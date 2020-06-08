@@ -2901,7 +2901,6 @@
         <item name="android:alertDialogTheme">@style/OPDarkDialogAlert</item>
         <item name="android:colorPrimary">#ff000000</item>
         <item name="android:colorPrimaryDark">#ff000000</item>
-        <item name="android:navigationBarColor">#ff00ff00</item>
         <item name="android:navigationBarColor">#ff000000</item>
         <item name="android:windowLightStatusBar">false</item>
         <item name="android:windowLightNavigationBar">false</item>
@@ -2915,7 +2914,6 @@
         <item name="sudBackgroundBaseColor">@color/oneplus_fingerprint_enrolling_bg_ab</item>
         <item name="sudBackgroundPatterned">true</item>
         <item name="sudMarginSides">@dimen/oneplus_suw_margin_start</item>
-        <item name="sudNavBarBackgroundColor">#ff000000</item>
         <item name="sudNavBarBackgroundColor">#ff000000</item>
         <item name="sudNavBarButtonBackground">#ff000000</item>
     </style>
