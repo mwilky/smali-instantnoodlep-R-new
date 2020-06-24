@@ -1905,12 +1905,16 @@
     :cond_6
     if-eqz v4, :cond_7
 
-    iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mContext:Landroid/content/Context;
+    #iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mContext:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/android/systemui/util/Utils;->useQsMediaPlayer(Landroid/content/Context;)Z
+    #invoke-static {v0}, Lcom/android/systemui/util/Utils;->useQsMediaPlayer(Landroid/content/Context;)Z
 
-    move-result v0
+    #move-result v0
 
+    #if-nez v0, :cond_7
+    
+    sget-boolean v0, Lcom/android/mwilky/Renovate;->mHideLockscreenAlbumArt:Z
+    
     if-nez v0, :cond_7
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mProcessArtworkTasks:Ljava/util/Set;
