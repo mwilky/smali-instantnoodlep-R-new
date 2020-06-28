@@ -395,120 +395,180 @@
 .end method
 
 .method public static getCircleColorForState(I)I
-    .locals 1
+    .registers 3
+    .param p0, "i"    # I
 
-    if-eqz p0, :cond_2
+    .line 200
+    sget-boolean v0, Lcom/android/mwilky/Renovate;->mOreoQs:Z
 
+    if-eqz v0, :cond_7
+
+    .line 201
+    const/high16 v0, 0x1000000
+
+    return v0
+
+    .line 203
+    :cond_7
+    if-nez p0, :cond_10
+
+    .line 205
+    const/16 v0, 0x8
+
+    invoke-static {v0}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
+
+    move-result v0
+
+    return v0
+
+    .line 207
+    :cond_10
     const/4 v0, 0x1
 
-    if-eq p0, v0, :cond_1
+    if-ne p0, v0, :cond_19
 
+    .line 209
+    const/4 v0, 0x7
+
+    invoke-static {v0}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
+
+    move-result v0
+
+    return v0
+
+    .line 212
+    :cond_19
     invoke-static {}, Lcom/oneplus/util/ThemeColorUtils;->getCurrentTheme()I
 
-    move-result p0
+    move-result v0
 
-    const/4 v0, 0x2
+    const/4 v1, 0x2
 
-    if-ne p0, v0, :cond_0
+    if-ne v0, v1, :cond_26
 
-    const/4 p0, 0x6
+    .line 213
+    const/4 v0, 0x6
 
-    invoke-static {p0}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
+    invoke-static {v0}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
 
-    move-result p0
+    move-result v0
 
-    goto :goto_0
+    return v0
 
-    :cond_0
-    const/16 p0, 0x65
+    .line 215
+    :cond_26
+    const/16 v0, 0x65
 
-    invoke-static {p0}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
+    invoke-static {v0}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
 
-    move-result p0
+    move-result v0
 
-    :goto_0
-    return p0
-
-    :cond_1
-    const/4 p0, 0x7
-
-    invoke-static {p0}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
-
-    move-result p0
-
-    return p0
-
-    :cond_2
-    const/16 p0, 0x8
-
-    invoke-static {p0}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
-
-    move-result p0
-
-    return p0
+    return v0
 .end method
 
 .method public static getColorForState(Landroid/content/Context;I)I
-    .locals 1
+    .registers 4
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "i"    # I
 
-    if-eqz p1, :cond_2
+    .line 219
+    if-nez p1, :cond_8
 
-    const/4 p0, 0x1
+    .line 221
+    const/4 v0, 0x5
 
-    if-eq p1, p0, :cond_1
+    invoke-static {v0}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
 
-    const/4 p0, 0x2
+    move-result v0
 
-    if-eq p1, p0, :cond_0
+    return v0
 
-    new-instance p0, Ljava/lang/StringBuilder;
+    .line 223
+    :cond_8
+    const/4 v0, 0x1
 
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+    if-ne p1, v0, :cond_11
 
-    const-string v0, "Invalid state "
+    .line 225
+    const/4 v0, 0x4
 
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result v0
 
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    return v0
 
-    move-result-object p0
+    .line 227
+    :cond_11
+    const/4 v0, 0x2
 
-    const-string p1, "QSTile"
+    if-ne p1, v0, :cond_31
 
-    invoke-static {p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    .line 229
+    sget-boolean v1, Lcom/android/mwilky/Renovate;->mOreoQs:Z
 
-    const/4 p0, 0x0
+    if-eqz v1, :cond_2b
 
-    return p0
+    .line 230
+    invoke-static {}, Lcom/oneplus/util/ThemeColorUtils;->getCurrentTheme()I
 
-    :cond_0
-    const/4 p0, 0x3
+    move-result v1
 
-    invoke-static {p0}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
+    if-ne v1, v0, :cond_24
 
-    move-result p0
+    .line 231
+    const/4 v0, 0x6
 
-    return p0
+    invoke-static {v0}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
 
-    :cond_1
-    const/4 p0, 0x4
+    move-result v0
 
-    invoke-static {p0}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
+    return v0
 
-    move-result p0
+    .line 233
+    :cond_24
+    const/16 v0, 0x65
 
-    return p0
+    invoke-static {v0}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
 
-    :cond_2
-    const/4 p0, 0x5
+    move-result v0
 
-    invoke-static {p0}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
+    return v0
 
-    move-result p0
+    .line 235
+    :cond_2b
+    const/4 v0, 0x3
 
-    return p0
+    invoke-static {v0}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
+
+    move-result v0
+
+    return v0
+
+    .line 238
+    :cond_31
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Invalid state "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "QSTile"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 239
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
 .method public static getOPColorForState(I)I
