@@ -455,7 +455,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-direct {p0}, Lcom/oneplus/setupwizard/BootReceiver;->startAndroidBetaService()V
+    #invoke-direct {p0}, Lcom/oneplus/setupwizard/BootReceiver;->startAndroidBetaService()V
 
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
