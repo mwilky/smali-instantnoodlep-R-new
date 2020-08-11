@@ -7994,4 +7994,5 @@ Update settings to:
     <item type="string" name="APKTOOL_DUMMY_1902">false</item>
     <item type="string" name="APKTOOL_DUMMY_1953">false</item>
     <item type="string" name="APKTOOL_DUMMY_1954">false</item>
+    <string name="renovate_version">RENOVATE ICE version</string>
 </resources>
