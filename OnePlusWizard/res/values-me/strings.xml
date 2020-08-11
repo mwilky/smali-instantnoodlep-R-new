@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_stability_improvement_program">O programu stabilnosti sistema</string>
+    <string name="about_user_experience_program">O programu za korisničko iskustvo</string>
+    <string name="agree_text">SLAŽEM SE</string>
+    <string name="back">Nazad</string>
+    <string name="back_home_recents_text">nazad, početni ekran, Nedavno</string>
+    <string name="back_text">Prevucite prstom prema unutra sa lijeve ili desne ivice kako biste se vratili nazad</string>
+    <string name="button_click_description">Dodirom na tipku „SLAŽEM SE“ dajete do znanja da ste pročitali i prihvatili gore navedene uslove i odredbe. Ako se ne slažete, nemojte da nastavite sa korištenjem vašeg OnePlus uređaja. Uređaj možete da vratite OnePlus-u i primite povrat novca u skladu sa pravilima vraćanja OnePlus-a.</string>
+    <string name="camera_summary">Nacrtajte <strong>O</strong> za pokretanje kamere</string>
+    <string name="camera_title">Otvori kameru</string>
+    <string name="choose_navigationbar_text">Birajte između navigacijske trake i pokreta koji želite</string>
+    <string name="disagree_text">NE SLAŽEM SE</string>
+    <string name="double_tap_summary">Dodirnite dva puta da probudite uređaj</string>
+    <string name="double_tap_title">Dupli dodir za buđenje</string>
+    <string name="finish_text">Završi</string>
+    <string name="flash_light_summary">Nacrtajte <strong>V</strong> za uključivanje/isključivanje lampe</string>
+    <string name="flash_light_title">Uključi/isključi lampu</string>
+    <string name="font_detials">Odaberite sistemski font koji želite da koristite</string>
+    <string name="font_set_success">Završeno</string>
+    <string name="home">Početna strana</string>
+    <string name="home_text">Swipe up from the bottom edge of the screen</string>
+    <string name="join_text">Pridružujem se</string>
+    <string name="master_in_gestures_header">Uvježbajte gestu cijelog ekrana u 3 koraka</string>
+    <string name="music_summary">Nacrtajte <strong>||</strong> koristeć dva prsta kako biste reprodukvoali muziku. Nacrtajte <strong>&lt;</strong> or <strong>></strong> za reprodukovanje sljedeće ili prethodne numere.</string>
+    <string name="music_title">Kontrola muzike</string>
+    <string name="navigation_gestures_text">Navigacioni gestovi</string>
+    <string name="navigationbar_gestures_title">Navigaciona traka i geste</string>
+    <string name="no_join_text">Ne, hvala</string>
+    <string name="oneplus_built_in_app_updates_description_deail_india">Za ugrađene aplikacije za koje ažuriranja ne možete da preuzmete sa Play Store-a, a koje uključuju telefon, kontakte, podešavanje i slično, ugrađena ažuriranja aplikacija bi provjerila verzije aplikacija i putem obavještenja bi vam, kada postoje hitna, pružila ažuriranja, što ima za cilj poboljšanje stabilnosti aplikacija. Možete to bilo kada da onemogućite odlaskom u Podešavanja > Sistem > Programi za poboljšanje iskustva > Ugrađena ažuriranja aplikacija.</string>
+    <string name="oneplus_built_in_app_updates_description_global">Dozvolite OnePlus-u da provjeri i potisne vam ugrađena ažuriranja aplikacija koja imaju za cilj poboljšavnje stabilnosti aplikacije. Za ugrađene aplikacije za koje ažuriranja ne možete da preuzmete sa Play Store-a, a koje uključuju telefon, kontakte, podešavanje i slično, ugrađena ažuriranja aplikacija bi provjerila verzije aplikacija i putem obavještenja bi vam, kada postoje hitna, pružila ažuriranja, što ima za cilj poboljšanje stabilnosti aplikacija. Možete to bilo kada da onemogućite odlaskom u Podešavanja > Sistem > Programi za poboljšanje iskustva > Ugrađena ažuriranja aplikacija.</string>
+    <string name="oneplus_built_in_app_updates_description_india">Omogućite OnePlus-u da provjeri i ponudi vam ažuriranja ugrađenih aplikacija koja imaju za cilj poboljšanje stabilnosti aplikacije.</string>
+    <string name="oneplus_built_in_app_updates_global">Ugrađena ažuriranja aplikacije</string>
+    <string name="oneplus_built_in_app_updates_india">Ugrađena ažuriranja aplikacije</string>
+    <string name="oneplus_care">Red Cable Club</string>
+    <string name="oneplus_care_description">Povežite svoj uređaj kako biste se pridružili ovom OnePlus unutrašnjem krugu, da biste osvojili nagrade, stekli vrhunsko iskustvo i dobili ekskluzivne ponude</string>
+    <string name="oneplus_indian_mem_dailog_description">Povezivanje Vašeg uređaja će zahtijevati pristup Vašem IMEI broju za potvrdu uređaja i neće se koristiti u druge svrhe. Vaši podaci će se čuvati strogo povjerljivo. Za više informacija pogledajte politiku privatnosti.</string>
+    <string name="oneplus_join">PRIDRUŽI SE</string>
+    <string name="oneplus_permissions_text">Dozvola</string>
+    <string name="oneplus_push">Pružanje obavještenja</string>
+    <string name="oneplus_push_description">Za bolju povezanost sa nama, OnePlus može da vam pošalje ankete i ažuriranja proizvoda putem push obavještenja.</string>
+    <string name="oneplus_push_details">"Kako bi se održala dobra komunikacija sa korisnicima OnePlus proizvoda i kako bi se pružile službene vijesti ili informacije o proizvodu, OnePlus može da koristi usluge push obavještenja. Ove usluge isporučuju službene vijesti, informacije o proizvodima i ankete.
+ Ovu funkciju možete da isključite u bilo kojem trenutku odlaskom u: Podešavanja – Napredno, i poništavanjem odabira potvrdnog okvira „Primaj vijesti sa OnePlus-a“."</string>
+    <string name="oneplus_recommend">Preporučeno</string>
+    <string name="oneplus_reject">ODBACI</string>
+    <string name="oneplus_service_messaging_description_detail_india">Omogućavanje OnePlus slanja servisnih poruka nudi vam priliku za uživanje u boljim uslugama clod-a i ostalim funkcijama osiguravajući svakog trenutka sinhronizaciju podataka. Možete to da onemogućite u bilo kojem trenutku jednostavnim odlaskom u Podešavanja > Sistem > Programi za poboljšanje iskustva > OnePlus slanje servisnih poruka.</string>
+    <string name="oneplus_service_messaging_description_india">Omogućite OnePlus-u da vam pruža usluge brzih razmjena poruka u cloud-u kako biste osigurali optimizirano iskustvo proizvoda</string>
+    <string name="oneplus_service_messaging_india">OnePlus slanje servisnih poruka</string>
+    <string name="oneplus_services">Uslovi i odredbe OnePlus-a</string>
+    <string name="oneplus_services_agree_dialog_content">Slažem se sa uslovima pravilnika o privatnosti i ugovora o licenci za krajnjeg korisnika</string>
+    <string name="oneplus_services_description">Prije upotrebe vašeg OnePlus uređaja pažljivo pročitajte sljedeće uslove. Dodirnite naslov da saznate više detalja. Jednom kada počnete da koristite svoj OnePlus uređaj, izjavljujete da prihvatate i slažete se sa uslovima i odredbama OnePlus-a. Ako se ne slažete, nemojte da nastavite sa korištenjem vašeg OnePlus uređaja. Uređaj možete da vratite OnePlus-u i primite povrat novca u skladu sa pravilima vraćanja OnePlus-a.</string>
+    <string name="oneplus_skip">PRESKOČI</string>
+    <string name="oneplus_system_service_description_global">Potiskivanje obavještenja koja se odnose na usluge sistema OnePlus, uključujući OnePlus servisne poruke i ugrađena ažuriranja aplikacija.</string>
+    <string name="oneplus_system_service_description_india">Potiskivanje obavještenja koja se odnose na usluge sistema OnePlus, uključujući OnePlus servisne poruke i ugrađena ažuriranja aplikacija.</string>
+    <string name="oneplus_system_service_description_india_without_msc">Potiskivanje obavještenja koja se odnose na usluge sistema OnePlus, uključujući ugrađena ažuriranja aplikacija.</string>
+    <string name="oneplus_system_service_global">OnePlus sistemska usluga</string>
+    <string name="oneplus_system_service_india">OnePlus sistemska usluga</string>
+    <string name="oos_gesture_header">Geste isključenja ekrana</string>
+    <string name="oos_ota_details">Ažuriranja sistema su završena. OnePlus će nastaviti da poboljšava vaše korisničko iskustvo, donosi sigurnije okruženje sistema i pruža bolju zaštitu vaših ličnih podataka i privatnosti.</string>
+    <string name="oos_ota_header">Vodič za ažuriranje privatnosti korisnika OnePlus-a</string>
+    <string name="oos_permissions_ota_details">Prije upotrebe vašeg OnePlus uređaja pažljivo pročitajte sljedeće uslove. Dodirnite naslov za detalje. Jednom kada počnete da koristite svoj OnePlus uređaj, smatraće se da ste se izjasnili da prihvatate i slažete se sa odredbama i uslovima OnePlus-a.</string>
+    <string name="privacy_policy_ota_details">Prije nego što nastavite postupak ažuriranja, pročitajte našu novu politiku privatnosti. Dodirnite naslov da biste detaljno pročitali našu politiku. Nastavak postupka nadogradnje ukazuje na to da ste pročitali politiku privatnosti.</string>
+    <string name="privacy_policy_ota_header">Ažuriranje OnePlus politike privatnosti</string>
+    <string name="privacy_policy_update">Evo ažuriranja:</string>
+    <string name="privacy_policy_update_text1">1. Dodato korištenje 3D kolačića.</string>
+    <string name="privacy_policy_update_text2">2. Dodata usluga za uklanjanje javnih korisničkih podataka korisnika.</string>
+    <string name="privacy_policy_update_text3">3. Dodavanje 3. službe za rješavanje spora.</string>
+    <string name="privacy_policy_websit">Za više detalja posjetite web lokaciju politike privatnosti OnePlus-a:</string>
+    <string name="privacy_policy_websit_address">https://www.oneplus.com/legal/privacy-policy</string>
+    <string name="recent">Nedavno</string>
+    <string name="recents_text">Swipe up from the bottom edge of the screen and pause</string>
+    <string name="reselect">PONOVO IZABERI</string>
+    <string name="setup_complete_text">Vaš uređaj je podešen i spreman za upotrebu</string>
+    <string name="setup_complete_title">Postavljanje je završeno</string>
+    <string name="setup_wizard_next_button_label">Sljedeće</string>
+    <string name="slide_from_bottom_text">Prevucite prstom prema gore kako biste počeli</string>
+    <string name="stability_improvement_description">Pridružite se programu za stabilnost sistema kako biste nam pomogli da brže pronađemo probleme OS-a.</string>
+    <string name="stability_improvement_description_details">Pridružite se programu stabilnosti sistema kako bi OnePlus mogao da nastavi sa usavršavanjem naših proizvoda. Podatke nećemo da koristimo za prepoznavanje ličnog identiteta i nećemo ih dijeliti sa bilo kojom trećom stranom u bilo koje svrhe. Nakon što odaberete dijeljenje podataka o sistemskim greškama sa OnePlus-om, još uvijek možete da odustanete u bilo kojem trenutku.</string>
+    <string name="stability_improvement_details">"Dijeljenje podataka zapisnika o sistemskim greškama nam pomaže u poboljšanju naših proizvoda. Zbog određenih dizajnerskih karakteristika u Android sistemu, kada ove podatke podijelite sa nama, postoji mala mogućnost da se neki lični podaci dodaju, poput vašeg telefonskog broja, adrese e-pošte ili broja Facebook naloga. Nažalost, ovo je izvan naše kontrole, ali je i vrlo malo vjerovatno. Svi podaci koje OnePlus prikupi čuvaju se samo tokom vremena potrebnog za analizu. Nećemo ih koristiti za prepoznavanje ličnog identiteta i nećemo dijeliti vaše podatke sa bilo kojom trećom stranom u bilo koju svrhu. Vaša odluka o tome da li želite ili ne da dijelie sa nama pogrešne podatke sistemskog dnevnika neće imati implikacije na vaše buduće sarađivanje sa OnePlus-om.
+Nakon što odaberete dijeljenje podataka o sistemskim greškama s OnePlus-om, postupak i dalje možete da zasutavite u svakom trenutku. kako bi to uradili jednostavno otiđite u Podešavanja – Napredno – Pridruži se programu poboljšanja stabilnosti sistema, i poništite odabir potvrdnog okvira. Pogledajte naša pravila privatnosti kako biste saznali više o prikupljanju i obradi informacija."</string>
+    <string name="stability_improvement_program">Program stabilnosti sistema</string>
+    <string name="suw_agree_continue_text">Agree and continue</string>
+    <string name="suw_built_in_updates_description">Omogućite OnePlus-u da provjeri i ponudi vam ažuriranja ugrađenih aplikacija koja imaju za cilj poboljšanje stabilnosti aplikacije.</string>
+    <string name="suw_built_in_updates_text">Ugrađena ažuriranja aplikacije</string>
+    <string name="suw_co_create_header">OnePlus Co-creation User Programs</string>
+    <string name="suw_co_create_text">Participate in OnePlus Co-creation User Programs to get the latest information and a better system experience. By agreeing to join, you accept all the items below. You can disable it under Settings> System> Experience improvement programs.</string>
+    <string name="suw_oobe_opt_dialog_text">"Participate in OnePlus co-creation user programs to help OnePlus improve system or application design, get the latest news and product information, quickly synchronize cloud service data, and receive fast and stable application updates. You can disable it under Settings> System> Experience improvement programs.
+Participate in OnePlus co-creation user programs?"</string>
+    <string name="suw_oobe_opt_dialog_title">OnePlus co-creation user programs</string>
+    <string name="suw_push_notification_description">For better communication, OnePlus may send you official news, product information, questionnaires etc., through notifications.</string>
+    <string name="suw_push_notification_text">Pružanje obavještenja</string>
+    <string name="suw_service_message_description">Allow OnePlus to deliver prompt cloud messaging services to you to ensure optimized product experience.</string>
+    <string name="suw_service_message_text">OnePlus slanje servisnih poruka</string>
+    <string name="suw_system_stability_description">Join the System Stability Program so OnePlus can continue to improve our products.</string>
+    <string name="suw_system_stability_text">Program stabilnosti sistema</string>
+    <string name="tap_screen_to_start_text">POČETAK</string>
+    <string name="user_experience_description_details">Pridružite se programu za korisničko iskustvo kako bi OnePlus mogao da nastavi da poboljšava naš dizajn proizvoda i cjelokupno korisničko iskustvo. OnePlus obećava da nikada neće da upotrebljava podatke za prepoznavanje ličnog identiteta. Nakon što se odlučite da se pridružite planu, u svakom trenutku možete od toga da odustanete.</string>
+    <string name="user_experience_details">"Uz vaše dopuštenje, OnePlus će da prikuplja podatke o upotrebi vašeg telefona zbog poboljšanje dizajna proizvoda i korisničkog iskustva. Ako se slažete sa programom korisničkog iskustva („Program“), to znači da se slažete da OnePlus može da prikuplja, koristiti i analizira sljedeće podatke:
+ (1) Podatke o konfiguraciji;
+ (2) Statistički podaci programa aplikacija;
+ (3) Podaci o ponašanju korisnika;
+ Prikupljanjem i analizom podataka navedenih iznad, OnePlus ima za cilj da poboljša korisničko iskustvo, cijeli postupak je u anonimnoj i kodiranoj formi za OnePlus, poput poboljšanja efikasnosti baterije i stabilnosti sistema. Ovi podaci se neće koristiti za prepoznavanje ličnog identitea. Nakon što se pridružite programu, možete u bilo kojem trenutku da se povučete korištenjem sljedeće metode: Podešavanje – Napredno – Program korisničkog iskustva i poništite odabir polja. Pogledajte politiku privatnosti OnePlus-a da biste saznali više o informacijama koje OnePlus obrađuje. Jednom kada se povučete iz programa, OnePlus će prestati da prikuplja gore navedene podatke."</string>
+    <string name="user_experience_program">Program korisničkog iskustva</string>
+    <string name="weather_services">Usluge vremenske prognoze</string>
+    <string name="weather_services_description">Dopustite da sistemske aplikacije koriste usluge vremenske prognoze za pružanje tačnih vremenskih informacija.</string>
+</resources>

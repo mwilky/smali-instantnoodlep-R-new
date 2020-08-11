@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="32.0dip" android:width="32.0dip" android:viewportWidth="84.0" android:viewportHeight="84.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:translateX="-42.0" android:translateY="-188.0">
+        <group android:translateX="42.0" android:translateY="188.0">
+            <path android:fillColor="@color/status_bar_color" android:pathData="M70 17.5l-56 0c-3.85 0 -6.965 3.15 -6.965 7L7 59.5c0 3.85 3.15 7 7 7l56 0c3.85 0 7 -3.15 7 -7l0 -35c0 -3.85 -3.15 -7 -7 -7zM38.5 28l7 0 0 7 -7 0 0 -7zm0 10.5l7 0 0 7 -7 0 0 -7zM28 28l7 0 0 7 -7 0 0 -7zm0 10.5l7 0 0 7 -7 0 0 -7zm-3.5 7l-7 0 0 -7 7 0 0 7zm0 -10.5l-7 0 0 -7 7 0 0 7zm31.5 24.5l-28 0 0 -7 28 0 0 7zm0 -14l-7 0 0 -7 7 0 0 7zm0 -10.5l-7 0 0 -7 7 0 0 7zm10.5 10.5l-7 0 0 -7 7 0 0 7zm0 -10.5l-7 0 0 -7 7 0 0 7z" />
+        </group>
+    </group>
+</vector>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.android.internal.widget.LinearLayoutWithDefaultTouchRecepient android:orientation="vertical" android:id="@id/topLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/SudGlifHeaderContainer">
+            <ImageView android:id="@id/sud_layout_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/oneplus_system_service" style="@style/SudGlifIcon" />
+            <TextView android:gravity="center_horizontal" android:id="@id/suc_layout_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/oneplus_system_service_india" android:accessibilityLiveRegion="polite" style="@style/SudGlifHeaderTitle" />
+        </LinearLayout>
+        <TextView android:textAppearance="@style/oneplus_contorl_text_style_body1" android:textSize="16.0sp" android:textColor="@color/oneplus_contorl_text_color_primary_light" android:gravity="center_horizontal" android:id="@id/system_service_title" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/oneplus_system_service_description_india" android:layout_below="@id/app_upgrader_title" android:lineSpacingExtra="5.0dip" />
+        <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:paddingTop="12.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <RelativeLayout android:id="@id/rel_service_messaging" android:paddingRight="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <CheckBox android:id="@id/self_messaging_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+                    <RelativeLayout android:id="@id/service_messaging_rel_layout" android:background="?android:selectableItemBackground" android:paddingLeft="24.0dip" android:paddingTop="15.0dip" android:paddingRight="18.0dip" android:paddingBottom="18.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@id/view_one">
+                        <TextView android:textAppearance="@style/oneplus_contorl_text_style_subheading" android:textColor="@color/oneplus_contorl_text_color_primary_light" android:id="@id/app_upgrader_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/oneplus_service_messaging_india" />
+                        <TextView android:textAppearance="@style/oneplus_contorl_text_style_body1" android:textColor="@color/oneplus_contorl_text_color_secondary_light" android:id="@id/flash_light_summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/oneplus_service_messaging_description_india" android:layout_below="@id/app_upgrader_title" />
+                    </RelativeLayout>
+                    <View android:id="@id/view_one" android:background="@android:color/black" android:layout_width="1.0dip" android:layout_height="24.0dip" android:layout_marginTop="4.0dip" android:layout_marginRight="18.0dip" android:layout_toLeftOf="@id/self_messaging_checkbox" android:layout_centerVertical="true" android:alpha="0.06" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/rel_build_in_update" android:paddingRight="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/rel_service_messaging">
+                    <CheckBox android:id="@id/built_in_app_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+                    <RelativeLayout android:id="@id/builin_app_rel_layout" android:background="?android:selectableItemBackground" android:paddingLeft="24.0dip" android:paddingTop="18.0dip" android:paddingRight="18.0dip" android:paddingBottom="18.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@id/view_two">
+                        <TextView android:textAppearance="@style/oneplus_contorl_text_style_subheading" android:textColor="@color/oneplus_contorl_text_color_primary_light" android:id="@id/app_messaging_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/oneplus_built_in_app_updates_india" />
+                        <TextView android:textAppearance="@style/oneplus_contorl_text_style_body1" android:textColor="@color/oneplus_contorl_text_color_secondary_light" android:id="@id/double_tap_summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/oneplus_built_in_app_updates_description_india" android:layout_below="@id/app_messaging_title" />
+                    </RelativeLayout>
+                    <View android:id="@id/view_two" android:background="@android:color/black" android:layout_width="1.0dip" android:layout_height="24.0dip" android:layout_marginTop="4.0dip" android:layout_marginRight="18.0dip" android:layout_toLeftOf="@id/built_in_app_checkbox" android:layout_centerVertical="true" android:alpha="0.06" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </com.android.internal.widget.LinearLayoutWithDefaultTouchRecepient>
+</RelativeLayout>
