@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="start|center" android:orientation="horizontal" android:paddingTop="18.0dip" android:paddingBottom="@dimen/dialog_title_bottom_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="?android:dialogPreferredPadding" android:paddingEnd="?android:dialogPreferredPadding">
+        <TextView android:ellipsize="end" android:id="@id/language_picker_title_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/label_choose_language" android:singleLine="true" android:textAlignment="viewStart" style="?android:windowTitleStyle" />
+    </LinearLayout>
+    <View android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="0.39999998dip" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ListView android:id="@id/llList" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="600.0dip" android:divider="@null" android:dividerHeight="0.0dip" />
+        <ListView android:id="@id/llCountryList" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="600.0dip" android:divider="@null" android:dividerHeight="0.0dip" />
+    </RelativeLayout>
+    <View android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="0.39999998dip" />
+</LinearLayout>

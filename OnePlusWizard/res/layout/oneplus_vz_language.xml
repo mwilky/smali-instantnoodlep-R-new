@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.setupdesign.GlifLayout android:id="@id/setup_wizard_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true" app:sucHeaderText="@string/header_setupwizard">
+        <com.android.internal.widget.LinearLayoutWithDefaultTouchRecepient android:orientation="vertical" android:id="@id/topLayout" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <FrameLayout android:id="@id/container" android:layout_width="300.0dip" android:layout_height="400.0dip" android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </com.android.internal.widget.LinearLayoutWithDefaultTouchRecepient>
+    </com.google.android.setupdesign.GlifLayout>
+</LinearLayout>

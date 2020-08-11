@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="300.0dip" android:layout_height="800.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/oneplus_contorl_text_style_body1" android:textSize="18.0sp" android:textColor="@color/oneplus_contorl_text_color_primary_light" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/label_choose_language" />
+    <View android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="0.39999998dip" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ListView android:id="@id/llList" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="600.0dip" />
+        <ListView android:id="@id/llCountryList" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="600.0dip" />
+    </RelativeLayout>
+    <View android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="0.39999998dip" />
+    <TextView android:textAppearance="@style/oneplus_contorl_text_style_body1" android:textSize="16.0sp" android:textColor="@color/oneplus_contorl_text_color_primary_light" android:gravity="right" android:id="@id/txt_cancel" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/label_cancel" />
+</LinearLayout>

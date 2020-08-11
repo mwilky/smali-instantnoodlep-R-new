@@ -1,0 +1,950 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="abc_action_bar_home_description">瀏覽首頁</string>
+    <string name="abc_action_bar_up_description">向上瀏覽</string>
+    <string name="abc_action_menu_overflow_description">更多選項</string>
+    <string name="abc_action_mode_done">完成</string>
+    <string name="abc_activity_chooser_view_see_all">查看全部</string>
+    <string name="abc_activitychooserview_choose_application">選擇應用程式</string>
+    <string name="abc_capital_off">關閉</string>
+    <string name="abc_capital_on">開啟</string>
+    <string name="abc_menu_alt_shortcut_label">Alt +</string>
+    <string name="abc_menu_ctrl_shortcut_label">Ctrl +</string>
+    <string name="abc_menu_delete_shortcut_label">Delete 鍵</string>
+    <string name="abc_menu_enter_shortcut_label">Enter 鍵</string>
+    <string name="abc_menu_function_shortcut_label">Fn +</string>
+    <string name="abc_menu_meta_shortcut_label">Meta +</string>
+    <string name="abc_menu_shift_shortcut_label">Shift +</string>
+    <string name="abc_menu_space_shortcut_label">空格鍵</string>
+    <string name="abc_menu_sym_shortcut_label">Sym +</string>
+    <string name="abc_prepend_shortcut_label">Menu +</string>
+    <string name="abc_search_hint">搜尋…</string>
+    <string name="abc_searchview_description_clear">清除查詢</string>
+    <string name="abc_searchview_description_query">搜尋查詢</string>
+    <string name="abc_searchview_description_search">搜尋</string>
+    <string name="abc_searchview_description_submit">提交查詢</string>
+    <string name="abc_searchview_description_voice">語音搜尋</string>
+    <string name="abc_shareactionprovider_share_with">分享對象</string>
+    <string name="abc_shareactionprovider_share_with_application">與「%s」分享</string>
+    <string name="abc_toolbar_collapse_description">收合</string>
+    <string name="about_action_bar_title">关于</string>
+    <string name="about_app_version_text">版本 %s</string>
+    <string name="about_privacy_policy">隱私政策</string>
+    <string name="about_release_note_title">更新日誌:</string>
+    <string name="about_stability_improvement_program">關於系統穩定改進計劃</string>
+    <string name="about_terms_service">用戶協議</string>
+    <string name="about_user_experience_program">關於用戶體驗計劃</string>
+    <string name="accessibility_display_daltonizer_preference_subtitle">色彩校正可讓你調整裝置上顯示的顏色</string>
+    <string name="accessibility_display_daltonizer_preference_title">色彩校正</string>
+    <string name="accessibility_manual_zen_less_time">減少時間。</string>
+    <string name="accessibility_manual_zen_more_time">增加時間。</string>
+    <string name="accessibility_no_wifi">Wi-Fi 連線已中斷。</string>
+    <string name="accessibility_wifi_off">已關閉 Wi-Fi。</string>
+    <string name="accessibility_wifi_one_bar">Wi-Fi 訊號強度一格。</string>
+    <string name="accessibility_wifi_security_type_none">開放式網路</string>
+    <string name="accessibility_wifi_security_type_secured">安全網路</string>
+    <string name="accessibility_wifi_signal_full">Wi-Fi 訊號強度滿格。</string>
+    <string name="accessibility_wifi_three_bars">Wi-Fi 訊號強度三格。</string>
+    <string name="accessibility_wifi_two_bars">Wi-Fi 訊號強度兩格。</string>
+    <string name="accessor_expires_text">租約到期時間：%s</string>
+    <string name="accessor_info_title">分享資料的應用程式</string>
+    <string name="accessor_no_description_text">應用程式未提供任何說明。</string>
+    <string name="active_input_method_subtypes">啟用的輸入法</string>
+    <string name="adb_device_fingerprint_title_format">裝置指紋：%1$s</string>
+    <string name="adb_device_forget">移除裝置</string>
+    <string name="adb_keys_warning_message">要針對先前授權的所有電腦撤銷 USB 偵錯權限嗎？</string>
+    <string name="adb_pair_method_code_summary">使用六位數的配對碼配對新裝置</string>
+    <string name="adb_pair_method_code_title">使用配對碼配對裝置</string>
+    <string name="adb_pair_method_qrcode_summary">使用 QR 圖碼掃描器配對新裝置</string>
+    <string name="adb_pair_method_qrcode_title">使用 QR 圖碼配對裝置</string>
+    <string name="adb_paired_devices_title">已配對的裝置</string>
+    <string name="adb_pairing_device_dialog_failed_msg">請確認裝置已連上相同的網路。</string>
+    <string name="adb_pairing_device_dialog_failed_title">配對失敗</string>
+    <string name="adb_pairing_device_dialog_pairing_code_label">Wi‑Fi 配對碼</string>
+    <string name="adb_pairing_device_dialog_title">與裝置配對</string>
+    <string name="adb_qrcode_pairing_device_failed_msg">無法配對裝置。可能是QR 圖碼錯誤，或是裝置未連上相同的網路。</string>
+    <string name="adb_warning_message">USB 偵錯是針對應用程式開發而設計的功能，可讓你複製電腦和裝置中的資料、不需經由通知即可在裝置上安裝應用程式，以及讀取記錄資料。</string>
+    <string name="adb_warning_title">允許 USB 偵錯嗎？</string>
+    <string name="adb_wireless_connection_failed_message">請確認「%1$s」已連上正確的網路</string>
+    <string name="adb_wireless_connection_failed_title">連線失敗</string>
+    <string name="adb_wireless_device_connected_summary">目前已連線的裝置</string>
+    <string name="adb_wireless_device_details_title">裝置詳細資料</string>
+    <string name="adb_wireless_error">錯誤</string>
+    <string name="adb_wireless_ip_addr_preference_title">IP 位址和通訊埠</string>
+    <string name="adb_wireless_list_empty_off">如要查看並使用可用的裝置，請開啟無線偵錯</string>
+    <string name="adb_wireless_no_network_msg">請連上 Wi-Fi 網路</string>
+    <string name="adb_wireless_qrcode_pairing_description">掃描 QR 圖碼即可透過 Wi-Fi 配對裝置</string>
+    <string name="adb_wireless_qrcode_pairing_title">掃描 QR 圖碼</string>
+    <string name="adb_wireless_qrcode_summary">掃描 QR 圖碼即可透過 Wi-Fi 配對裝置</string>
+    <string name="adb_wireless_settings">無線偵錯</string>
+    <string name="adb_wireless_verifying_qrcode_text">正在配對裝置…</string>
+    <string name="adbwifi_warning_message">無線偵錯是針對應用程式開發而設計的功能，可讓你複製電腦和裝置中的資料、不必經由通知即可在裝置上安裝應用程式，以及讀取記錄資料。</string>
+    <string name="adbwifi_warning_title">要啟用無線偵錯嗎？</string>
+    <string name="agree_text">同意</string>
+    <string name="alarm_template">時間：%1$s</string>
+    <string name="alarm_template_far">時間：%1$s</string>
+    <string name="allow_mock_location">允許模擬位置</string>
+    <string name="allow_mock_location_summary">允許模擬位置</string>
+    <string name="animator_duration_scale_title">動畫影片長度比例</string>
+    <string name="apn_settings_not_available">這位使用者無法修改存取點名稱設定</string>
+    <string name="app_name">安裝精靈</string>
+    <string name="app_process_limit_title">背景處理程序限制</string>
+    <string name="auto_connect_disable">自動連線功能已關閉</string>
+    <string name="available_via_app">可透過「%1$s」使用</string>
+    <string name="available_via_carrier">可透過 %1$s 使用</string>
+    <string name="available_via_passpoint">可透過 %1$s 使用</string>
+    <string name="back">返回上一層</string>
+    <string name="back_button_label">返回</string>
+    <string name="back_home_recents_text">後退、桌面、最近任務</string>
+    <string name="back_text">從側面邊緣返回</string>
+    <string name="battery_info_status_charging">充電中</string>
+    <string name="battery_info_status_charging_fast">快速充電中</string>
+    <string name="battery_info_status_charging_slow">慢速充電中</string>
+    <string name="battery_info_status_discharging">非充電中</string>
+    <string name="battery_info_status_full">電力充足</string>
+    <string name="battery_info_status_not_charging">已接上電源，但現在無法充電</string>
+    <string name="battery_info_status_unknown">不明</string>
+    <string name="blob_expires_text">到期時間：%s</string>
+    <string name="blob_id_text">共用資料 ID：%d</string>
+    <string name="bluetooth_a2dp_profile_summary_connected">連接至媒體音訊</string>
+    <string name="bluetooth_a2dp_profile_summary_use_for">用於媒體音訊</string>
+    <string name="bluetooth_active_battery_level">使用中，電量：%1$s</string>
+    <string name="bluetooth_active_battery_level_untethered">已啟用，左：目前電量為 %1$s，右：目前電量為 %2$s</string>
+    <string name="bluetooth_active_no_battery_level">使用中</string>
+    <string name="bluetooth_battery_level">電量：%1$s</string>
+    <string name="bluetooth_battery_level_untethered">左：目前電量為 %1$s，右：目前電量為 %2$s</string>
+    <string name="bluetooth_connected">已連線到「%1$s」</string>
+    <string name="bluetooth_connected_battery_level">已連線，電量為 %1$s%2$s</string>
+    <string name="bluetooth_connected_no_a2dp">已連線到「%1$s」(無媒體音訊)</string>
+    <string name="bluetooth_connected_no_a2dp_battery_level">已連線 (無媒體音訊)，電量為 %1$s%2$s</string>
+    <string name="bluetooth_connected_no_headset">已連線到「%1$s」(無手機音訊)</string>
+    <string name="bluetooth_connected_no_headset_battery_level">已連線 (無手機音訊)，電量為 %1$s%2$s</string>
+    <string name="bluetooth_connected_no_headset_no_a2dp">已連線到「%1$s」(無手機或媒體音訊)</string>
+    <string name="bluetooth_connected_no_headset_no_a2dp_battery_level">已連線 (無手機或媒體音訊)，電量為 %1$s%2$s</string>
+    <string name="bluetooth_connected_no_map">已連線到「%1$s」(無訊息存取權)</string>
+    <string name="bluetooth_connecting">連線中…</string>
+    <string name="bluetooth_disable_absolute_volume">停用絕對音量功能</string>
+    <string name="bluetooth_disable_absolute_volume_summary">只要停用藍牙絕對音量功能，即可避免在連線到遠端裝置時，發生音量過大或無法控制音量等問題。</string>
+    <string name="bluetooth_disconnected">已中斷連線</string>
+    <string name="bluetooth_disconnecting">正在中斷連線…</string>
+    <string name="bluetooth_enable_gabeldorsche">啟用 Gabeldorsche</string>
+    <string name="bluetooth_enable_gabeldorsche_summary">啟用藍牙 Gabeldorsche 功能堆疊。</string>
+    <string name="bluetooth_headset_profile_summary_connected">連接至電話音訊</string>
+    <string name="bluetooth_headset_profile_summary_use_for">用於電話音訊</string>
+    <string name="bluetooth_hearing_aid_profile_summary_connected">已連接到助聽器</string>
+    <string name="bluetooth_hearing_aid_profile_summary_use_for">用於助聽器</string>
+    <string name="bluetooth_hearingaid_left_battery_level">左側 - 電量：%1$s</string>
+    <string name="bluetooth_hearingaid_left_pairing_message">正在配對左側助聽器…</string>
+    <string name="bluetooth_hearingaid_right_battery_level">右側 - 電量：%1$s</string>
+    <string name="bluetooth_hearingaid_right_pairing_message">正在配對右側助聽器…</string>
+    <string name="bluetooth_hid_profile_summary_connected">已連線到輸入裝置</string>
+    <string name="bluetooth_hid_profile_summary_use_for">用於輸入</string>
+    <string name="bluetooth_map_profile_summary_connected">已連線至地圖</string>
+    <string name="bluetooth_map_profile_summary_use_for">地圖使用偏好</string>
+    <string name="bluetooth_opp_profile_summary_connected">已連線到檔案傳輸伺服器</string>
+    <string name="bluetooth_opp_profile_summary_not_connected">不要連線到檔案傳輸伺服器</string>
+    <string name="bluetooth_opp_profile_summary_use_for">用於傳輸檔案</string>
+    <string name="bluetooth_pairing">配對中…</string>
+    <string name="bluetooth_pairing_accept">配對</string>
+    <string name="bluetooth_pairing_accept_all_caps">配對</string>
+    <string name="bluetooth_pairing_decline">取消</string>
+    <string name="bluetooth_pairing_device_down_error_message">無法與 %1$s 通訊。</string>
+    <string name="bluetooth_pairing_error_message">無法與 %1$s 配對。</string>
+    <string name="bluetooth_pairing_pin_error_message">無法與 %1$s 配對，因為 PIN 碼或密碼金鑰不正確。</string>
+    <string name="bluetooth_pairing_rejected_error_message">「%1$s」拒絕配對要求。</string>
+    <string name="bluetooth_pairing_will_share_phonebook">配對完成後，所配對的裝置即可在連線後存取你的聯絡人和通話記錄。</string>
+    <string name="bluetooth_pan_nap_profile_summary_connected">與裝置分享本地網際網路連線</string>
+    <string name="bluetooth_pan_profile_summary_use_for">用於網際網路連線</string>
+    <string name="bluetooth_pan_user_profile_summary_connected">已連線至裝置並取得網際網路連線</string>
+    <string name="bluetooth_profile_a2dp">媒體音訊</string>
+    <string name="bluetooth_profile_a2dp_high_quality">HD 高解析音訊：%1$s</string>
+    <string name="bluetooth_profile_a2dp_high_quality_unknown_codec">HD 高解析音訊</string>
+    <string name="bluetooth_profile_headset">通話</string>
+    <string name="bluetooth_profile_hearing_aid">助聽器</string>
+    <string name="bluetooth_profile_hid">輸入裝置</string>
+    <string name="bluetooth_profile_map">簡訊</string>
+    <string name="bluetooth_profile_opp">檔案傳輸</string>
+    <string name="bluetooth_profile_pan">網際網路連線</string>
+    <string name="bluetooth_profile_pan_nap">網際網路連線分享</string>
+    <string name="bluetooth_profile_pbap">聯絡人共用</string>
+    <string name="bluetooth_profile_pbap_summary">用於聯絡人共用</string>
+    <string name="bluetooth_profile_sap">SIM 卡存取權</string>
+    <string name="bluetooth_sap_profile_summary_connected">已連線到 SAP</string>
+    <string name="bluetooth_sap_profile_summary_use_for">用於 SIM 卡存取權</string>
+    <string name="bluetooth_select_a2dp_codec_bits_per_sample">藍牙音訊每單位樣本位元數</string>
+    <string name="bluetooth_select_a2dp_codec_bits_per_sample_dialog_title">"觸發藍牙音訊轉碼器
+選項：每單位樣本位元數"</string>
+    <string name="bluetooth_select_a2dp_codec_channel_mode">藍牙音訊聲道模式</string>
+    <string name="bluetooth_select_a2dp_codec_channel_mode_dialog_title">"觸發藍牙音訊轉碼器
+選項：聲道模式"</string>
+    <string name="bluetooth_select_a2dp_codec_ldac_playback_quality">藍牙音訊 LDAC 轉碼器：播放品質</string>
+    <string name="bluetooth_select_a2dp_codec_ldac_playback_quality_dialog_title">"觸發藍牙音訊 LDAC
+轉碼器選項：播放品質"</string>
+    <string name="bluetooth_select_a2dp_codec_sample_rate">藍牙音訊取樣率</string>
+    <string name="bluetooth_select_a2dp_codec_sample_rate_dialog_title">"觸發藍牙音訊轉碼器
+選項：取樣率"</string>
+    <string name="bluetooth_select_a2dp_codec_streaming_label">串流中：%1$s</string>
+    <string name="bluetooth_select_a2dp_codec_type">藍牙音訊轉碼器</string>
+    <string name="bluetooth_select_a2dp_codec_type_dialog_title">"觸發藍牙音訊轉碼器
+選項"</string>
+    <string name="bluetooth_select_a2dp_codec_type_help_info">如果顯示為灰色，表示手機或耳機不支援這項功能</string>
+    <string name="bluetooth_select_avrcp_version_dialog_title">選取藍牙 AVRCP 版本</string>
+    <string name="bluetooth_select_avrcp_version_string">藍牙 AVRCP 版本</string>
+    <string name="bluetooth_select_map_version_dialog_title">選取 Bluetooth MAP 版本</string>
+    <string name="bluetooth_select_map_version_string">藍牙 MAP 版本</string>
+    <string name="bluetooth_show_devices_without_names">顯示沒有名稱的藍牙裝置</string>
+    <string name="bluetooth_show_devices_without_names_summary">系統會顯示沒有名稱 (僅具有 MAC 位址) 的藍牙裝置</string>
+    <string name="bluetooth_talkback_bluetooth">藍牙</string>
+    <string name="bluetooth_talkback_computer">電腦</string>
+    <string name="bluetooth_talkback_headphone">頭戴式耳機</string>
+    <string name="bluetooth_talkback_headset">免持耳機</string>
+    <string name="bluetooth_talkback_imaging">顯像裝置</string>
+    <string name="bluetooth_talkback_input_peripheral">周邊輸入裝置</string>
+    <string name="bluetooth_talkback_phone">電話</string>
+    <string name="bt_hci_snoop_log">啟用藍牙 HCI 窺探記錄</string>
+    <string name="bt_hci_snoop_log_summary">擷取藍牙數據包 (變更這項設定後請切換藍牙)。</string>
+    <string name="bugreport_in_power">錯誤回報捷徑</string>
+    <string name="bugreport_in_power_summary">在電源選單中顯示取得錯誤報告的按鈕</string>
+    <string name="button_click_description">點擊同意按鈕，即表明您已閱讀並同意以上條款與條件；如您不同意，請不要使用一加設備；在滿足一加退貨政策的前提下，您可以把設備退回一加並取得退款。</string>
+    <string name="button_convert_fbe">清除並轉換...</string>
+    <string name="cached_apps_freezer_device_default">裝置預設設定</string>
+    <string name="cached_apps_freezer_disabled">已停用</string>
+    <string name="cached_apps_freezer_enabled">已啟用</string>
+    <string name="cached_apps_freezer_reboot_dialog_text">裝置必須重新啟動才能套用這項變更。請立即重新啟動或取消變更。</string>
+    <string name="camera_summary">描繪一個字母 <strong>O</strong>，即可開啟相機</string>
+    <string name="camera_title">開啟相機</string>
+    <string name="cancel">取消</string>
+    <string name="capital_off">關閉</string>
+    <string name="capital_on">開啟</string>
+    <string name="category_personal">個人</string>
+    <string name="category_work">工作</string>
+    <string name="charge_length_format">%1$s前</string>
+    <string name="choose_navigationbar_text">請選擇你喜歡的按鍵或手勢</string>
+    <string name="choose_profile">選擇設定檔</string>
+    <string name="clear_adb_keys">撤銷 USB 偵錯授權</string>
+    <string name="confirm_enable_oem_unlock_text">警告：開啟這項設定時，你將無法使用這個裝置的防盜功能。</string>
+    <string name="confirm_enable_oem_unlock_title">要允許 OEM 解鎖嗎？</string>
+    <string name="connected_via_app">透過「%1$s」連線</string>
+    <string name="connected_via_carrier">已透過 %1$s 連線</string>
+    <string name="connected_via_network_scorer">已透過 %1$s 自動連線</string>
+    <string name="connected_via_network_scorer_default">已透過網路評分供應商自動連線</string>
+    <string name="connected_via_passpoint">已透過 %1$s 連線</string>
+    <string name="content_description_menu_button">選單</string>
+    <string name="convert_to_fbe_warning">"將資料分割區轉換成個別加密檔案。
+警告！這項操作會清除你的所有資料。
+這是 Alpha 版功能，可能無法正確運作。
+按下 [清除並轉換...] 即可繼續。"</string>
+    <string name="convert_to_file_encryption">轉換成檔案加密</string>
+    <string name="convert_to_file_encryption_done">已將檔案加密</string>
+    <string name="convert_to_file_encryption_enabled">轉換...</string>
+    <string name="copy">複製</string>
+    <string name="daltonizer_mode_deuteranomaly">綠色弱視 (紅-綠)</string>
+    <string name="daltonizer_mode_disabled">已停用</string>
+    <string name="daltonizer_mode_monochromacy">全色盲</string>
+    <string name="daltonizer_mode_protanomaly">紅色弱視 (紅-綠)</string>
+    <string name="daltonizer_mode_tritanomaly">藍色弱視 (藍-黃)</string>
+    <string name="daltonizer_type_overridden">已改為%1$s</string>
+    <string name="data_usage_ota">系統更新</string>
+    <string name="data_usage_uninstalled_apps">移除的應用程式</string>
+    <string name="data_usage_uninstalled_apps_users">已移除的應用程式和使用者</string>
+    <string name="debug_app">選取偵錯應用程式</string>
+    <string name="debug_app_not_set">未設定偵錯應用程式</string>
+    <string name="debug_app_set">偵錯應用程式：%1$s</string>
+    <string name="debug_applications_category">應用程式</string>
+    <string name="debug_debugging_category">偵錯</string>
+    <string name="debug_drawing_category">繪圖</string>
+    <string name="debug_hw_drawing_category">硬體加速轉譯</string>
+    <string name="debug_hw_overdraw">針對 GPU 重複繪圖進行偵錯</string>
+    <string name="debug_input_category">輸入</string>
+    <string name="debug_layout">顯示版面配置界限</string>
+    <string name="debug_layout_summary">顯示剪輯範圍、邊界等</string>
+    <string name="debug_monitoring_category">監控</string>
+    <string name="debug_networking_category">網路連線</string>
+    <string name="debug_view_attributes">啟用檢視屬性檢查</string>
+    <string name="delete_blob_confirmation_text">確定要刪除這項共用資料嗎？</string>
+    <string name="delete_blob_text">刪除共用資料</string>
+    <string name="dev_logpersist_clear_warning_message">如果你選擇不再透過永久記錄器進行監控，系統就必須清除裝置中的記錄器資料。</string>
+    <string name="dev_logpersist_clear_warning_title">要清除永久儲存的記錄器資料嗎？</string>
+    <string name="dev_settings_warning_message">這些設定僅供開發之用，可能導致你的裝置及裝置中的應用程式毀損或運作異常。</string>
+    <string name="dev_settings_warning_title">允許開發設定？</string>
+    <string name="development_settings_enable">啟用開發人員選項</string>
+    <string name="development_settings_not_available">這位使用者無法使用開發人員選項</string>
+    <string name="development_settings_summary">設定應用程式開發選項</string>
+    <string name="development_settings_title">開發人員選項</string>
+    <string name="direct_boot_unaware_dialog_message">注意：重新啟動後，你必須將手機解鎖，才能執行這個應用程式</string>
+    <string name="disable_overlays">停用硬體重疊圖層</string>
+    <string name="disable_overlays_summary">一律使用 GPU 進行畫面合成</string>
+    <string name="disabled">已停用</string>
+    <string name="disabled_by_admin">已由管理員停用</string>
+    <string name="disabled_by_admin_summary_text">已由管理員停用</string>
+    <string name="disagree_text">不同意</string>
+    <string name="double_tap_summary">點兩下即可喚醒裝置</string>
+    <string name="double_tap_title">點兩下喚醒</string>
+    <string name="enable_adb">USB 偵錯</string>
+    <string name="enable_adb_summary">連接 USB 時進入偵錯模式</string>
+    <string name="enable_adb_wireless">無線偵錯</string>
+    <string name="enable_adb_wireless_summary">連上 Wi-Fi 時啟用偵錯模式</string>
+    <string name="enable_freeform_support">啟用自由形式視窗</string>
+    <string name="enable_freeform_support_summary">啟用實驗版自由形式視窗的支援功能。</string>
+    <string name="enable_gpu_debug_layers">啟用 GPU 偵錯圖層</string>
+    <string name="enable_gpu_debug_layers_summary">允許載入 GPU 偵錯圖層為應用程式偵錯</string>
+    <string name="enable_opengl_traces_title">啟用 OpenGL 追蹤</string>
+    <string name="enable_terminal_summary">啟用可提供本機命令介面存取權的終端機應用程式</string>
+    <string name="enable_terminal_title">本機終端機</string>
+    <string name="enable_verbose_vendor_logging">啟用詳細供應商記錄功能</string>
+    <string name="enable_verbose_vendor_logging_summary">在錯誤報告中附上其他的裝置專屬供應商記錄。如果你這麼做，可能會增加電池用量及/或占用較多儲存空間，報告中可能也會包含私人資訊。</string>
+    <string name="enabled_by_admin">已由管理員啟用</string>
+    <string name="enhanced_connectivity">加強型連線</string>
+    <string name="enhanced_connectivity_summary">啟用「加強型連線」功能。</string>
+    <string name="expand_button_title">進階</string>
+    <string name="external_source_trusted">允許</string>
+    <string name="external_source_untrusted">不允許</string>
+    <string name="failed_to_open_app_settings_toast">無法開啟「%1$s」的設定</string>
+    <string name="finish_text">完成</string>
+    <string name="first_fragment_footer">條款及條件</string>
+    <string name="first_fragment_summary">我們現在將幫助您個人化您的 OnePlus 體驗</string>
+    <string name="first_fragment_title">OnePlus 安裝程式</string>
+    <string name="flash_light_summary">描繪一個字母 <strong>V</strong>，即可打開/關閉手電筒</string>
+    <string name="flash_light_title">打開/關閉手電筒</string>
+    <string name="font_detials">選擇你想要使用的系統字體</string>
+    <string name="font_set_success">字體已經切換成功</string>
+    <string name="font_size_preview_text_body">即使配戴著綠色眼鏡保護雙眼，這座美麗城市閃耀的光芒還是令桃樂絲和她的朋友們目眩神迷。街道兩側佇立著以碧綠大理石建造的華美房屋，上頭鑲滿光彩奪目的翡翠。</string>
+    <string name="font_size_preview_text_headline">範例文字</string>
+    <string name="font_size_preview_text_subtitle">第 11 章：奧茲國的翡翠城</string>
+    <string name="font_size_preview_text_title">綠野仙蹤</string>
+    <string name="font_text">字體</string>
+    <string name="force_allow_on_external">強制允許將應用程式寫入外部儲存空間</string>
+    <string name="force_allow_on_external_summary">允許將任何應用程式寫入外部儲存空間 (無論資訊清單值為何)</string>
+    <string name="force_msaa">強制 4x MSAA</string>
+    <string name="force_msaa_summary">在 OpenGL ES 2.0 應用程式中啟用 4x MSAA</string>
+    <string name="force_resizable_activities">將活動強制設為可調整大小</string>
+    <string name="force_resizable_activities_summary">將所有活動設為可配合多重視窗環境調整大小 (無論資訊清單值為何)。</string>
+    <string name="force_rtl_layout_all_locales">強制使用從右至左版面配置方向</string>
+    <string name="force_rtl_layout_all_locales_summary">強制將所有語言代碼的畫面配置方向改為從右至左</string>
+    <string name="gestures_camera">&lt;strong>開啟相機&lt;/strong>&lt;br> 描繪一個字母 &lt;strong>O&lt;/strong>，即可開啟相機</string>
+    <string name="gestures_double_tap_wake">&lt;strong>點兩下喚醒&lt;/strong>&lt;br> 點兩下即可喚醒裝置</string>
+    <string name="gestures_flashlight">&lt;strong>切換手電筒&lt;/strong>&lt;br> 描繪一個字母 &lt;strong>V&lt;/strong>，即可切換手電筒</string>
+    <string name="gestures_music">&lt;strong>音樂控制&lt;/strong>&lt;br> 用兩根手指描繪 &lt;strong>&amp;#124;&amp;#124;&lt;/strong>，即可播放音樂。描繪 &lt;strong>&amp;lt;&lt;/strong> 或 &lt;strong>&amp;gt;&lt;/strong>，即可轉到上一首或下一首曲目。</string>
+    <string name="gestures_summary">關閉畫面後，手勢可讓您執行一般操作。</string>
+    <string name="gestures_title">手勢</string>
+    <string name="google_font">Noto Sans</string>
+    <string name="guest_exit_guest">移除訪客</string>
+    <string name="guest_new_guest">新增訪客</string>
+    <string name="guest_nickname">訪客</string>
+    <string name="hdcp_checking_dialog_title">設定 HDCP 檢查行為</string>
+    <string name="hdcp_checking_title">HDCP 檢查</string>
+    <string name="header_initialization">初始化</string>
+    <string name="header_setupwizard">嚮導</string>
+    <string name="help_feedback_label">說明與意見回饋</string>
+    <string name="help_label">說明與意見回饋</string>
+    <string name="home">回到桌面</string>
+    <string name="home_text">從螢幕底部邊緣向上滑動回到桌面</string>
+    <string name="ime_security_warning">這個輸入法是由「%1$s」應用程式所提供，它可能會收集你輸入的所有文字，包括密碼和信用卡號等個人資料。要啟用這個輸入法嗎？</string>
+    <string name="immediately_destroy_activities">不要保留活動</string>
+    <string name="immediately_destroy_activities_summary">使用者離開活動後立刻刪除所有活動內容</string>
+    <string name="ims_reg_status_not_registered">未註冊</string>
+    <string name="ims_reg_status_registered">已註冊</string>
+    <string name="ims_reg_title">IMS 註冊狀態</string>
+    <string name="imsi_protection_warning">這個網路會收到可用於追蹤裝置位置的唯一 ID。<annotation id="url">瞭解詳情</annotation></string>
+    <string name="inactive_app_active_summary">已啟用。輕觸即可切換。</string>
+    <string name="inactive_app_inactive_summary">未啟用。輕觸即可切換。</string>
+    <string name="inactive_apps_title">待命應用程式</string>
+    <string name="input_google_radio_abstract_text">Android Lollipop 輸入法</string>
+    <string name="input_google_radio_text">Google 鍵盤</string>
+    <string name="input_summary">選擇您想要使用的預設輸入法</string>
+    <string name="input_swiftkey_radio_abstract_text">多種語系、顏色和設計、輕觸或滑動、隨時學習</string>
+    <string name="input_swiftkey_radio_text">SwiftKey 鍵盤 + Emoji</string>
+    <string name="input_title">輸入法</string>
+    <string name="install_other_apps">安裝不明應用程式</string>
+    <string name="join_text">好的</string>
+    <string name="keep_screen_on">螢幕不休眠</string>
+    <string name="keep_screen_on_summary">充電時螢幕不會進入休眠</string>
+    <string name="keywords_adb_wireless">ADB, 偵錯, 開發</string>
+    <string name="label_accessibility">輔助功能</string>
+    <string name="label_call">電話</string>
+    <string name="label_cancel">取消</string>
+    <string name="label_choose_language">選擇你的語言</string>
+    <string name="label_emergency_call">緊急電話</string>
+    <string name="label_initilization">请稍后，我们正在准备你的手机</string>
+    <string name="label_languaage_selection">嗨，您好</string>
+    <string name="label_next">下一個</string>
+    <string name="label_qr_code_tap">更多點擊以開始QR碼設置</string>
+    <string name="label_qr_code_taps">更多點擊以開始QR碼設置</string>
+    <string name="launch_defaults_none">未設定預設值</string>
+    <string name="launch_defaults_some">已設定部分預設值</string>
+    <string name="loading_injected_setting_summary">載入中…</string>
+    <string name="loading_text">正在載入...</string>
+    <string name="local_backup_password_summary_change">輕觸即可變更或移除電腦完整備份的密碼</string>
+    <string name="local_backup_password_summary_none">電腦完整備份目前未受保護</string>
+    <string name="local_backup_password_title">電腦備份密碼</string>
+    <string name="local_backup_password_toast_confirmation_mismatch">新密碼與確認密碼不符。</string>
+    <string name="local_backup_password_toast_success">已設定新備份密碼</string>
+    <string name="local_backup_password_toast_validation_failure">無法設定備份密碼</string>
+    <string name="managed_user_title">所有 Work 應用程式</string>
+    <string name="master_in_gestures_header">3步快速掌握全屏手勢</string>
+    <string name="media_category">媒體</string>
+    <string name="media_transfer_this_device_name">手機喇叭</string>
+    <string name="media_transfer_wired_device_name">有線音訊裝置</string>
+    <string name="media_transfer_wired_usb_device_name">有線耳機</string>
+    <string name="mobile_data_always_on">行動數據連線一律保持啟用狀態</string>
+    <string name="mobile_data_always_on_summary">即使 Wi‑Fi 連線已啟用，一律將行動數據連線保持啟用狀態 (以便快速切換網路)。</string>
+    <string name="mock_location_app">選取模擬位置應用程式</string>
+    <string name="mock_location_app_not_set">未設定模擬位置應用程式</string>
+    <string name="mock_location_app_set">模擬位置應用程式：%1$s</string>
+    <string name="mr_button_content_description">投放按鈕</string>
+    <string name="mr_cast_button_connected">投放按鈕；已連線</string>
+    <string name="mr_cast_button_connecting">投放按鈕；連線中</string>
+    <string name="mr_cast_button_disconnected">投放按鈕；已中斷連線</string>
+    <string name="mr_cast_dialog_title_view_placeholder">沒有可用的資訊</string>
+    <string name="mr_chooser_searching">正在尋找裝置</string>
+    <string name="mr_chooser_title">投放到</string>
+    <string name="mr_controller_album_art">專輯封面</string>
+    <string name="mr_controller_casting_screen">正在投放畫面</string>
+    <string name="mr_controller_close_description">關閉</string>
+    <string name="mr_controller_collapse_group">收合</string>
+    <string name="mr_controller_disconnect">中斷連線</string>
+    <string name="mr_controller_expand_group">展開</string>
+    <string name="mr_controller_no_info_available">沒有可用的資訊</string>
+    <string name="mr_controller_no_media_selected">未選取任何媒體</string>
+    <string name="mr_controller_pause">暫停</string>
+    <string name="mr_controller_play">播放</string>
+    <string name="mr_controller_stop">停止</string>
+    <string name="mr_controller_stop_casting">停止投放</string>
+    <string name="mr_controller_volume_slider">音量滑桿</string>
+    <string name="mr_dialog_groupable_header">新增裝置</string>
+    <string name="mr_dialog_transferable_header">在群組上播放</string>
+    <string name="mr_system_route_name">系統</string>
+    <string name="mr_user_route_category_name">裝置</string>
+    <string name="music_summary">" 用兩根手指描繪 "<strong>||</strong>，即可播放音樂。描繪 <strong>&lt;</strong> 或 <strong>></strong>，即可轉到上一首或下一首曲目。</string>
+    <string name="music_title">音樂控制</string>
+    <string name="navigation_bar_checkbox_text">使用軟體按鈕</string>
+    <string name="navigation_bar_summary">您是否想要使用軟體按鈕（而非硬體按鈕）進行導覽？</string>
+    <string name="navigation_bar_title">導覽控制項</string>
+    <string name="navigation_gestures_text">全屏手勢</string>
+    <string name="navigationbar_gestures_title">虛擬按鍵和全屏手勢</string>
+    <string name="next_button_label">繼續</string>
+    <string name="no_application">無</string>
+    <string name="no_join_text">不，謝謝</string>
+    <string name="not_set">未設定</string>
+    <string name="oem_unlock_enable">OEM 解鎖</string>
+    <string name="oem_unlock_enable_summary">允許解除鎖定開機載入器</string>
+    <string name="okay">確定</string>
+    <string name="oneplus_account_email_hint">輸入您的電子郵件信箱</string>
+    <string name="oneplus_account_summary_1">請登入，以便更有效地使用您的裝置。<a href="https://www.oneplus.net/">瞭解更多</a></string>
+    <string name="oneplus_account_summary_2"><a href="https://www.oneplus.net/">或建立一個新帳號</a></string>
+    <string name="oneplus_account_title">新增 OnePlus 帳號</string>
+    <string name="oneplus_built_in_app_updates_description_deail_india">針對無法在商店更新的系統級應用，例如：電話，聯繫人，設置等提供自主升級服務，一加將主動檢查其版本情況，並在有緊急更新的時候以通知的形式推送更新包到用户手機，以保證應用的穩定性及可用性。用户可隨時關閉系統應用升級消息推送，關閉的路徑為：設置-系統-體驗改進計劃-系統應用升級消息推送。</string>
+    <string name="oneplus_built_in_app_updates_description_global">允許一加檢查並推送系統級應用更新，以保證應用的穩定性。 針對無法在商店更新的系統級應用，例如：電話，聯絡人，設定等提供自主升級服務，一加將主動檢查其版本情況，並在有緊急更新的時候以通知的形式推送更新包到使用者手機，以保證應用的穩定性及可用性。使用者可隨時關閉移動網際網路服務資訊通道，關閉的路徑為：設定-系統-系統訊息推送-系統應用升級訊息推送。</string>
+    <string name="oneplus_built_in_app_updates_description_india">允許一加檢查並推送系統級應用更新，以保證應用的穩定性。</string>
+    <string name="oneplus_built_in_app_updates_global">系統應用升級訊息推送</string>
+    <string name="oneplus_built_in_app_updates_india">系統應用升級訊息推送</string>
+    <string name="oneplus_care">Red Cable Club</string>
+    <string name="oneplus_care_description">綁定設備以加入，可獲得專享的尊貴體驗，單獨定制的權益以及額外折扣</string>
+    <string name="oneplus_font">一加瑩黑™</string>
+    <string name="oneplus_indian_mem_dailog_description">綁定設備需要獲取你的設備 IMEI 信息以進行校驗，除此之外不作它用，你的數據會被嚴格保密。請查閱隱私政策以了解更多信息。</string>
+    <string name="oneplus_join">加入</string>
+    <string name="oneplus_permissions_text">權限許可</string>
+    <string name="oneplus_privacy_policy">隱私政策</string>
+    <string name="oneplus_push">訊息推送</string>
+    <string name="oneplus_push_description">一加會用推送的方式向您發送調查問捲和產品資訊,以便與您更好地溝通。</string>
+    <string name="oneplus_push_details">"\u0009\u0009\u0009\u0009為能與一加產品用戶(簡稱用戶)保有良好互動與提供更新官方資訊以及產品資訊，一加訊息推送功能將會提供由一加官方所提供的新聞、產品資訊、問卷互動以及購買優惠服務活動等，提供用戶有更廣的資訊通道與官方消息的接收。
+ \u0009\u0009\u0009\u0009訊息推送功能用戶可隨時關閉，關閉的路徑為：設置 > 系統 > 體驗改進計劃 > 一加推送消息。"</string>
+    <string name="oneplus_recommend">推薦</string>
+    <string name="oneplus_reject">拒絕</string>
+    <string name="oneplus_service_messaging_description_detail_india">為保證一加產品使用者使用雲服務等功能的體驗，移動網際網路服務訊息推送將提供更快速即時的資訊推送，以保證雲服務的秒級資料同步，以及其他服務的良好體驗。使用者可隨時關閉移動網際網路服務訊息推送，關閉的路徑為：設定-系統-系統訊息推送-移動網際網路服務推送。</string>
+    <string name="oneplus_service_messaging_description_india">允許一加提供快速即時的移動網際網路服務資訊推送，以保證產品體驗。</string>
+    <string name="oneplus_service_messaging_india">移動網際網路服務訊息推送</string>
+    <string name="oneplus_services">OnePlus條款與條件</string>
+    <string name="oneplus_services_agree_dialog_content">我已閱讀完《隱私政策》並同意《最終用戶許可協議》</string>
+    <string name="oneplus_services_description">在使用一加設備之前，請您認真閱讀以下條款；點擊標題可以打開文件進行閱讀。一旦您使用一加設備，即表示您已經閱讀《隱私政策》並同意《最終用戶許可協議》。如果您不同意《最終用戶許可協議》，請不要使用一加設備；在滿足一加退貨政策的前提下，您可以把設備退回一加並取得退款。</string>
+    <string name="oneplus_skip">跳過</string>
+    <string name="oneplus_system_service_description_global">系統服務相關的訊息推送，包括移動網際網路服務訊息推送、系統應用升級訊息推送。</string>
+    <string name="oneplus_system_service_description_india">系統服務相關的訊息推送，包括移動網際網路服務訊息推送、系統應用升級訊息推送。</string>
+    <string name="oneplus_system_service_description_india_without_msc">系統服務相關的訊息推送，包括系統應用升級訊息推送。</string>
+    <string name="oneplus_system_service_global">一加系統服務訊息推送</string>
+    <string name="oneplus_system_service_india">一加系統服務訊息推送</string>
+    <string name="oneplus_tc_desc">閱讀更多內容，請激活後繼續</string>
+    <string name="oneplus_tc_description">在使用OnePlus設備之前，請選擇以下合適的選項。單擊標題以獲取詳細信息。</string>
+    <string name="oneplus_tc_eula">終端用戶許可協議</string>
+    <string name="oneplus_tc_privacy_policy">隱私政策</string>
+    <string name="oneplus_tc_privacy_policy_desc">閱讀更多內容，請激活後繼續</string>
+    <string name="oneplus_tc_service_desc">匿名共享您的使用信息，以改善用戶體驗</string>
+    <string name="oneplus_tc_service_title">服務改進分析</string>
+    <string name="oneplus_tc_sytem_stability_desc">與我們共享系統錯誤日誌，幫助我們改進產品</string>
+    <string name="oneplus_tc_sytem_stability_title">系統穩定性分析</string>
+    <string name="oneplus_user_agreement">最終用戶許可協議</string>
+    <string name="oos_gesture_header">黑屏手勢</string>
+    <string name="oos_ota_details">系統更新已完成，OnePlus 會持續通過新版本來提升使用體驗、帶來更安全的系統環境及更嚴密的個人數據和隱私保護措施</string>
+    <string name="oos_ota_header">OnePlus 用戶隱私更新引導</string>
+    <string name="oos_permissions_ota_details">在使用一加設備之前，請您認真閱讀以下條款；點擊標題可以打開文件進行閱讀。一旦您使用一加設備，即表示您已經閱讀《隱私政策》。</string>
+    <string name="op_accessibility_quick_settings_page">第 %1$d 頁，共 %2$d 頁</string>
+    <string name="osu_completing_sign_up">正在完成註冊程序…</string>
+    <string name="osu_connect_failed">無法連線</string>
+    <string name="osu_opening_provider">正在開啟 %1$s</string>
+    <string name="osu_sign_up_complete">註冊完成。連線中…</string>
+    <string name="osu_sign_up_failed">無法完成註冊程序。輕觸即可重試。</string>
+    <string name="overlay_display_devices_title">模擬次要顯示器</string>
+    <string name="picture_color_mode">螢幕色彩模式</string>
+    <string name="picture_color_mode_desc">使用 sRGB</string>
+    <string name="pointer_location">指標位置</string>
+    <string name="pointer_location_summary">在螢幕圖層上顯示目前的觸控資料</string>
+    <string name="power_charging">%1$s - %2$s</string>
+    <string name="power_charging_duration">%1$s - %2$s後充飽電</string>
+    <string name="power_discharge_by">目前電量 %2$s，預估還能持續使用到%1$s</string>
+    <string name="power_discharge_by_enhanced">根據你的使用情形，目前電量為 %2$s，預估可持續使用到%1$s</string>
+    <string name="power_discharge_by_only">預估電力大約可使用到%1$s</string>
+    <string name="power_discharge_by_only_enhanced">根據你的使用情形，預估可持續使用到%1$s</string>
+    <string name="power_discharge_by_only_short">還能持續使用到%1$s</string>
+    <string name="power_discharging_duration">目前電量為 %2$s，還能使用約 %1$s</string>
+    <string name="power_discharging_duration_enhanced">根據你的使用情形，目前電量為 %2$s，還能使用約 %1$s</string>
+    <string name="power_remaining_charging_duration_only">%1$s後充飽電</string>
+    <string name="power_remaining_duration_only">還能使用約 %1$s</string>
+    <string name="power_remaining_duration_only_enhanced">根據你的使用情形，還能使用約 %1$s</string>
+    <string name="power_remaining_duration_only_shutdown_imminent">手機可能即將關機</string>
+    <string name="power_remaining_duration_shutdown_imminent">手機可能即將關機 (%1$s)</string>
+    <string name="power_remaining_less_than_duration">電池可用時間不到 %1$s (%2$s)</string>
+    <string name="power_remaining_less_than_duration_only">電池可用時間不到 %1$s</string>
+    <string name="power_remaining_more_than_subtext">電池可用時間超過 %1$s (%2$s)</string>
+    <string name="power_remaining_only_more_than_subtext">電池可用時間超過 %1$s</string>
+    <string name="power_remaining_settings_home_page">%1$s - %2$s</string>
+    <string name="power_suggestion_battery_run_out">電池電力可能於%1$s 前耗盡</string>
+    <string name="preference_copied">已將「%1$s」複製到剪貼簿。</string>
+    <string name="preference_summary_default_combination">%1$s / %2$s</string>
+    <string name="privacy_policy_ota_details">在您繼續之前，請您閱讀我們更新的隱私條款；點擊下方標題可以打開條款進行閱讀。當您繼續流程，表示您已閱讀『隱私政策』。</string>
+    <string name="privacy_policy_ota_header">OnePlus 隱私政策更新</string>
+    <string name="privacy_policy_update">此次隱私條款更新：</string>
+    <string name="privacy_policy_update_text1">1. 增加第三方Cookie使用說明</string>
+    <string name="privacy_policy_update_text2">2. 增加用戶公開信息刪除途徑</string>
+    <string name="privacy_policy_update_text3">3. 增加第三方爭議解決途徑</string>
+    <string name="privacy_policy_websit">詳情可參訪OnePlus隱私政策網頁：</string>
+    <string name="private_dns_broken">無法存取私人 DNS 伺服器</string>
+    <string name="private_dns_mode_off">停用</string>
+    <string name="private_dns_mode_opportunistic">自動</string>
+    <string name="private_dns_mode_provider">私人 DNS 供應商主機名稱</string>
+    <string name="private_dns_mode_provider_failure">無法連線</string>
+    <string name="private_dns_mode_provider_hostname_hint">輸入 DNS 供應商的主機名稱</string>
+    <string name="process_kernel_label">Android 作業系統</string>
+    <string name="profile_connect_timeout_subtext">無法連線，請關閉裝置後再重新開啟</string>
+    <string name="profile_info_settings_title">設定檔資訊</string>
+    <string name="progress_message">登入中...</string>
+    <string name="recent">進入多任務</string>
+    <string name="recents_text">從螢幕底部邊緣向上滑動，然後手指停留一會兒</string>
+    <string name="remaining_length_format">還剩 %1$s</string>
+    <string name="reselect">重新選擇</string>
+    <string name="retail_demo_reset_message">如要在示範模式中恢復原廠設定，請輸入密碼</string>
+    <string name="retail_demo_reset_next">下一步</string>
+    <string name="retail_demo_reset_title">請輸入密碼</string>
+    <string name="revert_hint_summary">您可隨時從「設置」變更本項。</string>
+    <string name="running_process_item_user_label">使用者：%1$s</string>
+    <string name="runningservices_settings_summary">查看並管理目前正在執行的服務</string>
+    <string name="runningservices_settings_title">正在運作的服務</string>
+    <string name="saved_network">由「%1$s」儲存</string>
+    <string name="screen_zoom_summary_custom">自訂 (%d)</string>
+    <string name="screen_zoom_summary_default">預設</string>
+    <string name="screen_zoom_summary_extremely_large">最大</string>
+    <string name="screen_zoom_summary_large">大</string>
+    <string name="screen_zoom_summary_small">小</string>
+    <string name="screen_zoom_summary_very_large">較大</string>
+    <string name="search_menu">搜尋設定</string>
+    <string name="search_menu_title">搜尋</string>
+    <string name="searchview_description_clear">清除查詢</string>
+    <string name="searchview_description_search">搜尋</string>
+    <string name="searchview_description_submit">提交查詢</string>
+    <string name="searchview_description_voice">語音搜尋</string>
+    <string name="select_application">選取應用程式</string>
+    <string name="select_day">選取月份和日期</string>
+    <string name="select_hours">選取小時數</string>
+    <string name="select_logd_size_dialog_title">選取每個記錄緩衝區的記錄器空間</string>
+    <string name="select_logd_size_title">記錄器緩衝區空間</string>
+    <string name="select_logpersist_dialog_title">選取要在裝置上永久儲存的記錄緩衝區</string>
+    <string name="select_logpersist_title">在裝置上永久儲存記錄器資料</string>
+    <string name="select_minutes">選取分鐘數</string>
+    <string name="select_private_dns_configuration_dialog_title">選取私人 DNS 模式</string>
+    <string name="select_private_dns_configuration_title">私人 DNS</string>
+    <string name="select_usb_configuration_dialog_title">選取 USB 設定</string>
+    <string name="select_usb_configuration_title">選取 USB 設定</string>
+    <string name="select_webview_provider_dialog_title">設定 WebView 實作</string>
+    <string name="select_webview_provider_title">WebView 實作</string>
+    <string name="select_webview_provider_toast_text">這個選項已失效，請再試一次。</string>
+    <string name="select_year">選取年份</string>
+    <string name="setup_complete_text">您的裝置已設定就緒，隨時可以使用</string>
+    <string name="setup_complete_title">設定完成</string>
+    <string name="setup_wizard_back_button_label">上一步</string>
+    <string name="setup_wizard_finish">完成</string>
+    <string name="setup_wizard_next_button_label">下一步</string>
+    <string name="setup_wizard_skip">跳過</string>
+    <string name="shared_data_delete_failure_text">刪除共用資料時發生錯誤。</string>
+    <string name="shared_data_no_accessors_dialog_text">這項共用資料沒有任何釋出期，要刪除這項資料嗎？</string>
+    <string name="shared_data_no_blobs_text">這位使用者沒有任何共用資料。</string>
+    <string name="shared_data_query_failure_text">擷取共用資料時發生錯誤，請再試一次。</string>
+    <string name="shared_data_summary">查看及修改共用資料</string>
+    <string name="shared_data_title">共用資料</string>
+    <string name="shelf_checkbox_text">啟用儲櫃</string>
+    <string name="shelf_hint_summary">我們很樂意聽到您的回饋意見。</string>
+    <string name="shelf_summary">"儲櫃是一款正在測試的新功能。您可以在裡面儲存、整理和發現您關心的事物。
+
+在主畫面上向右滑動即可存取儲櫃。"</string>
+    <string name="shelf_title">儲櫃</string>
+    <string name="show_all_anrs">顯示背景 ANR</string>
+    <string name="show_all_anrs_summary">為背景應用程式顯示「應用程式無回應」對話方塊</string>
+    <string name="show_hw_layers_updates">顯示硬體層更新</string>
+    <string name="show_hw_layers_updates_summary">在硬體層更新時閃綠燈</string>
+    <string name="show_hw_screen_updates">顯示畫面更新</string>
+    <string name="show_hw_screen_updates_summary">繪圖時在視窗中閃爍顯示畫面</string>
+    <string name="show_non_rect_clip">針對非矩形裁剪操作進行偵錯</string>
+    <string name="show_notification_channel_warnings">顯示通知管道警告</string>
+    <string name="show_notification_channel_warnings_summary">當應用程式未經有效管道發布通知時，在畫面上顯示警告</string>
+    <string name="show_screen_updates">顯示表層更新</string>
+    <string name="show_screen_updates_summary">更新表層時閃爍顯示整個視窗表層</string>
+    <string name="show_touches">顯示觸控回應</string>
+    <string name="show_touches_summary">顯示觸控位置的視覺回應</string>
+    <string name="simulate_color_space">模擬色彩空間</string>
+    <string name="skip_button_label">略過</string>
+    <string name="slide_from_bottom_text">上滑進入桌面</string>
+    <string name="speed_label_fast">快</string>
+    <string name="speed_label_medium">適中</string>
+    <string name="speed_label_okay">確定</string>
+    <string name="speed_label_slow">慢</string>
+    <string name="speed_label_very_fast">非常快</string>
+    <string name="speed_label_very_slow">非常慢</string>
+    <string name="stability_improvement_description">加入系統穩定改進計劃,幫助我們更好地定位您遇到的問題。</string>
+    <string name="stability_improvement_description_details">加入系統穩定改進計劃，將可以幫助一加改進系統或者應用的設計。一加不會將這些信息用來進行個人身份識別，也不會將信息分享給任何第三方做任何用途的使用。您選擇向一加分享系統錯誤數據后，可以隨時通過關閉按鈕終止分享。</string>
+    <string name="stability_improvement_description_details_vzw">加入系統穩定性分析，以便OnePlus可以繼續改進我們的產品。我們不會將這些信息用於個人身份識別，也不會出於任何目的與任何第三方共享您的信息。選擇與OnePlus共享系統錯誤數據後，您仍然可以隨時選擇退出</string>
+    <string name="stability_improvement_details">"\u0009\u0009\u0009\u0009如果您選擇向一加分享系統錯誤日誌信息，將可以幫助一加改進系統或者應用的設計。 因為Android系統的設計特點，在您選擇向一加分享您設備的錯誤日誌信息的同時，可能在一加不可控的狀況下同時向一加發送諸如電話號碼、Email以及Facebook帳號等個人信息，不過這種情況是低概率的。 一加僅在分析所需的時間保留前述數據，且不會將這些信息用來進行個人身份識別，也不會將信息分享給任何第三方做任何用途的使用。 您是否同意向一加分享系統錯誤日誌信息，不會影響您使用一加設備。
+ \u0009\u0009\u0009\u0009您選擇向一加分享系統錯誤數據後，可以隨時通過關閉按鈕終止分享；終止分享的路徑為：設置－其他高級設置－加入系統穩定改進方案，選擇關閉按鈕。了解更多一加關於信息收集和處理的內容，請參閱一加《隱私政策》。"</string>
+    <string name="stability_improvement_program">系統穩定改進計劃</string>
+    <string name="standby_bucket_summary">應用程式待命狀態： %s</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="status_unavailable">無法取得</string>
+    <string name="storage_category">儲存空間</string>
+    <string name="strict_mode">嚴格模式已啟用</string>
+    <string name="strict_mode_summary">當應用程式在主執行緒中進行長時間作業時，讓螢幕閃爍</string>
+    <string name="sud_built_in_app_content">OnePlus 將確保您及時收到裝置中所有內建應用程式的更新。例如：電話、連絡人、設定等。內建應用程式將透過通知接收推送應用程式更新，以提高應用程式穩定性。您可以隨時在「設定」>「系統」>「體驗改善程式」>「內建應用程式更新」下將其禁用。</string>
+    <string name="sud_built_in_app_description">允許 OnePlus 檢查推送的內建應用程式更新以提升應用程式穩定性。</string>
+    <string name="sud_built_in_app_title">內建應用程式</string>
+    <string name="sud_co_create_decription">參與 OnePlus 共創實驗室，以獲得最新資訊和強化的系統體驗。加入即表示您同意條款和條件。可以在「設定」>「系統」>「體驗改善項目」下禁用此功能。</string>
+    <string name="sud_co_create_header">共創實驗室</string>
+    <string name="sud_navigationbar_gestures_description">選擇您喜歡的導航風格</string>
+    <string name="sud_navigationbar_gestures_select_button">按鍵</string>
+    <string name="sud_navigationbar_gestures_select_gestures">體感手勢</string>
+    <string name="sud_navigationbar_gestures_title">導航風格</string>
+    <string name="sud_notification_description">為了雙向溝通，OnePlus 可推送通知和傳送調查問卷和產品更新資訊。</string>
+    <string name="sud_push_notification_content">為確保與 OnePlus 使用者保持雙向溝通並提供官方新聞或產品資訊，OnePlus可能會推送通知服務。這些服務將不定時提供 OnePlus 新聞和調查問卷。您可以隨時在「設定」>「系統」>「體驗改善計畫」>「OnePlus 通知」下將其禁用。</string>
+    <string name="sud_rcc_description">這是一個夢想家和開拓者的社區。成為 Red Cable Club 的會員即可享受獨家優惠和獎勵。為您而建，由您所創。</string>
+    <string name="sud_rcc_dialog_content">要綁定您的裝置，Red Cable Club 需要存取 IMEI 號碼以進行驗證。此資料將不會用於任何其他目的。請參閱隱私權政策以獲得更多資訊。</string>
+    <string name="sud_rcc_dialog_header">需要權限</string>
+    <string name="sud_rcc_header">加入 Red Cable Club</string>
+    <string name="sud_select_language">選擇語言</string>
+    <string name="sud_select_region">選擇地區</string>
+    <string name="sud_service_message_content">開啟 OnePlus 服務訊息後，資料將每秒同步，享受更佳雲端服務。您可以隨時在「設定」>「設定」>「系統」>「體驗改善項目」>「內建應用程式更新」下將其禁用。</string>
+    <string name="sud_service_messaging_description">允許 OnePlus 提供快速的雲端訊息服務，獲得優化的產品體驗。</string>
+    <string name="sud_service_messaging_title">服務訊息</string>
+    <string name="sud_services_description">使用 OnePlus 裝置前，請先詳細閱讀以下條款。請按一下標題以獲得詳細資訊。當開始使用 OnePlus 裝置後，即表示您同意並接受《OnePlus 的條款和條件》。如果您不同意，請勿繼續使用 OnePlus 裝置。您可以根據 OnePlus 的退貨政策將裝置退回 OnePlus 並獲得退款。</string>
+    <string name="sud_services_dialog_content">我同意《隱私權政策》和《最終使用者授權協議》</string>
+    <string name="sud_services_title">《OnePlus 條款與條件》</string>
+    <string name="sud_setup_complete_content">您的一加手機設定完成！</string>
+    <string name="sud_setup_complete_title">設定完成</string>
+    <string name="sud_user_experience_description">加入使用者體驗計畫，共創最佳的產品設計和使用者體驗。OnePlus 不會將您的資訊用於個人身份識別。您可以隨時選擇退出本計畫。</string>
+    <string name="sud_vision_settings">視覺設定</string>
+    <string name="sud_welcome_text">您好！</string>
+    <string name="summary_collapsed_preference_list">%1$s、%2$s</string>
+    <string name="summary_separator">" / "</string>
+    <string name="suw_agree_continue_text">同意並繼續</string>
+    <string name="suw_back_button_label">返回</string>
+    <string name="suw_built_in_updates_description">加入系統穩定改進計劃，將可以幫助一加改進系統或者應用的設計。</string>
+    <string name="suw_built_in_updates_text">系統應用升級訊息推送</string>
+    <string name="suw_co_create_header">OnePlus 用戶共創計劃</string>
+    <string name="suw_co_create_text">參與 OnePlus 用戶共創計劃，獲取最新的資訊和更好的系統體驗。如果您選擇同意，則表示您同意此頁面的所有內容。您可以隨時將其關閉，關閉的路徑為：設定>系統>體驗改進計劃。</string>
+    <string name="suw_more_button_label">更多</string>
+    <string name="suw_next_button_label">繼續</string>
+    <string name="suw_oobe_opt_dialog_text">"參與 OnePlus 用戶共創計劃，幫助 OnePlus 改進系統或應用設計，並獲得最新的官方新聞和產品資訊、雲服務資料的快速同步以及更快，更穩定的應用更新。您可以隨時將其關閉，關閉的路徑為：設定>系統>體驗改進計劃。
+您願意參與用戶共創計劃並獲得這些功能嗎？"</string>
+    <string name="suw_oobe_opt_dialog_title">OnePlus 用戶共創計劃</string>
+    <string name="suw_push_notification_description">為了更好地與您聯絡，OnePlus 可能會通過通知向您傳送官方新聞、產品資訊、問卷等資訊。</string>
+    <string name="suw_push_notification_text">訊息推送</string>
+    <string name="suw_service_message_description">允許一加提供快速即時的移動網際網路服務資訊推送，以保證產品體驗。</string>
+    <string name="suw_service_message_text">移動網際網路服務訊息推送</string>
+    <string name="suw_system_stability_description">加入系統穩定改進計劃，將可以幫助一加改進系統或者應用的設計。</string>
+    <string name="suw_system_stability_text">系統穩定改進方案</string>
+    <string name="tap_screen_to_start_text">開始使用</string>
+    <string name="tap_to_renew_subscription_and_connect">輕觸即可續訂並連線</string>
+    <string name="tap_to_sign_up">輕觸即可註冊</string>
+    <string name="tether_settings_title_all">網路共用與可攜式無線基地台</string>
+    <string name="tether_settings_title_bluetooth">藍牙網路共用</string>
+    <string name="tether_settings_title_usb">USB 網路共用</string>
+    <string name="tether_settings_title_usb_bluetooth">網路共用</string>
+    <string name="tether_settings_title_wifi">可攜式無線基地台</string>
+    <string name="tethering_hardware_offload">網路共用硬體加速</string>
+    <string name="tethering_hardware_offload_summary">使用網路共用硬體加速功能 (如果可用的話)</string>
+    <string name="tethering_settings_not_available">這位使用者無法修改網路共用設定</string>
+    <string name="time_picker_header_text">設定時間</string>
+    <string name="time_picker_hour_label">時</string>
+    <string name="time_picker_input_error">請輸入有效的時間</string>
+    <string name="time_picker_minute_label">分</string>
+    <string name="time_picker_prompt_label">輸入時間</string>
+    <string name="time_unit_just_now">剛剛</string>
+    <string name="title_convert_fbe">正在轉換成個別加密檔案</string>
+    <string name="track_frame_time">剖析 HWUI 轉譯</string>
+    <string name="transition_animation_scale_title">轉場動畫比例</string>
+    <string name="tts_default_lang_summary">設定文字轉語音功能要用的語言</string>
+    <string name="tts_default_lang_title">語言</string>
+    <string name="tts_default_pitch_summary">會影響合成語音的音調</string>
+    <string name="tts_default_pitch_title">音調</string>
+    <string name="tts_default_rate_summary">文字轉語音的播放速度</string>
+    <string name="tts_default_rate_title">語音速率</string>
+    <string name="tts_default_sample_string">你目前聽到的是我們的語音合成範例</string>
+    <string name="tts_engine_network_required">你必須連上網路才能使用文字轉語音輸出功能。</string>
+    <string name="tts_engine_preference_section_title">偏好的引擎</string>
+    <string name="tts_engine_security_warning">此語音合成引擎可能會收集你輸入的所有語音，包括密碼和信用卡號等個人資料。此引擎來自「%s」引擎，是否要使用此語音合成引擎？</string>
+    <string name="tts_engine_settings_button">啟動引擎設定</string>
+    <string name="tts_engine_settings_title">%s 設定</string>
+    <string name="tts_general_section_title">一般</string>
+    <string name="tts_install_data_summary">安裝語音合成所需的語音資料</string>
+    <string name="tts_install_data_title">安裝語音資料</string>
+    <string name="tts_lang_not_selected">未選取語言</string>
+    <string name="tts_lang_use_system">使用系統設定</string>
+    <string name="tts_play_example_summary">播放簡短的語音合成範例</string>
+    <string name="tts_play_example_title">聆聽範例</string>
+    <string name="tts_reset_speech_pitch_summary">將文字轉語音的播放音調重設為預設值。</string>
+    <string name="tts_reset_speech_pitch_title">重設語音音調</string>
+    <string name="tts_settings">文字轉語音設定</string>
+    <string name="tts_settings_title">文字轉語音輸出</string>
+    <string name="tts_status_checking">檢查中…</string>
+    <string name="tts_status_not_supported">不支援%1$s</string>
+    <string name="tts_status_ok">完整支援%1$s</string>
+    <string name="tts_status_requires_network">需要網路連線才支援%1$s</string>
+    <string name="tts_status_title">預設語言狀態</string>
+    <string name="unknown">不明</string>
+    <string name="usb_audio_disable_routing">停用 USB 音訊路由</string>
+    <string name="usb_audio_disable_routing_summary">停用 USB 音訊周邊設備的自動路由功能</string>
+    <string name="use_system_language_to_select_input_method_subtypes">使用系統語言</string>
+    <string name="user_add_profile_item_summary">你可以限制他人透過你的帳戶存取應用程式和內容</string>
+    <string name="user_add_profile_item_title">設有限制的個人資料</string>
+    <string name="user_add_user_item_summary">使用者擁有個人專屬的應用程式和內容</string>
+    <string name="user_add_user_item_title">使用者</string>
+    <string name="user_add_user_message_long">"你可以建立其他使用者，藉此與他人共用這個裝置。每位使用者都有自己的專屬空間，並可使用應用程式、桌布等項目自訂個人空間。此外，使用者也可以調整會影響所有人的裝置設定，例如 Wi‑Fi 設定。
+
+新增的使用者需要自行設定個人空間。
+
+任何使用者都可以為所有其他使用者更新應用程式。無障礙設定和服務可能無法轉移到新的使用者。"</string>
+    <string name="user_add_user_message_short">"新增的使用者需要自行設定個人空間。
+
+任何使用者皆可為其他所有使用者更新應用程式。"</string>
+    <string name="user_add_user_title">新增使用者？</string>
+    <string name="user_add_user_type_title">新增</string>
+    <string name="user_agreement">最終用戶許可協議</string>
+    <string name="user_experience_description">加入用戶體驗計劃,幫助我們使系統的體驗變得更加友好。</string>
+    <string name="user_experience_description_details">加入用戶體驗計劃，用以改進產品設計與提升用戶體驗。一加承諾不會將這些信息用來進行個人身份識別。您選擇加入計劃後，也可以隨時通過關閉按鈕退出這個計劃。</string>
+    <string name="user_experience_details">"\u0009\u0009\u0009\u0009一加將分析您的手機使用情況，用以改進產品設計與提升用戶體驗。
+ \u0009\u0009\u0009\u0009您可以選擇加入或者不加入用戶體驗計劃（以下或稱計劃）；如果您參與本用戶體驗計劃，即表明您同意一加按照本說明收集、使用、分析以下數據：
+ \u0009\u0009（1）配置數據；
+ \u0009\u0009（2）應用程式統計數據；
+ \u0009\u0009（3）用戶行為數據；
+ \u0009\u0009\u0009一加通過收集分析以上數據，所有採集資料行為都是匿名採集，並且透過加密後傳遞，目的在於改善產品使用體驗，例如可以經過優化系統來改善電池的續航能力以及應用的穩定性； 一加承諾不會將這些信息用來進行個人身份識別。您選擇加入計劃後，也可以隨時通過關閉按鈕退出這個計劃； 退出計劃的路徑為：設置－其他高級設置－用戶體驗計劃，選擇關閉按鈕。了解更多一加關於信息收集和處理的內容，請參閱一加《隱私政策》。
+ \u0009\u0009\u0009\u0009一旦您退出這個計劃，一加便停止收集您的前述信息。"</string>
+    <string name="user_experience_details_vzw">"經您的許可，OnePlus將收集您的電話使用信息，以改善產品設計和用戶體驗。如果您同意加入服務改進分析，則表示您同意OnePlus可以收集，使用和分析以下信息： n （1）配置數據； 
+ （2）應用程序的統計數據； 
+ （3）用戶行為數據； 
+ 通過收集和分析上述數據，OnePlus旨在改善用戶體驗，所有過程均以匿名和加密的形式發送給OnePlus，例如通過提高電池效率和系統穩定性。此數據將不會用於任何個人身份識別。加入本計劃後，您可以隨時通過以下方法退出：“設置”>“系統”>“體驗改善計劃”>“服務改善分析”。請參考OnePlus隱私政策，以了解有關OnePlus處理的信息的更多信息。 一旦退出該計劃，OnePlus將停止收集上述信息。"</string>
+    <string name="user_experience_program">用戶體驗計劃</string>
+    <string name="user_guest">訪客</string>
+    <string name="user_info_settings_title">使用者資訊</string>
+    <string name="user_need_lock_message">如要建立設有限制的個人資料，你必須先設定螢幕鎖定來保護你的應用程式和個人資料。</string>
+    <string name="user_new_profile_name">新的個人資料</string>
+    <string name="user_new_user_name">新使用者</string>
+    <string name="user_privacy_policy">隱私政策</string>
+    <string name="user_privacy_policy_content">"一、前言
+ 1.1\u0009\u0009請您知悉，一加重視用戶的隱私，並儘力採取有效措施保護用戶隱私。
+ 1.2\u0009\u0009鑑於您在使用一加的服務時，一加可能會收集和使用您的相關信息。一加希望通過本《隱私政策》向您說明，一加將如何收集、使用、儲存和分享這些信息，以及一加為您提供的訪問、更新、控制和保護這些信息的方式。
+ 1.3\u0009\u0009本《隱私政策》與您所使用的一加服務息息相關，希望您仔細閱讀。在需要時，請按照本《隱私政策》的指引，作出您認為適當的選擇。
+ 1.4\u0009\u0009您使用或繼續使用一加的服務，即意味著同意一加按照本《隱私政策》收集、使用、儲存和分享您的相關信息。
+ 二、一加可能收集的信息
+ 一加在為您提供服務時，可能會收集、儲存和使用下列與您有關的信息。如果您不提供相關信息，可能無法註冊成為一加的用戶或無法享受一加提供的某些服務，或者無法達到相關服務擬達到的效果。
+ 2.1\u0009\u0009您提供的信息
+ 2.1.1\u0009\u0009您在註冊賬戶或使用一加的服務時，向一加提供的相關個人信息，例如姓名、電話號碼、電子郵件、通訊地址和銀行賬號等；
+ 2.1.2\u0009\u0009您通過一加的服務向其他方提供的共享信息（例如分享相冊、日記心情、事件評論等），以及您使用一加的服務時所儲存的信息。
+ 2.2\u0009\u0009其他方分享的您的信息
+ 即其他方使用一加的服務時所提供有關您的共享信息。
+ 2.3\u0009\u0009一加獲取的您的信息
+ 您使用服務時，一加可能收集如下信息：
+ 2.3.1\u0009\u0009日誌信息，指您使用一加的服務時，系統可能通過cookies、web beacon或其他方式自動採集的技術信息，包括：
+ (a) 設備或軟件信息，例如設備名稱和型號、設備識別碼（IMEI）、作業系統版本號、安卓版本號、裝置所選擇的語言、SIM卡電信運營商和所屬國家等信息；
+ (b) 在使用一加服務時搜索或瀏覽的信息，例如您使用的網頁搜索詞語、訪問的社交媒體頁面url地址，以及您在使用一加服務時瀏覽或要求提供的其他信息和內容詳情；
+ (c) 您通過一加的服務進行通訊的信息，例如曾通訊的賬號，以及通訊時間、數據和時長；
+ (d) 您通過一加的服務分享的內容所包含的信息（元數據），例如拍攝或上傳的共享照片或錄像的日期、時間或地點等。
+ 2.3.2\u0009\u0009位置信息，指您開啟設備定位功能並使用一加基於位置提供的相關服務時，收集的有關您位置的信息，包括：
+ (a) 您通過具有定位功能的移動設備使用一加的服務時，通過GPS或WiFi等方式收集的您的地理位置信息；
+ (b) 您或其他用戶提供的包含您所處地理位置的實時信息，例如您提供的賬戶信息中包含的您所在地區信息，您或其他人上傳的顯示您當前或曾經所處地理位置的共享信息，您或其他人共享的照片包含的地理標記信息；
+ (c) 您可以通過關閉定位功能，停止對您的地理位置信息的收集。
+ 2.4\u0009\u0009除以上信息外，一加可能還會收集其他非個人信息，這些信息種類繁多，無法一一例舉，但都是機器自動收集、儲存、分析和使用，不具有個人可識別性。
+ 三、一加可能如何使用信息
+ 3.1\u0009\u0009一加可能將在向您提供服務的過程中所收集的信息用作下列用途：
+ 3.1.1\u0009\u0009向您提供服務；
+ 3.1.2\u0009\u0009在一加提供服務時，用於身份驗證、客戶服務、安全防範、詐騙監測、存檔和備份用途，確保一加向您提供的產品和服務的安全性；
+ 3.1.3\u0009\u0009幫助一加設計新服務，改善一加現有服務；
+ 3.1.4\u0009\u0009使一加更加了解您如何接入和使用一加的服務，從而針對性地回應您的個性化需求，例如語言設定、位置設定、個性化的幫助服務和指示，或對您和其他用戶作出其他方面的回應；
+ 3.1.5\u0009\u0009讓您參與有關一加產品和服務的調研。
+ 3.2\u0009\u0009為了讓您有更好的體驗、改善一加的服務或您同意的其他用途，在符合相關法律法規的前提下，一加可能將通過某一項服務所收集的信息，以匯集信息或者個性化的方式，用於一加的其他服務。如果一加在相關服務中提供了相應選項，您也可以授權一加將該服務所提供和儲存的信息用於一加的其他服務。
+ 四、一加可能分享的信息
+ 4.1\u0009\u0009除以下情形外，未經您同意，一加以及一加的關聯公司不會與任何第三方分享您的個人信息：
+ 4.1.1\u0009\u0009一加以及一加的關聯公司，可能將您的個人信息與一加的關聯公司、合作夥伴及第三方服務供應商、承包商及代理（例如代表一加發出電子郵件或推送通知的通訊服務提供商、為一加提供位置數據的地圖服務供應商）分享（他們可能並非位於您所在的法域），用作下列用途。如一加或一加的關聯公司與任何上述第三方分享您的個人信息，一加將努力確保該等第三方在使用您的個人信息時遵守本《隱私政策》及一加要求其遵守的其他適當的保密和安全措施。
+ (a) 向您提供一加的服務；
+ (b) 實現“一加可能如何使用信息”部分所述目的；
+ (c) 履行一加在《最終用戶許可協議》或本《隱私政策》中的義務和行使一加的權利；
+ (d) 理解、維護和改善一加的服務。
+ 4.1.2\u0009\u0009一加或一加的關聯公司還可能為以下需要而保留、保存或披露您的個人信息：
+ (a) 遵守適用的法律法規；
+ (b) 遵守法院命令或其他法律程序的規定；
+ (c) 遵守相關政府機關的要求；
+ (d) 為遵守適用的法律法規、維護社會公共利益，或保護一加的客戶、一加或一加的集團公司、其他用戶或僱員的人身和財產安全或合法權益的合理必需的用途。
+ 五、您如何訪問和控制自己的個人信息
+ 5.1\u0009\u0009一加將盡一切可能採取適當的技術手段，保證您可以訪問、更新、更正、刪除自己的註冊信息或使用一加的服務時提供的其他個人信息。在訪問、更新、更正和刪除前述信息時，一加可能會要求您進行身份驗證，以保障賬戶安全。
+ 六、信息安全
+ 6.1\u0009\u0009一加僅在本《隱私政策》所述目的所必需的期間和法律法規要求的時限內保留您的個人信息。
+ 6.2\u0009\u0009一加使用各種管理政策（例如製定信息安全制度、和管理信息的員工簽訂保密協議、只允許工作相關的員工接觸所收集的信息等）、安全技術和程式（例如訪問需輸入密碼、門禁隔離、電腦使用監控等），以防信息的丟失、不當使用、未經授權閱覽或披露。例如，在某些服務中，一加將利用加密技術（例如SSL）來保護您提供的個人信息。但請您理解，由於技術的限制以及可能存在的各種惡意手段，在互聯網行業，即便竭盡所能加強安全措施，也不可能始終保證信息百分之百的安全。您需要了解，您接入一加的服務所用的系統和通訊網絡，有可能因一加可控範圍外的因素而出現問題。
+ 6.3\u0009\u0009如果一加知悉其所獲取並儲存的數據安全受到危害，或由於外部行為（包括但不限於外部安全攻擊）使用戶的非公開信息被披露給不相關第三方，儘管本政策中有其他免責規定，一加仍將採取其認為適當的合理措施（包括但不限於內部調查、上報並通知執法機構、以及配合執法機構工作等）。同時，一加也會在其認為適當的情況下採取合法合理措施通知相關用戶，告知其被披露的信息以及一加對該等情況的知悉程度。
+ 七、一加可能向您發送的郵件和信息
+ 7.1\u0009\u0009郵件和信息推送
+ 您在使用一加的服務時，一加可能根據您上傳的通訊方式或者其他途徑向您的設備發送電子郵件、新聞或推送通知，您同意接受這些信息。
+ 7.2\u0009\u0009與服務有關的公告
+ 一加可能在必要時（例如因係統維護而暫停某一項服務時）向您發出與服務有關的公告。您可能無法取消這些與服務有關、性質不屬於推廣的公告。
+ 八、隱私政策的適用範圍
+ 8.1\u0009\u0009除針對某些特定服務另有規定特定隱私政策外，一加所有的服務均適用本《隱私政策》。針對某些特定服務的特定隱私政策，將更具體地說明一加在該等服務中如何使用您的信息，該特定服務的隱私政策構成本《隱私政策》的一部分。如相關特定服務的隱私政策與本《隱私政策》有不一致之處，適用該特定服務的隱私政策。
+ 8.2\u0009\u0009除本《隱私政策》另有規定外，本《隱私條款》所用詞語將與《最終用戶許可協議》所定義的詞語具有相同的涵義。
+ 8.3\u0009\u0009本政策同時以中英文兩種語言書就，中英文版本不一致的，以中文版本為准。
+ 九、隱私政策的適用例外
+ 9.1\u0009\u0009請您注意，本《隱私政策》不適用於以下情況：
+ 9.1.1\u0009\u0009通過一加的服務而接入的第三方服務（包括任何第三方網站）收集的信息；
+ 9.1.2\u0009\u0009通過在一加服務中進行廣告服務的其他公司或機構所收集的信息。
+ 9.2\u0009\u0009您使用上述第三方的社交媒體服務或其他服務（包括您向該等第三方提供的任何個人信息），須受該第三方的服務條款及隱私政策（而非本《隱私政策》）約束，您需要仔細閱讀其條款。
+ 9.3\u0009\u0009本《隱私政策》僅適用於一加所收集的信息，並不適用於任何第三方提供的服務或第三方的信息使用規則，一加對任何第三方使用由您提供的信息不承擔任何責任。
+ 十、未成年人使用一加的服務
+ 10.1\u0009\u0009一加要求未成年人在其法定監護人的許可和指導下使用一加的產品或服務。
+ 10.2\u0009\u0009如果您是未成年人，您需要確保在提供個人信息前，已經獲得了您合法監護人的同意。
+ 十一、變更
+ 11.1\u0009\u0009一加可能適時修訂本《隱私政策》的條款，該等修訂構成本《隱私政策》的一部分。如該等修訂造成您在本《隱私政策》下權利的實質減少，一加將在修訂生效前通過約定的通訊方式通知您。在該種情況下，若您繼續使用一加的服務，即表示同意受經修訂的本《隱私政策》的約束。
+ 十二、信息反饋
+ 12.1\u0009\u0009一加如果有任何信息向您發出，將會發送至您註冊賬戶或者購買一加產品時所留下的電子郵箱、手機號碼、通訊地址或者直接通過本軟件進行推送；如果通過電子通訊方式進行發送的，您的設備或者所使用的電子系統收到信息時視為送達；如果採用快遞形式發送的，快遞發出後的第三天視為送達。
+ 12.2\u0009\u0009如果您對本《隱私政策》或者一加產品有任何意見、建議或者疑問歡迎隨時給一加反饋。一加的聯繫方式是：（1）電子郵箱地址：user@oneplus.cn；（2）快遞地址：深圳市福田區車公廟泰然八路泰然大廈C座18樓，郵編: 518040；（3）電話: 0755-61882366。
+ （以下無正文）"</string>
+    <string name="user_protocal_content">"《最終用戶許可協議》（以下簡稱“本協議”）是您（或稱“用戶”）與深圳市萬普拉斯科技有限公司（以下簡稱“一加”）及其合作夥伴之間關於一加產品使用所訂立的協議。如果您是未成年人，請在您的監護人指引下閱讀該協議以及購買和使用一加產品。一加在此特別提醒您認真閱讀、充分理解本協議中各條款，如果您有包括但不限於購買、支付、下載、安裝、激活、註冊、登陸、使用、升級、以及更新一加產品的行為，即視為對本協議的接受。如果您不接受本協議，在滿足一加銷售政策的條件下，可以將產品退回一加。
+ 一、定義
+ 1.1\u0009\u0009本軟件，指由一加或其許可方通過一加終端設備所提供的軟件及其更新或升級版本；本軟件包括但不限於手機系統（H2OS或者O2OS）以及系統的預裝工具應用。
+ 1.2\u0009\u0009本設備，指由一加提供的能夠使用相關軟件、程式或服務的終端設備，即一加手機。
+ 1.3\u0009\u0009一加產品：本軟件和本設備，以及通過本軟件和本設備提供的服務合稱為一加產品；
+ 本協議是一加產品的組成部分，也對一加產品進行一定程度的範圍界定。
+ 二、使用授權
+ 2.1\u0009\u0009一加產品包含的所有版權、商標權、專利權、商業秘密等知識產權，以及與一加產品相關的其他所有信息，包括但不限於文字表述及其組合、色彩、界面設計、結構框架、有關數據和電子文檔等，均受相關法律法規以及國際公約的保護。除第三方授權許可使用的外（例如根據開源協議使用的開源軟件），一加享有一加產品的完整知識產權。
+ 2.2\u0009\u0009一加授權（請注意不是出售）本設備的合法用戶在本設備的正當使用範圍內使用本軟件及其相關內容，上述許可為有限的、非專有的、不可轉讓的許可。有限的許可是指許可權限是本協議明確約定的，本協議沒有約定的您就無權享有，且許可使用必須在本設備上使用，如果您的一加手機丟失、損壞、贈與他人，您就無權再使用本軟件；非專有的許可是指一加還可以把權利授予第三方；不可轉讓的，指您不允許商業使用本軟件，如果您需要轉讓（例如二手轉讓）該軟件，必須連同一加手機一起轉讓，且保證受讓方遵守本協議，且轉讓手機後，您無權再使用本軟件。
+ 2.3\u0009\u0009對於本設備中由第三方許可或提供一加使用的軟件，用戶在使用上述軟件時，應當遵守相關許可方的《最終用戶許可協議》以及相關知識產權條款。
+ 2.4\u0009\u0009許可使用費已經包含在您購買一加手機的費用中，您無須對使用授權額外支付費用，除非一加和您重新達成了一致意見，但您應該注意如果您使用一加產品接受第三方服務的，您可能需要向第三方支付費用。
+ 三、使用限制和服務變更
+ 3.1\u0009\u0009除非一加另行書面授權或本限制條款被認定為無效，用戶不得從事下述行為：
+ 3.1.1\u0009\u0009將本軟件安裝在任何未經一加明示許可的其它任何終端設備上；
+ 3.1.2\u0009\u0009以任何方式將本軟件用於任何商業用途或本聲明禁止的用途；
+ 3.1.3\u0009\u0009對本軟件進行出租、轉讓、再許可，或以其他方式轉讓對本軟件的任何權利；
+ 3.1.4\u0009\u0009在本軟件中添加其它軟件或將其它軟件與本軟件進行合併；
+ 3.1.5\u0009\u0009對本軟件進行修改、翻譯、反向工程、反向編譯、反彙編或創建衍生產品。
+ 3.1.6\u0009\u0009若發生上述禁止行為，一加有權立即終止本協議約定的使用授權，並保留追究您法律的責任的權利。
+ 3.2\u0009\u0009權利保留：未明示授權的其他一切權利仍歸一加所有，用戶需要使用其他權利時，應另行取得一加的書面同意。
+ 3.3\u0009\u0009在您使用一加產品的過程中，一加可能會向您推送某些信息，例如軟件的迭代升級以及更新信息，您同意在使用過程中顯示一加及其關聯方、合作單位所提供的推送信息及其他內容。如果您同意把本軟件升級為最新版本，包括但不限於用戶界面、色彩組合、桌面壁紙、內置功能、菜單列表、或者係統自帶的app等內容可能會發生變化，您同意接受這種變化帶來使用習慣的調整，且一加不會因為這種變化向您承擔任何法律責任或者賠償。
+ 3.4\u0009\u0009您知悉和同意：本軟件預裝的工具和應用，有些是可以刪除的，有些是不可以刪除的，有些可以直接使用，有些需要您安裝或者激活之後才能使用；同時，您也可以從第三工具平台下載和安裝各種工具應用, 但是如果出現包括但不限於軟件的兼容性、卡頓、病毒、惡意詐騙、隱私洩露等問題，您需要自己負責。
+ 3.5\u0009\u0009如您接受使用本軟件的升級版或更新版，即自動終止使用本軟件任何先前版本的權利，除非一加另行書面同意，否則您無權要求一加將更新版本恢復到任何先前版本。
+ 四、賬戶註冊
+ 4.1\u0009\u0009您無需註冊賬戶即可使用一加產品，但一加手機系統的某些功能、程式和服務，可能需要您註冊帳戶。如果您想體驗一加手機系統的更多功能，您可以選擇註冊帳戶並提供相關的個人信息。您註冊的賬戶為一加所有，但是您有使用管理的權利。您可以隨時終止使用您的賬戶，一加將會依據本協議保留或終止您的賬戶。在您註冊賬戶之前，您應當承諾和保證：
+ 4.1.1\u0009\u0009您應當對註冊信息的真實性、合法性、有效性承擔全部責任，不得冒充他人，不得利用他人的名義發布任何信息，不得惡意使用註冊帳戶導致其他人誤認。否則，一加有權立即停止提供服務，您應當獨自承擔由此而產生的法律責任。
+ 4.1.2\u0009\u0009您使用一加產品行為必須合法，並為自己註冊帳戶下的一切行為負責。一加無法且不會對因您行為而導致的任何損失或損害承擔責任。
+ 4.1.3\u0009\u0009您應當對您的登錄信息保密，避免被其他人獲取、使用，並在發現有可能觸犯法律的、未授權使用或懷疑為未授權使用的行為後，第一時間通知一加。否則，一加將不對您因未能遵守上述要求而造成的損失承擔責任。
+ 4.1.4\u0009\u0009您通過一加產品上傳或發佈到可公開獲取區域的任何內容，應保證對該作品享有合法著作權或者相應授權。如因違反上述要求導致任何第三方索賠或訴訟的，由您自行承擔責任。
+ 五、隱私保護
+ 5.1\u0009\u0009一加重視您的隱私，並儘力採取有效措施全面保護您隱私。在您使用一加產品過程中，一加可能會收集、儲存、處理、分享、使用您的個人信息和非個人信息。涉及隱私保護的詳細情況按照一加的《隱私政策》執行，《隱私政策》為本協議不可分割的一部分。
+ 六、免責聲明
+ 6.1\u0009\u0009請您知悉，如發生下述情形，一加不承擔任何法律責任：
+ 6.1.1\u0009\u0009依據法律規定或相關政府部門的要求提供您的個人信息；
+ 6.1.2\u0009\u0009由於您的使用不當或其他自身原因而導致任何個人信息的洩露；
+ 6.1.3\u0009\u0009任何由於黑客攻擊，電腦病毒的侵入，非法內容信息、騷擾信息的屏蔽、政府管制以及其他任何網絡、技術、通信線路、信息安全管理措施等原因造成的服務中斷、受阻等不能滿足您要求的情形；
+ 6.1.4\u0009\u0009您因第三方如運營商的通訊線路故障、技術問題、網絡、電腦故障、系統不穩定及其他因不可抗力造成損失的情形。
+ 6.1.5\u0009\u0009其他非因一加原因所導致的損失或者因第三方原因導致的損失，不管是直接的、間接的、偶發的、特殊的還是繼起的損失。
+ 6.2\u0009\u0009在相關法律或政策允許的範圍內，本軟件和本設備是按其現狀提供的，您開始使用一加產品後，則表明您接受一加產品的現狀，包括但不限於可能存在的系統漏洞、運行的出錯、反應的偶爾遲緩、以及安裝使用本軟件對其他軟件以及服務可能造成的不良影響等；一加及其許可方對本軟件的適銷性、特殊目的之適用性或未侵權等不提供任何保證。
+ 6.3\u0009\u0009對任何因錯誤使用、擅自修改本軟件或意外事故、不可抗力而導致的損失，一加均不承擔責任。
+ 6.4\u0009\u0009您使用一加產品，無論何種原因造成的損失以及損失類型，一加承擔的責任限額不超過您購買設備的價格，法律法規有另有明文規定的除外。
+ 七、修改與終止
+ 7.1\u0009\u0009修改
+ 7.1.1\u0009\u0009您知悉並同意，一加可能對本協議進行修改，但此等修改旨在於給您提供更好的服務或者依據法律法規的強制性規定而作出。如果本協議有任何實質性變更且減損您的權益的，一加將通過您提供的通訊方式或公告來通知您。如您在收到變更通知之後，繼續使用一加產品，則視為您已知曉此類變更並同意受其條款的約束。
+ 7.1.2\u0009\u0009一加可能在某個時候修改、關閉、保留一加產品之權利，您同意一加無需因修改、關閉或保留一加產品行為對您承擔責任。
+ 7.2\u0009\u0009終止
+ 7.2.1\u0009\u0009您知曉並同意，本協議於您第一次使用一加產品時生效，在您使用一加產品的過程中持續有效，直至依據本協議或法律規定而終止（例如您停止使用一加手機則本協議自然終止）。
+ 八、法律適用與爭議解決
+ 8.1\u0009\u0009法律適用
+ 本協議的訂立、生效、履行、解釋以及糾紛解決，均適用中華人民共和國法律，且排除衝突法的適用。如本協議中的某一條款與法律、法規相抵觸的，則按照法律、法規執行，某一條款被認定為無效，不影響其他條款的效力。
+ 8.2\u0009\u0009本協議同時以中英文兩種語言書就，中英文版本不一致的，以中文版本為准。
+ 8.3\u0009\u0009爭議解決
+ 如因履行本協議發生爭議的，應本著友好協商解決；協商不成的，任何一方可向被告所在地有管轄權的人民法院提起訴訟。
+ 九、信息反饋
+ 9.1\u0009\u0009一加如果有任何信息向您發出，將會發送至您購買一加產品時所留下的電子郵箱、手機號碼、通訊地址或者直接通過本軟件進行推送；如果通過電子通訊方式進行發送的，您的設備或者所使用的電子系統收到信息時視為送達；如果採用快遞形式發送的，快遞發出後的第三天視為送達。
+ 9.2\u0009\u0009如果您對本協議或者一加產品有任何意見、建議或者疑問歡迎隨時給一加反饋。一加的聯繫方式是：（1）電子郵箱地址：user@oneplus.cn；（2）快遞地址：深圳市福田區車公廟泰然八路泰然大廈C座18樓，郵編: 518040；（3）電話: 0755-61882366。
+ （以下無正文）"</string>
+    <string name="user_set_lock_button">設定鎖定</string>
+    <string name="user_setup_button_setup_later">暫時不要</string>
+    <string name="user_setup_button_setup_now">立即設定</string>
+    <string name="user_setup_dialog_message">請確保對方可以使用裝置並設定自己的空間</string>
+    <string name="user_setup_dialog_title">立即設定使用者？</string>
+    <string name="user_setup_profile_dialog_message">立即建立個人資料？</string>
+    <string name="user_switch_to_user">切換至%s</string>
+    <string name="v7_preference_off">關閉</string>
+    <string name="v7_preference_on">開啟</string>
+    <string name="verify_apps_over_usb_summary">檢查透過 ADB/ADT 安裝的應用程式是否具有有害行為。</string>
+    <string name="verify_apps_over_usb_title">透過 USB 驗證應用程式</string>
+    <string name="vpn_settings_not_available">這位使用者無法修改 VPN 設定</string>
+    <string name="wait_for_debugger">等待偵錯程式</string>
+    <string name="wait_for_debugger_summary">執行受偵錯的應用程式之前，先等待偵錯程序附加完成</string>
+    <string name="weather_services">天氣服務</string>
+    <string name="weather_services_description">允許系統使用天氣服務，為您提供更及時準確的天氣信息</string>
+    <string name="wifi_ap_unable_to_handle_new_sta">存取點暫時滿載</string>
+    <string name="wifi_cant_connect">無法連線</string>
+    <string name="wifi_cant_connect_to_ap">無法連線至「%1$s」</string>
+    <string name="wifi_check_password_try_again">請檢查密碼，然後再試一次</string>
+    <string name="wifi_connected_no_internet">沒有網際網路連線</string>
+    <string name="wifi_disabled_by_recommendation_provider">網路品質不佳，因此未連線</string>
+    <string name="wifi_disabled_generic">已停用</string>
+    <string name="wifi_disabled_network_failure">IP 設定失敗</string>
+    <string name="wifi_disabled_password_failure">驗證問題</string>
+    <string name="wifi_disabled_wifi_failure">WiFi 連線失敗</string>
+    <string name="wifi_disconnected">已中斷連線</string>
+    <string name="wifi_display_certification">無線螢幕分享認證</string>
+    <string name="wifi_display_certification_summary">顯示無線螢幕分享認證的選項</string>
+    <string name="wifi_enhanced_mac_randomization">Wi‑Fi 加強型 MAC 隨機化</string>
+    <string name="wifi_enhanced_mac_randomization_summary">啟用這個模式後，每次連線到啟用了 MAC 隨機化的網路時，這部裝置的 MAC 位址都可能會有所變更。</string>
+    <string name="wifi_fail_to_scan">無法掃描網路</string>
+    <string name="wifi_limited_connection">連線能力受限</string>
+    <string name="wifi_metered_label">計量付費</string>
+    <string name="wifi_no_internet">沒有可用的網際網路連線</string>
+    <string name="wifi_no_internet_no_reconnect">無法自動連線</string>
+    <string name="wifi_not_in_range">不在有效範圍內</string>
+    <string name="wifi_passpoint_expired">已失效</string>
+    <string name="wifi_remembered">已儲存</string>
+    <string name="wifi_scan_throttling">Wi-Fi 掃描調節</string>
+    <string name="wifi_scan_throttling_summary">降低耗電量以及改善網路效能</string>
+    <string name="wifi_security_none">無</string>
+    <string name="wifi_status_mac_randomized">MAC 位址已隨機化</string>
+    <string name="wifi_status_no_internet">沒有網際網路連線</string>
+    <string name="wifi_status_sign_in_required">必須登入</string>
+    <string name="wifi_unmetered_label">非計量付費</string>
+    <string name="wifi_verbose_logging">啟用 Wi‑Fi 詳細記錄設定</string>
+    <string name="wifi_verbose_logging_summary">讓 Wi‑Fi 記錄功能升級，在 Wi‑Fi 選擇器中依每個 SSID RSSI 顯示 Wi‑Fi 詳細記錄</string>
+    <string name="window_animation_scale_title">視窗動畫比例</string>
+    <string name="zen_alarm_warning">你不會聽到下一個%1$s 的鬧鐘</string>
+    <string name="zen_alarm_warning_indef">你不會聽到下一個%1$s 的鬧鐘，除非你預先關閉這項功能</string>
+    <string name="zen_interruption_level_priority">僅限優先通知</string>
+    <string name="zen_mode_and_condition">%1$s。%2$s</string>
+    <string name="zen_mode_duration_always_prompt_title">每次都詢問</string>
+    <string name="zen_mode_duration_settings_title">時間長度</string>
+    <string name="zen_mode_enable_dialog_turn_on">開啟</string>
+    <string name="zen_mode_forever">直到你關閉為止</string>
+    <string name="zen_mode_settings_summary_off">永不</string>
+    <string name="zen_mode_settings_turn_on_dialog_title">開啟「零打擾」模式</string>
+    <string name="zzz_input_dialog_alert_title">確認啟用此輸入法嗎？</string>
+    <string name="zzz_op_direct_boot_inputmethod_unaware_dialog_message">每當裝置重新啟動時，你必須解鎖手機才能使用此輸入法</string>
+    <string name="zzz_op_ime_security_warning">%1$s可能會收集你輸入的所有內容，包括密碼與信用卡號碼等個人資訊</string>
+    <string name="zzz_op_ime_warning_confirm">啟用</string>
+</resources>

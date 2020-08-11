@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="302.0dip" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:background="@drawable/bg_co_creation" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="17.0dip" android:textColor="@color/oneplus_contorl_text_color_primary_light" android:padding="@dimen/oneplus_contorl_padding_space4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/suw_co_create_header" />
+        <TextView android:textColor="@color/oneplus_contorl_text_color_secondary_default" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/oneplus_contorl_padding_space2" android:text="@string/suw_oobe_opt_dialog_text" android:paddingStart="@dimen/oneplus_contorl_padding_space4" android:paddingEnd="@dimen/oneplus_contorl_padding_space4" style="@style/oneplus_contorl_text_style_body1" />
+        <LinearLayout android:layout_gravity="right" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="6.0dip">
+            <Button android:textColor="@color/status_bar_color" android:id="@id/btnDisagree" android:background="@drawable/button_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/disagree_text" android:layout_centerInParent="true" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" android:layout_marginEnd="9.0dip" />
+            <Button android:textColor="@color/status_bar_color" android:id="@id/btnAgree" android:background="@drawable/button_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/suw_agree_continue_text" android:layout_centerInParent="true" android:layout_marginEnd="9.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

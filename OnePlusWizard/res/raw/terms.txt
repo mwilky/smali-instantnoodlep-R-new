@@ -1,0 +1,72 @@
+OxygenOS Privacy & Legal
+Terms and Conditions
+Updated: July 20, 2015
+
+OnePlus is pleased to offer you our products and services.  Please  take time to read these terms and conditions carefully before using OnePlus services.  You will gain access to OxygenOS on the premise that you agree to be bound by the following terms stated in the “OxygenOS Software License Agreement”.
+
+OxygenOS Software License Agreement
+Kind Reminder
+Please read this software license agreement (“Agreement”) carefully before using OxygenOS or downloading any updated version, and decide whether to accept this Agreement. If you agree, you will be bound by the terms of this Agreement. If you do not agree, please do not use OxygenOS or any updated version.
+
+License
+2.1 The software (including Boot ROM code and embedded software), interfaces, fonts and any data contained in the OxygenOS device (collectively referred to as “OxygenOS Software”) are developed and owned by OnePlus or its third party partners.  OnePlus hereby grants you a limited, non-exclusive, non-transferable license to use the OxygenOS Software under the terms of this Agreement. For the avoidance of doubt, OnePlus and its partners retain ownership and all the rights not expressly granted to you hereunder.
+
+Permitted use and limitation
+You are entitled to use the OxygenOS Software under the condition of the non-exclusive and non-transferable license, and you agree to use the OxygenOS Software in compliance with all applicable laws.
+
+You agree not to copy, modify, decrypt, disassemble, decompile, reverse engineer, derive the source code of or create derivative works of the OxygenOS Software, unless such use is allowed by applicable laws or by licensing terms governing use of open-source components.
+
+You may not rent, transfer, sub-license or assign the OxygenOS Software, and not install the OxygenOS Software in any other device without prior permission. Before transferring the OxygenOS device, you shall make sure that any party you transferred the device to reads and accepts this Agreement.
+
+Consent to Use of Data
+If you accept this Agreement, you agree that OnePlus may collect, maintain, process and use diagnostic, usage and related information (hereinafter referred to “Diagnostic and Usage Data”), including information about your OxygenOS device, system and application software. Such Diagnostic and Usage Data is collected in a form that does not personally identify you in order to provide and improve the products and services of OxygenOS.
+
+You acknowledge that OnePlus will take your privacy seriously and protect your privacy in accordance with the Privacy Policy, which is incorporated by the reference in this Agreement. You may find and read the Privacy Policy at: [oneplus.net/privacy-and-legal].
+Disclaimer of Warranties
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE OXYGENOS SOFTWARE AND SERVICES ARE PROVIDED "AS IS", WITH ALL FAULTS AND WITHOUT WARRANTY OF ANY KIND, AND ONEPLUS HEREBY DISCLAIMS ALL WARRANTIES AND CONDITIONS WITH RESPECT TO THE OXYGENOS SOFTWARE AND SERVICES, EITHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES AND/OR CONDITIONS OF MERCHANTABILITY, SATISFACTORY QUALITY, FITNESS FOR A PARTICULAR PURPOSE, ACCURACY, QUIET ENJOYMENT, AND NON-INFRINGEMENT OF THIRD PARTY RIGHTS.
+
+Limitation of Liability
+6.1 TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL ONEPLUS BE LIABLE FOR PERSONAL INJURY, OR ANY INCIDENTAL, SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES WHATSOEVER, INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF PROFITS, CORRUPTION OR LOSS OF DATA, FAILURE TO TRANSMIT OR RECEIVE ANY DATA, BUSINESS INTERRUPTION OR ANY OTHER COMMERCIAL DAMAGES OR LOSSES, ARISING OUT OF OR RELATED TO YOUR USE OR INABILITY TO USE THE OXYGENOS SOFTWARE AND SERVICES OR ANY THIRD PARTY SOFTWARE OR APPLICATIONS RELATED TO THE OXYGENOS SOFTWARE OR SERVICES, HOWEVER CAUSED, REGARDLESS OF THE THEORY OF LIABILITY (CONTRACT, TORT OR OTHERWISE) AND EVEN IF ONEPLUS HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. In no event shall OnePlus’ total liability to you for all damages (except as may be required by applicable law) exceed the amount of five hundred dollars (U.S. $500.00).
+
+6.2 IF YOU ARE IN SOME JURISDICTIONS, WHICH DO NOT ALLOW THE LIMITATION OF LIABILITY FOR PERSONAL INJURY, OR OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, THEN THIS LIMITATION MAY NOT APPLY TO YOU.
+
+8     Entire Agreement and Severable
+This License constitutes the entire agreement between you and OnePlus concerning the OxygenOS Software and supersedes all previous or contemporaneous understandings regarding to such subject matter.
+
+Provided any provision of this Agreement is prohibited, invalid or unenforceable in any jurisdiction, that provision will, as to that jurisdiction, be ineffective to the extent of the prohibition, invalidity or unenforceability, without invalidating the remaining provisions of this Agreement or affecting the validity or enforceability of that provision in any other jurisdiction, unless it materially alters the nature or material terms of this Agreement.
+9.    Term of Agreement.
+This Agreement commences on July 21, 2015 and continues in full force and effect, unless it is terminated or renewed in accordance with the terms of this Agreement.
+
+
+Privacy Policy
+You acknowledge that we will take your privacy seriously and will make every effort to take effective measures to protect your privacy. Please read the Privacy Policy which states how we collect, use, disclose, and store your information.
+Server Locations.
+The information collected by OnePlus may only be stored or transmitted to the Server hosted in appropriate territory according to the applicable laws and regulations of your residing location.
+
+How we collect the Information
+The information you voluntarily provide when using the OxygenOS software or services.
+System logs, namely the technical information the OxygenOS device may automatically collect when you use the OxygenOS device.
+
+How we use the Information
+Improve customer experience. Such information may be used internally to improve the Services and deepen your understanding in how to access and use the OxygenOS device so as to meet your customized requirements, such as language setting, position setting, customized help service and instructions.
+
+Disclose of Information
+We may disclose your information when required by law, legal process, litigation, public and governmental authorities within your country of residence.
+
+Information security
+We will only store your personal information during the necessary period for the purpose mentioned above and the time limit stipulated by the laws and regulations.
+We use various security techniques and procedures to prevent the loss, improper use, unauthorized reading or disclosure of the information. Notwithstanding, please understand that even the enhanced security measures will not be able to guarantee 100% security of the information in the internet industry due to technical restrictions and various possible malicious means. You also need to understand that such threats or problems may occur in the system and communication network due to some factors beyond our control.
+Once we realize that the information we collected and stored has been threatened or disclosed wrongly due to external actions, including but not limited to external security attack, we will take rational and appropriate measures, including but not limited to internal investigation, reporting and notifying the enforcement institutions or cooperating with the enforcement institutions regardless of any other disclaimer of warranties.
+
+Children Protection
+We demand that the children can only use the OxygenOS device under the permission and instructions of their statutory guardians.
+If you are a child, you shall make sure that you have received permission from your statutory guardian before providing your personal information. And if you are under 13 or an equivalent minimum age in the relevant jurisdiction, you cannot provide your personal information unless your parents provide consent to us.
+We warrant that we do not knowingly collect, use or disclose personal information from children under 13, or equivalent minimum age in the relevant jurisdiction, without verifiable parental consent. Once we recognize that we have collected the personal information of a child under 13, or equivalent minimum age depending on jurisdiction, without first receiving verifiable parental consent, we will take steps to delete the information as soon as possible.
+
+CONTACT INFORMATION
+If you have comments or questions about this Privacy Policy, please contact us according to the information we listed below:
+
+Address: Floor 18, Block C, Tairan Building, Che Gong Miao, Futian District, Shenzhen, China
+Zip Code: 518040
+Tel: 0755-61882366
+Email: user@oneplus.cn

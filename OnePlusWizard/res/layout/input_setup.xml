@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#fffafafa" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/oneplus_contorl_layout_margin_left2" android:layout_marginTop="42.0dip" android:src="@drawable/setup_input" />
+    <TextView android:textAppearance="@style/oneplus_contorl_text_style_headline" android:textColor="@color/oneplus_contorl_text_color_primary_light" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/oneplus_contorl_layout_margin_left2" android:layout_marginTop="16.0dip" />
+    <TextView android:textAppearance="@style/oneplus_contorl_text_style_body2" android:textColor="@color/oneplus_contorl_text_color_primary_light" android:id="@id/input_summary" android:paddingLeft="@dimen/oneplus_contorl_layout_margin_left2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/oneplus_contorl_layout_margin_right1" android:text="@string/input_summary" />
+    <RelativeLayout android:id="@id/swiftkey_input" android:layout_width="fill_parent" android:layout_height="@dimen/oneplus_contorl_list_item_height_two_line1" android:layout_marginTop="@dimen/oneplus_contorl_layout_margin_top2">
+        <View android:background="@color/oneplus_contorl_divider_color_light" android:layout_width="fill_parent" android:layout_height="@dimen/oneplus_contorl_divider_height_standard" android:layout_alignParentBottom="true" />
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/oneplus_contorl_layout_margin_left2" android:paddingRight="@dimen/oneplus_contorl_layout_margin_right2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+            <TextView android:textAppearance="@style/oneplus_contorl_text_style_subheading" android:textColor="@color/oneplus_contorl_text_color_primary_light" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/input_swiftkey_radio_text" />
+            <TextView android:textAppearance="@style/oneplus_contorl_text_style_body1" android:textColor="@color/oneplus_contorl_text_color_secondary_light" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/input_swiftkey_radio_abstract_text" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/google_input" android:layout_width="fill_parent" android:layout_height="@dimen/oneplus_contorl_list_item_height_two_line1">
+        <View android:background="@color/oneplus_contorl_divider_color_light" android:layout_width="fill_parent" android:layout_height="@dimen/oneplus_contorl_divider_height_standard" android:layout_alignParentBottom="true" />
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/oneplus_contorl_layout_margin_left2" android:paddingRight="@dimen/oneplus_contorl_layout_margin_right2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+            <TextView android:textAppearance="@style/oneplus_contorl_text_style_subheading" android:textColor="@color/oneplus_contorl_text_color_primary_light" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/input_google_radio_text" />
+            <TextView android:textAppearance="@style/oneplus_contorl_text_style_body1" android:textColor="@color/oneplus_contorl_text_color_secondary_light" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/input_google_radio_abstract_text" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

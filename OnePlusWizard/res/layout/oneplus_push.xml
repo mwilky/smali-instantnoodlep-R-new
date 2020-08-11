@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.setupdesign.GlifLayout android:icon="@drawable/oneplus_push" android:id="@id/setup_wizard_layout" android:layout="@layout/sud_glif_blank_template" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true" app:sucHeaderText="@string/oneplus_push">
+        <com.android.internal.widget.LinearLayoutWithDefaultTouchRecepient android:orientation="vertical" android:id="@id/topLayout" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/SudGlifHeaderContainer">
+                    <ImageView android:id="@id/sud_layout_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/oneplus_push" style="@style/SudGlifIcon" />
+                    <TextView android:gravity="center_horizontal" android:id="@id/suc_layout_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/oneplus_push" android:accessibilityLiveRegion="polite" style="@style/SudGlifHeaderTitle" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                    <TextView android:textSize="16.0sp" android:textColor="#ff000000" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/oneplus_push_description" android:lineSpacingExtra="5.0dip" android:breakStrategy="simple" />
+                </LinearLayout>
+                <ScrollView android:scrollbarSize="4.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/agree" android:layout_below="@id/setup_wizard_layout">
+                    <TextView android:textSize="16.0sp" android:textColor="#ff000000" android:gravity="center_horizontal" android:id="@id/input_summary" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="27.0dip" android:text="@string/oneplus_push_details" android:lineSpacingExtra="5.0dip" android:breakStrategy="simple" />
+                </ScrollView>
+            </LinearLayout>
+        </com.android.internal.widget.LinearLayoutWithDefaultTouchRecepient>
+    </com.google.android.setupdesign.GlifLayout>
+</RelativeLayout>

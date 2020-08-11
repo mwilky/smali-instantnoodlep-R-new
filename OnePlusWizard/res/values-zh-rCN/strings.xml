@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="abc_action_bar_home_description">转到首页</string>
+    <string name="abc_action_bar_up_description">转到上一层级</string>
+    <string name="abc_action_menu_overflow_description">更多选项</string>
+    <string name="abc_action_mode_done">完成</string>
+    <string name="abc_activity_chooser_view_see_all">查看全部</string>
+    <string name="abc_activitychooserview_choose_application">选择应用</string>
+    <string name="abc_capital_off">关闭</string>
+    <string name="abc_capital_on">开启</string>
+    <string name="abc_menu_alt_shortcut_label">Alt+</string>
+    <string name="abc_menu_ctrl_shortcut_label">Ctrl+</string>
+    <string name="abc_menu_delete_shortcut_label">Delete 键</string>
+    <string name="abc_menu_enter_shortcut_label">Enter 键</string>
+    <string name="abc_menu_function_shortcut_label">Fn+</string>
+    <string name="abc_menu_meta_shortcut_label">Meta+</string>
+    <string name="abc_menu_shift_shortcut_label">Shift+</string>
+    <string name="abc_menu_space_shortcut_label">空格键</string>
+    <string name="abc_menu_sym_shortcut_label">Sym+</string>
+    <string name="abc_prepend_shortcut_label">Menu+</string>
+    <string name="abc_search_hint">搜索…</string>
+    <string name="abc_searchview_description_clear">清除查询</string>
+    <string name="abc_searchview_description_query">搜索查询</string>
+    <string name="abc_searchview_description_search">搜索</string>
+    <string name="abc_searchview_description_submit">提交查询</string>
+    <string name="abc_searchview_description_voice">语音搜索</string>
+    <string name="abc_shareactionprovider_share_with">分享对象</string>
+    <string name="abc_shareactionprovider_share_with_application">与%s分享</string>
+    <string name="abc_toolbar_collapse_description">收起</string>
+    <string name="about_action_bar_title">关于</string>
+    <string name="about_app_version_text">版本 %s</string>
+    <string name="about_privacy_policy">隐私政策</string>
+    <string name="about_release_note_title">更新日志:</string>
+    <string name="about_stability_improvement_program">关于系统稳定改进计划</string>
+    <string name="about_terms_service">用户协议</string>
+    <string name="about_user_experience_program">关于用户体验计划</string>
+    <string name="accessibility_display_daltonizer_preference_subtitle">借助色彩校正功能，您可以调整设备上的颜色显示方式</string>
+    <string name="accessibility_display_daltonizer_preference_title">色彩校正</string>
+    <string name="accessibility_manual_zen_less_time">减少时间。</string>
+    <string name="accessibility_manual_zen_more_time">增加时间。</string>
+    <string name="accessibility_no_wifi">WLAN 连接已断开。</string>
+    <string name="accessibility_wifi_off">WLAN 已关闭。</string>
+    <string name="accessibility_wifi_one_bar">WLAN 信号强度为一格。</string>
+    <string name="accessibility_wifi_security_type_none">开放网络</string>
+    <string name="accessibility_wifi_security_type_secured">安全网络</string>
+    <string name="accessibility_wifi_signal_full">WLAN 信号满格。</string>
+    <string name="accessibility_wifi_three_bars">WLAN 信号强度为三格。</string>
+    <string name="accessibility_wifi_two_bars">WLAN 信号强度为两格。</string>
+    <string name="accessor_expires_text">租约到期时间是 %s</string>
+    <string name="accessor_info_title">共享数据的应用</string>
+    <string name="accessor_no_description_text">此应用未提供任何说明。</string>
+    <string name="active_input_method_subtypes">有效的输入法</string>
+    <string name="adb_device_fingerprint_title_format">设备指纹：%1$s</string>
+    <string name="adb_device_forget">取消保存</string>
+    <string name="adb_keys_warning_message">是否针对您之前授权的所有计算机撤消 USB 调试的访问权限？</string>
+    <string name="adb_pair_method_code_summary">使用六位数验证码配对新设备</string>
+    <string name="adb_pair_method_code_title">使用配对码配对设备</string>
+    <string name="adb_pair_method_qrcode_summary">使用二维码扫描器配对新设备</string>
+    <string name="adb_pair_method_qrcode_title">使用二维码配对设备</string>
+    <string name="adb_paired_devices_title">已配对的设备</string>
+    <string name="adb_pairing_device_dialog_failed_msg">请确保设备已连接到同一网络。</string>
+    <string name="adb_pairing_device_dialog_failed_title">配对失败</string>
+    <string name="adb_pairing_device_dialog_pairing_code_label">WLAN 配对码</string>
+    <string name="adb_pairing_device_dialog_title">与设备配对</string>
+    <string name="adb_qrcode_pairing_device_failed_msg">无法配对设备。可能是因为二维码不正确，或者设备未连接到同一网络。</string>
+    <string name="adb_warning_message">USB 调试仅用于开发目的。该功能可用于在您的计算机和设备之间复制数据、在您的设备上安装应用（事先不发通知）以及读取日志数据。</string>
+    <string name="adb_warning_title">是否允许 USB 调试？</string>
+    <string name="adb_wireless_connection_failed_message">确保%1$s已连接到正确的网络</string>
+    <string name="adb_wireless_connection_failed_title">连接失败</string>
+    <string name="adb_wireless_device_connected_summary">当前已连接</string>
+    <string name="adb_wireless_device_details_title">设备详细信息</string>
+    <string name="adb_wireless_error">错误</string>
+    <string name="adb_wireless_ip_addr_preference_title">IP 地址和端口</string>
+    <string name="adb_wireless_list_empty_off">要查看和使用可用的设备，请开启无线调试</string>
+    <string name="adb_wireless_no_network_msg">请连接到 WLAN 网络</string>
+    <string name="adb_wireless_qrcode_pairing_description">扫描二维码即可通过 WLAN 配对设备</string>
+    <string name="adb_wireless_qrcode_pairing_title">扫描二维码</string>
+    <string name="adb_wireless_qrcode_summary">扫描二维码即可通过 WLAN 配对设备</string>
+    <string name="adb_wireless_settings">无线调试</string>
+    <string name="adb_wireless_verifying_qrcode_text">正在配对设备…</string>
+    <string name="adbwifi_warning_message">无线调试仅用于开发目的。该功能可用于在您的计算机和设备之间复制数据、在您的设备上安装应用（事先不发通知）以及读取日志数据。</string>
+    <string name="adbwifi_warning_title">要允许无线调试吗？</string>
+    <string name="agree_text">同意</string>
+    <string name="alarm_template">时间：%1$s</string>
+    <string name="alarm_template_far">时间：%1$s</string>
+    <string name="allow_mock_location">允许模拟位置</string>
+    <string name="allow_mock_location_summary">允许模拟位置</string>
+    <string name="android_beta_feedback">反馈</string>
+    <string name="android_beta_message">该设备加入了 Android Beta 体验项目。该项目允许 Android 开发者和热心用户抢先体验 Android 预发布版本。若要了解 Android Beta 体验项目的更多信息，或者要退出该项目，请访问 <a href="https://www.oneplus.com/developer-preview">https://www.oneplus.com/developer-preview</a>。</string>
+    <string name="android_beta_ok">确认</string>
+    <string name="android_beta_program">Android Beta 体验项目</string>
+    <string name="animator_duration_scale_title">Animator 时长缩放</string>
+    <string name="apn_settings_not_available">此用户无权修改接入点名称设置</string>
+    <string name="app_name">安装向导</string>
+    <string name="app_process_limit_title">后台进程限制</string>
+    <string name="auto_connect_disable">自动连接已关闭</string>
+    <string name="available_via_app">可通过“%1$s”使用</string>
+    <string name="available_via_carrier">可通过%1$s连接</string>
+    <string name="available_via_passpoint">可通过%1$s连接</string>
+    <string name="back">返回上一级</string>
+    <string name="back_button_label">上一步</string>
+    <string name="back_home_recents_text">返回、桌面、多任务</string>
+    <string name="back_text">从侧面边缘返回</string>
+    <string name="battery_info_status_charging">正在充电</string>
+    <string name="battery_info_status_charging_fast">正在快速充电</string>
+    <string name="battery_info_status_charging_slow">正在慢速充电</string>
+    <string name="battery_info_status_discharging">未在充电</string>
+    <string name="battery_info_status_full">电量充足</string>
+    <string name="battery_info_status_not_charging">已插入电源，但是现在无法充电</string>
+    <string name="battery_info_status_unknown">未知</string>
+    <string name="blob_expires_text">到期时间是 %s</string>
+    <string name="blob_id_text">共享数据 ID：%d</string>
+    <string name="bluetooth_a2dp_profile_summary_connected">已连接到媒体音频</string>
+    <string name="bluetooth_a2dp_profile_summary_use_for">用于媒体音频</string>
+    <string name="bluetooth_active_battery_level">使用中，电池电量：%1$s</string>
+    <string name="bluetooth_active_battery_level_untethered">已启用，左：目前电量为 %1$s；右：目前电量为 %2$s</string>
+    <string name="bluetooth_active_no_battery_level">使用中</string>
+    <string name="bluetooth_battery_level">%1$s 的电量</string>
+    <string name="bluetooth_battery_level_untethered">左：目前电量为 %1$s；右：目前电量为 %2$s</string>
+    <string name="bluetooth_connected">已连接%1$s</string>
+    <string name="bluetooth_connected_battery_level">已连接，电量为 %1$s %2$s</string>
+    <string name="bluetooth_connected_no_a2dp">已连接（无媒体信号）%1$s</string>
+    <string name="bluetooth_connected_no_a2dp_battery_level">已连接（无媒体信号），电量为 %1$s %2$s</string>
+    <string name="bluetooth_connected_no_headset">已连接（无手机信号）%1$s</string>
+    <string name="bluetooth_connected_no_headset_battery_level">已连接（无手机信号），电量为 %1$s %2$s</string>
+    <string name="bluetooth_connected_no_headset_no_a2dp">已连接（无手机或媒体信号）%1$s</string>
+    <string name="bluetooth_connected_no_headset_no_a2dp_battery_level">已连接（无手机或媒体信号），电量为 %1$s %2$s</string>
+    <string name="bluetooth_connected_no_map">已连接（无消息访问权限）%1$s</string>
+    <string name="bluetooth_connecting">正在连接...</string>
+    <string name="bluetooth_disable_absolute_volume">停用绝对音量功能</string>
+    <string name="bluetooth_disable_absolute_volume_summary">停用蓝牙绝对音量功能，即可避免在连接到远程设备时出现音量问题（例如音量高得让人无法接受或无法控制音量等）。</string>
+    <string name="bluetooth_disconnected">已断开连接</string>
+    <string name="bluetooth_disconnecting">正在断开连接...</string>
+    <string name="bluetooth_enable_gabeldorsche">启用“Gabeldorsche”</string>
+    <string name="bluetooth_enable_gabeldorsche_summary">启用“蓝牙 Gabeldorsche”功能堆栈。</string>
+    <string name="bluetooth_headset_profile_summary_connected">已连接到手机音频</string>
+    <string name="bluetooth_headset_profile_summary_use_for">用于手机音频</string>
+    <string name="bluetooth_hearing_aid_profile_summary_connected">已连接到助听器</string>
+    <string name="bluetooth_hearing_aid_profile_summary_use_for">用于助听器</string>
+    <string name="bluetooth_hearingaid_left_battery_level">左侧 - 电池电量：%1$s</string>
+    <string name="bluetooth_hearingaid_left_pairing_message">正在配对左侧助听器…</string>
+    <string name="bluetooth_hearingaid_right_battery_level">右侧 - 电池电量：%1$s</string>
+    <string name="bluetooth_hearingaid_right_pairing_message">正在配对右侧助听器…</string>
+    <string name="bluetooth_hid_profile_summary_connected">已连接到输入设备</string>
+    <string name="bluetooth_hid_profile_summary_use_for">用于输入</string>
+    <string name="bluetooth_map_profile_summary_connected">已连接到地图</string>
+    <string name="bluetooth_map_profile_summary_use_for">用于地图</string>
+    <string name="bluetooth_opp_profile_summary_connected">已连接到文件传输服务器</string>
+    <string name="bluetooth_opp_profile_summary_not_connected">未连接到文件传输服务器</string>
+    <string name="bluetooth_opp_profile_summary_use_for">用于文件传输</string>
+    <string name="bluetooth_pairing">正在配对...</string>
+    <string name="bluetooth_pairing_accept">配对</string>
+    <string name="bluetooth_pairing_accept_all_caps">配对</string>
+    <string name="bluetooth_pairing_decline">取消</string>
+    <string name="bluetooth_pairing_device_down_error_message">无法与“%1$s”进行通信。</string>
+    <string name="bluetooth_pairing_error_message">无法与“%1$s”进行配对。</string>
+    <string name="bluetooth_pairing_pin_error_message">PIN码或配对密钥不正确，无法与%1$s配对。</string>
+    <string name="bluetooth_pairing_rejected_error_message">%1$s 已拒绝配对。</string>
+    <string name="bluetooth_pairing_will_share_phonebook">配对之后，所配对的设备将可以在建立连接后访问您的通讯录和通话记录。</string>
+    <string name="bluetooth_pan_nap_profile_summary_connected">与其他设备共享该设备的互联网连接</string>
+    <string name="bluetooth_pan_profile_summary_use_for">用于访问互联网</string>
+    <string name="bluetooth_pan_user_profile_summary_connected">经由其他设备连接到互联网</string>
+    <string name="bluetooth_profile_a2dp">媒体音频</string>
+    <string name="bluetooth_profile_a2dp_high_quality">HD 音频：%1$s</string>
+    <string name="bluetooth_profile_a2dp_high_quality_unknown_codec">HD 音频</string>
+    <string name="bluetooth_profile_headset">通话</string>
+    <string name="bluetooth_profile_hearing_aid">助听器</string>
+    <string name="bluetooth_profile_hid">输入设备</string>
+    <string name="bluetooth_profile_map">短信</string>
+    <string name="bluetooth_profile_opp">文件传输</string>
+    <string name="bluetooth_profile_pan">互联网连接</string>
+    <string name="bluetooth_profile_pan_nap">共享互联网连接</string>
+    <string name="bluetooth_profile_pbap">共享联系人</string>
+    <string name="bluetooth_profile_pbap_summary">用于共享联系人</string>
+    <string name="bluetooth_profile_sap">SIM 卡存取权限</string>
+    <string name="bluetooth_sap_profile_summary_connected">已连接到 SAP</string>
+    <string name="bluetooth_sap_profile_summary_use_for">用于存取 SIM 卡</string>
+    <string name="bluetooth_select_a2dp_codec_bits_per_sample">蓝牙音频每样本位数</string>
+    <string name="bluetooth_select_a2dp_codec_bits_per_sample_dialog_title">"触发蓝牙音频编解码器
+选择：每样本位数"</string>
+    <string name="bluetooth_select_a2dp_codec_channel_mode">蓝牙音频声道模式</string>
+    <string name="bluetooth_select_a2dp_codec_channel_mode_dialog_title">"触发蓝牙音频编解码器
+选择：声道模式"</string>
+    <string name="bluetooth_select_a2dp_codec_ldac_playback_quality">蓝牙音频 LDAC 编解码器：播放质量</string>
+    <string name="bluetooth_select_a2dp_codec_ldac_playback_quality_dialog_title">"触发蓝牙音频 LDAC
+编解码器选择：播放质量"</string>
+    <string name="bluetooth_select_a2dp_codec_sample_rate">蓝牙音频采样率</string>
+    <string name="bluetooth_select_a2dp_codec_sample_rate_dialog_title">"触发蓝牙音频编解码器
+选择：采样率"</string>
+    <string name="bluetooth_select_a2dp_codec_streaming_label">正在流式传输：%1$s</string>
+    <string name="bluetooth_select_a2dp_codec_type">蓝牙音频编解码器</string>
+    <string name="bluetooth_select_a2dp_codec_type_dialog_title">"触发蓝牙音频编解码器
+选择"</string>
+    <string name="bluetooth_select_a2dp_codec_type_help_info">灰显意味着手机或耳机不支持该功能</string>
+    <string name="bluetooth_select_avrcp_version_dialog_title">选择蓝牙 AVRCP 版本</string>
+    <string name="bluetooth_select_avrcp_version_string">蓝牙 AVRCP 版本</string>
+    <string name="bluetooth_select_map_version_dialog_title">选择蓝牙 MAP 版本</string>
+    <string name="bluetooth_select_map_version_string">蓝牙 MAP 版本</string>
+    <string name="bluetooth_show_devices_without_names">显示没有名称的蓝牙设备</string>
+    <string name="bluetooth_show_devices_without_names_summary">系统将显示没有名称（只有 MAC 地址）的蓝牙设备</string>
+    <string name="bluetooth_talkback_bluetooth">蓝牙</string>
+    <string name="bluetooth_talkback_computer">计算机</string>
+    <string name="bluetooth_talkback_headphone">耳机</string>
+    <string name="bluetooth_talkback_headset">耳麦</string>
+    <string name="bluetooth_talkback_imaging">成像设备</string>
+    <string name="bluetooth_talkback_input_peripheral">外围输入设备</string>
+    <string name="bluetooth_talkback_phone">手机</string>
+    <string name="bt_hci_snoop_log">启用蓝牙 HCI 信息收集日志</string>
+    <string name="bt_hci_snoop_log_summary">捕获蓝牙数据包（更改此设置之后请切换蓝牙开关）。</string>
+    <string name="bugreport_in_power">错误报告快捷方式</string>
+    <string name="bugreport_in_power_summary">在电源菜单中显示用于提交错误报告的按钮</string>
+    <string name="button_click_description">点击同意按钮，即表明您已阅读并同意以上条款与条件；如您不同意，请不要使用一加设备；在满足一加退货政策的前提下，您可以把设备退回一加并取得退款。</string>
+    <string name="button_convert_fbe">清除并转换…</string>
+    <string name="cached_apps_freezer_device_default">设备默认设置</string>
+    <string name="cached_apps_freezer_disabled">已停用</string>
+    <string name="cached_apps_freezer_enabled">已启用</string>
+    <string name="cached_apps_freezer_reboot_dialog_text">设备必须重新启动才能应用此更改。您可以立即重新启动或取消。</string>
+    <string name="camera_summary">画一个<strong>O</strong>，即可启动相机</string>
+    <string name="camera_title">打开相机</string>
+    <string name="cancel">取消</string>
+    <string name="capital_off">关闭</string>
+    <string name="capital_on">开启</string>
+    <string name="category_personal">个人</string>
+    <string name="category_work">工作</string>
+    <string name="charge_length_format">%1$s前</string>
+    <string name="choose_navigationbar_text">请选择你喜欢的按键或手势</string>
+    <string name="choose_profile">选择个人资料</string>
+    <string name="clear_adb_keys">撤消 USB 调试授权</string>
+    <string name="confirm_enable_oem_unlock_text">警告：如果开启此设置，此设备上的设备保护功能将无法使用。</string>
+    <string name="confirm_enable_oem_unlock_title">要允许 OEM 解锁吗？</string>
+    <string name="connected_via_app">已通过%1$s连接到网络</string>
+    <string name="connected_via_carrier">已通过%1$s连接</string>
+    <string name="connected_via_network_scorer">已通过%1$s自动连接</string>
+    <string name="connected_via_network_scorer_default">已自动连接（通过网络评分服务提供方）</string>
+    <string name="connected_via_passpoint">已通过%1$s连接</string>
+    <string name="content_description_menu_button">菜单</string>
+    <string name="convert_to_fbe_warning">"将数据分区转换为文件加密。
+！！警告！！此操作将会清除您所有的数据。
+此功能为 Alpha 版功能，可能无法正常运行。
+要继续操作，请按“清除并转换…”。"</string>
+    <string name="convert_to_file_encryption">转换为文件加密</string>
+    <string name="convert_to_file_encryption_done">文件已加密</string>
+    <string name="convert_to_file_encryption_enabled">转换…</string>
+    <string name="copy">复制</string>
+    <string name="daltonizer_mode_deuteranomaly">绿色弱视（红绿不分）</string>
+    <string name="daltonizer_mode_disabled">已停用</string>
+    <string name="daltonizer_mode_monochromacy">全色盲</string>
+    <string name="daltonizer_mode_protanomaly">红色弱视（红绿不分）</string>
+    <string name="daltonizer_mode_tritanomaly">蓝色弱视（蓝黄不分）</string>
+    <string name="daltonizer_type_overridden">已被“%1$s”覆盖</string>
+    <string name="data_usage_ota">系统更新</string>
+    <string name="data_usage_uninstalled_apps">已删除的应用</string>
+    <string name="data_usage_uninstalled_apps_users">已删除的应用和用户</string>
+    <string name="debug_app">选择调试应用</string>
+    <string name="debug_app_not_set">未设置任何调试应用</string>
+    <string name="debug_app_set">调试应用：%1$s</string>
+    <string name="debug_applications_category">应用</string>
+    <string name="debug_debugging_category">调试</string>
+    <string name="debug_drawing_category">绘图</string>
+    <string name="debug_hw_drawing_category">硬件加速渲染</string>
+    <string name="debug_hw_overdraw">调试 GPU 过度绘制</string>
+    <string name="debug_input_category">输入</string>
+    <string name="debug_layout">显示布局边界</string>
+    <string name="debug_layout_summary">显示剪辑边界、边距等。</string>
+    <string name="debug_monitoring_category">监控</string>
+    <string name="debug_networking_category">网络</string>
+    <string name="debug_view_attributes">启用视图属性检查功能</string>
+    <string name="delete_blob_confirmation_text">确定要删除这些共享数据吗？</string>
+    <string name="delete_blob_text">删除共享数据</string>
+    <string name="dev_logpersist_clear_warning_message">当我们不再使用永久日志记录器进行监控时，我们需要清除保存在您设备上的日志记录器数据。</string>
+    <string name="dev_logpersist_clear_warning_title">要清除永久存储的日志记录器数据吗？</string>
+    <string name="dev_settings_warning_message">这些设置仅适用于开发工作。一旦启用，会导致您的设备以及设备上的应用崩溃或出现异常。</string>
+    <string name="dev_settings_warning_title">允许开发设置？</string>
+    <string name="development_settings_enable">启用开发者选项</string>
+    <string name="development_settings_not_available">此用户无法使用开发者选项</string>
+    <string name="development_settings_summary">设置应用开发选项</string>
+    <string name="development_settings_title">开发者选项</string>
+    <string name="direct_boot_unaware_dialog_message">注意：重新启动后，您必须将手机解锁才能运行此应用</string>
+    <string name="disable_overlays">停用 HW 叠加层</string>
+    <string name="disable_overlays_summary">始终使用 GPU 进行屏幕合成</string>
+    <string name="disabled">已停用</string>
+    <string name="disabled_by_admin">已被管理员停用</string>
+    <string name="disabled_by_admin_summary_text">由管理员控制</string>
+    <string name="disagree_text">不同意</string>
+    <string name="double_tap_summary">轻触两下即可唤醒设备</string>
+    <string name="double_tap_title">轻触两下唤醒</string>
+    <string name="enable_adb">USB 调试</string>
+    <string name="enable_adb_summary">连接 USB 后启用调试模式</string>
+    <string name="enable_adb_wireless">无线调试</string>
+    <string name="enable_adb_wireless_summary">连接到 WLAN 后启用调试模式</string>
+    <string name="enable_freeform_support">启用可自由调整的窗口</string>
+    <string name="enable_freeform_support_summary">启用可自由调整的窗口这一实验性功能。</string>
+    <string name="enable_gpu_debug_layers">启用 GPU 调试层</string>
+    <string name="enable_gpu_debug_layers_summary">允许为调试应用加载 GPU 调试层</string>
+    <string name="enable_opengl_traces_title">启用 OpenGL 跟踪</string>
+    <string name="enable_terminal_summary">启用终端应用，以便在本地访问 Shell</string>
+    <string name="enable_terminal_title">本地终端</string>
+    <string name="enable_verbose_vendor_logging">启用详细供应商日志记录</string>
+    <string name="enable_verbose_vendor_logging_summary">在错误报告中包含其他设备特定的供应商日志，这些日志可能会含有隐私信息、消耗更多电量和/或使用更多存储空间。</string>
+    <string name="enabled_by_admin">已被管理员启用</string>
+    <string name="enhanced_connectivity">增强连接性</string>
+    <string name="enhanced_connectivity_summary">启用增强连接性功能。</string>
+    <string name="expand_button_title">高级</string>
+    <string name="external_source_trusted">允许</string>
+    <string name="external_source_untrusted">不允许</string>
+    <string name="failed_to_open_app_settings_toast">无法打开 %1$s 的设置</string>
+    <string name="finish_text">完成</string>
+    <string name="first_fragment_footer">条款和条件</string>
+    <string name="first_fragment_summary">现在，让我们帮助您个性化您的 OnePlus 体验</string>
+    <string name="first_fragment_title">一加安装程序</string>
+    <string name="flash_light_summary">画一个<strong>V</strong>，即可打开/关闭手电筒</string>
+    <string name="flash_light_title">打开/关闭手电筒</string>
+    <string name="font_detials">选择你想要使用的系统字体</string>
+    <string name="font_set_success">字体已经切换成功</string>
+    <string name="font_size_preview_text_body">尽管有绿色眼镜保护着眼睛，桃乐丝和她的朋友们在刚看到这座奇妙的城市时，还是被它耀眼的光芒照得眼花缭乱。街道两旁耸立着绿色大理石砌成的美丽房屋，到处镶嵌着闪闪发光的翡翠。</string>
+    <string name="font_size_preview_text_headline">示例文本</string>
+    <string name="font_size_preview_text_subtitle">第 11 章：奥兹国神奇的翡翠城</string>
+    <string name="font_size_preview_text_title">绿野仙踪</string>
+    <string name="font_text">字体</string>
+    <string name="force_allow_on_external">强制允许将应用写入外部存储设备</string>
+    <string name="force_allow_on_external_summary">允许将任何应用写入外部存储设备（无论清单值是什么）</string>
+    <string name="force_msaa">强制启用 4x MSAA</string>
+    <string name="force_msaa_summary">在 OpenGL ES 2.0 应用中启用 4x MSAA</string>
+    <string name="force_resizable_activities">强制将活动设为可调整大小</string>
+    <string name="force_resizable_activities_summary">将所有 Activity 设为可配合多窗口环境调整大小（忽略清单值）。</string>
+    <string name="force_rtl_layout_all_locales">强制使用从右到左的布局方向</string>
+    <string name="force_rtl_layout_all_locales_summary">强制将所有语言区域的屏幕布局方向改为从右到左</string>
+    <string name="gestures_camera">&lt;strong>打开相机&lt;/strong>&lt;br> 画一个&lt;strong>O&lt;/strong>，即可启动相机</string>
+    <string name="gestures_double_tap_wake">&lt;strong>轻触两下唤醒&lt;/strong>&lt;br> 轻触两下即可唤醒设备</string>
+    <string name="gestures_flashlight">&lt;strong>切换手电筒&lt;/strong>&lt;br> 画一个&lt;strong>V&lt;/strong>，即可切换手电筒</string>
+    <string name="gestures_music">&lt;strong>音乐控制&lt;/strong>&lt;br> 用双指画&lt;strong>&amp;#124;&amp;#124;&lt;/strong>，即可播放音乐。画一个 &lt;strong>&amp;lt;&lt;/strong> 或 &lt;strong>&amp;gt;&lt;/strong>，即可转到上一曲或下一曲。</string>
+    <string name="gestures_summary">屏幕关闭后，您仍然可以使用手势来执行常见操作。</string>
+    <string name="gestures_title">手势</string>
+    <string name="google_font">Noto Sans</string>
+    <string name="guest_exit_guest">移除访客</string>
+    <string name="guest_new_guest">添加访客</string>
+    <string name="guest_nickname">访客</string>
+    <string name="hdcp_checking_dialog_title">设置 HDCP 检查行为</string>
+    <string name="hdcp_checking_title">HDCP 检查</string>
+    <string name="header_initialization">初始化</string>
+    <string name="header_setupwizard">向导</string>
+    <string name="help_feedback_label">帮助和反馈</string>
+    <string name="help_label">帮助和反馈</string>
+    <string name="home">回到桌面</string>
+    <string name="home_text">从屏幕底部边缘向上划动回到桌面</string>
+    <string name="ime_security_warning">此输入法可能会收集您输入的所有内容，包括密码和信用卡号等个人数据。它来自“%1$s”应用。要使用此输入法吗？</string>
+    <string name="immediately_destroy_activities">不保留活动</string>
+    <string name="immediately_destroy_activities_summary">用户离开后即销毁每个活动</string>
+    <string name="ims_reg_status_not_registered">未注册</string>
+    <string name="ims_reg_status_registered">已注册</string>
+    <string name="ims_reg_title">IMS 注册状态</string>
+    <string name="imsi_protection_warning">此网络会收到可用于跟踪设备位置的唯一 ID。<annotation id="url">了解详情</annotation></string>
+    <string name="inactive_app_active_summary">已启用。点按即可切换。</string>
+    <string name="inactive_app_inactive_summary">未启用。点按即可切换。</string>
+    <string name="inactive_apps_title">待机应用</string>
+    <string name="input_google_radio_abstract_text">安卓 Lollipop 输入法</string>
+    <string name="input_google_radio_text">谷歌键盘</string>
+    <string name="input_summary">选择要使用的默认输入法</string>
+    <string name="input_swiftkey_radio_abstract_text">语言，颜色和图案，轻触或滑动，总是在学习</string>
+    <string name="input_swiftkey_radio_text">SwiftKey 键盘 + 表情符号</string>
+    <string name="input_title">输入法</string>
+    <string name="install_other_apps">安装未知应用</string>
+    <string name="join_text">好的</string>
+    <string name="keep_screen_on">不锁定屏幕</string>
+    <string name="keep_screen_on_summary">充电时屏幕不会休眠</string>
+    <string name="keywords_adb_wireless">adb, 调试, debug, 开发, dev</string>
+    <string name="label_accessibility">辅助功能</string>
+    <string name="label_call">电话</string>
+    <string name="label_cancel">取消</string>
+    <string name="label_choose_language">选择你的语言（地区）</string>
+    <string name="label_emergency_call">紧急电话</string>
+    <string name="label_initilization">請稍後，我們正在準備你的手機</string>
+    <string name="label_languaage_selection">嗨，您好</string>
+    <string name="label_next">下一个</string>
+    <string name="label_qr_code_tap">更多点击以开始QR码设置</string>
+    <string name="label_qr_code_taps">更多点击以开始QR码设置</string>
+    <string name="launch_defaults_none">没有默认操作</string>
+    <string name="launch_defaults_some">已设置部分默认选项</string>
+    <string name="loading_injected_setting_summary">正在加载…</string>
+    <string name="loading_text">正在加载…</string>
+    <string name="local_backup_password_summary_change">点按即可更改或移除用于保护桌面完整备份的密码</string>
+    <string name="local_backup_password_summary_none">桌面完整备份当前未设置密码保护</string>
+    <string name="local_backup_password_title">桌面备份密码</string>
+    <string name="local_backup_password_toast_confirmation_mismatch">新密码和确认密码不一致</string>
+    <string name="local_backup_password_toast_success">已设置了新的备份密码</string>
+    <string name="local_backup_password_toast_validation_failure">设置备份密码失败</string>
+    <string name="managed_user_title">所有工作应用</string>
+    <string name="master_in_gestures_header">3步快速掌握全屏手势</string>
+    <string name="media_category">媒体</string>
+    <string name="media_transfer_this_device_name">手机扬声器</string>
+    <string name="media_transfer_wired_device_name">有线音频设备</string>
+    <string name="media_transfer_wired_usb_device_name">有线耳机</string>
+    <string name="mobile_data_always_on">始终开启移动数据网络</string>
+    <string name="mobile_data_always_on_summary">始终开启移动数据网络，即使 WLAN 网络已开启（便于快速切换网络）。</string>
+    <string name="mock_location_app">选择模拟位置信息应用</string>
+    <string name="mock_location_app_not_set">尚未设置模拟位置信息应用</string>
+    <string name="mock_location_app_set">模拟位置信息应用：%1$s</string>
+    <string name="mr_button_content_description">投射按钮</string>
+    <string name="mr_cast_button_connected">投射按钮。已连接</string>
+    <string name="mr_cast_button_connecting">投射按钮。正在连接</string>
+    <string name="mr_cast_button_disconnected">投射按钮。已断开连接</string>
+    <string name="mr_cast_dialog_title_view_placeholder">没有任何相关信息</string>
+    <string name="mr_chooser_searching">正在查找设备</string>
+    <string name="mr_chooser_title">投射到</string>
+    <string name="mr_controller_album_art">专辑封面</string>
+    <string name="mr_controller_casting_screen">正在投射屏幕</string>
+    <string name="mr_controller_close_description">关闭</string>
+    <string name="mr_controller_collapse_group">收起</string>
+    <string name="mr_controller_disconnect">断开连接</string>
+    <string name="mr_controller_expand_group">展开</string>
+    <string name="mr_controller_no_info_available">没有任何相关信息</string>
+    <string name="mr_controller_no_media_selected">未选择任何媒体内容</string>
+    <string name="mr_controller_pause">暂停</string>
+    <string name="mr_controller_play">播放</string>
+    <string name="mr_controller_stop">停止</string>
+    <string name="mr_controller_stop_casting">停止投射</string>
+    <string name="mr_controller_volume_slider">音量滑块</string>
+    <string name="mr_dialog_groupable_header">添加设备</string>
+    <string name="mr_dialog_transferable_header">在一组设备上播放</string>
+    <string name="mr_system_route_name">系统</string>
+    <string name="mr_user_route_category_name">设备</string>
+    <string name="music_summary">用双指画<strong>||</strong>，即可播放音乐。画一个 <strong>&lt;</strong>或 <strong>></strong>，即可转到上一曲或下一曲。</string>
+    <string name="music_title">音乐控制</string>
+    <string name="navigation_bar_checkbox_text">使用软件按钮</string>
+    <string name="navigation_bar_summary">您是否希望使用软件按钮（而不是硬件按钮）进行导航？</string>
+    <string name="navigation_bar_title">导航控制</string>
+    <string name="navigation_gestures_text">全屏手势</string>
+    <string name="navigationbar_gestures_title">虚拟按键和全屏手势</string>
+    <string name="next_button_label">下一步</string>
+    <string name="no_application">无</string>
+    <string name="no_join_text">不，谢谢</string>
+    <string name="not_set">未设置</string>
+    <string name="oem_unlock_enable">OEM 解锁</string>
+    <string name="oem_unlock_enable_summary">允许解锁引导加载程序</string>
+    <string name="okay">确定</string>
+    <string name="oneplus_account_email_hint">请输入您的电子邮件</string>
+    <string name="oneplus_account_summary_1">请登录以更有效地使用您的设备。<a href="https://www.oneplus.net/"> 了解更多</a></string>
+    <string name="oneplus_account_summary_2"><a href="https://www.oneplus.net/"> 或创建一个新帐户</a></string>
+    <string name="oneplus_account_title">添加一加帐户</string>
+    <string name="oneplus_built_in_app_updates_description_deail_india">针对无法在商店更新的系统级应用，例如：电话，联系人，设置等提供自主升级服务，一加将主动检查其版本情况，并在有紧急更新的时候以通知的形式推送更新包到用户手机，以保证应用的稳定性及可用性。用户可随时关闭系统应用升级消息推送，关闭的路径为：设置-系统-体验改进计划-系统应用升级消息推送。</string>
+    <string name="oneplus_built_in_app_updates_description_global">允许一加检查并推送系统级应用更新，以保证应用的稳定性。 针对无法在商店更新的系统级应用，例如：电话，联系人，设置等提供自主升级服务，一加将主动检查其版本情况，并在有紧急更新的时候以通知的形式推送更新包到用户手机，以保证应用的稳定性及可用性。用户可随时关闭移动互联网服务信息通道，关闭的路径为：设置-系统-系统消息推送-系统应用升级消息推送。</string>
+    <string name="oneplus_built_in_app_updates_description_india">允许一加检查并推送系统级应用更新，以保证应用的稳定性。</string>
+    <string name="oneplus_built_in_app_updates_global">系统应用升级消息推送</string>
+    <string name="oneplus_built_in_app_updates_india">系统应用升级消息推送</string>
+    <string name="oneplus_care">Red Cable Club</string>
+    <string name="oneplus_care_description">绑定设备以加入，可获得专享的尊贵体验，单独定制的权益以及额外折扣</string>
+    <string name="oneplus_font">一加莹黑™</string>
+    <string name="oneplus_indian_mem_dailog_description">绑定设备需要获取你的设备 IMEI 信息以进行校验，除此之外不作它用，你的数据会被严格保密。请查阅隐私政策以了解更多信息。</string>
+    <string name="oneplus_join">加入</string>
+    <string name="oneplus_permissions_text">权限许可</string>
+    <string name="oneplus_privacy_policy">隐私政策</string>
+    <string name="oneplus_push">接收一加消息</string>
+    <string name="oneplus_push_description">我们会用推送的方式向您发送调查问卷和产品资讯,以便与您更好地沟通。</string>
+    <string name="oneplus_push_details">"\u0009\u0009\u0009\u0009为能与一加产品用户(简称用户)保有良好互动与提供更新官方资讯以及产品资讯，一加讯息推送功能将会提供由一加官方所提供的新闻、产品资讯、问卷互动以及购买优惠服务活动等，提供用户有更广的资讯通道与官方消息的接收。
+ \u0009\u0009\u0009\u0009讯息推送功能用户可随时关闭，关闭的路径为：设置 > 系统 > 体验改进计划 > 一加推送消息。"</string>
+    <string name="oneplus_recommend">推荐</string>
+    <string name="oneplus_reject">拒绝</string>
+    <string name="oneplus_service_messaging_description_detail_india">为保证一加产品用户使用云服务等功能的体验，移动互联网服务消息推送将提供更快速即时的信息推送，以保证云服务的秒级数据同步，以及其他服务的良好体验。用户可随时关闭移动互联网服务消息推送，关闭的路径为：设置-系统-系统消息推送-移动互联网服务推送。</string>
+    <string name="oneplus_service_messaging_description_india">允许一加提供快速即时的移动互联网服务信息推送，以保证产品体验。</string>
+    <string name="oneplus_service_messaging_india">移动互联网服务消息推送</string>
+    <string name="oneplus_services">OnePlus条款与条件</string>
+    <string name="oneplus_services_agree_dialog_content">我已阅读完《隐私政策》并同意《最终用户许可协议》</string>
+    <string name="oneplus_services_description">在使用一加设备之前，请您认真阅读以下条款；点击标题可以打开文件进行阅读。一旦您使用一加设备，即表示您已经阅读《隐私政策》并同意《最终用户许可协议》。如果您不同意《最终用户许可协议》，请不要使用一加设备；在满足一加退货政策的前提下，您可以把设备退回一加并取得退款。</string>
+    <string name="oneplus_skip">跳过</string>
+    <string name="oneplus_system_service_description_global">系统服务相关的消息推送，包括移动互联网服务消息推送、系统应用升级消息推送。</string>
+    <string name="oneplus_system_service_description_india">系统服务相关的消息推送，包括移动互联网服务消息推送、系统应用升级消息推送。</string>
+    <string name="oneplus_system_service_description_india_without_msc">系统服务相关的消息推送，包括系统应用升级消息推送。</string>
+    <string name="oneplus_system_service_global">一加系统服务消息推送</string>
+    <string name="oneplus_system_service_india">一加系统服务消息推送</string>
+    <string name="oneplus_tc_desc">阅读更多内容，请激活后继续</string>
+    <string name="oneplus_tc_description">在使用OnePlus设备之前，请选择以下合适的选项。单击标题以获取详细信息。</string>
+    <string name="oneplus_tc_eula">终端用户许可协议</string>
+    <string name="oneplus_tc_privacy_policy">隐私政策</string>
+    <string name="oneplus_tc_privacy_policy_desc">阅读更多内容，请激活后继续</string>
+    <string name="oneplus_tc_service_desc">匿名共享您的使用信息，以改善用户体验</string>
+    <string name="oneplus_tc_service_title">服务改进分析</string>
+    <string name="oneplus_tc_sytem_stability_desc">与我们共享系统错误日志，帮助我们改进产品</string>
+    <string name="oneplus_tc_sytem_stability_title">系统稳定性分析</string>
+    <string name="oneplus_user_agreement">最终用户许可协议</string>
+    <string name="oos_gesture_header">黑屏手势</string>
+    <string name="oos_ota_details">系统更新已完成，OnePlus 会持续通过新版本来提升使用体验、带来更安全的系统环境及更严密的个人数据和隐私保护措施</string>
+    <string name="oos_ota_header">OnePlus用户隐私更新引导</string>
+    <string name="oos_permissions_ota_details">在使用一加设备之前，请您认真阅读以下条款；点击标题可以打开文件进行阅读。一旦您使用一加设备，即表示您已经阅读《隐私政策》。</string>
+    <string name="op_accessibility_quick_settings_page">第 %1$d 页，共 %2$d 页</string>
+    <string name="osu_completing_sign_up">正在完成注册…</string>
+    <string name="osu_connect_failed">无法连接</string>
+    <string name="osu_opening_provider">正在打开%1$s</string>
+    <string name="osu_sign_up_complete">注册完毕。正在连接…</string>
+    <string name="osu_sign_up_failed">无法完成注册。点按即可重试。</string>
+    <string name="overlay_display_devices_title">模拟辅助显示设备</string>
+    <string name="picture_color_mode">图片颜色模式</string>
+    <string name="picture_color_mode_desc">使用 sRGB</string>
+    <string name="pointer_location">指针位置</string>
+    <string name="pointer_location_summary">屏幕叠加层显示当前触摸数据</string>
+    <string name="power_charging">%1$s - %2$s</string>
+    <string name="power_charging_duration">%1$s - %2$s后充满电</string>
+    <string name="power_discharge_by">目前电量为 %2$s，估计能用到%1$s</string>
+    <string name="power_discharge_by_enhanced">根据您的使用情况，估计能用到%1$s（目前电量为 %2$s）</string>
+    <string name="power_discharge_by_only">估计能用到%1$s</string>
+    <string name="power_discharge_by_only_enhanced">根据您的使用情况，估计能用到%1$s</string>
+    <string name="power_discharge_by_only_short">直到%1$s</string>
+    <string name="power_discharging_duration">大约还可使用 %1$s (%2$s)</string>
+    <string name="power_discharging_duration_enhanced">根据您的使用情况，大约还可使用 %1$s (%2$s)</string>
+    <string name="power_remaining_charging_duration_only">还剩 %1$s充满电</string>
+    <string name="power_remaining_duration_only">大约还可使用 %1$s</string>
+    <string name="power_remaining_duration_only_enhanced">根据您的使用情况，大约还可使用 %1$s</string>
+    <string name="power_remaining_duration_only_shutdown_imminent">手机可能即将关机</string>
+    <string name="power_remaining_duration_shutdown_imminent">手机可能即将关机 (%1$s)</string>
+    <string name="power_remaining_less_than_duration">剩余电池续航时间不到 %1$s (%2$s)</string>
+    <string name="power_remaining_less_than_duration_only">剩余电池续航时间不到 %1$s</string>
+    <string name="power_remaining_more_than_subtext">剩余电池续航时间超过 %1$s (%2$s)</string>
+    <string name="power_remaining_only_more_than_subtext">剩余电池续航时间超过 %1$s</string>
+    <string name="power_remaining_settings_home_page">%1$s - %2$s</string>
+    <string name="power_suggestion_battery_run_out">电池电量可能在%1$s 前耗尽</string>
+    <string name="preference_copied">已将“%1$s”复制到剪贴板。</string>
+    <string name="preference_summary_default_combination">%1$s / %2$s</string>
+    <string name="privacy_policy_ota_details">在您继续之前，请您阅读我们更新的隐私条款；点击下方标题可以打开条款进行阅读。当您继续流程，表示您已阅读『隐私政策』。</string>
+    <string name="privacy_policy_ota_header">OnePlus 隐私政策更新</string>
+    <string name="privacy_policy_update">此次隐私条款更新：</string>
+    <string name="privacy_policy_update_text1">1. 增加第三方Cookie使用说明</string>
+    <string name="privacy_policy_update_text2">2. 增加用户公开信息删除途径</string>
+    <string name="privacy_policy_update_text3">3. 增加第三方争议解决途径</string>
+    <string name="privacy_policy_websit">详情可访问OnePlus隐私政策网页：</string>
+    <string name="private_dns_broken">无法访问私人 DNS 服务器</string>
+    <string name="private_dns_mode_off">关闭</string>
+    <string name="private_dns_mode_opportunistic">自动</string>
+    <string name="private_dns_mode_provider">私人 DNS 提供商主机名</string>
+    <string name="private_dns_mode_provider_failure">无法连接</string>
+    <string name="private_dns_mode_provider_hostname_hint">输入 DNS 提供商的主机名</string>
+    <string name="process_kernel_label">Android 操作系统</string>
+    <string name="profile_connect_timeout_subtext">连接时遇到问题。请关闭并重新开启设备</string>
+    <string name="profile_info_settings_title">个人资料信息</string>
+    <string name="progress_message">登录中...</string>
+    <string name="recent">进入多任务</string>
+    <string name="recents_text">从屏幕底部边缘向上划动，然后手指停留一会儿</string>
+    <string name="remaining_length_format">还需 %1$s</string>
+    <string name="reselect">重新选择</string>
+    <string name="retail_demo_reset_message">输入密码即可在演示模式下恢复出厂设置</string>
+    <string name="retail_demo_reset_next">下一步</string>
+    <string name="retail_demo_reset_title">需要输入密码</string>
+    <string name="revert_hint_summary">您可随时在“设置”中更改本项。</string>
+    <string name="running_process_item_user_label">用户：%1$s</string>
+    <string name="runningservices_settings_summary">查看和控制当前正在运行的服务</string>
+    <string name="runningservices_settings_title">正在运行的服务</string>
+    <string name="saved_network">由“%1$s”保存</string>
+    <string name="screen_zoom_summary_custom">自定义 (%d)</string>
+    <string name="screen_zoom_summary_default">默认</string>
+    <string name="screen_zoom_summary_extremely_large">最大</string>
+    <string name="screen_zoom_summary_large">大</string>
+    <string name="screen_zoom_summary_small">小</string>
+    <string name="screen_zoom_summary_very_large">较大</string>
+    <string name="search_menu">搜索设置</string>
+    <string name="search_menu_title">搜索</string>
+    <string name="searchview_description_clear">清除查询</string>
+    <string name="searchview_description_search">搜索</string>
+    <string name="searchview_description_submit">提交查询</string>
+    <string name="searchview_description_voice">语音搜索</string>
+    <string name="select_application">选择应用</string>
+    <string name="select_day">选择月份和日期</string>
+    <string name="select_hours">选择小时</string>
+    <string name="select_logd_size_dialog_title">选择每个日志缓冲区的日志记录器大小</string>
+    <string name="select_logd_size_title">日志记录器缓冲区大小</string>
+    <string name="select_logpersist_dialog_title">选择要在设备上永久存储的日志缓冲区</string>
+    <string name="select_logpersist_title">在设备上永久存储日志记录器数据</string>
+    <string name="select_minutes">选择分钟</string>
+    <string name="select_private_dns_configuration_dialog_title">选择私人 DNS 模式</string>
+    <string name="select_private_dns_configuration_title">私人 DNS</string>
+    <string name="select_usb_configuration_dialog_title">选择USB配置</string>
+    <string name="select_usb_configuration_title">选择USB配置</string>
+    <string name="select_webview_provider_dialog_title">设置 WebView 实现</string>
+    <string name="select_webview_provider_title">WebView 实现</string>
+    <string name="select_webview_provider_toast_text">此选项已失效，请重试。</string>
+    <string name="select_year">选择年份</string>
+    <string name="setup_complete_text">您的设备已设置好，随时可以使用</string>
+    <string name="setup_complete_title">设置完成</string>
+    <string name="setup_wizard_back_button_label">返回</string>
+    <string name="setup_wizard_finish">完成</string>
+    <string name="setup_wizard_next_button_label">下一步</string>
+    <string name="setup_wizard_skip">跳过</string>
+    <string name="shared_data_delete_failure_text">删除共享数据时出错。</string>
+    <string name="shared_data_no_accessors_dialog_text">此共享数据未获得租用。要将其删除吗？</string>
+    <string name="shared_data_no_blobs_text">此用户没有共享数据。</string>
+    <string name="shared_data_query_failure_text">提取共享数据时出错。请重试。</string>
+    <string name="shared_data_summary">查看和修改共享数据</string>
+    <string name="shared_data_title">共享数据</string>
+    <string name="shelf_checkbox_text">启用 Shelf</string>
+    <string name="shelf_hint_summary">我们随时欢迎您提出宝贵意见。</string>
+    <string name="shelf_summary">"Shelf 是 Beta 版中推出的一项新功能。您可在这里保留、排列和发现您关心的东西。
+
+它是为你保持、 组织和发现你在乎 about.
+
+您可以在主页屏幕向右滑动以访问 Shelf。"</string>
+    <string name="shelf_title">Shelf</string>
+    <string name="show_all_anrs">显示后台 ANR</string>
+    <string name="show_all_anrs_summary">为后台应用显示“应用无响应”对话框</string>
+    <string name="show_hw_layers_updates">显示硬件层更新</string>
+    <string name="show_hw_layers_updates_summary">Flash 硬件层在进行更新时会显示为绿色</string>
+    <string name="show_hw_screen_updates">显示视图更新</string>
+    <string name="show_hw_screen_updates_summary">绘图时闪烁显示窗口中的视图</string>
+    <string name="show_non_rect_clip">调试非矩形剪裁操作</string>
+    <string name="show_notification_channel_warnings">显示通知渠道警告</string>
+    <string name="show_notification_channel_warnings_summary">当应用未经有效渠道发布通知时，在屏幕上显示警告</string>
+    <string name="show_screen_updates">显示面 (surface) 更新</string>
+    <string name="show_screen_updates_summary">窗口中的面 (surface) 更新时全部闪烁</string>
+    <string name="show_touches">显示点按操作反馈</string>
+    <string name="show_touches_summary">显示点按操作的视觉反馈</string>
+    <string name="simulate_color_space">模拟颜色空间</string>
+    <string name="skip_button_label">跳过</string>
+    <string name="slide_from_bottom_text">上滑进入桌面</string>
+    <string name="speed_label_fast">快</string>
+    <string name="speed_label_medium">适中</string>
+    <string name="speed_label_okay">良好</string>
+    <string name="speed_label_slow">慢</string>
+    <string name="speed_label_very_fast">很快</string>
+    <string name="speed_label_very_slow">很慢</string>
+    <string name="stability_improvement_description">加入系统稳定改进方案，帮助我们更好地定位您遇到的问题。</string>
+    <string name="stability_improvement_description_details">加入系统稳定改进方案，将可以帮助一加改进系统或者应用的设计。一加不会将这些信息用来进行个人身份识别，也不会将信息分享给任何第三方做任何用途的使用。您选择向一加分享系统错误数据后，可以随时通过关闭按钮终止分享。</string>
+    <string name="stability_improvement_description_details_vzw">加入系统稳定性分析，以便OnePlus可以继续改进我们的产品。我们不会将这些信息用于个人身份识别，也不会出于任何目的与任何第三方共享您的信息。选择与OnePlus共享系统错误数据后，您仍然可以随时选择退出</string>
+    <string name="stability_improvement_details">"\u0009\u0009\u0009\u0009如果您选择向一加分享系统错误日志信息，将可以帮助一加改进系统或者应用的设计。因为Android系统的设计特点，在您选择向一加分享您设备的错误日志信息的同时， 可能在一加不可控的状况下同时向一加发送诸如电话号码、Email地址以及Facebook账号等个人信息，不过这种情况是低概率的。一加仅在分析所需的时间保留前述数据， 且不会将这些信息用来进行个人身份识别，也不会将信息分享给任何第三方做任何用途的使用。您是否同意向一加分享系统错误日志信息，不会影响您使用一加设备。 
+\u0009\u0009\u0009\u0009您选择向一加分享系统错误数据后，可以随时通过关闭按钮终止分享；终止分享的路径为：设置－其他高级设置－加入系统稳定改进方案，选择关闭按钮。了解更多一加关于信息收集和处理的内容，请参阅一加《隐私政策》。"</string>
+    <string name="stability_improvement_program">系统稳定改进计划</string>
+    <string name="standby_bucket_summary">应用待机状态： %s</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="status_unavailable">无法获取</string>
+    <string name="storage_category">存储</string>
+    <string name="strict_mode">启用严格模式</string>
+    <string name="strict_mode_summary">应用在主线程上执行长时间操作时闪烁屏幕</string>
+    <string name="sud_built_in_app_content">OnePlus将确保你及时收到设备中所有内置应用程序的更新，例如电话，联系人，设置等。内置应用程序将通过通知接收推送应用程序更新，以提高应用程序稳定性。你可以随时在“设置”>“系统”>“体验改善程序”>“内置应用程序更新”下将其禁用。</string>
+    <string name="sud_built_in_app_description">允许OnePlus检查推送的内置应用程序更新以提升应用程序稳定性。</string>
+    <string name="sud_built_in_app_title">内置应用</string>
+    <string name="sud_co_create_decription">参加OnePlus共创实验室，以获取最新信息和的加强的系统体验。加入即表示你同意条款和条件。可以在“设置”>“系统”>“体验改善项目”下禁用此功能。</string>
+    <string name="sud_co_create_header">共创实验室</string>
+    <string name="sud_navigationbar_gestures_description">选择你喜欢的导航风格</string>
+    <string name="sud_navigationbar_gestures_select_button">按钮</string>
+    <string name="sud_navigationbar_gestures_select_gestures">手势</string>
+    <string name="sud_navigationbar_gestures_title">导航风格</string>
+    <string name="sud_notification_description">为了双向通信，OnePlus可以通过推送通知发送调查问卷和产品更新信息。</string>
+    <string name="sud_push_notification_content">为了确保与OnePlus用户保持双向通信并提供官方新闻或产品信息，OnePlus可能会使用推送通知服务。这些服务不定时提供OnePlus新闻和调查问卷。你可以随时在“设置”>“系统”>“体验改善计划”>“ OnePlus通知”下将其禁用。</string>
+    <string name="sud_rcc_description">这是一个梦想家和开拓者的社区。成为Red Cable Club的会员即可享受独家优惠和奖励。为你而建，由你所创。</string>
+    <string name="sud_rcc_dialog_content">要绑定你的设备，Red Cable Club需要访问IMEI号码以进行验证。此数据将不会用于任何其他目的。请参阅隐私政策以获取更多信息。</string>
+    <string name="sud_rcc_dialog_header">需要权限</string>
+    <string name="sud_rcc_header">加入Red Cable Club</string>
+    <string name="sud_select_language">选择语言</string>
+    <string name="sud_select_region">选择地区</string>
+    <string name="sud_service_message_content">开启OnePlus 服务消息，数据将每秒同步，享受更佳云服务。你可以随时在“设置”>“设置”>“系统”>“体验改善项目”>“内置应用程序更新”下将其禁用。</string>
+    <string name="sud_service_messaging_description">允许OnePlus提供快速的云消息服务，获得优化产品体验。</string>
+    <string name="sud_service_messaging_title">服务消息</string>
+    <string name="sud_services_description">在使用OnePlus设备之前，请仔细阅读以下条款。点击标题以获取详细信息。一旦开始使用OnePlus设备，即表示你同意并接受《OnePlus的条款和条件》。如果你不同意，请不要继续使用OnePlus设备。你可以根据OnePlus的退货政策将设备退回OnePlus并获得退款。</string>
+    <string name="sud_services_dialog_content">我同意《隐私政策》和《最终用户许可协议》</string>
+    <string name="sud_services_title">《OnePlus条款和条件》</string>
+    <string name="sud_setup_complete_content">你的一加手机设置完成！</string>
+    <string name="sud_setup_complete_title">设置完成</string>
+    <string name="sud_user_experience_description">加入用户体验计划，共创最佳的产品设计和用户体验。 OnePlus不会将你的信息用于个人身份识别。你可以随时选择退出该程序。</string>
+    <string name="sud_vision_settings">视觉设置</string>
+    <string name="sud_welcome_text">你好！</string>
+    <string name="summary_collapsed_preference_list">%1$s、%2$s</string>
+    <string name="summary_separator">" / "</string>
+    <string name="suw_agree_continue_text">同意并继续</string>
+    <string name="suw_back_button_label">返回</string>
+    <string name="suw_built_in_updates_description">允许一加检查并推送系统级应用更新，以保证应用的稳定性。</string>
+    <string name="suw_built_in_updates_text">系统应用升级消息推送</string>
+    <string name="suw_co_create_header">OnePlus 用户共创计划</string>
+    <string name="suw_co_create_text">参与 OnePlus 用户共创计划，获取最新的信息和更好的系统体验。如果您选择同意，则表示您同意此页面的所有内容。您可以随时将其关闭，关闭的路径为：设置>系统>体验改进计划。</string>
+    <string name="suw_more_button_label">更多</string>
+    <string name="suw_next_button_label">下一步</string>
+    <string name="suw_oobe_opt_dialog_text">"参与 OnePlus 用户共创计划，帮助 OnePlus 改进系统或应用设计，并获得最新的官方新闻和产品信息、云服务数据的快速同步以及更快，更稳定的应用更新。您可以随时将其关闭，关闭的路径为：设置>系统>体验改进计划。
+您愿意参与用户共创计划并获得这些功能吗？"</string>
+    <string name="suw_oobe_opt_dialog_title">OnePlus 用户共创计划</string>
+    <string name="suw_push_notification_description">为了更好地与您联系，OnePlus 可能会通过通知向您发送官方新闻、产品信息、问卷等信息。</string>
+    <string name="suw_push_notification_text">接收一加消息</string>
+    <string name="suw_service_message_description">允许一加提供快速即时的移动互联网服务信息推送，以保证产品体验。</string>
+    <string name="suw_service_message_text">移动互联网服务消息推送</string>
+    <string name="suw_system_stability_description">加入系统稳定改进方案，将可以帮助一加改进系统或者应用的设计</string>
+    <string name="suw_system_stability_text">系统稳定改进方案</string>
+    <string name="tap_screen_to_start_text">开始使用</string>
+    <string name="tap_to_renew_subscription_and_connect">点按即可续订并连接</string>
+    <string name="tap_to_sign_up">点按即可注册</string>
+    <string name="tether_settings_title_all">网络共享与便携式热点</string>
+    <string name="tether_settings_title_bluetooth">蓝牙网络共享</string>
+    <string name="tether_settings_title_usb">USB 网络共享</string>
+    <string name="tether_settings_title_usb_bluetooth">网络共享</string>
+    <string name="tether_settings_title_wifi">便携式热点</string>
+    <string name="tethering_hardware_offload">网络共享硬件加速</string>
+    <string name="tethering_hardware_offload_summary">使用网络共享硬件加速功能（如果可用）</string>
+    <string name="tethering_settings_not_available">此用户无权修改网络共享设置</string>
+    <string name="time_picker_header_text">设置时间</string>
+    <string name="time_picker_hour_label">时</string>
+    <string name="time_picker_input_error">请输入有效的时间</string>
+    <string name="time_picker_minute_label">分</string>
+    <string name="time_picker_prompt_label">输入时间</string>
+    <string name="time_unit_just_now">刚刚</string>
+    <string name="title_convert_fbe">正在转换为文件加密</string>
+    <string name="track_frame_time">HWUI 呈现模式分析</string>
+    <string name="transition_animation_scale_title">过渡动画缩放</string>
+    <string name="tts_default_lang_summary">设置文字转语音功能要使用的语言</string>
+    <string name="tts_default_lang_title">语言</string>
+    <string name="tts_default_pitch_summary">会影响合成语音的音调</string>
+    <string name="tts_default_pitch_title">音高</string>
+    <string name="tts_default_rate_summary">文字转换成语音后的播放速度</string>
+    <string name="tts_default_rate_title">语速</string>
+    <string name="tts_default_sample_string">这是语音合成示例</string>
+    <string name="tts_engine_network_required">您必须连接到网络才能使用文字转语音功能输出这种语言。</string>
+    <string name="tts_engine_preference_section_title">首选引擎</string>
+    <string name="tts_engine_security_warning">此语音合成引擎能够收集语音中出现的所有信息，包括密码和信用卡号码之类的个人数据。此功能由 %s 引擎提供。是否启用此语音合成引擎？</string>
+    <string name="tts_engine_settings_button">进行引擎设置</string>
+    <string name="tts_engine_settings_title">“%s”的设置</string>
+    <string name="tts_general_section_title">常规</string>
+    <string name="tts_install_data_summary">安装语音合成所需的数据包</string>
+    <string name="tts_install_data_title">安装语音数据包</string>
+    <string name="tts_lang_not_selected">未选择语言</string>
+    <string name="tts_lang_use_system">使用系统语言</string>
+    <string name="tts_play_example_summary">播放简短的语音合成示例</string>
+    <string name="tts_play_example_title">收听示例</string>
+    <string name="tts_reset_speech_pitch_summary">将文字的读出音调重置为默认值。</string>
+    <string name="tts_reset_speech_pitch_title">重置语音音调</string>
+    <string name="tts_settings">文字转语音设置</string>
+    <string name="tts_settings_title">文字转语音 (TTS) 输出</string>
+    <string name="tts_status_checking">正在检查…</string>
+    <string name="tts_status_not_supported">不支持%1$s</string>
+    <string name="tts_status_ok">完全支持%1$s</string>
+    <string name="tts_status_requires_network">只有在连接到网络的情况下，才支持%1$s</string>
+    <string name="tts_status_title">默认语言状态</string>
+    <string name="unknown">未知</string>
+    <string name="usb_audio_disable_routing">关闭 USB 音频转接</string>
+    <string name="usb_audio_disable_routing_summary">关闭自动转接至 USB 音频外围设备的功能</string>
+    <string name="use_system_language_to_select_input_method_subtypes">使用系统语言</string>
+    <string name="user_add_profile_item_summary">您可以限制其他人使用来自您的帐号的应用和内容</string>
+    <string name="user_add_profile_item_title">受限个人资料</string>
+    <string name="user_add_user_item_summary">用户拥有个人专属的应用和内容</string>
+    <string name="user_add_user_item_title">用户</string>
+    <string name="user_add_user_message_long">"创建新用户后，您就能够与其他人共用此设备。每位用户都有自己的专属空间，而且在自己的个人空间内还可以自行安装自己想要的应用、设置壁纸等。此外，用户还可以调整会影响所有用户的设备设置（例如 WLAN 设置）。
+
+当您添加新用户后，该用户需要自行设置个人空间。
+
+任何用户都可以为所有其他用户更新应用。无障碍功能设置和服务可能无法转移给新用户。"</string>
+    <string name="user_add_user_message_short">"您添加新用户后，该用户必须设置自己的空间。
+
+任何用户均可为其他所有用户更新应用。"</string>
+    <string name="user_add_user_title">要添加新用户吗？</string>
+    <string name="user_add_user_type_title">添加</string>
+    <string name="user_agreement">最终用户许可协议</string>
+    <string name="user_experience_description">加入用户体验计划，帮助我们使系统的体验变得更加友好。</string>
+    <string name="user_experience_description_details">加入用户体验计划，用以改进产品设计与提升用户体验。一加承诺不会将这些信息用来进行个人身份识别。您选择加入计划后，也可以随时通过关闭按钮退出这个计划。</string>
+    <string name="user_experience_details">"\u0009\u0009\u0009\u0009一加将分析您的手机使用情况，用以改进产品设计与提升用户体验。
+ \u0009\u0009\u0009\u0009您可以选择加入或者不加入用户体验计划（以下或称计划）；如果您参与本用户体验计划，即表明您同意一加按照本说明收集、使用、分析以下数据：
+ \u0009\u0009（1）配置数据；
+ \u0009\u0009（2）应用程序统计数据；
+ \u0009\u0009（3）用户行为数据；
+ \u0009\u0009\u0009一加通过收集分析以上数据，目的在于改善产品使用体验，所有采集资料行为都是匿名采集，并且通过加密后传递，目的在于改善产品使用体验，例如可以经过优化系统来改善电池的续航能力以及应用的稳定性； 一加承诺不会将这些信息用来进行个人身份识别。您选择加入计划后，也可以随时通过关闭按钮退出这个计划； 退出计划的路径为：设置－其他高级设置－用户体验计划，选择关闭按钮。了解更多一加关于信息收集和处理的内容，请参阅一加《隐私政策》。
+ \u0009\u0009\u0009\u0009一旦您退出这个计划，一加便停止收集您的前述信息。"</string>
+    <string name="user_experience_details_vzw">"经您的许可，OnePlus将收集您的电话使用信息，以改善产品设计和用户体验。如果您同意加入服务改进分析，则表示您同意OnePlus可以收集，使用和分析以下信息：
+ （1）配置数据； 
+ （2）应用程序的统计数据； 
+ （3）用户行为数据； 
+ 通过收集和分析上述数据，OnePlus旨在改善用户体验，所有过程均以匿名和加密的形式发送给OnePlus，例如通过提高电池效率和系统稳定性。此数据将不会用于任何个人身份识别。加入本计划后，您可以随时通过以下方法退出：“设置”>“系统”>“体验改善计划”>“服务改善分析”。请参考OnePlus隐私政策，以了解有关OnePlus处理的信息的更多信息。 一旦退出该计划，OnePlus将停止收集上述信息。"</string>
+    <string name="user_experience_program">用户体验计划</string>
+    <string name="user_guest">访客</string>
+    <string name="user_info_settings_title">用户信息</string>
+    <string name="user_need_lock_message">您需要先设置锁定屏幕来保护您的应用和个人数据，然后才可以创建受限个人资料。</string>
+    <string name="user_new_profile_name">新的个人资料</string>
+    <string name="user_new_user_name">新用户</string>
+    <string name="user_privacy_policy">隐私政策</string>
+    <string name="user_privacy_policy_content">"一、前言
+ 1.1\u0009\u0009请您知悉，一加重视用户的隐私，并尽力采取有效措施保护用户隐私。
+ 1.2\u0009\u0009鉴于您在使用一加的服务时，一加可能会收集和使用您的相关信息。一加希望通过本《隐私政策》向您说明，一加将如何收集、使用、储存和分享这些信息，以及一加为您提供的访问、更新、控制和保护这些信息的方式。
+ 1.3\u0009\u0009本《隐私政策》与您所使用的一加服务息息相关，希望您仔细阅读。在需要时，请按照本《隐私政策》的指引，作出您认为适当的选择。
+ 1.4\u0009\u0009您使用或继续使用一加的服务，即意味着同意一加按照本《隐私政策》收集、使用、储存和分享您的相关信息。
+ 二、 一加可能收集的信息
+ 一加在为您提供服务时，可能会收集、储存和使用下列与您有关的信息。如果您不提供相关信息，可能无法注册成为一加的用户或无法享受一加提供的某些服务，或者无法达到相关服务拟达到的效果。
+ 2.1\u0009\u0009您提供的信息
+ 2.1.1\u0009\u0009您在注册账户或使用一加的服务时，向一加提供的相关个人信息，例如姓名、电话号码、电子邮件、通讯地址和银行账号等；
+ 2.1.2\u0009\u0009您通过一加的服务向其他方提供的共享信息（例如分享相册、日记心情、事件评论等），以及您使用一加的服务时所储存的信息。
+ 2.2\u0009\u0009其他方分享的您的信息
+ 即其他方使用一加的服务时所提供有关您的共享信息。
+ 2.3\u0009\u0009一加获取的您的信息
+ 您使用服务时，一加可能收集如下信息：
+ 2.3.1\u0009\u0009日志信息，指您使用一加的服务时，系统可能通过cookies、web beacon或其他方式自动采集的技术信息，包括：
+ (a)设备或软件信息，例如设备名称和型号、设备识别码（IMEI）、操作系统版本号、安卓版本号、装置所选择的语言、SIM卡电信运营商和所属国家等信息；
+ (b)在使用一加服务时搜索或浏览的信息，例如您使用的网页搜索词语、访问的社交媒体页面url地址，以及您在使用一加服务时浏览或要求提供的其他信息和内容详情；
+ (c)您通过一加的服务进行通讯的信息，例如曾通讯的账号，以及通讯时间、数据和时长；
+ (d)您通过一加的服务分享的内容所包含的信息（元数据），例如拍摄或上传的共享照片或录像的日期、时间或地点等。
+ 2.3.2\u0009\u0009位置信息，指您开启设备定位功能并使用一加基于位置提供的相关服务时，收集的有关您位置的信息，包括：
+ (a)您通过具有定位功能的移动设备使用一加的服务时，通过GPS或WiFi等方式收集的您的地理位置信息；
+ (b)您或其他用户提供的包含您所处地理位置的实时信息，例如您提供的账户信息中包含的您所在地区信息，您或其他人上传的显示您当前或曾经所处地理位置的共享信息，您或其他人共享的照片包含的地理标记信息；
+ (c)您可以通过关闭定位功能，停止对您的地理位置信息的收集。
+ 2.4\u0009\u0009除以上信息外，一加可能还会收集其他非个人信息，这些信息种类繁多，无法一一例举，但都是机器自动收集、储存、分析和使用，不具有个人可识别性。
+ 三、一加可能如何使用信息
+ 3.1\u0009\u0009一加可能将在向您提供服务的过程中所收集的信息用作下列用途：
+ 3.1.1\u0009\u0009向您提供服务；
+ 3.1.2\u0009\u0009在一加提供服务时，用于身份验证、客户服务、安全防范、诈骗监测、存档和备份用途，确保一加向您提供的产品和服务的安全性；
+ 3.1.3\u0009\u0009帮助一加设计新服务，改善一加现有服务；
+ 3.1.4\u0009\u0009使一加更加了解您如何接入和使用一加的服务，从而针对性地回应您的个性化需求，例如语言设定、位置设定、个性化的帮助服务和指示，或对您和其他用户作出其他方面的回应；
+ 3.1.5\u0009\u0009让您参与有关一加产品和服务的调研。
+ 3.2\u0009\u0009为了让您有更好的体验、改善一加的服务或您同意的其他用途，在符合相关法律法规的前提下，一加可能将通过某一项服务所收集的信息，以汇集信息或者个性化的方式，用于一加的其他服务。如果一加在相关服务中提供了相应选项，您也可以授权一加将该服务所提供和储存的信息用于一加的其他服务。
+ 四、一加可能分享的信息
+ 4.1\u0009\u0009除以下情形外，未经您同意，一加以及一加的关联公司不会与任何第三方分享您的个人信息：
+ 4.1.1\u0009\u0009一加以及一加的关联公司，可能将您的个人信息与一加的关联公司、合作伙伴及第三方服务供应商、承包商及代理（例如代表一加发出电子邮件或推送通知的通讯服务提供商、为一加提供位置数据的地图服务供应商）分享（他们可能并非位于您所在的法域），用作下列用途。如一加或一加的关联公司与任何上述第三方分享您的个人信息，一加将努力确保该等第三方在使用您的个人信息时遵守本《隐私政策》及一加要求其遵守的其他适当的保密和安全措施。
+ (a)向您提供一加的服务；
+ (b)实现“一加可能如何使用信息”部分所述目的；
+ (c)履行一加在《最终用户许可协议》或本《隐私政策》中的义务和行使一加的权利；
+ (d)理解、维护和改善一加的服务。
+ 4.1.2\u0009\u0009一加或一加的关联公司还可能为以下需要而保留、保存或披露您的个人信息：
+ (a)遵守适用的法律法规；
+ (b)遵守法院命令或其他法律程序的规定；
+ (c)遵守相关政府机关的要求；
+ (d)为遵守适用的法律法规、维护社会公共利益，或保护一加的客户、一加或一加的集团公司、其他用户或雇员的人身和财产安全或合法权益的合理必需的用途。
+ 五、您如何访问和控制自己的个人信息
+ 5.1\u0009\u0009一加将尽一切可能采取适当的技术手段，保证您可以访问、更新、更正、删除自己的注册信息或使用一加的服务时提供的其他个人信息。在访问、更新、更正和删除前述信息时，一加可能会要求您进行身份验证，以保障账户安全。
+ 六、信息安全
+ 6.1\u0009\u0009一加仅在本《隐私政策》所述目的所必需的期间和法律法规要求的时限内保留您的个人信息。
+ 6.2\u0009\u0009一加使用各种管理政策（例如制定信息安全制度、和管理信息的员工签订保密协议、只允许工作相关的员工接触所收集的信息等）、安全技术和程序（例如访问需输入密码、门禁隔离、电脑使用监控等），以防信息的丢失、不当使用、未经授权阅览或披露。例如，在某些服务中，一加将利用加密技术（例如SSL）来保护您提供的个人信息。但请您理解，由于技术的限制以及可能存在的各种恶意手段，在互联网行业，即便竭尽所能加强安全措施，也不可能始终保证信息百分之百的安全。您需要了解，您接入一加的服务所用的系统和通讯网络，有可能因一加可控范围外的因素而出现问题。
+ 6.3\u0009\u0009如果一加知悉其所获取并储存的数据安全受到危害，或由于外部行为（包括但不限于外部安全攻击）使用户的非公开信息被披露给不相关第三方，尽管本政策中有其他免责规定，一加仍将采取其认为适当的合理措施（包括但不限于内部调查、上报并通知执法机构、以及配合执法机构工作等）。同时，一加也会在其认为适当的情况下采取合法合理措施通知相关用户，告知其被披露的信息以及一加对该等情况的知悉程度。
+ 七、一加可能向您发送的邮件和信息
+ 7.1\u0009\u0009邮件和信息推送
+ 您在使用一加的服务时，一加可能根据您上传的通讯方式或者其他途径向您的设备发送电子邮件、新闻或推送通知，您同意接受这些信息。
+ 7.2\u0009\u0009与服务有关的公告
+ 一加可能在必要时（例如因系统维护而暂停某一项服务时）向您发出与服务有关的公告。您可能无法取消这些与服务有关、性质不属于推广的公告。
+ 八、隐私政策的适用范围
+ 8.1\u0009\u0009除针对某些特定服务另有规定特定隐私政策外，一加所有的服务均适用本《隐私政策》。针对某些特定服务的特定隐私政策，将更具体地说明一加在该等服务中如何使用您的信息，该特定服务的隐私政策构成本《隐私政策》的一部分。如相关特定服务的隐私政策与本《隐私政策》有不一致之处，适用该特定服务的隐私政策。
+ 8.2\u0009\u0009除本《隐私政策》另有规定外，本《隐私条款》所用词语将与《最终用户许可协议》所定义的词语具有相同的涵义。
+ 8.3本政策同时以中英文两种语言书就，中英文版本不一致的，以中文版本为准。
+ 九、隐私政策的适用例外
+ 9.1\u0009\u0009请您注意，本《隐私政策》不适用于以下情况：
+ 9.1.1\u0009\u0009通过一加的服务而接入的第三方服务（包括任何第三方网站）收集的信息；
+ 9.1.2\u0009\u0009通过在一加服务中进行广告服务的其他公司或机构所收集的信息。
+ 9.2\u0009\u0009您使用上述第三方的社交媒体服务或其他服务（包括您向该等第三方提供的任何个人信息），须受该第三方的服务条款及隐私政策（而非本《隐私政策》）约束，您需要仔细阅读其条款。
+ 9.3\u0009\u0009本《隐私政策》仅适用于一加所收集的信息，并不适用于任何第三方提供的服务或第三方的信息使用规则，一加对任何第三方使用由您提供的信息不承担任何责任。
+ 十、未成年人使用一加的服务
+ 10.1\u0009\u0009一加要求未成年人在其法定监护人的许可和指导下使用一加的产品或服务。
+ 10.2\u0009\u0009如果您是未成年人，您需要确保在提供个人信息前，已经获得了您合法监护人的同意。
+ 十一、变更
+ 11.1\u0009\u0009一加可能适时修订本《隐私政策》的条款，该等修订构成本《隐私政策》的一部分。如该等修订造成您在本《隐私政策》下权利的实质减少，一加将在修订生效前通过约定的通讯方式通知您。在该种情况下，若您继续使用一加的服务，即表示同意受经修订的本《隐私政策》的约束。
+ 十二、信息反馈
+ 12.1\u0009\u0009一加如果有任何信息向您发出，将会发送至您注册账户或者购买一加产品时所留下的电子邮箱、手机号码、通讯地址或者直接通过本软件进行推送；如果通过电子通讯方式进行发送的，您的设备或者所使用的电子系统收到信息时视为送达；如果采用快递形式发送的，快递发出后的第三天视为送达。
+ 12.2\u0009\u0009如果您对本《隐私政策》或者一加产品有任何意见、建议或者疑问欢迎随时给一加反馈。一加的联系方式是：（1）电子邮箱地址：user@oneplus.cn；（2）快递地址：深圳市福田区车公庙泰然八路泰然大厦C座18楼，邮编: 518040；（3）电话: 0755-61882366。
+ （以下无正文）
+"</string>
+    <string name="user_protocal_content">"《最终用户许可协议》（以下简称“本协议”）是您（或称“用户”）与深圳市万普拉斯科技有限公司（以下简称“一加”）及其合作伙伴之间关于一加产品使用所订立的协议。如果您是未成年人，请在您的监护人指引下阅读该协议以及购买和使用一加产品。一加在此特别提醒您认真阅读、充分理解本协议中各条款，如果您有包括但不限于购买、支付、下载、安装、激活、注册、登陆、使用、升级、以及更新一加产品的行为，即视为对本协议的接受。如果你不接受本协议，在满足一加销售政策的条件下，可以将产品退回一加。
+ 一、 定义
+ 1.1\u0009\u0009本软件，指由一加或其许可方通过一加终端设备所提供的软件及其更新或升级版本；本软件包括但不限于手机系统（H2OS或者O2OS）以及系统的预装工具应用。
+ 1.2\u0009\u0009本设备，指由一加提供的能够使用相关软件、程序或服务的终端设备，即一加手机。
+ 1.3\u0009\u0009一加产品：本软件和本设备，以及通过本软件和本设备提供的服务合称为一加产品；
+ 本协议是一加产品的组成部分，也对一加产品进行一定程度的范围界定。
+ 二、 使用授权
+ 2.1\u0009\u0009一加产品包含的所有版权、商标权、专利权、商业秘密等知识产权，以及与一加产品相关的其他所有信息，包括但不限于文字表述及其组合、色彩、界面设计、结构框架、有关数据和电子文档等，均受相关法律法规以及国际公约的保护。除第三方授权许可使用的外（例如根据开源协议使用的开源软件），一加享有一加产品的完整知识产权。
+ 2.2\u0009\u0009一加授权（请注意不是出售）本设备的合法用户在本设备的正当使用范围内使用本软件及其相关内容，上述许可为有限的、非专有的、不可转让的许可。有限的许可是指许可权限是本协议明确约定的，本协议没有约定的您就无权享有，且许可使用必须在本设备上使用，如果您的一加手机丢失、损坏、赠与他人，您就无权再使用本软件；非专有的许可是指一加还可以把权利授予第三方；不可转让的，指您不允许商业使用本软件，如果您需要转让（例如二手转让）该软件，必须连同一加手机一起转让，且保证受让方遵守本协议，且转让手机后，您无权再使用本软件。
+ 2.3\u0009\u0009对于本设备中由第三方许可或提供一加使用的软件，用户在使用上述软件时，应当遵守相关许可方的《最终用户许可协议》以及相关知识产权条款。
+ 2.4\u0009\u0009许可使用费已经包含在您购买一加手机的费用中，您无须对使用授权额外支付费用，除非一加和您重新达成了一致意见，但您应该注意如果您使用一加产品接受第三方服务的，您可能需要向第三方支付费用。
+ 三、 使用限制和服务变更
+ 3.1\u0009\u0009除非一加另行书面授权或本限制条款被认定为无效，用户不得从事下述行为：
+ 3.1.1\u0009\u0009将本软件安装在任何未经一加明示许可的其它任何终端设备上；
+ 3.1.2\u0009\u0009以任何方式将本软件用于任何商业用途或本声明禁止的用途；
+ 3.1.3\u0009\u0009对本软件进行出租、转让、再许可，或以其他方式转让对本软件的任何权利；
+ 3.1.4\u0009\u0009在本软件中添加其它软件或将其它软件与本软件进行合并；
+ 3.1.5\u0009\u0009对本软件进行修改、翻译、反向工程、反向编译、反汇编或创建衍生产品。
+ 3.1.6\u0009\u0009若发生上述禁止行为，一加有权立即终止本协议约定的使用授权，并保留追究您法律的责任的权利。
+ 3.2\u0009\u0009权利保留：未明示授权的其他一切权利仍归一加所有，用户需要使用其他权利时，应另行取得一加的书面同意。
+ 3.3\u0009\u0009在您使用一加产品的过程中，一加可能会向您推送某些信息，例如软件的迭代升级以及更新信息，您同意在使用过程中显示一加及其关联方、合作单位所提供的推送信息及其他内容。如果您同意把本软件升级为最新版本，包括但不限于用户界面、色彩组合、桌面壁纸、内置功能、菜单列表、或者系统自带的app等内容可能会发生变化，您同意接受这种变化带来使用习惯的调整，且一加不会因为这种变化向您承担任何法律责任或者赔偿。
+ 3.4\u0009\u0009您知悉和同意：本软件预装的工具和应用，有些是可以删除的，有些是不可以删除的，有些可以直接使用，有些需要您安装或者激活之后才能使用；同时，您也可以从第三工具平台下载和安装各种工具应用, 但是如果出现包括但不限于软件的兼容性、卡顿、病毒、恶意诈骗、隐私泄露等问题，您需要自己负责。
+ 3.5\u0009\u0009如您接受使用本软件的升级版或更新版，即自动终止使用本软件任何先前版本的权利，除非一加另行书面同意，否则您无权要求一加将更新版本恢复到任何先前版本。
+ 四、账户注册
+ 4.1\u0009\u0009您无需注册账户即可使用一加产品，但一加手机系统的某些功能、程序和服务，可能需要您注册帐户。如果您想体验一加手机系统的更多功能，您可以选择注册帐户并提供相关的个人信息。您注册的账户为一加所有，但是您有使用管理的权利。您可以随时终止使用您的账户，一加将会依据本协议保留或终止您的账户。在您注册账户之前，您应当承诺和保证：
+ 4.1.1\u0009\u0009您应当对注册信息的真实性、合法性、有效性承担全部责任，不得冒充他人，不得利用他人的名义发布任何信息，不得恶意使用注册帐户导致其他人误认。否则，一加有权立即停止提供服务，您应当独自承担由此而产生的法律责任。
+ 4.1.2\u0009\u0009您使用一加产品行为必须合法，并为自己注册帐户下的一切行为负责。一加无法且不会对因您行为而导致的任何损失或损害承担责任。
+ 4.1.3\u0009\u0009您应当对您的登录信息保密，避免被其他人获取、使用，并在发现有可能触犯法律的、未授权使用或怀疑为未授权使用的行为后，第一时间通知一加。否则，一加将不对您因未能遵守上述要求而造成的损失承担责任。
+ 4.1.4\u0009\u0009您通过一加产品上传或发布到可公开获取区域的任何内容，应保证对该作品享有合法著作权或者相应授权。如因违反上述要求导致任何第三方索赔或诉讼的，由您自行承担责任。
+ 五、隐私保护
+ 5.1\u0009\u0009一加重视您的隐私，并尽力采取有效措施全面保护您隐私。在您使用一加产品过程中，一加可能会收集、储存、处理、分享、使用您的个人信息和非个人信息。涉及隐私保护的详细情况按照一加的《隐私政策》执行，《隐私政策》为本协议不可分割的一部分。
+ 六、免责声明
+ 6.1\u0009\u0009请您知悉，如发生下述情形，一加不承担任何法律责任：
+ 6.1.1\u0009\u0009依据法律规定或相关政府部门的要求提供您的个人信息；
+ 6.1.2\u0009\u0009由于您的使用不当或其他自身原因而导致任何个人信息的泄露；
+ 6.1.3\u0009\u0009任何由于黑客攻击，电脑病毒的侵入，非法内容信息、骚扰信息的屏蔽、政府管制以及其他任何网络、技术、通信线路、信息安全管理措施等原因造成的服务中断、受阻等不能满足您要求的情形；
+ 6.1.4\u0009\u0009您因第三方如运营商的通讯线路故障、技术问题、网络、电脑故障、系统不稳定及其他因不可抗力造成损失的情形。
+ 6.1.5\u0009\u0009其他非因一加原因所导致的损失或者因第三方原因导致的损失，不管是直接的、间接的、偶发的、特殊的还是继起的损失。
+ 6.2\u0009\u0009在相关法律或政策允许的范围内，本软件和本设备是按其现状提供的，您开始使用一加产品后，则表明您接受一加产品的现状，包括但不限于可能存在的系统漏洞、运行的出错、反应的偶尔迟缓、以及安装使用本软件对其他软件以及服务可能造成的不良影响等；一加及其许可方对本软件的适销性、特殊目的之适用性或未侵权等不提供任何保证。
+ 6.3\u0009\u0009对任何因错误使用、擅自修改本软件或意外事故、不可抗力而导致的损失，一加均不承担责任。
+ 6.4\u0009\u0009您使用一加产品，无论何种原因造成的损失以及损失类型，一加承担的责任限额不超过您购买设备的价格，法律法规有另有明文规定的除外。
+ 七、修改与终止
+ 7.1\u0009\u0009修改
+ 7.1.1\u0009\u0009您知悉并同意，一加可能对本协议进行修改，但此等修改旨在于给您提供更好的服务或者依据法律法规的强制性规定而作出。如果本协议有任何实质性变更且减损您的权益的，一加将通过您提供的通讯方式或公告来通知您。如您在收到变更通知之后，继续使用一加产品，则视为您已知晓此类变更并同意受其条款的约束。
+ 7.1.2\u0009\u0009一加可能在某个时候修改、关闭、保留一加产品之权利，您同意一加无需因修改、关闭或保留一加产品行为对您承担责任。
+ 7.2\u0009\u0009终止
+ 7.2.1\u0009\u0009您知晓并同意，本协议于您第一次使用一加产品时生效，在您使用一加产品的过程中持续有效，直至依据本协议或法律规定而终止（例如您停止使用一加手机则本协议自然终止）。
+ 八、法律适用与争议解决
+ 8.1\u0009\u0009法律适用
+ 本协议的订立、生效、履行、解释以及纠纷解决，均适用中华人民共和国法律，且排除冲突法的适用。如本协议中的某一条款与法律、法规相抵触的，则按照法律、法规执行，某一条款被认定为无效，不影响其他条款的效力。
+ 8.2\u0009\u0009争议解决
+ 如因履行本协议发生争议的，应本着友好协商解决；协商不成的，任何一方可向一加所在地有管辖权的人民法院提起诉讼。
+ 8.3\u0009\u0009本政策同时以中英文两种语言书就，中英文版本不一致的，以中文版本为准。
+ 九、信息反馈
+ 9.1\u0009\u0009一加如果有任何信息向您发出，将会发送至您购买一加产品时所留下的电子邮箱、手机号码、通讯地址或者直接通过本软件进行推送；如果通过电子通讯方式进行发送的，您的设备或者所使用的电子系统收到信息时视为送达；如果采用快递形式发送的，快递发出后的第三天视为送达。
+ 9.2\u0009\u0009如果您对本协议或者一加产品有任何意见、建议或者疑问欢迎随时给一加反馈。一加的联系方式是：（1）电子邮箱地址：user@oneplus.cn；（2）快递地址：深圳市福田区车公庙泰然八路泰然大厦C座18楼，邮编: 518040；（3）电话: 0755-61882366。
+ （以下无正文）
+"</string>
+    <string name="user_set_lock_button">设置屏幕锁定方式</string>
+    <string name="user_setup_button_setup_later">以后再说</string>
+    <string name="user_setup_button_setup_now">立即设置</string>
+    <string name="user_setup_dialog_message">请让相应用户操作设备并设置他们自己的空间。</string>
+    <string name="user_setup_dialog_title">要现在设置该用户吗？</string>
+    <string name="user_setup_profile_dialog_message">要立即设置个人资料吗？</string>
+    <string name="user_switch_to_user">切换到%s</string>
+    <string name="v7_preference_off">关闭</string>
+    <string name="v7_preference_on">开启</string>
+    <string name="verify_apps_over_usb_summary">检查通过 ADB/ADT 安装的应用是否存在有害行为。</string>
+    <string name="verify_apps_over_usb_title">通过 USB 验证应用</string>
+    <string name="vpn_settings_not_available">此用户无权修改VPN设置</string>
+    <string name="wait_for_debugger">等待调试程序</string>
+    <string name="wait_for_debugger_summary">调试应用会在执行前等待附加调试器</string>
+    <string name="weather_services">天气服务</string>
+    <string name="weather_services_description">允许系统使用天气服务，为您提供更及时准确的天气信息</string>
+    <string name="wifi_ap_unable_to_handle_new_sta">接入点暂时满载</string>
+    <string name="wifi_cant_connect">无法连接</string>
+    <string name="wifi_cant_connect_to_ap">无法连接到“%1$s”</string>
+    <string name="wifi_check_password_try_again">请检查密码，然后重试</string>
+    <string name="wifi_connected_no_internet">无法访问互联网</string>
+    <string name="wifi_disabled_by_recommendation_provider">网络质量较差，因此未连接</string>
+    <string name="wifi_disabled_generic">已停用</string>
+    <string name="wifi_disabled_network_failure">IP 配置失败</string>
+    <string name="wifi_disabled_password_failure">身份验证出现问题</string>
+    <string name="wifi_disabled_wifi_failure">WLAN 连接失败</string>
+    <string name="wifi_disconnected">已断开连接</string>
+    <string name="wifi_display_certification">无线显示认证</string>
+    <string name="wifi_display_certification_summary">显示无线显示认证选项</string>
+    <string name="wifi_enhanced_mac_randomization">WLAN 增强型随机分配 MAC 地址功能</string>
+    <string name="wifi_enhanced_mac_randomization_summary">启用此模式后，每当此设备连接到已启用随机分配 MAC 地址功能的网络时，它的 MAC 地址就可能会发生更改。</string>
+    <string name="wifi_fail_to_scan">无法扫描网络</string>
+    <string name="wifi_limited_connection">网络连接受限</string>
+    <string name="wifi_metered_label">按流量计费</string>
+    <string name="wifi_no_internet">无法访问互联网</string>
+    <string name="wifi_no_internet_no_reconnect">无法自动连接</string>
+    <string name="wifi_not_in_range">不在范围内</string>
+    <string name="wifi_passpoint_expired">已失效</string>
+    <string name="wifi_remembered">已保存</string>
+    <string name="wifi_scan_throttling">WLAN 扫描调节</string>
+    <string name="wifi_scan_throttling_summary">降低耗电量以及改善网络性能</string>
+    <string name="wifi_security_none">无</string>
+    <string name="wifi_status_mac_randomized">MAC 已随机化</string>
+    <string name="wifi_status_no_internet">无法访问互联网</string>
+    <string name="wifi_status_sign_in_required">必须登录</string>
+    <string name="wifi_unmetered_label">不按流量计费</string>
+    <string name="wifi_verbose_logging">启用 WLAN 详细日志记录功能</string>
+    <string name="wifi_verbose_logging_summary">提升 WLAN 日志记录级别（在 WLAN 选择器中显示每个 SSID 的 RSSI）</string>
+    <string name="window_animation_scale_title">窗口动画缩放</string>
+    <string name="zen_alarm_warning">您将不会听到下一个%1$s 的闹钟响铃</string>
+    <string name="zen_alarm_warning_indef">您将不会听到下一个%1$s 的闹钟响铃，除非您在该时间之前关闭这项功能</string>
+    <string name="zen_interruption_level_priority">仅限优先事项</string>
+    <string name="zen_mode_and_condition">%1$s。%2$s</string>
+    <string name="zen_mode_duration_always_prompt_title">每次都询问</string>
+    <string name="zen_mode_duration_settings_title">持续时间</string>
+    <string name="zen_mode_enable_dialog_turn_on">开启</string>
+    <string name="zen_mode_forever">直到您将其关闭</string>
+    <string name="zen_mode_settings_summary_off">永不</string>
+    <string name="zen_mode_settings_turn_on_dialog_title">开启勿扰模式</string>
+    <string name="zzz_input_dialog_alert_title">确认启用此输入法吗？</string>
+    <string name="zzz_op_direct_boot_inputmethod_unaware_dialog_message">每当设备重新启动时，你必须解锁手机才能使用此输入法</string>
+    <string name="zzz_op_ime_security_warning">%1$s可能会收集你输入的所有内容，包括密码和信用卡号等个人数据</string>
+    <string name="zzz_op_ime_warning_confirm">启用</string>
+</resources>
