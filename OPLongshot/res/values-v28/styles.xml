@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.V14.ThemeOverlay.MaterialComponents.MaterialAlertDialog" parent="@style/ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="android:backgroundDimAmount">0.32</item>
+        <item name="android:checkedTextViewStyle">@style/Widget.MaterialComponents.CheckedTextView</item>
+        <item name="android:dialogCornerRadius">@null</item>
+        <item name="alertDialogStyle">@style/MaterialAlertDialog.MaterialComponents</item>
+        <item name="buttonBarButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Dialog</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Dialog</item>
+        <item name="buttonBarNeutralButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Dialog.Flush</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Dialog</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/MaterialAlertDialog.MaterialComponents.Body.Text</item>
+    </style>
+    <style name="OnePlus.TextAppearance.AppCompat.Widget.ActionMode.Title" parent="@style/TextAppearance.AppCompat.Widget.ActionMode.Title">
+        <item name="android:textSize">@dimen/op_text_size_h5</item>
+        <item name="android:textColor">?onePlusActionBarTitleColor</item>
+        <item name="android:fontFamily">oneplus-sans-text-h5</item>
+        <item name="android:textFontWeight">300</item>
+    </style>
+    <style name="OnePlus.TextAppearance.AppCompat.Widget.Button" parent="@style/TextAppearance.AppCompat.Widget.Button">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/op_btn_text_material</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">oneplus-sans-text-button</item>
+        <item name="android:textFontWeight">@integer/op_button_text_font_weight</item>
+    </style>
+    <style name="op_control_text_style_body1" parent="@style/op_control_text_style_base">
+        <item name="android:textSize">@dimen/op_text_size_body1</item>
+        <item name="android:fontFamily">oneplus-sans-text-body-1</item>
+        <item name="android:textFontWeight">300</item>
+    </style>
+    <style name="op_control_text_style_button" parent="@style/op_control_text_style_base">
+        <item name="android:textSize">@dimen/op_text_size_button</item>
+        <item name="android:fontFamily">oneplus-sans-text-button</item>
+        <item name="android:textFontWeight">@integer/op_button_text_font_weight</item>
+    </style>
+    <style name="op_control_text_style_descriptions" parent="@style/op_control_text_style_base">
+        <item name="android:textSize">@dimen/op_text_size_descriptions</item>
+        <item name="android:fontFamily">oneplus-sans-text-description</item>
+        <item name="android:textFontWeight">400</item>
+    </style>
+    <style name="op_control_text_style_h1" parent="@style/op_control_text_style_base">
+        <item name="android:textSize">@dimen/op_text_size_h1</item>
+        <item name="android:lineSpacingMultiplier">@dimen/op_line_space_multiplier_h2</item>
+        <item name="android:fontFamily">oneplus-sans-display-h1</item>
+        <item name="android:textFontWeight">300</item>
+    </style>
+    <style name="op_control_text_style_h2" parent="@style/op_control_text_style_base">
+        <item name="android:textSize">@dimen/op_text_size_h2</item>
+        <item name="android:lineSpacingMultiplier">@dimen/op_line_space_multiplier_h2</item>
+        <item name="android:fontFamily">oneplus-sans-display-h2</item>
+        <item name="android:textFontWeight">300</item>
+    </style>
+    <style name="op_control_text_style_h3" parent="@style/op_control_text_style_base">
+        <item name="android:textSize">@dimen/op_text_size_h3</item>
+        <item name="android:fontFamily">oneplus-sans-display-h3</item>
+        <item name="android:textFontWeight">300</item>
+    </style>
+    <style name="op_control_text_style_h4" parent="@style/op_control_text_style_base">
+        <item name="android:textSize">@dimen/op_text_size_h4</item>
+        <item name="android:fontFamily">oneplus-sans-text-h4</item>
+        <item name="android:textFontWeight">200</item>
+    </style>
+    <style name="op_control_text_style_h5" parent="@style/op_control_text_style_base">
+        <item name="android:textSize">@dimen/op_text_size_h5</item>
+        <item name="android:fontFamily">oneplus-sans-text-h5</item>
+        <item name="android:textFontWeight">300</item>
+    </style>
+    <style name="op_control_text_style_h6" parent="@style/op_control_text_style_base">
+        <item name="android:textSize">@dimen/op_text_size_h6</item>
+        <item name="android:fontFamily">oneplus-sans-text-h6</item>
+        <item name="android:textFontWeight">300</item>
+    </style>
+    <style name="op_control_text_style_subtitle" parent="@style/op_control_text_style_base">
+        <item name="android:textSize">@dimen/op_text_size_subtitle</item>
+        <item name="android:fontFamily">oneplus-sans-text-subtitle</item>
+        <item name="android:textFontWeight">300</item>
+    </style>
+</resources>
