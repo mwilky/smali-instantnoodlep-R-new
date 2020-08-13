@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="got_it">Razumijem</string>
+    <string name="longshot_guide_not_support">Prošireni snimak ekrana nije podržan na ovoj stranici.</string>
+    <string name="longshot_guide_support">Dodirnite ovdje da biste isprobali prošireni snimak ekrana.</string>
+    <string name="not_support_longshot">Prošireni snimak ekrana nije podržan na ovoj stranici.</string>
+    <string name="screen_orientation_changed">Orijentacija ekrana ne može da se promijeniti prilikom snimanja proširenih snimaka ekrana.</string>
+    <string name="screenshot_stoped_text">Snimanje proširenog ekrana je zaustavljeno</string>
+    <string name="scrolling">Ekran će se automatski pomicati dok se izrađuje prošireni snimak ekrana.</string>
+    <string name="stop_and_save">Dodirnite ovaj ekran da biste zaustavili pomicanje i izrada proširenog snimka ekrana će da bude dovršena.</string>
+    <string name="summary">Nakon izrade snimka ekrana, dodirnite prošireni snimak ekrana kako biste snimili sadržaj koji se može pomicati u nastavku.</string>
+    <string name="title">Prošireni snimak ekrana</string>
+    <string name="top_activity_changed">Prebacivanje aplikacija tokom snimanja proširenih snimaka ekrana nije podržano.</string>
+</resources>
