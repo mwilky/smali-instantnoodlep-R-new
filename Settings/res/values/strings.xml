@@ -8030,6 +8030,24 @@ Update settings to:
     <item type="string" name="APKTOOL_DUMMY_db0">false</item>
     <item type="string" name="APKTOOL_DUMMY_dde">false</item>
     <item type="string" name="APKTOOL_DUMMY_ddf">false</item>
+    <item type="string" name="APKTOOL_DUMMY_e6f">false</item>
+    <item type="string" name="APKTOOL_DUMMY_f73">false</item>
+    <item type="string" name="APKTOOL_DUMMY_fc6">false</item>
+    <item type="string" name="APKTOOL_DUMMY_fc8">false</item>
+    <item type="string" name="APKTOOL_DUMMY_fca">false</item>
+    <item type="string" name="APKTOOL_DUMMY_1022">false</item>
+    <item type="string" name="APKTOOL_DUMMY_1023">false</item>
+    <item type="string" name="APKTOOL_DUMMY_1074">false</item>
+    <item type="string" name="APKTOOL_DUMMY_1075">false</item>
+    <item type="string" name="APKTOOL_DUMMY_11e7">false</item>
+    <item type="string" name="APKTOOL_DUMMY_1227">false</item>
+    <item type="string" name="APKTOOL_DUMMY_1228">false</item>
+    <item type="string" name="APKTOOL_DUMMY_126c">false</item>
+    <item type="string" name="APKTOOL_DUMMY_12a6">false</item>
+    <item type="string" name="APKTOOL_DUMMY_12dd">false</item>
+    <item type="string" name="APKTOOL_DUMMY_193a">false</item>
+    <item type="string" name="APKTOOL_DUMMY_198b">false</item>
+    <item type="string" name="APKTOOL_DUMMY_198c">false</item>
     <string name="renovate_version">RENOVATE ICE version</string>
     <string name="hardware_keys_action_kill">Kill foreground app</string>
     <string name="hardware_keys_action_screenshot">Full screenshot</string>
