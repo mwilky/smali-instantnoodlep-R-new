@@ -160,12 +160,13 @@
     return-object v6
 .end method
 
-.method static ofBounds(Landroid/view/SurfaceControl;Landroid/graphics/Rect;Landroid/graphics/Rect;)Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator;
-    .locals 7
+.method static ofBounds(Landroid/view/SurfaceControl;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;)Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator;
+    .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/SurfaceControl;",
+            "Landroid/graphics/Rect;",
             "Landroid/graphics/Rect;",
             "Landroid/graphics/Rect;",
             ")",
@@ -175,7 +176,59 @@
         }
     .end annotation
 
-    new-instance v6, Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator$2;
+    new-instance v8, Landroid/graphics/Rect;
+
+    invoke-direct {v8, p1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
+
+    if-eqz p3, :cond_0
+
+    new-instance v0, Landroid/graphics/Rect;
+
+    iget v1, p3, Landroid/graphics/Rect;->left:I
+
+    iget v2, p1, Landroid/graphics/Rect;->left:I
+
+    sub-int/2addr v1, v2
+
+    iget v2, p3, Landroid/graphics/Rect;->top:I
+
+    iget v3, p1, Landroid/graphics/Rect;->top:I
+
+    sub-int/2addr v2, v3
+
+    iget v3, p1, Landroid/graphics/Rect;->right:I
+
+    iget v4, p3, Landroid/graphics/Rect;->right:I
+
+    sub-int/2addr v3, v4
+
+    iget v4, p1, Landroid/graphics/Rect;->bottom:I
+
+    iget p3, p3, Landroid/graphics/Rect;->bottom:I
+
+    sub-int/2addr v4, p3
+
+    invoke-direct {v0, v1, v2, v3, v4}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    move-object v6, v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p3, 0x0
+
+    move-object v6, p3
+
+    :goto_0
+    new-instance v7, Landroid/graphics/Rect;
+
+    const/4 p3, 0x0
+
+    invoke-direct {v7, p3, p3, p3, p3}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    new-instance p3, Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator$2;
+
+    const/4 v2, 0x0
 
     new-instance v4, Landroid/graphics/Rect;
 
@@ -185,17 +238,15 @@
 
     invoke-direct {v5, p2}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    const/4 v2, 0x0
-
-    move-object v0, v6
+    move-object v0, p3
 
     move-object v1, p0
 
     move-object v3, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator$2;-><init>(Landroid/view/SurfaceControl;ILandroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;)V
+    invoke-direct/range {v0 .. v8}, Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator$2;-><init>(Landroid/view/SurfaceControl;ILandroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;)V
 
-    return-object v6
+    return-object p3
 .end method
 
 

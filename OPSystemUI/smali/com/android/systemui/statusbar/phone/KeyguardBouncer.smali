@@ -640,7 +640,7 @@
 .end method
 
 .method public hide(Z)V
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -726,13 +726,20 @@
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBouncer;->mHandler:Landroid/os/Handler;
 
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBouncer;->mRemoveViewRunnable:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBouncer;->mRemoveViewRunnable:Ljava/lang/Runnable;
 
-    const-wide/16 v0, 0x32
+    const-wide/16 v1, 0x32
 
-    invoke-virtual {p1, p0, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {p1, v0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     :cond_2
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBouncer;->mKeyguardView:Lcom/android/keyguard/KeyguardHostView;
+
+    if-eqz p0, :cond_3
+
+    invoke-virtual {p0}, Lcom/oneplus/keyguard/OpKeyguardHostView;->resetFlipperY()V
+
+    :cond_3
     return-void
 .end method
 
@@ -1614,7 +1621,7 @@
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_7
     iput-boolean v3, p0, Lcom/android/systemui/statusbar/phone/KeyguardBouncer;->mShowingSoon:Z

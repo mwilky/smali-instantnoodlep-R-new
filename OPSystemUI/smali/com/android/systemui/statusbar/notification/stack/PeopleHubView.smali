@@ -1,5 +1,5 @@
 .class public final Lcom/android/systemui/statusbar/notification/stack/PeopleHubView;
-.super Lcom/android/systemui/statusbar/notification/row/StackScrollerDecorView;
+.super Lcom/android/systemui/statusbar/notification/row/ActivatableNotificationView;
 .source "PeopleHubView.kt"
 
 # interfaces
@@ -42,7 +42,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p0, p1, p2}, Lcom/android/systemui/statusbar/notification/row/StackScrollerDecorView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Lcom/android/systemui/statusbar/notification/row/ActivatableNotificationView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
 .end method
@@ -134,7 +134,15 @@
     return-object p0
 .end method
 
-.method protected findContentView()Landroid/view/View;
+.method public final getCanSwipe()Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/systemui/statusbar/notification/stack/PeopleHubView;->canSwipe:Z
+
+    return p0
+.end method
+
+.method protected getContentView()Landroid/view/View;
     .locals 0
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
@@ -153,24 +161,6 @@
     const/4 p0, 0x0
 
     throw p0
-.end method
-
-.method protected findSecondaryView()Landroid/view/View;
-    .locals 0
-    .annotation build Lorg/jetbrains/annotations/Nullable;
-    .end annotation
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public final getCanSwipe()Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/android/systemui/statusbar/notification/stack/PeopleHubView;->canSwipe:Z
-
-    return p0
 .end method
 
 .method public hasFinishedInitialization()Z
@@ -252,16 +242,49 @@
 
     invoke-static {v0}, Lkotlin/collections/CollectionsKt;->asSequence(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
-    invoke-super {p0}, Lcom/android/systemui/statusbar/notification/row/StackScrollerDecorView;->onFinishInflate()V
+    invoke-super {p0}, Lcom/android/systemui/statusbar/notification/row/ActivatableNotificationView;->onFinishInflate()V
 
-    const/4 v0, 0x1
+    invoke-virtual {p0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/systemui/statusbar/notification/row/StackScrollerDecorView;->setVisible(ZZ)V
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/stack/PeopleHubView;->onUiModeChanged()V
 
     return-void
 
     :cond_0
     const-string p0, "contents"
+
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+
+    const/4 p0, 0x0
+
+    throw p0
+.end method
+
+.method public final onUiModeChanged()V
+    .locals 2
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/ActivatableNotificationView;->updateBackgroundColors()V
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/PeopleHubView;->label:Landroid/widget/TextView;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    sget v1, Lcom/android/systemui/R$color;->op_notification_info_primary_color:I
+
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getColor(I)I
+
+    move-result p0
+
+    invoke-virtual {v0, p0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    return-void
+
+    :cond_0
+    const-string p0, "label"
 
     invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
 
@@ -296,27 +319,6 @@
 
     :cond_1
     return-void
-.end method
-
-.method public final setTextColor(I)V
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/PeopleHubView;->label:Landroid/widget/TextView;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    return-void
-
-    :cond_0
-    const-string p0, "label"
-
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
-
-    const/4 p0, 0x0
-
-    throw p0
 .end method
 
 .method public setTranslation(F)V

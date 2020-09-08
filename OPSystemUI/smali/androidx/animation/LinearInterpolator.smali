@@ -2,6 +2,9 @@
 .super Ljava/lang/Object;
 .source "LinearInterpolator.java"
 
+# interfaces
+.implements Landroidx/animation/Interpolator;
+
 
 # direct methods
 .method public constructor <init>()V
@@ -18,4 +21,12 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public getInterpolation(F)F
+    .locals 0
+
+    return p1
 .end method

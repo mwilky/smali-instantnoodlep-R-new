@@ -585,6 +585,7 @@
     <string name="controls_favorite_other_zone_header">其他</string>
     <string name="controls_favorite_rearrange">按住并拖动即可重新排列控件</string>
     <string name="controls_favorite_removed">已移除所有控件</string>
+    <string name="controls_favorite_see_other_apps">查看其他应用</string>
     <string name="controls_favorite_subtitle">选择要从电源菜单访问的控件</string>
     <string name="controls_favorite_toast_no_changes">未保存更改</string>
     <string name="controls_in_progress">正在进行</string>
@@ -690,6 +691,8 @@
     <string name="disconnect_vpn">断开VPN连接</string>
     <string name="dnd_is_off">“勿扰”模式已关闭</string>
     <string name="dnd_suppressing_shade_text">勿扰模式暂停的通知</string>
+    <string name="do_disclosure_generic">此设备归贵单位所有</string>
+    <string name="do_disclosure_with_name">此设备归%s所有</string>
     <string name="do_not_silence">不静音</string>
     <string name="do_not_silence_block">不静音也不屏蔽</string>
     <string name="dock_alignment_not_charging">请调整手机位置以便进行无线充电</string>
@@ -700,6 +703,7 @@
     <string name="drag_to_rearrange_tiles">按住并拖动即可重新排列图块</string>
     <string name="drag_to_remove_disabled">您至少需要 %1$d 个卡片</string>
     <string name="drag_to_remove_tiles">拖动到此处即可移除</string>
+    <string name="earphone_support_battery_info">"左: %1$s  右: %2$s"</string>
     <string name="empty_shade_text">没有通知</string>
     <string name="enable_adb">USB 调试</string>
     <string name="enable_adb_summary">连接 USB 后启用调试模式</string>
@@ -1133,8 +1137,18 @@
     <string name="monitoring_description_do_learn_more_separator">" "</string>
     <string name="monitoring_description_managed_profile_ca_certificate">您所在的单位已为您的工作资料安装证书授权中心。您的安全网络流量可能会受到监控或修改。</string>
     <string name="monitoring_description_managed_profile_named_vpn">您的工作资料已连接到“%1$s”（该应用能够监控您的网络活动，其中包括收发电子邮件、使用应用和浏览网站）。</string>
+    <string name="monitoring_description_management">"此设备归贵单位所有。
+
+您的 IT 管理员能够监控和管理与您的设备相关的设置、企业权限、应用、数据，以及您设备的位置信息。
+
+如需了解详情，请与您的 IT 管理员联系。"</string>
     <string name="monitoring_description_management_ca_certificate">您所在的单位已在此设备上安装证书授权中心。您的安全网络流量可能会受到监控或修改。</string>
     <string name="monitoring_description_management_network_logging">您的管理员已开启网络日志功能（该功能会监控您设备上的流量）。</string>
+    <string name="monitoring_description_named_management">"此设备归%1$s所有。
+
+您的 IT 管理员能够监控和管理与您的设备相关的设置、企业权限、应用、数据，以及您设备的位置信息。
+
+如需了解详情，请与您的 IT 管理员联系。"</string>
     <string name="monitoring_description_named_vpn">您已连接到“%1$s”（该应用能够监控您的网络活动，其中包括收发电子邮件、使用应用和浏览网站）。</string>
     <string name="monitoring_description_network_logging">"您的管理员已开启网络日志功能，该功能会监控您设备上的流量。
 
@@ -1268,6 +1282,12 @@
     <string name="op_accessibility_quick_settings_page">第 %1$d 页，共 %2$d 页</string>
     <string name="op_aod_parsons_unlock_one">解锁过<annotation id="unlockNum">^1</annotation>次</string>
     <string name="op_aod_parsons_unlock_other">解锁过<annotation id="unlockNum">^1</annotation>次</string>
+    <string name="op_battery_saver_description">"为了延长电池续航时间，省电模式会执行以下操作：
+
+• 关闭或限制后台活动、部分视觉效果和其他功能，例如“Ok Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"为了延长电池续航时间，省电模式会执行以下操作：
+
+• 关闭或限制后台活动、部分视觉效果和其他功能"</string>
     <string name="op_date_format">M月d日</string>
     <string name="op_earphone_connect">配对中...</string>
     <string name="op_earphone_connected_fail">配对失败，你可以检查耳机和手机蓝牙状态。</string>
@@ -1460,7 +1480,7 @@
     <string name="quick_controls_setup_subtitle">按住电源按钮即可访问您的控件</string>
     <string name="quick_controls_setup_title">设置设备控件</string>
     <string name="quick_controls_subtitle">为您所连接的设备添加控件</string>
-    <string name="quick_controls_title">设备控件</string>
+    <string name="quick_controls_title">设备控制器</string>
     <string name="quick_launch_exit">退出</string>
     <string name="quick_launch_exit_hint">松手退出此界面</string>
     <string name="quick_reply">回复</string>
@@ -1504,8 +1524,20 @@
     <string name="quick_settings_data_switch_toast_0">当前没有插入SIM卡</string>
     <string name="quick_settings_data_switch_toast_1">当前只插入一张SIM卡</string>
     <string name="quick_settings_disclosure_managed_profile_monitoring">您所在的单位可能会监控您工作资料中的网络流量</string>
+    <string name="quick_settings_disclosure_managed_profile_named_vpn">您的工作资料已连接到“%1$s”</string>
+    <string name="quick_settings_disclosure_management">此设备归贵单位所有</string>
+    <string name="quick_settings_disclosure_management_monitoring">贵单位拥有此设备，且可能会监控网络流量</string>
+    <string name="quick_settings_disclosure_management_named_vpn">此设备归贵单位所有，且已连接到“%1$s”</string>
+    <string name="quick_settings_disclosure_management_vpns">此设备归贵单位所有，且已连接到多个 VPN</string>
     <string name="quick_settings_disclosure_monitoring">网络可能会受到监控</string>
     <string name="quick_settings_disclosure_named_managed_profile_monitoring">“%1$s”可能会监控您工作资料中的网络流量</string>
+    <string name="quick_settings_disclosure_named_management">此设备归%1$s所有</string>
+    <string name="quick_settings_disclosure_named_management_monitoring">%1$s拥有此设备，且可能会监控网络流量</string>
+    <string name="quick_settings_disclosure_named_management_named_vpn">此设备归%1$s所有，且已连接到“%2$s”</string>
+    <string name="quick_settings_disclosure_named_management_vpns">此设备归%1$s所有，且已连接到多个 VPN</string>
+    <string name="quick_settings_disclosure_named_vpn">此设备已连接到“%1$s”</string>
+    <string name="quick_settings_disclosure_personal_profile_named_vpn">您的个人资料已连接到“%1$s”</string>
+    <string name="quick_settings_disclosure_vpns">此设备已连接到多个 VPN</string>
     <string name="quick_settings_dnd_alarms_label">仅限闹钟</string>
     <string name="quick_settings_dnd_label">勿扰</string>
     <string name="quick_settings_dnd_none_label">完全阻止</string>

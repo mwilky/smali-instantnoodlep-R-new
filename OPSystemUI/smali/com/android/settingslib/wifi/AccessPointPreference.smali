@@ -508,7 +508,7 @@
     :goto_0
     new-array v2, v2, [I
 
-    const/16 v4, 0x4b
+    const/16 v4, 0x49
 
     aput v4, v2, v3
 

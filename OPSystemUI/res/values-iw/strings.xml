@@ -39,6 +39,11 @@
     <string name="abc_slice_updated">עודכן ב-%1$s</string>
     <string name="abc_slices_permission_request">%1$s רוצה להציג חלקים מ-%2$s</string>
     <string name="abc_toolbar_collapse_description">כיווץ</string>
+    <string name="about_action_bar_title">אודות</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">מדיניות פרטיות</string>
+    <string name="about_release_note_title">עדכן יומן:</string>
+    <string name="about_terms_service">תנאי שירות</string>
     <string name="accessibility_accessibility_button">נגישות</string>
     <string name="accessibility_action_divider_bottom_full">מסך תחתון מלא</string>
     <string name="accessibility_action_divider_left_30">שמאלה 30%</string>
@@ -598,6 +603,7 @@
     <string name="controls_favorite_other_zone_header">אחר</string>
     <string name="controls_favorite_rearrange">יש ללחוץ לחיצה ארוכה ולגרור כדי לארגן מחדש את הפקדים</string>
     <string name="controls_favorite_removed">כל הפקדים הוסרו</string>
+    <string name="controls_favorite_see_other_apps">הצגת אפליקציות אחרות</string>
     <string name="controls_favorite_subtitle">יש לבחור פקדים לגישה מתפריט ההפעלה</string>
     <string name="controls_favorite_toast_no_changes">השינויים לא נשמרו</string>
     <string name="controls_in_progress">בתהליך</string>
@@ -696,8 +702,8 @@
     <string name="disable_carrier_button_text">‏השבתת ה-eSIM</string>
     <string name="disable_overlays">‏השבת שכבות על של HW</string>
     <string name="disable_overlays_summary">‏השתמש תמיד ב-GPU להרכבת מסך</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">לפרטים, צור קשר עם מנהל מערכת</string>
+    <string name="disable_tether_notification_title">קשירה הושבתה</string>
     <string name="disable_vpn">‏השבת VPN</string>
     <string name="disabled">מושבת</string>
     <string name="disabled_by_admin">הושבת על ידי מנהל המכשיר</string>
@@ -705,6 +711,8 @@
     <string name="disconnect_vpn">‏נתק את ה-VPN</string>
     <string name="dnd_is_off">"מצב 'נא לא להפריע' כבוי"</string>
     <string name="dnd_suppressing_shade_text">"התראות הושהו על ידי מצב 'נא לא להפריע'"</string>
+    <string name="do_disclosure_generic">המכשיר הזה שייך לארגון שלך</string>
+    <string name="do_disclosure_with_name">המכשיר הזה שייך לארגון %s</string>
     <string name="do_not_silence">לא להשתיק</string>
     <string name="do_not_silence_block">לא להשתיק או לחסום</string>
     <string name="dock_alignment_not_charging">צריך ליישר את הטלפון כדי לטעון אותו באופן אלחוטי</string>
@@ -715,6 +723,7 @@
     <string name="drag_to_rearrange_tiles">יש ללחוץ ולגרור כדי לסדר מחדש את האריחים</string>
     <string name="drag_to_remove_disabled">יש צורך ב-%1$d אריחים לפחות</string>
     <string name="drag_to_remove_tiles">גרור לכאן כדי להסיר</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">גרור כותרות כדי לארגן אותן מחדש. הקש כדי להציג או להסתיר.</string>
     <string name="empty_shade_text">אין התראות</string>
     <string name="enable_adb">‏ניפוי באגים ב-USB</string>
@@ -1090,6 +1099,7 @@
     <string name="left_nav_bar_button_type">סוג נוסף של לחצן שמאלי</string>
     <string name="legacy_vpn_name">VPN</string>
     <string name="loading_injected_setting_summary">בטעינה…</string>
+    <string name="loading_text">טוען...</string>
     <string name="local_backup_password_summary_change">הקש כדי לשנות או להסיר את הסיסמה לגיבויים מלאים בשולחן העבודה</string>
     <string name="local_backup_password_summary_none">גיבויים מלאים בשולחן העבודה אינם מוגנים כעת</string>
     <string name="local_backup_password_title">סיסמת גיבוי שולחן העבודה</string>
@@ -1112,7 +1122,7 @@
     <string name="manage_notifications_history_text">היסטוריה</string>
     <string name="manage_notifications_text">ניהול</string>
     <string name="managed_user_title">כל אפליקציות העבודה</string>
-    <string name="maxxaudio_disable">השבת</string>
+    <string name="maxxaudio_disable">בטל</string>
     <string name="maxxaudio_enable">הפעל</string>
     <string name="media_category">מדיה</string>
     <string name="media_projection_action_text">התחל כעת</string>
@@ -1124,7 +1134,7 @@
     <string name="media_seamless_remote_device">מכשיר</string>
     <string name="media_transfer_this_device_name">רמקול של טלפון</string>
     <string name="media_transfer_wired_device_name">התקן אודיו חוטי</string>
-    <string name="media_transfer_wired_usb_device_name">אוזניות עם חוט</string>
+    <string name="media_transfer_wired_usb_device_name">אוזניות חוטיות</string>
     <string name="menu_ime">מחליף מקלדת</string>
     <string name="mhs_app">פתח My Verizon</string>
     <string name="mhs_call_back_error">חיבור נתונים אינו זמין.</string>
@@ -1174,8 +1184,18 @@
     <string name="monitoring_description_do_learn_more_separator">" "</string>
     <string name="monitoring_description_managed_profile_ca_certificate">הארגון שלך התקין רשות אישורים בפרופיל העבודה. ניתן לעקוב אחר התנועה ברשת המאובטחת או לשנות אותה.</string>
     <string name="monitoring_description_managed_profile_named_vpn">פרופיל העבודה שלך מחובר לאפליקציה %1$s, שיכולה לעקוב אחר הפעילות שלך ברשת, כולל הודעות אימייל, אפליקציות ואתרים.</string>
+    <string name="monitoring_description_management">"‏המכשיר הזה שייך לארגון שלך.
+
+מנהל ה-IT יכול לנטר ולנהל הגדרות, גישה ארגונית, אפליקציות, נתונים המשויכים למכשיר ומידע על מיקום המכשיר.
+
+למידע נוסף, יש לפנות למנהל ה-IT."</string>
     <string name="monitoring_description_management_ca_certificate">הארגון שלך התקין רשות אישורים במכשיר. ניתן לעקוב אחר התנועה ברשת המאובטחת או לשנות אותה.</string>
     <string name="monitoring_description_management_network_logging">"מנהל המערכת הפעיל את התכונה 'רישום התנועה ברשת', שמנטרת את תנועת הנתונים במכשיר."</string>
+    <string name="monitoring_description_named_management">"‏המכשיר הזה שייך לארגון %1$s.
+
+מנהל ה-IT יכול לנטר ולנהל הגדרות, גישה ארגונית, אפליקציות, נתונים המשויכים למכשיר ומידע על מיקום המכשיר.
+
+למידע נוסף, יש לפנות למנהל ה-IT."</string>
     <string name="monitoring_description_named_vpn">אתה מחובר לאפליקציה %1$s, שיכולה לעקוב אחר הפעילות שלך ברשת, כולל הודעות אימייל, אפליקציות ואתרים.</string>
     <string name="monitoring_description_network_logging">"מנהל המערכת הפעיל את תכונת רישום התנועה ברשת, שמנטרת את תנועת הנתונים במכשיר.
 
@@ -1311,8 +1331,14 @@
     <string name="oneplus_threekey_navigation_sound">כל הצלילים מותרים</string>
     <string name="oneplus_threekey_navigation_turned_on_here">ניתן להפעיל את האפשרות באמצעות כפתור החלפת המצב לעיל</string>
     <string name="oneplus_threekey_navigation_vibration">רטט בלבד</string>
-    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> ביטול נעילה</string>
-    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> ביטולי נעילה</string>
+    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>ביטול נעילה</string>
+    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>ביטולי נעילה</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">משייך...</string>
     <string name="op_earphone_connected_fail">השיוך נכשל. באפשרותך לבדוק את מצב האוזניות וה-Bluetooth.</string>
     <string name="op_earphone_connected_success">השיוך בוצע. הקש כדי להגדיר עוד.</string>
@@ -1342,9 +1368,10 @@
     <string name="op_notification_channel_summary_low">הודעות חשובות פחות ללא צליל או רטט.</string>
     <string name="op_notification_section_header_gentle">הודעות אחרות</string>
     <string name="op_notification_silence_title">אחר</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">מצב כהה</string>
     <string name="op_qs_data_usage_used">%1$s: ‏שימוש ב-%2$s %3$s</string>
-    <string name="op_quick_settings_night_display_label">מצב לילה</string>
+    <string name="op_quick_settings_night_display_label">נוחות ראייה</string>
     <string name="op_quick_settings_night_display_summary_off">מצב לילה כבוי, לחץ כדי להפעיל</string>
     <string name="op_quick_settings_night_display_summary_on">מצב לילה פועל, לחץ כדי להפסיק</string>
     <string name="op_read_mode2_dialog_black">אפקט מונו</string>
@@ -1556,8 +1583,20 @@
     <string name="quick_settings_data_switch_toast_1">כטיס SIM אחד בלבד בפנים</string>
     <string name="quick_settings_default_data_card">כרטיס זכרון של ברירת מחדל</string>
     <string name="quick_settings_disclosure_managed_profile_monitoring">הארגון שלך יכול לנטר את התנועה ברשת בפרופיל העבודה שלך</string>
+    <string name="quick_settings_disclosure_managed_profile_named_vpn">פרופיל העבודה שלך מחובר ל-%1$s</string>
+    <string name="quick_settings_disclosure_management">המכשיר הזה שייך לארגון שלך</string>
+    <string name="quick_settings_disclosure_management_monitoring">הארגון שלך הוא הבעלים של מכשיר זה והוא עשוי לנטר את התנועה ברשת</string>
+    <string name="quick_settings_disclosure_management_named_vpn">המכשיר הזה שייך לארגון שלך, והוא מחובר ל-%1$s</string>
+    <string name="quick_settings_disclosure_management_vpns">‏המכשיר הזה שייך לארגון שלך והוא מחובר לרשתות VPN</string>
     <string name="quick_settings_disclosure_monitoring">ייתכן שהרשת מנוטרת</string>
     <string name="quick_settings_disclosure_named_managed_profile_monitoring">הארגון %1$s עשוי לנטר את התנועה ברשת בפרופיל העבודה שלך</string>
+    <string name="quick_settings_disclosure_named_management">המכשיר הזה שייך לארגון %1$s</string>
+    <string name="quick_settings_disclosure_named_management_monitoring">הארגון %1$s הוא הבעלים של מכשיר זה והוא עשוי לנטר את התנועה ברשת</string>
+    <string name="quick_settings_disclosure_named_management_named_vpn">המכשיר הזה שייך לארגון %1$s והוא מחובר ל-%2$s</string>
+    <string name="quick_settings_disclosure_named_management_vpns">‏המכשיר הזה שייך לארגון %1$s והוא מחובר לרשתות VPN</string>
+    <string name="quick_settings_disclosure_named_vpn">המכשיר הזה מחובר ל-%1$s</string>
+    <string name="quick_settings_disclosure_personal_profile_named_vpn">הפרופיל האישי שלך מחובר ל-%1$s</string>
+    <string name="quick_settings_disclosure_vpns">‏המכשיר הזה מחובר לרשתות VPN</string>
     <string name="quick_settings_dnd_alarms_label">התראות בלבד</string>
     <string name="quick_settings_dnd_label">נא לא להפריע</string>
     <string name="quick_settings_dnd_none_label">שקט מוחלט</string>
@@ -1847,7 +1886,7 @@
     <string name="tethered_notification_hybrid_sharing_mobile">משתף נתוני נייד, הקש כדי להיכנס להגדרות</string>
     <string name="tethered_notification_hybrid_sharing_none">אין רשת זמינה לשיתוף, הקש כדי להיכנס להגדרות</string>
     <string name="tethered_notification_hybrid_sharing_wifi">משתף Wi-Fi, הקש כדי להיכנס להגדרות</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">הקש כדי להגדיר.</string>
     <string name="tethered_notification_multi_device_message">%1$s התקנים מחוברים</string>
     <string name="tethered_notification_multi_tether_title">שיוך בין מכשירים והתכונה Mobile HotSpot פעילים</string>
     <string name="tethered_notification_no_device_message">אין התקן מחובר</string>
@@ -2080,7 +2119,17 @@
     <string name="wifi_verbose_logging">‏הפעלת רישום מפורט של Wi‑Fi ביומן</string>
     <string name="wifi_verbose_logging_summary">‏העלה את רמת הרישום של Wi‑Fi ביומן, הצג לכל SSID RSSI ב-Wi‑Fi Picker</string>
     <string name="window_animation_scale_title">קנה מידה לאנימציה של חלון</string>
-    <string name="work_life_balance_mode">Work-Life Balance</string>
+    <string name="wlb_break_mode_active">פעיל</string>
+    <string name="wlb_break_mode_active_text">מצב %1$s‏·‏%2$s</string>
+    <string name="wlb_break_mode_on_break">בהפסקה</string>
+    <string name="wlb_break_mode_resume">המשך</string>
+    <string name="wlb_break_mode_take_break">צא להפסקה</string>
+    <string name="wlb_qs_detail_break_mode">מצב הפסקה</string>
+    <string name="wlb_qs_detail_break_mode_desc">חזרה אוטומטית למצב קודם לאחר 30 דקות</string>
+    <string name="wlb_qs_detail_life_mode">מצב חיים</string>
+    <string name="wlb_qs_detail_more_setting">הגדרות נוספות</string>
+    <string name="wlb_qs_detail_work_mode">מצב עבודה</string>
+    <string name="work_life_balance_mode">איזון בין החיים לעבודה</string>
     <string name="zen_alarm_warning">לא תשמע את ההתראה הבאה שלך %1$s</string>
     <string name="zen_alarm_warning_indef">לא תשמע את ההתראה הבאה שלך %1$s, אלא אם תשבית קודם את ההגדרה הזו</string>
     <string name="zen_alarms_introduction">כדי לא להפריע לך, המכשיר לא ירטוט ולא ישמיע שום צליל, חוץ מהתראות. המצב הזה לא ישפיע על צלילים שהם חלק מתוכן שבחרת להפעיל, כמו מוזיקה, סרטונים ומשחקים.</string>

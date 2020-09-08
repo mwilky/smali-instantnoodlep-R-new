@@ -24,6 +24,8 @@
 
 
 # instance fields
+.field private mBroadcastDispatcher:Lcom/android/systemui/broadcast/BroadcastDispatcher;
+
 .field private mCountDownTimer:Landroid/os/CountDownTimer;
 
 .field private mIsRecording:Z
@@ -42,27 +44,48 @@
 
 .field private mStopIntent:Landroid/app/PendingIntent;
 
+.field protected final mUserChangeReceiver:Landroid/content/BroadcastReceiver;
+    .annotation build Lcom/android/internal/annotations/VisibleForTesting;
+    .end annotation
+.end field
+
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 0
+.method public constructor <init>(Lcom/android/systemui/broadcast/BroadcastDispatcher;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x0
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lcom/android/systemui/screenrecord/RecordingController;->mCountDownTimer:Landroid/os/CountDownTimer;
+    iput-object v0, p0, Lcom/android/systemui/screenrecord/RecordingController;->mCountDownTimer:Landroid/os/CountDownTimer;
 
-    new-instance p1, Ljava/util/ArrayList;
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object p1, p0, Lcom/android/systemui/screenrecord/RecordingController;->mListeners:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/systemui/screenrecord/RecordingController;->mListeners:Ljava/util/ArrayList;
+
+    new-instance v0, Lcom/android/systemui/screenrecord/RecordingController$1;
+
+    invoke-direct {v0, p0}, Lcom/android/systemui/screenrecord/RecordingController$1;-><init>(Lcom/android/systemui/screenrecord/RecordingController;)V
+
+    iput-object v0, p0, Lcom/android/systemui/screenrecord/RecordingController;->mUserChangeReceiver:Landroid/content/BroadcastReceiver;
+
+    iput-object p1, p0, Lcom/android/systemui/screenrecord/RecordingController;->mBroadcastDispatcher:Lcom/android/systemui/broadcast/BroadcastDispatcher;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/systemui/screenrecord/RecordingController;)Ljava/util/ArrayList;
+.method static synthetic access$000(Lcom/android/systemui/screenrecord/RecordingController;)Landroid/app/PendingIntent;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/screenrecord/RecordingController;->mStopIntent:Landroid/app/PendingIntent;
+
+    return-object p0
+.end method
+
+.method static synthetic access$100(Lcom/android/systemui/screenrecord/RecordingController;)Ljava/util/ArrayList;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/screenrecord/RecordingController;->mListeners:Ljava/util/ArrayList;
@@ -70,7 +93,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$102(Lcom/android/systemui/screenrecord/RecordingController;Z)Z
+.method static synthetic access$202(Lcom/android/systemui/screenrecord/RecordingController;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/systemui/screenrecord/RecordingController;->mIsStarting:Z
@@ -78,12 +101,20 @@
     return p1
 .end method
 
-.method static synthetic access$202(Lcom/android/systemui/screenrecord/RecordingController;Z)Z
+.method static synthetic access$302(Lcom/android/systemui/screenrecord/RecordingController;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/systemui/screenrecord/RecordingController;->mIsRecording:Z
 
     return p1
+.end method
+
+.method static synthetic access$400(Lcom/android/systemui/screenrecord/RecordingController;)Lcom/android/systemui/broadcast/BroadcastDispatcher;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/screenrecord/RecordingController;->mBroadcastDispatcher:Lcom/android/systemui/broadcast/BroadcastDispatcher;
+
+    return-object p0
 .end method
 
 
@@ -241,7 +272,7 @@
 
     iput-object p6, p0, Lcom/android/systemui/screenrecord/RecordingController;->mStopIntent:Landroid/app/PendingIntent;
 
-    new-instance p6, Lcom/android/systemui/screenrecord/RecordingController$1;
+    new-instance p6, Lcom/android/systemui/screenrecord/RecordingController$2;
 
     move-object v1, p6
 
@@ -253,7 +284,7 @@
 
     move-object v7, p5
 
-    invoke-direct/range {v1 .. v7}, Lcom/android/systemui/screenrecord/RecordingController$1;-><init>(Lcom/android/systemui/screenrecord/RecordingController;JJLandroid/app/PendingIntent;)V
+    invoke-direct/range {v1 .. v7}, Lcom/android/systemui/screenrecord/RecordingController$2;-><init>(Lcom/android/systemui/screenrecord/RecordingController;JJLandroid/app/PendingIntent;)V
 
     iput-object p6, p0, Lcom/android/systemui/screenrecord/RecordingController;->mCountDownTimer:Landroid/os/CountDownTimer;
 
@@ -263,47 +294,65 @@
 .end method
 
 .method public stopRecording()V
-    .locals 2
-
-    :try_start_0
-    iget-object v0, p0, Lcom/android/systemui/screenrecord/RecordingController;->mStopIntent:Landroid/app/PendingIntent;
-
-    invoke-virtual {v0}, Landroid/app/PendingIntent;->send()V
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lcom/android/systemui/screenrecord/RecordingController;->updateState(Z)V
-    :try_end_0
-    .catch Landroid/app/PendingIntent$CanceledException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "Error stopping: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Landroid/app/PendingIntent$CanceledException;->getMessage()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
+    .locals 4
 
     const-string v0, "RecordingController"
 
-    invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :try_start_0
+    iget-object v1, p0, Lcom/android/systemui/screenrecord/RecordingController;->mStopIntent:Landroid/app/PendingIntent;
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/android/systemui/screenrecord/RecordingController;->mStopIntent:Landroid/app/PendingIntent;
+
+    invoke-virtual {v1}, Landroid/app/PendingIntent;->send()V
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "Stop intent was null"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v1}, Lcom/android/systemui/screenrecord/RecordingController;->updateState(Z)V
+    :try_end_0
+    .catch Landroid/app/PendingIntent$CanceledException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Error stopping: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Landroid/app/PendingIntent$CanceledException;->getMessage()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_1
+    iget-object v0, p0, Lcom/android/systemui/screenrecord/RecordingController;->mBroadcastDispatcher:Lcom/android/systemui/broadcast/BroadcastDispatcher;
+
+    iget-object p0, p0, Lcom/android/systemui/screenrecord/RecordingController;->mUserChangeReceiver:Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {v0, p0}, Lcom/android/systemui/broadcast/BroadcastDispatcher;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+
     return-void
 .end method
 

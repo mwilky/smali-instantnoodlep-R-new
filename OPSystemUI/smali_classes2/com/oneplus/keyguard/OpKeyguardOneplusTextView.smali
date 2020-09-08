@@ -86,6 +86,22 @@
 
     if-ge v2, v3, :cond_2
 
+    invoke-virtual {p1, v2}, Ljava/lang/String;->charAt(I)C
+
+    move-result v3
+
+    const/16 v4, 0x3a
+
+    if-eq v3, v4, :cond_2
+
+    invoke-virtual {p1, v2}, Ljava/lang/String;->charAt(I)C
+
+    move-result v3
+
+    const/16 v4, 0x2236
+
+    if-eq v3, v4, :cond_2
+
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V

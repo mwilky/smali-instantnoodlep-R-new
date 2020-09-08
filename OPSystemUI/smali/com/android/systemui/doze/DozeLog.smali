@@ -685,16 +685,6 @@
     return-void
 .end method
 
-.method public traceTimeTickScheduled(JJ)V
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/systemui/doze/DozeLog;->mLogger:Lcom/android/systemui/doze/DozeLogger;
-
-    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/systemui/doze/DozeLogger;->logTimeTickScheduled(JJ)V
-
-    return-void
-.end method
-
 .method public traceWakeDisplay(Z)V
     .locals 0
 

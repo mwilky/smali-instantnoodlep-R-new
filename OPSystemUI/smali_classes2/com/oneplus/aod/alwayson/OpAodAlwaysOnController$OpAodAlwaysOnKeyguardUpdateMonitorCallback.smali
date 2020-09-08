@@ -44,7 +44,7 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController$OpAodAlwaysOnKeyguardUpdateMonitorCallback;->this$0:Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;
 
-    invoke-static {v0, p1}, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;->access$202(Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;I)I
+    invoke-static {v0, p1}, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;->access$302(Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;I)I
 
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -56,7 +56,7 @@
 
     iget-object p0, p0, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController$OpAodAlwaysOnKeyguardUpdateMonitorCallback;->this$0:Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;
 
-    invoke-static {p0}, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;->access$200(Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;)I
+    invoke-static {p0}, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;->access$300(Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;)I
 
     move-result p0
 
@@ -88,7 +88,7 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController$OpAodAlwaysOnKeyguardUpdateMonitorCallback;->this$0:Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;
 
-    invoke-static {v0}, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;->access$300(Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+    invoke-static {v0}, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;->access$200(Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;)Lcom/android/keyguard/KeyguardUpdateMonitor;
 
     move-result-object v0
 
@@ -100,7 +100,7 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController$OpAodAlwaysOnKeyguardUpdateMonitorCallback;->this$0:Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;
 
-    invoke-static {v0}, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;->access$300(Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+    invoke-static {v0}, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;->access$200(Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;)Lcom/android/keyguard/KeyguardUpdateMonitor;
 
     move-result-object v0
 

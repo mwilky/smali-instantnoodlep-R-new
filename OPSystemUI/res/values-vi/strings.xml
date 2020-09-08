@@ -39,6 +39,11 @@
     <string name="abc_slice_updated">Đã cập nhật lúc %1$s</string>
     <string name="abc_slices_permission_request">%1$s muốn hiển thị các lát của %2$s</string>
     <string name="abc_toolbar_collapse_description">Thu gọn</string>
+    <string name="about_action_bar_title">Giới thiệu</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Chính sách Riêng tư</string>
+    <string name="about_release_note_title">Lịch sử cập nhật:</string>
+    <string name="about_terms_service">Điều khoản Dịch vụ</string>
     <string name="accessibility_accessibility_button">Hỗ trợ tiếp cận</string>
     <string name="accessibility_action_divider_bottom_full">Toàn màn hình phía dưới</string>
     <string name="accessibility_action_divider_left_30">Trái 30%</string>
@@ -267,7 +272,7 @@
     <string name="accessibility_wimax_signal_full">Tín hiệu WiMAX đầy đủ.</string>
     <string name="accessibility_wimax_three_bars">WiMAX ba vạch.</string>
     <string name="accessibility_wimax_two_bars">WiMAX hai vạch.</string>
-    <string name="accessibility_work_life_balance_mode">Work-Life Balance</string>
+    <string name="accessibility_work_life_balance_mode">Work Life Balance</string>
     <string name="accessibility_work_life_balance_mode_off">Chế độ Work-Life Balance đã tắt.</string>
     <string name="accessibility_work_life_balance_mode_on">Chế độ Work-Life Balance đã bật.</string>
     <string name="accessibility_zero_bars">0 vạch.</string>
@@ -530,7 +535,7 @@ Hãy thử lại sau %d giây."</string>
     <string name="bubble_overflow_empty_subtitle">Bong bóng trò chuyện đã đóng và bong bóng trò chuyện gần đây sẽ xuất hiện ở đây</string>
     <string name="bubble_overflow_empty_title">Không có bong bóng trò chuyện nào gần đây</string>
     <string name="bubbles_app_settings">Cài đặt %1$s</string>
-    <string name="bubbles_dont_bubble_conversation">Dừng trò chuyện bằng bong bóng</string>
+    <string name="bubbles_dont_bubble_conversation">Dừng sử dụng bong bóng cho cuộc trò chuyện</string>
     <string name="bubbles_settings_button_description">Tùy chọn cài đặt cho bong bóng trò chuyện %1$s</string>
     <string name="bubbles_user_education_description">Các cuộc trò chuyện mới sẽ xuất hiện dưới dạng biểu tượng nổi hoặc bong bóng trò chuyện. Nhấn để mở bong bóng trò chuyện. Kéo để di chuyển bong bóng trò chuyện.</string>
     <string name="bubbles_user_education_got_it">OK</string>
@@ -540,7 +545,7 @@ Hãy thử lại sau %d giây."</string>
     <string name="bugreport_in_power">Phím tắt báo cáo lỗi</string>
     <string name="bugreport_in_power_summary">Hiển thị một nút trong menu nguồn để báo cáo lỗi</string>
     <string name="button_convert_fbe">Xóa và chuyển đổi…</string>
-    <string name="cached_apps_freezer_device_default">Cài đặt mặc định của thiết bị</string>
+    <string name="cached_apps_freezer_device_default">Theo giá trị mặc định của thiết bị</string>
     <string name="cached_apps_freezer_disabled">Đã tắt</string>
     <string name="cached_apps_freezer_enabled">Đã bật</string>
     <string name="cached_apps_freezer_reboot_dialog_text">Bạn phải khởi động lại thiết bị để áp dụng sự thay đổi này. Hãy khởi động lại ngay hoặc hủy.</string>
@@ -598,6 +603,7 @@ Hãy thử lại sau %d giây."</string>
     <string name="controls_favorite_other_zone_header">Khác</string>
     <string name="controls_favorite_rearrange">Giữ và kéo để sắp xếp lại các tùy chọn điều khiển</string>
     <string name="controls_favorite_removed">Đã xóa tất cả tùy chọn điều khiển</string>
+    <string name="controls_favorite_see_other_apps">Xem ứng dụng khác</string>
     <string name="controls_favorite_subtitle">Chọn các tùy chọn điều khiển để truy cập từ trình đơn nguồn</string>
     <string name="controls_favorite_toast_no_changes">Chưa lưu các thay đổi</string>
     <string name="controls_in_progress">Đang thực hiện</string>
@@ -696,8 +702,8 @@ Nếu tiếp tục, bạn có thể bị tính phí sử dụng dữ liệu."</s
     <string name="disable_carrier_button_text">Vô hiệu hóa eSIM</string>
     <string name="disable_overlays">Tắt các lớp phủ phần cứng</string>
     <string name="disable_overlays_summary">Luôn sử dụng GPU để tổng hợp màn hình</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">Liên hệ với quản trị viên để biết thêm thông tin</string>
+    <string name="disable_tether_notification_title">Chia sẻ kết nối đã tắt</string>
     <string name="disable_vpn">Tắt VPN</string>
     <string name="disabled">Đã tắt</string>
     <string name="disabled_by_admin">Đã bị quản trị viên vô hiệu hóa</string>
@@ -705,6 +711,8 @@ Nếu tiếp tục, bạn có thể bị tính phí sử dụng dữ liệu."</s
     <string name="disconnect_vpn">Ngắt kết nối VPN</string>
     <string name="dnd_is_off">Không làm phiền tắt</string>
     <string name="dnd_suppressing_shade_text">Chế độ Không làm phiền đã tạm dừng thông báo</string>
+    <string name="do_disclosure_generic">Thiết bị này thuộc về tổ chức của bạn</string>
+    <string name="do_disclosure_with_name">Thiết bị này thuộc về %s</string>
     <string name="do_not_silence">Không im lặng</string>
     <string name="do_not_silence_block">Không im lặng hoặc chặn</string>
     <string name="dock_alignment_not_charging">Điều chỉnh lại vị trí điện thoại để sạc không dây</string>
@@ -715,6 +723,7 @@ Nếu tiếp tục, bạn có thể bị tính phí sử dụng dữ liệu."</s
     <string name="drag_to_rearrange_tiles">Giữ và kéo để sắp xếp lại các ô</string>
     <string name="drag_to_remove_disabled">Bạn cần ít nhất %1$d ô</string>
     <string name="drag_to_remove_tiles">Kéo vào đây để xóa</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">Kéo các ô để sắp xếp lại. Chạm để hiển thị hoặc ẩn.</string>
     <string name="empty_shade_text">Không có thông báo nào</string>
     <string name="enable_adb">Gỡ lỗi qua USB</string>
@@ -1090,6 +1099,7 @@ Hãy thử lại sau %2$d giây."</string>
     <string name="left_nav_bar_button_type">Loại nút bổ sung bên trái</string>
     <string name="legacy_vpn_name">VPN</string>
     <string name="loading_injected_setting_summary">Đang tải…</string>
+    <string name="loading_text">Đang tải...</string>
     <string name="local_backup_password_summary_change">Nhấn để thay đổi hoặc xóa mật khẩu dành cho các bản sao lưu đầy đủ vào máy tính</string>
     <string name="local_backup_password_summary_none">Các bản sao lưu đầy đủ vào máy tính hiện không được bảo vệ</string>
     <string name="local_backup_password_title">Mật khẩu sao lưu vào máy tính</string>
@@ -1174,8 +1184,18 @@ Bạn cũng đang kết nối với %3$s, ứng dụng này có thể giám sát
     <string name="monitoring_description_do_learn_more_separator">" "</string>
     <string name="monitoring_description_managed_profile_ca_certificate">Tổ chức của bạn đã cài đặt một tổ chức phát hành chứng chỉ trong hồ cơ công việc của bạn. Lưu lượng truy cập mạng bảo mật của bạn có thể được giám sát hoặc sửa đổi.</string>
     <string name="monitoring_description_managed_profile_named_vpn">Hồ sơ công việc của bạn được kết nối với %1$s, ứng dụng này có thể giám sát hoạt động mạng của bạn, bao gồm email, ứng dụng và trang web.</string>
+    <string name="monitoring_description_management">"Thiết bị này thuộc về tổ chức của bạn.
+
+Quản trị viên CNTT có thể giám sát và quản lý các tùy chọn cài đặt, quyền truy cập vào dữ liệu công ty, ứng dụng, dữ liệu liên kết với thiết bị và thông tin vị trí thiết bị của bạn.
+
+Để biết thêm thông tin, hãy liên hệ với quản trị viên CNTT của bạn."</string>
     <string name="monitoring_description_management_ca_certificate">Tổ chức của bạn đã cài đặt một tổ chức phát hành chứng chỉ trên thiết bị này. Lưu lượng truy cập mạng bảo mật của bạn có thể được giám sát hoặc sửa đổi.</string>
     <string name="monitoring_description_management_network_logging">Quản trị viên của bạn đã bật tính năng ghi nhật ký mạng. Tính năng này giám sát lưu lượng truy cập trên thiết bị của bạn.</string>
+    <string name="monitoring_description_named_management">"Thiết bị này thuộc về %1$s.
+
+Quản trị viên CNTT có thể giám sát và quản lý các tùy chọn cài đặt, quyền truy cập vào dữ liệu công ty, ứng dụng, dữ liệu liên kết với thiết bị và thông tin vị trí thiết bị của bạn.
+
+Để biết thêm thông tin, hãy liên hệ với quản trị viên CNTT của bạn."</string>
     <string name="monitoring_description_named_vpn">Bạn đang kết nối với %1$s. Ứng dụng này có thể giám sát hoạt động mạng của bạn, bao gồm email, ứng dụng và trang web.</string>
     <string name="monitoring_description_network_logging">"Quản trị viên đã bật tính năng ghi nhật ký mạng. Tính năng này giám sát lưu lượng truy cập trên thiết bị của bạn.
 
@@ -1311,8 +1331,14 @@ Bạn cũng được kết nối với VPN. Dịch vụ này có thể giám sá
     <string name="oneplus_threekey_navigation_sound">Cho phép tất cả âm thanh</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Có thể được bật chức năng này bằng cách bật khóa ở trên</string>
     <string name="oneplus_threekey_navigation_vibration">Chỉ rung</string>
-    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> lần mở khóa</string>
-    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> lần mở khóa</string>
+    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>lần mở khóa</string>
+    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>lần mở khóa</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">Đang ghép nối...</string>
     <string name="op_earphone_connected_fail">Ghép nối thất bại. Bạn có thể kiểm tra tai nghe và trạng thái Bluetooth.</string>
     <string name="op_earphone_connected_success">Đã ghép nối. Chạm để cài đặt thêm.</string>
@@ -1342,9 +1368,10 @@ Bạn cũng được kết nối với VPN. Dịch vụ này có thể giám sá
     <string name="op_notification_channel_summary_low">Những thông báo ít quan trọng hơn không có âm thanh hoặc rung.</string>
     <string name="op_notification_section_header_gentle">Thông báo khác</string>
     <string name="op_notification_silence_title">Khác</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">Chế độ tối</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s đã được sử dụng</string>
-    <string name="op_quick_settings_night_display_label">Chế độ ban đêm</string>
+    <string name="op_quick_settings_night_display_label">Thoải mái cho mắt</string>
     <string name="op_quick_settings_night_display_summary_off">Chế độ Ban đêm đang tắt, chạm để bật</string>
     <string name="op_quick_settings_night_display_summary_on">Chế độ Ban đêm đang bật, chạm để tắt</string>
     <string name="op_read_mode2_dialog_black">Hiệu ứng đơn sắc</string>
@@ -1556,8 +1583,20 @@ Bạn cũng được kết nối với VPN. Dịch vụ này có thể giám sá
     <string name="quick_settings_data_switch_toast_1">Hiện tại chỉ có một thẻ SIM được lắp</string>
     <string name="quick_settings_default_data_card">Thẻ dữ liệu mặc định</string>
     <string name="quick_settings_disclosure_managed_profile_monitoring">Tổ chức của bạn có thể giám sát lưu lượng truy cập mạng trong hồ sơ công việc của bạn</string>
+    <string name="quick_settings_disclosure_managed_profile_named_vpn">Hồ sơ công việc của bạn đã kết nối với %1$s</string>
+    <string name="quick_settings_disclosure_management">Thiết bị này thuộc về tổ chức của bạn</string>
+    <string name="quick_settings_disclosure_management_monitoring">Tổ chức của bạn sở hữu thiết bị này và có thể giám sát lưu lượng truy cập mạng</string>
+    <string name="quick_settings_disclosure_management_named_vpn">Thiết bị này thuộc về tổ chức của bạn và đã kết nối với %1$s</string>
+    <string name="quick_settings_disclosure_management_vpns">Thiết bị này thuộc về tổ chức của bạn và đã kết nối với VPN</string>
     <string name="quick_settings_disclosure_monitoring">Mạng có thể được giám sát</string>
     <string name="quick_settings_disclosure_named_managed_profile_monitoring">%1$s có thể giám sát lưu lượng truy cập mạng trong hồ sơ công việc của bạn</string>
+    <string name="quick_settings_disclosure_named_management">Thiết bị này thuộc về %1$s</string>
+    <string name="quick_settings_disclosure_named_management_monitoring">%1$s sở hữu thiết bị này và có thể giám sát lưu lượng truy cập mạng</string>
+    <string name="quick_settings_disclosure_named_management_named_vpn">Thiết bị này thuộc về %1$s và đã kết nối với %2$s</string>
+    <string name="quick_settings_disclosure_named_management_vpns">Thiết bị này thuộc về %1$s và đã kết nối với VPN</string>
+    <string name="quick_settings_disclosure_named_vpn">Thiết bị này đã kết nối với %1$s</string>
+    <string name="quick_settings_disclosure_personal_profile_named_vpn">Hồ sơ cá nhân của bạn đã kết nối với %1$s</string>
+    <string name="quick_settings_disclosure_vpns">Thiết bị này đã kết nối với VPN</string>
     <string name="quick_settings_dnd_alarms_label">Chỉ chuông báo</string>
     <string name="quick_settings_dnd_label">Không làm phiền</string>
     <string name="quick_settings_dnd_none_label">Hoàn toàn tắt tiếng</string>
@@ -1847,7 +1886,7 @@ Bạn cũng được kết nối với VPN. Dịch vụ này có thể giám sá
     <string name="tethered_notification_hybrid_sharing_mobile">Đang chia sẻ dữ liệu di động, nhấp để vào Cài đặt</string>
     <string name="tethered_notification_hybrid_sharing_none">Không có mạng khả dụng để chia sẻ, nhấp để vào Cài đặt</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Đang chia sẻ Wi-Fi, nhấp để vào Cài đặt</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">Chạm để thiết lập.</string>
     <string name="tethered_notification_multi_device_message">%1$s thiết bị được kết nối</string>
     <string name="tethered_notification_multi_tether_title">Chia sẻ kết nối và Điểm truy cập Di động đang hoạt động</string>
     <string name="tethered_notification_no_device_message">Không có thiết bị kết nối</string>
@@ -2080,7 +2119,17 @@ Mọi người dùng đều có thể cập nhật ứng dụng cho tất cả n
     <string name="wifi_verbose_logging">Bật ghi nhật ký chi tiết Wi‑Fi</string>
     <string name="wifi_verbose_logging_summary">Tăng mức ghi nhật ký Wi‑Fi, hiển thị mỗi SSID RSSI trong bộ chọn Wi‑Fi</string>
     <string name="window_animation_scale_title">Tỷ lệ hình động của cửa sổ</string>
-    <string name="work_life_balance_mode">Work-Life Balance</string>
+    <string name="wlb_break_mode_active">Hoạt động</string>
+    <string name="wlb_break_mode_active_text">%1$s Chế độ · %2$s</string>
+    <string name="wlb_break_mode_on_break">Đang nghỉ</string>
+    <string name="wlb_break_mode_resume">Tiếp tục</string>
+    <string name="wlb_break_mode_take_break">Tạm nghỉ</string>
+    <string name="wlb_qs_detail_break_mode">Chế độ nghỉ</string>
+    <string name="wlb_qs_detail_break_mode_desc">Tự động tiếp tục chế độ trước đó sau 30 phút</string>
+    <string name="wlb_qs_detail_life_mode">Chế độ cuộc sống</string>
+    <string name="wlb_qs_detail_more_setting">Cài đặt khác</string>
+    <string name="wlb_qs_detail_work_mode">Chế độ công việc</string>
+    <string name="work_life_balance_mode">Work Life Balance</string>
     <string name="zen_alarm_warning">Bạn sẽ không nghe thấy báo thức tiếp theo lúc %1$s của mình</string>
     <string name="zen_alarm_warning_indef">Bạn sẽ không nghe thấy báo thức tiếp theo lúc %1$s của mình trừ khi bạn tắt chức năng này trước</string>
     <string name="zen_alarms_introduction">Bạn sẽ không bị làm phiền bởi âm thanh và tiếng rung, ngoại trừ báo thức. Bạn sẽ vẫn nghe thấy mọi thứ bạn chọn phát, bao gồm nhạc, video và trò chơi.</string>
@@ -2101,5 +2150,5 @@ Mọi người dùng đều có thể cập nhật ứng dụng cho tất cả n
     <string name="zen_silence_introduction_voice">Chế độ này sẽ chặn TẤT CẢ âm thanh và tiếng rung, bao gồm báo thức, nhạc, video và trò chơi. Bạn vẫn có thể gọi điện thoại.</string>
     <string name="zzz_op_global_action_bootloader">Bộ nạp khởi động</string>
     <string name="zzz_op_global_action_recovery">Phục hồi</string>
-    <string name="zzz_op_quick_pay_no_install_message">Vui lòng cài đặt các ứng dụng thanh toán để sử dụng Quick Pay</string>
+    <string name="zzz_op_quick_pay_no_install_message">Vui lòng cài đặt các ứng dụng thanh toán để sử dụng Thanh toán nhanh</string>
 </resources>

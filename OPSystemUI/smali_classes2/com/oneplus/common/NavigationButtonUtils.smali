@@ -80,3 +80,52 @@
     :goto_0
     return p0
 .end method
+
+.method public static isGestureButtonShowOnCreen(Landroid/content/Context;)Z
+    .locals 2
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    const-string v0, "buttons_show_on_screen_navkeys"
+
+    const/4 v1, 0x0
+
+    invoke-static {p0, v0, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result p0
+
+    const/4 v0, 0x1
+
+    if-ne p0, v0, :cond_0
+
+    move v1, v0
+
+    :cond_0
+    return v1
+.end method
+
+.method public static isGestureNavigationBar(Landroid/content/Context;)Z
+    .locals 1
+
+    const-string v0, "config_navBarInteractionMode"
+
+    invoke-static {p0, v0}, Lcom/oneplus/common/NavigationButtonUtils;->getSystemIntegerRes(Landroid/content/Context;Ljava/lang/String;)I
+
+    move-result p0
+
+    const/4 v0, 0x2
+
+    if-ne v0, p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+.end method

@@ -78,7 +78,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/media/MediaDataManager$1;->this$0:Lcom/android/systemui/media/MediaDataManager;
 
-    invoke-static {p0, p1, p2}, Lcom/android/systemui/media/MediaDataManager;->access$setTimedOut(Lcom/android/systemui/media/MediaDataManager;Ljava/lang/String;Z)V
+    invoke-virtual {p0, p1, p2}, Lcom/android/systemui/media/MediaDataManager;->setTimedOut$packages__apps__OPSystemUI__android_common__OPSystemUI_core(Ljava/lang/String;Z)V
 
     return-void
 .end method

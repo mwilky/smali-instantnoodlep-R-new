@@ -57,9 +57,9 @@
 
 .field private mDarkIntensity:F
 
-.field private mDecorColor:I
-
 .field private mDensity:I
+
+.field private mDirty:Z
 
 .field private mDotAnimator:Landroid/animation/ObjectAnimator;
 
@@ -215,6 +215,8 @@
 
     iput v1, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mCachedContrastBackgroundColor:I
 
+    iput-boolean p2, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mDirty:Z
+
     new-instance v0, Lcom/android/systemui/statusbar/notification/NotificationIconDozeHelper;
 
     invoke-direct {v0, p1}, Lcom/android/systemui/statusbar/notification/NotificationIconDozeHelper;-><init>(Landroid/content/Context;)V
@@ -306,6 +308,8 @@
     iput-object v1, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mColorUpdater:Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
     iput v2, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mCachedContrastBackgroundColor:I
+
+    iput-boolean v0, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mDirty:Z
 
     new-instance v1, Lcom/android/systemui/statusbar/notification/NotificationIconDozeHelper;
 
@@ -1133,41 +1137,8 @@
 .end method
 
 .method private updateDecorColor()V
-    .locals 3
+    .locals 0
 
-    iget v0, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mDecorColor:I
-
-    iget v1, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mDozeAmount:F
-
-    const/4 v2, -0x1
-
-    invoke-static {v0, v2, v1}, Lcom/android/systemui/statusbar/notification/NotificationUtils;->interpolateColors(IIF)I
-
-    move-result v0
-
-    iget-object v1, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mDotPaint:Landroid/graphics/Paint;
-
-    invoke-virtual {v1}, Landroid/graphics/Paint;->getColor()I
-
-    move-result v1
-
-    if-eq v1, v0, :cond_0
-
-    iget-object v1, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mDotPaint:Landroid/graphics/Paint;
-
-    invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setColor(I)V
-
-    iget v0, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mDotAppearAmount:F
-
-    const/4 v1, 0x0
-
-    cmpl-float v0, v0, v1
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Landroid/widget/ImageView;->invalidate()V
-
-    :cond_0
     return-void
 .end method
 
@@ -1286,7 +1257,7 @@
     :cond_0
     iget v0, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mCurrentSetColor:I
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mMatrixColorFilter:Landroid/graphics/ColorMatrixColorFilter;
 
@@ -1317,6 +1288,29 @@
 
     move-result v0
 
+    iget-object v2, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mDotPaint:Landroid/graphics/Paint;
+
+    invoke-virtual {v2}, Landroid/graphics/Paint;->getColor()I
+
+    move-result v2
+
+    if-eq v2, v0, :cond_2
+
+    iget-object v2, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mDotPaint:Landroid/graphics/Paint;
+
+    invoke-virtual {v2, v0}, Landroid/graphics/Paint;->setColor(I)V
+
+    iget v2, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mDotAppearAmount:F
+
+    const/4 v3, 0x0
+
+    cmpl-float v2, v2, v3
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {p0}, Landroid/widget/ImageView;->invalidate()V
+
+    :cond_2
     iget-object v2, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mMatrix:[F
 
     const v3, 0x3f2b851f    # 0.67f
@@ -1341,7 +1335,7 @@
 
     goto :goto_0
 
-    :cond_2
+    :cond_3
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mDozer:Lcom/android/systemui/statusbar/notification/NotificationIconDozeHelper;
 
     iget v1, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mDozeAmount:F
@@ -1945,9 +1939,11 @@
 
     const/16 v0, 0x20
 
+    const/4 v1, 0x1
+
     if-ne p1, v0, :cond_1
 
-    const/4 p1, 0x1
+    move p1, v1
 
     goto :goto_0
 
@@ -1964,6 +1960,8 @@
     invoke-direct {p0}, Lcom/android/systemui/statusbar/StatusBarIconView;->initializeDecorColor()V
 
     :cond_2
+    iput-boolean v1, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mDirty:Z
+
     return-void
 .end method
 
@@ -2054,7 +2052,7 @@
 
     if-eqz v0, :cond_3
 
-    iget v0, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mDecorColor:I
+    iget v0, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mCurrentSetColor:I
 
     invoke-static {v0}, Landroid/graphics/Color;->alpha(I)I
 
@@ -2169,6 +2167,41 @@
     :cond_0
     invoke-direct {p0}, Lcom/android/systemui/statusbar/StatusBarIconView;->updatePivot()V
 
+    invoke-static {}, Lcom/oneplus/plugin/OpLsState;->getInstance()Lcom/oneplus/plugin/OpLsState;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/oneplus/plugin/OpLsState;->getPhoneStatusBar()Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/android/systemui/statusbar/phone/StatusBar;->isInMultiWindow()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    iget-object p1, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mNotification:Landroid/service/notification/StatusBarNotification;
+
+    if-nez p1, :cond_1
+
+    iget-boolean p1, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mDirty:Z
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p0}, Landroid/widget/ImageView;->getWidth()I
+
+    move-result p1
+
+    if-lez p1, :cond_1
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/StatusBarIconView;->applyIconAndColors()V
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mDirty:Z
+
+    :cond_1
     return-void
 .end method
 
@@ -2584,8 +2617,6 @@
 .method public setDecorColor(I)V
     .locals 0
 
-    iput p1, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mDecorColor:I
-
     invoke-direct {p0}, Lcom/android/systemui/statusbar/StatusBarIconView;->updateDecorColor()V
 
     return-void
@@ -2832,17 +2863,51 @@
 .end method
 
 .method public setVisibility(I)V
-    .locals 0
+    .locals 1
 
     invoke-super {p0, p1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    iget-object p0, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mOnVisibilityChangedListener:Lcom/android/systemui/statusbar/StatusBarIconView$OnVisibilityChangedListener;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mOnVisibilityChangedListener:Lcom/android/systemui/statusbar/StatusBarIconView$OnVisibilityChangedListener;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-interface {p0, p1}, Lcom/android/systemui/statusbar/StatusBarIconView$OnVisibilityChangedListener;->onVisibilityChanged(I)V
+    invoke-interface {v0, p1}, Lcom/android/systemui/statusbar/StatusBarIconView$OnVisibilityChangedListener;->onVisibilityChanged(I)V
 
     :cond_0
+    invoke-static {}, Lcom/oneplus/plugin/OpLsState;->getInstance()Lcom/oneplus/plugin/OpLsState;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oneplus/plugin/OpLsState;->getPhoneStatusBar()Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/StatusBar;->isInMultiWindow()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mNotification:Landroid/service/notification/StatusBarNotification;
+
+    if-nez v0, :cond_2
+
+    if-nez p1, :cond_2
+
+    invoke-virtual {p0}, Landroid/widget/ImageView;->getWidth()I
+
+    move-result p1
+
+    if-lez p1, :cond_1
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/StatusBarIconView;->applyIconAndColors()V
+
+    :cond_1
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mDirty:Z
+
+    :cond_2
     return-void
 .end method
 

@@ -36,7 +36,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController$9;->this$0:Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
-    invoke-static {p0}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->access$700(Lcom/android/systemui/statusbar/KeyguardIndicationController;)V
+    invoke-static {p0}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->access$900(Lcom/android/systemui/statusbar/KeyguardIndicationController;)V
 
     return-void
 .end method

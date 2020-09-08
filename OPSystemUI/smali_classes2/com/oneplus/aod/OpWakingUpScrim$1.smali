@@ -57,7 +57,7 @@
 
     add-float/2addr v1, v2
 
-    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
+    invoke-static {v0}, Lcom/oneplus/aod/OpWakingUpScrim;->access$100(Lcom/oneplus/aod/OpWakingUpScrim;)I
 
     move-result v2
 
@@ -73,9 +73,9 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/OpWakingUpScrim$1;->this$0:Lcom/oneplus/aod/OpWakingUpScrim;
 
-    invoke-static {v0, p1}, Lcom/oneplus/aod/OpWakingUpScrim;->access$102(Lcom/oneplus/aod/OpWakingUpScrim;F)F
+    invoke-static {v0, p1}, Lcom/oneplus/aod/OpWakingUpScrim;->access$202(Lcom/oneplus/aod/OpWakingUpScrim;F)F
 
-    sget-boolean v0, Lcom/oneplus/util/OpUtils;->DEBUG_ONEPLUS:Z
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
     if-eqz v0, :cond_0
 
@@ -100,7 +100,7 @@
     :cond_0
     iget-object v0, p0, Lcom/oneplus/aod/OpWakingUpScrim$1;->this$0:Lcom/oneplus/aod/OpWakingUpScrim;
 
-    invoke-static {v0, p1}, Lcom/oneplus/aod/OpWakingUpScrim;->access$200(Lcom/oneplus/aod/OpWakingUpScrim;F)V
+    invoke-static {v0, p1}, Lcom/oneplus/aod/OpWakingUpScrim;->access$300(Lcom/oneplus/aod/OpWakingUpScrim;F)V
 
     iget-object p0, p0, Lcom/oneplus/aod/OpWakingUpScrim$1;->this$0:Lcom/oneplus/aod/OpWakingUpScrim;
 

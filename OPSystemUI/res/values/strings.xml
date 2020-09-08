@@ -614,6 +614,7 @@ Selection"</string>
     <string name="compat_mode_off">Stretch to fill screen</string>
     <string name="compat_mode_on">Zoom to fill screen</string>
     <string name="config_cameraProtectionExcludedPackages" />
+    <string name="config_defaultNearbySharingComponent">com.google.android.gms/com.google.android.gms.nearby.sharing.ShareSheetActivity</string>
     <string name="config_frontBuiltInDisplayCutoutProtection" />
     <string name="config_navBarLayout">left[.5W],back[1WC];home;recent[1WC],right[.5W]</string>
     <string name="config_navBarLayoutHandle">back[40AC];home_handle;ime_switcher[40AC]</string>
@@ -660,6 +661,7 @@ Selection"</string>
     <string name="controls_favorite_other_zone_header">Other</string>
     <string name="controls_favorite_rearrange">Hold &amp; drag to rearrange controls</string>
     <string name="controls_favorite_removed">All controls removed</string>
+    <string name="controls_favorite_see_other_apps">See other apps</string>
     <string name="controls_favorite_subtitle">Choose controls to access from the power menu</string>
     <string name="controls_favorite_toast_no_changes">Changes not saved</string>
     <string name="controls_in_progress">In progress</string>
@@ -793,6 +795,7 @@ If you resume, charges may apply for data usage."</string>
     <string name="drag_to_rearrange_tiles">Hold and drag to rearrange tiles</string>
     <string name="drag_to_remove_disabled">You need at least %1$d tiles</string>
     <string name="drag_to_remove_tiles">Drag here to remove</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">Drag tiles to rearrange. Tap to show or hide.</string>
     <string name="ellipsis">…</string>
     <string name="empty_shade_text">No notifications</string>
@@ -912,7 +915,7 @@ Once your phone has cooled down, it will run normally."</string>
  2: Select %1$s in the list of available Wi-Fi networks. 
  3: If a password is required, enter %2$s To save battery, keep your phone plugged in when using Mobile Hotspot. "</string>
     <string name="icon_content_description">Dialog Icon</string>
-    <string name="icu_w_month_day_no_year">EEEEMMMd</string>
+    <string name="icu_w_month_day_no_year">EEEMMMd</string>
     <string name="ime_security_warning">This input method may be able to collect all the text you type, including personal data like passwords and credit card numbers. It comes from the app %1$s. Use this input method?</string>
     <string name="immediately_destroy_activities">Don’t keep activities</string>
     <string name="immediately_destroy_activities_summary">Destroy every activity as soon as the user leaves it</string>
@@ -1472,6 +1475,8 @@ You're also connected to a VPN, which can monitor your network activity."</strin
     <string name="oneplus_contorl_font_family_title_extended">sans-serif-medium</string>
     <string name="oneplus_device_tag">15801</string>
     <string name="oneplus_laboratory_added_toast">Congratulations! OnePlus laboratory has been added to Settings</string>
+    <string name="oneplus_lunar_leap">闰</string>
+    <string name="oneplus_lunar_year">年</string>
     <string name="oneplus_not_show">"Don't show this again"</string>
     <string name="oneplus_screen_features_not_available_toast">When turned on, features such as screen calibration will not be available</string>
     <string name="oneplus_threekey_navigation_disturb_changed">"'Do Not Disturb' has changed!"</string>
@@ -1484,7 +1489,23 @@ You're also connected to a VPN, which can monitor your network activity."</strin
     <string name="op_accessibility_quick_settings_page">page %1$d ,Total %2$d pages</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>unlock</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>unlocks</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_character_counter_pattern">%1$d / %2$d</string>
+    <string name="op_control_font_display_h1">oneplus-sans-display-h1</string>
+    <string name="op_control_font_display_h2">oneplus-sans-display-h2</string>
+    <string name="op_control_font_display_h3">oneplus-sans-display-h3</string>
+    <string name="op_control_font_text_body1">oneplus-sans-text-body-1</string>
+    <string name="op_control_font_text_button">oneplus-sans-text-button</string>
+    <string name="op_control_font_text_descriptions">oneplus-sans-text-description</string>
+    <string name="op_control_font_text_h4">oneplus-sans-text-h4</string>
+    <string name="op_control_font_text_h5">oneplus-sans-text-h5</string>
+    <string name="op_control_font_text_h6">oneplus-sans-text-h6</string>
+    <string name="op_control_font_text_subtitle">oneplus-sans-text-subtitle</string>
     <string name="op_date_format">MMMM d</string>
     <string name="op_earphone_connect">Pairing...</string>
     <string name="op_earphone_connected_fail">Failed to Pair. You can check the headset and Bluetooth status.</string>
@@ -1835,9 +1856,9 @@ You're also connected to a VPN, which can monitor your network activity."</strin
     <string name="quick_settings_switch_user_storage_insufficient">Storage is full, cannot switch user</string>
     <string name="quick_settings_tethering_label">Tethering</string>
     <string name="quick_settings_tiles">default</string>
-    <string name="quick_settings_tiles_default">wifi,cell,bt,flashlight,rotation,battery,airplane,night,location,dataswitch,dnd,nfc,custom(com.android.phone/com.android.wificalling.OPWifiCallingTitle),game,read,dark,hotspot,opreversecharge,custom(com.oneplus.brickmode/.service.BreathModeTileService),custom(com.oneplus.screenrecord/.core.SystemUITileService),custom(com.heytap.speechassist/.skill.drivingmode.internal.DrivingModeTileService)</string>
+    <string name="quick_settings_tiles_default">wifi,cell,bt,flashlight,rotation,battery,airplane,night,location,dataswitch,dnd,nfc,custom(com.android.phone/com.android.wificalling.OPWifiCallingTitle),game,read,dark,hotspot,opreversecharge,custom(com.oneplus.brickmode/.service.BreathModeTileService),custom(com.oneplus.screenrecord/.core.SystemUITileService),custom(com.heytap.speechassist/.skill.drivingmode.internal.DrivingModeTileService),custom(com.google.android.gms/.nearby.sharing.SharingTileService)</string>
     <string name="quick_settings_tiles_guest">wifi,bt,flashlight,rotation,powersaving,airplane,night,location,game,nfc,hotspot,saver,opreversecharge</string>
-    <string name="quick_settings_tiles_retail_mode">wifi,cell,bt,flashlight,rotation,battery,airplane,night,location,dataswitch,dnd,nfc,custom(com.android.phone/com.android.wificalling.OPWifiCallingTitle),game,read,dark,hotspot,custom(com.oneplus.brickmode/.service.BreathModeTileService),custom(com.oneplus.screenrecord/.service.SystemUITileService),custom(com.heytap.speechassist/.skill.drivingmode.internal.DrivingModeTileService)</string>
+    <string name="quick_settings_tiles_retail_mode">wifi,cell,bt,flashlight,rotation,battery,airplane,night,location,dataswitch,dnd,nfc,custom(com.android.phone/com.android.wificalling.OPWifiCallingTitle),game,read,dark,hotspot,custom(com.oneplus.brickmode/.service.BreathModeTileService),custom(com.oneplus.screenrecord/.service.SystemUITileService),custom(com.heytap.speechassist/.skill.drivingmode.internal.DrivingModeTileService),custom(com.google.android.gms/.nearby.sharing.SharingTileService)</string>
     <string name="quick_settings_tiles_stock">wifi,cell,battery,bt,rotation,flashlight,airplane,night,location,hotspot,nfc,read,dark,game,otg,dnd,cast,saver,vpn,inversion,work,dataswitch,opreversecharge,screenrecord,reverse</string>
     <string name="quick_settings_time_label">Time</string>
     <string name="quick_settings_ui_mode_night_label">Dark theme</string>
@@ -2082,7 +2103,7 @@ be monitored"</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Sharing Wi-Fi, click to enter Settings</string>
     <string name="tethered_notification_message">Tap to set up.</string>
     <string name="tethered_notification_multi_device_message">%1$s connected devices</string>
-    <string name="tethered_notification_multi_tether_title">Tethering and Mobile HotSpot active</string>
+    <string name="tethered_notification_multi_tether_title">Tethering and Mobile Hotspot Active</string>
     <string name="tethered_notification_no_device_message">No connected device</string>
     <string name="tethered_notification_one_device_message">%1$s connected device</string>
     <string name="tethered_notification_sharing_mobile_multi">Sharing mobile data, %1$s devices connected</string>
@@ -2094,7 +2115,7 @@ be monitored"</string>
     <string name="tethered_notification_sharing_wifi_multi">Sharing Wi-Fi, %1$s devices connected</string>
     <string name="tethered_notification_sharing_wifi_no">Sharing Wi-Fi, no device connected</string>
     <string name="tethered_notification_sharing_wifi_single">Sharing Wi-Fi, %1$s device connected</string>
-    <string name="tethered_notification_title">Tethering or Mobile HotSpot active</string>
+    <string name="tethered_notification_title">Tethering or Mobile Hotspot Active</string>
     <string name="tethering_hardware_offload">Tethering hardware acceleration</string>
     <string name="tethering_hardware_offload_summary">Use tethering hardware acceleration if available</string>
     <string name="tethering_settings_not_available">Tethering settings are not available for this user</string>

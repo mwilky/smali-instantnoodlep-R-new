@@ -39,6 +39,11 @@
     <string name="abc_slice_updated">%1$s에 업데이트됨</string>
     <string name="abc_slices_permission_request">%1$s에서 %2$s의 슬라이스를 표시하려고 합니다.</string>
     <string name="abc_toolbar_collapse_description">접기</string>
+    <string name="about_action_bar_title">정보</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">개인 정보 보호 정책</string>
+    <string name="about_release_note_title">업데이트 로그:</string>
+    <string name="about_terms_service">서비스 약관</string>
     <string name="accessibility_accessibility_button">접근성</string>
     <string name="accessibility_action_divider_bottom_full">아래쪽 화면 전체화면</string>
     <string name="accessibility_action_divider_left_30">왼쪽 화면 30%</string>
@@ -267,9 +272,9 @@
     <string name="accessibility_wimax_signal_full">WiMAX 신호가 강합니다.</string>
     <string name="accessibility_wimax_three_bars">WiMAX 신호 막대가 세 개입니다.</string>
     <string name="accessibility_wimax_two_bars">WiMAX 신호 막대가 두 개입니다.</string>
-    <string name="accessibility_work_life_balance_mode">워크 라이프 밸런스</string>
-    <string name="accessibility_work_life_balance_mode_off">워크 라이프 밸런스 모드가 꺼졌습니다.</string>
-    <string name="accessibility_work_life_balance_mode_on">워크 라이프 밸런스 모드가 켜졌습니다.</string>
+    <string name="accessibility_work_life_balance_mode">Work Life Balance</string>
+    <string name="accessibility_work_life_balance_mode_off">Work Life Balance 모드가 꺼졌습니다.</string>
+    <string name="accessibility_work_life_balance_mode_on">Work Life Balance 모드가 켜졌습니다.</string>
     <string name="accessibility_zero_bars">신호 막대가 없습니다.</string>
     <string name="accessor_expires_text">계약 만료일: %s</string>
     <string name="accessor_info_title">데이터 공유 앱</string>
@@ -598,10 +603,15 @@
     <string name="controls_favorite_other_zone_header">기타</string>
     <string name="controls_favorite_rearrange">길게 누르고 드래그하여 컨트롤 재정렬</string>
     <string name="controls_favorite_removed">모든 컨트롤 삭제됨</string>
+    <string name="controls_favorite_see_other_apps">다른 앱 보기</string>
     <string name="controls_favorite_subtitle">전원 메뉴에서 액세스할 컨트롤 선택</string>
     <string name="controls_favorite_toast_no_changes">변경사항이 저장되지 않음</string>
     <string name="controls_in_progress">진행 중</string>
+    <string name="controls_media_close_session">현재 세션을 숨깁니다.</string>
+    <string name="controls_media_dismiss_button">숨기기</string>
     <string name="controls_media_resume">다시 시작</string>
+    <string name="controls_media_settings_button">설정</string>
+    <string name="controls_media_title">미디어</string>
     <string name="controls_menu_add">컨트롤 추가</string>
     <string name="controls_menu_edit">컨트롤 수정</string>
     <string name="controls_open_app">앱 열기</string>
@@ -692,8 +702,8 @@
     <string name="disable_carrier_button_text">eSIM 사용 중지</string>
     <string name="disable_overlays">HW 오버레이 사용 안함</string>
     <string name="disable_overlays_summary">화면 합성 목적으로 항상 GPU 사용</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">자세한 내용은 관리자에게 문의하세요.</string>
+    <string name="disable_tether_notification_title">테더링이 사용 중지되었습니다.</string>
     <string name="disable_vpn">VPN 사용 중지</string>
     <string name="disabled">사용 안함</string>
     <string name="disabled_by_admin">관리자가 사용 중지함</string>
@@ -701,6 +711,8 @@
     <string name="disconnect_vpn">VPN 연결 해제</string>
     <string name="dnd_is_off">방해 금지 모드가 사용 중지됨</string>
     <string name="dnd_suppressing_shade_text">방해 금지 모드로 알림이 일시중지됨</string>
+    <string name="do_disclosure_generic">내 조직에 속한 기기입니다.</string>
+    <string name="do_disclosure_with_name">%s에 속한 기기입니다.</string>
     <string name="do_not_silence">무음 모드 사용 안함</string>
     <string name="do_not_silence_block">무음 모드 또는 차단 사용 안함</string>
     <string name="dock_alignment_not_charging">무선으로 충전하려면 스마트폰을 다시 배치하세요.</string>
@@ -711,6 +723,7 @@
     <string name="drag_to_rearrange_tiles">길게 터치하고 드래그하여 타일 재정렬</string>
     <string name="drag_to_remove_disabled">%1$d개 이상의 타일이 필요합니다.</string>
     <string name="drag_to_remove_tiles">여기로 드래그하여 삭제</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">타일을 재배치하려면 드래그하세요. 표시하거나 숨기려면 탭하세요.</string>
     <string name="empty_shade_text">알림 없음</string>
     <string name="enable_adb">USB 디버깅</string>
@@ -1086,6 +1099,7 @@
     <string name="left_nav_bar_button_type">추가 왼쪽 버튼 유형</string>
     <string name="legacy_vpn_name">VPN</string>
     <string name="loading_injected_setting_summary">로드 중…</string>
+    <string name="loading_text">로드하는 중...</string>
     <string name="local_backup_password_summary_change">데스크톱 전체 백업에 대한 비밀번호를 변경하거나 삭제하려면 탭하세요.</string>
     <string name="local_backup_password_summary_none">데스크톱 전체 백업에 비밀번호가 설정되어 있지 않음</string>
     <string name="local_backup_password_title">데스크톱 백업 비밀번호</string>
@@ -1170,8 +1184,18 @@
     <string name="monitoring_description_do_learn_more_separator">" "</string>
     <string name="monitoring_description_managed_profile_ca_certificate">조직에서 직장 프로필에 인증기관을 설치했습니다. 보안 네트워크 트래픽을 모니터링 또는 수정할 수 있습니다.</string>
     <string name="monitoring_description_managed_profile_named_vpn">직장 프로필이 %1$s에 연결되었습니다. 이 앱은 이메일, 앱, 웹사이트와 같은 내 네트워크 활동을 모니터링할 수 있습니다.</string>
+    <string name="monitoring_description_management">"내 조직에 속한 기기입니다.
+
+IT 관리자가 설정, 기업 액세스, 앱, 기기와 연결된 데이터, 기기 위치 정보를 모니터링 및 관리할 수 있습니다.
+
+자세한 정보를 확인하려면 IT 관리자에게 문의하세요."</string>
     <string name="monitoring_description_management_ca_certificate">조직에서 이 기기에 인증기관을 설치했습니다. 보안 네트워크 트래픽을 모니터링 또는 수정할 수 있습니다.</string>
     <string name="monitoring_description_management_network_logging">관리자가 기기에서 발생하는 트래픽을 모니터링하는 네트워크 로깅을 사용 설정했습니다.</string>
+    <string name="monitoring_description_named_management">"%1$s에 속한 기기입니다.
+
+IT 관리자가 설정, 기업 액세스, 앱, 기기와 연결된 데이터, 기기 위치 정보를 모니터링 및 관리할 수 있습니다.
+
+자세한 정보를 확인하려면 IT 관리자에게 문의하세요."</string>
     <string name="monitoring_description_named_vpn">%1$s에 연결되었습니다. 이 앱은 이메일, 앱, 웹사이트와 같은 내 네트워크 활동을 모니터링할 수 있습니다.</string>
     <string name="monitoring_description_network_logging">"관리자가 기기에서 발생하는 트래픽을 모니터링하는 네트워크 로깅을 사용 설정했습니다.
 
@@ -1254,7 +1278,7 @@
     <string name="notification_channel_summary_default">휴대전화 설정에 따라 벨소리나 진동이 울릴 수 있음</string>
     <string name="notification_channel_summary_default_with_bubbles">휴대전화 설정에 따라 벨소리나 진동이 울릴 수 있습니다. 기본적으로 %1$s의 대화는 대화창으로 표시됩니다.</string>
     <string name="notification_channel_summary_low">소리 또는 진동 없음</string>
-    <string name="notification_channel_summary_priority">대화 섹션 상단의 플로팅 대화창 또는 잠금 화면의 프로필 사진으로 표시됩니다.</string>
+    <string name="notification_channel_summary_priority">대화 섹션 상단에 표시, 플로팅 대화창으로 표시, 그리고 잠금 화면에 프로필 사진이 표시됩니다.</string>
     <string name="notification_channel_switch_accessibility">이 채널의 알림을 허용합니다.</string>
     <string name="notification_channel_tethering_status">핫스팟 및 테더링 상태</string>
     <string name="notification_channel_tv_pip">PIP 모드</string>
@@ -1309,6 +1333,13 @@
     <string name="oneplus_threekey_navigation_vibration">진동만</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>개 잠금 해제</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>개 잠금 해제</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
+    <string name="op_date_format">M月d日</string>
     <string name="op_earphone_connect">연결 중...</string>
     <string name="op_earphone_connected_fail">연결하지 못했습니다. 헤드셋 및 Bluetooth 상태를 확인하세요.</string>
     <string name="op_earphone_connected_success">연결되었습니다. 더 연결하려면 탭하세요.</string>
@@ -1338,9 +1369,10 @@
     <string name="op_notification_channel_summary_low">소리 또는 진동이 없는 덜 중요한 알림.</string>
     <string name="op_notification_section_header_gentle">기타 알림</string>
     <string name="op_notification_silence_title">기타</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">다크 모드</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s 사용됨</string>
-    <string name="op_quick_settings_night_display_label">야간 모드</string>
+    <string name="op_quick_settings_night_display_label">비전 컴포트</string>
     <string name="op_quick_settings_night_display_summary_off">야간 모드 꺼짐, 탭하여 켜기</string>
     <string name="op_quick_settings_night_display_summary_on">야간 모드 켜짐, 탭하여 끄기</string>
     <string name="op_read_mode2_dialog_black">모노 효과</string>
@@ -1552,8 +1584,20 @@
     <string name="quick_settings_data_switch_toast_1">현재 하나의 SIM 카드만 삽입되어 있습니다.</string>
     <string name="quick_settings_default_data_card">기본 데이터 카드</string>
     <string name="quick_settings_disclosure_managed_profile_monitoring">조직에서 직장 프로필의 네트워크 트래픽을 모니터링할 수 있습니다.</string>
+    <string name="quick_settings_disclosure_managed_profile_named_vpn">직장 프로필이 %1$s에 연결되었습니다.</string>
+    <string name="quick_settings_disclosure_management">내 조직에 속한 기기입니다.</string>
+    <string name="quick_settings_disclosure_management_monitoring">내 조직에서 이 기기를 소유하며 네트워크 트래픽을 모니터링할 수 있습니다.</string>
+    <string name="quick_settings_disclosure_management_named_vpn">내 조직에 속한 기기이며 %1$s에 연결되었습니다.</string>
+    <string name="quick_settings_disclosure_management_vpns">내 조직에 속한 기기이며 VPN에 연결되었습니다.</string>
     <string name="quick_settings_disclosure_monitoring">네트워크가 모니터링될 수 있습니다.</string>
     <string name="quick_settings_disclosure_named_managed_profile_monitoring">%1$s에서 내 직장 프로필의 네트워크 트래픽을 모니터링할 수 있습니다.</string>
+    <string name="quick_settings_disclosure_named_management">%1$s에 속한 기기입니다.</string>
+    <string name="quick_settings_disclosure_named_management_monitoring">%1$s에서 이 기기를 소유하며 네트워크 트래픽을 모니터링할 수 있습니다.</string>
+    <string name="quick_settings_disclosure_named_management_named_vpn">%1$s에 속한 기기이며 %2$s에 연결되었습니다.</string>
+    <string name="quick_settings_disclosure_named_management_vpns">%1$s에 속한 기기이며 VPN에 연결되었습니다.</string>
+    <string name="quick_settings_disclosure_named_vpn">기기가 %1$s에 연결되었습니다.</string>
+    <string name="quick_settings_disclosure_personal_profile_named_vpn">개인 프로필이 %1$s에 연결되었습니다.</string>
+    <string name="quick_settings_disclosure_vpns">기기가 VPN에 연결되었습니다.</string>
     <string name="quick_settings_dnd_alarms_label">알람만 허용</string>
     <string name="quick_settings_dnd_label">방해 금지 모드</string>
     <string name="quick_settings_dnd_none_label">모두 차단</string>
@@ -1843,7 +1887,7 @@
     <string name="tethered_notification_hybrid_sharing_mobile">모바일 데이터 공유 중, 클릭하여 설정으로 이동</string>
     <string name="tethered_notification_hybrid_sharing_none">공유할 수 있는 네트워크 없음, 클릭하여 설정으로 이동</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Wi-Fi 공유 중, 클릭하여 설정으로 이동</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">탭하여 설정하세요.</string>
     <string name="tethered_notification_multi_device_message">%1$s 연결된 장치</string>
     <string name="tethered_notification_multi_tether_title">테더링 및 모바일 핫스팟 활성</string>
     <string name="tethered_notification_no_device_message">연결된 장치 없음</string>
@@ -2076,7 +2120,17 @@ Wi‑Fi 주소(BSSID)
     <string name="wifi_verbose_logging">Wi-Fi 상세 로깅 사용</string>
     <string name="wifi_verbose_logging_summary">Wi‑Fi 로깅 수준을 높이고, Wi‑Fi 선택도구에서 SSID RSSI당 값을 표시</string>
     <string name="window_animation_scale_title">창 애니메이션 배율</string>
-    <string name="work_life_balance_mode">Work-Life Balance</string>
+    <string name="wlb_break_mode_active">활성</string>
+    <string name="wlb_break_mode_active_text">%1$s 모드 · %2$s</string>
+    <string name="wlb_break_mode_on_break">휴식 중</string>
+    <string name="wlb_break_mode_resume">다시 시작</string>
+    <string name="wlb_break_mode_take_break">휴식</string>
+    <string name="wlb_qs_detail_break_mode">휴식 모드</string>
+    <string name="wlb_qs_detail_break_mode_desc">30분 후 이전 모드로 자동 재개</string>
+    <string name="wlb_qs_detail_life_mode">라이프 모드</string>
+    <string name="wlb_qs_detail_more_setting">추가 설정</string>
+    <string name="wlb_qs_detail_work_mode">워크 모드</string>
+    <string name="work_life_balance_mode">Work Life Balance</string>
     <string name="zen_alarm_warning">%1$s에 다음 알람을 들을 수 없습니다.</string>
     <string name="zen_alarm_warning_indef">그때까지 알림 일시중지 상태를 유지하면 %1$s에 다음 알람을 들을 수 없습니다.</string>
     <string name="zen_alarms_introduction">알람을 제외한 소리와 진동을 끕니다. 음악, 동영상, 게임 등 재생하도록 선택한 소리는 정상적으로 들립니다.</string>

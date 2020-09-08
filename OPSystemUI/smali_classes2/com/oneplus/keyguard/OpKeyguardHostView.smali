@@ -285,6 +285,25 @@
     return-void
 .end method
 
+.method public resetFlipperY()V
+    .locals 1
+
+    invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardHostView;->getSecurityContainer()Lcom/android/keyguard/KeyguardSecurityContainer;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardHostView;->getSecurityContainer()Lcom/android/keyguard/KeyguardSecurityContainer;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/oneplus/keyguard/OpKeyguardSecurityContainer;->resetFlipperY()V
+
+    :cond_0
+    return-void
+.end method
+
 .method public showMessage(Ljava/lang/CharSequence;Landroid/content/res/ColorStateList;I)V
     .locals 1
 

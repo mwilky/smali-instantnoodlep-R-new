@@ -508,7 +508,7 @@
     <string name="bugreport_in_power">ਬੱਗ ਰਿਪੋਰਟ ਸ਼ਾਰਟਕੱਟ</string>
     <string name="bugreport_in_power_summary">ਇੱਕ ਬੱਗ ਰਿਪੋਰਟ ਲੈਣ ਲਈ ਪਾਵਰ ਮੀਨੂ ਵਿੱਚ ਇੱਕ ਬਟਨ ਦਿਖਾਓ</string>
     <string name="button_convert_fbe">ਮਿਟਾਓ ਅਤੇ ਰੁਪਾਂਤਰਣ ਕਰੋ...</string>
-    <string name="cached_apps_freezer_device_default">ਪੂਰਵ-ਨਿਰਧਾਰਤ ਡੀਵਾਈਸ</string>
+    <string name="cached_apps_freezer_device_default">ਡੀਵਾਈਸ ਪੂਰਵ-ਨਿਰਧਾਰਤ</string>
     <string name="cached_apps_freezer_disabled">ਬੰਦ ਕੀਤਾ ਗਿਆ</string>
     <string name="cached_apps_freezer_enabled">ਚਾਲੂ ਕੀਤਾ ਗਿਆ</string>
     <string name="cached_apps_freezer_reboot_dialog_text">ਇਸ ਤਬਦੀਲੀ ਨੂੰ ਲਾਗੂ ਕਰਨ ਲਈ ਤੁਹਾਡੇ ਡੀਵਾਈਸ ਨੂੰ ਰੀਬੂਟ ਕਰਨਾ ਲਾਜ਼ਮੀ ਹੈ। ਹੁਣੇ ਰੀਬੂਟ ਕਰੋ ਜਾਂ ਰੱਦ ਕਰੋ।</string>
@@ -561,6 +561,7 @@
     <string name="controls_favorite_other_zone_header">ਹੋਰ</string>
     <string name="controls_favorite_rearrange">ਕੰਟਰੋਲਾਂ ਨੂੰ ਮੁੜ-ਵਿਵਸਥਿਤ ਕਰਨ ਲਈ ਫੜ੍ਹ ਕੇ ਘਸੀਟੋ</string>
     <string name="controls_favorite_removed">ਸਾਰੇ ਕੰਟਰੋਲ ਹਟਾਏ ਗਏ</string>
+    <string name="controls_favorite_see_other_apps">ਹੋਰ ਐਪਾਂ ਦੇਖੋ</string>
     <string name="controls_favorite_subtitle">ਪਹੁੰਚ ਕਰਨ ਲਈ ਪਾਵਰ ਮੀਨੂ ਤੋਂ ਕੰਟਰੋਲ ਚੁਣੋ</string>
     <string name="controls_favorite_toast_no_changes">ਤਬਦੀਲੀਆਂ ਨੂੰ ਰੱਖਿਅਤ ਨਹੀਂ ਕੀਤਾ ਗਿਆ</string>
     <string name="controls_in_progress">ਜਾਰੀ ਹੈ</string>
@@ -663,6 +664,8 @@
     <string name="disconnect_vpn">VPN ਨੂੰ ਡਿਸਕਨੈਕਟ ਕਰੋ</string>
     <string name="dnd_is_off">"'ਪਰੇਸ਼ਾਨ ਨਾ ਕਰੋ' ਬੰਦ ਹੈ"</string>
     <string name="dnd_suppressing_shade_text">"'ਪਰੇਸ਼ਾਨ ਨਾ ਕਰੋ' ਵੱਲੋਂ ਸੂਚਨਾਵਾਂ ਨੂੰ ਰੋਕਿਆ ਗਿਆ"</string>
+    <string name="do_disclosure_generic">ਇਹ ਡੀਵਾਈਸ ਤੁਹਾਡੀ ਸੰਸਥਾ ਨਾਲ ਸੰਬੰਧਿਤ ਹੈ</string>
+    <string name="do_disclosure_with_name">ਇਹ ਡੀਵਾਈਸ %s ਨਾਲ ਸੰਬੰਧਿਤ ਹੈ</string>
     <string name="do_not_silence">ਚੁੱਪ ਨਾ ਕਰਵਾਓ</string>
     <string name="do_not_silence_block">ਚੁੱਪ ਨਾ ਕਰਵਾਓ ਜਾਂ ਬਲੌਕ ਨਾ ਕਰੋ</string>
     <string name="dock_alignment_not_charging">"ਫ਼ੋਨ ਨੂੰ ਬਿਨਾਂ ਤਾਰ ਤੋਂ ਚਾਰਜ ਕਰਨ ਲਈ ਡੌਕ 'ਤੇ ਸਹੀ ਕਰਕੇ ਰੱਖੋ"</string>
@@ -1065,8 +1068,18 @@
     <string name="monitoring_description_do_learn_more_separator">" "</string>
     <string name="monitoring_description_managed_profile_ca_certificate">ਤੁਹਾਡੀ ਸੰਸਥਾ ਵੱਲੋਂ ਤੁਹਾਡੇ ਕਾਰਜ ਪ੍ਰੋਫਾਈਲ ਵਿੱਚ ਇੱਕ ਪ੍ਰਮਾਣ-ਪੱਤਰ ਅਥਾਰਟੀ ਸਥਾਪਤ ਕੀਤੀ ਗਈ ਹੈ। ਤੁਹਾਡੇ ਸੁਰੱਖਿਅਤ ਨੈੱਟਵਰਕ ਟਰੈਫਿਕ ਦੀ ਨਿਗਰਾਨੀ ਕੀਤੀ ਜਾ ਸਕਦੀ ਹੈ ਜਾਂ ਉਸਨੂੰ ਸੋਧਿਆ ਜਾ ਸਕਦਾ ਹੈ।</string>
     <string name="monitoring_description_managed_profile_named_vpn">ਤੁਹਾਡੀ ਕਾਰਜ ਪ੍ਰੋਫਾਈਲ %1$s ਨਾਲ ਕਨੈਕਟ ਹੈ, ਜੋ ਈਮੇਲਾਂ, ਐਪਾਂ ਅਤੇ ਵੈੱਬਸਾਈਟਾਂ ਸਮੇਤ ਤੁਹਾਡੀ ਨੈੱਟਵਰਕ ਸਰਗਰਮੀ ਦੀ ਨਿਗਰਾਨੀ ਕਰ ਸਕਦੀ ਹੈ।</string>
+    <string name="monitoring_description_management">"ਇਹ ਡੀਵਾਈਸ ਤੁਹਾਡੀ ਸੰਸਥਾ ਨਾਲ ਸੰਬੰਧਿਤ ਹੈ।
+
+ਤੁਹਾਡਾ ਆਈ.ਟੀ. ਪ੍ਰਸ਼ਾਸਕ ਤੁਹਾਡੇ ਡੀਵਾਈਸ ਨਾਲ ਸੰਬੰਧਿਤ ਸੈਟਿੰਗਾਂ, ਕਾਰਪੋਰੇਟ ਪਹੁੰਚ, ਐਪਾਂ, ਡਾਟੇ ਅਤੇ ਤੁਹਾਡੇ ਡੀਵਾਈਸ ਦੀ ਟਿਕਾਣਾ ਜਾਣਕਾਰੀ ਦੀ ਨਿਗਰਾਨੀ ਅਤੇ ਪ੍ਰਬੰਧਨ ਕਰ ਸਕਦਾ ਹੈ।
+
+ਹੋਰ ਜਾਣਕਾਰੀ ਲਈ, ਆਪਣੇ ਆਈ.ਟੀ. ਪ੍ਰਸ਼ਾਸਕ ਨੂੰ ਸੰਪਰਕ ਕਰੋ।"</string>
     <string name="monitoring_description_management_ca_certificate">"ਤੁਹਾਡੀ ਸੰਸਥਾ ਵੱਲੋਂ ਇਸ ਡੀਵਾਈਸ 'ਤੇ ਇੱਕ ਪ੍ਰਮਾਣ-ਪੱਤਰ ਅਥਾਰਟੀ ਸਥਾਪਤ ਕੀਤੀ ਗਈ ਹੈ। ਤੁਹਾਡੇ ਸੁਰੱਖਿਅਤ ਨੈੱਟਵਰਕ ਟਰੈਫਿਕ ਦੀ ਨਿਗਰਾਨੀ ਕੀਤੀ ਜਾ ਸਕਦੀ ਹੈ ਜਾਂ ਉਸਨੂੰ ਸੋਧਿਆ ਜਾ ਸਕਦਾ ਹੈ।"</string>
     <string name="monitoring_description_management_network_logging">"ਤੁਹਾਡੇ ਪ੍ਰਸ਼ਾਸਕ ਨੇ ਨੈੱਟਵਰਕ ਲੌਗਿੰਗ ਨੂੰ ਚਾਲੂ ਕੀਤਾ ਹੋਇਆ ਹੈ, ਜੋ ਤੁਹਾਡੇ ਡੀਵਾਈਸ 'ਤੇ ਟਰੈਫਿਕ ਦੀ ਨਿਗਰਾਨੀ ਕਰਦਾ ਹੈ।"</string>
+    <string name="monitoring_description_named_management">"ਇਹ ਡੀਵਾਈਸ %1$s ਨਾਲ ਸੰਬੰਧਿਤ ਹੈ।
+
+ਤੁਹਾਡਾ ਆਈ.ਟੀ. ਪ੍ਰਸ਼ਾਸਕ ਤੁਹਾਡੇ ਡੀਵਾਈਸ ਨਾਲ ਸੰਬੰਧਿਤ ਸੈਟਿੰਗਾਂ, ਕਾਰਪੋਰੇਟ ਪਹੁੰਚ, ਐਪਾਂ, ਡਾਟੇ ਅਤੇ ਤੁਹਾਡੇ ਡੀਵਾਈਸ ਦੀ ਟਿਕਾਣਾ ਜਾਣਕਾਰੀ ਦੀ ਨਿਗਰਾਨੀ ਅਤੇ ਪ੍ਰਬੰਧਨ ਕਰ ਸਕਦਾ ਹੈ।
+
+ਹੋਰ ਜਾਣਕਾਰੀ ਲਈ, ਆਪਣੇ ਆਈ.ਟੀ. ਪ੍ਰਸ਼ਾਸਕ ਨੂੰ ਸੰਪਰਕ ਕਰੋ।"</string>
     <string name="monitoring_description_named_vpn">ਤੁਸੀਂ %1$s ਨਾਲ ਕਨੈਕਟ ਹੋ, ਜੋ ਈਮੇਲਾਂ, ਐਪਾਂ, ਅਤੇ ਵੈੱਬਸਾਈਟਾਂ ਸਮੇਤ ਤੁਹਾਡੀ ਨੈੱਟਵਰਕ ਸਰਗਰਮੀ ਦੀ ਨਿਗਰਾਨੀ ਕਰ ਸਕਦੀ ਹੈ।</string>
     <string name="monitoring_description_network_logging">"ਤੁਹਾਡੇ ਪ੍ਰਸ਼ਾਸਕ ਨੇ ਨੈੱਟਵਰਕ ਲੌਗਿੰਗ ਨੂੰ ਚਾਲੂ ਕੀਤਾ ਹੋਇਆ ਹੈ, ਜੋ ਤੁਹਾਡੇ ਡੀਵਾਈਸ 'ਤੇ ਟਰੈਫਿਕ ਦੀ ਨਿਗਰਾਨੀ ਕਰਦਾ ਹੈ।
 
@@ -1341,8 +1354,20 @@
     <string name="quick_settings_dark_mode_secondary_label_until">%s ਵਜੇ ਤੱਕ</string>
     <string name="quick_settings_dark_mode_secondary_label_until_sunrise">ਸੂਰਜ ਚੜ੍ਹਨ ਤੱਕ</string>
     <string name="quick_settings_disclosure_managed_profile_monitoring">ਤੁਹਾਡੀ ਸੰਸਥਾ ਤੁਹਾਡੇ ਕਾਰਜ ਪ੍ਰੋਫਾਈਲ ਵਿੱਚ ਨੈੱਟਵਰਕ ਟਰੈਫਿਕ ਦੀ ਨਿਗਰਾਨੀ ਕਰ ਸਕਦੀ ਹੈ</string>
+    <string name="quick_settings_disclosure_managed_profile_named_vpn">ਤੁਹਾਡਾ ਕਾਰਜ ਪ੍ਰੋਫਾਈਲ %1$s ਨਾਲ ਕਨੈਕਟ ਹੈ</string>
+    <string name="quick_settings_disclosure_management">ਇਹ ਡੀਵਾਈਸ ਤੁਹਾਡੀ ਸੰਸਥਾ ਨਾਲ ਸੰਬੰਧਿਤ ਹੈ</string>
+    <string name="quick_settings_disclosure_management_monitoring">ਤੁਹਾਡੀ ਸੰਸਥਾ ਕੋਲ ਇਸ ਡੀਵਾਈਸ ਦੀ ਮਲਕੀਅਤ ਹੈ ਅਤੇ ਇਹ ਨੈੱਟਵਰਕ ਟਰੈਫ਼ਿਕ ਦੀ ਨਿਗਰਾਨੀ ਕਰ ਸਕਦੀ ਹੈ</string>
+    <string name="quick_settings_disclosure_management_named_vpn">ਇਹ ਡੀਵਾਈਸ ਤੁਹਾਡੀ ਸੰਸਥਾ ਨਾਲ ਸੰਬੰਧਿਤ ਹੈ ਅਤੇ %1$s ਨਾਲ ਕਨੈਕਟ ਹੈ</string>
+    <string name="quick_settings_disclosure_management_vpns">ਇਹ ਡੀਵਾਈਸ ਤੁਹਾਡੀ ਸੰਸਥਾ ਨਾਲ ਸੰਬੰਧਿਤ ਹੈ ਅਤੇ VPN ਨਾਲ ਕਨੈਕਟ ਹੈ</string>
     <string name="quick_settings_disclosure_monitoring">ਨੈੱਟਵਰਕ ਦੀ ਨਿਗਰਾਨੀ ਕੀਤੀ ਜਾ ਸਕਦੀ ਹੈ</string>
     <string name="quick_settings_disclosure_named_managed_profile_monitoring">%1$s ਤੁਹਾਡੇ ਕਾਰਜ ਪ੍ਰੋਫਾਈਲ ਵਿੱਚ ਨੈੱਟਵਰਕ ਟਰੈਫਿਕ ਦੀ ਨਿਗਰਾਨੀ ਕਰ ਸਕਦੀ ਹੈ</string>
+    <string name="quick_settings_disclosure_named_management">ਇਹ ਡੀਵਾਈਸ %1$s ਨਾਲ ਸੰਬੰਧਿਤ ਹੈ</string>
+    <string name="quick_settings_disclosure_named_management_monitoring">%1$s ਕੋਲ ਇਸ ਡੀਵਾਈਸ ਦੀ ਮਲਕੀਅਤ ਹੈ ਅਤੇ ਇਹ ਨੈੱਟਵਰਕ ਟਰੈਫ਼ਿਕ ਦੀ ਨਿਗਰਾਨੀ ਕਰ ਸਕਦੀ ਹੈ</string>
+    <string name="quick_settings_disclosure_named_management_named_vpn">ਇਹ ਡੀਵਾਈਸ %1$s ਨਾਲ ਸੰਬੰਧਿਤ ਹੈ ਅਤੇ %2$s ਨਾਲ ਕਨੈਕਟ ਹੈ</string>
+    <string name="quick_settings_disclosure_named_management_vpns">ਇਹ ਡੀਵਾਈਸ %1$s ਨਾਲ ਸੰਬੰਧਿਤ ਹੈ ਅਤੇ VPN ਨਾਲ ਕਨੈਕਟ ਹੈ</string>
+    <string name="quick_settings_disclosure_named_vpn">ਇਹ ਡੀਵਾਈਸ %1$s ਨਾਲ ਕਨੈਕਟ ਹੈ</string>
+    <string name="quick_settings_disclosure_personal_profile_named_vpn">ਤੁਹਾਡਾ ਨਿੱਜੀ ਪ੍ਰੋਫਾਈਲ %1$s ਨਾਲ ਕਨੈਕਟ ਹੈ</string>
+    <string name="quick_settings_disclosure_vpns">ਇਹ ਡੀਵਾਈਸ VPN ਨਾਲ ਕਨੈਕਟ ਹੈ</string>
     <string name="quick_settings_dnd_alarms_label">ਕੇਵਲ ਅਲਾਰਮ</string>
     <string name="quick_settings_dnd_label">ਪਰੇਸ਼ਾਨ ਨਾ ਕਰੋ</string>
     <string name="quick_settings_dnd_none_label">ਪੂਰਾ ਸ਼ਾਂਤ</string>

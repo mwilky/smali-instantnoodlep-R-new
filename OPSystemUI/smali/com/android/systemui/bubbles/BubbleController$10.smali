@@ -80,6 +80,20 @@
 
     invoke-virtual {v0, v1}, Lcom/android/systemui/bubbles/BubbleStackView;->setExpanded(Z)V
 
+    iget-object v0, p0, Lcom/android/systemui/bubbles/BubbleController$10;->this$0:Lcom/android/systemui/bubbles/BubbleController;
+
+    invoke-static {v0}, Lcom/android/systemui/bubbles/BubbleController;->access$1900(Lcom/android/systemui/bubbles/BubbleController;)Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lcom/android/systemui/bubbles/BubbleController$10;->this$0:Lcom/android/systemui/bubbles/BubbleController;
+
+    invoke-static {v2}, Lcom/android/systemui/bubbles/BubbleController;->access$1800(Lcom/android/systemui/bubbles/BubbleController;)Z
+
+    move-result v2
+
+    invoke-virtual {v0, v2}, Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController;->setForceHasTopUi(Z)V
+
     :cond_1
     new-instance v0, Ljava/util/ArrayList;
 
@@ -101,7 +115,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_a
+    if-eqz v3, :cond_b
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -127,22 +141,31 @@
 
     move-result-object v5
 
+    if-eqz v5, :cond_3
+
+    iget-object v5, p0, Lcom/android/systemui/bubbles/BubbleController$10;->this$0:Lcom/android/systemui/bubbles/BubbleController;
+
+    invoke-static {v5}, Lcom/android/systemui/bubbles/BubbleController;->access$1700(Lcom/android/systemui/bubbles/BubbleController;)Lcom/android/systemui/bubbles/BubbleStackView;
+
+    move-result-object v5
+
     invoke-virtual {v5, v4}, Lcom/android/systemui/bubbles/BubbleStackView;->removeBubble(Lcom/android/systemui/bubbles/Bubble;)V
 
-    const/16 v5, 0x8
-
-    if-ne v3, v5, :cond_3
-
-    goto :goto_0
-
     :cond_3
-    const/4 v5, 0x5
+    const/16 v5, 0x8
 
     if-ne v3, v5, :cond_4
 
-    invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    goto :goto_0
 
     :cond_4
+    const/4 v5, 0x5
+
+    if-ne v3, v5, :cond_5
+
+    invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_5
     iget-object v6, p0, Lcom/android/systemui/bubbles/BubbleController$10;->this$0:Lcom/android/systemui/bubbles/BubbleController;
 
     invoke-static {v6}, Lcom/android/systemui/bubbles/BubbleController;->access$1300(Lcom/android/systemui/bubbles/BubbleController;)Lcom/android/systemui/statusbar/notification/NotificationEntryManager;
@@ -171,7 +194,7 @@
 
     move-result v7
 
-    if-nez v7, :cond_9
+    if-nez v7, :cond_a
 
     iget-object v7, p0, Lcom/android/systemui/bubbles/BubbleController$10;->this$0:Lcom/android/systemui/bubbles/BubbleController;
 
@@ -187,24 +210,24 @@
 
     move-result v7
 
-    if-nez v7, :cond_7
+    if-nez v7, :cond_8
 
     invoke-virtual {v4}, Lcom/android/systemui/bubbles/Bubble;->showInShade()Z
 
     move-result v7
 
-    if-eqz v7, :cond_5
+    if-eqz v7, :cond_6
 
-    if-eq v3, v5, :cond_5
+    if-eq v3, v5, :cond_6
 
     const/16 v5, 0x9
 
-    if-ne v3, v5, :cond_7
+    if-ne v3, v5, :cond_8
 
-    :cond_5
+    :cond_6
     iget-object v3, p0, Lcom/android/systemui/bubbles/BubbleController$10;->this$0:Lcom/android/systemui/bubbles/BubbleController;
 
-    invoke-static {v3}, Lcom/android/systemui/bubbles/BubbleController;->access$1800(Lcom/android/systemui/bubbles/BubbleController;)Ljava/util/List;
+    invoke-static {v3}, Lcom/android/systemui/bubbles/BubbleController;->access$2000(Lcom/android/systemui/bubbles/BubbleController;)Ljava/util/List;
 
     move-result-object v3
 
@@ -212,13 +235,13 @@
 
     move-result-object v3
 
-    :cond_6
+    :cond_7
     :goto_1
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v4
 
-    if-eqz v4, :cond_9
+    if-eqz v4, :cond_a
 
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -226,7 +249,7 @@
 
     check-cast v4, Lcom/android/systemui/bubbles/BubbleController$NotifCallback;
 
-    if-eqz v6, :cond_6
+    if-eqz v6, :cond_7
 
     const/4 v5, 0x2
 
@@ -234,25 +257,25 @@
 
     goto :goto_1
 
-    :cond_7
+    :cond_8
     invoke-virtual {v4}, Lcom/android/systemui/bubbles/Bubble;->isBubble()Z
 
     move-result v3
 
-    if-eqz v3, :cond_8
+    if-eqz v3, :cond_9
 
     iget-object v3, p0, Lcom/android/systemui/bubbles/BubbleController$10;->this$0:Lcom/android/systemui/bubbles/BubbleController;
 
-    invoke-static {v3, v4, v1}, Lcom/android/systemui/bubbles/BubbleController;->access$1900(Lcom/android/systemui/bubbles/BubbleController;Lcom/android/systemui/bubbles/Bubble;Z)V
+    invoke-static {v3, v4, v1}, Lcom/android/systemui/bubbles/BubbleController;->access$2100(Lcom/android/systemui/bubbles/BubbleController;Lcom/android/systemui/bubbles/Bubble;Z)V
 
-    :cond_8
-    if-eqz v6, :cond_9
+    :cond_9
+    if-eqz v6, :cond_a
 
     invoke-virtual {v6}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->getRow()Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
     move-result-object v3
 
-    if-eqz v3, :cond_9
+    if-eqz v3, :cond_a
 
     invoke-virtual {v6}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->getRow()Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
@@ -260,7 +283,7 @@
 
     invoke-virtual {v3}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->updateBubbleButton()V
 
-    :cond_9
+    :cond_a
     if-eqz v6, :cond_2
 
     invoke-virtual {v6}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->getSbn()Landroid/service/notification/StatusBarNotification;
@@ -295,7 +318,7 @@
 
     iget-object v3, p0, Lcom/android/systemui/bubbles/BubbleController$10;->this$0:Lcom/android/systemui/bubbles/BubbleController;
 
-    invoke-static {v3}, Lcom/android/systemui/bubbles/BubbleController;->access$1800(Lcom/android/systemui/bubbles/BubbleController;)Ljava/util/List;
+    invoke-static {v3}, Lcom/android/systemui/bubbles/BubbleController;->access$2000(Lcom/android/systemui/bubbles/BubbleController;)Ljava/util/List;
 
     move-result-object v3
 
@@ -320,10 +343,10 @@
 
     goto :goto_2
 
-    :cond_a
+    :cond_b
     iget-object v0, p0, Lcom/android/systemui/bubbles/BubbleController$10;->this$0:Lcom/android/systemui/bubbles/BubbleController;
 
-    invoke-static {v0}, Lcom/android/systemui/bubbles/BubbleController;->access$2000(Lcom/android/systemui/bubbles/BubbleController;)Lcom/android/systemui/bubbles/BubbleDataRepository;
+    invoke-static {v0}, Lcom/android/systemui/bubbles/BubbleController;->access$2200(Lcom/android/systemui/bubbles/BubbleController;)Lcom/android/systemui/bubbles/BubbleDataRepository;
 
     move-result-object v0
 
@@ -337,7 +360,7 @@
 
     iget-object v0, p1, Lcom/android/systemui/bubbles/BubbleData$Update;->addedBubble:Lcom/android/systemui/bubbles/Bubble;
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_c
 
     iget-object v0, p0, Lcom/android/systemui/bubbles/BubbleController$10;->this$0:Lcom/android/systemui/bubbles/BubbleController;
 
@@ -345,11 +368,11 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_c
 
     iget-object v0, p0, Lcom/android/systemui/bubbles/BubbleController$10;->this$0:Lcom/android/systemui/bubbles/BubbleController;
 
-    invoke-static {v0}, Lcom/android/systemui/bubbles/BubbleController;->access$2000(Lcom/android/systemui/bubbles/BubbleController;)Lcom/android/systemui/bubbles/BubbleDataRepository;
+    invoke-static {v0}, Lcom/android/systemui/bubbles/BubbleController;->access$2200(Lcom/android/systemui/bubbles/BubbleController;)Lcom/android/systemui/bubbles/BubbleDataRepository;
 
     move-result-object v0
 
@@ -373,10 +396,10 @@
 
     invoke-virtual {v0, v1}, Lcom/android/systemui/bubbles/BubbleStackView;->addBubble(Lcom/android/systemui/bubbles/Bubble;)V
 
-    :cond_b
+    :cond_c
     iget-object v0, p1, Lcom/android/systemui/bubbles/BubbleData$Update;->updatedBubble:Lcom/android/systemui/bubbles/Bubble;
 
-    if-eqz v0, :cond_c
+    if-eqz v0, :cond_d
 
     iget-object v0, p0, Lcom/android/systemui/bubbles/BubbleController$10;->this$0:Lcom/android/systemui/bubbles/BubbleController;
 
@@ -384,7 +407,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_c
+    if-eqz v0, :cond_d
 
     iget-object v0, p0, Lcom/android/systemui/bubbles/BubbleController$10;->this$0:Lcom/android/systemui/bubbles/BubbleController;
 
@@ -396,10 +419,10 @@
 
     invoke-virtual {v0, v1}, Lcom/android/systemui/bubbles/BubbleStackView;->updateBubble(Lcom/android/systemui/bubbles/Bubble;)V
 
-    :cond_c
+    :cond_d
     iget-boolean v0, p1, Lcom/android/systemui/bubbles/BubbleData$Update;->orderChanged:Z
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_e
 
     iget-object v0, p0, Lcom/android/systemui/bubbles/BubbleController$10;->this$0:Lcom/android/systemui/bubbles/BubbleController;
 
@@ -407,11 +430,11 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_e
 
     iget-object v0, p0, Lcom/android/systemui/bubbles/BubbleController$10;->this$0:Lcom/android/systemui/bubbles/BubbleController;
 
-    invoke-static {v0}, Lcom/android/systemui/bubbles/BubbleController;->access$2000(Lcom/android/systemui/bubbles/BubbleController;)Lcom/android/systemui/bubbles/BubbleDataRepository;
+    invoke-static {v0}, Lcom/android/systemui/bubbles/BubbleController;->access$2200(Lcom/android/systemui/bubbles/BubbleController;)Lcom/android/systemui/bubbles/BubbleDataRepository;
 
     move-result-object v0
 
@@ -435,10 +458,10 @@
 
     invoke-virtual {v0, v1}, Lcom/android/systemui/bubbles/BubbleStackView;->updateBubbleOrder(Ljava/util/List;)V
 
-    :cond_d
+    :cond_e
     iget-boolean v0, p1, Lcom/android/systemui/bubbles/BubbleData$Update;->selectionChanged:Z
 
-    if-eqz v0, :cond_e
+    if-eqz v0, :cond_f
 
     iget-object v0, p0, Lcom/android/systemui/bubbles/BubbleController$10;->this$0:Lcom/android/systemui/bubbles/BubbleController;
 
@@ -446,7 +469,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_e
+    if-eqz v0, :cond_f
 
     iget-object v0, p0, Lcom/android/systemui/bubbles/BubbleController$10;->this$0:Lcom/android/systemui/bubbles/BubbleController;
 
@@ -460,7 +483,7 @@
 
     iget-object v0, p1, Lcom/android/systemui/bubbles/BubbleData$Update;->selectedBubble:Lcom/android/systemui/bubbles/Bubble;
 
-    if-eqz v0, :cond_e
+    if-eqz v0, :cond_f
 
     iget-object v0, p0, Lcom/android/systemui/bubbles/BubbleController$10;->this$0:Lcom/android/systemui/bubbles/BubbleController;
 
@@ -478,7 +501,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_e
+    if-eqz v0, :cond_f
 
     iget-object v1, p0, Lcom/android/systemui/bubbles/BubbleController$10;->this$0:Lcom/android/systemui/bubbles/BubbleController;
 
@@ -488,14 +511,14 @@
 
     invoke-virtual {v1, v0}, Lcom/android/systemui/statusbar/phone/NotificationGroupManager;->updateSuppression(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)V
 
-    :cond_e
+    :cond_f
     iget-boolean v0, p1, Lcom/android/systemui/bubbles/BubbleData$Update;->expandedChanged:Z
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_10
 
     iget-boolean p1, p1, Lcom/android/systemui/bubbles/BubbleData$Update;->expanded:Z
 
-    if-eqz p1, :cond_f
+    if-eqz p1, :cond_10
 
     iget-object p1, p0, Lcom/android/systemui/bubbles/BubbleController$10;->this$0:Lcom/android/systemui/bubbles/BubbleController;
 
@@ -503,7 +526,7 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_f
+    if-eqz p1, :cond_10
 
     iget-object p1, p0, Lcom/android/systemui/bubbles/BubbleController$10;->this$0:Lcom/android/systemui/bubbles/BubbleController;
 
@@ -515,10 +538,30 @@
 
     invoke-virtual {p1, v0}, Lcom/android/systemui/bubbles/BubbleStackView;->setExpanded(Z)V
 
-    :cond_f
     iget-object p1, p0, Lcom/android/systemui/bubbles/BubbleController$10;->this$0:Lcom/android/systemui/bubbles/BubbleController;
 
-    invoke-static {p1}, Lcom/android/systemui/bubbles/BubbleController;->access$1800(Lcom/android/systemui/bubbles/BubbleController;)Ljava/util/List;
+    invoke-static {p1}, Lcom/android/systemui/bubbles/BubbleController;->access$1900(Lcom/android/systemui/bubbles/BubbleController;)Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController;->getForceHasTopUi()Z
+
+    move-result v1
+
+    invoke-static {p1, v1}, Lcom/android/systemui/bubbles/BubbleController;->access$1802(Lcom/android/systemui/bubbles/BubbleController;Z)Z
+
+    iget-object p1, p0, Lcom/android/systemui/bubbles/BubbleController$10;->this$0:Lcom/android/systemui/bubbles/BubbleController;
+
+    invoke-static {p1}, Lcom/android/systemui/bubbles/BubbleController;->access$1900(Lcom/android/systemui/bubbles/BubbleController;)Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0}, Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController;->setForceHasTopUi(Z)V
+
+    :cond_10
+    iget-object p1, p0, Lcom/android/systemui/bubbles/BubbleController$10;->this$0:Lcom/android/systemui/bubbles/BubbleController;
+
+    invoke-static {p1}, Lcom/android/systemui/bubbles/BubbleController;->access$2000(Lcom/android/systemui/bubbles/BubbleController;)Ljava/util/List;
 
     move-result-object p1
 
@@ -531,7 +574,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_10
+    if-eqz v0, :cond_11
 
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -545,7 +588,7 @@
 
     goto :goto_3
 
-    :cond_10
+    :cond_11
     iget-object p0, p0, Lcom/android/systemui/bubbles/BubbleController$10;->this$0:Lcom/android/systemui/bubbles/BubbleController;
 
     invoke-virtual {p0}, Lcom/android/systemui/bubbles/BubbleController;->updateStack()V

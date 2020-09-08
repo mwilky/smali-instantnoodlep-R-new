@@ -41,13 +41,13 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$2002(Lcom/oneplus/battery/OpNewWarpChargingView;Z)Z
+    invoke-static {v0, v1}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$1902(Lcom/oneplus/battery/OpNewWarpChargingView;Z)Z
 
     iget-object v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView$19;->this$0:Lcom/oneplus/battery/OpNewWarpChargingView;
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$2102(Lcom/oneplus/battery/OpNewWarpChargingView;Z)Z
+    invoke-static {v0, v1}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$2002(Lcom/oneplus/battery/OpNewWarpChargingView;Z)Z
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -59,7 +59,7 @@
 
     iget-object v1, p0, Lcom/oneplus/battery/OpNewWarpChargingView$19;->this$0:Lcom/oneplus/battery/OpNewWarpChargingView;
 
-    invoke-static {v1}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$2200(Lcom/oneplus/battery/OpNewWarpChargingView;)Z
+    invoke-static {v1}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$2100(Lcom/oneplus/battery/OpNewWarpChargingView;)Z
 
     move-result v1
 
@@ -75,7 +75,7 @@
 
     iget-object v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView$19;->this$0:Lcom/oneplus/battery/OpNewWarpChargingView;
 
-    invoke-static {v0}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$2200(Lcom/oneplus/battery/OpNewWarpChargingView;)Z
+    invoke-static {v0}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$2100(Lcom/oneplus/battery/OpNewWarpChargingView;)Z
 
     move-result v0
 
@@ -83,14 +83,14 @@
 
     iget-object p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView$19;->this$0:Lcom/oneplus/battery/OpNewWarpChargingView;
 
-    invoke-static {p0}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$1900(Lcom/oneplus/battery/OpNewWarpChargingView;)V
+    invoke-static {p0}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$1800(Lcom/oneplus/battery/OpNewWarpChargingView;)V
 
     goto :goto_0
 
     :cond_0
     iget-object v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView$19;->this$0:Lcom/oneplus/battery/OpNewWarpChargingView;
 
-    invoke-static {v0}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$2300(Lcom/oneplus/battery/OpNewWarpChargingView;)Z
+    invoke-static {v0}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$2200(Lcom/oneplus/battery/OpNewWarpChargingView;)Z
 
     move-result v0
 
@@ -98,7 +98,7 @@
 
     iget-object p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView$19;->this$0:Lcom/oneplus/battery/OpNewWarpChargingView;
 
-    invoke-static {p0}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$2400(Lcom/oneplus/battery/OpNewWarpChargingView;)I
+    invoke-static {p0}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$2300(Lcom/oneplus/battery/OpNewWarpChargingView;)I
 
     move-result v0
 

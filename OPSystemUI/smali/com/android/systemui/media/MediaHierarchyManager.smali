@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nMediaHierarchyManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaHierarchyManager.kt\ncom/android/systemui/media/MediaHierarchyManager\n*L\n1#1,602:1\n*E\n"
+    value = "SMAP\nMediaHierarchyManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaHierarchyManager.kt\ncom/android/systemui/media/MediaHierarchyManager\n*L\n1#1,636:1\n*E\n"
 .end annotation
 
 
@@ -855,7 +855,7 @@
 .end method
 
 .method private final getQSTransformationProgress()F
-    .locals 2
+    .locals 3
 
     iget v0, p0, Lcom/android/systemui/media/MediaHierarchyManager;->desiredLocation:I
 
@@ -869,29 +869,40 @@
 
     move-result-object v1
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     invoke-virtual {v0}, Lcom/android/systemui/media/MediaHost;->getLocation()I
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
     invoke-virtual {v1}, Lcom/android/systemui/media/MediaHost;->getLocation()I
 
     move-result v0
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    if-ne v0, v1, :cond_0
+    if-ne v0, v2, :cond_1
 
+    invoke-virtual {v1}, Lcom/android/systemui/media/MediaHost;->getVisible()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget v0, p0, Lcom/android/systemui/media/MediaHierarchyManager;->statusbarState:I
+
+    if-eq v0, v2, :cond_1
+
+    :cond_0
     iget p0, p0, Lcom/android/systemui/media/MediaHierarchyManager;->qsExpansion:F
 
     return p0
 
-    :cond_0
+    :cond_1
     const/high16 p0, -0x40800000    # -1.0f
 
     return p0
@@ -1135,9 +1146,9 @@
 
     iget p1, p0, Lcom/android/systemui/media/MediaHierarchyManager;->currentAttachmentLocation:I
 
-    const/16 p2, -0x3e8
+    iget p2, p0, Lcom/android/systemui/media/MediaHierarchyManager;->previousLocation:I
 
-    if-eq p1, p2, :cond_4
+    if-ne p1, p2, :cond_4
 
     invoke-virtual {v0}, Lcom/android/systemui/media/MediaHost;->getHostView()Lcom/android/systemui/util/animation/UniqueObjectHostView;
 
@@ -1176,6 +1187,10 @@
     iget p2, p0, Lcom/android/systemui/media/MediaHierarchyManager;->previousLocation:I
 
     invoke-direct {p0, p1, p2}, Lcom/android/systemui/media/MediaHierarchyManager;->adjustAnimatorForTransition(II)V
+
+    iget-boolean p1, p0, Lcom/android/systemui/media/MediaHierarchyManager;->animationPending:Z
+
+    if-nez p1, :cond_6
 
     iget-object p1, p0, Lcom/android/systemui/media/MediaHierarchyManager;->rootView:Landroid/view/View;
 
@@ -1318,7 +1333,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->isShown()Z
+    invoke-static {p1}, Lcom/android/systemui/media/MediaHierarchyManagerKt;->isShownNotFaded(Landroid/view/View;)Z
 
     move-result p1
 
@@ -1603,7 +1618,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_4
 
     invoke-direct {p0}, Lcom/android/systemui/media/MediaHierarchyManager;->getTransformationProgress()F
 
@@ -1617,7 +1632,7 @@
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_3
 
     iget v2, p0, Lcom/android/systemui/media/MediaHierarchyManager;->previousLocation:I
 
@@ -1625,8 +1640,29 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_2
 
+    invoke-virtual {v0}, Lcom/android/systemui/media/MediaHost;->getVisible()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    move-object v0, v2
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v2}, Lcom/android/systemui/media/MediaHost;->getVisible()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    move-object v2, v0
+
+    :cond_1
+    :goto_0
     invoke-virtual {v0}, Lcom/android/systemui/media/MediaHost;->getCurrentBounds()Landroid/graphics/Rect;
 
     move-result-object v3
@@ -1649,39 +1685,39 @@
 
     iput-object v0, p0, Lcom/android/systemui/media/MediaHierarchyManager;->targetBounds:Landroid/graphics/Rect;
 
-    goto :goto_0
-
-    :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->throwNpe()V
-
-    throw v1
-
-    :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->throwNpe()V
-
-    throw v1
+    goto :goto_1
 
     :cond_2
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->throwNpe()V
+
+    throw v1
+
+    :cond_3
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->throwNpe()V
+
+    throw v1
+
+    :cond_4
     iget v0, p0, Lcom/android/systemui/media/MediaHierarchyManager;->desiredLocation:I
 
     invoke-direct {p0, v0}, Lcom/android/systemui/media/MediaHierarchyManager;->getHost(I)Lcom/android/systemui/media/MediaHost;
 
     move-result-object v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_5
 
     invoke-virtual {v0}, Lcom/android/systemui/media/MediaHost;->getCurrentBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_5
 
     iget-object p0, p0, Lcom/android/systemui/media/MediaHierarchyManager;->targetBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p0, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    :cond_3
-    :goto_0
+    :cond_5
+    :goto_1
     return-void
 .end method
 

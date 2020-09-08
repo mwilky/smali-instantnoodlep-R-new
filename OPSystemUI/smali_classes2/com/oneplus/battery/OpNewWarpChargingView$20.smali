@@ -41,11 +41,11 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$2102(Lcom/oneplus/battery/OpNewWarpChargingView;Z)Z
+    invoke-static {v0, v1}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$2002(Lcom/oneplus/battery/OpNewWarpChargingView;Z)Z
 
     iget-object p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView$20;->this$0:Lcom/oneplus/battery/OpNewWarpChargingView;
 
-    invoke-static {p0, v1}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$2502(Lcom/oneplus/battery/OpNewWarpChargingView;Z)Z
+    invoke-static {p0, v1}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$2402(Lcom/oneplus/battery/OpNewWarpChargingView;Z)Z
 
     return-void
 .end method

@@ -126,13 +126,25 @@
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController$1;->this$0:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
+    invoke-static {p1}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$1600(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->isBiometricUnlock()Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController$1;->this$0:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
+
     invoke-static {p1, v0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$1102(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;Z)Z
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController$1;->this$0:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
     const-wide/16 p1, 0x168
 
-    invoke-static {p0, p1, p2}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$1600(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;J)V
+    invoke-static {p0, p1, p2}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$1700(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;J)V
 
     :cond_2
     return-void
@@ -143,7 +155,7 @@
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController$1;->this$0:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
-    invoke-static {p1}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$1700(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)Lcom/android/systemui/statusbar/phone/KeyguardBypassController;
+    invoke-static {p1}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$1800(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)Lcom/android/systemui/statusbar/phone/KeyguardBypassController;
 
     move-result-object v0
 

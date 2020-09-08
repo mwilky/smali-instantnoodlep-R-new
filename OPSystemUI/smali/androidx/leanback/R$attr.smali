@@ -12,12 +12,12 @@
 
 .field public static final imageCardViewStyle:I = 0x7f040294
 
-.field public static final pickerStyle:I = 0x7f040414
+.field public static final pickerStyle:I = 0x7f040411
 
-.field public static final pinPickerStyle:I = 0x7f040416
+.field public static final pinPickerStyle:I = 0x7f040413
 
-.field public static final rowHeaderStyle:I = 0x7f04047f
+.field public static final rowHeaderStyle:I = 0x7f04047c
 
-.field public static final searchOrbViewStyle:I = 0x7f040495
+.field public static final searchOrbViewStyle:I = 0x7f040492
 
-.field public static final timePickerStyle:I = 0x7f040568
+.field public static final timePickerStyle:I = 0x7f040565

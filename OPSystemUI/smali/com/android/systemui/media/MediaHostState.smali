@@ -9,6 +9,11 @@
     .end annotation
 .end method
 
+.method public abstract getDisappearParameters()Lcom/android/systemui/util/animation/DisappearParameters;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end method
+
 .method public abstract getExpansion()F
 .end method
 
@@ -18,12 +23,6 @@
 .method public abstract getMeasurementInput()Lcom/android/systemui/util/animation/MeasurementInput;
     .annotation build Lorg/jetbrains/annotations/Nullable;
     .end annotation
-.end method
-
-.method public abstract getPivotX()F
-.end method
-
-.method public abstract getPivotY()F
 .end method
 
 .method public abstract getShowsOnlyActiveMedia()Z

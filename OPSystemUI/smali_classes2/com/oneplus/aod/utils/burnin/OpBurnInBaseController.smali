@@ -13,13 +13,15 @@
 
 .field protected mClockController:Lcom/oneplus/aod/controller/IOpClockController;
 
+.field protected mContext:Landroid/content/Context;
+
 .field protected mSystemInfoView:Landroid/view/ViewGroup;
 
 .field protected mTag:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,6 +35,8 @@
     move-result-object v0
 
     iput-object v0, p0, Lcom/oneplus/aod/utils/burnin/OpBurnInBaseController;->mTag:Ljava/lang/String;
+
+    iput-object p1, p0, Lcom/oneplus/aod/utils/burnin/OpBurnInBaseController;->mContext:Landroid/content/Context;
 
     return-void
 .end method

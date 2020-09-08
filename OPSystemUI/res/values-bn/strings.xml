@@ -511,7 +511,7 @@
     <string name="cached_apps_freezer_device_default">ডিভাইসের ডিফল্ট</string>
     <string name="cached_apps_freezer_disabled">বন্ধ করা আছে</string>
     <string name="cached_apps_freezer_enabled">চালু করা আছে</string>
-    <string name="cached_apps_freezer_reboot_dialog_text">এই পরিবর্তনটি প্রয়োগ করার জন্য আপনার ডিভাইসটি অবশ্যই রিবুট করতে হবে। এখন রিবুট করুন বা বাতিল করুন।</string>
+    <string name="cached_apps_freezer_reboot_dialog_text">এই পরিবর্তনটি প্রয়োগ করার জন্য আপনার ডিভাইসটি অবশ্যই রিবুট করতে হবে। এখনই রিবুট করুন বা বাতিল করুন।</string>
     <string name="camera_hint">ক্যামেরার জন্য আইকন থেকে সোয়াইপ করুন</string>
     <string name="camera_label">ক্যামেরা খুলুন</string>
     <string name="cancel">বাতিল করুন</string>
@@ -561,6 +561,7 @@
     <string name="controls_favorite_other_zone_header">অন্য</string>
     <string name="controls_favorite_rearrange">কন্ট্রোলগুলিকে আবার সাজানোর জন্য ধরে রেখে টেনে আনুন</string>
     <string name="controls_favorite_removed">সমস্ত কন্ট্রোল সরানো হয়েছে</string>
+    <string name="controls_favorite_see_other_apps">অন্যান্য অ্যাপ দেখুন</string>
     <string name="controls_favorite_subtitle">যেসব কন্ট্রোল অ্যাক্সেস করতে চান সেগুলি পাওয়ার মেনু থেকে বেছে নিন</string>
     <string name="controls_favorite_toast_no_changes">পরিবর্তন সেভ করা হয়নি</string>
     <string name="controls_in_progress">চলছে</string>
@@ -663,6 +664,8 @@
     <string name="disconnect_vpn">VPN এর সংযোগ বিচ্ছিন্ন করুন</string>
     <string name="dnd_is_off">বিরক্ত করবে না বিকল্পটি বন্ধ আছে</string>
     <string name="dnd_suppressing_shade_text">"'বিরক্ত করবে না' দিয়ে বিজ্ঞপ্তি পজ করা হয়েছে"</string>
+    <string name="do_disclosure_generic">এই ডিভাইসটি আপনার প্রতিষ্ঠানের</string>
+    <string name="do_disclosure_with_name">এই ডিভাইসটি %s-এর</string>
     <string name="do_not_silence">নীরব করবেন না</string>
     <string name="do_not_silence_block">নীরব বা অবরুদ্ধ করবেন না</string>
     <string name="dock_alignment_not_charging">ওয়্যারলেস চার্জ করতে ফোনটিকে সঠিকভাবে রাখুন</string>
@@ -1029,7 +1032,7 @@
     <string name="media_projection_dialog_title">%s দিয়ে রেকর্ড করা বা কাস্টিং শুরু করবেন?</string>
     <string name="media_projection_remember_text">আর দেখাবেন না</string>
     <string name="media_seamless_remote_device">ডিভাইস</string>
-    <string name="media_transfer_this_device_name">ফেনের স্পিকার</string>
+    <string name="media_transfer_this_device_name">ফোনের স্পিকার</string>
     <string name="media_transfer_wired_device_name">ওয়্যার অডিও ডিভাইস</string>
     <string name="media_transfer_wired_usb_device_name">তার যুক্ত হেডফোন</string>
     <string name="menu_ime">কিবোর্ড স্যুইচার</string>
@@ -1065,8 +1068,18 @@
     <string name="monitoring_description_do_learn_more_separator">" "</string>
     <string name="monitoring_description_managed_profile_ca_certificate">আপনার প্রতিষ্ঠান আপনার অফিস প্রোফাইলে একটি সার্টিফিকেট কর্তৃপক্ষ ইনস্টল করেছে। আপনার নিরাপদ নেটওয়ার্ক ট্রাফিকে নজর রাখা হতে পারে বা তাতে পরিবর্তন করা হতে পারে।</string>
     <string name="monitoring_description_managed_profile_named_vpn">আপনার কর্মস্থলের প্রোফাইল %1$s এর সাথে সংযুক্ত রয়েছে, যেটি ইমেল, অ্যাপ, এবং ওয়েবসাইট সহ আপনার নেটওয়ার্ক কার্যকলাপে নজর রাখতে পারে।</string>
+    <string name="monitoring_description_management">"এই ডিভাইসটি আপনার প্রতিষ্ঠানের।
+
+আপনার আইটি অ্যাডমিন এই ডিভাইসের সেটিংস, কর্পোরেট অ্যাক্সেস, অ্যাপ, ডিভাইসের সাথে সম্পর্কিত ডেটা এবং ডিভাইসের লোকেশন সম্পর্কিত ডেটা মনিটর ও ম্যানেজ করতে পারে।
+
+আরও তথ্যের জন্য আপনার আইটি অ্যাডমিনের সাথে যোগাযোগ করুন।"</string>
     <string name="monitoring_description_management_ca_certificate">আপনার প্রতিষ্ঠান আপনার অফিস প্রোফাইলে একটি সার্টিফিকেট কর্তৃপক্ষ ইনস্টল করেছে।আপনার সুরক্ষিত নেটওয়ার্ক ট্রাফিক নিরীক্ষণ বা পরিবর্তন করা হতে পারে।</string>
     <string name="monitoring_description_management_network_logging">আপনার প্রশাসক নেটওয়ার্ক লগিং চালু করেছেন, যা আপনার ডিভাইসের ট্রাফিকের উপরে নজর রাখে।</string>
+    <string name="monitoring_description_named_management">"এই ডিভাইসটি %1$s-এর।
+
+আপনার আইটি অ্যাডমিন এই ডিভাইসের সেটিংস, কর্পোরেট অ্যাক্সেস, অ্যাপ, ডিভাইসের সাথে সম্পর্কিত ডেটা এবং ডিভাইসের লোকেশন সম্পর্কিত ডেটা মনিটর ও ম্যানেজ করতে পারে।
+
+আরও তথ্যের জন্য আপনার আইটি অ্যাডমিনের সাথে যোগাযোগ করুন।"</string>
     <string name="monitoring_description_named_vpn">আপনি %1$s এ সংযুক্ত রয়েছেন, যা আপনার ইমেল, অ্যাপ, এবং ওয়েবসাইট সহ আপনার নেটওয়ার্ক অ্যাক্টিভিটির উপর নজর রাখতে পারে।</string>
     <string name="monitoring_description_network_logging">"আপনার প্রশাসক নেটওয়ার্ক লগিং চালু করেছেন, যা আপনার ডিভাইসের ট্রাফিক নিরীক্ষণ করে।
 
@@ -1341,8 +1354,20 @@
     <string name="quick_settings_dark_mode_secondary_label_until">%s পর্যন্ত</string>
     <string name="quick_settings_dark_mode_secondary_label_until_sunrise">সূর্যোদয় পর্যন্ত</string>
     <string name="quick_settings_disclosure_managed_profile_monitoring">আপনার প্রতিষ্ঠান আপনার কর্মস্থলের প্রোফাইলের নেটওয়ার্ক ট্রাফিকে নজর রাখতে পারে</string>
+    <string name="quick_settings_disclosure_managed_profile_named_vpn">%1$s-এ আপনার অফিস প্রোফাইল কানেক্ট করা রয়েছে</string>
+    <string name="quick_settings_disclosure_management">এই ডিভাইসটি আপনার প্রতিষ্ঠানের</string>
+    <string name="quick_settings_disclosure_management_monitoring">এই ডিভাইসটি আপনার প্রতিষ্ঠানের এবং এরা ডিভাইসের নেটওয়ার্ক ট্রাফিক মনিটর করতে পারে</string>
+    <string name="quick_settings_disclosure_management_named_vpn">এই ডিভাইসটি আপনার প্রতিষ্ঠানের এবং %1$s-এ কানেক্ট করা আছে</string>
+    <string name="quick_settings_disclosure_management_vpns">এই ডিভাইসটি আপনার প্রতিষ্ঠানের এবং একাধিক VPN-এ কানেক্ট করা আছে</string>
     <string name="quick_settings_disclosure_monitoring">নেটওয়ার্কের উপরে নজর রাখা হতে পারে</string>
     <string name="quick_settings_disclosure_named_managed_profile_monitoring">%1$s আপনার কর্মস্থলের প্রোফাইলের নেটওয়ার্ক ট্রাফিকে নজর রাখতে পারে</string>
+    <string name="quick_settings_disclosure_named_management">এই ডিভাইসটি %1$s-এর</string>
+    <string name="quick_settings_disclosure_named_management_monitoring">%1$s এই ডিভাইসের মালিক এবং এটির নেটওয়ার্ক ট্রাফিক মনিটর করতে পারে</string>
+    <string name="quick_settings_disclosure_named_management_named_vpn">এই ডিভাইস %1$s-এর এবং %2$s-এ কানেক্ট করা আছে</string>
+    <string name="quick_settings_disclosure_named_management_vpns">এই ডিভাইস %1$s-এর এবং একাধিক VPN-এ কানেক্ট করা আছে</string>
+    <string name="quick_settings_disclosure_named_vpn">এই ডিভাইস %1$s-এ কানেক্ট করা আছে</string>
+    <string name="quick_settings_disclosure_personal_profile_named_vpn">আপনার ব্যক্তিগত প্রোফাইল %1$s-এ কানেক্ট করা আছে</string>
+    <string name="quick_settings_disclosure_vpns">এই ডিভাইস একাধিক VPN-এ কানেক্ট করা আছে</string>
     <string name="quick_settings_dnd_alarms_label">শুধুমাত্র অ্যালার্মগুলি</string>
     <string name="quick_settings_dnd_label">বিরক্ত করবে না</string>
     <string name="quick_settings_dnd_none_label">একদম নিরব</string>

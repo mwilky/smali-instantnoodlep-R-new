@@ -31,6 +31,10 @@
 
 .field private mIsAodSliceOn:Z
 
+.field private mIsFormat12Hour:Z
+
+.field private mIsFormat12HourObserver:Landroid/database/ContentObserver;
+
 .field private mKeyguardAssistantView:Lcom/android/keyguard/KeyguardAssistantView;
 
 .field public mKeyguardAssistantViewCallback:Lcom/android/keyguard/KeyguardAssistantView$Callback;
@@ -43,7 +47,7 @@
 
 .field private mSecondary:Landroid/widget/TextView;
 
-.field private mTextViewDateLineThree:Landroid/widget/TextClock;
+.field private mTextViewDateLineThree:Landroid/widget/TextView;
 
 .field private mTextViewDateOfWeekLineOne:Landroid/widget/TextView;
 
@@ -64,9 +68,11 @@
 
     iput-boolean p1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mIsAodSliceOn:Z
 
-    const/4 p1, 0x1
+    const/4 v0, 0x1
 
-    iput-boolean p1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mAllowShowSensitiveData:Z
+    iput-boolean v0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mAllowShowSensitiveData:Z
+
+    iput-boolean p1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mIsFormat12Hour:Z
 
     new-instance p1, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$1;
 
@@ -80,13 +86,23 @@
 
     new-instance p1, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$2;
 
-    invoke-direct {p1, p0}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$2;-><init>(Lcom/oneplus/keyguard/OpKeyguardClockInfoView;)V
+    new-instance v0, Landroid/os/Handler;
 
-    iput-object p1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mKeyguardAssistantViewCallback:Lcom/android/keyguard/KeyguardAssistantView$Callback;
+    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
+
+    invoke-direct {p1, p0, v0}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$2;-><init>(Lcom/oneplus/keyguard/OpKeyguardClockInfoView;Landroid/os/Handler;)V
+
+    iput-object p1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mIsFormat12HourObserver:Landroid/database/ContentObserver;
 
     new-instance p1, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$3;
 
     invoke-direct {p1, p0}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$3;-><init>(Lcom/oneplus/keyguard/OpKeyguardClockInfoView;)V
+
+    iput-object p1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mKeyguardAssistantViewCallback:Lcom/android/keyguard/KeyguardAssistantView$Callback;
+
+    new-instance p1, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$4;
+
+    invoke-direct {p1, p0}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$4;-><init>(Lcom/oneplus/keyguard/OpKeyguardClockInfoView;)V
 
     iput-object p1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mReceiver:Landroid/content/BroadcastReceiver;
 
@@ -106,6 +122,8 @@
 
     iput-boolean v1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mAllowShowSensitiveData:Z
 
+    iput-boolean v0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mIsFormat12Hour:Z
+
     new-instance v1, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$1;
 
     new-instance v2, Landroid/os/Handler;
@@ -118,13 +136,23 @@
 
     new-instance v1, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$2;
 
-    invoke-direct {v1, p0}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$2;-><init>(Lcom/oneplus/keyguard/OpKeyguardClockInfoView;)V
+    new-instance v2, Landroid/os/Handler;
 
-    iput-object v1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mKeyguardAssistantViewCallback:Lcom/android/keyguard/KeyguardAssistantView$Callback;
+    invoke-direct {v2}, Landroid/os/Handler;-><init>()V
+
+    invoke-direct {v1, p0, v2}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$2;-><init>(Lcom/oneplus/keyguard/OpKeyguardClockInfoView;Landroid/os/Handler;)V
+
+    iput-object v1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mIsFormat12HourObserver:Landroid/database/ContentObserver;
 
     new-instance v1, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$3;
 
     invoke-direct {v1, p0}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$3;-><init>(Lcom/oneplus/keyguard/OpKeyguardClockInfoView;)V
+
+    iput-object v1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mKeyguardAssistantViewCallback:Lcom/android/keyguard/KeyguardAssistantView$Callback;
+
+    new-instance v1, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$4;
+
+    invoke-direct {v1, p0}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$4;-><init>(Lcom/oneplus/keyguard/OpKeyguardClockInfoView;)V
 
     iput-object v1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mReceiver:Landroid/content/BroadcastReceiver;
 
@@ -270,18 +298,26 @@
     return-object p0
 .end method
 
-.method static synthetic access$300(Lcom/oneplus/keyguard/OpKeyguardClockInfoView;)V
+.method static synthetic access$302(Lcom/oneplus/keyguard/OpKeyguardClockInfoView;Z)Z
     .locals 0
 
-    invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->updateView()V
+    iput-boolean p1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mIsFormat12Hour:Z
 
-    return-void
+    return p1
 .end method
 
 .method static synthetic access$400(Lcom/oneplus/keyguard/OpKeyguardClockInfoView;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->updateTime()V
+
+    return-void
+.end method
+
+.method static synthetic access$500(Lcom/oneplus/keyguard/OpKeyguardClockInfoView;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->updateView()V
 
     return-void
 .end method
@@ -495,6 +531,28 @@
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lcom/android/systemui/R$dimen;->op_keyguard_clock_info_view_day_of_month_textsize:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result v0
+
+    invoke-static {v0}, Lcom/oneplus/util/OpUtils;->convertDpToFixedPx2(F)I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mTextViewDateLineThree:Landroid/widget/TextView;
+
+    const/4 v2, 0x0
+
+    int-to-float v0, v0
+
+    invoke-virtual {v1, v2, v0}, Landroid/widget/TextView;->setTextSize(IF)V
+
     invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->updateLayoutColor()V
 
     iget-object v0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mKeyguardAssistantView:Lcom/android/keyguard/KeyguardAssistantView;
@@ -504,6 +562,10 @@
     invoke-virtual {v0}, Lcom/android/keyguard/KeyguardAssistantView;->refresh()V
 
     :cond_1
+    invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->updateSliceLayout()V
+
+    invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->updateSliceTextSize()V
+
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->requestLayout()V
 
     return-void
@@ -594,11 +656,11 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
     :cond_3
-    iget-object v0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mTextViewDateLineThree:Landroid/widget/TextClock;
+    iget-object v0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mTextViewDateLineThree:Landroid/widget/TextView;
 
     if-eqz v0, :cond_4
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextClock;->setTextColor(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
     :cond_4
     iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mKeyguardAssistantView:Lcom/android/keyguard/KeyguardAssistantView;
@@ -626,10 +688,62 @@
 
     invoke-virtual {p1, p3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mRemark:Landroid/widget/TextView;
+    iget-object p1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mRemark:Landroid/widget/TextView;
 
-    invoke-virtual {p0, p4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {p1, p4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    if-eqz p4, :cond_0
+
+    invoke-virtual {p4}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mPrimary:Landroid/widget/TextView;
+
+    invoke-virtual {p1}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/LinearLayout$LayoutParams;
+
+    const/4 p2, -0x2
+
+    iput p2, p1, Landroid/widget/LinearLayout$LayoutParams;->width:I
+
+    const/4 p2, 0x0
+
+    iput p2, p1, Landroid/widget/LinearLayout$LayoutParams;->weight:F
+
+    iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mPrimary:Landroid/widget/TextView;
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mPrimary:Landroid/widget/TextView;
+
+    invoke-virtual {p1}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/LinearLayout$LayoutParams;
+
+    const/4 p2, 0x0
+
+    iput p2, p1, Landroid/widget/LinearLayout$LayoutParams;->width:I
+
+    const/high16 p2, 0x3f800000    # 1.0f
+
+    iput p2, p1, Landroid/widget/LinearLayout$LayoutParams;->weight:F
+
+    iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mPrimary:Landroid/widget/TextView;
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    :goto_0
     return-void
 .end method
 
@@ -783,6 +897,214 @@
     return-void
 .end method
 
+.method private updateSliceLayout()V
+    .locals 6
+
+    sget v0, Lcom/android/systemui/R$id;->slice_primary_container:I
+
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    sget v3, Lcom/android/systemui/R$dimen;->aod_slice_layout_primary_margin_bottom:I
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result v2
+
+    invoke-static {v2}, Lcom/oneplus/util/OpUtils;->convertDpToFixedPx(F)I
+
+    move-result v2
+
+    iput v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lcom/android/systemui/R$dimen;->op_control_icon_size_list:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result v0
+
+    invoke-static {v0}, Lcom/oneplus/util/OpUtils;->convertDpToFixedPx(F)I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mIcon:Landroid/widget/ImageView;
+
+    invoke-virtual {v1}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    iput v0, v1, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
+
+    iput v0, v1, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+
+    iget-object v0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mIcon:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object v0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mPrimary:Landroid/widget/TextView;
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Lcom/android/systemui/R$dimen;->op_control_margin_space1:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result v1
+
+    invoke-static {v1}, Lcom/oneplus/util/OpUtils;->convertDpToFixedPx(F)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
+
+    iget-object v1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mPrimary:Landroid/widget/TextView;
+
+    invoke-virtual {v1}, Landroid/widget/TextView;->getPaddingStart()I
+
+    move-result v2
+
+    iget-object v3, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mPrimary:Landroid/widget/TextView;
+
+    invoke-virtual {v3}, Landroid/widget/TextView;->getPaddingTop()I
+
+    move-result v3
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    sget v5, Lcom/android/systemui/R$dimen;->aod_slice_view_primary_padding_end:I
+
+    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result v4
+
+    invoke-static {v4}, Lcom/oneplus/util/OpUtils;->convertDpToFixedPx(F)I
+
+    move-result v4
+
+    iget-object v5, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mPrimary:Landroid/widget/TextView;
+
+    invoke-virtual {v5}, Landroid/widget/TextView;->getPaddingBottom()I
+
+    move-result v5
+
+    invoke-virtual {v1, v2, v3, v4, v5}, Landroid/widget/TextView;->setPaddingRelative(IIII)V
+
+    iget-object v1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mPrimary:Landroid/widget/TextView;
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object v0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mRemark:Landroid/widget/TextView;
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Lcom/android/systemui/R$dimen;->op_control_margin_space1:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result v1
+
+    invoke-static {v1}, Lcom/oneplus/util/OpUtils;->convertDpToFixedPx(F)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
+
+    iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mRemark:Landroid/widget/TextView;
+
+    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+.end method
+
+.method private updateSliceTextSize()V
+    .locals 3
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lcom/android/systemui/R$dimen;->op_keyguard_clock_info_view_slice_primary_textsize:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result v0
+
+    invoke-static {v0}, Lcom/oneplus/util/OpUtils;->convertDpToFixedPx2(F)I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mPrimary:Landroid/widget/TextView;
+
+    int-to-float v0, v0
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2, v0}, Landroid/widget/TextView;->setTextSize(IF)V
+
+    iget-object v1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mRemark:Landroid/widget/TextView;
+
+    invoke-virtual {v1, v2, v0}, Landroid/widget/TextView;->setTextSize(IF)V
+
+    iget-object v0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mSecondary:Landroid/widget/TextView;
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    sget v1, Lcom/android/systemui/R$dimen;->aod_slice_text_size_secondary:I
+
+    invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result p0
+
+    invoke-static {p0}, Lcom/oneplus/util/OpUtils;->convertDpToFixedPx2(F)I
+
+    move-result p0
+
+    int-to-float p0, p0
+
+    invoke-virtual {v0, v2, p0}, Landroid/widget/TextView;->setTextSize(IF)V
+
+    return-void
+.end method
+
 .method private updateTime()V
     .locals 2
 
@@ -810,12 +1132,26 @@
 
     invoke-direct {v1, v2}, Landroid/icu/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
+    iget-boolean v2, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mIsFormat12Hour:Z
+
+    if-eqz v2, :cond_0
+
+    new-instance v2, Landroid/icu/text/SimpleDateFormat;
+
+    const-string v3, "h\'\u2236\'mm"
+
+    invoke-direct {v2, v3}, Landroid/icu/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_0
     new-instance v2, Landroid/icu/text/SimpleDateFormat;
 
     const-string v3, "HH\'\u2236\'mm"
 
     invoke-direct {v2, v3}, Landroid/icu/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
+    :goto_0
     new-instance v3, Landroid/icu/text/SimpleDateFormat;
 
     iget-object v4, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mContext:Landroid/content/Context;
@@ -830,7 +1166,7 @@
 
     iget-object v4, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mTextViewDateOfWeekLineOne:Landroid/widget/TextView;
 
-    if-eqz v4, :cond_0
+    if-eqz v4, :cond_1
 
     invoke-virtual {v1, v0}, Landroid/icu/text/SimpleDateFormat;->format(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -838,10 +1174,10 @@
 
     invoke-virtual {v4, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    :cond_0
+    :cond_1
     iget-object v1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mTextViewTimeLineTwo:Lcom/oneplus/keyguard/OpKeyguardOneplusTextView;
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     invoke-virtual {v2, v0}, Landroid/icu/text/SimpleDateFormat;->format(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -851,18 +1187,18 @@
 
     invoke-virtual {v1, v2, v4}, Lcom/oneplus/keyguard/OpKeyguardOneplusTextView;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
 
-    :cond_1
-    iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mTextViewDateLineThree:Landroid/widget/TextClock;
+    :cond_2
+    iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mTextViewDateLineThree:Landroid/widget/TextView;
 
-    if-eqz p0, :cond_2
+    if-eqz p0, :cond_3
 
     invoke-virtual {v3, v0}, Landroid/icu/text/SimpleDateFormat;->format(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Landroid/widget/TextClock;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    :cond_2
+    :cond_3
     return-void
 .end method
 
@@ -1113,9 +1449,9 @@
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/TextClock;
+    check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mTextViewDateLineThree:Landroid/widget/TextClock;
+    iput-object v0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mTextViewDateLineThree:Landroid/widget/TextView;
 
     iget-object v0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mInnerPanel:Landroid/widget/LinearLayout;
 
@@ -1241,7 +1577,7 @@
 .end method
 
 .method protected onAttachedToWindow()V
-    .locals 6
+    .locals 7
 
     invoke-super {p0}, Landroid/widget/LinearLayout;->onAttachedToWindow()V
 
@@ -1318,6 +1654,40 @@
 
     move-result-object v0
 
+    const-string v3, "time_12_24"
+
+    invoke-static {v3}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v4
+
+    iget-object v6, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mIsFormat12HourObserver:Landroid/database/ContentObserver;
+
+    invoke-virtual {v0, v4, v5, v6}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
+
+    iget-object v0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    invoke-static {v0, v3}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v3, "12"
+
+    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mIsFormat12Hour:Z
+
+    iget-object v0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
     const/4 v3, -0x2
 
     invoke-static {v0, v2, v5, v3}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
@@ -1340,7 +1710,7 @@
     invoke-virtual {v0, v1}, Lcom/android/keyguard/KeyguardAssistantView;->setHideSensitiveData(Z)V
 
     :cond_2
-    invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->updateLayoutColor()V
+    invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->updateLayout()V
 
     return-void
 .end method
@@ -1406,7 +1776,17 @@
 
     move-result-object v0
 
-    iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mContentObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mContentObserver:Landroid/database/ContentObserver;
+
+    invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
+
+    iget-object v0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mIsFormat12HourObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, p0}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 

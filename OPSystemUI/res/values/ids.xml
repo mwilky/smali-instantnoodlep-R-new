@@ -204,9 +204,12 @@
     <item type="id" name="battery_container" />
     <item type="id" name="battery_dash_charge" />
     <item type="id" name="battery_level" />
+    <item type="id" name="battery_level_bound" />
     <item type="id" name="battery_level_container" />
     <item type="id" name="battery_level_hundredth" />
+    <item type="id" name="battery_level_hundredth_bound" />
     <item type="id" name="battery_level_percent" />
+    <item type="id" name="battery_level_percent_bound" />
     <item type="id" name="battery_percentage_view" />
     <item type="id" name="behaviors" />
     <item type="id" name="bg_end" />
@@ -301,17 +304,17 @@
     <item type="id" name="carrier_text" />
     <item type="id" name="center_group" />
     <item type="id" name="center_icon_area_inner" />
+    <item type="id" name="center_vertical_guideline" />
     <item type="id" name="centeredIcon" />
     <item type="id" name="centered_icon_area" />
     <item type="id" name="channel_description" />
     <item type="id" name="channel_name" />
     <item type="id" name="charging_and_owner_info_view" />
-    <item type="id" name="charging_anim_p1" />
-    <item type="id" name="charging_anim_p2" />
-    <item type="id" name="charging_anim_p3" />
     <item type="id" name="charging_dash" />
     <item type="id" name="charging_dash_container" />
     <item type="id" name="charging_info" />
+    <item type="id" name="charging_info_contain" />
+    <item type="id" name="charging_info_level" />
     <item type="id" name="checkbox" />
     <item type="id" name="checkbox_container" />
     <item type="id" name="checkbox_layout" />
@@ -330,6 +333,7 @@
     <item type="id" name="complete_bottom_single_fix_action" />
     <item type="id" name="complete_bottom_single_medium_action" />
     <item type="id" name="complete_button_layout" />
+    <item type="id" name="complete_buttons" />
     <item type="id" name="complete_icon" />
     <item type="id" name="complete_middle_bottom_action" />
     <item type="id" name="complete_middle_top_action" />
@@ -498,6 +502,7 @@
     <item type="id" name="expand" />
     <item type="id" name="expand_activities_button" />
     <item type="id" name="expand_button" />
+    <item type="id" name="expand_button_layout_container" />
     <item type="id" name="expand_container" />
     <item type="id" name="expand_indicator" />
     <item type="id" name="expand_space" />
@@ -775,7 +780,6 @@
     <item type="id" name="lock_screen_clock" />
     <item type="id" name="logo" />
     <item type="id" name="logout" />
-    <item type="id" name="lottie_container" />
     <item type="id" name="lottie_layer_name" />
     <item type="id" name="lottie_panel" />
     <item type="id" name="lowerIndicator" />
@@ -797,7 +801,6 @@
     <item type="id" name="mediaRowSelector" />
     <item type="id" name="mediaRowSeparator" />
     <item type="id" name="media_action_barrier" />
-    <item type="id" name="media_action_guidebox" />
     <item type="id" name="media_actions" />
     <item type="id" name="media_carousel" />
     <item type="id" name="media_carousel_scroller" />
@@ -806,7 +809,6 @@
     <item type="id" name="media_page_indicator" />
     <item type="id" name="media_progress_bar" />
     <item type="id" name="media_seamless" />
-    <item type="id" name="media_seamless_barrier" />
     <item type="id" name="media_seamless_fallback" />
     <item type="id" name="media_seamless_image" />
     <item type="id" name="media_seamless_text" />
@@ -993,6 +995,7 @@
     <item type="id" name="onboarding_fragment_root" />
     <item type="id" name="onboarding_half_shell_container" />
     <item type="id" name="onboarding_text" />
+    <item type="id" name="op_aod_bg" />
     <item type="id" name="op_aod_clock_container" />
     <item type="id" name="op_aod_container" />
     <item type="id" name="op_aod_fp_indication_text" />
@@ -1007,6 +1010,7 @@
     <item type="id" name="op_fingerprint_icon_white" />
     <item type="id" name="op_fingerprint_view" />
     <item type="id" name="op_keyguard_clock_info_view_primary_container" />
+    <item type="id" name="op_qs_clock" />
     <item type="id" name="op_qs_edit_appbar" />
     <item type="id" name="op_qs_edit_button_panel" />
     <item type="id" name="op_qs_edit_done" />
@@ -1073,7 +1077,6 @@
     <item type="id" name="prefs" />
     <item type="id" name="prefs_frame" />
     <item type="id" name="presentation" />
-    <item type="id" name="pressed" />
     <item type="id" name="prev" />
     <item type="id" name="prevent_mode_inner_view" />
     <item type="id" name="prevent_mode_phone" />
@@ -1307,6 +1310,7 @@
     <item type="id" name="ssc_container" />
     <item type="id" name="ssc_icon" />
     <item type="id" name="ssc_textview" />
+    <item type="id" name="ssc_wrapper" />
     <item type="id" name="sscs_container" />
     <item type="id" name="status" />
     <item type="id" name="statusIcons" />
@@ -1337,7 +1341,6 @@
     <item type="id" name="summary" />
     <item type="id" name="summary_container" />
     <item type="id" name="surface_view" />
-    <item type="id" name="swarp_view" />
     <item type="id" name="swipe_icon" />
     <item type="id" name="switchWidget" />
     <item type="id" name="switch_bar" />
@@ -1409,6 +1412,7 @@
     <item type="id" name="timePickerLayout" />
     <item type="id" name="time_clock" />
     <item type="id" name="time_header" />
+    <item type="id" name="time_header_layout" />
     <item type="id" name="time_view" />
     <item type="id" name="title" />
     <item type="id" name="titleDividerNoCustom" />
@@ -1421,6 +1425,7 @@
     <item type="id" name="title_text" />
     <item type="id" name="title_trailing_truncatable" />
     <item type="id" name="toggle_mode" />
+    <item type="id" name="toggle_mode_layout" />
     <item type="id" name="toggle_stub" />
     <item type="id" name="tool_bar" />
     <item type="id" name="toolbar" />
@@ -1432,7 +1437,6 @@
     <item type="id" name="top_inset_animator_end_value_tag" />
     <item type="id" name="top_inset_animator_start_value_tag" />
     <item type="id" name="top_inset_animator_tag" />
-    <item type="id" name="top_label" />
     <item type="id" name="top_line" />
     <item type="id" name="top_roundess_animator_end_tag" />
     <item type="id" name="top_roundess_animator_start_tag" />
@@ -1478,7 +1482,6 @@
     <item type="id" name="underline" />
     <item type="id" name="undo" />
     <item type="id" name="unlocks" />
-    <item type="id" name="unpressed" />
     <item type="id" name="up" />
     <item type="id" name="up_control" />
     <item type="id" name="upperIndicator" />
@@ -1533,8 +1536,6 @@
     <item type="id" name="vpn_subtitle" />
     <item type="id" name="vpn_warning" />
     <item type="id" name="wallpaper_view" />
-    <item type="id" name="warp_charging_anim_p2" />
-    <item type="id" name="warp_charging_anim_p3" />
     <item type="id" name="warp_view" />
     <item type="id" name="web_view_container" />
     <item type="id" name="welcome" />

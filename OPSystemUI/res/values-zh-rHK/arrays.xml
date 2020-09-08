@@ -82,6 +82,8 @@
         <item>Qualcomm® aptX™ 音訊</item>
         <item>Qualcomm® aptX™ HD 音訊</item>
         <item>LDAC</item>
+        <item>Qualcomm® aptX™ Adaptive 音訊</item>
+        <item>Qualcomm® aptX™ TWS+ 音訊</item>
     </string-array>
     <string-array name="bluetooth_a2dp_codec_titles">
         <item>使用系統選擇 (預設)</item>
@@ -90,6 +92,8 @@
         <item>Qualcomm® aptX™ 音訊</item>
         <item>Qualcomm® aptX™ HD 音訊</item>
         <item>LDAC</item>
+        <item>Qualcomm® aptX™ Adaptive 音訊</item>
+        <item>Qualcomm® aptX™ TWS+ 音訊</item>
     </string-array>
     <string-array name="bluetooth_audio_active_device_summaries">
         <item></item>

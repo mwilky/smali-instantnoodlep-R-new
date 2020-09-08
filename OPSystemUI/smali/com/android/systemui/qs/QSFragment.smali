@@ -1771,7 +1771,7 @@
 .end method
 
 .method public setQsExpansion(FF)V
-    .locals 10
+    .locals 12
 
     iget-object v0, p0, Lcom/android/systemui/qs/QSFragment;->mContainer:Lcom/android/systemui/qs/QSContainerImpl;
 
@@ -1930,31 +1930,186 @@
     move v7, v4
 
     :goto_3
-    iget-object v8, p0, Lcom/android/systemui/qs/QSFragment;->mQSPanelScrollView:Lcom/android/systemui/qs/NonInterceptingScrollView;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getContext()Landroid/content/Context;
 
-    invoke-virtual {v8}, Landroid/widget/ScrollView;->getBottom()I
+    move-result-object v8
+
+    invoke-virtual {v8}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v8
+
+    iget v8, v8, Landroid/content/res/Configuration;->orientation:I
+
+    if-ne v8, v3, :cond_7
+
+    move v8, v3
+
+    goto :goto_4
+
+    :cond_7
+    move v8, v4
+
+    :goto_4
+    :try_start_0
+    iget-object v9, p0, Lcom/android/systemui/qs/QSFragment;->mHeader:Lcom/android/systemui/qs/QuickStatusBarHeader;
+
+    invoke-virtual {v9}, Lcom/android/systemui/qs/QuickStatusBarHeader;->getHeaderQsPanel()Lcom/android/systemui/qs/QuickQSPanel;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Lcom/android/systemui/qs/QSPanel;->getMediaHost()Lcom/android/systemui/media/MediaHost;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Lcom/android/systemui/media/MediaHost;->getHostView()Lcom/android/systemui/util/animation/UniqueObjectHostView;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move v9, v3
+
+    goto :goto_5
+
+    :catch_0
+    move-exception v9
+
+    new-instance v10, Ljava/lang/StringBuilder;
+
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v11, "Exception e = "
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v10, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    const-string v10, "QS"
+
+    invoke-static {v10, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    move v9, v4
+
+    :goto_5
+    if-eqz v8, :cond_8
+
+    iget-object v10, p0, Lcom/android/systemui/qs/QSFragment;->mHeader:Lcom/android/systemui/qs/QuickStatusBarHeader;
+
+    invoke-virtual {v10}, Lcom/android/systemui/qs/QuickStatusBarHeader;->getHeaderQsPanel()Lcom/android/systemui/qs/QuickQSPanel;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Lcom/android/systemui/qs/QSPanel;->getMediaHost()Lcom/android/systemui/media/MediaHost;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Lcom/android/systemui/media/MediaHost;->getVisible()Z
+
+    move-result v10
+
+    if-eqz v10, :cond_8
+
+    if-eqz v9, :cond_8
+
+    iget-object v10, p0, Lcom/android/systemui/qs/QSFragment;->mHeader:Lcom/android/systemui/qs/QuickStatusBarHeader;
+
+    invoke-virtual {v10}, Lcom/android/systemui/qs/QuickStatusBarHeader;->getHeaderQsPanel()Lcom/android/systemui/qs/QuickQSPanel;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Lcom/android/systemui/qs/QSPanel;->getMediaHost()Lcom/android/systemui/media/MediaHost;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Lcom/android/systemui/media/MediaHost;->getHostView()Lcom/android/systemui/util/animation/UniqueObjectHostView;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Landroid/widget/FrameLayout;->getMeasuredHeight()I
+
+    move-result v10
+
+    goto :goto_6
+
+    :cond_8
+    move v10, v4
+
+    :goto_6
+    if-eqz v8, :cond_9
+
+    iget-object v8, p0, Lcom/android/systemui/qs/QSFragment;->mQSPanel:Lcom/android/systemui/qs/QSPanel;
+
+    invoke-virtual {v8}, Lcom/android/systemui/qs/QSPanel;->getMediaHost()Lcom/android/systemui/media/MediaHost;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Lcom/android/systemui/media/MediaHost;->getVisible()Z
 
     move-result v8
 
-    iget-object v9, p0, Lcom/android/systemui/qs/QSFragment;->mHeader:Lcom/android/systemui/qs/QuickStatusBarHeader;
+    if-eqz v8, :cond_9
 
-    invoke-virtual {v9}, Landroid/widget/RelativeLayout;->getBottom()I
+    if-eqz v9, :cond_9
+
+    iget-object v8, p0, Lcom/android/systemui/qs/QSFragment;->mQSPanel:Lcom/android/systemui/qs/QSPanel;
+
+    invoke-virtual {v8}, Lcom/android/systemui/qs/QSPanel;->getMediaHost()Lcom/android/systemui/media/MediaHost;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Lcom/android/systemui/media/MediaHost;->getHostView()Lcom/android/systemui/util/animation/UniqueObjectHostView;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Landroid/widget/FrameLayout;->getMeasuredHeight()I
+
+    move-result v8
+
+    goto :goto_7
+
+    :cond_9
+    move v8, v4
+
+    :goto_7
+    iget-object v9, p0, Lcom/android/systemui/qs/QSFragment;->mQSPanelScrollView:Lcom/android/systemui/qs/NonInterceptingScrollView;
+
+    invoke-virtual {v9}, Landroid/widget/ScrollView;->getBottom()I
 
     move-result v9
 
-    sub-int/2addr v8, v9
+    iget-object v11, p0, Lcom/android/systemui/qs/QSFragment;->mHeader:Lcom/android/systemui/qs/QuickStatusBarHeader;
 
-    iget-object v9, p0, Lcom/android/systemui/qs/QSFragment;->mHeader:Lcom/android/systemui/qs/QuickStatusBarHeader;
+    invoke-virtual {v11}, Landroid/widget/RelativeLayout;->getBottom()I
 
-    invoke-virtual {v9}, Landroid/widget/RelativeLayout;->getPaddingBottom()I
+    move-result v11
 
-    move-result v9
+    sub-int/2addr v9, v11
 
-    add-int/2addr v8, v9
+    iget-object v11, p0, Lcom/android/systemui/qs/QSFragment;->mHeader:Lcom/android/systemui/qs/QuickStatusBarHeader;
 
-    sub-int/2addr v8, v7
+    invoke-virtual {v11}, Landroid/widget/RelativeLayout;->getPaddingBottom()I
 
-    int-to-float v7, v8
+    move-result v11
+
+    add-int/2addr v9, v11
+
+    sub-int/2addr v9, v7
+
+    sub-int/2addr v8, v10
+
+    sub-int/2addr v9, v8
+
+    int-to-float v7, v9
 
     mul-float/2addr v1, v7
 
@@ -1964,16 +2119,16 @@
 
     iget-object v7, p0, Lcom/android/systemui/qs/QSFragment;->mFooter:Lcom/android/systemui/qs/QSFooter;
 
-    if-eqz v2, :cond_7
+    if-eqz v2, :cond_a
 
     move v2, v0
 
-    goto :goto_4
+    goto :goto_8
 
-    :cond_7
+    :cond_a
     move v2, p1
 
-    :goto_4
+    :goto_8
     invoke-interface {v7, v2}, Lcom/android/systemui/qs/QSFooter;->setExpansion(F)V
 
     iget-object v2, p0, Lcom/android/systemui/qs/QSFragment;->mQSPanel:Lcom/android/systemui/qs/QSPanel;
@@ -1996,13 +2151,13 @@
 
     invoke-virtual {v2, v1}, Landroid/widget/ScrollView;->setTranslationY(F)V
 
-    if-eqz v6, :cond_8
+    if-eqz v6, :cond_b
 
     iget-object v1, p0, Lcom/android/systemui/qs/QSFragment;->mQSPanelScrollView:Lcom/android/systemui/qs/NonInterceptingScrollView;
 
     invoke-virtual {v1, v4}, Landroid/widget/ScrollView;->setScrollY(I)V
 
-    :cond_8
+    :cond_b
     iget-object v1, p0, Lcom/android/systemui/qs/QSFragment;->mQSDetail:Lcom/android/systemui/qs/QSDetail;
 
     invoke-virtual {v1, p2}, Lcom/android/systemui/qs/QSDetail;->setFullyExpanded(Z)V
@@ -2011,21 +2166,21 @@
 
     cmpg-float v2, v5, p1
 
-    if-gez v2, :cond_9
+    if-gez v2, :cond_c
 
     cmpg-float v0, p1, v0
 
-    if-gez v0, :cond_9
+    if-gez v0, :cond_c
 
-    goto :goto_5
+    goto :goto_9
 
-    :cond_9
+    :cond_c
     move v3, v4
 
-    :goto_5
+    :goto_9
     invoke-virtual {v1, v3}, Lcom/android/systemui/qs/QSPanel;->setIsExpanding(Z)V
 
-    if-nez p2, :cond_a
+    if-nez p2, :cond_d
 
     iget-object p2, p0, Lcom/android/systemui/qs/QSFragment;->mQsBounds:Landroid/graphics/Rect;
 
@@ -2061,16 +2216,16 @@
 
     iput v0, p2, Landroid/graphics/Rect;->bottom:I
 
-    :cond_a
+    :cond_d
     invoke-direct {p0}, Lcom/android/systemui/qs/QSFragment;->updateQsBounds()V
 
     iget-object p2, p0, Lcom/android/systemui/qs/QSFragment;->mQSAnimator:Lcom/android/systemui/qs/QSAnimator;
 
-    if-eqz p2, :cond_b
+    if-eqz p2, :cond_e
 
     invoke-virtual {p2, p1}, Lcom/android/systemui/qs/QSAnimator;->setPosition(F)V
 
-    :cond_b
+    :cond_e
     invoke-direct {p0}, Lcom/android/systemui/qs/QSFragment;->updateMediaPositions()V
 
     return-void

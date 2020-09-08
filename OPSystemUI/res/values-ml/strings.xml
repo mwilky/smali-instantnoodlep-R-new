@@ -39,6 +39,11 @@
     <string name="abc_slice_updated">%1$s അപ്‌ഡേറ്റ് ചെയ്‌തു</string>
     <string name="abc_slices_permission_request">%2$s സ്ലൈസുകൾ കാണിക്കാൻ %1$s താൽപ്പര്യപ്പെടുന്നു</string>
     <string name="abc_toolbar_collapse_description">ചുരുക്കുക</string>
+    <string name="about_action_bar_title">വിവരം</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">സ്വകാര്യതാ നയം</string>
+    <string name="about_release_note_title">ലോഗ് അപ്‍ഡേറ്റ് ചെയ്യുക:</string>
+    <string name="about_terms_service">സേവന നിബന്ധനകൾ</string>
     <string name="accessibility_accessibility_button">ഉപയോഗസഹായി</string>
     <string name="accessibility_action_divider_bottom_full">താഴെ പൂർണ്ണ സ്ക്രീൻ</string>
     <string name="accessibility_action_divider_left_30">ഇടത് 30%</string>
@@ -267,7 +272,7 @@
     <string name="accessibility_wimax_signal_full">WiMAX മികച്ച സിഗ്‌നൽ.</string>
     <string name="accessibility_wimax_three_bars">WiMAX മൂന്ന് ബാറുകൾ.</string>
     <string name="accessibility_wimax_two_bars">WiMAX രണ്ട് ബാറുകൾ.</string>
-    <string name="accessibility_work_life_balance_mode">വർക്ക് ലൈഫ് ബാലൻസ്</string>
+    <string name="accessibility_work_life_balance_mode">Work Life Balance</string>
     <string name="accessibility_work_life_balance_mode_off">വർക്ക് ലൈഫ് ബാലൻസ് മോഡ് ഓഫുചെയ്‌തു.</string>
     <string name="accessibility_work_life_balance_mode_on">വർക്ക് ലൈഫ് ബാലൻസ് മോഡ് ഓണാക്കി.</string>
     <string name="accessibility_zero_bars">ബാറുകളൊന്നുമില്ല.</string>
@@ -598,6 +603,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="controls_favorite_other_zone_header">മറ്റുള്ളവ</string>
     <string name="controls_favorite_rearrange">നിയന്ത്രണങ്ങൾ പുനഃക്രമീകരിക്കാൻ അമർത്തിപ്പിടിച്ച് വലിച്ചിടുക</string>
     <string name="controls_favorite_removed">എല്ലാ നിയന്ത്രണങ്ങളും നീക്കം ചെയ്തു</string>
+    <string name="controls_favorite_see_other_apps">മറ്റ് ആപ്പുകൾ കാണുക</string>
     <string name="controls_favorite_subtitle">പവർ മെനുവിൽ നിന്ന് ആക്സസ് ചെയ്യേണ്ട നിയന്ത്രണങ്ങൾ തിരഞ്ഞെടുക്കുക</string>
     <string name="controls_favorite_toast_no_changes">മാറ്റങ്ങൾ സംരക്ഷിച്ചിട്ടില്ല</string>
     <string name="controls_in_progress">പുരോഗതിയിലാണ്</string>
@@ -696,8 +702,8 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="disable_carrier_button_text">eSIM പ്രവർത്തനരഹിതമാക്കുക</string>
     <string name="disable_overlays">HW ഓവർലേ നിഷ്ക്രിയമാക്കൂ</string>
     <string name="disable_overlays_summary">സ്‌ക്രീൻ കമ്പോസിറ്റ് ചെയ്യലിനായി GPU ഉപയോഗിക്കൂ</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">വിശദാംശങ്ങള്‍ക്ക് നിങ്ങളുടെ അഡ്മിനെ ബന്ധപ്പെടുക</string>
+    <string name="disable_tether_notification_title">ടെതറിംഗ് അസാദ്ധ്യമാക്കി</string>
     <string name="disable_vpn">VPN പ്രവർത്തനരഹിതമാക്കുക</string>
     <string name="disabled">പ്രവർത്തനരഹിതമാക്കി</string>
     <string name="disabled_by_admin">അഡ്‌മിൻ പ്രവർത്തനരഹിതമാക്കി</string>
@@ -705,6 +711,8 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="disconnect_vpn">VPN വിച്‌ഛേദിക്കുക</string>
     <string name="dnd_is_off">"'ശല്യപ്പെടുത്തരുത്' ഓഫാണ്"</string>
     <string name="dnd_suppressing_shade_text">"'ശല്യപ്പെടുത്തരുത്' വഴി അറിയിപ്പുകൾ താൽക്കാലികമായി നിർത്തി"</string>
+    <string name="do_disclosure_generic">ഈ ഉപകരണം നിങ്ങളുടെ സ്ഥാപനത്തിന്റേതാണ്</string>
+    <string name="do_disclosure_with_name">ഈ ഉപകരണം %s എന്ന സ്ഥാപനത്തിന്റേതാണ്</string>
     <string name="do_not_silence">നിശബ്ദമാക്കരുത്</string>
     <string name="do_not_silence_block">നിശബ്ദമാക്കുകയോ ബ്ലോക്കുചെയ്യുകയോ അരുത്</string>
     <string name="dock_alignment_not_charging">വയർലെസായി ചാർജ് ചെയ്യാൻ ഫോണിന്റെ സ്ഥാനം പുനഃക്രമീകരിക്കുക</string>
@@ -715,6 +723,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="drag_to_rearrange_tiles">ടൈലുകൾ പുനഃക്രമീകരിക്കാൻ അമർത്തിപ്പിടിച്ച് വലിച്ചിടുക</string>
     <string name="drag_to_remove_disabled">നിങ്ങൾക്ക് ചുരുങ്ങിയത് %1$d ടൈലുകളെങ്കിലും വേണം</string>
     <string name="drag_to_remove_tiles">നീക്കംചെയ്യുന്നതിന് ഇവിടെ വലിച്ചിടുക</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">പുനക്രമീകരിക്കാൻ ടൈലുകൾ ഇഴയ്ക്കുക. കാണിക്കാനോ മറയ്ക്കാനോ ആയി ടാപ്പുചെയ്യുക.</string>
     <string name="empty_shade_text">അറിയിപ്പുകൾ ഒന്നുമില്ല</string>
     <string name="enable_adb">USB ഡീബഗ്ഗിംഗ്</string>
@@ -1090,6 +1099,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="left_nav_bar_button_type">അധിക ഇടത് ബട്ടൺ തരം</string>
     <string name="legacy_vpn_name">VPN</string>
     <string name="loading_injected_setting_summary">ലോഡ് ചെയ്യുന്നു…</string>
+    <string name="loading_text">ലോഡുചെയ്യുന്നു...</string>
     <string name="local_backup_password_summary_change">ഡെസ്‌ക്‌ടോപ്പ് പൂർണ്ണ ബാക്കപ്പുകൾക്കായി പാസ്‌വേഡുകൾ മാറ്റാനോ നീക്കംചെയ്യാനോ ടാപ്പുചെയ്യുക</string>
     <string name="local_backup_password_summary_none">ഡെസ്‌ക്‌ടോപ്പ് പൂർണ്ണ ബാക്കപ്പുകൾ നിലവിൽ പരിരക്ഷിച്ചിട്ടില്ല</string>
     <string name="local_backup_password_title">ഡെ‌സ്‌ക്ടോപ്പ് ബാക്കപ്പ് പാസ്‌വേഡ്</string>
@@ -1112,7 +1122,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="manage_notifications_history_text">ചരിത്രം</string>
     <string name="manage_notifications_text">മാനേജ് ചെയ്യുക</string>
     <string name="managed_user_title">എല്ലാ ഔദ്യോഗിക ആപ്‌സും</string>
-    <string name="maxxaudio_disable">അപ്രാപ്തമാക്കുക</string>
+    <string name="maxxaudio_disable">അസാദ്ധ്യമാക്കുക</string>
     <string name="maxxaudio_enable">Habilita</string>
     <string name="media_category">മീഡിയ</string>
     <string name="media_projection_action_text">ഇപ്പോൾ ആരംഭിക്കുക</string>
@@ -1124,7 +1134,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="media_seamless_remote_device">ഉപകരണം</string>
     <string name="media_transfer_this_device_name">ഫോൺ സ്‌പീക്കർ</string>
     <string name="media_transfer_wired_device_name">വയർ മുഖേന ബന്ധിപ്പിച്ച ഓഡിയോ ഉപകരണം</string>
-    <string name="media_transfer_wired_usb_device_name">വയർ മുഖേന ബന്ധിപ്പിച്ച ഹെഡ്ഫോൺ</string>
+    <string name="media_transfer_wired_usb_device_name">വയേർഡ് ഹെഡ്ഫോൺ</string>
     <string name="menu_ime">കീബോർഡ് സ്വിച്ചർ</string>
     <string name="mhs_app">My Verizon തുറക്കുക</string>
     <string name="mhs_call_back_error">ഡാറ്റ കണക്ഷൻ ലഭ്യമല്ല.</string>
@@ -1174,8 +1184,18 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="monitoring_description_do_learn_more_separator">" 5"</string>
     <string name="monitoring_description_managed_profile_ca_certificate">നിങ്ങളുടെ ഔദ്യോഗിക പ്രൊഫൈലിൽ നിങ്ങളുടെ സ്ഥാപനമൊരു സർട്ടിഫിക്കറ്റ് അതോറിറ്റി ഇൻസ്റ്റാൾ ചെയ്തിരിക്കുന്നു. നിങ്ങളുടെ സുരക്ഷിത നെറ്റ്‌വർക്ക് ട്രാഫിക്ക് നിരീക്ഷിക്കപ്പെടുകയോ പരിഷ്കരിക്കപ്പെടുയോ ചെയ്തേക്കാം.</string>
     <string name="monitoring_description_managed_profile_named_vpn">%1$s ആപ്പിലേക്ക് നിങ്ങളുടെ ഔദ്യോഗിക പ്രൊഫൈൽ കണക്റ്റുചെയ്‌തിരിക്കുന്നു, ഇമെയിലുകൾ, ആപ്‌സ്, വെബ്‌സൈറ്റുകൾ എന്നിവ ഉൾപ്പെടെ നിങ്ങളുടെ നെറ്റ്‌വർക്ക് ആക്റ്റിവിറ്റി നിരീക്ഷിക്കാൻ ഈ ആപ്പിന് കഴിയും.</string>
+    <string name="monitoring_description_management">"ഈ ഉപകരണം നിങ്ങളുടെ സ്ഥാപനത്തിന്റേതാണ്.
+
+ക്രമീകരണം, കോർപ്പറേറ്റ് ആക്‌സസ്, ആപ്പുകൾ, നിങ്ങളുടെ ഉപകരണവുമായി ബന്ധപ്പെട്ട ഡാറ്റ, ഉപകരണത്തിന്റെ ലൊക്കേഷൻ ‌വിവരങ്ങൾ എന്നിവ നിരീക്ഷിക്കാനും മാനേജ് ചെയ്യാനും നിങ്ങളുടെ ഐടി അഡ്‌മിന് കഴിയും.
+
+കൂടുതൽ വിവരങ്ങൾക്ക് നിങ്ങളുടെ ഐടി അഡ്‌മിനെ ബന്ധപ്പെടുക."</string>
     <string name="monitoring_description_management_ca_certificate">ഈ ഉപകരണത്തിൽ നിങ്ങളുടെ സ്ഥാപനമൊരു സർട്ടിഫിക്കറ്റ് അതോറിറ്റി ഇൻസ്റ്റാൾ ചെയ്തിരിക്കുന്നു. നിങ്ങളുടെ സുരക്ഷിത നെറ്റ്‌വർക്ക് ട്രാഫിക്ക് നിരീക്ഷിക്കപ്പെടുകയോ പരിഷ്കരിക്കപ്പെടുയോ ചെയ്തേക്കാം.</string>
     <string name="monitoring_description_management_network_logging">നിങ്ങളുടെ അഡ്‌മിൻ, നെറ്റ്‌വർക്ക് ലോഗിംഗ് ഓണാക്കിയിട്ടുണ്ട്, ഇതിന് നിങ്ങളുടെ ഉപകരണത്തിലെ ട്രാഫിക്ക് നിരീക്ഷിക്കാൻ കഴിയും.</string>
+    <string name="monitoring_description_named_management">"ഈ ഉപകരണം %1$sഎന്ന സ്ഥാപനത്തിന്റേതാണ്.
+
+ക്രമീകരണം, കോർപ്പറേറ്റ് ആക്‌സസ്, ആപ്പുകൾ, നിങ്ങളുടെ ഉപകരണവുമായി ബന്ധപ്പെട്ട ഡാറ്റ, ഉപകരണത്തിന്റെ ലൊക്കേഷൻ ‌വിവരങ്ങൾ എന്നിവ നിരീക്ഷിക്കാനും മാനേജ് ചെയ്യാനും നിങ്ങളുടെ ഐടി അഡ്‌മിന് കഴിയും.
+
+കൂടുതൽ വിവരങ്ങൾക്ക് നിങ്ങളുടെ ഐടി അഡ്‌മിനെ ബന്ധപ്പെടുക."</string>
     <string name="monitoring_description_named_vpn">നിങ്ങൾ %1$s എന്ന ആപ്പിലേക്ക് കണക്റ്റുചെയ്‌തിരിക്കുന്നു, ഇമെയിലുകൾ, ആപ്പുകൾ, വെബ്‌സൈറ്റുകൾ എന്നിവ ഉൾപ്പെടെ നിങ്ങളുടെ നെറ്റ്‌വർക്ക് ആക്റ്റിവിറ്റി നിരീക്ഷിക്കാൻ ഈ ആപ്പിന് കഴിയും.</string>
     <string name="monitoring_description_network_logging">"നിങ്ങളുടെ ഉപകരണത്തിലെ ട്രാഫിക്ക് നിരീക്ഷിക്കുന്ന നെറ്റ്‌വർക്ക് ലോഗിംഗ് അഡ്‌മിൻ ഓണാക്കിയിട്ടുണ്ട്.
 
@@ -1311,8 +1331,14 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_threekey_navigation_sound">എല്ലാ ശബ്ദവും അനുവദനീയമാണ്</string>
     <string name="oneplus_threekey_navigation_turned_on_here">മുകളിലുള്ള ടോഗിൾ വഴി അത് ഓണാക്കാം</string>
     <string name="oneplus_threekey_navigation_vibration">വൈബ്രേഷൻ മാത്രം</string>
-    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> തുറക്കുക</string>
-    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> തുറക്കുന്നു</string>
+    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>ലോക്ക് മാറ്റുക</string>
+    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>ലോക്ക് മാറ്റുന്നു</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">ജോടിയാക്കുന്നു...</string>
     <string name="op_earphone_connected_fail">ജോടിയാക്കുന്നതിൽ പരാജയപ്പെട്ടു. ഹെഡ്‌സെറ്റ്, Bluetooth സ്റ്റാറ്റസ് നിങ്ങൾക്ക് പരിശോധിക്കാം.</string>
     <string name="op_earphone_connected_success">ജോടിയാക്കി. കൂടുതൽ ക്രമീകരിക്കാൻ ടാപ്പുചെയ്യുക.</string>
@@ -1342,9 +1368,10 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="op_notification_channel_summary_low">ശബ്ദമോ വൈബ്രേഷനോ ഇല്ലാത്ത പ്രാധാന്യം കുറഞ്ഞ അറിയിപ്പുകൾ.</string>
     <string name="op_notification_section_header_gentle">മറ്റ് അറിയിപ്പുകള്‍</string>
     <string name="op_notification_silence_title">മറ്റുള്ളവ</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">ഡാർക്ക് മോഡ്</string>
     <string name="op_qs_data_usage_used">%1$s:%2$s%3$s ഉപയോഗിച്ചു</string>
-    <string name="op_quick_settings_night_display_label">നൈറ്റ് മോഡ്</string>
+    <string name="op_quick_settings_night_display_label">കാഴ്ചാ സുഖം</string>
     <string name="op_quick_settings_night_display_summary_off">നൈറ്റ് മോഡ് ഓഫാണ്, ഓണ്‍ ചെയ്യാന്‍ ടാപ് ചെയ്യുക</string>
     <string name="op_quick_settings_night_display_summary_on">നൈറ്റ് മോഡ് ഓണാണ്, ഓഫ് ചെയ്യാന്‍ ടാപ് ചെയ്യുക</string>
     <string name="op_read_mode2_dialog_black">മോണോ ഇഫക്റ്റ്</string>
@@ -1492,7 +1519,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="profile_owned_footer">പ്രൊഫൈൽ നിരീക്ഷിക്കപ്പെടാം</string>
     <string name="qr_bubble_hint">മെസേജുകൾ വായിക്കാനും അവയ്‌ക്ക് മറുപടി നൽകാനും ബബിളിൽ ടാപ്പുചെയ്യുക</string>
     <string name="qr_portrait_hint">പോര്‍ട്രെയിറ്റിൽ ദ്രുത മറുപടി ഓഫാക്കിയിരിക്കുന്നു</string>
-    <string name="qr_portrait_turn_on">ഓണ്‍ ചെയ്യുക</string>
+    <string name="qr_portrait_turn_on">ഓണാക്കുക</string>
     <string name="qs_dnd_keep">Keep</string>
     <string name="qs_dnd_prompt_app">"ഒരു ആപ്പ് (%s) 'ശല്യപ്പെടുത്തരുത്' ഓണാക്കിയിരിക്കുന്നു."</string>
     <string name="qs_dnd_prompt_auto_rule">"സ്വയമേവയുള്ള ഒരു നയം (%s) 'ശല്യപ്പെടുത്തരുത്' ഓണാക്കിയിരിക്കുന്നു."</string>
@@ -1556,8 +1583,20 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="quick_settings_data_switch_toast_1">നിലവില്‍ ഒരു SIM കാര്‍ഡ് മാത്രം ഇട്ടിരിക്കുന്നു</string>
     <string name="quick_settings_default_data_card">ഡിഫോള്‍ട്ട് ഡാറ്റ കാര്‍ഡ്</string>
     <string name="quick_settings_disclosure_managed_profile_monitoring">നിങ്ങളുടെ ഔദ്യോഗിക പ്രൊഫൈലിലെ നെറ്റ്‌വർക്ക് ട്രാഫിക്ക് നിരീക്ഷിക്കാൻ നിങ്ങളുടെ സ്ഥാപനത്തിന് കഴിഞ്ഞേക്കാം</string>
+    <string name="quick_settings_disclosure_managed_profile_named_vpn">%1$s എന്നതിലേക്ക് നിങ്ങളുടെ ഔദ്യോഗിക പ്രൊഫൈൽ കണക്റ്റ് ചെയ്‌തിരിക്കുന്നു</string>
+    <string name="quick_settings_disclosure_management">ഈ ഉപകരണം നിങ്ങളുടെ സ്ഥാപനത്തിന്റേതാണ്</string>
+    <string name="quick_settings_disclosure_management_monitoring">ഈ ഉപകരണം നിങ്ങളുടെ സ്ഥാപനത്തിന്റെ ഉടമസ്ഥതയിലായതിനാൽ നെറ്റ്‌വർക്ക് ട്രാഫിക്ക് നിരീക്ഷിച്ചേക്കാം</string>
+    <string name="quick_settings_disclosure_management_named_vpn">ഈ ഉപകരണം നിങ്ങളുടെ സ്ഥാപനത്തിന്റേതാണ്, കൂടാതെ %1$s എന്നതിലേക്ക് കണക്റ്റ് ചെയ്‌തിരിക്കുന്നു</string>
+    <string name="quick_settings_disclosure_management_vpns">ഈ ഉപകരണം നിങ്ങളുടെ സ്ഥാപനത്തിന്റേതാണ്, കൂടാതെ VPN-കളിലേക്ക് കണക്റ്റ് ചെയ്‌തിരിക്കുന്നു</string>
     <string name="quick_settings_disclosure_monitoring">നെറ്റ്‌വർക്ക് നിരീക്ഷിക്കപ്പെടാം</string>
     <string name="quick_settings_disclosure_named_managed_profile_monitoring">നിങ്ങളുടെ ഔദ്യോഗിക പ്രൊഫൈലിലെ നെറ്റ്‌വർക്ക് ട്രാഫിക്ക് %1$s നിരീക്ഷിച്ചേക്കാം</string>
+    <string name="quick_settings_disclosure_named_management">ഈ ഉപകരണം %1$s എന്ന സ്ഥാപനത്തിന്റേതാണ്</string>
+    <string name="quick_settings_disclosure_named_management_monitoring">ഈ ഉപകരണം %1$s എന്ന സ്ഥാപനത്തിന്റെ ഉടമസ്ഥതയിലായതിനാൽ നെറ്റ്‌വർക്ക് ട്രാഫിക്ക് നിരീക്ഷിച്ചേക്കാം</string>
+    <string name="quick_settings_disclosure_named_management_named_vpn">ഈ ഉപകരണം %1$s എന്ന സ്ഥാപനത്തിന്റേതാണ്, കൂടാതെ %2$s എന്നതിലേക്ക് കണക്റ്റ് ചെയ്തിരിക്കുന്നു</string>
+    <string name="quick_settings_disclosure_named_management_vpns">ഈ ഉപകരണം %1$s എന്ന സ്ഥാപനത്തിന്റേതാണ്, കൂടാതെ VPN-കളിലേക്ക് കണക്റ്റ് ചെയ്‌തിരിക്കുന്നു</string>
+    <string name="quick_settings_disclosure_named_vpn">ഈ ഉപകരണം %1$s എന്നതിലേക്ക് കണക്റ്റ് ചെയ്തിരിക്കുന്നു</string>
+    <string name="quick_settings_disclosure_personal_profile_named_vpn">നിങ്ങളുടെ വ്യക്തിപരമായ പ്രൊഫൈൽ %1$s ആപ്പിലേക്ക് കണക്റ്റ് ചെയ്‌തിരിക്കുന്നു</string>
+    <string name="quick_settings_disclosure_vpns">ഈ ഉപകരണം VPN-കളിലേക്ക് കണക്റ്റ് ചെയ്തിരിക്കുന്നു</string>
     <string name="quick_settings_dnd_alarms_label">അലാറങ്ങൾ മാത്രം</string>
     <string name="quick_settings_dnd_label">ശല്യപ്പെടുത്തരുത്</string>
     <string name="quick_settings_dnd_none_label">പൂർണ്ണ നിശബ്‌ദത</string>
@@ -1847,7 +1886,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="tethered_notification_hybrid_sharing_mobile">മൊബൈൽ ഡാറ്റ പങ്കിടുന്നു, ക്രമീകരണങ്ങളിലേയ്‌ക്ക് പോകുന്നതിന് ക്ലിക്ക് ചെയ്യുക</string>
     <string name="tethered_notification_hybrid_sharing_none">പങ്കിടാൻ നെറ്റ്‌വർക്കുകളൊന്നും ലഭ്യമല്ല, ക്രമീകരണങ്ങളിലേയ്‌ക്ക് പോകാൻ ക്ലിക്ക് ചെയ്യുക</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Wi-Fi പങ്കിടുന്നു, ക്രമീകരണങ്ങളിലേയ്‌ക്ക് പോകുന്നതിന് ക്ലിക്ക് ചെയ്യുക</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">സജ്ജമാക്കാന്‍ തട്ടുക.</string>
     <string name="tethered_notification_multi_device_message">%1$s ബന്ധിപ്പിച്ച ഉപകരണങ്ങള്‍</string>
     <string name="tethered_notification_multi_tether_title">ടെതറിംഗ്, മൊബൈൽ ഹോട്ട്സ്പോട്ട് എന്നിവ സജീവമാണ്</string>
     <string name="tethered_notification_no_device_message">ബന്ധിപ്പിച്ച ഉപകരണം ഇല്ല</string>
@@ -2080,7 +2119,17 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="wifi_verbose_logging">വൈഫൈ വെർബോസ് ലോഗിംഗ് പ്രവർത്തനക്ഷമമാക്കുക</string>
     <string name="wifi_verbose_logging_summary">വൈഫൈ പിക്കറിൽ ഓരോ SSID RSSI പ്രകാരം കാണിക്കാൻ വൈഫൈ ലോഗിംഗ് നില വർദ്ധിപ്പിക്കുക</string>
     <string name="window_animation_scale_title">വിൻഡോ ആനിമേഷൻ സ്‌കെയിൽ</string>
-    <string name="work_life_balance_mode">Work-Life Balance</string>
+    <string name="wlb_break_mode_active">സജീവം</string>
+    <string name="wlb_break_mode_active_text">%1$s മോഡ് · %2$s</string>
+    <string name="wlb_break_mode_on_break">ഇടവേളയിൽ</string>
+    <string name="wlb_break_mode_resume">പുനരാരംഭിക്കുക</string>
+    <string name="wlb_break_mode_take_break">ഒരു അവധിയെടുക്കുക</string>
+    <string name="wlb_qs_detail_break_mode">ബ്രേക്ക് മോഡ്</string>
+    <string name="wlb_qs_detail_break_mode_desc">30 മിനിറ്റിന് ശേഷം മുമ്പത്തെ മോഡിലേക്ക് സ്വയമേവ പുനരാരംഭിക്കുന്നു</string>
+    <string name="wlb_qs_detail_life_mode">ജീവിത മോഡ്</string>
+    <string name="wlb_qs_detail_more_setting">കൂടുതൽ ക്രമീകരണങ്ങൾ</string>
+    <string name="wlb_qs_detail_work_mode">ജോലി മോഡ്</string>
+    <string name="work_life_balance_mode">Work Life Balance</string>
     <string name="zen_alarm_warning">%1$s-നുള്ള നിങ്ങളുടെ അടുത്ത അലാറം കേൾക്കില്ല</string>
     <string name="zen_alarm_warning_indef">നിങ്ങൾ ഇത് ഓഫാക്കുന്നില്ലെങ്കിൽ %1$s-നുള്ള അടുത്ത അലാറം കേൾക്കില്ല</string>
     <string name="zen_alarms_introduction">അലാറങ്ങളിൽ നിന്നുള്ള ശബ്‌ദങ്ങളും വൈബ്രേഷനുകളുമൊഴികെ മറ്റൊന്നും നിങ്ങളെ ശല്യപ്പെടുത്തുകയില്ല. സംഗീതം, വീഡിയോകൾ, ഗെയിമുകൾ എന്നിവയുൾപ്പെടെ പ്ലേ ചെയ്യുന്നതെന്തും നിങ്ങൾക്ക് ‌തുടർന്നും കേൾക്കാൻ കഴിയും.</string>

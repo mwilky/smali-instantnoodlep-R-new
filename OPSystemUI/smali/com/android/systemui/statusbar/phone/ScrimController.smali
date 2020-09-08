@@ -228,7 +228,7 @@
     goto :goto_0
 
     :cond_0
-    const p1, 0x3f59999a    # 0.85f
+    const p1, 0x3f266666    # 0.65f
 
     :goto_0
     iput p1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mDefaultScrimAlpha:F
@@ -1345,16 +1345,37 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/animation/ValueAnimator;->setCurrentPlayTime(J)V
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_0
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mState:Lcom/android/systemui/statusbar/phone/ScrimState;
+
+    sget-object v2, Lcom/android/systemui/statusbar/phone/ScrimState;->UNLOCKED:Lcom/android/systemui/statusbar/phone/ScrimState;
+
+    if-eq v1, v2, :cond_2
+
+    sget-object v2, Lcom/android/systemui/statusbar/phone/ScrimState;->BUBBLE_EXPANDED:Lcom/android/systemui/statusbar/phone/ScrimState;
+
+    if-ne v1, v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
     invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/phone/ScrimController;->getCurrentScrimTint(Landroid/view/View;)I
 
     move-result v1
 
     invoke-direct {p0, p1, v0, v1}, Lcom/android/systemui/statusbar/phone/ScrimController;->updateScrimColor(Landroid/view/View;FI)V
 
+    goto :goto_1
+
+    :cond_2
     :goto_0
+    const/high16 v1, -0x1000000
+
+    invoke-direct {p0, p1, v0, v1}, Lcom/android/systemui/statusbar/phone/ScrimController;->updateScrimColor(Landroid/view/View;FI)V
+
+    :goto_1
     return-void
 .end method
 
@@ -1666,7 +1687,7 @@
     :goto_1
     if-nez v1, :cond_7
 
-    if-eqz v2, :cond_9
+    if-eqz v2, :cond_b
 
     :cond_7
     iget-boolean v1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mAnimateChange:Z
@@ -1675,17 +1696,37 @@
 
     invoke-direct {p0, p1, v0}, Lcom/android/systemui/statusbar/phone/ScrimController;->startScrimAnimation(Landroid/view/View;F)V
 
-    goto :goto_2
+    goto :goto_4
 
     :cond_8
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mState:Lcom/android/systemui/statusbar/phone/ScrimState;
+
+    sget-object v1, Lcom/android/systemui/statusbar/phone/ScrimState;->UNLOCKED:Lcom/android/systemui/statusbar/phone/ScrimState;
+
+    if-eq v0, v1, :cond_a
+
+    sget-object v1, Lcom/android/systemui/statusbar/phone/ScrimState;->BUBBLE_EXPANDED:Lcom/android/systemui/statusbar/phone/ScrimState;
+
+    if-ne v0, v1, :cond_9
+
+    goto :goto_2
+
+    :cond_9
     invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/phone/ScrimController;->getCurrentScrimTint(Landroid/view/View;)I
 
     move-result v0
 
+    goto :goto_3
+
+    :cond_a
+    :goto_2
+    const/high16 v0, -0x1000000
+
+    :goto_3
     invoke-direct {p0, p1, p2, v0}, Lcom/android/systemui/statusbar/phone/ScrimController;->updateScrimColor(Landroid/view/View;FI)V
 
-    :cond_9
-    :goto_2
+    :cond_b
+    :goto_4
     return-void
 .end method
 
@@ -2012,9 +2053,23 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget p0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mExpansionFraction:F
+    iget p1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mExpansionFraction:F
 
-    invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(F)V
+    invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(F)V
+
+    const-string p1, " BackgroundColor:"
+
+    invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/ScrimController;->getBackgroundColor()I
+
+    move-result p0
+
+    invoke-static {p0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -2029,6 +2084,50 @@
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/ScrimController;->scheduleUpdate()V
 
     return-void
+.end method
+
+.method public getBackgroundColor()I
+    .locals 3
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mColors:Lcom/android/internal/colorextraction/ColorExtractor$GradientColors;
+
+    invoke-virtual {v0}, Lcom/android/internal/colorextraction/ColorExtractor$GradientColors;->getMainColor()I
+
+    move-result v0
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimBehind:Lcom/android/systemui/statusbar/ScrimView;
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/ScrimView;->getViewAlpha()F
+
+    move-result p0
+
+    invoke-static {v0}, Landroid/graphics/Color;->alpha(I)I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    mul-float/2addr p0, v1
+
+    float-to-int p0, p0
+
+    invoke-static {v0}, Landroid/graphics/Color;->red(I)I
+
+    move-result v1
+
+    invoke-static {v0}, Landroid/graphics/Color;->green(I)I
+
+    move-result v2
+
+    invoke-static {v0}, Landroid/graphics/Color;->blue(I)I
+
+    move-result v0
+
+    invoke-static {p0, v1, v2, v0}, Landroid/graphics/Color;->argb(IIII)I
+
+    move-result p0
+
+    return p0
 .end method
 
 .method public getState()Lcom/android/systemui/statusbar/phone/ScrimState;

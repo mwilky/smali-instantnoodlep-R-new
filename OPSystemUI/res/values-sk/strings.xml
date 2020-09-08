@@ -39,6 +39,11 @@
     <string name="abc_slice_updated">Aktualizované %1$s</string>
     <string name="abc_slices_permission_request">%1$s chce zobrazovať rezy z aplikácie %2$s</string>
     <string name="abc_toolbar_collapse_description">Zbaliť</string>
+    <string name="about_action_bar_title">Informácie</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Ochrana osobných údajov</string>
+    <string name="about_release_note_title">Denník aktualizácie:</string>
+    <string name="about_terms_service">Podmienky služby</string>
     <string name="accessibility_accessibility_button">Dostupnosť</string>
     <string name="accessibility_action_divider_bottom_full">Dolná – na celú obrazovku</string>
     <string name="accessibility_action_divider_left_30">Ľavá – 30 %</string>
@@ -543,7 +548,7 @@ Výber"</string>
     <string name="cached_apps_freezer_device_default">Predvol. nastavenie zariadenia</string>
     <string name="cached_apps_freezer_disabled">Vypnuté</string>
     <string name="cached_apps_freezer_enabled">Zapnuté</string>
-    <string name="cached_apps_freezer_reboot_dialog_text">Táto zmena sa uplatní až po reštartovaní zariadenia. Zariadenie reštartujte alebo zmenu zrušte.</string>
+    <string name="cached_apps_freezer_reboot_dialog_text">Zmena sa prejaví až po reštarte zariadenia. Môžete ho teraz reštartovať alebo akciu zrušiť.</string>
     <string name="camera_hint">Fotoaparát otvoríte prejdením prstom od ikony</string>
     <string name="camera_label">spustiť fotoaparát</string>
     <string name="cancel">Zrušiť</string>
@@ -598,6 +603,7 @@ Výber"</string>
     <string name="controls_favorite_other_zone_header">Iné</string>
     <string name="controls_favorite_rearrange">Polohu každého ovládača môžete zmeniť jeho pridržaním a presunutím</string>
     <string name="controls_favorite_removed">Všetky ovládače boli odstránené</string>
+    <string name="controls_favorite_see_other_apps">Zobraziť ďalšie aplikácie</string>
     <string name="controls_favorite_subtitle">Vyberte si ovládače, ktoré budú prístupné v ponuke vypínača</string>
     <string name="controls_favorite_toast_no_changes">Zmeny neboli uložené</string>
     <string name="controls_in_progress">Prebieha</string>
@@ -696,8 +702,8 @@ Ak ho znovu zapnete, môžu vám byť účtované poplatky za spotrebu dát."</s
     <string name="disable_carrier_button_text">Zakázať eSIM kartu</string>
     <string name="disable_overlays">Zakázať hardvérové prekrytia</string>
     <string name="disable_overlays_summary">Vždy skladať obrazovku grafickým procesorom</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">Viac informácií vám poskytne váš správca</string>
+    <string name="disable_tether_notification_title">Zdieľanie internetu je vypnuté</string>
     <string name="disable_vpn">Deaktivovať VPN</string>
     <string name="disabled">Deaktivované</string>
     <string name="disabled_by_admin">Zakázané správcom</string>
@@ -705,6 +711,8 @@ Ak ho znovu zapnete, môžu vám byť účtované poplatky za spotrebu dát."</s
     <string name="disconnect_vpn">Odpojiť sieť VPN</string>
     <string name="dnd_is_off">Režim bez vyrušení je vypnutý</string>
     <string name="dnd_suppressing_shade_text">Upozornenia sú pozastavené režimom bez vyrušení</string>
+    <string name="do_disclosure_generic">Toto zariadenie patrí vašej organizácii</string>
+    <string name="do_disclosure_with_name">Toto zariadení patrí organizácii %s</string>
     <string name="do_not_silence">Nestíšiť</string>
     <string name="do_not_silence_block">Nestíšiť ani neblokovať</string>
     <string name="dock_alignment_not_charging">Znova vložte telefón, aby sa bezdrôtovo nabil</string>
@@ -715,6 +723,7 @@ Ak ho znovu zapnete, môžu vám byť účtované poplatky za spotrebu dát."</s
     <string name="drag_to_rearrange_tiles">Dlaždice môžete usporiadať pridržaním a presunutím</string>
     <string name="drag_to_remove_disabled">Minimálny počet vyžadovaných dlaždíc: %1$d</string>
     <string name="drag_to_remove_tiles">Presunutím sem odstránite</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">Pretiahnite dlaždice pre zoradenie. Ťuknite pre zobrazenie alebo pre skrytie.</string>
     <string name="empty_shade_text">Žiadne upozornenia</string>
     <string name="enable_adb">Ladenie cez USB</string>
@@ -1090,6 +1099,7 @@ Skúste to znova o %2$d s."</string>
     <string name="left_nav_bar_button_type">Dodatočný typ ľavého tlačidla</string>
     <string name="legacy_vpn_name">VPN</string>
     <string name="loading_injected_setting_summary">Načítava sa…</string>
+    <string name="loading_text">Prebieha načítavanie...</string>
     <string name="local_backup_password_summary_change">Klepnutím zmeníte alebo odstránite heslo pre úplné zálohy do počítača</string>
     <string name="local_backup_password_summary_none">Úplné zálohy v počítači nie sú momentálne chránené</string>
     <string name="local_backup_password_title">Heslo pre zálohy v počítači</string>
@@ -1174,8 +1184,18 @@ Pripojili ste sa k aplikácii %3$s, ktorá môže sledovať vašu osobnú aktiv
     <string name="monitoring_description_do_learn_more_separator">" "</string>
     <string name="monitoring_description_managed_profile_ca_certificate">Organizácia nainštalovala pre váš pracovný profil certifikačnú autoritu. Zabezpečená sieťová premávka môže byť sledovaná či upravená.</string>
     <string name="monitoring_description_managed_profile_named_vpn">Váš pracovný profil je pripojený k aplikácii %1$s, ktorá môže sledovať vašu aktivitu v sieti vrátane správ, aplikácií a webových stránok.</string>
+    <string name="monitoring_description_management">"Toto zariadenie patrí vašej organizácii.
+
+Váš správca IT môže sledovať a spravovať nastavenia, podnikový prístup, aplikácie, údaje spojené s vaším zariadením a informácie o jeho polohe.
+
+. Viac sa dozviete od správcu IT."</string>
     <string name="monitoring_description_management_ca_certificate">Organizácia nainštalovala pre toto zariadenie certifikačnú autoritu. Zabezpečená sieťová premávka môže byť sledovaná či upravená.</string>
     <string name="monitoring_description_management_network_logging">Správca aktivoval zapisovanie do denníka siete, ktoré sleduje premávku na vašom zariadení.</string>
+    <string name="monitoring_description_named_management">"Toto zariadenie patrí organizácii %1$s.
+
+Váš správca IT môže sledovať a spravovať nastavenia, podnikový prístup, aplikácie, údaje spojené s vaším zariadení a informácie o jeho polohe.
+
+Viac sa dozviete od správcu IT."</string>
     <string name="monitoring_description_named_vpn">Pripojili ste sa k aplikácii %1$s, ktorá môže sledovať vašu aktivitu v sieti, vrátane správ, aplikácií a webových stránok.</string>
     <string name="monitoring_description_network_logging">"Správca aktivoval zapisovanie do denníka siete, ktoré sleduje premávku na vašom zariadení.
 
@@ -1313,6 +1333,12 @@ Máte tiež aktívne pripojenie k sieti VPN, ktorá môže sledovať vašu akti
     <string name="oneplus_threekey_navigation_vibration">Len vibrácie</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> odomknúť</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> odomyká</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">Párovanie...</string>
     <string name="op_earphone_connected_fail">Spárovanie sa nepodarilo. Skontrolujte stav náhlavnej súpravy a Bluetooth.</string>
     <string name="op_earphone_connected_success">Spárované. Ťuknutím nastavte ďalšie nastavenia.</string>
@@ -1342,9 +1368,10 @@ Máte tiež aktívne pripojenie k sieti VPN, ktorá môže sledovať vašu akti
     <string name="op_notification_channel_summary_low">Menej dôležité oznámenia bez zvuku alebo vibrácie.</string>
     <string name="op_notification_section_header_gentle">Ostatné oznámenia</string>
     <string name="op_notification_silence_title">Ostatné</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">Tmavý režim</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s využitých</string>
-    <string name="op_quick_settings_night_display_label">Nočný režim</string>
+    <string name="op_quick_settings_night_display_label">Pohodlie pohľadu</string>
     <string name="op_quick_settings_night_display_summary_off">Nočný režim je vypnutý, ťuknutím sa zapne</string>
     <string name="op_quick_settings_night_display_summary_on">Nočný režim je zapnutý, ťuknutím sa vypne</string>
     <string name="op_read_mode2_dialog_black">Mono efekt</string>
@@ -1556,8 +1583,20 @@ Máte tiež aktívne pripojenie k sieti VPN, ktorá môže sledovať vašu akti
     <string name="quick_settings_data_switch_toast_1">Momentálne je vložená len jedna karta SIM</string>
     <string name="quick_settings_default_data_card">Predvolená dátová karta</string>
     <string name="quick_settings_disclosure_managed_profile_monitoring">Organizácia môže sledovať sieťovú premávku vo vašom pracovnom profile</string>
+    <string name="quick_settings_disclosure_managed_profile_named_vpn">Váš pracovný profil je pripojený k sieti %1$s</string>
+    <string name="quick_settings_disclosure_management">Toto zariadenie patrí vašej organizácii</string>
+    <string name="quick_settings_disclosure_management_monitoring">Vaša organizácia spravuje toto zariadenie a môže sledovať sieťovú premávku</string>
+    <string name="quick_settings_disclosure_management_named_vpn">Toto zariadenie patrí vašej organizácii a je pripojené k sieti %1$s</string>
+    <string name="quick_settings_disclosure_management_vpns">Toto zariadenie patrí vašej organizácii a je pripojené k sieťam VPN</string>
     <string name="quick_settings_disclosure_monitoring">Sieť môže byť sledovaná</string>
     <string name="quick_settings_disclosure_named_managed_profile_monitoring">Organizácia %1$s môže sledovať sieťovú premávku vo vašom pracovnom profile</string>
+    <string name="quick_settings_disclosure_named_management">Toto zariadení patrí organizácii %1$s</string>
+    <string name="quick_settings_disclosure_named_management_monitoring">%1$s vlastní toto zariadenie a môže sledovať sieťovú premávku</string>
+    <string name="quick_settings_disclosure_named_management_named_vpn">Toto zariadenie patrí organizácii %1$s a je pripojené k sieti %2$s</string>
+    <string name="quick_settings_disclosure_named_management_vpns">Toto zariadenie patrí organizácii %1$s a je pripojené k sieťam VPN</string>
+    <string name="quick_settings_disclosure_named_vpn">Toto zariadenie je pripojené k sieti %1$s</string>
+    <string name="quick_settings_disclosure_personal_profile_named_vpn">Váš osobný profil je pripojený k sieti %1$s</string>
+    <string name="quick_settings_disclosure_vpns">Toto zariadenie je pripojené k sieťam VPN</string>
     <string name="quick_settings_dnd_alarms_label">Iba budíky</string>
     <string name="quick_settings_dnd_label">Režim bez vyrušení</string>
     <string name="quick_settings_dnd_none_label">Úplné ticho</string>
@@ -1847,7 +1886,7 @@ monitorovaná"</string>
     <string name="tethered_notification_hybrid_sharing_mobile">Zdieľanie mobilných dát, ťuknutím otvorte Nastavenia</string>
     <string name="tethered_notification_hybrid_sharing_none">Žiadna dostupná sieť na zdieľanie, ťuknutím otvorte Nastavenia</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Zdieľanie siete Wi-Fi, ťuknutím otvorte Nastavenia</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">Ťuknutím nastavte.</string>
     <string name="tethered_notification_multi_device_message">%1$s pripojené zariadenia</string>
     <string name="tethered_notification_multi_tether_title">Aktívne zdieľanie a mobilný hotspot</string>
     <string name="tethered_notification_no_device_message">Nie je pripojené žiadne zariadenie</string>
@@ -2080,7 +2119,17 @@ Adresa Wi‑Fi (BSSID)
     <string name="wifi_verbose_logging">Podrobné denníky Wi‑Fi</string>
     <string name="wifi_verbose_logging_summary">Zvýšiť úroveň denníkov Wi‑Fi, zobrazovať podľa SSID RSSI pri výbere siete Wi‑Fi</string>
     <string name="window_animation_scale_title">Mierka animácie okna</string>
-    <string name="work_life_balance_mode">Work-Life Balance</string>
+    <string name="wlb_break_mode_active">Aktívne</string>
+    <string name="wlb_break_mode_active_text">Režim %1$s · %2$s</string>
+    <string name="wlb_break_mode_on_break">Prestávka</string>
+    <string name="wlb_break_mode_resume">Obnoviť</string>
+    <string name="wlb_break_mode_take_break">Dajte si pauzu</string>
+    <string name="wlb_qs_detail_break_mode">Režim prestávky</string>
+    <string name="wlb_qs_detail_break_mode_desc">Automaticky sa vráti na predchádzajúci režim po 30 minútach</string>
+    <string name="wlb_qs_detail_life_mode">Režim súkromia</string>
+    <string name="wlb_qs_detail_more_setting">Ďalšie nastavenia</string>
+    <string name="wlb_qs_detail_work_mode">Pracovný režim</string>
+    <string name="work_life_balance_mode">Rovnováha medzi prácou a súkromím</string>
     <string name="zen_alarm_warning">Váš budík o %1$s sa nespustí</string>
     <string name="zen_alarm_warning_indef">Pokiaľ toto nastavenie nevypnete, váš budík o %1$s sa nespustí</string>
     <string name="zen_alarms_introduction">Nebudú vás vyrušovať zvuky ani vibrácie, iba budíky. Budete naďalej počuť všetko, čo sa rozhodnete prehrať, ako napríklad hudbu, videá a hry.</string>

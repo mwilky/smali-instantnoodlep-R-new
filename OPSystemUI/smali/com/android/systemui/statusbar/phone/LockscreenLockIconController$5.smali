@@ -41,6 +41,48 @@
     return-void
 .end method
 
+.method public onFacelockStateChanged(I)V
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "onFacelockStateChanged, type:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "LockIcon"
+
+    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController$5;->this$0:Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;
+
+    const/4 p1, 0x1
+
+    invoke-static {p0, p1}, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->access$1800(Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;Z)V
+
+    return-void
+.end method
+
+.method public onFinishedGoingToSleep(I)V
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController$5;->this$0:Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->opSetDeviceInteractive(Z)V
+
+    return-void
+.end method
+
 .method public onKeyguardVisibilityChanged(Z)V
     .locals 0
 
@@ -109,6 +151,18 @@
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController$5;->this$0:Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;
 
     invoke-static {p0}, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->access$1200(Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;)V
+
+    return-void
+.end method
+
+.method public onStartedWakingUp()V
+    .locals 1
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController$5;->this$0:Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->opSetDeviceInteractive(Z)V
 
     return-void
 .end method

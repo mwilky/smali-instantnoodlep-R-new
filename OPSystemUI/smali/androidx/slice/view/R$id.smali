@@ -8,18 +8,18 @@
 
 .field public static final action_sent_indicator:I = 0x7f0b0068
 
-.field public static final bottom_divider:I = 0x7f0b0103
+.field public static final bottom_divider:I = 0x7f0b0106
 
-.field public static final icon_frame:I = 0x7f0b02d1
+.field public static final icon_frame:I = 0x7f0b02d6
 
-.field public static final last_updated:I = 0x7f0b033a
+.field public static final last_updated:I = 0x7f0b033f
 
-.field public static final remote_input_progress:I = 0x7f0b0508
+.field public static final remote_input_progress:I = 0x7f0b050b
 
-.field public static final remote_input_send:I = 0x7f0b0509
+.field public static final remote_input_send:I = 0x7f0b050c
 
-.field public static final subcontent:I = 0x7f0b05e6
+.field public static final subcontent:I = 0x7f0b05ea
 
-.field public static final text_see_more:I = 0x7f0b0613
+.field public static final text_see_more:I = 0x7f0b0616
 
-.field public static final text_see_more_count:I = 0x7f0b0614
+.field public static final text_see_more_count:I = 0x7f0b0617

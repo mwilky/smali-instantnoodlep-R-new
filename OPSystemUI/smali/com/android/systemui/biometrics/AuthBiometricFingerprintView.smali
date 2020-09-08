@@ -97,32 +97,14 @@
     return-object p0
 .end method
 
-.method private getFodAnimationSize()F
-    .locals 1
+.method private getFodAnimationSize()I
+    .locals 0
 
-    invoke-static {}, Lcom/oneplus/util/OpUtils;->is2KResolution()Z
+    iget-object p0, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget v0, Lcom/android/systemui/R$dimen;->fp_animation_height_2k:I
-
-    goto :goto_0
-
-    :cond_0
-    sget v0, Lcom/android/systemui/R$dimen;->fp_animation_height_1080p:I
-
-    :goto_0
-    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpFodViewSettings;->getFodAnimViewHeight(Landroid/content/Context;)I
 
     move-result p0
-
-    int-to-float p0, p0
 
     return p0
 .end method
@@ -469,25 +451,9 @@
     return p0
 
     :cond_0
-    invoke-static {}, Lcom/oneplus/util/OpUtils;->is2KResolution()Z
+    iget-object p0, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
 
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    sget v0, Lcom/android/systemui/R$dimen;->op_biometric_icon_normal_width_2k:I
-
-    goto :goto_0
-
-    :cond_1
-    sget v0, Lcom/android/systemui/R$dimen;->op_biometric_icon_normal_width_1080p:I
-
-    :goto_0
-    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpFodViewSettings;->getFodIconSize(Landroid/content/Context;)I
 
     move-result p0
 
@@ -495,7 +461,7 @@
 .end method
 
 .method protected getBottomSpaceHeight(Landroid/util/DisplayMetrics;)I
-    .locals 9
+    .locals 10
 
     invoke-static {}, Lcom/oneplus/util/OpUtils;->isCustomFingerprint()Z
 
@@ -512,9 +478,11 @@
     :cond_0
     iget p1, p1, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    invoke-direct {p0}, Lcom/android/systemui/biometrics/AuthBiometricFingerprintView;->getFodAnimationSize()F
+    invoke-direct {p0}, Lcom/android/systemui/biometrics/AuthBiometricFingerprintView;->getFodAnimationSize()I
 
     move-result v0
+
+    int-to-float v0, v0
 
     invoke-virtual {p0}, Lcom/android/systemui/biometrics/AuthBiometricFingerprintView;->getBiometricIconSize()I
 
@@ -522,23 +490,21 @@
 
     int-to-float v1, v1
 
-    invoke-static {}, Lcom/oneplus/util/OpUtils;->isSupportCustomFingerprintType2()Z
+    iget-object v2, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
+
+    invoke-static {v2}, Lcom/oneplus/systemui/biometrics/OpFodViewSettings;->getFodAnimViewY(Landroid/content/Context;)I
 
     move-result v2
 
-    invoke-static {}, Lcom/oneplus/util/OpUtils;->is2KResolution()Z
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isSupportCustomFingerprintType2()Z
 
     move-result v3
 
-    invoke-static {}, Lcom/oneplus/util/OpUtils;->isSupportCutout()Z
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->is2KResolution()Z
 
     move-result v4
 
-    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
-
-    move-result-object v5
-
-    invoke-static {v5}, Lcom/oneplus/util/OpUtils;->isCutoutHide(Landroid/content/Context;)Z
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isSupportCutout()Z
 
     move-result v5
 
@@ -546,123 +512,102 @@
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/oneplus/util/OpUtils;->isSupportResolutionSwitch(Landroid/content/Context;)Z
+    invoke-static {v6}, Lcom/oneplus/util/OpUtils;->isCutoutHide(Landroid/content/Context;)Z
 
     move-result v6
 
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v8, "adjusting bottom space. isFpType2= "
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v8, ", is2kDisplay= "
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v8, ", isSupportCutout= "
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v8, ", isCutoutHide= "
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v8, ", isSupportResolutionSwitch= "
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
     move-result-object v7
 
-    const-string v8, "BiometricPrompt/AuthBiometricFingerprintView"
+    invoke-static {v7}, Lcom/oneplus/util/OpUtils;->isSupportResolutionSwitch(Landroid/content/Context;)Z
 
-    invoke-static {v8, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    move-result v7
 
-    if-eqz v6, :cond_3
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    if-eqz v2, :cond_1
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget v2, Lcom/android/systemui/R$dimen;->op_biometric_animation_view_ss_y:I
+    const-string v9, "adjusting bottom space. isFpType2= "
 
-    goto :goto_0
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_1
-    if-eqz v3, :cond_2
+    invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    sget v2, Lcom/android/systemui/R$dimen;->op_biometric_animation_view_y_2k:I
+    const-string v3, ", is2kDisplay= "
 
-    goto :goto_0
+    invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_2
-    sget v2, Lcom/android/systemui/R$dimen;->op_biometric_animation_view_y_1080p:I
+    invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    const-string v3, ", isSupportCutout= "
 
-    :cond_3
-    if-eqz v2, :cond_4
+    invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget v2, Lcom/android/systemui/R$dimen;->op_biometric_animation_view_ss_y:I
+    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    const-string v3, ", isCutoutHide= "
 
-    :cond_4
-    sget v2, Lcom/android/systemui/R$dimen;->op_biometric_animation_view_y:I
+    invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_0
-    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v3, ", isSupportResolutionSwitch= "
+
+    invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v7}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v3, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    const-string v4, "BiometricPrompt/AuthBiometricFingerprintView"
 
-    move-result v2
+    invoke-static {v4, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    int-to-float v2, v2
+    if-eqz v5, :cond_1
 
-    if-eqz v4, :cond_5
-
-    if-eqz v5, :cond_5
+    if-eqz v6, :cond_1
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
-    move-result-object p0
+    move-result-object v3
 
-    invoke-static {p0}, Lcom/oneplus/util/OpUtils;->getCutoutPathdataHeight(Landroid/content/Context;)I
+    invoke-static {v3}, Lcom/oneplus/util/OpUtils;->getCutoutPathdataHeight(Landroid/content/Context;)I
 
-    move-result p0
+    move-result v3
 
-    add-int/2addr p1, p0
+    add-int/2addr p1, v3
 
-    :cond_5
-    int-to-float p0, p1
+    :cond_1
+    sub-int/2addr p1, v2
 
-    sub-float/2addr p0, v2
+    int-to-float p1, p1
 
-    sub-float/2addr p0, v1
+    sub-float/2addr p1, v1
 
     sub-float/2addr v0, v1
 
-    const/high16 p1, 0x40000000    # 2.0f
+    const/high16 v1, 0x40000000    # 2.0f
 
-    div-float/2addr v0, p1
+    div-float/2addr v0, v1
 
-    sub-float/2addr p0, v0
+    sub-float/2addr p1, v0
 
-    float-to-int p0, p0
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    sget v0, Lcom/android/systemui/R$dimen;->oneplus_contorl_radius_r16:I
+
+    invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result p0
+
+    add-float/2addr p1, p0
+
+    float-to-int p0, p1
 
     return p0
 .end method

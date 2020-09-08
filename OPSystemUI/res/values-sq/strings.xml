@@ -39,6 +39,11 @@
     <string name="abc_slice_updated">Përditësuar %1$s</string>
     <string name="abc_slices_permission_request">%1$s dëshiron të shfaqë pjesë të %2$s</string>
     <string name="abc_toolbar_collapse_description">Palos</string>
+    <string name="about_action_bar_title">Rreth</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Rregullorja për privatësinë</string>
+    <string name="about_release_note_title">Regjistri i përditësimit:</string>
+    <string name="about_terms_service">Rregullat e shërbimit</string>
     <string name="accessibility_accessibility_button">Qasshmëria</string>
     <string name="accessibility_action_divider_bottom_full">Ekrani i plotë poshtë</string>
     <string name="accessibility_action_divider_left_30">Majtas 30%</string>
@@ -598,6 +603,7 @@ Zgjedhja"</string>
     <string name="controls_favorite_other_zone_header">Tjetër</string>
     <string name="controls_favorite_rearrange">Mbaje të shtypur dhe zvarrit për të risistemuar kontrollet</string>
     <string name="controls_favorite_removed">Të gjitha kontrollet u hoqën</string>
+    <string name="controls_favorite_see_other_apps">Shiko aplikacionet e tjera</string>
     <string name="controls_favorite_subtitle">Zgjidh kontrollet për të pasur qasje nga menyja e energjisë</string>
     <string name="controls_favorite_toast_no_changes">Ndryshimet nuk u ruajtën</string>
     <string name="controls_in_progress">Në vazhdim</string>
@@ -696,8 +702,8 @@ Nëse vazhdon, mund të zbatohen tarifa për përdorimin e të dhënave."</strin
     <string name="disable_carrier_button_text">Çaktivizo kartën eSIM</string>
     <string name="disable_overlays">Çaktivizo mbishtresimin e HW-së</string>
     <string name="disable_overlays_summary">Përdor gjithmonë GPU-në për përbërjen e ekranit</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">Kontaktoni administratorin për hollësi</string>
+    <string name="disable_tether_notification_title">Lidhja tethering është çaktivizuar</string>
     <string name="disable_vpn">Çaktivizo VPN-në</string>
     <string name="disabled">Çaktivizuar</string>
     <string name="disabled_by_admin">Çaktivizuar nga administratori</string>
@@ -717,6 +723,7 @@ Nëse vazhdon, mund të zbatohen tarifa për përdorimin e të dhënave."</strin
     <string name="drag_to_rearrange_tiles">Mbaje të shtypur dhe zvarrit për të risistemuar pllakëzat</string>
     <string name="drag_to_remove_disabled">Të duhen të paktën %1$d pllakëza</string>
     <string name="drag_to_remove_tiles">Zvarrit këtu për ta hequr</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">"Tërhiqini pllakat për t'i riorganizuar. Shtypni për të shfaqur ose fshehur."</string>
     <string name="empty_shade_text">Asnjë njoftim</string>
     <string name="enable_adb">Korrigjimi i USB-së</string>
@@ -1092,6 +1099,7 @@ Provo sërish për %2$d sekonda."</string>
     <string name="left_nav_bar_button_type">Lloji i butonit shtesë majtas</string>
     <string name="legacy_vpn_name">VPN</string>
     <string name="loading_injected_setting_summary">Po ngarkohet…</string>
+    <string name="loading_text">Duke ngarkuar...</string>
     <string name="local_backup_password_summary_change">Trokit për të ndryshuar ose hequr fjalëkalimin për rezervime të plota të desktopit</string>
     <string name="local_backup_password_summary_none">Rezervimet e plota në kompjuter nuk janë të mbrojtura aktualisht</string>
     <string name="local_backup_password_title">Fjalëkalimi rezervë i kompjuterit</string>
@@ -1311,7 +1319,7 @@ Je i lidhur edhe me një VPN, që mund të monitorojë aktivitetin tënd të rrj
     <string name="notification_unblockable_desc">Këto njoftime nuk mund të modifikohen.</string>
     <string name="oem_unlock_enable">Shkyçja e OEM-së</string>
     <string name="oem_unlock_enable_summary">Lejo shkyçjen e ngarkimit të sistemit</string>
-    <string name="ok">NË RREGULL</string>
+    <string name="ok">Në rregull</string>
     <string name="okay">Në rregull</string>
     <string name="oneplus_laboratory_added_toast">Urime! Laboratori OnePlus është shtuar te Cilësimet</string>
     <string name="oneplus_not_show">Mos e shfaq këtë përsëri</string>
@@ -1323,8 +1331,14 @@ Je i lidhur edhe me një VPN, që mund të monitorojë aktivitetin tënd të rrj
     <string name="oneplus_threekey_navigation_sound">Të gjithë tingujt lejohen</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Mund të aktivizohet me çelësin më sipër</string>
     <string name="oneplus_threekey_navigation_vibration">Vetëm dridhje</string>
-    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> zhbllokim</string>
-    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> zhbllokime</string>
+    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>zhbllokim</string>
+    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>zhbllokime</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">Duke çiftuar...</string>
     <string name="op_earphone_connected_fail">Çiftimi dështoi. Mund të kontrolloni kufjet dhe statusin e Bluetooth.</string>
     <string name="op_earphone_connected_success">U çiftua. Shtypni për të vendosur më shumë.</string>
@@ -1354,9 +1368,10 @@ Je i lidhur edhe me një VPN, që mund të monitorojë aktivitetin tënd të rrj
     <string name="op_notification_channel_summary_low">Njoftimet më pak të rëndësishme pa tinguj ose dridhje.</string>
     <string name="op_notification_section_header_gentle">Njoftime të tjera</string>
     <string name="op_notification_silence_title">Tjetër</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">Modaliteti i errët</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s të përdorura</string>
-    <string name="op_quick_settings_night_display_label">Modaliteti i natës</string>
+    <string name="op_quick_settings_night_display_label">Rehatia e shikimit</string>
     <string name="op_quick_settings_night_display_summary_off">Modaliteti i lojërave është joaktiv, shtypeni për ta aktivizuar</string>
     <string name="op_quick_settings_night_display_summary_on">Modaliteti i lojërave është aktiv, shtypeni për ta çaktivizuar</string>
     <string name="op_read_mode2_dialog_black">Efekt mono</string>
@@ -1867,7 +1882,7 @@ të monitorohet"</string>
     <string name="tethered_notification_hybrid_sharing_mobile">Duke ndarë internetin celular, klikoni për të hyrë te cilësimet</string>
     <string name="tethered_notification_hybrid_sharing_none">Nuk ka rrjet të disponueshëm për të ndarë, klikoni për të hyrë te cilësimet</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Duke ndarë Wi-Fi, klikoni për të hyrë te cilësimet</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">Shtypeni për ta konfiguruar.</string>
     <string name="tethered_notification_multi_device_message">%1$s pajisje të lidhura</string>
     <string name="tethered_notification_multi_tether_title">Lidhja tethering dhe hotspoti celular janë aktive</string>
     <string name="tethered_notification_no_device_message">Nuk ka pajisje të lidhur</string>
@@ -2095,7 +2110,17 @@ Adresa Wi‑Fi (BSSID)
     <string name="wifi_verbose_logging">Aktivizo hyrjen Wi-Fi Verbose</string>
     <string name="wifi_verbose_logging_summary">Rrit nivelin regjistrues të Wi‑Fi duke shfaqur SSID RSSI-në te Zgjedhësi i Wi‑Fi</string>
     <string name="window_animation_scale_title">Animacioni i dritares</string>
-    <string name="work_life_balance_mode">Work-Life Balance</string>
+    <string name="wlb_break_mode_active">Aktive</string>
+    <string name="wlb_break_mode_active_text">Modaliteti %1$s · %2$s</string>
+    <string name="wlb_break_mode_on_break">Në pushim</string>
+    <string name="wlb_break_mode_resume">Vazhdo</string>
+    <string name="wlb_break_mode_take_break">Bëni një pushim</string>
+    <string name="wlb_qs_detail_break_mode">Modaliteti i pushimit</string>
+    <string name="wlb_qs_detail_break_mode_desc">Vazhdon automatikisht në modalitetin e mëparshëm pas 30 minutash</string>
+    <string name="wlb_qs_detail_life_mode">Modaliteti i jetës</string>
+    <string name="wlb_qs_detail_more_setting">Më shumë cilësime</string>
+    <string name="wlb_qs_detail_work_mode">Modaliteti i punës</string>
+    <string name="work_life_balance_mode">Work Life Balance</string>
     <string name="zen_alarm_warning">Nuk do ta dëgjosh alarmin e radhës në %1$s</string>
     <string name="zen_alarm_warning_indef">Nuk do ta dëgjosh alarmin e radhës në %1$s nëse nuk e çaktivizon këtë përpara asaj ore.</string>
     <string name="zen_alarms_introduction">Nuk do të shqetësohesh nga tingujt dhe dridhjet, përveç alarmeve. Do të vazhdosh të dëgjosh çdo gjë që zgjedh të luash duke përfshirë muzikën, videot dhe lojërat.</string>

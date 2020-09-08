@@ -51,11 +51,11 @@
 
     move-result v0
 
-    invoke-static {p1, v0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$12402(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;I)I
+    invoke-static {p1, v0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$12502(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;I)I
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController$OnApplyWindowInsetsListener;->this$0:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
-    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$11700(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)V
+    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$11800(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)V
 
     return-object p2
 .end method

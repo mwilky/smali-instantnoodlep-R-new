@@ -515,15 +515,15 @@
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v2
+    move-result-object v3
 
-    sget v3, Lcom/google/android/material/R$dimen;->op_control_margin_screen_right2:I
+    sget v4, Lcom/google/android/material/R$dimen;->op_control_margin_screen_right2:I
 
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
-    move-result v2
+    move-result v3
 
-    iput v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+    iput v3, v1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -560,35 +560,51 @@
 
     if-le v0, v1, :cond_d
 
-    iget-object v0, p0, Lcom/google/android/material/listview/ListItemView;->mListTitleView:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/google/android/material/listview/ListItemView;->mRootLayout:Landroid/widget/LinearLayout;
 
-    invoke-virtual {v0}, Landroid/widget/TextView;->getPaddingLeft()I
+    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getPaddingLeft()I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/google/android/material/listview/ListItemView;->mListTitleView:Landroid/widget/TextView;
+    iget-object v3, p0, Lcom/google/android/material/listview/ListItemView;->mRootLayout:Landroid/widget/LinearLayout;
 
-    invoke-virtual {v2}, Landroid/widget/TextView;->getPaddingTop()I
-
-    move-result v2
-
-    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    sget v4, Lcom/google/android/material/R$dimen;->op_control_margin_list_bottom1:I
-
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+    invoke-virtual {v3}, Landroid/widget/LinearLayout;->getPaddingTop()I
 
     move-result v3
 
-    iget-object v4, p0, Lcom/google/android/material/listview/ListItemView;->mListTitleView:Landroid/widget/TextView;
+    iget-object v4, p0, Lcom/google/android/material/listview/ListItemView;->mRootLayout:Landroid/widget/LinearLayout;
 
-    invoke-virtual {v4}, Landroid/widget/TextView;->getPaddingBottom()I
+    invoke-virtual {v4}, Landroid/widget/LinearLayout;->getPaddingBottom()I
 
     move-result v4
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/widget/TextView;->setPadding(IIII)V
+    invoke-virtual {v0, v1, v3, v2, v4}, Landroid/widget/LinearLayout;->setPadding(IIII)V
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    instance-of v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    if-eqz v1, :cond_d
+
+    move-object v1, v0
+
+    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    sget v3, Lcom/google/android/material/R$dimen;->op_control_margin_screen_right2:I
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+
+    move-result v2
+
+    iput v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     :cond_d
     :goto_4

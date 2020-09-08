@@ -141,7 +141,8 @@
     <color name="control_secondary_text_color_dark">#6bffffff</color>
     <color name="control_secondary_text_color_light">#6b000000</color>
     <color name="control_spinner_dropdown">@android:color/foreground_material_dark</color>
-    <color name="cw_chip_action_bg">#ffc4c4c4</color>
+    <color name="cw_chip_action_bg">#51ffffff</color>
+    <color name="cw_chip_bg">#33000000</color>
     <color name="cw_chip_context_bg">#997b7b7b</color>
     <color name="dark_mode_icon_color_dual_tone_background">#3d000000</color>
     <color name="dark_mode_icon_color_dual_tone_fill">#7a000000</color>
@@ -216,7 +217,7 @@
     <color name="dim_foreground_material_dark">#ffbebebe</color>
     <color name="dim_foreground_material_light">#ff323232</color>
     <color name="disabled_text_color">#66000000</color>
-    <color name="docked_divider_background">#ff000000</color>
+    <color name="docked_divider_background">#ff7d7d7d</color>
     <color name="docked_divider_handle">#ffffffff</color>
     <color name="edittext_color">#dd000000</color>
     <color name="edittext_color_dark">#b7ffffff</color>
@@ -673,6 +674,8 @@
     <color name="op_grid_item_background_default">@color/op_grid_item_background_light</color>
     <color name="op_grid_item_background_light">#4cffffff</color>
     <color name="op_home_handle_dark_color">#b3858585</color>
+    <color name="op_home_handle_fullscreen_dark_color">#4d858585</color>
+    <color name="op_home_handle_fullscreen_light_color">#4dffffff</color>
     <color name="op_home_handle_light_color">#99ffffff</color>
     <color name="op_menu_background_dark">@color/op_control_bg_color_popup_dark</color>
     <color name="op_menu_background_light">@color/op_control_bg_color_popup_light</color>
@@ -699,6 +702,8 @@
     <color name="op_seek_bar_tick_color_light">#8affffff</color>
     <color name="op_seek_bar_tick_disabled_color_dark">#4cffffff</color>
     <color name="op_seek_bar_tick_disabled_color_light">#2e000000</color>
+    <color name="op_swarp_charging_anim_dim_layer_color">#b3000000</color>
+    <color name="op_swarp_charging_anim_info_warp_text_color">#f2ffffff</color>
     <color name="op_time_picker_am_pm_label_text_color_dark">#ffffffff</color>
     <color name="op_time_picker_am_pm_label_text_color_light">@color/op_time_picker_am_pm_label_text_color_dark</color>
     <color name="op_time_picker_numbers_background_color_dark">#ff373737</color>
@@ -728,11 +733,11 @@
     <color name="primary_text_disabled_material_dark">#4dffffff</color>
     <color name="primary_text_disabled_material_light">#39000000</color>
     <color name="qs_batterymeter_frame_color">#ff404040</color>
-    <color name="qs_customize_background">@color/GM2_grey_50</color>
+    <color name="qs_customize_background">#ff000000</color>
     <color name="qs_customize_decoration">@color/GM2_grey_100</color>
     <color name="qs_detail_button">@android:color/quaternary_device_default_settings</color>
     <color name="qs_detail_button_white">#b3ffffff</color>
-    <color name="qs_detail_transition">#66ffffff</color>
+    <color name="qs_detail_transition">#ff000000</color>
     <color name="qs_ripple_color">#ff808080</color>
     <color name="qs_subhead">#99ffffff</color>
     <color name="qs_tile_disabled_color">#ff9e9e9e</color>

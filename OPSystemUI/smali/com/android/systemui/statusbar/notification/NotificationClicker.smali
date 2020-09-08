@@ -274,29 +274,29 @@
 .end method
 
 .method public register(Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;Landroid/service/notification/StatusBarNotification;)V
-    .locals 1
+    .locals 2
 
     invoke-virtual {p2}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
-    move-result-object p2
+    move-result-object v0
 
-    iget-object v0, p2, Landroid/app/Notification;->contentIntent:Landroid/app/PendingIntent;
+    iget-object v1, v0, Landroid/app/Notification;->contentIntent:Landroid/app/PendingIntent;
 
-    if-nez v0, :cond_1
+    if-nez v1, :cond_1
 
-    iget-object p2, p2, Landroid/app/Notification;->fullScreenIntent:Landroid/app/PendingIntent;
+    iget-object v1, v0, Landroid/app/Notification;->fullScreenIntent:Landroid/app/PendingIntent;
 
-    if-nez p2, :cond_1
+    if-nez v1, :cond_1
 
     invoke-virtual {p1}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->getEntry()Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
 
-    move-result-object p2
+    move-result-object v1
 
-    invoke-virtual {p2}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->isBubble()Z
+    invoke-virtual {v1}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->isBubble()Z
 
-    move-result p2
+    move-result v1
 
-    if-eqz p2, :cond_0
+    if-eqz v1, :cond_0
 
     goto :goto_0
 
@@ -305,12 +305,51 @@
 
     invoke-virtual {p1, p0}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    const/4 p0, 0x2
+
     goto :goto_1
 
     :cond_1
     :goto_0
     invoke-virtual {p1, p0}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    const/4 p0, 0x1
+
     :goto_1
+    sget-boolean p1, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz p1, :cond_2
+
+    if-eqz v0, :cond_2
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "notification add listener:"
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Landroid/service/notification/StatusBarNotification;->getPackageName()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p2, ":"
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string p1, "NotificationClicker"
+
+    invoke-static {p1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_2
     return-void
 .end method

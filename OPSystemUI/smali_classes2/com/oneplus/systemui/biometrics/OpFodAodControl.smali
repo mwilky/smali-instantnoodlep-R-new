@@ -19,7 +19,7 @@
 
     new-array p1, p1, [I
 
-    const/16 v0, 0x135
+    const/16 v0, 0x12e
 
     const/4 v1, 0x0
 

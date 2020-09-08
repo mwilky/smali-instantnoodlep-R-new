@@ -314,6 +314,23 @@
     return-void
 .end method
 
+.method protected onDestroy()V
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/android/systemui/usb/UsbDebuggingActivity;->mServiceNotified:Z
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/android/systemui/usb/UsbDebuggingActivity;->notifyService(Z)V
+
+    :cond_0
+    invoke-super {p0}, Lcom/android/internal/app/AlertActivity;->onDestroy()V
+
+    return-void
+.end method
+
 .method public onStart()V
     .locals 2
 
@@ -351,15 +368,6 @@
     invoke-virtual {v1, v0}, Lcom/android/systemui/broadcast/BroadcastDispatcher;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     :cond_0
-    iget-boolean v0, p0, Lcom/android/systemui/usb/UsbDebuggingActivity;->mServiceNotified:Z
-
-    if-nez v0, :cond_1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/android/systemui/usb/UsbDebuggingActivity;->notifyService(Z)V
-
-    :cond_1
     invoke-super {p0}, Lcom/android/internal/app/AlertActivity;->onStop()V
 
     return-void

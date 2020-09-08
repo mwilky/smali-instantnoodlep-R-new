@@ -358,42 +358,61 @@
     return-object p0
 .end method
 
-.method static synthetic access$800(Lcom/android/systemui/pip/phone/PipManager;Landroid/graphics/Rect;ZZZ)V
+.method static synthetic access$800(Lcom/android/systemui/pip/phone/PipManager;Landroid/graphics/Rect;ZZZLandroid/window/WindowContainerTransaction;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/systemui/pip/phone/PipManager;->updateMovementBounds(Landroid/graphics/Rect;ZZZ)V
+    invoke-direct/range {p0 .. p5}, Lcom/android/systemui/pip/phone/PipManager;->updateMovementBounds(Landroid/graphics/Rect;ZZZLandroid/window/WindowContainerTransaction;)V
 
     return-void
 .end method
 
 .method private synthetic lambda$new$0(IIILandroid/window/WindowContainerTransaction;)V
-    .locals 8
+    .locals 9
 
-    iget-object v0, p0, Lcom/android/systemui/pip/phone/PipManager;->mPipBoundsHandler:Lcom/android/systemui/pip/PipBoundsHandler;
+    iget-object v0, p0, Lcom/android/systemui/pip/phone/PipManager;->mPipTaskOrganizer:Lcom/android/systemui/pip/PipTaskOrganizer;
 
-    iget-object v1, p0, Lcom/android/systemui/pip/phone/PipManager;->mTmpNormalBounds:Landroid/graphics/Rect;
+    invoke-virtual {v0}, Lcom/android/systemui/pip/PipTaskOrganizer;->isInPip()Z
 
-    iget-object v2, p0, Lcom/android/systemui/pip/phone/PipManager;->mPipTaskOrganizer:Lcom/android/systemui/pip/PipTaskOrganizer;
+    move-result v0
 
-    invoke-virtual {v2}, Lcom/android/systemui/pip/PipTaskOrganizer;->getLastReportedBounds()Landroid/graphics/Rect;
+    if-eqz v0, :cond_3
 
-    move-result-object v2
+    iget-object v0, p0, Lcom/android/systemui/pip/phone/PipManager;->mPipTaskOrganizer:Lcom/android/systemui/pip/PipTaskOrganizer;
 
-    iget-object v3, p0, Lcom/android/systemui/pip/phone/PipManager;->mTmpInsetBounds:Landroid/graphics/Rect;
+    invoke-virtual {v0}, Lcom/android/systemui/pip/PipTaskOrganizer;->isDeferringEnterPipAnimation()Z
 
-    move v4, p1
+    move-result v0
 
-    move v5, p2
+    if-eqz v0, :cond_0
 
-    move v6, p3
+    goto :goto_0
 
-    move-object v7, p4
+    :cond_0
+    iget-object v0, p0, Lcom/android/systemui/pip/phone/PipManager;->mPipTaskOrganizer:Lcom/android/systemui/pip/PipTaskOrganizer;
 
-    invoke-virtual/range {v0 .. v7}, Lcom/android/systemui/pip/PipBoundsHandler;->onDisplayRotationChanged(Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;IIILandroid/window/WindowContainerTransaction;)Z
+    invoke-virtual {v0}, Lcom/android/systemui/pip/PipTaskOrganizer;->getCurrentOrAnimatingBounds()Landroid/graphics/Rect;
+
+    move-result-object v3
+
+    iget-object v1, p0, Lcom/android/systemui/pip/phone/PipManager;->mPipBoundsHandler:Lcom/android/systemui/pip/PipBoundsHandler;
+
+    iget-object v2, p0, Lcom/android/systemui/pip/phone/PipManager;->mTmpNormalBounds:Landroid/graphics/Rect;
+
+    iget-object v4, p0, Lcom/android/systemui/pip/phone/PipManager;->mTmpInsetBounds:Landroid/graphics/Rect;
+
+    move v5, p1
+
+    move v6, p2
+
+    move v7, p3
+
+    move-object v8, p4
+
+    invoke-virtual/range {v1 .. v8}, Lcom/android/systemui/pip/PipBoundsHandler;->onDisplayRotationChanged(Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;IIILandroid/window/WindowContainerTransaction;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_2
 
     iget-object p1, p0, Lcom/android/systemui/pip/phone/PipManager;->mTouchHandler:Lcom/android/systemui/pip/phone/PipTouchHandler;
 
@@ -405,17 +424,17 @@
 
     move-result-object p3
 
-    iget-object p4, p0, Lcom/android/systemui/pip/phone/PipManager;->mTmpInsetBounds:Landroid/graphics/Rect;
+    iget-object v0, p0, Lcom/android/systemui/pip/phone/PipManager;->mTmpInsetBounds:Landroid/graphics/Rect;
 
-    invoke-virtual {p1, p2, p3, p4}, Lcom/android/systemui/pip/phone/PipTouchHandler;->adjustBoundsForRotation(Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;)V
+    invoke-virtual {p1, p2, p3, v0}, Lcom/android/systemui/pip/phone/PipTouchHandler;->adjustBoundsForRotation(Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;)V
 
     iget-boolean p1, p0, Lcom/android/systemui/pip/phone/PipManager;->mIsInFixedRotation:Z
 
-    const/4 p2, 0x0
-
-    if-nez p1, :cond_0
+    if-nez p1, :cond_1
 
     iget-object p1, p0, Lcom/android/systemui/pip/phone/PipManager;->mPipBoundsHandler:Lcom/android/systemui/pip/PipBoundsHandler;
+
+    const/4 p2, 0x0
 
     invoke-virtual {p1, p2, p2}, Lcom/android/systemui/pip/PipBoundsHandler;->setShelfHeight(ZI)Z
 
@@ -431,14 +450,30 @@
 
     invoke-virtual {p1, p2, p2}, Lcom/android/systemui/pip/phone/PipTouchHandler;->onImeVisibilityChanged(ZI)V
 
-    :cond_0
-    iget-object p1, p0, Lcom/android/systemui/pip/phone/PipManager;->mTmpNormalBounds:Landroid/graphics/Rect;
-
-    const/4 p3, 0x1
-
-    invoke-direct {p0, p1, p3, p2, p2}, Lcom/android/systemui/pip/phone/PipManager;->updateMovementBounds(Landroid/graphics/Rect;ZZZ)V
-
     :cond_1
+    iget-object v1, p0, Lcom/android/systemui/pip/phone/PipManager;->mTmpNormalBounds:Landroid/graphics/Rect;
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    move-object v0, p0
+
+    move-object v5, p4
+
+    invoke-direct/range {v0 .. v5}, Lcom/android/systemui/pip/phone/PipManager;->updateMovementBounds(Landroid/graphics/Rect;ZZZLandroid/window/WindowContainerTransaction;)V
+
+    :cond_2
+    return-void
+
+    :cond_3
+    :goto_0
+    iget-object p0, p0, Lcom/android/systemui/pip/phone/PipManager;->mPipBoundsHandler:Lcom/android/systemui/pip/PipBoundsHandler;
+
+    invoke-virtual {p0, p3}, Lcom/android/systemui/pip/PipBoundsHandler;->onDisplayRotationChangedNotInPip(I)V
+
     return-void
 .end method
 
@@ -461,39 +496,45 @@
 .end method
 
 .method private synthetic lambda$setShelfHeight$1(ZI)V
-    .locals 2
-
-    const/4 v0, 0x0
+    .locals 6
 
     if-eqz p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    move p2, v0
+    const/4 p2, 0x0
 
     :goto_0
-    iget-object v1, p0, Lcom/android/systemui/pip/phone/PipManager;->mPipBoundsHandler:Lcom/android/systemui/pip/PipBoundsHandler;
+    iget-object v0, p0, Lcom/android/systemui/pip/phone/PipManager;->mPipBoundsHandler:Lcom/android/systemui/pip/PipBoundsHandler;
 
-    invoke-virtual {v1, p1, p2}, Lcom/android/systemui/pip/PipBoundsHandler;->setShelfHeight(ZI)Z
+    invoke-virtual {v0, p1, p2}, Lcom/android/systemui/pip/PipBoundsHandler;->setShelfHeight(ZI)Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
 
-    iget-object v1, p0, Lcom/android/systemui/pip/phone/PipManager;->mTouchHandler:Lcom/android/systemui/pip/phone/PipTouchHandler;
+    iget-object v0, p0, Lcom/android/systemui/pip/phone/PipManager;->mTouchHandler:Lcom/android/systemui/pip/phone/PipTouchHandler;
 
-    invoke-virtual {v1, p1, p2}, Lcom/android/systemui/pip/phone/PipTouchHandler;->onShelfVisibilityChanged(ZI)V
+    invoke-virtual {v0, p1, p2}, Lcom/android/systemui/pip/phone/PipTouchHandler;->onShelfVisibilityChanged(ZI)V
 
     iget-object p1, p0, Lcom/android/systemui/pip/phone/PipManager;->mPipTaskOrganizer:Lcom/android/systemui/pip/PipTaskOrganizer;
 
     invoke-virtual {p1}, Lcom/android/systemui/pip/PipTaskOrganizer;->getLastReportedBounds()Landroid/graphics/Rect;
 
-    move-result-object p1
+    move-result-object v1
 
-    const/4 p2, 0x1
+    const/4 v2, 0x0
 
-    invoke-direct {p0, p1, v0, v0, p2}, Lcom/android/systemui/pip/phone/PipManager;->updateMovementBounds(Landroid/graphics/Rect;ZZZ)V
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    const/4 v5, 0x0
+
+    move-object v0, p0
+
+    invoke-direct/range {v0 .. v5}, Lcom/android/systemui/pip/phone/PipManager;->updateMovementBounds(Landroid/graphics/Rect;ZZZLandroid/window/WindowContainerTransaction;)V
 
     :cond_1
     return-void
@@ -519,12 +560,12 @@
     return-void
 .end method
 
-.method private updateMovementBounds(Landroid/graphics/Rect;ZZZ)V
+.method private updateMovementBounds(Landroid/graphics/Rect;ZZZLandroid/window/WindowContainerTransaction;)V
     .locals 7
 
-    new-instance v3, Landroid/graphics/Rect;
+    new-instance v6, Landroid/graphics/Rect;
 
-    invoke-direct {v3, p1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
+    invoke-direct {v6, p1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
     iget-object p1, p0, Lcom/android/systemui/pip/phone/PipManager;->mPipBoundsHandler:Lcom/android/systemui/pip/PipBoundsHandler;
 
@@ -534,11 +575,21 @@
 
     iget-object v2, p0, Lcom/android/systemui/pip/phone/PipManager;->mTmpDisplayInfo:Landroid/view/DisplayInfo;
 
-    invoke-virtual {p1, v0, v1, v3, v2}, Lcom/android/systemui/pip/PipBoundsHandler;->onMovementBoundsChanged(Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/view/DisplayInfo;)V
+    invoke-virtual {p1, v0, v1, v6, v2}, Lcom/android/systemui/pip/PipBoundsHandler;->onMovementBoundsChanged(Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/view/DisplayInfo;)V
 
-    iget-object p1, p0, Lcom/android/systemui/pip/phone/PipManager;->mPipTaskOrganizer:Lcom/android/systemui/pip/PipTaskOrganizer;
+    iget-object v0, p0, Lcom/android/systemui/pip/phone/PipManager;->mPipTaskOrganizer:Lcom/android/systemui/pip/PipTaskOrganizer;
 
-    invoke-virtual {p1, v3, p2, p3, p4}, Lcom/android/systemui/pip/PipTaskOrganizer;->onMovementBoundsChanged(Landroid/graphics/Rect;ZZZ)V
+    move-object v1, v6
+
+    move v2, p2
+
+    move v3, p3
+
+    move v4, p4
+
+    move-object v5, p5
+
+    invoke-virtual/range {v0 .. v5}, Lcom/android/systemui/pip/PipTaskOrganizer;->onMovementBoundsChanged(Landroid/graphics/Rect;ZZZLandroid/window/WindowContainerTransaction;)V
 
     iget-object v0, p0, Lcom/android/systemui/pip/phone/PipManager;->mTouchHandler:Lcom/android/systemui/pip/phone/PipTouchHandler;
 
@@ -548,11 +599,15 @@
 
     iget-object p0, p0, Lcom/android/systemui/pip/phone/PipManager;->mTmpDisplayInfo:Landroid/view/DisplayInfo;
 
-    iget v6, p0, Landroid/view/DisplayInfo;->rotation:I
+    iget p0, p0, Landroid/view/DisplayInfo;->rotation:I
+
+    move-object v3, v6
 
     move v4, p3
 
     move v5, p4
+
+    move v6, p0
 
     invoke-virtual/range {v0 .. v6}, Lcom/android/systemui/pip/phone/PipTouchHandler;->onMovementBoundsChanged(Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;ZZI)V
 

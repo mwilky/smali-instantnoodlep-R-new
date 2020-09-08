@@ -307,7 +307,7 @@
     return p0
 .end method
 
-.method protected isSticky()Z
+.method public isSticky()Z
     .locals 1
 
     invoke-super {p0}, Lcom/android/systemui/statusbar/policy/HeadsUpManager$HeadsUpEntry;->isSticky()Z

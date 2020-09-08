@@ -10,12 +10,13 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/systemui/statusbar/NotificationShadeDepthController$DepthAnimation;
+        Lcom/android/systemui/statusbar/NotificationShadeDepthController$DepthAnimation;,
+        Lcom/android/systemui/statusbar/NotificationShadeDepthController$DepthListener;
     }
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nNotificationShadeDepthController.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NotificationShadeDepthController.kt\ncom/android/systemui/statusbar/NotificationShadeDepthController\n*L\n1#1,486:1\n*E\n"
+    value = "SMAP\nNotificationShadeDepthController.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NotificationShadeDepthController.kt\ncom/android/systemui/statusbar/NotificationShadeDepthController\n*L\n1#1,508:1\n*E\n"
 .end annotation
 
 
@@ -53,6 +54,16 @@
 .field private final keyguardStateCallback:Lcom/android/systemui/statusbar/NotificationShadeDepthController$keyguardStateCallback$1;
 
 .field private final keyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
+
+.field private listeners:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Lcom/android/systemui/statusbar/NotificationShadeDepthController$DepthListener;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field private notificationAnimator:Landroid/animation/Animator;
 
@@ -212,6 +223,12 @@
 
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/NotificationShadeDepthController;->isClosed:Z
 
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Lcom/android/systemui/statusbar/NotificationShadeDepthController;->listeners:Ljava/util/List;
+
     const-wide/16 p1, -0x1
 
     iput-wide p1, p0, Lcom/android/systemui/statusbar/NotificationShadeDepthController;->prevTimestamp:J
@@ -357,6 +374,14 @@
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/NotificationShadeDepthController;->keyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
+
+    return-object p0
+.end method
+
+.method public static final synthetic access$getListeners$p(Lcom/android/systemui/statusbar/NotificationShadeDepthController;)Ljava/util/List;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/NotificationShadeDepthController;->listeners:Ljava/util/List;
 
     return-object p0
 .end method
@@ -816,6 +841,24 @@
 
 
 # virtual methods
+.method public final addListener(Lcom/android/systemui/statusbar/NotificationShadeDepthController$DepthListener;)V
+    .locals 1
+    .param p1    # Lcom/android/systemui/statusbar/NotificationShadeDepthController$DepthListener;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+
+    const-string v0, "listener"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/NotificationShadeDepthController;->listeners:Ljava/util/List;
+
+    invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
 .method public dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 1
     .param p1    # Ljava/io/FileDescriptor;

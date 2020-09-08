@@ -134,6 +134,7 @@
     <uses-permission android:name="android.permission.HIDE_NON_SYSTEM_OVERLAY_WINDOWS"/>
     <uses-permission android:name="android.permission.CONTROL_DISPLAY_COLOR_TRANSFORMS"/>
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"/>
     <uses-permission android:name="com.oneplus.faceunlock.permission.FACE_UNLOCK"/>
     <uses-permission android:name="com.oneplus.faceunlock.permission.FACE_SETTING"/>
     <uses-permission android:name="com.oneplus.security.permission.ACCESS_CONTENT"/>
@@ -151,6 +152,8 @@
     <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
     <uses-permission android:name="android.permission.MODIFY_AUDIO_ROUTING"/>
+    <uses-permission android:name="net.oneplus.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="net.oneplus.launcher.permission.WRITE_SETTINGS"/>
     <protected-broadcast android:name="com.google.android.apps.oemsmartspace.ENABLE_UPDATE"/>
     <protected-broadcast android:name="com.android.settingslib.action.REGISTER_SLICE_RECEIVER"/>
     <protected-broadcast android:name="com.android.settingslib.action.UNREGISTER_SLICE_RECEIVER"/>
@@ -171,7 +174,7 @@
                 <action android:name="com.android.systemui.screenshot.SHOW_ERROR"/>
             </intent-filter>
         </receiver>
-        <activity android:excludeFromRecents="true" android:name="com.android.systemui.screenrecord.ScreenRecordDialog" android:theme="@style/ScreenRecord"/>
+        <activity android:excludeFromRecents="true" android:name="com.android.systemui.screenrecord.ScreenRecordDialog" android:showForAllUsers="true" android:theme="@style/ScreenRecord"/>
         <service android:name="com.android.systemui.screenrecord.RecordingService"/>
         <receiver android:exported="false" android:name="com.android.systemui.SysuiRestartReceiver">
             <intent-filter>

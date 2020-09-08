@@ -10,10 +10,10 @@
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/oneplus/aod/utils/burnin/OpBurnInBaseController;-><init>()V
+    invoke-direct {p0, p1}, Lcom/oneplus/aod/utils/burnin/OpBurnInBaseController;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method

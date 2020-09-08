@@ -1742,6 +1742,9 @@
         <item name="android:paddingBottom">16.0dip</item>
         <item name="android:paddingEnd">16.0dip</item>
     </style>
+    <style name="ExpandButtonAnimation">
+        <item name="android:windowEnterAnimation">@anim/expand_button_anim_enter</item>
+    </style>
     <style name="ForcedResizableTheme" parent="@android:style/Theme.Translucent.NoTitleBar">
         <item name="android:windowBackground">@drawable/forced_resizable_background</item>
         <item name="android:windowAnimationStyle">@style/Animation.ForcedResizable</item>
@@ -1899,7 +1902,6 @@
     </style>
     <style name="OPTextAppearance.Material.TimePicker.InputField" parent="@style/op_control_text_style_h1">
         <item name="android:textColor">@color/op_primary_text_secondary_when_activated_material_inverse</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
     </style>
     <style name="OPTextAppearance.Material.TimePicker.InputFieldPrompt" parent="@style/op_control_text_style_body1">
         <item name="android:textColor">@color/op_time_picker_intput_label_text_color</item>
@@ -1917,7 +1919,6 @@
     </style>
     <style name="OPTextAppearance.Material.TimePicker.TimeLabel" parent="@style/op_control_text_style_h1">
         <item name="android:textColor">@color/op_primary_text_secondary_when_activated_material_inverse</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
     </style>
     <style name="OPTextAppearance.Material.TimePicker.TimeLabelUnActivated" parent="@style/op_control_text_style_h1">
         <item name="android:textColor">@color/op_primary_text_secondary_when_activated_material_inverse</item>
@@ -2004,7 +2005,7 @@
         <item name="android:datePickerDialogTheme">@style/ThemeOverlay.MaterialComponents.Dialog</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:contextPopupMenuStyle">@style/Widget.MaterialComponents.PopupMenu.ContextMenu</item>
-        <item name="OPListViewStyle">@style/Oneplus.Widget.Material.ListView</item>
+        <item name="OPListViewStyle">@style/OnePlus.Widget.Material.ListView</item>
         <item name="actionBarPopupTheme">@style/ThemeOverlay.MaterialComponents.Dark</item>
         <item name="actionBarSize">@dimen/mtrl_toolbar_default_height</item>
         <item name="actionBarStyle">@style/Widget.MaterialComponents.ActionBar.Surface</item>
@@ -2036,7 +2037,7 @@
         <item name="android:timePickerDialogTheme">@style/ThemeOverlay.MaterialComponents.Dialog</item>
         <item name="android:datePickerDialogTheme">@style/ThemeOverlay.MaterialComponents.Dialog</item>
         <item name="android:contextPopupMenuStyle">@style/Widget.MaterialComponents.PopupMenu.ContextMenu</item>
-        <item name="OPListViewStyle">@style/Oneplus.Widget.Material.Light.ListView</item>
+        <item name="OPListViewStyle">@style/OnePlus.Widget.Material.Light.ListView</item>
         <item name="actionBarPopupTheme">@style/ThemeOverlay.MaterialComponents.Light</item>
         <item name="actionBarStyle">@style/Widget.MaterialComponents.Light.ActionBar.Solid</item>
         <item name="actionOverflowMenuStyle">@style/Widget.MaterialComponents.PopupMenu.Overflow</item>
@@ -2116,15 +2117,15 @@
         <item name="seekbarTickDisabledColor">@color/op_seek_bar_tick_disabled_color_dark</item>
     </style>
     <style name="OnePlus.TextAppearance.AppCompat.Widget.ActionMode.Title" parent="@style/TextAppearance.AppCompat.Widget.ActionMode.Title">
-        <item name="android:textAppearance">@style/op_control_text_style_h5</item>
         <item name="android:textSize">@dimen/op_text_size_h5</item>
         <item name="android:textColor">?onePlusActionBarTitleColor</item>
+        <item name="android:fontFamily">@string/op_control_font_text_h5</item>
     </style>
     <style name="OnePlus.TextAppearance.AppCompat.Widget.Button" parent="@style/TextAppearance.AppCompat.Widget.Button">
         <item name="android:textSize">14.0sp</item>
         <item name="android:textColor">@color/op_btn_text_material</item>
         <item name="android:textAllCaps">false</item>
-        <item name="android:fontFamily">oneplus-sans-text-button</item>
+        <item name="android:fontFamily">@string/op_control_font_text_button</item>
         <item name="android:textFontWeight">@integer/op_button_text_font_weight</item>
     </style>
     <style name="OnePlus.TextAppearance.AppCompat.Widget.Button.Colored" parent="@style/OnePlus.TextAppearance.AppCompat.Widget.Button">
@@ -2135,6 +2136,9 @@
     </style>
     <style name="OnePlus.TextAppearance.AppCompat.Widget.Button.SubColored" parent="@style/OnePlus.TextAppearance.AppCompat.Widget.Button">
         <item name="android:textColor">@color/op_btn_sub_color_text_material</item>
+    </style>
+    <style name="OnePlus.TextAppearance.AppCompat.Widget.PopupMenu.Large" parent="@style/op_control_text_style_h6">
+        <item name="android:textColor">@color/op_menu_title_primary_text_material</item>
     </style>
     <style name="OnePlus.TextAppearance.List.Summary" parent="@style/op_control_text_style_body1">
         <item name="android:textColor">@color/op_preference_subtitle_text_color</item>
@@ -2380,6 +2384,12 @@
     <style name="OnePlus.Widget.Design.BottomSheet.Modal" parent="@style/Widget.Design.BottomSheet.Modal">
         <item name="android:background">@drawable/oneplus_control_bottom_sheet_background</item>
     </style>
+    <style name="OnePlus.Widget.Material.Light.ListView" parent="@android:style/Widget.Material.ListView">
+        <item name="android:divider">@color/op_control_divider_color_light</item>
+    </style>
+    <style name="OnePlus.Widget.Material.ListView" parent="@android:style/Widget.Material.ListView">
+        <item name="android:divider">@color/op_control_divider_color_dark</item>
+    </style>
     <style name="OnePlus.Widget.MaterialComponents.BottomAppBar" parent="@style/Widget.MaterialComponents.BottomAppBar">
         <item name="android:minHeight">@dimen/op_bottom_app_bar_with_fab_height</item>
         <item name="backgroundTint">?onePlusBgColor</item>
@@ -2403,7 +2413,7 @@
         <item name="closeIconEndPadding">0.0dip</item>
         <item name="closeIconSize">@dimen/op_control_icon_size_indicator</item>
         <item name="closeIconStartPadding">0.0dip</item>
-        <item name="closeIconTint">?onePlusIconColorActive</item>
+        <item name="closeIconTint">@color/op_control_icon_color_active_default</item>
         <item name="textEndPadding">@dimen/op_control_margin_space2</item>
         <item name="textStartPadding">@dimen/op_control_margin_space2</item>
     </style>
@@ -2555,9 +2565,6 @@
         <item name="android:datePickerMode">@integer/op_date_picker_mode</item>
         <item name="headerTextColor">@color/op_primary_text_secondary_when_activated_material_inverse</item>
     </style>
-    <style name="Oneplus.Widget.Material.Light.ListView" parent="@android:style/Widget.Material.ListView">
-        <item name="android:divider">@color/op_control_divider_color_light</item>
-    </style>
     <style name="Oneplus.Widget.Material.Light.TimePicker" parent="@android:style/Widget.Material.Light.TimePicker">
         <item name="android:headerBackground">?colorAccent</item>
         <item name="android:numbersTextColor">@color/op_timepicker_text_inverse_when_activated_material_light</item>
@@ -2570,9 +2577,6 @@
         <item name="legacyLayout">@layout/op_time_picker_legacy_material</item>
         <item name="numbersInnerTextColor">@color/op_timepicker_text_inverse_when_activated_material_light</item>
         <item name="numbersTextColor">@color/op_timepicker_text_inverse_when_activated_material_light</item>
-    </style>
-    <style name="Oneplus.Widget.Material.ListView" parent="@android:style/Widget.Material.ListView">
-        <item name="android:divider">@color/op_control_divider_color_dark</item>
     </style>
     <style name="Oneplus.Widget.Material.TimePicker" parent="@android:style/Widget.Material.TimePicker">
         <item name="android:headerBackground">?colorAccent</item>
@@ -2615,6 +2619,10 @@
     <style name="Oneplus_popup_bottom_animation" parent="@android:style/Animation">
         <item name="android:windowEnterAnimation">@anim/op_control_popup_bottom_enter</item>
         <item name="android:windowExitAnimation">@anim/op_control_popup_bottom_exit</item>
+    </style>
+    <style name="Oneplus_popup_bottom_edittext_animation" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/op_control_popup_bottom_edittext_enter</item>
+        <item name="android:windowExitAnimation">@anim/op_control_popup_bottom_edittext_exit</item>
     </style>
     <style name="Oneplus_popup_normal_animation" parent="@android:style/Animation">
         <item name="android:windowEnterAnimation">@anim/op_control_popup_normal_enter</item>
@@ -3244,7 +3252,7 @@
     <style name="TextAppearance.Design.Placeholder" parent="@style/TextAppearance.AppCompat.Body1" />
     <style name="TextAppearance.Design.Prefix" parent="@style/TextAppearance.AppCompat.Body1" />
     <style name="TextAppearance.Design.SnackBar.Action" parent="@style/op_control_text_style_button" />
-    <style name="TextAppearance.Design.SnackBar.Text" parent="@style/op_control_text_style_body1">
+    <style name="TextAppearance.Design.SnackBar.Text" parent="@style/op_control_text_style_h6">
         <item name="android:textColor">@color/op_control_text_color_primary_dark</item>
     </style>
     <style name="TextAppearance.Design.Snackbar.Message" parent="@android:style/TextAppearance">
@@ -3765,6 +3773,7 @@
         <item name="android:textColor">@color/text_color</item>
         <item name="android:paddingLeft">@dimen/text_horizontal_padding</item>
         <item name="android:paddingRight">@dimen/text_horizontal_padding</item>
+        <item name="android:fontFamily">google-sans</item>
     </style>
     <style name="TextTitle">
         <item name="android:textSize">@dimen/smartspace_title_size</item>
@@ -4286,7 +4295,7 @@
         <item name="mediaRouteControlPanelThemeOverlay">@style/ThemeOverlay.MediaRouter.Light</item>
     </style>
     <style name="Theme.OnePlus" parent="@style/Theme.MaterialComponents">
-        <item name="android:textColorPrimary">?onePlusTextColorPrimary</item>
+        <item name="android:textColorPrimary">@color/op_control_text_color_primary_dark</item>
         <item name="android:buttonStyle">@style/OnePlus.Widget.AppCompat.Button</item>
         <item name="android:buttonStyleSmall">@style/OnePlus.Widget.AppCompat.Button.Small</item>
         <item name="android:listPreferredItemHeight">@dimen/abc_list_item_height_material</item>
@@ -4328,7 +4337,7 @@
         <item name="android:actionModeCloseButtonStyle">@style/OnePlus.Widget.AppCompat.ActionButton.CloseMode</item>
         <item name="android:listPopupWindowStyle">@style/OnePlus.Widget.MaterialComponents.PopupMenu.ListPopupWindow</item>
         <item name="android:popupMenuStyle">@style/OnePlus.Widget.MaterialComponents.PopupMenu</item>
-        <item name="android:textAppearanceLargePopupMenu">@style/TextAppearance.AppCompat.Widget.PopupMenu.Large</item>
+        <item name="android:textAppearanceLargePopupMenu">@style/OnePlus.TextAppearance.AppCompat.Widget.PopupMenu.Large</item>
         <item name="android:textAppearanceSmallPopupMenu">@style/TextAppearance.AppCompat.Widget.PopupMenu.Small</item>
         <item name="android:dividerVertical">@drawable/abc_list_divider_mtrl_alpha</item>
         <item name="android:homeAsUpIndicator">@drawable/ic_title_bar_back</item>
@@ -4377,6 +4386,7 @@
         <item name="android:textAppearancePopupMenuHeader">@style/TextAppearance.AppCompat.Widget.PopupMenu.Header</item>
         <item name="android:numberPickerStyle">@style/Widget.Material.NumberPicker</item>
         <item name="android:colorError">@color/error_color_material_dark</item>
+        <item name="android:windowLightNavigationBar">false</item>
         <item name="actionBarDivider">?dividerVertical</item>
         <item name="actionBarItemBackground">@drawable/abc_action_bar_item_background_material</item>
         <item name="actionBarPopupTheme">@null</item>
@@ -4431,7 +4441,6 @@
         <item name="colorBackgroundFloating">@color/background_floating_material_dark</item>
         <item name="colorControlActivated">?colorAccent</item>
         <item name="colorControlNormal">?android:textColorSecondary</item>
-        <item name="colorError">@color/error_color_material_dark</item>
         <item name="colorPrimary">@color/primary_material_dark</item>
         <item name="colorPrimaryDark">@color/op_control_bg_color_dark</item>
         <item name="colorSwitchThumbNormal">@color/switch_thumb_material_dark</item>
@@ -4461,7 +4470,7 @@
         <item name="listPreferredItemPaddingRight">@dimen/op_control_margin_screen_right1</item>
         <item name="listPreferredItemPaddingStart">@dimen/op_control_margin_screen_left3</item>
         <item name="numberPickerStyle">@style/Widget.Material.NumberPicker</item>
-        <item name="onePlusActionBarTitleColor">?onePlusTextColorPrimary</item>
+        <item name="onePlusActionBarTitleColor">@color/op_control_text_color_primary_dark</item>
         <item name="onePlusAppbarBgColor">@color/op_control_bg_color_dark</item>
         <item name="onePlusBgColor">@color/op_control_bg_color_dark</item>
         <item name="onePlusBgColorCard">@color/op_control_bg_color_card_dark</item>
@@ -4478,10 +4487,12 @@
         <item name="onePlusColorButtonNormal">@color/op_btn_color_default_material</item>
         <item name="onePlusDividerColor">@color/op_control_divider_color_dark</item>
         <item name="onePlusEmptyTextTitleColor">@color/op_control_empty_text_title_dark</item>
+        <item name="onePlusIconCheckboxColorInactive">@color/op_control_icon_color_inactive_dark</item>
         <item name="onePlusIconColorActive">@color/op_control_icon_color_active_dark</item>
         <item name="onePlusIconColorDisable">@color/op_control_icon_color_disable_dark</item>
         <item name="onePlusIconColorInactive">@color/op_control_icon_color_inactive_dark</item>
         <item name="onePlusLabelStrokeColor">@color/op_control_accent_color_red_dark</item>
+        <item name="onePlusPreferenceDividerColor">#33ffffff</item>
         <item name="onePlusRippleColor">#33ffffff</item>
         <item name="onePlusSearchBgColor">@color/op_control_hint_searchview_bg_dark</item>
         <item name="onePlusSearchStrokeBgColor">@color/op_control_hint_searchview_bg_stroke_dark</item>
@@ -4498,7 +4509,7 @@
         <item name="panelBackground">@drawable/abc_menu_hardkey_panel_mtrl_mult</item>
         <item name="panelMenuListTheme">@style/Theme.AppCompat.CompactMenu</item>
         <item name="panelMenuListWidth">@dimen/abc_panel_menu_list_width</item>
-        <item name="pickerColorActivated">?colorAccent</item>
+        <item name="pickerColorActivated">@color/oneplus_accent_text_color</item>
         <item name="pickerColorUnActivated">@color/op_control_text_color_primary_dark</item>
         <item name="pickerInputLabelUnActivated">@color/op_control_text_color_secondary_dark</item>
         <item name="popupMenuStyle">@style/OnePlus.Widget.MaterialComponents.PopupMenu</item>
@@ -4517,7 +4528,7 @@
         <item name="switchStyle">@style/OnePlus.Base.Widget.AppCompat.CompoundButton.Switch</item>
         <item name="tabTextColorPrimary">@color/op_control_text_color_secondary_dark</item>
         <item name="tabTextColorSecondary">@color/op_control_text_color_primary_dark</item>
-        <item name="textAppearanceLargePopupMenu">@style/TextAppearance.AppCompat.Widget.PopupMenu.Large</item>
+        <item name="textAppearanceLargePopupMenu">@style/OnePlus.TextAppearance.AppCompat.Widget.PopupMenu.Large</item>
         <item name="textAppearanceListItem">@style/TextAppearance.AppCompat.Subhead</item>
         <item name="textAppearanceListItemSecondary">@style/TextAppearance.AppCompat.Body1</item>
         <item name="textAppearanceListItemSmall">@style/TextAppearance.AppCompat.Subhead</item>
@@ -4561,7 +4572,7 @@
     </style>
     <style name="Theme.OnePlus.DayNight.NoActionBar" parent="@style/Theme.OnePlus.Light.NoActionBar" />
     <style name="Theme.OnePlus.Light" parent="@style/Theme.MaterialComponents.Light">
-        <item name="android:textColorPrimary">?onePlusTextColorPrimary</item>
+        <item name="android:textColorPrimary">@color/op_control_text_color_primary_light</item>
         <item name="android:buttonStyle">@style/OnePlus.Widget.AppCompat.Button.Light</item>
         <item name="android:buttonStyleSmall">@style/OnePlus.Widget.AppCompat.Button.Small.Light</item>
         <item name="android:listPreferredItemHeight">@dimen/abc_list_item_height_material</item>
@@ -4602,7 +4613,7 @@
         <item name="android:actionModeCloseButtonStyle">@style/OnePlus.Widget.AppCompat.ActionButton.CloseMode</item>
         <item name="android:listPopupWindowStyle">@style/OnePlus.Widget.MaterialComponents.PopupMenu.ListPopupWindow</item>
         <item name="android:popupMenuStyle">@style/OnePlus.Widget.MaterialComponents.PopupMenu</item>
-        <item name="android:textAppearanceLargePopupMenu">@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large</item>
+        <item name="android:textAppearanceLargePopupMenu">@style/OnePlus.TextAppearance.AppCompat.Widget.PopupMenu.Large</item>
         <item name="android:textAppearanceSmallPopupMenu">@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Small</item>
         <item name="android:homeAsUpIndicator">@drawable/ic_title_bar_back</item>
         <item name="android:actionModeCutDrawable">@drawable/abc_ic_menu_cut_mtrl_alpha</item>
@@ -4648,6 +4659,7 @@
         <item name="android:listMenuViewStyle">@style/Widget.AppCompat.ListMenuView</item>
         <item name="android:textAppearancePopupMenuHeader">@style/TextAppearance.AppCompat.Widget.PopupMenu.Header</item>
         <item name="android:numberPickerStyle">@style/Widget.Material.Light.NumberPicker</item>
+        <item name="android:windowLightNavigationBar">true</item>
         <item name="actionBarDivider">?dividerVertical</item>
         <item name="actionBarItemBackground">@drawable/abc_action_bar_item_background_material</item>
         <item name="actionBarPopupTheme">@null</item>
@@ -4702,7 +4714,6 @@
         <item name="colorBackgroundFloating">@color/background_floating_material_light</item>
         <item name="colorControlActivated">?colorAccent</item>
         <item name="colorControlNormal">?android:textColorSecondary</item>
-        <item name="colorError">@color/error_color_material_light</item>
         <item name="colorPrimary">@color/primary_material_light</item>
         <item name="colorPrimaryDark">@color/op_control_bg_color_light</item>
         <item name="colorSwitchThumbNormal">@color/switch_thumb_material_light</item>
@@ -4732,7 +4743,7 @@
         <item name="listPreferredItemPaddingRight">@dimen/op_control_margin_screen_right1</item>
         <item name="listPreferredItemPaddingStart">@dimen/op_control_margin_screen_left3</item>
         <item name="numberPickerStyle">@style/Widget.Material.Light.NumberPicker</item>
-        <item name="onePlusActionBarTitleColor">?onePlusTextColorPrimary</item>
+        <item name="onePlusActionBarTitleColor">@color/op_control_text_color_primary_light</item>
         <item name="onePlusAppbarBgColor">@color/op_control_bg_color_light</item>
         <item name="onePlusBgColor">@color/op_control_bg_color_light</item>
         <item name="onePlusBgColorCard">@color/op_control_bg_color_card_light</item>
@@ -4749,10 +4760,12 @@
         <item name="onePlusColorButtonNormal">@color/op_btn_color_default_material</item>
         <item name="onePlusDividerColor">@color/op_control_divider_color_light</item>
         <item name="onePlusEmptyTextTitleColor">@color/op_control_empty_text_title_light</item>
+        <item name="onePlusIconCheckboxColorInactive">@color/op_control_icon_color_inactive_light</item>
         <item name="onePlusIconColorActive">@color/op_control_icon_color_active_light</item>
         <item name="onePlusIconColorDisable">@color/op_control_icon_color_disable_light</item>
         <item name="onePlusIconColorInactive">@color/op_control_icon_color_inactive_light</item>
         <item name="onePlusLabelStrokeColor">@color/op_control_accent_color_red_light</item>
+        <item name="onePlusPreferenceDividerColor">#2e000000</item>
         <item name="onePlusRippleColor">#1e000000</item>
         <item name="onePlusSearchBgColor">@color/op_control_hint_searchview_bg_light</item>
         <item name="onePlusSearchStrokeBgColor">@color/op_control_hint_searchview_bg_stroke_light</item>
@@ -4769,7 +4782,7 @@
         <item name="panelBackground">@drawable/abc_menu_hardkey_panel_mtrl_mult</item>
         <item name="panelMenuListTheme">@style/Theme.AppCompat.CompactMenu</item>
         <item name="panelMenuListWidth">@dimen/abc_panel_menu_list_width</item>
-        <item name="pickerColorActivated">?colorAccent</item>
+        <item name="pickerColorActivated">@color/oneplus_accent_text_color</item>
         <item name="pickerColorUnActivated">@color/op_control_text_color_primary_light</item>
         <item name="pickerInputLabelUnActivated">@color/op_control_text_color_secondary_light</item>
         <item name="popupMenuStyle">@style/OnePlus.Widget.MaterialComponents.PopupMenu</item>
@@ -4788,7 +4801,7 @@
         <item name="switchStyle">@style/OnePlus.Base.Widget.AppCompat.CompoundButton.Switch.Light</item>
         <item name="tabTextColorPrimary">@color/op_control_text_color_secondary_light</item>
         <item name="tabTextColorSecondary">@color/op_control_text_color_primary_light</item>
-        <item name="textAppearanceLargePopupMenu">@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large</item>
+        <item name="textAppearanceLargePopupMenu">@style/OnePlus.TextAppearance.AppCompat.Widget.PopupMenu.Large</item>
         <item name="textAppearanceListItem">@style/TextAppearance.AppCompat.Subhead</item>
         <item name="textAppearanceListItemSecondary">@style/TextAppearance.AppCompat.Body1</item>
         <item name="textAppearanceListItemSmall">@style/TextAppearance.AppCompat.Subhead</item>
@@ -5172,13 +5185,13 @@
     <style name="Widget.Design.Appbar.WithTab" parent="">
         <item name="android:background">?onePlusAppbarBgColor</item>
         <item name="android:minHeight">@dimen/op_app_bar_height_with_tab</item>
-        <item name="dividerColor">?onePlusDividerColor</item>
+        <item name="dividerColor">@color/op_control_divider_color_default</item>
         <item name="subtitleTextAppearance">@style/op_control_text_style_body1</item>
-        <item name="subtitleTextColor">?onePlusTextColorSecondary</item>
+        <item name="subtitleTextColor">@color/op_control_text_color_secondary_default</item>
         <item name="titleMarginStart">@dimen/op_control_margin_screen_left3</item>
         <item name="titleMode">normal</item>
         <item name="titleTextAppearance">@style/op_control_text_style_h5</item>
-        <item name="titleTextColor">?onePlusTextColorPrimary</item>
+        <item name="titleTextColor">@color/op_control_text_color_primary_default</item>
     </style>
     <style name="Widget.Design.Appbar.WithoutTab" parent="@style/Widget.Design.Appbar.WithTab">
         <item name="android:gravity">center_vertical</item>
@@ -5210,17 +5223,17 @@
         <item name="android:height">@dimen/op_app_bar_collapsing_height_with_tab</item>
         <item name="collapsedAppbarHeight">@dimen/op_app_bar_height_with_tab</item>
         <item name="collapsedSubtitleTextAppearance">@style/op_appbar_subtitle_style_body1</item>
-        <item name="collapsedSubtitleTextColor">?onePlusTextColorSecondary</item>
+        <item name="collapsedSubtitleTextColor">@color/op_control_text_color_secondary_default</item>
         <item name="collapsedTitleTextAppearance">@style/op_appbar_title_style_h5</item>
-        <item name="collapsedTitleTextColor">?onePlusTextColorPrimary</item>
+        <item name="collapsedTitleTextColor">@color/op_control_text_color_primary_default</item>
         <item name="expandedSubtitleTextAppearance">@style/op_appbar_subtitle_style_body1</item>
-        <item name="expandedSubtitleTextColor">?onePlusTextColorSecondary</item>
+        <item name="expandedSubtitleTextColor">@color/op_control_text_color_secondary_default</item>
         <item name="expandedTitleGravity">top</item>
         <item name="expandedTitleMarginEnd">@dimen/op_control_margin_screen_left3</item>
         <item name="expandedTitleMarginStart">@dimen/op_control_margin_screen_left3</item>
         <item name="expandedTitleMarginTop">@dimen/op_app_bar_margin_top</item>
         <item name="expandedTitleTextAppearance">@style/op_appbar_title_style_h1</item>
-        <item name="expandedTitleTextColor">?onePlusTextColorPrimary</item>
+        <item name="expandedTitleTextColor">@color/op_control_text_color_primary_default</item>
     </style>
     <style name="Widget.Design.CollapsingAppbarLayout.WithoutTab" parent="@style/Widget.Design.CollapsingAppbarLayout">
         <item name="android:minHeight">@dimen/op_app_bar_collapsing_height</item>
@@ -5255,7 +5268,7 @@
         <item name="itemIconPadding">@dimen/design_navigation_item_icon_padding</item>
     </style>
     <style name="Widget.Design.OPTextInputLayout" parent="@android:style/Widget">
-        <item name="android:textColorHint">?onePlusTextColorSecondary</item>
+        <item name="android:textColorHint">@color/op_control_text_color_secondary_default</item>
         <item name="counterOverflowTextAppearance">@style/TextAppearance.Design.Counter.Overflow</item>
         <item name="counterTextAppearance">@style/TextAppearance.Design.Counter</item>
         <item name="errorTextAppearance">@style/TextAppearance.Design.Error</item>
@@ -6637,72 +6650,63 @@
         <item name="android:colorAccent">@color/oneplus_accent_color</item>
     </style>
     <style name="op_appbar_subtitle_style_body1" parent="@style/op_control_text_style_body1">
-        <item name="android:textSize">@dimen/op_app_bar_subtitle_text_size</item>
+        <item name="android:textSize">@dimen/op_text_size_body1</item>
     </style>
     <style name="op_appbar_title_style_h1" parent="@style/op_control_text_style_h2">
         <item name="android:textSize">@dimen/op_app_bar_expand_text_size</item>
     </style>
     <style name="op_appbar_title_style_h5" parent="@style/op_control_text_style_h1">
-        <item name="android:textSize">@dimen/op_app_bar_collapsed_text_size</item>
+        <item name="android:textSize">@dimen/op_text_size_h5</item>
     </style>
     <style name="op_control_text_style_base">
         <item name="android:breakStrategy">simple</item>
     </style>
     <style name="op_control_text_style_body1" parent="@style/op_control_text_style_base">
-        <item name="android:textSize">13.0sp</item>
-        <item name="android:fontFamily">oneplus-sans-text-body-1</item>
-        <item name="android:textFontWeight">300</item>
+        <item name="android:textSize">@dimen/op_text_size_body1</item>
+        <item name="android:fontFamily">@string/op_control_font_text_body1</item>
     </style>
     <style name="op_control_text_style_button" parent="@style/op_control_text_style_base">
-        <item name="android:textSize">14.0sp</item>
-        <item name="android:fontFamily">oneplus-sans-text-button</item>
+        <item name="android:textSize">@dimen/op_text_size_button</item>
+        <item name="android:fontFamily">@string/op_control_font_text_button</item>
         <item name="android:textFontWeight">@integer/op_button_text_font_weight</item>
     </style>
     <style name="op_control_text_style_descriptions" parent="@style/op_control_text_style_base">
-        <item name="android:textSize">10.0sp</item>
-        <item name="android:fontFamily">oneplus-sans-text-description</item>
-        <item name="android:textFontWeight">400</item>
+        <item name="android:textSize">@dimen/op_text_size_descriptions</item>
+        <item name="android:fontFamily">@string/op_control_font_text_descriptions</item>
     </style>
     <style name="op_control_text_style_h1" parent="@style/op_control_text_style_base">
-        <item name="android:textSize">55.0sp</item>
+        <item name="android:textSize">@dimen/op_text_size_h1</item>
         <item name="android:lineSpacingMultiplier">@dimen/op_line_space_multiplier_h2</item>
-        <item name="android:fontFamily">oneplus-sans-display-h1</item>
-        <item name="android:textFontWeight">300</item>
+        <item name="android:fontFamily">@string/op_control_font_display_h1</item>
     </style>
     <style name="op_control_text_style_h2" parent="@style/op_control_text_style_base">
-        <item name="android:textSize">48.0sp</item>
+        <item name="android:textSize">@dimen/op_text_size_h2</item>
         <item name="android:lineSpacingMultiplier">@dimen/op_line_space_multiplier_h2</item>
-        <item name="android:fontFamily">oneplus-sans-display-h2</item>
-        <item name="android:textFontWeight">300</item>
+        <item name="android:fontFamily">@string/op_control_font_display_h2</item>
     </style>
     <style name="op_control_text_style_h3" parent="@style/op_control_text_style_base">
-        <item name="android:textSize">32.0sp</item>
-        <item name="android:fontFamily">oneplus-sans-display-h3</item>
-        <item name="android:textFontWeight">300</item>
+        <item name="android:textSize">@dimen/op_text_size_h3</item>
+        <item name="android:fontFamily">@string/op_control_font_display_h3</item>
     </style>
     <style name="op_control_text_style_h4" parent="@style/op_control_text_style_base">
-        <item name="android:textSize">28.0sp</item>
-        <item name="android:fontFamily">oneplus-sans-text-h4</item>
-        <item name="android:textFontWeight">200</item>
+        <item name="android:textSize">@dimen/op_text_size_h4</item>
+        <item name="android:fontFamily">@string/op_control_font_text_h4</item>
     </style>
     <style name="op_control_text_style_h5" parent="@style/op_control_text_style_base">
         <item name="android:textSize">@dimen/op_text_size_h5</item>
-        <item name="android:fontFamily">oneplus-sans-text-h5</item>
-        <item name="android:textFontWeight">300</item>
+        <item name="android:fontFamily">@string/op_control_font_text_h5</item>
     </style>
     <style name="op_control_text_style_h6" parent="@style/op_control_text_style_base">
-        <item name="android:textSize">16.0sp</item>
-        <item name="android:fontFamily">oneplus-sans-text-h6</item>
-        <item name="android:textFontWeight">300</item>
+        <item name="android:textSize">@dimen/op_text_size_h6</item>
+        <item name="android:fontFamily">@string/op_control_font_text_h6</item>
     </style>
     <style name="op_control_text_style_h6_local" parent="@style/oneplus_contorl_text_style_base">
-        <item name="android:textSize">16.0sp</item>
-        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:fontFamily">@font/oneplus_font_text_45lt</item>
     </style>
     <style name="op_control_text_style_subtitle" parent="@style/op_control_text_style_base">
-        <item name="android:textSize">13.0sp</item>
-        <item name="android:fontFamily">oneplus-sans-text-subtitle</item>
-        <item name="android:textFontWeight">300</item>
+        <item name="android:textSize">@dimen/op_text_size_subtitle</item>
+        <item name="android:fontFamily">@string/op_control_font_text_subtitle</item>
     </style>
     <style name="op_edit_theme_android" parent="@style/qs_theme">
         <item name="android:colorBackground">?android:colorSecondary</item>
@@ -6717,7 +6721,7 @@
         <item name="android:textColor">@color/oneplus_contorl_text_color_primary_light</item>
     </style>
     <style name="op_notificaiton_header_text">
-        <item name="android:textSize">10.0dip</item>
+        <item name="android:textSize">@dimen/op_notificaiton_header_text_size</item>
         <item name="android:textColor">@color/op_notification_info_primary_color</item>
         <item name="android:fontFamily">sans-serif-regular</item>
     </style>
@@ -6817,6 +6821,7 @@
     <style name="ssc_texts">
         <item name="android:textSize">@dimen/ssc_text_size</item>
         <item name="android:textColor">#ffcccccc</item>
+        <item name="android:fontFamily">google_sans_medium</item>
     </style>
     <style name="systemui_theme_remote_input" parent="@android:style/Theme.DeviceDefault.Light">
         <item name="android:colorAccent">@color/remote_input_accent</item>

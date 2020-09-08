@@ -485,6 +485,12 @@
 
     move-result-object p2
 
+    const-string v0, "SplitScreenTaskOrganizer.onTaskAppeared"
+
+    invoke-virtual {p2, v0}, Landroid/view/SurfaceControl$Builder;->setCallsite(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
+
+    move-result-object p2
+
     invoke-virtual {p2}, Landroid/view/SurfaceControl$Builder;->build()Landroid/view/SurfaceControl;
 
     move-result-object p2
@@ -510,6 +516,12 @@
     const-string v0, "Secondary Divider Dim"
 
     invoke-virtual {p2, v0}, Landroid/view/SurfaceControl$Builder;->setName(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
+
+    move-result-object p2
+
+    const-string v0, "SplitScreenTaskOrganizer.onTaskAppeared"
+
+    invoke-virtual {p2, v0}, Landroid/view/SurfaceControl$Builder;->setCallsite(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
 
     move-result-object p2
 
@@ -569,10 +581,6 @@
 
     invoke-virtual {p0, p2}, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->releaseTransaction(Landroid/view/SurfaceControl$Transaction;)V
 
-    iget-object p1, p0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mDivider:Lcom/android/systemui/stackdivider/Divider;
-
-    invoke-virtual {p1}, Lcom/android/systemui/stackdivider/Divider;->onTasksReady()V
-
     :cond_3
     monitor-exit p0
 
@@ -614,6 +622,26 @@
 
 .method public onTaskInfoChanged(Landroid/app/ActivityManager$RunningTaskInfo;)V
     .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "onTaskInfoChanged: , taskInfo.displayId:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p1, Landroid/app/ActivityManager$RunningTaskInfo;->displayId:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "SplitScreenTaskOrg"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     iget v0, p1, Landroid/app/ActivityManager$RunningTaskInfo;->displayId:I
 

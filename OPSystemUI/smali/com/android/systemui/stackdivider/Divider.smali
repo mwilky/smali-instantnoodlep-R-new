@@ -386,7 +386,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$growRecents$6(Ldagger/Lazy;)V
+.method static synthetic lambda$growRecents$5(Ldagger/Lazy;)V
     .locals 0
 
     invoke-interface {p0}, Ldagger/Lazy;->get()Ljava/lang/Object;
@@ -551,35 +551,7 @@
     return-void
 .end method
 
-.method private synthetic lambda$onTasksReady$1()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/android/systemui/stackdivider/Divider;->mDisplayController:Lcom/android/systemui/wm/DisplayController;
-
-    iget-object v1, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getDisplayId()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lcom/android/systemui/wm/DisplayController;->getDisplayContext(I)Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v0
-
-    invoke-direct {p0, v0}, Lcom/android/systemui/stackdivider/Divider;->update(Landroid/content/res/Configuration;)V
-
-    return-void
-.end method
-
-.method private synthetic lambda$setMinimized$5(Z)V
+.method private synthetic lambda$setMinimized$4(Z)V
     .locals 1
 
     iget-boolean v0, p0, Lcom/android/systemui/stackdivider/Divider;->mVisible:Z
@@ -596,7 +568,7 @@
     return-void
 .end method
 
-.method private synthetic lambda$updateVisibility$2(Landroid/view/SurfaceControl$Transaction;)V
+.method private synthetic lambda$updateVisibility$1(Landroid/view/SurfaceControl$Transaction;)V
     .locals 2
 
     iget-object v0, p0, Lcom/android/systemui/stackdivider/Divider;->mView:Lcom/android/systemui/stackdivider/DividerView;
@@ -610,7 +582,7 @@
     return-void
 .end method
 
-.method private synthetic lambda$updateVisibility$3(Landroid/view/SurfaceControl$Transaction;)V
+.method private synthetic lambda$updateVisibility$2(Landroid/view/SurfaceControl$Transaction;)V
     .locals 2
 
     iget-object v0, p0, Lcom/android/systemui/stackdivider/Divider;->mView:Lcom/android/systemui/stackdivider/DividerView;
@@ -624,7 +596,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$updateVisibility$4(ZLjava/lang/ref/WeakReference;)Z
+.method static synthetic lambda$updateVisibility$3(ZLjava/lang/ref/WeakReference;)Z
     .locals 0
 
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -855,6 +827,36 @@
     const/4 v0, 0x0
 
     :goto_0
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v3, "update, isDividerHidden:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v3, ", stack: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v3, 0x7
+
+    invoke-static {v3}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "Divider"
+
+    invoke-static {v3, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
     invoke-direct {p0}, Lcom/android/systemui/stackdivider/Divider;->removeDivider()V
 
     invoke-direct {p0, p1}, Lcom/android/systemui/stackdivider/Divider;->addDivider(Landroid/content/res/Configuration;)V
@@ -928,9 +930,9 @@
 
     iget-object v0, p0, Lcom/android/systemui/stackdivider/Divider;->mWindowManagerProxy:Lcom/android/systemui/stackdivider/WindowManagerProxy;
 
-    new-instance v1, Lcom/android/systemui/stackdivider/-$$Lambda$Divider$VIerqJCgwVozy2YX14uply8NzWc;
+    new-instance v1, Lcom/android/systemui/stackdivider/-$$Lambda$Divider$PFK1wU0r4FZbucBwkJAZvajxzCU;
 
-    invoke-direct {v1, p0}, Lcom/android/systemui/stackdivider/-$$Lambda$Divider$VIerqJCgwVozy2YX14uply8NzWc;-><init>(Lcom/android/systemui/stackdivider/Divider;)V
+    invoke-direct {v1, p0}, Lcom/android/systemui/stackdivider/-$$Lambda$Divider$PFK1wU0r4FZbucBwkJAZvajxzCU;-><init>(Lcom/android/systemui/stackdivider/Divider;)V
 
     invoke-virtual {v0, v1}, Lcom/android/systemui/stackdivider/WindowManagerProxy;->runInSync(Lcom/android/systemui/stackdivider/SyncTransactionQueue$TransactionRunnable;)V
 
@@ -943,9 +945,9 @@
 
     iget-object v0, p0, Lcom/android/systemui/stackdivider/Divider;->mWindowManagerProxy:Lcom/android/systemui/stackdivider/WindowManagerProxy;
 
-    new-instance v1, Lcom/android/systemui/stackdivider/-$$Lambda$Divider$iNWuxMXAFLjBEKXpcl-B7PNrayU;
+    new-instance v1, Lcom/android/systemui/stackdivider/-$$Lambda$Divider$VIerqJCgwVozy2YX14uply8NzWc;
 
-    invoke-direct {v1, p0}, Lcom/android/systemui/stackdivider/-$$Lambda$Divider$iNWuxMXAFLjBEKXpcl-B7PNrayU;-><init>(Lcom/android/systemui/stackdivider/Divider;)V
+    invoke-direct {v1, p0}, Lcom/android/systemui/stackdivider/-$$Lambda$Divider$VIerqJCgwVozy2YX14uply8NzWc;-><init>(Lcom/android/systemui/stackdivider/Divider;)V
 
     invoke-virtual {v0, v1}, Lcom/android/systemui/stackdivider/WindowManagerProxy;->runInSync(Lcom/android/systemui/stackdivider/SyncTransactionQueue$TransactionRunnable;)V
 
@@ -957,9 +959,9 @@
     :try_start_0
     iget-object p0, p0, Lcom/android/systemui/stackdivider/Divider;->mDockedStackExistsListeners:Ljava/util/ArrayList;
 
-    new-instance v1, Lcom/android/systemui/stackdivider/-$$Lambda$Divider$QdyBem7W-q0C60LFX3ncR6HAt_A;
+    new-instance v1, Lcom/android/systemui/stackdivider/-$$Lambda$Divider$fg71CWqbbHGuQEcI_sx-8tNWcJg;
 
-    invoke-direct {v1, p1}, Lcom/android/systemui/stackdivider/-$$Lambda$Divider$QdyBem7W-q0C60LFX3ncR6HAt_A;-><init>(Z)V
+    invoke-direct {v1, p1}, Lcom/android/systemui/stackdivider/-$$Lambda$Divider$fg71CWqbbHGuQEcI_sx-8tNWcJg;-><init>(Z)V
 
     invoke-virtual {p0, v1}, Ljava/util/ArrayList;->removeIf(Ljava/util/function/Predicate;)Z
 
@@ -1022,6 +1024,10 @@
 
     invoke-direct {p0, v1, v0}, Lcom/android/systemui/stackdivider/Divider;->setHomeMinimized(ZZ)V
 
+    iget-object v0, p0, Lcom/android/systemui/stackdivider/Divider;->mView:Lcom/android/systemui/stackdivider/DividerView;
+
+    if-eqz v0, :cond_0
+
     invoke-virtual {p0}, Lcom/android/systemui/stackdivider/Divider;->isDividerVisible()Z
 
     move-result v0
@@ -1042,6 +1048,10 @@
     const/4 v1, 0x0
 
     invoke-direct {p0, v1, v0}, Lcom/android/systemui/stackdivider/Divider;->setHomeMinimized(ZZ)V
+
+    iget-object v0, p0, Lcom/android/systemui/stackdivider/Divider;->mView:Lcom/android/systemui/stackdivider/DividerView;
+
+    if-eqz v0, :cond_0
 
     invoke-virtual {p0}, Lcom/android/systemui/stackdivider/Divider;->isDividerVisible()Z
 
@@ -1155,7 +1165,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/stackdivider/Divider;->mRecentsOptionalLazy:Ljava/util/Optional;
 
-    sget-object v0, Lcom/android/systemui/stackdivider/-$$Lambda$Divider$6JJV9QST9c3J9BXK0tkOp1I5H8g;->INSTANCE:Lcom/android/systemui/stackdivider/-$$Lambda$Divider$6JJV9QST9c3J9BXK0tkOp1I5H8g;
+    sget-object v0, Lcom/android/systemui/stackdivider/-$$Lambda$Divider$kUReJvdE1s1BPD9HklZ-GjPX7dM;->INSTANCE:Lcom/android/systemui/stackdivider/-$$Lambda$Divider$kUReJvdE1s1BPD9HklZ-GjPX7dM;
 
     invoke-virtual {p0, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -1210,18 +1220,18 @@
     return-void
 .end method
 
-.method public synthetic lambda$onTasksReady$1$Divider()V
+.method public synthetic lambda$setMinimized$4$Divider(Z)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/systemui/stackdivider/Divider;->lambda$onTasksReady$1()V
+    invoke-direct {p0, p1}, Lcom/android/systemui/stackdivider/Divider;->lambda$setMinimized$4(Z)V
 
     return-void
 .end method
 
-.method public synthetic lambda$setMinimized$5$Divider(Z)V
+.method public synthetic lambda$updateVisibility$1$Divider(Landroid/view/SurfaceControl$Transaction;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/systemui/stackdivider/Divider;->lambda$setMinimized$5(Z)V
+    invoke-direct {p0, p1}, Lcom/android/systemui/stackdivider/Divider;->lambda$updateVisibility$1(Landroid/view/SurfaceControl$Transaction;)V
 
     return-void
 .end method
@@ -1230,14 +1240,6 @@
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/systemui/stackdivider/Divider;->lambda$updateVisibility$2(Landroid/view/SurfaceControl$Transaction;)V
-
-    return-void
-.end method
-
-.method public synthetic lambda$updateVisibility$3$Divider(Landroid/view/SurfaceControl$Transaction;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/systemui/stackdivider/Divider;->lambda$updateVisibility$3(Landroid/view/SurfaceControl$Transaction;)V
 
     return-void
 .end method
@@ -1368,7 +1370,7 @@
 .method public onDisplayConfigurationChanged(ILandroid/content/res/Configuration;)V
     .locals 3
 
-    if-nez p1, :cond_3
+    if-nez p1, :cond_4
 
     iget-object v0, p0, Lcom/android/systemui/stackdivider/Divider;->mSplits:Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;
 
@@ -1474,10 +1476,49 @@
 
     :cond_2
     :goto_0
+    invoke-direct {p0}, Lcom/android/systemui/stackdivider/Divider;->isSplitActive()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
     invoke-direct {p0, p2}, Lcom/android/systemui/stackdivider/Divider;->update(Landroid/content/res/Configuration;)V
 
     :cond_3
+    return-void
+
+    :cond_4
     :goto_1
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "onDisplayConfigurationChanged return, displayId:"
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, ", mSplits.isSplitScreenSupported():"
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p0, p0, Lcom/android/systemui/stackdivider/Divider;->mSplits:Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;
+
+    invoke-virtual {p0}, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->isSplitScreenSupported()Z
+
+    move-result p0
+
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string p1, "Divider"
+
+    invoke-static {p1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
 .end method
 
@@ -1548,20 +1589,6 @@
     new-instance v1, Lcom/android/systemui/stackdivider/-$$Lambda$Divider$JQC7s2DcACmP1thtllRZ30N2PIw;
 
     invoke-direct {v1, p0}, Lcom/android/systemui/stackdivider/-$$Lambda$Divider$JQC7s2DcACmP1thtllRZ30N2PIw;-><init>(Lcom/android/systemui/stackdivider/Divider;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-.end method
-
-.method onTasksReady()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/android/systemui/stackdivider/Divider;->mHandler:Landroid/os/Handler;
-
-    new-instance v1, Lcom/android/systemui/stackdivider/-$$Lambda$Divider$CWGPNc_cyNf-EBr3UqX3bXRUxyM;
-
-    invoke-direct {v1, p0}, Lcom/android/systemui/stackdivider/-$$Lambda$Divider$CWGPNc_cyNf-EBr3UqX3bXRUxyM;-><init>(Lcom/android/systemui/stackdivider/Divider;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -1651,9 +1678,9 @@
 
     iget-object v0, p0, Lcom/android/systemui/stackdivider/Divider;->mHandler:Landroid/os/Handler;
 
-    new-instance v1, Lcom/android/systemui/stackdivider/-$$Lambda$Divider$hL5Bpl1FQl89tq2CiL7EP4tzVSk;
+    new-instance v1, Lcom/android/systemui/stackdivider/-$$Lambda$Divider$qaeq-4YZm8Jheg2TUOpTbHIkGx8;
 
-    invoke-direct {v1, p0, p1}, Lcom/android/systemui/stackdivider/-$$Lambda$Divider$hL5Bpl1FQl89tq2CiL7EP4tzVSk;-><init>(Lcom/android/systemui/stackdivider/Divider;Z)V
+    invoke-direct {v1, p0, p1}, Lcom/android/systemui/stackdivider/-$$Lambda$Divider$qaeq-4YZm8Jheg2TUOpTbHIkGx8;-><init>(Lcom/android/systemui/stackdivider/Divider;Z)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

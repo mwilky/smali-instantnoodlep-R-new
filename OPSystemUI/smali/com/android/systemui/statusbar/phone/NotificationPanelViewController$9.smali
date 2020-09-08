@@ -41,7 +41,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p0, v0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$2602(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;Z)Z
+    invoke-static {p0, v0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$2702(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;Z)Z
 
     return-void
 .end method

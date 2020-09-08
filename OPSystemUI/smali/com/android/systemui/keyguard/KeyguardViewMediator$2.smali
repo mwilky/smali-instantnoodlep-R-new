@@ -349,10 +349,6 @@
 
     if-ne v5, v4, :cond_5
 
-    if-eq p3, v3, :cond_5
-
-    if-eq p3, v2, :cond_5
-
     invoke-static {}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->access$1100()Landroid/util/SparseIntArray;
 
     move-result-object v5

@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nMediaDataCombineLatest.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaDataCombineLatest.kt\ncom/android/systemui/media/MediaDataCombineLatest\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,90:1\n1591#2,2:91\n1591#2,2:93\n*E\n*S KotlinDebug\n*F\n+ 1 MediaDataCombineLatest.kt\ncom/android/systemui/media/MediaDataCombineLatest\n*L\n75#1,2:91\n82#1,2:93\n*E\n"
+    value = "SMAP\nMediaDataCombineLatest.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaDataCombineLatest.kt\ncom/android/systemui/media/MediaDataCombineLatest\n+ 2 Maps.kt\nkotlin/collections/MapsKt__MapsKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,101:1\n461#2:102\n446#2,6:103\n388#2:109\n338#2:110\n1102#3,4:111\n1591#3,2:115\n1591#3,2:117\n*E\n*S KotlinDebug\n*F\n+ 1 MediaDataCombineLatest.kt\ncom/android/systemui/media/MediaDataCombineLatest\n*L\n64#1:102\n64#1,6:103\n66#1:109\n66#1:110\n66#1,4:111\n86#1,2:115\n93#1,2:117\n*E\n"
 .end annotation
 
 
@@ -164,7 +164,7 @@
 .end method
 
 .method private final update(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 25
+    .locals 26
 
     move-object/from16 v0, p0
 
@@ -202,13 +202,13 @@
 
     move-result-object v2
 
-    move-object/from16 v17, v2
+    move-object/from16 v18, v2
 
-    check-cast v17, Lcom/android/systemui/media/MediaDeviceData;
+    check-cast v18, Lcom/android/systemui/media/MediaDeviceData;
 
     if-eqz v4, :cond_1
 
-    if-eqz v17, :cond_1
+    if-eqz v18, :cond_1
 
     const/4 v5, 0x0
 
@@ -234,7 +234,7 @@
 
     const/16 v16, 0x0
 
-    const/16 v18, 0x0
+    const/16 v17, 0x0
 
     const/16 v19, 0x0
 
@@ -244,11 +244,13 @@
 
     const/16 v22, 0x0
 
-    const v23, 0x3efff
+    const/16 v23, 0x0
 
-    const/16 v24, 0x0
+    const v24, 0x7dfff
 
-    invoke-static/range {v4 .. v24}, Lcom/android/systemui/media/MediaData;->copy$default(Lcom/android/systemui/media/MediaData;ZILjava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/drawable/Icon;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Landroid/media/session/MediaSession$Token;Landroid/app/PendingIntent;Lcom/android/systemui/media/MediaDeviceData;ZLjava/lang/Runnable;ZLjava/lang/String;ZILjava/lang/Object;)Lcom/android/systemui/media/MediaData;
+    const/16 v25, 0x0
+
+    invoke-static/range {v4 .. v25}, Lcom/android/systemui/media/MediaData;->copy$default(Lcom/android/systemui/media/MediaData;IZILjava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/drawable/Icon;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Landroid/media/session/MediaSession$Token;Landroid/app/PendingIntent;Lcom/android/systemui/media/MediaDeviceData;ZLjava/lang/Runnable;ZLjava/lang/String;ZILjava/lang/Object;)Lcom/android/systemui/media/MediaData;
 
     move-result-object v2
 
@@ -307,22 +309,220 @@
     return p0
 .end method
 
-.method public final removeListener(Lcom/android/systemui/media/MediaDataManager$Listener;)Z
-    .locals 1
-    .param p1    # Lcom/android/systemui/media/MediaDataManager$Listener;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
+.method public final getData()Ljava/util/Map;
+    .locals 27
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Lcom/android/systemui/media/MediaData;",
+            ">;"
+        }
+    .end annotation
 
-    const-string v0, "listener"
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    move-object/from16 v0, p0
 
-    iget-object p0, p0, Lcom/android/systemui/media/MediaDataCombineLatest;->listeners:Ljava/util/Set;
+    iget-object v0, v0, Lcom/android/systemui/media/MediaDataCombineLatest;->entries:Ljava/util/Map;
 
-    invoke-interface {p0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+    new-instance v1, Ljava/util/LinkedHashMap;
 
-    move-result p0
+    invoke-direct {v1}, Ljava/util/LinkedHashMap;-><init>()V
 
-    return p0
+    invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/Map$Entry;
+
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/String;
+
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lkotlin/Pair;
+
+    invoke-virtual {v3}, Lkotlin/Pair;->getFirst()Ljava/lang/Object;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_1
+
+    invoke-virtual {v3}, Lkotlin/Pair;->getSecond()Ljava/lang/Object;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_1
+
+    const/4 v3, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v3, 0x0
+
+    :goto_1
+    if-eqz v3, :cond_0
+
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-interface {v1, v3, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_2
+    new-instance v0, Ljava/util/LinkedHashMap;
+
+    invoke-interface {v1}, Ljava/util/Map;->size()I
+
+    move-result v2
+
+    invoke-static {v2}, Lkotlin/collections/MapsKt;->mapCapacity(I)I
+
+    move-result v2
+
+    invoke-direct {v0, v2}, Ljava/util/LinkedHashMap;-><init>(I)V
+
+    invoke-interface {v1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_2
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/Map$Entry;
+
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/String;
+
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lkotlin/Pair;
+
+    invoke-virtual {v2}, Lkotlin/Pair;->getFirst()Ljava/lang/Object;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_3
+
+    move-object v5, v4
+
+    check-cast v5, Lcom/android/systemui/media/MediaData;
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x0
+
+    const/4 v12, 0x0
+
+    const/4 v13, 0x0
+
+    const/4 v14, 0x0
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0x0
+
+    const/16 v17, 0x0
+
+    const/16 v18, 0x0
+
+    invoke-virtual {v2}, Lkotlin/Pair;->getSecond()Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object/from16 v19, v2
+
+    check-cast v19, Lcom/android/systemui/media/MediaDeviceData;
+
+    const/16 v20, 0x0
+
+    const/16 v21, 0x0
+
+    const/16 v22, 0x0
+
+    const/16 v23, 0x0
+
+    const/16 v24, 0x0
+
+    const v25, 0x7dfff
+
+    const/16 v26, 0x0
+
+    invoke-static/range {v5 .. v26}, Lcom/android/systemui/media/MediaData;->copy$default(Lcom/android/systemui/media/MediaData;IZILjava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/drawable/Icon;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Landroid/media/session/MediaSession$Token;Landroid/app/PendingIntent;Lcom/android/systemui/media/MediaDeviceData;ZLjava/lang/Runnable;ZLjava/lang/String;ZILjava/lang/Object;)Lcom/android/systemui/media/MediaData;
+
+    move-result-object v2
+
+    invoke-interface {v0, v3, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_2
+
+    :cond_3
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->throwNpe()V
+
+    const/4 v0, 0x0
+
+    throw v0
+
+    :cond_4
+    return-object v0
 .end method

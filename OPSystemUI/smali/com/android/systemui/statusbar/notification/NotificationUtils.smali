@@ -1,5 +1,5 @@
 .class public Lcom/android/systemui/statusbar/notification/NotificationUtils;
-.super Ljava/lang/Object;
+.super Lcom/oneplus/systemui/statusbar/notification/OpNotificationUtils;
 .source "NotificationUtils.java"
 
 
@@ -199,42 +199,13 @@
 .end method
 
 .method public static isGrayscale(Landroid/widget/ImageView;Lcom/android/internal/util/ContrastColorUtil;)Z
-    .locals 2
+    .locals 0
 
-    sget v0, Lcom/android/systemui/R$id;->icon_is_grayscale:I
-
-    invoke-virtual {p0, v0}, Landroid/widget/ImageView;->getTag(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    sget-object p0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-virtual {p0, v0}, Ljava/lang/Boolean;->equals(Ljava/lang/Object;)Z
+    invoke-static {p0, p1}, Lcom/oneplus/systemui/statusbar/notification/OpNotificationUtils;->isGrayscaleInternal(Landroid/widget/ImageView;Lcom/android/internal/util/ContrastColorUtil;)Z
 
     move-result p0
 
     return p0
-
-    :cond_0
-    invoke-virtual {p0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lcom/android/internal/util/ContrastColorUtil;->isGrayscaleIcon(Landroid/graphics/drawable/Drawable;)Z
-
-    move-result p1
-
-    sget v0, Lcom/android/systemui/R$id;->icon_is_grayscale:I
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v0, v1}, Landroid/widget/ImageView;->setTag(ILjava/lang/Object;)V
-
-    return p1
 .end method
 
 .method public static useNewInterruptionModel(Landroid/content/Context;)Z

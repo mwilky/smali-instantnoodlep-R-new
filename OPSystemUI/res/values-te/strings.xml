@@ -39,6 +39,11 @@
     <string name="abc_slice_updated">అప్‌డేట్ చేసిన సమయం %1$s</string>
     <string name="abc_slices_permission_request">%1$s %2$s స్లైస్‌లను చూపించాలనుకుంటోంది</string>
     <string name="abc_toolbar_collapse_description">కుదిస్తుంది</string>
+    <string name="about_action_bar_title">పరిచయం</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">గోప్యతా విధానం</string>
+    <string name="about_release_note_title">అప్‌డేట్ లాగ్:</string>
+    <string name="about_terms_service">సేవా నిబంధనలు</string>
     <string name="accessibility_accessibility_button">యాక్సెస్ సామర్థ్యం</string>
     <string name="accessibility_action_divider_bottom_full">దిగువ పూర్తి స్క్రీన్</string>
     <string name="accessibility_action_divider_left_30">ఎడమవైపు 30%</string>
@@ -267,7 +272,7 @@
     <string name="accessibility_wimax_signal_full">WiMAX సిగ్నల్ పూర్తిగా ఉంది.</string>
     <string name="accessibility_wimax_three_bars">WiMAX మూడు బార్‌లు కలిగి ఉంది.</string>
     <string name="accessibility_wimax_two_bars">WiMAX రెండు బార్‌లు కలిగి ఉంది.</string>
-    <string name="accessibility_work_life_balance_mode">కార్యాలయ జీవితం సమతుల్యత</string>
+    <string name="accessibility_work_life_balance_mode">Work Life Balance</string>
     <string name="accessibility_work_life_balance_mode_off">వర్క్ లైఫ్ బ్యాలెన్స్ మోడ్ ఆఫ్ చేయబడింది.</string>
     <string name="accessibility_work_life_balance_mode_on">వర్క్ లైఫ్ బ్యాలెన్స్ మోడ్ ఆన్ చేయబడింది.</string>
     <string name="accessibility_zero_bars">సున్నా బార్‌లు.</string>
@@ -577,7 +582,7 @@
     <string name="connected_via_network_scorer_default">నెట్‌వర్క్ రేటింగ్ ప్రదాత ద్వారా స్వయంచాలకంగా కనెక్ట్ చేయబడింది</string>
     <string name="connected_via_passpoint">%1$s ద్వారా కనెక్ట్ చేయబడింది</string>
     <string name="content_description_menu_button">మెను</string>
-    <string name="continue_call">కొనసాగు</string>
+    <string name="continue_call">కొనసాగించండి</string>
     <string name="controls_added_tooltip">కొత్త నియంత్రణలను చూడడానికి పవర్ బటన్‌ని నొక్కి పట్టుకోండి</string>
     <string name="controls_confirmation_confirming">నిర్ధారిస్తోంది...</string>
     <string name="controls_confirmation_message">%sకి సంబంధించి మార్పును నిర్ధారించండి</string>
@@ -598,6 +603,7 @@
     <string name="controls_favorite_other_zone_header">ఇతరం</string>
     <string name="controls_favorite_rearrange">నియంత్రణల క్రమం మార్చడానికి దేనినైనా పట్టుకుని, లాగి వదిలేయండి</string>
     <string name="controls_favorite_removed">అన్ని నియంత్రణలు తీసివేయబడ్డాయి</string>
+    <string name="controls_favorite_see_other_apps">ఇతర యాప్‌లను చూడండి</string>
     <string name="controls_favorite_subtitle">పవర్ మెనూ నుండి యాక్సెస్ చేయడానికి నియంత్రణలను ఎంచుకోండి</string>
     <string name="controls_favorite_toast_no_changes">మార్పులు సేవ్ చేయబడలేదు</string>
     <string name="controls_in_progress">పురోగతిలో ఉంది</string>
@@ -696,8 +702,8 @@
     <string name="disable_carrier_button_text">eSIMని నిలిపివేయండి</string>
     <string name="disable_overlays">HW ప్రదర్శనలను నిలిపివేయి</string>
     <string name="disable_overlays_summary">స్క్రీన్ కంపాజిటింగ్‌కు ఎల్లప్పుడూ GPUని ఉపయోగించు</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">వివరాల కోసం మీ నిర్వాహకుడిని సంప్రదించండి</string>
+    <string name="disable_tether_notification_title">టీథరింగ్ నిలిపివేయబడింది</string>
     <string name="disable_vpn">VPNని నిలిపివేయి</string>
     <string name="disabled">నిలిపివేయబడింది</string>
     <string name="disabled_by_admin">అడ్మిన్ డిజేబుల్ చేశారు</string>
@@ -705,6 +711,8 @@
     <string name="disconnect_vpn">VPNను డిస్‌కనెక్ట్ చేయి</string>
     <string name="dnd_is_off">అంతరాయం కలిగించవద్దు ఆఫ్‌లో ఉంది</string>
     <string name="dnd_suppressing_shade_text">అంతరాయం కలిగించవద్దు ద్వారా నోటిఫికేషన్‌లు పాజ్ చేయబడ్డాయి</string>
+    <string name="do_disclosure_generic">ఈ పరికరం మీ సంస్థకు చెందినది</string>
+    <string name="do_disclosure_with_name">ఈ పరికరం %sకు చెందినది</string>
     <string name="do_not_silence">నిశ్శబ్దం చేయవద్దు</string>
     <string name="do_not_silence_block">నిశ్శబ్దం చేయవద్దు లేదా బ్లాక్ చేయవద్దు</string>
     <string name="dock_alignment_not_charging">వైర్‌లెస్‌లో ఛార్జ్ కావడానికి ఫోన్‌ను సరిగ్గా అమర్చండి</string>
@@ -715,6 +723,7 @@
     <string name="drag_to_rearrange_tiles">టైల్‌ల క్రమం మార్చడానికి వాటిని పట్టుకుని, లాగండి</string>
     <string name="drag_to_remove_disabled">మీ వద్ద కనీసం %1$d టైల్‌లు ఉండాలి</string>
     <string name="drag_to_remove_tiles">తీసివేయడానికి ఇక్కడికి లాగండి</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">మళ్లీ క్రమాన్ని మార్చడానికి టైల్‌లను లాగండి. చూపడానికి లేదా దాచడానికి ట్యాప్ చేయండి.</string>
     <string name="empty_shade_text">నోటిఫికేషన్‌లు లేవు</string>
     <string name="enable_adb">USB డీబగ్గింగ్</string>
@@ -1090,6 +1099,7 @@
     <string name="left_nav_bar_button_type">అత్యంత ఎడమ వైపు ఉన్న బటన్ రకం</string>
     <string name="legacy_vpn_name">VPN</string>
     <string name="loading_injected_setting_summary">లోడ్ చేస్తోంది…</string>
+    <string name="loading_text">లోడ్ అవుతోంది...</string>
     <string name="local_backup_password_summary_change">డెస్క్‌టాప్ పూర్తి బ్యాకప్‌ల కోసం పాస్‌వర్డ్‌ను మార్చడానికి లేదా తీసివేయడానికి నొక్కండి</string>
     <string name="local_backup_password_summary_none">డెస్క్‌టాప్ పూర్తి బ్యాకప్‌లు ప్రస్తుతం రక్షించబడలేదు</string>
     <string name="local_backup_password_title">డెస్క్‌టాప్ బ్యాకప్ పాస్‌వర్డ్</string>
@@ -1108,11 +1118,11 @@
     <string name="magnification_controls_title">మాగ్నిఫికేషన్ నియంత్రణల విండో</string>
     <string name="magnification_overlay_title">మాగ్నిఫికేషన్ ఓవర్‌లే విండో</string>
     <string name="magnification_window_title">మాగ్నిఫికేషన్ విండో</string>
-    <string name="manage_bubbles_text">నిర్వహించండి</string>
+    <string name="manage_bubbles_text">మేనేజ్ చేయండి</string>
     <string name="manage_notifications_history_text">చరిత్ర</string>
-    <string name="manage_notifications_text">నిర్వహించండి</string>
+    <string name="manage_notifications_text">మేనేజ్ చేయండి</string>
     <string name="managed_user_title">అన్ని కార్యాలయ అనువర్తనాలు</string>
-    <string name="maxxaudio_disable">నిలిపివేయి</string>
+    <string name="maxxaudio_disable">డిసేబుల్ చేయండి</string>
     <string name="maxxaudio_enable">ప్రారంభించు</string>
     <string name="media_category">మీడియా</string>
     <string name="media_projection_action_text">ఇప్పుడే ప్రారంభించు</string>
@@ -1174,8 +1184,18 @@
     <string name="monitoring_description_do_learn_more_separator">" "</string>
     <string name="monitoring_description_managed_profile_ca_certificate">మీ కార్యాలయ ప్రొఫైల్‌లో మీ సంస్థ ఒక ప్రమాణపత్ర అధికారాన్ని ఇన్‌స్టాల్ చేసింది. మీ సురక్షిత నెట్‌వర్క్ ట్రాఫిక్ పర్యవేక్షించబడవచ్చు లేదా సవరించబడవచ్చు.</string>
     <string name="monitoring_description_managed_profile_named_vpn">మీ కార్యాలయ ప్రొఫైల్ ఇమెయిల్‌లు, అనువర్తనాలు మరియు వెబ్‌సైట్‌లతో సహా మీ నెట్‌వర్క్ కార్యాచరణను పర్యవేక్షించగల %1$sకి కనెక్ట్ చేయబడింది.</string>
+    <string name="monitoring_description_management">"ఈ పరికరం మీ సంస్థకు చెందినది.
+
+సెట్టింగ్‌లను, కార్పొరేట్ యాక్సెస్‌ను, యాప్‌లను, మీ పరికరానికి సంబంధించిన డేటాను, అలాగే మీ పరికరం యొక్క లొకేషన్ సమాచారాన్ని మీ IT అడ్మిన్ పర్యవేక్షించగలరు, మేనేజ్ చేయగలరు.
+
+మరింత సమాచారం కోసం, మీ IT అడ్మిన్‌ను సంప్రదించండి."</string>
     <string name="monitoring_description_management_ca_certificate">ఈ పరికరంలో మీ సంస్థ ఒక ప్రమాణపత్ర అధికారాన్ని ఇన్‌స్టాల్ చేసింది. మీ సురక్షిత నెట్‌వర్క్ ట్రాఫిక్ పర్యవేక్షించబడవచ్చు లేదా సవరించబడవచ్చు.</string>
     <string name="monitoring_description_management_network_logging">మీ నిర్వాహకులు మీ పరికరంలోని ట్రాఫిక్‌ని పర్యవేక్షించగల నెట్‌వర్క్ లాగింగ్‌ని ఆన్ చేసారు.</string>
+    <string name="monitoring_description_named_management">"ఈ పరికరం %1$sకు చెందినది.
+
+సెట్టింగ్‌లను, కార్పొరేట్ యాక్సెస్‌ను, యాప్‌లను, మీ పరికరానికి సంబంధించిన డేటాను, అలాగే మీ పరికరం యొక్క లొకేషన్ సమాచారాన్ని మీ IT అడ్మిన్ పర్యవేక్షించగలరు, మేనేజ్ చేయగలరు.
+
+మరింత సమాచారం కోసం, మీ IT అడ్మిన్‌ను సంప్రదించండి."</string>
     <string name="monitoring_description_named_vpn">మీరు %1$sకి కనెక్ట్ చేయబడ్డారు, ఇది ఇమెయిల్‌లు, అనువర్తనాలు మరియు వెబ్‌సైట్‌లతో సహా మీ నెట్‌వర్క్ కార్యాచరణను పర్యవేక్షించగలదు.</string>
     <string name="monitoring_description_network_logging">"మీ నిర్వాహకులు మీ పరికరంలోని ట్రాఫిక్‌ని పర్యవేక్షించగల నెట్‌వర్క్ లాగింగ్‌ని ఆన్ చేసారు.
 
@@ -1299,7 +1319,7 @@
     <string name="notification_unblockable_desc">ఈ నోటిఫికేషన్‌లను సవరించడం వీలుపడదు.</string>
     <string name="oem_unlock_enable">OEM అన్‌లాకింగ్</string>
     <string name="oem_unlock_enable_summary">బూట్‌లోడర్ అన్‌లాక్ కావడానికి అనుమతించు</string>
-    <string name="ok">ఒకే</string>
+    <string name="ok">సరే</string>
     <string name="okay">సరే</string>
     <string name="oneplus_laboratory_added_toast">అభినందనలు! సెట్టింగ్‌లకు OnePlus లేబరేటరీ జోడించబడింది</string>
     <string name="oneplus_not_show">దీనిని మళ్లీ చూపించవద్దు</string>
@@ -1313,6 +1333,12 @@
     <string name="oneplus_threekey_navigation_vibration">వైబ్రేషన్ మాత్రమే</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> ఆన్‌లాక్</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> ఆన్‌లాక్స్</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">జత చేస్తోంది...</string>
     <string name="op_earphone_connected_fail">జత చేయడం విఫలమైంది. మీరు హెడ్‌సెట్ మరియు బ్లూటూత్ స్థితిని తనిఖీ చేయండి.</string>
     <string name="op_earphone_connected_success">జత చేయబడింది. మరిన్ని సెట్ చేయడానికి ట్యాప్ చేయండి.</string>
@@ -1342,9 +1368,10 @@
     <string name="op_notification_channel_summary_low">అంతగా ప్రాముఖ్యత లేని నోటిఫికేషన్‌లను ధ్వని లేదా వైబ్రేషన్ లేకుండా.</string>
     <string name="op_notification_section_header_gentle">ఇతర నోటిఫికేషన్‌లు</string>
     <string name="op_notification_silence_title">ఇతరం</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">డార్క్ మోడ్</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s ఉపయోగించిన</string>
-    <string name="op_quick_settings_night_display_label">నైట్ మోడ్</string>
+    <string name="op_quick_settings_night_display_label">విజన్ కంఫర్ట్</string>
     <string name="op_quick_settings_night_display_summary_off">నైట్ మోడ్ ఆఫ్ చేయబడింది, ఆన్ చేయడం కొరకు తట్టండి</string>
     <string name="op_quick_settings_night_display_summary_on">నైట్ మోడ్ ఆన్ చేయబడింది, ఆఫ్ చేయడం కొరకు తట్టండి</string>
     <string name="op_read_mode2_dialog_black">మోనో ప్రభావం</string>
@@ -1492,7 +1519,7 @@
     <string name="profile_owned_footer">ప్రొఫైల్‌ని పర్యవేక్షించవచ్చు</string>
     <string name="qr_bubble_hint">సందేశాలను చదివి, వాటికి ప్రత్యుత్తరమివ్వడానికి బబుల్‌పై నొక్కండి</string>
     <string name="qr_portrait_hint">పోర్ట్రెయిట్‌లో త్వరిత ప్రత్యుత్తరం ఆఫ్ చేయబడింది</string>
-    <string name="qr_portrait_turn_on">ఆన్ చేయి</string>
+    <string name="qr_portrait_turn_on">ఆన్ చేయండి</string>
     <string name="qs_dnd_keep">Keep</string>
     <string name="qs_dnd_prompt_app">యాప్ (%s) ద్వారా అంతరాయం కలిగించవద్దు ఆన్ చేయబడింది.</string>
     <string name="qs_dnd_prompt_auto_rule">స్వయంచాలక నియమం (%s) ద్వారా అంతరాయం కలిగించవద్దు ఆన్ చేయబడింది.</string>
@@ -1556,8 +1583,20 @@
     <string name="quick_settings_data_switch_toast_1">ప్రస్తుతం కేవలం ఒక్క SIM మాత్రమే చొప్పించబడింది</string>
     <string name="quick_settings_default_data_card">డిఫాల్ట్ డేటా కార్డ్</string>
     <string name="quick_settings_disclosure_managed_profile_monitoring">మీ కార్యాలయ ప్రొఫైల్‌లోని నెట్‌వర్క్ ట్రాఫిక్‌ని మీ సంస్థ పర్యవేక్షించవచ్చు</string>
+    <string name="quick_settings_disclosure_managed_profile_named_vpn">మీ వర్క్ ప్రొఫైల్ %1$sకు కనెక్ట్ చేయబడింది</string>
+    <string name="quick_settings_disclosure_management">ఈ పరికరం మీ సంస్థకు చెందినది</string>
+    <string name="quick_settings_disclosure_management_monitoring">ఈ పరికరం మీ సంస్థకు చెందినది, కాబట్టి అది నెట్‌వర్క్ ట్రాఫిక్‌ను పర్యవేక్షించవచ్చు</string>
+    <string name="quick_settings_disclosure_management_named_vpn">ఈ పరికరం మీ సంస్థకు చెందినది, ఇది %1$sకు కనెక్ట్ అయి ఉంది</string>
+    <string name="quick_settings_disclosure_management_vpns">ఈ పరికరం మీ సంస్థకు చెందినది, ఇది VPNలకు కనెక్ట్ అయి ఉంది</string>
     <string name="quick_settings_disclosure_monitoring">నెట్‌వర్క్ పర్యవేక్షించబడవచ్చు</string>
     <string name="quick_settings_disclosure_named_managed_profile_monitoring">మీ కార్యాలయ ప్రొఫైల్‌లోని నెట్‌వర్క్ ట్రాఫిక్‌ని %1$s పర్యవేక్షించవచ్చు</string>
+    <string name="quick_settings_disclosure_named_management">ఈ పరికరం %1$sకు చెందినది</string>
+    <string name="quick_settings_disclosure_named_management_monitoring">మీ పరికరం %1$sకు చెందినది, కాబట్టి అది నెట్‌వర్క్ ట్రాఫిక్‌ను పర్యవేక్షించవచ్చు</string>
+    <string name="quick_settings_disclosure_named_management_named_vpn">ఈ పరికరం %1$sకు చెందినది, ఇది %2$sకు కనెక్ట్ అయి ఉంది</string>
+    <string name="quick_settings_disclosure_named_management_vpns">ఈ పరికరం %1$sకు చెందినది, ఇది VPNలకు కనెక్ట్ అయి ఉంది</string>
+    <string name="quick_settings_disclosure_named_vpn">ఈ పరికరం %1$sకు కనెక్ట్ అయి ఉంది</string>
+    <string name="quick_settings_disclosure_personal_profile_named_vpn">%1$sకు మీ వ్యక్తిగత ప్రొఫైల్ కనెక్ట్ చేయబడింది</string>
+    <string name="quick_settings_disclosure_vpns">ఈ పరికరం VPNలకు కనెక్ట్ అయి ఉంది</string>
     <string name="quick_settings_dnd_alarms_label">అలారాలు మాత్రమే</string>
     <string name="quick_settings_dnd_label">అంతరాయం కలిగించవద్దు</string>
     <string name="quick_settings_dnd_none_label">మొత్తం నిశ్శబ్దం</string>
@@ -1847,7 +1886,7 @@
     <string name="tethered_notification_hybrid_sharing_mobile">మొబైల్ డేటాను షేర్ చేస్తోంది, సెట్టింగ్‌లలోకి ప్రవేశించడానికి క్లిక్ చేయండి</string>
     <string name="tethered_notification_hybrid_sharing_none">షేర్ చేయడానికి నెట్‌వర్క్ ఏదీ అందుబాటులో లేదు, సెట్టింగ్‌లలోకి ప్రవేశించడానికి క్లిక్ చేయండి</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Wi-Fiని షేర్ చేస్తోంది, సెట్టింగ్‌లలోకి ప్రవేశించడానికి క్లిక్ చేయండి</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">సెటప్ చేయడానికి టాప్ చేయండి.</string>
     <string name="tethered_notification_multi_device_message">%1$s కనెక్ట్ చేయబడ్డ పరికరాలు</string>
     <string name="tethered_notification_multi_tether_title">టెథరింగ్ మరియు మొబైల్ HotSpot యాక్టివ్‌లో ఉంది</string>
     <string name="tethered_notification_no_device_message">కనెక్ట్ చేయబడ్డ పరికరాలు ఏవీ లేవు</string>
@@ -2080,7 +2119,17 @@ Wi‑Fi అడ్రస్ (BSSID)
     <string name="wifi_verbose_logging">Wi‑Fi విశదీకృత లాగింగ్‌ను ప్రారంభించండి</string>
     <string name="wifi_verbose_logging_summary">Wi‑Fi ఎంపికలో SSID RSSI ప్రకారం చూపబడే Wi‑Fi లాగింగ్ స్థాయిని పెంచండి</string>
     <string name="window_animation_scale_title">విండో యానిమేషన్ ప్రమాణం</string>
-    <string name="work_life_balance_mode">Work-Life Balance</string>
+    <string name="wlb_break_mode_active">యాక్టివేట్ చేయి</string>
+    <string name="wlb_break_mode_active_text">%1$s మోడ్ · %2$s</string>
+    <string name="wlb_break_mode_on_break">ఆన్ బ్రేక్</string>
+    <string name="wlb_break_mode_resume">పునరుద్ధరించు</string>
+    <string name="wlb_break_mode_take_break">విరామం</string>
+    <string name="wlb_qs_detail_break_mode">బ్రిక్ మోడ్</string>
+    <string name="wlb_qs_detail_break_mode_desc">30 నిమిషాల తర్వాత స్వయంచాలకంగా మునుపటి మోడ్‌కు తిరిగి ప్రారంభమవుతుంది</string>
+    <string name="wlb_qs_detail_life_mode">లైఫ్ మోడ్</string>
+    <string name="wlb_qs_detail_more_setting">మరిన్ని సెట్టింగ్‌లు</string>
+    <string name="wlb_qs_detail_work_mode">వర్క్ మోడ్</string>
+    <string name="work_life_balance_mode">Work Life Balance</string>
     <string name="zen_alarm_warning">మీరు %1$s సెట్ చేసిన మీ తర్వాత అలారం మీకు వినిపించదు</string>
     <string name="zen_alarm_warning_indef">మీరు %1$s సెట్ చేసిన మీ తర్వాత అలారం మీరు ఆ లోపల దీన్ని ఆఫ్ చేయకుంటే వినిపించదు</string>
     <string name="zen_alarms_introduction">అలారాలు నుండి మినహా మరే ఇతర ధ్వనులు మరియు వైబ్రేషన్‌లతో మీకు అంతరాయం కలగదు. మీరు ఇప్పటికీ సంగీతం, వీడియోలు మరియు గేమ్‌లతో సహా మీరు ప్లే చేయడానికి ఎంచుకున్నవి ఏవైనా వింటారు.</string>
@@ -2101,5 +2150,5 @@ Wi‑Fi అడ్రస్ (BSSID)
     <string name="zen_silence_introduction_voice">ఇది అలారాలు, సంగీతం, వీడియోలు మరియు గేమ్‌లతో సహా అన్ని ధ్వనులు మరియు వైబ్రేషన్‌లను బ్లాక్ చేస్తుంది. మీరు ఇప్పటికీ ఫోన్ కాల్‌లు చేయగలుగుతారు.</string>
     <string name="zzz_op_global_action_bootloader">బూట్‌లోడర్</string>
     <string name="zzz_op_global_action_recovery">రికవరీ</string>
-    <string name="zzz_op_quick_pay_no_install_message">Quick Pay ఉపయోగించడం కొరకు దయచేసిపేమెంట్ యాప్‌లను ఇన్‌స్టాల్ చేయి</string>
+    <string name="zzz_op_quick_pay_no_install_message">క్విక్ పే ఉపయోగించడం కొరకు దయచేసిపేమెంట్ యాప్‌లను ఇన్‌స్టాల్ చేయి</string>
 </resources>

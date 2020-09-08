@@ -39,6 +39,11 @@
     <string name="abc_slice_updated">Aktualizováno %1$s</string>
     <string name="abc_slices_permission_request">Aplikace %1$s chce zobrazovat ukázky z aplikace %2$s</string>
     <string name="abc_toolbar_collapse_description">Sbalit</string>
+    <string name="about_action_bar_title">O aplikaci</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Zásady ochrany osobních údajů</string>
+    <string name="about_release_note_title">Protokol aktualizace:</string>
+    <string name="about_terms_service">Podmínky služby</string>
     <string name="accessibility_accessibility_button">Přístupnost</string>
     <string name="accessibility_action_divider_bottom_full">Dolní část na celou obrazovku</string>
     <string name="accessibility_action_divider_left_30">30 % vlevo</string>
@@ -598,6 +603,7 @@ Výběr"</string>
     <string name="controls_favorite_other_zone_header">Jiné</string>
     <string name="controls_favorite_rearrange">Ovládací prvky můžete uspořádat podržením a přetažením</string>
     <string name="controls_favorite_removed">Všechny ovládací prvky byly odstraněny</string>
+    <string name="controls_favorite_see_other_apps">Zobrazit další aplikace</string>
     <string name="controls_favorite_subtitle">Vyberte ovládací prvky, které budou zobrazeny v nabídce vypínače</string>
     <string name="controls_favorite_toast_no_changes">Změny nebyly uloženy</string>
     <string name="controls_in_progress">Probíhá</string>
@@ -696,8 +702,8 @@ Pokud jej obnovíte, mohou vám být účtovány poplatky za využití dat."</st
     <string name="disable_carrier_button_text">Deaktivovat eSIM kartu</string>
     <string name="disable_overlays">Zakázat hardwarové vrstvy</string>
     <string name="disable_overlays_summary">Vždy použít GPU ke skládání obrazovky</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">Podrobnosti vám sdělí váš správce</string>
+    <string name="disable_tether_notification_title">Sdílení internetového připojení je zakázáno</string>
     <string name="disable_vpn">Deaktivovat VPN</string>
     <string name="disabled">Deaktivováno</string>
     <string name="disabled_by_admin">Vypnuto administrátorem</string>
@@ -717,6 +723,7 @@ Pokud jej obnovíte, mohou vám být účtovány poplatky za využití dat."</st
     <string name="drag_to_rearrange_tiles">Dlaždice můžete uspořádat podržením a přetažením</string>
     <string name="drag_to_remove_disabled">Potřebujete alespoň tento počet dlaždic: %1$d</string>
     <string name="drag_to_remove_tiles">Přetažením sem dlaždice odstraníte</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">Přetažením dlaždic změňte uspořádání. Klepnutím zobrazíte nebo skryjete.</string>
     <string name="empty_shade_text">Žádná oznámení</string>
     <string name="enable_adb">Ladění přes USB</string>
@@ -1100,6 +1107,7 @@ Zkuste to znovu za %2$d s."</string>
     <string name="left_nav_bar_button_type">Zvláštní typ tlačítka vlevo</string>
     <string name="legacy_vpn_name">VPN</string>
     <string name="loading_injected_setting_summary">Načítání…</string>
+    <string name="loading_text">Načítání...</string>
     <string name="local_backup_password_summary_change">Tuto možnost vyberte, chcete-li změnit nebo odebrat heslo pro úplné zálohy do počítače</string>
     <string name="local_backup_password_summary_none">Úplné zálohy v počítači nejsou v současné době chráněny</string>
     <string name="local_backup_password_title">Heslo pro zálohy v počítači</string>
@@ -1331,8 +1339,14 @@ Jste také připojeni k síti VPN, která může sledovat vaši aktivitu v sí
     <string name="oneplus_threekey_navigation_sound">Jsou povoleny všechny zvuky</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Můžete zapnout pomocí výše uvedeného přepínače</string>
     <string name="oneplus_threekey_navigation_vibration">Pouze vibrace</string>
-    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> odemknutí</string>
-    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> odemknutí</string>
+    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>odemknutí</string>
+    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>odemknutí</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">Párování...</string>
     <string name="op_earphone_connected_fail">Párování se nezdařilo. Můžete zkontrolovat náhlavní soupravu a stav Bluetooth.</string>
     <string name="op_earphone_connected_success">Spárováno. Klepnutím nastavte další.</string>
@@ -1362,9 +1376,10 @@ Jste také připojeni k síti VPN, která může sledovat vaši aktivitu v sí
     <string name="op_notification_channel_summary_low">Méně důležitá oznámení beze zvuku a vibrací.</string>
     <string name="op_notification_section_header_gentle">Ostatní oznámení</string>
     <string name="op_notification_silence_title">Ostatní</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">Tmavý režim</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s využitých</string>
-    <string name="op_quick_settings_night_display_label">Noční režim</string>
+    <string name="op_quick_settings_night_display_label">Pohodlný obraz</string>
     <string name="op_quick_settings_night_display_summary_off">Noční režim vypnut, klepnutím zapnete</string>
     <string name="op_quick_settings_night_display_summary_on">Noční režim zapnut, klepnutím vypnete</string>
     <string name="op_read_mode2_dialog_black">Mono efekt</string>
@@ -1879,7 +1894,7 @@ monitorována"</string>
     <string name="tethered_notification_hybrid_sharing_mobile">Sdílení mobilních dat, kliknutím přejdete do Nastavení</string>
     <string name="tethered_notification_hybrid_sharing_none">Žádná dostupná síť ke sdílení, kliknutím přejdete do Nastavení</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Sdílení sítě Wi-Fi, kliknutím přejdete do Nastavení</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">Klepnutím nastavte.</string>
     <string name="tethered_notification_multi_device_message">%1$s připojená zařízení</string>
     <string name="tethered_notification_multi_tether_title">Aktivní sdílení internetového připojení a mobilní hotspot</string>
     <string name="tethered_notification_no_device_message">Není připojeno žádné zařízení</string>
@@ -2112,7 +2127,17 @@ Adresa Wi‑Fi (BSSID)
     <string name="wifi_verbose_logging">Podrobné protokolování Wi‑Fi</string>
     <string name="wifi_verbose_logging_summary">Zvýšit úroveň protokolování Wi‑Fi zobrazenou v SSID a RSSI při výběru sítě Wi‑Fi.</string>
     <string name="window_animation_scale_title">Měřítko animace okna</string>
-    <string name="work_life_balance_mode">Work-Life Balance</string>
+    <string name="wlb_break_mode_active">Aktivní</string>
+    <string name="wlb_break_mode_active_text">%1$s Režim · %2$s</string>
+    <string name="wlb_break_mode_on_break">Na přestávce</string>
+    <string name="wlb_break_mode_resume">Obnovit</string>
+    <string name="wlb_break_mode_take_break">Udělejte si přestávku</string>
+    <string name="wlb_qs_detail_break_mode">Režim přestávky</string>
+    <string name="wlb_qs_detail_break_mode_desc">Po 30 minutách se automaticky obnoví do předchozího režimu</string>
+    <string name="wlb_qs_detail_life_mode">Režim soukromého života</string>
+    <string name="wlb_qs_detail_more_setting">Další nastavení</string>
+    <string name="wlb_qs_detail_work_mode">Pracovní režim</string>
+    <string name="work_life_balance_mode">Rovnováha mezi pracovním a soukromým životem</string>
     <string name="zen_alarm_warning">Svůj další budík %1$s neuslyšíte</string>
     <string name="zen_alarm_warning_indef">Pokud tento režim nevypnete, svůj další budík %1$s neuslyšíte</string>
     <string name="zen_alarms_introduction">Nebudou vás rušit zvuky ani vibrace s výjimkou budíků. Nadále uslyšíte veškerý obsah, který si sami pustíte (např. hudba, videa nebo hry).</string>
@@ -2133,5 +2158,5 @@ Adresa Wi‑Fi (BSSID)
     <string name="zen_silence_introduction_voice">V tomto režimu budou blokovány VŠECHNY zvuky a vibrace, včetně těch z budíků, hudby, videí a her. Telefonovat budete moci i nadále.</string>
     <string name="zzz_op_global_action_bootloader">Zavaděč</string>
     <string name="zzz_op_global_action_recovery">Obnova</string>
-    <string name="zzz_op_quick_pay_no_install_message">Nainstalujte prosím platební aplikaci pro použití Quick Pay</string>
+    <string name="zzz_op_quick_pay_no_install_message">Nainstalujte prosím platební aplikaci pro použití rychlé platby</string>
 </resources>

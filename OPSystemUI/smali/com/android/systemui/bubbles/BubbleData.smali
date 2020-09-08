@@ -36,13 +36,15 @@
     .end annotation
 .end field
 
+.field private mCancelledListener:Lcom/android/systemui/bubbles/BubbleController$PendingIntentCanceledListener;
+
 .field private final mContext:Landroid/content/Context;
 
 .field private mExpanded:Z
 
 .field private mListener:Lcom/android/systemui/bubbles/BubbleData$Listener;
 
-.field mLogger:Lcom/android/systemui/bubbles/BubbleLogger;
+.field private mLogger:Lcom/android/systemui/bubbles/BubbleLogger;
 
 .field private final mMaxBubbles:I
 
@@ -304,13 +306,13 @@
 
     const/4 v1, -0x1
 
-    if-ne v0, v1, :cond_3
+    if-ne v0, v1, :cond_4
 
     invoke-virtual {p0, p1}, Lcom/android/systemui/bubbles/BubbleData;->hasOverflowBubbleWithKey(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     const/4 v0, 0x5
 
@@ -334,13 +336,18 @@
 
     const/16 v0, 0xd
 
-    if-ne p2, v0, :cond_2
+    if-ne p2, v0, :cond_3
 
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/systemui/bubbles/BubbleData;->getOverflowBubbleWithKey(Ljava/lang/String;)Lcom/android/systemui/bubbles/Bubble;
 
     move-result-object p1
 
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1}, Lcom/android/systemui/bubbles/Bubble;->stopInflation()V
+
+    :cond_2
     iget-object v0, p0, Lcom/android/systemui/bubbles/BubbleData;->mLogger:Lcom/android/systemui/bubbles/BubbleLogger;
 
     invoke-interface {v0, p1, p2}, Lcom/android/systemui/bubbles/BubbleLogger;->logOverflowRemove(Lcom/android/systemui/bubbles/Bubble;I)V
@@ -353,10 +360,10 @@
 
     invoke-interface {p0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    :cond_2
+    :cond_3
     return-void
 
-    :cond_3
+    :cond_4
     iget-object p1, p0, Lcom/android/systemui/bubbles/BubbleData;->mBubbles:Ljava/util/List;
 
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -364,6 +371,8 @@
     move-result-object p1
 
     check-cast p1, Lcom/android/systemui/bubbles/Bubble;
+
+    invoke-virtual {p1}, Lcom/android/systemui/bubbles/Bubble;->stopInflation()V
 
     iget-object v1, p0, Lcom/android/systemui/bubbles/BubbleData;->mBubbles:Ljava/util/List;
 
@@ -373,7 +382,7 @@
 
     const/4 v2, 0x1
 
-    if-ne v1, v2, :cond_4
+    if-ne v1, v2, :cond_5
 
     const/4 v1, 0x0
 
@@ -383,7 +392,7 @@
 
     iput-object v1, p0, Lcom/android/systemui/bubbles/BubbleData;->mSelectedBubble:Lcom/android/systemui/bubbles/Bubble;
 
-    :cond_4
+    :cond_5
     iget-object v1, p0, Lcom/android/systemui/bubbles/BubbleData;->mBubbles:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -392,13 +401,13 @@
 
     sub-int/2addr v1, v2
 
-    if-ge v0, v1, :cond_5
+    if-ge v0, v1, :cond_6
 
     iget-object v1, p0, Lcom/android/systemui/bubbles/BubbleData;->mStateChange:Lcom/android/systemui/bubbles/BubbleData$Update;
 
     iput-boolean v2, v1, Lcom/android/systemui/bubbles/BubbleData$Update;->orderChanged:Z
 
-    :cond_5
+    :cond_6
     iget-object v1, p0, Lcom/android/systemui/bubbles/BubbleData;->mBubbles:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->remove(I)Ljava/lang/Object;
@@ -411,7 +420,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_6
+    if-nez v1, :cond_7
 
     iget-object v1, p0, Lcom/android/systemui/bubbles/BubbleData;->mStateChange:Lcom/android/systemui/bubbles/BubbleData$Update;
 
@@ -425,7 +434,7 @@
 
     iput-boolean v3, v1, Lcom/android/systemui/bubbles/BubbleData$Update;->orderChanged:Z
 
-    :cond_6
+    :cond_7
     invoke-virtual {p0, p2, p1}, Lcom/android/systemui/bubbles/BubbleData;->overflowBubble(ILcom/android/systemui/bubbles/Bubble;)V
 
     iget-object v1, p0, Lcom/android/systemui/bubbles/BubbleData;->mSelectedBubble:Lcom/android/systemui/bubbles/Bubble;
@@ -434,7 +443,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_7
+    if-eqz v1, :cond_8
 
     iget-object v1, p0, Lcom/android/systemui/bubbles/BubbleData;->mBubbles:Ljava/util/List;
 
@@ -458,7 +467,7 @@
 
     invoke-direct {p0, v0}, Lcom/android/systemui/bubbles/BubbleData;->setSelectedBubbleInternal(Lcom/android/systemui/bubbles/Bubble;)V
 
-    :cond_7
+    :cond_8
     invoke-direct {p0, p2, p1}, Lcom/android/systemui/bubbles/BubbleData;->maybeSendDeleteIntent(ILcom/android/systemui/bubbles/Bubble;)V
 
     return-void
@@ -567,7 +576,7 @@
 .end method
 
 .method static synthetic lambda$removeBubblesWithInvalidShortcuts$0(Ljava/lang/String;Ljava/util/Set;Lcom/android/systemui/bubbles/Bubble;)Z
-    .locals 1
+    .locals 3
 
     invoke-virtual {p2}, Lcom/android/systemui/bubbles/Bubble;->getPackageName()Ljava/lang/String;
 
@@ -577,48 +586,74 @@
 
     move-result p0
 
-    if-eqz p0, :cond_1
+    invoke-virtual {p2}, Lcom/android/systemui/bubbles/Bubble;->hasMetadataShortcutId()Z
 
-    invoke-virtual {p2}, Lcom/android/systemui/bubbles/Bubble;->getShortcutInfo()Landroid/content/pm/ShortcutInfo;
+    move-result v0
 
-    move-result-object p0
+    const/4 v1, 0x0
 
-    if-eqz p0, :cond_0
+    if-eqz p0, :cond_2
 
-    invoke-virtual {p2}, Lcom/android/systemui/bubbles/Bubble;->getShortcutInfo()Landroid/content/pm/ShortcutInfo;
+    if-nez v0, :cond_0
 
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/content/pm/ShortcutInfo;->isEnabled()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p2}, Lcom/android/systemui/bubbles/Bubble;->getShortcutInfo()Landroid/content/pm/ShortcutInfo;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/content/pm/ShortcutInfo;->getId()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-interface {p1, p0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_1
+    goto :goto_1
 
     :cond_0
-    const/4 p0, 0x1
+    invoke-virtual {p2}, Lcom/android/systemui/bubbles/Bubble;->hasMetadataShortcutId()Z
+
+    move-result v0
+
+    const/4 v2, 0x1
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p2}, Lcom/android/systemui/bubbles/Bubble;->getShortcutInfo()Landroid/content/pm/ShortcutInfo;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p2}, Lcom/android/systemui/bubbles/Bubble;->getShortcutInfo()Landroid/content/pm/ShortcutInfo;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/pm/ShortcutInfo;->isEnabled()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p2}, Lcom/android/systemui/bubbles/Bubble;->getShortcutInfo()Landroid/content/pm/ShortcutInfo;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/content/pm/ShortcutInfo;->getId()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-interface {p1, p2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    move p1, v2
 
     goto :goto_0
 
     :cond_1
-    const/4 p0, 0x0
+    move p1, v1
 
     :goto_0
-    return p0
+    if-eqz p0, :cond_2
+
+    if-nez p1, :cond_2
+
+    move v1, v2
+
+    :cond_2
+    :goto_1
+    return v1
 .end method
 
 .method private synthetic lambda$removeBubblesWithInvalidShortcuts$1(ILcom/android/systemui/bubbles/Bubble;)V
@@ -1610,7 +1645,7 @@
 .end method
 
 .method getOrCreateBubble(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Lcom/android/systemui/bubbles/Bubble;)Lcom/android/systemui/bubbles/Bubble;
-    .locals 2
+    .locals 3
 
     if-eqz p1, :cond_0
 
@@ -1670,7 +1705,9 @@
 
     iget-object v1, p0, Lcom/android/systemui/bubbles/BubbleData;->mSuppressionListener:Lcom/android/systemui/bubbles/BubbleController$NotificationSuppressionChangedListener;
 
-    invoke-direct {p2, p1, v1}, Lcom/android/systemui/bubbles/Bubble;-><init>(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Lcom/android/systemui/bubbles/BubbleController$NotificationSuppressionChangedListener;)V
+    iget-object v2, p0, Lcom/android/systemui/bubbles/BubbleData;->mCancelledListener:Lcom/android/systemui/bubbles/BubbleController$PendingIntentCanceledListener;
+
+    invoke-direct {p2, p1, v1, v2}, Lcom/android/systemui/bubbles/Bubble;-><init>(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Lcom/android/systemui/bubbles/BubbleController$NotificationSuppressionChangedListener;Lcom/android/systemui/bubbles/BubbleController$PendingIntentCanceledListener;)V
 
     goto :goto_2
 
@@ -2277,6 +2314,14 @@
     .end annotation
 
     iput p1, p0, Lcom/android/systemui/bubbles/BubbleData;->mMaxOverflowBubbles:I
+
+    return-void
+.end method
+
+.method public setPendingIntentCancelledListener(Lcom/android/systemui/bubbles/BubbleController$PendingIntentCanceledListener;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/systemui/bubbles/BubbleData;->mCancelledListener:Lcom/android/systemui/bubbles/BubbleController$PendingIntentCanceledListener;
 
     return-void
 .end method

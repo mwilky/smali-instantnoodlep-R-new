@@ -98,6 +98,8 @@
 
 .field private mWifiManager:Landroid/net/wifi/WifiManager;
 
+.field private mWindowManager:Landroid/view/WindowManager;
+
 
 # direct methods
 .method static constructor <clinit>()V
@@ -1134,6 +1136,100 @@
     return-void
 .end method
 
+.method private updateDialogLayout()V
+    .locals 5
+
+    iget-object v0, p0, Lcom/oneplus/volume/OpOutputChooserDialog;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lcom/android/systemui/R$dimen;->op_output_chooser_dialog_panel_width:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/oneplus/volume/OpOutputChooserDialog;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Lcom/android/systemui/R$dimen;->op_output_chooser_dialog_panel_height_with_back_key:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v1
+
+    new-instance v2, Landroid/util/DisplayMetrics;
+
+    invoke-direct {v2}, Landroid/util/DisplayMetrics;-><init>()V
+
+    iget-object v3, p0, Lcom/oneplus/volume/OpOutputChooserDialog;->mWindowManager:Landroid/view/WindowManager;
+
+    invoke-interface {v3}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v2}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
+
+    iget v3, v2, Landroid/util/DisplayMetrics;->heightPixels:I
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    invoke-static {v3, v2}, Ljava/lang/Math;->min(II)I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    const v3, 0x3f4ccccd    # 0.8f
+
+    mul-float/2addr v2, v3
+
+    float-to-int v2, v2
+
+    iget-object v3, p0, Lcom/oneplus/volume/OpOutputChooserDialog;->mView:Lcom/oneplus/volume/OpOutputChooserLayout;
+
+    invoke-virtual {v3}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v3
+
+    invoke-direct {p0}, Lcom/oneplus/volume/OpOutputChooserDialog;->isLandscape()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    invoke-static {v2, v1}, Ljava/lang/Math;->min(II)I
+
+    move-result v1
+
+    iput v1, v3, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    iput v0, v3, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    goto :goto_0
+
+    :cond_0
+    iput v1, v3, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    invoke-static {v2, v0}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
+
+    iput v0, v3, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    :goto_0
+    iget-object p0, p0, Lcom/oneplus/volume/OpOutputChooserDialog;->mView:Lcom/oneplus/volume/OpOutputChooserLayout;
+
+    invoke-virtual {p0, v3}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+.end method
+
 .method private updateItems(Z)V
     .locals 6
 
@@ -2012,11 +2108,23 @@
 
     iget-object v1, p0, Lcom/oneplus/volume/OpOutputChooserDialog;->mContext:Landroid/content/Context;
 
-    iget-object p0, p0, Lcom/oneplus/volume/OpOutputChooserDialog;->mBluetoothProfileServiceListener:Landroid/bluetooth/BluetoothProfile$ServiceListener;
+    iget-object v2, p0, Lcom/oneplus/volume/OpOutputChooserDialog;->mBluetoothProfileServiceListener:Landroid/bluetooth/BluetoothProfile$ServiceListener;
 
-    invoke-virtual {v0, v1, p0, p1}, Landroid/bluetooth/BluetoothAdapter;->getProfileProxy(Landroid/content/Context;Landroid/bluetooth/BluetoothProfile$ServiceListener;I)Z
+    invoke-virtual {v0, v1, v2, p1}, Landroid/bluetooth/BluetoothAdapter;->getProfileProxy(Landroid/content/Context;Landroid/bluetooth/BluetoothProfile$ServiceListener;I)Z
 
     :cond_3
+    iget-object p1, p0, Lcom/oneplus/volume/OpOutputChooserDialog;->mContext:Landroid/content/Context;
+
+    const-string v0, "window"
+
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/view/WindowManager;
+
+    iput-object p1, p0, Lcom/oneplus/volume/OpOutputChooserDialog;->mWindowManager:Landroid/view/WindowManager;
+
     return-void
 .end method
 
@@ -2567,6 +2675,8 @@
 
     invoke-super {p0}, Landroid/app/Dialog;->show()V
 
+    invoke-direct {p0}, Lcom/oneplus/volume/OpOutputChooserDialog;->updateDialogLayout()V
+
     const-class v0, Lcom/android/internal/logging/MetricsLogger;
 
     invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -2615,7 +2725,9 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/android/systemui/Interpolators;->FAST_OUT_SLOW_IN:Landroid/view/animation/Interpolator;
+    new-instance v1, Lcom/android/systemui/volume/SystemUIInterpolators$LogAccelerateInterpolator;
+
+    invoke-direct {v1}, Lcom/android/systemui/volume/SystemUIInterpolators$LogAccelerateInterpolator;-><init>()V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 

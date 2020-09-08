@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oneplus/aod/OpAodDisplayViewManager;->quickHideNotificationBeforeScreenOff(Lcom/android/systemui/doze/DozeHost$PulseCallback;Landroid/os/Handler;)V
+    value = Lcom/oneplus/aod/OpAodDisplayViewManager;->onUserTrigger(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,20 +20,16 @@
 # instance fields
 .field final synthetic this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-.field final synthetic val$callback:Lcom/android/systemui/doze/DozeHost$PulseCallback;
-
-.field final synthetic val$handler:Landroid/os/Handler;
+.field final synthetic val$reason:I
 
 
 # direct methods
-.method constructor <init>(Lcom/oneplus/aod/OpAodDisplayViewManager;Lcom/android/systemui/doze/DozeHost$PulseCallback;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/oneplus/aod/OpAodDisplayViewManager;I)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$9;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    iput-object p2, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$9;->val$callback:Lcom/android/systemui/doze/DozeHost$PulseCallback;
-
-    iput-object p3, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$9;->val$handler:Landroid/os/Handler;
+    iput p2, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$9;->val$reason:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,74 +39,17 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 1
 
     iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$9;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1900(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpSingleNotificationView;
+    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$400(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpClockViewCtrl;
 
     move-result-object v0
 
-    const-string v1, "AodDisplayViewManager"
+    iget p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$9;->val$reason:I
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v0, p0}, Lcom/oneplus/aod/OpClockViewCtrl;->onUserTrigger(I)V
 
-    const-string v0, "hide notification before screen off"
-
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$9;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
-
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1200(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isAlwaysOnEnabled()Z
-
-    move-result v0
-
-    const/4 v2, 0x0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$9;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
-
-    invoke-static {v0, v2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$2002(Lcom/oneplus/aod/OpAodDisplayViewManager;I)I
-
-    :cond_0
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$9;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
-
-    invoke-static {v0, v2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$2102(Lcom/oneplus/aod/OpAodDisplayViewManager;Z)Z
-
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$9;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
-
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$300(Lcom/oneplus/aod/OpAodDisplayViewManager;)V
-
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$9;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
-
-    const/4 v2, 0x1
-
-    invoke-static {v0, v2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$2202(Lcom/oneplus/aod/OpAodDisplayViewManager;Z)Z
-
-    :cond_1
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$9;->val$callback:Lcom/android/systemui/doze/DozeHost$PulseCallback;
-
-    if-eqz v0, :cond_2
-
-    const-string v0, "call onPulseFinished"
-
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$9;->val$handler:Landroid/os/Handler;
-
-    if-eqz v0, :cond_2
-
-    new-instance v1, Lcom/oneplus/aod/OpAodDisplayViewManager$9$1;
-
-    invoke-direct {v1, p0}, Lcom/oneplus/aod/OpAodDisplayViewManager$9$1;-><init>(Lcom/oneplus/aod/OpAodDisplayViewManager$9;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
-
-    :cond_2
     return-void
 .end method

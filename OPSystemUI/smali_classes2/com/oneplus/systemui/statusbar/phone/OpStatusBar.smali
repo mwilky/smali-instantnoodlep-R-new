@@ -10,6 +10,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$StatusBarCollapseListener;,
         Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$CarModeScreenshotReceiver;,
         Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$OpDozeCallbacks;
     }
@@ -35,8 +36,6 @@
 
 .field protected mBackDisposition:I
 
-.field private mCameraAnim:Lcom/oneplus/anim/OpCameraAnimateController;
-
 .field private mCarModeReceiver:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$CarModeScreenshotReceiver;
 
 .field private final mCheckNavigationBarTask:Ljava/lang/Runnable;
@@ -57,6 +56,8 @@
 
 .field private mFullScreenGestureObserver:Landroid/database/ContentObserver;
 
+.field private mGestureOnlineConfig:Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;
+
 .field private mGoogleDarkTheme:Z
 
 .field protected mImeDisplayId:I
@@ -72,8 +73,6 @@
 .field private mLastExpand:Z
 
 .field private mLastUpdateNavBarTime:J
-
-.field protected mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
 .field private mNavLp:Landroid/view/WindowManager$LayoutParams;
 
@@ -127,6 +126,8 @@
 
 .field protected mStartDozingRequested:Z
 
+.field protected mStatusBarCollapseListener:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$StatusBarCollapseListener;
+
 .field private final mSysUiFlagContainer:Lcom/android/systemui/model/SysUiState;
 
 .field protected mTelecomManager:Landroid/telecom/TelecomManager;
@@ -158,85 +159,79 @@
 .end method
 
 .method protected constructor <init>(Landroid/content/Context;)V
-    .locals 5
+    .locals 4
 
     invoke-direct {p0, p1}, Lcom/android/systemui/SystemUI;-><init>(Landroid/content/Context;)V
 
-    const/4 v0, 0x0
+    const/4 p1, 0x0
 
-    iput-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mNeedShowOTAWizard:Z
+    iput-boolean p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mNeedShowOTAWizard:Z
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    iput-boolean v1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mLastExpand:Z
+    iput-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mLastExpand:Z
 
-    new-instance v2, Landroid/content/Intent;
+    new-instance v1, Landroid/content/Intent;
 
-    invoke-direct {v2}, Landroid/content/Intent;-><init>()V
+    invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    iput-object v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAlexaIntent:Landroid/content/Intent;
+    iput-object v1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAlexaIntent:Landroid/content/Intent;
 
-    iput v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mDoubleTapPowerApp:I
+    iput p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mDoubleTapPowerApp:I
 
-    iput-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->isCTSStart:Z
+    iput-boolean p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->isCTSStart:Z
 
-    iput-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mImeStateChange:Z
+    iput-boolean p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mImeStateChange:Z
 
-    iput-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mImeShow:Z
+    iput-boolean p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mImeShow:Z
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    iput-object v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpOneHandModeController:Lcom/oneplus/systemui/statusbar/phone/OpOneHandModeController;
+    iput-object v1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpOneHandModeController:Lcom/oneplus/systemui/statusbar/phone/OpOneHandModeController;
 
-    iput v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mNavType:I
+    iput p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mNavType:I
 
-    iput-boolean v1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mNavShowing:Z
+    iput-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mNavShowing:Z
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v2, 0x0
 
-    iput-wide v3, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mLastUpdateNavBarTime:J
+    iput-wide v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mLastUpdateNavBarTime:J
 
-    new-instance v1, Lcom/oneplus/systemui/statusbar/phone/-$$Lambda$OpStatusBar$b4K8-DVbezRw2CdKDCQbZqxi8NU;
+    new-instance v0, Lcom/oneplus/systemui/statusbar/phone/-$$Lambda$OpStatusBar$b4K8-DVbezRw2CdKDCQbZqxi8NU;
 
-    invoke-direct {v1, p0}, Lcom/oneplus/systemui/statusbar/phone/-$$Lambda$OpStatusBar$b4K8-DVbezRw2CdKDCQbZqxi8NU;-><init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)V
+    invoke-direct {v0, p0}, Lcom/oneplus/systemui/statusbar/phone/-$$Lambda$OpStatusBar$b4K8-DVbezRw2CdKDCQbZqxi8NU;-><init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)V
 
-    iput-object v1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mCheckNavigationBarTask:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mCheckNavigationBarTask:Ljava/lang/Runnable;
 
-    iput-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mQsDisabled:Z
+    iput-boolean p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mQsDisabled:Z
 
-    iput v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mDisableQs:I
+    iput p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mDisableQs:I
 
-    iput-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mWakingUpAnimationStart:Z
+    iput-boolean p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mWakingUpAnimationStart:Z
 
-    iput-object v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mDemoHighlightHint:Landroid/app/Notification$Builder;
+    iput-object v1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mDemoHighlightHint:Landroid/app/Notification$Builder;
 
-    iput-object v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mDemoCarModeHighlightHint:Landroid/app/Notification$Builder;
+    iput-object v1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mDemoCarModeHighlightHint:Landroid/app/Notification$Builder;
 
-    const-class v0, Lcom/android/systemui/model/SysUiState;
+    const-class p1, Lcom/android/systemui/model/SysUiState;
 
-    invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, Lcom/android/systemui/model/SysUiState;
+    check-cast p1, Lcom/android/systemui/model/SysUiState;
 
-    iput-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mSysUiFlagContainer:Lcom/android/systemui/model/SysUiState;
+    iput-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mSysUiFlagContainer:Lcom/android/systemui/model/SysUiState;
 
-    const-class v0, Lcom/android/systemui/shared/plugins/PluginManager;
+    const-class p1, Lcom/android/systemui/shared/plugins/PluginManager;
 
-    invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, Lcom/android/systemui/shared/plugins/PluginManager;
+    check-cast p1, Lcom/android/systemui/shared/plugins/PluginManager;
 
-    iput-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mPluginManager:Lcom/android/systemui/shared/plugins/PluginManager;
-
-    new-instance v0, Lcom/android/internal/widget/LockPatternUtils;
-
-    invoke-direct {v0, p1}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
-
-    iput-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iput-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mPluginManager:Lcom/android/systemui/shared/plugins/PluginManager;
 
     return-void
 .end method
@@ -2591,6 +2586,14 @@
     return-object p0
 .end method
 
+.method public getGestureOnlineConfig()Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mGestureOnlineConfig:Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;
+
+    return-object p0
+.end method
+
 .method public getKeyguardUnlockCounter()Lcom/oneplus/systemui/keyguard/OpKeyguardUnlockCounter;
     .locals 1
 
@@ -2628,14 +2631,6 @@
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpOneHandModeController:Lcom/oneplus/systemui/statusbar/phone/OpOneHandModeController;
-
-    return-object p0
-.end method
-
-.method public getOpCameraAnimateController()Lcom/oneplus/anim/OpCameraAnimateController;
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mCameraAnim:Lcom/oneplus/anim/OpCameraAnimateController;
 
     return-object p0
 .end method
@@ -2808,6 +2803,14 @@
     .locals 0
 
     const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public getmStatusBarCollapseListener()Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$StatusBarCollapseListener;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mStatusBarCollapseListener:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$StatusBarCollapseListener;
 
     return-object p0
 .end method
@@ -3005,16 +3008,6 @@
     iput p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOrientation:I
 
     invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->setUpHighlightHintInfo()V
-
-    new-instance p1, Lcom/oneplus/anim/OpCameraAnimateController;
-
-    iget-object v0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
-
-    invoke-direct {p1, v0}, Lcom/oneplus/anim/OpCameraAnimateController;-><init>(Landroid/content/Context;)V
-
-    iput-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mCameraAnim:Lcom/oneplus/anim/OpCameraAnimateController;
-
-    invoke-virtual {p1}, Lcom/oneplus/anim/OpCameraAnimateController;->init()V
 
     return-void
 .end method
@@ -3890,35 +3883,17 @@
 
     move-result-object v0
 
-    iget-boolean v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mCustomDozing:Z
+    iget-boolean v1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mCustomDozing:Z
 
-    invoke-virtual {v0, v2}, Lcom/android/systemui/statusbar/phone/DozeScrimController;->setDozing(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/phone/DozeScrimController;->setDozing(Z)V
 
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getKeyguardViewMediator()Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
     move-result-object v0
 
-    if-eqz v0, :cond_3
+    iget-boolean p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mCustomDozing:Z
 
-    invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->isKeyguardSecure()Z
-
-    move-result v2
-
-    if-nez v2, :cond_3
-
-    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
-
-    invoke-static {}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getCurrentUser()I
-
-    move-result v2
-
-    invoke-virtual {p0, v2}, Lcom/android/internal/widget/LockPatternUtils;->isLockScreenDisabled(I)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_3
-
-    invoke-virtual {v0, v1}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->notifyUnlockCounter(Z)V
+    invoke-virtual {v0, p0}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->setAodShowing(Z)V
 
     :cond_3
     return-void
@@ -4046,9 +4021,9 @@
 
     if-eqz v2, :cond_3
 
-    sget-object p0, Lcom/android/systemui/statusbar/phone/ScrimState;->BRIGHTNESS_MIRROR:Lcom/android/systemui/statusbar/phone/ScrimState;
+    sget-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->BRIGHTNESS_MIRROR:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    invoke-virtual {v1, p0}, Lcom/android/systemui/statusbar/phone/ScrimController;->transitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;)V
+    invoke-virtual {v1, v0}, Lcom/android/systemui/statusbar/phone/ScrimController;->transitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;)V
 
     goto/16 :goto_2
 
@@ -4063,13 +4038,13 @@
 
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getDozeScrimController()Lcom/android/systemui/statusbar/phone/DozeScrimController;
 
-    move-result-object p0
+    move-result-object v2
 
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/DozeScrimController;->getScrimCallback()Lcom/android/systemui/statusbar/phone/ScrimController$Callback;
+    invoke-virtual {v2}, Lcom/android/systemui/statusbar/phone/DozeScrimController;->getScrimCallback()Lcom/android/systemui/statusbar/phone/ScrimController$Callback;
 
-    move-result-object p0
+    move-result-object v2
 
-    invoke-virtual {v1, v0, p0}, Lcom/android/systemui/statusbar/phone/ScrimController;->transitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;Lcom/android/systemui/statusbar/phone/ScrimController$Callback;)V
+    invoke-virtual {v1, v0, v2}, Lcom/android/systemui/statusbar/phone/ScrimController;->transitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;Lcom/android/systemui/statusbar/phone/ScrimController$Callback;)V
 
     goto/16 :goto_2
 
@@ -4105,9 +4080,9 @@
 
     if-nez v0, :cond_6
 
-    sget-object p0, Lcom/android/systemui/statusbar/phone/ScrimState;->AOD:Lcom/android/systemui/statusbar/phone/ScrimState;
+    sget-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->AOD:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    invoke-virtual {v1, p0}, Lcom/android/systemui/statusbar/phone/ScrimController;->transitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;)V
+    invoke-virtual {v1, v0}, Lcom/android/systemui/statusbar/phone/ScrimController;->transitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;)V
 
     goto :goto_2
 
@@ -4120,9 +4095,9 @@
 
     if-nez v0, :cond_7
 
-    sget-object p0, Lcom/android/systemui/statusbar/phone/ScrimState;->KEYGUARD:Lcom/android/systemui/statusbar/phone/ScrimState;
+    sget-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->KEYGUARD:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    invoke-virtual {v1, p0}, Lcom/android/systemui/statusbar/phone/ScrimController;->transitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;)V
+    invoke-virtual {v1, v0}, Lcom/android/systemui/statusbar/phone/ScrimController;->transitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;)V
 
     goto :goto_2
 
@@ -4137,9 +4112,9 @@
 
     if-eqz v0, :cond_8
 
-    sget-object p0, Lcom/android/systemui/statusbar/phone/ScrimState;->BUBBLE_EXPANDED:Lcom/android/systemui/statusbar/phone/ScrimState;
+    sget-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->BUBBLE_EXPANDED:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    invoke-virtual {v1, p0}, Lcom/android/systemui/statusbar/phone/ScrimController;->transitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;)V
+    invoke-virtual {v1, v0}, Lcom/android/systemui/statusbar/phone/ScrimController;->transitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;)V
 
     goto :goto_2
 
@@ -4148,9 +4123,9 @@
 
     invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getUnlockScrimCallback()Lcom/android/systemui/statusbar/phone/ScrimController$Callback;
 
-    move-result-object p0
+    move-result-object v2
 
-    invoke-virtual {v1, v0, p0}, Lcom/android/systemui/statusbar/phone/ScrimController;->transitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;Lcom/android/systemui/statusbar/phone/ScrimController$Callback;)V
+    invoke-virtual {v1, v0, v2}, Lcom/android/systemui/statusbar/phone/ScrimController;->transitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;Lcom/android/systemui/statusbar/phone/ScrimController$Callback;)V
 
     goto :goto_2
 
@@ -4159,9 +4134,9 @@
 
     invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getUnlockScrimCallback()Lcom/android/systemui/statusbar/phone/ScrimController$Callback;
 
-    move-result-object p0
+    move-result-object v2
 
-    invoke-virtual {v1, v0, p0}, Lcom/android/systemui/statusbar/phone/ScrimController;->transitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;Lcom/android/systemui/statusbar/phone/ScrimController$Callback;)V
+    invoke-virtual {v1, v0, v2}, Lcom/android/systemui/statusbar/phone/ScrimController;->transitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;Lcom/android/systemui/statusbar/phone/ScrimController$Callback;)V
 
     goto :goto_2
 
@@ -4169,26 +4144,36 @@
     :goto_0
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getStatusBarKeyguardViewManager()Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->bouncerNeedsScrimming()Z
+    invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->bouncerNeedsScrimming()Z
 
-    move-result p0
+    move-result v0
 
-    if-eqz p0, :cond_b
+    if-eqz v0, :cond_b
 
-    sget-object p0, Lcom/android/systemui/statusbar/phone/ScrimState;->BOUNCER_SCRIMMED:Lcom/android/systemui/statusbar/phone/ScrimState;
+    sget-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->BOUNCER_SCRIMMED:Lcom/android/systemui/statusbar/phone/ScrimState;
 
     goto :goto_1
 
     :cond_b
-    sget-object p0, Lcom/android/systemui/statusbar/phone/ScrimState;->BOUNCER:Lcom/android/systemui/statusbar/phone/ScrimState;
+    sget-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->BOUNCER:Lcom/android/systemui/statusbar/phone/ScrimState;
 
     :goto_1
-    invoke-virtual {v1, p0}, Lcom/android/systemui/statusbar/phone/ScrimController;->transitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;)V
+    invoke-virtual {v1, v0}, Lcom/android/systemui/statusbar/phone/ScrimController;->transitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;)V
 
     :goto_2
     invoke-static {}, Landroid/os/Trace;->endSection()V
+
+    invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getNotificationPanelViewController()Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
+
+    move-result-object p0
+
+    invoke-virtual {v1}, Lcom/android/systemui/statusbar/phone/ScrimController;->getState()Lcom/android/systemui/statusbar/phone/ScrimState;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/oneplus/systemui/statusbar/phone/OpPanelViewController;->updateScrimState(Lcom/android/systemui/statusbar/phone/ScrimState;)V
 
     return-void
 .end method
@@ -4281,6 +4266,14 @@
     invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpPanelViewController;->setUpHighlightHintInfo()V
 
     :cond_0
+    return-void
+.end method
+
+.method public setmStatusBarCollapseListener(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$StatusBarCollapseListener;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mStatusBarCollapseListener:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$StatusBarCollapseListener;
+
     return-void
 .end method
 
@@ -5072,7 +5065,7 @@
 
     new-array v0, v1, [I
 
-    const/16 v1, 0xe5
+    const/16 v1, 0xdd
 
     aput v1, v0, v2
 
@@ -5096,6 +5089,14 @@
     invoke-direct {v0}, Lcom/oneplus/util/OpBoostUtils;-><init>()V
 
     iput-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpBoostUtils:Lcom/oneplus/util/OpBoostUtils;
+
+    new-instance v0, Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;
+
+    iget-object v1, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
+
+    invoke-direct {v0, v1}, Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mGestureOnlineConfig:Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;
 
     return-void
 .end method
@@ -5138,7 +5139,7 @@
 .end method
 
 .method protected startWakingUpAnimation()V
-    .locals 11
+    .locals 13
 
     iget-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mWakingUpAnimationStart:Z
 
@@ -5251,97 +5252,121 @@
 
     move-result v8
 
-    sget-boolean v9, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->DEBUG:Z
+    iget-object v9, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodDisplayViewManager:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    if-eqz v9, :cond_2
+    invoke-virtual {v9}, Lcom/oneplus/aod/OpAodDisplayViewManager;->isNoneFodAnimationStyle()Z
 
-    new-instance v9, Ljava/lang/StringBuilder;
+    move-result v9
 
-    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+    iget-object v10, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
-    const-string v10, "startWakingUpAnimation canPlayNotificationAnimation"
+    invoke-static {v10, v8}, Lcom/oneplus/aod/utils/OpCanvasAodHelper;->isCanvasAodAnimation(Landroid/content/Context;Z)Z
 
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v10
 
-    invoke-virtual {v9, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    sget-boolean v11, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->DEBUG:Z
 
-    const-string v10, " isFingerprintUnlock:"
+    if-eqz v11, :cond_2
 
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v11, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9, v8}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v10, " bouncerShow:"
+    const-string v12, "startWakingUpAnimation canPlayNotificationAnimation"
 
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v11, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v12, " isFingerprintUnlock:"
+
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v11, v8}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v12, " bouncerShow:"
+
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getBouncerShowing()Z
 
-    move-result v10
+    move-result v12
 
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v10, " isShowing:"
+    const-string v12, " isShowing:"
 
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v10, " getIsOccluded:"
+    const-string v12, " getIsOccluded:"
 
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getIsOccluded()Z
 
-    move-result v10
+    move-result v12
 
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v10, " playAodWakingUpAnimation:"
+    const-string v12, " playAodWakingUpAnimation:"
 
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v10, " isScreenOffUnlock:"
+    const-string v12, " isScreenOffUnlock:"
 
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v10, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpFacelockController:Lcom/oneplus/faceunlock/OpFacelockController;
+    iget-object v12, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpFacelockController:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-virtual {v10}, Lcom/oneplus/faceunlock/OpFacelockController;->isScreenOffUnlock()Z
+    invoke-virtual {v12}, Lcom/oneplus/faceunlock/OpFacelockController;->isScreenOffUnlock()Z
 
-    move-result v10
+    move-result v12
 
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v10, " isCameraLaunched:"
+    const-string v12, " isCameraLaunched:"
 
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getKeyguardUpdateMonitor()Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-    move-result-object v10
+    move-result-object v12
 
-    invoke-virtual {v10}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isCameraLaunched()Z
+    invoke-virtual {v12}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isCameraLaunched()Z
 
-    move-result v10
+    move-result v12
 
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v10, " isPreventViewShow:"
+    const-string v12, " isPreventViewShow:"
 
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     const-string v4, " isWarpChargingAnimationStart:"
 
-    invoke-virtual {v9, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v4, " isNoneFodAnimationStyle:"
+
+    invoke-virtual {v11, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v11, v9}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v4, " isCanvasAodAnimation: "
+
+    invoke-virtual {v11, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v11, v10}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v4
 
@@ -5350,7 +5375,7 @@
     :cond_2
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->cancelWakingupScrimAnimation()V
 
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_7
 
     iget-object v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodWindowManager:Lcom/oneplus/aod/OpAodWindowManager;
 
@@ -5368,14 +5393,28 @@
 
     invoke-virtual {v2, v3}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    if-nez v8, :cond_3
+    if-eqz v10, :cond_3
 
-    if-eqz v6, :cond_3
+    const-string v3, "canvas aod override waking up scrim animation"
+
+    invoke-static {v1, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v3, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpWakingUpScrimController:Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;
+
+    invoke-virtual {v3, v0}, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;->removeFromWindow(Z)V
+
+    :cond_3
+    if-nez v8, :cond_5
+
+    if-eqz v6, :cond_5
+
+    if-nez v10, :cond_4
 
     iget-object v3, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpWakingUpScrimController:Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;
 
     invoke-virtual {v3, v0, v7}, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;->startAnimation(ZZ)V
 
+    :cond_4
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodWindowManager:Lcom/oneplus/aod/OpAodWindowManager;
 
     invoke-virtual {v0}, Lcom/oneplus/aod/OpAodWindowManager;->getUIHandler()Landroid/os/Handler;
@@ -5392,9 +5431,9 @@
 
     invoke-static {v1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_1
+    goto :goto_2
 
-    :cond_3
+    :cond_5
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodWindowManager:Lcom/oneplus/aod/OpAodWindowManager;
 
     invoke-virtual {v0}, Lcom/oneplus/aod/OpAodWindowManager;->getUIHandler()Landroid/os/Handler;
@@ -5407,17 +5446,20 @@
 
     invoke-virtual {v0, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
+    if-nez v10, :cond_6
+
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpWakingUpScrimController:Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;
 
     invoke-virtual {p0, v7, v8}, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;->startAnimation(ZZ)V
 
+    :cond_6
     const-string p0, "mWakingUpAnimation case 2"
 
     invoke-static {v1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_1
+    goto :goto_2
 
-    :cond_4
+    :cond_7
     iget-object v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodWindowManager:Lcom/oneplus/aod/OpAodWindowManager;
 
     invoke-virtual {v2}, Lcom/oneplus/aod/OpAodWindowManager;->stopDozing()V
@@ -5434,7 +5476,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-eqz v3, :cond_5
+    if-eqz v3, :cond_8
 
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getKeyguardUpdateMonitor()Lcom/android/keyguard/KeyguardUpdateMonitor;
 
@@ -5444,7 +5486,9 @@
 
     move-result v2
 
-    if-nez v2, :cond_5
+    if-nez v2, :cond_8
+
+    if-nez v9, :cond_8
 
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpWakingUpScrimController:Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;
 
@@ -5454,18 +5498,36 @@
 
     invoke-static {v1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    goto :goto_2
+
+    :cond_8
+    invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getKeyguardUpdateMonitor()Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isCameraLaunched()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_9
+
+    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpWakingUpScrimController:Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;
+
+    invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;->removeFromWindowForCameraLaunched()V
+
     goto :goto_1
 
-    :cond_5
+    :cond_9
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpWakingUpScrimController:Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;
 
     invoke-virtual {p0, v0}, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;->removeFromWindow(Z)V
 
+    :goto_1
     const-string p0, "mWakingUpAnimation case 4"
 
     invoke-static {v1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    :goto_1
+    :goto_2
     return-void
 .end method
 

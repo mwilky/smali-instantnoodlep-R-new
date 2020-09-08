@@ -24,17 +24,17 @@
 
 
 # instance fields
-.field private mActivityStarter:Lcom/android/systemui/plugins/ActivityStarter;
-
 .field private mCallback:Lcom/android/systemui/qs/tiles/ScreenRecordTile$Callback;
 
 .field private mController:Lcom/android/systemui/screenrecord/RecordingController;
+
+.field private mKeyguardDismissUtil:Lcom/android/systemui/statusbar/phone/KeyguardDismissUtil;
 
 .field private mMillisUntilFinished:J
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/systemui/qs/QSHost;Lcom/android/systemui/screenrecord/RecordingController;Lcom/android/systemui/plugins/ActivityStarter;)V
+.method public constructor <init>(Lcom/android/systemui/qs/QSHost;Lcom/android/systemui/screenrecord/RecordingController;Lcom/android/systemui/statusbar/phone/KeyguardDismissUtil;)V
     .locals 2
 
     invoke-direct {p0, p1}, Lcom/android/systemui/qs/tileimpl/QSTileImpl;-><init>(Lcom/android/systemui/qs/QSHost;)V
@@ -55,7 +55,7 @@
 
     invoke-interface {p2, p0, p1}, Lcom/android/systemui/statusbar/policy/CallbackController;->observe(Landroidx/lifecycle/LifecycleOwner;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput-object p3, p0, Lcom/android/systemui/qs/tiles/ScreenRecordTile;->mActivityStarter:Lcom/android/systemui/plugins/ActivityStarter;
+    iput-object p3, p0, Lcom/android/systemui/qs/tiles/ScreenRecordTile;->mKeyguardDismissUtil:Lcom/android/systemui/statusbar/phone/KeyguardDismissUtil;
 
     return-void
 .end method
@@ -84,14 +84,28 @@
     return-void
 .end method
 
-.method private startCountdown()V
+.method private synthetic lambda$handleClick$0()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/systemui/qs/tiles/ScreenRecordTile;->showPrompt()V
+
+    return-void
+.end method
+
+.method private synthetic lambda$showPrompt$1(Landroid/content/Intent;)Z
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0, p1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method private showPrompt()V
     .locals 2
-
-    const-string v0, "ScreenRecordTile"
-
-    const-string v1, "Starting countdown"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-virtual {p0}, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->getHost()Lcom/android/systemui/qs/QSHost;
 
@@ -105,23 +119,21 @@
 
     move-result-object v0
 
-    iget-object p0, p0, Lcom/android/systemui/qs/tiles/ScreenRecordTile;->mActivityStarter:Lcom/android/systemui/plugins/ActivityStarter;
+    new-instance v1, Lcom/android/systemui/qs/tiles/-$$Lambda$ScreenRecordTile$qbmpsZNn23bn5rqlkcpltHLJl4w;
 
-    const/4 v1, 0x0
+    invoke-direct {v1, p0, v0}, Lcom/android/systemui/qs/tiles/-$$Lambda$ScreenRecordTile$qbmpsZNn23bn5rqlkcpltHLJl4w;-><init>(Lcom/android/systemui/qs/tiles/ScreenRecordTile;Landroid/content/Intent;)V
 
-    invoke-interface {p0, v0, v1}, Lcom/android/systemui/plugins/ActivityStarter;->postStartActivityDismissingKeyguard(Landroid/content/Intent;I)V
+    iget-object p0, p0, Lcom/android/systemui/qs/tiles/ScreenRecordTile;->mKeyguardDismissUtil:Lcom/android/systemui/statusbar/phone/KeyguardDismissUtil;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v1, v0}, Lcom/android/systemui/statusbar/phone/KeyguardDismissUtil;->executeWhenUnlocked(Lcom/android/systemui/plugins/ActivityStarter$OnDismissAction;Z)V
 
     return-void
 .end method
 
 .method private stopRecording()V
-    .locals 2
-
-    const-string v0, "ScreenRecordTile"
-
-    const-string v1, "Stopping recording from tile"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/qs/tiles/ScreenRecordTile;->mController:Lcom/android/systemui/screenrecord/RecordingController;
 
@@ -163,7 +175,7 @@
 .end method
 
 .method protected handleClick()V
-    .locals 1
+    .locals 2
 
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/ScreenRecordTile;->mController:Lcom/android/systemui/screenrecord/RecordingController;
 
@@ -191,7 +203,13 @@
     goto :goto_0
 
     :cond_1
-    invoke-direct {p0}, Lcom/android/systemui/qs/tiles/ScreenRecordTile;->startCountdown()V
+    iget-object v0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mUiHandler:Landroid/os/Handler;
+
+    new-instance v1, Lcom/android/systemui/qs/tiles/-$$Lambda$ScreenRecordTile$mAnfM-ZKBPW0VK4FrRQ7ZNGHi_A;
+
+    invoke-direct {v1, p0}, Lcom/android/systemui/qs/tiles/-$$Lambda$ScreenRecordTile$mAnfM-ZKBPW0VK4FrRQ7ZNGHi_A;-><init>(Lcom/android/systemui/qs/tiles/ScreenRecordTile;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     :goto_0
     invoke-virtual {p0}, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->refreshState()V
@@ -266,15 +284,15 @@
 
     iput-object v4, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->label:Ljava/lang/CharSequence;
 
+    sget v4, Lcom/android/systemui/R$drawable;->ic_screenrecord:I
+
+    invoke-static {v4}, Lcom/android/systemui/qs/tileimpl/QSTileImpl$ResourceIcon;->get(I)Lcom/android/systemui/plugins/qs/QSTile$Icon;
+
+    move-result-object v4
+
+    iput-object v4, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->icon:Lcom/android/systemui/plugins/qs/QSTile$Icon;
+
     if-eqz v0, :cond_4
-
-    sget p2, Lcom/android/systemui/R$drawable;->ic_qs_screenrecord:I
-
-    invoke-static {p2}, Lcom/android/systemui/qs/tileimpl/QSTileImpl$ResourceIcon;->get(I)Lcom/android/systemui/plugins/qs/QSTile$Icon;
-
-    move-result-object p2
-
-    iput-object p2, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->icon:Lcom/android/systemui/plugins/qs/QSTile$Icon;
 
     iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
 
@@ -305,14 +323,6 @@
 
     long-to-int p0, v4
 
-    sget p2, Lcom/android/systemui/R$drawable;->ic_qs_screenrecord:I
-
-    invoke-static {p2}, Lcom/android/systemui/qs/tileimpl/QSTileImpl$ResourceIcon;->get(I)Lcom/android/systemui/plugins/qs/QSTile$Icon;
-
-    move-result-object p2
-
-    iput-object p2, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->icon:Lcom/android/systemui/plugins/qs/QSTile$Icon;
-
     new-array p2, v2, [Ljava/lang/Object;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -332,14 +342,6 @@
     goto :goto_4
 
     :cond_5
-    sget p2, Lcom/android/systemui/R$drawable;->ic_qs_screenrecord:I
-
-    invoke-static {p2}, Lcom/android/systemui/qs/tileimpl/QSTileImpl$ResourceIcon;->get(I)Lcom/android/systemui/plugins/qs/QSTile$Icon;
-
-    move-result-object p2
-
-    iput-object p2, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->icon:Lcom/android/systemui/plugins/qs/QSTile$Icon;
-
     iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
 
     sget p2, Lcom/android/systemui/R$string;->quick_settings_screen_record_start:I
@@ -412,6 +414,24 @@
     .locals 0
 
     const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public synthetic lambda$handleClick$0$ScreenRecordTile()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/systemui/qs/tiles/ScreenRecordTile;->lambda$handleClick$0()V
+
+    return-void
+.end method
+
+.method public synthetic lambda$showPrompt$1$ScreenRecordTile(Landroid/content/Intent;)Z
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/systemui/qs/tiles/ScreenRecordTile;->lambda$showPrompt$1(Landroid/content/Intent;)Z
+
+    move-result p0
 
     return p0
 .end method

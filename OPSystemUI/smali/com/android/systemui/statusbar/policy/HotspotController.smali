@@ -46,5 +46,11 @@
     return p0
 .end method
 
+.method public onBootCompleted()V
+    .locals 0
+
+    return-void
+.end method
+
 .method public abstract setHotspotEnabled(Z)V
 .end method

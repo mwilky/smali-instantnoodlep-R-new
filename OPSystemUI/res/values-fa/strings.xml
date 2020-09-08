@@ -39,6 +39,11 @@
     <string name="abc_slice_updated">زمان به‌روزرسانی %1$s</string>
     <string name="abc_slices_permission_request">%1$s می‌خواهد تکه‌های %2$s را نشان دهد</string>
     <string name="abc_toolbar_collapse_description">کوچک کردن</string>
+    <string name="about_action_bar_title">درباره</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">سیاست حفظ حریم خصوصی</string>
+    <string name="about_release_note_title">گزارش به‌روزرسانی:</string>
+    <string name="about_terms_service">شرایط استفاده از خدمات</string>
     <string name="accessibility_accessibility_button">دسترس‌پذیری</string>
     <string name="accessibility_action_divider_bottom_full">تمام‌صفحه پایین</string>
     <string name="accessibility_action_divider_left_30">٪۳۰ چپ</string>
@@ -67,7 +72,7 @@
     <string name="accessibility_bluetooth_name">به %s متصل شد.</string>
     <string name="accessibility_bluetooth_tether">اشتراک‌گذاری اینترنت با بلوتوث.</string>
     <string name="accessibility_brightness">روشنایی نمایشگر</string>
-    <string name="accessibility_bubble_dismissed">ابزارک اعلان رد شد.</string>
+    <string name="accessibility_bubble_dismissed">حبابک رد شد.</string>
     <string name="accessibility_camera_button">دوربین</string>
     <string name="accessibility_cast_name">به %s متصل شد.</string>
     <string name="accessibility_casting_turned_off">فرستادن صفحه نمایش متوقف شد.</string>
@@ -267,7 +272,7 @@
     <string name="accessibility_wimax_signal_full">‏قدرت سیگنال WiMAX کامل است.</string>
     <string name="accessibility_wimax_three_bars">‏WiMAX سه نوار دارد.</string>
     <string name="accessibility_wimax_two_bars">‏WiMAX دو نوار دارد.</string>
-    <string name="accessibility_work_life_balance_mode">Work Life Balance</string>
+    <string name="accessibility_work_life_balance_mode">تعادل بین کار و زندگی</string>
     <string name="accessibility_work_life_balance_mode_off">حالت «Work Life Balance» خاموش شد.</string>
     <string name="accessibility_work_life_balance_mode_on">حالت «Work Life Balance» روشن شد.</string>
     <string name="accessibility_zero_bars">بدون میله.</string>
@@ -527,16 +532,16 @@
     <string name="bubble_content_description_stack">%1$s از %2$s و %3$d مورد بیشتر</string>
     <string name="bubble_dismiss_text">رد کردن حبابک</string>
     <string name="bubble_overflow_button_content_description">لبریزشده</string>
-    <string name="bubble_overflow_empty_subtitle">ابزارک اعلان اخیر و ابزارک اعلان ردشده اینجا ظاهر خواهند شد</string>
-    <string name="bubble_overflow_empty_title">هیچ ابزارک اعلان جدیدی وجود ندارد</string>
+    <string name="bubble_overflow_empty_subtitle">حبابک‌ها اخیر و حبابک‌ها ردشده اینجا ظاهر خواهند شد</string>
+    <string name="bubble_overflow_empty_title">هیچ حبابک جدیدی وجود ندارد</string>
     <string name="bubbles_app_settings">تنظیمات %1$s</string>
     <string name="bubbles_dont_bubble_conversation">مکالمه در حباب نشان داده نشود</string>
-    <string name="bubbles_settings_button_description">تنظیم برای ابزارک‌های اعلان %1$s</string>
-    <string name="bubbles_user_education_description">مکالمه‌های جدید به‌صورت نمادهای شناور یا ابزارک اعلان نشان داده شوند. برای باز کردن ابزارک اعلان ضربه بزنید. برای جابه‌جایی، آن را بکشید.</string>
+    <string name="bubbles_settings_button_description">تنظیمات برای حبابک‌های %1$s</string>
+    <string name="bubbles_user_education_description">مکالمه‌های جدید به‌صورت نمادهای شناور یا حبابک‌ها نشان داده می‌شوند. برای باز کردن حبابک‌ها ضربه بزنید. برای جابه‌جایی، آن را بکشید.</string>
     <string name="bubbles_user_education_got_it">متوجه‌ام</string>
-    <string name="bubbles_user_education_manage">برای خاموش کردن «ابزارک اعلان» از این برنامه، روی «مدیریت» ضربه بزنید</string>
-    <string name="bubbles_user_education_manage_title">کنترل ابزارک اعلان در هرزمانی</string>
-    <string name="bubbles_user_education_title">گپ بااستفاده از ابزارک اعلان</string>
+    <string name="bubbles_user_education_manage">برای خاموش کردن «حبابک‌ها» از این برنامه، روی «مدیریت» ضربه بزنید</string>
+    <string name="bubbles_user_education_manage_title">کنترل حبابک‌ها در هرزمانی</string>
+    <string name="bubbles_user_education_title">گپ بااستفاده از حبابک‌ها</string>
     <string name="bugreport_in_power">میان‌بر گزارش مشکل</string>
     <string name="bugreport_in_power_summary">نمایش دکمه‌ای در منوی روشن/خاموش برای گرفتن گزارش اشکال</string>
     <string name="button_convert_fbe">پاک کردن و تبدیل…</string>
@@ -598,6 +603,7 @@
     <string name="controls_favorite_other_zone_header">موارد دیگر</string>
     <string name="controls_favorite_rearrange">برای تغییر دادن ترتیب کنترل‌ها، آن‌ها را نگه دارید و بکشید</string>
     <string name="controls_favorite_removed">همه کنترل‌ها برداشته شده‌اند</string>
+    <string name="controls_favorite_see_other_apps">دیدن برنامه‌های دیگر</string>
     <string name="controls_favorite_subtitle">برای دسترسی از منوی روشن/خاموش، کنترل‌ها را انتخاب کنید</string>
     <string name="controls_favorite_toast_no_changes">تغییرات ذخیره نشد</string>
     <string name="controls_in_progress">درحال انجام</string>
@@ -696,8 +702,8 @@
     <string name="disable_carrier_button_text">‏غیرفعال کردن eSIM</string>
     <string name="disable_overlays">‏غیر فعال کردن پوشش HW</string>
     <string name="disable_overlays_summary">‏همیشه از GPU در ترکیب صفحه استفاده شود</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">برای دریافت جزئیات، با سرپرست خود تماس بگیرید</string>
+    <string name="disable_tether_notification_title">اشتراک‌گذاری اینترنت غیرفعال است</string>
     <string name="disable_vpn">‏غیرفعال کردن VPN</string>
     <string name="disabled">غیر فعال شد</string>
     <string name="disabled_by_admin">توسط سرپرست غیرفعال شده</string>
@@ -717,6 +723,7 @@
     <string name="drag_to_rearrange_tiles">برای تغییر دادن ترتیب کاشی‌ها، آن‌ها را نگه دارید و بکشید</string>
     <string name="drag_to_remove_disabled">حداقل به %1$d کاشی نیاز دارید</string>
     <string name="drag_to_remove_tiles">برای حذف، به اینجا بکشید</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">برای تغییر چیدمان، نماهای کوچک را بکشید. برای نمایش یا پنهان کردن، ضربه بزنید.</string>
     <string name="empty_shade_text">اعلانی موجود نیست</string>
     <string name="enable_adb">‏اشکال‌زدایی USB</string>
@@ -1092,6 +1099,7 @@
     <string name="left_nav_bar_button_type">نوع دکمه منتهی‌الیه چپ</string>
     <string name="legacy_vpn_name">VPN</string>
     <string name="loading_injected_setting_summary">بارگیری…</string>
+    <string name="loading_text">در حال بارگذاری...</string>
     <string name="local_backup_password_summary_change">برای تغییر یا حذف گذرواژه برای نسخه‌های پشتیبان کامل رایانه‌ای ضربه بزنید</string>
     <string name="local_backup_password_summary_none">پشتیبان‌گیری کامل رایانه درحال حاضر محافظت نمی‌شود</string>
     <string name="local_backup_password_title">گذرواژه پشتیبان‌گیری محلی</string>
@@ -1114,7 +1122,7 @@
     <string name="manage_notifications_history_text">سابقه</string>
     <string name="manage_notifications_text">مدیریت</string>
     <string name="managed_user_title">همه برنامه‌های کاری</string>
-    <string name="maxxaudio_disable">غیرفعال‌سازی</string>
+    <string name="maxxaudio_disable">غیرفعال کردن</string>
     <string name="maxxaudio_enable">فعال‌سازی</string>
     <string name="media_category">رسانه</string>
     <string name="media_projection_action_text">اکنون شروع کنید</string>
@@ -1279,13 +1287,13 @@
     <string name="notification_content_disable_button_in_nav">هنگام قفل بودن دکمه‌های سخت‌افزاری، نوار پیمایش غیرفعال می‌شود</string>
     <string name="notification_content_gesture_nav_available">برای به‌روزرسانی پیمایش سیستم، به «تنظیمات» بروید</string>
     <string name="notification_content_system_nav_changed">پیمایش سیستم به‌روزرسانی شد. برای انجام تغییرات به «تنظیمات» بروید.</string>
-    <string name="notification_conversation_bubble">نمایش ابزارک اعلان</string>
+    <string name="notification_conversation_bubble">نمایش حبابک</string>
     <string name="notification_conversation_channel_settings">تنظیمات</string>
     <string name="notification_conversation_favorite">مکالمه مهم</string>
     <string name="notification_conversation_home_screen">افزودن به صفحه اصلی</string>
     <string name="notification_conversation_mute">بی‌صدا شد</string>
     <string name="notification_conversation_summary_low">بدون صدا و لرزش در پایین بخش مکالمه نشان داده می‌شود</string>
-    <string name="notification_conversation_unbubble">برداشتن ابزارک اعلان</string>
+    <string name="notification_conversation_unbubble">برداشتن حبابک‌ها</string>
     <string name="notification_conversation_unfavorite">مکالمه غیرمهم</string>
     <string name="notification_conversation_unmute">هشدار دادن</string>
     <string name="notification_delegate_header">اعلان‌های دارای پراکسی</string>
@@ -1323,8 +1331,14 @@
     <string name="oneplus_threekey_navigation_sound">همۀ صداها مجاز باشند</string>
     <string name="oneplus_threekey_navigation_turned_on_here">با کلید بالا روشن می‌شود</string>
     <string name="oneplus_threekey_navigation_vibration">تنها لرزش</string>
-    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> قفل‌گشایی</string>
-    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> قفل‌گشایی می‌کند</string>
+    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>قفل‌گشایی</string>
+    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>قفل‌گشایی می‌کند</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">در حال جفت‌سازی...</string>
     <string name="op_earphone_connected_fail">جفت نشد. می‌توانید وضعیت هدست و بلوتوث را بررسی کنید.</string>
     <string name="op_earphone_connected_success">جفت شد. برای تنظیم بیشتر، ضربه بزنید.</string>
@@ -1354,9 +1368,10 @@
     <string name="op_notification_channel_summary_low">اعلان‌های کم‌اهمیت‌تر بدون صدا یا لرزش خواهد بود.</string>
     <string name="op_notification_section_header_gentle">سایر اعلان‌ها</string>
     <string name="op_notification_silence_title">سایر موارد</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">حالت تاریک</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s%3$s استفاده شده</string>
-    <string name="op_quick_settings_night_display_label">حالت شب</string>
+    <string name="op_quick_settings_night_display_label">راحتی دید</string>
     <string name="op_quick_settings_night_display_summary_off">حالت شب خاموش است؛ برای روشن کردن، ضربه بزنید</string>
     <string name="op_quick_settings_night_display_summary_on">حالت شب روشن است؛ برای خاموش کردن، ضربه بزنید</string>
     <string name="op_read_mode2_dialog_black">جلوۀ تک‌رنگ</string>
@@ -1479,13 +1494,13 @@
     <string name="prevent_view_top_tag_cancel2">دایره‌های روی صفحۀ نمایش را دنبال کنید و برای خروج اجباری از حالت جیب، روی آنها ضربه بزنید</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="priority_onboarding_appear_as_bubble_text">به‌شکل ابزارک اعلان شناور روی برنامه‌ها ظاهر می‌شود</string>
+    <string name="priority_onboarding_appear_as_bubble_text">به‌شکل حبابک شناور روی برنامه‌ها ظاهر می‌شود</string>
     <string name="priority_onboarding_behavior">مکالمه‌های اولویت‌دار:</string>
     <string name="priority_onboarding_done_button_title">متوجه‌ام</string>
     <string name="priority_onboarding_ignores_dnd_text">وقفه در «مزاحم نشوید»</string>
     <string name="priority_onboarding_settings_button_title">تنظیمات</string>
     <string name="priority_onboarding_show_at_top_text">نمایش در بالای بخش مکالمه</string>
-    <string name="priority_onboarding_show_avatar_text">نمایش تصویر نمایه در صفحه قفل</string>
+    <string name="priority_onboarding_show_avatar_text">تصویر نمایه را در صفحه قفل نمایش می‌دهد</string>
     <string name="priority_onboarding_title">مکالمه روی اولویت تنظیم شده است</string>
     <string name="privacy_alert_application_name">هشدار حریم خصوصی</string>
     <string name="privacy_alert_content_text">برای تغییر، ضربه بزنید</string>
@@ -1613,9 +1628,9 @@
     <string name="quick_settings_location_off_label">مکان خاموش</string>
     <string name="quick_settings_media_device_label">دستگاه رسانه</string>
     <string name="quick_settings_more_settings">تنظیمات بیشتر</string>
-    <string name="quick_settings_nfc_label">NFC</string>
-    <string name="quick_settings_nfc_off">‏NFC غیرفعال است</string>
-    <string name="quick_settings_nfc_on">‏NFC فعال است</string>
+    <string name="quick_settings_nfc_label">‏ارتباط میدان نزدیک (NFC)</string>
+    <string name="quick_settings_nfc_off">‏«ارتباط میدان نزدیک» (NFC) غیرفعال است</string>
+    <string name="quick_settings_nfc_on">‏«ارتباط میدان نزدیک» (NFC) فعال است</string>
     <string name="quick_settings_night_display_label">نور شب</string>
     <string name="quick_settings_night_mode_label">حالت شب</string>
     <string name="quick_settings_night_secondary_label_on_at">ساعت %s روشن می‌شود</string>
@@ -1871,7 +1886,7 @@
     <string name="tethered_notification_hybrid_sharing_mobile">در حال اشتراک‌گذاری دادۀ تلفن همراه؛ برای ورود به «تنظیمات»، کلیک کنید</string>
     <string name="tethered_notification_hybrid_sharing_none">شبکه‌ای برای اشتراک‌گذاری در دسترس نیست؛ برای ورود به «تنظیمات»، کلیک کنید</string>
     <string name="tethered_notification_hybrid_sharing_wifi">در حال اشتراک‌گذاری Wi-Fi؛ برای ورود به «تنظیمات»، کلیک کنید</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">برای تنظیم، ضربه بزنید.</string>
     <string name="tethered_notification_multi_device_message">%1$s دستگاه متصل</string>
     <string name="tethered_notification_multi_tether_title">«اشتراک‌گذاری اینترنت» و «نقطه اتصال همراه» فعال است</string>
     <string name="tethered_notification_no_device_message">هیچ دستگاهی متصل نیست</string>
@@ -2104,7 +2119,17 @@
     <string name="wifi_verbose_logging">‏فعال کردن گزارش‌گیری طولانی Wi‑Fi</string>
     <string name="wifi_verbose_logging_summary">‏افزایش سطح گزارش‌گیری Wi‑Fi، نمایش به ازای SSID RSSI در انتخاب‌کننده Wi‑Fi</string>
     <string name="window_animation_scale_title">مقیاس پویانمایی پنجره</string>
-    <string name="work_life_balance_mode">Work-Life Balance</string>
+    <string name="wlb_break_mode_active">فعال</string>
+    <string name="wlb_break_mode_active_text">%1$s حالت · %2$s</string>
+    <string name="wlb_break_mode_on_break">در استراحت</string>
+    <string name="wlb_break_mode_resume">ادامه</string>
+    <string name="wlb_break_mode_take_break">کمی استراحت کنید</string>
+    <string name="wlb_qs_detail_break_mode">حالت استراحت</string>
+    <string name="wlb_qs_detail_break_mode_desc">به‌طور خودکار بعد از 30 دقیقه حالت قبلی از سر گرفته می‌‌شود</string>
+    <string name="wlb_qs_detail_life_mode">حالت زندگی</string>
+    <string name="wlb_qs_detail_more_setting">تنظیمات بیشتر</string>
+    <string name="wlb_qs_detail_work_mode">حالت کار</string>
+    <string name="work_life_balance_mode">تعادل بین کار و زندگی</string>
     <string name="zen_alarm_warning">در ساعت %1$s، دیگر صدای زنگ ساعت را نمی‌شنوید</string>
     <string name="zen_alarm_warning_indef">در ساعت %1$s صدای زنگ ساعت بعدی‌تان را نمی‌شنوید، مگر اینکه قبل از آن، این تنظیم را خاموش کنید</string>
     <string name="zen_alarms_introduction">به‌جز هشدارها، هیچ صدا و لرزشی نخواهید داشت. همچنان صدای مواردی را که پخش می‌کنید می‌شنوید (ازجمله صدای موسیقی، ویدیو و بازی).</string>
@@ -2125,5 +2150,5 @@
     <string name="zen_silence_introduction_voice">این کار «همه» صداها و لرزش‌ها (شامل هشدار، موسیقی، ویدیو و بازی) را مسدود می‌کند. همچنان می‌توانید تماس تلفنی برقرار کنید.</string>
     <string name="zzz_op_global_action_bootloader">راه‌انداز</string>
     <string name="zzz_op_global_action_recovery">بازیابی</string>
-    <string name="zzz_op_quick_pay_no_install_message">لطفاً برای استفاده از «پرداخت سریع»، برنامه‌های پرداخت را نصب کنید</string>
+    <string name="zzz_op_quick_pay_no_install_message">لطفاً برنامه‌های پرداخت را برای استفاده از «پرداخت سریع» نصب کنید</string>
 </resources>

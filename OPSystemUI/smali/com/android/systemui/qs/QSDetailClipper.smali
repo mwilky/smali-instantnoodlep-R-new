@@ -381,6 +381,19 @@
     return-void
 .end method
 
+.method public cancelAnimator()V
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/qs/QSDetailClipper;->mAnimator:Landroid/animation/Animator;
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Landroid/animation/Animator;->cancel()V
+
+    :cond_0
+    return-void
+.end method
+
 .method public showBackground()V
     .locals 0
 

@@ -29,7 +29,7 @@
     return-void
 .end method
 
-.method static synthetic access$4800(Lcom/android/systemui/globalactions/GlobalActionsDialog$MyOverflowAdapter;I)Z
+.method static synthetic access$4700(Lcom/android/systemui/globalactions/GlobalActionsDialog$MyOverflowAdapter;I)Z
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/systemui/globalactions/GlobalActionsDialog$MyOverflowAdapter;->onLongClickItem(I)Z
@@ -39,7 +39,7 @@
     return p0
 .end method
 
-.method static synthetic access$4900(Lcom/android/systemui/globalactions/GlobalActionsDialog$MyOverflowAdapter;I)V
+.method static synthetic access$4800(Lcom/android/systemui/globalactions/GlobalActionsDialog$MyOverflowAdapter;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/systemui/globalactions/GlobalActionsDialog$MyOverflowAdapter;->onClickItem(I)V
@@ -56,7 +56,7 @@
 
     instance-of v0, p1, Lcom/android/systemui/globalactions/GlobalActionsDialog$SilentModeTriStateAction;
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
     iget-object p0, p0, Lcom/android/systemui/globalactions/GlobalActionsDialog$MyOverflowAdapter;->this$0:Lcom/android/systemui/globalactions/GlobalActionsDialog;
 
@@ -64,9 +64,11 @@
 
     if-eqz p0, :cond_0
 
-    const/4 v0, 0x0
+    instance-of v0, p1, Lcom/android/systemui/globalactions/GlobalActionsDialog$PowerOptionsAction;
 
-    invoke-static {p0, v0}, Lcom/android/systemui/globalactions/GlobalActionsDialog$ActionsDialog;->access$3400(Lcom/android/systemui/globalactions/GlobalActionsDialog$ActionsDialog;Z)V
+    if-nez v0, :cond_1
+
+    invoke-virtual {p0}, Lcom/android/systemui/globalactions/GlobalActionsDialog$ActionsDialog;->dismiss()V
 
     goto :goto_0
 
@@ -77,10 +79,11 @@
 
     invoke-static {p0, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    :cond_1
     :goto_0
     invoke-interface {p1}, Lcom/android/systemui/globalactions/GlobalActionsDialog$Action;->onPress()V
 
-    :cond_1
+    :cond_2
     return-void
 .end method
 

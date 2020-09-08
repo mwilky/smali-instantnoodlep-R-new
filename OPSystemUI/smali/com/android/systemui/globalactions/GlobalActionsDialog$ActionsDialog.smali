@@ -199,15 +199,7 @@
     return p0
 .end method
 
-.method static synthetic access$3400(Lcom/android/systemui/globalactions/GlobalActionsDialog$ActionsDialog;Z)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/systemui/globalactions/GlobalActionsDialog$ActionsDialog;->dismissOverflow(Z)V
-
-    return-void
-.end method
-
-.method static synthetic access$4400(Lcom/android/systemui/globalactions/GlobalActionsDialog$ActionsDialog;)V
+.method static synthetic access$4300(Lcom/android/systemui/globalactions/GlobalActionsDialog$ActionsDialog;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/globalactions/GlobalActionsDialog$ActionsDialog;->completeDismiss()V
@@ -215,7 +207,7 @@
     return-void
 .end method
 
-.method static synthetic access$4700(Lcom/android/systemui/globalactions/GlobalActionsDialog$ActionsDialog;)Landroid/content/Context;
+.method static synthetic access$4600(Lcom/android/systemui/globalactions/GlobalActionsDialog$ActionsDialog;)Landroid/content/Context;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/globalactions/GlobalActionsDialog$ActionsDialog;->mContext:Landroid/content/Context;
@@ -814,7 +806,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/globalactions/GlobalActionsDialog$ActionsDialog;->mOverflowAdapter:Lcom/android/systemui/globalactions/GlobalActionsDialog$MyOverflowAdapter;
 
-    invoke-static {p0, p3}, Lcom/android/systemui/globalactions/GlobalActionsDialog$MyOverflowAdapter;->access$4900(Lcom/android/systemui/globalactions/GlobalActionsDialog$MyOverflowAdapter;I)V
+    invoke-static {p0, p3}, Lcom/android/systemui/globalactions/GlobalActionsDialog$MyOverflowAdapter;->access$4800(Lcom/android/systemui/globalactions/GlobalActionsDialog$MyOverflowAdapter;I)V
 
     return-void
 .end method
@@ -824,7 +816,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/globalactions/GlobalActionsDialog$ActionsDialog;->mOverflowAdapter:Lcom/android/systemui/globalactions/GlobalActionsDialog$MyOverflowAdapter;
 
-    invoke-static {p0, p3}, Lcom/android/systemui/globalactions/GlobalActionsDialog$MyOverflowAdapter;->access$4800(Lcom/android/systemui/globalactions/GlobalActionsDialog$MyOverflowAdapter;I)Z
+    invoke-static {p0, p3}, Lcom/android/systemui/globalactions/GlobalActionsDialog$MyOverflowAdapter;->access$4700(Lcom/android/systemui/globalactions/GlobalActionsDialog$MyOverflowAdapter;I)Z
 
     move-result p0
 

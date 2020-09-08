@@ -112,7 +112,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/DozeServiceHost$1;->this$0:Lcom/android/systemui/statusbar/phone/DozeServiceHost;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->access$000(Lcom/android/systemui/statusbar/phone/DozeServiceHost;)Lcom/android/systemui/statusbar/phone/StatusBar;
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->access$100(Lcom/android/systemui/statusbar/phone/DozeServiceHost;)Lcom/android/systemui/statusbar/phone/StatusBar;
 
     move-result-object v0
 
@@ -140,13 +140,37 @@
 
 # virtual methods
 .method public onPulseFinished()V
-    .locals 2
+    .locals 3
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/DozeServiceHost$1;->this$0:Lcom/android/systemui/statusbar/phone/DozeServiceHost;
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->access$102(Lcom/android/systemui/statusbar/phone/DozeServiceHost;Z)Z
+    invoke-static {v0, v1}, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->access$002(Lcom/android/systemui/statusbar/phone/DozeServiceHost;Z)Z
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "pulseWhileDozing, onPulseFinished, mPulsing:"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/DozeServiceHost$1;->this$0:Lcom/android/systemui/statusbar/phone/DozeServiceHost;
+
+    invoke-static {v2}, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->access$000(Lcom/android/systemui/statusbar/phone/DozeServiceHost;)Z
+
+    move-result v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "StatusBar"
+
+    invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/DozeServiceHost$1;->val$callback:Lcom/android/systemui/doze/DozeHost$PulseCallback;
 
@@ -154,7 +178,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/DozeServiceHost$1;->this$0:Lcom/android/systemui/statusbar/phone/DozeServiceHost;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->access$000(Lcom/android/systemui/statusbar/phone/DozeServiceHost;)Lcom/android/systemui/statusbar/phone/StatusBar;
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->access$100(Lcom/android/systemui/statusbar/phone/DozeServiceHost;)Lcom/android/systemui/statusbar/phone/StatusBar;
 
     move-result-object v0
 
@@ -174,15 +198,39 @@
 .end method
 
 .method public onPulseStarted()V
-    .locals 1
+    .locals 2
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/DozeServiceHost$1;->val$callback:Lcom/android/systemui/doze/DozeHost$PulseCallback;
 
     invoke-interface {v0}, Lcom/android/systemui/doze/DozeHost$PulseCallback;->onPulseStarted()V
 
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "pulseWhileDozing, onPulseStarted, mPulsing:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/DozeServiceHost$1;->this$0:Lcom/android/systemui/statusbar/phone/DozeServiceHost;
+
+    invoke-static {v1}, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->access$000(Lcom/android/systemui/statusbar/phone/DozeServiceHost;)Z
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "StatusBar"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/DozeServiceHost$1;->this$0:Lcom/android/systemui/statusbar/phone/DozeServiceHost;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->access$000(Lcom/android/systemui/statusbar/phone/DozeServiceHost;)Lcom/android/systemui/statusbar/phone/StatusBar;
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->access$100(Lcom/android/systemui/statusbar/phone/DozeServiceHost;)Lcom/android/systemui/statusbar/phone/StatusBar;
 
     move-result-object v0
 

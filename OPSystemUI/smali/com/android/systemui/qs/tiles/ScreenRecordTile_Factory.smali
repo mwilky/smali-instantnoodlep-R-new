@@ -18,16 +18,6 @@
 
 
 # instance fields
-.field private final activityStarterProvider:Ljavax/inject/Provider;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljavax/inject/Provider<",
-            "Lcom/android/systemui/plugins/ActivityStarter;",
-            ">;"
-        }
-    .end annotation
-.end field
-
 .field private final controllerProvider:Ljavax/inject/Provider;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -48,6 +38,16 @@
     .end annotation
 .end field
 
+.field private final keyguardDismissUtilProvider:Ljavax/inject/Provider;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljavax/inject/Provider<",
+            "Lcom/android/systemui/statusbar/phone/KeyguardDismissUtil;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 
 # direct methods
 .method public constructor <init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
@@ -62,7 +62,7 @@
             "Lcom/android/systemui/screenrecord/RecordingController;",
             ">;",
             "Ljavax/inject/Provider<",
-            "Lcom/android/systemui/plugins/ActivityStarter;",
+            "Lcom/android/systemui/statusbar/phone/KeyguardDismissUtil;",
             ">;)V"
         }
     .end annotation
@@ -73,7 +73,7 @@
 
     iput-object p2, p0, Lcom/android/systemui/qs/tiles/ScreenRecordTile_Factory;->controllerProvider:Ljavax/inject/Provider;
 
-    iput-object p3, p0, Lcom/android/systemui/qs/tiles/ScreenRecordTile_Factory;->activityStarterProvider:Ljavax/inject/Provider;
+    iput-object p3, p0, Lcom/android/systemui/qs/tiles/ScreenRecordTile_Factory;->keyguardDismissUtilProvider:Ljavax/inject/Provider;
 
     return-void
 .end method
@@ -90,7 +90,7 @@
             "Lcom/android/systemui/screenrecord/RecordingController;",
             ">;",
             "Ljavax/inject/Provider<",
-            "Lcom/android/systemui/plugins/ActivityStarter;",
+            "Lcom/android/systemui/statusbar/phone/KeyguardDismissUtil;",
             ">;)",
             "Lcom/android/systemui/qs/tiles/ScreenRecordTile_Factory;"
         }
@@ -115,7 +115,7 @@
             "Lcom/android/systemui/screenrecord/RecordingController;",
             ">;",
             "Ljavax/inject/Provider<",
-            "Lcom/android/systemui/plugins/ActivityStarter;",
+            "Lcom/android/systemui/statusbar/phone/KeyguardDismissUtil;",
             ">;)",
             "Lcom/android/systemui/qs/tiles/ScreenRecordTile;"
         }
@@ -139,9 +139,9 @@
 
     move-result-object p2
 
-    check-cast p2, Lcom/android/systemui/plugins/ActivityStarter;
+    check-cast p2, Lcom/android/systemui/statusbar/phone/KeyguardDismissUtil;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/android/systemui/qs/tiles/ScreenRecordTile;-><init>(Lcom/android/systemui/qs/QSHost;Lcom/android/systemui/screenrecord/RecordingController;Lcom/android/systemui/plugins/ActivityStarter;)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/android/systemui/qs/tiles/ScreenRecordTile;-><init>(Lcom/android/systemui/qs/QSHost;Lcom/android/systemui/screenrecord/RecordingController;Lcom/android/systemui/statusbar/phone/KeyguardDismissUtil;)V
 
     return-object v0
 .end method
@@ -155,7 +155,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/qs/tiles/ScreenRecordTile_Factory;->controllerProvider:Ljavax/inject/Provider;
 
-    iget-object p0, p0, Lcom/android/systemui/qs/tiles/ScreenRecordTile_Factory;->activityStarterProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/qs/tiles/ScreenRecordTile_Factory;->keyguardDismissUtilProvider:Ljavax/inject/Provider;
 
     invoke-static {v0, v1, p0}, Lcom/android/systemui/qs/tiles/ScreenRecordTile_Factory;->provideInstance(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/qs/tiles/ScreenRecordTile;
 

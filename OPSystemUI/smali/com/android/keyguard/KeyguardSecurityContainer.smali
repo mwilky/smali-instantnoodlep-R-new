@@ -60,8 +60,6 @@
 
 .field private final mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-.field private final mWindowInsetsAnimationCallback:Landroid/view/WindowInsetsAnimation$Callback;
-
 
 # direct methods
 .method static constructor <clinit>()V
@@ -124,8 +122,6 @@
     const/4 p3, 0x0
 
     invoke-direct {p2, p0, p3}, Lcom/android/keyguard/KeyguardSecurityContainer$1;-><init>(Lcom/android/keyguard/KeyguardSecurityContainer;I)V
-
-    iput-object p2, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mWindowInsetsAnimationCallback:Landroid/view/WindowInsetsAnimation$Callback;
 
     new-instance p2, Lcom/android/keyguard/KeyguardSecurityContainer$3;
 
@@ -273,7 +269,15 @@
     return-object p0
 .end method
 
-.method static synthetic access$1000(Lcom/android/keyguard/KeyguardSecurityContainer;)Lcom/oneplus/keyguard/OpEmergencyPanel;
+.method static synthetic access$1000(Lcom/android/keyguard/KeyguardSecurityContainer;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/keyguard/KeyguardSecurityContainer;->hideSecurityIcon()V
+
+    return-void
+.end method
+
+.method static synthetic access$1100(Lcom/android/keyguard/KeyguardSecurityContainer;)Lcom/oneplus/keyguard/OpEmergencyPanel;
     .locals 0
 
     iget-object p0, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mEmergencyPanel:Lcom/oneplus/keyguard/OpEmergencyPanel;
@@ -281,7 +285,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1100(Lcom/android/keyguard/KeyguardSecurityContainer;)Lcom/android/keyguard/KeyguardSecurityCallback;
+.method static synthetic access$1200(Lcom/android/keyguard/KeyguardSecurityContainer;)Lcom/android/keyguard/KeyguardSecurityCallback;
     .locals 0
 
     iget-object p0, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mCallback:Lcom/android/keyguard/KeyguardSecurityCallback;
@@ -289,7 +293,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1200(Lcom/android/keyguard/KeyguardSecurityContainer;)Landroid/view/animation/Animation;
+.method static synthetic access$1300(Lcom/android/keyguard/KeyguardSecurityContainer;)Landroid/view/animation/Animation;
     .locals 0
 
     iget-object p0, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mFacelockAnimationSet:Landroid/view/animation/Animation;
@@ -297,7 +301,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1300(Lcom/android/keyguard/KeyguardSecurityContainer;)Landroid/view/View;
+.method static synthetic access$1400(Lcom/android/keyguard/KeyguardSecurityContainer;)Landroid/view/View;
     .locals 0
 
     iget-object p0, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mSecurityIcon:Landroid/view/View;
@@ -313,7 +317,15 @@
     return-object p0
 .end method
 
-.method static synthetic access$400(Lcom/android/keyguard/KeyguardSecurityContainer;)Lcom/android/internal/widget/LockPatternUtils;
+.method static synthetic access$400(Lcom/android/keyguard/KeyguardSecurityContainer;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$500(Lcom/android/keyguard/KeyguardSecurityContainer;)Lcom/android/internal/widget/LockPatternUtils;
     .locals 0
 
     iget-object p0, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
@@ -321,7 +333,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$500(Lcom/android/keyguard/KeyguardSecurityContainer;II)V
+.method static synthetic access$600(Lcom/android/keyguard/KeyguardSecurityContainer;II)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/android/keyguard/KeyguardSecurityContainer;->reportFailedUnlockAttempt(II)V
@@ -329,7 +341,7 @@
     return-void
 .end method
 
-.method static synthetic access$600(Lcom/android/keyguard/KeyguardSecurityContainer;)Lcom/android/internal/logging/MetricsLogger;
+.method static synthetic access$700(Lcom/android/keyguard/KeyguardSecurityContainer;)Lcom/android/internal/logging/MetricsLogger;
     .locals 0
 
     iget-object p0, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mMetricsLogger:Lcom/android/internal/logging/MetricsLogger;
@@ -337,7 +349,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$700()Lcom/android/internal/logging/UiEventLogger;
+.method static synthetic access$800()Lcom/android/internal/logging/UiEventLogger;
     .locals 1
 
     sget-object v0, Lcom/android/keyguard/KeyguardSecurityContainer;->sUiEventLogger:Lcom/android/internal/logging/UiEventLogger;
@@ -345,20 +357,12 @@
     return-object v0
 .end method
 
-.method static synthetic access$800(Lcom/android/keyguard/KeyguardSecurityContainer;)Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
+.method static synthetic access$900(Lcom/android/keyguard/KeyguardSecurityContainer;)Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
     .locals 0
 
     iget-object p0, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mCurrentSecuritySelection:Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
 
     return-object p0
-.end method
-
-.method static synthetic access$900(Lcom/android/keyguard/KeyguardSecurityContainer;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/keyguard/KeyguardSecurityContainer;->hideSecurityIcon()V
-
-    return-void
 .end method
 
 .method private getSecurityViewIdForMode(Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;)I
@@ -1723,25 +1727,27 @@
 .end method
 
 .method public onApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
-    .locals 5
+    .locals 6
 
-    sget v0, Landroid/view/ViewRootImpl;->sNewInsetsMode:I
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x2
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {}, Landroid/view/WindowInsets$Type;->systemBars()I
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getPaddingTop()I
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Landroid/view/WindowInsets;->getInsetsIgnoringVisibility(I)Landroid/graphics/Insets;
+    sget v1, Landroid/view/ViewRootImpl;->sNewInsetsMode:I
 
-    move-result-object v0
+    const/4 v2, 0x2
 
-    iget v0, v0, Landroid/graphics/Insets;->bottom:I
+    if-ne v1, v2, :cond_1
+
+    invoke-static {}, Landroid/view/WindowInsets$Type;->systemBars()I
+
+    move-result v1
+
+    invoke-virtual {p1, v1}, Landroid/view/WindowInsets;->getInsetsIgnoringVisibility(I)Landroid/graphics/Insets;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/graphics/Insets;->bottom:I
 
     invoke-static {}, Landroid/view/WindowInsets$Type;->ime()I
 
@@ -1753,41 +1759,85 @@
 
     iget v2, v2, Landroid/graphics/Insets;->bottom:I
 
-    invoke-static {v0, v2}, Ljava/lang/Integer;->max(II)I
-
-    move-result v0
-
-    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    const v3, 0x1050248
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v2
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p1}, Landroid/view/WindowInsets;->getSystemWindowInsetBottom()I
-
-    move-result v0
-
-    move v2, v1
-
-    :goto_0
-    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getPaddingLeft()I
+    invoke-static {v1, v2}, Ljava/lang/Integer;->max(II)I
 
     move-result v3
 
+    if-lez v2, :cond_0
+
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v4, 0x1050248
+
+    invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    :cond_0
+    sget-boolean v4, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz v4, :cond_2
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "onApplyWindowInsets,, paddingTopWhenIme:"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v5, ", imeInset:"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, ", bottomInset:"
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", inset:"
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "KeyguardSecurityView"
+
+    invoke-static {v2, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p1}, Landroid/view/WindowInsets;->getSystemWindowInsetBottom()I
+
+    move-result v3
+
+    :cond_2
+    :goto_0
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getPaddingLeft()I
+
+    move-result v1
+
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getPaddingRight()I
 
-    move-result v4
+    move-result v2
 
-    invoke-virtual {p0, v3, v2, v4, v0}, Landroid/widget/FrameLayout;->setPadding(IIII)V
+    invoke-virtual {p0, v1, v0, v2, v3}, Landroid/widget/FrameLayout;->setPadding(IIII)V
 
-    invoke-virtual {p1, v1, v2, v1, v0}, Landroid/view/WindowInsets;->inset(IIII)Landroid/view/WindowInsets;
+    const/4 p0, 0x0
+
+    invoke-virtual {p1, p0, p0, p0, v3}, Landroid/view/WindowInsets;->inset(IIII)Landroid/view/WindowInsets;
 
     move-result-object p0
 
@@ -1891,12 +1941,6 @@
     invoke-interface {v0, p1}, Lcom/android/keyguard/KeyguardSecurityView;->onResume(I)V
 
     :cond_0
-    iget-object p1, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mSecurityViewFlipper:Lcom/android/keyguard/KeyguardSecurityViewFlipper;
-
-    iget-object v0, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mWindowInsetsAnimationCallback:Landroid/view/WindowInsetsAnimation$Callback;
-
-    invoke-virtual {p1, v0}, Landroid/widget/ViewFlipper;->setWindowInsetsAnimationCallback(Landroid/view/WindowInsetsAnimation$Callback;)V
-
     invoke-direct {p0}, Lcom/android/keyguard/KeyguardSecurityContainer;->updateBiometricRetry()V
 
     return-void

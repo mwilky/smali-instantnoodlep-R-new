@@ -32,26 +32,8 @@
     return-void
 .end method
 
-.method private synthetic lambda$onAnimationStart$0()V
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView$12;->this$0:Lcom/oneplus/battery/OpNewWarpChargingView;
-
-    invoke-virtual {p0}, Lcom/oneplus/battery/OpNewWarpChargingView;->playChargingSound()V
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public synthetic lambda$onAnimationStart$0$OpNewWarpChargingView$12()V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/oneplus/battery/OpNewWarpChargingView$12;->lambda$onAnimationStart$0()V
-
-    return-void
-.end method
-
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 0
 
@@ -71,7 +53,7 @@
 
     iget-object p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView$12;->this$0:Lcom/oneplus/battery/OpNewWarpChargingView;
 
-    invoke-static {p0}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$1700(Lcom/oneplus/battery/OpNewWarpChargingView;)Landroid/animation/AnimatorSet;
+    invoke-static {p0}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$1600(Lcom/oneplus/battery/OpNewWarpChargingView;)Landroid/animation/AnimatorSet;
 
     move-result-object p0
 
@@ -118,18 +100,6 @@
 
     iget-object p1, p0, Lcom/oneplus/battery/OpNewWarpChargingView$12;->this$0:Lcom/oneplus/battery/OpNewWarpChargingView;
 
-    invoke-static {p1}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$1300(Lcom/oneplus/battery/OpNewWarpChargingView;)Landroid/os/Handler;
-
-    move-result-object p1
-
-    new-instance v1, Lcom/oneplus/battery/-$$Lambda$OpNewWarpChargingView$12$NqQXlpLzBh_CCcTzUxzAUyoK90E;
-
-    invoke-direct {v1, p0}, Lcom/oneplus/battery/-$$Lambda$OpNewWarpChargingView$12$NqQXlpLzBh_CCcTzUxzAUyoK90E;-><init>(Lcom/oneplus/battery/OpNewWarpChargingView$12;)V
-
-    invoke-virtual {p1, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    iget-object p1, p0, Lcom/oneplus/battery/OpNewWarpChargingView$12;->this$0:Lcom/oneplus/battery/OpNewWarpChargingView;
-
     invoke-static {p1}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$100(Lcom/oneplus/battery/OpNewWarpChargingView;)Landroid/view/View;
 
     move-result-object p1
@@ -158,7 +128,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    invoke-static {}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$1400()Landroid/content/res/Resources;
+    invoke-static {}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$1300()Landroid/content/res/Resources;
 
     move-result-object p1
 
@@ -172,7 +142,7 @@
 
     move-result p1
 
-    invoke-static {}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$1400()Landroid/content/res/Resources;
+    invoke-static {}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$1300()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -188,7 +158,7 @@
 
     iget-object v1, p0, Lcom/oneplus/battery/OpNewWarpChargingView$12;->this$0:Lcom/oneplus/battery/OpNewWarpChargingView;
 
-    invoke-static {v1}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$1500(Lcom/oneplus/battery/OpNewWarpChargingView;)Landroid/widget/TextView;
+    invoke-static {v1}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$1400(Lcom/oneplus/battery/OpNewWarpChargingView;)Landroid/widget/TextView;
 
     move-result-object v1
 
@@ -202,7 +172,7 @@
 
     iget-object v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView$12;->this$0:Lcom/oneplus/battery/OpNewWarpChargingView;
 
-    invoke-static {v0}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$1600(Lcom/oneplus/battery/OpNewWarpChargingView;)Landroid/widget/ImageView;
+    invoke-static {v0}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$1500(Lcom/oneplus/battery/OpNewWarpChargingView;)Landroid/widget/ImageView;
 
     move-result-object v0
 
@@ -210,7 +180,7 @@
 
     iget-object p1, p0, Lcom/oneplus/battery/OpNewWarpChargingView$12;->this$0:Lcom/oneplus/battery/OpNewWarpChargingView;
 
-    invoke-static {p1}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$1600(Lcom/oneplus/battery/OpNewWarpChargingView;)Landroid/widget/ImageView;
+    invoke-static {p1}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$1500(Lcom/oneplus/battery/OpNewWarpChargingView;)Landroid/widget/ImageView;
 
     move-result-object p1
 

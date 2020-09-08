@@ -85,7 +85,7 @@
 
     move-result-object p0
 
-    const-wide/16 v1, 0x2ee
+    const-wide/16 v1, 0xfa
 
     invoke-virtual {v0, p0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
@@ -139,11 +139,17 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView$3;->this$0:Lcom/android/keyguard/KeyguardAssistantView;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/android/keyguard/KeyguardAssistantView;->access$702(Lcom/android/keyguard/KeyguardAssistantView;I)I
+
     iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView$3;->this$0:Lcom/android/keyguard/KeyguardAssistantView;
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
-    invoke-static {p0, v0}, Lcom/android/keyguard/KeyguardAssistantView;->access$702(Lcom/android/keyguard/KeyguardAssistantView;I)I
+    invoke-virtual {p0, v0}, Lcom/android/keyguard/KeyguardAssistantView;->setHasHeader(Z)V
 
     return-void
 .end method

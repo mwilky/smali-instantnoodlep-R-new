@@ -91,22 +91,27 @@
 
     iget-object v0, p0, Lcom/android/systemui/pip/phone/PipTouchHandler$1;->this$0:Lcom/android/systemui/pip/phone/PipTouchHandler;
 
-    invoke-static {v0}, Lcom/android/systemui/pip/phone/PipTouchHandler;->access$200(Lcom/android/systemui/pip/phone/PipTouchHandler;)Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/systemui/pip/phone/PipTouchHandler;->access$300(Lcom/android/systemui/pip/phone/PipTouchHandler;)Landroid/app/IActivityManager;
 
     move-result-object v0
 
+    invoke-static {p1, v0}, Lcom/android/systemui/pip/phone/PipUtils;->getTopPipActivity(Landroid/content/Context;Landroid/app/IActivityManager;)Landroid/util/Pair;
+
+    move-result-object p1
+
+    iget-object v0, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
+
+    if-eqz v0, :cond_0
+
     iget-object p0, p0, Lcom/android/systemui/pip/phone/PipTouchHandler$1;->this$0:Lcom/android/systemui/pip/phone/PipTouchHandler;
 
-    invoke-static {p0}, Lcom/android/systemui/pip/phone/PipTouchHandler;->access$300(Lcom/android/systemui/pip/phone/PipTouchHandler;)Landroid/app/IActivityManager;
+    invoke-static {p0}, Lcom/android/systemui/pip/phone/PipTouchHandler;->access$200(Lcom/android/systemui/pip/phone/PipTouchHandler;)Landroid/content/Context;
 
     move-result-object p0
 
-    invoke-static {v0, p0}, Lcom/android/systemui/pip/phone/PipUtils;->getTopPipActivity(Landroid/content/Context;Landroid/app/IActivityManager;)Landroid/util/Pair;
+    invoke-static {p0, p1}, Lcom/android/internal/os/logging/MetricsLoggerWrapper;->logPictureInPictureDismissByDrag(Landroid/content/Context;Landroid/util/Pair;)V
 
-    move-result-object p0
-
-    invoke-static {p1, p0}, Lcom/android/internal/os/logging/MetricsLoggerWrapper;->logPictureInPictureDismissByDrag(Landroid/content/Context;Landroid/util/Pair;)V
-
+    :cond_0
     return-void
 .end method
 

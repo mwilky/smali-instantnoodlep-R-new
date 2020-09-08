@@ -1911,18 +1911,14 @@
 
     if-eqz p0, :cond_0
 
-    invoke-static {}, Landroid/telephony/CellSignalStrength;->getNumSignalStrengthLevels()I
-
-    move-result p0
+    sget p0, Landroid/telephony/SignalStrength;->NUM_SIGNAL_STRENGTH_BINS:I
 
     add-int/lit8 p0, p0, 0x1
 
     return p0
 
     :cond_0
-    invoke-static {}, Landroid/telephony/CellSignalStrength;->getNumSignalStrengthLevels()I
-
-    move-result p0
+    sget p0, Landroid/telephony/SignalStrength;->NUM_SIGNAL_STRENGTH_BINS:I
 
     return p0
 .end method
@@ -4949,13 +4945,17 @@
     goto :goto_b
 
     :cond_21
-    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/SignalController;->mCurrentState:Lcom/android/systemui/statusbar/policy/SignalController$State;
+    invoke-direct {p0, v3}, Lcom/android/systemui/statusbar/policy/MobileSignalController;->toIconKey(I)Ljava/lang/String;
 
-    check-cast v0, Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileState;
+    move-result-object v0
 
-    iget-boolean v0, v0, Lcom/android/systemui/statusbar/policy/SignalController$State;->connected:Z
+    iget-object v1, p0, Lcom/android/systemui/statusbar/policy/SignalController;->mCurrentState:Lcom/android/systemui/statusbar/policy/SignalController$State;
 
-    if-eqz v0, :cond_23
+    check-cast v1, Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileState;
+
+    iget-boolean v1, v1, Lcom/android/systemui/statusbar/policy/SignalController$State;->connected:Z
+
+    if-eqz v1, :cond_23
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/MobileSignalController;->isDataNetworkTypeAvailable()Z
 
@@ -4963,43 +4963,69 @@
 
     if-eqz v0, :cond_22
 
-    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/MobileSignalController;->mTelephonyDisplayInfo:Landroid/telephony/TelephonyDisplayInfo;
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/MobileSignalController;->getIconKey()Ljava/lang/String;
 
-    invoke-virtual {v0}, Landroid/telephony/TelephonyDisplayInfo;->getNetworkType()I
-
-    move-result v3
+    move-result-object v0
 
     goto :goto_a
 
     :cond_22
     invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/MobileSignalController;->getVoiceNetworkType()I
 
-    move-result v3
+    move-result v0
+
+    invoke-direct {p0, v0}, Lcom/android/systemui/statusbar/policy/MobileSignalController;->toIconKey(I)Ljava/lang/String;
+
+    move-result-object v0
 
     :cond_23
     :goto_a
-    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/SignalController;->mCurrentState:Lcom/android/systemui/statusbar/policy/SignalController$State;
+    iget-object v1, p0, Lcom/android/systemui/statusbar/policy/SignalController;->mCurrentState:Lcom/android/systemui/statusbar/policy/SignalController$State;
 
-    check-cast v0, Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileState;
+    check-cast v1, Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileState;
 
-    iget-object v1, p0, Lcom/android/systemui/statusbar/policy/MobileSignalController;->mNetworkToIconLookup:Ljava/util/Map;
-
-    invoke-direct {p0, v3}, Lcom/android/systemui/statusbar/policy/MobileSignalController;->toIconKey(I)Ljava/lang/String;
-
-    move-result-object v2
+    iget-object v2, p0, Lcom/android/systemui/statusbar/policy/MobileSignalController;->mNetworkToIconLookup:Ljava/util/Map;
 
     iget-object v3, p0, Lcom/android/systemui/statusbar/policy/MobileSignalController;->mDefaultIcons:Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;
 
-    invoke-interface {v1, v2, v3}, Ljava/util/Map;->getOrDefault(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v2, v0, v3}, Ljava/util/Map;->getOrDefault(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/systemui/statusbar/policy/SignalController$IconGroup;
+
+    iput-object v0, v1, Lcom/android/systemui/statusbar/policy/SignalController$State;->iconGroup:Lcom/android/systemui/statusbar/policy/SignalController$IconGroup;
+
+    :goto_b
+    sget-boolean v0, Lcom/android/systemui/statusbar/policy/SignalController;->DEBUG:Z
+
+    if-eqz v0, :cond_24
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/SignalController;->mTag:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v2, "updateTelephony, alwaysShowNetworkTypeIcon iconGroup:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lcom/android/systemui/statusbar/policy/SignalController;->mCurrentState:Lcom/android/systemui/statusbar/policy/SignalController$State;
+
+    check-cast v2, Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileState;
+
+    iget-object v2, v2, Lcom/android/systemui/statusbar/policy/SignalController$State;->iconGroup:Lcom/android/systemui/statusbar/policy/SignalController$IconGroup;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/systemui/statusbar/policy/SignalController$IconGroup;
-
-    iput-object v1, v0, Lcom/android/systemui/statusbar/policy/SignalController$State;->iconGroup:Lcom/android/systemui/statusbar/policy/SignalController$IconGroup;
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_24
-    :goto_b
     iget-object v0, p0, Lcom/android/systemui/statusbar/policy/SignalController;->mCurrentState:Lcom/android/systemui/statusbar/policy/SignalController$State;
 
     check-cast v0, Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileState;
@@ -7193,7 +7219,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "setSmartLinkEnable: smartlinkEnable="
+    const-string/jumbo v2, "setSmartLinkEnable: smartlinkEnable="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7517,6 +7543,14 @@
     :goto_0
     iput-boolean v0, p1, Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileState;->isDefaultDataSubId:Z
 
+    iget-object p1, p0, Lcom/android/systemui/statusbar/policy/SignalController;->mContext:Landroid/content/Context;
+
+    invoke-static {p1}, Lcom/oneplus/util/OpUtils;->isGlobalROM(Landroid/content/Context;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
     iget-object p1, p0, Lcom/android/systemui/statusbar/policy/SignalController;->mCurrentState:Lcom/android/systemui/statusbar/policy/SignalController$State;
 
     move-object v0, p1
@@ -7551,6 +7585,8 @@
     goto :goto_2
 
     :cond_3
+    iget-object p1, p0, Lcom/android/systemui/statusbar/policy/SignalController;->mCurrentState:Lcom/android/systemui/statusbar/policy/SignalController$State;
+
     check-cast p1, Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileState;
 
     iput v1, p1, Lcom/android/systemui/statusbar/policy/SignalController$State;->inetCondition:I

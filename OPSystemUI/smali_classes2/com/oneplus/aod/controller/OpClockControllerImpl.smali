@@ -617,7 +617,7 @@
 .end method
 
 .method protected getTypeface(Lcom/oneplus/aod/utils/OpAodSettings$OpTextViewInfo;Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
-    .locals 2
+    .locals 3
 
     invoke-virtual {p1}, Lcom/oneplus/aod/utils/OpAodSettings$OpTextViewInfo;->getFontFamily()I
 
@@ -630,6 +630,8 @@
     invoke-virtual {p1}, Lcom/oneplus/aod/utils/OpAodSettings$OpTextViewInfo;->isFollowSystemFont()Z
 
     move-result v0
+
+    const/4 v2, 0x0
 
     if-eqz v0, :cond_0
 
@@ -649,51 +651,26 @@
 
     if-eq p1, v1, :cond_3
 
-    const/4 v0, 0x0
-
-    invoke-static {p0, p1, v0}, Landroid/graphics/Typeface;->create(Landroid/graphics/Typeface;IZ)Landroid/graphics/Typeface;
+    invoke-static {p0, p1, v2}, Landroid/graphics/Typeface;->create(Landroid/graphics/Typeface;IZ)Landroid/graphics/Typeface;
 
     move-result-object p0
 
     goto :goto_0
 
     :cond_0
-    :try_start_0
-    new-instance v0, Landroid/graphics/fonts/Font$Builder;
-
     iget-object p0, p0, Lcom/oneplus/aod/controller/OpClockControllerImpl;->mContext:Landroid/content/Context;
-
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
 
     invoke-virtual {p1}, Lcom/oneplus/aod/utils/OpAodSettings$OpTextViewInfo;->getFontFamily()I
 
     move-result p1
 
-    invoke-direct {v0, p0, p1}, Landroid/graphics/fonts/Font$Builder;-><init>(Landroid/content/res/Resources;I)V
-
-    invoke-virtual {v0}, Landroid/graphics/fonts/Font$Builder;->build()Landroid/graphics/fonts/Font;
+    invoke-static {p0, p1}, Landroidx/core/content/res/ResourcesCompat;->getFont(Landroid/content/Context;I)Landroid/graphics/Typeface;
 
     move-result-object p0
 
-    new-instance p1, Landroid/graphics/fonts/FontFamily$Builder;
-
-    invoke-direct {p1, p0}, Landroid/graphics/fonts/FontFamily$Builder;-><init>(Landroid/graphics/fonts/Font;)V
-
-    invoke-virtual {p1}, Landroid/graphics/fonts/FontFamily$Builder;->build()Landroid/graphics/fonts/FontFamily;
+    invoke-static {p0, v2}, Landroid/graphics/Typeface;->create(Landroid/graphics/Typeface;I)Landroid/graphics/Typeface;
 
     move-result-object p0
-
-    new-instance p1, Landroid/graphics/Typeface$CustomFallbackBuilder;
-
-    invoke-direct {p1, p0}, Landroid/graphics/Typeface$CustomFallbackBuilder;-><init>(Landroid/graphics/fonts/FontFamily;)V
-
-    invoke-virtual {p1}, Landroid/graphics/Typeface$CustomFallbackBuilder;->build()Landroid/graphics/Typeface;
-
-    move-result-object p0
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
@@ -712,7 +689,6 @@
 
     goto :goto_0
 
-    :catch_0
     :cond_2
     const/4 p0, 0x0
 

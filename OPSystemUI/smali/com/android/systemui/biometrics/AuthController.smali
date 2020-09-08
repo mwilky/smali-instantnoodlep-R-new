@@ -514,28 +514,14 @@
 
 # virtual methods
 .method protected buildDialog(Landroid/os/Bundle;ZIILjava/lang/String;ZJI)Lcom/android/systemui/biometrics/AuthDialog;
-    .locals 4
+    .locals 3
 
     new-instance v0, Landroid/view/ContextThemeWrapper;
 
     iget-object v1, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
-    invoke-static {}, Lcom/oneplus/util/ThemeColorUtils;->getCurrentTheme()I
-
-    move-result v2
-
-    const/4 v3, 0x1
-
-    if-ne v2, v3, :cond_0
-
     sget v2, Lcom/android/systemui/R$style;->Oneplus_Theme_BiometricDialog_Dark:I
 
-    goto :goto_0
-
-    :cond_0
-    sget v2, Lcom/android/systemui/R$style;->Oneplus_Theme_BiometricDialog_Light:I
-
-    :goto_0
     invoke-direct {v0, v1, v2}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 
     new-instance v1, Lcom/android/systemui/biometrics/AuthContainerView$Builder;

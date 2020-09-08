@@ -9,8 +9,6 @@
 # instance fields
 .field protected mBackgroundColor:I
 
-.field private mContext:Landroid/content/Context;
-
 .field private final mOpNotificationController:Lcom/oneplus/notification/OpNotificationController;
 
 .field protected final mRow:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
@@ -22,31 +20,29 @@
 
 # direct methods
 .method protected constructor <init>(Landroid/content/Context;Landroid/view/View;Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;)V
-    .locals 1
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Landroid/graphics/Rect;
+    new-instance p1, Landroid/graphics/Rect;
 
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;->mTmpRect:Landroid/graphics/Rect;
+    iput-object p1, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;->mTmpRect:Landroid/graphics/Rect;
 
-    const/4 v0, 0x0
+    const/4 p1, 0x0
 
-    iput v0, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;->mBackgroundColor:I
+    iput p1, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;->mBackgroundColor:I
 
-    const-class v0, Lcom/oneplus/notification/OpNotificationController;
+    const-class p1, Lcom/oneplus/notification/OpNotificationController;
 
-    invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, Lcom/oneplus/notification/OpNotificationController;
+    check-cast p1, Lcom/oneplus/notification/OpNotificationController;
 
-    iput-object v0, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;->mOpNotificationController:Lcom/oneplus/notification/OpNotificationController;
-
-    iput-object p1, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;->mOpNotificationController:Lcom/oneplus/notification/OpNotificationController;
 
     iput-object p2, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;->mView:Landroid/view/View;
 
@@ -240,7 +236,7 @@
 
 # virtual methods
 .method childrenNeedInversion(ILandroid/view/ViewGroup;)Z
-    .locals 7
+    .locals 9
     .annotation build Lcom/android/internal/annotations/VisibleForTesting;
     .end annotation
 
@@ -279,7 +275,7 @@
 
     move-result v2
 
-    if-ge p1, v2, :cond_4
+    if-ge p1, v2, :cond_5
 
     invoke-virtual {p2, p1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
@@ -289,30 +285,83 @@
 
     const/4 v4, 0x1
 
-    if-eqz v3, :cond_2
+    if-eqz v3, :cond_3
 
-    check-cast v2, Landroid/widget/TextView;
+    move-object v3, v2
 
-    invoke-virtual {v2}, Landroid/widget/TextView;->getCurrentTextColor()I
+    check-cast v3, Landroid/widget/TextView;
 
-    move-result v2
+    invoke-virtual {v3}, Landroid/widget/TextView;->getCurrentTextColor()I
 
-    invoke-static {v2, v1}, Lcom/android/internal/graphics/ColorUtils;->calculateContrast(II)D
+    move-result v3
 
-    move-result-wide v2
+    invoke-static {v3, v1}, Lcom/android/internal/graphics/ColorUtils;->calculateContrast(II)D
 
-    const-wide/high16 v5, 0x4008000000000000L    # 3.0
+    move-result-wide v5
 
-    cmpg-double v2, v2, v5
+    const-wide/high16 v7, 0x4008000000000000L    # 3.0
 
-    if-gez v2, :cond_3
+    cmpg-double v3, v5, v7
+
+    if-gez v3, :cond_4
+
+    invoke-virtual {v2, v0, v0}, Landroid/view/View;->measure(II)V
+
+    invoke-virtual {v2}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result v3
+
+    const/4 v5, 0x4
+
+    if-le v3, v5, :cond_2
+
+    invoke-virtual {v2}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v3
+
+    if-le v3, v5, :cond_2
 
     return v4
 
     :cond_2
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "childrenNeedInversion visible area width "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v4, " height "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v2
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "NotificationViewWrapper"
+
+    invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_1
+
+    :cond_3
     instance-of v3, v2, Landroid/view/ViewGroup;
 
-    if-eqz v3, :cond_3
+    if-eqz v3, :cond_4
 
     check-cast v2, Landroid/view/ViewGroup;
 
@@ -320,16 +369,17 @@
 
     move-result v2
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_4
 
     return v4
 
-    :cond_3
+    :cond_4
+    :goto_1
     add-int/lit8 p1, p1, 0x1
 
     goto :goto_0
 
-    :cond_4
+    :cond_5
     return v0
 .end method
 
@@ -870,20 +920,56 @@
 
     invoke-static {p1, v1}, Lcom/android/internal/graphics/ColorUtils;->colorToHSL(I[F)V
 
-    aget v2, v1, v3
+    aget v4, v1, v3
 
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
-    cmpl-float v2, v2, v4
+    cmpl-float v4, v4, v5
 
-    if-eqz v2, :cond_9
+    if-eqz v4, :cond_9
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "no needs Inversion"
+
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;->mRow:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->getEntry()Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->getKey()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, ",skip for backgournd color: "
+
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {p1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
 
     :cond_9
     aget v2, v1, v3
 
-    cmpl-float v2, v2, v4
+    cmpl-float v2, v2, v5
 
     if-nez v2, :cond_a
 
@@ -1098,9 +1184,13 @@
     return v0
 
     :cond_0
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;->mContext:Landroid/content/Context;
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;->mView:Landroid/view/View;
 
-    sget v0, Lcom/android/systemui/R$color;->notification_material_background_color:I
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    const v0, 0x10601c8
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getColor(I)I
 

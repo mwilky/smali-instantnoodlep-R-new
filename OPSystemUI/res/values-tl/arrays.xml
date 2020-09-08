@@ -296,10 +296,10 @@
         <item>Scale ng animation 10x</item>
     </string-array>
     <string-array name="zzz_op_quick_pay_switch_strings">
-        <item>QR na code</item>
-        <item>Nag-scan</item>
-        <item>QR na code</item>
-        <item>Nag-scan</item>
+        <item>QR code</item>
+        <item>Nag-i-scan</item>
+        <item>QR code</item>
+        <item>Nag-i-scan</item>
         <item>Paytm</item>
     </string-array>
 </resources>

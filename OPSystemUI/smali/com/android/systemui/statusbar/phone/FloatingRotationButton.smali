@@ -286,11 +286,9 @@
 .end method
 
 .method public show()Z
-    .locals 11
+    .locals 10
 
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/FloatingRotationButton;->mCanShow:Z
-
-    const/4 v1, 0x0
 
     if-eqz v0, :cond_6
 
@@ -305,37 +303,47 @@
 
     iput-boolean v0, p0, Lcom/android/systemui/statusbar/phone/FloatingRotationButton;->mIsShowing:Z
 
-    const/16 v8, 0x8
+    const/16 v7, 0x8
 
-    new-instance v10, Landroid/view/WindowManager$LayoutParams;
+    new-instance v9, Landroid/view/WindowManager$LayoutParams;
 
-    iget v4, p0, Lcom/android/systemui/statusbar/phone/FloatingRotationButton;->mDiameter:I
+    iget v3, p0, Lcom/android/systemui/statusbar/phone/FloatingRotationButton;->mDiameter:I
 
-    iget v6, p0, Lcom/android/systemui/statusbar/phone/FloatingRotationButton;->mMargin:I
+    iget v5, p0, Lcom/android/systemui/statusbar/phone/FloatingRotationButton;->mMargin:I
 
-    const/16 v7, 0x7e8
+    const/16 v6, 0x7e8
 
-    const/4 v9, -0x3
+    const/4 v8, -0x3
 
-    move-object v2, v10
+    move-object v1, v9
 
-    move v3, v4
+    move v2, v3
 
-    move v5, v6
+    move v4, v5
 
-    invoke-direct/range {v2 .. v9}, Landroid/view/WindowManager$LayoutParams;-><init>(IIIIIII)V
+    invoke-direct/range {v1 .. v8}, Landroid/view/WindowManager$LayoutParams;-><init>(IIIIIII)V
 
-    iget v2, v10, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
+    iget v1, v9, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
-    or-int/lit8 v2, v2, 0x10
+    or-int/lit8 v1, v1, 0x10
 
-    iput v2, v10, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
+    iput v1, v9, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
-    const-string v2, "FloatingRotationButton"
+    const-string v1, "FloatingRotationButton"
 
-    invoke-virtual {v10, v2}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {v9, v1}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v10, v1}, Landroid/view/WindowManager$LayoutParams;->setFitInsetsTypes(I)V
+    invoke-static {}, Landroid/view/WindowInsets$Type;->statusBars()I
+
+    move-result v1
+
+    invoke-static {}, Landroid/view/WindowInsets$Type;->navigationBars()I
+
+    move-result v2
+
+    or-int/2addr v1, v2
+
+    invoke-virtual {v9, v1}, Landroid/view/WindowManager$LayoutParams;->setFitInsetsTypes(I)V
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/FloatingRotationButton;->mWindowManager:Landroid/view/WindowManager;
 
@@ -364,28 +372,28 @@
     :cond_1
     const/16 v1, 0x33
 
-    iput v1, v10, Landroid/view/WindowManager$LayoutParams;->gravity:I
+    iput v1, v9, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
     goto :goto_0
 
     :cond_2
     const/16 v1, 0x35
 
-    iput v1, v10, Landroid/view/WindowManager$LayoutParams;->gravity:I
+    iput v1, v9, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
     goto :goto_0
 
     :cond_3
     const/16 v1, 0x55
 
-    iput v1, v10, Landroid/view/WindowManager$LayoutParams;->gravity:I
+    iput v1, v9, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
     goto :goto_0
 
     :cond_4
     const/16 v1, 0x53
 
-    iput v1, v10, Landroid/view/WindowManager$LayoutParams;->gravity:I
+    iput v1, v9, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
     :goto_0
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/FloatingRotationButton;->updateIcon()V
@@ -394,7 +402,7 @@
 
     iget-object v2, p0, Lcom/android/systemui/statusbar/phone/FloatingRotationButton;->mKeyButtonView:Lcom/android/systemui/statusbar/policy/KeyButtonView;
 
-    invoke-interface {v1, v2, v10}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-interface {v1, v2, v9}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/FloatingRotationButton;->mKeyButtonDrawable:Lcom/android/systemui/statusbar/policy/KeyButtonDrawable;
 
@@ -419,7 +427,9 @@
 
     :cond_6
     :goto_1
-    return v1
+    const/4 p0, 0x0
+
+    return p0
 .end method
 
 .method public updateIcon()V

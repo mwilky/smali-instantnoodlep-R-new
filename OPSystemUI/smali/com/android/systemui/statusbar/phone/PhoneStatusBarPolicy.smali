@@ -653,7 +653,7 @@
     return-void
 .end method
 
-.method private synthetic lambda$onRecordingEnd$4()V
+.method private synthetic lambda$onCountdownEnd$4()V
     .locals 2
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/StatusBarIconController;
@@ -661,6 +661,34 @@
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotScreenRecord:Ljava/lang/String;
 
     const/4 v1, 0x0
+
+    invoke-interface {v0, p0, v1}, Lcom/android/systemui/statusbar/phone/StatusBarIconController;->setIconAccessibilityLiveRegion(Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method private synthetic lambda$onRecordingEnd$6()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/StatusBarIconController;
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotScreenRecord:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    invoke-interface {v0, p0, v1}, Lcom/android/systemui/statusbar/phone/StatusBarIconController;->setIconVisibility(Ljava/lang/String;Z)V
+
+    return-void
+.end method
+
+.method private synthetic lambda$onRecordingStart$5()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/StatusBarIconController;
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotScreenRecord:Ljava/lang/String;
+
+    const/4 v1, 0x1
 
     invoke-interface {v0, p0, v1}, Lcom/android/systemui/statusbar/phone/StatusBarIconController;->setIconVisibility(Ljava/lang/String;Z)V
 
@@ -1148,7 +1176,7 @@
 
     const/4 v1, 0x0
 
-    const/16 v2, 0xcd
+    const/16 v2, 0xc5
 
     aput v2, v0, v1
 
@@ -1579,7 +1607,9 @@
 
     sget-object v3, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mHandler:Landroid/os/Handler;
 
-    invoke-virtual {v1, v2, v0, v3}, Lcom/android/systemui/broadcast/BroadcastDispatcher;->registerReceiverWithHandler(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Landroid/os/Handler;)V
+    sget-object v4, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
+
+    invoke-virtual {v1, v2, v0, v3, v4}, Lcom/android/systemui/broadcast/BroadcastDispatcher;->registerReceiverWithHandler(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Landroid/os/Handler;Landroid/os/UserHandle;)V
 
     new-instance v0, Lcom/android/systemui/statusbar/phone/-$$Lambda$PhoneStatusBarPolicy$KdIGXKMKGALjz1ooREPEW2VYtAY;
 
@@ -1901,10 +1931,26 @@
     return-void
 .end method
 
-.method public synthetic lambda$onRecordingEnd$4$PhoneStatusBarPolicy()V
+.method public synthetic lambda$onCountdownEnd$4$PhoneStatusBarPolicy()V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->lambda$onRecordingEnd$4()V
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->lambda$onCountdownEnd$4()V
+
+    return-void
+.end method
+
+.method public synthetic lambda$onRecordingEnd$6$PhoneStatusBarPolicy()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->lambda$onRecordingEnd$6()V
+
+    return-void
+.end method
+
+.method public synthetic lambda$onRecordingStart$5$PhoneStatusBarPolicy()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->lambda$onRecordingStart$5()V
 
     return-void
 .end method
@@ -2072,13 +2118,13 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/StatusBarIconController;
+    sget-object v0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mHandler:Landroid/os/Handler;
 
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotScreenRecord:Ljava/lang/String;
+    new-instance v1, Lcom/android/systemui/statusbar/phone/-$$Lambda$PhoneStatusBarPolicy$7mFArDgpnanqDUji3ufC10IThZA;
 
-    const/4 v1, 0x0
+    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/phone/-$$Lambda$PhoneStatusBarPolicy$7mFArDgpnanqDUji3ufC10IThZA;-><init>(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;)V
 
-    invoke-interface {v0, p0, v1}, Lcom/android/systemui/statusbar/phone/StatusBarIconController;->setIconAccessibilityLiveRegion(Ljava/lang/String;I)V
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
@@ -2151,9 +2197,9 @@
     :cond_0
     sget-object v0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mHandler:Landroid/os/Handler;
 
-    new-instance v1, Lcom/android/systemui/statusbar/phone/-$$Lambda$PhoneStatusBarPolicy$hoZJVJmtFw1aPuFx26vSZqpaXBA;
+    new-instance v1, Lcom/android/systemui/statusbar/phone/-$$Lambda$PhoneStatusBarPolicy$lQt3Uj0Z6eUPln3nxKWH-1F6RLQ;
 
-    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/phone/-$$Lambda$PhoneStatusBarPolicy$hoZJVJmtFw1aPuFx26vSZqpaXBA;-><init>(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;)V
+    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/phone/-$$Lambda$PhoneStatusBarPolicy$lQt3Uj0Z6eUPln3nxKWH-1F6RLQ;-><init>(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -2190,13 +2236,13 @@
 
     invoke-interface {v0, v1, v2, v3}, Lcom/android/systemui/statusbar/phone/StatusBarIconController;->setIcon(Ljava/lang/String;ILjava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/StatusBarIconController;
+    sget-object v0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mHandler:Landroid/os/Handler;
 
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotScreenRecord:Ljava/lang/String;
+    new-instance v1, Lcom/android/systemui/statusbar/phone/-$$Lambda$PhoneStatusBarPolicy$7Gelwg8Ag7IxnHM8BkaPNl8uo3o;
 
-    const/4 v1, 0x1
+    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/phone/-$$Lambda$PhoneStatusBarPolicy$7Gelwg8Ag7IxnHM8BkaPNl8uo3o;-><init>(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;)V
 
-    invoke-interface {v0, p0, v1}, Lcom/android/systemui/statusbar/phone/StatusBarIconController;->setIconVisibility(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method

@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nNotificationConversationTemplateViewWrapper.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NotificationConversationTemplateViewWrapper.kt\ncom/android/systemui/statusbar/notification/row/wrapper/NotificationConversationTemplateViewWrapper\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n*L\n1#1,190:1\n10930#2,2:191\n10930#2,2:193\n*E\n*S KotlinDebug\n*F\n+ 1 NotificationConversationTemplateViewWrapper.kt\ncom/android/systemui/statusbar/notification/row/wrapper/NotificationConversationTemplateViewWrapper\n*L\n185#1,2:191\n188#1,2:193\n*E\n"
+    value = "SMAP\nNotificationConversationTemplateViewWrapper.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NotificationConversationTemplateViewWrapper.kt\ncom/android/systemui/statusbar/notification/row/wrapper/NotificationConversationTemplateViewWrapper\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n*L\n1#1,211:1\n10930#2,2:212\n10930#2,2:214\n*E\n*S KotlinDebug\n*F\n+ 1 NotificationConversationTemplateViewWrapper.kt\ncom/android/systemui/statusbar/notification/row/wrapper/NotificationConversationTemplateViewWrapper\n*L\n206#1,2:212\n209#1,2:214\n*E\n"
 .end annotation
 
 
@@ -35,6 +35,8 @@
 .field private imageMessageContainer:Landroid/view/ViewGroup;
 
 .field private importanceRing:Landroid/view/View;
+
+.field private mActions:Landroid/view/ViewGroup;
 
 .field private messagingLinearLayout:Lcom/android/internal/widget/MessagingLinearLayout;
 
@@ -141,7 +143,7 @@
 .end method
 
 .method private final resolveViews()V
-    .locals 3
+    .locals 6
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationConversationTemplateViewWrapper;->conversationLayout:Lcom/android/internal/widget/ConversationLayout;
 
@@ -287,11 +289,122 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/ConversationLayout;->findViewById(I)Landroid/view/View;
 
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationConversationTemplateViewWrapper;->facePileBottomBg:Landroid/view/View;
+
+    const v1, 0x10201b1
+
+    invoke-virtual {v0, v1}, Lcom/android/internal/widget/ConversationLayout;->requireViewById(I)Landroid/view/View;
+
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationConversationTemplateViewWrapper;->facePileBottomBg:Landroid/view/View;
+    const-string v1, "requireViewById(com.android.internal.R.id.actions)"
 
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast v0, Landroid/view/ViewGroup;
+
+    iput-object v0, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationConversationTemplateViewWrapper;->mActions:Landroid/view/ViewGroup;
+
+    const/4 v1, 0x0
+
+    const-string v2, "mActions"
+
+    if-eqz v0, :cond_7
+
+    if-eqz v0, :cond_6
+
+    if-eqz v0, :cond_5
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_6
+
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_4
+
+    check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationConversationTemplateViewWrapper;->mActions:Landroid/view/ViewGroup;
+
+    if-eqz v0, :cond_3
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getPaddingTop()I
+
+    move-result v4
+
+    iget-object v5, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationConversationTemplateViewWrapper;->mActions:Landroid/view/ViewGroup;
+
+    if-eqz v5, :cond_1
+
+    invoke-virtual {v5}, Landroid/view/ViewGroup;->getPaddingEnd()I
+
+    move-result v5
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationConversationTemplateViewWrapper;->mActions:Landroid/view/ViewGroup;
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingBottom()I
+
+    move-result p0
+
+    invoke-virtual {v0, v3, v4, v5, p0}, Landroid/view/ViewGroup;->setPaddingRelative(IIII)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_1
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_2
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_3
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_4
+    new-instance p0, Lkotlin/TypeCastException;
+
+    const-string v0, "null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams"
+
+    invoke-direct {p0, v0}, Lkotlin/TypeCastException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_5
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_6
+    :goto_0
     return-void
+
+    :cond_7
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+
+    throw v1
 .end method
 
 

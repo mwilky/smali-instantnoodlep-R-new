@@ -110,7 +110,7 @@
 
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
-    sget v0, Lcom/android/systemui/R$id;->clock:I
+    sget v0, Lcom/android/systemui/R$id;->op_qs_clock:I
 
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 

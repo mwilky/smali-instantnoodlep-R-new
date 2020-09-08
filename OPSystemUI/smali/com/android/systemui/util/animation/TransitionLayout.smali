@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nTransitionLayout.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TransitionLayout.kt\ncom/android/systemui/util/animation/TransitionLayout\n*L\n1#1,315:1\n*E\n"
+    value = "SMAP\nTransitionLayout.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TransitionLayout.kt\ncom/android/systemui/util/animation/TransitionLayout\n*L\n1#1,363:1\n*E\n"
 .end annotation
 
 
@@ -14,12 +14,11 @@
 
 .field private currentState:Lcom/android/systemui/util/animation/TransitionViewState;
 
-.field private measureAsConstraint:Z
+.field private desiredMeasureHeight:I
 
-.field private measureState:Lcom/android/systemui/util/animation/TransitionViewState;
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
-.end field
+.field private desiredMeasureWidth:I
+
+.field private measureAsConstraint:Z
 
 .field private final originalGoneChildrenSet:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
@@ -145,8 +144,6 @@
 
     invoke-direct {p1}, Lcom/android/systemui/util/animation/TransitionViewState;-><init>()V
 
-    iput-object p1, p0, Lcom/android/systemui/util/animation/TransitionLayout;->measureState:Lcom/android/systemui/util/animation/TransitionViewState;
-
     new-instance p1, Lcom/android/systemui/util/animation/TransitionLayout$preDrawApplicator$1;
 
     invoke-direct {p1, p0}, Lcom/android/systemui/util/animation/TransitionLayout$preDrawApplicator$1;-><init>(Lcom/android/systemui/util/animation/TransitionLayout;)V
@@ -195,208 +192,362 @@
 .end method
 
 .method private final applyCurrentState()V
-    .locals 9
+    .locals 12
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
 
-    const/4 v1, 0x0
+    iget-object v1, p0, Lcom/android/systemui/util/animation/TransitionLayout;->currentState:Lcom/android/systemui/util/animation/TransitionViewState;
 
-    move v2, v1
+    invoke-virtual {v1}, Lcom/android/systemui/util/animation/TransitionViewState;->getContentTranslation()Landroid/graphics/PointF;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/graphics/PointF;->x:F
+
+    float-to-int v1, v1
+
+    iget-object v2, p0, Lcom/android/systemui/util/animation/TransitionLayout;->currentState:Lcom/android/systemui/util/animation/TransitionViewState;
+
+    invoke-virtual {v2}, Lcom/android/systemui/util/animation/TransitionViewState;->getContentTranslation()Landroid/graphics/PointF;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/graphics/PointF;->y:F
+
+    float-to-int v2, v2
+
+    const/4 v3, 0x0
+
+    move v4, v3
 
     :goto_0
-    if-ge v2, v0, :cond_6
+    if-ge v4, v0, :cond_c
 
-    invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lcom/android/systemui/util/animation/TransitionLayout;->currentState:Lcom/android/systemui/util/animation/TransitionViewState;
-
-    invoke-virtual {v4}, Lcom/android/systemui/util/animation/TransitionViewState;->getWidgetStates()Ljava/util/Map;
-
-    move-result-object v4
-
-    const-string v5, "child"
-
-    invoke-static {v3, v5}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v3}, Landroid/view/View;->getId()I
-
-    move-result v5
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {p0, v4}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v5
 
-    invoke-interface {v4, v5}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v6, p0, Lcom/android/systemui/util/animation/TransitionLayout;->currentState:Lcom/android/systemui/util/animation/TransitionViewState;
 
-    move-result-object v4
+    invoke-virtual {v6}, Lcom/android/systemui/util/animation/TransitionViewState;->getWidgetStates()Ljava/util/Map;
 
-    check-cast v4, Lcom/android/systemui/util/animation/WidgetState;
+    move-result-object v6
 
-    if-eqz v4, :cond_5
+    const-string v7, "child"
 
-    invoke-virtual {v3}, Landroid/view/View;->getMeasuredWidth()I
+    invoke-static {v5, v7}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-result v5
-
-    invoke-virtual {v4}, Lcom/android/systemui/util/animation/WidgetState;->getMeasureWidth()I
-
-    move-result v6
-
-    if-ne v5, v6, :cond_0
-
-    invoke-virtual {v3}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v5
-
-    invoke-virtual {v4}, Lcom/android/systemui/util/animation/WidgetState;->getMeasureHeight()I
-
-    move-result v6
-
-    if-eq v5, v6, :cond_1
-
-    :cond_0
-    invoke-virtual {v4}, Lcom/android/systemui/util/animation/WidgetState;->getMeasureWidth()I
-
-    move-result v5
-
-    const/high16 v6, 0x40000000    # 2.0f
-
-    invoke-static {v5, v6}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
-
-    move-result v5
-
-    invoke-virtual {v4}, Lcom/android/systemui/util/animation/WidgetState;->getMeasureHeight()I
+    invoke-virtual {v5}, Landroid/view/View;->getId()I
 
     move-result v7
 
-    invoke-static {v7, v6}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result v6
+    move-result-object v7
 
-    invoke-virtual {v3, v5, v6}, Landroid/view/View;->measure(II)V
+    invoke-interface {v6, v7}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v3}, Landroid/view/View;->getMeasuredWidth()I
+    move-result-object v6
 
-    move-result v5
+    check-cast v6, Lcom/android/systemui/util/animation/WidgetState;
 
-    invoke-virtual {v3}, Landroid/view/View;->getMeasuredHeight()I
+    if-eqz v6, :cond_b
 
-    move-result v6
+    instance-of v7, v5, Landroid/widget/TextView;
 
-    invoke-virtual {v3, v1, v1, v5, v6}, Landroid/view/View;->layout(IIII)V
+    if-eqz v7, :cond_1
 
-    :cond_1
-    invoke-virtual {v4}, Lcom/android/systemui/util/animation/WidgetState;->getX()F
-
-    move-result v5
-
-    float-to-int v5, v5
-
-    invoke-virtual {v4}, Lcom/android/systemui/util/animation/WidgetState;->getY()F
-
-    move-result v6
-
-    float-to-int v6, v6
-
-    invoke-virtual {v4}, Lcom/android/systemui/util/animation/WidgetState;->getWidth()I
+    invoke-virtual {v6}, Lcom/android/systemui/util/animation/WidgetState;->getWidth()I
 
     move-result v7
 
-    add-int/2addr v7, v5
-
-    invoke-virtual {v4}, Lcom/android/systemui/util/animation/WidgetState;->getHeight()I
+    invoke-virtual {v6}, Lcom/android/systemui/util/animation/WidgetState;->getMeasureWidth()I
 
     move-result v8
 
-    add-int/2addr v8, v6
+    if-ge v7, v8, :cond_1
 
-    invoke-virtual {v3, v5, v6, v7, v8}, Landroid/view/View;->setLeftTopRightBottom(IIII)V
+    move-object v7, v5
 
-    invoke-virtual {v4}, Lcom/android/systemui/util/animation/WidgetState;->getScale()F
+    check-cast v7, Landroid/widget/TextView;
 
-    move-result v5
+    invoke-virtual {v7}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
 
-    invoke-virtual {v3, v5}, Landroid/view/View;->setScaleX(F)V
+    move-result-object v7
 
-    invoke-virtual {v4}, Lcom/android/systemui/util/animation/WidgetState;->getScale()F
-
-    move-result v5
-
-    invoke-virtual {v3, v5}, Landroid/view/View;->setScaleY(F)V
-
-    invoke-virtual {v3}, Landroid/view/View;->getClipBounds()Landroid/graphics/Rect;
-
-    move-result-object v5
-
-    if-eqz v5, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    new-instance v5, Landroid/graphics/Rect;
-
-    invoke-direct {v5}, Landroid/graphics/Rect;-><init>()V
-
-    :goto_1
-    invoke-virtual {v4}, Lcom/android/systemui/util/animation/WidgetState;->getWidth()I
-
-    move-result v6
-
-    invoke-virtual {v4}, Lcom/android/systemui/util/animation/WidgetState;->getHeight()I
+    invoke-virtual {v7, v3}, Landroid/text/Layout;->getParagraphDirection(I)I
 
     move-result v7
 
-    invoke-virtual {v5, v1, v1, v6, v7}, Landroid/graphics/Rect;->set(IIII)V
+    const/4 v8, -0x1
 
-    invoke-virtual {v3, v5}, Landroid/view/View;->setClipBounds(Landroid/graphics/Rect;)V
+    if-ne v7, v8, :cond_0
 
-    invoke-virtual {v4}, Lcom/android/systemui/util/animation/WidgetState;->getAlpha()F
+    invoke-virtual {v6}, Lcom/android/systemui/util/animation/WidgetState;->getMeasureWidth()I
 
-    move-result v5
+    move-result v7
 
-    invoke-static {v3, v5}, Lcom/android/systemui/statusbar/CrossFadeHelper;->fadeIn(Landroid/view/View;F)V
+    invoke-virtual {v6}, Lcom/android/systemui/util/animation/WidgetState;->getWidth()I
 
-    invoke-virtual {v4}, Lcom/android/systemui/util/animation/WidgetState;->getGone()Z
+    move-result v8
 
-    move-result v5
+    sub-int/2addr v7, v8
 
-    if-nez v5, :cond_4
+    goto :goto_1
 
-    invoke-virtual {v4}, Lcom/android/systemui/util/animation/WidgetState;->getAlpha()F
+    :cond_0
+    move v7, v3
 
-    move-result v4
+    :goto_1
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const/4 v5, 0x0
-
-    cmpg-float v4, v4, v5
-
-    if-nez v4, :cond_3
+    move-result-object v7
 
     goto :goto_2
 
+    :cond_1
+    const/4 v7, 0x0
+
+    :goto_2
+    invoke-virtual {v5}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result v8
+
+    invoke-virtual {v6}, Lcom/android/systemui/util/animation/WidgetState;->getMeasureWidth()I
+
+    move-result v9
+
+    if-ne v8, v9, :cond_2
+
+    invoke-virtual {v5}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v8
+
+    invoke-virtual {v6}, Lcom/android/systemui/util/animation/WidgetState;->getMeasureHeight()I
+
+    move-result v9
+
+    if-eq v8, v9, :cond_3
+
+    :cond_2
+    invoke-virtual {v6}, Lcom/android/systemui/util/animation/WidgetState;->getMeasureWidth()I
+
+    move-result v8
+
+    const/high16 v9, 0x40000000    # 2.0f
+
+    invoke-static {v8, v9}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+
+    move-result v8
+
+    invoke-virtual {v6}, Lcom/android/systemui/util/animation/WidgetState;->getMeasureHeight()I
+
+    move-result v10
+
+    invoke-static {v10, v9}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+
+    move-result v9
+
+    invoke-virtual {v5, v8, v9}, Landroid/view/View;->measure(II)V
+
+    invoke-virtual {v5}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result v8
+
+    invoke-virtual {v5}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v9
+
+    invoke-virtual {v5, v3, v3, v8, v9}, Landroid/view/View;->layout(IIII)V
+
     :cond_3
-    move v4, v1
+    if-eqz v7, :cond_4
+
+    invoke-virtual {v7}, Ljava/lang/Integer;->intValue()I
+
+    move-result v8
 
     goto :goto_3
 
     :cond_4
-    :goto_2
-    const/4 v4, 0x4
+    move v8, v3
 
     :goto_3
-    invoke-virtual {v3, v4}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v6}, Lcom/android/systemui/util/animation/WidgetState;->getX()F
+
+    move-result v9
+
+    float-to-int v9, v9
+
+    add-int/2addr v9, v1
+
+    sub-int/2addr v9, v8
+
+    invoke-virtual {v6}, Lcom/android/systemui/util/animation/WidgetState;->getY()F
+
+    move-result v10
+
+    float-to-int v10, v10
+
+    add-int/2addr v10, v2
+
+    if-eqz v7, :cond_5
+
+    const/4 v7, 0x1
+
+    goto :goto_4
 
     :cond_5
-    add-int/lit8 v2, v2, 0x1
+    move v7, v3
+
+    :goto_4
+    if-eqz v7, :cond_6
+
+    invoke-virtual {v6}, Lcom/android/systemui/util/animation/WidgetState;->getMeasureWidth()I
+
+    move-result v11
+
+    goto :goto_5
+
+    :cond_6
+    invoke-virtual {v6}, Lcom/android/systemui/util/animation/WidgetState;->getWidth()I
+
+    move-result v11
+
+    :goto_5
+    if-eqz v7, :cond_7
+
+    invoke-virtual {v6}, Lcom/android/systemui/util/animation/WidgetState;->getMeasureHeight()I
+
+    move-result v7
+
+    goto :goto_6
+
+    :cond_7
+    invoke-virtual {v6}, Lcom/android/systemui/util/animation/WidgetState;->getHeight()I
+
+    move-result v7
+
+    :goto_6
+    add-int/2addr v11, v9
+
+    add-int/2addr v7, v10
+
+    invoke-virtual {v5, v9, v10, v11, v7}, Landroid/view/View;->setLeftTopRightBottom(IIII)V
+
+    invoke-virtual {v6}, Lcom/android/systemui/util/animation/WidgetState;->getScale()F
+
+    move-result v7
+
+    invoke-virtual {v5, v7}, Landroid/view/View;->setScaleX(F)V
+
+    invoke-virtual {v6}, Lcom/android/systemui/util/animation/WidgetState;->getScale()F
+
+    move-result v7
+
+    invoke-virtual {v5, v7}, Landroid/view/View;->setScaleY(F)V
+
+    invoke-virtual {v5}, Landroid/view/View;->getClipBounds()Landroid/graphics/Rect;
+
+    move-result-object v7
+
+    if-eqz v7, :cond_8
+
+    goto :goto_7
+
+    :cond_8
+    new-instance v7, Landroid/graphics/Rect;
+
+    invoke-direct {v7}, Landroid/graphics/Rect;-><init>()V
+
+    :goto_7
+    invoke-virtual {v6}, Lcom/android/systemui/util/animation/WidgetState;->getWidth()I
+
+    move-result v9
+
+    add-int/2addr v9, v8
+
+    invoke-virtual {v6}, Lcom/android/systemui/util/animation/WidgetState;->getHeight()I
+
+    move-result v10
+
+    invoke-virtual {v7, v8, v3, v9, v10}, Landroid/graphics/Rect;->set(IIII)V
+
+    invoke-virtual {v5, v7}, Landroid/view/View;->setClipBounds(Landroid/graphics/Rect;)V
+
+    invoke-virtual {v6}, Lcom/android/systemui/util/animation/WidgetState;->getAlpha()F
+
+    move-result v7
+
+    invoke-static {v5, v7}, Lcom/android/systemui/statusbar/CrossFadeHelper;->fadeIn(Landroid/view/View;F)V
+
+    invoke-virtual {v6}, Lcom/android/systemui/util/animation/WidgetState;->getGone()Z
+
+    move-result v7
+
+    if-nez v7, :cond_a
+
+    invoke-virtual {v6}, Lcom/android/systemui/util/animation/WidgetState;->getAlpha()F
+
+    move-result v6
+
+    const/4 v7, 0x0
+
+    cmpg-float v6, v6, v7
+
+    if-nez v6, :cond_9
+
+    goto :goto_8
+
+    :cond_9
+    move v6, v3
+
+    goto :goto_9
+
+    :cond_a
+    :goto_8
+    const/4 v6, 0x4
+
+    :goto_9
+    invoke-virtual {v5, v6}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_b
+    add-int/lit8 v4, v4, 0x1
 
     goto/16 :goto_0
 
-    :cond_6
+    :cond_c
     invoke-direct {p0}, Lcom/android/systemui/util/animation/TransitionLayout;->updateBounds()V
+
+    iget-object v0, p0, Lcom/android/systemui/util/animation/TransitionLayout;->currentState:Lcom/android/systemui/util/animation/TransitionViewState;
+
+    invoke-virtual {v0}, Lcom/android/systemui/util/animation/TransitionViewState;->getTranslation()Landroid/graphics/PointF;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/graphics/PointF;->x:F
+
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->setTranslationX(F)V
+
+    iget-object v0, p0, Lcom/android/systemui/util/animation/TransitionLayout;->currentState:Lcom/android/systemui/util/animation/TransitionViewState;
+
+    invoke-virtual {v0}, Lcom/android/systemui/util/animation/TransitionViewState;->getTranslation()Landroid/graphics/PointF;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/graphics/PointF;->y:F
+
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->setTranslationY(F)V
+
+    iget-object v0, p0, Lcom/android/systemui/util/animation/TransitionLayout;->currentState:Lcom/android/systemui/util/animation/TransitionViewState;
+
+    invoke-virtual {v0}, Lcom/android/systemui/util/animation/TransitionViewState;->getAlpha()F
+
+    move-result v0
+
+    invoke-static {p0, v0}, Lcom/android/systemui/statusbar/CrossFadeHelper;->fadeIn(Landroid/view/View;F)V
 
     return-void
 .end method
@@ -606,55 +757,15 @@
 
     invoke-virtual {p0, v0, v1, v2, v3}, Landroid/view/ViewGroup;->setLeftTopRightBottom(IIII)V
 
-    iget-object v0, p0, Lcom/android/systemui/util/animation/TransitionLayout;->currentState:Lcom/android/systemui/util/animation/TransitionViewState;
-
-    invoke-virtual {v0}, Lcom/android/systemui/util/animation/TransitionViewState;->getTranslation()Landroid/graphics/PointF;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/graphics/PointF;->x:F
-
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->setTranslationX(F)V
-
-    iget-object v0, p0, Lcom/android/systemui/util/animation/TransitionLayout;->currentState:Lcom/android/systemui/util/animation/TransitionViewState;
-
-    invoke-virtual {v0}, Lcom/android/systemui/util/animation/TransitionViewState;->getTranslation()Landroid/graphics/PointF;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/graphics/PointF;->y:F
-
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->setTranslationY(F)V
-
     iget-object v0, p0, Lcom/android/systemui/util/animation/TransitionLayout;->boundsRect:Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getWidth()I
 
     move-result v1
 
-    int-to-float v1, v1
-
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getTranslationX()F
-
-    move-result v2
-
-    add-float/2addr v1, v2
-
-    float-to-int v1, v1
-
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getHeight()I
 
-    move-result v2
-
-    int-to-float v2, v2
-
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getTranslationY()F
-
     move-result p0
-
-    add-float/2addr v2, p0
-
-    float-to-int p0, v2
 
     const/4 v2, 0x0
 
@@ -1021,17 +1132,9 @@
     goto :goto_0
 
     :cond_2
-    iget-object p1, p0, Lcom/android/systemui/util/animation/TransitionLayout;->measureState:Lcom/android/systemui/util/animation/TransitionViewState;
+    iget p1, p0, Lcom/android/systemui/util/animation/TransitionLayout;->desiredMeasureWidth:I
 
-    invoke-virtual {p1}, Lcom/android/systemui/util/animation/TransitionViewState;->getWidth()I
-
-    move-result p1
-
-    iget-object p2, p0, Lcom/android/systemui/util/animation/TransitionLayout;->measureState:Lcom/android/systemui/util/animation/TransitionViewState;
-
-    invoke-virtual {p2}, Lcom/android/systemui/util/animation/TransitionViewState;->getHeight()I
-
-    move-result p2
+    iget p2, p0, Lcom/android/systemui/util/animation/TransitionLayout;->desiredMeasureHeight:I
 
     invoke-virtual {p0, p1, p2}, Landroid/view/ViewGroup;->setMeasuredDimension(II)V
 
@@ -1040,18 +1143,52 @@
 .end method
 
 .method public final setMeasureState(Lcom/android/systemui/util/animation/TransitionViewState;)V
-    .locals 1
+    .locals 2
     .param p1    # Lcom/android/systemui/util/animation/TransitionViewState;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
 
-    const-string v0, "<set-?>"
+    const-string/jumbo v0, "value"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iput-object p1, p0, Lcom/android/systemui/util/animation/TransitionLayout;->measureState:Lcom/android/systemui/util/animation/TransitionViewState;
+    invoke-virtual {p1}, Lcom/android/systemui/util/animation/TransitionViewState;->getWidth()I
 
+    move-result v0
+
+    invoke-virtual {p1}, Lcom/android/systemui/util/animation/TransitionViewState;->getHeight()I
+
+    move-result p1
+
+    iget v1, p0, Lcom/android/systemui/util/animation/TransitionLayout;->desiredMeasureWidth:I
+
+    if-ne v0, v1, :cond_0
+
+    iget v1, p0, Lcom/android/systemui/util/animation/TransitionLayout;->desiredMeasureHeight:I
+
+    if-eq p1, v1, :cond_2
+
+    :cond_0
+    iput v0, p0, Lcom/android/systemui/util/animation/TransitionLayout;->desiredMeasureWidth:I
+
+    iput p1, p0, Lcom/android/systemui/util/animation/TransitionLayout;->desiredMeasureHeight:I
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->isInLayout()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p0}, Landroidx/constraintlayout/widget/ConstraintLayout;->forceLayout()V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p0}, Landroidx/constraintlayout/widget/ConstraintLayout;->requestLayout()V
+
+    :cond_2
+    :goto_0
     return-void
 .end method
 

@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="about_action_bar_title">ਇਸ ਦੇ ਬਾਰੇ</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">ਪਰਦੇਦਾਰੀ ਨੀਤੀ</string>
+    <string name="about_release_note_title">ਅੱਪਡੇਟ ਲੌਗ:</string>
+    <string name="about_terms_service">ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ</string>
     <string name="accessibility_fingerprint_dialog_help_area">ਹੈਲਪ ਮੈਸੇਜ਼ ਏਰੀਆ</string>
     <string name="accessibility_hide">ਲੁਕਾਓ</string>
     <string name="accessibility_phone_four_bars">ਫ਼ੋਨ ਸਿਗਨਲ ਦੀਆਂ ਚਾਰ ਪੱਟੀਆਂ।</string>
@@ -13,7 +18,7 @@
     <string name="accessibility_quick_settings_night_mode_changed_on">ਰਾਤਰੀ ਮੋਡ ਚਾਲੂ ਕੀਤਾ ਗਿਆ।</string>
     <string name="accessibility_quick_settings_power_saving_changed_off">ਬੈਟਰੀ ਬੱਚਤਕਰਤਾ ਮੋਡ ਬੰਦ ਹੈ।</string>
     <string name="accessibility_quick_settings_power_saving_changed_on">ਬੈਟਰੀ ਬੱਚਤਕਰਤਾ ਮੋਡ ਚਾਲੂ ਹੈ।</string>
-    <string name="accessibility_work_life_balance_mode">ਕਾਰਜ-ਜੀਵਨ ਦਾ ਸੰਤੁਲਨ</string>
+    <string name="accessibility_work_life_balance_mode">Work Life Balance</string>
     <string name="accessibility_work_life_balance_mode_off">ਕਾਰਜ-ਜੀਵਨ ਦਾ ਸੰਤੁਲਨ ਮੋਡ ਬੰਦ ਕੀਤਾ ਗਿਆ।</string>
     <string name="accessibility_work_life_balance_mode_on">ਕਾਰਜ-ਜੀਵਨ ਦਾ ਸੰਤੁਲਨ ਮੋਡ ਚਾਲੂ ਕੀਤਾ ਗਿਆ।</string>
     <string name="activity_not_available">ਐਪ ਉਪਲਬਧ ਨਹੀਂ ਹੈ</string>
@@ -40,9 +45,10 @@
     <string name="delete">ਮਿਟਾਓ</string>
     <string name="denoise_notification">ਘੱਟ ਤਰਜੀਹ ਵਾਲੀ ਸੂਚਨਾ</string>
     <string name="dialog_mhs_error">ਕਿਰਪਾ ਕਰਕੇ ਪੁਸ਼ਟੀ ਕੀਤੇ ਜਾਣ ਦੌਰਾਨ ਉਡੀਕ ਕਰੋ..</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">ਵੇਰਵਿਆਂ ਲਈ ਆਪਣੇ ਐਡਮਿਨ ਨਾਲ ਸੰਪਰਕ ਕਰੋ</string>
+    <string name="disable_tether_notification_title">ਤੈਥਰਿੰਗ ਬੰਦ ਹੈ</string>
     <string name="drag_to_add_tiles">ਟਾਈਲਾਂ ਜੋੜਣ ਲਈ ਖਿੱਚ੍ਹੋ</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">ਮੁੜ-ਵਿਵਸਥਿਤ ਕਰਨ ਲਈ ਟਾਈਲਾਂ ਨੂੰ ਡ੍ਰੈਗ ਕਰੋ। ਦਿਖਾਉਣ ਜਾਂ ਲੁਕਾਉਣ ਲਈ ਟੈਪ ਕਰੋ।</string>
     <string name="end_call">ਸਮਾਪਤ</string>
     <string name="face_unlock_camera_error">ਚਿਹਰਾ ਅਣਲੌਕ ਅਸਫਲ ਹੋ ਗਿਆ, ਕੈਮਰਾ ਹੋਰ ਐਪ ਦੁਆਰਾ ਵਰਤਿਆ ਜਾ ਰਿਹਾ ਹੈ</string>
@@ -88,6 +94,7 @@
     <string name="kg_wrong_pattern_warning_one">ਤੁਹਾਡੇ ਕੋਲ ਹਾਲੇ ਵੀ 1 ਮੌਕਾ ਹੈ</string>
     <string name="kg_wrong_pin_warning">ਤੁਹਾਡੇ ਕੋਲ ਹਾਲੇ ਵੀ 2 ਮੌਕੇ ਹਨ</string>
     <string name="kg_wrong_pin_warning_one">ਤੁਹਾਡੇ ਕੋਲ ਹਾਲੇ ਵੀ 1 ਮੌਕਾ ਹੈ</string>
+    <string name="loading_text">ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ...</string>
     <string name="long_press_power_navigation_assist_content">"ਆਵਾਜ਼ ਸਹਾਇਕ ਦੇ ਲਈ \"ਪਾਵਰ ਬਟਨ\"
  ਨੂੰ ਦਬਾਕੇ ਰੱਖੋ"</string>
     <string name="long_press_power_navigation_power_content">ਪਾਵਰ ਬੰਦ ਕਰਨ ਲਈ \"ਪਾਵਰ ਬਟਨ\" ਅਤੇ \"ਆਵਾਜ਼ ਵਧਾਉਣ ਵਾਲੇ ਬਟਨ\" ਨੂੰ ਇੱਕੋ ਸਮੇਂ ਦਬਾਓ</string>
@@ -129,8 +136,14 @@
     <string name="oneplus_threekey_navigation_sound">ਸਾਰੀਆਂ ਧੁਨੀਆਂ ਦੀ ਇਜਾਜ਼ਤ ਹੈ</string>
     <string name="oneplus_threekey_navigation_turned_on_here">ਇਸ ਨੂੰ ਉੱਪਰ ਟੌਗਲ ਕਰਕੇ ਚਾਲੂ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ</string>
     <string name="oneplus_threekey_navigation_vibration">ਸਿਰਫ਼ ਕੰਪਨ</string>
-    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> ਅਨਲਾਕ</string>
-    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> ਅਨਲਾਕ</string>
+    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>ਅਨਲਾਕ</string>
+    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>ਅਨਲਾਕਸ</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">ਜੋੜਿਆ ਜਾ ਰਿਹਾ ਹੈ...</string>
     <string name="op_earphone_connected_fail">ਜੋੜਣਾ ਅਸਫ਼ਲ ਰਿਹਾ। ਤੁਸੀਂ ਹੈੱਡਸੈੱਟ ਅਤੇ ਬਲੂਟੁੱਥ ਸਥਿਤੀ ਦੀ ਜਾਂਚ ਕਰ ਸਕਦੇ ਹੋ।</string>
     <string name="op_earphone_connected_success">ਜੋੜਿਆ ਗਿਆ। ਹੋਰ ਸੈੱਟ ਕਰਨ ਲਈ ਟੈਪ ਕਰੋ।</string>
@@ -160,9 +173,10 @@
     <string name="op_notification_channel_summary_low">ਬਿਨਾਂ ਕਿਸੇ ਧੁਨੀ ਜਾਂ ਕੰਪਨ ਦੇ ਘੱਟ ਮਹੱਤਵਪੂਰਨ ਸੂਚਨਾਵਾਂ।</string>
     <string name="op_notification_section_header_gentle">ਹੋਰ ਸੂਚਨਾਵਾਂ</string>
     <string name="op_notification_silence_title">ਹੋਰ</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">ਹਨੇਰਾ ਮੋਡ</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s ਉਪਯੋਗ ਕੀਤੇ ਜਾ ਚੁੱਕੇ ਹਨ</string>
-    <string name="op_quick_settings_night_display_label">ਰਾਤਰੀ ਮੋਡ</string>
+    <string name="op_quick_settings_night_display_label">ਦ੍ਰਿਸ਼ ਆਰਾਮਦਾਇਕਤਾ</string>
     <string name="op_quick_settings_night_display_summary_off">ਰਾਤਰੀ ਮੋਡ ਬੰਦ ਹੈ, ਚਾਲੂ ਕਰਨ ਲਈ ਟੈਪ ਕਰੋ</string>
     <string name="op_quick_settings_night_display_summary_on">ਰਾਤਰੀ ਮੋਡ ਚਾਲੂ ਹੈ, ਬੰਦ ਕਰਨ ਲਈ ਟੈਪ ਕਰੋ</string>
     <string name="op_read_mode2_dialog_black">ਮੋਨੋ ਪ੍ਰਭਾਵ</string>
@@ -264,7 +278,7 @@
     <string name="tethered_notification_hybrid_sharing_mobile">"ਮੋਬਾਈਲ ਡੇਟਾ ਸਾਂਝਾ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ, ਸੈਟਿੰਗਾਂ 'ਚ ਦਾਖਲ ਹੋਣ ਲਈ ਕਲਿੱਕ ਕਰੋ"</string>
     <string name="tethered_notification_hybrid_sharing_none">"ਸਾਂਝਾ ਕਰਨ ਲਈ ਕੋਈ ਨੈੱਟਵਰਕ ਉਪਲਬਧ ਨਹੀਂ ਹੈ, ਸੈਟਿੰਗਾਂ 'ਚ ਦਾਖਲ ਹੋਣ ਲਈ ਕਲਿੱਕ ਕਰੋ"</string>
     <string name="tethered_notification_hybrid_sharing_wifi">"Wi-Fi ਸਾਂਝਾ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ, ਸੈਟਿੰਗਾਂ 'ਚ ਦਾਖਲ ਹੋਣ ਲਈ ਕਲਿੱਕ ਕਰੋ"</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">ਸੈਟ ਅੱਪ ਲਈ ਦੱਬੋ।</string>
     <string name="tethered_notification_multi_device_message">%1$s ਕਨੈਕਟ ਕੀਤੀਆਂ ਡਿਵਾਈਸਾਂ</string>
     <string name="tethered_notification_multi_tether_title">ਟੀਥਰਿੰਗ ਅਤੇ ਮੋਬਾਈਲ ਹੌਟਸਪੌਟ ਕਿਰਿਆਸ਼ੀਲ ਹਨ</string>
     <string name="tethered_notification_no_device_message">ਕੋਈ ਕਨੈਕਟ ਕੀਤੀ ਡਿਵਾਈਸ ਨਹੀਂ</string>
@@ -292,11 +306,21 @@
     <string name="volume_footer_slient">ਸਾਇਲੈਂਟ</string>
     <string name="volume_footer_vibrate">ਸਾਇਲੈਂਟ (ਵਾਈਬ੍ਰੇਟ)</string>
     <string name="volume_vibrate">ਕੰਪਨ</string>
-    <string name="work_life_balance_mode">Work-Life Balance</string>
+    <string name="wlb_break_mode_active">ਕਿਰਿਆਸ਼ੀਲ</string>
+    <string name="wlb_break_mode_active_text">%1$s ਮੋਡ · %2$s</string>
+    <string name="wlb_break_mode_on_break">ਬ੍ਰੇਕ ਉੱਤੇ</string>
+    <string name="wlb_break_mode_resume">ਮੁੜ ਜਾਰੀ ਰੱਖੋ</string>
+    <string name="wlb_break_mode_take_break">ਥੋੜੀ ਦੇਰ ਰੁਕੋ</string>
+    <string name="wlb_qs_detail_break_mode">ਬੇੑਕ ਮੋਡ</string>
+    <string name="wlb_qs_detail_break_mode_desc">30 ਮਿੰਟ ਬਾਅਦ ਸਵੈਚਾਲਿਤ ਤਰੀਕੇ ਨਾਲ ਹੀ ਪਿਛਲੇ ਮੋਡ ਵਿਚ ਸ਼ੁਰੂ ਕਰੋ</string>
+    <string name="wlb_qs_detail_life_mode">ਜੀਵਨ ਮੋਡ</string>
+    <string name="wlb_qs_detail_more_setting">ਹੋਰ ਸੈਟਿੰਗਸ</string>
+    <string name="wlb_qs_detail_work_mode">ਕਾਰਜ ਮੋਡ</string>
+    <string name="work_life_balance_mode">Work Life Balance</string>
     <string name="zen_important_interruptions">ਤਰਜੀਹੀ ਸੂਚਨਾਵਾਂ</string>
     <string name="zen_interruption_level_all">ਸਾਰੀਆਂ ਸੂਚਨਾਵਾਂ</string>
     <string name="zen_no_interruptions">ਸਾਇਲੈਂਟ</string>
     <string name="zzz_op_global_action_bootloader">ਬੂਟਲੋਡਰ</string>
     <string name="zzz_op_global_action_recovery">ਮੁੜ-ਪ੍ਰਾਪਤੀ</string>
-    <string name="zzz_op_quick_pay_no_install_message">ਤਤਕਾਲ ਭੁਗਤਾਨ ਦੀ ਵਰਤੋਂ ਕਰਨ ਲਈ ਕਿਰਪਾ ਕਰਕੇ ਭੁਗਤਾਨ ਐਪਾਂ ਸਥਾਪਤ ਕਰੋ</string>
+    <string name="zzz_op_quick_pay_no_install_message">ਕੁਇਕ ਪੇ ਦਾ ਉਪਯੋਗ ਕਰਨ ਲਈ ਕਿਰਪਾ ਕਰ ਕੇ ਪੇਮੈਂਟ ਐਪਸ ਨੂੰ ਇੰਸਟਾਲ ਕਰੋ</string>
 </resources>

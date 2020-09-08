@@ -227,7 +227,23 @@
     return-object p0
 .end method
 
-.method static synthetic access$1000(Lcom/android/systemui/power/PowerUI;)J
+.method static synthetic access$1000(Lcom/android/systemui/power/PowerUI;)[I
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/systemui/power/OpPowerUI;->mLowBatteryReminderLevels:[I
+
+    return-object p0
+.end method
+
+.method static synthetic access$1100(Lcom/android/systemui/power/PowerUI;)I
+    .locals 0
+
+    iget p0, p0, Lcom/android/systemui/power/PowerUI;->mLowBatteryAlertCloseLevel:I
+
+    return p0
+.end method
+
+.method static synthetic access$1200(Lcom/android/systemui/power/PowerUI;)J
     .locals 2
 
     iget-wide v0, p0, Lcom/android/systemui/power/PowerUI;->mScreenOffTime:J
@@ -235,7 +251,7 @@
     return-wide v0
 .end method
 
-.method static synthetic access$1002(Lcom/android/systemui/power/PowerUI;J)J
+.method static synthetic access$1202(Lcom/android/systemui/power/PowerUI;J)J
     .locals 0
 
     iput-wide p1, p0, Lcom/android/systemui/power/PowerUI;->mScreenOffTime:J
@@ -243,7 +259,7 @@
     return-wide p1
 .end method
 
-.method static synthetic access$1100(Lcom/android/systemui/power/PowerUI;)Lcom/android/systemui/power/PowerUI$WarningsUI;
+.method static synthetic access$1300(Lcom/android/systemui/power/PowerUI;)Lcom/android/systemui/power/PowerUI$WarningsUI;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/power/PowerUI;->mWarnings:Lcom/android/systemui/power/PowerUI$WarningsUI;
@@ -251,7 +267,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1200(Lcom/android/systemui/power/PowerUI;)Ljava/util/concurrent/Future;
+.method static synthetic access$1400(Lcom/android/systemui/power/PowerUI;)Ljava/util/concurrent/Future;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/power/PowerUI;->mLastShowWarningTask:Ljava/util/concurrent/Future;
@@ -259,7 +275,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1202(Lcom/android/systemui/power/PowerUI;Ljava/util/concurrent/Future;)Ljava/util/concurrent/Future;
+.method static synthetic access$1402(Lcom/android/systemui/power/PowerUI;Ljava/util/concurrent/Future;)Ljava/util/concurrent/Future;
     .locals 0
 
     iput-object p1, p0, Lcom/android/systemui/power/PowerUI;->mLastShowWarningTask:Ljava/util/concurrent/Future;
@@ -267,7 +283,7 @@
     return-object p1
 .end method
 
-.method static synthetic access$1300(Lcom/android/systemui/power/PowerUI;)V
+.method static synthetic access$1500(Lcom/android/systemui/power/PowerUI;)V
     .locals 0
 
     invoke-virtual {p0}, Lcom/oneplus/systemui/power/OpPowerUI;->restorePowerSavingSettingsForUser()V
@@ -275,7 +291,7 @@
     return-void
 .end method
 
-.method static synthetic access$1400(Lcom/android/systemui/power/PowerUI;Z)V
+.method static synthetic access$1600(Lcom/android/systemui/power/PowerUI;Z)V
     .locals 0
 
     invoke-virtual {p0, p1}, Lcom/oneplus/systemui/power/OpPowerUI;->updatePowerSavingSettings(Z)V
@@ -283,7 +299,7 @@
     return-void
 .end method
 
-.method static synthetic access$1500(Lcom/android/systemui/power/PowerUI;Z)V
+.method static synthetic access$1700(Lcom/android/systemui/power/PowerUI;Z)V
     .locals 0
 
     invoke-virtual {p0, p1}, Lcom/oneplus/systemui/power/OpPowerUI;->updatePowerSavingSettings(Z)V
@@ -291,7 +307,7 @@
     return-void
 .end method
 
-.method static synthetic access$1600(Lcom/android/systemui/power/PowerUI;)Ldagger/Lazy;
+.method static synthetic access$1800(Lcom/android/systemui/power/PowerUI;)Ldagger/Lazy;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/power/PowerUI;->mStatusBarLazy:Ldagger/Lazy;
@@ -299,7 +315,23 @@
     return-object p0
 .end method
 
-.method static synthetic access$200(Lcom/android/systemui/power/PowerUI;)I
+.method static synthetic access$200(Lcom/android/systemui/power/PowerUI;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$300(Lcom/android/systemui/power/PowerUI;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$400(Lcom/android/systemui/power/PowerUI;)I
     .locals 0
 
     iget p0, p0, Lcom/android/systemui/power/PowerUI;->mPlugType:I
@@ -307,7 +339,7 @@
     return p0
 .end method
 
-.method static synthetic access$202(Lcom/android/systemui/power/PowerUI;I)I
+.method static synthetic access$402(Lcom/android/systemui/power/PowerUI;I)I
     .locals 0
 
     iput p1, p0, Lcom/android/systemui/power/PowerUI;->mPlugType:I
@@ -315,7 +347,7 @@
     return p1
 .end method
 
-.method static synthetic access$300(Lcom/android/systemui/power/PowerUI;)I
+.method static synthetic access$500(Lcom/android/systemui/power/PowerUI;)I
     .locals 0
 
     iget p0, p0, Lcom/android/systemui/power/PowerUI;->mInvalidCharger:I
@@ -323,7 +355,7 @@
     return p0
 .end method
 
-.method static synthetic access$302(Lcom/android/systemui/power/PowerUI;I)I
+.method static synthetic access$502(Lcom/android/systemui/power/PowerUI;I)I
     .locals 0
 
     iput p1, p0, Lcom/android/systemui/power/PowerUI;->mInvalidCharger:I
@@ -331,7 +363,7 @@
     return p1
 .end method
 
-.method static synthetic access$400(Lcom/android/systemui/power/PowerUI;I)I
+.method static synthetic access$600(Lcom/android/systemui/power/PowerUI;I)I
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/systemui/power/PowerUI;->findBatteryLevelBucket(I)I
@@ -341,26 +373,10 @@
     return p0
 .end method
 
-.method static synthetic access$500(Lcom/android/systemui/power/PowerUI;)Landroid/os/PowerManager;
+.method static synthetic access$700(Lcom/android/systemui/power/PowerUI;)Landroid/os/PowerManager;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/power/PowerUI;->mPowerManager:Landroid/os/PowerManager;
-
-    return-object p0
-.end method
-
-.method static synthetic access$600(Lcom/android/systemui/power/PowerUI;)[I
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/systemui/power/OpPowerUI;->mLowBatteryReminderLevels:[I
-
-    return-object p0
-.end method
-
-.method static synthetic access$700(Lcom/android/systemui/power/PowerUI;)[I
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/systemui/power/OpPowerUI;->mLowBatteryReminderLevels:[I
 
     return-object p0
 .end method
@@ -373,12 +389,12 @@
     return-object p0
 .end method
 
-.method static synthetic access$900(Lcom/android/systemui/power/PowerUI;)I
+.method static synthetic access$900(Lcom/android/systemui/power/PowerUI;)[I
     .locals 0
 
-    iget p0, p0, Lcom/android/systemui/power/PowerUI;->mLowBatteryAlertCloseLevel:I
+    iget-object p0, p0, Lcom/oneplus/systemui/power/OpPowerUI;->mLowBatteryReminderLevels:[I
 
-    return p0
+    return-object p0
 .end method
 
 .method private findBatteryLevelBucket(I)I

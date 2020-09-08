@@ -58,9 +58,19 @@
     .end annotation
 .end field
 
+.field private final userContextTrackerProvider:Ljavax/inject/Provider;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljavax/inject/Provider<",
+            "Lcom/android/systemui/settings/CurrentUserContextTracker;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 
 # direct methods
-.method public constructor <init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
+.method public constructor <init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -76,6 +86,9 @@
             ">;",
             "Ljavax/inject/Provider<",
             "Landroid/app/NotificationManager;",
+            ">;",
+            "Ljavax/inject/Provider<",
+            "Lcom/android/systemui/settings/CurrentUserContextTracker;",
             ">;)V"
         }
     .end annotation
@@ -90,11 +103,13 @@
 
     iput-object p4, p0, Lcom/android/systemui/screenrecord/RecordingService_Factory;->notificationManagerProvider:Ljavax/inject/Provider;
 
+    iput-object p5, p0, Lcom/android/systemui/screenrecord/RecordingService_Factory;->userContextTrackerProvider:Ljavax/inject/Provider;
+
     return-void
 .end method
 
-.method public static create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/screenrecord/RecordingService_Factory;
-    .locals 1
+.method public static create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/screenrecord/RecordingService_Factory;
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -109,20 +124,35 @@
             ">;",
             "Ljavax/inject/Provider<",
             "Landroid/app/NotificationManager;",
+            ">;",
+            "Ljavax/inject/Provider<",
+            "Lcom/android/systemui/settings/CurrentUserContextTracker;",
             ">;)",
             "Lcom/android/systemui/screenrecord/RecordingService_Factory;"
         }
     .end annotation
 
-    new-instance v0, Lcom/android/systemui/screenrecord/RecordingService_Factory;
+    new-instance v6, Lcom/android/systemui/screenrecord/RecordingService_Factory;
 
-    invoke-direct {v0, p0, p1, p2, p3}, Lcom/android/systemui/screenrecord/RecordingService_Factory;-><init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
+    move-object v0, v6
 
-    return-object v0
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    move-object v5, p4
+
+    invoke-direct/range {v0 .. v5}, Lcom/android/systemui/screenrecord/RecordingService_Factory;-><init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
+
+    return-object v6
 .end method
 
-.method public static provideInstance(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/screenrecord/RecordingService;
-    .locals 1
+.method public static provideInstance(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/screenrecord/RecordingService;
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -137,46 +167,67 @@
             ">;",
             "Ljavax/inject/Provider<",
             "Landroid/app/NotificationManager;",
+            ">;",
+            "Ljavax/inject/Provider<",
+            "Lcom/android/systemui/settings/CurrentUserContextTracker;",
             ">;)",
             "Lcom/android/systemui/screenrecord/RecordingService;"
         }
     .end annotation
 
-    new-instance v0, Lcom/android/systemui/screenrecord/RecordingService;
+    new-instance v6, Lcom/android/systemui/screenrecord/RecordingService;
 
     invoke-interface {p0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Lcom/android/systemui/screenrecord/RecordingController;
+    move-object v1, p0
+
+    check-cast v1, Lcom/android/systemui/screenrecord/RecordingController;
 
     invoke-interface {p1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Ljava/util/concurrent/Executor;
+    move-object v2, p0
+
+    check-cast v2, Ljava/util/concurrent/Executor;
 
     invoke-interface {p2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object p2
+    move-result-object p0
 
-    check-cast p2, Lcom/android/internal/logging/UiEventLogger;
+    move-object v3, p0
+
+    check-cast v3, Lcom/android/internal/logging/UiEventLogger;
 
     invoke-interface {p3}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object p3
+    move-result-object p0
 
-    check-cast p3, Landroid/app/NotificationManager;
+    move-object v4, p0
 
-    invoke-direct {v0, p0, p1, p2, p3}, Lcom/android/systemui/screenrecord/RecordingService;-><init>(Lcom/android/systemui/screenrecord/RecordingController;Ljava/util/concurrent/Executor;Lcom/android/internal/logging/UiEventLogger;Landroid/app/NotificationManager;)V
+    check-cast v4, Landroid/app/NotificationManager;
 
-    return-object v0
+    invoke-interface {p4}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    move-result-object p0
+
+    move-object v5, p0
+
+    check-cast v5, Lcom/android/systemui/settings/CurrentUserContextTracker;
+
+    move-object v0, v6
+
+    invoke-direct/range {v0 .. v5}, Lcom/android/systemui/screenrecord/RecordingService;-><init>(Lcom/android/systemui/screenrecord/RecordingController;Ljava/util/concurrent/Executor;Lcom/android/internal/logging/UiEventLogger;Landroid/app/NotificationManager;Lcom/android/systemui/settings/CurrentUserContextTracker;)V
+
+    return-object v6
 .end method
 
 
 # virtual methods
 .method public get()Lcom/android/systemui/screenrecord/RecordingService;
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lcom/android/systemui/screenrecord/RecordingService_Factory;->controllerProvider:Ljavax/inject/Provider;
 
@@ -184,9 +235,11 @@
 
     iget-object v2, p0, Lcom/android/systemui/screenrecord/RecordingService_Factory;->uiEventLoggerProvider:Ljavax/inject/Provider;
 
-    iget-object p0, p0, Lcom/android/systemui/screenrecord/RecordingService_Factory;->notificationManagerProvider:Ljavax/inject/Provider;
+    iget-object v3, p0, Lcom/android/systemui/screenrecord/RecordingService_Factory;->notificationManagerProvider:Ljavax/inject/Provider;
 
-    invoke-static {v0, v1, v2, p0}, Lcom/android/systemui/screenrecord/RecordingService_Factory;->provideInstance(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/screenrecord/RecordingService;
+    iget-object p0, p0, Lcom/android/systemui/screenrecord/RecordingService_Factory;->userContextTrackerProvider:Ljavax/inject/Provider;
+
+    invoke-static {v0, v1, v2, v3, p0}, Lcom/android/systemui/screenrecord/RecordingService_Factory;->provideInstance(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/screenrecord/RecordingService;
 
     move-result-object p0
 

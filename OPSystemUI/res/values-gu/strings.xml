@@ -561,6 +561,7 @@ Codec પસંદગી ટ્રિગર કરો: પ્લેબૅક ક
     <string name="controls_favorite_other_zone_header">અન્ય</string>
     <string name="controls_favorite_rearrange">નિયંત્રણોને ફરીથી ગોઠવવા માટે તેમને હોલ્ડ કરીને ખેંચો</string>
     <string name="controls_favorite_removed">બધા નિયંત્રણો કાઢી નાખ્યા</string>
+    <string name="controls_favorite_see_other_apps">અન્ય બધી ઍપ જુઓ</string>
     <string name="controls_favorite_subtitle">પાવર મેનૂમાંથી ઍક્સેસ કરવા માટેના નિયંત્રણોને પસંદ કરો</string>
     <string name="controls_favorite_toast_no_changes">ફેરફારો સાચવ્યા નથી</string>
     <string name="controls_in_progress">પ્રક્રિયા ચાલુ છે</string>
@@ -663,6 +664,8 @@ Codec પસંદગી ટ્રિગર કરો: પ્લેબૅક ક
     <string name="disconnect_vpn">VPN ડિસ્કનેક્ટ કરો</string>
     <string name="dnd_is_off">ખલેલ પાડશો નહીં બંધ છે</string>
     <string name="dnd_suppressing_shade_text">ખલેલ પાડશો નહીં દ્વારા થોભાવેલ નોટિફિકેશન</string>
+    <string name="do_disclosure_generic">આ ડિવાઇસ તમારી સંસ્થાની માલિકીનું છે</string>
+    <string name="do_disclosure_with_name">આ ડિવાઇસ %sની માલિકીનું છે</string>
     <string name="do_not_silence">ચુપ કરશો નહીં</string>
     <string name="do_not_silence_block">ચુપ કે અવરોધિત કરશો નહીં</string>
     <string name="dock_alignment_not_charging">ફોનને વાયરલેસ રીતે ચાર્જ કરવા માટે ફરીથી ગોઠવો</string>
@@ -1065,8 +1068,18 @@ Codec પસંદગી ટ્રિગર કરો: પ્લેબૅક ક
     <string name="monitoring_description_do_learn_more_separator">" "</string>
     <string name="monitoring_description_managed_profile_ca_certificate">તમારી સંસ્થાએ તમારી કાર્ય પ્રોફાઇલમાં પ્રમાણપત્ર સત્તાધિકારી ઇન્સ્ટૉલ કર્યું છે. તમારા સુરક્ષિત નેટવર્ક ટ્રાફિકનું નિયમન થઈ શકે છે અથવા તેમાં ફેરફાર કરવામાં આવી શકે છે.</string>
     <string name="monitoring_description_managed_profile_named_vpn">તમારી કાર્યાલયની પ્રોફાઇલ %1$s સાથે કનેક્ટ કરેલ છે, જે ઇમેઇલ, ઍપ્લિકેશનો અને વેબસાઇટો સહિતની તમારી નેટવર્ક પ્રવૃત્તિનું નિયમન કરી શકે છે.</string>
+    <string name="monitoring_description_management">"આ ડિવાઇસ તમારી સંસ્થાની માલિકીનું છે.
+
+તમારા IT વ્યવસ્થાપક સેટિંગ, કૉર્પોરેટ ઍક્સેસ, ઍપ, તમારા ડિવાઇસ સાથે સંકળાયેલો ડેટા અને તમારા ડિવાઇસની સ્થાન માહિતીનું નિરીક્ષણ તેમજ તેને મેનેજ કરી શકે છે.
+
+વધુ માહિતી માટે, તમારા IT વ્યવસ્થાપકનો સંપર્ક કરો."</string>
     <string name="monitoring_description_management_ca_certificate">તમારી સંસ્થાએ આ ઉપકરણ પર પ્રમાણપત્ર સત્તાધિકારી ઇન્સ્ટૉલ કર્યું છે. તમારા સુરક્ષિત નેટવર્ક ટ્રાફિકનું નિયમન થઈ શકે છે અથવા તેમાં ફેરફાર કરવામાં આવી શકે છે.</string>
     <string name="monitoring_description_management_network_logging">તમારા વ્યવસ્થાપકે નેટવર્ક લૉગિંગ ચાલુ કર્યું છે, જે તમારા ઉપકરણ પર નેટવર્ક ટ્રાફિકનું નિયમન કરે છે.</string>
+    <string name="monitoring_description_named_management">"આ ડિવાઇસ %1$sની માલિકીનું છે.
+
+તમારા IT વ્યવસ્થાપક સેટિંગ, કૉર્પોરેટ ઍક્સેસ, ઍપ, તમારા ડિવાઇસ સાથે સંકળાયેલો ડેટા અને તમારા ડિવાઇસની સ્થાન માહિતીનું નિરીક્ષણ તેમજ તેને મેનેજ કરી શકે છે.
+
+વધુ માહિતી માટે, તમારા IT વ્યવસ્થાપકનો સંપર્ક કરો."</string>
     <string name="monitoring_description_named_vpn">તમે %1$s સાથે કનેક્ટ થયાં છો, જે ઇમેઇલ, ઍપ્લિકેશનો અને વેબસાઇટ સહિત તમારી નેટવર્ક પ્રવૃત્તિનું નિરીક્ષણ કરી શકે છે.</string>
     <string name="monitoring_description_network_logging">"તમારા વ્યવસ્થાપકે નેટવર્ક લૉગિંગ ચાલુ કર્યુ છે, જે તમારા ઉપકરણ પર ટ્રાફિકનું નિરીક્ષણ કરે છે.
 
@@ -1341,8 +1354,20 @@ Codec પસંદગી ટ્રિગર કરો: પ્લેબૅક ક
     <string name="quick_settings_dark_mode_secondary_label_until">%s વાગ્યા સુધી</string>
     <string name="quick_settings_dark_mode_secondary_label_until_sunrise">સૂર્યોદય સુધી</string>
     <string name="quick_settings_disclosure_managed_profile_monitoring">તમારી સંસ્થા તમારી કાર્ય પ્રોફાઇલમાં નેટવર્ક ટ્રાફિકનું નિયમન કરી શકે છે</string>
+    <string name="quick_settings_disclosure_managed_profile_named_vpn">તમારી ઑફિસની પ્રોફાઇલ %1$sથી કનેક્ટ કરેલી છે</string>
+    <string name="quick_settings_disclosure_management">આ ડિવાઇસ તમારી સંસ્થાની માલિકીનું છે</string>
+    <string name="quick_settings_disclosure_management_monitoring">તમારી સંસ્થા આ ડિવાઇસની માલિકી ધરાવે છે અને નેટવર્ક ટ્રાફિકનું નિરીક્ષણ કરી શકે છે</string>
+    <string name="quick_settings_disclosure_management_named_vpn">આ ડિવાઇસ તમારી સંસ્થાની માલિકીનું છે અને %1$sથી કનેક્ટ કરેલું છે</string>
+    <string name="quick_settings_disclosure_management_vpns">આ ડિવાઇસ તમારી સંસ્થાની માલિકીનું છે અને VPNsથી કનેક્ટ કરેલું છે</string>
     <string name="quick_settings_disclosure_monitoring">નેટવર્કનું નિયમન કરવામાં આવી શકે છે</string>
     <string name="quick_settings_disclosure_named_managed_profile_monitoring">%1$s તમારી કાર્ય પ્રોફાઇલમાં નેટવર્ક ટ્રાફિકનું નિયમન કરી શકે છે</string>
+    <string name="quick_settings_disclosure_named_management">આ ડિવાઇસ %1$sની માલિકીનું છે</string>
+    <string name="quick_settings_disclosure_named_management_monitoring">આ ડિવાઇસ %1$sની માલિકીનું છે અને નેટવર્ક ટ્રાફિકનું નિરીક્ષણ કરી શકે છે</string>
+    <string name="quick_settings_disclosure_named_management_named_vpn">આ ડિવાઇસ %1$sની માલિકીનું છે અને %2$sથી કનેક્ટ કરેલું છે</string>
+    <string name="quick_settings_disclosure_named_management_vpns">આ ડિવાઇસ %1$sની માલિકીનું છે અને VPNsથી કનેક્ટ કરેલું છે</string>
+    <string name="quick_settings_disclosure_named_vpn">આ ડિવાઇસ %1$sથી કનેક્ટ કરેલું છે</string>
+    <string name="quick_settings_disclosure_personal_profile_named_vpn">તમારી વ્યક્તિગત પ્રોફાઇલ %1$sથી કનેક્ટ કરેલી છે</string>
+    <string name="quick_settings_disclosure_vpns">આ ડિવાઇસ VPNsથી કનેક્ટ કરેલું છે</string>
     <string name="quick_settings_dnd_alarms_label">ફક્ત એલાર્મ્સ</string>
     <string name="quick_settings_dnd_label">ખલેલ પાડશો નહીં</string>
     <string name="quick_settings_dnd_none_label">સાવ શાંતિ</string>

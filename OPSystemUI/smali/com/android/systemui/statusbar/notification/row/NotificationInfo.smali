@@ -596,9 +596,9 @@
 
     move-result-object v1
 
-    const/4 v2, 0x0
+    const/16 v2, 0x8
 
-    const/16 v3, 0x8
+    const/4 v3, 0x0
 
     if-eqz v1, :cond_1
 
@@ -618,7 +618,7 @@
 
     if-nez v4, :cond_1
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
     new-instance v4, Lcom/android/systemui/statusbar/notification/row/-$$Lambda$NotificationInfo$1n0u5clDG1rrcb2QJPV4T7x9OY0;
 
@@ -629,7 +629,7 @@
     goto :goto_1
 
     :cond_1
-    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
     :goto_1
     sget v0, Lcom/android/systemui/R$id;->info:I
@@ -638,26 +638,77 @@
 
     move-result-object v0
 
+    check-cast v0, Landroid/widget/ImageView;
+
     invoke-direct {p0}, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->getSettingsOnClickListener()Landroid/view/View$OnClickListener;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    invoke-virtual {v0}, Landroid/widget/ImageView;->hasOnClickListeners()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    move v2, v3
+
+    :cond_2
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_5
+
+    iget v1, v1, Landroid/content/res/Configuration;->uiMode:I
+
+    and-int/lit8 v1, v1, 0x30
+
+    const/16 v2, 0x20
+
+    if-ne v1, v2, :cond_3
+
+    const/4 v3, 0x1
+
+    :cond_3
+    if-eqz v3, :cond_4
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    sget v1, Lcom/android/systemui/R$color;->op_control_icon_color_active_dark:I
 
-    invoke-virtual {v0}, Landroid/view/View;->hasOnClickListeners()Z
+    invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result p0
 
-    if-eqz p0, :cond_2
+    invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setColorFilter(I)V
 
     goto :goto_2
 
-    :cond_2
-    move v2, v3
+    :cond_4
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
+    move-result-object p0
+
+    sget v1, Lcom/android/systemui/R$color;->op_control_icon_color_active_light:I
+
+    invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result p0
+
+    invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setColorFilter(I)V
+
+    :cond_5
     :goto_2
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
-
     return-void
 .end method
 

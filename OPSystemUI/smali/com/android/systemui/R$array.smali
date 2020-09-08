@@ -34,34 +34,36 @@
 
 .field public static final oneplus_locale_carrier_names:I = 0x7f030048
 
-.field public static final oneplus_origin_carrier_names:I = 0x7f030049
+.field public static final oneplus_origin_carrier_names:I = 0x7f03004c
 
-.field public static final op_aod_clock_style_mapping:I = 0x7f03004a
+.field public static final op_aod_clock_style_mapping:I = 0x7f03004d
 
-.field public static final op_config_5g_signal_rsrp_thresholds:I = 0x7f03004f
+.field public static final op_config_5g_signal_rsrp_thresholds:I = 0x7f030052
 
-.field public static final op_config_statusBarIconBlackList:I = 0x7f030050
+.field public static final op_config_statusBarIconBlackList:I = 0x7f030053
 
-.field public static final op_light_start_animation:I = 0x7f030051
+.field public static final op_o2_uk_config_statusBarIconBlackList:I = 0x7f030055
 
-.field public static final op_o2_uk_config_statusBarIconBlackList:I = 0x7f030052
+.field public static final op_wbus_config_value:I = 0x7f030059
 
-.field public static final op_wx_mini_program_strings:I = 0x7f030056
+.field public static final op_wx_mini_program_strings:I = 0x7f03005a
 
-.field public static final qs_theme_colors:I = 0x7f03005a
+.field public static final qs_theme_colors:I = 0x7f03005e
 
-.field public static final recents_onboarding_blacklisted_packages:I = 0x7f03005b
+.field public static final recents_onboarding_blacklisted_packages:I = 0x7f03005f
 
-.field public static final tv_pip_settings_class_name:I = 0x7f03006f
+.field public static final swarpcharge_wired_anim:I = 0x7f03006b
 
-.field public static final type_clock_hours:I = 0x7f030070
+.field public static final tv_pip_settings_class_name:I = 0x7f030074
 
-.field public static final type_clock_minutes:I = 0x7f030071
+.field public static final type_clock_hours:I = 0x7f030075
 
-.field public static final warp_anim:I = 0x7f030074
+.field public static final type_clock_minutes:I = 0x7f030076
 
-.field public static final warpcharge_wired_anim:I = 0x7f030075
+.field public static final warp_anim:I = 0x7f030079
 
-.field public static final warpcharge_wireless_anim:I = 0x7f030076
+.field public static final warpcharge_wired_anim:I = 0x7f03007a
 
-.field public static final zzz_op_quick_pay_switch_strings:I = 0x7f03007b
+.field public static final warpcharge_wireless_anim:I = 0x7f03007b
+
+.field public static final zzz_op_quick_pay_switch_strings:I = 0x7f030080

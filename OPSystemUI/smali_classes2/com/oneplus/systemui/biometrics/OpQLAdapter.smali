@@ -80,7 +80,11 @@
 
     sget p2, Lcom/android/systemui/R$dimen;->op_quick_launch_icon_size:I
 
-    invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result p1
+
+    invoke-static {p1}, Lcom/oneplus/util/OpUtils;->convertDpToFixedPx2(F)I
 
     move-result p1
 
@@ -112,7 +116,7 @@
 
     move-result p1
 
-    invoke-static {p1}, Lcom/oneplus/util/OpUtils;->convertDpToFixedPx(F)I
+    invoke-static {p1}, Lcom/oneplus/util/OpUtils;->convertDpToFixedPx2(F)I
 
     move-result p1
 
@@ -130,7 +134,7 @@
 
     move-result p1
 
-    invoke-static {p1}, Lcom/oneplus/util/OpUtils;->convertDpToFixedPx(F)I
+    invoke-static {p1}, Lcom/oneplus/util/OpUtils;->convertDpToFixedPx2(F)I
 
     move-result p1
 

@@ -279,6 +279,31 @@
     return-object p0
 .end method
 
+.method public static isBreakModeActive(Landroid/content/Context;)Z
+    .locals 2
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    const-string v0, "oneplus_wlb_break_mode_activated"
+
+    const/4 v1, 0x0
+
+    invoke-static {p0, v0, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result p0
+
+    const/4 v0, 0x1
+
+    if-ne p0, v0, :cond_0
+
+    move v1, v0
+
+    :cond_0
+    return v1
+.end method
+
 .method private isDeviceProvisionedInSettingsDb()Z
     .locals 2
 
@@ -601,21 +626,33 @@
 .method private sendNotificationAddedBroadcast(Ljava/lang/String;Ljava/lang/Long;)V
     .locals 2
 
-    const-string v0, "OPSystemUIWLBHelper"
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "sendNotificationAddedBroadcast"
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    const-string v1, "sendNotificationAddedBroadcast "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "OPSystemUIWLBHelper"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_0
 
     const-string p0, "Package name not found"
 
-    invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
@@ -917,6 +954,34 @@
     const/4 p0, 0x0
 
     return p0
+.end method
+
+.method public onAllNotificationsCleared()V
+    .locals 3
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "com.oneplus.intent.NOTIFICATION_CLEAR_ALL"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string v1, "com.oneplus.opwlb"
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+
+    invoke-direct {p0}, Lcom/oneplus/worklife/OPWLBHelper;->getAppStartedTimestamp()Ljava/lang/Long;
+
+    move-result-object v1
+
+    const-string v2, "first_boot_time"
+
+    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
+
+    iget-object p0, p0, Lcom/oneplus/worklife/OPWLBHelper;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
+
+    return-void
 .end method
 
 .method public processWifiConnectivity(Z)V

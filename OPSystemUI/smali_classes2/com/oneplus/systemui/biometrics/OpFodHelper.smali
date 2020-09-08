@@ -258,6 +258,34 @@
     throw p0
 .end method
 
+.method public static isAppLocker(Ljava/lang/String;)Z
+    .locals 1
+
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, "com.oneplus.applocker"
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+.end method
+
 .method public static isForceShow(Ljava/lang/String;)Z
     .locals 1
 
@@ -344,6 +372,82 @@
     return p0
 .end method
 
+.method private pauseOrResumeInner(Z)V
+    .locals 3
+
+    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFodHelper;->mService:Landroid/hardware/fingerprint/IFingerprintService;
+
+    const-string v1, "OpFodHelper"
+
+    if-eqz v0, :cond_3
+
+    :try_start_0
+    invoke-interface {v0}, Landroid/hardware/fingerprint/IFingerprintService;->getAuthenticatedPackage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const-string p0, "empty client, do not handle it."
+
+    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_0
+    invoke-static {v0}, Lcom/oneplus/systemui/biometrics/OpFodHelper;->isKeyguard(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const-string p0, "keyguard client. do not handle it."
+
+    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_1
+    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFodHelper;->mService:Landroid/hardware/fingerprint/IFingerprintService;
+
+    if-eqz p1, :cond_2
+
+    const/16 p1, 0xc
+
+    goto :goto_0
+
+    :cond_2
+    const/16 p1, 0xb
+
+    :goto_0
+    invoke-interface {p0, p1}, Landroid/hardware/fingerprint/IFingerprintService;->updateStatus(I)I
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception p0
+
+    const-string p1, "updateStatus occur remote exception"
+
+    invoke-static {v1, p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_1
+
+    :cond_3
+    const-string p0, "pauseOrResumeInner null pointer"
+
+    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_1
+    return-void
+.end method
+
 
 # virtual methods
 .method public addFingerprintStateChangeListener(Lcom/oneplus/systemui/biometrics/OpFodHelper$OnFingerprintStateChangeListener;)V
@@ -408,7 +512,7 @@
 .end method
 
 .method public handleQSExpandChanged(Z)V
-    .locals 3
+    .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -428,75 +532,47 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFodHelper;->mService:Landroid/hardware/fingerprint/IFingerprintService;
+    invoke-direct {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFodHelper;->pauseOrResumeInner(Z)V
 
-    if-eqz v0, :cond_3
+    return-void
+.end method
 
-    :try_start_0
-    invoke-interface {v0}, Landroid/hardware/fingerprint/IFingerprintService;->getAuthenticatedPackage()Ljava/lang/String;
+.method public handleShutdownDialogVisibilityChanged(Z)V
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "handleShutdownDialogVisibilityChanged "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    const-string v1, "OpFodHelper"
 
-    move-result v2
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-eqz v2, :cond_0
-
-    const-string p0, "empty client, do not handle it."
-
-    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-direct {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFodHelper;->pauseOrResumeInner(Z)V
 
     return-void
+.end method
 
-    :cond_0
-    invoke-static {v0}, Lcom/oneplus/systemui/biometrics/OpFodHelper;->isKeyguard(Ljava/lang/String;)Z
+.method public isAppLockerClient()Z
+    .locals 0
 
-    move-result v0
+    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFodHelper;->mCurrentClient:Ljava/lang/String;
 
-    if-eqz v0, :cond_1
+    invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpFodHelper;->isAppLocker(Ljava/lang/String;)Z
 
-    const-string p0, "keyguard client. do not handle it."
+    move-result p0
 
-    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-
-    :cond_1
-    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFodHelper;->mService:Landroid/hardware/fingerprint/IFingerprintService;
-
-    if-eqz p1, :cond_2
-
-    const/16 p1, 0xc
-
-    goto :goto_0
-
-    :cond_2
-    const/16 p1, 0xb
-
-    :goto_0
-    invoke-interface {p0, p1}, Landroid/hardware/fingerprint/IFingerprintService;->updateStatus(I)I
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception p0
-
-    const-string p1, "updateStatus occur remote exception"
-
-    invoke-static {v1, p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    goto :goto_1
-
-    :cond_3
-    const-string p0, "handleQSExpandChanged null pointer"
-
-    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :goto_1
-    return-void
+    return p0
 .end method
 
 .method public isBiometricPromptReadyToShow()Z
@@ -919,28 +995,43 @@
     :cond_3
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFodHelper;->mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
+    if-nez v0, :cond_4
+
+    const-class v0, Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    iput-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFodHelper;->mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    :cond_4
+    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFodHelper;->mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
+
     invoke-virtual {v0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isUnlockingWithBiometricAllowed()Z
 
     move-result v0
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_6
 
     iget-boolean v0, p0, Lcom/oneplus/systemui/biometrics/OpFodHelper;->mActionEnroll:Z
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
     goto :goto_1
 
-    :cond_4
+    :cond_5
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFodHelper$FingerprintState;->LOCKOUT:Lcom/oneplus/systemui/biometrics/OpFodHelper$FingerprintState;
 
     invoke-direct {p0, v0, p1}, Lcom/oneplus/systemui/biometrics/OpFodHelper;->changeState(Lcom/oneplus/systemui/biometrics/OpFodHelper$FingerprintState;Z)V
 
     goto :goto_2
 
-    :cond_5
+    :cond_6
     :goto_1
-    if-eqz v4, :cond_6
+    if-eqz v4, :cond_7
 
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFodHelper$FingerprintState;->SUSPEND:Lcom/oneplus/systemui/biometrics/OpFodHelper$FingerprintState;
 
@@ -948,7 +1039,7 @@
 
     goto :goto_2
 
-    :cond_6
+    :cond_7
     sget-object v0, Lcom/oneplus/systemui/biometrics/OpFodHelper$FingerprintState;->RUNNING:Lcom/oneplus/systemui/biometrics/OpFodHelper$FingerprintState;
 
     invoke-direct {p0, v0, p1}, Lcom/oneplus/systemui/biometrics/OpFodHelper;->changeState(Lcom/oneplus/systemui/biometrics/OpFodHelper$FingerprintState;Z)V

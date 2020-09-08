@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nNotifCollectionLogger.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NotifCollectionLogger.kt\ncom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionLogger\n+ 2 LogBuffer.kt\ncom/android/systemui/log/LogBuffer\n*L\n1#1,182:1\n118#2,6:183\n118#2,6:189\n118#2,6:195\n118#2,6:201\n118#2,6:207\n118#2,6:213\n118#2,6:219\n118#2,6:225\n118#2,6:231\n118#2,6:237\n118#2,6:243\n118#2,6:249\n118#2,6:255\n118#2,6:261\n118#2,6:267\n118#2,6:273\n118#2,6:279\n118#2,6:285\n118#2,6:291\n*E\n*S KotlinDebug\n*F\n+ 1 NotifCollectionLogger.kt\ncom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionLogger\n*L\n35#1,6:183\n43#1,6:189\n52#1,6:195\n60#1,6:201\n69#1,6:207\n77#1,6:213\n85#1,6:219\n93#1,6:225\n101#1,6:231\n109#1,6:237\n117#1,6:243\n125#1,6:249\n126#1,6:255\n128#1,6:261\n133#1,6:267\n142#1,6:273\n150#1,6:279\n163#1,6:285\n173#1,6:291\n*E\n"
+    value = "SMAP\nNotifCollectionLogger.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NotifCollectionLogger.kt\ncom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionLogger\n+ 2 LogBuffer.kt\ncom/android/systemui/log/LogBuffer\n*L\n1#1,190:1\n118#2,6:191\n118#2,6:197\n118#2,6:203\n118#2,6:209\n118#2,6:215\n118#2,6:221\n118#2,6:227\n118#2,6:233\n118#2,6:239\n118#2,6:245\n118#2,6:251\n118#2,6:257\n118#2,6:263\n118#2,6:269\n118#2,6:275\n118#2,6:281\n118#2,6:287\n118#2,6:293\n118#2,6:299\n118#2,6:305\n*E\n*S KotlinDebug\n*F\n+ 1 NotifCollectionLogger.kt\ncom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionLogger\n*L\n35#1,6:191\n43#1,6:197\n52#1,6:203\n60#1,6:209\n69#1,6:215\n77#1,6:221\n85#1,6:227\n93#1,6:233\n101#1,6:239\n109#1,6:245\n117#1,6:251\n125#1,6:257\n133#1,6:263\n134#1,6:269\n136#1,6:275\n141#1,6:281\n150#1,6:287\n158#1,6:293\n171#1,6:299\n181#1,6:305\n*E\n"
 .end annotation
 
 
@@ -145,39 +145,6 @@
     return-void
 .end method
 
-.method public final logIgnoredError(Ljava/lang/String;)V
-    .locals 3
-    .param p1    # Ljava/lang/String;
-        .annotation build Lorg/jetbrains/annotations/Nullable;
-        .end annotation
-    .end param
-
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionLogger;->buffer:Lcom/android/systemui/log/LogBuffer;
-
-    sget-object v0, Lcom/android/systemui/log/LogLevel;->ERROR:Lcom/android/systemui/log/LogLevel;
-
-    sget-object v1, Lcom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionLogger$logIgnoredError$2;->INSTANCE:Lcom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionLogger$logIgnoredError$2;
-
-    invoke-virtual {p0}, Lcom/android/systemui/log/LogBuffer;->getFrozen()Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    const-string v2, "NotifCollection"
-
-    invoke-virtual {p0, v2, v0, v1}, Lcom/android/systemui/log/LogBuffer;->obtain(Ljava/lang/String;Lcom/android/systemui/log/LogLevel;Lkotlin/jvm/functions/Function1;)Lcom/android/systemui/log/LogMessageImpl;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Lcom/android/systemui/log/LogMessage;->setStr1(Ljava/lang/String;)V
-
-    invoke-virtual {p0, v0}, Lcom/android/systemui/log/LogBuffer;->push(Lcom/android/systemui/log/LogMessage;)V
-
-    :cond_0
-    return-void
-.end method
-
 .method public final logLifetimeExtended(Ljava/lang/String;Lcom/android/systemui/statusbar/notification/collection/notifcollection/NotifLifetimeExtender;)V
     .locals 3
     .param p1    # Ljava/lang/String;
@@ -275,6 +242,43 @@
     invoke-interface {v0, p1}, Lcom/android/systemui/log/LogMessage;->setStr2(Ljava/lang/String;)V
 
     invoke-interface {v0, p3}, Lcom/android/systemui/log/LogMessage;->setInt1(I)V
+
+    invoke-virtual {p0, v0}, Lcom/android/systemui/log/LogBuffer;->push(Lcom/android/systemui/log/LogMessage;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final logNoNotificationToRemoveWithKey(Ljava/lang/String;)V
+    .locals 3
+    .param p1    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+
+    const-string v0, "key"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionLogger;->buffer:Lcom/android/systemui/log/LogBuffer;
+
+    sget-object v0, Lcom/android/systemui/log/LogLevel;->ERROR:Lcom/android/systemui/log/LogLevel;
+
+    sget-object v1, Lcom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionLogger$logNoNotificationToRemoveWithKey$2;->INSTANCE:Lcom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionLogger$logNoNotificationToRemoveWithKey$2;
+
+    invoke-virtual {p0}, Lcom/android/systemui/log/LogBuffer;->getFrozen()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    const-string v2, "NotifCollection"
+
+    invoke-virtual {p0, v2, v0, v1}, Lcom/android/systemui/log/LogBuffer;->obtain(Ljava/lang/String;Lcom/android/systemui/log/LogLevel;Lkotlin/jvm/functions/Function1;)Lcom/android/systemui/log/LogMessageImpl;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Lcom/android/systemui/log/LogMessage;->setStr1(Ljava/lang/String;)V
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/log/LogBuffer;->push(Lcom/android/systemui/log/LogMessage;)V
 

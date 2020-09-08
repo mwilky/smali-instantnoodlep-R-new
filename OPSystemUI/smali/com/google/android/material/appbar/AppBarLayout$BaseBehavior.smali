@@ -364,11 +364,11 @@
     :cond_2
     new-instance p1, Landroid/view/animation/PathInterpolator;
 
-    const p2, 0x3f19999a    # 0.6f
+    const p2, 0x3ebd70a4    # 0.37f
 
     const/4 v1, 0x0
 
-    const v2, 0x3ebd70a4    # 0.37f
+    const v2, 0x3f2b851f    # 0.67f
 
     const/high16 v3, 0x3f800000    # 1.0f
 
@@ -378,8 +378,6 @@
 
     if-gez p2, :cond_3
 
-    const/16 p4, 0x177
-
     iget-object p2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->offsetAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p2, p1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
@@ -387,11 +385,13 @@
     goto :goto_0
 
     :cond_3
-    iget-object p1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->offsetAnimator:Landroid/animation/ValueAnimator;
+    new-instance p1, Landroid/view/animation/PathInterpolator;
 
-    sget-object p2, Landroidx/animation/AnimatorUtils;->op_control_interpolator_fast_out_slow_in_auxiliary:Landroid/view/animation/Interpolator;
+    invoke-direct {p1, v2, v1, v3, v3}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
 
-    invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+    iget-object p2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->offsetAnimator:Landroid/animation/ValueAnimator;
+
+    invoke-virtual {p2, p1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
     :goto_0
     iget-object p1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->offsetAnimator:Landroid/animation/ValueAnimator;

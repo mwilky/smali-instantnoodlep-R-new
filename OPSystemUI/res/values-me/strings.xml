@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="about_action_bar_title">O</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Politika privatnosti</string>
+    <string name="about_release_note_title">Dnevnik ažuriranja:</string>
+    <string name="about_terms_service">Uslovi korištenja</string>
     <string name="accessibility_fingerprint_dialog_help_area">Područje poruke za pomoć</string>
     <string name="accessibility_hide">Sakrij</string>
     <string name="accessibility_phone_four_bars">Četiri crtice telefona.</string>
@@ -50,6 +55,7 @@
     <string name="keyguard_indication_charging_time_fast_vooc">(ostalo je još%s do potpunog punjenja)</string>
     <string name="keyguard_plugged_in_charging_warp">%s • Warp punjenje</string>
     <string name="keyguard_plugged_in_wireless_warp">%s • Warp bežično punjenje</string>
+    <string name="loading_text">Učitavanje...</string>
     <string name="long_press_power_navigation_assist_content">"Press and hold \"power button\" 
 for Assist App"</string>
     <string name="long_press_power_navigation_power_content">Press \"power button\" and \"volume up button\" simultaneously to power off</string>

@@ -4,6 +4,8 @@
 
 
 # instance fields
+.field mCardViewOutlineProvider:Landroid/view/ViewOutlineProvider;
+
 .field private mNormalImageView:Landroid/widget/ImageView;
 
 
@@ -39,6 +41,12 @@
 
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    new-instance v0, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton$1;
+
+    invoke-direct {v0, p0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton$1;-><init>(Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;)V
+
+    iput-object v0, p0, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->mCardViewOutlineProvider:Landroid/view/ViewOutlineProvider;
+
     sget-object v0, Lcom/google/android/material/R$styleable;->switchFloatingActionButton:[I
 
     sget v1, Lcom/google/android/material/R$style;->Widget_Design_SwitchFloatingActionButton:I
@@ -51,7 +59,7 @@
 
     move-result-object p3
 
-    sget v0, Lcom/google/android/material/R$dimen;->op_control_shadow_z5:I
+    sget v0, Lcom/google/android/material/R$dimen;->op_float_action_button_shadow_z8:I
 
     invoke-virtual {p3, v0}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -102,6 +110,10 @@
     invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     invoke-virtual {p0, p3}, Landroid/widget/RelativeLayout;->setElevation(F)V
+
+    iget-object p3, p0, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->mCardViewOutlineProvider:Landroid/view/ViewOutlineProvider;
+
+    invoke-virtual {p0, p3}, Landroid/widget/RelativeLayout;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
     const-string p3, "layout_inflater"
 

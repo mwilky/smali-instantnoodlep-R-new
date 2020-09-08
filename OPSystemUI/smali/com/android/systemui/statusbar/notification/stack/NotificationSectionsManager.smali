@@ -15,7 +15,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nNotificationSectionsManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NotificationSectionsManager.kt\ncom/android/systemui/statusbar/notification/stack/NotificationSectionsManager\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n+ 3 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n+ 4 _Sequences.kt\nkotlin/sequences/SequencesKt___SequencesKt\n+ 5 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 6 SparseArrayUtils.kt\ncom/android/systemui/util/SparseArrayUtilsKt\n+ 7 Iterators.kt\nkotlin/collections/CollectionsKt__IteratorsKt\n*L\n1#1,582:1\n8918#2:583\n9251#2,3:584\n10480#2,3:609\n37#3,2:587\n1095#4,3:589\n1084#4,2:592\n846#4:596\n1591#5,2:594\n62#6,5:597\n67#6,4:603\n71#6:608\n32#7:602\n33#7:607\n*E\n*S KotlinDebug\n*F\n+ 1 NotificationSectionsManager.kt\ncom/android/systemui/statusbar/notification/stack/NotificationSectionsManager\n*L\n146#1:583\n146#1,3:584\n497#1,3:609\n147#1,2:587\n225#1,3:589\n334#1,2:592\n486#1:596\n411#1,2:594\n491#1,5:597\n491#1,4:603\n491#1:608\n491#1:602\n491#1:607\n*E\n"
+    value = "SMAP\nNotificationSectionsManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NotificationSectionsManager.kt\ncom/android/systemui/statusbar/notification/stack/NotificationSectionsManager\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n+ 3 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n+ 4 _Sequences.kt\nkotlin/sequences/SequencesKt___SequencesKt\n+ 5 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 6 SparseArrayUtils.kt\ncom/android/systemui/util/SparseArrayUtilsKt\n+ 7 Iterators.kt\nkotlin/collections/CollectionsKt__IteratorsKt\n*L\n1#1,589:1\n8918#2:590\n9251#2,3:591\n10480#2,3:616\n37#3,2:594\n1095#4,3:596\n1084#4,2:599\n846#4:603\n1591#5,2:601\n62#6,5:604\n67#6,4:610\n71#6:615\n32#7:609\n33#7:614\n*E\n*S KotlinDebug\n*F\n+ 1 NotificationSectionsManager.kt\ncom/android/systemui/statusbar/notification/stack/NotificationSectionsManager\n*L\n146#1:590\n146#1,3:591\n500#1,3:616\n147#1,2:594\n225#1,3:596\n336#1,2:599\n489#1:603\n413#1,2:601\n494#1,5:604\n494#1,4:610\n494#1:615\n494#1:609\n494#1:614\n*E\n"
 .end annotation
 
 
@@ -202,29 +202,6 @@
     invoke-direct {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->onGentleHeaderClick()V
 
     return-void
-.end method
-
-.method private final decorViewHeaderState(Lcom/android/systemui/statusbar/notification/row/StackScrollerDecorView;)Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager$SectionUpdateState;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Lcom/android/systemui/statusbar/notification/row/StackScrollerDecorView;",
-            ">(TT;)",
-            "Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager$SectionUpdateState<",
-            "TT;>;"
-        }
-    .end annotation
-
-    invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->expandableViewHeaderState(Lcom/android/systemui/statusbar/notification/row/ExpandableView;)Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager$SectionUpdateState;
-
-    move-result-object p0
-
-    new-instance v0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager$decorViewHeaderState$1;
-
-    invoke-direct {v0, p0, p1}, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager$decorViewHeaderState$1;-><init>(Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager$SectionUpdateState;Lcom/android/systemui/statusbar/notification/row/StackScrollerDecorView;)V
-
-    return-object v0
 .end method
 
 .method private final expandableViewHeaderState(Lcom/android/systemui/statusbar/notification/row/ExpandableView;)Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager$SectionUpdateState;
@@ -993,20 +970,34 @@
 .method public final onUiModeChanged()V
     .locals 1
 
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->silentHeaderView:Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->peopleHeaderView:Lcom/android/systemui/statusbar/notification/stack/PeopleHubView;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;->onUiModeChanged()V
+    invoke-virtual {v0}, Lcom/android/systemui/statusbar/notification/stack/PeopleHubView;->onUiModeChanged()V
 
     :cond_0
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->alertingHeaderView:Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->silentHeaderView:Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;
 
-    if-eqz p0, :cond_1
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;->onUiModeChanged()V
+
+    :cond_1
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->alertingHeaderView:Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;->onUiModeChanged()V
+
+    :cond_2
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->incomingHeaderView:Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;
+
+    if-eqz p0, :cond_3
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;->onUiModeChanged()V
 
-    :cond_1
+    :cond_3
     return-void
 .end method
 
@@ -1136,29 +1127,8 @@
 .end method
 
 .method public final setHeaderForegroundColor(I)V
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->peopleHeaderView:Lcom/android/systemui/statusbar/notification/stack/PeopleHubView;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1}, Lcom/android/systemui/statusbar/notification/stack/PeopleHubView;->setTextColor(I)V
-
-    :cond_0
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->silentHeaderView:Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0, p1}, Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;->setForegroundColor(I)V
-
-    :cond_1
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->alertingHeaderView:Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;
-
-    if-eqz p0, :cond_2
-
-    invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;->setForegroundColor(I)V
-
-    :cond_2
     return-void
 .end method
 
@@ -1462,7 +1432,7 @@
 
     if-eqz v0, :cond_4
 
-    invoke-direct {v7, v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->decorViewHeaderState(Lcom/android/systemui/statusbar/notification/row/StackScrollerDecorView;)Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager$SectionUpdateState;
+    invoke-direct {v7, v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->expandableViewHeaderState(Lcom/android/systemui/statusbar/notification/row/ExpandableView;)Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager$SectionUpdateState;
 
     move-result-object v0
 

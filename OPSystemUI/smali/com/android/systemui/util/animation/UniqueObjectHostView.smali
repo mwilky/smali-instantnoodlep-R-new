@@ -225,7 +225,7 @@
 
     iget-object v2, p0, Lcom/android/systemui/util/animation/UniqueObjectHostView;->measurementManager:Lcom/android/systemui/util/animation/UniqueObjectHostView$MeasurementManager;
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_1
 
     invoke-interface {v2, v4}, Lcom/android/systemui/util/animation/UniqueObjectHostView$MeasurementManager;->onMeasure(Lcom/android/systemui/util/animation/MeasurementInput;)Lcom/android/systemui/util/animation/MeasurementOutput;
 
@@ -243,34 +243,30 @@
 
     move-result v4
 
-    if-nez v4, :cond_0
+    if-eqz v4, :cond_0
 
-    add-int/2addr v3, v0
-
-    add-int/2addr v2, v1
-
-    invoke-virtual {p0, v3, v2}, Landroid/widget/FrameLayout;->setMeasuredDimension(II)V
-
-    goto :goto_0
-
-    :cond_0
     invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
     const/4 p1, 0x0
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
-    move-result-object p0
+    move-result-object p2
 
-    if-eqz p0, :cond_1
+    if-eqz p2, :cond_0
 
-    invoke-static {p0, p1}, Lcom/android/systemui/util/animation/UniqueObjectHostViewKt;->setRequiresRemeasuring(Landroid/view/View;Z)V
+    invoke-static {p2, p1}, Lcom/android/systemui/util/animation/UniqueObjectHostViewKt;->setRequiresRemeasuring(Landroid/view/View;Z)V
 
-    :cond_1
-    :goto_0
+    :cond_0
+    add-int/2addr v3, v0
+
+    add-int/2addr v2, v1
+
+    invoke-virtual {p0, v3, v2}, Landroid/widget/FrameLayout;->setMeasuredDimension(II)V
+
     return-void
 
-    :cond_2
+    :cond_1
     const-string p0, "measurementManager"
 
     invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V

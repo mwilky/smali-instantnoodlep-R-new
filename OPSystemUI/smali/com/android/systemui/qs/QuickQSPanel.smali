@@ -41,20 +41,6 @@
 
     iput-object p1, p0, Lcom/android/systemui/qs/QuickQSPanel;->mNumTiles:Lcom/android/systemui/tuner/TunerService$Tunable;
 
-    iget-object p1, p0, Lcom/android/systemui/qs/QSPanel;->mDatePanel:Lcom/oneplus/systemui/qs/OpQSDateTimePanelLayout;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->removeView(Landroid/view/View;)V
-
-    :cond_0
-    iget-object p1, p0, Lcom/android/systemui/qs/QSPanel;->mWidgetLayout:Landroid/view/View;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->removeView(Landroid/view/View;)V
-
-    :cond_1
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -123,6 +109,12 @@
 
 # virtual methods
 .method protected addSecurityFooter()V
+    .locals 0
+
+    return-void
+.end method
+
+.method protected addViewsAboveTiles()V
     .locals 0
 
     return-void

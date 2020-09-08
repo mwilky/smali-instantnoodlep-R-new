@@ -418,7 +418,7 @@
 .end method
 
 .method public onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
-    .locals 6
+    .locals 7
 
     invoke-super {p0, p1}, Landroidx/preference/Preference;->onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
 
@@ -461,83 +461,236 @@
 
     invoke-virtual {p1, v1}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
-    move-result-object p1
-
-    check-cast p1, Landroid/widget/ImageView;
-
-    iget-object v1, p0, Lcom/android/settingslib/wifi/WifiEntryPreference;->mWifiEntry:Lcom/android/wifitrackerlib/WifiEntry;
-
-    invoke-virtual {v1}, Lcom/android/wifitrackerlib/WifiEntry;->getHelpUriString()Ljava/lang/String;
-
     move-result-object v1
 
-    const/4 v2, 0x0
+    check-cast v1, Landroid/widget/ImageView;
+
+    iget-object v2, p0, Lcom/android/settingslib/wifi/WifiEntryPreference;->mWifiEntry:Lcom/android/wifitrackerlib/WifiEntry;
+
+    invoke-virtual {v2}, Lcom/android/wifitrackerlib/WifiEntry;->getHelpUriString()Ljava/lang/String;
+
+    move-result-object v2
 
     const/16 v3, 0x8
 
-    if-eqz v1, :cond_1
+    const/4 v4, 0x0
 
-    iget-object v1, p0, Lcom/android/settingslib/wifi/WifiEntryPreference;->mWifiEntry:Lcom/android/wifitrackerlib/WifiEntry;
+    if-eqz v2, :cond_1
 
-    invoke-virtual {v1}, Lcom/android/wifitrackerlib/WifiEntry;->getConnectedState()I
+    iget-object v2, p0, Lcom/android/settingslib/wifi/WifiEntryPreference;->mWifiEntry:Lcom/android/wifitrackerlib/WifiEntry;
 
-    move-result v1
+    invoke-virtual {v2}, Lcom/android/wifitrackerlib/WifiEntry;->getConnectedState()I
 
-    if-nez v1, :cond_1
+    move-result v2
 
-    sget v1, Lcom/android/settingslib/R$drawable;->ic_help:I
+    if-nez v2, :cond_1
 
-    invoke-direct {p0, v1}, Lcom/android/settingslib/wifi/WifiEntryPreference;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    sget v2, Lcom/android/settingslib/R$drawable;->ic_help:I
 
-    move-result-object v1
+    invoke-direct {p0, v2}, Lcom/android/settingslib/wifi/WifiEntryPreference;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v2
 
     invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
-    move-result-object v4
+    move-result-object v5
 
-    const v5, 0x1010429
+    const v6, 0x1010429
 
-    invoke-static {v4, v5}, Lcom/android/settingslib/Utils;->getColorAttr(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+    invoke-static {v5, v6}, Lcom/android/settingslib/Utils;->getColorAttr(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-virtual {v1, v4}, Landroid/graphics/drawable/Drawable;->setTintList(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {v2, v5}, Landroid/graphics/drawable/Drawable;->setTintList(Landroid/content/res/ColorStateList;)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    invoke-virtual {v0, v2}, Landroid/widget/ImageButton;->setVisibility(I)V
+    invoke-virtual {v0, v4}, Landroid/widget/ImageButton;->setVisibility(I)V
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
-    move-result-object p0
+    move-result-object v2
 
-    sget v1, Lcom/android/settingslib/R$string;->help_label:I
+    sget v5, Lcom/android/settingslib/R$string;->help_label:I
 
-    invoke-virtual {p0, v1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {v2, v5}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
-    move-result-object p0
+    move-result-object v2
 
-    invoke-virtual {v0, p0}, Landroid/widget/ImageButton;->setContentDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v2}, Landroid/widget/ImageButton;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    if-eqz p1, :cond_2
+    if-eqz v1, :cond_2
 
-    invoke-virtual {p1, v3}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto :goto_0
 
     :cond_1
     invoke-virtual {v0, v3}, Landroid/widget/ImageButton;->setVisibility(I)V
 
-    if-eqz p1, :cond_2
+    if-eqz v1, :cond_2
 
-    invoke-virtual {p1, v2}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-virtual {v1, v4}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    invoke-direct {p0, p1}, Lcom/android/settingslib/wifi/WifiEntryPreference;->bindFrictionImage(Landroid/widget/ImageView;)V
+    invoke-direct {p0, v1}, Lcom/android/settingslib/wifi/WifiEntryPreference;->bindFrictionImage(Landroid/widget/ImageView;)V
 
     :cond_2
     :goto_0
+    sget v0, Lcom/android/settingslib/R$id;->icon_passpoint:I
+
+    invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/ImageView;
+
+    if-eqz p1, :cond_7
+
+    invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_7
+
+    iget-object v0, p0, Lcom/android/settingslib/wifi/WifiEntryPreference;->mWifiEntry:Lcom/android/wifitrackerlib/WifiEntry;
+
+    if-eqz v0, :cond_7
+
+    invoke-virtual {p1, v4}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const-string v1, "oneplus_passpoint"
+
+    invoke-static {v0, v1, v4}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_3
+
+    move v0, v1
+
+    goto :goto_1
+
+    :cond_3
+    move v0, v4
+
+    :goto_1
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "onBindViewHolder isPasspointEnabled = "
+
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v5, "WifiEntryPreference"
+
+    invoke-static {v5, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-array v1, v1, [I
+
+    const/16 v2, 0x49
+
+    aput v2, v1, v4
+
+    invoke-static {v1}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    if-eqz v0, :cond_6
+
+    iget-object v0, p0, Lcom/android/settingslib/wifi/WifiEntryPreference;->mWifiEntry:Lcom/android/wifitrackerlib/WifiEntry;
+
+    invoke-virtual {v0}, Lcom/android/wifitrackerlib/WifiEntry;->getConnectedState()I
+
+    move-result v0
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_6
+
+    const-string v0, "onBindViewHolder isTmo mode and connectedState is connected"
+
+    invoke-static {v5, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {p1, v4}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    iget-object v0, p0, Lcom/android/settingslib/wifi/WifiEntryPreference;->mWifiEntry:Lcom/android/wifitrackerlib/WifiEntry;
+
+    invoke-virtual {v0}, Lcom/android/wifitrackerlib/WifiEntry;->getWifiConfiguration()Landroid/net/wifi/WifiConfiguration;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_5
+
+    invoke-virtual {v0}, Landroid/net/wifi/WifiConfiguration;->isPasspoint()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    iget-boolean v0, v0, Landroid/net/wifi/WifiConfiguration;->isHomeProviderNetwork:Z
+
+    if-eqz v0, :cond_4
+
+    const-string v0, "onBindViewHolder config.isPasspoint is true, set R icon"
+
+    invoke-static {v5, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    sget v0, Lcom/android/settingslib/R$drawable;->ic_passpoint_r:I
+
+    invoke-direct {p0, v0}, Lcom/android/settingslib/wifi/WifiEntryPreference;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    goto :goto_2
+
+    :cond_4
+    const-string v0, "onBindViewHolder config.isPasspoint is true, set H icon"
+
+    invoke-static {v5, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    sget v0, Lcom/android/settingslib/R$drawable;->ic_passpoint_h:I
+
+    invoke-direct {p0, v0}, Lcom/android/settingslib/wifi/WifiEntryPreference;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    goto :goto_2
+
+    :cond_5
+    invoke-virtual {p1, v3}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    goto :goto_2
+
+    :cond_6
+    invoke-virtual {p1, v3}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    :cond_7
+    :goto_2
     return-void
 .end method
 

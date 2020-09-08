@@ -57,7 +57,7 @@
 
     move-result p1
 
-    invoke-static {p0, p1}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->access$1202(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;Z)Z
+    invoke-static {p0, p1}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->access$1302(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;Z)Z
 
     :cond_0
     return-void

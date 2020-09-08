@@ -48,7 +48,7 @@
 
     iget-object p1, p0, Lcom/android/systemui/media/MediaHost$init$1;->this$0:Lcom/android/systemui/media/MediaHost;
 
-    invoke-static {p1}, Lcom/android/systemui/media/MediaHost;->access$getMediaDataManagerCombineLatest$p(Lcom/android/systemui/media/MediaHost;)Lcom/android/systemui/media/MediaDataCombineLatest;
+    invoke-static {p1}, Lcom/android/systemui/media/MediaHost;->access$getMediaDataFilter$p(Lcom/android/systemui/media/MediaHost;)Lcom/android/systemui/media/MediaDataFilter;
 
     move-result-object p1
 
@@ -58,7 +58,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/android/systemui/media/MediaDataCombineLatest;->addListener(Lcom/android/systemui/media/MediaDataManager$Listener;)Z
+    invoke-virtual {p1, v0}, Lcom/android/systemui/media/MediaDataFilter;->addListener(Lcom/android/systemui/media/MediaDataManager$Listener;)Z
 
     iget-object p0, p0, Lcom/android/systemui/media/MediaHost$init$1;->this$0:Lcom/android/systemui/media/MediaHost;
 
@@ -76,7 +76,7 @@
 
     iget-object p1, p0, Lcom/android/systemui/media/MediaHost$init$1;->this$0:Lcom/android/systemui/media/MediaHost;
 
-    invoke-static {p1}, Lcom/android/systemui/media/MediaHost;->access$getMediaDataManagerCombineLatest$p(Lcom/android/systemui/media/MediaHost;)Lcom/android/systemui/media/MediaDataCombineLatest;
+    invoke-static {p1}, Lcom/android/systemui/media/MediaHost;->access$getMediaDataFilter$p(Lcom/android/systemui/media/MediaHost;)Lcom/android/systemui/media/MediaDataFilter;
 
     move-result-object p1
 
@@ -86,7 +86,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p1, p0}, Lcom/android/systemui/media/MediaDataCombineLatest;->removeListener(Lcom/android/systemui/media/MediaDataManager$Listener;)Z
+    invoke-virtual {p1, p0}, Lcom/android/systemui/media/MediaDataFilter;->removeListener(Lcom/android/systemui/media/MediaDataManager$Listener;)Z
 
     return-void
 .end method

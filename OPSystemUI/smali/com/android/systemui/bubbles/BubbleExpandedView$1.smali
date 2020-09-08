@@ -74,6 +74,18 @@
 
     move-result-object v0
 
+    invoke-virtual {v0}, Lcom/android/systemui/bubbles/Bubble;->hasMetadataShortcutId()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/android/systemui/bubbles/BubbleExpandedView$1;->this$0:Lcom/android/systemui/bubbles/BubbleExpandedView;
+
+    invoke-static {v0}, Lcom/android/systemui/bubbles/BubbleExpandedView;->access$200(Lcom/android/systemui/bubbles/BubbleExpandedView;)Lcom/android/systemui/bubbles/Bubble;
+
+    move-result-object v0
+
     invoke-virtual {v0}, Lcom/android/systemui/bubbles/Bubble;->getShortcutInfo()Landroid/content/pm/ShortcutInfo;
 
     move-result-object v0
@@ -119,6 +131,23 @@
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
+    iget-object v2, p0, Lcom/android/systemui/bubbles/BubbleExpandedView$1;->this$0:Lcom/android/systemui/bubbles/BubbleExpandedView;
+
+    invoke-static {v2}, Lcom/android/systemui/bubbles/BubbleExpandedView;->access$200(Lcom/android/systemui/bubbles/BubbleExpandedView;)Lcom/android/systemui/bubbles/Bubble;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lcom/android/systemui/bubbles/BubbleExpandedView$1;->this$0:Lcom/android/systemui/bubbles/BubbleExpandedView;
+
+    invoke-static {v2}, Lcom/android/systemui/bubbles/BubbleExpandedView;->access$200(Lcom/android/systemui/bubbles/BubbleExpandedView;)Lcom/android/systemui/bubbles/Bubble;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/android/systemui/bubbles/Bubble;->setIntentActive()V
+
+    :cond_2
     iget-object v2, p0, Lcom/android/systemui/bubbles/BubbleExpandedView$1;->this$0:Lcom/android/systemui/bubbles/BubbleExpandedView;
 
     invoke-static {v2}, Lcom/android/systemui/bubbles/BubbleExpandedView;->access$500(Lcom/android/systemui/bubbles/BubbleExpandedView;)Landroid/app/ActivityView;

@@ -6,9 +6,14 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/android/systemui/assist/AssistManager$AssistManagerLaunchMode;,
         Lcom/android/systemui/assist/AssistManager$UiController;
     }
 .end annotation
+
+
+# static fields
+.field public static EXTRA_ASSIST_MANAGER_LAUNCH_MODE:Ljava/lang/String; = "assistant_launch_mode"
 
 
 # instance fields
@@ -60,6 +65,12 @@
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 0
+
+    return-void
+.end method
+
 .method public constructor <init>(Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;Landroid/content/Context;Lcom/android/internal/app/AssistUtils;Lcom/android/systemui/assist/AssistHandleBehaviorController;Lcom/android/systemui/statusbar/CommandQueue;Lcom/android/systemui/assist/PhoneStateMonitor;Lcom/android/systemui/recents/OverviewProxyService;Lcom/android/systemui/statusbar/policy/ConfigurationController;Ldagger/Lazy;Lcom/android/systemui/assist/ui/DefaultUiController;Lcom/android/systemui/assist/AssistLogger;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
@@ -535,6 +546,13 @@
 .method private startAssistInternal(Landroid/os/Bundle;Landroid/content/ComponentName;ZZ)V
     .locals 8
 
+    if-eqz p3, :cond_0
+
+    invoke-direct {p0, p1}, Lcom/android/systemui/assist/AssistManager;->startVoiceInteractor(Landroid/os/Bundle;)V
+
+    goto :goto_0
+
+    :cond_0
     iget-object v0, p0, Lcom/android/systemui/assist/AssistManager;->mContext:Landroid/content/Context;
 
     const-string v1, "keyguard"
@@ -545,23 +563,23 @@
 
     check-cast v0, Landroid/app/KeyguardManager;
 
-    if-eqz p4, :cond_1
+    if-eqz p4, :cond_2
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     invoke-virtual {v0}, Landroid/app/KeyguardManager;->isDeviceLocked()Z
 
     move-result v1
 
-    if-nez v1, :cond_0
+    if-nez v1, :cond_1
 
     invoke-virtual {v0}, Landroid/app/KeyguardManager;->isKeyguardLocked()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
-    :cond_0
+    :cond_1
     const-class v0, Lcom/android/systemui/plugins/ActivityStarter;
 
     invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -593,13 +611,6 @@
     invoke-interface {v0, v7, p0, p1}, Lcom/android/systemui/plugins/ActivityStarter;->dismissKeyguardThenExecute(Lcom/android/systemui/plugins/ActivityStarter$OnDismissAction;Ljava/lang/Runnable;Z)V
 
     return-void
-
-    :cond_1
-    if-eqz p3, :cond_2
-
-    invoke-direct {p0, p1}, Lcom/android/systemui/assist/AssistManager;->startVoiceInteractor(Landroid/os/Bundle;)V
-
-    goto :goto_0
 
     :cond_2
     invoke-direct {p0, p1, p2, p4}, Lcom/android/systemui/assist/AssistManager;->startAssistActivity(Landroid/os/Bundle;Landroid/content/ComponentName;Z)V
@@ -1241,7 +1252,7 @@
 
     iget-boolean v6, p0, Lcom/android/systemui/assist/AssistManager;->mIsPowerLongPressWithGoogleAssistant:Z
 
-    if-eqz v6, :cond_f
+    if-eqz v6, :cond_e
 
     :cond_b
     iget-object v6, p0, Lcom/android/systemui/assist/AssistManager;->mContext:Landroid/content/Context;
@@ -1295,7 +1306,7 @@
 
     const/4 v7, 0x2
 
-    if-ne v6, v7, :cond_f
+    if-ne v6, v7, :cond_e
 
     aget-object v0, v1, v3
 
@@ -1365,39 +1376,34 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-boolean v1, p0, Lcom/android/systemui/assist/AssistManager;->mIsPowerLongPressWithGoogleAssistant:Z
+    sget-object v1, Lcom/android/systemui/assist/AssistManager;->EXTRA_ASSIST_MANAGER_LAUNCH_MODE:Ljava/lang/String;
 
-    if-eqz v1, :cond_e
+    sget-object v2, Lcom/android/systemui/assist/AssistManager$AssistManagerLaunchMode;->DEFAULT:Lcom/android/systemui/assist/AssistManager$AssistManagerLaunchMode;
 
-    if-eqz v0, :cond_e
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-virtual {p0}, Lcom/android/systemui/assist/AssistManager;->launchVoiceAssistFromKeyguard()V
+    move-result v2
 
-    const-string p0, "Launch google assistant from keyguard"
+    invoke-virtual {p1, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    invoke-static {v2, p0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-
-    :cond_e
     invoke-direct {p0, p1, v5, v0, v3}, Lcom/android/systemui/assist/AssistManager;->startAssistInternal(Landroid/os/Bundle;Landroid/content/ComponentName;ZZ)V
 
     return-void
 
-    :cond_f
+    :cond_e
     const-string v1, "com.heytap.speechassist"
 
     invoke-virtual {p1, v1, v4}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v1
 
-    if-ne v1, v3, :cond_10
+    if-ne v1, v3, :cond_f
 
     invoke-virtual {p0}, Lcom/android/systemui/assist/AssistManager;->launchHeyTapVoiceAssist()V
 
     goto :goto_4
 
-    :cond_10
+    :cond_f
     invoke-direct {p0, p1, v0, v5, v4}, Lcom/android/systemui/assist/AssistManager;->startAssistInternal(Landroid/os/Bundle;Landroid/content/ComponentName;ZZ)V
 
     :goto_4

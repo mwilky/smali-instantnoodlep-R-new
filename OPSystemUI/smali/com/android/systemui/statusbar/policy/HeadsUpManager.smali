@@ -595,43 +595,43 @@
 .end method
 
 .method public isSnoozed(Ljava/lang/String;)Z
-    .locals 5
+    .locals 4
 
     iget v0, p0, Lcom/android/systemui/statusbar/policy/HeadsUpManager;->mUser:I
 
     invoke-static {p1, v0}, Lcom/android/systemui/statusbar/policy/HeadsUpManager;->snoozeKey(Ljava/lang/String;I)Ljava/lang/String;
 
+    move-result-object p1
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/HeadsUpManager;->mSnoozedPackages:Landroid/util/ArrayMap;
+
+    invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/systemui/statusbar/policy/HeadsUpManager;->mSnoozedPackages:Landroid/util/ArrayMap;
+    check-cast v0, Ljava/lang/Long;
 
-    invoke-virtual {v1, v0}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v0, :cond_2
 
-    move-result-object v1
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    check-cast v1, Ljava/lang/Long;
+    move-result-wide v0
 
-    if-eqz v1, :cond_2
+    iget-object v2, p0, Lcom/android/systemui/statusbar/AlertingNotificationManager;->mClock:Lcom/android/systemui/statusbar/AlertingNotificationManager$Clock;
 
-    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
+    invoke-virtual {v2}, Lcom/android/systemui/statusbar/AlertingNotificationManager$Clock;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iget-object v3, p0, Lcom/android/systemui/statusbar/AlertingNotificationManager;->mClock:Lcom/android/systemui/statusbar/AlertingNotificationManager$Clock;
+    cmp-long v0, v0, v2
 
-    invoke-virtual {v3}, Lcom/android/systemui/statusbar/AlertingNotificationManager$Clock;->currentTimeMillis()J
-
-    move-result-wide v3
-
-    cmp-long v1, v1, v3
-
-    if-lez v1, :cond_1
+    if-lez v0, :cond_1
 
     const/4 p0, 0x2
 
-    const-string p1, "HeadsUpManager"
+    const-string v0, "HeadsUpManager"
 
-    invoke-static {p1, p0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+    invoke-static {v0, p0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result p0
 
@@ -641,17 +641,17 @@
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v0, " snoozed"
+    const-string p1, " snoozed"
 
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-static {p1, p0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, p0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
     const/4 p0, 0x1

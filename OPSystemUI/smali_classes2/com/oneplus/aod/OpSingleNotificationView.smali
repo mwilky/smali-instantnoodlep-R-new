@@ -124,65 +124,69 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    iget-object v1, p0, Lcom/oneplus/aod/OpSingleNotificationView;->mIcon:Landroid/widget/ImageView;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
     invoke-virtual {p1}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->getSbn()Landroid/service/notification/StatusBarNotification;
 
     move-result-object v1
 
     invoke-virtual {v1}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
-    move-result-object v2
-
-    iget-object v2, v2, Landroid/app/Notification;->extras:Landroid/os/Bundle;
-
-    const-string v3, "android.title"
-
-    invoke-virtual {v2, v3}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
-
     move-result-object v3
 
-    const-string v4, "android.text"
+    iget-object v3, v3, Landroid/app/Notification;->extras:Landroid/os/Bundle;
 
-    invoke-virtual {v2, v4}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
+    const-string v4, "android.title"
+
+    invoke-virtual {v3, v4}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
 
     move-result-object v4
 
-    const-string v5, "android.textLines"
+    const-string v5, "android.text"
 
-    invoke-virtual {v2, v5}, Landroid/os/Bundle;->getCharSequenceArray(Ljava/lang/String;)[Ljava/lang/CharSequence;
+    invoke-virtual {v3, v5}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
 
-    move-result-object v2
+    move-result-object v5
 
-    const/4 v5, 0x1
+    const-string v6, "android.textLines"
 
-    if-eqz v2, :cond_0
+    invoke-virtual {v3, v6}, Landroid/os/Bundle;->getCharSequenceArray(Ljava/lang/String;)[Ljava/lang/CharSequence;
 
-    array-length v6, v2
+    move-result-object v3
 
-    if-eqz v6, :cond_0
+    const/4 v6, 0x1
 
-    array-length v4, v2
+    if-eqz v3, :cond_0
 
-    sub-int/2addr v4, v5
+    array-length v7, v3
 
-    aget-object v4, v2, v4
+    if-eqz v7, :cond_0
+
+    array-length v5, v3
+
+    sub-int/2addr v5, v6
+
+    aget-object v5, v3, v5
 
     :cond_0
     invoke-virtual {v1}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v2}, Landroid/app/Notification;->getSmallIcon()Landroid/graphics/drawable/Icon;
+    invoke-virtual {v3}, Landroid/app/Notification;->getSmallIcon()Landroid/graphics/drawable/Icon;
 
-    move-result-object v2
-
-    const/4 v6, 0x0
+    move-result-object v3
 
     const/4 v7, 0x0
 
-    invoke-direct {p0, v6, v7}, Lcom/oneplus/aod/OpSingleNotificationView;->showCustomNotification(ZLandroid/view/View;)V
+    invoke-direct {p0, v7, v2}, Lcom/oneplus/aod/OpSingleNotificationView;->showCustomNotification(ZLandroid/view/View;)V
 
     :try_start_0
-    invoke-direct {p0, v6, v7}, Lcom/oneplus/aod/OpSingleNotificationView;->showCustomNotification(ZLandroid/view/View;)V
+    invoke-direct {p0, v7, v2}, Lcom/oneplus/aod/OpSingleNotificationView;->showCustomNotification(ZLandroid/view/View;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -262,7 +266,7 @@
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v11, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v7}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     const-string v12, ", hideSensitivie="
 
@@ -402,11 +406,11 @@
 
     if-eqz p1, :cond_9
 
-    if-eqz v2, :cond_9
+    if-eqz v3, :cond_9
 
     iget-object p1, p0, Lcom/oneplus/aod/OpSingleNotificationView;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v2, p1}, Landroid/graphics/drawable/Icon;->loadDrawable(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v3, p1}, Landroid/graphics/drawable/Icon;->loadDrawable(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -429,7 +433,7 @@
 
     iget-object v1, p0, Lcom/oneplus/aod/OpSingleNotificationView;->mIcon:Landroid/widget/ImageView;
 
-    invoke-virtual {v1, v7}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
+    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
     if-eqz v8, :cond_7
 
@@ -438,7 +442,7 @@
     invoke-virtual {v1, v9}, Landroid/widget/ImageView;->setColorFilter(I)V
 
     :cond_7
-    if-eqz v2, :cond_8
+    if-eqz v3, :cond_8
 
     iget-object v1, p0, Lcom/oneplus/aod/OpSingleNotificationView;->mIcon:Landroid/widget/ImageView;
 
@@ -488,7 +492,7 @@
     :cond_a
     const/16 v2, 0x8
 
-    const-string v7, ""
+    const-string v3, ""
 
     if-eqz v10, :cond_c
 
@@ -498,17 +502,17 @@
 
     move-result-object v1
 
-    const/high16 v3, 0x50d0000
+    const/high16 v4, 0x50d0000
 
-    new-array v4, v5, [Ljava/lang/Object;
+    new-array v5, v6, [Ljava/lang/Object;
 
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v8
 
-    aput-object v8, v4, v6
+    aput-object v8, v5, v7
 
-    invoke-virtual {v1, v3, v5, v4}, Landroid/content/res/Resources;->getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v1, v4, v6, v5}, Landroid/content/res/Resources;->getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -533,11 +537,11 @@
     :cond_b
     iget-object p1, p0, Lcom/oneplus/aod/OpSingleNotificationView;->mSmallText:Landroid/widget/TextView;
 
-    invoke-virtual {p1, v6}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {p1, v7}, Landroid/widget/TextView;->setVisibility(I)V
 
     iget-object p1, p0, Lcom/oneplus/aod/OpSingleNotificationView;->mTitle:Landroid/widget/TextView;
 
-    invoke-virtual {p1, v7}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {p1, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     iget-object p0, p0, Lcom/oneplus/aod/OpSingleNotificationView;->mTitle:Landroid/widget/TextView;
 
@@ -546,21 +550,21 @@
     return-void
 
     :cond_c
-    invoke-virtual {v1, v7}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     iget-object p1, p0, Lcom/oneplus/aod/OpSingleNotificationView;->mSmallText:Landroid/widget/TextView;
 
-    invoke-virtual {p1, v7}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {p1, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    if-eqz v3, :cond_d
-
-    iget-object p1, p0, Lcom/oneplus/aod/OpSingleNotificationView;->mTitle:Landroid/widget/TextView;
-
-    invoke-virtual {p1, v6}, Landroid/widget/TextView;->setVisibility(I)V
+    if-eqz v4, :cond_d
 
     iget-object p1, p0, Lcom/oneplus/aod/OpSingleNotificationView;->mTitle:Landroid/widget/TextView;
 
-    invoke-interface {v3}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-virtual {p1, v7}, Landroid/widget/TextView;->setVisibility(I)V
+
+    iget-object p1, p0, Lcom/oneplus/aod/OpSingleNotificationView;->mTitle:Landroid/widget/TextView;
+
+    invoke-interface {v4}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -574,21 +578,21 @@
     invoke-virtual {p1, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
     :goto_5
-    if-eqz v4, :cond_e
+    if-eqz v5, :cond_e
 
     iget-object p1, p0, Lcom/oneplus/aod/OpSingleNotificationView;->mSmallText:Landroid/widget/TextView;
 
-    invoke-virtual {p1, v6}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {p1, v7}, Landroid/widget/TextView;->setVisibility(I)V
 
     iget-object p0, p0, Lcom/oneplus/aod/OpSingleNotificationView;->mSmallText:Landroid/widget/TextView;
 
-    invoke-interface {v4}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-interface {v5}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object p1
 
     invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p0
 

@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="about_action_bar_title">Tentang</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Dasar Privasi</string>
+    <string name="about_release_note_title">Log kemas kini:</string>
+    <string name="about_terms_service">Terma Perkhidmatan</string>
     <string name="accessibility_fingerprint_dialog_help_area">Bantuan dialog mesej</string>
     <string name="accessibility_hide">Sembunyi</string>
     <string name="accessibility_phone_four_bars">Telefon empat bar.</string>
@@ -13,7 +18,7 @@
     <string name="accessibility_quick_settings_night_mode_changed_on">Mod malam dihidupkan.</string>
     <string name="accessibility_quick_settings_power_saving_changed_off">Mod Penjimat Bateri dipadamkan.</string>
     <string name="accessibility_quick_settings_power_saving_changed_on">Mod Penjimat Bateri dihidupkan.</string>
-    <string name="accessibility_work_life_balance_mode">Keseimbangan Kerja-Kehidupan</string>
+    <string name="accessibility_work_life_balance_mode">Work-Life Balance</string>
     <string name="accessibility_work_life_balance_mode_off">Mod Keseimbangan Kerja-Kehidupan dimatikan.</string>
     <string name="accessibility_work_life_balance_mode_on">Mod Keseimbangan Kerja-Kehidupan dihidupkan.</string>
     <string name="activity_not_available">Aplikasi tidak tersedia</string>
@@ -40,9 +45,10 @@ Hidupkan Mod Pesawat?"</string>
     <string name="delete">Padam</string>
     <string name="denoise_notification">Pemberitahuan keutamaan rendah</string>
     <string name="dialog_mhs_error">Sila Tunggu semasa mengesahkan..</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">Hubungi pentadbir anda untuk maklumat lanjut</string>
+    <string name="disable_tether_notification_title">Penambatan telah dinyahdayakan</string>
     <string name="drag_to_add_tiles">Seret untuk menambah jubin</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">Seret jubin untuk menyusun semula. Ketik untuk paparkan atau sembunyikan.</string>
     <string name="end_call">Tamatkan</string>
     <string name="face_unlock_camera_error">Buka Kunci Muka gagal, kamera sedang digunakan oleh aplikasi lain</string>
@@ -88,11 +94,12 @@ Jika telefon anda ditetapkan semula, anda perlu memasukkan maklumat akaun Google
     <string name="kg_wrong_pattern_warning_one">Anda masih mempunyai 1 peluang</string>
     <string name="kg_wrong_pin_warning">Anda masih mempunyai 2 peluang</string>
     <string name="kg_wrong_pin_warning_one">Anda masih mempunyai 1 peluang</string>
+    <string name="loading_text">Sedang memuat...</string>
     <string name="long_press_power_navigation_assist_content">"Tekan dan tahan \"butang kuasa\" 
 untuk Pembantu Suara"</string>
     <string name="long_press_power_navigation_power_content">Tekan \"butang kuasa\" dan \"butang tambah kelantangan\" secara serentak untuk mematikan kuasa</string>
     <string name="long_press_power_navigation_setting_button">Tetapan ubah suai</string>
-    <string name="maxxaudio_disable">Lumpuhkan</string>
+    <string name="maxxaudio_disable">Nyahdayakan</string>
     <string name="maxxaudio_enable">Bolehkan</string>
     <string name="mhs_app">Buka Verizon Saya</string>
     <string name="mhs_call_back_error">Sambungan data tidak tersedia.</string>
@@ -129,8 +136,14 @@ Untuk melanggan Hotspot Mudah Alih, kunjungi Verizon Saya atau hubungi khidmat p
     <string name="oneplus_threekey_navigation_sound">Semua bunyi dibenarkan</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Ia boleh dihidupkan oleh togol di atas</string>
     <string name="oneplus_threekey_navigation_vibration">Getaran sahaja</string>
-    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>bukaan</string>
-    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>bukaan</string>
+    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>buka</string>
+    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>buka</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">Memasangkan...</string>
     <string name="op_earphone_connected_fail">Gagal untuk Dipasangkan. Anda boleh periksa set kepala dan status Bluetooth.</string>
     <string name="op_earphone_connected_success">Berpasangan. Ketik untuk menyediakan lagi.</string>
@@ -160,9 +173,10 @@ Untuk melanggan Hotspot Mudah Alih, kunjungi Verizon Saya atau hubungi khidmat p
     <string name="op_notification_channel_summary_low">Pemberitahuan yang kurang penting tanpa apa-apa bunyi atau getaran.</string>
     <string name="op_notification_section_header_gentle">Pemberitahuan lain</string>
     <string name="op_notification_silence_title">Lain-lain</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">Mod gelap</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s digunakan</string>
-    <string name="op_quick_settings_night_display_label">Mod malam</string>
+    <string name="op_quick_settings_night_display_label">Keselesaan penglihatan</string>
     <string name="op_quick_settings_night_display_summary_off">Mod Malam dipadam, ketik untuk menghidupkan</string>
     <string name="op_quick_settings_night_display_summary_on">Mod malam dihidupkan, ketik untuk memadamkan</string>
     <string name="op_read_mode2_dialog_black">Kesan mono</string>
@@ -264,7 +278,7 @@ Untuk melanggan Hotspot Mudah Alih, kunjungi Verizon Saya atau hubungi khidmat p
     <string name="tethered_notification_hybrid_sharing_mobile">Perkongsian data mudah alih, klik untuk masuk ke Tetapan</string>
     <string name="tethered_notification_hybrid_sharing_none">Tiada rangkaian yang tersedia untuk dikongsi, klik untuk masuk ke Tetapan</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Perkongsian Wi-Fi, klik untuk masuk ke Tetapan</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">Ketik untuk persediaan.</string>
     <string name="tethered_notification_multi_device_message">%1$s peranti disambung</string>
     <string name="tethered_notification_multi_tether_title">Tambatan dan HotSpot Mudah Alih diaktifkan</string>
     <string name="tethered_notification_no_device_message">Tiada peranti disambung</string>
@@ -292,11 +306,21 @@ Untuk melanggan Hotspot Mudah Alih, kunjungi Verizon Saya atau hubungi khidmat p
     <string name="volume_footer_slient">Senyap</string>
     <string name="volume_footer_vibrate">Senyap (Bergetar)</string>
     <string name="volume_vibrate">Bergetar</string>
+    <string name="wlb_break_mode_active">Aktif</string>
+    <string name="wlb_break_mode_active_text">%1$s Mod · %2$s</string>
+    <string name="wlb_break_mode_on_break">Sedang berehat</string>
+    <string name="wlb_break_mode_resume">Sambung semula</string>
+    <string name="wlb_break_mode_take_break">Rehat sekejap</string>
+    <string name="wlb_qs_detail_break_mode">Mod Pecah</string>
+    <string name="wlb_qs_detail_break_mode_desc">Akan sambung semula kepada mod sebelumnya secara automatik selepas 30 Minit</string>
+    <string name="wlb_qs_detail_life_mode">Mod Kehidupan</string>
+    <string name="wlb_qs_detail_more_setting">Tetapan Selanjutnya</string>
+    <string name="wlb_qs_detail_work_mode">Mod Kerja</string>
     <string name="work_life_balance_mode">Work-Life Balance</string>
     <string name="zen_important_interruptions">Pemberitahuan keutamaan</string>
     <string name="zen_interruption_level_all">Semua pemberitahuan</string>
     <string name="zen_no_interruptions">Senyap</string>
     <string name="zzz_op_global_action_bootloader">Pemuat but</string>
     <string name="zzz_op_global_action_recovery">Pemulihan</string>
-    <string name="zzz_op_quick_pay_no_install_message">Sila pasang aplikasi pembayaran untuk menggunakan Bayar Cepat</string>
+    <string name="zzz_op_quick_pay_no_install_message">Sila pasang aplikasi pembayaran untuk menggunakan Bayar Pantas</string>
 </resources>

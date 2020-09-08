@@ -56,7 +56,7 @@
 
     iget-object v2, p0, Lcom/oneplus/aod/OpAodWindowManager$SettingObserver;->this$0:Lcom/oneplus/aod/OpAodWindowManager;
 
-    invoke-static {v2}, Lcom/oneplus/aod/OpAodWindowManager;->access$1000(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/oneplus/aod/OpAodWindowManager$SettingObserver;
+    invoke-static {v2}, Lcom/oneplus/aod/OpAodWindowManager;->access$1100(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/oneplus/aod/OpAodWindowManager$SettingObserver;
 
     move-result-object v2
 
@@ -74,7 +74,7 @@
 
     iget-object v2, p0, Lcom/oneplus/aod/OpAodWindowManager$SettingObserver;->this$0:Lcom/oneplus/aod/OpAodWindowManager;
 
-    invoke-static {v2}, Lcom/oneplus/aod/OpAodWindowManager;->access$1000(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/oneplus/aod/OpAodWindowManager$SettingObserver;
+    invoke-static {v2}, Lcom/oneplus/aod/OpAodWindowManager;->access$1100(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/oneplus/aod/OpAodWindowManager$SettingObserver;
 
     move-result-object v2
 
@@ -88,7 +88,7 @@
 
     iget-object v2, p0, Lcom/oneplus/aod/OpAodWindowManager$SettingObserver;->this$0:Lcom/oneplus/aod/OpAodWindowManager;
 
-    invoke-static {v2}, Lcom/oneplus/aod/OpAodWindowManager;->access$1000(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/oneplus/aod/OpAodWindowManager$SettingObserver;
+    invoke-static {v2}, Lcom/oneplus/aod/OpAodWindowManager;->access$1100(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/oneplus/aod/OpAodWindowManager$SettingObserver;
 
     move-result-object v2
 
@@ -102,7 +102,7 @@
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager$SettingObserver;->this$0:Lcom/oneplus/aod/OpAodWindowManager;
 
-    invoke-static {p0}, Lcom/oneplus/aod/OpAodWindowManager;->access$1000(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/oneplus/aod/OpAodWindowManager$SettingObserver;
+    invoke-static {p0}, Lcom/oneplus/aod/OpAodWindowManager;->access$1100(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/oneplus/aod/OpAodWindowManager$SettingObserver;
 
     move-result-object p0
 

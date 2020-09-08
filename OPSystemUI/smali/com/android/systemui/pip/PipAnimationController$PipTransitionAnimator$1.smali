@@ -108,6 +108,12 @@
 
     move-result-object v1
 
+    invoke-virtual {v0, p2, p1, v1}, Lcom/android/systemui/pip/PipSurfaceTransactionHelper;->resetScale(Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl;Landroid/graphics/Rect;)Lcom/android/systemui/pip/PipSurfaceTransactionHelper;
+
+    invoke-virtual {p0}, Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator;->getDestinationBounds()Landroid/graphics/Rect;
+
+    move-result-object v1
+
     invoke-virtual {v0, p2, p1, v1}, Lcom/android/systemui/pip/PipSurfaceTransactionHelper;->crop(Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl;Landroid/graphics/Rect;)Lcom/android/systemui/pip/PipSurfaceTransactionHelper;
 
     invoke-virtual {p0}, Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator;->shouldApplyCornerRadius()Z

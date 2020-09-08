@@ -51,7 +51,10 @@
     return p0
 .end method
 
-.method public abstract onConfigurationChanged(Landroid/content/res/Configuration;)V
+.method public onConfigurationChanged(Landroid/content/res/Configuration;)V
+    .locals 0
+
+    return-void
 .end method
 
 .method onDestroy()V
@@ -88,5 +91,10 @@
 .method public abstract setWindowTitle(Ljava/lang/CharSequence;)V
 .end method
 
-.method public abstract startActionMode(Landroidx/appcompat/view/ActionMode$Callback;)Landroidx/appcompat/view/ActionMode;
+.method public startActionMode(Landroidx/appcompat/view/ActionMode$Callback;)Landroidx/appcompat/view/ActionMode;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return-object p0
 .end method

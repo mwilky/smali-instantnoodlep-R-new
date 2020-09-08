@@ -46,6 +46,14 @@
 
     move-result-object v0
 
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/android/systemui/media/ResumeMediaBrowser$4;->this$0:Lcom/android/systemui/media/ResumeMediaBrowser;
+
+    invoke-static {v0}, Lcom/android/systemui/media/ResumeMediaBrowser;->access$100(Lcom/android/systemui/media/ResumeMediaBrowser;)Landroid/media/browse/MediaBrowser;
+
+    move-result-object v0
+
     invoke-virtual {v0}, Landroid/media/browse/MediaBrowser;->isConnected()Z
 
     move-result v0

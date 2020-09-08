@@ -120,6 +120,8 @@
 
 .field private mFingerprintRunningState:I
 
+.field public mFocusUpdateBatteryInfo:Z
+
 .field private mFpm:Landroid/hardware/fingerprint/FingerprintManager;
 
 .field private mGoingToSleep:Z
@@ -387,6 +389,8 @@
     invoke-direct {v0, p0}, Lcom/android/keyguard/KeyguardUpdateMonitor$1;-><init>(Lcom/android/keyguard/KeyguardUpdateMonitor;)V
 
     iput-object v0, v1, Lcom/android/keyguard/KeyguardUpdateMonitor;->mCancelNotReceived:Ljava/lang/Runnable;
+
+    iput-boolean v3, v1, Lcom/android/keyguard/KeyguardUpdateMonitor;->mFocusUpdateBatteryInfo:Z
 
     new-instance v0, Lcom/android/keyguard/KeyguardUpdateMonitor$2;
 
@@ -699,6 +703,10 @@
     const-string v4, "android.app.action.DEVICE_POLICY_MANAGER_STATE_CHANGED"
 
     invoke-virtual {v0, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    const-string v5, "android.intent.action.ONEPLUS_CHARGE_TIME_ENABLE"
+
+    invoke-virtual {v0, v5}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     iget-object v5, v1, Lcom/android/keyguard/KeyguardUpdateMonitor;->mBroadcastDispatcher:Lcom/android/systemui/broadcast/BroadcastDispatcher;
 
@@ -1132,7 +1140,15 @@
     return v0
 .end method
 
-.method static synthetic access$1400(Lcom/android/keyguard/KeyguardUpdateMonitor;)V
+.method static synthetic access$1400(Lcom/android/keyguard/KeyguardUpdateMonitor;)Lcom/oneplus/battery/OpBatteryStatus;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mBatteryStatus:Lcom/oneplus/battery/OpBatteryStatus;
+
+    return-object p0
+.end method
+
+.method static synthetic access$1500(Lcom/android/keyguard/KeyguardUpdateMonitor;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleFingerprintLockoutReset()V
@@ -1140,7 +1156,7 @@
     return-void
 .end method
 
-.method static synthetic access$1500(Lcom/android/keyguard/KeyguardUpdateMonitor;)V
+.method static synthetic access$1600(Lcom/android/keyguard/KeyguardUpdateMonitor;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleFaceLockoutReset()V
@@ -1148,7 +1164,7 @@
     return-void
 .end method
 
-.method static synthetic access$1600(Lcom/android/keyguard/KeyguardUpdateMonitor;)Z
+.method static synthetic access$1700(Lcom/android/keyguard/KeyguardUpdateMonitor;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mDuringAcquired:Z
@@ -1156,7 +1172,7 @@
     return p0
 .end method
 
-.method static synthetic access$1702(Lcom/android/keyguard/KeyguardUpdateMonitor;Z)Z
+.method static synthetic access$1802(Lcom/android/keyguard/KeyguardUpdateMonitor;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mDuringAcquired:Z
@@ -1164,20 +1180,12 @@
     return p1
 .end method
 
-.method static synthetic access$1800(Lcom/android/keyguard/KeyguardUpdateMonitor;)V
+.method static synthetic access$1900(Lcom/android/keyguard/KeyguardUpdateMonitor;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleFingerprintAuthFailed()V
 
     return-void
-.end method
-
-.method static synthetic access$1900(Lcom/android/keyguard/KeyguardUpdateMonitor;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mDuringAcquired:Z
-
-    return p0
 .end method
 
 .method static synthetic access$200(Lcom/android/keyguard/KeyguardUpdateMonitor;)Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;
@@ -1188,7 +1196,15 @@
     return-object p0
 .end method
 
-.method static synthetic access$2002(Lcom/android/keyguard/KeyguardUpdateMonitor;Z)Z
+.method static synthetic access$2000(Lcom/android/keyguard/KeyguardUpdateMonitor;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mDuringAcquired:Z
+
+    return p0
+.end method
+
+.method static synthetic access$2102(Lcom/android/keyguard/KeyguardUpdateMonitor;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mDuringAcquired:Z
@@ -1196,7 +1212,7 @@
     return p1
 .end method
 
-.method static synthetic access$2100(Lcom/android/keyguard/KeyguardUpdateMonitor;IZ)V
+.method static synthetic access$2200(Lcom/android/keyguard/KeyguardUpdateMonitor;IZ)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleFingerprintAuthenticated(IZ)V
@@ -1204,7 +1220,7 @@
     return-void
 .end method
 
-.method static synthetic access$2200(Lcom/android/keyguard/KeyguardUpdateMonitor;)Z
+.method static synthetic access$2300(Lcom/android/keyguard/KeyguardUpdateMonitor;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mDuringAcquired:Z
@@ -1212,7 +1228,7 @@
     return p0
 .end method
 
-.method static synthetic access$2302(Lcom/android/keyguard/KeyguardUpdateMonitor;Z)Z
+.method static synthetic access$2402(Lcom/android/keyguard/KeyguardUpdateMonitor;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mDuringAcquired:Z
@@ -1220,7 +1236,7 @@
     return p1
 .end method
 
-.method static synthetic access$2400(Lcom/android/keyguard/KeyguardUpdateMonitor;ILjava/lang/String;)V
+.method static synthetic access$2500(Lcom/android/keyguard/KeyguardUpdateMonitor;ILjava/lang/String;)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleFingerprintHelp(ILjava/lang/String;)V
@@ -1228,7 +1244,7 @@
     return-void
 .end method
 
-.method static synthetic access$2500(Lcom/android/keyguard/KeyguardUpdateMonitor;)Z
+.method static synthetic access$2600(Lcom/android/keyguard/KeyguardUpdateMonitor;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mLockoutState:Z
@@ -1236,7 +1252,7 @@
     return p0
 .end method
 
-.method static synthetic access$2600(Lcom/android/keyguard/KeyguardUpdateMonitor;I)V
+.method static synthetic access$2700(Lcom/android/keyguard/KeyguardUpdateMonitor;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->setFingerprintRunningState(I)V
@@ -1244,7 +1260,7 @@
     return-void
 .end method
 
-.method static synthetic access$2700(Lcom/android/keyguard/KeyguardUpdateMonitor;)Z
+.method static synthetic access$2800(Lcom/android/keyguard/KeyguardUpdateMonitor;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mDuringAcquired:Z
@@ -1252,20 +1268,12 @@
     return p0
 .end method
 
-.method static synthetic access$2802(Lcom/android/keyguard/KeyguardUpdateMonitor;Z)Z
+.method static synthetic access$2902(Lcom/android/keyguard/KeyguardUpdateMonitor;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mDuringAcquired:Z
 
     return p1
-.end method
-
-.method static synthetic access$2900(Lcom/android/keyguard/KeyguardUpdateMonitor;ILjava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleFingerprintError(ILjava/lang/String;)V
-
-    return-void
 .end method
 
 .method static synthetic access$300(Lcom/android/keyguard/KeyguardUpdateMonitor;)Landroid/util/SparseBooleanArray;
@@ -1276,7 +1284,15 @@
     return-object p0
 .end method
 
-.method static synthetic access$3000(Lcom/android/keyguard/KeyguardUpdateMonitor;I)V
+.method static synthetic access$3000(Lcom/android/keyguard/KeyguardUpdateMonitor;ILjava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleFingerprintError(ILjava/lang/String;)V
+
+    return-void
+.end method
+
+.method static synthetic access$3100(Lcom/android/keyguard/KeyguardUpdateMonitor;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleFingerprintAcquired(I)V
@@ -1284,7 +1300,7 @@
     return-void
 .end method
 
-.method static synthetic access$3100(Lcom/android/keyguard/KeyguardUpdateMonitor;)V
+.method static synthetic access$3200(Lcom/android/keyguard/KeyguardUpdateMonitor;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleFaceAuthFailed()V
@@ -1292,7 +1308,7 @@
     return-void
 .end method
 
-.method static synthetic access$3200(Lcom/android/keyguard/KeyguardUpdateMonitor;IZ)V
+.method static synthetic access$3300(Lcom/android/keyguard/KeyguardUpdateMonitor;IZ)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleFaceAuthenticated(IZ)V
@@ -1300,7 +1316,7 @@
     return-void
 .end method
 
-.method static synthetic access$3300(Lcom/android/keyguard/KeyguardUpdateMonitor;ILjava/lang/String;)V
+.method static synthetic access$3400(Lcom/android/keyguard/KeyguardUpdateMonitor;ILjava/lang/String;)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleFaceHelp(ILjava/lang/String;)V
@@ -1308,7 +1324,7 @@
     return-void
 .end method
 
-.method static synthetic access$3400(Lcom/android/keyguard/KeyguardUpdateMonitor;ILjava/lang/String;)V
+.method static synthetic access$3500(Lcom/android/keyguard/KeyguardUpdateMonitor;ILjava/lang/String;)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleFaceError(ILjava/lang/String;)V
@@ -1316,7 +1332,7 @@
     return-void
 .end method
 
-.method static synthetic access$3500(Lcom/android/keyguard/KeyguardUpdateMonitor;I)V
+.method static synthetic access$3600(Lcom/android/keyguard/KeyguardUpdateMonitor;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleFaceAcquired(I)V
@@ -1324,7 +1340,7 @@
     return-void
 .end method
 
-.method static synthetic access$3600(Lcom/android/keyguard/KeyguardUpdateMonitor;)V
+.method static synthetic access$3700(Lcom/android/keyguard/KeyguardUpdateMonitor;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleTimeUpdate()V
@@ -1332,7 +1348,7 @@
     return-void
 .end method
 
-.method static synthetic access$3700(Lcom/android/keyguard/KeyguardUpdateMonitor;Ljava/lang/String;)V
+.method static synthetic access$3800(Lcom/android/keyguard/KeyguardUpdateMonitor;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleTimeZoneUpdate(Ljava/lang/String;)V
@@ -1340,18 +1356,10 @@
     return-void
 .end method
 
-.method static synthetic access$3800(Lcom/android/keyguard/KeyguardUpdateMonitor;Lcom/oneplus/battery/OpBatteryStatus;)V
+.method static synthetic access$3900(Lcom/android/keyguard/KeyguardUpdateMonitor;Lcom/oneplus/battery/OpBatteryStatus;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleBatteryUpdate(Lcom/oneplus/battery/OpBatteryStatus;)V
-
-    return-void
-.end method
-
-.method static synthetic access$3900(Lcom/android/keyguard/KeyguardUpdateMonitor;I)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleRingerModeChange(I)V
 
     return-void
 .end method
@@ -1364,7 +1372,15 @@
     return-object p0
 .end method
 
-.method static synthetic access$4000(Lcom/android/keyguard/KeyguardUpdateMonitor;Ljava/lang/String;)V
+.method static synthetic access$4000(Lcom/android/keyguard/KeyguardUpdateMonitor;I)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleRingerModeChange(I)V
+
+    return-void
+.end method
+
+.method static synthetic access$4100(Lcom/android/keyguard/KeyguardUpdateMonitor;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handlePhoneStateChanged(Ljava/lang/String;)V
@@ -1372,7 +1388,7 @@
     return-void
 .end method
 
-.method static synthetic access$4100(Lcom/android/keyguard/KeyguardUpdateMonitor;)V
+.method static synthetic access$4200(Lcom/android/keyguard/KeyguardUpdateMonitor;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleDeviceProvisioned()V
@@ -1380,7 +1396,7 @@
     return-void
 .end method
 
-.method static synthetic access$4200(Lcom/android/keyguard/KeyguardUpdateMonitor;I)V
+.method static synthetic access$4300(Lcom/android/keyguard/KeyguardUpdateMonitor;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleDevicePolicyManagerStateChanged(I)V
@@ -1388,7 +1404,7 @@
     return-void
 .end method
 
-.method static synthetic access$4300(Lcom/android/keyguard/KeyguardUpdateMonitor;I)V
+.method static synthetic access$4400(Lcom/android/keyguard/KeyguardUpdateMonitor;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleUserSwitchComplete(I)V
@@ -1396,7 +1412,7 @@
     return-void
 .end method
 
-.method static synthetic access$4400(Lcom/android/keyguard/KeyguardUpdateMonitor;)V
+.method static synthetic access$4500(Lcom/android/keyguard/KeyguardUpdateMonitor;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleKeyguardReset()V
@@ -1404,7 +1420,7 @@
     return-void
 .end method
 
-.method static synthetic access$4500(Lcom/android/keyguard/KeyguardUpdateMonitor;I)V
+.method static synthetic access$4600(Lcom/android/keyguard/KeyguardUpdateMonitor;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleKeyguardBouncerChanged(I)V
@@ -1412,7 +1428,7 @@
     return-void
 .end method
 
-.method static synthetic access$4600(Lcom/android/keyguard/KeyguardUpdateMonitor;I)V
+.method static synthetic access$4700(Lcom/android/keyguard/KeyguardUpdateMonitor;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleUserInfoChanged(I)V
@@ -1420,7 +1436,7 @@
     return-void
 .end method
 
-.method static synthetic access$4700(Lcom/android/keyguard/KeyguardUpdateMonitor;)V
+.method static synthetic access$4800(Lcom/android/keyguard/KeyguardUpdateMonitor;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleReportEmergencyCallAction()V
@@ -1428,7 +1444,7 @@
     return-void
 .end method
 
-.method static synthetic access$4800(Lcom/android/keyguard/KeyguardUpdateMonitor;ZI)V
+.method static synthetic access$4900(Lcom/android/keyguard/KeyguardUpdateMonitor;ZI)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleFaceUnlockStateChanged(ZI)V
@@ -1436,18 +1452,10 @@
     return-void
 .end method
 
-.method static synthetic access$4900(Lcom/android/keyguard/KeyguardUpdateMonitor;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleSimSubscriptionInfoChanged()V
-
-    return-void
-.end method
-
 .method static synthetic access$5000(Lcom/android/keyguard/KeyguardUpdateMonitor;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleAirplaneModeChanged()V
+    invoke-direct {p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleSimSubscriptionInfoChanged()V
 
     return-void
 .end method
@@ -1463,7 +1471,7 @@
 .method static synthetic access$5100(Lcom/android/keyguard/KeyguardUpdateMonitor;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleScreenTurnedOn()V
+    invoke-direct {p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleAirplaneModeChanged()V
 
     return-void
 .end method
@@ -1471,15 +1479,15 @@
 .method static synthetic access$5200(Lcom/android/keyguard/KeyguardUpdateMonitor;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleScreenTurnedOff()V
+    invoke-direct {p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleScreenTurnedOn()V
 
     return-void
 .end method
 
-.method static synthetic access$5300(Lcom/android/keyguard/KeyguardUpdateMonitor;I)V
+.method static synthetic access$5300(Lcom/android/keyguard/KeyguardUpdateMonitor;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleDreamingStateChanged(I)V
+    invoke-direct {p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleScreenTurnedOff()V
 
     return-void
 .end method
@@ -1487,7 +1495,7 @@
 .method static synthetic access$5400(Lcom/android/keyguard/KeyguardUpdateMonitor;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleUserUnlocked(I)V
+    invoke-direct {p0, p1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleDreamingStateChanged(I)V
 
     return-void
 .end method
@@ -1495,12 +1503,20 @@
 .method static synthetic access$5500(Lcom/android/keyguard/KeyguardUpdateMonitor;I)V
     .locals 0
 
+    invoke-direct {p0, p1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleUserUnlocked(I)V
+
+    return-void
+.end method
+
+.method static synthetic access$5600(Lcom/android/keyguard/KeyguardUpdateMonitor;I)V
+    .locals 0
+
     invoke-direct {p0, p1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleUserStopped(I)V
 
     return-void
 .end method
 
-.method static synthetic access$5600(Lcom/android/keyguard/KeyguardUpdateMonitor;)V
+.method static synthetic access$5700(Lcom/android/keyguard/KeyguardUpdateMonitor;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->updateLogoutEnabled()V
@@ -1508,7 +1524,15 @@
     return-void
 .end method
 
-.method static synthetic access$5700(Lcom/android/keyguard/KeyguardUpdateMonitor;)Z
+.method static synthetic access$5800(Lcom/android/keyguard/KeyguardUpdateMonitor;Z)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleKeyguardGoingAway(Z)V
+
+    return-void
+.end method
+
+.method static synthetic access$5900(Lcom/android/keyguard/KeyguardUpdateMonitor;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mDeviceProvisioned:Z
@@ -1516,22 +1540,12 @@
     return p0
 .end method
 
-.method static synthetic access$5702(Lcom/android/keyguard/KeyguardUpdateMonitor;Z)Z
+.method static synthetic access$5902(Lcom/android/keyguard/KeyguardUpdateMonitor;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mDeviceProvisioned:Z
 
     return p1
-.end method
-
-.method static synthetic access$5800(Lcom/android/keyguard/KeyguardUpdateMonitor;)Z
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isDeviceProvisionedInSettingsDb()Z
-
-    move-result p0
-
-    return p0
 .end method
 
 .method static synthetic access$600(Lcom/android/keyguard/KeyguardUpdateMonitor;)Lcom/android/internal/widget/LockPatternUtils;
@@ -1540,6 +1554,16 @@
     iget-object p0, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     return-object p0
+.end method
+
+.method static synthetic access$6000(Lcom/android/keyguard/KeyguardUpdateMonitor;)Z
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isDeviceProvisionedInSettingsDb()Z
+
+    move-result p0
+
+    return p0
 .end method
 
 .method static synthetic access$700(Lcom/android/keyguard/KeyguardUpdateMonitor;)I
@@ -1756,7 +1780,7 @@
 .end method
 
 .method private handleBatteryUpdate(Lcom/oneplus/battery/OpBatteryStatus;)V
-    .locals 2
+    .locals 3
 
     invoke-static {}, Lcom/android/systemui/util/Assert;->isMainThread()V
 
@@ -1774,36 +1798,38 @@
 
     iput-object p1, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mBatteryStatus:Lcom/oneplus/battery/OpBatteryStatus;
 
+    const/4 v1, 0x0
+
     if-eqz v0, :cond_1
 
-    const/4 v0, 0x0
+    move v0, v1
 
     :goto_0
-    iget-object v1, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mCallbacks:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mCallbacks:Ljava/util/ArrayList;
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
-    move-result v1
+    move-result v2
 
-    if-ge v0, v1, :cond_1
+    if-ge v0, v2, :cond_1
 
-    iget-object v1, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mCallbacks:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mCallbacks:Ljava/util/ArrayList;
 
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Ljava/lang/ref/WeakReference;
+    check-cast v2, Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
+    check-cast v2, Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
 
-    if-eqz v1, :cond_0
+    if-eqz v2, :cond_0
 
-    invoke-virtual {v1, p1}, Lcom/android/keyguard/KeyguardUpdateMonitorCallback;->onRefreshBatteryInfo(Lcom/oneplus/battery/OpBatteryStatus;)V
+    invoke-virtual {v2, p1}, Lcom/android/keyguard/KeyguardUpdateMonitorCallback;->onRefreshBatteryInfo(Lcom/oneplus/battery/OpBatteryStatus;)V
 
     :cond_0
     add-int/lit8 v0, v0, 0x1
@@ -1811,6 +1837,8 @@
     goto :goto_0
 
     :cond_1
+    iput-boolean v1, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mFocusUpdateBatteryInfo:Z
+
     return-void
 .end method
 
@@ -3091,6 +3119,16 @@
     return-void
 .end method
 
+.method private handleKeyguardGoingAway(Z)V
+    .locals 0
+
+    invoke-static {}, Lcom/android/systemui/util/Assert;->isMainThread()V
+
+    invoke-virtual {p0, p1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->setKeyguardGoingAway(Z)V
+
+    return-void
+.end method
+
 .method private handleKeyguardReset()V
     .locals 2
 
@@ -3910,103 +3948,110 @@
 .method private isBatteryUpdateInteresting(Lcom/oneplus/battery/OpBatteryStatus;Lcom/oneplus/battery/OpBatteryStatus;)Z
     .locals 5
 
+    iget-boolean p0, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mFocusUpdateBatteryInfo:Z
+
+    const/4 v0, 0x1
+
+    if-eqz p0, :cond_0
+
+    return v0
+
+    :cond_0
     invoke-virtual {p2}, Lcom/android/settingslib/fuelgauge/BatteryStatus;->isPluggedIn()Z
 
     move-result p0
 
     invoke-virtual {p1}, Lcom/android/settingslib/fuelgauge/BatteryStatus;->isPluggedIn()Z
 
-    move-result v0
+    move-result v1
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    const/4 v2, 0x1
+    if-eqz v1, :cond_1
 
-    if-eqz v0, :cond_0
-
-    if-eqz p0, :cond_0
+    if-eqz p0, :cond_1
 
     iget v3, p1, Lcom/android/settingslib/fuelgauge/BatteryStatus;->status:I
 
     iget v4, p2, Lcom/android/settingslib/fuelgauge/BatteryStatus;->status:I
 
-    if-eq v3, v4, :cond_0
+    if-eq v3, v4, :cond_1
 
-    move v3, v2
+    move v3, v0
 
     goto :goto_0
 
-    :cond_0
-    move v3, v1
+    :cond_1
+    move v3, v2
 
     :goto_0
-    if-ne v0, p0, :cond_7
+    if-ne v1, p0, :cond_8
 
-    if-eqz v3, :cond_1
+    if-eqz v3, :cond_2
 
     goto :goto_1
 
-    :cond_1
-    iget v0, p1, Lcom/android/settingslib/fuelgauge/BatteryStatus;->level:I
+    :cond_2
+    iget v1, p1, Lcom/android/settingslib/fuelgauge/BatteryStatus;->level:I
 
     iget v3, p2, Lcom/android/settingslib/fuelgauge/BatteryStatus;->level:I
 
-    if-eq v0, v3, :cond_2
+    if-eq v1, v3, :cond_3
 
-    return v2
-
-    :cond_2
-    if-eqz p0, :cond_3
-
-    iget v0, p2, Lcom/android/settingslib/fuelgauge/BatteryStatus;->maxChargingWattage:I
-
-    iget v3, p1, Lcom/android/settingslib/fuelgauge/BatteryStatus;->maxChargingWattage:I
-
-    if-eq v0, v3, :cond_3
-
-    return v2
+    return v0
 
     :cond_3
     if-eqz p0, :cond_4
 
-    iget p0, p2, Lcom/oneplus/battery/OpBatteryStatus;->fastCharge:I
+    iget v1, p2, Lcom/android/settingslib/fuelgauge/BatteryStatus;->maxChargingWattage:I
 
-    iget v0, p1, Lcom/oneplus/battery/OpBatteryStatus;->fastCharge:I
+    iget v3, p1, Lcom/android/settingslib/fuelgauge/BatteryStatus;->maxChargingWattage:I
 
-    if-eq p0, v0, :cond_4
+    if-eq v1, v3, :cond_4
 
-    return v2
+    return v0
 
     :cond_4
-    iget-boolean p0, p1, Lcom/oneplus/battery/OpBatteryStatus;->wirelessChargingDeviated:Z
+    if-eqz p0, :cond_5
 
-    iget-boolean v0, p2, Lcom/oneplus/battery/OpBatteryStatus;->wirelessChargingDeviated:Z
+    iget p0, p2, Lcom/oneplus/battery/OpBatteryStatus;->fastCharge:I
 
-    if-eq p0, v0, :cond_5
+    iget v1, p1, Lcom/oneplus/battery/OpBatteryStatus;->fastCharge:I
 
-    return v2
+    if-eq p0, v1, :cond_5
+
+    return v0
 
     :cond_5
+    iget-boolean p0, p1, Lcom/oneplus/battery/OpBatteryStatus;->wirelessChargingDeviated:Z
+
+    iget-boolean v1, p2, Lcom/oneplus/battery/OpBatteryStatus;->wirelessChargingDeviated:Z
+
+    if-eq p0, v1, :cond_6
+
+    return v0
+
+    :cond_6
     iget-boolean p0, p1, Lcom/oneplus/battery/OpBatteryStatus;->wirelessCharging:Z
 
-    iget-boolean v0, p2, Lcom/oneplus/battery/OpBatteryStatus;->wirelessCharging:Z
+    iget-boolean v1, p2, Lcom/oneplus/battery/OpBatteryStatus;->wirelessCharging:Z
 
-    if-ne p0, v0, :cond_7
+    if-ne p0, v1, :cond_8
 
     iget-boolean p0, p1, Lcom/oneplus/battery/OpBatteryStatus;->wirelessWarpCharging:Z
 
     iget-boolean p1, p2, Lcom/oneplus/battery/OpBatteryStatus;->wirelessWarpCharging:Z
 
-    if-eq p0, p1, :cond_6
+    if-eq p0, p1, :cond_7
 
     goto :goto_1
 
-    :cond_6
-    return v1
-
     :cond_7
-    :goto_1
     return v2
+
+    :cond_8
+    :goto_1
+    return v0
 .end method
 
 .method private isDeviceProvisionedInSettingsDb()Z
@@ -4281,7 +4326,7 @@
 .end method
 
 .method private synthetic lambda$new$1()V
-    .locals 4
+    .locals 5
 
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultSubscriptionId()I
 
@@ -4301,18 +4346,49 @@
 
     move-result-object v1
 
-    iget-object p0, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mHandler:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;
+    iget-object v2, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mHandler:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;
 
-    const/16 v2, 0x14a
+    const/16 v3, 0x14a
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
-    invoke-virtual {p0, v2, v0, v3, v1}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
+    invoke-virtual {v2, v3, v0, v4, v1}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v2, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mBatteryStatus:Lcom/oneplus/battery/OpBatteryStatus;
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mContext:Landroid/content/Context;
+
+    const/4 v1, 0x0
+
+    new-instance v2, Landroid/content/IntentFilter;
+
+    const-string v3, "android.intent.action.BATTERY_CHANGED"
+
+    invoke-direct {v2, v3}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mBatteryStatus:Lcom/oneplus/battery/OpBatteryStatus;
+
+    if-nez v1, :cond_0
+
+    iget-object v1, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
+
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1, p0, v0}, Landroid/content/BroadcastReceiver;->onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+
+    :cond_0
     return-void
 .end method
 
@@ -6180,6 +6256,26 @@
     throw p1
 .end method
 
+.method public dispatchKeyguardGoingAway(Z)V
+    .locals 1
+
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mHandler:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    const/16 v0, 0x156
+
+    invoke-virtual {p0, v0, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    return-void
+.end method
+
 .method public dispatchScreenTurnedOff()V
     .locals 1
 
@@ -7347,6 +7443,14 @@
     return v2
 .end method
 
+.method public getPhoneState()I
+    .locals 0
+
+    iget p0, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mPhoneState:I
+
+    return p0
+.end method
+
 .method public getSecondaryLockscreenRequirement(I)Landroid/content/Intent;
     .locals 0
 
@@ -7574,7 +7678,7 @@
 
     move-result v2
 
-    if-ge v0, v2, :cond_2
+    if-ge v0, v2, :cond_3
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -7592,8 +7696,13 @@
 
     const/4 v4, 0x2
 
-    if-ne p1, v4, :cond_0
+    if-eq p1, v4, :cond_0
 
+    const/4 v4, 0x3
+
+    if-ne p1, v4, :cond_1
+
+    :cond_0
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -7644,12 +7753,12 @@
 
     invoke-static {v5, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_0
+    :cond_1
     invoke-virtual {p0, v2}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getSimState(I)I
 
     move-result v4
 
-    if-ne p1, v4, :cond_1
+    if-ne p1, v4, :cond_2
 
     invoke-static {v3}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->getUnlockTrackSimState(I)I
 
@@ -7657,16 +7766,16 @@
 
     const/4 v4, 0x5
 
-    if-eq v3, v4, :cond_1
+    if-eq v3, v4, :cond_2
 
     goto :goto_1
 
-    :cond_1
+    :cond_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    :cond_2
+    :cond_3
     const/4 v2, -0x1
 
     :goto_1

@@ -63,7 +63,10 @@
 
 .field private mFetchingEstimate:Z
 
-.field private mHasReceivedBattery:Z
+.field mHasReceivedBattery:Z
+    .annotation build Lcom/android/internal/annotations/VisibleForTesting;
+    .end annotation
+.end field
 
 .field private mInvalidCharger:I
 
@@ -849,7 +852,7 @@
 .end method
 
 .method private registerReceiver()V
-    .locals 2
+    .locals 3
 
     new-instance v0, Landroid/content/IntentFilter;
 
@@ -874,6 +877,12 @@
     const-string v1, "android.intent.action.BATTERY_LEVEL_DECIMAL"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    const-string v1, "BatteryController"
+
+    const-string v2, "registerReceiver"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mBroadcastDispatcher:Lcom/android/systemui/broadcast/BroadcastDispatcher;
 
@@ -1114,7 +1123,7 @@
 
     const/4 v1, 0x0
 
-    const/16 v2, 0xf4
+    const/16 v2, 0xed
 
     aput v2, v0, v1
 
@@ -1558,7 +1567,7 @@
 
     new-array v4, v4, [I
 
-    const/16 v5, 0xf4
+    const/16 v5, 0xed
 
     aput v5, v4, v2
 
@@ -1634,10 +1643,39 @@
 .end method
 
 .method public init()V
-    .locals 0
+    .locals 4
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->registerReceiver()V
 
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mHasReceivedBattery:Z
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mContext:Landroid/content/Context;
+
+    const/4 v1, 0x0
+
+    new-instance v2, Landroid/content/IntentFilter;
+
+    const-string v3, "android.intent.action.BATTERY_CHANGED"
+
+    invoke-direct {v2, v3}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-boolean v1, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mHasReceivedBattery:Z
+
+    if-nez v1, :cond_0
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0, v1, v0}, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+
+    :cond_0
     invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->updatePowerSave()V
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->updateEstimate()V
@@ -1754,7 +1792,7 @@
 
     const/4 v5, 0x1
 
-    if-eqz v1, :cond_c
+    if-eqz v1, :cond_d
 
     iget-boolean p1, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mTestmode:Z
 
@@ -1877,19 +1915,64 @@
 
     move-result-wide v2
 
+    const-string v6, "persist.test.swarp"
+
+    invoke-static {v6, v0}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_5
+
+    const/16 v6, 0x3c
+
+    const-string v7, "persist.test.swarp.start"
+
+    invoke-static {v7, v6}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result v6
+
+    int-to-float v6, v6
+
+    const v7, 0x3f7ae148    # 0.98f
+
+    add-float/2addr v6, v7
+
+    iput v6, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mSWarpLevel:F
+
+    const/16 v6, 0x3d
+
+    const-string v7, "persist.test.swarp.next"
+
+    invoke-static {v7, v6}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result v6
+
+    int-to-float v6, v6
+
+    const v7, 0x3da3d70a    # 0.08f
+
+    add-float/2addr v6, v7
+
+    iput v6, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mSWarpLevelNext:F
+
+    const-wide/16 v6, 0x1770
+
+    iput-wide v6, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mSWarpDuration:J
+
+    :cond_5
     sget-boolean v6, Lcom/oneplus/util/OpUtils;->SUPPORT_SWARP_CHARGING:Z
 
     const/4 v7, 0x4
 
-    if-eqz v6, :cond_6
+    if-eqz v6, :cond_7
 
-    if-ne v1, v7, :cond_5
+    if-ne v1, v7, :cond_6
 
     move v6, v5
 
     goto :goto_4
 
-    :cond_5
+    :cond_6
     move v6, v0
 
     :goto_4
@@ -1919,10 +2002,10 @@
 
     invoke-static {v4, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_6
+    :cond_7
     new-array v2, v5, [I
 
-    const/16 v3, 0xf4
+    const/16 v3, 0xed
 
     aput v3, v2, v0
 
@@ -1930,7 +2013,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_7
+    if-eqz v2, :cond_8
 
     const-string/jumbo v2, "wireless_fastcharge_type"
 
@@ -1974,21 +2057,21 @@
 
     invoke-static {v4, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_7
+    :cond_8
     sget-boolean v2, Lcom/oneplus/util/OpUtils;->SUPPORT_WARP_CHARGING:Z
 
-    if-eqz v2, :cond_8
+    if-eqz v2, :cond_9
 
     move v5, v1
 
     goto :goto_5
 
-    :cond_8
-    if-lez v1, :cond_9
+    :cond_9
+    if-lez v1, :cond_a
 
     goto :goto_5
 
-    :cond_9
+    :cond_a
     move v5, v0
 
     :goto_5
@@ -1996,15 +2079,15 @@
 
     sget-boolean v1, Lcom/oneplus/util/OpUtils;->SUPPORT_SWARP_CHARGING:Z
 
-    if-eqz v1, :cond_a
+    if-eqz v1, :cond_b
 
     iget-boolean v1, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mSWarpCharging:Z
 
-    if-eqz v1, :cond_a
+    if-eqz v1, :cond_b
 
     goto :goto_6
 
-    :cond_a
+    :cond_b
     iget v7, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mFastchargeType:I
 
     :goto_6
@@ -2020,36 +2103,36 @@
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->fireInvalidChargerChange()V
 
-    if-eqz p1, :cond_b
+    if-eqz p1, :cond_c
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->fireBatteryStylechange()V
 
-    :cond_b
+    :cond_c
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->fireBatteryLevelChanged()V
 
     goto/16 :goto_7
 
-    :cond_c
+    :cond_d
     const-string v1, "android.os.action.POWER_SAVE_MODE_CHANGED"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_d
+    if-eqz v1, :cond_e
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->updatePowerSave()V
 
     goto :goto_7
 
-    :cond_d
+    :cond_e
     const-string v1, "android.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_e
+    if-eqz v1, :cond_f
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mSettingObserver:Lcom/android/systemui/statusbar/policy/BatteryControllerImpl$SettingObserver;
 
@@ -2059,14 +2142,14 @@
 
     goto :goto_7
 
-    :cond_e
+    :cond_f
     const-string v1, "com.android.systemui.BATTERY_LEVEL_TEST"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_f
+    if-eqz v1, :cond_10
 
     iput-boolean v5, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mTestmode:Z
 
@@ -2080,14 +2163,14 @@
 
     goto :goto_7
 
-    :cond_f
+    :cond_10
     const-string p1, "android.intent.action.BATTERY_LEVEL_DECIMAL"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_10
+    if-eqz p1, :cond_11
 
     const-string p1, "estimate_remain"
 
@@ -2145,7 +2228,7 @@
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->fireBatteryLevelChanged()V
 
-    :cond_10
+    :cond_11
     :goto_7
     return-void
 .end method

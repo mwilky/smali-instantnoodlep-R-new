@@ -158,36 +158,15 @@
 .end method
 
 .method public getDisplayNeedsBlanking()Z
-    .locals 2
+    .locals 1
 
-    const-class v0, Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isAlwaysOnEnabled()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return v1
-
-    :cond_0
     sget-boolean v0, Lcom/android/systemui/statusbar/phone/DozeParameters;->FORCE_BLANKING:Z
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_1
 
     sget-boolean v0, Lcom/android/systemui/statusbar/phone/DozeParameters;->FORCE_NO_BLANKING:Z
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/DozeParameters;->mResources:Landroid/content/res/Resources;
 
@@ -197,16 +176,21 @@
 
     move-result p0
 
-    if-eqz p0, :cond_1
+    if-eqz p0, :cond_0
 
     goto :goto_0
 
-    :cond_1
-    const/4 v1, 0x0
+    :cond_0
+    const/4 p0, 0x0
 
-    :cond_2
+    goto :goto_1
+
+    :cond_1
     :goto_0
-    return v1
+    const/4 p0, 0x1
+
+    :goto_1
+    return p0
 .end method
 
 .method public getDisplayStateSupported()Z
@@ -371,7 +355,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/DozeParameters;->mResources:Landroid/content/res/Resources;
 
-    const v0, 0x10e00aa
+    const v0, 0x10e00b0
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -434,7 +418,37 @@
 .end method
 
 .method public setControlScreenOffAnimation(Z)V
-    .locals 1
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "setControlScreenOffAnimation, controlScreenOffAnimation:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", stack:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0xa
+
+    invoke-static {v1}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "TAG"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/DozeParameters;->mControlScreenOffAnimation:Z
 

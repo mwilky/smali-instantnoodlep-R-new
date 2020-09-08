@@ -36,6 +36,16 @@
 
 .field private static final GAME_MODE_BLOCK_HEADS_UP_URI:Landroid/net/Uri;
 
+.field private static final ICON_COLORIZE_LIST:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field private static final LIFETIME_EXTENSION_LIST:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -253,6 +263,10 @@
 
     invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
+    move-result-object v2
+
+    sput-object v2, Lcom/oneplus/notification/OpNotificationController;->ICON_COLORIZE_LIST:Ljava/util/List;
+
     const-string v2, "com.whatsapp"
 
     const-string v4, "com.netease.cloudmusic"
@@ -364,6 +378,8 @@
     sput-object v0, Lcom/oneplus/notification/OpNotificationController;->OP_QUICKREPLY_IM_LIST_URI:Landroid/net/Uri;
 
     return-void
+
+    nop
 
     :array_0
     .array-data 4
@@ -1005,7 +1021,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x121
+    const/16 v2, 0x11a
 
     const/4 v3, 0x0
 
@@ -2396,7 +2412,7 @@
 
     const/4 v2, 0x0
 
-    const/16 v4, 0xb7
+    const/16 v4, 0xb0
 
     aput v4, p2, v2
 
@@ -2548,6 +2564,16 @@
     if-nez v4, :cond_2
 
     if-nez v1, :cond_2
+
+    invoke-virtual {p1}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->getRow()Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->isContentHidden()Z
+
+    move-result p0
+
+    if-nez p0, :cond_2
 
     goto :goto_2
 
@@ -3268,6 +3294,18 @@
     iput-object p1, p0, Lcom/oneplus/notification/OpNotificationController;->mTopActivity:Ljava/lang/String;
 
     return-void
+.end method
+
+.method public shouldColorizeIcon(Ljava/lang/String;)Z
+    .locals 0
+
+    sget-object p0, Lcom/oneplus/notification/OpNotificationController;->ICON_COLORIZE_LIST:Ljava/util/List;
+
+    invoke-interface {p0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    return p0
 .end method
 
 .method public shouldForceRemoveEntry(Ljava/lang/String;)Z

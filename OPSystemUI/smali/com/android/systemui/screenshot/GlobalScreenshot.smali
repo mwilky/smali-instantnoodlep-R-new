@@ -40,7 +40,13 @@
 
 .field private final mDisplayMetrics:Landroid/util/DisplayMetrics;
 
+.field private mLeftInset:I
+
+.field private mNavMode:I
+
 .field private mOnCompleteRunnable:Ljava/lang/Runnable;
+
+.field private mRightInset:I
 
 .field private mScreenshotAnimatedView:Landroid/widget/ImageView;
 
@@ -348,9 +354,9 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    new-instance v2, Lcom/android/systemui/screenshot/-$$Lambda$GlobalScreenshot$1xbYXj4C7gJbNuPAu8gXfoNThEk;
+    new-instance v2, Lcom/android/systemui/screenshot/-$$Lambda$GlobalScreenshot$lwSCWVmpTO3-JMK1heDr17u172Q;
 
-    invoke-direct {v2, p0}, Lcom/android/systemui/screenshot/-$$Lambda$GlobalScreenshot$1xbYXj4C7gJbNuPAu8gXfoNThEk;-><init>(Lcom/android/systemui/screenshot/GlobalScreenshot;)V
+    invoke-direct {v2, p0}, Lcom/android/systemui/screenshot/-$$Lambda$GlobalScreenshot$lwSCWVmpTO3-JMK1heDr17u172Q;-><init>(Lcom/android/systemui/screenshot/GlobalScreenshot;)V
 
     invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -382,9 +388,9 @@
 
     move-result v3
 
-    new-instance v4, Lcom/android/systemui/screenshot/-$$Lambda$GlobalScreenshot$OPI1KINhIb-stDuNUbFrez3OVy4;
+    new-instance v4, Lcom/android/systemui/screenshot/-$$Lambda$GlobalScreenshot$2_tLLQ8ajKLz2LczKwL5qBWTPFQ;
 
-    invoke-direct {v4, p0, v2, v3}, Lcom/android/systemui/screenshot/-$$Lambda$GlobalScreenshot$OPI1KINhIb-stDuNUbFrez3OVy4;-><init>(Lcom/android/systemui/screenshot/GlobalScreenshot;FF)V
+    invoke-direct {v4, p0, v2, v3}, Lcom/android/systemui/screenshot/-$$Lambda$GlobalScreenshot$2_tLLQ8ajKLz2LczKwL5qBWTPFQ;-><init>(Lcom/android/systemui/screenshot/GlobalScreenshot;FF)V
 
     invoke-virtual {v0, v4}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -413,7 +419,7 @@
     .end array-data
 .end method
 
-.method private synthetic lambda$createScreenshotDismissAnimation$14(Landroid/animation/ValueAnimator;)V
+.method private synthetic lambda$createScreenshotDismissAnimation$16(Landroid/animation/ValueAnimator;)V
     .locals 1
 
     iget-object p0, p0, Lcom/android/systemui/screenshot/GlobalScreenshot;->mScreenshotLayout:Landroid/view/View;
@@ -431,7 +437,7 @@
     return-void
 .end method
 
-.method private synthetic lambda$createScreenshotDismissAnimation$15(FFLandroid/animation/ValueAnimator;)V
+.method private synthetic lambda$createScreenshotDismissAnimation$17(FFLandroid/animation/ValueAnimator;)V
     .locals 2
 
     iget v0, p0, Lcom/android/systemui/screenshot/GlobalScreenshot;->mDismissDeltaY:F
@@ -469,7 +475,72 @@
     return-void
 .end method
 
-.method private synthetic lambda$reloadAssets$0(Landroid/view/View;)V
+.method private synthetic lambda$reloadAssets$0(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 1
+
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getActionMasked()I
+
+    move-result p1
+
+    const/4 p2, 0x0
+
+    const/4 v0, 0x4
+
+    if-ne p1, v0, :cond_0
+
+    invoke-direct {p0, p2}, Lcom/android/systemui/screenshot/GlobalScreenshot;->setWindowFocusable(Z)V
+
+    :cond_0
+    return p2
+.end method
+
+.method private synthetic lambda$reloadAssets$1(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+    .locals 1
+
+    iget p1, p0, Lcom/android/systemui/screenshot/GlobalScreenshot;->mNavMode:I
+
+    invoke-static {p1}, Lcom/android/systemui/shared/system/QuickStepContract;->isGesturalMode(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    invoke-static {}, Landroid/view/WindowInsets$Type;->systemGestures()I
+
+    move-result p1
+
+    invoke-virtual {p2, p1}, Landroid/view/WindowInsets;->getInsets(I)Landroid/graphics/Insets;
+
+    move-result-object p1
+
+    iget v0, p1, Landroid/graphics/Insets;->left:I
+
+    iput v0, p0, Lcom/android/systemui/screenshot/GlobalScreenshot;->mLeftInset:I
+
+    iget p1, p1, Landroid/graphics/Insets;->right:I
+
+    iput p1, p0, Lcom/android/systemui/screenshot/GlobalScreenshot;->mRightInset:I
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    iput p1, p0, Lcom/android/systemui/screenshot/GlobalScreenshot;->mRightInset:I
+
+    iput p1, p0, Lcom/android/systemui/screenshot/GlobalScreenshot;->mLeftInset:I
+
+    :goto_0
+    iget-object p0, p0, Lcom/android/systemui/screenshot/GlobalScreenshot;->mScreenshotLayout:Landroid/view/View;
+
+    invoke-virtual {p0, p2}, Landroid/view/View;->onApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method private synthetic lambda$reloadAssets$2(Landroid/view/View;)V
     .locals 1
 
     iget-object p1, p0, Lcom/android/systemui/screenshot/GlobalScreenshot;->mUiEventLogger:Lcom/android/internal/logging/UiEventLogger;
@@ -540,6 +611,22 @@
     move-result-object v3
 
     iput-object v3, p0, Lcom/android/systemui/screenshot/GlobalScreenshot;->mScreenshotLayout:Landroid/view/View;
+
+    new-instance v4, Lcom/android/systemui/screenshot/-$$Lambda$GlobalScreenshot$cjbBbqRWya3kStc4feynRVu5-_w;
+
+    invoke-direct {v4, p0}, Lcom/android/systemui/screenshot/-$$Lambda$GlobalScreenshot$cjbBbqRWya3kStc4feynRVu5-_w;-><init>(Lcom/android/systemui/screenshot/GlobalScreenshot;)V
+
+    invoke-virtual {v3, v4}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+
+    iget-object v3, p0, Lcom/android/systemui/screenshot/GlobalScreenshot;->mScreenshotLayout:Landroid/view/View;
+
+    new-instance v4, Lcom/android/systemui/screenshot/-$$Lambda$GlobalScreenshot$6btUb3pURbXlvq3U7gZEq6_gft0;
+
+    invoke-direct {v4, p0}, Lcom/android/systemui/screenshot/-$$Lambda$GlobalScreenshot$6btUb3pURbXlvq3U7gZEq6_gft0;-><init>(Lcom/android/systemui/screenshot/GlobalScreenshot;)V
+
+    invoke-virtual {v3, v4}, Landroid/view/View;->setOnApplyWindowInsetsListener(Landroid/view/View$OnApplyWindowInsetsListener;)V
+
+    iget-object v3, p0, Lcom/android/systemui/screenshot/GlobalScreenshot;->mScreenshotLayout:Landroid/view/View;
 
     new-instance v4, Lcom/android/systemui/screenshot/GlobalScreenshot$2;
 
@@ -657,9 +744,9 @@
 
     iput-object v3, p0, Lcom/android/systemui/screenshot/GlobalScreenshot;->mDismissButton:Landroid/widget/FrameLayout;
 
-    new-instance v4, Lcom/android/systemui/screenshot/-$$Lambda$GlobalScreenshot$wEEEm8jeTqSDq-3J8uvx5hr2nh8;
+    new-instance v4, Lcom/android/systemui/screenshot/-$$Lambda$GlobalScreenshot$ivNcVUrtovF5MBU69iA0tYfbicU;
 
-    invoke-direct {v4, p0}, Lcom/android/systemui/screenshot/-$$Lambda$GlobalScreenshot$wEEEm8jeTqSDq-3J8uvx5hr2nh8;-><init>(Lcom/android/systemui/screenshot/GlobalScreenshot;)V
+    invoke-direct {v4, p0}, Lcom/android/systemui/screenshot/-$$Lambda$GlobalScreenshot$ivNcVUrtovF5MBU69iA0tYfbicU;-><init>(Lcom/android/systemui/screenshot/GlobalScreenshot;)V
 
     invoke-virtual {v3, v4}, Landroid/widget/FrameLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -722,6 +809,51 @@
     invoke-interface {v0, v1, p0}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     :cond_2
+    return-void
+.end method
+
+.method private setWindowFocusable(Z)V
+    .locals 1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lcom/android/systemui/screenshot/GlobalScreenshot;->mWindowLayoutParams:Landroid/view/WindowManager$LayoutParams;
+
+    iget v0, p1, Landroid/view/WindowManager$LayoutParams;->flags:I
+
+    and-int/lit8 v0, v0, -0x9
+
+    iput v0, p1, Landroid/view/WindowManager$LayoutParams;->flags:I
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p1, p0, Lcom/android/systemui/screenshot/GlobalScreenshot;->mWindowLayoutParams:Landroid/view/WindowManager$LayoutParams;
+
+    iget v0, p1, Landroid/view/WindowManager$LayoutParams;->flags:I
+
+    or-int/lit8 v0, v0, 0x8
+
+    iput v0, p1, Landroid/view/WindowManager$LayoutParams;->flags:I
+
+    :goto_0
+    iget-object p1, p0, Lcom/android/systemui/screenshot/GlobalScreenshot;->mScreenshotLayout:Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->isAttachedToWindow()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    iget-object p1, p0, Lcom/android/systemui/screenshot/GlobalScreenshot;->mWindowManager:Landroid/view/WindowManager;
+
+    iget-object v0, p0, Lcom/android/systemui/screenshot/GlobalScreenshot;->mScreenshotLayout:Landroid/view/View;
+
+    iget-object p0, p0, Lcom/android/systemui/screenshot/GlobalScreenshot;->mWindowLayoutParams:Landroid/view/WindowManager$LayoutParams;
+
+    invoke-interface {p1, v0, p0}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    :cond_1
     return-void
 .end method
 
@@ -789,32 +921,52 @@
     return-void
 .end method
 
-.method public synthetic lambda$createScreenshotDismissAnimation$14$GlobalScreenshot(Landroid/animation/ValueAnimator;)V
+.method public synthetic lambda$createScreenshotDismissAnimation$16$GlobalScreenshot(Landroid/animation/ValueAnimator;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/systemui/screenshot/GlobalScreenshot;->lambda$createScreenshotDismissAnimation$14(Landroid/animation/ValueAnimator;)V
+    invoke-direct {p0, p1}, Lcom/android/systemui/screenshot/GlobalScreenshot;->lambda$createScreenshotDismissAnimation$16(Landroid/animation/ValueAnimator;)V
 
     return-void
 .end method
 
-.method public synthetic lambda$createScreenshotDismissAnimation$15$GlobalScreenshot(FFLandroid/animation/ValueAnimator;)V
+.method public synthetic lambda$createScreenshotDismissAnimation$17$GlobalScreenshot(FFLandroid/animation/ValueAnimator;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Lcom/android/systemui/screenshot/GlobalScreenshot;->lambda$createScreenshotDismissAnimation$15(FFLandroid/animation/ValueAnimator;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/android/systemui/screenshot/GlobalScreenshot;->lambda$createScreenshotDismissAnimation$17(FFLandroid/animation/ValueAnimator;)V
 
     return-void
 .end method
 
-.method public synthetic lambda$reloadAssets$0$GlobalScreenshot(Landroid/view/View;)V
+.method public synthetic lambda$reloadAssets$0$GlobalScreenshot(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/systemui/screenshot/GlobalScreenshot;->lambda$reloadAssets$0(Landroid/view/View;)V
+    invoke-direct {p0, p1, p2}, Lcom/android/systemui/screenshot/GlobalScreenshot;->lambda$reloadAssets$0(Landroid/view/View;Landroid/view/MotionEvent;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public synthetic lambda$reloadAssets$1$GlobalScreenshot(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/android/systemui/screenshot/GlobalScreenshot;->lambda$reloadAssets$1(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public synthetic lambda$reloadAssets$2$GlobalScreenshot(Landroid/view/View;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/systemui/screenshot/GlobalScreenshot;->lambda$reloadAssets$2(Landroid/view/View;)V
 
     return-void
 .end method
 
 .method public onComputeInternalInsets(Landroid/view/ViewTreeObserver$InternalInsetsInfo;)V
-    .locals 3
+    .locals 5
 
     const/4 v0, 0x3
 
@@ -852,14 +1004,55 @@
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
-    iget-object p0, p0, Lcom/android/systemui/screenshot/GlobalScreenshot;->mDismissButton:Landroid/widget/FrameLayout;
+    iget-object v2, p0, Lcom/android/systemui/screenshot/GlobalScreenshot;->mDismissButton:Landroid/widget/FrameLayout;
 
-    invoke-virtual {p0, v1}, Landroid/widget/FrameLayout;->getBoundsOnScreen(Landroid/graphics/Rect;)V
+    invoke-virtual {v2, v1}, Landroid/widget/FrameLayout;->getBoundsOnScreen(Landroid/graphics/Rect;)V
+
+    sget-object v2, Landroid/graphics/Region$Op;->UNION:Landroid/graphics/Region$Op;
+
+    invoke-virtual {v0, v1, v2}, Landroid/graphics/Region;->op(Landroid/graphics/Rect;Landroid/graphics/Region$Op;)Z
+
+    iget v1, p0, Lcom/android/systemui/screenshot/GlobalScreenshot;->mNavMode:I
+
+    invoke-static {v1}, Lcom/android/systemui/shared/system/QuickStepContract;->isGesturalMode(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Landroid/graphics/Rect;
+
+    iget v2, p0, Lcom/android/systemui/screenshot/GlobalScreenshot;->mLeftInset:I
+
+    iget-object v3, p0, Lcom/android/systemui/screenshot/GlobalScreenshot;->mDisplayMetrics:Landroid/util/DisplayMetrics;
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->heightPixels:I
+
+    const/4 v4, 0x0
+
+    invoke-direct {v1, v4, v4, v2, v3}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    sget-object v2, Landroid/graphics/Region$Op;->UNION:Landroid/graphics/Region$Op;
+
+    invoke-virtual {v0, v1, v2}, Landroid/graphics/Region;->op(Landroid/graphics/Rect;Landroid/graphics/Region$Op;)Z
+
+    iget-object v2, p0, Lcom/android/systemui/screenshot/GlobalScreenshot;->mDisplayMetrics:Landroid/util/DisplayMetrics;
+
+    iget v3, v2, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    iget p0, p0, Lcom/android/systemui/screenshot/GlobalScreenshot;->mRightInset:I
+
+    sub-int p0, v3, p0
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->heightPixels:I
+
+    invoke-virtual {v1, p0, v4, v3, v2}, Landroid/graphics/Rect;->set(IIII)V
 
     sget-object p0, Landroid/graphics/Region$Op;->UNION:Landroid/graphics/Region$Op;
 
     invoke-virtual {v0, v1, p0}, Landroid/graphics/Region;->op(Landroid/graphics/Rect;Landroid/graphics/Region$Op;)Z
 
+    :cond_0
     iget-object p0, p1, Landroid/view/ViewTreeObserver$InternalInsetsInfo;->touchableRegion:Landroid/graphics/Region;
 
     invoke-virtual {p0, v0}, Landroid/graphics/Region;->set(Landroid/graphics/Region;)Z

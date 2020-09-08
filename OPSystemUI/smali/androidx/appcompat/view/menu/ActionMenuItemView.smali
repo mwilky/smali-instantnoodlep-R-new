@@ -547,37 +547,35 @@
 
     if-eqz p1, :cond_3
 
-    invoke-virtual {p0}, Landroid/widget/TextView;->getMeasuredWidth()I
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result p1
 
-    iget-object p2, p0, Landroidx/appcompat/view/menu/ActionMenuItemView;->mIcon:Landroid/graphics/drawable/Drawable;
+    iget p2, p0, Landroidx/appcompat/view/menu/ActionMenuItemView;->mMinWidth:I
 
-    invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    sub-int/2addr p2, p1
 
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
-
-    move-result p2
-
-    sub-int/2addr p1, p2
-
-    div-int/lit8 p1, p1, 0x2
+    div-int/lit8 p2, p2, 0x2
 
     invoke-virtual {p0}, Landroid/widget/TextView;->getPaddingTop()I
 
-    move-result p2
-
-    invoke-virtual {p0}, Landroid/widget/TextView;->getPaddingRight()I
-
     move-result v0
+
+    iget v1, p0, Landroidx/appcompat/view/menu/ActionMenuItemView;->mMinWidth:I
+
+    sub-int/2addr v1, p1
+
+    div-int/lit8 v1, v1, 0x2
 
     invoke-virtual {p0}, Landroid/widget/TextView;->getPaddingBottom()I
 
-    move-result v1
+    move-result p1
 
-    invoke-super {p0, p1, p2, v0, v1}, Landroid/widget/TextView;->setPadding(IIII)V
+    invoke-super {p0, p2, v0, v1, p1}, Landroid/widget/TextView;->setPadding(IIII)V
 
     :cond_3
     return-void

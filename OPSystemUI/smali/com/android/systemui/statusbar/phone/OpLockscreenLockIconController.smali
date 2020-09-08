@@ -898,6 +898,16 @@
     return p0
 .end method
 
+.method public opSetDeviceInteractive(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mDeviceInteractive:Z
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->opUpdate()V
+
+    return-void
+.end method
+
 .method public opSetScreenOn(Z)V
     .locals 0
 

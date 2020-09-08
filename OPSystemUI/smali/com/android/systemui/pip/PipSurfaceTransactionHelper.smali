@@ -21,6 +21,8 @@
 
 .field private final mEnableCornerRadius:Z
 
+.field private final mTmpDestinationRect:Landroid/graphics/Rect;
+
 .field private final mTmpDestinationRectF:Landroid/graphics/RectF;
 
 .field private final mTmpFloat9:[F
@@ -59,6 +61,12 @@
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lcom/android/systemui/pip/PipSurfaceTransactionHelper;->mTmpDestinationRectF:Landroid/graphics/RectF;
+
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    iput-object v0, p0, Lcom/android/systemui/pip/PipSurfaceTransactionHelper;->mTmpDestinationRect:Landroid/graphics/Rect;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -187,7 +195,7 @@
 .end method
 
 .method scale(Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl;Landroid/graphics/Rect;Landroid/graphics/Rect;)Lcom/android/systemui/pip/PipSurfaceTransactionHelper;
-    .locals 3
+    .locals 2
 
     iget-object v0, p0, Lcom/android/systemui/pip/PipSurfaceTransactionHelper;->mTmpSourceRectF:Landroid/graphics/RectF;
 
@@ -199,29 +207,127 @@
 
     iget-object p3, p0, Lcom/android/systemui/pip/PipSurfaceTransactionHelper;->mTmpTransform:Landroid/graphics/Matrix;
 
-    iget-object v0, p0, Lcom/android/systemui/pip/PipSurfaceTransactionHelper;->mTmpSourceRectF:Landroid/graphics/RectF;
+    iget-object p4, p0, Lcom/android/systemui/pip/PipSurfaceTransactionHelper;->mTmpSourceRectF:Landroid/graphics/RectF;
 
-    iget-object v1, p0, Lcom/android/systemui/pip/PipSurfaceTransactionHelper;->mTmpDestinationRectF:Landroid/graphics/RectF;
+    iget-object v0, p0, Lcom/android/systemui/pip/PipSurfaceTransactionHelper;->mTmpDestinationRectF:Landroid/graphics/RectF;
 
-    sget-object v2, Landroid/graphics/Matrix$ScaleToFit;->FILL:Landroid/graphics/Matrix$ScaleToFit;
+    sget-object v1, Landroid/graphics/Matrix$ScaleToFit;->FILL:Landroid/graphics/Matrix$ScaleToFit;
 
-    invoke-virtual {p3, v0, v1, v2}, Landroid/graphics/Matrix;->setRectToRect(Landroid/graphics/RectF;Landroid/graphics/RectF;Landroid/graphics/Matrix$ScaleToFit;)Z
+    invoke-virtual {p3, p4, v0, v1}, Landroid/graphics/Matrix;->setRectToRect(Landroid/graphics/RectF;Landroid/graphics/RectF;Landroid/graphics/Matrix$ScaleToFit;)Z
 
     iget-object p3, p0, Lcom/android/systemui/pip/PipSurfaceTransactionHelper;->mTmpTransform:Landroid/graphics/Matrix;
 
-    iget-object v0, p0, Lcom/android/systemui/pip/PipSurfaceTransactionHelper;->mTmpFloat9:[F
+    iget-object p4, p0, Lcom/android/systemui/pip/PipSurfaceTransactionHelper;->mTmpFloat9:[F
 
-    invoke-virtual {p1, p2, p3, v0}, Landroid/view/SurfaceControl$Transaction;->setMatrix(Landroid/view/SurfaceControl;Landroid/graphics/Matrix;[F)Landroid/view/SurfaceControl$Transaction;
+    invoke-virtual {p1, p2, p3, p4}, Landroid/view/SurfaceControl$Transaction;->setMatrix(Landroid/view/SurfaceControl;Landroid/graphics/Matrix;[F)Landroid/view/SurfaceControl$Transaction;
 
     move-result-object p1
+
+    iget-object p3, p0, Lcom/android/systemui/pip/PipSurfaceTransactionHelper;->mTmpDestinationRectF:Landroid/graphics/RectF;
+
+    iget p4, p3, Landroid/graphics/RectF;->left:F
+
+    iget p3, p3, Landroid/graphics/RectF;->top:F
+
+    invoke-virtual {p1, p2, p4, p3}, Landroid/view/SurfaceControl$Transaction;->setPosition(Landroid/view/SurfaceControl;FF)Landroid/view/SurfaceControl$Transaction;
+
+    return-object p0
+.end method
+
+.method scaleAndCrop(Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;)Lcom/android/systemui/pip/PipSurfaceTransactionHelper;
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/systemui/pip/PipSurfaceTransactionHelper;->mTmpSourceRectF:Landroid/graphics/RectF;
+
+    invoke-virtual {v0, p3}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
+
+    iget-object v0, p0, Lcom/android/systemui/pip/PipSurfaceTransactionHelper;->mTmpDestinationRect:Landroid/graphics/Rect;
+
+    invoke-virtual {v0, p3}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    iget-object v0, p0, Lcom/android/systemui/pip/PipSurfaceTransactionHelper;->mTmpDestinationRect:Landroid/graphics/Rect;
+
+    invoke-virtual {v0, p5}, Landroid/graphics/Rect;->inset(Landroid/graphics/Rect;)V
+
+    invoke-virtual {p3}, Landroid/graphics/Rect;->width()I
+
+    move-result v0
+
+    invoke-virtual {p3}, Landroid/graphics/Rect;->height()I
+
+    move-result v1
+
+    if-gt v0, v1, :cond_0
+
+    invoke-virtual {p4}, Landroid/graphics/Rect;->width()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    invoke-virtual {p3}, Landroid/graphics/Rect;->width()I
+
+    move-result p3
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p4}, Landroid/graphics/Rect;->height()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    invoke-virtual {p3}, Landroid/graphics/Rect;->height()I
+
+    move-result p3
+
+    :goto_0
+    int-to-float p3, p3
+
+    div-float/2addr v0, p3
 
     iget p3, p4, Landroid/graphics/Rect;->left:I
 
     int-to-float p3, p3
 
+    iget v1, p5, Landroid/graphics/Rect;->left:I
+
+    int-to-float v1, v1
+
+    mul-float/2addr v1, v0
+
+    sub-float/2addr p3, v1
+
     iget p4, p4, Landroid/graphics/Rect;->top:I
 
     int-to-float p4, p4
+
+    iget p5, p5, Landroid/graphics/Rect;->top:I
+
+    int-to-float p5, p5
+
+    mul-float/2addr p5, v0
+
+    sub-float/2addr p4, p5
+
+    iget-object p5, p0, Lcom/android/systemui/pip/PipSurfaceTransactionHelper;->mTmpTransform:Landroid/graphics/Matrix;
+
+    invoke-virtual {p5, v0, v0}, Landroid/graphics/Matrix;->setScale(FF)V
+
+    iget-object p5, p0, Lcom/android/systemui/pip/PipSurfaceTransactionHelper;->mTmpTransform:Landroid/graphics/Matrix;
+
+    iget-object v0, p0, Lcom/android/systemui/pip/PipSurfaceTransactionHelper;->mTmpFloat9:[F
+
+    invoke-virtual {p1, p2, p5, v0}, Landroid/view/SurfaceControl$Transaction;->setMatrix(Landroid/view/SurfaceControl;Landroid/graphics/Matrix;[F)Landroid/view/SurfaceControl$Transaction;
+
+    move-result-object p1
+
+    iget-object p5, p0, Lcom/android/systemui/pip/PipSurfaceTransactionHelper;->mTmpDestinationRect:Landroid/graphics/Rect;
+
+    invoke-virtual {p1, p2, p5}, Landroid/view/SurfaceControl$Transaction;->setWindowCrop(Landroid/view/SurfaceControl;Landroid/graphics/Rect;)Landroid/view/SurfaceControl$Transaction;
+
+    move-result-object p1
 
     invoke-virtual {p1, p2, p3, p4}, Landroid/view/SurfaceControl$Transaction;->setPosition(Landroid/view/SurfaceControl;FF)Landroid/view/SurfaceControl$Transaction;
 

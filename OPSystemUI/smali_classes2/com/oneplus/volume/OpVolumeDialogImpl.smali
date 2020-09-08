@@ -1326,7 +1326,7 @@
 .end method
 
 .method protected loadOpDimens()V
-    .locals 4
+    .locals 6
 
     iget-object v0, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
 
@@ -1334,67 +1334,19 @@
 
     move-result-object v0
 
-    sget v1, Lcom/android/systemui/R$dimen;->oneplus_contorl_layout_margin_left1:I
+    sget v1, Lcom/android/systemui/R$dimen;->op_volume_dialog_panel_transparent_padding:I
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    const/16 v2, 0x438
 
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x2
-
-    iget-object v1, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    sget v2, Lcom/android/systemui/R$dimen;->op_volume_dialog_panel_transparent_padding:I
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-static {v0, v1, v2}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
 
     move-result v1
 
-    mul-int/lit8 v1, v1, 0x2
+    sget v3, Lcom/android/systemui/R$dimen;->op_volume_dialog_panel_width:I
 
-    add-int/2addr v0, v1
-
-    iget-object v1, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    sget v2, Lcom/android/systemui/R$dimen;->op_volume_dialog_panel_width:I
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    iput v0, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mOpBeforeExpandWidth:I
-
-    invoke-static {}, Lcom/android/systemui/util/ProductUtils;->isUsvMode()Z
+    invoke-static {v0, v3, v2}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
 
     move-result v0
-
-    const/4 v1, 0x4
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    sget v2, Lcom/android/systemui/R$dimen;->oneplus_contorl_layout_margin_left1:I
-
-    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x2
 
     iget-object v2, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
 
@@ -1402,7 +1354,7 @@
 
     move-result-object v2
 
-    sget v3, Lcom/android/systemui/R$dimen;->op_volume_dialog_panel_transparent_padding:I
+    sget v3, Lcom/android/systemui/R$dimen;->oneplus_contorl_layout_margin_left1:I
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1410,7 +1362,21 @@
 
     mul-int/lit8 v2, v2, 0x2
 
-    add-int/2addr v0, v2
+    mul-int/lit8 v1, v1, 0x2
+
+    add-int/2addr v2, v1
+
+    add-int/2addr v2, v0
+
+    iput v2, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mOpBeforeExpandWidth:I
+
+    invoke-static {}, Lcom/android/systemui/util/ProductUtils;->isUsvMode()Z
+
+    move-result v2
+
+    const/4 v3, 0x4
+
+    if-eqz v2, :cond_0
 
     iget-object v2, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
 
@@ -1418,125 +1384,103 @@
 
     move-result-object v2
 
-    sget v3, Lcom/android/systemui/R$dimen;->op_volume_dialog_panel_width:I
+    sget v4, Lcom/android/systemui/R$dimen;->oneplus_contorl_layout_margin_left1:I
 
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v2
 
-    mul-int/2addr v2, v1
+    mul-int/lit8 v2, v2, 0x2
 
-    add-int/2addr v0, v2
+    add-int/2addr v2, v1
 
-    iput v0, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mOpafterExpandWidth:I
+    mul-int/2addr v0, v3
+
+    add-int/2addr v2, v0
+
+    iput v2, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mOpafterExpandWidth:I
 
     goto :goto_2
 
     :cond_0
-    const/4 v0, 0x3
+    const/4 v2, 0x3
 
     :try_start_0
-    iget-object v2, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
 
-    const-string v3, "telecom"
+    const-string v5, "telecom"
 
-    invoke-virtual {v2, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v4, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v4
 
-    check-cast v2, Landroid/telecom/TelecomManager;
+    check-cast v4, Landroid/telecom/TelecomManager;
 
-    invoke-virtual {v2}, Landroid/telecom/TelecomManager;->isInCall()Z
+    invoke-virtual {v4}, Landroid/telecom/TelecomManager;->isInCall()Z
 
-    move-result v2
+    move-result v4
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    if-eqz v2, :cond_1
+    if-eqz v4, :cond_1
 
     goto :goto_0
 
     :cond_1
-    move v1, v0
+    move v3, v2
 
     :goto_0
-    move v0, v1
+    move v2, v3
 
     goto :goto_1
 
     :catch_0
-    move-exception v1
+    move-exception v3
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "Get status of inCall status fail "
+    const-string v5, "Get status of inCall status fail "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v3
 
-    const-string v2, "OpVolumeDialogImpl"
+    const-string v4, "OpVolumeDialogImpl"
 
-    invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v4, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_1
-    iget-object v1, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v1
+    move-result-object v3
 
-    sget v2, Lcom/android/systemui/R$dimen;->oneplus_contorl_layout_margin_left1:I
+    sget v4, Lcom/android/systemui/R$dimen;->oneplus_contorl_layout_margin_left1:I
 
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    move-result v1
+    move-result v3
 
-    mul-int/lit8 v1, v1, 0x2
+    mul-int/lit8 v3, v3, 0x2
 
-    iget-object v2, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
+    add-int/2addr v3, v1
 
-    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    mul-int/2addr v2, v0
 
-    move-result-object v2
+    add-int/2addr v3, v2
 
-    sget v3, Lcom/android/systemui/R$dimen;->op_volume_dialog_panel_transparent_padding:I
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v2
-
-    mul-int/lit8 v2, v2, 0x2
-
-    add-int/2addr v1, v2
-
-    iget-object v2, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    sget v3, Lcom/android/systemui/R$dimen;->op_volume_dialog_panel_width:I
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v2
-
-    mul-int/2addr v0, v2
-
-    add-int/2addr v1, v0
-
-    iput v1, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mOpafterExpandWidth:I
+    iput v3, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mOpafterExpandWidth:I
 
     :goto_2
     return-void
@@ -1857,8 +1801,309 @@
     throw p0
 .end method
 
-.method protected updateODIRelatedLayout()V
+.method protected updateButtonLayout(Landroid/view/View;Landroid/widget/ImageButton;Landroid/content/res/Resources;)V
+    .locals 4
+
+    sget p0, Lcom/android/systemui/R$dimen;->op_volume_dialog_settings_container_height:I
+
+    const/16 v0, 0x438
+
+    invoke-static {p3, p0, v0}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result p0
+
+    sget v1, Lcom/android/systemui/R$dimen;->op_volume_dialog_panel_transparent_padding:I
+
+    invoke-static {p3, v1, v0}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v1
+
+    sget v2, Lcom/android/systemui/R$dimen;->op_volume_dialog_panel_width:I
+
+    invoke-static {p3, v2, v0}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v2
+
+    sget v3, Lcom/android/systemui/R$dimen;->op_volume_dialog_settings_margin:I
+
+    invoke-static {p3, v3, v0}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result p3
+
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    iput p0, v0, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+
+    const/4 p0, 0x0
+
+    invoke-virtual {v0, v1, p0, v1, p0}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-virtual {p2}, Landroid/widget/ImageButton;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object p1
+
+    iput v2, p1, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    iput v2, p1, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    invoke-virtual {p2, p3, p0, p3, p0}, Landroid/widget/ImageButton;->setPadding(IIII)V
+
+    invoke-virtual {p2, p1}, Landroid/widget/ImageButton;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+.end method
+
+.method protected updateDialogLayout()V
     .locals 12
+
+    iget-object v0, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
+
+    if-eqz v0, :cond_1
+
+    invoke-static {v0}, Lcom/oneplus/util/OpUtils;->isSupportResolutionSwitch(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto/16 :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lcom/android/systemui/R$dimen;->op_volume_dialog_panel_width:I
+
+    const/16 v2, 0x438
+
+    invoke-static {v0, v1, v2}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v1
+
+    sget v3, Lcom/android/systemui/R$dimen;->op_volume_dialog_panel_transparent_padding:I
+
+    invoke-static {v0, v3, v2}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v3
+
+    sget v4, Lcom/android/systemui/R$dimen;->op_volume_dialog_outer_size:I
+
+    invoke-static {v0, v4, v2}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v4
+
+    sget v5, Lcom/android/systemui/R$dimen;->op_volume_dialog_elevation:I
+
+    invoke-static {v0, v5, v2}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v5
+
+    sget v6, Lcom/android/systemui/R$dimen;->op_volume_dialog_output_chooser_padding:I
+
+    invoke-static {v0, v6, v2}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v6
+
+    sget v7, Lcom/android/systemui/R$dimen;->op_volume_dialog_output_chooser_padding2:I
+
+    invoke-static {v0, v7, v2}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v7
+
+    sget v8, Lcom/android/systemui/R$dimen;->op_volume_dialog_image_icon_width:I
+
+    invoke-static {v0, v8, v2}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v8
+
+    sget v9, Lcom/android/systemui/R$dimen;->op_volume_dialog_output_chooser_expand_text_size:I
+
+    invoke-static {v0, v9, v2}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v9
+
+    sget v10, Lcom/android/systemui/R$dimen;->op_volume_dialog_settings_margin:I
+
+    invoke-static {v0, v10, v2}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    sget v10, Lcom/android/systemui/R$dimen;->op_volume_dialog_settings_container_height:I
+
+    invoke-static {v0, v10, v2}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    invoke-direct {p0}, Lcom/oneplus/volume/OpVolumeDialogImpl;->getDialogView()Landroid/view/ViewGroup;
+
+    move-result-object v10
+
+    invoke-virtual {v10, v1}, Landroid/view/ViewGroup;->setMinimumWidth(I)V
+
+    invoke-direct {p0}, Lcom/oneplus/volume/OpVolumeDialogImpl;->getDialogView()Landroid/view/ViewGroup;
+
+    move-result-object v10
+
+    sget v11, Lcom/android/systemui/R$id;->main:I
+
+    invoke-virtual {v10, v11}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+
+    move-result-object v10
+
+    invoke-virtual {v10, v1}, Landroid/view/View;->setMinimumWidth(I)V
+
+    iget-object v1, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mDialogRowContainer:Landroid/view/ViewGroup;
+
+    sget v10, Lcom/android/systemui/R$dimen;->op_volume_dialog_content_padding_top:I
+
+    invoke-static {v0, v10, v2}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v10
+
+    const/4 v11, 0x0
+
+    invoke-virtual {v1, v3, v10, v3, v11}, Landroid/view/ViewGroup;->setPadding(IIII)V
+
+    iget-object v1, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mOutputChooserBackgroundView:Landroid/view/View;
+
+    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    iput v4, v1, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+
+    iput v5, v1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+
+    iput v5, v1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+
+    iget-object v3, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mOutputChooserBackgroundView:Landroid/view/View;
+
+    invoke-virtual {v3, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object v1, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mOutputChooser:Landroid/widget/ImageButton;
+
+    invoke-virtual {v1}, Landroid/widget/ImageButton;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v1
+
+    iput v8, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    iput v4, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    iget-object v3, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mOutputChooser:Landroid/widget/ImageButton;
+
+    invoke-virtual {v3, v11, v6, v11, v6}, Landroid/widget/ImageButton;->setPadding(IIII)V
+
+    iget-object v3, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mOutputChooser:Landroid/widget/ImageButton;
+
+    invoke-virtual {v3, v1}, Landroid/widget/ImageButton;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object v1, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mOutputChooserExpandIcon:Landroid/widget/ImageView;
+
+    invoke-virtual {v1}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v1
+
+    iput v8, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    iput v4, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    iget-object v3, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mOutputChooserExpandIcon:Landroid/widget/ImageView;
+
+    invoke-virtual {v3, v11, v7, v11, v7}, Landroid/widget/ImageView;->setPadding(IIII)V
+
+    iget-object v3, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mOutputChooserExpandIcon:Landroid/widget/ImageView;
+
+    invoke-virtual {v3, v1}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object v1, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mOutputChooserExpandEditText:Landroid/widget/EditText;
+
+    int-to-float v3, v9
+
+    invoke-virtual {v1, v11, v3}, Landroid/widget/EditText;->setTextSize(IF)V
+
+    iget-object v1, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mOutputChooserExpandTextView:Landroid/widget/TextView;
+
+    invoke-virtual {v1, v11, v3}, Landroid/widget/TextView;->setTextSize(IF)V
+
+    iget-object v1, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mConnectedDevice:Landroid/widget/TextView;
+
+    sget v3, Lcom/android/systemui/R$dimen;->op_volume_dialog_volume_row_connected_device_text_size:I
+
+    invoke-static {v0, v3, v2}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    invoke-virtual {v1, v11, v3}, Landroid/widget/TextView;->setTextSize(IF)V
+
+    invoke-virtual {p0, v0}, Lcom/oneplus/volume/OpVolumeDialogImpl;->updateVolumeRowLayout(Landroid/content/res/Resources;)V
+
+    invoke-direct {p0}, Lcom/oneplus/volume/OpVolumeDialogImpl;->getSettingsView()Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-direct {p0}, Lcom/oneplus/volume/OpVolumeDialogImpl;->getSettingsIcon()Landroid/widget/ImageButton;
+
+    move-result-object v3
+
+    invoke-virtual {p0, v1, v3, v0}, Lcom/oneplus/volume/OpVolumeDialogImpl;->updateButtonLayout(Landroid/view/View;Landroid/widget/ImageButton;Landroid/content/res/Resources;)V
+
+    invoke-direct {p0}, Lcom/oneplus/volume/OpVolumeDialogImpl;->getSettingsBackView()Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-direct {p0}, Lcom/oneplus/volume/OpVolumeDialogImpl;->getSettingsBackIcon()Landroid/widget/ImageButton;
+
+    move-result-object v3
+
+    invoke-virtual {p0, v1, v3, v0}, Lcom/oneplus/volume/OpVolumeDialogImpl;->updateButtonLayout(Landroid/view/View;Landroid/widget/ImageButton;Landroid/content/res/Resources;)V
+
+    invoke-direct {p0}, Lcom/oneplus/volume/OpVolumeDialogImpl;->getSettingsOpSettingsView()Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-direct {p0}, Lcom/oneplus/volume/OpVolumeDialogImpl;->getSettingsOpSettingsIcon()Landroid/widget/ImageButton;
+
+    move-result-object v3
+
+    invoke-virtual {p0, v1, v3, v0}, Lcom/oneplus/volume/OpVolumeDialogImpl;->updateButtonLayout(Landroid/view/View;Landroid/widget/ImageButton;Landroid/content/res/Resources;)V
+
+    iget-object v1, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mODICaptionsView:Landroid/view/ViewGroup;
+
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v1
+
+    sget v3, Lcom/android/systemui/R$dimen;->op_volume_dialog_odi_captions_bottom_height:I
+
+    invoke-static {v0, v3, v2}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v0
+
+    iput v0, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    invoke-direct {p0}, Lcom/oneplus/volume/OpVolumeDialogImpl;->getDialogView()Landroid/view/ViewGroup;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->invalidate()V
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
+.method protected updateODIRelatedLayout()V
+    .locals 13
 
     iget-object v0, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
 
@@ -1868,37 +2113,39 @@
 
     sget v1, Lcom/android/systemui/R$dimen;->op_volume_dialog_icon_size:I
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    const/16 v2, 0x438
+
+    invoke-static {v0, v1, v2}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v1
+
+    sget v3, Lcom/android/systemui/R$dimen;->op_volume_dialog_odi_captions_margin:I
+
+    invoke-static {v0, v3, v2}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v3
+
+    sget v4, Lcom/android/systemui/R$dimen;->op_volume_dialog_settings_container_height:I
+
+    invoke-static {v0, v4, v2}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v4
+
+    sget v5, Lcom/android/systemui/R$dimen;->op_volume_dialog_row_margin_bottom:I
+
+    invoke-static {v0, v5, v2}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v5
+
+    sget v6, Lcom/android/systemui/R$dimen;->op_volume_dialog_slider_height:I
+
+    invoke-static {v0, v6, v2}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
+    mul-int/lit8 v3, v3, 0x2
 
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    sget v2, Lcom/android/systemui/R$dimen;->op_volume_dialog_odi_captions_margin:I
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v1
-
-    mul-int/lit8 v1, v1, 0x2
-
-    add-int/2addr v0, v1
-
-    iget-object v1, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    sget v2, Lcom/android/systemui/R$dimen;->op_volume_dialog_settings_container_height:I
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v1
+    add-int/2addr v3, v1
 
     iget-object v2, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
 
@@ -1906,11 +2153,19 @@
 
     move-result-object v2
 
-    sget v3, Lcom/android/systemui/R$dimen;->op_volume_dialog_row_margin_bottom:I
+    sget v6, Lcom/android/systemui/R$dimen;->oneplus_contorl_layout_margin_left1:I
 
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v2, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v2
+
+    invoke-direct {p0}, Lcom/oneplus/volume/OpVolumeDialogImpl;->isLandscape()Z
+
+    move-result v6
+
+    const-string v7, "OpVolumeDialogImpl"
+
+    if-eqz v6, :cond_1
 
     iget-object v3, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
 
@@ -1918,11 +2173,11 @@
 
     move-result-object v3
 
-    sget v4, Lcom/android/systemui/R$dimen;->oneplus_contorl_layout_margin_left1:I
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    move-result-object v3
 
-    move-result v3
+    iget v3, v3, Landroid/content/res/Configuration;->smallestScreenWidthDp:I
 
     iget-object v4, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
 
@@ -1930,279 +2185,235 @@
 
     move-result-object v4
 
-    sget v5, Lcom/android/systemui/R$dimen;->op_volume_dialog_slider_height:I
+    sget v5, Lcom/android/systemui/R$dimen;->op_volume_dialog_odi_captions_margin_land:I
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v4
 
-    invoke-direct {p0}, Lcom/oneplus/volume/OpVolumeDialogImpl;->isLandscape()Z
+    invoke-direct {p0}, Lcom/oneplus/volume/OpVolumeDialogImpl;->getDialogView()Landroid/view/ViewGroup;
 
-    move-result v5
+    move-result-object v5
 
-    const-string v6, "OpVolumeDialogImpl"
+    invoke-virtual {v5}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    if-eqz v5, :cond_1
+    move-result-object v5
 
-    iget-object v0, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
+    check-cast v5, Landroid/widget/FrameLayout$LayoutParams;
 
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    const/16 v5, 0x19b
 
-    move-result-object v0
+    const v6, 0x43cd8000    # 411.0f
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    const-wide/high16 v8, 0x3ff8000000000000L    # 1.5
 
-    move-result-object v0
+    if-gt v3, v5, :cond_0
 
-    iget v0, v0, Landroid/content/res/Configuration;->smallestScreenWidthDp:I
+    int-to-float v5, v3
 
-    iget-object v1, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
+    div-float/2addr v5, v6
 
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    const/high16 v10, 0x3f000000    # 0.5f
 
-    move-result-object v1
+    mul-float/2addr v5, v10
 
-    sget v2, Lcom/android/systemui/R$dimen;->op_volume_dialog_odi_captions_margin_land:I
+    int-to-float v4, v4
 
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    mul-float/2addr v4, v5
 
-    move-result v1
+    float-to-int v4, v4
+
+    new-instance v10, Ljava/lang/StringBuilder;
+
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v11, "mODICaptionsView swdp:"
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v11, " resizeRate:"
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, v5}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-static {v7, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-direct {p0}, Lcom/oneplus/volume/OpVolumeDialogImpl;->getDialogView()Landroid/view/ViewGroup;
 
-    move-result-object v2
+    move-result-object v10
 
-    invoke-virtual {v2}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    int-to-float v11, v2
 
-    move-result-object v2
+    mul-float/2addr v11, v5
 
-    check-cast v2, Landroid/widget/FrameLayout$LayoutParams;
+    float-to-int v5, v11
 
-    const/16 v2, 0x19b
+    int-to-double v11, v2
 
-    const v5, 0x43cd8000    # 411.0f
+    mul-double/2addr v11, v8
 
-    const-wide/high16 v7, 0x3ff8000000000000L    # 1.5
+    double-to-int v8, v11
 
-    if-gt v0, v2, :cond_0
-
-    int-to-float v2, v0
-
-    div-float/2addr v2, v5
-
-    const/high16 v9, 0x3f000000    # 0.5f
-
-    mul-float/2addr v2, v9
-
-    int-to-float v1, v1
-
-    mul-float/2addr v1, v2
-
-    float-to-int v1, v1
-
-    new-instance v9, Ljava/lang/StringBuilder;
-
-    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v10, "mODICaptionsView swdp:"
-
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v9, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v10, " resizeRate:"
-
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v9, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v9
-
-    invoke-static {v6, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    invoke-direct {p0}, Lcom/oneplus/volume/OpVolumeDialogImpl;->getDialogView()Landroid/view/ViewGroup;
-
-    move-result-object v9
-
-    int-to-float v10, v3
-
-    mul-float/2addr v10, v2
-
-    float-to-int v2, v10
-
-    int-to-double v10, v3
-
-    mul-double/2addr v10, v7
-
-    double-to-int v7, v10
-
-    invoke-virtual {v9, v3, v2, v7, v3}, Landroid/view/ViewGroup;->setPadding(IIII)V
+    invoke-virtual {v10, v2, v5, v8, v2}, Landroid/view/ViewGroup;->setPadding(IIII)V
 
     goto :goto_0
 
     :cond_0
     invoke-direct {p0}, Lcom/oneplus/volume/OpVolumeDialogImpl;->getDialogView()Landroid/view/ViewGroup;
 
-    move-result-object v2
+    move-result-object v5
 
-    int-to-double v9, v3
+    int-to-double v10, v2
 
-    mul-double/2addr v9, v7
+    mul-double/2addr v10, v8
 
-    double-to-int v7, v9
+    double-to-int v8, v10
 
-    invoke-virtual {v2, v3, v3, v7, v3}, Landroid/view/ViewGroup;->setPadding(IIII)V
+    invoke-virtual {v5, v2, v2, v8, v2}, Landroid/view/ViewGroup;->setPadding(IIII)V
 
     :goto_0
-    move v2, v1
+    move v5, v4
 
-    iget-object v1, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
+    mul-int/lit8 v2, v5, 0x2
 
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    sget v3, Lcom/android/systemui/R$dimen;->op_volume_dialog_icon_size:I
-
-    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v1
-
-    mul-int/lit8 v3, v2, 0x2
-
-    add-int/2addr v1, v3
-
-    int-to-float v3, v4
+    add-int v4, v1, v2
 
     int-to-float v0, v0
 
-    div-float/2addr v0, v5
+    int-to-float v1, v3
 
-    const v4, 0x3f6e147b    # 0.93f
+    div-float/2addr v1, v6
 
-    mul-float/2addr v0, v4
+    const v2, 0x3f6e147b    # 0.93f
 
-    mul-float/2addr v3, v0
+    mul-float/2addr v1, v2
 
-    float-to-int v4, v3
+    mul-float/2addr v0, v1
 
-    move v0, v1
+    float-to-int v0, v0
+
+    move v3, v4
 
     :cond_1
-    iget-object v3, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mRows:Ljava/util/List;
+    iget-object v1, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mRows:Ljava/util/List;
 
-    invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object v3
+    move-result-object v1
 
     :goto_1
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v5
+    move-result v2
 
-    if-eqz v5, :cond_2
+    if-eqz v2, :cond_2
 
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v5
+    move-result-object v2
 
-    check-cast v5, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;
+    check-cast v2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;
 
-    iget-object v7, v5, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
+    iget-object v6, v2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
 
     sget v8, Lcom/android/systemui/R$id;->volume_row_slider:I
 
-    invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v6, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    move-result-object v7
+    move-result-object v6
 
-    invoke-virtual {v7}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v6}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v8
 
-    iput v4, v8, Landroid/view/ViewGroup$LayoutParams;->width:I
+    iput v0, v8, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    invoke-virtual {v7, v8}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v6, v8}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget-object v5, v5, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
+    iget-object v2, v2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
 
-    sget v7, Lcom/android/systemui/R$id;->volume_row_slider_frame:I
+    sget v6, Lcom/android/systemui/R$id;->volume_row_slider_frame:I
 
-    invoke-virtual {v5, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v2, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    move-result-object v5
+    move-result-object v2
 
-    check-cast v5, Landroid/widget/FrameLayout;
+    check-cast v2, Landroid/widget/FrameLayout;
 
-    invoke-virtual {v5}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v2}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    move-result-object v7
+    move-result-object v6
 
-    iput v4, v7, Landroid/view/ViewGroup$LayoutParams;->height:I
+    iput v0, v6, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    invoke-virtual {v5, v7}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v2, v6}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-virtual {v5}, Landroid/widget/FrameLayout;->invalidate()V
+    invoke-virtual {v2}, Landroid/widget/FrameLayout;->invalidate()V
 
     goto :goto_1
 
     :cond_2
-    iget-object v3, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mODICaptionsView:Landroid/view/ViewGroup;
+    iget-object v0, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mODICaptionsView:Landroid/view/ViewGroup;
 
-    const/4 v4, 0x0
+    const/4 v1, 0x0
 
-    if-eqz v3, :cond_4
+    if-eqz v0, :cond_4
 
-    iget-object v3, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mDialogUpper:Landroid/view/ViewGroup;
+    iget-object v0, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mDialogUpper:Landroid/view/ViewGroup;
 
-    if-eqz v3, :cond_4
+    if-eqz v0, :cond_4
 
-    invoke-virtual {v3, v4, v4}, Landroid/view/ViewGroup;->measure(II)V
+    invoke-virtual {v0, v1, v1}, Landroid/view/ViewGroup;->measure(II)V
 
-    iget-object v3, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mDialogUpper:Landroid/view/ViewGroup;
+    iget-object v0, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mDialogUpper:Landroid/view/ViewGroup;
 
-    invoke-virtual {v3}, Landroid/view/ViewGroup;->getMeasuredWidth()I
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getMeasuredWidth()I
 
-    move-result v3
+    move-result v0
 
-    if-le v0, v3, :cond_3
+    if-le v3, v0, :cond_3
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v7, "mODICaptionsView odiHeight:"
+    const-string v6, "mODICaptionsView odiHeight:"
 
-    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v0, " max:"
+    const-string v3, " max:"
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v7, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    move v3, v0
+
+    :cond_3
+    iput v3, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mODIViewHeight:I
+
+    iget-object v0, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mODICaptionsView:Landroid/view/ViewGroup;
+
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    invoke-static {v6, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    move v0, v3
-
-    :cond_3
-    iput v0, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mODIViewHeight:I
-
-    iget-object v3, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mODICaptionsView:Landroid/view/ViewGroup;
-
-    invoke-virtual {v3}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v3
-
-    iput v0, v3, Landroid/view/ViewGroup$LayoutParams;->height:I
+    iput v3, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     iget-object v0, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mDialogLower:Landroid/view/ViewGroup;
 
@@ -2223,7 +2434,7 @@
 
     move-result-object v0
 
-    iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
+    iput v4, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     :cond_5
     invoke-direct {p0}, Lcom/oneplus/volume/OpVolumeDialogImpl;->getSettingsBackView()Landroid/view/View;
@@ -2240,7 +2451,7 @@
 
     move-result-object v0
 
-    iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
+    iput v4, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     :cond_6
     invoke-direct {p0}, Lcom/oneplus/volume/OpVolumeDialogImpl;->getSettingsOpSettingsView()Landroid/view/View;
@@ -2257,7 +2468,7 @@
 
     move-result-object v0
 
-    iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
+    iput v4, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     :cond_7
     iget-object v0, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mRows:Ljava/util/List;
@@ -2267,33 +2478,183 @@
     move-result v0
 
     :goto_2
-    if-ge v4, v0, :cond_9
+    if-ge v1, v0, :cond_9
 
-    iget-object v1, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mRows:Ljava/util/List;
+    iget-object v2, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mRows:Ljava/util/List;
 
-    invoke-interface {v1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;
+
+    iget-object v2, v2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->icon:Landroid/widget/ImageButton;
+
+    if-eqz v2, :cond_8
+
+    invoke-virtual {v2}, Landroid/widget/ImageButton;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    iput v5, v2, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    :cond_8
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_2
+
+    :cond_9
+    return-void
+.end method
+
+.method protected updateVolumeRowLayout(Landroid/content/res/Resources;)V
+    .locals 9
+
+    sget v0, Lcom/android/systemui/R$dimen;->op_volume_dialog_panel_width:I
+
+    const/16 v1, 0x438
+
+    invoke-static {p1, v0, v1}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v0
+
+    sget v2, Lcom/android/systemui/R$dimen;->op_volume_dialog_slider_width:I
+
+    invoke-static {p1, v2, v1}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v2
+
+    sget v3, Lcom/android/systemui/R$dimen;->op_volume_dialog_slider_height:I
+
+    invoke-static {p1, v3, v1}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v3
+
+    sget v4, Lcom/android/systemui/R$dimen;->op_volume_dialog_slider_margin_bottom:I
+
+    invoke-static {p1, v4, v1}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v4
+
+    sget v5, Lcom/android/systemui/R$dimen;->op_volume_dialog_icon_size:I
+
+    invoke-static {p1, v5, v1}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v5
+
+    sget v6, Lcom/android/systemui/R$dimen;->op_volume_dialog_row_margin_bottom:I
+
+    invoke-static {p1, v6, v1}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result p1
+
+    iget-object p0, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mRows:Ljava/util/List;
+
+    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;
 
-    iget-object v1, v1, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->icon:Landroid/widget/ImageButton;
+    iget-object v6, v1, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
 
-    if-eqz v1, :cond_8
+    invoke-virtual {v6}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    invoke-virtual {v1}, Landroid/widget/ImageButton;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    move-result-object v6
 
-    move-result-object v1
+    iput v0, v6, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
+    iget-object v7, v1, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
 
-    iput v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+    invoke-virtual {v7, v6}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    :cond_8
-    add-int/lit8 v4, v4, 0x1
+    iget-object v6, v1, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
 
-    goto :goto_2
+    sget v7, Lcom/android/systemui/R$id;->volume_row_slider:I
 
-    :cond_9
+    invoke-virtual {v6, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v7
+
+    iput v3, v7, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    iput v2, v7, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    invoke-virtual {v6, v7}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object v6, v1, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
+
+    sget v7, Lcom/android/systemui/R$id;->volume_row_slider_frame:I
+
+    invoke-virtual {v6, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v6
+
+    check-cast v6, Landroid/widget/FrameLayout;
+
+    invoke-virtual {v6}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v7
+
+    check-cast v7, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    iput v3, v7, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+
+    iput v2, v7, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
+
+    const/4 v8, 0x0
+
+    invoke-virtual {v7, v8, v8, v8, v4}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
+
+    invoke-virtual {v6, v7}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object v6, v1, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
+
+    sget v7, Lcom/android/systemui/R$id;->volume_row_icon:I
+
+    invoke-virtual {v6, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v6
+
+    check-cast v6, Landroid/widget/ImageButton;
+
+    invoke-virtual {v6}, Landroid/widget/ImageButton;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v7
+
+    check-cast v7, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    iput v5, v7, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+
+    iput v5, v7, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
+
+    invoke-virtual {v7, v8, v8, v8, p1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
+
+    invoke-virtual {v6, v7}, Landroid/widget/ImageButton;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object v1, v1, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
+
+    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
+
+    goto :goto_0
+
+    :cond_0
     return-void
 .end method

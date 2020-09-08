@@ -12,6 +12,8 @@
 
 
 # instance fields
+.field private mAodBg:Lcom/oneplus/aod/bg/OpAodCanvas;
+
 .field private mAodContainer:Landroid/view/View;
 
 .field private mAodWindowView:Landroid/widget/RelativeLayout;
@@ -151,6 +153,16 @@
 
     iput-object p1, p0, Lcom/oneplus/aod/OpAodWindowManager;->mAodContainer:Landroid/view/View;
 
+    sget p1, Lcom/android/systemui/R$id;->op_aod_bg:I
+
+    invoke-virtual {p2, p1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/oneplus/aod/bg/OpAodCanvas;
+
+    iput-object p1, p0, Lcom/oneplus/aod/OpAodWindowManager;->mAodBg:Lcom/oneplus/aod/bg/OpAodCanvas;
+
     new-instance p1, Landroid/os/HandlerThread;
 
     const-string p2, "AODUIThread"
@@ -204,7 +216,15 @@
     return-void
 .end method
 
-.method static synthetic access$1000(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/oneplus/aod/OpAodWindowManager$SettingObserver;
+.method static synthetic access$1000(Lcom/oneplus/aod/OpAodWindowManager;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/oneplus/aod/OpAodWindowManager;->removeAodWindow()V
+
+    return-void
+.end method
+
+.method static synthetic access$1100(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/oneplus/aod/OpAodWindowManager$SettingObserver;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mSettingsOberver:Lcom/oneplus/aod/OpAodWindowManager$SettingObserver;
@@ -212,7 +232,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1100(Lcom/oneplus/aod/OpAodWindowManager;)Landroid/view/View;
+.method static synthetic access$1200(Lcom/oneplus/aod/OpAodWindowManager;)Landroid/view/View;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mAodContainer:Landroid/view/View;
@@ -244,7 +264,15 @@
     return-object p0
 .end method
 
-.method static synthetic access$500(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
+.method static synthetic access$500(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/oneplus/aod/bg/OpAodCanvas;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mAodBg:Lcom/oneplus/aod/bg/OpAodCanvas;
+
+    return-object p0
+.end method
+
+.method static synthetic access$600(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mUnlockController:Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
@@ -252,7 +280,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$600(Lcom/oneplus/aod/OpAodWindowManager;)Z
+.method static synthetic access$700(Lcom/oneplus/aod/OpAodWindowManager;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mIsWakeAndUnlock:Z
@@ -260,7 +288,7 @@
     return p0
 .end method
 
-.method static synthetic access$602(Lcom/oneplus/aod/OpAodWindowManager;Z)Z
+.method static synthetic access$702(Lcom/oneplus/aod/OpAodWindowManager;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/oneplus/aod/OpAodWindowManager;->mIsWakeAndUnlock:Z
@@ -268,7 +296,7 @@
     return p1
 .end method
 
-.method static synthetic access$702(Lcom/oneplus/aod/OpAodWindowManager;Ljava/lang/String;)Ljava/lang/String;
+.method static synthetic access$802(Lcom/oneplus/aod/OpAodWindowManager;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/aod/OpAodWindowManager;->mWakingUpReason:Ljava/lang/String;
@@ -276,7 +304,7 @@
     return-object p1
 .end method
 
-.method static synthetic access$800(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+.method static synthetic access$900(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/android/keyguard/KeyguardUpdateMonitor;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
@@ -284,16 +312,8 @@
     return-object p0
 .end method
 
-.method static synthetic access$900(Lcom/oneplus/aod/OpAodWindowManager;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/oneplus/aod/OpAodWindowManager;->removeAodWindow()V
-
-    return-void
-.end method
-
 .method private getAodViewLayoutParams()Landroid/view/WindowManager$LayoutParams;
-    .locals 4
+    .locals 5
 
     new-instance p0, Landroid/view/WindowManager$LayoutParams;
 
@@ -303,29 +323,47 @@
 
     iput v0, p0, Landroid/view/WindowManager$LayoutParams;->type:I
 
-    const/16 v0, 0x10
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isCtsInputmethodservice()Z
 
-    iput v0, p0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
+    move-result v0
 
-    const/4 v1, 0x3
+    if-eqz v0, :cond_0
 
-    iput v1, p0, Landroid/view/WindowManager$LayoutParams;->layoutInDisplayCutoutMode:I
+    const-string v0, "AodWindowManager"
 
-    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+    const-string v1, "no focus flag"
 
-    const/16 v3, 0x1b
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-lt v2, v3, :cond_0
+    const v0, 0x1000508
 
-    const/high16 v2, 0x200000
-
-    or-int/2addr v0, v2
-
-    iput v0, p0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
+    goto :goto_0
 
     :cond_0
     const v0, 0x1000500
 
+    :goto_0
+    const/16 v1, 0x10
+
+    iput v1, p0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
+
+    const/4 v2, 0x3
+
+    iput v2, p0, Landroid/view/WindowManager$LayoutParams;->layoutInDisplayCutoutMode:I
+
+    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v4, 0x1b
+
+    if-lt v3, v4, :cond_1
+
+    const/high16 v3, 0x200000
+
+    or-int/2addr v1, v3
+
+    iput v1, p0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
+
+    :cond_1
     iput v0, p0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     const/4 v0, -0x2
@@ -350,7 +388,7 @@
 
     invoke-virtual {p0, v0}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    iput v1, p0, Landroid/view/WindowManager$LayoutParams;->softInputMode:I
+    iput v2, p0, Landroid/view/WindowManager$LayoutParams;->softInputMode:I
 
     return-object p0
 .end method
@@ -426,6 +464,10 @@
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setAlpha(F)V
 
+    iget-object v2, p0, Lcom/oneplus/aod/OpAodWindowManager;->mAodBg:Lcom/oneplus/aod/bg/OpAodCanvas;
+
+    invoke-virtual {v2}, Lcom/oneplus/aod/bg/OpAodCanvas;->reset()V
+
     iget-object v2, p0, Lcom/oneplus/aod/OpAodWindowManager;->mAodWindowView:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v2}, Landroid/widget/RelativeLayout;->isAttachedToWindow()Z
@@ -472,9 +514,21 @@
 
     invoke-virtual {v2, v1}, Landroid/widget/RelativeLayout;->setSystemUiVisibility(I)V
 
+    iget-object v1, p0, Lcom/oneplus/aod/OpAodWindowManager;->mAodWindowView:Landroid/widget/RelativeLayout;
+
+    invoke-virtual {v1, v0}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+
     iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mAodWindowView:Landroid/widget/RelativeLayout;
 
-    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getWindowInsetsController()Landroid/view/WindowInsetsController;
+
+    move-result-object p0
+
+    invoke-static {}, Landroid/view/WindowInsets$Type;->navigationBars()I
+
+    move-result v0
+
+    invoke-interface {p0, v0}, Landroid/view/WindowInsetsController;->hide(I)V
 
     return-void
 .end method
@@ -850,103 +904,126 @@
 .method public genAodDisappearAnimation(Z)Landroid/animation/AnimatorSet;
     .locals 7
 
-    new-instance v0, Landroid/animation/AnimatorSet;
+    iget-object v0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mContext:Landroid/content/Context;
 
-    invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
+    invoke-static {v0, p1}, Lcom/oneplus/aod/utils/OpCanvasAodHelper;->isCanvasAodAnimation(Landroid/content/Context;Z)Z
 
-    iput-object v0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mDisppearAnimation:Landroid/animation/AnimatorSet;
+    move-result v0
 
-    new-instance v0, Landroid/view/animation/PathInterpolator;
+    new-instance v1, Landroid/animation/AnimatorSet;
 
-    const v1, 0x3ecccccd    # 0.4f
+    invoke-direct {v1}, Landroid/animation/AnimatorSet;-><init>()V
 
-    const/4 v2, 0x0
+    iput-object v1, p0, Lcom/oneplus/aod/OpAodWindowManager;->mDisppearAnimation:Landroid/animation/AnimatorSet;
 
-    const v3, 0x3e99999a    # 0.3f
+    new-instance v1, Ljava/util/ArrayList;
 
-    const/high16 v4, 0x3f800000    # 1.0f
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-direct {v0, v1, v2, v3, v4}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
+    new-instance v2, Landroid/view/animation/PathInterpolator;
 
-    new-instance v1, Landroid/animation/ValueAnimator;
+    const v3, 0x3ecccccd    # 0.4f
 
-    invoke-direct {v1}, Landroid/animation/ValueAnimator;-><init>()V
+    const/4 v4, 0x0
 
-    const/4 v1, 0x2
+    const v5, 0x3e99999a    # 0.3f
 
-    new-array v2, v1, [F
+    const/high16 v6, 0x3f800000    # 1.0f
 
-    fill-array-data v2, :array_0
+    invoke-direct {v2, v3, v4, v5, v6}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
 
-    invoke-static {v2}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+    new-instance v3, Landroid/animation/ValueAnimator;
 
-    move-result-object v2
+    invoke-direct {v3}, Landroid/animation/ValueAnimator;-><init>()V
 
-    invoke-virtual {v2, v0}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+    const/4 v3, 0x2
 
-    const-string v3, "debug.aod.disappear.animation"
+    new-array v4, v3, [F
 
-    const/16 v4, 0xe1
-
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
-
-    move-result v3
-
-    const-wide/16 v4, 0x177
-
-    invoke-virtual {v2, v4, v5}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
-
-    new-instance v4, Lcom/oneplus/aod/OpAodWindowManager$5;
-
-    invoke-direct {v4, p0}, Lcom/oneplus/aod/OpAodWindowManager$5;-><init>(Lcom/oneplus/aod/OpAodWindowManager;)V
-
-    invoke-virtual {v2, v4}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    new-instance v4, Landroid/animation/ValueAnimator;
-
-    invoke-direct {v4}, Landroid/animation/ValueAnimator;-><init>()V
-
-    new-array v4, v1, [F
-
-    fill-array-data v4, :array_1
+    fill-array-data v4, :array_0
 
     invoke-static {v4}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
     move-result-object v4
 
+    invoke-virtual {v4, v2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    const-wide/16 v5, 0x177
+
+    invoke-virtual {v4, v5, v6}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+
+    new-instance v5, Lcom/oneplus/aod/OpAodWindowManager$5;
+
+    invoke-direct {v5, p0, v0}, Lcom/oneplus/aod/OpAodWindowManager$5;-><init>(Lcom/oneplus/aod/OpAodWindowManager;Z)V
+
+    invoke-virtual {v4, v5}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    new-instance v4, Landroid/animation/ValueAnimator;
+
+    invoke-direct {v4}, Landroid/animation/ValueAnimator;-><init>()V
+
+    new-array v3, v3, [F
+
+    fill-array-data v3, :array_1
+
+    invoke-static {v3}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+
+    move-result-object v3
+
+    const/16 v4, 0xe1
+
+    const-string v5, "debug.aod.disappear.animation"
+
+    invoke-static {v5, v4}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result v4
+
     if-eqz p1, :cond_0
 
-    int-to-long v5, v3
+    int-to-long v4, v4
 
     goto :goto_0
 
     :cond_0
-    const-wide/16 v5, 0xe1
+    const-wide/16 v4, 0xe1
 
     :goto_0
-    invoke-virtual {v4, v5, v6}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    invoke-virtual {v3, v4, v5}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    invoke-virtual {v4, v0}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+    invoke-virtual {v3, v2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
     new-instance p1, Lcom/oneplus/aod/OpAodWindowManager$6;
 
-    invoke-direct {p1, p0}, Lcom/oneplus/aod/OpAodWindowManager$6;-><init>(Lcom/oneplus/aod/OpAodWindowManager;)V
+    invoke-direct {p1, p0, v0}, Lcom/oneplus/aod/OpAodWindowManager$6;-><init>(Lcom/oneplus/aod/OpAodWindowManager;Z)V
 
-    invoke-virtual {v4, p1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+    invoke-virtual {v3, p1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    if-eqz v0, :cond_1
+
+    iget-object p1, p0, Lcom/oneplus/aod/OpAodWindowManager;->mAodBg:Lcom/oneplus/aod/bg/OpAodCanvas;
+
+    invoke-virtual {p1}, Lcom/oneplus/aod/bg/OpAodCanvas;->genAodDisappearAnimation()Ljava/util/ArrayList;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_1
+
+    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+
+    :cond_1
     iget-object p1, p0, Lcom/oneplus/aod/OpAodWindowManager;->mDisppearAnimation:Landroid/animation/AnimatorSet;
 
-    new-array v0, v1, [Landroid/animation/Animator;
-
-    const/4 v1, 0x0
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x1
-
-    aput-object v4, v0, v1
-
-    invoke-virtual {p1, v0}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
+    invoke-virtual {p1, v1}, Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
 
     iget-object p1, p0, Lcom/oneplus/aod/OpAodWindowManager;->mDisppearAnimation:Landroid/animation/AnimatorSet;
 
@@ -1104,9 +1181,19 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mAodContainer:Landroid/view/View;
+
+    sget v0, Lcom/android/systemui/R$id;->op_aod_bg:I
+
+    invoke-virtual {p1, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
+
     move-result-object p1
 
-    iput-object p1, p0, Lcom/oneplus/aod/OpAodWindowManager;->mAodContainer:Landroid/view/View;
+    check-cast p1, Lcom/oneplus/aod/bg/OpAodCanvas;
+
+    iput-object p1, p0, Lcom/oneplus/aod/OpAodWindowManager;->mAodBg:Lcom/oneplus/aod/bg/OpAodCanvas;
 
     return-void
 .end method

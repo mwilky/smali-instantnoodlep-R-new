@@ -46,8 +46,8 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Landroid/content/Context;Landroid/media/projection/MediaProjection;Z)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;Landroid/media/projection/MediaProjection;Z)V
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -56,27 +56,27 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance p2, Lcom/android/systemui/screenrecord/ScreenInternalAudioRecorder$Config;
+    new-instance v0, Lcom/android/systemui/screenrecord/ScreenInternalAudioRecorder$Config;
 
-    invoke-direct {p2}, Lcom/android/systemui/screenrecord/ScreenInternalAudioRecorder$Config;-><init>()V
+    invoke-direct {v0}, Lcom/android/systemui/screenrecord/ScreenInternalAudioRecorder$Config;-><init>()V
 
-    iput-object p2, p0, Lcom/android/systemui/screenrecord/ScreenInternalAudioRecorder;->mConfig:Lcom/android/systemui/screenrecord/ScreenInternalAudioRecorder$Config;
+    iput-object v0, p0, Lcom/android/systemui/screenrecord/ScreenInternalAudioRecorder;->mConfig:Lcom/android/systemui/screenrecord/ScreenInternalAudioRecorder$Config;
 
-    const/4 p2, -0x1
+    const/4 v0, -0x1
 
-    iput p2, p0, Lcom/android/systemui/screenrecord/ScreenInternalAudioRecorder;->mTrackId:I
+    iput v0, p0, Lcom/android/systemui/screenrecord/ScreenInternalAudioRecorder;->mTrackId:I
 
-    iput-boolean p4, p0, Lcom/android/systemui/screenrecord/ScreenInternalAudioRecorder;->mMic:Z
+    iput-boolean p3, p0, Lcom/android/systemui/screenrecord/ScreenInternalAudioRecorder;->mMic:Z
 
-    new-instance p2, Landroid/media/MediaMuxer;
+    new-instance p3, Landroid/media/MediaMuxer;
 
-    const/4 p4, 0x0
+    const/4 v0, 0x0
 
-    invoke-direct {p2, p1, p4}, Landroid/media/MediaMuxer;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p3, p1, v0}, Landroid/media/MediaMuxer;-><init>(Ljava/lang/String;I)V
 
-    iput-object p2, p0, Lcom/android/systemui/screenrecord/ScreenInternalAudioRecorder;->mMuxer:Landroid/media/MediaMuxer;
+    iput-object p3, p0, Lcom/android/systemui/screenrecord/ScreenInternalAudioRecorder;->mMuxer:Landroid/media/MediaMuxer;
 
-    iput-object p3, p0, Lcom/android/systemui/screenrecord/ScreenInternalAudioRecorder;->mMediaProjection:Landroid/media/projection/MediaProjection;
+    iput-object p2, p0, Lcom/android/systemui/screenrecord/ScreenInternalAudioRecorder;->mMediaProjection:Landroid/media/projection/MediaProjection;
 
     sget-object p2, Lcom/android/systemui/screenrecord/ScreenInternalAudioRecorder;->TAG:Ljava/lang/String;
 
@@ -84,9 +84,9 @@
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string p4, "creating audio file "
+    const-string v0, "creating audio file "
 
-    invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -851,6 +851,11 @@
 
 .method public start()V
     .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/IllegalStateException;
+        }
+    .end annotation
 
     iget-object v0, p0, Lcom/android/systemui/screenrecord/ScreenInternalAudioRecorder;->mThread:Ljava/lang/Thread;
 
@@ -912,20 +917,20 @@
 
     const/4 v1, 0x3
 
-    if-eq v0, v1, :cond_2
+    if-ne v0, v1, :cond_2
 
-    sget-object p0, Lcom/android/systemui/screenrecord/ScreenInternalAudioRecorder;->TAG:Ljava/lang/String;
-
-    const-string v0, "Error starting audio recording"
-
-    invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-
-    :cond_2
     iget-object p0, p0, Lcom/android/systemui/screenrecord/ScreenInternalAudioRecorder;->mThread:Ljava/lang/Thread;
 
     invoke-virtual {p0}, Ljava/lang/Thread;->start()V
 
     return-void
+
+    :cond_2
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Audio recording failed to start"
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method

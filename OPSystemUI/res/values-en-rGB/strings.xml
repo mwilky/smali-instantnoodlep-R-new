@@ -39,6 +39,11 @@
     <string name="abc_slice_updated">Updated %1$s</string>
     <string name="abc_slices_permission_request">%1$s wants to show %2$s slices</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
+    <string name="about_action_bar_title">About</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Privacy Policy</string>
+    <string name="about_release_note_title">Update log:</string>
+    <string name="about_terms_service">Terms of Service</string>
     <string name="accessibility_accessibility_button">Accessibility</string>
     <string name="accessibility_action_divider_bottom_full">Bottom full screen</string>
     <string name="accessibility_action_divider_left_30">Left 30%</string>
@@ -267,7 +272,7 @@
     <string name="accessibility_wimax_signal_full">WiMAX signal full.</string>
     <string name="accessibility_wimax_three_bars">WiMAX three bars.</string>
     <string name="accessibility_wimax_two_bars">WiMAX two bars.</string>
-    <string name="accessibility_work_life_balance_mode">Work Life Balance</string>
+    <string name="accessibility_work_life_balance_mode">Work-Life Balance</string>
     <string name="accessibility_work_life_balance_mode_off">Work-Life Balance mode turned off.</string>
     <string name="accessibility_work_life_balance_mode_on">Work-Life Balance mode turned on.</string>
     <string name="accessibility_zero_bars">Zero bars.</string>
@@ -598,6 +603,7 @@ Selection"</string>
     <string name="controls_favorite_other_zone_header">Other</string>
     <string name="controls_favorite_rearrange">Hold and drag to rearrange controls</string>
     <string name="controls_favorite_removed">All controls removed</string>
+    <string name="controls_favorite_see_other_apps">See other apps</string>
     <string name="controls_favorite_subtitle">Choose controls to access from the power menu</string>
     <string name="controls_favorite_toast_no_changes">Changes not saved</string>
     <string name="controls_in_progress">In progress</string>
@@ -717,6 +723,7 @@ If you resume, charges may apply for data usage."</string>
     <string name="drag_to_rearrange_tiles">Hold and drag to rearrange tiles</string>
     <string name="drag_to_remove_disabled">You need at least %1$d tiles</string>
     <string name="drag_to_remove_tiles">Drag here to remove</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">Drag tiles to re-arrange. Tap to show or hide.</string>
     <string name="empty_shade_text">No notifications</string>
     <string name="enable_adb">USB debugging</string>
@@ -1092,6 +1099,7 @@ Try again in %2$d seconds."</string>
     <string name="left_nav_bar_button_type">Extra left button type</string>
     <string name="legacy_vpn_name">VPN</string>
     <string name="loading_injected_setting_summary">Loading…</string>
+    <string name="loading_text">Loading...</string>
     <string name="local_backup_password_summary_change">Tap to change or remove the password for desktop full backups</string>
     <string name="local_backup_password_summary_none">"Desktop full backups aren't currently protected"</string>
     <string name="local_backup_password_title">Desktop backup password</string>
@@ -1323,8 +1331,14 @@ You're also connected to a VPN, which can monitor your network activity."</strin
     <string name="oneplus_threekey_navigation_sound">All sounds allowed</string>
     <string name="oneplus_threekey_navigation_turned_on_here">It can be turned on by the toggle above</string>
     <string name="oneplus_threekey_navigation_vibration">Vibration only</string>
-    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> unlock</string>
-    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> unlocks</string>
+    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>unlock</string>
+    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>unlocks</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">Pairing...</string>
     <string name="op_earphone_connected_fail">Failed to pair. Please check the headset and Bluetooth status.</string>
     <string name="op_earphone_connected_success">Paired. Tap to set more.</string>
@@ -1354,9 +1368,10 @@ You're also connected to a VPN, which can monitor your network activity."</strin
     <string name="op_notification_channel_summary_low">Less important notifications without any sound or vibration.</string>
     <string name="op_notification_section_header_gentle">Other notifications</string>
     <string name="op_notification_silence_title">Other</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">Dark mode</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s used</string>
-    <string name="op_quick_settings_night_display_label">Night mode</string>
+    <string name="op_quick_settings_night_display_label">Vision comfort</string>
     <string name="op_quick_settings_night_display_summary_off">Night mode off. Tap to turn on</string>
     <string name="op_quick_settings_night_display_summary_on">Night mode on. Tap to turn off</string>
     <string name="op_read_mode2_dialog_black">Mono effect</string>
@@ -2104,6 +2119,16 @@ Wi‑Fi Address (BSSID)
     <string name="wifi_verbose_logging">Enable Wi‑Fi verbose logging</string>
     <string name="wifi_verbose_logging_summary">Increase Wi‑Fi logging level, show per SSID RSSI in Wi‑Fi Picker</string>
     <string name="window_animation_scale_title">Window animation scale</string>
+    <string name="wlb_break_mode_active">Active</string>
+    <string name="wlb_break_mode_active_text">%1$s Mode · %2$s</string>
+    <string name="wlb_break_mode_on_break">On Break</string>
+    <string name="wlb_break_mode_resume">Resume</string>
+    <string name="wlb_break_mode_take_break">Take a break</string>
+    <string name="wlb_qs_detail_break_mode">Break Mode</string>
+    <string name="wlb_qs_detail_break_mode_desc">Automatically resumes to previous mode after 30 Minutes</string>
+    <string name="wlb_qs_detail_life_mode">Life Mode</string>
+    <string name="wlb_qs_detail_more_setting">More settings</string>
+    <string name="wlb_qs_detail_work_mode">Work Mode</string>
     <string name="work_life_balance_mode">Work-Life Balance</string>
     <string name="zen_alarm_warning">"You won't hear your next alarm %1$s"</string>
     <string name="zen_alarm_warning_indef">"You won't hear your next alarm %1$s unless you turn this off before then"</string>

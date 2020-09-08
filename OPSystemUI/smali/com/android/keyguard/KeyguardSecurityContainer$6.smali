@@ -51,7 +51,7 @@
 
     iget-object p1, p0, Lcom/android/keyguard/KeyguardSecurityContainer$6;->this$0:Lcom/android/keyguard/KeyguardSecurityContainer;
 
-    invoke-static {p1}, Lcom/android/keyguard/KeyguardSecurityContainer;->access$1200(Lcom/android/keyguard/KeyguardSecurityContainer;)Landroid/view/animation/Animation;
+    invoke-static {p1}, Lcom/android/keyguard/KeyguardSecurityContainer;->access$1300(Lcom/android/keyguard/KeyguardSecurityContainer;)Landroid/view/animation/Animation;
 
     move-result-object p1
 
@@ -59,7 +59,7 @@
 
     iget-object p1, p0, Lcom/android/keyguard/KeyguardSecurityContainer$6;->this$0:Lcom/android/keyguard/KeyguardSecurityContainer;
 
-    invoke-static {p1}, Lcom/android/keyguard/KeyguardSecurityContainer;->access$1300(Lcom/android/keyguard/KeyguardSecurityContainer;)Landroid/view/View;
+    invoke-static {p1}, Lcom/android/keyguard/KeyguardSecurityContainer;->access$1400(Lcom/android/keyguard/KeyguardSecurityContainer;)Landroid/view/View;
 
     move-result-object p1
 
@@ -81,7 +81,7 @@
     :cond_1
     iget-object p1, p0, Lcom/android/keyguard/KeyguardSecurityContainer$6;->this$0:Lcom/android/keyguard/KeyguardSecurityContainer;
 
-    invoke-static {p1}, Lcom/android/keyguard/KeyguardSecurityContainer;->access$1200(Lcom/android/keyguard/KeyguardSecurityContainer;)Landroid/view/animation/Animation;
+    invoke-static {p1}, Lcom/android/keyguard/KeyguardSecurityContainer;->access$1300(Lcom/android/keyguard/KeyguardSecurityContainer;)Landroid/view/animation/Animation;
 
     move-result-object p1
 
@@ -89,13 +89,13 @@
 
     iget-object p1, p0, Lcom/android/keyguard/KeyguardSecurityContainer$6;->this$0:Lcom/android/keyguard/KeyguardSecurityContainer;
 
-    invoke-static {p1}, Lcom/android/keyguard/KeyguardSecurityContainer;->access$1300(Lcom/android/keyguard/KeyguardSecurityContainer;)Landroid/view/View;
+    invoke-static {p1}, Lcom/android/keyguard/KeyguardSecurityContainer;->access$1400(Lcom/android/keyguard/KeyguardSecurityContainer;)Landroid/view/View;
 
     move-result-object p1
 
     iget-object p0, p0, Lcom/android/keyguard/KeyguardSecurityContainer$6;->this$0:Lcom/android/keyguard/KeyguardSecurityContainer;
 
-    invoke-static {p0}, Lcom/android/keyguard/KeyguardSecurityContainer;->access$1200(Lcom/android/keyguard/KeyguardSecurityContainer;)Landroid/view/animation/Animation;
+    invoke-static {p0}, Lcom/android/keyguard/KeyguardSecurityContainer;->access$1300(Lcom/android/keyguard/KeyguardSecurityContainer;)Landroid/view/animation/Animation;
 
     move-result-object p0
 

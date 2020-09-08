@@ -18,21 +18,11 @@
 
 
 # instance fields
-.field private final mediaDataManagerCombineLatestProvider:Ljavax/inject/Provider;
+.field private final mediaDataFilterProvider:Ljavax/inject/Provider;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljavax/inject/Provider<",
-            "Lcom/android/systemui/media/MediaDataCombineLatest;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final mediaDataManagerProvider:Ljavax/inject/Provider;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljavax/inject/Provider<",
-            "Lcom/android/systemui/media/MediaDataManager;",
+            "Lcom/android/systemui/media/MediaDataFilter;",
             ">;"
         }
     .end annotation
@@ -70,7 +60,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
+.method public constructor <init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -82,10 +72,7 @@
             "Lcom/android/systemui/media/MediaHierarchyManager;",
             ">;",
             "Ljavax/inject/Provider<",
-            "Lcom/android/systemui/media/MediaDataManager;",
-            ">;",
-            "Ljavax/inject/Provider<",
-            "Lcom/android/systemui/media/MediaDataCombineLatest;",
+            "Lcom/android/systemui/media/MediaDataFilter;",
             ">;",
             "Ljavax/inject/Provider<",
             "Lcom/android/systemui/media/MediaHostStatesManager;",
@@ -99,17 +86,15 @@
 
     iput-object p2, p0, Lcom/android/systemui/media/MediaHost_Factory;->mediaHierarchyManagerProvider:Ljavax/inject/Provider;
 
-    iput-object p3, p0, Lcom/android/systemui/media/MediaHost_Factory;->mediaDataManagerProvider:Ljavax/inject/Provider;
+    iput-object p3, p0, Lcom/android/systemui/media/MediaHost_Factory;->mediaDataFilterProvider:Ljavax/inject/Provider;
 
-    iput-object p4, p0, Lcom/android/systemui/media/MediaHost_Factory;->mediaDataManagerCombineLatestProvider:Ljavax/inject/Provider;
-
-    iput-object p5, p0, Lcom/android/systemui/media/MediaHost_Factory;->mediaHostStatesManagerProvider:Ljavax/inject/Provider;
+    iput-object p4, p0, Lcom/android/systemui/media/MediaHost_Factory;->mediaHostStatesManagerProvider:Ljavax/inject/Provider;
 
     return-void
 .end method
 
-.method public static create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/media/MediaHost_Factory;
-    .locals 7
+.method public static create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/media/MediaHost_Factory;
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -120,10 +105,7 @@
             "Lcom/android/systemui/media/MediaHierarchyManager;",
             ">;",
             "Ljavax/inject/Provider<",
-            "Lcom/android/systemui/media/MediaDataManager;",
-            ">;",
-            "Ljavax/inject/Provider<",
-            "Lcom/android/systemui/media/MediaDataCombineLatest;",
+            "Lcom/android/systemui/media/MediaDataFilter;",
             ">;",
             "Ljavax/inject/Provider<",
             "Lcom/android/systemui/media/MediaHostStatesManager;",
@@ -132,27 +114,15 @@
         }
     .end annotation
 
-    new-instance v6, Lcom/android/systemui/media/MediaHost_Factory;
+    new-instance v0, Lcom/android/systemui/media/MediaHost_Factory;
 
-    move-object v0, v6
+    invoke-direct {v0, p0, p1, p2, p3}, Lcom/android/systemui/media/MediaHost_Factory;-><init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
 
-    move-object v1, p0
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move-object v4, p3
-
-    move-object v5, p4
-
-    invoke-direct/range {v0 .. v5}, Lcom/android/systemui/media/MediaHost_Factory;-><init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
-
-    return-object v6
+    return-object v0
 .end method
 
-.method public static provideInstance(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/media/MediaHost;
-    .locals 7
+.method public static provideInstance(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/media/MediaHost;
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -163,10 +133,7 @@
             "Lcom/android/systemui/media/MediaHierarchyManager;",
             ">;",
             "Ljavax/inject/Provider<",
-            "Lcom/android/systemui/media/MediaDataManager;",
-            ">;",
-            "Ljavax/inject/Provider<",
-            "Lcom/android/systemui/media/MediaDataCombineLatest;",
+            "Lcom/android/systemui/media/MediaDataFilter;",
             ">;",
             "Ljavax/inject/Provider<",
             "Lcom/android/systemui/media/MediaHostStatesManager;",
@@ -175,71 +142,51 @@
         }
     .end annotation
 
-    new-instance v6, Lcom/android/systemui/media/MediaHost;
+    new-instance v0, Lcom/android/systemui/media/MediaHost;
 
     invoke-interface {p0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     move-result-object p0
 
-    move-object v1, p0
-
-    check-cast v1, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;
+    check-cast p0, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;
 
     invoke-interface {p1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    move-object v2, p0
-
-    check-cast v2, Lcom/android/systemui/media/MediaHierarchyManager;
+    check-cast p1, Lcom/android/systemui/media/MediaHierarchyManager;
 
     invoke-interface {p2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p2
 
-    move-object v3, p0
-
-    check-cast v3, Lcom/android/systemui/media/MediaDataManager;
+    check-cast p2, Lcom/android/systemui/media/MediaDataFilter;
 
     invoke-interface {p3}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p3
 
-    move-object v4, p0
+    check-cast p3, Lcom/android/systemui/media/MediaHostStatesManager;
 
-    check-cast v4, Lcom/android/systemui/media/MediaDataCombineLatest;
+    invoke-direct {v0, p0, p1, p2, p3}, Lcom/android/systemui/media/MediaHost;-><init>(Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;Lcom/android/systemui/media/MediaHierarchyManager;Lcom/android/systemui/media/MediaDataFilter;Lcom/android/systemui/media/MediaHostStatesManager;)V
 
-    invoke-interface {p4}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
-
-    move-result-object p0
-
-    move-object v5, p0
-
-    check-cast v5, Lcom/android/systemui/media/MediaHostStatesManager;
-
-    move-object v0, v6
-
-    invoke-direct/range {v0 .. v5}, Lcom/android/systemui/media/MediaHost;-><init>(Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;Lcom/android/systemui/media/MediaHierarchyManager;Lcom/android/systemui/media/MediaDataManager;Lcom/android/systemui/media/MediaDataCombineLatest;Lcom/android/systemui/media/MediaHostStatesManager;)V
-
-    return-object v6
+    return-object v0
 .end method
 
 
 # virtual methods
 .method public get()Lcom/android/systemui/media/MediaHost;
-    .locals 4
+    .locals 3
 
     iget-object v0, p0, Lcom/android/systemui/media/MediaHost_Factory;->stateProvider:Ljavax/inject/Provider;
 
     iget-object v1, p0, Lcom/android/systemui/media/MediaHost_Factory;->mediaHierarchyManagerProvider:Ljavax/inject/Provider;
 
-    iget-object v2, p0, Lcom/android/systemui/media/MediaHost_Factory;->mediaDataManagerProvider:Ljavax/inject/Provider;
-
-    iget-object v3, p0, Lcom/android/systemui/media/MediaHost_Factory;->mediaDataManagerCombineLatestProvider:Ljavax/inject/Provider;
+    iget-object v2, p0, Lcom/android/systemui/media/MediaHost_Factory;->mediaDataFilterProvider:Ljavax/inject/Provider;
 
     iget-object p0, p0, Lcom/android/systemui/media/MediaHost_Factory;->mediaHostStatesManagerProvider:Ljavax/inject/Provider;
 
-    invoke-static {v0, v1, v2, v3, p0}, Lcom/android/systemui/media/MediaHost_Factory;->provideInstance(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/media/MediaHost;
+    invoke-static {v0, v1, v2, p0}, Lcom/android/systemui/media/MediaHost_Factory;->provideInstance(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/media/MediaHost;
 
     move-result-object p0
 

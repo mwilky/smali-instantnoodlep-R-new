@@ -561,10 +561,15 @@ Pilihan"</string>
     <string name="controls_favorite_other_zone_header">Lain-lain</string>
     <string name="controls_favorite_rearrange">Tahan &amp; seret untuk mengatur semula kawalan</string>
     <string name="controls_favorite_removed">Semua kawalan dialih keluar</string>
+    <string name="controls_favorite_see_other_apps">Lihat apl lain</string>
     <string name="controls_favorite_subtitle">Pilih kawalan untuk diakses daripada menu kuasa</string>
     <string name="controls_favorite_toast_no_changes">Perubahan tidak disimpan</string>
     <string name="controls_in_progress">Sedang berlangsung</string>
+    <string name="controls_media_close_session">Sembunyikan sesi semasa.</string>
+    <string name="controls_media_dismiss_button">Sembunyikan</string>
     <string name="controls_media_resume">Sambung semula</string>
+    <string name="controls_media_settings_button">Tetapan</string>
+    <string name="controls_media_title">Media</string>
     <string name="controls_menu_add">Tambah kawalan</string>
     <string name="controls_menu_edit">Edit kawalan</string>
     <string name="controls_open_app">Buka apl</string>
@@ -659,6 +664,8 @@ Jika anda menyambung semula, caj mungkin digunakan untuk penggunaan data."</stri
     <string name="disconnect_vpn">Putuskan sambungan VPN</string>
     <string name="dnd_is_off">Jangan Ganggu dimatikan</string>
     <string name="dnd_suppressing_shade_text">Pemberitahuan dijeda oleh Jangan Ganggu</string>
+    <string name="do_disclosure_generic">Peranti ini milik organisasi anda</string>
+    <string name="do_disclosure_with_name">Peranti ini milik %s</string>
     <string name="do_not_silence">Jangan senyapkan</string>
     <string name="do_not_silence_block">Jangan senyapkan atau sekat</string>
     <string name="dock_alignment_not_charging">Jajarkan semula telefon untuk mengecas secara wayarles</string>
@@ -1061,8 +1068,18 @@ Untuk mendapatkan maklumat lanjut, hubungi pentadbir anda."</string>
     <string name="monitoring_description_do_learn_more_separator">" "</string>
     <string name="monitoring_description_managed_profile_ca_certificate">Organisasi anda memasang sijil kuasa dalam profil kerja anda. Trafik rangkaian selamat anda mungkin dipantau atau diubah suai.</string>
     <string name="monitoring_description_managed_profile_named_vpn">Profil kerja anda dihubungkan ke %1$s, yang dapat memantau aktiviti rangkaian anda, termasuk e-mel, apl dan tapak web.</string>
+    <string name="monitoring_description_management">"Peranti ini milik organisasi anda.
+
+Pentadbir IT anda boleh memantau dan mengurus tetapan, akses korporat, apl, data yang dikaitkan dengan peranti anda dan maklumat lokasi peranti anda.
+
+Untuk maklumat lanjut, hubungi pentadbir IT anda."</string>
     <string name="monitoring_description_management_ca_certificate">Organisasi anda memasang sijil kuasa pada peranti ini. Trafik rangkaian selamat anda mungkin dipantau atau diubah suai.</string>
     <string name="monitoring_description_management_network_logging">Pentadbir anda telah menghidupkan pengelogan rangkaian yang memantau trafik pada peranti anda.</string>
+    <string name="monitoring_description_named_management">"Peranti ini milik %1$s.
+
+Pentadbir IT anda boleh memantau dan mengurus tetapan, akses korporat, apl, data yang dikaitkan dengan peranti anda dan maklumat lokasi peranti anda.
+
+Untuk maklumat lanjut, hubungi pentadbir IT anda."</string>
     <string name="monitoring_description_named_vpn">Anda dihubungkan ke %1$s, yang boleh memantau aktiviti rangkaian anda, termasuk e-mel, apl dan tapak web.</string>
     <string name="monitoring_description_network_logging">"Pentadbir anda telah menghidupkan pengelogan rangkaian yang memantau trafik pada peranti anda.
 
@@ -1337,8 +1354,20 @@ Anda juga disambungkan ke VPN, yang boleh memantau aktiviti rangkaian."</string>
     <string name="quick_settings_dark_mode_secondary_label_until">Hingga %s</string>
     <string name="quick_settings_dark_mode_secondary_label_until_sunrise">Hingga matahari trbt</string>
     <string name="quick_settings_disclosure_managed_profile_monitoring">Organisasi anda mungkin memantau trafik rangkaian dalam profil kerja anda</string>
+    <string name="quick_settings_disclosure_managed_profile_named_vpn">Profil kerja anda dihubungkan dengan %1$s</string>
+    <string name="quick_settings_disclosure_management">Peranti ini milik organisasi anda</string>
+    <string name="quick_settings_disclosure_management_monitoring">Organisasi anda memiliki peranti ini dan mungkin memantau trafik rangkaian</string>
+    <string name="quick_settings_disclosure_management_named_vpn">Peranti ini milik organisasi anda dan dihubungkan dengan %1$s</string>
+    <string name="quick_settings_disclosure_management_vpns">Peranti ini milik organisasi anda dan dihubungkan dengan VPN</string>
     <string name="quick_settings_disclosure_monitoring">Rangkaian mungkin dipantau</string>
     <string name="quick_settings_disclosure_named_managed_profile_monitoring">%1$s mungkin memantau trafik rangkaian dalam profil kerja anda</string>
+    <string name="quick_settings_disclosure_named_management">Peranti ini milik %1$s</string>
+    <string name="quick_settings_disclosure_named_management_monitoring">%1$s memiliki peranti ini dan mungkin memantau trafik rangkaian</string>
+    <string name="quick_settings_disclosure_named_management_named_vpn">Peranti ini milik %1$s dan dihubungkan dengan %2$s</string>
+    <string name="quick_settings_disclosure_named_management_vpns">Peranti ini milik %1$s dan dihubungkan dengan VPN</string>
+    <string name="quick_settings_disclosure_named_vpn">Peranti ini dihubungkan dengan %1$s</string>
+    <string name="quick_settings_disclosure_personal_profile_named_vpn">Profil peribadi anda dihubungkan dengan %1$s</string>
+    <string name="quick_settings_disclosure_vpns">Peranti ini dihubungkan dengan VPN</string>
     <string name="quick_settings_dnd_alarms_label">Penggera sahaja</string>
     <string name="quick_settings_dnd_label">Jangan Ganggu</string>
     <string name="quick_settings_dnd_none_label">Senyap sepenuhnya</string>

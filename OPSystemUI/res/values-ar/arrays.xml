@@ -297,9 +297,9 @@
     </string-array>
     <string-array name="zzz_op_quick_pay_switch_strings">
         <item>رمز QR</item>
-        <item>مسح ضوئي</item>
+        <item>جارِ المسح الضوئي</item>
         <item>رمز QR</item>
-        <item>مسح ضوئي</item>
-        <item>الدفع</item>
+        <item>جارِ المسح الضوئي</item>
+        <item>Paytm</item>
     </string-array>
 </resources>

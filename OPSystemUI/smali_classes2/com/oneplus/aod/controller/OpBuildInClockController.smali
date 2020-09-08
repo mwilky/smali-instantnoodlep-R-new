@@ -282,6 +282,23 @@
     return-void
 .end method
 
+.method public onFodIndicationVisibilityChanged(Z)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/oneplus/aod/controller/OpClockControllerImpl;->mView:Landroid/view/View;
+
+    if-eqz v0, :cond_0
+
+    iget-object p0, p0, Lcom/oneplus/aod/controller/OpBuildInClockController;->mViewImpl:Lcom/oneplus/aod/views/IOpAodClock;
+
+    if-eqz p0, :cond_0
+
+    invoke-interface {p0, p1}, Lcom/oneplus/aod/views/IOpAodClock;->onFodIndicationVisibilityChanged(Z)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public onFodShowOrHideOnAod(Z)V
     .locals 1
 
@@ -309,6 +326,13 @@
     return-void
 
     :cond_0
+    iget-object v0, p0, Lcom/oneplus/aod/controller/OpBuildInClockController;->mViewImpl:Lcom/oneplus/aod/views/IOpAodClock;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Lcom/oneplus/aod/views/IOpAodClock;->onScreenTurnedOff()V
+
+    :cond_1
     invoke-direct {p0}, Lcom/oneplus/aod/controller/OpBuildInClockController;->endSchedule()V
 
     return-void
@@ -324,6 +348,13 @@
     return-void
 
     :cond_0
+    iget-object v0, p0, Lcom/oneplus/aod/controller/OpBuildInClockController;->mViewImpl:Lcom/oneplus/aod/views/IOpAodClock;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Lcom/oneplus/aod/views/IOpAodClock;->onScreenTurnedOn()V
+
+    :cond_1
     invoke-direct {p0}, Lcom/oneplus/aod/controller/OpBuildInClockController;->startSchedule()V
 
     return-void
@@ -347,6 +378,23 @@
 
     invoke-interface {v0, p0}, Lcom/oneplus/aod/views/IOpAodClock;->onTimeChanged(Ljava/util/Calendar;)V
 
+    return-void
+.end method
+
+.method public onUserTrigger(I)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/oneplus/aod/controller/OpClockControllerImpl;->mView:Landroid/view/View;
+
+    if-eqz v0, :cond_0
+
+    iget-object p0, p0, Lcom/oneplus/aod/controller/OpBuildInClockController;->mViewImpl:Lcom/oneplus/aod/views/IOpAodClock;
+
+    if-eqz p0, :cond_0
+
+    invoke-interface {p0, p1}, Lcom/oneplus/aod/views/IOpAodClock;->onUserTrigger(I)V
+
+    :cond_0
     return-void
 .end method
 

@@ -76,7 +76,7 @@
 
 # virtual methods
 .method public onBothCardAndChipShown(I)V
-    .locals 2
+    .locals 1
 
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -90,29 +90,27 @@
 
     invoke-static {v0}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    const-string v1, "KeyguardViewUpdateListener"
+    const-string v0, "KeyguardViewUpdateListener"
 
-    invoke-static {v1, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object p1, p0, Lcom/android/keyguard/KeyguardAssistantView$KeyguardViewUpdateListener;->this$0:Lcom/android/keyguard/KeyguardAssistantView;
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView$KeyguardViewUpdateListener;->this$0:Lcom/android/keyguard/KeyguardAssistantView;
 
-    invoke-virtual {p1}, Lcom/android/keyguard/KeyguardAssistantView;->setGoogleSmartspaceChildViewHeight()V
-
-    invoke-direct {p0, v0}, Lcom/android/keyguard/KeyguardAssistantView$KeyguardViewUpdateListener;->setKeyguardShowingHeader(Z)V
+    invoke-virtual {p0}, Lcom/android/keyguard/KeyguardAssistantView;->setGoogleSmartspaceChildViewHeight()V
 
     return-void
 .end method
 
 .method public onCardShown(I)V
-    .locals 2
+    .locals 1
 
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -126,23 +124,21 @@
 
     invoke-static {v0}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    const-string v1, "KeyguardViewUpdateListener"
+    const-string v0, "KeyguardViewUpdateListener"
 
-    invoke-static {v1, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object p1, p0, Lcom/android/keyguard/KeyguardAssistantView$KeyguardViewUpdateListener;->this$0:Lcom/android/keyguard/KeyguardAssistantView;
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView$KeyguardViewUpdateListener;->this$0:Lcom/android/keyguard/KeyguardAssistantView;
 
-    invoke-virtual {p1}, Lcom/android/keyguard/KeyguardAssistantView;->setGoogleSmartspaceChildViewHeight()V
-
-    invoke-direct {p0, v0}, Lcom/android/keyguard/KeyguardAssistantView$KeyguardViewUpdateListener;->setKeyguardShowingHeader(Z)V
+    invoke-virtual {p0}, Lcom/android/keyguard/KeyguardAssistantView;->setGoogleSmartspaceChildViewHeight()V
 
     return-void
 .end method

@@ -98,13 +98,9 @@
 
     invoke-static {p1, p2}, Lcom/android/systemui/media/MediaResumeListener;->access$setCurrentUserId$p(Lcom/android/systemui/media/MediaResumeListener;I)V
 
-    iget-object p1, p0, Lcom/android/systemui/media/MediaResumeListener$userChangeReceiver$1;->this$0:Lcom/android/systemui/media/MediaResumeListener;
-
-    invoke-static {p1}, Lcom/android/systemui/media/MediaResumeListener;->access$loadSavedComponents(Lcom/android/systemui/media/MediaResumeListener;)V
-
     iget-object p0, p0, Lcom/android/systemui/media/MediaResumeListener$userChangeReceiver$1;->this$0:Lcom/android/systemui/media/MediaResumeListener;
 
-    invoke-static {p0}, Lcom/android/systemui/media/MediaResumeListener;->access$loadMediaResumptionControls(Lcom/android/systemui/media/MediaResumeListener;)V
+    invoke-static {p0}, Lcom/android/systemui/media/MediaResumeListener;->access$loadSavedComponents(Lcom/android/systemui/media/MediaResumeListener;)V
 
     :cond_1
     :goto_0

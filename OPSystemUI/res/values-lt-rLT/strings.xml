@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="about_action_bar_title">Apie</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Privatumo politika</string>
+    <string name="about_release_note_title">Naujinimo žurnalas:</string>
+    <string name="about_terms_service">Paslaugos teikimo sąlygos</string>
     <string name="accessibility_fingerprint_dialog_help_area">Pagalbos žinutės sritis</string>
     <string name="accessibility_hide">Slėpti</string>
     <string name="accessibility_phone_four_bars">Keturi telefono stulpeliai.</string>
@@ -40,9 +45,10 @@
     <string name="delete">Šalinti</string>
     <string name="denoise_notification">Mažo prioriteto pranešimas</string>
     <string name="dialog_mhs_error">Palaukite, kol tvirtinama..</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">Jei reikia išsamios informacijos, kreipkitės į administratorių</string>
+    <string name="disable_tether_notification_title">Siejimas išjungtas</string>
     <string name="drag_to_add_tiles">Vilkite, kad įkeltumėte plyteles</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">Vilkite plyteles, kad pertvarkytumėte. Bakstelėkite, kad parodytumėte arba paslėptumėte.</string>
     <string name="end_call">Baigti</string>
     <string name="face_unlock_camera_error">Atrakinti veidu nepavyko. Kamerą naudoja kitos programos</string>
@@ -88,6 +94,7 @@ Jei telefonas bus nustatytas iš naujo, norėdami juo vėl naudotis turėsite į
     <string name="kg_wrong_pattern_warning_one">Dar turite 1 bandymą</string>
     <string name="kg_wrong_pin_warning">Dar turite 2 bandymus</string>
     <string name="kg_wrong_pin_warning_one">Dar turite 1 bandymą</string>
+    <string name="loading_text">Įkeliama...</string>
     <string name="long_press_power_navigation_assist_content">"Kad įjungtumėte balso asistentą, paspauskite ir palaikykite \"maitinimo mygtuką\" 
 "</string>
     <string name="long_press_power_navigation_power_content">Jei norite išjungti, vienu metu paspauskite \"maitinimo\" ir \"garsumo didinimo\" mygtukus</string>
@@ -118,7 +125,7 @@ Jei norite užsisakyti mobiliojo interneto prieigos taško paslaugą, apsilankyk
     <string name="notification_content_disable_button">Palieskite, kad išjungtumėte</string>
     <string name="notification_content_disable_button_in_nav">Užrakinus HW mygtukus, naršymo juosta išjungiama</string>
     <string name="notification_title_disable_button">HW MYGTUKAI UŽRAKINTI</string>
-    <string name="ok">Gerai</string>
+    <string name="ok">GERAI</string>
     <string name="oneplus_laboratory_added_toast">Sveikiname! „OnePlus“ laboratorija įkelta į parametrus</string>
     <string name="oneplus_not_show">Daugiau neberodyti</string>
     <string name="oneplus_screen_features_not_available_toast">Įjungus, ekrano funkcijos, pavyzdžiui, kalibravimo funkcija, neveiks</string>
@@ -129,8 +136,14 @@ Jei norite užsisakyti mobiliojo interneto prieigos taško paslaugą, apsilankyk
     <string name="oneplus_threekey_navigation_sound">Leidžiami visi garsai</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Įjungti galima, viršuje perjungus</string>
     <string name="oneplus_threekey_navigation_vibration">Tik vibracija</string>
-    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> atrakinimas</string>
-    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> atrakinimai (-ų)</string>
+    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>atrakinimas</string>
+    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>atrakinimai (-ų)</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">Susiejama...</string>
     <string name="op_earphone_connected_fail">Susieti nepavyko. Patikrinkite ausinių ir „Bluetooth“ būseną.</string>
     <string name="op_earphone_connected_success">Susieta. Bakstelėkite, kad nustatytumėte daugiau.</string>
@@ -160,9 +173,10 @@ Jei norite užsisakyti mobiliojo interneto prieigos taško paslaugą, apsilankyk
     <string name="op_notification_channel_summary_low">Mažiau svarbūs pranešimai be jokio garso ar vibracijos.</string>
     <string name="op_notification_section_header_gentle">Kiti pranešimai</string>
     <string name="op_notification_silence_title">Kita</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">Tamsusis režimas</string>
     <string name="op_qs_data_usage_used">%1$s: panaudota %2$s %3$s</string>
-    <string name="op_quick_settings_night_display_label">Nakties režimas</string>
+    <string name="op_quick_settings_night_display_label">Komfortas akims</string>
     <string name="op_quick_settings_night_display_summary_off">Nakties režimas išjungtas, bakstelėkite, kad įjungtumėte</string>
     <string name="op_quick_settings_night_display_summary_on">Nakties režimas įjungtas, bakstelėkite, kad išjungtumėte</string>
     <string name="op_read_mode2_dialog_black">Nespalvotas efektas</string>
@@ -264,7 +278,7 @@ Jei norite užsisakyti mobiliojo interneto prieigos taško paslaugą, apsilankyk
     <string name="tethered_notification_hybrid_sharing_mobile">Bendrinami mobilieji duomenys, spustelėkite ir įjunkite nustatymus</string>
     <string name="tethered_notification_hybrid_sharing_none">Nėra galimų bendrinti tinklų, spustelėkite ir įjunkite nustatymus</string>
     <string name="tethered_notification_hybrid_sharing_wifi">„Wi-Fi“ bendrinamas, spustelėkite ir įjunkite nustatymus</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">Bakstelėkite ir nustatykite.</string>
     <string name="tethered_notification_multi_device_message">%1$s prijungti įrenginiai</string>
     <string name="tethered_notification_multi_tether_title">Veikia pririšimas ir mobilusis interneto taškas</string>
     <string name="tethered_notification_no_device_message">Nėra prijungto įrenginio</string>
@@ -292,11 +306,21 @@ Jei norite užsisakyti mobiliojo interneto prieigos taško paslaugą, apsilankyk
     <string name="volume_footer_slient">Tylus</string>
     <string name="volume_footer_vibrate">Tylus (vibruoti)</string>
     <string name="volume_vibrate">Vibruoti</string>
-    <string name="work_life_balance_mode">„Work-Life Balance“</string>
+    <string name="wlb_break_mode_active">Aktyvus</string>
+    <string name="wlb_break_mode_active_text">%1$s Režimas · %2$s</string>
+    <string name="wlb_break_mode_on_break">Pertrauka</string>
+    <string name="wlb_break_mode_resume">Tęsti</string>
+    <string name="wlb_break_mode_take_break">Padaryti pertrauką</string>
+    <string name="wlb_qs_detail_break_mode">Pertraukos režimas</string>
+    <string name="wlb_qs_detail_break_mode_desc">Po 30 min. automatiškai vėl įjungiamas ankstesnis režimas</string>
+    <string name="wlb_qs_detail_life_mode">Laisvalaikio režimas</string>
+    <string name="wlb_qs_detail_more_setting">Daugiau nustatymų</string>
+    <string name="wlb_qs_detail_work_mode">Darbo režimas</string>
+    <string name="work_life_balance_mode">Darbo ir laisvalaikio balansas</string>
     <string name="zen_important_interruptions">Prioritetiniai pranešimai</string>
     <string name="zen_interruption_level_all">Visi pranešimai</string>
     <string name="zen_no_interruptions">Tylus</string>
     <string name="zzz_op_global_action_bootloader">Paleidimo programa</string>
     <string name="zzz_op_global_action_recovery">Atkūrimas</string>
-    <string name="zzz_op_quick_pay_no_install_message">Įdiekite mokėjimų programėles, kad galėtumėte naudoti „Quick Pay“</string>
+    <string name="zzz_op_quick_pay_no_install_message">Jei norite naudotis „Quick Pay“, įdiekite mokėjimo programų</string>
 </resources>

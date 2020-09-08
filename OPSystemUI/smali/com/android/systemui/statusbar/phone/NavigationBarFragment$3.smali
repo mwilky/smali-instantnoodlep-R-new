@@ -39,7 +39,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment$3;->this$0:Lcom/android/systemui/statusbar/phone/NavigationBarFragment;
 
-    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->access$1300(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)Lcom/android/systemui/statusbar/phone/VerticalNavigationHandle;
+    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->access$1400(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
 
     move-result-object p0
 

@@ -35,8 +35,6 @@
 
 .field private final mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
-.field private mCameraAnim:Lcom/oneplus/anim/OpCameraAnimateController;
-
 .field private mCameraLaunching:Z
 
 .field private final mConnection:Landroid/content/ServiceConnection;
@@ -226,7 +224,7 @@
 
     new-array v2, v0, [I
 
-    const/16 v3, 0xa9
+    const/16 v3, 0xa2
 
     aput v3, v2, p5
 
@@ -426,7 +424,7 @@
 
     new-array p4, v0, [I
 
-    const/16 v0, 0xf2
+    const/16 v0, 0xeb
 
     aput v0, p4, p5
 
@@ -493,16 +491,6 @@
     check-cast p1, Landroid/hardware/fingerprint/FingerprintManager;
 
     iput-object p1, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mFpm:Landroid/hardware/fingerprint/FingerprintManager;
-
-    new-instance p1, Lcom/oneplus/anim/OpCameraAnimateController;
-
-    iget-object p2, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mContext:Landroid/content/Context;
-
-    invoke-direct {p1, p2}, Lcom/oneplus/anim/OpCameraAnimateController;-><init>(Landroid/content/Context;)V
-
-    iput-object p1, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mCameraAnim:Lcom/oneplus/anim/OpCameraAnimateController;
-
-    invoke-virtual {p1}, Lcom/oneplus/anim/OpCameraAnimateController;->init()V
 
     return-void
 .end method

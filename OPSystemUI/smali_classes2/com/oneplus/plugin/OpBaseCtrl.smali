@@ -78,7 +78,10 @@
 .method public abstract onStartedWakingUp()V
 .end method
 
-.method public abstract onWallpaperChange(Landroid/graphics/Bitmap;)V
+.method public onWallpaperChange(Landroid/graphics/Bitmap;)V
+    .locals 0
+
+    return-void
 .end method
 
 .method public setCallback(Lcom/oneplus/plugin/OpBaseCtrl$ControlCallback;)V

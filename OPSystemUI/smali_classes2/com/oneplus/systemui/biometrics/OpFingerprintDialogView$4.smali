@@ -597,6 +597,61 @@
     return-void
 .end method
 
+.method public onShutdownDialogVisibilityChanged(Z)V
+    .locals 2
+
+    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$4;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
+
+    invoke-virtual {v0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->isDialogShowing()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "onShutdownDialogVisibilityChanged: show= "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "OpFingerprintDialogView"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-static {}, Lcom/oneplus/systemui/biometrics/OpFodHelper;->getInstance()Lcom/oneplus/systemui/biometrics/OpFodHelper;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oneplus/systemui/biometrics/OpFodHelper;->isEmptyClient()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$4;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->updateIconVisibility(Z)V
+
+    :cond_0
+    invoke-static {}, Lcom/oneplus/systemui/biometrics/OpFodHelper;->getInstance()Lcom/oneplus/systemui/biometrics/OpFodHelper;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFodHelper;->handleShutdownDialogVisibilityChanged(Z)V
+
+    return-void
+.end method
+
 .method public onShuttingDown()V
     .locals 2
 

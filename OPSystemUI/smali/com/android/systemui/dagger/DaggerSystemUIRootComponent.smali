@@ -1186,6 +1186,16 @@
     .end annotation
 .end field
 
+.field private mediaDataFilterProvider:Ljavax/inject/Provider;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljavax/inject/Provider<",
+            "Lcom/android/systemui/media/MediaDataFilter;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field private mediaDataManagerProvider:Ljavax/inject/Provider;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -4185,7 +4195,7 @@
 .method static synthetic access$18300(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->statusBarKeyguardViewManagerProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->biometricUnlockControllerProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -4193,12 +4203,20 @@
 .method static synthetic access$18400(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->notificationShadeDepthControllerProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->statusBarKeyguardViewManagerProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
 
 .method static synthetic access$18500(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->notificationShadeDepthControllerProvider:Ljavax/inject/Provider;
+
+    return-object p0
+.end method
+
+.method static synthetic access$18600(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->superStatusBarViewFactoryProvider:Ljavax/inject/Provider;
@@ -4931,43 +4949,29 @@
 .end method
 
 .method private getMediaHost()Lcom/android/systemui/media/MediaHost;
-    .locals 7
+    .locals 4
 
-    new-instance v6, Lcom/android/systemui/media/MediaHost;
+    new-instance v0, Lcom/android/systemui/media/MediaHost;
 
     new-instance v1, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;
 
     invoke-direct {v1}, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;-><init>()V
 
-    iget-object v0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->mediaHierarchyManagerProvider:Ljavax/inject/Provider;
+    iget-object v2, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->mediaHierarchyManagerProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v0
-
-    move-object v2, v0
+    move-result-object v2
 
     check-cast v2, Lcom/android/systemui/media/MediaHierarchyManager;
 
-    iget-object v0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->mediaDataManagerProvider:Ljavax/inject/Provider;
+    iget-object v3, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->mediaDataFilterProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v3}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v3
 
-    move-object v3, v0
-
-    check-cast v3, Lcom/android/systemui/media/MediaDataManager;
-
-    iget-object v0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->mediaDataCombineLatestProvider:Ljavax/inject/Provider;
-
-    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v4, v0
-
-    check-cast v4, Lcom/android/systemui/media/MediaDataCombineLatest;
+    check-cast v3, Lcom/android/systemui/media/MediaDataFilter;
 
     iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->mediaHostStatesManagerProvider:Ljavax/inject/Provider;
 
@@ -4975,15 +4979,11 @@
 
     move-result-object p0
 
-    move-object v5, p0
+    check-cast p0, Lcom/android/systemui/media/MediaHostStatesManager;
 
-    check-cast v5, Lcom/android/systemui/media/MediaHostStatesManager;
+    invoke-direct {v0, v1, v2, v3, p0}, Lcom/android/systemui/media/MediaHost;-><init>(Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;Lcom/android/systemui/media/MediaHierarchyManager;Lcom/android/systemui/media/MediaDataFilter;Lcom/android/systemui/media/MediaHostStatesManager;)V
 
-    move-object v0, v6
-
-    invoke-direct/range {v0 .. v5}, Lcom/android/systemui/media/MediaHost;-><init>(Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;Lcom/android/systemui/media/MediaHierarchyManager;Lcom/android/systemui/media/MediaDataManager;Lcom/android/systemui/media/MediaDataCombineLatest;Lcom/android/systemui/media/MediaHostStatesManager;)V
-
-    return-object v6
+    return-object v0
 .end method
 
 .method private getNotificationSectionsFeatureManager()Lcom/android/systemui/statusbar/notification/NotificationSectionsFeatureManager;
@@ -5175,7 +5175,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->brightnessDialogProvider:Lcom/android/systemui/settings/BrightnessDialog_Factory;
 
-    iget-object v0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideContextProvider:Lcom/android/systemui/SystemUIFactory_ContextHolder_ProvideContextFactory;
+    iget-object v0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->providesBroadcastDispatcherProvider:Ljavax/inject/Provider;
 
     invoke-static {v0}, Lcom/android/systemui/screenrecord/RecordingController_Factory;->create(Ljavax/inject/Provider;)Lcom/android/systemui/screenrecord/RecordingController_Factory;
 
@@ -5187,7 +5187,23 @@
 
     iput-object v0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->recordingControllerProvider:Ljavax/inject/Provider;
 
-    invoke-static {v0}, Lcom/android/systemui/screenrecord/ScreenRecordDialog_Factory;->create(Ljavax/inject/Provider;)Lcom/android/systemui/screenrecord/ScreenRecordDialog_Factory;
+    iget-object v0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideContextProvider:Lcom/android/systemui/SystemUIFactory_ContextHolder_ProvideContextFactory;
+
+    iget-object v1, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->providesBroadcastDispatcherProvider:Ljavax/inject/Provider;
+
+    invoke-static {v0, v1}, Lcom/android/systemui/settings/dagger/SettingsModule_ProvideCurrentUserContextTrackerFactory;->create(Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/settings/dagger/SettingsModule_ProvideCurrentUserContextTrackerFactory;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ldagger/internal/DoubleCheck;->provider(Ljavax/inject/Provider;)Ljavax/inject/Provider;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideCurrentUserContextTrackerProvider:Ljavax/inject/Provider;
+
+    iget-object v1, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->recordingControllerProvider:Ljavax/inject/Provider;
+
+    invoke-static {v1, v0}, Lcom/android/systemui/screenrecord/ScreenRecordDialog_Factory;->create(Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/screenrecord/ScreenRecordDialog_Factory;
 
     move-result-object v0
 
@@ -6285,20 +6301,6 @@
 
     iput-object p1, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->rowContentBindStageLoggerProvider:Lcom/android/systemui/statusbar/notification/row/RowContentBindStageLogger_Factory;
 
-    iget-object v0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->notificationContentInflaterProvider:Ljavax/inject/Provider;
-
-    iget-object v1, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->notifInflationErrorManagerProvider:Ljavax/inject/Provider;
-
-    invoke-static {v0, v1, p1}, Lcom/android/systemui/statusbar/notification/row/RowContentBindStage_Factory;->create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/statusbar/notification/row/RowContentBindStage_Factory;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ldagger/internal/DoubleCheck;->provider(Ljavax/inject/Provider;)Ljavax/inject/Provider;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->rowContentBindStageProvider:Ljavax/inject/Provider;
-
     return-void
 .end method
 
@@ -6306,6 +6308,22 @@
     .locals 19
 
     move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->notificationContentInflaterProvider:Ljavax/inject/Provider;
+
+    iget-object v2, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->notifInflationErrorManagerProvider:Ljavax/inject/Provider;
+
+    iget-object v3, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->rowContentBindStageLoggerProvider:Lcom/android/systemui/statusbar/notification/row/RowContentBindStageLogger_Factory;
+
+    invoke-static {v1, v2, v3}, Lcom/android/systemui/statusbar/notification/row/RowContentBindStage_Factory;->create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/statusbar/notification/row/RowContentBindStage_Factory;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ldagger/internal/DoubleCheck;->provider(Ljavax/inject/Provider;)Ljavax/inject/Provider;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->rowContentBindStageProvider:Ljavax/inject/Provider;
 
     invoke-static {}, Lcom/android/systemui/dagger/SystemServicesModule_ProvideIDreamManagerFactory;->create()Lcom/android/systemui/dagger/SystemServicesModule_ProvideIDreamManagerFactory;
 
@@ -7269,23 +7287,9 @@
 
     invoke-static {v1}, Ldagger/internal/DoubleCheck;->provider(Ljavax/inject/Provider;)Ljavax/inject/Provider;
 
-    move-result-object v1
+    move-result-object v12
 
-    iput-object v1, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->channelEditorDialogControllerProvider:Ljavax/inject/Provider;
-
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideContextProvider:Lcom/android/systemui/SystemUIFactory_ContextHolder_ProvideContextFactory;
-
-    iget-object v2, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->providesBroadcastDispatcherProvider:Ljavax/inject/Provider;
-
-    invoke-static {v1, v2}, Lcom/android/systemui/settings/dagger/SettingsModule_ProvideCurrentUserContextTrackerFactory;->create(Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/settings/dagger/SettingsModule_ProvideCurrentUserContextTrackerFactory;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ldagger/internal/DoubleCheck;->provider(Ljavax/inject/Provider;)Ljavax/inject/Provider;
-
-    move-result-object v13
-
-    iput-object v13, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideCurrentUserContextTrackerProvider:Ljavax/inject/Provider;
+    iput-object v12, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->channelEditorDialogControllerProvider:Ljavax/inject/Provider;
 
     iget-object v2, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideContextProvider:Lcom/android/systemui/SystemUIFactory_ContextHolder_ProvideContextFactory;
 
@@ -7307,7 +7311,7 @@
 
     iget-object v11, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideShortcutManagerProvider:Ljavax/inject/Provider;
 
-    iget-object v12, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->channelEditorDialogControllerProvider:Ljavax/inject/Provider;
+    iget-object v13, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideCurrentUserContextTrackerProvider:Ljavax/inject/Provider;
 
     invoke-static {}, Lcom/android/systemui/statusbar/notification/row/PriorityOnboardingDialogController_Builder_Factory;->create()Lcom/android/systemui/statusbar/notification/row/PriorityOnboardingDialogController_Builder_Factory;
 
@@ -10401,7 +10405,7 @@
 
     iget-object v1, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->proximitySensorProvider:Lcom/android/systemui/util/sensors/ProximitySensor_Factory;
 
-    iget-object v2, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideDelayableExecutorProvider:Ljavax/inject/Provider;
+    iget-object v2, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideMainDelayableExecutorProvider:Ljavax/inject/Provider;
 
     invoke-static {v1, v2}, Lcom/android/systemui/util/sensors/ProximitySensor_ProximityCheck_Factory;->create(Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/util/sensors/ProximitySensor_ProximityCheck_Factory;
 
@@ -10591,7 +10595,9 @@
 
     iget-object v4, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideNotificationManagerProvider:Ljavax/inject/Provider;
 
-    invoke-static {v2, v1, v3, v4}, Lcom/android/systemui/screenrecord/RecordingService_Factory;->create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/screenrecord/RecordingService_Factory;
+    iget-object v5, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideCurrentUserContextTrackerProvider:Ljavax/inject/Provider;
+
+    invoke-static {v2, v1, v3, v4, v5}, Lcom/android/systemui/screenrecord/RecordingService_Factory;->create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/screenrecord/RecordingService_Factory;
 
     move-result-object v1
 
@@ -11753,7 +11759,7 @@
 
     iget-object v2, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->recordingControllerProvider:Ljavax/inject/Provider;
 
-    iget-object v3, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->activityStarterDelegateProvider:Ljavax/inject/Provider;
+    iget-object v3, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->keyguardDismissUtilProvider:Ljavax/inject/Provider;
 
     invoke-static {v1, v2, v3}, Lcom/android/systemui/qs/tiles/ScreenRecordTile_Factory;->create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/qs/tiles/ScreenRecordTile_Factory;
 
@@ -12137,9 +12143,29 @@
 
     invoke-static {v1}, Ldagger/internal/DoubleCheck;->provider(Ljavax/inject/Provider;)Ljavax/inject/Provider;
 
+    move-result-object v2
+
+    iput-object v2, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->mediaDataCombineLatestProvider:Ljavax/inject/Provider;
+
+    iget-object v3, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->providesBroadcastDispatcherProvider:Ljavax/inject/Provider;
+
+    iget-object v4, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->mediaResumeListenerProvider:Ljavax/inject/Provider;
+
+    iget-object v5, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->mediaDataManagerProvider:Ljavax/inject/Provider;
+
+    iget-object v6, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->notificationLockscreenUserManagerImplProvider:Ljavax/inject/Provider;
+
+    iget-object v7, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideMainExecutorProvider:Lcom/android/systemui/util/concurrency/ConcurrencyModule_ProvideMainExecutorFactory;
+
+    invoke-static/range {v2 .. v7}, Lcom/android/systemui/media/MediaDataFilter_Factory;->create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/media/MediaDataFilter_Factory;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ldagger/internal/DoubleCheck;->provider(Ljavax/inject/Provider;)Ljavax/inject/Provider;
+
     move-result-object v8
 
-    iput-object v8, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->mediaDataCombineLatestProvider:Ljavax/inject/Provider;
+    iput-object v8, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->mediaDataFilterProvider:Ljavax/inject/Provider;
 
     iget-object v2, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideContextProvider:Lcom/android/systemui/SystemUIFactory_ContextHolder_ProvideContextFactory;
 
@@ -12155,11 +12181,9 @@
 
     iget-object v9, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideConfigurationControllerProvider:Ljavax/inject/Provider;
 
-    iget-object v10, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->mediaDataManagerProvider:Ljavax/inject/Provider;
+    iget-object v10, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->falsingManagerProxyProvider:Ljavax/inject/Provider;
 
-    iget-object v11, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->falsingManagerProxyProvider:Ljavax/inject/Provider;
-
-    invoke-static/range {v2 .. v11}, Lcom/android/systemui/media/MediaCarouselController_Factory;->create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/media/MediaCarouselController_Factory;
+    invoke-static/range {v2 .. v10}, Lcom/android/systemui/media/MediaCarouselController_Factory;->create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/media/MediaCarouselController_Factory;
 
     move-result-object v1
 
@@ -12197,13 +12221,11 @@
 
     iget-object v2, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->mediaHierarchyManagerProvider:Ljavax/inject/Provider;
 
-    iget-object v3, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->mediaDataManagerProvider:Ljavax/inject/Provider;
+    iget-object v3, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->mediaDataFilterProvider:Ljavax/inject/Provider;
 
-    iget-object v4, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->mediaDataCombineLatestProvider:Ljavax/inject/Provider;
+    iget-object v4, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->mediaHostStatesManagerProvider:Ljavax/inject/Provider;
 
-    iget-object v5, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->mediaHostStatesManagerProvider:Ljavax/inject/Provider;
-
-    invoke-static {v1, v2, v3, v4, v5}, Lcom/android/systemui/media/MediaHost_Factory;->create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/media/MediaHost_Factory;
+    invoke-static {v1, v2, v3, v4}, Lcom/android/systemui/media/MediaHost_Factory;->create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/media/MediaHost_Factory;
 
     move-result-object v1
 

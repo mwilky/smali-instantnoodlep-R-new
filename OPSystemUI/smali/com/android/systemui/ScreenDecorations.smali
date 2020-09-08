@@ -97,6 +97,8 @@
 
 .field private mShowRunnable:Ljava/lang/Runnable;
 
+.field private final mShutDownBroadcastReceiver:Landroid/content/BroadcastReceiver;
+
 .field private mTempColorInversionDisableSetting:Lcom/oneplus/util/SystemSetting;
 
 .field private mTempDisableInversion:Z
@@ -190,15 +192,21 @@
 
     iput p1, p0, Lcom/android/systemui/ScreenDecorations;->mResizeRatio:F
 
-    new-instance p1, Lcom/android/systemui/ScreenDecorations$6;
+    new-instance p1, Lcom/android/systemui/ScreenDecorations$1;
 
-    invoke-direct {p1, p0}, Lcom/android/systemui/ScreenDecorations$6;-><init>(Lcom/android/systemui/ScreenDecorations;)V
+    invoke-direct {p1, p0}, Lcom/android/systemui/ScreenDecorations$1;-><init>(Lcom/android/systemui/ScreenDecorations;)V
 
-    iput-object p1, p0, Lcom/android/systemui/ScreenDecorations;->mUserSwitchIntentReceiver:Landroid/content/BroadcastReceiver;
+    iput-object p1, p0, Lcom/android/systemui/ScreenDecorations;->mShutDownBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     new-instance p1, Lcom/android/systemui/ScreenDecorations$7;
 
     invoke-direct {p1, p0}, Lcom/android/systemui/ScreenDecorations$7;-><init>(Lcom/android/systemui/ScreenDecorations;)V
+
+    iput-object p1, p0, Lcom/android/systemui/ScreenDecorations;->mUserSwitchIntentReceiver:Landroid/content/BroadcastReceiver;
+
+    new-instance p1, Lcom/android/systemui/ScreenDecorations$8;
+
+    invoke-direct {p1, p0}, Lcom/android/systemui/ScreenDecorations$8;-><init>(Lcom/android/systemui/ScreenDecorations;)V
 
     iput-object p1, p0, Lcom/android/systemui/ScreenDecorations;->mShowRunnable:Ljava/lang/Runnable;
 
@@ -211,15 +219,25 @@
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/android/systemui/ScreenDecorations;)I
+.method static synthetic access$000(Lcom/android/systemui/ScreenDecorations;)V
     .locals 0
 
-    iget p0, p0, Lcom/android/systemui/ScreenDecorations;->mRotation:I
+    invoke-direct {p0}, Lcom/android/systemui/ScreenDecorations;->removeAllOverlays()V
+
+    return-void
+.end method
+
+.method static synthetic access$1000(Lcom/android/systemui/ScreenDecorations;)Z
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/systemui/ScreenDecorations;->isRectangleTop()Z
+
+    move-result p0
 
     return p0
 .end method
 
-.method static synthetic access$1000(Lcom/android/systemui/ScreenDecorations;)Z
+.method static synthetic access$1100(Lcom/android/systemui/ScreenDecorations;)Z
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/ScreenDecorations;->isRectangleBottom()Z
@@ -229,15 +247,7 @@
     return p0
 .end method
 
-.method static synthetic access$102(Lcom/android/systemui/ScreenDecorations;I)I
-    .locals 0
-
-    iput p1, p0, Lcom/android/systemui/ScreenDecorations;->mRotation:I
-
-    return p1
-.end method
-
-.method static synthetic access$1100(Lcom/android/systemui/ScreenDecorations;)V
+.method static synthetic access$1200(Lcom/android/systemui/ScreenDecorations;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/ScreenDecorations;->updateLayoutParams()V
@@ -245,7 +255,7 @@
     return-void
 .end method
 
-.method static synthetic access$1200(Lcom/android/systemui/ScreenDecorations;I)V
+.method static synthetic access$1300(Lcom/android/systemui/ScreenDecorations;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/systemui/ScreenDecorations;->updateView(I)V
@@ -253,7 +263,7 @@
     return-void
 .end method
 
-.method static synthetic access$1600()Z
+.method static synthetic access$1700()Z
     .locals 1
 
     sget-boolean v0, Lcom/android/systemui/ScreenDecorations;->DEBUG_SCREEN_DECORATIONS:Z
@@ -261,7 +271,7 @@
     return v0
 .end method
 
-.method static synthetic access$1700()Z
+.method static synthetic access$1800()Z
     .locals 1
 
     sget-boolean v0, Lcom/android/systemui/ScreenDecorations;->DEBUG_CUTOUT_DISPLAY:Z
@@ -269,7 +279,7 @@
     return v0
 .end method
 
-.method static synthetic access$1800()Z
+.method static synthetic access$1900()Z
     .locals 1
 
     sget-boolean v0, Lcom/android/systemui/ScreenDecorations;->DEBUG_CUTOUT_CIRCLE_DISPLAY:Z
@@ -277,23 +287,23 @@
     return v0
 .end method
 
-.method static synthetic access$200(Lcom/android/systemui/ScreenDecorations;)Z
+.method static synthetic access$200(Lcom/android/systemui/ScreenDecorations;)I
     .locals 0
 
-    iget-boolean p0, p0, Lcom/android/systemui/ScreenDecorations;->mOpPendingRotationChange:Z
+    iget p0, p0, Lcom/android/systemui/ScreenDecorations;->mRotation:I
 
     return p0
 .end method
 
-.method static synthetic access$202(Lcom/android/systemui/ScreenDecorations;Z)Z
+.method static synthetic access$202(Lcom/android/systemui/ScreenDecorations;I)I
     .locals 0
 
-    iput-boolean p1, p0, Lcom/android/systemui/ScreenDecorations;->mOpPendingRotationChange:Z
+    iput p1, p0, Lcom/android/systemui/ScreenDecorations;->mRotation:I
 
     return p1
 .end method
 
-.method static synthetic access$2200(Lcom/android/systemui/ScreenDecorations;)Z
+.method static synthetic access$2300(Lcom/android/systemui/ScreenDecorations;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/android/systemui/ScreenDecorations;->mPendingRotationChange:Z
@@ -301,7 +311,7 @@
     return p0
 .end method
 
-.method static synthetic access$2300(II)I
+.method static synthetic access$2400(II)I
     .locals 0
 
     invoke-static {p0, p1}, Lcom/android/systemui/ScreenDecorations;->getBoundPositionFromRotation(II)I
@@ -311,7 +321,7 @@
     return p0
 .end method
 
-.method static synthetic access$2400()I
+.method static synthetic access$2500()I
     .locals 1
 
     sget v0, Lcom/android/systemui/ScreenDecorations;->mOpCustRegionleft:I
@@ -319,7 +329,7 @@
     return v0
 .end method
 
-.method static synthetic access$2500()I
+.method static synthetic access$2600()I
     .locals 1
 
     sget v0, Lcom/android/systemui/ScreenDecorations;->mOpCustRegionRight:I
@@ -327,7 +337,7 @@
     return v0
 .end method
 
-.method static synthetic access$2600(I)Ljava/lang/String;
+.method static synthetic access$2700(I)Ljava/lang/String;
     .locals 0
 
     invoke-static {p0}, Lcom/android/systemui/ScreenDecorations;->getWindowTitleByPos(I)Ljava/lang/String;
@@ -340,7 +350,7 @@
 .method static synthetic access$300(Lcom/android/systemui/ScreenDecorations;)Z
     .locals 0
 
-    iget-boolean p0, p0, Lcom/android/systemui/ScreenDecorations;->mOpPendingRotationChangeBottom:Z
+    iget-boolean p0, p0, Lcom/android/systemui/ScreenDecorations;->mOpPendingRotationChange:Z
 
     return p0
 .end method
@@ -348,12 +358,28 @@
 .method static synthetic access$302(Lcom/android/systemui/ScreenDecorations;Z)Z
     .locals 0
 
+    iput-boolean p1, p0, Lcom/android/systemui/ScreenDecorations;->mOpPendingRotationChange:Z
+
+    return p1
+.end method
+
+.method static synthetic access$400(Lcom/android/systemui/ScreenDecorations;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/systemui/ScreenDecorations;->mOpPendingRotationChangeBottom:Z
+
+    return p0
+.end method
+
+.method static synthetic access$402(Lcom/android/systemui/ScreenDecorations;Z)Z
+    .locals 0
+
     iput-boolean p1, p0, Lcom/android/systemui/ScreenDecorations;->mOpPendingRotationChangeBottom:Z
 
     return p1
 .end method
 
-.method static synthetic access$400(Lcom/android/systemui/ScreenDecorations;)V
+.method static synthetic access$500(Lcom/android/systemui/ScreenDecorations;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/ScreenDecorations;->updateOrientation()V
@@ -361,7 +387,7 @@
     return-void
 .end method
 
-.method static synthetic access$500(Lcom/android/systemui/ScreenDecorations;I)V
+.method static synthetic access$600(Lcom/android/systemui/ScreenDecorations;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/systemui/ScreenDecorations;->updateColorInversion(I)V
@@ -369,7 +395,7 @@
     return-void
 .end method
 
-.method static synthetic access$602(Lcom/android/systemui/ScreenDecorations;Z)Z
+.method static synthetic access$702(Lcom/android/systemui/ScreenDecorations;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/systemui/ScreenDecorations;->mTempDisableInversion:Z
@@ -377,7 +403,7 @@
     return p1
 .end method
 
-.method static synthetic access$700(Lcom/android/systemui/ScreenDecorations;)Lcom/android/systemui/qs/SecureSetting;
+.method static synthetic access$800(Lcom/android/systemui/ScreenDecorations;)Lcom/android/systemui/qs/SecureSetting;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/ScreenDecorations;->mColorInversionSetting:Lcom/android/systemui/qs/SecureSetting;
@@ -385,22 +411,12 @@
     return-object p0
 .end method
 
-.method static synthetic access$800()Z
+.method static synthetic access$900()Z
     .locals 1
 
     sget-boolean v0, Lcom/android/systemui/ScreenDecorations;->DEBUG:Z
 
     return v0
-.end method
-
-.method static synthetic access$900(Lcom/android/systemui/ScreenDecorations;)Z
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/systemui/ScreenDecorations;->isRectangleTop()Z
-
-    move-result p0
-
-    return p0
 .end method
 
 .method private createOverlay(I)V
@@ -515,9 +531,9 @@
 
     aget-object v0, v0, p1
 
-    new-instance v1, Lcom/android/systemui/ScreenDecorations$5;
+    new-instance v1, Lcom/android/systemui/ScreenDecorations$6;
 
-    invoke-direct {v1, p0, p1}, Lcom/android/systemui/ScreenDecorations$5;-><init>(Lcom/android/systemui/ScreenDecorations;I)V
+    invoke-direct {v1, p0, p1}, Lcom/android/systemui/ScreenDecorations$6;-><init>(Lcom/android/systemui/ScreenDecorations;I)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
@@ -1786,7 +1802,7 @@
 
     if-nez v0, :cond_9
 
-    new-instance v0, Lcom/android/systemui/ScreenDecorations$3;
+    new-instance v0, Lcom/android/systemui/ScreenDecorations$4;
 
     iget-object v3, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
@@ -1794,7 +1810,7 @@
 
     const-string v5, "accessibility_display_inversion_enabled"
 
-    invoke-direct {v0, p0, v3, v4, v5}, Lcom/android/systemui/ScreenDecorations$3;-><init>(Lcom/android/systemui/ScreenDecorations;Landroid/content/Context;Landroid/os/Handler;Ljava/lang/String;)V
+    invoke-direct {v0, p0, v3, v4, v5}, Lcom/android/systemui/ScreenDecorations$4;-><init>(Lcom/android/systemui/ScreenDecorations;Landroid/content/Context;Landroid/os/Handler;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/android/systemui/ScreenDecorations;->mColorInversionSetting:Lcom/android/systemui/qs/SecureSetting;
 
@@ -1805,7 +1821,7 @@
     invoke-virtual {v0, v1}, Lcom/android/systemui/qs/SecureSetting;->onChange(Z)V
 
     :cond_9
-    new-instance v0, Lcom/android/systemui/ScreenDecorations$4;
+    new-instance v0, Lcom/android/systemui/ScreenDecorations$5;
 
     iget-object v5, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
@@ -1819,7 +1835,7 @@
 
     move-object v4, p0
 
-    invoke-direct/range {v3 .. v8}, Lcom/android/systemui/ScreenDecorations$4;-><init>(Lcom/android/systemui/ScreenDecorations;Landroid/content/Context;Landroid/os/Handler;Ljava/lang/String;Z)V
+    invoke-direct/range {v3 .. v8}, Lcom/android/systemui/ScreenDecorations$5;-><init>(Lcom/android/systemui/ScreenDecorations;Landroid/content/Context;Landroid/os/Handler;Ljava/lang/String;Z)V
 
     iput-object v0, p0, Lcom/android/systemui/ScreenDecorations;->mTempColorInversionDisableSetting:Lcom/oneplus/util/SystemSetting;
 
@@ -2141,9 +2157,9 @@
 
     invoke-direct {p0}, Lcom/android/systemui/ScreenDecorations;->setupCameraListener()V
 
-    new-instance v0, Lcom/android/systemui/ScreenDecorations$2;
+    new-instance v0, Lcom/android/systemui/ScreenDecorations$3;
 
-    invoke-direct {v0, p0}, Lcom/android/systemui/ScreenDecorations$2;-><init>(Lcom/android/systemui/ScreenDecorations;)V
+    invoke-direct {v0, p0}, Lcom/android/systemui/ScreenDecorations$3;-><init>(Lcom/android/systemui/ScreenDecorations;)V
 
     iput-object v0, p0, Lcom/android/systemui/ScreenDecorations;->mDisplayListener:Landroid/hardware/display/DisplayManager$DisplayListener;
 
@@ -3008,7 +3024,7 @@
 .end method
 
 .method public start()V
-    .locals 2
+    .locals 4
 
     invoke-virtual {p0}, Lcom/android/systemui/ScreenDecorations;->startHandlerThread()Landroid/os/Handler;
 
@@ -3022,6 +3038,35 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isUST()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Landroid/content/IntentFilter;
+
+    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
+
+    const-string v1, "android.intent.action.ACTION_SHUTDOWN"
+
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/android/systemui/ScreenDecorations;->mBroadcastDispatcher:Lcom/android/systemui/broadcast/BroadcastDispatcher;
+
+    iget-object v2, p0, Lcom/android/systemui/ScreenDecorations;->mShutDownBroadcastReceiver:Landroid/content/BroadcastReceiver;
+
+    new-instance v3, Landroid/os/HandlerExecutor;
+
+    iget-object p0, p0, Lcom/android/systemui/ScreenDecorations;->mHandler:Landroid/os/Handler;
+
+    invoke-direct {v3, p0}, Landroid/os/HandlerExecutor;-><init>(Landroid/os/Handler;)V
+
+    sget-object p0, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
+
+    invoke-virtual {v1, v2, v0, v3, p0}, Lcom/android/systemui/broadcast/BroadcastDispatcher;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/util/concurrent/Executor;Landroid/os/UserHandle;)V
+
+    :cond_0
     return-void
 .end method
 

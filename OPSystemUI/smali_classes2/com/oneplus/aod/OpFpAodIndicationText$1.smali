@@ -39,13 +39,33 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 2
+
+    iget-object v0, p0, Lcom/oneplus/aod/OpFpAodIndicationText$1;->this$0:Lcom/oneplus/aod/OpFpAodIndicationText;
+
+    iget-object v1, p0, Lcom/oneplus/aod/OpFpAodIndicationText$1;->val$text:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     iget-object v0, p0, Lcom/oneplus/aod/OpFpAodIndicationText$1;->this$0:Lcom/oneplus/aod/OpFpAodIndicationText;
 
     iget-object p0, p0, Lcom/oneplus/aod/OpFpAodIndicationText$1;->val$text:Ljava/lang/String;
 
-    invoke-virtual {v0, p0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/16 p0, 0x8
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    invoke-virtual {v0, p0}, Landroid/widget/TextView;->setVisibility(I)V
 
     return-void
 .end method

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/systemui/media/MediaCarouselController;-><init>(Landroid/content/Context;Ljavax/inject/Provider;Lcom/android/systemui/statusbar/notification/VisualStabilityManager;Lcom/android/systemui/media/MediaHostStatesManager;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/util/concurrency/DelayableExecutor;Lcom/android/systemui/media/MediaDataCombineLatest;Lcom/android/systemui/statusbar/policy/ConfigurationController;Lcom/android/systemui/media/MediaDataManager;Lcom/android/systemui/plugins/FalsingManager;)V
+    value = Lcom/android/systemui/media/MediaCarouselController;-><init>(Landroid/content/Context;Ljavax/inject/Provider;Lcom/android/systemui/statusbar/notification/VisualStabilityManager;Lcom/android/systemui/media/MediaHostStatesManager;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/util/concurrency/DelayableExecutor;Lcom/android/systemui/media/MediaDataFilter;Lcom/android/systemui/statusbar/policy/ConfigurationController;Lcom/android/systemui/plugins/FalsingManager;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +27,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/systemui/media/MediaDataManager;)V
+.method constructor <init>(Lcom/android/systemui/media/MediaDataFilter;)V
     .locals 1
 
     const/4 v0, 0x0
@@ -50,7 +50,7 @@
 .method public final getOwner()Lkotlin/reflect/KDeclarationContainer;
     .locals 0
 
-    const-class p0, Lcom/android/systemui/media/MediaDataManager;
+    const-class p0, Lcom/android/systemui/media/MediaDataFilter;
 
     invoke-static {p0}, Lkotlin/jvm/internal/Reflection;->getOrCreateKotlinClass(Ljava/lang/Class;)Lkotlin/reflect/KClass;
 
@@ -82,9 +82,9 @@
 
     iget-object p0, p0, Lkotlin/jvm/internal/CallableReference;->receiver:Ljava/lang/Object;
 
-    check-cast p0, Lcom/android/systemui/media/MediaDataManager;
+    check-cast p0, Lcom/android/systemui/media/MediaDataFilter;
 
-    invoke-virtual {p0}, Lcom/android/systemui/media/MediaDataManager;->onSwipeToDismiss()V
+    invoke-virtual {p0}, Lcom/android/systemui/media/MediaDataFilter;->onSwipeToDismiss()V
 
     return-void
 .end method

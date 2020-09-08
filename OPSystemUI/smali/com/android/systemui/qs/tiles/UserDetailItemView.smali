@@ -178,20 +178,6 @@
 
 
 # virtual methods
-.method public bind(Ljava/lang/String;Landroid/graphics/Bitmap;I)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/android/systemui/qs/tiles/UserDetailItemView;->mName:Landroid/widget/TextView;
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object p0, p0, Lcom/android/systemui/qs/tiles/UserDetailItemView;->mAvatar:Lcom/android/systemui/statusbar/phone/UserAvatarView;
-
-    invoke-virtual {p0, p2, p3}, Lcom/android/systemui/statusbar/phone/UserAvatarView;->setAvatarWithBadge(Landroid/graphics/Bitmap;I)V
-
-    return-void
-.end method
-
 .method public bind(Ljava/lang/String;Landroid/graphics/drawable/Drawable;I)V
     .locals 1
 

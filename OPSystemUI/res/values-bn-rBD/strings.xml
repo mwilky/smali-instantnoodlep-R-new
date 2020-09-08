@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="about_action_bar_title">সম্পর্কে</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">গোপনীয়তা নীতি</string>
+    <string name="about_release_note_title">আপডেট লগ:</string>
+    <string name="about_terms_service">পরিষেবার শর্তাবলী</string>
     <string name="accessibility_fingerprint_dialog_help_area">সাহায্য বার্তা এলাকা</string>
     <string name="accessibility_hide">লুকান</string>
     <string name="accessibility_phone_four_bars">ফোনের চারটি বার।</string>
@@ -13,7 +18,7 @@
     <string name="accessibility_quick_settings_night_mode_changed_on">রাত্রি মোড চালু আছে।</string>
     <string name="accessibility_quick_settings_power_saving_changed_off">ব্যাটারি সেভার মোড বন্ধ আছে।</string>
     <string name="accessibility_quick_settings_power_saving_changed_on">ব্যাটারি সেভার মোড চালু আছে।</string>
-    <string name="accessibility_work_life_balance_mode">ওয়ার্ক লাইফ ব্যালেন্স</string>
+    <string name="accessibility_work_life_balance_mode">Work Life Balance</string>
     <string name="accessibility_work_life_balance_mode_off">ওয়ার্ক লাইফ ব্যালেন্স মোড বন্ধ আছে।</string>
     <string name="accessibility_work_life_balance_mode_on">ওয়ার্ক লাইফ ব্যালেন্স মোড চালু আছে।</string>
     <string name="activity_not_available">অ্যাপ উপলব্ধ নয়</string>
@@ -40,9 +45,10 @@
     <string name="delete">মুছে ফেলুন</string>
     <string name="denoise_notification">কম অগ্রাধিকারের বিজ্ঞপ্তি</string>
     <string name="dialog_mhs_error">অনুগ্রহ করে যাচাই করার জন্য অপেক্ষা করুন..</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">বিস্তারিত জানার জন্য আপনার অ্যাডমিনের সাথে যোগাযোগ করুন</string>
+    <string name="disable_tether_notification_title">টিথারিং অক্ষম রয়েছে</string>
     <string name="drag_to_add_tiles">টাইল যোগ করতে টেনে আনুন</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">পুনরায় সাজাতে টাইলগুলি টেনে আনুন। দেখাতে বা লুকাতে আলতো চাপুন।</string>
     <string name="end_call">শেষ</string>
     <string name="face_unlock_camera_error">ফেস আনলক করা গেল না, অন্য অ্যাপ ক্যামেরা ব্যবহার করছে</string>
@@ -68,7 +74,7 @@
  3: কোনও পাসওয়ার্ডের প্রয়োজন হলে, ব্যাটারি সেভ করতে %2$s এণ্টার করুন, মোবাইল হটস্পট ব্যবহারের সময়ে আপনার ফোন প্লাগ ইন রাখুন। "</string>
     <string name="interruption_level_game">গেম</string>
     <string name="interruption_level_movie">মুভি</string>
-    <string name="interruption_level_music">মিউজিক</string>
+    <string name="interruption_level_music">সঙ্গীত</string>
     <string name="keyguard_fingerprint_unlock">আনলক করতে আঙ্গুলের ছাপ ব্যবহার করুন</string>
     <string name="keyguard_indication_charging_time_fast_vooc">(সম্পূর্ণ হতে %s)</string>
     <string name="keyguard_plugged_in_charging_warp">%s • Warp চার্জিং</string>
@@ -88,6 +94,7 @@
     <string name="kg_wrong_pattern_warning_one">আপনার এখনও 1টি সুযোগ আছে</string>
     <string name="kg_wrong_pin_warning">আপনার এখনও 2টি সুযোগ আছে</string>
     <string name="kg_wrong_pin_warning_one">আপনার এখনও 1টি সুযোগ আছে</string>
+    <string name="loading_text">লোড হচ্ছে...</string>
     <string name="long_press_power_navigation_assist_content">"ভয়েস সহযোগীর জন্য \"
  পাওয়ার বাটন \"চেপে ধরে রাখুন"</string>
     <string name="long_press_power_navigation_power_content">পাওয়ার অফ করার জন্য \"পাওয়ার বোতাম\" এবং \"ভলিউম আপ বোতাম\"টিকে একসাথে টিপুন</string>
@@ -129,8 +136,14 @@
     <string name="oneplus_threekey_navigation_sound">সকল শব্দ অনুমোদিত</string>
     <string name="oneplus_threekey_navigation_turned_on_here">উপরের টগল দিয়ে এটি চালু করা যাবে</string>
     <string name="oneplus_threekey_navigation_vibration">শুধু কম্পন</string>
-    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> আনলক</string>
-    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> আনলক্স</string>
+    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> আনব্লক করুন</string>
+    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>আনব্লকগুলি</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">জোড়া বাঁধা হচ্ছে...</string>
     <string name="op_earphone_connected_fail">জোড়া বাঁধা গেল না। আপনি হেডসেট এবং ব্লুটুথ স্ট্যাটাস পরীক্ষা করতে পারেন।</string>
     <string name="op_earphone_connected_success">জোড়া বাঁধা হয়েছে। আরও সেট করতে আলতো চাপুন।</string>
@@ -160,9 +173,10 @@
     <string name="op_notification_channel_summary_low">কম গুরুত্বপূর্ণ বিজ্ঞপ্তিগুলি কোনও শব্দ বা কম্পন ছাড়া।</string>
     <string name="op_notification_section_header_gentle">অন্যান্য বিজ্ঞপ্তি</string>
     <string name="op_notification_silence_title">অন্যান্য</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">অন্ধকার মোড</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s ব্যবহৃত হয়েছে</string>
-    <string name="op_quick_settings_night_display_label">রাত্রি মোড</string>
+    <string name="op_quick_settings_night_display_label">দৃষ্টি স্বস্তি</string>
     <string name="op_quick_settings_night_display_summary_off">নাইট মোড বন্ধ, চালু করতে আলতো চাপুন</string>
     <string name="op_quick_settings_night_display_summary_on">নাইট মোড চালু, বন্ধ করতে আলতো চাপুন</string>
     <string name="op_read_mode2_dialog_black">মনো ইফেক্ট</string>
@@ -264,7 +278,7 @@
     <string name="tethered_notification_hybrid_sharing_mobile">মোবাইল ডেটা শেয়ার করার জন্য, সেটিংসে ঢুকতে ক্লিক করুন</string>
     <string name="tethered_notification_hybrid_sharing_none">শেয়ার করার জন্য কোনও নেটওয়ার্ক উপলভ্য নেই, সেটিংসে ঢুকতে ক্লিক করুন</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Wi-Fi-তে শেয়ার করার জন্য, সেটিংসে ঢুকতে ক্লিক করুন</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">সেটআপ করতে ট্যাপ করুন।</string>
     <string name="tethered_notification_multi_device_message">%1$sটি ডিভাইস সংযুক্ত</string>
     <string name="tethered_notification_multi_tether_title">টেথারিং এবং মোবাইল হটস্পট সক্রিয় আছে</string>
     <string name="tethered_notification_no_device_message">কোনো সংযুক্ত ডিভাইস নেই</string>
@@ -292,7 +306,17 @@
     <string name="volume_footer_slient">নিঃশব্দ করুন</string>
     <string name="volume_footer_vibrate">নীরব (কম্পন)</string>
     <string name="volume_vibrate">কম্পন</string>
-    <string name="work_life_balance_mode">Work-Life Balance</string>
+    <string name="wlb_break_mode_active">সক্রিয়</string>
+    <string name="wlb_break_mode_active_text">%1$s মোড · %2$s</string>
+    <string name="wlb_break_mode_on_break">বিরতিতে আছি</string>
+    <string name="wlb_break_mode_resume">পুনরায় চালু করুন</string>
+    <string name="wlb_break_mode_take_break">একটু বিরতি নিন</string>
+    <string name="wlb_qs_detail_break_mode">ব্রেক মোড</string>
+    <string name="wlb_qs_detail_break_mode_desc">30 মিনিট পরে পূর্ববর্তী মোডে স্বয়ংক্রিয়ভাবে পুনরায় শুরু হয়</string>
+    <string name="wlb_qs_detail_life_mode">লাইফ মোড</string>
+    <string name="wlb_qs_detail_more_setting">আরও সেটিংস</string>
+    <string name="wlb_qs_detail_work_mode">কাজ মোড</string>
+    <string name="work_life_balance_mode">Work Life Balance</string>
     <string name="zen_important_interruptions">অগ্রাধিকারের বিজ্ঞপ্তি</string>
     <string name="zen_interruption_level_all">সমস্ত বিজ্ঞপ্তি</string>
     <string name="zen_no_interruptions">নিঃশব্দ করুন</string>

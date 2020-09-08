@@ -797,7 +797,9 @@
 
     sget v2, Lcom/android/systemui/R$dimen;->op_keyguard_status_bar_cust_padding_top:I
 
-    invoke-virtual {p1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    const/16 v3, 0x438
+
+    invoke-static {p1, v2, v3}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
 
     move-result p1
 
@@ -1779,7 +1781,7 @@
 .end method
 
 .method protected updateStatusBarPadding()V
-    .locals 6
+    .locals 7
 
     invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getContext()Landroid/content/Context;
 
@@ -1823,90 +1825,76 @@
     move v2, v3
 
     :goto_0
+    const/16 v1, 0x438
+
     if-eqz v0, :cond_1
 
-    move v1, v3
+    move v4, v3
 
     goto :goto_1
 
     :cond_1
     invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v1
+    move-result-object v4
 
-    sget v4, Lcom/android/systemui/R$dimen;->op_status_bar_cust_padding_top:I
+    sget v5, Lcom/android/systemui/R$dimen;->op_status_bar_cust_padding_top:I
 
-    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-static {v4, v5, v1}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
 
-    move-result v1
+    move-result v4
 
     :goto_1
     invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getPaddingLeft()I
 
-    move-result v4
+    move-result v5
 
     invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getPaddingRight()I
 
-    move-result v5
+    move-result v6
 
-    invoke-virtual {p0, v4, v1, v5, v3}, Landroid/widget/RelativeLayout;->setPadding(IIII)V
-
-    if-eqz v0, :cond_2
+    invoke-virtual {p0, v5, v4, v6, v3}, Landroid/widget/RelativeLayout;->setPadding(IIII)V
 
     invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v0
+    move-result-object v4
 
-    sget v1, Lcom/android/systemui/R$dimen;->status_bar_padding_end:I
+    sget v5, Lcom/android/systemui/R$dimen;->status_bar_padding_start:I
 
-    goto :goto_2
+    invoke-static {v4, v5, v1}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
 
-    :cond_2
-    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    sget v1, Lcom/android/systemui/R$dimen;->status_bar_padding_start:I
-
-    :goto_2
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v0
-
-    if-eqz v2, :cond_3
+    move-result v4
 
     invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v1
+    move-result-object v5
 
-    sget v4, Lcom/android/systemui/R$dimen;->system_icons_keyguard_padding_end:I
+    sget v6, Lcom/android/systemui/R$dimen;->status_bar_padding_end:I
 
-    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-static {v5, v6, v1}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
 
     move-result v1
 
-    goto :goto_3
+    if-eqz v0, :cond_2
+
+    move v4, v1
+
+    :cond_2
+    if-eqz v2, :cond_3
+
+    move v0, v1
+
+    goto :goto_2
 
     :cond_3
-    move v1, v0
+    move v0, v4
 
-    :goto_3
+    :goto_2
     if-eqz v2, :cond_4
 
-    goto :goto_4
+    move v1, v4
 
     :cond_4
-    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    sget v2, Lcom/android/systemui/R$dimen;->system_icons_keyguard_padding_end:I
-
-    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v0
-
-    :goto_4
     iget-object v2, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mCarrierLabel:Landroid/widget/TextView;
 
     invoke-virtual {v2}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -1915,15 +1903,26 @@
 
     check-cast v2, Landroid/widget/RelativeLayout$LayoutParams;
 
-    invoke-virtual {v2, v1}, Landroid/widget/RelativeLayout$LayoutParams;->setMarginStart(I)V
+    invoke-virtual {v2, v0}, Landroid/widget/RelativeLayout$LayoutParams;->setMarginStart(I)V
 
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mCarrierLabel:Landroid/widget/TextView;
+    iget-object v4, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mCarrierLabel:Landroid/widget/TextView;
 
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v4, v2}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mSystemIconsContainer:Landroid/view/View;
+    sget v2, Lcom/android/systemui/R$id;->status_bar_contents:I
 
-    invoke-virtual {v1, v3, v3, v0, v3}, Landroid/view/View;->setPaddingRelative(IIII)V
+    invoke-virtual {p0, v2}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_5
+
+    invoke-virtual {v2, v0, v3, v3, v3}, Landroid/view/View;->setPaddingRelative(IIII)V
+
+    :cond_5
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mSystemIconsContainer:Landroid/view/View;
+
+    invoke-virtual {v0, v3, v3, v1, v3}, Landroid/view/View;->setPaddingRelative(IIII)V
 
     invoke-virtual {p0}, Landroid/widget/RelativeLayout;->requestLayout()V
 

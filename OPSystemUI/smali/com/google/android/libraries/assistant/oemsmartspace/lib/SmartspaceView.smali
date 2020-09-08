@@ -315,45 +315,57 @@
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-nez v0, :cond_6
+
+    iget-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->clock:Landroid/widget/TextClock;
+
+    invoke-virtual {v0, v2}, Landroid/widget/TextClock;->setVisibility(I)V
 
     invoke-virtual {p1}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceCard;->getIcon()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    if-eqz v0, :cond_6
-
-    :cond_4
-    iget-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->clock:Landroid/widget/TextClock;
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextClock;->setVisibility(I)V
+    if-eqz v0, :cond_5
 
     iget-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->subtitleIcon:Landroid/widget/ImageView;
 
     invoke-direct {p0, p1}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->getCustomizedIcon(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceCard;)Landroid/graphics/drawable/Drawable;
 
-    move-result-object p1
+    move-result-object v2
 
-    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    iget p1, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->textColor:I
+    iget v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->textColor:I
 
-    if-eqz p1, :cond_5
+    if-eqz v0, :cond_4
 
+    iget-object v2, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->subtitleIcon:Landroid/widget/ImageView;
+
+    sget-object v4, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-virtual {v2, v0, v4}, Landroid/widget/ImageView;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
+
+    :cond_4
     iget-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->subtitleIcon:Landroid/widget/ImageView;
 
-    sget-object v2, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
-
-    invoke-virtual {v0, p1, v2}, Landroid/widget/ImageView;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     :cond_5
-    iget-object p1, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->subtitleTextView:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->subtitleTextView:Landroid/widget/TextView;
 
     invoke-direct {p0}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->ellipsizeSubtitle()Ljava/lang/CharSequence;
 
-    move-result-object v0
+    move-result-object v2
 
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->subtitleTextView:Landroid/widget/TextView;
+
+    new-instance v2, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView$3;
+
+    invoke-direct {v2, p0, p1}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView$3;-><init>(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceCard;)V
+
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     iget-object p1, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->context:Landroid/content/Context;
 
@@ -367,17 +379,15 @@
 
     move-result p1
 
+    invoke-direct {p0}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->setSubtitleMargin()V
+
     iget-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->subtitleTextView:Landroid/widget/TextView;
 
     invoke-direct {p0, v0, p1}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->setCustomizeTextStyle(Landroid/widget/TextView;F)V
 
-    iget-object p1, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->subtitleTextView:Landroid/widget/TextView;
+    iget-object p0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->subtitleTextView:Landroid/widget/TextView;
 
-    invoke-virtual {p1, v1}, Landroid/widget/TextView;->setVisibility(I)V
-
-    iget-object p0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->subtitleIcon:Landroid/widget/ImageView;
-
-    invoke-virtual {p0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-virtual {p0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     :cond_6
     return v3
@@ -1189,7 +1199,7 @@
 .method private static getCardIconName(Lcom/google/geo/sidekick/SmartspaceProto$SmartspaceUpdate$SmartspaceCard$CardType;)Ljava/lang/String;
     .locals 1
 
-    sget-object v0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView$3;->$SwitchMap$com$google$geo$sidekick$SmartspaceProto$SmartspaceUpdate$SmartspaceCard$CardType:[I
+    sget-object v0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView$4;->$SwitchMap$com$google$geo$sidekick$SmartspaceProto$SmartspaceUpdate$SmartspaceCard$CardType:[I
 
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
@@ -1340,8 +1350,8 @@
     return v0
 .end method
 
-.method private setChipStrokeColor(Landroid/view/View;)V
-    .locals 2
+.method private setChipStrokeAndBackgroundColor(Landroid/view/View;)V
+    .locals 5
 
     iget v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->textColor:I
 
@@ -1358,21 +1368,95 @@
 
     iget-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->context:Landroid/content/Context;
 
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    sget v1, Lcom/google/android/libraries/assistant/oemsmartspace/lib/R$color;->cw_chip_action_bg:I
 
-    move-result-object v0
-
-    sget v1, Lcom/google/android/libraries/assistant/oemsmartspace/lib/R$dimen;->ssc_action_bg_stroke_width:I
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getColor(I)I
 
     move-result v0
 
-    float-to-int v0, v0
+    invoke-static {v0}, Landroid/graphics/Color;->alpha(I)I
+
+    move-result v0
+
+    iget v1, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->textColor:I
+
+    invoke-static {v1}, Landroid/graphics/Color;->red(I)I
+
+    move-result v1
+
+    iget v2, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->textColor:I
+
+    invoke-static {v2}, Landroid/graphics/Color;->green(I)I
+
+    move-result v2
+
+    iget v3, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->textColor:I
+
+    invoke-static {v3}, Landroid/graphics/Color;->blue(I)I
+
+    move-result v3
+
+    invoke-static {v0, v1, v2, v3}, Landroid/graphics/Color;->argb(IIII)I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->context:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Lcom/google/android/libraries/assistant/oemsmartspace/lib/R$dimen;->ssc_action_bg_stroke_width:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result v1
+
+    iget-object v2, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->context:Landroid/content/Context;
+
+    sget v3, Lcom/google/android/libraries/assistant/oemsmartspace/lib/R$color;->cw_chip_bg:I
+
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getColor(I)I
+
+    move-result v2
+
+    invoke-static {v2}, Landroid/graphics/Color;->alpha(I)I
+
+    move-result v2
+
+    iget v3, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->textColor:I
+
+    invoke-static {v3}, Landroid/graphics/Color;->red(I)I
+
+    move-result v3
+
+    iget v4, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->textColor:I
+
+    invoke-static {v4}, Landroid/graphics/Color;->green(I)I
+
+    move-result v4
 
     iget p0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->textColor:I
 
-    invoke-virtual {p1, v0, p0}, Landroid/graphics/drawable/GradientDrawable;->setStroke(II)V
+    invoke-static {p0}, Landroid/graphics/Color;->blue(I)I
+
+    move-result p0
+
+    rsub-int v3, v3, 0xff
+
+    rsub-int v4, v4, 0xff
+
+    rsub-int p0, p0, 0xff
+
+    invoke-static {v2, v3, v4, p0}, Landroid/graphics/Color;->argb(IIII)I
+
+    move-result p0
+
+    float-to-int v1, v1
+
+    invoke-virtual {p1, v1, v0}, Landroid/graphics/drawable/GradientDrawable;->setStroke(II)V
+
+    invoke-virtual {p1, p0}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
 
     return-void
 .end method
@@ -1401,6 +1485,48 @@
     mul-float/2addr p2, p0
 
     invoke-virtual {p1, v0, p2}, Landroid/widget/TextView;->setTextSize(IF)V
+
+    return-void
+.end method
+
+.method private setSubtitleMargin()V
+    .locals 3
+
+    iget-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->context:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lcom/google/android/libraries/assistant/oemsmartspace/lib/R$dimen;->vertical_margin:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->subtitleLine:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    iget-object v1, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->subtitleLine:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/LinearLayout$LayoutParams;
+
+    iget v2, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->textSizeFactor:F
+
+    mul-float/2addr v0, v2
+
+    float-to-int v0, v0
+
+    iput v0, v1, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
+
+    iget-object p0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->subtitleLine:Landroid/widget/LinearLayout;
+
+    invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
 .end method
@@ -1469,7 +1595,15 @@
 
     invoke-direct {p0, v2, v4}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->setCustomizeTextStyle(Landroid/widget/TextView;F)V
 
-    invoke-direct {p0, v0}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->setChipStrokeColor(Landroid/view/View;)V
+    sget v4, Lcom/google/android/libraries/assistant/oemsmartspace/lib/R$id;->ssc_wrapper:I
+
+    invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v3}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-direct {p0, v4}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->setChipStrokeAndBackgroundColor(Landroid/view/View;)V
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
@@ -1477,7 +1611,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_2
 
     invoke-virtual {p1}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceChip;->getIcon()Landroid/graphics/drawable/Drawable;
 
@@ -1485,14 +1619,23 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setVisibility(I)V
+    iget v2, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;->textColor:I
+
+    if-eqz v2, :cond_1
+
+    sget-object v4, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-virtual {v1, v2, v4}, Landroid/widget/ImageView;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
     :cond_1
+    invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    :cond_2
     invoke-virtual {p1}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceChip;->hasPendingIntent()Z
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
     new-instance v1, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView$1;
 
@@ -1500,7 +1643,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    :cond_2
+    :cond_3
     return-void
 .end method
 

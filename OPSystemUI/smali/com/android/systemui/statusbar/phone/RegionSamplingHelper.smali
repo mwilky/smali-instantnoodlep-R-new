@@ -16,6 +16,8 @@
 
 
 # instance fields
+.field private mByPassThreshold:Z
+
 .field private final mCallback:Lcom/android/systemui/statusbar/phone/RegionSamplingHelper$SamplingCallback;
 
 .field private mCurrentMedianLuma:F
@@ -87,21 +89,23 @@
 
     iput-boolean v0, p0, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;->mSamplingListenerRegistered:Z
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    iput-object v0, p0, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;->mRegisteredStopLayer:Landroid/view/SurfaceControl;
+    iput-object v1, p0, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;->mRegisteredStopLayer:Landroid/view/SurfaceControl;
 
-    new-instance v0, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper$1;
+    new-instance v1, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper$1;
 
-    invoke-direct {v0, p0}, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper$1;-><init>(Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;)V
+    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper$1;-><init>(Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;)V
 
-    iput-object v0, p0, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;->mUpdateOnDraw:Landroid/view/ViewTreeObserver$OnDrawListener;
+    iput-object v1, p0, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;->mUpdateOnDraw:Landroid/view/ViewTreeObserver$OnDrawListener;
 
-    new-instance v0, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper$2;
+    new-instance v1, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper$2;
 
-    invoke-direct {v0, p0}, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper$2;-><init>(Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;)V
+    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper$2;-><init>(Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;)V
 
-    iput-object v0, p0, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;->mRemoveDrawRunnable:Ljava/lang/Runnable;
+    iput-object v1, p0, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;->mRemoveDrawRunnable:Ljava/lang/Runnable;
+
+    iput-boolean v0, p0, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;->mByPassThreshold:Z
 
     new-instance v0, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper$3;
 
@@ -277,13 +281,13 @@
 
     cmpl-float v0, v0, v1
 
-    if-gtz v0, :cond_0
+    if-gtz v0, :cond_1
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;->mSampledView:Landroid/view/View;
 
     instance-of v1, v0, Lcom/android/systemui/statusbar/phone/NavigationBarView;
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
     check-cast v0, Lcom/android/systemui/statusbar/phone/NavigationBarView;
 
@@ -291,8 +295,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-nez v0, :cond_0
 
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;->mByPassThreshold:Z
+
+    if-eqz v0, :cond_3
+
+    :cond_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;->mOverviewProxyService:Lcom/android/systemui/recents/OverviewProxyService;
 
     invoke-virtual {v0}, Lcom/android/systemui/recents/OverviewProxyService;->getNavBarMode()I
@@ -303,22 +312,22 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
-    :cond_0
+    :cond_1
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;->mCallback:Lcom/android/systemui/statusbar/phone/RegionSamplingHelper$SamplingCallback;
 
     iget v1, p0, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;->mLuminanceThreshold:F
 
     cmpg-float v1, p1, v1
 
-    if-gez v1, :cond_1
+    if-gez v1, :cond_2
 
     const/4 v1, 0x1
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     const/4 v1, 0x0
 
     :goto_0
@@ -326,7 +335,7 @@
 
     iput p1, p0, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;->mLastMedianLuma:F
 
-    :cond_2
+    :cond_3
     return-void
 .end method
 
@@ -777,6 +786,14 @@
     .locals 0
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;->stopAndDestroy()V
+
+    return-void
+.end method
+
+.method public setByPassThreshold(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;->mByPassThreshold:Z
 
     return-void
 .end method

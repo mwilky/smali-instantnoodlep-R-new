@@ -39,6 +39,11 @@
     <string name="abc_slice_updated">Päivitetty %1$s</string>
     <string name="abc_slices_permission_request">%1$s haluaa näyttää osia sovelluksesta %2$s.</string>
     <string name="abc_toolbar_collapse_description">Tiivistä</string>
+    <string name="about_action_bar_title">Tietoja</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Yksityisyyden suoja</string>
+    <string name="about_release_note_title">Päivitysloki:</string>
+    <string name="about_terms_service">Palveluehdot</string>
     <string name="accessibility_accessibility_button">Esteettömyys</string>
     <string name="accessibility_action_divider_bottom_full">Alaosa koko näytölle</string>
     <string name="accessibility_action_divider_left_30">Vasen 30 %</string>
@@ -598,6 +603,7 @@ Valinta"</string>
     <string name="controls_favorite_other_zone_header">Muu</string>
     <string name="controls_favorite_rearrange">Järjestele säätimiä koskettamalla pitkään ja vetämällä</string>
     <string name="controls_favorite_removed">Kaikki säätimet poistettu</string>
+    <string name="controls_favorite_see_other_apps">Katso muita sovelluksia</string>
     <string name="controls_favorite_subtitle">Valitse säätimet, joita käytetään virtavalikosta</string>
     <string name="controls_favorite_toast_no_changes">Muutoksia ei tallennettu</string>
     <string name="controls_in_progress">Käynnissä</string>
@@ -696,8 +702,8 @@ Jos jatkat käyttöä, datan käytöstä saatetaan periä maksuja."</string>
     <string name="disable_carrier_button_text">Poista eSIM käytöstä</string>
     <string name="disable_overlays">Poista HW-peittokuvat käytöstä</string>
     <string name="disable_overlays_summary">Käytä GPU:ta näytön koostamiseen.</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">Pyydä lisätietoja järjestelmänvalvojalta</string>
+    <string name="disable_tether_notification_title">Yhteyden jakaminen on poistettu käytöstä</string>
     <string name="disable_vpn">Poista VPN käytöstä</string>
     <string name="disabled">Pois päältä</string>
     <string name="disabled_by_admin">Järjestelmänvalvojan estämä</string>
@@ -717,6 +723,7 @@ Jos jatkat käyttöä, datan käytöstä saatetaan periä maksuja."</string>
     <string name="drag_to_rearrange_tiles">Järjestele koskettamalla pitkään ja vetämällä</string>
     <string name="drag_to_remove_disabled">%1$d kiekkoa on vähimmäismäärä</string>
     <string name="drag_to_remove_tiles">Poista vetämällä tähän.</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">Järjestele tiilet uudelleen vetämällä. Näytä tai piilota napauttamalla.</string>
     <string name="empty_shade_text">Ei ilmoituksia</string>
     <string name="enable_adb">USB-vianetsintä</string>
@@ -1092,6 +1099,7 @@ Yritä uudelleen %2$d sekunnin kuluttua."</string>
     <string name="left_nav_bar_button_type">Ylimääräinen vasen painiketyyppi</string>
     <string name="legacy_vpn_name">VPN</string>
     <string name="loading_injected_setting_summary">Ladataan…</string>
+    <string name="loading_text">Ladataan...</string>
     <string name="local_backup_password_summary_change">Vaihda tai poista tietokoneen kaikkien tietojen varmuuskopioinnin salasana koskettamalla.</string>
     <string name="local_backup_password_summary_none">Tietokoneen kaikkien tietojen varmuuskopiointia ei ole tällä hetkellä suojattu.</string>
     <string name="local_backup_password_title">Varmuuskop. salasana</string>
@@ -1325,6 +1333,12 @@ Olet myös yhteydessä VPN:ään, joka voi valvoa toimintaasi verkossa."</string
     <string name="oneplus_threekey_navigation_vibration">Vain värinä</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> lukituksen avaus</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> lukituksen avausta</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">Muodostetaan laiteparia...</string>
     <string name="op_earphone_connected_fail">Laiteparin muodostus epäonnistui. Voit tarkistaa kuulokkeet ja Bluetoothin tilan.</string>
     <string name="op_earphone_connected_success">Laitepari muodostettu. Määritä enemmän napauttamalla.</string>
@@ -1354,9 +1368,10 @@ Olet myös yhteydessä VPN:ään, joka voi valvoa toimintaasi verkossa."</string
     <string name="op_notification_channel_summary_low">Vähemmän tärkeät ilmoitukset ilman ääntä tai värinää.</string>
     <string name="op_notification_section_header_gentle">Muut ilmoitukset</string>
     <string name="op_notification_silence_title">Muut</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">Pimeä tila</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s käytetty</string>
-    <string name="op_quick_settings_night_display_label">Yötila</string>
+    <string name="op_quick_settings_night_display_label">Katselumukavuus</string>
     <string name="op_quick_settings_night_display_summary_off">Yötila on pois käytöstä, ota käyttöön napauttamalla</string>
     <string name="op_quick_settings_night_display_summary_on">Yötila on käytössä, poista käytöstä napauttamalla</string>
     <string name="op_read_mode2_dialog_black">Yksivärinen tehoste</string>
@@ -1871,7 +1886,7 @@ valvoa"</string>
     <string name="tethered_notification_hybrid_sharing_mobile">Jaetaan mobiilidata, siirry asetuksiin napsauttamalla</string>
     <string name="tethered_notification_hybrid_sharing_none">Ei jaettavaa verkkoa käytettävissä, siirry asetuksiin napsauttamalla</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Jaetaan Wi-Fi, siirry asetuksiin napsauttamalla</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">Aseta napauttamalla.</string>
     <string name="tethered_notification_multi_device_message">%1$s kytkettyä laitetta</string>
     <string name="tethered_notification_multi_tether_title">Yhdistäminen ja mobiili-hotspot aktiivinen</string>
     <string name="tethered_notification_no_device_message">Ei yhdistettyä laitetta</string>
@@ -2104,6 +2119,16 @@ Wi-Fin osoite (BSSID)
     <string name="wifi_verbose_logging">Käytä Wi-Fin laajennettua lokikirjausta</string>
     <string name="wifi_verbose_logging_summary">Lisää Wi‑Fin lokikirjaustasoa, näytä SSID RSSI -kohtaisesti Wi‑Fi-valitsimessa.</string>
     <string name="window_animation_scale_title">Ikkuna</string>
+    <string name="wlb_break_mode_active">Aktiivinen</string>
+    <string name="wlb_break_mode_active_text">%1$s-tila · %2$s</string>
+    <string name="wlb_break_mode_on_break">Tauolla</string>
+    <string name="wlb_break_mode_resume">Jatka</string>
+    <string name="wlb_break_mode_take_break">Pidä tauko</string>
+    <string name="wlb_qs_detail_break_mode">Taukotila</string>
+    <string name="wlb_qs_detail_break_mode_desc">Edellinen tila palautuu automaattisesti 30 minuutin kuluttua</string>
+    <string name="wlb_qs_detail_life_mode">Yksityiselämätila</string>
+    <string name="wlb_qs_detail_more_setting">Lisää asetuksia</string>
+    <string name="wlb_qs_detail_work_mode">Työtila</string>
     <string name="work_life_balance_mode">Työn ja vapaa-ajan tasapaino</string>
     <string name="zen_alarm_warning">Et kuule seuraavaa hälytystäsi (%1$s).</string>
     <string name="zen_alarm_warning_indef">Et kuule seuraavaa hälytystäsi (%1$s), ellet poista tätä tilaa käytöstä ennen sitä.</string>
@@ -2125,5 +2150,5 @@ Wi-Fin osoite (BSSID)
     <string name="zen_silence_introduction_voice">Tämä estää kaikki äänet ja värinät, mukaan lukien hälytysten, musiikin, videoiden ja pelien äänet ja värinät. Voit kuitenkin soittaa puheluita.</string>
     <string name="zzz_op_global_action_bootloader">Bootloader-tila</string>
     <string name="zzz_op_global_action_recovery">Recovery-tila</string>
-    <string name="zzz_op_quick_pay_no_install_message">Asenna maksusovellukset käyttääksesi pikamaksua</string>
+    <string name="zzz_op_quick_pay_no_install_message">Asenna maksusovellukset pikamaksujen käyttämiseksi</string>
 </resources>

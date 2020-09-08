@@ -724,45 +724,59 @@
 .end method
 
 .method public shouldShowHighlightHint()Z
-    .locals 4
+    .locals 5
 
-    iget-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpHighlightHintControllerImpl;->mExpandedVisible:Z
+    const-class v0, Lcom/oneplus/scene/OpSceneModeObserver;
 
-    const/4 v1, 0x1
+    invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    move-result-object v0
 
-    if-eqz v0, :cond_0
+    check-cast v0, Lcom/oneplus/scene/OpSceneModeObserver;
 
-    iget v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpHighlightHintControllerImpl;->mBarState:I
+    invoke-virtual {v0}, Lcom/oneplus/scene/OpSceneModeObserver;->isInBrickMode()Z
 
-    if-nez v0, :cond_0
+    move-result v0
 
-    move v0, v1
+    iget-boolean v1, p0, Lcom/oneplus/systemui/statusbar/phone/OpHighlightHintControllerImpl;->mExpandedVisible:Z
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    if-eqz v1, :cond_0
+
+    iget v1, p0, Lcom/oneplus/systemui/statusbar/phone/OpHighlightHintControllerImpl;->mBarState:I
+
+    if-nez v1, :cond_0
+
+    move v1, v2
 
     goto :goto_0
 
     :cond_0
-    move v0, v2
+    move v1, v3
 
     :goto_0
-    iget-boolean v3, p0, Lcom/oneplus/systemui/statusbar/phone/OpHighlightHintControllerImpl;->mShowHighlightNotification:Z
+    iget-boolean v4, p0, Lcom/oneplus/systemui/statusbar/phone/OpHighlightHintControllerImpl;->mShowHighlightNotification:Z
 
-    if-eqz v3, :cond_1
+    if-eqz v4, :cond_1
 
     iget-boolean p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpHighlightHintControllerImpl;->mHeadUpShow:Z
 
     if-nez p0, :cond_1
+
+    if-nez v1, :cond_1
 
     if-nez v0, :cond_1
 
     goto :goto_1
 
     :cond_1
-    move v1, v2
+    move v2, v3
 
     :goto_1
-    return v1
+    return v2
 .end method
 
 .method public showOvalLayout()Z

@@ -296,10 +296,10 @@
         <item>ಆನಿಮೇಶನ್ ಮಾಪಕ 10x</item>
     </string-array>
     <string-array name="zzz_op_quick_pay_switch_strings">
-        <item>QR ಕೋಡ್</item>
-        <item>ಸ್ಕ್ಯಾನಿಂಗ್</item>
-        <item>QR ಕೋಡ್</item>
-        <item>ಸ್ಕ್ಯಾನಿಂಗ್</item>
-        <item>Paytm</item>
+        <item>ಕ್ಯೂಆರ್ ಕೋಡ್‌</item>
+        <item>ಸ್ಕ್ಯಾನಿಂಗ್‌</item>
+        <item>ಕ್ಯೂಆರ್ ಕೋಡ್‌</item>
+        <item>ಸ್ಕ್ಯಾನಿಂಗ್‌</item>
+        <item>ಪೇಟಿಎಂ</item>
     </string-array>
 </resources>

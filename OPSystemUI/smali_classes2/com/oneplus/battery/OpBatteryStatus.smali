@@ -87,9 +87,7 @@
 
     move-result p2
 
-    const/4 p4, 0x4
-
-    if-ne p2, p4, :cond_1
+    if-eqz p2, :cond_1
 
     const-string p2, "estimate_time_to_full"
 

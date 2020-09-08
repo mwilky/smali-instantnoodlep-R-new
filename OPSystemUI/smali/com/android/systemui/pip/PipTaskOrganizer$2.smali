@@ -44,7 +44,7 @@
 
 # virtual methods
 .method public onTransactionReady(ILandroid/view/SurfaceControl$Transaction;)V
-    .locals 6
+    .locals 7
 
     invoke-virtual {p2}, Landroid/view/SurfaceControl$Transaction;->apply()V
 
@@ -56,13 +56,15 @@
 
     iget-object v2, p0, Lcom/android/systemui/pip/PipTaskOrganizer$2;->val$destinationBounds:Landroid/graphics/Rect;
 
-    iget v3, p0, Lcom/android/systemui/pip/PipTaskOrganizer$2;->val$direction:I
+    iget v4, p0, Lcom/android/systemui/pip/PipTaskOrganizer$2;->val$direction:I
 
-    iget v4, p0, Lcom/android/systemui/pip/PipTaskOrganizer$2;->val$animationDurationMs:I
+    iget v5, p0, Lcom/android/systemui/pip/PipTaskOrganizer$2;->val$animationDurationMs:I
 
-    const/4 v5, 0x0
+    const/4 v3, 0x0
 
-    invoke-static/range {v0 .. v5}, Lcom/android/systemui/pip/PipTaskOrganizer;->access$500(Lcom/android/systemui/pip/PipTaskOrganizer;Landroid/graphics/Rect;Landroid/graphics/Rect;IILjava/util/function/Consumer;)V
+    const/4 v6, 0x0
+
+    invoke-static/range {v0 .. v6}, Lcom/android/systemui/pip/PipTaskOrganizer;->access$500(Lcom/android/systemui/pip/PipTaskOrganizer;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;IILjava/util/function/Consumer;)V
 
     iget-object p0, p0, Lcom/android/systemui/pip/PipTaskOrganizer$2;->this$0:Lcom/android/systemui/pip/PipTaskOrganizer;
 

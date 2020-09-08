@@ -16,22 +16,22 @@
 
 .field public static final editTextPreferenceStyle:I = 0x7f0401ac
 
-.field public static final preferenceCategoryStyle:I = 0x7f04043d
+.field public static final preferenceCategoryStyle:I = 0x7f04043a
 
-.field public static final preferenceFragmentStyle:I = 0x7f040442
+.field public static final preferenceFragmentStyle:I = 0x7f04043f
 
-.field public static final preferenceScreenStyle:I = 0x7f040447
+.field public static final preferenceScreenStyle:I = 0x7f040444
 
-.field public static final preferenceStyle:I = 0x7f040448
+.field public static final preferenceStyle:I = 0x7f040445
 
-.field public static final preferenceTheme:I = 0x7f040449
+.field public static final preferenceTheme:I = 0x7f040446
 
-.field public static final radioButtonPreferenceStyle:I = 0x7f04045d
+.field public static final radioButtonPreferenceStyle:I = 0x7f04045a
 
-.field public static final ringtonePreferenceStyle:I = 0x7f040474
+.field public static final ringtonePreferenceStyle:I = 0x7f040471
 
-.field public static final seekBarPreferenceStyle:I = 0x7f04049c
+.field public static final seekBarPreferenceStyle:I = 0x7f040499
 
-.field public static final switchPreferenceCompatStyle:I = 0x7f040508
+.field public static final switchPreferenceCompatStyle:I = 0x7f040505
 
-.field public static final switchPreferenceStyle:I = 0x7f040509
+.field public static final switchPreferenceStyle:I = 0x7f040506

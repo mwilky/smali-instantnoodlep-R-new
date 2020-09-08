@@ -561,6 +561,7 @@ Selection"</string>
     <string name="controls_favorite_other_zone_header">Other</string>
     <string name="controls_favorite_rearrange">Hold and drag to rearrange controls</string>
     <string name="controls_favorite_removed">All controls removed</string>
+    <string name="controls_favorite_see_other_apps">See other apps</string>
     <string name="controls_favorite_subtitle">Choose controls to access from the power menu</string>
     <string name="controls_favorite_toast_no_changes">Changes not saved</string>
     <string name="controls_in_progress">In progress</string>
@@ -742,7 +743,7 @@ If you resume, charges may apply for data usage."</string>
     <string name="hdcp_checking_title">HDCP checking</string>
     <string name="headset">Headset</string>
     <string name="heap_dump_tile_name">Dump SysUI Heap</string>
-    <string name="help_feedback_label">Help &amp; feedback</string>
+    <string name="help_feedback_label">Help and feedback</string>
     <string name="help_label">Help and feedback</string>
     <string name="hidden_notifications_cancel">No, thanks</string>
     <string name="hidden_notifications_setup">Setup</string>

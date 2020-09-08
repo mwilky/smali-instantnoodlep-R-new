@@ -22,10 +22,6 @@
 
 .field protected mController:Lcom/android/systemui/statusbar/phone/WLBSwitchController;
 
-.field private mDetailView:Lcom/android/systemui/statusbar/phone/WLBDetailView;
-
-.field private mFullyExpanded:Z
-
 .field private mViewGroup:Landroid/view/ViewGroup;
 
 
@@ -39,38 +35,42 @@
 
     iput-object p2, p0, Lcom/android/systemui/statusbar/phone/WLBDetailView$Adapter;->mController:Lcom/android/systemui/statusbar/phone/WLBSwitchController;
 
-    iput-object p3, p0, Lcom/android/systemui/statusbar/phone/WLBDetailView$Adapter;->mDetailView:Lcom/android/systemui/statusbar/phone/WLBDetailView;
-
     return-void
 .end method
 
 .method private getPositionByMode(I)I
-    .locals 1
+    .locals 2
 
-    const/4 p0, 0x2
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/WLBDetailView$Adapter;->mContext:Landroid/content/Context;
 
-    const/4 v0, 0x1
+    invoke-static {p0}, Lcom/oneplus/worklife/OPWLBHelper;->isBreakModeActive(Landroid/content/Context;)Z
 
-    if-ne p1, v0, :cond_0
+    move-result p0
 
-    const/4 p0, 0x0
+    const/4 v0, 0x2
+
+    const/4 v1, 0x1
+
+    if-eqz p0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    if-ne p1, p0, :cond_1
+    if-ne p1, v1, :cond_1
 
-    move p0, v0
+    const/4 v0, 0x0
 
     goto :goto_0
 
     :cond_1
-    if-nez p1, :cond_2
+    if-ne p1, v0, :cond_2
+
+    move v0, v1
 
     goto :goto_0
 
     :cond_2
-    invoke-static {}, Lcom/android/systemui/statusbar/phone/WLBDetailView;->access$100()Ljava/lang/String;
+    invoke-static {}, Lcom/android/systemui/statusbar/phone/WLBDetailView;->access$000()Ljava/lang/String;
 
     move-result-object p0
 
@@ -78,28 +78,33 @@
 
     invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    const/4 p0, -0x1
+    const/4 v0, -0x1
 
     :goto_0
-    return p0
+    return v0
 .end method
 
 .method private handleWLBMode(IZ)V
-    .locals 1
+    .locals 2
 
     invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/phone/WLBDetailView$Adapter;->getPositionByMode(I)I
 
     move-result v0
 
+    if-gez v0, :cond_0
+
+    return-void
+
+    :cond_0
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/phone/WLBSwitchController$BaseUserAdapter;->getItem(I)Lcom/android/systemui/statusbar/phone/WLBSwitchController$WLBModeItem;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/WLBSwitchController$WLBModeItem;->isConfigured()Z
+    invoke-virtual {v1}, Lcom/android/systemui/statusbar/phone/WLBSwitchController$WLBModeItem;->isConfigured()Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_1
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/WLBDetailView$Adapter;->mController:Lcom/android/systemui/statusbar/phone/WLBSwitchController;
 
@@ -113,13 +118,17 @@
 
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->doBindService()V
 
-    if-eqz p2, :cond_1
+    if-eqz p2, :cond_2
 
     invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/phone/WLBDetailView$Adapter;->sendBroadcastToApplication(I)V
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
+    const/4 p2, 0x2
+
+    if-ge v0, p2, :cond_2
+
     const-class p2, Lcom/android/systemui/statusbar/phone/ShadeController;
 
     invoke-static {p2}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -132,7 +141,7 @@
 
     invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/phone/WLBDetailView$Adapter;->launchConfiguration(I)V
 
-    :cond_1
+    :cond_2
     :goto_0
     return-void
 .end method
@@ -225,75 +234,10 @@
     return-void
 .end method
 
-.method private setDescVisibility(Landroid/view/View;IZF)V
-    .locals 0
-
-    if-eqz p1, :cond_0
-
-    sget p0, Lcom/android/systemui/R$id;->layout_desc:I
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/widget/LinearLayout;
-
-    invoke-virtual {p0, p2}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    if-eqz p3, :cond_1
-
-    invoke-virtual {p0, p4}, Landroid/widget/LinearLayout;->setAlpha(F)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {}, Lcom/android/systemui/statusbar/phone/WLBDetailView;->access$100()Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string/jumbo p1, "updateExpansion: Item is null"
-
-    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method private setLayoutDescVisibility(IZF)V
-    .locals 2
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/WLBDetailView$Adapter;->mViewGroup:Landroid/view/ViewGroup;
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    :goto_0
-    const/4 v1, 0x3
-
-    if-ge v0, v1, :cond_0
-
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/WLBDetailView$Adapter;->mViewGroup:Landroid/view/ViewGroup;
-
-    invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-direct {p0, v1, p1, p2, p3}, Lcom/android/systemui/statusbar/phone/WLBDetailView$Adapter;->setDescVisibility(Landroid/view/View;IZF)V
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
 
 # virtual methods
 .method public createUserDetailItemView(Landroid/view/View;Landroid/view/ViewGroup;Lcom/android/systemui/statusbar/phone/WLBSwitchController$WLBModeItem;)Lcom/android/systemui/statusbar/phone/WLBDeatailItemView;
-    .locals 2
+    .locals 1
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/WLBDetailView$Adapter;->mContext:Landroid/content/Context;
 
@@ -308,53 +252,25 @@
     :cond_0
     invoke-virtual {p3}, Lcom/android/systemui/statusbar/phone/WLBSwitchController$WLBModeItem;->getModeName()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
     invoke-virtual {p3}, Lcom/android/systemui/statusbar/phone/WLBSwitchController$WLBModeItem;->getPicture()Landroid/graphics/drawable/Drawable;
 
-    move-result-object v0
+    move-result-object p1
 
     invoke-virtual {p3}, Lcom/android/systemui/statusbar/phone/WLBSwitchController$WLBModeItem;->getTriggerName()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {p2, p1, v0, v1}, Lcom/android/systemui/statusbar/phone/WLBDeatailItemView;->bind(Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/String;)V
+    invoke-virtual {p2, p0, p1, v0}, Lcom/android/systemui/statusbar/phone/WLBDeatailItemView;->bind(Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/String;)V
 
     invoke-virtual {p3}, Lcom/android/systemui/statusbar/phone/WLBSwitchController$WLBModeItem;->isActive()Z
 
-    move-result p1
+    move-result p0
 
-    invoke-virtual {p2, p1}, Lcom/android/systemui/statusbar/phone/WLBDeatailItemView;->updateThemeColor(Z)V
+    invoke-virtual {p2, p0}, Lcom/android/systemui/statusbar/phone/WLBDeatailItemView;->updateThemeColor(Z)V
 
     invoke-virtual {p2, p3}, Landroid/widget/LinearLayout;->setTag(Ljava/lang/Object;)V
-
-    iget-boolean p1, p0, Lcom/android/systemui/statusbar/phone/WLBDetailView$Adapter;->mFullyExpanded:Z
-
-    if-eqz p1, :cond_1
-
-    const/4 p1, 0x0
-
-    goto :goto_0
-
-    :cond_1
-    const/16 p1, 0x8
-
-    :goto_0
-    const/4 p3, 0x1
-
-    iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/WLBDetailView$Adapter;->mFullyExpanded:Z
-
-    if-eqz v0, :cond_2
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    goto :goto_1
-
-    :cond_2
-    const/4 v0, 0x0
-
-    :goto_1
-    invoke-direct {p0, p2, p1, p3, v0}, Lcom/android/systemui/statusbar/phone/WLBDetailView$Adapter;->setDescVisibility(Landroid/view/View;IZF)V
 
     return-object p2
 .end method
@@ -376,7 +292,7 @@
 .end method
 
 .method public onClick(Landroid/view/View;)V
-    .locals 5
+    .locals 3
 
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -384,7 +300,7 @@
 
     instance-of v0, v0, Lcom/android/systemui/statusbar/phone/WLBSwitchController$WLBModeItem;
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -427,64 +343,36 @@
 
     move-result v0
 
+    const/4 v2, -0x1
+
+    if-le v0, v2, :cond_1
+
     aput-boolean v1, p1, v0
 
+    :cond_1
     const/4 v0, 0x0
-
-    move v1, v0
 
     :goto_0
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/WLBSwitchController$BaseUserAdapter;->getCount()I
 
-    move-result v2
+    move-result v1
 
-    if-ge v1, v2, :cond_1
+    if-ge v0, v1, :cond_2
 
-    invoke-virtual {p0, v1}, Lcom/android/systemui/statusbar/phone/WLBSwitchController$BaseUserAdapter;->getItem(I)Lcom/android/systemui/statusbar/phone/WLBSwitchController$WLBModeItem;
+    invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/phone/WLBSwitchController$BaseUserAdapter;->getItem(I)Lcom/android/systemui/statusbar/phone/WLBSwitchController$WLBModeItem;
 
-    move-result-object v2
+    move-result-object v1
 
-    aget-boolean v3, p1, v1
+    aget-boolean v2, p1, v0
 
-    invoke-virtual {v2, v3}, Lcom/android/systemui/statusbar/phone/WLBSwitchController$WLBModeItem;->setActive(Z)V
+    invoke-virtual {v1, v2}, Lcom/android/systemui/statusbar/phone/WLBSwitchController$WLBModeItem;->setActive(Z)V
 
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    :cond_1
-    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/WLBDetailView$Adapter;->mDetailView:Lcom/android/systemui/statusbar/phone/WLBDetailView;
-
-    if-eqz p1, :cond_2
-
-    invoke-static {p1}, Lcom/android/systemui/statusbar/phone/WLBDetailView;->access$000(Lcom/android/systemui/statusbar/phone/WLBDetailView;)F
-
-    move-result p1
-
-    float-to-double v1, p1
-
-    const-wide/16 v3, 0x0
-
-    cmpl-double p1, v1, v3
-
-    if-nez p1, :cond_2
-
-    const/16 p1, 0x8
-
-    goto :goto_1
-
     :cond_2
-    move p1, v0
-
-    :goto_1
-    const/4 v1, 0x0
-
-    invoke-direct {p0, p1, v0, v1}, Lcom/android/systemui/statusbar/phone/WLBDetailView$Adapter;->setLayoutDescVisibility(IZF)V
-
-    :cond_3
     return-void
-
-    nop
 
     :array_0
     .array-data 1
@@ -497,15 +385,13 @@
 .method public setFullyExpanded(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/WLBDetailView$Adapter;->mFullyExpanded:Z
-
     return-void
 .end method
 
 .method public updateActiveMode(IZ)V
     .locals 4
 
-    invoke-static {}, Lcom/android/systemui/statusbar/phone/WLBDetailView;->access$100()Ljava/lang/String;
+    invoke-static {}, Lcom/android/systemui/statusbar/phone/WLBDetailView;->access$000()Ljava/lang/String;
 
     move-result-object v0
 
@@ -594,25 +480,17 @@
 .end method
 
 .method public updateExpansion(F)V
-    .locals 4
+    .locals 2
 
-    float-to-double v0, p1
+    float-to-double p0, p1
 
-    const-wide/16 v2, 0x0
+    const-wide/16 v0, 0x0
 
-    cmpl-double v0, v0, v2
+    cmpl-double p0, p0, v0
 
-    if-nez v0, :cond_0
-
-    return-void
+    if-nez p0, :cond_0
 
     :cond_0
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
-
-    invoke-direct {p0, v0, v1, p1}, Lcom/android/systemui/statusbar/phone/WLBDetailView$Adapter;->setLayoutDescVisibility(IZF)V
-
     return-void
 .end method
 
@@ -630,34 +508,39 @@
 
     move-result p1
 
-    const/4 v2, 0x1
+    const/4 v2, -0x1
 
-    aput-boolean v2, v1, p1
+    const/4 v3, 0x1
 
+    if-le p1, v2, :cond_0
+
+    aput-boolean v3, v1, p1
+
+    :cond_0
     const/4 p1, 0x0
 
     :goto_0
-    if-ge p1, v0, :cond_3
+    if-ge p1, v0, :cond_4
 
-    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/WLBDetailView$Adapter;->mViewGroup:Landroid/view/ViewGroup;
+    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/WLBDetailView$Adapter;->mViewGroup:Landroid/view/ViewGroup;
 
-    invoke-virtual {v3, p1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v2, p1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
-    move-result-object v3
+    move-result-object v2
 
-    check-cast v3, Lcom/android/systemui/statusbar/phone/WLBDeatailItemView;
+    check-cast v2, Lcom/android/systemui/statusbar/phone/WLBDeatailItemView;
 
     sget v4, Lcom/android/systemui/R$id;->user_picture:I
 
-    invoke-virtual {v3, v4}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v2, v4}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
-    move-result-object v3
+    move-result-object v2
 
-    check-cast v3, Landroid/widget/ImageView;
+    check-cast v2, Landroid/widget/ImageView;
 
     aget-boolean v4, v1, p1
 
-    if-eqz v4, :cond_0
+    if-eqz v4, :cond_1
 
     iget-object v4, p0, Lcom/android/systemui/statusbar/phone/WLBDetailView$Adapter;->mContext:Landroid/content/Context;
 
@@ -667,7 +550,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v2, v4}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     iget-object v4, p0, Lcom/android/systemui/statusbar/phone/WLBDetailView$Adapter;->mContext:Landroid/content/Context;
 
@@ -685,22 +568,22 @@
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {v2, v4}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
 
     goto :goto_2
 
-    :cond_0
+    :cond_1
     invoke-static {}, Lcom/oneplus/util/ThemeColorUtils;->getCurrentTheme()I
 
     move-result v4
 
-    if-eqz v4, :cond_2
+    if-eqz v4, :cond_3
 
-    if-eq v4, v2, :cond_1
+    if-eq v4, v3, :cond_2
 
     const/4 v5, 0x2
 
-    if-eq v4, v5, :cond_1
+    if-eq v4, v5, :cond_2
 
     sget v4, Lcom/android/systemui/R$drawable;->wlb_avathar_bg_disabled_light:I
 
@@ -708,14 +591,14 @@
 
     goto :goto_1
 
-    :cond_1
+    :cond_2
     sget v4, Lcom/android/systemui/R$drawable;->wlb_avathar_bg_disabled_dark:I
 
     sget v5, Lcom/android/systemui/R$color;->oneplus_contorl_icon_color_active_dark:I
 
     goto :goto_1
 
-    :cond_2
+    :cond_3
     sget v4, Lcom/android/systemui/R$drawable;->wlb_avathar_bg_disabled_light:I
 
     sget v5, Lcom/android/systemui/R$color;->oneplus_contorl_icon_color_active_light:I
@@ -727,7 +610,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v2, v4}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     iget-object v4, p0, Lcom/android/systemui/statusbar/phone/WLBDetailView$Adapter;->mContext:Landroid/content/Context;
 
@@ -743,7 +626,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {v2, v4}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -755,7 +638,7 @@
     :catch_0
     move-exception p0
 
-    invoke-static {}, Lcom/android/systemui/statusbar/phone/WLBDetailView;->access$100()Ljava/lang/String;
+    invoke-static {}, Lcom/android/systemui/statusbar/phone/WLBDetailView;->access$000()Ljava/lang/String;
 
     move-result-object p1
 
@@ -763,10 +646,8 @@
 
     invoke-static {p1, v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    :cond_3
+    :cond_4
     return-void
-
-    nop
 
     :array_0
     .array-data 1

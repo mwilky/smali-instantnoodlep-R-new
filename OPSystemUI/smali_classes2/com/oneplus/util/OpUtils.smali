@@ -14,6 +14,8 @@
 # static fields
 .field public static final DEBUG_ONEPLUS:Z
 
+.field private static final LAUNCHER_FEATURE_URI:Landroid/net/Uri;
+
 .field private static MmcMnc3UK:[Ljava/lang/String;
 
 .field public static QUICK_REPLY_BUBBLE:Z
@@ -40,6 +42,10 @@
 
 .field private static mIsCTSAdded:Z
 
+.field private static mIsCtsInputmethodservice:Z
+
+.field public static mIsFullScreenListApp:Z
+
 .field private static mIsHomeApp:Z
 
 .field private static mIsNeedDarkNavBar:Z
@@ -47,6 +53,8 @@
 .field private static mIsOnePlusHomeApp:Z
 
 .field private static mIsRecentUnlockBiometricFace:Z
+
+.field private static mIsRecentUnlockBiometricFinger:Z
 
 .field private static mIsScreenCompat:Z
 
@@ -60,6 +68,8 @@
 
 .field private static mSimType:Ljava/lang/String;
 
+.field private static mTopClassName:Ljava/lang/String;
+
 .field private static mTypefaceCache:Ljava/util/concurrent/ConcurrentHashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -71,7 +81,7 @@
     .end annotation
 .end field
 
-.field private static sStatusBarIconsDark:Z
+.field public static sIsSupportAssistantGesture:Z
 
 
 # direct methods
@@ -91,6 +101,8 @@
     sput-boolean v0, Lcom/oneplus/util/OpUtils;->mIsScreenCompat:Z
 
     sput-boolean v0, Lcom/oneplus/util/OpUtils;->mIsCTS:Z
+
+    sput-boolean v0, Lcom/oneplus/util/OpUtils;->mIsCtsInputmethodservice:Z
 
     sput-boolean v0, Lcom/oneplus/util/OpUtils;->mIsCTSAdded:Z
 
@@ -140,8 +152,6 @@
 
     sput-boolean v0, Lcom/oneplus/util/OpUtils;->QUICK_REPLY_PORTRAIT_ENABLED:Z
 
-    sput-boolean v0, Lcom/oneplus/util/OpUtils;->sStatusBarIconsDark:Z
-
     const-string v1, "UNKNOWN"
 
     sput-object v1, Lcom/oneplus/util/OpUtils;->mSimType:Ljava/lang/String;
@@ -149,6 +159,16 @@
     sput-boolean v0, Lcom/oneplus/util/OpUtils;->mIsOnePlusHomeApp:Z
 
     sput-boolean v0, Lcom/oneplus/util/OpUtils;->mIsRecentUnlockBiometricFace:Z
+
+    sput-boolean v0, Lcom/oneplus/util/OpUtils;->mIsRecentUnlockBiometricFinger:Z
+
+    sput-boolean v0, Lcom/oneplus/util/OpUtils;->mIsFullScreenListApp:Z
+
+    const-string v0, ""
+
+    sput-object v0, Lcom/oneplus/util/OpUtils;->mTopClassName:Ljava/lang/String;
+
+    sput-boolean v2, Lcom/oneplus/util/OpUtils;->sIsSupportAssistantGesture:Z
 
     const-string v0, "310120"
 
@@ -187,6 +207,14 @@
     sput-object v0, Lcom/oneplus/util/OpUtils;->WindTreMmcMnc:[Ljava/lang/String;
 
     sput-boolean v2, Lcom/oneplus/util/OpUtils;->mEditTileBefore:Z
+
+    const-string v0, "content://net.oneplus.launcher.features"
+
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/oneplus/util/OpUtils;->LAUNCHER_FEATURE_URI:Landroid/net/Uri;
 
     return-void
 .end method
@@ -357,6 +385,50 @@
     move-result p0
 
     return p0
+.end method
+
+.method public static gameToolboxEnable(Landroid/content/Context;)Z
+    .locals 5
+
+    const/4 v0, 0x0
+
+    if-nez p0, :cond_0
+
+    return v0
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v1
+
+    const/4 v2, -0x2
+
+    const-string v3, "game_toolbox_enable"
+
+    const/4 v4, 0x1
+
+    invoke-static {v1, v3, v4, v2}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    move-result v1
+
+    invoke-static {p0}, Lcom/oneplus/util/OpUtils;->isGameModeOn(Landroid/content/Context;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    if-ne v1, v4, :cond_1
+
+    invoke-static {p0}, Lcom/oneplus/util/OpUtils;->isKeyguardLocked(Landroid/content/Context;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_1
+
+    move v0, v4
+
+    :cond_1
+    return v0
 .end method
 
 .method private static getApplicationInfo(Landroid/content/Context;Ljava/lang/String;)Landroid/content/pm/ApplicationInfo;
@@ -539,7 +611,7 @@
 
     move-result-object v1
 
-    const v2, 0x50f0032
+    const v2, 0x50f0033
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -715,7 +787,7 @@
 
     new-array v2, v1, [I
 
-    const/16 v3, 0x32
+    const/16 v3, 0x31
 
     aput v3, v2, v0
 
@@ -727,7 +799,7 @@
 
     new-array v2, v1, [I
 
-    const/16 v3, 0xee
+    const/16 v3, 0xe6
 
     aput v3, v2, v0
 
@@ -935,13 +1007,9 @@
 .method public static getSubAccentColor(Landroid/content/Context;I)I
     .locals 3
 
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    const-string v0, "persist.sys.theme.sub_accentcolor"
 
-    move-result-object v0
-
-    const-string v1, "oneplus_sub_accent_color"
-
-    invoke-static {v0, v1}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1024,13 +1092,9 @@
 .method public static getThemeAccentColor(Landroid/content/Context;I)I
     .locals 3
 
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    const-string v0, "persist.sys.theme.accentcolor"
 
-    move-result-object v0
-
-    const-string v1, "oneplus_accent_color"
-
-    invoke-static {v0, v1}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1111,21 +1175,21 @@
 .end method
 
 .method public static getThemeColor(Landroid/content/Context;)I
-    .locals 2
+    .locals 0
 
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object p0
-
-    const-string v0, "oem_black_mode"
-
-    const/4 v1, 0x2
-
-    invoke-static {p0, v0, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    invoke-static {p0}, Lcom/oneplus/util/OpUtils;->isGoogleDarkTheme(Landroid/content/Context;)Z
 
     move-result p0
 
     return p0
+.end method
+
+.method public static getTopClassName()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lcom/oneplus/util/OpUtils;->mTopClassName:Ljava/lang/String;
+
+    return-object v0
 .end method
 
 .method private static getTypefaceByPath(Ljava/lang/String;)Landroid/graphics/Typeface;
@@ -1337,6 +1401,14 @@
     return v0
 .end method
 
+.method public static isCtsInputmethodservice()Z
+    .locals 1
+
+    sget-boolean v0, Lcom/oneplus/util/OpUtils;->mIsCtsInputmethodservice:Z
+
+    return v0
+.end method
+
 .method public static isCurrentGuest(Landroid/content/Context;)Z
     .locals 1
 
@@ -1379,7 +1451,7 @@
 
     const/4 v1, 0x0
 
-    const/16 v2, 0x3e
+    const/16 v2, 0x3c
 
     aput v2, v0, v1
 
@@ -1518,6 +1590,45 @@
     return p0
 .end method
 
+.method public static isDisableExpandForTouch(Landroid/content/Context;)Z
+    .locals 4
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const-string v1, "game_mode_prevent_mistouch"
+
+    const/4 v2, 0x0
+
+    const/4 v3, -0x2
+
+    invoke-static {v0, v1, v2, v3}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    move-result v0
+
+    invoke-static {p0}, Lcom/oneplus/util/OpUtils;->isGameModeOn(Landroid/content/Context;)Z
+
+    move-result v1
+
+    const/4 v3, 0x1
+
+    if-eqz v1, :cond_0
+
+    if-ne v0, v3, :cond_0
+
+    invoke-static {p0}, Lcom/oneplus/util/OpUtils;->isKeyguardLocked(Landroid/content/Context;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    move v2, v3
+
+    :cond_0
+    return v2
+.end method
+
 .method public static isEnableCustShutdownAnim(Landroid/content/Context;)Z
     .locals 2
 
@@ -1552,7 +1663,7 @@
 
     const/4 v1, 0x0
 
-    const/16 v2, 0x10c
+    const/16 v2, 0x105
 
     aput v2, v0, v1
 
@@ -1561,6 +1672,37 @@
     move-result v0
 
     return v0
+.end method
+
+.method public static isGameModeOn(Landroid/content/Context;)Z
+    .locals 2
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    const/4 v0, -0x2
+
+    const-string v1, "game_mode_status"
+
+    invoke-static {p0, v1, v0}, Landroid/provider/Settings$System;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "1"
+
+    invoke-static {p0, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result p0
+
+    return p0
 .end method
 
 .method public static isGlobalROM(Landroid/content/Context;)Z
@@ -1582,7 +1724,7 @@
 .end method
 
 .method public static isGoogleDarkTheme(Landroid/content/Context;)Z
-    .locals 1
+    .locals 0
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1594,11 +1736,9 @@
 
     iget p0, p0, Landroid/content/res/Configuration;->uiMode:I
 
-    and-int/lit8 p0, p0, 0x30
+    and-int/lit8 p0, p0, 0x20
 
-    const/16 v0, 0x20
-
-    if-ne p0, v0, :cond_0
+    if-eqz p0, :cond_0
 
     const/4 p0, 0x1
 
@@ -1651,6 +1791,50 @@
     return v0
 .end method
 
+.method public static isHydrogen()Z
+    .locals 2
+
+    const/4 v0, 0x1
+
+    new-array v0, v0, [I
+
+    const/4 v1, 0x0
+
+    aput v1, v0, v1
+
+    invoke-static {v0}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static isInFullScreenListApp()Z
+    .locals 1
+
+    sget-boolean v0, Lcom/oneplus/util/OpUtils;->mIsFullScreenListApp:Z
+
+    return v0
+.end method
+
+.method public static isKeyguardLocked(Landroid/content/Context;)Z
+    .locals 1
+
+    const-string v0, "keyguard"
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/app/KeyguardManager;
+
+    invoke-virtual {p0}, Landroid/app/KeyguardManager;->isKeyguardLocked()Z
+
+    move-result p0
+
+    return p0
+.end method
+
 .method public static isMCLVersion()Z
     .locals 1
 
@@ -1674,7 +1858,7 @@
 
     new-array v0, v1, [I
 
-    const/16 v3, 0xe7
+    const/16 v3, 0xdf
 
     aput v3, v0, v2
 
@@ -1920,6 +2104,14 @@
     return v0
 .end method
 
+.method public static isRecentUnlockBiometricFinger()Z
+    .locals 1
+
+    sget-boolean v0, Lcom/oneplus/util/OpUtils;->mIsRecentUnlockBiometricFinger:Z
+
+    return v0
+.end method
+
 .method public static isRemoveRoamingIcon()Z
     .locals 1
 
@@ -2034,12 +2226,123 @@
     return v0
 .end method
 
-.method public static isStatusBarIconsDark()Z
-    .locals 1
+.method private static isSupportAssistantGesture(Landroid/content/Context;)Z
+    .locals 6
 
-    sget-boolean v0, Lcom/oneplus/util/OpUtils;->sStatusBarIconsDark:Z
+    const-string v0, "OpUtils"
 
-    return v0
+    new-instance v1, Landroid/os/Bundle;
+
+    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
+
+    const/4 v2, 0x1
+
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    sget-object v3, Lcom/oneplus/util/OpUtils;->LAUNCHER_FEATURE_URI:Landroid/net/Uri;
+
+    const-string v4, "checkFeature"
+
+    const-string v5, "assistant_gesture"
+
+    invoke-virtual {p0, v3, v4, v5, v1}, Landroid/content/ContentResolver;->call(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
+
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    if-eqz p0, :cond_2
+
+    const/4 v1, -0x1
+
+    const-string v3, "result_code"
+
+    invoke-virtual {p0, v3, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "methodIsSupportAssistantGesture "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v3, 0x0
+
+    const-string v4, "result_message"
+
+    invoke-virtual {p0, v4, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v2
+
+    :cond_0
+    const-string v1, "is_supported"
+
+    invoke-virtual {p0, v1, v2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result p0
+
+    if-nez p0, :cond_1
+
+    const-string p0, "not support assistant gesture"
+
+    invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_1
+    const-string p0, "support assistant gesture"
+
+    invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v2
+
+    :cond_2
+    const-string p0, "methodIsSupportAssistantGesture bundle null"
+
+    invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v2
+
+    :catch_0
+    move-exception p0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "methodIsSupportAssistantGesture e1 = "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v2
 .end method
 
 .method private static isSupportChargingAnimationV1()Z
@@ -2051,7 +2354,7 @@
 
     const/4 v1, 0x0
 
-    const/16 v2, 0x117
+    const/16 v2, 0x110
 
     aput v2, v0, v1
 
@@ -2087,7 +2390,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x138
+    const/16 v2, 0x131
 
     const/4 v3, 0x0
 
@@ -2162,7 +2465,7 @@
 
     const/4 v1, 0x0
 
-    const/16 v2, 0x26
+    const/16 v2, 0x25
 
     aput v2, v0, v1
 
@@ -2182,7 +2485,7 @@
 
     const/4 v1, 0x0
 
-    const/16 v2, 0x33
+    const/16 v2, 0x32
 
     aput v2, v0, v1
 
@@ -2202,7 +2505,7 @@
 
     const/4 v1, 0x0
 
-    const/16 v2, 0x118
+    const/16 v2, 0x111
 
     aput v2, v0, v1
 
@@ -2220,7 +2523,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x7b
+    const/16 v2, 0x74
 
     const/4 v3, 0x0
 
@@ -2234,7 +2537,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x12a
+    const/16 v2, 0x123
 
     aput v2, v1, v3
 
@@ -2296,7 +2599,7 @@
 
     const/4 v1, 0x0
 
-    const/16 v2, 0xee
+    const/16 v2, 0xe6
 
     aput v2, v0, v1
 
@@ -2316,7 +2619,7 @@
 
     const/4 v1, 0x0
 
-    const/16 v2, 0x65
+    const/16 v2, 0x61
 
     aput v2, v0, v1
 
@@ -2370,7 +2673,7 @@
 
     const/4 v1, 0x0
 
-    const/16 v2, 0x59
+    const/16 v2, 0x56
 
     aput v2, v0, v1
 
@@ -2390,7 +2693,7 @@
 
     const/4 v1, 0x0
 
-    const/16 v2, 0x64
+    const/16 v2, 0x60
 
     aput v2, v0, v1
 
@@ -2418,7 +2721,7 @@
 
     const/4 v1, 0x0
 
-    const/16 v2, 0x91
+    const/16 v2, 0x8a
 
     aput v2, v0, v1
 
@@ -2436,7 +2739,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0xf5
+    const/16 v2, 0xee
 
     const/4 v3, 0x0
 
@@ -2530,7 +2833,7 @@
 
     const/4 v1, 0x0
 
-    const/16 v2, 0x35
+    const/16 v2, 0x34
 
     aput v2, v0, v1
 
@@ -2586,7 +2889,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x80
+    const/16 v2, 0x79
 
     const/4 v3, 0x0
 
@@ -2600,7 +2903,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0xf5
+    const/16 v2, 0xee
 
     aput v2, v1, v3
 
@@ -2647,7 +2950,7 @@
 
     const/4 v1, 0x0
 
-    const/16 v2, 0xc8
+    const/16 v2, 0xc0
 
     aput v2, v0, v1
 
@@ -2673,7 +2976,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x87
+    const/16 v2, 0x80
 
     const/4 v3, 0x0
 
@@ -2715,7 +3018,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x4b
+    const/16 v2, 0x49
 
     const/4 v3, 0x0
 
@@ -2830,7 +3133,7 @@
 
     const/4 v1, 0x0
 
-    const/16 v2, 0x10e
+    const/16 v2, 0x107
 
     aput v2, v0, v1
 
@@ -2958,8 +3261,6 @@
 
 .method public static notifyStatusBarIconsDark(Z)V
     .locals 0
-
-    sput-boolean p0, Lcom/oneplus/util/OpUtils;->sStatusBarIconsDark:Z
 
     return-void
 .end method
@@ -3090,6 +3391,14 @@
     .locals 0
 
     sput-boolean p0, Lcom/oneplus/util/OpUtils;->mIsRecentUnlockBiometricFace:Z
+
+    return-void
+.end method
+
+.method public static setRecentUnlockBiometricFinger(Z)V
+    .locals 0
+
+    sput-boolean p0, Lcom/oneplus/util/OpUtils;->mIsRecentUnlockBiometricFinger:Z
 
     return-void
 .end method
@@ -3261,18 +3570,42 @@
     return-void
 .end method
 
-.method public static updateTopPackage(Landroid/content/Context;Ljava/lang/String;)V
-    .locals 6
+.method public static updateSupportAssistantGestureState(Landroid/content/Context;)V
+    .locals 3
 
-    new-instance v0, Landroid/content/Intent;
+    new-instance v0, Ljava/lang/Throwable;
 
-    const-string v1, "android.intent.action.MAIN"
+    invoke-direct {v0}, Ljava/lang/Throwable;-><init>()V
 
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    const-string v1, "OpUtils"
 
-    const-string v1, "android.intent.category.HOME"
+    const-string v2, "updateSupportAssistantGestureState "
 
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    invoke-static {p0}, Lcom/oneplus/util/OpUtils;->isSupportAssistantGesture(Landroid/content/Context;)Z
+
+    move-result p0
+
+    sput-boolean p0, Lcom/oneplus/util/OpUtils;->sIsSupportAssistantGesture:Z
+
+    return-void
+.end method
+
+.method public static updateTopPackage(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 5
+
+    sput-object p2, Lcom/oneplus/util/OpUtils;->mTopClassName:Ljava/lang/String;
+
+    new-instance p2, Landroid/content/Intent;
+
+    const-string v0, "android.intent.action.MAIN"
+
+    invoke-direct {p2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string v0, "android.intent.category.HOME"
+
+    invoke-virtual {p2, v0}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
     if-nez p0, :cond_0
 
@@ -3281,224 +3614,254 @@
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    move-result-object v1
-
-    const/high16 v2, 0x10000
-
-    invoke-virtual {v1, v0, v2}, Landroid/content/pm/PackageManager;->resolveActivity(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;
-
     move-result-object v0
+
+    const/high16 v1, 0x10000
+
+    invoke-virtual {v0, p2, v1}, Landroid/content/pm/PackageManager;->resolveActivity(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;
+
+    move-result-object p2
+
+    const/4 v0, 0x0
+
+    if-eqz p2, :cond_1
+
+    iget-object p2, p2, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    iget-object v0, p2, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
+
+    :cond_1
+    const/4 p2, 0x1
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_1
-
-    iget-object v0, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
-
-    iget-object v1, v0, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
-
-    :cond_1
-    const/4 v0, 0x1
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_6
+    if-eqz v0, :cond_6
 
     if-eqz p1, :cond_6
 
-    const-string v3, "net.oneplus.launcher"
+    const-string v2, "net.oneplus.launcher"
 
-    invoke-virtual {p1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v4
+    move-result v3
 
-    const-string v5, "net.oneplus.h2launcher"
+    const-string v4, "net.oneplus.h2launcher"
 
-    if-nez v4, :cond_3
+    if-nez v3, :cond_3
 
-    invoke-virtual {p1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v4
+    move-result v3
 
-    if-nez v4, :cond_3
+    if-nez v3, :cond_3
 
-    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_2
+    if-eqz v0, :cond_2
 
     goto :goto_0
 
     :cond_2
-    move v1, v2
+    move v0, v1
 
     goto :goto_1
 
     :cond_3
     :goto_0
-    move v1, v0
+    move v0, p2
 
     :goto_1
-    sput-boolean v1, Lcom/oneplus/util/OpUtils;->mIsHomeApp:Z
+    sput-boolean v0, Lcom/oneplus/util/OpUtils;->mIsHomeApp:Z
 
-    invoke-virtual {p1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result v0
 
-    if-nez v1, :cond_5
+    if-nez v0, :cond_5
 
-    invoke-virtual {p1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_4
+    if-eqz v0, :cond_4
 
     goto :goto_2
 
     :cond_4
-    move v1, v2
+    move v0, v1
 
     goto :goto_3
 
     :cond_5
     :goto_2
-    move v1, v0
+    move v0, p2
 
     :goto_3
-    sput-boolean v1, Lcom/oneplus/util/OpUtils;->mIsOnePlusHomeApp:Z
+    sput-boolean v0, Lcom/oneplus/util/OpUtils;->mIsOnePlusHomeApp:Z
 
     goto :goto_4
 
     :cond_6
-    sput-boolean v2, Lcom/oneplus/util/OpUtils;->mIsHomeApp:Z
+    sput-boolean v1, Lcom/oneplus/util/OpUtils;->mIsHomeApp:Z
 
-    sput-boolean v2, Lcom/oneplus/util/OpUtils;->mIsOnePlusHomeApp:Z
+    sput-boolean v1, Lcom/oneplus/util/OpUtils;->mIsOnePlusHomeApp:Z
 
     :goto_4
     if-eqz p1, :cond_7
 
-    const-string v1, "com.android.systemui"
+    const-string v0, "com.android.systemui"
 
-    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result v0
 
-    sput-boolean v1, Lcom/oneplus/util/OpUtils;->mIsSystemUI:Z
+    sput-boolean v0, Lcom/oneplus/util/OpUtils;->mIsSystemUI:Z
 
     goto :goto_5
 
     :cond_7
-    sput-boolean v2, Lcom/oneplus/util/OpUtils;->mIsSystemUI:Z
+    sput-boolean v1, Lcom/oneplus/util/OpUtils;->mIsSystemUI:Z
 
     :goto_5
     if-eqz p1, :cond_8
 
-    const-string v1, "android.systemui.cts"
+    const-string v0, "android.systemui.cts"
 
-    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result v0
 
-    sput-boolean v1, Lcom/oneplus/util/OpUtils;->mIsCTS:Z
+    sput-boolean v0, Lcom/oneplus/util/OpUtils;->mIsCTS:Z
 
     goto :goto_6
 
     :cond_8
-    sput-boolean v2, Lcom/oneplus/util/OpUtils;->mIsCTS:Z
+    sput-boolean v1, Lcom/oneplus/util/OpUtils;->mIsCTS:Z
 
     :goto_6
-    if-eqz p1, :cond_b
+    if-eqz p1, :cond_9
 
-    const-string v1, "com.mobile.legends"
+    const-string v0, "android.inputmethodservice.cts"
 
-    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
-    move-result v1
+    move-result v0
 
-    if-nez v1, :cond_a
-
-    const-string v1, "com.tencent.tmgp.sgame"
-
-    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_9
+    sput-boolean v0, Lcom/oneplus/util/OpUtils;->mIsCtsInputmethodservice:Z
 
     goto :goto_7
 
     :cond_9
-    move v1, v2
+    sput-boolean v1, Lcom/oneplus/util/OpUtils;->mIsCtsInputmethodservice:Z
+
+    :goto_7
+    if-eqz p1, :cond_c
+
+    const-string v0, "com.mobile.legends"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_b
+
+    const-string v0, "com.tencent.tmgp.sgame"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_a
 
     goto :goto_8
 
     :cond_a
-    :goto_7
-    move v1, v0
-
-    :goto_8
-    sput-boolean v1, Lcom/oneplus/util/OpUtils;->mIsNeedDarkNavBar:Z
+    move v0, v1
 
     goto :goto_9
 
     :cond_b
-    sput-boolean v2, Lcom/oneplus/util/OpUtils;->mIsNeedDarkNavBar:Z
+    :goto_8
+    move v0, p2
 
     :goto_9
-    const-string v1, "appops"
+    sput-boolean v0, Lcom/oneplus/util/OpUtils;->mIsNeedDarkNavBar:Z
 
-    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    goto :goto_a
 
-    move-result-object v1
+    :cond_c
+    sput-boolean v1, Lcom/oneplus/util/OpUtils;->mIsNeedDarkNavBar:Z
 
-    check-cast v1, Landroid/app/AppOpsManager;
-
+    :goto_a
     if-eqz p1, :cond_d
+
+    invoke-static {p1}, Lcom/oneplus/systemui/OpSystemUIInjector;->isInNavGestureFullscreenList(Ljava/lang/String;)Z
+
+    move-result v0
+
+    sput-boolean v0, Lcom/oneplus/util/OpUtils;->mIsFullScreenListApp:Z
+
+    goto :goto_b
+
+    :cond_d
+    sput-boolean v1, Lcom/oneplus/util/OpUtils;->mIsFullScreenListApp:Z
+
+    :goto_b
+    const-string v0, "appops"
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/AppOpsManager;
+
+    if-eqz p1, :cond_f
 
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
-    invoke-virtual {p0, p1, v0}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+    invoke-virtual {p0, p1, p2}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
     move-result-object p0
 
-    const/16 v3, 0x3ee
+    const/16 v2, 0x3ee
 
     iget p0, p0, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    invoke-virtual {v1, v3, p0, p1}, Landroid/app/AppOpsManager;->checkOpNoThrow(IILjava/lang/String;)I
+    invoke-virtual {v0, v2, p0, p1}, Landroid/app/AppOpsManager;->checkOpNoThrow(IILjava/lang/String;)I
 
     move-result p0
 
-    if-nez p0, :cond_c
+    if-nez p0, :cond_e
 
-    goto :goto_a
+    goto :goto_c
 
-    :cond_c
-    move v0, v2
+    :cond_e
+    move p2, v1
 
-    :goto_a
-    sput-boolean v0, Lcom/oneplus/util/OpUtils;->mIsScreenCompat:Z
+    :goto_c
+    sput-boolean p2, Lcom/oneplus/util/OpUtils;->mIsScreenCompat:Z
 
-    goto :goto_b
+    goto :goto_d
 
-    :cond_d
-    sput-boolean v2, Lcom/oneplus/util/OpUtils;->mIsScreenCompat:Z
+    :cond_f
+    sput-boolean v1, Lcom/oneplus/util/OpUtils;->mIsScreenCompat:Z
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_b
+    goto :goto_d
 
     :catch_0
     move-exception p0
 
     invoke-virtual {p0}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
-    sput-boolean v2, Lcom/oneplus/util/OpUtils;->mIsScreenCompat:Z
+    sput-boolean v1, Lcom/oneplus/util/OpUtils;->mIsScreenCompat:Z
 
-    :goto_b
+    :goto_d
     return-void
 .end method

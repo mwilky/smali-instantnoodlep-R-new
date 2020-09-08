@@ -1,11 +1,11 @@
 .class Lcom/android/systemui/screenrecord/RecordingController$1;
-.super Landroid/os/CountDownTimer;
+.super Landroid/content/BroadcastReceiver;
 .source "RecordingController.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/systemui/screenrecord/RecordingController;->startCountdown(JJLandroid/app/PendingIntent;Landroid/app/PendingIntent;)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/android/systemui/screenrecord/RecordingController;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,138 +17,34 @@
 # instance fields
 .field final synthetic this$0:Lcom/android/systemui/screenrecord/RecordingController;
 
-.field final synthetic val$startIntent:Landroid/app/PendingIntent;
-
 
 # direct methods
-.method constructor <init>(Lcom/android/systemui/screenrecord/RecordingController;JJLandroid/app/PendingIntent;)V
+.method constructor <init>(Lcom/android/systemui/screenrecord/RecordingController;)V
     .locals 0
 
     iput-object p1, p0, Lcom/android/systemui/screenrecord/RecordingController$1;->this$0:Lcom/android/systemui/screenrecord/RecordingController;
 
-    iput-object p6, p0, Lcom/android/systemui/screenrecord/RecordingController$1;->val$startIntent:Landroid/app/PendingIntent;
-
-    invoke-direct {p0, p2, p3, p4, p5}, Landroid/os/CountDownTimer;-><init>(JJ)V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onFinish()V
-    .locals 3
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 0
 
-    const-string v0, "RecordingController"
+    iget-object p1, p0, Lcom/android/systemui/screenrecord/RecordingController$1;->this$0:Lcom/android/systemui/screenrecord/RecordingController;
 
-    iget-object v1, p0, Lcom/android/systemui/screenrecord/RecordingController$1;->this$0:Lcom/android/systemui/screenrecord/RecordingController;
+    invoke-static {p1}, Lcom/android/systemui/screenrecord/RecordingController;->access$000(Lcom/android/systemui/screenrecord/RecordingController;)Landroid/app/PendingIntent;
 
-    const/4 v2, 0x0
+    move-result-object p1
 
-    invoke-static {v1, v2}, Lcom/android/systemui/screenrecord/RecordingController;->access$102(Lcom/android/systemui/screenrecord/RecordingController;Z)Z
-
-    iget-object v1, p0, Lcom/android/systemui/screenrecord/RecordingController$1;->this$0:Lcom/android/systemui/screenrecord/RecordingController;
-
-    const/4 v2, 0x1
-
-    invoke-static {v1, v2}, Lcom/android/systemui/screenrecord/RecordingController;->access$202(Lcom/android/systemui/screenrecord/RecordingController;Z)Z
-
-    iget-object v1, p0, Lcom/android/systemui/screenrecord/RecordingController$1;->this$0:Lcom/android/systemui/screenrecord/RecordingController;
-
-    invoke-static {v1}, Lcom/android/systemui/screenrecord/RecordingController;->access$000(Lcom/android/systemui/screenrecord/RecordingController;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/android/systemui/screenrecord/RecordingController$RecordingStateChangeCallback;
-
-    invoke-interface {v2}, Lcom/android/systemui/screenrecord/RecordingController$RecordingStateChangeCallback;->onCountdownEnd()V
-
-    goto :goto_0
-
-    :cond_0
-    :try_start_0
-    iget-object p0, p0, Lcom/android/systemui/screenrecord/RecordingController$1;->val$startIntent:Landroid/app/PendingIntent;
-
-    invoke-virtual {p0}, Landroid/app/PendingIntent;->send()V
-
-    const-string p0, "sent start intent"
-
-    invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_0
-    .catch Landroid/app/PendingIntent$CanceledException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception p0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Pending intent was cancelled: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Landroid/app/PendingIntent$CanceledException;->getMessage()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    :goto_1
-    return-void
-.end method
-
-.method public onTick(J)V
-    .locals 1
+    if-eqz p1, :cond_0
 
     iget-object p0, p0, Lcom/android/systemui/screenrecord/RecordingController$1;->this$0:Lcom/android/systemui/screenrecord/RecordingController;
 
-    invoke-static {p0}, Lcom/android/systemui/screenrecord/RecordingController;->access$000(Lcom/android/systemui/screenrecord/RecordingController;)Ljava/util/ArrayList;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/systemui/screenrecord/RecordingController$RecordingStateChangeCallback;
-
-    invoke-interface {v0, p1, p2}, Lcom/android/systemui/screenrecord/RecordingController$RecordingStateChangeCallback;->onCountdown(J)V
-
-    goto :goto_0
+    invoke-virtual {p0}, Lcom/android/systemui/screenrecord/RecordingController;->stopRecording()V
 
     :cond_0
     return-void

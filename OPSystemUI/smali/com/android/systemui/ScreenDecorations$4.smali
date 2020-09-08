@@ -1,5 +1,5 @@
 .class Lcom/android/systemui/ScreenDecorations$4;
-.super Lcom/oneplus/util/SystemSetting;
+.super Lcom/android/systemui/qs/SecureSetting;
 .source "ScreenDecorations.java"
 
 
@@ -19,12 +19,12 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/systemui/ScreenDecorations;Landroid/content/Context;Landroid/os/Handler;Ljava/lang/String;Z)V
+.method constructor <init>(Lcom/android/systemui/ScreenDecorations;Landroid/content/Context;Landroid/os/Handler;Ljava/lang/String;)V
     .locals 0
 
     iput-object p1, p0, Lcom/android/systemui/ScreenDecorations$4;->this$0:Lcom/android/systemui/ScreenDecorations;
 
-    invoke-direct {p0, p2, p3, p4, p5}, Lcom/oneplus/util/SystemSetting;-><init>(Landroid/content/Context;Landroid/os/Handler;Ljava/lang/String;Z)V
+    invoke-direct {p0, p2, p3, p4}, Lcom/android/systemui/qs/SecureSetting;-><init>(Landroid/content/Context;Landroid/os/Handler;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -34,31 +34,9 @@
 .method protected handleValueChanged(IZ)V
     .locals 0
 
-    iget-object p2, p0, Lcom/android/systemui/ScreenDecorations$4;->this$0:Lcom/android/systemui/ScreenDecorations;
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    invoke-static {p2, p1}, Lcom/android/systemui/ScreenDecorations;->access$602(Lcom/android/systemui/ScreenDecorations;Z)Z
-
     iget-object p0, p0, Lcom/android/systemui/ScreenDecorations$4;->this$0:Lcom/android/systemui/ScreenDecorations;
 
-    invoke-static {p0}, Lcom/android/systemui/ScreenDecorations;->access$700(Lcom/android/systemui/ScreenDecorations;)Lcom/android/systemui/qs/SecureSetting;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/android/systemui/qs/SecureSetting;->getValue()I
-
-    move-result p1
-
-    invoke-static {p0, p1}, Lcom/android/systemui/ScreenDecorations;->access$500(Lcom/android/systemui/ScreenDecorations;I)V
+    invoke-static {p0, p1}, Lcom/android/systemui/ScreenDecorations;->access$600(Lcom/android/systemui/ScreenDecorations;I)V
 
     return-void
 .end method

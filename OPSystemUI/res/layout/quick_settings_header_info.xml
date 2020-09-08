@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:theme="@style/QSHeaderTheme" android:id="@id/header_text_container" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/qs_header_tooltip_height" android:layout_below="@id/quick_status_bar_system_icons" android:forceHasOverlappingRendering="false"
+<LinearLayout android:theme="@style/QSHeaderTheme" android:id="@id/header_text_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/qs_header_tooltip_height" android:layout_below="@id/quick_status_bar_system_icons" android:forceHasOverlappingRendering="false"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <com.android.systemui.qs.QSHeaderInfoLayout android:id="@id/status_container" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
         <LinearLayout android:gravity="center_vertical" android:id="@id/alarm_container" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent">

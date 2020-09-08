@@ -142,15 +142,21 @@
 .end method
 
 .method private synthetic lambda$onMovementBoundsChanged$2(Z)V
-    .locals 2
+    .locals 6
 
-    iget-object p0, p0, Lcom/android/systemui/pip/phone/PipManager$PipManagerPinnedStackListener;->this$0:Lcom/android/systemui/pip/phone/PipManager;
-
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcom/android/systemui/pip/phone/PipManager$PipManagerPinnedStackListener;->this$0:Lcom/android/systemui/pip/phone/PipManager;
 
     const/4 v1, 0x0
 
-    invoke-static {p0, v0, v1, p1, v1}, Lcom/android/systemui/pip/phone/PipManager;->access$800(Lcom/android/systemui/pip/phone/PipManager;Landroid/graphics/Rect;ZZZ)V
+    const/4 v2, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    move v3, p1
+
+    invoke-static/range {v0 .. v5}, Lcom/android/systemui/pip/phone/PipManager;->access$800(Lcom/android/systemui/pip/phone/PipManager;Landroid/graphics/Rect;ZZZLandroid/window/WindowContainerTransaction;)V
 
     return-void
 .end method

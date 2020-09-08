@@ -30,9 +30,6 @@
 .method public abstract getLong1()J
 .end method
 
-.method public abstract getLong2()J
-.end method
-
 .method public abstract getPrinter()Lkotlin/jvm/functions/Function1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -90,9 +87,6 @@
 .end method
 
 .method public abstract setLong1(J)V
-.end method
-
-.method public abstract setLong2(J)V
 .end method
 
 .method public abstract setStr1(Ljava/lang/String;)V

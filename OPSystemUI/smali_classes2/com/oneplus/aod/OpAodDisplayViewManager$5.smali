@@ -35,7 +35,7 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 2
 
     iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$5;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
@@ -45,15 +45,42 @@
 
     invoke-virtual {v0}, Lcom/oneplus/aod/OpClockViewCtrl;->startDozing()V
 
+    iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$5;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
+
+    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$500(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/slice/OpSliceManager;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/oneplus/aod/slice/OpSliceManager;->setListening(Z)V
+
+    iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$5;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
+
+    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$900(Lcom/oneplus/aod/OpAodDisplayViewManager;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$5;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
+
+    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1000(Lcom/oneplus/aod/OpAodDisplayViewManager;)Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/oneplus/aod/utils/OpCanvasAodHelper;->isCanvasAodEnabled(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
     iget-object p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$5;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    invoke-static {p0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$500(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/slice/OpSliceManager;
+    const-string v0, "start dozing"
 
-    move-result-object p0
+    invoke-static {p0, v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1100(Lcom/oneplus/aod/OpAodDisplayViewManager;Ljava/lang/String;)V
 
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Lcom/oneplus/aod/slice/OpSliceManager;->setListening(Z)V
-
+    :cond_0
     return-void
 .end method

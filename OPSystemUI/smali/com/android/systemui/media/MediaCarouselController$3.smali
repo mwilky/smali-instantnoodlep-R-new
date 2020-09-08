@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/systemui/media/MediaCarouselController;-><init>(Landroid/content/Context;Ljavax/inject/Provider;Lcom/android/systemui/statusbar/notification/VisualStabilityManager;Lcom/android/systemui/media/MediaHostStatesManager;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/util/concurrency/DelayableExecutor;Lcom/android/systemui/media/MediaDataCombineLatest;Lcom/android/systemui/statusbar/policy/ConfigurationController;Lcom/android/systemui/media/MediaDataManager;Lcom/android/systemui/plugins/FalsingManager;)V
+    value = Lcom/android/systemui/media/MediaCarouselController;-><init>(Landroid/content/Context;Ljavax/inject/Provider;Lcom/android/systemui/statusbar/notification/VisualStabilityManager;Lcom/android/systemui/media/MediaHostStatesManager;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/util/concurrency/DelayableExecutor;Lcom/android/systemui/media/MediaDataFilter;Lcom/android/systemui/statusbar/policy/ConfigurationController;Lcom/android/systemui/plugins/FalsingManager;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -43,11 +43,11 @@
 
     move-result v0
 
-    const/4 v1, 0x0
-
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Lcom/android/systemui/media/MediaCarouselController$3;->this$0:Lcom/android/systemui/media/MediaCarouselController;
+
+    const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/android/systemui/media/MediaCarouselController;->access$setNeedsReordering$p(Lcom/android/systemui/media/MediaCarouselController;Z)V
 
@@ -58,11 +58,11 @@
     :cond_0
     iget-object p0, p0, Lcom/android/systemui/media/MediaCarouselController$3;->this$0:Lcom/android/systemui/media/MediaCarouselController;
 
-    invoke-static {p0}, Lcom/android/systemui/media/MediaCarouselController;->access$getMediaCarousel$p(Lcom/android/systemui/media/MediaCarouselController;)Lcom/android/systemui/media/MediaScrollView;
+    invoke-static {p0}, Lcom/android/systemui/media/MediaCarouselController;->access$getMediaCarouselScrollHandler$p(Lcom/android/systemui/media/MediaCarouselController;)Lcom/android/systemui/media/MediaCarouselScrollHandler;
 
     move-result-object p0
 
-    invoke-virtual {p0, v1}, Landroid/widget/HorizontalScrollView;->setScrollX(I)V
+    invoke-virtual {p0}, Lcom/android/systemui/media/MediaCarouselScrollHandler;->scrollToStart()V
 
     return-void
 .end method

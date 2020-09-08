@@ -425,9 +425,27 @@
 
     move-result v0
 
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "isPulsingBlocked:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "DozeSensors"
+
+    invoke-static {v2, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
     new-array v1, v11, [I
 
-    const/16 v2, 0x3e
+    const/16 v2, 0x3c
 
     const/4 v3, 0x0
 
@@ -699,7 +717,7 @@
 
     new-array v0, p0, [I
 
-    const/16 v1, 0x5e
+    const/16 v1, 0x5b
 
     const/4 v2, 0x0
 
@@ -713,7 +731,7 @@
 
     new-array v0, p0, [I
 
-    const/16 v1, 0x3e
+    const/16 v1, 0x3c
 
     aput v1, v0, v2
 
@@ -938,7 +956,7 @@
 .end method
 
 .method public setListening(Z)V
-    .locals 2
+    .locals 4
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -966,45 +984,85 @@
 
     invoke-static {v1}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "DozeSensors"
+    const-string v2, "DozeSensors"
 
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-boolean v0, p0, Lcom/android/systemui/doze/DozeSensors;->mListening:Z
-
-    if-ne v0, p1, :cond_0
-
-    return-void
-
-    :cond_0
     invoke-static {}, Lcom/oneplus/aod/OpAodUtils;->isMotionAwakeOn()Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_0
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "setListening: adjustListen= "
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object v0, p0, Lcom/android/systemui/doze/DozeSensors;->mMotionCheck:Lcom/android/systemui/doze/DozeSensors$MotionCheck;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0, p1}, Lcom/android/systemui/doze/DozeSensors$MotionCheck;->setListening(Z)V
+    invoke-virtual {v0}, Lcom/android/systemui/doze/DozeSensors$MotionCheck;->isListened()Z
+
+    move-result v0
+
+    if-eq v0, v1, :cond_1
+
+    iget-object v0, p0, Lcom/android/systemui/doze/DozeSensors;->mMotionCheck:Lcom/android/systemui/doze/DozeSensors$MotionCheck;
+
+    invoke-virtual {v0, v1}, Lcom/android/systemui/doze/DozeSensors$MotionCheck;->setListening(Z)V
 
     :cond_1
     iget-object v0, p0, Lcom/android/systemui/doze/DozeSensors;->mPickUpCheck:Lcom/android/systemui/doze/DozeSensors$PickupCheck;
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0, p1}, Lcom/android/systemui/doze/DozeSensors$PickupCheck;->setListening(Z)V
+    invoke-virtual {v0}, Lcom/android/systemui/doze/DozeSensors$PickupCheck;->isListened()Z
+
+    move-result v0
+
+    if-eq v0, v1, :cond_2
+
+    iget-object v0, p0, Lcom/android/systemui/doze/DozeSensors;->mPickUpCheck:Lcom/android/systemui/doze/DozeSensors$PickupCheck;
+
+    invoke-virtual {v0, v1}, Lcom/android/systemui/doze/DozeSensors$PickupCheck;->setListening(Z)V
 
     :cond_2
+    iget-boolean v0, p0, Lcom/android/systemui/doze/DozeSensors;->mListening:Z
+
+    if-ne v0, p1, :cond_3
+
+    return-void
+
+    :cond_3
     iput-boolean p1, p0, Lcom/android/systemui/doze/DozeSensors;->mListening:Z
 
     invoke-virtual {p0}, Lcom/android/systemui/doze/DozeSensors;->updateListening()V
@@ -1107,7 +1165,7 @@
 .end method
 
 .method public updateListening()V
-    .locals 7
+    .locals 8
 
     iget-object v0, p0, Lcom/android/systemui/doze/DozeSensors;->mSensors:[Lcom/android/systemui/doze/DozeSensors$TriggerSensor;
 
@@ -1120,19 +1178,21 @@
     move v4, v3
 
     :goto_0
+    const/4 v5, 0x1
+
     if-ge v3, v1, :cond_1
 
-    aget-object v5, v0, v3
+    aget-object v6, v0, v3
+
+    iget-boolean v7, p0, Lcom/android/systemui/doze/DozeSensors;->mListening:Z
+
+    invoke-virtual {v6, v7}, Lcom/android/systemui/doze/DozeSensors$TriggerSensor;->setListening(Z)V
 
     iget-boolean v6, p0, Lcom/android/systemui/doze/DozeSensors;->mListening:Z
 
-    invoke-virtual {v5, v6}, Lcom/android/systemui/doze/DozeSensors$TriggerSensor;->setListening(Z)V
+    if-eqz v6, :cond_0
 
-    iget-boolean v5, p0, Lcom/android/systemui/doze/DozeSensors;->mListening:Z
-
-    if-eqz v5, :cond_0
-
-    const/4 v4, 0x1
+    move v4, v5
 
     :cond_0
     add-int/lit8 v3, v3, 0x1
@@ -1140,7 +1200,82 @@
     goto :goto_0
 
     :cond_1
-    if-nez v4, :cond_2
+    sget-boolean v0, Lcom/android/systemui/doze/DozeSensors;->DEBUG:Z
+
+    if-eqz v0, :cond_2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v1, "updateListening: mPaused = "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lcom/android/systemui/doze/DozeSensors;->mPaused:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", callstack = "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v1, 0x3
+
+    invoke-static {v1}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "DozeSensors"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_2
+    iget-object v0, p0, Lcom/android/systemui/doze/DozeSensors;->mMotionCheck:Lcom/android/systemui/doze/DozeSensors$MotionCheck;
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v0}, Lcom/android/systemui/doze/DozeSensors$MotionCheck;->isListened()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lcom/android/systemui/doze/DozeSensors;->mMotionCheck:Lcom/android/systemui/doze/DozeSensors$MotionCheck;
+
+    iget-boolean v1, p0, Lcom/android/systemui/doze/DozeSensors;->mPaused:Z
+
+    xor-int/2addr v1, v5
+
+    invoke-virtual {v0, v1}, Lcom/android/systemui/doze/DozeSensors$MotionCheck;->setListening(Z)V
+
+    :cond_3
+    iget-object v0, p0, Lcom/android/systemui/doze/DozeSensors;->mLightSensor:Lcom/android/systemui/doze/DozeSensors$LightSensor;
+
+    if-eqz v0, :cond_4
+
+    invoke-virtual {v0}, Lcom/android/systemui/doze/DozeSensors$LightSensor;->isListened()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, p0, Lcom/android/systemui/doze/DozeSensors;->mLightSensor:Lcom/android/systemui/doze/DozeSensors$LightSensor;
+
+    iget-boolean v1, p0, Lcom/android/systemui/doze/DozeSensors;->mPaused:Z
+
+    xor-int/2addr v1, v5
+
+    invoke-virtual {v0, v1}, Lcom/android/systemui/doze/DozeSensors$LightSensor;->setListening(Z)V
+
+    :cond_4
+    if-nez v4, :cond_5
 
     iget-object v0, p0, Lcom/android/systemui/doze/DozeSensors;->mResolver:Landroid/content/ContentResolver;
 
@@ -1150,17 +1285,17 @@
 
     goto :goto_2
 
-    :cond_2
+    :cond_5
     iget-boolean v0, p0, Lcom/android/systemui/doze/DozeSensors;->mSettingRegistered:Z
 
-    if-nez v0, :cond_3
+    if-nez v0, :cond_6
 
     iget-object v0, p0, Lcom/android/systemui/doze/DozeSensors;->mSensors:[Lcom/android/systemui/doze/DozeSensors$TriggerSensor;
 
     array-length v1, v0
 
     :goto_1
-    if-ge v2, v1, :cond_3
+    if-ge v2, v1, :cond_6
 
     aget-object v3, v0, v2
 
@@ -1172,7 +1307,7 @@
 
     goto :goto_1
 
-    :cond_3
+    :cond_6
     :goto_2
     iput-boolean v4, p0, Lcom/android/systemui/doze/DozeSensors;->mSettingRegistered:Z
 

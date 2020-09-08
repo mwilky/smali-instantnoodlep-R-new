@@ -27,9 +27,15 @@
 
 .field private mAnimationStarted:Z
 
+.field private mAudioManager:Landroid/media/AudioManager;
+
 .field private mBatteryController:Lcom/android/systemui/statusbar/policy/BatteryController;
 
+.field private mBatteryStatus:Lcom/oneplus/battery/OpBatteryStatus;
+
 .field private mBouncerShow:Z
+
+.field private mCacheFastChargeType:I
 
 .field private final mCallbacks:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
@@ -41,9 +47,17 @@
     .end annotation
 .end field
 
+.field private mChargingSound:Landroid/media/SoundPool;
+
+.field private mChargingSoundId:I
+
 .field private mConfigurationController:Lcom/android/systemui/statusbar/policy/ConfigurationController;
 
 .field private mContext:Landroid/content/Context;
+
+.field protected mDockOnWireless:Z
+
+.field private mDockOnWirelessObserver:Landroid/database/ContentObserver;
 
 .field private mHandler:Landroid/os/Handler;
 
@@ -57,17 +71,21 @@
 
 .field private mOpNewWarpChargingView:Lcom/oneplus/battery/OpNewWarpChargingView;
 
-.field private mOpWarpChargingView:Lcom/oneplus/battery/OpWarpChargingView;
+.field private mOpSWarpChargingView:Lcom/oneplus/battery/OpSWarpChargingView;
 
-.field private mOpWarpChargingViewV2:Lcom/oneplus/battery/OpWarpChargingViewV2;
+.field private mOpWarpChargingView:Lcom/oneplus/battery/OpWarpChargingView;
 
 .field private mPluggedButNotUsb:Z
 
 .field private mPreventViewShow:Z
 
+.field private final mRefreshBatteryInfo:Ljava/lang/Runnable;
+
 .field private mScreenLifecycle:Lcom/android/systemui/keyguard/ScreenLifecycle;
 
 .field private final mScreenObserver:Lcom/android/systemui/keyguard/ScreenLifecycle$Observer;
+
+.field private mShouldPlayChargeSound:Z
 
 .field private mSmallestWidth:I
 
@@ -88,7 +106,7 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
-    .locals 3
+    .locals 4
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -122,6 +140,8 @@
 
     iput v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOldChargingType:I
 
+    iput v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mCacheFastChargeType:I
+
     new-instance v1, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$1;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -134,17 +154,31 @@
 
     iput-boolean v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->isKeyguardShowing:Z
 
-    new-instance v0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$2;
+    new-instance v1, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$2;
 
-    invoke-direct {v0, p0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$2;-><init>(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)V
+    invoke-direct {v1, p0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$2;-><init>(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)V
 
-    iput-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mUpdateCallback:Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
+    iput-object v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mUpdateCallback:Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
 
-    new-instance v0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$3;
+    new-instance v1, Lcom/oneplus/battery/-$$Lambda$OpChargingAnimationControllerImpl$Rd40fvDNGOg-j7g-6AL7TtU1fGI;
 
-    invoke-direct {v0, p0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$3;-><init>(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)V
+    invoke-direct {v1, p0}, Lcom/oneplus/battery/-$$Lambda$OpChargingAnimationControllerImpl$Rd40fvDNGOg-j7g-6AL7TtU1fGI;-><init>(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)V
 
-    iput-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mScreenObserver:Lcom/android/systemui/keyguard/ScreenLifecycle$Observer;
+    iput-object v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mRefreshBatteryInfo:Ljava/lang/Runnable;
+
+    new-instance v1, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$3;
+
+    invoke-direct {v1, p0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$3;-><init>(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)V
+
+    iput-object v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mScreenObserver:Lcom/android/systemui/keyguard/ScreenLifecycle$Observer;
+
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mDockOnWirelessObserver:Landroid/database/ContentObserver;
+
+    const/4 v2, 0x1
+
+    iput-boolean v2, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mDockOnWireless:Z
 
     iput-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mContext:Landroid/content/Context;
 
@@ -160,9 +194,9 @@
 
     iget-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->TAG:Ljava/lang/String;
 
-    const-string v0, "OpChargingAnimationControllerImpl init"
+    const-string v3, "OpChargingAnimationControllerImpl init"
 
-    invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p1, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const-class p1, Lcom/android/systemui/statusbar/policy/BatteryController;
 
@@ -195,11 +229,39 @@
 
     new-instance p1, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$KeyguardStateCallback;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p1, p0, v0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$KeyguardStateCallback;-><init>(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;Lcom/oneplus/battery/OpChargingAnimationControllerImpl$1;)V
+    invoke-direct {p1, p0, v1}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$KeyguardStateCallback;-><init>(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;Lcom/oneplus/battery/OpChargingAnimationControllerImpl$1;)V
 
     iput-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mKeyguardStateCallback:Lcom/oneplus/battery/OpChargingAnimationControllerImpl$KeyguardStateCallback;
+
+    iget-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mContext:Landroid/content/Context;
+
+    const-string v1, "audio"
+
+    invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/media/AudioManager;
+
+    iput-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mAudioManager:Landroid/media/AudioManager;
+
+    new-instance p1, Landroid/media/SoundPool;
+
+    invoke-direct {p1, v2, v2, v0}, Landroid/media/SoundPool;-><init>(III)V
+
+    iput-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mChargingSound:Landroid/media/SoundPool;
+
+    iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mContext:Landroid/content/Context;
+
+    sget v1, Lcom/android/systemui/R$raw;->charging:I
+
+    invoke-virtual {p1, v0, v1, v2}, Landroid/media/SoundPool;->load(Landroid/content/Context;II)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mChargingSoundId:I
+
+    invoke-virtual {p0, v2}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->registerDockOnWirelessObserver(Z)V
 
     return-void
 .end method
@@ -252,7 +314,15 @@
     return p1
 .end method
 
-.method static synthetic access$1200(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)I
+.method static synthetic access$1202(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;Lcom/oneplus/battery/OpBatteryStatus;)Lcom/oneplus/battery/OpBatteryStatus;
+    .locals 0
+
+    iput-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mBatteryStatus:Lcom/oneplus/battery/OpBatteryStatus;
+
+    return-object p1
+.end method
+
+.method static synthetic access$1300(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)I
     .locals 0
 
     iget p0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOldChargingType:I
@@ -260,7 +330,7 @@
     return p0
 .end method
 
-.method static synthetic access$1202(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;I)I
+.method static synthetic access$1302(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;I)I
     .locals 0
 
     iput p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOldChargingType:I
@@ -268,18 +338,10 @@
     return p1
 .end method
 
-.method static synthetic access$1300(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Lcom/android/systemui/keyguard/ScreenLifecycle;
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mScreenLifecycle:Lcom/android/systemui/keyguard/ScreenLifecycle;
-
-    return-object p0
-.end method
-
 .method static synthetic access$1400(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Z
     .locals 0
 
-    iget-boolean p0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOldPluggedInAndCharging:Z
+    iget-boolean p0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mShouldPlayChargeSound:Z
 
     return p0
 .end method
@@ -287,17 +349,49 @@
 .method static synthetic access$1402(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;Z)Z
     .locals 0
 
+    iput-boolean p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mShouldPlayChargeSound:Z
+
+    return p1
+.end method
+
+.method static synthetic access$1500(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Lcom/android/systemui/keyguard/ScreenLifecycle;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mScreenLifecycle:Lcom/android/systemui/keyguard/ScreenLifecycle;
+
+    return-object p0
+.end method
+
+.method static synthetic access$1600(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOldPluggedInAndCharging:Z
+
+    return p0
+.end method
+
+.method static synthetic access$1602(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;Z)Z
+    .locals 0
+
     iput-boolean p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOldPluggedInAndCharging:Z
 
     return p1
 .end method
 
-.method static synthetic access$1500(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Z
+.method static synthetic access$1700(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mPreventViewShow:Z
 
     return p0
+.end method
+
+.method static synthetic access$1800(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Ljava/lang/Runnable;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mRefreshBatteryInfo:Ljava/lang/Runnable;
+
+    return-object p0
 .end method
 
 .method static synthetic access$200(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Ljava/lang/String;
@@ -348,10 +442,10 @@
     return-void
 .end method
 
-.method static synthetic access$700(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Lcom/oneplus/battery/OpWarpChargingViewV2;
+.method static synthetic access$700(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Lcom/oneplus/battery/OpSWarpChargingView;
     .locals 0
 
-    iget-object p0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpWarpChargingViewV2:Lcom/oneplus/battery/OpWarpChargingViewV2;
+    iget-object p0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpSWarpChargingView:Lcom/oneplus/battery/OpSWarpChargingView;
 
     return-object p0
 .end method
@@ -448,6 +542,82 @@
     return-object v0
 .end method
 
+.method private genOpSWarpChargingView()Lcom/oneplus/battery/OpSWarpChargingView;
+    .locals 3
+
+    iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->TAG:Ljava/lang/String;
+
+    const-string v1, "genOpSWarpChargingView"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpSWarpChargingView:Lcom/oneplus/battery/OpSWarpChargingView;
+
+    if-eqz v0, :cond_1
+
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->TAG:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, " mOpSWarpChargingView != null / mOpSWarpChargingView.getParent():"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpSWarpChargingView:Lcom/oneplus/battery/OpSWarpChargingView;
+
+    invoke-virtual {v2}, Landroid/widget/FrameLayout;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpSWarpChargingView:Lcom/oneplus/battery/OpSWarpChargingView;
+
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/ViewGroup;
+
+    iget-object v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpSWarpChargingView:Lcom/oneplus/battery/OpSWarpChargingView;
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+
+    :cond_1
+    iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object v0
+
+    sget v1, Lcom/android/systemui/R$layout;->op_swarp_charging_animation_view:I
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oneplus/battery/OpSWarpChargingView;
+
+    iput-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpSWarpChargingView:Lcom/oneplus/battery/OpSWarpChargingView;
+
+    return-object v0
+.end method
+
 .method private genOpWarpChargingView()Lcom/oneplus/battery/OpWarpChargingView;
     .locals 3
 
@@ -524,82 +694,6 @@
     return-object v0
 .end method
 
-.method private genOpWarpChargingViewV2()Lcom/oneplus/battery/OpWarpChargingViewV2;
-    .locals 3
-
-    iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->TAG:Ljava/lang/String;
-
-    const-string v1, "genOpWarpChargingViewV2"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpWarpChargingViewV2:Lcom/oneplus/battery/OpWarpChargingViewV2;
-
-    if-eqz v0, :cond_1
-
-    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->TAG:Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, " mOpWarpChargingViewV2 != null / mOpWarpChargingViewV2.getParent():"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpWarpChargingViewV2:Lcom/oneplus/battery/OpWarpChargingViewV2;
-
-    invoke-virtual {v2}, Landroid/widget/FrameLayout;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpWarpChargingViewV2:Lcom/oneplus/battery/OpWarpChargingViewV2;
-
-    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/ViewGroup;
-
-    iget-object v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpWarpChargingViewV2:Lcom/oneplus/battery/OpWarpChargingViewV2;
-
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
-
-    :cond_1
-    iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mContext:Landroid/content/Context;
-
-    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object v0
-
-    sget v1, Lcom/android/systemui/R$layout;->op_warp_charging_animation_view_v2:I
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/oneplus/battery/OpWarpChargingViewV2;
-
-    iput-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpWarpChargingViewV2:Lcom/oneplus/battery/OpWarpChargingViewV2;
-
-    return-object v0
-.end method
-
 .method private initOPWarpCharging()V
     .locals 2
 
@@ -625,13 +719,13 @@
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpWarpChargingViewV2:Lcom/oneplus/battery/OpWarpChargingViewV2;
+    iget-object v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpSWarpChargingView:Lcom/oneplus/battery/OpSWarpChargingView;
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
-    iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpWarpChargingViewV2:Lcom/oneplus/battery/OpWarpChargingViewV2;
+    iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpSWarpChargingView:Lcom/oneplus/battery/OpSWarpChargingView;
 
-    invoke-virtual {v0, p0}, Lcom/oneplus/battery/OpWarpChargingViewV2;->setChargingAnimationController(Lcom/oneplus/battery/OpChargingAnimationController;)V
+    invoke-virtual {v0, p0}, Lcom/oneplus/battery/OpSWarpChargingView;->setChargingAnimationController(Lcom/oneplus/battery/OpChargingAnimationController;)V
 
     goto :goto_0
 
@@ -681,6 +775,18 @@
     .locals 0
 
     invoke-interface {p1, p0}, Lcom/oneplus/battery/OpChargingAnimationController$ChargingStateChangeCallback;->onWarpCharingAnimationStart(I)V
+
+    return-void
+.end method
+
+.method private synthetic lambda$new$2()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mUpdateCallback:Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
+
+    iget-object p0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mBatteryStatus:Lcom/oneplus/battery/OpBatteryStatus;
+
+    invoke-virtual {v0, p0}, Lcom/android/keyguard/KeyguardUpdateMonitorCallback;->onRefreshBatteryInfo(Lcom/oneplus/battery/OpBatteryStatus;)V
 
     return-void
 .end method
@@ -886,17 +992,38 @@
 .end method
 
 .method public animationStart(I)V
-    .locals 3
+    .locals 4
 
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mAnimationStarted:Z
 
+    invoke-virtual {p0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->playChargingSound()V
+
+    iget v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mCacheFastChargeType:I
+
+    const/4 v2, -0x1
+
+    if-eq v1, v2, :cond_0
+
     iget-object v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->TAG:Ljava/lang/String;
 
-    const-string v2, "animationStart"
+    const-string v3, "Notify fast charge changed by cache"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mCacheFastChargeType:I
+
+    invoke-virtual {p0, v1}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->onFastChargeChanged(I)V
+
+    iput v2, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mCacheFastChargeType:I
+
+    :cond_0
+    iget-object v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->TAG:Ljava/lang/String;
+
+    const-string v3, "animationStart"
+
+    invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object p0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mCallbacks:Ljava/util/ArrayList;
 
@@ -918,9 +1045,7 @@
 
     const/4 p1, 0x0
 
-    const/4 v1, -0x1
-
-    invoke-virtual {p0, p1, v0, v1}, Lcom/android/systemui/statusbar/phone/StatusBar;->setPanelViewAlpha(FZI)V
+    invoke-virtual {p0, p1, v0, v2}, Lcom/android/systemui/statusbar/phone/StatusBar;->setPanelViewAlpha(FZI)V
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBar;->userActivity()V
 
@@ -930,11 +1055,11 @@
 .method public disPatchTouchEvent(Landroid/view/MotionEvent;)V
     .locals 0
 
-    iget-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpWarpChargingViewV2:Lcom/oneplus/battery/OpWarpChargingViewV2;
+    iget-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpSWarpChargingView:Lcom/oneplus/battery/OpSWarpChargingView;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/oneplus/battery/OpWarpChargingViewV2;->stopAnimation()V
+    invoke-virtual {p1}, Lcom/oneplus/battery/OpSWarpChargingView;->stopAnimation()V
 
     :cond_0
     iget-object p0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpNewWarpChargingView:Lcom/oneplus/battery/OpNewWarpChargingView;
@@ -993,7 +1118,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-direct {p0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->genOpWarpChargingViewV2()Lcom/oneplus/battery/OpWarpChargingViewV2;
+    invoke-direct {p0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->genOpSWarpChargingView()Lcom/oneplus/battery/OpSWarpChargingView;
 
     goto :goto_0
 
@@ -1027,6 +1152,42 @@
     return p0
 .end method
 
+.method protected isDockOnWireless()Z
+    .locals 2
+
+    iget-object p0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    const-string v0, "doced_on_wireless_charger"
+
+    const/4 v1, 0x1
+
+    invoke-static {p0, v0, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    return v1
+.end method
+
+.method public synthetic lambda$new$2$OpChargingAnimationControllerImpl()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->lambda$new$2()V
+
+    return-void
+.end method
+
 .method public onBatteryLevelChanged(IZZ)V
     .locals 1
 
@@ -1044,11 +1205,11 @@
     invoke-virtual {v0, p1, p2, p3}, Lcom/oneplus/battery/OpNewWarpChargingView;->onBatteryLevelChanged(IZZ)V
 
     :cond_1
-    iget-object p0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpWarpChargingViewV2:Lcom/oneplus/battery/OpWarpChargingViewV2;
+    iget-object p0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpSWarpChargingView:Lcom/oneplus/battery/OpSWarpChargingView;
 
     if-eqz p0, :cond_2
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/oneplus/battery/OpWarpChargingViewV2;->onBatteryLevelChanged(IZZ)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/oneplus/battery/OpSWarpChargingView;->onBatteryLevelChanged(IZZ)V
 
     :cond_2
     return-void
@@ -1085,7 +1246,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->genOpWarpChargingViewV2()Lcom/oneplus/battery/OpWarpChargingViewV2;
+    invoke-direct {p0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->genOpSWarpChargingView()Lcom/oneplus/battery/OpSWarpChargingView;
 
     goto :goto_0
 
@@ -1144,11 +1305,11 @@
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     iget-boolean v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mWarpFastCharging:Z
 
-    if-eq v0, v1, :cond_5
+    if-eq v0, v1, :cond_6
 
     iget-object v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mScreenLifecycle:Lcom/android/systemui/keyguard/ScreenLifecycle;
 
@@ -1172,63 +1333,68 @@
     :goto_0
     iget-boolean v2, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->isKeyguardShowing:Z
 
-    if-eqz v2, :cond_6
+    if-eqz v2, :cond_7
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_7
 
     iget-boolean v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mBouncerShow:Z
 
-    if-nez v1, :cond_6
+    if-nez v1, :cond_7
 
     iget-boolean v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mPreventViewShow:Z
 
-    if-nez v1, :cond_6
+    if-nez v1, :cond_7
 
     invoke-virtual {p0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->isAnimationStarted()Z
 
     move-result v1
 
-    if-eqz v1, :cond_6
+    if-nez v1, :cond_2
 
+    iput p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mCacheFastChargeType:I
+
+    return-void
+
+    :cond_2
     invoke-direct {p0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->updateScrim()V
 
     sget-boolean v1, Lcom/oneplus/util/OpUtils;->SUPPORT_CHARGING_ANIM_V2:Z
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_4
 
-    iget-object v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpWarpChargingViewV2:Lcom/oneplus/battery/OpWarpChargingViewV2;
+    iget-object v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpSWarpChargingView:Lcom/oneplus/battery/OpSWarpChargingView;
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_4
 
     const/4 v2, 0x4
 
-    if-ne p1, v2, :cond_2
+    if-ne p1, v2, :cond_3
 
     const/4 p1, 0x3
 
-    invoke-virtual {v1, p1}, Lcom/oneplus/battery/OpWarpChargingViewV2;->notifyWarpCharging(I)V
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {v1, v3}, Lcom/oneplus/battery/OpWarpChargingViewV2;->notifyWarpCharging(I)V
+    invoke-virtual {v1, p1}, Lcom/oneplus/battery/OpSWarpChargingView;->notifyWarpCharging(I)V
 
     goto :goto_1
 
     :cond_3
+    invoke-virtual {v1, v3}, Lcom/oneplus/battery/OpSWarpChargingView;->notifyWarpCharging(I)V
+
+    goto :goto_1
+
+    :cond_4
     sget-boolean p1, Lcom/oneplus/util/OpUtils;->SUPPORT_CHARGING_ANIM_V1:Z
 
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_5
 
     iget-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpNewWarpChargingView:Lcom/oneplus/battery/OpNewWarpChargingView;
 
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_5
 
     invoke-virtual {p1}, Lcom/oneplus/battery/OpNewWarpChargingView;->notifyWarpCharging()V
 
     goto :goto_1
 
-    :cond_4
+    :cond_5
     iget-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpWarpChargingView:Lcom/oneplus/battery/OpWarpChargingView;
 
     invoke-virtual {p1}, Lcom/oneplus/battery/OpWarpChargingView;->startAnimation()V
@@ -1238,16 +1404,16 @@
 
     goto :goto_2
 
-    :cond_5
-    if-nez v0, :cond_6
+    :cond_6
+    if-nez v0, :cond_7
 
     iget-boolean p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mWarpFastCharging:Z
 
-    if-eq v0, p1, :cond_6
+    if-eq v0, p1, :cond_7
 
     iput-boolean v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mWarpFastCharging:Z
 
-    :cond_6
+    :cond_7
     :goto_2
     return-void
 .end method
@@ -1255,11 +1421,11 @@
 .method public onSWarpBatteryLevelChanged(FFJ)V
     .locals 0
 
-    iget-object p0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpWarpChargingViewV2:Lcom/oneplus/battery/OpWarpChargingViewV2;
+    iget-object p0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpSWarpChargingView:Lcom/oneplus/battery/OpSWarpChargingView;
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/oneplus/battery/OpWarpChargingViewV2;->onSWarpBatteryLevelChanged(FFJ)V
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/oneplus/battery/OpSWarpChargingView;->onSWarpBatteryLevelChanged(FFJ)V
 
     :cond_0
     return-void
@@ -1337,11 +1503,11 @@
 
     invoke-direct {p0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->updateScrim()V
 
-    iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpWarpChargingViewV2:Lcom/oneplus/battery/OpWarpChargingViewV2;
+    iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpSWarpChargingView:Lcom/oneplus/battery/OpSWarpChargingView;
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/battery/OpWarpChargingViewV2;->notifyWarpCharging(I)V
+    invoke-virtual {v0, v1}, Lcom/oneplus/battery/OpSWarpChargingView;->notifyWarpCharging(I)V
 
     goto :goto_1
 
@@ -1366,6 +1532,159 @@
 
     :cond_4
     :goto_2
+    return-void
+.end method
+
+.method public playChargingSound()V
+    .locals 10
+
+    iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mAudioManager:Landroid/media/AudioManager;
+
+    const/4 v1, 0x2
+
+    invoke-virtual {v0, v1}, Landroid/media/AudioManager;->isStreamMute(I)Z
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->TAG:Ljava/lang/String;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "play charging sound. mute: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-nez v0, :cond_0
+
+    iget-object v3, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mChargingSound:Landroid/media/SoundPool;
+
+    if-eqz v3, :cond_0
+
+    iget v4, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mChargingSoundId:I
+
+    const/high16 v5, 0x3f800000    # 1.0f
+
+    const/high16 v6, 0x3f800000    # 1.0f
+
+    const/4 v7, 0x1
+
+    const/4 v8, 0x0
+
+    const/high16 v9, 0x3f800000    # 1.0f
+
+    invoke-virtual/range {v3 .. v9}, Landroid/media/SoundPool;->play(IFFIIF)I
+
+    move-result v0
+
+    iget-object p0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->TAG:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "play charging sound result "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    return-void
+.end method
+
+.method protected registerDockOnWirelessObserver(Z)V
+    .locals 3
+
+    iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->TAG:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "registerDockOnWirelessObserver regsiter = "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-eqz p1, :cond_1
+
+    iget-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mDockOnWirelessObserver:Landroid/database/ContentObserver;
+
+    if-nez p1, :cond_0
+
+    new-instance p1, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$4;
+
+    iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mHandler:Landroid/os/Handler;
+
+    invoke-direct {p1, p0, v0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$4;-><init>(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;Landroid/os/Handler;)V
+
+    iput-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mDockOnWirelessObserver:Landroid/database/ContentObserver;
+
+    :cond_0
+    iget-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p1
+
+    const-string v0, "doced_on_wireless_charger"
+
+    invoke-static {v0}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    iget-object p0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mDockOnWirelessObserver:Landroid/database/ContentObserver;
+
+    invoke-virtual {p1, v0, v1, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
+
+    goto :goto_0
+
+    :cond_1
+    iget-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mDockOnWirelessObserver:Landroid/database/ContentObserver;
+
+    if-eqz p1, :cond_2
+
+    iget-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mDockOnWirelessObserver:Landroid/database/ContentObserver;
+
+    invoke-virtual {p1, v0}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mDockOnWirelessObserver:Landroid/database/ContentObserver;
+
+    :cond_2
+    :goto_0
     return-void
 .end method
 

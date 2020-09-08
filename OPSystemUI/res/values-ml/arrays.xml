@@ -296,10 +296,10 @@
         <item>ആനിമേഷൻ സ്‌കെയിൽ 10x</item>
     </string-array>
     <string-array name="zzz_op_quick_pay_switch_strings">
-        <item>QR കോഡ്</item>
+        <item>ക്യുആർ കോഡ്</item>
         <item>സ്കാന്‍ ചെയ്യുന്നു</item>
-        <item>QR കോഡ്</item>
+        <item>ക്യുആർ കോഡ്</item>
         <item>സ്കാന്‍ ചെയ്യുന്നു</item>
-        <item>Paytm</item>
+        <item>പേയ്ടിഎം</item>
     </string-array>
 </resources>

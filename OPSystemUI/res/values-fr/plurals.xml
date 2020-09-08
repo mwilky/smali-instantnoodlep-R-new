@@ -14,7 +14,7 @@
     </plurals>
     <plurals name="controls_number_of_favorites">
         <item quantity="other">%s commandes ajoutées.</item>
-        <item quantity="one">%s controls added.</item>
+        <item quantity="one">%s commande ajoutée.</item>
     </plurals>
     <plurals name="kg_password_default_pin_message">
         <item quantity="other">Saisissez le code de la carte SIM. %d tentatives restantes.</item>

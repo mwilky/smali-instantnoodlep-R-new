@@ -47,7 +47,7 @@
 .method private initialize(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent$TvPipComponentBuilder;)V
     .locals 0
 
-    invoke-static {p1}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent$TvPipComponentBuilder;->access$19000(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent$TvPipComponentBuilder;)Lcom/android/systemui/pip/tv/PipControlsView;
+    invoke-static {p1}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent$TvPipComponentBuilder;->access$19100(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent$TvPipComponentBuilder;)Lcom/android/systemui/pip/tv/PipControlsView;
 
     move-result-object p1
 
@@ -67,7 +67,7 @@
 
     iget-object v2, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent$TvPipComponentImpl;->this$0:Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;
 
-    invoke-static {v2}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->access$19100(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
+    invoke-static {v2}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->access$19200(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
 
     move-result-object v2
 
@@ -79,7 +79,7 @@
 
     iget-object v3, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent$TvPipComponentImpl;->this$0:Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;
 
-    invoke-static {v3}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->access$19200(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
+    invoke-static {v3}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->access$19300(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
 
     move-result-object v3
 

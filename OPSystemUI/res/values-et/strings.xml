@@ -561,6 +561,7 @@ Valik"</string>
     <string name="controls_favorite_other_zone_header">Muu</string>
     <string name="controls_favorite_rearrange">Juhtelementide ümberpaigutamiseks hoidke neid all ja lohistage</string>
     <string name="controls_favorite_removed">Kõik juhtelemendid eemaldati</string>
+    <string name="controls_favorite_see_other_apps">Kuva muud rakendused</string>
     <string name="controls_favorite_subtitle">Valige toitemenüüs saadaolevad juhtelemendid</string>
     <string name="controls_favorite_toast_no_changes">Muudatusi ei salvestatud</string>
     <string name="controls_in_progress">Pooleli</string>
