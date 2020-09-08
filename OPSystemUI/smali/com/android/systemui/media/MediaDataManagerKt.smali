@@ -11,7 +11,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 22
+    .locals 23
 
     const-string v0, "android.media.metadata.ALBUM_ART_URI"
 
@@ -31,13 +31,13 @@
 
     invoke-static {}, Lkotlin/collections/CollectionsKt;->emptyList()Ljava/util/List;
 
-    move-result-object v9
+    move-result-object v10
 
     invoke-static {}, Lkotlin/collections/CollectionsKt;->emptyList()Ljava/util/List;
 
-    move-result-object v10
+    move-result-object v11
 
-    const/4 v2, 0x0
+    const/4 v2, -0x1
 
     const/4 v3, 0x0
 
@@ -51,17 +51,17 @@
 
     const/4 v8, 0x0
 
-    const-string v11, "INVALID"
+    const/4 v9, 0x0
 
-    const/4 v12, 0x0
+    const-string v12, "INVALID"
 
     const/4 v13, 0x0
 
     const/4 v14, 0x0
 
-    const/4 v15, 0x1
+    const/4 v15, 0x0
 
-    const/16 v16, 0x0
+    const/16 v16, 0x1
 
     const/16 v17, 0x0
 
@@ -69,11 +69,13 @@
 
     const/16 v19, 0x0
 
-    const v20, 0x38000
+    const/16 v20, 0x0
 
-    const/16 v21, 0x0
+    const/high16 v21, 0x70000
 
-    invoke-direct/range {v1 .. v21}, Lcom/android/systemui/media/MediaData;-><init>(ZILjava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/drawable/Icon;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Landroid/media/session/MediaSession$Token;Landroid/app/PendingIntent;Lcom/android/systemui/media/MediaDeviceData;ZLjava/lang/Runnable;ZLjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    const/16 v22, 0x0
+
+    invoke-direct/range {v1 .. v22}, Lcom/android/systemui/media/MediaData;-><init>(IZILjava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/drawable/Icon;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Landroid/media/session/MediaSession$Token;Landroid/app/PendingIntent;Lcom/android/systemui/media/MediaDeviceData;ZLjava/lang/Runnable;ZLjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/android/systemui/media/MediaDataManagerKt;->LOADING:Lcom/android/systemui/media/MediaData;
 

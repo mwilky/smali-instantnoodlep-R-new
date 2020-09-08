@@ -100,7 +100,7 @@
 
     iget-object p1, p0, Lcom/android/systemui/bubbles/BubbleStackView$7;->this$0:Lcom/android/systemui/bubbles/BubbleStackView;
 
-    invoke-virtual {p1}, Lcom/android/systemui/bubbles/BubbleStackView;->hideImeFromExpandedBubble()V
+    invoke-virtual {p1}, Lcom/android/systemui/bubbles/BubbleStackView;->hideCurrentInputMethod()V
 
     iget-object p1, p0, Lcom/android/systemui/bubbles/BubbleStackView$7;->this$0:Lcom/android/systemui/bubbles/BubbleStackView;
 

@@ -2,7 +2,7 @@
 <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <ImageView android:layout_gravity="center" android:id="@id/analog_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:adjustViewBounds="true" />
-    <TextView android:layout_gravity="center_vertical" android:id="@id/analog_dateView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quick_settings_hotspot_password" />
+    <TextView android:layout_gravity="center_vertical" android:id="@id/analog_dateView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/oneplus_font_text_45lt" />
     <View android:id="@id/analog_hour" android:layout_width="fill_parent" android:layout_height="fill_parent" />
     <View android:id="@id/analog_min" android:layout_width="fill_parent" android:layout_height="fill_parent" />
     <View android:id="@id/analog_sec" android:layout_width="fill_parent" android:layout_height="fill_parent" />

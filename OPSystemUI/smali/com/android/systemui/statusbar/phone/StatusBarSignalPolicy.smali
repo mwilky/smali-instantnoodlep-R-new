@@ -1985,7 +1985,7 @@
     :cond_0
     const-string v0, "StatusBarSignalPolicy"
 
-    const-string v1, "setSubs s"
+    const-string/jumbo v1, "setSubs s"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -2188,7 +2188,7 @@
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy;->dumpMobileStates()V
 
-    const-string p0, "setSubs e"
+    const-string/jumbo p0, "setSubs e"
 
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 

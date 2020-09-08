@@ -47,7 +47,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController$MyOnHeadsUpChangedListener;->this$0:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$9000(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)Z
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$9100(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)Z
 
     move-result v0
 
@@ -55,7 +55,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController$MyOnHeadsUpChangedListener;->this$0:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
-    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$3300(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
+    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$3400(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
     move-result-object p0
 
@@ -76,7 +76,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController$MyOnHeadsUpChangedListener;->this$0:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$3300(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$3400(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
     move-result-object v0
 
@@ -86,7 +86,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController$MyOnHeadsUpChangedListener;->this$0:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$8500(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)Ljava/lang/Runnable;
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$8600(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)Ljava/lang/Runnable;
 
     move-result-object v0
 
@@ -94,7 +94,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController$MyOnHeadsUpChangedListener;->this$0:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$8600(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)V
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$8700(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)V
 
     goto :goto_0
 
@@ -107,13 +107,13 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController$MyOnHeadsUpChangedListener;->this$0:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$3300(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$3400(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController$MyOnHeadsUpChangedListener;->this$0:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
-    invoke-static {v1}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$8500(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)Ljava/lang/Runnable;
+    invoke-static {v1}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$8600(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)Ljava/lang/Runnable;
 
     move-result-object v1
 
@@ -122,19 +122,19 @@
     :goto_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController$MyOnHeadsUpChangedListener;->this$0:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$8700(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)V
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$8800(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)V
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController$MyOnHeadsUpChangedListener;->this$0:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
-    invoke-static {v0, p1}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$8802(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;Z)Z
+    invoke-static {v0, p1}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$8902(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;Z)Z
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController$MyOnHeadsUpChangedListener;->this$0:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
-    invoke-static {p1}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$8900(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)V
+    invoke-static {p1}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$9000(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)V
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController$MyOnHeadsUpChangedListener;->this$0:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
-    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$2200(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)V
+    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$2300(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)V
 
     return-void
 .end method
@@ -144,7 +144,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController$MyOnHeadsUpChangedListener;->this$0:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
-    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$3300(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
+    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$3400(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
     move-result-object p0
 
@@ -172,7 +172,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController$MyOnHeadsUpChangedListener;->this$0:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$9000(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)Z
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$9100(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)Z
 
     move-result v0
 
@@ -180,7 +180,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController$MyOnHeadsUpChangedListener;->this$0:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
-    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$3300(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
+    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$3400(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
     move-result-object p0
 

@@ -102,6 +102,14 @@
 
     iput-object p1, p0, Lcom/android/systemui/media/MediaResumeListener;->resumeComponents:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
+    iget-object p1, p0, Lcom/android/systemui/media/MediaResumeListener;->context:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getUserId()I
+
+    move-result p1
+
+    iput p1, p0, Lcom/android/systemui/media/MediaResumeListener;->currentUserId:I
+
     new-instance p1, Lcom/android/systemui/media/MediaResumeListener$userChangeReceiver$1;
 
     invoke-direct {p1, p0}, Lcom/android/systemui/media/MediaResumeListener$userChangeReceiver$1;-><init>(Lcom/android/systemui/media/MediaResumeListener;)V
@@ -113,14 +121,6 @@
     invoke-direct {p1, p0}, Lcom/android/systemui/media/MediaResumeListener$mediaBrowserCallback$1;-><init>(Lcom/android/systemui/media/MediaResumeListener;)V
 
     iput-object p1, p0, Lcom/android/systemui/media/MediaResumeListener;->mediaBrowserCallback:Lcom/android/systemui/media/MediaResumeListener$mediaBrowserCallback$1;
-
-    iget-object p1, p0, Lcom/android/systemui/media/MediaResumeListener;->context:Landroid/content/Context;
-
-    invoke-virtual {p1}, Landroid/content/Context;->getUserId()I
-
-    move-result p1
-
-    iput p1, p0, Lcom/android/systemui/media/MediaResumeListener;->currentUserId:I
 
     iget-boolean p1, p0, Lcom/android/systemui/media/MediaResumeListener;->useMediaResumption:Z
 
@@ -164,6 +164,14 @@
     iget-object p0, p0, Lcom/android/systemui/media/MediaResumeListener;->context:Landroid/content/Context;
 
     return-object p0
+.end method
+
+.method public static final synthetic access$getCurrentUserId$p(Lcom/android/systemui/media/MediaResumeListener;)I
+    .locals 0
+
+    iget p0, p0, Lcom/android/systemui/media/MediaResumeListener;->currentUserId:I
+
+    return p0
 .end method
 
 .method public static final synthetic access$getMediaBrowser$p(Lcom/android/systemui/media/MediaResumeListener;)Lcom/android/systemui/media/ResumeMediaBrowser;
@@ -695,6 +703,14 @@
 
 
 # virtual methods
+.method public final isResumptionEnabled()Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/systemui/media/MediaResumeListener;->useMediaResumption:Z
+
+    return p0
+.end method
+
 .method public onMediaDataLoaded(Ljava/lang/String;Ljava/lang/String;Lcom/android/systemui/media/MediaData;)V
     .locals 5
     .param p1    # Ljava/lang/String;

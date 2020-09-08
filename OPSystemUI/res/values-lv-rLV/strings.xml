@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="about_action_bar_title">Par</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Konfidencialitātes politika</string>
+    <string name="about_release_note_title">Atjauninājumu žurnāls:</string>
+    <string name="about_terms_service">Pakalpojuma lietošanas noteikumi</string>
     <string name="accessibility_fingerprint_dialog_help_area">Palīdzības ziņojumu zona</string>
     <string name="accessibility_hide">Paslēpt</string>
     <string name="accessibility_phone_four_bars">Četras tālruņa joslas.</string>
@@ -13,7 +18,7 @@
     <string name="accessibility_quick_settings_night_mode_changed_on">Nakts režīms ieslēgts.</string>
     <string name="accessibility_quick_settings_power_saving_changed_off">Enerģijas taupīšanas režīms ir izslēgts.</string>
     <string name="accessibility_quick_settings_power_saving_changed_on">Enerģijas taupīšanas režīms ir ieslēgts.</string>
-    <string name="accessibility_work_life_balance_mode">Darba un privātās dzīves līdzsvarošanas režīms</string>
+    <string name="accessibility_work_life_balance_mode">Work-Life Balance</string>
     <string name="accessibility_work_life_balance_mode_off">Darba un privātās dzīves līdzsvarošanas režīms ir izslēgts.</string>
     <string name="accessibility_work_life_balance_mode_on">Darba un privātās dzīves līdzsvarošanas režīms ir ieslēgts.</string>
     <string name="activity_not_available">Lietotne nav pieejama</string>
@@ -40,9 +45,10 @@ Ieslēgt Lidojuma režīmu?"</string>
     <string name="delete">Dzēst</string>
     <string name="denoise_notification">Paziņojums ar zemu prioritāti</string>
     <string name="dialog_mhs_error">Lūdzu, uzgaidiet, kamēr notiek verifikācija...</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">Sazinieties ar administratoru, lai saņemtu sīkāku informāciju</string>
+    <string name="disable_tether_notification_title">Piesaiste ir atspējota</string>
     <string name="drag_to_add_tiles">Velciet, lai pievienotu elementus</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">Velciet elementus, lai mainītu to izkārtojumu. Pieskarieties, lai parādītu vai slēptu tos.</string>
     <string name="end_call">Beigt</string>
     <string name="face_unlock_camera_error">Atbloķēšana ar seju neizdevās, kameru izmanto citas lietotnes</string>
@@ -88,6 +94,7 @@ Ja tālrunis tika atiestatīts, jums būs jāievada ar šo tālruni saistītā G
     <string name="kg_wrong_pattern_warning_one">Jums ir vēl 1 mēģinājums</string>
     <string name="kg_wrong_pin_warning">Jums ir vēl 2 mēģinājumi</string>
     <string name="kg_wrong_pin_warning_one">Jums ir vēl 1 mēģinājums</string>
+    <string name="loading_text">Notiek ielāde...</string>
     <string name="long_press_power_navigation_assist_content">"Nospiediet un turiet \"ieslēgšanas/izslēgšanas pogu\" 
 , lai piekļūtu Balss asistentam"</string>
     <string name="long_press_power_navigation_power_content">Vienlaikus nospiediet \"ieslēgšanas/izslēgšanas pogu\" un \"skaļuma palielināšanas pogu\", lai izslēgtu</string>
@@ -129,8 +136,14 @@ Lai abonētu mobilo tīklāju, apmeklējiet My Verizon vai zvaniet klientu apkal
     <string name="oneplus_threekey_navigation_sound">Atļaut visas skaņas</string>
     <string name="oneplus_threekey_navigation_turned_on_here">To var aktivizēt, izmantojot pārslēgu augstāk</string>
     <string name="oneplus_threekey_navigation_vibration">Tikai vibrēt</string>
-    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> atbloķēšanas reize</string>
-    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> atbloķēšanas reizes</string>
+    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>atbloķēšanas reize</string>
+    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>atbloķēšanas reizes</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">Veido savienojumu pārī...</string>
     <string name="op_earphone_connected_fail">Savienošana parī neizdevās. Jūs varat pārbaudīt austiņas ar mikrofonu un Bluetooth statusu.</string>
     <string name="op_earphone_connected_success">Izveidots savienojums pārī. Pieskarieties, lai iestatītu vēl citus.</string>
@@ -160,9 +173,10 @@ Lai abonētu mobilo tīklāju, apmeklējiet My Verizon vai zvaniet klientu apkal
     <string name="op_notification_channel_summary_low">Mazāk svarīgiem paziņojumiem netiek lietota ne skaņa, ne vibrācija.</string>
     <string name="op_notification_section_header_gentle">Citi paziņojumi</string>
     <string name="op_notification_silence_title">Cits</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">Tumšais režīms</string>
     <string name="op_qs_data_usage_used">Izmantotais apjoms: %1$s: %2$s %3$s</string>
-    <string name="op_quick_settings_night_display_label">Nakts režīms</string>
+    <string name="op_quick_settings_night_display_label">Redzes komforts</string>
     <string name="op_quick_settings_night_display_summary_off">Nakts režīms ir izslēgts, pieskarieties, lai to aktivizētu</string>
     <string name="op_quick_settings_night_display_summary_on">Nakts režīms ir aktivizēts, pieskarieties, lai to izslēgtu</string>
     <string name="op_read_mode2_dialog_black">Melnbalts efekts</string>
@@ -264,7 +278,7 @@ Lai abonētu mobilo tīklāju, apmeklējiet My Verizon vai zvaniet klientu apkal
     <string name="tethered_notification_hybrid_sharing_mobile">Notiek mobilo datu kopīgošana, noklikšķiniet, lai atvērtu sadaļu Iestatījumi</string>
     <string name="tethered_notification_hybrid_sharing_none">Nav kopīgošanai pieejama tīkla, noklikšķiniet, lai atvērtu sadaļu Iestatījumi</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Notiek Wi-Fi kopīgošana, noklikšķiniet, lai atvērtu sadaļu Iestatījumi</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">Pieskarieties, lai iestatītu.</string>
     <string name="tethered_notification_multi_device_message">Pievienotas %1$s ierīces</string>
     <string name="tethered_notification_multi_tether_title">Sasaiste un mobilais tīklājs ir aktivizēti</string>
     <string name="tethered_notification_no_device_message">Nav savienota neviena ierīce</string>
@@ -292,6 +306,16 @@ Lai abonētu mobilo tīklāju, apmeklējiet My Verizon vai zvaniet klientu apkal
     <string name="volume_footer_slient">Klusums</string>
     <string name="volume_footer_vibrate">Klusums (vibrēt)</string>
     <string name="volume_vibrate">Vibrēt</string>
+    <string name="wlb_break_mode_active">Aktīvs</string>
+    <string name="wlb_break_mode_active_text">%1$s Režīms · %2$s</string>
+    <string name="wlb_break_mode_on_break">Pauze</string>
+    <string name="wlb_break_mode_resume">Atsākt</string>
+    <string name="wlb_break_mode_take_break">Paņemt pauzi</string>
+    <string name="wlb_qs_detail_break_mode">Atpūtas režīms</string>
+    <string name="wlb_qs_detail_break_mode_desc">Automātiski atsāk iepriekšējo režīmu pēc 30 minūtēm</string>
+    <string name="wlb_qs_detail_life_mode">Privātās dzīves režīms</string>
+    <string name="wlb_qs_detail_more_setting">Citi iestatījumi</string>
+    <string name="wlb_qs_detail_work_mode">Darba režīms</string>
     <string name="work_life_balance_mode">Work-Life Balance</string>
     <string name="zen_important_interruptions">Svarīgie paziņojumi</string>
     <string name="zen_interruption_level_all">Visi paziņojumi</string>

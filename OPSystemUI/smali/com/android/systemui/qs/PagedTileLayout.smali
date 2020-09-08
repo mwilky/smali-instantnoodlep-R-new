@@ -1425,6 +1425,14 @@
     return-void
 .end method
 
+.method public setExcessHeight(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/android/systemui/qs/PagedTileLayout;->mExcessHeight:I
+
+    return-void
+.end method
+
 .method public setExpansion(F)V
     .locals 0
 

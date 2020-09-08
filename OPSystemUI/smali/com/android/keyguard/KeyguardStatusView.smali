@@ -19,6 +19,8 @@
 
 .field private mChargingInfo:Landroid/widget/TextView;
 
+.field private mChargingInfoLevel:Landroid/widget/TextView;
+
 .field private mClockView:Lcom/android/keyguard/KeyguardClockSwitch;
 
 .field private mDarkAmount:F
@@ -864,11 +866,24 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextAppearance(I)V
 
-    iget-object p0, p0, Lcom/android/keyguard/KeyguardStatusView;->mChargingInfo:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardStatusView;->mChargingInfo:Landroid/widget/TextView;
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    :cond_5
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardStatusView;->mChargingInfoLevel:Landroid/widget/TextView;
+
+    if-eqz v0, :cond_6
+
+    sget v2, Lcom/android/systemui/R$style;->op_control_text_style_body1:I
+
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextAppearance(I)V
+
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardStatusView;->mChargingInfoLevel:Landroid/widget/TextView;
 
     invoke-virtual {p0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    :cond_5
+    :cond_6
     return-void
 .end method
 
@@ -1615,6 +1630,16 @@
     check-cast v0, Landroid/widget/TextView;
 
     iput-object v0, p0, Lcom/android/keyguard/KeyguardStatusView;->mChargingInfo:Landroid/widget/TextView;
+
+    sget v0, Lcom/android/systemui/R$id;->charging_info_level:I
+
+    invoke-virtual {p0, v0}, Landroid/widget/GridLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/android/keyguard/KeyguardStatusView;->mChargingInfoLevel:Landroid/widget/TextView;
 
     sget v0, Lcom/android/systemui/R$id;->lock_icon_container:I
 

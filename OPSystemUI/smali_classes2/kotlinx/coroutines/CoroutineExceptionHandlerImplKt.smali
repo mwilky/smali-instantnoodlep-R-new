@@ -19,7 +19,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    invoke-static {}, L$$ServiceLoaderMethods;->$load1()Ljava/util/Iterator;
+    invoke-static {}, L$$ServiceLoaderMethods;->$load$kotlinx$coroutines$CoroutineExceptionHandlerImplKt$$clinit$-163931$$0()Ljava/util/Iterator;
 
     move-result-object v0
 

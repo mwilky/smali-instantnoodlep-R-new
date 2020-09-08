@@ -39,6 +39,11 @@
     <string name="abc_slice_updated">Dernière mise à jour : %1$s</string>
     <string name="abc_slices_permission_request">%1$s souhaite afficher des éléments de %2$s</string>
     <string name="abc_toolbar_collapse_description">Réduire</string>
+    <string name="about_action_bar_title">À propos</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Politique de confidentialité</string>
+    <string name="about_release_note_title">Journal de mise à jour :</string>
+    <string name="about_terms_service">Conditions de services</string>
     <string name="accessibility_accessibility_button">Accessibilité</string>
     <string name="accessibility_action_divider_bottom_full">Écran du bas en plein écran</string>
     <string name="accessibility_action_divider_left_30">Écran de gauche à 30 %</string>
@@ -267,7 +272,7 @@
     <string name="accessibility_wimax_signal_full">Signal WiMAX : excellent</string>
     <string name="accessibility_wimax_three_bars">Signal WiMAX : bon</string>
     <string name="accessibility_wimax_two_bars">Signal WiMAX : moyen</string>
-    <string name="accessibility_work_life_balance_mode">Équilibre travail - vie</string>
+    <string name="accessibility_work_life_balance_mode">Work-Life Balance</string>
     <string name="accessibility_work_life_balance_mode_off">Mode Équilibre travail - vie désactivé.</string>
     <string name="accessibility_work_life_balance_mode_on">Mode Équilibre travail - vie activé.</string>
     <string name="accessibility_zero_bars">Aucun signal</string>
@@ -540,7 +545,7 @@ Bluetooth"</string>
     <string name="bugreport_in_power">Raccourci vers rapport de bug</string>
     <string name="bugreport_in_power_summary">Afficher un bouton dans le menu de démarrage permettant de créer un rapport de bug</string>
     <string name="button_convert_fbe">Effacer et convertir…</string>
-    <string name="cached_apps_freezer_device_default">Appareil par défaut</string>
+    <string name="cached_apps_freezer_device_default">Paramètre par défaut</string>
     <string name="cached_apps_freezer_disabled">Désactivé</string>
     <string name="cached_apps_freezer_enabled">Activé</string>
     <string name="cached_apps_freezer_reboot_dialog_text">"Vous devez redémarrer l'appareil pour que cette modification soit appliquée. Redémarrez maintenant ou annulez l'opération."</string>
@@ -593,12 +598,13 @@ Bluetooth"</string>
     <string name="controls_error_retryable">Erreur. Nouvelle tentative…</string>
     <string name="controls_error_timeout">"Délai expiré, vérifier l'appli"</string>
     <string name="controls_favorite_default_title">Commandes</string>
-    <string name="controls_favorite_load_error">"Impossible de charger les commandes. Vérifiez l'application %s pour vous assurer que les paramètres de l'application n'ont pas changé."</string>
+    <string name="controls_favorite_load_error">"Impossible de charger les commandes. Vérifiez l'application %s pour vous assurer que les paramètres n'ont pas changé."</string>
     <string name="controls_favorite_load_none">Commandes compatibles indisponibles</string>
     <string name="controls_favorite_other_zone_header">Autre</string>
     <string name="controls_favorite_rearrange">Appuyez et faites glisser pour réorganiser les commandes</string>
     <string name="controls_favorite_removed">Toutes les commandes ont été supprimées</string>
-    <string name="controls_favorite_subtitle">Sélectionnez les commandes auxquelles vous souhaitez accéder depuis le menu de démarrage</string>
+    <string name="controls_favorite_see_other_apps">"Afficher d'autres applications"</string>
+    <string name="controls_favorite_subtitle">Sélectionnez les commandes auxquelles vous souhaitez accéder depuis le menu Marche/Arrêt</string>
     <string name="controls_favorite_toast_no_changes">"Les modifications n'ont pas été enregistrées"</string>
     <string name="controls_in_progress">En cours</string>
     <string name="controls_media_close_session">Masquer la session en cours.</string>
@@ -696,8 +702,8 @@ Si vous réactivez les données, des frais peuvent s'appliquer."</string>
     <string name="disable_carrier_button_text">Désactiver la carte eSIM</string>
     <string name="disable_overlays">Désactiver superpos. matérielle</string>
     <string name="disable_overlays_summary">"Toujours utiliser le GPU pour la composition de l'écran"</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">Contactez votre administrateur pour plus de détails</string>
+    <string name="disable_tether_notification_title">Partage de connexion désactivé</string>
     <string name="disable_vpn">Désactiver le VPN</string>
     <string name="disabled">Désactivée</string>
     <string name="disabled_by_admin">"Désactivé par l'administrateur"</string>
@@ -705,6 +711,8 @@ Si vous réactivez les données, des frais peuvent s'appliquer."</string>
     <string name="disconnect_vpn">Déconnecter le VPN</string>
     <string name="dnd_is_off">Mode \"Ne pas déranger\" désactivé</string>
     <string name="dnd_suppressing_shade_text">Notifications suspendues par le mode Ne pas déranger</string>
+    <string name="do_disclosure_generic">Cet appareil appartient à votre organisation</string>
+    <string name="do_disclosure_with_name">Cet appareil appartient à %s</string>
     <string name="do_not_silence">Ne pas activer le mode silencieux</string>
     <string name="do_not_silence_block">Ne pas bloquer les notifications</string>
     <string name="dock_alignment_not_charging">Réalignez le téléphone pour le recharger sans fil</string>
@@ -715,6 +723,7 @@ Si vous réactivez les données, des frais peuvent s'appliquer."</string>
     <string name="drag_to_rearrange_tiles">Sélectionnez et faites glisser les icônes pour réorganiser</string>
     <string name="drag_to_remove_disabled">Au minimum %1$d tuiles sont nécessaires</string>
     <string name="drag_to_remove_tiles">Faites glisser les tuiles ici pour les supprimer.</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">Faites glisser les tuiles pour les réorganiser. Appuyez pour afficher ou masquer.</string>
     <string name="empty_shade_text">Aucune notification</string>
     <string name="enable_adb">Débogage USB</string>
@@ -1090,6 +1099,7 @@ Réessayez dans %2$d secondes."</string>
     <string name="left_nav_bar_button_type">Type de bouton gauche supplémentaire</string>
     <string name="legacy_vpn_name">VPN</string>
     <string name="loading_injected_setting_summary">Chargement…</string>
+    <string name="loading_text">Chargement…</string>
     <string name="local_backup_password_summary_change">Appuyez pour modifier ou supprimer le mot de passe de sauvegarde complète sur PC.</string>
     <string name="local_backup_password_summary_none">Les sauvegardes complètes sur PC ne sont pas protégées actuellement</string>
     <string name="local_backup_password_title">Mot de passe de sauvegarde PC</string>
@@ -1174,8 +1184,18 @@ Pour plus d'informations, contactez votre administrateur."</string>
     <string name="monitoring_description_do_learn_more_separator">" "</string>
     <string name="monitoring_description_managed_profile_ca_certificate">Votre entreprise a installé une autorité de certification dans votre profil professionnel. Votre trafic sur le réseau sécurisé peut être contrôlé ou modifié.</string>
     <string name="monitoring_description_managed_profile_named_vpn">"Votre profil professionnel est connecté à %1$s, qui peut contrôler votre activité sur le réseau, y compris l'activité relative aux e-mails, aux applications et aux sites Web."</string>
+    <string name="monitoring_description_management">"Cet appareil appartient à votre organisation.
+
+Votre administrateur informatique peut contrôler et gérer les paramètres, l'accès aux données d'entreprise, les applications, les données associées à l'appareil et les informations sur sa localisation.
+
+Pour plus d'informations, contactez votre administrateur informatique."</string>
     <string name="monitoring_description_management_ca_certificate">Votre entreprise a installé une autorité de certification sur cet appareil. Votre trafic sur le réseau sécurisé peut être contrôlé ou modifié.</string>
     <string name="monitoring_description_management_network_logging">Votre administrateur a activé la journalisation du réseau, pour contrôler le trafic sur votre appareil.</string>
+    <string name="monitoring_description_named_management">"Cet appareil appartient à %1$s.
+
+Votre administrateur informatique peut contrôler et gérer les paramètres, l'accès aux données d'entreprise, les applications, les données associées à l'appareil et les informations sur sa localisation.
+
+Pour plus d'informations, contactez votre administrateur informatique."</string>
     <string name="monitoring_description_named_vpn">"Vous êtes connecté à %1$s, qui peut contrôler votre activité sur le réseau, y compris l'activité relative aux e-mails, aux applications et aux sites Web."</string>
     <string name="monitoring_description_network_logging">"Votre administrateur a activé la journalisation réseau, qui surveille le trafic sur votre appareil.
 
@@ -1311,8 +1331,14 @@ Vous êtes également connecté à un VPN qui peut contrôler votre activité su
     <string name="oneplus_threekey_navigation_sound">Tous les sons autorisés</string>
     <string name="oneplus_threekey_navigation_turned_on_here">"Pour l'activer, utilisez la touche ci-dessus"</string>
     <string name="oneplus_threekey_navigation_vibration">Vibrations uniquement</string>
-    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> déverrouillage</string>
+    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>déverrouillage</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> déverrouillages</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">Association en cours…</string>
     <string name="op_earphone_connected_fail">"Association échouée. Vous pouvez vérifier le casque et l'état de la connexion Bluetooth."</string>
     <string name="op_earphone_connected_success">"Associé. Appuyer pour d'autres paramètres."</string>
@@ -1342,9 +1368,10 @@ Vous êtes également connecté à un VPN qui peut contrôler votre activité su
     <string name="op_notification_channel_summary_low">Des notifications moins importantes sans aucun son ni vibration.</string>
     <string name="op_notification_section_header_gentle">Autres notifications</string>
     <string name="op_notification_silence_title">Autre</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">Mode Sombre</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s utilisé</string>
-    <string name="op_quick_settings_night_display_label">Mode Nuit</string>
+    <string name="op_quick_settings_night_display_label">Confort de vision</string>
     <string name="op_quick_settings_night_display_summary_off">"Mode Nuit désactivé. Appuyez pour l'activer"</string>
     <string name="op_quick_settings_night_display_summary_on">Mode Nuit activé. Appuyez pour le désactiver</string>
     <string name="op_read_mode2_dialog_black">Effet monochrome</string>
@@ -1556,8 +1583,20 @@ Vous êtes également connecté à un VPN qui peut contrôler votre activité su
     <string name="quick_settings_data_switch_toast_1">Une seule carte SIM est actuellement insérée</string>
     <string name="quick_settings_default_data_card">Carte de données par défaut</string>
     <string name="quick_settings_disclosure_managed_profile_monitoring">Votre entreprise peut contrôler votre trafic réseau dans votre profil professionnel</string>
+    <string name="quick_settings_disclosure_managed_profile_named_vpn">Votre profil professionnel est connecté à %1$s</string>
+    <string name="quick_settings_disclosure_management">Cet appareil appartient à votre organisation</string>
+    <string name="quick_settings_disclosure_management_monitoring">Cet appareil appartient à votre organisation, qui peut contrôler votre trafic réseau</string>
+    <string name="quick_settings_disclosure_management_named_vpn">Cet appareil appartient à votre organisation et il est connecté à %1$s</string>
+    <string name="quick_settings_disclosure_management_vpns">Cet appareil appartient à votre organisation et il est connecté à des VPN</string>
     <string name="quick_settings_disclosure_monitoring">Il est possible que le réseau soit surveillé</string>
     <string name="quick_settings_disclosure_named_managed_profile_monitoring">%1$s peut contrôler votre trafic réseau dans votre profil professionnel</string>
+    <string name="quick_settings_disclosure_named_management">Cet appareil appartient à %1$s</string>
+    <string name="quick_settings_disclosure_named_management_monitoring">Cet appareil appartient à %1$s, qui peut contrôler votre trafic réseau</string>
+    <string name="quick_settings_disclosure_named_management_named_vpn">Cet appareil appartient à %1$s et il est connecté à %2$s</string>
+    <string name="quick_settings_disclosure_named_management_vpns">Cet appareil appartient à %1$s et il est connecté à des VPN</string>
+    <string name="quick_settings_disclosure_named_vpn">Cet appareil est connecté à %1$s</string>
+    <string name="quick_settings_disclosure_personal_profile_named_vpn">Votre profil personnel est connecté à %1$s</string>
+    <string name="quick_settings_disclosure_vpns">Cet appareil est connecté à des VPN</string>
     <string name="quick_settings_dnd_alarms_label">Alarmes uniquement</string>
     <string name="quick_settings_dnd_label">Ne pas déranger</string>
     <string name="quick_settings_dnd_none_label">Aucune interruption</string>
@@ -1847,7 +1886,7 @@ Vous êtes également connecté à un VPN qui peut contrôler votre activité su
     <string name="tethered_notification_hybrid_sharing_mobile">Partage en cours des données mobiles, appuyer pour entrer dans les Paramètres</string>
     <string name="tethered_notification_hybrid_sharing_none">Aucun réseau disponible pour le partage, appuyez pour entrer dans les Paramètres</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Partage en cours du Wi-Fi, appuyez pour entrer dans les Paramètres</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">Appuyez pour configurer.</string>
     <string name="tethered_notification_multi_device_message">%1$s appareils connectés</string>
     <string name="tethered_notification_multi_tether_title">"Partage de connexion USB et point d'accès mobile actifs"</string>
     <string name="tethered_notification_no_device_message">Aucun appareil connecté</string>
@@ -2080,6 +2119,16 @@ Adresse Wi‑Fi (BSSID)
     <string name="wifi_verbose_logging">"Autoriser l'enregistrement d'infos Wi-Fi détaillées"</string>
     <string name="wifi_verbose_logging_summary">"Détailler les infos Wi-Fi, afficher par RSSI de SSID dans l'outil de sélection Wi-Fi"</string>
     <string name="window_animation_scale_title">"Échelle d'animation des fenêtres"</string>
+    <string name="wlb_break_mode_active">Actif</string>
+    <string name="wlb_break_mode_active_text">%1$s Mode · %2$s</string>
+    <string name="wlb_break_mode_on_break">En pause</string>
+    <string name="wlb_break_mode_resume">Reprendre</string>
+    <string name="wlb_break_mode_take_break">Faire une pause</string>
+    <string name="wlb_qs_detail_break_mode">Mode Pause</string>
+    <string name="wlb_qs_detail_break_mode_desc">Reprend automatiquement sur le mode précédent au bout de 30 minutes</string>
+    <string name="wlb_qs_detail_life_mode">Mode Vie privée</string>
+    <string name="wlb_qs_detail_more_setting">Plus de paramètres</string>
+    <string name="wlb_qs_detail_work_mode">Mode Travail</string>
     <string name="work_life_balance_mode">Work-Life Balance</string>
     <string name="zen_alarm_warning">"Vous n'entendrez pas votre prochaine alarme %1$s."</string>
     <string name="zen_alarm_warning_indef">"Vous n'entendrez pas votre prochaine alarme %1$s, sauf si vous désactivez cette option avant."</string>
@@ -2101,5 +2150,5 @@ Adresse Wi‑Fi (BSSID)
     <string name="zen_silence_introduction_voice">Cette option permet de bloquer TOUS les sons et les vibrations, y compris pour les alarmes, la musique, les vidéos et les jeux. Vous pourrez encore passer des appels téléphoniques.</string>
     <string name="zzz_op_global_action_bootloader">Bootloader</string>
     <string name="zzz_op_global_action_recovery">Récupération</string>
-    <string name="zzz_op_quick_pay_no_install_message">Veuillez installer des applications de paiement pour utiliser le paiement rapide</string>
+    <string name="zzz_op_quick_pay_no_install_message">Veuillez installer des applications de paiement pour utiliser le Paiement Rapide</string>
 </resources>

@@ -209,7 +209,7 @@
 .end method
 
 .method protected shouldPulse(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Z
-    .locals 1
+    .locals 4
 
     invoke-virtual {p1}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->getSbn()Landroid/service/notification/StatusBarNotification;
 
@@ -221,6 +221,10 @@
 
     move-result p0
 
+    const-string p1, "OpNotificationInterruptionStateProvider"
+
+    const/4 v1, 0x0
+
     if-nez p0, :cond_1
 
     sget-boolean p0, Lcom/oneplus/systemui/statusbar/notification/OpNotificationInterruptStateProvider;->DEBUG_ONEPLUS:Z
@@ -231,30 +235,84 @@
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string p1, "No pulsing: notification should be hidden on keyguard: "
+    const-string v2, "No pulsing: notification should be hidden on keyguard: "
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Landroid/service/notification/StatusBarNotification;->getKey()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v0
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    const-string p1, "OpNotificationInterruptionStateProvider"
-
     invoke-static {p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    const/4 p0, 0x0
-
-    return p0
+    return v1
 
     :cond_1
+    invoke-virtual {v0}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
+
+    move-result-object p0
+
+    iget-object p0, p0, Landroid/app/Notification;->extras:Landroid/os/Bundle;
+
+    const-string v2, "android.title"
+
+    invoke-virtual {p0, v2}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
+
+    move-result-object v2
+
+    const-string v3, "android.text"
+
+    invoke-virtual {p0, v3}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
+
+    move-result-object p0
+
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_3
+
+    sget-boolean p0, Lcom/oneplus/systemui/statusbar/notification/OpNotificationInterruptStateProvider;->DEBUG_ONEPLUS:Z
+
+    if-eqz p0, :cond_2
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "No pulsing: title and text are empty: "
+
+    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Landroid/service/notification/StatusBarNotification;->getKey()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_2
+    return v1
+
+    :cond_3
     const/4 p0, 0x1
 
     return p0

@@ -152,7 +152,7 @@
     return p0
 .end method
 
-.method protected isSticky()Z
+.method public isSticky()Z
     .locals 0
 
     const/4 p0, 0x0

@@ -15,8 +15,6 @@
 # instance fields
 .field private mCurrentAnimator:Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator;
 
-.field private final mFastOutSlowInInterpolator:Landroid/view/animation/Interpolator;
-
 .field private mSfAnimationHandlerThreadLocal:Ljava/lang/ThreadLocal;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -32,25 +30,17 @@
 
 # direct methods
 .method constructor <init>(Landroid/content/Context;Lcom/android/systemui/pip/PipSurfaceTransactionHelper;)V
-    .locals 1
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Lcom/android/systemui/pip/-$$Lambda$PipAnimationController$-iXb7MLu8McpFbUwX5eyjXMVFMI;->INSTANCE:Lcom/android/systemui/pip/-$$Lambda$PipAnimationController$-iXb7MLu8McpFbUwX5eyjXMVFMI;
+    sget-object p1, Lcom/android/systemui/pip/-$$Lambda$PipAnimationController$-iXb7MLu8McpFbUwX5eyjXMVFMI;->INSTANCE:Lcom/android/systemui/pip/-$$Lambda$PipAnimationController$-iXb7MLu8McpFbUwX5eyjXMVFMI;
 
-    invoke-static {v0}, Ljava/lang/ThreadLocal;->withInitial(Ljava/util/function/Supplier;)Ljava/lang/ThreadLocal;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/android/systemui/pip/PipAnimationController;->mSfAnimationHandlerThreadLocal:Ljava/lang/ThreadLocal;
-
-    const v0, 0x10c000d
-
-    invoke-static {p1, v0}, Landroid/view/animation/AnimationUtils;->loadInterpolator(Landroid/content/Context;I)Landroid/view/animation/Interpolator;
+    invoke-static {p1}, Ljava/lang/ThreadLocal;->withInitial(Ljava/util/function/Supplier;)Ljava/lang/ThreadLocal;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/android/systemui/pip/PipAnimationController;->mFastOutSlowInInterpolator:Landroid/view/animation/Interpolator;
+    iput-object p1, p0, Lcom/android/systemui/pip/PipAnimationController;->mSfAnimationHandlerThreadLocal:Ljava/lang/ThreadLocal;
 
     iput-object p2, p0, Lcom/android/systemui/pip/PipAnimationController;->mSurfaceTransactionHelper:Lcom/android/systemui/pip/PipSurfaceTransactionHelper;
 
@@ -124,7 +114,7 @@
 
     invoke-virtual {p1, v0}, Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator;->setSurfaceTransactionHelper(Lcom/android/systemui/pip/PipSurfaceTransactionHelper;)V
 
-    iget-object v0, p0, Lcom/android/systemui/pip/PipAnimationController;->mFastOutSlowInInterpolator:Landroid/view/animation/Interpolator;
+    sget-object v0, Lcom/android/systemui/Interpolators;->FAST_OUT_SLOW_IN:Landroid/view/animation/Interpolator;
 
     invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
@@ -222,14 +212,14 @@
     return-object p0
 .end method
 
-.method getAnimator(Landroid/view/SurfaceControl;Landroid/graphics/Rect;Landroid/graphics/Rect;)Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator;
+.method getAnimator(Landroid/view/SurfaceControl;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;)Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator;
     .locals 2
 
     iget-object v0, p0, Lcom/android/systemui/pip/PipAnimationController;->mCurrentAnimator:Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator;
 
     if-nez v0, :cond_0
 
-    invoke-static {p1, p2, p3}, Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator;->ofBounds(Landroid/view/SurfaceControl;Landroid/graphics/Rect;Landroid/graphics/Rect;)Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator;
+    invoke-static {p1, p2, p3, p4}, Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator;->ofBounds(Landroid/view/SurfaceControl;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;)Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator;
 
     move-result-object p1
 
@@ -298,7 +288,7 @@
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
-    invoke-static {p1, p2, p3}, Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator;->ofBounds(Landroid/view/SurfaceControl;Landroid/graphics/Rect;Landroid/graphics/Rect;)Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator;
+    invoke-static {p1, p2, p3, p4}, Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator;->ofBounds(Landroid/view/SurfaceControl;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;)Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator;
 
     move-result-object p1
 

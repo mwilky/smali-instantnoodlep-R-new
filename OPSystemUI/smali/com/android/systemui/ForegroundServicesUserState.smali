@@ -134,45 +134,6 @@
     return-void
 .end method
 
-.method public addOp(Ljava/lang/String;I)V
-    .locals 3
-
-    iget-object v0, p0, Lcom/android/systemui/ForegroundServicesUserState;->mAppOps:Landroid/util/ArrayMap;
-
-    invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcom/android/systemui/ForegroundServicesUserState;->mAppOps:Landroid/util/ArrayMap;
-
-    new-instance v1, Landroid/util/ArraySet;
-
-    const/4 v2, 0x3
-
-    invoke-direct {v1, v2}, Landroid/util/ArraySet;-><init>(I)V
-
-    invoke-virtual {v0, p1, v1}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
-    iget-object p0, p0, Lcom/android/systemui/ForegroundServicesUserState;->mAppOps:Landroid/util/ArrayMap;
-
-    invoke-virtual {p0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/util/ArraySet;
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
-
-    return-void
-.end method
-
 .method public addStandardLayoutNotification(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
@@ -390,49 +351,6 @@
 
     or-int/2addr p0, v0
 
-    return p0
-.end method
-
-.method public removeOp(Ljava/lang/String;I)Z
-    .locals 1
-
-    iget-object v0, p0, Lcom/android/systemui/ForegroundServicesUserState;->mAppOps:Landroid/util/ArrayMap;
-
-    invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/util/ArraySet;
-
-    if-nez v0, :cond_0
-
-    const/4 p0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p2
-
-    invoke-virtual {v0, p2}, Landroid/util/ArraySet;->remove(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    invoke-virtual {v0}, Landroid/util/ArraySet;->size()I
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-object p0, p0, Lcom/android/systemui/ForegroundServicesUserState;->mAppOps:Landroid/util/ArrayMap;
-
-    invoke-virtual {p0, p1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_1
-    move p0, p2
-
-    :goto_0
     return p0
 .end method
 

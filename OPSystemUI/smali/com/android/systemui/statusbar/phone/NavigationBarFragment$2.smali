@@ -95,7 +95,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment$2;->this$0:Lcom/android/systemui/statusbar/phone/NavigationBarFragment;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->access$1000(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)I
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->access$1100(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)I
 
     move-result v0
 
@@ -122,7 +122,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment$2;->this$0:Lcom/android/systemui/statusbar/phone/NavigationBarFragment;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->access$1000(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)I
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->access$1100(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)I
 
     move-result v0
 
@@ -148,7 +148,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment$2;->this$0:Lcom/android/systemui/statusbar/phone/NavigationBarFragment;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->access$1000(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)I
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->access$1100(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)I
 
     move-result v0
 
@@ -160,7 +160,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment$2;->this$0:Lcom/android/systemui/statusbar/phone/NavigationBarFragment;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->access$1100(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)Ldagger/Lazy;
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->access$1200(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)Ldagger/Lazy;
 
     move-result-object v0
 
@@ -210,7 +210,7 @@
     :cond_2
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment$2;->this$0:Lcom/android/systemui/statusbar/phone/NavigationBarFragment;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->access$1200(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)Z
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->access$1300(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)Z
 
     move-result v0
 
@@ -282,9 +282,20 @@
 
     invoke-static {v0, p1}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->access$802(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;I)I
 
+    const/4 v0, -0x1
+
+    if-ne p1, v0, :cond_0
+
+    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment$2;->this$0:Lcom/android/systemui/statusbar/phone/NavigationBarFragment;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->access$902(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;Z)Z
+
+    :cond_0
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment$2;->this$0:Lcom/android/systemui/statusbar/phone/NavigationBarFragment;
 
-    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->access$900(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)V
+    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->access$1000(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)V
 
     return-void
 .end method

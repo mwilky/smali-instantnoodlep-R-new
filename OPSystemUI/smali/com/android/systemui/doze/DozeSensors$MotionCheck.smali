@@ -344,6 +344,14 @@
     return p0
 .end method
 
+.method public isListened()Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/systemui/doze/DozeSensors$MotionCheck;->mRegistered:Z
+
+    return p0
+.end method
+
 .method public onAccuracyChanged(Landroid/hardware/Sensor;I)V
     .locals 0
 

@@ -8,8 +8,8 @@
         <systemInfoContainer android:layout_marginLeft="@dimen/op_aod_parsons_clock_burnin_gap" android:layout_marginRight="@dimen/op_aod_parsons_clock_burnin_gap" android:layout_centerHorizontal="true" systemui:marginEndType="fixed2" systemui:marginStartType="fixed2" />
         <dateInfo systemui:show="false" />
         <sliceInfo systemui:show="false" />
-        <batteryInfo android:layout_gravity="center_horizontal" android:fontFamily="@font/oneplus_font_text_45lt" systemui:followSystemFont="false" />
-        <notificationInfo android:layout_gravity="center_horizontal" android:layout_marginTop="@dimen/aod_clock_systeminfo_vertical_margin" android:fontFamily="@font/oneplus_font_text_45lt" systemui:followSystemFont="false" systemui:marginTopType="fixed2" />
+        <batteryInfo android:layout_gravity="center_horizontal" />
+        <notificationInfo android:layout_gravity="center_horizontal" android:layout_marginTop="@dimen/aod_clock_systeminfo_vertical_margin" systemui:marginTopType="fixed2" />
         <ownerInfo systemui:show="false" />
     </systemInfoSettings>
 </AodClockStyle>

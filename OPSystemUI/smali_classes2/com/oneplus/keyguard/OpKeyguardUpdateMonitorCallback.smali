@@ -80,6 +80,12 @@
     return-void
 .end method
 
+.method public onShutdownDialogVisibilityChanged(Z)V
+    .locals 0
+
+    return-void
+.end method
+
 .method public onShuttingDown()V
     .locals 0
 

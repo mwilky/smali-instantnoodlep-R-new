@@ -42,7 +42,7 @@
     return-void
 .end method
 
-.method static synthetic access$18700(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$NotificationRowComponentBuilder;)Lcom/android/systemui/statusbar/notification/row/ActivatableNotificationView;
+.method static synthetic access$18800(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$NotificationRowComponentBuilder;)Lcom/android/systemui/statusbar/notification/row/ActivatableNotificationView;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$NotificationRowComponentBuilder;->activatableNotificationView:Lcom/android/systemui/statusbar/notification/row/ActivatableNotificationView;

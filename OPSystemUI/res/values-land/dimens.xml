@@ -12,6 +12,8 @@
     <dimen name="controls_activity_view_top_offset">25.0dip</dimen>
     <dimen name="docked_divider_handle_height">16.0dip</dimen>
     <dimen name="docked_divider_handle_width">2.0dip</dimen>
+    <dimen name="global_actions_power_dialog_item_bottom_margin">35.0dip</dimen>
+    <dimen name="global_actions_power_dialog_item_height">130.0dip</dimen>
     <dimen name="mr_controller_volume_group_list_item_height">61.0dip</dimen>
     <dimen name="mr_controller_volume_group_list_item_icon_size">18.0dip</dimen>
     <dimen name="mr_controller_volume_group_list_max_height">132.0dip</dimen>
@@ -30,7 +32,7 @@
     <dimen name="mtrl_calendar_title_baseline_to_top">24.0dip</dimen>
     <dimen name="mtrl_calendar_title_baseline_to_top_fullscreen">32.0dip</dimen>
     <item type="dimen" name="navigation_bar_size">@android:dimen/navigation_bar_width</item>
-    <dimen name="notification_panel_width">417.0dip</dimen>
+    <dimen name="notification_panel_width">490.0dip</dimen>
     <item type="dimen" name="op_quick_qs_tile_margin_top">@dimen/op_control_margin_space3</item>
     <dimen name="qs_detail_margin_top">0.0dip</dimen>
     <dimen name="qs_paged_tile_layout_padding_bottom">0.0dip</dimen>

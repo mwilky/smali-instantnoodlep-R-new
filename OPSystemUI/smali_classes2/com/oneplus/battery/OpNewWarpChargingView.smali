@@ -22,8 +22,6 @@
 
 .field private mAssetReleasing:Z
 
-.field private mAudioManager:Landroid/media/AudioManager;
-
 .field private mBackgroundHandler:Landroid/os/Handler;
 
 .field private mBackgroundView:Landroid/widget/ImageView;
@@ -55,10 +53,6 @@
 .field private mChargingScaleDownAnimSet:Landroid/animation/AnimatorSet;
 
 .field private mChargingScaleUpAnimSet:Landroid/animation/AnimatorSet;
-
-.field private mChargingSound:Landroid/media/SoundPool;
-
-.field private mChargingSoundId:I
 
 .field private mChargingType:I
 
@@ -280,15 +274,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1300(Lcom/oneplus/battery/OpNewWarpChargingView;)Landroid/os/Handler;
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mHandler:Landroid/os/Handler;
-
-    return-object p0
-.end method
-
-.method static synthetic access$1400()Landroid/content/res/Resources;
+.method static synthetic access$1300()Landroid/content/res/Resources;
     .locals 1
 
     sget-object v0, Lcom/oneplus/battery/OpNewWarpChargingView;->mRes:Landroid/content/res/Resources;
@@ -296,7 +282,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$1500(Lcom/oneplus/battery/OpNewWarpChargingView;)Landroid/widget/TextView;
+.method static synthetic access$1400(Lcom/oneplus/battery/OpNewWarpChargingView;)Landroid/widget/TextView;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mBatteryLevel:Landroid/widget/TextView;
@@ -304,7 +290,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1600(Lcom/oneplus/battery/OpNewWarpChargingView;)Landroid/widget/ImageView;
+.method static synthetic access$1500(Lcom/oneplus/battery/OpNewWarpChargingView;)Landroid/widget/ImageView;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mWarpView:Landroid/widget/ImageView;
@@ -312,7 +298,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1700(Lcom/oneplus/battery/OpNewWarpChargingView;)Landroid/animation/AnimatorSet;
+.method static synthetic access$1600(Lcom/oneplus/battery/OpNewWarpChargingView;)Landroid/animation/AnimatorSet;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingScaleUpAnimSet:Landroid/animation/AnimatorSet;
@@ -320,7 +306,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1800(Lcom/oneplus/battery/OpNewWarpChargingView;)V
+.method static synthetic access$1700(Lcom/oneplus/battery/OpNewWarpChargingView;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/battery/OpNewWarpChargingView;->preloadAnimationList()V
@@ -328,7 +314,7 @@
     return-void
 .end method
 
-.method static synthetic access$1900(Lcom/oneplus/battery/OpNewWarpChargingView;)V
+.method static synthetic access$1800(Lcom/oneplus/battery/OpNewWarpChargingView;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/battery/OpNewWarpChargingView;->releaseAnimationList()V
@@ -336,10 +322,18 @@
     return-void
 .end method
 
-.method static synthetic access$2002(Lcom/oneplus/battery/OpNewWarpChargingView;Z)Z
+.method static synthetic access$1902(Lcom/oneplus/battery/OpNewWarpChargingView;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mAssetLoading:Z
+
+    return p1
+.end method
+
+.method static synthetic access$2002(Lcom/oneplus/battery/OpNewWarpChargingView;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mAssetLoaded:Z
 
     return p1
 .end method
@@ -352,15 +346,7 @@
     return p1
 .end method
 
-.method static synthetic access$2102(Lcom/oneplus/battery/OpNewWarpChargingView;Z)Z
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mAssetLoaded:Z
-
-    return p1
-.end method
-
-.method static synthetic access$2200(Lcom/oneplus/battery/OpNewWarpChargingView;)Z
+.method static synthetic access$2100(Lcom/oneplus/battery/OpNewWarpChargingView;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mKeyguardShowing:Z
@@ -368,7 +354,7 @@
     return p0
 .end method
 
-.method static synthetic access$2300(Lcom/oneplus/battery/OpNewWarpChargingView;)Z
+.method static synthetic access$2200(Lcom/oneplus/battery/OpNewWarpChargingView;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mIsPaddingStartAnimation:Z
@@ -376,7 +362,7 @@
     return p0
 .end method
 
-.method static synthetic access$2400(Lcom/oneplus/battery/OpNewWarpChargingView;)I
+.method static synthetic access$2300(Lcom/oneplus/battery/OpNewWarpChargingView;)I
     .locals 0
 
     iget p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingType:I
@@ -384,7 +370,7 @@
     return p0
 .end method
 
-.method static synthetic access$2502(Lcom/oneplus/battery/OpNewWarpChargingView;Z)Z
+.method static synthetic access$2402(Lcom/oneplus/battery/OpNewWarpChargingView;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mAssetReleasing:Z
@@ -1676,7 +1662,7 @@
 .end method
 
 .method protected onAttachedToWindow()V
-    .locals 4
+    .locals 2
 
     invoke-super {p0}, Landroid/widget/FrameLayout;->onAttachedToWindow()V
 
@@ -1779,38 +1765,6 @@
 
     iput-object v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mBatteryLevelViewContainer:Landroid/view/View;
 
-    iget-object v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mContext:Landroid/content/Context;
-
-    const-string v1, "audio"
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/media/AudioManager;
-
-    iput-object v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mAudioManager:Landroid/media/AudioManager;
-
-    new-instance v0, Landroid/media/SoundPool;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v2, v2, v1}, Landroid/media/SoundPool;-><init>(III)V
-
-    iput-object v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingSound:Landroid/media/SoundPool;
-
-    iget-object v1, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mContext:Landroid/content/Context;
-
-    sget v3, Lcom/android/systemui/R$raw;->charging:I
-
-    invoke-virtual {v0, v1, v3, v2}, Landroid/media/SoundPool;->load(Landroid/content/Context;II)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingSoundId:I
-
     invoke-direct {p0}, Lcom/oneplus/battery/OpNewWarpChargingView;->refreshUI()V
 
     return-void
@@ -1879,29 +1833,12 @@
 .end method
 
 .method protected onDetachedFromWindow()V
-    .locals 2
+    .locals 0
 
     invoke-super {p0}, Landroid/widget/FrameLayout;->onDetachedFromWindow()V
 
     invoke-virtual {p0}, Lcom/oneplus/battery/OpNewWarpChargingView;->stopAnimation()V
 
-    iget-object v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingSound:Landroid/media/SoundPool;
-
-    if-eqz v0, :cond_0
-
-    iget v1, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingSoundId:I
-
-    invoke-virtual {v0, v1}, Landroid/media/SoundPool;->stop(I)V
-
-    iget-object v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingSound:Landroid/media/SoundPool;
-
-    invoke-virtual {v0}, Landroid/media/SoundPool;->release()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingSound:Landroid/media/SoundPool;
-
-    :cond_0
     return-void
 .end method
 
@@ -1913,77 +1850,6 @@
     if-nez p2, :cond_0
 
     invoke-direct {p0}, Lcom/oneplus/battery/OpNewWarpChargingView;->refreshUI()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public playChargingSound()V
-    .locals 10
-
-    iget-object v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mAudioManager:Landroid/media/AudioManager;
-
-    const/4 v1, 0x2
-
-    invoke-virtual {v0, v1}, Landroid/media/AudioManager;->isStreamMute(I)Z
-
-    move-result v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "play dash anim, "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "OpNewWarpChargingView"
-
-    invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    if-nez v0, :cond_0
-
-    iget-object v3, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingSound:Landroid/media/SoundPool;
-
-    if-eqz v3, :cond_0
-
-    iget v4, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingSoundId:I
-
-    const/high16 v5, 0x3f800000    # 1.0f
-
-    const/high16 v6, 0x3f800000    # 1.0f
-
-    const/4 v7, 0x1
-
-    const/4 v8, 0x0
-
-    const/high16 v9, 0x3f800000    # 1.0f
-
-    invoke-virtual/range {v3 .. v9}, Landroid/media/SoundPool;->play(IFFIIF)I
-
-    move-result p0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "play dash result "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
     return-void

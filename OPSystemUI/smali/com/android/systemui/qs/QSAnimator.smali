@@ -12,6 +12,8 @@
 
 
 # instance fields
+.field private mAllPagesDelayedAnimator:Lcom/android/systemui/qs/TouchAnimator;
+
 .field private final mAllViews:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1076,65 +1078,84 @@
 
     invoke-virtual {v1, v2}, Lcom/android/systemui/qs/TouchAnimator$Builder;->setStartDelay(F)Lcom/android/systemui/qs/TouchAnimator$Builder;
 
-    const/4 v2, 0x2
+    const/4 v6, 0x2
 
-    new-array v6, v2, [F
+    new-array v7, v6, [F
 
-    fill-array-data v6, :array_3
+    fill-array-data v7, :array_3
 
-    invoke-virtual {v1, v9, v14, v6}, Lcom/android/systemui/qs/TouchAnimator$Builder;->addFloat(Ljava/lang/Object;Ljava/lang/String;[F)Lcom/android/systemui/qs/TouchAnimator$Builder;
+    invoke-virtual {v1, v9, v14, v7}, Lcom/android/systemui/qs/TouchAnimator$Builder;->addFloat(Ljava/lang/Object;Ljava/lang/String;[F)Lcom/android/systemui/qs/TouchAnimator$Builder;
 
-    iget-object v6, v0, Lcom/android/systemui/qs/QSAnimator;->mQsPanel:Lcom/android/systemui/qs/QSPanel;
+    invoke-virtual {v1}, Lcom/android/systemui/qs/TouchAnimator$Builder;->build()Lcom/android/systemui/qs/TouchAnimator;
 
-    invoke-virtual {v6}, Lcom/android/systemui/qs/QSPanel;->getSecurityFooter()Lcom/android/systemui/qs/QSSecurityFooter;
+    move-result-object v1
 
-    move-result-object v6
+    iput-object v1, v0, Lcom/android/systemui/qs/QSAnimator;->mFirstPageDelayedAnimator:Lcom/android/systemui/qs/TouchAnimator;
 
-    if-eqz v6, :cond_b
+    new-instance v1, Lcom/android/systemui/qs/TouchAnimator$Builder;
 
-    iget-object v6, v0, Lcom/android/systemui/qs/QSAnimator;->mQsPanel:Lcom/android/systemui/qs/QSPanel;
+    invoke-direct {v1}, Lcom/android/systemui/qs/TouchAnimator$Builder;-><init>()V
 
-    invoke-virtual {v6}, Lcom/android/systemui/qs/QSPanel;->getSecurityFooter()Lcom/android/systemui/qs/QSSecurityFooter;
+    invoke-virtual {v1, v2}, Lcom/android/systemui/qs/TouchAnimator$Builder;->setStartDelay(F)Lcom/android/systemui/qs/TouchAnimator$Builder;
 
-    move-result-object v6
+    iget-object v2, v0, Lcom/android/systemui/qs/QSAnimator;->mQsPanel:Lcom/android/systemui/qs/QSPanel;
 
-    invoke-virtual {v6}, Lcom/android/systemui/qs/QSSecurityFooter;->getView()Landroid/view/View;
+    invoke-virtual {v2}, Lcom/android/systemui/qs/QSPanel;->getSecurityFooter()Lcom/android/systemui/qs/QSSecurityFooter;
 
-    move-result-object v6
+    move-result-object v2
 
-    new-array v7, v2, [F
+    if-eqz v2, :cond_b
+
+    iget-object v2, v0, Lcom/android/systemui/qs/QSAnimator;->mQsPanel:Lcom/android/systemui/qs/QSPanel;
+
+    invoke-virtual {v2}, Lcom/android/systemui/qs/QSPanel;->getSecurityFooter()Lcom/android/systemui/qs/QSSecurityFooter;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/android/systemui/qs/QSSecurityFooter;->getView()Landroid/view/View;
+
+    move-result-object v2
+
+    const/4 v6, 0x2
+
+    new-array v7, v6, [F
 
     fill-array-data v7, :array_4
 
-    invoke-virtual {v1, v6, v14, v7}, Lcom/android/systemui/qs/TouchAnimator$Builder;->addFloat(Ljava/lang/Object;Ljava/lang/String;[F)Lcom/android/systemui/qs/TouchAnimator$Builder;
+    invoke-virtual {v1, v2, v14, v7}, Lcom/android/systemui/qs/TouchAnimator$Builder;->addFloat(Ljava/lang/Object;Ljava/lang/String;[F)Lcom/android/systemui/qs/TouchAnimator$Builder;
+
+    goto :goto_8
 
     :cond_b
-    iget-object v6, v0, Lcom/android/systemui/qs/QSAnimator;->mQsPanel:Lcom/android/systemui/qs/QSPanel;
+    const/4 v6, 0x2
 
-    invoke-virtual {v6}, Lcom/android/systemui/qs/QSPanel;->getDivider()Landroid/view/View;
+    :goto_8
+    iget-object v2, v0, Lcom/android/systemui/qs/QSAnimator;->mQsPanel:Lcom/android/systemui/qs/QSPanel;
 
-    move-result-object v6
+    invoke-virtual {v2}, Lcom/android/systemui/qs/QSPanel;->getDivider()Landroid/view/View;
 
-    if-eqz v6, :cond_c
+    move-result-object v2
 
-    iget-object v6, v0, Lcom/android/systemui/qs/QSAnimator;->mQsPanel:Lcom/android/systemui/qs/QSPanel;
+    if-eqz v2, :cond_c
 
-    invoke-virtual {v6}, Lcom/android/systemui/qs/QSPanel;->getDivider()Landroid/view/View;
+    iget-object v2, v0, Lcom/android/systemui/qs/QSAnimator;->mQsPanel:Lcom/android/systemui/qs/QSPanel;
 
-    move-result-object v6
+    invoke-virtual {v2}, Lcom/android/systemui/qs/QSPanel;->getDivider()Landroid/view/View;
 
-    new-array v7, v2, [F
+    move-result-object v2
+
+    new-array v7, v6, [F
 
     fill-array-data v7, :array_5
 
-    invoke-virtual {v1, v6, v14, v7}, Lcom/android/systemui/qs/TouchAnimator$Builder;->addFloat(Ljava/lang/Object;Ljava/lang/String;[F)Lcom/android/systemui/qs/TouchAnimator$Builder;
+    invoke-virtual {v1, v2, v14, v7}, Lcom/android/systemui/qs/TouchAnimator$Builder;->addFloat(Ljava/lang/Object;Ljava/lang/String;[F)Lcom/android/systemui/qs/TouchAnimator$Builder;
 
     :cond_c
     invoke-virtual {v1}, Lcom/android/systemui/qs/TouchAnimator$Builder;->build()Lcom/android/systemui/qs/TouchAnimator;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/android/systemui/qs/QSAnimator;->mFirstPageDelayedAnimator:Lcom/android/systemui/qs/TouchAnimator;
+    iput-object v1, v0, Lcom/android/systemui/qs/QSAnimator;->mAllPagesDelayedAnimator:Lcom/android/systemui/qs/TouchAnimator;
 
     iget-object v1, v0, Lcom/android/systemui/qs/QSAnimator;->mQsPanel:Lcom/android/systemui/qs/QSPanel;
 
@@ -1226,7 +1247,7 @@
 
     move v1, v5
 
-    goto :goto_8
+    goto :goto_9
 
     :cond_f
     invoke-interface/range {v23 .. v23}, Ljava/util/Collection;->size()I
@@ -1239,12 +1260,12 @@
 
     const v1, 0x3ecccccd    # 0.4f
 
-    goto :goto_8
+    goto :goto_9
 
     :cond_10
     const/4 v1, 0x0
 
-    :goto_8
+    :goto_9
     new-instance v2, Lcom/android/systemui/qs/PathInterpolatorBuilder;
 
     const/4 v6, 0x0
@@ -1339,6 +1360,8 @@
     iput-object v1, v0, Lcom/android/systemui/qs/QSAnimator;->mNonfirstPageDelayedAnimator:Lcom/android/systemui/qs/TouchAnimator;
 
     return-void
+
+    nop
 
     :array_0
     .array-data 4
@@ -1798,9 +1821,9 @@
     :cond_1
     iget-boolean v0, p0, Lcom/android/systemui/qs/QSAnimator;->mOnKeyguard:Z
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const/high16 v2, 0x3f800000    # 1.0f
 
     if-eqz v0, :cond_3
 
@@ -1808,12 +1831,12 @@
 
     if-eqz p1, :cond_2
 
-    move p1, v2
+    move p1, v1
 
     goto :goto_0
 
     :cond_2
-    move p1, v1
+    move p1, v2
 
     :cond_3
     :goto_0
@@ -1821,15 +1844,24 @@
 
     iget-boolean v0, p0, Lcom/android/systemui/qs/QSAnimator;->mAllowFancy:Z
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_4
+
+    iget-object v0, p0, Lcom/android/systemui/qs/QSAnimator;->mAllPagesDelayedAnimator:Lcom/android/systemui/qs/TouchAnimator;
+
+    invoke-virtual {v0, p1}, Lcom/android/systemui/qs/TouchAnimator;->setPosition(F)V
+
+    :cond_4
+    iget-boolean v0, p0, Lcom/android/systemui/qs/QSAnimator;->mAllowFancy:Z
+
+    if-eqz v0, :cond_6
 
     iget-boolean v0, p0, Lcom/android/systemui/qs/QSAnimator;->mOnFirstPage:Z
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
     iget-object v0, p0, Lcom/android/systemui/qs/QSAnimator;->mQuickQsPanel:Lcom/android/systemui/qs/QuickQSPanel;
 
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setAlpha(F)V
+    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setAlpha(F)V
 
     iget-object v0, p0, Lcom/android/systemui/qs/QSAnimator;->mFirstPageAnimator:Lcom/android/systemui/qs/TouchAnimator;
 
@@ -1849,7 +1881,7 @@
 
     goto :goto_1
 
-    :cond_4
+    :cond_5
     iget-object v0, p0, Lcom/android/systemui/qs/QSAnimator;->mNonfirstPageAnimator:Lcom/android/systemui/qs/TouchAnimator;
 
     invoke-virtual {v0, p1}, Lcom/android/systemui/qs/TouchAnimator;->setPosition(F)V
@@ -1861,14 +1893,14 @@
     :goto_1
     iget-object v0, p0, Lcom/android/systemui/qs/QSAnimator;->mPageIndicatorAnimator:Lcom/android/systemui/qs/TouchAnimator;
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     invoke-virtual {v0, p1}, Lcom/android/systemui/qs/TouchAnimator;->setPosition(F)V
 
-    :cond_5
-    cmpl-float p1, p1, v2
+    :cond_6
+    cmpl-float p1, p1, v1
 
-    if-nez p1, :cond_6
+    if-nez p1, :cond_7
 
     iget-object p0, p0, Lcom/android/systemui/qs/QSAnimator;->mQuickQsPanel:Lcom/android/systemui/qs/QuickQSPanel;
 
@@ -1882,7 +1914,7 @@
 
     goto :goto_2
 
-    :cond_6
+    :cond_7
     iget-object p0, p0, Lcom/android/systemui/qs/QSAnimator;->mQuickQsPanel:Lcom/android/systemui/qs/QuickQSPanel;
 
     invoke-virtual {p0}, Lcom/android/systemui/qs/QSPanel;->getBrightnessView()Landroid/view/View;

@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field private final contextProvider:Ljavax/inject/Provider;
+.field private final broadcastDispatcherProvider:Ljavax/inject/Provider;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljavax/inject/Provider<",
-            "Landroid/content/Context;",
+            "Lcom/android/systemui/broadcast/BroadcastDispatcher;",
             ">;"
         }
     .end annotation
@@ -36,14 +36,14 @@
         value = {
             "(",
             "Ljavax/inject/Provider<",
-            "Landroid/content/Context;",
+            "Lcom/android/systemui/broadcast/BroadcastDispatcher;",
             ">;)V"
         }
     .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/android/systemui/screenrecord/RecordingController_Factory;->contextProvider:Ljavax/inject/Provider;
+    iput-object p1, p0, Lcom/android/systemui/screenrecord/RecordingController_Factory;->broadcastDispatcherProvider:Ljavax/inject/Provider;
 
     return-void
 .end method
@@ -54,7 +54,7 @@
         value = {
             "(",
             "Ljavax/inject/Provider<",
-            "Landroid/content/Context;",
+            "Lcom/android/systemui/broadcast/BroadcastDispatcher;",
             ">;)",
             "Lcom/android/systemui/screenrecord/RecordingController_Factory;"
         }
@@ -73,7 +73,7 @@
         value = {
             "(",
             "Ljavax/inject/Provider<",
-            "Landroid/content/Context;",
+            "Lcom/android/systemui/broadcast/BroadcastDispatcher;",
             ">;)",
             "Lcom/android/systemui/screenrecord/RecordingController;"
         }
@@ -85,9 +85,9 @@
 
     move-result-object p0
 
-    check-cast p0, Landroid/content/Context;
+    check-cast p0, Lcom/android/systemui/broadcast/BroadcastDispatcher;
 
-    invoke-direct {v0, p0}, Lcom/android/systemui/screenrecord/RecordingController;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/android/systemui/screenrecord/RecordingController;-><init>(Lcom/android/systemui/broadcast/BroadcastDispatcher;)V
 
     return-object v0
 .end method
@@ -97,7 +97,7 @@
 .method public get()Lcom/android/systemui/screenrecord/RecordingController;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/screenrecord/RecordingController_Factory;->contextProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/screenrecord/RecordingController_Factory;->broadcastDispatcherProvider:Ljavax/inject/Provider;
 
     invoke-static {p0}, Lcom/android/systemui/screenrecord/RecordingController_Factory;->provideInstance(Ljavax/inject/Provider;)Lcom/android/systemui/screenrecord/RecordingController;
 

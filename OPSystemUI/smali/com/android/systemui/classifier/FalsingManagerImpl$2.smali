@@ -75,7 +75,7 @@
 
     move-result-object v0
 
-    const-string v1, "setStatusBarState"
+    const-string/jumbo v1, "setStatusBarState"
 
     invoke-static {v1, v0}, Lcom/android/systemui/classifier/FalsingLog;->i(Ljava/lang/String;Ljava/lang/String;)V
 

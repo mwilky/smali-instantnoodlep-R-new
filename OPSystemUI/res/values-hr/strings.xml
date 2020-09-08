@@ -39,6 +39,11 @@
     <string name="abc_slice_updated">Ažurirano %1$s</string>
     <string name="abc_slices_permission_request">%1$s želi prikazivati isječke aplikacije %2$s</string>
     <string name="abc_toolbar_collapse_description">Sažmi</string>
+    <string name="about_action_bar_title">Informacije</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Pravilnik o zaštiti privatnosti</string>
+    <string name="about_release_note_title">Zapisnik ažuriranja:</string>
+    <string name="about_terms_service">Uvjeti usluge</string>
     <string name="accessibility_accessibility_button">Pristupačnost</string>
     <string name="accessibility_action_divider_bottom_full">Donji zaslon u cijeli zaslon</string>
     <string name="accessibility_action_divider_left_30">Lijevi zaslon na 30%</string>
@@ -598,6 +603,7 @@ Audio"</string>
     <string name="controls_favorite_other_zone_header">Drugo</string>
     <string name="controls_favorite_rearrange">Zadržite i povucite da biste promijenili raspored kontrola</string>
     <string name="controls_favorite_removed">Sve su kontrole uklonjene</string>
+    <string name="controls_favorite_see_other_apps">Pogledajte ostale aplikacije</string>
     <string name="controls_favorite_subtitle">Odaberite kontrole kojima želite pristupati iz izbornika napajanja</string>
     <string name="controls_favorite_toast_no_changes">Promjene nisu spremljene</string>
     <string name="controls_in_progress">U tijeku</string>
@@ -696,8 +702,8 @@ Ako nastavite, moguća je naplata za potrošeni podatkovni promet."</string>
     <string name="disable_carrier_button_text">Onemogući eSIM</string>
     <string name="disable_overlays">Onemogući dijeljenje mem.</string>
     <string name="disable_overlays_summary">Uvijek koristi GPU za slaganje zaslona</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">Obratite se administratoru za pojedinosti</string>
+    <string name="disable_tether_notification_title">Dijeljenje internetske veze je onemogućeno</string>
     <string name="disable_vpn">Onemogući VPN</string>
     <string name="disabled">Onemogućeno</string>
     <string name="disabled_by_admin">Onemogućio administrator</string>
@@ -717,6 +723,7 @@ Ako nastavite, moguća je naplata za potrošeni podatkovni promet."</string>
     <string name="drag_to_rearrange_tiles">Zadržite i povucite da biste premjestili pločice</string>
     <string name="drag_to_remove_disabled">Potrebno je barem %1$d pločica</string>
     <string name="drag_to_remove_tiles">Povucite ovdje za uklanjanje</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">Povucite pločice za preuređivanje. Dodirnite ih za skrivanje ili prikaz.</string>
     <string name="empty_shade_text">Nema obavijesti</string>
     <string name="enable_adb">Otklanjanje pogrešaka putem USB-a</string>
@@ -1092,6 +1099,7 @@ Pokušajte ponovo za %2$d s."</string>
     <string name="left_nav_bar_button_type">Vrsta dodatnog lijevog gumba</string>
     <string name="legacy_vpn_name">VPN</string>
     <string name="loading_injected_setting_summary">Učitavanje…</string>
+    <string name="loading_text">Učitavanje...</string>
     <string name="local_backup_password_summary_change">Dodirnite da biste promijenili ili uklonili zaporku za potpune sigurnosne kopije na računalu</string>
     <string name="local_backup_password_summary_none">Potpune sigurnosne kopije na stolnom računalu trenutačno nisu zaštićene</string>
     <string name="local_backup_password_title">Zaporka sigurnosne kopije</string>
@@ -1323,8 +1331,14 @@ Povezani ste i s VPN-om koji može nadzirati vašu mrežnu aktivnost."</string>
     <string name="oneplus_threekey_navigation_sound">Svi su zvukovi dopušteni</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Može se uključiti pomicanjem gornjeg prekidača</string>
     <string name="oneplus_threekey_navigation_vibration">Samo vibracija</string>
-    <string name="op_aod_parsons_unlock_one">Otključaj <annotation id="unlockNum">^1</annotation></string>
-    <string name="op_aod_parsons_unlock_other">Otključano <annotation id="unlockNum">^1</annotation></string>
+    <string name="op_aod_parsons_unlock_one">Otključava <annotation id="unlockNum">^1</annotation></string>
+    <string name="op_aod_parsons_unlock_other">Otključava <annotation id="unlockNum">^1</annotation></string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">Uparivanje...</string>
     <string name="op_earphone_connected_fail">Uparivanje nije uspjelo. Provjerite status slušalica i Bluetootha.</string>
     <string name="op_earphone_connected_success">Upareno. Dodirnite za više postavki.</string>
@@ -1354,9 +1368,10 @@ Povezani ste i s VPN-om koji može nadzirati vašu mrežnu aktivnost."</string>
     <string name="op_notification_channel_summary_low">Manje važne obavijesti bez zvuka ili vibracija.</string>
     <string name="op_notification_section_header_gentle">Druge obavijesti</string>
     <string name="op_notification_silence_title">Drugo</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">Tamni način</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s iskorišteno</string>
-    <string name="op_quick_settings_night_display_label">Noćni način rada</string>
+    <string name="op_quick_settings_night_display_label">Ugodnost gledanja</string>
     <string name="op_quick_settings_night_display_summary_off">Noćni način rada isključen, dodirnite kako biste ga uključili</string>
     <string name="op_quick_settings_night_display_summary_on">Noćni način rada uključen, dodirnite kako biste ga isključili</string>
     <string name="op_read_mode2_dialog_black">Crno-bijeli efekt</string>
@@ -1871,7 +1886,7 @@ možda prati"</string>
     <string name="tethered_notification_hybrid_sharing_mobile">Dijeljenje mobilnih podataka, kliknite za otvaranje Postavki</string>
     <string name="tethered_notification_hybrid_sharing_none">Nema dostupne mreže za dijeljenje, kliknite za otvaranje Postavki</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Dijeljenje Wi-Fi veze, kliknite za otvaranje Postavki</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">Dodirnite za postavljanje.</string>
     <string name="tethered_notification_multi_device_message">%1$s povezanih uređaja</string>
     <string name="tethered_notification_multi_tether_title">Aktivno je dijeljenje mobilnog interneta i mobilna žarišna točka</string>
     <string name="tethered_notification_no_device_message">Nema povezanih uređaja</string>
@@ -2104,7 +2119,17 @@ Adresa Wi‑Fija (BSSID)
     <string name="wifi_verbose_logging">Omogući opširnu prijavu na Wi-Fi</string>
     <string name="wifi_verbose_logging_summary">Povećana razina prijave na Wi‑Fi, prikaz po SSID RSSI-ju u Biraču Wi‑Fi-ja</string>
     <string name="window_animation_scale_title">Brzina animacije prozora</string>
-    <string name="work_life_balance_mode">Work-Life Balance</string>
+    <string name="wlb_break_mode_active">Aktivno</string>
+    <string name="wlb_break_mode_active_text">%1$s način rada · %2$s</string>
+    <string name="wlb_break_mode_on_break">Na odmoru</string>
+    <string name="wlb_break_mode_resume">Nastavi</string>
+    <string name="wlb_break_mode_take_break">Odmorite se</string>
+    <string name="wlb_qs_detail_break_mode">Način odmora</string>
+    <string name="wlb_qs_detail_break_mode_desc">Automatski se vraća na prethodni način nakon 30 minuta</string>
+    <string name="wlb_qs_detail_life_mode">Način života</string>
+    <string name="wlb_qs_detail_more_setting">Više postavki</string>
+    <string name="wlb_qs_detail_work_mode">Način rada</string>
+    <string name="work_life_balance_mode">Ravnoteža života i posla</string>
     <string name="zen_alarm_warning">Nećete čuti sljedeći alarm %1$s</string>
     <string name="zen_alarm_warning_indef">Nećete čuti sljedeći alarm %1$s ako to ne isključite prije njega</string>
     <string name="zen_alarms_introduction">Neće vas ometati zvukovi i vibracije, osim alarma. I dalje ćete čuti sve što želite reproducirati, uključujući glazbu, videozapise i igre.</string>

@@ -47,7 +47,7 @@
     :cond_0
     iget-object p1, p0, Lcom/android/systemui/globalactions/GlobalActionsDialog$10;->this$0:Lcom/android/systemui/globalactions/GlobalActionsDialog;
 
-    invoke-static {p1}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$4500(Lcom/android/systemui/globalactions/GlobalActionsDialog;)V
+    invoke-static {p1}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$4400(Lcom/android/systemui/globalactions/GlobalActionsDialog;)V
 
     iget-object p0, p0, Lcom/android/systemui/globalactions/GlobalActionsDialog$10;->this$0:Lcom/android/systemui/globalactions/GlobalActionsDialog;
 
@@ -80,7 +80,7 @@
 
     iget-object p1, p1, Lcom/android/systemui/globalactions/GlobalActionsDialog;->mDialog:Lcom/android/systemui/globalactions/GlobalActionsDialog$ActionsDialog;
 
-    invoke-static {p1}, Lcom/android/systemui/globalactions/GlobalActionsDialog$ActionsDialog;->access$4400(Lcom/android/systemui/globalactions/GlobalActionsDialog$ActionsDialog;)V
+    invoke-static {p1}, Lcom/android/systemui/globalactions/GlobalActionsDialog$ActionsDialog;->access$4300(Lcom/android/systemui/globalactions/GlobalActionsDialog$ActionsDialog;)V
 
     goto :goto_0
 

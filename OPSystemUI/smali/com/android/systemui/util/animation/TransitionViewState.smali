@@ -5,11 +5,18 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nTransitionLayout.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TransitionLayout.kt\ncom/android/systemui/util/animation/TransitionViewState\n+ 2 Maps.kt\nkotlin/collections/MapsKt__MapsKt\n*L\n1#1,315:1\n307#2,7:316\n*E\n*S KotlinDebug\n*F\n+ 1 TransitionLayout.kt\ncom/android/systemui/util/animation/TransitionViewState\n*L\n267#1,7:316\n*E\n"
+    value = "SMAP\nTransitionLayout.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TransitionLayout.kt\ncom/android/systemui/util/animation/TransitionViewState\n+ 2 Maps.kt\nkotlin/collections/MapsKt__MapsKt\n*L\n1#1,363:1\n307#2,7:364\n*E\n*S KotlinDebug\n*F\n+ 1 TransitionLayout.kt\ncom/android/systemui/util/animation/TransitionViewState\n*L\n313#1,7:364\n*E\n"
 .end annotation
 
 
 # instance fields
+.field private alpha:F
+
+.field private final contentTranslation:Landroid/graphics/PointF;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
+
 .field private height:I
 
 .field private final translation:Landroid/graphics/PointF;
@@ -46,11 +53,21 @@
 
     iput-object v0, p0, Lcom/android/systemui/util/animation/TransitionViewState;->widgetStates:Ljava/util/Map;
 
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    iput v0, p0, Lcom/android/systemui/util/animation/TransitionViewState;->alpha:F
+
     new-instance v0, Landroid/graphics/PointF;
 
     invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
 
     iput-object v0, p0, Lcom/android/systemui/util/animation/TransitionViewState;->translation:Landroid/graphics/PointF;
+
+    new-instance v0, Landroid/graphics/PointF;
+
+    invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
+
+    iput-object v0, p0, Lcom/android/systemui/util/animation/TransitionViewState;->contentTranslation:Landroid/graphics/PointF;
 
     return-void
 .end method
@@ -105,9 +122,23 @@
 
     iput v2, v1, Lcom/android/systemui/util/animation/TransitionViewState;->height:I
 
+    iget v2, v0, Lcom/android/systemui/util/animation/TransitionViewState;->alpha:F
+
+    iput v2, v1, Lcom/android/systemui/util/animation/TransitionViewState;->alpha:F
+
     iget-object v2, v1, Lcom/android/systemui/util/animation/TransitionViewState;->translation:Landroid/graphics/PointF;
 
     iget-object v3, v0, Lcom/android/systemui/util/animation/TransitionViewState;->translation:Landroid/graphics/PointF;
+
+    iget v4, v3, Landroid/graphics/PointF;->x:F
+
+    iget v3, v3, Landroid/graphics/PointF;->y:F
+
+    invoke-virtual {v2, v4, v3}, Landroid/graphics/PointF;->set(FF)V
+
+    iget-object v2, v1, Lcom/android/systemui/util/animation/TransitionViewState;->contentTranslation:Landroid/graphics/PointF;
+
+    iget-object v3, v0, Lcom/android/systemui/util/animation/TransitionViewState;->contentTranslation:Landroid/graphics/PointF;
 
     iget v4, v3, Landroid/graphics/PointF;->x:F
 
@@ -184,6 +215,24 @@
 
     :cond_1
     return-object v1
+.end method
+
+.method public final getAlpha()F
+    .locals 0
+
+    iget p0, p0, Lcom/android/systemui/util/animation/TransitionViewState;->alpha:F
+
+    return p0
+.end method
+
+.method public final getContentTranslation()Landroid/graphics/PointF;
+    .locals 0
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    iget-object p0, p0, Lcom/android/systemui/util/animation/TransitionViewState;->contentTranslation:Landroid/graphics/PointF;
+
+    return-object p0
 .end method
 
 .method public final getHeight()I
@@ -332,11 +381,27 @@
 
     iput v1, v0, Lcom/android/systemui/util/animation/TransitionViewState;->height:I
 
-    iget-object v0, v0, Lcom/android/systemui/util/animation/TransitionViewState;->translation:Landroid/graphics/PointF;
+    iget-object v1, v0, Lcom/android/systemui/util/animation/TransitionViewState;->translation:Landroid/graphics/PointF;
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v1}, Landroid/graphics/PointF;->set(FF)V
+    invoke-virtual {v1, v2, v2}, Landroid/graphics/PointF;->set(FF)V
+
+    iget-object v1, v0, Lcom/android/systemui/util/animation/TransitionViewState;->contentTranslation:Landroid/graphics/PointF;
+
+    invoke-virtual {v1, v2, v2}, Landroid/graphics/PointF;->set(FF)V
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    iput v1, v0, Lcom/android/systemui/util/animation/TransitionViewState;->alpha:F
+
+    return-void
+.end method
+
+.method public final setAlpha(F)V
+    .locals 0
+
+    iput p1, p0, Lcom/android/systemui/util/animation/TransitionViewState;->alpha:F
 
     return-void
 .end method

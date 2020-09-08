@@ -21,8 +21,6 @@
 # instance fields
 .field private mAdapter:Lcom/android/systemui/statusbar/phone/WLBDetailView$Adapter;
 
-.field private mExpansion:F
-
 
 # direct methods
 .method static constructor <clinit>()V
@@ -47,15 +45,7 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/systemui/statusbar/phone/WLBDetailView;)F
-    .locals 0
-
-    iget p0, p0, Lcom/android/systemui/statusbar/phone/WLBDetailView;->mExpansion:F
-
-    return p0
-.end method
-
-.method static synthetic access$100()Ljava/lang/String;
+.method static synthetic access$000()Ljava/lang/String;
     .locals 1
 
     sget-object v0, Lcom/android/systemui/statusbar/phone/WLBDetailView;->TAG:Ljava/lang/String;
@@ -117,8 +107,6 @@
 
 .method public onExpansionChanged(F)V
     .locals 1
-
-    iput p1, p0, Lcom/android/systemui/statusbar/phone/WLBDetailView;->mExpansion:F
 
     const/4 v0, 0x0
 

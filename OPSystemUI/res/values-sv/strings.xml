@@ -39,6 +39,11 @@
     <string name="abc_slice_updated">Uppdaterades %1$s</string>
     <string name="abc_slices_permission_request">%1$s vill kunna visa bitar av %2$s</string>
     <string name="abc_toolbar_collapse_description">Komprimera</string>
+    <string name="about_action_bar_title">Om</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Sekretesspolicy</string>
+    <string name="about_release_note_title">Uppdateringslogg:</string>
+    <string name="about_terms_service">Villkor för tjänsten</string>
     <string name="accessibility_accessibility_button">Tillgänglighet</string>
     <string name="accessibility_action_divider_bottom_full">Helskärm på nedre skärm</string>
     <string name="accessibility_action_divider_left_30">Vänster 30 %</string>
@@ -598,6 +603,7 @@ Val"</string>
     <string name="controls_favorite_other_zone_header">Övrigt</string>
     <string name="controls_favorite_rearrange">Ändra ordning på kontrollerna genom att trycka och dra</string>
     <string name="controls_favorite_removed">Alla kontroller har tagits bort</string>
+    <string name="controls_favorite_see_other_apps">Visa andra appar</string>
     <string name="controls_favorite_subtitle">Välj snabbkontroller som ska visas i strömbrytarmenyn</string>
     <string name="controls_favorite_toast_no_changes">Ändringarna har inte sparats</string>
     <string name="controls_in_progress">Pågår</string>
@@ -696,8 +702,8 @@ Om du fortsätter kan avgifter för dataanvändning tillkomma."</string>
     <string name="disable_carrier_button_text">Inaktivera eSIM</string>
     <string name="disable_overlays">Inaktivera HW-överlagringar</string>
     <string name="disable_overlays_summary">Använd alltid GPU för skärmsammansättning</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">Kontakta administratören för att få mer information</string>
+    <string name="disable_tether_notification_title">Internetdelning är inaktiverad</string>
     <string name="disable_vpn">Inaktivera VPN</string>
     <string name="disabled">Inaktiverad</string>
     <string name="disabled_by_admin">Inaktiverad av administratören</string>
@@ -705,6 +711,8 @@ Om du fortsätter kan avgifter för dataanvändning tillkomma."</string>
     <string name="disconnect_vpn">Koppla från VPN</string>
     <string name="dnd_is_off">Stör ej är inaktiverat</string>
     <string name="dnd_suppressing_shade_text">Aviseringar har pausats via Stör ej</string>
+    <string name="do_disclosure_generic">Den här enheten tillhör organisationen</string>
+    <string name="do_disclosure_with_name">Den här enheten tillhör %s</string>
     <string name="do_not_silence">Stäng inte av ljudet</string>
     <string name="do_not_silence_block">Stäng inte av ljudet och blockera inte</string>
     <string name="dock_alignment_not_charging">Räta upp telefonen för att ladda trådlöst</string>
@@ -715,6 +723,7 @@ Om du fortsätter kan avgifter för dataanvändning tillkomma."</string>
     <string name="drag_to_rearrange_tiles">Ordna om rutor genom att trycka och dra</string>
     <string name="drag_to_remove_disabled">Minst %1$d rutor måste finnas kvar</string>
     <string name="drag_to_remove_tiles">Ta bort genom att dra här</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">Dra paneler för att ordna om. Tryck för visa eller dölja.</string>
     <string name="empty_shade_text">Inga aviseringar</string>
     <string name="enable_adb">USB-felsökning</string>
@@ -1090,6 +1099,7 @@ Försök igen om %2$d sekunder."</string>
     <string name="left_nav_bar_button_type">Knapptyp för extra vänster</string>
     <string name="legacy_vpn_name">VPN</string>
     <string name="loading_injected_setting_summary">Läser in …</string>
+    <string name="loading_text">Läser in ...</string>
     <string name="local_backup_password_summary_change">Tryck om du vill ändra eller ta bort lösenordet för fullständig säkerhetskopiering av datorn</string>
     <string name="local_backup_password_summary_none">De fullständiga säkerhetskopiorna av datorn är för närvarande inte skyddade</string>
     <string name="local_backup_password_title">Lösenord för säkerhetskopia av datorn</string>
@@ -1174,8 +1184,18 @@ Kontakta administratören om du vill veta mer."</string>
     <string name="monitoring_description_do_learn_more_separator">" "</string>
     <string name="monitoring_description_managed_profile_ca_certificate">Organisationen har installerat en certifikatutfärdare i jobbprofilen. Din säkra nätverkstrafik kan övervakas och ändras.</string>
     <string name="monitoring_description_managed_profile_named_vpn">Jobbprofilen är ansluten till %1$s som kan övervaka din nätverksaktivitet, exempelvis e-post, appar och webbplatser.</string>
+    <string name="monitoring_description_management">"Den här enheten tillhör organisationen.
+
+IT-administratören kan övervaka och hantera inställningar, företagsåtkomst, appar, data med koppling till enheten och enhetens plats.
+
+Kontakta IT-administratören om du vill veta mer."</string>
     <string name="monitoring_description_management_ca_certificate">Organisationen har installerat en certifikatutfärdare på enheten. Din säkra nätverkstrafik kan övervakas och ändras.</string>
     <string name="monitoring_description_management_network_logging">Administratören har aktiverat nätverksloggning som övervakar trafik på enheten.</string>
+    <string name="monitoring_description_named_management">"Den här enheten tillhör %1$s.
+
+IT-administratören kan övervaka och hantera inställningar, företagsåtkomst, appar, data med koppling till enheten och enhetens plats.
+
+Kontakta IT-administratören om du vill veta mer."</string>
     <string name="monitoring_description_named_vpn">Du är ansluten till %1$s som kan övervaka din nätverksaktivitet, inklusive e-postmeddelanden, appar och webbplatser.</string>
     <string name="monitoring_description_network_logging">"Administratören har aktiverat nätverksloggning som övervakar trafik på enheten.
 
@@ -1311,8 +1331,14 @@ Du är även ansluten till ett VPN som kan övervaka nätverksaktivitet."</strin
     <string name="oneplus_threekey_navigation_sound">Alla ljud tillåts</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Det kan aktiveras med växlingsknappen ovan</string>
     <string name="oneplus_threekey_navigation_vibration">Endast vibration</string>
-    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> upplåsning</string>
-    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> upplåsningar</string>
+    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>upplåsning</string>
+    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>upplåsningar</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">Parar ihop ...</string>
     <string name="op_earphone_connected_fail">Det gick inte att para ihop. Kontrollera status för headset och Bluetooth.</string>
     <string name="op_earphone_connected_success">Ihopparad. Tryck för att ställa in fler.</string>
@@ -1342,9 +1368,10 @@ Du är även ansluten till ett VPN som kan övervaka nätverksaktivitet."</strin
     <string name="op_notification_channel_summary_low">Mindre viktiga aviseringar utan ljud eller vibration.</string>
     <string name="op_notification_section_header_gentle">Övriga aviseringar</string>
     <string name="op_notification_silence_title">Annan</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">Mörkt läge</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s använt</string>
-    <string name="op_quick_settings_night_display_label">Nattläge</string>
+    <string name="op_quick_settings_night_display_label">Visningskomfort</string>
     <string name="op_quick_settings_night_display_summary_off">Nattläge är av. Tryck för att sätta på</string>
     <string name="op_quick_settings_night_display_summary_on">Nattläge är på. Tryck för att stänga av</string>
     <string name="op_read_mode2_dialog_black">Monokrom effekt</string>
@@ -1556,8 +1583,20 @@ Du är även ansluten till ett VPN som kan övervaka nätverksaktivitet."</strin
     <string name="quick_settings_data_switch_toast_1">Enbart ett SIM-kort är isatt för tillfället</string>
     <string name="quick_settings_default_data_card">Standard-datakort</string>
     <string name="quick_settings_disclosure_managed_profile_monitoring">Organisationen kan övervaka nätverkstrafik i jobbprofilen</string>
+    <string name="quick_settings_disclosure_managed_profile_named_vpn">Jobbprofilen är ansluten till %1$s</string>
+    <string name="quick_settings_disclosure_management">Den här enheten tillhör organisationen</string>
+    <string name="quick_settings_disclosure_management_monitoring">Organisationen äger den här enheten och kan övervaka nätverkstrafiken</string>
+    <string name="quick_settings_disclosure_management_named_vpn">Den här enheten tillhör organisationen och är ansluten till %1$s</string>
+    <string name="quick_settings_disclosure_management_vpns">Den här enheten tillhör organisationen och är ansluten till VPN</string>
     <string name="quick_settings_disclosure_monitoring">Nätverket kan vara övervakat</string>
     <string name="quick_settings_disclosure_named_managed_profile_monitoring">%1$s kan övervaka nätverkstrafiken i jobbprofilen</string>
+    <string name="quick_settings_disclosure_named_management">Den här enheten tillhör %1$s</string>
+    <string name="quick_settings_disclosure_named_management_monitoring">%1$s äger den här enheten och kan övervaka nätverkstrafiken</string>
+    <string name="quick_settings_disclosure_named_management_named_vpn">Den här enheten tillhör %1$s och är ansluten till %2$s</string>
+    <string name="quick_settings_disclosure_named_management_vpns">Den här enheten tillhör %1$s och är ansluten till VPN</string>
+    <string name="quick_settings_disclosure_named_vpn">Den här enheten är ansluten till %1$s</string>
+    <string name="quick_settings_disclosure_personal_profile_named_vpn">Din personliga profil är ansluten till %1$s</string>
+    <string name="quick_settings_disclosure_vpns">Den här enheten är ansluten till VPN</string>
     <string name="quick_settings_dnd_alarms_label">Endast alarm</string>
     <string name="quick_settings_dnd_label">Stör ej</string>
     <string name="quick_settings_dnd_none_label">Helt tyst</string>
@@ -1847,7 +1886,7 @@ vara övervakat"</string>
     <string name="tethered_notification_hybrid_sharing_mobile">Delar mobildata, klicka för att öppna Inställningar</string>
     <string name="tethered_notification_hybrid_sharing_none">Inget tillgängligt nätverk att dela, klicka för att öppna Inställningar</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Delar Wi-Fi, klicka för att öppna Inställningar</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">Tryck för att konfigurera.</string>
     <string name="tethered_notification_multi_device_message">%1$s anslutna enheter</string>
     <string name="tethered_notification_multi_tether_title">Internetdelning och mobil trådlös surfzon aktiva</string>
     <string name="tethered_notification_no_device_message">Ingen enhet är ansluten</string>
@@ -2080,6 +2119,16 @@ Wi‑Fi-adress (BSSID)
     <string name="wifi_verbose_logging">Aktivera utförlig loggning för Wi-Fi</string>
     <string name="wifi_verbose_logging_summary">Öka loggningsnivån för Wi-Fi, visa per SSID RSSI i Wi‑Fi Picker</string>
     <string name="window_animation_scale_title">Skala – fönsteranimering</string>
+    <string name="wlb_break_mode_active">Aktiv</string>
+    <string name="wlb_break_mode_active_text">%1$s-läge · %2$s</string>
+    <string name="wlb_break_mode_on_break">Pausad</string>
+    <string name="wlb_break_mode_resume">Återuppta</string>
+    <string name="wlb_break_mode_take_break">Ta en paus</string>
+    <string name="wlb_qs_detail_break_mode">Pausläge</string>
+    <string name="wlb_qs_detail_break_mode_desc">Återgår automatiskt till föregående läge efter 30 minuter</string>
+    <string name="wlb_qs_detail_life_mode">Livsläge</string>
+    <string name="wlb_qs_detail_more_setting">Fler inställningar</string>
+    <string name="wlb_qs_detail_work_mode">Arbetsläge</string>
     <string name="work_life_balance_mode">Balans mellan arbete och privatliv</string>
     <string name="zen_alarm_warning">Nästa alarm, kl. %1$s, kommer inte att höras</string>
     <string name="zen_alarm_warning_indef">Nästa alarm, kl. %1$s, kommer inte att höras om du inte inaktiverar detta innan dess</string>

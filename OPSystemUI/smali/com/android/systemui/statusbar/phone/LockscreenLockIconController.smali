@@ -882,7 +882,7 @@
 .end method
 
 .method public opUpdate(Z)V
-    .locals 11
+    .locals 13
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLockIcon:Lcom/android/systemui/statusbar/phone/LockIcon;
 
@@ -918,133 +918,236 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mTrustDrawable:Lcom/oneplus/phone/OpTrustDrawable;
+    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mTrustDrawable:Lcom/oneplus/phone/OpTrustDrawable;
 
-    invoke-virtual {v0}, Lcom/oneplus/phone/OpTrustDrawable;->start()V
+    invoke-virtual {v3}, Lcom/oneplus/phone/OpTrustDrawable;->start()V
 
     goto :goto_1
 
     :cond_1
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mTrustDrawable:Lcom/oneplus/phone/OpTrustDrawable;
+    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mTrustDrawable:Lcom/oneplus/phone/OpTrustDrawable;
 
-    invoke-virtual {v0}, Lcom/oneplus/phone/OpTrustDrawable;->stop()V
+    invoke-virtual {v3}, Lcom/oneplus/phone/OpTrustDrawable;->stop()V
 
     :goto_1
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->opGetState()I
 
-    move-result v0
+    move-result v3
 
-    const/16 v3, 0xf
+    const/16 v4, 0xf
 
-    if-eq v0, v3, :cond_3
+    if-eq v3, v4, :cond_3
 
-    const/4 v3, 0x3
+    const/4 v5, 0x3
 
-    if-ne v0, v3, :cond_2
+    if-ne v3, v5, :cond_2
 
     goto :goto_2
 
     :cond_2
-    move v10, v2
+    move v11, v2
 
     goto :goto_3
 
     :cond_3
     :goto_2
-    move v10, v1
+    move v11, v1
 
     :goto_3
-    iget v3, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLastState:I
+    sget-boolean v5, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
-    if-ne v0, v3, :cond_4
+    const-string v12, "LockIcon"
 
-    iget-boolean v3, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mDeviceInteractive:Z
+    if-eqz v5, :cond_4
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "opUpdate, visible:"
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, ", state:"
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, ", mLastState:"
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v0, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLastState:I
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, ", mDeviceInteractive:"
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mDeviceInteractive:Z
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, ", mLastDeviceInteractive:"
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mLastDeviceInteractive:Z
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, ", mScreenOn:"
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mScreenOn:Z
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, ", mLastScreenOn:"
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLastScreenOn:Z
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, ", force:"
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, ", anyFingerprintIcon:"
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v11}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, ", useAdditionalPadding:"
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v11}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, ", trustHidden:"
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v11}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, ", stack:"
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {v4}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v12, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_4
+    iget v0, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLastState:I
+
+    if-ne v3, v0, :cond_5
+
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mDeviceInteractive:Z
 
     iget-boolean v4, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mLastDeviceInteractive:Z
 
-    if-ne v3, v4, :cond_4
+    if-ne v0, v4, :cond_5
 
-    iget-boolean v3, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mScreenOn:Z
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mScreenOn:Z
 
     iget-boolean v4, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLastScreenOn:Z
 
-    if-ne v3, v4, :cond_4
+    if-ne v0, v4, :cond_5
 
-    if-eqz p1, :cond_14
+    if-eqz p1, :cond_15
 
-    :cond_4
+    :cond_5
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mHandler:Landroid/os/Handler;
 
-    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mPaddingRetryRunnable:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mPaddingRetryRunnable:Ljava/lang/Runnable;
 
-    invoke-virtual {p1, v3}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    iget v4, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLastState:I
+    iget v5, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLastState:I
 
-    iget-boolean v6, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mLastDeviceInteractive:Z
+    iget-boolean v7, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mLastDeviceInteractive:Z
 
-    iget-boolean v7, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mDeviceInteractive:Z
+    iget-boolean v8, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mDeviceInteractive:Z
 
-    iget-boolean v8, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLastScreenOn:Z
+    iget-boolean v9, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLastScreenOn:Z
 
-    iget-boolean v9, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mScreenOn:Z
+    iget-boolean v10, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mScreenOn:Z
 
-    move-object v3, p0
+    move-object v4, p0
 
-    move v5, v0
+    move v6, v3
 
-    invoke-virtual/range {v3 .. v9}, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->opGetAnimationResForTransition(IIZZZZ)I
+    invoke-virtual/range {v4 .. v10}, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->opGetAnimationResForTransition(IIZZZZ)I
 
     move-result p1
 
-    const/4 v3, -0x1
+    const/4 v0, -0x1
 
-    if-eq p1, v3, :cond_5
+    if-eq p1, v0, :cond_6
 
-    move v3, v1
+    move v0, v1
 
     goto :goto_4
 
-    :cond_5
-    move v3, v2
+    :cond_6
+    move v0, v2
 
     :goto_4
     sget v4, Lcom/android/systemui/R$drawable;->op_lockscreen_fingerprint_draw_off_animation:I
-
-    if-ne p1, v4, :cond_6
-
-    move v4, v1
-
-    :goto_5
-    move v10, v4
-
-    goto :goto_6
-
-    :cond_6
-    sget v4, Lcom/android/systemui/R$drawable;->op_trusted_state_to_error_animation:I
 
     if-ne p1, v4, :cond_7
 
     move v4, v1
 
-    move v10, v2
+    :goto_5
+    move v11, v4
 
     goto :goto_6
 
     :cond_7
-    sget v4, Lcom/android/systemui/R$drawable;->op_error_to_trustedstate_animation:I
+    sget v4, Lcom/android/systemui/R$drawable;->op_trusted_state_to_error_animation:I
 
     if-ne p1, v4, :cond_8
+
+    move v4, v1
+
+    move v11, v2
+
+    goto :goto_6
+
+    :cond_8
+    sget v4, Lcom/android/systemui/R$drawable;->op_error_to_trustedstate_animation:I
+
+    if-ne p1, v4, :cond_9
 
     move v4, v2
 
     goto :goto_5
 
-    :cond_8
-    move v4, v10
+    :cond_9
+    move v4, v11
 
     :goto_6
-    if-eqz v3, :cond_9
+    if-eqz v0, :cond_a
 
     iget-object v5, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mContext:Landroid/content/Context;
 
@@ -1054,12 +1157,12 @@
 
     goto :goto_7
 
-    :cond_9
+    :cond_a
     iget-boolean p1, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mScreenOn:Z
 
     iget-boolean v5, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mDeviceInteractive:Z
 
-    invoke-virtual {p0, v0, p1, v5}, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->opGetIconForState(IZZ)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0, v3, p1, v5}, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->opGetIconForState(IZZ)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -1068,7 +1171,7 @@
 
     const/4 v6, 0x0
 
-    if-eqz v5, :cond_a
+    if-eqz v5, :cond_b
 
     move-object v5, p1
 
@@ -1076,7 +1179,7 @@
 
     goto :goto_8
 
-    :cond_a
+    :cond_b
     move-object v5, v6
 
     :goto_8
@@ -1108,25 +1211,25 @@
 
     move-result v9
 
-    if-ne v9, v7, :cond_b
+    if-ne v9, v7, :cond_c
 
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v9
 
-    if-eq v9, v8, :cond_c
+    if-eq v9, v8, :cond_d
 
-    :cond_b
+    :cond_c
     new-instance v9, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController$IntrinsicSizeDrawable;
 
     invoke-direct {v9, p1, v8, v7}, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController$IntrinsicSizeDrawable;-><init>(Landroid/graphics/drawable/Drawable;II)V
 
     move-object p1, v9
 
-    :cond_c
+    :cond_d
     iget-object v7, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLockIcon:Lcom/android/systemui/statusbar/phone/LockIcon;
 
-    if-eqz v10, :cond_d
+    if-eqz v11, :cond_e
 
     iget-object v8, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mContext:Landroid/content/Context;
 
@@ -1142,7 +1245,7 @@
 
     goto :goto_9
 
-    :cond_d
+    :cond_e
     move v8, v2
 
     :goto_9
@@ -1158,7 +1261,7 @@
 
     const/4 v7, 0x2
 
-    if-ne p1, v7, :cond_e
+    if-ne p1, v7, :cond_f
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLockIcon:Lcom/android/systemui/statusbar/phone/LockIcon;
 
@@ -1172,23 +1275,23 @@
 
     invoke-virtual {p1, v7}, Landroid/widget/ImageView;->announceForAccessibility(Ljava/lang/CharSequence;)V
 
-    :cond_e
-    if-eqz v5, :cond_f
+    :cond_f
+    if-eqz v5, :cond_10
 
-    if-eqz v3, :cond_f
+    if-eqz v0, :cond_10
 
     invoke-virtual {v5}, Landroid/graphics/drawable/AnimatedVectorDrawable;->forceAnimationOnUI()V
 
     invoke-virtual {v5}, Landroid/graphics/drawable/AnimatedVectorDrawable;->start()V
 
-    :cond_f
+    :cond_10
     iget p1, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLastState:I
 
-    const/16 v3, 0xb
+    const/16 v0, 0xb
 
-    if-eq p1, v3, :cond_10
+    if-eq p1, v0, :cond_11
 
-    if-ne v0, v3, :cond_10
+    if-ne v3, v0, :cond_11
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLockIcon:Lcom/android/systemui/statusbar/phone/LockIcon;
 
@@ -1196,86 +1299,84 @@
 
     goto :goto_a
 
-    :cond_10
+    :cond_11
     iget p1, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLastState:I
 
     const/16 v5, 0xd
 
-    if-eq p1, v5, :cond_11
+    if-eq p1, v5, :cond_12
 
-    if-ne v0, v5, :cond_11
+    if-ne v3, v5, :cond_12
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLockIcon:Lcom/android/systemui/statusbar/phone/LockIcon;
 
-    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mContext:Landroid/content/Context;
 
     sget v5, Lcom/android/systemui/R$drawable;->op_facelock_lock_ripple_drawable:I
 
-    invoke-virtual {v3, v5}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0, v5}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
-    move-result-object v3
+    move-result-object v0
 
-    invoke-virtual {p1, v3}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_a
 
-    :cond_11
-    if-eq v0, v3, :cond_12
+    :cond_12
+    if-eq v3, v0, :cond_13
 
     const/16 p1, 0xc
 
-    if-eq v0, p1, :cond_12
+    if-eq v3, p1, :cond_13
 
-    if-eq v0, v5, :cond_12
+    if-eq v3, v5, :cond_13
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLockIcon:Lcom/android/systemui/statusbar/phone/LockIcon;
 
-    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mTrustDrawable:Lcom/oneplus/phone/OpTrustDrawable;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mTrustDrawable:Lcom/oneplus/phone/OpTrustDrawable;
 
-    invoke-virtual {p1, v3}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    :cond_12
+    :cond_13
     :goto_a
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLockIcon:Lcom/android/systemui/statusbar/phone/LockIcon;
 
-    invoke-virtual {p0, p1, v0}, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->opUpdateIconAnimation(Landroid/view/View;I)V
+    invoke-virtual {p0, p1, v3}, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->opUpdateIconAnimation(Landroid/view/View;I)V
 
     sget-boolean p1, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
-    if-eqz p1, :cond_13
+    if-eqz p1, :cond_14
 
     iget p1, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLastState:I
 
-    if-eq p1, v0, :cond_13
+    if-eq p1, v3, :cond_14
 
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "from "
+    const-string v0, "from "
 
-    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v3, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLastState:I
-
-    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v3, " to "
-
-    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v0, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLastState:I
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, " to "
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    const-string v3, "LockIcon"
+    invoke-static {v12, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {v3, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_13
-    iput v0, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLastState:I
+    :cond_14
+    iput v3, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLastState:I
 
     iget-boolean p1, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mDeviceInteractive:Z
 
@@ -1285,9 +1386,9 @@
 
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLastScreenOn:Z
 
-    move v10, v4
+    move v11, v4
 
-    :cond_14
+    :cond_15
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
     invoke-static {}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getCurrentUser()I
@@ -1298,13 +1399,13 @@
 
     move-result p1
 
-    if-eqz p1, :cond_15
+    if-eqz p1, :cond_16
 
-    if-nez v10, :cond_15
+    if-nez v11, :cond_16
 
     goto :goto_b
 
-    :cond_15
+    :cond_16
     move v1, v2
 
     :goto_b

@@ -157,7 +157,7 @@
 
     iget-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$KeyguardStateCallback;->this$0:Lcom/oneplus/battery/OpChargingAnimationControllerImpl;
 
-    invoke-static {p1}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$700(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Lcom/oneplus/battery/OpWarpChargingViewV2;
+    invoke-static {p1}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$700(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Lcom/oneplus/battery/OpSWarpChargingView;
 
     move-result-object p1
 
@@ -165,11 +165,11 @@
 
     iget-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$KeyguardStateCallback;->this$0:Lcom/oneplus/battery/OpChargingAnimationControllerImpl;
 
-    invoke-static {p1}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$700(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Lcom/oneplus/battery/OpWarpChargingViewV2;
+    invoke-static {p1}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$700(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Lcom/oneplus/battery/OpSWarpChargingView;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/oneplus/battery/OpWarpChargingViewV2;->stopAnimation()V
+    invoke-virtual {p1}, Lcom/oneplus/battery/OpSWarpChargingView;->stopAnimation()V
 
     goto :goto_0
 

@@ -205,10 +205,6 @@
 
     move-result-object v1
 
-    invoke-virtual {p2}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->getSbn()Landroid/service/notification/StatusBarNotification;
-
-    move-result-object p2
-
     const-string v2, "NotifRemoteInputManager"
 
     if-nez p2, :cond_1
@@ -220,6 +216,10 @@
     return-void
 
     :cond_1
+    invoke-virtual {p2}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->getSbn()Landroid/service/notification/StatusBarNotification;
+
+    move-result-object p2
+
     invoke-virtual {p2}, Landroid/service/notification/StatusBarNotification;->getKey()Ljava/lang/String;
 
     move-result-object v4

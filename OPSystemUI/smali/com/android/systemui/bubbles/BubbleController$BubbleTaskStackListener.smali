@@ -133,13 +133,13 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     iget p1, p1, Landroid/app/ActivityManager$RunningTaskInfo;->displayId:I
 
     iget-object v0, p0, Lcom/android/systemui/bubbles/BubbleController$BubbleTaskStackListener;->this$0:Lcom/android/systemui/bubbles/BubbleController;
 
-    invoke-static {v0}, Lcom/android/systemui/bubbles/BubbleController;->access$2100(Lcom/android/systemui/bubbles/BubbleController;)Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/systemui/bubbles/BubbleController;->access$2300(Lcom/android/systemui/bubbles/BubbleController;)Landroid/content/Context;
 
     move-result-object v1
 
@@ -147,8 +147,23 @@
 
     move-result v0
 
-    if-ne p1, v0, :cond_0
+    if-ne p1, v0, :cond_1
 
+    iget-object p1, p0, Lcom/android/systemui/bubbles/BubbleController$BubbleTaskStackListener;->this$0:Lcom/android/systemui/bubbles/BubbleController;
+
+    invoke-static {p1}, Lcom/android/systemui/bubbles/BubbleController;->access$2400(Lcom/android/systemui/bubbles/BubbleController;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p0, p0, Lcom/android/systemui/bubbles/BubbleController$BubbleTaskStackListener;->this$0:Lcom/android/systemui/bubbles/BubbleController;
+
+    invoke-virtual {p0}, Lcom/android/systemui/bubbles/BubbleController;->hideCurrentInputMethod()V
+
+    goto :goto_0
+
+    :cond_0
     iget-object p0, p0, Lcom/android/systemui/bubbles/BubbleController$BubbleTaskStackListener;->this$0:Lcom/android/systemui/bubbles/BubbleController;
 
     invoke-static {p0}, Lcom/android/systemui/bubbles/BubbleController;->access$100(Lcom/android/systemui/bubbles/BubbleController;)Lcom/android/systemui/bubbles/BubbleData;
@@ -159,7 +174,8 @@
 
     invoke-virtual {p0, p1}, Lcom/android/systemui/bubbles/BubbleData;->setExpanded(Z)V
 
-    :cond_0
+    :cond_1
+    :goto_0
     return-void
 .end method
 

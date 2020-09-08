@@ -47,13 +47,29 @@
 
     iput-object p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationBlockingHelperManager;->mNonBlockablePkgs:Ljava/util/Set;
 
+    iget-object p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationBlockingHelperManager;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p2
+
+    const p3, 0x107005e
+
+    invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
+
+    iget-object p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationBlockingHelperManager;->mNonBlockablePkgs:Ljava/util/Set;
+
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationBlockingHelperManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const p2, 0x107005e
+    const p2, 0x502001b
 
     invoke-virtual {p0, p2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 

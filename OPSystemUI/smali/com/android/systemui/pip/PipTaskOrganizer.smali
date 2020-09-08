@@ -236,10 +236,10 @@
     return-object p0
 .end method
 
-.method static synthetic access$500(Lcom/android/systemui/pip/PipTaskOrganizer;Landroid/graphics/Rect;Landroid/graphics/Rect;IILjava/util/function/Consumer;)V
+.method static synthetic access$500(Lcom/android/systemui/pip/PipTaskOrganizer;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;IILjava/util/function/Consumer;)V
     .locals 0
 
-    invoke-direct/range {p0 .. p5}, Lcom/android/systemui/pip/PipTaskOrganizer;->scheduleAnimateResizePip(Landroid/graphics/Rect;Landroid/graphics/Rect;IILjava/util/function/Consumer;)V
+    invoke-direct/range {p0 .. p6}, Lcom/android/systemui/pip/PipTaskOrganizer;->scheduleAnimateResizePip(Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;IILjava/util/function/Consumer;)V
 
     return-void
 .end method
@@ -276,7 +276,7 @@
     return-object p0
 .end method
 
-.method private animateResizePip(Landroid/graphics/Rect;Landroid/graphics/Rect;II)V
+.method private animateResizePip(Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;II)V
     .locals 2
 
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
@@ -304,17 +304,17 @@
     :cond_0
     iget-object v1, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mPipAnimationController:Lcom/android/systemui/pip/PipAnimationController;
 
-    invoke-virtual {v1, v0, p1, p2}, Lcom/android/systemui/pip/PipAnimationController;->getAnimator(Landroid/view/SurfaceControl;Landroid/graphics/Rect;Landroid/graphics/Rect;)Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator;
+    invoke-virtual {v1, v0, p1, p2, p3}, Lcom/android/systemui/pip/PipAnimationController;->getAnimator(Landroid/view/SurfaceControl;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;)Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator;
 
     move-result-object p1
 
-    invoke-virtual {p1, p3}, Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator;->setTransitionDirection(I)Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator;
+    invoke-virtual {p1, p4}, Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator;->setTransitionDirection(I)Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator;
 
     iget-object p0, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mPipAnimationCallback:Lcom/android/systemui/pip/PipAnimationController$PipAnimationCallback;
 
     invoke-virtual {p1, p0}, Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator;->setPipAnimationCallback(Lcom/android/systemui/pip/PipAnimationController$PipAnimationCallback;)Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator;
 
-    int-to-long p2, p4
+    int-to-long p2, p5
 
     invoke-virtual {p1, p2, p3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
@@ -431,6 +431,34 @@
     return-void
 .end method
 
+.method private createFinishResizeSurfaceTransaction(Landroid/graphics/Rect;)Landroid/view/SurfaceControl$Transaction;
+    .locals 3
+
+    iget-object v0, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mSurfaceControlTransactionFactory:Lcom/android/systemui/pip/PipSurfaceTransactionHelper$SurfaceControlTransactionFactory;
+
+    invoke-interface {v0}, Lcom/android/systemui/pip/PipSurfaceTransactionHelper$SurfaceControlTransactionFactory;->getTransaction()Landroid/view/SurfaceControl$Transaction;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mSurfaceTransactionHelper:Lcom/android/systemui/pip/PipSurfaceTransactionHelper;
+
+    iget-object v2, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mLeash:Landroid/view/SurfaceControl;
+
+    invoke-virtual {v1, v0, v2, p1}, Lcom/android/systemui/pip/PipSurfaceTransactionHelper;->crop(Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl;Landroid/graphics/Rect;)Lcom/android/systemui/pip/PipSurfaceTransactionHelper;
+
+    iget-object v2, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mLeash:Landroid/view/SurfaceControl;
+
+    invoke-virtual {v1, v0, v2, p1}, Lcom/android/systemui/pip/PipSurfaceTransactionHelper;->resetScale(Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl;Landroid/graphics/Rect;)Lcom/android/systemui/pip/PipSurfaceTransactionHelper;
+
+    iget-object p1, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mLeash:Landroid/view/SurfaceControl;
+
+    iget-boolean p0, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mInPip:Z
+
+    invoke-virtual {v1, v0, p1, p0}, Lcom/android/systemui/pip/PipSurfaceTransactionHelper;->round(Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl;Z)Lcom/android/systemui/pip/PipSurfaceTransactionHelper;
+
+    return-object v0
+.end method
+
 .method private enterPipWithAlphaAnimation(Landroid/graphics/Rect;J)V
     .locals 3
 
@@ -447,6 +475,8 @@
     invoke-virtual {v0, v1, v2}, Landroid/view/SurfaceControl$Transaction;->setAlpha(Landroid/view/SurfaceControl;F)Landroid/view/SurfaceControl$Transaction;
 
     invoke-virtual {v0}, Landroid/view/SurfaceControl$Transaction;->apply()V
+
+    invoke-virtual {v0}, Landroid/view/SurfaceControl$Transaction;->close()V
 
     new-instance v0, Landroid/window/WindowContainerTransaction;
 
@@ -488,7 +518,7 @@
 
     move-result-object v1
 
-    if-ne v0, v1, :cond_4
+    if-ne v0, v1, :cond_1
 
     iget-object v0, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mLastReportedBounds:Landroid/graphics/Rect;
 
@@ -511,55 +541,13 @@
 
     invoke-direct {p4}, Landroid/window/WindowContainerTransaction;-><init>()V
 
-    invoke-static {p3}, Lcom/android/systemui/pip/PipAnimationController;->isInPipDirection(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mToken:Landroid/window/WindowContainerToken;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p4, v0, v1}, Landroid/window/WindowContainerTransaction;->setActivityWindowingMode(Landroid/window/WindowContainerToken;I)Landroid/window/WindowContainerTransaction;
-
-    iget-object v0, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mToken:Landroid/window/WindowContainerToken;
-
-    invoke-virtual {p4, v0, p2}, Landroid/window/WindowContainerTransaction;->scheduleFinishEnterPip(Landroid/window/WindowContainerToken;Landroid/graphics/Rect;)Landroid/window/WindowContainerTransaction;
-
-    goto :goto_0
-
-    :cond_1
-    invoke-static {p3}, Lcom/android/systemui/pip/PipAnimationController;->isOutPipDirection(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    const/4 v0, 0x3
-
-    if-ne p3, v0, :cond_2
-
-    const/4 p2, 0x0
-
-    :cond_2
-    invoke-direct {p0, p4, p3}, Lcom/android/systemui/pip/PipTaskOrganizer;->applyWindowingModeChangeOnExit(Landroid/window/WindowContainerTransaction;I)V
-
-    :cond_3
-    :goto_0
-    iget-object v0, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mToken:Landroid/window/WindowContainerToken;
-
-    invoke-virtual {p4, v0, p2}, Landroid/window/WindowContainerTransaction;->setBounds(Landroid/window/WindowContainerToken;Landroid/graphics/Rect;)Landroid/window/WindowContainerTransaction;
-
-    iget-object p2, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mToken:Landroid/window/WindowContainerToken;
-
-    invoke-virtual {p4, p2, p1}, Landroid/window/WindowContainerTransaction;->setBoundsChangeTransaction(Landroid/window/WindowContainerToken;Landroid/view/SurfaceControl$Transaction;)Landroid/window/WindowContainerTransaction;
+    invoke-direct {p0, p2, p3, p1, p4}, Lcom/android/systemui/pip/PipTaskOrganizer;->prepareFinishResizeTransaction(Landroid/graphics/Rect;ILandroid/view/SurfaceControl$Transaction;Landroid/window/WindowContainerTransaction;)V
 
     invoke-virtual {p0, p4, p3}, Lcom/android/systemui/pip/PipTaskOrganizer;->applyFinishBoundsResize(Landroid/window/WindowContainerTransaction;I)V
 
     return-void
 
-    :cond_4
+    :cond_1
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string p1, "Callers should call scheduleResizePip() instead of this directly"
@@ -570,15 +558,15 @@
 .end method
 
 .method private getAspectRatioOrDefault(Landroid/app/PictureInPictureParams;)F
-    .locals 0
+    .locals 1
 
-    if-nez p1, :cond_0
+    if-eqz p1, :cond_1
 
-    iget-object p0, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mPipBoundsHandler:Lcom/android/systemui/pip/PipBoundsHandler;
+    invoke-virtual {p1}, Landroid/app/PictureInPictureParams;->hasSetAspectRatio()Z
 
-    invoke-virtual {p0}, Lcom/android/systemui/pip/PipBoundsHandler;->getDefaultAspectRatio()F
+    move-result v0
 
-    move-result p0
+    if-nez v0, :cond_0
 
     goto :goto_0
 
@@ -587,7 +575,17 @@
 
     move-result p0
 
+    goto :goto_1
+
+    :cond_1
     :goto_0
+    iget-object p0, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mPipBoundsHandler:Lcom/android/systemui/pip/PipBoundsHandler;
+
+    invoke-virtual {p0}, Lcom/android/systemui/pip/PipBoundsHandler;->getDefaultAspectRatio()F
+
+    move-result p0
+
+    :goto_1
     return p0
 .end method
 
@@ -626,8 +624,49 @@
     return-object p0
 .end method
 
+.method private getValidSourceHintRect(Landroid/app/ActivityManager$RunningTaskInfo;Landroid/graphics/Rect;)Landroid/graphics/Rect;
+    .locals 1
+
+    iget-object p0, p1, Landroid/app/ActivityManager$RunningTaskInfo;->pictureInPictureParams:Landroid/app/PictureInPictureParams;
+
+    const/4 v0, 0x0
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Landroid/app/PictureInPictureParams;->hasSourceBoundsHint()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    iget-object p0, p1, Landroid/app/ActivityManager$RunningTaskInfo;->pictureInPictureParams:Landroid/app/PictureInPictureParams;
+
+    invoke-virtual {p0}, Landroid/app/PictureInPictureParams;->getSourceRectHint()Landroid/graphics/Rect;
+
+    move-result-object p0
+
+    goto :goto_0
+
+    :cond_0
+    move-object p0, v0
+
+    :goto_0
+    if-eqz p0, :cond_1
+
+    invoke-virtual {p2, p0}, Landroid/graphics/Rect;->contains(Landroid/graphics/Rect;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    return-object p0
+
+    :cond_1
+    return-object v0
+.end method
+
 .method private synthetic lambda$new$0(Landroid/os/Message;)Z
-    .locals 6
+    .locals 9
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -723,21 +762,33 @@
     :cond_3
     iget-object p1, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
 
+    move-object v4, p1
+
+    check-cast v4, Landroid/graphics/Rect;
+
+    iget-object p1, v0, Lcom/android/internal/os/SomeArgs;->arg3:Ljava/lang/Object;
+
     check-cast p1, Landroid/graphics/Rect;
 
-    iget-object v3, v0, Lcom/android/internal/os/SomeArgs;->arg3:Ljava/lang/Object;
+    iget-object v3, v0, Lcom/android/internal/os/SomeArgs;->arg4:Ljava/lang/Object;
 
-    check-cast v3, Landroid/graphics/Rect;
+    move-object v6, v3
 
-    iget v4, v0, Lcom/android/internal/os/SomeArgs;->argi2:I
+    check-cast v6, Landroid/graphics/Rect;
 
-    iget v5, v0, Lcom/android/internal/os/SomeArgs;->argi1:I
+    iget v8, v0, Lcom/android/internal/os/SomeArgs;->argi2:I
 
-    invoke-direct {p0, p1, v3, v5, v4}, Lcom/android/systemui/pip/PipTaskOrganizer;->animateResizePip(Landroid/graphics/Rect;Landroid/graphics/Rect;II)V
+    iget v7, v0, Lcom/android/internal/os/SomeArgs;->argi1:I
+
+    move-object v3, p0
+
+    move-object v5, p1
+
+    invoke-direct/range {v3 .. v8}, Lcom/android/systemui/pip/PipTaskOrganizer;->animateResizePip(Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;II)V
 
     if-eqz v1, :cond_5
 
-    invoke-interface {v1, v3}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
+    invoke-interface {v1, p1}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -917,7 +968,7 @@
 .end method
 
 .method private offsetPip(Landroid/graphics/Rect;III)V
-    .locals 2
+    .locals 6
 
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
@@ -944,15 +995,23 @@
     return-void
 
     :cond_0
-    new-instance v0, Landroid/graphics/Rect;
+    new-instance v2, Landroid/graphics/Rect;
 
-    invoke-direct {v0, p1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
+    invoke-direct {v2, p1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    invoke-virtual {v0, p2, p3}, Landroid/graphics/Rect;->offset(II)V
+    invoke-virtual {v2, p2, p3}, Landroid/graphics/Rect;->offset(II)V
 
-    const/4 p2, 0x1
+    const/4 v3, 0x0
 
-    invoke-direct {p0, p1, v0, p2, p4}, Lcom/android/systemui/pip/PipTaskOrganizer;->animateResizePip(Landroid/graphics/Rect;Landroid/graphics/Rect;II)V
+    const/4 v4, 0x1
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move v5, p4
+
+    invoke-direct/range {v0 .. v5}, Lcom/android/systemui/pip/PipTaskOrganizer;->animateResizePip(Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;II)V
 
     return-void
 
@@ -964,6 +1023,56 @@
     invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     throw p0
+.end method
+
+.method private prepareFinishResizeTransaction(Landroid/graphics/Rect;ILandroid/view/SurfaceControl$Transaction;Landroid/window/WindowContainerTransaction;)V
+    .locals 1
+
+    invoke-static {p2}, Lcom/android/systemui/pip/PipAnimationController;->isInPipDirection(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object p2, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mToken:Landroid/window/WindowContainerToken;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p4, p2, v0}, Landroid/window/WindowContainerTransaction;->setActivityWindowingMode(Landroid/window/WindowContainerToken;I)Landroid/window/WindowContainerTransaction;
+
+    iget-object p2, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mToken:Landroid/window/WindowContainerToken;
+
+    invoke-virtual {p4, p2, p1}, Landroid/window/WindowContainerTransaction;->scheduleFinishEnterPip(Landroid/window/WindowContainerToken;Landroid/graphics/Rect;)Landroid/window/WindowContainerTransaction;
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {p2}, Lcom/android/systemui/pip/PipAnimationController;->isOutPipDirection(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    const/4 v0, 0x3
+
+    if-ne p2, v0, :cond_1
+
+    const/4 p1, 0x0
+
+    :cond_1
+    invoke-direct {p0, p4, p2}, Lcom/android/systemui/pip/PipTaskOrganizer;->applyWindowingModeChangeOnExit(Landroid/window/WindowContainerTransaction;I)V
+
+    :cond_2
+    :goto_0
+    iget-object p2, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mToken:Landroid/window/WindowContainerToken;
+
+    invoke-virtual {p4, p2, p1}, Landroid/window/WindowContainerTransaction;->setBounds(Landroid/window/WindowContainerToken;Landroid/graphics/Rect;)Landroid/window/WindowContainerTransaction;
+
+    iget-object p0, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mToken:Landroid/window/WindowContainerToken;
+
+    invoke-virtual {p4, p0, p3}, Landroid/window/WindowContainerTransaction;->setBoundsChangeTransaction(Landroid/window/WindowContainerToken;Landroid/view/SurfaceControl$Transaction;)Landroid/window/WindowContainerTransaction;
+
+    return-void
 .end method
 
 .method private resizePip(Landroid/graphics/Rect;)V
@@ -1038,11 +1147,38 @@
     throw p0
 .end method
 
-.method private scheduleAnimateResizePip(Landroid/graphics/Rect;Landroid/graphics/Rect;IILjava/util/function/Consumer;)V
+.method private runOnMainHandler(Ljava/lang/Runnable;)V
+    .locals 2
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p0, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mMainHandler:Landroid/os/Handler;
+
+    invoke-virtual {p0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    :goto_0
+    return-void
+.end method
+
+.method private scheduleAnimateResizePip(Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;IILjava/util/function/Consumer;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
+            "Landroid/graphics/Rect;",
             "Landroid/graphics/Rect;",
             "Landroid/graphics/Rect;",
             "II",
@@ -1063,15 +1199,17 @@
 
     move-result-object v0
 
-    iput-object p5, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
+    iput-object p6, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
     iput-object p1, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
 
     iput-object p2, v0, Lcom/android/internal/os/SomeArgs;->arg3:Ljava/lang/Object;
 
-    iput p3, v0, Lcom/android/internal/os/SomeArgs;->argi1:I
+    iput-object p3, v0, Lcom/android/internal/os/SomeArgs;->arg4:Ljava/lang/Object;
 
-    iput p4, v0, Lcom/android/internal/os/SomeArgs;->argi2:I
+    iput p4, v0, Lcom/android/internal/os/SomeArgs;->argi1:I
+
+    iput p5, v0, Lcom/android/internal/os/SomeArgs;->argi2:I
 
     iget-object p0, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mUpdateHandler:Landroid/os/Handler;
 
@@ -1086,12 +1224,11 @@
     return-void
 .end method
 
-.method private scheduleFinishResizePip(Landroid/view/SurfaceControl$Transaction;Landroid/graphics/Rect;ILjava/util/function/Consumer;)V
+.method private scheduleFinishResizePip(Landroid/graphics/Rect;ILjava/util/function/Consumer;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Landroid/view/SurfaceControl$Transaction;",
             "Landroid/graphics/Rect;",
             "I",
             "Ljava/util/function/Consumer<",
@@ -1100,9 +1237,11 @@
         }
     .end annotation
 
-    iget-boolean v0, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mInPip:Z
+    invoke-direct {p0}, Lcom/android/systemui/pip/PipTaskOrganizer;->shouldBlockResizeRequest()Z
 
-    if-nez v0, :cond_0
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     return-void
 
@@ -1111,13 +1250,17 @@
 
     move-result-object v0
 
-    iput-object p4, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
+    iput-object p3, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
-    iput-object p1, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
+    invoke-direct {p0, p1}, Lcom/android/systemui/pip/PipTaskOrganizer;->createFinishResizeSurfaceTransaction(Landroid/graphics/Rect;)Landroid/view/SurfaceControl$Transaction;
 
-    iput-object p2, v0, Lcom/android/internal/os/SomeArgs;->arg3:Ljava/lang/Object;
+    move-result-object p3
 
-    iput p3, v0, Lcom/android/internal/os/SomeArgs;->argi1:I
+    iput-object p3, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
+
+    iput-object p1, v0, Lcom/android/internal/os/SomeArgs;->arg3:Ljava/lang/Object;
+
+    iput p2, v0, Lcom/android/internal/os/SomeArgs;->argi1:I
 
     iget-object p0, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mUpdateHandler:Landroid/os/Handler;
 
@@ -1133,45 +1276,65 @@
 .end method
 
 .method private sendOnPipTransitionCancelled(I)V
-    .locals 2
+    .locals 1
 
-    iget-object v0, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mMainHandler:Landroid/os/Handler;
+    new-instance v0, Lcom/android/systemui/pip/-$$Lambda$PipTaskOrganizer$TTTo1eGF0SlCllWVDuAJlbhmvjo;
 
-    new-instance v1, Lcom/android/systemui/pip/-$$Lambda$PipTaskOrganizer$TTTo1eGF0SlCllWVDuAJlbhmvjo;
+    invoke-direct {v0, p0, p1}, Lcom/android/systemui/pip/-$$Lambda$PipTaskOrganizer$TTTo1eGF0SlCllWVDuAJlbhmvjo;-><init>(Lcom/android/systemui/pip/PipTaskOrganizer;I)V
 
-    invoke-direct {v1, p0, p1}, Lcom/android/systemui/pip/-$$Lambda$PipTaskOrganizer$TTTo1eGF0SlCllWVDuAJlbhmvjo;-><init>(Lcom/android/systemui/pip/PipTaskOrganizer;I)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    invoke-direct {p0, v0}, Lcom/android/systemui/pip/PipTaskOrganizer;->runOnMainHandler(Ljava/lang/Runnable;)V
 
     return-void
 .end method
 
 .method private sendOnPipTransitionFinished(I)V
-    .locals 2
+    .locals 1
 
-    iget-object v0, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mMainHandler:Landroid/os/Handler;
+    new-instance v0, Lcom/android/systemui/pip/-$$Lambda$PipTaskOrganizer$cVPyDgP7uB9XVG-Z8xzNA-yEDd4;
 
-    new-instance v1, Lcom/android/systemui/pip/-$$Lambda$PipTaskOrganizer$cVPyDgP7uB9XVG-Z8xzNA-yEDd4;
+    invoke-direct {v0, p0, p1}, Lcom/android/systemui/pip/-$$Lambda$PipTaskOrganizer$cVPyDgP7uB9XVG-Z8xzNA-yEDd4;-><init>(Lcom/android/systemui/pip/PipTaskOrganizer;I)V
 
-    invoke-direct {v1, p0, p1}, Lcom/android/systemui/pip/-$$Lambda$PipTaskOrganizer$cVPyDgP7uB9XVG-Z8xzNA-yEDd4;-><init>(Lcom/android/systemui/pip/PipTaskOrganizer;I)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    invoke-direct {p0, v0}, Lcom/android/systemui/pip/PipTaskOrganizer;->runOnMainHandler(Ljava/lang/Runnable;)V
 
     return-void
 .end method
 
 .method private sendOnPipTransitionStarted(I)V
-    .locals 2
+    .locals 1
 
-    iget-object v0, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mMainHandler:Landroid/os/Handler;
+    new-instance v0, Lcom/android/systemui/pip/-$$Lambda$PipTaskOrganizer$JUO3Grq_R7eMASAsK_v_c6_mMuI;
 
-    new-instance v1, Lcom/android/systemui/pip/-$$Lambda$PipTaskOrganizer$JUO3Grq_R7eMASAsK_v_c6_mMuI;
+    invoke-direct {v0, p0, p1}, Lcom/android/systemui/pip/-$$Lambda$PipTaskOrganizer$JUO3Grq_R7eMASAsK_v_c6_mMuI;-><init>(Lcom/android/systemui/pip/PipTaskOrganizer;I)V
 
-    invoke-direct {v1, p0, p1}, Lcom/android/systemui/pip/-$$Lambda$PipTaskOrganizer$JUO3Grq_R7eMASAsK_v_c6_mMuI;-><init>(Lcom/android/systemui/pip/PipTaskOrganizer;I)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    invoke-direct {p0, v0}, Lcom/android/systemui/pip/PipTaskOrganizer;->runOnMainHandler(Ljava/lang/Runnable;)V
 
     return-void
+.end method
+
+.method private shouldBlockResizeRequest()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mInPip:Z
+
+    if-eqz v0, :cond_1
+
+    iget-boolean p0, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mExitingPip:Z
+
+    if-eqz p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 p0, 0x1
+
+    :goto_1
+    return p0
 .end method
 
 .method private syncWithSplitScreenBounds(Landroid/graphics/Rect;)Z
@@ -1777,6 +1940,41 @@
     return-void
 .end method
 
+.method public getCurrentOrAnimatingBounds()Landroid/graphics/Rect;
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mPipAnimationController:Lcom/android/systemui/pip/PipAnimationController;
+
+    invoke-virtual {v0}, Lcom/android/systemui/pip/PipAnimationController;->getCurrentAnimator()Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isRunning()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    new-instance p0, Landroid/graphics/Rect;
+
+    invoke-virtual {v0}, Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator;->getDestinationBounds()Landroid/graphics/Rect;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
+
+    return-object p0
+
+    :cond_0
+    invoke-virtual {p0}, Lcom/android/systemui/pip/PipTaskOrganizer;->getLastReportedBounds()Landroid/graphics/Rect;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method public getLastReportedBounds()Landroid/graphics/Rect;
     .locals 1
 
@@ -1803,6 +2001,28 @@
     iget-object p0, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mUpdateHandler:Landroid/os/Handler;
 
     return-object p0
+.end method
+
+.method public isDeferringEnterPipAnimation()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mInPip:Z
+
+    if-eqz v0, :cond_0
+
+    iget-boolean p0, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mShouldDeferEnteringPip:Z
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
 .end method
 
 .method public isInPip()Z
@@ -1920,8 +2140,8 @@
     return-void
 .end method
 
-.method public onMovementBoundsChanged(Landroid/graphics/Rect;ZZZ)V
-    .locals 4
+.method public onMovementBoundsChanged(Landroid/graphics/Rect;ZZZLandroid/window/WindowContainerTransaction;)V
+    .locals 3
 
     iget-object v0, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mPipAnimationController:Lcom/android/systemui/pip/PipAnimationController;
 
@@ -1979,23 +2199,23 @@
 
     iget-object p4, p4, Landroid/app/ActivityManager$RunningTaskInfo;->topActivity:Landroid/content/ComponentName;
 
-    iget-object v1, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mPictureInPictureParams:Landroid/app/PictureInPictureParams;
+    iget-object p5, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mPictureInPictureParams:Landroid/app/PictureInPictureParams;
 
-    invoke-direct {p0, v1}, Lcom/android/systemui/pip/PipTaskOrganizer;->getAspectRatioOrDefault(Landroid/app/PictureInPictureParams;)F
+    invoke-direct {p0, p5}, Lcom/android/systemui/pip/PipTaskOrganizer;->getAspectRatioOrDefault(Landroid/app/PictureInPictureParams;)F
 
-    move-result v1
+    move-result p5
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    iget-object v3, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
+    iget-object v2, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    iget-object v3, v3, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
+    iget-object v2, v2, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
 
-    invoke-direct {p0, v3}, Lcom/android/systemui/pip/PipTaskOrganizer;->getMinimalSize(Landroid/content/pm/ActivityInfo;)Landroid/util/Size;
+    invoke-direct {p0, v2}, Lcom/android/systemui/pip/PipTaskOrganizer;->getMinimalSize(Landroid/content/pm/ActivityInfo;)Landroid/util/Size;
 
     move-result-object p0
 
-    invoke-virtual {p3, p4, v1, v2, p0}, Lcom/android/systemui/pip/PipBoundsHandler;->getDestinationBounds(Landroid/content/ComponentName;FLandroid/graphics/Rect;Landroid/util/Size;)Landroid/graphics/Rect;
+    invoke-virtual {p3, p4, p5, v1, p0}, Lcom/android/systemui/pip/PipBoundsHandler;->getDestinationBounds(Landroid/content/ComponentName;FLandroid/graphics/Rect;Landroid/util/Size;)Landroid/graphics/Rect;
 
     move-result-object p0
 
@@ -2027,28 +2247,49 @@
     :goto_0
     iget-boolean p3, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mInPip:Z
 
-    if-eqz p3, :cond_5
+    if-eqz p3, :cond_6
 
-    if-eqz p2, :cond_5
+    if-eqz p2, :cond_6
 
-    iget-object p2, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mLastReportedBounds:Landroid/graphics/Rect;
+    const/4 p2, 0x0
 
-    invoke-virtual {p2, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    if-eqz v0, :cond_5
 
-    iget-object p1, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mLastReportedBounds:Landroid/graphics/Rect;
+    invoke-virtual {v0}, Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator;->getTransitionDirection()I
 
-    invoke-virtual {p0, p1}, Lcom/android/systemui/pip/PipTaskOrganizer;->scheduleFinishResizePip(Landroid/graphics/Rect;)V
+    move-result p2
+
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->removeAllUpdateListeners()V
+
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->removeAllListeners()V
+
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
+
+    invoke-direct {p0, p2}, Lcom/android/systemui/pip/PipTaskOrganizer;->sendOnPipTransitionCancelled(I)V
+
+    invoke-direct {p0, p2}, Lcom/android/systemui/pip/PipTaskOrganizer;->sendOnPipTransitionFinished(I)V
+
+    :cond_5
+    iget-object p3, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mLastReportedBounds:Landroid/graphics/Rect;
+
+    invoke-virtual {p3, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    invoke-direct {p0, p1}, Lcom/android/systemui/pip/PipTaskOrganizer;->createFinishResizeSurfaceTransaction(Landroid/graphics/Rect;)Landroid/view/SurfaceControl$Transaction;
+
+    move-result-object p3
+
+    invoke-direct {p0, p1, p2, p3, p5}, Lcom/android/systemui/pip/PipTaskOrganizer;->prepareFinishResizeTransaction(Landroid/graphics/Rect;ILandroid/view/SurfaceControl$Transaction;Landroid/window/WindowContainerTransaction;)V
 
     goto :goto_1
 
-    :cond_5
-    if-eqz v0, :cond_6
+    :cond_6
+    if-eqz v0, :cond_7
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isRunning()Z
 
     move-result p2
 
-    if-eqz p2, :cond_6
+    if-eqz p2, :cond_7
 
     invoke-virtual {v0}, Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator;->getDestinationBounds()Landroid/graphics/Rect;
 
@@ -2058,7 +2299,7 @@
 
     move-result p0
 
-    if-nez p0, :cond_7
+    if-nez p0, :cond_8
 
     invoke-virtual {v0}, Lcom/android/systemui/pip/PipAnimationController$PipTransitionAnimator;->getDestinationBounds()Landroid/graphics/Rect;
 
@@ -2068,26 +2309,26 @@
 
     goto :goto_1
 
-    :cond_6
+    :cond_7
     iget-object p2, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mLastReportedBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p2}, Landroid/graphics/Rect;->isEmpty()Z
 
     move-result p2
 
-    if-nez p2, :cond_7
+    if-nez p2, :cond_8
 
     iget-object p0, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mLastReportedBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p1, p0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    :cond_7
+    :cond_8
     :goto_1
     return-void
 .end method
 
 .method public onTaskAppeared(Landroid/app/ActivityManager$RunningTaskInfo;Landroid/view/SurfaceControl;)V
-    .locals 11
+    .locals 13
 
     const-string v0, "Requires RunningTaskInfo"
 
@@ -2095,45 +2336,45 @@
 
     iput-object p1, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    iget-object p1, p1, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
+    iget-object v0, p1, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
 
-    iput-object p1, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mToken:Landroid/window/WindowContainerToken;
+    iput-object v0, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mToken:Landroid/window/WindowContainerToken;
 
-    const/4 v0, 0x1
+    const/4 v1, 0x1
 
-    iput-boolean v0, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mInPip:Z
+    iput-boolean v1, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mInPip:Z
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    iput-boolean v1, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mExitingPip:Z
+    iput-boolean v2, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mExitingPip:Z
 
     iput-object p2, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mLeash:Landroid/view/SurfaceControl;
 
     iget-object p2, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mInitialState:Ljava/util/Map;
 
-    invoke-virtual {p1}, Landroid/window/WindowContainerToken;->asBinder()Landroid/os/IBinder;
+    invoke-virtual {v0}, Landroid/window/WindowContainerToken;->asBinder()Landroid/os/IBinder;
 
-    move-result-object p1
+    move-result-object v0
 
-    new-instance v2, Landroid/content/res/Configuration;
+    new-instance v3, Landroid/content/res/Configuration;
 
-    iget-object v3, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
+    iget-object v4, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    iget-object v3, v3, Landroid/app/ActivityManager$RunningTaskInfo;->configuration:Landroid/content/res/Configuration;
+    iget-object v4, v4, Landroid/app/ActivityManager$RunningTaskInfo;->configuration:Landroid/content/res/Configuration;
 
-    invoke-direct {v2, v3}, Landroid/content/res/Configuration;-><init>(Landroid/content/res/Configuration;)V
+    invoke-direct {v3, v4}, Landroid/content/res/Configuration;-><init>(Landroid/content/res/Configuration;)V
 
-    invoke-interface {p2, p1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v0, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object p1, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
+    iget-object p2, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    iget-object p2, p1, Landroid/app/ActivityManager$RunningTaskInfo;->pictureInPictureParams:Landroid/app/PictureInPictureParams;
+    iget-object v0, p2, Landroid/app/ActivityManager$RunningTaskInfo;->pictureInPictureParams:Landroid/app/PictureInPictureParams;
 
-    iput-object p2, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mPictureInPictureParams:Landroid/app/PictureInPictureParams;
+    iput-object v0, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mPictureInPictureParams:Landroid/app/PictureInPictureParams;
 
-    iget-boolean v2, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mShouldDeferEnteringPip:Z
+    iget-boolean v3, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mShouldDeferEnteringPip:Z
 
-    if-eqz v2, :cond_0
+    if-eqz v3, :cond_0
 
     iget-object p1, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mSurfaceControlTransactionFactory:Lcom/android/systemui/pip/PipSurfaceTransactionHelper$SurfaceControlTransactionFactory;
 
@@ -2153,71 +2394,77 @@
 
     invoke-virtual {p1}, Landroid/view/SurfaceControl$Transaction;->apply()V
 
+    invoke-virtual {p1}, Landroid/view/SurfaceControl$Transaction;->close()V
+
     return-void
 
     :cond_0
-    iget-object v2, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mPipBoundsHandler:Lcom/android/systemui/pip/PipBoundsHandler;
+    iget-object v3, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mPipBoundsHandler:Lcom/android/systemui/pip/PipBoundsHandler;
 
-    iget-object p1, p1, Landroid/app/ActivityManager$RunningTaskInfo;->topActivity:Landroid/content/ComponentName;
+    iget-object p2, p2, Landroid/app/ActivityManager$RunningTaskInfo;->topActivity:Landroid/content/ComponentName;
 
-    invoke-direct {p0, p2}, Lcom/android/systemui/pip/PipTaskOrganizer;->getAspectRatioOrDefault(Landroid/app/PictureInPictureParams;)F
+    invoke-direct {p0, v0}, Lcom/android/systemui/pip/PipTaskOrganizer;->getAspectRatioOrDefault(Landroid/app/PictureInPictureParams;)F
 
-    move-result p2
+    move-result v0
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
-    iget-object v4, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
+    iget-object v5, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    iget-object v4, v4, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
+    iget-object v5, v5, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
 
-    invoke-direct {p0, v4}, Lcom/android/systemui/pip/PipTaskOrganizer;->getMinimalSize(Landroid/content/pm/ActivityInfo;)Landroid/util/Size;
+    invoke-direct {p0, v5}, Lcom/android/systemui/pip/PipTaskOrganizer;->getMinimalSize(Landroid/content/pm/ActivityInfo;)Landroid/util/Size;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-virtual {v2, p1, p2, v3, v4}, Lcom/android/systemui/pip/PipBoundsHandler;->getDestinationBounds(Landroid/content/ComponentName;FLandroid/graphics/Rect;Landroid/util/Size;)Landroid/graphics/Rect;
+    invoke-virtual {v3, p2, v0, v4, v5}, Lcom/android/systemui/pip/PipBoundsHandler;->getDestinationBounds(Landroid/content/ComponentName;FLandroid/graphics/Rect;Landroid/util/Size;)Landroid/graphics/Rect;
+
+    move-result-object v8
+
+    const-string p2, "Missing destination bounds"
+
+    invoke-static {v8, p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    iget-object p2, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
+
+    iget-object p2, p2, Landroid/app/ActivityManager$RunningTaskInfo;->configuration:Landroid/content/res/Configuration;
+
+    iget-object p2, p2, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+
+    invoke-virtual {p2}, Landroid/app/WindowConfiguration;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v7
 
-    const-string p1, "Missing destination bounds"
+    iget p2, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mOneShotAnimationType:I
 
-    invoke-static {v7, p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    if-nez p2, :cond_1
 
-    iget-object p1, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
+    invoke-direct {p0, p1, v7}, Lcom/android/systemui/pip/PipTaskOrganizer;->getValidSourceHintRect(Landroid/app/ActivityManager$RunningTaskInfo;Landroid/graphics/Rect;)Landroid/graphics/Rect;
 
-    iget-object p1, p1, Landroid/app/ActivityManager$RunningTaskInfo;->configuration:Landroid/content/res/Configuration;
+    move-result-object v9
 
-    iget-object p1, p1, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    const/4 v10, 0x2
 
-    invoke-virtual {p1}, Landroid/app/WindowConfiguration;->getBounds()Landroid/graphics/Rect;
+    iget v11, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mEnterExitAnimationDuration:I
 
-    move-result-object v6
+    const/4 v12, 0x0
 
-    iget p1, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mOneShotAnimationType:I
+    move-object v6, p0
 
-    if-nez p1, :cond_1
-
-    const/4 v8, 0x2
-
-    iget v9, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mEnterExitAnimationDuration:I
-
-    const/4 v10, 0x0
-
-    move-object v5, p0
-
-    invoke-direct/range {v5 .. v10}, Lcom/android/systemui/pip/PipTaskOrganizer;->scheduleAnimateResizePip(Landroid/graphics/Rect;Landroid/graphics/Rect;IILjava/util/function/Consumer;)V
+    invoke-direct/range {v6 .. v12}, Lcom/android/systemui/pip/PipTaskOrganizer;->scheduleAnimateResizePip(Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;IILjava/util/function/Consumer;)V
 
     goto :goto_0
 
     :cond_1
-    if-ne p1, v0, :cond_2
+    if-ne p2, v1, :cond_2
 
     iget p1, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mEnterExitAnimationDuration:I
 
     int-to-long p1, p1
 
-    invoke-direct {p0, v7, p1, p2}, Lcom/android/systemui/pip/PipTaskOrganizer;->enterPipWithAlphaAnimation(Landroid/graphics/Rect;J)V
+    invoke-direct {p0, v8, p1, p2}, Lcom/android/systemui/pip/PipTaskOrganizer;->enterPipWithAlphaAnimation(Landroid/graphics/Rect;J)V
 
-    iput v1, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mOneShotAnimationType:I
+    iput v2, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mOneShotAnimationType:I
 
     :goto_0
     return-void
@@ -2485,7 +2732,7 @@
 .end method
 
 .method public scheduleAnimateResizePip(Landroid/graphics/Rect;ILjava/util/function/Consumer;)V
-    .locals 6
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2514,15 +2761,17 @@
 
     const/4 v3, 0x0
 
+    const/4 v4, 0x0
+
     move-object v0, p0
 
     move-object v2, p1
 
-    move v4, p2
+    move v5, p2
 
-    move-object v5, p3
+    move-object v6, p3
 
-    invoke-direct/range {v0 .. v5}, Lcom/android/systemui/pip/PipTaskOrganizer;->scheduleAnimateResizePip(Landroid/graphics/Rect;Landroid/graphics/Rect;IILjava/util/function/Consumer;)V
+    invoke-direct/range {v0 .. v6}, Lcom/android/systemui/pip/PipTaskOrganizer;->scheduleAnimateResizePip(Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;IILjava/util/function/Consumer;)V
 
     return-void
 .end method
@@ -2538,7 +2787,7 @@
 .end method
 
 .method public scheduleFinishResizePip(Landroid/graphics/Rect;Ljava/util/function/Consumer;)V
-    .locals 4
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2549,31 +2798,9 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mSurfaceControlTransactionFactory:Lcom/android/systemui/pip/PipSurfaceTransactionHelper$SurfaceControlTransactionFactory;
+    const/4 v0, 0x0
 
-    invoke-interface {v0}, Lcom/android/systemui/pip/PipSurfaceTransactionHelper$SurfaceControlTransactionFactory;->getTransaction()Landroid/view/SurfaceControl$Transaction;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mSurfaceTransactionHelper:Lcom/android/systemui/pip/PipSurfaceTransactionHelper;
-
-    iget-object v2, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mLeash:Landroid/view/SurfaceControl;
-
-    invoke-virtual {v1, v0, v2, p1}, Lcom/android/systemui/pip/PipSurfaceTransactionHelper;->crop(Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl;Landroid/graphics/Rect;)Lcom/android/systemui/pip/PipSurfaceTransactionHelper;
-
-    iget-object v2, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mLeash:Landroid/view/SurfaceControl;
-
-    invoke-virtual {v1, v0, v2, p1}, Lcom/android/systemui/pip/PipSurfaceTransactionHelper;->resetScale(Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl;Landroid/graphics/Rect;)Lcom/android/systemui/pip/PipSurfaceTransactionHelper;
-
-    iget-object v2, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mLeash:Landroid/view/SurfaceControl;
-
-    iget-boolean v3, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mInPip:Z
-
-    invoke-virtual {v1, v0, v2, v3}, Lcom/android/systemui/pip/PipSurfaceTransactionHelper;->round(Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl;Z)Lcom/android/systemui/pip/PipSurfaceTransactionHelper;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p0, v0, p1, v1, p2}, Lcom/android/systemui/pip/PipTaskOrganizer;->scheduleFinishResizePip(Landroid/view/SurfaceControl$Transaction;Landroid/graphics/Rect;ILjava/util/function/Consumer;)V
+    invoke-direct {p0, p1, v0, p2}, Lcom/android/systemui/pip/PipTaskOrganizer;->scheduleFinishResizePip(Landroid/graphics/Rect;ILjava/util/function/Consumer;)V
 
     return-void
 .end method
@@ -2591,9 +2818,11 @@
         }
     .end annotation
 
-    iget-boolean v0, p0, Lcom/android/systemui/pip/PipTaskOrganizer;->mInPip:Z
+    invoke-direct {p0}, Lcom/android/systemui/pip/PipTaskOrganizer;->shouldBlockResizeRequest()Z
 
-    if-nez v0, :cond_0
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     return-void
 

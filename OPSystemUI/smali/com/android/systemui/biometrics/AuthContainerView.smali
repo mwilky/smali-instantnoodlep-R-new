@@ -1235,9 +1235,21 @@
 
     move-result v0
 
-    invoke-static {}, Landroid/view/WindowInsets$Type;->ime()I
+    invoke-static {}, Landroid/view/WindowInsets$Type;->statusBars()I
 
     move-result v1
+
+    invoke-static {}, Landroid/view/WindowInsets$Type;->navigationBars()I
+
+    move-result v2
+
+    or-int/2addr v1, v2
+
+    invoke-static {}, Landroid/view/WindowInsets$Type;->ime()I
+
+    move-result v2
+
+    or-int/2addr v1, v2
 
     not-int v1, v1
 
@@ -1250,26 +1262,6 @@
     invoke-virtual {v6, v0}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
     iput-object p1, v6, Landroid/view/WindowManager$LayoutParams;->token:Landroid/os/IBinder;
-
-    invoke-virtual {v6}, Landroid/view/WindowManager$LayoutParams;->getFitInsetsTypes()I
-
-    move-result p1
-
-    invoke-static {}, Landroid/view/WindowInsets$Type;->statusBars()I
-
-    move-result v0
-
-    invoke-static {}, Landroid/view/WindowInsets$Type;->navigationBars()I
-
-    move-result v1
-
-    or-int/2addr v0, v1
-
-    not-int v0, v0
-
-    and-int/2addr p1, v0
-
-    invoke-virtual {v6, p1}, Landroid/view/WindowManager$LayoutParams;->setFitInsetsTypes(I)V
 
     invoke-static {}, Lcom/oneplus/util/OpUtils;->isCustomFingerprint()Z
 

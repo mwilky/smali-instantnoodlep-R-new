@@ -89,7 +89,7 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Handler;Landroid/os/Handler;)V
-    .locals 3
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -105,147 +105,62 @@
 
     iput-boolean v0, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mHasTetherableWifiRegexs:Z
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    iput-boolean v1, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mDisableByOperator:Z
+    iput-boolean v0, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mDisableByOperator:Z
 
-    new-instance v2, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl$1;
+    new-instance v0, Ljava/lang/Object;
 
-    invoke-direct {v2, p0}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl$1;-><init>(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v2, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mTetheringCallback:Landroid/net/TetheringManager$TetheringEventCallback;
+    iput-object v0, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mPublicSync:Ljava/lang/Object;
 
-    new-instance v2, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl$2;
+    new-instance v0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl$1;
 
-    invoke-direct {v2, p0}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl$2;-><init>(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;)V
+    invoke-direct {v0, p0}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl$1;-><init>(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;)V
 
-    iput-object v2, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mTetherChangeReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mTetheringCallback:Landroid/net/TetheringManager$TetheringEventCallback;
+
+    new-instance v0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl$2;
+
+    invoke-direct {v0, p0}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl$2;-><init>(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;)V
+
+    iput-object v0, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mTetherChangeReceiver:Landroid/content/BroadcastReceiver;
 
     iput-object p1, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mContext:Landroid/content/Context;
 
-    const-class v2, Landroid/net/TetheringManager;
+    const-class v0, Landroid/net/TetheringManager;
 
-    invoke-virtual {p1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v0
 
-    check-cast v2, Landroid/net/TetheringManager;
+    check-cast v0, Landroid/net/TetheringManager;
 
-    iput-object v2, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mTetheringManager:Landroid/net/TetheringManager;
+    iput-object v0, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mTetheringManager:Landroid/net/TetheringManager;
 
-    const-string/jumbo v2, "wifi"
+    const-string/jumbo v0, "wifi"
 
-    invoke-virtual {p1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object p1
 
-    check-cast v2, Landroid/net/wifi/WifiManager;
+    check-cast p1, Landroid/net/wifi/WifiManager;
 
-    iput-object v2, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iput-object p1, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     iput-object p2, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mMainHandler:Landroid/os/Handler;
 
-    iget-object p2, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mTetheringManager:Landroid/net/TetheringManager;
+    iget-object p1, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mTetheringManager:Landroid/net/TetheringManager;
 
-    new-instance v2, Landroid/os/HandlerExecutor;
+    new-instance p2, Landroid/os/HandlerExecutor;
 
-    invoke-direct {v2, p3}, Landroid/os/HandlerExecutor;-><init>(Landroid/os/Handler;)V
+    invoke-direct {p2, p3}, Landroid/os/HandlerExecutor;-><init>(Landroid/os/Handler;)V
 
-    iget-object p3, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mTetheringCallback:Landroid/net/TetheringManager$TetheringEventCallback;
+    iget-object p0, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mTetheringCallback:Landroid/net/TetheringManager$TetheringEventCallback;
 
-    invoke-virtual {p2, v2, p3}, Landroid/net/TetheringManager;->registerTetheringEventCallback(Ljava/util/concurrent/Executor;Landroid/net/TetheringManager$TetheringEventCallback;)V
+    invoke-virtual {p1, p2, p0}, Landroid/net/TetheringManager;->registerTetheringEventCallback(Ljava/util/concurrent/Executor;Landroid/net/TetheringManager$TetheringEventCallback;)V
 
-    iget-object p2, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mContext:Landroid/content/Context;
-
-    const-string p3, "connectivity"
-
-    invoke-virtual {p2, p3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/net/ConnectivityManager;
-
-    iput-object p2, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mConnectivityManager:Landroid/net/ConnectivityManager;
-
-    new-instance p2, Ljava/lang/Object;
-
-    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mPublicSync:Ljava/lang/Object;
-
-    iget-object p2, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mConnectivityManager:Landroid/net/ConnectivityManager;
-
-    invoke-virtual {p2}, Landroid/net/ConnectivityManager;->getTetherableUsbRegexs()[Ljava/lang/String;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mUsbRegexs:[Ljava/lang/String;
-
-    iget-object p2, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mConnectivityManager:Landroid/net/ConnectivityManager;
-
-    invoke-virtual {p2}, Landroid/net/ConnectivityManager;->getTetherableBluetoothRegexs()[Ljava/lang/String;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mBluetoothRegexs:[Ljava/lang/String;
-
-    iget-object p2, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mConnectivityManager:Landroid/net/ConnectivityManager;
-
-    invoke-virtual {p2}, Landroid/net/ConnectivityManager;->getTetherableWifiRegexs()[Ljava/lang/String;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mWifiRegexs:[Ljava/lang/String;
-
-    new-instance p2, Landroid/content/IntentFilter;
-
-    invoke-direct {p2}, Landroid/content/IntentFilter;-><init>()V
-
-    const-string p3, "android.net.conn.TETHER_STATE_CHANGED"
-
-    invoke-virtual {p2, p3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    iget-object p3, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mTetherChangeReceiver:Landroid/content/BroadcastReceiver;
-
-    invoke-virtual {p1, p3, p2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
-
-    invoke-static {}, Lcom/oneplus/util/OpUtils;->isUSS()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    new-instance p1, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl$3;
-
-    iget-object p2, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mContext:Landroid/content/Context;
-
-    const/4 p3, 0x0
-
-    const-string v2, "TetheredData"
-
-    invoke-direct {p1, p0, p2, p3, v2}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl$3;-><init>(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;Landroid/content/Context;Landroid/os/Handler;Ljava/lang/String;)V
-
-    iput-object p1, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mTetheredData:Lcom/android/systemui/qs/GlobalSetting;
-
-    invoke-virtual {p1, v0}, Lcom/android/systemui/qs/GlobalSetting;->setListening(Z)V
-
-    iget-object p1, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mTetheredData:Lcom/android/systemui/qs/GlobalSetting;
-
-    invoke-virtual {p1}, Lcom/android/systemui/qs/GlobalSetting;->getValue()I
-
-    move-result p1
-
-    if-ne p1, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    :goto_0
-    iput-boolean v0, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mDisableByOperator:Z
-
-    :cond_1
     return-void
 .end method
 
@@ -468,6 +383,8 @@
     goto :goto_0
 
     :cond_0
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->updateState()V
+
     return-void
 
     :catchall_0
@@ -602,6 +519,99 @@
     const/4 p0, -0x1
 
     return p0
+.end method
+
+.method private initRegexs()V
+    .locals 4
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mContext:Landroid/content/Context;
+
+    const-string v1, "connectivity"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/net/ConnectivityManager;
+
+    iput-object v0, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mConnectivityManager:Landroid/net/ConnectivityManager;
+
+    invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getTetherableUsbRegexs()[Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mUsbRegexs:[Ljava/lang/String;
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mConnectivityManager:Landroid/net/ConnectivityManager;
+
+    invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getTetherableBluetoothRegexs()[Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mBluetoothRegexs:[Ljava/lang/String;
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mConnectivityManager:Landroid/net/ConnectivityManager;
+
+    invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getTetherableWifiRegexs()[Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mWifiRegexs:[Ljava/lang/String;
+
+    new-instance v0, Landroid/content/IntentFilter;
+
+    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
+
+    const-string v1, "android.net.conn.TETHER_STATE_CHANGED"
+
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mContext:Landroid/content/Context;
+
+    iget-object v2, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mTetherChangeReceiver:Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isUSS()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    new-instance v0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl$3;
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mContext:Landroid/content/Context;
+
+    const/4 v2, 0x0
+
+    const-string v3, "TetheredData"
+
+    invoke-direct {v0, p0, v1, v2, v3}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl$3;-><init>(Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;Landroid/content/Context;Landroid/os/Handler;Ljava/lang/String;)V
+
+    iput-object v0, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mTetheredData:Lcom/android/systemui/qs/GlobalSetting;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/android/systemui/qs/GlobalSetting;->setListening(Z)V
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mTetheredData:Lcom/android/systemui/qs/GlobalSetting;
+
+    invoke-virtual {v0}, Lcom/android/systemui/qs/GlobalSetting;->getValue()I
+
+    move-result v0
+
+    if-ne v0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    iput-boolean v1, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mDisableByOperator:Z
+
+    :cond_1
+    return-void
 .end method
 
 .method private synthetic lambda$addCallback$0(Lcom/android/systemui/statusbar/policy/HotspotController$Callback;)V
@@ -852,6 +862,16 @@
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v2, " isHotspotEnabled "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->isHotspotEnabled()Z
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -1152,17 +1172,6 @@
 .method public getHotspotWifiStandard()I
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mWifiManager:Landroid/net/wifi/WifiManager;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Landroid/net/wifi/WifiManager;->getSoftApWifiStandard()I
-
-    move-result p0
-
-    return p0
-
-    :cond_0
     const/4 p0, 0x1
 
     return p0
@@ -1289,8 +1298,22 @@
     return-void
 .end method
 
+.method public onBootCompleted()V
+    .locals 2
+
+    const-string v0, "HotspotController"
+
+    const-string v1, "onBootComplete"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->initRegexs()V
+
+    return-void
+.end method
+
 .method public onConnectedClientsChanged(Ljava/util/List;)V
-    .locals 0
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1299,6 +1322,28 @@
             ">;)V"
         }
     .end annotation
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "onConnectedClientsChanged "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "HotspotController"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -1312,7 +1357,31 @@
 .end method
 
 .method public onStateChanged(II)V
-    .locals 0
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "onStateChanged state "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " failureReason "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    const-string v0, "HotspotController"
+
+    invoke-static {v0, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     iput p1, p0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->mHotspotState:I
 
@@ -1680,7 +1749,7 @@
     :goto_2
     new-array v2, v7, [I
 
-    const/16 v11, 0x105
+    const/16 v11, 0xfe
 
     aput v11, v2, v6
 

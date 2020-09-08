@@ -42,6 +42,8 @@
     .end annotation
 .end field
 
+.field private mCurrentSelection:I
+
 .field private mDefaultDescriptionView:Landroid/widget/TextView;
 
 .field private mDelegatePkg:Ljava/lang/String;
@@ -53,6 +55,8 @@
 .field private mINotificationManager:Landroid/app/INotificationManager;
 
 .field private mIconFactory:Lcom/android/settingslib/notification/ConversationIconFactory;
+
+.field private mImportanceButtonStroke:I
 
 .field private mIsDeviceProvisioned:Z
 
@@ -72,6 +76,8 @@
 
 .field private mOnSettingsClickListener:Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$OnSettingsClickListener;
 
+.field private mOneplusAccentColor:I
+
 .field private mPackageName:Ljava/lang/String;
 
 .field private mPm:Landroid/content/pm/PackageManager;
@@ -81,6 +87,8 @@
 .field private mPriorityDescriptionView:Landroid/widget/TextView;
 
 .field private mSbn:Landroid/service/notification/StatusBarNotification;
+
+.field private mSecondaryColor:I
 
 .field private mSelectedAction:I
 
@@ -108,33 +116,35 @@
 
     iput p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mSelectedAction:I
 
-    const/4 p1, 0x0
+    const/4 p2, 0x0
 
-    iput-boolean p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mSkipPost:Z
+    iput-boolean p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mSkipPost:Z
 
-    new-instance p1, Lcom/android/systemui/statusbar/notification/row/-$$Lambda$NotificationConversationInfo$2f29XNzTuIQXwa-IUqXUdjSebnE;
+    new-instance p2, Lcom/android/systemui/statusbar/notification/row/-$$Lambda$NotificationConversationInfo$2f29XNzTuIQXwa-IUqXUdjSebnE;
 
-    invoke-direct {p1, p0}, Lcom/android/systemui/statusbar/notification/row/-$$Lambda$NotificationConversationInfo$2f29XNzTuIQXwa-IUqXUdjSebnE;-><init>(Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;)V
+    invoke-direct {p2, p0}, Lcom/android/systemui/statusbar/notification/row/-$$Lambda$NotificationConversationInfo$2f29XNzTuIQXwa-IUqXUdjSebnE;-><init>(Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;)V
 
-    iput-object p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOnFavoriteClick:Landroid/view/View$OnClickListener;
+    iput-object p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOnFavoriteClick:Landroid/view/View$OnClickListener;
 
-    new-instance p1, Lcom/android/systemui/statusbar/notification/row/-$$Lambda$NotificationConversationInfo$MMDb1SDKJPIzmFXTDLDSkJw5h7E;
+    new-instance p2, Lcom/android/systemui/statusbar/notification/row/-$$Lambda$NotificationConversationInfo$MMDb1SDKJPIzmFXTDLDSkJw5h7E;
 
-    invoke-direct {p1, p0}, Lcom/android/systemui/statusbar/notification/row/-$$Lambda$NotificationConversationInfo$MMDb1SDKJPIzmFXTDLDSkJw5h7E;-><init>(Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;)V
+    invoke-direct {p2, p0}, Lcom/android/systemui/statusbar/notification/row/-$$Lambda$NotificationConversationInfo$MMDb1SDKJPIzmFXTDLDSkJw5h7E;-><init>(Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;)V
 
-    iput-object p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOnDefaultClick:Landroid/view/View$OnClickListener;
+    iput-object p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOnDefaultClick:Landroid/view/View$OnClickListener;
 
-    new-instance p1, Lcom/android/systemui/statusbar/notification/row/-$$Lambda$NotificationConversationInfo$b1cMFzfzYhzwNF5Nsg_2Oi0i80o;
+    new-instance p2, Lcom/android/systemui/statusbar/notification/row/-$$Lambda$NotificationConversationInfo$b1cMFzfzYhzwNF5Nsg_2Oi0i80o;
 
-    invoke-direct {p1, p0}, Lcom/android/systemui/statusbar/notification/row/-$$Lambda$NotificationConversationInfo$b1cMFzfzYhzwNF5Nsg_2Oi0i80o;-><init>(Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;)V
+    invoke-direct {p2, p0}, Lcom/android/systemui/statusbar/notification/row/-$$Lambda$NotificationConversationInfo$b1cMFzfzYhzwNF5Nsg_2Oi0i80o;-><init>(Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;)V
 
-    iput-object p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOnMuteClick:Landroid/view/View$OnClickListener;
+    iput-object p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOnMuteClick:Landroid/view/View$OnClickListener;
 
-    new-instance p1, Lcom/android/systemui/statusbar/notification/row/-$$Lambda$NotificationConversationInfo$a2pWq-ojuRPeVF2IYicCGQXQa0w;
+    new-instance p2, Lcom/android/systemui/statusbar/notification/row/-$$Lambda$NotificationConversationInfo$a2pWq-ojuRPeVF2IYicCGQXQa0w;
 
-    invoke-direct {p1, p0}, Lcom/android/systemui/statusbar/notification/row/-$$Lambda$NotificationConversationInfo$a2pWq-ojuRPeVF2IYicCGQXQa0w;-><init>(Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;)V
+    invoke-direct {p2, p0}, Lcom/android/systemui/statusbar/notification/row/-$$Lambda$NotificationConversationInfo$a2pWq-ojuRPeVF2IYicCGQXQa0w;-><init>(Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;)V
 
-    iput-object p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOnDone:Landroid/view/View$OnClickListener;
+    iput-object p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOnDone:Landroid/view/View$OnClickListener;
+
+    iput p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mCurrentSelection:I
 
     return-void
 .end method
@@ -164,7 +174,7 @@
 .end method
 
 .method private bindActions()V
-    .locals 6
+    .locals 7
 
     iget v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mAppBubble:I
 
@@ -188,17 +198,17 @@
 
     sget v4, Lcom/android/systemui/R$string;->notification_channel_summary_default_with_bubbles:I
 
-    new-array v1, v1, [Ljava/lang/Object;
+    new-array v5, v1, [Ljava/lang/Object;
 
-    iget-object v5, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mAppName:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mAppName:Ljava/lang/String;
 
-    aput-object v5, v1, v2
+    aput-object v6, v5, v2
 
-    invoke-virtual {v3, v4, v1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v3, v4, v5}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     :cond_0
     sget v0, Lcom/android/systemui/R$id;->priority:I
@@ -207,9 +217,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOnFavoriteClick:Landroid/view/View$OnClickListener;
+    iget-object v3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOnFavoriteClick:Landroid/view/View$OnClickListener;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     sget v0, Lcom/android/systemui/R$id;->default_behavior:I
 
@@ -217,9 +227,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOnDefaultClick:Landroid/view/View$OnClickListener;
+    iget-object v3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOnDefaultClick:Landroid/view/View$OnClickListener;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     sget v0, Lcom/android/systemui/R$id;->silence:I
 
@@ -227,9 +237,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOnMuteClick:Landroid/view/View$OnClickListener;
+    iget-object v3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOnMuteClick:Landroid/view/View$OnClickListener;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     sget v0, Lcom/android/systemui/R$id;->info:I
 
@@ -237,28 +247,85 @@
 
     move-result-object v0
 
+    check-cast v0, Landroid/widget/ImageView;
+
     invoke-direct {p0}, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->getSettingsOnClickListener()Landroid/view/View$OnClickListener;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    invoke-virtual {v0}, Landroid/view/View;->hasOnClickListeners()Z
+    invoke-virtual {v0}, Landroid/widget/ImageView;->hasOnClickListeners()Z
 
-    move-result v1
+    move-result v3
 
-    if-eqz v1, :cond_1
+    if-eqz v3, :cond_1
 
-    move v1, v2
+    move v3, v2
 
     goto :goto_0
 
     :cond_1
-    const/16 v1, 0x8
+    const/16 v3, 0x8
 
     :goto_0
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_4
+
+    iget v3, v3, Landroid/content/res/Configuration;->uiMode:I
+
+    and-int/lit8 v3, v3, 0x30
+
+    const/16 v4, 0x20
+
+    if-ne v3, v4, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    move v1, v2
+
+    :goto_1
+    if-eqz v1, :cond_3
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v3, Lcom/android/systemui/R$color;->op_control_icon_color_active_dark:I
+
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setColorFilter(I)V
+
+    goto :goto_2
+
+    :cond_3
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v3, Lcom/android/systemui/R$color;->op_control_icon_color_active_light:I
+
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setColorFilter(I)V
+
+    :cond_4
+    :goto_2
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->getSelectedAction()I
 
     move-result v0
@@ -610,50 +677,56 @@
     return-void
 .end method
 
-.method static synthetic lambda$updateToggleActions$5(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
+.method private synthetic lambda$updateToggleActions$5(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
     .locals 1
 
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setSelected(Z)V
+    invoke-virtual {p1, v0}, Landroid/view/View;->setSelected(Z)V
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->setSelected(Z)V
+    invoke-virtual {p2, p1}, Landroid/view/View;->setSelected(Z)V
 
-    invoke-virtual {p2, p0}, Landroid/view/View;->setSelected(Z)V
+    invoke-virtual {p3, p1}, Landroid/view/View;->setSelected(Z)V
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->updateSelectionColor()V
 
     return-void
 .end method
 
-.method static synthetic lambda$updateToggleActions$6(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
+.method private synthetic lambda$updateToggleActions$6(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
     .locals 1
 
     const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setSelected(Z)V
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setSelected(Z)V
 
-    const/4 p0, 0x1
+    invoke-virtual {p2, v0}, Landroid/view/View;->setSelected(Z)V
 
-    invoke-virtual {p2, p0}, Landroid/view/View;->setSelected(Z)V
+    const/4 p1, 0x1
+
+    invoke-virtual {p3, p1}, Landroid/view/View;->setSelected(Z)V
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->updateSelectionColor()V
 
     return-void
 .end method
 
-.method static synthetic lambda$updateToggleActions$7(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
+.method private synthetic lambda$updateToggleActions$7(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
     .locals 1
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setSelected(Z)V
+    invoke-virtual {p1, v0}, Landroid/view/View;->setSelected(Z)V
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->setSelected(Z)V
+    invoke-virtual {p2, p1}, Landroid/view/View;->setSelected(Z)V
 
-    invoke-virtual {p2, v0}, Landroid/view/View;->setSelected(Z)V
+    invoke-virtual {p3, v0}, Landroid/view/View;->setSelected(Z)V
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->updateSelectionColor()V
 
     return-void
 .end method
@@ -870,6 +943,239 @@
     return-void
 .end method
 
+.method private updateSelectionColor()V
+    .locals 4
+
+    iget v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOneplusAccentColor:I
+
+    if-eqz v0, :cond_9
+
+    sget v0, Lcom/android/systemui/R$id;->done:I
+
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iget v1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOneplusAccentColor:I
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    sget v0, Lcom/android/systemui/R$id;->priority:I
+
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/graphics/drawable/GradientDrawable;
+
+    invoke-virtual {v0}, Landroid/view/View;->isSelected()Z
+
+    move-result v0
+
+    iget v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mImportanceButtonStroke:I
+
+    if-eqz v0, :cond_0
+
+    iget v3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOneplusAccentColor:I
+
+    goto :goto_0
+
+    :cond_0
+    iget v3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mSecondaryColor:I
+
+    :goto_0
+    invoke-virtual {v1, v2, v3}, Landroid/graphics/drawable/GradientDrawable;->setStroke(II)V
+
+    sget v1, Lcom/android/systemui/R$id;->priority_icon:I
+
+    invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/ImageView;
+
+    if-eqz v0, :cond_1
+
+    iget v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOneplusAccentColor:I
+
+    goto :goto_1
+
+    :cond_1
+    iget v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mSecondaryColor:I
+
+    :goto_1
+    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setColorFilter(I)V
+
+    sget v1, Lcom/android/systemui/R$id;->priority_label:I
+
+    invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/TextView;
+
+    if-eqz v0, :cond_2
+
+    iget v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOneplusAccentColor:I
+
+    goto :goto_2
+
+    :cond_2
+    iget v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mSecondaryColor:I
+
+    :goto_2
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    sget v0, Lcom/android/systemui/R$id;->default_behavior:I
+
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/graphics/drawable/GradientDrawable;
+
+    invoke-virtual {v0}, Landroid/view/View;->isSelected()Z
+
+    move-result v0
+
+    iget v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mImportanceButtonStroke:I
+
+    if-eqz v0, :cond_3
+
+    iget v3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOneplusAccentColor:I
+
+    goto :goto_3
+
+    :cond_3
+    iget v3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mSecondaryColor:I
+
+    :goto_3
+    invoke-virtual {v1, v2, v3}, Landroid/graphics/drawable/GradientDrawable;->setStroke(II)V
+
+    sget v1, Lcom/android/systemui/R$id;->default_icon:I
+
+    invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/ImageView;
+
+    if-eqz v0, :cond_4
+
+    iget v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOneplusAccentColor:I
+
+    goto :goto_4
+
+    :cond_4
+    iget v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mSecondaryColor:I
+
+    :goto_4
+    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setColorFilter(I)V
+
+    sget v1, Lcom/android/systemui/R$id;->default_label:I
+
+    invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/TextView;
+
+    if-eqz v0, :cond_5
+
+    iget v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOneplusAccentColor:I
+
+    goto :goto_5
+
+    :cond_5
+    iget v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mSecondaryColor:I
+
+    :goto_5
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    sget v0, Lcom/android/systemui/R$id;->silence:I
+
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/graphics/drawable/GradientDrawable;
+
+    invoke-virtual {v0}, Landroid/view/View;->isSelected()Z
+
+    move-result v0
+
+    iget v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mImportanceButtonStroke:I
+
+    if-eqz v0, :cond_6
+
+    iget v3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOneplusAccentColor:I
+
+    goto :goto_6
+
+    :cond_6
+    iget v3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mSecondaryColor:I
+
+    :goto_6
+    invoke-virtual {v1, v2, v3}, Landroid/graphics/drawable/GradientDrawable;->setStroke(II)V
+
+    sget v1, Lcom/android/systemui/R$id;->silence_icon:I
+
+    invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/ImageView;
+
+    if-eqz v0, :cond_7
+
+    iget v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOneplusAccentColor:I
+
+    goto :goto_7
+
+    :cond_7
+    iget v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mSecondaryColor:I
+
+    :goto_7
+    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setColorFilter(I)V
+
+    sget v1, Lcom/android/systemui/R$id;->silence_label:I
+
+    invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/TextView;
+
+    if-eqz v0, :cond_8
+
+    iget p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOneplusAccentColor:I
+
+    goto :goto_8
+
+    :cond_8
+    iget p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mSecondaryColor:I
+
+    :goto_8
+    invoke-virtual {v1, p0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    :cond_9
+    return-void
+.end method
+
 .method private updateToggleActions(IZ)V
     .locals 7
 
@@ -880,6 +1186,10 @@
     const/4 v2, 0x0
 
     if-eqz p2, :cond_0
+
+    iget p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mCurrentSelection:I
+
+    if-eq p2, p1, :cond_0
 
     new-instance p2, Landroid/transition/TransitionSet;
 
@@ -938,6 +1248,8 @@
     invoke-static {p0, p2}, Landroid/transition/TransitionManager;->beginDelayedTransition(Landroid/view/ViewGroup;Landroid/transition/Transition;)V
 
     :cond_0
+    iput p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mCurrentSelection:I
+
     sget p2, Lcom/android/systemui/R$id;->priority:I
 
     invoke-virtual {p0, p2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -978,9 +1290,9 @@
 
     invoke-virtual {v6, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
-    new-instance v5, Lcom/android/systemui/statusbar/notification/row/-$$Lambda$NotificationConversationInfo$kfzFL-SnOxGZqEtBbC1UizD6-b0;
+    new-instance v5, Lcom/android/systemui/statusbar/notification/row/-$$Lambda$NotificationConversationInfo$0S4L_UsmhLMbBvJl5fTdphnFmzM;
 
-    invoke-direct {v5, p2, v3, v4}, Lcom/android/systemui/statusbar/notification/row/-$$Lambda$NotificationConversationInfo$kfzFL-SnOxGZqEtBbC1UizD6-b0;-><init>(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
+    invoke-direct {v5, p0, p2, v3, v4}, Lcom/android/systemui/statusbar/notification/row/-$$Lambda$NotificationConversationInfo$0S4L_UsmhLMbBvJl5fTdphnFmzM;-><init>(Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
 
     invoke-virtual {p0, v5}, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->post(Ljava/lang/Runnable;)Z
 
@@ -1022,9 +1334,9 @@
 
     invoke-virtual {v6, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
-    new-instance v5, Lcom/android/systemui/statusbar/notification/row/-$$Lambda$NotificationConversationInfo$B9YxfzUwTI8bD0EYToJb0uOXmZg;
+    new-instance v5, Lcom/android/systemui/statusbar/notification/row/-$$Lambda$NotificationConversationInfo$dvx9KmKAz6icTUDSfIsrdlCO0HU;
 
-    invoke-direct {v5, p2, v3, v4}, Lcom/android/systemui/statusbar/notification/row/-$$Lambda$NotificationConversationInfo$B9YxfzUwTI8bD0EYToJb0uOXmZg;-><init>(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
+    invoke-direct {v5, p0, p2, v3, v4}, Lcom/android/systemui/statusbar/notification/row/-$$Lambda$NotificationConversationInfo$dvx9KmKAz6icTUDSfIsrdlCO0HU;-><init>(Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
 
     invoke-virtual {p0, v5}, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->post(Ljava/lang/Runnable;)Z
 
@@ -1043,9 +1355,9 @@
 
     invoke-virtual {v6, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
-    new-instance v5, Lcom/android/systemui/statusbar/notification/row/-$$Lambda$NotificationConversationInfo$u26KNDMKK01ES1xNd4IeWex6-38;
+    new-instance v5, Lcom/android/systemui/statusbar/notification/row/-$$Lambda$NotificationConversationInfo$wewGi0RbJXr-_GpswoKgwDn5ou8;
 
-    invoke-direct {v5, p2, v3, v4}, Lcom/android/systemui/statusbar/notification/row/-$$Lambda$NotificationConversationInfo$u26KNDMKK01ES1xNd4IeWex6-38;-><init>(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
+    invoke-direct {v5, p0, p2, v3, v4}, Lcom/android/systemui/statusbar/notification/row/-$$Lambda$NotificationConversationInfo$wewGi0RbJXr-_GpswoKgwDn5ou8;-><init>(Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
 
     invoke-virtual {p0, v5}, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->post(Ljava/lang/Runnable;)Z
 
@@ -1292,13 +1604,61 @@
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iget-object v1, v1, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mGutsContainer:Lcom/android/systemui/statusbar/notification/row/NotificationGuts;
+    iget-object v2, v1, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mGutsContainer:Lcom/android/systemui/statusbar/notification/row/NotificationGuts;
 
-    invoke-virtual {v1}, Landroid/widget/FrameLayout;->getAccessibilityDelegate()Landroid/view/View$AccessibilityDelegate;
+    invoke-virtual {v2}, Landroid/widget/FrameLayout;->getAccessibilityDelegate()Landroid/view/View$AccessibilityDelegate;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setAccessibilityDelegate(Landroid/view/View$AccessibilityDelegate;)V
+    invoke-virtual {v0, v2}, Landroid/view/View;->setAccessibilityDelegate(Landroid/view/View$AccessibilityDelegate;)V
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v2, Lcom/android/systemui/R$dimen;->op_notification_info_importance_button_stroke:I
+
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result v0
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v2
+
+    float-to-int v0, v0
+
+    iput v0, v1, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mImportanceButtonStroke:I
+
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Landroid/content/res/OpThemeUtils;->getOneplusAccentColor(I)I
+
+    move-result v0
+
+    iput v0, v1, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOneplusAccentColor:I
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v2, Lcom/android/systemui/R$color;->op_notification_info_secondary_color:I
+
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v0
+
+    iput v0, v1, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mSecondaryColor:I
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->updateSelectionColor()V
 
     return-void
 
@@ -1435,6 +1795,30 @@
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->lambda$new$3(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public synthetic lambda$updateToggleActions$5$NotificationConversationInfo(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2, p3}, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->lambda$updateToggleActions$5(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public synthetic lambda$updateToggleActions$6$NotificationConversationInfo(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2, p3}, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->lambda$updateToggleActions$6(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public synthetic lambda$updateToggleActions$7$NotificationConversationInfo(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2, p3}, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->lambda$updateToggleActions$7(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
 
     return-void
 .end method

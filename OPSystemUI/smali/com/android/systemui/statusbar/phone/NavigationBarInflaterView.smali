@@ -531,7 +531,7 @@
 .end method
 
 .method private createView(Ljava/lang/String;Landroid/view/ViewGroup;Landroid/view/LayoutInflater;)Landroid/view/View;
-    .locals 4
+    .locals 5
 
     invoke-static {p1}, Lcom/android/systemui/statusbar/phone/NavigationBarInflaterView;->extractButton(Ljava/lang/String;)Ljava/lang/String;
 
@@ -576,30 +576,77 @@
 
     move-result v0
 
-    const/4 v3, 0x0
+    const/16 v3, 0x438
+
+    const/4 v4, 0x0
 
     if-eqz v0, :cond_3
 
-    iget-boolean p0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarInflaterView;->mIsCustomNavBar:Z
+    iget-boolean p1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarInflaterView;->mIsCustomNavBar:Z
 
-    if-eqz p0, :cond_2
+    if-eqz p1, :cond_2
 
-    sget p0, Lcom/android/systemui/R$layout;->home2:I
+    sget p1, Lcom/android/systemui/R$layout;->home2:I
 
-    invoke-virtual {p3, p0, p2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-virtual {p3, p1, p2, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    move-result-object p0
+    move-result-object p1
 
-    goto/16 :goto_2
+    goto :goto_1
 
     :cond_2
-    sget p0, Lcom/android/systemui/R$layout;->home:I
+    sget p1, Lcom/android/systemui/R$layout;->home:I
 
-    invoke-virtual {p3, p0, p2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-virtual {p3, p1, p2, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object p1
+
+    :goto_1
+    iget-boolean p2, p0, Lcom/android/systemui/statusbar/phone/NavigationBarInflaterView;->mIsCustomNavBar:Z
+
+    if-eqz p2, :cond_13
+
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object p2
+
+    iget-object p3, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p3
+
+    sget v0, Lcom/android/systemui/R$dimen;->op_navigation_key_width:I
+
+    invoke-virtual {p3, v0}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result p3
+
+    invoke-static {p3, v3}, Lcom/oneplus/util/OpUtils;->convertPxByResolutionProportion(FI)I
+
+    move-result p3
+
+    iput p3, p2, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    iget-object p0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    goto/16 :goto_2
+    sget p2, Lcom/android/systemui/R$dimen;->op_navigation_key_padding:I
+
+    invoke-virtual {p0, p2}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result p0
+
+    invoke-static {p0, v3}, Lcom/oneplus/util/OpUtils;->convertPxByResolutionProportion(FI)I
+
+    move-result p0
+
+    invoke-virtual {p1, p0, v4, p0, v4}, Landroid/view/View;->setPadding(IIII)V
+
+    goto/16 :goto_6
 
     :cond_3
     const-string v0, "back"
@@ -610,26 +657,53 @@
 
     if-eqz v0, :cond_5
 
-    iget-boolean p0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarInflaterView;->mIsCustomNavBar:Z
+    iget-boolean p1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarInflaterView;->mIsCustomNavBar:Z
 
-    if-eqz p0, :cond_4
+    if-eqz p1, :cond_4
 
-    sget p0, Lcom/android/systemui/R$layout;->back2:I
+    sget p1, Lcom/android/systemui/R$layout;->back2:I
 
-    invoke-virtual {p3, p0, p2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-virtual {p3, p1, p2, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    move-result-object p0
+    move-result-object p1
 
-    goto/16 :goto_2
+    goto :goto_2
 
     :cond_4
-    sget p0, Lcom/android/systemui/R$layout;->back:I
+    sget p1, Lcom/android/systemui/R$layout;->back:I
 
-    invoke-virtual {p3, p0, p2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-virtual {p3, p1, p2, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object p1
+
+    :goto_2
+    iget-boolean p2, p0, Lcom/android/systemui/statusbar/phone/NavigationBarInflaterView;->mIsCustomNavBar:Z
+
+    if-eqz p2, :cond_13
+
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object p2
+
+    iget-object p0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    goto/16 :goto_2
+    sget p3, Lcom/android/systemui/R$dimen;->op_navigation_key_width:I
+
+    invoke-virtual {p0, p3}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result p0
+
+    invoke-static {p0, v3}, Lcom/oneplus/util/OpUtils;->convertPxByResolutionProportion(FI)I
+
+    move-result p0
+
+    iput p0, p2, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    goto/16 :goto_6
 
     :cond_5
     const-string v0, "recent"
@@ -640,26 +714,53 @@
 
     if-eqz v0, :cond_7
 
-    iget-boolean p0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarInflaterView;->mIsCustomNavBar:Z
+    iget-boolean p1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarInflaterView;->mIsCustomNavBar:Z
 
-    if-eqz p0, :cond_6
+    if-eqz p1, :cond_6
 
-    sget p0, Lcom/android/systemui/R$layout;->recent_apps2:I
+    sget p1, Lcom/android/systemui/R$layout;->recent_apps2:I
 
-    invoke-virtual {p3, p0, p2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-virtual {p3, p1, p2, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    move-result-object p0
+    move-result-object p1
 
-    goto/16 :goto_2
+    goto :goto_3
 
     :cond_6
-    sget p0, Lcom/android/systemui/R$layout;->recent_apps:I
+    sget p1, Lcom/android/systemui/R$layout;->recent_apps:I
 
-    invoke-virtual {p3, p0, p2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-virtual {p3, p1, p2, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object p1
+
+    :goto_3
+    iget-boolean p2, p0, Lcom/android/systemui/statusbar/phone/NavigationBarInflaterView;->mIsCustomNavBar:Z
+
+    if-eqz p2, :cond_13
+
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object p2
+
+    iget-object p0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    goto/16 :goto_2
+    sget p3, Lcom/android/systemui/R$dimen;->op_navigation_key_width:I
+
+    invoke-virtual {p0, p3}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result p0
+
+    invoke-static {p0, v3}, Lcom/oneplus/util/OpUtils;->convertPxByResolutionProportion(FI)I
+
+    move-result p0
+
+    iput p0, p2, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    goto/16 :goto_6
 
     :cond_7
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -668,43 +769,70 @@
 
     if-eqz v0, :cond_9
 
-    iget-boolean p0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarInflaterView;->mIsCustomNavBar:Z
+    iget-boolean p1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarInflaterView;->mIsCustomNavBar:Z
 
-    if-eqz p0, :cond_8
+    if-eqz p1, :cond_8
 
-    sget p0, Lcom/android/systemui/R$layout;->menu_ime2:I
+    sget p1, Lcom/android/systemui/R$layout;->menu_ime2:I
 
-    invoke-virtual {p3, p0, p2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-virtual {p3, p1, p2, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    move-result-object p0
+    move-result-object p1
 
-    goto/16 :goto_2
+    goto :goto_4
 
     :cond_8
-    sget p0, Lcom/android/systemui/R$layout;->menu_ime:I
+    sget p1, Lcom/android/systemui/R$layout;->menu_ime:I
 
-    invoke-virtual {p3, p0, p2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-virtual {p3, p1, p2, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object p1
+
+    :goto_4
+    iget-boolean p2, p0, Lcom/android/systemui/statusbar/phone/NavigationBarInflaterView;->mIsCustomNavBar:Z
+
+    if-eqz p2, :cond_13
+
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object p2
+
+    iget-object p0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    goto/16 :goto_2
+    sget p3, Lcom/android/systemui/R$dimen;->op_navigation_extra_key_width:I
+
+    invoke-virtual {p0, p3}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result p0
+
+    invoke-static {p0, v3}, Lcom/oneplus/util/OpUtils;->convertPxByResolutionProportion(FI)I
+
+    move-result p0
+
+    iput p0, p2, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    goto/16 :goto_6
 
     :cond_9
     invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_a
 
     sget p1, Lcom/android/systemui/R$layout;->nav_key_space:I
 
-    invoke-virtual {p3, p1, p2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-virtual {p3, p1, p2, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p1
 
     iget-boolean p2, p0, Lcom/android/systemui/statusbar/phone/NavigationBarInflaterView;->mIsCustomNavBar:Z
 
-    if-eqz p2, :cond_a
+    if-eqz p2, :cond_13
 
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -722,108 +850,133 @@
 
     move-result p0
 
-    float-to-int p0, p0
+    invoke-static {p0, v3}, Lcom/oneplus/util/OpUtils;->convertPxByResolutionProportion(FI)I
+
+    move-result p0
 
     iput p0, p2, Landroid/view/ViewGroup$LayoutParams;->width:I
 
+    goto/16 :goto_6
+
     :cond_a
-    move-object p0, p1
+    const-string v0, "clipboard"
 
-    goto/16 :goto_2
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    :cond_b
-    const-string p0, "clipboard"
+    move-result v0
 
-    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_c
+    if-eqz v0, :cond_b
 
     sget p0, Lcom/android/systemui/R$layout;->clipboard:I
 
-    invoke-virtual {p3, p0, p2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-virtual {p3, p0, p2, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    move-result-object p0
+    move-result-object p1
 
-    goto/16 :goto_2
+    goto/16 :goto_6
 
-    :cond_c
-    const-string p0, "contextual"
+    :cond_b
+    const-string v0, "contextual"
 
-    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result v0
 
-    if-eqz p0, :cond_d
+    if-eqz v0, :cond_c
 
     sget p0, Lcom/android/systemui/R$layout;->contextual:I
 
-    invoke-virtual {p3, p0, p2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-virtual {p3, p0, p2, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    move-result-object p0
+    move-result-object p1
 
-    goto/16 :goto_2
+    goto/16 :goto_6
 
-    :cond_d
-    const-string p0, "home_handle"
+    :cond_c
+    const-string v0, "home_handle"
 
-    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result v0
 
-    if-eqz p0, :cond_e
+    if-eqz v0, :cond_d
 
     sget p0, Lcom/android/systemui/R$layout;->home_handle:I
 
-    invoke-virtual {p3, p0, p2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-virtual {p3, p0, p2, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    move-result-object p0
+    move-result-object p1
 
-    goto/16 :goto_2
+    goto/16 :goto_6
 
-    :cond_e
-    const-string p0, "ime_switcher"
+    :cond_d
+    const-string v0, "ime_switcher"
 
-    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result v0
 
-    if-eqz p0, :cond_f
+    if-eqz v0, :cond_e
 
     sget p0, Lcom/android/systemui/R$layout;->ime_switcher:I
 
-    invoke-virtual {p3, p0, p2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-virtual {p3, p0, p2, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object p1
+
+    goto/16 :goto_6
+
+    :cond_e
+    const-string v0, "nav"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_f
+
+    sget p1, Lcom/android/systemui/R$layout;->nav:I
+
+    invoke-virtual {p3, p1, p2, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object p1
+
+    iget-boolean p2, p0, Lcom/android/systemui/statusbar/phone/NavigationBarInflaterView;->mIsCustomNavBar:Z
+
+    if-eqz p2, :cond_13
+
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object p2
+
+    iget-object p0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    goto :goto_2
+    sget p3, Lcom/android/systemui/R$dimen;->op_navigation_extra_key_width:I
 
-    :cond_f
-    const-string p0, "nav"
-
-    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p3}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result p0
 
-    if-eqz p0, :cond_10
+    invoke-static {p0, v3}, Lcom/oneplus/util/OpUtils;->convertPxByResolutionProportion(FI)I
 
-    sget p0, Lcom/android/systemui/R$layout;->nav:I
+    move-result p0
 
-    invoke-virtual {p3, p0, p2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    iput p0, p2, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    move-result-object p0
+    goto :goto_6
 
-    goto :goto_2
-
-    :cond_10
+    :cond_f
     const-string p0, "key"
 
     invoke-virtual {p1, p0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p0
 
-    if-eqz p0, :cond_13
+    if-eqz p0, :cond_12
 
     invoke-static {p1}, Lcom/android/systemui/statusbar/phone/NavigationBarInflaterView;->extractImage(Ljava/lang/String;)Ljava/lang/String;
 
@@ -835,7 +988,7 @@
 
     sget v0, Lcom/android/systemui/R$layout;->custom_key:I
 
-    invoke-virtual {p3, v0, p2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-virtual {p3, v0, p2, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p2
 
@@ -845,7 +998,7 @@
 
     invoke-virtual {p3, p1}, Lcom/android/systemui/statusbar/policy/KeyButtonView;->setCode(I)V
 
-    if-eqz p0, :cond_12
+    if-eqz p0, :cond_11
 
     const-string p1, ":"
 
@@ -853,7 +1006,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_11
+    if-eqz p1, :cond_10
 
     invoke-static {p0}, Landroid/graphics/drawable/Icon;->createWithContentUri(Ljava/lang/String;)Landroid/graphics/drawable/Icon;
 
@@ -861,16 +1014,16 @@
 
     invoke-virtual {p3, p0}, Lcom/android/systemui/statusbar/policy/KeyButtonView;->loadAsync(Landroid/graphics/drawable/Icon;)V
 
-    goto :goto_1
+    goto :goto_5
 
-    :cond_11
+    :cond_10
     const-string p1, "/"
 
     invoke-virtual {p0, p1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_12
+    if-eqz p1, :cond_11
 
     const/16 p1, 0x2f
 
@@ -878,7 +1031,7 @@
 
     move-result p1
 
-    invoke-virtual {p0, v3, p1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    invoke-virtual {p0, v4, p1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v0
 
@@ -898,17 +1051,18 @@
 
     invoke-virtual {p3, p0}, Lcom/android/systemui/statusbar/policy/KeyButtonView;->loadAsync(Landroid/graphics/drawable/Icon;)V
 
-    :cond_12
-    :goto_1
-    move-object p0, p2
+    :cond_11
+    :goto_5
+    move-object p1, p2
 
-    goto :goto_2
+    goto :goto_6
+
+    :cond_12
+    const/4 p1, 0x0
 
     :cond_13
-    const/4 p0, 0x0
-
-    :goto_2
-    return-object p0
+    :goto_6
+    return-object p1
 .end method
 
 .method public static extractButton(Ljava/lang/String;)Ljava/lang/String;

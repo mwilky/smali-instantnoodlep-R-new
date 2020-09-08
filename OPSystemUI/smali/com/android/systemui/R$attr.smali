@@ -12,8 +12,8 @@
 
 .field public static final lightIconTheme:I = 0x7f040320
 
-.field public static final optedOut:I = 0x7f0403ea
+.field public static final optedOut:I = 0x7f0403e7
 
-.field public static final singleToneColor:I = 0x7f0404c5
+.field public static final singleToneColor:I = 0x7f0404c2
 
-.field public static final wallpaperTextColor:I = 0x7f0405ac
+.field public static final wallpaperTextColor:I = 0x7f0405a9

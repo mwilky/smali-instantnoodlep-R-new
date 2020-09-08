@@ -296,10 +296,10 @@
         <item>Měřítko animace 10x</item>
     </string-array>
     <string-array name="zzz_op_quick_pay_switch_strings">
-        <item>QR kód</item>
-        <item>Skenování</item>
-        <item>QR kód</item>
-        <item>Skenování</item>
+        <item>Kód QR</item>
+        <item>Kontrola</item>
+        <item>Kód QR</item>
+        <item>Kontrola</item>
         <item>Paytm</item>
     </string-array>
 </resources>

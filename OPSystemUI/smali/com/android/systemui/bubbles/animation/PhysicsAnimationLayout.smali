@@ -356,6 +356,8 @@
 
     move-result-object p0
 
+    if-eqz p0, :cond_1
+
     add-float/2addr p4, p1
 
     invoke-virtual {p0, p4}, Landroidx/dynamicanimation/animation/SpringAnimation;->animateToFinalPosition(F)V
@@ -663,12 +665,13 @@
 
     move-result-object v0
 
+    :cond_1
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -680,11 +683,13 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->cancel()V
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Landroidx/dynamicanimation/animation/DynamicAnimation;->cancel()V
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     return-void
 .end method
 

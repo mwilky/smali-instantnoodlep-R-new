@@ -77,7 +77,7 @@
 .end method
 
 .method private bindActions()V
-    .locals 5
+    .locals 6
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/notification/row/PartialConversationInfo;->getSettingsOnClickListener()Landroid/view/View$OnClickListener;
 
@@ -89,9 +89,15 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    check-cast v1, Landroid/widget/ImageView;
 
-    invoke-virtual {v1}, Landroid/view/View;->hasOnClickListeners()Z
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/notification/row/PartialConversationInfo;->getSettingsOnClickListener()Landroid/view/View$OnClickListener;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    invoke-virtual {v1}, Landroid/widget/ImageView;->hasOnClickListeners()Z
 
     move-result v2
 
@@ -107,8 +113,67 @@
     const/16 v2, 0x8
 
     :goto_0
-    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v2
+
+    const/4 v4, 0x1
+
+    if-eqz v2, :cond_3
+
+    iget v2, v2, Landroid/content/res/Configuration;->uiMode:I
+
+    and-int/lit8 v2, v2, 0x30
+
+    const/16 v5, 0x20
+
+    if-ne v2, v5, :cond_1
+
+    move v2, v4
+
+    goto :goto_1
+
+    :cond_1
+    move v2, v3
+
+    :goto_1
+    if-eqz v2, :cond_2
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    sget v5, Lcom/android/systemui/R$color;->op_control_icon_color_active_dark:I
+
+    invoke-virtual {v2, v5}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setColorFilter(I)V
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    sget v5, Lcom/android/systemui/R$color;->op_control_icon_color_active_light:I
+
+    invoke-virtual {v2, v5}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setColorFilter(I)V
+
+    :cond_3
+    :goto_2
     sget v1, Lcom/android/systemui/R$id;->settings_link:I
 
     invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -130,8 +195,6 @@
     move-result-object v1
 
     sget v2, Lcom/android/systemui/R$string;->no_shortcut:I
-
-    const/4 v4, 0x1
 
     new-array v4, v4, [Ljava/lang/Object;
 

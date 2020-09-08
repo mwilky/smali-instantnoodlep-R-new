@@ -603,6 +603,16 @@
 .method private updateClockPadding()V
     .locals 8
 
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
+
+    iget v1, v0, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
+
+    iget v0, v0, Landroid/widget/FrameLayout$LayoutParams;->rightMargin:I
+
     iget-boolean v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mIsLandscape:Z
 
     const/4 v1, 0x0
@@ -700,48 +710,47 @@
 
     move-result-object v4
 
-    if-eqz v3, :cond_5
-
-    sget v5, Lcom/android/systemui/R$dimen;->status_bar_padding_end:I
-
-    goto :goto_4
-
-    :cond_5
     sget v5, Lcom/android/systemui/R$dimen;->status_bar_padding_start:I
 
-    :goto_4
-    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    const/16 v6, 0x438
+
+    invoke-static {v4, v5, v6}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
 
     move-result v4
 
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v5
+
+    sget v7, Lcom/android/systemui/R$dimen;->status_bar_padding_end:I
+
+    invoke-static {v5, v7, v6}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v5
+
+    if-eqz v3, :cond_5
+
+    move v4, v5
+
+    :cond_5
     if-eqz v3, :cond_6
 
     move v3, v1
 
-    goto :goto_5
+    goto :goto_4
 
     :cond_6
     invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    sget v5, Lcom/android/systemui/R$dimen;->op_status_bar_cust_padding_top:I
+    sget v7, Lcom/android/systemui/R$dimen;->op_status_bar_cust_padding_top:I
 
-    invoke-virtual {v3, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-static {v3, v7, v6}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
 
     move-result v3
 
-    :goto_5
-    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    sget v6, Lcom/android/systemui/R$dimen;->status_bar_padding_end:I
-
-    invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v5
-
+    :goto_4
     invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
@@ -776,6 +785,41 @@
 
     invoke-virtual {v7, v0, p0, v2, v1}, Landroid/view/View;->setPadding(IIII)V
 
+    return-void
+.end method
+
+.method private updateClockView()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mClockView:Lcom/android/systemui/statusbar/policy/Clock;
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-boolean v1, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mExpanded:Z
+
+    if-eqz v1, :cond_1
+
+    iget-boolean v1, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mIsLandscape:Z
+
+    if-nez v1, :cond_1
+
+    const/16 p0, 0x8
+
+    invoke-virtual {v0, p0}, Lcom/android/systemui/statusbar/policy/Clock;->setVisibility(I)V
+
+    goto :goto_0
+
+    :cond_1
+    iget-object p0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mClockView:Lcom/android/systemui/statusbar/policy/Clock;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/policy/Clock;->setVisibility(I)V
+
+    :goto_0
     return-void
 .end method
 
@@ -868,6 +912,10 @@
 
     iput v1, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mRoundedCornerPadding:I
 
+    sget v1, Lcom/android/systemui/R$dimen;->status_bar_padding_top:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
     iget-object v1, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mHeaderTextContainerView:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -939,6 +987,8 @@
 
     :cond_2
     :goto_1
+    invoke-direct {p0}, Lcom/android/systemui/qs/QuickStatusBarHeader;->updateClockView()V
+
     iget-object v1, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mSystemIconsView:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -2014,89 +2064,6 @@
     return-void
 .end method
 
-.method protected onMeasure(II)V
-    .locals 3
-
-    invoke-super {p0, p1, p2}, Landroid/widget/RelativeLayout;->onMeasure(II)V
-
-    iget-boolean p1, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mQsDisabled:Z
-
-    if-nez p1, :cond_1
-
-    iget-object p1, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mSystemIconsView:Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object p1
-
-    iget p1, p1, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    iget-object p2, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mQuickQsStatusIcons:Landroid/view/View;
-
-    invoke-virtual {p2}, Landroid/view/View;->getVisibility()I
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    iget-object p2, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mQuickQsStatusIcons:Landroid/view/View;
-
-    invoke-virtual {p2}, Landroid/view/View;->getHeight()I
-
-    move-result p2
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p2, 0x0
-
-    :goto_0
-    iget-object v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mHeaderQsPanel:Lcom/android/systemui/qs/QuickQSPanel;
-
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getHeight()I
-
-    move-result v0
-
-    iget-object v1, p0, Landroid/widget/RelativeLayout;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    sget v2, Lcom/android/systemui/R$dimen;->qs_footer_height:I
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v1
-
-    add-int/2addr p1, p2
-
-    add-int/2addr p1, v0
-
-    add-int/2addr p1, v1
-
-    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/widget/FrameLayout$LayoutParams;
-
-    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getMinimumHeight()I
-
-    move-result v0
-
-    invoke-static {v0, p1}, Ljava/lang/Math;->max(II)I
-
-    move-result p1
-
-    iput p1, p2, Landroid/widget/FrameLayout$LayoutParams;->height:I
-
-    invoke-virtual {p0, p2}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    :cond_1
-    return-void
-.end method
-
 .method public onNextAlarmChanged(Landroid/app/AlarmManager$AlarmClockInfo;)V
     .locals 0
 
@@ -2203,26 +2170,8 @@
 
     invoke-virtual {v0, p1}, Lcom/android/systemui/qs/QSPanel;->setExpanded(Z)V
 
-    iget-boolean p1, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mExpanded:Z
+    invoke-direct {p0}, Lcom/android/systemui/qs/QuickStatusBarHeader;->updateClockView()V
 
-    if-eqz p1, :cond_1
-
-    iget-object p1, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mClockView:Lcom/android/systemui/statusbar/policy/Clock;
-
-    const/16 v0, 0x8
-
-    invoke-virtual {p1, v0}, Lcom/android/systemui/statusbar/policy/Clock;->setVisibility(I)V
-
-    goto :goto_0
-
-    :cond_1
-    iget-object p1, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mClockView:Lcom/android/systemui/statusbar/policy/Clock;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Lcom/android/systemui/statusbar/policy/Clock;->setVisibility(I)V
-
-    :goto_0
     invoke-virtual {p0}, Lcom/android/systemui/qs/QuickStatusBarHeader;->updateEverything()V
 
     return-void
@@ -2437,6 +2386,8 @@
     .locals 0
 
     iput-object p1, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mQsPanel:Lcom/android/systemui/qs/QSPanel;
+
+    invoke-direct {p0}, Lcom/android/systemui/qs/QuickStatusBarHeader;->updateStatusText()V
 
     invoke-virtual {p1}, Lcom/android/systemui/qs/QSPanel;->getHost()Lcom/android/systemui/qs/QSTileHost;
 

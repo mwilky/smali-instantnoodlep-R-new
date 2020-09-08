@@ -561,6 +561,7 @@ Selection"</string>
     <string name="controls_favorite_other_zone_header">Other</string>
     <string name="controls_favorite_rearrange">Hold and drag to rearrange controls</string>
     <string name="controls_favorite_removed">All controls removed</string>
+    <string name="controls_favorite_see_other_apps">See other apps</string>
     <string name="controls_favorite_subtitle">Choose controls to access from the power menu</string>
     <string name="controls_favorite_toast_no_changes">Changes not saved</string>
     <string name="controls_in_progress">In progress</string>

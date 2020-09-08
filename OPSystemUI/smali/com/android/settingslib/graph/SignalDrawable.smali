@@ -396,9 +396,7 @@
 
     shr-int/lit8 p0, p0, 0x8
 
-    invoke-static {}, Landroid/telephony/CellSignalStrength;->getNumSignalStrengthLevels()I
-
-    move-result v0
+    sget v0, Landroid/telephony/SignalStrength;->NUM_SIGNAL_STRENGTH_BINS:I
 
     add-int/lit8 v0, v0, 0x1
 

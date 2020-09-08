@@ -39,6 +39,11 @@
     <string name="abc_slice_updated">Atualizado às %1$s</string>
     <string name="abc_slices_permission_request">%1$s quer mostrar partes do app %2$s</string>
     <string name="abc_toolbar_collapse_description">Recolher</string>
+    <string name="about_action_bar_title">Sobre</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Política de Privacidade</string>
+    <string name="about_release_note_title">Histórico de atualização:</string>
+    <string name="about_terms_service">Termos do Serviço</string>
     <string name="accessibility_accessibility_button">Acessibilidade</string>
     <string name="accessibility_action_divider_bottom_full">Parte inferior em tela cheia</string>
     <string name="accessibility_action_divider_left_30">Esquerda a 30%</string>
@@ -267,7 +272,7 @@
     <string name="accessibility_wimax_signal_full">Sinal WiMAX completo.</string>
     <string name="accessibility_wimax_three_bars">Três barras do WiMAX.</string>
     <string name="accessibility_wimax_two_bars">Duas barras do WiMAX.</string>
-    <string name="accessibility_work_life_balance_mode">Equilíbrio entre a vida social e o trabalho</string>
+    <string name="accessibility_work_life_balance_mode">Equilíbrio trabalho/vida pessoal</string>
     <string name="accessibility_work_life_balance_mode_off">Modo de Equlíbrio entre a vida social e o trabalho desativado.</string>
     <string name="accessibility_work_life_balance_mode_on">Modo de Equilíbrio entre a vida social e o trabalho ativado.</string>
     <string name="accessibility_zero_bars">Nenhuma barra.</string>
@@ -598,6 +603,7 @@ Seleção"</string>
     <string name="controls_favorite_other_zone_header">Outro</string>
     <string name="controls_favorite_rearrange">Toque no controle, mantenha-o pressionado e arraste para reorganizar as posições.</string>
     <string name="controls_favorite_removed">Todos os controles foram removidos</string>
+    <string name="controls_favorite_see_other_apps">Ver outros apps</string>
     <string name="controls_favorite_subtitle">Escolha os controles para acessar pelo menu do botão liga/desliga</string>
     <string name="controls_favorite_toast_no_changes">As mudanças não foram salvas</string>
     <string name="controls_in_progress">Em andamento</string>
@@ -696,8 +702,8 @@ Se retomar o uso de dados, o serviço poderá ser cobrado."</string>
     <string name="disable_carrier_button_text">Desativar eSIM</string>
     <string name="disable_overlays">Desativar sobreposição HW</string>
     <string name="disable_overlays_summary">Sempre usar a GPU para composição de tela</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">Contacte o seu administrador para obter informações detalhadas</string>
+    <string name="disable_tether_notification_title">A partilha de rede está desativada</string>
     <string name="disable_vpn">Desativar VPN</string>
     <string name="disabled">Desativado</string>
     <string name="disabled_by_admin">Desativado pelo administrador</string>
@@ -706,7 +712,7 @@ Se retomar o uso de dados, o serviço poderá ser cobrado."</string>
     <string name="dnd_is_off">O recurso Não perturbe está desativado</string>
     <string name="dnd_suppressing_shade_text">Notificações pausadas pelo modo \"Não perturbe\"</string>
     <string name="do_disclosure_generic">Este dispositivo pertence à sua organização</string>
-    <string name="do_disclosure_with_name">Este dispositivo pertence a %s</string>
+    <string name="do_disclosure_with_name">Este dispositivo pertence à organização %s</string>
     <string name="do_not_silence">Não silenciar</string>
     <string name="do_not_silence_block">Não silenciar ou bloquear</string>
     <string name="dock_alignment_not_charging">Realinhe o smartphone para carregar sem usar fios</string>
@@ -717,6 +723,7 @@ Se retomar o uso de dados, o serviço poderá ser cobrado."</string>
     <string name="drag_to_rearrange_tiles">Mantenha pressionado e arraste para reorganizar os blocos</string>
     <string name="drag_to_remove_disabled">É preciso haver pelo menos %1$d blocos</string>
     <string name="drag_to_remove_tiles">Arraste aqui para remover</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">Arraste as peças para reorganizar. Toque para ocultar ou mostrar.</string>
     <string name="empty_shade_text">Sem notificações</string>
     <string name="enable_adb">Depuração USB</string>
@@ -1092,6 +1099,7 @@ Tente novamente em %2$d segundos."</string>
     <string name="left_nav_bar_button_type">Tipo de botão esquerdo extra</string>
     <string name="legacy_vpn_name">VPN</string>
     <string name="loading_injected_setting_summary">Carregando…</string>
+    <string name="loading_text">A carregar...</string>
     <string name="local_backup_password_summary_change">Toque para alterar ou remover a senha de backups completos do desktop</string>
     <string name="local_backup_password_summary_none">Os backups completos não estão protegidos no momento</string>
     <string name="local_backup_password_title">Senha de backup local</string>
@@ -1183,7 +1191,7 @@ O administrador de TI pode monitorar e gerenciar configurações, acesso corpora
 Para saber mais, entre em contato com seu administrador de TI."</string>
     <string name="monitoring_description_management_ca_certificate">Sua organização instalou uma autoridade de certificação neste dispositivo. É possível monitorar ou modificar seu tráfego de rede seguro.</string>
     <string name="monitoring_description_management_network_logging">Seu administrador ativou o registro de rede, que monitora o tráfego no seu dispositivo.</string>
-    <string name="monitoring_description_named_management">"Este dispositivo pertence a %1$s.
+    <string name="monitoring_description_named_management">"Este dispositivo pertence à organização %1$s.
 
 O administrador de TI pode monitorar e gerenciar configurações, acesso corporativo, apps, dados associados ao dispositivo e informações de local do dispositivo.
 
@@ -1244,7 +1252,7 @@ Você também está conectado a uma VPN, que pode monitorar sua atividade de red
     <string name="nav_bar_layout">Layout</string>
     <string name="no_application">Nada</string>
     <string name="no_auto_saver_action">Não</string>
-    <string name="no_shortcut">O app %1$s não é compatível com recursos de conversão</string>
+    <string name="no_shortcut">O app %1$s não é compatível com recursos de conversa</string>
     <string name="non_op_earphone_notification_content">O OnePlus oferece algumas novas funcionalidades para os seus auriculares. Clique na notificação para experimentar.</string>
     <string name="non_op_earphone_notification_title">Dicas</string>
     <string name="not_default_data_content_description">Sem configuração para uso de dados</string>
@@ -1323,8 +1331,14 @@ Você também está conectado a uma VPN, que pode monitorar sua atividade de red
     <string name="oneplus_threekey_navigation_sound">Todos os sons permitidos</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Pode ser ligado através do comutador acima</string>
     <string name="oneplus_threekey_navigation_vibration">Apenas vibração</string>
-    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> desbloqueio</string>
-    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> desbloqueios</string>
+    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>desbloqueio</string>
+    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>desbloqueios</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">A emparelhar...</string>
     <string name="op_earphone_connected_fail">Falha ao emparelhar. Pode verificar o estado dos auriculares e Bluetooth.</string>
     <string name="op_earphone_connected_success">Emparelhado. Tocar para conf. mais.</string>
@@ -1354,9 +1368,10 @@ Você também está conectado a uma VPN, que pode monitorar sua atividade de red
     <string name="op_notification_channel_summary_low">Notificações menos importantes sem qualquer som ou vibração.</string>
     <string name="op_notification_section_header_gentle">Outras notificações</string>
     <string name="op_notification_silence_title">Outros</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">Modo escuro</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s utilizado</string>
-    <string name="op_quick_settings_night_display_label">Modo noturno</string>
+    <string name="op_quick_settings_night_display_label">Conforto visual</string>
     <string name="op_quick_settings_night_display_summary_off">Modo noturno desativado, toque para ativar</string>
     <string name="op_quick_settings_night_display_summary_on">Modo noturno ativado, toque para desativar</string>
     <string name="op_read_mode2_dialog_black">Efeito mono</string>
@@ -1504,7 +1519,7 @@ Você também está conectado a uma VPN, que pode monitorar sua atividade de red
     <string name="profile_owned_footer">O perfil pode ser monitorado</string>
     <string name="qr_bubble_hint">Toque no balão para ler e responder a mensagens</string>
     <string name="qr_portrait_hint">A resposta rápida está desligada no retrato</string>
-    <string name="qr_portrait_turn_on">ATIVAR</string>
+    <string name="qr_portrait_turn_on">LIGAR</string>
     <string name="qs_dnd_keep">Manter</string>
     <string name="qs_dnd_prompt_app">O recurso Não perturbe foi ativado por um app (%s).</string>
     <string name="qs_dnd_prompt_auto_rule">O recurso Não perturbe foi ativado por uma regra automática (%s).</string>
@@ -1575,10 +1590,10 @@ Você também está conectado a uma VPN, que pode monitorar sua atividade de red
     <string name="quick_settings_disclosure_management_vpns">Este dispositivo pertence à sua organização e está conectado a VPNs</string>
     <string name="quick_settings_disclosure_monitoring">A rede pode ser monitorada</string>
     <string name="quick_settings_disclosure_named_managed_profile_monitoring">%1$s pode monitorar o tráfego de rede no seu perfil de trabalho</string>
-    <string name="quick_settings_disclosure_named_management">Este dispositivo pertence a %1$s</string>
-    <string name="quick_settings_disclosure_named_management_monitoring">%1$s é dona deste dispositivo e pode monitorar o tráfego de rede</string>
-    <string name="quick_settings_disclosure_named_management_named_vpn">Este dispositivo pertence a %1$s e está conectado a %2$s</string>
-    <string name="quick_settings_disclosure_named_management_vpns">Este dispositivo pertence a %1$s e está conectado a VPNs</string>
+    <string name="quick_settings_disclosure_named_management">Este dispositivo pertence à organização %1$s</string>
+    <string name="quick_settings_disclosure_named_management_monitoring">A organização %1$s é dona deste dispositivo e pode monitorar o tráfego de rede</string>
+    <string name="quick_settings_disclosure_named_management_named_vpn">Este dispositivo pertence à organização %1$s e está conectado a %2$s</string>
+    <string name="quick_settings_disclosure_named_management_vpns">Este dispositivo pertence á organização %1$s e está conectado a VPNs</string>
     <string name="quick_settings_disclosure_named_vpn">Este dispositivo está conectado a %1$s</string>
     <string name="quick_settings_disclosure_personal_profile_named_vpn">Seu perfil pessoal está conectado a %1$s</string>
     <string name="quick_settings_disclosure_vpns">Este dispositivo está conectado a VPNs</string>
@@ -1868,7 +1883,7 @@ sob monitoração"</string>
     <string name="tethered_notification_hybrid_sharing_mobile">A partilhar dados móveis, clique para aceder às Definições</string>
     <string name="tethered_notification_hybrid_sharing_none">Nenhuma rede disponível para partilha, clique para aceder às Definições</string>
     <string name="tethered_notification_hybrid_sharing_wifi">A partilhar Wi-Fi, clique para aceder às Definições</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">Toque para configurar.</string>
     <string name="tethered_notification_multi_device_message">%1$s dispositivos ligados</string>
     <string name="tethered_notification_multi_tether_title">Tethering e Ponto de acesso móvel ativos</string>
     <string name="tethered_notification_no_device_message">Nenhum dispositivo conectado</string>
@@ -2100,6 +2115,16 @@ Endereço do Wi-Fi (BSSID)
     <string name="wifi_verbose_logging">Ativar registro detalhado de Wi-Fi</string>
     <string name="wifi_verbose_logging_summary">Aumentar o nível de registro de Wi-Fi; mostrar conforme o RSSI do SSID no seletor de Wi-Fi</string>
     <string name="window_animation_scale_title">Escala de animação da janela</string>
+    <string name="wlb_break_mode_active">Ativo</string>
+    <string name="wlb_break_mode_active_text">%1$s Modo · %2$s</string>
+    <string name="wlb_break_mode_on_break">Em pausa</string>
+    <string name="wlb_break_mode_resume">Retomar</string>
+    <string name="wlb_break_mode_take_break">Faça uma pausa</string>
+    <string name="wlb_qs_detail_break_mode">Modo de pausa</string>
+    <string name="wlb_qs_detail_break_mode_desc">Retoma automaticamente o modo anterior após 30 minutos</string>
+    <string name="wlb_qs_detail_life_mode">Modo de vida</string>
+    <string name="wlb_qs_detail_more_setting">Mais definições</string>
+    <string name="wlb_qs_detail_work_mode">Modo de trabalho</string>
     <string name="work_life_balance_mode">Equilíbrio trabalho/vida pessoal</string>
     <string name="zen_alarm_warning">Você não ouvirá o próximo alarme às %1$s</string>
     <string name="zen_alarm_warning_indef">Você não ouvirá o próximo alarme às %1$s, a menos que desative essa opção antes desse horário</string>
@@ -2121,5 +2146,5 @@ Endereço do Wi-Fi (BSSID)
     <string name="zen_silence_introduction_voice">Isso bloqueia TODOS os sons e vibrações, incluindo alarmes, músicas, vídeos e jogos. Você ainda poderá fazer chamadas telefônicas.</string>
     <string name="zzz_op_global_action_bootloader">Bootloader</string>
     <string name="zzz_op_global_action_recovery">Recuperação</string>
-    <string name="zzz_op_quick_pay_no_install_message">Instale a aplicação de pagamento para utilizar o Pagamento Rápido</string>
+    <string name="zzz_op_quick_pay_no_install_message">Instale as aplicações de pagamento para utilizar o Pagamento Rápido</string>
 </resources>

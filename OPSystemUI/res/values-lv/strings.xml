@@ -561,6 +561,7 @@ Atlase"</string>
     <string name="controls_favorite_other_zone_header">Cita</string>
     <string name="controls_favorite_rearrange">Lai pārkārtotu vadīklas, turiet un velciet tās</string>
     <string name="controls_favorite_removed">Visas vadīklas ir noņemtas</string>
+    <string name="controls_favorite_see_other_apps">Skatīt citas lietotnes</string>
     <string name="controls_favorite_subtitle">Izvēlieties vadīklas, kurām piekļūt no barošanas izvēlnes</string>
     <string name="controls_favorite_toast_no_changes">Izmaiņas nav saglabātas.</string>
     <string name="controls_in_progress">Sākta</string>
@@ -663,6 +664,8 @@ Ja atsāksiet, var tikt piemērota maksa par datu lietojumu."</string>
     <string name="disconnect_vpn">Atvienot VPN tīklu</string>
     <string name="dnd_is_off">Režīms “Netraucēt” ir izslēgts</string>
     <string name="dnd_suppressing_shade_text">Paziņojumi pārtraukti, izmantojot iestatījumu “Netraucēt”</string>
+    <string name="do_disclosure_generic">Šī ierīce pieder jūsu organizācijai.</string>
+    <string name="do_disclosure_with_name">Šī ierīce pieder organizācijai %s.</string>
     <string name="do_not_silence">Neizslēgt skaņu</string>
     <string name="do_not_silence_block">Neizslēgt skaņu vai nebloķēt</string>
     <string name="dock_alignment_not_charging">Pārvietojiet tālruni citā vietā, lai veiktu bezvadu uzlādi.</string>
@@ -1065,8 +1068,18 @@ Lai iegūtu plašāku informāciju, sazinieties ar administratoru."</string>
     <string name="monitoring_description_do_learn_more_separator">" "</string>
     <string name="monitoring_description_managed_profile_ca_certificate">Jūsu organizācija instalēja sertifikātu jūsu darba profilā. Jūsu drošā tīkla datplūsma var tikt uzraudzīta.</string>
     <string name="monitoring_description_managed_profile_named_vpn">Jūsu darba profilam ir izveidots savienojums ar lietotni %1$s, kas var pārraudzīt jūsu darbības tīklā, tostarp saņemtos un nosūtītos e-pasta ziņojumus, instalētās lietotnes un apmeklētās tīmekļa vietnes.</string>
+    <string name="monitoring_description_management">"Šī ierīce pieder jūsu organizācijai.
+
+Jūsu IT administrators var pārraudzīt un pārvaldīt iestatījumus, korporatīvo piekļuvi, lietotnes, ar ierīci saistītos datus un ierīces atrašanās vietas informāciju.
+
+Lai iegūtu plašāku informāciju, sazinieties ar IT administratoru."</string>
     <string name="monitoring_description_management_ca_certificate">Jūsu organizācija instalēja sertifikātu šajā ierīcē. Jūsu drošā tīkla datplūsma var tikt uzraudzīta.</string>
     <string name="monitoring_description_management_network_logging">Administrators ieslēdza tīkla reģistrēšanu, kuru izmanto, lai pārraudzītu datplūsmu jūsu ierīcē.</string>
+    <string name="monitoring_description_named_management">"Šī ierīce pieder organizācijai %1$s.
+
+Jūsu IT administrators var pārraudzīt un pārvaldīt iestatījumus, korporatīvo piekļuvi, lietotnes, ar ierīci saistītos datus un ierīces atrašanās vietas informāciju.
+
+Lai iegūtu plašāku informāciju, sazinieties ar IT administratoru."</string>
     <string name="monitoring_description_named_vpn">Ir izveidots savienojums ar lietotni %1$s, kas var pārraudzīt jūsu darbības tīklā, tostarp e-pasta ziņojumus, lietotnes un vietnes.</string>
     <string name="monitoring_description_network_logging">"Administrators ir ieslēdzis tīkla reģistrēšanu, kuru izmanto, lai pārraudzītu datplūsmu jūsu ierīcē.
 
@@ -1341,8 +1354,20 @@ Ir izveidots savienojums arī ar VPN, kurā var pārraudzīt jūsu darbības tī
     <string name="quick_settings_dark_mode_secondary_label_until">Līdz plkst. %s</string>
     <string name="quick_settings_dark_mode_secondary_label_until_sunrise">Līdz saullēktam</string>
     <string name="quick_settings_disclosure_managed_profile_monitoring">Jūsu organizācija var uzraudzīt jūsu darba profila tīkla datplūsmu.</string>
+    <string name="quick_settings_disclosure_managed_profile_named_vpn">Jūsu darba profils ir savienots ar: %1$s.</string>
+    <string name="quick_settings_disclosure_management">Šī ierīce pieder jūsu organizācijai.</string>
+    <string name="quick_settings_disclosure_management_monitoring">Šī ierīce pieder jūsu organizācijai, un jūsu organizācija var uzraudzīt tīkla datplūsmu.</string>
+    <string name="quick_settings_disclosure_management_named_vpn">Šī ierīce pieder jūsu organizācijai un ir saistīta ar: %1$s.</string>
+    <string name="quick_settings_disclosure_management_vpns">Šī ierīce pieder jūsu organizācijai un ir savienota ar virtuālajiem privātajiem tīkliem.</string>
     <string name="quick_settings_disclosure_monitoring">Var tikt pārraudzītas tīklā veiktās darbības.</string>
     <string name="quick_settings_disclosure_named_managed_profile_monitoring">%1$s var uzraudzīt jūsu profila tīkla datplūsmu.</string>
+    <string name="quick_settings_disclosure_named_management">Šī ierīce pieder organizācijai %1$s.</string>
+    <string name="quick_settings_disclosure_named_management_monitoring">Šī ierīce pieder organizācijai%1$s, un šī organizācija var uzraudzīt tīkla datplūsmu.</string>
+    <string name="quick_settings_disclosure_named_management_named_vpn">Šī ierīce pieder organizācijai %1$s un ir savienota ar: %2$s.</string>
+    <string name="quick_settings_disclosure_named_management_vpns">Šī ierīce pieder organizācijai%1$s un ir savienota ar virtuālajiem privātajiem tīkliem.</string>
+    <string name="quick_settings_disclosure_named_vpn">Šī ierīce ir savienota ar: %1$s.</string>
+    <string name="quick_settings_disclosure_personal_profile_named_vpn">Jūsu personīgais profils ir saistīts ar: %1$s.</string>
+    <string name="quick_settings_disclosure_vpns">Šī ierīce ir saistīta ar virtuālajiem privātajiem tīkliem.</string>
     <string name="quick_settings_dnd_alarms_label">Tikai signāli</string>
     <string name="quick_settings_dnd_label">Režīms “Netraucēt”</string>
     <string name="quick_settings_dnd_none_label">Pilnīgs klusums</string>

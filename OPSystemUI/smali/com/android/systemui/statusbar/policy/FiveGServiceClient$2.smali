@@ -187,7 +187,7 @@
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/policy/FiveGServiceClient$2;->this$0:Lcom/android/systemui/statusbar/policy/FiveGServiceClient;
 
-    invoke-static {p1}, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->access$400(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)V
+    invoke-static {p1}, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->access$500(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)V
 
     new-instance p1, Ljava/lang/StringBuilder;
 

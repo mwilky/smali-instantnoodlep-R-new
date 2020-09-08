@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic $scollXAmount:I
+.field final synthetic $scrollXAmount:I
 
 .field final synthetic this$0:Lcom/android/systemui/media/MediaCarouselScrollHandler;
 
@@ -29,7 +29,7 @@
 
     iput-object p1, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler$onTouch$1;->this$0:Lcom/android/systemui/media/MediaCarouselScrollHandler;
 
-    iput p2, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler$onTouch$1;->$scollXAmount:I
+    iput p2, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler$onTouch$1;->$scrollXAmount:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,8 +47,19 @@
 
     move-result-object v0
 
-    iget p0, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler$onTouch$1;->$scollXAmount:I
+    iget-object v1, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler$onTouch$1;->this$0:Lcom/android/systemui/media/MediaCarouselScrollHandler;
 
+    invoke-virtual {v1}, Lcom/android/systemui/media/MediaCarouselScrollHandler;->isRtl()Z
+
+    move-result v1
+
+    iget p0, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler$onTouch$1;->$scrollXAmount:I
+
+    if-eqz v1, :cond_0
+
+    neg-int p0, p0
+
+    :cond_0
     const/4 v1, 0x0
 
     invoke-virtual {v0, p0, v1}, Landroid/widget/HorizontalScrollView;->smoothScrollBy(II)V

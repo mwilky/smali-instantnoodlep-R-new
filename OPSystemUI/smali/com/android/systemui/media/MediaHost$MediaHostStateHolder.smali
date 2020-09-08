@@ -31,11 +31,16 @@
     .end annotation
 .end field
 
+.field private disappearParameters:Lcom/android/systemui/util/animation/DisappearParameters;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
+
 .field private expansion:F
 
 .field private falsingProtectionNeeded:Z
 
-.field private gonePivot:Landroid/graphics/PointF;
+.field private lastDisappearHash:I
 
 .field private measurementInput:Lcom/android/systemui/util/animation/MeasurementInput;
     .annotation build Lorg/jetbrains/annotations/Nullable;
@@ -53,15 +58,25 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Landroid/graphics/PointF;
-
-    invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
-
-    iput-object v0, p0, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->gonePivot:Landroid/graphics/PointF;
-
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->visible:Z
+
+    new-instance v0, Lcom/android/systemui/util/animation/DisappearParameters;
+
+    invoke-direct {v0}, Lcom/android/systemui/util/animation/DisappearParameters;-><init>()V
+
+    iput-object v0, p0, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->disappearParameters:Lcom/android/systemui/util/animation/DisappearParameters;
+
+    invoke-virtual {p0}, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->getDisappearParameters()Lcom/android/systemui/util/animation/DisappearParameters;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/systemui/util/animation/DisappearParameters;->hashCode()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->lastDisappearHash:I
 
     return-void
 .end method
@@ -114,11 +129,15 @@
 
     invoke-virtual {v0, v1}, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->setVisible(Z)V
 
-    iget-object v1, v0, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->gonePivot:Landroid/graphics/PointF;
+    invoke-virtual {p0}, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->getDisappearParameters()Lcom/android/systemui/util/animation/DisappearParameters;
 
-    iget-object v2, p0, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->gonePivot:Landroid/graphics/PointF;
+    move-result-object v1
 
-    invoke-virtual {v1, v2}, Landroid/graphics/PointF;->set(Landroid/graphics/PointF;)V
+    invoke-virtual {v1}, Lcom/android/systemui/util/animation/DisappearParameters;->deepCopy()Lcom/android/systemui/util/animation/DisappearParameters;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->setDisappearParameters(Lcom/android/systemui/util/animation/DisappearParameters;)V
 
     invoke-virtual {p0}, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->getFalsingProtectionNeeded()Z
 
@@ -218,17 +237,15 @@
     return v1
 
     :cond_5
-    iget-object p0, p0, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->gonePivot:Landroid/graphics/PointF;
+    invoke-virtual {p0}, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->getDisappearParameters()Lcom/android/systemui/util/animation/DisappearParameters;
 
-    invoke-interface {p1}, Lcom/android/systemui/media/MediaHostState;->getPivotX()F
+    move-result-object p0
 
-    move-result v0
+    invoke-interface {p1}, Lcom/android/systemui/media/MediaHostState;->getDisappearParameters()Lcom/android/systemui/util/animation/DisappearParameters;
 
-    invoke-interface {p1}, Lcom/android/systemui/media/MediaHostState;->getPivotY()F
+    move-result-object p1
 
-    move-result p1
-
-    invoke-virtual {p0, v0, p1}, Landroid/graphics/PointF;->equals(FF)Z
+    invoke-virtual {p0, p1}, Lcom/android/systemui/util/animation/DisappearParameters;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -240,6 +257,16 @@
     const/4 p0, 0x1
 
     return p0
+.end method
+
+.method public getDisappearParameters()Lcom/android/systemui/util/animation/DisappearParameters;
+    .locals 0
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    iget-object p0, p0, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->disappearParameters:Lcom/android/systemui/util/animation/DisappearParameters;
+
+    return-object p0
 .end method
 
 .method public getExpansion()F
@@ -266,26 +293,6 @@
     iget-object p0, p0, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->measurementInput:Lcom/android/systemui/util/animation/MeasurementInput;
 
     return-object p0
-.end method
-
-.method public getPivotX()F
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->gonePivot:Landroid/graphics/PointF;
-
-    iget p0, p0, Landroid/graphics/PointF;->x:F
-
-    return p0
-.end method
-
-.method public getPivotY()F
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->gonePivot:Landroid/graphics/PointF;
-
-    iget p0, p0, Landroid/graphics/PointF;->y:F
-
-    return p0
 .end method
 
 .method public getShowsOnlyActiveMedia()Z
@@ -379,9 +386,11 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object p0, p0, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->gonePivot:Landroid/graphics/PointF;
+    invoke-virtual {p0}, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->getDisappearParameters()Lcom/android/systemui/util/animation/DisappearParameters;
 
-    invoke-virtual {p0}, Landroid/graphics/PointF;->hashCode()I
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/systemui/util/animation/DisappearParameters;->hashCode()I
 
     move-result p0
 
@@ -407,6 +416,58 @@
 
     iput-object p1, p0, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->changedListener:Lkotlin/jvm/functions/Function0;
 
+    return-void
+.end method
+
+.method public setDisappearParameters(Lcom/android/systemui/util/animation/DisappearParameters;)V
+    .locals 3
+    .param p1    # Lcom/android/systemui/util/animation/DisappearParameters;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+
+    const-string/jumbo v0, "value"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Lcom/android/systemui/util/animation/DisappearParameters;->hashCode()I
+
+    move-result v0
+
+    iget v1, p0, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->lastDisappearHash:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/Integer;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    return-void
+
+    :cond_0
+    iput-object p1, p0, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->disappearParameters:Lcom/android/systemui/util/animation/DisappearParameters;
+
+    iput v0, p0, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->lastDisappearHash:I
+
+    iget-object p0, p0, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->changedListener:Lkotlin/jvm/functions/Function0;
+
+    if-eqz p0, :cond_1
+
+    invoke-interface {p0}, Lkotlin/jvm/functions/Function0;->invoke()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lkotlin/Unit;
+
+    :cond_1
     return-void
 .end method
 
@@ -456,38 +517,6 @@
 
     :cond_0
     iput-boolean p1, p0, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->falsingProtectionNeeded:Z
-
-    iget-object p0, p0, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->changedListener:Lkotlin/jvm/functions/Function0;
-
-    if-eqz p0, :cond_1
-
-    invoke-interface {p0}, Lkotlin/jvm/functions/Function0;->invoke()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lkotlin/Unit;
-
-    :cond_1
-    return-void
-.end method
-
-.method public setGonePivot(FF)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->gonePivot:Landroid/graphics/PointF;
-
-    invoke-virtual {v0, p1, p2}, Landroid/graphics/PointF;->equals(FF)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->gonePivot:Landroid/graphics/PointF;
-
-    invoke-virtual {v0, p1, p2}, Landroid/graphics/PointF;->set(FF)V
 
     iget-object p0, p0, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->changedListener:Lkotlin/jvm/functions/Function0;
 

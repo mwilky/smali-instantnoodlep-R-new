@@ -53,7 +53,7 @@
 
     iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$3;->this$0:Lcom/oneplus/battery/OpChargingAnimationControllerImpl;
 
-    invoke-static {v0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$700(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Lcom/oneplus/battery/OpWarpChargingViewV2;
+    invoke-static {v0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$700(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Lcom/oneplus/battery/OpSWarpChargingView;
 
     move-result-object v0
 
@@ -61,11 +61,11 @@
 
     iget-object p0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$3;->this$0:Lcom/oneplus/battery/OpChargingAnimationControllerImpl;
 
-    invoke-static {p0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$700(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Lcom/oneplus/battery/OpWarpChargingViewV2;
+    invoke-static {p0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$700(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Lcom/oneplus/battery/OpSWarpChargingView;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/oneplus/battery/OpWarpChargingViewV2;->stopAnimation()V
+    invoke-virtual {p0}, Lcom/oneplus/battery/OpSWarpChargingView;->stopAnimation()V
 
     goto :goto_0
 
@@ -111,5 +111,51 @@
 
     :cond_2
     :goto_0
+    return-void
+.end method
+
+.method public onScreenTurnedOn()V
+    .locals 3
+
+    iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$3;->this$0:Lcom/oneplus/battery/OpChargingAnimationControllerImpl;
+
+    invoke-static {v0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$200(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "onScreenTurnedOn onRefreshBatteryInfo"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$3;->this$0:Lcom/oneplus/battery/OpChargingAnimationControllerImpl;
+
+    invoke-static {v0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$000(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Landroid/os/Handler;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$3;->this$0:Lcom/oneplus/battery/OpChargingAnimationControllerImpl;
+
+    invoke-static {v1}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$1800(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Ljava/lang/Runnable;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$3;->this$0:Lcom/oneplus/battery/OpChargingAnimationControllerImpl;
+
+    invoke-static {v0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$000(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Landroid/os/Handler;
+
+    move-result-object v0
+
+    iget-object p0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$3;->this$0:Lcom/oneplus/battery/OpChargingAnimationControllerImpl;
+
+    invoke-static {p0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$1800(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Ljava/lang/Runnable;
+
+    move-result-object p0
+
+    const-wide/16 v1, 0x3e8
+
+    invoke-virtual {v0, p0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
     return-void
 .end method

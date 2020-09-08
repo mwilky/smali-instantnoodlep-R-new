@@ -561,6 +561,7 @@ Seleção"</string>
     <string name="controls_favorite_other_zone_header">Outro</string>
     <string name="controls_favorite_rearrange">Toque sem soltar e arraste para reorganizar os controlos.</string>
     <string name="controls_favorite_removed">Todos os controlos foram removidos.</string>
+    <string name="controls_favorite_see_other_apps">Ver outras apps</string>
     <string name="controls_favorite_subtitle">Escolha os controlos a que pretende aceder a partir do menu ligar/desligar.</string>
     <string name="controls_favorite_toast_no_changes">Alterações não guardadas.</string>
     <string name="controls_in_progress">Em curso</string>
@@ -575,7 +576,7 @@ Seleção"</string>
     <string name="controls_pin_instructions">Introduzir PIN</string>
     <string name="controls_pin_instructions_retry">Experimente outro PIN.</string>
     <string name="controls_pin_use_alphanumeric">O PIN contém letras ou símbolos.</string>
-    <string name="controls_pin_verify">Valide %s</string>
+    <string name="controls_pin_verify">Validar %s</string>
     <string name="controls_pin_verifying">A validar…</string>
     <string name="controls_pin_wrong">PIN incorreto</string>
     <string name="controls_providers_title">Escolha uma app para adicionar controlos</string>
@@ -658,7 +659,7 @@ Se retomar, podem aplicar-se custos relativos à utilização de dados."</string
     <string name="disable_overlays_summary">Utilizar sempre GPU para a composição do ecrã</string>
     <string name="disable_vpn">Desativar a VPN</string>
     <string name="disabled">Desativada</string>
-    <string name="disabled_by_admin">Desativada pelo administrador</string>
+    <string name="disabled_by_admin">Desativado pelo administrador</string>
     <string name="disabled_by_admin_summary_text">Controlado pelo gestor</string>
     <string name="disconnect_vpn">Desligar VPN</string>
     <string name="dnd_is_off">Não incomodar desativado</string>
@@ -786,7 +787,7 @@ Pretende continuar a mostrá-las?"</string>
     <string name="inline_stop_button">Parar notificações</string>
     <string name="inline_turn_off_notifications">Desativar notificações</string>
     <string name="inline_undo">Anular</string>
-    <string name="install_other_apps">Instalar aplicações desconhecidas</string>
+    <string name="install_other_apps">Instalar apps desconhecidas</string>
     <string name="installer_cd_button_title">Inst. app Transf. Ficheiros do Android para Mac</string>
     <string name="instant_apps">Apps instantâneas</string>
     <string name="instant_apps_message">A app é aberta sem ser instalada.</string>
@@ -1314,7 +1315,7 @@ Além disso, está ligado a uma VPN, que pode monitorizar a sua atividade da red
     <string name="qs_status_phone_vibrate">Telemóvel no modo de vibração</string>
     <string name="quick_controls_setup_subtitle">Prima sem soltar o botão ligar/desligar para aceder aos controlos.</string>
     <string name="quick_controls_setup_title">Configure os controlos de dispositivos</string>
-    <string name="quick_controls_subtitle">Adicione controlos para os seus dispositivos associados.</string>
+    <string name="quick_controls_subtitle">Adicione controlos para os dispositivos associados.</string>
     <string name="quick_controls_title">Controlos de dispositivos</string>
     <string name="quick_settings">Definições rápidas</string>
     <string name="quick_settings_bluetooth_detail_empty_text">Sem dispositivos sincronizados disponíveis</string>

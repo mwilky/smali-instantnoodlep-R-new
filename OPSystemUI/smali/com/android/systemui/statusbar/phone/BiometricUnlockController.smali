@@ -180,7 +180,7 @@
 
     iput-object p9, p0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mHandler:Landroid/os/Handler;
 
-    const p1, 0x10e00cd
+    const p1, 0x10e00d3
 
     invoke-virtual {p11, p1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1196,6 +1196,10 @@
     move-result p1
 
     if-eqz p1, :cond_2
+
+    const/4 p1, 0x1
+
+    invoke-static {p1}, Lcom/oneplus/util/OpUtils;->setRecentUnlockBiometricFinger(Z)V
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mKeyguardViewMediator:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 

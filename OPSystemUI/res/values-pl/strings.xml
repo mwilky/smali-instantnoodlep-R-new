@@ -39,6 +39,11 @@
     <string name="abc_slice_updated">Aktualizacja: %1$s</string>
     <string name="abc_slices_permission_request">Aplikacja %1$s chce pokazywać wycinki z aplikacji %2$s</string>
     <string name="abc_toolbar_collapse_description">Zwiń</string>
+    <string name="about_action_bar_title">Informacje</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Polityka prywatności</string>
+    <string name="about_release_note_title">Dziennik aktualizacji:</string>
+    <string name="about_terms_service">Regulamin</string>
     <string name="accessibility_accessibility_button">Ułatwienia dostępu</string>
     <string name="accessibility_action_divider_bottom_full">Dolna część ekranu na pełnym ekranie</string>
     <string name="accessibility_action_divider_left_30">30% lewej części ekranu</string>
@@ -598,6 +603,7 @@ Wybór"</string>
     <string name="controls_favorite_other_zone_header">Inne</string>
     <string name="controls_favorite_rearrange">Przytrzymaj i przeciągnij, aby przestawić elementy sterujące</string>
     <string name="controls_favorite_removed">Usunięto wszystkie elementy sterujące</string>
+    <string name="controls_favorite_see_other_apps">Wyświetl pozostałe aplikacje</string>
     <string name="controls_favorite_subtitle">Wybierz elementy sterujące dostępne w menu zasilania</string>
     <string name="controls_favorite_toast_no_changes">Zmiany nie zostały zapisane</string>
     <string name="controls_in_progress">W toku</string>
@@ -696,8 +702,8 @@ Jeśli włączysz ją ponownie, może zostać naliczona opłata za użycie danyc
     <string name="disable_carrier_button_text">Wyłącz eSIM</string>
     <string name="disable_overlays">Wyłącz nakładki HW</string>
     <string name="disable_overlays_summary">Zawsze używaj GPU do komponowania ekranu</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">Skontaktuj się z administratorem w celu uzyskania szczegółowych informacji</string>
+    <string name="disable_tether_notification_title">Tethering jest wyłączony</string>
     <string name="disable_vpn">Wyłącz VPN</string>
     <string name="disabled">Wyłączone</string>
     <string name="disabled_by_admin">Wyłączone przez administratora</string>
@@ -705,6 +711,8 @@ Jeśli włączysz ją ponownie, może zostać naliczona opłata za użycie danyc
     <string name="disconnect_vpn">Rozłącz z VPN</string>
     <string name="dnd_is_off">Tryb Nie przeszkadzać jest wyłączony</string>
     <string name="dnd_suppressing_shade_text">Powiadomienia wstrzymane przez tryb Nie przeszkadzać</string>
+    <string name="do_disclosure_generic">To urządzenie należy do Twojej organizacji</string>
+    <string name="do_disclosure_with_name">Właściciel tego urządzenia: %s</string>
     <string name="do_not_silence">Nie ignoruj</string>
     <string name="do_not_silence_block">Nie ignoruj ani nie blokuj</string>
     <string name="dock_alignment_not_charging">Popraw ustawienie telefonu, by naładować go bezprzewodowo</string>
@@ -715,6 +723,7 @@ Jeśli włączysz ją ponownie, może zostać naliczona opłata za użycie danyc
     <string name="drag_to_rearrange_tiles">Przytrzymaj i przeciągnij, by przestawić kafelki</string>
     <string name="drag_to_remove_disabled">Minimalna liczba kafelków to %1$d</string>
     <string name="drag_to_remove_tiles">Przeciągnij tutaj, by usunąć</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">Przeciągnij kafelki, aby je przestawić. Stuknij, aby je pokazać lub ukryć.</string>
     <string name="empty_shade_text">Brak powiadomień</string>
     <string name="enable_adb">Debugowanie USB</string>
@@ -1090,6 +1099,7 @@ Spróbuj ponownie za %2$d s."</string>
     <string name="left_nav_bar_button_type">Typ dodatkowego lewego przycisku</string>
     <string name="legacy_vpn_name">VPN</string>
     <string name="loading_injected_setting_summary">Ładuję…</string>
+    <string name="loading_text">Ładowanie...</string>
     <string name="local_backup_password_summary_change">Dotknij, by zmienić lub usunąć hasło pełnych kopii zapasowych na komputerze.</string>
     <string name="local_backup_password_summary_none">Pełne kopie zapasowe na komputerze nie są obecnie chronione</string>
     <string name="local_backup_password_title">Hasło kopii zapasowej</string>
@@ -1174,8 +1184,18 @@ Skontaktuj się z administratorem, aby uzyskać więcej informacji."</string>
     <string name="monitoring_description_do_learn_more_separator">"  "</string>
     <string name="monitoring_description_managed_profile_ca_certificate">Twoja organizacja zainstalowała urząd certyfikacji w Twoim profilu do pracy. Zabezpieczony ruch w sieci może być monitorowany i zmieniany.</string>
     <string name="monitoring_description_managed_profile_named_vpn">Twój profil służbowy jest połączony z aplikacją %1$s, która może monitorować Twoją aktywność w sieci, w tym e-maile, aplikacje i strony internetowe.</string>
+    <string name="monitoring_description_management">"To urządzenie należy do Twojej organizacji.
+
+Administrator IT może monitorować ustawienia, firmowe uprawnienia dostępu, aplikacje, dane dotyczące urządzenia i lokalizacji oraz nimi zarządzać.
+
+Aby dowiedzieć się więcej, skontaktuj się z administratorem IT."</string>
     <string name="monitoring_description_management_ca_certificate">Twoja organizacja zainstalowała urząd certyfikacji na tym urządzeniu. Zabezpieczony ruch w sieci może być monitorowany i zmieniany.</string>
     <string name="monitoring_description_management_network_logging">Administrator włączył rejestrowanie sieciowe, które pozwala monitorować ruch na Twoim urządzeniu.</string>
+    <string name="monitoring_description_named_management">"To urządzenie należy do organizacji %1$s.
+
+Administrator IT może monitorować ustawienia, firmowe uprawnienia dostępu, aplikacje, dane dotyczące urządzenia i lokalizacji oraz nimi zarządzać.
+
+Aby dowiedzieć się więcej, skontaktuj się z administratorem IT."</string>
     <string name="monitoring_description_named_vpn">Łączysz się z aplikacją %1$s, która może monitorować Twoją aktywność w sieci, w tym e-maile, aplikacje i strony internetowe.</string>
     <string name="monitoring_description_network_logging">"Administrator włączył rejestrowanie sieciowe, które pozwala monitorować ruch na Twoim urządzeniu.
 
@@ -1311,8 +1331,14 @@ Aby dowiedzieć się więcej, skontaktuj się z administratorem.
     <string name="oneplus_threekey_navigation_sound">Zezwalaj na wszystkie dźwięki</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Włącz za pomocą przełącznika powyżej</string>
     <string name="oneplus_threekey_navigation_vibration">Tylko wibracje</string>
-    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> — odblokowanie</string>
-    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> — odblokowania</string>
+    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>odblokowanie</string>
+    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>odblokowania</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">Parowanie...</string>
     <string name="op_earphone_connected_fail">Nie udało się sparować. Możesz sprawdzić status słuchawek i Bluetooth.</string>
     <string name="op_earphone_connected_success">Sparowano. Dotknij, aby ustawić więcej.</string>
@@ -1342,9 +1368,10 @@ Aby dowiedzieć się więcej, skontaktuj się z administratorem.
     <string name="op_notification_channel_summary_low">Mniej ważne powiadomienia bez jakiegokolwiek dźwięku lub wibracji.</string>
     <string name="op_notification_section_header_gentle">Inne powiadomienia</string>
     <string name="op_notification_silence_title">Inne</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">Ciemny tryb</string>
     <string name="op_qs_data_usage_used">%1$s: użyto %2$s %3$s</string>
-    <string name="op_quick_settings_night_display_label">Tryb nocny</string>
+    <string name="op_quick_settings_night_display_label">Komfort oglądania</string>
     <string name="op_quick_settings_night_display_summary_off">Tryb nocny jest wyłączony. Dotknij, aby włączyć</string>
     <string name="op_quick_settings_night_display_summary_on">Tryb nocny jest włączony. Dotknij, aby wyłączyć</string>
     <string name="op_read_mode2_dialog_black">Efekt monochromatyczny</string>
@@ -1556,8 +1583,20 @@ Aby dowiedzieć się więcej, skontaktuj się z administratorem.
     <string name="quick_settings_data_switch_toast_1">Obecnie włożono tylko jedną kartę SIM</string>
     <string name="quick_settings_default_data_card">Domyślna karta danych</string>
     <string name="quick_settings_disclosure_managed_profile_monitoring">Twoja organizacja może monitorować ruch w sieci w Twoim profilu do pracy</string>
+    <string name="quick_settings_disclosure_managed_profile_named_vpn">Twój profil służbowy jest połączony z siecią %1$s</string>
+    <string name="quick_settings_disclosure_management">To urządzenie należy do Twojej organizacji</string>
+    <string name="quick_settings_disclosure_management_monitoring">Twoja organizacja jest właścicielem tego urządzenia i może monitorować ruch w sieci</string>
+    <string name="quick_settings_disclosure_management_named_vpn">To urządzenie należy do Twojej organizacji i jest połączone z siecią %1$s</string>
+    <string name="quick_settings_disclosure_management_vpns">To urządzenie należy do Twojej organizacji i jest połączone z sieciami VPN</string>
     <string name="quick_settings_disclosure_monitoring">Sieć może być monitorowana</string>
     <string name="quick_settings_disclosure_named_managed_profile_monitoring">Organizacja %1$s może monitorować ruch w sieci w Twoim profilu do pracy</string>
+    <string name="quick_settings_disclosure_named_management">Właściciel tego urządzenia: %1$s</string>
+    <string name="quick_settings_disclosure_named_management_monitoring">Organizacja %1$s jest właścicielem tego urządzenia i może monitorować ruch w sieci</string>
+    <string name="quick_settings_disclosure_named_management_named_vpn">To urządzenie należy do organizacji %1$s i jest połączone z siecią %2$s</string>
+    <string name="quick_settings_disclosure_named_management_vpns">To urządzenie należy do organizacji %1$s i jest połączone z sieciami VPN</string>
+    <string name="quick_settings_disclosure_named_vpn">To urządzenie jest połączone z siecią %1$s</string>
+    <string name="quick_settings_disclosure_personal_profile_named_vpn">Twój profil osobisty jest połączony z siecią %1$s</string>
+    <string name="quick_settings_disclosure_vpns">To urządzenie jest połączone z sieciami VPN</string>
     <string name="quick_settings_dnd_alarms_label">Tylko alarmy</string>
     <string name="quick_settings_dnd_label">Nie przeszkadzać</string>
     <string name="quick_settings_dnd_none_label">Całkowita cisza</string>
@@ -1847,7 +1886,7 @@ monitorowana"</string>
     <string name="tethered_notification_hybrid_sharing_mobile">Udostępnianie danych mobilnych, kliknij, aby przejść do obszaru Ustawienia</string>
     <string name="tethered_notification_hybrid_sharing_none">Brak dostępnej sieci do udostępnienia, kliknij, aby przejść do obszaru Ustawienia</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Udostępnianie sieci Wi-Fi, kliknij, aby przejść do obszaru Ustawienia</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">Stuknij, aby skonfigurować.</string>
     <string name="tethered_notification_multi_device_message">%1$s podłączonych urządzeń</string>
     <string name="tethered_notification_multi_tether_title">Aktywne połączenie przez USB lub mobilny hotspot</string>
     <string name="tethered_notification_no_device_message">Brak podłączonych urządzeń</string>
@@ -2080,6 +2119,16 @@ Adres Wi‑Fi (BSSID)
     <string name="wifi_verbose_logging">Szczegółowy dziennik Wi-Fi</string>
     <string name="wifi_verbose_logging_summary">Zwiększ poziom rejestrowania Wi‑Fi, pokazuj według RSSI SSID w selektorze Wi‑Fi</string>
     <string name="window_animation_scale_title">Skala animacji okna</string>
+    <string name="wlb_break_mode_active">Aktywny</string>
+    <string name="wlb_break_mode_active_text">%1$s Tryb · %2$s</string>
+    <string name="wlb_break_mode_on_break">Na przerwie</string>
+    <string name="wlb_break_mode_resume">Wznów</string>
+    <string name="wlb_break_mode_take_break">Zrób sobie przerwę</string>
+    <string name="wlb_qs_detail_break_mode">Tryb przerwy</string>
+    <string name="wlb_qs_detail_break_mode_desc">Automatyczny powrót do poprzedniego trybu po 30 minutach</string>
+    <string name="wlb_qs_detail_life_mode">Tryb życia osobistego</string>
+    <string name="wlb_qs_detail_more_setting">Więcej ustawień</string>
+    <string name="wlb_qs_detail_work_mode">Tryb pracy</string>
     <string name="work_life_balance_mode">Równowaga praca-życie osobiste</string>
     <string name="zen_alarm_warning">Nie usłyszysz swojego następnego alarmu %1$s</string>
     <string name="zen_alarm_warning_indef">Nie usłyszysz swojego następnego alarmu (%1$s), jeśli nie wyłączysz do tego czasu tej funkcji</string>
@@ -2101,5 +2150,5 @@ Adres Wi‑Fi (BSSID)
     <string name="zen_silence_introduction_voice">To zablokuje WSZYSTKIE dźwięki i wibracje, w tym alarmy, muzykę, filmy i gry. Nadal będzie można wykonywać połączenia.</string>
     <string name="zzz_op_global_action_bootloader">Tryb Bootloader</string>
     <string name="zzz_op_global_action_recovery">Tryb Recovery</string>
-    <string name="zzz_op_quick_pay_no_install_message">Zainstaluj aplikacje płatnicze, aby korzystać z szybkiej płatności</string>
+    <string name="zzz_op_quick_pay_no_install_message">Zainstaluj aplikacje płatnicze, aby korzystać z Szybkiej Płatności</string>
 </resources>

@@ -689,6 +689,12 @@
 
     iput-boolean v1, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->isShown:Z
 
+    iget-object v2, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mClipper:Lcom/android/systemui/qs/QSDetailClipper;
+
+    invoke-virtual {v2}, Lcom/android/systemui/qs/QSDetailClipper;->cancelAnimator()V
+
+    iput-boolean v1, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mOpening:Z
+
     invoke-direct {p0, v1}, Lcom/android/systemui/qs/customize/QSCustomizer;->setCustomizing(Z)V
 
     invoke-direct {p0}, Lcom/android/systemui/qs/customize/QSCustomizer;->save()V
@@ -919,7 +925,7 @@
 .end method
 
 .method public restoreInstanceState(Landroid/os/Bundle;)V
-    .locals 1
+    .locals 2
 
     const-string v0, "qs_customizing"
 
@@ -927,7 +933,40 @@
 
     move-result p1
 
-    if-eqz p1, :cond_0
+    iget-boolean v0, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mCustomizing:Z
+
+    if-eq p1, v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "customizing "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string p1, " mCustomizing "
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean p0, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mCustomizing:Z
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string p1, "QSCustomizer"
+
+    invoke-static {p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_0
+    if-eqz p1, :cond_1
 
     const/4 p1, 0x0
 
@@ -939,7 +978,7 @@
 
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
-    :cond_0
+    :cond_1
     return-void
 .end method
 
@@ -1117,6 +1156,10 @@
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    iget-object v1, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mClipper:Lcom/android/systemui/qs/QSDetailClipper;
+
+    invoke-virtual {v1}, Lcom/android/systemui/qs/QSDetailClipper;->cancelAnimator()V
 
     iget-object v1, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mClipper:Lcom/android/systemui/qs/QSDetailClipper;
 

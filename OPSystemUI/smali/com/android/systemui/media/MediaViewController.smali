@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nMediaViewController.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaViewController.kt\ncom/android/systemui/media/MediaViewController\n*L\n1#1,382:1\n*E\n"
+    value = "SMAP\nMediaViewController.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaViewController.kt\ncom/android/systemui/media/MediaViewController\n*L\n1#1,437:1\n*E\n"
 .end annotation
 
 
@@ -66,9 +66,13 @@
     .end annotation
 .end field
 
-.field private final tmpPoint:Landroid/graphics/PointF;
+.field private final tmpKey:Lcom/android/systemui/media/CacheKey;
 
 .field private final tmpState:Lcom/android/systemui/util/animation/TransitionViewState;
+
+.field private final tmpState2:Lcom/android/systemui/util/animation/TransitionViewState;
+
+.field private final tmpState3:Lcom/android/systemui/util/animation/TransitionViewState;
 
 .field private transitionLayout:Lcom/android/systemui/util/animation/TransitionLayout;
 
@@ -76,7 +80,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
-            "Lcom/android/systemui/media/MediaHostState;",
+            "Lcom/android/systemui/media/CacheKey;",
             "Lcom/android/systemui/util/animation/TransitionViewState;",
             ">;"
         }
@@ -86,7 +90,7 @@
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/statusbar/policy/ConfigurationController;Lcom/android/systemui/media/MediaHostStatesManager;)V
-    .locals 1
+    .locals 6
     .param p1    # Landroid/content/Context;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
@@ -158,11 +162,35 @@
 
     iput-object p2, p0, Lcom/android/systemui/media/MediaViewController;->tmpState:Lcom/android/systemui/util/animation/TransitionViewState;
 
-    new-instance p2, Landroid/graphics/PointF;
+    new-instance p2, Lcom/android/systemui/util/animation/TransitionViewState;
 
-    invoke-direct {p2}, Landroid/graphics/PointF;-><init>()V
+    invoke-direct {p2}, Lcom/android/systemui/util/animation/TransitionViewState;-><init>()V
 
-    iput-object p2, p0, Lcom/android/systemui/media/MediaViewController;->tmpPoint:Landroid/graphics/PointF;
+    iput-object p2, p0, Lcom/android/systemui/media/MediaViewController;->tmpState2:Lcom/android/systemui/util/animation/TransitionViewState;
+
+    new-instance p2, Lcom/android/systemui/util/animation/TransitionViewState;
+
+    invoke-direct {p2}, Lcom/android/systemui/util/animation/TransitionViewState;-><init>()V
+
+    iput-object p2, p0, Lcom/android/systemui/media/MediaViewController;->tmpState3:Lcom/android/systemui/util/animation/TransitionViewState;
+
+    new-instance p2, Lcom/android/systemui/media/CacheKey;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x7
+
+    const/4 v5, 0x0
+
+    move-object v0, p2
+
+    invoke-direct/range {v0 .. v5}, Lcom/android/systemui/media/CacheKey;-><init>(IIFILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    iput-object p2, p0, Lcom/android/systemui/media/MediaViewController;->tmpKey:Lcom/android/systemui/media/CacheKey;
 
     new-instance p2, Lcom/android/systemui/media/MediaViewController$configurationListener$1;
 
@@ -319,178 +347,230 @@
     return-void
 .end method
 
-.method private final obtainViewState(Lcom/android/systemui/media/MediaHostState;)Lcom/android/systemui/util/animation/TransitionViewState;
-    .locals 10
-
-    iget-object v0, p0, Lcom/android/systemui/media/MediaViewController;->viewStates:Ljava/util/Map;
-
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/systemui/util/animation/TransitionViewState;
-
-    if-eqz v0, :cond_0
-
-    return-object v0
-
-    :cond_0
-    iget-object v0, p0, Lcom/android/systemui/media/MediaViewController;->transitionLayout:Lcom/android/systemui/util/animation/TransitionLayout;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_7
+.method private final getKey(Lcom/android/systemui/media/MediaHostState;Lcom/android/systemui/media/CacheKey;)Lcom/android/systemui/media/CacheKey;
+    .locals 1
 
     invoke-interface {p1}, Lcom/android/systemui/media/MediaHostState;->getMeasurementInput()Lcom/android/systemui/util/animation/MeasurementInput;
 
-    move-result-object v0
+    move-result-object p0
 
-    if-eqz v0, :cond_7
+    const/4 v0, 0x0
 
-    invoke-interface {p1}, Lcom/android/systemui/media/MediaHostState;->getExpansion()F
+    if-eqz p0, :cond_0
 
-    move-result v0
+    invoke-virtual {p0}, Lcom/android/systemui/util/animation/MeasurementInput;->getHeightMeasureSpec()I
 
-    const/4 v2, 0x0
-
-    cmpg-float v0, v0, v2
-
-    if-eqz v0, :cond_4
-
-    invoke-interface {p1}, Lcom/android/systemui/media/MediaHostState;->getExpansion()F
-
-    move-result v0
-
-    const/high16 v3, 0x3f800000    # 1.0f
-
-    cmpg-float v0, v0, v3
-
-    if-nez v0, :cond_1
+    move-result p0
 
     goto :goto_0
 
-    :cond_1
-    invoke-interface {p1}, Lcom/android/systemui/media/MediaHostState;->copy()Lcom/android/systemui/media/MediaHostState;
+    :cond_0
+    move p0, v0
 
-    move-result-object v0
-
-    invoke-interface {v0, v2}, Lcom/android/systemui/media/MediaHostState;->setExpansion(F)V
-
-    invoke-direct {p0, v0}, Lcom/android/systemui/media/MediaViewController;->obtainViewState(Lcom/android/systemui/media/MediaHostState;)Lcom/android/systemui/util/animation/TransitionViewState;
-
-    move-result-object v5
-
-    const-string v1, "null cannot be cast to non-null type com.android.systemui.util.animation.TransitionViewState"
-
-    if-eqz v5, :cond_3
-
-    invoke-interface {p1}, Lcom/android/systemui/media/MediaHostState;->copy()Lcom/android/systemui/media/MediaHostState;
-
-    move-result-object v2
-
-    invoke-interface {v2, v3}, Lcom/android/systemui/media/MediaHostState;->setExpansion(F)V
-
-    invoke-direct {p0, v2}, Lcom/android/systemui/media/MediaViewController;->obtainViewState(Lcom/android/systemui/media/MediaHostState;)Lcom/android/systemui/util/animation/TransitionViewState;
-
-    move-result-object v6
-
-    if-eqz v6, :cond_2
-
-    iget-object v1, p0, Lcom/android/systemui/media/MediaViewController;->tmpPoint:Landroid/graphics/PointF;
-
-    invoke-interface {v0}, Lcom/android/systemui/media/MediaHostState;->getPivotX()F
-
-    move-result v2
-
-    invoke-interface {v0}, Lcom/android/systemui/media/MediaHostState;->getPivotY()F
-
-    move-result v0
-
-    invoke-virtual {v1, v2, v0}, Landroid/graphics/PointF;->set(FF)V
-
-    new-instance v1, Lcom/android/systemui/util/animation/TransitionViewState;
-
-    invoke-direct {v1}, Lcom/android/systemui/util/animation/TransitionViewState;-><init>()V
-
-    iget-object v4, p0, Lcom/android/systemui/media/MediaViewController;->layoutController:Lcom/android/systemui/util/animation/TransitionLayoutController;
-
-    invoke-interface {p1}, Lcom/android/systemui/media/MediaHostState;->getExpansion()F
-
-    move-result v7
-
-    iget-object v8, p0, Lcom/android/systemui/media/MediaViewController;->tmpPoint:Landroid/graphics/PointF;
-
-    move-object v9, v1
-
-    invoke-virtual/range {v4 .. v9}, Lcom/android/systemui/util/animation/TransitionLayoutController;->getInterpolatedState(Lcom/android/systemui/util/animation/TransitionViewState;Lcom/android/systemui/util/animation/TransitionViewState;FLandroid/graphics/PointF;Lcom/android/systemui/util/animation/TransitionViewState;)V
-
-    goto :goto_1
-
-    :cond_2
-    new-instance p0, Lkotlin/TypeCastException;
-
-    invoke-direct {p0, v1}, Lkotlin/TypeCastException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_3
-    new-instance p0, Lkotlin/TypeCastException;
-
-    invoke-direct {p0, v1}, Lkotlin/TypeCastException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_4
     :goto_0
-    iget-object v0, p0, Lcom/android/systemui/media/MediaViewController;->transitionLayout:Lcom/android/systemui/util/animation/TransitionLayout;
-
-    if-eqz v0, :cond_6
+    invoke-virtual {p2, p0}, Lcom/android/systemui/media/CacheKey;->setHeightMeasureSpec(I)V
 
     invoke-interface {p1}, Lcom/android/systemui/media/MediaHostState;->getMeasurementInput()Lcom/android/systemui/util/animation/MeasurementInput;
 
-    move-result-object v2
+    move-result-object p0
+
+    if-eqz p0, :cond_1
+
+    invoke-virtual {p0}, Lcom/android/systemui/util/animation/MeasurementInput;->getWidthMeasureSpec()I
+
+    move-result v0
+
+    :cond_1
+    invoke-virtual {p2, v0}, Lcom/android/systemui/media/CacheKey;->setWidthMeasureSpec(I)V
+
+    invoke-interface {p1}, Lcom/android/systemui/media/MediaHostState;->getExpansion()F
+
+    move-result p0
+
+    invoke-virtual {p2, p0}, Lcom/android/systemui/media/CacheKey;->setExpansion(F)V
+
+    return-object p2
+.end method
+
+.method private final obtainViewState(Lcom/android/systemui/media/MediaHostState;)Lcom/android/systemui/util/animation/TransitionViewState;
+    .locals 12
+
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_8
+
+    invoke-interface {p1}, Lcom/android/systemui/media/MediaHostState;->getMeasurementInput()Lcom/android/systemui/util/animation/MeasurementInput;
+
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    goto/16 :goto_1
+
+    :cond_0
+    iget-object v2, p0, Lcom/android/systemui/media/MediaViewController;->tmpKey:Lcom/android/systemui/media/CacheKey;
+
+    invoke-direct {p0, p1, v2}, Lcom/android/systemui/media/MediaViewController;->getKey(Lcom/android/systemui/media/MediaHostState;Lcom/android/systemui/media/CacheKey;)Lcom/android/systemui/media/CacheKey;
+
+    iget-object v1, p0, Lcom/android/systemui/media/MediaViewController;->viewStates:Ljava/util/Map;
+
+    invoke-interface {v1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/systemui/util/animation/TransitionViewState;
+
+    if-eqz v1, :cond_1
+
+    return-object v1
+
+    :cond_1
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x7
+
+    const/4 v7, 0x0
+
+    invoke-static/range {v2 .. v7}, Lcom/android/systemui/media/CacheKey;->copy$default(Lcom/android/systemui/media/CacheKey;IIFILjava/lang/Object;)Lcom/android/systemui/media/CacheKey;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/android/systemui/media/MediaViewController;->transitionLayout:Lcom/android/systemui/util/animation/TransitionLayout;
+
+    if-eqz v2, :cond_8
+
+    invoke-interface {p1}, Lcom/android/systemui/media/MediaHostState;->getExpansion()F
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    cmpg-float v2, v2, v3
 
     if-eqz v2, :cond_5
 
     invoke-interface {p1}, Lcom/android/systemui/media/MediaHostState;->getExpansion()F
 
-    move-result v1
+    move-result v2
 
-    invoke-direct {p0, v1}, Lcom/android/systemui/media/MediaViewController;->constraintSetForExpansion(F)Landroidx/constraintlayout/widget/ConstraintSet;
+    const/high16 v4, 0x3f800000    # 1.0f
 
-    move-result-object v1
+    cmpg-float v2, v2, v4
 
-    new-instance v3, Lcom/android/systemui/util/animation/TransitionViewState;
+    if-nez v2, :cond_2
 
-    invoke-direct {v3}, Lcom/android/systemui/util/animation/TransitionViewState;-><init>()V
+    goto :goto_0
 
-    invoke-virtual {v0, v2, v1, v3}, Lcom/android/systemui/util/animation/TransitionLayout;->calculateViewState(Lcom/android/systemui/util/animation/MeasurementInput;Landroidx/constraintlayout/widget/ConstraintSet;Lcom/android/systemui/util/animation/TransitionViewState;)Lcom/android/systemui/util/animation/TransitionViewState;
+    :cond_2
+    invoke-interface {p1}, Lcom/android/systemui/media/MediaHostState;->copy()Lcom/android/systemui/media/MediaHostState;
 
-    move-result-object v1
+    move-result-object v0
 
-    iget-object p0, p0, Lcom/android/systemui/media/MediaViewController;->viewStates:Ljava/util/Map;
+    invoke-interface {v0, v3}, Lcom/android/systemui/media/MediaHostState;->setExpansion(F)V
+
+    invoke-direct {p0, v0}, Lcom/android/systemui/media/MediaViewController;->obtainViewState(Lcom/android/systemui/media/MediaHostState;)Lcom/android/systemui/util/animation/TransitionViewState;
+
+    move-result-object v6
+
+    const-string v0, "null cannot be cast to non-null type com.android.systemui.util.animation.TransitionViewState"
+
+    if-eqz v6, :cond_4
 
     invoke-interface {p1}, Lcom/android/systemui/media/MediaHostState;->copy()Lcom/android/systemui/media/MediaHostState;
 
-    move-result-object p1
+    move-result-object v1
 
-    invoke-interface {p0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v4}, Lcom/android/systemui/media/MediaHostState;->setExpansion(F)V
+
+    invoke-direct {p0, v1}, Lcom/android/systemui/media/MediaViewController;->obtainViewState(Lcom/android/systemui/media/MediaHostState;)Lcom/android/systemui/util/animation/TransitionViewState;
+
+    move-result-object v7
+
+    if-eqz v7, :cond_3
+
+    iget-object v5, p0, Lcom/android/systemui/media/MediaViewController;->layoutController:Lcom/android/systemui/util/animation/TransitionLayoutController;
+
+    invoke-interface {p1}, Lcom/android/systemui/media/MediaHostState;->getExpansion()F
+
+    move-result v8
+
+    const/4 v9, 0x0
+
+    const/16 v10, 0x8
+
+    const/4 v11, 0x0
+
+    invoke-static/range {v5 .. v11}, Lcom/android/systemui/util/animation/TransitionLayoutController;->getInterpolatedState$default(Lcom/android/systemui/util/animation/TransitionLayoutController;Lcom/android/systemui/util/animation/TransitionViewState;Lcom/android/systemui/util/animation/TransitionViewState;FLcom/android/systemui/util/animation/TransitionViewState;ILjava/lang/Object;)Lcom/android/systemui/util/animation/TransitionViewState;
+
+    move-result-object v0
 
     goto :goto_1
 
-    :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->throwNpe()V
+    :cond_3
+    new-instance p0, Lkotlin/TypeCastException;
 
-    throw v1
+    invoke-direct {p0, v0}, Lkotlin/TypeCastException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_4
+    new-instance p0, Lkotlin/TypeCastException;
+
+    invoke-direct {p0, v0}, Lkotlin/TypeCastException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_5
+    :goto_0
+    iget-object v2, p0, Lcom/android/systemui/media/MediaViewController;->transitionLayout:Lcom/android/systemui/util/animation/TransitionLayout;
+
+    if-eqz v2, :cond_7
+
+    invoke-interface {p1}, Lcom/android/systemui/media/MediaHostState;->getMeasurementInput()Lcom/android/systemui/util/animation/MeasurementInput;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_6
+
+    invoke-interface {p1}, Lcom/android/systemui/media/MediaHostState;->getExpansion()F
+
+    move-result p1
+
+    invoke-direct {p0, p1}, Lcom/android/systemui/media/MediaViewController;->constraintSetForExpansion(F)Landroidx/constraintlayout/widget/ConstraintSet;
+
+    move-result-object p1
+
+    new-instance v0, Lcom/android/systemui/util/animation/TransitionViewState;
+
+    invoke-direct {v0}, Lcom/android/systemui/util/animation/TransitionViewState;-><init>()V
+
+    invoke-virtual {v2, v3, p1, v0}, Lcom/android/systemui/util/animation/TransitionLayout;->calculateViewState(Lcom/android/systemui/util/animation/MeasurementInput;Landroidx/constraintlayout/widget/ConstraintSet;Lcom/android/systemui/util/animation/TransitionViewState;)Lcom/android/systemui/util/animation/TransitionViewState;
+
+    move-result-object v0
+
+    iget-object p0, p0, Lcom/android/systemui/media/MediaViewController;->viewStates:Ljava/util/Map;
+
+    invoke-interface {p0, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_1
 
     :cond_6
     invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->throwNpe()V
 
-    throw v1
+    throw v0
 
     :cond_7
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->throwNpe()V
+
+    throw v0
+
+    :cond_8
     :goto_1
-    return-object v1
+    return-object v0
 .end method
 
 .method private final obtainViewStateForLocation(I)Lcom/android/systemui/util/animation/TransitionViewState;
@@ -521,6 +601,72 @@
     return-object p0
 
     :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method private final updateViewStateToCarouselSize(Lcom/android/systemui/util/animation/TransitionViewState;ILcom/android/systemui/util/animation/TransitionViewState;)Lcom/android/systemui/util/animation/TransitionViewState;
+    .locals 0
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1, p3}, Lcom/android/systemui/util/animation/TransitionViewState;->copy(Lcom/android/systemui/util/animation/TransitionViewState;)Lcom/android/systemui/util/animation/TransitionViewState;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    iget-object p0, p0, Lcom/android/systemui/media/MediaViewController;->mediaHostStatesManager:Lcom/android/systemui/media/MediaHostStatesManager;
+
+    invoke-virtual {p0}, Lcom/android/systemui/media/MediaHostStatesManager;->getCarouselSizes()Ljava/util/Map;
+
+    move-result-object p0
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p2
+
+    invoke-interface {p0, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/android/systemui/util/animation/MeasurementOutput;
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Lcom/android/systemui/util/animation/MeasurementOutput;->getMeasuredHeight()I
+
+    move-result p2
+
+    invoke-virtual {p1}, Lcom/android/systemui/util/animation/TransitionViewState;->getHeight()I
+
+    move-result p3
+
+    invoke-static {p2, p3}, Ljava/lang/Math;->max(II)I
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, Lcom/android/systemui/util/animation/TransitionViewState;->setHeight(I)V
+
+    invoke-virtual {p0}, Lcom/android/systemui/util/animation/MeasurementOutput;->getMeasuredWidth()I
+
+    move-result p0
+
+    invoke-virtual {p1}, Lcom/android/systemui/util/animation/TransitionViewState;->getWidth()I
+
+    move-result p2
+
+    invoke-static {p0, p2}, Ljava/lang/Math;->max(II)I
+
+    move-result p0
+
+    invoke-virtual {p1, p0}, Lcom/android/systemui/util/animation/TransitionViewState;->setWidth(I)V
+
+    :cond_0
+    return-object p1
+
+    :cond_1
     const/4 p0, 0x0
 
     return-object p0
@@ -558,8 +704,6 @@
     iget-object v0, p0, Lcom/android/systemui/media/MediaViewController;->layoutController:Lcom/android/systemui/util/animation/TransitionLayoutController;
 
     invoke-virtual {v0, p1}, Lcom/android/systemui/util/animation/TransitionLayoutController;->attach(Lcom/android/systemui/util/animation/TransitionLayout;)V
-
-    invoke-direct {p0}, Lcom/android/systemui/media/MediaViewController;->ensureAllMeasurements()V
 
     iget p1, p0, Lcom/android/systemui/media/MediaViewController;->currentEndLocation:I
 
@@ -702,6 +846,46 @@
     return-object p0
 .end method
 
+.method public final getTranslationX()F
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/media/MediaViewController;->transitionLayout:Lcom/android/systemui/util/animation/TransitionLayout;
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getTranslationX()F
+
+    move-result p0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+.end method
+
+.method public final getTranslationY()F
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/media/MediaViewController;->transitionLayout:Lcom/android/systemui/util/animation/TransitionLayout;
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getTranslationY()F
+
+    move-result p0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+.end method
+
 .method public final onDestroy()V
     .locals 1
 
@@ -738,14 +922,21 @@
 .method public final refreshState()V
     .locals 4
 
-    iget-boolean v0, p0, Lcom/android/systemui/media/MediaViewController;->firstRefresh:Z
-
-    if-nez v0, :cond_0
-
     iget-object v0, p0, Lcom/android/systemui/media/MediaViewController;->viewStates:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
+    iget-boolean v0, p0, Lcom/android/systemui/media/MediaViewController;->firstRefresh:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-direct {p0}, Lcom/android/systemui/media/MediaViewController;->ensureAllMeasurements()V
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/android/systemui/media/MediaViewController;->firstRefresh:Z
+
+    :cond_0
     iget v0, p0, Lcom/android/systemui/media/MediaViewController;->currentStartLocation:I
 
     iget v1, p0, Lcom/android/systemui/media/MediaViewController;->currentEndLocation:I
@@ -755,11 +946,6 @@
     const/4 v3, 0x1
 
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/systemui/media/MediaViewController;->setCurrentState(IIFZ)V
-
-    :cond_0
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/android/systemui/media/MediaViewController;->firstRefresh:Z
 
     return-void
 .end method
@@ -773,276 +959,220 @@
 .end method
 
 .method public final setCurrentState(IIFZ)V
-    .locals 15
+    .locals 10
 
-    move-object v0, p0
+    iput p2, p0, Lcom/android/systemui/media/MediaViewController;->currentEndLocation:I
 
-    move/from16 v4, p3
+    iput p1, p0, Lcom/android/systemui/media/MediaViewController;->currentStartLocation:I
 
-    move/from16 v1, p2
+    iput p3, p0, Lcom/android/systemui/media/MediaViewController;->currentTransitionProgress:F
 
-    iput v1, v0, Lcom/android/systemui/media/MediaViewController;->currentEndLocation:I
+    iget-boolean v0, p0, Lcom/android/systemui/media/MediaViewController;->animateNextStateChange:Z
 
-    move/from16 v2, p1
+    const/4 v1, 0x0
 
-    iput v2, v0, Lcom/android/systemui/media/MediaViewController;->currentStartLocation:I
-
-    iput v4, v0, Lcom/android/systemui/media/MediaViewController;->currentTransitionProgress:F
-
-    iget-boolean v3, v0, Lcom/android/systemui/media/MediaViewController;->animateNextStateChange:Z
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x1
-
-    if-eqz v3, :cond_0
+    if-eqz v0, :cond_0
 
     if-nez p4, :cond_0
 
-    move v10, v6
+    const/4 v0, 0x1
+
+    move v5, v0
 
     goto :goto_0
 
     :cond_0
-    move v10, v5
+    move v5, v1
 
     :goto_0
-    iget-object v3, v0, Lcom/android/systemui/media/MediaViewController;->mediaHostStatesManager:Lcom/android/systemui/media/MediaHostStatesManager;
+    iget-object v0, p0, Lcom/android/systemui/media/MediaViewController;->mediaHostStatesManager:Lcom/android/systemui/media/MediaHostStatesManager;
 
-    invoke-virtual {v3}, Lcom/android/systemui/media/MediaHostStatesManager;->getMediaHostStates()Ljava/util/Map;
+    invoke-virtual {v0}, Lcom/android/systemui/media/MediaHostStatesManager;->getMediaHostStates()Ljava/util/Map;
 
-    move-result-object v3
+    move-result-object v0
 
-    invoke-static/range {p1 .. p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    invoke-interface {v3, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/systemui/media/MediaHostState;
+
+    if-eqz v0, :cond_9
+
+    iget-object v2, p0, Lcom/android/systemui/media/MediaViewController;->mediaHostStatesManager:Lcom/android/systemui/media/MediaHostStatesManager;
+
+    invoke-virtual {v2}, Lcom/android/systemui/media/MediaHostStatesManager;->getMediaHostStates()Ljava/util/Map;
+
+    move-result-object v2
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-interface {v2, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/systemui/media/MediaHostState;
 
-    iget-object v3, v0, Lcom/android/systemui/media/MediaViewController;->mediaHostStatesManager:Lcom/android/systemui/media/MediaHostStatesManager;
-
-    invoke-virtual {v3}, Lcom/android/systemui/media/MediaHostStatesManager;->getMediaHostStates()Ljava/util/Map;
+    invoke-direct {p0, v0}, Lcom/android/systemui/media/MediaViewController;->obtainViewState(Lcom/android/systemui/media/MediaHostState;)Lcom/android/systemui/util/animation/TransitionViewState;
 
     move-result-object v3
 
-    invoke-static/range {p2 .. p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    if-eqz v3, :cond_9
 
-    move-result-object v1
+    iget-object v4, p0, Lcom/android/systemui/media/MediaViewController;->tmpState2:Lcom/android/systemui/util/animation/TransitionViewState;
 
-    invoke-interface {v3, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {p0, v3, p2, v4}, Lcom/android/systemui/media/MediaViewController;->updateViewStateToCarouselSize(Lcom/android/systemui/util/animation/TransitionViewState;ILcom/android/systemui/util/animation/TransitionViewState;)Lcom/android/systemui/util/animation/TransitionViewState;
 
-    move-result-object v1
+    move-result-object p2
 
-    check-cast v1, Lcom/android/systemui/media/MediaHostState;
+    if-eqz p2, :cond_8
 
-    if-eqz v1, :cond_2
+    iget-object v3, p0, Lcom/android/systemui/media/MediaViewController;->layoutController:Lcom/android/systemui/util/animation/TransitionLayoutController;
 
-    invoke-interface {v1}, Lcom/android/systemui/media/MediaHostState;->getVisible()Z
+    invoke-virtual {v3, p2}, Lcom/android/systemui/util/animation/TransitionLayoutController;->setMeasureState(Lcom/android/systemui/util/animation/TransitionViewState;)V
 
-    move-result v3
+    iput-boolean v1, p0, Lcom/android/systemui/media/MediaViewController;->animateNextStateChange:Z
 
-    if-eq v3, v6, :cond_1
+    iget-object v1, p0, Lcom/android/systemui/media/MediaViewController;->transitionLayout:Lcom/android/systemui/util/animation/TransitionLayout;
 
-    goto :goto_1
-
-    :cond_1
-    move v3, v5
-
-    goto :goto_2
-
-    :cond_2
-    :goto_1
-    move-object v1, v2
-
-    move v3, v6
-
-    :goto_2
-    if-eqz v2, :cond_4
-
-    invoke-interface {v2}, Lcom/android/systemui/media/MediaHostState;->getVisible()Z
-
-    move-result v7
-
-    if-eq v7, v6, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    move v7, v5
-
-    goto :goto_4
-
-    :cond_4
-    :goto_3
-    move-object v2, v1
-
-    move v7, v6
-
-    :goto_4
-    if-eqz v2, :cond_10
-
-    if-nez v1, :cond_5
-
-    goto/16 :goto_a
-
-    :cond_5
-    invoke-direct {p0, v1}, Lcom/android/systemui/media/MediaViewController;->obtainViewState(Lcom/android/systemui/media/MediaHostState;)Lcom/android/systemui/util/animation/TransitionViewState;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_10
-
-    const/4 v8, 0x0
-
-    if-eqz v3, :cond_6
-
-    invoke-static {v1, v8, v6, v8}, Lcom/android/systemui/util/animation/TransitionViewState;->copy$default(Lcom/android/systemui/util/animation/TransitionViewState;Lcom/android/systemui/util/animation/TransitionViewState;ILjava/lang/Object;)Lcom/android/systemui/util/animation/TransitionViewState;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v5}, Lcom/android/systemui/util/animation/TransitionViewState;->setHeight(I)V
-
-    :cond_6
-    move-object v9, v1
-
-    iget-object v1, v0, Lcom/android/systemui/media/MediaViewController;->layoutController:Lcom/android/systemui/util/animation/TransitionLayoutController;
-
-    invoke-virtual {v1, v9}, Lcom/android/systemui/util/animation/TransitionLayoutController;->setMeasureState(Lcom/android/systemui/util/animation/TransitionViewState;)V
-
-    iput-boolean v5, v0, Lcom/android/systemui/media/MediaViewController;->animateNextStateChange:Z
-
-    iget-object v1, v0, Lcom/android/systemui/media/MediaViewController;->transitionLayout:Lcom/android/systemui/util/animation/TransitionLayout;
-
-    if-nez v1, :cond_7
+    if-nez v1, :cond_1
 
     return-void
 
-    :cond_7
+    :cond_1
     invoke-direct {p0, v2}, Lcom/android/systemui/media/MediaViewController;->obtainViewState(Lcom/android/systemui/media/MediaHostState;)Lcom/android/systemui/util/animation/TransitionViewState;
 
     move-result-object v1
 
-    if-eqz v7, :cond_9
+    iget-object v3, p0, Lcom/android/systemui/media/MediaViewController;->tmpState3:Lcom/android/systemui/util/animation/TransitionViewState;
 
-    if-eqz v1, :cond_8
+    invoke-direct {p0, v1, p1, v3}, Lcom/android/systemui/media/MediaViewController;->updateViewStateToCarouselSize(Lcom/android/systemui/util/animation/TransitionViewState;ILcom/android/systemui/util/animation/TransitionViewState;)Lcom/android/systemui/util/animation/TransitionViewState;
 
-    invoke-static {v1, v8, v6, v8}, Lcom/android/systemui/util/animation/TransitionViewState;->copy$default(Lcom/android/systemui/util/animation/TransitionViewState;Lcom/android/systemui/util/animation/TransitionViewState;ILjava/lang/Object;)Lcom/android/systemui/util/animation/TransitionViewState;
+    move-result-object p1
 
-    move-result-object v8
+    invoke-interface {v0}, Lcom/android/systemui/media/MediaHostState;->getVisible()Z
 
-    :cond_8
-    if-eqz v8, :cond_a
+    move-result v1
 
-    invoke-virtual {v8, v5}, Lcom/android/systemui/util/animation/TransitionViewState;->setHeight(I)V
+    if-nez v1, :cond_3
 
-    goto :goto_5
+    if-eqz p1, :cond_7
 
-    :cond_9
-    move-object v8, v1
+    if-eqz v2, :cond_7
 
-    :cond_a
-    :goto_5
+    invoke-interface {v2}, Lcom/android/systemui/media/MediaHostState;->getVisible()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    iget-object p2, p0, Lcom/android/systemui/media/MediaViewController;->layoutController:Lcom/android/systemui/util/animation/TransitionLayoutController;
+
+    invoke-interface {v2}, Lcom/android/systemui/media/MediaHostState;->getDisappearParameters()Lcom/android/systemui/util/animation/DisappearParameters;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/systemui/media/MediaViewController;->tmpState:Lcom/android/systemui/util/animation/TransitionViewState;
+
+    invoke-virtual {p2, p1, v0, p3, v1}, Lcom/android/systemui/util/animation/TransitionLayoutController;->getGoneState(Lcom/android/systemui/util/animation/TransitionViewState;Lcom/android/systemui/util/animation/DisappearParameters;FLcom/android/systemui/util/animation/TransitionViewState;)Lcom/android/systemui/util/animation/TransitionViewState;
+
+    move-result-object p1
+
+    goto :goto_1
+
+    :cond_3
     const/high16 v1, 0x3f800000    # 1.0f
 
-    cmpg-float v1, v4, v1
+    if-eqz v2, :cond_4
 
-    if-eqz v1, :cond_f
-
-    if-nez v8, :cond_b
-
-    goto :goto_8
-
-    :cond_b
-    const/4 v1, 0x0
-
-    cmpg-float v5, v4, v1
-
-    if-nez v5, :cond_c
-
-    goto :goto_9
-
-    :cond_c
-    if-nez v3, :cond_e
-
-    if-eqz v7, :cond_d
-
-    goto :goto_6
-
-    :cond_d
-    iget-object v2, v0, Lcom/android/systemui/media/MediaViewController;->tmpPoint:Landroid/graphics/PointF;
-
-    invoke-virtual {v2, v1, v1}, Landroid/graphics/PointF;->set(FF)V
-
-    goto :goto_7
-
-    :cond_e
-    :goto_6
-    iget-object v1, v0, Lcom/android/systemui/media/MediaViewController;->tmpPoint:Landroid/graphics/PointF;
-
-    invoke-interface {v2}, Lcom/android/systemui/media/MediaHostState;->getPivotX()F
-
-    move-result v3
-
-    invoke-interface {v2}, Lcom/android/systemui/media/MediaHostState;->getPivotY()F
+    invoke-interface {v2}, Lcom/android/systemui/media/MediaHostState;->getVisible()Z
 
     move-result v2
 
-    invoke-virtual {v1, v3, v2}, Landroid/graphics/PointF;->set(FF)V
+    if-nez v2, :cond_4
 
-    :goto_7
-    iget-object v1, v0, Lcom/android/systemui/media/MediaViewController;->layoutController:Lcom/android/systemui/util/animation/TransitionLayoutController;
+    iget-object p1, p0, Lcom/android/systemui/media/MediaViewController;->layoutController:Lcom/android/systemui/util/animation/TransitionLayoutController;
 
-    iget-object v5, v0, Lcom/android/systemui/media/MediaViewController;->tmpPoint:Landroid/graphics/PointF;
+    invoke-interface {v0}, Lcom/android/systemui/media/MediaHostState;->getDisappearParameters()Lcom/android/systemui/util/animation/DisappearParameters;
 
-    iget-object v6, v0, Lcom/android/systemui/media/MediaViewController;->tmpState:Lcom/android/systemui/util/animation/TransitionViewState;
+    move-result-object v0
 
-    move-object v2, v8
+    sub-float/2addr v1, p3
 
-    move-object v3, v9
+    iget-object p3, p0, Lcom/android/systemui/media/MediaViewController;->tmpState:Lcom/android/systemui/util/animation/TransitionViewState;
 
-    move/from16 v4, p3
+    invoke-virtual {p1, p2, v0, v1, p3}, Lcom/android/systemui/util/animation/TransitionLayoutController;->getGoneState(Lcom/android/systemui/util/animation/TransitionViewState;Lcom/android/systemui/util/animation/DisappearParameters;FLcom/android/systemui/util/animation/TransitionViewState;)Lcom/android/systemui/util/animation/TransitionViewState;
 
-    invoke-virtual/range {v1 .. v6}, Lcom/android/systemui/util/animation/TransitionLayoutController;->getInterpolatedState(Lcom/android/systemui/util/animation/TransitionViewState;Lcom/android/systemui/util/animation/TransitionViewState;FLandroid/graphics/PointF;Lcom/android/systemui/util/animation/TransitionViewState;)V
+    move-result-object p1
 
-    iget-object v1, v0, Lcom/android/systemui/media/MediaViewController;->tmpState:Lcom/android/systemui/util/animation/TransitionViewState;
+    :goto_1
+    move-object v3, p1
 
-    move-object v8, v1
+    goto :goto_3
 
-    goto :goto_9
+    :cond_4
+    cmpg-float v0, p3, v1
 
-    :cond_f
-    :goto_8
-    move-object v8, v9
+    if-eqz v0, :cond_7
 
-    :goto_9
-    invoke-virtual {v8}, Lcom/android/systemui/util/animation/TransitionViewState;->getWidth()I
+    if-nez p1, :cond_5
 
-    move-result v1
+    goto :goto_2
 
-    iput v1, v0, Lcom/android/systemui/media/MediaViewController;->currentWidth:I
+    :cond_5
+    const/4 v0, 0x0
 
-    invoke-virtual {v8}, Lcom/android/systemui/util/animation/TransitionViewState;->getHeight()I
+    cmpg-float v0, p3, v0
 
-    move-result v1
+    if-nez v0, :cond_6
 
-    iput v1, v0, Lcom/android/systemui/media/MediaViewController;->currentHeight:I
+    goto :goto_1
 
-    iget-object v7, v0, Lcom/android/systemui/media/MediaViewController;->layoutController:Lcom/android/systemui/util/animation/TransitionLayoutController;
+    :cond_6
+    iget-object v0, p0, Lcom/android/systemui/media/MediaViewController;->layoutController:Lcom/android/systemui/util/animation/TransitionLayoutController;
 
-    iget-wide v11, v0, Lcom/android/systemui/media/MediaViewController;->animationDuration:J
+    iget-object v1, p0, Lcom/android/systemui/media/MediaViewController;->tmpState:Lcom/android/systemui/util/animation/TransitionViewState;
 
-    iget-wide v13, v0, Lcom/android/systemui/media/MediaViewController;->animationDelay:J
+    invoke-virtual {v0, p1, p2, p3, v1}, Lcom/android/systemui/util/animation/TransitionLayoutController;->getInterpolatedState(Lcom/android/systemui/util/animation/TransitionViewState;Lcom/android/systemui/util/animation/TransitionViewState;FLcom/android/systemui/util/animation/TransitionViewState;)Lcom/android/systemui/util/animation/TransitionViewState;
 
-    move/from16 v9, p4
+    move-result-object p1
 
-    invoke-virtual/range {v7 .. v14}, Lcom/android/systemui/util/animation/TransitionLayoutController;->setState(Lcom/android/systemui/util/animation/TransitionViewState;ZZJJ)V
+    goto :goto_1
 
-    :cond_10
-    :goto_a
+    :cond_7
+    :goto_2
+    move-object v3, p2
+
+    :goto_3
+    iget-object v2, p0, Lcom/android/systemui/media/MediaViewController;->layoutController:Lcom/android/systemui/util/animation/TransitionLayoutController;
+
+    iget-wide v6, p0, Lcom/android/systemui/media/MediaViewController;->animationDuration:J
+
+    iget-wide v8, p0, Lcom/android/systemui/media/MediaViewController;->animationDelay:J
+
+    move v4, p4
+
+    invoke-virtual/range {v2 .. v9}, Lcom/android/systemui/util/animation/TransitionLayoutController;->setState(Lcom/android/systemui/util/animation/TransitionViewState;ZZJJ)V
+
+    return-void
+
+    :cond_8
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->throwNpe()V
+
+    const/4 p0, 0x0
+
+    throw p0
+
+    :cond_9
     return-void
 .end method
 

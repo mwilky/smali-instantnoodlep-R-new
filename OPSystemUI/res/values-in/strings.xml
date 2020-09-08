@@ -39,6 +39,11 @@
     <string name="abc_slice_updated">Diupdate %1$s</string>
     <string name="abc_slices_permission_request">%1$s ingin menampilkan potongan %2$s</string>
     <string name="abc_toolbar_collapse_description">Ciutkan</string>
+    <string name="about_action_bar_title">Tentang</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Kebijakan Privasi</string>
+    <string name="about_release_note_title">Perbarui log:</string>
+    <string name="about_terms_service">Ketentuan Layanan</string>
     <string name="accessibility_accessibility_button">Aksesibilitas</string>
     <string name="accessibility_action_divider_bottom_full">Layar penuh di bawah</string>
     <string name="accessibility_action_divider_left_30">Kiri 30%</string>
@@ -598,10 +603,15 @@ Pilihan"</string>
     <string name="controls_favorite_other_zone_header">Lainnya</string>
     <string name="controls_favorite_rearrange">Tahan &amp; tarik untuk mengatur ulang kontrol</string>
     <string name="controls_favorite_removed">Semua kontrol dihapus</string>
+    <string name="controls_favorite_see_other_apps">Lihat aplikasi lainnya</string>
     <string name="controls_favorite_subtitle">Pilih kontrol yang akan diakses dari menu daya</string>
     <string name="controls_favorite_toast_no_changes">Perubahan tidak disimpan</string>
     <string name="controls_in_progress">Dalam proses</string>
+    <string name="controls_media_close_session">Menyembunyikan sesi saat ini.</string>
+    <string name="controls_media_dismiss_button">Sembunyikan</string>
     <string name="controls_media_resume">Lanjutkan</string>
+    <string name="controls_media_settings_button">Setelan</string>
+    <string name="controls_media_title">Media</string>
     <string name="controls_menu_add">Tambahkan kontrol</string>
     <string name="controls_menu_edit">Edit kontrol</string>
     <string name="controls_open_app">Buka aplikasi</string>
@@ -692,8 +702,8 @@ Jika Anda melanjutkan, tarif penggunaan data mungkin berlaku."</string>
     <string name="disable_carrier_button_text">Nonaktifkan eSIM</string>
     <string name="disable_overlays">Nonaktifkan lapisan HW</string>
     <string name="disable_overlays_summary">Selalu gunakan GPU untuk pengomposisian layar</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">Hubungi admin untuk detailnya</string>
+    <string name="disable_tether_notification_title">Penambatan dinonaktifkan</string>
     <string name="disable_vpn">Nonaktifkan VPN</string>
     <string name="disabled">Dinonaktifkan</string>
     <string name="disabled_by_admin">Dinonaktifkan oleh admin</string>
@@ -701,6 +711,8 @@ Jika Anda melanjutkan, tarif penggunaan data mungkin berlaku."</string>
     <string name="disconnect_vpn">Putuskan sambungan VPN</string>
     <string name="dnd_is_off">Fitur Jangan Ganggu nonaktif</string>
     <string name="dnd_suppressing_shade_text">Notifikasi dijeda oleh mode Jangan Ganggu</string>
+    <string name="do_disclosure_generic">Perangkat ini milik organisasi Anda</string>
+    <string name="do_disclosure_with_name">Perangkat ini milik %s</string>
     <string name="do_not_silence">Jangan bisukan</string>
     <string name="do_not_silence_block">Jangan bisukan atau blokir</string>
     <string name="dock_alignment_not_charging">Sejajarkan ulang ponsel untuk mengisi daya secara nirkabel</string>
@@ -711,6 +723,7 @@ Jika Anda melanjutkan, tarif penggunaan data mungkin berlaku."</string>
     <string name="drag_to_rearrange_tiles">Tahan dan tarik untuk mengatur ulang kartu</string>
     <string name="drag_to_remove_disabled">Anda membutuhkan setidaknya %1$d kartu</string>
     <string name="drag_to_remove_tiles">Tarik ke sini untuk menghapus</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">Seret petak untuk menata ulang. Ketuk menampilkan atau menyembunyikan.</string>
     <string name="empty_shade_text">Tidak ada notifikasi</string>
     <string name="enable_adb">Debugging USB</string>
@@ -1086,6 +1099,7 @@ Coba lagi dalam %2$d detik."</string>
     <string name="left_nav_bar_button_type">Jenis tombol ekstra kiri</string>
     <string name="legacy_vpn_name">VPN</string>
     <string name="loading_injected_setting_summary">Memuat…</string>
+    <string name="loading_text">Memuat...</string>
     <string name="local_backup_password_summary_change">Ketuk guna mengubah atau menghapus sandi untuk cadangan lengkap desktop</string>
     <string name="local_backup_password_summary_none">Saat ini cadangan desktop penuh tidak dilindungi</string>
     <string name="local_backup_password_title">Sandi cadangan desktop</string>
@@ -1170,8 +1184,18 @@ Hubungi admin untuk mendapatkan informasi lebih lanjut."</string>
     <string name="monitoring_description_do_learn_more_separator">" "</string>
     <string name="monitoring_description_managed_profile_ca_certificate">Organisasi Anda menginstal otoritas sertifikat di profil kerja. Traffic jaringan aman Anda mungkin dipantau atau diubah.</string>
     <string name="monitoring_description_managed_profile_named_vpn">Profil kerja Anda tersambung ke %1$s, yang dapat memantau aktivitas jaringan, termasuk email, aplikasi, dan situs.</string>
+    <string name="monitoring_description_management">"Perangkat ini milik organisasi Anda.
+
+Admin IT Anda dapat memantau dan mengelola setelan, akses perusahaan, aplikasi, data yang terkait dengan perangkat, dan informasi lokasi perangkat.
+
+Untuk informasi selengkapnya, hubungi admin IT Anda."</string>
     <string name="monitoring_description_management_ca_certificate">Organisasi Anda menginstal otoritas sertifikat di perangkat ini. Traffic jaringan aman Anda mungkin dipantau atau diubah.</string>
     <string name="monitoring_description_management_network_logging">Admin telah mengaktifkan pencatatan jaringan, yang memantau traffic di perangkat.</string>
+    <string name="monitoring_description_named_management">"Perangkat ini milik %1$s.
+
+Admin IT Anda dapat memantau dan mengelola setelan, akses perusahaan, aplikasi, data yang terkait dengan perangkat, dan informasi lokasi perangkat.
+
+Untuk informasi selengkapnya, hubungi admin IT Anda."</string>
     <string name="monitoring_description_named_vpn">Anda tersambung ke %1$s, yang dapat memantau aktivitas jaringan, termasuk email, aplikasi, dan situs web.</string>
     <string name="monitoring_description_network_logging">"Admin telah mengaktifkan pencatatan log jaringan, yang memantau traffic di perangkat.
 
@@ -1307,8 +1331,14 @@ Anda juga tersambung ke VPN, yang dapat memantau aktivitas jaringan."</string>
     <string name="oneplus_threekey_navigation_sound">Semua suara diizinkan</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Ini dapat diaktifkan dengan sakelar di atas</string>
     <string name="oneplus_threekey_navigation_vibration">Getar saja</string>
-    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> membuka</string>
+    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>dibuka</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> membuka</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">Memasangkan...</string>
     <string name="op_earphone_connected_fail">Gagal Memasangkan. Anda dapat memeriksa status headset dan Bluetooth.</string>
     <string name="op_earphone_connected_success">Dipasangkan. Ketuk untuk mengatur selengkapnya.</string>
@@ -1338,9 +1368,10 @@ Anda juga tersambung ke VPN, yang dapat memantau aktivitas jaringan."</string>
     <string name="op_notification_channel_summary_low">Notifikasi yang kurang penting tanpa suara atau getar.</string>
     <string name="op_notification_section_header_gentle">Notifikasi lainnya</string>
     <string name="op_notification_silence_title">Lainnya</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">Mode gelap</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s digunakan</string>
-    <string name="op_quick_settings_night_display_label">Mode malam</string>
+    <string name="op_quick_settings_night_display_label">Kenyamanan penglihatan</string>
     <string name="op_quick_settings_night_display_summary_off">Mode malam nonaktif, ketuk untuk mengaktifkan</string>
     <string name="op_quick_settings_night_display_summary_on">Mode malam aktif, ketuk untuk menonaktifkan</string>
     <string name="op_read_mode2_dialog_black">Efek mono</string>
@@ -1552,8 +1583,20 @@ Anda juga tersambung ke VPN, yang dapat memantau aktivitas jaringan."</string>
     <string name="quick_settings_data_switch_toast_1">Hanya satu kartu SIM terpasang</string>
     <string name="quick_settings_default_data_card">Kartu data default</string>
     <string name="quick_settings_disclosure_managed_profile_monitoring">Organisasi dapat memantau traffic jaringan di profil kerja</string>
+    <string name="quick_settings_disclosure_managed_profile_named_vpn">Profil kerja Anda terhubung ke %1$s</string>
+    <string name="quick_settings_disclosure_management">Perangkat ini milik organisasi Anda</string>
+    <string name="quick_settings_disclosure_management_monitoring">Organisasi Anda memiliki perangkat ini dan mungkin memantau traffic jaringan</string>
+    <string name="quick_settings_disclosure_management_named_vpn">Perangkat ini milik organisasi Anda dan terhubung ke %1$s</string>
+    <string name="quick_settings_disclosure_management_vpns">Perangkat ini milik organisasi Anda dan terhubung ke VPN</string>
     <string name="quick_settings_disclosure_monitoring">Jaringan mungkin dipantau</string>
     <string name="quick_settings_disclosure_named_managed_profile_monitoring">%1$s mungkin memantau traffic jaringan di profil kerja Anda</string>
+    <string name="quick_settings_disclosure_named_management">Perangkat ini milik %1$s</string>
+    <string name="quick_settings_disclosure_named_management_monitoring">%1$s memiliki perangkat ini dan mungkin memantau traffic jaringan</string>
+    <string name="quick_settings_disclosure_named_management_named_vpn">Perangkat ini milik %1$s dan terhubung ke %2$s</string>
+    <string name="quick_settings_disclosure_named_management_vpns">Perangkat ini milik %1$s dan terhubung ke VPN</string>
+    <string name="quick_settings_disclosure_named_vpn">Perangkat ini terhubung ke %1$s</string>
+    <string name="quick_settings_disclosure_personal_profile_named_vpn">Profil pribadi Anda terhubung ke %1$s</string>
+    <string name="quick_settings_disclosure_vpns">Perangkat ini terhubung ke VPN</string>
     <string name="quick_settings_dnd_alarms_label">Hanya alarm</string>
     <string name="quick_settings_dnd_label">Jangan Ganggu</string>
     <string name="quick_settings_dnd_none_label">Senyap total</string>
@@ -1836,7 +1879,7 @@ diawasi"</string>
     <string name="tethered_notification_hybrid_sharing_mobile">Berbagi data seluler, klik untuk memasuki Pengaturan</string>
     <string name="tethered_notification_hybrid_sharing_none">Tidak ada jaringan untuk dibagikan, klik untuk memasuki Pengaturan</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Berbagi Wi-Fi, klik untuk memasuki Pengaturan</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">Ketuk untuk menyiapkan.</string>
     <string name="tethered_notification_multi_device_message">%1$s perangkat tersambung</string>
     <string name="tethered_notification_multi_tether_title">Penambatan dan HotSpot Seluler aktif</string>
     <string name="tethered_notification_no_device_message">Tidak ada perangkat tersambung</string>
@@ -2063,7 +2106,17 @@ Alamat Wi‑Fi (BSSID)
     <string name="wifi_verbose_logging">Aktifkan Pencatatan Log Panjang Wi-Fi</string>
     <string name="wifi_verbose_logging_summary">Tingkatkan level pencatatan log Wi-Fi, tampilkan per SSID RSSI di Pemilih Wi‑Fi</string>
     <string name="window_animation_scale_title">Skala animasi jendela</string>
-    <string name="work_life_balance_mode">Work-Life Balance</string>
+    <string name="wlb_break_mode_active">Aktif</string>
+    <string name="wlb_break_mode_active_text">%1$s Mode · %2$s</string>
+    <string name="wlb_break_mode_on_break">Sedang Beristirahat</string>
+    <string name="wlb_break_mode_resume">Lanjutkan</string>
+    <string name="wlb_break_mode_take_break">Beristirahat</string>
+    <string name="wlb_qs_detail_break_mode">Mode Jeda</string>
+    <string name="wlb_qs_detail_break_mode_desc">Otomatis lanjutkan ke mode sebelumnya setelah 30 Menit</string>
+    <string name="wlb_qs_detail_life_mode">Mode Life</string>
+    <string name="wlb_qs_detail_more_setting">Pengaturan Lain</string>
+    <string name="wlb_qs_detail_work_mode">Mode Work</string>
+    <string name="work_life_balance_mode">Work Life Balance</string>
     <string name="zen_alarm_warning">Anda tidak akan mendengar alarm berikutnya %1$s</string>
     <string name="zen_alarm_warning_indef">Anda tidak akan mendengar alarm berikutnya %1$s jika Anda tidak menonaktifkannya sebelum waktu tersebut</string>
     <string name="zen_alarms_introduction">Anda tidak akan terganggu oleh suara dan getaran, kecuali dari alarm. Anda akan tetap mendengar apa pun yang telah dipilih untuk diputar, termasuk musik, video, dan game.</string>
@@ -2084,5 +2137,5 @@ Alamat Wi‑Fi (BSSID)
     <string name="zen_silence_introduction_voice">SEMUA suara dan getaran, termasuk dari alarm, musik, video, dan game akan diblokir. Anda tetap dapat melakukan panggilan telepon.</string>
     <string name="zzz_op_global_action_bootloader">Bootloader</string>
     <string name="zzz_op_global_action_recovery">Pemulihan</string>
-    <string name="zzz_op_quick_pay_no_install_message">Instal apl pembayaran untuk menggunakan Quick Pay</string>
+    <string name="zzz_op_quick_pay_no_install_message">Instal apl pembayaran untuk menggunakan Pembayaran Cepat</string>
 </resources>

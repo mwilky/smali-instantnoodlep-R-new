@@ -56,17 +56,7 @@
 .end method
 
 .method private flingEndAction()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/android/systemui/pip/phone/PipTouchHandler$DefaultPipTouchGesture;->this$0:Lcom/android/systemui/pip/phone/PipTouchHandler;
-
-    invoke-static {v0}, Lcom/android/systemui/pip/phone/PipTouchHandler;->access$400(Lcom/android/systemui/pip/phone/PipTouchHandler;)Lcom/android/systemui/pip/phone/PipTouchState;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/android/systemui/pip/phone/PipTouchState;->setAllowTouches(Z)V
+    .locals 1
 
     iget-boolean v0, p0, Lcom/android/systemui/pip/phone/PipTouchHandler$DefaultPipTouchGesture;->mShouldHideMenuAfterFling:Z
 
@@ -499,6 +489,14 @@
 
     :cond_3
     iput-boolean v1, p0, Lcom/android/systemui/pip/phone/PipTouchHandler$DefaultPipTouchGesture;->mShouldHideMenuAfterFling:Z
+
+    iget-object p1, p0, Lcom/android/systemui/pip/phone/PipTouchHandler$DefaultPipTouchGesture;->this$0:Lcom/android/systemui/pip/phone/PipTouchHandler;
+
+    invoke-static {p1}, Lcom/android/systemui/pip/phone/PipTouchHandler;->access$400(Lcom/android/systemui/pip/phone/PipTouchHandler;)Lcom/android/systemui/pip/phone/PipTouchState;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/android/systemui/pip/phone/PipTouchState;->reset()V
 
     iget-object p1, p0, Lcom/android/systemui/pip/phone/PipTouchHandler$DefaultPipTouchGesture;->this$0:Lcom/android/systemui/pip/phone/PipTouchHandler;
 

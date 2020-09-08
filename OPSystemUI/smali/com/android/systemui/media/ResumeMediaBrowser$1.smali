@@ -96,6 +96,14 @@
 
     iget-object p1, p0, Lcom/android/systemui/media/ResumeMediaBrowser$1;->this$0:Lcom/android/systemui/media/ResumeMediaBrowser;
 
+    invoke-static {p1}, Lcom/android/systemui/media/ResumeMediaBrowser;->access$100(Lcom/android/systemui/media/ResumeMediaBrowser;)Landroid/media/browse/MediaBrowser;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    iget-object p1, p0, Lcom/android/systemui/media/ResumeMediaBrowser$1;->this$0:Lcom/android/systemui/media/ResumeMediaBrowser;
+
     invoke-static {p1}, Lcom/android/systemui/media/ResumeMediaBrowser;->access$200(Lcom/android/systemui/media/ResumeMediaBrowser;)Lcom/android/systemui/media/ResumeMediaBrowser$Callback;
 
     move-result-object p1

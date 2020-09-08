@@ -671,7 +671,7 @@
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v0, "setStreamVolume: No token found for stream: "
+    const-string/jumbo v0, "setStreamVolume: No token found for stream: "
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

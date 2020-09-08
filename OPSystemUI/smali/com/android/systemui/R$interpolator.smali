@@ -4,6 +4,4 @@
 
 
 # static fields
-.field public static final op_control_interpolator_fast_out_slow_in_reverse:I = 0x7f0d0031
-
-.field public static final op_control_interpolator_fast_out_slow_in_standard:I = 0x7f0d0032
+.field public static final op_control_interpolator_fast_out_slow_in_standard:I = 0x7f0d0033

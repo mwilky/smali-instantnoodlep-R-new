@@ -2138,13 +2138,22 @@
 .method private notifySplitScreenBoundsChanged()V
     .locals 5
 
-    iget-object v0, p0, Lcom/android/systemui/stackdivider/DividerView;->mOtherTaskRect:Landroid/graphics/Rect;
+    iget-object v0, p0, Lcom/android/systemui/stackdivider/DividerView;->mSplitLayout:Lcom/android/systemui/stackdivider/SplitDisplayLayout;
 
-    iget-object v1, p0, Lcom/android/systemui/stackdivider/DividerView;->mSplitLayout:Lcom/android/systemui/stackdivider/SplitDisplayLayout;
+    iget-object v1, v0, Lcom/android/systemui/stackdivider/SplitDisplayLayout;->mPrimary:Landroid/graphics/Rect;
 
-    iget-object v1, v1, Lcom/android/systemui/stackdivider/SplitDisplayLayout;->mSecondary:Landroid/graphics/Rect;
+    if-eqz v1, :cond_5
 
-    invoke-virtual {v0, v1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    iget-object v0, v0, Lcom/android/systemui/stackdivider/SplitDisplayLayout;->mSecondary:Landroid/graphics/Rect;
+
+    if-nez v0, :cond_0
+
+    goto/16 :goto_2
+
+    :cond_0
+    iget-object v1, p0, Lcom/android/systemui/stackdivider/DividerView;->mOtherTaskRect:Landroid/graphics/Rect;
+
+    invoke-virtual {v1, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     iget-object v0, p0, Lcom/android/systemui/stackdivider/DividerView;->mTmpRect:Landroid/graphics/Rect;
 
@@ -2180,7 +2189,7 @@
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     iget-object v0, p0, Lcom/android/systemui/stackdivider/DividerView;->mTmpRect:Landroid/graphics/Rect;
 
@@ -2190,7 +2199,7 @@
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     iget-object v0, p0, Lcom/android/systemui/stackdivider/DividerView;->mTmpRect:Landroid/graphics/Rect;
 
     iget v2, p0, Lcom/android/systemui/stackdivider/DividerView;->mDividerPositionX:I
@@ -2224,33 +2233,33 @@
 
     const/4 v2, 0x1
 
-    if-eq v0, v2, :cond_3
+    if-eq v0, v2, :cond_4
 
     const/4 v2, 0x2
 
-    if-eq v0, v2, :cond_2
+    if-eq v0, v2, :cond_3
 
     const/4 v2, 0x3
 
-    if-eq v0, v2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    iget-object v0, p0, Lcom/android/systemui/stackdivider/DividerView;->mTmpRect:Landroid/graphics/Rect;
-
-    iput v1, v0, Landroid/graphics/Rect;->right:I
+    if-eq v0, v2, :cond_2
 
     goto :goto_1
 
     :cond_2
     iget-object v0, p0, Lcom/android/systemui/stackdivider/DividerView;->mTmpRect:Landroid/graphics/Rect;
 
-    iput v1, v0, Landroid/graphics/Rect;->top:I
+    iput v1, v0, Landroid/graphics/Rect;->right:I
 
     goto :goto_1
 
     :cond_3
+    iget-object v0, p0, Lcom/android/systemui/stackdivider/DividerView;->mTmpRect:Landroid/graphics/Rect;
+
+    iput v1, v0, Landroid/graphics/Rect;->top:I
+
+    goto :goto_1
+
+    :cond_4
     iget-object v0, p0, Lcom/android/systemui/stackdivider/DividerView;->mTmpRect:Landroid/graphics/Rect;
 
     iput v1, v0, Landroid/graphics/Rect;->left:I
@@ -2270,6 +2279,8 @@
 
     invoke-virtual {v0, v1, p0}, Lcom/android/systemui/recents/OverviewProxyService;->notifySplitScreenBoundsChanged(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
 
+    :cond_5
+    :goto_2
     return-void
 .end method
 

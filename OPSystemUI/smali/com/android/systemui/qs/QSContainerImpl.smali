@@ -195,6 +195,25 @@
     return-void
 .end method
 
+.method private synthetic lambda$onFinishInflate$1(Ljava/lang/Boolean;)V
+    .locals 0
+
+    iget-object p1, p0, Lcom/android/systemui/qs/QSContainerImpl;->mQSPanel:Lcom/android/systemui/qs/QSPanel;
+
+    invoke-virtual {p1}, Landroid/widget/LinearLayout;->isShown()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lcom/android/systemui/qs/QSContainerImpl;->mAnimateBottomOnNextLayout:Z
+
+    :cond_0
+    return-void
+.end method
+
 .method private setBackgroundBottom(I)V
     .locals 0
 
@@ -596,6 +615,14 @@
     return-void
 .end method
 
+.method public synthetic lambda$onFinishInflate$1$QSContainerImpl(Ljava/lang/Boolean;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/systemui/qs/QSContainerImpl;->lambda$onFinishInflate$1(Ljava/lang/Boolean;)V
+
+    return-void
+.end method
+
 .method protected onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 1
 
@@ -710,6 +737,14 @@
     new-instance v1, Lcom/android/systemui/qs/-$$Lambda$QSContainerImpl$SmgcCxPvK9MpCttxm75WvXCaB3s;
 
     invoke-direct {v1, p0}, Lcom/android/systemui/qs/-$$Lambda$QSContainerImpl$SmgcCxPvK9MpCttxm75WvXCaB3s;-><init>(Lcom/android/systemui/qs/QSContainerImpl;)V
+
+    invoke-virtual {v0, v1}, Lcom/android/systemui/qs/QSPanel;->setMediaVisibilityChangedListener(Ljava/util/function/Consumer;)V
+
+    iget-object v0, p0, Lcom/android/systemui/qs/QSContainerImpl;->mQSPanel:Lcom/android/systemui/qs/QSPanel;
+
+    new-instance v1, Lcom/android/systemui/qs/-$$Lambda$QSContainerImpl$671EqL2XSP9H1_W3SpTM-CiE58Y;
+
+    invoke-direct {v1, p0}, Lcom/android/systemui/qs/-$$Lambda$QSContainerImpl$671EqL2XSP9H1_W3SpTM-CiE58Y;-><init>(Lcom/android/systemui/qs/QSContainerImpl;)V
 
     invoke-virtual {v0, v1}, Lcom/android/systemui/qs/QSPanel;->setMediaVisibilityChangedListener(Ljava/util/function/Consumer;)V
 

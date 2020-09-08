@@ -1,4 +1,4 @@
-.class public final Lcom/android/systemui/controls/management/ControlsRequestDialog;
+.class public Lcom/android/systemui/controls/management/ControlsRequestDialog;
 .super Lcom/android/systemui/util/LifecycleActivity;
 .source "ControlsRequestDialog.kt"
 
@@ -18,9 +18,9 @@
 
 .field private final callback:Lcom/android/systemui/controls/management/ControlsRequestDialog$callback$1;
 
-.field private component:Landroid/content/ComponentName;
-
 .field private control:Landroid/service/controls/Control;
+
+.field private controlComponent:Landroid/content/ComponentName;
 
 .field private final controller:Lcom/android/systemui/controls/controller/ControlsController;
 
@@ -103,7 +103,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/controls/management/ControlsRequestDialog;->controller:Lcom/android/systemui/controls/controller/ControlsController;
 
-    iget-object v1, p0, Lcom/android/systemui/controls/management/ControlsRequestDialog;->component:Landroid/content/ComponentName;
+    iget-object v1, p0, Lcom/android/systemui/controls/management/ControlsRequestDialog;->controlComponent:Landroid/content/ComponentName;
 
     const/4 v2, 0x0
 
@@ -223,7 +223,7 @@
     return v3
 
     :cond_7
-    const-string p0, "component"
+    const-string p0, "controlComponent"
 
     invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
 
@@ -235,7 +235,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/controls/management/ControlsRequestDialog;->controlsListingController:Lcom/android/systemui/controls/management/ControlsListingController;
 
-    iget-object p0, p0, Lcom/android/systemui/controls/management/ControlsRequestDialog;->component:Landroid/content/ComponentName;
+    iget-object p0, p0, Lcom/android/systemui/controls/management/ControlsRequestDialog;->controlComponent:Landroid/content/ComponentName;
 
     if-eqz p0, :cond_0
 
@@ -246,7 +246,7 @@
     return-object p0
 
     :cond_0
-    const-string p0, "component"
+    const-string p0, "controlComponent"
 
     invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
 
@@ -272,7 +272,7 @@
 
     sget-object v1, Lcom/android/systemui/controls/ui/RenderInfo;->Companion:Lcom/android/systemui/controls/ui/RenderInfo$Companion;
 
-    iget-object v3, p0, Lcom/android/systemui/controls/management/ControlsRequestDialog;->component:Landroid/content/ComponentName;
+    iget-object v3, p0, Lcom/android/systemui/controls/management/ControlsRequestDialog;->controlComponent:Landroid/content/ComponentName;
 
     const/4 v0, 0x0
 
@@ -504,7 +504,7 @@
     throw v0
 
     :cond_3
-    const-string p0, "component"
+    const-string p0, "controlComponent"
 
     invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
 
@@ -532,36 +532,32 @@
 
     const/4 p1, -0x1
 
-    if-ne p2, p1, :cond_6
+    if-ne p2, p1, :cond_7
 
     iget-object p1, p0, Lcom/android/systemui/controls/management/ControlsRequestDialog;->controller:Lcom/android/systemui/controls/controller/ControlsController;
 
-    invoke-virtual {p0}, Landroid/app/Activity;->getComponentName()Landroid/content/ComponentName;
+    iget-object p2, p0, Lcom/android/systemui/controls/management/ControlsRequestDialog;->controlComponent:Landroid/content/ComponentName;
 
-    move-result-object p2
+    const/4 v0, 0x0
 
-    const-string v0, "componentName"
+    if-eqz p2, :cond_6
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcom/android/systemui/controls/management/ControlsRequestDialog;->control:Landroid/service/controls/Control;
-
-    const/4 v1, 0x0
+    iget-object v1, p0, Lcom/android/systemui/controls/management/ControlsRequestDialog;->control:Landroid/service/controls/Control;
 
     const-string v2, "control"
 
-    if-eqz v0, :cond_5
+    if-eqz v1, :cond_5
 
-    invoke-virtual {v0}, Landroid/service/controls/Control;->getStructure()Ljava/lang/CharSequence;
+    invoke-virtual {v1}, Landroid/service/controls/Control;->getStructure()Ljava/lang/CharSequence;
 
-    move-result-object v0
+    move-result-object v1
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const-string v0, ""
+    const-string v1, ""
 
     :goto_0
     new-instance v3, Lcom/android/systemui/controls/controller/ControlInfo;
@@ -608,40 +604,47 @@
 
     invoke-virtual {v7}, Landroid/service/controls/Control;->getDeviceType()I
 
-    move-result v1
+    move-result v0
 
-    invoke-direct {v3, v4, v5, v6, v1}, Lcom/android/systemui/controls/controller/ControlInfo;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;I)V
+    invoke-direct {v3, v4, v5, v6, v0}, Lcom/android/systemui/controls/controller/ControlInfo;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;I)V
 
-    invoke-interface {p1, p2, v0, v3}, Lcom/android/systemui/controls/controller/ControlsController;->addFavorite(Landroid/content/ComponentName;Ljava/lang/CharSequence;Lcom/android/systemui/controls/controller/ControlInfo;)V
+    invoke-interface {p1, p2, v1, v3}, Lcom/android/systemui/controls/controller/ControlsController;->addFavorite(Landroid/content/ComponentName;Ljava/lang/CharSequence;Lcom/android/systemui/controls/controller/ControlInfo;)V
 
     goto :goto_1
 
     :cond_1
     invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
 
-    throw v1
+    throw v0
 
     :cond_2
     invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
 
-    throw v1
+    throw v0
 
     :cond_3
     invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
 
-    throw v1
+    throw v0
 
     :cond_4
     invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
 
-    throw v1
+    throw v0
 
     :cond_5
     invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
 
-    throw v1
+    throw v0
 
     :cond_6
+    const-string p0, "controlComponent"
+
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_7
     :goto_1
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
@@ -747,7 +750,7 @@
 
     if-eqz p1, :cond_3
 
-    iput-object p1, p0, Lcom/android/systemui/controls/management/ControlsRequestDialog;->component:Landroid/content/ComponentName;
+    iput-object p1, p0, Lcom/android/systemui/controls/management/ControlsRequestDialog;->controlComponent:Landroid/content/ComponentName;
 
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
@@ -834,7 +837,7 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v3, p0, Lcom/android/systemui/controls/management/ControlsRequestDialog;->component:Landroid/content/ComponentName;
+    iget-object v3, p0, Lcom/android/systemui/controls/management/ControlsRequestDialog;->controlComponent:Landroid/content/ComponentName;
 
     if-eqz v3, :cond_0
 
@@ -863,7 +866,7 @@
     return-void
 
     :cond_0
-    const-string p0, "component"
+    const-string p0, "controlComponent"
 
     invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
 

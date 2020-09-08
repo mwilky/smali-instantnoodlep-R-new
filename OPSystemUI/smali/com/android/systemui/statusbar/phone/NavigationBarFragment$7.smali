@@ -39,7 +39,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment$7;->this$0:Lcom/android/systemui/statusbar/phone/NavigationBarFragment;
 
-    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->access$1100(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)Ldagger/Lazy;
+    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->access$1200(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)Ldagger/Lazy;
 
     move-result-object p0
 

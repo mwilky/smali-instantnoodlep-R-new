@@ -616,37 +616,6 @@
     return-void
 .end method
 
-.method public final logTimeTickScheduled(JJ)V
-    .locals 3
-
-    iget-object p0, p0, Lcom/android/systemui/doze/DozeLogger;->buffer:Lcom/android/systemui/log/LogBuffer;
-
-    sget-object v0, Lcom/android/systemui/log/LogLevel;->DEBUG:Lcom/android/systemui/log/LogLevel;
-
-    sget-object v1, Lcom/android/systemui/doze/DozeLogger$logTimeTickScheduled$2;->INSTANCE:Lcom/android/systemui/doze/DozeLogger$logTimeTickScheduled$2;
-
-    invoke-virtual {p0}, Lcom/android/systemui/log/LogBuffer;->getFrozen()Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    const-string v2, "DozeLog"
-
-    invoke-virtual {p0, v2, v0, v1}, Lcom/android/systemui/log/LogBuffer;->obtain(Ljava/lang/String;Lcom/android/systemui/log/LogLevel;Lkotlin/jvm/functions/Function1;)Lcom/android/systemui/log/LogMessageImpl;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1, p2}, Lcom/android/systemui/log/LogMessage;->setLong1(J)V
-
-    invoke-interface {v0, p3, p4}, Lcom/android/systemui/log/LogMessage;->setLong2(J)V
-
-    invoke-virtual {p0, v0}, Lcom/android/systemui/log/LogBuffer;->push(Lcom/android/systemui/log/LogMessage;)V
-
-    :cond_0
-    return-void
-.end method
-
 .method public final logWakeDisplay(Z)V
     .locals 3
 

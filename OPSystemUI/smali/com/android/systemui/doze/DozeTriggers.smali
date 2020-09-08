@@ -1467,7 +1467,7 @@
 
     new-array v2, v3, [I
 
-    const/16 v5, 0x3e
+    const/16 v5, 0x3c
 
     const/4 v6, 0x0
 

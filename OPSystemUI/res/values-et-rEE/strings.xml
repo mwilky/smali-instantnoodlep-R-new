@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="about_action_bar_title">Teave</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Privaatsuspoliitika</string>
+    <string name="about_release_note_title">Uuenduste logi:</string>
+    <string name="about_terms_service">Teenusetingimused</string>
     <string name="accessibility_fingerprint_dialog_help_area">Spikrisõnumi ala</string>
     <string name="accessibility_hide">Peida</string>
     <string name="accessibility_phone_four_bars">Signaali neli tulpa.</string>
@@ -40,9 +45,10 @@ Kas lennurežiim on sisse lülitada?"</string>
     <string name="delete">Kustuta</string>
     <string name="denoise_notification">Madala tähtsusega teated</string>
     <string name="dialog_mhs_error">Oodake, kuni kinnitame..</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">Pöörduge üksikasjade saamiseks administraatori poole</string>
+    <string name="disable_tether_notification_title">Sidumine on keelatud</string>
     <string name="drag_to_add_tiles">Paanide lisamiseks lohistage</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">Paanide ümber paigutamiseks lohistage neid. Kuvamiseks või peitmiseks toksake.</string>
     <string name="end_call">Lõpeta</string>
     <string name="face_unlock_camera_error">Näotuvastusega lukuvabastus nurjus. Kaamerat kasutavad teised rakendused</string>
@@ -88,6 +94,7 @@ Pärast telefoni lähtestamist peate sisestama selle telefoniga seotud Google'i 
     <string name="kg_wrong_pattern_warning_one">Teil on veel 1 võimalus</string>
     <string name="kg_wrong_pin_warning">Teil on veel 2 võimalust</string>
     <string name="kg_wrong_pin_warning_one">Teil on veel 1 võimalus</string>
+    <string name="loading_text">Laadimine...</string>
     <string name="long_press_power_navigation_assist_content">"Häälassistendi avamiseks hoidke all \"toitenuppu\" 
 "</string>
     <string name="long_press_power_navigation_power_content">Toite väljalülitamiseks hoidke korraga all \"toitenuppu\" ja \"helitugevuse suurendamise nuppu\"</string>
@@ -129,8 +136,14 @@ Mobiilse kuupunkti tellimuse tühistamiseks külastage veebisaiti My Verizon võ
     <string name="oneplus_threekey_navigation_sound">Kõik helid lubatud</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Selle saab valikulülitiga sisse lülitada</string>
     <string name="oneplus_threekey_navigation_vibration">Ainult vibratsioon</string>
-    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> avamine</string>
-    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> avab</string>
+    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>avamine</string>
+    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>avamist</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">Seon...</string>
     <string name="op_earphone_connected_fail">Sidumine nurjus. Kontrollige peakomplekti ja Bluetoothi olekut.</string>
     <string name="op_earphone_connected_success">Seotud. Seadistamiseks toksake.</string>
@@ -160,9 +173,10 @@ Mobiilse kuupunkti tellimuse tühistamiseks külastage veebisaiti My Verizon võ
     <string name="op_notification_channel_summary_low">Vähem olulised teavitused ilma heli või vibratsioonita.</string>
     <string name="op_notification_section_header_gentle">Muud teavitused</string>
     <string name="op_notification_silence_title">Muu</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">Tume režiim</string>
     <string name="op_qs_data_usage_used">%1$s: kasutatud %2$s %3$s</string>
-    <string name="op_quick_settings_night_display_label">Öörežiim</string>
+    <string name="op_quick_settings_night_display_label">Nägemismugavus</string>
     <string name="op_quick_settings_night_display_summary_off">Öörežiim on väljas, sisse lülitamiseks toksake</string>
     <string name="op_quick_settings_night_display_summary_on">Öörežiim on sees, välja lülitamiseks toksake</string>
     <string name="op_read_mode2_dialog_black">Monoefekt</string>
@@ -264,7 +278,7 @@ Mobiilse kuupunkti tellimuse tühistamiseks külastage veebisaiti My Verizon võ
     <string name="tethered_notification_hybrid_sharing_mobile">Mobiilandmeside jagamine, klõpsake sätete avamiseks</string>
     <string name="tethered_notification_hybrid_sharing_none">Ühtki võrku ei ole jagamiseks saadaval, klõpsake sätete avamiseks</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Wi-Fi jagamine, klõpsake sätete avamiseks</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">Puudutage seadistamiseks.</string>
     <string name="tethered_notification_multi_device_message">%1$s ühendatud seadet</string>
     <string name="tethered_notification_multi_tether_title">Sidumine või Mobile HotSpot on aktiivne</string>
     <string name="tethered_notification_no_device_message">Ühendatud pole ühtki seadet</string>
@@ -292,7 +306,17 @@ Mobiilse kuupunkti tellimuse tühistamiseks külastage veebisaiti My Verizon võ
     <string name="volume_footer_slient">Hääletu</string>
     <string name="volume_footer_vibrate">Hääletu (vibreeri)</string>
     <string name="volume_vibrate">Vibreeri</string>
-    <string name="work_life_balance_mode">Work-Life Balance</string>
+    <string name="wlb_break_mode_active">Aktiivne</string>
+    <string name="wlb_break_mode_active_text">%1$s režiim · %2$s</string>
+    <string name="wlb_break_mode_on_break">Pausil</string>
+    <string name="wlb_break_mode_resume">Jätka</string>
+    <string name="wlb_break_mode_take_break">Tehke paus</string>
+    <string name="wlb_qs_detail_break_mode">Pausirežiim</string>
+    <string name="wlb_qs_detail_break_mode_desc">Jätkab 30 minuti pärast automaatselt eelmist režiimi</string>
+    <string name="wlb_qs_detail_life_mode">Eraelurežiim</string>
+    <string name="wlb_qs_detail_more_setting">Veel sätteid</string>
+    <string name="wlb_qs_detail_work_mode">Töörežiim</string>
+    <string name="work_life_balance_mode">Töö- ja eraelu tasakaal</string>
     <string name="zen_important_interruptions">Tähtsad teated</string>
     <string name="zen_interruption_level_all">Kõik teated</string>
     <string name="zen_no_interruptions">Hääletu</string>

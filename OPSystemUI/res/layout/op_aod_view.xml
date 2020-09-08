@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.oneplus.aod.bg.OpAodCanvas android:id="@id/op_aod_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" />
     <FrameLayout android:id="@id/op_aod_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
         <com.oneplus.aod.OpAodMain android:gravity="center_horizontal" android:id="@id/op_aod_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
             <FrameLayout android:id="@id/op_aod_clock_container" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" />
@@ -23,7 +24,7 @@
                 <TextView android:ellipsize="end" android:gravity="center" android:id="@id/owner_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/main_view_horizontal_margin" android:layout_marginTop="@dimen/owner_info_marginTop" android:layout_marginRight="@dimen/main_view_horizontal_margin" android:singleLine="true" style="@style/aod_owner_info" />
             </LinearLayout>
         </com.oneplus.aod.OpAodMain>
-        <com.oneplus.aod.OpFpAodIndicationText android:textColor="@android:color/white" android:gravity="bottom|center" android:layout_gravity="bottom|center" android:id="@id/op_aod_fp_indication_text" android:paddingLeft="@dimen/oneplus_contorl_layout_margin_left5" android:paddingRight="@dimen/oneplus_contorl_layout_margin_left5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/aod_fp_indication_margingBottom" android:alpha="0.7" android:accessibilityLiveRegion="polite" />
+        <com.oneplus.aod.OpFpAodIndicationText android:textColor="@android:color/white" android:gravity="bottom|center" android:layout_gravity="bottom|center" android:id="@id/op_aod_fp_indication_text" android:paddingLeft="@dimen/oneplus_contorl_layout_margin_left5" android:paddingRight="@dimen/oneplus_contorl_layout_margin_left5" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/aod_fp_indication_margingBottom" android:alpha="0.7" android:accessibilityLiveRegion="polite" />
         <com.oneplus.aod.OpSingleNotificationView android:gravity="center" android:id="@id/single_notification_view" android:background="@android:color/black" android:paddingBottom="130.0px" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
             <LinearLayout android:orientation="vertical" android:id="@id/notification_default" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/single_notification_horizontal_margin" android:layout_marginEnd="@dimen/single_notification_horizontal_margin">
                 <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/header_container" android:layout_width="fill_parent" android:layout_height="wrap_content">

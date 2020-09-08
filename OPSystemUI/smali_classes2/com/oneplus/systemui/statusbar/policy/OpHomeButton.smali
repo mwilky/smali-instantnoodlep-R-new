@@ -778,7 +778,7 @@
 
     if-nez v2, :cond_5
 
-    const/16 v2, 0xa
+    const/16 v2, 0x28
 
     if-ge p1, v2, :cond_1
 

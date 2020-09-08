@@ -39,6 +39,11 @@
     <string name="abc_slice_updated">Na-update noong %1$s</string>
     <string name="abc_slices_permission_request">Gustong ipakita ng %1$s ang mga slice ng %2$s</string>
     <string name="abc_toolbar_collapse_description">I-collapse</string>
+    <string name="about_action_bar_title">Tungkol sa</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Patakarang Pang-pribado</string>
+    <string name="about_release_note_title">I-update ang log:</string>
+    <string name="about_terms_service">Mga Tuntunin ng Serbisyo</string>
     <string name="accessibility_accessibility_button">Accessibility</string>
     <string name="accessibility_action_divider_bottom_full">I-full screen ang nasa ibaba</string>
     <string name="accessibility_action_divider_left_30">Gawing 30% ang nasa kaliwa</string>
@@ -577,7 +582,7 @@ Bluetooth"</string>
     <string name="connected_via_network_scorer_default">Awtomatikong nakakonekta sa pamamagitan ng provider ng rating ng network</string>
     <string name="connected_via_passpoint">Nakakonekta sa pamamagitan ng %1$s</string>
     <string name="content_description_menu_button">Menu</string>
-    <string name="continue_call">Magpatuloy</string>
+    <string name="continue_call">Ipagpatuloy</string>
     <string name="controls_added_tooltip">Pindutin nang matagal ang Power button para makita ang mga bagong kontrol</string>
     <string name="controls_confirmation_confirming">Kinukumpirma…</string>
     <string name="controls_confirmation_message">Kumpirmahin ang pagbabago para sa %s</string>
@@ -598,6 +603,7 @@ Bluetooth"</string>
     <string name="controls_favorite_other_zone_header">Iba pa</string>
     <string name="controls_favorite_rearrange">I-hold at i-drag para baguhin ang pagkakaayos ng mga kontrol</string>
     <string name="controls_favorite_removed">Inalis ang lahat ng kontrol</string>
+    <string name="controls_favorite_see_other_apps">Tingnan ang iba pang app</string>
     <string name="controls_favorite_subtitle">Pumili ng mga kontrol na maa-access mula sa power menu</string>
     <string name="controls_favorite_toast_no_changes">Hindi na-save ang mga pagbabago</string>
     <string name="controls_in_progress">Isinasagawa</string>
@@ -696,8 +702,8 @@ Kung magpapatuloy ka, maaaring may mga singil sa paggamit ng data."</string>
     <string name="disable_carrier_button_text">I-disable ang eSIM</string>
     <string name="disable_overlays">Wag paganahin HW overlay</string>
     <string name="disable_overlays_summary">Laging gamitin ang GPU para sa screen compositing</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">Kontakin ang admin mo para sa mga detalye</string>
+    <string name="disable_tether_notification_title">Hindi pinagagana ang tethering</string>
     <string name="disable_vpn">I-disable ang VPN</string>
     <string name="disabled">Naka-disable</string>
     <string name="disabled_by_admin">Na-disable ng admin</string>
@@ -717,6 +723,7 @@ Kung magpapatuloy ka, maaaring may mga singil sa paggamit ng data."</string>
     <string name="drag_to_rearrange_tiles">Pindutin nang matagal at i-drag para ayusin ulit ang tile</string>
     <string name="drag_to_remove_disabled">Kailangan mo ng kahit %1$d (na) tile</string>
     <string name="drag_to_remove_tiles">I-drag dito upang alisin</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">I-drag ang mga tile para muling isaayos. I-tap para ipakita o itago.</string>
     <string name="empty_shade_text">Walang mga notification</string>
     <string name="enable_adb">Pag-debug ng USB</string>
@@ -1092,6 +1099,7 @@ Subukang muli sa loob ng %2$d (na) segundo."</string>
     <string name="left_nav_bar_button_type">Uri ng extra na button ng kaliwa</string>
     <string name="legacy_vpn_name">VPN</string>
     <string name="loading_injected_setting_summary">Naglo-load…</string>
+    <string name="loading_text">Naglo-load...</string>
     <string name="local_backup_password_summary_change">I-tap upang baguhin o alisin ang password para sa mga kumpletong pag-back up sa desktop</string>
     <string name="local_backup_password_summary_none">Kasalukuyang hindi pinoprotektahan ang mga buong pag-backup ng desktop</string>
     <string name="local_backup_password_title">Password ng pag-backup ng desktop</string>
@@ -1114,7 +1122,7 @@ para sa Voice Assistant"</string>
     <string name="manage_notifications_history_text">History</string>
     <string name="manage_notifications_text">Pamahalaan</string>
     <string name="managed_user_title">Lahat ng app sa trabaho</string>
-    <string name="maxxaudio_disable">I-disable</string>
+    <string name="maxxaudio_disable">Huwag paganahin</string>
     <string name="maxxaudio_enable">I-enable</string>
     <string name="media_category">Media</string>
     <string name="media_projection_action_text">Magsimula ngayon</string>
@@ -1323,8 +1331,14 @@ Nakakonekta ka rin sa isang VPN, na may kakayahang subaybayan ang iyong aktibida
     <string name="oneplus_threekey_navigation_sound">Pinapayagan ang lahat ng tunog</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Maaari itong i-on gamit ang toggle sa itaas</string>
     <string name="oneplus_threekey_navigation_vibration">Pag-vibrate lang</string>
-    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> unlock</string>
-    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> na unlock</string>
+    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>unlock</string>
+    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>na unlock</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">Pinapares...</string>
     <string name="op_earphone_connected_fail">Hindi napares. Maaari mong tingnan ang status ng headset at Bluetooth.</string>
     <string name="op_earphone_connected_success">Napares na. I-tap para magtakda pa.</string>
@@ -1354,9 +1368,10 @@ Nakakonekta ka rin sa isang VPN, na may kakayahang subaybayan ang iyong aktibida
     <string name="op_notification_channel_summary_low">Mga hindi gaanong mahalagang notification na walang anumang tunog o pag-vibrate.</string>
     <string name="op_notification_section_header_gentle">Iba pang notification</string>
     <string name="op_notification_silence_title">Iba pa</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">Dark mode</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s ang nagamit</string>
-    <string name="op_quick_settings_night_display_label">Mode sa gabi</string>
+    <string name="op_quick_settings_night_display_label">Ginhawa sa paningin</string>
     <string name="op_quick_settings_night_display_summary_off">Ang Mode sa Gabi ay hindi gumagana, i-tap upang buksan ito</string>
     <string name="op_quick_settings_night_display_summary_on">Ang Mode sa Gabi ay gumagana, i-tap upang patayin ito</string>
     <string name="op_read_mode2_dialog_black">Mono effect</string>
@@ -1617,7 +1632,7 @@ Nakakonekta ka rin sa isang VPN, na may kakayahang subaybayan ang iyong aktibida
     <string name="quick_settings_nfc_off">Naka-disable ang NFC</string>
     <string name="quick_settings_nfc_on">Naka-enable ang NFC</string>
     <string name="quick_settings_night_display_label">Night Light</string>
-    <string name="quick_settings_night_mode_label">Mode sa gabi</string>
+    <string name="quick_settings_night_mode_label">Pamamaraan sa gabi</string>
     <string name="quick_settings_night_secondary_label_on_at">Mao-on sa ganap na %s</string>
     <string name="quick_settings_night_secondary_label_on_at_sunset">Mao-on sa sunset</string>
     <string name="quick_settings_night_secondary_label_until_sunrise">Hanggang sunrise</string>
@@ -1868,7 +1883,7 @@ sinusubaybayan ang network"</string>
     <string name="tethered_notification_hybrid_sharing_mobile">Sine-share ang mobile data, i-click para pumasok sa Mga Setting</string>
     <string name="tethered_notification_hybrid_sharing_none">Walang available na network na mase-share, i-click para pumasok sa Mga Setting</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Sine-share ang Wi-Fi, i-click para pumasok sa Mga Setting</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">I-tap para maitakda.</string>
     <string name="tethered_notification_multi_device_message">%1$s konektadong mga aparato</string>
     <string name="tethered_notification_multi_tether_title">Aktibo sa Pag-tether at Mobile HotSpot</string>
     <string name="tethered_notification_no_device_message">Walang nakakonektang device</string>
@@ -2100,7 +2115,17 @@ Address ng Wi‑Fi (BSSID)
     <string name="wifi_verbose_logging">I-enable ang Pagla-log sa Wi‑Fi Verbose</string>
     <string name="wifi_verbose_logging_summary">Pataasin ang antas ng Wi‑Fi logging, ipakita sa bawat SSID RSSI sa Wi‑Fi Picker</string>
     <string name="window_animation_scale_title">Scale ng window animation</string>
-    <string name="work_life_balance_mode">Work-Life Balance</string>
+    <string name="wlb_break_mode_active">Aktibo</string>
+    <string name="wlb_break_mode_active_text">%1$s Mode · %2$s</string>
+    <string name="wlb_break_mode_on_break">Nagpapahinga</string>
+    <string name="wlb_break_mode_resume">Ipagpatuloy</string>
+    <string name="wlb_break_mode_take_break">Magpahinga</string>
+    <string name="wlb_qs_detail_break_mode">Break Mode</string>
+    <string name="wlb_qs_detail_break_mode_desc">Awtomatikong magpagpapatuloy sa dating mode pagkatapos ng 30 Minuto</string>
+    <string name="wlb_qs_detail_life_mode">Life Mode</string>
+    <string name="wlb_qs_detail_more_setting">Higit Pang Settings</string>
+    <string name="wlb_qs_detail_work_mode">Work Mode</string>
+    <string name="work_life_balance_mode">Work Life Balance</string>
     <string name="zen_alarm_warning">Hindi mo maririnig ang iyong susunod na alarm ng %1$s</string>
     <string name="zen_alarm_warning_indef">Hindi mo maririnig ang iyong susunod na alarm ng %1$s maliban kung io-off mo ito bago pa dumating ang oras na iyon</string>
     <string name="zen_alarms_introduction">Hindi ka maiistorbo ng mga tunog at pag-vibrate, maliban sa mga alarm. Maririnig mo pa rin ang anumang pipiliin mong i-play kabilang ang mga musika, video, at laro.</string>
@@ -2121,5 +2146,5 @@ Address ng Wi‑Fi (BSSID)
     <string name="zen_silence_introduction_voice">Bina-block nito ang LAHAT ng tunog at pag-vibrate, kabilang ang mula sa mga alarm, musika, video, at laro. Makakatawag ka pa rin.</string>
     <string name="zzz_op_global_action_bootloader">Bootloader</string>
     <string name="zzz_op_global_action_recovery">Makabawi</string>
-    <string name="zzz_op_quick_pay_no_install_message">Mangyaring mag-instala ng mga app na gamitin sa Quick Pay</string>
+    <string name="zzz_op_quick_pay_no_install_message">Paki-install ang mga app para sa pagbabayad para magamit ang Quick Pay</string>
 </resources>

@@ -39,6 +39,11 @@
     <string name="abc_slice_updated">Oppdatert %1$s</string>
     <string name="abc_slices_permission_request">%1$s vil vise %2$s-utsnitt</string>
     <string name="abc_toolbar_collapse_description">Skjul</string>
+    <string name="about_action_bar_title">Om</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Personvern</string>
+    <string name="about_release_note_title">Oppdateringslogg:</string>
+    <string name="about_terms_service">Bruksvilkår</string>
     <string name="accessibility_accessibility_button">Tilgjengelighet</string>
     <string name="accessibility_action_divider_bottom_full">Utvid den nederste delen av skjermen til hele skjermen</string>
     <string name="accessibility_action_divider_left_30">Sett størrelsen på den venstre delen av skjermen til 30 %</string>
@@ -598,6 +603,7 @@ Valg"</string>
     <string name="controls_favorite_other_zone_header">Annet</string>
     <string name="controls_favorite_rearrange">Hold og dra for å flytte kontroller</string>
     <string name="controls_favorite_removed">Alle kontroller er fjernet</string>
+    <string name="controls_favorite_see_other_apps">Se andre apper</string>
     <string name="controls_favorite_subtitle">Velg kontroller som er tilgjengelige fra av/på-menyen</string>
     <string name="controls_favorite_toast_no_changes">Endringene er ikke lagret</string>
     <string name="controls_in_progress">Pågår</string>
@@ -696,8 +702,8 @@ Hvis du fortsetter, kan avgifter for databruk påløpe."</string>
     <string name="disable_carrier_button_text">Deaktiver e-SIM-kortet</string>
     <string name="disable_overlays">Slå av maskinvareoverlegg</string>
     <string name="disable_overlays_summary">Bruk alltid GPU for skjermsammensetting</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">Kontakt din administrator for å få mer informasjon</string>
+    <string name="disable_tether_notification_title">Tilknytning deaktiveres</string>
     <string name="disable_vpn">Deaktiver VPN</string>
     <string name="disabled">Slått av</string>
     <string name="disabled_by_admin">Deaktivert av administratoren</string>
@@ -717,6 +723,7 @@ Hvis du fortsetter, kan avgifter for databruk påløpe."</string>
     <string name="drag_to_rearrange_tiles">Hold og dra for å flytte på rutene</string>
     <string name="drag_to_remove_disabled">Du trenger minst %1$d infobrikker</string>
     <string name="drag_to_remove_tiles">Dra hit for å fjerne</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">Dra flisene for å endre rekkefølge. Berør for å vise eller skjule.</string>
     <string name="empty_shade_text">Ingen varsler</string>
     <string name="enable_adb">USB-feilsøking</string>
@@ -816,8 +823,8 @@ Telefonen kommer til å kjøre som normalt, når den har kjølt seg ned."</strin
     <string name="hotspot_apm_message">Kan ikke koble til mobilnettet mens flymodus er aktivert. Deaktiver flymodus, og prøv på nytt.</string>
     <string name="hotspot_operator_dialog_nosim_msg">Sett inn et SIM-kort for å bruke hotspot og andre tilknytningsalternativer</string>
     <string name="hotspot_operator_dialog_nosim_title">Ingen SIM-kort</string>
-    <string name="hotspot_operator_dialog_othererror_msg">Du har ikke abonnert på Wifi-tilknytning</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi-tilknytningsfeil</string>
+    <string name="hotspot_operator_dialog_othererror_msg">Du har ikke abonnert på Wi-Fi-tilknytning</string>
+    <string name="hotspot_operator_dialog_othererror_title">Wi-Fi-tilknytningsfeil</string>
     <string name="hotspot_tip_message">"Hotspot deler dine mobildata med andre Wi-Fi-kapable enheter. For å koble til ditt hotspot: \u0009 
  1: Skru på Wi-Fi på den andre enheten. 
  2: Velg %1$s fra listen over tilgjengelige Wi-Fi -nettverk. 
@@ -1092,6 +1099,7 @@ Prøv på nytt om %2$d sekunder."</string>
     <string name="left_nav_bar_button_type">Ekstra venstre-knapptype</string>
     <string name="legacy_vpn_name">VPN</string>
     <string name="loading_injected_setting_summary">Laster inn …</string>
+    <string name="loading_text">Laster inn...</string>
     <string name="local_backup_password_summary_change">Trykk for å endre eller fjerne passordet for fullstendige sikkerhetskopier på datamaskinen</string>
     <string name="local_backup_password_summary_none">Fullstendig sikkerhetskopiering på datamaskin er ikke beskyttet</string>
     <string name="local_backup_password_title">Passord for sikkerhetskopiering på datamaskin</string>
@@ -1272,7 +1280,7 @@ Du er også tilkoblet en VPN som kan overvåke nettverksaktiviteten din."</strin
     <string name="notification_channel_summary_low">Ingen lyd eller vibrering</string>
     <string name="notification_channel_summary_priority">Vises øverst i samtaledelen, vises som en flytende boble, viser profilbildet på låseskjermen</string>
     <string name="notification_channel_switch_accessibility">Tillat varsler fra denne kanalen</string>
-    <string name="notification_channel_tethering_status">Hotspot &amp; tilknytningsstatus</string>
+    <string name="notification_channel_tethering_status">Hotspot og tilknytningsstatus</string>
     <string name="notification_channel_tv_pip">Bilde-i-bilde</string>
     <string name="notification_channel_unsilenced">Disse varslene varsler deg</string>
     <string name="notification_content_disable_button">Berør for å slå av</string>
@@ -1323,8 +1331,14 @@ Du er også tilkoblet en VPN som kan overvåke nettverksaktiviteten din."</strin
     <string name="oneplus_threekey_navigation_sound">Alle lyder tillatt</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Kan ikke slåes på med å bla ovenfor</string>
     <string name="oneplus_threekey_navigation_vibration">Kun vibrasjon</string>
-    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> opplåsninger</string>
-    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> opplåsninger</string>
+    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>opplåsning</string>
+    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>opplåsninger</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">Sammenkobling...</string>
     <string name="op_earphone_connected_fail">Ikke sammenkobling. Du kan kontrollere hodesettet og Bluetooth-status.</string>
     <string name="op_earphone_connected_success">Paret. Trykk for å angi flere.</string>
@@ -1354,9 +1368,10 @@ Du er også tilkoblet en VPN som kan overvåke nettverksaktiviteten din."</strin
     <string name="op_notification_channel_summary_low">Mindre viktige varsler uten noe lyd eller vibrasjon.</string>
     <string name="op_notification_section_header_gentle">Andre varsler</string>
     <string name="op_notification_silence_title">Annet</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">Mørk modus</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s brukt</string>
-    <string name="op_quick_settings_night_display_label">Nattmodus</string>
+    <string name="op_quick_settings_night_display_label">Synskomfort</string>
     <string name="op_quick_settings_night_display_summary_off">Nattmodus er av, trykk for å slå på</string>
     <string name="op_quick_settings_night_display_summary_on">Nattmodus er på, trykk for å slå av</string>
     <string name="op_read_mode2_dialog_black">Monoeffekt</string>
@@ -1593,9 +1608,9 @@ Du er også tilkoblet en VPN som kan overvåke nettverksaktiviteten din."</strin
     <string name="quick_settings_footer_audio_output">Lydutgang</string>
     <string name="quick_settings_footer_audio_speaker">Telefonhøyttaler</string>
     <string name="quick_settings_game_mode_demo">Når Spillmodus er aktivert, %s, kan du skru den av i kontrollsenteret eller ved å berøre varselet.</string>
-    <string name="quick_settings_game_mode_demo_all">varsler blokkeres og kapasitive knapper låses</string>
+    <string name="quick_settings_game_mode_demo_all">varslinger blokkeres og kapasitive knapper låses</string>
     <string name="quick_settings_game_mode_demo_button">kapasitive knapper låses</string>
-    <string name="quick_settings_game_mode_demo_notification">varsler blir blokkert</string>
+    <string name="quick_settings_game_mode_demo_notification">varslinger blir blokkert</string>
     <string name="quick_settings_game_mode_label">Spillmodus</string>
     <string name="quick_settings_game_mode_summary_off">Spillmodus er av, trykk for å slå på</string>
     <string name="quick_settings_game_mode_summary_on">Spillmodus er på, trykk for å slå av</string>
@@ -1868,7 +1883,7 @@ være overvåket"</string>
     <string name="tethered_notification_hybrid_sharing_mobile">Deler mobildata, klikk for å gå til Innstillinger</string>
     <string name="tethered_notification_hybrid_sharing_none">Ingen tilgjengelig nettverk for deling, klikk for å gå til Innstillinger</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Deler Wi-Fi, klikk for å gå til Innstillinger</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">Trykk for å konfigurere.</string>
     <string name="tethered_notification_multi_device_message">%1$s tilkoblede enheter</string>
     <string name="tethered_notification_multi_tether_title">Tilknytning og hotspot aktiv</string>
     <string name="tethered_notification_no_device_message">Ingen tilkoblet enhet</string>
@@ -2100,7 +2115,17 @@ Wi‑Fi-adresse (BSSID)
     <string name="wifi_verbose_logging">Slå på detaljert Wi-Fi-loggføring</string>
     <string name="wifi_verbose_logging_summary">Øk Wi-Fi-loggenivå – vis per SSID RSSI i Wi-Fi-velgeren</string>
     <string name="window_animation_scale_title">Animasjonsskala for vindu</string>
-    <string name="work_life_balance_mode">Work-Life Balance</string>
+    <string name="wlb_break_mode_active">Aktiv</string>
+    <string name="wlb_break_mode_active_text">%1$s Modus · %2$s</string>
+    <string name="wlb_break_mode_on_break">Tar pause</string>
+    <string name="wlb_break_mode_resume">Fortsett</string>
+    <string name="wlb_break_mode_take_break">Ta en pause</string>
+    <string name="wlb_qs_detail_break_mode">Pausemodus</string>
+    <string name="wlb_qs_detail_break_mode_desc">Går automatisk tilbake til forrige modus etter 30 minutter</string>
+    <string name="wlb_qs_detail_life_mode">Fritidsmodus</string>
+    <string name="wlb_qs_detail_more_setting">Flere innstillinger</string>
+    <string name="wlb_qs_detail_work_mode">Arbeidsmodus</string>
+    <string name="work_life_balance_mode">Balanse mellom arbeid og fritid</string>
     <string name="zen_alarm_warning">Du hører ikke neste innstilte alarm %1$s</string>
     <string name="zen_alarm_warning_indef">Du hører ikke neste innstilte alarm %1$s med mindre du slår dette av i forkant</string>
     <string name="zen_alarms_introduction">Du blir ikke forstyrret av lyder og vibrasjoner, med unntak av alarmer. Du kan fremdeles høre alt du velger å spille av, for eksempel musikk, videoer og spill.</string>

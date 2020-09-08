@@ -42,16 +42,6 @@
 
 .field private mBGHandler:Lcom/android/systemui/appops/AppOpsControllerImpl$H;
 
-.field private final mCallbacks:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Lcom/android/systemui/appops/AppOpsController$Callback;",
-            ">;"
-        }
-    .end annotation
-.end field
-
 .field private final mCallbacksByCode:Landroid/util/ArrayMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -119,8 +109,6 @@
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v1, p0, Lcom/android/systemui/appops/AppOpsControllerImpl;->mCallbacks:Ljava/util/List;
 
     new-instance v1, Landroid/util/ArrayMap;
 
@@ -562,79 +550,6 @@
 
 
 # virtual methods
-.method public addCallback([ILcom/android/systemui/appops/AppOpsController$Callback;)V
-    .locals 6
-
-    array-length v0, p1
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    :goto_0
-    const/4 v3, 0x1
-
-    if-ge v1, v0, :cond_1
-
-    iget-object v4, p0, Lcom/android/systemui/appops/AppOpsControllerImpl;->mCallbacksByCode:Landroid/util/ArrayMap;
-
-    aget v5, p1, v1
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Landroid/util/ArrayMap;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    iget-object v2, p0, Lcom/android/systemui/appops/AppOpsControllerImpl;->mCallbacksByCode:Landroid/util/ArrayMap;
-
-    aget v4, p1, v1
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    invoke-virtual {v2, v4}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/util/Set;
-
-    invoke-interface {v2, p2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    move v2, v3
-
-    :cond_0
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    if-eqz v2, :cond_2
-
-    iget-object p1, p0, Lcom/android/systemui/appops/AppOpsControllerImpl;->mCallbacks:Ljava/util/List;
-
-    invoke-interface {p1, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    :cond_2
-    iget-object p1, p0, Lcom/android/systemui/appops/AppOpsControllerImpl;->mCallbacks:Ljava/util/List;
-
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    invoke-virtual {p0, v3}, Lcom/android/systemui/appops/AppOpsControllerImpl;->setListening(Z)V
-
-    :cond_3
-    return-void
-.end method
-
 .method public dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 2
 

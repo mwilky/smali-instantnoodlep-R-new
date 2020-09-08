@@ -47,7 +47,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController$DynamicPrivacyControlListener;->this$0:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$7600(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)F
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$7700(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)F
 
     move-result v0
 
@@ -64,7 +64,7 @@
 
     const/4 v0, 0x1
 
-    invoke-static {p0, v0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$6502(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;Z)Z
+    invoke-static {p0, v0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$6602(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;Z)Z
 
     return-void
 .end method

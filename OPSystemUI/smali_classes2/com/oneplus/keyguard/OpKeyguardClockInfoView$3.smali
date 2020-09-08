@@ -1,6 +1,9 @@
 .class Lcom/oneplus/keyguard/OpKeyguardClockInfoView$3;
-.super Landroid/content/BroadcastReceiver;
+.super Ljava/lang/Object;
 .source "OpKeyguardClockInfoView.java"
+
+# interfaces
+.implements Lcom/android/keyguard/KeyguardAssistantView$Callback;
 
 
 # annotations
@@ -24,67 +27,37 @@
 
     iput-object p1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$3;->this$0:Lcom/oneplus/keyguard/OpKeyguardClockInfoView;
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 1
+.method public onCardShownChanged(Z)V
+    .locals 2
 
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "receive onCardShownChanged value:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    const-string p2, "android.intent.action.TIME_TICK"
-
-    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
     const-string v0, "OpKeyguardClockInfoView"
 
-    if-eqz p2, :cond_1
-
-    sget-boolean p1, Lcom/oneplus/util/OpUtils;->DEBUG_ONEPLUS:Z
-
-    if-eqz p1, :cond_0
-
-    const-string p1, "ACTION_TIME_TICK"
-
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$3;->this$0:Lcom/oneplus/keyguard/OpKeyguardClockInfoView;
-
-    invoke-static {p0}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->access$400(Lcom/oneplus/keyguard/OpKeyguardClockInfoView;)V
-
-    goto :goto_0
-
-    :cond_1
-    const-string p2, "android.intent.action.SCREEN_ON"
-
-    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    const-string p1, "ACTION_SCREEN_ON"
-
-    invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget-object p1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$3;->this$0:Lcom/oneplus/keyguard/OpKeyguardClockInfoView;
-
-    invoke-static {p1}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->access$300(Lcom/oneplus/keyguard/OpKeyguardClockInfoView;)V
 
     iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$3;->this$0:Lcom/oneplus/keyguard/OpKeyguardClockInfoView;
 
-    invoke-static {p0}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->access$400(Lcom/oneplus/keyguard/OpKeyguardClockInfoView;)V
+    invoke-static {p0}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->access$500(Lcom/oneplus/keyguard/OpKeyguardClockInfoView;)V
 
-    :cond_2
-    :goto_0
     return-void
 .end method

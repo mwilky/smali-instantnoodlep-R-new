@@ -329,317 +329,335 @@
 
     iget-object v1, v6, Lcom/android/systemui/qs/QSSecurityFooter;->mSecurityController:Lcom/android/systemui/statusbar/policy/SecurityController;
 
-    invoke-interface {v1}, Lcom/android/systemui/statusbar/policy/SecurityController;->hasWorkProfile()Z
+    invoke-interface {v1}, Lcom/android/systemui/statusbar/policy/SecurityController;->isProfileOwnerOfOrganizationOwnedDevice()Z
 
     move-result v1
 
     iget-object v2, v6, Lcom/android/systemui/qs/QSSecurityFooter;->mSecurityController:Lcom/android/systemui/statusbar/policy/SecurityController;
 
-    invoke-interface {v2}, Lcom/android/systemui/statusbar/policy/SecurityController;->getDeviceOwnerOrganizationName()Ljava/lang/CharSequence;
+    invoke-interface {v2}, Lcom/android/systemui/statusbar/policy/SecurityController;->hasWorkProfile()Z
 
-    move-result-object v2
+    move-result v2
 
     iget-object v3, v6, Lcom/android/systemui/qs/QSSecurityFooter;->mSecurityController:Lcom/android/systemui/statusbar/policy/SecurityController;
 
-    invoke-interface {v3}, Lcom/android/systemui/statusbar/policy/SecurityController;->hasCACertInCurrentUser()Z
+    invoke-interface {v3}, Lcom/android/systemui/statusbar/policy/SecurityController;->getDeviceOwnerOrganizationName()Ljava/lang/CharSequence;
 
-    move-result v3
+    move-result-object v3
 
     iget-object v4, v6, Lcom/android/systemui/qs/QSSecurityFooter;->mSecurityController:Lcom/android/systemui/statusbar/policy/SecurityController;
 
-    invoke-interface {v4}, Lcom/android/systemui/statusbar/policy/SecurityController;->hasCACertInWorkProfile()Z
+    invoke-interface {v4}, Lcom/android/systemui/statusbar/policy/SecurityController;->getWorkProfileOrganizationName()Ljava/lang/CharSequence;
 
-    move-result v4
+    move-result-object v4
 
     iget-object v5, v6, Lcom/android/systemui/qs/QSSecurityFooter;->mSecurityController:Lcom/android/systemui/statusbar/policy/SecurityController;
 
-    invoke-interface {v5}, Lcom/android/systemui/statusbar/policy/SecurityController;->isNetworkLoggingEnabled()Z
+    invoke-interface {v5}, Lcom/android/systemui/statusbar/policy/SecurityController;->hasCACertInCurrentUser()Z
 
     move-result v5
 
     iget-object v7, v6, Lcom/android/systemui/qs/QSSecurityFooter;->mSecurityController:Lcom/android/systemui/statusbar/policy/SecurityController;
 
-    invoke-interface {v7}, Lcom/android/systemui/statusbar/policy/SecurityController;->getPrimaryVpnName()Ljava/lang/String;
+    invoke-interface {v7}, Lcom/android/systemui/statusbar/policy/SecurityController;->hasCACertInWorkProfile()Z
 
-    move-result-object v7
+    move-result v7
 
     iget-object v8, v6, Lcom/android/systemui/qs/QSSecurityFooter;->mSecurityController:Lcom/android/systemui/statusbar/policy/SecurityController;
 
-    invoke-interface {v8}, Lcom/android/systemui/statusbar/policy/SecurityController;->getWorkProfileVpnName()Ljava/lang/String;
+    invoke-interface {v8}, Lcom/android/systemui/statusbar/policy/SecurityController;->isNetworkLoggingEnabled()Z
 
-    move-result-object v8
+    move-result v8
 
-    new-instance v9, Lcom/android/systemui/statusbar/phone/SystemUIDialog;
+    iget-object v9, v6, Lcom/android/systemui/qs/QSSecurityFooter;->mSecurityController:Lcom/android/systemui/statusbar/policy/SecurityController;
 
-    iget-object v10, v6, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
+    invoke-interface {v9}, Lcom/android/systemui/statusbar/policy/SecurityController;->getPrimaryVpnName()Ljava/lang/String;
 
-    invoke-direct {v9, v10}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;-><init>(Landroid/content/Context;)V
+    move-result-object v9
 
-    iput-object v9, v6, Lcom/android/systemui/qs/QSSecurityFooter;->mDialog:Landroid/app/AlertDialog;
+    iget-object v10, v6, Lcom/android/systemui/qs/QSSecurityFooter;->mSecurityController:Lcom/android/systemui/statusbar/policy/SecurityController;
 
-    const/4 v10, 0x1
+    invoke-interface {v10}, Lcom/android/systemui/statusbar/policy/SecurityController;->getWorkProfileVpnName()Ljava/lang/String;
 
-    invoke-virtual {v9, v10}, Landroid/app/AlertDialog;->requestWindowFeature(I)Z
+    move-result-object v10
+
+    new-instance v11, Lcom/android/systemui/statusbar/phone/SystemUIDialog;
+
+    iget-object v12, v6, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
+
+    invoke-direct {v11, v12}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;-><init>(Landroid/content/Context;)V
+
+    iput-object v11, v6, Lcom/android/systemui/qs/QSSecurityFooter;->mDialog:Landroid/app/AlertDialog;
+
+    const/4 v12, 0x1
+
+    invoke-virtual {v11, v12}, Landroid/app/AlertDialog;->requestWindowFeature(I)Z
 
     invoke-static {}, Lcom/oneplus/util/ThemeColorUtils;->getCurrentTheme()I
 
-    move-result v9
+    move-result v11
 
-    if-ne v9, v10, :cond_0
+    if-ne v11, v12, :cond_0
 
-    sget v9, Lcom/android/systemui/R$style;->oneplus_theme_dialog_dark:I
+    sget v11, Lcom/android/systemui/R$style;->oneplus_theme_dialog_dark:I
 
     goto :goto_0
 
     :cond_0
-    sget v9, Lcom/android/systemui/R$style;->oneplus_theme_dialog_light:I
+    sget v11, Lcom/android/systemui/R$style;->oneplus_theme_dialog_light:I
 
     :goto_0
-    new-instance v11, Landroid/view/ContextThemeWrapper;
+    new-instance v13, Landroid/view/ContextThemeWrapper;
 
-    iget-object v12, v6, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
+    iget-object v14, v6, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
 
-    invoke-direct {v11, v12, v9}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v13, v14, v11}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 
-    invoke-static {v11}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-static {v13}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
-    move-result-object v9
+    move-result-object v11
 
-    sget v11, Lcom/android/systemui/R$layout;->quick_settings_footer_dialog:I
+    sget v13, Lcom/android/systemui/R$layout;->quick_settings_footer_dialog:I
 
-    const/4 v12, 0x0
+    const/4 v14, 0x0
 
-    const/4 v13, 0x0
+    const/4 v15, 0x0
 
-    invoke-virtual {v9, v11, v12, v13}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-virtual {v11, v13, v14, v15}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    move-result-object v9
+    move-result-object v11
 
-    iget-object v11, v6, Lcom/android/systemui/qs/QSSecurityFooter;->mDialog:Landroid/app/AlertDialog;
+    iget-object v13, v6, Lcom/android/systemui/qs/QSSecurityFooter;->mDialog:Landroid/app/AlertDialog;
 
-    invoke-virtual {v11, v9}, Landroid/app/AlertDialog;->setView(Landroid/view/View;)V
+    invoke-virtual {v13, v11}, Landroid/app/AlertDialog;->setView(Landroid/view/View;)V
 
-    iget-object v11, v6, Lcom/android/systemui/qs/QSSecurityFooter;->mDialog:Landroid/app/AlertDialog;
+    iget-object v13, v6, Lcom/android/systemui/qs/QSSecurityFooter;->mDialog:Landroid/app/AlertDialog;
 
     invoke-direct/range {p0 .. p0}, Lcom/android/systemui/qs/QSSecurityFooter;->getPositiveButton()Ljava/lang/String;
 
-    move-result-object v12
+    move-result-object v14
 
-    const/4 v14, -0x1
+    const/4 v12, -0x1
 
-    invoke-virtual {v11, v14, v12, v6}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {v13, v12, v14, v6}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    invoke-virtual {v6, v0, v2}, Lcom/android/systemui/qs/QSSecurityFooter;->getManagementMessage(ZLjava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v6, v0, v3, v1, v4}, Lcom/android/systemui/qs/QSSecurityFooter;->getManagementMessage(ZLjava/lang/CharSequence;ZLjava/lang/CharSequence;)Ljava/lang/CharSequence;
 
-    move-result-object v2
+    move-result-object v3
 
-    const/4 v11, -0x2
+    const/4 v13, -0x2
 
-    const/16 v12, 0x8
+    const/16 v4, 0x8
 
-    if-nez v2, :cond_1
+    if-nez v3, :cond_1
 
-    sget v15, Lcom/android/systemui/R$id;->device_management_disclosures:I
+    sget v1, Lcom/android/systemui/R$id;->device_management_disclosures:I
 
-    invoke-virtual {v9, v15}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v11, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    move-result-object v15
+    move-result-object v1
 
-    invoke-virtual {v15, v12}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_1
 
     :cond_1
-    sget v15, Lcom/android/systemui/R$id;->device_management_disclosures:I
+    sget v14, Lcom/android/systemui/R$id;->device_management_disclosures:I
 
-    invoke-virtual {v9, v15}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v11, v14}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    move-result-object v15
+    move-result-object v14
 
-    invoke-virtual {v15, v13}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v14, v15}, Landroid/view/View;->setVisibility(I)V
 
-    sget v15, Lcom/android/systemui/R$id;->device_management_warning:I
+    sget v14, Lcom/android/systemui/R$id;->device_management_warning:I
 
-    invoke-virtual {v9, v15}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v11, v14}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    move-result-object v15
+    move-result-object v14
 
-    check-cast v15, Landroid/widget/TextView;
+    check-cast v14, Landroid/widget/TextView;
 
-    invoke-virtual {v15, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v14, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v15, v6, Lcom/android/systemui/qs/QSSecurityFooter;->mDialog:Landroid/app/AlertDialog;
+    if-nez v1, :cond_2
+
+    iget-object v1, v6, Lcom/android/systemui/qs/QSSecurityFooter;->mDialog:Landroid/app/AlertDialog;
 
     invoke-direct/range {p0 .. p0}, Lcom/android/systemui/qs/QSSecurityFooter;->getSettingsButton()Ljava/lang/String;
 
-    move-result-object v10
+    move-result-object v14
 
-    invoke-virtual {v15, v11, v10, v6}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {v1, v13, v14, v6}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
+    :cond_2
     :goto_1
-    invoke-virtual {v6, v0, v3, v4}, Lcom/android/systemui/qs/QSSecurityFooter;->getCaCertsMessage(ZZZ)Ljava/lang/CharSequence;
+    invoke-virtual {v6, v0, v5, v7}, Lcom/android/systemui/qs/QSSecurityFooter;->getCaCertsMessage(ZZZ)Ljava/lang/CharSequence;
 
-    move-result-object v3
+    move-result-object v1
 
-    if-nez v3, :cond_2
+    if-nez v1, :cond_3
 
-    sget v4, Lcom/android/systemui/R$id;->ca_certs_disclosures:I
+    sget v5, Lcom/android/systemui/R$id;->ca_certs_disclosures:I
 
-    invoke-virtual {v9, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v11, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-virtual {v4, v12}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v5, v4}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_2
 
-    :cond_2
-    sget v4, Lcom/android/systemui/R$id;->ca_certs_disclosures:I
-
-    invoke-virtual {v9, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v13}, Landroid/view/View;->setVisibility(I)V
-
-    sget v4, Lcom/android/systemui/R$id;->ca_certs_warning:I
-
-    invoke-virtual {v9, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/widget/TextView;
-
-    invoke-virtual {v4, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    new-instance v10, Landroid/text/method/LinkMovementMethod;
-
-    invoke-direct {v10}, Landroid/text/method/LinkMovementMethod;-><init>()V
-
-    invoke-virtual {v4, v10}, Landroid/widget/TextView;->setMovementMethod(Landroid/text/method/MovementMethod;)V
-
-    :goto_2
-    invoke-virtual {v6, v5}, Lcom/android/systemui/qs/QSSecurityFooter;->getNetworkLoggingMessage(Z)Ljava/lang/CharSequence;
-
-    move-result-object v4
-
-    if-nez v4, :cond_3
-
-    sget v5, Lcom/android/systemui/R$id;->network_logging_disclosures:I
-
-    invoke-virtual {v9, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v12}, Landroid/view/View;->setVisibility(I)V
-
-    goto :goto_3
-
     :cond_3
-    sget v5, Lcom/android/systemui/R$id;->network_logging_disclosures:I
+    sget v5, Lcom/android/systemui/R$id;->ca_certs_disclosures:I
 
-    invoke-virtual {v9, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v11, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v5
 
-    invoke-virtual {v5, v13}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v5, v15}, Landroid/view/View;->setVisibility(I)V
 
-    sget v5, Lcom/android/systemui/R$id;->network_logging_warning:I
+    sget v5, Lcom/android/systemui/R$id;->ca_certs_warning:I
 
-    invoke-virtual {v9, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v11, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v5
 
     check-cast v5, Landroid/widget/TextView;
 
-    invoke-virtual {v5, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v5, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    new-instance v7, Landroid/text/method/LinkMovementMethod;
+
+    invoke-direct {v7}, Landroid/text/method/LinkMovementMethod;-><init>()V
+
+    invoke-virtual {v5, v7}, Landroid/widget/TextView;->setMovementMethod(Landroid/text/method/MovementMethod;)V
+
+    :goto_2
+    invoke-virtual {v6, v8}, Lcom/android/systemui/qs/QSSecurityFooter;->getNetworkLoggingMessage(Z)Ljava/lang/CharSequence;
+
+    move-result-object v5
+
+    if-nez v5, :cond_4
+
+    sget v7, Lcom/android/systemui/R$id;->network_logging_disclosures:I
+
+    invoke-virtual {v11, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v4}, Landroid/view/View;->setVisibility(I)V
+
+    goto :goto_3
+
+    :cond_4
+    sget v7, Lcom/android/systemui/R$id;->network_logging_disclosures:I
+
+    invoke-virtual {v11, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v15}, Landroid/view/View;->setVisibility(I)V
+
+    sget v7, Lcom/android/systemui/R$id;->network_logging_warning:I
+
+    invoke-virtual {v11, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v7
+
+    check-cast v7, Landroid/widget/TextView;
+
+    invoke-virtual {v7, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     :goto_3
-    invoke-virtual {v6, v0, v1, v7, v8}, Lcom/android/systemui/qs/QSSecurityFooter;->getVpnMessage(ZZLjava/lang/String;Ljava/lang/String;)Ljava/lang/CharSequence;
+    invoke-virtual {v6, v0, v2, v9, v10}, Lcom/android/systemui/qs/QSSecurityFooter;->getVpnMessage(ZZLjava/lang/String;Ljava/lang/String;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    if-nez v0, :cond_4
+    if-nez v0, :cond_5
 
-    sget v1, Lcom/android/systemui/R$id;->vpn_disclosures:I
+    sget v2, Lcom/android/systemui/R$id;->vpn_disclosures:I
 
-    invoke-virtual {v9, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v11, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1, v12}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v2, v4}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_4
 
-    :cond_4
-    sget v1, Lcom/android/systemui/R$id;->vpn_disclosures:I
+    :cond_5
+    sget v2, Lcom/android/systemui/R$id;->vpn_disclosures:I
 
-    invoke-virtual {v9, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v11, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1, v13}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v2, v15}, Landroid/view/View;->setVisibility(I)V
 
-    sget v1, Lcom/android/systemui/R$id;->vpn_warning:I
+    sget v2, Lcom/android/systemui/R$id;->vpn_warning:I
 
-    invoke-virtual {v9, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v11, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Landroid/widget/TextView;
+    check-cast v2, Landroid/widget/TextView;
 
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v2, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    new-instance v5, Landroid/text/method/LinkMovementMethod;
+    new-instance v4, Landroid/text/method/LinkMovementMethod;
 
-    invoke-direct {v5}, Landroid/text/method/LinkMovementMethod;-><init>()V
+    invoke-direct {v4}, Landroid/text/method/LinkMovementMethod;-><init>()V
 
-    invoke-virtual {v1, v5}, Landroid/widget/TextView;->setMovementMethod(Landroid/text/method/MovementMethod;)V
+    invoke-virtual {v2, v4}, Landroid/widget/TextView;->setMovementMethod(Landroid/text/method/MovementMethod;)V
 
     :goto_4
-    if-eqz v2, :cond_5
-
-    const/4 v1, 0x1
-
-    goto :goto_5
-
-    :cond_5
-    move v1, v13
-
-    :goto_5
     if-eqz v3, :cond_6
 
     const/4 v2, 0x1
 
-    goto :goto_6
+    goto :goto_5
 
     :cond_6
-    move v2, v13
+    move v2, v15
 
-    :goto_6
-    if-eqz v4, :cond_7
+    :goto_5
+    if-eqz v1, :cond_7
 
     const/4 v3, 0x1
 
-    goto :goto_7
+    goto :goto_6
 
     :cond_7
-    move v3, v13
+    move v3, v15
 
-    :goto_7
-    if-eqz v0, :cond_8
+    :goto_6
+    if-eqz v5, :cond_8
 
     const/4 v4, 0x1
 
-    goto :goto_8
+    goto :goto_7
 
     :cond_8
-    move v4, v13
+    move v4, v15
 
-    :goto_8
+    :goto_7
+    if-eqz v0, :cond_9
+
+    const/4 v15, 0x1
+
+    :cond_9
     move-object/from16 v0, p0
 
-    move-object v5, v9
+    move v1, v2
+
+    move v2, v3
+
+    move v3, v4
+
+    move v4, v15
+
+    move-object v5, v11
 
     invoke-virtual/range {v0 .. v5}, Lcom/android/systemui/qs/QSSecurityFooter;->configSubtitleVisibility(ZZZZLandroid/view/View;)V
 
@@ -653,7 +671,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v14, v11}, Landroid/view/Window;->setLayout(II)V
+    invoke-virtual {v0, v12, v13}, Landroid/view/Window;->setLayout(II)V
 
     return-void
 .end method
@@ -1333,37 +1351,60 @@
     return-object p0
 .end method
 
-.method protected getManagementMessage(ZLjava/lang/CharSequence;)Ljava/lang/CharSequence;
+.method protected getManagementMessage(ZLjava/lang/CharSequence;ZLjava/lang/CharSequence;)Ljava/lang/CharSequence;
     .locals 2
 
     if-nez p1, :cond_0
+
+    if-nez p3, :cond_0
 
     const/4 p0, 0x0
 
     return-object p0
 
     :cond_0
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    if-eqz p1, :cond_1
+
     if-eqz p2, :cond_1
 
     iget-object p0, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
 
     sget p1, Lcom/android/systemui/R$string;->monitoring_description_named_management:I
 
-    const/4 v0, 0x1
+    new-array p3, v1, [Ljava/lang/Object;
 
-    new-array v0, v0, [Ljava/lang/Object;
+    aput-object p2, p3, v0
 
-    const/4 v1, 0x0
-
-    aput-object p2, v0, v1
-
-    invoke-virtual {p0, p1, v0}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, p1, p3}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
     :cond_1
+    if-eqz p3, :cond_2
+
+    if-eqz p4, :cond_2
+
+    iget-object p0, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
+
+    sget p1, Lcom/android/systemui/R$string;->monitoring_description_named_management:I
+
+    new-array p2, v1, [Ljava/lang/Object;
+
+    aput-object p4, p2, v0
+
+    invoke-virtual {p0, p1, p2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_2
     iget-object p0, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
 
     sget p1, Lcom/android/systemui/R$string;->monitoring_description_management:I

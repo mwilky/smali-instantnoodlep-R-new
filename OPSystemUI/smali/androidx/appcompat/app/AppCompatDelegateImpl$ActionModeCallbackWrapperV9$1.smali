@@ -138,5 +138,7 @@
 
     iput-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl;->mFadeAnim:Landroidx/core/view/ViewPropertyAnimatorCompat;
 
+    invoke-static {p0}, Landroidx/appcompat/app/AppCompatDelegateImpl;->access$000(Landroidx/appcompat/app/AppCompatDelegateImpl;)V
+
     return-void
 .end method

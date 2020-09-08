@@ -58,28 +58,13 @@
 
     iput-object p6, p0, Lcom/android/systemui/doze/DozeUi;->mHandler:Landroid/os/Handler;
 
-    invoke-virtual {p8}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isAlwaysOnEnabled()Z
-
-    move-result p1
-
-    const/4 p3, 0x0
-
-    if-eqz p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
     invoke-virtual {p7}, Lcom/android/systemui/statusbar/phone/DozeParameters;->getDisplayNeedsBlanking()Z
 
     move-result p1
 
-    if-nez p1, :cond_1
+    xor-int/lit8 p1, p1, 0x1
 
-    const/4 p3, 0x1
-
-    :cond_1
-    :goto_0
-    iput-boolean p3, p0, Lcom/android/systemui/doze/DozeUi;->mCanAnimateTransition:Z
+    iput-boolean p1, p0, Lcom/android/systemui/doze/DozeUi;->mCanAnimateTransition:Z
 
     iput-object p7, p0, Lcom/android/systemui/doze/DozeUi;->mDozeParameters:Lcom/android/systemui/statusbar/phone/DozeParameters;
 
@@ -182,88 +167,8 @@
     return-void
 .end method
 
-.method private roundToNextMinute(J)J
-    .locals 0
-
-    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1, p2}, Ljava/util/Calendar;->setTimeInMillis(J)V
-
-    const/16 p1, 0xe
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p0, p1, p2}, Ljava/util/Calendar;->set(II)V
-
-    const/16 p1, 0xd
-
-    invoke-virtual {p0, p1, p2}, Ljava/util/Calendar;->set(II)V
-
-    const/16 p1, 0xc
-
-    const/4 p2, 0x1
-
-    invoke-virtual {p0, p1, p2}, Ljava/util/Calendar;->add(II)V
-
-    invoke-virtual {p0}, Ljava/util/Calendar;->getTimeInMillis()J
-
-    move-result-wide p0
-
-    return-wide p0
-.end method
-
 .method private scheduleTimeTick()V
-    .locals 6
-
-    iget-object v0, p0, Lcom/android/systemui/doze/DozeUi;->mTimeTicker:Lcom/android/systemui/util/AlarmTimeout;
-
-    invoke-virtual {v0}, Lcom/android/systemui/util/AlarmTimeout;->isScheduled()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    invoke-direct {p0, v0, v1}, Lcom/android/systemui/doze/DozeUi;->roundToNextMinute(J)J
-
-    move-result-wide v2
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v4
-
-    sub-long/2addr v2, v4
-
-    iget-object v4, p0, Lcom/android/systemui/doze/DozeUi;->mTimeTicker:Lcom/android/systemui/util/AlarmTimeout;
-
-    const/4 v5, 0x1
-
-    invoke-virtual {v4, v2, v3, v5}, Lcom/android/systemui/util/AlarmTimeout;->schedule(JI)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    iget-object v4, p0, Lcom/android/systemui/doze/DozeUi;->mDozeLog:Lcom/android/systemui/doze/DozeLog;
-
-    add-long/2addr v2, v0
-
-    invoke-virtual {v4, v0, v1, v2, v3}, Lcom/android/systemui/doze/DozeLog;->traceTimeTickScheduled(JJ)V
-
-    :cond_1
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lcom/android/systemui/doze/DozeUi;->mLastTimeTickElapsed:J
+    .locals 0
 
     return-void
 .end method

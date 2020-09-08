@@ -477,6 +477,19 @@
     return-void
 .end method
 
+.method public onFodIndicationVisibilityChanged(Z)V
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/aod/OpClockViewCtrl;->mClockController:Lcom/oneplus/aod/controller/IOpClockController;
+
+    if-eqz p0, :cond_0
+
+    invoke-interface {p0, p1}, Lcom/oneplus/aod/controller/IOpClockController;->onFodIndicationVisibilityChanged(Z)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public onFodShowOrHideOnAod(Z)V
     .locals 0
 
@@ -549,6 +562,10 @@
 
     invoke-direct {p0}, Lcom/oneplus/aod/OpClockViewCtrl;->refreshTime()V
 
+    iget-object p0, p0, Lcom/oneplus/aod/OpClockViewCtrl;->mAodBurnInProtectionHelper:Lcom/oneplus/aod/utils/OpAodBurnInProtectionHelper;
+
+    invoke-virtual {p0}, Lcom/oneplus/aod/utils/OpAodBurnInProtectionHelper;->onTimeChanged()V
+
     return-void
 .end method
 
@@ -561,6 +578,19 @@
 
     invoke-virtual {p0, p1}, Lcom/oneplus/aod/OpClockViewCtrl;->updateClockDB(Z)V
 
+    return-void
+.end method
+
+.method public onUserTrigger(I)V
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/aod/OpClockViewCtrl;->mClockController:Lcom/oneplus/aod/controller/IOpClockController;
+
+    if-eqz p0, :cond_0
+
+    invoke-interface {p0, p1}, Lcom/oneplus/aod/controller/IOpClockController;->onUserTrigger(I)V
+
+    :cond_0
     return-void
 .end method
 

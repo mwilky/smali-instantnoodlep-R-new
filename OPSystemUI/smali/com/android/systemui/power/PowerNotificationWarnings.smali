@@ -70,7 +70,7 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    sget-boolean v0, Lcom/android/systemui/power/PowerUI;->DEBUG:Z
+    sget-boolean v0, Lcom/oneplus/util/OpUtils;->DEBUG_ONEPLUS:Z
 
     sput-boolean v0, Lcom/android/systemui/power/PowerNotificationWarnings;->DEBUG:Z
 
@@ -290,11 +290,21 @@
 .end method
 
 .method private dismissAutoSaverSuggestion()V
-    .locals 1
+    .locals 4
 
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mShowAutoSaverSuggestion:Z
+
+    iget-object v0, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mNoMan:Landroid/app/NotificationManager;
+
+    sget-object v1, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
+
+    const-string v2, "auto_saver"
+
+    const/16 v3, 0x31
+
+    invoke-virtual {v0, v2, v3, v1}, Landroid/app/NotificationManager;->cancelAsUser(Ljava/lang/String;ILandroid/os/UserHandle;)V
 
     invoke-direct {p0}, Lcom/android/systemui/power/PowerNotificationWarnings;->updateNotification()V
 
@@ -322,7 +332,7 @@
 .end method
 
 .method private dismissInvalidChargerNotification()V
-    .locals 2
+    .locals 4
 
     iget-boolean v0, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mInvalidCharger:Z
 
@@ -339,13 +349,23 @@
 
     iput-boolean v0, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mInvalidCharger:Z
 
+    iget-object v0, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mNoMan:Landroid/app/NotificationManager;
+
+    const/4 v1, 0x2
+
+    sget-object v2, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
+
+    const-string v3, "low_battery"
+
+    invoke-virtual {v0, v3, v1, v2}, Landroid/app/NotificationManager;->cancelAsUser(Ljava/lang/String;ILandroid/os/UserHandle;)V
+
     invoke-direct {p0}, Lcom/android/systemui/power/PowerNotificationWarnings;->updateNotification()V
 
     return-void
 .end method
 
 .method private dismissLowBatteryNotification()V
-    .locals 2
+    .locals 4
 
     iget-boolean v0, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mWarning:Z
 
@@ -361,6 +381,16 @@
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mWarning:Z
+
+    iget-object v0, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mNoMan:Landroid/app/NotificationManager;
+
+    const/4 v1, 0x3
+
+    sget-object v2, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
+
+    const-string v3, "low_battery"
+
+    invoke-virtual {v0, v3, v1, v2}, Landroid/app/NotificationManager;->cancelAsUser(Ljava/lang/String;ILandroid/os/UserHandle;)V
 
     invoke-direct {p0}, Lcom/android/systemui/power/PowerNotificationWarnings;->updateNotification()V
 
@@ -386,11 +416,17 @@
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isHydrogen()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     iget-object p0, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mContext:Landroid/content/Context;
 
-    const v0, 0x1040188
+    sget v0, Lcom/android/systemui/R$string;->op_battery_saver_description_no_ga:I
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -399,6 +435,17 @@
     return-object p0
 
     :cond_0
+    iget-object p0, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mContext:Landroid/content/Context;
+
+    sget v0, Lcom/android/systemui/R$string;->op_battery_saver_description:I
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_1
     iget-object v1, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mContext:Landroid/content/Context;
 
     const v2, 0x1040189
@@ -432,7 +479,7 @@
     array-length v4, v3
 
     :goto_0
-    if-ge v5, v4, :cond_2
+    if-ge v5, v4, :cond_3
 
     aget-object v6, v3, v5
 
@@ -446,11 +493,11 @@
 
     move-result v7
 
-    if-nez v7, :cond_1
+    if-nez v7, :cond_2
 
     goto :goto_1
 
-    :cond_1
+    :cond_2
     invoke-virtual {v2, v6}, Landroid/text/SpannableString;->getSpanStart(Ljava/lang/Object;)I
 
     move-result v7
@@ -474,7 +521,7 @@
 
     goto :goto_0
 
-    :cond_2
+    :cond_3
     return-object v1
 .end method
 

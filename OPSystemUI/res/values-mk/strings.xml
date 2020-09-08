@@ -39,6 +39,11 @@
     <string name="abc_slice_updated">Ажурирано %1$s</string>
     <string name="abc_slices_permission_request">%1$s сака да прикажува делови од %2$s</string>
     <string name="abc_toolbar_collapse_description">Собери</string>
+    <string name="about_action_bar_title">За</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Политика за приватност</string>
+    <string name="about_release_note_title">Дневник на надградувања:</string>
+    <string name="about_terms_service">Услови на услуга</string>
     <string name="accessibility_accessibility_button">Пристапност</string>
     <string name="accessibility_action_divider_bottom_full">Долниот на цел екран</string>
     <string name="accessibility_action_divider_left_30">Левиот 30%</string>
@@ -267,7 +272,7 @@
     <string name="accessibility_wimax_signal_full">Полн сигнал на WiMAX.</string>
     <string name="accessibility_wimax_three_bars">WiMAX три цртички.</string>
     <string name="accessibility_wimax_two_bars">WiMAX две цртички.</string>
-    <string name="accessibility_work_life_balance_mode">Баланс „живот-работа“</string>
+    <string name="accessibility_work_life_balance_mode">Work Life Balance</string>
     <string name="accessibility_work_life_balance_mode_off">Исклучен е режимот за баланс „живот-работа“.</string>
     <string name="accessibility_work_life_balance_mode_on">Вклучен е режимот за баланс „живот-работа“.</string>
     <string name="accessibility_zero_bars">Нула цртички.</string>
@@ -598,6 +603,7 @@
     <string name="controls_favorite_other_zone_header">Друга</string>
     <string name="controls_favorite_rearrange">Задржете и влечете за да ги преуредите контролите</string>
     <string name="controls_favorite_removed">Сите контроли се отстранети</string>
+    <string name="controls_favorite_see_other_apps">Видете други апликации</string>
     <string name="controls_favorite_subtitle">Изберете ги контролите до кои ќе пристапувате од менито за вклучување</string>
     <string name="controls_favorite_toast_no_changes">Промените не се зачувани</string>
     <string name="controls_in_progress">Во тек</string>
@@ -696,8 +702,8 @@
     <string name="disable_carrier_button_text">Оневозможи ја eSIM</string>
     <string name="disable_overlays">Оневозможи HW преклопувања</string>
     <string name="disable_overlays_summary">Секогаш користи GPU за составување екран</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">Контактирајте го администраторот за детали</string>
+    <string name="disable_tether_notification_title">Поврзувањето е оневозможено</string>
     <string name="disable_vpn">Оневозможи ВПН</string>
     <string name="disabled">Оневозможено</string>
     <string name="disabled_by_admin">Оневозможено од администраторот</string>
@@ -717,6 +723,7 @@
     <string name="drag_to_rearrange_tiles">Задржете и влечете за да ги преуредите плочките</string>
     <string name="drag_to_remove_disabled">Потребни ви се најмалку %1$d плочки</string>
     <string name="drag_to_remove_tiles">Повлечете тука за да се отстрани</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">Влечете ги опциите за да се преуредат. Допрете за да се покаже или сокрие.</string>
     <string name="empty_shade_text">Нема известувања</string>
     <string name="enable_adb">Отстранување грешки на USB</string>
@@ -1092,6 +1099,7 @@
     <string name="left_nav_bar_button_type">Тип дополнително лево копче</string>
     <string name="legacy_vpn_name">ВПН</string>
     <string name="loading_injected_setting_summary">Се вчитува…</string>
+    <string name="loading_text">Вчитување...</string>
     <string name="local_backup_password_summary_change">Допрете за да се промени или отстрани лозинката за целосен бекап на компјутерот</string>
     <string name="local_backup_password_summary_none">Целосниот бекап на компјутерот во моментов не е заштитен</string>
     <string name="local_backup_password_title">Лозинка за бекап на компјутер</string>
@@ -1114,7 +1122,7 @@
     <string name="manage_notifications_history_text">Историја</string>
     <string name="manage_notifications_text">Управувајте</string>
     <string name="managed_user_title">Сите апликации за работа</string>
-    <string name="maxxaudio_disable">Исклучи</string>
+    <string name="maxxaudio_disable">Оневозможи</string>
     <string name="maxxaudio_enable">Вклучи</string>
     <string name="media_category">Медиуми</string>
     <string name="media_projection_action_text">Започни сега</string>
@@ -1178,14 +1186,14 @@
     <string name="monitoring_description_managed_profile_named_vpn">Вашиот работен профил е поврзан на %1$s, што може да ја следи вашата активност на мрежата, заедно со е-пораките, апликациите и веб-сајтовите.</string>
     <string name="monitoring_description_management">"Уредов е во сопственост на организацијата.
 
-IT-администраторот може да ги следи и да управува со поставките, корпоративниот пристап, апликациите, податоците поврзани со уредот и информациите за локацијата на уредот.
+IT-администраторот може да ги следи и да управува со поставките, корпоративниот пристап, апликациите, податоците поврзани со уредот и податоците за локацијата на уредот.
 
 За повеќе информации, контактирајте со IT-администраторот."</string>
     <string name="monitoring_description_management_ca_certificate">Вашата организација инсталираше авторитет за сертификат на уредов. Сообраќајот на вашата безбедна мрежа можно е да се следи или изменува.</string>
     <string name="monitoring_description_management_network_logging">Вашиот администратор вклучил евиденција на мрежата, што подразбира следење на сообраќајот на вашиот уред.</string>
     <string name="monitoring_description_named_management">"Уредов е во сопственост на %1$s.
 
-IT-администраторот може да ги следи и да управува со поставките, корпоративниот пристап, апликациите, податоците поврзани со уредот и информациите за локацијата на уредот.
+IT-администраторот може да ги следи и да управува со поставките, корпоративниот пристап, апликациите, податоците поврзани со уредот и податоците за локацијата на уредот.
 
 За повеќе информации, контактирајте со IT-администраторот."</string>
     <string name="monitoring_description_named_vpn">Поврзани сте на %1$s, што може да ја следи вашата активност на мрежата, вклучувајќи ги е-пораките, апликациите и веб-сајтовите.</string>
@@ -1323,8 +1331,14 @@ YИсто така, поврзани сте на VPN којашто може д�
     <string name="oneplus_threekey_navigation_sound">Дозволени се сите звуци</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Можете да го вклучите со копчето горе</string>
     <string name="oneplus_threekey_navigation_vibration">Само вибрации</string>
-    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> отклучување</string>
-    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> отклучувања</string>
+    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>отклучување</string>
+    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>отклучувања</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">Се спарува...</string>
     <string name="op_earphone_connected_fail">Неуспешно спарување. Можете да го проверите статусот на слушалките и Bluetooth.</string>
     <string name="op_earphone_connected_success">Спарено. Допрете за да поставите повеќе.</string>
@@ -1354,9 +1368,10 @@ YИсто така, поврзани сте на VPN којашто може д�
     <string name="op_notification_channel_summary_low">Помалку важните известувања без звук или вибрација.</string>
     <string name="op_notification_section_header_gentle">Други известувања</string>
     <string name="op_notification_silence_title">Друго</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">Темен режим</string>
     <string name="op_qs_data_usage_used">Искористено %1$s: %2$s%3$s</string>
-    <string name="op_quick_settings_night_display_label">Вечерен режим</string>
+    <string name="op_quick_settings_night_display_label">Удобност за видот</string>
     <string name="op_quick_settings_night_display_summary_off">Исклучен е вечерниот режим, допрете за да се вклучи</string>
     <string name="op_quick_settings_night_display_summary_on">Вклучен е вечерниот режим, допрете за да се исклучи</string>
     <string name="op_read_mode2_dialog_black">Моно ефект</string>
@@ -1570,7 +1585,7 @@ YИсто така, поврзани сте на VPN којашто може д�
     <string name="quick_settings_disclosure_managed_profile_monitoring">Вашата организација може да го следи мрежниот сообраќај на вашиот работен профил</string>
     <string name="quick_settings_disclosure_managed_profile_named_vpn">Вашиот работен профил е поврзан со %1$s</string>
     <string name="quick_settings_disclosure_management">Уредов е во сопственост на организацијата</string>
-    <string name="quick_settings_disclosure_management_monitoring">Организацијата управува со уредов и може да го следи мрежниот сообраќај</string>
+    <string name="quick_settings_disclosure_management_monitoring">Организацијата е сопственик на уредов и може да го следи мрежниот сообраќај</string>
     <string name="quick_settings_disclosure_management_named_vpn">Уредов е во сопственост на организацијата и е поврзан со %1$s</string>
     <string name="quick_settings_disclosure_management_vpns">Уредов е во сопственост на организацијата и е поврзан со VPN-мрежи</string>
     <string name="quick_settings_disclosure_monitoring">Мрежата можеби се следи</string>
@@ -1867,7 +1882,7 @@ YИсто така, поврзани сте на VPN којашто може д�
     <string name="tethered_notification_hybrid_sharing_mobile">Се споделува мобилен интернет, кликнете за да влезете во Поставки</string>
     <string name="tethered_notification_hybrid_sharing_none">Нема достапна мрежа за споделување, кликнете за да влезете во Поставки</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Се споделува Wi-Fi, кликнете за да влезете во Поставки</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">Допрете за поставување.</string>
     <string name="tethered_notification_multi_device_message">%1$s поврзани уреди</string>
     <string name="tethered_notification_multi_tether_title">Поврзувањето и мобилниот хотспот се активни</string>
     <string name="tethered_notification_no_device_message">Нема поврзан уред</string>
@@ -2095,7 +2110,17 @@ Wi‑Fi-адреса (BSSID)
     <string name="wifi_verbose_logging">Овозможи преопширно пријавување Wi‑Fi</string>
     <string name="wifi_verbose_logging_summary">Зголеми Wi‑Fi ниво на пријавување, прикажи по SSID RSSI во Wi‑Fi бирач</string>
     <string name="window_animation_scale_title">Опсег на аним. на прозор.</string>
-    <string name="work_life_balance_mode">Work-Life Balance</string>
+    <string name="wlb_break_mode_active">Активен</string>
+    <string name="wlb_break_mode_active_text">%1$s режим · %2$s</string>
+    <string name="wlb_break_mode_on_break">На пауза</string>
+    <string name="wlb_break_mode_resume">Продолжи</string>
+    <string name="wlb_break_mode_take_break">Одморете се</string>
+    <string name="wlb_qs_detail_break_mode">Режим за одмор</string>
+    <string name="wlb_qs_detail_break_mode_desc">Автоматски продолжува на претходниот режим по 30 минути</string>
+    <string name="wlb_qs_detail_life_mode">Режим за живот</string>
+    <string name="wlb_qs_detail_more_setting">Повеќе поставки</string>
+    <string name="wlb_qs_detail_work_mode">Режим за работа</string>
+    <string name="work_life_balance_mode">Work Life Balance</string>
     <string name="zen_alarm_warning">Нема да го слушнете следниот аларм %1$s</string>
     <string name="zen_alarm_warning_indef">Нема да го слушнете следниот аларм %1$s освен ако претходно не го исклучите ова</string>
     <string name="zen_alarms_introduction">Нема да ве вознемируваат звуци и вибрации, освен од аларми. Сѐ уште ќе слушате сѐ што ќе изберете да пуштите, како музика, видеа и игри.</string>

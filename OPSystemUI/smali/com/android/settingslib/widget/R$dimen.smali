@@ -8,6 +8,6 @@
 
 .field public static final advanced_dashboard_tile_foreground_image_inset:I = 0x7f070075
 
-.field public static final dashboard_tile_foreground_image_inset:I = 0x7f070193
+.field public static final dashboard_tile_foreground_image_inset:I = 0x7f070199
 
-.field public static final settings_bar_view_max_height:I = 0x7f070899
+.field public static final settings_bar_view_max_height:I = 0x7f0708bc

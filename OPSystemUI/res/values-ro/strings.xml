@@ -39,6 +39,11 @@
     <string name="abc_slice_updated">Actualizat la %1$s</string>
     <string name="abc_slices_permission_request">%1$s vrea să afișeze porțiuni din %2$s</string>
     <string name="abc_toolbar_collapse_description">Restrângeți</string>
+    <string name="about_action_bar_title">Despre</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Politica de confidențialitate</string>
+    <string name="about_release_note_title">Jurnal de actualizări:</string>
+    <string name="about_terms_service">Termenii serviciului</string>
     <string name="accessibility_accessibility_button">Accesibilitate</string>
     <string name="accessibility_action_divider_bottom_full">Partea de jos pe ecran complet</string>
     <string name="accessibility_action_divider_left_30">Partea stângă: 30%</string>
@@ -598,10 +603,15 @@ Selecție"</string>
     <string name="controls_favorite_other_zone_header">Altul</string>
     <string name="controls_favorite_rearrange">Țineți apăsat și trageți pentru a rearanja comenzile</string>
     <string name="controls_favorite_removed">Au fost șterse toate comenzile</string>
+    <string name="controls_favorite_see_other_apps">Vedeți alte aplicații</string>
     <string name="controls_favorite_subtitle">Alegeți comenzile de accesat din meniul de alimentare</string>
     <string name="controls_favorite_toast_no_changes">Modificările nu au fost salvate</string>
     <string name="controls_in_progress">În curs</string>
+    <string name="controls_media_close_session">Ascunde sesiunea actuală.</string>
+    <string name="controls_media_dismiss_button">Ascunde</string>
     <string name="controls_media_resume">Reia</string>
+    <string name="controls_media_settings_button">Setări</string>
+    <string name="controls_media_title">Media</string>
     <string name="controls_menu_add">Adăugați comenzi</string>
     <string name="controls_menu_edit">Editați comenzile</string>
     <string name="controls_open_app">Deschideți aplicația</string>
@@ -692,8 +702,8 @@ Dacă reluați, este posibil să se aplice taxe pentru utilizarea datelor."</str
     <string name="disable_carrier_button_text">Dezactivați cardul eSIM</string>
     <string name="disable_overlays">Dezactivați suprapun. HW</string>
     <string name="disable_overlays_summary">Utilizați mereu GPU pentru compunerea ecranului</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">Pentru detalii luați legătura cu administratorul</string>
+    <string name="disable_tether_notification_title">Partajarea de conexiune este dezactivată</string>
     <string name="disable_vpn">Dezactivați conexiunea prin VPN</string>
     <string name="disabled">Dezactivată</string>
     <string name="disabled_by_admin">Dezactivat de administrator</string>
@@ -713,6 +723,7 @@ Dacă reluați, este posibil să se aplice taxe pentru utilizarea datelor."</str
     <string name="drag_to_rearrange_tiles">Țineți apăsat și trageți pentru a rearanja piesele</string>
     <string name="drag_to_remove_disabled">Aveți nevoie de cel puțin %1$d carduri</string>
     <string name="drag_to_remove_tiles">Trageți aici pentru a elimina</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">Trageți panouri pentru a le rearanja. Atingeți pentru a le afișa sau ascunde.</string>
     <string name="empty_shade_text">Nicio notificare</string>
     <string name="enable_adb">Remedierea erorilor prin USB</string>
@@ -1088,6 +1099,7 @@ Dacă telefonul este resetat, nu îl veți putea utiliza decât după ce introdu
     <string name="left_nav_bar_button_type">Tip de buton din extrema stângă</string>
     <string name="legacy_vpn_name">VPN</string>
     <string name="loading_injected_setting_summary">Se încarcă…</string>
+    <string name="loading_text">Se încarcă...</string>
     <string name="local_backup_password_summary_change">Atingeți ca să modificați sau să eliminați parola pentru backupurile complete pe desktop</string>
     <string name="local_backup_password_summary_none">În prezent, backupurile complete pe computer nu sunt protejate</string>
     <string name="local_backup_password_title">Parolă backup computer</string>
@@ -1313,14 +1325,20 @@ De asemenea, sunteți conectat(ă) la o rețea VPN care vă poate monitoriza act
     <string name="oneplus_not_show">Nu afișa din nou</string>
     <string name="oneplus_screen_features_not_available_toast">Când sunt activate, caracteristicile precum calibrarea ecranului nu vor fi disponibile</string>
     <string name="oneplus_threekey_navigation_disturb_changed">S-a schimbat „Nu deranjați”!</string>
-    <string name="oneplus_threekey_navigation_next">URMĂTORUL</string>
+    <string name="oneplus_threekey_navigation_next">URMĂTOAREA</string>
     <string name="oneplus_threekey_navigation_silence">Silențios total</string>
     <string name="oneplus_threekey_navigation_slider_has_changed">Alert slider s-a schimbat!</string>
     <string name="oneplus_threekey_navigation_sound">Toate sunetele permise</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Poate fi activat prin butonul de mai sus</string>
     <string name="oneplus_threekey_navigation_vibration">Doar vibrații</string>
-    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> deblocare</string>
-    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> deblocări</string>
+    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>deblocare</string>
+    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>deblocări</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">Se asociază...</string>
     <string name="op_earphone_connected_fail">Asocierea nu a reușit. Puteți verifica starea căștilor și a Bluetooth.</string>
     <string name="op_earphone_connected_success">Asociat. Apăsați pentru a seta mai multe.</string>
@@ -1350,9 +1368,10 @@ De asemenea, sunteți conectat(ă) la o rețea VPN care vă poate monitoriza act
     <string name="op_notification_channel_summary_low">Notificările mai puțin importante fără sunet sau vibrații.</string>
     <string name="op_notification_section_header_gentle">Alte notificări</string>
     <string name="op_notification_silence_title">Altele</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">Mod întunecat</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s consumat</string>
-    <string name="op_quick_settings_night_display_label">Mod noapte</string>
+    <string name="op_quick_settings_night_display_label">Confort vizual</string>
     <string name="op_quick_settings_night_display_summary_off">Modul noapte este dezactivat, atingeți pentru a îl activa</string>
     <string name="op_quick_settings_night_display_summary_on">Modul noapte este activat, atingeți pentru a îl dezactiva</string>
     <string name="op_read_mode2_dialog_black">Efect monocromatic</string>
@@ -1566,7 +1585,7 @@ De asemenea, sunteți conectat(ă) la o rețea VPN care vă poate monitoriza act
     <string name="quick_settings_disclosure_managed_profile_monitoring">Este posibil ca organizația dvs. să monitorizeze traficul de rețea în profilul dvs. de serviciu</string>
     <string name="quick_settings_disclosure_managed_profile_named_vpn">Profilul dvs. de serviciu este conectat la %1$s</string>
     <string name="quick_settings_disclosure_management">Dispozitivul aparține organizației dvs.</string>
-    <string name="quick_settings_disclosure_management_monitoring">Organizația dvs. gestionează acest dispozitiv și poate monitoriza traficul de rețea</string>
+    <string name="quick_settings_disclosure_management_monitoring">Organizația dvs. deține acest dispozitiv și poate monitoriza traficul de rețea</string>
     <string name="quick_settings_disclosure_management_named_vpn">Dispozitivul aparține organizației dvs. și este conectat la %1$s</string>
     <string name="quick_settings_disclosure_management_vpns">Dispozitivul aparține organizației dvs. și este conectat la VPN-uri</string>
     <string name="quick_settings_disclosure_monitoring">Este posibil ca rețeaua să fie monitorizată</string>
@@ -1867,7 +1886,7 @@ fi monitorizată"</string>
     <string name="tethered_notification_hybrid_sharing_mobile">Se partajează conexiunea de date mobile, faceți clic pentru a accesa Setările</string>
     <string name="tethered_notification_hybrid_sharing_none">Nu există rețele disponibile pentru partajare, faceți clic pentru a accesa Setările</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Se partajează Wi-Fi, faceți clic pentru a accesa Setările</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">Atingeți pentru a configura.</string>
     <string name="tethered_notification_multi_device_message">%1$s dispozitive conectate</string>
     <string name="tethered_notification_multi_tether_title">Punct de acces mobil și conexiune prin mobil active</string>
     <string name="tethered_notification_no_device_message">Niciun dispozitiv conectat</string>
@@ -2100,7 +2119,17 @@ Adresa Wi‑Fi (BSSID)
     <string name="wifi_verbose_logging">Înregistrare prin Wi-Fi de volume mari de date</string>
     <string name="wifi_verbose_logging_summary">Măriți niv. de înr. prin Wi‑Fi, afișați în fcț. de SSID RSSI în Selectorul Wi‑Fi</string>
     <string name="window_animation_scale_title">Scară animație fereastră</string>
-    <string name="work_life_balance_mode">Work-Life Balance</string>
+    <string name="wlb_break_mode_active">Activ</string>
+    <string name="wlb_break_mode_active_text">Modul %1$s · %2$s</string>
+    <string name="wlb_break_mode_on_break">În pauză</string>
+    <string name="wlb_break_mode_resume">Reluare</string>
+    <string name="wlb_break_mode_take_break">Luați o pauză</string>
+    <string name="wlb_qs_detail_break_mode">Modul Pauză</string>
+    <string name="wlb_qs_detail_break_mode_desc">După 30 de minute se revine automat la modul anterior</string>
+    <string name="wlb_qs_detail_life_mode">Modul Viață</string>
+    <string name="wlb_qs_detail_more_setting">Mai multe setări</string>
+    <string name="wlb_qs_detail_work_mode">Modul Muncă</string>
+    <string name="work_life_balance_mode">Work Life Balance</string>
     <string name="zen_alarm_warning">Nu veți auzi următoarea alarmă %1$s</string>
     <string name="zen_alarm_warning_indef">Dacă nu dezactivați această opțiune înainte, nu veți auzi următoarea alarmă %1$s</string>
     <string name="zen_alarms_introduction">Se vor anunța prin sunete și vibrații numai alarmele. Totuși, veți auzi tot ce alegeți să redați, inclusiv muzică, videoclipuri și jocuri.</string>

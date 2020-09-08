@@ -31,7 +31,7 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 0
 
-    sget-boolean p0, Lcom/oneplus/util/OpUtils;->DEBUG_ONEPLUS:Z
+    sget-boolean p0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
     if-eqz p0, :cond_0
 
@@ -48,7 +48,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 0
 
-    sget-boolean p0, Lcom/oneplus/util/OpUtils;->DEBUG_ONEPLUS:Z
+    sget-boolean p0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
     if-eqz p0, :cond_0
 

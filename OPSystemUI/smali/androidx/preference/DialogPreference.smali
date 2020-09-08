@@ -12,6 +12,8 @@
 
 
 # instance fields
+.field private lastClickTime:J
+
 .field private mDialogIcon:Landroid/graphics/drawable/Drawable;
 
 .field private mDialogLayoutResId:I
@@ -63,9 +65,13 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
-    .locals 1
+    .locals 2
 
     invoke-direct {p0, p1, p2, p3, p4}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Landroidx/preference/DialogPreference;->lastClickTime:J
 
     sget-object v0, Landroidx/preference/R$styleable;->DialogPreference:[I
 
@@ -200,7 +206,27 @@
 .end method
 
 .method protected onClick()V
-    .locals 1
+    .locals 6
+
+    invoke-static {}, Landroid/icu/util/Calendar;->getInstance()Landroid/icu/util/Calendar;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/icu/util/Calendar;->getTimeInMillis()J
+
+    move-result-wide v0
+
+    iget-wide v2, p0, Landroidx/preference/DialogPreference;->lastClickTime:J
+
+    sub-long v2, v0, v2
+
+    const-wide/16 v4, 0x1f4
+
+    cmp-long v2, v2, v4
+
+    if-lez v2, :cond_0
+
+    iput-wide v0, p0, Landroidx/preference/DialogPreference;->lastClickTime:J
 
     invoke-virtual {p0}, Landroidx/preference/Preference;->getPreferenceManager()Landroidx/preference/PreferenceManager;
 
@@ -208,5 +234,6 @@
 
     invoke-virtual {v0, p0}, Landroidx/preference/PreferenceManager;->showDialog(Landroidx/preference/Preference;)V
 
+    :cond_0
     return-void
 .end method

@@ -2142,7 +2142,7 @@
 
     iput v3, v1, Lcom/android/systemui/statusbar/notification/stack/ViewState;->zTranslation:F
 
-    goto :goto_4
+    goto/16 :goto_4
 
     :cond_1
     invoke-virtual {p4}, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->getTrackedHeadsUpRow()Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
@@ -2153,13 +2153,23 @@
 
     if-eq v0, v4, :cond_4
 
+    iget-object v4, p3, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm$StackScrollAlgorithmState;->visibleChildren:Ljava/util/ArrayList;
+
+    invoke-virtual {v4, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    instance-of v4, v4, Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;
+
+    if-nez v4, :cond_2
+
     iget-object p3, p3, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm$StackScrollAlgorithmState;->visibleChildren:Ljava/util/ArrayList;
 
     invoke-virtual {p3, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object p3
 
-    instance-of p3, p3, Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;
+    instance-of p3, p3, Lcom/android/systemui/statusbar/notification/stack/PeopleHubView;
 
     if-nez p3, :cond_2
 

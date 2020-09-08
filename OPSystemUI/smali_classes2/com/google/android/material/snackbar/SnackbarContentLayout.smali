@@ -95,7 +95,7 @@
 .end method
 
 .method private updateViewsWithinLayout(III)Z
-    .locals 2
+    .locals 3
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getOrientation()I
 
@@ -140,10 +140,53 @@
 
     :cond_2
     :goto_1
+    iget-object p1, p0, Lcom/google/android/material/snackbar/SnackbarContentLayout;->messageView:Landroid/widget/TextView;
+
+    invoke-static {p1, p2, p3}, Lcom/google/android/material/snackbar/SnackbarContentLayout;->updateTopBottomPadding(Landroid/view/View;II)V
+
+    iget-object p1, p0, Lcom/google/android/material/snackbar/SnackbarContentLayout;->actionView:Landroid/widget/Button;
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p1}, Landroid/widget/Button;->getVisibility()I
+
+    move-result p1
+
+    const/16 p2, 0x8
+
+    if-ne p1, p2, :cond_3
+
+    iget-object p1, p0, Lcom/google/android/material/snackbar/SnackbarContentLayout;->messageView:Landroid/widget/TextView;
+
+    invoke-virtual {p1}, Landroid/widget/TextView;->getPaddingLeft()I
+
+    move-result p2
+
+    iget-object p3, p0, Lcom/google/android/material/snackbar/SnackbarContentLayout;->messageView:Landroid/widget/TextView;
+
+    invoke-virtual {p3}, Landroid/widget/TextView;->getPaddingTop()I
+
+    move-result p3
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v2, Lcom/google/android/material/R$dimen;->op_control_margin_space3:I
+
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
     iget-object p0, p0, Lcom/google/android/material/snackbar/SnackbarContentLayout;->messageView:Landroid/widget/TextView;
 
-    invoke-static {p0, p2, p3}, Lcom/google/android/material/snackbar/SnackbarContentLayout;->updateTopBottomPadding(Landroid/view/View;II)V
+    invoke-virtual {p0}, Landroid/widget/TextView;->getPaddingBottom()I
 
+    move-result p0
+
+    invoke-virtual {p1, p2, p3, v0, p0}, Landroid/widget/TextView;->setPadding(IIII)V
+
+    :cond_3
     :goto_2
     return v1
 .end method

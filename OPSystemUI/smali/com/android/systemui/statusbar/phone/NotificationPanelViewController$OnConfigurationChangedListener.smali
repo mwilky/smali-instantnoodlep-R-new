@@ -46,7 +46,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController$OnConfigurationChangedListener;->this$0:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$5900(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)Lcom/android/systemui/statusbar/phone/KeyguardAffordanceHelper;
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$6000(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)Lcom/android/systemui/statusbar/phone/KeyguardAffordanceHelper;
 
     move-result-object v0
 
@@ -56,7 +56,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController$OnConfigurationChangedListener;->this$0:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
-    invoke-static {v1}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$12300(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)I
+    invoke-static {v1}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$12400(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)I
 
     move-result v1
 
@@ -64,14 +64,14 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController$OnConfigurationChangedListener;->this$0:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$10500(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)V
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$10600(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)V
 
     :cond_0
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController$OnConfigurationChangedListener;->this$0:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
     iget p1, p1, Landroid/content/res/Configuration;->orientation:I
 
-    invoke-static {p0, p1}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$12302(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;I)I
+    invoke-static {p0, p1}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$12402(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;I)I
 
     return-void
 .end method

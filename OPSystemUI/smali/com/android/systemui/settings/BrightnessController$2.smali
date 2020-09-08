@@ -37,7 +37,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/settings/BrightnessController$2;->this$0:Lcom/android/systemui/settings/BrightnessController;
 
-    invoke-static {v0}, Lcom/android/systemui/settings/BrightnessController;->access$1300(Lcom/android/systemui/settings/BrightnessController;)Z
+    invoke-static {v0}, Lcom/android/systemui/settings/BrightnessController;->access$1500(Lcom/android/systemui/settings/BrightnessController;)Z
 
     move-result v0
 
@@ -51,6 +51,12 @@
     const-string v0, "screen_brightness_float"
 
     :goto_0
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v1
+
+    invoke-static {v1, v2}, Lcom/android/systemui/settings/BrightnessController;->access$702(J)J
+
     iget-object v1, p0, Lcom/android/systemui/settings/BrightnessController$2;->this$0:Lcom/android/systemui/settings/BrightnessController;
 
     invoke-static {v1}, Lcom/android/systemui/settings/BrightnessController;->access$000(Lcom/android/systemui/settings/BrightnessController;)Landroid/content/Context;
@@ -63,7 +69,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/settings/BrightnessController$2;->this$0:Lcom/android/systemui/settings/BrightnessController;
 
-    invoke-static {p0}, Lcom/android/systemui/settings/BrightnessController;->access$2200(Lcom/android/systemui/settings/BrightnessController;)F
+    invoke-static {p0}, Lcom/android/systemui/settings/BrightnessController;->access$2300(Lcom/android/systemui/settings/BrightnessController;)F
 
     move-result p0
 
@@ -89,7 +95,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/settings/BrightnessController$2;->this$0:Lcom/android/systemui/settings/BrightnessController;
 
-    invoke-static {v0}, Lcom/android/systemui/settings/BrightnessController;->access$1000(Lcom/android/systemui/settings/BrightnessController;)Z
+    invoke-static {v0}, Lcom/android/systemui/settings/BrightnessController;->access$1200(Lcom/android/systemui/settings/BrightnessController;)Z
 
     move-result v0
 
@@ -102,11 +108,11 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/android/systemui/settings/BrightnessController;->access$1002(Lcom/android/systemui/settings/BrightnessController;Z)Z
+    invoke-static {v0, v1}, Lcom/android/systemui/settings/BrightnessController;->access$1202(Lcom/android/systemui/settings/BrightnessController;Z)Z
 
     iget-object v0, p0, Lcom/android/systemui/settings/BrightnessController$2;->this$0:Lcom/android/systemui/settings/BrightnessController;
 
-    invoke-static {v0}, Lcom/android/systemui/settings/BrightnessController;->access$1100(Lcom/android/systemui/settings/BrightnessController;)Landroid/service/vr/IVrManager;
+    invoke-static {v0}, Lcom/android/systemui/settings/BrightnessController;->access$1300(Lcom/android/systemui/settings/BrightnessController;)Landroid/service/vr/IVrManager;
 
     move-result-object v0
 
@@ -117,13 +123,13 @@
     :try_start_0
     iget-object v0, p0, Lcom/android/systemui/settings/BrightnessController$2;->this$0:Lcom/android/systemui/settings/BrightnessController;
 
-    invoke-static {v0}, Lcom/android/systemui/settings/BrightnessController;->access$1100(Lcom/android/systemui/settings/BrightnessController;)Landroid/service/vr/IVrManager;
+    invoke-static {v0}, Lcom/android/systemui/settings/BrightnessController;->access$1300(Lcom/android/systemui/settings/BrightnessController;)Landroid/service/vr/IVrManager;
 
     move-result-object v0
 
     iget-object v3, p0, Lcom/android/systemui/settings/BrightnessController$2;->this$0:Lcom/android/systemui/settings/BrightnessController;
 
-    invoke-static {v3}, Lcom/android/systemui/settings/BrightnessController;->access$1200(Lcom/android/systemui/settings/BrightnessController;)Landroid/service/vr/IVrStateCallbacks;
+    invoke-static {v3}, Lcom/android/systemui/settings/BrightnessController;->access$1400(Lcom/android/systemui/settings/BrightnessController;)Landroid/service/vr/IVrStateCallbacks;
 
     move-result-object v3
 
@@ -144,7 +150,7 @@
     :goto_0
     iget-object v0, p0, Lcom/android/systemui/settings/BrightnessController$2;->this$0:Lcom/android/systemui/settings/BrightnessController;
 
-    invoke-static {v0}, Lcom/android/systemui/settings/BrightnessController;->access$1400(Lcom/android/systemui/settings/BrightnessController;)Lcom/android/systemui/settings/BrightnessController$BrightnessObserver;
+    invoke-static {v0}, Lcom/android/systemui/settings/BrightnessController;->access$1600(Lcom/android/systemui/settings/BrightnessController;)Lcom/android/systemui/settings/BrightnessController$BrightnessObserver;
 
     move-result-object v0
 
@@ -152,7 +158,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/settings/BrightnessController$2;->this$0:Lcom/android/systemui/settings/BrightnessController;
 
-    invoke-static {v0}, Lcom/android/systemui/settings/BrightnessController;->access$1500(Lcom/android/systemui/settings/BrightnessController;)Lcom/android/systemui/settings/CurrentUserTracker;
+    invoke-static {v0}, Lcom/android/systemui/settings/BrightnessController;->access$1700(Lcom/android/systemui/settings/BrightnessController;)Lcom/android/systemui/settings/CurrentUserTracker;
 
     move-result-object v0
 
@@ -160,7 +166,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/settings/BrightnessController$2;->this$0:Lcom/android/systemui/settings/BrightnessController;
 
-    invoke-static {v0}, Lcom/android/systemui/settings/BrightnessController;->access$1700(Lcom/android/systemui/settings/BrightnessController;)Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/systemui/settings/BrightnessController;->access$1800(Lcom/android/systemui/settings/BrightnessController;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -168,7 +174,7 @@
 
     invoke-virtual {v0, v3}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    invoke-static {}, Lcom/android/systemui/settings/BrightnessController;->access$1800()Z
+    invoke-static {}, Lcom/android/systemui/settings/BrightnessController;->access$1900()Z
 
     move-result v0
 
@@ -184,7 +190,7 @@
 
     iget-object v3, p0, Lcom/android/systemui/settings/BrightnessController$2;->this$0:Lcom/android/systemui/settings/BrightnessController;
 
-    invoke-static {v3}, Lcom/android/systemui/settings/BrightnessController;->access$1900(Lcom/android/systemui/settings/BrightnessController;)Z
+    invoke-static {v3}, Lcom/android/systemui/settings/BrightnessController;->access$2000(Lcom/android/systemui/settings/BrightnessController;)Z
 
     move-result v3
 
@@ -196,7 +202,7 @@
 
     iget-object v3, p0, Lcom/android/systemui/settings/BrightnessController$2;->this$0:Lcom/android/systemui/settings/BrightnessController;
 
-    invoke-static {v3}, Lcom/android/systemui/settings/BrightnessController;->access$2000(Lcom/android/systemui/settings/BrightnessController;)Z
+    invoke-static {v3}, Lcom/android/systemui/settings/BrightnessController;->access$2100(Lcom/android/systemui/settings/BrightnessController;)Z
 
     move-result v3
 
@@ -208,7 +214,7 @@
 
     iget-object v3, p0, Lcom/android/systemui/settings/BrightnessController$2;->this$0:Lcom/android/systemui/settings/BrightnessController;
 
-    invoke-static {v3}, Lcom/android/systemui/settings/BrightnessController;->access$2100(Lcom/android/systemui/settings/BrightnessController;)Z
+    invoke-static {v3}, Lcom/android/systemui/settings/BrightnessController;->access$2200(Lcom/android/systemui/settings/BrightnessController;)Z
 
     move-result v3
 
@@ -220,7 +226,7 @@
 
     iget-object v3, p0, Lcom/android/systemui/settings/BrightnessController$2;->this$0:Lcom/android/systemui/settings/BrightnessController;
 
-    invoke-static {v3}, Lcom/android/systemui/settings/BrightnessController;->access$2200(Lcom/android/systemui/settings/BrightnessController;)F
+    invoke-static {v3}, Lcom/android/systemui/settings/BrightnessController;->access$2300(Lcom/android/systemui/settings/BrightnessController;)F
 
     move-result v3
 
@@ -235,7 +241,7 @@
     :cond_2
     iget-object v0, p0, Lcom/android/systemui/settings/BrightnessController$2;->this$0:Lcom/android/systemui/settings/BrightnessController;
 
-    invoke-static {v0}, Lcom/android/systemui/settings/BrightnessController;->access$1900(Lcom/android/systemui/settings/BrightnessController;)Z
+    invoke-static {v0}, Lcom/android/systemui/settings/BrightnessController;->access$2000(Lcom/android/systemui/settings/BrightnessController;)Z
 
     move-result v0
 
@@ -249,7 +255,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/settings/BrightnessController$2;->this$0:Lcom/android/systemui/settings/BrightnessController;
 
-    invoke-static {p0, v1}, Lcom/android/systemui/settings/BrightnessController;->access$1902(Lcom/android/systemui/settings/BrightnessController;Z)Z
+    invoke-static {p0, v1}, Lcom/android/systemui/settings/BrightnessController;->access$2002(Lcom/android/systemui/settings/BrightnessController;Z)Z
 
     :cond_3
     return-void

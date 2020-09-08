@@ -49,6 +49,47 @@
     return p0
 .end method
 
+.method getDrawableResIdByFeature()I
+    .locals 1
+
+    iget-object p0, p0, Lcom/android/settingslib/media/MediaDevice;->mRouteInfo:Landroid/media/MediaRoute2Info;
+
+    invoke-virtual {p0}, Landroid/media/MediaRoute2Info;->getFeatures()Ljava/util/List;
+
+    move-result-object p0
+
+    const-string v0, "android.media.route.feature.REMOTE_GROUP_PLAYBACK"
+
+    invoke-interface {p0, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget p0, Lcom/android/settingslib/R$drawable;->ic_media_group_device:I
+
+    goto :goto_0
+
+    :cond_0
+    const-string v0, "android.media.route.feature.REMOTE_VIDEO_PLAYBACK"
+
+    invoke-interface {p0, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    sget p0, Lcom/android/settingslib/R$drawable;->ic_media_display_device:I
+
+    goto :goto_0
+
+    :cond_1
+    sget p0, Lcom/android/settingslib/R$drawable;->ic_media_speaker_device:I
+
+    :goto_0
+    return p0
+.end method
+
 .method public getIcon()Landroid/graphics/drawable/Drawable;
     .locals 1
 
@@ -72,7 +113,7 @@
 
     iget-object v0, p0, Lcom/android/settingslib/media/MediaDevice;->mContext:Landroid/content/Context;
 
-    invoke-virtual {p0}, Lcom/android/settingslib/media/InfoMediaDevice;->getDrawableResId()I
+    invoke-virtual {p0}, Lcom/android/settingslib/media/InfoMediaDevice;->getDrawableResIdByFeature()I
 
     move-result p0
 

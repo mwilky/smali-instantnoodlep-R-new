@@ -1,9 +1,6 @@
 .class Lcom/oneplus/keyguard/OpKeyguardClockInfoView$2;
-.super Ljava/lang/Object;
+.super Landroid/database/ContentObserver;
 .source "OpKeyguardClockInfoView.java"
-
-# interfaces
-.implements Lcom/android/keyguard/KeyguardAssistantView$Callback;
 
 
 # annotations
@@ -22,42 +19,56 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/oneplus/keyguard/OpKeyguardClockInfoView;)V
+.method constructor <init>(Lcom/oneplus/keyguard/OpKeyguardClockInfoView;Landroid/os/Handler;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$2;->this$0:Lcom/oneplus/keyguard/OpKeyguardClockInfoView;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onCardShownChanged(Z)V
+.method public onChange(Z)V
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    const-string p1, "OpKeyguardClockInfoView"
 
-    const-string v1, "receive onCardShownChanged value:"
+    const-string v0, "receive mIsFormat12HourObserver changed"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    iget-object p1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$2;->this$0:Lcom/oneplus/keyguard/OpKeyguardClockInfoView;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p1}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->access$100(Lcom/oneplus/keyguard/OpKeyguardClockInfoView;)Landroid/content/Context;
 
-    move-result-object p1
+    move-result-object v0
 
-    const-string v0, "OpKeyguardClockInfoView"
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    move-result-object v0
+
+    const-string v1, "time_12_24"
+
+    invoke-static {v0, v1}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "12"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    invoke-static {p1, v0}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->access$302(Lcom/oneplus/keyguard/OpKeyguardClockInfoView;Z)Z
 
     iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$2;->this$0:Lcom/oneplus/keyguard/OpKeyguardClockInfoView;
 
-    invoke-static {p0}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->access$300(Lcom/oneplus/keyguard/OpKeyguardClockInfoView;)V
+    invoke-static {p0}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->access$400(Lcom/oneplus/keyguard/OpKeyguardClockInfoView;)V
 
     return-void
 .end method

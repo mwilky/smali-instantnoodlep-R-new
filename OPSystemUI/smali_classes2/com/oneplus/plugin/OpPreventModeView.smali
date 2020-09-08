@@ -8,8 +8,6 @@
 
 .field private mInnerView:Landroid/widget/LinearLayout;
 
-.field mOrientatin:I
-
 .field private mPhone:Landroid/widget/ImageView;
 
 .field private mResources:Landroid/content/res/Resources;
@@ -31,13 +29,9 @@
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
+    .locals 0
 
     invoke-direct {p0, p1}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lcom/oneplus/plugin/OpPreventModeView;->mOrientatin:I
 
     iput-object p1, p0, Lcom/oneplus/plugin/OpPreventModeView;->mContext:Landroid/content/Context;
 
@@ -55,10 +49,6 @@
 
     invoke-direct {p0, p1, p2}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    const/4 p2, 0x1
-
-    iput p2, p0, Lcom/oneplus/plugin/OpPreventModeView;->mOrientatin:I
-
     iput-object p1, p0, Lcom/oneplus/plugin/OpPreventModeView;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -74,10 +64,6 @@
     .locals 0
 
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-
-    const/4 p2, 0x1
-
-    iput p2, p0, Lcom/oneplus/plugin/OpPreventModeView;->mOrientatin:I
 
     iput-object p1, p0, Lcom/oneplus/plugin/OpPreventModeView;->mContext:Landroid/content/Context;
 
@@ -95,10 +81,6 @@
 
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    const/4 p2, 0x1
-
-    iput p2, p0, Lcom/oneplus/plugin/OpPreventModeView;->mOrientatin:I
-
     iput-object p1, p0, Lcom/oneplus/plugin/OpPreventModeView;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -115,18 +97,15 @@
 
     iget-object v0, p0, Lcom/oneplus/plugin/OpPreventModeView;->mRippleView:Lcom/oneplus/plugin/OpRippleView;
 
+    if-eqz v0, :cond_0
+
     invoke-virtual {v0}, Lcom/oneplus/plugin/OpRippleView;->prepare()V
 
     iget-object p0, p0, Lcom/oneplus/plugin/OpPreventModeView;->mRippleView:Lcom/oneplus/plugin/OpRippleView;
 
     invoke-virtual {p0}, Lcom/oneplus/plugin/OpRippleView;->startRipple()V
 
-    return-void
-.end method
-
-.method private relayout()V
-    .locals 0
-
+    :cond_0
     return-void
 .end method
 
@@ -142,6 +121,8 @@
     iget v0, v0, Landroid/util/DisplayMetrics;->scaledDensity:F
 
     iget-object v1, p0, Lcom/oneplus/plugin/OpPreventModeView;->mInnerView:Landroid/widget/LinearLayout;
+
+    if-eqz v1, :cond_0
 
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -163,6 +144,7 @@
 
     iput v2, v1, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
 
+    :cond_0
     iget-object v1, p0, Lcom/oneplus/plugin/OpPreventModeView;->mTitle:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -424,6 +406,74 @@
 
 
 # virtual methods
+.method public clear()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/oneplus/plugin/OpPreventModeView;->mInnerView:Landroid/widget/LinearLayout;
+
+    iput-object v0, p0, Lcom/oneplus/plugin/OpPreventModeView;->mRippleView:Lcom/oneplus/plugin/OpRippleView;
+
+    return-void
+.end method
+
+.method public create()V
+    .locals 2
+
+    sget v0, Lcom/android/systemui/R$id;->prevent_mode_inner_view:I
+
+    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/LinearLayout;
+
+    iput-object v0, p0, Lcom/oneplus/plugin/OpPreventModeView;->mInnerView:Landroid/widget/LinearLayout;
+
+    sget v0, Lcom/android/systemui/R$id;->rippleview_first:I
+
+    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oneplus/plugin/OpRippleView;
+
+    iput-object v0, p0, Lcom/oneplus/plugin/OpPreventModeView;->mRippleView:Lcom/oneplus/plugin/OpRippleView;
+
+    sget v0, Lcom/android/systemui/R$id;->scrim_view:I
+
+    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
+
+    invoke-direct {p0}, Lcom/oneplus/plugin/OpPreventModeView;->updateLayout()V
+
+    iget-object v0, p0, Lcom/oneplus/plugin/OpPreventModeView;->mTitle:Landroid/widget/TextView;
+
+    sget v1, Lcom/android/systemui/R$string;->prevent_view_title:I
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
+
+    iget-object v0, p0, Lcom/oneplus/plugin/OpPreventModeView;->mTitleCancel:Landroid/widget/TextView;
+
+    sget v1, Lcom/android/systemui/R$string;->prevent_view_title_cancel:I
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
+
+    iget-object v0, p0, Lcom/oneplus/plugin/OpPreventModeView;->mTag:Landroid/widget/TextView;
+
+    sget v1, Lcom/android/systemui/R$string;->prevent_view_top_tag_cancel:I
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
+
+    iget-object p0, p0, Lcom/oneplus/plugin/OpPreventModeView;->mTag2:Landroid/widget/TextView;
+
+    sget v0, Lcom/android/systemui/R$string;->prevent_view_top_tag_cancel2:I
+
+    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setText(I)V
+
+    return-void
+.end method
+
 .method public init()V
     .locals 2
 
@@ -541,55 +591,38 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    invoke-direct {p0}, Lcom/oneplus/plugin/OpPreventModeView;->relayout()V
-
     invoke-direct {p0}, Lcom/oneplus/plugin/OpPreventModeView;->updateLayout()V
 
     return-void
 .end method
 
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
-    .locals 2
+    .locals 1
 
-    iget-object v0, p0, Lcom/oneplus/plugin/OpPreventModeView;->mTitle:Landroid/widget/TextView;
+    iget-object p1, p0, Lcom/oneplus/plugin/OpPreventModeView;->mTitle:Landroid/widget/TextView;
 
-    sget v1, Lcom/android/systemui/R$string;->prevent_view_title:I
+    sget v0, Lcom/android/systemui/R$string;->prevent_view_title:I
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(I)V
 
-    iget-object v0, p0, Lcom/oneplus/plugin/OpPreventModeView;->mTitleCancel:Landroid/widget/TextView;
+    iget-object p1, p0, Lcom/oneplus/plugin/OpPreventModeView;->mTitleCancel:Landroid/widget/TextView;
 
-    sget v1, Lcom/android/systemui/R$string;->prevent_view_title_cancel:I
+    sget v0, Lcom/android/systemui/R$string;->prevent_view_title_cancel:I
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(I)V
 
-    iget-object v0, p0, Lcom/oneplus/plugin/OpPreventModeView;->mTag:Landroid/widget/TextView;
+    iget-object p1, p0, Lcom/oneplus/plugin/OpPreventModeView;->mTag:Landroid/widget/TextView;
 
-    sget v1, Lcom/android/systemui/R$string;->prevent_view_top_tag_cancel:I
+    sget v0, Lcom/android/systemui/R$string;->prevent_view_top_tag_cancel:I
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(I)V
 
-    iget-object v0, p0, Lcom/oneplus/plugin/OpPreventModeView;->mTag2:Landroid/widget/TextView;
+    iget-object p0, p0, Lcom/oneplus/plugin/OpPreventModeView;->mTag2:Landroid/widget/TextView;
 
-    sget v1, Lcom/android/systemui/R$string;->prevent_view_top_tag_cancel2:I
+    sget p1, Lcom/android/systemui/R$string;->prevent_view_top_tag_cancel2:I
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(I)V
 
-    new-instance v0, Landroid/content/res/Configuration;
-
-    invoke-direct {v0, p1}, Landroid/content/res/Configuration;-><init>(Landroid/content/res/Configuration;)V
-
-    iget p1, p1, Landroid/content/res/Configuration;->orientation:I
-
-    iget v0, p0, Lcom/oneplus/plugin/OpPreventModeView;->mOrientatin:I
-
-    if-eq p1, v0, :cond_0
-
-    iput p1, p0, Lcom/oneplus/plugin/OpPreventModeView;->mOrientatin:I
-
-    invoke-direct {p0}, Lcom/oneplus/plugin/OpPreventModeView;->relayout()V
-
-    :cond_0
     return-void
 .end method
 
@@ -614,9 +647,11 @@
 
     if-eqz p2, :cond_0
 
-    iget-object p0, p0, Lcom/oneplus/plugin/OpPreventModeView;->mRippleView:Lcom/oneplus/plugin/OpRippleView;
+    iget-object p1, p0, Lcom/oneplus/plugin/OpPreventModeView;->mRippleView:Lcom/oneplus/plugin/OpRippleView;
 
-    invoke-virtual {p0}, Lcom/oneplus/plugin/OpRippleView;->stopRipple()V
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Lcom/oneplus/plugin/OpRippleView;->stopRipple()V
 
     goto :goto_0
 

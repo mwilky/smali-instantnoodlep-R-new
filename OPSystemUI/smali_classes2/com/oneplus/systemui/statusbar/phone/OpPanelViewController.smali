@@ -17,6 +17,8 @@
 
 .field private mHightHintIntercepting:Z
 
+.field protected mOpExpandButton:Lcom/oneplus/systemui/statusbar/phone/OpExpandButton;
+
 
 # direct methods
 .method public constructor <init>(Lcom/android/systemui/statusbar/phone/PanelView;Lcom/android/systemui/plugins/FalsingManager;Lcom/android/systemui/doze/DozeLog;Lcom/android/systemui/statusbar/policy/KeyguardStateController;Lcom/android/systemui/statusbar/SysuiStatusBarStateController;Lcom/android/systemui/statusbar/VibratorHelper;Lcom/android/internal/util/LatencyTracker;Lcom/android/systemui/statusbar/FlingAnimationUtils$Builder;Lcom/android/systemui/statusbar/phone/StatusBarTouchableRegionManager;)V
@@ -114,6 +116,19 @@
 
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpPanelViewController;->run()V
 
+    return-void
+.end method
+
+.method private synthetic lambda$initExpandButton$0()V
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpPanelViewController;->mOpExpandButton:Lcom/oneplus/systemui/statusbar/phone/OpExpandButton;
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpExpandButton;->dismiss()V
+
+    :cond_0
     return-void
 .end method
 
@@ -597,6 +612,181 @@
 .method public abstract getPerf()Landroid/util/BoostFramework;
 .end method
 
+.method protected initExpandButton()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpPanelViewController;->mOpExpandButton:Lcom/oneplus/systemui/statusbar/phone/OpExpandButton;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lcom/oneplus/systemui/statusbar/phone/OpExpandButton;
+
+    iget-object v1, p0, Lcom/oneplus/systemui/statusbar/phone/OpPanelViewController;->mContext:Landroid/content/Context;
+
+    invoke-direct {v0, v1}, Lcom/oneplus/systemui/statusbar/phone/OpExpandButton;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpPanelViewController;->mOpExpandButton:Lcom/oneplus/systemui/statusbar/phone/OpExpandButton;
+
+    new-instance v1, Lcom/oneplus/systemui/statusbar/phone/OpPanelViewController$3;
+
+    invoke-direct {v1, p0}, Lcom/oneplus/systemui/statusbar/phone/OpPanelViewController$3;-><init>(Lcom/oneplus/systemui/statusbar/phone/OpPanelViewController;)V
+
+    invoke-virtual {v0, v1}, Lcom/oneplus/systemui/statusbar/phone/OpExpandButton;->setmOnExpandButtonListener(Lcom/oneplus/systemui/statusbar/phone/OpExpandButton$OnExpandButtonListener;)V
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/PanelViewController;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getmStatusBarCollapseListener()Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$StatusBarCollapseListener;
+
+    move-result-object v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/PanelViewController;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    new-instance v1, Lcom/oneplus/systemui/statusbar/phone/-$$Lambda$OpPanelViewController$ETHyd_pQqafCpVPaRSBqmkI8Ei0;
+
+    invoke-direct {v1, p0}, Lcom/oneplus/systemui/statusbar/phone/-$$Lambda$OpPanelViewController$ETHyd_pQqafCpVPaRSBqmkI8Ei0;-><init>(Lcom/oneplus/systemui/statusbar/phone/OpPanelViewController;)V
+
+    invoke-virtual {v0, v1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->setmStatusBarCollapseListener(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$StatusBarCollapseListener;)V
+
+    :cond_1
+    return-void
+.end method
+
+.method protected isWithinGameModeToolBoxRegion()Z
+    .locals 6
+
+    iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpPanelViewController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getDisplay()Landroid/view/Display;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return v1
+
+    :cond_0
+    invoke-virtual {v0}, Landroid/view/Display;->getRotation()I
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    const/4 v3, 0x2
+
+    if-ne v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpPanelViewController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    sget v3, Lcom/android/systemui/R$dimen;->op_game_mode_toolbox_region_width_land:I
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v2
+
+    goto :goto_1
+
+    :cond_2
+    :goto_0
+    iget-object v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpPanelViewController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    sget v3, Lcom/android/systemui/R$dimen;->op_game_mode_toolbox_region_width_port:I
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v2
+
+    :goto_1
+    sget-object v3, Lcom/android/systemui/statusbar/phone/PanelViewController;->TAG:Ljava/lang/String;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "toolboxRegionWidth:"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v3, p0, Lcom/oneplus/systemui/statusbar/phone/OpPanelViewController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    const v4, 0x1050248
+
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v3
+
+    iget v4, p0, Lcom/android/systemui/statusbar/phone/PanelViewController;->mTouchActionDownY:F
+
+    int-to-float v3, v3
+
+    cmpg-float v3, v4, v3
+
+    if-gtz v3, :cond_4
+
+    iget p0, p0, Lcom/android/systemui/statusbar/phone/PanelViewController;->mTouchActionDownX:F
+
+    int-to-float v3, v2
+
+    cmpg-float v3, p0, v3
+
+    if-lez v3, :cond_3
+
+    invoke-virtual {v0}, Landroid/view/Display;->getWidth()I
+
+    move-result v0
+
+    sub-int/2addr v0, v2
+
+    int-to-float v0, v0
+
+    cmpl-float p0, p0, v0
+
+    if-ltz p0, :cond_4
+
+    :cond_3
+    const/4 v1, 0x1
+
+    :cond_4
+    return v1
+.end method
+
+.method public synthetic lambda$initExpandButton$0$OpPanelViewController()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpPanelViewController;->lambda$initExpandButton$0()V
+
+    return-void
+.end method
+
 .method protected loadDimens()V
     .locals 3
 
@@ -971,6 +1161,55 @@
     const-wide/16 v2, 0x1f4
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    :cond_0
+    return-void
+.end method
+
+.method protected showExpandButton()V
+    .locals 3
+
+    sget-object v0, Lcom/android/systemui/statusbar/phone/PanelViewController;->TAG:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "disable panel expandButton is show:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpPanelViewController;->mOpExpandButton:Lcom/oneplus/systemui/statusbar/phone/OpExpandButton;
+
+    invoke-virtual {v2}, Lcom/oneplus/systemui/statusbar/phone/OpExpandButton;->isShow()Z
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpPanelViewController;->mOpExpandButton:Lcom/oneplus/systemui/statusbar/phone/OpExpandButton;
+
+    invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpExpandButton;->show()V
+
+    return-void
+.end method
+
+.method public updateScrimState(Lcom/android/systemui/statusbar/phone/ScrimState;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpPanelViewController;->getNotificationStackScroller()Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->updateScrimState(Lcom/android/systemui/statusbar/phone/ScrimState;)V
 
     :cond_0
     return-void

@@ -36,7 +36,7 @@
 
 # virtual methods
 .method public onChange(Z)V
-    .locals 3
+    .locals 5
 
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
@@ -60,18 +60,119 @@
 
     if-ne v0, v1, :cond_0
 
-    move v2, v1
+    move v0, v1
+
+    goto :goto_0
 
     :cond_0
-    invoke-static {p1, v2}, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;->access$102(Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;Z)Z
+    move v0, v2
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    :goto_0
+    invoke-static {p1, v0}, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;->access$102(Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;Z)Z
 
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+    iget-object p1, p0, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController$OpAodAlwaysOnSettingObserver;->mContext:Landroid/content/Context;
 
-    const-string v0, "mAlwaysOnEnabled changed= "
+    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p1
+
+    const-string v0, "low_power"
+
+    invoke-static {p1, v0, v2}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result p1
+
+    if-ne p1, v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    move v1, v2
+
+    :goto_1
+    iget-object p1, p0, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController$OpAodAlwaysOnSettingObserver;->this$0:Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;
+
+    iget-object p1, p1, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;->mPowerManager:Landroid/os/PowerManager;
+
+    invoke-virtual {p1}, Landroid/os/PowerManager;->isInteractive()Z
+
+    move-result p1
+
+    iget-object v0, p0, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController$OpAodAlwaysOnSettingObserver;->this$0:Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;
+
+    invoke-static {v0}, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;->access$200(Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isScreenOn()Z
+
+    move-result v0
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "mAlwaysOnEnabled changed= "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v4, p0, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController$OpAodAlwaysOnSettingObserver;->this$0:Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;
+
+    invoke-static {v4}, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;->access$100(Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;)Z
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v4, ", isPowerSaveEnabled = "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v4, ", isInteractive = "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v4, p0, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController$OpAodAlwaysOnSettingObserver;->this$0:Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;
+
+    iget-object v4, v4, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;->mPowerManager:Landroid/os/PowerManager;
+
+    invoke-virtual {v4}, Landroid/os/PowerManager;->isInteractive()Z
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v4, ", isScreenOn = "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v4, p0, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController$OpAodAlwaysOnSettingObserver;->this$0:Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;
+
+    invoke-static {v4}, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;->access$200(Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isScreenOn()Z
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v4, "AlwaysOnSettingsObserver"
+
+    invoke-static {v4, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-nez p1, :cond_2
+
+    if-eqz v0, :cond_2
+
+    if-eqz v1, :cond_2
 
     iget-object p0, p0, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController$OpAodAlwaysOnSettingObserver;->this$0:Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;
 
@@ -79,15 +180,18 @@
 
     move-result p0
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    if-eqz p0, :cond_2
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {}, Lcom/oneplus/plugin/OpLsState;->getInstance()Lcom/oneplus/plugin/OpLsState;
 
     move-result-object p0
 
-    const-string p1, "AlwaysOnSettingsObserver"
+    invoke-virtual {p0}, Lcom/oneplus/plugin/OpLsState;->getPhoneStatusBar()Lcom/android/systemui/statusbar/phone/StatusBar;
 
-    invoke-static {p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    move-result-object p0
 
+    invoke-virtual {p0, v2}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->onAlwaysOnEnableChanged(Z)V
+
+    :cond_2
     return-void
 .end method

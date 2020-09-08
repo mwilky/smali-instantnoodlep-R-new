@@ -37,7 +37,7 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 0
 
-    sget-boolean p0, Lcom/oneplus/util/OpUtils;->DEBUG_ONEPLUS:Z
+    sget-boolean p0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
     if-eqz p0, :cond_0
 
@@ -60,7 +60,7 @@
 
     invoke-virtual {p0, p1}, Landroid/view/View;->setAlpha(F)V
 
-    sget-boolean p0, Lcom/oneplus/util/OpUtils;->DEBUG_ONEPLUS:Z
+    sget-boolean p0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
     if-eqz p0, :cond_0
 
@@ -85,7 +85,7 @@
 
     iget-object p0, p0, Lcom/oneplus/aod/OpWakingUpScrim$2;->this$0:Lcom/oneplus/aod/OpWakingUpScrim;
 
-    invoke-static {p0}, Lcom/oneplus/aod/OpWakingUpScrim;->access$300(Lcom/oneplus/aod/OpWakingUpScrim;)F
+    invoke-static {p0}, Lcom/oneplus/aod/OpWakingUpScrim;->access$400(Lcom/oneplus/aod/OpWakingUpScrim;)F
 
     move-result p1
 

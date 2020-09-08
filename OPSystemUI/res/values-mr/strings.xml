@@ -561,6 +561,7 @@
     <string name="controls_favorite_other_zone_header">इतर</string>
     <string name="controls_favorite_rearrange">नियंत्रणांची पुनर्रचना करण्यासाठी धरून ठेवा आणि ड्रॅग करा</string>
     <string name="controls_favorite_removed">सर्व नियंत्रणे काढून टाकली आहेत</string>
+    <string name="controls_favorite_see_other_apps">इतर अ‍ॅप्स पहा</string>
     <string name="controls_favorite_subtitle">पॉवर मेनूमधून अ‍ॅक्सेस करण्यासाठी नियंत्रणे निवडा</string>
     <string name="controls_favorite_toast_no_changes">बदल सेव्ह केले गेले नाहीत</string>
     <string name="controls_in_progress">प्रगतीपथावर आहे</string>
@@ -663,6 +664,8 @@
     <string name="disconnect_vpn">VPN डिस्कनेक्ट करा</string>
     <string name="dnd_is_off">व्यत्यय आणू नका बंद आहे</string>
     <string name="dnd_suppressing_shade_text">व्यत्यय आणून नकाद्वारे सूचना थांबवल्या</string>
+    <string name="do_disclosure_generic">हे डिव्हाइस तुमच्या संस्थेचे आहे</string>
+    <string name="do_disclosure_with_name">हे डिव्हाइस %s चे आहे</string>
     <string name="do_not_silence">शांत करू नका</string>
     <string name="do_not_silence_block">शांत किंवा अवरोधित करू नका</string>
     <string name="dock_alignment_not_charging">वायरलेस पद्धतीने चार्ज करण्यासाठी फोन पुन्हा अलाइन करा</string>
@@ -1065,8 +1068,18 @@
     <string name="monitoring_description_do_learn_more_separator">" "</string>
     <string name="monitoring_description_managed_profile_ca_certificate">आपल्या संस्थेने आपल्या कार्य प्रोफाइलवर प्रमाणपत्र अधिकार इंस्टॉल केला आहे. आपल्या सुरक्षित नेटवर्क रहदारीचे परीक्षण केले जाऊ शकते किंवा ती सुधारली जाऊ शकते.</string>
     <string name="monitoring_description_managed_profile_named_vpn">तुमचे कार्य प्रोफाइल %1$s शी कनेक्‍ट केले आहे, जे ईमेल, अ‍ॅप्स आणि वेबसाइटसह आपल्‍या नेटवर्क क्रियाकलापाचे परीक्षण करू शकते.</string>
+    <string name="monitoring_description_management">"हे डिव्हाइस तुमच्या संस्थेचे आहे.
+
+तुमचा आयटी ॲडमिन सेटिंग्ज, कॉर्पोरेट अ‍ॅक्सेस, ॲप्‍स, तुमच्‍या डिव्‍हाइसशी संबंधित डेटा आणि तुमच्‍या डिव्‍हाइसच्‍या स्‍थानाची माहिती यांचे परीक्षण व व्‍यवस्‍थापन करू शकतो.
+
+अधिक माहितीसाठी तुमच्‍या आयटी ॲडमिनशी संपर्क साधा."</string>
     <string name="monitoring_description_management_ca_certificate">आपल्या संस्थेने या डिव्हाइसवर प्रमाणपत्र अधिकार इंस्टॉल केला आहे. आपल्या सुरक्षित नेटवर्क रहदारीचे परीक्षण केले जाऊ शकते किंवा ती सुधारली जाऊ शकते.</string>
     <string name="monitoring_description_management_network_logging">आपल्या प्रशासकाने नेटवर्क लॉगिंग सुरू केले आहे, जे आपल्या डिव्हाइसवरील रहदारीचे परीक्षण करते.</string>
+    <string name="monitoring_description_named_management">"हे डिव्हाइस %1$s चे आहे.
+
+तुमचा आयटी ॲडमिन सेटिंग्ज, कॉर्पोरेट अ‍ॅक्सेस, ॲप्‍स, तुमच्‍या डिव्‍हाइसशी संबंधित डेटा आणि तुमच्‍या डिव्‍हाइसच्‍या स्‍थानाची माहिती यांचे परीक्षण व व्‍यवस्‍थापन करू शकतो.
+
+अधिक माहितीसाठी तुमच्‍या आयटी ॲडमिनशी संपर्क साधा."</string>
     <string name="monitoring_description_named_vpn">तुम्‍ही %1$s शी कनेक्‍ट केले आहे, जे ईमेल, अ‍ॅप्स आणि वेबसाइटसहित आपल्‍या नेटवर्क क्रिया मॉनिटर करू शकते.</string>
     <string name="monitoring_description_network_logging">"आपल्या प्रशासकाने नेटवर्क लॉगिंग सुरू केले आहे, जे आपल्या डिव्हाइसवरील रहदारीचे निरीक्षण करते.
 
@@ -1341,8 +1354,20 @@
     <string name="quick_settings_dark_mode_secondary_label_until">%s पर्यंत</string>
     <string name="quick_settings_dark_mode_secondary_label_until_sunrise">सूर्योदयापर्यंत</string>
     <string name="quick_settings_disclosure_managed_profile_monitoring">तुमची संस्था आपल्या कार्य प्रोफाइलमधील नेटवर्क रहदारीचे परीक्षण करू शकते</string>
+    <string name="quick_settings_disclosure_managed_profile_named_vpn">तुमची कार्य प्रोफाइल %1$s ला कनेक्ट केली</string>
+    <string name="quick_settings_disclosure_management">हे डिव्हाइस तुमच्या संस्थेचे आहे</string>
+    <string name="quick_settings_disclosure_management_monitoring">तुमच्‍या संस्‍थेकडे या डिव्हाइसची मालकी आहे आणि ती नेटवर्क ट्रॅफिकचे परीक्षण करू शकते</string>
+    <string name="quick_settings_disclosure_management_named_vpn">हे डिव्हाइस तुमच्या संस्थेचे आहे आणि ते %1$s ला कनेक्ट केले आहे</string>
+    <string name="quick_settings_disclosure_management_vpns">हे डिव्हाइस तुमच्या संस्थेचे आहे आणि ते VPN ना कनेक्ट केले आहे</string>
     <string name="quick_settings_disclosure_monitoring">नेटवर्कचे परीक्षण केले जाऊ शकते</string>
     <string name="quick_settings_disclosure_named_managed_profile_monitoring">%1$s आपल्या कार्य प्रोफाइलमधील नेटवर्क रहदारीचे परीक्षण करू शकते</string>
+    <string name="quick_settings_disclosure_named_management">हे डिव्हाइस %1$s चे आहे</string>
+    <string name="quick_settings_disclosure_named_management_monitoring">हे डिव्हाइस %1$s च्या मालकीचे आहे आणि ती नेटवर्क ट्रॅफिकचे परीक्षण करू शकते</string>
+    <string name="quick_settings_disclosure_named_management_named_vpn">हे डिव्हाइस %1$s चे आहे आणि ते %2$s ला कनेक्ट केले आहे</string>
+    <string name="quick_settings_disclosure_named_management_vpns">हे डिव्हाइस %1$s चे आहे आणि ते VPN ना कनेक्ट केले आहे</string>
+    <string name="quick_settings_disclosure_named_vpn">हे डिव्हाइस %1$s ला कनेक्ट केले आहे</string>
+    <string name="quick_settings_disclosure_personal_profile_named_vpn">तुमची वैयक्‍तिक प्रोफाइल %1$s ला कनेक्‍ट केली आहे</string>
+    <string name="quick_settings_disclosure_vpns">हे डिव्हाइस VPN ला कनेक्ट केले आहे</string>
     <string name="quick_settings_dnd_alarms_label">केवळ अलार्म</string>
     <string name="quick_settings_dnd_label">व्यत्यय आणू नका</string>
     <string name="quick_settings_dnd_none_label">संपूर्ण शांतता</string>

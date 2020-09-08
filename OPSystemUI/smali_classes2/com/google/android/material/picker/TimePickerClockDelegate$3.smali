@@ -3,12 +3,12 @@
 .source "TimePickerClockDelegate.java"
 
 # interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/android/material/picker/TimePickerClockDelegate;->animationOutInputTimeField()V
+    value = Lcom/google/android/material/picker/TimePickerClockDelegate;->animationInInputTimeField()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -34,86 +34,171 @@
 
 
 # virtual methods
-.method public onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
+.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 7
 
-    return-void
-.end method
+    iget-object v0, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$3;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
 
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 2
+    invoke-static {v0}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$800(Lcom/google/android/material/picker/TimePickerClockDelegate;)Landroid/view/Window;
 
-    iget-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$3;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
+    move-result-object v0
 
-    invoke-static {p1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$400(Lcom/google/android/material/picker/TimePickerClockDelegate;)Lcom/google/android/material/picker/RadialTimePickerView;
+    if-eqz v0, :cond_1
 
-    move-result-object p1
+    new-instance v0, Landroid/graphics/Rect;
 
-    const/4 v0, 0x0
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    iget-object v1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$3;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
 
-    iget-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$3;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
+    invoke-static {v1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$800(Lcom/google/android/material/picker/TimePickerClockDelegate;)Landroid/view/Window;
 
-    invoke-static {p1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$500(Lcom/google/android/material/picker/TimePickerClockDelegate;)Landroid/widget/LinearLayout;
+    move-result-object v1
 
-    move-result-object p1
+    invoke-virtual {v1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
-    invoke-virtual {p1, v0}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    move-result-object v1
 
-    iget-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$3;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
+    invoke-virtual {v1, v0}, Landroid/view/View;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
 
-    invoke-static {p1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$600(Lcom/google/android/material/picker/TimePickerClockDelegate;)Landroid/view/View;
+    iget-object v1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$3;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
 
-    move-result-object p1
+    iget-object v1, v1, Lcom/google/android/material/picker/TimePicker$AbstractTimePickerDelegate;->mContext:Landroid/content/Context;
 
-    const/4 v1, 0x4
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
+    move-result-object v1
 
-    iget-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$3;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    invoke-static {p1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$200(Lcom/google/android/material/picker/TimePickerClockDelegate;)Lcom/google/android/material/picker/TextInputTimePickerView;
+    move-result-object v1
 
-    move-result-object p1
+    iget v2, v1, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    invoke-virtual {p1, v1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+    iget v1, v1, Landroid/util/DisplayMetrics;->densityDpi:I
 
-    iget-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$3;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
+    const/16 v2, 0x230
 
-    invoke-static {p1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$700(Lcom/google/android/material/picker/TimePickerClockDelegate;)V
+    if-lt v1, v2, :cond_0
+
+    const/16 v1, 0x9c4
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v1, 0x7d0
+
+    :goto_0
+    iget v0, v0, Landroid/graphics/Rect;->bottom:I
+
+    if-ge v0, v1, :cond_1
+
+    int-to-float v0, v0
+
+    iget-object v1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$3;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
+
+    iget-object v1, v1, Lcom/google/android/material/picker/TimePicker$AbstractTimePickerDelegate;->mContext:Landroid/content/Context;
+
+    const/16 v2, 0x162
+
+    invoke-static {v1, v2}, Lcom/google/android/material/internal/ViewUtils;->dpToPx(Landroid/content/Context;I)F
+
+    move-result v1
+
+    sub-float/2addr v0, v1
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
+
+    move-result v1
+
+    mul-float/2addr v0, v1
+
+    float-to-int v4, v0
+
+    iget-object v0, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$3;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
+
+    iget-object v0, v0, Lcom/google/android/material/picker/TimePicker$AbstractTimePickerDelegate;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lcom/google/android/material/R$drawable;->op_picker_dialog_material_background_bottom:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v2
+
+    new-instance v0, Landroid/graphics/drawable/InsetDrawable;
+
+    const/4 v3, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v6}, Landroid/graphics/drawable/InsetDrawable;-><init>(Landroid/graphics/drawable/Drawable;IIII)V
+
+    iget-object v1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$3;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
+
+    iget-object v1, v1, Lcom/google/android/material/picker/TimePicker$AbstractTimePickerDelegate;->mContext:Landroid/content/Context;
+
+    sget v2, Lcom/google/android/material/R$color;->op_control_bg_color_popup_default:I
+
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getColor(I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/InsetDrawable;->setTint(I)V
+
+    iget-object v1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$3;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
+
+    invoke-static {v1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$800(Lcom/google/android/material/picker/TimePickerClockDelegate;)Landroid/view/Window;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_1
+    iget-object v0, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$3;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
+
+    invoke-static {v0}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$900(Lcom/google/android/material/picker/TimePickerClockDelegate;)Landroid/widget/LinearLayout;
+
+    move-result-object v0
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
+
+    move-result p1
+
+    sub-float/2addr v1, p1
 
     iget-object p0, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$3;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
 
-    invoke-static {p0, v0}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$302(Lcom/google/android/material/picker/TimePickerClockDelegate;Z)Z
+    iget-object p0, p0, Lcom/google/android/material/picker/TimePicker$AbstractTimePickerDelegate;->mContext:Landroid/content/Context;
 
-    return-void
-.end method
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-.method public onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
+    move-result-object p0
 
-    return-void
-.end method
+    sget p1, Lcom/google/android/material/R$dimen;->op_control_margin_space3:I
 
-.method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 1
+    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
-    iget-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$3;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
+    move-result p0
 
-    invoke-static {p1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$200(Lcom/google/android/material/picker/TimePickerClockDelegate;)Lcom/google/android/material/picker/TextInputTimePickerView;
+    int-to-float p0, p0
 
-    move-result-object p1
+    mul-float/2addr v1, p0
 
-    const/4 v0, 0x0
+    float-to-int p0, v1
 
-    invoke-virtual {p1, v0}, Lcom/google/android/material/picker/TextInputTimePickerView;->showInputBlock(Z)V
+    const/4 p1, 0x0
 
-    iget-object p0, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$3;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
-
-    const/4 p1, 0x1
-
-    invoke-static {p0, p1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$302(Lcom/google/android/material/picker/TimePickerClockDelegate;Z)Z
+    invoke-virtual {v0, p1, p1, p1, p0}, Landroid/widget/LinearLayout;->setPadding(IIII)V
 
     return-void
 .end method

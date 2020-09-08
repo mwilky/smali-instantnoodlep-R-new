@@ -28,6 +28,22 @@
     return-object p0
 .end method
 
+.method private getFlipper()Lcom/android/keyguard/KeyguardSecurityViewFlipper;
+    .locals 2
+
+    const-class v0, Lcom/android/keyguard/KeyguardSecurityContainer;
+
+    const-string v1, "mSecurityViewFlipper"
+
+    invoke-static {v0, p0, v1}, Lcom/oneplus/util/OpReflectionUtils;->getValue(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/android/keyguard/KeyguardSecurityViewFlipper;
+
+    return-object p0
+.end method
+
 .method private getSecurityView(Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;)Lcom/android/keyguard/KeyguardSecurityView;
     .locals 5
 
@@ -64,6 +80,27 @@
 
 
 # virtual methods
+.method public resetFlipperY()V
+    .locals 1
+
+    invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardSecurityContainer;->getFlipper()Lcom/android/keyguard/KeyguardSecurityViewFlipper;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardSecurityContainer;->getFlipper()Lcom/android/keyguard/KeyguardSecurityViewFlipper;
+
+    move-result-object p0
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Landroid/widget/ViewFlipper;->setTranslationY(F)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public showMessage(Ljava/lang/CharSequence;Landroid/content/res/ColorStateList;I)V
     .locals 2
 

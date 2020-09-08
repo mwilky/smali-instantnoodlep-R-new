@@ -4,6 +4,7 @@
     <color name="GM2_green_500">#ff41af6a</color>
     <color name="GM2_red_500">#ffe25142</color>
     <color name="GM2_yellow_500">#fff5c518</color>
+    <color name="advanced_outline_color">#ffffffff</color>
     <color name="biometric_dialog_accent">#ff80cbc4</color>
     <color name="biometric_dialog_error">#fff28b82</color>
     <color name="biometric_dialog_gray">#ff888888</color>

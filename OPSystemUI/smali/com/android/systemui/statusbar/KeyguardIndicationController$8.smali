@@ -45,7 +45,7 @@
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController$8;->this$0:Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
-    invoke-static {p1}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->access$400(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Landroid/widget/FrameLayout;
+    invoke-static {p1}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->access$500(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Landroid/widget/FrameLayout;
 
     move-result-object p1
 
@@ -55,7 +55,7 @@
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController$8;->this$0:Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
-    invoke-static {p1}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->access$400(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Landroid/widget/FrameLayout;
+    invoke-static {p1}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->access$500(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Landroid/widget/FrameLayout;
 
     move-result-object p1
 
@@ -65,11 +65,11 @@
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController$8;->this$0:Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
-    invoke-static {p0}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->access$100(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Landroid/widget/TextView;
+    invoke-static {p0}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->access$100(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Landroid/widget/LinearLayout;
 
     move-result-object p0
 
-    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setAlpha(F)V
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->setAlpha(F)V
 
     return-void
 .end method
@@ -81,7 +81,7 @@
 .end method
 
 .method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 2
+    .locals 3
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController$8;->this$0:Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
@@ -89,15 +89,47 @@
 
     move-result-object p1
 
+    const-string/jumbo v0, "\u2022"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+
+    move-result v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p1, v2, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object p1
+
     iget-object v0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController$8;->this$0:Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->access$100(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Landroid/widget/TextView;
+    invoke-static {v0}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->access$600(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Landroid/widget/TextView;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController$8;->this$0:Lcom/android/systemui/statusbar/KeyguardIndicationController;
+
+    invoke-static {v0}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->access$400(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Landroid/widget/TextView;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController$8;->this$0:Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
-    invoke-static {v1}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->access$500(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Z
+    invoke-static {v1}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->access$700(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Z
 
     move-result v1
 
@@ -105,7 +137,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController$8;->this$0:Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
-    invoke-static {v1, p1}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->access$600(Lcom/android/systemui/statusbar/KeyguardIndicationController;Ljava/lang/String;)Landroid/text/SpannableString;
+    invoke-static {v1, p1}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->access$800(Lcom/android/systemui/statusbar/KeyguardIndicationController;Ljava/lang/String;)Landroid/text/SpannableString;
 
     move-result-object p1
 
@@ -114,23 +146,21 @@
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController$8;->this$0:Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
-    invoke-static {p1}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->access$100(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Landroid/widget/TextView;
+    invoke-static {p1}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->access$100(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Landroid/widget/LinearLayout;
 
     move-result-object p1
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {p1, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController$8;->this$0:Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
-    invoke-static {p0}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->access$100(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Landroid/widget/TextView;
+    invoke-static {p0}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->access$100(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Landroid/widget/LinearLayout;
 
     move-result-object p0
 
     const/4 p1, 0x0
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setAlpha(F)V
+    invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->setAlpha(F)V
 
     return-void
 .end method

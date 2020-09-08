@@ -39,6 +39,11 @@
     <string name="abc_slice_updated">Posodobljeno: %1$s</string>
     <string name="abc_slices_permission_request">Aplikacija %1$s želi prikazati izreze iz aplikacije %2$s</string>
     <string name="abc_toolbar_collapse_description">Strnitev</string>
+    <string name="about_action_bar_title">Več</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Pravilnik o zasebnosti</string>
+    <string name="about_release_note_title">Dnevnik posodobitev:</string>
+    <string name="about_terms_service">Pogoji storitve</string>
     <string name="accessibility_accessibility_button">Funkcije za ljudi s posebnimi potrebami</string>
     <string name="accessibility_action_divider_bottom_full">Spodnji v celozaslonski način</string>
     <string name="accessibility_action_divider_left_30">Levi 30 %</string>
@@ -598,6 +603,7 @@ Izbor"</string>
     <string name="controls_favorite_other_zone_header">Drugo</string>
     <string name="controls_favorite_rearrange">Držite in povlecite, da prerazporedite kontrolnike</string>
     <string name="controls_favorite_removed">Vsi kontrolniki so bili odstranjeni</string>
+    <string name="controls_favorite_see_other_apps">Prikaz drugih aplikacij</string>
     <string name="controls_favorite_subtitle">Izberite kontrolnike, do katerih želite imeti dostop prek menija za vklop/izklop</string>
     <string name="controls_favorite_toast_no_changes">Spremembe niso shranjene</string>
     <string name="controls_in_progress">V teku</string>
@@ -696,8 +702,8 @@ Izbor"</string>
     <string name="disable_carrier_button_text">Onemogoči kartico e-SIM</string>
     <string name="disable_overlays">Onem. strojni medp.</string>
     <string name="disable_overlays_summary">Za sestavljanje slike vedno uporabi graf. procesor</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">Za podrobnosti stopite v stik z vašim skrbnikom</string>
+    <string name="disable_tether_notification_title">Skupna raba je onemogočena</string>
     <string name="disable_vpn">Onemogoči VPN</string>
     <string name="disabled">Onemogočeno</string>
     <string name="disabled_by_admin">Onemogočil skrbnik</string>
@@ -717,6 +723,7 @@ Izbor"</string>
     <string name="drag_to_rearrange_tiles">Držite in povlecite, da prerazporedite ploščice</string>
     <string name="drag_to_remove_disabled">Imeti morate vsaj toliko ploščic: %1$d</string>
     <string name="drag_to_remove_tiles">Če želite odstraniti, povlecite sem</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">Povlecite ploščice, da jih prerazporedite. Tapnite jih, da jih prikažete ali skrijete.</string>
     <string name="empty_shade_text">Ni obvestil</string>
     <string name="enable_adb">Odpravljanje težav prek USB-ja</string>
@@ -961,7 +968,7 @@ prednostno"</string>
     <string name="keyguard_plugged_in">%s • polnjenje</string>
     <string name="keyguard_plugged_in_charging_fast">%s • hitro polnjenje</string>
     <string name="keyguard_plugged_in_charging_slowly">%s • počasno polnjenje</string>
-    <string name="keyguard_plugged_in_charging_warp">%s • Polnjenje Warp</string>
+    <string name="keyguard_plugged_in_charging_warp">%s • Warp Charging</string>
     <string name="keyguard_plugged_in_wireless">%s • brezžično polnjenje</string>
     <string name="keyguard_plugged_in_wireless_warp">%s • Brezžično polnjenje Warp</string>
     <string name="keyguard_retry">Povlecite navzgor za vnovičen poskus</string>
@@ -1092,6 +1099,7 @@ Poskusite znova čez %2$d s."</string>
     <string name="left_nav_bar_button_type">Vrsta dodatnega levega gumba</string>
     <string name="legacy_vpn_name">VPN</string>
     <string name="loading_injected_setting_summary">Nalaganje …</string>
+    <string name="loading_text">Nalaganje ...</string>
     <string name="local_backup_password_summary_change">Dotaknite se, če želite spremeniti ali odstraniti geslo za popolno varnostno kopiranje namizja</string>
     <string name="local_backup_password_summary_none">Popolne varnostne kopije namizja trenutno niso zaščitene</string>
     <string name="local_backup_password_title">Geslo za varnostno kopijo namizja</string>
@@ -1323,8 +1331,14 @@ Povezani ste tudi z omrežjem VPN, ki lahko nadzira vašo omrežno dejavnost."</
     <string name="oneplus_threekey_navigation_sound">Dovoljeni vsi zvoki</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Vklopite lahko tako, da zgoraj preklopite</string>
     <string name="oneplus_threekey_navigation_vibration">Samo vibriranje</string>
-    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> odkleni</string>
-    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> odklene</string>
+    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>odkleni</string>
+    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>odklene</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">Seznanjanje ...</string>
     <string name="op_earphone_connected_fail">Sezanitev ni uspela. Preverite lahko slušalke in status Bluetooth.</string>
     <string name="op_earphone_connected_success">Seznanjeno. Tapnite za več nastavitev.</string>
@@ -1354,9 +1368,10 @@ Povezani ste tudi z omrežjem VPN, ki lahko nadzira vašo omrežno dejavnost."</
     <string name="op_notification_channel_summary_low">Manj pomembna obvestila brez zvoka ali vibriranja.</string>
     <string name="op_notification_section_header_gentle">Druga obvestila</string>
     <string name="op_notification_silence_title">Drugo</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">Zatemnjeni način</string>
     <string name="op_qs_data_usage_used">Uporabljeno %1$s: %2$s %3$s</string>
-    <string name="op_quick_settings_night_display_label">Nočni način</string>
+    <string name="op_quick_settings_night_display_label">Udobno gledanje</string>
     <string name="op_quick_settings_night_display_summary_off">Izključen nočni način, tapnite za vklop</string>
     <string name="op_quick_settings_night_display_summary_on">Vključen nočni način, tapnite za izklop</string>
     <string name="op_read_mode2_dialog_black">Mono učinek</string>
@@ -1568,7 +1583,7 @@ Povezani ste tudi z omrežjem VPN, ki lahko nadzira vašo omrežno dejavnost."</
     <string name="quick_settings_data_switch_toast_1">Trenutno je vstavljena ena kartica SIM</string>
     <string name="quick_settings_default_data_card">Privzeta podatkovna kartica</string>
     <string name="quick_settings_disclosure_managed_profile_monitoring">Vaša organizacija lahko nadzira omrežni promet v vašem delovnem profilu</string>
-    <string name="quick_settings_disclosure_managed_profile_named_vpn">Vaš delovni profil je povezan v aplikacijo %1$s</string>
+    <string name="quick_settings_disclosure_managed_profile_named_vpn">Delovni profil je povezan v aplikacijo %1$s</string>
     <string name="quick_settings_disclosure_management">Ta naprava pripada vaši organizaciji</string>
     <string name="quick_settings_disclosure_management_monitoring">Vaša organizacija je lastnica te naprave in lahko nadzira omrežni promet</string>
     <string name="quick_settings_disclosure_management_named_vpn">Ta naprava pripada vaši organizaciji in je povezana v aplikacijo %1$s</string>
@@ -1580,7 +1595,7 @@ Povezani ste tudi z omrežjem VPN, ki lahko nadzira vašo omrežno dejavnost."</
     <string name="quick_settings_disclosure_named_management_named_vpn">Ta naprava pripada organizaciji %1$s in je povezana v aplikacijo %2$s</string>
     <string name="quick_settings_disclosure_named_management_vpns">Ta naprava pripada organizaciji %1$s in je povezana v omrežja VPN</string>
     <string name="quick_settings_disclosure_named_vpn">Ta naprava je povezava v aplikacijo %1$s</string>
-    <string name="quick_settings_disclosure_personal_profile_named_vpn">Vaš osebni profil je povezan v aplikacijo %1$s</string>
+    <string name="quick_settings_disclosure_personal_profile_named_vpn">Osebni profil je povezan v aplikacijo %1$s</string>
     <string name="quick_settings_disclosure_vpns">Ta naprava je povezana v omrežja VPN</string>
     <string name="quick_settings_dnd_alarms_label">Samo alarmi</string>
     <string name="quick_settings_dnd_label">Ne moti</string>
@@ -1871,7 +1886,7 @@ lahko spremljano"</string>
     <string name="tethered_notification_hybrid_sharing_mobile">Skupna raba prek podatkovne povezave, kliknite, da odprete Nastavitve</string>
     <string name="tethered_notification_hybrid_sharing_none">Za skupno rabo ni na voljo nobeno omrežje, kliknite, da odprete Nastavitve</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Skupna raba prek Wi-Fi, kliknite, da odprete Nastavitve</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">Dotaknite se za nastavitev.</string>
     <string name="tethered_notification_multi_device_message">%1$s prikjučene naprave</string>
     <string name="tethered_notification_multi_tether_title">Skupna raba intrneta in mobilna dostopna točka sta aktivni</string>
     <string name="tethered_notification_no_device_message">Ni priključenih naprav</string>
@@ -2104,7 +2119,17 @@ Naslov omrežja Wi‑Fi (BSSID)
     <string name="wifi_verbose_logging">Omogoči podrobno zapisovanje dnevnika za Wi-Fi</string>
     <string name="wifi_verbose_logging_summary">Povečaj raven zapisovanja dnevnika za Wi-Fi; v izbirniku Wi‑Fi-ja pokaži glede na SSID RSSI</string>
     <string name="window_animation_scale_title">Merilo animacije okna</string>
-    <string name="work_life_balance_mode">Work-Life Balance</string>
+    <string name="wlb_break_mode_active">Aktiven</string>
+    <string name="wlb_break_mode_active_text">%1$s način · %2$s</string>
+    <string name="wlb_break_mode_on_break">Na premoru</string>
+    <string name="wlb_break_mode_resume">Nadaljujte</string>
+    <string name="wlb_break_mode_take_break">Naredite premor</string>
+    <string name="wlb_qs_detail_break_mode">Način premora</string>
+    <string name="wlb_qs_detail_break_mode_desc">Samodejno obnovi prejšnji način po 30 minutah</string>
+    <string name="wlb_qs_detail_life_mode">Način zasebnega življenja</string>
+    <string name="wlb_qs_detail_more_setting">Več nastavitev</string>
+    <string name="wlb_qs_detail_work_mode">Način dela</string>
+    <string name="work_life_balance_mode">Ravnovesje med delom in zasebnim življenjem</string>
     <string name="zen_alarm_warning">Naslednjega alarma ob %1$s ne boste slišali</string>
     <string name="zen_alarm_warning_indef">Naslednjega alarma ob %1$s ne boste slišali, razen če prej te nastavitve ne izklopite</string>
     <string name="zen_alarms_introduction">Ne bodo vas motili zvoki ali vibriranje, razen v primeru alarmov. Še vedno pa boste slišali vse, kar se boste odločili predvajati, vključno z glasbo, videoposnetki in igrami.</string>

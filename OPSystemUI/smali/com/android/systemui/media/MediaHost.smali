@@ -14,7 +14,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nMediaHost.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaHost.kt\ncom/android/systemui/media/MediaHost\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,293:1\n1591#2,2:294\n*E\n*S KotlinDebug\n*F\n+ 1 MediaHost.kt\ncom/android/systemui/media/MediaHost\n*L\n124#1,2:294\n*E\n"
+    value = "SMAP\nMediaHost.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaHost.kt\ncom/android/systemui/media/MediaHost\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,292:1\n1591#2,2:293\n*E\n*S KotlinDebug\n*F\n+ 1 MediaHost.kt\ncom/android/systemui/media/MediaHost\n*L\n123#1,2:293\n*E\n"
 .end annotation
 
 
@@ -33,9 +33,7 @@
 
 .field private location:I
 
-.field private final mediaDataManager:Lcom/android/systemui/media/MediaDataManager;
-
-.field private final mediaDataManagerCombineLatest:Lcom/android/systemui/media/MediaDataCombineLatest;
+.field private final mediaDataFilter:Lcom/android/systemui/media/MediaDataFilter;
 
 .field private final mediaHierarchyManager:Lcom/android/systemui/media/MediaHierarchyManager;
 
@@ -59,7 +57,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;Lcom/android/systemui/media/MediaHierarchyManager;Lcom/android/systemui/media/MediaDataManager;Lcom/android/systemui/media/MediaDataCombineLatest;Lcom/android/systemui/media/MediaHostStatesManager;)V
+.method public constructor <init>(Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;Lcom/android/systemui/media/MediaHierarchyManager;Lcom/android/systemui/media/MediaDataFilter;Lcom/android/systemui/media/MediaHostStatesManager;)V
     .locals 1
     .param p1    # Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;
         .annotation build Lorg/jetbrains/annotations/NotNull;
@@ -69,15 +67,11 @@
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p3    # Lcom/android/systemui/media/MediaDataManager;
+    .param p3    # Lcom/android/systemui/media/MediaDataFilter;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p4    # Lcom/android/systemui/media/MediaDataCombineLatest;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .param p5    # Lcom/android/systemui/media/MediaHostStatesManager;
+    .param p4    # Lcom/android/systemui/media/MediaHostStatesManager;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
@@ -90,17 +84,13 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "mediaDataManager"
+    const-string v0, "mediaDataFilter"
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "mediaDataManagerCombineLatest"
-
-    invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
-
     const-string v0, "mediaHostStatesManager"
 
-    invoke-static {p5, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -108,11 +98,9 @@
 
     iput-object p2, p0, Lcom/android/systemui/media/MediaHost;->mediaHierarchyManager:Lcom/android/systemui/media/MediaHierarchyManager;
 
-    iput-object p3, p0, Lcom/android/systemui/media/MediaHost;->mediaDataManager:Lcom/android/systemui/media/MediaDataManager;
+    iput-object p3, p0, Lcom/android/systemui/media/MediaHost;->mediaDataFilter:Lcom/android/systemui/media/MediaDataFilter;
 
-    iput-object p4, p0, Lcom/android/systemui/media/MediaHost;->mediaDataManagerCombineLatest:Lcom/android/systemui/media/MediaDataCombineLatest;
-
-    iput-object p5, p0, Lcom/android/systemui/media/MediaHost;->mediaHostStatesManager:Lcom/android/systemui/media/MediaHostStatesManager;
+    iput-object p4, p0, Lcom/android/systemui/media/MediaHost;->mediaHostStatesManager:Lcom/android/systemui/media/MediaHostStatesManager;
 
     const/4 p1, -0x1
 
@@ -146,6 +134,8 @@
 
     return-void
 
+    nop
+
     :array_0
     .array-data 4
         0x0
@@ -161,10 +151,10 @@
     return-object p0
 .end method
 
-.method public static final synthetic access$getMediaDataManagerCombineLatest$p(Lcom/android/systemui/media/MediaHost;)Lcom/android/systemui/media/MediaDataCombineLatest;
+.method public static final synthetic access$getMediaDataFilter$p(Lcom/android/systemui/media/MediaHost;)Lcom/android/systemui/media/MediaDataFilter;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/media/MediaHost;->mediaDataManagerCombineLatest:Lcom/android/systemui/media/MediaDataCombineLatest;
+    iget-object p0, p0, Lcom/android/systemui/media/MediaHost;->mediaDataFilter:Lcom/android/systemui/media/MediaDataFilter;
 
     return-object p0
 .end method
@@ -202,18 +192,18 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/systemui/media/MediaHost;->mediaDataManager:Lcom/android/systemui/media/MediaDataManager;
+    iget-object v0, p0, Lcom/android/systemui/media/MediaHost;->mediaDataFilter:Lcom/android/systemui/media/MediaDataFilter;
 
-    invoke-virtual {v0}, Lcom/android/systemui/media/MediaDataManager;->hasActiveMedia()Z
+    invoke-virtual {v0}, Lcom/android/systemui/media/MediaDataFilter;->hasActiveMedia()Z
 
     move-result v0
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lcom/android/systemui/media/MediaHost;->mediaDataManager:Lcom/android/systemui/media/MediaDataManager;
+    iget-object v0, p0, Lcom/android/systemui/media/MediaHost;->mediaDataFilter:Lcom/android/systemui/media/MediaDataFilter;
 
-    invoke-virtual {v0}, Lcom/android/systemui/media/MediaDataManager;->hasAnyMedia()Z
+    invoke-virtual {v0}, Lcom/android/systemui/media/MediaDataFilter;->hasAnyMedia()Z
 
     move-result v0
 
@@ -501,6 +491,20 @@
     throw v1
 .end method
 
+.method public getDisappearParameters()Lcom/android/systemui/util/animation/DisappearParameters;
+    .locals 0
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    iget-object p0, p0, Lcom/android/systemui/media/MediaHost;->state:Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;
+
+    invoke-virtual {p0}, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->getDisappearParameters()Lcom/android/systemui/util/animation/DisappearParameters;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method public getExpansion()F
     .locals 0
 
@@ -568,30 +572,6 @@
     return-object p0
 .end method
 
-.method public getPivotX()F
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/systemui/media/MediaHost;->state:Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;
-
-    invoke-virtual {p0}, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->getPivotX()F
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public getPivotY()F
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/systemui/media/MediaHost;->state:Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;
-
-    invoke-virtual {p0}, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->getPivotY()F
-
-    move-result p0
-
-    return p0
-.end method
-
 .method public getShowsOnlyActiveMedia()Z
     .locals 0
 
@@ -647,7 +627,7 @@
 
     new-instance v1, Lcom/android/systemui/media/MediaHost$init$2;
 
-    invoke-direct {v1, p0}, Lcom/android/systemui/media/MediaHost$init$2;-><init>(Lcom/android/systemui/media/MediaHost;)V
+    invoke-direct {v1, p0, p1}, Lcom/android/systemui/media/MediaHost$init$2;-><init>(Lcom/android/systemui/media/MediaHost;I)V
 
     invoke-virtual {v0, v1}, Lcom/android/systemui/util/animation/UniqueObjectHostView;->setMeasurementManager(Lcom/android/systemui/util/animation/UniqueObjectHostView$MeasurementManager;)V
 
@@ -674,6 +654,24 @@
     throw v1
 .end method
 
+.method public setDisappearParameters(Lcom/android/systemui/util/animation/DisappearParameters;)V
+    .locals 1
+    .param p1    # Lcom/android/systemui/util/animation/DisappearParameters;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+
+    const-string v0, "<set-?>"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object p0, p0, Lcom/android/systemui/media/MediaHost;->state:Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;
+
+    invoke-virtual {p0, p1}, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->setDisappearParameters(Lcom/android/systemui/util/animation/DisappearParameters;)V
+
+    return-void
+.end method
+
 .method public setExpansion(F)V
     .locals 0
 
@@ -690,16 +688,6 @@
     iget-object p0, p0, Lcom/android/systemui/media/MediaHost;->state:Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;
 
     invoke-virtual {p0, p1}, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->setFalsingProtectionNeeded(Z)V
-
-    return-void
-.end method
-
-.method public setGonePivot(FF)V
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/systemui/media/MediaHost;->state:Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;
-
-    invoke-virtual {p0, p1, p2}, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;->setGonePivot(FF)V
 
     return-void
 .end method

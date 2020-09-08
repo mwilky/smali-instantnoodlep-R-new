@@ -503,12 +503,12 @@
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/media/MediaScrollView;->setAnimationTargetX(F)V
 
-    goto :goto_2
+    goto :goto_4
 
     :cond_4
     iget-object p2, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->scrollView:Lcom/android/systemui/media/MediaScrollView;
 
-    invoke-virtual {p2}, Landroid/widget/HorizontalScrollView;->getScrollX()I
+    invoke-virtual {p2}, Lcom/android/systemui/media/MediaScrollView;->getRelativeScrollX()I
 
     move-result p2
 
@@ -524,15 +524,41 @@
     move p2, v1
 
     :goto_1
+    invoke-virtual {p0}, Lcom/android/systemui/media/MediaCarouselScrollHandler;->isRtl()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    int-to-float v0, v1
+
+    cmpl-float p1, p1, v0
+
+    if-lez p1, :cond_7
+
+    goto :goto_2
+
+    :cond_6
     int-to-float v0, v1
 
     cmpg-float p1, p1, v0
 
-    if-gtz p1, :cond_6
+    if-gez p1, :cond_7
+
+    :goto_2
+    move p1, v3
+
+    goto :goto_3
+
+    :cond_7
+    move p1, v1
+
+    :goto_3
+    if-eqz p1, :cond_8
 
     add-int/lit8 p2, p2, 0x1
 
-    :cond_6
+    :cond_8
     invoke-static {v1, p2}, Ljava/lang/Math;->max(II)I
 
     move-result p1
@@ -563,7 +589,7 @@
 
     invoke-interface {p2, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    :goto_2
+    :goto_4
     return v3
 .end method
 
@@ -580,37 +606,34 @@
 .end method
 
 .method private final onMediaScrollingChanged(II)V
-    .locals 3
+    .locals 4
 
     iget v0, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->scrollIntoCurrentMedia:I
 
-    const/4 v1, 0x1
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
     if-eqz v0, :cond_0
 
-    move v0, v1
+    move v0, v2
 
     goto :goto_0
 
     :cond_0
-    move v0, v2
+    move v0, v1
 
     :goto_0
     iput p2, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->scrollIntoCurrentMedia:I
 
     if-eqz p2, :cond_1
 
-    goto :goto_1
-
-    :cond_1
     move v1, v2
 
-    :goto_1
-    iget v2, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->activeMediaIndex:I
+    :cond_1
+    iget v3, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->activeMediaIndex:I
 
-    if-ne p1, v2, :cond_2
+    if-ne p1, v3, :cond_2
 
     if-eq v0, v1, :cond_3
 
@@ -634,14 +657,35 @@
 
     div-float/2addr p2, v0
 
-    goto :goto_2
+    goto :goto_1
 
     :cond_4
     const/4 p2, 0x0
 
-    :goto_2
+    :goto_1
     add-float/2addr p1, p2
 
+    invoke-virtual {p0}, Lcom/android/systemui/media/MediaCarouselScrollHandler;->isRtl()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_5
+
+    iget-object p2, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->mediaContent:Landroid/view/ViewGroup;
+
+    invoke-virtual {p2}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result p2
+
+    int-to-float p2, p2
+
+    sub-float/2addr p2, p1
+
+    int-to-float p1, v2
+
+    sub-float p1, p2, p1
+
+    :cond_5
     iget-object p2, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->pageIndicator:Lcom/android/systemui/qs/PageIndicator;
 
     invoke-virtual {p2, p1}, Lcom/android/systemui/qs/PageIndicator;->setLocation(F)V
@@ -716,7 +760,7 @@
     :cond_4
     iget-object p1, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->scrollView:Lcom/android/systemui/media/MediaScrollView;
 
-    invoke-virtual {p1}, Landroid/widget/HorizontalScrollView;->getScrollX()I
+    invoke-virtual {p1}, Lcom/android/systemui/media/MediaScrollView;->getRelativeScrollX()I
 
     move-result p1
 
@@ -1103,7 +1147,7 @@
 
     const-string/jumbo v3, "settingsButton"
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_d
 
     invoke-direct {p0}, Lcom/android/systemui/media/MediaCarouselScrollHandler;->getMaxTranslation()I
 
@@ -1129,7 +1173,7 @@
 
     iget-object v7, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->settingsButton:Landroid/view/View;
 
-    if-eqz v7, :cond_9
+    if-eqz v7, :cond_c
 
     invoke-virtual {v7}, Landroid/view/View;->getWidth()I
 
@@ -1145,19 +1189,22 @@
 
     mul-float/2addr v7, v8
 
-    iget v8, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->contentTranslation:F
+    invoke-virtual {p0}, Lcom/android/systemui/media/MediaCarouselScrollHandler;->isRtl()Z
+
+    move-result v8
 
     const/4 v9, 0x0
+
+    if-eqz v8, :cond_2
+
+    iget v8, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->contentTranslation:F
 
     int-to-float v10, v9
 
     cmpl-float v8, v8, v10
 
-    if-lez v8, :cond_0
+    if-lez v8, :cond_1
 
-    goto :goto_0
-
-    :cond_0
     iget-object v8, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->scrollView:Lcom/android/systemui/media/MediaScrollView;
 
     invoke-virtual {v8}, Landroid/widget/HorizontalScrollView;->getWidth()I
@@ -1170,7 +1217,55 @@
 
     iget-object v7, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->settingsButton:Landroid/view/View;
 
-    if-eqz v7, :cond_8
+    if-eqz v7, :cond_0
+
+    invoke-virtual {v7}, Landroid/view/View;->getWidth()I
+
+    move-result v7
+
+    int-to-float v7, v7
+
+    sub-float/2addr v8, v7
+
+    neg-float v7, v8
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+
+    throw v2
+
+    :cond_1
+    neg-float v7, v7
+
+    goto :goto_0
+
+    :cond_2
+    iget v8, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->contentTranslation:F
+
+    int-to-float v10, v9
+
+    cmpl-float v8, v8, v10
+
+    if-lez v8, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v8, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->scrollView:Lcom/android/systemui/media/MediaScrollView;
+
+    invoke-virtual {v8}, Landroid/widget/HorizontalScrollView;->getWidth()I
+
+    move-result v8
+
+    int-to-float v8, v8
+
+    sub-float/2addr v8, v7
+
+    iget-object v7, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->settingsButton:Landroid/view/View;
+
+    if-eqz v7, :cond_b
 
     invoke-virtual {v7}, Landroid/view/View;->getWidth()I
 
@@ -1189,7 +1284,7 @@
 
     iget-object v8, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->settingsButton:Landroid/view/View;
 
-    if-eqz v8, :cond_7
+    if-eqz v8, :cond_a
 
     iget v10, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->contentTranslation:F
 
@@ -1209,34 +1304,38 @@
 
     move-result v0
 
+    invoke-static {v0}, Landroid/util/MathUtils;->saturate(F)F
+
+    move-result v0
+
     iget-object v4, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->settingsButton:Landroid/view/View;
 
-    if-eqz v4, :cond_6
+    if-eqz v4, :cond_9
 
     invoke-virtual {v4, v0}, Landroid/view/View;->setAlpha(F)V
 
     iget-object v4, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->settingsButton:Landroid/view/View;
 
-    if-eqz v4, :cond_5
+    if-eqz v4, :cond_8
 
     cmpg-float v0, v0, v5
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_4
 
     move v1, v9
 
-    :cond_1
+    :cond_4
     invoke-virtual {v4, v1}, Landroid/view/View;->setVisibility(I)V
 
     iget-object v0, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->settingsButton:Landroid/view/View;
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_7
 
     invoke-virtual {v0, v7}, Landroid/view/View;->setTranslationX(F)V
 
     iget-object v0, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->settingsButton:Landroid/view/View;
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_6
 
     iget-object v1, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->scrollView:Lcom/android/systemui/media/MediaScrollView;
 
@@ -1246,7 +1345,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->settingsButton:Landroid/view/View;
 
-    if-eqz p0, :cond_2
+    if-eqz p0, :cond_5
 
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
@@ -1263,21 +1362,6 @@
     invoke-virtual {v0, p0}, Landroid/view/View;->setTranslationY(F)V
 
     goto :goto_1
-
-    :cond_2
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
-
-    throw v2
-
-    :cond_3
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
-
-    throw v2
-
-    :cond_4
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
-
-    throw v2
 
     :cond_5
     invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
@@ -1305,16 +1389,31 @@
     throw v2
 
     :cond_a
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+
+    throw v2
+
+    :cond_b
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+
+    throw v2
+
+    :cond_c
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+
+    throw v2
+
+    :cond_d
     iget-object p0, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->settingsButton:Landroid/view/View;
 
-    if-eqz p0, :cond_b
+    if-eqz p0, :cond_e
 
     invoke-virtual {p0, v1}, Landroid/view/View;->setVisibility(I)V
 
     :goto_1
     return-void
 
-    :cond_b
+    :cond_e
     invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
 
     throw v2
@@ -1342,6 +1441,18 @@
     .locals 0
 
     iget p0, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->playerWidthPlusPadding:I
+
+    return p0
+.end method
+
+.method public final isRtl()Z
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->scrollView:Lcom/android/systemui/media/MediaScrollView;
+
+    invoke-virtual {p0}, Landroid/widget/HorizontalScrollView;->isLayoutRtl()Z
+
+    move-result p0
 
     return p0
 .end method
@@ -1407,15 +1518,37 @@
     :goto_1
     if-eqz p1, :cond_2
 
-    iget p1, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->activeMediaIndex:I
+    iget v0, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->activeMediaIndex:I
 
-    sub-int/2addr p1, v1
+    sub-int/2addr v0, v1
 
-    invoke-static {v2, p1}, Ljava/lang/Math;->max(II)I
+    invoke-static {v2, v0}, Ljava/lang/Math;->max(II)I
 
-    move-result p1
+    move-result v0
 
-    iput p1, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->activeMediaIndex:I
+    iput v0, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->activeMediaIndex:I
+
+    :cond_2
+    invoke-virtual {p0}, Lcom/android/systemui/media/MediaCarouselScrollHandler;->isRtl()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    if-nez p1, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    move v1, v2
+
+    goto :goto_2
+
+    :cond_4
+    move v1, p1
+
+    :goto_2
+    if-eqz v1, :cond_5
 
     iget-object p1, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->scrollView:Lcom/android/systemui/media/MediaScrollView;
 
@@ -1433,7 +1566,7 @@
 
     invoke-virtual {p1, p0}, Landroid/widget/HorizontalScrollView;->setScrollX(I)V
 
-    :cond_2
+    :cond_5
     return-void
 .end method
 
@@ -1759,6 +1892,18 @@
     return-void
 .end method
 
+.method public final scrollToStart()V
+    .locals 1
+
+    iget-object p0, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->scrollView:Lcom/android/systemui/media/MediaScrollView;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lcom/android/systemui/media/MediaScrollView;->setRelativeScrollX(I)V
+
+    return-void
+.end method
+
 .method public final setCarouselBounds(II)V
     .locals 1
 
@@ -1816,7 +1961,7 @@
     :goto_0
     iget-object p0, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler;->scrollView:Lcom/android/systemui/media/MediaScrollView;
 
-    invoke-virtual {p0, v0}, Landroid/widget/HorizontalScrollView;->setScrollX(I)V
+    invoke-virtual {p0, v0}, Lcom/android/systemui/media/MediaScrollView;->setRelativeScrollX(I)V
 
     return-void
 .end method

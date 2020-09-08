@@ -6,10 +6,6 @@
 .implements Lcom/android/systemui/Dumpable;
 
 
-# static fields
-.field private static final INITIALIZATION_FORGIVENESS_WINDOW:J
-
-
 # instance fields
 .field private mAmDispatchingToOtherCode:Z
 
@@ -42,8 +38,6 @@
 .end field
 
 .field private final mFeatureFlags:Lcom/android/systemui/statusbar/FeatureFlags;
-
-.field private mInitializedTimestamp:J
 
 .field private final mLifetimeExtenders:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -103,15 +97,11 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
-    move-result-wide v0
-
-    sput-wide v0, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;->INITIALIZATION_FORGIVENESS_WINDOW:J
-
     return-void
 .end method
 
 .method public constructor <init>(Lcom/android/internal/statusbar/IStatusBarService;Lcom/android/systemui/util/time/SystemClock;Lcom/android/systemui/statusbar/FeatureFlags;Lcom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionLogger;Lcom/android/systemui/dump/LogBufferEulogizer;Lcom/android/systemui/dump/DumpManager;)V
-    .locals 2
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -158,10 +148,6 @@
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;->mAttached:Z
-
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;->mInitializedTimestamp:J
 
     new-instance v0, Lcom/android/systemui/statusbar/notification/collection/NotifCollection$1;
 
@@ -532,67 +518,6 @@
     check-cast v0, Ljava/lang/IllegalStateException;
 
     throw v0
-.end method
-
-.method private crashIfNotInitializing(Ljava/lang/RuntimeException;)V
-    .locals 4
-
-    iget-wide v0, p0, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;->mInitializedTimestamp:J
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;->mClock:Lcom/android/systemui/util/time/SystemClock;
-
-    invoke-interface {v0}, Lcom/android/systemui/util/time/SystemClock;->uptimeMillis()J
-
-    move-result-wide v0
-
-    iget-wide v2, p0, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;->mInitializedTimestamp:J
-
-    sub-long/2addr v0, v2
-
-    sget-wide v2, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;->INITIALIZATION_FORGIVENESS_WINDOW:J
-
-    cmp-long v0, v0, v2
-
-    if-gez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 v0, 0x1
-
-    :goto_1
-    if-eqz v0, :cond_2
-
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;->mLogger:Lcom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionLogger;
-
-    invoke-virtual {p1}, Ljava/lang/RuntimeException;->getMessage()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionLogger;->logIgnoredError(Ljava/lang/String;)V
-
-    return-void
-
-    :cond_2
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;->mEulogizer:Lcom/android/systemui/dump/LogBufferEulogizer;
-
-    invoke-virtual {p0, p1}, Lcom/android/systemui/dump/LogBufferEulogizer;->record(Ljava/lang/Exception;)Ljava/lang/Exception;
-
-    check-cast p1, Ljava/lang/RuntimeException;
-
-    throw p1
 .end method
 
 .method private dispatchEventsAndRebuildList()V
@@ -1230,29 +1155,13 @@
 
     if-nez v0, :cond_0
 
-    new-instance p2, Ljava/lang/IllegalStateException;
-
-    new-instance p3, Ljava/lang/StringBuilder;
-
-    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "No notification to remove with key "
-
-    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;->mLogger:Lcom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionLogger;
 
     invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getKey()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    invoke-direct {p0, p2}, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;->crashIfNotInitializing(Ljava/lang/RuntimeException;)V
+    invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionLogger;->logNoNotificationToRemoveWithKey(Ljava/lang/String;)V
 
     return-void
 
@@ -1269,15 +1178,11 @@
 .end method
 
 .method private onNotificationsInitialized()V
-    .locals 2
+    .locals 0
 
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;->mClock:Lcom/android/systemui/util/time/SystemClock;
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;->mClock:Lcom/android/systemui/util/time/SystemClock;
 
-    invoke-interface {v0}, Lcom/android/systemui/util/time/SystemClock;->uptimeMillis()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;->mInitializedTimestamp:J
+    invoke-interface {p0}, Lcom/android/systemui/util/time/SystemClock;->uptimeMillis()J
 
     return-void
 .end method

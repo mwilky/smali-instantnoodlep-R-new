@@ -2,6 +2,9 @@
 .super Ljava/lang/Object;
 .source "OpClockCtrl.java"
 
+# interfaces
+.implements Landroid/app/AlarmManager$OnAlarmListener;
+
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
@@ -13,10 +16,14 @@
 
 
 # static fields
+.field private static final DEBUG:Z
+
 .field private static mInstance:Lcom/oneplus/keyguard/clock/OpClockCtrl;
 
 
 # instance fields
+.field private mAlarmManager:Landroid/app/AlarmManager;
+
 .field private mBGHandler:Lcom/oneplus/keyguard/clock/OpClockCtrl$BGHandler;
 
 .field private mListener:Lcom/oneplus/keyguard/clock/OpClockCtrl$OnTimeUpdatedListener;
@@ -25,10 +32,22 @@
 
 .field private mNonUiLooper:Landroid/os/Looper;
 
+.field private mPM:Landroid/os/PowerManager;
+
 .field private mScreenON:Z
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    sput-boolean v0, Lcom/oneplus/keyguard/clock/OpClockCtrl;->DEBUG:Z
+
+    return-void
+.end method
+
 .method public constructor <init>()V
     .locals 1
 
@@ -47,6 +66,27 @@
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/oneplus/keyguard/clock/OpClockCtrl;->handleNotifySchedule(Z)V
+
+    return-void
+.end method
+
+.method private cancelSchedule()V
+    .locals 2
+
+    sget-boolean v0, Lcom/oneplus/keyguard/clock/OpClockCtrl;->DEBUG:Z
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "ClockCtrl"
+
+    const-string v1, "cancelSchedule"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget-object v0, p0, Lcom/oneplus/keyguard/clock/OpClockCtrl;->mAlarmManager:Landroid/app/AlarmManager;
+
+    invoke-virtual {v0, p0}, Landroid/app/AlarmManager;->cancel(Landroid/app/AlarmManager$OnAlarmListener;)V
 
     return-void
 .end method
@@ -162,6 +202,95 @@
     invoke-direct {p0}, Lcom/oneplus/keyguard/clock/OpClockCtrl;->dispatchTimeChanged()V
 
     :cond_1
+    return-void
+.end method
+
+.method private startSchedule(Ljava/lang/String;)V
+    .locals 13
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    const-wide/32 v2, 0xea60
+
+    div-long v4, v0, v2
+
+    const-wide/16 v6, 0x1
+
+    add-long/2addr v4, v6
+
+    mul-long/2addr v4, v2
+
+    sub-long/2addr v4, v0
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v0
+
+    add-long v8, v0, v4
+
+    sget-boolean v0, Lcom/oneplus/keyguard/clock/OpClockCtrl;->DEBUG:Z
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "startSchedule: reason= "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, ", callers= "
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 p1, 0x1
+
+    invoke-static {p1}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "ClockCtrl"
+
+    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget-object v6, p0, Lcom/oneplus/keyguard/clock/OpClockCtrl;->mAlarmManager:Landroid/app/AlarmManager;
+
+    const/4 v7, 0x2
+
+    invoke-static {}, Lcom/oneplus/plugin/OpLsState;->getInstance()Lcom/oneplus/plugin/OpLsState;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/oneplus/plugin/OpLsState;->getPhoneStatusBar()Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getAodWindowManager()Lcom/oneplus/aod/OpAodWindowManager;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/oneplus/aod/OpAodWindowManager;->getUIHandler()Landroid/os/Handler;
+
+    move-result-object v12
+
+    const-string v10, "OpClockCtrl.always_on"
+
+    move-object v11, p0
+
+    invoke-virtual/range {v6 .. v12}, Landroid/app/AlarmManager;->setExact(IJLjava/lang/String;Landroid/app/AlarmManager$OnAlarmListener;Landroid/os/Handler;)V
+
     return-void
 .end method
 
@@ -295,6 +424,18 @@
     throw p0
 .end method
 
+.method public onAlarm()V
+    .locals 1
+
+    invoke-direct {p0}, Lcom/oneplus/keyguard/clock/OpClockCtrl;->dispatchTimeChanged()V
+
+    const-string v0, "on alarm"
+
+    invoke-direct {p0, v0}, Lcom/oneplus/keyguard/clock/OpClockCtrl;->startSchedule(Ljava/lang/String;)V
+
+    return-void
+.end method
+
 .method public onScreenTurnedOff()V
     .locals 1
 
@@ -306,20 +447,62 @@
 
     invoke-direct {p0, v0}, Lcom/oneplus/keyguard/clock/OpClockCtrl;->stopUpdate(Ljava/lang/String;)V
 
+    invoke-direct {p0}, Lcom/oneplus/keyguard/clock/OpClockCtrl;->cancelSchedule()V
+
     return-void
 .end method
 
 .method public onScreenTurnedOn()V
-    .locals 1
+    .locals 2
 
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/oneplus/keyguard/clock/OpClockCtrl;->mScreenON:Z
 
+    const-class v0, Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isDreaming()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isAlwaysOnEnabled()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/oneplus/keyguard/clock/OpClockCtrl;->mPM:Landroid/os/PowerManager;
+
+    invoke-virtual {v0}, Landroid/os/PowerManager;->isInteractive()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-direct {p0}, Lcom/oneplus/keyguard/clock/OpClockCtrl;->dispatchTimeChanged()V
+
+    const-string v0, "screen turned on"
+
+    invoke-direct {p0, v0}, Lcom/oneplus/keyguard/clock/OpClockCtrl;->startSchedule(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_0
     const-string v0, "ScreenON"
 
     invoke-direct {p0, v0}, Lcom/oneplus/keyguard/clock/OpClockCtrl;->startUpdate(Ljava/lang/String;)V
 
+    :goto_0
     return-void
 .end method
 
@@ -352,16 +535,36 @@
 
     check-cast p1, Landroid/os/PowerManager;
 
+    iput-object p1, p0, Lcom/oneplus/keyguard/clock/OpClockCtrl;->mPM:Landroid/os/PowerManager;
+
     invoke-virtual {p1}, Landroid/os/PowerManager;->isScreenOn()Z
 
     move-result p1
 
     iput-boolean p1, p0, Lcom/oneplus/keyguard/clock/OpClockCtrl;->mScreenON:Z
 
+    const-class p1, Landroid/app/AlarmManager;
+
+    invoke-virtual {p2, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/app/AlarmManager;
+
+    iput-object p1, p0, Lcom/oneplus/keyguard/clock/OpClockCtrl;->mAlarmManager:Landroid/app/AlarmManager;
+
     :cond_0
     const-string p1, "startCtrl"
 
     invoke-direct {p0, p1}, Lcom/oneplus/keyguard/clock/OpClockCtrl;->startUpdate(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public onStartedWakingUp()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/oneplus/keyguard/clock/OpClockCtrl;->cancelSchedule()V
 
     return-void
 .end method

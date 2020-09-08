@@ -2061,6 +2061,11 @@
 
     check-cast p0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBar;->toggleWxBus()V
+
+    :cond_0
     return-void
 .end method
 

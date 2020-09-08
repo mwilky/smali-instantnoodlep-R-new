@@ -50,10 +50,11 @@
 
 .field private final mMotionHelper:Lcom/android/systemui/pip/phone/PipMotionHelper;
 
-.field private final mMovementBoundsSupplier:Ljava/util/function/Supplier;
+.field private final mMovementBoundsSupplier:Ljava/util/function/Function;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljava/util/function/Supplier<",
+            "Ljava/util/function/Function<",
+            "Landroid/graphics/Rect;",
             "Landroid/graphics/Rect;",
             ">;"
         }
@@ -84,7 +85,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/pip/PipBoundsHandler;Lcom/android/systemui/pip/phone/PipMotionHelper;Lcom/android/systemui/util/DeviceConfigProxy;Lcom/android/systemui/pip/PipTaskOrganizer;Ljava/util/function/Supplier;Ljava/lang/Runnable;Lcom/android/systemui/model/SysUiState;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/pip/PipBoundsHandler;Lcom/android/systemui/pip/phone/PipMotionHelper;Lcom/android/systemui/util/DeviceConfigProxy;Lcom/android/systemui/pip/PipTaskOrganizer;Ljava/util/function/Function;Ljava/lang/Runnable;Lcom/android/systemui/model/SysUiState;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -94,7 +95,8 @@
             "Lcom/android/systemui/pip/phone/PipMotionHelper;",
             "Lcom/android/systemui/util/DeviceConfigProxy;",
             "Lcom/android/systemui/pip/PipTaskOrganizer;",
-            "Ljava/util/function/Supplier<",
+            "Ljava/util/function/Function<",
+            "Landroid/graphics/Rect;",
             "Landroid/graphics/Rect;",
             ">;",
             "Ljava/lang/Runnable;",
@@ -197,7 +199,7 @@
 
     iput-object p5, p0, Lcom/android/systemui/pip/phone/PipResizeGestureHandler;->mPipTaskOrganizer:Lcom/android/systemui/pip/PipTaskOrganizer;
 
-    iput-object p6, p0, Lcom/android/systemui/pip/phone/PipResizeGestureHandler;->mMovementBoundsSupplier:Ljava/util/function/Supplier;
+    iput-object p6, p0, Lcom/android/systemui/pip/phone/PipResizeGestureHandler;->mMovementBoundsSupplier:Ljava/util/function/Function;
 
     iput-object p7, p0, Lcom/android/systemui/pip/phone/PipResizeGestureHandler;->mUpdateMovementBoundsRunnable:Ljava/lang/Runnable;
 
@@ -700,9 +702,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/systemui/pip/phone/PipResizeGestureHandler;->mMovementBoundsSupplier:Ljava/util/function/Supplier;
+    iget-object v1, p0, Lcom/android/systemui/pip/phone/PipResizeGestureHandler;->mMovementBoundsSupplier:Ljava/util/function/Function;
 
-    invoke-interface {v1}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
+    invoke-interface {v1, v0}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -937,6 +939,142 @@
 
 
 # virtual methods
+.method public dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "  "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p2, "PipResizeGestureHandler"
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "mAllowGesture="
+
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lcom/android/systemui/pip/phone/PipResizeGestureHandler;->mAllowGesture:Z
+
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "mIsAttached="
+
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lcom/android/systemui/pip/phone/PipResizeGestureHandler;->mIsAttached:Z
+
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "mIsEnabled="
+
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lcom/android/systemui/pip/phone/PipResizeGestureHandler;->mIsEnabled:Z
+
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "mEnableUserResize="
+
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lcom/android/systemui/pip/phone/PipResizeGestureHandler;->mEnableUserResize:Z
+
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "mThresholdCrossed="
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean p0, p0, Lcom/android/systemui/pip/phone/PipResizeGestureHandler;->mThresholdCrossed:Z
+
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    return-void
+.end method
+
 .method public isWithinTouchRegion(II)Z
     .locals 5
 
@@ -1138,4 +1276,46 @@
     invoke-virtual {p0, p1, p2}, Landroid/graphics/Point;->set(II)V
 
     return-void
+.end method
+
+.method public willStartResizeGesture(Landroid/view/MotionEvent;)Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/android/systemui/pip/phone/PipResizeGestureHandler;->mEnableUserResize:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-direct {p0}, Lcom/android/systemui/pip/phone/PipResizeGestureHandler;->isInValidSysUiState()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
+
+    move-result v0
+
+    float-to-int v0, v0
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
+
+    move-result p1
+
+    float-to-int p1, p1
+
+    invoke-virtual {p0, v0, p1}, Lcom/android/systemui/pip/phone/PipResizeGestureHandler;->isWithinTouchRegion(II)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
 .end method

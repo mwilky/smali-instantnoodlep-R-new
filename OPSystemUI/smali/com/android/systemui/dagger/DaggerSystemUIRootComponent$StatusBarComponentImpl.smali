@@ -77,7 +77,7 @@
 .end method
 
 .method private initialize(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$StatusBarComponentBuilder;)V
-    .locals 32
+    .locals 33
 
     move-object/from16 v0, p0
 
@@ -293,7 +293,13 @@
 
     move-result-object v31
 
-    invoke-static/range {v2 .. v31}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController_Factory;->create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/statusbar/phone/NotificationPanelViewController_Factory;
+    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$StatusBarComponentImpl;->this$0:Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;
+
+    invoke-static {v1}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$18400(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+
+    move-result-object v32
+
+    invoke-static/range {v2 .. v32}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController_Factory;->create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/statusbar/phone/NotificationPanelViewController_Factory;
 
     move-result-object v1
 
@@ -545,7 +551,7 @@
 
     iget-object v1, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$StatusBarComponentImpl;->this$0:Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;
 
-    invoke-static {v1}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$18400(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+    invoke-static {v1}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$18500(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
 
     move-result-object v1
 
@@ -573,7 +579,7 @@
 
     iget-object v0, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$StatusBarComponentImpl;->this$0:Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;
 
-    invoke-static {v0}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$18500(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+    invoke-static {v0}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$18600(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
 
     move-result-object v0
 

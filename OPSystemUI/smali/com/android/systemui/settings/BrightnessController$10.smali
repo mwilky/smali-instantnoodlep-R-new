@@ -45,6 +45,12 @@
 .method public run()V
     .locals 3
 
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Lcom/android/systemui/settings/BrightnessController;->access$702(J)J
+
     iget-object v0, p0, Lcom/android/systemui/settings/BrightnessController$10;->this$0:Lcom/android/systemui/settings/BrightnessController;
 
     invoke-static {v0}, Lcom/android/systemui/settings/BrightnessController;->access$000(Lcom/android/systemui/settings/BrightnessController;)Landroid/content/Context;

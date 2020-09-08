@@ -244,18 +244,6 @@
 
     iput-object p7, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->receiverList:Ljava/util/List;
 
-    invoke-static {}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->isLanguageSupported()Z
-
-    move-result p1
-
-    iput-boolean p1, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->isSupportedLocale:Z
-
-    invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->currentUserHandle:Landroid/os/UserHandle;
-
     new-instance p1, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$$Lambda$0;
 
     invoke-direct {p1, p0, p2}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$$Lambda$0;-><init>(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceData;)V
@@ -1497,7 +1485,7 @@
 .end method
 
 .method private registerCardExpireListeners()V
-    .locals 4
+    .locals 3
 
     new-instance v0, Landroid/content/IntentFilter;
 
@@ -1511,15 +1499,19 @@
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->context:Landroid/content/Context;
+    new-instance v1, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$DeviceStateChangeReceiver;
 
-    new-instance v2, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$DeviceStateChangeReceiver;
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    invoke-direct {v1, p0, v2}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$DeviceStateChangeReceiver;-><init>(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$1;)V
 
-    invoke-direct {v2, p0, v3}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$DeviceStateChangeReceiver;-><init>(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$1;)V
+    iget-object v2, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->context:Landroid/content/Context;
 
-    invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {v2, v1, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    iget-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->receiverList:Ljava/util/List;
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     new-instance v0, Landroid/content/IntentFilter;
 
@@ -2098,17 +2090,32 @@
 
     iget-boolean v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->hasContents:Z
 
+    const-string v1, "SmartSpaceViewCtrl"
+
     if-eqz v0, :cond_0
 
-    const-string p0, "SmartSpaceViewCtrl"
+    const-string p0, "register setup complete. Skip to avoid duplicate"
 
-    const-string v0, "register setup complete. Skip to avoid duplicate"
-
-    invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
     :cond_0
+    iget-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->receiverList:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "receiverList is not empty, clean up first to avoid duplicate"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-direct {p0}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->cleanup()V
+
+    :cond_1
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
@@ -2560,6 +2567,18 @@
     const-string v1, "com.google.android.apps.oemsmartspace.JAR_LIB_VERSION_KEY"
 
     invoke-virtual {p2, v1, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    invoke-static {}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->isLanguageSupported()Z
+
+    move-result p2
+
+    iput-boolean p2, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->isSupportedLocale:Z
+
+    invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->currentUserHandle:Landroid/os/UserHandle;
 
     iput-object p3, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->smartspaceView:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;
 

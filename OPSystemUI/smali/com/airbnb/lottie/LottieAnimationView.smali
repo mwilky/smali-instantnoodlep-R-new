@@ -806,16 +806,6 @@
 
 
 # virtual methods
-.method public addAnimatorListener(Landroid/animation/Animator$AnimatorListener;)V
-    .locals 0
-
-    iget-object p0, p0, Lcom/airbnb/lottie/LottieAnimationView;->lottieDrawable:Lcom/airbnb/lottie/LottieDrawable;
-
-    invoke-virtual {p0, p1}, Lcom/airbnb/lottie/LottieDrawable;->addAnimatorListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    return-void
-.end method
-
 .method public addValueCallback(Lcom/airbnb/lottie/model/KeyPath;Ljava/lang/Object;Lcom/airbnb/lottie/value/LottieValueCallback;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;

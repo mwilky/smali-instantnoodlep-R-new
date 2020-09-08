@@ -32,6 +32,8 @@
 
 .field mUpdateMonitorCallback:Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
 
+.field private mUsedScreenWidth:I
+
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
@@ -937,6 +939,203 @@
     return-void
 .end method
 
+.method private updateLayoutParamForDisplayWidth()V
+    .locals 4
+
+    iget-object v0, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/android/systemui/assist/ui/DisplayUtils;->getWidth(Landroid/content/Context;)I
+
+    move-result v0
+
+    iget v1, p0, Lcom/android/keyguard/KeyguardSimPinView;->mUsedScreenWidth:I
+
+    if-ne v1, v0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v2, "updateLayoutParamForDisplayWidth, displayWidth:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, ", mUsedScreenWidth:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v2, p0, Lcom/android/keyguard/KeyguardSimPinView;->mUsedScreenWidth:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "KeyguardSimPinView"
+
+    invoke-static {v2, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    iput v0, p0, Lcom/android/keyguard/KeyguardSimPinView;->mUsedScreenWidth:I
+
+    const/16 v1, 0x438
+
+    if-le v0, v1, :cond_2
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/keyguard/KeyguardSecurityViewFlipper$LayoutParams;
+
+    iget-object v2, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    sget v3, Lcom/android/systemui/R$dimen;->keyguard_security_max_height:I
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    invoke-static {v2, v1}, Lcom/oneplus/util/OpUtils;->convertPxByResolutionProportion(FI)I
+
+    move-result v2
+
+    iput v2, v0, Lcom/android/keyguard/KeyguardSecurityViewFlipper$LayoutParams;->maxHeight:I
+
+    iget-object v2, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    sget v3, Lcom/android/systemui/R$dimen;->keyguard_security_width:I
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    invoke-static {v2, v1}, Lcom/oneplus/util/OpUtils;->convertPxByResolutionProportion(FI)I
+
+    move-result v2
+
+    iput v2, v0, Lcom/android/keyguard/KeyguardSecurityViewFlipper$LayoutParams;->maxWidth:I
+
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    sget v0, Lcom/android/systemui/R$id;->keyguard_security_sim_pin_top_space:I
+
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    iget-object v2, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    sget v3, Lcom/android/systemui/R$dimen;->keyguard_security_sim_pin_top_space:I
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    invoke-static {v2, v1}, Lcom/oneplus/util/OpUtils;->convertPxByResolutionProportion(FI)I
+
+    move-result v2
+
+    iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    sget v0, Lcom/android/systemui/R$id;->keyguard_esim_area:I
+
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    instance-of v2, v0, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    if-eqz v2, :cond_1
+
+    check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    iget-object v2, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    sget v3, Lcom/android/systemui/R$dimen;->eca_overlap:I
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    invoke-static {v2, v1}, Lcom/oneplus/util/OpUtils;->convertPxByResolutionProportion(FI)I
+
+    move-result v2
+
+    iput v2, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    :cond_1
+    sget v0, Lcom/android/systemui/R$id;->simPinEntry:I
+
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    iget-object p0, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    sget v2, Lcom/android/systemui/R$dimen;->keyguard_security_width:I
+
+    invoke-virtual {p0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p0
+
+    int-to-float p0, p0
+
+    invoke-static {p0, v1}, Lcom/oneplus/util/OpUtils;->convertPxByResolutionProportion(FI)I
+
+    move-result p0
+
+    iput p0, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    :cond_2
+    return-void
+.end method
+
 
 # virtual methods
 .method protected getPasswordTextViewId()I
@@ -1059,6 +1258,16 @@
     return-void
 .end method
 
+.method protected onMeasure(II)V
+    .locals 0
+
+    invoke-super {p0, p1, p2}, Landroid/widget/LinearLayout;->onMeasure(II)V
+
+    invoke-direct {p0}, Lcom/android/keyguard/KeyguardSimPinView;->updateLayoutParamForDisplayWidth()V
+
+    return-void
+.end method
+
 .method public onPause()V
     .locals 1
 
@@ -1073,37 +1282,13 @@
     iput-object v0, p0, Lcom/android/keyguard/KeyguardSimPinView;->mSimUnlockProgressDialog:Landroid/app/ProgressDialog;
 
     :cond_0
-    const-class v0, Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    iget-object p0, p0, Lcom/android/keyguard/KeyguardSimPinView;->mUpdateMonitorCallback:Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
-
-    invoke-virtual {v0, p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->removeCallback(Lcom/android/keyguard/KeyguardUpdateMonitorCallback;)V
-
     return-void
 .end method
 
 .method public onResume(I)V
-    .locals 1
+    .locals 0
 
     invoke-super {p0, p1}, Lcom/android/keyguard/KeyguardPinBasedInputView;->onResume(I)V
-
-    const-class p1, Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    invoke-static {p1}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    iget-object v0, p0, Lcom/android/keyguard/KeyguardSimPinView;->mUpdateMonitorCallback:Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
-
-    invoke-virtual {p1, v0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->registerCallback(Lcom/android/keyguard/KeyguardUpdateMonitorCallback;)V
 
     invoke-virtual {p0}, Lcom/android/keyguard/KeyguardSimPinView;->resetState()V
 

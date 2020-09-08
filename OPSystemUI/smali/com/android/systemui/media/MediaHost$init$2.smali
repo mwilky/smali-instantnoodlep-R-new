@@ -18,19 +18,23 @@
 
 
 # instance fields
+.field final synthetic $location:I
+
 .field final synthetic this$0:Lcom/android/systemui/media/MediaHost;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/systemui/media/MediaHost;)V
+.method constructor <init>(Lcom/android/systemui/media/MediaHost;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "()V"
+            "(I)V"
         }
     .end annotation
 
     iput-object p1, p0, Lcom/android/systemui/media/MediaHost$init$2;->this$0:Lcom/android/systemui/media/MediaHost;
+
+    iput p2, p0, Lcom/android/systemui/media/MediaHost$init$2;->$location:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -95,13 +99,15 @@
 
     move-result-object p1
 
+    iget v0, p0, Lcom/android/systemui/media/MediaHost$init$2;->$location:I
+
     iget-object p0, p0, Lcom/android/systemui/media/MediaHost$init$2;->this$0:Lcom/android/systemui/media/MediaHost;
 
     invoke-static {p0}, Lcom/android/systemui/media/MediaHost;->access$getState$p(Lcom/android/systemui/media/MediaHost;)Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;
 
     move-result-object p0
 
-    invoke-virtual {p1, p0}, Lcom/android/systemui/media/MediaHostStatesManager;->getPlayerDimensions(Lcom/android/systemui/media/MediaHostState;)Lcom/android/systemui/util/animation/MeasurementOutput;
+    invoke-virtual {p1, v0, p0}, Lcom/android/systemui/media/MediaHostStatesManager;->updateCarouselDimensions(ILcom/android/systemui/media/MediaHostState;)Lcom/android/systemui/util/animation/MeasurementOutput;
 
     move-result-object p0
 

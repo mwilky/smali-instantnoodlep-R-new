@@ -18,10 +18,10 @@
 
 .field public static final bt_nearby_icon_size:I = 0x7f0700e4
 
-.field public static final signal_icon_size:I = 0x7f0708a8
+.field public static final signal_icon_size:I = 0x7f0708cb
 
-.field public static final two_target_pref_medium_icon_size:I = 0x7f07093e
+.field public static final two_target_pref_medium_icon_size:I = 0x7f070963
 
-.field public static final two_target_pref_small_icon_size:I = 0x7f07093f
+.field public static final two_target_pref_small_icon_size:I = 0x7f070964
 
-.field public static final wifi_preference_badge_padding:I = 0x7f07097f
+.field public static final wifi_preference_badge_padding:I = 0x7f0709a4

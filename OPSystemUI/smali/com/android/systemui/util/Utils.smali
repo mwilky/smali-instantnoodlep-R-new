@@ -158,7 +158,7 @@
 
     const-string v0, "qs_media_player"
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
     invoke-static {p0, v0, v1}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -166,8 +166,11 @@
 
     if-lez p0, :cond_0
 
-    const/4 v1, 0x1
+    goto :goto_0
 
     :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
     return v1
 .end method

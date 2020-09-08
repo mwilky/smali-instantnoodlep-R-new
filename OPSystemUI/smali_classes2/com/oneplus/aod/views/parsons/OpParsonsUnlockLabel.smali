@@ -224,15 +224,17 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/content/res/TypedArray;->getDimension(IF)F
 
-    move-result v0
+    move-result v1
 
-    invoke-static {v0}, Lcom/oneplus/util/OpUtils;->convertDpToFixedPx2(F)I
+    invoke-static {v1}, Lcom/oneplus/util/OpUtils;->convertDpToFixedPx2(F)I
 
-    move-result v0
+    move-result v1
 
-    int-to-float v0, v0
+    int-to-float v1, v1
 
-    invoke-virtual {p0, v2, v0}, Landroid/widget/TextView;->setTextSize(IF)V
+    invoke-virtual {p0, v2, v1}, Landroid/widget/TextView;->setTextSize(IF)V
+
+    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void
 .end method

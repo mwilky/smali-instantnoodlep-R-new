@@ -561,6 +561,7 @@
     <string name="controls_favorite_other_zone_header">பிற</string>
     <string name="controls_favorite_rearrange">கட்டுப்பாடுகளை மறுவரிசைப்படுத்த அவற்றைப் பிடித்து இழுக்கவும்</string>
     <string name="controls_favorite_removed">கட்டுப்பாடுகள் அனைத்தும் அகற்றப்பட்டன</string>
+    <string name="controls_favorite_see_other_apps">பிற ஆப்ஸையும் காட்டு</string>
     <string name="controls_favorite_subtitle">பவர் மெனுவில் இருந்து அணுகுவதற்கான கட்டுப்பாடுகளைத் தேர்ந்தெடுக்கலாம்</string>
     <string name="controls_favorite_toast_no_changes">மாற்றங்கள் சேமிக்கப்படவில்லை</string>
     <string name="controls_in_progress">செயல்பாட்டிலுள்ளது</string>
@@ -663,6 +664,8 @@
     <string name="disconnect_vpn">VPNஐத் துண்டி</string>
     <string name="dnd_is_off">\"தொந்தரவு செய்ய வேண்டாம்\" முடக்கத்தில் உள்ளது</string>
     <string name="dnd_suppressing_shade_text">"'தொந்தரவு செய்ய வேண்டாம்' அம்சத்தின் மூலம் அறிவிப்புகள் இடைநிறுத்தப்பட்டுள்ளன"</string>
+    <string name="do_disclosure_generic">இந்த சாதனம் உங்கள் நிறுவனத்துக்கு சொந்தமானது</string>
+    <string name="do_disclosure_with_name">இந்த சாதனம் %s நிறுவனத்துக்கு சொந்தமானது</string>
     <string name="do_not_silence">ஒலியை அனுமதி</string>
     <string name="do_not_silence_block">ஒலி அல்லது அறிவிப்பைத் தடுக்காதே</string>
     <string name="dock_alignment_not_charging">மொபைலை வயர்லெஸ்ஸாகச் சார்ஜ் செய்ய அதை சரியாக வைக்கவும்</string>
@@ -1065,8 +1068,18 @@
     <string name="monitoring_description_do_learn_more_separator">" "</string>
     <string name="monitoring_description_managed_profile_ca_certificate">உங்கள் நிறுவனம், பணிக் கணக்கில் சான்றிதழ் அங்கீகாரத்தை நிறுவியுள்ளது. உங்களின் பாதுகாப்பான நெட்வொர்க் ட்ராஃபிக் கண்காணிக்கப்படலாம் அல்லது மாற்றப்படலாம்.</string>
     <string name="monitoring_description_managed_profile_named_vpn">மின்னஞ்சல்கள், ஆப்ஸ், இணையதளங்கள் உட்பட உங்கள் நெட்வொர்க் செயல்பாட்டைக் கண்காணிக்கக்கூடிய %1$s உடன் உங்கள் பணிக் கணக்கு இணைக்கப்பட்டுள்ளது.</string>
+    <string name="monitoring_description_management">"இந்த சாதனம் உங்கள் நிறுவனத்துக்கு சொந்தமானது.
+
+உங்கள் IT நிர்வாகியால் அமைப்புகள், நிறுவன அணுகல், ஆப்ஸ், உங்கள் சாதனத்துடன் தொடர்புடைய தரவு, சாதனத்தின் இருப்பிடத் தகவல்கள் ஆகியவற்றைக் கண்காணிக்கவும் நிர்வகிக்கவும் முடியும்.
+
+மேலும் தகவல்களுக்கு IT நிர்வாகியைத் தொடர்புகொள்ளவும்."</string>
     <string name="monitoring_description_management_ca_certificate">உங்கள் நிறுவனம் இந்தச் சாதனத்தில் சான்றிதழ் அங்கீகாரத்தை நிறுவியுள்ளது. உங்களின் பாதுகாப்பான நெட்வொர்க் ட்ராஃபிக் கண்காணிக்கப்படலாம் அல்லது மாற்றப்படலாம்.</string>
     <string name="monitoring_description_management_network_logging">உங்கள் நிர்வாகி, நெட்வொர்க் பதிவெடுத்தலை இயக்கியுள்ளார். இது சாதனத்தில் ட்ராஃபிக்கைக் கண்காணிக்கும்.</string>
+    <string name="monitoring_description_named_management">"இந்த சாதனம் %1$s நிறுவனத்துக்கு சொந்தமானது.
+
+உங்கள் IT நிர்வாகியால் அமைப்புகள், நிறுவன அணுகல், ஆப்ஸ், உங்கள் சாதனத்துடன் தொடர்புடைய தரவு, சாதனத்தின் இருப்பிடத் தகவல்கள் ஆகியவற்றைக் கண்காணிக்கவும் நிர்வகிக்கவும் முடியும்.
+
+மேலும் தகவல்களுக்கு IT நிர்வாகியைத் தொடர்புகொள்ளவும்."</string>
     <string name="monitoring_description_named_vpn">மின்னஞ்சல்கள், ஆப்ஸ், இணையதளங்கள் உட்பட உங்கள் நெட்வொர்க் செயல்பாட்டைக் கண்காணிக்கக்கூடிய %1$s உடன் இணைக்கப்பட்டுள்ளீர்கள்.</string>
     <string name="monitoring_description_network_logging">"உங்கள் நிர்வாகி நெட்வொர்க் பதிவெடுத்தலை இயக்கியுள்ளார், இது சாதனத்தில் ட்ராஃபிக்கைக் கண்காணிக்கும்.
 
@@ -1341,8 +1354,20 @@
     <string name="quick_settings_dark_mode_secondary_label_until">%s வரை</string>
     <string name="quick_settings_dark_mode_secondary_label_until_sunrise">காலை வரை</string>
     <string name="quick_settings_disclosure_managed_profile_monitoring">உங்கள் நிறுவனம் பணிக் கணக்கில் நெட்வொர்க் ட்ராஃபிக்கைக் கண்காணிக்கலாம்</string>
+    <string name="quick_settings_disclosure_managed_profile_named_vpn">உங்கள் பணிக் கணக்கு %1$s உடன் இணைக்கப்பட்டுள்ளது</string>
+    <string name="quick_settings_disclosure_management">இந்த சாதனம் உங்கள் நிறுவனத்துக்கு சொந்தமானது</string>
+    <string name="quick_settings_disclosure_management_monitoring">இந்த சாதனம் உங்கள் நிறுவனத்துக்கு உரியது, நெட்வொர்க் ட்ராஃபிக்கையும் நிறுவனமே கண்காணிக்கக்கூடும்</string>
+    <string name="quick_settings_disclosure_management_named_vpn">இந்த சாதனம் உங்கள் நிறுவனத்துக்கு சொந்தமானது, அது %1$s உடன் இணைக்கப்பட்டுள்ளது</string>
+    <string name="quick_settings_disclosure_management_vpns">இந்த சாதனம் உங்கள் நிறுவனத்துக்கு சொந்தமானது, அது VPNகளுடன் இணைக்கப்பட்டுள்ளது</string>
     <string name="quick_settings_disclosure_monitoring">நெட்வொர்க் கண்காணிக்கப்படலாம்</string>
     <string name="quick_settings_disclosure_named_managed_profile_monitoring">%1$s உங்கள் பணிக் கணக்கில் நெட்வொர்க் ட்ராஃபிக்கைக் கண்காணிக்கலாம்</string>
+    <string name="quick_settings_disclosure_named_management">இந்த சாதனம் %1$s நிறுவனத்துக்கு சொந்தமானது</string>
+    <string name="quick_settings_disclosure_named_management_monitoring">இந்த சாதனம் %1$s நிறுவனத்துக்கு உரியது, நெட்வொர்க் ட்ராஃபிக்கையும் நிறுவனமே கண்காணிக்கக்கூடும்</string>
+    <string name="quick_settings_disclosure_named_management_named_vpn">இந்த சாதனம் %1$s நிறுவனத்துக்கு சொந்தமானது, அது %2$s உடன் இணைக்கப்பட்டுள்ளது</string>
+    <string name="quick_settings_disclosure_named_management_vpns">இந்த சாதனம் %1$s நிறுவனத்துக்கு சொந்தமானது, அது VPNகளுடன் இணைக்கப்பட்டுள்ளது</string>
+    <string name="quick_settings_disclosure_named_vpn">இந்த சாதனம் %1$s உடன் இணைக்கப்பட்டுள்ளது</string>
+    <string name="quick_settings_disclosure_personal_profile_named_vpn">உங்கள் தனிப்பட்ட சுயவிவரம் %1$s உடன் இணைக்கப்பட்டுள்ளது</string>
+    <string name="quick_settings_disclosure_vpns">இந்த சாதனம் VPNகளுடன் இணைக்கப்பட்டுள்ளது</string>
     <string name="quick_settings_dnd_alarms_label">அலாரங்கள் மட்டும்</string>
     <string name="quick_settings_dnd_label">தொந்தரவு செய்ய வேண்டாம்</string>
     <string name="quick_settings_dnd_none_label">அறிவிப்புகள் வேண்டாம்</string>

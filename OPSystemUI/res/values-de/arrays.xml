@@ -297,9 +297,9 @@
     </string-array>
     <string-array name="zzz_op_quick_pay_switch_strings">
         <item>QR-Code</item>
-        <item>Überprüfen</item>
+        <item>Wird gescannt</item>
         <item>QR-Code</item>
-        <item>Überprüfen</item>
+        <item>Wird gescannt</item>
         <item>Paytm</item>
     </string-array>
 </resources>

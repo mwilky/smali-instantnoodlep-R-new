@@ -333,6 +333,20 @@
 
     if-nez v1, :cond_1
 
+    const-class v1, Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    invoke-static {v1}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    invoke-virtual {v1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isSimPinSecure()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
     :cond_0
     :goto_0
     move-object v0, v2

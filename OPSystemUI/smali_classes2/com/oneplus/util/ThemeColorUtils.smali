@@ -138,17 +138,13 @@
     sput-object v1, Lcom/oneplus/util/ThemeColorUtils;->sThemeName:[Ljava/lang/String;
 
     :cond_0
-    invoke-static {p0}, Lcom/oneplus/util/OpUtils;->getThemeColor(Landroid/content/Context;)I
+    invoke-static {p0}, Lcom/oneplus/util/OpUtils;->isGoogleDarkTheme(Landroid/content/Context;)Z
 
     move-result v1
 
-    invoke-static {p0}, Lcom/oneplus/util/OpUtils;->isGoogleDarkTheme(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/oneplus/util/OpUtils;->getThemeColor(Landroid/content/Context;)I
 
     move-result v2
-
-    sget-boolean v3, Landroid/os/Build;->DEBUG_ONEPLUS:Z
-
-    if-eqz v3, :cond_1
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -158,48 +154,42 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v4, ", opTheme="
+    const-string v1, ", opTheme="
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v1
 
-    const-string v4, "ThemeColorUtils"
+    const-string v3, "ThemeColorUtils"
 
-    invoke-static {v4, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_1
-    if-eqz v2, :cond_2
-
-    const/4 v1, 0x1
-
-    :cond_2
     invoke-static {p0}, Lcom/oneplus/util/OpUtils;->isSpecialTheme(Landroid/content/Context;)Z
 
-    move-result v2
+    move-result v1
 
     sget v3, Lcom/oneplus/util/ThemeColorUtils;->sCurrentTheme:I
 
-    if-ne v3, v1, :cond_3
+    if-ne v3, v2, :cond_1
 
     sget-boolean v3, Lcom/oneplus/util/ThemeColorUtils;->sSpecialTheme:Z
 
-    if-eq v3, v2, :cond_4
+    if-eq v3, v1, :cond_2
 
-    :cond_3
-    sput v1, Lcom/oneplus/util/ThemeColorUtils;->sCurrentTheme:I
+    :cond_1
+    sput v2, Lcom/oneplus/util/ThemeColorUtils;->sCurrentTheme:I
 
-    sput-boolean v2, Lcom/oneplus/util/ThemeColorUtils;->sSpecialTheme:Z
+    sput-boolean v1, Lcom/oneplus/util/ThemeColorUtils;->sSpecialTheme:Z
 
-    sget-object v2, Lcom/oneplus/util/ThemeColorUtils;->sThemeName:[Ljava/lang/String;
+    sget-object v1, Lcom/oneplus/util/ThemeColorUtils;->sThemeName:[Ljava/lang/String;
 
-    aget-object v1, v2, v1
+    aget-object v1, v1, v2
 
     const/4 v2, 0x0
 
@@ -215,7 +205,7 @@
 
     sput-object v0, Lcom/oneplus/util/ThemeColorUtils;->sColors:[I
 
-    :cond_4
+    :cond_2
     invoke-static {p0}, Lcom/oneplus/util/ThemeColorUtils;->updateAccentColor(Landroid/content/Context;)V
 
     return-void

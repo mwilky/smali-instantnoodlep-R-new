@@ -11,7 +11,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nMediaHostStatesManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaHostStatesManager.kt\ncom/android/systemui/media/MediaHostStatesManager\n*L\n1#1,117:1\n*E\n"
+    value = "SMAP\nMediaHostStatesManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaHostStatesManager.kt\ncom/android/systemui/media/MediaHostStatesManager\n*L\n1#1,128:1\n*E\n"
 .end annotation
 
 
@@ -23,6 +23,20 @@
             "Lcom/android/systemui/media/MediaHostStatesManager$Callback;",
             ">;"
         }
+    .end annotation
+.end field
+
+.field private final carouselSizes:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map<",
+            "Ljava/lang/Integer;",
+            "Lcom/android/systemui/util/animation/MeasurementOutput;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 .end field
 
@@ -73,6 +87,12 @@
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
+    iput-object v0, p0, Lcom/android/systemui/media/MediaHostStatesManager;->carouselSizes:Ljava/util/Map;
+
+    new-instance v0, Ljava/util/LinkedHashMap;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+
     iput-object v0, p0, Lcom/android/systemui/media/MediaHostStatesManager;->mediaHostStates:Ljava/util/Map;
 
     return-void
@@ -116,6 +136,26 @@
     return-void
 .end method
 
+.method public final getCarouselSizes()Ljava/util/Map;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Map<",
+            "Ljava/lang/Integer;",
+            "Lcom/android/systemui/util/animation/MeasurementOutput;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    iget-object p0, p0, Lcom/android/systemui/media/MediaHostStatesManager;->carouselSizes:Ljava/util/Map;
+
+    return-object p0
+.end method
+
 .method public final getMediaHostStates()Ljava/util/Map;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
@@ -136,90 +176,6 @@
     return-object p0
 .end method
 
-.method public final getPlayerDimensions(Lcom/android/systemui/media/MediaHostState;)Lcom/android/systemui/util/animation/MeasurementOutput;
-    .locals 4
-    .param p1    # Lcom/android/systemui/media/MediaHostState;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
-
-    const-string v0, "hostState"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
-
-    new-instance v0, Lcom/android/systemui/util/animation/MeasurementOutput;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1, v1}, Lcom/android/systemui/util/animation/MeasurementOutput;-><init>(II)V
-
-    iget-object p0, p0, Lcom/android/systemui/media/MediaHostStatesManager;->controllers:Ljava/util/Set;
-
-    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_0
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/android/systemui/media/MediaViewController;
-
-    invoke-virtual {v1, p1}, Lcom/android/systemui/media/MediaViewController;->getMeasurementsForState(Lcom/android/systemui/media/MediaHostState;)Lcom/android/systemui/util/animation/MeasurementOutput;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Lcom/android/systemui/util/animation/MeasurementOutput;->getMeasuredHeight()I
-
-    move-result v2
-
-    invoke-virtual {v0}, Lcom/android/systemui/util/animation/MeasurementOutput;->getMeasuredHeight()I
-
-    move-result v3
-
-    if-le v2, v3, :cond_1
-
-    invoke-virtual {v1}, Lcom/android/systemui/util/animation/MeasurementOutput;->getMeasuredHeight()I
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Lcom/android/systemui/util/animation/MeasurementOutput;->setMeasuredHeight(I)V
-
-    :cond_1
-    invoke-virtual {v1}, Lcom/android/systemui/util/animation/MeasurementOutput;->getMeasuredWidth()I
-
-    move-result v2
-
-    invoke-virtual {v0}, Lcom/android/systemui/util/animation/MeasurementOutput;->getMeasuredWidth()I
-
-    move-result v3
-
-    if-le v2, v3, :cond_0
-
-    invoke-virtual {v1}, Lcom/android/systemui/util/animation/MeasurementOutput;->getMeasuredWidth()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lcom/android/systemui/util/animation/MeasurementOutput;->setMeasuredWidth(I)V
-
-    goto :goto_0
-
-    :cond_2
-    return-object v0
-.end method
-
 .method public final removeController(Lcom/android/systemui/media/MediaViewController;)V
     .locals 1
     .param p1    # Lcom/android/systemui/media/MediaViewController;
@@ -238,8 +194,100 @@
     return-void
 .end method
 
+.method public final updateCarouselDimensions(ILcom/android/systemui/media/MediaHostState;)Lcom/android/systemui/util/animation/MeasurementOutput;
+    .locals 5
+    .param p2    # Lcom/android/systemui/media/MediaHostState;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    const-string v0, "hostState"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    new-instance v0, Lcom/android/systemui/util/animation/MeasurementOutput;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1, v1}, Lcom/android/systemui/util/animation/MeasurementOutput;-><init>(II)V
+
+    iget-object v1, p0, Lcom/android/systemui/media/MediaHostStatesManager;->controllers:Ljava/util/Set;
+
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :cond_0
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/android/systemui/media/MediaViewController;
+
+    invoke-virtual {v2, p2}, Lcom/android/systemui/media/MediaViewController;->getMeasurementsForState(Lcom/android/systemui/media/MediaHostState;)Lcom/android/systemui/util/animation/MeasurementOutput;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v2}, Lcom/android/systemui/util/animation/MeasurementOutput;->getMeasuredHeight()I
+
+    move-result v3
+
+    invoke-virtual {v0}, Lcom/android/systemui/util/animation/MeasurementOutput;->getMeasuredHeight()I
+
+    move-result v4
+
+    if-le v3, v4, :cond_1
+
+    invoke-virtual {v2}, Lcom/android/systemui/util/animation/MeasurementOutput;->getMeasuredHeight()I
+
+    move-result v3
+
+    invoke-virtual {v0, v3}, Lcom/android/systemui/util/animation/MeasurementOutput;->setMeasuredHeight(I)V
+
+    :cond_1
+    invoke-virtual {v2}, Lcom/android/systemui/util/animation/MeasurementOutput;->getMeasuredWidth()I
+
+    move-result v3
+
+    invoke-virtual {v0}, Lcom/android/systemui/util/animation/MeasurementOutput;->getMeasuredWidth()I
+
+    move-result v4
+
+    if-le v3, v4, :cond_0
+
+    invoke-virtual {v2}, Lcom/android/systemui/util/animation/MeasurementOutput;->getMeasuredWidth()I
+
+    move-result v2
+
+    invoke-virtual {v0, v2}, Lcom/android/systemui/util/animation/MeasurementOutput;->setMeasuredWidth(I)V
+
+    goto :goto_0
+
+    :cond_2
+    iget-object p0, p0, Lcom/android/systemui/media/MediaHostStatesManager;->carouselSizes:Ljava/util/Map;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-interface {p0, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object v0
+.end method
+
 .method public final updateHostState(ILcom/android/systemui/media/MediaHostState;)V
-    .locals 2
+    .locals 3
     .param p2    # Lcom/android/systemui/media/MediaHostState;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
@@ -269,30 +317,32 @@
 
     invoke-interface {p2}, Lcom/android/systemui/media/MediaHostState;->copy()Lcom/android/systemui/media/MediaHostState;
 
-    move-result-object p2
+    move-result-object v0
 
-    iget-object v0, p0, Lcom/android/systemui/media/MediaHostStatesManager;->mediaHostStates:Ljava/util/Map;
+    iget-object v1, p0, Lcom/android/systemui/media/MediaHostStatesManager;->mediaHostStates:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-interface {v0, v1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v0, p0, Lcom/android/systemui/media/MediaHostStatesManager;->controllers:Ljava/util/Set;
+    invoke-virtual {p0, p1, p2}, Lcom/android/systemui/media/MediaHostStatesManager;->updateCarouselDimensions(ILcom/android/systemui/media/MediaHostState;)Lcom/android/systemui/util/animation/MeasurementOutput;
 
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    iget-object p2, p0, Lcom/android/systemui/media/MediaHostStatesManager;->controllers:Ljava/util/Set;
 
-    move-result-object v0
+    invoke-interface {p2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object p2
 
     :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -302,7 +352,7 @@
 
     move-result-object v1
 
-    invoke-interface {v1, p1, p2}, Lcom/android/systemui/media/MediaHostStatesManager$Callback;->onHostStateChanged(ILcom/android/systemui/media/MediaHostState;)V
+    invoke-interface {v1, p1, v0}, Lcom/android/systemui/media/MediaHostStatesManager$Callback;->onHostStateChanged(ILcom/android/systemui/media/MediaHostState;)V
 
     goto :goto_0
 
@@ -316,17 +366,17 @@
     :goto_1
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v0
+    move-result p2
 
-    if-eqz v0, :cond_1
+    if-eqz p2, :cond_1
 
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p2
 
-    check-cast v0, Lcom/android/systemui/media/MediaHostStatesManager$Callback;
+    check-cast p2, Lcom/android/systemui/media/MediaHostStatesManager$Callback;
 
-    invoke-interface {v0, p1, p2}, Lcom/android/systemui/media/MediaHostStatesManager$Callback;->onHostStateChanged(ILcom/android/systemui/media/MediaHostState;)V
+    invoke-interface {p2, p1, v0}, Lcom/android/systemui/media/MediaHostStatesManager$Callback;->onHostStateChanged(ILcom/android/systemui/media/MediaHostState;)V
 
     goto :goto_1
 

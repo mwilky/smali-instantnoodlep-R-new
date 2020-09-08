@@ -191,7 +191,7 @@
 
     new-array p3, p2, [I
 
-    const/16 v2, 0x31
+    const/16 v2, 0x30
 
     aput v2, p3, v0
 

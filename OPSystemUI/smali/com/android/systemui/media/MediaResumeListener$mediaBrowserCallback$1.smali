@@ -37,7 +37,7 @@
 
 # virtual methods
 .method public addTrack(Landroid/media/MediaDescription;Landroid/content/ComponentName;Lcom/android/systemui/media/ResumeMediaBrowser;)V
-    .locals 9
+    .locals 10
     .param p1    # Landroid/media/MediaDescription;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
@@ -67,11 +67,11 @@
 
     invoke-virtual {p3}, Lcom/android/systemui/media/ResumeMediaBrowser;->getToken()Landroid/media/session/MediaSession$Token;
 
-    move-result-object v5
+    move-result-object v6
 
     invoke-virtual {p3}, Lcom/android/systemui/media/ResumeMediaBrowser;->getAppIntent()Landroid/app/PendingIntent;
 
-    move-result-object v7
+    move-result-object v8
 
     iget-object p3, p0, Lcom/android/systemui/media/MediaResumeListener$mediaBrowserCallback$1;->this$0:Lcom/android/systemui/media/MediaResumeListener;
 
@@ -95,16 +95,16 @@
 
     invoke-static {v3, p2}, Lcom/android/systemui/media/MediaResumeListener;->access$getResumeAction(Lcom/android/systemui/media/MediaResumeListener;Landroid/content/ComponentName;)Ljava/lang/Runnable;
 
-    move-result-object v4
+    move-result-object v5
 
     :try_start_0
     invoke-virtual {p2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
 
-    const/4 v6, 0x0
+    const/4 v4, 0x0
 
-    invoke-virtual {p3, v3, v6}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+    invoke-virtual {p3, v3, v4}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
     move-result-object v3
 
@@ -146,35 +146,41 @@
 
     invoke-static {v0, p3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    iget-object p3, p0, Lcom/android/systemui/media/MediaResumeListener$mediaBrowserCallback$1;->this$0:Lcom/android/systemui/media/MediaResumeListener;
+
+    invoke-static {p3}, Lcom/android/systemui/media/MediaResumeListener;->access$getMediaDataManager$p(Lcom/android/systemui/media/MediaResumeListener;)Lcom/android/systemui/media/MediaDataManager;
+
+    move-result-object p3
+
     iget-object p0, p0, Lcom/android/systemui/media/MediaResumeListener$mediaBrowserCallback$1;->this$0:Lcom/android/systemui/media/MediaResumeListener;
 
-    invoke-static {p0}, Lcom/android/systemui/media/MediaResumeListener;->access$getMediaDataManager$p(Lcom/android/systemui/media/MediaResumeListener;)Lcom/android/systemui/media/MediaDataManager;
+    invoke-static {p0}, Lcom/android/systemui/media/MediaResumeListener;->access$getCurrentUserId$p(Lcom/android/systemui/media/MediaResumeListener;)I
 
-    move-result-object p0
+    move-result v3
 
-    const-string/jumbo p3, "token"
+    const-string/jumbo p0, "token"
 
-    invoke-static {v5, p3}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, p0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v7
 
-    const-string p3, "appIntent"
+    const-string p0, "appIntent"
 
-    invoke-static {v7, p3}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, p0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v9
 
-    invoke-static {v8, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-object v2, p0
+    move-object v2, p3
 
-    move-object v3, p1
+    move-object v4, p1
 
-    invoke-virtual/range {v2 .. v8}, Lcom/android/systemui/media/MediaDataManager;->addResumptionControls(Landroid/media/MediaDescription;Ljava/lang/Runnable;Landroid/media/session/MediaSession$Token;Ljava/lang/String;Landroid/app/PendingIntent;Ljava/lang/String;)V
+    invoke-virtual/range {v2 .. v9}, Lcom/android/systemui/media/MediaDataManager;->addResumptionControls(ILandroid/media/MediaDescription;Ljava/lang/Runnable;Landroid/media/session/MediaSession$Token;Ljava/lang/String;Landroid/app/PendingIntent;Ljava/lang/String;)V
 
     return-void
 .end method

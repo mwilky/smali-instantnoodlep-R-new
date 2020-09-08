@@ -187,6 +187,8 @@
 
     move-result-object v4
 
+    if-eqz v4, :cond_1
+
     invoke-virtual {v4}, Landroid/content/pm/ApplicationInfo;->isInstantApp()Z
 
     move-result p2

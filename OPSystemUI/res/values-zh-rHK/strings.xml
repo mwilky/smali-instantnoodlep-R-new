@@ -48,7 +48,7 @@
     <string name="abc_slice_updated">更新時間：%1$s</string>
     <string name="abc_slices_permission_request">「%1$s」想顯示「%2$s」的快訊</string>
     <string name="abc_toolbar_collapse_description">收合</string>
-    <string name="about_action_bar_title">关于</string>
+    <string name="about_action_bar_title">關於</string>
     <string name="about_app_version_text">版本 %s</string>
     <string name="about_privacy_policy">隱私政策</string>
     <string name="about_release_note_title">更新日誌:</string>
@@ -577,11 +577,12 @@
     <string name="controls_error_retryable">發生錯誤，正在重試…</string>
     <string name="controls_error_timeout">已停用，請檢查應用程式</string>
     <string name="controls_favorite_default_title">控制項</string>
-    <string name="controls_favorite_load_error">無法載入控制項。請檢查 %s 應用程式，確定應用程式設定並無變更。</string>
-    <string name="controls_favorite_load_none">沒有可用的兼容控制項</string>
+    <string name="controls_favorite_load_error">無法載入控制項。請檢查 %s 應用程式，確保設定沒有變動。</string>
+    <string name="controls_favorite_load_none">沒有兼容的控制項</string>
     <string name="controls_favorite_other_zone_header">其他</string>
     <string name="controls_favorite_rearrange">按住並拖曳便可重新排列控制項</string>
     <string name="controls_favorite_removed">已移除所有控制項</string>
+    <string name="controls_favorite_see_other_apps">查看其他應用程式</string>
     <string name="controls_favorite_subtitle">選擇可從電源選單使用的控制項</string>
     <string name="controls_favorite_toast_no_changes">未儲存變更</string>
     <string name="controls_in_progress">進行中</string>
@@ -685,6 +686,8 @@
     <string name="disconnect_vpn">中斷 VPN 連線</string>
     <string name="dnd_is_off">「請勿騷擾」已關閉</string>
     <string name="dnd_suppressing_shade_text">「請勿騷擾」模式已將通知暫停</string>
+    <string name="do_disclosure_generic">此裝置屬於您的機構</string>
+    <string name="do_disclosure_with_name">此裝置屬於「%s」</string>
     <string name="do_not_silence">不設為靜音</string>
     <string name="do_not_silence_block">不設為靜音或封鎖</string>
     <string name="dock_alignment_not_charging">請重新調整手機位置以使用無線充電</string>
@@ -695,6 +698,7 @@
     <string name="drag_to_rearrange_tiles">按住並拖曳即可重新排列圖塊</string>
     <string name="drag_to_remove_disabled">您需要有至少 %1$d 個資訊方塊</string>
     <string name="drag_to_remove_tiles">拖曳這裡即可移除</string>
+    <string name="earphone_support_battery_info">"左: %1$s  右: %2$s"</string>
     <string name="empty_shade_text">沒有通知</string>
     <string name="enable_adb">USB 偵錯</string>
     <string name="enable_adb_summary">連接 USB 時進入偵錯模式</string>
@@ -1127,8 +1131,18 @@
     <string name="monitoring_description_do_learn_more_separator">" "</string>
     <string name="monitoring_description_managed_profile_ca_certificate">您的機構已在您的工作設定檔中安裝憑證授權單位。您的安全網絡流量可能會受監控或修改。</string>
     <string name="monitoring_description_managed_profile_named_vpn">您的工作設定檔已連結至「%1$s」，此應用程式可以監控您的網絡活動，包括電郵、應用程式及網站。</string>
+    <string name="monitoring_description_management">"此裝置屬於您的機構。
+
+您的 IT 管理員可監察及管理與裝置相關聯的設定、公司存取權、應用程式和資料，以及裝置的位置資料。
+
+如要瞭解詳情，請與您的 IT 管理員聯絡。"</string>
     <string name="monitoring_description_management_ca_certificate">您的機構已在此裝置中安裝憑證授權單位。您的安全網絡流量可能會受監控或修改。</string>
     <string name="monitoring_description_management_network_logging">您的管理員已開啟網絡記錄功能，以監控您裝置上的流量。</string>
+    <string name="monitoring_description_named_management">"此裝置屬於 %1$s。
+
+您的 IT 管理員可監察及管理與裝置相關聯的設定、公司存取權、應用程式和資料，以及裝置的位置資料。
+
+如要瞭解詳情，請與您的 IT 管理員聯絡。"</string>
     <string name="monitoring_description_named_vpn">您已連接至「%1$s」，此應用程式可以監控您的網絡活動，包括電郵、應用程式及網站。</string>
     <string name="monitoring_description_network_logging">"您的管理員已開啟網絡記錄功能，以監控您裝置上的流量。
 
@@ -1259,6 +1273,12 @@
     <string name="oneplus_threekey_navigation_vibration">僅提供震動</string>
     <string name="op_aod_parsons_unlock_one">解鎖過<annotation id="unlockNum">^1</annotation>次</string>
     <string name="op_aod_parsons_unlock_other">解鎖過<annotation id="unlockNum">^1</annotation>次</string>
+    <string name="op_battery_saver_description">"為延長電池壽命，「省電模式」會：
+
+•關閉或限制背景活動、某些視覺效果和其他功能 (例如「Hey Google」)"</string>
+    <string name="op_battery_saver_description_no_ga">"為延長電池壽命，「省電模式」會：
+
+•關閉或限制背景活動、某些視覺效果和其他功能"</string>
     <string name="op_date_format">M月d日</string>
     <string name="op_earphone_connect">配對中...</string>
     <string name="op_earphone_connected_fail">配對失敗，你可以檢查耳機和手機藍牙狀態。</string>
@@ -1282,6 +1302,7 @@
     <string name="op_notification_section_header_gentle">次要通知</string>
     <string name="op_notification_silence_title">次要</string>
     <string name="op_protect_charging">" 充電保護中"</string>
+    <string name="op_qs_dark_mode_tile_label">暗色模式</string>
     <string name="op_quick_settings_night_display_label">護眼模式</string>
     <string name="op_read_mode2_dialog_black">黑白效果</string>
     <string name="op_read_mode2_dialog_color">彩色效果</string>
@@ -1472,8 +1493,20 @@
     <string name="quick_settings_data_switch_toast_0">目前沒有插入SIM卡</string>
     <string name="quick_settings_data_switch_toast_1">目前只插入一張SIM卡</string>
     <string name="quick_settings_disclosure_managed_profile_monitoring">您的機構可能監控您工作設定檔上的網絡流量</string>
+    <string name="quick_settings_disclosure_managed_profile_named_vpn">您的工作設定檔已連結至「%1$s」</string>
+    <string name="quick_settings_disclosure_management">此裝置屬於您的機構</string>
+    <string name="quick_settings_disclosure_management_monitoring">您的機構擁有此裝置，並可能會監察網絡流量</string>
+    <string name="quick_settings_disclosure_management_named_vpn">此裝置屬於您的機構，並已連結至「%1$s」</string>
+    <string name="quick_settings_disclosure_management_vpns">此裝置屬於您的機構，並已連結至 VPN</string>
     <string name="quick_settings_disclosure_monitoring">網絡可能會受到監控</string>
     <string name="quick_settings_disclosure_named_managed_profile_monitoring">%1$s可能會監控您工作設定檔上的網絡流量</string>
+    <string name="quick_settings_disclosure_named_management">此裝置屬於「%1$s」</string>
+    <string name="quick_settings_disclosure_named_management_monitoring">「%1$s」擁有此裝置，並可能會監察網絡流量</string>
+    <string name="quick_settings_disclosure_named_management_named_vpn">此裝置屬於「%1$s」，並已連結至「%2$s」</string>
+    <string name="quick_settings_disclosure_named_management_vpns">此裝置屬於「%1$s」，並已連結至 VPN</string>
+    <string name="quick_settings_disclosure_named_vpn">此裝置已連結至「%1$s」</string>
+    <string name="quick_settings_disclosure_personal_profile_named_vpn">您的個人設定檔已連結至「%1$s」</string>
+    <string name="quick_settings_disclosure_vpns">此裝置已連結至 VPN</string>
     <string name="quick_settings_dnd_alarms_label">只限鬧鐘</string>
     <string name="quick_settings_dnd_label">請勿騷擾</string>
     <string name="quick_settings_dnd_none_label">完全靜音</string>

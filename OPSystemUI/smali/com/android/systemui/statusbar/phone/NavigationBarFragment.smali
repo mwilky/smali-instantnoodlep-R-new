@@ -52,6 +52,8 @@
 
 .field final mCheckNavigationBarState:Ljava/lang/Runnable;
 
+.field private final mCloseByPassThreshold:Ljava/lang/Runnable;
+
 .field private final mCommandQueue:Lcom/android/systemui/statusbar/CommandQueue;
 
 .field private mContentResolver:Landroid/content/ContentResolver;
@@ -114,7 +116,7 @@
 
 .field private mOrientation:I
 
-.field private mOrientationHandle:Lcom/android/systemui/statusbar/phone/VerticalNavigationHandle;
+.field private mOrientationHandle:Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
 
 .field private mOrientationHandleGlobalLayoutListener:Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
@@ -147,6 +149,8 @@
         }
     .end annotation
 .end field
+
+.field private mShowOrientedHandleForImmersiveMode:Z
 
 .field private mStartingQuickSwitchRotation:I
 
@@ -237,6 +241,12 @@
 
     iput-boolean v2, v0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mImeShow:Z
 
+    new-instance v3, Lcom/android/systemui/statusbar/phone/-$$Lambda$NavigationBarFragment$2a6PQeDykikHzH0rBVD4AZZp14o;
+
+    invoke-direct {v3, p0}, Lcom/android/systemui/statusbar/phone/-$$Lambda$NavigationBarFragment$2a6PQeDykikHzH0rBVD4AZZp14o;-><init>(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)V
+
+    iput-object v3, v0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mCloseByPassThreshold:Ljava/lang/Runnable;
+
     new-instance v3, Lcom/android/systemui/statusbar/phone/NavigationBarFragment$1;
 
     invoke-direct {v3, p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment$1;-><init>(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)V
@@ -255,15 +265,15 @@
 
     iput-object v3, v0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandleIntensityListener:Lcom/android/systemui/statusbar/phone/NavigationBarTransitions$DarkIntensityListener;
 
-    new-instance v3, Lcom/android/systemui/statusbar/phone/-$$Lambda$NavigationBarFragment$xnm4oWC06-iZWq-zBbKv8ubGVFU;
+    new-instance v3, Lcom/android/systemui/statusbar/phone/-$$Lambda$NavigationBarFragment$64cObUVomQJ4mZyswq0vgRauVPI;
 
-    invoke-direct {v3, p0}, Lcom/android/systemui/statusbar/phone/-$$Lambda$NavigationBarFragment$xnm4oWC06-iZWq-zBbKv8ubGVFU;-><init>(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)V
+    invoke-direct {v3, p0}, Lcom/android/systemui/statusbar/phone/-$$Lambda$NavigationBarFragment$64cObUVomQJ4mZyswq0vgRauVPI;-><init>(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)V
 
     iput-object v3, v0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mRotationButtonListener:Lcom/android/systemui/statusbar/phone/ContextualButton$ContextButtonListener;
 
-    new-instance v3, Lcom/android/systemui/statusbar/phone/-$$Lambda$NavigationBarFragment$Wf_FUQzkbSdMD9hXKJaXOD_rVSY;
+    new-instance v3, Lcom/android/systemui/statusbar/phone/-$$Lambda$NavigationBarFragment$BSA_kMakLk5yiXdgwYZ_AoVEsRo;
 
-    invoke-direct {v3, p0}, Lcom/android/systemui/statusbar/phone/-$$Lambda$NavigationBarFragment$Wf_FUQzkbSdMD9hXKJaXOD_rVSY;-><init>(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)V
+    invoke-direct {v3, p0}, Lcom/android/systemui/statusbar/phone/-$$Lambda$NavigationBarFragment$BSA_kMakLk5yiXdgwYZ_AoVEsRo;-><init>(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)V
 
     iput-object v3, v0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mAutoDim:Ljava/lang/Runnable;
 
@@ -305,9 +315,9 @@
 
     iput-object v3, v0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mAccessibilityListener:Landroid/view/accessibility/AccessibilityManager$AccessibilityServicesStateChangeListener;
 
-    new-instance v3, Lcom/android/systemui/statusbar/phone/-$$Lambda$NavigationBarFragment$ivU7sfkPnx7kuUAYwcAC-75X5OE;
+    new-instance v3, Lcom/android/systemui/statusbar/phone/-$$Lambda$NavigationBarFragment$rPVTsn99rxp2rmSxt8MZ9ZaaU_I;
 
-    invoke-direct {v3, p0}, Lcom/android/systemui/statusbar/phone/-$$Lambda$NavigationBarFragment$ivU7sfkPnx7kuUAYwcAC-75X5OE;-><init>(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)V
+    invoke-direct {v3, p0}, Lcom/android/systemui/statusbar/phone/-$$Lambda$NavigationBarFragment$rPVTsn99rxp2rmSxt8MZ9ZaaU_I;-><init>(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)V
 
     iput-object v3, v0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mRotationWatcher:Ljava/util/function/Consumer;
 
@@ -421,7 +431,15 @@
     return p0
 .end method
 
-.method static synthetic access$1000(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)I
+.method static synthetic access$1000(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->orientSecondaryHomeHandle()V
+
+    return-void
+.end method
+
+.method static synthetic access$1100(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)I
     .locals 0
 
     iget p0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavBarMode:I
@@ -429,7 +447,7 @@
     return p0
 .end method
 
-.method static synthetic access$1100(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)Ldagger/Lazy;
+.method static synthetic access$1200(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)Ldagger/Lazy;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mStatusBarLazy:Ldagger/Lazy;
@@ -437,7 +455,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1200(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)Z
+.method static synthetic access$1300(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mForceNavBarHandleOpaque:Z
@@ -445,7 +463,7 @@
     return p0
 .end method
 
-.method static synthetic access$1202(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;Z)Z
+.method static synthetic access$1302(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mForceNavBarHandleOpaque:Z
@@ -453,15 +471,15 @@
     return p1
 .end method
 
-.method static synthetic access$1300(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)Lcom/android/systemui/statusbar/phone/VerticalNavigationHandle;
+.method static synthetic access$1400(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/VerticalNavigationHandle;
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
 
     return-object p0
 .end method
 
-.method static synthetic access$1400(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)Z
+.method static synthetic access$1500(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mHideNavBar:Z
@@ -469,7 +487,7 @@
     return p0
 .end method
 
-.method static synthetic access$1402(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;Z)Z
+.method static synthetic access$1502(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mHideNavBar:Z
@@ -477,7 +495,7 @@
     return p1
 .end method
 
-.method static synthetic access$1500(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)Landroid/content/ContentResolver;
+.method static synthetic access$1600(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)Landroid/content/ContentResolver;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mContentResolver:Landroid/content/ContentResolver;
@@ -485,7 +503,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1600(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;Z)V
+.method static synthetic access$1700(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;Z)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->onHideNavBar(Z)V
@@ -493,7 +511,7 @@
     return-void
 .end method
 
-.method static synthetic access$1700(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)Lcom/android/systemui/recents/OverviewProxyService;
+.method static synthetic access$1800(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)Lcom/android/systemui/recents/OverviewProxyService;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOverviewProxyService:Lcom/android/systemui/recents/OverviewProxyService;
@@ -501,20 +519,12 @@
     return-object p0
 .end method
 
-.method static synthetic access$1800(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)V
+.method static synthetic access$1900(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->notifyNavigationBarScreenOn()V
 
     return-void
-.end method
-
-.method static synthetic access$1900(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)Landroid/view/accessibility/AccessibilityManager;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
-
-    return-object p0
 .end method
 
 .method static synthetic access$200(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)V
@@ -525,7 +535,15 @@
     return-void
 .end method
 
-.method static synthetic access$2000(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;Landroid/view/accessibility/AccessibilityManager;)V
+.method static synthetic access$2000(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)Landroid/view/accessibility/AccessibilityManager;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2100(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;Landroid/view/accessibility/AccessibilityManager;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->updateAccessibilityServicesState(Landroid/view/accessibility/AccessibilityManager;)V
@@ -581,12 +599,12 @@
     return p1
 .end method
 
-.method static synthetic access$900(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)V
+.method static synthetic access$902(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;Z)Z
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->orientSecondaryHomeHandle()V
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mShowOrientedHandleForImmersiveMode:Z
 
-    return-void
+    return p1
 .end method
 
 .method private static barMode(ZI)I
@@ -937,15 +955,15 @@
 
     invoke-virtual {v0, p0, v1}, Landroid/hardware/display/DisplayManager;->registerDisplayListener(Landroid/hardware/display/DisplayManager$DisplayListener;Landroid/os/Handler;)V
 
-    new-instance v0, Lcom/android/systemui/statusbar/phone/VerticalNavigationHandle;
+    new-instance v0, Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
 
     invoke-virtual {p0}, Landroid/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/android/systemui/statusbar/phone/VerticalNavigationHandle;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/VerticalNavigationHandle;
+    iput-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->getBarTransitions()Lcom/android/systemui/statusbar/phone/NavigationBarTransitions;
 
@@ -973,25 +991,63 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationParams:Landroid/view/WindowManager$LayoutParams;
 
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "SecondaryHomeHandle"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Landroid/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/Context;->getDisplayId()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationParams:Landroid/view/WindowManager$LayoutParams;
+
+    iget v1, v0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
+
+    or-int/lit8 v1, v1, 0x40
+
+    iput v1, v0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
+
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mWindowManager:Landroid/view/WindowManager;
 
-    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/VerticalNavigationHandle;
+    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
 
     invoke-interface {v1, v2, v0}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/VerticalNavigationHandle;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    new-instance v0, Lcom/android/systemui/statusbar/phone/-$$Lambda$NavigationBarFragment$Q9R6TLtnrREWz6y8b5TLw_HN9LI;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationParams:Landroid/view/WindowManager$LayoutParams;
 
-    invoke-direct {v0, p0}, Lcom/android/systemui/statusbar/phone/-$$Lambda$NavigationBarFragment$Q9R6TLtnrREWz6y8b5TLw_HN9LI;-><init>(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)V
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/view/WindowManager$LayoutParams;->setFitInsetsTypes(I)V
+
+    new-instance v0, Lcom/android/systemui/statusbar/phone/-$$Lambda$NavigationBarFragment$WBR057y3e1A5lbkY-xhTKGb4TAo;
+
+    invoke-direct {v0, p0}, Lcom/android/systemui/statusbar/phone/-$$Lambda$NavigationBarFragment$WBR057y3e1A5lbkY-xhTKGb4TAo;-><init>(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)V
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandleGlobalLayoutListener:Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/VerticalNavigationHandle;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
 
     invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
@@ -1058,7 +1114,7 @@
     return-void
 .end method
 
-.method private synthetic lambda$disableAnimationsDuringHide$4()V
+.method private synthetic lambda$disableAnimationsDuringHide$5()V
     .locals 1
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavigationBarView:Lcom/android/systemui/statusbar/phone/NavigationBarView;
@@ -1096,7 +1152,7 @@
     return-void
 .end method
 
-.method private synthetic lambda$initSecondaryHomeHandleForRotation$2()V
+.method private synthetic lambda$initSecondaryHomeHandleForRotation$3()V
     .locals 3
 
     iget v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mStartingQuickSwitchRotation:I
@@ -1108,13 +1164,13 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/VerticalNavigationHandle;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
 
-    invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/VerticalNavigationHandle;->computeHomeHandleBounds()Landroid/graphics/RectF;
+    invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;->computeHomeHandleBounds()Landroid/graphics/RectF;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/VerticalNavigationHandle;
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
 
     const/4 v2, 0x1
 
@@ -1133,7 +1189,42 @@
     return-void
 .end method
 
-.method private synthetic lambda$new$0(Lcom/android/systemui/statusbar/phone/ContextualButton;Z)V
+.method private synthetic lambda$new$0()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavigationBarView:Lcom/android/systemui/statusbar/phone/NavigationBarView;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/NavigationBarView;->getRegionSamplingHelper()Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;->setByPassThreshold(Z)V
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavigationBarView:Lcom/android/systemui/statusbar/phone/NavigationBarView;
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarView;->getHomeHandle()Lcom/android/systemui/statusbar/phone/ButtonDispatcher;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/ButtonDispatcher;->getCurrentView()Landroid/view/View;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/android/systemui/statusbar/phone/NavigationHandle;
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/NavigationHandle;->triggerChangeColorAnimation()V
+
+    :cond_0
+    return-void
+.end method
+
+.method private synthetic lambda$new$1(Lcom/android/systemui/statusbar/phone/ContextualButton;Z)V
     .locals 0
 
     if-eqz p2, :cond_0
@@ -1146,7 +1237,7 @@
     return-void
 .end method
 
-.method private synthetic lambda$new$1()V
+.method private synthetic lambda$new$2()V
     .locals 1
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->getBarTransitions()Lcom/android/systemui/statusbar/phone/NavigationBarTransitions;
@@ -1160,7 +1251,7 @@
     return-void
 .end method
 
-.method private synthetic lambda$new$5(Ljava/lang/Integer;)V
+.method private synthetic lambda$new$6(Ljava/lang/Integer;)V
     .locals 1
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavigationBarView:Lcom/android/systemui/statusbar/phone/NavigationBarView;
@@ -1193,7 +1284,7 @@
     return p0
 .end method
 
-.method private synthetic lambda$onNavigationModeChanged$3()V
+.method private synthetic lambda$onNavigationModeChanged$4()V
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavigationBarView:Lcom/android/systemui/statusbar/phone/NavigationBarView;
@@ -1914,7 +2005,7 @@
 
     const/4 v1, -0x1
 
-    if-eq v0, v1, :cond_7
+    if-eq v0, v1, :cond_9
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mDivider:Lcom/android/systemui/stackdivider/Divider;
 
@@ -1987,7 +2078,9 @@
 
     move-result-object v1
 
-    if-eqz v0, :cond_6
+    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
+
+    invoke-virtual {v2, v0}, Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;->setDeltaRotation(I)V
 
     const/4 v2, 0x3
 
@@ -1995,11 +2088,13 @@
 
     const/4 v4, 0x0
 
+    if-eqz v0, :cond_5
+
     if-eq v0, v3, :cond_4
 
     const/4 v5, 0x2
 
-    if-eq v0, v5, :cond_6
+    if-eq v0, v5, :cond_5
 
     if-eq v0, v2, :cond_4
 
@@ -2014,24 +2109,49 @@
 
     move-result v1
 
-    invoke-virtual {p0}, Landroid/app/Fragment;->getResources()Landroid/content/res/Resources;
+    iget-object v5, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavigationBarView:Lcom/android/systemui/statusbar/phone/NavigationBarView;
 
-    move-result-object v5
-
-    sget v6, Lcom/android/systemui/R$dimen;->navigation_bar_height:I
-
-    invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v5}, Landroid/widget/FrameLayout;->getHeight()I
 
     move-result v5
+
+    goto :goto_0
+
+    :cond_5
+    iget-boolean v5, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mShowOrientedHandleForImmersiveMode:Z
+
+    if-nez v5, :cond_6
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->resetSecondaryHandle()V
+
+    return-void
+
+    :cond_6
+    invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
+
+    move-result v5
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavigationBarView:Lcom/android/systemui/statusbar/phone/NavigationBarView;
+
+    invoke-virtual {v1}, Landroid/widget/FrameLayout;->getHeight()I
+
+    move-result v1
 
     :goto_0
     iget-object v6, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationParams:Landroid/view/WindowManager$LayoutParams;
 
-    if-ne v0, v3, :cond_5
+    if-nez v0, :cond_7
+
+    const/16 v2, 0x50
 
     goto :goto_1
 
-    :cond_5
+    :cond_7
+    if-ne v0, v3, :cond_8
+
+    goto :goto_1
+
+    :cond_8
     const/4 v2, 0x5
 
     :goto_1
@@ -2045,7 +2165,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mWindowManager:Landroid/view/WindowManager;
 
-    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/VerticalNavigationHandle;
+    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
 
     invoke-interface {v1, v2, v0}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -2055,18 +2175,13 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/VerticalNavigationHandle;
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
 
     invoke-virtual {p0, v4}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_3
 
-    :cond_6
-    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->resetSecondaryHandle()V
-
-    return-void
-
-    :cond_7
+    :cond_9
     :goto_2
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->resetSecondaryHandle()V
 
@@ -2267,7 +2382,7 @@
 .method private resetSecondaryHandle()V
     .locals 2
 
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/VerticalNavigationHandle;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
 
     if-eqz v0, :cond_0
 
@@ -2826,9 +2941,9 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavigationBarView:Lcom/android/systemui/statusbar/phone/NavigationBarView;
 
-    new-instance v1, Lcom/android/systemui/statusbar/phone/-$$Lambda$NavigationBarFragment$AE0O6kF8ojkF6VqrpuJnRwniTec;
+    new-instance v1, Lcom/android/systemui/statusbar/phone/-$$Lambda$NavigationBarFragment$j_WZTHSZ47fEKh7hZbvsbut1wMg;
 
-    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/phone/-$$Lambda$NavigationBarFragment$AE0O6kF8ojkF6VqrpuJnRwniTec;-><init>(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)V
+    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/phone/-$$Lambda$NavigationBarFragment$j_WZTHSZ47fEKh7hZbvsbut1wMg;-><init>(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)V
 
     const-wide/16 v2, 0x1c0
 
@@ -3099,55 +3214,63 @@
     return v2
 .end method
 
-.method public synthetic lambda$disableAnimationsDuringHide$4$NavigationBarFragment()V
+.method public synthetic lambda$disableAnimationsDuringHide$5$NavigationBarFragment()V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->lambda$disableAnimationsDuringHide$4()V
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->lambda$disableAnimationsDuringHide$5()V
 
     return-void
 .end method
 
-.method public synthetic lambda$initSecondaryHomeHandleForRotation$2$NavigationBarFragment()V
+.method public synthetic lambda$initSecondaryHomeHandleForRotation$3$NavigationBarFragment()V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->lambda$initSecondaryHomeHandleForRotation$2()V
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->lambda$initSecondaryHomeHandleForRotation$3()V
 
     return-void
 .end method
 
-.method public synthetic lambda$new$0$NavigationBarFragment(Lcom/android/systemui/statusbar/phone/ContextualButton;Z)V
+.method public synthetic lambda$new$0$NavigationBarFragment()V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->lambda$new$0(Lcom/android/systemui/statusbar/phone/ContextualButton;Z)V
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->lambda$new$0()V
 
     return-void
 .end method
 
-.method public synthetic lambda$new$1$NavigationBarFragment()V
+.method public synthetic lambda$new$1$NavigationBarFragment(Lcom/android/systemui/statusbar/phone/ContextualButton;Z)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->lambda$new$1()V
+    invoke-direct {p0, p1, p2}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->lambda$new$1(Lcom/android/systemui/statusbar/phone/ContextualButton;Z)V
 
     return-void
 .end method
 
-.method public synthetic lambda$new$5$NavigationBarFragment(Ljava/lang/Integer;)V
+.method public synthetic lambda$new$2$NavigationBarFragment()V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->lambda$new$5(Ljava/lang/Integer;)V
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->lambda$new$2()V
 
     return-void
 .end method
 
-.method public synthetic lambda$onNavigationModeChanged$3$NavigationBarFragment()V
+.method public synthetic lambda$new$6$NavigationBarFragment(Ljava/lang/Integer;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->lambda$onNavigationModeChanged$3()V
+    invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->lambda$new$6(Ljava/lang/Integer;)V
 
     return-void
 .end method
 
-.method public notifyNavBarColorChanged(ILjava/lang/String;)V
+.method public synthetic lambda$onNavigationModeChanged$4$NavigationBarFragment()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->lambda$onNavigationModeChanged$4()V
+
+    return-void
+.end method
+
+.method public notifyNavBarColorChanged(ILjava/lang/String;Ljava/lang/String;)V
     .locals 1
 
     invoke-static {}, Lcom/oneplus/util/OpNavBarUtils;->isSupportCustomNavBar()Z
@@ -3163,7 +3286,7 @@
 
     sget-object v0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->sContext:Landroid/content/Context;
 
-    invoke-static {v0, p2}, Lcom/oneplus/util/OpUtils;->updateTopPackage(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, p2, p3}, Lcom/oneplus/util/OpUtils;->updateTopPackage(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object p2, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavigationBarView:Lcom/android/systemui/statusbar/phone/NavigationBarView;
 
@@ -3688,7 +3811,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/systemui/broadcast/BroadcastDispatcher;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/VerticalNavigationHandle;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
 
     if-eqz v0, :cond_3
 
@@ -3716,7 +3839,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/phone/NavigationBarTransitions;->removeDarkIntensityListener(Lcom/android/systemui/statusbar/phone/NavigationBarTransitions$DarkIntensityListener;)V
 
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/VerticalNavigationHandle;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
 
     invoke-virtual {v0}, Landroid/view/View;->isAttachedToWindow()Z
 
@@ -3726,12 +3849,12 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mWindowManager:Landroid/view/WindowManager;
 
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/VerticalNavigationHandle;
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
 
     invoke-interface {v0, v1}, Landroid/view/WindowManager;->removeView(Landroid/view/View;)V
 
     :cond_2
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/VerticalNavigationHandle;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
 
     invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
@@ -3965,9 +4088,9 @@
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mHandler:Landroid/os/Handler;
 
-    new-instance v0, Lcom/android/systemui/statusbar/phone/-$$Lambda$NavigationBarFragment$nsAI5AC9ZGrY-UeFXDe0isYp7EU;
+    new-instance v0, Lcom/android/systemui/statusbar/phone/-$$Lambda$NavigationBarFragment$XEk0w8DzgaQF2WOx5moeKvCIr5U;
 
-    invoke-direct {v0, p0}, Lcom/android/systemui/statusbar/phone/-$$Lambda$NavigationBarFragment$nsAI5AC9ZGrY-UeFXDe0isYp7EU;-><init>(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)V
+    invoke-direct {v0, p0}, Lcom/android/systemui/statusbar/phone/-$$Lambda$NavigationBarFragment$XEk0w8DzgaQF2WOx5moeKvCIr5U;-><init>(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)V
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -4164,7 +4287,7 @@
 .end method
 
 .method public onSystemBarAppearanceChanged(II[Lcom/android/internal/view/AppearanceRegion;Z)V
-    .locals 2
+    .locals 3
 
     iget p3, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mDisplayId:I
 
@@ -4175,7 +4298,9 @@
     :cond_0
     iget p1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mAppearance:I
 
-    const/4 p3, 0x0
+    const/4 p3, 0x1
+
+    const/4 v0, 0x0
 
     if-eq p1, p2, :cond_4
 
@@ -4202,30 +4327,28 @@
 
     invoke-static {}, Lcom/oneplus/util/OpNavBarUtils;->isSupportHideNavBar()Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_3
+    if-eqz v1, :cond_3
 
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavigationBarView:Lcom/android/systemui/statusbar/phone/NavigationBarView;
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavigationBarView:Lcom/android/systemui/statusbar/phone/NavigationBarView;
 
-    if-eqz v0, :cond_3
+    if-eqz v1, :cond_3
 
-    and-int/lit16 v1, p2, 0x1002
+    and-int/lit16 v2, p2, 0x1002
 
-    if-eqz v1, :cond_2
+    if-eqz v2, :cond_2
 
-    const/4 p3, 0x1
-
-    invoke-virtual {v0, p3}, Lcom/android/systemui/statusbar/phone/NavigationBarView;->onImmersiveSticky(Z)V
+    invoke-virtual {v1, p3}, Lcom/android/systemui/statusbar/phone/NavigationBarView;->onImmersiveSticky(Z)V
 
     goto :goto_0
 
     :cond_2
-    invoke-virtual {v0, p3}, Lcom/android/systemui/statusbar/phone/NavigationBarView;->onImmersiveSticky(Z)V
+    invoke-virtual {v1, v0}, Lcom/android/systemui/statusbar/phone/NavigationBarView;->onImmersiveSticky(Z)V
 
     :cond_3
     :goto_0
-    move p3, p1
+    move v0, p1
 
     :cond_4
     sget-boolean p1, Landroid/os/Build;->DEBUG_ONEPLUS:Z
@@ -4236,39 +4359,64 @@
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v0, "onSystemBarAppearanceChanged: appearance="
+    const-string v1, "onSystemBarAppearanceChanged: appearance="
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-static {p2}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v0, ", mode="
+    const-string v1, ", mode="
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavigationBarMode:I
+    iget v1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavigationBarMode:I
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    const-string v0, "NavigationBar"
+    const-string v1, "NavigationBar"
 
-    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_5
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mLightBarController:Lcom/android/systemui/statusbar/phone/LightBarController;
 
-    iget p0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavigationBarMode:I
+    iget v1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavigationBarMode:I
 
-    invoke-virtual {p1, p2, p3, p0, p4}, Lcom/android/systemui/statusbar/phone/LightBarController;->onNavigationBarAppearanceChanged(IZIZ)V
+    invoke-virtual {p1, p2, v0, v1, p4}, Lcom/android/systemui/statusbar/phone/LightBarController;->onNavigationBarAppearanceChanged(IZIZ)V
 
+    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavigationBarView:Lcom/android/systemui/statusbar/phone/NavigationBarView;
+
+    if-eqz p1, :cond_6
+
+    invoke-virtual {p1}, Lcom/android/systemui/statusbar/phone/NavigationBarView;->getRegionSamplingHelper()Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p3}, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;->setByPassThreshold(Z)V
+
+    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mHandler:Landroid/os/Handler;
+
+    iget-object p2, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mCloseByPassThreshold:Ljava/lang/Runnable;
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mHandler:Landroid/os/Handler;
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mCloseByPassThreshold:Ljava/lang/Runnable;
+
+    const-wide/16 p2, 0x7d0
+
+    invoke-virtual {p1, p0, p2, p3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    :cond_6
     return-void
 .end method
 
@@ -4714,22 +4862,45 @@
 
     iget v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mDisplayId:I
 
-    if-ne p1, v0, :cond_1
+    if-ne p1, v0, :cond_3
 
     const/4 p1, 0x2
 
-    if-ne p2, p1, :cond_1
+    if-ne p2, p1, :cond_3
 
-    iget p1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavigationBarWindowState:I
+    iget p2, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavigationBarWindowState:I
 
-    if-eq p1, p3, :cond_1
+    if-eq p2, p3, :cond_3
 
     iput p3, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavigationBarWindowState:I
 
-    const/4 p1, -0x1
+    const/4 p2, -0x1
 
-    invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->updateSystemUiStateFlags(I)V
+    invoke-virtual {p0, p2}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->updateSystemUiStateFlags(I)V
 
+    if-ne p3, p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mShowOrientedHandleForImmersiveMode:Z
+
+    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
+
+    if-eqz p1, :cond_1
+
+    iget p1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mStartingQuickSwitchRotation:I
+
+    if-eq p1, p2, :cond_1
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->orientSecondaryHomeHandle()V
+
+    :cond_1
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4754,7 +4925,7 @@
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavigationBarView:Lcom/android/systemui/statusbar/phone/NavigationBarView;
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_2
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->isNavBarWindowVisible()Z
 
@@ -4762,12 +4933,12 @@
 
     invoke-virtual {p1, p2}, Lcom/android/systemui/statusbar/phone/NavigationBarView;->setWindowVisible(Z)V
 
-    :cond_0
+    :cond_2
     iget p1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavBarMode:I
 
     iput p1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mBackupNavBarMode:I
 
-    :cond_1
+    :cond_3
     return-void
 .end method
 

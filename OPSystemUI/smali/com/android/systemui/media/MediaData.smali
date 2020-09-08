@@ -95,19 +95,17 @@
     .end annotation
 .end field
 
+.field private final userId:I
+
 
 # direct methods
-.method public constructor <init>(ZILjava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/drawable/Icon;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Landroid/media/session/MediaSession$Token;Landroid/app/PendingIntent;Lcom/android/systemui/media/MediaDeviceData;ZLjava/lang/Runnable;ZLjava/lang/String;Z)V
+.method public constructor <init>(IZILjava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/drawable/Icon;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Landroid/media/session/MediaSession$Token;Landroid/app/PendingIntent;Lcom/android/systemui/media/MediaDeviceData;ZLjava/lang/Runnable;ZLjava/lang/String;Z)V
     .locals 5
-    .param p3    # Ljava/lang/String;
+    .param p4    # Ljava/lang/String;
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
-    .param p4    # Landroid/graphics/drawable/Drawable;
-        .annotation build Lorg/jetbrains/annotations/Nullable;
-        .end annotation
-    .end param
-    .param p5    # Ljava/lang/CharSequence;
+    .param p5    # Landroid/graphics/drawable/Drawable;
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
@@ -115,45 +113,49 @@
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
-    .param p7    # Landroid/graphics/drawable/Icon;
+    .param p7    # Ljava/lang/CharSequence;
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
-    .param p8    # Ljava/util/List;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
+    .param p8    # Landroid/graphics/drawable/Icon;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
     .param p9    # Ljava/util/List;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p10    # Ljava/lang/String;
+    .param p10    # Ljava/util/List;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p11    # Landroid/media/session/MediaSession$Token;
+    .param p11    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p12    # Landroid/media/session/MediaSession$Token;
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
-    .param p12    # Landroid/app/PendingIntent;
+    .param p13    # Landroid/app/PendingIntent;
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
-    .param p13    # Lcom/android/systemui/media/MediaDeviceData;
+    .param p14    # Lcom/android/systemui/media/MediaDeviceData;
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
-    .param p15    # Ljava/lang/Runnable;
+    .param p16    # Ljava/lang/Runnable;
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
-    .param p17    # Ljava/lang/String;
+    .param p18    # Ljava/lang/String;
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(ZI",
+            "(IZI",
             "Ljava/lang/String;",
             "Landroid/graphics/drawable/Drawable;",
             "Ljava/lang/CharSequence;",
@@ -179,51 +181,55 @@
 
     move-object v0, p0
 
-    move-object v1, p8
+    move-object v1, p9
 
-    move-object v2, p9
+    move-object v2, p10
 
-    move-object v3, p10
+    move-object/from16 v3, p11
 
     const-string v4, "actions"
 
-    invoke-static {p8, v4}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p9, v4}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v4, "actionsToShowInCompact"
 
-    invoke-static {p9, v4}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p10, v4}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v4, "packageName"
 
-    invoke-static {p10, v4}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     move v4, p1
 
-    iput-boolean v4, v0, Lcom/android/systemui/media/MediaData;->initialized:Z
+    iput v4, v0, Lcom/android/systemui/media/MediaData;->userId:I
 
     move v4, p2
 
+    iput-boolean v4, v0, Lcom/android/systemui/media/MediaData;->initialized:Z
+
+    move v4, p3
+
     iput v4, v0, Lcom/android/systemui/media/MediaData;->backgroundColor:I
-
-    move-object v4, p3
-
-    iput-object v4, v0, Lcom/android/systemui/media/MediaData;->app:Ljava/lang/String;
 
     move-object v4, p4
 
-    iput-object v4, v0, Lcom/android/systemui/media/MediaData;->appIcon:Landroid/graphics/drawable/Drawable;
+    iput-object v4, v0, Lcom/android/systemui/media/MediaData;->app:Ljava/lang/String;
 
     move-object v4, p5
 
-    iput-object v4, v0, Lcom/android/systemui/media/MediaData;->artist:Ljava/lang/CharSequence;
+    iput-object v4, v0, Lcom/android/systemui/media/MediaData;->appIcon:Landroid/graphics/drawable/Drawable;
 
     move-object v4, p6
 
-    iput-object v4, v0, Lcom/android/systemui/media/MediaData;->song:Ljava/lang/CharSequence;
+    iput-object v4, v0, Lcom/android/systemui/media/MediaData;->artist:Ljava/lang/CharSequence;
 
     move-object v4, p7
+
+    iput-object v4, v0, Lcom/android/systemui/media/MediaData;->song:Ljava/lang/CharSequence;
+
+    move-object v4, p8
 
     iput-object v4, v0, Lcom/android/systemui/media/MediaData;->artwork:Landroid/graphics/drawable/Icon;
 
@@ -233,107 +239,107 @@
 
     iput-object v3, v0, Lcom/android/systemui/media/MediaData;->packageName:Ljava/lang/String;
 
-    move-object/from16 v1, p11
+    move-object/from16 v1, p12
 
     iput-object v1, v0, Lcom/android/systemui/media/MediaData;->token:Landroid/media/session/MediaSession$Token;
 
-    move-object/from16 v1, p12
+    move-object/from16 v1, p13
 
     iput-object v1, v0, Lcom/android/systemui/media/MediaData;->clickIntent:Landroid/app/PendingIntent;
 
-    move-object/from16 v1, p13
+    move-object/from16 v1, p14
 
     iput-object v1, v0, Lcom/android/systemui/media/MediaData;->device:Lcom/android/systemui/media/MediaDeviceData;
 
-    move/from16 v1, p14
+    move/from16 v1, p15
 
     iput-boolean v1, v0, Lcom/android/systemui/media/MediaData;->active:Z
 
-    move-object/from16 v1, p15
+    move-object/from16 v1, p16
 
     iput-object v1, v0, Lcom/android/systemui/media/MediaData;->resumeAction:Ljava/lang/Runnable;
 
-    move/from16 v1, p16
+    move/from16 v1, p17
 
     iput-boolean v1, v0, Lcom/android/systemui/media/MediaData;->resumption:Z
 
-    move-object/from16 v1, p17
+    move-object/from16 v1, p18
 
     iput-object v1, v0, Lcom/android/systemui/media/MediaData;->notificationKey:Ljava/lang/String;
 
-    move/from16 v1, p18
+    move/from16 v1, p19
 
     iput-boolean v1, v0, Lcom/android/systemui/media/MediaData;->hasCheckedForResume:Z
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(ZILjava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/drawable/Icon;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Landroid/media/session/MediaSession$Token;Landroid/app/PendingIntent;Lcom/android/systemui/media/MediaDeviceData;ZLjava/lang/Runnable;ZLjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
-    .locals 21
+.method public synthetic constructor <init>(IZILjava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/drawable/Icon;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Landroid/media/session/MediaSession$Token;Landroid/app/PendingIntent;Lcom/android/systemui/media/MediaDeviceData;ZLjava/lang/Runnable;ZLjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    .locals 22
 
-    and-int/lit8 v0, p19, 0x1
+    and-int/lit8 v0, p20, 0x2
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    move v3, v1
+    move v4, v1
 
     goto :goto_0
 
     :cond_0
-    move/from16 v3, p1
+    move/from16 v4, p2
 
     :goto_0
-    const v0, 0x8000
+    const/high16 v0, 0x10000
 
-    and-int v0, p19, v0
+    and-int v0, p20, v0
 
     if-eqz v0, :cond_1
 
-    move/from16 v18, v1
+    move/from16 v19, v1
 
     goto :goto_1
 
     :cond_1
-    move/from16 v18, p16
+    move/from16 v19, p17
 
     :goto_1
-    const/high16 v0, 0x10000
+    const/high16 v0, 0x20000
 
-    and-int v0, p19, v0
+    and-int v0, p20, v0
 
     if-eqz v0, :cond_2
 
     const/4 v0, 0x0
 
-    move-object/from16 v19, v0
+    move-object/from16 v20, v0
 
     goto :goto_2
 
     :cond_2
-    move-object/from16 v19, p17
+    move-object/from16 v20, p18
 
     :goto_2
-    const/high16 v0, 0x20000
+    const/high16 v0, 0x40000
 
-    and-int v0, p19, v0
+    and-int v0, p20, v0
 
     if-eqz v0, :cond_3
 
-    move/from16 v20, v1
+    move/from16 v21, v1
 
     goto :goto_3
 
     :cond_3
-    move/from16 v20, p18
+    move/from16 v21, p19
 
     :goto_3
     move-object/from16 v2, p0
 
-    move/from16 v4, p2
+    move/from16 v3, p1
 
-    move-object/from16 v5, p3
+    move/from16 v5, p3
 
     move-object/from16 v6, p4
 
@@ -355,27 +361,29 @@
 
     move-object/from16 v15, p13
 
-    move/from16 v16, p14
+    move-object/from16 v16, p14
 
-    move-object/from16 v17, p15
+    move/from16 v17, p15
 
-    invoke-direct/range {v2 .. v20}, Lcom/android/systemui/media/MediaData;-><init>(ZILjava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/drawable/Icon;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Landroid/media/session/MediaSession$Token;Landroid/app/PendingIntent;Lcom/android/systemui/media/MediaDeviceData;ZLjava/lang/Runnable;ZLjava/lang/String;Z)V
+    move-object/from16 v18, p16
+
+    invoke-direct/range {v2 .. v21}, Lcom/android/systemui/media/MediaData;-><init>(IZILjava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/drawable/Icon;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Landroid/media/session/MediaSession$Token;Landroid/app/PendingIntent;Lcom/android/systemui/media/MediaDeviceData;ZLjava/lang/Runnable;ZLjava/lang/String;Z)V
 
     return-void
 .end method
 
-.method public static synthetic copy$default(Lcom/android/systemui/media/MediaData;ZILjava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/drawable/Icon;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Landroid/media/session/MediaSession$Token;Landroid/app/PendingIntent;Lcom/android/systemui/media/MediaDeviceData;ZLjava/lang/Runnable;ZLjava/lang/String;ZILjava/lang/Object;)Lcom/android/systemui/media/MediaData;
+.method public static synthetic copy$default(Lcom/android/systemui/media/MediaData;IZILjava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/drawable/Icon;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Landroid/media/session/MediaSession$Token;Landroid/app/PendingIntent;Lcom/android/systemui/media/MediaDeviceData;ZLjava/lang/Runnable;ZLjava/lang/String;ZILjava/lang/Object;)Lcom/android/systemui/media/MediaData;
     .locals 17
 
     move-object/from16 v0, p0
 
-    move/from16 v1, p19
+    move/from16 v1, p20
 
     and-int/lit8 v2, v1, 0x1
 
     if-eqz v2, :cond_0
 
-    iget-boolean v2, v0, Lcom/android/systemui/media/MediaData;->initialized:Z
+    iget v2, v0, Lcom/android/systemui/media/MediaData;->userId:I
 
     goto :goto_0
 
@@ -387,7 +395,7 @@
 
     if-eqz v3, :cond_1
 
-    iget v3, v0, Lcom/android/systemui/media/MediaData;->backgroundColor:I
+    iget-boolean v3, v0, Lcom/android/systemui/media/MediaData;->initialized:Z
 
     goto :goto_1
 
@@ -399,19 +407,19 @@
 
     if-eqz v4, :cond_2
 
-    iget-object v4, v0, Lcom/android/systemui/media/MediaData;->app:Ljava/lang/String;
+    iget v4, v0, Lcom/android/systemui/media/MediaData;->backgroundColor:I
 
     goto :goto_2
 
     :cond_2
-    move-object/from16 v4, p3
+    move/from16 v4, p3
 
     :goto_2
     and-int/lit8 v5, v1, 0x8
 
     if-eqz v5, :cond_3
 
-    iget-object v5, v0, Lcom/android/systemui/media/MediaData;->appIcon:Landroid/graphics/drawable/Drawable;
+    iget-object v5, v0, Lcom/android/systemui/media/MediaData;->app:Ljava/lang/String;
 
     goto :goto_3
 
@@ -423,7 +431,7 @@
 
     if-eqz v6, :cond_4
 
-    iget-object v6, v0, Lcom/android/systemui/media/MediaData;->artist:Ljava/lang/CharSequence;
+    iget-object v6, v0, Lcom/android/systemui/media/MediaData;->appIcon:Landroid/graphics/drawable/Drawable;
 
     goto :goto_4
 
@@ -435,7 +443,7 @@
 
     if-eqz v7, :cond_5
 
-    iget-object v7, v0, Lcom/android/systemui/media/MediaData;->song:Ljava/lang/CharSequence;
+    iget-object v7, v0, Lcom/android/systemui/media/MediaData;->artist:Ljava/lang/CharSequence;
 
     goto :goto_5
 
@@ -447,7 +455,7 @@
 
     if-eqz v8, :cond_6
 
-    iget-object v8, v0, Lcom/android/systemui/media/MediaData;->artwork:Landroid/graphics/drawable/Icon;
+    iget-object v8, v0, Lcom/android/systemui/media/MediaData;->song:Ljava/lang/CharSequence;
 
     goto :goto_6
 
@@ -459,7 +467,7 @@
 
     if-eqz v9, :cond_7
 
-    iget-object v9, v0, Lcom/android/systemui/media/MediaData;->actions:Ljava/util/List;
+    iget-object v9, v0, Lcom/android/systemui/media/MediaData;->artwork:Landroid/graphics/drawable/Icon;
 
     goto :goto_7
 
@@ -471,7 +479,7 @@
 
     if-eqz v10, :cond_8
 
-    iget-object v10, v0, Lcom/android/systemui/media/MediaData;->actionsToShowInCompact:Ljava/util/List;
+    iget-object v10, v0, Lcom/android/systemui/media/MediaData;->actions:Ljava/util/List;
 
     goto :goto_8
 
@@ -483,7 +491,7 @@
 
     if-eqz v11, :cond_9
 
-    iget-object v11, v0, Lcom/android/systemui/media/MediaData;->packageName:Ljava/lang/String;
+    iget-object v11, v0, Lcom/android/systemui/media/MediaData;->actionsToShowInCompact:Ljava/util/List;
 
     goto :goto_9
 
@@ -495,7 +503,7 @@
 
     if-eqz v12, :cond_a
 
-    iget-object v12, v0, Lcom/android/systemui/media/MediaData;->token:Landroid/media/session/MediaSession$Token;
+    iget-object v12, v0, Lcom/android/systemui/media/MediaData;->packageName:Ljava/lang/String;
 
     goto :goto_a
 
@@ -507,7 +515,7 @@
 
     if-eqz v13, :cond_b
 
-    iget-object v13, v0, Lcom/android/systemui/media/MediaData;->clickIntent:Landroid/app/PendingIntent;
+    iget-object v13, v0, Lcom/android/systemui/media/MediaData;->token:Landroid/media/session/MediaSession$Token;
 
     goto :goto_b
 
@@ -519,7 +527,7 @@
 
     if-eqz v14, :cond_c
 
-    iget-object v14, v0, Lcom/android/systemui/media/MediaData;->device:Lcom/android/systemui/media/MediaDeviceData;
+    iget-object v14, v0, Lcom/android/systemui/media/MediaData;->clickIntent:Landroid/app/PendingIntent;
 
     goto :goto_c
 
@@ -531,79 +539,95 @@
 
     if-eqz v15, :cond_d
 
-    iget-boolean v15, v0, Lcom/android/systemui/media/MediaData;->active:Z
+    iget-object v15, v0, Lcom/android/systemui/media/MediaData;->device:Lcom/android/systemui/media/MediaDeviceData;
 
     goto :goto_d
 
     :cond_d
-    move/from16 v15, p14
+    move-object/from16 v15, p14
 
     :goto_d
-    move/from16 p14, v15
+    move-object/from16 p14, v15
 
     and-int/lit16 v15, v1, 0x4000
 
     if-eqz v15, :cond_e
 
-    iget-object v15, v0, Lcom/android/systemui/media/MediaData;->resumeAction:Ljava/lang/Runnable;
+    iget-boolean v15, v0, Lcom/android/systemui/media/MediaData;->active:Z
 
     goto :goto_e
 
     :cond_e
-    move-object/from16 v15, p15
+    move/from16 v15, p15
 
     :goto_e
     const v16, 0x8000
 
     and-int v16, v1, v16
 
-    move-object/from16 p15, v15
+    move/from16 p15, v15
 
     if-eqz v16, :cond_f
 
-    iget-boolean v15, v0, Lcom/android/systemui/media/MediaData;->resumption:Z
+    iget-object v15, v0, Lcom/android/systemui/media/MediaData;->resumeAction:Ljava/lang/Runnable;
 
     goto :goto_f
 
     :cond_f
-    move/from16 v15, p16
+    move-object/from16 v15, p16
 
     :goto_f
     const/high16 v16, 0x10000
 
     and-int v16, v1, v16
 
-    move/from16 p16, v15
+    move-object/from16 p16, v15
 
     if-eqz v16, :cond_10
 
-    iget-object v15, v0, Lcom/android/systemui/media/MediaData;->notificationKey:Ljava/lang/String;
+    iget-boolean v15, v0, Lcom/android/systemui/media/MediaData;->resumption:Z
 
     goto :goto_10
 
     :cond_10
-    move-object/from16 v15, p17
+    move/from16 v15, p17
 
     :goto_10
     const/high16 v16, 0x20000
 
-    and-int v1, v1, v16
+    and-int v16, v1, v16
 
-    if-eqz v1, :cond_11
+    move/from16 p17, v15
 
-    iget-boolean v1, v0, Lcom/android/systemui/media/MediaData;->hasCheckedForResume:Z
+    if-eqz v16, :cond_11
+
+    iget-object v15, v0, Lcom/android/systemui/media/MediaData;->notificationKey:Ljava/lang/String;
 
     goto :goto_11
 
     :cond_11
-    move/from16 v1, p18
+    move-object/from16 v15, p18
 
     :goto_11
+    const/high16 v16, 0x40000
+
+    and-int v1, v1, v16
+
+    if-eqz v1, :cond_12
+
+    iget-boolean v1, v0, Lcom/android/systemui/media/MediaData;->hasCheckedForResume:Z
+
+    goto :goto_12
+
+    :cond_12
+    move/from16 v1, p19
+
+    :goto_12
     move/from16 p1, v2
 
     move/from16 p2, v3
 
-    move-object/from16 p3, v4
+    move/from16 p3, v4
 
     move-object/from16 p4, v5
 
@@ -625,11 +649,11 @@
 
     move-object/from16 p13, v14
 
-    move-object/from16 p17, v15
+    move-object/from16 p18, v15
 
-    move/from16 p18, v1
+    move/from16 p19, v1
 
-    invoke-virtual/range {p0 .. p18}, Lcom/android/systemui/media/MediaData;->copy(ZILjava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/drawable/Icon;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Landroid/media/session/MediaSession$Token;Landroid/app/PendingIntent;Lcom/android/systemui/media/MediaDeviceData;ZLjava/lang/Runnable;ZLjava/lang/String;Z)Lcom/android/systemui/media/MediaData;
+    invoke-virtual/range {p0 .. p19}, Lcom/android/systemui/media/MediaData;->copy(IZILjava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/drawable/Icon;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Landroid/media/session/MediaSession$Token;Landroid/app/PendingIntent;Lcom/android/systemui/media/MediaDeviceData;ZLjava/lang/Runnable;ZLjava/lang/String;Z)Lcom/android/systemui/media/MediaData;
 
     move-result-object v0
 
@@ -638,17 +662,13 @@
 
 
 # virtual methods
-.method public final copy(ZILjava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/drawable/Icon;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Landroid/media/session/MediaSession$Token;Landroid/app/PendingIntent;Lcom/android/systemui/media/MediaDeviceData;ZLjava/lang/Runnable;ZLjava/lang/String;Z)Lcom/android/systemui/media/MediaData;
-    .locals 20
-    .param p3    # Ljava/lang/String;
+.method public final copy(IZILjava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/drawable/Icon;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Landroid/media/session/MediaSession$Token;Landroid/app/PendingIntent;Lcom/android/systemui/media/MediaDeviceData;ZLjava/lang/Runnable;ZLjava/lang/String;Z)Lcom/android/systemui/media/MediaData;
+    .locals 21
+    .param p4    # Ljava/lang/String;
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
-    .param p4    # Landroid/graphics/drawable/Drawable;
-        .annotation build Lorg/jetbrains/annotations/Nullable;
-        .end annotation
-    .end param
-    .param p5    # Ljava/lang/CharSequence;
+    .param p5    # Landroid/graphics/drawable/Drawable;
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
@@ -656,45 +676,49 @@
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
-    .param p7    # Landroid/graphics/drawable/Icon;
+    .param p7    # Ljava/lang/CharSequence;
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
-    .param p8    # Ljava/util/List;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
+    .param p8    # Landroid/graphics/drawable/Icon;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
     .param p9    # Ljava/util/List;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p10    # Ljava/lang/String;
+    .param p10    # Ljava/util/List;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p11    # Landroid/media/session/MediaSession$Token;
+    .param p11    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p12    # Landroid/media/session/MediaSession$Token;
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
-    .param p12    # Landroid/app/PendingIntent;
+    .param p13    # Landroid/app/PendingIntent;
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
-    .param p13    # Lcom/android/systemui/media/MediaDeviceData;
+    .param p14    # Lcom/android/systemui/media/MediaDeviceData;
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
-    .param p15    # Ljava/lang/Runnable;
+    .param p16    # Ljava/lang/Runnable;
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
-    .param p17    # Ljava/lang/String;
+    .param p18    # Ljava/lang/String;
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(ZI",
+            "(IZI",
             "Ljava/lang/String;",
             "Landroid/graphics/drawable/Drawable;",
             "Ljava/lang/CharSequence;",
@@ -726,7 +750,7 @@
 
     move/from16 v2, p2
 
-    move-object/from16 v3, p3
+    move/from16 v3, p3
 
     move-object/from16 v4, p4
 
@@ -748,45 +772,47 @@
 
     move-object/from16 v13, p13
 
-    move/from16 v14, p14
+    move-object/from16 v14, p14
 
-    move-object/from16 v15, p15
+    move/from16 v15, p15
 
-    move/from16 v16, p16
+    move-object/from16 v16, p16
 
-    move-object/from16 v17, p17
+    move/from16 v17, p17
 
-    move/from16 v18, p18
+    move-object/from16 v18, p18
+
+    move/from16 v19, p19
 
     const-string v0, "actions"
 
     move/from16 p0, v1
 
-    move-object/from16 v1, p8
+    move-object/from16 v1, p9
 
     invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "actionsToShowInCompact"
 
-    move-object/from16 v1, p9
+    move-object/from16 v1, p10
 
     invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "packageName"
 
-    move-object/from16 v1, p10
+    move-object/from16 v1, p11
 
     invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    new-instance v19, Lcom/android/systemui/media/MediaData;
+    new-instance v20, Lcom/android/systemui/media/MediaData;
 
-    move-object/from16 v0, v19
+    move-object/from16 v0, v20
 
     move/from16 v1, p0
 
-    invoke-direct/range {v0 .. v18}, Lcom/android/systemui/media/MediaData;-><init>(ZILjava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/drawable/Icon;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Landroid/media/session/MediaSession$Token;Landroid/app/PendingIntent;Lcom/android/systemui/media/MediaDeviceData;ZLjava/lang/Runnable;ZLjava/lang/String;Z)V
+    invoke-direct/range {v0 .. v19}, Lcom/android/systemui/media/MediaData;-><init>(IZILjava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/drawable/Icon;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Landroid/media/session/MediaSession$Token;Landroid/app/PendingIntent;Lcom/android/systemui/media/MediaDeviceData;ZLjava/lang/Runnable;ZLjava/lang/String;Z)V
 
-    return-object v19
+    return-object v20
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -803,6 +829,12 @@
     if-eqz v0, :cond_0
 
     check-cast p1, Lcom/android/systemui/media/MediaData;
+
+    iget v0, p0, Lcom/android/systemui/media/MediaData;->userId:I
+
+    iget v1, p1, Lcom/android/systemui/media/MediaData;->userId:I
+
+    if-ne v0, v1, :cond_0
 
     iget-boolean v0, p0, Lcom/android/systemui/media/MediaData;->initialized:Z
 
@@ -1148,275 +1180,293 @@
     return-object p0
 .end method
 
+.method public final getUserId()I
+    .locals 0
+
+    iget p0, p0, Lcom/android/systemui/media/MediaData;->userId:I
+
+    return p0
+.end method
+
 .method public hashCode()I
     .locals 4
 
-    iget-boolean v0, p0, Lcom/android/systemui/media/MediaData;->initialized:Z
+    iget v0, p0, Lcom/android/systemui/media/MediaData;->userId:I
 
-    const/4 v1, 0x1
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    if-eqz v0, :cond_0
+    move-result v0
 
-    move v0, v1
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lcom/android/systemui/media/MediaData;->initialized:Z
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_0
+
+    move v1, v2
 
     :cond_0
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v2, p0, Lcom/android/systemui/media/MediaData;->backgroundColor:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v2
-
-    add-int/2addr v0, v2
+    add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/android/systemui/media/MediaData;->app:Ljava/lang/String;
+    iget v1, p0, Lcom/android/systemui/media/MediaData;->backgroundColor:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lcom/android/systemui/media/MediaData;->app:Ljava/lang/String;
 
     const/4 v3, 0x0
 
-    if-eqz v2, :cond_1
+    if-eqz v1, :cond_1
 
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    move-result v2
+    move-result v1
 
     goto :goto_0
 
     :cond_1
-    move v2, v3
+    move v1, v3
 
     :goto_0
-    add-int/2addr v0, v2
+    add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/android/systemui/media/MediaData;->appIcon:Landroid/graphics/drawable/Drawable;
+    iget-object v1, p0, Lcom/android/systemui/media/MediaData;->appIcon:Landroid/graphics/drawable/Drawable;
 
-    if-eqz v2, :cond_2
+    if-eqz v1, :cond_2
 
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    move-result v2
+    move-result v1
 
     goto :goto_1
 
     :cond_2
-    move v2, v3
+    move v1, v3
 
     :goto_1
-    add-int/2addr v0, v2
+    add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/android/systemui/media/MediaData;->artist:Ljava/lang/CharSequence;
+    iget-object v1, p0, Lcom/android/systemui/media/MediaData;->artist:Ljava/lang/CharSequence;
 
-    if-eqz v2, :cond_3
+    if-eqz v1, :cond_3
 
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    move-result v2
+    move-result v1
 
     goto :goto_2
 
     :cond_3
-    move v2, v3
+    move v1, v3
 
     :goto_2
-    add-int/2addr v0, v2
+    add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/android/systemui/media/MediaData;->song:Ljava/lang/CharSequence;
+    iget-object v1, p0, Lcom/android/systemui/media/MediaData;->song:Ljava/lang/CharSequence;
 
-    if-eqz v2, :cond_4
+    if-eqz v1, :cond_4
 
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    move-result v2
+    move-result v1
 
     goto :goto_3
 
     :cond_4
-    move v2, v3
+    move v1, v3
 
     :goto_3
-    add-int/2addr v0, v2
+    add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/android/systemui/media/MediaData;->artwork:Landroid/graphics/drawable/Icon;
+    iget-object v1, p0, Lcom/android/systemui/media/MediaData;->artwork:Landroid/graphics/drawable/Icon;
 
-    if-eqz v2, :cond_5
+    if-eqz v1, :cond_5
 
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    move-result v2
+    move-result v1
 
     goto :goto_4
 
     :cond_5
-    move v2, v3
+    move v1, v3
 
     :goto_4
-    add-int/2addr v0, v2
+    add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/android/systemui/media/MediaData;->actions:Ljava/util/List;
+    iget-object v1, p0, Lcom/android/systemui/media/MediaData;->actions:Ljava/util/List;
 
-    if-eqz v2, :cond_6
+    if-eqz v1, :cond_6
 
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    move-result v2
+    move-result v1
 
     goto :goto_5
 
     :cond_6
-    move v2, v3
+    move v1, v3
 
     :goto_5
-    add-int/2addr v0, v2
+    add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/android/systemui/media/MediaData;->actionsToShowInCompact:Ljava/util/List;
+    iget-object v1, p0, Lcom/android/systemui/media/MediaData;->actionsToShowInCompact:Ljava/util/List;
 
-    if-eqz v2, :cond_7
+    if-eqz v1, :cond_7
 
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    move-result v2
+    move-result v1
 
     goto :goto_6
 
     :cond_7
-    move v2, v3
+    move v1, v3
 
     :goto_6
-    add-int/2addr v0, v2
+    add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/android/systemui/media/MediaData;->packageName:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/systemui/media/MediaData;->packageName:Ljava/lang/String;
 
-    if-eqz v2, :cond_8
+    if-eqz v1, :cond_8
 
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    move-result v2
+    move-result v1
 
     goto :goto_7
 
     :cond_8
-    move v2, v3
+    move v1, v3
 
     :goto_7
-    add-int/2addr v0, v2
+    add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/android/systemui/media/MediaData;->token:Landroid/media/session/MediaSession$Token;
+    iget-object v1, p0, Lcom/android/systemui/media/MediaData;->token:Landroid/media/session/MediaSession$Token;
 
-    if-eqz v2, :cond_9
+    if-eqz v1, :cond_9
 
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    move-result v2
+    move-result v1
 
     goto :goto_8
 
     :cond_9
-    move v2, v3
+    move v1, v3
 
     :goto_8
-    add-int/2addr v0, v2
+    add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/android/systemui/media/MediaData;->clickIntent:Landroid/app/PendingIntent;
+    iget-object v1, p0, Lcom/android/systemui/media/MediaData;->clickIntent:Landroid/app/PendingIntent;
 
-    if-eqz v2, :cond_a
+    if-eqz v1, :cond_a
 
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    move-result v2
+    move-result v1
 
     goto :goto_9
 
     :cond_a
-    move v2, v3
+    move v1, v3
 
     :goto_9
-    add-int/2addr v0, v2
+    add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/android/systemui/media/MediaData;->device:Lcom/android/systemui/media/MediaDeviceData;
+    iget-object v1, p0, Lcom/android/systemui/media/MediaData;->device:Lcom/android/systemui/media/MediaDeviceData;
 
-    if-eqz v2, :cond_b
+    if-eqz v1, :cond_b
 
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    move-result v2
+    move-result v1
 
     goto :goto_a
 
     :cond_b
-    move v2, v3
+    move v1, v3
 
     :goto_a
-    add-int/2addr v0, v2
+    add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-boolean v2, p0, Lcom/android/systemui/media/MediaData;->active:Z
+    iget-boolean v1, p0, Lcom/android/systemui/media/MediaData;->active:Z
 
-    if-eqz v2, :cond_c
+    if-eqz v1, :cond_c
 
-    move v2, v1
+    move v1, v2
 
     :cond_c
-    add-int/2addr v0, v2
+    add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/android/systemui/media/MediaData;->resumeAction:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/android/systemui/media/MediaData;->resumeAction:Ljava/lang/Runnable;
 
-    if-eqz v2, :cond_d
+    if-eqz v1, :cond_d
 
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    move-result v2
+    move-result v1
 
     goto :goto_b
 
     :cond_d
-    move v2, v3
+    move v1, v3
 
     :goto_b
-    add-int/2addr v0, v2
+    add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-boolean v2, p0, Lcom/android/systemui/media/MediaData;->resumption:Z
+    iget-boolean v1, p0, Lcom/android/systemui/media/MediaData;->resumption:Z
 
-    if-eqz v2, :cond_e
+    if-eqz v1, :cond_e
 
-    move v2, v1
+    move v1, v2
 
     :cond_e
-    add-int/2addr v0, v2
+    add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/android/systemui/media/MediaData;->notificationKey:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/systemui/media/MediaData;->notificationKey:Ljava/lang/String;
 
-    if-eqz v2, :cond_f
+    if-eqz v1, :cond_f
 
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v3
 
@@ -1432,10 +1482,10 @@
     goto :goto_c
 
     :cond_10
-    move v1, p0
+    move v2, p0
 
     :goto_c
-    add-int/2addr v0, v1
+    add-int/2addr v0, v2
 
     return v0
 .end method
@@ -1477,7 +1527,15 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "MediaData(initialized="
+    const-string v1, "MediaData(userId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lcom/android/systemui/media/MediaData;->userId:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", initialized="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

@@ -39,6 +39,11 @@
     <string name="abc_slice_updated">Geüpdatet: %1$s</string>
     <string name="abc_slices_permission_request">%1$s wil segmenten van %2$s weergeven</string>
     <string name="abc_toolbar_collapse_description">Samenvouwen</string>
+    <string name="about_action_bar_title">Over</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Privacybeleid</string>
+    <string name="about_release_note_title">Updatelogboek:</string>
+    <string name="about_terms_service">Algemene gebruiksvoorwaarden</string>
     <string name="accessibility_accessibility_button">Toegankelijkheid</string>
     <string name="accessibility_action_divider_bottom_full">Onderste scherm op volledig scherm</string>
     <string name="accessibility_action_divider_left_30">Linkerscherm 30%</string>
@@ -574,10 +579,10 @@ Selectie"</string>
     <string name="connected_via_app">Verbonden via %1$s</string>
     <string name="connected_via_carrier">Verbonden via %1$s</string>
     <string name="connected_via_network_scorer">Automatisch verbonden via %1$s</string>
-    <string name="connected_via_network_scorer_default">Automatisch verbonden via netwerkbeoordelaar</string>
+    <string name="connected_via_network_scorer_default">Automatisch verbonden via provider van netwerkbeoordelingen</string>
     <string name="connected_via_passpoint">Verbonden via %1$s</string>
     <string name="content_description_menu_button">Menu</string>
-    <string name="continue_call">Doorgaan</string>
+    <string name="continue_call">Ga Verder</string>
     <string name="controls_added_tooltip">Houd de aan/uit-knop ingedrukt om nieuwe bedieningselementen te bekijken</string>
     <string name="controls_confirmation_confirming">Bevestigen…</string>
     <string name="controls_confirmation_message">Bevestig de wijziging voor %s</string>
@@ -594,11 +599,12 @@ Selectie"</string>
     <string name="controls_error_timeout">Inactief, check de app</string>
     <string name="controls_favorite_default_title">Bedieningselementen</string>
     <string name="controls_favorite_load_error">Bedieningselementen kunnen niet worden geladen. Check de %s-app om na te gaan of de app-instellingen niet zijn gewijzigd.</string>
-    <string name="controls_favorite_load_none">Geen geschikte bedieningselementen beschikbaar.</string>
+    <string name="controls_favorite_load_none">Geen geschikte bedieningselementen beschikbaar</string>
     <string name="controls_favorite_other_zone_header">Overig</string>
     <string name="controls_favorite_rearrange">Houd vast en sleep om de bedieningselementen opnieuw in te delen</string>
     <string name="controls_favorite_removed">Alle bedieningselementen verwijderd</string>
-    <string name="controls_favorite_subtitle">Kies bedieningselementen die je vanaf het aan/uit-menu wilt kunnen gebruiken</string>
+    <string name="controls_favorite_see_other_apps">Andere apps bekijken</string>
+    <string name="controls_favorite_subtitle">Kies bedieningselementen die je via het aan/uit-menu wilt kunnen gebruiken</string>
     <string name="controls_favorite_toast_no_changes">Wijzigingen zijn niet opgeslagen</string>
     <string name="controls_in_progress">Bezig</string>
     <string name="controls_media_close_session">De huidige sessie verbergen.</string>
@@ -696,8 +702,8 @@ Als je hervat, kunnen er kosten voor datagebruik in rekening worden gebracht."</
     <string name="disable_carrier_button_text">Simkaart uitschakelen</string>
     <string name="disable_overlays">HW-overlays uitschakelen</string>
     <string name="disable_overlays_summary">GPU altijd gebruiken voor schermcompositing</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">Neem contact op met uw beheerder voor meer informatie</string>
+    <string name="disable_tether_notification_title">Tethering is uitgeschakeld</string>
     <string name="disable_vpn">VPN uitschakelen</string>
     <string name="disabled">Uitgeschakeld</string>
     <string name="disabled_by_admin">Uitgeschakeld door beheerder</string>
@@ -717,6 +723,7 @@ Als je hervat, kunnen er kosten voor datagebruik in rekening worden gebracht."</
     <string name="drag_to_rearrange_tiles">Houd vast en sleep om tegels opnieuw in te delen</string>
     <string name="drag_to_remove_disabled">Je hebt minimaal %1$d tegels nodig</string>
     <string name="drag_to_remove_tiles">Sleep hier naartoe om te verwijderen</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">Sleep tegels om te herschikken, tik om weer te geven of te verbergen.</string>
     <string name="empty_shade_text">Geen meldingen</string>
     <string name="enable_adb">USB-foutopsporing</string>
@@ -1092,6 +1099,7 @@ Probeer het over %2$d seconden opnieuw."</string>
     <string name="left_nav_bar_button_type">Extra knoptype links</string>
     <string name="legacy_vpn_name">VPN</string>
     <string name="loading_injected_setting_summary">Laden…</string>
+    <string name="loading_text">Laden...</string>
     <string name="local_backup_password_summary_change">Tik om het wachtwoord voor volledige back-ups naar desktops te wijzigen of te verwijderen</string>
     <string name="local_backup_password_summary_none">Volledige back-ups naar desktops zijn momenteel niet beveiligd</string>
     <string name="local_backup_password_title">Wachtwoord desktopback-up</string>
@@ -1323,8 +1331,14 @@ Je bent ook verbonden met een VPN, waarmee je netwerkactiviteit kan worden gecon
     <string name="oneplus_threekey_navigation_sound">Alle geluiden toegestaan</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Het kan worden ingeschakeld met de schakelaar hierboven</string>
     <string name="oneplus_threekey_navigation_vibration">Alleen vibreren</string>
-    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> ontgrendeling</string>
-    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> ontgrendelingen</string>
+    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>ontgrendeling</string>
+    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>ontgrendelt</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">Bezig met koppelen...</string>
     <string name="op_earphone_connected_fail">Koppelen mislukt. Contoleer de hoofdtelefoon en Bluetooth-status.</string>
     <string name="op_earphone_connected_success">Gekoppeld, tik voor meer instellingen.</string>
@@ -1354,9 +1368,10 @@ Je bent ook verbonden met een VPN, waarmee je netwerkactiviteit kan worden gecon
     <string name="op_notification_channel_summary_low">Minder belangrijke meldingen zonder geluid of trillingen.</string>
     <string name="op_notification_section_header_gentle">Overige meldingen</string>
     <string name="op_notification_silence_title">Andere</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">Donkere modus</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s gebruikt</string>
-    <string name="op_quick_settings_night_display_label">Nachtmodus</string>
+    <string name="op_quick_settings_night_display_label">Visie comfort</string>
     <string name="op_quick_settings_night_display_summary_off">Nachtmodus uit, tap om in te schakelen</string>
     <string name="op_quick_settings_night_display_summary_on">Nachtmodus aan, tap om uit te schakelen</string>
     <string name="op_read_mode2_dialog_black">Mono-effect</string>
@@ -1724,7 +1739,7 @@ Je bent ook verbonden met een VPN, waarmee je netwerkactiviteit kan worden gecon
     <string name="screenrecord_delete_description">Schermopname verwijderd</string>
     <string name="screenrecord_delete_error">Fout bij verwijderen van schermopname</string>
     <string name="screenrecord_delete_label">Verwijderen</string>
-    <string name="screenrecord_description">"Tijdens de opname kan het Android-systeem gevoelige informatie opnemen die zichtbaar is op je scherm of wordt afgespeeld op je apparaat. Dit omvat wachtwoorden, betalingsgegevens, foto's, berichten en audio."</string>
+    <string name="screenrecord_description">"Tijdens de opname kan het Android-systeem gevoelige informatie opnemen die zichtbaar is op je scherm of wordt afgespeeld op je apparaat, waaronder wachtwoorden, betalingsgegevens, foto's, berichten en audio."</string>
     <string name="screenrecord_device_audio_and_mic_label">Audio van apparaat en microfoon</string>
     <string name="screenrecord_device_audio_description">Geluid van je apparaat, zoals muziek, gesprekken en ringtones</string>
     <string name="screenrecord_device_audio_label">Audio van apparaat</string>
@@ -1871,7 +1886,7 @@ worden gecontroleerd"</string>
     <string name="tethered_notification_hybrid_sharing_mobile">Mobiele data wordt gedeeld, klik om Instellingen te openen</string>
     <string name="tethered_notification_hybrid_sharing_none">Geen beschikbaar netwerk om te delen, klik om Instellingen te openen</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Wifi wordt gedeeld, klik om Instellingen te openen</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">Tap om in te stellen.</string>
     <string name="tethered_notification_multi_device_message">%1$s apparaten verbonden</string>
     <string name="tethered_notification_multi_tether_title">Tethering en Mobiele HotSpot actief</string>
     <string name="tethered_notification_no_device_message">Geen toestel verbonden</string>
@@ -2104,7 +2119,17 @@ Wifi-adres (BSSID)
     <string name="wifi_verbose_logging">Uitgebreide wifi-logregistratie insch.</string>
     <string name="wifi_verbose_logging_summary">Logniveau voor wifi verhogen, weergeven per SSID RSSI in wifi-kiezer</string>
     <string name="window_animation_scale_title">Venster­animatieschaal</string>
-    <string name="work_life_balance_mode">Werk-privébalans</string>
+    <string name="wlb_break_mode_active">Actief</string>
+    <string name="wlb_break_mode_active_text">%1$s Mode · %2$s</string>
+    <string name="wlb_break_mode_on_break">Gepauzeerd</string>
+    <string name="wlb_break_mode_resume">Hervatten</string>
+    <string name="wlb_break_mode_take_break">Neem even pauze</string>
+    <string name="wlb_qs_detail_break_mode">Pauzemodus</string>
+    <string name="wlb_qs_detail_break_mode_desc">Hervat automatisch de vorige modus na 30 minuten</string>
+    <string name="wlb_qs_detail_life_mode">Privémodus</string>
+    <string name="wlb_qs_detail_more_setting">Meer instellingen</string>
+    <string name="wlb_qs_detail_work_mode">Werkmodus</string>
+    <string name="work_life_balance_mode">Balans werk-privé</string>
     <string name="zen_alarm_warning">Je hoort je volgende wekker niet %1$s</string>
     <string name="zen_alarm_warning_indef">Je hoort je volgende wekker niet %1$s tenzij je dit voor die tijd uitschakelt</string>
     <string name="zen_alarms_introduction">"Je wordt niet gestoord door geluiden en trillingen, behalve bij wekkers. Je kunt nog steeds alles horen wat je wilt afspelen, waaronder muziek, video's en games."</string>

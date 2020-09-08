@@ -141,7 +141,9 @@
 
     sget p3, Lcom/android/systemui/R$dimen;->status_bar_padding_start:I
 
-    invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    const/16 p4, 0x438
+
+    invoke-static {p2, p3, p4}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
 
     move-result p2
 

@@ -19,6 +19,9 @@
 .method public abstract getDisplayOptions()I
 .end method
 
+.method public abstract getMenu()Landroid/view/Menu;
+.end method
+
 .method public abstract getNavigationMode()I
 .end method
 
@@ -56,6 +59,9 @@
 .end method
 
 .method public abstract setMenu(Landroid/view/Menu;Landroidx/appcompat/view/menu/MenuPresenter$Callback;)V
+.end method
+
+.method public abstract setMenuCallbacks(Landroidx/appcompat/view/menu/MenuPresenter$Callback;Landroidx/appcompat/view/menu/MenuBuilder$Callback;)V
 .end method
 
 .method public abstract setMenuPrepared()V

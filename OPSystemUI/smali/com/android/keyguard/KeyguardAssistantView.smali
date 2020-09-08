@@ -340,7 +340,7 @@
 
     int-to-float v3, v3
 
-    const v4, 0x40133333    # 2.3f
+    const/high16 v4, 0x40200000    # 2.5f
 
     div-float/2addr v3, v4
 
@@ -404,23 +404,15 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
-    move-result-object p0
+    move-result-object v1
 
-    check-cast p0, Landroid/view/ViewGroup$MarginLayoutParams;
+    new-instance v2, Lcom/android/keyguard/KeyguardAssistantView$4;
 
-    iget v2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+    invoke-direct {v2, p0, v0}, Lcom/android/keyguard/KeyguardAssistantView$4;-><init>(Lcom/android/keyguard/KeyguardAssistantView;Landroid/view/ViewGroup;)V
 
-    div-int/lit8 v2, v2, 0x2
-
-    iget v3, p0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
-
-    div-int/lit8 v3, v3, 0x3
-
-    invoke-virtual {p0, v2, v1, v3, v1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
-
-    invoke-virtual {v0, p0}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v1, v2}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
     const/4 p0, 0x1
 
@@ -614,7 +606,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    const-string v1, "0.7"
+    const-string v1, "0.8"
 
     invoke-static {v1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
@@ -695,6 +687,29 @@
 .method public setGoogleSmartspaceChildViewHeight()V
     .locals 3
 
+    const-string v0, "debug.no.smartspace.custgoogleview"
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->TAG:Ljava/lang/String;
+
+    const-string v1, "debug.no.smartspace.custgoogleview true"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Lcom/android/keyguard/KeyguardAssistantView;->setHasHeader(Z)V
+
+    return-void
+
+    :cond_0
     iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;

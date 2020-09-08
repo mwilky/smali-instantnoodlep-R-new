@@ -488,12 +488,12 @@
     return-object p0
 .end method
 
-.method static synthetic access$2600(Lcom/android/systemui/volume/VolumeDialogImpl;)Landroid/view/ViewGroup;
+.method static synthetic access$2600(Lcom/android/systemui/volume/VolumeDialogImpl;)V
     .locals 0
 
-    iget-object p0, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mODICaptionsView:Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/oneplus/volume/OpVolumeDialogImpl;->updateDialogLayout()V
 
-    return-object p0
+    return-void
 .end method
 
 .method static synthetic access$2700(Lcom/android/systemui/volume/VolumeDialogImpl;)Landroid/view/ViewGroup;
@@ -504,18 +504,18 @@
     return-object p0
 .end method
 
-.method static synthetic access$2800(Lcom/android/systemui/volume/VolumeDialogImpl;)V
+.method static synthetic access$2800(Lcom/android/systemui/volume/VolumeDialogImpl;)Landroid/view/ViewGroup;
     .locals 0
 
-    invoke-virtual {p0}, Lcom/oneplus/volume/OpVolumeDialogImpl;->updateODIRelatedLayout()V
+    iget-object p0, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mODICaptionsView:Landroid/view/ViewGroup;
 
-    return-void
+    return-object p0
 .end method
 
 .method static synthetic access$2900(Lcom/android/systemui/volume/VolumeDialogImpl;)V
     .locals 0
 
-    invoke-virtual {p0}, Lcom/oneplus/volume/OpVolumeDialogImpl;->loadOpDimens()V
+    invoke-virtual {p0}, Lcom/oneplus/volume/OpVolumeDialogImpl;->updateODIRelatedLayout()V
 
     return-void
 .end method
@@ -530,7 +530,15 @@
     return p0
 .end method
 
-.method static synthetic access$3000(Lcom/android/systemui/volume/VolumeDialogImpl;)I
+.method static synthetic access$3000(Lcom/android/systemui/volume/VolumeDialogImpl;)V
+    .locals 0
+
+    invoke-virtual {p0}, Lcom/oneplus/volume/OpVolumeDialogImpl;->loadOpDimens()V
+
+    return-void
+.end method
+
+.method static synthetic access$3100(Lcom/android/systemui/volume/VolumeDialogImpl;)I
     .locals 0
 
     iget p0, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mOpBeforeExpandWidth:I
@@ -538,7 +546,7 @@
     return p0
 .end method
 
-.method static synthetic access$3100(Lcom/android/systemui/volume/VolumeDialogImpl;)I
+.method static synthetic access$3200(Lcom/android/systemui/volume/VolumeDialogImpl;)I
     .locals 0
 
     iget p0, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mOpafterExpandWidth:I
@@ -546,7 +554,7 @@
     return p0
 .end method
 
-.method static synthetic access$3200(Lcom/android/systemui/volume/VolumeDialogImpl;)V
+.method static synthetic access$3300(Lcom/android/systemui/volume/VolumeDialogImpl;)V
     .locals 0
 
     invoke-virtual {p0}, Lcom/oneplus/volume/OpVolumeDialogImpl;->setExpandFeautureDismissState()V
@@ -554,7 +562,7 @@
     return-void
 .end method
 
-.method static synthetic access$3300(Lcom/android/systemui/volume/VolumeDialogImpl;)Lcom/android/systemui/volume/VolumeDialogImpl$H;
+.method static synthetic access$3400(Lcom/android/systemui/volume/VolumeDialogImpl;)Lcom/android/systemui/volume/VolumeDialogImpl$H;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mHandler:Lcom/android/systemui/volume/VolumeDialogImpl$H;
@@ -562,7 +570,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$3402(Lcom/android/systemui/volume/VolumeDialogImpl;Z)Z
+.method static synthetic access$3502(Lcom/android/systemui/volume/VolumeDialogImpl;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mConfigChanged:Z
@@ -570,7 +578,7 @@
     return p1
 .end method
 
-.method static synthetic access$3502(Lcom/android/systemui/volume/VolumeDialogImpl;Z)Z
+.method static synthetic access$3602(Lcom/android/systemui/volume/VolumeDialogImpl;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mPendingInit:Z
@@ -578,7 +586,7 @@
     return p1
 .end method
 
-.method static synthetic access$3600(Lcom/android/systemui/volume/VolumeDialogImpl;)Z
+.method static synthetic access$3700(Lcom/android/systemui/volume/VolumeDialogImpl;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mSilentMode:Z
@@ -586,7 +594,7 @@
     return p0
 .end method
 
-.method static synthetic access$3700(Lcom/android/systemui/volume/VolumeDialogImpl;)Lcom/android/systemui/plugins/VolumeDialogController;
+.method static synthetic access$3800(Lcom/android/systemui/volume/VolumeDialogImpl;)Lcom/android/systemui/plugins/VolumeDialogController;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mController:Lcom/android/systemui/plugins/VolumeDialogController;
@@ -594,28 +602,12 @@
     return-object p0
 .end method
 
-.method static synthetic access$3800(Lcom/android/systemui/volume/VolumeDialogImpl;I)V
+.method static synthetic access$3900(Lcom/android/systemui/volume/VolumeDialogImpl;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/systemui/volume/VolumeDialogImpl;->showSafetyWarningH(I)V
 
     return-void
-.end method
-
-.method static synthetic access$3900(Lcom/android/systemui/volume/VolumeDialogImpl;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mShowA11yStream:Z
-
-    return p0
-.end method
-
-.method static synthetic access$3902(Lcom/android/systemui/volume/VolumeDialogImpl;Z)Z
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mShowA11yStream:Z
-
-    return p1
 .end method
 
 .method static synthetic access$400(Lcom/android/systemui/volume/VolumeDialogImpl;)Z
@@ -629,7 +621,7 @@
 .method static synthetic access$4000(Lcom/android/systemui/volume/VolumeDialogImpl;)Z
     .locals 0
 
-    iget-boolean p0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mIsCaptionComponentEnabled:Z
+    iget-boolean p0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mShowA11yStream:Z
 
     return p0
 .end method
@@ -637,12 +629,28 @@
 .method static synthetic access$4002(Lcom/android/systemui/volume/VolumeDialogImpl;Z)Z
     .locals 0
 
+    iput-boolean p1, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mShowA11yStream:Z
+
+    return p1
+.end method
+
+.method static synthetic access$4100(Lcom/android/systemui/volume/VolumeDialogImpl;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mIsCaptionComponentEnabled:Z
+
+    return p0
+.end method
+
+.method static synthetic access$4102(Lcom/android/systemui/volume/VolumeDialogImpl;Z)Z
+    .locals 0
+
     iput-boolean p1, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mIsCaptionComponentEnabled:Z
 
     return p1
 .end method
 
-.method static synthetic access$4100(Lcom/android/systemui/volume/VolumeDialogImpl;ZZ)V
+.method static synthetic access$4200(Lcom/android/systemui/volume/VolumeDialogImpl;ZZ)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/android/systemui/volume/VolumeDialogImpl;->updateODICaptionsH(ZZ)V
@@ -650,7 +658,7 @@
     return-void
 .end method
 
-.method static synthetic access$4200(Lcom/android/systemui/volume/VolumeDialogImpl;IZ)V
+.method static synthetic access$4300(Lcom/android/systemui/volume/VolumeDialogImpl;IZ)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/android/systemui/volume/VolumeDialogImpl;->setStreamImportantH(IZ)V
@@ -658,7 +666,7 @@
     return-void
 .end method
 
-.method static synthetic access$4300(Lcom/android/systemui/volume/VolumeDialogImpl;)Lcom/android/systemui/plugins/VolumeDialogController$State;
+.method static synthetic access$4400(Lcom/android/systemui/volume/VolumeDialogImpl;)Lcom/android/systemui/plugins/VolumeDialogController$State;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mState:Lcom/android/systemui/plugins/VolumeDialogController$State;
@@ -666,7 +674,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$4400(Lcom/android/systemui/volume/VolumeDialogImpl;)Z
+.method static synthetic access$4500(Lcom/android/systemui/volume/VolumeDialogImpl;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mShowing:Z
@@ -674,7 +682,7 @@
     return p0
 .end method
 
-.method static synthetic access$4500(Landroid/widget/SeekBar;I)I
+.method static synthetic access$4600(Landroid/widget/SeekBar;I)I
     .locals 0
 
     invoke-static {p0, p1}, Lcom/android/systemui/volume/VolumeDialogImpl;->getImpliedLevel(Landroid/widget/SeekBar;I)I
@@ -2120,6 +2128,8 @@
     invoke-interface {v0}, Lcom/android/systemui/plugins/VolumeDialogController;->getState()V
 
     invoke-virtual {p0, v2}, Lcom/oneplus/volume/OpVolumeDialogImpl;->applyColorTheme(Z)V
+
+    invoke-virtual {p0}, Lcom/oneplus/volume/OpVolumeDialogImpl;->updateDialogLayout()V
 
     iget-object v0, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mODICaptionsView:Landroid/view/ViewGroup;
 
@@ -4446,25 +4456,39 @@
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
-    iget-boolean v2, v0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mOpForceExpandState:Z
+    iget-object v2, v0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
 
-    const-wide/16 v5, 0x1e
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    const/4 v7, 0x2
+    move-result-object v2
 
-    const/4 v8, 0x3
+    sget v3, Lcom/android/systemui/R$dimen;->op_volume_dialog_panel_width:I
 
-    const/4 v9, 0x4
+    const/16 v4, 0x438
 
-    const/high16 v11, 0x3f800000    # 1.0f
+    invoke-static {v2, v3, v4}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
 
-    const v12, 0x3ecccccd    # 0.4f
+    move-result v2
 
-    const/4 v13, 0x1
+    iget-boolean v3, v0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mOpForceExpandState:Z
 
-    const/4 v14, 0x0
+    const-wide/16 v6, 0x1e
 
-    if-eqz v2, :cond_e
+    const/4 v8, 0x2
+
+    const/4 v9, 0x3
+
+    const/4 v10, 0x4
+
+    const/high16 v12, 0x3f800000    # 1.0f
+
+    const v13, 0x3ecccccd    # 0.4f
+
+    const/4 v14, 0x1
+
+    const/4 v15, 0x0
+
+    if-eqz v3, :cond_e
 
     iget-object v1, v0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mRows:Ljava/util/List;
 
@@ -4475,352 +4499,292 @@
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_b
+    if-eqz v3, :cond_b
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v3
 
-    check-cast v2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;
+    check-cast v3, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;
 
-    iget v15, v2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->stream:I
+    iget v11, v3, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->stream:I
 
-    if-eq v15, v7, :cond_3
+    if-eq v11, v8, :cond_3
 
-    if-eq v15, v9, :cond_3
+    if-eq v11, v10, :cond_3
 
-    if-eq v15, v8, :cond_3
+    if-eq v11, v9, :cond_3
 
-    if-nez v15, :cond_a
+    if-nez v11, :cond_a
 
     invoke-static {}, Lcom/android/systemui/util/ProductUtils;->isUsvMode()Z
 
-    move-result v15
+    move-result v11
 
-    if-eqz v15, :cond_a
+    if-eqz v11, :cond_a
 
     :cond_3
-    iget-boolean v15, v0, Lcom/android/systemui/volume/VolumeDialogImpl;->mNeedPlayExpandAnim:Z
+    iget-boolean v11, v0, Lcom/android/systemui/volume/VolumeDialogImpl;->mNeedPlayExpandAnim:Z
 
-    if-eqz v15, :cond_9
+    if-eqz v11, :cond_9
 
-    iget-boolean v15, v0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mFirstTimeInitDialog:Z
+    iget-boolean v11, v0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mFirstTimeInitDialog:Z
 
-    if-nez v15, :cond_9
+    if-nez v11, :cond_9
 
-    iget v15, v2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->stream:I
+    iget v11, v3, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->stream:I
 
-    const-wide/16 v3, 0x113
+    const-wide/16 v4, 0x113
 
-    if-ne v15, v7, :cond_5
+    if-ne v11, v8, :cond_5
 
-    iget-object v15, v2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
+    iget-object v11, v3, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
 
-    invoke-virtual {v15, v14}, Landroid/view/View;->setAlpha(F)V
+    invoke-virtual {v11, v15}, Landroid/view/View;->setAlpha(F)V
 
-    iget-object v15, v2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
+    iget-object v11, v3, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
 
-    invoke-static {v15, v13}, Lcom/android/systemui/volume/Util;->setVisOrGone(Landroid/view/View;Z)V
+    invoke-static {v11, v14}, Lcom/android/systemui/volume/Util;->setVisOrGone(Landroid/view/View;Z)V
 
     invoke-static {}, Lcom/android/systemui/util/ProductUtils;->isUsvMode()Z
 
-    move-result v15
+    move-result v11
 
-    if-eqz v15, :cond_4
+    if-eqz v11, :cond_4
 
-    iget-object v15, v2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
+    iget-object v11, v3, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
 
-    iget-object v7, v0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
+    neg-int v8, v2
 
-    invoke-virtual {v7}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    div-int/2addr v8, v10
 
-    move-result-object v7
+    int-to-float v8, v8
 
-    sget v10, Lcom/android/systemui/R$dimen;->op_volume_dialog_panel_width:I
-
-    invoke-virtual {v7, v10}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v7
-
-    neg-int v7, v7
-
-    div-int/2addr v7, v9
-
-    int-to-float v7, v7
-
-    invoke-virtual {v15, v7}, Landroid/view/View;->setTranslationX(F)V
+    invoke-virtual {v11, v8}, Landroid/view/View;->setTranslationX(F)V
 
     goto :goto_1
 
     :cond_4
-    iget-object v7, v2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
+    iget-object v8, v3, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
 
-    iget-object v10, v0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
+    neg-int v11, v2
 
-    invoke-virtual {v10}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    div-int/2addr v11, v9
 
-    move-result-object v10
+    int-to-float v11, v11
 
-    sget v15, Lcom/android/systemui/R$dimen;->op_volume_dialog_panel_width:I
-
-    invoke-virtual {v10, v15}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v10
-
-    neg-int v10, v10
-
-    div-int/2addr v10, v8
-
-    int-to-float v10, v10
-
-    invoke-virtual {v7, v10}, Landroid/view/View;->setTranslationX(F)V
+    invoke-virtual {v8, v11}, Landroid/view/View;->setTranslationX(F)V
 
     :goto_1
-    iget-object v7, v2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
+    iget-object v8, v3, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
 
-    invoke-virtual {v7}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v8}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
-    move-result-object v7
+    move-result-object v8
 
-    invoke-virtual {v7, v11}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v8, v12}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
-    move-result-object v7
+    move-result-object v8
 
-    invoke-virtual {v7, v14}, Landroid/view/ViewPropertyAnimator;->translationX(F)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v8, v15}, Landroid/view/ViewPropertyAnimator;->translationX(F)Landroid/view/ViewPropertyAnimator;
 
-    move-result-object v7
+    move-result-object v8
 
-    invoke-virtual {v7, v3, v4}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v8, v4, v5}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
-    move-result-object v3
+    move-result-object v4
 
-    new-instance v4, Landroid/view/animation/PathInterpolator;
+    new-instance v5, Landroid/view/animation/PathInterpolator;
 
-    invoke-direct {v4, v12, v14, v12, v11}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
+    invoke-direct {v5, v13, v15, v13, v12}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
 
-    invoke-virtual {v3, v4}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v4, v5}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
-    move-result-object v3
+    move-result-object v4
 
-    sget-object v4, Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$rNQvPZ4v1mumin0xPzfWijGPmaI;->INSTANCE:Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$rNQvPZ4v1mumin0xPzfWijGPmaI;
+    sget-object v5, Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$rNQvPZ4v1mumin0xPzfWijGPmaI;->INSTANCE:Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$rNQvPZ4v1mumin0xPzfWijGPmaI;
 
-    invoke-virtual {v3, v4}, Landroid/view/ViewPropertyAnimator;->withEndAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v4, v5}, Landroid/view/ViewPropertyAnimator;->withEndAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {v3, v5, v6}, Landroid/view/ViewPropertyAnimator;->setStartDelay(J)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v4, v6, v7}, Landroid/view/ViewPropertyAnimator;->setStartDelay(J)Landroid/view/ViewPropertyAnimator;
 
     goto/16 :goto_3
 
     :cond_5
-    if-ne v15, v9, :cond_7
+    if-ne v11, v10, :cond_7
 
-    iget-object v7, v2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
+    iget-object v8, v3, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
 
-    invoke-virtual {v7, v14}, Landroid/view/View;->setAlpha(F)V
+    invoke-virtual {v8, v15}, Landroid/view/View;->setAlpha(F)V
 
-    iget-object v7, v2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
+    iget-object v8, v3, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
 
-    invoke-static {v7, v13}, Lcom/android/systemui/volume/Util;->setVisOrGone(Landroid/view/View;Z)V
+    invoke-static {v8, v14}, Lcom/android/systemui/volume/Util;->setVisOrGone(Landroid/view/View;Z)V
 
     invoke-static {}, Lcom/android/systemui/util/ProductUtils;->isUsvMode()Z
 
-    move-result v7
+    move-result v8
 
-    if-eqz v7, :cond_6
+    if-eqz v8, :cond_6
 
-    iget-object v7, v2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
+    iget-object v8, v3, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
 
-    iget-object v10, v0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
+    neg-int v11, v2
 
-    invoke-virtual {v10}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    div-int/2addr v11, v10
 
-    move-result-object v10
+    int-to-float v11, v11
 
-    sget v15, Lcom/android/systemui/R$dimen;->op_volume_dialog_panel_width:I
-
-    invoke-virtual {v10, v15}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v10
-
-    neg-int v10, v10
-
-    div-int/2addr v10, v9
-
-    int-to-float v10, v10
-
-    invoke-virtual {v7, v10}, Landroid/view/View;->setTranslationX(F)V
+    invoke-virtual {v8, v11}, Landroid/view/View;->setTranslationX(F)V
 
     goto :goto_2
 
     :cond_6
-    iget-object v7, v2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
+    iget-object v8, v3, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
 
-    iget-object v10, v0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
+    neg-int v11, v2
 
-    invoke-virtual {v10}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    div-int/2addr v11, v9
 
-    move-result-object v10
+    int-to-float v11, v11
 
-    sget v15, Lcom/android/systemui/R$dimen;->op_volume_dialog_panel_width:I
-
-    invoke-virtual {v10, v15}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v10
-
-    neg-int v10, v10
-
-    div-int/2addr v10, v8
-
-    int-to-float v10, v10
-
-    invoke-virtual {v7, v10}, Landroid/view/View;->setTranslationX(F)V
+    invoke-virtual {v8, v11}, Landroid/view/View;->setTranslationX(F)V
 
     :goto_2
-    iget-object v7, v2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
+    iget-object v8, v3, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
 
-    invoke-virtual {v7}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v8}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
-    move-result-object v7
+    move-result-object v8
 
-    invoke-virtual {v7, v11}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v8, v12}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
-    move-result-object v7
+    move-result-object v8
 
-    invoke-virtual {v7, v14}, Landroid/view/ViewPropertyAnimator;->translationX(F)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v8, v15}, Landroid/view/ViewPropertyAnimator;->translationX(F)Landroid/view/ViewPropertyAnimator;
 
-    move-result-object v7
+    move-result-object v8
 
-    invoke-virtual {v7, v3, v4}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v8, v4, v5}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
-    move-result-object v3
+    move-result-object v4
 
-    new-instance v4, Landroid/view/animation/PathInterpolator;
+    new-instance v5, Landroid/view/animation/PathInterpolator;
 
-    invoke-direct {v4, v12, v14, v12, v11}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
+    invoke-direct {v5, v13, v15, v13, v12}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
 
-    invoke-virtual {v3, v4}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v4, v5}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
-    move-result-object v3
+    move-result-object v4
 
-    sget-object v4, Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$m26Kv58I4TUt4m4TU2mNQQsVCVc;->INSTANCE:Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$m26Kv58I4TUt4m4TU2mNQQsVCVc;
+    sget-object v5, Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$m26Kv58I4TUt4m4TU2mNQQsVCVc;->INSTANCE:Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$m26Kv58I4TUt4m4TU2mNQQsVCVc;
 
-    invoke-virtual {v3, v4}, Landroid/view/ViewPropertyAnimator;->withEndAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v4, v5}, Landroid/view/ViewPropertyAnimator;->withEndAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
 
-    move-result-object v3
+    move-result-object v4
 
-    const-wide/16 v5, 0x3c
+    const-wide/16 v6, 0x3c
 
-    invoke-virtual {v3, v5, v6}, Landroid/view/ViewPropertyAnimator;->setStartDelay(J)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v4, v6, v7}, Landroid/view/ViewPropertyAnimator;->setStartDelay(J)Landroid/view/ViewPropertyAnimator;
 
     goto :goto_3
 
     :cond_7
-    if-nez v15, :cond_8
+    if-nez v11, :cond_8
 
     invoke-static {}, Lcom/android/systemui/util/ProductUtils;->isUsvMode()Z
 
-    move-result v5
+    move-result v6
 
-    if-eqz v5, :cond_8
+    if-eqz v6, :cond_8
 
-    iget-object v5, v2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
+    iget-object v6, v3, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
 
-    invoke-virtual {v5, v14}, Landroid/view/View;->setAlpha(F)V
+    invoke-virtual {v6, v15}, Landroid/view/View;->setAlpha(F)V
 
-    iget-object v5, v2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
+    iget-object v6, v3, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
 
-    invoke-static {v5, v13}, Lcom/android/systemui/volume/Util;->setVisOrGone(Landroid/view/View;Z)V
+    invoke-static {v6, v14}, Lcom/android/systemui/volume/Util;->setVisOrGone(Landroid/view/View;Z)V
 
-    iget-object v5, v2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
+    iget-object v6, v3, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
 
-    iget-object v6, v0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
+    neg-int v7, v2
 
-    invoke-virtual {v6}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    div-int/2addr v7, v10
+
+    int-to-float v7, v7
+
+    invoke-virtual {v6, v7}, Landroid/view/View;->setTranslationX(F)V
+
+    iget-object v6, v3, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
+
+    invoke-virtual {v6}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v6
 
-    sget v7, Lcom/android/systemui/R$dimen;->op_volume_dialog_panel_width:I
+    invoke-virtual {v6, v12}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
-    invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    move-result-object v6
 
-    move-result v6
+    invoke-virtual {v6, v15}, Landroid/view/ViewPropertyAnimator;->translationX(F)Landroid/view/ViewPropertyAnimator;
 
-    neg-int v6, v6
+    move-result-object v6
 
-    div-int/2addr v6, v9
+    invoke-virtual {v6, v4, v5}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
-    int-to-float v6, v6
+    move-result-object v4
 
-    invoke-virtual {v5, v6}, Landroid/view/View;->setTranslationX(F)V
+    new-instance v5, Landroid/view/animation/PathInterpolator;
 
-    iget-object v5, v2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
+    invoke-direct {v5, v13, v15, v13, v12}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
 
-    invoke-virtual {v5}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v4, v5}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
-    move-result-object v5
+    move-result-object v4
 
-    invoke-virtual {v5, v11}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
+    sget-object v5, Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$CGNjjawdA5MPOVXXrPSL0CwlAlM;->INSTANCE:Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$CGNjjawdA5MPOVXXrPSL0CwlAlM;
 
-    move-result-object v5
+    invoke-virtual {v4, v5}, Landroid/view/ViewPropertyAnimator;->withEndAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
 
-    invoke-virtual {v5, v14}, Landroid/view/ViewPropertyAnimator;->translationX(F)Landroid/view/ViewPropertyAnimator;
+    move-result-object v4
 
-    move-result-object v5
+    const-wide/16 v5, 0x5a
 
-    invoke-virtual {v5, v3, v4}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v3
-
-    new-instance v4, Landroid/view/animation/PathInterpolator;
-
-    invoke-direct {v4, v12, v14, v12, v11}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
-
-    invoke-virtual {v3, v4}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v3
-
-    sget-object v4, Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$CGNjjawdA5MPOVXXrPSL0CwlAlM;->INSTANCE:Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$CGNjjawdA5MPOVXXrPSL0CwlAlM;
-
-    invoke-virtual {v3, v4}, Landroid/view/ViewPropertyAnimator;->withEndAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v3
-
-    const-wide/16 v4, 0x5a
-
-    invoke-virtual {v3, v4, v5}, Landroid/view/ViewPropertyAnimator;->setStartDelay(J)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v4, v5, v6}, Landroid/view/ViewPropertyAnimator;->setStartDelay(J)Landroid/view/ViewPropertyAnimator;
 
     goto :goto_3
 
     :cond_8
-    iget-object v3, v2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
+    iget-object v4, v3, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
 
-    invoke-static {v3, v13}, Lcom/android/systemui/volume/Util;->setVisOrGone(Landroid/view/View;Z)V
+    invoke-static {v4, v14}, Lcom/android/systemui/volume/Util;->setVisOrGone(Landroid/view/View;Z)V
 
     goto :goto_3
 
     :cond_9
-    iget-object v3, v2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
+    iget-object v4, v3, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
 
-    invoke-static {v3, v13}, Lcom/android/systemui/volume/Util;->setVisOrGone(Landroid/view/View;Z)V
+    invoke-static {v4, v14}, Lcom/android/systemui/volume/Util;->setVisOrGone(Landroid/view/View;Z)V
 
     :goto_3
-    iget-object v3, v2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
+    iget-object v4, v3, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
 
-    invoke-virtual {v3}, Landroid/view/View;->isShown()Z
+    invoke-virtual {v4}, Landroid/view/View;->isShown()Z
 
-    move-result v3
+    move-result v4
 
-    if-eqz v3, :cond_a
+    if-eqz v4, :cond_a
 
-    invoke-direct {v0, v2, v13, v13}, Lcom/android/systemui/volume/VolumeDialogImpl;->updateVolumeRowTintH(Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;ZZ)V
+    invoke-direct {v0, v3, v14, v14}, Lcom/android/systemui/volume/VolumeDialogImpl;->updateVolumeRowTintH(Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;ZZ)V
 
     :cond_a
-    const-wide/16 v5, 0x1e
+    const-wide/16 v6, 0x1e
 
-    const/4 v7, 0x2
+    const/4 v8, 0x2
 
     goto/16 :goto_0
 
@@ -4829,7 +4793,7 @@
 
     if-eqz v1, :cond_d
 
-    invoke-direct {v0, v13}, Lcom/android/systemui/volume/VolumeDialogImpl;->opExpandAnim(Z)V
+    invoke-direct {v0, v14}, Lcom/android/systemui/volume/VolumeDialogImpl;->opExpandAnim(Z)V
 
     iget-boolean v1, v0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mIsExpandAnimDone:Z
 
@@ -4860,9 +4824,9 @@
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_c
-    invoke-virtual {v0, v13}, Lcom/oneplus/volume/OpVolumeDialogImpl;->setOpOutputChooserGravityNeedBeforeAnimStart(Z)V
+    invoke-virtual {v0, v14}, Lcom/oneplus/volume/OpVolumeDialogImpl;->setOpOutputChooserGravityNeedBeforeAnimStart(Z)V
 
-    invoke-virtual {v0, v13}, Lcom/oneplus/volume/OpVolumeDialogImpl;->setOpOutputChooserVisible(Z)V
+    invoke-virtual {v0, v14}, Lcom/oneplus/volume/OpVolumeDialogImpl;->setOpOutputChooserVisible(Z)V
 
     iget-object v1, v0, Lcom/android/systemui/volume/VolumeDialogImpl;->mAnimVol:Landroid/animation/ValueAnimator;
 
@@ -4876,11 +4840,11 @@
     goto/16 :goto_b
 
     :cond_e
-    if-nez v2, :cond_1c
+    if-nez v3, :cond_1c
 
-    iget-boolean v2, v0, Lcom/android/systemui/volume/VolumeDialogImpl;->mNeedPlayExpandAnim:Z
+    iget-boolean v3, v0, Lcom/android/systemui/volume/VolumeDialogImpl;->mNeedPlayExpandAnim:Z
 
-    if-eqz v2, :cond_15
+    if-eqz v3, :cond_15
 
     iget-object v1, v0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mRows:Ljava/util/List;
 
@@ -4891,212 +4855,176 @@
     :goto_4
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_12
+    if-eqz v3, :cond_12
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v3
 
-    check-cast v2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;
+    check-cast v3, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;
 
-    iget v3, v2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->stream:I
+    iget v4, v3, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->stream:I
 
-    const-wide/16 v4, 0xaf
+    const-wide/16 v5, 0xaf
 
-    const/4 v6, 0x2
+    const/4 v7, 0x2
 
-    if-ne v3, v6, :cond_10
+    if-ne v4, v7, :cond_10
 
-    iget-object v3, v2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
+    iget-object v4, v3, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
 
-    invoke-virtual {v3}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v4}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v15}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v4
+
+    neg-int v8, v2
+
+    div-int/lit8 v8, v8, 0x5
+
+    int-to-float v8, v8
+
+    invoke-virtual {v4, v8}, Landroid/view/ViewPropertyAnimator;->translationX(F)Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v5, v6}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v4
+
+    new-instance v5, Landroid/view/animation/PathInterpolator;
+
+    invoke-direct {v5, v13, v15, v13, v12}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
+
+    invoke-virtual {v4, v5}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v4
+
+    new-instance v5, Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$MpNJ24ayoduzmAFeDFV4eMtPu04;
+
+    invoke-direct {v5, v3}, Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$MpNJ24ayoduzmAFeDFV4eMtPu04;-><init>(Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;)V
+
+    invoke-virtual {v4, v5}, Landroid/view/ViewPropertyAnimator;->withEndAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v3
 
-    invoke-virtual {v3, v14}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
+    const-wide/16 v8, 0x3c
 
-    move-result-object v3
-
-    iget-object v7, v0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v7}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v7
-
-    sget v8, Lcom/android/systemui/R$dimen;->op_volume_dialog_panel_width:I
-
-    invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v7
-
-    neg-int v7, v7
-
-    div-int/lit8 v7, v7, 0x5
-
-    int-to-float v7, v7
-
-    invoke-virtual {v3, v7}, Landroid/view/ViewPropertyAnimator;->translationX(F)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v4, v5}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v3
-
-    new-instance v4, Landroid/view/animation/PathInterpolator;
-
-    invoke-direct {v4, v12, v14, v12, v11}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
-
-    invoke-virtual {v3, v4}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v3
-
-    new-instance v4, Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$MpNJ24ayoduzmAFeDFV4eMtPu04;
-
-    invoke-direct {v4, v2}, Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$MpNJ24ayoduzmAFeDFV4eMtPu04;-><init>(Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;)V
-
-    invoke-virtual {v3, v4}, Landroid/view/ViewPropertyAnimator;->withEndAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v2
-
-    const-wide/16 v7, 0x3c
-
-    invoke-virtual {v2, v7, v8}, Landroid/view/ViewPropertyAnimator;->setStartDelay(J)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v3, v8, v9}, Landroid/view/ViewPropertyAnimator;->setStartDelay(J)Landroid/view/ViewPropertyAnimator;
 
     :cond_f
-    const-wide/16 v3, 0x1e
+    const-wide/16 v4, 0x1e
 
     goto :goto_4
 
     :cond_10
-    const-wide/16 v7, 0x3c
+    const-wide/16 v8, 0x3c
 
-    if-ne v3, v9, :cond_11
+    if-ne v4, v10, :cond_11
 
-    iget-object v3, v2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
+    iget-object v4, v3, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
 
-    invoke-virtual {v3}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v4}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {v3, v14}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v4, v15}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
-    move-result-object v3
+    move-result-object v4
 
-    iget-object v10, v0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
+    neg-int v11, v2
 
-    invoke-virtual {v10}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    div-int/lit8 v11, v11, 0x5
 
-    move-result-object v10
+    int-to-float v11, v11
 
-    sget v13, Lcom/android/systemui/R$dimen;->op_volume_dialog_panel_width:I
+    invoke-virtual {v4, v11}, Landroid/view/ViewPropertyAnimator;->translationX(F)Landroid/view/ViewPropertyAnimator;
 
-    invoke-virtual {v10, v13}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    move-result-object v4
 
-    move-result v10
+    invoke-virtual {v4, v5, v6}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
-    neg-int v10, v10
+    move-result-object v4
 
-    div-int/lit8 v10, v10, 0x5
+    new-instance v5, Landroid/view/animation/PathInterpolator;
 
-    int-to-float v10, v10
+    invoke-direct {v5, v13, v15, v13, v12}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
 
-    invoke-virtual {v3, v10}, Landroid/view/ViewPropertyAnimator;->translationX(F)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v4, v5}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {v3, v4, v5}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
+    new-instance v5, Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$uTzBYZgj9yTHnMEMjuHMHE4EwAI;
 
-    move-result-object v3
+    invoke-direct {v5, v3}, Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$uTzBYZgj9yTHnMEMjuHMHE4EwAI;-><init>(Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;)V
 
-    new-instance v4, Landroid/view/animation/PathInterpolator;
-
-    invoke-direct {v4, v12, v14, v12, v11}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
-
-    invoke-virtual {v3, v4}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v4, v5}, Landroid/view/ViewPropertyAnimator;->withEndAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v3
 
-    new-instance v4, Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$uTzBYZgj9yTHnMEMjuHMHE4EwAI;
+    const-wide/16 v4, 0x1e
 
-    invoke-direct {v4, v2}, Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$uTzBYZgj9yTHnMEMjuHMHE4EwAI;-><init>(Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;)V
+    invoke-virtual {v3, v4, v5}, Landroid/view/ViewPropertyAnimator;->setStartDelay(J)Landroid/view/ViewPropertyAnimator;
 
-    invoke-virtual {v3, v4}, Landroid/view/ViewPropertyAnimator;->withEndAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v2
-
-    const-wide/16 v3, 0x1e
-
-    invoke-virtual {v2, v3, v4}, Landroid/view/ViewPropertyAnimator;->setStartDelay(J)Landroid/view/ViewPropertyAnimator;
-
-    goto/16 :goto_4
+    goto :goto_4
 
     :cond_11
-    if-nez v3, :cond_f
+    if-nez v4, :cond_f
 
     invoke-static {}, Lcom/android/systemui/util/ProductUtils;->isUsvMode()Z
 
-    move-result v3
+    move-result v4
 
-    if-eqz v3, :cond_f
+    if-eqz v4, :cond_f
 
-    iget-object v3, v2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
+    iget-object v4, v3, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
 
-    invoke-virtual {v3}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v4}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {v3, v14}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v4, v15}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
-    move-result-object v3
+    move-result-object v4
 
-    iget-object v10, v0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
+    neg-int v11, v2
 
-    invoke-virtual {v10}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    div-int/lit8 v11, v11, 0x5
 
-    move-result-object v10
+    int-to-float v11, v11
 
-    sget v13, Lcom/android/systemui/R$dimen;->op_volume_dialog_panel_width:I
+    invoke-virtual {v4, v11}, Landroid/view/ViewPropertyAnimator;->translationX(F)Landroid/view/ViewPropertyAnimator;
 
-    invoke-virtual {v10, v13}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    move-result-object v4
 
-    move-result v10
+    invoke-virtual {v4, v5, v6}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
-    neg-int v10, v10
+    move-result-object v4
 
-    div-int/lit8 v10, v10, 0x5
+    new-instance v5, Landroid/view/animation/PathInterpolator;
 
-    int-to-float v10, v10
+    invoke-direct {v5, v13, v15, v13, v12}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
 
-    invoke-virtual {v3, v10}, Landroid/view/ViewPropertyAnimator;->translationX(F)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v4, v5}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {v3, v4, v5}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
+    new-instance v5, Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$5x76B-GMRRmIBDZfWPK8_p6CN4k;
 
-    move-result-object v3
+    invoke-direct {v5, v3}, Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$5x76B-GMRRmIBDZfWPK8_p6CN4k;-><init>(Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;)V
 
-    new-instance v4, Landroid/view/animation/PathInterpolator;
-
-    invoke-direct {v4, v12, v14, v12, v11}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
-
-    invoke-virtual {v3, v4}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v4, v5}, Landroid/view/ViewPropertyAnimator;->withEndAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v3
 
-    new-instance v4, Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$5x76B-GMRRmIBDZfWPK8_p6CN4k;
+    const-wide/16 v4, 0x1e
 
-    invoke-direct {v4, v2}, Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$5x76B-GMRRmIBDZfWPK8_p6CN4k;-><init>(Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;)V
-
-    invoke-virtual {v3, v4}, Landroid/view/ViewPropertyAnimator;->withEndAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v2
-
-    const-wide/16 v3, 0x1e
-
-    invoke-virtual {v2, v3, v4}, Landroid/view/ViewPropertyAnimator;->setStartDelay(J)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v3, v4, v5}, Landroid/view/ViewPropertyAnimator;->setStartDelay(J)Landroid/view/ViewPropertyAnimator;
 
     goto/16 :goto_4
 
@@ -5153,9 +5081,9 @@
 
     iget v4, v3, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->stream:I
 
-    if-ne v4, v8, :cond_17
+    if-ne v4, v9, :cond_17
 
-    move v4, v13
+    move v4, v14
 
     goto :goto_7
 
@@ -5170,7 +5098,7 @@
     :cond_18
     if-ne v3, v1, :cond_19
 
-    move v4, v13
+    move v4, v14
 
     goto :goto_8
 
@@ -5195,7 +5123,7 @@
 
     iget v4, v3, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->stream:I
 
-    if-eq v4, v8, :cond_1b
+    if-eq v4, v9, :cond_1b
 
     if-eqz v5, :cond_1b
 
@@ -5220,7 +5148,7 @@
 
     iget v6, v5, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->stream:I
 
-    if-ne v6, v8, :cond_1a
+    if-ne v6, v9, :cond_1a
 
     iget-object v5, v5, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->view:Landroid/view/View;
 
@@ -5246,7 +5174,7 @@
 
     if-eqz v4, :cond_16
 
-    invoke-direct {v0, v3, v13}, Lcom/android/systemui/volume/VolumeDialogImpl;->updateVolumeRowTintH(Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;Z)V
+    invoke-direct {v0, v3, v14}, Lcom/android/systemui/volume/VolumeDialogImpl;->updateVolumeRowTintH(Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;Z)V
 
     goto :goto_6
 

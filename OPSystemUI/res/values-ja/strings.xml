@@ -39,6 +39,11 @@
     <string name="abc_slice_updated">更新時刻: %1$s</string>
     <string name="abc_slices_permission_request">%1$s が %2$s のスライスの表示をリクエストしています</string>
     <string name="abc_toolbar_collapse_description">折りたたむ</string>
+    <string name="about_action_bar_title">情報</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">プライバシーポリシー</string>
+    <string name="about_release_note_title">更新履歴：</string>
+    <string name="about_terms_service">サービス利用規約</string>
     <string name="accessibility_accessibility_button">ユーザー補助機能</string>
     <string name="accessibility_action_divider_bottom_full">下部全画面</string>
     <string name="accessibility_action_divider_left_30">左 30%</string>
@@ -543,7 +548,7 @@
     <string name="cached_apps_freezer_device_default">デバイスのデフォルト</string>
     <string name="cached_apps_freezer_disabled">無効</string>
     <string name="cached_apps_freezer_enabled">有効</string>
-    <string name="cached_apps_freezer_reboot_dialog_text">この変更を適用するには、デバイスの再起動が必要です。今すぐ再起動してください。キャンセルすることもできます。</string>
+    <string name="cached_apps_freezer_reboot_dialog_text">この変更を適用するには、デバイスの再起動が必要です。今すぐ再起動するか、キャンセルしてください。</string>
     <string name="camera_hint">左にスワイプしてカメラを起動</string>
     <string name="camera_label">カメラを起動</string>
     <string name="cancel">キャンセル</string>
@@ -598,6 +603,7 @@
     <string name="controls_favorite_other_zone_header">その他</string>
     <string name="controls_favorite_rearrange">コントロールを並べ替えるには長押ししてドラッグします</string>
     <string name="controls_favorite_removed">すべてのコントロールを削除しました</string>
+    <string name="controls_favorite_see_other_apps">その他のアプリを表示</string>
     <string name="controls_favorite_subtitle">電源ボタン メニューからアクセスするコントロールを選択する</string>
     <string name="controls_favorite_toast_no_changes">変更が保存されていません</string>
     <string name="controls_in_progress">処理中</string>
@@ -696,8 +702,8 @@
     <string name="disable_carrier_button_text">eSIM を無効にする</string>
     <string name="disable_overlays">HWオーバーレイを無効化</string>
     <string name="disable_overlays_summary">画面合成に常にGPUを使用する</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">詳細については、管理者にお問い合わせください</string>
+    <string name="disable_tether_notification_title">テザリングが無効です</string>
     <string name="disable_vpn">VPNを無効にする</string>
     <string name="disabled">無効</string>
     <string name="disabled_by_admin">管理者により無効にされています</string>
@@ -717,6 +723,7 @@
     <string name="drag_to_rearrange_tiles">タイルを並べ替えるには長押ししてドラッグ</string>
     <string name="drag_to_remove_disabled">タイルは %1$d 個以上必要です</string>
     <string name="drag_to_remove_tiles">削除するにはここにドラッグ</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">配置を変更するには、タイルをドラッグしてください。表示または非表示を切り替えるには、タップしてください。</string>
     <string name="empty_shade_text">通知はありません</string>
     <string name="enable_adb">USB デバッグ</string>
@@ -1092,6 +1099,7 @@
     <string name="left_nav_bar_button_type">その他の左ボタンタイプ</string>
     <string name="legacy_vpn_name">VPN</string>
     <string name="loading_injected_setting_summary">読み込んでいます…</string>
+    <string name="loading_text">読み込み中...</string>
     <string name="local_backup_password_summary_change">デスクトップのフルバックアップ用のパスワードを変更または削除する場合にタップします</string>
     <string name="local_backup_password_summary_none">デスクトップのフルバックアップは現在保護されていません</string>
     <string name="local_backup_password_title">PC バックアップ パスワード</string>
@@ -1268,9 +1276,9 @@ IT 管理者が、このデバイスに関連付けられている設定、コ�
     <string name="notification_channel_storage">ストレージ</string>
     <string name="notification_channel_summary_bubble">このコンテンツのフローティング ショートカットで通知をお知らせします。</string>
     <string name="notification_channel_summary_default">スマートフォンの設定を基に着信音またはバイブレーションが有効になります</string>
-    <string name="notification_channel_summary_default_with_bubbles">スマートフォンの設定を基に着信音またはバイブレーションが有効になります。デフォルトでは %1$s からの会話がふきだしで表示されます。</string>
+    <string name="notification_channel_summary_default_with_bubbles">スマートフォンの設定を基に着信音またはバイブレーションが有効になります。デフォルトでは %1$s からの会話がバブルとして表示されます。</string>
     <string name="notification_channel_summary_low">着信音もバイブレーションも無効です</string>
-    <string name="notification_channel_summary_priority">会話セクションの一番上にふきだしとして表示され、プロフィール写真がロック画面に表示されます</string>
+    <string name="notification_channel_summary_priority">会話セクションの一番上にバブルとして表示され、プロフィール写真がロック画面に表示されます</string>
     <string name="notification_channel_switch_accessibility">このチャンネルからの通知を許可する</string>
     <string name="notification_channel_tethering_status">ホットスポットおよびテザリングのステータス</string>
     <string name="notification_channel_tv_pip">ピクチャー イン ピクチャー</string>
@@ -1299,7 +1307,7 @@ IT 管理者が、このデバイスに関連付けられている設定、コ�
     <string name="notification_menu_snooze_description">通知スヌーズ設定</string>
     <string name="notification_more_settings">詳細設定</string>
     <string name="notification_multichannel_desc">このグループの通知はここでは設定できません</string>
-    <string name="notification_priority_title">優先度</string>
+    <string name="notification_priority_title">優先</string>
     <string name="notification_section_header_alerting">通知</string>
     <string name="notification_section_header_conversations">会話</string>
     <string name="notification_section_header_gentle">サイレント</string>
@@ -1325,6 +1333,13 @@ IT 管理者が、このデバイスに関連付けられている設定、コ�
     <string name="oneplus_threekey_navigation_vibration">バイブのみ</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> 個をロック解除</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> 個をロック解除</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
+    <string name="op_date_format">M月d日</string>
     <string name="op_earphone_connect">ペア設定しています...</string>
     <string name="op_earphone_connected_fail">ペア設定に失敗しました。ヘッドセットと Bluetooth のステータスを確認してみてください。</string>
     <string name="op_earphone_connected_success">ペア設定が完了しました。さらにペア設定を行うにはタップしてください。</string>
@@ -1354,9 +1369,10 @@ IT 管理者が、このデバイスに関連付けられている設定、コ�
     <string name="op_notification_channel_summary_low">重要性の低い通知は、サウンドまたはバイブを使用しません。</string>
     <string name="op_notification_section_header_gentle">その他の通知</string>
     <string name="op_notification_silence_title">その他</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">ダークモード</string>
     <string name="op_qs_data_usage_used">%1$s：%2$s %3$s 使用済み</string>
-    <string name="op_quick_settings_night_display_label">おやすみモード</string>
+    <string name="op_quick_settings_night_display_label">ビジョンコンフォート</string>
     <string name="op_quick_settings_night_display_summary_off">おやすみモードがオフになっています。タップしてオンにします。</string>
     <string name="op_quick_settings_night_display_summary_on">おやすみモードがオンになっています。タップしてオフにします。</string>
     <string name="op_read_mode2_dialog_black">モノクローム効果</string>
@@ -1482,7 +1498,7 @@ IT 管理者が、このデバイスに関連付けられている設定、コ�
     <string name="priority_onboarding_appear_as_bubble_text">他のアプリに重ねてフローティング バブルとして表示</string>
     <string name="priority_onboarding_behavior">優先度の高い会話は、次のように表示されます。</string>
     <string name="priority_onboarding_done_button_title">OK</string>
-    <string name="priority_onboarding_ignores_dnd_text">サイレント モードに割り込み</string>
+    <string name="priority_onboarding_ignores_dnd_text">サイレント モードが ON でも表示</string>
     <string name="priority_onboarding_settings_button_title">設定</string>
     <string name="priority_onboarding_show_at_top_text">会話セクションの一番上にバブルで表示</string>
     <string name="priority_onboarding_show_avatar_text">ロック画面にプロフィール写真を表示</string>
@@ -1871,7 +1887,7 @@ IT 管理者が、このデバイスに関連付けられている設定、コ�
     <string name="tethered_notification_hybrid_sharing_mobile">モバイルデータを共有しています。[設定] を表示するには、クリックしてください</string>
     <string name="tethered_notification_hybrid_sharing_none">共有できるネットワークはありません。[設定] を表示するには、クリックしてください</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Wi-Fi を共有しています。[設定] を表示するには、クリックしてください</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">タップして設定してください。</string>
     <string name="tethered_notification_multi_device_message">%1$s 個のデバイスが接続されています</string>
     <string name="tethered_notification_multi_tether_title">テザリングとモバイルホットスポットがアクティブ</string>
     <string name="tethered_notification_no_device_message">接続されているデバイスがありません</string>
@@ -2104,7 +2120,17 @@ Wi‑Fi アドレス（BSSID）
     <string name="wifi_verbose_logging">Wi-Fi 詳細ログの有効化</string>
     <string name="wifi_verbose_logging_summary">Wi-Fi ログレベルを上げて、Wi-Fi 選択ツールで SSID RSSI ごとに表示します</string>
     <string name="window_animation_scale_title">ウィンドウアニメスケール</string>
-    <string name="work_life_balance_mode">Work-Life Balance</string>
+    <string name="wlb_break_mode_active">アクティブ</string>
+    <string name="wlb_break_mode_active_text">%1$s モード · %2$s</string>
+    <string name="wlb_break_mode_on_break">休憩中</string>
+    <string name="wlb_break_mode_resume">再開</string>
+    <string name="wlb_break_mode_take_break">休憩する</string>
+    <string name="wlb_qs_detail_break_mode">休憩モード</string>
+    <string name="wlb_qs_detail_break_mode_desc">30 分後に自動的に以前のモードに戻ります</string>
+    <string name="wlb_qs_detail_life_mode">プライベートモード</string>
+    <string name="wlb_qs_detail_more_setting">その他の設定</string>
+    <string name="wlb_qs_detail_work_mode">仕事モード</string>
+    <string name="work_life_balance_mode">仕事とプライベートのバランス</string>
     <string name="zen_alarm_warning">次回のアラーム（%1$s）は鳴りません</string>
     <string name="zen_alarm_warning_indef">この設定をOFFにしないと次回のアラーム（%1$s）は鳴りません</string>
     <string name="zen_alarms_introduction">アラーム以外の音やバイブレーションに煩わされることはありません。音楽、動画、ゲームなど再生対象として選択したコンテンツは引き続き再生されます。</string>
@@ -2125,5 +2151,5 @@ Wi‑Fi アドレス（BSSID）
     <string name="zen_silence_introduction_voice">アラーム、音楽、動画、ゲームを含むすべての音とバイブレーションがブロックされます。電話をかけることはできます。</string>
     <string name="zzz_op_global_action_bootloader">ブートローダ</string>
     <string name="zzz_op_global_action_recovery">リカバリー</string>
-    <string name="zzz_op_quick_pay_no_install_message">クイック支払を使用する支払いアプリをインストールしてください</string>
+    <string name="zzz_op_quick_pay_no_install_message">クイック支払を使用するには、支払いアプリをインストールしてください</string>
 </resources>

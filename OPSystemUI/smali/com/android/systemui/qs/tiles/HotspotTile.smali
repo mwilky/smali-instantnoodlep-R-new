@@ -1822,6 +1822,12 @@
 
     move-result v6
 
+    if-nez v6, :cond_d
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isUSS()Z
+
+    move-result v6
+
     if-eqz v6, :cond_b
 
     goto :goto_9
@@ -1844,11 +1850,11 @@
     :cond_c
     iget-boolean v6, p1, Lcom/android/systemui/plugins/qs/QSTile$BooleanState;->value:Z
 
-    if-eqz v6, :cond_f
+    if-eqz v6, :cond_d
 
     new-array v6, v1, [I
 
-    const/16 v7, 0xcd
+    const/16 v7, 0xc5
 
     aput v7, v6, v2
 
@@ -1856,45 +1862,13 @@
 
     move-result v6
 
-    if-eqz v6, :cond_f
-
-    iget-object v6, p0, Lcom/android/systemui/qs/tiles/HotspotTile;->mWifiManager:Landroid/net/wifi/WifiManager;
-
-    invoke-virtual {v6}, Landroid/net/wifi/WifiManager;->getSoftApWifiStandard()I
-
-    move-result v6
-
-    const/4 v7, 0x6
-
-    if-ne v6, v7, :cond_d
+    if-eqz v6, :cond_d
 
     iget-object v6, p0, Lcom/android/systemui/qs/tiles/HotspotTile;->mWifi6EnabledStatic:Lcom/android/systemui/plugins/qs/QSTile$Icon;
 
     iput-object v6, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->icon:Lcom/android/systemui/plugins/qs/QSTile$Icon;
 
-    goto :goto_9
-
     :cond_d
-    const/4 v7, 0x5
-
-    if-ne v6, v7, :cond_e
-
-    iget-object v6, p0, Lcom/android/systemui/qs/tiles/HotspotTile;->mWifi5EnabledStatic:Lcom/android/systemui/plugins/qs/QSTile$Icon;
-
-    iput-object v6, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->icon:Lcom/android/systemui/plugins/qs/QSTile$Icon;
-
-    goto :goto_9
-
-    :cond_e
-    const/4 v7, 0x4
-
-    if-ne v6, v7, :cond_f
-
-    iget-object v6, p0, Lcom/android/systemui/qs/tiles/HotspotTile;->mWifi4EnabledStatic:Lcom/android/systemui/plugins/qs/QSTile$Icon;
-
-    iput-object v6, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->icon:Lcom/android/systemui/plugins/qs/QSTile$Icon;
-
-    :cond_f
     :goto_9
     const-class v6, Landroid/widget/Switch;
 
@@ -1908,37 +1882,37 @@
 
     iput-object v6, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->contentDescription:Ljava/lang/CharSequence;
 
-    if-nez v4, :cond_11
+    if-nez v4, :cond_f
 
     iget-boolean v6, p0, Lcom/android/systemui/qs/tiles/HotspotTile;->mVirtualSimExist:Z
 
-    if-nez v6, :cond_11
+    if-nez v6, :cond_f
 
     invoke-static {}, Lcom/oneplus/util/OpUtils;->isUSS()Z
 
     move-result v6
 
-    if-eqz v6, :cond_10
+    if-eqz v6, :cond_e
 
     iget-boolean v6, p0, Lcom/android/systemui/qs/tiles/HotspotTile;->mReguireTileToGray:Z
 
-    if-eqz v6, :cond_10
+    if-eqz v6, :cond_e
 
     goto :goto_a
 
-    :cond_10
+    :cond_e
     move v6, v2
 
     goto :goto_b
 
-    :cond_11
+    :cond_f
     :goto_a
     move v6, v1
 
     :goto_b
     iget-boolean v7, p0, Lcom/android/systemui/qs/tiles/HotspotTile;->mVirtualSimExist:Z
 
-    if-eqz v7, :cond_12
+    if-eqz v7, :cond_10
 
     iget-object v7, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->TAG:Ljava/lang/String;
 
@@ -1946,57 +1920,57 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_12
+    :cond_10
     iget-boolean v7, p1, Lcom/android/systemui/plugins/qs/QSTile$BooleanState;->value:Z
 
-    if-nez v7, :cond_14
+    if-nez v7, :cond_12
 
     iget-boolean v7, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->isTransient:Z
 
-    if-eqz v7, :cond_13
+    if-eqz v7, :cond_11
 
     goto :goto_c
 
-    :cond_13
+    :cond_11
     move v7, v2
 
     goto :goto_d
 
-    :cond_14
+    :cond_12
     :goto_c
     move v7, v1
 
     :goto_d
-    if-eqz v6, :cond_15
+    if-eqz v6, :cond_13
 
     iput v2, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->state:I
 
     goto :goto_f
 
-    :cond_15
+    :cond_13
     invoke-static {}, Lcom/android/systemui/util/ProductUtils;->isUsvMode()Z
 
     move-result v2
 
-    if-eqz v2, :cond_16
+    if-eqz v2, :cond_14
 
-    if-eqz v5, :cond_16
+    if-eqz v5, :cond_14
 
     goto :goto_e
 
-    :cond_16
-    if-eqz v7, :cond_17
+    :cond_14
+    if-eqz v7, :cond_15
 
     const/4 v1, 0x2
 
-    :cond_17
+    :cond_15
     :goto_e
     iput v1, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->state:I
 
     :goto_f
     sget-boolean v1, Lcom/android/systemui/qs/tiles/HotspotTile;->DEBUG_ONEPLUS:Z
 
-    if-eqz v1, :cond_18
+    if-eqz v1, :cond_16
 
     iget-object v1, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->TAG:Ljava/lang/String;
 
@@ -2080,7 +2054,7 @@
 
     invoke-static {v1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_18
+    :cond_16
     invoke-direct {p0, v7, v3, v4, v0}, Lcom/android/systemui/qs/tiles/HotspotTile;->getSecondaryLabel(ZZZI)Ljava/lang/String;
 
     move-result-object p0

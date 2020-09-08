@@ -261,13 +261,7 @@
 .end method
 
 .method public notifyPressMode(I)V
-    .locals 2
-
-    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->mHandler:Landroid/os/Handler;
-
-    iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->mPressModeRunnable:Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier$PressModeRunnable;
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+    .locals 1
 
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->mPressModeRunnable:Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier$PressModeRunnable;
 

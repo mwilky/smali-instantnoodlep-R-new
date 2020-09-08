@@ -84,7 +84,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, L$$ServiceLoaderMethods;->$load0()Ljava/util/Iterator;
+    invoke-static {}, L$$ServiceLoaderMethods;->$load$kotlinx$coroutines$internal$MainDispatcherLoader$loadMainDispatcher$-159772$$0()Ljava/util/Iterator;
 
     move-result-object v1
 

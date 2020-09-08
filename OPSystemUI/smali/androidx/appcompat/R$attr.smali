@@ -64,20 +64,20 @@
 
 .field public static final listPopupWindowStyle:I = 0x7f04032d
 
-.field public static final panelMenuListTheme:I = 0x7f0403fe
+.field public static final panelMenuListTheme:I = 0x7f0403fb
 
-.field public static final ratingBarStyle:I = 0x7f040461
+.field public static final ratingBarStyle:I = 0x7f04045e
 
-.field public static final searchViewStyle:I = 0x7f040496
+.field public static final searchViewStyle:I = 0x7f040493
 
-.field public static final seekBarStyle:I = 0x7f04049d
+.field public static final seekBarStyle:I = 0x7f04049a
 
-.field public static final spinnerStyle:I = 0x7f0404d7
+.field public static final spinnerStyle:I = 0x7f0404d4
 
-.field public static final state_indeterminate:I = 0x7f0404e6
+.field public static final state_indeterminate:I = 0x7f0404e3
 
-.field public static final switchStyle:I = 0x7f04050a
+.field public static final switchStyle:I = 0x7f040507
 
-.field public static final toolbarNavigationButtonStyle:I = 0x7f040582
+.field public static final toolbarNavigationButtonStyle:I = 0x7f04057f
 
-.field public static final toolbarStyle:I = 0x7f040583
+.field public static final toolbarStyle:I = 0x7f040580

@@ -172,7 +172,7 @@
 
     new-array v0, v0, [I
 
-    const/16 v1, 0x4c
+    const/16 v1, 0x4a
 
     const/4 v2, 0x0
 

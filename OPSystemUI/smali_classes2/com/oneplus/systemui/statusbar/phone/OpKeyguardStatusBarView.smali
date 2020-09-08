@@ -104,7 +104,7 @@
 .end method
 
 .method public onHighlightHintStateChange()V
-    .locals 4
+    .locals 5
 
     const-class v0, Lcom/oneplus/systemui/statusbar/phone/OpHighlightHintController;
 
@@ -126,43 +126,62 @@
 
     const/4 v3, 0x0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
-    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpKeyguardStatusBarView;->mCarrierLabel:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpKeyguardStatusBarView;->mCarrierLabel:Landroid/widget/TextView;
 
     if-eqz v1, :cond_0
+
+    move v4, v2
 
     goto :goto_0
 
     :cond_0
-    move v2, v3
+    move v4, v3
 
     :goto_0
-    invoke-virtual {p0, v2}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v4}, Landroid/widget/TextView;->setVisibility(I)V
+
+    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpKeyguardStatusBarView;->mHighlightHintView:Landroid/view/View;
+
+    if-eqz v1, :cond_1
+
+    move v2, v3
+
+    :cond_1
+    invoke-virtual {p0, v2}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_1
 
-    :cond_1
-    if-eqz v1, :cond_2
+    :cond_2
+    if-eqz v1, :cond_3
 
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpKeyguardStatusBarView;->mSystemIcons:Landroid/view/View;
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpKeyguardStatusBarView;->mCarrierLabel:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpKeyguardStatusBarView;->mCarrierLabel:Landroid/widget/TextView;
 
-    invoke-virtual {p0, v2}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
+
+    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpKeyguardStatusBarView;->mHighlightHintView:Landroid/view/View;
+
+    invoke-virtual {p0, v3}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_1
 
-    :cond_2
+    :cond_3
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpKeyguardStatusBarView;->mSystemIcons:Landroid/view/View;
 
     invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpKeyguardStatusBarView;->mCarrierLabel:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpKeyguardStatusBarView;->mCarrierLabel:Landroid/widget/TextView;
 
-    invoke-virtual {p0, v3}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
+
+    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpKeyguardStatusBarView;->mHighlightHintView:Landroid/view/View;
+
+    invoke-virtual {p0, v2}, Landroid/view/View;->setVisibility(I)V
 
     :goto_1
     return-void

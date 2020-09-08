@@ -561,10 +561,15 @@ Sélection"</string>
     <string name="controls_favorite_other_zone_header">Autre</string>
     <string name="controls_favorite_rearrange">"Maintenez le doigt sur l'écran, puis glissez-le pour réorganiser les commandes"</string>
     <string name="controls_favorite_removed">Toutes les commandes ont été supprimées</string>
+    <string name="controls_favorite_see_other_apps">Afficher autres applications</string>
     <string name="controls_favorite_subtitle">"Sélectionnez les commandes auxquelles vous souhaitez accéder à partir du menu de l'interrupteur"</string>
     <string name="controls_favorite_toast_no_changes">Modifications non enregistrées</string>
     <string name="controls_in_progress">En cours</string>
+    <string name="controls_media_close_session">Masquer la session en cours.</string>
+    <string name="controls_media_dismiss_button">Masquer</string>
     <string name="controls_media_resume">Reprendre</string>
+    <string name="controls_media_settings_button">Paramètres</string>
+    <string name="controls_media_title">Commandes multimédias</string>
     <string name="controls_menu_add">Ajouter des commandes</string>
     <string name="controls_menu_edit">Modifier des commandes</string>
     <string name="controls_open_app">"Ouvrir l'application"</string>
@@ -659,6 +664,8 @@ Si vous rétablissez la connexion de données cellulaires, des frais peuvent s'a
     <string name="disconnect_vpn">Déconnecter le RPV</string>
     <string name="dnd_is_off">Le mode Ne pas déranger est désactivé</string>
     <string name="dnd_suppressing_shade_text">Les notifications sont suspendues par le mode Ne pas déranger</string>
+    <string name="do_disclosure_generic">Cet appareil appartient à votre organisation</string>
+    <string name="do_disclosure_with_name">Cet appareil appartient à %s</string>
     <string name="do_not_silence">Ne pas activer le mode silencieux</string>
     <string name="do_not_silence_block">Ne pas activer le mode silencieux ni bloquer</string>
     <string name="dock_alignment_not_charging">Réalignez le téléphone pour le recharger sans fil</string>
@@ -1061,8 +1068,18 @@ Pour en savoir plus, communiquez avec votre administrateur."</string>
     <string name="monitoring_description_do_learn_more_separator">" "</string>
     <string name="monitoring_description_managed_profile_ca_certificate">Votre entreprise a installé une autorité de certification dans votre profil professionnel. Votre trafic sur le réseau sécurisé peut être contrôlé ou modifié.</string>
     <string name="monitoring_description_managed_profile_named_vpn">Votre profil professionnel est connecté à %1$s, qui peut contrôler votre activité réseau, y compris les courriels, les applications et les sites Web.</string>
+    <string name="monitoring_description_management">"Cet appareil appartient à votre organisation.
+
+Votre administrateur informatique peut contrôler et gérer les paramètres, l'accès aux données d'entreprise, les applications, les données associées à votre appareil et les renseignements sur sa position.
+
+Pour obtenir plus d'information, communiquez avec votre administrateur informatique."</string>
     <string name="monitoring_description_management_ca_certificate">Votre entreprise a installé une autorité de certification sur cet appareil. Votre trafic sur le réseau sécurisé peut être contrôlé ou modifié.</string>
     <string name="monitoring_description_management_network_logging">Votre administrateur a activé la journalisation réseau, qui surveille le trafic sur votre appareil.</string>
+    <string name="monitoring_description_named_management">"Votre appareil appartient à %1$s.
+
+Votre administrateur informatique peut contrôler et gérer les paramètres, l'accès aux données d'entreprise, les applications, les données associées à l'appareil et les renseignements sur sa position.
+
+Pour obtenir plus d'information, communiquez avec votre administrateur informatique."</string>
     <string name="monitoring_description_named_vpn">Vous êtes connecté à %1$s, qui peut contrôler votre activité réseau, y compris les courriels, les applications et les sites Web.</string>
     <string name="monitoring_description_network_logging">"Votre administrateur a activé la journalisation réseau, qui surveille le trafic sur votre appareil.
 
@@ -1337,8 +1354,20 @@ Vous êtes aussi connecté à un RPV, qui peut surveiller votre activité sur le
     <string name="quick_settings_dark_mode_secondary_label_until">"Jusqu'à %s"</string>
     <string name="quick_settings_dark_mode_secondary_label_until_sunrise">"Jusqu'à l'aube"</string>
     <string name="quick_settings_disclosure_managed_profile_monitoring">Votre organisation peut contrôler le trafic réseau dans votre profil professionnel</string>
+    <string name="quick_settings_disclosure_managed_profile_named_vpn">Votre profil professionnel est connecté à %1$s</string>
+    <string name="quick_settings_disclosure_management">Cet appareil appartient à votre organisation</string>
+    <string name="quick_settings_disclosure_management_monitoring">Votre organisation possède cet appareil et peut contrôler le trafic réseau</string>
+    <string name="quick_settings_disclosure_management_named_vpn">Cet appareil appartient à votre organisation et est connecté à %1$s</string>
+    <string name="quick_settings_disclosure_management_vpns">Cet appareil appartient à votre organisation et est connecté à des RPV</string>
     <string name="quick_settings_disclosure_monitoring">Le réseau peut être surveillé</string>
     <string name="quick_settings_disclosure_named_managed_profile_monitoring">%1$s peut contrôler votre trafic réseau dans votre profil professionnel</string>
+    <string name="quick_settings_disclosure_named_management">Cet appareil appartient à %1$s</string>
+    <string name="quick_settings_disclosure_named_management_monitoring">%1$s possède cet appareil et peut contrôler le trafic réseau</string>
+    <string name="quick_settings_disclosure_named_management_named_vpn">Cet appareil appartient à %1$s et est connecté à %2$s</string>
+    <string name="quick_settings_disclosure_named_management_vpns">Cet appareil appartient à %1$s et est connecté à des RPV</string>
+    <string name="quick_settings_disclosure_named_vpn">Cet appareil est connecté à %1$s</string>
+    <string name="quick_settings_disclosure_personal_profile_named_vpn">Votre profil personnel est connecté à %1$s</string>
+    <string name="quick_settings_disclosure_vpns">Cet appareil est connecté à des RPV</string>
     <string name="quick_settings_dnd_alarms_label">Alarmes seulement</string>
     <string name="quick_settings_dnd_label">Ne pas déranger</string>
     <string name="quick_settings_dnd_none_label">Aucune interruption</string>

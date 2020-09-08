@@ -39,6 +39,11 @@
     <string name="abc_slice_updated">%1$s बजे अपडेट किया गया</string>
     <string name="abc_slices_permission_request">%1$s, %2$s के हिस्से (स्लाइस) दिखाना चाहता है</string>
     <string name="abc_toolbar_collapse_description">छोटा करें</string>
+    <string name="about_action_bar_title">इसके बारे में</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">गोपनीयता नीति</string>
+    <string name="about_release_note_title">अपडेट लॉग:</string>
+    <string name="about_terms_service">सेवा की शर्तें</string>
     <string name="accessibility_accessibility_button">सुलभता</string>
     <string name="accessibility_action_divider_bottom_full">नीचे की स्क्रीन को फ़ुल स्क्रीन बनाएं</string>
     <string name="accessibility_action_divider_left_30">बाईं स्क्रीन को 30% बनाएं</string>
@@ -266,7 +271,7 @@
     <string name="accessibility_wimax_signal_full">WiMAX सि‍ग्‍नल पूरा है.</string>
     <string name="accessibility_wimax_three_bars">WiMAX तीन बार.</string>
     <string name="accessibility_wimax_two_bars">WiMAX दो बार.</string>
-    <string name="accessibility_work_life_balance_mode">कार्य-जीवन संतुलन</string>
+    <string name="accessibility_work_life_balance_mode">Work Life Balance</string>
     <string name="accessibility_work_life_balance_mode_off">कार्य-जीवन संतुलन मोड बंद ‍किया गया।</string>
     <string name="accessibility_work_life_balance_mode_on">कार्य-जीवन संतुलन मोड चालू ‍किया गया।</string>
     <string name="accessibility_zero_bars">शून्य बार.</string>
@@ -542,7 +547,7 @@
     <string name="cached_apps_freezer_device_default">डिवाइस की डिफ़ॉल्ट सेटिंग</string>
     <string name="cached_apps_freezer_disabled">बंद है</string>
     <string name="cached_apps_freezer_enabled">चालू है</string>
-    <string name="cached_apps_freezer_reboot_dialog_text">बदली गई सेटिंग को लागू करने के लिए, अपने डिवाइस को फिर से चालू करें. डिवाइस को फिर से चालू करें या रद्द करें.</string>
+    <string name="cached_apps_freezer_reboot_dialog_text">बदली गई सेटिंग को लागू करने के लिए, डिवाइस को रीस्टार्ट करना होगा. अपने डिवाइस को रीस्टार्ट करें या रद्द करें.</string>
     <string name="camera_hint">कैमरे के लिए आइकॉन से स्वाइप करें</string>
     <string name="camera_label">कैमरा खोलें</string>
     <string name="cancel">रद्द करें</string>
@@ -597,6 +602,7 @@
     <string name="controls_favorite_other_zone_header">अन्य</string>
     <string name="controls_favorite_rearrange">कंट्रोल का क्रम फिर से बदलने के लिए उन्हें दबाकर रखें और खींचें</string>
     <string name="controls_favorite_removed">सभी कंट्रोल हटा दिए गए</string>
+    <string name="controls_favorite_see_other_apps">दूसरे ऐप्लिकेशन देखें</string>
     <string name="controls_favorite_subtitle">पावर मेन्यू से ऐक्सेस करने के लिए कंट्रोल चुनें</string>
     <string name="controls_favorite_toast_no_changes">बदलाव सेव नहीं किए गए</string>
     <string name="controls_in_progress">जारी है</string>
@@ -695,8 +701,8 @@
     <string name="disable_carrier_button_text">eSIM अक्षम करें</string>
     <string name="disable_overlays">एचडब्ल्यू ओवरले बंद करें</string>
     <string name="disable_overlays_summary">स्‍क्रीन संयोजन के लिए हमेशा जीपीयू का उपयोग करें</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">विवरण के लिए अपने एडमिन से संपर्क करें</string>
+    <string name="disable_tether_notification_title">टेदरिंग अक्षम है</string>
     <string name="disable_vpn">VPN अक्षम करें</string>
     <string name="disabled">बंद किया गया</string>
     <string name="disabled_by_admin">एडमिन की ओर से बंद किया गया</string>
@@ -704,6 +710,8 @@
     <string name="disconnect_vpn">VPN डिस्‍कनेक्‍ट करें</string>
     <string name="dnd_is_off">परेशान न करें बंद है</string>
     <string name="dnd_suppressing_shade_text">"'परेशान न करें' सुविधा के ज़रिए कुछ समय के लिए सूचनाएं दिखाना रोक दिया गया है"</string>
+    <string name="do_disclosure_generic">इस डिवाइस का मालिकाना हक आपके संगठन के पास है</string>
+    <string name="do_disclosure_with_name">इस डिवाइस का मालिकाना हक %s के पास है</string>
     <string name="do_not_silence">मौन ना करें</string>
     <string name="do_not_silence_block">मौन या ब्लॉक ना करें</string>
     <string name="dock_alignment_not_charging">वायरलेस चार्जिंग के लिए, फ़ोन को डॉक पर ठीक तरह से रखें</string>
@@ -714,6 +722,7 @@
     <string name="drag_to_rearrange_tiles">टाइल का क्रम फिर से बदलने के लिए उन्हें दबाकर रखें और खींचें</string>
     <string name="drag_to_remove_disabled">आपके पास कम से कम %1$d टाइलें होनी चाहिए</string>
     <string name="drag_to_remove_tiles">हटाने के लिए यहां खींचें और छोड़ें</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">टाइल्स पुनःव्यवस्थित करने के लिए ड्रैग करें। दिखाने या छुपाने के लिए टैप करें।</string>
     <string name="empty_shade_text">कोई सूचना नहीं मिली</string>
     <string name="enable_adb">USB डीबग करना</string>
@@ -859,7 +868,7 @@
 अलार्म"</string>
     <string name="interruption_level_game">गेम</string>
     <string name="interruption_level_movie">फ़िल्में</string>
-    <string name="interruption_level_music">संगीत</string>
+    <string name="interruption_level_music">म्यूज़िक</string>
     <string name="interruption_level_none">पूरी तरह शांत</string>
     <string name="interruption_level_none_twoline">"पूरी तरह
 शांत"</string>
@@ -1085,6 +1094,7 @@
     <string name="left_nav_bar_button_type">कुछ और बाएं बटन के प्रकार</string>
     <string name="legacy_vpn_name">वीपीएन</string>
     <string name="loading_injected_setting_summary">लोड हो रहा है…</string>
+    <string name="loading_text">लोड किया जा रहा है...</string>
     <string name="local_backup_password_summary_change">डेस्कटॉप के पूरे बैक अप का पासवर्ड बदलने या हटाने के लिए टैप करें</string>
     <string name="local_backup_password_summary_none">डेस्‍कटॉप के पूरे बैक अप फ़िलहाल सुरक्षित नहीं हैं</string>
     <string name="local_backup_password_title">डेस्‍कटॉप बैकअप पासवर्ड</string>
@@ -1169,8 +1179,18 @@
     <string name="monitoring_description_do_learn_more_separator">" "</string>
     <string name="monitoring_description_managed_profile_ca_certificate">आपके संगठन ने आपकी वर्क प्रोफ़ाइल में एक प्रमाणपत्र अनुमति इंस्टॉल की है. आपके सुरक्षित नेटवर्क ट्रैफ़िक की निगरानी या उसमें बदलाव किया जा सकता है.</string>
     <string name="monitoring_description_managed_profile_named_vpn">आपकी वर्क प्रोफ़ाइल %1$s से कनेक्ट है, जो ईमेल, ऐप्लिकेशन और वेबसाइटों सहित आपकी नेटवर्क गतिविधि की निगरानी कर सकता है.</string>
+    <string name="monitoring_description_management">"इस डिवाइस का मालिकाना हक आपके संगठन के पास है.
+
+आपके संगठन का आईटी एडमिन कुछ चीज़ों की निगरानी और उन्हें प्रबंधित कर सकता है, जैसे कि सेटिंग, कॉर्पोरेट ऐक्सेस, ऐप्लिकेशन, आपके डिवाइस से जुड़ा डेटा, और आपके डिवाइस की जगह की जानकारी.
+
+ज़्यादा जानकारी के लिए, अपने आईटी एडमिन से संपर्क करें."</string>
     <string name="monitoring_description_management_ca_certificate">आपके संगठन ने इस डिवाइस पर एक प्रमाणपत्र अनुमति इंस्टॉल की है. आपके सुरक्षित नेटवर्क पर ट्रेफ़िक की निगरानी या उसमें बदलाव किया जा सकता है.</string>
     <string name="monitoring_description_management_network_logging">आपके व्यवस्थापक ने नेटवर्क लॉगिंग चालू किया है, जो आपके डिवाइस पर ट्रैफ़िक की निगरानी करता है.</string>
+    <string name="monitoring_description_named_management">"इस डिवाइस का मालिकाना हक %1$s के पास है.
+
+आपके संगठन का आईटी एडमिन कुछ चीज़ों की निगरानी और उन्हें प्रबंधित कर सकता है, जैसे कि सेटिंग, कॉर्पोरेट ऐक्सेस, ऐप्लिकेशन, आपके डिवाइस से जुड़ा डेटा, और आपके डिवाइस की जगह की जानकारी.
+
+ज़्यादा जानकारी के लिए, अपने आईटी एडमिन से संपर्क करें."</string>
     <string name="monitoring_description_named_vpn">आप %1$s से कनेक्‍ट हैं, जो ईमेल, ऐप्लिकेशन और वेबसाइटों सहित आपकी नेटवर्क गतिविधि की निगरानी कर सकते हैं.</string>
     <string name="monitoring_description_network_logging">"आपके एडमिन ने नेटवर्क लॉग करना चालू कर दिया है, जो आपके डिवाइस पर ट्रैफ़िक की निगरानी करता है.
 
@@ -1308,6 +1328,12 @@
     <string name="oneplus_threekey_navigation_vibration">केवल कंपन</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> ऑनलॉक</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> ऑनलॉक्स</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">जोड़ा जा रहा है...</string>
     <string name="op_earphone_connected_fail">जुड़ने में विफल। आप हेडसेट और ब्लूटूथ स्थिति की जांच कर सकते हैं ।</string>
     <string name="op_earphone_connected_success">जुड़ गया। अधिक एक्सेस कार्ड टैप करें।</string>
@@ -1337,9 +1363,10 @@
     <string name="op_notification_channel_summary_low">बिना किसी ध्वनि या कंपन के कम महत्वपूर्ण वाले नोटिफ़िकेशंस</string>
     <string name="op_notification_section_header_gentle">अन्य नोटिफिकेशंस</string>
     <string name="op_notification_silence_title">अन्य</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">डार्क मोड</string>
     <string name="op_qs_data_usage_used">%1$s%2$s%3$s प्रयुक्त</string>
-    <string name="op_quick_settings_night_display_label">रात्रि मोड</string>
+    <string name="op_quick_settings_night_display_label">दृष्टि आराम</string>
     <string name="op_quick_settings_night_display_summary_off">रात्रि मोड ऑफ़ है, ऑन करने के लिए टैप करें</string>
     <string name="op_quick_settings_night_display_summary_on">रात्रि मोड ऑन है, ऑफ़ करने के लिए टैप करें</string>
     <string name="op_read_mode2_dialog_black">मोनो प्रभाव</string>
@@ -1551,8 +1578,20 @@
     <string name="quick_settings_data_switch_toast_1">वर्तमान में केवल एक सिम कार्ड अंदर है</string>
     <string name="quick_settings_default_data_card">डिफ़ॉल्ट डेटा कार्ड</string>
     <string name="quick_settings_disclosure_managed_profile_monitoring">आपका संगठन आपकी वर्क प्रोफ़ाइल में नेटवर्क ट्रैफ़िक की निगरानी कर सकता है</string>
+    <string name="quick_settings_disclosure_managed_profile_named_vpn">आपकी वर्क प्रोफ़ाइल %1$s से कनेक्ट की गई है</string>
+    <string name="quick_settings_disclosure_management">इस डिवाइस का मालिकाना हक आपके संगठन के पास है</string>
+    <string name="quick_settings_disclosure_management_monitoring">इस डिवाइस का मालिकाना हक आपके संगठन के पास है. आपका संगठन, नेटवर्क के ट्रैफ़िक की निगरानी कर सकता है</string>
+    <string name="quick_settings_disclosure_management_named_vpn">इस डिवाइस का मालिकाना हक आपके संगठन के पास है. इस डिवाइस को %1$s से कनेक्ट किया गया है</string>
+    <string name="quick_settings_disclosure_management_vpns">इस डिवाइस का मालिकाना हक आपके संगठन के पास है. इस डिवाइस को वीपीएन से कनेक्ट किया गया है</string>
     <string name="quick_settings_disclosure_monitoring">नेटवर्क की निगरानी की जा सकती है</string>
     <string name="quick_settings_disclosure_named_managed_profile_monitoring">%1$s आपकी वर्क प्रोफ़ाइल में नेटवर्क ट्रैफ़िक की निगरानी कर सकता है</string>
+    <string name="quick_settings_disclosure_named_management">इस डिवाइस का मालिकाना हक %1$s के पास है</string>
+    <string name="quick_settings_disclosure_named_management_monitoring">इस डिवाइस का मालिकाना हक %1$s के पास है. आपका संगठन, नेटवर्क के ट्रैफ़िक की निगरानी कर सकता है</string>
+    <string name="quick_settings_disclosure_named_management_named_vpn">इस डिवाइस का मालिकाना हक %1$s के पास है. इस डिवाइस को %2$s से कनेक्ट किया गया है</string>
+    <string name="quick_settings_disclosure_named_management_vpns">इस डिवाइस का मालिकाना हक %1$s के पास है. इस डिवाइस को वीपीएन से कनेक्ट किया गया है</string>
+    <string name="quick_settings_disclosure_named_vpn">इस डिवाइस को %1$s से कनेक्ट किया गया है</string>
+    <string name="quick_settings_disclosure_personal_profile_named_vpn">आपकी निजी प्रोफ़ाइल %1$s से कनेक्ट की गई है</string>
+    <string name="quick_settings_disclosure_vpns">इस डिवाइस को वीपीएन से कनेक्ट किया गया है</string>
     <string name="quick_settings_dnd_alarms_label">सिर्फ़ अलार्म</string>
     <string name="quick_settings_dnd_label">परेशान न करें</string>
     <string name="quick_settings_dnd_none_label">पूरी तरह शांत</string>
@@ -1842,7 +1881,7 @@
     <string name="tethered_notification_hybrid_sharing_mobile">मोबाइल डेटा साझा करना, सेटिंग्स दर्ज करने के लिए क्लिक करें</string>
     <string name="tethered_notification_hybrid_sharing_none">साझा करने के लिए कोई नेटवर्क उपलब्ध नहीं, सेटिंग्स दर्ज करने के लिए क्लिक करें</string>
     <string name="tethered_notification_hybrid_sharing_wifi">वाई-फ़ाई साझा करना, सेटिंग्स दर्ज करने के लिए क्लिक करें</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">सेट करने के लिए टैप करें।</string>
     <string name="tethered_notification_multi_device_message">%1$s कनेक्टेड डिवाइस</string>
     <string name="tethered_notification_multi_tether_title">टीदरिंग और मोबाइल हॉटस्पॉट सक्रिय है</string>
     <string name="tethered_notification_no_device_message">कोई कनेक्ट की गई डिवाइस नहीं है</string>
@@ -2075,7 +2114,17 @@
     <string name="wifi_verbose_logging">वाई-फ़ाई वर्बोस लॉगिंग चालू करें</string>
     <string name="wifi_verbose_logging_summary">वाई-फ़ाई लॉगिंग का स्तर बढ़ाएं, वाई-फ़ाई पिकर में प्रति SSID RSSI दिखाएं</string>
     <string name="window_animation_scale_title">विंडो एनिमेशन स्‍केल</string>
-    <string name="work_life_balance_mode">Work-Life Balance</string>
+    <string name="wlb_break_mode_active">सक्रिय</string>
+    <string name="wlb_break_mode_active_text">%1$s मोड · %2$s</string>
+    <string name="wlb_break_mode_on_break">ब्रेक पर</string>
+    <string name="wlb_break_mode_resume">फिर शुरू करें</string>
+    <string name="wlb_break_mode_take_break">एक ब्रेक ले लें</string>
+    <string name="wlb_qs_detail_break_mode">ब्रेक मोड</string>
+    <string name="wlb_qs_detail_break_mode_desc">30 मिनट के बाद स्वचालित रूप से पिछले मोड में शुरू होता है</string>
+    <string name="wlb_qs_detail_life_mode">जीवन मोड</string>
+    <string name="wlb_qs_detail_more_setting">और सेटिंग्स</string>
+    <string name="wlb_qs_detail_work_mode">कार्य मोड</string>
+    <string name="work_life_balance_mode">Work Life Balance</string>
     <string name="zen_alarm_warning">आपको %1$s पर अपना अगला अलार्म नहीं सुनाई देगा</string>
     <string name="zen_alarm_warning_indef">आपको %1$s पर अपना अगला अलार्म तब तक सुनाई नहीं देगा जब तक कि आप अलार्म को इस समय से पहले बंद नहीं कर देते</string>
     <string name="zen_alarms_introduction">आपको अलार्म छोड़कर दूसरी आवाज़ों और कंपनों से परेशान नहीं किया जाएगा. आपको अब भी संगीत, वीडियो और गेम सहित वह सब कुछ सुनाई देगा जो आपने चलाने के लिए चुना है.</string>
@@ -2096,5 +2145,5 @@
     <string name="zen_silence_introduction_voice">इससे अलार्म, संगीत, वीडियो और गेम सहित सभी आवाज़ और कंपन (वाइब्रेशन) रोक दिए जाते हैं. आप तब भी फ़ोन काॅल कर सकेंगे.</string>
     <string name="zzz_op_global_action_bootloader">बूटलोडर</string>
     <string name="zzz_op_global_action_recovery">रिकवरी</string>
-    <string name="zzz_op_quick_pay_no_install_message">त्वरित भुगतान का उपयोग करने के लिए कृपया भुगतान करें ऐप इंस्टॉल करें</string>
+    <string name="zzz_op_quick_pay_no_install_message">क्विक पे का उपयोग करने के लिए कृपया भुगतान एप्लिकेशन इंस्टॉल करें</string>
 </resources>

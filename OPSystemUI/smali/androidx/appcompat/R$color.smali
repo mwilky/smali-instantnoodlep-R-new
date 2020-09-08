@@ -18,8 +18,8 @@
 
 .field public static final abc_tint_switch_track:I = 0x7f060035
 
-.field public static final op_control_text_color_disable_default:I = 0x7f0602ec
+.field public static final op_control_text_color_disable_default:I = 0x7f0602ed
 
-.field public static final op_control_text_color_primary_default:I = 0x7f060301
+.field public static final op_control_text_color_primary_default:I = 0x7f060302
 
-.field public static final switch_thumb_normal_material_light:I = 0x7f0603a3
+.field public static final switch_thumb_normal_material_light:I = 0x7f0603a8

@@ -310,7 +310,7 @@
 
     move-result-object v1
 
-    const-string v2, "Neil"
+    const-string v2, "SectionHeaderView"
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -368,24 +368,6 @@
 
     :goto_0
     invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    return-void
-.end method
-
-.method setForegroundColor(I)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;->mLabelView:Landroid/widget/TextView;
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;->mClearAllButton:Landroid/widget/ImageView;
-
-    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
 
     return-void
 .end method

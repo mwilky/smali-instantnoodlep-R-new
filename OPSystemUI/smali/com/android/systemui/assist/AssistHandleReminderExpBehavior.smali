@@ -397,6 +397,14 @@
     return-object p0
 .end method
 
+.method static synthetic access$700(Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
 .method private callbackForCurrentState(Z)V
     .locals 1
 
@@ -481,6 +489,30 @@
     :cond_2
     iput-wide v0, p0, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->mLearnedHintLastShownEpochDay:J
 
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "callbackForLearnedState supportAssistantGesture :"
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-boolean v0, Lcom/oneplus/util/OpUtils;->sIsSupportAssistantGesture:Z
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "AssistHandleReminder"
+
+    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    sget-boolean p1, Lcom/oneplus/util/OpUtils;->sIsSupportAssistantGesture:Z
+
+    if-eqz p1, :cond_4
+
     iget-object p0, p0, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->mAssistHandleCallbacks:Lcom/android/systemui/assist/AssistHandleCallbacks;
 
     invoke-interface {p0}, Lcom/android/systemui/assist/AssistHandleCallbacks;->showAndGo()V
@@ -501,6 +533,26 @@
 .method private callbackForUnlearnedState()V
     .locals 4
 
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "callbackForUnlearnedState supportAssistantGesture :"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-boolean v1, Lcom/oneplus/util/OpUtils;->sIsSupportAssistantGesture:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "AssistHandleReminder"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     iget-object v0, p0, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->mAssistHandleCallbacks:Lcom/android/systemui/assist/AssistHandleCallbacks;
 
     if-nez v0, :cond_0
@@ -508,28 +560,37 @@
     return-void
 
     :cond_0
+    sget-boolean v1, Lcom/oneplus/util/OpUtils;->sIsSupportAssistantGesture:Z
+
+    if-nez v1, :cond_1
+
+    invoke-interface {v0}, Lcom/android/systemui/assist/AssistHandleCallbacks;->hide()V
+
+    return-void
+
+    :cond_1
     invoke-direct {p0}, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->isFullyAwake()Z
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     iget-boolean v0, p0, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->mIsNavBarHidden:Z
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_6
 
     invoke-direct {p0}, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->isSuppressed()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     iget-boolean v0, p0, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->mOnLockscreen:Z
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     iget-object p0, p0, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->mAssistHandleCallbacks:Lcom/android/systemui/assist/AssistHandleCallbacks;
 
@@ -537,10 +598,10 @@
 
     goto :goto_1
 
-    :cond_2
+    :cond_3
     iget-boolean v0, p0, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->mIsLauncherShowing:Z
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     iget-object p0, p0, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->mAssistHandleCallbacks:Lcom/android/systemui/assist/AssistHandleCallbacks;
 
@@ -548,12 +609,12 @@
 
     goto :goto_1
 
-    :cond_3
+    :cond_4
     iget v0, p0, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->mConsecutiveTaskSwitches:I
 
     const/4 v1, 0x1
 
-    if-ne v0, v1, :cond_4
+    if-ne v0, v1, :cond_5
 
     iget-object v0, p0, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->mAssistHandleCallbacks:Lcom/android/systemui/assist/AssistHandleCallbacks;
 
@@ -567,7 +628,7 @@
 
     goto :goto_1
 
-    :cond_4
+    :cond_5
     iget-object v0, p0, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->mAssistHandleCallbacks:Lcom/android/systemui/assist/AssistHandleCallbacks;
 
     invoke-direct {p0}, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->getShowAndGoDelayedLongDelayMs()J
@@ -578,7 +639,7 @@
 
     goto :goto_1
 
-    :cond_5
+    :cond_6
     :goto_0
     iget-object p0, p0, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->mAssistHandleCallbacks:Lcom/android/systemui/assist/AssistHandleCallbacks;
 
@@ -2045,6 +2106,10 @@
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->mLastLearningTimestamp:J
+
+    iget-object p1, p0, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->mContext:Landroid/content/Context;
+
+    invoke-static {p1}, Lcom/oneplus/util/OpUtils;->updateSupportAssistantGestureState(Landroid/content/Context;)V
 
     invoke-direct {p0, p2}, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->callbackForCurrentState(Z)V
 

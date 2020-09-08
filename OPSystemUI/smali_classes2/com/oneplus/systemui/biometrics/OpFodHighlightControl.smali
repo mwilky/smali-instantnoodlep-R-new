@@ -61,6 +61,10 @@
 .method public changeToAodMode()V
     .locals 1
 
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/oneplus/systemui/biometrics/OpFodHighlightControl;->mIsHighlight:Z
+
     invoke-virtual {p0}, Lcom/oneplus/systemui/biometrics/OpFodDisplayController$OpDisplayControl;->getNotifier()Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;
 
     move-result-object p0

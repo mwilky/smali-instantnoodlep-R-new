@@ -61,19 +61,9 @@
     goto :goto_0
 
     :pswitch_0
-    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
     iget-object p0, p0, Lcom/android/systemui/statusbar/policy/FiveGServiceClient$1;->this$0:Lcom/android/systemui/statusbar/policy/FiveGServiceClient;
 
-    const/4 v0, 0x0
-
-    invoke-static {p0, p1, v0}, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->access$600(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;II)V
+    invoke-static {p0}, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->access$600(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)V
 
     goto :goto_0
 
@@ -89,21 +79,11 @@
 
     invoke-static {p0}, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->access$400(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)V
 
-    goto :goto_0
-
-    :pswitch_3
-    iget-object p0, p0, Lcom/android/systemui/statusbar/policy/FiveGServiceClient$1;->this$0:Lcom/android/systemui/statusbar/policy/FiveGServiceClient;
-
-    invoke-static {p0}, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->access$300(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)V
-
     :goto_0
     return-void
 
-    nop
-
     :pswitch_data_0
     .packed-switch 0x400
-        :pswitch_3
         :pswitch_2
         :pswitch_1
         :pswitch_0

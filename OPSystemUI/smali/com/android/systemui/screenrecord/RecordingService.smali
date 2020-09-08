@@ -23,9 +23,11 @@
 
 .field private final mUiEventLogger:Lcom/android/internal/logging/UiEventLogger;
 
+.field private final mUserContextTracker:Lcom/android/systemui/settings/CurrentUserContextTracker;
+
 
 # direct methods
-.method public constructor <init>(Lcom/android/systemui/screenrecord/RecordingController;Ljava/util/concurrent/Executor;Lcom/android/internal/logging/UiEventLogger;Landroid/app/NotificationManager;)V
+.method public constructor <init>(Lcom/android/systemui/screenrecord/RecordingController;Ljava/util/concurrent/Executor;Lcom/android/internal/logging/UiEventLogger;Landroid/app/NotificationManager;Lcom/android/systemui/settings/CurrentUserContextTracker;)V
     .locals 0
 
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
@@ -37,6 +39,8 @@
     iput-object p3, p0, Lcom/android/systemui/screenrecord/RecordingService;->mUiEventLogger:Lcom/android/internal/logging/UiEventLogger;
 
     iput-object p4, p0, Lcom/android/systemui/screenrecord/RecordingService;->mNotificationManager:Landroid/app/NotificationManager;
+
+    iput-object p5, p0, Lcom/android/systemui/screenrecord/RecordingService;->mUserContextTracker:Lcom/android/systemui/settings/CurrentUserContextTracker;
 
     return-void
 .end method
@@ -152,56 +156,64 @@
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    const-string p0, "com.android.systemui.screenrecord.STOP"
+    const-string v1, "com.android.systemui.screenrecord.STOP"
 
-    invoke-virtual {v0, p0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Landroid/content/Context;->getUserId()I
+
+    move-result p0
+
+    const-string v1, "android.intent.extra.user_handle"
+
+    invoke-virtual {v0, v1, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private synthetic lambda$saveRecording$0()V
-    .locals 5
+.method private synthetic lambda$saveRecording$0(Landroid/os/UserHandle;)V
+    .locals 6
 
     const-string v0, "RecordingService"
 
     const/16 v1, 0x10b3
 
+    const/4 v2, 0x0
+
     :try_start_0
-    const-string v2, "saving recording"
-
-    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    invoke-virtual {p0}, Lcom/android/systemui/screenrecord/RecordingService;->getRecorder()Lcom/android/systemui/screenrecord/ScreenMediaRecorder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/android/systemui/screenrecord/ScreenMediaRecorder;->save()Lcom/android/systemui/screenrecord/ScreenMediaRecorder$SavedRecording;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v2}, Lcom/android/systemui/screenrecord/RecordingService;->createSaveNotification(Lcom/android/systemui/screenrecord/ScreenMediaRecorder$SavedRecording;)Landroid/app/Notification;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/android/systemui/screenrecord/RecordingService;->mController:Lcom/android/systemui/screenrecord/RecordingController;
-
-    invoke-virtual {v3}, Lcom/android/systemui/screenrecord/RecordingController;->isRecording()Z
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    const-string/jumbo v3, "showing saved notification"
+    const-string v3, "saving recording"
 
     invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object v3, p0, Lcom/android/systemui/screenrecord/RecordingService;->mNotificationManager:Landroid/app/NotificationManager;
+    invoke-virtual {p0}, Lcom/android/systemui/screenrecord/RecordingService;->getRecorder()Lcom/android/systemui/screenrecord/ScreenMediaRecorder;
 
-    const/16 v4, 0x10b1
+    move-result-object v3
 
-    invoke-virtual {v3, v4, v2}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
+    invoke-virtual {v3}, Lcom/android/systemui/screenrecord/ScreenMediaRecorder;->save()Lcom/android/systemui/screenrecord/ScreenMediaRecorder$SavedRecording;
+
+    move-result-object v3
+
+    invoke-virtual {p0, v3}, Lcom/android/systemui/screenrecord/RecordingService;->createSaveNotification(Lcom/android/systemui/screenrecord/ScreenMediaRecorder$SavedRecording;)Landroid/app/Notification;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lcom/android/systemui/screenrecord/RecordingService;->mController:Lcom/android/systemui/screenrecord/RecordingController;
+
+    invoke-virtual {v4}, Lcom/android/systemui/screenrecord/RecordingController;->isRecording()Z
+
+    move-result v4
+
+    if-nez v4, :cond_0
+
+    iget-object v4, p0, Lcom/android/systemui/screenrecord/RecordingService;->mNotificationManager:Landroid/app/NotificationManager;
+
+    const/16 v5, 0x10b1
+
+    invoke-virtual {v4, v2, v5, v3, p1}, Landroid/app/NotificationManager;->notifyAsUser(Ljava/lang/String;ILandroid/app/Notification;Landroid/os/UserHandle;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -210,7 +222,7 @@
     :goto_0
     iget-object p0, p0, Lcom/android/systemui/screenrecord/RecordingService;->mNotificationManager:Landroid/app/NotificationManager;
 
-    invoke-virtual {p0, v1}, Landroid/app/NotificationManager;->cancel(I)V
+    invoke-virtual {p0, v2, v1, p1}, Landroid/app/NotificationManager;->cancelAsUser(Ljava/lang/String;ILandroid/os/UserHandle;)V
 
     goto :goto_1
 
@@ -220,34 +232,34 @@
     goto :goto_2
 
     :catch_0
-    move-exception v2
+    move-exception v3
 
     :try_start_1
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "Error saving screen recording: "
+    const-string v5, "Error saving screen recording: "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     sget v0, Lcom/android/systemui/R$string;->screenrecord_delete_error:I
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    invoke-static {p0, v0, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
+    invoke-static {p0, v0, v3}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
     move-result-object v0
 
@@ -263,31 +275,37 @@
     :goto_2
     iget-object p0, p0, Lcom/android/systemui/screenrecord/RecordingService;->mNotificationManager:Landroid/app/NotificationManager;
 
-    invoke-virtual {p0, v1}, Landroid/app/NotificationManager;->cancel(I)V
+    invoke-virtual {p0, v2, v1, p1}, Landroid/app/NotificationManager;->cancelAsUser(Ljava/lang/String;ILandroid/os/UserHandle;)V
 
     throw v0
 .end method
 
-.method private saveRecording()V
-    .locals 3
+.method private saveRecording(I)V
+    .locals 4
 
-    iget-object v0, p0, Lcom/android/systemui/screenrecord/RecordingService;->mNotificationManager:Landroid/app/NotificationManager;
+    new-instance v0, Landroid/os/UserHandle;
+
+    invoke-direct {v0, p1}, Landroid/os/UserHandle;-><init>(I)V
+
+    iget-object p1, p0, Lcom/android/systemui/screenrecord/RecordingService;->mNotificationManager:Landroid/app/NotificationManager;
 
     invoke-virtual {p0}, Lcom/android/systemui/screenrecord/RecordingService;->createProcessingNotification()Landroid/app/Notification;
 
     move-result-object v1
 
-    const/16 v2, 0x10b3
+    const/4 v2, 0x0
 
-    invoke-virtual {v0, v2, v1}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
+    const/16 v3, 0x10b3
 
-    iget-object v0, p0, Lcom/android/systemui/screenrecord/RecordingService;->mLongExecutor:Ljava/util/concurrent/Executor;
+    invoke-virtual {p1, v2, v3, v1, v0}, Landroid/app/NotificationManager;->notifyAsUser(Ljava/lang/String;ILandroid/app/Notification;Landroid/os/UserHandle;)V
 
-    new-instance v1, Lcom/android/systemui/screenrecord/-$$Lambda$RecordingService$JZqzkKZiritSjy3o77scaqkB02w;
+    iget-object p1, p0, Lcom/android/systemui/screenrecord/RecordingService;->mLongExecutor:Ljava/util/concurrent/Executor;
 
-    invoke-direct {v1, p0}, Lcom/android/systemui/screenrecord/-$$Lambda$RecordingService$JZqzkKZiritSjy3o77scaqkB02w;-><init>(Lcom/android/systemui/screenrecord/RecordingService;)V
+    new-instance v1, Lcom/android/systemui/screenrecord/-$$Lambda$RecordingService$VCwgNNzpq2HdyNZyJT8KtYGVm5w;
 
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-direct {v1, p0, v0}, Lcom/android/systemui/screenrecord/-$$Lambda$RecordingService$VCwgNNzpq2HdyNZyJT8KtYGVm5w;-><init>(Lcom/android/systemui/screenrecord/RecordingService;Landroid/os/UserHandle;)V
+
+    invoke-interface {p1, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -332,6 +350,7 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
@@ -342,18 +361,24 @@
 
     invoke-static {p0, v2, v0}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0}, Landroid/widget/Toast;->show()V
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
+
+    iget-object p0, p0, Lcom/android/systemui/screenrecord/RecordingService;->mController:Lcom/android/systemui/screenrecord/RecordingController;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lcom/android/systemui/screenrecord/RecordingController;->updateState(Z)V
 
     :goto_0
     return-void
 .end method
 
-.method private stopRecording()V
-    .locals 2
+.method private stopRecording(I)V
+    .locals 1
 
     iget-boolean v0, p0, Lcom/android/systemui/screenrecord/RecordingService;->mOriginalShowTaps:Z
 
@@ -371,23 +396,23 @@
 
     invoke-virtual {v0}, Lcom/android/systemui/screenrecord/ScreenMediaRecorder;->end()V
 
-    invoke-direct {p0}, Lcom/android/systemui/screenrecord/RecordingService;->saveRecording()V
+    invoke-direct {p0, p1}, Lcom/android/systemui/screenrecord/RecordingService;->saveRecording(I)V
 
     goto :goto_0
 
     :cond_0
-    const-string v0, "RecordingService"
+    const-string p1, "RecordingService"
 
-    const-string/jumbo v1, "stopRecording called, but recorder was null"
+    const-string/jumbo v0, "stopRecording called, but recorder was null"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
     iget-object p0, p0, Lcom/android/systemui/screenrecord/RecordingService;->mController:Lcom/android/systemui/screenrecord/RecordingController;
 
-    const/4 v0, 0x0
+    const/4 p1, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/android/systemui/screenrecord/RecordingController;->updateState(Z)V
+    invoke-virtual {p0, p1}, Lcom/android/systemui/screenrecord/RecordingController;->updateState(Z)V
 
     return-void
 .end method
@@ -395,7 +420,7 @@
 
 # virtual methods
 .method protected createProcessingNotification()Landroid/app/Notification;
-    .locals 4
+    .locals 5
     .annotation build Lcom/android/internal/annotations/VisibleForTesting;
     .end annotation
 
@@ -417,7 +442,7 @@
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
     goto :goto_0
 
@@ -426,20 +451,34 @@
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
     :goto_0
-    new-instance v1, Landroid/app/Notification$Builder;
+    new-instance v2, Landroid/os/Bundle;
+
+    invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
+
+    sget v3, Lcom/android/systemui/R$string;->screenrecord_name:I
+
+    invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v3, "android.substName"
+
+    invoke-virtual {v2, v3, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v0, Landroid/app/Notification$Builder;
 
     invoke-virtual {p0}, Landroid/app/Service;->getApplicationContext()Landroid/content/Context;
 
-    move-result-object v2
+    move-result-object v3
 
-    const-string v3, "screen_record"
+    const-string v4, "screen_record"
 
-    invoke-direct {v1, v2, v3}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v0, v3, v4}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v0}, Landroid/app/Notification$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
+    invoke-virtual {v0, v1}, Landroid/app/Notification$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
     move-result-object v0
 
@@ -460,6 +499,10 @@
     sget v0, Lcom/android/systemui/R$drawable;->ic_screenrecord:I
 
     invoke-virtual {p0, v0}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
+
+    move-result-object p0
+
+    invoke-virtual {p0, v2}, Landroid/app/Notification$Builder;->addExtras(Landroid/os/Bundle;)Landroid/app/Notification$Builder;
 
     move-result-object p0
 
@@ -605,7 +648,7 @@
 
     const/4 v2, 0x2
 
-    const/high16 v3, 0x8000000
+    const/high16 v3, 0xc000000
 
     invoke-static {p0, v2, v4, v3}, Landroid/app/PendingIntent;->getService(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
@@ -685,7 +728,7 @@
 
     const/4 v6, 0x2
 
-    const/high16 v7, 0x8000000
+    const/high16 v7, 0xc000000
 
     invoke-static {p0, v6, v5, v7}, Landroid/app/PendingIntent;->getService(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
@@ -849,10 +892,10 @@
     return-object p0
 .end method
 
-.method public synthetic lambda$saveRecording$0$RecordingService()V
+.method public synthetic lambda$saveRecording$0$RecordingService(Landroid/os/UserHandle;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/systemui/screenrecord/RecordingService;->lambda$saveRecording$0()V
+    invoke-direct {p0, p1}, Lcom/android/systemui/screenrecord/RecordingService;->lambda$saveRecording$0(Landroid/os/UserHandle;)V
 
     return-void
 .end method
@@ -906,7 +949,7 @@
 .end method
 
 .method public onStartCommand(Landroid/content/Intent;II)I
-    .locals 8
+    .locals 10
 
     const/4 p2, 0x2
 
@@ -937,119 +980,140 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    const/4 v0, -0x1
+    iget-object v0, p0, Lcom/android/systemui/screenrecord/RecordingService;->mUserContextTracker:Lcom/android/systemui/settings/CurrentUserContextTracker;
+
+    invoke-virtual {v0}, Lcom/android/systemui/settings/CurrentUserContextTracker;->getCurrentUserContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->getUserId()I
+
+    move-result v0
+
+    new-instance v2, Landroid/os/UserHandle;
+
+    invoke-direct {v2, v0}, Landroid/os/UserHandle;-><init>(I)V
 
     invoke-virtual {p3}, Ljava/lang/String;->hashCode()I
 
-    move-result v2
+    move-result v3
 
-    const-string v3, "com.android.systemui.screenrecord.STOP_FROM_NOTIF"
+    const-string v4, "com.android.systemui.screenrecord.STOP_FROM_NOTIF"
 
-    const/4 v4, 0x4
+    const/4 v5, 0x4
 
-    const/4 v5, 0x3
+    const/4 v6, 0x3
 
-    const/4 v6, 0x0
+    const/4 v7, -0x1
 
-    const/4 v7, 0x1
+    const/4 v8, 0x0
 
-    sparse-switch v2, :sswitch_data_0
+    const/4 v9, 0x1
+
+    sparse-switch v3, :sswitch_data_0
 
     goto :goto_0
 
     :sswitch_0
-    invoke-virtual {p3, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_1
+    if-eqz v3, :cond_1
 
-    move v0, v7
+    move v3, v9
 
-    goto :goto_0
+    goto :goto_1
 
     :sswitch_1
-    const-string v2, "com.android.systemui.screenrecord.STOP"
+    const-string v3, "com.android.systemui.screenrecord.STOP"
 
-    invoke-virtual {p3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p3, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_1
+    if-eqz v3, :cond_1
 
-    move v0, p2
+    move v3, p2
 
-    goto :goto_0
+    goto :goto_1
 
     :sswitch_2
-    const-string v2, "com.android.systemui.screenrecord.DELETE"
+    const-string v3, "com.android.systemui.screenrecord.DELETE"
 
-    invoke-virtual {p3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p3, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_1
+    if-eqz v3, :cond_1
 
-    move v0, v4
+    move v3, v5
 
-    goto :goto_0
+    goto :goto_1
 
     :sswitch_3
-    const-string v2, "com.android.systemui.screenrecord.START"
+    const-string v3, "com.android.systemui.screenrecord.START"
 
-    invoke-virtual {p3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p3, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_1
+    if-eqz v3, :cond_1
 
-    move v0, v6
+    move v3, v8
 
-    goto :goto_0
+    goto :goto_1
 
     :sswitch_4
-    const-string v2, "com.android.systemui.screenrecord.SHARE"
+    const-string v3, "com.android.systemui.screenrecord.SHARE"
 
-    invoke-virtual {p3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p3, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_1
+    if-eqz v3, :cond_1
 
-    move v0, v5
+    move v3, v6
+
+    goto :goto_1
 
     :cond_1
     :goto_0
-    if-eqz v0, :cond_6
+    move v3, v7
 
-    if-eq v0, v7, :cond_4
+    :goto_1
+    if-eqz v3, :cond_7
 
-    if-eq v0, p2, :cond_4
+    if-eq v3, v9, :cond_4
+
+    if-eq v3, p2, :cond_4
 
     const/16 p2, 0x10b1
 
     const-string p3, "android.intent.action.CLOSE_SYSTEM_DIALOGS"
 
-    const-string v2, "extra_path"
+    const-string v0, "extra_path"
 
-    if-eq v0, v5, :cond_3
+    const/4 v4, 0x0
 
-    if-eq v0, v4, :cond_2
+    if-eq v3, v6, :cond_3
 
-    goto/16 :goto_2
+    if-eq v3, v5, :cond_2
+
+    goto/16 :goto_3
 
     :cond_2
-    new-instance v0, Landroid/content/Intent;
+    new-instance v3, Landroid/content/Intent;
 
-    invoke-direct {v0, p3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    invoke-direct {v3, p3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0, v0}, Landroid/app/Service;->sendBroadcast(Landroid/content/Intent;)V
+    invoke-virtual {p0, v3}, Landroid/app/Service;->sendBroadcast(Landroid/content/Intent;)V
 
     invoke-virtual {p0}, Landroid/app/Service;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p3
 
-    invoke-virtual {p1, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1057,13 +1121,11 @@
 
     move-result-object p1
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p3, p1, v0, v0}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-virtual {p3, p1, v4, v4}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
     sget p3, Lcom/android/systemui/R$string;->screenrecord_delete_description:I
 
-    invoke-static {p0, p3, v7}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
+    invoke-static {p0, p3, v9}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
     move-result-object p3
 
@@ -1071,7 +1133,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/screenrecord/RecordingService;->mNotificationManager:Landroid/app/NotificationManager;
 
-    invoke-virtual {p0, p2}, Landroid/app/NotificationManager;->cancel(I)V
+    invoke-virtual {p0, v4, p2, v2}, Landroid/app/NotificationManager;->cancelAsUser(Ljava/lang/String;ILandroid/os/UserHandle;)V
 
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -1089,10 +1151,10 @@
 
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto/16 :goto_2
+    goto/16 :goto_3
 
     :cond_3
-    invoke-virtual {p1, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1136,7 +1198,7 @@
 
     iget-object p3, p0, Lcom/android/systemui/screenrecord/RecordingService;->mNotificationManager:Landroid/app/NotificationManager;
 
-    invoke-virtual {p3, p2}, Landroid/app/NotificationManager;->cancel(I)V
+    invoke-virtual {p3, v4, p2, v2}, Landroid/app/NotificationManager;->cancelAsUser(Ljava/lang/String;ILandroid/os/UserHandle;)V
 
     invoke-static {p1, v0}, Landroid/content/Intent;->createChooser(Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;
 
@@ -1150,32 +1212,67 @@
 
     invoke-virtual {p0, p1}, Landroid/app/Service;->startActivity(Landroid/content/Intent;)V
 
-    goto/16 :goto_2
+    goto/16 :goto_3
 
     :cond_4
-    invoke-virtual {v3, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_5
+
+    iget-object p2, p0, Lcom/android/systemui/screenrecord/RecordingService;->mUiEventLogger:Lcom/android/internal/logging/UiEventLogger;
+
+    sget-object p3, Lcom/android/systemui/screenrecord/Events$ScreenRecordEvent;->SCREEN_RECORD_END_NOTIFICATION:Lcom/android/systemui/screenrecord/Events$ScreenRecordEvent;
+
+    invoke-interface {p2, p3}, Lcom/android/internal/logging/UiEventLogger;->log(Lcom/android/internal/logging/UiEventLogger$UiEventEnum;)V
+
+    goto :goto_2
+
+    :cond_5
+    iget-object p2, p0, Lcom/android/systemui/screenrecord/RecordingService;->mUiEventLogger:Lcom/android/internal/logging/UiEventLogger;
+
+    sget-object p3, Lcom/android/systemui/screenrecord/Events$ScreenRecordEvent;->SCREEN_RECORD_END_QS_TILE:Lcom/android/systemui/screenrecord/Events$ScreenRecordEvent;
+
+    invoke-interface {p2, p3}, Lcom/android/internal/logging/UiEventLogger;->log(Lcom/android/internal/logging/UiEventLogger$UiEventEnum;)V
+
+    :goto_2
+    const-string p2, "android.intent.extra.user_handle"
+
+    invoke-virtual {p1, p2, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
-    if-eqz p1, :cond_5
+    if-ne p1, v7, :cond_6
 
-    iget-object p1, p0, Lcom/android/systemui/screenrecord/RecordingService;->mUiEventLogger:Lcom/android/internal/logging/UiEventLogger;
+    iget-object p1, p0, Lcom/android/systemui/screenrecord/RecordingService;->mUserContextTracker:Lcom/android/systemui/settings/CurrentUserContextTracker;
 
-    sget-object p2, Lcom/android/systemui/screenrecord/Events$ScreenRecordEvent;->SCREEN_RECORD_END_NOTIFICATION:Lcom/android/systemui/screenrecord/Events$ScreenRecordEvent;
+    invoke-virtual {p1}, Lcom/android/systemui/settings/CurrentUserContextTracker;->getCurrentUserContext()Landroid/content/Context;
 
-    invoke-interface {p1, p2}, Lcom/android/internal/logging/UiEventLogger;->log(Lcom/android/internal/logging/UiEventLogger$UiEventEnum;)V
+    move-result-object p1
 
-    goto :goto_1
+    invoke-virtual {p1}, Landroid/content/Context;->getUserId()I
 
-    :cond_5
-    iget-object p1, p0, Lcom/android/systemui/screenrecord/RecordingService;->mUiEventLogger:Lcom/android/internal/logging/UiEventLogger;
+    move-result p1
 
-    sget-object p2, Lcom/android/systemui/screenrecord/Events$ScreenRecordEvent;->SCREEN_RECORD_END_QS_TILE:Lcom/android/systemui/screenrecord/Events$ScreenRecordEvent;
+    :cond_6
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    invoke-interface {p1, p2}, Lcom/android/internal/logging/UiEventLogger;->log(Lcom/android/internal/logging/UiEventLogger$UiEventEnum;)V
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
-    :goto_1
-    invoke-direct {p0}, Lcom/android/systemui/screenrecord/RecordingService;->stopRecording()V
+    const-string p3, "notifying for user "
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {v1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-direct {p0, p1}, Lcom/android/systemui/screenrecord/RecordingService;->stopRecording(I)V
 
     iget-object p1, p0, Lcom/android/systemui/screenrecord/RecordingService;->mNotificationManager:Landroid/app/NotificationManager;
 
@@ -1185,16 +1282,16 @@
 
     invoke-virtual {p0}, Landroid/app/Service;->stopSelf()V
 
-    goto :goto_2
+    goto :goto_3
 
-    :cond_6
+    :cond_7
     invoke-static {}, Lcom/android/systemui/screenrecord/ScreenRecordingAudioSource;->values()[Lcom/android/systemui/screenrecord/ScreenRecordingAudioSource;
 
     move-result-object p2
 
     const-string p3, "extra_useAudio"
 
-    invoke-virtual {p1, p3, v6}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    invoke-virtual {p1, p3, v8}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p3
 
@@ -1222,7 +1319,7 @@
 
     const-string p2, "extra_showTaps"
 
-    invoke-virtual {p1, p2, v6}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+    invoke-virtual {p1, p2, v8}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p1
 
@@ -1238,16 +1335,16 @@
 
     const-string/jumbo p2, "show_touches"
 
-    invoke-static {p1, p2, v6}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    invoke-static {p1, p2, v8}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result p1
 
-    if-eqz p1, :cond_7
+    if-eqz p1, :cond_8
 
-    move v6, v7
+    move v8, v9
 
-    :cond_7
-    iput-boolean v6, p0, Lcom/android/systemui/screenrecord/RecordingService;->mOriginalShowTaps:Z
+    :cond_8
+    iput-boolean v8, p0, Lcom/android/systemui/screenrecord/RecordingService;->mOriginalShowTaps:Z
 
     iget-boolean p1, p0, Lcom/android/systemui/screenrecord/RecordingService;->mShowTaps:Z
 
@@ -1255,26 +1352,22 @@
 
     new-instance p1, Lcom/android/systemui/screenrecord/ScreenMediaRecorder;
 
-    invoke-virtual {p0}, Landroid/app/Service;->getApplicationContext()Landroid/content/Context;
+    iget-object p2, p0, Lcom/android/systemui/screenrecord/RecordingService;->mUserContextTracker:Lcom/android/systemui/settings/CurrentUserContextTracker;
+
+    invoke-virtual {p2}, Lcom/android/systemui/settings/CurrentUserContextTracker;->getCurrentUserContext()Landroid/content/Context;
 
     move-result-object p2
 
-    invoke-virtual {p0}, Landroid/app/Service;->getUserId()I
+    iget-object p3, p0, Lcom/android/systemui/screenrecord/RecordingService;->mAudioSource:Lcom/android/systemui/screenrecord/ScreenRecordingAudioSource;
 
-    move-result p3
-
-    iget-object v0, p0, Lcom/android/systemui/screenrecord/RecordingService;->mAudioSource:Lcom/android/systemui/screenrecord/ScreenRecordingAudioSource;
-
-    invoke-direct {p1, p2, p3, v0, p0}, Lcom/android/systemui/screenrecord/ScreenMediaRecorder;-><init>(Landroid/content/Context;ILcom/android/systemui/screenrecord/ScreenRecordingAudioSource;Landroid/media/MediaRecorder$OnInfoListener;)V
+    invoke-direct {p1, p2, v0, p3, p0}, Lcom/android/systemui/screenrecord/ScreenMediaRecorder;-><init>(Landroid/content/Context;ILcom/android/systemui/screenrecord/ScreenRecordingAudioSource;Landroid/media/MediaRecorder$OnInfoListener;)V
 
     iput-object p1, p0, Lcom/android/systemui/screenrecord/RecordingService;->mRecorder:Lcom/android/systemui/screenrecord/ScreenMediaRecorder;
 
     invoke-direct {p0}, Lcom/android/systemui/screenrecord/RecordingService;->startRecording()V
 
-    :goto_2
-    return v7
-
-    nop
+    :goto_3
+    return v9
 
     :sswitch_data_0
     .sparse-switch

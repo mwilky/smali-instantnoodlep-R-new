@@ -561,6 +561,7 @@ Pasirinkimas"</string>
     <string name="controls_favorite_other_zone_header">Kita</string>
     <string name="controls_favorite_rearrange">Norėdami pertvarkyti valdiklius, vilkite laikydami nuspaudę</string>
     <string name="controls_favorite_removed">Visi valdikliai pašalinti</string>
+    <string name="controls_favorite_see_other_apps">Žr. kitas programas</string>
     <string name="controls_favorite_subtitle">Pasirinkite valdiklius, kuriuos norite pasiekti įjungimo meniu</string>
     <string name="controls_favorite_toast_no_changes">Pakeitimai neišsaugoti</string>
     <string name="controls_in_progress">Vyksta</string>
@@ -663,6 +664,8 @@ Jei tęsite, gali būti taikomi duomenų naudojimo mokesčiai."</string>
     <string name="disconnect_vpn">Atjungti VPN</string>
     <string name="dnd_is_off">Netrukdymo režimas išjungtas</string>
     <string name="dnd_suppressing_shade_text">Pranešimai pristabdyti naudojant netrukdymo režimą</string>
+    <string name="do_disclosure_generic">Šis įrenginys priklauso jūsų organizacijai</string>
+    <string name="do_disclosure_with_name">Šis įrenginys priklauso „%s“</string>
     <string name="do_not_silence">Netylėti</string>
     <string name="do_not_silence_block">Netylėti arba blokuoti</string>
     <string name="dock_alignment_not_charging">Sulygiuokite telefoną iš naujo, kad gal. įkrauti be laidų</string>
@@ -1065,8 +1068,18 @@ Jei reikia daugiau informacijos, susisiekite su administratoriumi."</string>
     <string name="monitoring_description_do_learn_more_separator">" "</string>
     <string name="monitoring_description_managed_profile_ca_certificate">Jūsų organizacija įdiegė darbo profilyje sertifikato įgaliojimą. Jūsų saugaus tinklo srautas gali būti stebimas arba keičiamas.</string>
     <string name="monitoring_description_managed_profile_named_vpn">Darbo profilis susietas su programa „%1$s“, kuri gali stebėti tinklo veiklą, įskaitant el. laiškus, programas ir svetaines.</string>
+    <string name="monitoring_description_management">"Šis įrenginys priklauso jūsų organizacijai.
+
+IT administratorius gali stebėti ir tvarkyti nustatymus, įmonės prieigą, programas, su įrenginiu susietus duomenis ir įrenginio vietovės informaciją.
+
+Daugiau informacijos galite gauti susisiekę su IT administratoriumi."</string>
     <string name="monitoring_description_management_ca_certificate">Jūsų organizacija įdiegė šiame įrenginyje sertifikato įgaliojimą. Jūsų saugaus tinklo srautas gali būti stebimas arba keičiamas.</string>
     <string name="monitoring_description_management_network_logging">Administratorius įjungė tinklo duomenų įrašymą į žurnalą. Įjungus šią funkciją stebimas srautas jūsų įrenginyje.</string>
+    <string name="monitoring_description_named_management">"Šis įrenginys priklauso „%1$s“.
+
+IT administratorius gali stebėti ir tvarkyti nustatymus, įmonės prieigą, programas, su įrenginiu susietus duomenis ir įrenginio vietovės informaciją.
+
+Daugiau informacijos galite gauti susisiekę su IT administratoriumi."</string>
     <string name="monitoring_description_named_vpn">Esate prisijungę prie programos „%1$s“, kuri gali stebėti tinklo veiklą, įskaitant el. laiškus, programas ir svetaines.</string>
     <string name="monitoring_description_network_logging">"Administratorius įjungė tinklo duomenų įrašymą į žurnalą. Įjungus šią funkciją stebimas srautas jūsų įrenginyje.
 
@@ -1341,8 +1354,20 @@ Taip pat esate prisijungę prie VPN, kuris gali stebėti jūsų tinklo veiklą."
     <string name="quick_settings_dark_mode_secondary_label_until">Iki %s</string>
     <string name="quick_settings_dark_mode_secondary_label_until_sunrise">Iki saulėtekio</string>
     <string name="quick_settings_disclosure_managed_profile_monitoring">Jūsų organizacija darbo profilyje gali stebėti tinklo srautą</string>
+    <string name="quick_settings_disclosure_managed_profile_named_vpn">Darbo profilis susietas su „%1$s“</string>
+    <string name="quick_settings_disclosure_management">Šis įrenginys priklauso jūsų organizacijai</string>
+    <string name="quick_settings_disclosure_management_monitoring">Šis įrenginys priklauso jūsų organizacijai ir ji gali stebėti tinklo srautą</string>
+    <string name="quick_settings_disclosure_management_named_vpn">Šis įrenginys priklauso jūsų organizacijai ir yra susietas su „%1$s“</string>
+    <string name="quick_settings_disclosure_management_vpns">Šis įrenginys priklauso jūsų organizacijai ir yra prijungtas prie VPN</string>
     <string name="quick_settings_disclosure_monitoring">Tinklas gali būti stebimas</string>
     <string name="quick_settings_disclosure_named_managed_profile_monitoring">„%1$s“ darbo profilyje gali stebėti tinklo srautą</string>
+    <string name="quick_settings_disclosure_named_management">Šis įrenginys priklauso „%1$s“</string>
+    <string name="quick_settings_disclosure_named_management_monitoring">Šis įrenginys priklauso „%1$s“ ir ji gali stebėti tinklo srautą</string>
+    <string name="quick_settings_disclosure_named_management_named_vpn">Šis įrenginys priklauso „%1$s“ ir yra susietas su „%2$s“</string>
+    <string name="quick_settings_disclosure_named_management_vpns">Šis įrenginys priklauso „%1$s“ ir yra prijungtas prie VPN</string>
+    <string name="quick_settings_disclosure_named_vpn">Šis įrenginys susietas su „%1$s“</string>
+    <string name="quick_settings_disclosure_personal_profile_named_vpn">Asmeninis profilis susietas su „%1$s“</string>
+    <string name="quick_settings_disclosure_vpns">Šis įrenginys prijungtas prie VPN</string>
     <string name="quick_settings_dnd_alarms_label">Tik signalai</string>
     <string name="quick_settings_dnd_label">Netrukdymo režimas</string>
     <string name="quick_settings_dnd_none_label">Visiška tyla</string>

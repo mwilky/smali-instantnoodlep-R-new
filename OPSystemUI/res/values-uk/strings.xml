@@ -39,6 +39,11 @@
     <string name="abc_slice_updated">Оновлено: %1$s</string>
     <string name="abc_slices_permission_request">%1$s хоче показати фрагменти додатка %2$s</string>
     <string name="abc_toolbar_collapse_description">Згорнути</string>
+    <string name="about_action_bar_title">Інформація</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Політика конфіденційності</string>
+    <string name="about_release_note_title">Журнал оновлень:</string>
+    <string name="about_terms_service">Умови використання</string>
     <string name="accessibility_accessibility_button">Спеціальні можливості</string>
     <string name="accessibility_action_divider_bottom_full">Нижнє вікно на весь екран</string>
     <string name="accessibility_action_divider_left_30">Ліве вікно на 30%</string>
@@ -540,10 +545,10 @@
     <string name="bugreport_in_power">Ярлик звіту про помилки</string>
     <string name="bugreport_in_power_summary">Показувати в меню живлення кнопку створення звіту про помилки</string>
     <string name="button_convert_fbe">Стерти та конвертувати…</string>
-    <string name="cached_apps_freezer_device_default">Пристрій за умовчанням</string>
+    <string name="cached_apps_freezer_device_default">За умовчанням для пристрою</string>
     <string name="cached_apps_freezer_disabled">Вимкнено</string>
     <string name="cached_apps_freezer_enabled">Увімкнено</string>
-    <string name="cached_apps_freezer_reboot_dialog_text">Щоб застосувати ці зміни, перезапустіть пристрій. Перезапустіть пристрій або скасуйте зміни.</string>
+    <string name="cached_apps_freezer_reboot_dialog_text">Щоб застосувати ці зміни, потрібний перезапуск. Перезапустіть пристрій або скасуйте зміни.</string>
     <string name="camera_hint">Камера: проведіть пальцем від значка</string>
     <string name="camera_label">відкрити камеру</string>
     <string name="cancel">Скасувати</string>
@@ -598,10 +603,15 @@
     <string name="controls_favorite_other_zone_header">Інше</string>
     <string name="controls_favorite_rearrange">Щоб змінити порядок елементів керування, перетягуйте їх</string>
     <string name="controls_favorite_removed">Усі елементи керування вилучено</string>
+    <string name="controls_favorite_see_other_apps">Переглянути інші додатки</string>
     <string name="controls_favorite_subtitle">Виберіть, які елементи керування будуть у меню кнопки живлення</string>
     <string name="controls_favorite_toast_no_changes">Зміни не збережено</string>
     <string name="controls_in_progress">Виконується</string>
+    <string name="controls_media_close_session">Приховати поточний сеанс.</string>
+    <string name="controls_media_dismiss_button">Приховати</string>
     <string name="controls_media_resume">Відновити</string>
+    <string name="controls_media_settings_button">Налаштування</string>
+    <string name="controls_media_title">Медіа</string>
     <string name="controls_menu_add">Додати елементи керування</string>
     <string name="controls_menu_edit">Змінити елементи керування</string>
     <string name="controls_open_app">Відкрити додаток</string>
@@ -692,8 +702,8 @@
     <string name="disable_carrier_button_text">Вимкнути eSIM-карту</string>
     <string name="disable_overlays">Вимк. апаратн. накладання</string>
     <string name="disable_overlays_summary">Завжди використовувати GPU для компонування екрана</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">Зверніться до адміністратора по додаткову інформацію</string>
+    <string name="disable_tether_notification_title">Режим модема вимкнено</string>
     <string name="disable_vpn">Вимкнути VPN</string>
     <string name="disabled">Вимкнено</string>
     <string name="disabled_by_admin">Вимкнено адміністратором</string>
@@ -701,6 +711,8 @@
     <string name="disconnect_vpn">Від’єднатися від мережі VPN</string>
     <string name="dnd_is_off">Режим \"Не турбувати\" вимкнено</string>
     <string name="dnd_suppressing_shade_text">Режим \"Не турбувати\" призупинив сповіщення</string>
+    <string name="do_disclosure_generic">Цей пристрій належить вашій організації</string>
+    <string name="do_disclosure_with_name">Цей пристрій належить організації \"%s\"</string>
     <string name="do_not_silence">Не вимикати звуковий сигнал</string>
     <string name="do_not_silence_block">Не вимикати звуковий сигнал і не блокувати</string>
     <string name="dock_alignment_not_charging">Поправте телефон, щоб активувати бездротове заряджання</string>
@@ -711,6 +723,7 @@
     <string name="drag_to_rearrange_tiles">Щоб змінити порядок елементів, перетягуйте їх</string>
     <string name="drag_to_remove_disabled">Мінімальна кількість фрагментів: %1$d</string>
     <string name="drag_to_remove_tiles">Перетягніть сюди, щоб видалити</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">Перетягуйте плитки, щоб змінювати порядок їх розташування. Торкайтеся, щоб показати або приховати їх.</string>
     <string name="empty_shade_text">Сповіщень немає</string>
     <string name="enable_adb">Налагодження USB</string>
@@ -1086,6 +1099,7 @@
     <string name="left_nav_bar_button_type">Додатковий тип кнопки ліворуч</string>
     <string name="legacy_vpn_name">VPN</string>
     <string name="loading_injected_setting_summary">Завантаження…</string>
+    <string name="loading_text">Завантаження…</string>
     <string name="local_backup_password_summary_change">Торкніться, щоб змінити або видалити пароль для повного резервного копіювання на комп’ютер</string>
     <string name="local_backup_password_summary_none">Повні резервні копії на комп’ютері наразі не захищені</string>
     <string name="local_backup_password_title">Пароль рез. копії на ПК</string>
@@ -1170,8 +1184,18 @@
     <string name="monitoring_description_do_learn_more_separator">" "</string>
     <string name="monitoring_description_managed_profile_ca_certificate">Адміністратор організації встановив центр сертифікації у вашому робочому профілі. Захищений мережевий трафік може відстежуватися або змінюватися.</string>
     <string name="monitoring_description_managed_profile_named_vpn">Ваш робочий профіль під’єднано до додатка %1$s, який може відстежувати вашу активність у мережі, зокрема в електронній пошті, додатках і на веб-сайтах.</string>
+    <string name="monitoring_description_management">"Цей пристрій належить вашій організації.
+
+ІТ-адміністратор може відстежувати й контролювати налаштування, корпоративний доступ, додатки, дані пристрою та інформацію про його місцезнаходження.
+
+Щоб дізнатися більше, зв'яжіться з ІТ-адміністратором."</string>
     <string name="monitoring_description_management_ca_certificate">Адміністратор організації встановив центр сертифікації на цьому пристрої. Захищений мережевий трафік може відстежуватися або змінюватися.</string>
     <string name="monitoring_description_management_network_logging">Ваш адміністратор увімкнув реєстрацію в мережі, під час якої на вашому пристрої відстежується трафік.</string>
+    <string name="monitoring_description_named_management">"Цей пристрій належить організації \"%1$s\".
+
+IT-адміністратор може відстежувати й контролювати налаштування, корпоративний доступ, додатки, дані пристрою та інформацію про його місцезнаходження.
+
+Щоб дізнатися більше, зв'яжіться з IT-адміністратором."</string>
     <string name="monitoring_description_named_vpn">Під’єднано додаток %1$s, який може відстежувати вашу активність у мережі, як-от відкривання електронних листів, додатків і веб-сайтів.</string>
     <string name="monitoring_description_network_logging">"Ваш адміністратор увімкнув реєстрацію в мережі, під час якої на вашому пристрої відстежується трафік.
 
@@ -1307,8 +1331,14 @@
     <string name="oneplus_threekey_navigation_sound">Усі звуки дозволено</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Його можна ввімкнути за допомогою перемикача вище</string>
     <string name="oneplus_threekey_navigation_vibration">Лише вібрація</string>
-    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> розблокування</string>
-    <string name="op_aod_parsons_unlock_other">Розблокувань: <annotation id="unlockNum">^1</annotation></string>
+    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>розблокування</string>
+    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>розблокувань</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">Створення пари…</string>
     <string name="op_earphone_connected_fail">Не вдалося створити пару. Перевірте гарнітуру та статус Bluetooth.</string>
     <string name="op_earphone_connected_success">Пару створено. Торкніться, щоб виконати інші налаштування.</string>
@@ -1338,9 +1368,10 @@
     <string name="op_notification_channel_summary_low">Менш важливі сповіщення без звуку й вібрації</string>
     <string name="op_notification_section_header_gentle">Інші сповіщення</string>
     <string name="op_notification_silence_title">Інше</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">Темний режим</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s використано</string>
-    <string name="op_quick_settings_night_display_label">Нічний режим</string>
+    <string name="op_quick_settings_night_display_label">Зоровий комфорт</string>
     <string name="op_quick_settings_night_display_summary_off">Нічний режим вимкнено. Торкніться, щоб увімкнути</string>
     <string name="op_quick_settings_night_display_summary_on">Нічний режим увімкнено. Торкніться, щоб вимкнути</string>
     <string name="op_read_mode2_dialog_black">Одноколірний ефект</string>
@@ -1552,8 +1583,20 @@
     <string name="quick_settings_data_switch_toast_1">Вставлено тільки одну SIM-карту</string>
     <string name="quick_settings_default_data_card">Карта даних за замовчуванням</string>
     <string name="quick_settings_disclosure_managed_profile_monitoring">Адміністратор вашої організації може відстежувати мережевий трафік у вашому робочому профілі</string>
+    <string name="quick_settings_disclosure_managed_profile_named_vpn">Ваш робочий профіль підключено до додатка %1$s</string>
+    <string name="quick_settings_disclosure_management">Цей пристрій належить вашій організації</string>
+    <string name="quick_settings_disclosure_management_monitoring">Цей пристрій належить вашій організації. Її адміністратор може відстежувати мережевий трафік</string>
+    <string name="quick_settings_disclosure_management_named_vpn">Цей пристрій належить вашій організації. Його підключено до додатка %1$s</string>
+    <string name="quick_settings_disclosure_management_vpns">Цей пристрій належить вашій організації. Його підключено до мереж VPN</string>
     <string name="quick_settings_disclosure_monitoring">Мережевий трафік може відстежуватися</string>
     <string name="quick_settings_disclosure_named_managed_profile_monitoring">Адміністратор організації %1$s мож відстежувати мережевий трафік у вашому робочому профілі</string>
+    <string name="quick_settings_disclosure_named_management">Цей пристрій належить організації \"%1$s\"</string>
+    <string name="quick_settings_disclosure_named_management_monitoring">Цей пристрій належить організації \"%1$s\". Її адміністратор може відстежувати мережевий трафік</string>
+    <string name="quick_settings_disclosure_named_management_named_vpn">Цей пристрій належить організації \"%1$s\". Його підключено до додатка %2$s</string>
+    <string name="quick_settings_disclosure_named_management_vpns">Цей пристрій належить організації \"%1$s\". Його підключено до мереж VPN</string>
+    <string name="quick_settings_disclosure_named_vpn">Цей пристрій підключено до додатка %1$s</string>
+    <string name="quick_settings_disclosure_personal_profile_named_vpn">Ваш особистий профіль підключено до додатка %1$s</string>
+    <string name="quick_settings_disclosure_vpns">Цей пристрій підключено до мереж VPN</string>
     <string name="quick_settings_dnd_alarms_label">Лише будильник</string>
     <string name="quick_settings_dnd_label">Не турбувати</string>
     <string name="quick_settings_dnd_none_label">Без сигналів</string>
@@ -1843,7 +1886,7 @@
     <string name="tethered_notification_hybrid_sharing_mobile">Спільне використання мобільних даних; натисніть, щоб перейти до налаштувань</string>
     <string name="tethered_notification_hybrid_sharing_none">Немає доступної мережі для спільного використання; натисніть, щоб перейти до налаштувань</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Спільне використання мережі Wi-Fi; натисніть, щоб перейти до налаштувань</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">Торкніться, щоб налаштувати.</string>
     <string name="tethered_notification_multi_device_message">"%1$s під'єднаних пристроїв(-ї)"</string>
     <string name="tethered_notification_multi_tether_title">Режим модема та мобільну точку доступу ввімкнено</string>
     <string name="tethered_notification_no_device_message">Немає підключених пристроїв</string>
@@ -2076,7 +2119,17 @@
     <string name="wifi_verbose_logging">Докладний запис у журнал Wi-Fi</string>
     <string name="wifi_verbose_logging_summary">Показувати в журналі RSSI для кожного SSID під час вибору Wi-Fi</string>
     <string name="window_animation_scale_title">Анімація вікон</string>
-    <string name="work_life_balance_mode">Work-Life Balance</string>
+    <string name="wlb_break_mode_active">Активний</string>
+    <string name="wlb_break_mode_active_text">Режим %1$s · %2$s</string>
+    <string name="wlb_break_mode_on_break">На перерві</string>
+    <string name="wlb_break_mode_resume">Відновити</string>
+    <string name="wlb_break_mode_take_break">Перепочиньте</string>
+    <string name="wlb_qs_detail_break_mode">Режим перепочинку</string>
+    <string name="wlb_qs_detail_break_mode_desc">Автоматично відновлює попередній режим через 30 хвилин</string>
+    <string name="wlb_qs_detail_life_mode">Режим особистого життя</string>
+    <string name="wlb_qs_detail_more_setting">Додаткові налаштування</string>
+    <string name="wlb_qs_detail_work_mode">Режим роботи</string>
+    <string name="work_life_balance_mode">Баланс роботи й особистого життя</string>
     <string name="zen_alarm_warning">Наступний сигнал о %1$s не пролунає</string>
     <string name="zen_alarm_warning_indef">Наступний сигнал о %1$s не пролунає, якщо ви до того часу не вимкнете цю функцію</string>
     <string name="zen_alarms_introduction">Ви отримуватиме звукові та вібросигнали лише для будильників. Однак ви чутимете все, що захочете відтворити, зокрема музику, відео й ігри.</string>
@@ -2097,5 +2150,5 @@
     <string name="zen_silence_introduction_voice">Блокуватимуться ВСІ звукові та вібросигнали, зокрема будильники, музика, відео й ігри. Однак ви зможете телефонувати.</string>
     <string name="zzz_op_global_action_bootloader">Завантажувач</string>
     <string name="zzz_op_global_action_recovery">Відновлення</string>
-    <string name="zzz_op_quick_pay_no_install_message">Для використання Quick Pay, будь ласка, встановіть платіжні додатки</string>
+    <string name="zzz_op_quick_pay_no_install_message">Щоб використовувати Quick Pay, установіть платіжні додатки</string>
 </resources>

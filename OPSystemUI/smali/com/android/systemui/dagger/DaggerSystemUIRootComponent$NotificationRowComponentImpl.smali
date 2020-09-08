@@ -75,7 +75,7 @@
 .method private initialize(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$NotificationRowComponentBuilder;)V
     .locals 0
 
-    invoke-static {p1}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$NotificationRowComponentBuilder;->access$18700(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$NotificationRowComponentBuilder;)Lcom/android/systemui/statusbar/notification/row/ActivatableNotificationView;
+    invoke-static {p1}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$NotificationRowComponentBuilder;->access$18800(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$NotificationRowComponentBuilder;)Lcom/android/systemui/statusbar/notification/row/ActivatableNotificationView;
 
     move-result-object p1
 

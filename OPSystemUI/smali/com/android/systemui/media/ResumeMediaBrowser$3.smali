@@ -68,21 +68,21 @@
 
     move-result-object v0
 
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/android/systemui/media/ResumeMediaBrowser$3;->this$0:Lcom/android/systemui/media/ResumeMediaBrowser;
+
+    invoke-static {v0}, Lcom/android/systemui/media/ResumeMediaBrowser;->access$100(Lcom/android/systemui/media/ResumeMediaBrowser;)Landroid/media/browse/MediaBrowser;
+
+    move-result-object v0
+
     invoke-virtual {v0}, Landroid/media/browse/MediaBrowser;->isConnected()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    iget-object p0, p0, Lcom/android/systemui/media/ResumeMediaBrowser$3;->this$0:Lcom/android/systemui/media/ResumeMediaBrowser;
-
-    invoke-static {p0}, Lcom/android/systemui/media/ResumeMediaBrowser;->access$200(Lcom/android/systemui/media/ResumeMediaBrowser;)Lcom/android/systemui/media/ResumeMediaBrowser$Callback;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lcom/android/systemui/media/ResumeMediaBrowser$Callback;->onError()V
-
-    return-void
+    goto :goto_0
 
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/media/ResumeMediaBrowser$3;->this$0:Lcom/android/systemui/media/ResumeMediaBrowser;
@@ -126,6 +126,18 @@
     move-result-object p0
 
     invoke-virtual {p0}, Lcom/android/systemui/media/ResumeMediaBrowser$Callback;->onConnected()V
+
+    return-void
+
+    :cond_1
+    :goto_0
+    iget-object p0, p0, Lcom/android/systemui/media/ResumeMediaBrowser$3;->this$0:Lcom/android/systemui/media/ResumeMediaBrowser;
+
+    invoke-static {p0}, Lcom/android/systemui/media/ResumeMediaBrowser;->access$200(Lcom/android/systemui/media/ResumeMediaBrowser;)Lcom/android/systemui/media/ResumeMediaBrowser$Callback;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/systemui/media/ResumeMediaBrowser$Callback;->onError()V
 
     return-void
 .end method

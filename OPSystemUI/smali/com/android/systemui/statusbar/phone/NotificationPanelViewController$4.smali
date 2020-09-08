@@ -39,7 +39,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController$4;->this$0:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
-    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$2200(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)V
+    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$2300(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)V
 
     return-void
 .end method
@@ -49,7 +49,7 @@
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController$4;->this$0:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
-    invoke-static {p1}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$1700(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)Lcom/android/systemui/statusbar/phone/KeyguardBypassController;
+    invoke-static {p1}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$1800(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)Lcom/android/systemui/statusbar/phone/KeyguardBypassController;
 
     move-result-object p1
 
@@ -67,7 +67,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController$4;->this$0:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
-    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$2300(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)V
+    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$2400(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)V
 
     :cond_0
     return-void

@@ -16,6 +16,8 @@
 
 .field private mCameraIcon:Landroid/view/View;
 
+.field private mContext:Landroid/content/Context;
+
 .field private mExpandButton:Lcom/android/internal/widget/NotificationExpandButton;
 
 .field private mHeaderText:Landroid/widget/TextView;
@@ -83,35 +85,37 @@
 
     invoke-static {p1}, Lcom/android/systemui/statusbar/notification/NotificationUtils;->useNewInterruptionModel(Landroid/content/Context;)Z
 
-    move-result p1
+    move-result p2
 
-    if-eqz p1, :cond_0
+    if-eqz p2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p2, 0x0
 
     goto :goto_1
 
     :cond_1
     :goto_0
-    move p1, v0
+    move p2, v0
 
     :goto_1
-    iput-boolean p1, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationHeaderViewWrapper;->mShowExpandButtonAtEnd:Z
+    iput-boolean p2, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationHeaderViewWrapper;->mShowExpandButtonAtEnd:Z
 
-    new-instance p1, Lcom/android/systemui/statusbar/ViewTransformationHelper;
+    new-instance p2, Lcom/android/systemui/statusbar/ViewTransformationHelper;
 
-    invoke-direct {p1}, Lcom/android/systemui/statusbar/ViewTransformationHelper;-><init>()V
+    invoke-direct {p2}, Lcom/android/systemui/statusbar/ViewTransformationHelper;-><init>()V
 
-    iput-object p1, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationHeaderViewWrapper;->mTransformationHelper:Lcom/android/systemui/statusbar/ViewTransformationHelper;
+    iput-object p2, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationHeaderViewWrapper;->mTransformationHelper:Lcom/android/systemui/statusbar/ViewTransformationHelper;
 
-    new-instance p2, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationHeaderViewWrapper$1;
+    iput-object p1, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationHeaderViewWrapper;->mContext:Landroid/content/Context;
 
-    invoke-direct {p2, p0, v0}, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationHeaderViewWrapper$1;-><init>(Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationHeaderViewWrapper;I)V
+    new-instance p1, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationHeaderViewWrapper$1;
 
-    invoke-virtual {p1, p2, v0}, Lcom/android/systemui/statusbar/ViewTransformationHelper;->setCustomTransformation(Lcom/android/systemui/statusbar/ViewTransformationHelper$CustomTransformation;I)V
+    invoke-direct {p1, p0, v0}, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationHeaderViewWrapper$1;-><init>(Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationHeaderViewWrapper;I)V
+
+    invoke-virtual {p2, p1, v0}, Lcom/android/systemui/statusbar/ViewTransformationHelper;->setCustomTransformation(Lcom/android/systemui/statusbar/ViewTransformationHelper$CustomTransformation;I)V
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationHeaderViewWrapper;->resolveHeaderViews()V
 
@@ -671,6 +675,73 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationHeaderViewWrapper;->mExpandButton:Lcom/android/internal/widget/NotificationExpandButton;
 
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationHeaderViewWrapper;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    iget v0, v0, Landroid/content/res/Configuration;->uiMode:I
+
+    and-int/lit8 v0, v0, 0x30
+
+    const/16 v1, 0x20
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationHeaderViewWrapper;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lcom/android/systemui/R$color;->op_control_icon_color_active_dark:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationHeaderViewWrapper;->mExpandButton:Lcom/android/internal/widget/NotificationExpandButton;
+
+    invoke-virtual {v1, v0}, Lcom/android/internal/widget/NotificationExpandButton;->setColorFilter(I)V
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationHeaderViewWrapper;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lcom/android/systemui/R$color;->op_control_icon_color_active_light:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationHeaderViewWrapper;->mExpandButton:Lcom/android/internal/widget/NotificationExpandButton;
+
+    invoke-virtual {v1, v0}, Lcom/android/internal/widget/NotificationExpandButton;->setColorFilter(I)V
+
+    :cond_2
+    :goto_1
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;->mView:Landroid/view/View;
 
     const v1, 0x1020407
@@ -747,7 +818,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationHeaderViewWrapper;->mNotificationHeader:Landroid/view/NotificationHeaderView;
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_3
 
     iget-boolean v1, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationHeaderViewWrapper;->mShowExpandButtonAtEnd:Z
 
@@ -757,7 +828,7 @@
 
     invoke-virtual {p0}, Landroid/view/NotificationHeaderView;->getOriginalIconColor()I
 
-    :cond_0
+    :cond_3
     return-void
 .end method
 

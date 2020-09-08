@@ -1374,6 +1374,28 @@
     return v1
 .end method
 
+.method public onDisplayRotationChangedNotInPip(I)V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/systemui/pip/PipBoundsHandler;->mDisplayLayout:Lcom/android/systemui/wm/DisplayLayout;
+
+    iget-object v1, p0, Lcom/android/systemui/pip/PipBoundsHandler;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1, p1}, Lcom/android/systemui/wm/DisplayLayout;->rotateTo(Landroid/content/res/Resources;I)V
+
+    iget-object v0, p0, Lcom/android/systemui/pip/PipBoundsHandler;->mDisplayInfo:Landroid/view/DisplayInfo;
+
+    iput p1, v0, Landroid/view/DisplayInfo;->rotation:I
+
+    invoke-direct {p0}, Lcom/android/systemui/pip/PipBoundsHandler;->updateDisplayInfoIfNeeded()V
+
+    return-void
+.end method
+
 .method public onImeVisibilityChanged(ZI)V
     .locals 0
 

@@ -59,11 +59,21 @@
     :cond_0
     iget-object p1, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler$scrollChangedListener$1;->this$0:Lcom/android/systemui/media/MediaCarouselScrollHandler;
 
-    invoke-virtual {p1}, Lcom/android/systemui/media/MediaCarouselScrollHandler;->getPlayerWidthPlusPadding()I
+    invoke-static {p1}, Lcom/android/systemui/media/MediaCarouselScrollHandler;->access$getScrollView$p(Lcom/android/systemui/media/MediaCarouselScrollHandler;)Lcom/android/systemui/media/MediaScrollView;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/android/systemui/media/MediaScrollView;->getRelativeScrollX()I
+
+    move-result p1
+
+    iget-object p2, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler$scrollChangedListener$1;->this$0:Lcom/android/systemui/media/MediaCarouselScrollHandler;
+
+    invoke-virtual {p2}, Lcom/android/systemui/media/MediaCarouselScrollHandler;->getPlayerWidthPlusPadding()I
 
     move-result p3
 
-    div-int p3, p2, p3
+    div-int p3, p1, p3
 
     iget-object p0, p0, Lcom/android/systemui/media/MediaCarouselScrollHandler$scrollChangedListener$1;->this$0:Lcom/android/systemui/media/MediaCarouselScrollHandler;
 
@@ -71,9 +81,9 @@
 
     move-result p0
 
-    rem-int/2addr p2, p0
+    rem-int/2addr p1, p0
 
-    invoke-static {p1, p3, p2}, Lcom/android/systemui/media/MediaCarouselScrollHandler;->access$onMediaScrollingChanged(Lcom/android/systemui/media/MediaCarouselScrollHandler;II)V
+    invoke-static {p2, p3, p1}, Lcom/android/systemui/media/MediaCarouselScrollHandler;->access$onMediaScrollingChanged(Lcom/android/systemui/media/MediaCarouselScrollHandler;II)V
 
     return-void
 .end method

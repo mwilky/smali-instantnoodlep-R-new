@@ -35,15 +35,23 @@
 
 # virtual methods
 .method public onBootComplete()V
-    .locals 1
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior$6;->this$0:Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;
+
+    invoke-static {v0}, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->access$600(Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;)Landroid/content/ComponentName;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->access$502(Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;Landroid/content/ComponentName;)Landroid/content/ComponentName;
 
     iget-object p0, p0, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior$6;->this$0:Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;
 
-    invoke-static {p0}, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->access$600(Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;)Landroid/content/ComponentName;
+    invoke-static {p0}, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->access$700(Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;)Landroid/content/Context;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-static {p0, v0}, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->access$502(Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;Landroid/content/ComponentName;)Landroid/content/ComponentName;
+    invoke-static {p0}, Lcom/oneplus/util/OpUtils;->updateSupportAssistantGestureState(Landroid/content/Context;)V
 
     return-void
 .end method

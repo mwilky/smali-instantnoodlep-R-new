@@ -32,6 +32,16 @@
 .method public abstract addCallback(Lcom/android/systemui/statusbar/policy/NetworkController$SignalCallback;)V
 .end method
 
+.method public bridge synthetic addCallback(Ljava/lang/Object;)V
+    .locals 0
+
+    check-cast p1, Lcom/android/systemui/statusbar/policy/NetworkController$SignalCallback;
+
+    invoke-interface {p0, p1}, Lcom/android/systemui/statusbar/policy/NetworkController;->addCallback(Lcom/android/systemui/statusbar/policy/NetworkController$SignalCallback;)V
+
+    return-void
+.end method
+
 .method public abstract getAccessPointController()Lcom/android/systemui/statusbar/policy/NetworkController$AccessPointController;
 .end method
 
@@ -51,6 +61,16 @@
 .end method
 
 .method public abstract removeCallback(Lcom/android/systemui/statusbar/policy/NetworkController$SignalCallback;)V
+.end method
+
+.method public bridge synthetic removeCallback(Ljava/lang/Object;)V
+    .locals 0
+
+    check-cast p1, Lcom/android/systemui/statusbar/policy/NetworkController$SignalCallback;
+
+    invoke-interface {p0, p1}, Lcom/android/systemui/statusbar/policy/NetworkController;->removeCallback(Lcom/android/systemui/statusbar/policy/NetworkController$SignalCallback;)V
+
+    return-void
 .end method
 
 .method public abstract setNetworkSpeedController(Lcom/oneplus/networkspeed/NetworkSpeedController;)V

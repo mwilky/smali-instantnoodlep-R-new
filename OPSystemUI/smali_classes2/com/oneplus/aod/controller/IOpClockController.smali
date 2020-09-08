@@ -78,6 +78,9 @@
 .method public abstract onDestroyView()V
 .end method
 
+.method public abstract onFodIndicationVisibilityChanged(Z)V
+.end method
+
 .method public abstract onFodShowOrHideOnAod(Z)V
 .end method
 
@@ -97,6 +100,9 @@
     .locals 0
 
     return-void
+.end method
+
+.method public abstract onUserTrigger(I)V
 .end method
 
 .method public abstract recoverFromBurnInScreen()V

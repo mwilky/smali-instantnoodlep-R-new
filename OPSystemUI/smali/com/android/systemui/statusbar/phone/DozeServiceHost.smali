@@ -223,7 +223,23 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/systemui/statusbar/phone/DozeServiceHost;)Lcom/android/systemui/statusbar/phone/StatusBar;
+.method static synthetic access$000(Lcom/android/systemui/statusbar/phone/DozeServiceHost;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mPulsing:Z
+
+    return p0
+.end method
+
+.method static synthetic access$002(Lcom/android/systemui/statusbar/phone/DozeServiceHost;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mPulsing:Z
+
+    return p1
+.end method
+
+.method static synthetic access$100(Lcom/android/systemui/statusbar/phone/DozeServiceHost;)Lcom/android/systemui/statusbar/phone/StatusBar;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
@@ -237,14 +253,6 @@
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mPulseExpansionHandler:Lcom/android/systemui/statusbar/PulseExpansionHandler;
 
     return-object p0
-.end method
-
-.method static synthetic access$102(Lcom/android/systemui/statusbar/phone/DozeServiceHost;Z)Z
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mPulsing:Z
-
-    return p1
 .end method
 
 .method static synthetic access$1100(Lcom/android/systemui/statusbar/phone/DozeServiceHost;)Lcom/android/systemui/statusbar/notification/NotificationWakeUpCoordinator;
@@ -676,7 +684,7 @@
 .end method
 
 .method public isPulsingBlocked()Z
-    .locals 1
+    .locals 2
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mBiometricUnlockControllerLazy:Ldagger/Lazy;
 
@@ -692,13 +700,44 @@
 
     const/4 v0, 0x1
 
-    if-ne p0, v0, :cond_0
+    if-eq p0, v0, :cond_1
+
+    const-class p0, Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    invoke-static {p0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    invoke-virtual {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->getGoingToSleepReason()I
+
+    move-result p0
+
+    const/16 v1, 0xa
+
+    if-ne p0, v1, :cond_0
+
+    const-class p0, Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    invoke-static {p0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    invoke-virtual {p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getPhoneState()I
+
+    move-result p0
+
+    if-eqz p0, :cond_0
 
     goto :goto_0
 
     :cond_0
     const/4 v0, 0x0
 
+    :cond_1
     :goto_0
     return v0
 .end method
@@ -951,6 +990,26 @@
 
     :goto_0
     iput-boolean v1, p0, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mPulsing:Z
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "pulseWhileDozing, mPulsing:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v2, p0, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mPulsing:Z
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "StatusBar"
+
+    invoke-static {v2, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mDozeScrimController:Lcom/android/systemui/statusbar/phone/DozeScrimController;
 

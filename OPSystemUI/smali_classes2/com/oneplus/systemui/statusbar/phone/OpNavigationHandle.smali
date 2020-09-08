@@ -752,7 +752,7 @@
 
     if-nez v3, :cond_6
 
-    const/16 v3, 0xa
+    const/16 v3, 0x28
 
     if-ge p1, v3, :cond_1
 

@@ -5,9 +5,23 @@
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/recents/OverviewProxyService;Lcom/android/systemui/model/SysUiState;Lcom/android/systemui/shared/plugins/PluginManager;)V
-    .locals 0
+    .locals 6
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;-><init>(Landroid/content/Context;Lcom/android/systemui/recents/OverviewProxyService;Lcom/android/systemui/model/SysUiState;Lcom/android/systemui/shared/plugins/PluginManager;)V
+    new-instance v5, Lcom/oneplus/systemui/statusbar/phone/OpEdgeBackGestureHandler$1;
+
+    invoke-direct {v5}, Lcom/oneplus/systemui/statusbar/phone/OpEdgeBackGestureHandler$1;-><init>()V
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    move-object v4, p4
+
+    invoke-direct/range {v0 .. v5}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;-><init>(Landroid/content/Context;Lcom/android/systemui/recents/OverviewProxyService;Lcom/android/systemui/model/SysUiState;Lcom/android/systemui/shared/plugins/PluginManager;Ljava/lang/Runnable;)V
 
     return-void
 .end method

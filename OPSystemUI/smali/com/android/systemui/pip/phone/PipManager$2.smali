@@ -118,8 +118,6 @@
 .method public onActivityRestartAttempt(Landroid/app/ActivityManager$RunningTaskInfo;ZZZ)V
     .locals 0
 
-    if-eqz p4, :cond_1
-
     iget-object p1, p1, Landroid/app/ActivityManager$RunningTaskInfo;->configuration:Landroid/content/res/Configuration;
 
     iget-object p1, p1, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
@@ -132,7 +130,7 @@
 
     if-eq p1, p2, :cond_0
 
-    goto :goto_0
+    return-void
 
     :cond_0
     iget-object p0, p0, Lcom/android/systemui/pip/phone/PipManager$2;->this$0:Lcom/android/systemui/pip/phone/PipManager;
@@ -147,8 +145,6 @@
 
     invoke-virtual {p0, p3}, Lcom/android/systemui/pip/phone/PipMotionHelper;->expandPipToFullscreen(Z)V
 
-    :cond_1
-    :goto_0
     return-void
 .end method
 

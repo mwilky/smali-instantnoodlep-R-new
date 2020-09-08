@@ -51,11 +51,11 @@
 
     mul-float/2addr p1, v1
 
-    invoke-static {v0, p1}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$10702(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;F)F
+    invoke-static {v0, p1}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$10802(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;F)F
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController$ExpansionCallback;->this$0:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
-    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$10600(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)V
+    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->access$10700(Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;)V
 
     return-void
 .end method

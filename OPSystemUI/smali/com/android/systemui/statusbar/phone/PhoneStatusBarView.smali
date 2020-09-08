@@ -263,7 +263,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x32
+    const/16 v2, 0x31
 
     const/4 v3, 0x0
 
@@ -758,7 +758,7 @@
 .end method
 
 .method private updateStatusBarHeight()V
-    .locals 6
+    .locals 7
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;->mDisplayCutout:Landroid/view/DisplayCutout;
 
@@ -828,6 +828,39 @@
 
     move-result v4
 
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
+
+    move-result-object v5
+
+    invoke-static {v5}, Lcom/oneplus/util/OpUtils;->isSupportResolutionSwitch(Landroid/content/Context;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_1
+
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    sget v4, Lcom/android/systemui/R$dimen;->status_bar_padding_start:I
+
+    const/16 v5, 0x438
+
+    invoke-static {v3, v4, v5}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v3
+
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    sget v6, Lcom/android/systemui/R$dimen;->status_bar_padding_end:I
+
+    invoke-static {v4, v6, v5}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v4
+
+    :cond_1
     sget v5, Lcom/android/systemui/R$id;->status_bar_contents:I
 
     invoke-virtual {p0, v5}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -850,13 +883,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     invoke-static {}, Lcom/oneplus/util/OpUtils;->isSupportHolePunchFrontCam()Z
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
     iget-object v0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
 
@@ -864,21 +897,21 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
-    :cond_1
+    :cond_2
     invoke-static {}, Lcom/oneplus/util/OpUtils;->isCutoutEmulationEnabled()Z
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
-    :cond_2
+    :cond_3
     move v0, v1
 
     goto :goto_1
 
-    :cond_3
+    :cond_4
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0

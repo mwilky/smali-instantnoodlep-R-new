@@ -1531,7 +1531,7 @@
 
     new-array v0, p5, [I
 
-    const/16 v1, 0xb7
+    const/16 v1, 0xb0
 
     const/4 v2, 0x0
 

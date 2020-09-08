@@ -7,7 +7,7 @@
     <FrameLayout android:layout_width="fill_parent" android:layout_height="72.0dip">
         <View android:layout_gravity="center|top" android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="@dimen/controls_app_divider_height" />
         <androidx.constraintlayout.widget.ConstraintLayout android:padding="@dimen/controls_management_footer_side_margin" android:layout_width="fill_parent" android:layout_height="fill_parent">
-            <Button android:gravity="center_vertical" android:id="@id/other_apps" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="See other apps" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@android:style/Widget.DeviceDefault.Button.Borderless.Colored" />
+            <Button android:gravity="center_vertical" android:id="@id/other_apps" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/controls_favorite_see_other_apps" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@android:style/Widget.DeviceDefault.Button.Borderless.Colored" />
             <Button android:id="@id/done" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/save" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" style="@android:style/Widget.DeviceDefault.Button.Colored" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>

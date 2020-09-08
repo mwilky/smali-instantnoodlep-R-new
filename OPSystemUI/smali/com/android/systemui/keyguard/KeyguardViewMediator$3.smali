@@ -243,6 +243,12 @@
     return-void
 
     :cond_0
+    const-string p1, "KeyguardViewMediator"
+
+    const-string p2, "keyguardDone"
+
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$3;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
     invoke-static {p0}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->access$1600(Lcom/android/systemui/keyguard/KeyguardViewMediator;)V
@@ -278,6 +284,12 @@
     const-string p1, "KeyguardViewMediator.mViewMediatorCallback#keyguardDonePending"
 
     invoke-static {p1}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
+
+    const-string p1, "KeyguardViewMediator"
+
+    const-string v0, "keyguardDonePending"
+
+    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
@@ -347,6 +359,12 @@
     const-string v0, "KeyguardViewMediator.mViewMediatorCallback#keyguardGone"
 
     invoke-static {v0}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
+
+    const-string v0, "KeyguardViewMediator"
+
+    const-string v1, "keyguardGone"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$3;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 

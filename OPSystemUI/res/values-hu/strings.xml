@@ -39,6 +39,11 @@
     <string name="abc_slice_updated">Frissítve: %1$s</string>
     <string name="abc_slices_permission_request">A(z) %1$s alkalmazás részleteket szeretne megjeleníteni a(z) %2$s alkalmazásból</string>
     <string name="abc_toolbar_collapse_description">Összecsukás</string>
+    <string name="about_action_bar_title">Névjegy</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Adatvédelmi politika</string>
+    <string name="about_release_note_title">Frissítési napló:</string>
+    <string name="about_terms_service">Szolgáltatási feltételek</string>
     <string name="accessibility_accessibility_button">Kisegítő lehetőségek</string>
     <string name="accessibility_action_divider_bottom_full">Alsó teljes képernyőre</string>
     <string name="accessibility_action_divider_left_30">Bal oldali 30%-ra</string>
@@ -267,7 +272,7 @@
     <string name="accessibility_wimax_signal_full">WiMAX-jel: teljes.</string>
     <string name="accessibility_wimax_three_bars">WiMAX-jel: három sáv.</string>
     <string name="accessibility_wimax_two_bars">WiMAX-jel: két sáv.</string>
-    <string name="accessibility_work_life_balance_mode">Work-Life Balance</string>
+    <string name="accessibility_work_life_balance_mode">Egyensúlyban a munka és az élet</string>
     <string name="accessibility_work_life_balance_mode_off">Work-Life Balance üzemmód kikapcsolva.</string>
     <string name="accessibility_work_life_balance_mode_on">Work-Life Balance üzemmód bekapcsolva.</string>
     <string name="accessibility_zero_bars">Nincs sáv.</string>
@@ -598,6 +603,7 @@ Kiválasztás"</string>
     <string name="controls_favorite_other_zone_header">Más</string>
     <string name="controls_favorite_rearrange">Tartsa lenyomva, és húzza a vezérlők átrendezéséhez</string>
     <string name="controls_favorite_removed">Minden vezérlő eltávolítva</string>
+    <string name="controls_favorite_see_other_apps">Többi alkalmazás megtekintése</string>
     <string name="controls_favorite_subtitle">A bekapcsológomb menüjéből hozzáférhető vezérlők kiválasztása</string>
     <string name="controls_favorite_toast_no_changes">A rendszer nem mentette a módosításokat</string>
     <string name="controls_in_progress">Folyamatban</string>
@@ -696,8 +702,8 @@ Ha a folytatást választja, szolgáltatója adathasználati díjat számíthat 
     <string name="disable_carrier_button_text">Az e-SIM-kártya letiltása</string>
     <string name="disable_overlays">HW fedvények letiltása</string>
     <string name="disable_overlays_summary">Mindig a GPU használata képernyő-feldolgozáshoz</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">A részletekért forduljon a rendszergazdához</string>
+    <string name="disable_tether_notification_title">Az internetmegosztás le van tiltva</string>
     <string name="disable_vpn">VPN letiltása</string>
     <string name="disabled">Letiltva</string>
     <string name="disabled_by_admin">A rendszergazda kikapcsolta</string>
@@ -705,6 +711,8 @@ Ha a folytatást választja, szolgáltatója adathasználati díjat számíthat 
     <string name="disconnect_vpn">VPN-kapcsolat bontása</string>
     <string name="dnd_is_off">A „Ne zavarjanak” mód ki van kapcsolva</string>
     <string name="dnd_suppressing_shade_text">Ne zavarjanak funkcióval szüneteltetett értesítések</string>
+    <string name="do_disclosure_generic">Ez az eszköz az Ön szervezetének tulajdonában van</string>
+    <string name="do_disclosure_with_name">Ez az eszköz a(z) %s tulajdonában van</string>
     <string name="do_not_silence">Nincs némítás</string>
     <string name="do_not_silence_block">Nincs némítás vagy letiltás</string>
     <string name="dock_alignment_not_charging">Igazítsa a helyére a telefont a vezeték nélküli töltéshez</string>
@@ -715,6 +723,7 @@ Ha a folytatást választja, szolgáltatója adathasználati díjat számíthat 
     <string name="drag_to_rearrange_tiles">Tartsa lenyomva, és húzza a mozaikok átrendezéséhez</string>
     <string name="drag_to_remove_disabled">Legalább %1$d kártya szükséges</string>
     <string name="drag_to_remove_tiles">Húzza ide az eltávolításhoz</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">A csempéket húzással átrendezheti, koppintással megjelenítheti vagy elrejtheti.</string>
     <string name="empty_shade_text">Nincs értesítés</string>
     <string name="enable_adb">USB hibakeresés</string>
@@ -1090,6 +1099,7 @@ Próbálja újra %2$d másodperc múlva."</string>
     <string name="left_nav_bar_button_type">További bal oldali gombtípus</string>
     <string name="legacy_vpn_name">VPN</string>
     <string name="loading_injected_setting_summary">Betöltés…</string>
+    <string name="loading_text">Töltés...</string>
     <string name="local_backup_password_summary_change">Koppintson ide az asztali teljes mentések jelszavának módosításához vagy eltávolításához</string>
     <string name="local_backup_password_summary_none">Az asztali teljes biztonsági mentések jelenleg nem védettek.</string>
     <string name="local_backup_password_title">Asztali mentés jelszava</string>
@@ -1112,7 +1122,7 @@ Próbálja újra %2$d másodperc múlva."</string>
     <string name="manage_notifications_history_text">Előzmények</string>
     <string name="manage_notifications_text">Kezelés</string>
     <string name="managed_user_title">Összes munkaalkalmazás</string>
-    <string name="maxxaudio_disable">Kikapcsol</string>
+    <string name="maxxaudio_disable">Letiltás</string>
     <string name="maxxaudio_enable">Engedélyez</string>
     <string name="media_category">Média</string>
     <string name="media_projection_action_text">Indítás most</string>
@@ -1174,8 +1184,18 @@ További információért forduljon a rendszergazdához."</string>
     <string name="monitoring_description_do_learn_more_separator">" "</string>
     <string name="monitoring_description_managed_profile_ca_certificate">Szervezete tanúsítványkibocsátót telepített a munkaprofilba. Ezáltal figyelhetik és befolyásolhatják az Ön biztonságos hálózati forgalmát.</string>
     <string name="monitoring_description_managed_profile_named_vpn">Munkaprofilja csatlakozik a(z) %1$s alkalmazáshoz, amely figyelheti hálózati tevékenységét, beleértve a levelezést, az alkalmazásokat és a webhelyeket.</string>
+    <string name="monitoring_description_management">"Ez az eszköz az Ön szervezetének tulajdonában van.
+
+A rendszergazda figyelheti és kezelheti az eszköz beállításait, vállalati hozzáférését, alkalmazásait, adatait és helyadatait.
+
+Ha további információra van szüksége, vegye fel a kapcsolatot a rendszergazdával."</string>
     <string name="monitoring_description_management_ca_certificate">Szervezete tanúsítványkibocsátót telepített az eszközre. Ezáltal figyelhetik és befolyásolhatják az Ön biztonságos hálózati forgalmát.</string>
     <string name="monitoring_description_management_network_logging">A rendszergazda bekapcsolta az eszköz forgalmát figyelő hálózati naplózást.</string>
+    <string name="monitoring_description_named_management">"Ez az eszköz a(z) %1$s tulajdonában van.
+
+A rendszergazda figyelheti és kezelheti az eszköz beállításait, vállalati hozzáférését, alkalmazásait, adatait és helyadatait.
+
+Ha további információra van szüksége, vegye fel a kapcsolatot a rendszergazdával."</string>
     <string name="monitoring_description_named_vpn">Ön kapcsolódik a(z) %1$s alkalmazáshoz, amely figyelheti hálózati tevékenységét, beleértve a levelezést, valamint az alkalmazás- és webhelyhasználatot.</string>
     <string name="monitoring_description_network_logging">"A rendszergazda bekapcsolta az eszköz forgalmát figyelő hálózati naplózást.
 
@@ -1311,8 +1331,14 @@ VPN-hez is kapcsolódik, amely szintén figyelheti hálózati tevékenységét."
     <string name="oneplus_threekey_navigation_sound">Minden hang bekapcsolva</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Bekapcsolható a fenti kapcsolóval</string>
     <string name="oneplus_threekey_navigation_vibration">Csak rezgés</string>
-    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> feloldása</string>
-    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> feloldódik</string>
+    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>feloldás</string>
+    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>feloldás</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">Párosítás...</string>
     <string name="op_earphone_connected_fail">Sikertelen párosítás. Ellenőrizze a fejhallgatót és a Bluetooth-állapotát.</string>
     <string name="op_earphone_connected_success">Párosítva. Koppintson a további beállításokért.</string>
@@ -1342,9 +1368,10 @@ VPN-hez is kapcsolódik, amely szintén figyelheti hálózati tevékenységét."
     <string name="op_notification_channel_summary_low">Kevésbé fontos értesítések hang és rezgés nélkül.</string>
     <string name="op_notification_section_header_gentle">Egyéb értesítések</string>
     <string name="op_notification_silence_title">Egyéb</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">Sötét mód</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s használatban</string>
-    <string name="op_quick_settings_night_display_label">Éjszakai mód</string>
+    <string name="op_quick_settings_night_display_label">Szemkímélés</string>
     <string name="op_quick_settings_night_display_summary_off">Éjszakai mód nem aktív, koppintásra bekapcsol</string>
     <string name="op_quick_settings_night_display_summary_on">Éjszakai mód aktív, koppintásra kikapcsol</string>
     <string name="op_read_mode2_dialog_black">Mono hatás</string>
@@ -1556,8 +1583,20 @@ VPN-hez is kapcsolódik, amely szintén figyelheti hálózati tevékenységét."
     <string name="quick_settings_data_switch_toast_1">Jelenleg csak egy SIM-kártya van behelyezve</string>
     <string name="quick_settings_default_data_card">Alapértelmezett adatkártya</string>
     <string name="quick_settings_disclosure_managed_profile_monitoring">Szervezete figyelheti a munkaprofil hálózati forgalmát</string>
+    <string name="quick_settings_disclosure_managed_profile_named_vpn">Munkaprofilja össze van kapcsolva a(z) %1$s alkalmazással</string>
+    <string name="quick_settings_disclosure_management">Ez az eszköz az Ön szervezetének tulajdonában van</string>
+    <string name="quick_settings_disclosure_management_monitoring">Az eszköz az Ön szervezetének tulajdonában van, és lehetséges, hogy a hálózati forgalmat is figyelik</string>
+    <string name="quick_settings_disclosure_management_named_vpn">Ez az eszköz az Ön szervezetének tulajdonában van, és össze van kapcsolva a(z) %1$s alkalmazással</string>
+    <string name="quick_settings_disclosure_management_vpns">Ez az eszköz az Ön szervezetének tulajdonában van, és VPN-ekhez van csatlakoztatva</string>
     <string name="quick_settings_disclosure_monitoring">Elképzelhető, hogy a hálózatot figyelik</string>
     <string name="quick_settings_disclosure_named_managed_profile_monitoring">A(z) %1$s figyelheti a munkaprofil hálózati forgalmát</string>
+    <string name="quick_settings_disclosure_named_management">Ez az eszköz a(z) %1$s tulajdonában van</string>
+    <string name="quick_settings_disclosure_named_management_monitoring">Az eszköz a(z) %1$s tulajdonában van, és lehetséges, hogy a hálózati forgalmat is figyelik</string>
+    <string name="quick_settings_disclosure_named_management_named_vpn">Ez az eszköz a(z) %1$s tulajdonában van, és össze van kapcsolva a(z) %2$s alkalmazással</string>
+    <string name="quick_settings_disclosure_named_management_vpns">Ez az eszköz a(z) %1$s tulajdonában van, és VPN-ekhez van csatlakoztatva</string>
+    <string name="quick_settings_disclosure_named_vpn">Ez az eszköz össze van kapcsolva a(z) %1$s alkalmazással</string>
+    <string name="quick_settings_disclosure_personal_profile_named_vpn">Személyes profilja össze van kapcsolva a(z) %1$s alkalmazással</string>
+    <string name="quick_settings_disclosure_vpns">Ez az eszköz VPN-ekhez van csatlakoztatva</string>
     <string name="quick_settings_dnd_alarms_label">Csak ébresztések</string>
     <string name="quick_settings_dnd_label">Ne zavarjanak</string>
     <string name="quick_settings_dnd_none_label">Teljes némítás</string>
@@ -1847,7 +1886,7 @@ hálózat felügyelt"</string>
     <string name="tethered_notification_hybrid_sharing_mobile">Mobiladat-kapcsolat megosztva, kattintson a Beállítások megnyitásához</string>
     <string name="tethered_notification_hybrid_sharing_none">Nincs megosztható hálózat, kattintson a Beállítások megnyitásához</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Wi-Fi megosztva, kattintson a Beállítások megnyitásához</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">Koppintson a beállításhoz.</string>
     <string name="tethered_notification_multi_device_message">%1$s csatlakoztatott eszközök</string>
     <string name="tethered_notification_multi_tether_title">Pányvázás és Mobil Hotspot aktív</string>
     <string name="tethered_notification_no_device_message">Nincs csatlakoztatott eszköz</string>
@@ -2080,7 +2119,17 @@ Wi‑Fi-cím (BSSID):
     <string name="wifi_verbose_logging">Részletes Wi-Fi-naplózás engedélyezése</string>
     <string name="wifi_verbose_logging_summary">Wi‑Fi-naplózási szint növelése, RSSI/SSID megjelenítése a Wi‑Fi-választóban</string>
     <string name="window_animation_scale_title">Ablakanimáció tempója</string>
-    <string name="work_life_balance_mode">Work-Life Balance</string>
+    <string name="wlb_break_mode_active">Aktív</string>
+    <string name="wlb_break_mode_active_text">%1$s mód · %2$s</string>
+    <string name="wlb_break_mode_on_break">Szünetet tart</string>
+    <string name="wlb_break_mode_resume">Folytatás</string>
+    <string name="wlb_break_mode_take_break">Tartson szünetet</string>
+    <string name="wlb_qs_detail_break_mode">Szünet üzemmód</string>
+    <string name="wlb_qs_detail_break_mode_desc">Automatikusan visszavált az előző üzemmódra 30 perc elteltével</string>
+    <string name="wlb_qs_detail_life_mode">Magánélet üzemmód</string>
+    <string name="wlb_qs_detail_more_setting">További beállítások</string>
+    <string name="wlb_qs_detail_work_mode">Munka üzemmód</string>
+    <string name="work_life_balance_mode">Egyensúlyban a munka és az élet</string>
     <string name="zen_alarm_warning">Nem fogja hallani az ébresztést ekkor: %1$s</string>
     <string name="zen_alarm_warning_indef">Nem fogja hallani a következő ébresztést ekkor: %1$s, ha előbb ezt nem kapcsolja ki</string>
     <string name="zen_alarms_introduction">Az ébresztéseken kívül nem fogja Önt más hang és rezgés megzavarni. Továbbra is lesz hangjuk azoknak a tartalmaknak, amelyeket Ön elindít, például zenék, videók és játékok.</string>

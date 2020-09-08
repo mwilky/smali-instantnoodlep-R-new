@@ -50,7 +50,7 @@
 
     iget-object p1, p1, Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;->this$0:Landroidx/appcompat/widget/AppCompatSpinner;
 
-    invoke-virtual {p1, p3}, Landroid/widget/Spinner;->setSelection(I)V
+    invoke-virtual {p1, p3}, Landroidx/appcompat/widget/AppCompatSpinner;->setSelection(I)V
 
     iget-object p1, p0, Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup$1;->this$1:Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;
 

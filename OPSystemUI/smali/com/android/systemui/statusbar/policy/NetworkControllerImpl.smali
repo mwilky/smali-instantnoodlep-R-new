@@ -4211,9 +4211,7 @@
 
     move-result v1
 
-    invoke-static {}, Landroid/telephony/CellSignalStrength;->getNumSignalStrengthLevels()I
-
-    move-result v13
+    sget v13, Landroid/telephony/SignalStrength;->NUM_SIGNAL_STRENGTH_BINS:I
 
     invoke-static {v1, v13}, Ljava/lang/Math;->min(II)I
 
@@ -6172,7 +6170,7 @@
 
     if-eqz p1, :cond_b
 
-    const-string p1, "setTetherError "
+    const-string/jumbo p1, "setTetherError "
 
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -6421,6 +6419,8 @@
     :cond_b
     :goto_5
     return-void
+
+    nop
 
     :sswitch_data_0
     .sparse-switch

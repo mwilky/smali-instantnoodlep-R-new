@@ -140,12 +140,41 @@
 
     const-string v1, "zh_"
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const-string v1, "ko_"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const-string v1, "ja_"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/text/SimpleDateFormat;
+
+    const-string v0, "MMM d"
+
+    invoke-direct {p1, v0}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
     const-string v0, "MMMMd"
 
     invoke-static {p1, v0}, Landroid/text/format/DateFormat;->getBestDateTimePattern(Ljava/util/Locale;Ljava/lang/String;)Ljava/lang/String;
@@ -160,21 +189,14 @@
 
     invoke-direct {v1, v0, p1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    goto :goto_0
+    move-object p1, v1
 
-    :cond_0
-    new-instance v1, Ljava/text/SimpleDateFormat;
+    :goto_1
+    new-instance v0, Ljava/util/Date;
 
-    const-string p1, "MMM d"
+    invoke-direct {v0}, Ljava/util/Date;-><init>()V
 
-    invoke-direct {v1, p1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
-
-    :goto_0
-    new-instance p1, Ljava/util/Date;
-
-    invoke-direct {p1}, Ljava/util/Date;-><init>()V
-
-    invoke-virtual {v1, p1}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+    invoke-virtual {p1, v0}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object p1
 

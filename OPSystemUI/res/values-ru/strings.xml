@@ -39,6 +39,11 @@
     <string name="abc_slice_updated">Обновлено %1$s</string>
     <string name="abc_slices_permission_request">Приложение \"%1$s\" запрашивает разрешение на показ фрагментов приложения \"%2$s\".</string>
     <string name="abc_toolbar_collapse_description">Свернуть</string>
+    <string name="about_action_bar_title">Информация</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Политика конфиденциальности</string>
+    <string name="about_release_note_title">Журнал обновлений:</string>
+    <string name="about_terms_service">Условия обслуживания</string>
     <string name="accessibility_accessibility_button">Специальные возможности</string>
     <string name="accessibility_action_divider_bottom_full">Нижний во весь экран</string>
     <string name="accessibility_action_divider_left_30">Левый на 30%</string>
@@ -267,7 +272,7 @@
     <string name="accessibility_wimax_signal_full">Надежный сигнал WiMAX.</string>
     <string name="accessibility_wimax_three_bars">Сигнал WiMAX: три деления.</string>
     <string name="accessibility_wimax_two_bars">Сигнал WiMAX: два деления.</string>
-    <string name="accessibility_work_life_balance_mode">Баланс работы и личной жизни</string>
+    <string name="accessibility_work_life_balance_mode">Баланс рабочего времени</string>
     <string name="accessibility_work_life_balance_mode_off">Режим баланса работы и личной жизни отключен.</string>
     <string name="accessibility_work_life_balance_mode_on">Режим баланса работы и личной жизни включен.</string>
     <string name="accessibility_zero_bars">Нет сигнала</string>
@@ -593,17 +598,22 @@
     <string name="controls_error_retryable">Ошибка. Повторная попытка…</string>
     <string name="controls_error_timeout">Нет ответа. Проверьте приложение.</string>
     <string name="controls_favorite_default_title">Элементы управления</string>
-    <string name="controls_favorite_load_error">Не удалось загрузить список доступных для управления устройств. Проверьте, не изменились ли настройки приложения \"%s\".</string>
-    <string name="controls_favorite_load_none">Управление недоступно</string>
+    <string name="controls_favorite_load_error">Не удалось загрузить список виджетов для управления устройствами. Проверьте, не изменились ли настройки приложения \"%s\".</string>
+    <string name="controls_favorite_load_none">Управление недоступно.</string>
     <string name="controls_favorite_other_zone_header">Другое</string>
-    <string name="controls_favorite_rearrange">Чтобы изменить порядок элементов управления, перетащите их</string>
-    <string name="controls_favorite_removed">Все элементы управления удалены</string>
-    <string name="controls_favorite_subtitle">Выберите элементы управления, которые будут доступны в меню кнопки питания.</string>
+    <string name="controls_favorite_rearrange">Чтобы изменить порядок виджетов, перетащите их.</string>
+    <string name="controls_favorite_removed">Все виджеты управления удалены.</string>
+    <string name="controls_favorite_see_other_apps">Показать другие приложения</string>
+    <string name="controls_favorite_subtitle">Выберите виджеты управления, которые будут доступны в меню кнопки питания.</string>
     <string name="controls_favorite_toast_no_changes">Изменения не сохранены.</string>
     <string name="controls_in_progress">Выполняется</string>
+    <string name="controls_media_close_session">Скрыть текущий сеанс?</string>
+    <string name="controls_media_dismiss_button">Скрыть</string>
     <string name="controls_media_resume">Возобновить</string>
-    <string name="controls_menu_add">Добавить эл-ты управления</string>
-    <string name="controls_menu_edit">Изменить эл-ты управления</string>
+    <string name="controls_media_settings_button">Настройки</string>
+    <string name="controls_media_title">Медиа</string>
+    <string name="controls_menu_add">Добавить виджеты</string>
+    <string name="controls_menu_edit">Изменить виджеты</string>
     <string name="controls_open_app">Открыть приложение</string>
     <string name="controls_pin_instructions">Введите PIN-код</string>
     <string name="controls_pin_instructions_retry">Введите другой PIN-код</string>
@@ -611,7 +621,7 @@
     <string name="controls_pin_verify">Подтвердите устройство \"%s\"</string>
     <string name="controls_pin_verifying">Проверка…</string>
     <string name="controls_pin_wrong">Неверный PIN-код</string>
-    <string name="controls_providers_title">Чтобы добавить элементы управления, выберите приложение</string>
+    <string name="controls_providers_title">Чтобы добавить виджеты управления, выберите приложение</string>
     <string name="controls_removed">Удалено</string>
     <string name="controls_seeding_in_progress">Загрузка рекомендаций…</string>
     <string name="controls_structure_tooltip">Проведите по экрану, чтобы увидеть больше</string>
@@ -692,8 +702,8 @@
     <string name="disable_carrier_button_text">Отключить eSIM</string>
     <string name="disable_overlays">Откл. аппарат. наложения</string>
     <string name="disable_overlays_summary">Всегда использовать GPU при компоновке экрана</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">За дополнительными сведениями обратитесь к администратору</string>
+    <string name="disable_tether_notification_title">Режим модема отключен</string>
     <string name="disable_vpn">Отключить VPN</string>
     <string name="disabled">Отключено</string>
     <string name="disabled_by_admin">Отключено администратором</string>
@@ -713,6 +723,7 @@
     <string name="drag_to_rearrange_tiles">Чтобы изменить порядок элементов, перетащите их</string>
     <string name="drag_to_remove_disabled">Должно остаться не менее %1$d элементов</string>
     <string name="drag_to_remove_tiles">Чтобы удалить, перетащите сюда</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">Перетащите плитки, чтобы изменить их порядок. Нажмите, чтобы показать их или скрыть.</string>
     <string name="empty_shade_text">Нет уведомлений</string>
     <string name="enable_adb">Отладка по USB</string>
@@ -1088,6 +1099,7 @@
     <string name="left_nav_bar_button_type">Дополнительный тип кнопки \"Влево\"</string>
     <string name="legacy_vpn_name">Сеть VPN</string>
     <string name="loading_injected_setting_summary">Загрузка…</string>
+    <string name="loading_text">Загрузка...</string>
     <string name="local_backup_password_summary_change">Нажмите, чтобы изменить или удалить пароль для резервного копирования</string>
     <string name="local_backup_password_summary_none">Полные резервные копии в настоящее время не защищены</string>
     <string name="local_backup_password_title">Пароль для резервного копирования</string>
@@ -1179,7 +1191,7 @@
 За подробной информацией обращайтесь к системному администратору."</string>
     <string name="monitoring_description_management_ca_certificate">Ваша организация установила сертификат ЦС на устройство. Она может отслеживать и изменять защищенный сетевой трафик.</string>
     <string name="monitoring_description_management_network_logging">Администратор включил ведение сетевого журнала, чтобы отслеживать трафик на вашем устройстве.</string>
-    <string name="monitoring_description_named_management">"Этим устройством управляет организация \"%1$s\".
+    <string name="monitoring_description_named_management">"Это устройство принадлежит организации \"%1$s\".
 
 Ваш системный администратор может управлять настройками, приложениями и параметрами доступа к корпоративным ресурсам на этом устройстве, а также связанными с ним данными (например, сведениями о местоположении).
 
@@ -1321,6 +1333,12 @@
     <string name="oneplus_threekey_navigation_vibration">Только вибрация</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> разблокировка</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> разблокировки(-ок)</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">Сопряжение...</string>
     <string name="op_earphone_connected_fail">Не удалось выполнить сопряжение. Проверьте состояние гарнитуры и Bluetooth.</string>
     <string name="op_earphone_connected_success">Сопряжено. Нажмите для настройки.</string>
@@ -1350,9 +1368,10 @@
     <string name="op_notification_channel_summary_low">Менее важные уведомления без звука и вибрации.</string>
     <string name="op_notification_section_header_gentle">Другие уведомления</string>
     <string name="op_notification_silence_title">Другое</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">Темный режим</string>
     <string name="op_qs_data_usage_used">%1$s: использовано %2$s %3$s</string>
-    <string name="op_quick_settings_night_display_label">Ночной режим</string>
+    <string name="op_quick_settings_night_display_label">Комфорт для глаз</string>
     <string name="op_quick_settings_night_display_summary_off">Ночной режим выключен, коснитесь для включения</string>
     <string name="op_quick_settings_night_display_summary_on">Ночной режим включен, коснитесь для выключения</string>
     <string name="op_read_mode2_dialog_black">Одноцветный эффект</string>
@@ -1867,7 +1886,7 @@
     <string name="tethered_notification_hybrid_sharing_mobile">Совместное использование сети мобильных данных. Нажмите для перехода к настройкам</string>
     <string name="tethered_notification_hybrid_sharing_none">Нет доступной сети для совместного использования. Нажмите для перехода к настройкам</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Совместное использование сети Wi-Fi. Нажмите для перехода к настройкам</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">Коснитесь для настройки.</string>
     <string name="tethered_notification_multi_device_message">Подключенных устройств: %1$s</string>
     <string name="tethered_notification_multi_tether_title">Активен режим модема и мобильная точка доступа</string>
     <string name="tethered_notification_no_device_message">Нет подключенного устройства</string>
@@ -2100,6 +2119,16 @@ MAC-адрес точки доступа (BSSID):
     <string name="wifi_verbose_logging">Подробный журнал Wi‑Fi</string>
     <string name="wifi_verbose_logging_summary">Вести подробный журнал, показывать RSSI для каждого SSID при выборе сети</string>
     <string name="window_animation_scale_title">Анимация окон</string>
+    <string name="wlb_break_mode_active">Активно</string>
+    <string name="wlb_break_mode_active_text">Режим %1$s · %2$s</string>
+    <string name="wlb_break_mode_on_break">Перерыв</string>
+    <string name="wlb_break_mode_resume">Возобновить</string>
+    <string name="wlb_break_mode_take_break">Сделать перерыв</string>
+    <string name="wlb_qs_detail_break_mode">Режим перерыва</string>
+    <string name="wlb_qs_detail_break_mode_desc">Автоматически возвращается в предыдущий режим через 30 минут</string>
+    <string name="wlb_qs_detail_life_mode">Режим нерабочего времени</string>
+    <string name="wlb_qs_detail_more_setting">Дополнительные настройки</string>
+    <string name="wlb_qs_detail_work_mode">Режим рабочего времени</string>
     <string name="work_life_balance_mode">Баланс рабочего времени</string>
     <string name="zen_alarm_warning">Следующий будильник: %1$s. Звук отключен.</string>
     <string name="zen_alarm_warning_indef">Следующий будильник: %1$s. Чтобы услышать сигнал, включите звук.</string>

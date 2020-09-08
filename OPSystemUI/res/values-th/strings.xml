@@ -39,6 +39,11 @@
     <string name="abc_slice_updated">อัปเดตเมื่อ %1$s</string>
     <string name="abc_slices_permission_request">%1$s ต้องการแสดงส่วนต่างๆ ของ %2$s</string>
     <string name="abc_toolbar_collapse_description">ยุบ</string>
+    <string name="about_action_bar_title">เกี่ยวกับ</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">นโยบายความเป็นส่วนตัว</string>
+    <string name="about_release_note_title">ล็อกการอัปเดต:</string>
+    <string name="about_terms_service">เงื่อนไขการใช้บริการ</string>
     <string name="accessibility_accessibility_button">การช่วยเหลือพิเศษ</string>
     <string name="accessibility_action_divider_bottom_full">เต็มหน้าจอด้านล่าง</string>
     <string name="accessibility_action_divider_left_30">ซ้าย 30%</string>
@@ -267,7 +272,7 @@
     <string name="accessibility_wimax_signal_full">สัญญาณ WiMAX เต็ม</string>
     <string name="accessibility_wimax_three_bars">สัญญาณ WiMAX สามขีด</string>
     <string name="accessibility_wimax_two_bars">สัญญาณ WiMAX สองขีด</string>
-    <string name="accessibility_work_life_balance_mode">สมดุลงานและการใช้ชีวิต</string>
+    <string name="accessibility_work_life_balance_mode">Work Life Balance</string>
     <string name="accessibility_work_life_balance_mode_off">โหมดสมดุลงานและการใช้ชีวิตปิดอยู่</string>
     <string name="accessibility_work_life_balance_mode_on">โหมดสมดุลงานและการใช้ชีวิตเปิดอยู่</string>
     <string name="accessibility_zero_bars">ศูนย์ขีด</string>
@@ -565,7 +570,7 @@
     <string name="clock_seconds">แสดงวินาทีของนาฬิกา</string>
     <string name="clock_seconds_desc">แสดงวินาทีของนาฬิกาในแถบสถานะ อาจส่งผลต่ออายุแบตเตอรี</string>
     <string name="clock_title_analog">แอนะล็อก</string>
-    <string name="clock_title_bubble">ลูกโป่ง</string>
+    <string name="clock_title_bubble">บับเบิล</string>
     <string name="clock_title_default">ค่าเริ่มต้น</string>
     <string name="compat_mode_off">ยืดจนเต็มหน้าจอ</string>
     <string name="compat_mode_on">ขยายจนเต็มหน้าจอ</string>
@@ -594,10 +599,11 @@
     <string name="controls_error_timeout">ไม่มีการใช้งาน โปรดตรวจสอบแอป</string>
     <string name="controls_favorite_default_title">การควบคุม</string>
     <string name="controls_favorite_load_error">โหลดตัวควบคุมไม่ได้ ตรวจสอบแอป %s ให้แน่ใจว่าการตั้งค่าของแอปไม่เปลี่ยนแปลง</string>
-    <string name="controls_favorite_load_none">ตัวควบคุมความเข้ากันได้ไม่พร้อมใช้งาน</string>
+    <string name="controls_favorite_load_none">ตัวควบคุมที่เข้ากันได้ไม่พร้อมใช้งาน</string>
     <string name="controls_favorite_other_zone_header">อื่นๆ</string>
     <string name="controls_favorite_rearrange">แตะตัวควบคุมค้างไว้แล้วลากเพื่อจัดเรียงใหม่</string>
     <string name="controls_favorite_removed">นำตัวควบคุมทั้งหมดออกแล้ว</string>
+    <string name="controls_favorite_see_other_apps">ดูแอปอื่นๆ</string>
     <string name="controls_favorite_subtitle">เลือกตัวควบคุมที่ต้องการให้เข้าถึงได้จากเมนูเปิด/ปิด</string>
     <string name="controls_favorite_toast_no_changes">ยังไม่ได้บันทึกการเปลี่ยนแปลง</string>
     <string name="controls_in_progress">กำลังดำเนินการ</string>
@@ -696,8 +702,8 @@
     <string name="disable_carrier_button_text">ปิดใช้ eSIM</string>
     <string name="disable_overlays">ปิดใช้งานการวางซ้อน HW</string>
     <string name="disable_overlays_summary">ใช้ GPU ในการจัดวางองค์ประกอบหน้าจอเสมอ</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">โปรดติดต่อผู้ดูแลระบบของคุณสำหรับรายละเอียดเพิ่มเติม</string>
+    <string name="disable_tether_notification_title">การปล่อยสัญญาณถูกปิดการใช้งาน</string>
     <string name="disable_vpn">ปิดใช้ VPN</string>
     <string name="disabled">ปิดอยู่</string>
     <string name="disabled_by_admin">ปิดใช้โดยผู้ดูแลระบบ</string>
@@ -705,6 +711,8 @@
     <string name="disconnect_vpn">ยกเลิกการเชื่อมต่อ VPN</string>
     <string name="dnd_is_off">\"ห้ามรบกวน\" ปิดอยู่</string>
     <string name="dnd_suppressing_shade_text">หยุดการแจ้งเตือนชั่วคราวโดย \"ห้ามรบกวน\"</string>
+    <string name="do_disclosure_generic">องค์กรของคุณเป็นเจ้าของอุปกรณ์นี้</string>
+    <string name="do_disclosure_with_name">%s เป็นเจ้าของอุปกรณ์นี้</string>
     <string name="do_not_silence">ไม่ปิดเสียง</string>
     <string name="do_not_silence_block">ไม่ปิดเสียงหรือบล็อก</string>
     <string name="dock_alignment_not_charging">จัดวางโทรศัพท์ใหม่เพื่อชาร์จแบบไร้สาย</string>
@@ -715,6 +723,7 @@
     <string name="drag_to_rearrange_tiles">กดการ์ดค้างไว้แล้วลากเพื่อจัดเรียงใหม่</string>
     <string name="drag_to_remove_disabled">คุณต้องมีการ์ดอย่างน้อย %1$d รายการ</string>
     <string name="drag_to_remove_tiles">ลากมาที่นี่เพื่อนำออก</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">ลากชื่อเพื่อจัดเรียงใหม่ แตะเพื่อแสดงหรือซ่อน</string>
     <string name="empty_shade_text">ไม่มีการแจ้งเตือน</string>
     <string name="enable_adb">การแก้ไขข้อบกพร่อง USB</string>
@@ -1090,6 +1099,7 @@
     <string name="left_nav_bar_button_type">ประเภทปุ่มทางซ้ายเพิ่มเติม</string>
     <string name="legacy_vpn_name">VPN</string>
     <string name="loading_injected_setting_summary">กำลังโหลด…</string>
+    <string name="loading_text">กำลังโหลด...</string>
     <string name="local_backup_password_summary_change">แตะเพื่อเปลี่ยนแปลงหรือลบรหัสผ่านสำหรับการสำรองข้อมูลเต็มรูปแบบในเดสก์ท็อป</string>
     <string name="local_backup_password_summary_none">การสำรองข้อมูลเต็มรูปแบบในเดสก์ท็อปไม่ได้รับการป้องกันในขณะนี้</string>
     <string name="local_backup_password_title">รหัสผ่านการสำรองข้อมูลในเดสก์ท็อป</string>
@@ -1174,8 +1184,18 @@
     <string name="monitoring_description_do_learn_more_separator">" "</string>
     <string name="monitoring_description_managed_profile_ca_certificate">องค์กรของคุณติดตั้งผู้ออกใบรับรองในโปรไฟล์งาน อาจมีการตรวจสอบหรือแก้ไขการจราจรของข้อมูลในเครือข่ายที่ปลอดภัยของคุณ</string>
     <string name="monitoring_description_managed_profile_named_vpn">โปรไฟล์งานของคุณเชื่อมต่ออยู่กับ %1$s ซึ่งสามารถตรวจสอบกิจกรรมในเครือข่ายของคุณ รวมถึงอีเมล แอป และเว็บไซต์</string>
+    <string name="monitoring_description_management">"องค์กรของคุณเป็นเจ้าของอุปกรณ์นี้
+
+ผู้ดูแลระบบไอทีจะตรวจสอบและจัดการการตั้งค่า การเข้าถึงของบริษัท แอป ข้อมูลที่เชื่อมโยงกับอุปกรณ์ และข้อมูลตำแหน่งของอุปกรณ์ได้
+
+ติดต่อผู้ดูแลระบบไอทีหากต้องการข้อมูลเพิ่มเติม"</string>
     <string name="monitoring_description_management_ca_certificate">องค์กรของคุณติดตั้งผู้ออกใบรับรองในอุปกรณ์นี้ อาจมีการตรวจสอบหรือแก้ไขการจราจรของข้อมูลในเครือข่ายที่ปลอดภัยของคุณ</string>
     <string name="monitoring_description_management_network_logging">ผู้ดูแลระบบได้เปิดการบันทึกเครือข่าย ซึ่งจะตรวจสอบการจราจรของข้อมูลในอุปกรณ์ของคุณ</string>
+    <string name="monitoring_description_named_management">"%1$s เป็นเจ้าของอุปกรณ์นี้
+
+ผู้ดูแลระบบไอทีจะตรวจสอบและจัดการการตั้งค่า การเข้าถึงของบริษัท แอป ข้อมูลที่เชื่อมโยงกับอุปกรณ์ และข้อมูลตำแหน่งของอุปกรณ์ได้
+
+ติดต่อผู้ดูแลระบบไอทีหากต้องการข้อมูลเพิ่มเติม"</string>
     <string name="monitoring_description_named_vpn">คุณเชื่อมต่ออยู่กับ %1$s ซึ่งสามารถตรวจสอบกิจกรรมในเครือข่ายของคุณ รวมถึงอีเมล แอป และเว็บไซต์</string>
     <string name="monitoring_description_network_logging">"ผู้ดูแลระบบได้เปิดการทำบันทึกเครือข่าย ซึ่งจะติดตามดูการรับส่งข้อมูลบนอุปกรณ์ของคุณ
 
@@ -1311,8 +1331,14 @@
     <string name="oneplus_threekey_navigation_sound">อนุญาตทุกเสียง</string>
     <string name="oneplus_threekey_navigation_turned_on_here">สามารถเปิดได้โดยปุ่มสลับข้างบน</string>
     <string name="oneplus_threekey_navigation_vibration">สั่นเท่านั้น</string>
-    <string name="op_aod_parsons_unlock_one">ปลดล็อก <annotation id="unlockNum">^1</annotation></string>
-    <string name="op_aod_parsons_unlock_other">ปลดล็อก <annotation id="unlockNum">^1</annotation></string>
+    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>ปลดล็อก</string>
+    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>ปลดล็อก</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">กำลังจับคู่...</string>
     <string name="op_earphone_connected_fail">ไม่สามารถจับคู่ได้ คุณสามารถตรวจสอบชุดหูฟังและสถานะบลูทูธได้</string>
     <string name="op_earphone_connected_success">จับคู่แล้ว แตะการตั้งค่าเพิ่มเติม</string>
@@ -1342,9 +1368,10 @@
     <string name="op_notification_channel_summary_low">การแจ้งเตือนที่สำคัญน้อยกว่าไม่มีเสียงหรือการสั่น</string>
     <string name="op_notification_section_header_gentle">การแจ้งเตือนอื่นๆ</string>
     <string name="op_notification_silence_title">อื่นๆ</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">โหมดมืด</string>
     <string name="op_qs_data_usage_used">ใช้งานไป %1$s: %2$s %3$s</string>
-    <string name="op_quick_settings_night_display_label">โหมดกลางคืน</string>
+    <string name="op_quick_settings_night_display_label">การมองเห็นแบบสบายตา</string>
     <string name="op_quick_settings_night_display_summary_off">โหมดกลางคืนปิด แตะเพื่อเปิด</string>
     <string name="op_quick_settings_night_display_summary_on">โหมดกลางคืนเปิด แตะเพื่อปิด</string>
     <string name="op_read_mode2_dialog_black">เอฟเฟกต์ขาวดำ</string>
@@ -1556,8 +1583,20 @@
     <string name="quick_settings_data_switch_toast_1">มีเพียงหนึ่งซิมการ์ดใส่อยู่ในขณะนี้</string>
     <string name="quick_settings_default_data_card">การ์ดเริ่มต้นสำหรับดาต้า</string>
     <string name="quick_settings_disclosure_managed_profile_monitoring">องค์กรของคุณอาจตรวจสอบการจราจรของข้อมูลในเครือข่ายในโปรไฟล์งาน</string>
+    <string name="quick_settings_disclosure_managed_profile_named_vpn">โปรไฟล์งานของคุณเชื่อมต่ออยู่กับ %1$s</string>
+    <string name="quick_settings_disclosure_management">องค์กรของคุณเป็นเจ้าของอุปกรณ์นี้</string>
+    <string name="quick_settings_disclosure_management_monitoring">องค์กรของคุณเป็นเจ้าของอุปกรณ์นี้และอาจตรวจสอบการจราจรของข้อมูลในเครือข่าย</string>
+    <string name="quick_settings_disclosure_management_named_vpn">องค์กรของคุณเป็นเจ้าของอุปกรณ์นี้ และอุปกรณ์เชื่อมต่ออยู่กับ %1$s</string>
+    <string name="quick_settings_disclosure_management_vpns">องค์กรของคุณเป็นเจ้าของอุปกรณ์นี้ และอุปกรณ์เชื่อมต่ออยู่กับ VPN</string>
     <string name="quick_settings_disclosure_monitoring">อาจมีการตรวจสอบเครือข่าย</string>
     <string name="quick_settings_disclosure_named_managed_profile_monitoring">%1$s อาจตรวจสอบการจราจรของข้อมูลในเครือข่ายในโปรไฟล์งานของคุณ</string>
+    <string name="quick_settings_disclosure_named_management">%1$s เป็นเจ้าของอุปกรณ์นี้</string>
+    <string name="quick_settings_disclosure_named_management_monitoring">%1$s เป็นเจ้าของอุปกรณ์นี้และอาจตรวจสอบการจราจรของข้อมูลในเครือข่าย</string>
+    <string name="quick_settings_disclosure_named_management_named_vpn">%1$s เป็นเจ้าของอุปกรณ์นี้ และอุปกรณ์เชื่อมต่ออยู่กับ %2$s</string>
+    <string name="quick_settings_disclosure_named_management_vpns">%1$s เป็นเจ้าของอุปกรณ์นี้ และอุปกรณ์เชื่อมต่ออยู่กับ VPN</string>
+    <string name="quick_settings_disclosure_named_vpn">อุปกรณ์นี้เชื่อมต่ออยู่กับ %1$s</string>
+    <string name="quick_settings_disclosure_personal_profile_named_vpn">โปรไฟล์ส่วนตัวของคุณเชื่อมต่ออยู่กับ %1$s</string>
+    <string name="quick_settings_disclosure_vpns">อุปกรณ์นี้เชื่อมต่ออยู่กับ VPN</string>
     <string name="quick_settings_dnd_alarms_label">เฉพาะปลุกเท่านั้น</string>
     <string name="quick_settings_dnd_label">ห้ามรบกวน</string>
     <string name="quick_settings_dnd_none_label">ปิดเสียงทั้งหมด</string>
@@ -1847,7 +1886,7 @@
     <string name="tethered_notification_hybrid_sharing_mobile">กำลังแบ่งปันข้อมูลมือถือ คลิกเพื่อเข้าสู่การตั้งค่า</string>
     <string name="tethered_notification_hybrid_sharing_none">ไม่มีเครือข่ายที่จะแบ่งปัน คลิกเพื่อเข้าสู่การตั้งค่า</string>
     <string name="tethered_notification_hybrid_sharing_wifi">กำลังแบ่งปัน Wi-Fi คลิกเพื่อเข้าสู่การตั้งค่า</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">แตะเพื่อตั้งค่า</string>
     <string name="tethered_notification_multi_device_message">%1$s อุปกรณ์ที่เชื่อมต่ออยู่</string>
     <string name="tethered_notification_multi_tether_title">การกระจายสัญญาณและฮอตสปอตมือถือใช้งานอยู่</string>
     <string name="tethered_notification_no_device_message">ไม่มีอุปกรณ์ที่เชื่อมต่ออยู่</string>
@@ -2080,7 +2119,17 @@
     <string name="wifi_verbose_logging">เปิดใช้การบันทึกรายละเอียด Wi-Fi</string>
     <string name="wifi_verbose_logging_summary">เพิ่มระดับการบันทึก Wi‑Fi แสดงต่อ SSID RSSI ในตัวเลือก Wi‑Fi</string>
     <string name="window_animation_scale_title">อัตราการเคลื่อนไหวของหน้าต่าง</string>
-    <string name="work_life_balance_mode">Work-Life Balance</string>
+    <string name="wlb_break_mode_active">ใช้งานอยู่</string>
+    <string name="wlb_break_mode_active_text">%1$s โหมด · %2$s</string>
+    <string name="wlb_break_mode_on_break">หยุดพักอยู่</string>
+    <string name="wlb_break_mode_resume">ทำงานต่อ</string>
+    <string name="wlb_break_mode_take_break">หยุดพัก</string>
+    <string name="wlb_qs_detail_break_mode">โหมดพัก</string>
+    <string name="wlb_qs_detail_break_mode_desc">กลับสู่โหมดก่อนหน้าอัตโนมัติหลังจาก 30 นาที</string>
+    <string name="wlb_qs_detail_life_mode">โหมดการใช้ชีวิต</string>
+    <string name="wlb_qs_detail_more_setting">การตั้งค่าเพิ่มเติม</string>
+    <string name="wlb_qs_detail_work_mode">โหมดทำงาน</string>
+    <string name="work_life_balance_mode">Work Life Balance</string>
     <string name="zen_alarm_warning">คุณจะไม่ได้ยินเสียงปลุกครั้งถัดไปในเวลา %1$s</string>
     <string name="zen_alarm_warning_indef">คุณจะไม่ได้ยินเสียงปลุกครั้งถัดไปในเวลา %1$s เว้นแต่คุณจะปิดการปลุกนี้ไปก่อนแล้ว</string>
     <string name="zen_alarms_introduction">คุณจะไม่ถูกรบกวนจากเสียงและการสั่น ยกเว้นเสียงนาฬิกาปลุก คุณจะยังคงได้ยินสิ่งที่คุณเลือกเล่น เช่น เพลง วิดีโอ และเกม</string>

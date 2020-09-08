@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nMediaScrollView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaScrollView.kt\ncom/android/systemui/media/MediaScrollView\n*L\n1#1,100:1\n*E\n"
+    value = "SMAP\nMediaScrollView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaScrollView.kt\ncom/android/systemui/media/MediaScrollView\n*L\n1#1,131:1\n*E\n"
 .end annotation
 
 
@@ -118,6 +118,47 @@
     return-void
 .end method
 
+.method private final transformScrollX(I)I
+    .locals 1
+
+    invoke-virtual {p0}, Landroid/widget/HorizontalScrollView;->isLayoutRtl()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/android/systemui/media/MediaScrollView;->contentContainer:Landroid/view/ViewGroup;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getWidth()I
+
+    move-result v0
+
+    invoke-virtual {p0}, Landroid/widget/HorizontalScrollView;->getWidth()I
+
+    move-result p0
+
+    sub-int/2addr v0, p0
+
+    sub-int p1, v0, p1
+
+    goto :goto_0
+
+    :cond_0
+    const-string p0, "contentContainer"
+
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+
+    const/4 p0, 0x0
+
+    throw p0
+
+    :cond_1
+    :goto_0
+    return p1
+.end method
+
 
 # virtual methods
 .method public final cancelCurrentScroll()V
@@ -223,6 +264,20 @@
     invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
 
     throw v1
+.end method
+
+.method public final getRelativeScrollX()I
+    .locals 1
+
+    invoke-virtual {p0}, Landroid/widget/HorizontalScrollView;->getScrollX()I
+
+    move-result v0
+
+    invoke-direct {p0, v0}, Lcom/android/systemui/media/MediaScrollView;->transformScrollX(I)I
+
+    move-result p0
+
+    return p0
 .end method
 
 .method protected onFinishInflate()V
@@ -399,6 +454,18 @@
     .locals 0
 
     iput p1, p0, Lcom/android/systemui/media/MediaScrollView;->animationTargetX:F
+
+    return-void
+.end method
+
+.method public final setRelativeScrollX(I)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/systemui/media/MediaScrollView;->transformScrollX(I)I
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Landroid/widget/HorizontalScrollView;->setScrollX(I)V
 
     return-void
 .end method

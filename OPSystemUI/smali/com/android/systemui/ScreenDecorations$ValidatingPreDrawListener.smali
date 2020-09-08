@@ -55,7 +55,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/ScreenDecorations$ValidatingPreDrawListener;->this$0:Lcom/android/systemui/ScreenDecorations;
 
-    invoke-static {v1}, Lcom/android/systemui/ScreenDecorations;->access$100(Lcom/android/systemui/ScreenDecorations;)I
+    invoke-static {v1}, Lcom/android/systemui/ScreenDecorations;->access$200(Lcom/android/systemui/ScreenDecorations;)I
 
     move-result v1
 
@@ -63,13 +63,13 @@
 
     iget-object v1, p0, Lcom/android/systemui/ScreenDecorations$ValidatingPreDrawListener;->this$0:Lcom/android/systemui/ScreenDecorations;
 
-    invoke-static {v1}, Lcom/android/systemui/ScreenDecorations;->access$2200(Lcom/android/systemui/ScreenDecorations;)Z
+    invoke-static {v1}, Lcom/android/systemui/ScreenDecorations;->access$2300(Lcom/android/systemui/ScreenDecorations;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$800()Z
+    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$900()Z
 
     move-result v1
 
@@ -85,7 +85,7 @@
 
     iget-object v2, p0, Lcom/android/systemui/ScreenDecorations$ValidatingPreDrawListener;->this$0:Lcom/android/systemui/ScreenDecorations;
 
-    invoke-static {v2}, Lcom/android/systemui/ScreenDecorations;->access$100(Lcom/android/systemui/ScreenDecorations;)I
+    invoke-static {v2}, Lcom/android/systemui/ScreenDecorations;->access$200(Lcom/android/systemui/ScreenDecorations;)I
 
     move-result v2
 

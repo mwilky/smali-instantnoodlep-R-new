@@ -183,7 +183,7 @@
     <dimen name="aod_slice_layout_primary_margin_bottom">6.5dip</dimen>
     <dimen name="aod_slice_text_margin_start">4.0dip</dimen>
     <dimen name="aod_slice_text_size_primary">17.0sp</dimen>
-    <dimen name="aod_slice_text_size_secondary">11.0sp</dimen>
+    <dimen name="aod_slice_text_size_secondary">11.0dip</dimen>
     <dimen name="aod_slice_view_horizontal_margin">60.0dip</dimen>
     <dimen name="aod_slice_view_primary_padding_end">8.0dip</dimen>
     <dimen name="aod_slice_view_secondary_horizontal_margin">20.0dip</dimen>
@@ -223,7 +223,7 @@
     <dimen name="blinds_pop_threshold">0.0dip</dimen>
     <dimen name="boost_dv">550.0dip</dimen>
     <dimen name="borderless_button_radius">2.0dip</dimen>
-    <dimen name="bottom_margin">6.0dip</dimen>
+    <dimen name="bottom_margin">12.0dip</dimen>
     <dimen name="bottom_padding">48.0dip</dimen>
     <dimen name="bottom_text_spacing_digital">0.0dip</dimen>
     <dimen name="brightness_mirror_height">48.0dip</dimen>
@@ -260,9 +260,9 @@
     <dimen name="bubble_overflow_padding">15.0dip</dimen>
     <dimen name="bubble_overflow_text_padding">7.0dip</dimen>
     <dimen name="bubble_padding_top">16.0dip</dimen>
-    <dimen name="bubble_pointer_height">4.0dip</dimen>
+    <dimen name="bubble_pointer_height">8.0dip</dimen>
     <dimen name="bubble_pointer_margin">8.0dip</dimen>
-    <dimen name="bubble_pointer_width">6.0dip</dimen>
+    <dimen name="bubble_pointer_width">12.0dip</dimen>
     <dimen name="bubble_stack_offscreen">9.0dip</dimen>
     <dimen name="bubble_stack_offset">5.0dip</dimen>
     <dimen name="bubble_stack_starting_offset_y">120.0dip</dimen>
@@ -322,6 +322,7 @@
     <dimen name="complete_content_layout_minimum_width">376.0dip</dimen>
     <dimen name="complete_icon_margin_end">48.0dip</dimen>
     <dimen name="complete_icon_margin_start">48.0dip</dimen>
+    <dimen name="complete_icon_margin_top">446.0px</dimen>
     <dimen name="complete_icon_size">86.0dip</dimen>
     <item type="dimen" name="config_rounded_mask_size">@android:dimen/rounded_corner_radius</item>
     <item type="dimen" name="config_rounded_mask_size_bottom">@android:dimen/rounded_corner_radius_bottom</item>
@@ -330,12 +331,14 @@
     <dimen name="control_base_item_margin">2.0dip</dimen>
     <item type="dimen" name="control_card_elevation">15.0</item>
     <dimen name="control_corner_radius">12.0dip</dimen>
+    <dimen name="control_empty_base_height">0.0px</dimen>
     <dimen name="control_empty_home_status_height">90.0dip</dimen>
     <dimen name="control_empty_image_height">400.0px</dimen>
     <dimen name="control_empty_image_margin_bottom">32.0px</dimen>
     <dimen name="control_empty_image_margin_top">318.0px</dimen>
     <dimen name="control_empty_image_view_size">490.0px</dimen>
     <dimen name="control_empty_image_width">720.0px</dimen>
+    <dimen name="control_empty_min_margin">0.0px</dimen>
     <dimen name="control_empty_temp_height">680.0px</dimen>
     <dimen name="control_header_text_size">20.0sp</dimen>
     <dimen name="control_height">106.0dip</dimen>
@@ -401,6 +404,9 @@
     <dimen name="conversation_single_line_face_pile_protection_width">1.0dip</dimen>
     <dimen name="conversation_single_line_face_pile_size">25.0dip</dimen>
     <dimen name="corner_size">8.0dip</dimen>
+    <dimen name="cw_chip_margin">4.0dip</dimen>
+    <dimen name="cw_chip_margin_top_bottom">8.0dip</dimen>
+    <dimen name="cw_chip_text_margin">12.0dip</dimen>
     <dimen name="dashboard_tile_foreground_image_inset">6.0dip</dimen>
     <dimen name="data_usage_graph_marker_width">4.0dip</dimen>
     <dimen name="date_owner_info_margin">15.75px</dimen>
@@ -494,8 +500,8 @@
     <dimen name="design_snackbar_min_width">-1.0px</dimen>
     <dimen name="design_snackbar_padding_bottom">18.0dip</dimen>
     <dimen name="design_snackbar_padding_horizontal">12.0dip</dimen>
-    <dimen name="design_snackbar_padding_left">18.0dip</dimen>
-    <dimen name="design_snackbar_padding_right">18.0dip</dimen>
+    <item type="dimen" name="design_snackbar_padding_left">@dimen/op_control_margin_space3</item>
+    <dimen name="design_snackbar_padding_right">0.0dip</dimen>
     <dimen name="design_snackbar_padding_top">18.0dip</dimen>
     <dimen name="design_snackbar_padding_vertical">14.0dip</dimen>
     <dimen name="design_snackbar_padding_vertical_2lines">24.0dip</dimen>
@@ -542,6 +548,13 @@
     <dimen name="edge_margin">8.0dip</dimen>
     <dimen name="edge_tap_area_width">48.0dip</dimen>
     <dimen name="emergency_button_margin_top">155.0px</dimen>
+    <dimen name="expand_button_arrow_height">56.0px</dimen>
+    <dimen name="expand_button_arrow_width">63.0px</dimen>
+    <dimen name="expand_button_height">63.0px</dimen>
+    <dimen name="expand_button_padding">42.0px</dimen>
+    <dimen name="expand_button_radius">36.0px</dimen>
+    <dimen name="expand_button_stroke">3.0px</dimen>
+    <dimen name="expand_button_width">105.0px</dimen>
     <dimen name="fab_elevation">12.0dip</dimen>
     <dimen name="fab_margin">16.0dip</dimen>
     <dimen name="fab_press_translation_z">9.0dip</dimen>
@@ -563,7 +576,7 @@
     <dimen name="fingerprint_dialog_corner_size">4.0dip</dimen>
     <dimen name="fingerprint_dialog_fp_icon_size">64.0dip</dimen>
     <dimen name="fingerprint_icon_additional_padding">4.0dip</dimen>
-    <dimen name="fingerprint_icon_padding">43.57498px</dimen>
+    <dimen name="fingerprint_icon_padding">38.0px</dimen>
     <dimen name="fix_oneplus_contorl_layout_margin_bottom1">23.0px</dimen>
     <dimen name="fix_oneplus_contorl_layout_margin_left2">46.0px</dimen>
     <dimen name="fix_oneplus_contorl_layout_margin_left3">70.0px</dimen>
@@ -601,6 +614,7 @@
     <dimen name="global_actions_grid_vertical_padding">3.0dip</dimen>
     <dimen name="global_actions_padding">12.0dip</dimen>
     <dimen name="global_actions_panel_width">120.0dip</dimen>
+    <dimen name="global_actions_power_dialog_item_bottom_margin">45.0dip</dimen>
     <dimen name="global_actions_power_dialog_item_height">190.0dip</dimen>
     <dimen name="global_actions_power_dialog_item_width">255.0dip</dimen>
     <dimen name="global_actions_side_margin">10.0dip</dimen>
@@ -1530,7 +1544,7 @@
     <dimen name="op_aod_parsons_bar_distance_bottom">5.0dip</dimen>
     <dimen name="op_aod_parsons_bar_distance_top">5.0dip</dimen>
     <dimen name="op_aod_parsons_border">1.0dip</dimen>
-    <dimen name="op_aod_parsons_clock_bar_margin_bottom1">43.0dip</dimen>
+    <dimen name="op_aod_parsons_clock_bar_margin_bottom1">70.0dip</dimen>
     <dimen name="op_aod_parsons_clock_bar_margin_bottom2">27.0dip</dimen>
     <dimen name="op_aod_parsons_clock_burnin_gap">51.0dip</dimen>
     <dimen name="op_aod_parsons_clock_systeminfo_bottom">30.0dip</dimen>
@@ -1548,7 +1562,7 @@
     <dimen name="op_app_bar_collapsing_title_limit_one_menu_width">62.0dip</dimen>
     <dimen name="op_app_bar_collapsing_title_limit_three_menu_width">146.0dip</dimen>
     <dimen name="op_app_bar_collapsing_title_limit_two_menu_width">104.0dip</dimen>
-    <dimen name="op_app_bar_collapsing_title_limit_width">20.0dip</dimen>
+    <dimen name="op_app_bar_collapsing_title_limit_width">30.0dip</dimen>
     <dimen name="op_app_bar_distance">171.0dip</dimen>
     <dimen name="op_app_bar_expand_text_size">96.0px</dimen>
     <dimen name="op_app_bar_height_with_tab">54.0dip</dimen>
@@ -1718,6 +1732,7 @@
     <dimen name="op_emergency_panel_indicator_margin_top">329.0px</dimen>
     <dimen name="op_emergency_panel_indicator_padding">126.0px</dimen>
     <dimen name="op_fingerprint_icon_dim_alpha_precentage">70.0px</dimen>
+    <dimen name="op_float_action_button_shadow_z8">8.0dip</dimen>
     <dimen name="op_front_camera_animation_default_resource_resolution">1440.0px</dimen>
     <dimen name="op_front_camera_animation_front_camera_posistion">235.0px</dimen>
     <dimen name="op_front_camera_animation_front_camera_posistion_second">0.0px</dimen>
@@ -1725,6 +1740,8 @@
     <dimen name="op_front_camera_animation_front_camera_posistion_y_second">0.0px</dimen>
     <dimen name="op_front_camera_animation_height">0.0px</dimen>
     <dimen name="op_front_camera_animation_width">0.0px</dimen>
+    <dimen name="op_game_mode_toolbox_region_width_land">48.0dip</dimen>
+    <dimen name="op_game_mode_toolbox_region_width_port">48.0dip</dimen>
     <dimen name="op_gesture_navigation_side_padding">37.0dip</dimen>
     <item type="dimen" name="op_global_actions_grid_side_margin">@dimen/global_actions_grid_side_margin</item>
     <dimen name="op_global_actions_item_icon_size">60.0px</dimen>
@@ -1743,15 +1760,18 @@
     <dimen name="op_keyguard_affordance_view_padding">84.0px</dimen>
     <dimen name="op_keyguard_affordance_width">126.0px</dimen>
     <dimen name="op_keyguard_clock_YRegular">470.0px</dimen>
-    <dimen name="op_keyguard_clock_info_view_content_differ_status_bar_height_with_spec">11.0dip</dimen>
+    <dimen name="op_keyguard_clock_info_view_content_differ_status_bar_height_with_spec">0.0dip</dimen>
     <dimen name="op_keyguard_clock_info_view_content_draw_smart_space_line_padding">22.0dip</dimen>
     <dimen name="op_keyguard_clock_info_view_content_lock_icon_margin_bottom">7.0dip</dimen>
-    <dimen name="op_keyguard_clock_info_view_content_lock_icon_size">24.0dip</dimen>
+    <dimen name="op_keyguard_clock_info_view_content_lock_icon_size">34.0dip</dimen>
     <item type="dimen" name="op_keyguard_clock_info_view_content_padding">@dimen/op_control_margin_screen_left3</item>
     <dimen name="op_keyguard_clock_info_view_content_padding_for_aod_bottom_view">24.0dip</dimen>
+    <dimen name="op_keyguard_clock_info_view_content_padding_for_lock_icon_start">16.5dip</dimen>
     <dimen name="op_keyguard_clock_info_view_content_smart_space_padding">15.0dip</dimen>
+    <dimen name="op_keyguard_clock_info_view_day_of_month_textsize">16.0dip</dimen>
     <dimen name="op_keyguard_clock_info_view_height">380.0px</dimen>
-    <dimen name="op_keyguard_clock_info_view_smart_space_height">48.0dip</dimen>
+    <dimen name="op_keyguard_clock_info_view_slice_primary_textsize">15.0dip</dimen>
+    <dimen name="op_keyguard_clock_info_view_smart_space_height">157.0px</dimen>
     <dimen name="op_keyguard_clock_info_view_smart_space_line">1.8499756dip</dimen>
     <dimen name="op_keyguard_clock_info_view_smart_space_line_y_padding">9.5dip</dimen>
     <dimen name="op_keyguard_clock_y">220.0px</dimen>
@@ -1779,7 +1799,8 @@
     <dimen name="op_navigation_key_padding_big">67.0px</dimen>
     <dimen name="op_navigation_key_width">211.0px</dimen>
     <dimen name="op_navigation_side_padding">30.0px</dimen>
-    <dimen name="op_notification_icon_size_indicator">14.0dip</dimen>
+    <dimen name="op_notificaiton_header_text_size">12.0dip</dimen>
+    <dimen name="op_notification_icon_size_indicator">18.0dip</dimen>
     <dimen name="op_notification_info_button_paddingHorizontal">11.0dip</dimen>
     <dimen name="op_notification_info_button_paddingVertical">12.0dip</dimen>
     <item type="dimen" name="op_notification_info_content_margin_horizontal">@dimen/op_control_margin_space3</item>
@@ -1831,7 +1852,7 @@
     <dimen name="op_quick_launch_track_view_padding_side">210.0px</dimen>
     <dimen name="op_quick_qs_panel_landscape_side_margin">20.0dip</dimen>
     <item type="dimen" name="op_quick_qs_panel_portrait_side_margin">@dimen/op_control_margin_space3</item>
-    <dimen name="op_quick_qs_tile_margin_top">8.0dip</dimen>
+    <dimen name="op_quick_qs_tile_margin_top">0.0dip</dimen>
     <dimen name="op_reduce_padding_space2">-9.0dip</dimen>
     <dimen name="op_ripple_radius">22.599976dip</dimen>
     <dimen name="op_rounded_corner_content_padding">8.0dip</dimen>
@@ -1849,8 +1870,21 @@
     <dimen name="op_status_bar_highlight_hint_marginEnd_hole_punch">18.0px</dimen>
     <dimen name="op_status_bar_wifi_signal_spacer_width">3.0dip</dimen>
     <dimen name="op_status_icon_left_padding">8.0dip</dimen>
+    <dimen name="op_swarp_charging_anim_info_battery_level_percent_text_size">51.0px</dimen>
+    <dimen name="op_swarp_charging_anim_info_battery_level_text_size">113.0px</dimen>
+    <dimen name="op_swarp_charging_anim_info_warp_text_size">45.0px</dimen>
+    <dimen name="op_swarp_charging_anim_view_margin_top">190.0dip</dimen>
     <dimen name="op_switch_ripple_radius">18.0dip</dimen>
-    <dimen name="op_text_size_h5">21.0sp</dimen>
+    <dimen name="op_text_size_body1">13.0sp</dimen>
+    <dimen name="op_text_size_button">14.0sp</dimen>
+    <dimen name="op_text_size_descriptions">10.0sp</dimen>
+    <dimen name="op_text_size_h1">110.0px</dimen>
+    <dimen name="op_text_size_h2">96.0px</dimen>
+    <dimen name="op_text_size_h3">32.0sp</dimen>
+    <dimen name="op_text_size_h4">28.0sp</dimen>
+    <dimen name="op_text_size_h5">18.0sp</dimen>
+    <dimen name="op_text_size_h6">16.0sp</dimen>
+    <dimen name="op_text_size_subtitle">13.0sp</dimen>
     <dimen name="op_threekey_dialog_elevation">2.0dip</dimen>
     <dimen name="op_threekey_dialog_icon_out_width">126.0px</dimen>
     <dimen name="op_threekey_dialog_icon_size">63.0px</dimen>
@@ -1916,7 +1950,7 @@
     <dimen name="op_warp_charging_text_image_height">83.0px</dimen>
     <dimen name="op_warp_charging_text_image_width">198.0px</dimen>
     <dimen name="op_warp_charging_wireless_anim_info_battery_level_container_height">95.69998dip</dimen>
-    <dimen name="op_warp_charging_wireless_anim_info_battery_level_height">51.0dip</dimen>
+    <dimen name="op_warp_charging_wireless_anim_info_battery_level_height">55.0dip</dimen>
     <dimen name="op_warp_charging_wireless_anim_info_battery_level_text_padding_left">3.0dip</dimen>
     <dimen name="op_warp_charging_wireless_anim_info_battery_level_text_size">48.69998dip</dimen>
     <dimen name="op_warp_charging_wireless_anim_info_battery_percent_text_padding_left">3.0dip</dimen>
@@ -1989,7 +2023,7 @@
     <item type="dimen" name="proximity_sensor_threshold">@null</item>
     <dimen name="pull_span_min">25.0dip</dimen>
     <dimen name="pulsing_notification_appear_translation">10.0dip</dimen>
-    <dimen name="qqs_media_spacing">16.0dip</dimen>
+    <dimen name="qqs_media_spacing">0.0dip</dimen>
     <dimen name="qr_bubble_activity_view_width">280.5dip</dimen>
     <dimen name="qr_bubble_app_icon">12.599976dip</dimen>
     <dimen name="qr_bubble_background_size">74.0dip</dimen>
@@ -2010,6 +2044,7 @@
     <dimen name="qs_brightness_view_margin_top">8.0dip</dimen>
     <dimen name="qs_carrier_margin_width">4.0dip</dimen>
     <dimen name="qs_carrier_text_padding">16.0dip</dimen>
+    <dimen name="qs_center_guideline_padding">10.0dip</dimen>
     <dimen name="qs_customize_header_min_height">46.0dip</dimen>
     <dimen name="qs_data_usage_text_size">14.0sp</dimen>
     <dimen name="qs_data_usage_usage_text_size">36.0sp</dimen>
@@ -2075,6 +2110,7 @@
     <dimen name="qs_media_album_size">52.0dip</dimen>
     <dimen name="qs_media_disabled_seekbar_height">1.0dip</dimen>
     <dimen name="qs_media_enabled_seekbar_height">3.0dip</dimen>
+    <dimen name="qs_media_icon_size">16.0dip</dimen>
     <dimen name="qs_media_padding">16.0dip</dimen>
     <dimen name="qs_media_panel_outer_padding">16.0dip</dimen>
     <dimen name="qs_media_width">350.0dip</dimen>
@@ -2092,9 +2128,8 @@
     <dimen name="qs_quick_tile_padding">16.0dip</dimen>
     <dimen name="qs_quick_tile_size">48.0dip</dimen>
     <dimen name="qs_seamless_fallback_end_margin">16.0dip</dimen>
-    <dimen name="qs_seamless_fallback_icon_size">20.0dip</dimen>
-    <dimen name="qs_seamless_fallback_top_margin">18.0dip</dimen>
-    <dimen name="qs_seamless_icon_size">20.0dip</dimen>
+    <item type="dimen" name="qs_seamless_fallback_icon_size">@dimen/qs_seamless_icon_size</item>
+    <item type="dimen" name="qs_seamless_icon_size">@dimen/qs_media_icon_size</item>
     <dimen name="qs_signal_indicator_shift_down_amount">7.0dip</dimen>
     <dimen name="qs_status_separator">32.0dip</dimen>
     <dimen name="qs_statusbar_header_margin_top">12.0dip</dimen>
@@ -2123,7 +2158,7 @@
     <dimen name="qs_upper_pager_height">245.0dip</dimen>
     <dimen name="quick_qs_total_height">292.0dip</dimen>
     <dimen name="quick_reply_notification_height">64.0dip</dimen>
-    <dimen name="quick_settings_bottom_margin_media">16.0dip</dimen>
+    <dimen name="quick_settings_bottom_margin_media">0.0dip</dimen>
     <dimen name="recents_layout_initial_bottom_offset_phone_port_gesture">210.0dip</dimen>
     <dimen name="recents_onboarding_toast_arrow_corner_radius">2.0dip</dimen>
     <dimen name="recents_quick_scrub_onboarding_margin_start">8.0dip</dimen>
@@ -2229,6 +2264,7 @@
     <dimen name="smart_reply_button_padding_vertical">14.0dip</dimen>
     <dimen name="smart_reply_button_spacing">8.0dip</dimen>
     <dimen name="smart_reply_button_stroke_width">1.0dip</dimen>
+    <dimen name="smartspace_date_text_size">19.0dip</dimen>
     <dimen name="smartspace_horizontal_padding">56.0dip</dimen>
     <dimen name="smartspace_text_size">16.0dip</dimen>
     <dimen name="smartspace_title_icon_size_5x5">28.0dip</dimen>
@@ -2240,13 +2276,14 @@
     <dimen name="speed_bump_height">16.0dip</dimen>
     <dimen name="ssc_action_bg_stroke_width">1.0dip</dimen>
     <dimen name="ssc_bg_radius">20.0dip</dimen>
-    <dimen name="ssc_height">28.0dip</dimen>
-    <dimen name="ssc_icon_height">20.0dip</dimen>
+    <dimen name="ssc_height">32.0dip</dimen>
+    <dimen name="ssc_icon_height">16.0dip</dimen>
     <dimen name="ssc_icon_margin_end">4.0dip</dimen>
-    <dimen name="ssc_margin">4.0dip</dimen>
+    <dimen name="ssc_margin">8.0dip</dimen>
     <dimen name="ssc_max_width">120.0dip</dimen>
-    <dimen name="ssc_text_margin">10.0dip</dimen>
+    <dimen name="ssc_text_margin">12.0dip</dimen>
     <dimen name="ssc_text_size">14.0dip</dimen>
+    <dimen name="ssc_vertical_padding">4.0dip</dimen>
     <dimen name="stacked_strength_height">5.6999817dip</dimen>
     <dimen name="stacked_strength_width">9.699982dip</dimen>
     <dimen name="stacked_type_height">5.0999756dip</dimen>
@@ -2325,7 +2362,7 @@
     <dimen name="timepicker_minimum_margin_sides">48.0dip</dimen>
     <dimen name="timepicker_minimum_margin_top_bottom">24.0dip</dimen>
     <dimen name="timepicker_pm_top_padding">4.0dip</dimen>
-    <dimen name="timepicker_radial_picker_dimen">302.0dip</dimen>
+    <dimen name="timepicker_radial_picker_dimen">216.0dip</dimen>
     <dimen name="timepicker_radial_picker_left_margin">24.0dip</dimen>
     <dimen name="timepicker_radial_picker_right_margin">24.0dip</dimen>
     <dimen name="timepicker_radial_picker_top_margin">27.0dip</dimen>

@@ -48,7 +48,7 @@
     <string name="abc_slice_updated">更新時間：%1$s</string>
     <string name="abc_slices_permission_request">「%1$s」想要顯示「%2$s」的區塊</string>
     <string name="abc_toolbar_collapse_description">收合</string>
-    <string name="about_action_bar_title">关于</string>
+    <string name="about_action_bar_title">關於</string>
     <string name="about_app_version_text">版本 %s</string>
     <string name="about_privacy_policy">隱私政策</string>
     <string name="about_release_note_title">更新日誌:</string>
@@ -585,6 +585,7 @@
     <string name="controls_favorite_other_zone_header">其他</string>
     <string name="controls_favorite_rearrange">按住並拖曳即可重新排列控制項</string>
     <string name="controls_favorite_removed">所有控制項都已移除</string>
+    <string name="controls_favorite_see_other_apps">查看其他應用程式</string>
     <string name="controls_favorite_subtitle">選擇要從電源選單存取的控制項</string>
     <string name="controls_favorite_toast_no_changes">未儲存變更</string>
     <string name="controls_in_progress">進行中</string>
@@ -688,6 +689,8 @@
     <string name="disconnect_vpn">中斷 VPN 連線</string>
     <string name="dnd_is_off">零打擾模式已關閉</string>
     <string name="dnd_suppressing_shade_text">「零打擾」模式已將通知設為暫停</string>
+    <string name="do_disclosure_generic">這部裝置的擁有者為貴機構</string>
+    <string name="do_disclosure_with_name">這部裝置的擁有者為「%s」</string>
     <string name="do_not_silence">不設定靜音</string>
     <string name="do_not_silence_block">不設定靜音或封鎖</string>
     <string name="dock_alignment_not_charging">請調整手機位置，即可無線充電</string>
@@ -698,6 +701,7 @@
     <string name="drag_to_rearrange_tiles">按住並拖曳即可重新排列圖塊</string>
     <string name="drag_to_remove_disabled">你至少必須要有 %1$d 個資訊方塊</string>
     <string name="drag_to_remove_tiles">拖曳到這裡即可移除</string>
+    <string name="earphone_support_battery_info">"左: %1$s  右: %2$s"</string>
     <string name="empty_shade_text">沒有通知</string>
     <string name="enable_adb">USB 偵錯</string>
     <string name="enable_adb_summary">連接 USB 時進入偵錯模式</string>
@@ -1130,8 +1134,18 @@
     <string name="monitoring_description_do_learn_more_separator">" "</string>
     <string name="monitoring_description_managed_profile_ca_certificate">貴機構已為你的工作資料夾安裝憑證授權單位憑證。你的安全網路流量可能會受到監控或修改。</string>
     <string name="monitoring_description_managed_profile_named_vpn">由於你的工作資料夾已連結至「%1$s」，因此你的網路活動 (包括收發電子郵件、使用應用程式及瀏覽網站) 可能會受到這個應用程式監控。</string>
+    <string name="monitoring_description_management">"這部裝置的擁有者為貴機構。
+
+你的 IT 管理員可以監控及管理與裝置相關聯的設定、公司系統權限、應用程式和資料，以及裝置的位置資訊。
+
+如要瞭解詳情，請與你的 IT 管理員聯絡。"</string>
     <string name="monitoring_description_management_ca_certificate">貴機構已為這個裝置安裝憑證授權單位憑證。你的安全網路流量可能會受到監控或修改。</string>
     <string name="monitoring_description_management_network_logging">你的管理員已啟用網路記錄功能，可監控你裝置的流量。</string>
+    <string name="monitoring_description_named_management">"這部裝置的擁有者為「%1$s」。
+
+你的 IT 管理員可以監控及管理與裝置相關聯的設定、公司系統權限、應用程式和資料，以及裝置的位置資訊。
+
+如要瞭解詳情，請與你的 IT 管理員聯絡。"</string>
     <string name="monitoring_description_named_vpn">由於你已連結至「%1$s」，因此你的網路活動 (包括收發電子郵件、使用應用程式及瀏覽網站) 可能會受到這個應用程式監控。</string>
     <string name="monitoring_description_network_logging">"你的管理員已啟用網路記錄功能，可監控你裝置的流量。
 
@@ -1264,6 +1278,12 @@
     <string name="op_accessibility_quick_settings_page">第 %1$d 頁，共 %2$d 頁</string>
     <string name="op_aod_parsons_unlock_one">解鎖過<annotation id="unlockNum">^1</annotation>次</string>
     <string name="op_aod_parsons_unlock_other">解鎖過<annotation id="unlockNum">^1</annotation>次</string>
+    <string name="op_battery_saver_description">"為了延長電池續航力，節約耗電量功能會執行以下動作：
+
+•關閉或限制背景活動、部分視覺效果和其他功能，例如「Hey Google」啟動字詞"</string>
+    <string name="op_battery_saver_description_no_ga">"為了延長電池續航力，節約耗電量功能會執行以下動作：
+
+•關閉或限制背景活動、部分視覺效果和其他功能"</string>
     <string name="op_date_format">M月d日</string>
     <string name="op_earphone_connect">配對中...</string>
     <string name="op_earphone_connected_fail">配對失敗，你可以檢查耳機和手機藍牙狀態。</string>
@@ -1295,7 +1315,7 @@
     <string name="op_notification_section_header_gentle">次要通知</string>
     <string name="op_notification_silence_title">次要</string>
     <string name="op_protect_charging">" 充電保護中"</string>
-    <string name="op_qs_dark_mode_tile_label">暗色模式</string>
+    <string name="op_qs_dark_mode_tile_label">深色模式</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s 已使用</string>
     <string name="op_quick_settings_night_display_label">護眼模式</string>
     <string name="op_read_mode2_dialog_black">黑白效果</string>
@@ -1500,8 +1520,20 @@
     <string name="quick_settings_data_switch_toast_0">目前沒有插入SIM卡</string>
     <string name="quick_settings_data_switch_toast_1">目前只插入一張SIM卡</string>
     <string name="quick_settings_disclosure_managed_profile_monitoring">貴機構可能會監控你工作資料夾的網路流量</string>
+    <string name="quick_settings_disclosure_managed_profile_named_vpn">你的工作資料夾已連線到「%1$s」</string>
+    <string name="quick_settings_disclosure_management">這部裝置的擁有者為貴機構</string>
+    <string name="quick_settings_disclosure_management_monitoring">貴機構擁有這部裝置，而且可能會監控網路流量</string>
+    <string name="quick_settings_disclosure_management_named_vpn">這部裝置的擁有者為貴機構，並且已連線到「%1$s」</string>
+    <string name="quick_settings_disclosure_management_vpns">這部裝置的擁有者為貴機構，並且已連線到 VPN</string>
     <string name="quick_settings_disclosure_monitoring">網路可能會受到監控</string>
     <string name="quick_settings_disclosure_named_managed_profile_monitoring">「%1$s」可能會監控你工作資料夾的網路流量</string>
+    <string name="quick_settings_disclosure_named_management">這部裝置的擁有者為「%1$s」</string>
+    <string name="quick_settings_disclosure_named_management_monitoring">這部裝置的擁有者為「%1$s」，而且該機構可能會監控網路流量</string>
+    <string name="quick_settings_disclosure_named_management_named_vpn">這部裝置的擁有者為「%1$s」，並且已連線到「%2$s」</string>
+    <string name="quick_settings_disclosure_named_management_vpns">這部裝置的擁有者為「%1$s」，並且已連線到 VPN</string>
+    <string name="quick_settings_disclosure_named_vpn">這部裝置已連線到「%1$s」</string>
+    <string name="quick_settings_disclosure_personal_profile_named_vpn">你的個人資料夾已連線到「%1$s」</string>
+    <string name="quick_settings_disclosure_vpns">這部裝置已連線到 VPN</string>
     <string name="quick_settings_dnd_alarms_label">僅限鬧鐘</string>
     <string name="quick_settings_dnd_label">零打擾</string>
     <string name="quick_settings_dnd_none_label">完全靜音</string>

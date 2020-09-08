@@ -39,6 +39,11 @@
     <string name="abc_slice_updated">Opdateret %1$s</string>
     <string name="abc_slices_permission_request">%1$s anmoder om tilladelse til at vise eksempler fra %2$s</string>
     <string name="abc_toolbar_collapse_description">Skjul</string>
+    <string name="about_action_bar_title">Om</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Politik om beskyttelse af personlige oplysninger</string>
+    <string name="about_release_note_title">Opdateringslog:</string>
+    <string name="about_terms_service">Servicebetingelser</string>
     <string name="accessibility_accessibility_button">Hjælpefunktioner</string>
     <string name="accessibility_action_divider_bottom_full">Vis nederste del i fuld skærm</string>
     <string name="accessibility_action_divider_left_30">Venstre 30 %</string>
@@ -543,7 +548,7 @@ Valg"</string>
     <string name="cached_apps_freezer_device_default">Enhedens standardindstilling</string>
     <string name="cached_apps_freezer_disabled">Deaktiveret</string>
     <string name="cached_apps_freezer_enabled">Aktiveret</string>
-    <string name="cached_apps_freezer_reboot_dialog_text">Din enhed skal genstartes for at denne enhed bliver anvendt. Genstart nu, eller annuller.</string>
+    <string name="cached_apps_freezer_reboot_dialog_text">Din enhed skal genstartes for at anvende denne ændring. Genstart nu, eller annuller.</string>
     <string name="camera_hint">Stryg fra kameraikonet</string>
     <string name="camera_label">åbn kamera</string>
     <string name="cancel">Annuller</string>
@@ -593,11 +598,12 @@ Valg"</string>
     <string name="controls_error_retryable">Fejl. Prøver igen…</string>
     <string name="controls_error_timeout">Inaktiv. Tjek appen</string>
     <string name="controls_favorite_default_title">Betjeningselementer</string>
-    <string name="controls_favorite_load_error">Betjeningselementerne kunne ikke indlæses. Tjek %s-appen for at sørge for, at dine appindstillinger ikke er blevet ændret.</string>
+    <string name="controls_favorite_load_error">Betjeningselementerne kunne ikke indlæses. Tjek %s-appen for at sikre, at dine appindstillinger ikke er blevet ændret.</string>
     <string name="controls_favorite_load_none">Kompatible betjeningselementer er ikke tilgængelige</string>
     <string name="controls_favorite_other_zone_header">Andre</string>
     <string name="controls_favorite_rearrange">Flyt rundt på styringselementer ved at holde dem nede og trække</string>
     <string name="controls_favorite_removed">Alle styringselementerne blev fjernet</string>
+    <string name="controls_favorite_see_other_apps">Se andre apps</string>
     <string name="controls_favorite_subtitle">Vælg de indstillinger, der skal vises i menuen for afbryderknappen</string>
     <string name="controls_favorite_toast_no_changes">Ændringerne blev ikke gemt</string>
     <string name="controls_in_progress">I gang</string>
@@ -696,8 +702,8 @@ Hvis du fortsætter, bliver du muligvis opkrævet betaling for dit dataforbrug."
     <string name="disable_carrier_button_text">Deaktiver eSIM</string>
     <string name="disable_overlays">Deaktiver HW-overlejring</string>
     <string name="disable_overlays_summary">Brug altid GPU til skærmsammensætning</string>
-    <string name="disable_tether_notification_message">Contact your admin for details</string>
-    <string name="disable_tether_notification_title">Tethering is disabled</string>
+    <string name="disable_tether_notification_message">Kontakt din administrator for mere information</string>
+    <string name="disable_tether_notification_title">Sammenkobling er deaktiveret</string>
     <string name="disable_vpn">Deaktiver VPN</string>
     <string name="disabled">Deaktiveret</string>
     <string name="disabled_by_admin">Deaktiveret af administrator</string>
@@ -717,6 +723,7 @@ Hvis du fortsætter, bliver du muligvis opkrævet betaling for dit dataforbrug."
     <string name="drag_to_rearrange_tiles">Flyt rundt på felterne ved at holde dem nede og trække</string>
     <string name="drag_to_remove_disabled">Du skal bruge mindst %1$d felter</string>
     <string name="drag_to_remove_tiles">Træk herhen for at fjerne</string>
+    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">Træk fliser for at flytte rundt på dem. Tryk for at vise eller skjule dem.</string>
     <string name="empty_shade_text">Ingen notifikationer</string>
     <string name="enable_adb">USB-fejlretning</string>
@@ -1092,6 +1099,7 @@ Prøv igen om %2$d sekunder."</string>
     <string name="left_nav_bar_button_type">Ekstra venstre knaptype</string>
     <string name="legacy_vpn_name">VPN</string>
     <string name="loading_injected_setting_summary">Indlæser…</string>
+    <string name="loading_text">Indlæser ...</string>
     <string name="local_backup_password_summary_change">Tryk for at skifte eller fjerne adgangskoden til fuld lokal backup</string>
     <string name="local_backup_password_summary_none">Lokale komplette backups er i øjeblikket ikke beskyttet</string>
     <string name="local_backup_password_title">Kode til lokal backup</string>
@@ -1323,8 +1331,14 @@ Du har også forbindelse til et VPN, som kan overvåge din netværksaktivitet."<
     <string name="oneplus_threekey_navigation_sound">Alle lyde tilladt</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Den kan aktiveres med til/fra-knappen ovenfor</string>
     <string name="oneplus_threekey_navigation_vibration">Kun vibration</string>
-    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> lås op</string>
-    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> låser op</string>
+    <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>lås op</string>
+    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>låser op</string>
+    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+
+•Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_earphone_connect">Danner par ...</string>
     <string name="op_earphone_connected_fail">Kunne ikke danne par. Du kan tjekke status for hovedtelefon og Bluetooth.</string>
     <string name="op_earphone_connected_success">Dannet par. Tryk for flere indstillinger.</string>
@@ -1354,9 +1368,10 @@ Du har også forbindelse til et VPN, som kan overvåge din netværksaktivitet."<
     <string name="op_notification_channel_summary_low">Mindre vigtige meddelelser uden lyd eller vibration.</string>
     <string name="op_notification_section_header_gentle">Andre meddelelser</string>
     <string name="op_notification_silence_title">Andet</string>
+    <string name="op_protect_charging">" Protect charging"</string>
     <string name="op_qs_dark_mode_tile_label">Mørk tilstand</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s brugt</string>
-    <string name="op_quick_settings_night_display_label">Nattetilstand</string>
+    <string name="op_quick_settings_night_display_label">Synskomfort</string>
     <string name="op_quick_settings_night_display_summary_off">Nattetilstand slået fra, tryk for at slå til</string>
     <string name="op_quick_settings_night_display_summary_on">Nattetilstand slået til, tryk for at slå fra</string>
     <string name="op_read_mode2_dialog_black">Sort/hvid-effekt</string>
@@ -1504,7 +1519,7 @@ Du har også forbindelse til et VPN, som kan overvåge din netværksaktivitet."<
     <string name="profile_owned_footer">Profilen kan overvåges</string>
     <string name="qr_bubble_hint">Tryk på boblen for at læse og svare på beskeder</string>
     <string name="qr_portrait_hint">Hurtigt svar er slået fra i stående</string>
-    <string name="qr_portrait_turn_on">TÆNDE</string>
+    <string name="qr_portrait_turn_on">SLÅ TIL</string>
     <string name="qs_dnd_keep">Behold</string>
     <string name="qs_dnd_prompt_app">Tilstanden Forstyr ikke blev aktiveret af en app (%s).</string>
     <string name="qs_dnd_prompt_auto_rule">Tilstanden Forstyr ikke blev aktiveret af en automatisk regel (%s).</string>
@@ -1617,7 +1632,7 @@ Du har også forbindelse til et VPN, som kan overvåge din netværksaktivitet."<
     <string name="quick_settings_nfc_off">NFC er deaktiveret</string>
     <string name="quick_settings_nfc_on">NFC er aktiveret</string>
     <string name="quick_settings_night_display_label">Nattelys</string>
-    <string name="quick_settings_night_mode_label">Nattetilstand</string>
+    <string name="quick_settings_night_mode_label">Nat-tilstand</string>
     <string name="quick_settings_night_secondary_label_on_at">Tænd kl. %s</string>
     <string name="quick_settings_night_secondary_label_on_at_sunset">Tænd ved solnedgang</string>
     <string name="quick_settings_night_secondary_label_until_sunrise">Indtil solopgang</string>
@@ -1871,7 +1886,7 @@ være overvåget"</string>
     <string name="tethered_notification_hybrid_sharing_mobile">Deler mobildata, klik for at åbne Indstillinger</string>
     <string name="tethered_notification_hybrid_sharing_none">Ingen tilgængelige netværk kan deles, klik for at åbne Indstillinger</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Deler Wi-Fi, klik for at åbne Indstillinger</string>
-    <string name="tethered_notification_message">Tap to set up.</string>
+    <string name="tethered_notification_message">Tryk for at konfigurere.</string>
     <string name="tethered_notification_multi_device_message">%1$s tilsluttede enheder</string>
     <string name="tethered_notification_multi_tether_title">Internetdeling og mobilt hotspot aktive</string>
     <string name="tethered_notification_no_device_message">Ingen tilsluttet enhed</string>
@@ -2104,7 +2119,17 @@ Wi‑Fi-adresse (BSSID)
     <string name="wifi_verbose_logging">Aktivér detaljeret Wi-Fi-logføring</string>
     <string name="wifi_verbose_logging_summary">Øg mængden af Wi‑Fi-logføring. Vis opdelt efter SSID RSSI i Wi‑Fi-vælgeren</string>
     <string name="window_animation_scale_title">Animationsskala for vindue</string>
-    <string name="work_life_balance_mode">Work-Life Balance</string>
+    <string name="wlb_break_mode_active">Aktive</string>
+    <string name="wlb_break_mode_active_text">%1$s tilstand · %2$s</string>
+    <string name="wlb_break_mode_on_break">Tager pause</string>
+    <string name="wlb_break_mode_resume">Fortsæt</string>
+    <string name="wlb_break_mode_take_break">Tag en pause</string>
+    <string name="wlb_qs_detail_break_mode">Pausetilstand</string>
+    <string name="wlb_qs_detail_break_mode_desc">Genoptager automatisk forrige tilstand efter 30 minutter</string>
+    <string name="wlb_qs_detail_life_mode">Fritidstilstand</string>
+    <string name="wlb_qs_detail_more_setting">Flere indstillinger</string>
+    <string name="wlb_qs_detail_work_mode">Arbejdstilstand</string>
+    <string name="work_life_balance_mode">Balance mellem arbejde og fritid</string>
     <string name="zen_alarm_warning">Du vil ikke kunne høre din næste alarm %1$s</string>
     <string name="zen_alarm_warning_indef">Du vil ikke kunne høre din næste alarm %1$s, medmindre du slår funktionen fra inden da</string>
     <string name="zen_alarms_introduction">Du bliver ikke forstyrret af lyde eller vibrationer, undtagen fra alarmer. Du kan stadig høre alt, du vælger at afspille, f.eks. musik, videoer og spil.</string>

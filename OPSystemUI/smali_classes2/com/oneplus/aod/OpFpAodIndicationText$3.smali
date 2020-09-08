@@ -20,7 +20,7 @@
 # instance fields
 .field final synthetic this$0:Lcom/oneplus/aod/OpFpAodIndicationText;
 
-.field final synthetic val$show:Z
+.field final synthetic val$needToShow:Z
 
 
 # direct methods
@@ -29,7 +29,7 @@
 
     iput-object p1, p0, Lcom/oneplus/aod/OpFpAodIndicationText$3;->this$0:Lcom/oneplus/aod/OpFpAodIndicationText;
 
-    iput-boolean p2, p0, Lcom/oneplus/aod/OpFpAodIndicationText$3;->val$show:Z
+    iput-boolean p2, p0, Lcom/oneplus/aod/OpFpAodIndicationText$3;->val$needToShow:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,7 +43,7 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/OpFpAodIndicationText$3;->this$0:Lcom/oneplus/aod/OpFpAodIndicationText;
 
-    iget-boolean p0, p0, Lcom/oneplus/aod/OpFpAodIndicationText$3;->val$show:Z
+    iget-boolean p0, p0, Lcom/oneplus/aod/OpFpAodIndicationText$3;->val$needToShow:Z
 
     if-eqz p0, :cond_0
 

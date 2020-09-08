@@ -318,11 +318,11 @@
 
     iget-boolean v0, p0, Lcom/android/systemui/pip/phone/PipMotionHelper;->mDismissalPending:Z
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
     iget-boolean v0, p0, Lcom/android/systemui/pip/phone/PipMotionHelper;->mSpringingToTouch:Z
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
     iget-object v0, p0, Lcom/android/systemui/pip/phone/PipMotionHelper;->mMagnetizedPip:Lcom/android/systemui/util/magnetictarget/MagnetizedObject;
 
@@ -330,7 +330,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
     iget-object v0, p0, Lcom/android/systemui/pip/phone/PipMotionHelper;->mBounds:Landroid/graphics/Rect;
 
@@ -338,17 +338,22 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
+    iget-boolean v0, p0, Lcom/android/systemui/pip/phone/PipMotionHelper;->mDismissalPending:Z
+
+    if-nez v0, :cond_0
+
     iget-object v0, p0, Lcom/android/systemui/pip/phone/PipMotionHelper;->mPipTaskOrganizer:Lcom/android/systemui/pip/PipTaskOrganizer;
 
     iget-object v1, p0, Lcom/android/systemui/pip/phone/PipMotionHelper;->mBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Lcom/android/systemui/pip/PipTaskOrganizer;->scheduleFinishResizePip(Landroid/graphics/Rect;)V
 
+    :cond_0
     iget-object v0, p0, Lcom/android/systemui/pip/phone/PipMotionHelper;->mTemporaryBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->setEmpty()V
 
-    :cond_0
+    :cond_1
     iget-object v0, p0, Lcom/android/systemui/pip/phone/PipMotionHelper;->mAnimatingToBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->setEmpty()V
@@ -943,79 +948,81 @@
 .end method
 
 .method flingToSnapTarget(FFLjava/lang/Runnable;Ljava/lang/Runnable;)V
-    .locals 7
+    .locals 8
 
-    iget-object v6, p0, Lcom/android/systemui/pip/phone/PipMotionHelper;->mTemporaryBoundsPhysicsAnimator:Lcom/android/systemui/util/animation/PhysicsAnimator;
+    const/4 v0, 0x0
 
-    sget-object v0, Lcom/android/systemui/util/animation/FloatProperties;->RECT_WIDTH:Landroidx/dynamicanimation/animation/FloatPropertyCompat;
+    iput-boolean v0, p0, Lcom/android/systemui/pip/phone/PipMotionHelper;->mSpringingToTouch:Z
 
-    iget-object v1, p0, Lcom/android/systemui/pip/phone/PipMotionHelper;->mBounds:Landroid/graphics/Rect;
+    iget-object v7, p0, Lcom/android/systemui/pip/phone/PipMotionHelper;->mTemporaryBoundsPhysicsAnimator:Lcom/android/systemui/util/animation/PhysicsAnimator;
 
-    invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
+    sget-object v1, Lcom/android/systemui/util/animation/FloatProperties;->RECT_WIDTH:Landroidx/dynamicanimation/animation/FloatPropertyCompat;
 
-    move-result v1
+    iget-object v2, p0, Lcom/android/systemui/pip/phone/PipMotionHelper;->mBounds:Landroid/graphics/Rect;
 
-    int-to-float v1, v1
+    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
 
-    iget-object v2, p0, Lcom/android/systemui/pip/phone/PipMotionHelper;->mSpringConfig:Lcom/android/systemui/util/animation/PhysicsAnimator$SpringConfig;
+    move-result v2
 
-    invoke-virtual {v6, v0, v1, v2}, Lcom/android/systemui/util/animation/PhysicsAnimator;->spring(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FLcom/android/systemui/util/animation/PhysicsAnimator$SpringConfig;)Lcom/android/systemui/util/animation/PhysicsAnimator;
+    int-to-float v2, v2
 
-    sget-object v0, Lcom/android/systemui/util/animation/FloatProperties;->RECT_HEIGHT:Landroidx/dynamicanimation/animation/FloatPropertyCompat;
+    iget-object v3, p0, Lcom/android/systemui/pip/phone/PipMotionHelper;->mSpringConfig:Lcom/android/systemui/util/animation/PhysicsAnimator$SpringConfig;
 
-    iget-object v1, p0, Lcom/android/systemui/pip/phone/PipMotionHelper;->mBounds:Landroid/graphics/Rect;
+    invoke-virtual {v7, v1, v2, v3}, Lcom/android/systemui/util/animation/PhysicsAnimator;->spring(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FLcom/android/systemui/util/animation/PhysicsAnimator$SpringConfig;)Lcom/android/systemui/util/animation/PhysicsAnimator;
 
-    invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
+    sget-object v1, Lcom/android/systemui/util/animation/FloatProperties;->RECT_HEIGHT:Landroidx/dynamicanimation/animation/FloatPropertyCompat;
 
-    move-result v1
+    iget-object v2, p0, Lcom/android/systemui/pip/phone/PipMotionHelper;->mBounds:Landroid/graphics/Rect;
 
-    int-to-float v1, v1
+    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
 
-    iget-object v2, p0, Lcom/android/systemui/pip/phone/PipMotionHelper;->mSpringConfig:Lcom/android/systemui/util/animation/PhysicsAnimator$SpringConfig;
+    move-result v2
 
-    invoke-virtual {v6, v0, v1, v2}, Lcom/android/systemui/util/animation/PhysicsAnimator;->spring(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FLcom/android/systemui/util/animation/PhysicsAnimator$SpringConfig;)Lcom/android/systemui/util/animation/PhysicsAnimator;
+    int-to-float v2, v2
 
-    sget-object v1, Lcom/android/systemui/util/animation/FloatProperties;->RECT_X:Landroidx/dynamicanimation/animation/FloatPropertyCompat;
+    iget-object v3, p0, Lcom/android/systemui/pip/phone/PipMotionHelper;->mSpringConfig:Lcom/android/systemui/util/animation/PhysicsAnimator$SpringConfig;
 
-    iget-object v3, p0, Lcom/android/systemui/pip/phone/PipMotionHelper;->mFlingConfigX:Lcom/android/systemui/util/animation/PhysicsAnimator$FlingConfig;
+    invoke-virtual {v7, v1, v2, v3}, Lcom/android/systemui/util/animation/PhysicsAnimator;->spring(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FLcom/android/systemui/util/animation/PhysicsAnimator$SpringConfig;)Lcom/android/systemui/util/animation/PhysicsAnimator;
 
-    iget-object v4, p0, Lcom/android/systemui/pip/phone/PipMotionHelper;->mSpringConfig:Lcom/android/systemui/util/animation/PhysicsAnimator$SpringConfig;
+    sget-object v2, Lcom/android/systemui/util/animation/FloatProperties;->RECT_X:Landroidx/dynamicanimation/animation/FloatPropertyCompat;
 
-    const/4 v5, 0x1
+    iget-object v4, p0, Lcom/android/systemui/pip/phone/PipMotionHelper;->mFlingConfigX:Lcom/android/systemui/util/animation/PhysicsAnimator$FlingConfig;
 
-    move-object v0, v6
+    iget-object v5, p0, Lcom/android/systemui/pip/phone/PipMotionHelper;->mSpringConfig:Lcom/android/systemui/util/animation/PhysicsAnimator$SpringConfig;
 
-    move v2, p1
+    const/4 v6, 0x1
 
-    invoke-virtual/range {v0 .. v5}, Lcom/android/systemui/util/animation/PhysicsAnimator;->flingThenSpring(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FLcom/android/systemui/util/animation/PhysicsAnimator$FlingConfig;Lcom/android/systemui/util/animation/PhysicsAnimator$SpringConfig;Z)Lcom/android/systemui/util/animation/PhysicsAnimator;
+    move-object v1, v7
 
-    sget-object v0, Lcom/android/systemui/util/animation/FloatProperties;->RECT_Y:Landroidx/dynamicanimation/animation/FloatPropertyCompat;
+    move v3, p1
 
-    iget-object v1, p0, Lcom/android/systemui/pip/phone/PipMotionHelper;->mFlingConfigY:Lcom/android/systemui/util/animation/PhysicsAnimator$FlingConfig;
+    invoke-virtual/range {v1 .. v6}, Lcom/android/systemui/util/animation/PhysicsAnimator;->flingThenSpring(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FLcom/android/systemui/util/animation/PhysicsAnimator$FlingConfig;Lcom/android/systemui/util/animation/PhysicsAnimator$SpringConfig;Z)Lcom/android/systemui/util/animation/PhysicsAnimator;
 
-    iget-object v2, p0, Lcom/android/systemui/pip/phone/PipMotionHelper;->mSpringConfig:Lcom/android/systemui/util/animation/PhysicsAnimator$SpringConfig;
+    sget-object v1, Lcom/android/systemui/util/animation/FloatProperties;->RECT_Y:Landroidx/dynamicanimation/animation/FloatPropertyCompat;
 
-    invoke-virtual {v6, v0, p2, v1, v2}, Lcom/android/systemui/util/animation/PhysicsAnimator;->flingThenSpring(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FLcom/android/systemui/util/animation/PhysicsAnimator$FlingConfig;Lcom/android/systemui/util/animation/PhysicsAnimator$SpringConfig;)Lcom/android/systemui/util/animation/PhysicsAnimator;
+    iget-object v2, p0, Lcom/android/systemui/pip/phone/PipMotionHelper;->mFlingConfigY:Lcom/android/systemui/util/animation/PhysicsAnimator$FlingConfig;
 
-    const/4 v0, 0x1
+    iget-object v3, p0, Lcom/android/systemui/pip/phone/PipMotionHelper;->mSpringConfig:Lcom/android/systemui/util/animation/PhysicsAnimator$SpringConfig;
 
-    new-array v0, v0, [Ljava/lang/Runnable;
+    invoke-virtual {v7, v1, p2, v2, v3}, Lcom/android/systemui/util/animation/PhysicsAnimator;->flingThenSpring(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FLcom/android/systemui/util/animation/PhysicsAnimator$FlingConfig;Lcom/android/systemui/util/animation/PhysicsAnimator$SpringConfig;)Lcom/android/systemui/util/animation/PhysicsAnimator;
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
-    aput-object p4, v0, v1
+    new-array v1, v1, [Ljava/lang/Runnable;
 
-    invoke-virtual {v6, v0}, Lcom/android/systemui/util/animation/PhysicsAnimator;->withEndActions([Ljava/lang/Runnable;)Lcom/android/systemui/util/animation/PhysicsAnimator;
+    aput-object p4, v1, v0
+
+    invoke-virtual {v7, v1}, Lcom/android/systemui/util/animation/PhysicsAnimator;->withEndActions([Ljava/lang/Runnable;)Lcom/android/systemui/util/animation/PhysicsAnimator;
 
     if-eqz p3, :cond_0
 
     iget-object p4, p0, Lcom/android/systemui/pip/phone/PipMotionHelper;->mTemporaryBoundsPhysicsAnimator:Lcom/android/systemui/util/animation/PhysicsAnimator;
 
-    new-instance v0, Lcom/android/systemui/pip/phone/-$$Lambda$PipMotionHelper$AiW2VQGjSOah3v_re0mTkvmkPLc;
+    new-instance v1, Lcom/android/systemui/pip/phone/-$$Lambda$PipMotionHelper$AiW2VQGjSOah3v_re0mTkvmkPLc;
 
-    invoke-direct {v0, p3}, Lcom/android/systemui/pip/phone/-$$Lambda$PipMotionHelper$AiW2VQGjSOah3v_re0mTkvmkPLc;-><init>(Ljava/lang/Runnable;)V
+    invoke-direct {v1, p3}, Lcom/android/systemui/pip/phone/-$$Lambda$PipMotionHelper$AiW2VQGjSOah3v_re0mTkvmkPLc;-><init>(Ljava/lang/Runnable;)V
 
-    invoke-virtual {p4, v0}, Lcom/android/systemui/util/animation/PhysicsAnimator;->addUpdateListener(Lcom/android/systemui/util/animation/PhysicsAnimator$UpdateListener;)Lcom/android/systemui/util/animation/PhysicsAnimator;
+    invoke-virtual {p4, v1}, Lcom/android/systemui/util/animation/PhysicsAnimator;->addUpdateListener(Lcom/android/systemui/util/animation/PhysicsAnimator$UpdateListener;)Lcom/android/systemui/util/animation/PhysicsAnimator;
 
     :cond_0
     const/4 p3, 0x0
@@ -1050,7 +1057,7 @@
 
     move-result p2
 
-    invoke-direct {p0, p1, p2, v1}, Lcom/android/systemui/pip/phone/PipMotionHelper;->startBoundsAnimator(FFZ)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/android/systemui/pip/phone/PipMotionHelper;->startBoundsAnimator(FFZ)V
 
     return-void
 .end method
@@ -1152,18 +1159,6 @@
 
     :goto_0
     return-object p0
-.end method
-
-.method isAnimating()Z
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/systemui/pip/phone/PipMotionHelper;->mTemporaryBoundsPhysicsAnimator:Lcom/android/systemui/util/animation/PhysicsAnimator;
-
-    invoke-virtual {p0}, Lcom/android/systemui/util/animation/PhysicsAnimator;->isRunning()Z
-
-    move-result p0
-
-    return p0
 .end method
 
 .method public synthetic lambda$expandPipToFullscreen$2$PipMotionHelper(Z)V

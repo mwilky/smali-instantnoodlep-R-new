@@ -311,7 +311,9 @@
         <item>0</item>
         <item>400</item>
     </integer-array>
-    <array name="config_controlsPreferredPackages" />
+    <string-array name="config_controlsPreferredPackages">
+        <item>com.google.android.apps.chromecast.app</item>
+    </string-array>
     <integer-array name="config_doze_brightness_sensor_to_brightness">
         <item>-1</item>
         <item>2</item>
@@ -334,9 +336,12 @@
     </integer-array>
     <string-array name="config_pluginWhitelist">
         <item>com.android.systemui</item>
+        <item>com.android.systemui.plugin.globalactions.wallet</item>
     </string-array>
     <string-array name="config_quickSettingsAutoAdd">
         <item>accessibility_display_inversion_enabled:inversion</item>
+        <item>wind_down_first_time_setup:custom(com.google.android.apps.wellbeing/.screen.ui.GrayscaleTileService)</item>
+        <item>focus_mode_first_time_setup:custom(com.google.android.apps.wellbeing/.focusmode.quicksettings.FocusModeTileService)</item>
     </string-array>
     <array name="config_statusBarIconBlackList">
         <item>@android:string/status_bar_rotate</item>
@@ -671,6 +676,64 @@
         <item>China_Tietong</item>
         <item>roamingTextSearching</item>
     </string-array>
+    <string-array name="oneplus_lunar_day_translate">
+        <item>初一</item>
+        <item>初二</item>
+        <item>初三</item>
+        <item>初四</item>
+        <item>初五</item>
+        <item>初六</item>
+        <item>初七</item>
+        <item>初八</item>
+        <item>初九</item>
+        <item>初十</item>
+        <item>十一</item>
+        <item>十二</item>
+        <item>十三</item>
+        <item>十四</item>
+        <item>十五</item>
+        <item>十六</item>
+        <item>十七</item>
+        <item>十八</item>
+        <item>十九</item>
+        <item>二十</item>
+        <item>廿一</item>
+        <item>廿二</item>
+        <item>廿三</item>
+        <item>廿四</item>
+        <item>廿五</item>
+        <item>廿六</item>
+        <item>廿七</item>
+        <item>廿八</item>
+        <item>廿九</item>
+        <item>三十</item>
+    </string-array>
+    <string-array name="oneplus_lunar_month_translate">
+        <item>正月</item>
+        <item>二月</item>
+        <item>三月</item>
+        <item>四月</item>
+        <item>五月</item>
+        <item>六月</item>
+        <item>七月</item>
+        <item>八月</item>
+        <item>九月</item>
+        <item>十月</item>
+        <item>十一月</item>
+        <item>十二月</item>
+    </string-array>
+    <string-array name="oneplus_lunar_year_translate">
+        <item>〇</item>
+        <item>一</item>
+        <item>二</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+        <item>七</item>
+        <item>八</item>
+        <item>九</item>
+    </string-array>
     <string-array name="oneplus_origin_carrier_names">
         <item>"CHINA  MOBILE"</item>
         <item>CHINA MOBILE — CMCC</item>
@@ -842,6 +905,7 @@
         <item>@color/op_control_icon_color_inactive_light</item>
         <item>@color/op_control_text_color_secondary_light</item>
     </array>
+    <array name="op_wbus_config_value" />
     <string-array name="op_wx_mini_program_strings">
         <item>@string/op_wx_mini_program_wx_transit</item>
     </string-array>
@@ -952,6 +1016,126 @@
         <item>1</item>
         <item>3</item>
     </string-array>
+    <array name="swarpcharge_wired_anim">
+        <item>@drawable/warpcharge_wired_000</item>
+        <item>@drawable/warpcharge_wired_001</item>
+        <item>@drawable/warpcharge_wired_002</item>
+        <item>@drawable/warpcharge_wired_003</item>
+        <item>@drawable/warpcharge_wired_004</item>
+        <item>@drawable/warpcharge_wired_005</item>
+        <item>@drawable/warpcharge_wired_006</item>
+        <item>@drawable/warpcharge_wired_007</item>
+        <item>@drawable/warpcharge_wired_008</item>
+        <item>@drawable/warpcharge_wired_009</item>
+        <item>@drawable/warpcharge_wired_010</item>
+        <item>@drawable/warpcharge_wired_011</item>
+        <item>@drawable/warpcharge_wired_012</item>
+        <item>@drawable/warpcharge_wired_013</item>
+        <item>@drawable/warpcharge_wired_014</item>
+        <item>@drawable/warpcharge_wired_015</item>
+        <item>@drawable/warpcharge_wired_016</item>
+        <item>@drawable/warpcharge_wired_017</item>
+        <item>@drawable/warpcharge_wired_018</item>
+        <item>@drawable/warpcharge_wired_019</item>
+        <item>@drawable/warpcharge_wired_020</item>
+        <item>@drawable/warpcharge_wired_021</item>
+        <item>@drawable/warpcharge_wired_022</item>
+        <item>@drawable/warpcharge_wired_023</item>
+        <item>@drawable/warpcharge_wired_024</item>
+        <item>@drawable/warpcharge_wired_025</item>
+        <item>@drawable/warpcharge_wired_026</item>
+        <item>@drawable/warpcharge_wired_027</item>
+        <item>@drawable/warpcharge_wired_028</item>
+        <item>@drawable/warpcharge_wired_029</item>
+        <item>@drawable/warpcharge_wired_030</item>
+        <item>@drawable/warpcharge_wired_031</item>
+        <item>@drawable/warpcharge_wired_032</item>
+        <item>@drawable/warpcharge_wired_033</item>
+        <item>@drawable/warpcharge_wired_034</item>
+        <item>@drawable/warpcharge_wired_035</item>
+        <item>@drawable/warpcharge_wired_036</item>
+        <item>@drawable/warpcharge_wired_037</item>
+        <item>@drawable/warpcharge_wired_038</item>
+        <item>@drawable/warpcharge_wired_039</item>
+        <item>@drawable/warpcharge_wired_040</item>
+        <item>@drawable/warpcharge_wired_041</item>
+        <item>@drawable/warpcharge_wired_042</item>
+        <item>@drawable/warpcharge_wired_043</item>
+        <item>@drawable/warpcharge_wired_044</item>
+        <item>@drawable/warpcharge_wired_045</item>
+        <item>@drawable/warpcharge_wired_046</item>
+        <item>@drawable/warpcharge_wired_047</item>
+        <item>@drawable/warpcharge_wired_048</item>
+        <item>@drawable/warpcharge_wired_049</item>
+        <item>@drawable/warpcharge_wired_050</item>
+        <item>@drawable/warpcharge_wired_051</item>
+        <item>@drawable/warpcharge_wired_052</item>
+        <item>@drawable/warpcharge_wired_053</item>
+        <item>@drawable/warpcharge_wired_054</item>
+        <item>@drawable/warpcharge_wired_055</item>
+        <item>@drawable/warpcharge_wired_056</item>
+        <item>@drawable/warpcharge_wired_057</item>
+        <item>@drawable/warpcharge_wired_058</item>
+        <item>@drawable/warpcharge_wired_059</item>
+        <item>@drawable/warpcharge_wired_060</item>
+        <item>@drawable/warpcharge_wired_061</item>
+        <item>@drawable/warpcharge_wired_062</item>
+        <item>@drawable/warpcharge_wired_063</item>
+        <item>@drawable/warpcharge_wired_064</item>
+        <item>@drawable/warpcharge_wired_065</item>
+        <item>@drawable/warpcharge_wired_066</item>
+        <item>@drawable/warpcharge_wired_067</item>
+        <item>@drawable/warpcharge_wired_068</item>
+        <item>@drawable/warpcharge_wired_069</item>
+        <item>@drawable/warpcharge_wired_070</item>
+        <item>@drawable/warpcharge_wired_071</item>
+        <item>@drawable/warpcharge_wired_072</item>
+        <item>@drawable/warpcharge_wired_073</item>
+        <item>@drawable/warpcharge_wired_074</item>
+        <item>@drawable/warpcharge_wired_075</item>
+        <item>@drawable/warpcharge_wired_076</item>
+        <item>@drawable/warpcharge_wired_077</item>
+        <item>@drawable/warpcharge_wired_078</item>
+        <item>@drawable/warpcharge_wired_079</item>
+        <item>@drawable/warpcharge_wired_080</item>
+        <item>@drawable/warpcharge_wired_081</item>
+        <item>@drawable/warpcharge_wired_082</item>
+        <item>@drawable/warpcharge_wired_083</item>
+        <item>@drawable/warpcharge_wired_084</item>
+        <item>@drawable/warpcharge_wired_085</item>
+        <item>@drawable/warpcharge_wired_086</item>
+        <item>@drawable/warpcharge_wired_087</item>
+        <item>@drawable/warpcharge_wired_088</item>
+        <item>@drawable/warpcharge_wired_089</item>
+        <item>@drawable/warpcharge_wired_090</item>
+        <item>@drawable/warpcharge_wired_091</item>
+        <item>@drawable/warpcharge_wired_092</item>
+        <item>@drawable/warpcharge_wired_093</item>
+        <item>@drawable/warpcharge_wired_094</item>
+        <item>@drawable/warpcharge_wired_095</item>
+        <item>@drawable/warpcharge_wired_096</item>
+        <item>@drawable/warpcharge_wired_097</item>
+        <item>@drawable/warpcharge_wired_098</item>
+        <item>@drawable/warpcharge_wired_099</item>
+        <item>@drawable/warpcharge_wired_100</item>
+        <item>@drawable/warpcharge_wired_101</item>
+        <item>@drawable/warpcharge_wired_102</item>
+        <item>@drawable/warpcharge_wired_103</item>
+        <item>@drawable/warpcharge_wired_104</item>
+        <item>@drawable/warpcharge_wired_105</item>
+        <item>@drawable/warpcharge_wired_106</item>
+        <item>@drawable/warpcharge_wired_107</item>
+        <item>@drawable/warpcharge_wired_108</item>
+        <item>@drawable/warpcharge_wired_109</item>
+        <item>@drawable/warpcharge_wired_110</item>
+        <item>@drawable/warpcharge_wired_111</item>
+        <item>@drawable/warpcharge_wired_112</item>
+        <item>@drawable/warpcharge_wired_113</item>
+        <item>@drawable/warpcharge_wired_114</item>
+        <item>@drawable/warpcharge_wired_115</item>
+        <item>@drawable/warpcharge_wired_116</item>
+        <item>@drawable/warpcharge_wired_117</item>
+    </array>
     <string-array name="track_frame_time_entries">
         <item>Off</item>
         <item>On screen as bars</item>

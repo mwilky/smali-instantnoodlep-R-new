@@ -7,8 +7,8 @@
     <systemInfoSettings>
         <dateInfo systemui:show="false" />
         <sliceInfo android:layout_gravity="start" android:layout_marginTop="@dimen/op_control_margin_space7" android:layout_marginStart="@dimen/op_keyguard_clock_info_view_content_padding_for_aod_bottom_view" android:layout_marginEnd="@dimen/aod_slice_view_horizontal_margin" systemui:show="false" />
-        <batteryInfo android:layout_gravity="start" android:layout_marginTop="@dimen/op_control_margin_space7" android:fontFamily="@font/oneplus_aod_font" android:layout_marginStart="@dimen/op_keyguard_clock_info_view_content_padding_for_aod_bottom_view" android:textFontWeight="400" />
-        <notificationInfo android:layout_gravity="start" android:layout_marginTop="@dimen/oneplus_contorl_layout_margin_bottom2" android:fontFamily="@font/oneplus_aod_font" android:layout_marginStart="@dimen/op_keyguard_clock_info_view_content_padding_for_aod_bottom_view" android:textFontWeight="400" />
-        <ownerInfo android:layout_gravity="start" android:layout_marginTop="@dimen/oneplus_contorl_layout_margin_bottom2" android:fontFamily="@font/oneplus_aod_font" android:layout_marginStart="@dimen/op_keyguard_clock_info_view_content_padding_for_aod_bottom_view" android:textFontWeight="400" />
+        <batteryInfo android:layout_gravity="start" android:layout_marginTop="@dimen/op_control_margin_space7" android:layout_marginStart="@dimen/op_keyguard_clock_info_view_content_padding_for_aod_bottom_view" />
+        <notificationInfo android:layout_gravity="start" android:layout_marginTop="@dimen/oneplus_contorl_layout_margin_bottom2" android:layout_marginStart="@dimen/op_keyguard_clock_info_view_content_padding_for_aod_bottom_view" />
+        <ownerInfo android:layout_gravity="start" android:layout_marginTop="@dimen/oneplus_contorl_layout_margin_bottom2" android:layout_marginStart="@dimen/op_keyguard_clock_info_view_content_padding_for_aod_bottom_view" />
     </systemInfoSettings>
 </AodClockStyle>

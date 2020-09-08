@@ -78,16 +78,6 @@
     .end annotation
 .end field
 
-.field private final mediaDataManagerProvider:Ljavax/inject/Provider;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljavax/inject/Provider<",
-            "Lcom/android/systemui/media/MediaDataManager;",
-            ">;"
-        }
-    .end annotation
-.end field
-
 .field private final mediaHostStatesManagerProvider:Ljavax/inject/Provider;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -102,7 +92,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljavax/inject/Provider<",
-            "Lcom/android/systemui/media/MediaDataCombineLatest;",
+            "Lcom/android/systemui/media/MediaDataFilter;",
             ">;"
         }
     .end annotation
@@ -120,7 +110,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
+.method public constructor <init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -144,13 +134,10 @@
             "Lcom/android/systemui/util/concurrency/DelayableExecutor;",
             ">;",
             "Ljavax/inject/Provider<",
-            "Lcom/android/systemui/media/MediaDataCombineLatest;",
+            "Lcom/android/systemui/media/MediaDataFilter;",
             ">;",
             "Ljavax/inject/Provider<",
             "Lcom/android/systemui/statusbar/policy/ConfigurationController;",
-            ">;",
-            "Ljavax/inject/Provider<",
-            "Lcom/android/systemui/media/MediaDataManager;",
             ">;",
             "Ljavax/inject/Provider<",
             "Lcom/android/systemui/plugins/FalsingManager;",
@@ -176,15 +163,13 @@
 
     iput-object p8, p0, Lcom/android/systemui/media/MediaCarouselController_Factory;->configurationControllerProvider:Ljavax/inject/Provider;
 
-    iput-object p9, p0, Lcom/android/systemui/media/MediaCarouselController_Factory;->mediaDataManagerProvider:Ljavax/inject/Provider;
-
-    iput-object p10, p0, Lcom/android/systemui/media/MediaCarouselController_Factory;->falsingManagerProvider:Ljavax/inject/Provider;
+    iput-object p9, p0, Lcom/android/systemui/media/MediaCarouselController_Factory;->falsingManagerProvider:Ljavax/inject/Provider;
 
     return-void
 .end method
 
-.method public static create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/media/MediaCarouselController_Factory;
-    .locals 12
+.method public static create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/media/MediaCarouselController_Factory;
+    .locals 11
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -207,13 +192,10 @@
             "Lcom/android/systemui/util/concurrency/DelayableExecutor;",
             ">;",
             "Ljavax/inject/Provider<",
-            "Lcom/android/systemui/media/MediaDataCombineLatest;",
+            "Lcom/android/systemui/media/MediaDataFilter;",
             ">;",
             "Ljavax/inject/Provider<",
             "Lcom/android/systemui/statusbar/policy/ConfigurationController;",
-            ">;",
-            "Ljavax/inject/Provider<",
-            "Lcom/android/systemui/media/MediaDataManager;",
             ">;",
             "Ljavax/inject/Provider<",
             "Lcom/android/systemui/plugins/FalsingManager;",
@@ -222,9 +204,9 @@
         }
     .end annotation
 
-    new-instance v11, Lcom/android/systemui/media/MediaCarouselController_Factory;
+    new-instance v10, Lcom/android/systemui/media/MediaCarouselController_Factory;
 
-    move-object v0, v11
+    move-object v0, v10
 
     move-object v1, p0
 
@@ -234,7 +216,7 @@
 
     move-object v4, p3
 
-    move-object/from16 v5, p4
+    move-object v5, p4
 
     move-object/from16 v6, p5
 
@@ -244,15 +226,13 @@
 
     move-object/from16 v9, p8
 
-    move-object/from16 v10, p9
+    invoke-direct/range {v0 .. v9}, Lcom/android/systemui/media/MediaCarouselController_Factory;-><init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
 
-    invoke-direct/range {v0 .. v10}, Lcom/android/systemui/media/MediaCarouselController_Factory;-><init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
-
-    return-object v11
+    return-object v10
 .end method
 
-.method public static provideInstance(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/media/MediaCarouselController;
-    .locals 12
+.method public static provideInstance(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/media/MediaCarouselController;
+    .locals 11
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -275,13 +255,10 @@
             "Lcom/android/systemui/util/concurrency/DelayableExecutor;",
             ">;",
             "Ljavax/inject/Provider<",
-            "Lcom/android/systemui/media/MediaDataCombineLatest;",
+            "Lcom/android/systemui/media/MediaDataFilter;",
             ">;",
             "Ljavax/inject/Provider<",
             "Lcom/android/systemui/statusbar/policy/ConfigurationController;",
-            ">;",
-            "Ljavax/inject/Provider<",
-            "Lcom/android/systemui/media/MediaDataManager;",
             ">;",
             "Ljavax/inject/Provider<",
             "Lcom/android/systemui/plugins/FalsingManager;",
@@ -290,7 +267,7 @@
         }
     .end annotation
 
-    new-instance v11, Lcom/android/systemui/media/MediaCarouselController;
+    new-instance v10, Lcom/android/systemui/media/MediaCarouselController;
 
     invoke-interface {p0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
@@ -316,7 +293,7 @@
 
     check-cast v4, Lcom/android/systemui/media/MediaHostStatesManager;
 
-    invoke-interface/range {p4 .. p4}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {p4}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -338,7 +315,7 @@
 
     move-object v7, v0
 
-    check-cast v7, Lcom/android/systemui/media/MediaDataCombineLatest;
+    check-cast v7, Lcom/android/systemui/media/MediaDataFilter;
 
     invoke-interface/range {p7 .. p7}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
@@ -354,29 +331,21 @@
 
     move-object v9, v0
 
-    check-cast v9, Lcom/android/systemui/media/MediaDataManager;
+    check-cast v9, Lcom/android/systemui/plugins/FalsingManager;
 
-    invoke-interface/range {p9 .. p9}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v10, v0
-
-    check-cast v10, Lcom/android/systemui/plugins/FalsingManager;
-
-    move-object v0, v11
+    move-object v0, v10
 
     move-object v2, p1
 
-    invoke-direct/range {v0 .. v10}, Lcom/android/systemui/media/MediaCarouselController;-><init>(Landroid/content/Context;Ljavax/inject/Provider;Lcom/android/systemui/statusbar/notification/VisualStabilityManager;Lcom/android/systemui/media/MediaHostStatesManager;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/util/concurrency/DelayableExecutor;Lcom/android/systemui/media/MediaDataCombineLatest;Lcom/android/systemui/statusbar/policy/ConfigurationController;Lcom/android/systemui/media/MediaDataManager;Lcom/android/systemui/plugins/FalsingManager;)V
+    invoke-direct/range {v0 .. v9}, Lcom/android/systemui/media/MediaCarouselController;-><init>(Landroid/content/Context;Ljavax/inject/Provider;Lcom/android/systemui/statusbar/notification/VisualStabilityManager;Lcom/android/systemui/media/MediaHostStatesManager;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/util/concurrency/DelayableExecutor;Lcom/android/systemui/media/MediaDataFilter;Lcom/android/systemui/statusbar/policy/ConfigurationController;Lcom/android/systemui/plugins/FalsingManager;)V
 
-    return-object v11
+    return-object v10
 .end method
 
 
 # virtual methods
 .method public get()Lcom/android/systemui/media/MediaCarouselController;
-    .locals 10
+    .locals 9
 
     iget-object v0, p0, Lcom/android/systemui/media/MediaCarouselController_Factory;->contextProvider:Ljavax/inject/Provider;
 
@@ -394,11 +363,9 @@
 
     iget-object v7, p0, Lcom/android/systemui/media/MediaCarouselController_Factory;->configurationControllerProvider:Ljavax/inject/Provider;
 
-    iget-object v8, p0, Lcom/android/systemui/media/MediaCarouselController_Factory;->mediaDataManagerProvider:Ljavax/inject/Provider;
+    iget-object v8, p0, Lcom/android/systemui/media/MediaCarouselController_Factory;->falsingManagerProvider:Ljavax/inject/Provider;
 
-    iget-object v9, p0, Lcom/android/systemui/media/MediaCarouselController_Factory;->falsingManagerProvider:Ljavax/inject/Provider;
-
-    invoke-static/range {v0 .. v9}, Lcom/android/systemui/media/MediaCarouselController_Factory;->provideInstance(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/media/MediaCarouselController;
+    invoke-static/range {v0 .. v8}, Lcom/android/systemui/media/MediaCarouselController_Factory;->provideInstance(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/media/MediaCarouselController;
 
     move-result-object p0
 

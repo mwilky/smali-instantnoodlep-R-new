@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;-><init>(Landroid/content/Context;Landroid/os/Handler;Landroid/os/Handler;)V
+    value = Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->initRegexs()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
