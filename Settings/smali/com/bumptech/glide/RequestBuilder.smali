@@ -1288,6 +1288,33 @@
     .end packed-switch
 .end method
 
+.method public load(Landroid/graphics/drawable/Drawable;)Lcom/bumptech/glide/RequestBuilder;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/graphics/drawable/Drawable;",
+            ")",
+            "Lcom/bumptech/glide/RequestBuilder<",
+            "TTranscodeType;>;"
+        }
+    .end annotation
+
+    invoke-direct {p0, p1}, Lcom/bumptech/glide/RequestBuilder;->loadGeneric(Ljava/lang/Object;)Lcom/bumptech/glide/RequestBuilder;
+
+    sget-object p1, Lcom/bumptech/glide/load/engine/DiskCacheStrategy;->NONE:Lcom/bumptech/glide/load/engine/DiskCacheStrategy;
+
+    invoke-static {p1}, Lcom/bumptech/glide/request/RequestOptions;->diskCacheStrategyOf(Lcom/bumptech/glide/load/engine/DiskCacheStrategy;)Lcom/bumptech/glide/request/RequestOptions;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lcom/bumptech/glide/RequestBuilder;->apply(Lcom/bumptech/glide/request/BaseRequestOptions;)Lcom/bumptech/glide/RequestBuilder;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method public load(Ljava/lang/Object;)Lcom/bumptech/glide/RequestBuilder;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;

@@ -51,7 +51,7 @@
 
 .field private mCurrentCredential:Lcom/android/internal/widget/LockscreenCredential;
 
-.field private mDefaultHeaderColorList:Landroid/content/res/ColorStateList;
+.field protected mDefaultHeaderColorList:Landroid/content/res/ColorStateList;
 
 .field protected mFooterText:Landroid/widget/TextView;
 
@@ -169,15 +169,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/password/ChooseLockPattern$ChooseLockPatternFragment;)Landroid/content/res/ColorStateList;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/settings/password/ChooseLockPattern$ChooseLockPatternFragment;->mDefaultHeaderColorList:Landroid/content/res/ColorStateList;
-
-    return-object p0
-.end method
-
-.method static synthetic access$300(Lcom/android/settings/password/ChooseLockPattern$ChooseLockPatternFragment;)Lcom/google/android/setupcompat/template/FooterButton;
+.method static synthetic access$200(Lcom/android/settings/password/ChooseLockPattern$ChooseLockPatternFragment;)Lcom/google/android/setupcompat/template/FooterButton;
     .locals 0
 
     iget-object p0, p0, Lcom/android/settings/password/ChooseLockPattern$ChooseLockPatternFragment;->mNextButton:Lcom/google/android/setupcompat/template/FooterButton;
@@ -185,7 +177,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/password/ChooseLockPattern$ChooseLockPatternFragment;)Landroid/widget/ScrollView;
+.method static synthetic access$300(Lcom/android/settings/password/ChooseLockPattern$ChooseLockPatternFragment;)Landroid/widget/ScrollView;
     .locals 0
 
     iget-object p0, p0, Lcom/android/settings/password/ChooseLockPattern$ChooseLockPatternFragment;->mTitleHeaderScrollView:Landroid/widget/ScrollView;

@@ -232,7 +232,7 @@ To switch between features, swipe up with three fingers and hold."</string>
     <string name="accessibility_vibration_intensity_off">Off</string>
     <string name="accessibility_vibration_settings_title">Vibration and haptic strength</string>
     <string name="accessibility_vibration_summary">Ring %1$s, notification %2$s, touch %3$s</string>
-    <string name="accessibility_vibration_summary_high">Ring &amp; notification set to high</string>
+    <string name="accessibility_vibration_summary_high">Ring and notification set to high</string>
     <string name="accessibility_vibration_summary_low">Ring &amp; notification set to low</string>
     <string name="accessibility_vibration_summary_medium">Ring &amp; notification set to medium</string>
     <string name="accessibility_vibration_summary_off">Ring &amp; notification set to off</string>
@@ -728,7 +728,7 @@ Apps:
     <string name="battery_used_by">%1$s used by %2$s</string>
     <string name="battery_used_for">Used for ^1</string>
     <string name="bearer">Bearer</string>
-    <string name="billing_cycle">Data warning &amp; limit</string>
+    <string name="billing_cycle">Data warning and limit</string>
     <string name="billing_cycle_fragment_summary">Monthly on day %1$s</string>
     <string name="billing_cycle_less_than_one_day_left">Less than one day left</string>
     <string name="billing_cycle_none_left">No time remaining</string>
@@ -1992,8 +1992,8 @@ When you turn on automatic backup, device and app data is periodically saved rem
     <string name="header_category_wireless_networks">Wireless &amp; networks</string>
     <string name="header_data_and_synchronization">Data &amp; synchronisation</string>
     <string name="heavy_weight_stop_description">"This app can't be stopped safely. If you stop it, you may lose some of your current work."</string>
-    <string name="help_feedback_label">Help &amp; feedback</string>
-    <string name="help_label">Help &amp; feedback</string>
+    <string name="help_feedback_label">Help and feedback</string>
+    <string name="help_label">Help and feedback</string>
     <string name="hide_extra_apps">Show app usage</string>
     <string name="hide_silent_icons_summary">"Icons from gentle notifications aren't shown in the status bar"</string>
     <string name="hide_silent_icons_title">Hide icons from gentle notifications</string>
@@ -2173,6 +2173,7 @@ You can change this later from Settings > Apps and notifications."</string>
     <string name="keywords_lock_screen_notif">lock screen notification, notifications</string>
     <string name="keywords_lockscreen">slide to unlock, password, pattern, PIN</string>
     <string name="keywords_lockscreen_bypass">Lock screen, Lockscreen, Skip, Bypass</string>
+    <string name="keywords_media_controls">media</string>
     <string name="keywords_model_and_hardware">serial number, hardware version</string>
     <string name="keywords_more_mobile_networks">mobile, mobile operator, wireless, data, 4g,3g, 2g, lte</string>
     <string name="keywords_network_reset">reset, restore, factory</string>
@@ -2549,6 +2550,12 @@ There are other users present on this device.
     <string name="master_clear_title">Delete all data (factory reset)</string>
     <string name="maximum_memory_use">Maximum memory use</string>
     <string name="media_category">Media</string>
+    <string name="media_controls_hide_player">Hide player</string>
+    <string name="media_controls_no_players">No players available</string>
+    <string name="media_controls_resume_description">The player allows you to resume a session from the expanded Quick Settings panel.</string>
+    <string name="media_controls_show_player">Show player</string>
+    <string name="media_controls_summary">Hide player when the media session has ended</string>
+    <string name="media_controls_title">Media</string>
     <string name="media_out_summary_ongoing_call_state">Unavailable during calls</string>
     <string name="media_output_default_summary">This device</string>
     <string name="media_output_disconnected_status">%1$s (disconnected)</string>
@@ -2728,7 +2735,7 @@ Switching to %1$s won't cancel your %2$s service."</string>
     <string name="network_dashboard_summary_data_usage">data usage</string>
     <string name="network_dashboard_summary_hotspot">hotspot</string>
     <string name="network_dashboard_summary_mobile">mobile</string>
-    <string name="network_dashboard_title">Network and Internet</string>
+    <string name="network_dashboard_title">Network and internet</string>
     <string name="network_disconnected">Disconnected</string>
     <string name="network_lte">LTE (recommended)</string>
     <string name="network_operator_category">Network</string>
@@ -2806,7 +2813,7 @@ This replaces %2$s as your default payment app."</string>
     <string name="night_display_text">Night Light tints your screen amber. This makes it easier to look at your screen or read in dim light, and may help you fall asleep more easily.</string>
     <string name="night_display_title">Night Light</string>
     <string name="no">No</string>
-    <string name="no_5g_in_dsds_text">When using two SIMs, this phone will be limited to 4G. <annotation id="url">Learn more</annotation>.</string>
+    <string name="no_5g_in_dsds_text">When using two SIMs, this phone will be limited to 4G. <annotation id="url">Learn more</annotation></string>
     <string name="no_application">Nothing</string>
     <string name="no_applications">No apps.</string>
     <string name="no_battery_summary">No battery use since last full charge</string>
@@ -2923,6 +2930,7 @@ This will also give the app the ability to turn Do Not Disturb on or off and cha
     <string name="notification_priority_title">Priority</string>
     <string name="notification_pulse_title">Blink light</string>
     <string name="notification_ringtone_title">Default notification sound</string>
+    <string name="notification_screen_summary">Notification history, bubbles, recently sent</string>
     <string name="notification_settings_work_profile">Notification access is not available for apps in the work profile.</string>
     <string name="notification_show_lights_title">Blink light</string>
     <string name="notification_silence_title">Silent</string>
@@ -3030,6 +3038,8 @@ This will also give the app the ability to turn Do Not Disturb on or off and cha
     <string name="platform_compat_dashboard_title">App compatibility changes</string>
     <string name="platform_compat_default_disabled_title">Default disabled changes</string>
     <string name="platform_compat_default_enabled_title">Default enabled changes</string>
+    <string name="platform_compat_dialog_text_no_apps">App compatibility changes can only be modified for debuggable apps. Install a debuggable app and try again.</string>
+    <string name="platform_compat_dialog_title_no_apps">No apps available</string>
     <string name="please_select_phase2">Phase 2 authentication</string>
     <string name="pointer_location">Pointer location</string>
     <string name="pointer_location_summary">Screen overlay showing current touch data</string>
@@ -3294,7 +3304,7 @@ Restart your device and try again."</string>
     <string name="reset_esim_title">Erase downloaded SIMs</string>
     <string name="reset_network_button_text">Reset settings</string>
     <string name="reset_network_complete_toast">Network settings have been reset</string>
-    <string name="reset_network_confirm_title">Reset?</string>
+    <string name="reset_network_confirm_title">Want to reset?</string>
     <string name="reset_network_desc">"This will reset all network settings, including:
 
 "<li>Wi‑Fi</li>"
@@ -3303,7 +3313,7 @@ Restart your device and try again."</string>
     <string name="reset_network_final_button_text">Reset settings</string>
     <string name="reset_network_final_desc">Reset all network settings? You can’t undo this action.</string>
     <string name="reset_network_final_desc_esim">Reset all network settings and delete downloaded SIMs? You can’t undo this action.</string>
-    <string name="reset_network_title">Reset Wi-Fi, mobile &amp; Bluetooth</string>
+    <string name="reset_network_title">Reset Wi-Fi, mobile and Bluetooth</string>
     <string name="reset_shortcut_manager_throttling">Reset ShortcutManager rate-limiting</string>
     <string name="reset_shortcut_manager_throttling_complete">ShortcutManager rate-limiting has been reset</string>
     <string name="restore_default_apn">Restoring default APN settings.</string>
@@ -3935,8 +3945,8 @@ This ^1 is formatted to work on this device only. It won’t work on any others.
     <string name="storage_menu_unmount">Eject</string>
     <string name="storage_mount_failure">"Couldn't mount %1$s"</string>
     <string name="storage_mount_success">%1$s is mounted</string>
-    <string name="storage_movies_tv">Movie &amp; TV apps</string>
-    <string name="storage_music_audio">Music &amp; audio</string>
+    <string name="storage_movies_tv">Movie and TV apps</string>
+    <string name="storage_music_audio">Music and audio</string>
     <string name="storage_other_apps">Other apps</string>
     <string name="storage_other_users">Other users</string>
     <string name="storage_percent_full">used</string>

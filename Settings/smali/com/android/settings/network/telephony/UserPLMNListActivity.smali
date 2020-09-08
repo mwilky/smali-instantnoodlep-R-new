@@ -1061,7 +1061,7 @@
 
     :cond_2
     :goto_2
-    const-string p1, "update EFuplmn Start."
+    const-string/jumbo p1, "update EFuplmn Start."
 
     invoke-static {p1}, Lcom/android/settings/network/telephony/UserPLMNListActivity;->log(Ljava/lang/String;)V
 

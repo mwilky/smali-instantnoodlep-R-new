@@ -34,6 +34,8 @@
     .end annotation
 .end field
 
+.field private mToolBar:Landroidx/appcompat/widget/Toolbar;
+
 .field mToolbarMenuPrepared:Z
 
 .field mWindowCallback:Landroid/view/Window$Callback;
@@ -62,6 +64,8 @@
     invoke-direct {v0, p0}, Landroidx/appcompat/app/ToolbarActionBar$2;-><init>(Landroidx/appcompat/app/ToolbarActionBar;)V
 
     iput-object v0, p0, Landroidx/appcompat/app/ToolbarActionBar;->mMenuClicker:Landroidx/appcompat/widget/Toolbar$OnMenuItemClickListener;
+
+    iput-object p1, p0, Landroidx/appcompat/app/ToolbarActionBar;->mToolBar:Landroidx/appcompat/widget/Toolbar;
 
     new-instance v0, Landroidx/appcompat/widget/ToolbarWidgetWrapper;
 
@@ -225,6 +229,14 @@
     invoke-interface {p0}, Landroidx/appcompat/widget/DecorToolbar;->getContext()Landroid/content/Context;
 
     move-result-object p0
+
+    return-object p0
+.end method
+
+.method public getToolBar()Landroidx/appcompat/widget/Toolbar;
+    .locals 0
+
+    iget-object p0, p0, Landroidx/appcompat/app/ToolbarActionBar;->mToolBar:Landroidx/appcompat/widget/Toolbar;
 
     return-object p0
 .end method

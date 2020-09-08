@@ -1706,13 +1706,13 @@
 
     iget-object v2, p0, Lcom/android/settings/deviceinfo/simstatus/SimStatusDialogController;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
-    invoke-virtual {v2}, Landroid/telephony/TelephonyManager;->getDataNetworkType()I
+    invoke-virtual {v2, v0}, Landroid/telephony/TelephonyManager;->getDataNetworkType(I)I
 
     move-result v2
 
     iget-object v3, p0, Lcom/android/settings/deviceinfo/simstatus/SimStatusDialogController;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
-    invoke-virtual {v3}, Landroid/telephony/TelephonyManager;->getVoiceNetworkType()I
+    invoke-virtual {v3, v0}, Landroid/telephony/TelephonyManager;->getVoiceNetworkType(I)I
 
     move-result v3
 
@@ -1734,7 +1734,7 @@
 
     if-eqz v2, :cond_2
 
-    invoke-static {v2}, Lcom/android/settings/deviceinfo/simstatus/SimStatusDialogController;->getNetworkTypeName(I)Ljava/lang/String;
+    invoke-static {v2}, Landroid/telephony/TelephonyManager;->getNetworkTypeName(I)Ljava/lang/String;
 
     move-result-object v6
 
@@ -1746,7 +1746,7 @@
     :goto_1
     if-eqz v3, :cond_3
 
-    invoke-static {v3}, Lcom/android/settings/deviceinfo/simstatus/SimStatusDialogController;->getNetworkTypeName(I)Ljava/lang/String;
+    invoke-static {v3}, Landroid/telephony/TelephonyManager;->getNetworkTypeName(I)Ljava/lang/String;
 
     move-result-object v5
 

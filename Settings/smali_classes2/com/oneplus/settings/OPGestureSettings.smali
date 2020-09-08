@@ -7,18 +7,10 @@
 .implements Landroidx/preference/Preference$OnPreferenceClickListener;
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/oneplus/settings/OPGestureSettings$OPGestureSearchIndexProvider;
-    }
-.end annotation
-
-
 # static fields
 .field private static final OEM_ACC_SENSOR_ROTATE_SILENT_URI:Landroid/net/Uri;
 
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settingslib/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/BaseSearchIndexProvider;
 
 
 # instance fields
@@ -93,11 +85,11 @@
 
     sput-object v0, Lcom/oneplus/settings/OPGestureSettings;->OEM_ACC_SENSOR_ROTATE_SILENT_URI:Landroid/net/Uri;
 
-    new-instance v0, Lcom/oneplus/settings/OPGestureSettings$OPGestureSearchIndexProvider;
+    new-instance v0, Lcom/oneplus/settings/OPGestureSettings$2;
 
-    invoke-direct {v0}, Lcom/oneplus/settings/OPGestureSettings$OPGestureSearchIndexProvider;-><init>()V
+    invoke-direct {v0}, Lcom/oneplus/settings/OPGestureSettings$2;-><init>()V
 
-    sput-object v0, Lcom/oneplus/settings/OPGestureSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settingslib/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/oneplus/settings/OPGestureSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/BaseSearchIndexProvider;
 
     return-void
 .end method
@@ -1500,7 +1492,7 @@
 .end method
 
 .method public onResume()V
-    .locals 4
+    .locals 7
 
     invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
 
@@ -1528,10 +1520,15 @@
 
     if-ne v0, v3, :cond_0
 
-    move v2, v3
+    move v0, v3
+
+    goto :goto_0
 
     :cond_0
-    invoke-virtual {v1, v2}, Lcom/android/settings/widget/MasterSwitchPreference;->setChecked(Z)V
+    move v0, v2
+
+    :goto_0
+    invoke-virtual {v1, v0}, Lcom/android/settings/widget/MasterSwitchPreference;->setChecked(Z)V
 
     invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1541,13 +1538,37 @@
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
-    move-result-object v1
+    move-result-object v4
 
-    iget-object p0, p0, Lcom/oneplus/settings/OPGestureSettings;->mContentObserver:Landroid/database/ContentObserver;
+    iget-object v5, p0, Lcom/oneplus/settings/OPGestureSettings;->mContentObserver:Landroid/database/ContentObserver;
 
-    const/4 v2, -0x1
+    const/4 v6, -0x1
 
-    invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
+    invoke-virtual {v0, v4, v3, v5, v6}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
+
+    iget-object v0, p0, Lcom/oneplus/settings/OPGestureSettings;->mRotationSilent:Landroidx/preference/SwitchPreference;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    invoke-static {p0, v1, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result p0
+
+    if-nez p0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    move v2, v3
+
+    :goto_1
+    invoke-virtual {v0, v2}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
 
     return-void
 .end method

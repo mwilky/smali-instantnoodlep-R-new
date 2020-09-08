@@ -225,11 +225,11 @@
         <item quantity="one">มี %d แอปที่ใช้งานอยู่</item>
     </plurals>
     <plurals name="oneplus_applock_wrong_pattern_warning">
-        <item quantity="other">คุณยังเหลือโอกาสอีก %1$d ครั้ง</item>
+        <item quantity="other">คุณยังมีโอกาสอีก %1$d ครั้ง</item>
         <item quantity="one">You still have %1$d chance</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
-        <item quantity="other">ลองใหม่ในอีก %d วินาที</item>
+        <item quantity="other">ลองอีกครั้งใน %d วินาที</item>
         <item quantity="one">Try again in %d second.</item>
     </plurals>
     <plurals name="oneplus_zen_mode_duration_summary_time_hours">
@@ -237,7 +237,7 @@
         <item quantity="one">1 hour (unless turned on automatically)</item>
     </plurals>
     <plurals name="op_location_settings_summary_location_on">
-        <item quantity="other">On - %1$d apps have access to location</item>
+        <item quantity="other">เปิด - แอป %1$d สามารถเข้าถึงตำแหน่งได้</item>
         <item quantity="one">On - %1$d app has access to location</item>
     </plurals>
     <plurals name="permission_bar_chart_label">
@@ -365,8 +365,8 @@
         <item quantity="one">รหัส PIN ของซิมไม่ถูกต้อง คุณพยายามได้อีก %d ครั้งก่อนที่จะต้องติดต่อผู้ให้บริการเพื่อปลดล็อกอุปกรณ์</item>
     </plurals>
     <plurals name="zen_mode_bypassing_apps_subtext">
-        <item quantity="other">%s รบกวนได้</item>
-        <item quantity="one">%s รบกวนได้</item>
+        <item quantity="other">%sรบกวนได้</item>
+        <item quantity="one">%sรบกวนได้</item>
     </plurals>
     <plurals name="zen_mode_contacts_count">
         <item quantity="other">รายชื่อติดต่อ %d ราย</item>
@@ -381,8 +381,8 @@
         <item quantity="one">1 ชั่วโมง</item>
     </plurals>
     <plurals name="zen_mode_other_sounds_summary">
-        <item quantity="other">%s รบกวนได้</item>
-        <item quantity="one">%s รบกวนได้</item>
+        <item quantity="other">%sรบกวนได้</item>
+        <item quantity="one">%sรบกวนได้</item>
     </plurals>
     <plurals name="zen_mode_settings_summary_on">
         <item quantity="other">ตั้งกำหนดการแล้ว %d รายการ</item>

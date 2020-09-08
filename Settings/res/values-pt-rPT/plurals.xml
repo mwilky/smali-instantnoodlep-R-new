@@ -369,8 +369,8 @@ Para obter mais informações acerca deste certificado, contacte o gestor."</ite
         <item quantity="one">O som de %s pode interromper.</item>
     </plurals>
     <plurals name="zen_mode_settings_summary_on">
-        <item quantity="other">%d horários definidos.</item>
-        <item quantity="one">1 horário definido.</item>
+        <item quantity="other">%d horários definidos</item>
+        <item quantity="one">1 horário definido</item>
     </plurals>
     <plurals name="zen_mode_sound_summary_summary_off_info">
         <item quantity="other">%d horários podem ser ativados automaticamente</item>

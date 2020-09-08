@@ -13,11 +13,13 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
     new-instance v0, Lcom/oneplus/settings/OPThemeSettings$1;
 
-    invoke-direct {v0}, Lcom/oneplus/settings/OPThemeSettings$1;-><init>()V
+    sget v1, Lcom/android/settings/R$xml;->op_theme_settings:I
+
+    invoke-direct {v0, v1}, Lcom/oneplus/settings/OPThemeSettings$1;-><init>(I)V
 
     sput-object v0, Lcom/oneplus/settings/OPThemeSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/BaseSearchIndexProvider;
 

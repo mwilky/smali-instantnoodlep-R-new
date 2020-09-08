@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="about_action_bar_title">ਇਸ ਦੇ ਬਾਰੇ</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">ਪਰਦੇਦਾਰੀ ਨੀਤੀ</string>
+    <string name="about_release_note_title">ਅੱਪਡੇਟ ਲੌਗ:</string>
+    <string name="about_terms_service">ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ</string>
     <string name="access_permissions">ਪਹੁੰਚ ਇਜਾਜ਼ਤਾਂ</string>
     <string name="activate_one_handed_mode">ਤੁਰੰਤ ਪਹੁੰਚ</string>
     <string name="activate_one_handed_mode_description">"ਅਸਥਾਈ ਤੋਰ 'ਤੇ ਤੁਰੰਤ ਪਹੁੰਚ ਚਾਲੂ ਕਰਨ ਲਈ ਸਕਰੀਨ ਦੇ ਹੇਠਲੇ ਹਿੱਸੇ ਵਿੱਚ ਹੇਠਾਂ ਸਵਾਈਪ ਕਰੋ। ਤੁਰੰਤ ਪਹੁੰਚ ਦੇ ਨਾਲ, ਤੁਸੀਂ ਆਪਣੇ ਫੋਨ ਦੀ ਸਕਰੀਨ ਦੇ ਉੱਪਰਲੇ ਹਿੱਸੇ ਵਿੱਚ ਸਮੱਗਰੀ ਹਾਸਿਲ ਕਰੋਗੇ। ਬਾਹਰ ਆਉਣ ਅਤੇ ਪੂਰਨ‑ਸਕਰੀਨ ਵਿੱਚ ਰੀਸਟੋਰ ਕਰਨ ਲਈ ਉੱਪਰ ਸਵਾਈਪ ਕਰੋ।"</string>
@@ -69,23 +74,23 @@
     <string name="app_notification_led_enabled_summary">ਇਸ ਐਪ ਲਈ LED ਸੂਚਨਾਵਾਂ ਦਿਖਾਓ</string>
     <string name="app_notification_led_enabled_title">LED ਸੂਚਨਾਵਾਂ</string>
     <string name="app_notification_no_ongoing_on_keyguard_summary">"ਲੌਕਸਕ੍ਰੀਨ 'ਤੇ ਇਸ ਐਪ ਤੋਂ ਲਗਾਤਾਰ ਸੂਚਨਾਵਾਂ ਕਦੇ ਵੀ ਨਾ ਦਿਖਾਓ"</string>
-    <string name="app_notification_no_ongoing_on_keyguard_title">"ਲੌਕਸਕ੍ਰੀਨ 'ਤੇ ਲਗਾਤਾਰ ਸੂਚਨਾ ਨੂੰ ਅਸਮਰੱਥ ਕਰੋ"</string>
+    <string name="app_notification_no_ongoing_on_keyguard_title">"ਲੌਕਸਕ੍ਰੀਨ 'ਤੇ ਲਗਾਤਾਰ ਅਧਿਸੂਚਨਾ ਨੂੰ ਅਸਮਰੱਥ ਕਰੋ"</string>
     <string name="app_notification_show_on_keyguard_summary">"ਇਸ ਐਪ ਤੋਂ ਸੂਚਨਾਵਾਂ ਲੌਕਸਕ੍ਰੀਨ 'ਤੇ ਦਿਖਾਓ"</string>
     <string name="app_notification_show_on_keyguard_title">"ਲੌਕਸਕ੍ਰੀਨ ਹੋਣ 'ਤੇ ਦਿਖਾਓ"</string>
     <string name="app_ops_last_used_prefix_new">ਪਿਛਲੀ ਵਾਰ ਵਰਤੋਂ ਕੀਤੀ ਗਈ</string>
     <string name="app_ops_never_used_new">ਕਦੇ ਵੀ ਨਹੀਂ ਵਰਤਿਆ ਗਿਆ</string>
     <string name="app_ops_running_new">ਇਸ ਸਮੇਂ ਵਰਤਿਆ ਜਾ ਰਿਹਾ ਹੈ</string>
-    <string name="app_ops_settings_new">ਐਪ ਇਜਾਜ਼ਤਾਂ</string>
-    <string name="app_ops_title_new">ਐਪ ਇਜਾਜ਼ਤਾਂ</string>
+    <string name="app_ops_settings_new">ਐਪ ਇਜਾਜ਼ਤਾਂ</string>
+    <string name="app_ops_title_new">ਐਪ ਇਜਾਜ਼ਤਾਂ</string>
     <string name="app_permissions_warning_message">ਇਜਾਜ਼ਤਾਂ ਨੂੰ ਅਸਮਰੱਥ ਕਰਨਾ ਕਿਸੇ ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਸਹੀ ਢੰਗ ਨਾਲ ਕੰਮ ਕਰਨ ਤੋਂ ਰੋਕ ਸਕਦਾ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਸਾਵਧਾਨੀ ਨਾਲ ਅੱਗੇ ਵਧੋ।</string>
     <string name="app_permissions_warning_title">ਚਿਤਾਵਨੀ</string>
     <string name="automatic">ਸਵੈਚਲਿਤ</string>
     <string name="battery_bar">ਬੈਟਰੀ ਪੱਟੀ</string>
     <string name="battery_circle">ਬੈਟਰੀ ਚੱਕਰ</string>
-    <string name="battery_hidden">ਛੁਪਾਕੇ ਰੱਖੀ ਹੋਈ ਬੈਟਰੀ</string>
+    <string name="battery_hidden">ਛੁਪਾ ਕੇ ਰੱਖੀ ਹੋਈ ਬੈਟਰੀ</string>
     <string name="battery_optization_no_support">ਸਮਰਥਿਤ ਨਹੀਂ ਹੈ</string>
     <string name="battery_percent">ਬੈਟਰੀ ਪ੍ਰਤੀਸ਼ਤ</string>
-    <string name="battery_status_icon_title">ਬੈਟਰੀ ਸ਼ੈਲੀ</string>
+    <string name="battery_status_icon_title">ਬੈਟਰੀ ਦਾ ਸਟਾਈਲ</string>
     <string name="battery_use">ਬੈਟਰੀ</string>
     <string name="bg_optimize_advance_settings">ਉੱਨਤ ਅਨੁਕੂਲਨ</string>
     <string name="bg_optimize_advance_settings_summery">ਬੈਟਰੀ ਦੀ ਖਪਤ ਨੂੰ ਹੋਰ ਘਟਾਉਣ ਲਈ ਐਪਾਂ ਦੀ ਬੈਕਗ੍ਰਾਊਂਡ ਸਰਗਰਮੀ ਨੂੰ ਵਧੇਰੇ ਜੋਰ-ਸ਼ੋਰ ਨਾਲ ਸੀਮਿਤ ਕਰਦਾ ਹੈ। ਕੁਝ ਐਪਾਂ ਨੂੰ ਹੋ ਸਕਦਾ ਹੈ ਮੁੜ ਖੋਲ੍ਹੇ ਜਾਣ ਤੱਕ ਸੂਚਨਾਵਾਂ ਪ੍ਰਾਪਤ ਨਾ ਹੋਣ।</string>
@@ -139,9 +144,9 @@
     <string name="data_usage_less_than_value">0.01 ਤੋਂ ਘੱਟ</string>
     <string name="data_usage_limit_label">"ਸੀਮਾ "</string>
     <string name="data_usage_metered_title">ਨੈੱਟਵਰਕ ਪਾਬੰਦੀਆਂ</string>
-    <string name="data_usage_package_set">ਬਿਲਿੰਗ ਚੱਕਰ</string>
+    <string name="data_usage_package_set">Billing Cycle</string>
     <string name="data_usage_rank_sim">ਸੈਲਿਊਲਰ ਡੇਟਾ ਵਰਤੋਂ</string>
-    <string name="data_usage_rank_wifi">Wi‑Fi ਡੇਟਾ ਵਰਤੋਂ</string>
+    <string name="data_usage_rank_wifi">Wi-Fi ਡੇਟਾ ਵਰਤੋਂ</string>
     <string name="data_usage_rank_wlan">ਸੈਲਿਊਲਰ ਡੇਟਾ ਵਰਤੋਂ</string>
     <string name="data_usage_summary_title">ਡੇਟਾ ਵਰਤੋਂ</string>
     <string name="data_usage_tab_mobile">ਸੈਲਿਊਲਰ</string>
@@ -170,7 +175,7 @@
     <string name="display_summary_off">ਅਨੁਸਾਰੀ ਚਮਕ ਬੰਦ ਹੈ</string>
     <string name="display_summary_on">ਅਨੁਸਾਰੀ ਚਮਕ ਚਾਲੂ ਹੈ</string>
     <string name="doze_summary">"ਸੂਚਨਾਵਾਂ ਪ੍ਰਾਪਤ ਹੋਣ 'ਤੇ ਡਿਸਪਲੇ ਦਾ ਕਿਰਿਆਸ਼ੀਲ ਹੋਣਾ"</string>
-    <string name="doze_title">ਐਂਬਿਐਂਟ ਡਿਸਪਲੇ</string>
+    <string name="doze_title">ਵਿਆਪਕ ਡਿਸਪਲੇਅ</string>
     <string name="earphone_function_control_click_left">ਖੱਬੇ ਈਅਰਬੱਡ ਉੱਤੇ ਡਬਲ-ਕਲਿੱਕ ਕਰੋ</string>
     <string name="earphone_function_control_click_right">ਸੱਜੇ ਈਅਰਬੱਡ ਉੱਤੇ ਡਬਲ-ਕਲਿੱਕ ਕਰੋ</string>
     <string name="earphone_function_control_last_song">ਪਿਛਲਾ ਟ੍ਰੈਕ</string>
@@ -235,7 +240,7 @@
     <string name="gallery_application_title">ਗੈਲਰੀ ਐਪ</string>
     <string name="generic_error_dlg_text">ਐਪ ਨੂੰ ਅਣ-ਸਥਾਪਿਤ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ।</string>
     <string name="generic_error_dlg_title">ਤਰੁੱਟੀ</string>
-    <string name="gestures_settings">ਇਸ਼ਾਰੇ</string>
+    <string name="gestures_settings">ਸੰਕੇਤ</string>
     <string name="ghzonly_2.4">ਸਿਰਫ਼ 2.4 GHz</string>
     <string name="ghzonly_5">ਸਿਰਫ਼ 5 GHz</string>
     <string name="hardware_keys_action_assist">ਖੋਜ ਸਹਾਇਕ</string>
@@ -262,10 +267,10 @@
 
 ਜੇ ਤੁਸੀਂ ਮੋਬਾਈਲ ਡੇਟਾ ਨੂੰ ਚਾਲੂ ਕਰਦੇ ਹੋ, ਤਾਂ ਤੁਹਾਡੇ ਕੈਰੀਅਰ ਵੱਲੋਂ ਡੇਟਾ ਵਰਤੋਂ ਲਈ ਤੁਹਾਡੇ 'ਤੇ ਖਰਚਾ ਲਿਆ ਜਾ ਸਕਦਾ ਹੈ।"</string>
     <string name="hint_traffic_is_running_out">ਮਹੀਨਾਵਾਰ ਡੇਟਾ ਵਰਤੋਂ ਸੀਮਾ ਪਾਰ ਹੋ ਗਈ ਹੈ। ਕੀ ਤੁਸੀਂ ਮੋਬਾਈਲ ਡੇਟਾ ਨੂੰ ਅਸਮਰੱਥ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
-    <string name="hotspot_tip_message" formatted="false">"ਮੋਬਾਈਲ ਹੌਟਸਪੌਟ ਤੁਹਾਡੇ ਮੋਬਾਈਲ ਡੇਟਾ ਨੂੰ ਦੂਜੇ Wi-Fi ਸਮਰੱਥ ਡਿਵਾਈਸਾਂ ਨਾਲ ਸਾਂਝਾ ਕਰਦਾ ਹੈ। ਆਪਣੇ ਮੋਬਾਈਲ ਹੌਟਸਪੌਟ ਨੂੰ ਕਨੈਕਟ ਕਰਨ ਲਈ: \u0009
- 1: ਦੂਜੇ ਡਿਵਾਈਸ 'ਤੇ Wi-Fi ਚਾਲੂ ਕਰੋ।
- 2: ਉਪਲਬਧ Wi-Fi ਨੈੱਟਵਰਕਾਂ ਦੀ ਸੂਚੀ 'ਚ %s ਨੂੰ ਚੁਣੋ।
- 3: ਜੇਕਰ ਪਾਸਵਰਡ ਲੋੜੀਂਦਾ ਹੈ, ਤਾਂ ਬੈਟਰੀ ਨੂੰ ਸੁਰੱਖਿਅਤ ਰੱਖਣ ਲਈ %s ਦਾਖਲ ਕਰੋ, ਮੋਬਾਈਲ ਹੌਟਸਪੌਟ ਦੀ ਵਰਤੋਂ ਕਰਦੇ ਸਮੇਂ ਆਪਣੇ ਫ਼ੋਨ ਨੂੰ ਚਾਰਜ 'ਤੇ ਲਗਾਕੇ ਰੱਖੋ। "</string>
+    <string name="hotspot_tip_message" formatted="false">"ਮੋਬਾਇਲ ਹੋਟਸਪੋਟ ਤੁਹਾਡੇ ਮੋਬਾਇਲ ਡਾਟਾ ਨੂੰ ਹੋਰ Wi-Fi ਯੋਗ ਯੰਤਰਾਂ ਨਾਲ ਸਾਂਝਾ ਕਰਦਾ ਹੈ। ਆਪਣੇ ਮੋਬਾਇਲ ਹੋਟਸਪੋਟ ਨਾਲ ਜੋੜਣ ਲਈ: \u0009 
+ 1: ਦੂਸਰੇ ਯੰਤਰਾਂ ਉੱਤੇ Wi-Fi ਚਾਲੂ ਕਰੋ।
+ 2: ਉਪਲਬਧ Wi-Fi ਨੈੱਟਵਰਕਾਂ ਵਿੱਚੋਂ %s ਚੁਣੋ। 
+ 3: ਜੇਕਰ ਪਾਸਵਰਡ ਦੀ ਲੋੜ ਹੈ, %s ਭਰੋ ਬੈਟਰੀ ਬਚਾਉਣ ਲਈ, ਜਦੋਂ ਮੋਬਾਇਲ ਹੋਟਸਪਾਟ ਵਰਤ ਰਹੇ ਹੋਵੋ ਆਪਣੇ ਫੋਨ ਨੂੰ ਪਲੱਗ ਨਾਲ ਲਗਾਓ। "</string>
     <string name="hotspot_tip_title">ਮੋਬਾਈਲ ਹੌਟਸਪੌਟ</string>
     <string name="icon_attributions">ਆਈਕਨ ਪੈਕ</string>
     <string name="keyguard_wallpaper_settings_title">ਲੌਕ ਸਕ੍ਰੀਨ ਵਾਲਪੇਪਰ</string>
@@ -293,6 +298,7 @@
     <string name="list_saved_fingerprints">ਸਹੇਜੇ ਫਿੰਗਰਪ੍ਰਿੰਟ</string>
     <string name="list_saved_fingerprints_footer">"ਪੰਜ ਤੱਕ ਫਿੰਗਰਪ੍ਰਿੰਟ ਸਹੇਜੇ ਜਾ ਸਕਦੇ ਹਨ। ਨਾਂ ਬਦਲਣ ਜਾਂ ਮਿਟਾਉਣ ਲਈ ਸਹੇਜੇ ਗਏ ਉਪਰੋਕਤ ਫਿੰਗਰਪ੍ਰਿੰਟਾਂ ਵਿੱਚੋਂ ਕਿਸੇ 'ਤੇ ਵੀ ਟੈਪ ਕਰੋ।"</string>
     <string name="load_error">ਲੋਡ ਸਬੰਧੀ ਤਰੁੱਟੀ</string>
+    <string name="loading_text">ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ...</string>
     <string name="location_carrier_location_access">ਕੈਰੀਅਰ ਸਥਾਨ ਤੱਕ ਪਹੁੰਚ</string>
     <string name="location_text">ਸਥਾਨ</string>
     <string name="lockpassword_choose_your_fingerprint_header">ਫਿੰਗਰਪ੍ਰਿੰਟ</string>
@@ -311,7 +317,7 @@
     <string name="mobile_hotspot_airplane_off_error">ਹੌਟਸਪੌਟ ਚਾਲੂ ਕਰਨ ਲਈ, ਕਿਰਪਾ ਕਰਕੇ ਏਅਰਪਲੇਨ ਮੋਡ ਬੰਦ ਕਰੋ</string>
     <string name="mobile_hotspot_authoration_error">"ਮੋਬਾਈਲ ਹੌਟਸਪੌਟ ਵਰਤਣ ਲਈ, ਤੁਹਾਨੂੰ ਮੋਬਾਈਲ ਹੌਟਸਪੌਟ ਸੇਵਾਵਾਂ ਦਾ ਗਾਹਕ ਬਣਨ ਦੀ ਲੋੜ ਪਵੇਗੀ।
 
-ਮੋਬਾਈਲ ਹੌਟਸਪੌਟ ਦੇ ਗਾਹਕ ਬਣਨ ਲਈ My Verizon 'ਤੇ ਜਾਓ ਜਾਂ ਗਾਹਕ ਸੇਵਾ ਨੂੰ (800) 922–0204 'ਤੇ ਕਾਲ ਕਰੋ।"</string>
+ਮੋਬਾਈਲ ਹੌਟਸਪੌਟ ਦੇ ਗਾਹਕ ਬਣਨ ਲਈ ਮਾਈ verizon 'ਤੇ ਜਾਓ ਜਾਂ ਗਾਹਕ ਸੇਵਾ ਨੂੰ (800) 922–0204 'ਤੇ ਕਾਲ ਕਰੋ।"</string>
     <string name="mobile_hotspot_data_off_error">ਹੌਟਸਪੌਟ ਚਾਲੂ ਕਰਨ ਲਈ, ਕਿਰਪਾ ਕਰਕੇ ਮੋਬਾਈਲ ਡੇਟਾ ਬੰਦ ਕਰੋ</string>
     <string name="multi_app_label_badge">ਸਮਾਨਾਂਤਰ %1$s</string>
     <string name="music_application_title">ਸੰਗੀਤ ਐਪ</string>
@@ -324,7 +330,7 @@
     <string name="not_connected_to_the_verizon_network">Verizon ਨੈੱਟਵਰਕ ਨਾਲ ਕਨੈਕਟ ਨਹੀਂ ਹੈ</string>
     <string name="not_optimize_summery">"ਐਪ ਨੂੰ ਹੁਣ ਬੈਕਗ੍ਰਾਊਂਡ 'ਚ ਬੈਟਰੀ ਦੀ ਵਰਤੋਂ ਕਰਨ ਲਈ ਪ੍ਰਤਿਬੰਧਿਤ ਨਹੀਂ ਕੀਤਾ ਜਾਵੇਗਾ। ਇਸ ਨਾਲ ਬੈਟਰੀ ਵਰਤੋਂ ਵੱਧ ਹੋਵੇਗੀ"</string>
     <string name="not_optimized_apps">ਅਨੁਕੂਲਿਤ ਐਪਾਂ ਨਹੀਂ ਹਨ</string>
-    <string name="notification_for_work_life">ਕਾਰਜ ਅਤੇ ਜੀਵਨ ਮੋਡ ਲਈ ਸੂਚਨਾਵਾਂ</string>
+    <string name="notification_for_work_life">ਕਾਰਜ ਅਤੇ ਜੀਵਨ ਮੋਡ ਲਈ ਨੋਟੀਫਿਕੇਸ਼ਨਾਂ</string>
     <string name="notification_for_work_life_disabled">ਇਸ ਵਿਸ਼ੇਸ਼ਤਾ ਨੂੰ ਸਮਰੱਥ ਕਰਨ ਲਈ ਟੈਪ ਕਰੋ</string>
     <string name="nxp_non_std_card">ਗ਼ੈਰ-ਮਿਆਰੀ NFC ਟੈਗ ਸਮਰਥਨ</string>
     <string name="nxp_non_std_card_summary">ਕੁਝ ਗ਼ੈਰ-ਮਿਆਰੀ NFC ਟੈਗਾਂ ਨੂੰ ਪੜ੍ਹਨ ਲਈ ਸਮਰਥਨ</string>
@@ -337,13 +343,13 @@
     <string name="oneplus_add_bluetooth_car_kit_summary">ਵਾਹਨ ਬਲੂਟੁੱਥ ਆਪਣੇ-ਆਪ ਤੁਹਾਡੀਆਂ ਪਹਿਲਾਂ ਦੀਆਂ ਡਿਵਾਈਸਾਂ ਨਾਲ ਕਨੈਕਟ ਕਰਦਾ ਹੈ, ਤੁਸੀਂ ਨਵੀਆਂ ਡਿਵਾਈਸਾਂ ਨੂੰ ਹੱਥੀਂ ਵੀ ਜੋੜ ਸਕਦੇ ਹੋ</string>
     <string name="oneplus_add_fingerprint_list">ਫਿੰਗਰਪ੍ਰਿੰਟ ਜੋੜੋ</string>
     <string name="oneplus_adjust_effect">ਸਕ੍ਰੀਨ ਪ੍ਰਭਾਵ ਅਨੁਕੂਲਤਾ</string>
-    <string name="oneplus_advance_settings">ਹੋਰ ਸੈਟਿੰਗਾਂ</string>
+    <string name="oneplus_advance_settings">ਹੋਰ ਸੈਟਿੰਗਸ</string>
     <string name="oneplus_advanced_display_settings">ਆਧੁਨਿਕ ਡਿਸਪਲੇ ਸੈਟਿੰਗਾਂ</string>
     <string name="oneplus_advanced_security_settings">ਆਧੁਨਿਕ ਸੁਰੱਖਿਆ ਸੈਟਿੰਗਾਂ</string>
     <string name="oneplus_alarm_summary">ਅਲਾਰਮ ਹਮੇਸ਼ਾ ਵੱਜਣਗੇ</string>
     <string name="oneplus_always_show_navigation_bar_summary">ਹਮੇਸ਼ਾ ਨੈਵੀਗੇਸ਼ਨ ਪੱਟੀ ਦਿਖਾਓ</string>
     <string name="oneplus_anti_misoperation_of_the_screen_touch_enable_summary">ਫ਼ੋਨ ਦੇ ਤੁਹਾਡੀ ਜੇਬ ਵਿੱਚ ਹੋਣ ਦੌਰਾਨ ਗਲਤੀ ਨਾਲ ਹੋਣ ਵਾਲੇ ਸਕ੍ਰੀਨ ਸਪਰਸ਼ਾਂ ਜਾਂ ਫਿੰਗਰਪ੍ਰਿੰਟ ਆਪਰੇਸ਼ਨਾਂ ਤੋਂ ਬਚੋ</string>
-    <string name="oneplus_anti_misoperation_of_the_screen_touch_enable_title">ਜੇਬ ਮੋਡ</string>
+    <string name="oneplus_anti_misoperation_of_the_screen_touch_enable_title">ਪਾਕੇਟ ਮੋਡ</string>
     <string name="oneplus_aod_smart_display_calendar_event">ਕੈਲੰਡਰ ਇਵੈਂਟ</string>
     <string name="oneplus_aod_smart_display_music_info">ਮੀਡੀਆ ਪਲੇਅਰ</string>
     <string name="oneplus_aod_smart_display_title">ਸੰਦਰਭ ਜਾਣਕਾਰੀ</string>
@@ -352,7 +358,7 @@
     <string name="oneplus_app_display_compatibility">ਅਨੁਕੂਲਤਾ ਮੋਡ</string>
     <string name="oneplus_app_display_fullscreen">ਪੂਰੀ-ਸਕ੍ਰੀਨ ਮੋਡ</string>
     <string name="oneplus_app_display_fullscreen_summary">ਜੇਕਰ ਐਪ ਦੀ ਸਮੱਗਰੀ ਨੌਚ ਖੇਤਰ ਦੁਆਰਾ ਢਕੀ ਹੋਈ ਹੈ, ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਡਿਫੌਲਟ ਮੋਡ ਵਿੱਚ ਅਦਲਾ-ਬਦਲੀ ਕਰੋ</string>
-    <string name="oneplus_app_display_fullscreen_title">ਪੂਰੀ ਸਕ੍ਰੀਨ ਵਿੱਚ ਡਿਸਪਲੇ ਕੀਤੀਆਂ ਜਾਣ ਵਾਲੀਆਂ ਐਪਾਂ</string>
+    <string name="oneplus_app_display_fullscreen_title">ਪੂਰੀ ਸਕ੍ਰੀਨ ਵਿੱਚ ਡਿਸਪਲੇਅ ਕੀਤੀਆਂ ਜਾਣ ਵਾਲੀਆਂ ਐਪਾਂ</string>
     <string name="oneplus_app_list">ਐਪਲੀਕੇਸ਼ਨ ਸੂਚੀ</string>
     <string name="oneplus_app_list_empty">ਖਾਲੀ ਸੂਚੀ</string>
     <string name="oneplus_app_locker_add_apps">ਐਪਾਂ ਜੋੜੋ</string>
@@ -365,7 +371,7 @@
     <string name="oneplus_app_network_settings">ਡੇਟਾ ਵਰਤੋਂ ਨਿਯੰਤਰਣ</string>
     <string name="oneplus_app_notification_allow_led">LED ਚਾਲੂ ਹੈ</string>
     <string name="oneplus_app_notification_not_allow_led">LED ਬੰਦ ਹੈ</string>
-    <string name="oneplus_app_ops_title">ਐਪ ਇਜਾਜ਼ਤਾਂ</string>
+    <string name="oneplus_app_ops_title">ਐਪ ਇਜਾਜ਼ਤਾਂ</string>
     <string name="oneplus_app_uninstall_remark">ਤਤਕਾਲ ਭੁਗਤਾਨ ਕਰੋ ਦੀ ਵਰਤੋਂ ਕਰਨ ਲਈ ਕਿਰਪਾ ਕਰਕੇ ਭੁਗਤਾਨ ਐਪਾਂ ਸਥਾਪਤ ਕਰੋ</string>
     <string name="oneplus_app_wechat">WeChat</string>
     <string name="oneplus_applications_settings_summary">ਐਪ ਸੂਚਨਾਵਾਂ, ਸਮਾਂਤਰ ਐਪਾਂ, ਇਜਾਜ਼ਤਾਂ</string>
@@ -374,22 +380,23 @@
     <string name="oneplus_applock_need_to_unlock_wrong">ਗਲਤ PIN</string>
     <string name="oneplus_applock_pattern_header">ਆਪਣਾ ਪੈਟਰਨ ਬਣਾਓ</string>
     <string name="oneplus_applock_wrong_pattern_header">ਗਲਤ ਪੈਟਰਨ</string>
-    <string name="oneplus_apps_notifications">ਐਪਾਂ &amp; ਸੂਚਨਾਵਾਂ</string>
+    <string name="oneplus_apps_notifications">ਐਪਾਂ &amp; ਅਧਿਸੂਚਨਾਵਾਂ</string>
     <string name="oneplus_apps_title">ਐਪਾਂ</string>
     <string name="oneplus_aptx_hd_support">aptX / aptX HD ਸਮਰਥਨ</string>
+    <string name="oneplus_at_a_glance">ਇੱਕ ਨਜ਼ਰ ਵਿੱਚ</string>
     <string name="oneplus_authentication_information">ਪ੍ਰਮਾਣੀਕਰਨ ਜਾਣਕਾਰੀ</string>
     <string name="oneplus_auto_activate">ਸਵੈਚਲਿਤ ਤਰੀਕੇ ਨਾਲ ਕਿਰਿਆਸ਼ੀਲ ਕਰੋ</string>
     <string name="oneplus_auto_answer_via_bluetooth_summary">ਜਦੋਂ ਆਉਂਦੀ ਕਾਲ ਪ੍ਰਾਪਤ ਹੋਵੇ, ਬਲੂਟੁੱਥ ਯੰਤਰ ਨਾਲ ਜੁੜਣ ਦੇ ਬਾਅਦ ਇਸਦਾ ਜਵਾਬ ਆਪਣੇ ਆਪ ਦਿੱਤਾ ਜਾਵੇਗਾ।</string>
     <string name="oneplus_auto_answer_via_bluetooth_title">Bluetooth ਲਈ ਸਮਾਰਟ ਜਵਾਬ</string>
-    <string name="oneplus_auto_check_pin_length">PIN ਦਾਖਲ ਕਰਨ ਤੋਂ ਬਾਅਦ ਸਕ੍ਰੀਨ ਨੂੰ ਸਵੈਚਲਿਤ ਤਰੀਕੇ ਨਾਲ ਅਣਲੌਕ ਕਰੋ</string>
+    <string name="oneplus_auto_check_pin_length">"PIN ਦਾਖਲ ਕਰਨ ਤੋਂ ਬਾਅਦ ਸਕ੍ਰੀਨ ਨੂੰ ਸਵੈਚਲਿਤ ਤੌਰ 'ਤੇ ਅਣਲੌਕ ਕਰੋ"</string>
     <string name="oneplus_auto_disconect_the_ap">ਜੇ ਕੋਈ ਡਿਵਾਈਸਾਂ ਕਨੈਕਟ ਨਹੀਂ ਹੁੰਦੀਆਂ ਹਨ ਤਾਂ 5 ਮਿੰਟ ਬਾਅਦ ਹੌਟਸਪੌਟ ਆਪਣੇ-ਆਪ ਬੰਦ ਹੋ ਜਾਵੇਗਾ।</string>
     <string name="oneplus_auto_open_app_none">ਕੋਈ ਨਹੀਂ</string>
     <string name="oneplus_auto_open_app_other_applications">ਹੋਰ ਐਪਲੀਕੇਸ਼ਨਾਂ</string>
-    <string name="oneplus_auto_open_app_recommended">ਸਿਫ਼ਾਰਿਸ਼ ਕੀਤੇ</string>
+    <string name="oneplus_auto_open_app_recommended">ਸਿਫਾਰਿਸ਼ ਕੀਤਾ</string>
     <string name="oneplus_auto_open_specified_app">ਨਿਰਧਾਰਤ ਐਪ ਨੂੰ ਸਵੈਚਾਲਿਤ ਤਰੀਕੇ ਨਾਲ ਖੋਲੋ</string>
     <string name="oneplus_auto_play">ਆਟੋ ਪਲੇ</string>
     <string name="oneplus_auto_play_summary">ਈਅਰਫ਼ੋਨ ਕਨੈਕਟ ਕਰਨ ਵੇਲੇ ਸਵੈਚਲਿਤ ਤਰੀਕੇ ਨਾਲ ਸੰਗੀਤ ਪਲੇਬੈਕ ਮੁੜ-ਸ਼ੁਰੂ ਕਰੋ</string>
-    <string name="oneplus_auto_switch_mobile_data">ਸੂਝਵਾਨ ਨੈੱਟਵਰਕ ਕਨੈਕਸ਼ਨ</string>
+    <string name="oneplus_auto_switch_mobile_data">ਡੇਟਾ ਵਰਤੋਂ</string>
     <string name="oneplus_auto_switch_mobile_data_summary">ਦੋਵੇਂ ਵਾਈ‑ਫਾਈ ਅਤੇ ਮੋਬਾਇਲ ਡਾਟਾ ਬਹਿਤਰ ਸਥਿਰਤਾ ਲਈ ਵਰਤੋ ਜਦੋਂ ਸੰਪਰਕ ਮਾੜਾ ਹੋਵੇ।</string>
     <string name="oneplus_auto_turn_on_apps">ਇਹਨਾਂ ਐਪਾਂ ਲਈ ਸਵੈਚਲਿਤ ਤਰੀਕੇ ਨਾਲ ਚਾਲੂ ਕਰੋ</string>
     <string name="oneplus_auto_turn_on_car_charger_info_o2">"ਉਪਰੋਕਤ ਆਈਟਮਾਂ ਨੂੰ ਸਥਾਪਤ ਕਰਕੇ, ਤੁਸੀਂ 'ਪਰੇਸ਼ਾਨ ਨਾਲ ਕਰੋ' ਨੂੰ ਕਿਰਿਆਸ਼ੀਲ ਕਰ ਸਕਦੇ ਹੋ ਅਤੇ ਹਰ ਵਾਰ ਕਾਰ ਚਾਰਜਰ ਦੇ ਕਨੈਕਟ ਹੋਣ 'ਤੇ ਆਪਣੀ ਨਿਰਧਾਰਤ ਐਪ ਨੂੰ ਲਾਂਚ ਕਰ ਸਕਦੇ ਹੋ"</string>
@@ -397,8 +404,8 @@
     <string name="oneplus_available_keyboard_category">ਉਪਲਬਧ ਕੀਬੋਰਡ</string>
     <string name="oneplus_available_keyboard_description">ਇੱਥੇ ਸਮਰਥਿਤ ਇੰਸਟਾਲ ਕੀਤੇ ਕੀਬੋਰਡਾਂ ਨੂੰ \"ਉਪਲਬਧ ਕੀਬੋਰਡਾਂ\" ਦੀ ਸੂਚੀ ਵਿੱਚ ਸ਼ਾਮਲ ਕੀਤਾ ਜਾਵੇਗਾ</string>
     <string name="oneplus_back_home">ਹੋਮ, ਪਿੱਛੇ</string>
-    <string name="oneplus_back_home_o2">ਪਿੱਛੇ, ਹੋਮ</string>
-    <string name="oneplus_back_home_summary">"ਹੋਮ ਬਟਨ 'ਤੇ ਉੱਪਰ ਵੱਲ ਸਵਾਈਪ ਕਰੋ"</string>
+    <string name="oneplus_back_home_o2">Back, Home</string>
+    <string name="oneplus_back_home_summary">Swipe up on Home button</string>
     <string name="oneplus_back_topic_theme_summary">ਬੈਕ ਕਵਰ ਸਵੈਪ ਕਰਦੇ ਸਮੇਂ ਸਵੈਚਲਿਤ ਤਰੀਕੇ ਨਾਲ ਸਿਸਟਮ ਥੀਮ ਬਦਲੀ ਕਰੋ</string>
     <string name="oneplus_back_topic_theme_title">ਬੈਕ ਕਵਰ ਥੀਮ</string>
     <string name="oneplus_battery_menu_stats_total">ਵਿਸਤਾਰਤ ਵਰਤੋਂ ਦੇਖੋ</string>
@@ -415,7 +422,7 @@
     <string name="oneplus_block_all_notifications_summary">ਐਪ ਤੋਂ ਸਾਰੀਆਂ ਸੂਚਨਾਵਾਂ ਬਲੌਕ ਕਰੋ</string>
     <string name="oneplus_block_notifications">ਸੂਚਨਾਵਾਂ ਬਲੌਕ ਕਰੋ</string>
     <string name="oneplus_block_notifications_summary">ਕਾਲਾਂ ਅਤੇ ਅਲਾਰਮਾਂ ਨੂੰ ਛੂਟ ਦਿੱਤੀ ਗਈ ਹੈ</string>
-    <string name="oneplus_block_peek_notifications">ਪੀਕ ਸੂਚਨਾਵਾਂ ਬਲੌਕ ਕਰੋ</string>
+    <string name="oneplus_block_peek_notifications">ਪੀਕ ਅਧਿਸੂਚਨਾਵਾਂ ਨੂੰ ਬਲੌਕ ਕਰੋ</string>
     <string name="oneplus_bluetooth_aptX">aptX</string>
     <string name="oneplus_bluetooth_aptx_hd">aptX HD</string>
     <string name="oneplus_bluetooth_audio_codec">ਬਲੂਟੁੱਥ ਔਡੀਓ ਕੋਡੈਕ</string>
@@ -455,8 +462,9 @@
     <string name="oneplus_condition_bg_data_summary">"ਬੈਕਗ੍ਰਾਊਂਡ ਡੇਟਾ ਸਿਰਫ਼ Wi-Fi ਰਾਹੀਂ ਉਪਲਬਧ ਹੁੰਦਾ ਹੈ। ਇਸ ਕਰਕੇ Wi-Fi ਦੇ ਉਪਲਬਧ ਨਾ ਹੋਣ 'ਤੇ ਕੁਝ ਐਪਾਂ ਜਾਂ ਸੇਵਾਵਾਂ ਪ੍ਰਭਾਵਿਤ ਹੋ ਸਕਦੀਆਂ ਹਨ"</string>
     <string name="oneplus_condition_bg_data_title">ਡੇਟਾ ਸੇਵਰ ਚਾਲੂ ਹੈ</string>
     <string name="oneplus_condition_hotspot_turn_off">ਹੌਟਸਪੌਟ ਬੰਦ ਕਰੋ</string>
+    <string name="oneplus_condition_night_display_title">ਦਿੑਸ਼ਟੀਗਤ ਆਰਾਮਦਾਇਤਾ ਚਾਲੂ ਹੈ</string>
     <string name="oneplus_condition_night_mode_title">ਨਾਈਟ ਮੋਡ ਚਾਲੂ ਹੈ</string>
-    <string name="oneplus_condition_night_mode_turn_off">ਰਾਤਰੀ ਮੋਡ ਬੰਦ ਕਰੋ</string>
+    <string name="oneplus_condition_night_mode_turn_off">ਦਿੑਸ਼ਟੀਗਤ ਆਰਾਮਦਾਇਕਤਾ ਦਾ ਮੋਡ ਬੰਦ ਕਰੋ</string>
     <string name="oneplus_condition_ota_summary">ਅੱਪਡੇਟ ਲਈ ਨਵੇਂ ਸੰਸਕਰਣ ਦਾ ਪਤਾ ਲੱਗਿਆ ਹੈ</string>
     <string name="oneplus_connected_device_count">%1$s ਡਿਵਾਈਸ ਕਨੈਕਟ ਹੈ</string>
     <string name="oneplus_connected_device_management_title">ਡਿਵਾਈਸ ਪ੍ਰਬੰਧਕ ਕਨੈਕਟ ਹੋਇਆ</string>
@@ -477,7 +485,7 @@
     <string name="oneplus_deep_optimization">ਤੀਬਰ ਅਨੁਕੂਲਣ</string>
     <string name="oneplus_deep_optimization_summary">ਜਦੋਂ ਤੁਸੀਂ ਤੀਬਰ ਅਨੁਕੂਲਣ ਨੂੰ ਬੰਦ ਕਰਦੇ ਹੋ, ਤਾਂ ਪਾਵਰ ਦੀ ਖਪਤ ਬਹੁਤ ਵਧ ਜਾਵੇਗੀ ਅਤੇ ਇਹ ਆਮ ਫ਼ੋਨ ਵਰਤੋਂ ਨੂੰ ਪ੍ਰਭਾਵਤ ਕਰ ਸਕਦੀ ਹੈ।</string>
     <string name="oneplus_deep_optimization_title">ਤੀਬਰ ਅਨੁਕੂਲਣ ਨੂੰ ਬੰਦ ਕਰਨਾ ਹੈ?</string>
-    <string name="oneplus_default_launcher">ਡਿਫੌਲਟ ਲਾਂਚਰ</string>
+    <string name="oneplus_default_launcher">ਡਿਫੌਲਟ ਹੋਮ ਐਪ</string>
     <string name="oneplus_default_method">ਡਿਫੌਲਟ ਕੀਬੋਰਡ</string>
     <string name="oneplus_delete_fingerprint_list">ਫਿੰਗਰਪ੍ਰਿੰਟ ਮਿਟਾਓ</string>
     <string name="oneplus_deleted_fingerprint_list">ਫਿੰਗਰਪ੍ਰਿੰਟ ਮਿਟਾਇਆ</string>
@@ -492,10 +500,10 @@
     <string name="oneplus_device_warranty_expried_date">ਵਾਰੰਟੀ ਦੀ ਮਿਆਦ ਸਮਾਪਤੀ ਦੀ ਮਿਤੀ</string>
     <string name="oneplus_dirac_audio_tuner">ਡਾਇਰੈਕ ਆਡੀਓ ਟਿਊਨਰ</string>
     <string name="oneplus_direct_boot_inputmethod_unaware_dialog_message">ਜੇ ਤੁਸੀਂ ਆਪਣਾ ਫੋਨੇ ਮੁੜ-ਸ਼ੁਰੂ ਅਤੇ ਕੋਈ ਸਕ੍ਰੀਨ ਲੌਕ ਸੈੱਟ ਕੀਤਾ ਹੈ, ਤਾਂ ਇਹ ਕੀਬੋਰਡ ਉਦੋਂ ਤੱਕ ਸ਼ੁਰੂ ਨਹੀਂ ਹੋ ਸਕਦਾ ਜਦੋਂ ਤੱਕ ਤੁਸੀਂ ਆਪਣਾ ਫੋਨ ਅਣਲੌਕ ਨਹੀਂ ਕਰਦੇ</string>
-    <string name="oneplus_disable_aosp_face_lock_message">"OnePlus ਚਿਹਰਾ ਅਨਲੌਕ ਸਮਰੱਥ ਕਰਨ 'ਤੇ ਸਮਾਰਟ ਲੌਕ ਦਾ ਭਰੋਸੇਯੋਗ ਚਿਹਰਾ ਅਸਮਰੱਥ ਹੋ ਜਾਵੇਗਾ। ਕੀ ਤੁਸੀਂ ਜਾਰੀ ਰੱਖਣਾ ਚਾਹੁੰਦੇ ਹੋ?"</string>
+    <string name="oneplus_disable_aosp_face_lock_message">OnePlus ਚਿਹਰਾ ਅਣਲੌਕ ਨੂੰ ਚਾਲੂ ਕਰਨਾ ਸਮਾਰਟ ਲੌਕ ਦੇ ਭਰੋਸੇਯੋਗ ਚਿਹਰੇ ਨੂੰ ਬੰਦ ਕਰ ਦੇਵੇਗਾ। ਕੀ ਤੁਸੀਂ ਜਾਰੀ ਰੱਖਣਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
     <string name="oneplus_disconnected">ਡਿਸਕਨੈਕਟ ਕਰੋ</string>
     <string name="oneplus_display_dashboard_no_theme_summary">ਸਥਿਤੀ ਬਾਰ, ਵਾਤਾਵਰਣ ਡਿਸਪਲੇ, ਵਾਲਪੇਪਰ</string>
-    <string name="oneplus_display_dashboard_no_theme_summary_801">Status bar, ambient display, Vision comfort, reading mode</string>
+    <string name="oneplus_display_dashboard_no_theme_summary_801">ਸਟੇਟਸ ਬਾਰ, ਵਾਤਾਵਰਨ ਡਿਸਪਲੇ, ਨਾਈਟ ਮੋਡ, ਰੀਡਿੰਗ ਮੋਡ</string>
     <string name="oneplus_display_dashboard_summary">ਸਥਿਤੀ ਬਾਰ, ਵਾਤਾਵਰਣ ਡਿਸਪਲੇ, ਵਾਲਪੇਪਰ, ਥੀਮ</string>
     <string name="oneplus_display_dashboard_summary_801">ਸਥਿਤੀ ਬਾਰ, ਵਾਤਾਵਰਣ ਡਿਸਪਲੇ, ਵਾਲਪੇਪਰ, ਥੀਮ</string>
     <string name="oneplus_display_screen_timeout">ਅਕਿਰਿਆਸ਼ੀਲ</string>
@@ -518,8 +526,8 @@
     <string name="oneplus_double_tap_power_none">ਕੋਈ ਨਹੀਂ</string>
     <string name="oneplus_doze_summary_801">"ਘੜੀ ਅਤੇ ਹੋਰ ਜਾਣਕਾਰੀ ਨੂੰ ਸਟੈਂਡਬਾਇ ਸਕ੍ਰੀਨ 'ਤੇ ਦਿਖਾਓ"</string>
     <string name="oneplus_doze_summary_new">"ਸਕ੍ਰੀਨ 'ਤੇ ਸਮਾਂ, ਮਿਤੀ ਅਤੇ ਸੂਚਨਾਵਾਂ ਦਿਖਾਓ"</string>
-    <string name="oneplus_doze_title">ਐਂਬਿਐਂਟ ਡਿਸਪਲੇ</string>
-    <string name="oneplus_doze_title_801">ਐਂਬਿਐਂਟ ਡਿਸਪਲੇ</string>
+    <string name="oneplus_doze_title">ਵਿਆਪਕ ਡਿਸਪਲੇਅ</string>
+    <string name="oneplus_doze_title_801">ਵਿਆਪਕ ਡਿਸਪਲੇਅ</string>
     <string name="oneplus_draw_gesture_start_none">ਕੋਈ ਨਹੀਂ</string>
     <string name="oneplus_draw_m_start_app">M ਬਣਾਓ</string>
     <string name="oneplus_draw_o_start_app">O ਬਣਾਓ</string>
@@ -542,13 +550,13 @@
     <string name="oneplus_e_sports_mode_summary">ਰੁਕਾਵਟਾਂ ਨੂੰ ਦੂਰ ਕਰੋ ਅਤੇ ਆਪਣੇ ਫ਼ੋਨ ਨੂੰ ਇੱਕ ਸਮਰਪਿਤ ਗੇਮਿੰਗ ਡਿਵਾਈਸ ਵਿੱਚ ਬਦਲੋ</string>
     <string name="oneplus_e_sports_mode_title">ਈ-ਸਪੋਰਟਸ ਮੋਡ</string>
     <string name="oneplus_earphone">ਈਅਰਫ਼ੋਨ</string>
-    <string name="oneplus_earphone_mode">ਈਅਰਫ਼ੋਨ ਮੋਡ</string>
+    <string name="oneplus_earphone_mode">ਈਅਰਫੋਨ ਮੋਡ</string>
     <string name="oneplus_emergency_rescue_settings">ਅਪਾਤਕਾਲੀ ਬਚਾਅ</string>
     <string name="oneplus_emergency_rescue_settings_summary">ਤੇਜ਼ੀ ਨਾਲ ਪਾਵਰ ਬਟਨ ਦਬਾ ਕੇ ਮਦਦ ਲਈ ਆਟੋਮੈਟਿਕਲੀ ਕਾਲ ਕਰੋ</string>
     <string name="oneplus_emergency_tap_power_gesture_tips">ਐਮਰਜੈਂਸੀ ਬਚਾਅ ਦੀਆਂ ਪਾਵਰ ਬਟਨ ਸੈਟਿੰਗਾਂ ਦੇ ਸੰਸ਼ੋਧਨ ਤੋਂ ਬਾਅਦ ਉਪਲਬਧ</string>
-    <string name="oneplus_enroll_fingerprint_tips_summary">"1.ਫਿੰਗਰਪ੍ਰਿੰਟ ਦੀ ਉਪਲਬਧਤਾ ਨੂੰ ਯਕੀਨੀ ਬਣਾਉਣ ਲਈ ਹਰ ਵਾਰ ਸੁਰੱਖਿਆਤਮਕ ਫਿਲਮ ਨੂੰ ਬਦਲਣ ਤੋਂ ਬਾਅਦ ਆਪਣੇ ਫਿੰਗਰਪ੍ਰਿੰਟ ਨੂੰ ਮੁੜ-ਦਰਜ ਕਰੋ
+    <string name="oneplus_enroll_fingerprint_tips_summary">"1. ਫਿੰਗਰਪਿੰੑਟ ਦੀ ਉਪਲੱਬਧਤਾ ਨੂੰ ਸੁਨਿਸ਼ਚਿਤ ਕਰਨ ਵਾਸਤੇ ਕਿਰਪਾ ਕਰ ਕੇ ਸੁਰੱਖਿਆ ਫਿਲਮ ਦੀ ਹਰੇਕ ਤਬਦੀਲੀ ਤੋਂ ਬਾਅਦ ਆਪਣੇ ਫਿੰਗਰਪਿੰੑਟ ਨੂੰ ਮੁੜ ਦਾਖਲ ਕਰੋ। 
 
-2.ਇਕਹਰੀ ਸੈਟਅੱਪ ਪ੍ਰਕਿਰਿਆ ਵਿੱਚ, ਕਿਰਪਾ ਕਰਕੇ ਸਿਰਫ਼ ਇੱਕ ਉਂਗਲ ਦੀ ਫਿੰਗਰਪ੍ਰਿੰਟ ਜਾਣਕਾਰੀ ਦਰਜ ਕਰੋ"</string>
+2.ਸਥਾਪਨਾ ਕਰਨ ਵਾਲੀ ਇਕ ਸਿੰਗਲ ਪੑਕਿਰਿਆ ਵਿਚ, ਕਿਰਪਾ ਕਰ ਕੇ ਸਿਰਫ ਇਕ ਉਂਗਲ ਦੀ ਫਿੰਗਰਪਿੰੑਟ ਜਾਣਕਾਰੀ ਦਾਖਲ ਕਰੇ"</string>
     <string name="oneplus_enroll_fingerprint_tips_title">ਫਿੰਗਰਪ੍ਰਿੰਟ ਸੈੱਟਅੱਪ ਪ੍ਰੋਂਪਟ</string>
     <string name="oneplus_enter_your_fingerprint">· ਆਪਣਾ ਫਿੰਗਰਪ੍ਰਿੰਟ ਦਰਜ ਕਰੋ</string>
     <string name="oneplus_erase_system_data">ਸਿਸਟਮ ਡੇਟਾ ਮਿਟਾਓ</string>
@@ -589,17 +597,17 @@
     <string name="oneplus_finger_input_fail_tips">ਇਨਪੁੱਟ ਅਸਫਲ ਹੋਈ, ਕਿਰਪਾ ਕਰਕੇ ਸਥਿਤੀ ਵਿਵਸਥਿਤ ਕਰੋ ਅਤੇ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ</string>
     <string name="oneplus_finger_print_anim_save">ਸੁਰੱਖਿਅਤ ਕਰੋ</string>
     <string name="oneplus_fingerprint">ਫਿੰਗਰਪ੍ਰਿੰਟ</string>
-    <string name="oneplus_fingerprint_acquired_imager_dirty">The fingerprint identification area is dirty. Please wipe it clean and try again.</string>
-    <string name="oneplus_fingerprint_acquired_partial">Partial fingerprint detected. Please completely cover the fingerprint identification area.</string>
-    <string name="oneplus_fingerprint_acquired_too_fast">Too fast to process your fingerprint. Please stay for a while when pressing.</string>
+    <string name="oneplus_fingerprint_acquired_imager_dirty">ਫਿੰਗਰਪਿੰੑਟ ਪਛਾਣ ਖੇਤਰ ਗੰਦਾ ਹੈ। ਕਿਰਪਾ ਕਰ ਕੇ ਇਸ ਨੂੰ ਸਾਫ ਕਰੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ</string>
+    <string name="oneplus_fingerprint_acquired_partial">ਅੰਸ਼ਿਕ ਫਿੰਗਰਪਿੰੑਟ ਦਾ ਪਤਾ ਲਗਾਇਆ ਗਿਆ ਹੈ। ਕਿਰਪਾ ਕਰ ਕੇ ਫਿੰਗਰਪਿੰੑਟ ਪਛਾਣ ਖੇਤਰ ਨੂੰ ਪੂਰੀ ਤਰਾਂ ਨਾਲ ਢੱਕ ਦਿਓ</string>
+    <string name="oneplus_fingerprint_acquired_too_fast">ਤੁਹਾਡੇ ਫਿੰਗਰਪਿੰੑਟ ਦੀ ਪੑਕਿਰਿਆ ਕਰਨ ਵਾਸਤੇ ਬਹੁਤ ਤੇਜ਼ ਹੈ। ਜਦੋਂ ਇਸ ਨੂੰ ਦਬਾਓ ਤਾਂ ਕਿਰਪਾ ਕਰ ਕੇ ਥੋੜੀ ਦੇਰ ਲਈ ਰੁਕੋ</string>
     <string name="oneplus_fingerprint_acquired_too_similar">ਸਮਾਨ ਫਿੰਗਰਪ੍ਰਿੰਟ ਡੇਟਾ ਦਾ ਪਤਾ ਲੱਗਿਆ। ਆਪਣੇ ਫਿੰਗਰਪ੍ਰਿੰਟ ਦੇ ਵੱਖੋ-ਵੱਖਰੇ ਖੇਤਰਾਂ ਤੋਂ ਡੇਟਾ ਦਾਖ਼ਲ ਕਰਨ ਲਈ ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੀ ਉਂਗਲ ਨੂੰ ਹਲਕੇ ਜਿਹੇ ਖਿਸਕਾਓ।</string>
     <string name="oneplus_fingerprint_animation_effect_title">ਫਿੰਗਰਪ੍ਰਿੰਟ ਐਨੀਮੇਸ਼ਨ ਪ੍ਰਭਾਵ</string>
     <string name="oneplus_fingerprint_delete_confirm_message">ਕੀ ਤੁਸੀਂ ਇਸ ਨੂੰ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
     <string name="oneplus_fingerprint_detail">ਵੇਰਵੇ</string>
     <string name="oneplus_fingerprint_enrol_completed">ਫਿੰਗਰਪ੍ਰਿੰਟ ਸਹੇਜ ਲਿਆ ਗਿਆ ਹੈ</string>
-    <string name="oneplus_fingerprint_enroll_summary">ਦਬਾਓ ਅਤੇ ਆਪਣੀ ਉਂਗਲ ਨਾਲ ਫਿੰਗਰਪ੍ਰਿੰਟ ਪਛਾਣ ਖੇਤਰ ਨੂੰ ਜਿੰਨਾ ਹੋ ਸਕੇ ਓਨਾ ਢਕੋ, ਫਿਰ ਕੰਪਨ ਮਹਿਸੂਸ ਹੋਣ ‘ਤੇ ਉਂਗਲੀ ਚੁੱਕ ਲਓ</string>
-    <string name="oneplus_fingerprint_findsendor_summary">When the fingerprint pattern appears at the bottom of the screen, simply press with your finger on the fingerprint identification area to use the fingerprint function.</string>
-    <string name="oneplus_fingerprint_findsendor_tilte">How to use fingerprint</string>
+    <string name="oneplus_fingerprint_enroll_summary">ਦਬਾਓ ਅਤੇ ਆਪਣੀ ਉਂਗਲੀ ਨਾਲ ਜਿੱਥੋਂ ਤੱਕ ਸੰਭਵ ਹੋ ਸਕੇ, ਫਿੰਗਰਪਿੰੑਟ ਪਛਾਣ ਖੇਤਰ ਨੂੰ ਢੱਕੋ, ਫਿਰ ਜਦੋਂ ਤੁਹਾਨੂੰ ਕੰਪਨ ਮਹਿਸੂਸ ਹੋਵੇ, ਤਾਂ ਇਸ ਨੂੰ ਚੁੱਕ ਲਓ।</string>
+    <string name="oneplus_fingerprint_findsendor_summary">"ਸਕ੍ਰੀਨ ਦੇ ਹੇਠਲੇ ਹਿੱਸੇ ਵਿੱਚ ਫਿੰਗਰਪ੍ਰਿੰਟ ਪੈਟਰਨ ਪ੍ਰਦਰਸ਼ਿਤ ਹੋਣ 'ਤੇ, ਫਿੰਗਰਪ੍ਰਿੰਟ ਫੰਕਸ਼ਨਾਂ ਦੀ ਵਰਤੋਂ ਕਰਨ ਲਈ ਬੱਸ ਆਪਣੀ ਉਂਗਲੀ ਨਾਲ ਫਿੰਗਰਪ੍ਰਿੰਟ ਪਛਾਣ ਖੇਤਰ ਨੂੰ ਦਬਾਓ: ਆਪਣੇ ਫ਼ੋਨ ਨੂੰ ਕਿਰਿਆਸ਼ੀਲ ਅਤੇ ਅਨਲੌਕ ਕਰਨਾ, ਖ਼ਰੀਦਦਾਰੀ ਨੂੰ ਪ੍ਰਮਾਣਿਤ ਕਰਨਾ ਜਾਂ ਐਪਾਂ ਵਿੱਚ ਸਾਈਨ ਇਨ ਕਰਨਾ।"</string>
+    <string name="oneplus_fingerprint_findsendor_tilte">ਫਿੰਗਰਪਿੰੑਟ ਦੀ ਵਰਤੋਂ ਕਿਵੇਂ ਕੀਤੀ ਜਾਵੇ?</string>
     <string name="oneplus_fingerprint_functional_declaration">ਫਿੰਗਰਪ੍ਰਿੰਟ ਫੰਕਸ਼ਨ ਘੋਸ਼ਣਾ</string>
     <string name="oneplus_fingerprint_gesture_camera_summary">"ਵਿਊਫਾਈਂਡਰ ਸਕ੍ਰੀਨ ਤੋਂ, ਫ਼ੋਟੋ ਖਿੱਚ੍ਹਣ ਲਈ ਫਿੰਗਰਪ੍ਰਿੰਟ ਸੈਂਸਰ 'ਤੇ ਲੰਬੇ ਸਮੇਂ ਤੱਕ ਦਬਾਓ"</string>
     <string name="oneplus_fingerprint_gesture_camera_title">ਫ਼ੋਟੋ ਖਿੱਚ੍ਹਣ ਲਈ ਲੰਬੇ ਸਮੇਂ ਤੱਕ ਦਬਾਓ</string>
@@ -692,9 +700,9 @@
     <string name="oneplus_gesture_navigation_bar_summary">ਨੈਵੀਗੇਸ਼ਨ ਪੱਟੀ ਨੂੰ ਬਦਲਣ ਲਈ ਜੈਸਚਰ ਦੀ ਵਰਤੋਂ ਕਰੋ</string>
     <string name="oneplus_gesture_navigation_bar_summary_for_bottom">ਪਿੱਛੇ ਜਾਣ ਲਈ ਹੇਠਲੇ ਕਿਨਾਰੇ ਤੋਂ ਅੰਦਰਵਾਰ ਸਵਾਈਪ ਕਰੋ</string>
     <string name="oneplus_gesture_navigation_bar_summary_for_deprecated">ਪਿੱਛੇ ਜਾਣ ਲਈ ਖੱਬੇ ਜਾਂ ਸੱਜੇ ਕਿਨਾਰੇ ਤੋਂ ਅੰਦਰਵਾਰ ਸਵਾਈਪ ਕਰੋ</string>
-    <string name="oneplus_gesture_navigation_bar_title">ਨੈਵੀਗੇਸ਼ਨ ਜੈਸਚਰ</string>
-    <string name="oneplus_gesture_navigation_bar_title_for_bottom">ਨੈਵੀਗੇਸ਼ਨ ਜੈਸਚਰ (ਹੇਠਾਂ)</string>
-    <string name="oneplus_gesture_navigation_bar_title_for_deprecated">ਨੈਵੀਗੇਸ਼ਨ ਜੈਸਚਰ (ਖੱਬੇ ਅਤੇ ਸੱਜੇ)</string>
+    <string name="oneplus_gesture_navigation_bar_title">ਨੈਵੀਗੇਸ਼ਨ ਇਸ਼ਾਰ</string>
+    <string name="oneplus_gesture_navigation_bar_title_for_bottom">ਨੈਵੀਗੇਸ਼ਨ ਇਸ਼ਾਰੇ (ਹੇਠਾਂ)</string>
+    <string name="oneplus_gesture_navigation_bar_title_for_deprecated">ਨੈਵੀਗੇਸ਼ਨ ਇਸ਼ਾਰੇ (ਖੱਬੇ ਅਤੇ ਸੱਜੇ)</string>
     <string name="oneplus_gesture_of_answer_call_info">"ਕਾਲ ਆਉਣ 'ਤੇ ਤੁਸੀਂ ਫ਼ੋਨ ਨੂੰ ਆਪਣੇ ਕੰਨ ਕੋਲ ਲਿਜਾਕੇ ਇਸਦਾ ਜਵਾਬ ਦੇ ਸਕਦੇ ਹੋ।"</string>
     <string name="oneplus_gesture_of_answer_call_summary">ਫ਼ੋਨ ਨੂੰ ਆਪਣੇ ਕੰਨ ਕੋਲ ਲਿਜਾਕੇ ਸਵੈਚਲਿਤ ਤਰੀਕੇ ਨਾਲ ਇਨਕਮਿੰਗ ਕਾਲਾਂ ਦਾ ਜਵਾਬ ਦਿਓ</string>
     <string name="oneplus_gesture_of_answer_call_title">ਇਸ਼ਾਰੇ ਨਾਲ ਕਾਲਾਂ ਦਾ ਜਵਾਬ ਦਿਓ</string>
@@ -703,7 +711,7 @@
     <string name="oneplus_gesture_to_answer_title">ਜਵਾਬ ਦੇਣ ਲਈ ਚੁੱਕੋ</string>
     <string name="oneplus_gesture_to_control_call_info">ਫ਼ੋਨ ਨੂੰ ਆਪਣੇ ਕੰਨ ਦੇ ਕੋਲ ਲਿਜਾ ਕੇ ਸਵੈਚਲਿਤ ਰੂਪ ਵਿੱਚ ਕਾਲਾਂ ਨੂੰ ਕੰਟਰੋਲ ਕਰੋ</string>
     <string name="oneplus_gesture_to_control_calls_summary">"ਸਵੈਚਲਿਤ ਰੂਪ ਨਾਲ ਕਾਲਾਂ ਦਾ ਜਵਾਬ ਦਿਓ ਜਾਂ ਇਸ਼ਾਰੇ ਨਾਲ ਈਅਰਪੀਸ 'ਤੇ ਅਦਲਾ-ਬਦਲੀ ਕਰੋ"</string>
-    <string name="oneplus_gesture_to_control_calls_title">ਜਵਾਬ ਦੇਣ/ਅਦਲਾ-ਬਦਲੀ ਕਰਨ ਲਈ ਚੁੱਕੋ</string>
+    <string name="oneplus_gesture_to_control_calls_title">ਜਵਾਬ ਦੇਣ/ਅਦਲਾ-ਬਦਲੀ ਕਰਨ ਲਈ ਅੱਗੇ ਵਧੋ</string>
     <string name="oneplus_gesture_to_route_audio_summary">"ਬਲੂੁਟੁੱਥ ਹੈੱਡਸੈੱਟਾਂ ਨਾਲ ਕਨੈਕਟ ਹੋਣ 'ਤੇ, ਕਾਲ ਕਰਨ ਜਾਂ ਜਵਾਬ ਦੇਣ ਦੇ 5 ਸਕਿੰਟਾਂ ਦੇ ਅੰਦਰ, ਫ਼ੋਨ ਨੂੰ ਆਪਣੇ ਕੰਨ ਤੱਕ ਚੁੱਕ ਕੇ ਕਾਲ ਨੂੰ ਫ਼ੋਨ ਦੇ ਈਅਰਪੀਸ 'ਤੇ ਅਦਲਾ-ਬਦਲੀ ਕਰੋ"</string>
     <string name="oneplus_gesture_to_route_audio_title">ਅਦਲੀ-ਬਦਲੀ ਕਰਨ ਲਈ ਚੁੱਕੋ</string>
     <string name="oneplus_gestures_fast_entrance">ਸ਼ੌਰਟਕੱਟ</string>
@@ -741,9 +749,9 @@
     <string name="oneplus_hide_navkeys_summary">ਨੈਵੀਗੇਸ਼ਨ ਪੱਟੀ ਨੂੰ ਲੁਕਾਉਣ ਜਾਂ ਦਿਖਾਉਣ ਲਈ ਇੱਕ ਬਟਨ ਸ਼ਾਮਲ ਕਰੋ</string>
     <string name="oneplus_hide_notch_display_summary">ਨੌਚ ਖੇਤਰ ਵਿੱਚ ਐਪਾਂ ਵਰਤੀਆਂ ਨਹੀਂ ਜਾ ਸਕਦੀਆਂ</string>
     <string name="oneplus_hide_notch_display_title">ਨੌਟ ਖੇਤਰ ਨੂੰ ਲੁਕਾਓ</string>
-    <string name="oneplus_how_to_use_fingerprint_summary">"ਸਕ੍ਰੀਨ ਦੇ ਹੇਠਾਂ ਫਿੰਗਰਪ੍ਰਿੰਟ ਪੈਟਰਨ ਦਿਖਾਈ ਦੇਣ ‘ਤੇ, ਫਿੰਗਰਪ੍ਰਿੰਟ ਫੰਕਸ਼ਨ ਦੀ ਵਰਤੋਂ ਕਰਨ ਲਈ ਬਸ ਆਪਣੀ ਉਂਗਲ ਨਾਲ ਫਿੰਗਰਪ੍ਰਿੰਟ ਪਛਾਣ ਖੇਤਰ ਨੂੰ ਦਬਾਓ: ਆਪਣੇ ਫ਼ੋਨ ਨੂੰ ਕਿਰਿਆਸ਼ੀਲ ਅਤੇ ਅਨਲੌਕ ਕਰੋ, ਖ਼ਰੀਦਦਾਰੀਆਂ ਨੂੰ ਪ੍ਰਮਾਣਿਤ ਕਰੋ, ਜਾਂ ਐਪਾਂ ਵਿੱਚ ਸਾਈਨ ਇਨ ਕਰੋ। 
+    <string name="oneplus_how_to_use_fingerprint_summary">"ਜਦੋਂ ਫਿੰਗਰਪਿੰੑਟ ਪੈਟਰਨ ਸਕੀੑਨ ਦੇ ਹੇਠਾਂ ਪੑਦਰਸ਼ਿਤ ਹੁੰਦਾ ਹੈ, ਤਾਂ ਫਿੰਗਰਪਿੰੑਟ ਦੇ ਫੰਕਸ਼ਨ ਦਾ ਇਸਤੇਮਾਲ ਕਰਨ ਵਾਸਤੇ ਫਿੰਗਰਪਿੰੑਟ ਪਛਾਣ ਖੇਤਰ ਨੂੰ ਆਪਣੀ ਉਂਗਲੀ ਨਾਲ ਸਾਧਾਰਨ ਤੌਰ ’ਤੇ ਦਬਾਓ: ਆਪਣੇ ਫੋਨ ਨੂੰ ਚਾਲੂ ਅਤੇ ਅਨਲਾਕ ਕਰੋ, ਖਰੀਦਾਰੀਆਂ ਨੂੰ ਅਧਿਕਾਰਤ ਕਰੋ ਜਾਂ ਐਪਸ ਵਿਚ ਸਾਈਨ-ਇਨ ਕਰੋ। 
 
-ਨੋਟ: ਤੁਹਾਡਾ ਫਿੰਗਰਪ੍ਰਿੰਟ ਕਿਸੇ ਮਜ਼ਬੂਤ ਪੈਟਰਨ ਜਾਂ PIN ਤੋਂ ਘੱਟ ਸੁਰੱਖਿਅਤ ਹੋ ਸਕਦਾ ਹੈ"</string>
+ਨੋਟ: ਤੁਹਾਡਾ ਫਿੰਗਰਪਿੰੑਟ ਇਕ ਮਜ਼ਬੂਤ ਪੈਟਰਨ ਜਾਂ PIN ਨਾਲੋਂ ਘੱਟ ਸੁਰੱਖਿਅਤ ਹੋ ਸਕਦਾ ਹੈ।"</string>
     <string name="oneplus_how_to_use_fingerprint_summary_no_note">"ਸਕ੍ਰੀਨ ਦੇ ਹੇਠਲੇ ਹਿੱਸੇ ਵਿੱਚ ਫਿੰਗਰਪ੍ਰਿੰਟ ਪੈਟਰਨ ਪ੍ਰਦਰਸ਼ਿਤ ਹੋਣ 'ਤੇ, ਫਿੰਗਰਪ੍ਰਿੰਟ ਫੰਕਸ਼ਨਾਂ ਦੀ ਵਰਤੋਂ ਕਰਨ ਲਈ ਬੱਸ ਆਪਣੀ ਉਂਗਲੀ ਨਾਲ ਫਿੰਗਰਪ੍ਰਿੰਟ ਪਛਾਣ ਖੇਤਰ ਨੂੰ ਦਬਾਓ: ਆਪਣੇ ਫ਼ੋਨ ਨੂੰ ਕਿਰਿਆਸ਼ੀਲ ਅਤੇ ਅਨਲੌਕ ਕਰਨਾ, ਖ਼ਰੀਦਦਾਰੀ ਨੂੰ ਪ੍ਰਮਾਣਿਤ ਕਰਨਾ ਜਾਂ ਐਪਾਂ ਵਿੱਚ ਸਾਈਨ ਇਨ ਕਰਨਾ।"</string>
     <string name="oneplus_hydrogen_version">H₂OS ਸੰਸਕਰਣ</string>
     <string name="oneplus_ime_security_warning">"%1$s ਨਿੱਜੀ ਡੇਟਾ ਜਿਵੇਂ ਪਾਸਵਰਡ ਅਤੇ ਕ੍ਰੈਡਿਟ ਕਾਰਡ ਨੰਬਰਾਂ ਸਮੇਤ ਤੁਹਾਡੇ ਵੱਲੋਂ ਟਾਈਪ ਕੀਤੇ ਸਾਰੇ ਟੈਕਟ ਨੂੰ ਇਕੱਤਰ ਕਰਨ 'ਚ ਸਮਰੱਥ ਹੋ ਸਕਦਾ ਹੈ।"</string>
@@ -755,7 +763,7 @@
     <string name="oneplus_instrucitons">ਹਿਦਾਇਤ</string>
     <string name="oneplus_intelligently_select_best_wifi">ਸਮਝਦਾਰੀ ਨਾਲ ਸਰਵੋਤਮ Wi‑Fi ਚੁਣੋ</string>
     <string name="oneplus_intelligently_select_best_wifi_summary">Wi‑Fi ਨੈਟਵਰਕ ਦੀ ਕਨੈਕਟਿਵਿਟੀ ਦੀ ਪਛਾਣ ਅਤੇ ਵਿਸ਼ਲੇਸ਼ਣ ਕਰਕੇ ਸਮਝਦਾਰੀ ਨਾਲ ਸਰਵੋਤਮ Wi‑Fi ਨੈਟਵਰਕ ਦੀ ਚੋਣ ਅਤੇ ਨਾਲ ਕਨੈਕਟ ਕਰੋ</string>
-    <string name="oneplus_intensely">ਮਜ਼ਬੂਤ</string>
+    <string name="oneplus_intensely">Strong</string>
     <string name="oneplus_is_turn_on_feature">"ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਤੌਰ 'ਤੇ ਇਸ ਵਿਸ਼ੇਸ਼ਤਾ ਨੂੰ ਚਾਲੂ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?"</string>
     <string name="oneplus_is_turn_on_feature_summary">"ਜਦੋਂ ਇਹ ਚਾਲੂ ਹੁੰਦਾ ਹੈ, ਤਾਂ ਹੇਠ ਲਿਖੀਆਂ ਸਥਿਤੀਆਂ ਕਦੇ-ਕਦੇ ਵਾਪਰ ਸਕਦੀਆਂ ਹਨ:
 1। ਸਕ੍ਰੀਨ ਦੇ ਕੁਝ ਖੇਤਰ ਅਸਧਾਰਨ ਦਿਖਣਗੇ
@@ -784,7 +792,7 @@
     <string name="oneplus_lock_after_timeout">ਆਪਣੇ ਆਪ ਹੀ ਸਲੀਪ ਤੋਂ ਬਾਅਦ ਲਾੱਕ ਹੋ ਜਾਵੇਗਾ</string>
     <string name="oneplus_lock_buttons">ਲੌਕ ਬਟਨ</string>
     <string name="oneplus_lock_buttons_summary">"ਗੇਮਿੰਗ ਮੋਡ ਚਾਲੂ ਹੋਣ 'ਤੇ ਕਪੈਸਿਟਿਵ ਬਟਨ ਲੌਕ ਕਰੋ"</string>
-    <string name="oneplus_lock_screen_intro_skip_dialog_text">"ਜੇਕਰ ਤੁਸੀਂ ਚਿਹਰਾ ਡੇਟਾ ਨੂੰ ਰਿਕਾਰਡ ਕਰਨਾ ਛੱਡਣਾ ਚੁਣਦੇ ਹੋ, ਤਾਂ ਤੁਹਾਨੂੰ ਆਪਣੇ ਡਿਵਾਈਸ ਅਤੇ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਦੀ ਰੱਖਿਆ ਲਈ ਕਿਸੇ ਹੋਰ ਵਿਧੀ, ਜਿਵੇਂ ਫਿੰਗਰਪ੍ਰਿੰਟ ਜਾਂ ਪਿੰਨ, ਨੂੰ ਸਮਰੱਥ ਬਣਾਉਣ ਦਾ ਸੁਝਾਅ ਦਿੱਤਾ ਜਾਂਦਾ ਹੈ। ਤੁਸੀਂ ਕੁਝ ਐਪਾਂ 'ਤੇ ਪਾਸਵਰਡ ਵੀ ਸੈੱਟ ਕਰ ਸਕਦੇ ਹੋ। ਰੱਖਿਆ ਨੂੰ ਸਮਰੱਥ ਬਣਾਉਣ ਲਈ, ਕਿਰਪਾ ਕਰਕੇ \"ਸੈਟਿੰਗਾਂ\" > \"ਸੁਰੱਖਿਆ &amp; ਸਕ੍ਰੀਨ ਲੌਕ ਕਰੋ\" 'ਤੇ ਜਾਓ"</string>
+    <string name="oneplus_lock_screen_intro_skip_dialog_text">"ਜੇਕਰ ਤੁਸੀਂ ਚਿਹਰਾ ਡੈਟਾ ਰਿਕਾਰਡ ਕਰਨ ਨੂੰ ਸਕਿੱਪ ਕਰਨ ਦੀ ਚੋਣ ਕਰਦੇ ਹੋ, ਤਾਂ ਤੁਹਾਨੂੰ ਆਪਣੇ ਯੰਤਰ ਅਤੇ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਦੀ ਰੱਖਿਆ ਲਈ ਕਿਸੇ ਹੋਰ ਵਿਧੀ, ਜਿਵੇਂ ਫਿੰਗਰਪ੍ਰਿੰਟ ਜਾਂ ਪਿੰਨ, ਨੂੰ ਸਮਰੱਥ ਬਣਾਉਣ ਦਾ ਸੁਝਾਅ ਦਿੱਤਾ ਜਾਂਦਾ ਹੈ। ਤੁਸੀਂ ਕੁਝ ਖਾਸ ਐਪਾਂ 'ਤੇ ਪਾਸਵਰਡ ਵੀ ਸੈੱਟ ਕਰ ਸਕਦੇ ਹੋ। ਰੱਖਿਆ ਨੂੰ ਸਮਰੱਥ ਬਣਾਉਣ ਲਈ, ਕਿਰਪਾ ਕਰਕੇ \"ਸੈਟਿੰਗਾਂ\" > \"ਸੁਰੱਖਿਆ &amp; ਸਕ੍ਰੀਨ ਲੌਕ ਕਰੋ\" 'ਤੇ ਜਾਓ"</string>
     <string name="oneplus_lock_screen_notifications_summary_hide">ਸਿਰਫ਼ ਅਨਲੌਕ ਹੋਣ ਤੇ ਹੀ ਨਿੱਜੀ ਸਮੱਗਰੀ ਦਿਖਾਓ</string>
     <string name="oneplus_lock_screen_notifs_show_alerting">ਸਿਰਫ਼ ਮਹੱਤਵਪੂਰਨ ਸੂਚਨਾਵਾਂ ਦਿਖਾਓ</string>
     <string name="oneplus_lock_screen_notifs_show_all">ਮਹੱਤਵਪੂਰਨ ਅਤੇ ਹੋਰ ਸੂਚਨਾਵਾਂ ਦਿਖਾਓ</string>
@@ -812,7 +820,7 @@
     <string name="oneplus_memc_video_extreme">ਅਤਿਅੰਤ</string>
     <string name="oneplus_memc_video_nosupport_extreme_summary">"ਅਤਿਅੰਤ ਚਾਲੂ ਕਰਨ ਲਈ ਰੈਜ਼ੋਲਿਊਸ਼ਨ ਨੂੰ FHD+ 'ਚ ਸਵਿੱਚ ਕਰਨ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ"</string>
     <string name="oneplus_memc_video_nosupport_extreme_text">QHD+ ਰੈਜ਼ੋਲਿਊਸ਼ਨ ਸਵਿੱਚ ਕਰਨਾ, ਗਤੀਸ਼ੀਲ ਗ੍ਰਾਫ਼ਿਕਸ ਪ੍ਰਤਿਪੂਰਤੀ ਨੂੰ ਸੀਮਿਤ ਕੀਤਾ ਗਿਆ ਹੈ</string>
-    <string name="oneplus_memc_video_smooth">ਸਮੂਦ</string>
+    <string name="oneplus_memc_video_smooth">ਨਿਰਵਿਘਨ</string>
     <string name="oneplus_memc_video_theacme_summary">"ਬਹੁਤ ਜ਼ਿਆਦਾ ਨਿਰਵਿਘਨ ਗ੍ਰਾਫ਼ਿਕਸ ਲਈ ਵੀਡੀਓ ਫ੍ਰੇਮ ਦਰ ਨੂੰ 120 fps ਤੱਕ ਵਧਾਇਆ ਜਾਵੇਗਾ, ਜਿਸ ਨਾਲ ਵਧੀਕ ਪਾਵਰ ਖਪਤ ਹੋ ਸਕਦੀ ਹੈ।QHD+ ਰੈਜ਼ੋਲਿਊਸ਼ਨ ਅਸਥਾਈ ਤੌਰ 'ਤੇ ਸਮਰਥਿਤ ਨਹੀਂ ਹੈ।"</string>
     <string name="oneplus_memc_video_theacme_title">ਹਾਈਪਰ ਮੋਸ਼ਨ ਸਮੂਦਿੰਗ</string>
     <string name="oneplus_mobile_device_name_title">ਫ਼ੋਨ ਨਾਮ</string>
@@ -832,7 +840,7 @@
     <string name="oneplus_multitasking_clean_way">ਹਾਲੀਆ ਐਪ ਪ੍ਰਬੰਧਨ</string>
     <string name="oneplus_navigation_bar_custom_settings">ਰਵਾਇਤੀ ਸੈਟਿਂਗ</string>
     <string name="oneplus_navigation_bar_summary">ਨੈਵੀਗੇਸ਼ਨ ਪੱਟੀ ਸੈੱਟ ਕਰੋ</string>
-    <string name="oneplus_navigation_bar_title">ਨੈਵੀਗੇਸ਼ਨ ਪੱਟੀ &amp; ਜੈਸਚਰ</string>
+    <string name="oneplus_navigation_bar_title">ਨੈਵੀਗੇਸ਼ਨ ਬਾਰ&amp; ਇਸ਼ਾਰੇ</string>
     <string name="oneplus_network_auto_change_summary">ਕਨੈਕਟੀਵਿਟੀ ਅਤੇ ਸਿਗਨਲ ਦੀ ਮਜਬੂਤੀ ਦੇ ਆਧਾਰ ਤੇ Wi-Fi ਨੈਟਵਰਕ ਅਤੇ ਮੋਬਾਈਲ ਡੇਟਾ ਵਿਚਕਾਰ ਸਵੈਚਲਿਤ ਤਰੀਕੇ ਨਾਲ ਅਦਲਾ-ਬਦਲੀ ਕਰਦਾ ਹੈ</string>
     <string name="oneplus_network_auto_change_title">ਸਮਾਰਟ Wi-Fi ਸਵਿੱਚਕਰਤਾ</string>
     <string name="oneplus_network_dashboard_title">Wi-Fi &amp; ਨੈੱਟਵਰਕ</string>
@@ -845,7 +853,7 @@
     <string name="oneplus_night_mode_enabled_op">ਰਾਤਰੀ ਮੋਡ</string>
     <string name="oneplus_night_mode_enabled_op_summary">ਨਾਈਟ ਮੋਡ ਨੂੰ ਹੱਥੀਂ ਆੱਨ ਕਰੋ</string>
     <string name="oneplus_night_mode_manual_open">ਹੱਥੀਂ</string>
-    <string name="oneplus_night_mode_open_tip">ਕਿਰਪਾ ਕਰਕੇ ਪਹਿਲਾਂ ਰਾਤਰੀ ਮੋਡ ਚਾਲੂ ਕਰੋ</string>
+    <string name="oneplus_night_mode_open_tip">ਕਿਰਪਾ ਕਰ ਕੇ ਪਹਿਲਾਂ ਦਿੑਸ਼ਟੀਗਤ ਆਰਾਮਦਾਇਕ ਮੋਡ ਚਾਲੂ ਕਰੋ</string>
     <string name="oneplus_night_mode_sensor_summary">"ਆਲੇ-ਦੁਆਲੇ ਦੀ ਰੋਸ਼ਣੀ ਦੀ ਹਾਲਤ ਦੇ ਆਧਾਰ 'ਤੇ, ਰਾਤਰੀ ਮੋਡ ਸਵੈਚਲਿਤ ਤਰੀਕੇ ਨਾਲ ਸਕ੍ਰੀਨ ਰੰਗ ਤਾਪਮਾਨ ਨੂੰ ਕੈਲੀਬ੍ਰੇਟ ਕਰੇਗਾ ਤਾਂਕਿ ਇਹ ਵਾਤਾਵਰਨ ਦੇ ਅਨੁਕੂਲ ਹੋ ਸਕੇ। ਇਸ ਨਾਲ ਤੁਹਾਡੀਆਂ ਅੱਖਾਂ ਨੂੰ ਹੋਣ ਵਾਲੀ ਥਕਾਵਟ ਅਤੇ ਇਨ੍ਹਾਂ 'ਤੇ ਪੈਣ ਵਾਲਾ ਤਣਾਓ ਘਟ ਸਕਦਾ ਹੈ ਅਤੇ ਤੁਹਾਨੂੰ ਬਿਹਤਰ ਢੰਗ ਨਾਲ ਸੌਣ ਵਿੱਚ ਮਦਦ ਮਿਲ ਸਕਦੀ ਹੈ।"</string>
     <string name="oneplus_night_mode_strong">ਚਮਕੀਲਾ</string>
     <string name="oneplus_night_mode_summary">"ਅੱਖਾਂ 'ਤੇ ਥਕਾਵਟ ਅਤੇ ਤਣਾਅ ਨੂੰ ਘਟਾਉਣ ਲਈ ਰਾਤਰੀ ਮੋਡ ਸਕ੍ਰੀਨ ਨੂੰ ਵਾਰਮਰ ਰੰਗਾਂ 'ਤੇ ਕੈਲੀਬ੍ਰੇਟ ਕਰੇਗਾ। ਇਸ ਨਾਲ ਤੁਹਾਨੂੰ ਬਿਹਤਰ ਤਰੀਕੇ ਨਾਲ ਸੌਣ ਵਿੱਚ ਮਦਦ ਮਿਲ ਸਕਦੀ ਹੈ। ਤੈਅ ਸਮੇਂ 'ਤੇ ਕਿਰਿਆਸ਼ੀਲ ਕਰਨ ਲਈ ਸੁਝਾਇਆ ਗਿਆ।"</string>
@@ -856,8 +864,8 @@
     <string name="oneplus_no_choice">ਕੋਈ ਰਿੰਗਟੋਨ ਨਹੀਂ ਚੁਣੀ ਗਈ</string>
     <string name="oneplus_no_device_connected">ਕੋਈ ਡਿਵਾਈਸ ਕਨੈਕਟ ਨਹੀਂ ਹੈ</string>
     <string name="oneplus_no_file_tips">ਕੋਈ ਰਿੰਗਟੋਨ ਫ਼ਾਈਲਾਂ ਨਹੀਂ ਹਨ</string>
-    <string name="oneplus_no_support_apps_installed">ਕੋਈ ਸਮਰਥਿਤ ਐਪਾਂ ਇੰਸਟਾਲ ਨਹੀਂ ਹਨ</string>
-    <string name="oneplus_no_supported_apps">ਕੋਈ ਸਮਰਥਿਤ ਐਪਾਂ ਇੰਸਟਾਲ ਨਹੀਂ ਹਨ</string>
+    <string name="oneplus_no_support_apps_installed">ਕੋਈ ਸਮਰਥਿਤ ਐਪਸ ਇੰਸਟਾਲ ਨਹੀਂ ਹਨ</string>
+    <string name="oneplus_no_supported_apps">ਕੋਈ ਸਮਰਥਿਤ ਐਪਸ ਇੰਸਟਾਲ ਨਹੀਂ ਹਨ</string>
     <string name="oneplus_noise_tips">ਵਾਈਬ੍ਰੇਸ਼ਨ ਸਮਰੱਥ ਕਰੋ</string>
     <string name="oneplus_none_default_camera">ਕੋਈ ਡਿਫੌਲਟ ਕੈਮਰਾ ਨਹੀਂ</string>
     <string name="oneplus_none_default_email">ਕੋਈ ਡਿਫੌਲਟ ਮੇਲ ਐਪ ਨਹੀਂ</string>
@@ -870,7 +878,7 @@
     <string name="oneplus_notch_display_area">ਨੌਚ</string>
     <string name="oneplus_notch_display_choose_title">ਚੁਣੋ ਕਿ ਨੋਚ ਖੇਤਰ ਕਿਵੇਂ ਦਿਖਾਇਆ ਜਾਂਦਾ ਹੈ</string>
     <string name="oneplus_notch_display_title">ਨੋਚ ਡਿਸਪਲੇ</string>
-    <string name="oneplus_notice_vibrate_intensity">ਨੋਟੀਫਿਕੇਸ਼ਨਾਂ</string>
+    <string name="oneplus_notice_vibrate_intensity">ਸੂਚਨਾਵਾਂ</string>
     <string name="oneplus_notification_advance_settings">ਸੂਚਨਾ ਐਡਵਾਂਸ ਸੈਟਿੰਗਾਂ</string>
     <string name="oneplus_notification_alert_title">ਮਹੱਤਵਪੂਰਨ</string>
     <string name="oneplus_notification_channel_summary_low">ਬਿਨਾਂ ਕਿਸੇ ਧੁਨੀ ਜਾਂ ਕੰਪਨ ਦੇ ਘੱਟ ਮਹੱਤਵਪੂਰਨ ਸੂਚਨਾਵਾਂ।</string>
@@ -888,13 +896,13 @@
     <string name="oneplus_notification_sound_default">ਪੂਰਵ-ਨਿਰਧਾਰਤ ਸੂਚਨਾ</string>
     <string name="oneplus_notification_ways">ਡਿਸਪਲੇ ਮੋਡ</string>
     <string name="oneplus_notification_ways_title">ਸੂਚਨਾਵਾਂ ਕਿਵੇਂ ਦਿਖਾਈਏ</string>
-    <string name="oneplus_notifications">ਨੋਟੀਫਿਕੇਸ਼ਨਾਂ</string>
+    <string name="oneplus_notifications">ਸੂਚਨਾਵਾਂ</string>
     <string name="oneplus_notifications_3rd_calls">3ਜੀ ਧਿਰ ਦੀਆਂ ਕਾਲਾਂ ਲਈ ਸੂਚਨਾਵਾਂ</string>
     <string name="oneplus_notifications_3rd_calls_summary">ਸੋਸ਼ਲ ਐਪਾਂ ਤੋਂ ਵੌਇਸ ਜਾਂ ਵੀਡੀਓ ਕਾਲਾਂ ਸੂਚਨਾਵਾਂ ਵਜੋਂ ਦਿਖਾਈਆਂ ਜਾਣਗੀਆਂ</string>
     <string name="oneplus_notifications_and_vibration">ਸੂਚਨਾ ਧੁਨੀ ਅਤੇ ਕੰਪਨ</string>
     <string name="oneplus_notifications_free">ਮੁਫ਼ਤ</string>
     <string name="oneplus_notifications_meet">ਮਿਲੋ</string>
-    <string name="oneplus_notifications_sound">Notification sound</string>
+    <string name="oneplus_notifications_sound">ਸੂਚਨਾ ਆਵਾਜ਼</string>
     <string name="oneplus_o2_contributors">OxygenOS ਯੋਗਦਾਨੀ</string>
     <string name="oneplus_open_bed_time_mode_schedule_summary">"ਇੱਕ ਵਿਸ਼ੇਸ਼-ਵਿਉਂਤਬੱਧ ਸਮਾਂ ਰੇਂਜ 'ਤੇ ਚਾਲੂ ਕਰੋ"</string>
     <string name="oneplus_open_bed_time_mode_schedule_title">ਅਨੁਸੂਚੀ</string>
@@ -945,30 +953,30 @@
     <string name="oneplus_prior_to_use_you_need_to">ਵਰਤੋਂ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ, ਤੁਹਾਨੂੰ ਹੇਠਾਂ ਲਿਖਿਆਂ ਦੀ ਲੋੜ ਹੈ：</string>
     <string name="oneplus_privacy_policy">ਪਰਦੇਦਾਰੀ ਨੀਤੀ</string>
     <string name="oneplus_privacy_protection_title">ਏਨਕ੍ਰਿਪਟ ਕੀਤੀ ਥਾਂ</string>
-    <string name="oneplus_product_info_introduce">ਡਿਵਾਈਸ ਦੀ ਜਾਣਕਾਰੀ &amp; ਵਾਰੰਟੀ ਕਾਰਡ</string>
+    <string name="oneplus_product_info_introduce">ਯੰਤਰ ਦੀ ਜਾਣਕਾਰੀ &amp; ਵਾਰੰਟੀ ਕਾਰਡ</string>
     <string name="oneplus_product_info_summary">ਵਾਰੰਟੀ ਕਾਰਡ, ਪਹਿਲਾਂ ਤੋਂ ਇੰਸਟਾਲ ਕੀਤਿਆਂ ਦੀ ਸੂਚੀ</string>
     <string name="oneplus_proximity_summary_disable">ਐਂਬੀਏਂਟ ਡਿਸਪਲੇ ਬੰਦ ਹੋਣ ਕਾਰਨ ਅਣਉਪਲਬਧ ਹੈ</string>
     <string name="oneplus_quick_clipboard">ਤਤਕਾਲ ਕਲਿੱਪਬੋਰਡ</string>
     <string name="oneplus_quick_clipboard_summary">ਕਾਪੀ ਕਰਨ ਦੀ ਸਮਰੱਥਾ ਵਿੱਚ ਵਾਧਾ ਕਰੋ ਅਤੇ ਫਿਰ ਕਾਪੀ ਦੇ ਅਨੁਸਾਰ ਅਗਲੀ ਕਾਰਵਾਈ ਦੀ ਸਿਫ਼ਾਰਸ਼ ਕਰੋ</string>
-    <string name="oneplus_quick_gestures">ਸੰਕੇਤ</string>
+    <string name="oneplus_quick_gestures">ਇਸ਼ਾਰੇ</string>
     <string name="oneplus_quick_gestures_title">ਤੁਰੰਤ ਜੈਸਚਰ</string>
     <string name="oneplus_quick_launch_how_to_exit_summary">ਤਤਕਾਲ ਲਾਂਚ ਪੈਨਲ ਵਿੱਚੋਂ ਬਾਹਰ ਜਾਣ ਲਈ ਹੇਠਾਂ ਵੱਲ ਸਵਾਈਪ ਕਰੋ</string>
     <string name="oneplus_quick_launch_how_to_exit_title">ਤਤਕਾਲ ਲਾਂਚ ਵਿੱਚੋਂ ਬਾਹਰ ਜਾਓ</string>
     <string name="oneplus_quick_launch_how_to_use_summary">"1.ਤਤਕਾਲ ਲਾਂਚ ਪੇਨਲ ਨੂੰ ਖੋਲ੍ਹਣ ਲਈ ਅਨਲੌਕ ਕਰਨ ਤੋਂ ਬਾਅਦ ਆਪਣੀ ਉਂਗਲ ਨੂੰ ਦਬਾਉਣਾ ਜਾਰੀ ਰੱਖੋ
 2. ਸ਼ੌਰਟਕੱਟ ਨੂੰ ਚੁਣਨ ਲਈ ਸਵਾਈਪ ਕਰੋ ਅਤੇ ਉਸ ਨੂੰ ਲਾਂਚ ਕਰਨ ਲਈ ਆਪਣੀ ਉਂਗਲ ਚੁੱਕੋ"</string>
     <string name="oneplus_quick_launch_how_to_use_title">ਤਤਕਾਲ ਲਾਂਚ ਦੀ ਵਰਤੋਂ ਕਰਨਾ</string>
-    <string name="oneplus_quick_launch_summary">ਤੁਰੰਤ ਭੁਗਤਾਨ ਨੂੰ ਲਾਂਚ ਕਰਨ ਲਈ ਜਾਂ ਐਪਾਂ ਨੂੰ ਕਿਰਿਆਸ਼ੀਲ ਕਰਨ ਲਈ ਫਿੰਗਰਪ੍ਰਿੰਟ ਪਛਾਣ ਖੇਤਰ ਨੂੰ ਦੇਰ ਤੱਕ ਦਬਾਓ</string>
+    <string name="oneplus_quick_launch_summary">ਕੁਇਕ ਪੇ ਨੂੰ ਲਾਂਚ ਕਰਨ ਜਾਂ ਐਪਸ ਨੂੰ ਕਿੑਆਸ਼ੀਲ ਕਰਨ ਵਾਸਤੇ ਫਿੰਗਰਪਿੰੑਟ ਪਛਾਣ ਖੇਤਰ ਨੂੰ ਲੰਬੇ ਸਮੇਂ ਤੱਕ ਦਬਾਈ ਰੱਖੋ</string>
     <string name="oneplus_quick_launch_title">ਤਤਕਾਲ ਲਾਂਚ</string>
-    <string name="oneplus_quick_launch_toggle_summary">ਫ਼ੋਨ ਨੂੰ ਲੌਕ ਕੀਤੇ ਹੋਣ ‘ਤੇ ਤੁਰੰਤ ਭੁਗਤਾਨ ਨੂੰ ਲਾਂਚ ਕਰਨ ਲਈ ਜਾਂ ਐਪਾਂ ਨੂੰ ਕਿਰਿਆਸ਼ੀਲ ਕਰਨ ਲਈ ਫਿੰਗਰਪ੍ਰਿੰਟ ਪਛਾਣ ਖੇਤਰ ਨੂੰ ਦੇਰ ਤੱਕ ਦਬਾਓ</string>
+    <string name="oneplus_quick_launch_toggle_summary">ਜਦੋਂ ਫੋਨ ਲੋਕ ਹੋਵੇ, ਤਾਂ ਕੁਇਕ ਪੇ ਨੂੰ ਲਾਂਚ ਕਰਨ ਜਾਂ ਐਪਸ ਨੂੰ ਕਿੑਆਸ਼ੀਲ ਕਰਨ ਵਾਸਤੇ ਫਿੰਗਰਪਿੰੑਟ ਪਛਾਣ ਖੇਤਰ ਨੂੰ ਲੰਬੇ ਸਮੇਂ ਤੱਕ ਦਬਾਈ ਰੱਖੋ</string>
     <string name="oneplus_quick_launch_toggle_title">ਤਤਕਾਲ ਲਾਂਚ ਨੂੰ ਚਾਲੂ ਕਰੋ</string>
-    <string name="oneplus_quick_reply">ਲੈਂਡਸਕੇਪ ਵਿੱਚ ਤੁਰੰਤ ਜਵਾਬ ਦਿਓ</string>
+    <string name="oneplus_quick_reply">ਲੈਂਡਸਕੇਪ ਵਿੱਚ ਤੁਰੰਤ ਜਵਾਬ</string>
     <string name="oneplus_quick_reply_content">ਵੀਡੀਓ ਜਾਂ ਗੇਮ ਨੂੰ ਬਿਨਾਂ ਰੋਕੇ ਸੂਚਨਾਵਾਂ ਨੂੰ ਤੁਰੰਤ ਦੇਖੋ ਅਤੇ ਜਵਾਬ ਦਿਓ। ਪਰੇਸ਼ਾਨ ਨਾ ਕਰੋ ਮੋਡ ਨੂੰ ਸਮਰੱਥ ਕਰਨ ਲਈ ਚੈਟ ਬੁਲਬੁਲਿਆਂ ਨੂੰ ਹੇਠਾਂ ਵੱਲ ਖਿੱਚੋ ਜਦੋਂ ਤੱਕ ਤੁਸੀਂ ਐਪ ਤੋਂ ਬਾਹਰ ਨਹੀਂ ਆ ਜਾਂਦੇ।</string>
     <string name="oneplus_quick_reply_description">"ਤੁਸੀਂ WeChat, QQ ਜਾਂ ਹੋਰ ਲੈਂਡਸਕੇਪ ਐਪਾਂ ਤੋਂ ਸੁਨੇਹਾ ਪ੍ਰਾਪਤ ਹੋਣ 'ਤੇ ਤੁਰੰਤ ਜਵਾਬ ਦੇ ਸਕਦੇ ਹੋ"</string>
     <string name="oneplus_quick_reply_description_O2">"ਤੁਸੀਂ WhatsApp ਜਾਂ ਹੋਰ ਲੈਂਡਸਕੇਪ ਐਪਾਂ ਤੋਂ ਸੁਨੇਹਾ ਪ੍ਰਾਪਤ ਹੋਣ 'ਤੇ ਤੁਰੰਤ ਜਵਾਬ ਦੇ ਸਕਦੇ ਹੋ"</string>
     <string name="oneplus_quick_reply_label">ਤਤਕਾਲ ਜਵਾਬ ਦਿਓ</string>
     <string name="oneplus_quick_reply_portrait_mode">ਤਤਕਾਲ ਜਵਾਬ ਦਿਓ ਨੂੰ ਪੋਰਟ੍ਰੇਟ ਮੋਡ ਵਿੱਚ ਸਮਰੱਥ ਕਰੋ</string>
     <string name="oneplus_quick_reply_summary">ਕੁਝ ਇਨਪੁਟ ਢੰਗ ਸ਼ਾਇਦ ਫਲੋਟਿੰਗ ਮੋਡ ਨੂੰ ਸਮਰੱਥ ਨਾ ਕਰਨ</string>
-    <string name="oneplus_quick_reply_title">ਤੁਰੰਤ ਜਵਾਬ ਦੇਣ ਵੇਲੇ ਫਲੋਟਿੰਗ ਕੀਬੋਰਡ ਦੀ ਵਰਤੋਂ ਕਰੋ</string>
+    <string name="oneplus_quick_reply_title">ਜਦੋਂ ਤੁਰੰਤ ਜਵਾਬ ਦੇਣਾ ਹੋਵੇ ਤਾਂ ਫਲੋਟਿੰਗ ਕੀਬੋਰਡ ਦੀ ਵਰਤੋਂ ਕਰੋ</string>
     <string name="oneplus_quick_turn_on_assistant_app">ਸਹਾਇਕ ਐਪ ਨੂੰ ਤੁਰੰਤ ਕਿਰਿਆਸ਼ੀਲ ਕਰੋ</string>
     <string name="oneplus_quick_turn_on_assistant_app_summary">ਸਹਾਇਕ ਐਪ ਨੂੰ ਕਿਰਿਆਸ਼ੀਲ ਕਰਨ ਲਈ ਪਾਵਰ ਬਟਨ ਨੂੰ 0.5 ਸਕਿੰਟ ਲਈ ਅਤੇ ਫ਼ੋਨ ਦੀ ਪਾਵਰ ਬੰਦ ਕਰਨ ਲਈ 3 ਸਕਿੰਟ ਤੱਕ ਹੋਲਡ ਕਰੋ</string>
     <string name="oneplus_quick_turn_on_camera">ਤੇਜ਼ੀ ਨਾਲ ਕੈਮਰਾ ਚਾਲੂ ਕਰੋ</string>
@@ -983,7 +991,7 @@
     <string name="oneplus_quickpay_unlock_swtch_title">"ਸਕ੍ਰੀਨ ਚਾਲੂ ਹੋਣ 'ਤੇ ਤਤਕਾਲ ਭੁਗਤਾਨ ਕਰੋ"</string>
     <string name="oneplus_quickpay_way_alipay_qrcode">Alipay QR ਕੋਡ</string>
     <string name="oneplus_quickpay_way_alipay_scanning">Alipay ਸਕੈਨ</string>
-    <string name="oneplus_quickpay_way_paytm">Paytm</string>
+    <string name="oneplus_quickpay_way_paytm">ਪੇਟੀਐਮ</string>
     <string name="oneplus_quickpay_way_wecaht_qrcode">WeChat QR ਕੋਡ</string>
     <string name="oneplus_quickpay_way_wecaht_ridecode">WeChat ਟ੍ਰਾਂਸਿਟ QR ਕੋਡ</string>
     <string name="oneplus_quickpay_way_wecaht_scanning">WeChat ਸਕੈਨ</string>
@@ -996,9 +1004,9 @@
     <string name="oneplus_reading_mode_activate_manual">"ਦਸਤੀ ਤੌਰ 'ਤੇ ਕਿਰਿਆਸ਼ੀਲ ਕਰੋ"</string>
     <string name="oneplus_reading_mode_add_apps">ਪੜ੍ਹਨ ਮੋਡ ਲਈ ਐਪਾਂ ਜੋੜੋ</string>
     <string name="oneplus_reading_mode_ask">ਹਰ ਵਾਰ ਪੁੱਛੋ</string>
-    <string name="oneplus_reading_mode_auto_summary">"ਪੜ੍ਹਨ ਮੋਡ ਇਹਨਾਂ ਐਪਾਂ ਨੂੰ ਖੋਲ੍ਹੇ ਜਾਣ 'ਤੇ ਸਵੈਚਲਿਤ ਤਰੀਕੇ ਨਾਲ ਚਾਲੂ ਹੋ ਜਾਵੇਗਾ ਅਤੇ ਇਹਨਾਂ ਨੂੰ ਬੰਦ ਕੀਤੇ ਜਾਣ 'ਤੇ ਸਵੈਚਲਿਤ ਤਰੀਕੇ ਨਾਲ ਬੰਦ ਹੋ ਜਾਵੇਗਾ"</string>
+    <string name="oneplus_reading_mode_auto_summary">"ਪੜ੍ਹਨ ਮੋਡ ਇਹਨਾਂ ਐਪਾਂ ਨੂੰ ਖੋਲ੍ਹੇ ਜਾਣ 'ਤੇ ਸਵੈਚਲਿਤ ਤਰੀਕੇ ਨਾਲ ਚਾਲੂ ਹੋ ਜਾਵੇਗਾ ਅਤੇ ਇਹਨਾਂ ਨੂੰ ਬੰਦ ਕੀਤੇ ਜਾਣ 'ਤੇ ਸਵੈਚਲਿਤ ਤਰੀਕੇ ਨਾਲ ਬੰਦ ਹੋ ਜਾਵੇਗਾ।"</string>
     <string name="oneplus_reading_mode_available">ਕੋਈ ਪ੍ਰਭਾਵ ਨਹੀਂ</string>
-    <string name="oneplus_reading_mode_block_peek_notifications">ਪੀਕ ਸੂਚਨਾਵਾਂ ਬਲੌਕ ਕਰੋ</string>
+    <string name="oneplus_reading_mode_block_peek_notifications">ਪੀਕ ਅਧਿਸੂਚਨਾਵਾਂ ਨੂੰ ਬਲੌਕ ਕਰੋ</string>
     <string name="oneplus_reading_mode_chromatic">ਕ੍ਰੋਮੈਟਿਕ ਪ੍ਰਭਾਵ</string>
     <string name="oneplus_reading_mode_default_state">ਡਿਫਾਲਟ ਸਟੇਟ</string>
     <string name="oneplus_reading_mode_manual_settings">ਮੈਨੁਅਲ ਸੈਟਿਂਗ</string>
@@ -1045,7 +1053,7 @@
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">ਪੜ੍ਹਣ ਮੋਡ ਚਾਲੂ ਹੋਣ ਕਾਰਨ ਅਣਉਪਲਬਧ ਹੈ</string>
     <string name="oneplus_screen_color_mode_soft">ਹਲਕਾ</string>
     <string name="oneplus_screen_color_mode_title">ਸਕ੍ਰੀਨ ਕੈਲੀਬ੍ਰੇਸ਼ਨ</string>
-    <string name="oneplus_screen_color_mode_title_summary">ਰਾਤਰੀ ਮੋਡ ਚਾਲੂ ਹੋਣ ਕਾਰਨ ਅਣਉਪਲਬਧ ਹੈ</string>
+    <string name="oneplus_screen_color_mode_title_summary">ਦਿੑਸ਼ਟੀਗਤ ਆਰਾਮਦਾਇਕ ਮੋਡ ਚਾਲੂ ਹੋਣ ਕਾਰਨ ਅਣਉਪਲਬਧ ਹੈ</string>
     <string name="oneplus_screen_features_not_available_toast">"ਚਾਲੂ ਕੀਤੇ ਹੋਣ 'ਤੇ, ਸਕ੍ਰੀਨ ਕੈਲੀਬ੍ਰੇਸ਼ਨ ਵਰਗੀਆਂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਉਪਲਬਧ ਨਹੀਂ ਹੋਣਗੀਆਂ"</string>
     <string name="oneplus_screen_refresh_rate">ਤਾਜ਼ਾ ਕਰਨ ਦੀ ਦਰ</string>
     <string name="oneplus_screen_refresh_rate_60hz_summary">ਬਿਹਤਰ ਬੈਟਰੀ ਜੀਵਨ ਨਾਲ ਘੱਟ ਨਿਰਮਲ</string>
@@ -1058,7 +1066,7 @@
     <string name="oneplus_screen_resolution_adjust_intelligent_switch_summary">"ਆਪਣੇ-ਆਪ ਉਚਿਤ ਰੈਜ਼ੋਲੂਸ਼ਨ 'ਤੇ ਸਵਿੱਚ ਕਰੋ"</string>
     <string name="oneplus_screen_resolution_adjust_other_summary">ਅਧਿਕਤਮ ਸਪਸ਼ੱਟਤਾ, ਵਧੀ ਹੋਈ ਪਾਵਰ ਖਪਤ (3120x1440)</string>
     <string name="oneplus_screen_resolution_adjust_other_summary_19811">ਅਧਿਕਤਮ ਸਪਸ਼ੱਟਤਾ, ਵਧੀ ਹੋਈ ਪਾਵਰ ਖਪਤ (3168x1440)</string>
-    <string name="oneplus_search_keyword_about_settings">device name, android version, build number, model, CPU, storage, RAM, ROM, camera, pixel, screen, Verification, Legal information, Warranty card, preinstalled list, Award</string>
+    <string name="oneplus_search_keyword_about_settings">ਯੰਤਰ ਦਾ ਨਾਮ, ਐਂਡਰਾਇਡ ਸੰਸਕਰਨ, ਨਿਰਮਾਣ ਨੰਬਰ, ਮਾਡਲ, CPU, ਸਟੋਰੇਜ RAM, ROM, ਕੈਮਰਾ, ਪਿਕਸਲ, ਤਸਦੀਕ, ਕਾਨੂੰਨੀ ਜਾਣਕਾਰੀ, ਵਾਰੰਟੀ ਕਾਰਡ, ਪੂਰਵ-ਸਥਾਪਿਤ ਸੂਚੀ, ਪੁਰਸਕਾਰ</string>
     <string name="oneplus_search_keyword_accent_color">ਰੰਗ</string>
     <string name="oneplus_search_keyword_app_lock">ਲੌਕ,PIN,ਪਾਸਵਰਡ</string>
     <string name="oneplus_search_keyword_connected_device_manager">ਡਿਵਾਈਸ ਪ੍ਰਬੰਧਕ ਕਨੈਕਟ ਹੋਇਆ, ਡਿਵਾਈਸ</string>
@@ -1097,8 +1105,11 @@
     <string name="oneplus_search_keyword_swap_navkeys">ਸਵੈਪ ਬਟਨ</string>
     <string name="oneplus_search_keyword_switch">ਟ੍ਰਾਂਸਫਰ, ਡੇਟਾ ਮਾਈਗ੍ਰੇਸ਼ਨ</string>
     <string name="oneplus_search_keyword_theme_settings">ਲਾੱਕ ਸਕ੍ਰੀਨ ਕਸਟਮਾਇਜ਼ੇਸ਼ਨ, ਵਾਲਪੇਪਰ, ਕਲਾੱਕ ਸਟਾਇਲ, ਫਿੰਗਰਪ੍ਰਿੰਟ ਐਨਿਮੇਸ਼ਨ, Horizon Light, ਸਿਸਟਮ ਕਸਟਮਾਇਜ਼ੇਸ਼ਨ, ਐਕਸੇਂਟ ਕਲੱਰ, ਆਕਾਰ, ਫੌਂਟ, ਟੋਨ, ਆਇਕਨ ਪੈਕ, ਪ੍ਰਕਾਸ਼ਮਈ ਰੋਸ਼ਨੀ, ਸੂਖਮ ਹਨੇਰਾ, ਚਮਕੀਲੀਆਂ ਰੰਗਤਾਂ</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl">ਲੌਕ ਸਕ੍ਰੀਨ ਅਨੁਕੂਲਨ, ਵਾਲਪੇਪਰ, ਘੜੀ ਦਾ ਸਟਾਇਲ, ਫਿੰਗਰਪ੍ਰਿੰਟ ਐਨੀਮੇਸ਼ਨ, Horizon Light, ਸਿਸਟਮ ਅਨੁਕੂਲਨ, ਐਕਸੇਂਟ ਰੰਗ, ਆਕਾਰ, ਫੌਂਟ, ਟੋਨ, ਆਈਕੋਨ ਪੈਕ, ਪ੍ਰਕਾਸ਼ਮਈ ਰੋਸ਼ਨੀ, ਸੂਖਮ ਹਨੇਰਾ, ਚਮਕੀਲੀਆਂ ਰੰਗਤਾਂ, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light">ਲਾੱਕ ਸਕ੍ਰੀਨ ਕਸਟਮਾਇਜ਼ੇਸ਼ਨ, ਵਾਲਪੇਪਰ, ਕਲਾੱਕ ਸਟਾਇਲ, ਫਿੰਗਰਪ੍ਰਿੰਟ ਐਨਿਮੇਸ਼ਨ, Horizon Light, ਸਿਸਟਮ ਕਸਟਮਾਇਜ਼ੇਸ਼ਨ, ਐਕਸੇਂਟ ਕਲੱਰ, ਆਕਾਰ, ਫੌਂਟ, ਟੋਨ, ਆਇਕਨ ਪੈਕ, ਪ੍ਰਕਾਸ਼ਮਈ ਰੋਸ਼ਨੀ, ਸੂਖਮ ਹਨੇਰਾ, ਚਮਕੀਲੀਆਂ ਰੰਗਤਾਂ</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">ਲਾੱਕ ਸਕ੍ਰੀਨ ਕਸਟਮਾਇਜ਼ੇਸ਼ਨ, ਵਾਲਪੇਪਰ, ਕਲਾੱਕ ਸਟਾਇਲ, ਫਿੰਗਰਪ੍ਰਿੰਟ ਐਨਿਮੇਸ਼ਨ, Horizon Light, ਸਿਸਟਮ ਕਸਟਮਾਇਜ਼ੇਸ਼ਨ, ਐਕਸੇਂਟ ਕਲੱਰ, ਆਕਾਰ, ਫੌਂਟ, ਟੋਨ, ਆਇਕਨ ਪੈਕ, ਪ੍ਰਕਾਸ਼ਮਈ ਰੋਸ਼ਨੀ, ਸੂਖਮ ਹਨੇਰਾ, ਚਮਕੀਲੀਆਂ ਰੰਗਤਾਂ, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">ਲਾੱਕ ਸਕ੍ਰੀਨ ਕਸਟਮਾਇਜ਼ੇਸ਼ਨ, ਵਾਲਪੇਪਰ, ਕਲਾੱਕ ਸਟਾਇਲ, ਫਿੰਗਰਪ੍ਰਿੰਟ ਐਨਿਮੇਸ਼ਨ, Horizon Light, ਸਿਸਟਮ ਕਸਟਮਾਇਜ਼ੇਸ਼ਨ, ਐਕਸੇਂਟ ਕਲੱਰ, ਆਕਿੑਤੀ , ਫੌਂਟ, ਟੋਨ, ਆਇਕਨ ਪੈਕ, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_new">ਲਾੱਕ ਸਕ੍ਰੀਨ ਕਸਟਮਾਇਜ਼ੇਸ਼ਨ, ਵਾਲਪੇਪਰ, ਕਲਾੱਕ ਸਟਾਇਲ, ਫਿੰਗਰਪ੍ਰਿੰਟ ਐਨਿਮੇਸ਼ਨ, Horizon Light, ਸਿਸਟਮ ਕਸਟਮਾਇਜ਼ੇਸ਼ਨ, ਐਕਸੇਂਟ ਕਲੱਰ, ਆਕਿੑਤੀ , ਫੌਂਟ, ਟੋਨ, ਆਇਕਨ ਪੈਕ</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light">ਲਾੱਕ ਸਕ੍ਰੀਨ ਕਸਟਮਾਇਜ਼ੇਸ਼ਨ, ਵਾਲਪੇਪਰ, ਕਲਾੱਕ ਸਟਾਇਲ, ਫਿੰਗਰਪ੍ਰਿੰਟ ਐਨਿਮੇਸ਼ਨ, ਸਿਸਟਮ ਕਸਟਮਾਇਜ਼ੇਸ਼ਨ, ਐਕਸੇਂਟ ਕਲੱਰ, ਆਕਾਰ, ਫੌਂਟ, ਟੋਨ, ਆਇਕਨ ਪੈਕ, ਪ੍ਰਕਾਸ਼ਮਈ ਰੋਸ਼ਨੀ, ਸੂਖਮ ਹਨੇਰਾ, ਚਮਕੀਲੀਆਂ ਰੰਗਤਾਂ</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">ਲਾੱਕ ਸਕ੍ਰੀਨ ਕਸਟਮਾਇਜ਼ੇਸ਼ਨ, ਵਾਲਪੇਪਰ, ਕਲਾੱਕ ਸਟਾਇਲ, ਫਿੰਗਰਪ੍ਰਿੰਟ ਐਨਿਮੇਸ਼ਨ, ਸਿਸਟਮ ਕਸਟਮਾਇਜ਼ੇਸ਼ਨ, ਐਕਸੇਂਟ ਕਲੱਰ, ਆਕਿੑਤੀ , ਫੌਂਟ, ਟੋਨ, ਆਇਕਨ ਪੈਕ</string>
     <string name="oneplus_search_keyword_three_screenshots">ਸਕ੍ਰੀਨਸ਼ੌਟ</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">ਸੂਚਨਾਵਾਂ,ਅਨੁਭਵ,ਪ੍ਰੋਗਰਾਮ,ਸੁਧਾਰ</string>
@@ -1112,22 +1123,22 @@
     <string name="oneplus_security_lock_settings_summary">ਤਰਜੀਹਾਂ, ਸਥਾਨ ਸੇਵਾਵਾਂ, ਐਪ ਲੌਕਰ ਨੂੰ ਅਣ-ਲੌਕ ਕਰੋ</string>
     <string name="oneplus_security_lock_settings_title">ਸੁਰੱਖਿਆ &amp; ਪਰਦੇਦਾਰੀ</string>
     <string name="oneplus_security_settings_fingerprint_enroll_error_dialog_title">ਸੈੱਟਅੱਪ ਕਰਨਾ ਅਸਫਲ ਹੋਇਆ</string>
-    <string name="oneplus_security_settings_fingerprint_enroll_introduction_message">"ਆਪਣੇ ਫ਼ੋਨ ਨੂੰ ਅਨਲੌਕ ਕਰਨ, ਖ਼ਰੀਦਦਾਰੀਆਂ ਨੂੰ ਪ੍ਰਮਾਣਿਤ ਕਰਨ ਜਾਂ ਐਪਾਂ ਵਿੱਚ ਸਾਈਨ ਇਨ ਕਰਨ ਲਈ ਬਸ ਫਿੰਗਰਪ੍ਰਿੰਟ ਪਛਾਣ ਖੇਤਰ ਨੂੰ ਦਬਾਓ। 
+    <string name="oneplus_security_settings_fingerprint_enroll_introduction_message">"ਆਪਣੇ ਫੋਨ ਨੂੰ ਅਨਲਾਕ ਕਰਨ, ਖਰੀਦਾਰੀ ਨੂੰ ਅਧਿਕਾਰਤ ਕਰਨ ਜਾਂ ਫਿਰ ਐਪਸ ਵਿਚ ਲੋਗ-ਇਨ ਕਰਨ ਵਾਸਤੇ ਸਿਰਫ ਫਿੰਗਰਪਿੰੑਟ ਪਛਾਣ ਖੇਤਰ ਨੂੰ ਦਬਾਓ। 
 
 ਨੋਟ: 
-1.ਤੁਹਾਡਾ ਫਿੰਗਰਪ੍ਰਿੰਟ ਕਿਸੇ ਮਜ਼ਬੂਤ ਪੈਟਰਨ ਜਾਂ PIN ਤੋਂ ਘੱਟ ਸੁਰੱਖਿਅਤ ਹੋ ਸਕਦਾ ਹੈ।
-2.ਫਿੰਗਰਪ੍ਰਿੰਟ ਦੀ ਉਪਲਬਧਤਾ ਨੂੰ ਯਕੀਨੀ ਬਣਾਉਣ ਲਈ ਕਿਰਪਾ ਕਰਕੇ ਹਰ ਵਾਰ ਸੁਰੱਖਿਆਤਮਕ ਫਿਲਮ ਨੂੰ ਬਦਲਣ ਤੋਂ ਬਾਅਦ ਆਪਣੇ ਫਿੰਗਰਪ੍ਰਿੰਟ ਨੂੰ ਮੁੜ-ਦਰਜ ਕਰੋ।"</string>
+1. ਤੁਹਾਡੇ ਫਿੰਗਰਪਿੰੑਟ ਇਕ ਮਜ਼ਬੂਤ ਪੈਟਰਨ ਜਾਂ ਫਿਰ PIN.
+2. ਨਾਲੋਂ ਘੱਟ ਸੁਰੱਖਿਅਤ ਹੋ ਸਕਦੇ ਹਨ। ਫਿੰਗਰਪਿੰੑਟ ਦੀ ਉਪਲੱਬਧਤਾ ਨੂੰ ਸੁਨਿਸ਼ਚਿਤ ਕਰਨ ਵਾਸਤੇ ਸੁਰੱਖਿਆ ਫਿਲਮ ਦੀ ਹਰੇਕ ਤਬਦੀਲੀ ਤੋਂ ਬਾਅਦ ਕਿਰਪਾ ਕਰ ਕੇ ਆਪਣੇ ਫਿੰਗਰਪਿੰੑਟ ਨੂੰ ਦੁਬਾਰਾ ਦਾਖਲ ਕਰੋ।"</string>
     <string name="oneplus_security_settings_fingerprint_exists_dialog_message">ਇਸ ਫਿੰਗਰਪ੍ਰਿੰਟ ਨੂੰ ਪਹਿਲਾਂ ਹੀ ਪੰਜੀਕਿਰਤ ਕਰ ਲਿਆ ਗਿਆ ਹੈ, ਕਿਰਪਾ ਕਰਕੇ ਕਿਸੇ ਹੋਰ ਫਿੰਗਰਪ੍ਰਿੰਟ ਨੂੰ ਅਜ਼ਮਾਓ।</string>
     <string name="oneplus_security_settings_fingerprint_toggle_category_title">ਵਿਆਪਕ ਡਿਸਪਲੇਅ ਵਿਚ ਫਿੰਗਰਪਿੰੑਟ ਆਈਕਲ ਦਿਖਾਓ</string>
     <string name="oneplus_security_settings_fingerprint_toggle_category_title_for_always_on">ਫਿੰਗਰਪਿੰੑਟ ਆਈਕਨ ਪਾੑਥਮਿਕਤਾ</string>
     <string name="oneplus_security_settings_fingerprint_toggle_one_title">ਦਿਖਾਉਣ ਲਈ ਆਪਣੇ ਫੋਨ ਨੂੰ ਥੋੜਾ ਜਿਹਾ ਹਿਲਾਓ</string>
-    <string name="oneplus_security_settings_fingerprint_toggle_two_title">"ਦਿਖਾਉਣ ਲਈ ਸਕ੍ਰੀਨ 'ਤੇ ਟੈਪ ਕਰੋ"</string>
+    <string name="oneplus_security_settings_fingerprint_toggle_two_title">ਦਿਖਾਉਣ ਲਈ ਸਕੀੑਨ ’ਤੇ ਟੈਪ ਕਰੋ</string>
     <string name="oneplus_security_settings_fingerprint_toggle_two_toast_1">"\"ਕਿਰਿਆਸ਼ੀਲ ਕਰਨ ਲਈ ਦੋ ਵਾਰ ਟੈਪ ਕਰੋ\" ਸਮਰੱਥ ਕੀਤਾ ਹੋਇਆ ਹੈ ਅਤੇ \"ਦਿਖਾਉਣ ਲਈ ਸਕ੍ਰੀਨ 'ਤੇ ਟੈਪ ਕਰੋ\" ਨੂੰ ਅਸਮਰੱਥ ਕੀਤਾ ਜਾਵੇਗਾ"</string>
     <string name="oneplus_security_settings_fingerprint_toggle_two_toast_2">"\"ਦਿਖਾਉਣ ਲਈ ਸਕ੍ਰੀਨ 'ਤੇ ਟੈਪ ਕਰੋ\" ਨੂੰ ਸਮਰੱਥ ਕੀਤਾ ਹੋਇਆ ਹੈ ਅਤੇ \"ਕਿਰਿਆਸ਼ੀਲ ਕਰਨ ਲਈ ਦੋ ਵਾਰ ਟੈਪ ਕਰੋ\" ਨੂੰ ਅਸਮਰੱਥ ਕੀਤਾ ਜਾਵੇਗਾ"</string>
-    <string name="oneplus_security_settings_fingerprint_tolocation_advanced_settingsggle_two_title">"ਦਿਖਾਉਣ ਲਈ ਸਕ੍ਰੀਨ 'ਤੇ ਟੈਪ ਕਰੋ"</string>
-    <string name="oneplus_select_fingerprint_animation_effect_1">ਕੌਸਮੌਸ</string>
-    <string name="oneplus_select_fingerprint_animation_effect_2">ਵੇਵ</string>
-    <string name="oneplus_select_fingerprint_animation_effect_3">ਸਟ੍ਰਾਈਪ</string>
+    <string name="oneplus_security_settings_fingerprint_tolocation_advanced_settingsggle_two_title">ਦਿਖਾਉਣ ਲਈ ਸਕੀੑਨ ’ਤੇ ਟੈਪ ਕਰੋ</string>
+    <string name="oneplus_select_fingerprint_animation_effect_1">ਕੋਸਮੋਸ</string>
+    <string name="oneplus_select_fingerprint_animation_effect_2">ਤਰੰਗ</string>
+    <string name="oneplus_select_fingerprint_animation_effect_3">ਸਟਰਾਈਪ</string>
     <string name="oneplus_select_fingerprint_animation_effect_4">ਲਹਿਰ</string>
     <string name="oneplus_select_fingerprint_animation_effect_6">ਊਰਜਾ</string>
     <string name="oneplus_select_fingerprint_animation_effect_mcl">McLaren</string>
@@ -1138,7 +1149,7 @@
     <string name="oneplus_set_time">ਤੈਅ ਸਮੇਂ ਵਾਲਾ ਰਾਤਰੀ ਮੋਡ</string>
     <string name="oneplus_setting_ringtone">ਰਿੰਗਟੋਨ ਸੈੱਟ ਕਰੋ</string>
     <string name="oneplus_setting_sim_ringtone_switch">ਹਰੇਕ SIM ਕਾਰਡ ਲਈ ਰਿੰਗਟੋਨ ਸੈੱਟ ਕਰੋ</string>
-    <string name="oneplus_settings_lab_feature_boost_summary">ਤੁਹਾਡੀ ਰੋਜ਼ਾਨਾ ਵਰਤੋਂ ‘ਤੇ ਆਧਾਰਿਤ, ਸਮਾਰਟ ਬੂਸਟ OnePlus ਫ਼ੋਨਾਂ ਦੀ ਵੱਡੀ RAM ਦਾ ਪੂਰਾ ਲਾਹਾ ਲੈਂਦਾ ਹੈ, ਜੋ ਕਿ ਐਪਾਂ ਅਤੇ ਗੇਮਾਂ ਨੂੰ ਲੋਡ ਕਰਨ ਦੀ ਕਾਰਗੁਜ਼ਾਰੀ ਦਾ ਲਾਭ ਲੈਂਦਾ ਹੈ।</string>
+    <string name="oneplus_settings_lab_feature_boost_summary">ਤੁਹਾਡੀ ਰੋਜ਼ਾਨਾ ਦੀ ਵਰਤੋਂ ਦੇ ਆਧਾਰ ’ਤੇ ਸਮਾਰਟ ਬੂਸਟ OnePlus ਫੋਨਾਂ ਦੀ ਵੱਡੀ RAM ਦਾ ਪੂਰਾ ਫਾਇਦਾ ਉਠਾਉਂਦਾ ਹੈ ਜਿਸ ਨਾਲ ਕਿ ਐਪਸ ਅਤੇ ਖੇਡਾਂ ਦੀ ਲੋਡਿੰਗ ਸਮਰੱਥਾ ਵਿਚ ਸੁਧਾਰ ਹੁੰਦਾ ਹੈ।</string>
     <string name="oneplus_settings_lab_feature_boost_title">ਸਮਾਰਟ ਬੂਸਟ</string>
     <string name="oneplus_settings_refresh_rate_settings_120">120Hz ਸੈਟਿੰਗ</string>
     <string name="oneplus_settings_refresh_rate_settings_90">90Hz ਸੈਟਿੰਗ</string>
@@ -1162,16 +1173,17 @@
     <string name="oneplus_silent_mode_on">ਸਾਇਲੈਂਟ ਮੋਡ ਚਾਲੂ ਹੈ</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">ਅਲਾਰਮਾਂ ਨੂੰ ਛੱਡ ਕੇ, ਕਾਲਾਂ ਅਤੇ ਸੂਚਨਾਵਾਂ ਨੂੰ ਸਾਇਲੈਂਟ ਕੀਤਾ ਜਾਵੇਗਾ</string>
     <string name="oneplus_silent_mode_summary">ਅਲਾਰਮਾਂ ਨੂੰ ਛੱਡ ਕੇ, ਕਾਲਾਂ ਅਤੇ ਸੂਚਨਾਵਾਂ ਨੂੰ ਸਾਇਲੈਂਟ ਕੀਤਾ ਜਾਵੇਗਾ</string>
+    <string name="oneplus_silent_notifications_status_bar">ਸਾਈਲੈਂਟ ਅਧਿਸੂਚਨਾਵਾਂ ਨੂੰ ਸਟੇਟਸ ਬਾਰ ਵਿਚ ਛੁਪਾ ਦਿਓ</string>
     <string name="oneplus_sim1_ringtone_switch">SIM ਕਾਰਡ 1</string>
     <string name="oneplus_sim2_ringtone_switch">SIM ਕਾਰਡ 2</string>
-    <string name="oneplus_simcard_title">SIM</string>
+    <string name="oneplus_simcard_title">ਕਾਰਡ</string>
     <string name="oneplus_sla_down_load_app_summary">"ਹੌਟਸਪੌਟ ਜਾਂ Wi‑Fi ਡਾਇਰੈਕਟ ਦੇ ਚਾਲੂ ਹੋਣ 'ਤੇ ਡਾਊਨਲੋਡ ਗਤੀਵਰਧਣ ਉਪਲਬਧ ਨਹੀਂ ਹੋਵੇਗਾ"</string>
     <string name="oneplus_sleep_standby_summary">ਸੌਣ ਦੇ ਦੌਰਾਨ ਬੈਟਰੀ ਜੀਵਨ ਨੂੰ ਅਨੁਕੂਲਿਤ (ਜਿਵੇਂ ਕਿ ਨੈੱਟਵਰਕ ਕਨੈਕਸ਼ਨਾਂ ਨੂੰ ਅਸਮਰੱਥ ਕਰਕੇ) ਕਰੋ। ਇਸ ਨਾਲ ਸ਼ਾਇਦ ਉਸ ਸਮੇਂ ਦੌਰਾਨ ਐਪਾਂ ਸੂਚਨਾਵਾਂ ਪ੍ਰਾਪਤ ਨਾ ਕਰਨ।</string>
     <string name="oneplus_sleep_standby_title">ਸਲੀਪ ਸਟੈਂਡਬਾਇ ਅਨੁਕੂਲਣ</string>
     <string name="oneplus_smart_background_management_title">ਆਕ੍ਰਮਣਸ਼ੀਲ ਡੋਜ਼ &amp; ਐਪ ਹਾਈਬਰਨੇਸ਼ਨ</string>
     <string name="oneplus_smart_wifi_connection">ਸਮਾਰਟ Wi‑Fi ਕਨੈਕਸ਼ਨ</string>
     <string name="oneplus_sms">SMS</string>
-    <string name="oneplus_sms_and_vibration">SMS ਰਿੰਗਟੋਨ ਅਤੇ ਕੰਪਨ</string>
+    <string name="oneplus_sms_and_vibration">SMS ਰਿੰਗਟੋਨ&amp; ਕੰਪਨ</string>
     <string name="oneplus_snooze_options_title">ਸੂਚਨਾ ਵਾਲੀ ਸੂਚੀ ਤੋਂ ਸੂਚਨਾਵਾਂ ਨੂੰ ਸਨੂਜ਼ ਕਰੋ</string>
     <string name="oneplus_sound_and_vibrate">ਆਵਾਜ਼ &amp; ਕੰਪਨ</string>
     <string name="oneplus_sound_effects_and_modes">ਸਾਊਂਡ ਪੑਭਾਵ ਅਤੇ ਮੋਡ</string>
@@ -1179,7 +1191,7 @@
     <string name="oneplus_sound_tuner">Dolby Atmos</string>
     <string name="oneplus_status_summary">ਫ਼ੋਨ ਨੰਬਰ, ਸਿਗਨਲ, ਆਦਿ</string>
     <string name="oneplus_stop_run">ਜ਼ਬਰਦਸਤੀ ਰੋਕੋ</string>
-    <string name="oneplus_storage">ਸਟੋਰੇਜ</string>
+    <string name="oneplus_storage">STORAGE</string>
     <string name="oneplus_sunrise_sunset">"ਸੂਰਜ ਦੇ ਛਿਪਣ ਤੋਂ ਸੂਰਜ ਦੇ ਚੜ੍ਹਣ ਤੱਕ ਸਵੈਚਲਿਤ ਤੌਰ 'ਤੇ ਸਮਰੱਥ ਕਰੋ"</string>
     <string name="oneplus_support_apps">ਸਮਰਥਿਤ ਐਪਾਂ</string>
     <string name="oneplus_support_summary">ਡਿਵਾਈਸ ਵਰਤੋਂ ਦੇ ਨੁਕਤੇ ਅਤੇ ਅਕਸਰ ਪੁੱਛੇ ਜਾਣ ਵਾਲੇ ਸਵਾਲ</string>
@@ -1200,11 +1212,11 @@
     <string name="oneplus_system_stability_add">ਸਿਸਟਮ ਸਥਿਰਤਾ ਸੁਧਾਰ ਪ੍ਰੋਗਰਾਮ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ</string>
     <string name="oneplus_system_stability_summary">"OnePlus ਨੂੰ ਸਿਸਟਮ ਲੌਗਾਂ ਤੱਕ ਗੁਮਨਾਮ ਤੌਰ 'ਤੇ ਪਹੁੰਚ ਦੀ ਇਜਾਜ਼ਤ ਦਿਓ। ਕੋਈ ਤਰੁੱਟੀ ਹੋਣ ਦੇ ਮਾਮਲੇ ਵਿੱਚ, ਲੌਗਾਂ ਵਾਲੀ ਇੱਕ ਬੱਗ ਰਿਪੋਰਟ ਨੂੰ ਸਪੁਰਦ ਕੀਤੇ ਜਾਣ ਦੀ ਇਜਾਜ਼ਤ ਦਿਓ। ਲੌਗਾਂ ਦੀ ਵਰਤੋਂ ਸਿਰਫ਼ ਸਿਸਟਮ ਤਰੁੱਟੀ ਵਿਸ਼ਲੇਸ਼ਣ ਅਤੇ ਸਥਿਰਤਾ ਨੂੰ ਬਿਹਤਰ ਬਣਾਉਣ ਲਈ ਕੀਤੀ ਜਾਵੇਗੀ"</string>
     <string name="oneplus_system_stability_title">ਸਿਸਟਮ ਸਥਿਰਤਾ ਪ੍ਰੋਗਰਾਮ</string>
-    <string name="oneplus_system_vibrate">ਸਿਸਟਮ ਵਾਈਬ੍ਰੇਸ਼ਨ</string>
+    <string name="oneplus_system_vibrate">ਸਿਸਟਮ ਕੰਪਨ</string>
     <string name="oneplus_theme_accent_color">ਐਕਸੈਂਟ ਰੰਗ</string>
-    <string name="oneplus_theme_accent_color_customization">ਅਨੁਕੂਲਣ</string>
+    <string name="oneplus_theme_accent_color_customization">ਕਸਟਮਾਇਜ਼ੇਸ਼ਨ</string>
     <string name="oneplus_theme_accent_color_presetcolor">ਪ੍ਰੀਸੈਟ ਕਲੱਰ</string>
-    <string name="oneplus_theme_accent_color_select">ਐਕਸੇਂਟ ਕਲੱਰ ਨੂੰ ਚੁਣੋ</string>
+    <string name="oneplus_theme_accent_color_select">ਕੋਈ ਐਕਸੈਂਟ ਰੰਗ ਚੁਣੋ</string>
     <string name="oneplus_theme_apply_summary">ਇਸ ਥੀਮ ਨੂੰ ਲਾਗੂ ਕਰਨ ਤੋਂ ਬਾਅਦ, ਤੁਹਾਡੀ ਕਸਟਮਾਇਜੇਸ਼ਨ ਦੇ ਵਿਕਲਪ ਬੰਦ ਹੋ ਜਾਣਗੇ</string>
     <string name="oneplus_theme_apply_title">ਕੀ ਤੁਸੀਂ ਇਸ ਥੀਮ ਨੂੰ ਲਾਗੂ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
     <string name="oneplus_theme_clock">ਘੜੀ ਦੀ ਸ਼ੈਲੀ</string>
@@ -1220,7 +1232,7 @@
     <string name="oneplus_theme_fingerprint_snake_tip">ਇਹ ਫੀਚਰ ਉਦੋਂ ਹੀ ਉਪਲੱਬਧ ਹੋਵੇਗਾ ਜਦੋਂ ਫਿੰਗਰਪ੍ਰਿੰਟ ਆੱਨ ਹੋਵੇਗਾ</string>
     <string name="oneplus_theme_font">ਫੌਂਟ</string>
     <string name="oneplus_theme_font_content">ਦੁਨੀਆ ਨਾਲ ਹੱਥ ਮਿਲਾਉਂਦੇ ਹੋਏ ਸਰਵੋਤਮ ਤਕਨਾਲੋਜੀ ਨੂੰ ਸਾਂਝਾ ਕਰੋ</string>
-    <string name="oneplus_theme_icon_pack">ਆਈਕੱਨ ਪੈਕ</string>
+    <string name="oneplus_theme_icon_pack">ਆਈਕਨ ਪੈਕ</string>
     <string name="oneplus_theme_lock_screen_customization">ਲਾੱਕ ਸਕ੍ਰੀਨ ਕਸਟਮਾਇਜੇਸ਼ਨ</string>
     <string name="oneplus_theme_preset">ਪ੍ਰੀਸੈਟ ਥੀਮ</string>
     <string name="oneplus_theme_preset_color">ਚਮਕੀਲੀਆਂ ਰੰਗਤਾਂ</string>
@@ -1238,30 +1250,30 @@
     <string name="oneplus_theme_system_customization">ਸਿਸਟਮ ਕਸਟਮਾਇਜੇਸ਼ਨ</string>
     <string name="oneplus_theme_tone">ਟੋਨ</string>
     <string name="oneplus_theme_tone_effect_color">ਰੰਗਦਾਰ</string>
-    <string name="oneplus_theme_tone_effect_dark">ਡਾਰਕ</string>
+    <string name="oneplus_theme_tone_effect_dark">ਗਹਿਰਾ</string>
     <string name="oneplus_theme_tone_effect_light">ਹਲਕਾ</string>
     <string name="oneplus_theme_tone_effect_title">ਟੋਨ ਚੁਣੋ</string>
     <string name="oneplus_theme_wallpaper">ਵਾਲਪੇਪਰ</string>
     <string name="oneplus_three_screenshots_enable_summary">"ਸਕ੍ਰੀਨਸ਼ੌਟ ਲੈਣ ਲਈ ਸਕ੍ਰੀਨ 'ਤੇ ਤਿੰਨ ਉਂਗਲਾਂ ਨਾਲ ਸਵਾਈਪ ਕਰੋ"</string>
     <string name="oneplus_three_screenshots_enable_title">ਤਿੰਨ-ਉਂਗਲਾਂ ਵਾਲਾ ਸਕ੍ਰੀਨਸ਼ੌਟ</string>
-    <string name="oneplus_timepower_power_off_title">ਪਾਵਰ ਬੰਦ ਹੋਣ ਦਾ ਸਮਾਂ ਸੈੱਟ ਕਰੋ</string>
-    <string name="oneplus_timepower_power_on_title">ਪਾਵਰ ਚਾਲੂ ਦਾ ਸਮਾਂ ਸੈੱਟ ਕਰੋ</string>
+    <string name="oneplus_timepower_power_off_title">ਪਾਵਰ ਬੰਦ ਕਰਨ ਲਈ ਸਮਾਂ ਨਿਰਧਾਰਤ ਕਰੋ</string>
+    <string name="oneplus_timepower_power_on_title">ਪਾਵਰ ਚਾਲੂ ਕਰਨ ਦੇ ਲਈ ਸਮਾਂ ਨਿਰਧਾਰਤ ਕਰੋ</string>
     <string name="oneplus_timer_shutdown_disable_summary">"ਇਸ ਵਿਸ਼ੇਸ਼ਤਾ ਨੂੰ ਅਣਲੌਕ ਕਰਨ ਲਈ ਸਟਾਰਟਅੱਪ 'ਤੇ ਪਾਸਵਰਡ ਨੂੰ ਅਸਮਰੱਥ ਕਰੋ"</string>
     <string name="oneplus_timer_shutdown_summary">ਤੁਹਾਡਾ ਫ਼ੋਨ %d ਸਕਿੰਟ ਵਿੱਚ ਸਵੈਚਲਿਤ ਤਰੀਕੇ ਨਾਲ ਸ਼ੱਟ ਡਾਊਨ ਹੋ ਜਾਵੇਗਾ। ਤੁਰੰਤ ਸ਼ੱਟ ਡਾਊਨ ਕਰਨ ਲਈ ਪੁਸ਼ਟੀ ਕਰੋ।</string>
     <string name="oneplus_to_select_assistant_app_dialog">ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੀ ਪਸੰਦ ਦੀ ਸਹਾਇਕ ਐਪ ਨੂੰ ਕਿਰਿਆਸ਼ੀਲ ਕਰਨ ਲਈ ਕਿਰਿਆਸ਼ੀਲ ਕਰੋ</string>
-    <string name="oneplus_tools_quicklaunch_summary">ਗੇਮਿੰਗ ਮੋਡ, ਤੁਰੰਤ ਲਾਂਚ, ਸਮਾਨਾਂਤਰ ਐਪਾਂ</string>
-    <string name="oneplus_tools_quicklaunch_summary_no_gamingmode">ਤੁਰੰਤ ਲਾਂਚ, ਸਮਾਨਾਂਤਰ ਐਪਾਂ</string>
+    <string name="oneplus_tools_quicklaunch_summary">ਗੇਮਿੰਗ ਮੋਡ, ਤੁਰੰਤ ਲਾਂਚ, ਸਮਾਨਾਂਤਰ ਐਪਾਂ, ਐਪ ਲੌਕਰ</string>
+    <string name="oneplus_tools_quicklaunch_summary_no_gamingmode">ਤੁਰੰਤ ਲਾਂਚ, ਸਮਾਨਾਂਤਰ ਐਪਾਂ, ਐਪ ਲੌਕਰ</string>
     <string name="oneplus_tools_summary">ਗੇਮਿੰਗ ਮੋਡ, ਐਪ ਲੌਕਰ, ਸਮਾਂਤਰ ਐਪਾਂ</string>
     <string name="oneplus_tools_summary_U30">ਗੇਮਿੰਗ ਮੋਡ, ਪੌਕੇਟ ਮੋਡ, ਨਿਯਤ ਪਾਵਰ ਚਾਲੂ/ਬੰਦ</string>
     <string name="oneplus_tools_summary_no_gamingmode">ਐਪ ਲਾੱਕਰ, ਸਮਾਂਤਰ ਐਪ</string>
     <string name="oneplus_tools_title">ਸੁਵਿਧਾਵਾਂ</string>
     <string name="oneplus_top_level_accounts_summary">OnePlus ਖਾਤਾ, ਹੋਰ ਖਾਤੇ</string>
     <string name="oneplus_top_level_apps_and_notifs_summary">ਡਿਫੌਲਟ ਐਪਾਂ, ਸੂਚਨਾਵਾਂ, ਇਜਾਜ਼ਤਾਂ</string>
-    <string name="oneplus_top_level_buttons_and_gestures_summary">ਚਿਤਾਵਨੀ ਸਲਾਈਡਰ, ਨੈਵੀਗੇਸ਼ਨ ਬਾਰ &amp; ਜੈਸਚਰ</string>
-    <string name="oneplus_top_level_cloud_h2_summary">ਡੇਟਾ ਨੂੰ ਕਲਾਊਡ ਨਾਲ ਸਿੰਕ ਕਰੋ, ਮੇਰਾ ਫ਼ੋਨ ਲੱਭੋ</string>
+    <string name="oneplus_top_level_buttons_and_gestures_summary">ਚਿਤਾਵਨੀ ਸਲਾਈਡਰ, ਨੈਵੀਗੇਸ਼ਨ ਬਾਰ &amp; ਇਸ਼ਾਰੇ</string>
+    <string name="oneplus_top_level_cloud_h2_summary">ਡੇਟਾ ਨੂੰ ਕਲਾਊਡ, ਮੇਰਾ ਫ਼ੋਨ ਲੱਭੋ ਨਾਲ ਸਿੰਕ ਕਰੋ</string>
     <string name="oneplus_top_level_cloud_o2_summary">ਕਲਾਊਡ ਨਾਲ ਡੇਟਾ ਸਿੰਕ ਕਰੋ</string>
     <string name="oneplus_top_level_connected_summary">NFC, ਕਾਸਟ ਕਰੋ, ਟੈਪ ਕਰੋ &amp; ਭੁਗਤਾਨ ਕਰੋ</string>
-    <string name="oneplus_top_level_display_summary">Status bar, ambient display, Vision comfort, reading mode</string>
+    <string name="oneplus_top_level_display_summary">ਸਟੇਟਸ ਬਾਰ, ਵਾਤਾਵਰਨ ਡਿਸਪਲੇ, ਨਾਈਟ ਮੋਡ, ਰੀਡਿੰਗ ਮੋਡ</string>
     <string name="oneplus_top_level_network_summary">SIM, ਮੋਬਾਈਲ ਨੈੱਟਵਰਕ, ਡੇਟਾ ਵਰਤੋਂ, ਹੌਟਸਪੌਟ</string>
     <string name="oneplus_top_level_privacy_summary">ਇਜਾਜ਼ਤਾਂ, ਨਿੱਜੀ ਡੇਟਾ</string>
     <string name="oneplus_top_level_security_dashboard_summary">ਫਿੰਗਰਪ੍ਰਿੰਟ, Face Unlock, ਐਮਰਜੈਂਸੀ ਬਚਾਅ</string>
@@ -1289,13 +1301,13 @@
     <string name="oneplus_user_agreement">ਉਪਯੋਗਕਰਤਾ ਲਾਇਸੰਸ ਇਕਰਾਰਨਾਮਾ ਸਮਾਪਤ ਕਰੋ</string>
     <string name="oneplus_user_enjoy_plan_title">ਵਰਤੋਂਕਾਰ ਅਨੁਭਵ ਪ੍ਰੋਗਰਾਮ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ</string>
     <string name="oneplus_vibrant_color_effect">ਚਮਕੀਲਾ ਰੰਗ ਪ੍ਰਭਾਵ Pro</string>
-    <string name="oneplus_vibrate">ਕੰਪਨ</string>
-    <string name="oneplus_vibrate_dynamic_mode">ਡਾਇਨਾਮਿਕ</string>
-    <string name="oneplus_vibrate_intensity">ਵਾਈਬ੍ਰੇਸ਼ਨ ਤੀਬਰਤਾ</string>
+    <string name="oneplus_vibrate">ਵਾਈਬ੍ਰੇਸ਼ਨ</string>
+    <string name="oneplus_vibrate_dynamic_mode">ਡਾਇਨੈਮਿਕ</string>
+    <string name="oneplus_vibrate_intensity">ਕੰਬਣ ਦੀ ਤੀਬਰਤਾ</string>
     <string name="oneplus_vibrate_on_touch_intensity">"ਟੈਪ ਕਰਨ 'ਤੇ ਵਾਈਬ੍ਰੇਟ ਕਰੋ"</string>
     <string name="oneplus_vibrate_rhythm">ਵਾਈਬ੍ਰੇਸ਼ਨ ਪੈਟਰਨ</string>
     <string name="oneplus_vibrate_strength">ਵਾਈਬ੍ਰੇਸ਼ਨ ਪੈਟਰਨ ਅਤੇ ਤੀਬਰਤਾ</string>
-    <string name="oneplus_vibration_settings_soc_tri_state">ਵਾਈਬ੍ਰੇਸ਼ਨ</string>
+    <string name="oneplus_vibration_settings_soc_tri_state">ਕੰਪਨ</string>
     <string name="oneplus_vibration_settings_soc_tri_state_summary">ਅਲਾਰਮਾਂ ਨੂੰ ਛੱਡ ਕੇ, ਕਾਲਾਂ ਅਤੇ ਸੂਚਨਾਵਾਂ ਨੂੰ ਸਾਇਲੈਂਟ ਕੀਤਾ ਜਾਵੇਗਾ ਅਤੇ ਸਿਰਫ਼ ਵਾਈਬ੍ਰੇਟ ਕਰਨ ਲਈ ਸੈੱਟ ਕੀਤਾ ਜਾਵੇਗਾ</string>
     <string name="oneplus_vibration_summary">ਅਲਾਰਮ ਹਮੇਸ਼ਾ ਵੱਜੇਗਾ</string>
     <string name="oneplus_video_enhancer">ਚਮਕੀਲਾ ਰੰਗ ਪ੍ਰਭਾਵ</string>
@@ -1305,7 +1317,7 @@
     <string name="oneplus_video_enhancer_summary">ਵੀਡੀਓ ਚਲਾਉਣ ਦੌਰਾਨ ਰੰਗ ਦੀ ਗੁਣਵੱਤਾ ਵਧਾਓ</string>
     <string name="oneplus_video_enhancer_vivid_mode">ਸਪਸ਼ਟ</string>
     <string name="oneplus_virtual_keyboard_category">ਆਭਾਸੀ ਕੀਬੋਰਡ</string>
-    <string name="oneplus_voice_assistant">ਆਵਾਜ਼ ਸਹਾਇਕ</string>
+    <string name="oneplus_voice_assistant">ਵਾਇਸ ਅਸਿਸਟੈਂਟ</string>
     <string name="oneplus_volume_keys_adjust">ਵਿਵਸਥਿਤ ਕਰਨ ਲਈ ਵੌਲਿਊਮ ਬਟਨ ਦੀ ਵਰਤੋਂ ਕਰੋ</string>
     <string name="oneplus_volume_keys_adjust_media">ਮੀਡੀਆ ਵੌਲਿਊਮ</string>
     <string name="oneplus_volume_keys_adjust_ringtones">ਰਿੰਗਟੋਨ ਦਾ ਵੌਲਿਊਮ</string>
@@ -1349,16 +1361,14 @@
     <string name="op_advanced_settings">ਉੱਨਤ</string>
     <string name="op_android_mode_cannot_change_color_accent">ਡਿਫੌਲਟ ਥੀਮ ਸਿਰਫ਼ ਸਿਸਟਮ ਰੰਗ ਥੀਮ ਦੀ ਵਰਤੋਂ ਕਰ ਸਕਦਾ ਹੈ</string>
     <string name="op_aod_parsons_info_button">ਠੀਕ</string>
-    <string name="op_aod_parsons_info_message">"Every 24 hours, a masterpiece is created.
-
-Insight, designed together by OnePlus &amp; students from Parsons School of Design, transforms time into a visible color bar. The device's usage data drives the pattern. Every time the phone is unlocked, it leaves a groove on the bar. The longer is the utility time; the wider is the groove and vice versa. Through the insight of those grooves, take a peek at your digital life."</string>
-    <string name="op_aod_parsons_info_title">Insight</string>
+    <string name="op_aod_parsons_info_message">"ਹਰ  ਘੰਟਿਆਂ ਬਾਅਦ, ਇਕ ਮਾਸਟਰਪੀਸ ਬਣਾਇਆ ਜਾਂਦਾ ਹੈ।
+Insight, ਜੋ OnePlus &amp; ਪਰਸਨਸ ਸਕੂਲ ਆਫ ਡਿਜ਼ਾਇਨ ਦੇ ਵਿਦਿਆਰਥੀਆਂ ਦੁਆਰਾ ਬਣਾਇਆ ਗਿਆ ਹੈ, ਸਮੇਂ ਨੂੰ ਦਿਖਾਈ ਦਿੰਦੇ ਰੰਗੀਨ ਬਾਰ ਵਿੱਚ ਬਦਲਦਾ ਹੈ। ਡਿਵਾਈਸ ਦਾ ਉਪਯੋਗਤਾ ਡੇਟਾ ਪੈਟਰਨ ਨੂੰ ਚਲਾਉਂਦਾ ਹੈ। ਹਰ ਵਾਰ ਜਦੋਂ ਫੋਨ ਅਨਲੌਕ ਹੁੰਦਾ ਹੈ, ਤਾਂ ਇਹ ਬਾਰ 'ਤੇ ਇਕ ਝਰੀਟ ਛੱਡਦਾ ਹੈ। ਜਿਨਾਂ ਵਰਤੋਂ ਸਮਾਂ ਲੰਮਾ ਹੈ; ਝਰੀਟ ਉਂਨੀ ਵਿਆਪਕ ਹੈ ਅਤੇ ਇਸ ਦੇ ਉਲਟ। ਉਨ੍ਹਾਂ ਝਰੀਟਾਂ ਦੀ ਸਮਝ ਦੁਆਰਾ, ਆਪਣੇ ਡਿਜੀਟਲ ਜੀਵਨ ਵੱਲ ਝਾਤ ਮਾਰੋ।"</string>
     <string name="op_app_already_uninstalled">ਅਣਸਥਾਪਤ ਕੀਤਾ ਗਿਆ</string>
     <string name="op_audio_settings">ਔਡੀਓ ਟਿਊਨਰ</string>
     <string name="op_auto_power_saving">ਆਟੋ ਪਾਵਰ ਸੇਵਿੰਗ</string>
     <string name="op_auto_power_saving_summary">"ਬੈਟਰੀ ਖਪਤ ਦੇ ਬਿਨਾਂ ਢੁੱਕਵੇਂ ਰੈਜ਼ੋਲਿਊਸ਼ਨ 'ਚ ਸਵੈਚਲਿਤ ਤਰੀਕੇ ਨਾਲ ਸਵਿੱਚ ਕਰੋ"</string>
-    <string name="op_battery_saver_description">Battery Saver turns off or restricts background activity, some visual effects &amp; other high-power features to extend battery life.</string>
-    <string name="op_battery_suggestion_summary">Turn on Adaptive Battery</string>
+    <string name="op_battery_saver_description">ਬੈਟਰੀ ਬਚਾਉਣ ਵਾਲਾ ਬੰਦ ਹੈ ਜਾਂ ਫਿਰ ਇਸ ਨੇ ਪਿੱਠਵਰਤੀ ਗਤੀਵਿਧੀ ਬੰਦ ਕਰ ਦਿੱਤੀ ਹੈ। ਬੈਟਰੀ ਦੀ ਲਾਈਫ ਨੂੰ ਵਧਾਉਣ ਲਈ ਹੋਰ ਉੱਚ ਪਾਵਰ ਵਾਲੀਆਂ ਖਾਸੀਅਤਾਂ &amp; ਅਤੇ ਕੁਝ ਵੀਜ਼ੁਅਸ ਪੑਭਾਵ</string>
+    <string name="op_battery_suggestion_summary">ਅਨੁਕੂਲ ਬੈਟਰੀ ਚਾਲੂ ਕਰੋ</string>
     <string name="op_cast_description">"ਆਪਣੇ ਫ਼ੋਨ ਦੀ ਸਕ੍ਰੀਨ ਅਤੇ ਆਡੀਓ ਨੂੰ ਕਿਸੇ TV ਜਿਹੀ ਡਿਵਾਈਸ 'ਤੇ ਦਿਖਾਓ"</string>
     <string name="op_cast_nearby">ਨਜ਼ਦੀਕੀ ਡਿਵਾਈਸਾਂ</string>
     <string name="op_cast_no_devices">ਕੋਈ ਵੀ ਨਜ਼ਦੀਕੀ ਡਿਵਾਈਸਾਂ ਨਹੀਂ ਲੱਭੀਆਂ</string>
@@ -1366,8 +1376,8 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_cast_searching">ਡਿਵਾਈਸਾਂ ਦੀ ਖੋਜ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ……</string>
     <string name="op_charging_Station_mute_notifications">ਸੁਚਨਾਵਾਂ ਬੰਦ ਕਰੋ</string>
     <string name="op_charging_footer_text">"ਤੁਹਾਨੂੰ ਨੇੜੇ ਦੇ ਕਿਸੇ ਵੀ ਚਾਰਜਿੰਗ ਸਟੇਸ਼ਨਾਂ ਬਾਰੇ Pop-ups ਵਾਂਗ ਦੱਸਿਆ ਜਾਵੇਗਾ ਜਦੋਂ ਤੁਸੀਂ ਭਾਈਵਾਲ ਜਗਾਹਾਂ ਜਿਵੇਂ ਹਵਾਈ ਅੱਡੇ ਜਾਂ Oneplus ਸਮਾਗਮਾਂ 'ਤੇ ਜਾਂਦੇ ਹੋ।"</string>
-    <string name="op_charging_optimization">ਅਨੁਕੂਲਿਤ ਚਾਰਜਿੰਗ</string>
-    <string name="op_charging_optimization_summary">ਆਪਣੀਆਂ ਵਰਤੋਂ ਦੀਆਂ ਆਦਤਾਂ ਦੇ ਮੁਤਾਬਿਕ ਚਾਰਜ ਕਰਨ ਦੇ ਪੈਟਰਨ ਨੂੰ ਅਨੁਕੂਲ ਕਰੋ</string>
+    <string name="op_charging_optimization">ਅਨੁਕੂਲਿਤ ਚਾਰਜ ਕਰਨਾ</string>
+    <string name="op_charging_optimization_summary">ਬੈਟਰੀ ਲੋਡ ਨੂੰ ਘੱਟ ਕਰਨ ਲਈ, ਅਤੇ ਬੈਟਰੀ ਜੀਵਨ ਨੂੰ ਵਧਾਉਣ ਲਈ ਆਪਣੀਆਂ ਵਰਤੋਂ ਦੀਆਂ ਆਦਤਾਂ ਦੇ ਮੁਤਾਬਿਕ ਚਾਰਜ ਕਰਨ ਦੇ ਪੈਟਰਨ ਨੂੰ ਅਨੁਕੂਲ ਕਰੋ</string>
     <string name="op_charging_station">ਨੇੜਲੇ ਚਾਰਜਿੰਗ ਸਟੇਸ਼ਨ</string>
     <string name="op_charging_station_no_station">ਨੇੜੇ ਕੋਈ ਚਾਰਜਿੰਗ ਸਟੇਸ਼ਨ ਨਹੀਂ</string>
     <string name="op_charging_station_summary">ਦੱਸੋ ਜਦੋਂ ਕੋਈ ਚਾਰਜਿੰਗ ਸਟੇਸ਼ਨ ਨਜ਼ਦੀਕ ਹੋਵੇ</string>
@@ -1386,13 +1396,13 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_cloud_service_title">ਕਲਾਉਡ ਸੇਵਾ</string>
     <string name="op_confirm_enable_oem_unlock_text">ਚਿਤਾਵਨੀ: ਡਿਵਾਈਸ ਸੁਰੱਖਿਆ ਅਤੇ ਪੁਸ਼ਟੀਕਰਣ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ, ਉਦਾਹਰਨ ਲਈ, ਫਿੰਗਰਪ੍ਰਿੰਟ ਭੁਗਤਾਨ ਅਤੇ ਆਧੁਨਿਕ DRM ਕੁੰਜੀ OEM ਦੇ ਅਣ-ਲੌਕ ਹੋਣ ਵੇਲੇ ਕੰਮ ਨਹੀਂ ਕਰ ਸਕਦੇ।</string>
     <string name="op_control_accent_color_amber_label">ਐਂਬਰ</string>
-    <string name="op_control_accent_color_gin_label">Sloe gin fizz</string>
+    <string name="op_control_accent_color_gin_label">ਸਲੋਏ ਗਿਨ ਫਿਜ</string>
     <string name="op_control_accent_color_indigo_label">ਇੰਡੀਗੋ</string>
     <string name="op_control_accent_color_teal_label">ਟੀਲ</string>
     <string name="op_custom_color_value">ਰੰਗ ਮੁੱਲ</string>
     <string name="op_custom_color_value_edit">ਕੋਈ ਰੰਗ ਮੁੱਲ ਦਾਖ਼ਲ ਕਰੋ</string>
     <string name="op_custom_color_value_invalid">ਅਵੈਧ ਰੰਗ ਮੁੱਲ</string>
-    <string name="op_dark_mode_title">ਡਾਰਕ</string>
+    <string name="op_dark_mode_title">ਗਹਿਰਾ</string>
     <string name="op_data_vowlan_enable_summary">"ਉਪਲਬਧ ਹੋਣ 'ਤੇ Wi-Fi ਕਾਲਿੰਗ ਦੀ ਵਰਤੋਂ ਕਰੋ"</string>
     <string name="op_default_apps_summary">ਹੋਮ, ਬ੍ਰਾਊਜ਼ਰ</string>
     <string name="op_default_luncher_title">ਹੋਮ ਐਪ</string>
@@ -1424,7 +1434,13 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
  ਜਦੋਂ ਫੋਨ ਤੁਹਾਡੀਆਂ ਉਂਗਲਾਂ ਦੇ ਨਿਸ਼ਾਨਾਂ ਦੀ ਪਹਿਚਾਣ ਅਤੇ ਮੇਲ ਕਰਦਾ ਹੈ, ਤੁਹਾਡੇ ਫੋਨ ਦੀ ਰੋਸ਼ਨੀ ਵਧੇਗੀ, ਅਤੇ ਰੰਗ ਦਾ ਪ੍ਰੋਫਾਈਲ ਆਰਜ਼ੀ ਤੋਰ ਤੇ ਬਦਲੇਗਾ।"</string>
     <string name="op_fragment">ਸੰਖੇਪ</string>
     <string name="op_gamespace">ਗੇਮ ਸਪੇਸ</string>
+    <string name="op_global_drak_mode_apps_manage">ਡਾਰਕ ਮੋਡ ਵਿਚ ਐਪਸ ਦਾ ਪੑਬੰਧਨ ਕਰੋ</string>
+    <string name="op_global_drak_mode_full_support_list">ਸਮਰਥਿਤ ਐਪਾਂ</string>
+    <string name="op_global_drak_mode_not_full_support_list">ਗੈਰ-ਸਮਰਥਿਤ ਐਪਸ</string>
+    <string name="op_global_drak_mode_support_description">ਜਿਹੜੀਆਂ ਐਪਸ ਸਮਰਥਿਤ ਨਹੀਂ ਹਨ, ਉਹ ਡਾਰਕ ਮੋਡ ਵਿਚ ਉੱਚਿਤ ਤਰੀਕੇ ਨਾਲ ਕਾਰਜ ਨਹੀਂ ਵੀ ਕਰ ਸਕਦੀਆਂ ਹਨ</string>
+    <string name="op_gps_off_warn_msg">ਕਿਰਪਾ ਕਰਕੇ ਪਹਿਲਾਂ ਰਾਤਰੀ ਮੋਡ ਚਾਲੂ ਕਰੋ</string>
     <string name="op_high_power_app_manager">ਉੱਚ ਪਾਵਰ ਵਰਤੋਂ ਵਾਲੀਆਂ ਐਪਾਂ</string>
+    <string name="op_history_toggled_on_summary">ਤੁਹਾਡੀਆਂ ਹਾਲੀਆ ਅਧਿਸੂਚਨਾਵਾਂ ਇੱਥੇ ਦਿਖਾਈ ਦੇਣਗੀਆਂ</string>
     <string name="op_keep_location_services">ਨੇੜਲੇ ਚਾਰਜਿੰਗ ਸਟੇਸ਼ਨਾਂ ਨੂੰ ਲੱਭਣ ਅਤੇ ਟਰੈਕ ਕਰਨ ਲਈ‚ ਸਥਾਨ ਲੱਭਣ ਵਾਲੀਆਂ ਸੇਵਾਵਾਂ ਨੂੰ ਸਮਰੱਥ ਬਣਾਈ ਰੱਖੋ</string>
     <string name="op_light_mode_title">ਹਲਕਾ</string>
     <string name="op_linked_launch_summary">ਉਨ੍ਹਾਂ ਐਪਾਂ ਨੂੰ ਪ੍ਰਬੰਧਿਤ ਕਰੋ ਜਿਨ੍ਹਾਂ ਨੂੰ ਬੈਕਗ੍ਰਾਊਂਡ ਵਿੱਚ ਲਾਂਚ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ</string>
@@ -1434,11 +1450,13 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_lockpassword_choose_your_pin_header_for_face">ਚਿਹਰਾ ਅਨਲੌਕ ਵਰਤਣ ਲਈ PIN ਸੈੱਟ ਕਰੋ</string>
     <string name="op_member_description">ਖਾਸ ਫ਼ਾਇਦੇ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਆਪਣੇ ਡਿਵਾਈਸ ਨੂੰ ਬਾਈਂਡ ਕਰੋ</string>
     <string name="op_member_title">OnePlus ਖਾਤਾ ਵਿੱਚ ਲੌਗਇਨ ਕਰੋ</string>
-    <string name="op_night_display_title">Vision comfort</string>
+    <string name="op_night_display_title">ਦ੍ਰਿਸ਼ ਆਰਾਮਦਾਇਕਤਾ</string>
     <string name="op_not_disturb">ਪਰੇਸ਼ਾਨ ਨਾ ਕਰੋ ਤਰਜੀਹਾਂ</string>
     <string name="op_not_disturb_summary">ਅਲਾਰਮਾਂ ਨੂੰ ਛੱਡਕੇ ਕਾਲਾਂ ਅਤੇ ਸੂਚਨਾਵਾਂ ਦੀ ਆਵਾਜ਼ ਬੰਦ ਕਰੋ ਅਤੇ ਵਾਈਬ੍ਰੇਸ਼ਨ ਨੂੰ ਬੰਦ ਕਰੋ</string>
+    <string name="op_notification_history_off_summary">ਹਾਲੀਆ ਅਧਿਸੂਚਨਾਵਾਂ ਨੂੰ ਦੇਖਣ ਲਈ ਅਧਿਸੂਚਨਾ ਹਿਸਟਰੀ ਨੂੰ ਚਾਲੂ ਕਰੋ</string>
+    <string name="op_notification_history_summary">ਹਾਲੀਆ ਅਧਿਸੂਚਨਾਵਾਂ ਦਿਖਾਓ</string>
     <string name="op_oneplus_roaming_summary">ਵਿਸ਼ਪ-ਵਿਆਪੀ ਇੰਟਰਨੈੱਟ ਪਹੁੰਚ ਸੇਵਾਵਾਂ ਪ੍ਰਦਾਨ ਕਰਦਾ ਹੈ</string>
-    <string name="op_oneplus_roaming_title">OnePlus ਰੋਮਿੰਗ</string>
+    <string name="op_oneplus_roaming_title">OnePlus Roaming</string>
     <string name="op_primary_charm_purple_label">ਗਾੜ੍ਹਾ ਬੈਂਗਨੀ</string>
     <string name="op_primary_dark_green_label">ਗੂੜ੍ਹਾ ਹਰਾ</string>
     <string name="op_primary_default_label">ਨੀਲਾ</string>
@@ -1447,6 +1465,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_primary_grass_green_label">ਹਲਕਾ ਹਰਾ</string>
     <string name="op_primary_lemon_yellow_label">ਸੰਤਰੀ</string>
     <string name="op_primary_red_label">ਲਾਲ</string>
+    <string name="op_primary_rose_red_label">ਲਾਲ ਗੁਲਾਬ</string>
     <string name="op_primary_royal_blue_label">ਸ਼ਾਹੀ ਨੀਲਾ</string>
     <string name="op_primary_sky_blue_label">ਹਰਾ ਨੀਲਾ</string>
     <string name="op_primary_vigour_red_label">ਗੁਲਾਬੀ</string>
@@ -1461,10 +1480,10 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_sim_cord">SIM &amp; ਨੈੱਟਵਰਕ</string>
     <string name="op_sim_cord_summary">ਡਿਫੌਲਟ SIM ਕਾਰਡ, ਬੈਂਡਵਿਡਥ ਵਰਤੋਂ</string>
     <string name="op_sim_name_with_prefix">  (%1$s)</string>
-    <string name="op_smart_battery_manager_title">Adaptive Battery</string>
-    <string name="op_smart_battery_title">Use Adaptive Battery</string>
+    <string name="op_smart_battery_manager_title">ਅਨੁਕੂਲ ਬੈਟਰੀ</string>
+    <string name="op_smart_battery_title">ਅਨੁਕੂਲ ਬੈਟਰੀ ਦਾ ਉਪਯੋਗ ਕਰੋ</string>
     <string name="op_sms_ringtone">SMS ਰਿੰਗਟੋਨ</string>
-    <string name="op_starwar_mode_cannot_change_color_accent">Star Wars ਥੀਮ ਸਿਰਫ਼ ਸਿਸਟਮ ਰੰਗ ਥੀਮ ਦੀ ਵਰਤੋਂ ਕਰ ਸਕਦਾ ਹੈ</string>
+    <string name="op_starwar_mode_cannot_change_color_accent">ਸਟਾਰ ਵਾਰਜ਼ ਥੀਮ ਸਿਰਫ਼ ਸਿਸਟਮ ਰੰਗ ਥੀਮ ਦੀ ਵਰਤੋਂ ਕਰ ਸਕਦਾ ਹੈ</string>
     <string name="op_starwar_mode_title">Star Wars</string>
     <string name="op_storage">ਸਟੋਰੇਜ &amp; ਮੈਮੋਰੀ</string>
     <string name="op_system_dashboard_summary">ਭਾਸ਼ਾਵਾਂ, ਸਮਾਂ, ਰੀਸੈੱਟ, ਅੱਪਡੇਟ</string>
@@ -1472,9 +1491,9 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_tcp_timestamps_randomization_title">TCP ਰੈਂਡਮ ਟਾਈਮਸਟੈਂਪ ਫਲੈਗ</string>
     <string name="op_theme_2__cannot_change_color_accent">ਦ ਅਵੈਂਜਰਸ ਥੀਮ ਸਿਰਫ਼ ਸਿਸਟਮ ਕਲਰ ਥੀਮ ਦੀ ਵਰਤੋਂ ਕਰ ਸਕਦੀ ਹੈ</string>
     <string name="op_theme_2__title">ਦ ਅਵੈਂਜਰਸ</string>
-    <string name="op_theme_3_cannot_change_color_accent">McLaren ਥੀਮ ਸਿਰਫ਼ ਸਿਸਟਮ ਰੰਗ ਥੀਮ ਨੂੰ ਵਰਤ ਸਕਦੀ ਹੈ</string>
+    <string name="op_theme_3_cannot_change_color_accent">McLaren ਥੀਮ ਸਿਰਫ਼ ਸਿਸਟਮ ਰੰਗ ਥੀਮ ਦੀ ਵਰਤੋਂ ਕਰ ਸਕਦਾ ਹੈ</string>
     <string name="op_theme_3_title">McLaren</string>
-    <string name="op_theme_entrance_summary">Wallpapers, accent color, font</string>
+    <string name="op_theme_entrance_summary">ਵਾਲ ਪੇਪਰ, ਐਕਸੇਂਟ ਕਲਰ, ਫੌਂਟ, ਟੋਨ</string>
     <string name="op_theme_mode_title">ਥੀਮ</string>
     <string name="op_use_cast">ਕਾਸਟ ਦੀ ਵਰਤੋਂ ਕਰੋ</string>
     <string name="op_user_manual_settings">ਵਰਤੋਂਕਾਰ ਮੈਨੂਅਲ</string>
@@ -1489,7 +1508,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_wlan_settings_and_management">Wi‑Fi ਸੈਟਿੰਗਾਂ</string>
     <string name="op_zen_mode_automation_settings_title">ਸਵੈਚਲਿਤ ਤਰੀਕੇ ਨਾਲ ਕਿਰਿਆਸ਼ੀਲ ਕਰੋ</string>
     <string name="op_zen_mode_behavior_settings_title">ਅਪਵਾਦ</string>
-    <string name="op_zen_mode_restrict_notifications_title">Restrict notifications</string>
+    <string name="op_zen_mode_restrict_notifications_title">ਸੂਚਨਾਵਾਂ ਰੋਕੋ</string>
     <string name="opcustom_tone_dark_tile_text">ਹਨੇਰਾ ਮੋਡ</string>
     <string name="open_hotspot_warning_message">"ਓਪਨ ਸੁਰੱਖਿਆ ਨਾਲ, ਡਿਵਾਈਸ ਬਿਨਾਂ ਪਾਸਵਰਡ ਦਾਖਲ ਕੀਤੇ ਤੁਹਾਡੇ ਮੋਬਾਈਲ ਹੌਟਸਪੌਟ ਨੂੰ ਵਰਤਣ ਦੇ ਯੋਗ ਹੋਣਗੇ। ਇਸਦੀ ਬਜਾਏ WPA2 ਸੁਰੱਖਿਆ ਨੂੰ ਚੁਣੋ, ਜੇਕਰ ਤੁਸੀਂ ਪਾਸਵਰਡ ਲੋੜੀਂਦਾ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ। "</string>
     <string name="openid_dialog_reset">RESET</string>
@@ -1506,7 +1525,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="oxygen_version_default">ਅਗਿਆਤ</string>
     <string name="please_type_passphrase">ਵਾਇਰਲੈੱਸ ਪਾਸਵਰਡ</string>
     <string name="power_menu">ਪਾਵਰ ਮੀਨੂ</string>
-    <string name="power_off">ਪਾਵਰ ਬੰਦ ਕਰੋ</string>
+    <string name="power_off">ਪਾਵਰ ਬੰਦ</string>
     <string name="power_off_summary">ਤੁਹਾਡਾ ਡਿਵਾਈਸ ਬੰਦ ਹੋ ਜਾਵੇਗਾ</string>
     <string name="power_show_in_statusbar_title">ਬੈਟਰੀ ਦੀ ਪ੍ਰਤੀਸ਼ਤ ਵਿਖਾਓ</string>
     <string name="ppp_number">ppp_number</string>
@@ -1592,14 +1611,14 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="status_bar_ethernet_title">ਈਥਰਨੈੱਟ</string>
     <string name="status_bar_settings_airplane_title">ਹਵਾਈ ਜਹਾਜ਼ ਮੋਡ</string>
     <string name="status_bar_settings_alarm_title">ਅਲਾਰਮ</string>
-    <string name="status_bar_settings_auto_rotation_title">ਸਕ੍ਰੀਨ ਨੂੰ ਸਵੈਚਲਿਤ ਤਰੀਕੇ ਨਾਲ ਘੁੰਮਾਓ</string>
-    <string name="status_bar_settings_bluetooth_title">ਬਲੂਟੁੱਥ</string>
+    <string name="status_bar_settings_auto_rotation_title">ਸਕ੍ਰੀਨ ਨੂੰ ਸਵੈਚਾਲਿਤ ਤਰੀਕੇ ਨਾਲ ਘੁੰਮਾਓ</string>
+    <string name="status_bar_settings_bluetooth_title">ਬਲੂਟੁਥ</string>
     <string name="status_bar_settings_cast_title">ਕਾਸਟ</string>
     <string name="status_bar_settings_cellular_title">ਸੈਲਿਊਲਰ ਡੇਟਾ</string>
     <string name="status_bar_settings_dnd_title">ਪਰੇਸ਼ਾਨ ਨਾ ਕਰੋ</string>
     <string name="status_bar_settings_headset_title">ਹੈੱਡਸੈੱਟ</string>
     <string name="status_bar_settings_hotspot_title">ਹੌਟਸਪੌਟ</string>
-    <string name="status_bar_settings_network_speed_title">ਡਿਸਪਲੇ ਨੈੱਟਵਰਕ ਗਤੀ</string>
+    <string name="status_bar_settings_network_speed_title">ਨੈਟਵਰਕ ਦੀ ਰਫਤਾਰ ਨੂੰ ਡਿਸਪਲੇਅ ਕਰੋ</string>
     <string name="status_bar_settings_time_title">ਸਮਾਂ</string>
     <string name="status_bar_settings_wifi_title">Wi-Fi</string>
     <string name="status_bar_settings_work_title">ਕਾਰਜ ਪ੍ਰੋਫਾਈਲ</string>
@@ -1627,7 +1646,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="tether_error_item_default">ਟੈਦਰਿੰਗ</string>
     <string name="tether_error_message">ਤੁਸੀਂ %1$s ਲਈ ਸਬਸਕ੍ਰਾਈਬ ਨਹੀਂ ਕੀਤਾ ਹੈ।</string>
     <string name="tether_error_title">%1$s ਤਰੁੱਟੀ</string>
-    <string name="tether_no_sim_message">ਮੋਬਾਇਲ ਹਾੱਟਸਪਾੱਟ ਅਤੇ ਹੋਰ ਟੀਥਰਿੰਗ ਵਿਕਲਪਾਂ ਦਾ ਪ੍ਰਯੋਗ ਕਰਨ ਲਈ SIM ਕਾਰਡ ਪਾਓ</string>
+    <string name="tether_no_sim_message">ਮੋਬਾਈਲ ਹੌਟਸਪੌਟ ਅਤੇ ਹੋਰ ਟੈਦਰਿੰਗ ਵਿਕਲਪਾਂ ਨੂੰ ਵਰਤਣ ਲਈ SIM ਕਾਰਡ ਪਾਓ</string>
     <string name="tether_no_sim_title">ਕੋਈ SIM ਕਾਰਡ ਨਹੀਂ</string>
     <string name="text_waiting">ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ...</string>
     <string name="theme_accent_color_title">ਐਕਸੈਂਟ ਰੰਗ</string>
@@ -1657,7 +1676,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="touchscreen_flashlight_gesture_summary">ਫਲੈਸ਼ਲਾਈਟ ਟੌਗਲ ਕਰਨ ਲਈ V ਦੀ ਆਕ੍ਰਿਤੀ ਬਣਾਓ</string>
     <string name="touchscreen_flashlight_gesture_title">ਫਲੈਸ਼ਲਾਈਟ ਟੌਗਲ ਕਰੋ</string>
     <string name="touchscreen_music_gesture_summary">ਸੰਗੀਤ ਨੂੰ ਚਲਾਉਣ ਜਾਂ ਰੋਕਣ ਲਈ ਦੋ ਉਂਗਲੀਆਂ ਨਾਲ || ਦੀ ਆਕ੍ਰਿਤੀ ਬਣਾਓ। ਪਿਛਲੇ ਜਾਂ ਅਗਲੇ ਲਈ &lt; ਜਾਂ > ਦੀ ਆਕ੍ਰਿਤੀ ਬਣਾਓ</string>
-    <string name="touchscreen_music_gesture_title">ਸੰਗੀਤ ਨਿਯੰਤਰਨ</string>
+    <string name="touchscreen_music_gesture_title">ਸੰਗੀਤ ’ਤੇ ਕੰਟਰੋਲ</string>
     <string name="traffic_auto_close_network">ਨੈੱਟਵਰਕ ਤੋਂ ਸਵੈ-ਡਿਸਕਨੈਕਟ ਕਰੋ</string>
     <string name="traffic_auto_close_network_keep_closed">ਅਣਡਿੱਠ ਕਰੋ</string>
     <string name="traffic_auto_close_network_keep_closed_vzw">ਠੀਕ ਹੈ</string>
@@ -1689,7 +1708,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="traffic_warn_value_title">ਡੇਟਾ ਚੇਤਾਵਨੀ</string>
     <string name="uicc_alert_message">"SSID VerizonWiFiAccess ਨਾਲ WiFi ਨੈੱਟਵਰਕ 'ਤੇ ਲੌਗਇਨ ਕਰਨ ਲਈ UICC ਲੋੜੀਂਦਾ ਹੈ"</string>
     <string name="uicc_all_lock_summary">ਤੁਹਾਡੀ ਡਿਵਾਈਸ ਨੂੰ ਸਿਰਫ਼ Sprint SIMs ਦੁਆਰਾ ਲੌਕ ਕੀਤਾ ਜਾਂਦਾ ਹੈ</string>
-    <string name="uicc_lock_summary">ਤੁਹਾਡੀ ਡਿਵਾਈਸ ਨੂੰ ਸਿਰਫ਼ Sprint SIM ਦੁਆਰਾ ਲੌਕ ਕੀਤਾ ਜਾਂਦਾ ਹੈ</string>
+    <string name="uicc_lock_summary">ਤੁਹਾਡੀ ਡਿਵਾਈਸ ਨੂੰ ਸਿਰਫ਼ Sprint SIMs ਦੁਆਰਾ ਲੌਕ ਕੀਤਾ ਜਾਂਦਾ ਹੈ</string>
     <string name="uicc_unlock">UICC ਅਨਲੌਕ</string>
     <string name="uicc_unlock_summary">ਤੁਹਾਡੀ ਡਿਵਾਈਸ ਅਨਲੌਕ ਹੈ</string>
     <string name="under_meters">%1d ਮੀਟਰ ਅਧੀਨ</string>
@@ -1732,7 +1751,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="upstream_type_wifi_summary">ਜਦੋਂ Wi-Fi ਡਿਸਕਨੈਕਟ ਹੋਇਆ, ਸਾਂਝਾਕਰਨ ਨੂੰ ਅਸਮਰੱਥ ਕੀਤਾ ਗਿਆ</string>
     <string name="usb_audio_source_title">ਔਡੀਓ ਸਰੋਤ</string>
     <string name="usb_charging_summary">ਤੁਹਾਨੂੰ ਕੰਪਿਊਟਰ ਨਾਲ ਸਾਰੇ ਡੇਟਾ ਅਤੇ ਫਾਈਲ ਟ੍ਰਾਂਸਫਰ ਕਨੈਕਸ਼ਨ ਅਸਮਰੱਥ ਕਰਨ ਅਤੇ ਡਿਵਾਈਸ ਨੂੰ ਸਿਰਫ਼ ਚਾਰਜ ਕਰੋ ਮੋਡ ਵਿੱਚ ਰੱਖਣ ਦਿੰਦਾ ਹੈ।</string>
-    <string name="usb_charging_title">ਚਾਰਜ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ</string>
+    <string name="usb_charging_title">ਚਾਰਜ ਹੋ ਰਿਹਾ</string>
     <string name="usb_connect_to_access">USB ਕਨੈਕਸ਼ਨ ਸੈਟਿੰਗਜ਼ ਐਕਸੈਸ ਕਰਨ ਲਈ ਆਪਣੇ ਡਿਵਾਈਸ ਨੂੰ ਕਿਸੇ ਕੰਪਿਊਟਰ ਨਾਲ ਜੋੜੋ</string>
     <string name="user_experience">ਵਰਤੋਂਕਾਰ ਅਨੁਭਵ ਪ੍ਰੋਗਰਾਮ</string>
     <string name="user_experience_description">ਉਤਪਾਦ ਡਿਜ਼ਾਈਨ ਅਤੇ ਵਰਤੋਂਕਾਰ ਅਨੁਭਵ ਨੂੰ ਬਿਹਤਰ ਬਣਾਉਣ ਲਈ, ਤੁਸੀਂ ਆਪਣੇ ਫ਼ੋਨ ਨੂੰ ਕਿਵੇਂ ਵਰਤਦੇ ਹੋ ਇਸ ਬਾਰੇ OnePlus ਨੂੰ ਗੁਮਨਾਮ ਤਰੀਕੇ ਨਾਲ ਆਮ ਅੰਕੜਾ ਡੇਟਾ ਦਾ ਮੁਲਾਂਕਣ ਕਰਨ ਦੀ ਇਜਾਜ਼ਤ ਦਿਓ</string>
@@ -1752,7 +1771,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="wifi_context_menu_change_wapi_certificate">WAPI ਪ੍ਰਮਾਣਪੱਤਰ ਬਦਲੋ</string>
     <string name="wifi_context_menu_connect">ਨੈੱਟਵਰਕ ਨਾਲ ਕਨੈਕਟ ਕਰੋ</string>
     <string name="wifi_context_menu_forget">ਨੈੱਟਵਰਕ ਨੂੰ ਭੁੱਲੋ</string>
-    <string name="wifi_security_dialog">ਓਪਨ ਸੁਰੱਖਿਆ ਦੇ ਨਾਲ, ਕੋਈ ਵੀ ਡਿਵਾਈਸ ਤੁਹਾਡੇ ਮੋਬਾਈਲ ਹਾਟਸਪਾਟ ਦੇ ਨਾਲ ਕਨੈਕਟ ਕਰ ਸਕਦਾ ਹੈ ਅਤੇ ਤੁਹਾਡੇ ਮੋਬਾਈਲ ਡੇਟਾ ਕਨੈਕਸ਼ਨ ਦੀ ਵਰਤੋਂ ਕਰ ਸਕਦਾ ਹੈ।</string>
+    <string name="wifi_security_dialog">ਓਪਨ ਸੁਰੱਖਿਆ ਨਾਲ, ਕੋਈ ਵੀ ਡਿਵਾਈਸ ਤੁਹਾਡੇ ਮੋਬਾਈਲ ਹੌਟਸਪੌਟ ਨਾਲ ਕਨੈਕਟ ਕਰ ਸਕਦਾ ਹੈ ਅਤੇ ਤੁਹਾਡੇ ਮੋਬਾਈਲ ਡੇਟਾ ਕਨੈਕਸ਼ਨ ਨੂੰ ਵਰਤ ਸਕਦਾ ਹੈ।</string>
     <string name="wifi_security_open">ਖੋਲ੍ਹੋ</string>
     <string name="wifi_setting_frequency_band_error">ਫ੍ਰੀਕਵੈਂਸੀ ਬੈਂਡ ਸੈੱਟ ਕਰਨ ਦੌਰਾਨ ਕੋਈ ਸਮੱਸਿਆ ਆਈ ਸੀ।</string>
     <string name="wifi_setting_frequency_band_summary">ਕਾਰਵਾਈ ਦੀ ਫ੍ਰੀਕਵੈਂਸੀ ਰੇਂਜ ਨਿਰਧਾਰਤ ਕਰੋ</string>
@@ -1792,7 +1811,8 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="wifi_wapi_certification_dont_exist">ਤੁਹਾਡੇ ਵੱਲੋਂ ਟਾਈਪ ਕੀਤਾ ਗਿਆ ਨੈੱਟਵਰਕ ਪਾਸਵਰਡ ਗਲਤ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
     <string name="wifi_wapi_user_cert">ਵਰਤੋਂਕਾਰ ਪ੍ਰਮਾਣਪੱਤਰ</string>
     <string name="work_life_balance">Work Life Balance</string>
-    <string name="work_life_disabled_toast">Work Life Balance ਫੀਚਰ ਬੰਦ ਹੋ ਗਿਆ ਹੈ।</string>
+    <string name="work_life_banner_summary">ਅਧਿਸੂਚਨਾਵਾਂ ਧਿਆਨ ਭਟਕਾਉਣ ਵਾਲੀਆਂ ਹੋ ਸਕਦੀਆਂ ਹਨ। ਉੱਚਿਤ work-life balance ਦਾ ਪਤਾ ਲਗਾਉਣ ਲਈ ਇਹਨਾਂ ਨੂੰ ਪਹਿਲ ਦਿਓ।</string>
+    <string name="work_life_disabled_toast">Work life Balance ਫੀਚਰ ਬੰਦ ਹੋ ਗਿਆ ਹੈ।</string>
     <string name="zen_mode_alarm_info_new">ਅਲਾਰਮ ਹਮੇਸ਼ਾ ਵੱਜੇਗਾ</string>
     <string name="zen_mode_alarms_summary">ਅਲਾਰਮਾਂ ਲਈ ਸਾਊਂਡ ਸਮਰੱਥ ਕਰੋ</string>
     <string name="zen_mode_media_sound">ਮੀਡੀਆ</string>

@@ -32,17 +32,21 @@
 
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
-    .locals 2
+    .locals 3
 
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
 
-    if-eq v0, v1, :cond_1
+    if-eq v0, v1, :cond_2
 
-    const/4 v1, 0x2
+    const/4 v2, 0x2
 
-    if-eq v0, v1, :cond_0
+    if-eq v0, v2, :cond_1
+
+    const/4 v2, 0x3
+
+    if-eq v0, v2, :cond_0
 
     goto :goto_0
 
@@ -51,11 +55,20 @@
 
     iget p1, p1, Landroid/os/Message;->arg1:I
 
-    invoke-static {p0, p1}, Lcom/android/settings/users/UserSettings;->access$000(Lcom/android/settings/users/UserSettings;I)V
+    invoke-static {p0, p1, v1}, Lcom/android/settings/users/UserSettings;->access$100(Lcom/android/settings/users/UserSettings;IZ)V
 
     goto :goto_0
 
     :cond_1
+    iget-object p0, p0, Lcom/android/settings/users/UserSettings$1;->this$0:Lcom/android/settings/users/UserSettings;
+
+    iget p1, p1, Landroid/os/Message;->arg1:I
+
+    invoke-static {p0, p1}, Lcom/android/settings/users/UserSettings;->access$000(Lcom/android/settings/users/UserSettings;I)V
+
+    goto :goto_0
+
+    :cond_2
     iget-object p0, p0, Lcom/android/settings/users/UserSettings$1;->this$0:Lcom/android/settings/users/UserSettings;
 
     invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->updateUserList()V

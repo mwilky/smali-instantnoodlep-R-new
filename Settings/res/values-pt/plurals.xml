@@ -225,8 +225,8 @@
         <item quantity="one">%d app ativo</item>
     </plurals>
     <plurals name="oneplus_applock_wrong_pattern_warning">
-        <item quantity="other">Ainda têm %1$d de probabilidade</item>
-        <item quantity="one">Ainda tem %1$d de probabilidade</item>
+        <item quantity="other">Ainda tem %1$d oportunidades</item>
+        <item quantity="one">Ainda tem %1$d oportunidade</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
         <item quantity="other">Tente novamente dentro de %d segundos.</item>
@@ -237,8 +237,8 @@
         <item quantity="one">1 hora (a não ser que ligado automaticamente)</item>
     </plurals>
     <plurals name="op_location_settings_summary_location_on">
-        <item quantity="other">On - %1$d apps have access to location</item>
-        <item quantity="one">On - %1$d app has access to location</item>
+        <item quantity="other">Ativado - %1$d aplicações têm acesso à localização</item>
+        <item quantity="one">Ativado - %1$d aplicação tem acesso à localização</item>
     </plurals>
     <plurals name="permission_bar_chart_label">
         <item quantity="other">%s apps</item>

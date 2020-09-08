@@ -2173,6 +2173,7 @@ Anda boleh menukar tetapan ini kemudian daripada Tetapan > Apl &amp; pemberitahu
     <string name="keywords_lock_screen_notif">pemberitahuan skrin kunci, pemberitahuan</string>
     <string name="keywords_lockscreen">luncur untuk membuka kunci, kata laluan, corak, PIN</string>
     <string name="keywords_lockscreen_bypass">Skrin kunci, Langkau, Pintas</string>
+    <string name="keywords_media_controls">media</string>
     <string name="keywords_model_and_hardware">nombor siri, versi perkakasan</string>
     <string name="keywords_more_mobile_networks">selular, mudah alih, pembawa selular, wayarles, data, 4g, 3g, 2g, lte</string>
     <string name="keywords_network_reset">tetapkan semula, pulihkan, kilang</string>
@@ -2549,6 +2550,12 @@ Terdapat pengguna lain pada peranti ini.
     <string name="master_clear_title">Padamkan semua data (tetapan semula kilang)</string>
     <string name="maximum_memory_use">Penggunaan memori maksimum</string>
     <string name="media_category">Media</string>
+    <string name="media_controls_hide_player">Sembunyikan pemain</string>
+    <string name="media_controls_no_players">Tiada pemain tersedia</string>
+    <string name="media_controls_resume_description">Pemain membolehkan anda menyambung semula sesi daripada panel Tetapan Pantas yang dikembangkan.</string>
+    <string name="media_controls_show_player">Tunjukkan pemain</string>
+    <string name="media_controls_summary">Sembunyikan pemain apabila sesi media tamat</string>
+    <string name="media_controls_title">Media</string>
     <string name="media_out_summary_ongoing_call_state">Tidak tersedia semasa panggilan</string>
     <string name="media_output_default_summary">Peranti ini</string>
     <string name="media_output_disconnected_status">%1$s (diputuskan sambungan)</string>
@@ -2806,7 +2813,7 @@ Ini menggantikan %2$s sebagai apl pembayaran lalai anda."</string>
     <string name="night_display_text">Cahaya Malam memberi seri warna kuning jingga pada skrin anda. Ini memudahkan lagi anda melihat skrin atau membaca dalam cahaya malap dan mungkin dapat membantu anda tidur dengan lebih mudah.</string>
     <string name="night_display_title">Cahaya Malam</string>
     <string name="no">Tidak</string>
-    <string name="no_5g_in_dsds_text">Apabila menggunakan 2 SIM, telefon ini akan dihadkan kepada 4G. <annotation id="url">Ketahui lebih lanjut</annotation>.</string>
+    <string name="no_5g_in_dsds_text">Apabila menggunakan 2 SIM, telefon ini akan dihadkan kepada 4G. <annotation id="url">Ketahui lebih lanjut</annotation></string>
     <string name="no_application">Tiada apa-apa</string>
     <string name="no_applications">Tiada aplikasi.</string>
     <string name="no_battery_summary">Tiada penggunaan bateri sejak cas penuh terakhir</string>
@@ -2923,6 +2930,7 @@ Hal ini turut mengupayakan apl untuk menghidupkan atau mematikan ciri Jangan Gan
     <string name="notification_priority_title">Keutamaan</string>
     <string name="notification_pulse_title">Lampu berkelip</string>
     <string name="notification_ringtone_title">Bunyi pemberitahuan lalai</string>
+    <string name="notification_screen_summary">Sejarah pemberitahuan, gelembung, yang baru dihantar</string>
     <string name="notification_settings_work_profile">Akses pemberitahuan tidak tersedia untuk apl dalam profil kerja.</string>
     <string name="notification_show_lights_title">Lampu berkelip</string>
     <string name="notification_silence_title">Senyap</string>
@@ -3030,6 +3038,8 @@ Hal ini turut mengupayakan apl untuk menghidupkan atau mematikan ciri Jangan Gan
     <string name="platform_compat_dashboard_title">Perubahan Keserasian Apl</string>
     <string name="platform_compat_default_disabled_title">Perubaan dilumpuhkan tetapan lalai</string>
     <string name="platform_compat_default_enabled_title">Perubahan didayakan tetapan lalai</string>
+    <string name="platform_compat_dialog_text_no_apps">Perubahan keserasian aplikasi hanya boleh diubah suai untuk apl boleh dinyahpepijat. Pasang apl boleh dinyahpepijat dan cuba lagi.</string>
+    <string name="platform_compat_dialog_title_no_apps">Tiada apl tersedia</string>
     <string name="please_select_phase2">Pengesahan fasa 2</string>
     <string name="pointer_location">Lokasi penuding</string>
     <string name="pointer_location_summary">Tindihan skrin menunjukkan data sentuh semasa</string>

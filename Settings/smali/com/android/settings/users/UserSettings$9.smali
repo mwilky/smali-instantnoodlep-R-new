@@ -3,7 +3,7 @@
 .source "UserSettings.java"
 
 # interfaces
-.implements Lcom/android/settings/users/EditUserInfoController$OnContentChangedCallback;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
@@ -34,52 +34,12 @@
 
 
 # virtual methods
-.method public onLabelChanged(Landroid/os/UserHandle;Ljava/lang/CharSequence;)V
-    .locals 2
-
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings$9;->this$0:Lcom/android/settings/users/UserSettings;
-
-    iget-object v0, v0, Lcom/android/settings/users/UserSettings;->mMePreference:Lcom/android/settings/users/UserPreference;
-
-    invoke-interface {p2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 0
 
     iget-object p0, p0, Lcom/android/settings/users/UserSettings$9;->this$0:Lcom/android/settings/users/UserSettings;
 
-    invoke-static {p0}, Lcom/android/settings/users/UserSettings;->access$400(Lcom/android/settings/users/UserSettings;)Landroid/os/UserManager;
-
-    move-result-object p0
-
-    invoke-virtual {p1}, Landroid/os/UserHandle;->getIdentifier()I
-
-    move-result p1
-
-    invoke-interface {p2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {p0, p1, p2}, Landroid/os/UserManager;->setUserName(ILjava/lang/String;)V
-
-    return-void
-.end method
-
-.method public onPhotoChanged(Landroid/os/UserHandle;Landroid/graphics/drawable/Drawable;)V
-    .locals 1
-
-    new-instance v0, Lcom/android/settings/users/UserSettings$9$1;
-
-    invoke-direct {v0, p0, p1, p2}, Lcom/android/settings/users/UserSettings$9$1;-><init>(Lcom/android/settings/users/UserSettings$9;Landroid/os/UserHandle;Landroid/graphics/drawable/Drawable;)V
-
-    invoke-static {v0}, Lcom/android/settingslib/utils/ThreadUtils;->postOnBackgroundThread(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
-
-    iget-object p0, p0, Lcom/android/settings/users/UserSettings$9;->this$0:Lcom/android/settings/users/UserSettings;
-
-    iget-object p0, p0, Lcom/android/settings/users/UserSettings;->mMePreference:Lcom/android/settings/users/UserPreference;
-
-    invoke-virtual {p0, p2}, Landroidx/preference/Preference;->setIcon(Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p0}, Lcom/android/settings/users/UserSettings;->access$1200(Lcom/android/settings/users/UserSettings;)V
 
     return-void
 .end method

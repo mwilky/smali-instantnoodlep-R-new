@@ -2173,6 +2173,7 @@ You can change this later from Settings > Apps and notifications."</string>
     <string name="keywords_lock_screen_notif">lock screen notification, notifications</string>
     <string name="keywords_lockscreen">slide to unlock, password, pattern, PIN</string>
     <string name="keywords_lockscreen_bypass">Lock screen, Lockscreen, Skip, Bypass</string>
+    <string name="keywords_media_controls">media</string>
     <string name="keywords_model_and_hardware">serial number, hardware version</string>
     <string name="keywords_more_mobile_networks">mobile, mobile operator, wireless, data, 4g,3g, 2g, lte</string>
     <string name="keywords_network_reset">reset, restore, factory</string>
@@ -2549,6 +2550,12 @@ There are other users present on this device.
     <string name="master_clear_title">Erase all data (factory reset)</string>
     <string name="maximum_memory_use">Maximum memory use</string>
     <string name="media_category">Media</string>
+    <string name="media_controls_hide_player">Hide player</string>
+    <string name="media_controls_no_players">No players available</string>
+    <string name="media_controls_resume_description">The player allows you to resume a session from the expanded Quick Settings panel.</string>
+    <string name="media_controls_show_player">Show player</string>
+    <string name="media_controls_summary">Hide player when the media session has ended</string>
+    <string name="media_controls_title">Media</string>
     <string name="media_out_summary_ongoing_call_state">Unavailable during calls</string>
     <string name="media_output_default_summary">This device</string>
     <string name="media_output_disconnected_status">%1$s (disconnected)</string>
@@ -2806,7 +2813,7 @@ This replaces %2$s as your default payment app."</string>
     <string name="night_display_text">Night Light tints your screen amber. This makes it easier to look at your screen or read in dim light, and may help you fall asleep more easily.</string>
     <string name="night_display_title">Night Light</string>
     <string name="no">No</string>
-    <string name="no_5g_in_dsds_text">When using two SIMs, this phone will be limited to 4G. <annotation id="url">Learn more</annotation>.</string>
+    <string name="no_5g_in_dsds_text">When using two SIMs, this phone will be limited to 4G. <annotation id="url">Learn more</annotation></string>
     <string name="no_application">Nothing</string>
     <string name="no_applications">No apps.</string>
     <string name="no_battery_summary">No battery use since last full charge</string>
@@ -2923,6 +2930,7 @@ This will also give the app the ability to turn Do Not Disturb on or off and cha
     <string name="notification_priority_title">Priority</string>
     <string name="notification_pulse_title">Blink light</string>
     <string name="notification_ringtone_title">Default notification sound</string>
+    <string name="notification_screen_summary">Notification history, bubbles, recently sent</string>
     <string name="notification_settings_work_profile">Notification access is not available for apps in the work profile.</string>
     <string name="notification_show_lights_title">Blink light</string>
     <string name="notification_silence_title">Silent</string>
@@ -3030,6 +3038,8 @@ This will also give the app the ability to turn Do Not Disturb on or off and cha
     <string name="platform_compat_dashboard_title">App compatibility changes</string>
     <string name="platform_compat_default_disabled_title">Default disabled changes</string>
     <string name="platform_compat_default_enabled_title">Default enabled changes</string>
+    <string name="platform_compat_dialog_text_no_apps">App compatibility changes can only be modified for debuggable apps. Install a debuggable app and try again.</string>
+    <string name="platform_compat_dialog_title_no_apps">No apps available</string>
     <string name="please_select_phase2">Phase 2 authentication</string>
     <string name="pointer_location">Pointer location</string>
     <string name="pointer_location_summary">Screen overlay showing current touch data</string>

@@ -89,7 +89,7 @@
 
     iget-object p0, p0, Lcom/android/settings/network/ApnSettings$RestoreApnUiHandler;->this$0:Lcom/android/settings/network/ApnSettings;
 
-    invoke-static {p0, v1}, Lcom/android/settings/network/ApnSettings;->access$1300(Lcom/android/settings/network/ApnSettings;I)V
+    invoke-static {p0, v1}, Lcom/android/settings/network/ApnSettings;->access$1400(Lcom/android/settings/network/ApnSettings;I)V
 
     const-string p0, "EVENT_RESTORE_DEFAULTAPN_COMPLETE activity is null !"
 
@@ -125,7 +125,7 @@
 
     iget-object v0, p0, Lcom/android/settings/network/ApnSettings$RestoreApnUiHandler;->this$0:Lcom/android/settings/network/ApnSettings;
 
-    invoke-static {v0, v1}, Lcom/android/settings/network/ApnSettings;->access$1400(Lcom/android/settings/network/ApnSettings;I)V
+    invoke-static {v0, v1}, Lcom/android/settings/network/ApnSettings;->access$1500(Lcom/android/settings/network/ApnSettings;I)V
 
     iget-object p0, p0, Lcom/android/settings/network/ApnSettings$RestoreApnUiHandler;->this$0:Lcom/android/settings/network/ApnSettings;
 

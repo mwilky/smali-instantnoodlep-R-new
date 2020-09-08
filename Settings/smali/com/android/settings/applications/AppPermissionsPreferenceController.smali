@@ -252,7 +252,7 @@
 .end method
 
 .method updateSummary(Ljava/util/List;)V
-    .locals 5
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -268,15 +268,13 @@
 
     iget p1, p0, Lcom/android/settings/applications/AppPermissionsPreferenceController;->mNumPackageChecked:I
 
-    const/4 v0, 0x1
-
-    add-int/2addr p1, v0
+    add-int/lit8 p1, p1, 0x1
 
     iput p1, p0, Lcom/android/settings/applications/AppPermissionsPreferenceController;->mNumPackageChecked:I
 
-    const/4 v1, 0x4
+    const/4 v0, 0x4
 
-    if-ge p1, v1, :cond_0
+    if-ge p1, v0, :cond_0
 
     return-void
 
@@ -287,118 +285,31 @@
 
     move-result-object p1
 
-    sget v1, Lcom/android/settings/applications/AppPermissionsPreferenceController;->NUM_PERMISSIONS_TO_SHOW:I
+    sget v0, Lcom/android/settings/applications/AppPermissionsPreferenceController;->NUM_PERMISSIONS_TO_SHOW:I
 
-    int-to-long v1, v1
+    int-to-long v0, v0
 
-    invoke-interface {p1, v1, v2}, Ljava/util/stream/Stream;->limit(J)Ljava/util/stream/Stream;
+    invoke-interface {p1, v0, v1}, Ljava/util/stream/Stream;->limit(J)Ljava/util/stream/Stream;
 
     move-result-object p1
 
     invoke-static {}, Ljava/util/stream/Collectors;->toList()Ljava/util/stream/Collector;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-interface {p1, v1}, Ljava/util/stream/Stream;->collect(Ljava/util/stream/Collector;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Ljava/util/stream/Stream;->collect(Ljava/util/stream/Collector;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Ljava/util/List;
 
-    iget-object v1, p0, Lcom/android/settings/applications/AppPermissionsPreferenceController;->mPermissionGroups:Ljava/util/Set;
+    iget-object p0, p0, Lcom/android/settings/applications/AppPermissionsPreferenceController;->mPermissionGroups:Ljava/util/Set;
 
-    invoke-interface {v1}, Ljava/util/Set;->size()I
+    invoke-interface {p0}, Ljava/util/Set;->size()I
 
-    move-result v1
+    move-result p0
 
-    sget v2, Lcom/android/settings/applications/AppPermissionsPreferenceController;->NUM_PERMISSIONS_TO_SHOW:I
-
-    const/4 v3, 0x0
-
-    if-le v1, v2, :cond_1
-
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_1
-    move v1, v3
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
-
-    move-result v2
-
-    if-nez v2, :cond_3
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
-
-    sget v2, Lcom/android/settings/R$string;->app_permissions_summary_more:I
-
-    new-array v0, v0, [Ljava/lang/Object;
-
-    invoke-static {}, Landroid/icu/text/ListFormatter;->getInstance()Landroid/icu/text/ListFormatter;
-
-    move-result-object v4
-
-    invoke-virtual {v4, p1}, Landroid/icu/text/ListFormatter;->format(Ljava/util/Collection;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
-
-    move-result-object p1
-
-    aput-object p1, v0, v3
-
-    invoke-virtual {v1, v2, v0}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    goto :goto_1
-
-    :cond_2
-    iget-object v1, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
-
-    sget v2, Lcom/android/settings/R$string;->app_permissions_summary:I
-
-    new-array v0, v0, [Ljava/lang/Object;
-
-    invoke-static {}, Landroid/icu/text/ListFormatter;->getInstance()Landroid/icu/text/ListFormatter;
-
-    move-result-object v4
-
-    invoke-virtual {v4, p1}, Landroid/icu/text/ListFormatter;->format(Ljava/util/Collection;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
-
-    move-result-object p1
-
-    aput-object p1, v0, v3
-
-    invoke-virtual {v1, v2, v0}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    goto :goto_1
-
-    :cond_3
-    iget-object p1, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
-
-    sget v0, Lcom/android/settings/R$string;->runtime_permissions_summary_no_permissions_granted:I
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    :goto_1
-    iget-object p0, p0, Lcom/android/settings/applications/AppPermissionsPreferenceController;->mPreference:Landroidx/preference/Preference;
-
-    invoke-virtual {p0, p1}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+    sget p1, Lcom/android/settings/applications/AppPermissionsPreferenceController;->NUM_PERMISSIONS_TO_SHOW:I
 
     return-void
 .end method

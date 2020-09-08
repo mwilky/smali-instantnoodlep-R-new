@@ -157,7 +157,7 @@
 .end method
 
 .method private updateChargingStationPref()V
-    .locals 4
+    .locals 5
 
     const-string v0, "op_charging_station_setting"
 
@@ -181,24 +181,36 @@
 
     invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
+    move-result-object v2
+
+    const-string v3, "op_stations_installation"
+
+    const/4 v4, 0x0
+
+    invoke-static {v2, v3, v4}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v2
+
+    const/4 v3, 0x1
+
+    if-ne v2, v3, :cond_1
+
+    invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+
     move-result-object p0
 
     const-string v0, "op_charging_stations_feature_on"
 
-    const/4 v2, 0x0
-
-    invoke-static {p0, v0, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    invoke-static {p0, v0, v4}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result p0
 
-    const/4 v0, 0x1
+    if-ne p0, v3, :cond_0
 
-    if-ne p0, v0, :cond_0
-
-    move v2, v0
+    move v4, v3
 
     :cond_0
-    invoke-virtual {v1, v2}, Lcom/android/settings/widget/MasterSwitchPreference;->setChecked(Z)V
+    invoke-virtual {v1, v4}, Lcom/android/settings/widget/MasterSwitchPreference;->setChecked(Z)V
 
     goto :goto_0
 

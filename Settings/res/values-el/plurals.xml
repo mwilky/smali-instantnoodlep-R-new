@@ -225,8 +225,8 @@
         <item quantity="one">%d ενεργή εφαρμογή</item>
     </plurals>
     <plurals name="oneplus_applock_wrong_pattern_warning">
-        <item quantity="other">Έχετε ακόμα %1$d προσπάθειες</item>
-        <item quantity="one">Έχετε ακόμα %1$d προσπάθεια</item>
+        <item quantity="other">Έχετε ακόμα %1$d ευκαιρίες</item>
+        <item quantity="one">Έχετε ακόμα %1$d ευκαιρία</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
         <item quantity="other">Δοκιμάστε ξανά σε %d δευτερόλεπτα.</item>
@@ -237,8 +237,8 @@
         <item quantity="one">1 ώρα (εκτός αν ενεργοποιείται αυτόματα)</item>
     </plurals>
     <plurals name="op_location_settings_summary_location_on">
-        <item quantity="other">On - %1$d apps have access to location</item>
-        <item quantity="one">On - %1$d app has access to location</item>
+        <item quantity="other">Ενεργοποιημένο - %1$d Οι εφαρμογές έχουν πρόσβαση στην τοποθεσία</item>
+        <item quantity="one">Ενεργοποιημένο - %1$d Η εφαρμογή έχει πρόσβαση στην τοποθεσία</item>
     </plurals>
     <plurals name="permission_bar_chart_label">
         <item quantity="other">%s εφαρμογές</item>

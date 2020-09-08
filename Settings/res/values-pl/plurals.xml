@@ -337,11 +337,11 @@
         <item quantity="many">%d aktywnych aplikacji</item>
     </plurals>
     <plurals name="oneplus_applock_wrong_pattern_warning">
-        <item quantity="other">Masz jeszcze %1$d próby</item>
+        <item quantity="other">Masz jeszcze %1$d prób</item>
         <item quantity="one">Masz jeszcze %1$d próbę</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
-        <item quantity="other">Spróbuj ponownie za %d sekundy.</item>
+        <item quantity="other">Spróbuj ponownie za %d sekund.</item>
         <item quantity="one">Spróbuj ponownie za %d sekundę.</item>
     </plurals>
     <plurals name="oneplus_zen_mode_duration_summary_time_hours">
@@ -349,8 +349,8 @@
         <item quantity="one">1 godzina (chyba że włączono automatycznie)</item>
     </plurals>
     <plurals name="op_location_settings_summary_location_on">
-        <item quantity="other">On - %1$d apps have access to location</item>
-        <item quantity="one">On - %1$d app has access to location</item>
+        <item quantity="other">Włączone - aplikacje %1$d mają dostęp do lokalizacji</item>
+        <item quantity="one">Włączone - aplikacja %1$d ma dostęp do lokalizacji</item>
     </plurals>
     <plurals name="permission_bar_chart_label">
         <item quantity="other">%s aplikacji</item>

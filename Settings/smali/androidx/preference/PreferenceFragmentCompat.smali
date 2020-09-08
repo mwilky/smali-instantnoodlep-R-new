@@ -5,6 +5,7 @@
 # interfaces
 .implements Landroidx/preference/PreferenceManager$OnPreferenceTreeClickListener;
 .implements Landroidx/preference/PreferenceManager$OnDisplayPreferenceDialogListener;
+.implements Landroidx/preference/PreferenceManager$OnDisMissPreferenceDialogListener;
 .implements Landroidx/preference/PreferenceManager$OnNavigateToScreenListener;
 .implements Landroidx/preference/DialogPreference$TargetFragment;
 
@@ -1017,6 +1018,10 @@
 
     invoke-virtual {v0, p0}, Landroidx/preference/PreferenceManager;->setOnDisplayPreferenceDialogListener(Landroidx/preference/PreferenceManager$OnDisplayPreferenceDialogListener;)V
 
+    iget-object v0, p0, Landroidx/preference/PreferenceFragmentCompat;->mPreferenceManager:Landroidx/preference/PreferenceManager;
+
+    invoke-virtual {v0, p0}, Landroidx/preference/PreferenceManager;->setOnDisMissPreferenceDialogListener(Landroidx/preference/PreferenceManager$OnDisMissPreferenceDialogListener;)V
+
     return-void
 .end method
 
@@ -1031,9 +1036,13 @@
 
     invoke-virtual {v0, v1}, Landroidx/preference/PreferenceManager;->setOnPreferenceTreeClickListener(Landroidx/preference/PreferenceManager$OnPreferenceTreeClickListener;)V
 
+    iget-object v0, p0, Landroidx/preference/PreferenceFragmentCompat;->mPreferenceManager:Landroidx/preference/PreferenceManager;
+
+    invoke-virtual {v0, v1}, Landroidx/preference/PreferenceManager;->setOnDisplayPreferenceDialogListener(Landroidx/preference/PreferenceManager$OnDisplayPreferenceDialogListener;)V
+
     iget-object p0, p0, Landroidx/preference/PreferenceFragmentCompat;->mPreferenceManager:Landroidx/preference/PreferenceManager;
 
-    invoke-virtual {p0, v1}, Landroidx/preference/PreferenceManager;->setOnDisplayPreferenceDialogListener(Landroidx/preference/PreferenceManager$OnDisplayPreferenceDialogListener;)V
+    invoke-virtual {p0, v1}, Landroidx/preference/PreferenceManager;->setOnDisMissPreferenceDialogListener(Landroidx/preference/PreferenceManager$OnDisMissPreferenceDialogListener;)V
 
     return-void
 .end method

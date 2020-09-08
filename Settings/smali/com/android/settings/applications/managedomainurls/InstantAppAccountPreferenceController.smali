@@ -3,6 +3,14 @@
 .source "InstantAppAccountPreferenceController.java"
 
 
+# static fields
+.field private static final CLASS_NAME_GMS:Ljava/lang/String; = "com.google.android.gms.instantapps.settings.SettingsActivity"
+
+.field private static final CLASS_NAME_VENDING:Ljava/lang/String; = "com.google.android.finsky.instantapps.SettingsActivity"
+
+.field private static final PACKAGE_NAME_VENDING:Ljava/lang/String; = "com.android.vending"
+
+
 # instance fields
 .field private mLaunchIntent:Landroid/content/Intent;
 
@@ -66,32 +74,77 @@
 .end method
 
 .method public getAvailabilityStatus()I
-    .locals 1
+    .locals 4
 
     iget-object v0, p0, Lcom/android/settings/applications/managedomainurls/InstantAppAccountPreferenceController;->mLaunchIntent:Landroid/content/Intent;
 
-    if-eqz v0, :cond_1
+    const/4 v1, 0x3
 
-    iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+    if-eqz v0, :cond_2
 
-    invoke-static {p0}, Lcom/android/settings/applications/managedomainurls/WebActionCategoryController;->isDisableWebActions(Landroid/content/Context;)Z
+    iget-object v0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
 
-    move-result p0
+    invoke-static {v0}, Lcom/android/settings/applications/managedomainurls/WebActionCategoryController;->isDisableWebActions(Landroid/content/Context;)Z
 
-    if-eqz p0, :cond_0
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
+    new-instance v0, Landroid/content/ComponentName;
+
+    const-string v2, "com.google.android.gms"
+
+    const-string v3, "com.google.android.gms.instantapps.settings.SettingsActivity"
+
+    invoke-direct {v0, v2, v3}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v2, p0, Lcom/android/settings/applications/managedomainurls/InstantAppAccountPreferenceController;->mLaunchIntent:Landroid/content/Intent;
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v2}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    new-instance v0, Landroid/content/Intent;
+
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+
+    const-string v2, "com.android.vending"
+
+    const-string v3, "com.google.android.finsky.instantapps.SettingsActivity"
+
+    invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    const/4 v2, 0x0
+
+    invoke-static {p0, v0, v2}, Lcom/oneplus/settings/utils/OPUtils;->isActionExist(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_1
+
+    return v1
+
+    :cond_1
     const/4 p0, 0x0
 
     return p0
 
-    :cond_1
+    :cond_2
     :goto_0
-    const/4 p0, 0x3
-
-    return p0
+    return v1
 .end method
 
 .method public bridge synthetic getBackgroundWorkerClass()Ljava/lang/Class;

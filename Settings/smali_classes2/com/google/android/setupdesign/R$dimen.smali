@@ -4,8 +4,8 @@
 
 
 # static fields
-.field public static final sud_decor_padding_top:I = 0x7f0705e5
+.field public static final sud_decor_padding_top:I = 0x7f0705f3
 
-.field public static final sud_glif_icon_max_height:I = 0x7f0705fc
+.field public static final sud_glif_icon_max_height:I = 0x7f07060a
 
-.field public static final sud_illustration_aspect_ratio:I = 0x7f070609
+.field public static final sud_illustration_aspect_ratio:I = 0x7f070617

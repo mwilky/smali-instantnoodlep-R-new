@@ -25,10 +25,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    const-string v0, "application/json; charset=utf-8"
-
-    invoke-static {v0}, Lokhttp3/MediaType;->parse(Ljava/lang/String;)Lokhttp3/MediaType;
-
     const/4 v0, 0x0
 
     new-array v0, v0, [B
@@ -62,12 +58,6 @@
     sget-object v1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-virtual {v0, v2, v3, v1}, Lokhttp3/OkHttpClient$Builder;->writeTimeout(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$Builder;
-
-    new-instance v1, Lcom/oneplus/settings/utils/OPOkHttpUtils$1;
-
-    invoke-direct {v1, p0}, Lcom/oneplus/settings/utils/OPOkHttpUtils$1;-><init>(Lcom/oneplus/settings/utils/OPOkHttpUtils;)V
-
-    invoke-virtual {v0, v1}, Lokhttp3/OkHttpClient$Builder;->hostnameVerifier(Ljavax/net/ssl/HostnameVerifier;)Lokhttp3/OkHttpClient$Builder;
 
     invoke-virtual {v0}, Lokhttp3/OkHttpClient$Builder;->build()Lokhttp3/OkHttpClient;
 
@@ -222,9 +212,9 @@
 
     move-result-object p1
 
-    new-instance p2, Lcom/oneplus/settings/utils/OPOkHttpUtils$3;
+    new-instance p2, Lcom/oneplus/settings/utils/OPOkHttpUtils$1;
 
-    invoke-direct {p2, p0, p3}, Lcom/oneplus/settings/utils/OPOkHttpUtils$3;-><init>(Lcom/oneplus/settings/utils/OPOkHttpUtils;Lcom/oneplus/settings/utils/OPOkHttpUtils$NetCall;)V
+    invoke-direct {p2, p0, p3}, Lcom/oneplus/settings/utils/OPOkHttpUtils$1;-><init>(Lcom/oneplus/settings/utils/OPOkHttpUtils;Lcom/oneplus/settings/utils/OPOkHttpUtils$NetCall;)V
 
     invoke-interface {p1, p2}, Lokhttp3/Call;->enqueue(Lokhttp3/Callback;)V
 

@@ -204,7 +204,11 @@
 .end method
 
 .method updateSummary(Landroidx/preference/Preference;ZI)V
-    .locals 3
+    .locals 4
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
 
     if-lez p3, :cond_0
 
@@ -216,23 +220,27 @@
 
     sget p2, Lcom/android/settings/R$plurals;->battery_manager_app_restricted:I
 
-    const/4 v0, 0x1
-
-    new-array v0, v0, [Ljava/lang/Object;
-
-    const/4 v1, 0x0
+    new-array v2, v1, [Ljava/lang/Object;
 
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v2
+    move-result-object v3
 
-    aput-object v2, v0, v1
+    aput-object v3, v2, v0
 
-    invoke-virtual {p0, p2, p3, v0}, Landroid/content/res/Resources;->getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, p2, p3, v2}, Landroid/content/res/Resources;->getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
     invoke-virtual {p1, p0}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+
+    instance-of p0, p1, Lcom/android/settings/widget/MasterSwitchPreference;
+
+    if-eqz p0, :cond_2
+
+    check-cast p1, Lcom/android/settings/widget/MasterSwitchPreference;
+
+    invoke-virtual {p1, v1}, Lcom/android/settings/widget/MasterSwitchPreference;->setChecked(Z)V
 
     goto :goto_0
 
@@ -243,6 +251,14 @@
 
     invoke-virtual {p1, p0}, Landroidx/preference/Preference;->setSummary(I)V
 
+    instance-of p0, p1, Lcom/android/settings/widget/MasterSwitchPreference;
+
+    if-eqz p0, :cond_2
+
+    check-cast p1, Lcom/android/settings/widget/MasterSwitchPreference;
+
+    invoke-virtual {p1, v1}, Lcom/android/settings/widget/MasterSwitchPreference;->setChecked(Z)V
+
     goto :goto_0
 
     :cond_1
@@ -250,6 +266,15 @@
 
     invoke-virtual {p1, p0}, Landroidx/preference/Preference;->setSummary(I)V
 
+    instance-of p0, p1, Lcom/android/settings/widget/MasterSwitchPreference;
+
+    if-eqz p0, :cond_2
+
+    check-cast p1, Lcom/android/settings/widget/MasterSwitchPreference;
+
+    invoke-virtual {p1, v0}, Lcom/android/settings/widget/MasterSwitchPreference;->setChecked(Z)V
+
+    :cond_2
     :goto_0
     return-void
 .end method

@@ -572,7 +572,7 @@
 
 # virtual methods
 .method public getFragmentList()Ljava/util/List;
-    .locals 5
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -590,6 +590,28 @@
 
     move-result-object v0
 
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "getFragmentList "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "DataUsageMainActivity"
+
+    invoke-static {v2, v1}, Lcom/oneplus/security/utils/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)V
+
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
@@ -602,25 +624,29 @@
 
     iget-object v1, p0, Lcom/oneplus/security/network/view/DataUsageMainActivity;->mOperatorDataModelSimOne:Lcom/oneplus/security/network/operator/OperatorModelInterface;
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
     if-eqz v1, :cond_0
 
+    const-string v1, "getFragmentList mOperatorDataModelSimOne != null"
+
+    invoke-static {v2, v1}, Lcom/oneplus/security/utils/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)V
+
     new-instance v1, Lcom/oneplus/security/network/view/DataUsagePrefFragment;
 
-    sget v3, Lcom/android/settings/R$xml;->data_usage_simcard_prefs:I
+    sget v4, Lcom/android/settings/R$xml;->data_usage_simcard_prefs:I
 
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
-    invoke-direct {v1, p0, v3, v2, v4}, Lcom/oneplus/security/network/view/DataUsagePrefFragment;-><init>(Landroid/content/Context;IZI)V
+    invoke-direct {v1, p0, v4, v3, v5}, Lcom/oneplus/security/network/view/DataUsagePrefFragment;-><init>(Landroid/content/Context;IZI)V
 
-    iget-object v3, p0, Lcom/oneplus/security/network/view/DataUsageMainActivity;->mSimcardDataModel:Lcom/oneplus/security/network/simcard/SimcardDataModelInterface;
+    iget-object v4, p0, Lcom/oneplus/security/network/view/DataUsageMainActivity;->mSimcardDataModel:Lcom/oneplus/security/network/simcard/SimcardDataModelInterface;
 
-    invoke-interface {v3, v4}, Lcom/oneplus/security/network/simcard/SimcardDataModelInterface;->isSlotOperatorSupportedBySdk(I)Z
+    invoke-interface {v4, v5}, Lcom/oneplus/security/network/simcard/SimcardDataModelInterface;->isSlotOperatorSupportedBySdk(I)Z
 
-    move-result v3
+    move-result v4
 
-    invoke-virtual {v1, v3}, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->setSupportSdk(Z)V
+    invoke-virtual {v1, v4}, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->setSupportSdk(Z)V
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -629,19 +655,23 @@
 
     if-eqz v1, :cond_1
 
+    const-string v1, "getFragmentList mOperatorDataModelSimTwo != null"
+
+    invoke-static {v2, v1}, Lcom/oneplus/security/utils/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)V
+
     new-instance v1, Lcom/oneplus/security/network/view/DataUsagePrefFragment;
 
-    sget v3, Lcom/android/settings/R$xml;->data_usage_simcard_prefs:I
+    sget v2, Lcom/android/settings/R$xml;->data_usage_simcard_prefs:I
 
-    invoke-direct {v1, p0, v3, v2, v2}, Lcom/oneplus/security/network/view/DataUsagePrefFragment;-><init>(Landroid/content/Context;IZI)V
+    invoke-direct {v1, p0, v2, v3, v3}, Lcom/oneplus/security/network/view/DataUsagePrefFragment;-><init>(Landroid/content/Context;IZI)V
 
-    iget-object v3, p0, Lcom/oneplus/security/network/view/DataUsageMainActivity;->mSimcardDataModel:Lcom/oneplus/security/network/simcard/SimcardDataModelInterface;
+    iget-object v2, p0, Lcom/oneplus/security/network/view/DataUsageMainActivity;->mSimcardDataModel:Lcom/oneplus/security/network/simcard/SimcardDataModelInterface;
 
-    invoke-interface {v3, v2}, Lcom/oneplus/security/network/simcard/SimcardDataModelInterface;->isSlotOperatorSupportedBySdk(I)Z
+    invoke-interface {v2, v3}, Lcom/oneplus/security/network/simcard/SimcardDataModelInterface;->isSlotOperatorSupportedBySdk(I)Z
 
-    move-result v3
+    move-result v2
 
-    invoke-virtual {v1, v3}, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->setSupportSdk(Z)V
+    invoke-virtual {v1, v2}, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->setSupportSdk(Z)V
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -656,11 +686,11 @@
 
     new-instance v1, Lcom/oneplus/security/network/view/DataUsagePrefFragment;
 
-    sget v3, Lcom/android/settings/R$xml;->data_usage_simcard_prefs:I
+    sget v2, Lcom/android/settings/R$xml;->data_usage_simcard_prefs:I
 
     const/4 v4, -0x1
 
-    invoke-direct {v1, p0, v3, v2, v4}, Lcom/oneplus/security/network/view/DataUsagePrefFragment;-><init>(Landroid/content/Context;IZI)V
+    invoke-direct {v1, p0, v2, v3, v4}, Lcom/oneplus/security/network/view/DataUsagePrefFragment;-><init>(Landroid/content/Context;IZI)V
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -927,7 +957,7 @@
 .end method
 
 .method protected onDestroy()V
-    .locals 1
+    .locals 2
 
     invoke-direct {p0}, Lcom/oneplus/security/network/view/DataUsageMainActivity;->clearExistingOperatorDataModels()V
 
@@ -942,6 +972,12 @@
     iput-object v0, p0, Lcom/oneplus/security/network/view/DataUsageMainActivity;->mInvalidDataModel:Lcom/oneplus/security/network/operator/OperatorModelInterface;
 
     :cond_0
+    const-string v0, "DataUsageMainActivity"
+
+    const-string v1, "onDestroy"
+
+    invoke-static {v0, v1}, Lcom/oneplus/security/utils/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)V
+
     invoke-super {p0}, Landroidx/appcompat/app/AppCompatActivity;->onDestroy()V
 
     return-void

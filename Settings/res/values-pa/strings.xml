@@ -1024,7 +1024,7 @@
     <string name="cache_size_label">ਕੈਸ਼ੇ</string>
     <string name="cached">ਕੈਚ ਕੀਤੀ ਪਿਛੋਕੜ ਪ੍ਰਕਿਰਿਆ</string>
     <string name="cached_apps_freezer">ਕੈਸ਼ੇ ਕੀਤੀਆਂ ਐਪਾਂ ਦਾ ਚੱਲਣਾ ਮੁਅੱਤਲ ਕਰੋ</string>
-    <string name="cached_apps_freezer_device_default">ਪੂਰਵ-ਨਿਰਧਾਰਤ ਡੀਵਾਈਸ</string>
+    <string name="cached_apps_freezer_device_default">ਡੀਵਾਈਸ ਪੂਰਵ-ਨਿਰਧਾਰਤ</string>
     <string name="cached_apps_freezer_disabled">ਬੰਦ ਕੀਤਾ ਗਿਆ</string>
     <string name="cached_apps_freezer_enabled">ਚਾਲੂ ਕੀਤਾ ਗਿਆ</string>
     <string name="cached_apps_freezer_reboot_dialog_text">ਇਸ ਤਬਦੀਲੀ ਨੂੰ ਲਾਗੂ ਕਰਨ ਲਈ ਤੁਹਾਡੇ ਡੀਵਾਈਸ ਨੂੰ ਰੀਬੂਟ ਕਰਨਾ ਲਾਜ਼ਮੀ ਹੈ। ਹੁਣੇ ਰੀਬੂਟ ਕਰੋ ਜਾਂ ਰੱਦ ਕਰੋ।</string>
@@ -2173,6 +2173,7 @@
     <string name="keywords_lock_screen_notif">ਲਾਕ ਸਕ੍ਰੀਨ ਸੂਚਨਾ, ਸੂਚਨਾਵਾਂ</string>
     <string name="keywords_lockscreen">ਅਣਲਾਕ ਕਰਨ ਲਈ ਸਲਾਈਡ ਕਰੋ, ਪਾਸਵਰਡ, ਪੈਟਰਨ, ਪਿੰਨ ਦਾਖਲ ਕਰੋ</string>
     <string name="keywords_lockscreen_bypass">ਲਾਕ ਸਕ੍ਰੀਨ, ਲਾਕਸਕ੍ਰੀਨ, ਛੱਡੋ, ਅਣਡਿੱਠ</string>
+    <string name="keywords_media_controls">ਮੀਡੀਆ</string>
     <string name="keywords_model_and_hardware">ਸੀਰੀਅਲ ਨੰਬਰ, ਹਾਰਡਵੇਅਰ ਵਰਜਨ</string>
     <string name="keywords_more_mobile_networks">ਸੈਲਿਊਲਰ, ਮੋਬਾਈਲ, ਸੈੱਲ ਕੈਰੀਅਰ, ਵਾਇਰਲੈੱਸ, ਡਾਟਾ, 4g,3g, 2g, lte</string>
     <string name="keywords_network_reset">ਮੁੜ-ਸੈੱਟ ਕਰੋ, ਮੁੜ-ਸਟੋਰ ਕਰੋ, ਫੈਕਟਰੀ</string>
@@ -2549,6 +2550,12 @@
     <string name="master_clear_title">ਸਾਰਾ ਡਾਟਾ ਮਿਟਾਓ (ਫੈਕਟਰੀ ਰੀਸੈੱਟ)</string>
     <string name="maximum_memory_use">ਅਧਿਕਤਮ ਮੈਮਰੀ ਵਰਤੋਂ</string>
     <string name="media_category">ਮੀਡੀਆ</string>
+    <string name="media_controls_hide_player">ਪਲੇਅਰ ਲੁਕਾਓ</string>
+    <string name="media_controls_no_players">ਕੋਈ ਪਲੇਅਰ ਉਪਲਬਧ ਨਹੀਂ</string>
+    <string name="media_controls_resume_description">ਪਲੇਅਰ ਤੁਹਾਨੂੰ ਵਿਸਤ੍ਰਿਤ ਤਤਕਾਲ ਸੈਟਿੰਗਾਂ ਪੈਨਲ ਤੋਂ ਸੈਸ਼ਨ ਨੂੰ ਮੁੜ-ਚਾਲੂ ਕਰਨ ਦਿੰਦਾ ਹੈ।</string>
+    <string name="media_controls_show_player">ਪਲੇਅਰ ਦਿਖਾਓ</string>
+    <string name="media_controls_summary">"ਮੀਡੀਆ ਸੈਸ਼ਨ ਸਮਾਪਤ ਹੋਣ 'ਤੇ ਪਲੇਅਰ ਨੂੰ ਲੁਕਾਓ"</string>
+    <string name="media_controls_title">ਮੀਡੀਆ</string>
     <string name="media_out_summary_ongoing_call_state">ਕਾਲਾਂ ਵੇਲੇ ਉਪਲਬਧ ਨਹੀਂ ਹੈ</string>
     <string name="media_output_default_summary">ਇਹ ਡੀਵਾਈਸ</string>
     <string name="media_output_disconnected_status">%1$s (ਡਿਸਕਨੈਕਟ ਹੋਇਆ)</string>
@@ -2806,7 +2813,6 @@
     <string name="night_display_text">"'ਰਾਤ ਦੀ ਰੋਸ਼ਨੀ' ਤੁਹਾਡੀ ਸਕ੍ਰੀਨ ਨੂੰ ਭੂਰੇ ਪੀਲੇ ਰੰਗ ਦੀ ਭਾਹ ਦਿੰਦੀ ਹੈ। ਇਸ ਨਾਲ ਮੱਧਮ ਰੋਸ਼ਨੀ ਵਿੱਚ ਤੁਹਾਡੀ ਸਕ੍ਰੀਨ ਨੂੰ ਦੇਖਣਾ ਜਾਂ ਪੜ੍ਹਨਾ ਵਧੇਰੇ ਆਸਾਨ ਹੋ ਜਾਂਦਾ ਹੈ ਅਤੇ ਤੁਹਾਨੂੰ ਵਧੇਰੇ ਆਸਾਨੀ ਨਾਲ ਸੌਣ ਵਿੱਚ ਮਦਦ ਮਿਲ ਸਕਦੀ ਹੈ।"</string>
     <string name="night_display_title">ਰਾਤ ਦੀ ਰੋਸ਼ਨੀ</string>
     <string name="no">ਨਹੀਂ</string>
-    <string name="no_5g_in_dsds_text">2 ਸਿਮ ਵਰਤਣ ਵੇਲੇ, ਇਹ ਫ਼ੋਨ 4G ਤੱਕ ਸੀਮਤ ਰਹੇਗਾ। <annotation id="url">ਹੋਰ ਜਾਣੋ</annotation>।</string>
     <string name="no_application">ਕੁਝ ਨਹੀਂ</string>
     <string name="no_applications">ਕੋਈ ਐਪਾਂ ਨਹੀਂ।</string>
     <string name="no_battery_summary">ਪਿਛਲੇ ਸੰਪੂਰਣ ਚਾਰਤ ਤੋਂ ਬਾਅਦ ਬੈਟਰੀ ਦਾ ਕੋਈ ਉਪਯੋਗ ਨਹੀਂ</string>
@@ -2923,6 +2929,7 @@
     <string name="notification_priority_title">ਤਰਜੀਹ</string>
     <string name="notification_pulse_title">ਲਾਈਟ ਨੂੰ ਟਿਮ-ਟਿਮਾਓ</string>
     <string name="notification_ringtone_title">ਪੂਰਵ-ਨਿਰਧਾਰਤ ਸੂਚਨਾ ਧੁਨੀ</string>
+    <string name="notification_screen_summary">ਸੂਚਨਾ ਦਾ ਇਤਿਹਾਸ, ਬਬਲ, ਹਾਲ ਵਿੱਚ ਭੇਜੀਆਂ ਗਈਆਂ</string>
     <string name="notification_settings_work_profile">ਕਾਰਜ ਪ੍ਰੋਫਾਈਲ ਵਿੱਚ ਐਪਾਂ ਲਈ ਸੂਚਨਾ ਪਹੁੰਚ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।</string>
     <string name="notification_show_lights_title">ਲਾਈਟ ਨੂੰ ਟਿਮ-ਟਿਮਾਓ</string>
     <string name="notification_silence_title">ਸ਼ਾਂਤ</string>
@@ -2985,7 +2992,7 @@
     <string name="other_sound_category_preference_title">ਹੋਰ ਧੁਨੀਆਂ ਅਤੇ ਥਰਥਰਾਹਟਾਂ</string>
     <string name="other_sound_settings">ਹੋਰ ਅਵਾਜ਼ਾਂ</string>
     <string name="overlay_display_devices_title">ਸੈਕੰਡਰੀ ਡਿਸਪਲੇ ਦੀ ਨਕਲ ਕਰੋ</string>
-    <string name="overlay_option_device_default">ਪੂਰਵ-ਨਿਰਧਾਰਤ ਡੀਵਾਈਸ</string>
+    <string name="overlay_option_device_default">ਡੀਵਾਈਸ ਪੂਰਵ-ਨਿਰਧਾਰਤ</string>
     <string name="overlay_settings">ਦੂਜੀਆਂ ਐਪਾਂ ਦੇ ਉੱਪਰ ਪ੍ਰਦਰਸ਼ਿਤ ਕਰੋ</string>
     <string name="overlay_settings_summary">"ਉਹਨਾਂ ਐਪਾਂ ਨੂੰ ਇਜਾਜ਼ਤ ਦਿਓ ਜੋ 'ਸੈਟਿੰਗਾਂ' ਸਕ੍ਰੀਨਾਂ ਨੂੰ ਓਵਰਲੇ ਕਰਨ ਲਈ ਦੂਜੀਆਂ ਐਪਾਂ ਦੇ ਉੱਪਰ ਪ੍ਰਦਰਸ਼ਿਤ ਹੋ ਸਕਦੀਆਂ ਹਨ"</string>
     <string name="overlay_settings_title">"'ਸੈਟਿੰਗਾਂ' 'ਤੇ ਸਕ੍ਰੀਨ ਓਵਰਲੇ ਦੀ ਇਜਾਜ਼ਤ ਦਿਓ"</string>
@@ -3030,6 +3037,8 @@
     <string name="platform_compat_dashboard_title">ਐਪ ਅਨੁਰੂਪਤਾ ਸੰਬੰਧੀ ਤਬਦੀਲੀਆਂ</string>
     <string name="platform_compat_default_disabled_title">"ਪੂਰਵ-ਨਿਰਧਾਰਤ ਤੌਤ 'ਤੇ ਬੰਦ ਕੀਤੀਆਂ ਤਬਦੀਲੀਆਂ"</string>
     <string name="platform_compat_default_enabled_title">"ਪੂਰਵ-ਨਿਰਧਾਰਤ ਤੌਰ 'ਤੇ ਚਾਲੂ ਕੀਤੀਆਂ ਤਬਦੀਲੀਆਂ"</string>
+    <string name="platform_compat_dialog_text_no_apps">ਐਪ ਅਨੁਰੂਪਤਾ ਸੰਬੰਧੀ ਤਬਦੀਲੀਆਂ ਸਿਰਫ਼ ਡੀਬੱਗਯੋਗ ਐਪਾਂ ਲਈ ਸੋਧੀਆਂ ਜਾ ਸਕਦੀਆਂ ਹਨ। ਡੀਬੱਗਯੋਗ ਐਪ ਨੂੰ ਸਥਾਪਤ ਕਰੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
+    <string name="platform_compat_dialog_title_no_apps">ਕੋਈ ਐਪ ਉਪਲਬਧ ਨਹੀਂ</string>
     <string name="please_select_phase2">ਫੇਜ਼ 2 ਪ੍ਰਮਾਣੀਕਰਨ</string>
     <string name="pointer_location">ਪੁਆਇੰਟਰ ਟਿਕਾਣਾ</string>
     <string name="pointer_location_summary">ਸਕ੍ਰੀਨ ਓਵਰਲੇ ਮੌਜੂਦਾ ਸਪੱਰਸ਼ ਡਾਟਾ ਦਿਖਾ ਰਿਹਾ ਹੈ</string>
@@ -4162,7 +4171,7 @@
     <string name="tethering_help_button_text">ਮਦਦ</string>
     <string name="tethering_interface_options">ਟੈਦਰਿੰਗ</string>
     <string name="tethering_settings_not_available">ਇਸ ਵਰਤੋਂਕਾਰ ਲਈ ਟੈਦਰਿੰਗ ਸੈਟਿੰਗਾਂ ਉਪਲਬਧ ਨਹੀਂ ਹਨ</string>
-    <string name="theme_customization_device_default">ਪੂਰਵ-ਨਿਰਧਾਰਤ ਡੀਵਾਈਸ</string>
+    <string name="theme_customization_device_default">ਡੀਵਾਈਸ ਪੂਰਵ-ਨਿਰਧਾਰਤ</string>
     <string name="time_format_category_title">ਸਮਾਂ ਫਾਰਮੈਟ</string>
     <string name="time_picker_title">ਸਮਾਂ</string>
     <string name="time_spent_in_app_pref_title">ਸਕ੍ਰੀਨ ਸਮਾਂ</string>

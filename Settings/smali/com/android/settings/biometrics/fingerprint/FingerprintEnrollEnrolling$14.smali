@@ -39,7 +39,7 @@
 
     iget-object v0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling$14;->this$0:Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;
 
-    invoke-static {v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->access$1300(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)Lcom/android/settings/biometrics/BiometricEnrollSidecar;
+    invoke-static {v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->access$1100(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)Lcom/android/settings/biometrics/BiometricEnrollSidecar;
 
     move-result-object v0
 
@@ -51,7 +51,7 @@
 
     invoke-direct {v1}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollSidecar;-><init>()V
 
-    invoke-static {v0, v1}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->access$1402(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;Lcom/android/settings/biometrics/BiometricEnrollSidecar;)Lcom/android/settings/biometrics/BiometricEnrollSidecar;
+    invoke-static {v0, v1}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->access$1202(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;Lcom/android/settings/biometrics/BiometricEnrollSidecar;)Lcom/android/settings/biometrics/BiometricEnrollSidecar;
 
     iget-object v0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling$14;->this$0:Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;
 
@@ -65,7 +65,7 @@
 
     iget-object v1, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling$14;->this$0:Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;
 
-    invoke-static {v1}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->access$1500(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)Lcom/android/settings/biometrics/BiometricEnrollSidecar;
+    invoke-static {v1}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->access$1300(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)Lcom/android/settings/biometrics/BiometricEnrollSidecar;
 
     move-result-object v1
 
@@ -78,7 +78,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling$14;->this$0:Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;
 
-    invoke-static {v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->access$1600(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)Lcom/android/settings/biometrics/BiometricEnrollSidecar;
+    invoke-static {v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->access$1400(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)Lcom/android/settings/biometrics/BiometricEnrollSidecar;
 
     move-result-object v0
 

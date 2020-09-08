@@ -15,6 +15,8 @@
 # instance fields
 .field private final mAlertObserver:Landroid/net/INetworkManagementEventObserver;
 
+.field private mBootDataTimeReceiver:Lcom/oneplus/security/receiver/BootDataTimeReceiver;
+
 .field private mContext:Landroid/content/Context;
 
 .field private mHandler:Landroid/os/Handler;
@@ -608,19 +610,30 @@
 
     invoke-virtual {v2, v3, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    invoke-static {}, Lcom/oneplus/security/utils/Utils;->hasSDK28()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v2, "android.intent.action.DATE_CHANGED"
 
     invoke-direct {v0, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    :cond_0
+    const-string v2, "android.intent.action.TIME_SET"
+
+    invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    new-instance v2, Lcom/oneplus/security/receiver/BootDataTimeReceiver;
+
+    invoke-direct {v2}, Lcom/oneplus/security/receiver/BootDataTimeReceiver;-><init>()V
+
+    iput-object v2, p0, Lcom/oneplus/security/SecureService;->mBootDataTimeReceiver:Lcom/oneplus/security/receiver/BootDataTimeReceiver;
+
+    invoke-virtual {p0}, Landroid/app/Service;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/oneplus/security/SecureService;->mBootDataTimeReceiver:Lcom/oneplus/security/receiver/BootDataTimeReceiver;
+
+    invoke-virtual {v2, v3, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
     iget-object v0, p0, Lcom/oneplus/security/SecureService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -706,7 +719,13 @@
 
     invoke-virtual {v0, v2}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    invoke-static {}, Lcom/oneplus/security/utils/Utils;->hasSDK28()Z
+    invoke-virtual {p0}, Landroid/app/Service;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lcom/oneplus/security/SecureService;->mBootDataTimeReceiver:Lcom/oneplus/security/receiver/BootDataTimeReceiver;
+
+    invoke-virtual {v0, v2}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     const-string v0, "SecureService"
 

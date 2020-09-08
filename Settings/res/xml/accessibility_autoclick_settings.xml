@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen android:title="@string/accessibility_autoclick_preference_title"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
-    <com.android.settingslib.widget.LayoutPreference android:persistent="false" android:layout="@layout/accessibility_autoclick_preview" android:title="@string/summary_placeholder" android:selectable="false" android:key="accessibility_autoclick_preview" settings:allowDividerBelow="false" settings:searchable="false" />
+    <com.oneplus.settings.ui.OPPreferenceHeaderMargin android:key="preference_divider_line" android:order="-300" />
     <com.android.settings.widget.RadioButtonPreference android:title="@string/accessibility_autoclick_default_title" android:key="accessibility_control_autoclick_default" settings:allowDividerAbove="false" />
     <com.android.settings.widget.RadioButtonPreference android:title="@string/accessibility_autoclick_short_title" android:key="accessibility_control_autoclick_200ms" android:summary="@string/accessibility_autoclick_short_summary" />
     <com.android.settings.widget.RadioButtonPreference android:title="@string/accessibility_autoclick_medium_title" android:key="accessibility_control_autoclick_600ms" android:summary="@string/accessibility_autoclick_medium_summary" />

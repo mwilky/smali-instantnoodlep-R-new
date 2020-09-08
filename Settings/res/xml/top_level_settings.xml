@@ -2,7 +2,6 @@
 <PreferenceScreen android:key="top_level_settings"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
     <com.oneplus.settings.ui.OPMemberPreference android:key="member_sign" android:order="-195" settings:controller="com.oneplus.settings.OPMemberController" />
-    <com.oneplus.settings.worklifebalance.OPWLBBannerPreference android:key="worklifebalance_banner" android:order="-194" settings:controller="com.oneplus.settings.worklifebalance.OPWLBBannerPrefController" />
     <Preference android:icon="@drawable/op_ic_homepage_network_settings" android:layout="@layout/op_home_preference_card_top" android:title="@string/oneplus_network_dashboard_title" android:key="top_level_network" android:summary="@string/summary_placeholder" android:order="-190" android:fragment="com.android.settings.network.NetworkDashboardFragment" settings:controller="com.android.settings.network.TopLevelNetworkEntryPreferenceController" />
     <Preference android:icon="@drawable/op_ic_homepage_connected_device_settings" android:layout="@layout/op_home_preference_card_bottom" android:title="@string/oneplus_connected_devices_dashboard_title" android:key="top_level_connected_devices" android:summary="@string/summary_placeholder" android:order="-180" settings:controller="com.android.settings.connecteddevice.TopLevelConnectedDevicesPreferenceController">
         <intent android:action="com.android.settings.ADVANCED_CONNECTED_DEVICE_SETTINGS" />

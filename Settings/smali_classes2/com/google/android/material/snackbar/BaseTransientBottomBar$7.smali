@@ -42,19 +42,7 @@
 .end method
 
 .method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 1
-
-    iget-object p0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$7;->this$0:Lcom/google/android/material/snackbar/BaseTransientBottomBar;
-
-    invoke-static {p0}, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->access$000(Lcom/google/android/material/snackbar/BaseTransientBottomBar;)Lcom/google/android/material/snackbar/ContentViewCallback;
-
-    move-result-object p0
-
-    const/16 p1, 0x78
-
-    const/16 v0, 0xb4
-
-    invoke-interface {p0, p1, v0}, Lcom/google/android/material/snackbar/ContentViewCallback;->animateContentIn(II)V
+    .locals 0
 
     return-void
 .end method

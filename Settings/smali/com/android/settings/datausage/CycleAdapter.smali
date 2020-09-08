@@ -1,5 +1,5 @@
 .class public Lcom/android/settings/datausage/CycleAdapter;
-.super Lcom/android/settingslib/widget/settingsspinner/SettingsSpinnerAdapter;
+.super Lcom/oneplus/settings/widget/OPSettingsSpinnerAdapter;
 .source "CycleAdapter.java"
 
 
@@ -13,7 +13,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/android/settingslib/widget/settingsspinner/SettingsSpinnerAdapter<",
+        "Lcom/oneplus/settings/widget/OPSettingsSpinnerAdapter<",
         "Lcom/android/settings/datausage/CycleAdapter$CycleItem;",
         ">;"
     }
@@ -30,7 +30,7 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/settings/datausage/CycleAdapter$SpinnerInterface;Landroid/widget/AdapterView$OnItemSelectedListener;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/settingslib/widget/settingsspinner/SettingsSpinnerAdapter;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/oneplus/settings/widget/OPSettingsSpinnerAdapter;-><init>(Landroid/content/Context;)V
 
     iput-object p2, p0, Lcom/android/settings/datausage/CycleAdapter;->mSpinner:Lcom/android/settings/datausage/CycleAdapter$SpinnerInterface;
 

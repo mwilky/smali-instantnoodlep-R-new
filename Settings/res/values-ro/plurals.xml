@@ -281,20 +281,20 @@
         <item quantity="few">%d aplicații active</item>
     </plurals>
     <plurals name="oneplus_applock_wrong_pattern_warning">
-        <item quantity="other">Mai aveți %1$d șanse</item>
+        <item quantity="other">Mai aveți %1$d de șanse</item>
         <item quantity="one">Mai aveți %1$d șansă</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
-        <item quantity="other">Încercați din nou în %d secunde.</item>
-        <item quantity="one">Încercați din nou în %d secundă.</item>
+        <item quantity="other">Încercați din nou peste %d de secunde.</item>
+        <item quantity="one">Încercați din nou peste %d secundă.</item>
     </plurals>
     <plurals name="oneplus_zen_mode_duration_summary_time_hours">
         <item quantity="other">%d de ore (dacă nu se activează automat)</item>
         <item quantity="one">1 oră (dacă nu se activează automat)</item>
     </plurals>
     <plurals name="op_location_settings_summary_location_on">
-        <item quantity="other">On - %1$d apps have access to location</item>
-        <item quantity="one">On - %1$d app has access to location</item>
+        <item quantity="other">Pornit - %1$d de aplicații au acces la locație</item>
+        <item quantity="one">Pornit - %1$d aplicație are acces la locație</item>
     </plurals>
     <plurals name="permission_bar_chart_label">
         <item quantity="other">%s de aplicații</item>

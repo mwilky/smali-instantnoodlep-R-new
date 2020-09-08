@@ -680,6 +680,33 @@
     return v1
 .end method
 
+.method public static isVerizon()Z
+    .locals 2
+
+    const-string v0, "ril.sim.carrier.name.slot0"
+
+    invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "VZW"
+
+    invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
 .method private synthetic lambda$onClick$0()V
     .locals 0
 
@@ -942,13 +969,20 @@
 .method public onClick(Landroid/view/View;)V
     .locals 3
 
+    iget-object v0, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mContext:Landroid/content/Context;
+
+    if-eqz v0, :cond_0
+
+    invoke-static {v0}, Lcom/oneplus/settings/utils/OPUtils;->startVibratePattern(Landroid/content/Context;)V
+
+    :cond_0
     check-cast p1, Landroid/widget/Switch;
 
     invoke-virtual {p1}, Landroid/widget/Switch;->isChecked()Z
 
     move-result p1
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_1
 
     const-string p1, "WifiTetherSwitchBarController"
 
@@ -960,16 +994,16 @@
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     iget-object p1, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_2
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
 
-    :cond_1
+    :cond_2
     iget-object p1, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mHandler:Landroid/os/Handler;
 
     new-instance v0, Lcom/android/settings/wifi/tether/-$$Lambda$WifiTetherSwitchBarController$1Q77u4UUtMOQY8TZ1sxe4HO3zzE;

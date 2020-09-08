@@ -2173,6 +2173,7 @@ Varat mainīt šo iestatījumu vēlāk sadaļā Iestatījumi > Lietotnes un paz
     <string name="keywords_lock_screen_notif">paziņojumi bloķēšanas ekrānā, paziņojumi</string>
     <string name="keywords_lockscreen">vilkt, lai atbloķētu, parole, kombinācija, PIN</string>
     <string name="keywords_lockscreen_bypass">Bloķēšanas ekrāns, izlaist, apiet</string>
+    <string name="keywords_media_controls">multivide</string>
     <string name="keywords_model_and_hardware">sērijas numurs, aparatūras versija</string>
     <string name="keywords_more_mobile_networks">mobilais, mobilo sakaru operators, bezvadu, dati, 4g, 3g, 2g, lte</string>
     <string name="keywords_network_reset">atiestatīt, atjaunot, rūpnīcas iestatījumi</string>
@@ -2549,6 +2550,12 @@ Veicot šo darbību, netiks atcelts jūsu mobilo pakalpojumu plāns."</string>
     <string name="master_clear_title">Notīrīt visus datus (atiestatīt rūpnīcas datus)</string>
     <string name="maximum_memory_use">Maksimāls atmiņas lietojums</string>
     <string name="media_category">Multivide</string>
+    <string name="media_controls_hide_player">Paslēpt atskaņotāju</string>
+    <string name="media_controls_no_players">Nav pieejams neviens atskaņotājs</string>
+    <string name="media_controls_resume_description">Atskaņotāja sesiju varat atsākt izvērstajā ātro iestatījumu panelī.</string>
+    <string name="media_controls_show_player">Rādīt atskaņotāju</string>
+    <string name="media_controls_summary">Paslēpiet atskaņotāju, multivides sesijai beidzoties</string>
+    <string name="media_controls_title">Multivide</string>
     <string name="media_out_summary_ongoing_call_state">Ierīce nav pieejama zvanu laikā</string>
     <string name="media_output_default_summary">Šī ierīce</string>
     <string name="media_output_disconnected_status">%1$s (savienojums pārtraukts)</string>
@@ -2923,6 +2930,7 @@ Lietotne varēs arī ieslēgt vai izslēgt režīmu “Netraucēt” un mainīt 
     <string name="notification_priority_title">Prioritārs</string>
     <string name="notification_pulse_title">Mirgojošs gaismas signāls</string>
     <string name="notification_ringtone_title">Paziņojuma noklusējuma skaņa</string>
+    <string name="notification_screen_summary">Paziņojumu vēsture, burbuļi, nesen nosūtītie paziņojumi</string>
     <string name="notification_settings_work_profile">Piekļuve paziņojumiem nav pieejama darba profila lietotnēm.</string>
     <string name="notification_show_lights_title">Mirgojošs gaismas signāls</string>
     <string name="notification_silence_title">Klusums</string>
@@ -3030,6 +3038,8 @@ Lietotne varēs arī ieslēgt vai izslēgt režīmu “Netraucēt” un mainīt 
     <string name="platform_compat_dashboard_title">Lietotņu saderības iestatījumu izmaiņas</string>
     <string name="platform_compat_default_disabled_title">Pēc noklusējuma atspējotās izmaiņas</string>
     <string name="platform_compat_default_enabled_title">Pēc noklusējuma iespējotās izmaiņas</string>
+    <string name="platform_compat_dialog_text_no_apps">Lietotņu saderības izmaiņas var pārveidot tikai atkļūdojamām lietotnēm. Instalējiet atkļūdojamu lietotni un mēģiniet vēlreiz.</string>
+    <string name="platform_compat_dialog_title_no_apps">Nav lietotņu</string>
     <string name="please_select_phase2">2. fāzes autentifikācija</string>
     <string name="pointer_location">Rādītāja atrašanās vieta</string>
     <string name="pointer_location_summary">Ekrāna pārklājums ar aktuāliem pieskāriena datiem</string>

@@ -41,7 +41,7 @@
 .end method
 
 .method public handlePreferenceTreeClick(Landroidx/preference/Preference;)Z
-    .locals 1
+    .locals 3
 
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
@@ -58,9 +58,17 @@
     :try_start_0
     new-instance p1, Landroid/content/Intent;
 
-    const-string v0, "com.oem.oemlogkit.startlog"
+    invoke-direct {p1}, Landroid/content/Intent;-><init>()V
 
-    invoke-direct {p1, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    new-instance v0, Landroid/content/ComponentName;
+
+    const-string v1, "com.oem.oemlogkit"
+
+    const-string v2, "com.oem.oemlogkit.OEMLogKitMainActivity"
+
+    invoke-direct {v0, v1, v2}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p1, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     const/high16 v0, 0x30000000
 

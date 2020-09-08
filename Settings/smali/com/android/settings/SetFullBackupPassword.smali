@@ -1,5 +1,5 @@
 .class public Lcom/android/settings/SetFullBackupPassword;
-.super Landroid/app/Activity;
+.super Lcom/oneplus/settings/BaseActivity;
 .source "SetFullBackupPassword.java"
 
 
@@ -23,7 +23,7 @@
 .method public constructor <init>()V
     .locals 1
 
-    invoke-direct {p0}, Landroid/app/Activity;-><init>()V
+    invoke-direct {p0}, Lcom/oneplus/settings/BaseActivity;-><init>()V
 
     new-instance v0, Lcom/android/settings/SetFullBackupPassword$1;
 
@@ -84,7 +84,7 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 1
 
-    invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/oneplus/settings/BaseActivity;->onCreate(Landroid/os/Bundle;)V
 
     const-string p1, "backup"
 
@@ -100,11 +100,11 @@
 
     sget p1, Lcom/android/settings/R$layout;->set_backup_pw:I
 
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->setContentView(I)V
+    invoke-virtual {p0, p1}, Lcom/oneplus/settings/BaseActivity;->setContentView(I)V
 
     sget p1, Lcom/android/settings/R$id;->current_backup_pw:I
 
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -114,7 +114,7 @@
 
     sget p1, Lcom/android/settings/R$id;->new_backup_pw:I
 
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -124,7 +124,7 @@
 
     sget p1, Lcom/android/settings/R$id;->confirm_new_backup_pw:I
 
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -134,7 +134,7 @@
 
     sget p1, Lcom/android/settings/R$id;->backup_pw_cancel_button:I
 
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -144,7 +144,7 @@
 
     sget p1, Lcom/android/settings/R$id;->backup_pw_set_button:I
 
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 

@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/android/settings/Settings$OPExtendedActivity;,
         Lcom/android/settings/Settings$OPChargingStationSettings;,
         Lcom/android/settings/Settings$OPBedTimeModeSettingsActivity;,
         Lcom/android/settings/Settings$OPDefaultVoiceAssistPickerActivity;,
@@ -38,7 +39,6 @@
         Lcom/android/settings/Settings$OPNotificationAndNotdisturbSettingsActivity;,
         Lcom/android/settings/Settings$OPEarphoneModeActivity;,
         Lcom/android/settings/Settings$DisplaySizeAdaptionAppListActivity;,
-        Lcom/android/settings/Settings$DefaultAssistPickerActivity;,
         Lcom/android/settings/Settings$OPReverseWirelessActivity;,
         Lcom/android/settings/Settings$OPDataSaverActivity;,
         Lcom/android/settings/Settings$OPProductInfoActivity;,
@@ -92,7 +92,6 @@
         Lcom/android/settings/Settings$ApnSettingsActivity;,
         Lcom/android/settings/Settings$AppInteractAcrossProfilesSettingsActivity;,
         Lcom/android/settings/Settings$InteractAcrossProfilesSettingsActivity;,
-        Lcom/android/settings/Settings$GestureNavigationSettingsActivity;,
         Lcom/android/settings/Settings$PhotosStorageActivity;,
         Lcom/android/settings/Settings$MoviesStorageActivity;,
         Lcom/android/settings/Settings$GamesStorageActivity;,

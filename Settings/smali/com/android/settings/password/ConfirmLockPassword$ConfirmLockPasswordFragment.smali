@@ -103,7 +103,15 @@
     return p0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/password/ConfirmLockPassword$ConfirmLockPasswordFragment;)V
+.method static synthetic access$500(Lcom/android/settings/password/ConfirmLockPassword$ConfirmLockPasswordFragment;)Landroid/widget/ImeAwareEditText;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/password/ConfirmLockPassword$ConfirmLockPasswordFragment;->mPasswordEntry:Landroid/widget/ImeAwareEditText;
+
+    return-object p0
+.end method
+
+.method static synthetic access$600(Lcom/android/settings/password/ConfirmLockPassword$ConfirmLockPasswordFragment;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/settings/password/ConfirmLockPassword$ConfirmLockPasswordFragment;->updatePasswordEntry()V
@@ -313,7 +321,11 @@
 
     iput-object p1, p0, Lcom/android/settings/password/ConfirmLockPassword$ConfirmLockPasswordFragment;->mCountdownTimer:Landroid/os/CountDownTimer;
 
-    invoke-direct {p0}, Lcom/android/settings/password/ConfirmLockPassword$ConfirmLockPasswordFragment;->updatePasswordEntry()V
+    new-instance p1, Lcom/android/settings/password/-$$Lambda$ConfirmLockPassword$ConfirmLockPasswordFragment$-h2qJuSjHY5ZQFlCqtgB0es4Z9M;
+
+    invoke-direct {p1, p0}, Lcom/android/settings/password/-$$Lambda$ConfirmLockPassword$ConfirmLockPasswordFragment$-h2qJuSjHY5ZQFlCqtgB0es4Z9M;-><init>(Lcom/android/settings/password/ConfirmLockPassword$ConfirmLockPasswordFragment;)V
+
+    invoke-static {p1}, Lcom/android/settingslib/utils/ThreadUtils;->postOnMainThread(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -429,6 +441,14 @@
 .end method
 
 .method public static synthetic lambda$Myp25CGN_sn9Gs6wDwuZ61aKfg8(Lcom/android/settings/password/ConfirmLockPassword$ConfirmLockPasswordFragment;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/settings/password/ConfirmLockPassword$ConfirmLockPasswordFragment;->updatePasswordEntry()V
+
+    return-void
+.end method
+
+.method private synthetic lambda$handleAttemptLockout$1()V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/settings/password/ConfirmLockPassword$ConfirmLockPasswordFragment;->updatePasswordEntry()V
@@ -744,9 +764,13 @@
     goto :goto_1
 
     :cond_1
+    iget-object v0, p0, Lcom/android/settings/password/ConfirmLockPassword$ConfirmLockPasswordFragment;->mPasswordEntry:Landroid/widget/ImeAwareEditText;
+
+    invoke-virtual {v0}, Landroid/widget/ImeAwareEditText;->scheduleShowSoftInput()V
+
     iget-object p0, p0, Lcom/android/settings/password/ConfirmLockPassword$ConfirmLockPasswordFragment;->mPasswordEntry:Landroid/widget/ImeAwareEditText;
 
-    invoke-virtual {p0}, Landroid/widget/ImeAwareEditText;->scheduleShowSoftInput()V
+    invoke-virtual {p0}, Landroid/widget/ImeAwareEditText;->requestFocus()Z
 
     :goto_1
     return-void
@@ -841,6 +865,14 @@
     const/16 p0, 0x1e
 
     return p0
+.end method
+
+.method public synthetic lambda$handleAttemptLockout$1$ConfirmLockPassword$ConfirmLockPasswordFragment()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/settings/password/ConfirmLockPassword$ConfirmLockPasswordFragment;->lambda$handleAttemptLockout$1()V
+
+    return-void
 .end method
 
 .method public onClick(Landroid/view/View;)V

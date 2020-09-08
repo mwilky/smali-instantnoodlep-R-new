@@ -4,6 +4,8 @@
 
 
 # instance fields
+.field protected mNeedShowAppBar:Z
+
 .field public mOnPressListener:Lcom/oneplus/settings/OnPressListener;
 
 .field private mWarnDialog:Landroidx/appcompat/app/AlertDialog;
@@ -11,9 +13,13 @@
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Lcom/oneplus/settings/BaseAppCompatActivity;-><init>()V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/oneplus/settings/BaseActivity;->mNeedShowAppBar:Z
 
     return-void
 .end method
@@ -83,6 +89,15 @@
 
     invoke-virtual {v0, v1}, Landroidx/appcompat/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
 
+    iget-boolean v0, p0, Lcom/oneplus/settings/BaseActivity;->mNeedShowAppBar:Z
+
+    if-nez v0, :cond_0
+
+    const/16 v0, 0x8
+
+    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->setVisibility(I)V
+
+    :cond_0
     new-instance v0, Lcom/oneplus/settings/BaseActivity$1;
 
     invoke-direct {v0, p0}, Lcom/oneplus/settings/BaseActivity$1;-><init>(Lcom/oneplus/settings/BaseActivity;)V

@@ -30,54 +30,60 @@
 
 .field public static final OPDarkDialogAlert:I = 0x7f140142
 
-.field public static final OnePlusFingerprintEnrolling:I = 0x7f1401d0
+.field public static final OnePlusFingerprintEnrolling:I = 0x7f1401d5
 
-.field public static final OnePlusPasswordTheme:I = 0x7f1401d6
+.field public static final OnePlusPasswordTheme:I = 0x7f1401db
 
-.field public static final OnePlusPrimaryButtonStyle:I = 0x7f1401d7
+.field public static final OnePlusPrimaryButtonStyle:I = 0x7f1401dc
 
-.field public static final OnePlusSecondaryButtonStyle:I = 0x7f1401d8
+.field public static final OnePlusSecondaryButtonStyle:I = 0x7f1401dd
 
-.field public static final OnePlus_TextAppearance_List_Summary:I = 0x7f140196
+.field public static final OnePlusSetupPasswordTheme:I = 0x7f1401de
 
-.field public static final OnePlus_TextAppearance_List_Title:I = 0x7f140197
+.field public static final OnePlus_TextAppearance_List_Summary:I = 0x7f140198
 
-.field public static final OnePlus_Theme_Dialog_Picker:I = 0x7f14019d
+.field public static final OnePlus_TextAppearance_List_Title:I = 0x7f140199
 
-.field public static final OnePlus_Theme_Dialog_Pop:I = 0x7f14019e
+.field public static final OnePlus_Theme_Dialog_Picker:I = 0x7f14019f
 
-.field public static final RingProgressBarStyle:I = 0x7f14023b
+.field public static final OnePlus_Theme_Dialog_Pop:I = 0x7f1401a0
 
-.field public static final SetupOnePlusPasswordTheme:I = 0x7f14025f
+.field public static final RingProgressBarStyle:I = 0x7f140240
 
-.field public static final SetupWizardPartnerResource:I = 0x7f140264
+.field public static final SetupOnePlusFingerprintEnrolling:I = 0x7f140263
 
-.field public static final SetupWizardTheme_Dialog_Alert_Hydrogen:I = 0x7f140266
+.field public static final SetupOnePlusPasswordTheme:I = 0x7f140264
 
-.field public static final SetupWizardTheme_Dialog_Alert_Oxygen:I = 0x7f140267
+.field public static final SetupWizardPartnerResource:I = 0x7f140269
 
-.field public static final SetupWizardTheme_Light_Transparent:I = 0x7f140269
+.field public static final SetupWizardTheme_Dialog_Alert_Hydrogen:I = 0x7f14026b
 
-.field public static final SetupWizardTheme_Transparent:I = 0x7f14026a
+.field public static final SetupWizardTheme_Dialog_Alert_Oxygen:I = 0x7f14026c
 
-.field public static final SuwAlertDialogThemeCompat_Light:I = 0x7f1402c4
+.field public static final SetupWizardTheme_Light_Transparent:I = 0x7f14026e
 
-.field public static final SyncSwitchPreference:I = 0x7f1402c5
+.field public static final SetupWizardTheme_Transparent:I = 0x7f14026f
 
-.field public static final TextAppearance_Small_SwitchBar:I = 0x7f140361
+.field public static final SuwAlertDialogThemeCompat_Light:I = 0x7f1402c9
 
-.field public static final Theme_AlertDialog:I = 0x7f14037a
+.field public static final SyncSwitchPreference:I = 0x7f1402ca
 
-.field public static final Theme_ConfirmDeviceCredentialsDark:I = 0x7f1403a0
+.field public static final TextAppearance_Small_SwitchBar:I = 0x7f140366
 
-.field public static final Theme_Leanback_GuidedStep:I = 0x7f1403b1
+.field public static final Theme_AlertDialog:I = 0x7f14037f
 
-.field public static final Theme_Oneplus_SetupWizardTheme_Hydrogen:I = 0x7f1403f9
+.field public static final Theme_ConfirmDeviceCredentialsDark:I = 0x7f1403a5
 
-.field public static final Theme_Oneplus_SetupWizardTheme_Oxygen:I = 0x7f1403fc
+.field public static final Theme_Leanback_GuidedStep:I = 0x7f1403b6
 
-.field public static final Theme_SettingsBase:I = 0x7f14040a
+.field public static final Theme_Oneplus_SetupWizardTheme_Hydrogen:I = 0x7f1403fe
 
-.field public static final Theme_SubSettings:I = 0x7f14040b
+.field public static final Theme_Oneplus_SetupWizardTheme_Oxygen:I = 0x7f140401
 
-.field public static final op_control_text_style_h6:I = 0x7f14059e
+.field public static final Theme_SettingsBase:I = 0x7f14040f
+
+.field public static final Theme_SubSettings:I = 0x7f140410
+
+.field public static final oneplus_contorl_text_style_body1:I = 0x7f140588
+
+.field public static final op_control_text_style_h6:I = 0x7f1405a3

@@ -2173,6 +2173,7 @@ CA சான்றிதழை நிறுவினால் நீங்கள
     <string name="keywords_lock_screen_notif">பூட்டுத் திரை அறிவிப்பு, அறிவிப்புகள்</string>
     <string name="keywords_lockscreen">திறப்பதற்கு ஸ்லைடு செய்தல், கடவுச்சொல், பேட்டர்ன், பின்</string>
     <string name="keywords_lockscreen_bypass">பூட்டுத் திரை, பூட்டுத்திரை, தவிர், தவிர்த்துச் செல்</string>
+    <string name="keywords_media_controls">மீடியா</string>
     <string name="keywords_model_and_hardware">வரிசை எண், வன்பொருள் பதிப்பு</string>
     <string name="keywords_more_mobile_networks">செல்லுலார், மொபைல், செல் கேரியர், வயர்லெஸ், தரவு, 4g,3g, 2g, lte</string>
     <string name="keywords_network_reset">மீட்டமை, மீட்டெடு, ஆரம்பநிலை</string>
@@ -2549,6 +2550,12 @@ CA சான்றிதழை நிறுவினால் நீங்கள
     <string name="master_clear_title">எல்லா டேட்டாவையும் அழி (ஆரம்பநிலை மீட்டமைவு)</string>
     <string name="maximum_memory_use">அதிகபட்ச நினைவக உபயோகம்</string>
     <string name="media_category">மீடியா</string>
+    <string name="media_controls_hide_player">பிளேயர் மறை</string>
+    <string name="media_controls_no_players">பிளேயர்கள் எதுவுமில்லை</string>
+    <string name="media_controls_resume_description">விரிவாக்கப்பட்ட விரைவு அமைப்புகள் பேனலிலிருந்து அமர்வு ஒன்றை மீண்டும் தொடங்க இந்தப் பிளேயர் அனுமதிக்கும்.</string>
+    <string name="media_controls_show_player">பிளேயரைக் காட்டு</string>
+    <string name="media_controls_summary">மீடியா அமர்வு முடிந்தபிறகு பிளேயரை மறை</string>
+    <string name="media_controls_title">மீடியா</string>
     <string name="media_out_summary_ongoing_call_state">அழைப்புகளின்போது பயன்படுத்த இயலாது</string>
     <string name="media_output_default_summary">இந்தச் சாதனம்</string>
     <string name="media_output_disconnected_status">%1$s (இணைப்பு துண்டிக்கப்பட்டது)</string>
@@ -2806,7 +2813,7 @@ CA சான்றிதழை நிறுவினால் நீங்கள
     <string name="night_display_text">நைட் லைட் அம்சமானது உங்கள் திரையை மஞ்சளும் ஆரஞ்சும் கலந்த நிறத்திற்கு மாற்றும். இது மங்கலான ஒளியில் திரையைப் பார்ப்பதை அல்லது படிப்பதை எளிதாக்குவதோடு, விரைவாக உறங்க உதவக்கூடும்.</string>
     <string name="night_display_title">நைட் லைட்</string>
     <string name="no">வேண்டாம்</string>
-    <string name="no_5g_in_dsds_text">2 சிம்களைப் பயன்படுத்தும்போது இந்த மொபைலை 4Gயுடன் மட்டுமே இணைக்க முடியும். <annotation id="url">மேலும் அறிக</annotation>.</string>
+    <string name="no_5g_in_dsds_text">2 சிம்களைப் பயன்படுத்தும்போது இந்த மொபைலை 4Gயுடன் மட்டுமே இணைக்க முடியும். <annotation id="url">மேலும் அறிக</annotation></string>
     <string name="no_application">ஒன்றுமில்லை</string>
     <string name="no_applications">ஆப்ஸ் இல்லை.</string>
     <string name="no_battery_summary">கடைசியாக முழு சார்ஜ் செய்த நேரத்திலிருந்து, பேட்டரி பயன்படுத்தப்படவில்லை</string>
@@ -2923,6 +2930,7 @@ CA சான்றிதழை நிறுவினால் நீங்கள
     <string name="notification_priority_title">முன்னுரிமை</string>
     <string name="notification_pulse_title">ஒளியைச் சிமிட்டு</string>
     <string name="notification_ringtone_title">இயல்பு அறிவிப்பு ஒலி</string>
+    <string name="notification_screen_summary">அறிவிப்பு வரலாறு, குமிழ்கள், சமீபத்தில் அனுப்பியவை</string>
     <string name="notification_settings_work_profile">பணிக் கணக்கில், ஆப்ஸுற்கான அறிவிப்பு அணுகல் இல்லை.</string>
     <string name="notification_show_lights_title">ஒளியைச் சிமிட்டு</string>
     <string name="notification_silence_title">நிசப்தம்</string>
@@ -3030,6 +3038,8 @@ CA சான்றிதழை நிறுவினால் நீங்கள
     <string name="platform_compat_dashboard_title">ஆப்ஸ் இணக்கத்தன்மை தொடர்பான மாற்றங்கள்</string>
     <string name="platform_compat_default_disabled_title">இயல்புநிலை முடக்கப்பட்டது தொடர்பான மாற்றங்கள்</string>
     <string name="platform_compat_default_enabled_title">இயல்புநிலை இயக்கப்பட்டது தொடர்பான மாற்றங்கள்</string>
+    <string name="platform_compat_dialog_text_no_apps">பிழைதிருத்தி ஆப்ஸில் மட்டுமே ஆப்ஸ் இணக்கத்தன்மை மாற்றங்களை மாற்ற முடியும். பிழைதிருத்தி ஆப்ஸை நிறுவி மீண்டும் முயலவும்.</string>
+    <string name="platform_compat_dialog_title_no_apps">ஆப்ஸ் எதுவுமில்லை</string>
     <string name="please_select_phase2">2 ஆம் நிலை அங்கீகரிப்பு</string>
     <string name="pointer_location">குறிப்பான் இடம்</string>
     <string name="pointer_location_summary">திரையின் மேல் அடுக்கானது தற்போது தொடப்பட்டிருக்கும் தரவைக் காண்பிக்கிறது</string>

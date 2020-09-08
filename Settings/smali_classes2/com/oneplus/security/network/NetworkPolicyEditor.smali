@@ -115,7 +115,7 @@
 
     iput-wide p2, p1, Landroid/net/NetworkPolicy;->warningBytes:J
 
-    const/4 p2, 0x0
+    const/4 p2, 0x1
 
     iput-boolean p2, p1, Landroid/net/NetworkPolicy;->inferred:Z
 
@@ -313,7 +313,7 @@
 
     iput-object p2, p1, Landroid/net/NetworkPolicy;->cycleRule:Landroid/util/RecurrenceRule;
 
-    const/4 p2, 0x0
+    const/4 p2, 0x1
 
     iput-boolean p2, p1, Landroid/net/NetworkPolicy;->inferred:Z
 
@@ -350,7 +350,7 @@
 
     iput-wide p2, p1, Landroid/net/NetworkPolicy;->limitBytes:J
 
-    const/4 p2, 0x0
+    const/4 p2, 0x1
 
     iput-boolean p2, p1, Landroid/net/NetworkPolicy;->inferred:Z
 

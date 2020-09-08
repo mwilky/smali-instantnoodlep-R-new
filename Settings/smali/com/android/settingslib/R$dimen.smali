@@ -18,26 +18,26 @@
 
 .field public static final circle_avatar_size:I = 0x7f0700af
 
-.field public static final conversation_icon_size:I = 0x7f0700f2
+.field public static final conversation_icon_size:I = 0x7f0700f5
 
-.field public static final restricted_icon_padding:I = 0x7f070594
+.field public static final restricted_icon_padding:I = 0x7f0705a2
 
-.field public static final secondary_app_icon_size:I = 0x7f0705b1
+.field public static final secondary_app_icon_size:I = 0x7f0705bf
 
-.field public static final signal_icon_size:I = 0x7f0705bc
+.field public static final signal_icon_size:I = 0x7f0705ca
 
-.field public static final two_target_pref_medium_icon_size:I = 0x7f070657
+.field public static final two_target_pref_medium_icon_size:I = 0x7f070665
 
-.field public static final two_target_pref_small_icon_size:I = 0x7f070658
+.field public static final two_target_pref_small_icon_size:I = 0x7f070666
 
-.field public static final usage_graph_divider_size:I = 0x7f07065b
+.field public static final usage_graph_divider_size:I = 0x7f070669
 
-.field public static final usage_graph_dot_interval:I = 0x7f07065c
+.field public static final usage_graph_dot_interval:I = 0x7f07066a
 
-.field public static final usage_graph_dot_size:I = 0x7f07065d
+.field public static final usage_graph_dot_size:I = 0x7f07066b
 
-.field public static final usage_graph_line_corner_radius:I = 0x7f070660
+.field public static final usage_graph_line_corner_radius:I = 0x7f07066e
 
-.field public static final usage_graph_line_width:I = 0x7f070661
+.field public static final usage_graph_line_width:I = 0x7f07066f
 
-.field public static final wifi_preference_badge_padding:I = 0x7f07067a
+.field public static final wifi_preference_badge_padding:I = 0x7f070688

@@ -366,6 +366,10 @@
     add-int/lit8 p3, p3, -0x1
 
     :cond_0
+    iget-object p1, p0, Lcom/oneplus/settings/network/OPDualChannelDownloadAccelerationSettings;->mContext:Landroid/content/Context;
+
+    invoke-static {p1}, Lcom/oneplus/settings/utils/OPUtils;->startVibratePattern(Landroid/content/Context;)V
+
     add-int/lit8 p1, p3, 0x1
 
     invoke-direct {p0, p1}, Lcom/oneplus/settings/network/OPDualChannelDownloadAccelerationSettings;->getModelWithPosition(I)Lcom/oneplus/settings/better/OPAppModel;

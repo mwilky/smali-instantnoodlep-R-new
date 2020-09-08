@@ -20,6 +20,8 @@
 
 
 # instance fields
+.field private mForSetup:Z
+
 .field private mRequirements:[Ljava/lang/String;
 
 
@@ -28,6 +30,10 @@
     .locals 1
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/android/settings/password/PasswordRequirementAdapter;->mForSetup:Z
 
     const/4 v0, 0x1
 
@@ -75,18 +81,43 @@
 .end method
 
 .method public onBindViewHolder(Lcom/android/settings/password/PasswordRequirementAdapter$PasswordRequirementViewHolder;I)V
-    .locals 0
+    .locals 2
+
+    invoke-static {p1}, Lcom/android/settings/password/PasswordRequirementAdapter$PasswordRequirementViewHolder;->access$000(Lcom/android/settings/password/PasswordRequirementAdapter$PasswordRequirementViewHolder;)Landroid/widget/TextView;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/settings/password/PasswordRequirementAdapter;->mRequirements:[Ljava/lang/String;
+
+    aget-object p2, v1, p2
+
+    invoke-virtual {v0, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-boolean p0, p0, Lcom/android/settings/password/PasswordRequirementAdapter;->mForSetup:Z
+
+    if-eqz p0, :cond_0
+
+    invoke-static {p1}, Lcom/android/settings/password/PasswordRequirementAdapter$PasswordRequirementViewHolder;->access$000(Lcom/android/settings/password/PasswordRequirementAdapter$PasswordRequirementViewHolder;)Landroid/widget/TextView;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    sget p2, Lcom/android/settings/R$color;->op_control_text_color_primary_light:I
+
+    invoke-virtual {p0, p2}, Landroid/content/Context;->getColor(I)I
+
+    move-result p0
 
     invoke-static {p1}, Lcom/android/settings/password/PasswordRequirementAdapter$PasswordRequirementViewHolder;->access$000(Lcom/android/settings/password/PasswordRequirementAdapter$PasswordRequirementViewHolder;)Landroid/widget/TextView;
 
     move-result-object p1
 
-    iget-object p0, p0, Lcom/android/settings/password/PasswordRequirementAdapter;->mRequirements:[Ljava/lang/String;
+    invoke-virtual {p1, p0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    aget-object p0, p0, p2
-
-    invoke-virtual {p1, p0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
+    :cond_0
     return-void
 .end method
 
@@ -124,6 +155,14 @@
     invoke-direct {p1, p0}, Lcom/android/settings/password/PasswordRequirementAdapter$PasswordRequirementViewHolder;-><init>(Landroid/view/View;)V
 
     return-object p1
+.end method
+
+.method public setForSetup(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/settings/password/PasswordRequirementAdapter;->mForSetup:Z
+
+    return-void
 .end method
 
 .method public setRequirements([Ljava/lang/String;)V

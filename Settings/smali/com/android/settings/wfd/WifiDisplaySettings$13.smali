@@ -22,18 +22,14 @@
 
 .field final synthetic val$display:Landroid/hardware/display/WifiDisplay;
 
-.field final synthetic val$nameEditText:Landroid/widget/EditText;
-
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wfd/WifiDisplaySettings;Landroid/widget/EditText;Landroid/hardware/display/WifiDisplay;)V
+.method constructor <init>(Lcom/android/settings/wfd/WifiDisplaySettings;Landroid/hardware/display/WifiDisplay;)V
     .locals 0
 
     iput-object p1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$13;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
 
-    iput-object p2, p0, Lcom/android/settings/wfd/WifiDisplaySettings$13;->val$nameEditText:Landroid/widget/EditText;
-
-    iput-object p3, p0, Lcom/android/settings/wfd/WifiDisplaySettings$13;->val$display:Landroid/hardware/display/WifiDisplay;
+    iput-object p2, p0, Lcom/android/settings/wfd/WifiDisplaySettings$13;->val$display:Landroid/hardware/display/WifiDisplay;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,47 +41,11 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 0
 
-    iget-object p1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$13;->val$nameEditText:Landroid/widget/EditText;
+    iget-object p1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$13;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
 
-    invoke-virtual {p1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-static {p1}, Lcom/android/settings/wfd/WifiDisplaySettings;->access$100(Lcom/android/settings/wfd/WifiDisplaySettings;)Landroid/hardware/display/DisplayManager;
 
     move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    iget-object p2, p0, Lcom/android/settings/wfd/WifiDisplaySettings$13;->val$display:Landroid/hardware/display/WifiDisplay;
-
-    invoke-virtual {p2}, Landroid/hardware/display/WifiDisplay;->getDeviceName()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :cond_1
-    iget-object p2, p0, Lcom/android/settings/wfd/WifiDisplaySettings$13;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
-
-    invoke-static {p2}, Lcom/android/settings/wfd/WifiDisplaySettings;->access$300(Lcom/android/settings/wfd/WifiDisplaySettings;)Landroid/hardware/display/DisplayManager;
-
-    move-result-object p2
 
     iget-object p0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$13;->val$display:Landroid/hardware/display/WifiDisplay;
 
@@ -93,7 +53,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p2, p0, p1}, Landroid/hardware/display/DisplayManager;->renameWifiDisplay(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, p0}, Landroid/hardware/display/DisplayManager;->forgetWifiDisplay(Ljava/lang/String;)V
 
     return-void
 .end method

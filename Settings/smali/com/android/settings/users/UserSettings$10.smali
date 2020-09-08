@@ -3,12 +3,12 @@
 .source "UserSettings.java"
 
 # interfaces
-.implements Lcom/android/settings/users/EditUserInfoController$OnContentChangedCallback;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/users/UserSettings;->buildAddUserProfileEditorDialog(I)Landroid/app/Dialog;
+    value = Lcom/android/settings/users/UserSettings;->onCreateDialog(I)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -34,22 +34,12 @@
 
 
 # virtual methods
-.method public onLabelChanged(Landroid/os/UserHandle;Ljava/lang/CharSequence;)V
+.method public onClick(Landroid/content/DialogInterface;I)V
     .locals 0
 
     iget-object p0, p0, Lcom/android/settings/users/UserSettings$10;->this$0:Lcom/android/settings/users/UserSettings;
 
-    invoke-static {p0, p2}, Lcom/android/settings/users/UserSettings;->access$1102(Lcom/android/settings/users/UserSettings;Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
-
-    return-void
-.end method
-
-.method public onPhotoChanged(Landroid/os/UserHandle;Landroid/graphics/drawable/Drawable;)V
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/settings/users/UserSettings$10;->this$0:Lcom/android/settings/users/UserSettings;
-
-    invoke-static {p0, p2}, Lcom/android/settings/users/UserSettings;->access$1002(Lcom/android/settings/users/UserSettings;Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p0}, Lcom/android/settings/users/UserSettings;->access$1300(Lcom/android/settings/users/UserSettings;)V
 
     return-void
 .end method

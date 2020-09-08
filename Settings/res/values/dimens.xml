@@ -187,6 +187,7 @@
     <dimen name="complete_content_layout_minimum_width">376.0dip</dimen>
     <dimen name="complete_icon_margin_end">48.0dip</dimen>
     <dimen name="complete_icon_margin_start">48.0dip</dimen>
+    <dimen name="complete_icon_margin_top">446.0px</dimen>
     <dimen name="complete_icon_size">86.0dip</dimen>
     <item type="dimen" name="confirm_credentials_layout_width">@dimen/match_parent</item>
     <dimen name="confirm_credentials_security_method_margin">48.0dip</dimen>
@@ -229,12 +230,14 @@
     <dimen name="contextual_half_card_padding_top">12.0dip</dimen>
     <dimen name="contextual_half_card_title_margin_top">12.0dip</dimen>
     <dimen name="control_app_bar_ar_margin">20.0dip</dimen>
+    <dimen name="control_empty_base_height">0.0px</dimen>
     <dimen name="control_empty_home_status_height">90.0dip</dimen>
     <dimen name="control_empty_image_height">400.0px</dimen>
     <dimen name="control_empty_image_margin_bottom">32.0px</dimen>
     <dimen name="control_empty_image_margin_top">318.0px</dimen>
     <dimen name="control_empty_image_view_size">490.0px</dimen>
     <dimen name="control_empty_image_width">720.0px</dimen>
+    <dimen name="control_empty_min_margin">0.0px</dimen>
     <dimen name="control_empty_temp_height">680.0px</dimen>
     <dimen name="control_tooltip_height">15.0dip</dimen>
     <dimen name="control_tooltip_width">18.0dip</dimen>
@@ -335,8 +338,8 @@
     <dimen name="design_snackbar_min_width">-1.0px</dimen>
     <dimen name="design_snackbar_padding_bottom">18.0dip</dimen>
     <dimen name="design_snackbar_padding_horizontal">12.0dip</dimen>
-    <dimen name="design_snackbar_padding_left">18.0dip</dimen>
-    <dimen name="design_snackbar_padding_right">18.0dip</dimen>
+    <item type="dimen" name="design_snackbar_padding_left">@dimen/op_control_margin_space3</item>
+    <dimen name="design_snackbar_padding_right">0.0dip</dimen>
     <dimen name="design_snackbar_padding_top">18.0dip</dimen>
     <dimen name="design_snackbar_padding_vertical">14.0dip</dimen>
     <dimen name="design_snackbar_padding_vertical_2lines">24.0dip</dimen>
@@ -1138,12 +1141,12 @@
     <dimen name="oneplus_fnatic_wallpaper_width">640.0px</dimen>
     <dimen name="oneplus_fod_finger_introduction_anim_height">904.0px</dimen>
     <dimen name="oneplus_fod_finger_introduction_anim_width">800.0px</dimen>
-    <dimen name="oneplus_fod_fingerprint_enroll_complete_layout_margin_top">720.0px</dimen>
+    <dimen name="oneplus_fod_fingerprint_enroll_complete_layout_margin_top">1000.0px</dimen>
     <dimen name="oneplus_fod_fingerprint_enroll_complete_view_margin_top">127.0px</dimen>
     <dimen name="oneplus_fod_fingerprint_enroll_edge_lottie_height">1037.0px</dimen>
     <dimen name="oneplus_fod_fingerprint_enroll_edge_lottie_witdh">828.0px</dimen>
     <dimen name="oneplus_fod_fingerprint_enroll_layout_margin_top">560.0px</dimen>
-    <dimen name="oneplus_fod_fingerprint_enroll_lottie_layout_margin_top">450.0px</dimen>
+    <dimen name="oneplus_fod_fingerprint_enroll_lottie_layout_margin_top">750.0px</dimen>
     <dimen name="oneplus_fod_fingerprint_enroll_lottie_view_width">710.0px</dimen>
     <dimen name="oneplus_fod_fingerprint_enroll_top_margin">189.0px</dimen>
     <dimen name="oneplus_fod_fingerprint_enroll_view_width">580.0px</dimen>
@@ -1216,7 +1219,7 @@
     <dimen name="op_app_bar_collapsing_title_limit_one_menu_width">62.0dip</dimen>
     <dimen name="op_app_bar_collapsing_title_limit_three_menu_width">146.0dip</dimen>
     <dimen name="op_app_bar_collapsing_title_limit_two_menu_width">104.0dip</dimen>
-    <dimen name="op_app_bar_collapsing_title_limit_width">20.0dip</dimen>
+    <dimen name="op_app_bar_collapsing_title_limit_width">30.0dip</dimen>
     <dimen name="op_app_bar_distance">171.0dip</dimen>
     <dimen name="op_app_bar_expand_text_size">96.0px</dimen>
     <dimen name="op_app_bar_height_with_tab">54.0dip</dimen>
@@ -1337,6 +1340,7 @@
     <dimen name="op_custom_shape_item_space">10.0dip</dimen>
     <dimen name="op_dialog_background_inset">48.0dip</dimen>
     <dimen name="op_dialog_picker_background_inset">9.0dip</dimen>
+    <dimen name="op_float_action_button_shadow_z8">8.0dip</dimen>
     <dimen name="op_guide_anim_show_height">1037.0px</dimen>
     <dimen name="op_hint_search_view_height">40.0dip</dimen>
     <dimen name="op_hint_search_view_icon_size">40.0dip</dimen>
@@ -1355,7 +1359,16 @@
     <dimen name="op_spinner_material_padding_left">18.0dip</dimen>
     <dimen name="op_spinner_material_padding_right">18.0dip</dimen>
     <dimen name="op_switch_ripple_radius">18.0dip</dimen>
-    <dimen name="op_text_size_h5">21.0sp</dimen>
+    <dimen name="op_text_size_body1">13.0sp</dimen>
+    <dimen name="op_text_size_button">14.0sp</dimen>
+    <dimen name="op_text_size_descriptions">10.0sp</dimen>
+    <dimen name="op_text_size_h1">110.0px</dimen>
+    <dimen name="op_text_size_h2">96.0px</dimen>
+    <dimen name="op_text_size_h3">32.0sp</dimen>
+    <dimen name="op_text_size_h4">28.0sp</dimen>
+    <dimen name="op_text_size_h5">18.0sp</dimen>
+    <dimen name="op_text_size_h6">16.0sp</dimen>
+    <dimen name="op_text_size_subtitle">13.0sp</dimen>
     <dimen name="op_theme_item_entity_size">106.0dip</dimen>
     <dimen name="op_threekey_down_bottom_left_radius">63.0px</dimen>
     <dimen name="op_threekey_down_bottom_right_radius">63.0px</dimen>
@@ -1370,8 +1383,9 @@
     <dimen name="op_threekey_up_top_left_radius">63.0px</dimen>
     <dimen name="op_threekey_up_top_right_radius">63.0px</dimen>
     <dimen name="op_toolbar_navigation_max_button_height">42.0dip</dimen>
+    <dimen name="output_switcher_panel_icon_corner_radius">16.0dip</dimen>
     <dimen name="output_switcher_panel_icon_size">52.0dip</dimen>
-    <dimen name="output_switcher_slice_max_height">506.0dip</dimen>
+    <dimen name="output_switcher_slice_max_height">458.0dip</dimen>
     <dimen name="output_switcher_slice_padding_top">11.0dip</dimen>
     <dimen name="pager_tabs_padding">0.0dip</dimen>
     <dimen name="pager_tabs_selected_indicator_height">3.0dip</dimen>
@@ -1471,7 +1485,7 @@
     <dimen name="storage_donut_view_label_text_size">21.0sp</dimen>
     <dimen name="storage_donut_view_percent_sign_size">20.0sp</dimen>
     <dimen name="storage_donut_view_percent_text_size">45.0sp</dimen>
-    <dimen name="storage_donut_view_shrunken_label_text_size">10.0sp</dimen>
+    <dimen name="storage_donut_view_shrunken_label_text_size">9.0sp</dimen>
     <dimen name="storage_summary_padding_end">16.0dip</dimen>
     <dimen name="suc_customization_button_margin_end">20.0dip</dimen>
     <dimen name="suc_customization_button_margin_start">8.0dip</dimen>
@@ -1584,7 +1598,7 @@
     <dimen name="timepicker_minimum_margin_sides">48.0dip</dimen>
     <dimen name="timepicker_minimum_margin_top_bottom">24.0dip</dimen>
     <dimen name="timepicker_pm_top_padding">4.0dip</dimen>
-    <dimen name="timepicker_radial_picker_dimen">302.0dip</dimen>
+    <dimen name="timepicker_radial_picker_dimen">216.0dip</dimen>
     <dimen name="timepicker_radial_picker_left_margin">24.0dip</dimen>
     <dimen name="timepicker_radial_picker_right_margin">24.0dip</dimen>
     <dimen name="timepicker_radial_picker_top_margin">27.0dip</dimen>

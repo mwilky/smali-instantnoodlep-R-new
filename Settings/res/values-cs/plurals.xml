@@ -337,20 +337,20 @@
         <item quantity="many">%d aktivní aplikace</item>
     </plurals>
     <plurals name="oneplus_applock_wrong_pattern_warning">
-        <item quantity="other">Zbývají %1$d pokusy</item>
+        <item quantity="other">Zbývá %1$d pokusů</item>
         <item quantity="one">Zbývá %1$d pokus</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
-        <item quantity="other">Zkusit znovu za %d sekundy.</item>
-        <item quantity="one">Zkusit znovu za %d sekundu.</item>
+        <item quantity="other">Zkusit znovu za %d sekund.</item>
+        <item quantity="one">Zkusit znovu %d sekundu.</item>
     </plurals>
     <plurals name="oneplus_zen_mode_duration_summary_time_hours">
         <item quantity="other">%d hodin (pokud se nezapíná automaticky)</item>
         <item quantity="one">1 hodina (pokud se nezapíná automaticky)</item>
     </plurals>
     <plurals name="op_location_settings_summary_location_on">
-        <item quantity="other">On - %1$d apps have access to location</item>
-        <item quantity="one">On - %1$d app has access to location</item>
+        <item quantity="other">Zapnuto – %1$d aplikací má přístup k poloze</item>
+        <item quantity="one">Zapnuto – %1$d aplikace má přístup k poloze</item>
     </plurals>
     <plurals name="permission_bar_chart_label">
         <item quantity="other">%s aplikací</item>

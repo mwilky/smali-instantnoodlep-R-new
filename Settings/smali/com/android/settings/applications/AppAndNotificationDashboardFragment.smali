@@ -268,9 +268,9 @@
 .method public onPreferenceTreeClick(Landroidx/preference/Preference;)Z
     .locals 4
 
-    const-string v0, "com.google.android.cellbroadcastreceiver"
+    const-string v0, "com.android.cellbroadcastreceiver"
 
-    const-string v1, "com.android.cellbroadcastreceiver"
+    const-string v1, "com.google.android.cellbroadcastreceiver"
 
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 

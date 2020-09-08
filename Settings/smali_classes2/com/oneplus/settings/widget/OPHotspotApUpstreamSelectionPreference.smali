@@ -813,28 +813,8 @@
 
     invoke-virtual {p1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lcom/oneplus/settings/utils/OPUtils;->isBlackModeOn(Landroid/content/ContentResolver;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
     sget p0, Lcom/android/settings/R$drawable;->op_btn_image_single_choice:I
 
-    goto :goto_0
-
-    :cond_0
-    sget p0, Lcom/android/settings/R$drawable;->op_btn_image_single_choice:I
-
-    :goto_0
     sget p2, Lcom/android/settings/R$id;->marked:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;

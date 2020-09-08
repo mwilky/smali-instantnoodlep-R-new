@@ -229,16 +229,16 @@
         <item quantity="one">U hebt nog %1$d kans</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
-        <item quantity="other">Probeer het opnieuw in %d seconden.</item>
-        <item quantity="one">Probeer het opnieuw in %d seconde.</item>
+        <item quantity="other">Probeer het opnieuw over %d seconden.</item>
+        <item quantity="one">Probeer het opnieuw over %d seconde.</item>
     </plurals>
     <plurals name="oneplus_zen_mode_duration_summary_time_hours">
         <item quantity="other">%d uur (tenzij automatisch ingeschakeld)</item>
         <item quantity="one">1 uur (tenzij automatisch ingeschakeld)</item>
     </plurals>
     <plurals name="op_location_settings_summary_location_on">
-        <item quantity="other">On - %1$d apps have access to location</item>
-        <item quantity="one">On - %1$d app has access to location</item>
+        <item quantity="other">Op - %1$d apps hebben toegang tot locatie</item>
+        <item quantity="one">Op - %1$d app heeft toegang tot locatie</item>
     </plurals>
     <plurals name="permission_bar_chart_label">
         <item quantity="other">%s apps</item>

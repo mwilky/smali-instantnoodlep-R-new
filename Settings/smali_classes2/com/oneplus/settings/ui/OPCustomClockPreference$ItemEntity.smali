@@ -17,6 +17,8 @@
 # instance fields
 .field hasInfo:Z
 
+.field key_pref:Ljava/lang/String;
+
 .field name:Ljava/lang/String;
 
 .field resId:I
@@ -47,12 +49,14 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;IIZ)V
+.method public constructor <init>(Ljava/lang/String;IIZLjava/lang/String;)V
     .locals 0
 
     invoke-direct {p0, p1, p2, p3}, Lcom/oneplus/settings/ui/OPCustomClockPreference$ItemEntity;-><init>(Ljava/lang/String;II)V
 
     iput-boolean p4, p0, Lcom/oneplus/settings/ui/OPCustomClockPreference$ItemEntity;->hasInfo:Z
+
+    iput-object p5, p0, Lcom/oneplus/settings/ui/OPCustomClockPreference$ItemEntity;->key_pref:Ljava/lang/String;
 
     return-void
 .end method

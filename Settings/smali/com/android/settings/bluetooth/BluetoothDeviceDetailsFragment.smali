@@ -235,6 +235,16 @@
     return p1
 .end method
 
+.method static synthetic access$2100(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;Ljava/lang/Object;)I
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->getBatteryLevel(Ljava/lang/Object;)I
+
+    move-result p0
+
+    return p0
+.end method
+
 .method static synthetic access$300(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;Ljava/lang/String;)I
     .locals 0
 
@@ -309,6 +319,72 @@
     iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mDoubleClickRight:Landroidx/preference/ListPreference;
 
     return-object p0
+.end method
+
+.method private getBatteryLevel(Ljava/lang/Object;)I
+    .locals 2
+
+    if-nez p1, :cond_0
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_0
+    instance-of p0, p1, Ljava/lang/String;
+
+    if-eqz p0, :cond_1
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_1
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p0
+
+    const/16 p1, 0x3e8
+
+    if-le p0, p1, :cond_2
+
+    rem-int/lit16 p1, p0, 0x3e8
+
+    goto :goto_0
+
+    :cond_2
+    add-int/lit8 p1, p0, 0x1
+
+    mul-int/lit8 p1, p1, 0xa
+
+    :goto_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "getBatteryLevel value = "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p0, " level = "
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "BTDeviceDetailsFrg"
+
+    invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return p1
 .end method
 
 .method private getBatteryString(III)Ljava/lang/String;
@@ -1705,7 +1781,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "unregisterReceiver e = "
+    const-string/jumbo v4, "unregisterReceiver e = "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

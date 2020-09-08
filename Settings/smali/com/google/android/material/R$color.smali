@@ -18,34 +18,38 @@
 
 .field public static final oneplus_accent_color:I = 0x7f0601bb
 
+.field public static final oneplus_accent_text_color:I = 0x7f0601bc
+
 .field public static final op_avatar_checked_background:I = 0x7f060269
 
 .field public static final op_avatar_checked_marker:I = 0x7f06026a
 
-.field public static final op_control_accent_color_red_default:I = 0x7f0602a8
+.field public static final op_control_accent_color_red_default:I = 0x7f0602a9
 
-.field public static final op_control_bg_color_default:I = 0x7f0602b5
+.field public static final op_control_bg_color_default:I = 0x7f0602b6
 
-.field public static final op_control_bg_color_selected_default:I = 0x7f0602bf
+.field public static final op_control_bg_color_popup_default:I = 0x7f0602bd
 
-.field public static final op_control_divider_color_default:I = 0x7f0602d9
+.field public static final op_control_bg_color_selected_default:I = 0x7f0602c0
 
-.field public static final op_control_icon_color_active_default:I = 0x7f0602e7
+.field public static final op_control_divider_color_default:I = 0x7f0602da
 
-.field public static final op_control_icon_color_active_light:I = 0x7f0602e8
+.field public static final op_control_icon_color_active_default:I = 0x7f0602e8
 
-.field public static final op_control_icon_color_disable_default:I = 0x7f0602eb
+.field public static final op_control_icon_color_active_light:I = 0x7f0602e9
 
-.field public static final op_control_system_color_tips_default:I = 0x7f0602f9
+.field public static final op_control_icon_color_disable_default:I = 0x7f0602ec
 
-.field public static final op_control_text_color_hint_light:I = 0x7f060312
+.field public static final op_control_system_color_tips_default:I = 0x7f0602fa
 
-.field public static final op_error_color_material_default:I = 0x7f060335
+.field public static final op_control_text_color_hint_light:I = 0x7f060313
 
-.field public static final op_seek_bar_tick_color_dark:I = 0x7f06036b
+.field public static final op_error_color_material_default:I = 0x7f060337
 
-.field public static final op_seek_bar_tick_color_light:I = 0x7f06036c
+.field public static final op_seek_bar_tick_color_dark:I = 0x7f06036e
 
-.field public static final op_seek_bar_tick_disabled_color_light:I = 0x7f06036e
+.field public static final op_seek_bar_tick_color_light:I = 0x7f06036f
 
-.field public static final timepicker_default_numbers_background_color_material:I = 0x7f0603f8
+.field public static final op_seek_bar_tick_disabled_color_light:I = 0x7f060371
+
+.field public static final timepicker_default_numbers_background_color_material:I = 0x7f0603fb

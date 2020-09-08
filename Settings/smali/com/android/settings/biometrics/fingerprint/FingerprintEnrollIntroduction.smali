@@ -67,18 +67,25 @@
 
     iget-object v0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollIntroduction;->mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     invoke-virtual {p0}, Landroidx/appcompat/app/AppCompatActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x10e0060
+    const v1, 0x10e0066
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v0
 
+    const/4 v1, -0x1
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x5
+
+    :cond_0
     iget-object v1, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollIntroduction;->mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
     iget p0, p0, Lcom/android/settings/biometrics/BiometricEnrollBase;->mUserId:I
@@ -91,18 +98,18 @@
 
     move-result p0
 
-    if-lt p0, v0, :cond_0
+    if-lt p0, v0, :cond_1
 
     sget p0, Lcom/android/settings/R$string;->fingerprint_intro_error_max:I
 
     return p0
 
-    :cond_0
+    :cond_1
     const/4 p0, 0x0
 
     return p0
 
-    :cond_1
+    :cond_2
     sget p0, Lcom/android/settings/R$string;->fingerprint_intro_error_unknown:I
 
     return p0

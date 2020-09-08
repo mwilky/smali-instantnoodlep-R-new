@@ -85,7 +85,7 @@
         <item>辅助结构</item>
         <item>辅助屏幕截图</item>
         <item>读取手机状态</item>
-        <item>添加语音邮件</item>
+        <item>添加语音信息</item>
         <item>使用 SIP</item>
         <item>处理拨出电话</item>
         <item>指纹</item>
@@ -152,7 +152,7 @@
         <item>辅助结构</item>
         <item>辅助屏幕截图</item>
         <item>读取手机状态</item>
-        <item>添加语音邮件</item>
+        <item>添加语音信息</item>
         <item>使用 SIP</item>
         <item>处理拨出电话</item>
         <item>指纹</item>
@@ -263,6 +263,8 @@
         <item>Qualcomm® aptX™ 音频</item>
         <item>Qualcomm® aptX™ HD 音频</item>
         <item>LDAC</item>
+        <item>Qualcomm® aptX™ Adaptive音频</item>
+        <item>Qualcomm® aptX™ TWS+ 音频</item>
     </string-array>
     <string-array name="bluetooth_a2dp_codec_titles">
         <item>使用系统选择（默认）</item>
@@ -271,6 +273,8 @@
         <item>Qualcomm® aptX™ 音频</item>
         <item>Qualcomm® aptX™ HD 音频</item>
         <item>LDAC</item>
+        <item>Qualcomm® aptX™ Adaptive 音频</item>
+        <item>Qualcomm® aptX™ TWS+ 音频</item>
     </string-array>
     <string-array name="bluetooth_audio_active_device_summaries">
         <item></item>
@@ -302,7 +306,6 @@
     </string-array>
     <string-array name="bluetooth_max_connected_audio_devices">
         <item>使用系统默认值：%1$d</item>
-        <item>1</item>
         <item>2</item>
         <item>3</item>
         <item>4</item>

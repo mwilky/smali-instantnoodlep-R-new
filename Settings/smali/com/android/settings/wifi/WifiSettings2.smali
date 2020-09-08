@@ -2875,19 +2875,28 @@
 .method setAdditionalSettingsSummaries()V
     .locals 4
 
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
     iget-object v0, p0, Lcom/android/settings/wifi/WifiSettings2;->mConfigureWifiSettingsPreference:Landroidx/preference/Preference;
 
     invoke-direct {p0}, Lcom/android/settings/wifi/WifiSettings2;->isWifiWakeupEnabled()Z
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
     sget v1, Lcom/android/settings/R$string;->wifi_configure_settings_preference_summary_wakeup_on:I
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     sget v1, Lcom/android/settings/R$string;->wifi_configure_settings_preference_summary_wakeup_off:I
 
     :goto_0
@@ -2911,7 +2920,7 @@
 
     add-int v2, v0, v1
 
-    if-lez v2, :cond_1
+    if-lez v2, :cond_2
 
     iget-object v2, p0, Lcom/android/settings/wifi/WifiSettings2;->mSavedNetworksPreference:Landroidx/preference/Preference;
 
@@ -2929,7 +2938,7 @@
 
     goto :goto_1
 
-    :cond_1
+    :cond_2
     iget-object p0, p0, Lcom/android/settings/wifi/WifiSettings2;->mSavedNetworksPreference:Landroidx/preference/Preference;
 
     const/4 v0, 0x0

@@ -2,9 +2,16 @@
 .super Lcom/android/settings/dashboard/DashboardFragment;
 .source "AdvancedConnectedDeviceDashboardFragment.java"
 
+# interfaces
+.implements Lcom/android/settings/nfc/NfcUiccObserver$OnNfcUiccChangeCallback;
+
 
 # static fields
 .field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/BaseSearchIndexProvider;
+
+
+# instance fields
+.field private mNfcUiccObserver:Lcom/android/settings/nfc/NfcUiccObserver;
 
 
 # direct methods
@@ -163,5 +170,90 @@
 
     invoke-virtual {p1, p0}, Lcom/android/settings/connecteddevice/OPUSBConnectedDeviceGroupController;->init(Lcom/android/settings/dashboard/DashboardFragment;)V
 
+    return-void
+.end method
+
+.method public onDataChange()V
+    .locals 1
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportNfcUicc()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardFragment;->updatePreferenceStates()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public onStart()V
+    .locals 3
+
+    invoke-super {p0}, Lcom/android/settings/dashboard/DashboardFragment;->onStart()V
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportNfcUicc()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Lcom/android/settings/nfc/NfcUiccObserver;
+
+    invoke-direct {v0, p0}, Lcom/android/settings/nfc/NfcUiccObserver;-><init>(Lcom/android/settings/nfc/NfcUiccObserver$OnNfcUiccChangeCallback;)V
+
+    iput-object v0, p0, Lcom/android/settings/connecteddevice/AdvancedConnectedDeviceDashboardFragment;->mNfcUiccObserver:Lcom/android/settings/nfc/NfcUiccObserver;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const-string v1, "nfc_multise_list"
+
+    invoke-static {v1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    iget-object p0, p0, Lcom/android/settings/connecteddevice/AdvancedConnectedDeviceDashboardFragment;->mNfcUiccObserver:Lcom/android/settings/nfc/NfcUiccObserver;
+
+    invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public onStop()V
+    .locals 2
+
+    invoke-super {p0}, Lcom/android/settings/dashboard/DashboardFragment;->onStop()V
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportNfcUicc()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/settings/connecteddevice/AdvancedConnectedDeviceDashboardFragment;->mNfcUiccObserver:Lcom/android/settings/nfc/NfcUiccObserver;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/settings/connecteddevice/AdvancedConnectedDeviceDashboardFragment;->mNfcUiccObserver:Lcom/android/settings/nfc/NfcUiccObserver;
+
+    invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/android/settings/connecteddevice/AdvancedConnectedDeviceDashboardFragment;->mNfcUiccObserver:Lcom/android/settings/nfc/NfcUiccObserver;
+
+    :cond_0
     return-void
 .end method

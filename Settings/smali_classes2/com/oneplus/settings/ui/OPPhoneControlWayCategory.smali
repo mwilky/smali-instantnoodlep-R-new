@@ -1511,7 +1511,7 @@
 
     move-result-object p0
 
-    const v0, 0x10e0086
+    const v0, 0x10e008c
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1537,7 +1537,7 @@
 
     move-result-object p0
 
-    const v0, 0x10e0086
+    const v0, 0x10e008c
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1700,6 +1700,16 @@
     iget v1, p0, Lcom/oneplus/settings/ui/OPPhoneControlWayCategory;->mCurrIndex:I
 
     invoke-virtual {v0, v1}, Landroidx/viewpager/widget/ViewPager;->setCurrentItem(I)V
+
+    iget-object v0, p0, Lcom/oneplus/settings/ui/OPPhoneControlWayCategory;->mViewPager:Landroidx/viewpager/widget/ViewPager;
+
+    iget-object v1, p0, Lcom/oneplus/settings/ui/OPPhoneControlWayCategory;->mPagerAdapter:Landroidx/viewpager/widget/PagerAdapter;
+
+    invoke-virtual {v1}, Landroidx/viewpager/widget/PagerAdapter;->getCount()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroidx/viewpager/widget/ViewPager;->setOffscreenPageLimit(I)V
 
     iget-object v0, p0, Lcom/oneplus/settings/ui/OPPhoneControlWayCategory;->mPageIndicator:Lcom/google/android/material/indicator/PageIndicator;
 

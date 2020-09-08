@@ -1,9 +1,6 @@
 .class Lcom/android/settings/accounts/AccountPreferenceController$1;
-.super Ljava/lang/Object;
+.super Ljava/lang/Thread;
 .source "AccountPreferenceController.java"
-
-# interfaces
-.implements Ljava/util/Comparator;
 
 
 # annotations
@@ -16,89 +13,94 @@
     name = null
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator<",
-        "Lcom/android/settings/accounts/AccountTypePreference;",
-        ">;"
-    }
-.end annotation
+
+# instance fields
+.field final synthetic this$0:Lcom/android/settings/accounts/AccountPreferenceController;
+
+.field final synthetic val$accountTypePreferences:Ljava/util/ArrayList;
+
+.field final synthetic val$accountTypes:[Ljava/lang/String;
+
+.field final synthetic val$helper:Lcom/android/settingslib/accounts/AuthenticatorHelper;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accounts/AccountPreferenceController;)V
+.method constructor <init>(Lcom/android/settings/accounts/AccountPreferenceController;[Ljava/lang/String;Lcom/android/settingslib/accounts/AuthenticatorHelper;Ljava/util/ArrayList;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lcom/android/settings/accounts/AccountPreferenceController$1;->this$0:Lcom/android/settings/accounts/AccountPreferenceController;
+
+    iput-object p2, p0, Lcom/android/settings/accounts/AccountPreferenceController$1;->val$accountTypes:[Ljava/lang/String;
+
+    iput-object p3, p0, Lcom/android/settings/accounts/AccountPreferenceController$1;->val$helper:Lcom/android/settingslib/accounts/AuthenticatorHelper;
+
+    iput-object p4, p0, Lcom/android/settings/accounts/AccountPreferenceController$1;->val$accountTypePreferences:Ljava/util/ArrayList;
+
+    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public compare(Lcom/android/settings/accounts/AccountTypePreference;Lcom/android/settings/accounts/AccountTypePreference;)I
-    .locals 1
+.method public run()V
+    .locals 4
 
-    invoke-virtual {p1}, Lcom/android/settings/accounts/AccountTypePreference;->getSummary()Ljava/lang/CharSequence;
+    invoke-super {p0}, Ljava/lang/Thread;->run()V
 
-    move-result-object p0
+    const/4 v0, 0x0
 
-    invoke-interface {p0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    :goto_0
+    iget-object v1, p0, Lcom/android/settings/accounts/AccountPreferenceController$1;->val$accountTypes:[Ljava/lang/String;
 
-    move-result-object p0
+    array-length v1, v1
 
-    invoke-virtual {p2}, Lcom/android/settings/accounts/AccountTypePreference;->getSummary()Ljava/lang/CharSequence;
+    if-ge v0, v1, :cond_0
 
-    move-result-object v0
+    iget-object v1, p0, Lcom/android/settings/accounts/AccountPreferenceController$1;->val$helper:Lcom/android/settingslib/accounts/AuthenticatorHelper;
 
-    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings/accounts/AccountPreferenceController$1;->this$0:Lcom/android/settings/accounts/AccountPreferenceController;
 
-    move-result-object v0
+    invoke-static {v2}, Lcom/android/settings/accounts/AccountPreferenceController;->access$100(Lcom/android/settings/accounts/AccountPreferenceController;)Landroid/content/Context;
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+    move-result-object v2
 
-    move-result p0
+    iget-object v3, p0, Lcom/android/settings/accounts/AccountPreferenceController$1;->val$accountTypes:[Ljava/lang/String;
 
-    if-eqz p0, :cond_0
+    aget-object v3, v3, v0
+
+    invoke-virtual {v1, v2, v3}, Lcom/android/settingslib/accounts/AuthenticatorHelper;->getDrawableForType(Landroid/content/Context;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    invoke-static {}, Lcom/android/settings/accounts/AccountPreferenceController;->access$200()Ljava/util/HashMap;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/android/settings/accounts/AccountPreferenceController$1;->val$accountTypes:[Ljava/lang/String;
+
+    aget-object v3, v3, v0
+
+    invoke-virtual {v2, v3, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p1}, Lcom/android/settings/accounts/AccountTypePreference;->getTitle()Ljava/lang/CharSequence;
+    new-instance v0, Landroid/os/Handler;
 
-    move-result-object p0
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    invoke-interface {p0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object p0
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    invoke-virtual {p2}, Lcom/android/settings/accounts/AccountTypePreference;->getTitle()Ljava/lang/CharSequence;
+    new-instance v1, Lcom/android/settings/accounts/AccountPreferenceController$1$1;
 
-    move-result-object p1
+    invoke-direct {v1, p0}, Lcom/android/settings/accounts/AccountPreferenceController$1$1;-><init>(Lcom/android/settings/accounts/AccountPreferenceController$1;)V
 
-    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
-
-    move-result p0
-
-    :goto_0
-    return p0
-.end method
-
-.method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 0
-
-    check-cast p1, Lcom/android/settings/accounts/AccountTypePreference;
-
-    check-cast p2, Lcom/android/settings/accounts/AccountTypePreference;
-
-    invoke-virtual {p0, p1, p2}, Lcom/android/settings/accounts/AccountPreferenceController$1;->compare(Lcom/android/settings/accounts/AccountTypePreference;Lcom/android/settings/accounts/AccountTypePreference;)I
-
-    move-result p0
-
-    return p0
+    return-void
 .end method

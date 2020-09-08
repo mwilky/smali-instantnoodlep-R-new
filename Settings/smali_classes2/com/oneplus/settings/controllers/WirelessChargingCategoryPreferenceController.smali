@@ -39,7 +39,7 @@
 
     new-array p0, p0, [I
 
-    const/16 v0, 0xf4
+    const/16 v0, 0xed
 
     const/4 v1, 0x0
 

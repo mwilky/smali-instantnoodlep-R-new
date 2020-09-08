@@ -230,7 +230,7 @@
     :goto_4
     new-instance v4, Landroid/content/ComponentName;
 
-    const-class v7, Lcom/android/settings/Settings$DataUsageSummaryActivity;
+    const-class v7, Lcom/android/settings/Settings$ConnectedDeviceDashboardActivity;
 
     invoke-virtual {v7}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -238,9 +238,11 @@
 
     invoke-direct {v4, v2, v7}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/android/settings/Utils;->isBandwidthControlEnabled()Z
+    invoke-static {p0}, Landroid/os/UserManager;->isDeviceInDemoMode(Landroid/content/Context;)Z
 
     move-result v7
+
+    xor-int/2addr v7, v6
 
     invoke-direct {p0, v3, v4, v7, v1}, Lcom/android/settings/SettingsActivity;->setTileEnabled(Ljava/lang/StringBuilder;Landroid/content/ComponentName;ZZ)Z
 
@@ -264,7 +266,7 @@
     :goto_6
     new-instance v4, Landroid/content/ComponentName;
 
-    const-class v7, Lcom/android/settings/Settings$ConnectedDeviceDashboardActivity;
+    const-class v7, Lcom/android/settings/Settings$SimSettingsActivity;
 
     invoke-virtual {v7}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -272,11 +274,9 @@
 
     invoke-direct {v4, v2, v7}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {p0}, Landroid/os/UserManager;->isDeviceInDemoMode(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/android/settings/Utils;->showSimCardTile(Landroid/content/Context;)Z
 
     move-result v7
-
-    xor-int/2addr v7, v6
 
     invoke-direct {p0, v3, v4, v7, v1}, Lcom/android/settings/SettingsActivity;->setTileEnabled(Ljava/lang/StringBuilder;Landroid/content/ComponentName;ZZ)Z
 
@@ -300,7 +300,7 @@
     :goto_8
     new-instance v4, Landroid/content/ComponentName;
 
-    const-class v7, Lcom/android/settings/Settings$SimSettingsActivity;
+    const-class v7, Lcom/android/settings/Settings$PowerUsageSummaryActivity;
 
     invoke-virtual {v7}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -308,9 +308,7 @@
 
     invoke-direct {v4, v2, v7}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcom/android/settings/Utils;->showSimCardTile(Landroid/content/Context;)Z
-
-    move-result v7
+    iget-boolean v7, p0, Lcom/android/settings/SettingsActivity;->mBatteryPresent:Z
 
     invoke-direct {p0, v3, v4, v7, v1}, Lcom/android/settings/SettingsActivity;->setTileEnabled(Ljava/lang/StringBuilder;Landroid/content/ComponentName;ZZ)Z
 
@@ -334,72 +332,6 @@
     :goto_a
     new-instance v4, Landroid/content/ComponentName;
 
-    const-class v7, Lcom/android/settings/Settings$PowerUsageSummaryActivity;
-
-    invoke-virtual {v7}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-direct {v4, v2, v7}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-boolean v7, p0, Lcom/android/settings/SettingsActivity;->mBatteryPresent:Z
-
-    invoke-direct {p0, v3, v4, v7, v1}, Lcom/android/settings/SettingsActivity;->setTileEnabled(Ljava/lang/StringBuilder;Landroid/content/ComponentName;ZZ)Z
-
-    move-result v4
-
-    if-nez v4, :cond_d
-
-    if-eqz v0, :cond_c
-
-    goto :goto_b
-
-    :cond_c
-    move v0, v5
-
-    goto :goto_c
-
-    :cond_d
-    :goto_b
-    move v0, v6
-
-    :goto_c
-    new-instance v4, Landroid/content/ComponentName;
-
-    const-class v7, Lcom/android/settings/Settings$DataUsageSummaryActivity;
-
-    invoke-virtual {v7}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-direct {v4, v2, v7}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {}, Lcom/android/settings/Utils;->isBandwidthControlEnabled()Z
-
-    move-result v7
-
-    invoke-direct {p0, v3, v4, v7, v1}, Lcom/android/settings/SettingsActivity;->setTileEnabled(Ljava/lang/StringBuilder;Landroid/content/ComponentName;ZZ)Z
-
-    move-result v4
-
-    if-nez v4, :cond_f
-
-    if-eqz v0, :cond_e
-
-    goto :goto_d
-
-    :cond_e
-    move v0, v5
-
-    goto :goto_e
-
-    :cond_f
-    :goto_d
-    move v0, v6
-
-    :goto_e
-    new-instance v4, Landroid/content/ComponentName;
-
     const-class v7, Lcom/android/settings/Settings$UserSettingsActivity;
 
     invoke-virtual {v7}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -412,62 +344,62 @@
 
     move-result v7
 
-    if-eqz v7, :cond_10
+    if-eqz v7, :cond_c
 
     invoke-static {}, Lcom/android/settings/Utils;->isMonkeyRunning()Z
 
     move-result v7
 
-    if-nez v7, :cond_10
+    if-nez v7, :cond_c
 
     move v7, v6
 
-    goto :goto_f
+    goto :goto_b
 
-    :cond_10
+    :cond_c
     move v7, v5
 
-    :goto_f
+    :goto_b
     invoke-direct {p0, v3, v4, v7, v1}, Lcom/android/settings/SettingsActivity;->setTileEnabled(Ljava/lang/StringBuilder;Landroid/content/ComponentName;ZZ)Z
 
     move-result v4
 
-    if-nez v4, :cond_12
+    if-nez v4, :cond_e
 
-    if-eqz v0, :cond_11
+    if-eqz v0, :cond_d
 
-    goto :goto_10
+    goto :goto_c
 
-    :cond_11
+    :cond_d
     move v0, v5
 
-    goto :goto_11
+    goto :goto_d
 
-    :cond_12
-    :goto_10
+    :cond_e
+    :goto_c
     move v0, v6
 
-    :goto_11
+    :goto_d
     invoke-static {p0}, Lcom/android/settingslib/development/DevelopmentSettingsEnabler;->isDevelopmentSettingsEnabled(Landroid/content/Context;)Z
 
     move-result v4
 
-    if-eqz v4, :cond_13
+    if-eqz v4, :cond_f
 
     invoke-static {}, Lcom/android/settings/Utils;->isMonkeyRunning()Z
 
     move-result v4
 
-    if-nez v4, :cond_13
+    if-nez v4, :cond_f
 
     move v4, v6
 
-    goto :goto_12
+    goto :goto_e
 
-    :cond_13
+    :cond_f
     move v4, v5
 
-    :goto_12
+    :goto_e
     new-instance v7, Landroid/content/ComponentName;
 
     const-class v8, Lcom/android/settings/Settings$DevelopmentSettingsDashboardActivity;
@@ -482,22 +414,22 @@
 
     move-result v4
 
-    if-nez v4, :cond_15
+    if-nez v4, :cond_11
 
-    if-eqz v0, :cond_14
+    if-eqz v0, :cond_10
 
-    goto :goto_13
+    goto :goto_f
 
-    :cond_14
+    :cond_10
     move v0, v5
 
-    goto :goto_14
+    goto :goto_10
 
-    :cond_15
-    :goto_13
+    :cond_11
+    :goto_f
     move v0, v6
 
-    :goto_14
+    :goto_10
     new-instance v4, Landroid/content/ComponentName;
 
     const-class v7, Lcom/android/settings/Settings$WifiDisplaySettingsActivity;
@@ -516,23 +448,23 @@
 
     move-result v4
 
-    if-nez v4, :cond_17
+    if-nez v4, :cond_13
 
-    if-eqz v0, :cond_16
+    if-eqz v0, :cond_12
 
-    goto :goto_15
+    goto :goto_11
 
-    :cond_16
+    :cond_12
     move v0, v5
 
-    goto :goto_16
+    goto :goto_12
 
-    :cond_17
-    :goto_15
+    :cond_13
+    :goto_11
     move v0, v6
 
-    :goto_16
-    if-nez v1, :cond_1d
+    :goto_12
+    if-nez v1, :cond_19
 
     iget-object v4, p0, Lcom/android/settings/SettingsActivity;->mDashboardFeatureProvider:Lcom/android/settings/dashboard/DashboardFeatureProvider;
 
@@ -547,12 +479,12 @@
 
     move-result-object v7
 
-    :cond_18
+    :cond_14
     invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v8
 
-    if-eqz v8, :cond_1c
+    if-eqz v8, :cond_18
 
     invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -566,8 +498,8 @@
 
     move v10, v5
 
-    :goto_17
-    if-ge v10, v9, :cond_18
+    :goto_13
+    if-ge v10, v9, :cond_14
 
     invoke-virtual {v8, v10}, Lcom/android/settingslib/drawer/DashboardCategory;->getTile(I)Lcom/android/settingslib/drawer/Tile;
 
@@ -599,39 +531,39 @@
 
     move-result v13
 
-    if-eqz v13, :cond_1b
+    if-eqz v13, :cond_17
 
-    if-nez v12, :cond_1b
+    if-nez v12, :cond_17
 
     invoke-direct {p0, v3, v11, v5, v1}, Lcom/android/settings/SettingsActivity;->setTileEnabled(Ljava/lang/StringBuilder;Landroid/content/ComponentName;ZZ)Z
 
     move-result v11
 
-    if-nez v11, :cond_1a
+    if-nez v11, :cond_16
 
-    if-eqz v0, :cond_19
+    if-eqz v0, :cond_15
 
-    goto :goto_18
+    goto :goto_14
 
-    :cond_19
+    :cond_15
     move v0, v5
 
-    goto :goto_19
+    goto :goto_15
 
-    :cond_1a
-    :goto_18
+    :cond_16
+    :goto_14
     move v0, v6
 
-    :cond_1b
-    :goto_19
+    :cond_17
+    :goto_15
     add-int/lit8 v10, v10, 0x1
 
-    goto :goto_17
+    goto :goto_13
 
-    :cond_1c
+    :cond_18
     monitor-exit v4
 
-    goto :goto_1a
+    goto :goto_16
 
     :catchall_0
     move-exception p0
@@ -642,9 +574,9 @@
 
     throw p0
 
-    :cond_1d
-    :goto_1a
-    if-eqz v0, :cond_1e
+    :cond_19
+    :goto_16
+    if-eqz v0, :cond_1a
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -670,16 +602,16 @@
 
     invoke-virtual {p0}, Lcom/android/settings/core/SettingsBaseActivity;->updateCategories()V
 
-    goto :goto_1b
+    goto :goto_17
 
-    :cond_1e
+    :cond_1a
     const-string p0, "SettingsActivity"
 
     const-string v0, "No enabled state changed, skipping updateCategory call"
 
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :goto_1b
+    :goto_17
     return-void
 .end method
 
@@ -1800,128 +1732,130 @@
 
     invoke-static {v0, v1}, Lcom/oneplus/settings/utils/OPUtils;->setLightNavigationBar(Landroid/view/Window;I)V
 
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->setRequestedOrientation(I)V
+
     invoke-direct {p0}, Lcom/android/settings/SettingsActivity;->getMetaData()V
 
     invoke-virtual {p0}, Lcom/android/settings/SettingsActivity;->getIntent()Landroid/content/Intent;
 
-    move-result-object v0
+    move-result-object v1
 
-    const-string v1, "settings:ui_options"
+    const-string v2, "settings:ui_options"
 
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
+    invoke-virtual {v1, v2}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
 
-    move-result v2
+    move-result v3
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
-    if-eqz v2, :cond_0
+    if-eqz v3, :cond_0
 
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result v1
-
-    invoke-virtual {v2, v1}, Landroid/view/Window;->setUiOptions(I)V
-
-    :cond_0
-    new-instance v1, Lcom/android/settings/SmqSettings;
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Lcom/android/settings/SmqSettings;-><init>(Landroid/content/Context;)V
-
-    iput-object v1, p0, Lcom/android/settings/SettingsActivity;->mSMQ:Lcom/android/settings/SmqSettings;
-
-    const-string v1, ":settings:show_fragment"
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    instance-of v2, p0, Lcom/android/settings/SubSettings;
-
-    const/4 v4, 0x1
-
-    if-nez v2, :cond_2
-
-    const-string v2, ":settings:show_fragment_as_subsetting"
-
-    invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+    invoke-virtual {v1, v2, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v2
 
-    if-eqz v2, :cond_1
+    invoke-virtual {v3, v2}, Landroid/view/Window;->setUiOptions(I)V
+
+    :cond_0
+    new-instance v2, Lcom/android/settings/SmqSettings;
+
+    invoke-virtual {p0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3}, Lcom/android/settings/SmqSettings;-><init>(Landroid/content/Context;)V
+
+    iput-object v2, p0, Lcom/android/settings/SettingsActivity;->mSMQ:Lcom/android/settings/SmqSettings;
+
+    const-string v2, ":settings:show_fragment"
+
+    invoke-virtual {v1, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    instance-of v3, p0, Lcom/android/settings/SubSettings;
+
+    if-nez v3, :cond_2
+
+    const-string v3, ":settings:show_fragment_as_subsetting"
+
+    invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
 
     goto :goto_0
 
     :cond_1
-    move v2, v3
+    move v3, v4
 
     goto :goto_1
 
     :cond_2
     :goto_0
-    move v2, v4
+    move v3, v0
 
     :goto_1
-    if-eqz v2, :cond_3
+    if-eqz v3, :cond_3
 
     invoke-virtual {p0}, Lcom/android/settings/SettingsActivity;->getIntent()Landroid/content/Intent;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-static {v2}, Lcom/google/android/setupcompat/util/WizardManagerHelper;->isAnySetupWizard(Landroid/content/Intent;)Z
+    invoke-static {v3}, Lcom/google/android/setupcompat/util/WizardManagerHelper;->isAnySetupWizard(Landroid/content/Intent;)Z
 
-    move-result v2
+    move-result v3
 
-    if-nez v2, :cond_3
+    if-nez v3, :cond_3
 
-    sget v2, Lcom/android/settings/R$style;->Theme_SubSettings:I
+    sget v3, Lcom/android/settings/R$style;->Theme_SubSettings:I
 
-    invoke-virtual {p0, v2}, Landroidx/appcompat/app/AppCompatActivity;->setTheme(I)V
+    invoke-virtual {p0, v3}, Landroidx/appcompat/app/AppCompatActivity;->setTheme(I)V
 
     :cond_3
-    sget v2, Lcom/android/settings/R$layout;->settings_main_prefs:I
+    sget v3, Lcom/android/settings/R$layout;->settings_main_prefs:I
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/core/SettingsBaseActivity;->setContentView(I)V
+    invoke-virtual {p0, v3}, Lcom/android/settings/core/SettingsBaseActivity;->setContentView(I)V
 
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v2, p0}, Landroidx/fragment/app/FragmentManager;->addOnBackStackChangedListener(Landroidx/fragment/app/FragmentManager$OnBackStackChangedListener;)V
+    invoke-virtual {v3, p0}, Landroidx/fragment/app/FragmentManager;->addOnBackStackChangedListener(Landroidx/fragment/app/FragmentManager$OnBackStackChangedListener;)V
 
     if-eqz p1, :cond_4
 
-    invoke-direct {p0, v0}, Lcom/android/settings/SettingsActivity;->setTitleFromIntent(Landroid/content/Intent;)V
+    invoke-direct {p0, v1}, Lcom/android/settings/SettingsActivity;->setTitleFromIntent(Landroid/content/Intent;)V
 
-    const-string v1, ":settings:categories"
+    const-string v2, ":settings:categories"
 
-    invoke-virtual {p1, v1}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
+    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object p1
 
     if-eqz p1, :cond_5
 
-    iget-object v1, p0, Lcom/android/settings/SettingsActivity;->mCategories:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings/SettingsActivity;->mCategories:Ljava/util/ArrayList;
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
+    invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    iget-object v1, p0, Lcom/android/settings/SettingsActivity;->mCategories:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings/SettingsActivity;->mCategories:Ljava/util/ArrayList;
 
-    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+    invoke-virtual {v2, p1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
     invoke-direct {p0}, Lcom/android/settings/SettingsActivity;->setTitleFromBackStack()V
 
     goto :goto_2
 
     :cond_4
-    invoke-virtual {p0, v1, v0}, Lcom/android/settings/SettingsActivity;->launchSettingFragment(Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-virtual {p0, v2, v1}, Lcom/android/settings/SettingsActivity;->launchSettingFragment(Ljava/lang/String;Landroid/content/Intent;)V
 
     :cond_5
     :goto_2
@@ -1935,19 +1869,19 @@
 
     invoke-virtual {p0}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
 
-    move-result-object v1
+    move-result-object v2
 
-    if-eqz v1, :cond_6
+    if-eqz v2, :cond_6
 
-    xor-int/lit8 v2, p1, 0x1
+    xor-int/lit8 v3, p1, 0x1
 
-    invoke-virtual {v1, v2}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
+    invoke-virtual {v2, v3}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
 
-    xor-int/2addr p1, v4
+    xor-int/2addr p1, v0
 
-    invoke-virtual {v1, p1}, Landroid/app/ActionBar;->setHomeButtonEnabled(Z)V
+    invoke-virtual {v2, p1}, Landroid/app/ActionBar;->setHomeButtonEnabled(Z)V
 
-    invoke-virtual {v1, v4}, Landroid/app/ActionBar;->setDisplayShowTitleEnabled(Z)V
+    invoke-virtual {v2, v0}, Landroid/app/ActionBar;->setDisplayShowTitleEnabled(Z)V
 
     :cond_6
     sget p1, Lcom/android/settings/R$id;->switch_bar:I
@@ -1964,14 +1898,14 @@
 
     invoke-direct {p0}, Lcom/android/settings/SettingsActivity;->getMetricsTag()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {p1, v1}, Lcom/android/settings/widget/SwitchBar;->setMetricsTag(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lcom/android/settings/widget/SwitchBar;->setMetricsTag(Ljava/lang/String;)V
 
     :cond_7
     const-string p1, "extra_prefs_show_button_bar"
 
-    invoke-virtual {v0, p1, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+    invoke-virtual {v1, p1, v4}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p1
 
@@ -1985,7 +1919,7 @@
 
     if-eqz p1, :cond_c
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
 
     sget p1, Lcom/android/settings/R$id;->back_button:I
 
@@ -1995,25 +1929,25 @@
 
     check-cast p1, Landroid/widget/Button;
 
-    new-instance v1, Lcom/android/settings/-$$Lambda$SettingsActivity$xj33YuwAAWABRerpKy-5E-8fkjk;
+    new-instance v0, Lcom/android/settings/-$$Lambda$SettingsActivity$xj33YuwAAWABRerpKy-5E-8fkjk;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/-$$Lambda$SettingsActivity$xj33YuwAAWABRerpKy-5E-8fkjk;-><init>(Lcom/android/settings/SettingsActivity;)V
+    invoke-direct {v0, p0}, Lcom/android/settings/-$$Lambda$SettingsActivity$xj33YuwAAWABRerpKy-5E-8fkjk;-><init>(Lcom/android/settings/SettingsActivity;)V
 
-    invoke-virtual {p1, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p1, v0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    sget v1, Lcom/android/settings/R$id;->skip_button:I
+    sget v0, Lcom/android/settings/R$id;->skip_button:I
 
-    invoke-virtual {p0, v1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
-    move-result-object v1
+    move-result-object v0
 
-    check-cast v1, Landroid/widget/Button;
+    check-cast v0, Landroid/widget/Button;
 
     new-instance v2, Lcom/android/settings/-$$Lambda$SettingsActivity$DprhoLIEb9VcKgAzJHK8h9J6b8M;
 
     invoke-direct {v2, p0}, Lcom/android/settings/-$$Lambda$SettingsActivity$DprhoLIEb9VcKgAzJHK8h9J6b8M;-><init>(Lcom/android/settings/SettingsActivity;)V
 
-    invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     sget v2, Lcom/android/settings/R$id;->next_button:I
 
@@ -2025,31 +1959,31 @@
 
     iput-object v2, p0, Lcom/android/settings/SettingsActivity;->mNextButton:Landroid/widget/Button;
 
-    new-instance v4, Lcom/android/settings/-$$Lambda$SettingsActivity$1W-97zC8WEIU323IiggDWF3SpYA;
+    new-instance v3, Lcom/android/settings/-$$Lambda$SettingsActivity$1W-97zC8WEIU323IiggDWF3SpYA;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/-$$Lambda$SettingsActivity$1W-97zC8WEIU323IiggDWF3SpYA;-><init>(Lcom/android/settings/SettingsActivity;)V
+    invoke-direct {v3, p0}, Lcom/android/settings/-$$Lambda$SettingsActivity$1W-97zC8WEIU323IiggDWF3SpYA;-><init>(Lcom/android/settings/SettingsActivity;)V
 
-    invoke-virtual {v2, v4}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v2, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     const-string v2, "extra_prefs_set_next_text"
 
-    invoke-virtual {v0, v2}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
+    invoke-virtual {v1, v2}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
 
-    move-result v4
+    move-result v3
 
     const/16 v5, 0x8
 
-    if-eqz v4, :cond_9
+    if-eqz v3, :cond_9
 
-    invoke-virtual {v0, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v4
+    move-result v3
 
-    if-eqz v4, :cond_8
+    if-eqz v3, :cond_8
 
     iget-object p0, p0, Lcom/android/settings/SettingsActivity;->mNextButton:Landroid/widget/Button;
 
@@ -2066,13 +2000,13 @@
     :goto_3
     const-string p0, "extra_prefs_set_back_text"
 
-    invoke-virtual {v0, p0}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
+    invoke-virtual {v1, p0}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_b
 
-    invoke-virtual {v0, p0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, p0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -2093,13 +2027,13 @@
     :goto_4
     const-string p0, "extra_prefs_show_skip"
 
-    invoke-virtual {v0, p0, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+    invoke-virtual {v1, p0, v4}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p0
 
     if-eqz p0, :cond_c
 
-    invoke-virtual {v1, v3}, Landroid/widget/Button;->setVisibility(I)V
+    invoke-virtual {v0, v4}, Landroid/widget/Button;->setVisibility(I)V
 
     :cond_c
     return-void

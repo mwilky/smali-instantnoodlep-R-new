@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wfd/WifiDisplaySettings;->setListenMode(Z)V
+    value = Lcom/android/settings/wfd/WifiDisplaySettings;->setWifiP2pChannels(II)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,15 +17,9 @@
 .end annotation
 
 
-# instance fields
-.field final synthetic val$enable:Z
-
-
 # direct methods
-.method constructor <init>(Lcom/android/settings/wfd/WifiDisplaySettings;Z)V
+.method constructor <init>(Lcom/android/settings/wfd/WifiDisplaySettings;)V
     .locals 0
-
-    iput-boolean p2, p0, Lcom/android/settings/wfd/WifiDisplaySettings$11;->val$enable:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -35,41 +29,23 @@
 
 # virtual methods
 .method public onFailure(I)V
-    .locals 2
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance p0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "Failed to "
+    const-string v0, "Failed to set wifi p2p channels with reason "
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean p0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$11;->val$enable:Z
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    if-eqz p0, :cond_0
+    const-string p1, "."
 
-    const-string p0, "entered"
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_0
-
-    :cond_0
-    const-string p0, "exited"
-
-    :goto_0
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, " listen mode with reason "
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p0, "."
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 

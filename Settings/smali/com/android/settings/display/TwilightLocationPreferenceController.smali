@@ -109,8 +109,22 @@
 .method public getAvailabilityStatus()I
     .locals 0
 
+    iget-object p0, p0, Lcom/android/settings/display/TwilightLocationPreferenceController;->mLocationManager:Landroid/location/LocationManager;
+
+    invoke-virtual {p0}, Landroid/location/LocationManager;->isLocationEnabled()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x2
+
+    goto :goto_0
+
+    :cond_0
     const/4 p0, 0x1
 
+    :goto_0
     return p0
 .end method
 
@@ -187,22 +201,6 @@
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/android/settings/display/TwilightLocationPreferenceController;->lambda$displayPreference$0(Lcom/android/settingslib/widget/LayoutPreference;Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method public updateState(Landroidx/preference/Preference;)V
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/settings/display/TwilightLocationPreferenceController;->mLocationManager:Landroid/location/LocationManager;
-
-    invoke-virtual {p0}, Landroid/location/LocationManager;->isLocationEnabled()Z
-
-    move-result p0
-
-    xor-int/lit8 p0, p0, 0x1
-
-    invoke-virtual {p1, p0}, Landroidx/preference/Preference;->setVisible(Z)V
 
     return-void
 .end method

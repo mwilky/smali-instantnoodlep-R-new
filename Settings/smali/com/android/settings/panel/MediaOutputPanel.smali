@@ -216,7 +216,7 @@
 .end method
 
 .method public getIcon()Landroidx/core/graphics/drawable/IconCompat;
-    .locals 2
+    .locals 3
 
     iget-object v0, p0, Lcom/android/settings/panel/MediaOutputPanel;->mMediaController:Landroid/media/session/MediaController;
 
@@ -257,7 +257,25 @@
 
     if-eqz v0, :cond_1
 
-    invoke-static {v0}, Landroidx/core/graphics/drawable/IconCompat;->createWithBitmap(Landroid/graphics/Bitmap;)Landroidx/core/graphics/drawable/IconCompat;
+    iget-object p0, p0, Lcom/android/settings/panel/MediaOutputPanel;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Lcom/android/settings/R$dimen;->output_switcher_panel_icon_corner_radius:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    invoke-static {p0, v0, v1}, Lcom/android/settings/Utils;->convertCornerRadiusBitmap(Landroid/content/Context;Landroid/graphics/Bitmap;F)Landroid/graphics/Bitmap;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroidx/core/graphics/drawable/IconCompat;->createWithBitmap(Landroid/graphics/Bitmap;)Landroidx/core/graphics/drawable/IconCompat;
 
     move-result-object p0
 

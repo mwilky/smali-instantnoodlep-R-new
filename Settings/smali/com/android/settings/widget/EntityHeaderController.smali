@@ -94,7 +94,7 @@
 
     move-result-object p1
 
-    sget p2, Lcom/android/settings/R$layout;->settings_entity_header:I
+    sget p2, Lcom/android/settings/R$layout;->op_settings_entity_header:I
 
     const/4 p3, 0x0
 

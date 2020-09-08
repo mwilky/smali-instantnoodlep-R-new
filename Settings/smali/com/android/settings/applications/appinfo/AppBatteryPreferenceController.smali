@@ -7,6 +7,7 @@
 .implements Lcom/android/settingslib/core/lifecycle/LifecycleObserver;
 .implements Lcom/android/settingslib/core/lifecycle/events/OnResume;
 .implements Lcom/android/settingslib/core/lifecycle/events/OnPause;
+.implements Lcom/android/settingslib/core/lifecycle/events/OnDestroy;
 
 
 # annotations
@@ -18,7 +19,8 @@
         ">;",
         "Lcom/android/settingslib/core/lifecycle/LifecycleObserver;",
         "Lcom/android/settingslib/core/lifecycle/events/OnResume;",
-        "Lcom/android/settingslib/core/lifecycle/events/OnPause;"
+        "Lcom/android/settingslib/core/lifecycle/events/OnPause;",
+        "Lcom/android/settingslib/core/lifecycle/events/OnDestroy;"
     }
 .end annotation
 
@@ -38,7 +40,7 @@
 
 .field private final mPackageName:Ljava/lang/String;
 
-.field private final mParent:Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;
+.field private mParent:Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;
 
 .field private mPreference:Landroidx/preference/Preference;
 
@@ -116,20 +118,22 @@
 .method findTargetSipper(Lcom/android/internal/os/BatteryStatsHelper;I)Lcom/android/internal/os/BatterySipper;
     .locals 3
 
+    if-eqz p1, :cond_1
+
     invoke-virtual {p1}, Lcom/android/internal/os/BatteryStatsHelper;->getUsageList()Ljava/util/List;
 
     move-result-object p0
 
+    const/4 p1, 0x0
+
     invoke-interface {p0}, Ljava/util/List;->size()I
 
-    move-result p1
-
-    const/4 v0, 0x0
+    move-result v0
 
     :goto_0
-    if-ge v0, p1, :cond_1
+    if-ge p1, v0, :cond_1
 
-    invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -144,7 +148,7 @@
     return-object v1
 
     :cond_0
-    add-int/lit8 v0, v0, 0x1
+    add-int/lit8 p1, p1, 0x1
 
     goto :goto_0
 
@@ -390,6 +394,20 @@
     invoke-direct {p1, p0}, Lcom/android/settings/fuelgauge/BatteryStatsHelperLoader;-><init>(Landroid/content/Context;)V
 
     return-object p1
+.end method
+
+.method public onDestroy()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/android/settings/applications/appinfo/AppBatteryPreferenceController;->mBatteryHelper:Lcom/android/internal/os/BatteryStatsHelper;
+
+    iput-object v0, p0, Lcom/android/settings/applications/appinfo/AppBatteryPreferenceController;->mSipper:Lcom/android/internal/os/BatterySipper;
+
+    iput-object v0, p0, Lcom/android/settings/applications/appinfo/AppBatteryPreferenceController;->mParent:Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;
+
+    return-void
 .end method
 
 .method public onLoadFinished(Landroidx/loader/content/Loader;Lcom/android/internal/os/BatteryStatsHelper;)V

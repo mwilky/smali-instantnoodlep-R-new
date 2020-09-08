@@ -28,6 +28,18 @@
     return-void
 .end method
 
+.method static synthetic lambda$textWithoutLink$0(Landroid/text/SpannableString;Landroid/text/Annotation;)I
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/text/SpannableString;->getSpanStart(Ljava/lang/Object;)I
+
+    move-result p0
+
+    neg-int p0, p0
+
+    return p0
+.end method
+
 .method public static varargs linkify(Ljava/lang/CharSequence;[Lcom/android/settings/utils/AnnotationSpan$LinkInfo;)Ljava/lang/CharSequence;
     .locals 13
 
@@ -261,6 +273,79 @@
 
     :cond_4
     return-object v1
+.end method
+
+.method public static textWithoutLink(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    .locals 6
+
+    new-instance v0, Landroid/text/SpannableString;
+
+    invoke-direct {v0, p0}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {v0}, Landroid/text/SpannableString;->length()I
+
+    move-result v1
+
+    const-class v2, Landroid/text/Annotation;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v3, v1, v2}, Landroid/text/SpannableString;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, [Landroid/text/Annotation;
+
+    if-nez v1, :cond_0
+
+    return-object p0
+
+    :cond_0
+    new-instance p0, Lcom/android/settings/utils/-$$Lambda$AnnotationSpan$vkx-OAkOrk8m9VmpwaIv8Nve-V4;
+
+    invoke-direct {p0, v0}, Lcom/android/settings/utils/-$$Lambda$AnnotationSpan$vkx-OAkOrk8m9VmpwaIv8Nve-V4;-><init>(Landroid/text/SpannableString;)V
+
+    invoke-static {p0}, Ljava/util/Comparator;->comparingInt(Ljava/util/function/ToIntFunction;)Ljava/util/Comparator;
+
+    move-result-object p0
+
+    invoke-static {v1, p0}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Landroid/text/SpannableString;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {p0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    array-length v2, v1
+
+    :goto_0
+    if-ge v3, v2, :cond_1
+
+    aget-object v4, v1, v3
+
+    invoke-virtual {v0, v4}, Landroid/text/SpannableString;->getSpanStart(Ljava/lang/Object;)I
+
+    move-result v5
+
+    invoke-virtual {v0, v4}, Landroid/text/SpannableString;->getSpanEnd(Ljava/lang/Object;)I
+
+    move-result v4
+
+    invoke-virtual {p0, v5, v4}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 

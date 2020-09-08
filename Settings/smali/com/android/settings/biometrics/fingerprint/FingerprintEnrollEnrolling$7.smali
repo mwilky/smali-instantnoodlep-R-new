@@ -39,7 +39,7 @@
 
     iget-object v0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling$7;->this$0:Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;
 
-    invoke-static {v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->access$800(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)V
+    invoke-static {v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->access$600(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)V
 
     iget-object p0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling$7;->this$0:Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;
 
@@ -49,7 +49,7 @@
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->access$900(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;Ljava/lang/CharSequence;)V
+    invoke-static {p0, v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->access$700(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;Ljava/lang/CharSequence;)V
 
     return-void
 .end method

@@ -132,6 +132,24 @@
     return-void
 .end method
 
+.method public displayPreference(Landroidx/preference/PreferenceScreen;)V
+    .locals 1
+
+    invoke-super {p0, p1}, Lcom/android/settings/core/BasePreferenceController;->displayPreference(Landroidx/preference/PreferenceScreen;)V
+
+    iget-object v0, p0, Lcom/android/settings/core/BasePreferenceController;->mPreferenceKey:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Landroidx/preference/PreferenceGroup;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/android/settings/widget/MasterSwitchPreference;
+
+    iput-object p1, p0, Lcom/android/settings/network/AllInOneTetherPreferenceController;->mPreference:Lcom/android/settings/widget/MasterSwitchPreference;
+
+    return-void
+.end method
+
 .method public getAvailabilityStatus()I
     .locals 1
 

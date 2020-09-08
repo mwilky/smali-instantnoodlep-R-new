@@ -32,7 +32,7 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 6
+    .locals 5
 
     const-string p1, "BluetoothDashboardFrag"
 
@@ -46,7 +46,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
     :try_start_0
     iget-object v0, p0, Lcom/android/settings/connecteddevice/BluetoothDashboardFragment$3;->this$0:Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;
@@ -55,7 +55,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
     const-string v0, "android.bluetooth.device.extra.DEVICE"
 
@@ -69,7 +69,7 @@
 
     move-result-object v1
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
     iget-object v0, p0, Lcom/android/settings/connecteddevice/BluetoothDashboardFragment$3;->this$0:Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;
 
@@ -81,7 +81,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
     const-string v0, "android.bluetooth.headset.extra.VENDOR_SPECIFIC_HEADSET_EVENT_CMD"
 
@@ -101,107 +101,83 @@
 
     check-cast p2, [Ljava/lang/Object;
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
-    if-eqz p2, :cond_3
+    if-eqz p2, :cond_2
 
     array-length v0, p2
 
     const/4 v2, 0x7
 
-    if-ne v0, v2, :cond_3
+    if-ne v0, v2, :cond_2
 
-    const/4 v0, 0x2
+    iget-object v0, p0, Lcom/android/settings/connecteddevice/BluetoothDashboardFragment$3;->this$0:Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;
 
-    aget-object v0, p2, v0
+    const/4 v2, 0x2
 
-    check-cast v0, Ljava/lang/Integer;
+    aget-object v2, p2, v2
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    invoke-static {v0, v2}, Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;->access$500(Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;Ljava/lang/Object;)I
 
     move-result v0
 
-    const/4 v2, 0x1
-
-    add-int/2addr v0, v2
-
-    mul-int/lit8 v0, v0, 0xa
+    iget-object v2, p0, Lcom/android/settings/connecteddevice/BluetoothDashboardFragment$3;->this$0:Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;
 
     const/4 v3, 0x4
 
     aget-object v3, p2, v3
 
-    check-cast v3, Ljava/lang/Integer;
+    invoke-static {v2, v3}, Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;->access$500(Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;Ljava/lang/Object;)I
 
-    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+    move-result v2
 
-    move-result v3
-
-    add-int/2addr v3, v2
-
-    mul-int/lit8 v3, v3, 0xa
+    iget-object v3, p0, Lcom/android/settings/connecteddevice/BluetoothDashboardFragment$3;->this$0:Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;
 
     const/4 v4, 0x6
 
-    aget-object v5, p2, v4
-
-    instance-of v5, v5, Ljava/lang/String;
-
-    if-eqz v5, :cond_0
-
-    goto :goto_0
-
-    :cond_0
     aget-object p2, p2, v4
 
-    check-cast p2, Ljava/lang/Integer;
-
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
+    invoke-static {v3, p2}, Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;->access$500(Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;Ljava/lang/Object;)I
 
     move-result p2
 
-    add-int/2addr p2, v2
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    mul-int/lit8 v2, p2, 0xa
-
-    :goto_0
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v4, "ACTION_VENDOR_SPECIFIC_HEADSET_EVENT address = "
 
-    invoke-virtual {p2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v4, ", leftLevel: "
 
-    invoke-virtual {p2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v4, ", rightLevel: "
 
-    invoke-virtual {p2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v4, ", boxLevel: "
 
-    invoke-virtual {p2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p2
+    move-result-object v3
 
-    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object p2, p0, Lcom/android/settings/connecteddevice/BluetoothDashboardFragment$3;->this$0:Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;
+    iget-object v3, p0, Lcom/android/settings/connecteddevice/BluetoothDashboardFragment$3;->this$0:Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;
 
-    invoke-static {p2, v0, v3, v2}, Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;->access$500(Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;III)Ljava/lang/String;
+    invoke-static {v3, v0, v2, p2}, Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;->access$600(Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;III)Ljava/lang/String;
 
     move-result-object p2
 
@@ -217,29 +193,29 @@
 
     check-cast v0, Lcom/android/settings/bluetooth/BluetoothDevicePreference;
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_0
 
     iget-object v0, p0, Lcom/android/settings/connecteddevice/BluetoothDashboardFragment$3;->this$0:Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;
 
     const-string v2, "available_device_list"
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;->access$600(Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;Ljava/lang/String;Ljava/lang/String;)Lcom/android/settings/bluetooth/BluetoothDevicePreference;
+    invoke-static {v0, v1, v2}, Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;->access$700(Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;Ljava/lang/String;Ljava/lang/String;)Lcom/android/settings/bluetooth/BluetoothDevicePreference;
 
     move-result-object v0
 
-    :cond_1
-    if-nez v0, :cond_2
+    :cond_0
+    if-nez v0, :cond_1
 
     iget-object p0, p0, Lcom/android/settings/connecteddevice/BluetoothDashboardFragment$3;->this$0:Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;
 
     const-string v0, "connected_device_list"
 
-    invoke-static {p0, v1, v0}, Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;->access$600(Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;Ljava/lang/String;Ljava/lang/String;)Lcom/android/settings/bluetooth/BluetoothDevicePreference;
+    invoke-static {p0, v1, v0}, Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;->access$700(Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;Ljava/lang/String;Ljava/lang/String;)Lcom/android/settings/bluetooth/BluetoothDevicePreference;
 
     move-result-object v0
 
-    :cond_2
-    if-eqz v0, :cond_3
+    :cond_1
+    if-eqz v0, :cond_2
 
     invoke-virtual {v0, p2}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
@@ -247,7 +223,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_1
+    goto :goto_0
 
     :catch_0
     move-exception p0
@@ -268,7 +244,7 @@
 
     invoke-static {p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_3
-    :goto_1
+    :cond_2
+    :goto_0
     return-void
 .end method

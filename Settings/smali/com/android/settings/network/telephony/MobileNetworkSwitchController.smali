@@ -272,44 +272,38 @@
     iput-object v1, p0, Lcom/android/settings/network/telephony/MobileNetworkSwitchController;->mSubInfo:Landroid/telephony/SubscriptionInfo;
 
     :cond_2
-    iget v0, p0, Lcom/android/settings/network/telephony/MobileNetworkSwitchController;->mCallState:I
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "update: disable switchbar, callstate="
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v2, p0, Lcom/android/settings/network/telephony/MobileNetworkSwitchController;->mCallState:I
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {}, Landroid/sysprop/TelephonyProperties;->in_ecm_mode()Ljava/util/Optional;
 
     move-result-object v0
 
-    const-string v2, "MobileNetworkSwitchCtrl"
+    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v0, v1}, Ljava/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object p0, p0, Lcom/android/settings/network/telephony/MobileNetworkSwitchController;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    move-result-object v0
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    check-cast v0, Ljava/lang/Boolean;
 
-    return-void
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    iget v1, p0, Lcom/android/settings/network/telephony/MobileNetworkSwitchController;->mCallState:I
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_6
+
+    if-eqz v0, :cond_3
+
+    goto :goto_1
 
     :cond_3
     iget-object v0, p0, Lcom/android/settings/network/telephony/MobileNetworkSwitchController;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
 
-    const/4 v2, 0x1
+    const/4 v1, 0x1
 
-    invoke-virtual {v0, v2}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
 
     iget-object v0, p0, Lcom/android/settings/network/telephony/MobileNetworkSwitchController;->mSubInfo:Landroid/telephony/SubscriptionInfo;
 
@@ -334,14 +328,48 @@
 
     iget-object p0, p0, Lcom/android/settings/network/telephony/MobileNetworkSwitchController;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
 
-    if-ne v0, v2, :cond_5
+    if-ne v0, v1, :cond_5
 
-    move v1, v2
+    move v2, v1
 
     :cond_5
-    invoke-virtual {p0, v1}, Lcom/android/settings/widget/SwitchBar;->setCheckedInternal(Z)V
+    invoke-virtual {p0, v2}, Lcom/android/settings/widget/SwitchBar;->setCheckedInternal(Z)V
 
     :goto_0
+    return-void
+
+    :cond_6
+    :goto_1
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v3, "update: disable switchbar, isEcbmEnabled="
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, ", callstate="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v0, p0, Lcom/android/settings/network/telephony/MobileNetworkSwitchController;->mCallState:I
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "MobileNetworkSwitchCtrl"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object p0, p0, Lcom/android/settings/network/telephony/MobileNetworkSwitchController;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+
+    invoke-virtual {p0, v2}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+
     return-void
 .end method
 

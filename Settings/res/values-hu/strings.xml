@@ -40,9 +40,14 @@
     <string name="abc_slice_updated">Frissítve: %1$s</string>
     <string name="abc_slices_permission_request">A(z) %1$s alkalmazás részleteket szeretne megjeleníteni a(z) %2$s alkalmazásból</string>
     <string name="abc_toolbar_collapse_description">Összecsukás</string>
+    <string name="about_action_bar_title">Névjegy</string>
+    <string name="about_app_version_text">Version %s</string>
     <string name="about_phone_device_name_warning">Eszköze neve látható a telefonján lévő alkalmazások számára. Mások is láthatják, ha csatlakoztatja telefonját más Bluetooth-eszközökhöz, vagy ha Wi-Fi-hotspotot állít be.</string>
+    <string name="about_privacy_policy">Adatvédelmi politika</string>
+    <string name="about_release_note_title">Frissítési napló:</string>
     <string name="about_settings">A telefonról</string>
     <string name="about_settings_summary">Jogi információk, állapot, szoftververzió megtekintése</string>
+    <string name="about_terms_service">Szolgáltatási feltételek</string>
     <string name="accelerometer_summary_off">Tájolás automatikus váltása a telefon elfordításakor</string>
     <string name="accelerometer_summary_on">Tájolás automatikus váltása a telefon elfordításakor</string>
     <string name="accelerometer_title">Automatikus képernyőforgatás</string>
@@ -526,8 +531,8 @@ Bekapcsolja a Repülőgép üzemmódot?"</string>
     <string name="app_ops_never_used_new">Soha nem használt</string>
     <string name="app_ops_running">Fut</string>
     <string name="app_ops_running_new">Jelenleg használt</string>
-    <string name="app_ops_settings_new">Alkalmazás engedélyek</string>
-    <string name="app_ops_title_new">Alkalmazás engedélyek</string>
+    <string name="app_ops_settings_new">Alkalmazásengedélyek</string>
+    <string name="app_ops_title_new">Alkalmazásengedélyek</string>
     <string name="app_permission_summary_allowed">Engedélyezett</string>
     <string name="app_permission_summary_not_allowed">Nem engedélyezett</string>
     <string name="app_permissions">Engedélykezelő</string>
@@ -690,7 +695,7 @@ A korlátozáshoz kapcsolja be az akkumulátoroptimalizálást."</string>
     <string name="battery_auto_restriction_summary">Az akkumulátort merítő alkalmazások észlelése</string>
     <string name="battery_auto_restriction_title">Az Akkumulátorkezelő használata</string>
     <string name="battery_bar">Akkumulátorsáv</string>
-    <string name="battery_circle">Akkumulátor kör</string>
+    <string name="battery_circle">Kör akkumulátor</string>
     <string name="battery_desc_apps">Az alkalmazás által felhasznált energia</string>
     <string name="battery_desc_bluetooth">Bluetooth által felhasznált energia</string>
     <string name="battery_desc_camera">A kamera által felhasznált energia</string>
@@ -1580,10 +1585,10 @@ Mivel az adatforgalmat a telefon méri, és a szolgáltató mérései ettől elt
     <string name="data_usage_metered_yes">Mért</string>
     <string name="data_usage_ota">Rendszerfrissítések</string>
     <string name="data_usage_other_apps">Adathasználat – egyéb alkalmazások</string>
-    <string name="data_usage_package_set">Számlázási ciklus</string>
+    <string name="data_usage_package_set">Billing Cycle</string>
     <string name="data_usage_pick_cycle_day">Az adatforgalmi ciklus visszaállítása a hónap e napján:</string>
     <string name="data_usage_rank_sim">Mobilhálózati adatkapcsolat használata</string>
-    <string name="data_usage_rank_wifi">Wi‑Fi adathasználat</string>
+    <string name="data_usage_rank_wifi">Wi-Fi adathasználat</string>
     <string name="data_usage_rank_wlan">Mobilhálózati adatkapcsolat használata</string>
     <string name="data_usage_received_sent">%1$s érkezett, %2$s elküldve</string>
     <string name="data_usage_restrict_background">Ha korlátozza a háttérben zajló mobiladat-forgalmat, néhány alkalmazás és szolgáltatás nem fog működni, ha nem csatlakozik Wi-Fi-hálózathoz.</string>
@@ -2169,7 +2174,7 @@ Nem voltak sehol lovak vagy más állatok; az emberek mindent kis zöld kocsikon
 Ha bekapcsolja az automatikus biztonsági mentést, akkor a rendszer szabályos időközönként elvégzi eszköz- és alkalmazásadatainak távoli mentését. Alkalmazásadat bármilyen adat lehet, amelyet egy alkalmazás mentett (a fejlesztői beállításoktól függően), beleértve a potenciálisan bizalmas adatokat is (például névjegyek, üzenetek és fotók)."</string>
     <string name="fullbackup_erase_dialog_message">Kikapcsolja az eszközadatok (például Wi-Fi-jelszavak és híváslista) és alkalmazásadatok (például az alkalmazások által tárolt beállítások és fájlok) automatikus biztonsági mentését, és törli azok összes példányát a távoli szerverekről?</string>
     <string name="gadget_picker_title">Modul kiválasztása</string>
-    <string name="gallery_application_title">Képtár alkalmazás</string>
+    <string name="gallery_application_title">Galéria alkalmazás</string>
     <string name="game_controller_settings_category">Játékvezérlő</string>
     <string name="game_storage_settings">Játékok</string>
     <string name="generic_error_dlg_text">Az alkalmazást nem lehetett eltávolítani.</string>
@@ -2193,7 +2198,7 @@ Ha bekapcsolja az automatikus biztonsági mentést, akkor a rendszer szabályos 
     <string name="gesture_setting_off">Kikapcsolva</string>
     <string name="gesture_setting_on">Bekapcsolva</string>
     <string name="gesture_settings_activity_title">Kézmozdulatok beállításai</string>
-    <string name="gestures_settings">Kézmozdulatok</string>
+    <string name="gestures_settings">Mozdulatok</string>
     <string name="ghzonly_2.4">Csak 2,4 GHz</string>
     <string name="ghzonly_5">Csak 5 GHz</string>
     <string name="go_back_button_label">Vissza</string>
@@ -2277,7 +2282,7 @@ Ha visszakapcsolja a mobiladatot, elképzelhető, hogy a szolgáltatója kiszám
     <string name="hotspot_tip_title">Mobil hotspot</string>
     <string name="hwui_force_dark_summary">A kényszerített sötétítés funkció felülírása mindig bekapcsolt állapotra</string>
     <string name="hwui_force_dark_title">A kényszerített sötétítés felülírása</string>
-    <string name="icon_attributions">Ikon csomagok</string>
+    <string name="icon_attributions">Ikoncsomagok</string>
     <string name="ignore_optimizations_off">Optimalizálás</string>
     <string name="ignore_optimizations_off_desc">Ajánlott a hosszabb akkumulátor-üzemidő érdekében.</string>
     <string name="ignore_optimizations_on">Ne legyen optimalizálva</string>
@@ -2438,6 +2443,7 @@ Ha visszakapcsolja a mobiladatot, elképzelhető, hogy a szolgáltatója kiszám
     <string name="keywords_lock_screen_notif">értesítés a lezárási képernyőn, értesítések</string>
     <string name="keywords_lockscreen">feloldás csúsztatással, jelszó, minta, pin-kód</string>
     <string name="keywords_lockscreen_bypass">Lezárási képernyő, Kihagyás, Megkerülés</string>
+    <string name="keywords_media_controls">média</string>
     <string name="keywords_model_and_hardware">sorozatszám, hardververzió</string>
     <string name="keywords_more_default_sms_app">szöveges üzenetek, üzenetírás, üzenetek, üzenetküldés, alapértelmezett</string>
     <string name="keywords_more_mobile_networks">mobilhálózat, mobil, mobilszolgáltató, vezeték nélküli, adat, 4g, 3g, 2g, lte</string>
@@ -2566,6 +2572,7 @@ Ha visszakapcsolja a mobiladatot, elképzelhető, hogy a szolgáltatója kiszám
     <string name="load_networks_progress">Keresés…</string>
     <string name="loading_injected_setting_summary">Betöltés…</string>
     <string name="loading_notification_apps">Alkalmazások betöltése…</string>
+    <string name="loading_text">Töltés...</string>
     <string name="local_backup_password_summary_change">Koppintson ide az asztali teljes mentések jelszavának módosításához vagy eltávolításához</string>
     <string name="local_backup_password_summary_none">Az asztali teljes biztonsági mentések jelenleg nem védettek.</string>
     <string name="local_backup_password_title">Asztali mentés jelszava</string>
@@ -2841,6 +2848,12 @@ Más felhasználók is vannak ezen az eszközön.
     <string name="master_clear_title">Összes adat törlése (gyári beállítások visszaállítása)</string>
     <string name="maximum_memory_use">Maximális memóriahasználat</string>
     <string name="media_category">Média</string>
+    <string name="media_controls_hide_player">Lejátszó elrejtése</string>
+    <string name="media_controls_no_players">Nincs rendelkezésre álló lejátszó</string>
+    <string name="media_controls_resume_description">A lejátszó lehetővé teszi a munkamenet folytatását a kibontott Gyorsbeállítások panelen.</string>
+    <string name="media_controls_show_player">Lejátszó megjelenítése</string>
+    <string name="media_controls_summary">Lejátszó elrejtése a munkamenet befejezésekor</string>
+    <string name="media_controls_title">Média</string>
     <string name="media_out_summary_ongoing_call_state">Nem áll rendelkezésre hívások közben</string>
     <string name="media_output_default_summary">Ez az eszköz</string>
     <string name="media_output_disconnected_status">%1$s (leválasztva)</string>
@@ -3173,7 +3186,7 @@ Ezzel az alkalmazás egyúttal képes lesz a „Ne zavarjanak” funkció be- é
     <string name="notification_conversation_add_to_home">Hozzáadás a kezdőképernyőhöz</string>
     <string name="notification_conversation_important">Prioritás</string>
     <string name="notification_conversation_summary_low">Nincs hang és rezgés, továbbá lejjebb jelenik meg a beszélgetések szakaszában</string>
-    <string name="notification_for_work_life">A Work és Life üzemmód értesítései</string>
+    <string name="notification_for_work_life">A Munka és Élet üzemmódok értesítései</string>
     <string name="notification_for_work_life_disabled">Koppintson a funkció engedélyezéséhez.</string>
     <string name="notification_group_title">Értesítési kategória csoportja</string>
     <string name="notification_history">Értesítéselőzmények</string>
@@ -3239,6 +3252,7 @@ Ezzel az alkalmazás egyúttal képes lesz a „Ne zavarjanak” funkció be- é
     <string name="notification_priority_title">Prioritás</string>
     <string name="notification_pulse_title">Villogó fény</string>
     <string name="notification_ringtone_title">Alapértelmezett értesítőhang</string>
+    <string name="notification_screen_summary">Értesítéselőzmények, buborékok, nemrég küldött</string>
     <string name="notification_settings_work_profile">Az értesítésekhez való hozzáférés a munkaprofil alkalmazásai számára nem áll rendelkezésre.</string>
     <string name="notification_show_lights_title">Villogó fény</string>
     <string name="notification_silence_title">Néma</string>
@@ -3292,7 +3306,7 @@ Ezzel az alkalmazás egyúttal képes lesz a „Ne zavarjanak” funkció be- é
     <string name="oneplus_adaptive_model">Adaptív mód</string>
     <string name="oneplus_add">Hozzáadás</string>
     <string name="oneplus_add_bluetooth_car_kit">Jármű Bluetooth hozzáadása</string>
-    <string name="oneplus_add_bluetooth_car_kit_summary">A Jármű Bluetooth automatikusan csatlakozik a korábbi készülékekhez, hozzáadhat új készülékeket is kézileg</string>
+    <string name="oneplus_add_bluetooth_car_kit_summary">A Jármű Bluetooth-rendszere automatikusan csatlakozik a korábbi készülékekhez, hozzáadhat új készülékeket is kézileg</string>
     <string name="oneplus_add_fingerprint_list">Ujjlenyomat hozzáadása</string>
     <string name="oneplus_adjust_effect">Képernyőeffektek módosítása</string>
     <string name="oneplus_advance_settings">További beállítások</string>
@@ -3323,7 +3337,7 @@ Ezzel az alkalmazás egyúttal képes lesz a „Ne zavarjanak” funkció be- é
     <string name="oneplus_app_network_settings">Adathasználat ellenőrzése</string>
     <string name="oneplus_app_notification_allow_led">LED bekapcsolva</string>
     <string name="oneplus_app_notification_not_allow_led">LED kikapcsolva</string>
-    <string name="oneplus_app_ops_title">Alkalmazás engedélyek</string>
+    <string name="oneplus_app_ops_title">Alkalmazásengedélyek</string>
     <string name="oneplus_app_uninstall_remark">A gyorsfizetés használatához telepítse a fenti fizetési alkalmazásokat</string>
     <string name="oneplus_app_wechat">WeChat</string>
     <string name="oneplus_applications_settings_summary">Alkalmazásértesítések, Párhuzamos alkalmazások, jogosultságok</string>
@@ -3335,6 +3349,7 @@ Ezzel az alkalmazás egyúttal képes lesz a „Ne zavarjanak” funkció be- é
     <string name="oneplus_apps_notifications">Alkalmazások és értesítések</string>
     <string name="oneplus_apps_title">Alkalmazások</string>
     <string name="oneplus_aptx_hd_support">aptX / aptX HD támogatása</string>
+    <string name="oneplus_at_a_glance">Áttekintés</string>
     <string name="oneplus_authentication_information">Hitelesítési adatok</string>
     <string name="oneplus_auto_activate">Automatikus bekapcsolás</string>
     <string name="oneplus_auto_answer_via_bluetooth_summary">A bejövő hívás automatikusan fogadva lesz, miután csatlakozik egy Bluetooth-eszközhöz</string>
@@ -3347,7 +3362,7 @@ Ezzel az alkalmazás egyúttal képes lesz a „Ne zavarjanak” funkció be- é
     <string name="oneplus_auto_open_specified_app">Meghatározott alkalmazás automatikus megnyitása</string>
     <string name="oneplus_auto_play">Automatikus lejátszás</string>
     <string name="oneplus_auto_play_summary">Fülhallgató csatlakoztatásakor automatikusan folytassa a zene lejátszását</string>
-    <string name="oneplus_auto_switch_mobile_data">Intelligens hálózati kapcsolat</string>
+    <string name="oneplus_auto_switch_mobile_data">Adat használat</string>
     <string name="oneplus_auto_switch_mobile_data_summary">A stabilitás növelése érdekében használja a Wi-Fi-t és a mobiladat-forgalmat is, ha gyenge a kapcsolat</string>
     <string name="oneplus_auto_turn_on_apps">Automatikusan kapcsolja be a következő alkalmazásokhoz</string>
     <string name="oneplus_auto_turn_on_car_charger_info_o2">A fenti elemek beállításával aktiválhatja a Ne Zavarj módot, és elindíthatja a megadott alkalmazást, ha az autóstöltő csatlakoztatva van</string>
@@ -3355,8 +3370,8 @@ Ezzel az alkalmazás egyúttal képes lesz a „Ne zavarjanak” funkció be- é
     <string name="oneplus_available_keyboard_category">Elérhető billentyűzet</string>
     <string name="oneplus_available_keyboard_description">Az itt engedélyezett, telepített billentyűzetek hozzá lesznek adva az \"Elérhető billentyűzetek\" listájához</string>
     <string name="oneplus_back_home">Kezdőképernyő, vissza</string>
-    <string name="oneplus_back_home_o2">Vissza, kezdőképernyő</string>
-    <string name="oneplus_back_home_summary">Húzza felfelé a Kezdőképernyő gombon</string>
+    <string name="oneplus_back_home_o2">Back, Home</string>
+    <string name="oneplus_back_home_summary">Swipe up on Home button</string>
     <string name="oneplus_back_topic_theme_summary">Váltson rendszertémát, amikor automatikusan nyit meg háttér-témát</string>
     <string name="oneplus_back_topic_theme_title">Hátsó fedőlap téma</string>
     <string name="oneplus_battery_menu_stats_total">Részletes használat megtekintése</string>
@@ -3413,8 +3428,9 @@ akkumulátor takarékállapota automatikusan kikapcsol a készülék töltéseko
     <string name="oneplus_condition_bg_data_summary">A háttéradatok csak Wi-Fi-n keresztül lesznek elérhetők. Ez hatással lehet bizonyos alkalmazásokra vagy szolgáltatásokra, ha a Wi-Fi nem érhető el</string>
     <string name="oneplus_condition_bg_data_title">Az adatmentés bekapcsolva</string>
     <string name="oneplus_condition_hotspot_turn_off">HOTSPOT KIKAPCSOLÁSA</string>
+    <string name="oneplus_condition_night_display_title">A Szemkímélés bekapcsolva</string>
     <string name="oneplus_condition_night_mode_title">Éjszakai üzemmód bekapcsolva</string>
-    <string name="oneplus_condition_night_mode_turn_off">ÉJJELI MÓD KIKAPCSOLÁSA</string>
+    <string name="oneplus_condition_night_mode_turn_off">SZEMKÍMÉLÉS ÜZEMMÓD KIKAPCSOLÁSA</string>
     <string name="oneplus_condition_ota_summary">Új verziófrissítés érhető el</string>
     <string name="oneplus_connected_device_count">%1$s eszköz kapcsolódik</string>
     <string name="oneplus_connected_device_management_title">Csatlakoztatott eszközkezelő</string>
@@ -3435,7 +3451,7 @@ akkumulátor takarékállapota automatikusan kikapcsol a készülék töltéseko
     <string name="oneplus_deep_optimization">Mély optimalizálás</string>
     <string name="oneplus_deep_optimization_summary">Ha kikapcsolja a mély optimalizálást, az energiafogyasztás nagyban megnő, ez pedig hatással lehet a normál telefonhasználatra.</string>
     <string name="oneplus_deep_optimization_title">Kikapcsolja a mély optimalizálást?</string>
-    <string name="oneplus_default_launcher">Alapértelmezett indító</string>
+    <string name="oneplus_default_launcher">Alapértelmezett kezdőalkalmazás</string>
     <string name="oneplus_default_method">Alapértelmezett billentyűzet</string>
     <string name="oneplus_delete_fingerprint_list">Ujjlenyomat törlése</string>
     <string name="oneplus_deleted_fingerprint_list">Ujjlenyomat törölve</string>
@@ -3450,10 +3466,10 @@ akkumulátor takarékállapota automatikusan kikapcsol a készülék töltéseko
     <string name="oneplus_device_warranty_expried_date">Jótállás lejárati dátuma</string>
     <string name="oneplus_dirac_audio_tuner">Dirac hangtuner</string>
     <string name="oneplus_direct_boot_inputmethod_unaware_dialog_message">Ha újraindítja a telefonját és a képernyőzár engedélyezve van, akkor a billentyűzetet nem tudja használni a telefon zárolásának a feloldásáig</string>
-    <string name="oneplus_disable_aosp_face_lock_message">Ha bekapcsolja a OnePlus Zár feloldása Arcfelismeréssel funkciót, azzal kikapcsolja a Smart Lock megbízható arcok szolgáltatását. Kívánja folytatni?</string>
+    <string name="oneplus_disable_aosp_face_lock_message">Ha engedélyezi a OnePlus-nak a zár feloldását arcfelismeréssel, kikapcsolja a Smart Lock megbízható arcfelismerését. Kívánja folytatni?</string>
     <string name="oneplus_disconnected">Kapcsolat bontása</string>
     <string name="oneplus_display_dashboard_no_theme_summary">Állapotsáv, környezeti kijelző, háttérképek</string>
-    <string name="oneplus_display_dashboard_no_theme_summary_801">Status bar, ambient display, Vision comfort, reading mode</string>
+    <string name="oneplus_display_dashboard_no_theme_summary_801">Állapotsáv, környezethez igazodó kijelző, éjszakai mód, olvasó mód</string>
     <string name="oneplus_display_dashboard_summary">Állapotsáv, környezeti kijelző, háttérképek, téma</string>
     <string name="oneplus_display_dashboard_summary_801">Állapotsáv, környezeti kijelző, háttérképek, téma</string>
     <string name="oneplus_display_screen_timeout">Alvás</string>
@@ -3476,8 +3492,8 @@ akkumulátor takarékállapota automatikusan kikapcsol a készülék töltéseko
     <string name="oneplus_double_tap_power_none">Nincs</string>
     <string name="oneplus_doze_summary_801">Az óra és egyéb információk megjelentése a készenléti képernyőn</string>
     <string name="oneplus_doze_summary_new">Az idő, a dátum és az értesítések megjelenítése a képernyőn</string>
-    <string name="oneplus_doze_title">Ambient display</string>
-    <string name="oneplus_doze_title_801">Ambient kijelző</string>
+    <string name="oneplus_doze_title">Környezethez igazodó kijelző</string>
+    <string name="oneplus_doze_title_801">Környezethez igazodó kijelző</string>
     <string name="oneplus_draw_gesture_start_none">Nincs</string>
     <string name="oneplus_draw_m_start_app">Rajzoljon M betűt</string>
     <string name="oneplus_draw_o_start_app">Rajzoljon O betűt</string>
@@ -3503,10 +3519,10 @@ A kapcsolódó funkciók bekapcsolása adathasználatot eredményez és az adatf
     <string name="oneplus_earphone_mode">Fülhallgató mód</string>
     <string name="oneplus_emergency_rescue_settings">Segélyhívó</string>
     <string name="oneplus_emergency_rescue_settings_summary">Automatikus gyors segélyhívás a főkapcsoló megnyomásával</string>
-    <string name="oneplus_emergency_tap_power_gesture_tips">Elérhető a Segélyhívó BEKAPCSOLÓ GOMB beállításainak módosítása után</string>
-    <string name="oneplus_enroll_fingerprint_tips_summary">"1. Kérjük, adja meg ismét az ujjlenyomatát a védőfólia kicserélése után az ujjlenyomata elérhetőségének biztosításához.
+    <string name="oneplus_emergency_tap_power_gesture_tips">Elérhető a Segélyhívó bekapcsoló gombja beállításainak módosítása után</string>
+    <string name="oneplus_enroll_fingerprint_tips_summary">"1. Adja meg újra az ujjlenyomatát a védőfólia sikeres cseréje után, hogy elérhető legyen az ujjlenyomat.
 
-2. Egy beállítási folyamatban csak egy ujjlenyomat-információt adjon meg."</string>
+2. Egyszeri beállítási folyamat során csak egy ujjlenyomatának információit adja meg"</string>
     <string name="oneplus_enroll_fingerprint_tips_title">Ujjlenyomat-telepítési kérdés</string>
     <string name="oneplus_enter_your_fingerprint">· Készítsen felvételt ujjlenyomatáról</string>
     <string name="oneplus_erase_system_data">RENDSZERADATOK TÖRLÉSE</string>
@@ -3547,17 +3563,17 @@ Figyelem: Az Arcfelismerés kevésbé biztonságos, mint az ujjlenyomat vagy a j
     <string name="oneplus_finger_input_fail_tips">A bemenet nem sikerült, állítsa be a helyzetét, és próbálja újra</string>
     <string name="oneplus_finger_print_anim_save">MENTÉS</string>
     <string name="oneplus_fingerprint">Ujjlenyomat</string>
-    <string name="oneplus_fingerprint_acquired_imager_dirty">The fingerprint identification area is dirty. Please wipe it clean and try again.</string>
-    <string name="oneplus_fingerprint_acquired_partial">Partial fingerprint detected. Please completely cover the fingerprint identification area.</string>
-    <string name="oneplus_fingerprint_acquired_too_fast">Too fast to process your fingerprint. Please stay for a while when pressing.</string>
+    <string name="oneplus_fingerprint_acquired_imager_dirty">Az ujjlenyomat azonosító terület piszkos. Törölje le, majd próbálja meg újra.</string>
+    <string name="oneplus_fingerprint_acquired_partial">Ujjlenyomatrész észlelve. Kérjük, tegye az ujjlenyomata egészét az azonosító területre.</string>
+    <string name="oneplus_fingerprint_acquired_too_fast">Túl gyors volt, nem sikerült feldolgozni az ujjlenyomatát. Nyomás közben hagyja ott kis ideig.</string>
     <string name="oneplus_fingerprint_acquired_too_similar">Azonos ujjlenyomat-adat észlelve. Kérjük, mozdítsa meg kicsit az ujját, hogy megadja az ujjlenyomata különböző részeinek értékeit.</string>
     <string name="oneplus_fingerprint_animation_effect_title">Ujjlenyomat-animációs effektus</string>
     <string name="oneplus_fingerprint_delete_confirm_message">Szeretné törölni?</string>
     <string name="oneplus_fingerprint_detail">Részletek</string>
     <string name="oneplus_fingerprint_enrol_completed">Az ujjlenyomatot elmentette</string>
-    <string name="oneplus_fingerprint_enroll_summary">Helyezze az ujját az ujjlenyomat-érzékelő területére úgy, hogy azt a lehető legjobban lefedje, majd emelje fel, amikor rezgést érez.</string>
-    <string name="oneplus_fingerprint_findsendor_summary">When the fingerprint pattern appears at the bottom of the screen, simply press with your finger on the fingerprint identification area to use the fingerprint function.</string>
-    <string name="oneplus_fingerprint_findsendor_tilte">How to use fingerprint</string>
+    <string name="oneplus_fingerprint_enroll_summary">Tegye az ujját az ujjlenyomat azonosító területre, amilyen pontosan csak tudja, majd a rezgéskor emelje fel</string>
+    <string name="oneplus_fingerprint_findsendor_summary">Amikor az ujjlenyomat minta megjelenik a képernyő alján, egyszerűen csak nyomja meg az ujjlenyomat azonosítási felületet az ujjával, hogy használni tudja az ujjlenyomat funkciót.</string>
+    <string name="oneplus_fingerprint_findsendor_tilte">Ujjlenyomat használatának módja</string>
     <string name="oneplus_fingerprint_functional_declaration">Az ujjlenyomat funkcióval kapcsolatos nyilatkozat</string>
     <string name="oneplus_fingerprint_gesture_camera_summary">A kereső képernyőn nyomja meg hosszan az ujjlenyomat-érzékelőt fénykép készítéséhez</string>
     <string name="oneplus_fingerprint_gesture_camera_title">Nyomja meg hosszan fénykép készítéséhez</string>
@@ -3597,7 +3613,7 @@ Figyelem: Az Arcfelismerés kevésbé biztonságos, mint az ujjlenyomat vagy a j
     <string name="oneplus_front_camera_display_choose_title">Válassza ki, hogy elrejti-e az előlapi kamerát</string>
     <string name="oneplus_front_camera_display_title">Előlapi kamera kijelzőterület</string>
     <string name="oneplus_fullscreen_back_guide_summary">Lapozzon a képernyő bal alsó vagy jobb alsó sarkától befelé</string>
-    <string name="oneplus_fullscreen_back_guide_summary_deprecated">Legyintsen felfelé a képernyő alsó szélének bal vagy jobb végétől.</string>
+    <string name="oneplus_fullscreen_back_guide_summary_deprecated">Lapozzon felfelé a képernyő alsó szélének bal vagy jobb végétől</string>
     <string name="oneplus_fullscreen_back_guide_title">Vissza</string>
     <string name="oneplus_fullscreen_disable_this_feature">Ezt a funkciót nem lehet használni, ha engedélyezve vannak a navigációs gesztusok.</string>
     <string name="oneplus_fullscreen_gesture_guide_back">"Próbáljuk ki a kézmozdulatot, amely pótolja a visszalépés gombját.
@@ -3610,7 +3626,7 @@ Ha bármikor a kezdőképernyőre kíván lépni, legyintsen felfelé a képerny
     <string name="oneplus_fullscreen_gesture_guide_multitask">A legfrissebb alkalmazások eléréséhez legyintsen felfelé a képernyő aljáról, és tartsa ott az ujját.</string>
     <string name="oneplus_fullscreen_gesture_guide_will_enable">Engedélyezi a navigációs kézmozdulatokat</string>
     <string name="oneplus_fullscreen_home_guide_summary">Lapozzon felfelé a képernyő alsó szélétől</string>
-    <string name="oneplus_fullscreen_home_guide_summary_deprecated">Legyintsen felfelé a képernyő alsó szélének közepétől.</string>
+    <string name="oneplus_fullscreen_home_guide_summary_deprecated">Lapozzon felfelé a képernyő alsó szélének közepétől</string>
     <string name="oneplus_fullscreen_home_guide_title">Kezdőképernyő</string>
     <string name="oneplus_fullscreen_landscape_guide_summary">A navigációs gesztusok továbbra is elindíthatók a képernyő alsó széléről, kérjük, lapozzon a bal vagy a jobb szél felé, hogy visszalépjen</string>
     <string name="oneplus_fullscreen_landscape_guide_summary_deprecated">Az álló tájoláshoz hasonlóan a navigációs gesztusok továbbra is a készülék aljától indulnak</string>
@@ -3623,8 +3639,8 @@ Ha bármikor a kezdőképernyőre kíván lépni, legyintsen felfelé a képerny
     <string name="oneplus_fullscreen_previous_app_no_bar_guide_summary">Lapozzon felfelé a képernyő alsó széléről, majd húzza el jobbra vagy balra</string>
     <string name="oneplus_fullscreen_previous_app_no_bar_guide_title">Váltás a legutóbb használt alkalmazások között</string>
     <string name="oneplus_fullscreen_recent_guide_summary">Lapozzon felfelé a képernyő alsó szélétől, majd tartson szünetet</string>
-    <string name="oneplus_fullscreen_recent_guide_summary_deprecated">Legyintsen felfelé a képernyő alsó szélének közepétől, majd tartson szünetet.</string>
-    <string name="oneplus_fullscreen_recent_guide_title">Legutóbb használt alkalmazások</string>
+    <string name="oneplus_fullscreen_recent_guide_summary_deprecated">Lapozzon felfelé a képernyő alsó szélének közepétől, majd tartson szünetet</string>
+    <string name="oneplus_fullscreen_recent_guide_title">Legújabb alkalmazások</string>
     <string name="oneplus_functional_terms">ÁLTALÁNOS SZERZŐDÉSI FELTÉTELEK</string>
     <string name="oneplus_game_haptic_feedback_summary">Adjon hozzá haptikus visszajelzéseket, hogy élénkebb játékélményt kapjon. A Bluetooth fejhallgatók még nincsenek támogatva.</string>
     <string name="oneplus_game_mode_ad_summary">A játékkép sötét és világos részleteinek a kiemelése</string>
@@ -3633,7 +3649,7 @@ Ha bármikor a kezdőképernyőre kíván lépni, legyintsen felfelé a képerny
     <string name="oneplus_gaming_mode">Játék mód</string>
     <string name="oneplus_gaming_mode_add_apps">Alkalmazások hozzárendelése a Játék módhoz</string>
     <string name="oneplus_gaming_mode_close_automatic_brightness">Az automatikus fényerőszabályozás kikapcsolása</string>
-    <string name="oneplus_gaming_mode_close_automatic_brightness_summary">Bekapcsolt Játék módban zárja le a képernyő fényerejét</string>
+    <string name="oneplus_gaming_mode_close_automatic_brightness_summary">Bekapcsolt Játék módban zárolja a képernyő fényerejét</string>
     <string name="oneplus_gaming_mode_game_battery_saver">Akkumulátorkímélő a játékokhoz</string>
     <string name="oneplus_gaming_mode_game_battery_saver_close">Kikapcsolva</string>
     <string name="oneplus_gaming_mode_game_battery_saver_high">Magas</string>
@@ -3681,7 +3697,7 @@ Ha bármikor a kezdőképernyőre kíván lépni, legyintsen felfelé a képerny
     <string name="oneplus_gps_using">használja a GPS-t</string>
     <string name="oneplus_h2_contributors">A HydrogenOS közreműködői</string>
     <string name="oneplus_hand_up_proximity_summary">Ébressze fel a képernyőt, amikor felveszi a telefont</string>
-    <string name="oneplus_hand_up_proximity_title">Emelje fel a kijelzőt</string>
+    <string name="oneplus_hand_up_proximity_title">Felemelési kijelző</string>
     <string name="oneplus_hand_up_to_show">Vegye fel telefonját a megjelenítéshez</string>
     <string name="oneplus_haptic_feedback_no_app">Nincs telepítve támogatott játék</string>
     <string name="oneplus_haptic_feedback_no_app_tip">Telepítheti a PUBG Mobile és Asphalt 9 alkalmazásokat</string>
@@ -3699,9 +3715,9 @@ Ha bármikor a kezdőképernyőre kíván lépni, legyintsen felfelé a képerny
     <string name="oneplus_hide_navkeys_summary">Adjon hozzá egy gombot a navigációs sáv megjelenítéséhez vagy elrejtéséhez</string>
     <string name="oneplus_hide_notch_display_summary">Az alkalmazások nem használhatják a beugró területet</string>
     <string name="oneplus_hide_notch_display_title">Beugró terület elrejtése</string>
-    <string name="oneplus_how_to_use_fingerprint_summary">"Amikor az ujjlenyomat-mintázata megjelenik a képernyő alján, egyszerűen nyomja meg az ujjával az ujjlenyomat-érzékelő területét az ujjlenyomat-funkció használatához: telefon felébresztése és zárolása, vásárlások jóváhagyása vagy alkalmazásokba való bejelentkezés. 
+    <string name="oneplus_how_to_use_fingerprint_summary">"Amikor az ujjlenyomat minta megjelenik a képernyő alján, egyszerűen csak nyomja meg az ujjlenyomat azonosítási felületet az ujjával, hogy használni tudja az ujjlenyomat funkciót: a telefonja felébresztéséhez, a zárolás feloldásához, vásárlások engedélyezéséhez, vagy alkalmazásokba való bejelentkezéshez. 
 
-Megjegyzés: Előfordulhat, hogy az ujjlenyomata kevésbé biztonságos, mint egy erős minta vagy PIN-kód"</string>
+Megjegyzés: Az ujjlenyomata kevésbé biztonságos, mint egy erős minta vagy PIN"</string>
     <string name="oneplus_how_to_use_fingerprint_summary_no_note">Amikor az ujjlenyomat minta megjelenik a képernyő alján, egyszerűen csak nyomja meg az ujjlenyomat azonosítási felületet az ujjával, hogy használni tudja az ujjlenyomat funkciót: a telefonja felébresztéséhez, a zárolás feloldásához, vásárlások engedélyezéséhez, vagy alkalmazásokba való bejelentkezéshez.</string>
     <string name="oneplus_hydrogen_version">H₂OS verzió</string>
     <string name="oneplus_ime_security_warning">%1$s lehet, hogy képes begyűjteni minden Ön által begépelt szöveget, köztük személyes adatokat, például jelszavakat és hitelkártyaszámokat</string>
@@ -3713,7 +3729,7 @@ Megjegyzés: Előfordulhat, hogy az ujjlenyomata kevésbé biztonságos, mint eg
     <string name="oneplus_instrucitons">Utasítás</string>
     <string name="oneplus_intelligently_select_best_wifi">A legjobb Wi‑Fi intelligens kiválasztása</string>
     <string name="oneplus_intelligently_select_best_wifi_summary">Intelligens módon kiválasztja és csatlakozik a legjobb Wi‑Fi-hez úgy, hogy észleli és elemzi a Wi‑Fi hálózatok kapcsolatát</string>
-    <string name="oneplus_intensely">Erős</string>
+    <string name="oneplus_intensely">Strong</string>
     <string name="oneplus_is_turn_on_feature">Biztosan bekapcsolja ezt a funkciót?</string>
     <string name="oneplus_is_turn_on_feature_summary">"Ha be van kapcsolva, a következők fordulhatnak elő időnként: 
 1.A képernyő bizonyos részei rendellenesen jelennek meg
@@ -3742,7 +3758,7 @@ Megjegyzés: Előfordulhat, hogy az ujjlenyomata kevésbé biztonságos, mint eg
     <string name="oneplus_lock_after_timeout">Automatikus zár az alvás után</string>
     <string name="oneplus_lock_buttons">Zárolás gombok</string>
     <string name="oneplus_lock_buttons_summary">Bekapcsolt Játék módban zárja le a kapacitív gombokat</string>
-    <string name="oneplus_lock_screen_intro_skip_dialog_text">Ha kiválasztja az arcrögzítés adatainak kihagyását, azt tanácsoljuk, hogy eszköze és személyes adatai védelmére engedélyezzen egy más módszert, például ujjlenyomat vagy PIN-kód használatát. Egyes alkalmazásokhoz jelszót is beállíthat. A védelem engedélyezéséhez válassza a „Beállítások” > „Biztonság és képernyőzár” elemet.</string>
+    <string name="oneplus_lock_screen_intro_skip_dialog_text">Ha kiválasztja az arcrögzítés adatainak kihagyását, azt tanácsoljuk, hogy eszköze és személyes adatai védelmére engedélyezzen egy más módszert, például ujjlenyomat vagy Pin-kód használatát. Egyes alkalmazásokhoz jelszót is beállíthat. A védelem engedélyezéséhez válassza a „Beállítások” > „Biztonság és képernyőzár” elemet.</string>
     <string name="oneplus_lock_screen_notifications_summary_hide">Csak akkor jelenítse meg a privát tartalmat, ha fel van oldva</string>
     <string name="oneplus_lock_screen_notifs_show_alerting">Csak a fontos értesítések megjelenítése</string>
     <string name="oneplus_lock_screen_notifs_show_all">Fontos és egyéb értesítések megjelenítése</string>
@@ -3777,7 +3793,7 @@ Megjegyzés: Előfordulhat, hogy az ujjlenyomata kevésbé biztonságos, mint eg
     <string name="oneplus_mode_choose">Mód kiválasztása</string>
     <string name="oneplus_mode_settings">Figyelmeztetés csúszka beállításai</string>
     <string name="oneplus_moderate">Közepes</string>
-    <string name="oneplus_more">Több</string>
+    <string name="oneplus_more">Továbbiak</string>
     <string name="oneplus_motion_sensor_settings_title">Rendszer gesztusok</string>
     <string name="oneplus_multi_app">Párhuzamos alkalmazások</string>
     <string name="oneplus_multi_app_disable_apps">Támogatott alkalmazások</string>
@@ -3790,7 +3806,7 @@ Megjegyzés: Előfordulhat, hogy az ujjlenyomata kevésbé biztonságos, mint eg
     <string name="oneplus_multitasking_clean_way">Újabb alkalmazások kezelése</string>
     <string name="oneplus_navigation_bar_custom_settings">EGYÉNI BEÁLLÍTÁSOK</string>
     <string name="oneplus_navigation_bar_summary">A navigációs sáv beállítása</string>
-    <string name="oneplus_navigation_bar_title">Navigációs sáv és gesztusok</string>
+    <string name="oneplus_navigation_bar_title">Navigációs sáv &amp; Gesztusok</string>
     <string name="oneplus_network_auto_change_summary">Automatikus váltás Wi-Fi hálózat és mobil adatok között a kapcsolattól és a jelerősségtől függően</string>
     <string name="oneplus_network_auto_change_title">Intelligens Wi-Fi átkapcsoló</string>
     <string name="oneplus_network_dashboard_title">Wi-Fi és hálózat</string>
@@ -3803,7 +3819,7 @@ Megjegyzés: Előfordulhat, hogy az ujjlenyomata kevésbé biztonságos, mint eg
     <string name="oneplus_night_mode_enabled_op">Éjszakai mód</string>
     <string name="oneplus_night_mode_enabled_op_summary">Éjszakai mód kézi bekapcsolása</string>
     <string name="oneplus_night_mode_manual_open">Manuális</string>
-    <string name="oneplus_night_mode_open_tip">Kérjük, először kapcsolja be az Éjszakai módot</string>
+    <string name="oneplus_night_mode_open_tip">Kérjük, először kapcsolja be a szemkímélő módot</string>
     <string name="oneplus_night_mode_sensor_summary">Az éjszakai mód a környezeti fényviszonyoktól függően automatikusan a körülményekhez igazítja a képernyő színhőmérsékletét, ezzel csökkenheti a szem fáradtságát és megerőltetését, és elősegítheti a jobb alvást.</string>
     <string name="oneplus_night_mode_strong">Legmelegebb</string>
     <string name="oneplus_night_mode_summary">Az éjszakai mód melegebb színekre kalibrálja a képernyőt, hogy csökkentse a szem fáradtságát és megerőltetését, ez elősegítheti a jobb alvást. Azt tanácsoljuk, tervszerű ütemezéssel aktiválja.</string>
@@ -3852,7 +3868,7 @@ Megjegyzés: Előfordulhat, hogy az ujjlenyomata kevésbé biztonságos, mint eg
     <string name="oneplus_notifications_and_vibration">Értesítéshang és rezgés</string>
     <string name="oneplus_notifications_free">Szabad</string>
     <string name="oneplus_notifications_meet">Találkozás</string>
-    <string name="oneplus_notifications_sound">Notification sound</string>
+    <string name="oneplus_notifications_sound">Értesítések hangja</string>
     <string name="oneplus_o2_contributors">Az OxygenOS közreműködői</string>
     <string name="oneplus_open_bed_time_mode_schedule_summary">Bekapcsolás a tervezett időintervallumban</string>
     <string name="oneplus_open_bed_time_mode_schedule_title">Ütemezés</string>
@@ -3898,7 +3914,7 @@ Megjegyzés: Előfordulhat, hogy az ujjlenyomata kevésbé biztonságos, mint eg
     <string name="oneplus_preference_settings_custom_time">Automatikus be- és kikapcsolás</string>
     <string name="oneplus_preference_settings_manual_open">Állapot</string>
     <string name="oneplus_preference_settings_turn_off_time">Vége</string>
-    <string name="oneplus_preference_settings_turn_on">Ne zavarj üzemmód bekapcsolása</string>
+    <string name="oneplus_preference_settings_turn_on">Kapcsolja be a Ne zavarjanak módot</string>
     <string name="oneplus_preference_settings_turn_on_time">Kezdete</string>
     <string name="oneplus_prior_to_use_you_need_to">Használat előtt ezeket kell megtenni:</string>
     <string name="oneplus_privacy_policy">Adatvédelmi irányelvek</string>
@@ -3908,16 +3924,16 @@ Megjegyzés: Előfordulhat, hogy az ujjlenyomata kevésbé biztonságos, mint eg
     <string name="oneplus_proximity_summary_disable">Nem érhető el, mert a környezeti megjelenítése ki van kapcsolva</string>
     <string name="oneplus_quick_clipboard">Gyors vágólap</string>
     <string name="oneplus_quick_clipboard_summary">Kibővíti a másolás lehetőségeit, és másolt elem alapján felkínálja a következő műveletet</string>
-    <string name="oneplus_quick_gestures">Mozdulatok</string>
+    <string name="oneplus_quick_gestures">Kézmozdulatok</string>
     <string name="oneplus_quick_gestures_title">Gyors gesztusok</string>
     <string name="oneplus_quick_launch_how_to_exit_summary">Húzza lefelé az ujját a gyorsindítási panel bezárásához</string>
     <string name="oneplus_quick_launch_how_to_exit_title">Kilépés a gyorsindításból</string>
     <string name="oneplus_quick_launch_how_to_use_summary">"1. Tartsa a kijelzőn az ujját a feloldás után a gyorsindítási panel megnyitásához
 2. Húzással válassza ki a parancsikont, majd emelje fel az ujját az indításhoz"</string>
     <string name="oneplus_quick_launch_how_to_use_title">Gyorsindítás használata</string>
-    <string name="oneplus_quick_launch_summary">Nyomja hosszan az ujjlenyomat-olvasót a gyorsfizetéshez, vagy az aktív alkalmazások megjelenítéséhez</string>
+    <string name="oneplus_quick_launch_summary">Nyomjon rá hosszan az ujjlenyomat azonosító területre, hogy elindítsa a gyorsfizetést vagy alkalmazásokat aktiváljon</string>
     <string name="oneplus_quick_launch_title">Gyorsindítás</string>
-    <string name="oneplus_quick_launch_toggle_summary">Nyomja hosszan az ujjlenyomat-olvasót a gyorsfizetéshez, vagy az aktív alkalmazások megjelenítéséhez, ha a telefon zárolva van</string>
+    <string name="oneplus_quick_launch_toggle_summary">Nyomjon rá hosszan az ujjlenyomat azonosító területre, hogy elindítsa a gyorsfizetést vagy alkalmazásokat aktiváljon, amikor a telefon zárolva van</string>
     <string name="oneplus_quick_launch_toggle_title">Gyorsindítás bekapcsolása</string>
     <string name="oneplus_quick_reply">Gyors válasz fekvő tájolásban</string>
     <string name="oneplus_quick_reply_content">Tekintse meg gyorsan és reagáljon az értesítésekre úgy, hogy közben nem állítja meg a videót vagy a játékot. Húzza le a csevegőbuborékokat, hogy az alkalmazás bezárásáig engedélyezze a Ne zavarj üzemmódot.</string>
@@ -3954,7 +3970,7 @@ Megjegyzés: Előfordulhat, hogy az ujjlenyomata kevésbé biztonságos, mint eg
     <string name="oneplus_reading_mode_activate_manual">Manuális aktiválás</string>
     <string name="oneplus_reading_mode_add_apps">Alkalmazások hozzárendelése az olvasási módhoz</string>
     <string name="oneplus_reading_mode_ask">Mindig kérdezze meg</string>
-    <string name="oneplus_reading_mode_auto_summary">Automatikusan bekapcsolja az olvasási módot, ha megnyitja ezeket az alkalmazásokat, majd a bezáráskor kikapcsolja</string>
+    <string name="oneplus_reading_mode_auto_summary">Automatikusan bekapcsolja az olvasási módot, ha megnyitja ezeket az alkalmazásokat, és bezárásukkor kikapcsolja</string>
     <string name="oneplus_reading_mode_available">Nincs hatás</string>
     <string name="oneplus_reading_mode_block_peek_notifications">Megjelenő értesítések blokkolása</string>
     <string name="oneplus_reading_mode_chromatic">Kromatikus hatás</string>
@@ -4000,12 +4016,12 @@ Megjegyzés: Előfordulhat, hogy az ujjlenyomata kevésbé biztonságos, mint eg
     <string name="oneplus_screen_color_mode_default">P3-kijelző (alapértelmezett)</string>
     <string name="oneplus_screen_color_mode_defined">Egyéni szín</string>
     <string name="oneplus_screen_color_mode_ntsc">Tág tartományú AMOLED</string>
-    <string name="oneplus_screen_color_mode_reading_mode_on_summary">Nem érhető el, mert az Olvasási mód aktív</string>
+    <string name="oneplus_screen_color_mode_reading_mode_on_summary">Nem érhető el, mert az olvasási üzemmód aktív</string>
     <string name="oneplus_screen_color_mode_soft">Puha</string>
     <string name="oneplus_screen_color_mode_title">Képernyő kalibrálása</string>
-    <string name="oneplus_screen_color_mode_title_summary">Nem érhető el, mert az éjszakai üzemmód aktív</string>
-    <string name="oneplus_screen_features_not_available_toast">Ha be van kapcsolva, bizonyos funkciók, mint például a képernyő kalibrálása, nem lesznek elérhetők</string>
-    <string name="oneplus_screen_refresh_rate">Frissítési gyakoriság</string>
+    <string name="oneplus_screen_color_mode_title_summary">Nem érhető el, mert a szemkímélő üzemmód aktív</string>
+    <string name="oneplus_screen_features_not_available_toast">Bekapcsolt állapotban olyan funkciók, mint a képernyő-kalibrálás, nem lesznek elérhetők</string>
+    <string name="oneplus_screen_refresh_rate">Frissítési ráta</string>
     <string name="oneplus_screen_refresh_rate_60hz_summary">Kevésbé akadásmentes, de hosszabb akkumulátor-üzemidő</string>
     <string name="oneplus_screen_refresh_rate_auto_summary">Kifejezetten akadásmentes megjelenítés magasabb frissítési sebességnél</string>
     <string name="oneplus_screen_refresh_rate_info">Minél magasabb a frissítési sebesség, annál simább a mozgás a képernyőn. 90 Hz-nél a frissítési sebesség dinamikusan változik az eseménytől függően.</string>
@@ -4016,11 +4032,11 @@ Megjegyzés: Előfordulhat, hogy az ujjlenyomata kevésbé biztonságos, mint eg
     <string name="oneplus_screen_resolution_adjust_intelligent_switch_summary">Automatikus kapcsolás a megfelelő felbontásra</string>
     <string name="oneplus_screen_resolution_adjust_other_summary">Maximális tisztaság, fokozott energiafogyasztás (3120×1440)</string>
     <string name="oneplus_screen_resolution_adjust_other_summary_19811">Maximális tisztaság, fokozott energiafogyasztás (3168×1440)</string>
-    <string name="oneplus_search_keyword_about_settings">device name, android version, build number, model, CPU, storage, RAM, ROM, camera, pixel, screen, Verification, Legal information, Warranty card, preinstalled list, Award</string>
+    <string name="oneplus_search_keyword_about_settings">Készüléknév, Android verzió, Buildszám, modell, CPU, tárhely, RAM, ROM, kamera, pixel, képernyő, Hitelesítés, Jogi információk, Garanciakártya, előretelepített lista, Díj</string>
     <string name="oneplus_search_keyword_accent_color">szín</string>
     <string name="oneplus_search_keyword_app_lock">zárolás,PIN,jelszavak</string>
     <string name="oneplus_search_keyword_connected_device_manager">csatlakoztatott eszközkezelő, eszköz</string>
-    <string name="oneplus_search_keyword_data_usage_control">adathasználat ellenőrzése</string>
+    <string name="oneplus_search_keyword_data_usage_control">Adathasználat ellenőrzése</string>
     <string name="oneplus_search_keyword_default_launcher_app">indító, alapértelmezett, alkalmazások, alapértelmezett főképernyő-alkalmazás, főképernyő-alkalmazás</string>
     <string name="oneplus_search_keyword_discoverable_device">felderíthető</string>
     <string name="oneplus_search_keyword_double_click_light_screen">képernyő,ébresztés</string>
@@ -4035,7 +4051,7 @@ Megjegyzés: Előfordulhat, hogy az ujjlenyomata kevésbé biztonságos, mint eg
     <string name="oneplus_search_keyword_gesture_to_control_calls">hívásfogadás,kapcsoló</string>
     <string name="oneplus_search_keyword_hide_navkeys">navigációs sáv elrejtése</string>
     <string name="oneplus_search_keyword_home_key">kezdőképernyő</string>
-    <string name="oneplus_search_keyword_icon_manager">ikonkezelő</string>
+    <string name="oneplus_search_keyword_icon_manager">Ikon-kezelő</string>
     <string name="oneplus_search_keyword_incoming_call_vibrate_mode">rezgés</string>
     <string name="oneplus_search_keyword_input_keyboard">bevitel,billentyűzet</string>
     <string name="oneplus_search_keyword_led_settings">szín, fény, LED</string>
@@ -4054,9 +4070,12 @@ Megjegyzés: Előfordulhat, hogy az ujjlenyomata kevésbé biztonságos, mint eg
     <string name="oneplus_search_keyword_sounds_and_notifications_interruptions">ne zavarjanak, megszakítás, megszakítás, szünet, üzemmód</string>
     <string name="oneplus_search_keyword_swap_navkeys">gombok felcserélése</string>
     <string name="oneplus_search_keyword_switch">átvitel,adatok áttelepítése</string>
-    <string name="oneplus_search_keyword_theme_settings">ZÁRKÉPERNYŐ TESTRESZABÁSA, Háttérképek, Órastílus, Ujjlenyomat-animáció, Horizon Light, RENDSZER TESTRESZABÁSA, Kiemelés színe, Forma, Betűtípus, Tónus, Ikoncsomag, Világító fény, Árnyalt sötét, Élénk színek</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl">ZÁRKÉPERNYŐ TESTRESZABÁSA, Háttérképek, Órastílus, Ujjlenyomat-animáció, Horizon fény, RENDSZER TESTRESZABÁSA, Kiemelés színe, Forma, Betűtípus, Tónus, Ikoncsomag, Világító fény, Árnyalt sötét, Élénk színek, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light">ZÁRKÉPERNYŐ TESTRESZABÁSA, Háttérképek, Órastílus, Ujjlenyomat-animáció, RENDSZER TESTRESZABÁSA, Kiemelés színe, Forma, Betűtípus, Tónus, Ikoncsomag, Világító fény, Árnyalt sötét, Élénk színek</string>
+    <string name="oneplus_search_keyword_theme_settings">Zárképernyő testreszabása, Háttérképek, Órastílus, Ujjlenyomat-animáció, Horizon Light, Rendszer testreszabása, Kiemelés színe, Forma, Betűtípus, Tónus, Ikoncsomag, Világító fény, Árnyalt sötét, Élénk színek</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">Zárképernyő testreszabása, Háttérképek, Órastílus, Ujjlenyomat-animáció, Horizon Light, Rendszer testreszabása, Kiemelés színe, Forma, Betűtípus, Tónus, Ikoncsomag, Világító fény, Árnyalt sötét, Élénk színek, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Zárképernyő testreszabása, Háttérképek, Órastílus, Ujjlenyomat-animáció, Horizon Light, Rendszer testreszabása, Kiemelés színe, Forma, Betűtípus, Árnyalat, Ikoncsomag, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_new">Zárképernyő testreszabása, Háttérképek, Órastílus, Ujjlenyomat-animáció, Horizon Light, Rendszer testreszabása, Kiemelés színe, Forma, Betűtípus, Árnyalat, Ikoncsomag</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light">Zárképernyő testreszabása, Háttérképek, Órastílus, Ujjlenyomat-animáció, Rendszer testreszabása, Kiemelés színe, Forma, Betűtípus, Tónus, Ikoncsomag, Világító fény, Árnyalt sötét, Élénk színek</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Zárképernyő testreszabása, Háttérképek, Órastílus, Ujjlenyomat-animáció, Rendszer testreszabása, Kiemelés színe, Forma, Betűtípus, Árnyalat, Ikoncsomag</string>
     <string name="oneplus_search_keyword_three_screenshots">képernyőfelvétel</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">értesítések,élmény,program,fejlesztés</string>
@@ -4070,11 +4089,11 @@ Megjegyzés: Előfordulhat, hogy az ujjlenyomata kevésbé biztonságos, mint eg
     <string name="oneplus_security_lock_settings_summary">Feloldja a beállításokat, a helyszolgáltatást és az alkalmazászárat</string>
     <string name="oneplus_security_lock_settings_title">Biztonság és adatvédelem</string>
     <string name="oneplus_security_settings_fingerprint_enroll_error_dialog_title">A beállítás sikertelen volt</string>
-    <string name="oneplus_security_settings_fingerprint_enroll_introduction_message">"Nyomja meg az ujjlenyomat-érzékelő területét a telefon feloldásához, vásárlások jóváhagyásához vagy alkalmazásokba való bejelentkezéshez. 
+    <string name="oneplus_security_settings_fingerprint_enroll_introduction_message">"Nyomjon rá az ujjlenyomat azonosító területre, hogy feloldja a telefonját, vásárlásokat végezzen el vagy alkalmazásokba jelentkezzen be. 
 
 Megjegyzés: 
-1. Előfordulhat, hogy az ujjlenyomata kevésbé biztonságos, mint egy erős minta vagy PIN-kód.
-2. Kérjük, adja meg ismét az ujjlenyomatát a védőfólia kicserélése után az ujjlenyomata elérhetőségének biztosításához."</string>
+1. Az ujjlenyomata kevésbé biztonságos, mint egy erős minta vagy PIN.
+2. Adja meg újra az ujjlenyomatát a védőfólia sikeres cseréje után, hogy elérhető legyen az ujjlenyomat."</string>
     <string name="oneplus_security_settings_fingerprint_exists_dialog_message">Ezt az ujjlenyomatot már regisztrálta, próbálkozzon egy másikkal.</string>
     <string name="oneplus_security_settings_fingerprint_toggle_category_title">Mutassa az ujjlenyomat-ikont a környezethez igazodó kijelzőn</string>
     <string name="oneplus_security_settings_fingerprint_toggle_category_title_for_always_on">UJJLENYOMAT-IKON-PREFERENCIÁK</string>
@@ -4096,8 +4115,8 @@ Megjegyzés:
     <string name="oneplus_set_time">Ütemezett éjszakai mód</string>
     <string name="oneplus_setting_ringtone">Csengőhang beállítása</string>
     <string name="oneplus_setting_sim_ringtone_switch">Csengőhang beállítása mindegyik SIM kártyához</string>
-    <string name="oneplus_settings_lab_feature_boost_summary">A napi használat alapján a Smart Boost teljes mértékben kihasználja a OnePlus telefonok nagyméretű RAM-ját, amely növeli az alkalmazások és játékok betöltésének teljesítményét.</string>
-    <string name="oneplus_settings_lab_feature_boost_title">Smart Boost</string>
+    <string name="oneplus_settings_lab_feature_boost_summary">Az Intelligens növelés a napi használat alapján kihasználja a OnePlus telefonok nagy RAM-ját, mellyel növelheti az alkalmazások és betöltések során fennálló teljesítményt.</string>
+    <string name="oneplus_settings_lab_feature_boost_title">Intelligens növelés</string>
     <string name="oneplus_settings_refresh_rate_settings_120">120 Hz BEÁLLÍTÁSOK</string>
     <string name="oneplus_settings_refresh_rate_settings_90">90 Hz BEÁLLÍTÁSOK</string>
     <string name="oneplus_settings_refresh_rate_settings_summary">Automatikusan váltson a megfelelő képernyőfrissítési arányra az akkumulátor merítése nélkül</string>
@@ -4120,16 +4139,17 @@ Megjegyzés:
     <string name="oneplus_silent_mode_on">Néma üzemmód be van kapcsolva</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">A hívások és értesítések elnémítása a riasztásokon kívül</string>
     <string name="oneplus_silent_mode_summary">A hívások és értesítések elnémítása a riasztásokon kívül</string>
+    <string name="oneplus_silent_notifications_status_bar">Csendes értesítés elrejtése az állapotsávban</string>
     <string name="oneplus_sim1_ringtone_switch">1. SIM-kártya</string>
     <string name="oneplus_sim2_ringtone_switch">2. SIM-kártya</string>
-    <string name="oneplus_simcard_title">SIM</string>
+    <string name="oneplus_simcard_title">Kártya</string>
     <string name="oneplus_sla_down_load_app_summary">A letöltésgyorsítás nem érhető el aktív hotspot vagy Wi-Fi Direct funkció esetén</string>
     <string name="oneplus_sleep_standby_summary">Optimalizálja az akkumulátor élettartamát (pl. a hálózati kapcsolat kikapcsolásával), amikor Ön alszik. Ekkor az alkalmazások nem fognak rendszeres értesítéseket fogadni.</string>
     <string name="oneplus_sleep_standby_title">Készenléti állapot optimalizáció</string>
     <string name="oneplus_smart_background_management_title">Agresszív alvó állapotba kapcsolás&amp; alkalmazás hibernálása</string>
     <string name="oneplus_smart_wifi_connection">Intelligens Wi‑Fi kapcsolat</string>
     <string name="oneplus_sms">SMS</string>
-    <string name="oneplus_sms_and_vibration">SMS-csengőhang és rezgés</string>
+    <string name="oneplus_sms_and_vibration">SMS csengőhang és rezgés</string>
     <string name="oneplus_snooze_options_title">Az értesítő árnyalat szundiértesítései</string>
     <string name="oneplus_sound_and_vibrate">Hang és rezgés</string>
     <string name="oneplus_sound_effects_and_modes">Hanghatások és üzemmódok</string>
@@ -4137,7 +4157,7 @@ Megjegyzés:
     <string name="oneplus_sound_tuner">Dolby Atmos</string>
     <string name="oneplus_status_summary">Telefonszám, jel, stb</string>
     <string name="oneplus_stop_run">Kényszerleállítás</string>
-    <string name="oneplus_storage">TÁRHELY</string>
+    <string name="oneplus_storage">STORAGE</string>
     <string name="oneplus_sunrise_sunset">Automatikusan engedélyezni naplementétől napkeltéig</string>
     <string name="oneplus_support_apps">TÁMOGATOTT ALKALMAZÁSOK</string>
     <string name="oneplus_support_summary">Tippek és gyakran feltett kérdések a készülékhasználattal kapcsolatban</string>
@@ -4146,7 +4166,7 @@ Megjegyzés:
     <string name="oneplus_suspension_notice">Figyelmeztetés</string>
     <string name="oneplus_suspension_notice_summary">Engedélyezi az alkalmazásoknak, hogy megjelenítsék a figyelmeztető értesítéseket</string>
     <string name="oneplus_switch">OnePlus Switch</string>
-    <string name="oneplus_switch_resolution_kill_process_confirm">Átkapcsol</string>
+    <string name="oneplus_switch_resolution_kill_process_confirm">Switch</string>
     <string name="oneplus_switch_resolution_kill_process_tips">A felbontás megváltoztatása miatt bizonyos háttéralkalmazások bezáródhatnak. Megerősíti az átkapcsolást?</string>
     <string name="oneplus_switch_screen_lock_type">A képernyőzár típusa átkapcsol, kis türelmet kérünk...</string>
     <string name="oneplus_system_data_summary">Beleértve a fiók adatokat, kapcsolatokat, alkalmazások adatait</string>
@@ -4160,9 +4180,9 @@ Megjegyzés:
     <string name="oneplus_system_stability_title">Rendszer-stabilitási program</string>
     <string name="oneplus_system_vibrate">Rendszerrezgés</string>
     <string name="oneplus_theme_accent_color">Kiemelés színe</string>
-    <string name="oneplus_theme_accent_color_customization">TESTRESZABÁS</string>
+    <string name="oneplus_theme_accent_color_customization">SZEMÉLYRE SZABÁS</string>
     <string name="oneplus_theme_accent_color_presetcolor">ELŐRE BEÁLLÍTOTT SZÍN</string>
-    <string name="oneplus_theme_accent_color_select">KIEMELÉS SZÍNÉNEK KIVÁLASZTÁSA</string>
+    <string name="oneplus_theme_accent_color_select">Válasszon egy színt a kiemeléshez</string>
     <string name="oneplus_theme_apply_summary">Miután alkalmazza a témát, a testreszabási lehetőségei felül lesznek írva</string>
     <string name="oneplus_theme_apply_title">Alkalmazza ezt a témát?</string>
     <string name="oneplus_theme_clock">Óra stílusa</string>
@@ -4202,13 +4222,13 @@ Megjegyzés:
     <string name="oneplus_theme_wallpaper">Háttérképek</string>
     <string name="oneplus_three_screenshots_enable_summary">Csúsztassa át három ujját a képernyőn képernyőfotó készítéséhez</string>
     <string name="oneplus_three_screenshots_enable_title">Háromujjas képernyőfotó</string>
-    <string name="oneplus_timepower_power_off_title">Kikapcsolási időpont beállítása</string>
+    <string name="oneplus_timepower_power_off_title">Bekapcsolási időpont beállítása</string>
     <string name="oneplus_timepower_power_on_title">Bekapcsolási időpont beállítása</string>
     <string name="oneplus_timer_shutdown_disable_summary">Tiltsa le indításkor a jelszót ezen funkció zárolásának feloldásához</string>
     <string name="oneplus_timer_shutdown_summary">A telefon automatikusan leáll ekkor: %d s. Erősítse meg az azonnali leállítást.</string>
     <string name="oneplus_to_select_assistant_app_dialog">Válassza ki az aktiválni kívánt segédalkalmazást</string>
-    <string name="oneplus_tools_quicklaunch_summary">Játék üzemmód, gyorsindítás, Párhuzamos alkalmazások</string>
-    <string name="oneplus_tools_quicklaunch_summary_no_gamingmode">Gyorsindítás, Párhuzamos alkalmazások</string>
+    <string name="oneplus_tools_quicklaunch_summary">Játék üzemmód, gyorsindítás, Párhuzamos alkalmazások, alkalmazás páncéldoboz</string>
+    <string name="oneplus_tools_quicklaunch_summary_no_gamingmode">Gyorsindítás, Párhuzamos alkalmazások, alkalmazás páncéldoboz</string>
     <string name="oneplus_tools_summary">Játék mód, alkalmazászár, párhuzamos alkalmazások</string>
     <string name="oneplus_tools_summary_U30">Játék mód, zseb mód, ütemezett be/kikapcsolás</string>
     <string name="oneplus_tools_summary_no_gamingmode">Alkalmazászár, párhuzamos alkalmazások</string>
@@ -4216,10 +4236,10 @@ Megjegyzés:
     <string name="oneplus_top_level_accounts_summary">OnePlus fiók, egyéb fiókok</string>
     <string name="oneplus_top_level_apps_and_notifs_summary">Alapértelmezett alkalmazások, értesítések és engedélyek</string>
     <string name="oneplus_top_level_buttons_and_gestures_summary">Riasztási csúszka, navigációs sáv és gesztusok</string>
-    <string name="oneplus_top_level_cloud_h2_summary">Szinkronizálás a felhővel, Telefon megkeresése</string>
+    <string name="oneplus_top_level_cloud_h2_summary">Adatok szinkronizálása a felhővel, Telefonom megkeresése</string>
     <string name="oneplus_top_level_cloud_o2_summary">Adatok szinkronizálása a felhővel</string>
     <string name="oneplus_top_level_connected_summary">NFC, kivetítés, érintés és fizetés</string>
-    <string name="oneplus_top_level_display_summary">Status bar, ambient display, Vision comfort, reading mode</string>
+    <string name="oneplus_top_level_display_summary">Állapotsáv, környezethez igazodó kijelző, éjszakai mód, olvasó mód</string>
     <string name="oneplus_top_level_network_summary">SIM, mobilhálózat, adathasználat, hotspot</string>
     <string name="oneplus_top_level_privacy_summary">Engedélyek, személyes adatok</string>
     <string name="oneplus_top_level_security_dashboard_summary">Ujjlenyomat, Arcfelismerés, vészhelyzet</string>
@@ -4256,7 +4276,7 @@ Megjegyzés: A zár feloldása arcfelismeréssel kevésbé biztonságos, mint az
     <string name="oneplus_vibration_settings_soc_tri_state">Rezgés</string>
     <string name="oneplus_vibration_settings_soc_tri_state_summary">A rendszer a riasztásokon kívül a hívásokat és értesítéseket is elnémítja, és csak rezegni fognak</string>
     <string name="oneplus_vibration_summary">A riasztás mindig csenget</string>
-    <string name="oneplus_video_enhancer">Élénk színhatás</string>
+    <string name="oneplus_video_enhancer">Élénk szín hatás</string>
     <string name="oneplus_video_enhancer_enhance_effect">Hatás opció</string>
     <string name="oneplus_video_enhancer_footer">A teljesítménynövelő motor dinamikusan optimalizálja a videó színvilágát és kontrasztját az élénkebb kép érdekében.</string>
     <string name="oneplus_video_enhancer_natural_mode">Természetes</string>
@@ -4269,7 +4289,7 @@ Megjegyzés: A zár feloldása arcfelismeréssel kevésbé biztonságos, mint az
     <string name="oneplus_volume_keys_adjust_ringtones">Csengőhang hangereje</string>
     <string name="oneplus_weak_text_reminding">Csak szöveg</string>
     <string name="oneplus_weak_text_reminding_summary">Engedélyezi az alkalmazásoknak, hogy megjelenítsék a figyelmeztető értesítéseket</string>
-    <string name="oneplus_wellbeing_grayscale_open_tip">Az Éjszakai mód jelenleg nem érhető el, mivel a \"Szürkeárnyalat\" funkció be van kapcsolva</string>
+    <string name="oneplus_wellbeing_grayscale_open_tip">A szemkímélő mód jelenleg nem érhető el, mivel a \"Szürkeárnyalat\" funkció be van kapcsolva</string>
     <string name="oneplus_wifi_6_standard_hotspot_cancel">MÉGSE</string>
     <string name="oneplus_wifi_6_standard_hotspot_enable">BEKAPCSOL</string>
     <string name="oneplus_wifi_6_standard_hotspot_title">Wi‑Fi 6 normál hotspot</string>
@@ -4299,7 +4319,7 @@ Ha a hálózatot rejtett állapotra állítja be, az nem fogja megváltoztatni a
     <string name="oneplus_zen_mode_footer_info">Ha a Ne zavarj be van kapcsolva, a hang és a rezgés ki lesz kapcsolva, kivéve a fent engedélyezett esetekben</string>
     <string name="oneplus_zen_mode_mode_manual_switch_summary">Manuálisan bekapcsolhatja a Ne Zavarj módot</string>
     <string name="oneplus_zen_mode_settings">Viselkedés</string>
-    <string name="oneplus_zen_mode_switch">Ne zavarj üzemmód bekapcsolása</string>
+    <string name="oneplus_zen_mode_switch">Kapcsolja be a Ne zavarjanak módot</string>
     <string name="oneplus_zen_mode_walloftext">Ha a Ne zavarj be van kapcsolva, a hang és a rezgés ki lesz kapcsolva, kivéve a lent engedélyezett esetekben</string>
     <string name="oneplus_zen_sound_title">Egyéb hangok</string>
     <string name="onplus_hardware_version_info">Hardververzió</string>
@@ -4308,16 +4328,14 @@ Ha a hálózatot rejtett állapotra állítja be, az nem fogja megváltoztatni a
     <string name="op_advanced_settings">Speciális</string>
     <string name="op_android_mode_cannot_change_color_accent">Az alapértelmezett téma csak a rendszer színtémáját használhatja</string>
     <string name="op_aod_parsons_info_button">OK</string>
-    <string name="op_aod_parsons_info_message">"Every 24 hours, a masterpiece is created.
-
-Insight, designed together by OnePlus &amp; students from Parsons School of Design, transforms time into a visible color bar. The device's usage data drives the pattern. Every time the phone is unlocked, it leaves a groove on the bar. The longer is the utility time; the wider is the groove and vice versa. Through the insight of those grooves, take a peek at your digital life."</string>
-    <string name="op_aod_parsons_info_title">Insight</string>
+    <string name="op_aod_parsons_info_message">"Megnyitáskor elkészül egy mestermű.
+A OnePlus és a Parsons School of Design tanulói által közösen megtervezett Insight az időt színes szalaggá alakítja. Az eszköz használati adatai alapján jön létre a mintázat. A telefon képernyőzárjának minden feloldása barázdát hagy a szalagon. Minél hosszabb a használat ideje, annál szélesebb a barázda. Ezen barázdák vizsgálatával pillantást vethetsz saját digitális életedre."</string>
     <string name="op_app_already_uninstalled">Eltávolítva</string>
     <string name="op_audio_settings">Audio Tuner</string>
     <string name="op_auto_power_saving">Automatikus energiamegtakarítás</string>
     <string name="op_auto_power_saving_summary">Automatikusan váltson a megfelelő felbontásra az akkumulátor merítése nélkül</string>
-    <string name="op_battery_saver_description">Battery Saver turns off or restricts background activity, some visual effects &amp; other high-power features to extend battery life.</string>
-    <string name="op_battery_suggestion_summary">Turn on Adaptive Battery</string>
+    <string name="op_battery_saver_description">Az Akkumulátorkímélő kikapcsolva vagy korlátozza a háttértevékenységet, egyes vizuális hatásokat &amp; más, nagyteljesítményű funkciókat, hogy növelje az akkumulátor üzemidejét.</string>
+    <string name="op_battery_suggestion_summary">Adaptív akkumulátor bekapcsolása</string>
     <string name="op_cast_description">A telefon képernyőjének és hangjának megjelenítése külső készüléken, pl. Tv-n</string>
     <string name="op_cast_nearby">Közelben lévő készülékek</string>
     <string name="op_cast_no_devices">A közelben nem találhatók készülékek</string>
@@ -4326,7 +4344,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_charging_Station_mute_notifications">Értesítések némítása</string>
     <string name="op_charging_footer_text">Értesíteni fogjuk, ha van töltőállomás a közelben, amikor repülőtéren, vagy OnePlus-eseményen, például Pop-up rendezvényen tartózkodik.</string>
     <string name="op_charging_optimization">Optimalizált töltés</string>
-    <string name="op_charging_optimization_summary">Optimalizálja a töltési módot a használati szokásainak megfelelően</string>
+    <string name="op_charging_optimization_summary">Optimalizálja a töltési módot a használati szokásai szerint, hogy csökkenteni tudja az akkumulátor terhelését, és meghosszabbítsa az akkumulátor élettartamát</string>
     <string name="op_charging_station">Közelben lévő töltőállomások</string>
     <string name="op_charging_station_no_station">A közelben nincs töltőállomás</string>
     <string name="op_charging_station_summary">Értesítsen, ha van töltőállomás a közelben</string>
@@ -4360,7 +4378,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_display_advanced_settings_summary_2">Képernyő kalibrálása, frissítési ráta, kivágás beállításai</string>
     <string name="op_display_advanced_settings_summary_3">Képernyő kalibrálása, felbontás, frissítési ráta</string>
     <string name="op_display_advanced_settings_summary_4">Képernyő kalibrálása, kivágás beállításai</string>
-    <string name="op_display_advanced_settings_summary_5">Frissítési gyakoriság</string>
+    <string name="op_display_advanced_settings_summary_5">Frissítési ráta</string>
     <string name="op_display_advanced_settings_summary_6">Képernyő kalibrálása, felbontás, frissítési ráta, előlapi kamera kijelzőterület</string>
     <string name="op_display_advanced_settings_summary_7">Képernyő kalibrálása, frissítési ráta, előlapi kamera kijelzőterület</string>
     <string name="op_display_graphics_enhancement_engine">VIDEÓTELJESÍTMÉNY-JAVÍTÓ MOTOR</string>
@@ -4383,9 +4401,15 @@ Előfordulhat, hogy az ujjlenyomat-feloldás nem kompatibilis a harmadik féltő
  Miközben a telefon azonosítja és hitelesíti az ujjlenyomatát, a telefon képernyőjének fényereje megnő, a színprofil pedig átmenetileg megváltozik."</string>
     <string name="op_fragment">Rövid</string>
     <string name="op_gamespace">Game Space</string>
-    <string name="op_high_power_app_manager">Energiaigényes alkalmazások kezelése</string>
+    <string name="op_global_drak_mode_apps_manage">Alkalmazások kezelése sötét üzemmódban</string>
+    <string name="op_global_drak_mode_full_support_list">Támogatott alkalmazások</string>
+    <string name="op_global_drak_mode_not_full_support_list">Nem támogatott alkalmazások</string>
+    <string name="op_global_drak_mode_support_description">A nem támogatott alkalmazások nem biztos, hogy megfelelően működnek a sötét üzemmódban</string>
+    <string name="op_gps_off_warn_msg">Kérjük, először kapcsolja be a Hely funkciót</string>
+    <string name="op_high_power_app_manager">Nagy teljesítményigényű alkalmazások</string>
+    <string name="op_history_toggled_on_summary">A legújabb értesítései itt jelennek meg</string>
     <string name="op_keep_location_services">Kérjük, engedélyezze a helymeghatározást a közelben lévő töltőállomások kereséséhez és nyomon követéséhez</string>
-    <string name="op_light_mode_title">Fény</string>
+    <string name="op_light_mode_title">Enyhe</string>
     <string name="op_linked_launch_summary">Az alkalmazások kezelése összekapcsolható háttérben indítással</string>
     <string name="op_linked_launch_title">Alkalmazások automatikus indítása</string>
     <string name="op_lockpassword_choose_your_password_header_for_face">Az arcfelismeréssel működő zár használatához állítson be jelszót</string>
@@ -4393,11 +4417,13 @@ Előfordulhat, hogy az ujjlenyomat-feloldás nem kompatibilis a harmadik féltő
     <string name="op_lockpassword_choose_your_pin_header_for_face">Az arcfelismeréssel működő zár használatához állítson be PIN-kódot</string>
     <string name="op_member_description">Kapcsolja össze a készülékét az exkluzív előnyök megszerzéséhez</string>
     <string name="op_member_title">Bejelentkezés a OnePlus fiókba</string>
-    <string name="op_night_display_title">Vision comfort</string>
+    <string name="op_night_display_title">Szemkímélés</string>
     <string name="op_not_disturb">A Ne zavarjanak mód beállításai</string>
     <string name="op_not_disturb_summary">Hívások és értesítések némítása, valamint rezgések kikapcsolása a riasztások kivételével</string>
+    <string name="op_notification_history_off_summary">Kapcsolja be az értesítési előzményeket, hogy megtekintse a legutóbbi értesítéseket</string>
+    <string name="op_notification_history_summary">Legutóbbi értesítések megjelenítése</string>
     <string name="op_oneplus_roaming_summary">Globális internet-hozzáférési szolgáltatások nyújtása</string>
-    <string name="op_oneplus_roaming_title">OnePlus barangolás</string>
+    <string name="op_oneplus_roaming_title">OnePlus Roaming</string>
     <string name="op_primary_charm_purple_label">Sötétlila</string>
     <string name="op_primary_dark_green_label">Sötétzöld</string>
     <string name="op_primary_default_label">Kék</string>
@@ -4406,6 +4432,7 @@ Előfordulhat, hogy az ujjlenyomat-feloldás nem kompatibilis a harmadik féltő
     <string name="op_primary_grass_green_label">Világoszöld</string>
     <string name="op_primary_lemon_yellow_label">Narancs</string>
     <string name="op_primary_red_label">Piros</string>
+    <string name="op_primary_rose_red_label">Rózsapiros</string>
     <string name="op_primary_royal_blue_label">Királykék</string>
     <string name="op_primary_sky_blue_label">Enciánkék</string>
     <string name="op_primary_vigour_red_label">Rózsaszín</string>
@@ -4416,12 +4443,12 @@ Előfordulhat, hogy az ujjlenyomat-feloldás nem kompatibilis a harmadik féltő
     <string name="op_security_settings_back_fingerprint_enroll_find_sensor_message">A telefon hátoldalán megtalálható</string>
     <string name="op_security_settings_fingerprint_enroll_find_sensor_message">Keresse meg az ujjlenyomat-érzékelőt az Otthon gombon</string>
     <string name="op_security_settings_title">Biztonság &amp; ujjlenyomat</string>
-    <string name="op_sim_card_with_slotid">"SIM %1$s "</string>
+    <string name="op_sim_card_with_slotid">SIM  %1$s</string>
     <string name="op_sim_cord">SIM &amp; hálózat</string>
     <string name="op_sim_cord_summary">Alapértelmezett SIM-kártya, használt sávszélesség</string>
     <string name="op_sim_name_with_prefix">  (%1$s )</string>
-    <string name="op_smart_battery_manager_title">Adaptive Battery</string>
-    <string name="op_smart_battery_title">Use Adaptive Battery</string>
+    <string name="op_smart_battery_manager_title">Adaptív akkumulátor</string>
+    <string name="op_smart_battery_title">Adaptív akkumulátor használata</string>
     <string name="op_sms_ringtone">SMS csengőhang</string>
     <string name="op_starwar_mode_cannot_change_color_accent">A Star Wars téma csak a rendszer színtémáját használhatja</string>
     <string name="op_starwar_mode_title">Star Wars</string>
@@ -4431,9 +4458,9 @@ Előfordulhat, hogy az ujjlenyomat-feloldás nem kompatibilis a harmadik féltő
     <string name="op_tcp_timestamps_randomization_title">Véletlenszerű TCP-időbélyegző jelölés</string>
     <string name="op_theme_2__cannot_change_color_accent">A bosszúállók téma csak a rendszer színtémáját használhatja</string>
     <string name="op_theme_2__title">A bosszúállók</string>
-    <string name="op_theme_3_cannot_change_color_accent">A McLaren téma csak a rendszer színbeállításait tudja használni</string>
+    <string name="op_theme_3_cannot_change_color_accent">A McLaren téma csak a rendszer színtémáját használhatja</string>
     <string name="op_theme_3_title">McLaren</string>
-    <string name="op_theme_entrance_summary">Wallpapers, accent color, font</string>
+    <string name="op_theme_entrance_summary">Háttérképek, kiemelés színe, betűtípus</string>
     <string name="op_theme_mode_title">Téma</string>
     <string name="op_use_cast">Adás használata</string>
     <string name="op_user_manual_settings">Felhasználói kézikönyv</string>
@@ -4448,8 +4475,8 @@ Előfordulhat, hogy az ujjlenyomat-feloldás nem kompatibilis a harmadik féltő
     <string name="op_wlan_settings_and_management">Wi‑Fi beállításai</string>
     <string name="op_zen_mode_automation_settings_title">Automatikus bekapcsolás</string>
     <string name="op_zen_mode_behavior_settings_title">Kivételek</string>
-    <string name="op_zen_mode_restrict_notifications_title">Restrict notifications</string>
-    <string name="opcustom_tone_dark_tile_text">Sötét mód</string>
+    <string name="op_zen_mode_restrict_notifications_title">Értesítések korlátozása</string>
+    <string name="opcustom_tone_dark_tile_text">Sötét üzemmód</string>
     <string name="open_hotspot_warning_message">"Nyílt biztonsággal a készülékek jelszó megadása nélkül is használhatják a Mobil hotspotot. Válassza a WPA2-biztonságot, ha jelszó megadását szeretné. "</string>
     <string name="open_supported_links_footer">Az alkalmazás a következő linkeket szeretné megnyitni:</string>
     <string name="openid_dialog_reset">VISSZAÁLLÍT</string>
@@ -4524,6 +4551,8 @@ Előfordulhat, hogy az ujjlenyomat-feloldás nem kompatibilis a harmadik féltő
     <string name="platform_compat_dashboard_title">Az alkalmazás kompatibilitási változtatásai</string>
     <string name="platform_compat_default_disabled_title">Alapértelmezett letiltott változtatások</string>
     <string name="platform_compat_default_enabled_title">Alapértelmezett engedélyezett változtatások</string>
+    <string name="platform_compat_dialog_text_no_apps">Az alkalmazáskompatibilitás csak a hibaelhárításra alkalmas alkalmazásoknál módosítható. Telepítsen hibaelhárításra alkalmas alkalmazást, és próbálja újra.</string>
+    <string name="platform_compat_dialog_title_no_apps">Nem található app</string>
     <string name="please_select_phase2">Hitelesítés 2. fázisa</string>
     <string name="please_type_passphrase">Vezeték nélküli jelszó</string>
     <string name="pointer_location">Mutató helye</string>
@@ -5435,7 +5464,7 @@ Ezt az Ön eszközére telepített megbízható hitelesítési adatok teszik leh
     <string name="status_bar_settings_wifi_title">Wi-Fi</string>
     <string name="status_bar_settings_work_title">Work-profil</string>
     <string name="status_bar_summary">Az állapotsorban megjelenő ikonok testreszabása</string>
-    <string name="status_bar_title">Állapotsor</string>
+    <string name="status_bar_title">Állapotsáv</string>
     <string name="status_bt_address">Bluetooth-cím</string>
     <string name="status_data_network_type">Mobiladat-hálózat típusa</string>
     <string name="status_data_state">Mobilhálózat állapota</string>
@@ -6633,7 +6662,7 @@ Engedélyezi ezt az összes olyan alkalmazásnál, amely keresést akar végezni
     <string name="wifi_scan_throttling">Wi-Fi-hálózat szabályozása</string>
     <string name="wifi_scan_throttling_summary">Csökkenti az akkumulátorhasználatot, és javítja a hálózat teljesítményét</string>
     <string name="wifi_security">Biztonság</string>
-    <string name="wifi_security_dialog">A nyílt biztonsággal bármelyik készülék csatlakozni tud a mobil hotspotjához, és használni tudja a mobil adatforgalmát.</string>
+    <string name="wifi_security_dialog">Nyílt biztonsági beállításokkal akármilyen készülék csatlakozhat az Ön mobil hotspotjához és használhatja az Ön mobiladat-kapcsolatát.</string>
     <string name="wifi_security_none">Nincs</string>
     <string name="wifi_security_open">Megnyitás</string>
     <string name="wifi_select_network">Wi-Fi-hálózat kiválasztása</string>
@@ -6741,7 +6770,8 @@ Engedélyezi ezt az összes olyan alkalmazásnál, amely keresést akar végezni
     <string name="wizard_finish">Befejezés</string>
     <string name="wizard_next">Tovább</string>
     <string name="work_alarm_ringtone_title">Munkaprofil alapértelmezett ébresztőhangja</string>
-    <string name="work_life_balance">Work Life Balance</string>
+    <string name="work_life_balance">Egyensúlyban a munka és az élet</string>
+    <string name="work_life_banner_summary">Az értesítések zavaróak lehetnek: Állítsa őket fontossági sorrendbe, hogy megtalálja a megfelelő Munka-Élet egyensúlyt.</string>
     <string name="work_life_disabled_toast">Work-Life Balance funkció kikapcsolva.</string>
     <string name="work_mode_label">Munkaprofil</string>
     <string name="work_mode_off_summary">Az alkalmazások és az értesítések ki vannak kapcsolva</string>

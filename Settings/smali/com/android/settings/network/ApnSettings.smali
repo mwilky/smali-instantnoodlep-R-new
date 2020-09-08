@@ -48,6 +48,8 @@
 
 .field private mIntentFilter:Landroid/content/IntentFilter;
 
+.field private mLastSubscriptionInfo:Landroid/telephony/SubscriptionInfo;
+
 .field private mMvnoMatchData:Ljava/lang/String;
 
 .field private mMvnoType:Ljava/lang/String;
@@ -196,7 +198,15 @@
     return-void
 .end method
 
-.method static synthetic access$1000(Lcom/android/settings/network/ApnSettings;I)V
+.method static synthetic access$1002(Lcom/android/settings/network/ApnSettings;Lcom/android/settings/network/ApnSettings$RestoreApnProcessHandler;)Lcom/android/settings/network/ApnSettings$RestoreApnProcessHandler;
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/settings/network/ApnSettings;->mRestoreApnProcessHandler:Lcom/android/settings/network/ApnSettings$RestoreApnProcessHandler;
+
+    return-object p1
+.end method
+
+.method static synthetic access$1100(Lcom/android/settings/network/ApnSettings;I)V
     .locals 0
 
     invoke-virtual {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->removeDialog(I)V
@@ -204,18 +214,10 @@
     return-void
 .end method
 
-.method static synthetic access$1100(Lcom/android/settings/network/ApnSettings;)V
+.method static synthetic access$1200(Lcom/android/settings/network/ApnSettings;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/settings/network/ApnSettings;->loadCarrierConfigInfo()V
-
-    return-void
-.end method
-
-.method static synthetic access$1300(Lcom/android/settings/network/ApnSettings;I)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->removeDialog(I)V
 
     return-void
 .end method
@@ -228,7 +230,15 @@
     return-void
 .end method
 
-.method static synthetic access$1500(Lcom/android/settings/network/ApnSettings;)Landroid/content/ContentResolver;
+.method static synthetic access$1500(Lcom/android/settings/network/ApnSettings;I)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->removeDialog(I)V
+
+    return-void
+.end method
+
+.method static synthetic access$1600(Lcom/android/settings/network/ApnSettings;)Landroid/content/ContentResolver;
     .locals 0
 
     invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
@@ -238,7 +248,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1600()Landroid/net/Uri;
+.method static synthetic access$1700()Landroid/net/Uri;
     .locals 1
 
     sget-object v0, Lcom/android/settings/network/ApnSettings;->DEFAULTAPN_URI:Landroid/net/Uri;
@@ -246,7 +256,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$1700(Lcom/android/settings/network/ApnSettings;Landroid/net/Uri;)Landroid/net/Uri;
+.method static synthetic access$1800(Lcom/android/settings/network/ApnSettings;Landroid/net/Uri;)Landroid/net/Uri;
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/settings/network/ApnSettings;->getUriForCurrSubId(Landroid/net/Uri;)Landroid/net/Uri;
@@ -283,7 +293,7 @@
 .method static synthetic access$400(Lcom/android/settings/network/ApnSettings;)Landroid/telephony/SubscriptionInfo;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/settings/network/ApnSettings;->mSubscriptionInfo:Landroid/telephony/SubscriptionInfo;
+    iget-object p0, p0, Lcom/android/settings/network/ApnSettings;->mLastSubscriptionInfo:Landroid/telephony/SubscriptionInfo;
 
     return-object p0
 .end method
@@ -291,12 +301,28 @@
 .method static synthetic access$402(Lcom/android/settings/network/ApnSettings;Landroid/telephony/SubscriptionInfo;)Landroid/telephony/SubscriptionInfo;
     .locals 0
 
+    iput-object p1, p0, Lcom/android/settings/network/ApnSettings;->mLastSubscriptionInfo:Landroid/telephony/SubscriptionInfo;
+
+    return-object p1
+.end method
+
+.method static synthetic access$500(Lcom/android/settings/network/ApnSettings;)Landroid/telephony/SubscriptionInfo;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/network/ApnSettings;->mSubscriptionInfo:Landroid/telephony/SubscriptionInfo;
+
+    return-object p0
+.end method
+
+.method static synthetic access$502(Lcom/android/settings/network/ApnSettings;Landroid/telephony/SubscriptionInfo;)Landroid/telephony/SubscriptionInfo;
+    .locals 0
+
     iput-object p1, p0, Lcom/android/settings/network/ApnSettings;->mSubscriptionInfo:Landroid/telephony/SubscriptionInfo;
 
     return-object p1
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/network/ApnSettings;I)Landroid/telephony/SubscriptionInfo;
+.method static synthetic access$600(Lcom/android/settings/network/ApnSettings;I)Landroid/telephony/SubscriptionInfo;
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/settings/network/ApnSettings;->getSubscriptionInfo(I)Landroid/telephony/SubscriptionInfo;
@@ -306,7 +332,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/network/ApnSettings;I)V
+.method static synthetic access$700(Lcom/android/settings/network/ApnSettings;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/settings/network/ApnSettings;->restartPhoneStateListener(I)V
@@ -314,7 +340,7 @@
     return-void
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/network/ApnSettings;I)V
+.method static synthetic access$800(Lcom/android/settings/network/ApnSettings;I)V
     .locals 0
 
     invoke-virtual {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->showDialog(I)V
@@ -322,7 +348,7 @@
     return-void
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/network/ApnSettings;)Landroid/os/HandlerThread;
+.method static synthetic access$900(Lcom/android/settings/network/ApnSettings;)Landroid/os/HandlerThread;
     .locals 0
 
     iget-object p0, p0, Lcom/android/settings/network/ApnSettings;->mRestoreDefaultApnThread:Landroid/os/HandlerThread;
@@ -330,18 +356,10 @@
     return-object p0
 .end method
 
-.method static synthetic access$802(Lcom/android/settings/network/ApnSettings;Landroid/os/HandlerThread;)Landroid/os/HandlerThread;
+.method static synthetic access$902(Lcom/android/settings/network/ApnSettings;Landroid/os/HandlerThread;)Landroid/os/HandlerThread;
     .locals 0
 
     iput-object p1, p0, Lcom/android/settings/network/ApnSettings;->mRestoreDefaultApnThread:Landroid/os/HandlerThread;
-
-    return-object p1
-.end method
-
-.method static synthetic access$902(Lcom/android/settings/network/ApnSettings;Lcom/android/settings/network/ApnSettings$RestoreApnProcessHandler;)Lcom/android/settings/network/ApnSettings$RestoreApnProcessHandler;
-    .locals 0
-
-    iput-object p1, p0, Lcom/android/settings/network/ApnSettings;->mRestoreApnProcessHandler:Lcom/android/settings/network/ApnSettings$RestoreApnProcessHandler;
 
     return-object p1
 .end method
@@ -731,7 +749,7 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_18
+    if-eqz v2, :cond_19
 
     const-string v4, "apn_list"
 
@@ -1410,27 +1428,42 @@
 
     invoke-direct {v0, v2}, Lcom/android/settings/network/ApnSettings;->setSelectedApnKey(Ljava/lang/String;)V
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "set key to  "
+    const-string v3, "set key to  "
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v11, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_18
+    new-instance v1, Lcom/oneplus/settings/ui/OPPreferenceHeaderMargin;
+
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->getPrefContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v11, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-direct {v1, v0}, Lcom/oneplus/settings/ui/OPPreferenceHeaderMargin;-><init>(Landroid/content/Context;)V
 
-    :cond_18
+    const/16 v0, -0x12c
+
+    invoke-virtual {v1, v0}, Landroidx/preference/Preference;->setOrder(I)V
+
+    invoke-virtual {v4, v1}, Landroidx/preference/PreferenceGroup;->addPreference(Landroidx/preference/Preference;)Z
+
+    :cond_19
     return-void
 .end method
 
@@ -2670,6 +2703,10 @@
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/settings/network/ApnSettings;->mSubscriptionInfo:Landroid/telephony/SubscriptionInfo;
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/android/settings/network/ApnSettings;->mLastSubscriptionInfo:Landroid/telephony/SubscriptionInfo;
 
     const-class v0, Landroid/telephony/TelephonyManager;
 

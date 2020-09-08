@@ -281,20 +281,20 @@
         <item quantity="few">%d aktivne aplikacije</item>
     </plurals>
     <plurals name="oneplus_applock_wrong_pattern_warning">
-        <item quantity="other">Još uvijek imate %1$d prilika</item>
+        <item quantity="other">Preostalo prilika: %1$d</item>
         <item quantity="one">Još uvijek imate %1$d priliku</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
-        <item quantity="other">Pokušajte ponovno za %d sekundi.</item>
-        <item quantity="one">Pokušajte ponovno za %d sekundi.</item>
+        <item quantity="other">Pokušajte ponovno za %d s.</item>
+        <item quantity="one">Pokušajte ponovno za %d s.</item>
     </plurals>
     <plurals name="oneplus_zen_mode_duration_summary_time_hours">
         <item quantity="other">%d h (osim ako se ne uključuje automatski)</item>
         <item quantity="one">1 h (osim ako se ne uključuje automatski)</item>
     </plurals>
     <plurals name="op_location_settings_summary_location_on">
-        <item quantity="other">On - %1$d apps have access to location</item>
-        <item quantity="one">On - %1$d app has access to location</item>
+        <item quantity="other">Uključeno – aplikacije (%1$d) pristupaju lokaciji</item>
+        <item quantity="one">Uključeno – %1$d aplikacija pristupa lokaciji</item>
     </plurals>
     <plurals name="permission_bar_chart_label">
         <item quantity="other">%s aplikacija</item>

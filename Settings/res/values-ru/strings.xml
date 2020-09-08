@@ -40,9 +40,14 @@
     <string name="abc_slice_updated">Обновлено %1$s</string>
     <string name="abc_slices_permission_request">Приложение \"%1$s\" запрашивает разрешение на показ фрагментов приложения \"%2$s\".</string>
     <string name="abc_toolbar_collapse_description">Свернуть</string>
+    <string name="about_action_bar_title">Информация</string>
+    <string name="about_app_version_text">Version %s</string>
     <string name="about_phone_device_name_warning">У приложений на телефоне есть доступ к названию устройства. Его могут видеть другие пользователи, когда вы подключаетесь к устройствам по Bluetooth или настраиваете точку доступа Wi-Fi.</string>
+    <string name="about_privacy_policy">Политика конфиденциальности</string>
+    <string name="about_release_note_title">Журнал обновлений:</string>
     <string name="about_settings">О телефоне</string>
     <string name="about_settings_summary">Просмотр юридической информации, состояния планшетного ПК и версии ПО</string>
+    <string name="about_terms_service">Условия обслуживания</string>
     <string name="accelerometer_summary_off">Автоматически менять ориентацию экрана при повороте телефона</string>
     <string name="accelerometer_summary_on">Автоматически менять ориентацию экрана при повороте телефона</string>
     <string name="accelerometer_title">Автоповорот экрана</string>
@@ -267,7 +272,7 @@
     <string name="action_drag_label_move_up">Поднять</string>
     <string name="action_drag_label_remove">Удалить язык</string>
     <string name="activate_one_handed_mode">Быстрый доступ</string>
-    <string name="activate_one_handed_mode_description">Смахните вниз в нижней части экрана, чтобы вызвать функцию быстрого доступа. Быстрый доступ позволяет вернуться к контенту в верхней части экрана. Смахните вверх, чтобы вернуться в полноэкранный режим.</string>
+    <string name="activate_one_handed_mode_description">Смахните вниз в нижней части экрана, чтобы вызвать на время функцию быстрого доступа. Быстрый доступ позволяет вернуться к контенту в верхней части экрана. Смахните вверх, чтобы вернуться в полноэкранный режим.</string>
     <string name="active_device_admin_msg">Приложение администратора устройства</string>
     <string name="active_input_method_subtypes">Активные способы ввода</string>
     <string name="activity_not_found">Приложение не установлено на телефоне.</string>
@@ -370,7 +375,7 @@
     <string name="alert_dialog_cancel">Отменить</string>
     <string name="alert_slider_settings_title">Настройки приоритетности</string>
     <string name="alert_slider_silent_title">Настройки режима \"без звука\"</string>
-    <string name="alertslider_settings">Alert slider</string>
+    <string name="alertslider_settings">Переключатель сигналов</string>
     <string name="alertslider_settings_soc_tri_state_summary">Беззвучный режим, вибрация, звонок</string>
     <string name="all_volume_title">Громкость</string>
     <string name="allow">Разрешить</string>
@@ -1093,7 +1098,7 @@
     <string name="bubbles_app_toggle_title">Всплывающие чаты</string>
     <string name="bubbles_conversation_app_link">Все настройки всплывающих чатов</string>
     <string name="bubbles_conversation_toggle_summary">Показывать плавающий значок над приложениями</string>
-    <string name="bubbles_conversation_toggle_title">Показывать всплывающие чаты для этого разговора</string>
+    <string name="bubbles_conversation_toggle_title">Показывать всплывающий чат</string>
     <string name="bubbles_feature_disabled_button_approve">Включить</string>
     <string name="bubbles_feature_disabled_button_cancel">Отмена</string>
     <string name="bubbles_feature_disabled_dialog_text">"Если включить всплывающие чаты для этого приложения, они также будут включены на уровне устройства.
@@ -1189,7 +1194,7 @@
     <string name="carrier_enabled">Включить/выключить APN</string>
     <string name="carrier_enabled_summaryOff">APN выкл.</string>
     <string name="carrier_enabled_summaryOn">APN вкл.</string>
-    <string name="carrier_info_default_summary">Нет данных</string>
+    <string name="carrier_info_default_summary">Неизвестно</string>
     <string name="carrier_provisioning">Сведения об операторе</string>
     <string name="carrier_settings_euicc">Оператор</string>
     <string name="carrier_settings_title">Настройки оператора</string>
@@ -1241,7 +1246,7 @@
     <string name="clear_instant_app_data">Удалить данные приложения</string>
     <string name="clear_uri_btn_text">Закрыть доступ</string>
     <string name="clear_user_data_text">Очистить хранилище</string>
-    <string name="close_dialog">OK</string>
+    <string name="close_dialog">ОК</string>
     <string name="color_black">Черный</string>
     <string name="color_blue">Синий</string>
     <string name="color_cyan">Голубой</string>
@@ -1261,7 +1266,7 @@
     <string name="color_picker_default">По умолчанию</string>
     <string name="color_picker_led_color_message">Выбрать цвет LED</string>
     <string name="color_picker_message_default">Выберите предпочитаемый цвет.</string>
-    <string name="color_picker_unknown_label">Неизвестно</string>
+    <string name="color_picker_unknown_label">Нет данных</string>
     <string name="color_purple">Фиолетовый</string>
     <string name="color_red">Красный</string>
     <string name="color_temperature">Холодные оттенки</string>
@@ -1280,7 +1285,7 @@
     <string name="condition_bg_data_title">Экономия трафика</string>
     <string name="condition_cellular_summary">Интернет доступен только через Wi-Fi</string>
     <string name="condition_cellular_title">Мобильный Интернет отключен</string>
-    <string name="condition_cloud_summary">Нажмите, чтобы использовать Облачную службу и защитить ваши данные от утраты</string>
+    <string name="condition_cloud_summary">Нажмите, чтобы использовать облачный сервис и защитить свои данные от утраты</string>
     <string name="condition_cloud_title">Начало использования Облачной службы</string>
     <string name="condition_cloud_turn_off">ОТКЛОНИТЬ</string>
     <string name="condition_device_muted_action_turn_on_sound">Включить звук</string>
@@ -1580,11 +1585,11 @@
     <string name="data_usage_metered_yes">Сеть с тарификацией трафика</string>
     <string name="data_usage_ota">Обновления системы</string>
     <string name="data_usage_other_apps">Другие приложения</string>
-    <string name="data_usage_package_set">Период выставления счетов</string>
+    <string name="data_usage_package_set">Billing Cycle</string>
     <string name="data_usage_pick_cycle_day">День месяца, когда сбрасывается цикл использования данных:</string>
-    <string name="data_usage_rank_sim">Использование данных через сотовую систему передачи</string>
-    <string name="data_usage_rank_wifi">Использование данных Wi‑Fi</string>
-    <string name="data_usage_rank_wlan">Использование данных через сотовую систему передачи</string>
+    <string name="data_usage_rank_sim">Использование данных через сотовую сеть</string>
+    <string name="data_usage_rank_wifi">Использование данных Wi-Fi</string>
+    <string name="data_usage_rank_wlan">Использование данных через сотовую сеть</string>
     <string name="data_usage_received_sent">Получено: %1$s; отправлено: %2$s</string>
     <string name="data_usage_restrict_background">Если ограничить передачу данных по мобильной сети в фоновом режиме, некоторые приложения и сервисы не будут работать без подключения к Wi-Fi.</string>
     <string name="data_usage_restrict_background_multiuser">"Если ограничить передачу данных по мобильной сети в фоновом режиме, некоторые приложения и сервисы не будут работать без подключения к Wi-Fi.
@@ -1867,7 +1872,7 @@
     <string name="earphone_function_introduction">Описание функции</string>
     <string name="earphone_function_listening_breeno">Голосовой помощник</string>
     <string name="earphone_support_battery_dot">;</string>
-    <string name="earphone_support_battery_info_box">Футляр для наушников OnePlus: %1$s</string>
+    <string name="earphone_support_battery_info_box">Футляр для наушников OnePlus Buds: %1$s</string>
     <string name="earphone_support_battery_info_left">Л: %1$s</string>
     <string name="earphone_support_battery_info_right">П: %1$s</string>
     <string name="earphone_support_current_version">Текущая версия:</string>
@@ -2232,7 +2237,7 @@
     <string name="header_account_settings">Настройки аккаунта</string>
     <string name="header_add_an_account">Добавить аккаунт</string>
     <string name="header_application_sync_settings">Настройки синхронизации</string>
-    <string name="header_category_custom">Индивидуальная настройка</string>
+    <string name="header_category_custom">Персонализация</string>
     <string name="header_category_system">Система</string>
     <string name="header_category_wireless_networks">Беспроводные сети</string>
     <string name="header_data_and_synchronization">Cинхронизация данных</string>
@@ -2271,9 +2276,9 @@
     <string name="homepage_condition_footer_content_description">Свернуть</string>
     <string name="homepage_personal_settings">Подсказки</string>
     <string name="hotspot_tip_message" formatted="false">"Мобильная точка доступа позволяет другим устройствам с поддержкой Wi-Fi использовать вашу сеть мобильных данных. Для подключения к мобильной точке доступа выполните следующие действия: \u0009 
- 1: Включите Wi-Fi на другом устройстве.
- 2: Выберите %s в списке доступных сетей Wi-Fi. 
- 3: Если требуется пароль, введите %s Для экономии заряда аккумулятора подключите телефон к зарядке при использовании мобильной точки доступа. "</string>
+ 1. Включите Wi-Fi на другом устройстве.
+ 2. Выберите %s в списке доступных сетей Wi-Fi. 
+ 3. Если требуется пароль, введите %s. Для экономии заряда аккумулятора подключите телефон к зарядке при использовании мобильной точки доступа. "</string>
     <string name="hotspot_tip_title">Мобильная точка доступа</string>
     <string name="hwui_force_dark_summary">Изменение настройки принудительного включения тёмной темы на \"Всегда включено\"</string>
     <string name="hwui_force_dark_title">Переопределение включения тёмной темы</string>
@@ -2438,6 +2443,7 @@
     <string name="keywords_lock_screen_notif">уведомление на экране блокировки, уведомления</string>
     <string name="keywords_lockscreen">провести для разблокировки, пароль, графический ключ, PIN-код</string>
     <string name="keywords_lockscreen_bypass">Заблокированный экран, пропустить, перейти</string>
+    <string name="keywords_media_controls">Медиа</string>
     <string name="keywords_model_and_hardware">серийный номер, версия аппаратного обеспечения</string>
     <string name="keywords_more_default_sms_app">текстовое сообщение, обмен текстовыми сообщениями, сообщения, обмен сообщениями, по умолчанию</string>
     <string name="keywords_more_mobile_networks">сотовая сеть, мобильный Интернет, сотовый оператор, беспроводная сеть, передача данных, 4G, 3G, 2G, LTE</string>
@@ -2566,6 +2572,7 @@
     <string name="load_networks_progress">Поиск…</string>
     <string name="loading_injected_setting_summary">Загрузка…</string>
     <string name="loading_notification_apps">Загрузка...</string>
+    <string name="loading_text">Загрузка...</string>
     <string name="local_backup_password_summary_change">Нажмите, чтобы изменить или удалить пароль для резервного копирования</string>
     <string name="local_backup_password_summary_none">Полные резервные копии в настоящее время не защищены</string>
     <string name="local_backup_password_title">Пароль для резервного копирования</string>
@@ -2643,7 +2650,7 @@
     <string name="lock_screen_notifs_redact_work">Уведомления с конфиденциальными данными из рабочего профиля</string>
     <string name="lock_screen_notifs_redact_work_summary">Показывать конфиденциальные данные из рабочего профиля на заблокированном экране</string>
     <string name="lock_screen_notifs_show_alerting">Скрывать беззвучные чаты и уведомления</string>
-    <string name="lock_screen_notifs_show_all">Показывать все разговоры</string>
+    <string name="lock_screen_notifs_show_all">Показывать все чаты</string>
     <string name="lock_screen_notifs_show_none">Не показывать уведомления</string>
     <string name="lock_screen_notifs_title">Уведомления на заблокированном экране</string>
     <string name="lock_screen_password_skip_title">Не устанавливать пароль?</string>
@@ -2841,6 +2848,12 @@
     <string name="master_clear_title">Удалить все данные (сброс к заводским настройкам)</string>
     <string name="maximum_memory_use">Макс. объем исп. памяти</string>
     <string name="media_category">Мультимедиа</string>
+    <string name="media_controls_hide_player">Проигрыватель скрыт</string>
+    <string name="media_controls_no_players">Нет доступных проигрывателей</string>
+    <string name="media_controls_resume_description">С помощью проигрывателя вы можете восстанавливать мультимедийный сеанс на панели быстрых настроек</string>
+    <string name="media_controls_show_player">Проигрыватель показан</string>
+    <string name="media_controls_summary">Скрывать проигрыватель по окончании мультимедийного сеанса</string>
+    <string name="media_controls_title">Медиа</string>
     <string name="media_out_summary_ongoing_call_state">Недоступно во время вызовов</string>
     <string name="media_output_default_summary">Это устройство</string>
     <string name="media_output_disconnected_status">%1$s (отключено)</string>
@@ -2937,9 +2950,9 @@
     <string name="mobile_data_settings_title">Мобильный Интернет</string>
     <string name="mobile_data_usage_title">Трафик приложений</string>
     <string name="mobile_hotspot_airplane_off_error">Чтобы включить точку доступа, отключите авиарежим</string>
-    <string name="mobile_hotspot_authoration_error">"Для работы с мобильной точкой доступа оформите подписку на сервисы Mobile Hotspot.
+    <string name="mobile_hotspot_authoration_error">"Для работы с мобильной точкой доступа оформите подписку на сервис мобильной точки доступа.
 
-Чтобы оформить подписку на сервисы Mobile Hotspot, посетите раздел \"Мой Verizon\" или позвоните в отдел клиентской поддержки (800) 922–0204."</string>
+Чтобы оформить подписку на сервис мобильной точки доступа, посетите раздел \"Мой Verizon\" или позвоните в отдел клиентской поддержки (800) 922–0204."</string>
     <string name="mobile_hotspot_data_off_error">Чтобы включить точку доступа, включите мобильные данные</string>
     <string name="mobile_insert_sim_card">Вставьте SIM-карту и перезагрузите устройство</string>
     <string name="mobile_network_active_esim">Активно / Скачанная SIM-карта</string>
@@ -3173,7 +3186,7 @@
     <string name="notification_conversation_add_to_home">Добавить на главный экран</string>
     <string name="notification_conversation_important">Важные</string>
     <string name="notification_conversation_summary_low">Без звука или вибрации, появляется в нижней части списка разговоров</string>
-    <string name="notification_for_work_life">Уведомления для режима работы и личной жизни</string>
+    <string name="notification_for_work_life">Уведомления в рабочее и нерабочее время</string>
     <string name="notification_for_work_life_disabled">Нажмите, чтобы включить эту функцию.</string>
     <string name="notification_group_title">Группа категорий уведомлений</string>
     <string name="notification_history">История уведомлений</string>
@@ -3239,6 +3252,7 @@
     <string name="notification_priority_title">Приоритет</string>
     <string name="notification_pulse_title">Световая индикация</string>
     <string name="notification_ringtone_title">Звук уведомления по умолчанию</string>
+    <string name="notification_screen_summary">История уведомлений, всплывающие уведомления, недавно отправленные</string>
     <string name="notification_settings_work_profile">Приложениям в рабочем профиле нельзя предоставить доступ к уведомлениям.</string>
     <string name="notification_show_lights_title">Световая индикация</string>
     <string name="notification_silence_title">Без звука</string>
@@ -3315,7 +3329,7 @@
     <string name="oneplus_app_list_empty">Пустой список</string>
     <string name="oneplus_app_locker_add_apps">Добавить приложения</string>
     <string name="oneplus_app_locker_catagory">Конфиденциальность</string>
-    <string name="oneplus_app_locker_open_apps">Список Applocker</string>
+    <string name="oneplus_app_locker_open_apps">Список блокировщика приложений</string>
     <string name="oneplus_app_locker_summary">Выберите приложения для шифрования</string>
     <string name="oneplus_app_locker_switch">Скрыть содержимое уведомления</string>
     <string name="oneplus_app_locker_switch_summary">Содержимое уведомлений будет скрыто от приложений, для которых включен блокировщик приложений</string>
@@ -3326,7 +3340,7 @@
     <string name="oneplus_app_ops_title">Разрешения приложения</string>
     <string name="oneplus_app_uninstall_remark">Установите эти платежные приложения, чтобы использовать Quick Pay</string>
     <string name="oneplus_app_wechat">WeChat</string>
-    <string name="oneplus_applications_settings_summary">Уведомления приложений, Параллельные приложения, разрешения</string>
+    <string name="oneplus_applications_settings_summary">Уведомления приложений, параллельные приложения, разрешения</string>
     <string name="oneplus_applock_at_least_four_points">Рисуйте так, чтобы включить как минимум четыре точки</string>
     <string name="oneplus_applock_lockpassword_confirm_your_pin_header">Введите PIN-код</string>
     <string name="oneplus_applock_need_to_unlock_wrong">Неправильный PIN-код</string>
@@ -3335,6 +3349,7 @@
     <string name="oneplus_apps_notifications">Приложения и уведомления</string>
     <string name="oneplus_apps_title">Приложения</string>
     <string name="oneplus_aptx_hd_support">Поддержка aptX/aptX HD</string>
+    <string name="oneplus_at_a_glance">Самое главное</string>
     <string name="oneplus_authentication_information">Сведения об аутентификации</string>
     <string name="oneplus_auto_activate">Включать автоматически</string>
     <string name="oneplus_auto_answer_via_bluetooth_summary">Входящий вызов принимается автоматически при подключенном устройстве Bluetooth</string>
@@ -3343,20 +3358,20 @@
     <string name="oneplus_auto_disconect_the_ap">Точка доступа будет автоматически отключена через 5 минут, если нет подключенных устройств.</string>
     <string name="oneplus_auto_open_app_none">Нет</string>
     <string name="oneplus_auto_open_app_other_applications">ДРУГИЕ ПРИЛОЖЕНИЯ</string>
-    <string name="oneplus_auto_open_app_recommended">РЕКОМЕНДУЕТСЯ</string>
+    <string name="oneplus_auto_open_app_recommended">РЕКОМЕНДАЦИИ</string>
     <string name="oneplus_auto_open_specified_app">Автоматически открывать указанное приложение</string>
     <string name="oneplus_auto_play">Автозапуск</string>
     <string name="oneplus_auto_play_summary">Автоматически продолжить воспроизведение музыки при подключении наушников</string>
-    <string name="oneplus_auto_switch_mobile_data">Интеллектуальное подключение к сети</string>
+    <string name="oneplus_auto_switch_mobile_data">Использование данных</string>
     <string name="oneplus_auto_switch_mobile_data_summary">При слабом приеме используйте Wi‑Fi и мобильные данные для более стабильной связи</string>
     <string name="oneplus_auto_turn_on_apps">Автоматически включать для этих приложений</string>
-    <string name="oneplus_auto_turn_on_car_charger_info_o2">Настроив параметры выше, вы сможете активировать режим «Не беспокоить» и запускать указанное приложение каждый раз при подключении автомобильного зарядного устройства</string>
-    <string name="oneplus_auto_turn_on_dnd">Автоматически включать режим «Не беспокоить»</string>
+    <string name="oneplus_auto_turn_on_car_charger_info_o2">Настроив указанные выше параметры, вы сможете активировать режим \"Не беспокоить\" и запускать указанное приложение каждый раз при подключении автомобильного зарядного устройства</string>
+    <string name="oneplus_auto_turn_on_dnd">Автоматически включать режим \"Не беспокоить\"</string>
     <string name="oneplus_available_keyboard_category">Доступная клавиатура</string>
     <string name="oneplus_available_keyboard_description">Включенные здесь установленные клавиатуры будут добавлены к списку \"Доступные клавиатуры\"</string>
     <string name="oneplus_back_home">Домой, Назад</string>
-    <string name="oneplus_back_home_o2">Назад, Домой</string>
-    <string name="oneplus_back_home_summary">Проведите пальцем вверх на кнопку Главная</string>
+    <string name="oneplus_back_home_o2">Back, Home</string>
+    <string name="oneplus_back_home_summary">Swipe up on Home button</string>
     <string name="oneplus_back_topic_theme_summary">Автоматически переключать тему системы при открытии предшествующих тематических разделов</string>
     <string name="oneplus_back_topic_theme_title">Тема для задней крышки</string>
     <string name="oneplus_battery_menu_stats_total">Показать сведения об использовании</string>
@@ -3384,13 +3399,13 @@
     <string name="oneplus_bluetooth_volume_switch_summary">Автоматически синхронизировать громкость гарнитуры и устройства при подключении по Bluetooth</string>
     <string name="oneplus_broadcat_wifi_name">Имя широковещательной сети (SSID)</string>
     <string name="oneplus_buttons_and_gestures_settings">Кнопки и жесты</string>
-    <string name="oneplus_buttons_dashboard_summary">Alert Slider, навигация, жесты</string>
+    <string name="oneplus_buttons_dashboard_summary">Бегунок оповещения, навигация, жесты</string>
     <string name="oneplus_buttons_settings">Настройки кнопок</string>
     <string name="oneplus_buttons_settings_summary">Жест навигации</string>
     <string name="oneplus_call_information_broadcast">Произносить идентификатор вызывающего абонента</string>
     <string name="oneplus_call_information_broadcast_summary">Идентификатор вызывающего абонента при входящем вызове будет озвучен в подключенных наушниках</string>
     <string name="oneplus_calls">Вызовы</string>
-    <string name="oneplus_calls_and_vibration">Мелодия звонка и вибрация</string>
+    <string name="oneplus_calls_and_vibration">Мелодия и вибрация вызова</string>
     <string name="oneplus_camera">КАМЕРА</string>
     <string name="oneplus_cancel_finger_input">Отмена...</string>
     <string name="oneplus_cannot_enroll_fingerprint_in_splitting_screen">Нельзя ввести отпечаток пальца при разделенном экране</string>
@@ -3413,8 +3428,9 @@
     <string name="oneplus_condition_bg_data_summary">Передача данных в фоновом режиме доступна только через Wi-Fi. Это может повлиять на работу некоторых приложений и услуг, когда нет подключения к сети Wi-Fi</string>
     <string name="oneplus_condition_bg_data_title">Механизм экономии данных включен</string>
     <string name="oneplus_condition_hotspot_turn_off">ВЫКЛЮЧИТЬ ТОЧКУ ДОСТУПА</string>
+    <string name="oneplus_condition_night_display_title">Режим \"Комфорт для глаз\" включен</string>
     <string name="oneplus_condition_night_mode_title">Ночной режим включен</string>
-    <string name="oneplus_condition_night_mode_turn_off">ВЫКЛЮЧИТЬ НОЧНОЙ РЕЖИМ</string>
+    <string name="oneplus_condition_night_mode_turn_off">ВЫКЛЮЧИТЬ РЕЖИМ \"КОМФОРТ ДЛЯ ГЛАЗ\"</string>
     <string name="oneplus_condition_ota_summary">Обнаружена новая версия для обновления</string>
     <string name="oneplus_connected_device_count">Подключено устройств: %1$s</string>
     <string name="oneplus_connected_device_management_title">Подключен диспетчер устройств</string>
@@ -3450,10 +3466,10 @@
     <string name="oneplus_device_warranty_expried_date">Дата окончания гарантии</string>
     <string name="oneplus_dirac_audio_tuner">Аудиотюнер Dirac</string>
     <string name="oneplus_direct_boot_inputmethod_unaware_dialog_message">Если вы перезагрузили телефон и у вас установлена блокировка экрана, клавиатура не сможет запуститься до разблокировки телефона</string>
-    <string name="oneplus_disable_aosp_face_lock_message">При включении разблокировки OnePlus с помощью лица будет отключена функция Trusted Face от Smart Lock. Продолжить?</string>
+    <string name="oneplus_disable_aosp_face_lock_message">При включении разблокировки OnePlus с помощью лица функция \"доверенное лицо\" сервиса умной блокировки будет отключена. Продолжить?</string>
     <string name="oneplus_disconnected">Отключить</string>
     <string name="oneplus_display_dashboard_no_theme_summary">Строка состояния, черно-белый экран, обои</string>
-    <string name="oneplus_display_dashboard_no_theme_summary_801">Status bar, ambient display, Vision comfort, reading mode</string>
+    <string name="oneplus_display_dashboard_no_theme_summary_801">Строка состояния, черно-белый экран, комфорт для глаз, режим чтения</string>
     <string name="oneplus_display_dashboard_summary">Строка состояния, черно-белый экран, обои, тема</string>
     <string name="oneplus_display_dashboard_summary_801">Строка состояния, черно-белый экран, обои, тема</string>
     <string name="oneplus_display_screen_timeout">Сон</string>
@@ -3492,7 +3508,7 @@
     <string name="oneplus_e_sports_mode_background_introduction_summary">Повысьте производительность игры, ограничив фоновые процессы. Это может привести к сбоям в некоторых фоновых приложениях. </string>
     <string name="oneplus_e_sports_mode_background_introduction_title">Расширенные фоновые ограничения</string>
     <string name="oneplus_e_sports_mode_disturb_introduction_summary">Блокировать все уведомления и вызовы (кроме уведомлений о низком уровне заряда аккумулятора, будильника и таймера). Вы можете просмотреть пропущенные вызовы в истории вызовов.</string>
-    <string name="oneplus_e_sports_mode_disturb_introduction_title">Расширенный режим «Не беспокоить»</string>
+    <string name="oneplus_e_sports_mode_disturb_introduction_title">Расширенный режим \"Не беспокоить\"</string>
     <string name="oneplus_e_sports_mode_enable_introduction_title">Для того, чтобы использовать Киберспортивный режим, необходимо сначала включить Игровой режим.</string>
     <string name="oneplus_e_sports_mode_network_introduction_dual4g_summary">При использовании двух сетей 4G этот режим прекращает работу дополнительной SIM-карты, чтобы улучшить работу сети основной SIM-карты. Когда этот режим включен, вы не сможете принимать вызовы и SMS-сообщения на дополнительную SIM-карту.</string>
     <string name="oneplus_e_sports_mode_network_introduction_summary">Повысить стабильность подключения к сети</string>
@@ -3503,10 +3519,10 @@
     <string name="oneplus_earphone_mode">Режим наушников</string>
     <string name="oneplus_emergency_rescue_settings">Экстренная помощь</string>
     <string name="oneplus_emergency_rescue_settings_summary">Автоматически обратитесь за помощью, быстро нажимая кнопку питания</string>
-    <string name="oneplus_emergency_tap_power_gesture_tips">Доступно после изменения параметров КНОПКИ ПИТАНИЯ для функции Экстренная помощь</string>
-    <string name="oneplus_enroll_fingerprint_tips_summary">"1.Осуществите повторный ввод отпечатка пальца после каждой замены защитной пленки, чтобы обеспечить доступность отпечатка пальца
+    <string name="oneplus_emergency_tap_power_gesture_tips">Доступно после изменения параметров кнопки питания для функции экстренной помощи</string>
+    <string name="oneplus_enroll_fingerprint_tips_summary">"1. Регистрируйте отпечаток пальца повторно после каждой замены защитной пленки, чтобы убедиться в наличии сохраненного образца отпечатка
 
-2.При каждом процессе настройки вводите только информацию об одном отпечатке пальца"</string>
+2. В процессе настройки вводите только один отпечаток"</string>
     <string name="oneplus_enroll_fingerprint_tips_title">Подсказка для настройки отпечатка пальца</string>
     <string name="oneplus_enter_your_fingerprint">· Зарегистрировать отпечаток пальца</string>
     <string name="oneplus_erase_system_data">СТЕРЕТЬ СИСТЕМНЫЕ ДАННЫЕ</string>
@@ -3514,8 +3530,8 @@
     <string name="oneplus_erase_system_data_title">Стереть системные данные?</string>
     <string name="oneplus_error_mms_port_exceed">Значение порта MMS не может превышать 65535. Повторите попытку.</string>
     <string name="oneplus_error_port_exceed">Значение порта не может превышать 65535. Повторите попытку.</string>
-    <string name="oneplus_esportmode_introduction_summary">Активируйте Киберспортивный режим, включив переключатель в панели Игрового режима.</string>
-    <string name="oneplus_experience_improvement_programs">Программы улучшения впечатлений от использования</string>
+    <string name="oneplus_esportmode_introduction_summary">Чтобы активировать Киберспортивный режим, включите переключатель на панели Игрового режима.</string>
+    <string name="oneplus_experience_improvement_programs">Программы повышения качества обслуживания</string>
     <string name="oneplus_face_auto_unlock_while_screen_on_sumary">Разблокировать телефон распознаванием вашего лица сразу после включения экрана без проведения по экрану.</string>
     <string name="oneplus_face_auto_unlock_while_screen_on_title">Разблокировать автоматически после включения экрана</string>
     <string name="oneplus_face_setup_unlock_settings_summary">"Разблокировка распознаванием лица — это способ быстрой разблокировки телефона. Для использования телефона просто включите экран телефона и посмотрите на него.
@@ -3547,17 +3563,17 @@
     <string name="oneplus_finger_input_fail_tips">Ошибка ввода. Пожалуйста, отрегулируйте позицию и повторите попытку</string>
     <string name="oneplus_finger_print_anim_save">СОХРАНИТЬ</string>
     <string name="oneplus_fingerprint">Отпечаток пальца</string>
-    <string name="oneplus_fingerprint_acquired_imager_dirty">The fingerprint identification area is dirty. Please wipe it clean and try again.</string>
-    <string name="oneplus_fingerprint_acquired_partial">Partial fingerprint detected. Please completely cover the fingerprint identification area.</string>
-    <string name="oneplus_fingerprint_acquired_too_fast">Too fast to process your fingerprint. Please stay for a while when pressing.</string>
+    <string name="oneplus_fingerprint_acquired_imager_dirty">Область распознавания отпечатков пальца загрязнена. Протрите ее и повторите попытку.</string>
+    <string name="oneplus_fingerprint_acquired_partial">Обнаружен частичный отпечаток пальца. Приложите палец, чтобы полностью закрыть область распознавания отпечатков пальца.</string>
+    <string name="oneplus_fingerprint_acquired_too_fast">Алгоритм не успел обработать данные. Удерживайте палец дольше на контактной области.</string>
     <string name="oneplus_fingerprint_acquired_too_similar">Обнаружены данные похожего отпечатка пальца. Слегка переместите палец, чтобы зарегистрировать данные различных частей отпечатка.</string>
     <string name="oneplus_fingerprint_animation_effect_title">Эффект анимации отпечатка пальца</string>
     <string name="oneplus_fingerprint_delete_confirm_message">Вы хотите это удалить?</string>
-    <string name="oneplus_fingerprint_detail">Реквизиты</string>
+    <string name="oneplus_fingerprint_detail">Информация</string>
     <string name="oneplus_fingerprint_enrol_completed">Отпечаток пальца сохранен</string>
-    <string name="oneplus_fingerprint_enroll_summary">Нажмите и расположите палец так, чтобы он максимально закрывал область распознавания отпечатка пальца. Поднимите палец после того, как почувствуете вибрацию.</string>
-    <string name="oneplus_fingerprint_findsendor_summary">When the fingerprint pattern appears at the bottom of the screen, simply press with your finger on the fingerprint identification area to use the fingerprint function.</string>
-    <string name="oneplus_fingerprint_findsendor_tilte">How to use fingerprint</string>
+    <string name="oneplus_fingerprint_enroll_summary">Приложите палец к области распознавания отпечатков пальца, чтобы максимально закрыть ее, а после того, как почувствуете вибрацию, поднимите его</string>
+    <string name="oneplus_fingerprint_findsendor_summary">Когда в нижней части экрана появляется значок отпечатка пальца просто приложите палец к области распознавания отпечатков пальца, чтобы использовать эту функцию.</string>
+    <string name="oneplus_fingerprint_findsendor_tilte">Как пользоваться отпечатком пальца</string>
     <string name="oneplus_fingerprint_functional_declaration">Объявление функции отпечатков пальцев</string>
     <string name="oneplus_fingerprint_gesture_camera_summary">При открытом экране видоискателя выполните длительное нажатие на датчик отпечатков пальцев для того, чтобы сделать фото</string>
     <string name="oneplus_fingerprint_gesture_camera_title">Нажмите и держите, чтобы сделать фото</string>
@@ -3633,16 +3649,16 @@
     <string name="oneplus_gaming_mode">Игровой режим</string>
     <string name="oneplus_gaming_mode_add_apps">Добавить приложения для Игрового режима</string>
     <string name="oneplus_gaming_mode_close_automatic_brightness">Отключить автонастройку яркости</string>
-    <string name="oneplus_gaming_mode_close_automatic_brightness_summary">Зафиксировать яркость экрана, когда включен Игровой режим</string>
+    <string name="oneplus_gaming_mode_close_automatic_brightness_summary">Зафиксировать яркость экрана, когда включен игровой режим</string>
     <string name="oneplus_gaming_mode_game_battery_saver">Экономия энергии в играх</string>
     <string name="oneplus_gaming_mode_game_battery_saver_close">Отключено</string>
-    <string name="oneplus_gaming_mode_game_battery_saver_high">Высокое</string>
+    <string name="oneplus_gaming_mode_game_battery_saver_high">Высокий</string>
     <string name="oneplus_gaming_mode_game_battery_saver_high_summary">Разрешение экрана и FPS (кадры в секунду) во время игры будут ограничены</string>
-    <string name="oneplus_gaming_mode_game_battery_saver_light">Низкое</string>
+    <string name="oneplus_gaming_mode_game_battery_saver_light">Низкий</string>
     <string name="oneplus_gaming_mode_game_battery_saver_light_summary">Разрешение экрана во время игры будет ограничено</string>
     <string name="oneplus_gaming_mode_game_battery_saver_summary">Рекомендуется для игр, которым не требуется высокая плавность, например, казуальных</string>
     <string name="oneplus_gaming_mode_network_acceleration">Ускорение сети</string>
-    <string name="oneplus_gaming_mode_network_acceleration_summary">Ограничить сетевой трафик других приложений, когда включен Игровой режим</string>
+    <string name="oneplus_gaming_mode_network_acceleration_summary">Ограничить сетевой трафик других приложений, когда включен игровой режим</string>
     <string name="oneplus_gaming_mode_summary">Игровой режим будет автоматически включаться при запуске этих приложений и выключаться при их закрытии.</string>
     <string name="oneplus_gaming_toast_title">Можно отключить только один вариант.</string>
     <string name="oneplus_gesture_hidden_bar_summary">Переместите палец влево или вправо после проведения вверх для переключения приложений</string>
@@ -3662,7 +3678,7 @@
     <string name="oneplus_gesture_to_control_call_info">Автоматически управлять вызовами, поднося телефон к уху</string>
     <string name="oneplus_gesture_to_control_calls_summary">Автоматически принимать вызовы или переключаться на динамик телефона с помощью жеста</string>
     <string name="oneplus_gesture_to_control_calls_title">Поднять для ответа/переключения</string>
-    <string name="oneplus_gesture_to_route_audio_summary">Когда подключена Bluetooth-гарнитура, переключаться на динамик телефона при поднесении телефон к уху в течение 5 секунд после ответа на вызов</string>
+    <string name="oneplus_gesture_to_route_audio_summary">Когда подключена гарнитура Bluetooth, переключаться на динамик телефона при поднесении телефон к уху в течение 5 секунд после ответа на вызов</string>
     <string name="oneplus_gesture_to_route_audio_title">Поднять для переключения</string>
     <string name="oneplus_gestures_fast_entrance">Ярлыки</string>
     <string name="oneplus_gestures_open_apps">Открыть приложения</string>
@@ -3699,9 +3715,9 @@
     <string name="oneplus_hide_navkeys_summary">Добавьте кнопку, чтобы быстро скрывать или показывать панель навигации</string>
     <string name="oneplus_hide_notch_display_summary">Приложения не могут использовать вырез на экране</string>
     <string name="oneplus_hide_notch_display_title">Скрыть вырез на экране</string>
-    <string name="oneplus_how_to_use_fingerprint_summary">"Когда рисунок отпечатка пальца появляется в нижней части экрана, просто нажмите пальцем на область распознавания отпечатков пальцев для использования функции, чтобы включить экран и разблокировать телефон, осуществить покупку или выполнить вход в систему приложения. 
+    <string name="oneplus_how_to_use_fingerprint_summary">"Когда в нижней части экрана появляется значок отпечатка пальца просто приложите палец к области распознавания отпечатков пальца, чтобы использовать функцию для пробуждения и разблокирования телефона, авторизации покупок или входа в учетные записи приложений. 
 
-Примечание: Отпечаток пальца может быть менее безопасен чем сильный графический ключ или PIN-код"</string>
+Примечание. Обратите внимание, что отпечаток пальца может быть менее надежной защитой, чем сложный графический ключ или PIN-код"</string>
     <string name="oneplus_how_to_use_fingerprint_summary_no_note">Когда в нижней части экрана появляется значок отпечатка пальца просто приложите палец к области распознавания отпечатков пальца, чтобы использовать функцию для пробуждения и разблокирования телефона, авторизации покупок или входа в учетные записи приложений.</string>
     <string name="oneplus_hydrogen_version">Версия H₂OS</string>
     <string name="oneplus_ime_security_warning">%1$s может осуществлять сбор всего вводимого текста, включая такие личные данные, как пароли и номера банковских карт</string>
@@ -3713,7 +3729,7 @@
     <string name="oneplus_instrucitons">Инструкции</string>
     <string name="oneplus_intelligently_select_best_wifi">Интеллектуальный выбор лучшей сети Wi‑Fi</string>
     <string name="oneplus_intelligently_select_best_wifi_summary">Интеллектуальный выбор и подключение к лучшей сети Wi‑Fi с помощью обнаружения и анализа характеристик подключения сетей Wi‑Fi</string>
-    <string name="oneplus_intensely">Сильное</string>
+    <string name="oneplus_intensely">Strong</string>
     <string name="oneplus_is_turn_on_feature">Действительно включить эту функцию?</string>
     <string name="oneplus_is_turn_on_feature_summary">"Когда функция включена, периодически могут возникать следующие ситуации:
 1.Неправильное отображение некоторых областей экрана
@@ -3747,11 +3763,11 @@
     <string name="oneplus_lock_screen_notifs_show_alerting">Показывать только важные уведомления</string>
     <string name="oneplus_lock_screen_notifs_show_all">Показывать важные и другие уведомления</string>
     <string name="oneplus_lock_screen_notifs_title">Уведомления на экране блокировки</string>
-    <string name="oneplus_lockdown_settings_summary">Показывать опцию кнопки питания, с помощью которой можно выключить Smart Lock, разблокировку отпечатком пальца и оповещения на экране блокировки</string>
+    <string name="oneplus_lockdown_settings_summary">Показывать настройку кнопки питания, с помощью которой можно выключить умную блокировку, разблокировку отпечатком пальца и оповещения на экране блокировки</string>
     <string name="oneplus_lockpassword_choose_your_password_header_for_fingerprint">Установите пароль, чтобы использовать разблокировку распознаванием лица или отпечаток пальца</string>
     <string name="oneplus_lockpassword_choose_your_pattern_header_for_fingerprint">Установите узор, чтобы использовать разблокировку распознаванием лица или отпечаток пальца</string>
     <string name="oneplus_lockpassword_choose_your_pin_header_for_fingerprint">Установите PIN, чтобы использовать разблокировку распознаванием лица или отпечаток пальца</string>
-    <string name="oneplus_lockpattern_need_to_unlock_wrong">Попробуйте еще раз</string>
+    <string name="oneplus_lockpattern_need_to_unlock_wrong">Попробуйте снова</string>
     <string name="oneplus_lockpattern_too_many_failed_confirmation_attempts_header">Слишком много неверных попыток!</string>
     <string name="oneplus_lockscreen_settings_title">Параметры экрана блокировки</string>
     <string name="oneplus_manage_virtual_keyboard">Управление клавиатурами</string>
@@ -3770,13 +3786,13 @@
     <string name="oneplus_memc_video_extreme">Экстремальный</string>
     <string name="oneplus_memc_video_nosupport_extreme_summary">Для включения экстремального режима необходимо переключить разрешение на FHD+</string>
     <string name="oneplus_memc_video_nosupport_extreme_text">Переключение на разрешение QHD+, компенсация движущейся графики ограничена</string>
-    <string name="oneplus_memc_video_smooth">Плавность</string>
+    <string name="oneplus_memc_video_smooth">Плавный</string>
     <string name="oneplus_memc_video_theacme_summary">Частота кадров видео будет увеличена до 120 кадров/с, что обеспечит максимальное сглаживание изображения. Это может привести к увеличению энергопотребления. Разрешение QHD+ временно не поддерживается.</string>
     <string name="oneplus_memc_video_theacme_title">Чрезвычайно гладкое изображение</string>
     <string name="oneplus_mobile_device_name_title">Имя телефона</string>
     <string name="oneplus_mode_choose">Выбор режима</string>
-    <string name="oneplus_mode_settings">Настройки Alert slider</string>
-    <string name="oneplus_moderate">Среднее</string>
+    <string name="oneplus_mode_settings">Настройки бегунка оповещений</string>
+    <string name="oneplus_moderate">Средние</string>
     <string name="oneplus_more">Еще</string>
     <string name="oneplus_motion_sensor_settings_title">Системные жесты</string>
     <string name="oneplus_multi_app">Параллельные приложения</string>
@@ -3801,9 +3817,9 @@
     <string name="oneplus_night_mode_brightness_strong">Самый темный</string>
     <string name="oneplus_night_mode_color_temperature">Цветовая температура</string>
     <string name="oneplus_night_mode_enabled_op">Ночной режим</string>
-    <string name="oneplus_night_mode_enabled_op_summary">Включите Ночной режим вручную</string>
+    <string name="oneplus_night_mode_enabled_op_summary">Включите \"Ночной\" режим вручную</string>
     <string name="oneplus_night_mode_manual_open">Вручную</string>
-    <string name="oneplus_night_mode_open_tip">Сначала включите Ночной режим</string>
+    <string name="oneplus_night_mode_open_tip">Сначала включите режим \"Комфорт для глаз\"</string>
     <string name="oneplus_night_mode_sensor_summary">В зависимости от уровня освещенности вокруг, ночной режим автоматически настроит температуру цветов на экране так, чтобы снижать нагрузку на глаза и не нарушать сон.</string>
     <string name="oneplus_night_mode_strong">Самые теплые цвета</string>
     <string name="oneplus_night_mode_summary">Когда включен ночной режим, цвета на экране становятся мягче, чтобы снижать нагрузку на глаза и не нарушать сон. Рекомендуется включать этот режим по расписанию.</string>
@@ -3849,10 +3865,10 @@
     <string name="oneplus_notifications">Уведомления</string>
     <string name="oneplus_notifications_3rd_calls">Уведомления для вызовов из сторонних приложений</string>
     <string name="oneplus_notifications_3rd_calls_summary">Голосовые и видеовызовы из социальных приложений будут отображаться как уведомления</string>
-    <string name="oneplus_notifications_and_vibration">Звук уведомления и вибрация</string>
+    <string name="oneplus_notifications_and_vibration">Звуковой сигнал и вибрация уведомления</string>
     <string name="oneplus_notifications_free">Бесплатно</string>
     <string name="oneplus_notifications_meet">Знакомство</string>
-    <string name="oneplus_notifications_sound">Notification sound</string>
+    <string name="oneplus_notifications_sound">Звук уведомлений</string>
     <string name="oneplus_o2_contributors">Соавторы OxygenOS</string>
     <string name="oneplus_open_bed_time_mode_schedule_summary">Включать в соответствии с настраиваемым расписанием</string>
     <string name="oneplus_open_bed_time_mode_schedule_title">Расписание</string>
@@ -3897,13 +3913,13 @@
     <string name="oneplus_preference_settings_behavior">Предпочтения</string>
     <string name="oneplus_preference_settings_custom_time">Автопереключение</string>
     <string name="oneplus_preference_settings_manual_open">Статус</string>
-    <string name="oneplus_preference_settings_turn_off_time">До</string>
+    <string name="oneplus_preference_settings_turn_off_time">Кому</string>
     <string name="oneplus_preference_settings_turn_on">Включить функцию \"Не беспокоить\"</string>
     <string name="oneplus_preference_settings_turn_on_time">С</string>
     <string name="oneplus_prior_to_use_you_need_to">Перед использованием вам необходимо:</string>
     <string name="oneplus_privacy_policy">Политика конфиденциальности</string>
     <string name="oneplus_privacy_protection_title">Зашифрованное пространство</string>
-    <string name="oneplus_product_info_introduce">Информация об устройстве &amp; Гарантийная карта</string>
+    <string name="oneplus_product_info_introduce">Информация об устройстве и гарантийная карта</string>
     <string name="oneplus_product_info_summary">Гарантийная карта, список предустановленных</string>
     <string name="oneplus_proximity_summary_disable">Недоступно, так как черно-белый экран выключен</string>
     <string name="oneplus_quick_clipboard">Быстрый буфер обмена</string>
@@ -3915,10 +3931,10 @@
     <string name="oneplus_quick_launch_how_to_use_summary">"1. Продолжайте удерживать палец после разблокировки, чтобы открыть панель быстрого запуска
 2. Проведите, чтобы выбрать ярлык и отпустите палец для запуска"</string>
     <string name="oneplus_quick_launch_how_to_use_title">Использование быстрого запуска</string>
-    <string name="oneplus_quick_launch_summary">Нажмите и удерживайте область распознавания отпечатка пальца для запуска быстрого платежа или активации приложений</string>
+    <string name="oneplus_quick_launch_summary">Используйте длинное нажатие на области распознавания отпечатков пальцев для запуска быстрого платежа или активации приложений</string>
     <string name="oneplus_quick_launch_title">Быстрый запуск</string>
-    <string name="oneplus_quick_launch_toggle_summary">Нажмите и удерживайте область распознавания отпечатка пальца для запуска быстрого платежа или активации приложений когда телефон заблокирован</string>
-    <string name="oneplus_quick_launch_toggle_title">Включить Быстрый запуск</string>
+    <string name="oneplus_quick_launch_toggle_summary">Используйте длинное нажатие на области распознавания отпечатков пальцев для запуска быстрого платежа или активации приложений, когда телефон заблокирован</string>
+    <string name="oneplus_quick_launch_toggle_title">Включить быстрый запуск</string>
     <string name="oneplus_quick_reply">Быстрый ответ в альбомной ориентации</string>
     <string name="oneplus_quick_reply_content">Просматривайте уведомления и отвечайте на них, не прерывая игру или просмотр видео. Перетащите пузыри чата вниз, чтобы включить режим \"Не беспокоить\" до выхода из приложения.</string>
     <string name="oneplus_quick_reply_description">Отвечайте быстро на сообщения из WeChat, QQ или других приложений в альбомной ориентации</string>
@@ -3937,7 +3953,7 @@
     <string name="oneplus_quickpay_lock_swtch_summary">Нажмите и держите кнопку Home соответствующим пальцем для запуска Quick Pay, когда экран заблокирован.</string>
     <string name="oneplus_quickpay_lock_swtch_title">Quick Pay при заблокированном экране</string>
     <string name="oneplus_quickpay_select_default_way">Выберите способ оплаты по умолчанию</string>
-    <string name="oneplus_quickpay_unlock_swtch_summary">Нажмите и держите кнопку Home для запуска Quick Pay, когда экран разблокирован.</string>
+    <string name="oneplus_quickpay_unlock_swtch_summary">Используйте длинное нажатие кнопки начального экрана для запуска быстрой оплаты, когда экран разблокирован</string>
     <string name="oneplus_quickpay_unlock_swtch_title">Quick Pay при разблокированном экране</string>
     <string name="oneplus_quickpay_way_alipay_qrcode">QR-код для Alipay</string>
     <string name="oneplus_quickpay_way_alipay_scanning">Сканер Alipay</string>
@@ -3964,7 +3980,7 @@
     <string name="oneplus_reading_mode_mono">Одноцветный эффект</string>
     <string name="oneplus_reading_mode_select_effect">Выбор эффекта</string>
     <string name="oneplus_reading_mode_select_effect_for_app">Выбор эффекта для \"%1$s\"</string>
-    <string name="oneplus_reading_mode_summary">Режим чтения автоматически настроит температуру цветов на экране в зависимости от окружающего света и откалибрует его так, чтобы было удобно читать тексты.</string>
+    <string name="oneplus_reading_mode_summary">В зависимости от уровня освещенности вокруг, режим чтения автоматически настроит температуру цветов на экране и откалибрует его так, чтобы было удобно читать тексты.</string>
     <string name="oneplus_reading_mode_summary_no_sensor">Режим чтения оптимизирует отображение текста, позволяя читать также комфортно, как и на электронной книге.</string>
     <string name="oneplus_reading_mode_tips">Одноцветный эффект позволяет лучше сконцентрироваться на словах, а цветной эффект обеспечивает более высокий комфорт при чтении</string>
     <string name="oneplus_reading_mode_turn_on">Включить режим чтения</string>
@@ -3993,17 +4009,17 @@
     <string name="oneplus_scene_mode">СЦЕНЫ</string>
     <string name="oneplus_schedule">Расписание</string>
     <string name="oneplus_screen">ЭКРАН</string>
-    <string name="oneplus_screen_better_cold">Холоднее</string>
+    <string name="oneplus_screen_better_cold">Холодно</string>
     <string name="oneplus_screen_better_nature">Естественный</string>
     <string name="oneplus_screen_better_warm">Теплее</string>
     <string name="oneplus_screen_color_mode_auto">Адаптивные цветовые профили</string>
     <string name="oneplus_screen_color_mode_default">Display-P3 (по умолчанию)</string>
     <string name="oneplus_screen_color_mode_defined">Пользовательский цвет</string>
     <string name="oneplus_screen_color_mode_ntsc">Расширенная цветовая гамма AMOLED</string>
-    <string name="oneplus_screen_color_mode_reading_mode_on_summary">Недоступно, т. к. включен режим чтения</string>
+    <string name="oneplus_screen_color_mode_reading_mode_on_summary">Недоступно, так как включен режим чтения</string>
     <string name="oneplus_screen_color_mode_soft">Мягкий</string>
     <string name="oneplus_screen_color_mode_title">Калибровка экрана</string>
-    <string name="oneplus_screen_color_mode_title_summary">Недоступно, так как включен ночной режим</string>
+    <string name="oneplus_screen_color_mode_title_summary">Недоступно, так как включен режим \"Комфорт для глаз\"</string>
     <string name="oneplus_screen_features_not_available_toast">При включенной функции, такие функции как калибровка экрана не будут доступны</string>
     <string name="oneplus_screen_refresh_rate">Частота обновления</string>
     <string name="oneplus_screen_refresh_rate_60hz_summary">Сниженная плавность и более длительная работа от аккумулятора</string>
@@ -4016,11 +4032,11 @@
     <string name="oneplus_screen_resolution_adjust_intelligent_switch_summary">Автоматическое переключение на подходящее разрешение</string>
     <string name="oneplus_screen_resolution_adjust_other_summary">Максимальная четкость, увеличенный расход заряда (3120×1440)</string>
     <string name="oneplus_screen_resolution_adjust_other_summary_19811">Максимальная четкость, увеличенный расход заряда (3168×1440)</string>
-    <string name="oneplus_search_keyword_about_settings">device name, android version, build number, model, CPU, storage, RAM, ROM, camera, pixel, screen, Verification, Legal information, Warranty card, preinstalled list, Award</string>
+    <string name="oneplus_search_keyword_about_settings">Название устройства, версия Android, номер сборки, модель, ЦП, память телефона, ОЗУ, ПЗУ, камера, пиксель, экран, проверка, юридическая информация, гарантийная карт, список предустановленных, награда</string>
     <string name="oneplus_search_keyword_accent_color">цвет</string>
     <string name="oneplus_search_keyword_app_lock">блокировка,PIN-код,пароли</string>
     <string name="oneplus_search_keyword_connected_device_manager">диспетчер подключенных устройств, устройство</string>
-    <string name="oneplus_search_keyword_data_usage_control">контроль использования данных</string>
+    <string name="oneplus_search_keyword_data_usage_control">Контроль использования данных</string>
     <string name="oneplus_search_keyword_default_launcher_app">программа запуска, по умолчанию, приложения, приложение домашнего экрана по умолчанию, приложение домашнего экрана</string>
     <string name="oneplus_search_keyword_discoverable_device">может быть обнаружено</string>
     <string name="oneplus_search_keyword_double_click_light_screen">экран,активировать</string>
@@ -4035,7 +4051,7 @@
     <string name="oneplus_search_keyword_gesture_to_control_calls">ответить,переключить</string>
     <string name="oneplus_search_keyword_hide_navkeys">скрыть панель навигации</string>
     <string name="oneplus_search_keyword_home_key">главная</string>
-    <string name="oneplus_search_keyword_icon_manager">менеджер значков</string>
+    <string name="oneplus_search_keyword_icon_manager">Менеджер значков</string>
     <string name="oneplus_search_keyword_incoming_call_vibrate_mode">вибрация</string>
     <string name="oneplus_search_keyword_input_keyboard">ввод,клавиатура</string>
     <string name="oneplus_search_keyword_led_settings">цвет, свет, LED</string>
@@ -4054,27 +4070,30 @@
     <string name="oneplus_search_keyword_sounds_and_notifications_interruptions">не беспокоить, прервать, прерывание, разрыв, режим</string>
     <string name="oneplus_search_keyword_swap_navkeys">поменять кнопки местами</string>
     <string name="oneplus_search_keyword_switch">передача,перенос данных</string>
-    <string name="oneplus_search_keyword_theme_settings">ПЕРСОНАЛИЗАЦИЯ ЭКРАНА БЛОКИРОВКИ, Обои, Стиль часов, Анимация отпечатка пальца, Horizon light, ПЕРСОНАЛИЗАЦИЯ СИСТЕМЫ, Цвет подсветки, Форма, Шрифт, Оттенок, Пакет значков, Иллюминация, Темная с нюансами, Яркие оттенки</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl">ПЕРСОНАЛИЗАЦИЯ ЭКРАНА БЛОКИРОВКИ, Обои, Стиль часов, Анимация отпечатка пальца, Horizon Light, ПЕРСОНАЛИЗАЦИЯ СИСТЕМЫ, Цвет подсветки, Форма, Шрифт, Оттенок, Пакет значков, Иллюминация, Темная с нюансами, Яркие оттенки, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light">ПЕРСОНАЛИЗАЦИЯ ЭКРАНА БЛОКИРОВКИ, Обои, Стиль часов, Анимация отпечатка пальца, ПЕРСОНАЛИЗАЦИЯ СИСТЕМЫ, Цвет подсветки, Форма, Шрифт, Оттенок, Пакет значков, Иллюминация, Темная с нюансами, Яркие оттенки</string>
+    <string name="oneplus_search_keyword_theme_settings">Персонализация экрана блокировки, Обои, Стиль часов, Анимация отпечатка пальца, Horizon Light, Персонализация системы, Цвет подсветки, Форма, Шрифт, Оттенок, Пакет значков, Иллюминация, Темная с нюансами, Яркие оттенки</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">Персонализация экрана блокировки, Обои, Стиль часов, Анимация отпечатка пальца, Horizon Light, Персонализация системы, Цвет подсветки, Форма, Шрифт, Оттенок, Пакет значков, Иллюминация, Темная с нюансами, Яркие оттенки, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Персонализация экрана блокировки, Обои, Стиль часов, Анимация отпечатка пальца, Horizon Light, Персонализация системы, Цвет подсветки, Форма, Шрифт, Оттенок, Пакет значков, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_new">Персонализация экрана блокировки, Обои, Стиль часов, Анимация отпечатка пальца, Horizon Light, Персонализация системы, Цвет подсветки, Форма, Шрифт, Оттенок, Пакет значков</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light">Персонализация экрана блокировки, Обои, Стиль часов, Анимация отпечатка пальца, Персонализация системы, Цвет подсветки, Форма, Шрифт, Оттенок, Пакет значков, Иллюминация, Темная с нюансами, Яркие оттенки</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Персонализация экрана блокировки, Обои, Стиль часов, Анимация отпечатка пальца, Персонализация системы, Цвет подсветки, Форма, Шрифт, Оттенок, Пакет значков</string>
     <string name="oneplus_search_keyword_three_screenshots">скриншот</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">уведомления,опыт,программа,улучшение</string>
     <string name="oneplus_search_keyword_wallpaper_settings">обои, экран блокировки</string>
     <string name="oneplus_search_keyword_wifi_direct">прямое,P2P,подключение</string>
     <string name="oneplus_search_keyword_wifi_display_settings_screen">передача</string>
-    <string name="oneplus_security_dashboard_summary">Отпечаток пальца, Разблокировка распознаванием лица, местоположение</string>
+    <string name="oneplus_security_dashboard_summary">Отпечаток пальца, разблокировка распознаванием лица, местоположение</string>
     <string name="oneplus_security_dashboard_summary_no_faceunlock">Отпечаток пальца, местоположение</string>
     <string name="oneplus_security_detection_summary">Проверка безопасности приложений из неизвестных источников</string>
     <string name="oneplus_security_detection_title">Проверка безопасности OnePlus</string>
     <string name="oneplus_security_lock_settings_summary">Параметры разблокировки, служба местоположения, блокировщик приложения</string>
     <string name="oneplus_security_lock_settings_title">Безопасность и конфиденциальность</string>
     <string name="oneplus_security_settings_fingerprint_enroll_error_dialog_title">Ошибка настройки</string>
-    <string name="oneplus_security_settings_fingerprint_enroll_introduction_message">"Нажмите на область распознавания отпечатка пальца для разблокировки телефона, осуществления покупок или для входа в систему приложений. 
+    <string name="oneplus_security_settings_fingerprint_enroll_introduction_message">"Приложите палец к области распознавания отпечатков пальца для разблокирования телефона, подтверждения платежей и входа в приложения. 
 
-Примечание: 
-1.Отпечаток пальца может быть менее безопасен чем сильный графический ключ или PIN-код.
-2.Осуществите повторный ввод отпечатка пальца после каждой замены защитной пленки, чтобы обеспечить доступность отпечатка пальца."</string>
+Примечание. 
+1. Ваш отпечаток пальца может быть менее надежной защитой, чем сложный графический ключ или PIN-код.
+2. Регистрируйте отпечаток пальца повторно после каждой замены защитной пленки, чтобы убедиться в наличии сохраненного образца отпечатка."</string>
     <string name="oneplus_security_settings_fingerprint_exists_dialog_message">Этот отпечаток уже зарегистрирован, попробуйте другой палец.</string>
     <string name="oneplus_security_settings_fingerprint_toggle_category_title">Показывать значок отпечатка пальца на черно-белом экране</string>
     <string name="oneplus_security_settings_fingerprint_toggle_category_title_for_always_on">НАСТРОЙКИ ЗНАЧКА ОТПЕЧАТКА ПАЛЬЦА</string>
@@ -4096,8 +4115,8 @@
     <string name="oneplus_set_time">Ночной режим по расписанию</string>
     <string name="oneplus_setting_ringtone">Установить мелодию звонка</string>
     <string name="oneplus_setting_sim_ringtone_switch">Установить мелодию для каждой SIM-карты</string>
-    <string name="oneplus_settings_lab_feature_boost_summary">В зависимости от ежедневного использования функция интеллектуального ускорения позволяет на полную использовать RAM телефонов OnePlus, увеличивая производительность при загрузке приложений и игр.</string>
-    <string name="oneplus_settings_lab_feature_boost_title">Интеллектуальное ускорение</string>
+    <string name="oneplus_settings_lab_feature_boost_summary">С учетом статистики ежедневного использования алгоритм умного ускорения оптимизирует ресурсы ОЗУ на телефоне OnePlus для ускоренного запуска приложений и игр.</string>
+    <string name="oneplus_settings_lab_feature_boost_title">Умное усиление</string>
     <string name="oneplus_settings_refresh_rate_settings_120">НАСТРОЙКИ 120 Гц</string>
     <string name="oneplus_settings_refresh_rate_settings_90">НАСТРОЙКИ 90 Гц</string>
     <string name="oneplus_settings_refresh_rate_settings_summary">Автоматическое переключение на подходящюю частоту обновления без расхода заряда</string>
@@ -4105,7 +4124,7 @@
     <string name="oneplus_setup_an_alternate_way_to_0unlock">· Определить альтернативный способ разблокировки экрана</string>
     <string name="oneplus_share_this_wifi">Увеличить покрытие сети Wi-Fi</string>
     <string name="oneplus_share_wifi_title">Раздача Wi‑Fi</string>
-    <string name="oneplus_shielding_notification">Блокировать</string>
+    <string name="oneplus_shielding_notification">Блокировка</string>
     <string name="oneplus_shielding_notification_summary">Уведомления будут заблокированы (за исключением вызовов и сигналов будильника)</string>
     <string name="oneplus_shortcuts_add">Добавить ярлыки</string>
     <string name="oneplus_shortcuts_preview">Предпросмотр ярлыков</string>
@@ -4120,16 +4139,17 @@
     <string name="oneplus_silent_mode_on">Бесшумный режим включен</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Вызовы и уведомления, кроме сигналов будильника, будут без звука</string>
     <string name="oneplus_silent_mode_summary">Вызовы и уведомления, кроме сигналов будильника, будут без звука</string>
+    <string name="oneplus_silent_notifications_status_bar">Скрывать уведомления без звукового сигнала в строке состояния</string>
     <string name="oneplus_sim1_ringtone_switch">SIM-карта 1</string>
     <string name="oneplus_sim2_ringtone_switch">SIM-карта 2</string>
-    <string name="oneplus_simcard_title">SIM</string>
+    <string name="oneplus_simcard_title">Карта</string>
     <string name="oneplus_sla_down_load_app_summary">Ускорение загрузки недоступно, пока включены точка доступа или Wi‑Fi Direct</string>
     <string name="oneplus_sleep_standby_summary">Оптимизировать работу батареи (например, путем отключения сетевых соединений) когда вы спите. Это может привести к тому, что приложения не смогут своевременно получать уведомления.</string>
     <string name="oneplus_sleep_standby_title">Оптимизация режима сна</string>
     <string name="oneplus_smart_background_management_title">Агрессивный режим Doze и спящий режим приложений</string>
     <string name="oneplus_smart_wifi_connection">интеллектуальное подключение Wi‑Fi</string>
     <string name="oneplus_sms">SMS</string>
-    <string name="oneplus_sms_and_vibration">Мелодия SMS и вибрация</string>
+    <string name="oneplus_sms_and_vibration">Мелодия и вибрация SMS</string>
     <string name="oneplus_snooze_options_title">Откладывать уведомления из шторки уведомлений</string>
     <string name="oneplus_sound_and_vibrate">Звуки и вибрация</string>
     <string name="oneplus_sound_effects_and_modes">Звуковые эффекты и режимы</string>
@@ -4137,7 +4157,7 @@
     <string name="oneplus_sound_tuner">Dolby Atmos</string>
     <string name="oneplus_status_summary">Номер телефона, сигнал, и т.д.</string>
     <string name="oneplus_stop_run">Принудительная остановка</string>
-    <string name="oneplus_storage">ХРАНИЛИЩЕ</string>
+    <string name="oneplus_storage">STORAGE</string>
     <string name="oneplus_sunrise_sunset">Автоматически включать от заката до восхода</string>
     <string name="oneplus_support_apps">ПОДДЕРЖИВАЕМЫЕ ПРИЛОЖЕНИЯ</string>
     <string name="oneplus_support_summary">Советы и часто задаваемые вопросы по использованию устройства</string>
@@ -4146,7 +4166,7 @@
     <string name="oneplus_suspension_notice">Во всплывающем окне</string>
     <string name="oneplus_suspension_notice_summary">Разрешить приложениям отображать уведомления во всплывающем окне</string>
     <string name="oneplus_switch">OnePlus Switch</string>
-    <string name="oneplus_switch_resolution_kill_process_confirm">Переключить</string>
+    <string name="oneplus_switch_resolution_kill_process_confirm">Switch</string>
     <string name="oneplus_switch_resolution_kill_process_tips">Переключение разрешения экрана может привести к закрытию некоторых фоновых приложений. Выполнить переключение?</string>
     <string name="oneplus_switch_screen_lock_type">Переключение типа блокировки экрана, подождите...</string>
     <string name="oneplus_system_data_summary">Включая данные учетной записи, контакты и данные приложения</string>
@@ -4160,25 +4180,25 @@
     <string name="oneplus_system_stability_title">Программа улучшения стабильности системы</string>
     <string name="oneplus_system_vibrate">Системная вибрация</string>
     <string name="oneplus_theme_accent_color">Цвет подсветки</string>
-    <string name="oneplus_theme_accent_color_customization">ИНДИВИДУАЛЬНАЯ НАСТРОЙКА</string>
+    <string name="oneplus_theme_accent_color_customization">ПЕРСОНАЛИЗАЦИЯ</string>
     <string name="oneplus_theme_accent_color_presetcolor">ПРЕДУСТАНОВЛЕННЫЙ ЦВЕТ</string>
-    <string name="oneplus_theme_accent_color_select">ВЫБОР ЦВЕТА ПОДСВЕТКИ</string>
+    <string name="oneplus_theme_accent_color_select">Выбрать цвет подсветки</string>
     <string name="oneplus_theme_apply_summary">После применения темы параметры персонализации будут перезаписаны</string>
     <string name="oneplus_theme_apply_title">Применить эту тему?</string>
     <string name="oneplus_theme_clock">Стиль часов</string>
     <string name="oneplus_theme_clock_snake_action">ВКЛЮЧИТЬ ЧЕРНО-БЕЛЫЙ ЭКРАН</string>
     <string name="oneplus_theme_clock_snake_tip">Эта функция будет доступна при включенном черно-белом экране</string>
     <string name="oneplus_theme_colorpicker_colorvalue">КОД ЦВЕТА</string>
-    <string name="oneplus_theme_drop_summary">Отменить изменения?</string>
+    <string name="oneplus_theme_drop_summary">Сбросить изменения?</string>
     <string name="oneplus_theme_drop_title">Выход из редактора</string>
     <string name="oneplus_theme_entrance_summary">Обои, цвет подсветки, шрифт, оттенок</string>
-    <string name="oneplus_theme_entrance_title">Индивидуальная настройка</string>
+    <string name="oneplus_theme_entrance_title">Персонализация</string>
     <string name="oneplus_theme_fingerprint">Анимация отпечатка пальца</string>
     <string name="oneplus_theme_fingerprint_snake_action">ВКЛЮЧИТЬ ОТПЕЧАТОК ПАЛЬЦА</string>
     <string name="oneplus_theme_fingerprint_snake_tip">Эта функция будет доступна при включенном распознавании отпечатка пальца</string>
     <string name="oneplus_theme_font">Шрифт</string>
     <string name="oneplus_theme_font_content">Лучшие технологии в мире бок о бок с вами</string>
-    <string name="oneplus_theme_icon_pack">Пакет значков</string>
+    <string name="oneplus_theme_icon_pack">Пакеты значков</string>
     <string name="oneplus_theme_lock_screen_customization">ПЕРСОНАЛИЗАЦИЯ ЭКРАНА БЛОКИРОВКИ</string>
     <string name="oneplus_theme_preset">Предустановленная тема</string>
     <string name="oneplus_theme_preset_color">Яркие оттенки</string>
@@ -4189,39 +4209,39 @@
     <string name="oneplus_theme_preset_summary_tmp">Предустановленные темы содержат большое количество обоев, цветов подсветки, оттенков и т. д.</string>
     <string name="oneplus_theme_shape">Значки системы</string>
     <string name="oneplus_theme_shape_effect_round">Круглая</string>
-    <string name="oneplus_theme_shape_effect_round_rectangle">Закругленная квадратная</string>
+    <string name="oneplus_theme_shape_effect_round_rectangle">Прямоугольник с закруглениями</string>
     <string name="oneplus_theme_shape_effect_square">Квадратная</string>
     <string name="oneplus_theme_shape_effect_teardrop">Капля</string>
     <string name="oneplus_theme_shape_effect_title">Выберите форму</string>
     <string name="oneplus_theme_system_customization">ПЕРСОНАЛИЗАЦИЯ СИСТЕМЫ</string>
     <string name="oneplus_theme_tone">Оттенок</string>
     <string name="oneplus_theme_tone_effect_color">Цветная тема</string>
-    <string name="oneplus_theme_tone_effect_dark">Темная</string>
+    <string name="oneplus_theme_tone_effect_dark">Темный</string>
     <string name="oneplus_theme_tone_effect_light">Легкое</string>
     <string name="oneplus_theme_tone_effect_title">Выберите тон</string>
     <string name="oneplus_theme_wallpaper">Обои</string>
     <string name="oneplus_three_screenshots_enable_summary">Чтобы сделать скриншот, проведите тремя пальцами по экрану</string>
     <string name="oneplus_three_screenshots_enable_title">Скриншот тремя пальцами</string>
-    <string name="oneplus_timepower_power_off_title">Установить время отключения питания</string>
+    <string name="oneplus_timepower_power_off_title">Установить время выключения питания</string>
     <string name="oneplus_timepower_power_on_title">Установить время включения питания</string>
     <string name="oneplus_timer_shutdown_disable_summary">Для разблокировки этой функции отключите запрос пароля при включении</string>
     <string name="oneplus_timer_shutdown_summary">Телефон автоматически выключится в %d s. Подтвердите немедленное выключение.</string>
     <string name="oneplus_to_select_assistant_app_dialog">Выберите приложение-ассистент, которое необходимо активировать</string>
-    <string name="oneplus_tools_quicklaunch_summary">Игровой режим, быстрый запуск, параллельные приложения</string>
-    <string name="oneplus_tools_quicklaunch_summary_no_gamingmode">Быстрый запуск, параллельные приложения</string>
+    <string name="oneplus_tools_quicklaunch_summary">Игровой режим, быстрый запуск, параллельные приложения, блокировщик приложений</string>
+    <string name="oneplus_tools_quicklaunch_summary_no_gamingmode">Быстрый запуск, параллельные приложения, блокировщик приложений</string>
     <string name="oneplus_tools_summary">Игровой режим, блокировщик приложений, параллельные приложения</string>
     <string name="oneplus_tools_summary_U30">Игровой режим, карманный режим, запланированное включение/выключение питания</string>
     <string name="oneplus_tools_summary_no_gamingmode">Блокировка приложений, параллельные приложения</string>
     <string name="oneplus_tools_title">Утилиты</string>
     <string name="oneplus_top_level_accounts_summary">Учетная запись OnePlus, другие учетные записи</string>
     <string name="oneplus_top_level_apps_and_notifs_summary">Приложения по умолчанию, уведомления и разрешения</string>
-    <string name="oneplus_top_level_buttons_and_gestures_summary">Alert Slider, панель навигации, жесты</string>
+    <string name="oneplus_top_level_buttons_and_gestures_summary">Бегунок оповещения, панель навигации, жесты</string>
     <string name="oneplus_top_level_cloud_h2_summary">Синхронизация данных с облаком, поиск телефона</string>
     <string name="oneplus_top_level_cloud_o2_summary">Синхронизация данных с облаком</string>
     <string name="oneplus_top_level_connected_summary">NFC, трансляция, оплата касанием</string>
-    <string name="oneplus_top_level_display_summary">Status bar, ambient display, Vision comfort, reading mode</string>
+    <string name="oneplus_top_level_display_summary">Строка состояния, черно-белый экран, комфорт для глаз, режим чтения</string>
     <string name="oneplus_top_level_network_summary">SIM-карты, мобильная сеть, использование трафика, точка доступа</string>
-    <string name="oneplus_top_level_privacy_summary">Разрешения, личные данные</string>
+    <string name="oneplus_top_level_privacy_summary">Разрешения, персональные данные</string>
     <string name="oneplus_top_level_security_dashboard_summary">Отпечаток пальца, разблокировка распознаванием лица, экстренная помощь</string>
     <string name="oneplus_top_level_security_summary">Отпечаток пальца, разблокировка распознаванием лица, экстренная помощь</string>
     <string name="oneplus_top_level_sound_summary">Не беспокоить, режим наушников, мелодия звонка</string>
@@ -4230,7 +4250,7 @@
     <string name="oneplus_touch_vibrate">Вибрация при касании</string>
     <string name="oneplus_true_color_mode_summary">Автоматически адаптировать цвет экрана в зависимости от окружающего освещения для обеспечения приятного изображения в различных условиях</string>
     <string name="oneplus_true_color_mode_title">Комфортный тон</string>
-    <string name="oneplus_turn_off_time">До</string>
+    <string name="oneplus_turn_off_time">Кому</string>
     <string name="oneplus_turn_on_feature_cancel">ОТМЕНА</string>
     <string name="oneplus_turn_on_feature_ok">ВКЛЮЧИТЬ</string>
     <string name="oneplus_turn_on_time">С</string>
@@ -4269,7 +4289,7 @@
     <string name="oneplus_volume_keys_adjust_ringtones">Громкость мелодии</string>
     <string name="oneplus_weak_text_reminding">Только текст</string>
     <string name="oneplus_weak_text_reminding_summary">Разрешить приложениям отображать уведомления во всплывающем окне</string>
-    <string name="oneplus_wellbeing_grayscale_open_tip">Ночной режим недоступен в настоящее время, т. к. включена функция \"Оттенки серого\"</string>
+    <string name="oneplus_wellbeing_grayscale_open_tip">Режим \"Комфорт для глаз\" недоступен в настоящее время, так как включена функция \"Оттенки серого\"</string>
     <string name="oneplus_wifi_6_standard_hotspot_cancel">ОТМЕНА</string>
     <string name="oneplus_wifi_6_standard_hotspot_enable">ВКЛЮЧИТЬ</string>
     <string name="oneplus_wifi_6_standard_hotspot_title">Точка доступа стандарта Wi‑Fi 6</string>
@@ -4296,11 +4316,11 @@
     <string name="oneplus_zen_mode_duration_summary_always_prompt">Спрашивать каждый раз (если не включено автоматически)</string>
     <string name="oneplus_zen_mode_duration_summary_forever">До выключения вами (если не включено автоматически)</string>
     <string name="oneplus_zen_mode_duration_summary_time_minutes">%d мин (если не включено автоматически)</string>
-    <string name="oneplus_zen_mode_footer_info">Когда включен режим «Не беспокоить», звук и вибрация будут отключены, за исключением разрешенных вами выше случаев</string>
-    <string name="oneplus_zen_mode_mode_manual_switch_summary">Режим «Не беспокоить» можно включить вручную</string>
+    <string name="oneplus_zen_mode_footer_info">Когда включен режим \"Не беспокоить\", звук и вибрация будут отключены, за исключением разрешенных вами выше случаев</string>
+    <string name="oneplus_zen_mode_mode_manual_switch_summary">Режим \"Не беспокоить\" можно включить вручную</string>
     <string name="oneplus_zen_mode_settings">Поведение</string>
     <string name="oneplus_zen_mode_switch">Включить функцию \"Не беспокоить\"</string>
-    <string name="oneplus_zen_mode_walloftext">Когда включен режим «Не беспокоить», звук и вибрация будут отключены, за исключением разрешенных вами ниже случаев</string>
+    <string name="oneplus_zen_mode_walloftext">Когда включен режим \"Не беспокоить\", звук и вибрация будут отключены, за исключением разрешенных вами ниже случаев</string>
     <string name="oneplus_zen_sound_title">Другие звуки</string>
     <string name="onplus_hardware_version_info">Версия оборудования</string>
     <string name="onplus_software_version_info">Версия программного обеспечения</string>
@@ -4308,16 +4328,14 @@
     <string name="op_advanced_settings">Расширенный</string>
     <string name="op_android_mode_cannot_change_color_accent">В стандартной теме может быть только системная цветовая схема</string>
     <string name="op_aod_parsons_info_button">ОК</string>
-    <string name="op_aod_parsons_info_message">"Every 24 hours, a masterpiece is created.
-
-Insight, designed together by OnePlus &amp; students from Parsons School of Design, transforms time into a visible color bar. The device's usage data drives the pattern. Every time the phone is unlocked, it leaves a groove on the bar. The longer is the utility time; the wider is the groove and vice versa. Through the insight of those grooves, take a peek at your digital life."</string>
-    <string name="op_aod_parsons_info_title">Insight</string>
+    <string name="op_aod_parsons_info_message">"При каждом запуске этого сервиса рождается новый шедевр.
+Сервис \"Аналитика\", разработанный OnePlus совместно со студентами Parsons School of Design, представляет время в виде цветной шкалы, на которой отображаются данные об использовании устройства. При каждом разблокировании телефона на шкале появляется полоска. Чем дольше телефон используется, тем шире полоска и наоборот. По этим полоскам можно судить о том, какую цифровую жизнь ведет пользователь."</string>
     <string name="op_app_already_uninstalled">Удалено</string>
     <string name="op_audio_settings">Настройка аудио</string>
     <string name="op_auto_power_saving">Автоматическое энергосбережение</string>
     <string name="op_auto_power_saving_summary">Автоматическое переключение на подходящее разрешение без расхода заряда</string>
-    <string name="op_battery_saver_description">Battery Saver turns off or restricts background activity, some visual effects &amp; other high-power features to extend battery life.</string>
-    <string name="op_battery_suggestion_summary">Turn on Adaptive Battery</string>
+    <string name="op_battery_saver_description">В режиме экономии энергии с целью продления времени работы от батареи отключаются или ограничиваются фоновые процессы, некоторые визуальные эффекты и другие энергозатратные функции.</string>
+    <string name="op_battery_suggestion_summary">Включить режим сна</string>
     <string name="op_cast_description">Показ экрана и воспроизведение звука телефона на другом устройстве, например телевизоре</string>
     <string name="op_cast_nearby">Устройства поблизости</string>
     <string name="op_cast_no_devices">Не найдено устройств поблизости</string>
@@ -4326,7 +4344,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_charging_Station_mute_notifications">Отключить звук уведомлений</string>
     <string name="op_charging_footer_text">Вы будете получать уведомления о расположенных поблизости станциях зарядки в аэропортах или на мероприятиях OnePlus, таких как Pop-ups.</string>
     <string name="op_charging_optimization">Оптимизированная зарядка</string>
-    <string name="op_charging_optimization_summary">Оптимизация процесса зарядки в соответствии с вашими привычками использования</string>
+    <string name="op_charging_optimization_summary">Оптимизируйте процесс зарядки с учетом своих привычек использования, чтобы снизить нагрузку на батарею и увеличить время работы от нее</string>
     <string name="op_charging_station">Станции зарядки поблизости</string>
     <string name="op_charging_station_no_station">Поблизости нет станций зарядки</string>
     <string name="op_charging_station_summary">Уведомлять, когда поблизости есть станция зарядки</string>
@@ -4345,16 +4363,16 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_cloud_service_title">Облачная служба</string>
     <string name="op_confirm_enable_oem_unlock_text">ПРЕДУПРЕЖДЕНИЕ: Функции защиты устройства и проверки, например, платеж с помощью отпечатка пальца и расширенный ключ DRM могут не работать при разблокированном OEM.</string>
     <string name="op_control_accent_color_amber_label">Янтарный</string>
-    <string name="op_control_accent_color_gin_label">Sloe gin fizz</string>
+    <string name="op_control_accent_color_gin_label">Сливовый коктейль</string>
     <string name="op_control_accent_color_indigo_label">Индиго</string>
     <string name="op_control_accent_color_teal_label">Бирюзовый</string>
     <string name="op_custom_color_value">Значение цвета</string>
     <string name="op_custom_color_value_edit">Введите значение цвета</string>
     <string name="op_custom_color_value_invalid">Неверное значение цвета</string>
-    <string name="op_dark_mode_title">Темная</string>
+    <string name="op_dark_mode_title">Темный</string>
     <string name="op_data_vowlan_enable_summary">По возможности использовать вызовы через Wi-Fi</string>
     <string name="op_default_apps_summary">Домашний экран, браузер</string>
-    <string name="op_default_luncher_title">Приложение домашнего экрана</string>
+    <string name="op_default_luncher_title">Приложение начального экрана</string>
     <string name="op_display_advanced_settings">Расширенный</string>
     <string name="op_display_advanced_settings_summary_1">Калибровка экрана, разрешение, частота обновления, настройки выреза</string>
     <string name="op_display_advanced_settings_summary_2">Калибровка экрана, частота обновления, настройки выреза</string>
@@ -4383,9 +4401,15 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
  В процессе идентификации отпечатка пальца яркость экрана увеличится и цветовой профиль временно будет изменен."</string>
     <string name="op_fragment">Короткий</string>
     <string name="op_gamespace">Игровое пространство</string>
-    <string name="op_high_power_app_manager">Диспетчер энергоемких приложений</string>
+    <string name="op_global_drak_mode_apps_manage">Управление приложениями в темном режиме</string>
+    <string name="op_global_drak_mode_full_support_list">Поддерживаемые приложения</string>
+    <string name="op_global_drak_mode_not_full_support_list">Неподдерживаемые приложения</string>
+    <string name="op_global_drak_mode_support_description">Неподдерживаемые приложения в темном режиме могут работать неправильно</string>
+    <string name="op_gps_off_warn_msg">Сначала включите службу определения местоположения</string>
+    <string name="op_high_power_app_manager">Приложения, использующие много заряда батареи</string>
+    <string name="op_history_toggled_on_summary">Здесь будут отображаться последние уведомления</string>
     <string name="op_keep_location_services">Для поиска и отслеживания станций зарядки поблизости не выключайте службу определения местоположения</string>
-    <string name="op_light_mode_title">Светлая</string>
+    <string name="op_light_mode_title">Светлый</string>
     <string name="op_linked_launch_summary">Приложениями можно управлять в фоновом режиме</string>
     <string name="op_linked_launch_title">Автоматический запуск приложений</string>
     <string name="op_lockpassword_choose_your_password_header_for_face">Чтобы использовать разблокировку распознаванием лица, установите пароль</string>
@@ -4393,9 +4417,11 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_lockpassword_choose_your_pin_header_for_face">Чтобы использовать разблокировку распознаванием лица, установите PIN-код</string>
     <string name="op_member_description">Привяжите свое устройство, чтобы получить эксклюзивные преимущества</string>
     <string name="op_member_title">Вход в учетную запись OnePlus</string>
-    <string name="op_night_display_title">Vision comfort</string>
+    <string name="op_night_display_title">Комфорт для глаз</string>
     <string name="op_not_disturb">Настройки режима \"Не беспокоить\"</string>
     <string name="op_not_disturb_summary">Отключить звук и вибрацию для всех вызовов и уведомлений, кроме будильников</string>
+    <string name="op_notification_history_off_summary">Включить историю уведомлений для просмотра недавних уведомлений</string>
+    <string name="op_notification_history_summary">Показать недавние уведомления</string>
     <string name="op_oneplus_roaming_summary">Предоставить глобальные услуги доступа к Интернету</string>
     <string name="op_oneplus_roaming_title">OnePlus Roaming</string>
     <string name="op_primary_charm_purple_label">Темно-фиолетовый</string>
@@ -4406,6 +4432,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_primary_grass_green_label">Светло-зеленый</string>
     <string name="op_primary_lemon_yellow_label">Оранжевый</string>
     <string name="op_primary_red_label">Красный</string>
+    <string name="op_primary_rose_red_label">Розовый</string>
     <string name="op_primary_royal_blue_label">Королевский синий</string>
     <string name="op_primary_sky_blue_label">Зеленовато-голубой</string>
     <string name="op_primary_vigour_red_label">Розовый</string>
@@ -4416,14 +4443,14 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_security_settings_back_fingerprint_enroll_find_sensor_message">Датчик находится на задней панели телефона</string>
     <string name="op_security_settings_fingerprint_enroll_find_sensor_message">Найдите датчик отпечатка пальца на кнопке \"Домой\"</string>
     <string name="op_security_settings_title">Безопасность и отпечаток пальца</string>
-    <string name="op_sim_card_with_slotid">SIM  %1$s</string>
+    <string name="op_sim_card_with_slotid">SIM-карта  %1$s</string>
     <string name="op_sim_cord">SIM-карта и сеть</string>
     <string name="op_sim_cord_summary">SIM-карта по умолчанию, использование полосы пропускания</string>
     <string name="op_sim_name_with_prefix">  (%1$s)</string>
-    <string name="op_smart_battery_manager_title">Adaptive Battery</string>
-    <string name="op_smart_battery_title">Use Adaptive Battery</string>
+    <string name="op_smart_battery_manager_title">Адаптивная модель</string>
+    <string name="op_smart_battery_title">Использовать адаптивную модель</string>
     <string name="op_sms_ringtone">Мелодия SMS</string>
-    <string name="op_starwar_mode_cannot_change_color_accent">В теме \"Звездные войны\" может быть только системная цветовая схема</string>
+    <string name="op_starwar_mode_cannot_change_color_accent">В теме \"Звездные войны\" может использоваться только системная цветовая тема</string>
     <string name="op_starwar_mode_title">Звездные войны</string>
     <string name="op_storage">Хранение и память</string>
     <string name="op_system_dashboard_summary">Языки, время, сброс, обновления</string>
@@ -4431,9 +4458,9 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_tcp_timestamps_randomization_title">Флаг случайных меток времени TCP</string>
     <string name="op_theme_2__cannot_change_color_accent">Тема The Avengers может использовать только системную цветовую схему</string>
     <string name="op_theme_2__title">The Avengers</string>
-    <string name="op_theme_3_cannot_change_color_accent">Тема McLaren может использовать только системную цветовую тему</string>
+    <string name="op_theme_3_cannot_change_color_accent">В теме McLaren может быть только системная цветовая схема</string>
     <string name="op_theme_3_title">McLaren</string>
-    <string name="op_theme_entrance_summary">Wallpapers, accent color, font</string>
+    <string name="op_theme_entrance_summary">Обои, цвет подсветки, шрифт</string>
     <string name="op_theme_mode_title">Тема</string>
     <string name="op_use_cast">Использовать трансляцию</string>
     <string name="op_user_manual_settings">Руководство пользователя</string>
@@ -4448,7 +4475,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_wlan_settings_and_management">Настройки Wi‑Fi</string>
     <string name="op_zen_mode_automation_settings_title">Включать автоматически</string>
     <string name="op_zen_mode_behavior_settings_title">Исключения</string>
-    <string name="op_zen_mode_restrict_notifications_title">Restrict notifications</string>
+    <string name="op_zen_mode_restrict_notifications_title">Ограничить уведомления</string>
     <string name="opcustom_tone_dark_tile_text">Темный режим</string>
     <string name="open_hotspot_warning_message">"С отключенной безопасностью устройства смогут использовать вашу мобильную точку доступа без ввода пароля. Выберите безопасность WPA2, чтобы запрашивать пароль. "</string>
     <string name="open_supported_links_footer">Через приложение открываются следующие ссылки:</string>
@@ -4487,7 +4514,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="owner_info_settings_summary">Нет текста</string>
     <string name="owner_info_settings_title">Текст на заблокированном экране</string>
     <string name="oxygen_version">Версия OxygenOS</string>
-    <string name="oxygen_version_default">Неизвестный</string>
+    <string name="oxygen_version_default">Неизвестно</string>
     <string name="packages_subtitle">Пакеты</string>
     <string name="page_tab_title_summary">Все</string>
     <string name="page_tab_title_support">Помощь и советы</string>
@@ -4524,6 +4551,8 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="platform_compat_dashboard_title">Изменение настроек совместимости приложений</string>
     <string name="platform_compat_default_disabled_title">Изменения, отключенные по умолчанию</string>
     <string name="platform_compat_default_enabled_title">Изменения, включенные по умолчанию</string>
+    <string name="platform_compat_dialog_text_no_apps">Настраивать изменение параметров совместимости можно только для приложений, доступных для отладки. Установите такое приложение и повторите попытку.</string>
+    <string name="platform_compat_dialog_title_no_apps">Нет приложений</string>
     <string name="please_select_phase2">2-й этап аутентификации</string>
     <string name="please_type_passphrase">Пароль беспроводной сети</string>
     <string name="pointer_location">Место касания</string>
@@ -5449,7 +5478,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="status_number">Номер телефона</string>
     <string name="status_number_sim_slot">Номер телефона (слот SIM %1$d)</string>
     <string name="status_number_sim_status">Номер телефона (SIM)</string>
-    <string name="status_openid_summary">Предоставление анонимного идентификатора устройства для таких Интернет-служб OnePlus, как облачная служба</string>
+    <string name="status_openid_summary">Предоставление анонимного идентификатора устройства для таких интернет-служб OnePlus, как облачная служба</string>
     <string name="status_openid_title">Анонимный идентификатор устройства OnePlus</string>
     <string name="status_operator">Сеть</string>
     <string name="status_prl_version">Версия PRL</string>
@@ -5688,7 +5717,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="summary_separator">" / "</string>
     <string name="summary_voice_network">VoLTE, вызовы через Wi-Fi</string>
     <string name="summary_voice_volte_only">VoLTE</string>
-    <string name="summary_voice_wfc_only">Вызовы через Wi-Fi</string>
+    <string name="summary_voice_wfc_only">Вызов через Wi-Fi</string>
     <string name="support_summary">Справочные статьи, поддержка по телефону и в чате, инструкции по началу работы</string>
     <string name="swipe_direction_ltr">Проведите вправо, чтобы закрыть уведомление, или влево, чтобы открыть меню</string>
     <string name="swipe_direction_rtl">"Проведите  влево, чтобы закрыть уведомление, или вправо, чтобы открыть меню"</string>
@@ -5826,7 +5855,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="track_frame_time_keywords">Графический процессор</string>
     <string name="traffic_auto_close_network">Автоматическое отключение от сети</string>
     <string name="traffic_auto_close_network_keep_closed">Игнорировать</string>
-    <string name="traffic_auto_close_network_keep_closed_vzw">OK</string>
+    <string name="traffic_auto_close_network_keep_closed_vzw">ОК</string>
     <string name="traffic_auto_close_network_reopen">Включить мобильные данные</string>
     <string name="traffic_auto_close_network_reopen_vzw">Включить данные</string>
     <string name="traffic_auto_close_network_summary">Автоматическое отключение от сети по достижении лимита на использование данных</string>
@@ -5914,7 +5943,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="tx_link_speed">%1$d Мбит/с</string>
     <string name="tx_wifi_speed">Скорость передачи данных</string>
     <string name="uicc_alert_message">Чтобы подключиться к сети WiFi с помощью SSID VerizonWiFiAccess требуется UICC</string>
-    <string name="uicc_all_lock_summary">Ваше устройство можно использовать только с SIM-картами оператора Sprint или международными SIM-картами</string>
+    <string name="uicc_all_lock_summary">Ваше устройство можно использовать только с SIM-картами Sprint или международными SIM-картами</string>
     <string name="uicc_lock_summary">На вашем устройстве можно использовать только SIM-карты Sprint</string>
     <string name="uicc_unlock">Разблокировать UICC</string>
     <string name="uicc_unlock_summary">Ваше устройство разблокировано</string>
@@ -6437,7 +6466,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="wifi_connected_no_internet">Нет подключения к Интернету</string>
     <string name="wifi_connected_to_message">Подключено: %1$s</string>
     <string name="wifi_connecting">Подключение…</string>
-    <string name="wifi_context_menu_change_password">Изменить пароль</string>
+    <string name="wifi_context_menu_change_password">Изменение пароля</string>
     <string name="wifi_context_menu_change_wapi_certificate">Изменить сертификат WAPI</string>
     <string name="wifi_context_menu_connect">Подключиться к сети</string>
     <string name="wifi_context_menu_forget">Забыть сеть</string>
@@ -6685,7 +6714,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="wifi_tether_custom_auto_turn_off_10_min_summary">Через 10 минут бездействия</string>
     <string name="wifi_tether_custom_auto_turn_off_15_min_summary">Через 15 минут бездействия</string>
     <string name="wifi_tether_custom_auto_turn_off_5_min_summary">Через 5 минут бездействия</string>
-    <string name="wifi_tether_custom_auto_turn_off_always_summary">Всегда вкл.</string>
+    <string name="wifi_tether_custom_auto_turn_off_always_summary">Всегда включен</string>
     <string name="wifi_tether_enabled_subtext">Сеть %1$s активна</string>
     <string name="wifi_tether_failed_subtext">Ошибка подключения к точке доступа</string>
     <string name="wifi_tether_passphrase_warning">Пароль должен содержать как минимум одну заглавную букву, одну строчную букву, цифру и символ</string>
@@ -6698,7 +6727,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="wifi_tether_verizon_custom_auto_turn_off_30_min_summary">Через 30 минут бездействия</string>
     <string name="wifi_tether_verizon_custom_auto_turn_off_5_min_summary">Через 5 минут бездействия</string>
     <string name="wifi_tether_verizon_custom_auto_turn_off_60_min_summary">Через 60 минут бездействия</string>
-    <string name="wifi_tether_verizon_custom_auto_turn_off_always_summary">Всегда вкл.</string>
+    <string name="wifi_tether_verizon_custom_auto_turn_off_always_summary">Всегда включен</string>
     <string name="wifi_time_remaining">Осталось времени: %1$s</string>
     <string name="wifi_turned_on_message">Wi-Fi включен</string>
     <string name="wifi_unchanged">(без изменений)</string>
@@ -6744,7 +6773,8 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="wizard_next">Далее</string>
     <string name="work_alarm_ringtone_title">Звук будильника по умолчанию</string>
     <string name="work_life_balance">Баланс рабочего времени</string>
-    <string name="work_life_disabled_toast">Сервис \"Баланс рабочего времени\" выключен.</string>
+    <string name="work_life_banner_summary">Уведомления могут отвлекать. Установите приоритеты, чтобы сбалансировать рабочее и личное время.</string>
+    <string name="work_life_disabled_toast">Функция баланса рабочего времени отключена.</string>
     <string name="work_mode_label">Рабочий профиль</string>
     <string name="work_mode_off_summary">Приложения и уведомления отключены.</string>
     <string name="work_mode_on_summary">Управляется вашей организацией.</string>

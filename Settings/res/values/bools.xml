@@ -77,7 +77,7 @@
     <bool name="config_show_trust_agent_click_intent">true</bool>
     <bool name="config_show_tts_settings_summary">true</bool>
     <bool name="config_show_unlock_set_or_change">true</bool>
-    <bool name="config_show_vibrate_input_devices">true</bool>
+    <bool name="config_show_vibrate_input_devices">false</bool>
     <bool name="config_show_virtual_keyboard_pref">true</bool>
     <bool name="config_show_wallpaper_attribution">true</bool>
     <bool name="config_show_wifi_ip_address">true</bool>

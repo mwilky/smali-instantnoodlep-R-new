@@ -226,19 +226,19 @@
     </plurals>
     <plurals name="oneplus_applock_wrong_pattern_warning">
         <item quantity="other">നിങ്ങള്‍ക്ക് ഇപ്പോഴും %1$d അവസരങ്ങളുണ്ട്</item>
-        <item quantity="one">നിങ്ങള്‍ക്ക് ഇപ്പോഴും %1$d അവസരമുണ്ട്</item>
+        <item quantity="one">നിങ്ങള്‍ക്കിപ്പോഴും %1$d സാദ്ധ്യതയുണ്ട്</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
         <item quantity="other">%d സെക്കന്‍ഡുകള്‍ക്കുള്ളില്‍ വീണ്ടും ശ്രമിക്കുക.</item>
-        <item quantity="one">%d സെക്കന്‍ഡിനുള്ളില്‍ വീണ്ടും ശ്രമിക്കുക.</item>
+        <item quantity="one">%d സെക്കന്‍റിനുശേഷം വീണ്ടും ശ്രമിക്കുക.</item>
     </plurals>
     <plurals name="oneplus_zen_mode_duration_summary_time_hours">
         <item quantity="other">%d മണിക്കൂർ (സ്വയമേവ ഓണാക്കിയതല്ലാത്ത പക്ഷം)</item>
         <item quantity="one">ഒരു മണിക്കൂർ (സ്വയമേവ ഓണാക്കിയതല്ലാത്ത പക്ഷം)</item>
     </plurals>
     <plurals name="op_location_settings_summary_location_on">
-        <item quantity="other">On - %1$d apps have access to location</item>
-        <item quantity="one">On - %1$d app has access to location</item>
+        <item quantity="other">%1$d ന് ആപ്പിലേയ്ക്ക് ആക്സസ്സ് ഉണ്ട്</item>
+        <item quantity="one">- %1$d ൽ ആപ്പിന് സ്ഥലത്തേയ്ക്ക് ആക്സസ്സ് ഉണ്ട്</item>
     </plurals>
     <plurals name="permission_bar_chart_label">
         <item quantity="other">%s ആപ്പുകൾ</item>

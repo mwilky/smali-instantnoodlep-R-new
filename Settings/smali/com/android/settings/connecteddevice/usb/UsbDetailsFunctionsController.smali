@@ -28,13 +28,25 @@
 
 
 # instance fields
+.field private mCallBack:Lcom/verizon/loginenginesvc/clientsdk/MhsAuthorizedClient$ICallback;
+
+.field private mClient:Lcom/verizon/loginenginesvc/clientsdk/MhsAuthorizedClient;
+
 .field private mConnectivityManager:Landroid/net/ConnectivityManager;
+
+.field private mContext:Landroid/content/Context;
 
 .field mOnStartTetheringCallback:Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController$OnStartTetheringCallback;
 
 .field mPreviousFunction:J
 
 .field private mProfilesContainer:Landroidx/preference/PreferenceCategory;
+
+.field private mProgressDialog:Landroid/app/ProgressDialog;
+
+.field private mUsbPref:Lcom/android/settings/widget/RadioButtonPreference;
+
+.field private mWifiManager:Landroid/net/wifi/WifiManager;
 
 
 # direct methods
@@ -133,6 +145,24 @@
 
     invoke-direct {p0, p1, p2, p3}, Lcom/android/settings/connecteddevice/usb/UsbDetailsController;-><init>(Landroid/content/Context;Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment;Lcom/android/settings/connecteddevice/usb/UsbBackend;)V
 
+    new-instance p2, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController$3;
+
+    invoke-direct {p2, p0}, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController$3;-><init>(Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;)V
+
+    iput-object p2, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mCallBack:Lcom/verizon/loginenginesvc/clientsdk/MhsAuthorizedClient$ICallback;
+
+    iput-object p1, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mContext:Landroid/content/Context;
+
+    const-string/jumbo p2, "wifi"
+
+    invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/net/wifi/WifiManager;
+
+    iput-object p2, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mWifiManager:Landroid/net/wifi/WifiManager;
+
     const-class p2, Landroid/net/ConnectivityManager;
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -157,6 +187,83 @@
 
     iput-wide p1, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mPreviousFunction:J
 
+    return-void
+.end method
+
+.method static synthetic access$000(Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$100(Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;)Landroid/net/wifi/WifiManager;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mWifiManager:Landroid/net/wifi/WifiManager;
+
+    return-object p0
+.end method
+
+.method static synthetic access$200(Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;)Landroid/app/ProgressDialog;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mProgressDialog:Landroid/app/ProgressDialog;
+
+    return-object p0
+.end method
+
+.method static synthetic access$300(Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;J)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->startVzwTethering(J)V
+
+    return-void
+.end method
+
+.method static synthetic access$400(Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;)Landroid/net/ConnectivityManager;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mConnectivityManager:Landroid/net/ConnectivityManager;
+
+    return-object p0
+.end method
+
+.method static synthetic access$500(Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->dismissDialog()V
+
+    return-void
+.end method
+
+.method static synthetic access$600(Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->resetSwitch()V
+
+    return-void
+.end method
+
+.method static synthetic access$700(Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mobileHotspotDialog()V
+
+    return-void
+.end method
+
+.method private dismissDialog()V
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mProgressDialog:Landroid/app/ProgressDialog;
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Landroid/app/ProgressDialog;->dismiss()V
+
+    :cond_0
     return-void
 .end method
 
@@ -195,6 +302,169 @@
 
     :cond_0
     return-object v0
+.end method
+
+.method private mobileHotspotDialog()V
+    .locals 3
+
+    new-instance v0, Landroidx/appcompat/app/AlertDialog$Builder;
+
+    iget-object v1, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mContext:Landroid/content/Context;
+
+    invoke-direct {v0, v1}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    iget-object v1, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mContext:Landroid/content/Context;
+
+    sget v2, Lcom/android/settings/R$string;->hotspot_tip_title:I
+
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    iget-object v1, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mContext:Landroid/content/Context;
+
+    sget v2, Lcom/android/settings/R$string;->mobile_hotspot_authoration_error:I
+
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    const/high16 v1, 0x1040000
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroidx/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    iget-object v1, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mContext:Landroid/content/Context;
+
+    sget v2, Lcom/android/settings/R$string;->mhs_app:I
+
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v2, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController$4;
+
+    invoke-direct {v2, p0}, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController$4;-><init>(Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;)V
+
+    invoke-virtual {v0, v1, v2}, Landroidx/appcompat/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    invoke-virtual {v0}, Landroidx/appcompat/app/AlertDialog$Builder;->create()Landroidx/appcompat/app/AlertDialog;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->show()V
+
+    return-void
+.end method
+
+.method private resetSwitch()V
+    .locals 3
+
+    iget-object v0, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mProfilesContainer:Landroidx/preference/PreferenceCategory;
+
+    iget-wide v1, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mPreviousFunction:J
+
+    invoke-static {v1, v2}, Lcom/android/settings/connecteddevice/usb/UsbBackend;->usbFunctionsToString(J)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroidx/preference/PreferenceGroup;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/settings/widget/RadioButtonPreference;
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+
+    :cond_0
+    iget-object p0, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mUsbPref:Lcom/android/settings/widget/RadioButtonPreference;
+
+    if-eqz p0, :cond_1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+
+    :cond_1
+    return-void
+.end method
+
+.method private startVzwTethering(J)V
+    .locals 5
+
+    iget-object v0, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mContext:Landroid/content/Context;
+
+    check-cast v0, Landroid/app/Activity;
+
+    iget-object v1, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mProgressDialog:Landroid/app/ProgressDialog;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Landroid/app/ProgressDialog;->setCancelable(Z)V
+
+    iget-object v1, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mProgressDialog:Landroid/app/ProgressDialog;
+
+    iget-object v2, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    sget v3, Lcom/android/settings/R$string;->dialog_mhs_error:I
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/app/Activity;->isDestroyed()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mProgressDialog:Landroid/app/ProgressDialog;
+
+    invoke-virtual {v0}, Landroid/app/ProgressDialog;->show()V
+
+    new-instance v0, Lcom/verizon/loginenginesvc/clientsdk/MhsAuthorizedClient;
+
+    iget-object v1, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mContext:Landroid/content/Context;
+
+    iget-object v2, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mCallBack:Lcom/verizon/loginenginesvc/clientsdk/MhsAuthorizedClient$ICallback;
+
+    invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultDataSubscriptionId()I
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v4
+
+    invoke-direct {v0, v1, v2, v3, v4}, Lcom/verizon/loginenginesvc/clientsdk/MhsAuthorizedClient;-><init>(Landroid/content/Context;Lcom/verizon/loginenginesvc/clientsdk/MhsAuthorizedClient$ICallback;Ljava/lang/Integer;Landroid/os/Looper;)V
+
+    iput-object v0, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mClient:Lcom/verizon/loginenginesvc/clientsdk/MhsAuthorizedClient;
+
+    invoke-virtual {v0, p1, p2}, Lcom/verizon/loginenginesvc/clientsdk/internal/LoginSvcClient;->sendRequest(J)V
+
+    :cond_0
+    return-void
 .end method
 
 
@@ -240,7 +510,7 @@
 .end method
 
 .method public onRadioButtonClicked(Lcom/android/settings/widget/RadioButtonPreference;)V
-    .locals 6
+    .locals 8
 
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
@@ -258,13 +528,13 @@
 
     cmp-long v4, v0, v2
 
-    if-eqz v4, :cond_2
+    if-eqz v4, :cond_8
 
     invoke-static {}, Lcom/android/settings/Utils;->isMonkeyRunning()Z
 
     move-result v4
 
-    if-nez v4, :cond_2
+    if-nez v4, :cond_8
 
     iput-wide v2, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mPreviousFunction:J
 
@@ -280,37 +550,203 @@
 
     check-cast v2, Lcom/android/settings/widget/RadioButtonPreference;
 
-    const/4 v3, 0x1
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
 
     if-eqz v2, :cond_0
 
-    const/4 v4, 0x0
+    invoke-virtual {v2, v3}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
 
-    invoke-virtual {v2, v4}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
-
-    invoke-virtual {p1, v3}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+    invoke-virtual {p1, v4}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
 
     :cond_0
-    const-wide/16 v4, 0x20
+    const-wide/16 v5, 0x20
 
-    cmp-long p1, v0, v4
+    cmp-long v5, v0, v5
 
-    if-nez p1, :cond_1
+    if-nez v5, :cond_7
 
+    new-instance v0, Landroid/app/ProgressDialog;
+
+    iget-object v1, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mContext:Landroid/content/Context;
+
+    invoke-direct {v0, v1}, Landroid/app/ProgressDialog;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mProgressDialog:Landroid/app/ProgressDialog;
+
+    iput-object p1, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mUsbPref:Lcom/android/settings/widget/RadioButtonPreference;
+
+    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isUsvMode()Z
+
+    move-result v0
+
+    const-wide/16 v5, 0x61a8
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mWifiManager:Landroid/net/wifi/WifiManager;
+
+    invoke-virtual {v0}, Landroid/net/wifi/WifiManager;->isWifiEnabled()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mContext:Landroid/content/Context;
+
+    const-string v1, "tether_settings_prefs"
+
+    invoke-virtual {v0, v1, v3}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    const-string v1, "checkbox_status"
+
+    const-string v7, "unchecked"
+
+    invoke-interface {v0, v1, v7}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "checked"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v2, v3}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+
+    invoke-virtual {p1, v4}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+
+    :cond_1
+    iget-object p1, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mWifiManager:Landroid/net/wifi/WifiManager;
+
+    invoke-virtual {p1, v3}, Landroid/net/wifi/WifiManager;->setWifiEnabled(Z)Z
+
+    invoke-static {}, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->isVerizon()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    iget-object p1, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mProgressDialog:Landroid/app/ProgressDialog;
+
+    if-eqz p1, :cond_2
+
+    invoke-direct {p0, v5, v6}, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->startVzwTethering(J)V
+
+    goto :goto_0
+
+    :cond_2
     iget-object p1, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
     iget-object p0, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mOnStartTetheringCallback:Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController$OnStartTetheringCallback;
 
-    invoke-virtual {p1, v3, v3, p0}, Landroid/net/ConnectivityManager;->startTethering(IZLandroid/net/ConnectivityManager$OnStartTetheringCallback;)V
+    invoke-virtual {p1, v4, v4, p0}, Landroid/net/ConnectivityManager;->startTethering(IZLandroid/net/ConnectivityManager$OnStartTetheringCallback;)V
 
     goto :goto_0
 
-    :cond_1
+    :cond_3
+    new-instance v0, Landroidx/appcompat/app/AlertDialog$Builder;
+
+    iget-object v1, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mContext:Landroid/content/Context;
+
+    invoke-direct {v0, v1}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    iget-object v1, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mContext:Landroid/content/Context;
+
+    invoke-static {v1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object v1
+
+    sget v4, Lcom/android/settings/R$layout;->dialog_checkbox:I
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v1, v4, v5}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object v1
+
+    sget v4, Lcom/android/settings/R$id;->dialogCheckbox:I
+
+    invoke-virtual {v1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/widget/CheckBox;
+
+    invoke-virtual {v0, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setView(Landroid/view/View;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    invoke-virtual {v0, v3}, Landroidx/appcompat/app/AlertDialog$Builder;->setCancelable(Z)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    sget v1, Lcom/android/settings/R$string;->dialog_usb_tether_title:I
+
+    invoke-virtual {v0, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setMessage(I)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    sget v1, Lcom/android/settings/R$string;->dialog_usb_tether_cancel:I
+
+    new-instance v3, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController$1;
+
+    invoke-direct {v3, p0, v4, v2, p1}, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController$1;-><init>(Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;Landroid/widget/CheckBox;Lcom/android/settings/widget/RadioButtonPreference;Lcom/android/settings/widget/RadioButtonPreference;)V
+
+    invoke-virtual {v0, v1, v3}, Landroidx/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    sget v1, Lcom/android/settings/R$string;->dialog_usb_tether_ok:I
+
+    new-instance v3, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController$2;
+
+    invoke-direct {v3, p0, v4, v2, p1}, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController$2;-><init>(Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;Landroid/widget/CheckBox;Lcom/android/settings/widget/RadioButtonPreference;Lcom/android/settings/widget/RadioButtonPreference;)V
+
+    invoke-virtual {v0, v1, v3}, Landroidx/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    invoke-virtual {v0}, Landroidx/appcompat/app/AlertDialog$Builder;->create()Landroidx/appcompat/app/AlertDialog;
+
+    invoke-virtual {v0}, Landroidx/appcompat/app/AlertDialog$Builder;->show()Landroidx/appcompat/app/AlertDialog;
+
+    goto :goto_0
+
+    :cond_4
+    if-eqz v2, :cond_5
+
+    invoke-virtual {v2, v3}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+
+    invoke-virtual {p1, v4}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+
+    :cond_5
+    invoke-static {}, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->isVerizon()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_6
+
+    iget-object p1, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mProgressDialog:Landroid/app/ProgressDialog;
+
+    if-eqz p1, :cond_6
+
+    invoke-direct {p0, v5, v6}, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->startVzwTethering(J)V
+
+    goto :goto_0
+
+    :cond_6
+    iget-object p1, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mConnectivityManager:Landroid/net/ConnectivityManager;
+
+    iget-object p0, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;->mOnStartTetheringCallback:Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController$OnStartTetheringCallback;
+
+    invoke-virtual {p1, v4, v4, p0}, Landroid/net/ConnectivityManager;->startTethering(IZLandroid/net/ConnectivityManager$OnStartTetheringCallback;)V
+
+    goto :goto_0
+
+    :cond_7
     iget-object p0, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsController;->mUsbBackend:Lcom/android/settings/connecteddevice/usb/UsbBackend;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/settings/connecteddevice/usb/UsbBackend;->setCurrentFunctions(J)V
 
-    :cond_2
+    :cond_8
     :goto_0
     return-void
 .end method

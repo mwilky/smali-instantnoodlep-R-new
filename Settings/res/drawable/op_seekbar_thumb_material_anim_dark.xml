@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<animated-selector
+<selector android:constantSize="true"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_enabled="false">
-        <shape android:tint="@color/op_seek_bar_disabled_color_dark" android:shape="oval">
-            <size android:height="16.0dip" android:width="16.0dip" />
-        </shape>
+    <item android:state_enabled="false" android:state_pressed="true">
+        <bitmap android:gravity="center" android:src="@drawable/op_abc_scrubber_control_to_pressed_mtrl_000" android:tint="#ff242424" />
     </item>
-    <item android:state_pressed="true" android:id="@id/pressed" android:drawable="@drawable/op_seekbar_thumb_pressed_to_unpressed" />
-    <item android:id="@id/unpressed" android:drawable="@drawable/op_seekbar_thumb_unpressed_to_pressed" />
-    <transition android:drawable="@drawable/op_seekbar_thumb_unpressed_to_pressed_animation" android:toId="@id/pressed" android:fromId="@id/unpressed" />
-    <transition android:drawable="@drawable/op_seekbar_thumb_pressed_to_unpressed_animation" android:toId="@id/unpressed" android:fromId="@id/pressed" />
-</animated-selector>
+    <item android:state_enabled="false">
+        <bitmap android:gravity="center" android:src="@drawable/op_abc_scrubber_control_to_pressed_mtrl_000" android:tint="#ff242424" />
+    </item>
+    <item android:state_pressed="true">
+        <bitmap android:gravity="center" android:src="@drawable/op_abc_scrubber_control_to_pressed_mtrl_005" android:tint="?colorControlActivated" />
+    </item>
+    <item>
+        <bitmap android:gravity="center" android:src="@drawable/op_abc_scrubber_control_to_pressed_mtrl_000" android:tint="?colorControlActivated" />
+    </item>
+</selector>

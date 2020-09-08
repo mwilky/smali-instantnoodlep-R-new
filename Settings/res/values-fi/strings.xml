@@ -40,9 +40,14 @@
     <string name="abc_slice_updated">Päivitetty %1$s</string>
     <string name="abc_slices_permission_request">%1$s haluaa näyttää osia sovelluksesta %2$s.</string>
     <string name="abc_toolbar_collapse_description">Tiivistä</string>
+    <string name="about_action_bar_title">Tietoja</string>
+    <string name="about_app_version_text">Version %s</string>
     <string name="about_phone_device_name_warning">Puhelimen sovellukset näkevät laitteesi nimen. Muut voivat myös nähdä nimen, kun muodostat Bluetooth-yhteyden laitteisiin tai aktivoit Wi-Fi-hotspotin.</string>
+    <string name="about_privacy_policy">Yksityisyyden suoja</string>
+    <string name="about_release_note_title">Päivitysloki:</string>
     <string name="about_settings">Tietoja puhelimesta</string>
     <string name="about_settings_summary">Näytä lakitiedot, tila, ohjelmiston versio</string>
+    <string name="about_terms_service">Palveluehdot</string>
     <string name="accelerometer_summary_off">Vaihda suuntaa automaattisesti, kun puhelinta käännetään</string>
     <string name="accelerometer_summary_on">Vaihda suuntaa automaattisesti, kun puhelinta käännetään</string>
     <string name="accelerometer_title">Näytön automaattinen kierto</string>
@@ -355,12 +360,12 @@ Järjestelmänvalvoja voi valvoa tähän käyttäjäprofiiliin liittyviä asetuk
     <string name="advanced_wificall_summary">Käytä langatonta verkkoyhteyttä, kun matkapuhelinverkko ei ole käytettävissä</string>
     <string name="airplane_mode">Lentokonetila</string>
     <string name="airplane_mode_description">Lentokonetila poistaa käytöstä kaikki verkkoyhteydet, mukaan lukien puhelut, tekstiviestit, Internet-pääsyn, Wi-Fin ja Bluetoothin.</string>
-    <string name="airplane_mode_enable_dialog_message">"Kun lentokonetila on päällä, et voi käyttää Internetiä, sähköpostia tai muita datayhteyttä tarvitsevia sovelluksia, ellet käytä Wi-Fiä.
+    <string name="airplane_mode_enable_dialog_message">"Kun lentotila on käytössä, et voi käyttää Internetiä, sähköpostia tai muita datayhteyttä tarvitsevia sovelluksia, ellet käytä Wi-Fiä.
 
-Otetaanko lentokonetila käyttöön?"</string>
-    <string name="airplane_mode_enable_dialog_message_wifi_volte">"Kun lentokonetila on päällä, et voi käyttää Internetiä, sähköpostia, Wi-Fi-puheluita tai muita datayhteyttä tarvitsevia sovelluksia, ellet käytä Wi-Fiä.
+Otetaanko lentotila käyttöön?"</string>
+    <string name="airplane_mode_enable_dialog_message_wifi_volte">"Kun lentotila on käytössä, et voi käyttää Internetiä, sähköpostia, Wi-Fi-puheluita tai muita datayhteyttä tarvitsevia sovelluksia, ellet käytä Wi-Fiä.
 
-Otetaanko lentokonetila käyttöön?"</string>
+Otetaanko lentotila käyttöön?"</string>
     <string name="alarm_ringtone_title">Herätyksen oletusääni</string>
     <string name="alarm_template">kello %1$s</string>
     <string name="alarm_template_far">%1$s</string>
@@ -370,7 +375,7 @@ Otetaanko lentokonetila käyttöön?"</string>
     <string name="alert_dialog_cancel">Peruuta</string>
     <string name="alert_slider_settings_title">Prioriteettiasetukset</string>
     <string name="alert_slider_silent_title">Hiljaiset asetukset</string>
-    <string name="alertslider_settings">Alert Slider</string>
+    <string name="alertslider_settings">Hälytyksen liukusäädin</string>
     <string name="alertslider_settings_soc_tri_state_summary">Äänetön, värinä, soitto</string>
     <string name="all_volume_title">Äänenvoimakkuudet</string>
     <string name="allow">Salli</string>
@@ -508,7 +513,7 @@ Aseta vain laitteet vierekkäin (yleensä takakannet vastakkain) ja kosketa näy
     <string name="app_notification_led_enabled_title">LED-ilmoitukset</string>
     <string name="app_notification_listing_summary_zero">Päällä kaikissa sovelluksissa</string>
     <string name="app_notification_no_ongoing_on_keyguard_summary">Älä koskaan näytä tämän sovelluksen itsepintaisia ilmoituksia lukitusnäytöllä</string>
-    <string name="app_notification_no_ongoing_on_keyguard_title">Poista käytöstä itsepintainen ilmoitus lukitusnäytöllä</string>
+    <string name="app_notification_no_ongoing_on_keyguard_title">Poista käytöstä pysyvä ilmoitus lukitusnäytöllä</string>
     <string name="app_notification_override_dnd_summary">Salli näiden ilmoitusten näyttö myös Älä häiritse ‑tilassa.</string>
     <string name="app_notification_override_dnd_title">Ohita Älä häiritse -asetus</string>
     <string name="app_notification_preferences">Sovellusasetukset</string>
@@ -1280,7 +1285,7 @@ Tämä vaikuttaa muihin sovelluksiin ja keskusteluihin, joissa kuplat sallitaan.
     <string name="condition_bg_data_title">Data Saver</string>
     <string name="condition_cellular_summary">Vain Wi-Fi-yhteys internetiin saatavilla</string>
     <string name="condition_cellular_title">Mobiilidata pois käytöstä</string>
-    <string name="condition_cloud_summary">Napsauta käyttääksesi Cloud Service -palvelua taataksesi, että tietoja ei menetetä</string>
+    <string name="condition_cloud_summary">Käytä pilvipalvelua napsauttamalla ja varmistat samalla, ettet menetetä tietoja</string>
     <string name="condition_cloud_title">Aloita Cloud Service -palvelun käyttö</string>
     <string name="condition_cloud_turn_off">HYLKÄÄ</string>
     <string name="condition_device_muted_action_turn_on_sound">Ota äänet käyttöön</string>
@@ -1580,10 +1585,10 @@ Puhelin mittaa datan käytön. Operaattorisi voi kuitenkin käyttää eri mittau
     <string name="data_usage_metered_yes">Maksullinen</string>
     <string name="data_usage_ota">Järjestelmäpäivitykset</string>
     <string name="data_usage_other_apps">Muut datan käyttöön laskettavat sovellukset</string>
-    <string name="data_usage_package_set">Laskutuskausi</string>
+    <string name="data_usage_package_set">Billing Cycle</string>
     <string name="data_usage_pick_cycle_day">Tiedonsiirtojakson nollauspäivä (kk):</string>
     <string name="data_usage_rank_sim">Matkapuhelimen datan käyttö</string>
-    <string name="data_usage_rank_wifi">Wi‑Fi-tiedonsiirto</string>
+    <string name="data_usage_rank_wifi">Wi-Fi-datan käyttö</string>
     <string name="data_usage_rank_wlan">Matkapuhelimen datan käyttö</string>
     <string name="data_usage_received_sent">%1$s vastaanotettu, %2$s lähetetty</string>
     <string name="data_usage_restrict_background">Jos rajoitat taustalla tapahtuvaa mobiilitiedonsiirtoa, osa sovelluksista ja palveluista toimii vain kun käytät Wi‑Fi-yhteyttä.</string>
@@ -1903,7 +1908,7 @@ Jos tämä tapahtuu toistuvasti, akun optimointi voi edellyttää sovelluksen po
     <string name="enable_mms_notification_summary">Napauta, jos haluat sallia MMS-viestit (%1$s), kun mobiilidata ei ole käytössä.</string>
     <string name="enable_opengl_traces_title">Ota OpenGL-jälj. käyttöön</string>
     <string name="enable_otg_storage_summary">Ota käyttöön ulkoisen talletustilan lukeminen OTG:n kautta</string>
-    <string name="enable_otg_storage_title">OTG-talletustila</string>
+    <string name="enable_otg_storage_title">OTG-tallennustila</string>
     <string name="enable_quick_setting">Näytä pika-asetuksissa</string>
     <string name="enable_receiving_mms_notification_title">Saapuva MMS-viesti</string>
     <string name="enable_sending_mms_notification_title">MMS-viestiä ei voi lähettää</string>
@@ -2343,7 +2348,7 @@ Jos kytket mobiilidatan takaisin päälle, operaattori saattaa veloittaa sinua d
     <string name="interact_across_profiles_install_work_app_title">Jos haluat yhdistää nämä sovellukset, asenna %1$s työprofiiliisi</string>
     <string name="interact_across_profiles_keywords">profiilien väliset yhdistetty sovellus sovellukset työ ja henkilökohtainen</string>
     <string name="interact_across_profiles_number_of_connected_apps_none">Ei yhdistettyjä sovelluksia</string>
-    <string name="interact_across_profiles_summary_1">Yhdistetyt sovellukset jakavat luvat keskenään ja niillä on pääsy toistensa dataan.</string>
+    <string name="interact_across_profiles_summary_1">Yhdistetyt sovellukset jakavat luvat keskenään, ja niillä on pääsy toistensa dataan.</string>
     <string name="interact_across_profiles_summary_2">Yhdistä vain sovellukset, joista tiedät, että ne eivät jaa henkilötietoja IT-järjestelmänvalvojalle.</string>
     <string name="interact_across_profiles_summary_3">Voit katkaista sovellusten yhteyden milloin tahansa laitteesi tietosuoja-asetuksista.</string>
     <string name="interact_across_profiles_summary_allowed">Yhdistetty</string>
@@ -2438,6 +2443,7 @@ Jos kytket mobiilidatan takaisin päälle, operaattori saattaa veloittaa sinua d
     <string name="keywords_lock_screen_notif">lukitusnäytön ilmoitus, ilmoitukset</string>
     <string name="keywords_lockscreen">"avaa liu'uttamalla, salasana, lukituksenpoistokuvio, PIN-koodi"</string>
     <string name="keywords_lockscreen_bypass">Lukitusnäyttö, ohita</string>
+    <string name="keywords_media_controls">media</string>
     <string name="keywords_model_and_hardware">sarjanumero, laitteistoversio</string>
     <string name="keywords_more_default_sms_app">tekstiviesti, tekstaus, viestit, viestintä, oletus</string>
     <string name="keywords_more_mobile_networks">matkapuhelin, mobiili, puhelinoperaattori, langaton, tiedonsiirto, 4g, 3g, 2g, lte</string>
@@ -2566,6 +2572,7 @@ Jos kytket mobiilidatan takaisin päälle, operaattori saattaa veloittaa sinua d
     <string name="load_networks_progress">Haetaan…</string>
     <string name="loading_injected_setting_summary">Ladataan…</string>
     <string name="loading_notification_apps">Ladataan sovelluksia…</string>
+    <string name="loading_text">Ladataan...</string>
     <string name="local_backup_password_summary_change">Vaihda tai poista tietokoneen kaikkien tietojen varmuuskopioinnin salasana koskettamalla.</string>
     <string name="local_backup_password_summary_none">Tietokoneen kaikkien tietojen varmuuskopiointia ei ole tällä hetkellä suojattu.</string>
     <string name="local_backup_password_title">Varmuuskop. salasana</string>
@@ -2841,6 +2848,12 @@ Tällä laitteella on muita paikalla olevia käyttäjiä.
     <string name="master_clear_title">Poista kaikki tiedot (palauta tehdasasetukset)</string>
     <string name="maximum_memory_use">Muistin enimmäiskäyttö</string>
     <string name="media_category">Media</string>
+    <string name="media_controls_hide_player">Piilota soitin</string>
+    <string name="media_controls_no_players">Soittimia ei saatavilla</string>
+    <string name="media_controls_resume_description">Tällä soittimella voit jatkaa käyttökertaa laajennetusta pika-asetuspaneelista.</string>
+    <string name="media_controls_show_player">Näytä soitin</string>
+    <string name="media_controls_summary">Piilota soitin kun median käyttökerta on päättynyt</string>
+    <string name="media_controls_title">Media</string>
     <string name="media_out_summary_ongoing_call_state">Ei käytettävissä puhelujen aikana</string>
     <string name="media_output_default_summary">Tämä laite</string>
     <string name="media_output_disconnected_status">%1$s (yhteys katkaistu)</string>
@@ -2936,10 +2949,10 @@ Tällä laitteella on muita paikalla olevia käyttäjiä.
     <string name="mobile_data_settings_summary_auto_switch">Puhelin vaihtaa automaattisesti tähän operaattoriin, kun se on kantoalueella.</string>
     <string name="mobile_data_settings_title">Mobiilidata</string>
     <string name="mobile_data_usage_title">Sovelluksen datan käyttö</string>
-    <string name="mobile_hotspot_airplane_off_error">Ota hotspot käyttöön poistamalla lentokonetila käytöstä</string>
-    <string name="mobile_hotspot_authoration_error">"Mobiili-hotspotin käyttöä varten on tilattava Mobile Hotspot -palvelu.
+    <string name="mobile_hotspot_airplane_off_error">Ota hotspot käyttöön poistamalla lentotila käytöstä</string>
+    <string name="mobile_hotspot_authoration_error">"Mobiili-hotspotin käyttämiseksi on tilattava Mobile Hotspot -palvelu.
 
-Tilaa Mobile Hotspot -palvelu My Verizon -sovelluksessa tai soittamalla asiakaspalveluun numeroon (800) 922–0204."</string>
+Tilaa Mobile Hotspot -palvelu My Verizon -sovelluksesta tai soittamalla asiakaspalvelunumeroon (800) 922–0204."</string>
     <string name="mobile_hotspot_data_off_error">Ota hotspot käyttöön ottamalla mobiilidata käyttöön</string>
     <string name="mobile_insert_sim_card">Aseta SIM-kortti ja käynnistä uudelleen</string>
     <string name="mobile_network_active_esim">Aktiivinen / Ladattu SIM-kortti</string>
@@ -3114,7 +3127,7 @@ Vanhaa palvelua (%2$s) ei peruuteta, jos %1$s otetaan käyttöön."</string>
     <string name="night_display_text">Yövalo tekee näytöstä keltasävyisen. Sen avulla näytön katselu heikossa valossa on helpompaa ja saatat nukahtaa helpommin.</string>
     <string name="night_display_title">Yövalo</string>
     <string name="no">Ei</string>
-    <string name="no_5g_in_dsds_text">Jos käytät kahta SIM-korttia, tämä puhelin voi muodostaa yhteyden vain 4G-verkkoon. <annotation id="url">Lue lisää</annotation>.</string>
+    <string name="no_5g_in_dsds_text">Jos käytät kahta SIM-korttia, tämä puhelin voi muodostaa yhteyden vain 4G-verkkoon. <annotation id="url">Lue lisää</annotation></string>
     <string name="no_application">Ei mitään</string>
     <string name="no_applications">Ei sovelluksia.</string>
     <string name="no_battery_summary">Ei akun käyttöä täyteen lataamisen jälkeen</string>
@@ -3173,7 +3186,7 @@ Tämä antaa sovellukselle myös oikeuden laittaa Älä häiritse ‑tilan pää
     <string name="notification_conversation_add_to_home">Lisää aloitusnäytölle</string>
     <string name="notification_conversation_important">Tärkeä</string>
     <string name="notification_conversation_summary_low">Ei ääntä tai värinää ja näkyy alempana keskusteluosiossa</string>
-    <string name="notification_for_work_life">Ilmoitukset työ- ja vapaa-aika-tiloille</string>
+    <string name="notification_for_work_life">Työn ja vapaa-ajan tasapainotoiminnon ilmoitukset</string>
     <string name="notification_for_work_life_disabled">Ota tämä ominaisuus käyttöön napauttamalla tätä.</string>
     <string name="notification_group_title">Ilmoitusluokka</string>
     <string name="notification_history">Ilmoitushistoria</string>
@@ -3239,6 +3252,7 @@ Tämä antaa sovellukselle myös oikeuden laittaa Älä häiritse ‑tilan pää
     <string name="notification_priority_title">Tärkeä</string>
     <string name="notification_pulse_title">Vilkuta valoa</string>
     <string name="notification_ringtone_title">Ilmoituksen oletusääni</string>
+    <string name="notification_screen_summary">Ilmoitushistoria, kuplat, äsken lähetetyt</string>
     <string name="notification_settings_work_profile">Työprofiilin sovelluksilla ei voi olla ilmoitusten käyttöoikeuksia.</string>
     <string name="notification_show_lights_title">Vilkuta valoa</string>
     <string name="notification_silence_title">Äänetön</string>
@@ -3315,12 +3329,12 @@ Tämä antaa sovellukselle myös oikeuden laittaa Älä häiritse ‑tilan pää
     <string name="oneplus_app_list_empty">Tyhjä lista</string>
     <string name="oneplus_app_locker_add_apps">Lisää sovelluksia</string>
     <string name="oneplus_app_locker_catagory">Tietosuoja</string>
-    <string name="oneplus_app_locker_open_apps">Sovelluksen lukitsimen lista</string>
+    <string name="oneplus_app_locker_open_apps">Sovelluslukitusluettelo</string>
     <string name="oneplus_app_locker_summary">Valitse salattavat sovellukset</string>
     <string name="oneplus_app_locker_switch">Piilota ilmoitussisältö</string>
     <string name="oneplus_app_locker_switch_summary">Ilmoitusten sisältö piilotetaan sovelluksista, joissa sovelluslukitus on käytössä</string>
     <string name="oneplus_app_locker_title">Sovelluksen lukitsin</string>
-    <string name="oneplus_app_network_settings">Datakäytön hallinta</string>
+    <string name="oneplus_app_network_settings">Tietojen käytön valvonta</string>
     <string name="oneplus_app_notification_allow_led">LED päällä</string>
     <string name="oneplus_app_notification_not_allow_led">LED pois päältä</string>
     <string name="oneplus_app_ops_title">Sovelluksen oikeudet</string>
@@ -3328,13 +3342,14 @@ Tämä antaa sovellukselle myös oikeuden laittaa Älä häiritse ‑tilan pää
     <string name="oneplus_app_wechat">WeChat</string>
     <string name="oneplus_applications_settings_summary">Sovellusilmoitukset, rinnakkaiset sovellukset, käyttöoikeudet</string>
     <string name="oneplus_applock_at_least_four_points">Piirrä vähintään 4 pistettä</string>
-    <string name="oneplus_applock_lockpassword_confirm_your_pin_header">Anna pin-koodi</string>
-    <string name="oneplus_applock_need_to_unlock_wrong">Väärä pin-koodi</string>
+    <string name="oneplus_applock_lockpassword_confirm_your_pin_header">Syötä PIN-koodi</string>
+    <string name="oneplus_applock_need_to_unlock_wrong">Väärä PIN-koodi</string>
     <string name="oneplus_applock_pattern_header">Piirrä kuviosi</string>
     <string name="oneplus_applock_wrong_pattern_header">Väärä kuvio</string>
     <string name="oneplus_apps_notifications">Sovellukset ja ilmoitukset</string>
     <string name="oneplus_apps_title">Sovellukset</string>
     <string name="oneplus_aptx_hd_support">aptX- / aptX HD -tuki</string>
+    <string name="oneplus_at_a_glance">Pikanäkymä</string>
     <string name="oneplus_authentication_information">Todennuksen tiedot</string>
     <string name="oneplus_auto_activate">Ota käyttöön automaattisesti</string>
     <string name="oneplus_auto_answer_via_bluetooth_summary">Puhelun saapuessa siihen vastataan automaattisesti, kun Bluetooth-laitteeseen on muodostettu yhteys</string>
@@ -3347,16 +3362,16 @@ Tämä antaa sovellukselle myös oikeuden laittaa Älä häiritse ‑tilan pää
     <string name="oneplus_auto_open_specified_app">Avaa valittu sovellus automaattisesti</string>
     <string name="oneplus_auto_play">Automaattinen toisto</string>
     <string name="oneplus_auto_play_summary">Jatka musiikin toistoa automaattisesti, kun kuulokkeet liitetään</string>
-    <string name="oneplus_auto_switch_mobile_data">Älykäs verkkoyhteys</string>
+    <string name="oneplus_auto_switch_mobile_data">Datan käyttö</string>
     <string name="oneplus_auto_switch_mobile_data_summary">Paranna yhteyden vakautta käyttämällä sekä langatonta verkkoyhteyttä että mobiilidataa yhteyden ollessa huono</string>
     <string name="oneplus_auto_turn_on_apps">Avaa nämä sovellukset automaattisesti</string>
-    <string name="oneplus_auto_turn_on_car_charger_info_o2">Määrittämällä yllä olevat kohdat voit aktivoida Ei saa häiritä -tilan ja käynnistää valitsemasi sovelluksen aina, kun autolaturi kytketään</string>
+    <string name="oneplus_auto_turn_on_car_charger_info_o2">Asettamalla yllä olevat kohdat voit aktivoida Ei saa häiritä -tilan ja käynnistää valitsemasi sovelluksen aina, kun autolaturi kytketään</string>
     <string name="oneplus_auto_turn_on_dnd">Ota Ei saa häiritä automaattisesti käyttöön</string>
     <string name="oneplus_available_keyboard_category">Käytettävissä oleva näppäimistö</string>
     <string name="oneplus_available_keyboard_description">Asennetut näppäimistöt, jotka on otettu käyttöön tässä, lisätään Käytettävissä olevat näppäimistöt -luetteloon</string>
     <string name="oneplus_back_home">Aloitussivu, takaisin</string>
-    <string name="oneplus_back_home_o2">Takaisin, aloitussivu</string>
-    <string name="oneplus_back_home_summary">Pyyhkäise ylöspäin kotipainikeella</string>
+    <string name="oneplus_back_home_o2">Back, Home</string>
+    <string name="oneplus_back_home_summary">Swipe up on Home button</string>
     <string name="oneplus_back_topic_theme_summary">Vaihda järjestelmän teemaa automaattisesti tilanteen mukaan</string>
     <string name="oneplus_back_topic_theme_title">Takakuoren teema</string>
     <string name="oneplus_battery_menu_stats_total">Näytä käytön yksityiskohdat</string>
@@ -3384,7 +3399,7 @@ Akunsäästäjä poistuu automaattisesti käytössä, kun laitetta ladataan."</s
     <string name="oneplus_bluetooth_volume_switch_summary">Synkronoi kuulokkeiden ja laitteen äänenvoimakkuus, kun Bluetooth on liitetty</string>
     <string name="oneplus_broadcat_wifi_name">Lähetä verkon nimi (SSID)</string>
     <string name="oneplus_buttons_and_gestures_settings">Painikkeet ja eleet</string>
-    <string name="oneplus_buttons_dashboard_summary">Alert Slider, navigointi, eleet</string>
+    <string name="oneplus_buttons_dashboard_summary">Hälytyksen liukusäädin, navigointi, eleet</string>
     <string name="oneplus_buttons_settings">Painikkeiden asetukset</string>
     <string name="oneplus_buttons_settings_summary">Navigointiele</string>
     <string name="oneplus_call_information_broadcast">Sano soittajatunnus</string>
@@ -3413,6 +3428,7 @@ Akunsäästäjä poistuu automaattisesti käytössä, kun laitetta ladataan."</s
     <string name="oneplus_condition_bg_data_summary">Taustadata on käytettävissä vain Wi-Fi-verkossa. Tämä saattaa vaikuttaa joihinkin sovelluksiin ja palveluihin, kun Wi-Fi ei ole käytettävissä</string>
     <string name="oneplus_condition_bg_data_title">Data Saver on käytössä</string>
     <string name="oneplus_condition_hotspot_turn_off">POISTA HOTSPOT KÄYTÖSTÄ</string>
+    <string name="oneplus_condition_night_display_title">Yötila on käytössä</string>
     <string name="oneplus_condition_night_mode_title">Yötila on päällä</string>
     <string name="oneplus_condition_night_mode_turn_off">POISTA YÖTILA KÄYTÖSTÄ</string>
     <string name="oneplus_condition_ota_summary">Uusi versio löytyi päivitettäväksi</string>
@@ -3427,7 +3443,7 @@ Akunsäästäjä poistuu automaattisesti käytössä, kun laitetta ladataan."</s
     <string name="oneplus_customization">Navigointipalkin mukauttaminen</string>
     <string name="oneplus_customization_summary">Paina pitkään, kaksoisnapauta</string>
     <string name="oneplus_customization_summary_hide_navbar">Pitkä painallus, kaksoisnapautus, piilota navigointipalkki</string>
-    <string name="oneplus_data_usage_control_title">Datakäytön hallinta</string>
+    <string name="oneplus_data_usage_control_title">Tietojen käytön valvonta</string>
     <string name="oneplus_dc_dimming_summary">DC-himmennys säätää näytön kirkkautta muuttamalla näyttöpiirin tehoa. Kun se on käytössä, se vähentää näytön välkkymistä himmeässä valaistuksessa. Tämä voi kuitenkin vääristää värejä joissain tapauksissa.</string>
     <string name="oneplus_dc_dimming_title">DC-himmennys</string>
     <string name="oneplus_deep_clear_way">Syvä puhdistus</string>
@@ -3435,7 +3451,7 @@ Akunsäästäjä poistuu automaattisesti käytössä, kun laitetta ladataan."</s
     <string name="oneplus_deep_optimization">Syvä optimointi</string>
     <string name="oneplus_deep_optimization_summary">Kun poistat syväoptimoinnin käytöstä, virrankulutus kasvaa huomattavasti, mikä voi vaikuttaa normaaliin puhelimen käyttöön.</string>
     <string name="oneplus_deep_optimization_title">Poistetaanko syvä optimointi käytöstä?</string>
-    <string name="oneplus_default_launcher">Oletusarvoinen käynnistys</string>
+    <string name="oneplus_default_launcher">Aloitusnäytön oletussovellus</string>
     <string name="oneplus_default_method">Oletusnäppäimistö</string>
     <string name="oneplus_delete_fingerprint_list">Poista sormenjälki</string>
     <string name="oneplus_deleted_fingerprint_list">Sormenjälki poistettu</string>
@@ -3450,10 +3466,10 @@ Akunsäästäjä poistuu automaattisesti käytössä, kun laitetta ladataan."</s
     <string name="oneplus_device_warranty_expried_date">Takuun voimassaolon päättymispäivä</string>
     <string name="oneplus_dirac_audio_tuner">Dirac-ääniviritin</string>
     <string name="oneplus_direct_boot_inputmethod_unaware_dialog_message">Jos puhelin käynnistetään uudelleen ja näytön lukitus on asetettu, tämä näppäimistö ei voi käynnistyä, ennen kuin puhelimen lukitus poistetaan</string>
-    <string name="oneplus_disable_aosp_face_lock_message">Kun OnePlusin kasvolukituksen avaus otetaan käyttöön, luotettavien kasvojen älykäs lukitus poistuu käytöstä. Haluatko jatkaa?</string>
+    <string name="oneplus_disable_aosp_face_lock_message">Kun OnePlusin avaus kasvojentunnistuksella otetaan käyttöön, luotettavien kasvojen älykäs lukitus poistetaan käytöstä. Haluatko jatkaa?</string>
     <string name="oneplus_disconnected">Katkaise yhteys</string>
     <string name="oneplus_display_dashboard_no_theme_summary">Tilarivi, ympäristönäyttö, taustakuvat</string>
-    <string name="oneplus_display_dashboard_no_theme_summary_801">Status bar, ambient display, Vision comfort, reading mode</string>
+    <string name="oneplus_display_dashboard_no_theme_summary_801">Tilarivi, ympäristönäyttö, yötila, lukutila</string>
     <string name="oneplus_display_dashboard_summary">Tilarivi, ympäristönäyttö, taustakuvat, teema</string>
     <string name="oneplus_display_dashboard_summary_801">Tilarivi, ympäristönäyttö, taustakuvat, teema</string>
     <string name="oneplus_display_screen_timeout">Lepotila</string>
@@ -3476,7 +3492,7 @@ Akunsäästäjä poistuu automaattisesti käytössä, kun laitetta ladataan."</s
     <string name="oneplus_double_tap_power_none">Ei mitään</string>
     <string name="oneplus_doze_summary_801">Näytä kello ja muut tiedot valmiusnäytössä</string>
     <string name="oneplus_doze_summary_new">Näytä kellonaika, päivämäärä ja ilmoitukset näytössä</string>
-    <string name="oneplus_doze_title">Tyyni näyttö</string>
+    <string name="oneplus_doze_title">Ympäristönäyttö</string>
     <string name="oneplus_doze_title_801">Ympäristönäyttö</string>
     <string name="oneplus_draw_gesture_start_none">Ei mitään</string>
     <string name="oneplus_draw_m_start_app">Piirrä M</string>
@@ -3493,7 +3509,7 @@ Liittyvien toimintojen kytkeminen päälle kuluttaa dataa, ja todellinen kulutus
     <string name="oneplus_e_sports_mode_background_introduction_title">Lisätyt taustarajoitukset</string>
     <string name="oneplus_e_sports_mode_disturb_introduction_summary">Estä kaikki ilmoitukset ja puhelut (paitsi akku vähissä -ilmoitus, hälytykset ja ajastimet). Vastaamatta jääneet puhelut näkyvät puheluhistoriassa.</string>
     <string name="oneplus_e_sports_mode_disturb_introduction_title">Edistynyt Ei saa häiritä -tila</string>
-    <string name="oneplus_e_sports_mode_enable_introduction_title">Pelitila on otettava käyttöön, jotta Esports-tilaa voi käyttää.</string>
+    <string name="oneplus_e_sports_mode_enable_introduction_title">Pelitila on otettava käyttöön, jotta esports-tilaa voi käyttää.</string>
     <string name="oneplus_e_sports_mode_network_introduction_dual4g_summary">Kahta 4G-verkkoa käytettäessä tämä tila estää toissijaisen SIM-kortin toiminnan parantaakseen ensisijaisen SIM-kortin verkon suorituskykyä. Et voi vastaanottaa puheluita tai tekstiviestejä toissijaisella SIM-kortilla tämän tilan ollessa aktiivinen.</string>
     <string name="oneplus_e_sports_mode_network_introduction_summary">Paranna verkkoyhteyden vakautta</string>
     <string name="oneplus_e_sports_mode_network_introduction_title">Verkkoparannus</string>
@@ -3503,10 +3519,10 @@ Liittyvien toimintojen kytkeminen päälle kuluttaa dataa, ja todellinen kulutus
     <string name="oneplus_earphone_mode">Kuuloketila</string>
     <string name="oneplus_emergency_rescue_settings">Hätäpelastus</string>
     <string name="oneplus_emergency_rescue_settings_summary">Soita automaattisesti apua painamalla virtapainiketta nopeasti</string>
-    <string name="oneplus_emergency_tap_power_gesture_tips">Käytettävissä vasta, kun hätäpalautuksen VIRTAPAINIKKEEN asetuksia on muutettu</string>
-    <string name="oneplus_enroll_fingerprint_tips_summary">"1.Syötä sormenjälkesi uudelleen aina, kun vaihdat suojakalvon, jotta sormenjälki varmasti toimisi
+    <string name="oneplus_emergency_tap_power_gesture_tips">Käytettävissä vasta, kun hätäpalautuksen virtapainikkeen asetuksia on muutettu</string>
+    <string name="oneplus_enroll_fingerprint_tips_summary">"1. Anna sormenjälkesi aina uudelleen, kun vaihdat näytön suojakalvon, jotta jälki olisi edelleen käytettävissä
 
-2.Syötä yhdessä asetusprosessissa vain yhden sormen sormenjälkitiedot"</string>
+2. Anna yhden asetuskerran aikana vain yhden sormen sormenjälkitiedot"</string>
     <string name="oneplus_enroll_fingerprint_tips_title">Sormenjäljen asetuskehote</string>
     <string name="oneplus_enter_your_fingerprint">– rekisteröitävä sormenjälkesi</string>
     <string name="oneplus_erase_system_data">PYYHI JÄRJESTELMÄTIEDOT</string>
@@ -3514,11 +3530,11 @@ Liittyvien toimintojen kytkeminen päälle kuluttaa dataa, ja todellinen kulutus
     <string name="oneplus_erase_system_data_title">Pyyhitäänkö järjestelmätiedot?</string>
     <string name="oneplus_error_mms_port_exceed">MMS-portin numero ei voi olla suurempi kuin 65535. Yritä uudelleen.</string>
     <string name="oneplus_error_port_exceed">Portin numero ei voi olla suurempi kuin 65535. Yritä uudelleen.</string>
-    <string name="oneplus_esportmode_introduction_summary">Voit aktivoida Esports-tilan napauttamalla pelitilapaneelin kytkintä.</string>
+    <string name="oneplus_esportmode_introduction_summary">Voit aktivoida esports-tilan napauttamalla pelitilapaneelin kytkintä.</string>
     <string name="oneplus_experience_improvement_programs">Kokemusta parantavat ohjelmat</string>
     <string name="oneplus_face_auto_unlock_while_screen_on_sumary">Poista puhelimen lukitus kasvoillasi, kun näyttö kytkeytyy päälle pyyhkäisemättä ensin.</string>
     <string name="oneplus_face_auto_unlock_while_screen_on_title">Automaattinen lukituksen poisto, kun näyttö on päällä</string>
-    <string name="oneplus_face_setup_unlock_settings_summary">"Kasvojentunnistus on nopea tapa avata puhelimen lukitus. Sinun tarvitsee vain herättää puhelin ja katsoa sitä, minkä jälkeen se on käyttövalmis.
+    <string name="oneplus_face_setup_unlock_settings_summary">"Kasvojentunnistus on nopea tapa avata puhelimen lukitus. Sinun tarvitsee vain aktivoida puhelin ja katsoa sitä, minkä jälkeen se on käyttövalmis.
 
 Varoitus: kasvojentunnistus on vähemmän turvallinen kuin sormenjälki tai salasana"</string>
     <string name="oneplus_face_setup_unlock_settings_title">Kokeillaan kasvojen lukituksen avausta</string>
@@ -3547,17 +3563,17 @@ Varoitus: kasvojentunnistus on vähemmän turvallinen kuin sormenjälki tai sala
     <string name="oneplus_finger_input_fail_tips">Syöttö epäonnistui. Muuta asentoa ja yritä uudelleen</string>
     <string name="oneplus_finger_print_anim_save">TALLENNA</string>
     <string name="oneplus_fingerprint">Sormenjälki</string>
-    <string name="oneplus_fingerprint_acquired_imager_dirty">The fingerprint identification area is dirty. Please wipe it clean and try again.</string>
-    <string name="oneplus_fingerprint_acquired_partial">Partial fingerprint detected. Please completely cover the fingerprint identification area.</string>
-    <string name="oneplus_fingerprint_acquired_too_fast">Too fast to process your fingerprint. Please stay for a while when pressing.</string>
+    <string name="oneplus_fingerprint_acquired_imager_dirty">Sormenjäljentunnistusalue on likainen. Puhdista se ja yritä uudelleen.</string>
+    <string name="oneplus_fingerprint_acquired_partial">Vastaava sormenjälki havaittu. Peitä koko sormenjäljentunnistusalue.</string>
+    <string name="oneplus_fingerprint_acquired_too_fast">Toimit liian nopeasti, joten sormenjälkeä ei voida käsitellä. Paina pidempään.</string>
     <string name="oneplus_fingerprint_acquired_too_similar">Samanlaiset sormenjälkitiedot havaittu. Siirrä sormeasi hiukan, jotta saamme sormenjälkesi eri alueiden tiedot.</string>
-    <string name="oneplus_fingerprint_animation_effect_title">Sormenjäljen animaatietehoste</string>
+    <string name="oneplus_fingerprint_animation_effect_title">Sormenjäljen animaatiotehoste</string>
     <string name="oneplus_fingerprint_delete_confirm_message">Haluatko poistaa sen?</string>
     <string name="oneplus_fingerprint_detail">Tiedot</string>
     <string name="oneplus_fingerprint_enrol_completed">Sormenjälki on tallennettu</string>
-    <string name="oneplus_fingerprint_enroll_summary">Paina sormellasi siten, että se peittää sormenjäljen tunnistusalueen mahdollisimman hyvin, ja nosta se sitten ylös kun tunnet värinää</string>
-    <string name="oneplus_fingerprint_findsendor_summary">When the fingerprint pattern appears at the bottom of the screen, simply press with your finger on the fingerprint identification area to use the fingerprint function.</string>
-    <string name="oneplus_fingerprint_findsendor_tilte">How to use fingerprint</string>
+    <string name="oneplus_fingerprint_enroll_summary">Paina ja peitä koko sormenjäljentunnistusalue mahdollisimman tarkkaan; nosta sormi, kun tunnet värinän</string>
+    <string name="oneplus_fingerprint_findsendor_summary">Kun näytön alalaidassa näkyy sormenjälkikuvio, käytä sormenjälkitoimintoa painamalla sormellasi sormenjäljentunnistusaluetta.</string>
+    <string name="oneplus_fingerprint_findsendor_tilte">Sormenjäljen käyttäminen</string>
     <string name="oneplus_fingerprint_functional_declaration">Sormenjälkitoiminnon ilmoitus</string>
     <string name="oneplus_fingerprint_gesture_camera_summary">Etsinnäytössä sormenjälkitunnistimen pitkä painallus ottaa kuvan</string>
     <string name="oneplus_fingerprint_gesture_camera_title">Pitkä painallus ottaa kuvan</string>
@@ -3591,14 +3607,14 @@ Varoitus: kasvojentunnistus on vähemmän turvallinen kuin sormenjälki tai sala
     <string name="oneplus_font_style">Fontti</string>
     <string name="oneplus_font_switch">Fontin vaihto</string>
     <string name="oneplus_force_factory_reset_summary">Käynnistyksen yhteydessä pyydetään salasanaa, sisäinen tallennusväline poistetaan</string>
-    <string name="oneplus_forum_award_summary">Tämä yhteisö on sinun. Vain sinä voit määrittää suuntamme. Yhdessä määritämme ja parantelemme. Puramme koontiversioita ja kirjoitamme koodia. Tämä on sinua varten. Kiitos, että unelmoit kanssamme!</string>
+    <string name="oneplus_forum_award_summary">Tämä yhteisö on sinun. Vain sinä voit määrittää suuntamme. Yhdessä määritämme ja parantelemme. Poistamme vanhoja versioita ja kirjoitamme koodia. Tämä on sinua varten. Kiitos, että unelmoit kanssamme!</string>
     <string name="oneplus_forum_award_title">Palkinto</string>
     <string name="oneplus_front_camera_app_display_fullscreen_summary">Jos etukameran näyttöalue peittää sovelluksen sisältöä, vaihda oletustilaan</string>
     <string name="oneplus_front_camera_display_choose_title">Valitse, piilotetaanko etukamera</string>
     <string name="oneplus_front_camera_display_title">Etukameran näyttöalue</string>
     <string name="oneplus_fullscreen_back_guide_summary">Pyyhkäise sisäänpäin näytön vasemmasta tai oikeasta alalaidasta</string>
     <string name="oneplus_fullscreen_back_guide_summary_deprecated">Pyyhkäise ylöspäin näytön alalaidan oikesta tai vasemmasta nurkasta</string>
-    <string name="oneplus_fullscreen_back_guide_title">Takaisin</string>
+    <string name="oneplus_fullscreen_back_guide_title">Edellinen</string>
     <string name="oneplus_fullscreen_disable_this_feature">Tätä ominaisuutta ei voi käyttää, kun navigointieleet ovat käytössä.</string>
     <string name="oneplus_fullscreen_gesture_guide_back">"Kokeillaan paluupainikkeen korvaavaa elettä. 
 Pyyhkäise näytön vasemmasta tai oikeasta alareunasta ylös."</string>
@@ -3624,7 +3640,7 @@ Voit siirtyä aloitusnäyttöön milloin vain pyyhkäisemällä näytön alareun
     <string name="oneplus_fullscreen_previous_app_no_bar_guide_title">Vaihda äskettäisten sovellusten välillä</string>
     <string name="oneplus_fullscreen_recent_guide_summary">Pyyhkäise ylöspäin näytön alalaidasta ja odota</string>
     <string name="oneplus_fullscreen_recent_guide_summary_deprecated">Pyyhkäise ylöspäin näytön alalaidan keskeltä ja odota</string>
-    <string name="oneplus_fullscreen_recent_guide_title">Äskettäiset sovellukset</string>
+    <string name="oneplus_fullscreen_recent_guide_title">Viimeiset sovellukset</string>
     <string name="oneplus_functional_terms">EHDOT</string>
     <string name="oneplus_game_haptic_feedback_summary">Lisää haptinen palaute tehdäksesi pelikokemuksestasi eloisamman. Bluetooth-kuulokkeita ei vielä tueta.</string>
     <string name="oneplus_game_mode_ad_summary">Paranna pelinäytön vaaleiden ja tummien osien yksityiskohtia</string>
@@ -3699,9 +3715,9 @@ Voit siirtyä aloitusnäyttöön milloin vain pyyhkäisemällä näytön alareun
     <string name="oneplus_hide_navkeys_summary">Lisää painike, joka piilottaa tai näyttää siirtymispalkin</string>
     <string name="oneplus_hide_notch_display_summary">Sovellukset eivät voi käyttää lovialuetta</string>
     <string name="oneplus_hide_notch_display_title">Piilota lovialue</string>
-    <string name="oneplus_how_to_use_fingerprint_summary">"Kun sormenjälkesi malli näkyy näytön alalaidassa, voit käyttää sormenjälkitoimintoa yksinkertaisesti painamalla sormella sormenjäljen tunnistusaluetta herättääksesi puhelimen ja avataksesi sen lukituksen, valtuuttaaksesi ostoksia tai kirjautuaksesi sovelluksiin. 
+    <string name="oneplus_how_to_use_fingerprint_summary">"Kun näytön alalaidassa näkyy sormenjälkikuvio, paina sormellasi sormenjäljentunnistusaluetta, jotta voisit käyttää sormenjälkitoimintoa, kuten puhelimen aktivointia ja lukituksen avaamista, ostosten valtuuttamista tai sovelluksiin kirjautumista. 
 
-Huomautus: Sormenjälki saattaa olla vähemmän turvallinen kuin vahva kuvio tai PIN-koodi"</string>
+Huomaa: Sormenjälki ei saata olla niin turvallinen kuin kuvio tai PIN-koodi"</string>
     <string name="oneplus_how_to_use_fingerprint_summary_no_note">Kun näytön alalaidassa näkyy sormenjälkikuvio, paina sormellasi sormenjäljen tunnistusaluetta käyttääksesi sormenjälkitoimintoa, kuten puhelimen herättämistä ja lukituksen avaamista, ostosten valtuuttamista tai sovelluksiin kirjautumista.</string>
     <string name="oneplus_hydrogen_version">H₂OS-versio</string>
     <string name="oneplus_ime_security_warning">%1$s saattaa pystyä keräämään kaiken kirjoitetun tekstin, mukaan lukien henkilötiedot, kuten salasanat ja luottokorttien numerot</string>
@@ -3713,7 +3729,7 @@ Huomautus: Sormenjälki saattaa olla vähemmän turvallinen kuin vahva kuvio tai
     <string name="oneplus_instrucitons">Ohjeet</string>
     <string name="oneplus_intelligently_select_best_wifi">Valitse älykkäästi paras Wi‑Fi</string>
     <string name="oneplus_intelligently_select_best_wifi_summary">Valitse älykkäästi paras Wi‑Fi ja muodosta siihen yhteys tunnistamalla ja analysoimalla Wi‑Fi-verkkojen liitettävyys</string>
-    <string name="oneplus_intensely">Vahva</string>
+    <string name="oneplus_intensely">Strong</string>
     <string name="oneplus_is_turn_on_feature">Haluatko varmasti aktivoida tämän ominaisuuden?</string>
     <string name="oneplus_is_turn_on_feature_summary">"Kun se kytketään päälle, joku seuraavista voi esiintyä satunnaisesti:
 1.Näytön tietyt alueet eivät näy normaalisti
@@ -3742,7 +3758,7 @@ Huomautus: Sormenjälki saattaa olla vähemmän turvallinen kuin vahva kuvio tai
     <string name="oneplus_lock_after_timeout">Lukitse automaattisesti lepotilan jälkeen</string>
     <string name="oneplus_lock_buttons">Lukitse näppäimet</string>
     <string name="oneplus_lock_buttons_summary">Lukitse hipaisupainikkeet, kun pelitila on käytössä</string>
-    <string name="oneplus_lock_screen_intro_skip_dialog_text">Jos valitset kasvotietojen tallennuksen ohittamisen, sinua kehotetaan ottamaan käyttöön toinen menetelmä, kuten sormenjälki tai PIN-koodi, laitteen ja omien tietojen suojaamiseksi. Joissakin sovelluksissa voidaan myös asettaa salasana. Suojauksen käyttöönottamiseksi pitää valita ”Asetukset” > ”Suojaus ja näytön lukitus”.</string>
+    <string name="oneplus_lock_screen_intro_skip_dialog_text">Jos ohitat kasvotietojen tallennuksen, sinua kehotetaan suojaamaan laite ja tietosi jollakin muulla tavalla, kuten sormenjäljellä tai PIN-koodilla. Joissakin sovelluksissa voidaan myös asettaa salasana. Ota suojaus käyttöön valitsemalla ”Asetukset” > ”Suojaus ja näytön lukitus”.</string>
     <string name="oneplus_lock_screen_notifications_summary_hide">Näytä yksityinen sisältö vain, kun lukitus on avattu</string>
     <string name="oneplus_lock_screen_notifs_show_alerting">Näytä vain tärkeät ilmoitukset</string>
     <string name="oneplus_lock_screen_notifs_show_all">Näytä tärkeät ja muut ilmoitukset</string>
@@ -3770,12 +3786,12 @@ Huomautus: Sormenjälki saattaa olla vähemmän turvallinen kuin vahva kuvio tai
     <string name="oneplus_memc_video_extreme">Äärimmäinen</string>
     <string name="oneplus_memc_video_nosupport_extreme_summary">Äärimmäinen-tilan ottaminen käyttöön edellyttää vaihtamista tarkkuuteen FHD+</string>
     <string name="oneplus_memc_video_nosupport_extreme_text">Jos tarkkuudeksi vaihdetaan QHD+, liikegrafiikan kompensointia rajoitetaan</string>
-    <string name="oneplus_memc_video_smooth">Sileä</string>
+    <string name="oneplus_memc_video_smooth">Pehmeä</string>
     <string name="oneplus_memc_video_theacme_summary">Videon kuvataajuus nostetaan arvoon 120 fps erittäin sujuvaa grafiikkaa varten; voi aiheuttaa virrankulutuksen lisääntymistä. QHD+-tarkkuutta ei tilapäisesti tueta.</string>
     <string name="oneplus_memc_video_theacme_title">Hyperliikkeenpehmennys</string>
     <string name="oneplus_mobile_device_name_title">Puhelimen nimi</string>
     <string name="oneplus_mode_choose">Tilan valinta</string>
-    <string name="oneplus_mode_settings">Alert Slider -asetukset</string>
+    <string name="oneplus_mode_settings">Hälytyksen liukusäätimen asetukset</string>
     <string name="oneplus_moderate">Normaali</string>
     <string name="oneplus_more">Lisää</string>
     <string name="oneplus_motion_sensor_settings_title">Järjestelmän eleet</string>
@@ -3794,16 +3810,16 @@ Huomautus: Sormenjälki saattaa olla vähemmän turvallinen kuin vahva kuvio tai
     <string name="oneplus_network_auto_change_summary">Vaihda automaattisesti Wi-Fi-verkon ja mobiilidatan välillä verkkoyhteydestä ja signaalin vahvuudesta riippuen</string>
     <string name="oneplus_network_auto_change_title">Fiksu Wi-Fin vaihtaja</string>
     <string name="oneplus_network_dashboard_title">Wi-Fi ja verkko</string>
-    <string name="oneplus_network_datausage_restrict_title">Poista datakäyttö käytöstä</string>
+    <string name="oneplus_network_datausage_restrict_title">Poista datan käyttö käytöstä</string>
     <string name="oneplus_network_wifi_restrict_title">Poista Wi‑Fi käytöstä</string>
     <string name="oneplus_never_auto">Pois käytöstä</string>
     <string name="oneplus_night_mode_brightness">Valoisuus</string>
     <string name="oneplus_night_mode_brightness_strong">Tummin</string>
     <string name="oneplus_night_mode_color_temperature">Värilämpötila</string>
     <string name="oneplus_night_mode_enabled_op">Yötila</string>
-    <string name="oneplus_night_mode_enabled_op_summary">Kytke yötila päälle manuaalisesti</string>
+    <string name="oneplus_night_mode_enabled_op_summary">Ota yötila käyttöön manuaalisesti</string>
     <string name="oneplus_night_mode_manual_open">Manuaali</string>
-    <string name="oneplus_night_mode_open_tip">Kytke yötila ensin päälle</string>
+    <string name="oneplus_night_mode_open_tip">Ota yötila ensin käyttöön</string>
     <string name="oneplus_night_mode_sensor_summary">Ympäristön valaistuksesta riippuen yötila kalibroi näytön värilämpötilan automaattisesti ympäristöön sopivaksi. Tämä voi vähentää silmien rasitusta ja auttaa nukkumaan paremmin.</string>
     <string name="oneplus_night_mode_strong">Lämpimin</string>
     <string name="oneplus_night_mode_summary">Yötila kalibroi ruudun lämpimämmillä väreillä silmien väsymyksen ja rasituksen vähentämiseksi. Tämä saattaa auttaa nukkumaan paremmin. Suositellaan aktivoitavaksi säännöllisesti.</string>
@@ -3823,7 +3839,7 @@ Huomautus: Sormenjälki saattaa olla vähemmän turvallinen kuin vahva kuvio tai
     <string name="oneplus_none_default_music">Ei oletusmusiikkisoitinta</string>
     <string name="oneplus_normal_clear_way">Normaali tyhjennys</string>
     <string name="oneplus_normal_clear_way_summary">Tyhjennä tehtävälista ja välimuisti mutta älä taustaprosesseja.</string>
-    <string name="oneplus_not_disturb_on">Älä häiritse -tila on päällä</string>
+    <string name="oneplus_not_disturb_on">Älä häiritse -tila on käytössä</string>
     <string name="oneplus_not_show">Älä näytä tätä uudelleen</string>
     <string name="oneplus_notch_display_area">Lovi</string>
     <string name="oneplus_notch_display_choose_title">Valitse, miten lovialue näytetään</string>
@@ -3842,7 +3858,7 @@ Huomautus: Sormenjälki saattaa olla vähemmän turvallinen kuin vahva kuvio tai
     <string name="oneplus_notification_ringtone_mode">Vain soittotilassa</string>
     <string name="oneplus_notification_ringtone_silent_mode">Aina</string>
     <string name="oneplus_notification_ringtone_title">Ilmoituksen soittoääni kuulokkeissa</string>
-    <string name="oneplus_notification_silence_title">Muut</string>
+    <string name="oneplus_notification_silence_title">Muu</string>
     <string name="oneplus_notification_sound_default">Oletusilmoitus</string>
     <string name="oneplus_notification_ways">Näyttötila</string>
     <string name="oneplus_notification_ways_title">Miten ilmoitukset esitetään</string>
@@ -3852,7 +3868,7 @@ Huomautus: Sormenjälki saattaa olla vähemmän turvallinen kuin vahva kuvio tai
     <string name="oneplus_notifications_and_vibration">Ilmoituksen ääni ja värinä</string>
     <string name="oneplus_notifications_free">Vapaa</string>
     <string name="oneplus_notifications_meet">Tapaa</string>
-    <string name="oneplus_notifications_sound">Notification sound</string>
+    <string name="oneplus_notifications_sound">Ilmoitusten ääni</string>
     <string name="oneplus_o2_contributors">OxygenOS:n tukijat</string>
     <string name="oneplus_open_bed_time_mode_schedule_summary">Käynnistä mukautettuna ajankohtana</string>
     <string name="oneplus_open_bed_time_mode_schedule_title">Aikataulu</string>
@@ -3891,15 +3907,15 @@ Huomautus: Sormenjälki saattaa olla vähemmän turvallinen kuin vahva kuvio tai
     <string name="oneplus_pin_code_attempts_count">"Anna nykyisen SIM-kortin pin-koodi.
 %d yritystä jäljellä."</string>
     <string name="oneplus_pocket_mode_summary">Estä tahattomat näytön kosketukset, kun puhelin on taskussasi</string>
-    <string name="oneplus_pre_application">Esiasennettujen sovellusten lista</string>
+    <string name="oneplus_pre_application">Esiasennettujen sovellusten luettelo</string>
     <string name="oneplus_preference_settings">Käyttäytyminen</string>
     <string name="oneplus_preference_settings_auto_activate">Ajoitettu</string>
     <string name="oneplus_preference_settings_behavior">Asetukset</string>
     <string name="oneplus_preference_settings_custom_time">Kytke automaattisesti</string>
     <string name="oneplus_preference_settings_manual_open">Tila</string>
     <string name="oneplus_preference_settings_turn_off_time">Saakka</string>
-    <string name="oneplus_preference_settings_turn_on">Kytke Ei saa häiritä -tila päälle</string>
-    <string name="oneplus_preference_settings_turn_on_time">Alkaen</string>
+    <string name="oneplus_preference_settings_turn_on">Ota Ei saa häiritä -tila käyttöön</string>
+    <string name="oneplus_preference_settings_turn_on_time">Mistä</string>
     <string name="oneplus_prior_to_use_you_need_to">Ennen käyttöä sinun täytyy:</string>
     <string name="oneplus_privacy_policy">Yksityisyyden suoja</string>
     <string name="oneplus_privacy_protection_title">Salattu tila</string>
@@ -3915,18 +3931,18 @@ Huomautus: Sormenjälki saattaa olla vähemmän turvallinen kuin vahva kuvio tai
     <string name="oneplus_quick_launch_how_to_use_summary">"1. Avaa pikakäynnistyspaneeli pitämällä sormi painettuna lukituksen avaamisen jälkeen
 2. Valitse pikavalinta pyyhkäisemällä ja käynnistä se nostamalla sormesi"</string>
     <string name="oneplus_quick_launch_how_to_use_title">Pikakäynnistyksen käyttö</string>
-    <string name="oneplus_quick_launch_summary">Paina sormenjäljen tunnistusaluetta pitkään käynnistääksesi lähimaksun tai aktivoidaksesi sovelluksia</string>
+    <string name="oneplus_quick_launch_summary">Aloita pikamaksaminen tai aktivoi sovelluksia painamalla sormenjäljentunnistusaluetta pitkään</string>
     <string name="oneplus_quick_launch_title">Pikakäynnistys</string>
-    <string name="oneplus_quick_launch_toggle_summary">Paina sormenjäljen tunnistusaluetta pitkään käynnistääksesi lähimaksun tai aktivoidaksesi sovelluksia puhelimen ollessa lukittu</string>
-    <string name="oneplus_quick_launch_toggle_title">Kytke pikakäynnistys päälle</string>
+    <string name="oneplus_quick_launch_toggle_summary">Aloita pikamaksaminen tai aktivoi sovelluksia painamalla sormenjäljentunnistusaluetta pitkään puhelimen ollessa lukittuna</string>
+    <string name="oneplus_quick_launch_toggle_title">Ota pikakäynnistys käyttöön</string>
     <string name="oneplus_quick_reply">Pikavastaus vaakatilassa</string>
-    <string name="oneplus_quick_reply_content">Tarkastele ilmoituksia ja reagoi niihin keskeyttämättä videotoistoa tai pelaamista. Vedä keskustelun kuplaa alaspäin, kun haluat ottaa käyttöön Älä häiritse -tilan sovelluksen sulkemiseen asti.</string>
+    <string name="oneplus_quick_reply_content">Tarkastele ilmoituksia ja reagoi niihin keskeyttämättä videotoistoa tai pelaamista. Vedä keskustelun kuplaa alaspäin, kun haluat ottaa Älä häiritse -tilan käyttöön sovelluksen sulkemiseen asti.</string>
     <string name="oneplus_quick_reply_description">Voit vastata nopeasti saadessasi viestin WeChatistä, QQ:sta tai muusta vaakasovelluksesta</string>
     <string name="oneplus_quick_reply_description_O2">Voit vastata nopeasti saadessasi viestin WhatsAppista tai muusta vaakasovelluksesta</string>
     <string name="oneplus_quick_reply_label">Pikavastaus</string>
     <string name="oneplus_quick_reply_portrait_mode">Ota pikavastaus käyttöön pystysuunnassa</string>
     <string name="oneplus_quick_reply_summary">Jotkut syöttötavat eivät välttämättä käytä kelluvaa tilaa</string>
-    <string name="oneplus_quick_reply_title">Käyttää kelluva näppäimistöä, kun pikavastaat</string>
+    <string name="oneplus_quick_reply_title">Käytä kelluva näppäimistöä, kun pikavastaat</string>
     <string name="oneplus_quick_turn_on_assistant_app">Pika-aktivoi apusovellus</string>
     <string name="oneplus_quick_turn_on_assistant_app_summary">Aktivoi apusovellus painamalla virtapainiketta 0,5 sekuntia. Sammuta puhelin painamalla virtapainiketta 3 sekuntia</string>
     <string name="oneplus_quick_turn_on_camera">Kytke kamera nopeasti päälle</string>
@@ -3937,7 +3953,7 @@ Huomautus: Sormenjälki saattaa olla vähemmän turvallinen kuin vahva kuvio tai
     <string name="oneplus_quickpay_lock_swtch_summary">Käynnistä pikamaksu puhelimen ollessa lukittu painamalla pohjassa kotinäppäintä rekisteröidyllä sormella.</string>
     <string name="oneplus_quickpay_lock_swtch_title">Piilota pikamaksu</string>
     <string name="oneplus_quickpay_select_default_way">Valitse oletusarvoinen maksutapa</string>
-    <string name="oneplus_quickpay_unlock_swtch_summary">Käynnistä pikamaksu puhelimen ollessa lukittu painamalla pohjassa kotinäppäintä</string>
+    <string name="oneplus_quickpay_unlock_swtch_summary">Käynnistä pikamaksu puhelimen ollessa lukittuna painamalla pitkään kotinäppäintä</string>
     <string name="oneplus_quickpay_unlock_swtch_title">Näytä pikamaksu</string>
     <string name="oneplus_quickpay_way_alipay_qrcode">Alipayn QR-koodi</string>
     <string name="oneplus_quickpay_way_alipay_scanning">Alipay-skannaus</string>
@@ -3964,7 +3980,7 @@ Huomautus: Sormenjälki saattaa olla vähemmän turvallinen kuin vahva kuvio tai
     <string name="oneplus_reading_mode_mono">Yksivärinen tehoste</string>
     <string name="oneplus_reading_mode_select_effect">Valitse tehoste</string>
     <string name="oneplus_reading_mode_select_effect_for_app">Valitse sovelluksen %1$s tehoste</string>
-    <string name="oneplus_reading_mode_summary">Ympäristön valaistuksesta riippuen lukutila säätää näytön värilämpötilan ja kalibroinnin automaattisesti optimoidakseen tekstin lukemisen ympäristön mukaan. Tämä voi parantaa lukukokemusta.</string>
+    <string name="oneplus_reading_mode_summary">Ympäristön valaistuksesta riippuen lukutila säätää näytön värilämpötilan ja kalibroinnin automaattisesti tekstin lukemiseen ja ympäristöön sopivaksi. Tämä voi auttaa lukukokemusta.</string>
     <string name="oneplus_reading_mode_summary_no_sensor">Lukutila optimoi näytön ja tekstin esittämisen ja tekee lukukokemuksesta yhtä mukavan kuin e-kirjan lukulaitteessa.</string>
     <string name="oneplus_reading_mode_tips">Yksivärinen tehoste auttaa keskittymään sanoihin; väritehoste tarjoaa mukavamman värikkään lukukokemuksen</string>
     <string name="oneplus_reading_mode_turn_on">Ota lukutila käyttöön</string>
@@ -4000,27 +4016,27 @@ Huomautus: Sormenjälki saattaa olla vähemmän turvallinen kuin vahva kuvio tai
     <string name="oneplus_screen_color_mode_default">Näyttö-P3（oletus）</string>
     <string name="oneplus_screen_color_mode_defined">Mukautettu väri</string>
     <string name="oneplus_screen_color_mode_ntsc">AMOLED Wide Gamut</string>
-    <string name="oneplus_screen_color_mode_reading_mode_on_summary">Ei käytettävissä, koska lukutila on päällä</string>
+    <string name="oneplus_screen_color_mode_reading_mode_on_summary">Ei käytettävissä, sillä lukutila on käytössä</string>
     <string name="oneplus_screen_color_mode_soft">Pehmeä</string>
     <string name="oneplus_screen_color_mode_title">Näytön kalibrointi</string>
-    <string name="oneplus_screen_color_mode_title_summary">Ei käytettävissä, sillä yötila on päällä</string>
+    <string name="oneplus_screen_color_mode_title_summary">Ei käytettävissä, sillä yötila on käytössä</string>
     <string name="oneplus_screen_features_not_available_toast">Kun tämä on käytössä, sellaiset ominaisuudet kuin näytön kalibrointi eivät ole käytettävissä</string>
     <string name="oneplus_screen_refresh_rate">Virkistystaajuus</string>
     <string name="oneplus_screen_refresh_rate_60hz_summary">Vähemmän sujuva mutta pitempi akun kesto</string>
     <string name="oneplus_screen_refresh_rate_auto_summary">Erittäin sujuva suuremmalla virkistystaajuudella</string>
     <string name="oneplus_screen_refresh_rate_info">Mitä suurempi näytön virkistystaajuus, sitä sujuvampi näyttökokemus on. 90 Hz: ssä virkistystaajuus kytketään dynaamisesti tilanteiden mukaisesti.</string>
-    <string name="oneplus_screen_resolution_adjust">Resoluutio</string>
+    <string name="oneplus_screen_resolution_adjust">Tarkkuus</string>
     <string name="oneplus_screen_resolution_adjust_1080p_summary">Erinomainen näyttö, matalampi virrankulutus (2340×1080)</string>
     <string name="oneplus_screen_resolution_adjust_1080p_summary_19811">Erinomainen näyttö, matalampi virrankulutus (2376×1080)</string>
     <string name="oneplus_screen_resolution_adjust_intelligent_switch">Kytke automaattisesti</string>
     <string name="oneplus_screen_resolution_adjust_intelligent_switch_summary">Siirry sopivaan tarkkuuteen automaattisesti</string>
     <string name="oneplus_screen_resolution_adjust_other_summary">Selkein näyttö, kasvanut virrankulutus (3120×1440)</string>
     <string name="oneplus_screen_resolution_adjust_other_summary_19811">Selkein näyttö, kasvanut virrankulutus (3168×1440)</string>
-    <string name="oneplus_search_keyword_about_settings">device name, android version, build number, model, CPU, storage, RAM, ROM, camera, pixel, screen, Verification, Legal information, Warranty card, preinstalled list, Award</string>
+    <string name="oneplus_search_keyword_about_settings">Laitteen nimi, Android-versio, Koontiversion numero, Malli, CPU, Tallennustila, RAM, ROM, Kamera, Pikselit, Näyttö, Vahvistus, Juridiset tiedot, Takuukortti, Esiasennusluettelo, Palkinto</string>
     <string name="oneplus_search_keyword_accent_color">väri</string>
     <string name="oneplus_search_keyword_app_lock">lukitus,PIN,salasanat</string>
     <string name="oneplus_search_keyword_connected_device_manager">yhdistettyjen laitteiden hallinta, laite</string>
-    <string name="oneplus_search_keyword_data_usage_control">datakäytön hallinta</string>
+    <string name="oneplus_search_keyword_data_usage_control">Tietojen käytön valvonta</string>
     <string name="oneplus_search_keyword_default_launcher_app">launcher, oletus, sovellukset, aloitusnäytön oletussovellus, aloitusnäytön sovellus</string>
     <string name="oneplus_search_keyword_discoverable_device">löydettävissä</string>
     <string name="oneplus_search_keyword_double_click_light_screen">näyttö,herätys</string>
@@ -4035,7 +4051,7 @@ Huomautus: Sormenjälki saattaa olla vähemmän turvallinen kuin vahva kuvio tai
     <string name="oneplus_search_keyword_gesture_to_control_calls">vastaus,kytkin</string>
     <string name="oneplus_search_keyword_hide_navkeys">piilota navigointipalkki</string>
     <string name="oneplus_search_keyword_home_key">aloitussivu</string>
-    <string name="oneplus_search_keyword_icon_manager">kuvakkeiden hallinta</string>
+    <string name="oneplus_search_keyword_icon_manager">Kuvakkeiden hallinta</string>
     <string name="oneplus_search_keyword_incoming_call_vibrate_mode">värinä</string>
     <string name="oneplus_search_keyword_input_keyboard">syöttö, näppäimistö</string>
     <string name="oneplus_search_keyword_led_settings">väri, valo, LED</string>
@@ -4054,27 +4070,30 @@ Huomautus: Sormenjälki saattaa olla vähemmän turvallinen kuin vahva kuvio tai
     <string name="oneplus_search_keyword_sounds_and_notifications_interruptions">ei saa häiritä, keskeyttää, keskeytys, tauko, tila</string>
     <string name="oneplus_search_keyword_swap_navkeys">vaihda painikkeet</string>
     <string name="oneplus_search_keyword_switch">siirto,tietojen siirto</string>
-    <string name="oneplus_search_keyword_theme_settings">LUKITUSNÄYTÖN MUKAUTUS, Taustakuvat, Kellon tyyli, Sormenjälkianimaatio, Horizon-valo, JÄRJESTELMÄN MUKAUTUS, Korostusväri, Muoto, Kirjasin, Värisävy, Kuvakepaketti, Valaistus, Värivivahdetumma, Eloisat sävyt</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl">LUKITUSNÄYTÖN MUKAUTUS, Taustakuvat, Kellon tyyli, Sormenjälkianimaatio, Horizon-valo, JÄRJESTELMÄN MUKAUTUS, Korostusväri, Muoto, Kirjasin, Värisävy, Kuvakepaketti, Valaistus, Värivivahdetumma, Eloisat sävyt, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light">LUKITUSNÄYTÖN MUKAUTUS, Taustakuvat, Kellon tyyli, Sormenjälkianimaatio, JÄRJESTELMÄN MUKAUTUS, Korostusväri, Muoto, Kirjasin, Värisävy, Kuvakepaketti, Valaistus, Värivivahdetumma, Eloisat sävyt</string>
+    <string name="oneplus_search_keyword_theme_settings">Lukitusnäytön mukautus, Taustakuvat, Kellon tyyli, Sormenjälkianimaatio, Horizon-valo, Järjestelmän mukautus, Korostusväri, Muoto, Kirjasin, Värisävy, Kuvakepaketti, Valaistus, Värivivahde tumma, Eloisat sävyt</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">Lukitusnäytön mukautus, Taustakuvat, Kellon tyyli, Sormenjälkianimaatio, Horizon-valo, Järjestelmän mukautus, Korostusväri, Muoto, Kirjasin, Värisävy, Kuvakepaketti, Valaistus, Värivivahde tumma, Eloisat sävyt, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lukitusnäytön mukautus, Taustakuvat, Kellon tyyli, Sormenjälkianimaatio, Horizon-valo, Järjestelmän mukautus, Korostusväri, Muoto, Kirjasin, Värisävy, Kuvakepaketti, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_new">Lukitusnäytön mukautus, Taustakuvat, Kellon tyyli, Sormenjälkianimaatio, Horizon-valo, Järjestelmän mukautus, Korostusväri, Muoto, Kirjasin, Värisävy, Kuvakepaketti</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light">Lukitusnäytön mukautus, Taustakuvat, Kellon tyyli, Sormenjälkianimaatio, Järjestelmän mukautus, Korostusväri, Muoto, Kirjasin, Värisävy, Kuvakepaketti, Valaistus, Värivivahde tumma, Eloisat sävyt</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lukitusnäytön mukautus, Taustakuvat, Kellon tyyli, Sormenjälkianimaatio, Järjestelmän mukautus, Korostusväri, Muoto, Kirjasin, Värisävy, Kuvakepaketti</string>
     <string name="oneplus_search_keyword_three_screenshots">näyttökuva</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">ilmoitukset,kokemus,ohjelma,parannus</string>
     <string name="oneplus_search_keyword_wallpaper_settings">taustakuva, lukitusnäyttö</string>
     <string name="oneplus_search_keyword_wifi_direct">suora,P2P,yhteys</string>
     <string name="oneplus_search_keyword_wifi_display_settings_screen">lähetä</string>
-    <string name="oneplus_security_dashboard_summary">Sormenjälki, Face Unlock, sijainti</string>
+    <string name="oneplus_security_dashboard_summary">Sormenjälki, kasvoavaus, sijainti</string>
     <string name="oneplus_security_dashboard_summary_no_faceunlock">Sormenjälki, sijainti</string>
     <string name="oneplus_security_detection_summary">Suojaustunnistus tuntemattoman lähteen sovelluksille</string>
     <string name="oneplus_security_detection_title">OnePlus-suojaustunnistus</string>
     <string name="oneplus_security_lock_settings_summary">Avaa asetukset, paikannuspalvelu, sovellusvarasto</string>
     <string name="oneplus_security_lock_settings_title">Turvallisuus ja tietosuoja</string>
     <string name="oneplus_security_settings_fingerprint_enroll_error_dialog_title">Määrittäminen epäonnistui</string>
-    <string name="oneplus_security_settings_fingerprint_enroll_introduction_message">"Voit avata puhelimen lukituksen, valtuuttaa oston ja kirjautua sovelluksiin yksinkertaisesti painamalla sormenjäljen tunnistusaluetta. 
+    <string name="oneplus_security_settings_fingerprint_enroll_introduction_message">"Avaa puhelimen lukitus, valtuuta ostoksia ja kirjaudu sovelluksiin painamalla sormenjäljentunnistusaluetta. 
 
-Huomautus: 
-1.Sormenjälki saattaa olla vähemmän turvallinen kuin vahva kuvio tai PIN-koodi.
-2.Syötä sormenjälkesi uudelleen aina, kun vaihdat suojakalvon, jotta sormenjälki varmasti toimisi."</string>
+Huomaa: 
+1. Sormenjälki ei saata olla niin turvallinen kuin kuvio tai PIN-koodi.
+2. Anna sormenjälkesi aina uudelleen, kun vaihdat näytön suojakalvon, jotta jälki olisi edelleen käytettävissä."</string>
     <string name="oneplus_security_settings_fingerprint_exists_dialog_message">Tämä sormenjälki on jo määritetty, kokeile toista sormea.</string>
     <string name="oneplus_security_settings_fingerprint_toggle_category_title">Näytä sormenjälkikuvake ympäristönäytössä</string>
     <string name="oneplus_security_settings_fingerprint_toggle_category_title_for_always_on">SORMENJÄLKIKUVAKKEEN VALINNAT</string>
@@ -4096,8 +4115,8 @@ Huomautus:
     <string name="oneplus_set_time">Ajastettu yötila</string>
     <string name="oneplus_setting_ringtone">Aseta soittoääni</string>
     <string name="oneplus_setting_sim_ringtone_switch">Aseta soittoääni kullekin SIM-kortille</string>
-    <string name="oneplus_settings_lab_feature_boost_summary">Smart Boost hyödyntää OnePlus-puhelinten suurta RAM-muistia täysin päivittäisen käyttösi perusteella hyödyntäen sovellusten ja pelien lataustehoa.</string>
-    <string name="oneplus_settings_lab_feature_boost_title">Smart Boost</string>
+    <string name="oneplus_settings_lab_feature_boost_summary">Älytehostin hyödyntää päivittäisten käyttötietojesi perusteella OnePlus-puhelimen suurta RAM-muistia ja tehostaa näin sovellusten ja pelien lataamista.</string>
+    <string name="oneplus_settings_lab_feature_boost_title">Älytehostin</string>
     <string name="oneplus_settings_refresh_rate_settings_120">120 Hz:n ASETUKSET</string>
     <string name="oneplus_settings_refresh_rate_settings_90">90 Hz:n ASETUKSET</string>
     <string name="oneplus_settings_refresh_rate_settings_summary">Vaihda automaattisesti asianmukaiseen päivitysnopeuteen akkua kuluttamatta</string>
@@ -4120,9 +4139,10 @@ Huomautus:
     <string name="oneplus_silent_mode_on">Äänetön tila on käytössä</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Puhelut ja ilmoitukset mykistyvät lukuun ottamatta hälytyksiä</string>
     <string name="oneplus_silent_mode_summary">Puhelut ja ilmoitukset mykistyvät lukuun ottamatta hälytyksiä</string>
+    <string name="oneplus_silent_notifications_status_bar">Piilota hiljainen ilmoitus tilariviltä</string>
     <string name="oneplus_sim1_ringtone_switch">SIM-kortti 1</string>
     <string name="oneplus_sim2_ringtone_switch">SIM-kortti 2</string>
-    <string name="oneplus_simcard_title">SIM</string>
+    <string name="oneplus_simcard_title">Kortti</string>
     <string name="oneplus_sla_down_load_app_summary">Latauskiihdytys ei ole käytössä, kun hotspot tai Wi‑Fi Direct on käytössä</string>
     <string name="oneplus_sleep_standby_summary">Optimoi akun kesto (esim. poistamalla verkko käytöstä), kun nukut. Tällöin sovellukset eivät välttämättä saa ilmoituksia ajoissa.</string>
     <string name="oneplus_sleep_standby_title">Univalmiustilan optimointi</string>
@@ -4137,7 +4157,7 @@ Huomautus:
     <string name="oneplus_sound_tuner">Dolby Atmos</string>
     <string name="oneplus_status_summary">Puhelinnumero, signaali jne.</string>
     <string name="oneplus_stop_run">Estä väkisin</string>
-    <string name="oneplus_storage">TALLENNUS</string>
+    <string name="oneplus_storage">STORAGE</string>
     <string name="oneplus_sunrise_sunset">Ota automaattisesti käyttöön auringonlaskusta auringonnousuun</string>
     <string name="oneplus_support_apps">TUETUT SOVELLUKSET</string>
     <string name="oneplus_support_summary">Vinkkejä ja usein kysyttyjä kysymyksiä laitteen käytöstä</string>
@@ -4146,23 +4166,23 @@ Huomautus:
     <string name="oneplus_suspension_notice">Ennakkoilmoitus</string>
     <string name="oneplus_suspension_notice_summary">Sallii sovellusten näyttää ennakkoilmoituksia</string>
     <string name="oneplus_switch">OnePlus Switch</string>
-    <string name="oneplus_switch_resolution_kill_process_confirm">Vaihda</string>
+    <string name="oneplus_switch_resolution_kill_process_confirm">Kytkin</string>
     <string name="oneplus_switch_resolution_kill_process_tips">Tarkkuuden muuttaminen voi saada joitain taustasovelluksia sulkeutumaan. Vahvistatko muutoksen?</string>
     <string name="oneplus_switch_screen_lock_type">Vaihdetaan näytön lukitustyyppi, odota...</string>
     <string name="oneplus_system_data_summary">Sisältää tilitiedot, yhteystiedot ja sovellusten tiedot</string>
     <string name="oneplus_system_data_title">Järjestelmän tiedot</string>
     <string name="oneplus_system_default">Järjestelmän oletus</string>
-    <string name="oneplus_system_ringtone">Järjestelmä-äänet</string>
+    <string name="oneplus_system_ringtone">Järjestelmän äänet</string>
     <string name="oneplus_system_settings_summary">Helppokäyttöisyys, päivämäärä ja aika, kielet ja syöttö</string>
     <string name="oneplus_system_settings_title">Järjestelmäasetukset</string>
     <string name="oneplus_system_stability_add">Liity järjestelmän vakautta parantavaan ohjelmaan</string>
     <string name="oneplus_system_stability_summary">Anna OnePlusin käsitellä järjestelmälokeja anonyymisti. Salli virheraportin ja lokien lähettäminen virheen sattuessa. Lokeja käytetään vain järjestelmän virheanalyysiin ja vakauden parantamiseen</string>
     <string name="oneplus_system_stability_title">Järjestelmän vakausohjelma</string>
-    <string name="oneplus_system_vibrate">Järjetelmän värinä</string>
+    <string name="oneplus_system_vibrate">Järjestelmän värinä</string>
     <string name="oneplus_theme_accent_color">Korostusväri</string>
-    <string name="oneplus_theme_accent_color_customization">MUKAUTUS</string>
+    <string name="oneplus_theme_accent_color_customization">MUKAUTTAMINEN</string>
     <string name="oneplus_theme_accent_color_presetcolor">ENNALTA MÄÄRITETTY VÄRI</string>
-    <string name="oneplus_theme_accent_color_select">VALITSE KOROSTUSVÄRI</string>
+    <string name="oneplus_theme_accent_color_select">Valitse korostusväri</string>
     <string name="oneplus_theme_apply_summary">Kun olet ottanut tämän teeman käyttöön, mukautusasetuksesi ohitetaan</string>
     <string name="oneplus_theme_apply_title">Haluatko ottaa tämän teeman käyttöön?</string>
     <string name="oneplus_theme_clock">Kellon tyyli</string>
@@ -4173,7 +4193,7 @@ Huomautus:
     <string name="oneplus_theme_drop_title">Poistu muokkaustilasta</string>
     <string name="oneplus_theme_entrance_summary">Taustakuvat, korustusväri, kirjasin, värisävy</string>
     <string name="oneplus_theme_entrance_title">Mukauttaminen</string>
-    <string name="oneplus_theme_fingerprint">Sormenjälkiainmointi</string>
+    <string name="oneplus_theme_fingerprint">Sormenjälkianimointi</string>
     <string name="oneplus_theme_fingerprint_snake_action">OTA SORMENJÄLKI KÄYTTÖÖN</string>
     <string name="oneplus_theme_fingerprint_snake_tip">Tämä ominaisuus on käytettävissä, kun sormenjälki on päällä</string>
     <string name="oneplus_theme_font">Fontti</string>
@@ -4182,21 +4202,21 @@ Huomautus:
     <string name="oneplus_theme_lock_screen_customization">LUKITUSNÄYTÖN MUKAUTTAMINEN</string>
     <string name="oneplus_theme_preset">Valmis teema</string>
     <string name="oneplus_theme_preset_color">Eloisat sävyt</string>
-    <string name="oneplus_theme_preset_dark">Värivivahdetumma</string>
+    <string name="oneplus_theme_preset_dark">Värivivahde tumma</string>
     <string name="oneplus_theme_preset_light">Valaistus</string>
     <string name="oneplus_theme_preset_mcl">McLaren</string>
     <string name="oneplus_theme_preset_summary">Esiasetettuihin teemoihin kuuluu laaja valikoima korostusvärejä, ääniä jne</string>
     <string name="oneplus_theme_preset_summary_tmp">Esiasetettuihin teemoihin kuuluu laaja valikoima taustakuvia, korostusvärejä, ääniä jne</string>
     <string name="oneplus_theme_shape">Järjestelmäkuvakkeet</string>
     <string name="oneplus_theme_shape_effect_round">Pyöreä</string>
-    <string name="oneplus_theme_shape_effect_round_rectangle">Pyöreä suorakaide</string>
+    <string name="oneplus_theme_shape_effect_round_rectangle">Pyöristetty suorakaide</string>
     <string name="oneplus_theme_shape_effect_square">Neliö</string>
     <string name="oneplus_theme_shape_effect_teardrop">Kyynel</string>
     <string name="oneplus_theme_shape_effect_title">Valitse muoto</string>
     <string name="oneplus_theme_system_customization">JÄRJESTELMÄN MUKAUTTAMINEN</string>
     <string name="oneplus_theme_tone">Värisävy</string>
     <string name="oneplus_theme_tone_effect_color">Värikäs</string>
-    <string name="oneplus_theme_tone_effect_dark">Pimeä</string>
+    <string name="oneplus_theme_tone_effect_dark">Tumma</string>
     <string name="oneplus_theme_tone_effect_light">Kevyt</string>
     <string name="oneplus_theme_tone_effect_title">Valitse sävy</string>
     <string name="oneplus_theme_wallpaper">Taustakuvat</string>
@@ -4207,33 +4227,33 @@ Huomautus:
     <string name="oneplus_timer_shutdown_disable_summary">Ota tämä toiminto käyttöön poistamalla käynnistyksen salasana käytöstä</string>
     <string name="oneplus_timer_shutdown_summary">Puhelimesi automaattiseen sammutukseen on %d s. Vahvista sammuttaaksesi heti.</string>
     <string name="oneplus_to_select_assistant_app_dialog">Valitse aktivoitava apusovellus</string>
-    <string name="oneplus_tools_quicklaunch_summary">Pelitila, pikakäynnistys, rinnakkaiset sovellukset</string>
-    <string name="oneplus_tools_quicklaunch_summary_no_gamingmode">Pikakäynnistys, rinnakkaiset sovellukset</string>
+    <string name="oneplus_tools_quicklaunch_summary">Pelitila, pikakäynnistys, rinnakkaiset sovellukset, sovelluslukitus</string>
+    <string name="oneplus_tools_quicklaunch_summary_no_gamingmode">Pikakäynnistys, rinnakkaiset sovellukset, sovelluslukitus</string>
     <string name="oneplus_tools_summary">Pelitila, sovelluslukko, rinnakkaissovellukset</string>
     <string name="oneplus_tools_summary_U30">Pelitila, taskutila, ajastettu käynnistys/sammutus</string>
     <string name="oneplus_tools_summary_no_gamingmode">Sovelluslukitus, rinnakkaissovellukset</string>
     <string name="oneplus_tools_title">Apuohjelmat</string>
     <string name="oneplus_top_level_accounts_summary">OnePlus-tili, muut tilit</string>
     <string name="oneplus_top_level_apps_and_notifs_summary">Oletussovellukset, -ilmoitukset, -käyttöoikeudet</string>
-    <string name="oneplus_top_level_buttons_and_gestures_summary">Alert Slider, navigointipalkki ja eleet</string>
-    <string name="oneplus_top_level_cloud_h2_summary">Synkronoi data pilvipalvelun kanssa, paikanna puhelin</string>
+    <string name="oneplus_top_level_buttons_and_gestures_summary">Hälytyksen liukusäädin, navigointipalkki ja eleet</string>
+    <string name="oneplus_top_level_cloud_h2_summary">Synkronoi data pilvipalvelun kanssa; paikanna puhelin</string>
     <string name="oneplus_top_level_cloud_o2_summary">Synkronoi data pilvipalvelun kanssa</string>
     <string name="oneplus_top_level_connected_summary">NFC, näytöntallennus, napauta ja maksa</string>
-    <string name="oneplus_top_level_display_summary">Status bar, ambient display, Vision comfort, reading mode</string>
+    <string name="oneplus_top_level_display_summary">Tilarivi, ympäristönäyttö, yötila, lukutila</string>
     <string name="oneplus_top_level_network_summary">SIM, mobiiliverkko, datakäyttö, hotspot</string>
     <string name="oneplus_top_level_privacy_summary">Käyttöoikeudet, henkilötiedot</string>
-    <string name="oneplus_top_level_security_dashboard_summary">Sormenjälki, Face Unlock, hätäpelastus</string>
-    <string name="oneplus_top_level_security_summary">Sormenjälki, Face Unlock, hätäpelastus</string>
+    <string name="oneplus_top_level_security_dashboard_summary">Sormenjälki, kasvoavaus, hätäpelastus</string>
+    <string name="oneplus_top_level_security_summary">Sormenjälki, kasvoavaus, hätäpelastus</string>
     <string name="oneplus_top_level_sound_summary">Ei saa häiritä, kuuloketila, soittoääni</string>
     <string name="oneplus_top_level_system_summary">Kieli ja näppäimistö, aika, nollaus, järjestelmäpäivitykset</string>
     <string name="oneplus_top_level_system_summary_verizon">Kieli ja näppäimistö, kellonaika, nollaus</string>
-    <string name="oneplus_touch_vibrate">Värise kosketettaessa</string>
+    <string name="oneplus_touch_vibrate">Värinä kosketettaessa</string>
     <string name="oneplus_true_color_mode_summary">Mukauta näytön väri automaattisesti ympäristön valaistuksen mukaan, jotta varmistetaan miellyttävä näyttövaikutus eri ympäristöissä</string>
     <string name="oneplus_true_color_mode_title">Miellyttävä sävy</string>
     <string name="oneplus_turn_off_time">Saakka</string>
     <string name="oneplus_turn_on_feature_cancel">PERUUTA</string>
     <string name="oneplus_turn_on_feature_ok">OTA KÄYTTÖÖN</string>
-    <string name="oneplus_turn_on_time">Alkaen</string>
+    <string name="oneplus_turn_on_time">Mistä</string>
     <string name="oneplus_tws_pods_funtion">Kuuloketoiminto</string>
     <string name="oneplus_uninstatll_multi_app_msg">Kaikki rinnakkaisen sovelluksen tiedot pyyhitään asennuksen poistamisen yhteydessä. Haluatko varmasti poistaa asennuksen?</string>
     <string name="oneplus_uninstatll_multi_app_title">Rinnakkainen %1$s</string>
@@ -4269,7 +4289,7 @@ Huomautus: Lukituksen avaaminen kasvojentunnistuksella saattaa olla vähemmän t
     <string name="oneplus_volume_keys_adjust_ringtones">Soittoäänen voimakkuus</string>
     <string name="oneplus_weak_text_reminding">Vain teksti</string>
     <string name="oneplus_weak_text_reminding_summary">Sallii sovellusten näyttää ennakkoilmoituksia</string>
-    <string name="oneplus_wellbeing_grayscale_open_tip">Yötila ei ole tällä hetkellä käytettävissä, koska Harmaasävy-ominaisuus on päällä</string>
+    <string name="oneplus_wellbeing_grayscale_open_tip">Yötila ei ole juuri nyt käytettävissä, koska Harmaasävy-ominaisuus on käytössä</string>
     <string name="oneplus_wifi_6_standard_hotspot_cancel">PERUUTA</string>
     <string name="oneplus_wifi_6_standard_hotspot_enable">OTA KÄYTTÖÖN</string>
     <string name="oneplus_wifi_6_standard_hotspot_title">Wi‑Fi 6 -standardin hotspot</string>
@@ -4284,7 +4304,7 @@ Verkon asettaminen piilotetuksi ei muuta reitittimen asetuksia."</string>
     <string name="oneplus_wifi_ipv6_surport_title">IPv6-tuki</string>
     <string name="oneplus_wifi_list">Wi‑Fi-lista</string>
     <string name="oneplus_wifi_name">Mobiili-hotspotin nimi</string>
-    <string name="oneplus_wifi_name_dialog_message">Jos kytket asetuksen Lähetä verkon nimi (SSID) pois päältä, puhelin ei ole muiden laitteiden nähtävissä eikä se näy käytettävissä olevien Wi-Fi-verkkojen luettelossa. Muut laitteet voivat yhä muodostaa yhteyden hotspotiisi syöttämällä sen verkkonimen manuaalisesti.</string>
+    <string name="oneplus_wifi_name_dialog_message">Jos otat Lähetä verkon nimi (SSID) -asetuksen pois käytöstä, puhelin ei ole muiden laitteiden nähtävissä eikä se näy käytettävissä olevien Wi-Fi-verkkojen luettelossa. Muut laitteet voivat yhä muodostaa yhteyden hotspotiisi syöttämällä sen verkkonimen manuaalisesti.</string>
     <string name="oneplus_wifi_name_dialog_title">Hotspotisi ei ole nyt näkyvissä</string>
     <string name="oneplus_wifi_scan_always_available">Skannaus aina käytettävissä</string>
     <string name="oneplus_wifi_scan_always_available_summary">Anna sijaintipalvelujen ja muiden sovellusten etsiä verkkoja, vaikka Wi‑Fi on pois päältä</string>
@@ -4296,28 +4316,26 @@ Verkon asettaminen piilotetuksi ei muuta reitittimen asetuksia."</string>
     <string name="oneplus_zen_mode_duration_summary_always_prompt">Kysy aina (paitsi jos kytketty päälle automaattisesti)</string>
     <string name="oneplus_zen_mode_duration_summary_forever">Kunnes poistetaan käytöstä (ellei oteta käyttöön automaattisesti)</string>
     <string name="oneplus_zen_mode_duration_summary_time_minutes">%d minuuttia (ellei oteta käyttöön automaattisesti)</string>
-    <string name="oneplus_zen_mode_footer_info">Kun Ei saa häiritä on päällä, ääni ja värinä poistetaan käytöstä yllä sallimiasi tapauksia lukuun ottamatta</string>
+    <string name="oneplus_zen_mode_footer_info">Kun Ei saa häiritä on käytössä, ääni ja värinä poistetaan käytöstä yllä sallimiasi tapauksia lukuun ottamatta</string>
     <string name="oneplus_zen_mode_mode_manual_switch_summary">Voit ottaa Ei saa häiritä -tilan käyttöön manuaalisesti</string>
     <string name="oneplus_zen_mode_settings">Käyttäytyminen</string>
-    <string name="oneplus_zen_mode_switch">Kytke Ei saa häiritä -tila päälle</string>
-    <string name="oneplus_zen_mode_walloftext">Kun Ei saa häiritä on päällä, ääni ja värinä poistetaan käytöstä alla sallimiasi tapauksia lukuun ottamatta</string>
+    <string name="oneplus_zen_mode_switch">Ota Ei saa häiritä -tila käyttöön</string>
+    <string name="oneplus_zen_mode_walloftext">Kun Ei saa häiritä on käytössä, ääni ja värinä poistetaan käytöstä alla sallimiasi tapauksia lukuun ottamatta</string>
     <string name="oneplus_zen_sound_title">Muut äänet</string>
     <string name="onplus_hardware_version_info">Laitteistoversio</string>
     <string name="onplus_software_version_info">Ohjelmistoversio</string>
     <string name="onscreen_keyboard_settings_summary">Näyttönäppäimistön asetukset</string>
     <string name="op_advanced_settings">Lisäasetukset</string>
     <string name="op_android_mode_cannot_change_color_accent">Oletusteemassa voi käyttää vain järjestelmän väriteemaa</string>
-    <string name="op_aod_parsons_info_button">OK</string>
-    <string name="op_aod_parsons_info_message">"Every 24 hours, a masterpiece is created.
-
-Insight, designed together by OnePlus &amp; students from Parsons School of Design, transforms time into a visible color bar. The device's usage data drives the pattern. Every time the phone is unlocked, it leaves a groove on the bar. The longer is the utility time; the wider is the groove and vice versa. Through the insight of those grooves, take a peek at your digital life."</string>
-    <string name="op_aod_parsons_info_title">Insight</string>
+    <string name="op_aod_parsons_info_button">Ok</string>
+    <string name="op_aod_parsons_info_message">"Avattaessa luodaan mestariteos.
+OnePlus ja Parsons School of Designin opiskelijat ovat luoneet yhdessä yleiskuvatoiminnon, joka muuntaa ajan väripalkiksi. Laitteen käyttötiedot muodostavat kuvion. Aina, kun puhelimen lukitus avataan, väripalkkiin piirtyy ura. Mitä kauemmin puhelinta käytetään, sitä leveämpi ura on. Saat yleiskuvan digitaalisesta elämästäsi vilkaisemalla uria."</string>
     <string name="op_app_already_uninstalled">Poistettu</string>
     <string name="op_audio_settings">Ääniviritin</string>
     <string name="op_auto_power_saving">Automaattinen virransäästö</string>
     <string name="op_auto_power_saving_summary">Vaihda automaattisesti asianmukaiseen tarkkuuteen akkua kuluttamatta</string>
-    <string name="op_battery_saver_description">Battery Saver turns off or restricts background activity, some visual effects &amp; other high-power features to extend battery life.</string>
-    <string name="op_battery_suggestion_summary">Turn on Adaptive Battery</string>
+    <string name="op_battery_saver_description">Virransäästötoiminto lopettaa tai rajoittaa akun kestoajan pidentämiseksi joitakin taustatoimintoja, kuten visuaalisia tehosteita &amp; muita paljon virtaa kuluttavia toimintoja.</string>
+    <string name="op_battery_suggestion_summary">Ota mukautuva akkutoiminto käyttöön</string>
     <string name="op_cast_description">Näytä puhelimen näyttö ja ääni laitteessa, kuten TV:ssä</string>
     <string name="op_cast_nearby">Lähellä olevat laitteet</string>
     <string name="op_cast_no_devices">Lähellä olevia laitteita ei löytynyt</string>
@@ -4326,7 +4344,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_charging_Station_mute_notifications">Mykistä ilmoitukset</string>
     <string name="op_charging_footer_text">Saat ilmoituksen lähellä olevista latausasemista kumppaneilta lentoasemilla tai OnePlus-tapahtumissa (esim. Pop-up).</string>
     <string name="op_charging_optimization">Optimoitu lataus</string>
-    <string name="op_charging_optimization_summary">Optimoi latausmalli käyttötottumustesi mukaan</string>
+    <string name="op_charging_optimization_summary">Optimoi latausmalli käyttötottumustesi mukaisesti akun kuormituksen vähentämiseksi ja akun käyttöiän pidentämiseksi</string>
     <string name="op_charging_station">Lähistöllä olevat latausasemat</string>
     <string name="op_charging_station_no_station">Lähistöllä ei ole latausasemia</string>
     <string name="op_charging_station_summary">Näytä ilmoitus, kun lähistöllä havaitaan latausasema</string>
@@ -4351,7 +4369,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_custom_color_value">Väriarvo</string>
     <string name="op_custom_color_value_edit">Anna värin arvo</string>
     <string name="op_custom_color_value_invalid">Virheellinen värin arvo</string>
-    <string name="op_dark_mode_title">Pimeä</string>
+    <string name="op_dark_mode_title">Tumma</string>
     <string name="op_data_vowlan_enable_summary">Käytä Wi-Fi-soittamista, kun saatavilla</string>
     <string name="op_default_apps_summary">Koti, selain</string>
     <string name="op_default_luncher_title">Kotisovellus</string>
@@ -4366,7 +4384,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_display_graphics_enhancement_engine">VIDEON TEHOSTUSMOOTTORI</string>
     <string name="op_display_motion_graphics_compensation">Liikegrafiikan pehmennys</string>
     <string name="op_display_motion_graphics_compensation_summary">Tehosta grafiikan kuvataajuutta, sujuvampaa videota ja pelitehosteita</string>
-    <string name="op_dnd_summary">Ei saa häiritä</string>
+    <string name="op_dnd_summary">Älä häiritse</string>
     <string name="op_enable_location_services">Ota sijaintiasetus käyttöön, kun haluat etsiä lähellä olevia latausasemia ja pitää niistä kirjaa</string>
     <string name="op_enable_text">Ota käyttöön</string>
     <string name="op_face_unlock_set_unlock_password">Kasvo-avaus + salasana</string>
@@ -4383,9 +4401,15 @@ Eri valmistajien näytönsuojakalvot eivät ehkä toimi sormenjälkitunnistuksen
  Sormenjälkitunnistuksen määrityksen aikana puhelimen näytön kirkkautta lisätään ja näytön värintoistoprofiilia vaihdetaan tilapäisesti."</string>
     <string name="op_fragment">Lyhyt</string>
     <string name="op_gamespace">Pelitila</string>
-    <string name="op_high_power_app_manager">Akkua kuluttavien sovellusten hallinta</string>
+    <string name="op_global_drak_mode_apps_manage">Hallinnoi sovelluksia tummassa tilassa</string>
+    <string name="op_global_drak_mode_full_support_list">Tuetut sovellukset</string>
+    <string name="op_global_drak_mode_not_full_support_list">Ei tuetut sovellukset</string>
+    <string name="op_global_drak_mode_support_description">Sovellukset, joita ei tueta, eivät saata toimia oikein tummassa tilassa</string>
+    <string name="op_gps_off_warn_msg">Ota ensin paikannus käyttöön</string>
+    <string name="op_high_power_app_manager">Paljon virtaa käyttävät sovellukset</string>
+    <string name="op_history_toggled_on_summary">Uusimmat ilmoitukset näytetään täällä</string>
     <string name="op_keep_location_services">Etsi lähellä olevia latausasemia ja pidä niistä kirjaa ottamalla sijaintiasetus käyttöön</string>
-    <string name="op_light_mode_title">Valoisa</string>
+    <string name="op_light_mode_title">Vaalea</string>
     <string name="op_linked_launch_summary">Sovellusten hallinnan voi käynnistää taustalla</string>
     <string name="op_linked_launch_title">Sovellusten automaattinen käynnistys</string>
     <string name="op_lockpassword_choose_your_password_header_for_face">Kasvo-avauksen käyttämiseen, aseta salasana</string>
@@ -4393,9 +4417,11 @@ Eri valmistajien näytönsuojakalvot eivät ehkä toimi sormenjälkitunnistuksen
     <string name="op_lockpassword_choose_your_pin_header_for_face">Kasvo-avauksen käyttämiseen, aseta PIN</string>
     <string name="op_member_description">Sido laitteesi, niin saat eksklusiivisia etuja</string>
     <string name="op_member_title">Kirjaudu OnePlus-tilille</string>
-    <string name="op_night_display_title">Vision comfort</string>
+    <string name="op_night_display_title">Katselumukavuus</string>
     <string name="op_not_disturb">Älä häiritse -asetukset</string>
     <string name="op_not_disturb_summary">Mykistä puhelut ja imoitukset ja poista värinä käytöstä hälytyksiä lukuun ottamatta</string>
+    <string name="op_notification_history_off_summary">Näytä äskettäiset ilmoitukset ottamalla ilmoitushistoria käyttöön</string>
+    <string name="op_notification_history_summary">Näytä äskettäiset ilmoitukset</string>
     <string name="op_oneplus_roaming_summary">Tarjoa kansainvälisiä Internet-käyttöpalveluita</string>
     <string name="op_oneplus_roaming_title">OnePlus Roaming</string>
     <string name="op_primary_charm_purple_label">Syvä violetti</string>
@@ -4406,34 +4432,35 @@ Eri valmistajien näytönsuojakalvot eivät ehkä toimi sormenjälkitunnistuksen
     <string name="op_primary_grass_green_label">Vaaleanvihreä</string>
     <string name="op_primary_lemon_yellow_label">Oranssi</string>
     <string name="op_primary_red_label">Punainen</string>
+    <string name="op_primary_rose_red_label">Ruusunpunainen</string>
     <string name="op_primary_royal_blue_label">Royal Blue</string>
     <string name="op_primary_sky_blue_label">Syaani</string>
     <string name="op_primary_vigour_red_label">Vaaleanpunainen</string>
     <string name="op_reset">Nollaa</string>
     <string name="op_reset_options_summary">Tehdasasetusten palautus, sovellukset ja verkon nollaus</string>
     <string name="op_screenshot">Kuvakaappauksen ääni</string>
-    <string name="op_security_lock_settings_title">Turvallisuus &amp; näytön lukitus</string>
+    <string name="op_security_lock_settings_title">Turvallisuus ja näytön lukitus</string>
     <string name="op_security_settings_back_fingerprint_enroll_find_sensor_message">Löydät sen puhelimen takaosasta</string>
     <string name="op_security_settings_fingerprint_enroll_find_sensor_message">Paikanna sormenjälkisensori kotinäppäimessä</string>
-    <string name="op_security_settings_title">Turvallisuus &amp; sormenjälki</string>
+    <string name="op_security_settings_title">Turvallisuus ja sormenjälki</string>
     <string name="op_sim_card_with_slotid">SIM  %1$s</string>
-    <string name="op_sim_cord">SIM-kortti &amp; verkko</string>
+    <string name="op_sim_cord">SIM-kortti ja verkko</string>
     <string name="op_sim_cord_summary">Oletus-SIM-kortti, kaistanleveyden käyttö</string>
     <string name="op_sim_name_with_prefix">  (%1$s)</string>
-    <string name="op_smart_battery_manager_title">Adaptive Battery</string>
-    <string name="op_smart_battery_title">Use Adaptive Battery</string>
+    <string name="op_smart_battery_manager_title">Mukautuva akku</string>
+    <string name="op_smart_battery_title">Käytä mukautuvaa akkutoimintoa</string>
     <string name="op_sms_ringtone">Tekstiviestiääni</string>
-    <string name="op_starwar_mode_cannot_change_color_accent">StarWar-teema voi käyttää vain järjestelmän väriteemaa</string>
+    <string name="op_starwar_mode_cannot_change_color_accent">Star Wars -teema voi käyttää vain järjestelmän väriteemaa</string>
     <string name="op_starwar_mode_title">Star Wars</string>
-    <string name="op_storage">Tallennus &amp; muisti</string>
+    <string name="op_storage">Tallennus ja muisti</string>
     <string name="op_system_dashboard_summary">Kieli, aika, nollaus, päivitykset</string>
     <string name="op_tcp_timestamps_randomization_dialog_title">Valitse TCP satunnaisten aikaleimojen merkintä</string>
     <string name="op_tcp_timestamps_randomization_title">TCP satunnaisten aikaleimojen merkintä</string>
     <string name="op_theme_2__cannot_change_color_accent">The Avengers -teemaa voi käyttää vain järjestelmän väriteemana</string>
     <string name="op_theme_2__title">The Avengers</string>
-    <string name="op_theme_3_cannot_change_color_accent">McLaren-teema voi käyttää ainoastaan järjestelmän väriteemaa</string>
+    <string name="op_theme_3_cannot_change_color_accent">McLaren-teemassa voi käyttää vain järjestelmän väriteemaa</string>
     <string name="op_theme_3_title">McLaren</string>
-    <string name="op_theme_entrance_summary">Wallpapers, accent color, font</string>
+    <string name="op_theme_entrance_summary">Taustakuvat, korostusväri, kirjasin</string>
     <string name="op_theme_mode_title">Teema</string>
     <string name="op_use_cast">Käytä lähetystä</string>
     <string name="op_user_manual_settings">Käyttöohje</string>
@@ -4448,8 +4475,8 @@ Eri valmistajien näytönsuojakalvot eivät ehkä toimi sormenjälkitunnistuksen
     <string name="op_wlan_settings_and_management">Wi‑Fi-asetukset</string>
     <string name="op_zen_mode_automation_settings_title">Ota käyttöön automaattisesti</string>
     <string name="op_zen_mode_behavior_settings_title">Poikkeukset</string>
-    <string name="op_zen_mode_restrict_notifications_title">Restrict notifications</string>
-    <string name="opcustom_tone_dark_tile_text">Pimeä tila</string>
+    <string name="op_zen_mode_restrict_notifications_title">Rajoita ilmoituksia</string>
+    <string name="opcustom_tone_dark_tile_text">Tumma tila</string>
     <string name="open_hotspot_warning_message">"Avoimen suojauksen avulla laitteet voivat käyttää mobiili-hotspotia ilman salasanan syöttämistä. Valitse WPA2-suojaus sen sijaan, jos haluat vaatia salasanan. "</string>
     <string name="open_supported_links_footer">Sovellus sanoo käsittelevänsä näitä linkkejä:</string>
     <string name="openid_dialog_reset">NOLLAA</string>
@@ -4524,6 +4551,8 @@ Eri valmistajien näytönsuojakalvot eivät ehkä toimi sormenjälkitunnistuksen
     <string name="platform_compat_dashboard_title">Sovelluksen yhteensopivuuden muutokset</string>
     <string name="platform_compat_default_disabled_title">Oletusarvoisesti käytöstä poistettujen muutokset</string>
     <string name="platform_compat_default_enabled_title">Oletusarvoisesti käyttöön otettujen muutokset</string>
+    <string name="platform_compat_dialog_text_no_apps">Sovelluksen yhteensopivuusmuutoksia voi tehdä vain virheenkorjausta tukevissa sovelluksissa. Asenna virheenkorjausta tukeva sovellus ja yritä uudelleen.</string>
+    <string name="platform_compat_dialog_title_no_apps">Ei sovelluksia</string>
     <string name="please_select_phase2">Todennus: vaihe 2</string>
     <string name="please_type_passphrase">Langaton salasana</string>
     <string name="pointer_location">Osoittimen sijainti</string>
@@ -5307,7 +5336,7 @@ Saatoit antaa väärän PIN-koodin."</string>
     <string name="sim_editor_title">SIM-korttipaikka %1$d</string>
     <string name="sim_enable_sim_lock">Lukitse SIM-kortti</string>
     <string name="sim_enabled">käytössä</string>
-    <string name="sim_enabler_airplane_on">VIRHE, lentotila on päällä!</string>
+    <string name="sim_enabler_airplane_on">VIRHE, lentotila on käytössä!</string>
     <string name="sim_enabler_both_inactive">Virhe. Kaikkia SIM-kortteja ei voi poistaa käytöstä</string>
     <string name="sim_enabler_disabling">Epäaktivoidaan...</string>
     <string name="sim_enabler_enabling">Aktivoidaan...</string>
@@ -5427,7 +5456,7 @@ Laitteeseesi asennettu luotettu varmenne tekee tämän mahdolliseksi."</string>
     <string name="status_bar_settings_bluetooth_title">Bluetooth</string>
     <string name="status_bar_settings_cast_title">Lähetä</string>
     <string name="status_bar_settings_cellular_title">Matkapuhelindata</string>
-    <string name="status_bar_settings_dnd_title">Ei saa häiritä</string>
+    <string name="status_bar_settings_dnd_title">Älä häiritse</string>
     <string name="status_bar_settings_headset_title">Kuulokkeet</string>
     <string name="status_bar_settings_hotspot_title">Hotspot</string>
     <string name="status_bar_settings_network_speed_title">Näytä verkon nopeus</string>
@@ -5449,7 +5478,7 @@ Laitteeseesi asennettu luotettu varmenne tekee tämän mahdolliseksi."</string>
     <string name="status_number">Puhelinnumero</string>
     <string name="status_number_sim_slot">Puh. nro (SIM-paikka %1$d)</string>
     <string name="status_number_sim_status">SIM-kortin puhelinnumero</string>
-    <string name="status_openid_summary">Anna nimetön laitetunnus OnePlusin Internet-palveluille, kuten Cloud Servicelle</string>
+    <string name="status_openid_summary">Anna nimetön laitetunnus OnePlusin Internet-palveluille, esimerkiksi pilvipalvelulle</string>
     <string name="status_openid_title">OnePlusin nimetön laitetunnus</string>
     <string name="status_operator">Verkko</string>
     <string name="status_prl_version">PRL-versio</string>
@@ -5688,7 +5717,7 @@ Kokeile ottaa käyttöön nopeampi ^3 tai käytä laitetta ^4 siirrettävänä t
     <string name="summary_separator">" / "</string>
     <string name="summary_voice_network">VoLTE, Wi-Fi-puhelut</string>
     <string name="summary_voice_volte_only">VoLTE</string>
-    <string name="summary_voice_wfc_only">Wi-Fi-puhelu</string>
+    <string name="summary_voice_wfc_only">Wi-Fi-puhelut</string>
     <string name="support_summary">Ohjeartikkelit, puhelin ja chat, aloitus</string>
     <string name="swipe_direction_ltr">Ohita pyyhkäisemällä oikealle ja näytä valikko pyyhkäisemällä vasemmalle.</string>
     <string name="swipe_direction_rtl">Ohita pyyhkäisemällä vasemmalle ja näytä valikko pyyhkäisemällä oikealle.</string>
@@ -5748,7 +5777,7 @@ Se on Googlen tapa synkronoida tietoja, ja sen avulla voit käyttää yhteystiet
     <string name="tether_error_item_default">Internet-yhteyden jakaminen</string>
     <string name="tether_error_message">Et ole tilannut palvelua %1$s.</string>
     <string name="tether_error_title">%1$s-virhe</string>
-    <string name="tether_no_sim_message">Asenna SIM-kortti käyttääksesi mobiilihotspotia ja muita Internet-yhteyden jakamisvaihtoehtoja</string>
+    <string name="tether_no_sim_message">Asenna SIM-kortti, jotta voisit käyttää mobiili-hotspotia ja muita Internet-yhteyden jakamisvaihtoehtoja</string>
     <string name="tether_no_sim_title">Ei SIM-korttia</string>
     <string name="tether_settings_disabled_on_data_saver">Kun Data Saver on käytössä, puhelinta ei voi käyttää modeemina eikä kannettavien hotspotien käyttäminen onnistu.</string>
     <string name="tether_settings_summary_all">Hotspot, USB, Bluetooth, Ethernet</string>
@@ -5800,7 +5829,7 @@ Se on Googlen tapa synkronoida tietoja, ja sen avulla voit käyttää yhteystiet
     <string name="time_picker_title">Aika</string>
     <string name="time_spent_in_app_pref_title">Käyttöaika</string>
     <string name="time_unit_just_now">Äsken</string>
-    <string name="timepower_edit_title">Määritä ajastettu käynnistys/sammutus</string>
+    <string name="timepower_edit_title">Aseta ajastettu käynnistys/sammutus</string>
     <string name="timepower_power_off">Katkaise virta</string>
     <string name="timepower_power_off_title">Ajastettu sammutus</string>
     <string name="timepower_power_on">Kytke virta</string>
@@ -6222,7 +6251,7 @@ Kaikki käyttäjät voivat päivittää sovelluksia muille käyttäjille."</stri
     <string name="verify_apps_over_usb_title">Tarkista USB:n kautta asennetut</string>
     <string name="verizon_store_demo_mode_hint">Syötä salasana</string>
     <string name="verizon_store_demo_mode_title">Verizon Store Demo Mode</string>
-    <string name="verizon_wifi_tether_band_warning">Mobiili-hotspotin asetusten muuttaminen katkaisee katkaisee mobiili-hotspotiin yhdistettyjen laitteiden yhteyden.</string>
+    <string name="verizon_wifi_tether_band_warning">Mobiili-hotspotin asetusten muuttaminen katkaisee mobiili-hotspotiin yhdistettyjen laitteiden yhteyden.</string>
     <string name="version_text">versio %1$s</string>
     <string name="vibrate_in_silent_title">Käytä värinää äänettömässä tilassa</string>
     <string name="vibrate_input_devices">Uudelleenohjaa värinä</string>
@@ -6633,7 +6662,7 @@ Annetaanko tämä lupa kaikille sovelluksille, jotka haluavat etsiä verkkoja?"<
     <string name="wifi_scan_throttling">Wi‑Fi-haun rajoitus</string>
     <string name="wifi_scan_throttling_summary">Vähentää virrankulutusta ja parantaa verkon toimintaa</string>
     <string name="wifi_security">Suojaus</string>
-    <string name="wifi_security_dialog">Suojauksen ollessa avoin mikä tahansa laite voi muodostaa yhteyden mobiilihotspotiisi ja käyttää mobiilidatayhteyttäsi.</string>
+    <string name="wifi_security_dialog">Suojauksen ollessa avoin mikä tahansa laite voi muodostaa yhteyden mobiili-hotspotiisi ja käyttää mobiilidatayhteyttäsi.</string>
     <string name="wifi_security_none">Ei mitään</string>
     <string name="wifi_security_open">Avaa</string>
     <string name="wifi_select_network">Valitse Wi-Fi-verkko</string>
@@ -6741,8 +6770,9 @@ Annetaanko tämä lupa kaikille sovelluksille, jotka haluavat etsiä verkkoja?"<
     <string name="wizard_finish">Valmis</string>
     <string name="wizard_next">Seuraava</string>
     <string name="work_alarm_ringtone_title">Työherätyksen oletusääni</string>
-    <string name="work_life_balance">Työn ja vapaa ajan tasapaino</string>
-    <string name="work_life_disabled_toast">Työn ja yksityiselämän tasapainotustoiminto on pois käytöstä.</string>
+    <string name="work_life_balance">Työn ja vapaa-ajan tasapaino</string>
+    <string name="work_life_banner_summary">Ilmoitukset saattavat häiritä. Aseta ne tärkeysjärjestykseen työn ja vapaa-ajan tasapainottamiseksi.</string>
+    <string name="work_life_disabled_toast">Työn ja vapaa-ajan tasapainotoiminto on poissa käytöstä.</string>
     <string name="work_mode_label">Työprofiili</string>
     <string name="work_mode_off_summary">Sovellukset ja ilmoitukset ovat poissa käytöstä</string>
     <string name="work_mode_on_summary">Organisaatiosi hallinnoima</string>

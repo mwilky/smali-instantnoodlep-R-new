@@ -2173,6 +2173,7 @@ Vous pouvez modifier cette option plus tard dans Paramètres > Applications et n
     <string name="keywords_lock_screen_notif">"notification sur l'écran de verrouillage, notifications"</string>
     <string name="keywords_lockscreen">glisser pour déverrouiller, mot de passe, schéma, nip</string>
     <string name="keywords_lockscreen_bypass">Écran de verrouillage, écran verrouillé, ignorer, contourner</string>
+    <string name="keywords_media_controls">commandes multimédias</string>
     <string name="keywords_model_and_hardware">numéro de série, version matérielle</string>
     <string name="keywords_more_mobile_networks">cellulaire, mobile, fournisseur de services, sans fil, données, 4g, 3g, 2g, lte</string>
     <string name="keywords_network_reset">"réinitialiser, restaurer, paramètres d'usine"</string>
@@ -2549,6 +2550,12 @@ D'autres personnes utilisent cet appareil.
     <string name="master_clear_title">"Effacer toutes les données (réinitialisation d'usine)"</string>
     <string name="maximum_memory_use">Utilisation max. de la mémoire</string>
     <string name="media_category">Médias</string>
+    <string name="media_controls_hide_player">Masquer le lecteur</string>
+    <string name="media_controls_no_players">"Aucun lecteur n'a été trouvé"</string>
+    <string name="media_controls_resume_description">Le lecteur vous permet de reprendre une session à partir du panneau Paramètres rapides développé.</string>
+    <string name="media_controls_show_player">Afficher le lecteur</string>
+    <string name="media_controls_summary">Masquer le lecteur à la fin de la session multimédia</string>
+    <string name="media_controls_title">Commandes multimédias</string>
     <string name="media_out_summary_ongoing_call_state">Indisponible pendant les appels</string>
     <string name="media_output_default_summary">Cet appareil</string>
     <string name="media_output_disconnected_status">%1$s (déconnecté)</string>
@@ -2806,7 +2813,7 @@ Cette application remplace %2$s comme application de paiement par défaut."</str
     <string name="night_display_text">"Le mode Éclairage nocturne donne une teinte ambre à votre écran. Cela vous permet de le regarder plus facilement lorsque l'éclairage est faible et peut vous aider à vous endormir plus facilement."</string>
     <string name="night_display_title">Éclairage nocturne</string>
     <string name="no">Non</string>
-    <string name="no_5g_in_dsds_text">Lorsque vous utilisez deux modules SIM, ce téléphone est limité aux réseaux 4G. <annotation id="url">Apprenez-en plus.</annotation></string>
+    <string name="no_5g_in_dsds_text">Lorsque vous utilisez deux modules SIM, ce téléphone est limité aux réseaux 4G. <annotation id="url">En savoir plus</annotation></string>
     <string name="no_application">Aucune</string>
     <string name="no_applications">Aucune application</string>
     <string name="no_battery_summary">Aucune utilisation de la pile depuis la dernière charge complète</string>
@@ -2923,6 +2930,7 @@ Cela permettra également à l'application d'activer et de désactiver la foncti
     <string name="notification_priority_title">Priorité</string>
     <string name="notification_pulse_title">Faire clignoter le voyant</string>
     <string name="notification_ringtone_title">Son de notification par défaut</string>
+    <string name="notification_screen_summary">Historique des notifications, bulles, éléments récemment envoyés</string>
     <string name="notification_settings_work_profile">"Les applications du profil professionnel n'ont pas accès aux notifications."</string>
     <string name="notification_show_lights_title">Faire clignoter le voyant</string>
     <string name="notification_silence_title">Mode silencieux</string>
@@ -3030,6 +3038,8 @@ Cela permettra également à l'application d'activer et de désactiver la foncti
     <string name="platform_compat_dashboard_title">Changements dans la compatibilité des applications</string>
     <string name="platform_compat_default_disabled_title">Changements désactivés par défaut</string>
     <string name="platform_compat_default_enabled_title">Changements activés par défaut</string>
+    <string name="platform_compat_dialog_text_no_apps">Les modifications de compatibilité des applications peuvent uniquement être modifiées pour les applications débogables. Installez une application débogable, puis réessayez.</string>
+    <string name="platform_compat_dialog_title_no_apps">Aucune application</string>
     <string name="please_select_phase2">Authentification de la phase 2</string>
     <string name="pointer_location">Emplacement du curseur</string>
     <string name="pointer_location_summary">Superposition écran indiquant données actuelles</string>

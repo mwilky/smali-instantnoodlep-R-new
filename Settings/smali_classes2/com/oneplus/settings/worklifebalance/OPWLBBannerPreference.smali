@@ -88,6 +88,26 @@
     return-void
 .end method
 
+.method private isWLBConfigured()I
+    .locals 2
+
+    iget-object p0, p0, Lcom/oneplus/settings/worklifebalance/OPWLBBannerPreference;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    const-string v0, "oneplus_wlb_setup_done"
+
+    const/4 v1, 0x0
+
+    invoke-static {p0, v0, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result p0
+
+    return p0
+.end method
+
 .method private setClickBgHeight()V
     .locals 2
 
@@ -116,37 +136,22 @@
 
 # virtual methods
 .method public clearNew()V
-    .locals 2
+    .locals 1
 
-    iget-object v0, p0, Lcom/oneplus/settings/worklifebalance/OPWLBBannerPreference;->mTvNew:Landroid/widget/TextView;
+    iget-object p0, p0, Lcom/oneplus/settings/worklifebalance/OPWLBBannerPreference;->mTvNew:Landroid/widget/TextView;
 
-    const/16 v1, 0x8
+    if-eqz p0, :cond_0
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+    const/16 v0, 0x8
 
-    iget-object p0, p0, Lcom/oneplus/settings/worklifebalance/OPWLBBannerPreference;->mContext:Landroid/content/Context;
+    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
-    invoke-static {p0}, Landroidx/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object p0
-
-    const-string v0, "wlb_banner_new"
-
-    const/4 v1, 0x0
-
-    invoke-interface {p0, v0, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
-
-    invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->apply()V
-
+    :cond_0
     return-void
 .end method
 
 .method public onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
-    .locals 2
+    .locals 1
 
     invoke-super {p0, p1}, Landroidx/preference/Preference;->onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
 
@@ -214,25 +219,29 @@
 
     invoke-static {p1}, Landroidx/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
-    move-result-object p1
-
-    const-string v0, "wlb_banner_new"
-
-    const/4 v1, 0x1
-
-    invoke-interface {p1, v0, v1}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-direct {p0}, Lcom/oneplus/settings/worklifebalance/OPWLBBannerPreference;->isWLBConfigured()I
 
     move-result p1
 
-    if-eqz p1, :cond_0
+    const/4 v0, 0x0
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    move p1, v0
+
+    :goto_0
+    if-eqz p1, :cond_1
 
     iget-object p1, p0, Lcom/oneplus/settings/worklifebalance/OPWLBBannerPreference;->mTvNew:Landroid/widget/TextView;
 
-    const/4 v0, 0x0
-
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
-    :cond_0
+    :cond_1
     iget-object p1, p0, Lcom/oneplus/settings/worklifebalance/OPWLBBannerPreference;->mTvTitle:Landroid/widget/TextView;
 
     sget v0, Lcom/android/settings/R$string;->work_life_balance:I

@@ -487,15 +487,13 @@
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
-    .locals 2
+    .locals 1
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isGuaProject()Z
 
     move-result p1
-
-    const/16 v0, 0x400
 
     if-nez p1, :cond_1
 
@@ -516,13 +514,13 @@
     :cond_0
     sget-object p1, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    sget v1, Lcom/android/settings/R$string;->oneplus_model_for_china_and_india:I
+    sget v0, Lcom/android/settings/R$string;->oneplus_model_for_china_and_india:I
 
-    invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {p1, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result p1
 
@@ -530,23 +528,17 @@
 
     sget-object p1, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    sget v1, Lcom/android/settings/R$string;->oneplus_model_for_europe_and_america:I
+    sget v0, Lcom/android/settings/R$string;->oneplus_model_for_europe_and_america:I
 
-    invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {p1, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result p1
 
     if-nez p1, :cond_2
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0, v0}, Landroid/view/Window;->setFlags(II)V
 
     const/4 p1, 0x0
 
@@ -556,12 +548,6 @@
 
     :cond_1
     :goto_0
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0, v0}, Landroid/view/Window;->setFlags(II)V
-
     const/4 p1, 0x1
 
     invoke-virtual {p0, p1}, Landroid/app/Activity;->setRequestedOrientation(I)V

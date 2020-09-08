@@ -200,9 +200,19 @@
     invoke-virtual {p1, v0}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
 
     :goto_0
-    iget-object p0, p0, Lcom/android/settings/datausage/AppDataUsage$UpdateRuleTask;->progressDialog:Lcom/oneplus/settings/ui/OPProgressDialog;
+    iget-object p1, p0, Lcom/android/settings/datausage/AppDataUsage$UpdateRuleTask;->progressDialog:Lcom/oneplus/settings/ui/OPProgressDialog;
 
-    if-eqz p0, :cond_1
+    if-eqz p1, :cond_1
+
+    iget-object p1, p0, Lcom/android/settings/datausage/AppDataUsage$UpdateRuleTask;->this$0:Lcom/android/settings/datausage/AppDataUsage;
+
+    invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->isAdded()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    iget-object p0, p0, Lcom/android/settings/datausage/AppDataUsage$UpdateRuleTask;->progressDialog:Lcom/oneplus/settings/ui/OPProgressDialog;
 
     invoke-virtual {p0}, Lcom/oneplus/settings/ui/OPProgressDialog;->dismiss()V
 

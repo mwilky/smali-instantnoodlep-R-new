@@ -3,12 +3,12 @@
 .source "WifiDisplaySettings.java"
 
 # interfaces
-.implements Landroidx/preference/Preference$OnPreferenceChangeListener;
+.implements Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wfd/WifiDisplaySettings;->buildCertificationMenu(Landroidx/preference/PreferenceScreen;)V
+    value = Lcom/android/settings/wfd/WifiDisplaySettings;->startAutoGO()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,15 +17,9 @@
 .end annotation
 
 
-# instance fields
-.field final synthetic this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
-
-
 # direct methods
 .method constructor <init>(Lcom/android/settings/wfd/WifiDisplaySettings;)V
     .locals 0
-
-    iput-object p1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$8;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -34,51 +28,36 @@
 
 
 # virtual methods
-.method public onPreferenceChange(Landroidx/preference/Preference;Ljava/lang/Object;)Z
+.method public onFailure(I)V
+    .locals 1
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "Failed to start AutoGO with reason "
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, "."
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string p1, "WifiDisplaySettings"
+
+    invoke-static {p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method public onSuccess()V
     .locals 0
 
-    check-cast p2, Ljava/lang/String;
-
-    invoke-static {p2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result p1
-
-    iget-object p2, p0, Lcom/android/settings/wfd/WifiDisplaySettings$8;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
-
-    invoke-static {p2}, Lcom/android/settings/wfd/WifiDisplaySettings;->access$1100(Lcom/android/settings/wfd/WifiDisplaySettings;)I
-
-    move-result p2
-
-    if-eq p1, p2, :cond_0
-
-    iget-object p2, p0, Lcom/android/settings/wfd/WifiDisplaySettings$8;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
-
-    invoke-static {p2, p1}, Lcom/android/settings/wfd/WifiDisplaySettings;->access$1102(Lcom/android/settings/wfd/WifiDisplaySettings;I)I
-
-    iget-object p1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$8;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
-
-    invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/app/Activity;->invalidateOptionsMenu()V
-
-    iget-object p1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$8;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
-
-    invoke-static {p1}, Lcom/android/settings/wfd/WifiDisplaySettings;->access$1000(Lcom/android/settings/wfd/WifiDisplaySettings;)I
-
-    move-result p2
-
-    iget-object p0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$8;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
-
-    invoke-static {p0}, Lcom/android/settings/wfd/WifiDisplaySettings;->access$1100(Lcom/android/settings/wfd/WifiDisplaySettings;)I
-
-    move-result p0
-
-    invoke-static {p1, p2, p0}, Lcom/android/settings/wfd/WifiDisplaySettings;->access$1200(Lcom/android/settings/wfd/WifiDisplaySettings;II)V
-
-    :cond_0
-    const/4 p0, 0x1
-
-    return p0
+    return-void
 .end method

@@ -22,6 +22,31 @@
     return-void
 .end method
 
+.method public static bitmapTransform(Lcom/bumptech/glide/load/Transformation;)Lcom/bumptech/glide/request/RequestOptions;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/bumptech/glide/load/Transformation<",
+            "Landroid/graphics/Bitmap;",
+            ">;)",
+            "Lcom/bumptech/glide/request/RequestOptions;"
+        }
+    .end annotation
+
+    new-instance v0, Lcom/bumptech/glide/request/RequestOptions;
+
+    invoke-direct {v0}, Lcom/bumptech/glide/request/RequestOptions;-><init>()V
+
+    invoke-virtual {v0, p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->transform(Lcom/bumptech/glide/load/Transformation;)Lcom/bumptech/glide/request/BaseRequestOptions;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/bumptech/glide/request/RequestOptions;
+
+    return-object p0
+.end method
+
 .method public static decodeTypeOf(Ljava/lang/Class;)Lcom/bumptech/glide/request/RequestOptions;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;

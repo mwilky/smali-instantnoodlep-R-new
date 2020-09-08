@@ -273,13 +273,7 @@
 
     move-result v2
 
-    iget-object v3, p0, Lcom/android/settings/panel/PanelSlicesAdapter$SliceRowViewHolder;->mSliceSliderLayout:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v3}, Landroid/widget/LinearLayout;->getPaddingBottom()I
-
-    move-result v3
-
-    invoke-virtual {v0, v1, p2, v2, v3}, Landroid/widget/LinearLayout;->setPadding(IIII)V
+    invoke-virtual {v0, v1, p2, v2, p2}, Landroid/widget/LinearLayout;->setPadding(IIII)V
 
     goto :goto_1
 

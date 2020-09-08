@@ -324,3 +324,31 @@
 
     return-void
 .end method
+
+.method public final b(Landroid/content/Context;Lcom/oneplus/accountsdk/auth/OPAuthListener;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Lcom/oneplus/accountsdk/auth/OPAuthListener<",
+            "Lcom/oneplus/accountsdk/entity/UserTokenInfo;",
+            ">;)V"
+        }
+    .end annotation
+
+    if-eqz p2, :cond_0
+
+    invoke-interface {p2}, Lcom/oneplus/accountsdk/auth/OPAuthListener;->onReqStart()V
+
+    invoke-interface {p2}, Lcom/oneplus/accountsdk/auth/OPAuthListener;->onReqLoading()V
+
+    :cond_0
+    new-instance v0, Lcom/oneplus/accountsdk/auth/e$2;
+
+    invoke-direct {v0, p0, p2}, Lcom/oneplus/accountsdk/auth/e$2;-><init>(Lcom/oneplus/accountsdk/auth/e;Lcom/oneplus/accountsdk/auth/OPAuthListener;)V
+
+    invoke-static {p1, v0}, Lcom/oneplus/accountsdk/auth/b;->a(Landroid/content/Context;Lcom/oneplus/accountsdk/auth/c$a;)V
+
+    return-void
+.end method

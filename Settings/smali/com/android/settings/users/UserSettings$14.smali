@@ -1,28 +1,19 @@
 .class Lcom/android/settings/users/UserSettings$14;
-.super Landroid/os/AsyncTask;
+.super Ljava/lang/Object;
 .source "UserSettings.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/users/UserSettings;->loadIconsAsync(Ljava/util/List;)V
+    value = Lcom/android/settings/users/UserSettings;->removeUserNow()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x0
     name = null
-.end annotation
-
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Landroid/os/AsyncTask<",
-        "Ljava/util/List<",
-        "Ljava/lang/Integer;",
-        ">;",
-        "Ljava/lang/Void;",
-        "Ljava/lang/Void;",
-        ">;"
-    }
 .end annotation
 
 
@@ -36,119 +27,59 @@
 
     iput-object p1, p0, Lcom/android/settings/users/UserSettings$14;->this$0:Lcom/android/settings/users/UserSettings;
 
-    invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, [Ljava/util/List;
-
-    invoke-virtual {p0, p1}, Lcom/android/settings/users/UserSettings$14;->doInBackground([Ljava/util/List;)Ljava/lang/Void;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method protected varargs doInBackground([Ljava/util/List;)Ljava/lang/Void;
+.method public run()V
     .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "([",
-            "Ljava/util/List<",
-            "Ljava/lang/Integer;",
-            ">;)",
-            "Ljava/lang/Void;"
-        }
-    .end annotation
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcom/android/settings/users/UserSettings$14;->this$0:Lcom/android/settings/users/UserSettings;
 
-    aget-object p1, p1, v0
-
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {v0}, Lcom/android/settings/users/UserSettings;->access$1700(Lcom/android/settings/users/UserSettings;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Integer;
+    monitor-enter v0
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
+    :try_start_0
     iget-object v1, p0, Lcom/android/settings/users/UserSettings$14;->this$0:Lcom/android/settings/users/UserSettings;
 
-    invoke-static {v1}, Lcom/android/settings/users/UserSettings;->access$400(Lcom/android/settings/users/UserSettings;)Landroid/os/UserManager;
+    invoke-static {v1}, Lcom/android/settings/users/UserSettings;->access$600(Lcom/android/settings/users/UserSettings;)Landroid/os/UserManager;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Landroid/os/UserManager;->getUserIcon(I)Landroid/graphics/Bitmap;
-
-    move-result-object v1
-
-    if-nez v1, :cond_0
-
-    iget-object v1, p0, Lcom/android/settings/users/UserSettings$14;->this$0:Lcom/android/settings/users/UserSettings;
-
-    invoke-virtual {v1}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-static {v1, v0}, Lcom/android/settings/users/UserSettings;->access$1600(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
-
-    move-result-object v1
-
-    :cond_0
     iget-object v2, p0, Lcom/android/settings/users/UserSettings$14;->this$0:Lcom/android/settings/users/UserSettings;
 
-    iget-object v2, v2, Lcom/android/settings/users/UserSettings;->mUserIcons:Landroid/util/SparseArray;
+    invoke-static {v2}, Lcom/android/settings/users/UserSettings;->access$200(Lcom/android/settings/users/UserSettings;)I
 
-    invoke-virtual {v2, v0, v1}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
+    move-result v2
 
-    goto :goto_0
-
-    :cond_1
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
-    .locals 0
-
-    check-cast p1, Ljava/lang/Void;
-
-    invoke-virtual {p0, p1}, Lcom/android/settings/users/UserSettings$14;->onPostExecute(Ljava/lang/Void;)V
-
-    return-void
-.end method
-
-.method protected onPostExecute(Ljava/lang/Void;)V
-    .locals 0
+    invoke-virtual {v1, v2}, Landroid/os/UserManager;->removeUser(I)Z
 
     iget-object p0, p0, Lcom/android/settings/users/UserSettings$14;->this$0:Lcom/android/settings/users/UserSettings;
 
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->updateUserList()V
+    invoke-static {p0}, Lcom/android/settings/users/UserSettings;->access$400(Lcom/android/settings/users/UserSettings;)Landroid/os/Handler;
+
+    move-result-object p0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    monitor-exit v0
 
     return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
 .end method

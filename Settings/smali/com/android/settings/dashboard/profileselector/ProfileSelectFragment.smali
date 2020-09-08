@@ -290,17 +290,21 @@
 
     invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getListView()Landroidx/recyclerview/widget/RecyclerView;
 
-    move-result-object p2
+    move-result-object p3
 
-    const/4 p3, 0x2
+    const/4 v0, 0x2
 
-    invoke-virtual {p2, p3}, Landroid/view/ViewGroup;->setOverScrollMode(I)V
+    invoke-virtual {p3, v0}, Landroid/view/ViewGroup;->setOverScrollMode(I)V
 
     invoke-virtual {p0}, Lcom/android/settingslib/core/lifecycle/ObservablePreferenceFragment;->getSettingsLifecycle()Lcom/android/settingslib/core/lifecycle/Lifecycle;
 
-    move-result-object p3
+    move-result-object v0
 
-    invoke-static {p1, p3, p2}, Lcom/android/settings/Utils;->setActionBarShadowAnimation(Landroid/app/Activity;Landroidx/lifecycle/Lifecycle;Landroid/view/View;)V
+    invoke-static {p1, v0, p3}, Lcom/android/settings/Utils;->setActionBarShadowAnimation(Landroid/app/Activity;Landroidx/lifecycle/Lifecycle;Landroid/view/View;)V
+
+    const/16 p1, 0x8
+
+    invoke-virtual {p2, p1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
     iget-object p0, p0, Lcom/android/settings/dashboard/profileselector/ProfileSelectFragment;->mContentView:Landroid/view/ViewGroup;
 

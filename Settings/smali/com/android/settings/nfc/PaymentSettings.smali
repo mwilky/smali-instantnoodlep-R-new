@@ -2,12 +2,17 @@
 .super Lcom/android/settings/dashboard/DashboardFragment;
 .source "PaymentSettings.java"
 
+# interfaces
+.implements Lcom/android/settings/nfc/NfcUiccObserver$OnNfcUiccChangeCallback;
+
 
 # static fields
 .field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/BaseSearchIndexProvider;
 
 
 # instance fields
+.field private mNfcUiccObserver:Lcom/android/settings/nfc/NfcUiccObserver;
+
 .field private mPaymentBackend:Lcom/android/settings/nfc/PaymentBackend;
 
 
@@ -97,6 +102,44 @@
     return p0
 .end method
 
+.method public onActivityCreated(Landroid/os/Bundle;)V
+    .locals 2
+
+    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object p1
+
+    const v0, 0x1020004
+
+    invoke-virtual {p1, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/android/material/emptyview/EmptyPageView;
+
+    invoke-virtual {p1}, Lcom/google/android/material/emptyview/EmptyPageView;->getEmptyTextView()Landroid/widget/TextView;
+
+    move-result-object v0
+
+    sget v1, Lcom/android/settings/R$string;->nfc_payment_no_apps:I
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
+
+    invoke-virtual {p1}, Lcom/google/android/material/emptyview/EmptyPageView;->getEmptyImageView()Landroid/widget/ImageView;
+
+    move-result-object v0
+
+    sget v1, Lcom/android/settings/R$drawable;->op_empty:I
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    invoke-virtual {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->setEmptyView(Landroid/view/View;)V
+
+    return-void
+.end method
+
 .method public onAttach(Landroid/content/Context;)V
     .locals 1
 
@@ -111,6 +154,8 @@
     invoke-direct {p1, v0}, Lcom/android/settings/nfc/PaymentBackend;-><init>(Landroid/content/Context;)V
 
     iput-object p1, p0, Lcom/android/settings/nfc/PaymentSettings;->mPaymentBackend:Lcom/android/settings/nfc/PaymentBackend;
+
+    invoke-virtual {p1, p0}, Lcom/android/settings/nfc/PaymentBackend;->setFragment(Landroidx/fragment/app/Fragment;)V
 
     const/4 p1, 0x1
 
@@ -173,6 +218,25 @@
     return-void
 .end method
 
+.method public onDataChange()V
+    .locals 1
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportNfcUicc()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object p0, p0, Lcom/android/settings/nfc/PaymentSettings;->mPaymentBackend:Lcom/android/settings/nfc/PaymentBackend;
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Lcom/android/settings/nfc/PaymentBackend;->refresh()V
+
+    :cond_0
+    return-void
+.end method
+
 .method public onPause()V
     .locals 0
 
@@ -197,48 +261,71 @@
     return-void
 .end method
 
-.method public onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+.method public onStart()V
+    .locals 3
+
+    invoke-super {p0}, Lcom/android/settings/dashboard/DashboardFragment;->onStart()V
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportNfcUicc()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Lcom/android/settings/nfc/NfcUiccObserver;
+
+    invoke-direct {v0, p0}, Lcom/android/settings/nfc/NfcUiccObserver;-><init>(Lcom/android/settings/nfc/NfcUiccObserver$OnNfcUiccChangeCallback;)V
+
+    iput-object v0, p0, Lcom/android/settings/nfc/PaymentSettings;->mNfcUiccObserver:Lcom/android/settings/nfc/NfcUiccObserver;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const-string v1, "nfc_multise_list"
+
+    invoke-static {v1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    iget-object p0, p0, Lcom/android/settings/nfc/PaymentSettings;->mNfcUiccObserver:Lcom/android/settings/nfc/NfcUiccObserver;
+
+    invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public onStop()V
     .locals 2
 
-    invoke-super {p0, p1, p2}, Landroidx/preference/PreferenceFragmentCompat;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0}, Lcom/android/settings/dashboard/DashboardFragment;->onStop()V
 
-    invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportNfcUicc()Z
 
-    move-result-object p2
+    move-result v0
 
-    invoke-virtual {p0, p2}, Lcom/android/settings/nfc/PaymentSettings;->isShowEmptyImage(Landroidx/preference/PreferenceScreen;)Z
+    if-eqz v0, :cond_0
 
-    move-result p2
+    iget-object v0, p0, Lcom/android/settings/nfc/PaymentSettings;->mNfcUiccObserver:Lcom/android/settings/nfc/NfcUiccObserver;
 
-    if-eqz p2, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0}, Landroid/app/Activity;->getLayoutInflater()Landroid/view/LayoutInflater;
+    iget-object v1, p0, Lcom/android/settings/nfc/PaymentSettings;->mNfcUiccObserver:Lcom/android/settings/nfc/NfcUiccObserver;
 
-    move-result-object p0
-
-    sget p2, Lcom/android/settings/R$layout;->nfc_payment_empty:I
+    invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     const/4 v0, 0x0
 
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, p2, v0, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object p0
-
-    const p2, 0x102003f
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/view/ViewGroup;
-
-    invoke-virtual {p1, p0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    iput-object v0, p0, Lcom/android/settings/nfc/PaymentSettings;->mNfcUiccObserver:Lcom/android/settings/nfc/NfcUiccObserver;
 
     :cond_0
     return-void

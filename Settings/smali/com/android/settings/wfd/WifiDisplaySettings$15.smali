@@ -1,9 +1,6 @@
 .class Lcom/android/settings/wfd/WifiDisplaySettings$15;
-.super Ljava/lang/Object;
+.super Landroid/content/BroadcastReceiver;
 .source "WifiDisplaySettings.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -27,31 +24,50 @@
 
     iput-object p1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$15;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$15;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/android/settings/wfd/WifiDisplaySettings;->access$1300(Lcom/android/settings/wfd/WifiDisplaySettings;)I
+    move-result-object p1
 
-    move-result v0
+    const-string p2, "android.hardware.display.action.WIFI_DISPLAY_STATUS_CHANGED"
 
-    iget-object v1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$15;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    const/4 v2, 0x0
+    move-result p2
 
-    invoke-static {v1, v2}, Lcom/android/settings/wfd/WifiDisplaySettings;->access$1302(Lcom/android/settings/wfd/WifiDisplaySettings;I)I
+    const/4 v0, 0x4
+
+    if-eqz p2, :cond_0
 
     iget-object p0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$15;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
 
-    invoke-static {p0, v0}, Lcom/android/settings/wfd/WifiDisplaySettings;->access$1400(Lcom/android/settings/wfd/WifiDisplaySettings;I)V
+    invoke-static {p0, v0}, Lcom/android/settings/wfd/WifiDisplaySettings;->access$1300(Lcom/android/settings/wfd/WifiDisplaySettings;I)V
 
+    goto :goto_0
+
+    :cond_0
+    const-string p2, "android.net.wifi.WIFI_STATE_CHANGED"
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    iget-object p0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$15;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+
+    invoke-static {p0, v0}, Lcom/android/settings/wfd/WifiDisplaySettings;->access$1300(Lcom/android/settings/wfd/WifiDisplaySettings;I)V
+
+    :cond_1
+    :goto_0
     return-void
 .end method

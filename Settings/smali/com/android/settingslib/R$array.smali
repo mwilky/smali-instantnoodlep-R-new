@@ -18,18 +18,18 @@
 
 .field public static final bt_icon_fg_colors:I = 0x7f03003c
 
-.field public static final select_logd_size_lowram_titles:I = 0x7f03012a
+.field public static final select_logd_size_lowram_titles:I = 0x7f03012d
 
-.field public static final select_logd_size_summaries:I = 0x7f03012b
+.field public static final select_logd_size_summaries:I = 0x7f03012e
 
-.field public static final select_logd_size_titles:I = 0x7f03012c
+.field public static final select_logd_size_titles:I = 0x7f03012f
 
-.field public static final select_logd_size_values:I = 0x7f03012d
+.field public static final select_logd_size_values:I = 0x7f030130
 
-.field public static final select_logpersist_summaries:I = 0x7f03012e
+.field public static final select_logpersist_summaries:I = 0x7f030131
 
-.field public static final select_logpersist_values:I = 0x7f030130
+.field public static final select_logpersist_values:I = 0x7f030133
 
-.field public static final wifi_status:I = 0x7f03018a
+.field public static final wifi_status:I = 0x7f03018d
 
-.field public static final wifi_status_with_ssid:I = 0x7f03018b
+.field public static final wifi_status_with_ssid:I = 0x7f03018e

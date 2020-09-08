@@ -119,7 +119,7 @@
 
     iget-object v2, p0, Lcom/android/settings/homepage/contextualcards/conditional/NightDisplayConditionController;->mAppContext:Landroid/content/Context;
 
-    sget v3, Lcom/android/settings/R$string;->condition_night_display_title:I
+    sget v3, Lcom/android/settings/R$string;->oneplus_condition_night_display_title:I
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -135,7 +135,7 @@
 
     iget-object v1, p0, Lcom/android/settings/homepage/contextualcards/conditional/NightDisplayConditionController;->mAppContext:Landroid/content/Context;
 
-    sget v2, Lcom/android/settings/R$string;->condition_night_display_title:I
+    sget v2, Lcom/android/settings/R$string;->oneplus_condition_night_display_title:I
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 

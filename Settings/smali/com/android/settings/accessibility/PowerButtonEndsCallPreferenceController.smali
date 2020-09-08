@@ -2,12 +2,35 @@
 .super Lcom/android/settings/core/TogglePreferenceController;
 .source "PowerButtonEndsCallPreferenceController.java"
 
+# interfaces
+.implements Lcom/android/settingslib/core/lifecycle/LifecycleObserver;
+.implements Lcom/android/settingslib/core/lifecycle/events/OnResume;
+.implements Lcom/android/settingslib/core/lifecycle/events/OnPause;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/android/settings/accessibility/PowerButtonEndsCallPreferenceController$SettingObserver;
+    }
+.end annotation
+
+
+# instance fields
+.field private mSettingObserver:Lcom/android/settings/accessibility/PowerButtonEndsCallPreferenceController$SettingObserver;
+
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/android/settings/core/TogglePreferenceController;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    new-instance p1, Lcom/android/settings/accessibility/PowerButtonEndsCallPreferenceController$SettingObserver;
+
+    invoke-direct {p1, p0}, Lcom/android/settings/accessibility/PowerButtonEndsCallPreferenceController$SettingObserver;-><init>(Lcom/android/settings/accessibility/PowerButtonEndsCallPreferenceController;)V
+
+    iput-object p1, p0, Lcom/android/settings/accessibility/PowerButtonEndsCallPreferenceController;->mSettingObserver:Lcom/android/settings/accessibility/PowerButtonEndsCallPreferenceController$SettingObserver;
 
     return-void
 .end method
@@ -133,6 +156,48 @@
     move-result p0
 
     return p0
+.end method
+
+.method public onPause()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/settings/accessibility/PowerButtonEndsCallPreferenceController;->mSettingObserver:Lcom/android/settings/accessibility/PowerButtonEndsCallPreferenceController$SettingObserver;
+
+    if-eqz v0, :cond_0
+
+    iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, p0, v1}, Lcom/android/settings/accessibility/PowerButtonEndsCallPreferenceController$SettingObserver;->register(Landroid/content/ContentResolver;Z)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public onResume()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/settings/accessibility/PowerButtonEndsCallPreferenceController;->mSettingObserver:Lcom/android/settings/accessibility/PowerButtonEndsCallPreferenceController$SettingObserver;
+
+    if-eqz v0, :cond_0
+
+    iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, p0, v1}, Lcom/android/settings/accessibility/PowerButtonEndsCallPreferenceController$SettingObserver;->register(Landroid/content/ContentResolver;Z)V
+
+    :cond_0
+    return-void
 .end method
 
 .method public setChecked(Z)Z

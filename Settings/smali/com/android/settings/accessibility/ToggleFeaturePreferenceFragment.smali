@@ -1512,10 +1512,6 @@
 
     invoke-static {p1, v0, v1}, Lcom/android/settings/accessibility/AccessibilityUtil;->optInAllValuesToSettings(Landroid/content/Context;ILandroid/content/ComponentName;)V
 
-    const/16 p1, 0x3f0
-
-    invoke-virtual {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->showDialog(I)V
-
     goto :goto_0
 
     :cond_1
@@ -1544,7 +1540,7 @@
 .end method
 
 .method public onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
-    .locals 4
+    .locals 5
 
     invoke-super {p0, p1, p2}, Landroidx/preference/PreferenceFragmentCompat;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
@@ -1574,7 +1570,7 @@
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_2
 
     invoke-virtual {p0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->getPrefContext()Landroid/content/Context;
 
@@ -1594,17 +1590,57 @@
 
     invoke-direct {v2, v3}, Lcom/android/settings/accessibility/AnimatedImagePreference;-><init>(Landroid/content/Context;)V
 
+    invoke-virtual {p0}, Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment;->getMetricsCategory()I
+
+    move-result v3
+
+    const/16 v4, 0x719
+
+    if-ne v3, v4, :cond_0
+
+    sget v3, Lcom/android/settings/R$drawable;->op_accessibility_color_reverse:I
+
+    invoke-virtual {v2, v3}, Lcom/android/settings/accessibility/AnimatedImagePreference;->setImageRes(I)V
+
+    goto :goto_0
+
+    :cond_0
     iget-object v3, p0, Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment;->mImageUri:Landroid/net/Uri;
 
     invoke-virtual {v2, v3}, Lcom/android/settings/accessibility/AnimatedImagePreference;->setImageUri(Landroid/net/Uri;)V
 
+    :goto_0
     invoke-virtual {v2, v1}, Landroidx/preference/Preference;->setSelectable(Z)V
 
     invoke-virtual {v2, v0}, Lcom/android/settings/accessibility/AnimatedImagePreference;->setMaxHeight(I)V
 
+    new-instance v0, Lcom/android/settings/accessibility/MagnificationLottie;
+
+    invoke-virtual {p0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->getPrefContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    invoke-direct {v0, v3}, Lcom/android/settings/accessibility/MagnificationLottie;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setSelectable(Z)V
+
+    invoke-virtual {p0}, Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment;->getMetricsCategory()I
+
+    move-result v3
+
+    const/4 v4, 0x7
+
+    if-eq v3, v4, :cond_1
+
     invoke-virtual {p1, v2}, Landroidx/preference/PreferenceGroup;->addPreference(Landroidx/preference/Preference;)Z
 
-    :cond_0
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p1, v0}, Landroidx/preference/PreferenceGroup;->addPreference(Landroidx/preference/Preference;)Z
+
+    :cond_2
+    :goto_1
     new-instance v0, Lcom/android/settings/accessibility/DividerSwitchPreference;
 
     invoke-virtual {p0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->getPrefContext()Landroid/content/Context;
@@ -1629,7 +1665,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_3
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
 
@@ -1643,7 +1679,7 @@
 
     invoke-virtual {v2, v0}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
 
-    :cond_1
+    :cond_3
     new-instance v0, Lcom/oneplus/settings/ui/OPPreferenceHeaderMargin;
 
     invoke-virtual {p0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->getPrefContext()Landroid/content/Context;
@@ -1690,11 +1726,11 @@
 
     const/4 v2, 0x1
 
-    if-eqz p2, :cond_2
+    if-eqz p2, :cond_4
 
     iget-object p2, p0, Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment;->mSettingsIntent:Landroid/content/Intent;
 
-    if-eqz p2, :cond_2
+    if-eqz p2, :cond_4
 
     new-instance p2, Landroidx/preference/Preference;
 
@@ -1720,21 +1756,21 @@
 
     invoke-virtual {p2, v3}, Landroidx/preference/Preference;->setIntent(Landroid/content/Intent;)V
 
-    :cond_2
+    :cond_4
     iget-object p2, p0, Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment;->mSettingsPreference:Landroidx/preference/Preference;
 
-    if-eqz p2, :cond_3
+    if-eqz p2, :cond_5
 
     invoke-virtual {v0, p2}, Landroidx/preference/PreferenceGroup;->addPreference(Landroidx/preference/Preference;)Z
 
-    :cond_3
+    :cond_5
     iget-object p2, p0, Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment;->mHtmlDescription:Ljava/lang/CharSequence;
 
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p2
 
-    if-nez p2, :cond_4
+    if-nez p2, :cond_6
 
     new-instance p2, Landroidx/preference/PreferenceCategory;
 
@@ -1784,27 +1820,27 @@
 
     invoke-virtual {p2, p1}, Landroidx/preference/PreferenceGroup;->addPreference(Landroidx/preference/Preference;)Z
 
-    :cond_4
+    :cond_6
     iget-object p1, p0, Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment;->mDescription:Ljava/lang/CharSequence;
 
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p1
 
-    if-nez p1, :cond_5
+    if-nez p1, :cond_7
 
     iget-object p1, p0, Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment;->mDescription:Ljava/lang/CharSequence;
 
     invoke-direct {p0, p1}, Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment;->createFooterPreference(Ljava/lang/CharSequence;)V
 
-    :cond_5
+    :cond_7
     iget-object p1, p0, Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment;->mHtmlDescription:Ljava/lang/CharSequence;
 
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_6
+    if-eqz p1, :cond_8
 
     iget-object p1, p0, Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment;->mDescription:Ljava/lang/CharSequence;
 
@@ -1812,7 +1848,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_6
+    if-eqz p1, :cond_8
 
     sget p1, Lcom/android/settings/R$string;->accessibility_service_default_description:I
 
@@ -1822,7 +1858,7 @@
 
     invoke-direct {p0, p1}, Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment;->createFooterPreference(Ljava/lang/CharSequence;)V
 
-    :cond_6
+    :cond_8
     return-void
 .end method
 

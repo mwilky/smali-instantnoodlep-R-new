@@ -63,10 +63,6 @@
 
     iput v0, p0, Lcom/android/settings/IccLockSettings;->mDialogState:I
 
-    const/4 v0, -0x1
-
-    iput v0, p0, Lcom/android/settings/IccLockSettings;->mSlotId:I
-
     new-instance v0, Lcom/android/settings/IccLockSettings$1;
 
     invoke-direct {v0, p0}, Lcom/android/settings/IccLockSettings$1;-><init>(Lcom/android/settings/IccLockSettings;)V
@@ -106,14 +102,6 @@
     .locals 0
 
     iget-object p0, p0, Lcom/android/settings/IccLockSettings;->mHandler:Landroid/os/Handler;
-
-    return-object p0
-.end method
-
-.method static synthetic access$1000(Lcom/android/settings/IccLockSettings;)Landroid/widget/TabHost;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/settings/IccLockSettings;->mTabHost:Landroid/widget/TabHost;
 
     return-object p0
 .end method
@@ -166,14 +154,12 @@
     return p1
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/IccLockSettings;Ljava/lang/String;)I
+.method static synthetic access$900(Lcom/android/settings/IccLockSettings;)Landroid/widget/TabHost;
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/settings/IccLockSettings;->getSlotIndexFromTag(Ljava/lang/String;)I
+    iget-object p0, p0, Lcom/android/settings/IccLockSettings;->mTabHost:Landroid/widget/TabHost;
 
-    move-result p0
-
-    return p0
+    return-object p0
 .end method
 
 .method private buildTabSpec(Ljava/lang/String;Ljava/lang/String;)Landroid/widget/TabHost$TabSpec;
@@ -251,7 +237,7 @@
 
     move-result-object v3
 
-    const v4, 0x10e00c3
+    const v4, 0x10e00c9
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -364,6 +350,54 @@
     return-void
 .end method
 
+.method private static getActiveSubscriptionInfoForSimSlotIndex(Ljava/util/List;I)Landroid/telephony/SubscriptionInfo;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Landroid/telephony/SubscriptionInfo;",
+            ">;I)",
+            "Landroid/telephony/SubscriptionInfo;"
+        }
+    .end annotation
+
+    const/4 v0, 0x0
+
+    if-nez p0, :cond_0
+
+    return-object v0
+
+    :cond_0
+    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :cond_1
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/telephony/SubscriptionInfo;
+
+    invoke-virtual {v1}, Landroid/telephony/SubscriptionInfo;->getSimSlotIndex()I
+
+    move-result v2
+
+    if-ne v2, p1, :cond_1
+
+    return-object v1
+
+    :cond_2
+    return-object v0
+.end method
+
 .method private getPinPasswordErrorMessage(I)Ljava/lang/String;
     .locals 4
 
@@ -436,98 +470,6 @@
 
     :goto_0
     return-object p0
-.end method
-
-.method private getSlotIndexFromTag(Ljava/lang/String;)I
-    .locals 0
-
-    :try_start_0
-    invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result p0
-    :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    const/4 p0, -0x1
-
-    :goto_0
-    return p0
-.end method
-
-.method private getTagForSlotId(I)Ljava/lang/String;
-    .locals 0
-
-    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method private getVisibleSubscriptionInfoForSimSlotIndex(I)Landroid/telephony/SubscriptionInfo;
-    .locals 5
-
-    iget-object v0, p0, Lcom/android/settings/IccLockSettings;->mProxySubscriptionMgr:Lcom/android/settings/network/ProxySubscriptionManager;
-
-    invoke-virtual {v0}, Lcom/android/settings/network/ProxySubscriptionManager;->getActiveSubscriptionsInfo()Ljava/util/List;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    return-object v1
-
-    :cond_0
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    const-class v3, Landroid/telephony/CarrierConfigManager;
-
-    invoke-virtual {v2, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/telephony/CarrierConfigManager;
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/telephony/SubscriptionInfo;
-
-    invoke-direct {p0, v2, v3}, Lcom/android/settings/IccLockSettings;->isSubscriptionVisible(Landroid/telephony/CarrierConfigManager;Landroid/telephony/SubscriptionInfo;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    invoke-virtual {v3}, Landroid/telephony/SubscriptionInfo;->getSimSlotIndex()I
-
-    move-result v4
-
-    if-ne v4, p1, :cond_1
-
-    return-object v3
-
-    :cond_2
-    return-object v1
 .end method
 
 .method private iccLockChanged(ZI)V
@@ -706,35 +648,6 @@
     return p0
 .end method
 
-.method private isSubscriptionVisible(Landroid/telephony/CarrierConfigManager;Landroid/telephony/SubscriptionInfo;)Z
-    .locals 0
-
-    invoke-virtual {p2}, Landroid/telephony/SubscriptionInfo;->getSubscriptionId()I
-
-    move-result p0
-
-    invoke-virtual {p1, p0}, Landroid/telephony/CarrierConfigManager;->getConfigForSubId(I)Landroid/os/PersistableBundle;
-
-    move-result-object p0
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_0
-    const-string p1, "hide_sim_lock_settings_bool"
-
-    invoke-virtual {p0, p1}, Landroid/os/PersistableBundle;->getBoolean(Ljava/lang/String;)Z
-
-    move-result p0
-
-    xor-int/lit8 p0, p0, 0x1
-
-    return p0
-.end method
-
 .method private reasonablePin(Ljava/lang/String;)Z
     .locals 1
 
@@ -792,202 +705,6 @@
     iput v0, p0, Lcom/android/settings/IccLockSettings;->mDialogState:I
 
     return-void
-.end method
-
-.method private restoreDialogStates(Landroid/os/Bundle;)Z
-    .locals 4
-
-    iget-object v0, p0, Lcom/android/settings/IccLockSettings;->mProxySubscriptionMgr:Lcom/android/settings/network/ProxySubscriptionManager;
-
-    const-string v1, "dialogSubId"
-
-    invoke-virtual {p1, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lcom/android/settings/network/ProxySubscriptionManager;->getActiveSubscriptionInfo(I)Landroid/telephony/SubscriptionInfo;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    return v1
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/telephony/SubscriptionInfo;->getSimSlotIndex()I
-
-    move-result v2
-
-    invoke-direct {p0, v2}, Lcom/android/settings/IccLockSettings;->getVisibleSubscriptionInfoForSimSlotIndex(I)Landroid/telephony/SubscriptionInfo;
-
-    move-result-object v2
-
-    if-nez v2, :cond_1
-
-    return v1
-
-    :cond_1
-    invoke-virtual {v2}, Landroid/telephony/SubscriptionInfo;->getSubscriptionId()I
-
-    move-result v2
-
-    invoke-virtual {v0}, Landroid/telephony/SubscriptionInfo;->getSubscriptionId()I
-
-    move-result v3
-
-    if-eq v2, v3, :cond_2
-
-    return v1
-
-    :cond_2
-    invoke-virtual {v0}, Landroid/telephony/SubscriptionInfo;->getSimSlotIndex()I
-
-    move-result v1
-
-    iput v1, p0, Lcom/android/settings/IccLockSettings;->mSlotId:I
-
-    invoke-virtual {v0}, Landroid/telephony/SubscriptionInfo;->getSubscriptionId()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/android/settings/IccLockSettings;->mSubId:I
-
-    const-string v0, "dialogState"
-
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/android/settings/IccLockSettings;->mDialogState:I
-
-    const-string v0, "dialogPin"
-
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/android/settings/IccLockSettings;->mPin:Ljava/lang/String;
-
-    const-string v0, "dialogError"
-
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/android/settings/IccLockSettings;->mError:Ljava/lang/String;
-
-    const-string v0, "enableState"
-
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lcom/android/settings/IccLockSettings;->mToState:Z
-
-    iget v0, p0, Lcom/android/settings/IccLockSettings;->mDialogState:I
-
-    const/4 v1, 0x3
-
-    const-string v2, "oldPinCode"
-
-    if-eq v0, v1, :cond_4
-
-    const/4 v1, 0x4
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/android/settings/IccLockSettings;->mOldPin:Ljava/lang/String;
-
-    const-string v0, "newPinCode"
-
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcom/android/settings/IccLockSettings;->mNewPin:Ljava/lang/String;
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcom/android/settings/IccLockSettings;->mOldPin:Ljava/lang/String;
-
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method private restoreTabFocus(Landroid/os/Bundle;)Z
-    .locals 2
-
-    const/4 v0, 0x0
-
-    :try_start_0
-    const-string v1, "currentTab"
-
-    invoke-virtual {p1, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result p1
-    :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
-
-    invoke-direct {p0, p1}, Lcom/android/settings/IccLockSettings;->getVisibleSubscriptionInfoForSimSlotIndex(I)Landroid/telephony/SubscriptionInfo;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    return v0
-
-    :cond_0
-    invoke-virtual {p1}, Landroid/telephony/SubscriptionInfo;->getSimSlotIndex()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/android/settings/IccLockSettings;->mSlotId:I
-
-    invoke-virtual {p1}, Landroid/telephony/SubscriptionInfo;->getSubscriptionId()I
-
-    move-result p1
-
-    iput p1, p0, Lcom/android/settings/IccLockSettings;->mSubId:I
-
-    iget-object p1, p0, Lcom/android/settings/IccLockSettings;->mTabHost:Landroid/widget/TabHost;
-
-    if-eqz p1, :cond_1
-
-    iget v0, p0, Lcom/android/settings/IccLockSettings;->mSlotId:I
-
-    invoke-direct {p0, v0}, Lcom/android/settings/IccLockSettings;->getTagForSlotId(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p0}, Landroid/widget/TabHost;->setCurrentTabByTag(Ljava/lang/String;)V
-
-    :cond_1
-    const/4 p0, 0x1
-
-    return p0
-
-    :catch_0
-    return v0
 .end method
 
 .method private setDialogValues()V
@@ -1257,122 +974,101 @@
 .method private updatePreferences()V
     .locals 6
 
-    iget v0, p0, Lcom/android/settings/IccLockSettings;->mSlotId:I
+    iget-object v0, p0, Lcom/android/settings/IccLockSettings;->mProxySubscriptionMgr:Lcom/android/settings/network/ProxySubscriptionManager;
 
-    invoke-direct {p0, v0}, Lcom/android/settings/IccLockSettings;->getVisibleSubscriptionInfoForSimSlotIndex(I)Landroid/telephony/SubscriptionInfo;
+    invoke-virtual {v0}, Lcom/android/settings/network/ProxySubscriptionManager;->getActiveSubscriptionsInfo()Ljava/util/List;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    iget v1, p0, Lcom/android/settings/IccLockSettings;->mSlotId:I
 
-    invoke-virtual {v0}, Landroid/telephony/SubscriptionInfo;->getSubscriptionId()I
+    invoke-static {v0, v1}, Lcom/android/settings/IccLockSettings;->getActiveSubscriptionInfoForSimSlotIndex(Ljava/util/List;I)Landroid/telephony/SubscriptionInfo;
 
-    move-result v1
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const/4 v1, -0x1
 
     goto :goto_0
 
     :cond_0
-    const/4 v1, -0x1
+    invoke-virtual {v0}, Landroid/telephony/SubscriptionInfo;->getSubscriptionId()I
+
+    move-result v1
 
     :goto_0
+    iput v1, p0, Lcom/android/settings/IccLockSettings;->mSubId:I
+
     iget-object v2, p0, Lcom/android/settings/IccLockSettings;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
-    iget v3, p0, Lcom/android/settings/IccLockSettings;->mSubId:I
+    invoke-virtual {v2, v1}, Landroid/telephony/TelephonyManager;->createForSubscriptionId(I)Landroid/telephony/TelephonyManager;
 
-    invoke-virtual {v2, v3}, Landroid/telephony/TelephonyManager;->createForSubscriptionId(I)Landroid/telephony/TelephonyManager;
+    move-result-object v1
 
-    move-result-object v2
+    iput-object v1, p0, Lcom/android/settings/IccLockSettings;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
-    iput-object v2, p0, Lcom/android/settings/IccLockSettings;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+    invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->getSimState()I
 
-    invoke-virtual {v2}, Landroid/telephony/TelephonyManager;->getSimState()I
+    move-result v1
 
-    move-result v2
+    const/4 v2, 0x5
 
-    const/4 v3, 0x5
+    const/4 v3, 0x0
 
-    const/4 v4, 0x0
+    const/4 v4, 0x1
 
-    const/4 v5, 0x1
+    if-eq v1, v2, :cond_2
 
-    if-eq v2, v3, :cond_2
+    const/16 v2, 0xa
 
-    const/16 v3, 0xa
-
-    if-ne v2, v3, :cond_1
+    if-ne v1, v2, :cond_1
 
     goto :goto_1
 
     :cond_1
-    move v2, v4
+    move v1, v3
 
     goto :goto_2
 
     :cond_2
     :goto_1
-    move v2, v5
+    move v1, v4
 
     :goto_2
-    iget v3, p0, Lcom/android/settings/IccLockSettings;->mSubId:I
-
-    if-eq v3, v1, :cond_3
-
-    iput v1, p0, Lcom/android/settings/IccLockSettings;->mSubId:I
-
-    invoke-direct {p0}, Lcom/android/settings/IccLockSettings;->resetDialogState()V
-
-    iget-object v1, p0, Lcom/android/settings/IccLockSettings;->mPinDialog:Lcom/android/settings/EditPinPreference;
-
-    if-eqz v1, :cond_3
-
-    invoke-virtual {v1}, Lcom/android/settings/EditPinPreference;->isDialogOpen()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    iget-object v1, p0, Lcom/android/settings/IccLockSettings;->mPinDialog:Lcom/android/settings/EditPinPreference;
-
-    invoke-virtual {v1}, Lcom/android/settingslib/CustomEditTextPreferenceCompat;->getDialog()Landroid/app/Dialog;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/app/Dialog;->dismiss()V
-
-    :cond_3
-    iget-object v1, p0, Lcom/android/settings/IccLockSettings;->mPinDialog:Lcom/android/settings/EditPinPreference;
-
-    if-eqz v1, :cond_5
-
-    if-eqz v0, :cond_4
+    iget-object v2, p0, Lcom/android/settings/IccLockSettings;->mPinDialog:Lcom/android/settings/EditPinPreference;
 
     if-eqz v2, :cond_4
 
-    move v3, v5
+    if-eqz v0, :cond_3
+
+    if-eqz v1, :cond_3
+
+    move v5, v4
 
     goto :goto_3
 
-    :cond_4
-    move v3, v4
+    :cond_3
+    move v5, v3
 
     :goto_3
-    invoke-virtual {v1, v3}, Landroidx/preference/Preference;->setEnabled(Z)V
+    invoke-virtual {v2, v5}, Landroidx/preference/Preference;->setEnabled(Z)V
 
-    :cond_5
-    iget-object v1, p0, Lcom/android/settings/IccLockSettings;->mPinToggle:Landroidx/preference/SwitchPreference;
-
-    if-eqz v1, :cond_7
-
-    if-eqz v0, :cond_6
+    :cond_4
+    iget-object v2, p0, Lcom/android/settings/IccLockSettings;->mPinToggle:Landroidx/preference/SwitchPreference;
 
     if-eqz v2, :cond_6
 
-    move v4, v5
+    if-eqz v0, :cond_5
 
-    :cond_6
-    invoke-virtual {v1, v4}, Landroidx/preference/Preference;->setEnabled(Z)V
+    if-eqz v1, :cond_5
 
-    if-eqz v0, :cond_7
+    move v3, v4
+
+    :cond_5
+    invoke-virtual {v2, v3}, Landroidx/preference/Preference;->setEnabled(Z)V
+
+    if-eqz v0, :cond_6
 
     iget-object v0, p0, Lcom/android/settings/IccLockSettings;->mPinToggle:Landroidx/preference/SwitchPreference;
 
@@ -1382,7 +1078,7 @@
 
     invoke-virtual {v0, p0}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
 
-    :cond_7
+    :cond_6
     return-void
 .end method
 
@@ -1474,92 +1170,85 @@
 
     iput-object v0, p0, Lcom/android/settings/IccLockSettings;->mPinToggle:Landroidx/preference/SwitchPreference;
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_3
 
     const-string v0, "dialogState"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result v1
 
-    const-string v1, ", subId="
+    if-eqz v1, :cond_3
 
-    const-string v2, "IccLockSettings"
-
-    if-eqz v0, :cond_1
-
-    invoke-direct {p0, p1}, Lcom/android/settings/IccLockSettings;->restoreDialogStates(Landroid/os/Bundle;)Z
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    iput v0, p0, Lcom/android/settings/IccLockSettings;->mDialogState:I
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    const-string v0, "dialogPin"
 
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    const-string v0, "onCreate: restore dialog for slotId="
+    move-result-object v0
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-object v0, p0, Lcom/android/settings/IccLockSettings;->mPin:Ljava/lang/String;
 
-    iget v0, p0, Lcom/android/settings/IccLockSettings;->mSlotId:I
+    const-string v0, "dialogError"
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    iget v0, p0, Lcom/android/settings/IccLockSettings;->mSubId:I
+    iput-object v0, p0, Lcom/android/settings/IccLockSettings;->mError:Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-string v0, "enableState"
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
-    move-result-object p1
+    move-result v0
 
-    invoke-static {v2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    iput-boolean v0, p0, Lcom/android/settings/IccLockSettings;->mToState:Z
+
+    iget v0, p0, Lcom/android/settings/IccLockSettings;->mDialogState:I
+
+    const/4 v1, 0x3
+
+    const-string v2, "oldPinCode"
+
+    if-eq v0, v1, :cond_2
+
+    const/4 v1, 0x4
+
+    if-eq v0, v1, :cond_1
 
     goto :goto_0
 
     :cond_1
-    const-string v0, "currentTab"
+    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
+    move-result-object v0
 
-    move-result v0
+    iput-object v0, p0, Lcom/android/settings/IccLockSettings;->mOldPin:Ljava/lang/String;
 
-    if-eqz v0, :cond_2
+    const-string v0, "newPinCode"
 
-    invoke-direct {p0, p1}, Lcom/android/settings/IccLockSettings;->restoreTabFocus(Landroid/os/Bundle;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "onCreate: restore focus on slotId="
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v0, p0, Lcom/android/settings/IccLockSettings;->mSlotId:I
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v0, p0, Lcom/android/settings/IccLockSettings;->mSubId:I
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {v2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    iput-object p1, p0, Lcom/android/settings/IccLockSettings;->mNewPin:Ljava/lang/String;
+
+    goto :goto_0
 
     :cond_2
+    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/android/settings/IccLockSettings;->mOldPin:Ljava/lang/String;
+
+    :cond_3
     :goto_0
     iget-object p1, p0, Lcom/android/settings/IccLockSettings;->mPinDialog:Lcom/android/settings/EditPinPreference;
 
@@ -1583,7 +1272,7 @@
 .end method
 
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 7
+    .locals 9
 
     iget-object v0, p0, Lcom/android/settings/IccLockSettings;->mProxySubscriptionMgr:Lcom/android/settings/network/ProxySubscriptionManager;
 
@@ -1591,42 +1280,80 @@
 
     move-result v0
 
-    new-instance v1, Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings/IccLockSettings;->mProxySubscriptionMgr:Lcom/android/settings/network/ProxySubscriptionManager;
 
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+    invoke-virtual {v1}, Lcom/android/settings/network/ProxySubscriptionManager;->getActiveSubscriptionsInfo()Ljava/util/List;
+
+    move-result-object v1
 
     const/4 v2, 0x0
 
-    move v3, v2
+    iput v2, p0, Lcom/android/settings/IccLockSettings;->mSlotId:I
+
+    new-instance v3, Ljava/util/ArrayList;
+
+    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+
+    move v4, v2
 
     :goto_0
-    if-ge v3, v0, :cond_1
+    if-ge v4, v0, :cond_1
 
-    invoke-direct {p0, v3}, Lcom/android/settings/IccLockSettings;->getVisibleSubscriptionInfoForSimSlotIndex(I)Landroid/telephony/SubscriptionInfo;
+    invoke-static {v1, v4}, Lcom/android/settings/IccLockSettings;->getActiveSubscriptionInfoForSimSlotIndex(Ljava/util/List;I)Landroid/telephony/SubscriptionInfo;
 
-    move-result-object v4
+    move-result-object v5
 
-    if-eqz v4, :cond_0
+    if-eqz v5, :cond_0
 
-    invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v6
+
+    const-class v7, Landroid/telephony/CarrierConfigManager;
+
+    invoke-virtual {v6, v7}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Landroid/telephony/CarrierConfigManager;
+
+    invoke-virtual {v5}, Landroid/telephony/SubscriptionInfo;->getSubscriptionId()I
+
+    move-result v7
+
+    invoke-virtual {v6, v7}, Landroid/telephony/CarrierConfigManager;->getConfigForSubId(I)Landroid/os/PersistableBundle;
+
+    move-result-object v6
+
+    if-eqz v6, :cond_0
+
+    const-string v7, "hide_sim_lock_settings_bool"
+
+    invoke-virtual {v6, v7}, Landroid/os/PersistableBundle;->getBoolean(Ljava/lang/String;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_0
+
+    invoke-interface {v3, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_0
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
     :cond_1
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v0
 
-    const-string v3, "IccLockSettings"
-
     if-nez v0, :cond_2
 
-    const-string v0, "onCreateView: no sim info"
+    const-string v0, "IccLockSettings"
 
-    invoke-static {v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    const-string v1, "onCreateView: no sim info"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-super {p0, p1, p2, p3}, Lcom/android/settings/SettingsPreferenceFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
@@ -1635,68 +1362,13 @@
     return-object p0
 
     :cond_2
-    iget v0, p0, Lcom/android/settings/IccLockSettings;->mSlotId:I
-
-    if-gez v0, :cond_3
-
-    invoke-interface {v1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/telephony/SubscriptionInfo;
-
-    invoke-virtual {v0}, Landroid/telephony/SubscriptionInfo;->getSimSlotIndex()I
+    invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/IccLockSettings;->mSlotId:I
+    const/4 v1, 0x1
 
-    invoke-interface {v1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/telephony/SubscriptionInfo;
-
-    invoke-virtual {v0}, Landroid/telephony/SubscriptionInfo;->getSubscriptionId()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/android/settings/IccLockSettings;->mSubId:I
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "onCreateView: default slotId="
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v4, p0, Lcom/android/settings/IccLockSettings;->mSlotId:I
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v4, ", subId="
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v4, p0, Lcom/android/settings/IccLockSettings;->mSubId:I
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v3, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_3
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    const/4 v3, 0x1
-
-    if-le v0, v3, :cond_6
+    if-le v0, v1, :cond_6
 
     sget v0, Lcom/android/settings/R$layout;->icc_lock_tabs:I
 
@@ -1752,9 +1424,15 @@
 
     iget-object p1, p0, Lcom/android/settings/IccLockSettings;->mTabHost:Landroid/widget/TabHost;
 
+    iget-object p2, p0, Lcom/android/settings/IccLockSettings;->mTabListener:Landroid/widget/TabHost$OnTabChangeListener;
+
+    invoke-virtual {p1, p2}, Landroid/widget/TabHost;->setOnTabChangedListener(Landroid/widget/TabHost$OnTabChangeListener;)V
+
+    iget-object p1, p0, Lcom/android/settings/IccLockSettings;->mTabHost:Landroid/widget/TabHost;
+
     invoke-virtual {p1}, Landroid/widget/TabHost;->clearAllTabs()V
 
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
@@ -1763,7 +1441,7 @@
 
     move-result p2
 
-    if-eqz p2, :cond_5
+    if-eqz p2, :cond_4
 
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1773,39 +1451,39 @@
 
     invoke-virtual {p2}, Landroid/telephony/SubscriptionInfo;->getSimSlotIndex()I
 
-    move-result p3
+    move-result v4
 
-    invoke-direct {p0, p3}, Lcom/android/settings/IccLockSettings;->getTagForSlotId(I)Ljava/lang/String;
+    iget-object v5, p0, Lcom/android/settings/IccLockSettings;->mTabHost:Landroid/widget/TabHost;
 
-    move-result-object v1
+    invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/android/settings/IccLockSettings;->mTabHost:Landroid/widget/TabHost;
+    move-result-object v6
 
-    if-nez p2, :cond_4
+    if-nez p2, :cond_3
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p2
 
-    sget v5, Lcom/android/settings/R$string;->sim_editor_title:I
+    sget v7, Lcom/android/settings/R$string;->sim_editor_title:I
 
-    new-array v6, v3, [Ljava/lang/Object;
+    new-array v8, v1, [Ljava/lang/Object;
 
-    add-int/lit8 p3, p3, 0x1
+    add-int/lit8 v4, v4, 0x1
 
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object p3
+    move-result-object v4
 
-    aput-object p3, v6, v2
+    aput-object v4, v8, v2
 
-    invoke-virtual {p2, v5, v6}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p2, v7, v8}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p2
 
     goto :goto_2
 
-    :cond_4
+    :cond_3
     invoke-virtual {p2}, Landroid/telephony/SubscriptionInfo;->getDisplayName()Ljava/lang/CharSequence;
 
     move-result-object p2
@@ -1815,34 +1493,61 @@
 
     move-result-object p2
 
-    invoke-direct {p0, v1, p2}, Lcom/android/settings/IccLockSettings;->buildTabSpec(Ljava/lang/String;Ljava/lang/String;)Landroid/widget/TabHost$TabSpec;
+    invoke-direct {p0, v6, p2}, Lcom/android/settings/IccLockSettings;->buildTabSpec(Ljava/lang/String;Ljava/lang/String;)Landroid/widget/TabHost$TabSpec;
 
     move-result-object p2
 
-    invoke-virtual {v4, p2}, Landroid/widget/TabHost;->addTab(Landroid/widget/TabHost$TabSpec;)V
+    invoke-virtual {v5, p2}, Landroid/widget/TabHost;->addTab(Landroid/widget/TabHost$TabSpec;)V
 
     goto :goto_1
 
+    :cond_4
+    invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/telephony/SubscriptionInfo;
+
+    invoke-virtual {p1}, Landroid/telephony/SubscriptionInfo;->getSubscriptionId()I
+
+    move-result p1
+
+    iput p1, p0, Lcom/android/settings/IccLockSettings;->mSubId:I
+
+    if-eqz p3, :cond_5
+
+    const-string p1, "currentTab"
+
+    invoke-virtual {p3, p1}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_5
+
+    iget-object p0, p0, Lcom/android/settings/IccLockSettings;->mTabHost:Landroid/widget/TabHost;
+
+    invoke-virtual {p3, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Landroid/widget/TabHost;->setCurrentTabByTag(Ljava/lang/String;)V
+
     :cond_5
-    iget-object p1, p0, Lcom/android/settings/IccLockSettings;->mTabHost:Landroid/widget/TabHost;
-
-    iget p2, p0, Lcom/android/settings/IccLockSettings;->mSlotId:I
-
-    invoke-direct {p0, p2}, Lcom/android/settings/IccLockSettings;->getTagForSlotId(I)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Landroid/widget/TabHost;->setCurrentTabByTag(Ljava/lang/String;)V
-
-    iget-object p1, p0, Lcom/android/settings/IccLockSettings;->mTabHost:Landroid/widget/TabHost;
-
-    iget-object p0, p0, Lcom/android/settings/IccLockSettings;->mTabListener:Landroid/widget/TabHost$OnTabChangeListener;
-
-    invoke-virtual {p1, p0}, Landroid/widget/TabHost;->setOnTabChangedListener(Landroid/widget/TabHost$OnTabChangeListener;)V
-
     return-object v0
 
     :cond_6
+    invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/telephony/SubscriptionInfo;
+
+    invoke-virtual {v0}, Landroid/telephony/SubscriptionInfo;->getSimSlotIndex()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/android/settings/IccLockSettings;->mSlotId:I
+
     invoke-super {p0, p1, p2, p3}, Lcom/android/settings/SettingsPreferenceFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object p0
@@ -2085,12 +1790,6 @@
     move-result v0
 
     if-eqz v0, :cond_2
-
-    iget v0, p0, Lcom/android/settings/IccLockSettings;->mSubId:I
-
-    const-string v1, "dialogSubId"
-
-    invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     iget v0, p0, Lcom/android/settings/IccLockSettings;->mDialogState:I
 

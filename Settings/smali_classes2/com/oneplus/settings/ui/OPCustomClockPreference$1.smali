@@ -35,7 +35,7 @@
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .locals 4
+    .locals 1
 
     iget-object p1, p0, Lcom/oneplus/settings/ui/OPCustomClockPreference$1;->this$0:Lcom/oneplus/settings/ui/OPCustomClockPreference;
 
@@ -55,52 +55,9 @@
 
     check-cast p1, Lcom/oneplus/settings/ui/OPCustomClockPreference$ItemEntity;
 
-    if-eqz p1, :cond_1
-
-    iget-boolean v0, p1, Lcom/oneplus/settings/ui/OPCustomClockPreference$ItemEntity;->hasInfo:Z
-
-    if-eqz v0, :cond_1
-
-    iget p1, p1, Lcom/oneplus/settings/ui/OPCustomClockPreference$ItemEntity;->type:I
-
-    const/16 v0, 0xb
-
-    const/4 v1, -0x1
-
-    if-eq p1, v0, :cond_0
-
-    move p1, v1
-
-    move v0, p1
-
-    move v2, v0
-
-    goto :goto_0
-
-    :cond_0
-    sget v1, Lcom/android/settings/R$string;->op_aod_parsons_info_title:I
-
-    sget p1, Lcom/android/settings/R$string;->op_aod_parsons_info_message:I
-
-    sget v0, Lcom/android/settings/R$string;->op_aod_parsons_info_button:I
-
-    sget v2, Lcom/android/settings/R$drawable;->op_parsons_info_image:I
-
-    move v3, v0
-
-    move v0, p1
-
-    move p1, v1
-
-    move v1, v2
-
-    move v2, v3
-
-    :goto_0
     iget-object p0, p0, Lcom/oneplus/settings/ui/OPCustomClockPreference$1;->this$0:Lcom/oneplus/settings/ui/OPCustomClockPreference;
 
-    invoke-static {p0, v1, p1, v0, v2}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$200(Lcom/oneplus/settings/ui/OPCustomClockPreference;IIII)V
+    invoke-static {p0, p1}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$200(Lcom/oneplus/settings/ui/OPCustomClockPreference;Lcom/oneplus/settings/ui/OPCustomClockPreference$ItemEntity;)V
 
-    :cond_1
     return-void
 .end method

@@ -2173,6 +2173,7 @@
     <string name="keywords_lock_screen_notif">लॉक स्क्रीन सूचना, सूचना</string>
     <string name="keywords_lockscreen">अनलॉक करण्यासाठी स्लाइड करा, पासवर्ड, पॅटर्न, पिन</string>
     <string name="keywords_lockscreen_bypass">लॉक स्क्रीन, लॉकस्क्रीन, वगळा, बायपास</string>
+    <string name="keywords_media_controls">मीडिया</string>
     <string name="keywords_model_and_hardware">सीरीअल नंबर, हार्डवेअर आवृत्ती</string>
     <string name="keywords_more_mobile_networks">सेल्युलर, मोबाइल, सेल वाहक, वायरलेस, डेटा, 4g, 3g, 2g, lte</string>
     <string name="keywords_network_reset">रीसेट करा, पुनर्संचयित करा, फॅक्टरी</string>
@@ -2549,6 +2550,12 @@
     <string name="master_clear_title">सर्व डेटा मिटवा (फॅक्टरी रीसेट)</string>
     <string name="maximum_memory_use">कमाल मेमरी वापर</string>
     <string name="media_category">मीडिया</string>
+    <string name="media_controls_hide_player">प्‍लेअर लपवा</string>
+    <string name="media_controls_no_players">कोणताही प्‍लेअर उपलब्ध नाही</string>
+    <string name="media_controls_resume_description">प्‍लेअर तुम्हाला विस्तार केलेल्या क्विक सेटिंग्ज पॅनलमधून सेशन पुन्‍हा सुरू करण्याची अनुमती देतो.</string>
+    <string name="media_controls_show_player">प्‍लेअर दाखवा</string>
+    <string name="media_controls_summary">मीडिया सेशन संपेल तेव्हा प्‍लेअर लपवा</string>
+    <string name="media_controls_title">मीडिया</string>
     <string name="media_out_summary_ongoing_call_state">कॉल दरम्‍यान अनुपलब्‍ध</string>
     <string name="media_output_default_summary">हे डिव्हाइस</string>
     <string name="media_output_disconnected_status">%1$s (डिस्कनेक्ट केलेले)</string>
@@ -2806,7 +2813,7 @@
     <string name="night_display_text">रात्रीचा प्रकाश तुमच्या स्क्रीनला पिवळसर तपकिरी छटा देतो. यामुळे मंद प्रकाशात तुमची स्क्रीन पाहणे किंवा वाचणे सोपे होते आणि तुम्हाला झोप येण्यात मदत होऊ शकते.</string>
     <string name="night_display_title">रात्रीचा प्रकाश</string>
     <string name="no">नाही</string>
-    <string name="no_5g_in_dsds_text">दोन सिम वापरताना या फोनचे नेटवर्क 4G पुरते मर्यादित असेल. <annotation id="url">अधिक जाणून घ्या</annotation>.</string>
+    <string name="no_5g_in_dsds_text">दोन सिम वापरताना या फोनचे नेट 4G पुरते मर्यादित असेल. <annotation id="url">अधिक जाणून घ्या</annotation></string>
     <string name="no_application">काहीही नाही</string>
     <string name="no_applications">अ‍ॅप्स नाहीत.</string>
     <string name="no_battery_summary">पूर्ण चार्ज झाल्यानंतर बॅटरी वापर नाही</string>
@@ -2923,6 +2930,7 @@
     <string name="notification_priority_title">प्राधान्य</string>
     <string name="notification_pulse_title">ब्लिंक लाइट</string>
     <string name="notification_ringtone_title">डीफॉल्ट सूचना ध्वनी</string>
+    <string name="notification_screen_summary">सूचना इतिहास, बबल, अलीकडे पाठवलेले</string>
     <string name="notification_settings_work_profile">कार्य प्रोफाइलमधील ॲप्ससाठी सूचनेचा अ‍ॅक्सेस उपलब्ध नाही.</string>
     <string name="notification_show_lights_title">ब्लिंक लाइट</string>
     <string name="notification_silence_title">सायलंट</string>
@@ -3030,6 +3038,8 @@
     <string name="platform_compat_dashboard_title">ॲप कंपॅटिबिलिटी बदल</string>
     <string name="platform_compat_default_disabled_title">डीफॉल्ट बंद केलेले बदल</string>
     <string name="platform_compat_default_enabled_title">डीफॉल्ट सुरू केलेले बदल</string>
+    <string name="platform_compat_dialog_text_no_apps">ॲप कंपॅटिबिलिटी संबंधित बदलांमध्ये फक्‍त डीबग करण्यायोग्य ॲप्‍सवरून बदल केले जाऊ शकतात. डीबग करण्यायोग्य ॲप इंस्टॉल करा आणि पुन्‍हा प्रयत्न करा.</string>
+    <string name="platform_compat_dialog_title_no_apps">अ‍ॅप्स उपलब्ध नाहीत</string>
     <string name="please_select_phase2">टप्पा 2 प्रमाणीकरण</string>
     <string name="pointer_location">पॉइंटर स्थान</string>
     <string name="pointer_location_summary">वर्तमान स्पर्श डेटा दर्शविणारे स्क्रीन ओव्हरले</string>

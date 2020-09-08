@@ -70,5 +70,28 @@
 
     invoke-virtual {v0, p0, v1}, Lcom/google/android/setupcompat/template/FooterButton;->setText(Landroid/content/Context;I)V
 
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isO2()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollFinish;->mBtnNext:Landroid/widget/Button;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Landroidx/appcompat/app/AppCompatActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    sget v1, Lcom/android/settings/R$color;->oneplus_setupwizard_accent_color:I
+
+    invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result p0
+
+    invoke-virtual {v0, p0}, Landroid/widget/Button;->setTextColor(I)V
+
+    :cond_0
     return-void
 .end method

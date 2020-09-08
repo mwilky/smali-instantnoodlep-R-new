@@ -2,6 +2,9 @@
 .super Ljava/lang/Object;
 .source "PathInterpolator.java"
 
+# interfaces
+.implements Landroidx/animation/Interpolator;
+
 
 # instance fields
 .field private mData:[F
@@ -450,4 +453,110 @@
     invoke-direct {p0, p1}, Landroid/view/InflateException;-><init>(Ljava/lang/String;)V
 
     throw p0
+.end method
+
+
+# virtual methods
+.method public getInterpolation(F)F
+    .locals 6
+
+    const/4 v0, 0x0
+
+    cmpg-float v1, p1, v0
+
+    if-gtz v1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    cmpl-float v2, p1, v1
+
+    if-ltz v2, :cond_1
+
+    return v1
+
+    :cond_1
+    const/4 v1, 0x0
+
+    invoke-direct {p0}, Landroidx/animation/PathInterpolator;->getNumOfPoints()I
+
+    move-result v2
+
+    const/4 v3, 0x1
+
+    sub-int/2addr v2, v3
+
+    :goto_0
+    sub-int v4, v2, v1
+
+    if-le v4, v3, :cond_3
+
+    add-int v4, v1, v2
+
+    div-int/lit8 v4, v4, 0x2
+
+    invoke-direct {p0, v4}, Landroidx/animation/PathInterpolator;->getXAtIndex(I)F
+
+    move-result v5
+
+    cmpg-float v5, p1, v5
+
+    if-gez v5, :cond_2
+
+    move v2, v4
+
+    goto :goto_0
+
+    :cond_2
+    move v1, v4
+
+    goto :goto_0
+
+    :cond_3
+    invoke-direct {p0, v2}, Landroidx/animation/PathInterpolator;->getXAtIndex(I)F
+
+    move-result v3
+
+    invoke-direct {p0, v1}, Landroidx/animation/PathInterpolator;->getXAtIndex(I)F
+
+    move-result v4
+
+    sub-float/2addr v3, v4
+
+    cmpl-float v0, v3, v0
+
+    if-nez v0, :cond_4
+
+    invoke-direct {p0, v1}, Landroidx/animation/PathInterpolator;->getYAtIndex(I)F
+
+    move-result p0
+
+    return p0
+
+    :cond_4
+    invoke-direct {p0, v1}, Landroidx/animation/PathInterpolator;->getXAtIndex(I)F
+
+    move-result v0
+
+    sub-float/2addr p1, v0
+
+    div-float/2addr p1, v3
+
+    invoke-direct {p0, v1}, Landroidx/animation/PathInterpolator;->getYAtIndex(I)F
+
+    move-result v0
+
+    invoke-direct {p0, v2}, Landroidx/animation/PathInterpolator;->getYAtIndex(I)F
+
+    move-result p0
+
+    sub-float/2addr p0, v0
+
+    mul-float/2addr p1, p0
+
+    add-float/2addr v0, p1
+
+    return v0
 .end method

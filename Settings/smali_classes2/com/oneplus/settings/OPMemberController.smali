@@ -84,7 +84,19 @@
 
 .field private mContext:Landroid/content/Context;
 
+.field private mOPAuthListener:Lcom/oneplus/accountsdk/auth/OPAuthListener;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/oneplus/accountsdk/auth/OPAuthListener<",
+            "Lcom/oneplus/accountsdk/entity/UserTokenInfo;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field private mOPMemberPreference:Lcom/oneplus/settings/ui/OPMemberPreference;
+
+.field private mUserTokenInfo:Lcom/oneplus/accountsdk/entity/UserTokenInfo;
 
 
 # direct methods
@@ -98,6 +110,12 @@
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/oneplus/settings/OPMemberController;->errCount:I
+
+    new-instance v0, Lcom/oneplus/settings/OPMemberController$2;
+
+    invoke-direct {v0, p0}, Lcom/oneplus/settings/OPMemberController$2;-><init>(Lcom/oneplus/settings/OPMemberController;)V
+
+    iput-object v0, p0, Lcom/oneplus/settings/OPMemberController;->mOPAuthListener:Lcom/oneplus/accountsdk/auth/OPAuthListener;
 
     iput-object p1, p0, Lcom/oneplus/settings/OPMemberController;->mContext:Landroid/content/Context;
 
@@ -118,6 +136,14 @@
     invoke-direct {p0, p1}, Lcom/oneplus/settings/OPMemberController;->getData(Ljava/lang/String;)V
 
     return-void
+.end method
+
+.method static synthetic access$202(Lcom/oneplus/settings/OPMemberController;Lcom/oneplus/accountsdk/entity/UserTokenInfo;)Lcom/oneplus/accountsdk/entity/UserTokenInfo;
+    .locals 0
+
+    iput-object p1, p0, Lcom/oneplus/settings/OPMemberController;->mUserTokenInfo:Lcom/oneplus/accountsdk/entity/UserTokenInfo;
+
+    return-object p1
 .end method
 
 .method private getAccessToken()V
@@ -188,109 +214,8 @@
     return-void
 .end method
 
-.method private getAccountTokenForProvider(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
-    .locals 3
-
-    const-string p0, ""
-
-    new-instance v0, Landroid/os/Bundle;
-
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
-
-    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "extra_package_name"
-
-    invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    :try_start_0
-    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object p1
-
-    const-string v1, "content://com.oneplus.account.provider.open"
-
-    invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1, p2, p0, v0}, Landroid/content/ContentResolver;->call(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
-
-    move-result-object p1
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p1
-
-    invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
-
-    const/4 p1, 0x0
-
-    :goto_0
-    if-nez p1, :cond_0
-
-    return-object p0
-
-    :cond_0
-    const-string v0, "get_account_oneplus_token"
-
-    invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    const-string v0, "OPMemberController"
-
-    if-eqz p2, :cond_1
-
-    const-string p2, "token"
-
-    invoke-virtual {p1, p2, p0}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    const-string p1, "op token is null"
-
-    invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_1
-
-    :cond_1
-    const-string p2, "oplustoken"
-
-    invoke-virtual {p1, p2, p0}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    const-string p1, "ht token is null"
-
-    invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_2
-    :goto_1
-    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    return-object p0
-.end method
-
 .method private getData(Ljava/lang/String;)V
-    .locals 5
+    .locals 6
 
     invoke-direct {p0}, Lcom/oneplus/settings/OPMemberController;->isH2Show()Z
 
@@ -314,201 +239,208 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object v1, p0, Lcom/oneplus/settings/OPMemberController;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/oneplus/settings/OPMemberController;->mUserTokenInfo:Lcom/oneplus/accountsdk/entity/UserTokenInfo;
 
-    const-string v2, "get_account_oneplus_token"
+    const-string v2, ""
 
-    invoke-direct {p0, v1, v2}, Lcom/oneplus/settings/OPMemberController;->getAccountTokenForProvider(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    if-eqz v1, :cond_0
 
-    move-result-object v1
-
-    new-instance v2, Ljava/util/HashMap;
-
-    invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
-
-    const-string v3, "access_token"
-
-    invoke-interface {v2, v3, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    if-eqz v0, :cond_0
-
-    const-string p1, "4a348e7f51314002b1927030ffa22d16"
+    iget-object v1, v1, Lcom/oneplus/accountsdk/entity/UserTokenInfo;->token:Ljava/lang/String;
 
     goto :goto_0
 
     :cond_0
-    const-string p1, "a291040ba78042b39d1ab8ba35396478"
+    move-object v1, v2
 
     :goto_0
-    const-string v3, "client_id"
+    new-instance v3, Ljava/util/HashMap;
 
-    invoke-interface {v2, v3, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
+
+    const-string v4, "access_token"
+
+    invoke-interface {v3, v4, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     if-eqz v0, :cond_1
 
-    const-string p1, "setting.copywriting.get"
+    const-string p1, "4a348e7f51314002b1927030ffa22d16"
 
     goto :goto_1
 
     :cond_1
-    const-string p1, "member.app.copywriting.get"
+    const-string p1, "a291040ba78042b39d1ab8ba35396478"
 
     :goto_1
-    const-string v3, "method"
+    const-string v4, "client_id"
 
-    invoke-interface {v2, v3, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v3, v4, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    if-eqz v0, :cond_2
+
+    const-string p1, "setting.copywriting.get"
+
+    goto :goto_2
+
+    :cond_2
+    const-string p1, "member.app.copywriting.get"
+
+    :goto_2
+    const-string v4, "method"
+
+    invoke-interface {v3, v4, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     new-instance p1, Lorg/json/JSONObject;
 
     invoke-direct {p1}, Lorg/json/JSONObject;-><init>()V
 
     :try_start_0
-    const-string v3, "client"
+    const-string v4, "client"
 
-    const-string v4, "3"
+    const-string v5, "3"
 
-    invoke-virtual {p1, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {p1, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    const-string v3, "deviceName"
+    const-string v4, "deviceName"
 
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->getDeviceName()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-virtual {p1, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {p1, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    const-string v3, "model"
+    const-string v4, "model"
 
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->getDeviceModel()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-virtual {p1, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {p1, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    const-string v3, "deviceId"
+    const-string v4, "deviceId"
 
-    iget-object v4, p0, Lcom/oneplus/settings/OPMemberController;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/oneplus/settings/OPMemberController;->mContext:Landroid/content/Context;
 
-    invoke-static {v4}, Lcom/oneplus/settings/utils/OPUtils;->getOPSafeUUID(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v5}, Lcom/oneplus/settings/utils/OPUtils;->getOPSafeUUID(Landroid/content/Context;)Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-virtual {p1, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {p1, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    const-string v3, "lang"
+    const-string v4, "lang"
 
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->getLang()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-virtual {p1, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {p1, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    const-string v3, "version"
+    const-string v4, "version"
 
-    const-string v4, "1.1.0"
+    const-string v5, "1.1.0"
 
-    invoke-virtual {p1, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {p1, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    const-string v3, "packageName"
+    const-string v4, "packageName"
 
-    const-string v4, "com.android.settings"
+    const-string v5, "com.android.settings"
 
-    invoke-virtual {p1, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {p1, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    const-string v3, "token"
+    const-string v4, "token"
 
-    invoke-virtual {p1, v3, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {p1, v4, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_5
 
-    iget-object v1, p0, Lcom/oneplus/settings/OPMemberController;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/oneplus/settings/OPMemberController;->mUserTokenInfo:Lcom/oneplus/accountsdk/entity/UserTokenInfo;
 
-    const-string v3, "get_account_o_token"
+    if-eqz v1, :cond_3
 
-    invoke-direct {p0, v1, v3}, Lcom/oneplus/settings/OPMemberController;->getAccountTokenForProvider(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v1, p0, Lcom/oneplus/settings/OPMemberController;->mUserTokenInfo:Lcom/oneplus/accountsdk/entity/UserTokenInfo;
 
-    move-result-object v1
+    iget-object v2, v1, Lcom/oneplus/accountsdk/entity/UserTokenInfo;->heytapToken:Ljava/lang/String;
 
-    const-string v3, "heyTapToken"
+    :cond_3
+    const-string v1, "heyTapToken"
 
-    invoke-virtual {p1, v3, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {p1, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string v1, "cloudServiceFlag"
 
-    iget-object v3, p0, Lcom/oneplus/settings/OPMemberController;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/oneplus/settings/OPMemberController;->mContext:Landroid/content/Context;
 
     const-string v4, "com.heytap.cloud"
 
-    invoke-static {v3, v4}, Lcom/oneplus/settings/utils/OPUtils;->isAppExist(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v2, v4}, Lcom/oneplus/settings/utils/OPUtils;->isAppExist(Landroid/content/Context;Ljava/lang/String;)Z
 
-    move-result v3
+    move-result v2
 
-    if-eqz v3, :cond_2
+    if-eqz v2, :cond_4
 
-    const/4 v3, 0x1
+    const/4 v2, 0x1
 
-    goto :goto_2
+    goto :goto_3
 
-    :cond_2
-    const/4 v3, 0x0
+    :cond_4
+    const/4 v2, 0x0
 
-    :goto_2
-    invoke-virtual {p1, v1, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+    :goto_3
+    invoke-virtual {p1, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
     const-string v1, "versionName"
 
     invoke-direct {p0}, Lcom/oneplus/settings/OPMemberController;->getOSVersion()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {p1, v1, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {p1, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string v1, "buildTime"
 
     invoke-static {}, Landroid/text/BidiFormatter;->getInstance()Landroid/text/BidiFormatter;
 
-    move-result-object v3
+    move-result-object v2
 
     sget-object v4, Landroid/os/Build$VERSION;->INCREMENTAL:Ljava/lang/String;
 
-    invoke-virtual {v3, v4}, Landroid/text/BidiFormatter;->unicodeWrap(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v4}, Landroid/text/BidiFormatter;->unicodeWrap(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {p1, v1, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {p1, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string v1, "accountVersionName"
 
-    iget-object v3, p0, Lcom/oneplus/settings/OPMemberController;->mAccountVersionName:Ljava/lang/String;
+    iget-object v2, p0, Lcom/oneplus/settings/OPMemberController;->mAccountVersionName:Ljava/lang/String;
 
-    invoke-virtual {p1, v1, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {p1, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string v1, "accountVersionCode"
 
-    iget-wide v3, p0, Lcom/oneplus/settings/OPMemberController;->mAccountVersionCode:J
+    iget-wide v4, p0, Lcom/oneplus/settings/OPMemberController;->mAccountVersionCode:J
 
-    invoke-virtual {p1, v1, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {p1, v1, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    :cond_3
+    :cond_5
     const-string v1, "biz_content"
 
     invoke-virtual {p1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-interface {v2, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v3, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_3
+    goto :goto_4
 
     :catch_0
     move-exception p1
 
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
-    :goto_3
-    invoke-static {v2}, Lcom/oneplus/settings/utils/SignUtils;->getSignContent(Ljava/util/Map;)Ljava/lang/String;
+    :goto_4
+    invoke-static {v3}, Lcom/oneplus/settings/utils/SignUtils;->getSignContent(Ljava/util/Map;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -518,23 +450,23 @@
 
     const-string v1, "sign"
 
-    invoke-interface {v2, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v3, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     invoke-static {}, Lcom/oneplus/settings/utils/OPOkHttpUtils;->getInstance()Lcom/oneplus/settings/utils/OPOkHttpUtils;
 
     move-result-object p1
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_6
 
     const-string v0, "https://gateway.oneplus.cn/v2/api/router"
 
-    goto :goto_4
+    goto :goto_5
 
-    :cond_4
+    :cond_6
     const-string v0, "https://gateway.oneplus.net/v2/api/router"
 
-    :goto_4
-    invoke-virtual {p1, v0, v2, p0}, Lcom/oneplus/settings/utils/OPOkHttpUtils;->postDataAsyn(Ljava/lang/String;Ljava/util/Map;Lcom/oneplus/settings/utils/OPOkHttpUtils$NetCall;)V
+    :goto_5
+    invoke-virtual {p1, v0, v3, p0}, Lcom/oneplus/settings/utils/OPOkHttpUtils;->postDataAsyn(Ljava/lang/String;Ljava/util/Map;Lcom/oneplus/settings/utils/OPOkHttpUtils$NetCall;)V
 
     return-void
 .end method
@@ -908,7 +840,7 @@
 .end method
 
 .method public onResume()V
-    .locals 3
+    .locals 2
 
     invoke-direct {p0}, Lcom/oneplus/settings/OPMemberController;->isH2Show()Z
 
@@ -931,19 +863,17 @@
 
     iget-object v0, p0, Lcom/oneplus/settings/OPMemberController;->mContext:Landroid/content/Context;
 
-    invoke-static {v0}, Landroidx/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+    invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const-string v1, "access_token"
+    new-instance v1, Lcom/oneplus/accountsdk/auth/OPAuthInfo;
 
-    const-string v2, ""
+    invoke-direct {v1}, Lcom/oneplus/accountsdk/auth/OPAuthInfo;-><init>()V
 
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-object p0, p0, Lcom/oneplus/settings/OPMemberController;->mOPAuthListener:Lcom/oneplus/accountsdk/auth/OPAuthListener;
 
-    move-result-object v0
-
-    invoke-direct {p0, v0}, Lcom/oneplus/settings/OPMemberController;->getData(Ljava/lang/String;)V
+    invoke-static {v0, v1, p0}, Lcom/oneplus/accountsdk/auth/OPAuth;->getAuthToken(Landroid/content/Context;Lcom/oneplus/accountsdk/auth/OPAuthInfo;Lcom/oneplus/accountsdk/auth/OPAuthListener;)V
 
     :cond_1
     return-void
@@ -996,7 +926,7 @@
 
     const-string v6, "OPMemberController"
 
-    if-eqz v4, :cond_5
+    if-eqz v4, :cond_6
 
     :try_start_1
     const-string v4, "get data success"
@@ -1084,6 +1014,8 @@
 
     if-eqz v5, :cond_4
 
+    move-object p1, v6
+
     goto :goto_4
 
     :cond_4
@@ -1093,55 +1025,56 @@
 
     invoke-static {v4, v5}, Ljava/lang/String;->valueOf(D)Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object p1
 
     :goto_4
-    new-instance p1, Ljava/util/HashMap;
+    new-instance v4, Ljava/util/HashMap;
 
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
+    invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
-    const-string v4, "member_title"
+    const-string v5, "member_title"
 
-    invoke-interface {p1, v4, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v4, v5, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v3, "member_content"
 
-    invoke-interface {p1, v3, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v4, v3, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v2, "member_avatar"
 
-    invoke-interface {p1, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v4, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v1, "member_icon"
 
-    invoke-interface {p1, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v4, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v0, "member_new_version"
 
-    invoke-interface {p1, v0, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v4, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v0, "token"
+    const-string p1, "token"
 
-    iget-object v1, p0, Lcom/oneplus/settings/OPMemberController;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/oneplus/settings/OPMemberController;->mUserTokenInfo:Lcom/oneplus/accountsdk/entity/UserTokenInfo;
 
-    const-string v2, "get_account_oneplus_token"
+    if-eqz v0, :cond_5
 
-    invoke-direct {p0, v1, v2}, Lcom/oneplus/settings/OPMemberController;->getAccountTokenForProvider(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v0, p0, Lcom/oneplus/settings/OPMemberController;->mUserTokenInfo:Lcom/oneplus/accountsdk/entity/UserTokenInfo;
 
-    move-result-object v1
+    iget-object v6, v0, Lcom/oneplus/accountsdk/entity/UserTokenInfo;->token:Ljava/lang/String;
 
-    invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_5
+    invoke-interface {v4, p1, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     iget-object p0, p0, Lcom/oneplus/settings/OPMemberController;->mOPMemberPreference:Lcom/oneplus/settings/ui/OPMemberPreference;
 
-    invoke-virtual {p0, p1}, Lcom/oneplus/settings/ui/OPMemberPreference;->setData(Ljava/util/Map;)V
+    invoke-virtual {p0, v4}, Lcom/oneplus/settings/ui/OPMemberPreference;->setData(Ljava/util/Map;)V
 
     goto :goto_5
 
-    :cond_5
+    :cond_6
     iget p1, p0, Lcom/oneplus/settings/OPMemberController;->errCount:I
 
-    if-nez p1, :cond_6
+    if-nez p1, :cond_7
 
     iget p1, p0, Lcom/oneplus/settings/OPMemberController;->errCount:I
 
@@ -1153,7 +1086,7 @@
 
     goto :goto_5
 
-    :cond_6
+    :cond_7
     const-string p0, "errCode"
 
     invoke-virtual {v5, p0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;

@@ -169,8 +169,8 @@
         <item quantity="one">必须少于 %d 位数</item>
     </plurals>
     <plurals name="lockpassword_pin_too_short">
-        <item quantity="other">PIN 码必须包含至少 %d 位数</item>
-        <item quantity="one">PIN 码必须包含至少 %d 位数</item>
+        <item quantity="other">数字密码必须包含至少 %d 位数</item>
+        <item quantity="one">数字密码必须包含至少 %d 位数</item>
     </plurals>
     <plurals name="manage_notification_access_summary_nonzero">
         <item quantity="other">%d 个应用可以读取通知</item>
@@ -361,8 +361,8 @@
         <item quantity="one">已连接 %1$d 个设备</item>
     </plurals>
     <plurals name="wrong_pin_code">
-        <item quantity="other">SIM 卡 PIN 码不正确，您还可尝试 %d 次。</item>
-        <item quantity="one">SIM 卡 PIN 码不正确，您还可尝试 %d 次。如果仍不正确，则需要联系运营商帮您解锁设备。</item>
+        <item quantity="other">SIM 卡 数字密码不正确，您还可尝试 %d 次。</item>
+        <item quantity="one">SIM 卡 数字密码不正确，您还可尝试 %d 次。如果仍不正确，则需要联系运营商帮您解锁设备。</item>
     </plurals>
     <plurals name="zen_mode_bypassing_apps_subtext">
         <item quantity="other">“%s”例外</item>

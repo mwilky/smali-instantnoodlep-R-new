@@ -277,7 +277,7 @@
 
     iput-object v2, p0, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
 
-    sget v3, Lcom/android/settings/R$string;->oneplus_global_dark_mode_title:I
+    sget v3, Lcom/android/settings/R$string;->op_global_drak_mode_apps_manage:I
 
     invoke-virtual {v2, v3, v3}, Lcom/android/settings/widget/SwitchBar;->setSwitchBarText(II)V
 

@@ -50,7 +50,7 @@
 
     iget-object p1, p0, Lcom/android/settings/users/UserSettings$2;->this$0:Lcom/android/settings/users/UserSettings;
 
-    invoke-static {p1, v0}, Lcom/android/settings/users/UserSettings;->access$102(Lcom/android/settings/users/UserSettings;I)I
+    invoke-static {p1, v0}, Lcom/android/settings/users/UserSettings;->access$202(Lcom/android/settings/users/UserSettings;I)I
 
     goto :goto_0
 
@@ -77,7 +77,9 @@
 
     iget-object p2, p0, Lcom/android/settings/users/UserSettings$2;->this$0:Lcom/android/settings/users/UserSettings;
 
-    iget-object p2, p2, Lcom/android/settings/users/UserSettings;->mUserIcons:Landroid/util/SparseArray;
+    invoke-static {p2}, Lcom/android/settings/users/UserSettings;->access$300(Lcom/android/settings/users/UserSettings;)Landroid/util/SparseArray;
+
+    move-result-object p2
 
     invoke-virtual {p2, p1}, Landroid/util/SparseArray;->remove(I)V
 
@@ -85,7 +87,7 @@
     :goto_0
     iget-object p0, p0, Lcom/android/settings/users/UserSettings$2;->this$0:Lcom/android/settings/users/UserSettings;
 
-    invoke-static {p0}, Lcom/android/settings/users/UserSettings;->access$200(Lcom/android/settings/users/UserSettings;)Landroid/os/Handler;
+    invoke-static {p0}, Lcom/android/settings/users/UserSettings;->access$400(Lcom/android/settings/users/UserSettings;)Landroid/os/Handler;
 
     move-result-object p0
 

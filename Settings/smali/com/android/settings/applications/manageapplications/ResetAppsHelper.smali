@@ -205,7 +205,10 @@
     const/4 v9, 0x1
 
     invoke-virtual {v8, v9}, Lcom/oneplus/settings/defaultapp/DefaultAppLogic;->initDefaultAppSettings(Z)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
+    :try_start_1
     const-string v8, "com.android.mms"
 
     invoke-static {v8, p1}, Lcom/android/internal/telephony/SmsApplication;->setDefaultApplication(Ljava/lang/String;Landroid/content/Context;)V
@@ -213,7 +216,18 @@
     const-string v8, "com.android.dialer"
 
     invoke-static {p1, v8, v6}, Landroid/telecom/DefaultDialerManager;->setDefaultDialerApplication(Landroid/content/Context;Ljava/lang/String;I)Z
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    :try_start_2
+    invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
+
+    :goto_0
     invoke-direct {p0, v4}, Lcom/android/settings/applications/manageapplications/ResetAppsHelper;->isAppExist(Ljava/lang/String;)Z
 
     move-result p1
@@ -295,7 +309,7 @@
 
     invoke-virtual {v7, v0, v6}, Landroid/content/pm/PackageManager;->setDefaultBrowserPackageNameAsUser(Ljava/lang/String;I)Z
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_3
     invoke-direct {p0, v2}, Lcom/android/settings/applications/manageapplications/ResetAppsHelper;->isAppExist(Ljava/lang/String;)Z
@@ -311,7 +325,7 @@
     invoke-virtual {v7, v2, v6}, Landroid/content/pm/PackageManager;->setDefaultBrowserPackageNameAsUser(Ljava/lang/String;I)Z
 
     :cond_4
-    :goto_0
+    :goto_1
     new-instance p0, Landroid/content/IntentFilter;
 
     const-string p1, "android.intent.action.MAIN"
@@ -340,7 +354,7 @@
 
     move v2, v1
 
-    :goto_1
+    :goto_2
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v3
@@ -367,7 +381,7 @@
 
     add-int/lit8 v2, v2, 0x1
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_5
     const-string v0, "net.oneplus.launcher/net.oneplus.launcher.Launcher"
@@ -387,12 +401,12 @@
     check-cast p1, [Landroid/content/ComponentName;
 
     invoke-virtual {v7, p0, v2, p1, v0}, Landroid/content/pm/PackageManager;->replacePreferredActivity(Landroid/content/IntentFilter;I[Landroid/content/ComponentName;Landroid/content/ComponentName;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    goto :goto_2
+    goto :goto_3
 
-    :catch_0
+    :catch_1
     move-exception p0
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -415,7 +429,7 @@
 
     invoke-static {v5, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :goto_2
+    :goto_3
     return-void
 .end method
 

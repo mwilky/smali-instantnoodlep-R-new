@@ -612,7 +612,7 @@
     :cond_7
     invoke-virtual {v0, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setView(Landroid/view/View;)Landroidx/appcompat/app/AlertDialog$Builder;
 
-    sget p1, Lcom/android/settings/R$string;->yes:I
+    const p1, 0x104000a
 
     new-instance v2, Lcom/oneplus/security/network/view/TrafficUsageSettingsActivity$TrafficUsageSettingsFragment$9;
 
@@ -795,7 +795,7 @@
 
     invoke-virtual {v2, v3}, Landroidx/appcompat/app/AlertDialog$Builder;->setView(Landroid/view/View;)Landroidx/appcompat/app/AlertDialog$Builder;
 
-    sget v0, Lcom/android/settings/R$string;->yes:I
+    const v0, 0x104000a
 
     new-instance v1, Lcom/oneplus/security/network/view/TrafficUsageSettingsActivity$TrafficUsageSettingsFragment$5;
 

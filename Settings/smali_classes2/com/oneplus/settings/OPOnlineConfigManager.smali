@@ -618,6 +618,8 @@
 
     move-result-object v2
 
+    if-eqz v2, :cond_5
+
     const-string v3, "name"
 
     invoke-virtual {v2, v3}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
@@ -917,6 +919,8 @@
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_3
+    if-eqz p1, :cond_7
+
     const/4 v0, 0x0
 
     move v1, v0
@@ -932,6 +936,8 @@
     invoke-virtual {p1, v1}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v2
+
+    if-eqz v2, :cond_5
 
     const-string v3, "name"
 
@@ -1087,6 +1093,7 @@
 
     invoke-virtual {p0}, Lorg/json/JSONException;->printStackTrace()V
 
+    :cond_7
     :goto_4
     return-void
 .end method

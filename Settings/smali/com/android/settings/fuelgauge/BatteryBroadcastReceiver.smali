@@ -33,7 +33,7 @@
 .end method
 
 .method private updateBatteryStatus(Landroid/content/Intent;Z)V
-    .locals 2
+    .locals 3
 
     if-eqz p1, :cond_4
 
@@ -51,23 +51,23 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_2
 
     invoke-static {p1}, Lcom/android/settings/Utils;->getBatteryPercentage(Landroid/content/Intent;)Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver;->mContext:Landroid/content/Context;
 
-    invoke-static {v1, p1}, Lcom/android/settingslib/Utils;->getBatteryStatus(Landroid/content/Context;Landroid/content/Intent;)Ljava/lang/String;
+    invoke-static {v2, p1}, Lcom/android/settingslib/Utils;->getBatteryStatus(Landroid/content/Context;Landroid/content/Intent;)Ljava/lang/String;
 
     move-result-object p1
 
     if-eqz p2, :cond_0
 
     iget-object p2, p0, Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver;->mBatteryListener:Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver$OnBatteryChangedListener;
-
-    const/4 v1, 0x0
 
     invoke-interface {p2, v1}, Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver$OnBatteryChangedListener;->onBatteryChanged(I)V
 
@@ -91,25 +91,37 @@
     goto :goto_0
 
     :cond_1
-    iget-object p2, p0, Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver;->mBatteryStatus:Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_2
-
     iget-object p2, p0, Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver;->mBatteryListener:Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver$OnBatteryChangedListener;
 
     const/4 v1, 0x3
 
     invoke-interface {p2, v1}, Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver$OnBatteryChangedListener;->onBatteryChanged(I)V
 
-    :cond_2
     :goto_0
     iput-object v0, p0, Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver;->mBatteryLevel:Ljava/lang/String;
 
     iput-object p1, p0, Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver;->mBatteryStatus:Ljava/lang/String;
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    move-result-object p2
+
+    const-string v0, "android.os.action.POWER_SAVE_MODE_CHANGED"
+
+    invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_3
+
+    iget-object p1, p0, Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver;->mBatteryListener:Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver$OnBatteryChangedListener;
+
+    const/4 p2, 0x2
+
+    invoke-interface {p1, p2}, Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver$OnBatteryChangedListener;->onBatteryChanged(I)V
 
     goto :goto_1
 
@@ -118,7 +130,7 @@
 
     move-result-object p1
 
-    const-string p2, "android.os.action.POWER_SAVE_MODE_CHANGED"
+    const-string p2, "android.intent.action.ONEPLUS_CHARGE_TIME_ENABLE"
 
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -126,11 +138,15 @@
 
     if-eqz p1, :cond_4
 
+    const-string p1, "BatteryBroadcastReceiver"
+
+    const-string p2, "Reflash battery info by op intent"
+
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     iget-object p1, p0, Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver;->mBatteryListener:Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver$OnBatteryChangedListener;
 
-    const/4 p2, 0x2
-
-    invoke-interface {p1, p2}, Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver$OnBatteryChangedListener;->onBatteryChanged(I)V
+    invoke-interface {p1, v1}, Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver$OnBatteryChangedListener;->onBatteryChanged(I)V
 
     :cond_4
     :goto_1
@@ -161,6 +177,10 @@
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "android.intent.action.BATTERY_CHANGED"
+
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    const-string v1, "android.intent.action.ONEPLUS_CHARGE_TIME_ENABLE"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 

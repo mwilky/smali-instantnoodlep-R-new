@@ -1519,7 +1519,7 @@
 .end method
 
 .method private refreshMacAddress()V
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lcom/android/settings/wifi/details2/WifiDetailPreferenceController2;->mWifiEntry:Lcom/android/wifitrackerlib/WifiEntry;
 
@@ -1527,7 +1527,11 @@
 
     move-result-object v0
 
-    if-nez v0, :cond_0
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
 
     iget-object p0, p0, Lcom/android/settings/wifi/details2/WifiDetailPreferenceController2;->mMacAddressPref:Landroidx/preference/Preference;
 
@@ -1544,80 +1548,48 @@
 
     invoke-virtual {v1, v2}, Landroidx/preference/Preference;->setVisible(Z)V
 
+    iget-object v1, p0, Lcom/android/settings/wifi/details2/WifiDetailPreferenceController2;->mMacAddressPref:Landroidx/preference/Preference;
+
+    iget-object v3, p0, Lcom/android/settings/wifi/details2/WifiDetailPreferenceController2;->mWifiEntry:Lcom/android/wifitrackerlib/WifiEntry;
+
+    invoke-virtual {v3}, Lcom/android/wifitrackerlib/WifiEntry;->getPrivacy()I
+
+    move-result v3
+
+    if-ne v3, v2, :cond_1
+
+    sget v2, Lcom/android/settings/R$string;->wifi_advanced_randomized_mac_address_title:I
+
+    goto :goto_0
+
+    :cond_1
+    sget v2, Lcom/android/settings/R$string;->wifi_advanced_device_mac_address_title:I
+
+    :goto_0
+    invoke-virtual {v1, v2}, Landroidx/preference/Preference;->setTitle(I)V
+
     const-string v1, "02:00:00:00:00:00"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
-    iget-object v0, p0, Lcom/android/settings/wifi/details2/WifiDetailPreferenceController2;->mMacAddressPref:Landroidx/preference/Preference;
+    iget-object p0, p0, Lcom/android/settings/wifi/details2/WifiDetailPreferenceController2;->mMacAddressPref:Landroidx/preference/Preference;
 
-    sget v1, Lcom/android/settings/R$string;->device_info_not_available:I
+    sget v0, Lcom/android/settings/R$string;->device_info_not_available:I
 
-    invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setSummary(I)V
+    invoke-virtual {p0, v0}, Landroidx/preference/Preference;->setSummary(I)V
 
-    goto :goto_0
-
-    :cond_1
-    iget-object v1, p0, Lcom/android/settings/wifi/details2/WifiDetailPreferenceController2;->mMacAddressPref:Landroidx/preference/Preference;
-
-    invoke-virtual {v1, v0}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
-
-    :goto_0
-    invoke-direct {p0}, Lcom/android/settings/wifi/details2/WifiDetailPreferenceController2;->refreshMacTitle()V
-
-    return-void
-.end method
-
-.method private refreshMacTitle()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/android/settings/wifi/details2/WifiDetailPreferenceController2;->mWifiEntry:Lcom/android/wifitrackerlib/WifiEntry;
-
-    invoke-virtual {v0}, Lcom/android/wifitrackerlib/WifiEntry;->isSaved()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lcom/android/settings/wifi/details2/WifiDetailPreferenceController2;->mWifiEntry:Lcom/android/wifitrackerlib/WifiEntry;
-
-    invoke-virtual {v0}, Lcom/android/wifitrackerlib/WifiEntry;->isSubscription()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    return-void
-
-    :cond_1
-    iget-object v0, p0, Lcom/android/settings/wifi/details2/WifiDetailPreferenceController2;->mMacAddressPref:Landroidx/preference/Preference;
-
-    iget-object p0, p0, Lcom/android/settings/wifi/details2/WifiDetailPreferenceController2;->mWifiEntry:Lcom/android/wifitrackerlib/WifiEntry;
-
-    invoke-virtual {p0}, Lcom/android/wifitrackerlib/WifiEntry;->getPrivacy()I
-
-    move-result p0
-
-    const/4 v1, 0x1
-
-    if-ne p0, v1, :cond_2
-
-    sget p0, Lcom/android/settings/R$string;->wifi_advanced_randomized_mac_address_title:I
-
-    goto :goto_0
+    goto :goto_1
 
     :cond_2
-    sget p0, Lcom/android/settings/R$string;->wifi_advanced_device_mac_address_title:I
+    iget-object p0, p0, Lcom/android/settings/wifi/details2/WifiDetailPreferenceController2;->mMacAddressPref:Landroidx/preference/Preference;
 
-    :goto_0
-    invoke-virtual {v0, p0}, Landroidx/preference/Preference;->setTitle(I)V
+    invoke-virtual {p0, v0}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
+    :goto_1
     return-void
 .end method
 

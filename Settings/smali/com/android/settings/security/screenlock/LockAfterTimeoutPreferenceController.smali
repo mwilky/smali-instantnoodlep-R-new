@@ -226,6 +226,8 @@
 
     move-result v1
 
+    const-wide/16 v7, 0x0
+
     const/4 v5, 0x1
 
     if-nez v1, :cond_4
@@ -242,11 +244,9 @@
 
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v7
+    move-result-wide v9
 
-    const-wide/16 v9, 0x0
-
-    cmp-long v1, v7, v9
+    cmp-long v1, v9, v7
 
     if-nez v1, :cond_3
 
@@ -286,6 +286,43 @@
     goto :goto_1
 
     :cond_4
+    iget-object v0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/oneplus/settings/utils/OPUtils;->isZh(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    aget-object v0, v3, v6
+
+    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    cmp-long v0, v0, v7
+
+    if-nez v0, :cond_5
+
+    iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    sget v0, Lcom/android/settings/R$string;->op_lock_after_timeout_summary:I
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    goto :goto_1
+
+    :cond_5
     iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
 
     sget v0, Lcom/android/settings/R$string;->lock_after_timeout_summary:I

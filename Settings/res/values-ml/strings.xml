@@ -40,9 +40,14 @@
     <string name="abc_slice_updated">%1$s അപ്‌ഡേറ്റ് ചെയ്‌തു</string>
     <string name="abc_slices_permission_request">%2$s സ്ലൈസുകൾ കാണിക്കാൻ %1$s താൽപ്പര്യപ്പെടുന്നു</string>
     <string name="abc_toolbar_collapse_description">ചുരുക്കുക</string>
+    <string name="about_action_bar_title">വിവരം</string>
+    <string name="about_app_version_text">Version %s</string>
     <string name="about_phone_device_name_warning">നിങ്ങളുടെ ഫോണിലെ അപ്ലിക്കേഷനുകൾക്ക് നിങ്ങളുടെ ഉപകരണത്തിന്റെ പേര് ദൃശ്യമാണ്. വൈഫൈ ഹോട്ട്‌സ്‌പോട്ട് സജ്ജീകരിക്കുമ്പോഴോ Bluetooth ഉപകരണങ്ങളുമായി കണക്‌റ്റ് ചെയ്യുമ്പോഴോ, ഇത് മറ്റ് ആളുകൾക്കും കാണാനായേക്കും.</string>
+    <string name="about_privacy_policy">സ്വകാര്യതാ നയം</string>
+    <string name="about_release_note_title">ലോഗ് അപ്‍ഡേറ്റ് ചെയ്യുക:</string>
     <string name="about_settings">ഫോണിനെക്കുറിച്ച്</string>
     <string name="about_settings_summary">നിയമ വിവരം, നില, സോഫ്‌റ്റ്‌വെയർ പതിപ്പ് എന്നിവ കാണുക</string>
+    <string name="about_terms_service">സേവന നിബന്ധനകൾ</string>
     <string name="accelerometer_summary_off">ഫോൺ തിരിക്കുമ്പോൾ ഒാറിയൻ്റേഷനിലേയ്ക്ക് സ്വയം മാറുക</string>
     <string name="accelerometer_summary_on">ഫോൺ തിരിക്കുമ്പോൾ ഒാറിയൻ്റേഷനിലേയ്ക്ക് സ്വയം മാറുക</string>
     <string name="accelerometer_title">സ്‌ക്രീൻ സ്വയമേവ തിരിക്കുക</string>
@@ -267,7 +272,7 @@
     <string name="action_drag_label_move_up">മുകളിലേക്ക് നീക്കുക</string>
     <string name="action_drag_label_remove">ഭാഷ നീക്കംചെയ്യുക</string>
     <string name="activate_one_handed_mode">അതിവേഗ ആക്സസ്സ്</string>
-    <string name="activate_one_handed_mode_description">അതിവേഗ ആക്സസ്സ് തല്‍ക്കാലത്തേയ്ക്ക് സജീവമാക്കാന്‍ സ്ക്രീനിന്‍റെ അടിഭാഗത്ത് സ്വൈപ്പ് ചെയ്യുക. അതിവേഗ ആക്സസ്സ് വഴി, നിങ്ങള്‍ക്ക് സ്ക്രീനിന്‍റെ മുകളിലെ ഭാഗത്തെ ഉള്ളടക്കം നേടാവുന്നതാണ്‌. മുഴുവന്‍‑സ്ക്രീനിലേയ്ക്ക് പോകാന്‍ മുകളിലേയ്ക്ക് സ്വൈപ്പ് ചെയ്ത് പുറത്തുകടക്കുക.</string>
+    <string name="activate_one_handed_mode_description">ദ്രുത ആക്‌സസ്സ് താൽക്കാലികമായി സജീവമാക്കുന്നതിന് സ്‌ക്രീനിന്റെ താഴത്തെ ഭാഗത്ത് താഴേയ്ക്ക് സ്വൈപ്പുചെയ്യുക. ദ്രുത ആക്സസ് ഉപയോഗിച്ച്, നിങ്ങളുടെ ഫോൺ സ്ക്രീനിന്റെ മുകൾ ഭാഗത്തെ ഉള്ളടക്കത്തിലേക്ക് നിങ്ങൾക്ക് പ്രവേശിക്കാൻ കഴിയും. പുറത്തുകടക്കുന്നതിനും പൂർണ്ണ‑സ്ക്രീൻ പുനഃസ്ഥാപിക്കുന്നതിനും മുകളിലേക്ക് സ്വൈപ്പുചെയ്യുക.</string>
     <string name="active_device_admin_msg">ഉപകരണ അഡ്‌മിൻ ആപ്പ്</string>
     <string name="active_input_method_subtypes">സജീവ ടൈപ്പുചെയ്യൽ രീതികൾ</string>
     <string name="activity_not_found">അപ്ലിക്കേഷൻ നിങ്ങളുടെ ഫോണിൽ ഇൻസ്റ്റാളുചെയ്‌തിട്ടില്ല.</string>
@@ -344,7 +349,7 @@
     <string name="advanced_apps">വിപുലമായത്</string>
     <string name="advanced_battery_graph_subtext">നിങ്ങളുടെ ഉപകരണ ഉപയോഗത്തെ അടിസ്ഥാനമാക്കിയുള്ളതാണ് ബാക്കിയുള്ള ബാറ്ററിയുടെ ഏകദേശക്കണക്ക്</string>
     <string name="advanced_battery_title">ബാറ്ററി ഉപയോഗം</string>
-    <string name="advanced_calling_summary">HD വോയ്‌സ്, വീഡിയോ കോളിംഗ്</string>
+    <string name="advanced_calling_summary">എച്ച് ഡി വോയ്‌സ്, വീഡിയോ കോളിംഗ്</string>
     <string name="advanced_calling_title">അഡ്വാന്സ്ഡ് കോളിംഗ്</string>
     <string name="advanced_reboot_summary">അണ്‍ലോക്ക് ചെയ്യുമ്പോള്‍, റീബൂട്ട് ഐറ്റം നിങ്ങള്‍ക്ക് റീബൂട്ട് തിരഞ്ഞെടുക്കാനായി ഒരു ഡയലോഗ് നല്‍കും: സാധാരണയായി, ഇത് റിക്കവറിയിലേക്ക് അല്ലെങ്കില്‍ ഫാസ്റ്റ് ബൂട്ടിലേക്കായിരിക്കും</string>
     <string name="advanced_reboot_title">അഡ്‍വാന്‍സ്‍ഡ് റീബൂട്ട്</string>
@@ -355,12 +360,12 @@
     <string name="advanced_wificall_summary">മൊബൈല്‍ നെറ്റ്‍വര്‍ക്ക് ലഭ്യമല്ലാത്തപ്പോൾ Wi‑Fi ഉപയോഗിക്കുക</string>
     <string name="airplane_mode">ഫ്ലൈറ്റ് മോഡ്</string>
     <string name="airplane_mode_description">കോളിംഗ്, സന്ദേശമയയ്‌ക്കൽ, ഇന്റർനെറ്റ് ലഭ്യത, Wi-Fi, ബ്ലൂടൂത്ത് എന്നിവ ഉൾപ്പെടെയുള്ള എല്ലാ നെറ്റ്‌വർക്ക് കണക്ഷനുകളും വിമാന മോഡ് ഓഫാക്കും.</string>
-    <string name="airplane_mode_enable_dialog_message">"വിമാന മോഡ് ഓണായിരിക്കുമ്പോൾ, Wi-Fi ഉപയോഗിച്ചില്ലെങ്കിൽ നിങ്ങൾക്ക് ഇന്റെർനെറ്റ്, ഇമെയിൽ അല്ലെങ്കിൽ ഡാറ്റ കണക്‌ഷൻ ആവശ്യമായ മറ്റ് ആപ്ലിക്കേഷനുകൾ ഉപയോഗിക്കാനാകില്ല.
+    <string name="airplane_mode_enable_dialog_message">"എയർപ്ലെയിൻ മോഡ് ഓണായിരിക്കുമ്പോൾ, വൈഫൈ ഉപയോഗിച്ചില്ലെങ്കിൽ നിങ്ങൾക്ക് ഇന്റെർനെറ്റ്, ഇമെയിൽ അല്ലെങ്കിൽ ഡാറ്റ കണക്‌ഷൻ ആവശ്യമായ മറ്റ് ആപ്ലിക്കേഷനുകൾ ഉപയോഗിക്കാനാകില്ല.
 
- വിമാന മോഡ് ഓണാക്കണോ?"</string>
-    <string name="airplane_mode_enable_dialog_message_wifi_volte">"വിമാന മോഡ് ഓണായിരിക്കുമ്പോൾ, Wi-Fi ഉപയോഗിച്ചില്ലെങ്കിൽ നിങ്ങൾക്ക് ഇന്റർനെറ്റ്, ഇമെയിൽ, Wi-Fi കോളിംഗ് അല്ലെങ്കിൽ ഡാറ്റ കണക്‌ഷൻ ആവശ്യമായ മറ്റ് ആപ്ലിക്കേഷനുകൾ ഉപയോഗിക്കാനാകില്ല.
+ എയർപ്ലെയിൻ മോഡ് ഓണാക്കണോ?"</string>
+    <string name="airplane_mode_enable_dialog_message_wifi_volte">"എയർപ്ലെയിൻ മോഡ് ഓണായിരിക്കുമ്പോൾ, Wi-Fi ഉപയോഗിച്ചില്ലെങ്കിൽ നിങ്ങൾക്ക് ഇന്റർനെറ്റ്, ഇമെയിൽ, Wi-Fi കോളിംഗ് അല്ലെങ്കിൽ ഡാറ്റ കണക്‌ഷൻ ആവശ്യമായ മറ്റ് ആപ്ലിക്കേഷനുകൾ ഉപയോഗിക്കാനാകില്ല.
 
- വിമാന മോഡ് ഓണാക്കണോ?"</string>
+ എയർപ്ലെയിൻ മോഡ് ഓണാക്കണോ?"</string>
     <string name="alarm_ringtone_title">ഡിഫോൾട്ട് അലാറം ശബ്ദം</string>
     <string name="alarm_template">%1$s-ന്</string>
     <string name="alarm_template_far">%1$s-ന്</string>
@@ -508,7 +513,7 @@
     <string name="app_notification_led_enabled_title">LED അറിയിപ്പുകള്‍</string>
     <string name="app_notification_listing_summary_zero">എല്ലാ ആപ്പുകൾക്കും ഓണാണ്</string>
     <string name="app_notification_no_ongoing_on_keyguard_summary">ഈ ആപ്പില്‍ നിന്നുള്ള സ്ഥിരമായ അറിയിപ്പുകള്‍ ഒരിക്കലും ലോക്ക്‍സ്ക്രീനില്‍ കാണിക്കരുത്</string>
-    <string name="app_notification_no_ongoing_on_keyguard_title">ലോക്ക്‍സ്ക്രീനില്‍ സ്ഥിരമായുള്ള അറിയിപ്പ് അപ്രാപ്തമാക്കുക</string>
+    <string name="app_notification_no_ongoing_on_keyguard_title">ലോക്ക് സ്ക്രീനില്‍ സ്ഥിരമായുള്ള അറിയിപ്പ് അപ്രാപ്തമാക്കുക</string>
     <string name="app_notification_override_dnd_summary">"'ശല്യപ്പെടുത്തരുത്' ഓണായിരിക്കുമ്പോഴും തടസ്സപ്പെടുത്തൽ തുടരാൻ ഈ അറിയിപ്പുകളെ അനുവദിക്കുക"</string>
     <string name="app_notification_override_dnd_title">"'ശല്യപ്പെടുത്തരുത്' അസാധുവാക്കുക"</string>
     <string name="app_notification_preferences">ആപ്പ് ക്രമീകരണം</string>
@@ -1109,7 +1114,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="bugreport_in_power_summary">ബഗ് റിപ്പോർട്ട് എടുക്കുന്നതിന് പവർ മെനുവിൽ ഒരു ബട്ടൺ കാണിക്കുക</string>
     <string name="build_number">ബിൽഡ് നമ്പർ</string>
     <string name="built_in_app_updates_summary">ആപ്പ് സ്ഥിരത മെച്ചപ്പെടുത്താൻ ലക്ഷ്യമിട്ടുള്ള ഇൻ-ബിൽറ്റ് ആപ്പ് അപ്ഡേറ്റുകൾ പരിശോധിക്കാനും പുഷ് ചെയ്യാനും OnePlus-നെ അനുവദിക്കുക</string>
-    <string name="built_in_app_updates_title">അന്തർനിർമ്മിത ആപ്പ് അപ്‌ഡേറ്റുകൾ</string>
+    <string name="built_in_app_updates_title">ബിൽറ്റ്-ഇൻ ആപ്പ് അപ്‌ഡേറ്റുകൾ</string>
     <string name="builtin_keyboard_settings_summary">ഫിസിക്കൽ കീബോർഡ് ക്രമീകരണങ്ങൾ</string>
     <string name="builtin_keyboard_settings_title">ഫിസിക്കൽ കീബോർഡ്</string>
     <string name="button_confirm_convert_fbe">വൈപ്പുചെയ്ത് പരിവർത്തനം ചെയ്യുക</string>
@@ -1131,7 +1136,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="cache_header_label">കാഷെ</string>
     <string name="cache_size_label">കാഷെ</string>
     <string name="cached">കാഷെ ചെയ്ത പശ്ചാത്തല പ്രോസസ്സ്</string>
-    <string name="cached_apps_freezer">കാഷെ ചെയ്ത ആപ്പിനുള്ള നിർവ്വഹണം തൽക്കാലം റദ്ദാക്കൂ</string>
+    <string name="cached_apps_freezer">കാഷെ ചെയ്ത ആപ്പിനുള്ള നിർവഹണം തൽക്കാലം റദ്ദാക്കൽ</string>
     <string name="cached_apps_freezer_device_default">ഉപകരണത്തിന്റെ ഡിഫോൾട്ട് പ്രവർത്തനം</string>
     <string name="cached_apps_freezer_disabled">പ്രവർത്തനരഹിതമാക്കി</string>
     <string name="cached_apps_freezer_enabled">പ്രവർത്തനക്ഷമമാക്കി</string>
@@ -1280,7 +1285,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="condition_bg_data_title">ഡാറ്റാ സേവർ</string>
     <string name="condition_cellular_summary">വൈഫൈ വഴി മാത്രമേ ഇന്‍റര്‍നെറ്റ് ലഭ്യമാകൂ</string>
     <string name="condition_cellular_title">മൊബൈൽ ഡാറ്റ ഓഫാണ്</string>
-    <string name="condition_cloud_summary">നിങ്ങളുടെ ഡാറ്റ നഷ്ടപ്പെടില്ലെന്ന് ഉറപ്പാക്കാൻ ക്ലൌഡ് സർവീസ് ഉപയോഗിക്കാൻ ക്ലിക്ക് ചെയ്യുക</string>
+    <string name="condition_cloud_summary">നിങ്ങളുടെ ഡാറ്റ നഷ്ടപ്പെടില്ലെന്ന് ഉറപ്പാക്കാൻ ക്ലൗഡ് സർവീസ് ഉപയോഗിക്കാൻ ക്ലിക്ക് ചെയ്യുക</string>
     <string name="condition_cloud_title">ക്ലൌഡ് സർവീസ് ഉപയോഗിക്കാൻ തുടങ്ങുക</string>
     <string name="condition_cloud_turn_off">ഒഴിവാക്കുക</string>
     <string name="condition_device_muted_action_turn_on_sound">ശബ്‌ദം ഓണാക്കുക</string>
@@ -1580,10 +1585,10 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="data_usage_metered_yes">മീറ്റർ ചെയ്തത്</string>
     <string name="data_usage_ota">സിസ്‌റ്റം അപ്‌ഡേറ്റുകൾ</string>
     <string name="data_usage_other_apps">ഉപയോഗത്തിൽ ഉൾപ്പെട്ട മറ്റ് ആപ്‌സ്</string>
-    <string name="data_usage_package_set">ബില്ലിങ്ങ് ആവൃത്തി</string>
+    <string name="data_usage_package_set">Billing Cycle</string>
     <string name="data_usage_pick_cycle_day">ഡാറ്റ ഉപയോഗ സൈക്കിൾ പുനഃസജ്ജീകരിക്കുന്നതിനുള്ള മാസത്തിലെ ദിവസം:</string>
     <string name="data_usage_rank_sim">സെല്ലുലാര്‍ ഡാറ്റ ഉപയോഗം</string>
-    <string name="data_usage_rank_wifi">Wi-Fi ഡാറ്റ ഉപയോഗം</string>
+    <string name="data_usage_rank_wifi">വൈഫൈ ഡാറ്റ ഉപയോഗം</string>
     <string name="data_usage_rank_wlan">സെല്ലുലാര്‍ ഡാറ്റ ഉപയോഗം</string>
     <string name="data_usage_received_sent">%1$s ലഭിച്ചു, %2$s അയച്ചു</string>
     <string name="data_usage_restrict_background">പശ്ചാത്തല മൊബൈൽ ഡാറ്റയെ പരിമിതപ്പെടുത്തുകയാണെങ്കിൽ, ചില ആപ്‌സും സേവനങ്ങളും വൈഫൈയിൽ കണക്റ്റുചെയ്യുന്നതുവരെ പ്രവർത്തിക്കില്ല.</string>
@@ -1873,7 +1878,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="earphone_support_current_version">നിലവിലെ പതിപ്പ്:</string>
     <string name="earphone_support_update_ota">ഫേംവെയർ യാന്ത്രികമായി അപ്‌ഡേറ്റുചെയ്യുക</string>
     <string name="earphone_support_wifi_data">മൊബൈൽ ഡാറ്റ ഉപയോഗിച്ച് യാന്ത്രിക അപ്‌ഡേറ്റുകൾ അനുവദിക്കുക</string>
-    <string name="earphone_usage_guide_complete">ചെയ്തു</string>
+    <string name="earphone_usage_guide_complete">Fet</string>
     <string name="edge_to_edge_navigation_summary">ഹോമിലേക്ക് പോകാൻ സ്‌ക്രീനിന്റെ താഴെ നിന്ന് മുകളിലേക്ക് സ്വൈപ്പ് ചെയ്യുക. ആപ്പുകൾ മാറാൻ താഴെ നിന്നും മുകളിലേക്ക് സ്വൈപ്പ് ചെയ്ത് പിടിക്കുക, ശേഷം വിടുക. തിരികെ പോകാൻ ഇടത്തെ അരികിൽ നിന്നോ വലത്തെ അരികിൽ നിന്നോ സ്വൈപ്പ് ചെയ്യുക.</string>
     <string name="edge_to_edge_navigation_title">വിരൽചലന നാവിഗേഷൻ</string>
     <string name="emergency_address_summary">വൈഫൈ ഉപയോഗിച്ച് നിങ്ങളൊരു അടിയന്തര കോൾ ചെയ്യുമ്പോൾ, നിങ്ങളുടെ ലൊക്കേഷനായി ഉപയോഗിക്കപ്പെടും</string>
@@ -1903,7 +1908,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="enable_mms_notification_summary">മൊബൈൽ ഡാറ്റ ഓഫായിരിക്കുമ്പോൾ %1$s-ൽ നിന്ന് MMS സന്ദേശം അയയ്ക്കുന്നത് അനുവദിക്കാൻ ടാപ്പ് ചെയ്യുക</string>
     <string name="enable_opengl_traces_title">OpenGL ട്രെയ്‌സ് സജീവമാക്കൂ</string>
     <string name="enable_otg_storage_summary">OTG വഴി ബാഹ്യ സ്റ്റോറേജ് വായിക്കുന്നത് പ്രാപ്തമാക്കുക</string>
-    <string name="enable_otg_storage_title">OTG സംഭരണം</string>
+    <string name="enable_otg_storage_title">ഒ.ടി.ജി. സ്റ്റോറേജ്</string>
     <string name="enable_quick_setting">ദ്രുത്ര ക്രമീകരണങ്ങളിൽ ദൃശ്യമാക്കുക</string>
     <string name="enable_receiving_mms_notification_title">ഇൻകമിംഗ് MMS സന്ദേശം</string>
     <string name="enable_sending_mms_notification_title">MMS സന്ദേശം അയയ്ക്കാനാവില്ല</string>
@@ -2220,7 +2225,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="hardware_keys_action_recents">സമീപസ്ഥമായവ</string>
     <string name="hardware_keys_action_shelf">Shelf തുറക്കുക</string>
     <string name="hardware_keys_action_turn_off_screen">സ്ക്രീന്‍ ഓഫ് ചെയ്യുക</string>
-    <string name="hardware_keys_action_voice_search">ശബ്ദം തിരയല്‍</string>
+    <string name="hardware_keys_action_voice_search">ശബ്ദ തിരയൽ</string>
     <string name="hardware_keys_back_key_title">പിന്നിലേക്കുള്ള ബട്ടണ്‍</string>
     <string name="hardware_keys_double_tap_title">ഇരട്ട ടാപ് നടപടി</string>
     <string name="hardware_keys_home_key_title">ഹോം ബട്ടണ്‍</string>
@@ -2232,7 +2237,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="header_account_settings">അക്കൗണ്ട് ക്രമീകരണങ്ങൾ</string>
     <string name="header_add_an_account">ഒരു അക്കൗണ്ട് ചേർക്കുക</string>
     <string name="header_application_sync_settings">അപ്ലിക്കേഷൻ സമന്വയ ക്രമീകരണങ്ങൾ</string>
-    <string name="header_category_custom">ഇച്ഛാനുസൃതമാക്കല്‍</string>
+    <string name="header_category_custom">ഇഷ്ടാനുസൃതമാക്കല്‍</string>
     <string name="header_category_system">സിസ്റ്റം</string>
     <string name="header_category_wireless_networks">വയർലെസും നെറ്റ്‌വർക്കുകളും</string>
     <string name="header_data_and_synchronization">ഡാറ്റയും സമന്വയവും</string>
@@ -2270,10 +2275,10 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="homepage_all_settings">എല്ലാ ക്രമീകരണവും</string>
     <string name="homepage_condition_footer_content_description">ചുരുക്കുക</string>
     <string name="homepage_personal_settings">നിർദ്ദേശങ്ങൾ</string>
-    <string name="hotspot_tip_message" formatted="false">"മൊബൈൽ ഹോട്ട്‌സ്പോട്ട് നിങ്ങളുടെ മൊബൈൽ ഡാറ്റ വൈഫൈ ഉപയോഗിക്കാനാകുന്ന മറ്റ് ഉപകരണങ്ങളുമായി പങ്കിടുന്നു. നിങ്ങളുടെ മൊബൈൽ ഹോട്ട്‍സ്‌പോട്ടിലേക്ക് കണക്‌റ്റ് ചെയ്യുന്നതിന്:\u0009
-1: മറ്റൊരു ഉപകരണത്തിലെ Wi-Fi ഓണാക്കുക.
- 2: ലഭ്യമായ Wi-Fi നെറ്റ്‍വര്‍ക്കുകളുടെ ലിസ്‌റ്റിൽ നിന്നും %s തിരഞ്ഞെടുക്കുക.
- 3: പാസ്‍വേഡ് ആവശ്യമാണെങ്കിൽ %s നൽകുക. മൊബൈൽ ഹോട്ട്‍സ്‌പോട്ട് ഉപയോഗിക്കുമ്പോൾ ബാറ്ററി സംരക്ഷിക്കുന്നതിന് നിങ്ങളുടെ ഫോൺ പ്ലഗ്ഗിന്‍ ചെയ്യുക. "</string>
+    <string name="hotspot_tip_message" formatted="false">"മൊബൈൽ ഹോട്ട്സ്പോട്ട് നിങ്ങളുടെ മൊബൈൽ ഡാറ്റ മറ്റ് Wi-Fi പ്രാപ്തമായ ഉപകരണങ്ങളുമായി പങ്കു വയ്ക്കുന്നു. നിങ്ങളുടെ മൊബൈൽ ഹോട്ട്സ്പോട്ട് ബന്ധിപ്പിക്കുന്നതിനായി: \u0009 
+ 1: മറ്റ് ഉപകരണത്തിലെ Wi-Fi ഓൺ ചെയ്യുക.
+ 2: ലഭ്യമായ Wi-Fi നെറ്റ്‌വർക്കുകളുടെ ലിസ്റ്റിൽ നിന്നും %s തെരഞ്ഞെടുക്കുക. 
+ 3: ഒരു പാസ്സ്‌വേഡ് ആവശ്യമാണെങ്കിൽ,%s ചേർക്കുക ബാറ്ററി സംരക്ഷിക്കുന്നതിനായി, മൊബൈൽ ഹോട്ട്സ്പോട്ട് ഉപയോഗിക്കുമ്പോൾ, നിങ്ങളുടെ ഫോൺ പ്ലഗ്ഗ് ഇൻ ചെയ്തു വയ്ക്കണം. "</string>
     <string name="hotspot_tip_title">മൊബൈൽ ഹോട്ട്‍സ്‌പോട്ട്</string>
     <string name="hwui_force_dark_summary">എപ്പോഴും ഓണാക്കിയിരിക്കുന്ന നിർബന്ധിത ഇരുണ്ട മോഡ് ഫീച്ചർ അസാധുവാക്കുക</string>
     <string name="hwui_force_dark_title">നിർബന്ധിത ഇരുണ്ട മോഡ് അസാധുവാക്കുക</string>
@@ -2345,7 +2350,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="interact_across_profiles_number_of_connected_apps_none">ആപ്പുകളൊന്നും കണക്‌റ്റ് ചെയ്തിട്ടില്ല</string>
     <string name="interact_across_profiles_summary_1">കണക്റ്റ് ചെയ്ത ആപ്പുകൾ അനുമതികൾ പങ്കിടുന്നു, അവയ്ക്ക് പരസ്പരം ഡാറ്റ ആക്സസ് ചെയ്യാനുമാവും.</string>
     <string name="interact_across_profiles_summary_2">വ്യക്തിപരമായ ഡാറ്റ ഐടി അഡ്‌മിനുമായി പങ്കിടില്ലെന്ന് നിങ്ങൾ വിശ്വസിക്കുന്ന ആപ്പുകൾ മാത്രം കണക്റ്റ് ചെയ്യുക.</string>
-    <string name="interact_across_profiles_summary_3">ഉപകരണത്തിന്റെ സ്വകാര്യ ക്രമീകരണത്തിൽ ഏത് സമയത്തും നിങ്ങൾക്ക് ആപ്പുകൾ വിച്‌ഛേദിക്കാം.</string>
+    <string name="interact_across_profiles_summary_3">ഉപകരണത്തിന്റെ സ്വകാര്യതാ ക്രമീകരണത്തിൽ ഏത് സമയത്തും നിങ്ങൾക്ക് ആപ്പുകൾ വിച്‌ഛേദിക്കാം.</string>
     <string name="interact_across_profiles_summary_allowed">കണക്റ്റ് ചെയ്തിരിക്കുന്നു</string>
     <string name="interact_across_profiles_summary_not_allowed">കണ‌ക്റ്റ് ചെയ്‌തിട്ടില്ല</string>
     <string name="interact_across_profiles_switch_disabled">ഈ ആപ്പുകൾ കണക്‌റ്റ് ചെയ്യുക</string>
@@ -2438,6 +2443,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="keywords_lock_screen_notif">ലോക്ക് സ്‌ക്രീൻ അറിയിപ്പ്, അറിയിപ്പുകൾ</string>
     <string name="keywords_lockscreen">അൺലോക്കുചെയ്യാൻ സ്ലൈഡുചെയ്യുക, പാസ്‌വേഡ്, പാറ്റേൺ, പിൻ</string>
     <string name="keywords_lockscreen_bypass">ലോക്ക് സ്‌ക്രീൻ, ലോക്ക് സ്‌ക്രീൻ, ഒഴിവാക്കുക, മറികടക്കുക</string>
+    <string name="keywords_media_controls">മീഡിയ</string>
     <string name="keywords_model_and_hardware">സീരിയൽ നമ്പർ, ഹാർഡ്‌വെയർ പതിപ്പ്</string>
     <string name="keywords_more_default_sms_app">ടെക്സ്റ്റ് മെസേജ്, ടെക്സ്റ്റിംഗ്, മെസ്സേജിംഗ്, ഡിഫോൾട്ട്</string>
     <string name="keywords_more_mobile_networks">സെല്ലുലാർ, മൊബൈൽ, സെൽ കാരിയർ, വയർലെസ്, ഡാറ്റ, 4g,3g, 2g, lte</string>
@@ -2566,6 +2572,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="load_networks_progress">തിരയുന്നു...</string>
     <string name="loading_injected_setting_summary">ലോഡ് ചെയ്യുന്നു…</string>
     <string name="loading_notification_apps">അപ്ലിക്കേഷനുകൾ ലോഡുചെയ്യുന്നു...</string>
+    <string name="loading_text">ലോഡുചെയ്യുന്നു...</string>
     <string name="local_backup_password_summary_change">ഡെസ്‌ക്‌ടോപ്പ് പൂർണ്ണ ബാക്കപ്പുകൾക്കായി പാസ്‌വേഡുകൾ മാറ്റാനോ നീക്കംചെയ്യാനോ ടാപ്പുചെയ്യുക</string>
     <string name="local_backup_password_summary_none">ഡെസ്‌ക്‌ടോപ്പ് പൂർണ്ണ ബാക്കപ്പുകൾ നിലവിൽ പരിരക്ഷിച്ചിട്ടില്ല</string>
     <string name="local_backup_password_title">ഡെ‌സ്‌ക്ടോപ്പ് ബാക്കപ്പ് പാസ്‌വേഡ്</string>
@@ -2841,6 +2848,12 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="master_clear_title">എല്ലാ ഡാറ്റയും മായ്‌ക്കുക (ഫാക്‌ടറി റീസെറ്റ്)</string>
     <string name="maximum_memory_use">പരമാവധി മെമ്മറി ഉപയോഗം</string>
     <string name="media_category">മീഡിയ</string>
+    <string name="media_controls_hide_player">പ്ലേയർ മറയ്‌ക്കുക</string>
+    <string name="media_controls_no_players">പ്ലേയറുകളൊന്നും ലഭ്യമല്ല</string>
+    <string name="media_controls_resume_description">വികസിപ്പിച്ച ദ്രുത ക്രമീകരണ പാനലിൽ നിന്ന് സെഷൻ പുനരാരംഭിക്കാൻ പ്ലേയർ നിങ്ങളെ അനുവദിക്കുന്നു.</string>
+    <string name="media_controls_show_player">പ്ലേയർ കാണിക്കുക</string>
+    <string name="media_controls_summary">മീഡിയ സെഷൻ അവസാനിക്കുമ്പോൾ പ്ലേയർ മറയ്‌ക്കുക</string>
+    <string name="media_controls_title">മീഡിയ</string>
     <string name="media_out_summary_ongoing_call_state">കോളുകൾ ചെയ്യുമ്പോൾ ലഭ്യമല്ല</string>
     <string name="media_output_default_summary">ഈ ഉപകരണത്തിൽ</string>
     <string name="media_output_disconnected_status">%1$s (വിച്ഛേദിച്ചു)</string>
@@ -2859,7 +2872,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="media_output_title">മീഡിയ പ്ലേ ചെയ്യുക:</string>
     <string name="media_transfer_this_device_name">ഫോൺ സ്‌പീക്കർ</string>
     <string name="media_transfer_wired_device_name">വയർ മുഖേന ബന്ധിപ്പിച്ച ഓഡിയോ ഉപകരണം</string>
-    <string name="media_transfer_wired_usb_device_name">വയർ മുഖേന ബന്ധിപ്പിച്ച ഹെഡ്ഫോൺ</string>
+    <string name="media_transfer_wired_usb_device_name">വയേർഡ് ഹെഡ്ഫോൺ</string>
     <string name="media_volume_option_title">മീഡിയാ വോളിയം</string>
     <string name="media_volume_summary">സംഗീതത്തിനും വീഡിയോകൾക്കുമായി വോളിയം സജ്ജീകരിക്കുക</string>
     <string name="media_volume_title">മീഡിയ</string>
@@ -2936,10 +2949,10 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="mobile_data_settings_summary_auto_switch">പരിധിയിൽ വരുമ്പോൾ ഫോൺ ഈ സേവനദാതാവിലേക്ക് സ്വയമേവ മാറും</string>
     <string name="mobile_data_settings_title">മൊബൈൽ ഡാറ്റ</string>
     <string name="mobile_data_usage_title">ആപ്പിന്‍റെ ഡാറ്റാ ഉപയോഗം</string>
-    <string name="mobile_hotspot_airplane_off_error">ഹോട്ട്‌സ്‌പോട്ട് ഓണാക്കുന്നതിന്, വിമാന മോഡ് ഓഫാക്കുക</string>
+    <string name="mobile_hotspot_airplane_off_error">ഹോട്ട്‌സ്‌പോട്ട് ഓണാക്കുന്നതിന്, എയർപ്ലെയിൻ മോഡ് ഓഫാക്കുക</string>
     <string name="mobile_hotspot_authoration_error">"മൊബൈൽ ഹോട്ട്‍സ്പോട്ട് ഉപയോഗിക്കുന്നതിന്, മൊബൈൽ ഹോട്ട്‍സ്പോട്ട് സേവനങ്ങൾ സബ്‌സ്‌ക്രൈബ് ചെയ്യേണ്ടതുണ്ട്. 
 
-മൊബൈൽ ഹോട്ട്‍സ്പോട്ട് സബ്‌സ്‌ക്രൈബ് ചെയ്യുന്നതിന് my verizon സന്ദർശിക്കുക അല്ലെങ്കിൽ (800) 922–0204 എന്ന നമ്പറിൽ ഉപഭോക്തൃ സേവനത്തിലേക്ക് വിളിക്കുക."</string>
+മൊബൈൽ ഹോട്ട്‍സ്പോട്ട് സബ്‌സ്‌ക്രൈബ് ചെയ്യുന്നതിന് മൈ verizon സന്ദർശിക്കുക അല്ലെങ്കിൽ (800) 922–0204 എന്ന നമ്പറിൽ ഉപഭോക്തൃ സേവനത്തിലേക്ക് വിളിക്കുക."</string>
     <string name="mobile_hotspot_data_off_error">ഹോട്ട്‌സ്‌പോട്ട് ഓണാക്കുന്നതിന്, മൊബൈല്‍ ഡാറ്റ ഓണാക്കുക</string>
     <string name="mobile_insert_sim_card">സിം കാർഡ് ചേർത്തതിനുശേഷം പുനരാരംഭിക്കുക</string>
     <string name="mobile_network_active_esim">സജീവം / ഡൗൺലോഡ് ചെയ്‌ത SIM</string>
@@ -3009,7 +3022,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="mr_user_route_category_name">ഉപകരണങ്ങൾ</string>
     <string name="mtp_ptp_mode_summary">MTP അല്ലെങ്കിൽ PTP പ്രവർത്തനം സജീവമാണ്</string>
     <string name="multi_app_label_badge">സമാന്തരം %1$s</string>
-    <string name="music_application_title">മ്യൂസിക് ആപ്പ്</string>
+    <string name="music_application_title">സംഗീത ആപ്പ്</string>
     <string name="musicfx_title">സംഗീത ഇഫക്‌റ്റുകൾ</string>
     <string name="mvno_match_data">MVNO മൂല്യം</string>
     <string name="mvno_type">MVNO തരം</string>
@@ -3114,7 +3127,6 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="night_display_text">"'നൈറ്റ് ലൈറ്റ്' നിങ്ങളുടെ സ്ക്രീനിന് ചെറുതായി ഓറഞ്ച് നിറം നൽകുന്നു. മങ്ങിയ വെളിച്ചത്തിൽ സ്ക്രീനിൽ നോക്കുന്നതും വായിക്കുന്നതും ഈ ഡിസ്പ്ലേ എളുപ്പമാക്കുന്നു, പെട്ടെന്ന് ഉറങ്ങാനും ഇത് നിങ്ങളെ സഹായിച്ചേക്കാം."</string>
     <string name="night_display_title">നൈറ്റ് ലൈറ്റ്</string>
     <string name="no">ഇല്ല</string>
-    <string name="no_5g_in_dsds_text">2 സിമ്മുകൾ ഉപയോഗിക്കുമ്പോൾ ഈ ഫോണിൽ 4G മാത്രമേ ലഭിക്കൂ. <annotation id="url">കൂടുതലറിയുക</annotation>.</string>
     <string name="no_application">ഒന്നുമില്ല</string>
     <string name="no_applications">ആപ്പുകളൊന്നുമില്ല</string>
     <string name="no_battery_summary">അവസാനമായി ഫുൾ ചാർജ് ചെയ്തത് മുതൽ ബാറ്ററി ഉപയോഗമൊന്നുമില്ല</string>
@@ -3135,7 +3147,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="no_running_services">ഒന്നും പ്രവർത്തിക്കുന്നില്ല.</string>
     <string name="no_services">സജീവമായത് ഒന്നുമില്ല</string>
     <string name="no_sim_card">സിം കാർഡില്ല</string>
-    <string name="no_sim_card_available">SIM കാര്‍ഡൊന്നും ഇല്ല</string>
+    <string name="no_sim_card_available">SIM കാര്‍ഡ് ഇല്ല</string>
     <string name="no_trust_agents">ലഭ്യമായ പരിചിത ഏജന്റുകളൊന്നുമില്ല</string>
     <string name="no_vr_listeners">VR സഹായി സേവനമായി റൺ ചെയ്യുന്നതിന് ഇൻസ്റ്റാൾ ചെയ്തിട്ടുള്ള ആപ്‌സൊന്നും അഭ്യർത്ഥിച്ചിട്ടില്ല.</string>
     <string name="not_allowed">നിങ്ങളുടെ സിം കാർഡ്, ഈ നെറ്റ്‌വർക്കിലേക്ക് കണക്ഷൻ അനുവദിക്കുന്നില്ല.</string>
@@ -3239,6 +3251,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="notification_priority_title">മുൻഗണന</string>
     <string name="notification_pulse_title">ലൈറ്റ് മിന്നുക</string>
     <string name="notification_ringtone_title">ഡിഫോൾട്ട് അറിയിപ്പ് ശബ്‌ദം</string>
+    <string name="notification_screen_summary">അറിയിപ്പ് ചരിത്രം, ബബിൾ, അടുത്തിടെ അയച്ചവ</string>
     <string name="notification_settings_work_profile">ഔദ്യോഗിക പ്രൊഫൈലിലെ ആപ്പുകൾക്ക് അറിയിപ്പിലേക്കുള്ള ആക്‌സസ് ലഭ്യമല്ല.</string>
     <string name="notification_show_lights_title">ലൈറ്റ് മിന്നുക</string>
     <string name="notification_silence_title">നിശബ്‌ദം</string>
@@ -3295,7 +3308,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_add_bluetooth_car_kit_summary">വാഹന ബ്ലൂടൂത്ത് നിങ്ങളുടെ മുമ്പുള്ള ഉപകരണങ്ങളുമായി സ്വയം കണക്റ്റുചെയ്യുന്നു, നിങ്ങൾക്ക് പുതിയ ഉപകരണങ്ങൾ നേരിട്ട് ചേർക്കുകയും ചെയ്യാം</string>
     <string name="oneplus_add_fingerprint_list">വിരലടയാളം ചേര്‍ക്കുക</string>
     <string name="oneplus_adjust_effect">സ്ക്രീൻ ഇഫക്റ്റ് ക്രമീകരണം</string>
-    <string name="oneplus_advance_settings">കൂടുതൽ ക്രമീകരണം</string>
+    <string name="oneplus_advance_settings">കൂടുതൽ ക്രമീകരണങ്ങൾ</string>
     <string name="oneplus_advanced_display_settings">വിപുലമായ ഡിസ്പ്ലേ ക്രമീകരണം</string>
     <string name="oneplus_advanced_security_settings">വിപുലമായ സുരക്ഷാ ക്രമീകരണം</string>
     <string name="oneplus_alarm_summary">അലാമുകള്‍ എല്ലായ്‍പ്പോഴും റിംഗ് ചെയ്യും</string>
@@ -3310,7 +3323,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_app_display_compatibility">അനുയോജ്യതാ മോഡ്</string>
     <string name="oneplus_app_display_fullscreen">പൂര്‍ണ്ണ സ്ക്രീന്‍ മോഡ്</string>
     <string name="oneplus_app_display_fullscreen_summary">ആപ്പിന്റെ ഉള്ളടക്കം നോച്ച് മേഖലയിൽ ഉൾപ്പെടുന്നുണ്ടെങ്കിൽ, ഡിഫോൾട്ട് മോഡിലേയ്ക്ക് മാറുക</string>
-    <string name="oneplus_app_display_fullscreen_title">പൂർണ്ണ സ്ക്രീനിൽ ആപ്പ് പ്രദർശനം</string>
+    <string name="oneplus_app_display_fullscreen_title">മുഴുസ്ക്രീനിൽ പ്രദർശിപ്പിക്കേണ്ട ആപ്പുകൾ</string>
     <string name="oneplus_app_list">ആപ്ലിക്കേഷന്‍ ലിസ്റ്റ്</string>
     <string name="oneplus_app_list_empty">ശൂന്യമായ ലിസ്റ്റ്</string>
     <string name="oneplus_app_locker_add_apps">ആപ്പുകള്‍ ചേര്‍ക്കുക</string>
@@ -3332,9 +3345,10 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_applock_need_to_unlock_wrong">തെറ്റായ PIN</string>
     <string name="oneplus_applock_pattern_header">നിങ്ങളുടെ പാറ്റേണ്‍ വരയ്ക്കുക</string>
     <string name="oneplus_applock_wrong_pattern_header">തെറ്റായ പാറ്റേണ്‍</string>
-    <string name="oneplus_apps_notifications">ആപ്സും അറിയിപ്പുകളും</string>
+    <string name="oneplus_apps_notifications">ആപ്പ് &amp; അറിയിപ്പുകൾ</string>
     <string name="oneplus_apps_title">ആപ്പുകൾ</string>
     <string name="oneplus_aptx_hd_support">aptX / aptX HD പിന്തുണ</string>
+    <string name="oneplus_at_a_glance">ഒറ്റനോട്ടത്തിൽ</string>
     <string name="oneplus_authentication_information">ഓതന്‍റിക്കേഷന്‍ വിവരം</string>
     <string name="oneplus_auto_activate">സ്വയം ഓണ്‍ ചെയ്യുക</string>
     <string name="oneplus_auto_answer_via_bluetooth_summary">ഒരു ബ്ലൂടൂത്ത് ഡിവൈസിലേക്ക് കണക്റ്റ് ചെയ്ത് കഴിഞ്ഞാൽ വരുന്ന ഇൻകമിങ്ങ് കോളിന് സ്വയമേവ അത് മറുപടി നൽകും</string>
@@ -3343,11 +3357,11 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_auto_disconect_the_ap">ഉപകരണങ്ങളൊന്നും കണക്റ്റ് ചെയ്തിട്ടില്ലെങ്കിൽ ഹോട്ട്‌സ്പോട്ട് 5 മിനിറ്റിനു ശേഷം സ്വയം ഓഫാകും.</string>
     <string name="oneplus_auto_open_app_none">ഒന്നുമില്ല</string>
     <string name="oneplus_auto_open_app_other_applications">മറ്റ് ആപ്ലിക്കേഷനുകൾ</string>
-    <string name="oneplus_auto_open_app_recommended">ശുപാർശ ചെയ്യുന്നു</string>
+    <string name="oneplus_auto_open_app_recommended">ശുപാർശ ചെയ്തത്</string>
     <string name="oneplus_auto_open_specified_app">നിർദ്ദിഷ്ട ആപ്പ് സ്വയമേവ തുറക്കുക</string>
     <string name="oneplus_auto_play">ഓട്ടോ പ്ലേ</string>
     <string name="oneplus_auto_play_summary">ഇയര്‍ ഫോണ്‍ ബന്ധിപ്പിക്കുമ്പോള്‍ ഓട്ടോമാറ്റിക്കായി മ്യൂസിക് പ്ലേബാക്കിലേക്ക് മടങ്ങുക</string>
-    <string name="oneplus_auto_switch_mobile_data">ഇന്റലിജന്റ് നെറ്റ്‌വർക്ക് കണക്ഷൻ</string>
+    <string name="oneplus_auto_switch_mobile_data">ഡാറ്റ ഉപയോഗം</string>
     <string name="oneplus_auto_switch_mobile_data_summary">മെച്ചപ്പെട്ട സ്ഥിരതക്കായി കണക്ഷൻ മോശമായി ലഭിക്കുമ്പോൾ Wi‑Fi കൂടാതെ മൊബൈൽ ഡാറ്റ ഉപയോഗിക്കുക</string>
     <string name="oneplus_auto_turn_on_apps">ഈ ആപ്പുകള്‍ക്ക് വേണ്ടി സ്വയം ഓണ്‍ ചെയ്യുക</string>
     <string name="oneplus_auto_turn_on_car_charger_info_o2">മുകളിലുള്ള ഇനങ്ങൾ ക്രമീകരിക്കുന്നതിലൂടെ, കാർ ചാർജർ കണക്റ്റുചെയ്യുമ്പോഴെല്ലാം ‘ശല്യപ്പെടുത്തരുത്‘ സജീവമാക്കി നിർദ്ദിഷ്ട ആപ്പ് സമാരംഭിക്കാനാകും</string>
@@ -3355,8 +3369,8 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_available_keyboard_category">ലഭ്യമായ കീ‌ബോർഡ്</string>
     <string name="oneplus_available_keyboard_description">ഇവിടെ പ്രവർത്തനക്ഷമമാക്കിയിരിക്കുന്ന, ഇൻസ്‌റ്റാൾ ചെയ്‌ത കീബോർഡുകൾ \"ലഭ്യമായ കീബോർഡുകളുടെ\" ലിസ്‌റ്റിലേയ്‌ക്ക് ചേർക്കും</string>
     <string name="oneplus_back_home">ഹോം, മടങ്ങുക</string>
-    <string name="oneplus_back_home_o2">മടങ്ങുക, ഹോം</string>
-    <string name="oneplus_back_home_summary">ഹോം ബട്ടണിൽ മുകളിലേയ്ക്ക് സ്വൈപ്പുചെയ്യുക</string>
+    <string name="oneplus_back_home_o2">Back, Home</string>
+    <string name="oneplus_back_home_summary">Swipe up on Home button</string>
     <string name="oneplus_back_topic_theme_summary">ബാക്ക് കവര്‍ മാറ്റുമ്പോള്‍‌ സ്വയം സിസ്റ്റം തീം മാറ്റുക</string>
     <string name="oneplus_back_topic_theme_title">ബാക്ക് കവര്‍ തീം</string>
     <string name="oneplus_battery_menu_stats_total">വിശദാമാ‍യ ഉപയോഗം കാണുക</string>
@@ -3380,17 +3394,17 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_bluetooth_discoverable">കണ്ടെത്താവുന്നത്</string>
     <string name="oneplus_bluetooth_sbc">SBC</string>
     <string name="oneplus_bluetooth_volume">ബ്ലൂടൂത്ത് വോള്യം</string>
-    <string name="oneplus_bluetooth_volume_switch">ബ്ലൂടൂത്ത് പരമാവധി വോള്യം</string>
+    <string name="oneplus_bluetooth_volume_switch">ബ്ലൂടൂത്ത് പരിപൂർണ ശബ്ദം</string>
     <string name="oneplus_bluetooth_volume_switch_summary">ബ്ലൂടൂത്തുമായി ബന്ധിപ്പിക്കുമ്പോള്‍ ഹെഡ്‍സെറ്റും ഡിവൈസ് വോള്യവും ഓട്ടോ സിങ്ക് ചെയ്യുക</string>
     <string name="oneplus_broadcat_wifi_name">ബ്രോഡ്‌കാസ്റ്റ് നെറ്റ്‌വർക്ക് പേര് (SSID)</string>
-    <string name="oneplus_buttons_and_gestures_settings">ബട്ടണുകളും ആംഗ്യങ്ങളും</string>
+    <string name="oneplus_buttons_and_gestures_settings">ബട്ടണുകളും&amp; ആംഗ്യങ്ങളും</string>
     <string name="oneplus_buttons_dashboard_summary">മുന്നറിയിപ്പ് സ്ലൈഡർ, നാവിഗേഷൻ, ആംഗ്യങ്ങൾ</string>
     <string name="oneplus_buttons_settings">ബട്ടൺ ക്രമീകരണം</string>
     <string name="oneplus_buttons_settings_summary">നാവിഗേഷൻ ആംഗ്യം</string>
     <string name="oneplus_call_information_broadcast">സ്പീക്ക് കോളർ ID</string>
     <string name="oneplus_call_information_broadcast_summary">കണക്റ്റുചെയ്‌ത ഇയർഫോണുകൾ മുഖേന ഇൻകമിംഗ് കോളർ ഐഡി അറിയിക്കും</string>
     <string name="oneplus_calls">കോളുകൾ</string>
-    <string name="oneplus_calls_and_vibration">ഫോൺ റിംഗ്ടോണും വൈബ്രേഷനും</string>
+    <string name="oneplus_calls_and_vibration">ഫോൺ റിംഗ്ടോണും&amp; വൈബ്രേഷനും</string>
     <string name="oneplus_camera">ക്യാമറ</string>
     <string name="oneplus_cancel_finger_input">റദ്ദാക്കുന്നു...</string>
     <string name="oneplus_cannot_enroll_fingerprint_in_splitting_screen">സ്ക്രീൻ വിഭജിച്ചിരിക്കുമ്പോൾ വിരലടയാളം നൽകാനാവില്ല</string>
@@ -3413,14 +3427,15 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_condition_bg_data_summary">Wi-Fi വഴി മാത്രമേ പശ്ചാത്തല ഡാറ്റ ലഭ്യമാകൂ. Wi-Fi ലഭ്യമല്ലാത്തപ്പോൾ ഇത് ചില ആപ്പുകളേയോ സേവനങ്ങളേയോ ബാധിച്ചേക്കാം</string>
     <string name="oneplus_condition_bg_data_title">ഡാറ്റ സേവർ ഓണാണ്</string>
     <string name="oneplus_condition_hotspot_turn_off">ഹോട്ട്സ്പോട്ട് ഓഫാക്കുക</string>
+    <string name="oneplus_condition_night_display_title">വിഷൻ കംഫർട്ട് മോഡ് ഓണാണ്</string>
     <string name="oneplus_condition_night_mode_title">രാത്രി മോഡ് ഓണ്‍ ആണ്</string>
-    <string name="oneplus_condition_night_mode_turn_off">നൈറ്റ് മോഡ് ഓഫാക്കുക</string>
+    <string name="oneplus_condition_night_mode_turn_off">വിഷൻ കംഫർട്ട് മോഡ് ഓഫാക്കുക</string>
     <string name="oneplus_condition_ota_summary">അപ്ഡേറ്റിനായി പുതിയ പതിപ്പ് കണ്ടെത്തി</string>
     <string name="oneplus_connected_device_count">%1$sഡിവൈസ് ബന്ധിപ്പിച്ചിട്ടുണ്ട്</string>
     <string name="oneplus_connected_device_management_title">ബന്ധിപ്പിച്ച ഡിവൈസ് മാനേജര്‍</string>
     <string name="oneplus_connected_devices_count">%1$s ഡിവൈസ് ബന്ധിപ്പിച്ചിട്ടുണ്ട്</string>
     <string name="oneplus_connected_devices_dashboard_summary">NFC, കാസ്റ്റ്, പ്രിൻ്റിംഗ്</string>
-    <string name="oneplus_connected_devices_dashboard_title">ബ്ലൂടൂത്തും ഉപകരണ കണക്ഷനും</string>
+    <string name="oneplus_connected_devices_dashboard_title">ബ്ലൂടൂത്തും &amp; ഉപകരണ കണക്ഷനും</string>
     <string name="oneplus_cpu">പ്രോസസർ</string>
     <string name="oneplus_custom_drop_title">മാറ്റങ്ങൾ നിരസിക്കണോ？</string>
     <string name="oneplus_custom_time">ഇച്ഛാനുസൃതമായ സമയ പരിധി</string>
@@ -3450,10 +3465,10 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_device_warranty_expried_date">വാറന്‍റി കാലഹരണ തീയതി</string>
     <string name="oneplus_dirac_audio_tuner">ഡിറാക് ഓഡിയോ ട്യൂണർ</string>
     <string name="oneplus_direct_boot_inputmethod_unaware_dialog_message">നിങ്ങളുടെ ഫോണിന് സ്ക്രീൻ ലോക്ക് ഉണ്ടെങ്കിൽ, ഫോൺ പുനഃസജ്ജീകരിച്ച് കഴിഞ്ഞാൽ ഫോൺ അൺലോക്ക് ചെയ്യുന്നത് വരെ ഈ കീബോർഡിന് ആരംഭിക്കാനാകില്ല</string>
-    <string name="oneplus_disable_aosp_face_lock_message">OnePlus ഫേസ് അണ്‍ലോക്ക് പ്രാപ്തമാക്കുന്നത് സ്മാര്‍ട്ട് ലോക്കിന്‍റെ വിശ്വസനീയ ഫേസ് അപ്രാപ്തമാക്കും. നിങ്ങള്‍ തുടരാന്‍ ആഗ്രഹിക്കുന്നുണ്ടോ?</string>
+    <string name="oneplus_disable_aosp_face_lock_message">OnePlus ഫേസ് അണ്‍ലോക്ക് പ്രാപ്തമാക്കുന്നത് സ്മാര്‍ട്ട് ലോക്കിന്‍റെ ട്രസ്റ്റഡ് ഫേസ് അപ്രാപ്തമാക്കും. നിങ്ങള്‍ തുടരാന്‍ ആഗ്രഹിക്കുന്നുണ്ടോ?</string>
     <string name="oneplus_disconnected">വിച്ഛേദിക്കുക</string>
     <string name="oneplus_display_dashboard_no_theme_summary">സ്റ്റാറ്റസ് ബാർ, ആംബിയന്റ് ഡിസ്പ്ലേ, വാൾപേപ്പറുകൾ</string>
-    <string name="oneplus_display_dashboard_no_theme_summary_801">Status bar, ambient display, Vision comfort, reading mode</string>
+    <string name="oneplus_display_dashboard_no_theme_summary_801">സ്റ്റാറ്റസ് ബാർ, ആംബിയന്റ് ഡിസ്പ്ലേ, വിഷൻ കംഫർട്ട്, വായനാ മോഡ്</string>
     <string name="oneplus_display_dashboard_summary">സ്റ്റാറ്റസ് ബാർ, ആമ്പിയൻ്റ് ഡിസ്പ്ലേ, വാൾപേപ്പറുകൾ, തീം</string>
     <string name="oneplus_display_dashboard_summary_801">സ്റ്റാറ്റസ് ബാർ, ആമ്പിയൻ്റ് ഡിസ്പ്ലേ, വാൾപേപ്പറുകൾ, തീം</string>
     <string name="oneplus_display_screen_timeout">സ്ലീപ്പ്</string>
@@ -3476,8 +3491,8 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_double_tap_power_none">ഒന്നുമില്ല</string>
     <string name="oneplus_doze_summary_801">സ്റ്റാൻഡ്‌ബൈ സ്ക്രീനിൽ ക്ലോക്കും മറ്റ് വിവരങ്ങളും കാണിക്കുക</string>
     <string name="oneplus_doze_summary_new">സ്‌ക്രീനിൽ സമയം, തീയതി, അറിയിപ്പുകൾ എന്നിവ പ്രദർശിപ്പിക്കുക</string>
-    <string name="oneplus_doze_title">ആംബിയന്‍റ് ഡിസ്‍പ്ലേ</string>
-    <string name="oneplus_doze_title_801">ആംബിയന്‍റ് ഡിസ്‍പ്ലേ</string>
+    <string name="oneplus_doze_title">ആംബിയന്റ് ഡിസ്‍പ്ലേ</string>
+    <string name="oneplus_doze_title_801">ആംബിയന്റ് ഡിസ്‍പ്ലേ</string>
     <string name="oneplus_draw_gesture_start_none">ഒന്നുമില്ല</string>
     <string name="oneplus_draw_m_start_app">M വരയ്ക്കുക</string>
     <string name="oneplus_draw_o_start_app">O വരയ്ക്കുക</string>
@@ -3501,12 +3516,12 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_e_sports_mode_title">ഇസ്പോർട്സ് മോഡ്</string>
     <string name="oneplus_earphone">ഇയര്‍ഫോണ്‍</string>
     <string name="oneplus_earphone_mode">ഇയര്‍ഫോണ്‍ മോഡ്</string>
-    <string name="oneplus_emergency_rescue_settings">അടിയന്തരമായി രക്ഷപ്പെടുത്തൽ</string>
+    <string name="oneplus_emergency_rescue_settings">അടിയന്തര രക്ഷപ്പെടുത്തൽ</string>
     <string name="oneplus_emergency_rescue_settings_summary">പവർ ബട്ടൺ വേഗത്തിൽ അമർത്തിക്കൊണ്ട് സഹായത്തിനായി സ്വയമേവ കോൾ ചെയ്യുക</string>
     <string name="oneplus_emergency_tap_power_gesture_tips">എമർജൻസി റെസ്ക്യൂവിന്റെ പവർ ബട്ടൺ ക്രമീകരണങ്ങൾ പരിഷ്ക്കരിച്ചതിനുശേഷം ലഭ്യമാണ്</string>
-    <string name="oneplus_enroll_fingerprint_tips_summary">"1.വിരലടയാളത്തിന്റെ ലഭ്യത ഉറപ്പാക്കുന്നതിന് പരിരക്ഷിത ഫിലിമിന്റെ ഓരോ പുനഃസ്ഥാപനത്തിനുശേഷവും നിങ്ങളുടെ വിരലടയാളം വീണ്ടും നൽകുക
+    <string name="oneplus_enroll_fingerprint_tips_summary">"1. വിരലടയാളത്തിന്റെ ലഭ്യത ഉറപ്പാക്കുന്നതിന് സംരക്ഷിത ഫിലിം മാറ്റിസ്ഥാപിച്ചതിന് ശേഷം നിങ്ങളുടെ വിരലടയാളം വീണ്ടും നൽകുക
 
-2.ഒറ്റ ക്രമീകരണ പ്രോസസ്സിൽ, ഒരു വിരലിന്റെ മാത്രം വിരലടയാള വിവരങ്ങൾ നൽകുക"</string>
+2. ഒരൊറ്റ സജ്ജീകരണ പ്രക്രിയയിൽ, ദയവായി ഒരു വിരലിന്റെ വിരലടയാള വിവരം മാത്രം നൽകുക"</string>
     <string name="oneplus_enroll_fingerprint_tips_title">ഫിംഗർപ്രിൻ്റ് സെറ്റപ്പ് പ്രോംപ്റ്റ്</string>
     <string name="oneplus_enter_your_fingerprint">നിങ്ങളുടെ വിരലടയാളം ചേര്‍ക്കുക</string>
     <string name="oneplus_erase_system_data">സിസ്‌റ്റം ഡാറ്റ മായ്‌ക്കുക</string>
@@ -3514,8 +3529,8 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_erase_system_data_title">സിസ്‌റ്റം ഡാറ്റ മായ്‌ക്കണോ?</string>
     <string name="oneplus_error_mms_port_exceed">എം എം എസ് പോർട്ട് വാല്യൂ 65535 ൽ കൂടാൻ പാടില്ല, ദയവായി വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="oneplus_error_port_exceed">പോർട്ട് വാല്യൂ 65535 ൽ കൂടാൻ പാടില്ല, ദയവായി വീണ്ടും ശ്രമിക്കുക.</string>
-    <string name="oneplus_esportmode_introduction_summary">Esports മോഡ് സജീവമാക്കുന്നതിന്, ഗെയിമിംഗ് മോഡ് പാനലിൽ ടോഗിൾ ടാപ്പുചെയ്യുക.</string>
-    <string name="oneplus_experience_improvement_programs">അനുഭവ മെച്ചപ്പെടുത്തൽ പ്രോഗ്രാമുകൾ</string>
+    <string name="oneplus_esportmode_introduction_summary">ഇസ്പോർട്സ് മോഡ് സജീവമാക്കുന്നതിന്, ഗെയിമിംഗ് മോഡ് പാനലിൽ ടോഗിൾ ടാപ്പുചെയ്യുക.</string>
+    <string name="oneplus_experience_improvement_programs">എക്സ്‍പീരിയൻസ് ഇംപ്രൂവ്‍മെന്റ് പ്രോഗ്രാമുകൾ</string>
     <string name="oneplus_face_auto_unlock_while_screen_on_sumary">ആദ്യം സ്വൈപ്പ് ചെയ്യാതെ സ്ക്രീന്‍ ഓണായാല്‍ ഉടന്‍ നിങ്ങളുടെ മുഖം ഉപയോഗിച്ച് ഫോണ്‍ അണ്‍ലോക്ക് ചെയ്യുക.</string>
     <string name="oneplus_face_auto_unlock_while_screen_on_title">സ്ക്രീൻ ഓണായതിനുശേഷം സ്വയം അൺലോക്കുചെയ്യുക</string>
     <string name="oneplus_face_setup_unlock_settings_summary">"നിങ്ങളുടെ ഫോൺ അൺലോക്കുചെയ്യാനുള്ള എളുപ്പവഴിയാണ് ഫെയ്സ് അൺലോക്ക്. നിങ്ങളുടെ ഫോണിനെ ഉണർത്തി അതിലേയ്ക്ക് നോക്കുക, അത് ഉപയോഗിക്കാം.
@@ -3547,17 +3562,17 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_finger_input_fail_tips">ഇന്‍പുട്ട് പരാജയപ്പെട്ടു, ദയവായി സ്ഥാനം ക്രമീകരിച്ച് വീണ്ടും ശ്രമിക്കുക</string>
     <string name="oneplus_finger_print_anim_save">സംരക്ഷിക്കുക</string>
     <string name="oneplus_fingerprint">വിരലടയാളം</string>
-    <string name="oneplus_fingerprint_acquired_imager_dirty">The fingerprint identification area is dirty. Please wipe it clean and try again.</string>
-    <string name="oneplus_fingerprint_acquired_partial">Partial fingerprint detected. Please completely cover the fingerprint identification area.</string>
-    <string name="oneplus_fingerprint_acquired_too_fast">Too fast to process your fingerprint. Please stay for a while when pressing.</string>
+    <string name="oneplus_fingerprint_acquired_imager_dirty">വിരലടയാളം തിരിച്ചറിയൽ ഏരിയ വൃത്തികെട്ടതാണ്. ഇത് വൃത്തിയായി തുടച്ച് വീണ്ടും ശ്രമിക്കുക.</string>
+    <string name="oneplus_fingerprint_acquired_partial">ഭാഗിക വിരലടയാളം കണ്ടെത്തി. ഫിംഗർപ്രിന്റ് തിരിച്ചറിയൽ ഏരിയ പൂർണ്ണമായും കവർ ചെയ്യുക.</string>
+    <string name="oneplus_fingerprint_acquired_too_fast">നിങ്ങളുടെ വിരലടയാളം പ്രോസസ്സ് ചെയ്യുന്നതിന് വളരെ വേഗത. അമർത്തുമ്പോൾ കുറച്ച് സമയം തുടരുക.</string>
     <string name="oneplus_fingerprint_acquired_too_similar">സമാനമായ വിരലടയാള ഡാറ്റ കണ്ടെത്തി. വിരളടയാളത്തിന്റെ വ്യത്യസ്ത പ്രദേശങ്ങളിൽ നിന്ന് ഡാറ്റ നൽകാൻ നിങ്ങളുടെ വിരൽ ചെറുതായി നീക്കുക.</string>
     <string name="oneplus_fingerprint_animation_effect_title">ഫിംഗർപ്രിൻ്റ് ആനിമേഷൻ ഇഫക്റ്റ്</string>
     <string name="oneplus_fingerprint_delete_confirm_message">നിങ്ങള്‍‌ ഇത് ഇല്ലാതാക്കാന്‍ ആഗ്രഹിക്കുന്നുണ്ടോ?</string>
     <string name="oneplus_fingerprint_detail">വിശദാംശങ്ങള്‍</string>
     <string name="oneplus_fingerprint_enrol_completed">വിരലടയാളം സംരക്ഷിച്ചു</string>
-    <string name="oneplus_fingerprint_enroll_summary">വിരലടയാളം തിരിച്ചറിയൽ പ്രദേശം നിങ്ങളുടെ വിരൽ കൊണ്ട് അമർത്തി സാധ്യമായത്ര മറയ്ക്കുക, വൈബ്രേഷൻ അനുഭവപ്പെട്ടതിനുശേഷം ഉയർത്തുക</string>
-    <string name="oneplus_fingerprint_findsendor_summary">When the fingerprint pattern appears at the bottom of the screen, simply press with your finger on the fingerprint identification area to use the fingerprint function.</string>
-    <string name="oneplus_fingerprint_findsendor_tilte">How to use fingerprint</string>
+    <string name="oneplus_fingerprint_enroll_summary">വിരലടയാളം തിരിച്ചറിയൽ ഏരിയ നിങ്ങളുടെ വിരൽ പരമാവധി മൂടുക, തുടർന്ന് ഒരു വൈബ്രേഷൻ അനുഭവപ്പെട്ടതിനുശേഷം ഉയർത്തുക</string>
+    <string name="oneplus_fingerprint_findsendor_summary">വിരലടയാള പാറ്റേൺ സ്ക്രീനിൻ്റെ താഴെ ദൃശ്യമാകുമ്പോൾ, വിരലടയാള ഫംഗ്ഷൻ ഉപയോഗിക്കുന്നതിന് വിരലടയാള ഐഡൻ്റിഫിക്കേഷൻ ഏരിയയിൽ നിങ്ങളുടെ വിരൽ ഉപയോഗിച്ച് അമർത്തുക: ഉണർന്ന് നിങ്ങളുടെ ഫോൺ അൺലോക്കുചെയ്യുക, വാങ്ങലുകൾ അംഗീകരിക്കുക അല്ലെങ്കിൽ ആപ്പുകളിലേയ്ക്ക് സൈനിൻ ചെയ്യുക.</string>
+    <string name="oneplus_fingerprint_findsendor_tilte">വിരലടയാളം എങ്ങനെ ഉപയോഗിക്കാം</string>
     <string name="oneplus_fingerprint_functional_declaration">വിരലടയാള ഫംഗ്ഷൻ പ്രഖ്യാപനം</string>
     <string name="oneplus_fingerprint_gesture_camera_summary">ഒരു ഫോട്ടോ എടുക്കുന്നതിന് വ്യുഫൈന്‍ഡര്‍ സ്ക്രീനില്‍ നിന്ന്, വിരലടയാള സെന്‍സറില്‍ ദീർഘമായി അമര്‍ത്തുക</string>
     <string name="oneplus_fingerprint_gesture_camera_title">ഒരു ഫോട്ടോ എടുക്കാന്‍ അമര്‍ത്തിപ്പിടിക്കുക</string>
@@ -3610,7 +3625,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_fullscreen_gesture_guide_multitask">സമീപകാല ആപ്പുകള്‍ക്ക് വേണ്ടി, സ്ക്രീനിന്‍റെ താഴെ നിന്ന് മുകളിലേക്ക് സ്വൈപ്പ് ചെയ്യുകയും പോസ് ചെയ്യുകയും ചെയ്യുക.</string>
     <string name="oneplus_fullscreen_gesture_guide_will_enable">നാവിഗേഷന്‍ ആംഗ്യങ്ങള്‍ പ്രാപ്തമാക്കും</string>
     <string name="oneplus_fullscreen_home_guide_summary">സ്ക്രീനിന്റെ താഴെ അരുകിൽ നിന്നും മുകളിലേയ്ക്ക് സ്വൈപ്പുചെയ്യുക</string>
-    <string name="oneplus_fullscreen_home_guide_summary_deprecated">സ്ക്രീനിന്റെ താഴെ മധ്യഭാഗത്ത് അരികിൽ നിന്നും മുകളിലേയ്ക്ക് സ്വൈപ്പുചെയ്യുക</string>
+    <string name="oneplus_fullscreen_home_guide_summary_deprecated">സ്ക്രീനിന്റെ താഴെ മധ്യഭാഗത്തെ അരികിൽ നിന്നും മുകളിലേയ്ക്ക് സ്വൈപ്പുചെയ്യുക</string>
     <string name="oneplus_fullscreen_home_guide_title">ഹോം</string>
     <string name="oneplus_fullscreen_landscape_guide_summary">സ്ക്രീനിന്റെ താഴെ അരികിൽ നിന്ന് തുടർന്നും നാവിഗേഷൻ ഗെസ്ചറുകൾ ട്രിഗർ ചെയ്യാനാവും, പിറകോട്ട് പോകാൻ ഇടത്തേ അരികിൽ നിന്നോ വലത്തേ അരികിൽ നിന്നോ സ്വൈപ്പ് ചെയ്യുക</string>
     <string name="oneplus_fullscreen_landscape_guide_summary_deprecated">പോർട്രെയ്റ്റിലേത് പോലെ, നാവിഗേഷൻ ആംഗ്യങ്ങൾ ഉപകരണത്തിന്റെ താഴെ നിന്നാണ്</string>
@@ -3624,7 +3639,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_fullscreen_previous_app_no_bar_guide_title">സമീപകാലത്തുള്ള ആപ്പുകളിലേക്ക് മാറുക</string>
     <string name="oneplus_fullscreen_recent_guide_summary">സ്ക്രീനിന്റെ താഴെ അരികിൽ നിന്നും സ്വൈപ്പുചെയ്ത് തൽക്കാലം നിർത്തുക</string>
     <string name="oneplus_fullscreen_recent_guide_summary_deprecated">സ്ക്രീനിന്റെ താഴെ മധ്യഭാഗത്ത് അരികിൽ നിന്നും മുകളിലേയ്ക്ക് സ്വൈപ്പുചെയ്ത് തൽക്കാലം നിർത്തുക</string>
-    <string name="oneplus_fullscreen_recent_guide_title">സമീപകാലത്തുള്ള ആപ്സുകൾ</string>
+    <string name="oneplus_fullscreen_recent_guide_title">Apps recents</string>
     <string name="oneplus_functional_terms">ഉപാധികളും നിബന്ധനകളും</string>
     <string name="oneplus_game_haptic_feedback_summary">നിങ്ങളുടെ ഗെയിമിംഗ് അനുഭവം കൂടുതൽ സ്പഷ്ടമാക്കുന്നതിന് ഹാപ്റ്റിക് ഫീഡ്ബാക്ക് ചേർക്കുക. ബ്ലൂടൂത്ത് ഹെഡ്ഫോണുകൾ ഇതുവരെ പിന്തുണയ്ക്കുന്നില്ല.</string>
     <string name="oneplus_game_mode_ad_summary">ഗെയിമിംഗ് ഡിസ്പ്ലേയുടെ തെളിഞ്ഞതും ഇരുണ്ടതുമായ ഭാഗത്തിന്റെ വിശദാംശങ്ങൾ മെച്ചപ്പെടുത്തുക</string>
@@ -3652,7 +3667,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_gesture_navigation_bar_summary_for_deprecated">മടങ്ങി പോകുന്നതിന് ഇടത് അല്ലെങ്കിൽ വലത് അരികിൽ നിന്ന് ഉള്ളിലേക്ക് സ്വൈപ്പ് ചെയ്യുക</string>
     <string name="oneplus_gesture_navigation_bar_title">നാവിഗേഷൻ ആംഗ്യങ്ങൾ</string>
     <string name="oneplus_gesture_navigation_bar_title_for_bottom">നാവിഗേഷൻ ആംഗ്യങ്ങൾ (താഴെ)</string>
-    <string name="oneplus_gesture_navigation_bar_title_for_deprecated">നാവിഗേഷൻ ഗെസ്ചറുകൾ (ഇടതും വലതും)</string>
+    <string name="oneplus_gesture_navigation_bar_title_for_deprecated">നാവിഗേഷൻ ആംഗ്യങ്ങൾ (ഇടതും വലതും)</string>
     <string name="oneplus_gesture_of_answer_call_info">ഒരു ഇന്‍കമിങ്ങ് കോള്‍ ഉള്ളപ്പോള്‍, ഫോണ്‍ ചെവിയിലേക്ക് ഉയര്‍ത്തി നിങ്ങള്‍ക്ക് അതിന് മറുപടി നല്‍കാനാവും.</string>
     <string name="oneplus_gesture_of_answer_call_summary">ഫോണ്‍ ചെവിയിലേക്ക് ഉയര്‍ത്തി ഇന്‍കമിങ്ങ് കോളുകള്‍ക്ക് സ്വയമേവ മറുപടി നല്‍കുക</string>
     <string name="oneplus_gesture_of_answer_call_title">ആംഗ്യം കൊണ്ട് കോളിന് മറുപടി നല്‍കുക</string>
@@ -3699,9 +3714,9 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_hide_navkeys_summary">നാവിഗേഷന്‍ ബാര്‍ കാണിക്കുന്നതിനോ മറയ്ക്കുന്നതിനോ ആയി ഒരു ബട്ടണ്‍ ചേര്‍ക്കുക</string>
     <string name="oneplus_hide_notch_display_summary">നോച്ച് പ്രദേശം ഉപയോഗിക്കാൻ ആപ്പുകൾക്ക് കഴിയില്ല</string>
     <string name="oneplus_hide_notch_display_title">നോച്ച് ഏരിയ മറയ്ക്കുക</string>
-    <string name="oneplus_how_to_use_fingerprint_summary">"സ്ക്രീനിന്റെ അടിയിൽ വിരലടയാള പാറ്റേൺ ദൃശ്യമാകുമ്പോൾ, വിരലടയാള ഫംഗ്ഷൻ ഉപയോഗിക്കാനായി വിരലടയാളം തിരിച്ചറിയൽ പ്രദേശത്ത് വിരൽ കൊണ്ട് അമർത്തുക: നിങ്ങളുടെ ഫോൺ ഉണർത്തി അൺലോക്ക് ചെയ്യുക, വാങ്ങലുകൾ അംഗീകരിക്കുക അല്ലെങ്കിൽ ആപ്പുകളിലേയ്ക്ക് സൈനിൻ ചെയ്യുക. 
+    <string name="oneplus_how_to_use_fingerprint_summary">"വിരലടയാള പാറ്റേൺ സ്ക്രീനിൻ്റെ താഴെ ദൃശ്യമാകുമ്പോൾ, വിരലടയാള ഫംഗ്ഷൻ ഉപയോഗിക്കുന്നതിന് വിരലടയാള ഐഡൻ്റിഫിക്കേഷൻ ഏരിയയിൽ നിങ്ങളുടെ വിരൽ ഉപയോഗിച്ച് അമർത്തുക: ഉണർന്ന് നിങ്ങളുടെ ഫോൺ അൺലോക്കുചെയ്യുക, വാങ്ങലുകൾ അംഗീകരിക്കുക അല്ലെങ്കിൽ ആപ്പുകളിലേയ്ക്ക് സൈനിൻ ചെയ്യുക.
 
-ശ്രദ്ധിക്കുക: നിങ്ങളുടെ വിരലടയാളം ഒരു ദൃഢമായ പാറ്റേൺ അല്ലെങ്കിൽ PIN-നേക്കാളും സുരക്ഷ കുറഞ്ഞതായിരിക്കാം"</string>
+ശ്രദ്ധിക്കുക:നിങ്ങളുടെ വിരലടയാളം ശക്തമായ പാറ്റേൺ അല്ലെങ്കിൽ പിൻ എന്നതിനേക്കാൾ സുരക്ഷിതമല്ല"</string>
     <string name="oneplus_how_to_use_fingerprint_summary_no_note">വിരലടയാള പാറ്റേൺ സ്ക്രീനിൻ്റെ താഴെ ദൃശ്യമാകുമ്പോൾ, വിരലടയാള ഫംഗ്ഷൻ ഉപയോഗിക്കുന്നതിന് വിരലടയാള ഐഡൻ്റിഫിക്കേഷൻ ഏരിയയിൽ നിങ്ങളുടെ വിരൽ ഉപയോഗിച്ച് അമർത്തുക: ഉണർന്ന് നിങ്ങളുടെ ഫോൺ അൺലോക്കുചെയ്യുക, വാങ്ങലുകൾ അംഗീകരിക്കുക അല്ലെങ്കിൽ ആപ്പുകളിലേയ്ക്ക് സൈനിൻ ചെയ്യുക.</string>
     <string name="oneplus_hydrogen_version">H₂OS പതിപ്പ്</string>
     <string name="oneplus_ime_security_warning">പാസ്‌വേഡുകൾ, ക്രെഡിറ്റ് കാർഡ് നമ്പറുകൾ തുടങ്ങിയ വ്യക്തിഗത ഡാറ്റ ഉൾപ്പെടെ നിങ്ങൾ ടൈപ്പ് ചെയ്യുന്ന എല്ലാ ടെക്‌സ്റ്റും ശേഖരിക്കാൻ %1$s-ന് കഴിഞ്ഞേക്കും</string>
@@ -3713,7 +3728,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_instrucitons">നിര്‍ദ്ദേശം</string>
     <string name="oneplus_intelligently_select_best_wifi">മികച്ച Wi‑Fi ബുദ്ധിപൂർവ്വം തിരഞ്ഞെടുക്കുക</string>
     <string name="oneplus_intelligently_select_best_wifi_summary">Wi‑Fi നെറ്റ്‌വർക്കുകളുടെ കണക്റ്റിവിറ്റി കണ്ടെത്തി വിശകലനം ചെയ്യുന്നതിലൂടെ മികച്ച Wi‑Fi ബുദ്ധിപൂർവ്വം തിരഞ്ഞെടുത്ത് കണക്റ്റുചെയ്യുക</string>
-    <string name="oneplus_intensely">ശക്തം</string>
+    <string name="oneplus_intensely">Strong</string>
     <string name="oneplus_is_turn_on_feature">ഈ ഫീച്ചർ ഓണാക്കണമെന്ന് നിങ്ങള്‍ക്ക് തീര്‍ച്ചയാണോ?</string>
     <string name="oneplus_is_turn_on_feature_summary">"ഇത് ഓണാക്കുമ്പോൾ, ഇനിപ്പറയുന്ന പ്രശ്‌നങ്ങൾ ഇടയ്‌ക്കിടയ്‌ക്ക് സംഭവിക്കും:
 1.സ്‌ക്രീൻ ഡിസ്‌പേയിലെ ചില ഭാഗങ്ങൾ അസാധാരണമായിരിക്കും
@@ -3737,12 +3752,12 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_levels">ഘട്ടങ്ങള്‍</string>
     <string name="oneplus_lift_up_display">എല്ലായ്‍പ്പോഴും ഡിസ്‍പ്ലേ ഓണ്‍ ചെയ്യുക, അല്ലെങ്കിൽ ഡിസ്‍പ്ലേ ഉയര്‍ത്തുക</string>
     <string name="oneplus_light">ലൈറ്റ്</string>
-    <string name="oneplus_local_ringtone">ആഭ്യന്തര സംഭരണത്തിൽ നിന്നുള്ള റിംഗ്ടോൺ</string>
+    <string name="oneplus_local_ringtone">ഇന്റേണൽ സ്റ്റോറേജിൽ നിന്നുള്ള റിംഗ്‍ടോൺ</string>
     <string name="oneplus_location_information">ലൊക്കേഷൻ അടിസ്ഥാനമാക്കിയുള്ള സേവനങ്ങളുടെ വിശദാംശങ്ങൾ</string>
     <string name="oneplus_lock_after_timeout">സ്ലീപ്പിനു ശേഷം സ്വയമേവ ലോക്കാകുന്നു</string>
     <string name="oneplus_lock_buttons">ലോക്ക് ബട്ടണുകള്‍</string>
     <string name="oneplus_lock_buttons_summary">ഗെയിമിങ്ങ് മോഡ് ഓണാക്കുമ്പോള്‍ കപ്പാസിറ്റേറ്റിവ് ബട്ടണുകള്‍ ലോക്ക് ചെയ്യുക</string>
-    <string name="oneplus_lock_screen_intro_skip_dialog_text">ഫേസ് ഡാറ്റ റെക്കോഡ് ചെയ്യുന്നത് ഒഴിവാക്കാന്‍ നിങ്ങള്‍ തിരഞ്ഞെടുത്താല്‍, വിരലടയാളം അല്ലെങ്കില്‍ പിന്‍ പോലുള്ള മറ്റൊരു രീതി നിങ്ങളുടെ ഡിവൈസും വ്യക്തിഗത വിവരവും സംരക്ഷിക്കാനായി പ്രാപ്തമാക്കുന്നതിന് നിര്‍ദ്ദേശിക്കുന്നു. പ്രത്യക ആപ്പുകളില്‍ നിങ്ങള്‍ക്ക് പാസ്‍വേഡുകളും സജ്ജീകരിക്കാം. സംരക്ഷണം പ്രാപ്തമാക്കാന്‍ ദയവായി \"ക്രമീകരണങ്ങള്‍\" > \"സുരക്ഷ &amp; ലോക്ക് സക്രീന്‍ എന്നതിലേക്ക് പോകുക\".</string>
+    <string name="oneplus_lock_screen_intro_skip_dialog_text">ഫേസ് ഡാറ്റ റെക്കോർഡ് ചെയ്യുന്നത് ഒഴിവാക്കാന്‍ നിങ്ങള്‍ തിരഞ്ഞെടുത്താല്‍, നിങ്ങളുടെ ഉപകരണവും വ്യക്തിഗത വിവരവും സംരക്ഷിക്കാനായി വിരലടയാളം അല്ലെങ്കില്‍ പിന്‍ പോലുള്ള മറ്റൊരു രീതി പ്രാപ്തമാക്കുന്നതിന് നിര്‍ദേശിക്കുന്നു. ചില ആപ്പുകളില്‍ നിങ്ങള്‍ക്ക് പാസ്‍വേഡുകളും സജ്ജമാക്കാം. സംരക്ഷണം പ്രാപ്തമാക്കാന്‍ ദയവായി \"ക്രമീകരണങ്ങള്‍\" > \"സുരക്ഷ &amp; ലോക്ക് സക്രീന്‍\" എന്നതിലേക്ക് പോകുക.</string>
     <string name="oneplus_lock_screen_notifications_summary_hide">അണ്‍ലോക്ക് ആയിരിക്കുമ്പോൾ മാത്രം സ്വകാര്യ ഉള്ളടക്കം കാണിക്കുക</string>
     <string name="oneplus_lock_screen_notifs_show_alerting">പ്രധാനപ്പെട്ട അറിയിപ്പുകൾ മാത്രം കാണിക്കുക</string>
     <string name="oneplus_lock_screen_notifs_show_all">പ്രധാനപ്പെട്ടവയും മറ്റ് അറിയിപ്പുകളും കാണിക്കുക</string>
@@ -3790,10 +3805,10 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_multitasking_clean_way">സമീപകാല ആപ്പ് മാനേജ്‍മെന്‍റ്</string>
     <string name="oneplus_navigation_bar_custom_settings">കസ്റ്റം ക്രമീകരണം</string>
     <string name="oneplus_navigation_bar_summary">നാവിഗേഷൻ ബാർ ക്രമീകരിക്കുക</string>
-    <string name="oneplus_navigation_bar_title">നാവിഗേഷൻ ബാറും &amp; ആംഗ്യങ്ങളും</string>
+    <string name="oneplus_navigation_bar_title">നാവിഗേഷൻ ബാർ &amp; ആംഗ്യങ്ങൾ</string>
     <string name="oneplus_network_auto_change_summary">കണക്ടിവിറ്റിയെയും സിഗ്നല്‍ കരുത്തിനെയും ആശ്രയിച്ച്, മൊബൈല്‍ ഡാറ്റ അല്ലെങ്കില്‍ Wi-Fi ക്ക് ഇടയില്‍ സ്വയം മാറുന്നു</string>
     <string name="oneplus_network_auto_change_title">സ്മാര്‍ട്ട് Wi-Fi സ്വിച്ചര്‍</string>
-    <string name="oneplus_network_dashboard_title">Wi-Fi &amp; നെറ്റ്‍വര്‍ക്ക്</string>
+    <string name="oneplus_network_dashboard_title">വൈഫൈ &amp; നെറ്റ്‍വര്‍ക്ക്</string>
     <string name="oneplus_network_datausage_restrict_title">ഡാറ്റ ഉപയോഗം അപ്രാപ്തമാക്കുക</string>
     <string name="oneplus_network_wifi_restrict_title">Wi‑Fi അപ്രാപ്തമാക്കുക</string>
     <string name="oneplus_never_auto">അപ്രാപ്തമാക്കി</string>
@@ -3801,9 +3816,9 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_night_mode_brightness_strong">വളരെ ഇരുണ്ടത്</string>
     <string name="oneplus_night_mode_color_temperature">വർണ്ണ താപനില</string>
     <string name="oneplus_night_mode_enabled_op">നൈറ്റ് മോഡ്</string>
-    <string name="oneplus_night_mode_enabled_op_summary">രാത്രി മോഡ് നേരിട്ട് ഓണാക്കുക</string>
+    <string name="oneplus_night_mode_enabled_op_summary">നൈറ്റ് മോഡ് നേരിട്ട് ഓണാക്കുക</string>
     <string name="oneplus_night_mode_manual_open">മാനുവല്‍</string>
-    <string name="oneplus_night_mode_open_tip">ആദ്യം രാത്രി മോഡ് ഓണാക്കുക</string>
+    <string name="oneplus_night_mode_open_tip">ദയവായി ആദ്യം വിഷൻ കംഫർട്ട് മോഡ് ഓൺ ആക്കുക</string>
     <string name="oneplus_night_mode_sensor_summary">ചുറ്റുമുള്ള വെളിച്ചത്തിന്‍റെ സ്ഥിതിയെ ആശ്രയിച്ച്, നൈറ്റ് മോഡ് സ്ക്രീൻ വർണ്ണ താപനില ചുറ്റുപാടിന് യോജിക്കുന്ന വിധത്തിൽ സ്വയമേവ കാലിബ്രേറ്റുചെയ്യും. ഇത് കണ്ണിനുള്ള ക്ഷീണവും ആയാസവും കുറയ്ക്കുകയും നിങ്ങളെ നന്നായി ഉറങ്ങാൻ സഹായിക്കുകയും ചെയ്തേക്കാം.</string>
     <string name="oneplus_night_mode_strong">ഊഷ്മളം</string>
     <string name="oneplus_night_mode_summary">നൈറ്റ് മോഡ് കണ്ണിന് ക്ഷീണവും ആയാസവും ഉണ്ടാക്കുന്നത് തടയാനായി സ്ക്രീനിനെ കടുത്ത നിറത്തിലേക്ക് കാലിബ്രേറ്റുചെയ്യും. ഇത് നിങ്ങളെ നന്നായി ഉറങ്ങാൻ സഹായിച്ചേക്കാം. ഷെഡ്യൂൾചെയ്ത പ്രകാരം ആക്റ്റിവേറ്റുചെയ്യാൻ ശുപാർശ ചെയ്യുന്നു.</string>
@@ -3828,7 +3843,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_notch_display_area">നോച്ച്</string>
     <string name="oneplus_notch_display_choose_title">നോച്ച് പ്രദേശം എങ്ങനെ പ്രദർശിപ്പിക്കാമെന്ന് തിരഞ്ഞെടുക്കുക</string>
     <string name="oneplus_notch_display_title">നോച്ച് ‍ഡിസ്‍പ്ലേ</string>
-    <string name="oneplus_notice_vibrate_intensity">അറിയിപ്പുകള്‍</string>
+    <string name="oneplus_notice_vibrate_intensity">നോട്ടിഫിക്കേഷനുകള്‍</string>
     <string name="oneplus_notification_advance_settings">അറിയിപ്പിനുള്ള വര്‍ദ്ധിച്ച ക്രമീകരണങ്ങള്‍</string>
     <string name="oneplus_notification_alert_title">പ്രധാനപ്പെട്ടത്</string>
     <string name="oneplus_notification_channel_summary_low">പ്രാധാന്യം കുറഞ്ഞവ, ശബ്ദമോ വൈബ്രേഷനോ ഇല്ലാതെ</string>
@@ -3846,13 +3861,13 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_notification_sound_default">ഡിഫോള്‍ട്ട് അറിയിപ്പ്</string>
     <string name="oneplus_notification_ways">ഡിസ്‌പ്ലേ മോഡ്</string>
     <string name="oneplus_notification_ways_title">എങ്ങനെ അറിയിപ്പുകൾ കാണിക്കാം</string>
-    <string name="oneplus_notifications">അറിയിപ്പുകള്‍</string>
+    <string name="oneplus_notifications">നോട്ടിഫിക്കേഷനുകള്‍</string>
     <string name="oneplus_notifications_3rd_calls">മൂന്നാം കക്ഷി കോളുകൾക്കുള്ള അറിയിപ്പുകൾ</string>
     <string name="oneplus_notifications_3rd_calls_summary">സോഷ്യൽ ആപ്പുകളിൽ നിന്നുള്ള വോയ്‌സ് അല്ലെങ്കിൽ വീഡിയോ കോളുകൾ അറിയിപ്പുകളായി കാണിക്കും</string>
-    <string name="oneplus_notifications_and_vibration">അറിയിപ്പ് ശബ്ദവും വൈബ്രേഷനും</string>
+    <string name="oneplus_notifications_and_vibration">അറിയിപ്പ് ശബ്ദവും&amp; വൈബ്രേഷനും</string>
     <string name="oneplus_notifications_free">സൗജന്യം</string>
     <string name="oneplus_notifications_meet">മീറ്റ്</string>
-    <string name="oneplus_notifications_sound">Notification sound</string>
+    <string name="oneplus_notifications_sound">നോട്ടിഫിക്കേഷൻ ശബ്ദം</string>
     <string name="oneplus_o2_contributors">HydrogenOS സംഭാവകർ</string>
     <string name="oneplus_open_bed_time_mode_schedule_summary">ഇഷ്‌ടാനുസൃത സമയമനുസരിച്ച് ഓണാക്കുക</string>
     <string name="oneplus_open_bed_time_mode_schedule_title">ഷെഡ്യൂൾ ചെയ്യുക</string>
@@ -3891,7 +3906,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_pin_code_attempts_count">"നിങ്ങളുടെ നിലവിലുള്ള SIM കാര്‍ഡ് PIN നല്‍കുക.
 %d ശ്രമങ്ങള്‍ ശേഷിക്കുന്നു."</string>
     <string name="oneplus_pocket_mode_summary">ഫോൺ നിങ്ങളുടെ പോക്കറ്റിലായിരിക്കുമ്പോൾ അപ്രതീക്ഷിതമായി സ്ക്രീനിൽ സ്പർശിക്കുന്നത് തടയുക</string>
-    <string name="oneplus_pre_application">പ്രി ഇന്‍സ്റ്റാള്‍‌ ചെയ്ത ആപ്ലിക്കേഷനുകളുടെ പട്ടിക</string>
+    <string name="oneplus_pre_application">പ്രീഇന്‍സ്റ്റാള്‍‌ ചെയ്ത ആപ്ലിക്കേഷനുകളുടെ പട്ടിക</string>
     <string name="oneplus_preference_settings">പെരുമാറ്റം</string>
     <string name="oneplus_preference_settings_auto_activate">ഷെഡ്യൂൾ ചെയ്തു</string>
     <string name="oneplus_preference_settings_behavior">മുൻഗണനകൾ</string>
@@ -3899,25 +3914,25 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_preference_settings_manual_open">സ്റ്റാറ്റസ്</string>
     <string name="oneplus_preference_settings_turn_off_time">വരെ</string>
     <string name="oneplus_preference_settings_turn_on">ശല്യപ്പെടുത്തരുത് ഓണാക്കുക</string>
-    <string name="oneplus_preference_settings_turn_on_time">മുതല്‍</string>
+    <string name="oneplus_preference_settings_turn_on_time">ആരംഭം</string>
     <string name="oneplus_prior_to_use_you_need_to">ഉപയോഗിക്കുന്നതിന് മുമ്പ്, നിങ്ങള്‍ ഇത് ചെയ്യേണ്ടതുണ്ട്：</string>
     <string name="oneplus_privacy_policy">സ്വകാര്യതാ നയം</string>
     <string name="oneplus_privacy_protection_title">എന്‍ക്രിപ്റ്റ് ചെയ്‌ത സ്ഥലം</string>
-    <string name="oneplus_product_info_introduce">ഉപകരണ വിവരവും വാറന്റി കാർഡും</string>
+    <string name="oneplus_product_info_introduce">ഉപകരണ വിവരവും &amp; വാറന്റി കാർഡും</string>
     <string name="oneplus_product_info_summary">വാറൻ്റി കാർഡ്, പ്രിഇൻസ്റ്റാൾ ചെയ്ത ലിസ്റ്റ്</string>
     <string name="oneplus_proximity_summary_disable">ആംബിയന്‍റ് ഡിസ്‍പ്ലേ ഓഫായതിനാല്‍ ലഭ്യമല്ല</string>
     <string name="oneplus_quick_clipboard">ക്വിക് ക്ലിപ്ബോര്‍ഡ്</string>
     <string name="oneplus_quick_clipboard_summary">കോപ്പി ചെയ്യാനുള്ള കഴിവ് വിപുലീകരിക്കുകയും തുടര്‍ന്ന് കോപ്പി പ്രകാരം അടുത്ത പ്രവര്‍ത്തനം നിര്‍ദ്ദേശിക്കുകയും ചെയ്യുക</string>
     <string name="oneplus_quick_gestures">ആംഗ്യങ്ങള്‍</string>
-    <string name="oneplus_quick_gestures_title">ക്വിക്ക് ക്യാപ്ചര്‍</string>
+    <string name="oneplus_quick_gestures_title">ദ്രുത ആംഗ്യങ്ങൾ</string>
     <string name="oneplus_quick_launch_how_to_exit_summary">അതിവേഗ സമാരംഭ പാനലിൽ നിന്ന് പുറത്തുകടക്കാൻ താഴേക്ക് സ്വൈപ്പ് ചെയ്യുക</string>
     <string name="oneplus_quick_launch_how_to_exit_title">അതിവേഗ സമാരംഭത്തിൽ നിന്ന് പുറത്തുകടക്കുക</string>
     <string name="oneplus_quick_launch_how_to_use_summary">"1. അതിവേഗ സമാരംഭ പാനൽ തുറക്കാൻ അൺലോക്കുചെയ്തശേഷം നിങ്ങൾ വിരൽ വയ്ക്കുന്നത് തുടരുക
 2. കുറുക്കുവഴി തിരഞ്ഞെടുക്കാൻ സ്വൈപ്പുചെയ്യുകയും അത് സമാരംഭിക്കാൻ വിരലെടുക്കുകയും ചെയ്യുക"</string>
     <string name="oneplus_quick_launch_how_to_use_title">അതിവേഗ സമാരംഭം ഉപയോഗിക്കുന്നു</string>
-    <string name="oneplus_quick_launch_summary">ക്വിക്ക് പേ ആരംഭിക്കാനോ ആപ്പുകൾ സജീവമാക്കാനോ ഫിംഗർപ്രിന്റ് തിരിച്ചറിയൽ ഏരിയയിൽ ദീർഘനേരം അമർത്തുക</string>
+    <string name="oneplus_quick_launch_summary">ഫോണ്‍ ലോക്കായിരിക്കുമ്പോള്‍ ക്വിക് പേ ആരംഭിക്കാന്‍ വിരലടയാള സെന്‍സറില്‍ അമര്‍ത്തിപ്പിടിക്കുക</string>
     <string name="oneplus_quick_launch_title">അതിവേഗ സമാരംഭം</string>
-    <string name="oneplus_quick_launch_toggle_summary">ഫോൺ ലോക്കായിരിക്കുമ്പോൾ, ക്വിക്ക് പേ ആരംഭിക്കാനോ ആപ്പുകൾ സജീവമാക്കാനോ ഫിംഗർപ്രിന്റ് തിരിച്ചറിയൽ ഏരിയയിൽ ദീർഘനേരം അമർത്തുക</string>
+    <string name="oneplus_quick_launch_toggle_summary">ഫോണ്‍ ലോക്കായിരിക്കുമ്പോള്‍ ക്വിക് പേ ആരംഭിക്കാന്‍ വിരലടയാള സെന്‍സറില്‍ അമര്‍ത്തിപ്പിടിക്കുക</string>
     <string name="oneplus_quick_launch_toggle_title">അതിവേഗ സമാരംഭം ഓൺ ചെയ്യുക</string>
     <string name="oneplus_quick_reply">ലാൻഡ്‌സ്കേപ്പിൽ അതിവേഗ മറുപടി</string>
     <string name="oneplus_quick_reply_content">വീഡിയോ അല്ലെങ്കിൽ ഗെയിം നിർത്താതെ തന്നെ അറിയിപ്പുകൾ വേഗത്തിൽ കാണുകയും പ്രതികരിക്കുകയും ചെയ്യുക. നിങ്ങൾ ആപ്പിൽ നിന്ന് പുറത്തുപോകുന്നത് വരെ ശല്യപ്പെടുത്തരുത് മോഡ് പ്രാപ്തമാക്കുന്നതിനായി ചാറ്റ് ബബിളുകൾ താഴേക്ക് വലിച്ചിടുക.</string>
@@ -3941,7 +3956,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_quickpay_unlock_swtch_title">ഓണായ സ്ക്രീനില്‍ നിന്നുള്ള ക്വിക് പേ</string>
     <string name="oneplus_quickpay_way_alipay_qrcode">Alipay QR കോഡ്</string>
     <string name="oneplus_quickpay_way_alipay_scanning">Alipay സ്കാനിങ്ങ്</string>
-    <string name="oneplus_quickpay_way_paytm">Paytm</string>
+    <string name="oneplus_quickpay_way_paytm">പേയ്ടിഎം</string>
     <string name="oneplus_quickpay_way_wecaht_qrcode">WeChat QR കോഡ്</string>
     <string name="oneplus_quickpay_way_wecaht_ridecode">WeChat ട്രാൻസിസ്റ്റ് QR കോഡ്</string>
     <string name="oneplus_quickpay_way_wecaht_scanning">WeChat സ്കാനിങ്ങ്</string>
@@ -3954,7 +3969,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_reading_mode_activate_manual">മാനുവലായി ആക്ടിവേറ്റ് ചെയ്തു</string>
     <string name="oneplus_reading_mode_add_apps">വായന മോഡിന് വേണ്ടി ആപ്പുകള്‍ ചേര്‍ക്കുക</string>
     <string name="oneplus_reading_mode_ask">ഓരോ തവണയും ചോദിക്കുക</string>
-    <string name="oneplus_reading_mode_auto_summary">ഈ ആപ്പുകള്‍ ഓണായിരിക്കുമ്പോള്‍ വായന മോഡ് സ്വയം ഓണാകുകയും അവ അടയ്ക്കുമ്പോള്‍ സ്വയം അടയ്ക്കുകയും ചെയ്യും</string>
+    <string name="oneplus_reading_mode_auto_summary">ഈ ആപ്പുകള്‍ ഓണായിരിക്കുമ്പോള്‍ വായന മോഡ് സ്വയം ഓണാകുകയും അവ അടയ്ക്കുമ്പോള്‍ സ്വയം ഓഫാകുകയും ചെയ്യും.</string>
     <string name="oneplus_reading_mode_available">ഇഫക്റ്റ് ഇല്ല</string>
     <string name="oneplus_reading_mode_block_peek_notifications">പീക്ക് അറിയിപ്പുകൾ തടയുക</string>
     <string name="oneplus_reading_mode_chromatic">ക്രോമാറ്റിക് ഇഫക്റ്റ്</string>
@@ -3964,7 +3979,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_reading_mode_mono">മോണോ ഇഫക്റ്റ്</string>
     <string name="oneplus_reading_mode_select_effect">ഇഫക്റ്റ് തിരഞ്ഞെടുക്കുക</string>
     <string name="oneplus_reading_mode_select_effect_for_app">\"%1$s\" എന്നതിനായി ഇഫക്റ്റ് തിരഞ്ഞെടുക്കുക</string>
-    <string name="oneplus_reading_mode_summary">ചുറ്റുപാടുമുള്ള വെളിച്ചത്തിന്‍റെ അവസ്ഥയെ ആശ്രയിച്ച്, വായന മോഡ് സക്രീന്‍ കളര്‍ ടെംപറേച്ചറും ഇഷ്ടാനുസൃതമാക്കിയ താരതമ്യവും ചുറ്റുപാടിന് അനുയോജ്യമായി ടെക്സ്റ്റ് വായിക്കുന്നതിന് വേണ്ടി ക്രമീകരിക്കും, ഇത് വായനാ അനുഭവത്തെ മെച്ചപ്പെടുത്തും.</string>
+    <string name="oneplus_reading_mode_summary">ചുറ്റുപാടുമുള്ള വെളിച്ചത്തിന്‍റെ അവസ്ഥയെ ആശ്രയിച്ച്, വായന മോഡ് സക്രീന്‍ കളര്‍ ടെംപറേച്ചറും ഇച്ഛാനുസൃതമാക്കിയ താരതമ്യവും ചുറ്റുപാടിന് അനുയോജ്യമായി ടെക്സ്റ്റ് വായിക്കുന്നതിന് വേണ്ടി ക്രമീകരിക്കും, ഇത് വായനാ അനുഭവത്തെ മെച്ചപ്പെടുത്തും.</string>
     <string name="oneplus_reading_mode_summary_no_sensor">വായനാ മോഡ്, സ്ക്രീനിന്റെയും ടെക്സ്റ്റിന്റെയും ഡിസ്പ്ലേ ഒപ്റ്റിമൈസ് ചെയ്ത് ഇ-ബുക്ക് റീഡർ പോലെ വായനാനുഭവം സുഖകരമാക്കുന്നു.</string>
     <string name="oneplus_reading_mode_tips">വാക്കുകളുടെ ആഴത്തിലേക്ക് മോണോ ഇഫക്റ്റ് നിങ്ങളെ നയിക്കും; കൂടുതൽ സൌകര്യപ്രദമായ കളർ വായനാ അനുഭവം ക്രോമാറ്റിക് ഇഫക്റ്റ് പ്രദാനം ചെയ്യും</string>
     <string name="oneplus_reading_mode_turn_on">വായന മോഡ് ഓണ്‍ ചെയ്യുക</string>
@@ -3983,13 +3998,13 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_rename_fingerprint_list">വിരലടയാളം പുനര്‍നാമകരണം ചെയ്യുക</string>
     <string name="oneplus_reset_all_data">എല്ലാ ഡാറ്റയും റീസെറ്റ് ചെയ്യുക</string>
     <string name="oneplus_reset_network">നെറ്റ്‍വര്‍ക്ക് ക്രമീകരണങ്ങള്‍ റീസെറ്റ് ചെയ്യുന്നു, ദയവായി കാത്തിരിക്കുക...</string>
-    <string name="oneplus_ring_pattern">റിംങ്ങ്</string>
+    <string name="oneplus_ring_pattern">റിംഗ്</string>
     <string name="oneplus_ring_pattern_soc_tri_state_summary">കോളുകളും അറിയിപ്പുകളും റിംഗ് ചെയ്യും</string>
     <string name="oneplus_ring_pattern_summary">കോളുകളും അറിയിപ്പുകളും റിംഗ് ചെയ്യും</string>
     <string name="oneplus_ringtone_and_vibrate">ശബ്ദവും വൈബ്രേഷനും</string>
     <string name="oneplus_ringtones_oneplus_tune">OnePlus ട്യൂണ്‍</string>
     <string name="oneplus_rotation_silent_enable_summary">ഇന്‍കമിങ്ങ് കോള്‍ നിശബ്ദമാക്കാന്‍ ഡിവൈസ് ഫ്ലിപ്പ് ചെയ്യുക</string>
-    <string name="oneplus_rotation_silent_enable_title">നിശബ്ദമാക്കാന്‍ ഫ്ലിപ് ചെയ്യുക</string>
+    <string name="oneplus_rotation_silent_enable_title">നിശബ്ദമാക്കാന്‍ ഫ്ലിപ്പ് ചെയ്യുക</string>
     <string name="oneplus_scene_mode">സീനുകൾ</string>
     <string name="oneplus_schedule">ഷെഡ്യൂൾ ചെയ്യുക</string>
     <string name="oneplus_screen">സ്ക്രീൻ</string>
@@ -4000,11 +4015,11 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_screen_color_mode_default">ഡിസ്പ്ലേ-P3（ഡിഫോൾട്ട്）</string>
     <string name="oneplus_screen_color_mode_defined">ഇച്ഛാനുസൃതമായ നിറം</string>
     <string name="oneplus_screen_color_mode_ntsc">AMOLED വൈഡ് ഗമുട്ട്</string>
-    <string name="oneplus_screen_color_mode_reading_mode_on_summary">വായനാ മോഡ് ഓണ്‍ ആയതിനാല്‍ ലഭ്യമല്ല</string>
+    <string name="oneplus_screen_color_mode_reading_mode_on_summary">വായന മോഡ് ഓണ്‍ ആയതിനാല്‍ ലഭ്യമല്ല</string>
     <string name="oneplus_screen_color_mode_soft">സോഫ്റ്റ്</string>
     <string name="oneplus_screen_color_mode_title">സ്ക്രീന്‍ താരതമ്യം</string>
-    <string name="oneplus_screen_color_mode_title_summary">നൈറ്റ് മോഡ് ഓണ്‍ ആയതിനാല്‍ ലഭ്യമല്ല</string>
-    <string name="oneplus_screen_features_not_available_toast">ഓണായിരിക്കുമ്പോൾ, സ്‌ക്രീൻ കാലിബറേഷൻ പോലുള്ള ഫീച്ചറുകൾ ലഭ്യമായിരിക്കില്ല</string>
+    <string name="oneplus_screen_color_mode_title_summary">വിഷൻ കംഫോർട്ട് മോഡ് ഓണ്‍ ആയതിനാല്‍ ലഭ്യമല്ല</string>
+    <string name="oneplus_screen_features_not_available_toast">ഓണായിരിക്കുമ്പോൾ, സ്‌ക്രീൻ കാലിബ്രേഷൻ പോലുള്ള ഫീച്ചറുകൾ ലഭ്യമായിരിക്കില്ല</string>
     <string name="oneplus_screen_refresh_rate">പുതുക്കൽ നിരക്ക്</string>
     <string name="oneplus_screen_refresh_rate_60hz_summary">നല്ല ബാറ്ററി ലൈഫ്, പക്ഷെ കുറഞ്ഞ അനായാസത</string>
     <string name="oneplus_screen_refresh_rate_auto_summary">ഉയർന്ന റിഫ്രഷ് റേറ്റിൽ നല്ല അനായാസത</string>
@@ -4016,7 +4031,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_screen_resolution_adjust_intelligent_switch_summary">ഉചിതമായ റെസലൂഷനിലേക്ക് സ്വയമേവ മാറുക</string>
     <string name="oneplus_screen_resolution_adjust_other_summary">പരമാവധി വ്യക്‌തത, വർദ്ധിച്ച പവർ ഉപഭോഗം (3120×1440)</string>
     <string name="oneplus_screen_resolution_adjust_other_summary_19811">പരമാവധി വ്യക്‌തത, വർദ്ധിച്ച പവർ ഉപഭോഗം (3168×1440)</string>
-    <string name="oneplus_search_keyword_about_settings">device name, android version, build number, model, CPU, storage, RAM, ROM, camera, pixel, screen, Verification, Legal information, Warranty card, preinstalled list, Award</string>
+    <string name="oneplus_search_keyword_about_settings">ഉപകരണത്തിന്റെ പേര്, ആൻഡ്രോയിഡ് പതിപ്പ്, ബിൽഡ് നമ്പർ, മോഡൽ, സിപിയു, സംഭരണം, റാം, റോം, ക്യാമറ, പിക്‌സൽ, സ്‌ക്രീൻ, പരിശോധന, നിയമ വിവരങ്ങൾ, വാറന്റി കാർഡ്, പ്രീഇൻസ്റ്റാൾ ചെയ്‌ത പട്ടിക, അവാർഡ്</string>
     <string name="oneplus_search_keyword_accent_color">നിറം</string>
     <string name="oneplus_search_keyword_app_lock">ലോക്ക്,PIN,പാസ്‌വേഡുകൾ</string>
     <string name="oneplus_search_keyword_connected_device_manager">ബന്ധിപ്പിച്ച ഉപകരണ മാനേജര്‍, ഉപകരണം</string>
@@ -4054,9 +4069,12 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_search_keyword_sounds_and_notifications_interruptions">ശല്യപ്പെടുത്തരുത്, തടപ്പെടുത്തുക, തടപ്പെടുത്തൽ, ബ്രേക്ക്, മോഡ്</string>
     <string name="oneplus_search_keyword_swap_navkeys">സ്വാപ് ബട്ടണുകള്‍</string>
     <string name="oneplus_search_keyword_switch">കൈമാറ്റം,ഡാറ്റ മൈഗ്രേഷൻ</string>
-    <string name="oneplus_search_keyword_theme_settings">ലോക്ക് സ്‌ക്രീൻ ഇഷ്‌ടാനുസൃതമാക്കൽ, വാൾപേപ്പറുകൾ, ക്ലോക്ക് സ്റ്റൈൽ, വിരലടയാള ആനിമേഷൻ, Horizon light, സിസ്റ്റം ഇഷ്‌ടാനുസൃതമാക്കൽ, ആക്‌സന്റ് നിറം, ആകൃതി, ഫോണ്ട്, ടോൺ, ഐക്കൺ പായ്ക്ക്, ഇല്ലുമിനേറ്റിംഗ് ലൈറ്റ്, ന്യുവാൻസ്ഡ് ഡാർക്ക്, ആകർഷകമായ നിറങ്ങൾ</string>
+    <string name="oneplus_search_keyword_theme_settings">ലോക്ക് സ്‌ക്രീൻ ഇഷ്‌ടാനുസൃതമാക്കൽ, വാൾപേപ്പറുകൾ, ക്ലോക്ക് സ്റ്റൈൽ, വിരലടയാള ആനിമേഷൻ, Horizon Light, സിസ്റ്റം ഇഷ്‌ടാനുസൃതമാക്കൽ, ആക്‌സന്റ് നിറം, ആകൃതി, ഫോണ്ട്, ടോൺ, ഐക്കൺ പായ്‌ക്ക്, ഇല്ലുമിനേറ്റിംഗ് ലൈറ്റ്, ന്യുവാൻസ്ഡ് ഡാർക്ക്, ആകർഷകമായ നിറങ്ങൾ</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">ലോക്ക് സ്‌ക്രീൻ ഇഷ്‌ടാനുസൃതമാക്കൽ, വാൾപേപ്പറുകൾ, ക്ലോക്ക് സ്റ്റൈൽ, വിരലടയാള ആനിമേഷൻ, Horizon Light, സിസ്റ്റം ഇഷ്‌ടാനുസൃതമാക്കൽ, ആക്‌സന്റ് നിറം, ആകൃതി, ഫോണ്ട്, ടോൺ, ഐക്കൺ പായ്‌ക്ക്, ഇല്ലുമിനേറ്റിംഗ് ലൈറ്റ്, ന്യുവാൻസ്ഡ് ഡാർക്ക്, ആകർഷകമായ നിറങ്ങൾ, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light">ലോക്ക് സ്‌ക്രീൻ ഇഷ്‌ടാനുസൃതമാക്കൽ, വാൾപേപ്പറുകൾ, ക്ലോക്ക് സ്റ്റൈൽ, വിരലടയാള ആനിമേഷൻ, സിസ്റ്റം ഇഷ്‌ടാനുസൃതമാക്കൽ, ആക്‌സന്റ് നിറം, ആകൃതി, ഫോണ്ട്, ടോൺ, ഐക്കൺ പായ്ക്ക്, ഇല്ലുമിനേറ്റിംഗ് ലൈറ്റ്, ന്യുവാൻസ്ഡ് ഡാർക്ക്, ആകർഷകമായ നിറങ്ങൾ</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">ലോക്ക് സ്‌ക്രീൻ ഇഷ്‌ടാനുസൃതമാക്കൽ, വാൾപേപ്പറുകൾ, ക്ലോക്ക് സ്റ്റൈൽ, വിരലടയാള ആനിമേഷൻ, Horizon Light, സിസ്റ്റം ഇഷ്‌ടാനുസൃതമാക്കൽ, ആക്‌സന്റ് നിറം, ആകൃതി, ഫോണ്ട്, ടോൺ, ഐക്കൺ പായ്‌ക്ക്,McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_new">ലോക്ക് സ്‌ക്രീൻ ഇഷ്‌ടാനുസൃതമാക്കൽ, വാൾപേപ്പറുകൾ, ക്ലോക്ക് സ്റ്റൈൽ, വിരലടയാള ആനിമേഷൻ, Horizon Light, സിസ്റ്റം ഇഷ്‌ടാനുസൃതമാക്കൽ, ആക്‌സന്റ് നിറം, ആകൃതി, ഫോണ്ട്, ടോൺ, ഐക്കൺ പായ്‌ക്ക്.</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light">ലോക്ക് സ്‌ക്രീൻ ഇഷ്‌ടാനുസൃതമാക്കൽ, വാൾപേപ്പറുകൾ, ക്ലോക്ക് സ്റ്റൈൽ, വിരലടയാള ആനിമേഷൻ, സിസ്റ്റം ഇഷ്‌ടാനുസൃതമാക്കൽ, ആക്‌സന്റ് നിറം, ആകൃതി, ഫോണ്ട്, ടോൺ, ഐക്കൺ പായ്‌ക്ക്, ഇല്ലുമിനേറ്റിംഗ് ലൈറ്റ്, ന്യുവാൻസ്ഡ് ഡാർക്ക്, ആകർഷകമായ നിറങ്ങൾ</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">ലോക്ക് സ്‌ക്രീൻ ഇഷ്‌ടാനുസൃതമാക്കൽ, വാൾപേപ്പറുകൾ, ക്ലോക്ക് സ്റ്റൈൽ, വിരലടയാള ആനിമേഷൻ, ആക്‌സന്റ് നിറം, ആകൃതി, ഫോണ്ട്, ടോൺ, ഐക്കൺ പായ്‌ക്ക്.</string>
     <string name="oneplus_search_keyword_three_screenshots">സ്ക്രീന്‍ഷോട്ട്</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">അറിയിപ്പുകൾ,അനുഭവം,പ്രോഗ്രാം,മെച്ചപ്പെടുത്തൽ</string>
@@ -4068,13 +4086,13 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_security_detection_summary">അറിയില്ലാത്ത ഉറവിട ആപ്പുകൾക്കുള്ള സുരക്ഷ ഡിറ്റക്ഷൻ</string>
     <string name="oneplus_security_detection_title">OnePlus സുരക്ഷ ഡിറ്റക്ഷൻ</string>
     <string name="oneplus_security_lock_settings_summary">അൺലോക്ക് താൽപ്പര്യങ്ങൾ, ലൊക്കേഷൻ സേവനം, ആപ്പ് ലോക്കർ</string>
-    <string name="oneplus_security_lock_settings_title">സുരക്ഷയും സ്വകാര്യതയും</string>
+    <string name="oneplus_security_lock_settings_title">സുരക്ഷയും&amp; സ്വകാര്യതയും</string>
     <string name="oneplus_security_settings_fingerprint_enroll_error_dialog_title">സജ്ജീകരണം പരാജയപ്പെട്ടു</string>
-    <string name="oneplus_security_settings_fingerprint_enroll_introduction_message">"നിങ്ങളുടെ ഫോൺ അൺലോക്ക് ചെയ്യാൻ, വാങ്ങലുകൾ അംഗീകരിക്കാൻ അല്ലെങ്കിൽ ആപ്പുകളിലേയ്ക്ക് സൈനിൻ ചെയ്യാൻ വിരലടയാളം തിരിച്ചറിയൽ പ്രദേശത്ത് അമർത്തുക. 
+    <string name="oneplus_security_settings_fingerprint_enroll_introduction_message">"നിങ്ങളുടെ ഫോൺ അൺലോക്കുചെയ്യാനോ വാങ്ങലുകൾക്ക് അംഗീകാരം നൽകാനോ അപ്ലിക്കേഷനുകളിലേക്ക് പ്രവേശിക്കാനോ വിരലടയാളം തിരിച്ചറിയൽ ഏരിയ അമർത്തുക. 
 
 ശ്രദ്ധിക്കുക: 
-1.നിങ്ങളുടെ വിരലടയാളം ഒരു ദൃഢമായ പാറ്റേൺ അല്ലെങ്കിൽ PIN-നേക്കാളും സുരക്ഷ കുറഞ്ഞതായിരിക്കാം.
-2.വിരലടയാളത്തിന്റെ ലഭ്യത ഉറപ്പാക്കുന്നതിന് പരിരക്ഷിത ഫിലിമിന്റെ ഓരോ പുനഃസ്ഥാപനത്തിനുശേഷവും നിങ്ങളുടെ വിരലടയാളം വീണ്ടും നൽകുക."</string>
+1. നിങ്ങളുടെ വിരലടയാളം ശക്തമായ പാറ്റേണിനേക്കാളും പിൻ- നേക്കാൾ സുരക്ഷിതമല്ലാത്തതായിരിക്കാം. 
+2. വിരലടയാളത്തിന്റെ ലഭ്യത ഉറപ്പാക്കുന്നതിന് സംരക്ഷണ ഫിലിമിന്റെ ഓരോ മാറ്റിസ്ഥാപനത്തിനും ശേഷം ദയവായി നിങ്ങളുടെ വിരലടയാളം വീണ്ടും നൽകുക."</string>
     <string name="oneplus_security_settings_fingerprint_exists_dialog_message">ഈ വിരലടയാളം ഇതിനകം ചേര്‍ത്തിട്ടുണ്ട്, ദയവായി മറ്റൊരു വിരലടയാളം ശ്രമിക്കുക.</string>
     <string name="oneplus_security_settings_fingerprint_toggle_category_title">ആംബിയന്റ് ഡിസ്പ്ലേയിൽ ഫിംഗർ പ്രിന്റ് ഐക്കൺ കാണിക്കുക</string>
     <string name="oneplus_security_settings_fingerprint_toggle_category_title_for_always_on">ഫിംഗർ പ്രിന്റ് ഐക്കൺ മുൻ‌ഗണനകൾ</string>
@@ -4083,9 +4101,9 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_security_settings_fingerprint_toggle_two_toast_1">\"ഉണർത്താൻ ഇരട്ട ടാപ്പ് ചെയ്യുക\" പ്രാപ്തമാക്കിയിരിക്കുന്നു, \"കാണിക്കാൻ സ്ക്രീൻ ടാപ്പ് ചെയ്യുക\" നിഷ്ക്രിയമാക്കപ്പെടും</string>
     <string name="oneplus_security_settings_fingerprint_toggle_two_toast_2">\"കാണിക്കാൻ സ്ക്രീൻ ടാപ്പ് ചെയ്യുക\" പ്രാപ്തമാക്കിയിരിക്കുന്നു, \"ഉണർത്താൻ ഇരട്ട ടാപ്പ് ചെയ്യുക\" നിഷ്ക്രിയമാക്കപ്പെടും</string>
     <string name="oneplus_security_settings_fingerprint_tolocation_advanced_settingsggle_two_title">പ്രദർശിപ്പിക്കാൻ സ്ക്രീനിൽ ടാപ്പുചെയ്യുക</string>
-    <string name="oneplus_select_fingerprint_animation_effect_1">കോസ്‌മോസ്</string>
+    <string name="oneplus_select_fingerprint_animation_effect_1">കോസ്മോസ്</string>
     <string name="oneplus_select_fingerprint_animation_effect_2">വേവ്</string>
-    <string name="oneplus_select_fingerprint_animation_effect_3">സ്ട്രൈപ്പ്</string>
+    <string name="oneplus_select_fingerprint_animation_effect_3">സ്‌ട്രൈപ്‌</string>
     <string name="oneplus_select_fingerprint_animation_effect_4">റിപ്പിൾ</string>
     <string name="oneplus_select_fingerprint_animation_effect_6">ഊർജ്ജം</string>
     <string name="oneplus_select_fingerprint_animation_effect_mcl">McLaren</string>
@@ -4095,8 +4113,8 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_service_messaging_title">OnePlus സേവന മെസേജിംഗ്</string>
     <string name="oneplus_set_time">ഷെഡ്യൂള്‍ ചെയ്ത നൈറ്റ് മോഡ്</string>
     <string name="oneplus_setting_ringtone">റിംഗ്‍ടോണ്‍ സജ്ജീകരിക്കുക</string>
-    <string name="oneplus_setting_sim_ringtone_switch">ഓരോ SIM കാര്‍‍ഡിനും റിംഗ്‍ടോണ്‍ സജ്ജീകരിക്കുക</string>
-    <string name="oneplus_settings_lab_feature_boost_summary">നിങ്ങളുടെ പ്രതിദിന ഉപയോഗത്തെ അടിസ്ഥാനമാക്കി, OnePlus ഫോണുകളുടെ വലിയ RAM-ന്റെ മുഴുവൻ ഗുണങ്ങളും സ്മാർട്ട് ബൂസ്റ്റ് പ്രയോജനപ്പെടുത്തുന്നു, അത് ആപ്പുകളും ഗെയിമുകളും ലോഡ് ചെയ്യുന്ന പ്രവർത്തനം പരമാവധി ഉപയോഗപ്പെടുത്തുന്നു.</string>
+    <string name="oneplus_setting_sim_ringtone_switch">ഓരോ SIM കാര്‍‍ഡിനും റിംഗ്‍ടോണ്‍ സജ്ജമാക്കുക</string>
+    <string name="oneplus_settings_lab_feature_boost_summary">നിങ്ങളുടെ ദൈനംദിന ഉപയോഗത്തെ അടിസ്ഥാനമാക്കി, ആപ്ലിക്കേഷനുകളും ഗെയിമുകളും ലോഡുചെയ്യുന്നതിന്റെ പ്രകടനത്തെ സ്വാധീനിക്കുന്ന One Plus ഫോണുകളുടെ വലിയ റാം സ്മാർട്ട് ബൂസ്റ്റ് പ്രയോജനപ്പെടുത്തുന്നു.</string>
     <string name="oneplus_settings_lab_feature_boost_title">സ്മാർട്ട് ബൂസ്റ്റ്</string>
     <string name="oneplus_settings_refresh_rate_settings_120">120Hz സെറ്റിംഗുകൾ</string>
     <string name="oneplus_settings_refresh_rate_settings_90">90Hz സെറ്റിംഗുകൾ</string>
@@ -4118,8 +4136,9 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_show_pattern_and_password">പാസ്‍വേഡ് അല്ലെങ്കില്‍ പാറ്റേണ്‍ പ്രദര്‍ശിപ്പിക്കുക</string>
     <string name="oneplus_silent_mode">നിശബ്ദം</string>
     <string name="oneplus_silent_mode_on">നിശബ്ദത മോഡ് ഓണ്‍ ആണ്</string>
-    <string name="oneplus_silent_mode_soc_tri_state_summary">അലാമുകള്‍ ഒഴികെ കോളുകളും അറിയിപ്പുകളും നിശബ്ദമാക്കും</string>
-    <string name="oneplus_silent_mode_summary">അലാമുകള്‍ ഒഴികെ കോളുകളും അറിയിപ്പുകളും നിശബ്ദമാക്കപ്പെടും</string>
+    <string name="oneplus_silent_mode_soc_tri_state_summary">അലാമുകള്‍ ഒഴികെ കോളുകളും അറിയിപ്പുകളും നിശബ്ദമാക്കപ്പെടും</string>
+    <string name="oneplus_silent_mode_summary">അലാമുകള്‍ ഒഴികെ കോളുകളും അറിയിപ്പുകളും നിശബ്ദമാക്കും</string>
+    <string name="oneplus_silent_notifications_status_bar">സ്റ്റാറ്റസ് ബാറിൽ നിശബ്‌ദ അറിയിപ്പ് മറയ്‌ക്കുക</string>
     <string name="oneplus_sim1_ringtone_switch">SIM കാര്‍ഡ് 1</string>
     <string name="oneplus_sim2_ringtone_switch">SIM കാര്‍ഡ് 2</string>
     <string name="oneplus_simcard_title">SIM</string>
@@ -4129,40 +4148,40 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_smart_background_management_title">അഗ്രസ്സീവ് ഡോസ് &amp; ആപ്പ് ഹൈബര്‍നേഷന്‍</string>
     <string name="oneplus_smart_wifi_connection">സ്മാർട്ട് Wi‑Fi കണക്ഷൻ</string>
     <string name="oneplus_sms">SMS</string>
-    <string name="oneplus_sms_and_vibration">സിം റിംഗ്ടോണും വൈബ്രേഷനും</string>
+    <string name="oneplus_sms_and_vibration">എസ്എംഎസ് റിംഗ്ടോണും&amp; വൈബ്രേഷനും</string>
     <string name="oneplus_snooze_options_title">നോട്ടിഫിക്കേഷൻ ഷേഡിൽ നിന്നുള്ള അറിയിപ്പുകൾ സ്‌നൂസ് ചെയ്യുക</string>
-    <string name="oneplus_sound_and_vibrate">ശബ്ദവും വൈബ്രേഷനും</string>
+    <string name="oneplus_sound_and_vibrate">ശബ്ദവും &amp; വൈബ്രേഷനും</string>
     <string name="oneplus_sound_effects_and_modes">സൌണ്ട് ഇഫക്ടുകളും മോഡുകളും</string>
     <string name="oneplus_sound_settings_summary">ശല്യപ്പെടുത്തരുത്, ഇയർഫോൺ മോഡ്</string>
     <string name="oneplus_sound_tuner">Dolby Atmos</string>
     <string name="oneplus_status_summary">ഫോൺ നമ്പർ, സിഗ്നൽ മുതലായവ</string>
     <string name="oneplus_stop_run">നിര്‍ബന്ധിതമായ അവസാനിപ്പിക്കല്‍</string>
-    <string name="oneplus_storage">സംഭരണം</string>
+    <string name="oneplus_storage">STORAGE</string>
     <string name="oneplus_sunrise_sunset">സൂര്യോദയം മുതല്‍ അസ്തമയം വരെ സ്വയം പ്രാപ്തമാക്കുക</string>
     <string name="oneplus_support_apps">പിന്തുണയ്‌ക്കുന്ന ആപ്പുകൾ</string>
     <string name="oneplus_support_summary">ഉപകരണ ഉപയോഗത്തെക്കുറിച്ചുള്ള നുറുങ്ങുകളും പതിവ് ചോദ്യങ്ങളും</string>
-    <string name="oneplus_support_title">നുറുങ്ങുകളും സഹായവും</string>
+    <string name="oneplus_support_title">നുറുങ്ങുകളും&amp; സഹായവും</string>
     <string name="oneplus_supported_apps">പിന്തുണയ്ക്കുന്ന ആപ്പുകള്‍</string>
     <string name="oneplus_suspension_notice">ഹെഡ്‌സ് അപ്പ്</string>
-    <string name="oneplus_suspension_notice_summary">ഹെഡ്‌സ് അപ്പ് അറിയിപ്പുകൾ കാണിക്കാൻ ആപ്പുകളെ അനുവദിക്കുക</string>
+    <string name="oneplus_suspension_notice_summary">ഹെഡ്‌സ് അപ്പ് അറിയിപ്പ് കാണിക്കാൻ ആപ്പുകളെ അനുവദിക്കുക</string>
     <string name="oneplus_switch">OnePlus Switch</string>
-    <string name="oneplus_switch_resolution_kill_process_confirm">മാറ്റുക</string>
+    <string name="oneplus_switch_resolution_kill_process_confirm">Switch</string>
     <string name="oneplus_switch_resolution_kill_process_tips">റെസലൂഷൻ മാറ്റുന്നത് കുറച്ച് പശ്ചാത്തല ആപ്പുകൾ അടയ്ക്കുന്നതിന് കാരണമായേക്കാം. മാറ്റുന്നത് നിങ്ങൾ സ്ഥിരീകരിക്കുന്നോ?</string>
     <string name="oneplus_switch_screen_lock_type">സ്ക്രീന്‍ ലോക്ക് ടൈപ്പ് മാറ്റുന്നു, ദയവായി കാത്തിരിക്കുക...</string>
     <string name="oneplus_system_data_summary">അക്കൗണ്ട് വിവരം, സമ്പര്‍ക്കങ്ങള്‍, ആപ്സ് ‍ഡാറ്റ എന്നിവ ഉള്‍പ്പെടുന്നു</string>
     <string name="oneplus_system_data_title">സിസ്റ്റം ഡാറ്റ</string>
     <string name="oneplus_system_default">Predeterminada del sistema</string>
-    <string name="oneplus_system_ringtone">സിസ്റ്റം സൌണ്ടുകൾ</string>
+    <string name="oneplus_system_ringtone">സിസ്റ്റം സൗണ്ടുകൾ</string>
     <string name="oneplus_system_settings_summary">ആക്സസബിലിറ്റി, തീയതിയും സമയവും, ഭാഷയും ഇൻപുട്ടും</string>
     <string name="oneplus_system_settings_title">സിസ്റ്റം ക്രമീകരണങ്ങള്‍</string>
     <string name="oneplus_system_stability_add">സിസ്റ്റം സ്ഥിരത മെച്ചപ്പെടുത്തൽ പ്രോഗ്രാമില്‍ ചേരുക</string>
     <string name="oneplus_system_stability_summary">സിസ്റ്റം ലോഗുകൾ പേരുവെളിപ്പെടുത്താതെ ആക്സസ് ചെയ്യാൻ OnePlus-നെ അനുവദിക്കുക. ഒരു പിശക് സംഭവിച്ചാൽ, ലോഗുകൾ സഹിതമുള്ള ബഗ് റിപ്പോർട്ട് സമർപ്പിക്കാൻ അനുവദിക്കുക. സിസ്റ്റം പിശകുകളുടെ വിശകലനത്തിനും സ്ഥിരത മെച്ചപ്പെടുത്തുന്നതിനും മാത്രമേ ലോഗുകൾ ഉപയോഗിക്കുകയുള്ളൂ</string>
     <string name="oneplus_system_stability_title">സിസ്‌റ്റം സ്ഥിരതാ പ്രോഗ്രാം</string>
     <string name="oneplus_system_vibrate">സിസ്റ്റം വൈബ്രേഷൻ</string>
-    <string name="oneplus_theme_accent_color">ആക്സന്‍റ് നിറം</string>
-    <string name="oneplus_theme_accent_color_customization">ഇച്ഛാനുസൃതമാക്കൽ</string>
+    <string name="oneplus_theme_accent_color">ആക്സന്റ് നിറം</string>
+    <string name="oneplus_theme_accent_color_customization">കസ്റ്റമൈസേഷൻ</string>
     <string name="oneplus_theme_accent_color_presetcolor">കളർ പ്രീസെറ്റ് ചെയ്യുക</string>
-    <string name="oneplus_theme_accent_color_select">ആക്സന്‍റ് നിറം തിരഞ്ഞെടുക്കുക</string>
+    <string name="oneplus_theme_accent_color_select">ആക്സന്റ് നിറം തിരഞ്ഞെടുക്കുക</string>
     <string name="oneplus_theme_apply_summary">ഈ തീം അപ്ലൈ ചെയ്ത ശേഷം, നിങ്ങളുടെ കസ്റ്റമൈസേഷൻ ഓപ്ഷൻ റദ്ദാക്കപ്പെടും</string>
     <string name="oneplus_theme_apply_title">നിങ്ങൾക്ക് ഈ തീം പ്രയോഗിക്കണോ?</string>
     <string name="oneplus_theme_clock">ക്ലോക്ക് സ്റ്റൈല്‍</string>
@@ -4172,13 +4191,13 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_theme_drop_summary">പരിഷ്കരണങ്ങള്‍ നിരാകരിക്കണോ?</string>
     <string name="oneplus_theme_drop_title">തിരുത്തല്‍ മോഡില്‍ നിന്ന് പുറത്ത് കടക്കുക</string>
     <string name="oneplus_theme_entrance_summary">വോൾപേപ്പറുകൾ, ആക്സന്റ് കളർ, ഫോണ്ട്, ടോൺ</string>
-    <string name="oneplus_theme_entrance_title">ഇച്ഛാനുസൃതമാക്കല്‍</string>
+    <string name="oneplus_theme_entrance_title">ഇഷ്ടാനുസൃതമാക്കല്‍</string>
     <string name="oneplus_theme_fingerprint">ഫിംഗർപ്രിൻ്റ് ആനിമേഷൻ</string>
     <string name="oneplus_theme_fingerprint_snake_action">ഫിംഗർ‌പ്രിന്റ് ഓൺ ചെയ്യുക</string>
     <string name="oneplus_theme_fingerprint_snake_tip">ഫിംഗർപ്രിന്റ് ഓണായിരിക്കുമ്പോൾ ഈ ഫീച്ചർ ലഭ്യമായിരിക്കും</string>
     <string name="oneplus_theme_font">ഫോണ്ട്</string>
     <string name="oneplus_theme_font_content">നിങ്ങൾക്കൊപ്പമുള്ള മികച്ച ടെക്നോളജി ലോകവുമായി പങ്കിടുക</string>
-    <string name="oneplus_theme_icon_pack">ഐക്കൺ പായ്ക്ക്</string>
+    <string name="oneplus_theme_icon_pack">ഐക്കണ്‍ പാക്കുകള്‍</string>
     <string name="oneplus_theme_lock_screen_customization">ലോക്ക് സ്ക്രീൻ കസ്റ്റമൈസേഷൻ</string>
     <string name="oneplus_theme_preset">നിലവിലെ തീം</string>
     <string name="oneplus_theme_preset_color">ആകർഷകമായ നിറങ്ങൾ</string>
@@ -4196,36 +4215,36 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_theme_system_customization">സിസ്റ്റം കസ്റ്റമൈസേഷൻ</string>
     <string name="oneplus_theme_tone">ടോൺ</string>
     <string name="oneplus_theme_tone_effect_color">വർണ്ണശബളം</string>
-    <string name="oneplus_theme_tone_effect_dark">ഡാര്‍ക്ക്</string>
+    <string name="oneplus_theme_tone_effect_dark">ഇരുണ്ടത്</string>
     <string name="oneplus_theme_tone_effect_light">ലൈറ്റ്</string>
     <string name="oneplus_theme_tone_effect_title">ടോൺ തിരഞ്ഞെടുക്കുക</string>
     <string name="oneplus_theme_wallpaper">വാള്‍പേപ്പറുകള്‍</string>
     <string name="oneplus_three_screenshots_enable_summary">സ്ക്രീന്‍ഷോട്ട് എടുക്കുന്നതിന് സ്ക്രീനില്‍ മൂന്ന് വിരലുകള്‍ കൊണ്ട് സ്വൈപ്പ് ചെയ്യുക</string>
-    <string name="oneplus_three_screenshots_enable_title">മൂന്ന് വിരല്‍ സ്ക്രീന്‍‌ഷോട്ട്</string>
-    <string name="oneplus_timepower_power_off_title">പവർ ഓഫാകുന്നതിന് സമയം ക്രമീകരിക്കുക</string>
-    <string name="oneplus_timepower_power_on_title">പവർ ഓണാകുന്നതിന് സമയം ക്രമീകരിക്കുക</string>
+    <string name="oneplus_three_screenshots_enable_title">മൂന്ന്-വിരല്‍ സ്ക്രീന്‍‌ഷോട്ട്</string>
+    <string name="oneplus_timepower_power_off_title">പവർ ഓഫാക്കുന്നതിന് സമയം സജ്ജമാക്കുക</string>
+    <string name="oneplus_timepower_power_on_title">പവർ ഓണാക്കുന്നതിന് സമയം സജ്ജമാക്കുക</string>
     <string name="oneplus_timer_shutdown_disable_summary">ഈ സംവിധാനം അണ്‍ലോക്ക് ചെയ്യുന്നതിന് സ്റ്റാര്‍ട്ട് അപ്പില്‍ പാസ്‍വേഡ് അപ്രാപ്തമാക്കുക</string>
     <string name="oneplus_timer_shutdown_summary">നിങ്ങളുടെ ഫോണ്‍ %ds ല്‍ സ്വയം ഷട്ട് ഡൗണ്‍ ചെയ്യും. വേഗത്തില്‍ ഷട്ട് ഡൗണ്‍ ചെയ്യുന്നതിന് സ്ഥിരീകരിക്കുക.</string>
     <string name="oneplus_to_select_assistant_app_dialog">നിങ്ങൾക്ക് ആക്റ്റിവേറ്റ് ചെയ്യേണ്ട അസിസ്റ്റൻ്റ് ആപ്പ് തിരഞ്ഞെടുക്കുക</string>
-    <string name="oneplus_tools_quicklaunch_summary">ഗെയിമിംഗ് മോഡ്, ദ്രുത സമാരംഭം, സമാന്തര ആപ്പുകൾ</string>
-    <string name="oneplus_tools_quicklaunch_summary_no_gamingmode">ദ്രുത സമാരംഭം, സമാന്തര ആപ്പുകൾ</string>
+    <string name="oneplus_tools_quicklaunch_summary">ഗെയിമിങ്ങ് മോഡ്, അതിവേഗ ലോഞ്ച്, സമാന്തര ആപ്പുകൾ, ആപ്പ് ലോക്കർ</string>
+    <string name="oneplus_tools_quicklaunch_summary_no_gamingmode">അതിവേഗ ലോഞ്ച്, സമാന്തര ആപ്പുകൾ, ആപ്പ് ലോക്കർ</string>
     <string name="oneplus_tools_summary">ഗെയിമിംഗ് മോഡ്, ആപ്പ് ലോക്കർ, ഒരുപോലുള്ള ആപ്സുകൾ</string>
     <string name="oneplus_tools_summary_U30">ഗെയിമിംഗ് മോഡ്, പോക്കറ്റ് മോഡ്, പവർ ഓൺ/ഓഫ് ഷെഡ്യൂൾ ചെയ്യൽ</string>
     <string name="oneplus_tools_summary_no_gamingmode">ആപ്പ് ലോക്കർ, സമാന്തര ആപ്പുകൾ</string>
     <string name="oneplus_tools_title">യൂട്ടിലിറ്റികൾ</string>
     <string name="oneplus_top_level_accounts_summary">OnePlus അക്കൌണ്ട്, മറ്റ് അക്കൌണ്ടുകൾ</string>
     <string name="oneplus_top_level_apps_and_notifs_summary">ഡിഫോള്‍ട്ട് ആപ്പുകൾ, അറിയിപ്പുകൾ, അനുമതികൾ</string>
-    <string name="oneplus_top_level_buttons_and_gestures_summary">മുന്നറിയിപ്പ് സ്ലൈഡർ, നാവിഗേഷൻ ബാർ, ആംഗ്യങ്ങൾ</string>
-    <string name="oneplus_top_level_cloud_h2_summary">ക്ലൌഡുമായി ഡാറ്റ സമന്വയിപ്പിക്കുക, എന്റെ ഫോൺ കണ്ടെത്തുക</string>
-    <string name="oneplus_top_level_cloud_o2_summary">ക്ലൌഡുമായി ഡാറ്റ സമന്വയിപ്പിക്കുക</string>
+    <string name="oneplus_top_level_buttons_and_gestures_summary">മുന്നറിയിപ്പ് സ്ലൈഡർ, നാവിഗേഷൻ ബാർ&amp;, ആംഗ്യങ്ങൾ</string>
+    <string name="oneplus_top_level_cloud_h2_summary">ക്ലൗഡ് ഉപയോഗിച്ച് ഡാറ്റ സിന്‍ക് ചെയ്ത് എന്‍റെ ഫോണ്‍ കണ്ടെത്തുക</string>
+    <string name="oneplus_top_level_cloud_o2_summary">ക്ലൗഡുമായി ഡാറ്റ സമന്വയിപ്പിക്കുക</string>
     <string name="oneplus_top_level_connected_summary">NFC, കാസ്റ്റ്, ടാപ് ചെയ്ത് പണം അടയ്ക്കുക</string>
-    <string name="oneplus_top_level_display_summary">Status bar, ambient display, Vision comfort, reading mode</string>
+    <string name="oneplus_top_level_display_summary">സ്റ്റാറ്റസ് ബാർ, ആംബിയന്റ് ഡിസ്പ്ലേ, വിഷൻ കംഫർട്ട്, വായനാ മോഡ്</string>
     <string name="oneplus_top_level_network_summary">സിം, മൊബൈൽ നെറ്റ്‌വർക്ക്, ഡാറ്റ ഉപയോഗം, ഹോട്ട്സ്പോട്ട്</string>
     <string name="oneplus_top_level_privacy_summary">അനുമതികൾ, സ്വകാര്യ ഡാറ്റ</string>
     <string name="oneplus_top_level_security_dashboard_summary">വിരലടയാളം, ഫേസ് അൺലോക്ക്, എമർജൻസി റെസ്ക്യൂ</string>
     <string name="oneplus_top_level_security_summary">വിരലടയാളം, ഫേസ് അൺലോക്ക്, എമർജൻസി റെസ്ക്യൂ</string>
     <string name="oneplus_top_level_sound_summary">ശല്യപ്പെടുത്തരുത്, ഇയർഫോൺ മോഡ്, റിംഗ്‌ടോൺ</string>
-    <string name="oneplus_top_level_system_summary">ഭാഷ; കീബോർഡ്, സമയം, റീസെറ്റ്, സിസ്റ്റം അപ്ഡേറ്റുകൾ</string>
+    <string name="oneplus_top_level_system_summary">ഭാഷയും കീബോർഡും, സമയം, റീസെറ്റ്, സിസ്റ്റം അപ്ഡേറ്റുകൾ</string>
     <string name="oneplus_top_level_system_summary_verizon">ഭാഷ &amp; കീബോർഡ്, സമയം, പുനഃക്രമീകരിക്കുക</string>
     <string name="oneplus_touch_vibrate">ടച്ച് വൈബ്രേഷൻ</string>
     <string name="oneplus_true_color_mode_summary">വ്യത്യസ്‌ത ചുറ്റുപാടുകളിൽ സുഖകരമായ ഡിസ്‌പ്ലേ ഇഫക്‌റ്റ് ഉറപ്പുവരുത്തുന്നതിന് ആംബിയന്‍റ് പ്രകാശം അടിസ്ഥാനമാക്കി സ്‌ക്രീൻ വർണ്ണം സ്വയമേവ ക്രമീകരിക്കുക</string>
@@ -4233,7 +4252,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_turn_off_time">വരെ</string>
     <string name="oneplus_turn_on_feature_cancel">റദ്ദാക്കുക</string>
     <string name="oneplus_turn_on_feature_ok">ഓണാക്കുക</string>
-    <string name="oneplus_turn_on_time">മുതല്‍</string>
+    <string name="oneplus_turn_on_time">ആരംഭം</string>
     <string name="oneplus_tws_pods_funtion">ഹെഡ്സെറ്റ് പ്രവർത്തനം</string>
     <string name="oneplus_uninstatll_multi_app_msg">സമാന്തര ആപ്പിലുള്ള എല്ലാ ഡാറ്റയും അൺഇൻസ്റ്റാൾ ചെയ്യുമ്പോൾ മായ്ക്കും. അൺഇൻസ്റ്റാൾ ചെയ്യണമെന്ന് നിങ്ങൾക്ക് തീർച്ചയാണോ?</string>
     <string name="oneplus_uninstatll_multi_app_title">സമാന്തരം %1$s</string>
@@ -4252,7 +4271,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_vibrate_intensity">വൈബ്രേഷന്‍ തീവ്രത</string>
     <string name="oneplus_vibrate_on_touch_intensity">ടാപ് ചെയ്യുമ്പോള്‍ വൈബ്രേറ്റ് ചെയ്യുക</string>
     <string name="oneplus_vibrate_rhythm">വൈബ്രേഷൻ പാറ്റേൺ</string>
-    <string name="oneplus_vibrate_strength">വൈബ്രേഷൻ പാറ്റേണും തീവ്രതയും</string>
+    <string name="oneplus_vibrate_strength">വൈബ്രേഷൻ പാറ്റേണും&amp; തീവ്രതയും</string>
     <string name="oneplus_vibration_settings_soc_tri_state">വൈബ്രേഷന്‍</string>
     <string name="oneplus_vibration_settings_soc_tri_state_summary">അലാമുകള്‍ ഒഴികെ കോളുകളും അറിയിപ്പുകളും വൈബ്രേഷൻ മാത്രമാക്കി നിശബ്ദമാക്കപ്പെടും</string>
     <string name="oneplus_vibration_summary">അലാമുകള്‍ എല്ലായ്‍പ്പോഴും റിംഗ് ചെയ്യും</string>
@@ -4262,14 +4281,14 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_video_enhancer_natural_mode">സ്വാഭാവികം</string>
     <string name="oneplus_video_enhancer_summary">വീഡിയോകള്‍ പ്ലേ ചെയ്യുമ്പോള്‍ നിറം വര്‍ദ്ധിപ്പിക്കുക</string>
     <string name="oneplus_video_enhancer_vivid_mode">വിവിഡ്</string>
-    <string name="oneplus_virtual_keyboard_category">വെർച്വൽ കീ‌ബോർഡ്</string>
-    <string name="oneplus_voice_assistant">വോയ്സ് അസിസ്‌റ്റന്റ്</string>
+    <string name="oneplus_virtual_keyboard_category">വിർച്വൽ കീ‌ബോർഡ്</string>
+    <string name="oneplus_voice_assistant">വോയ്സ് അസിസ്റ്റന്റ്</string>
     <string name="oneplus_volume_keys_adjust">ക്രമീകരിക്കാൻ വോളീയം ബട്ടണുകൾ ഉപയോഗിക്കുക</string>
     <string name="oneplus_volume_keys_adjust_media">മീഡിയ വോള്യം</string>
     <string name="oneplus_volume_keys_adjust_ringtones">റിംഗ്‍ടോണ്‍ വോള്യം</string>
     <string name="oneplus_weak_text_reminding">ടെക്സ്റ്റ് മാത്രം</string>
-    <string name="oneplus_weak_text_reminding_summary">ഹെഡ്‌സ് അപ്പ് അറിയിപ്പ് കാണിക്കാൻ ആപ്പുകളെ അനുവദിക്കുക</string>
-    <string name="oneplus_wellbeing_grayscale_open_tip">\"ഗ്രേസ്കെയിൽ\" ഫീച്ചർ ഓണാക്കിയതിനാൽ രാത്രി മോഡ് നിലവിൽ ലഭ്യമല്ല</string>
+    <string name="oneplus_weak_text_reminding_summary">ഹെഡ്‌സ് അപ്പ് അറിയിപ്പുകൾ കാണിക്കാൻ ആപ്പുകളെ അനുവദിക്കുക</string>
+    <string name="oneplus_wellbeing_grayscale_open_tip">\"ഗ്രേസ്കെയിൽ\" ഫീച്ചർ ഓണാക്കിയതിനാൽ വിഷൻ കംഫർട്ട് മോഡ് നിലവിൽ ലഭ്യമല്ല</string>
     <string name="oneplus_wifi_6_standard_hotspot_cancel">റദ്ദാക്കുക</string>
     <string name="oneplus_wifi_6_standard_hotspot_enable">പ്രാപ്തമാക്കുക</string>
     <string name="oneplus_wifi_6_standard_hotspot_title">Wi‑Fi 6 സ്‌റ്റാന്റേർഡ് ഹോട്ട്‌സ്‌പോട്ട്</string>
@@ -4285,7 +4304,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_wifi_list">Wi-Fi ലിസ്റ്റ്</string>
     <string name="oneplus_wifi_name">മൊബൈൽ ഹോട്ട്‌സ്പോട്ട് പേര്</string>
     <string name="oneplus_wifi_name_dialog_message">നിങ്ങൾ ബ്രോഡ്‌കാസ്റ്റ് നെറ്റ്‌വർക്ക് നെയിം (SSID) ഓപ്ഷൻ ഓഫ് ചെയ്താൽ, മറ്റ് ഉപകരണങ്ങൾക്ക് നിങ്ങളുടെ ഫോൺ ദൃശ്യമായിരിക്കില്ല, ലഭ്യമായ വൈ-ഫൈ നെറ്റ്‌വർക്കുകളുടെ പട്ടികയിൽ കാണില്ല. ഇതിൻ്റെ നെറ്റ്‌വർക്ക് പേര് നേരിട്ട് നൽകിക്കൊണ്ട് നിങ്ങളുടെ ഹോട്ട്‌സ്പോട്ടിലേക്ക് മറ്റ് ഉപകരണങ്ങൾക്ക് തുടർന്നും കണക്റ്റ് ചെയ്യാനാകും.</string>
-    <string name="oneplus_wifi_name_dialog_title">നിങ്ങളുടെ HotSpot ഇപ്പോൾ ദൃശ്യമല്ല</string>
+    <string name="oneplus_wifi_name_dialog_title">നിങ്ങളുടെ ഹോട്ട്സ്പോട്ട് ഇപ്പോൾ ദൃശ്യമല്ല</string>
     <string name="oneplus_wifi_scan_always_available">സ്കാനിങ്ങ് എല്ലായ്‍പ്പോഴും ലഭ്യമാണ്</string>
     <string name="oneplus_wifi_scan_always_available_summary">Wi‑Fi ഓഫായിരിക്കുമ്പോൾ പോലും നെറ്റ്‌വർക്കുകൾക്കായി സ്‌കാൻ ചെയ്യാൻ സ്ഥാന സേവനങ്ങളെയോ മറ്റ് ആപ്പുകളെയോ അനുവദിക്കുക</string>
     <string name="oneplus_wifi_scan_always_available_title">എല്ലായ്പ്പോഴും സ്കാനിങ്ങ് അനുവദിക്കുക</string>
@@ -4296,8 +4315,8 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_zen_mode_duration_summary_always_prompt">ഓരോ തവണയും ആവശ്യപ്പെടുക (സ്വയമേവ ഓൺ ആയില്ലായെങ്കിൽ)</string>
     <string name="oneplus_zen_mode_duration_summary_forever">നിങ്ങൾ ഓഫാക്കുന്നത് വരെ (സ്വയമേവ ഓണാക്കിയതല്ലാത്ത പക്ഷം)</string>
     <string name="oneplus_zen_mode_duration_summary_time_minutes">%dമിനിറ്റ് (സ്വയമേവ ഓണാക്കിയതല്ലാത്ത പക്ഷം)</string>
-    <string name="oneplus_zen_mode_footer_info">ശല്യപ്പെടുത്തരുത് ഓണായിരിക്കുമ്പോൾ, ശബ്ദവും വൈബ്രേഷനും ഓഫായിരിക്കും, നിങ്ങൾ മുകളിൽ പറഞ്ഞിരിക്കുന്ന സാഹചര്യങ്ങളിൽ ഒഴികെ</string>
-    <string name="oneplus_zen_mode_mode_manual_switch_summary">ശല്യപ്പെടുത്തരുത് സ്വയമേവ ഓണാക്കാം</string>
+    <string name="oneplus_zen_mode_footer_info">ശല്യപ്പെടുത്തരുത് ഓണായിരിക്കുമ്പോൾ, ശബ്ദവും&amp; വൈബ്രേഷനും ഓഫായിരിക്കും, നിങ്ങൾ മുകളിൽ പറഞ്ഞിരിക്കുന്ന സാഹചര്യങ്ങളിൽ ഒഴികെ</string>
+    <string name="oneplus_zen_mode_mode_manual_switch_summary">ശല്യപ്പെടുത്തരുത് സ്വമേധയാ ഓണാക്കാം</string>
     <string name="oneplus_zen_mode_settings">പെരുമാറ്റം</string>
     <string name="oneplus_zen_mode_switch">ശല്യപ്പെടുത്തരുത് ഓണാക്കുക</string>
     <string name="oneplus_zen_mode_walloftext">ശല്യപ്പെടുത്തരുത് ഓണായിരിക്കുമ്പോൾ, ശബ്ദവും വൈബ്രേഷനും ഓഫായിരിക്കും, നിങ്ങൾ താഴെ പറഞ്ഞിരിക്കുന്ന സാഹചര്യങ്ങളിൽ ഒഴികെ</string>
@@ -4308,16 +4327,14 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="op_advanced_settings">നവീനം</string>
     <string name="op_android_mode_cannot_change_color_accent">ഡിഫോള്‍ട്ട് തീമിന് സിസ്റ്റം കളര്‍ തീം മാത്രമേ ഉപയോഗിക്കാനാവൂ</string>
     <string name="op_aod_parsons_info_button">ശരി</string>
-    <string name="op_aod_parsons_info_message">"Every 24 hours, a masterpiece is created.
-
-Insight, designed together by OnePlus &amp; students from Parsons School of Design, transforms time into a visible color bar. The device's usage data drives the pattern. Every time the phone is unlocked, it leaves a groove on the bar. The longer is the utility time; the wider is the groove and vice versa. Through the insight of those grooves, take a peek at your digital life."</string>
-    <string name="op_aod_parsons_info_title">Insight</string>
+    <string name="op_aod_parsons_info_message">"ഓരോ മണിക്കൂറിലും, ഒരു മാസ്റ്റർപീസ് സൃഷ്ടിക്കപ്പെടുന്നു.
+Insight, OnePlus രൂപകൽപ്പന ചെയ്‌തിരിക്കുന്നത് &amp; പാർസൺസ് സ്കൂൾ ഓഫ് ഡിസൈനിലെ വിദ്യാർത്ഥികൾ സമയം കാണാവുന്ന വർണ്ണ ബാറാക്കി മാറ്റുന്നു. ഉപകരണത്തിന്റെ ഉപയോഗ ഡാറ്റ പാറ്റേൺ നയിക്കുന്നു. ഫോൺ അൺലോക്കുചെയ്യുമ്പോഴെല്ലാം, അത് ബാറിൽ ഒരു ആവേശം വിടുന്നു. ദൈർഘ്യമേറിയത് യൂട്ടിലിറ്റി സമയമാണ്; വിശാലമായത് ആവേശമാണ്, തിരിച്ചും. ആ ആവേശത്തിന്റെ ഉൾക്കാഴ്ചയിലൂടെ, നിങ്ങളുടെ ഡിജിറ്റൽ ജീവിതത്തിലേക്ക് എത്തിനോക്കുക."</string>
     <string name="op_app_already_uninstalled">അണ്‍ഇന്‍സ്റ്റാള്‍ ചെയ്തു</string>
     <string name="op_audio_settings">ഓഡിയോ ട്യൂണര്‍</string>
     <string name="op_auto_power_saving">സ്വയമേയുള്ള പവർ സംരക്ഷണം</string>
     <string name="op_auto_power_saving_summary">ബാറ്ററി ചാർജ് അധികം ചോർത്താതെ തന്നെ അനുയോജ്യമായ റെസലൂഷനിലേക്ക് സ്വയമേവ മാറുക</string>
-    <string name="op_battery_saver_description">Battery Saver turns off or restricts background activity, some visual effects &amp; other high-power features to extend battery life.</string>
-    <string name="op_battery_suggestion_summary">Turn on Adaptive Battery</string>
+    <string name="op_battery_saver_description">ബാറ്ററി സേവർ ഓഫുചെയ്യുകയോ പശ്ചാത്തല പ്രവർത്തനം നിയന്ത്രിക്കുകയോ ചെയ്യുന്നു, ചില വിഷ്വൽ ഇഫക്റ്റുകൾ ബാറ്ററി&amp; ബാറ്ററി ആയുസ്സ് വർദ്ധിപ്പിക്കുന്നതിനുള്ള മറ്റ് ഉയർന്ന പവർ സവിശേഷതകൾ.</string>
+    <string name="op_battery_suggestion_summary">അഡാപ്റ്റീവ് ബാറ്ററി ഓൺ ചെയ്യുക</string>
     <string name="op_cast_description">ടിവി പോലെയുള്ള ഒരു ഉപകരണത്തിൽ നിങ്ങളുടെ ഫോണിന്റെ സ്‌ക്രീനും ഓഡിയോയും പ്രദർശിപ്പിക്കുക</string>
     <string name="op_cast_nearby">സമീപമുള്ള ഉപകരണങ്ങൾ</string>
     <string name="op_cast_no_devices">സമീപത്തുള്ള ഉപകരണങ്ങൾ ഒന്നും കണ്ടെത്തിയില്ല</string>
@@ -4325,8 +4342,8 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_cast_searching">ഉപകരണങ്ങൾക്കായി തിരയുന്നു……</string>
     <string name="op_charging_Station_mute_notifications">അറിയിപ്പുകൾ മ്യൂട്ട് ചെയ്യുക</string>
     <string name="op_charging_footer_text">നിങ്ങൾ വിമാനത്താവളങ്ങൾ അല്ലെങ്കിൽ Pop-ups പോലുള്ള Oneplus ഇവന്റുകൾ സന്ദർശിക്കുമ്പോൾ സമീപത്തുള്ള ചാർജിംഗ് സ്റ്റേഷനുകളെക്കുറിച്ച് നിങ്ങളെ അറിയിക്കുന്നതാണ്.</string>
-    <string name="op_charging_optimization">ഒപ്‌റ്റിമൈസുചെയ്ത ചാർജ്ജിംഗ്</string>
-    <string name="op_charging_optimization_summary">നിങ്ങളുടെ ഉപയോഗ രീതികൾ അനുസരിച്ച് ചാർജിംഗ് പാറ്റേൺ ഒപ്‌റ്റിമൈസ് ചെയ്യുക</string>
+    <string name="op_charging_optimization">ഒപ്‌റ്റിമൈസ് ചെയ്‌ത ചാർജിംഗ്</string>
+    <string name="op_charging_optimization_summary">ചാർജ്ജിംഗ് രീതി നിങ്ങളുടെ ഉപയോഗ ശീലങ്ങൾക്കനുസരിച്ച് ഒപ്റ്റിമൈസ് ചെയ്യുക, ഒപ്പം ബാറ്ററി കാലാവധിയും വർദ്ധിപ്പിക്കുക</string>
     <string name="op_charging_station">അടുത്തുള്ള ചാർജിങ്ങ് സ്റ്റേഷനുകൾ</string>
     <string name="op_charging_station_no_station">അടുത്ത് ചാർജിംഗ് സ്റ്റേഷനുകൾ ഒന്നുമില്ല</string>
     <string name="op_charging_station_summary">അടുത്ത് ഒരു ചാർജിങ്ങ് സ്റ്റേഷൻ ഉള്ളപ്പോൾ എന്നെ വിവരം അറിയിക്കുക</string>
@@ -4345,13 +4362,13 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_cloud_service_title">ക്ലൗഡ് സേവനം</string>
     <string name="op_confirm_enable_oem_unlock_text">മുന്നറിയിപ്പ്: ഉപകരണ പരിരക്ഷണ, പരിശോധിച്ചുറപ്പിക്കൽ സവിശേഷതകൾ, ഉദാ., OEM അൺലോക്ക് ആയിരിക്കുമ്പോൾ വിരലടയാളം ഉപയോഗിച്ചുള്ള പണമടയ്ക്കലും നൂതന DRM കീയും പ്രവർത്തിച്ചേക്കില്ല.</string>
     <string name="op_control_accent_color_amber_label">ആംബർ</string>
-    <string name="op_control_accent_color_gin_label">Sloe gin fizz</string>
+    <string name="op_control_accent_color_gin_label">സ്ലോ ജിൻ ഫിസ്</string>
     <string name="op_control_accent_color_indigo_label">ഇൻ‌ഡിഗോ</string>
     <string name="op_control_accent_color_teal_label">ടീൽ</string>
     <string name="op_custom_color_value">വർണ്ണ മൂല്യം</string>
     <string name="op_custom_color_value_edit">ഒരു വർണ മുല്യം നൽകുക</string>
     <string name="op_custom_color_value_invalid">വർണ മൂല്യം അസാധുവാണ്</string>
-    <string name="op_dark_mode_title">ഡാര്‍ക്ക്</string>
+    <string name="op_dark_mode_title">ഇരുണ്ടത്</string>
     <string name="op_data_vowlan_enable_summary">ലഭ്യമായിരിക്കുമ്പോൾ Wi-Fi കോളിംഗ് ഉപയോഗിക്കുക</string>
     <string name="op_default_apps_summary">ഹോം, ബ്രൗസർ</string>
     <string name="op_default_luncher_title">ഹോം ആപ്പ്</string>
@@ -4368,7 +4385,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_display_motion_graphics_compensation_summary">ഗ്രാഫിക്‌സിന്റെ ഫ്രെയിം നിരക്ക് മെച്ചപ്പെടുത്തുന്നത്, വീഡിയോയും ഗെയിം ഇഫക്‌റ്റുകളും സുഗമമാക്കും</string>
     <string name="op_dnd_summary">ശല്യപ്പെടുത്തരുത്</string>
     <string name="op_enable_location_services">അടുത്തുള്ള ചാർജ്ജിംഗ് സ്റ്റേഷനുകൾ കണ്ടുപിടിക്കുന്നതിനും ട്രാക്ക് ചെയ്യുന്നതിനും, ദയവായി ലൊക്കേഷൻ സേവനങ്ങൾ എനേബിൾ ചെയ്യുക</string>
-    <string name="op_enable_text">Habilita</string>
+    <string name="op_enable_text">പ്രാപ്തമാക്കുക</string>
     <string name="op_face_unlock_set_unlock_password">ഫേസ് അണ്‍ലോക്ക് + പാസ്‍വേഡ്</string>
     <string name="op_face_unlock_set_unlock_pattern">ഫേസ് അണ്‍ലോക്ക് + പാറ്റേണ്‍</string>
     <string name="op_face_unlock_set_unlock_pin">ഫേസ് അണ്‍ലോക്ക് + PIN</string>
@@ -4383,7 +4400,13 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
  ഫോൺ നിങ്ങളുടെ ഫിംഗർപ്രിന്റുകൾ തിരിച്ചറിയുകയും, മാച്ച് ചെയ്യുകയും ചെയ്യുമ്പോൾ ഫോൺ സ്ക്രീനിന്റെ ബ്രൈറ്റ്നെസ്സ് കൂടുകയും, കളർ പ്രൊഫൈൽ താൽക്കാലികമായി മാറുകയും ചെയ്യും."</string>
     <string name="op_fragment">ഹ്രസ്വമായത്</string>
     <string name="op_gamespace">ഗെയിം സ്പെയ്സ്</string>
+    <string name="op_global_drak_mode_apps_manage">ഡാർക്ക് മോഡിൽ അപ്ലിക്കേഷനുകൾ നിയന്ത്രിക്കുക</string>
+    <string name="op_global_drak_mode_full_support_list">പിന്തുണയ്ക്കുന്ന ആപ്പുകള്‍</string>
+    <string name="op_global_drak_mode_not_full_support_list">പിന്തുണയ്ക്കാത്ത ആപ്പുകള്‍</string>
+    <string name="op_global_drak_mode_support_description">പിന്തുണയ്‌ക്കാത്ത അപ്ലിക്കേഷനുകൾ ഡാർക്ക് മോഡിൽ ഉചിതമായി പ്രവർത്തിച്ചേക്കില്ല</string>
+    <string name="op_gps_off_warn_msg">ദയവായി ആദ്യം ലൊക്കേഷൻ ഓണാക്കുക</string>
     <string name="op_high_power_app_manager">ഉയര്‍ന്ന പവര്‍ ഉപയോഗിക്കുന്ന ആപ്പുകള്‍</string>
+    <string name="op_history_toggled_on_summary">നിങ്ങളുടെ സമീപകാല അറിയിപ്പുകൾ ഇവിടെ ദൃശ്യമാകും</string>
     <string name="op_keep_location_services">അടുത്തുള്ള ചാർജ്ജിംഗ് സ്റ്റേഷനുകൾ കണ്ടുപിടിക്കുന്നതിനും ട്രാക്ക് ചെയ്യുന്നതിനും, ദയവായി ലൊക്കേഷൻ സേവനങ്ങൾ എനേബിൾ ചെയ്യുക</string>
     <string name="op_light_mode_title">ലൈറ്റ്</string>
     <string name="op_linked_launch_summary">ആപ്പുകള്‍ കൈകാര്യം ചെയ്യുന്നത് വഴി പശ്ചാത്തലത്തില്‍ ലിങ്ക് തുറക്കാനാകും</string>
@@ -4393,11 +4416,13 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_lockpassword_choose_your_pin_header_for_face">ഫേസ് അൺലോക്ക് ഉപയോഗിക്കുന്നതിന്, PIN സജ്ജീകരിക്കുക</string>
     <string name="op_member_description">സവിശേഷമായ ആനുകൂല്യങ്ങൾ സ്വന്തമാക്കാൻ നിങ്ങളുടെ ഉപകരണം ബന്ധിപ്പിക്കുക</string>
     <string name="op_member_title">OnePlus അക്കൗണ്ടിലേക്ക് ലോഗിന്‍ ചെയ്യുക</string>
-    <string name="op_night_display_title">Vision comfort</string>
+    <string name="op_night_display_title">കാഴ്ചാ സുഖം</string>
     <string name="op_not_disturb">ശല്യപ്പെടുത്തരുത് പരിഗണനകള്‍</string>
     <string name="op_not_disturb_summary">അലാറങ്ങൾ ഒഴികെ കോളുകളും അറിയിപ്പുകളും നിശബ്ദമാക്കുകയും വൈബ്രേഷൻ ഓഫാക്കുകയും ചെയ്യുക</string>
+    <string name="op_notification_history_off_summary">സമീപകാല അറിയിപ്പുകൾ കാണാൻ അറിയിപ്പ് ചരിത്രം ഓണാക്കുക</string>
+    <string name="op_notification_history_summary">സമീപകാല അറിയിപ്പുകൾ കാണിക്കുക</string>
     <string name="op_oneplus_roaming_summary">ആഗോള ഇൻ്റർനെറ്റ് ആക്സസ്സ് സേവനങ്ങൾ നൽകുക</string>
-    <string name="op_oneplus_roaming_title">OnePlus റോമിങ്ങ്</string>
+    <string name="op_oneplus_roaming_title">OnePlus Roaming</string>
     <string name="op_primary_charm_purple_label">ഡീപ് പര്‍പ്പിള്‍</string>
     <string name="op_primary_dark_green_label">ഇരുണ്ട പച്ച</string>
     <string name="op_primary_default_label">നീല</string>
@@ -4406,6 +4431,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_primary_grass_green_label">ഇളം പച്ച</string>
     <string name="op_primary_lemon_yellow_label">ഓറഞ്ച്</string>
     <string name="op_primary_red_label">ചുവപ്പ്</string>
+    <string name="op_primary_rose_red_label">റോസ് ചുവപ്പ്</string>
     <string name="op_primary_royal_blue_label">റോയൽ ബ്ലൂ</string>
     <string name="op_primary_sky_blue_label">സ്യാന്‍</string>
     <string name="op_primary_vigour_red_label">പിങ്ക്</string>
@@ -4417,13 +4443,13 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_security_settings_fingerprint_enroll_find_sensor_message">വിരലടയാള സെന്‍സര്‍ ഹോം ബട്ടണില്‍ സ്ഥാപിക്കുക</string>
     <string name="op_security_settings_title">സുരക്ഷ &amp; വിരലടയാളം</string>
     <string name="op_sim_card_with_slotid">SIM  %1$s</string>
-    <string name="op_sim_cord">SIM &amp;&amp; നെറ്റ്‍വര്‍ക്ക്</string>
+    <string name="op_sim_cord">SIM &amp; നെറ്റ്‍വര്‍ക്ക്</string>
     <string name="op_sim_cord_summary">ഡിഫോൾട്ട് SIM കാർഡ്, ബാൻഡ്‌വിഡ്ത്ത് ഉപയോഗം</string>
     <string name="op_sim_name_with_prefix">"  (%1$s)"</string>
-    <string name="op_smart_battery_manager_title">Adaptive Battery</string>
-    <string name="op_smart_battery_title">Use Adaptive Battery</string>
+    <string name="op_smart_battery_manager_title">അഡാപ്റ്റീവ് ബാറ്ററി</string>
+    <string name="op_smart_battery_title">അഡാപ്റ്റീവ് ബാറ്ററി ഉപയോഗിക്കുക</string>
     <string name="op_sms_ringtone">SMS റിംഗ്‍ടോണ്‍</string>
-    <string name="op_starwar_mode_cannot_change_color_accent">സ്റ്റാര്‍വാര്‍ തീമിന് സിസ്റ്റം കളര്‍ തീം മാത്രമേ ഉപയോഗിക്കാനാവൂ</string>
+    <string name="op_starwar_mode_cannot_change_color_accent">സ്റ്റാര്‍വാഴ്സ് തീമിന് സിസ്റ്റം കളര്‍ തീം മാത്രമേ ഉപയോഗിക്കാനാവൂ</string>
     <string name="op_starwar_mode_title">സ്റ്റാര്‍ വാര്‍സ്</string>
     <string name="op_storage">സ്റ്റോറേജ് &amp; മെമ്മറി</string>
     <string name="op_system_dashboard_summary">ഭാഷകൾ, സമയം, പുനഃക്രമീകരിക്കുക, അപ്‌ഡേറ്റുകൾ</string>
@@ -4431,9 +4457,9 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_tcp_timestamps_randomization_title">TCP ക്രമരഹിത ടൈംസ്റ്റാമ്പ് ഫ്ലാഗ്</string>
     <string name="op_theme_2__cannot_change_color_accent">ദി അവഞ്ചേഴ്സ് തീമിന് സിസ്റ്റം കളര്‍ തീം മാത്രമേ ഉപയോഗിക്കാനാവൂ</string>
     <string name="op_theme_2__title">ദി അവഞ്ചേഴ്സ്</string>
-    <string name="op_theme_3_cannot_change_color_accent">McLaren തീമിനു സിസ്റ്റം കളർ തീം മാത്രമേ ഉപയോഗിക്കാനാവൂ</string>
+    <string name="op_theme_3_cannot_change_color_accent">McLaren തീമിന് സിസ്റ്റം കളര്‍ തീം മാത്രമേ ഉപയോഗിക്കാനാവൂ</string>
     <string name="op_theme_3_title">McLaren</string>
-    <string name="op_theme_entrance_summary">Wallpapers, accent color, font</string>
+    <string name="op_theme_entrance_summary">വോൾപേപ്പറുകൾ, ആക്സന്റ് കളർ, ഫോണ്ട്, ടോൺ</string>
     <string name="op_theme_mode_title">തീം</string>
     <string name="op_use_cast">കാസ്റ്റ് ഉപയോഗിക്കുക</string>
     <string name="op_user_manual_settings">ഉപയോക്തൃ മാനുവല്‍</string>
@@ -4447,8 +4473,8 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_wifi_verbose_multi_broadcast_title">ആപ്പ് Wi-Fi മള്‍ട്ടി/ബ്രോഡ്‍കാസ്റ്റിങ്ങ് ഫില്‍റ്റര്‍</string>
     <string name="op_wlan_settings_and_management">Wi‑Fi സെറ്റിംഗുകൾ</string>
     <string name="op_zen_mode_automation_settings_title">സ്വയം ഓണ്‍ ചെയ്യുക</string>
-    <string name="op_zen_mode_behavior_settings_title">ഉൾപ്പെടാത്തവ</string>
-    <string name="op_zen_mode_restrict_notifications_title">Restrict notifications</string>
+    <string name="op_zen_mode_behavior_settings_title">ഒഴിവാക്കലുകൾ</string>
+    <string name="op_zen_mode_restrict_notifications_title">നോട്ടിഫിക്കേഷനുകൾ നിയന്ത്രിക്കുക</string>
     <string name="opcustom_tone_dark_tile_text">ഡാർക്ക് മോഡ്</string>
     <string name="open_hotspot_warning_message">"ഓപ്പൺ സെക്യൂരിറ്റി ഉപയോഗിച്ച്, പാസ്‍വേഡ് നൽകാതെ നിങ്ങളുടെ മൊബൈൽ ഹോട്ട്‍സ്‌പോട്ട് ഉപയോഗിക്കാൻ ഉപകരണങ്ങൾക്ക് കഴിയും. നിങ്ങൾക്ക് പാസ്‍വേഡ് ആവശ്യമാണെങ്കിൽ പകരം WPA2 സുരക്ഷ തിരഞ്ഞെടുക്കുക. "</string>
     <string name="open_supported_links_footer">ഇനിപ്പറയുന്ന ലിങ്കുകൾ കൈകാര്യം ചെയ്യുന്നതിനുള്ള ആപ്പ് ക്ലെയിമുകൾ:</string>
@@ -4524,6 +4550,8 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="platform_compat_dashboard_title">ആപ്പ് അനുയോജ്യമാക്കുന്നതിനുള്ള മാറ്റങ്ങൾ</string>
     <string name="platform_compat_default_disabled_title">ഡിഫോൾട്ട് ആയ, പ്രവർത്തനരഹിതമാക്കിയ മാറ്റങ്ങൾ</string>
     <string name="platform_compat_default_enabled_title">ഡിഫോൾട്ട് ആയ, പ്രവർത്തനക്ഷമമാക്കിയ മാറ്റങ്ങൾ</string>
+    <string name="platform_compat_dialog_text_no_apps">ഡീബഗ് ചെയ്യാവുന്ന ആപ്പുകൾക്ക് വേണ്ടി മാത്രമേ ആപ്പ് അനുയോജ്യതാ മാറ്റങ്ങൾ പരിഷ്‌കരിക്കാൻ കഴിയൂ. ഡീബഗ് ചെയ്യാവുന്ന ആപ്പ് ഇന്‍സ്റ്റാള്‍ ചെയ്‌ത് വീണ്ടും ശ്രമിക്കുക.</string>
+    <string name="platform_compat_dialog_title_no_apps">ആപ്പുകൾ ലഭ്യമല്ല</string>
     <string name="please_select_phase2">രണ്ടാം ഘട്ട പരിശോധിച്ചുറപ്പിക്കൽ</string>
     <string name="please_type_passphrase">വയര്‍‍ലെസ്സ് പാസ്‍വേഡ്</string>
     <string name="pointer_location">പോയിന്റർ ലൊക്കേഷൻ</string>
@@ -4559,7 +4587,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="power_menu_privacy_show_controls">ലോക്ക് ചെയ്‌തിരിക്കുമ്പോൾ നിയന്ത്രണങ്ങൾ കാണുക</string>
     <string name="power_menu_setting_name">പവർ മെനു</string>
     <string name="power_menu_setting_title">പവർ ബട്ടൺ മെനു</string>
-    <string name="power_off">പവര്‍ ഓഫ്</string>
+    <string name="power_off">പവര്‍ ഓഫ് ചെയ്യുക</string>
     <string name="power_off_summary">നിങ്ങളുടെ ഉപകരണം ഷട്ട് ഡൗൺ ചെയ്യും</string>
     <string name="power_overcounted">കണക്കാക്കി</string>
     <string name="power_phone">വോയ്‌സ് കോളുകൾ</string>
@@ -5688,7 +5716,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="summary_separator">" / "</string>
     <string name="summary_voice_network">VoLTE, Wi-Fi കോളിംഗ്</string>
     <string name="summary_voice_volte_only">VoLTE</string>
-    <string name="summary_voice_wfc_only">വൈ-ഫൈ കോളിങ്ങ്</string>
+    <string name="summary_voice_wfc_only">വൈഫൈ കോളിംഗ്</string>
     <string name="support_summary">സഹായ ലേഖനങ്ങൾ, ഫോൺ, ചാറ്റ്, ആരംഭിക്കൽ</string>
     <string name="swipe_direction_ltr">നിരസിക്കാൻ വലത്തോട്ടോ, മെനു കാണിക്കാൻ ഇടത്തോട്ടോ സ്വൈപ്പ് ചെയ്യുക</string>
     <string name="swipe_direction_rtl">നിരസിക്കാൻ ഇടത്തോട്ടോ, മെനു കാണിക്കാൻ വലത്തോട്ടോ സ്വൈപ്പ് ചെയ്യുക</string>
@@ -5748,8 +5776,8 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="tether_error_item_default">ടെതറിംഗ്</string>
     <string name="tether_error_message">നിങ്ങൾ %1$s-ലേക്ക് സബ്‌സ്ക്രൈബ് ചെയ്തിട്ടില്ല.</string>
     <string name="tether_error_title">%1$s പിശക്</string>
-    <string name="tether_no_sim_message">മൊബൈൽ ഹോട്ട്‌സ്പോട്ടും മറ്റ് ടെതറിംഗ് ഓപ്ഷനുകളും ഉപയോഗിക്കുന്നതിനായി ഒരു SIM കാർഡ് ചേർക്കുക</string>
-    <string name="tether_no_sim_title">SIM കാര്‍ഡൊന്നും ഇല്ല</string>
+    <string name="tether_no_sim_message">മൊബൈൽ ഹോട്ട്‌സ്പോട്ടും മറ്റ് ടെതറിംഗ് ഓപ്ഷനുകളും ഉപയോഗിക്കുന്നതിന് ഒരു SIM കാർഡ് ഇടുക</string>
+    <string name="tether_no_sim_title">SIM കാര്‍ഡ് ഇല്ല</string>
     <string name="tether_settings_disabled_on_data_saver">ഡാറ്റ സേവർ ഓണായിരിക്കുന്ന സമയത്ത് പോർട്ടബിൾ ഹോട്ട്സ്പോട്ടുകൾ ടെതർ ചെയ്യാനോ ഉപയോഗിക്കാനോ കഴിയില്ല</string>
     <string name="tether_settings_summary_all">ഹോട്ട്‌സ്‌പോട്ട്, USB, Bluetooth, ഇതർനെറ്റ്</string>
     <string name="tether_settings_summary_bluetooth_and_ethernet">Bluetooth, ഇതർനെറ്റ്</string>
@@ -5783,7 +5811,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="tethering_interface_options">ടെതറിംഗ്</string>
     <string name="tethering_settings_not_available">ഈ ഉപയോക്താവിനായി ടെതറിംഗ് ക്രമീകരണങ്ങൾ ലഭ്യമല്ല</string>
     <string name="text_waiting">ലോഡ് ചെയ്യുന്നു...</string>
-    <string name="theme_accent_color_title">ആക്സന്‍റ് നിറം</string>
+    <string name="theme_accent_color_title">ആക്സന്റ് നിറം</string>
     <string name="theme_customization_device_default">ഉപകരണ ഡിഫോള്‍ട്ട്</string>
     <string name="theme_switch_dark">ഡാര്‍ക്ക്</string>
     <string name="theme_switch_dark_mode_summary">സിസ്റ്റം വൈഡ് ഡാര്‍‌ക്ക് തീം പ്രാപ്തമാക്കുന്നു</string>
@@ -5817,7 +5845,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="touchscreen_camera_gesture_summary">ക്യാമറ തുറക്കുന്നതിന് ഒരു O വരയ്ക്കുക</string>
     <string name="touchscreen_camera_gesture_title">ക്യാമറ തുറക്കുക</string>
     <string name="touchscreen_double_tap_to_wake_gesture_summary">ഡിവൈസിനെ ഉണര്‍‌ത്താന്‍ സ്ക്രീനില്‍ രണ്ട് തവണ ടാപ് ചെയ്യുക</string>
-    <string name="touchscreen_double_tap_to_wake_gesture_title">തുറക്കാൻ ഇരട്ട ടാപ്പുചെയ്യുക</string>
+    <string name="touchscreen_double_tap_to_wake_gesture_title">ഉണര്‍ത്താന്‍ ഇരട്ട ടാപ്പ് ചെയ്യുക</string>
     <string name="touchscreen_flashlight_gesture_summary">ഫ്ലാഷ്‍ലൈറ്റ് ടോഗിള്‍ ചെയ്യാന്‍ ഒരു V വരയ്ക്കുക</string>
     <string name="touchscreen_flashlight_gesture_title">ഫ്ലാഷ്‍ലൈറ്റ് ടോഗിള്‍ ചെയ്യുക</string>
     <string name="touchscreen_music_gesture_summary">സംഗീതം പ്ലേ ചെയ്യാന്‍ അല്ലെങ്കില്‍ നിര്‍ത്തി വെക്കാന്‍ രണ്ട് വിരലുകള്‍ ഉപയോഗിച്ച് || വരയ്ക്കുക. വരയ്ക്കുക&lt; or > ആദ്യത്തെ അല്ലെങ്കില്‍ അടുത്ത ട്രാക്കിന് വേണ്ടി</string>
@@ -5913,7 +5941,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="tx_wifi_speed">പ്രക്ഷേപണ ലിങ്കിന്റെ വേഗത</string>
     <string name="uicc_alert_message">Wi Fi നെറ്റ്‍വര്‍ക്കിലേക്ക് SSID VerizonWiFiAccess ഉപയോഗിച്ച് ലോഗിൻ ചെയ്യുന്നതിന് UICC ആവശ്യമാണ്</string>
     <string name="uicc_all_lock_summary">നിങ്ങളുടെ ഉപകരണം Sprint അല്ലെങ്കിൽ അന്താരാഷ്ട്ര SIM-കൾ ഉപയോഗിച്ച് ലോക്ക് ചെയ്തിരിക്കുന്നു</string>
-    <string name="uicc_lock_summary">Sprint SIM-കൾ മാത്രം ഉപയോഗിച്ച് നിങ്ങളുടെ ഉപകരണം ലോക്കുചെയ്തിരിക്കുന്നു</string>
+    <string name="uicc_lock_summary">sprint SIM-കൾ മാത്രം ഉപയോഗിച്ച് നിങ്ങളുടെ ഉപകരണം ലോക്കുചെയ്തിരിക്കുന്നു</string>
     <string name="uicc_unlock">UICC അൺലോക്ക്</string>
     <string name="uicc_unlock_summary">നിങ്ങളുടെ ഉപകരണം അൺലോക്ക് ചെയ്തു</string>
     <string name="under_meters">%1d മീറ്ററുകള്‍ക്ക് താഴെ</string>
@@ -6633,7 +6661,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="wifi_scan_throttling">വൈഫൈ സ്‌കാൻ പ്രവർത്തനരഹിതമാക്കുന്നു</string>
     <string name="wifi_scan_throttling_summary">ബാറ്ററി ചാർജ് വേഗത്തിൽ തീരുന്ന അവസ്ഥ കുറച്ച് നെറ്റ്‌വർക്ക് പ്രകടനം മെച്ചപ്പെടുത്തുന്നു</string>
     <string name="wifi_security">സുരക്ഷ</string>
-    <string name="wifi_security_dialog">സുരക്ഷ ഉപയോഗിച്ച്, ഏതൊരു ഉപകരണത്തിനും നിങ്ങളുടെ മൊബൈൽ ഹോട്ട്സ്പോട്ടിലേക്ക് കണക്റ്റുചെയ്യാനും നിങ്ങളുടെ മൊബൈൽ ഡാറ്റ കണക്ഷൻ ഉപയോഗിക്കാനും കഴിയും.</string>
+    <string name="wifi_security_dialog">ഓപ്പൺ സെക്യൂരിറ്റി വഴി ഏത് ഉപകരണവും നിങ്ങളുടെ മൊബൈൽ ഹോട്ട്സ്പോട്ടിലേക്ക് കണക്റ്റ് ചെയ്ത് നിങ്ങളുടെ മൊബൈൽ ഡാറ്റ കണക്ഷൻ ഉപയോഗിക്കാം.</string>
     <string name="wifi_security_none">ഒന്നുമില്ല</string>
     <string name="wifi_security_open">തുറക്കുക</string>
     <string name="wifi_select_network">വൈഫൈ തിരഞ്ഞെടുക്കുക</string>
@@ -6683,7 +6711,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="wifi_tether_custom_auto_turn_off_10_min_summary">10 മിനിറ്റ് നിഷ്ക്രിയത്വത്തിനുശേഷം</string>
     <string name="wifi_tether_custom_auto_turn_off_15_min_summary">15 മിനിറ്റ് നിഷ്ക്രിയത്വത്തിനുശേഷം</string>
     <string name="wifi_tether_custom_auto_turn_off_5_min_summary">5 മിനിറ്റ് നിഷ്ക്രിയത്വത്തിനുശേഷം</string>
-    <string name="wifi_tether_custom_auto_turn_off_always_summary">എല്ലായ്‌പ്പോഴും ഓണാണ്</string>
+    <string name="wifi_tether_custom_auto_turn_off_always_summary">എല്ലായ്‍പ്പോഴും ഓണ്‍</string>
     <string name="wifi_tether_enabled_subtext">%1$s സജീവമാണ്</string>
     <string name="wifi_tether_failed_subtext">പോർട്ടബിൾ വൈഫൈ ഹോട്ട്‌സ്പോട്ട് പിശക്</string>
     <string name="wifi_tether_passphrase_warning">ഒരു അപ്പർ കെയ്സ് ആൽഫബെറ്റ്, ഒരു ലോവർ കെയ്സ് ആൽഫബെറ്റ്, നമ്പർ, സിംബൽ എന്നിവയെങ്കിലും ആവശ്യമാണ്</string>
@@ -6696,7 +6724,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="wifi_tether_verizon_custom_auto_turn_off_30_min_summary">30 മിനിറ്റ് നിഷ്‌ക്രിയത്വത്തിനുശേഷം</string>
     <string name="wifi_tether_verizon_custom_auto_turn_off_5_min_summary">5 മിനിറ്റ് നിഷ്ക്രിയത്വത്തിനുശേഷം</string>
     <string name="wifi_tether_verizon_custom_auto_turn_off_60_min_summary">60 മിനിറ്റ് നിഷ്‌ക്രിയത്വത്തിനുശേഷം</string>
-    <string name="wifi_tether_verizon_custom_auto_turn_off_always_summary">എല്ലായ്‌പ്പോഴും ഓണാണ്</string>
+    <string name="wifi_tether_verizon_custom_auto_turn_off_always_summary">എല്ലായ്‍പ്പോഴും ഓണ്‍</string>
     <string name="wifi_time_remaining">%1$s ശേഷിക്കുന്നു</string>
     <string name="wifi_turned_on_message">വൈഫൈ ഓണാക്കി</string>
     <string name="wifi_unchanged">(മാറ്റം വരുത്തിയിട്ടില്ല)</string>
@@ -6742,7 +6770,8 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="wizard_next">അടുത്തത്</string>
     <string name="work_alarm_ringtone_title">ഡിഫോൾട്ട് ഔദ്യോഗിക അലാറം ശബ്‌ദം</string>
     <string name="work_life_balance">Work Life Balance</string>
-    <string name="work_life_disabled_toast">Work Life Balanceഫീച്ചർ അപ്രാപ്തമാക്കിയിരിക്കുന്നു.</string>
+    <string name="work_life_banner_summary">അറിയിപ്പുകൾ ശ്രദ്ധ തിരിക്കാം. മികച്ച work-life balance കണ്ടെത്താൻ അവയ്ക്ക് മുൻഗണന നൽകുക.</string>
+    <string name="work_life_disabled_toast">Work life balanceഫീച്ചർ അപ്രാപ്തമാക്കിയിരിക്കുന്നു.</string>
     <string name="work_mode_label">ഔദ്യോഗിക പ്രൊഫൈൽ</string>
     <string name="work_mode_off_summary">ആപ്പുകളും അറിയിപ്പുകളും ഓഫാണ്</string>
     <string name="work_mode_on_summary">നിങ്ങളുടെ സ്ഥാപനം നിയന്ത്രിക്കുന്നത്</string>

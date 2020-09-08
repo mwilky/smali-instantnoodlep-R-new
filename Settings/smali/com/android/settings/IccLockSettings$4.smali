@@ -39,7 +39,7 @@
 
     iget-object v0, p0, Lcom/android/settings/IccLockSettings$4;->this$0:Lcom/android/settings/IccLockSettings;
 
-    invoke-static {v0, p1}, Lcom/android/settings/IccLockSettings;->access$900(Lcom/android/settings/IccLockSettings;Ljava/lang/String;)I
+    invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p1
 

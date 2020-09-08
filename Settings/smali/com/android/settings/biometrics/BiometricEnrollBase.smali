@@ -186,6 +186,20 @@
     return-void
 .end method
 
+.method protected onApplyThemeResource(Landroid/content/res/Resources$Theme;IZ)V
+    .locals 2
+
+    sget v0, Lcom/android/settings/R$style;->SetupWizardPartnerResource:I
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p1, v0, v1}, Landroid/content/res/Resources$Theme;->applyStyle(IZ)V
+
+    invoke-super {p0, p1, p2, p3}, Landroid/app/Activity;->onApplyThemeResource(Landroid/content/res/Resources$Theme;IZ)V
+
+    return-void
+.end method
+
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 4
 

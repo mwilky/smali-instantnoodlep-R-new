@@ -444,6 +444,30 @@
     return-object p0
 .end method
 
+.method public load(Landroid/graphics/drawable/Drawable;)Lcom/bumptech/glide/RequestBuilder;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/graphics/drawable/Drawable;",
+            ")",
+            "Lcom/bumptech/glide/RequestBuilder<",
+            "Landroid/graphics/drawable/Drawable;",
+            ">;"
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Lcom/bumptech/glide/RequestManager;->asDrawable()Lcom/bumptech/glide/RequestBuilder;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p1}, Lcom/bumptech/glide/RequestBuilder;->load(Landroid/graphics/drawable/Drawable;)Lcom/bumptech/glide/RequestBuilder;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method public load(Ljava/lang/String;)Lcom/bumptech/glide/RequestBuilder;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;

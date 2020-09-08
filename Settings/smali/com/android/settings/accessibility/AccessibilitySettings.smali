@@ -67,6 +67,8 @@
 
 .field private mToggleLargePointerIconPreference:Landroidx/preference/SwitchPreference;
 
+.field private mTtsEngines:Landroid/speech/tts/TtsEngines;
+
 .field private final mUpdateRunnable:Ljava/lang/Runnable;
 
 
@@ -700,12 +702,47 @@
 .end method
 
 .method private updateAllPreferences()V
-    .locals 0
+    .locals 1
 
     invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettings;->updateSystemPreferences()V
 
     invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettings;->updateServicePreferences()V
 
+    const-string v0, "screen_reader_category"
+
+    invoke-virtual {p0, v0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/preference/PreferenceCategory;
+
+    if-eqz v0, :cond_1
+
+    iget-object p0, p0, Lcom/android/settings/accessibility/AccessibilitySettings;->mTtsEngines:Landroid/speech/tts/TtsEngines;
+
+    invoke-virtual {p0}, Landroid/speech/tts/TtsEngines;->getEngines()Ljava/util/List;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x0
+
+    invoke-virtual {v0, p0}, Landroidx/preference/Preference;->setVisible(Z)V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x1
+
+    invoke-virtual {v0, p0}, Landroidx/preference/Preference;->setVisible(Z)V
+
+    :cond_1
+    :goto_0
     return-void
 .end method
 
@@ -852,9 +889,19 @@
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 0
+    .locals 1
 
     invoke-super {p0, p1}, Lcom/android/settings/dashboard/DashboardFragment;->onCreate(Landroid/os/Bundle;)V
+
+    new-instance p1, Landroid/speech/tts/TtsEngines;
+
+    invoke-virtual {p0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->getPrefContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Landroid/speech/tts/TtsEngines;-><init>(Landroid/content/Context;)V
+
+    iput-object p1, p0, Lcom/android/settings/accessibility/AccessibilitySettings;->mTtsEngines:Landroid/speech/tts/TtsEngines;
 
     invoke-direct {p0}, Lcom/android/settings/accessibility/AccessibilitySettings;->initializeAllPreferences()V
 

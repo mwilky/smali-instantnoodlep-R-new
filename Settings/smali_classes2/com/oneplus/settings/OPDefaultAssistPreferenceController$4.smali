@@ -39,7 +39,7 @@
 
     iget-object p1, p0, Lcom/oneplus/settings/OPDefaultAssistPreferenceController$4;->this$0:Lcom/oneplus/settings/OPDefaultAssistPreferenceController;
 
-    invoke-static {p1}, Lcom/oneplus/settings/OPDefaultAssistPreferenceController;->access$200(Lcom/oneplus/settings/OPDefaultAssistPreferenceController;)Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;
+    invoke-static {p1}, Lcom/oneplus/settings/OPDefaultAssistPreferenceController;->access$200(Lcom/oneplus/settings/OPDefaultAssistPreferenceController;)Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;
 
     move-result-object p1
 
@@ -69,7 +69,7 @@
     const/4 v1, 0x1
 
     :goto_0
-    invoke-virtual {p1, v1}, Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;->setChecked(Z)V
+    invoke-virtual {p1, v1}, Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;->setChecked(Z)V
 
     return-void
 .end method

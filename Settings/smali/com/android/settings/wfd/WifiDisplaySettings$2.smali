@@ -1,14 +1,11 @@
 .class Lcom/android/settings/wfd/WifiDisplaySettings$2;
-.super Ljava/lang/Object;
+.super Landroidx/preference/Preference;
 .source "WifiDisplaySettings.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wfd/WifiDisplaySettings;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/android/settings/wfd/WifiDisplaySettings;->buildCertificationMenu(Landroidx/preference/PreferenceScreen;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,30 +19,58 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wfd/WifiDisplaySettings;)V
+.method constructor <init>(Lcom/android/settings/wfd/WifiDisplaySettings;Landroid/content/Context;)V
     .locals 0
 
     iput-object p1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$2;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 1
+.method public onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
+    .locals 2
 
-    iget-object p0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$2;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+    invoke-super {p0, p1}, Landroidx/preference/Preference;->onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
 
-    invoke-static {p0}, Lcom/android/settings/wfd/WifiDisplaySettings;->access$200(Lcom/android/settings/wfd/WifiDisplaySettings;)Landroidx/preference/Preference;
+    sget v0, Lcom/android/settings/R$id;->left_button:I
 
-    move-result-object p0
+    invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
-    sget v0, Lcom/android/settings/R$string;->op_cast_no_devices:I
+    move-result-object v0
 
-    invoke-virtual {p0, v0}, Landroidx/preference/Preference;->setSummary(I)V
+    check-cast v0, Landroid/widget/Button;
+
+    sget v1, Lcom/android/settings/R$string;->wifi_display_pause:I
+
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(I)V
+
+    new-instance v1, Lcom/android/settings/wfd/WifiDisplaySettings$2$1;
+
+    invoke-direct {v1, p0}, Lcom/android/settings/wfd/WifiDisplaySettings$2$1;-><init>(Lcom/android/settings/wfd/WifiDisplaySettings$2;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    sget v0, Lcom/android/settings/R$id;->right_button:I
+
+    invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/Button;
+
+    sget v0, Lcom/android/settings/R$string;->wifi_display_resume:I
+
+    invoke-virtual {p1, v0}, Landroid/widget/Button;->setText(I)V
+
+    new-instance v0, Lcom/android/settings/wfd/WifiDisplaySettings$2$2;
+
+    invoke-direct {v0, p0}, Lcom/android/settings/wfd/WifiDisplaySettings$2$2;-><init>(Lcom/android/settings/wfd/WifiDisplaySettings$2;)V
+
+    invoke-virtual {p1, v0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     return-void
 .end method

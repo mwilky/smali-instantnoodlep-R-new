@@ -112,6 +112,21 @@
     return-object p0
 .end method
 
+.method public setHotspot(Z)Lcom/android/settingslib/net/NetworkCycleDataLoader$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(Z)",
+            "Lcom/android/settingslib/net/NetworkCycleDataLoader$Builder<",
+            "TT;>;"
+        }
+    .end annotation
+
+    iput-boolean p1, p0, Lcom/android/settingslib/net/NetworkCycleDataLoader$Builder;->mIsHotspot:Z
+
+    return-object p0
+.end method
+
 .method public setNetworkTemplate(Landroid/net/NetworkTemplate;)Lcom/android/settingslib/net/NetworkCycleDataLoader$Builder;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;

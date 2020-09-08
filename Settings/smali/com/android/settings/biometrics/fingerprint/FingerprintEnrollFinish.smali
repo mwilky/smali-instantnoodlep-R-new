@@ -24,6 +24,51 @@
     return-void
 .end method
 
+.method private adjustTitleSize()V
+    .locals 2
+
+    invoke-static {p0}, Lcom/oneplus/settings/utils/OPUtils;->isLargerFontSize(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p0}, Lcom/oneplus/settings/utils/OPUtils;->isLargerScreenZoom(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget v0, Lcom/android/settings/R$id;->message:I
+
+    invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    const/high16 v1, 0x41900000    # 18.0f
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextSize(F)V
+
+    sget v0, Lcom/android/settings/R$id;->message_secondary:I
+
+    invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/widget/TextView;
+
+    const/4 v0, 0x0
+
+    const/high16 v1, 0x42400000    # 48.0f
+
+    invoke-virtual {p0, v0, v1}, Landroid/widget/TextView;->setTextSize(IF)V
+
+    :cond_0
+    return-void
+.end method
+
 .method private synthetic lambda$onCreate$0(Landroid/view/View;)V
     .locals 0
 
@@ -402,7 +447,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e0060
+    const v1, 0x10e0066
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -410,13 +455,15 @@
 
     if-lt p1, v0, :cond_1
 
-    iget-object p0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollFinish;->mBtnAdd:Landroid/widget/Button;
+    iget-object p1, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollFinish;->mBtnAdd:Landroid/widget/Button;
 
-    const/4 p1, 0x4
+    const/4 v0, 0x4
 
-    invoke-virtual {p0, p1}, Landroid/widget/Button;->setVisibility(I)V
+    invoke-virtual {p1, v0}, Landroid/widget/Button;->setVisibility(I)V
 
     :cond_1
+    invoke-direct {p0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollFinish;->adjustTitleSize()V
+
     return-void
 .end method
 
@@ -498,7 +545,7 @@
 
     move-result-object v2
 
-    const v3, 0x10e0060
+    const v3, 0x10e0066
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
 

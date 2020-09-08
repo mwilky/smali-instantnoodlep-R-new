@@ -4,4 +4,4 @@
 
 
 # static fields
-.field public static final Widget_SliceView:I = 0x7f140564
+.field public static final Widget_SliceView:I = 0x7f140569

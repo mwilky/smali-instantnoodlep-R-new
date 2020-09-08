@@ -215,17 +215,31 @@
 
     invoke-virtual {p1, p2}, Lcom/google/android/setupdesign/GlifLayout;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
+    iget-object p1, p0, Lcom/android/settings/wifi/dpp/WifiDppQrCodeBaseFragment;->mGlifLayout:Lcom/google/android/setupdesign/GlifLayout;
+
+    const-class v0, Lcom/google/android/setupcompat/template/StatusBarMixin;
+
+    invoke-virtual {p1, v0}, Lcom/google/android/setupcompat/internal/TemplateLayout;->getMixin(Ljava/lang/Class;)Lcom/google/android/setupcompat/template/Mixin;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/android/setupcompat/template/StatusBarMixin;
+
+    invoke-virtual {p1, p2}, Lcom/google/android/setupcompat/template/StatusBarMixin;->setStatusBarBackground(Landroid/graphics/drawable/Drawable;)V
+
     iget-object p0, p0, Lcom/android/settings/wifi/dpp/WifiDppQrCodeBaseFragment;->mGlifLayout:Lcom/google/android/setupdesign/GlifLayout;
 
-    const-class p1, Lcom/google/android/setupcompat/template/StatusBarMixin;
+    const-class p1, Lcom/google/android/setupdesign/template/HeaderMixin;
 
     invoke-virtual {p0, p1}, Lcom/google/android/setupcompat/internal/TemplateLayout;->getMixin(Ljava/lang/Class;)Lcom/google/android/setupcompat/template/Mixin;
 
     move-result-object p0
 
-    check-cast p0, Lcom/google/android/setupcompat/template/StatusBarMixin;
+    check-cast p0, Lcom/google/android/setupdesign/template/HeaderMixin;
 
-    invoke-virtual {p0, p2}, Lcom/google/android/setupcompat/template/StatusBarMixin;->setStatusBarBackground(Landroid/graphics/drawable/Drawable;)V
+    const/16 p1, 0x8
+
+    invoke-virtual {p0, p1}, Lcom/google/android/setupdesign/template/HeaderMixin;->setVisibility(I)V
 
     :cond_2
     return-void

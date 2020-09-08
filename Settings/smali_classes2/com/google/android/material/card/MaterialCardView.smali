@@ -40,6 +40,8 @@
 
 .field private mCardBackgroundMaskPaint:Landroid/graphics/Paint;
 
+.field mCardViewOutlineProvider:Landroid/view/ViewOutlineProvider;
+
 .field private mCornerPathList:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -123,7 +125,7 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 10
+    .locals 9
 
     sget v0, Lcom/google/android/material/card/MaterialCardView;->DEF_STYLE_RES:I
 
@@ -161,23 +163,29 @@
 
     iput-object v1, p0, Lcom/google/android/material/card/MaterialCardView;->mDuffXferMode:Landroid/graphics/PorterDuffXfermode;
 
+    new-instance v1, Lcom/google/android/material/card/MaterialCardView$1;
+
+    invoke-direct {v1, p0}, Lcom/google/android/material/card/MaterialCardView$1;-><init>(Lcom/google/android/material/card/MaterialCardView;)V
+
+    iput-object v1, p0, Lcom/google/android/material/card/MaterialCardView;->mCardViewOutlineProvider:Landroid/view/ViewOutlineProvider;
+
     iput-boolean v2, p0, Lcom/google/android/material/card/MaterialCardView;->isParentCardViewDoneInitializing:Z
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
-    move-result-object v4
+    move-result-object v3
 
-    sget-object v6, Lcom/google/android/material/R$styleable;->MaterialCardView:[I
+    sget-object v5, Lcom/google/android/material/R$styleable;->MaterialCardView:[I
 
-    sget v8, Lcom/google/android/material/card/MaterialCardView;->DEF_STYLE_RES:I
+    sget v7, Lcom/google/android/material/card/MaterialCardView;->DEF_STYLE_RES:I
 
-    new-array v9, p1, [I
+    new-array v8, p1, [I
 
-    move-object v5, p2
+    move-object v4, p2
 
-    move v7, p3
+    move v6, p3
 
-    invoke-static/range {v4 .. v9}, Lcom/google/android/material/internal/ThemeEnforcement;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroid/content/res/TypedArray;
+    invoke-static/range {v3 .. v8}, Lcom/google/android/material/internal/ThemeEnforcement;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroid/content/res/TypedArray;
 
     move-result-object v1
 
@@ -229,16 +237,28 @@
 
     invoke-virtual {p1, p2, p3, v0, v2}, Lcom/google/android/material/card/MaterialCardViewHelper;->setUserContentPadding(IIII)V
 
-    iget-object p0, p0, Lcom/google/android/material/card/MaterialCardView;->cardViewHelper:Lcom/google/android/material/card/MaterialCardViewHelper;
+    iget-object p1, p0, Lcom/google/android/material/card/MaterialCardView;->cardViewHelper:Lcom/google/android/material/card/MaterialCardViewHelper;
 
-    invoke-virtual {p0, v1}, Lcom/google/android/material/card/MaterialCardViewHelper;->loadFromAttributes(Landroid/content/res/TypedArray;)V
+    invoke-virtual {p1, v1}, Lcom/google/android/material/card/MaterialCardViewHelper;->loadFromAttributes(Landroid/content/res/TypedArray;)V
 
     invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
+
+    iget-object p1, p0, Lcom/google/android/material/card/MaterialCardView;->mCardViewOutlineProvider:Landroid/view/ViewOutlineProvider;
+
+    invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
     return-void
 .end method
 
-.method static synthetic access$001(Lcom/google/android/material/card/MaterialCardView;)F
+.method static synthetic access$000(Lcom/google/android/material/card/MaterialCardView;)F
+    .locals 0
+
+    iget p0, p0, Lcom/google/android/material/card/MaterialCardView;->mCornerRadius:F
+
+    return p0
+.end method
+
+.method static synthetic access$101(Lcom/google/android/material/card/MaterialCardView;)F
     .locals 0
 
     invoke-super {p0}, Landroidx/cardview/widget/CardView;->getRadius()F
@@ -448,7 +468,7 @@
 .method getCardViewRadius()F
     .locals 0
 
-    invoke-static {p0}, Lcom/google/android/material/card/MaterialCardView;->access$001(Lcom/google/android/material/card/MaterialCardView;)F
+    invoke-static {p0}, Lcom/google/android/material/card/MaterialCardView;->access$101(Lcom/google/android/material/card/MaterialCardView;)F
 
     move-result p0
 

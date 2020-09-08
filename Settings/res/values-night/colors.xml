@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="advanced_outline_color">#ffffffff</color>
     <color name="condition_divider_white">#1cffffff</color>
     <color name="contextual_card_background">@android:color/material_grey_900</color>
     <color name="contextual_card_stroke_color">#0cffffff</color>
@@ -30,6 +31,7 @@
     <color name="oneplus_main_home_bg_ab">#ff000000</color>
     <color name="oneplus_main_home_color_Accent">#ff8399b3</color>
     <color name="oneplus_navigation_bar_color">#ff000001</color>
+    <color name="oneplus_nofile_tips">@color/white</color>
     <color name="oneplus_opfinger_input_tips_summary_color">#8affffff</color>
     <color name="oneplus_opfinger_input_tips_title_bg_color">#ff090909</color>
     <color name="oneplus_settings_black_background">#ff000000</color>
@@ -76,6 +78,7 @@
     <color name="oneplus_theme_shape_sound_background_color">#ff4d4d4d</color>
     <color name="op_avatar_checked_background">@color/op_control_bg_color_light</color>
     <color name="op_avatar_checked_marker">@color/op_control_icon_color_active_light</color>
+    <color name="op_button_default_text_color">@color/op_control_text_color_primary_light</color>
     <color name="op_control_accent_color_amber_default">@color/op_control_accent_color_amber_dark</color>
     <color name="op_control_accent_color_blue_default">@color/op_control_accent_color_blue_dark</color>
     <color name="op_control_accent_color_cyan_default">@color/op_control_accent_color_cyan_dark</color>
@@ -144,6 +147,7 @@
     <color name="op_control_text_color_teal_default">@color/op_control_text_color_teal_dark</color>
     <color name="op_custom_shape_stroke_1">#ff1e2022</color>
     <color name="op_custom_shape_stroke_3">#ffffffff</color>
+    <color name="op_data_prograss_bg_color">#24ffffff</color>
     <color name="op_edit_text_line_color_default">@color/op_edit_text_line_color_dark</color>
     <color name="op_grid_item_background_default">@color/op_grid_item_background_dark</color>
     <color name="op_switchbar_background_color">#ff323335</color>

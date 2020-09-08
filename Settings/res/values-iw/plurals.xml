@@ -337,20 +337,20 @@
         <item quantity="many">%d אפליקציות פעילות</item>
     </plurals>
     <plurals name="oneplus_applock_wrong_pattern_warning">
-        <item quantity="other">נותרו לך עוד %1$d נסיונות</item>
-        <item quantity="one">נותרו לך עוד %1$d נסיונות</item>
+        <item quantity="other">יש לך %1$d הזדמנויות</item>
+        <item quantity="one">יש לך הזדמנות %1$d</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
         <item quantity="other">נסה שוב בעוד %d שניות.</item>
-        <item quantity="one">נסה שוב בעוד %d שניה.</item>
+        <item quantity="one">נסה שוב בעוד שניה %d.</item>
     </plurals>
     <plurals name="oneplus_zen_mode_duration_summary_time_hours">
         <item quantity="other">%d שעות (אלא אם יופעל אוטומטית)</item>
         <item quantity="one">שעה אחת (אלא אם יופעל אוטומטית)</item>
     </plurals>
     <plurals name="op_location_settings_summary_location_on">
-        <item quantity="other">On - %1$d apps have access to location</item>
-        <item quantity="one">On - %1$d app has access to location</item>
+        <item quantity="other">ל-%1$d יישומים יש גישה למיקום</item>
+        <item quantity="one">ליישום %1$d יש גישה למיקום</item>
     </plurals>
     <plurals name="permission_bar_chart_label">
         <item quantity="other">%s אפליקציות</item>

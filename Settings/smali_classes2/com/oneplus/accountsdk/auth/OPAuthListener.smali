@@ -24,3 +24,9 @@
         }
     .end annotation
 .end method
+
+.method public abstract onReqLoading()V
+.end method
+
+.method public abstract onReqStart()V
+.end method

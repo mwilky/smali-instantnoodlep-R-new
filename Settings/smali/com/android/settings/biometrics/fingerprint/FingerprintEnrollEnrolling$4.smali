@@ -39,7 +39,7 @@
 
     iget-object p0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling$4;->this$0:Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;
 
-    invoke-static {p0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->access$400(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)[B
+    invoke-static {p0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->access$200(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)[B
 
     move-result-object v0
 

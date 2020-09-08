@@ -280,13 +280,13 @@
 .end method
 
 .method public onPreferenceTreeClick(Landroidx/preference/Preference;)Z
-    .locals 2
+    .locals 8
 
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "unlock_set_do_later"
+    const-string/jumbo v1, "unlock_set_do_later"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -302,15 +302,25 @@
 
     move-result-object p1
 
-    const-string v0, ":settings:frp_supported"
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    const-string v1, ":settings:frp_supported"
 
-    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+    invoke-virtual {p1, v1, v0}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
-    move-result p1
+    move-result v2
 
-    invoke-static {p1, v1, v1, v1, v1}, Lcom/android/settings/password/SetupSkipDialog;->newInstance(ZZZZZ)Lcom/android/settings/password/SetupSkipDialog;
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x1
+
+    invoke-static/range {v2 .. v7}, Lcom/android/settings/password/SetupSkipDialog;->newInstance(ZZZZZZ)Lcom/android/settings/password/SetupSkipDialog;
 
     move-result-object p1
 

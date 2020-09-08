@@ -2,6 +2,9 @@
 .super Landroid/widget/ListView;
 .source "SpringListView.java"
 
+# interfaces
+.implements Landroidx/core/view/NestedScrollingChild;
+
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
@@ -12,6 +15,8 @@
 
 
 # instance fields
+.field private mAppbarLayout:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
+
 .field private mBottomGlow:Landroid/widget/EdgeEffect;
 
 .field private mDispatchScrollCounter:I
@@ -51,6 +56,8 @@
 .field private mScrollState:I
 
 .field mScrollStepConsumed:[I
+
+.field private mScrollingChildHelper:Landroidx/core/view/NestedScrollingChildHelper;
 
 .field private mSkipSpringAnimationOnce:Z
 
@@ -345,6 +352,23 @@
 .method private init()V
     .locals 2
 
+    new-instance v0, Landroidx/core/view/NestedScrollingChildHelper;
+
+    invoke-direct {v0, p0}, Landroidx/core/view/NestedScrollingChildHelper;-><init>(Landroid/view/View;)V
+
+    iput-object v0, p0, Lcom/google/android/material/edgeeffect/SpringListView;->mScrollingChildHelper:Landroidx/core/view/NestedScrollingChildHelper;
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x15
+
+    if-lt v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Lcom/google/android/material/edgeeffect/SpringListView;->setNestedScrollingEnabled(Z)V
+
+    :cond_0
     invoke-virtual {p0}, Landroid/widget/ListView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -761,7 +785,7 @@
     invoke-virtual {v0}, Landroid/view/VelocityTracker;->clear()V
 
     :cond_0
-    invoke-virtual {p0}, Landroid/widget/ListView;->stopNestedScroll()V
+    invoke-virtual {p0}, Lcom/google/android/material/edgeeffect/SpringListView;->stopNestedScroll()V
 
     invoke-direct {p0}, Lcom/google/android/material/edgeeffect/SpringListView;->releaseGlows()V
 
@@ -883,6 +907,92 @@
 
     :cond_2
     return-void
+.end method
+
+.method public dispatchNestedFling(FFZ)Z
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/material/edgeeffect/SpringListView;->mScrollingChildHelper:Landroidx/core/view/NestedScrollingChildHelper;
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0, p1, p2, p3}, Landroidx/core/view/NestedScrollingChildHelper;->dispatchNestedFling(FFZ)Z
+
+    move-result p0
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public dispatchNestedPreFling(FF)Z
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/material/edgeeffect/SpringListView;->mScrollingChildHelper:Landroidx/core/view/NestedScrollingChildHelper;
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0, p1, p2}, Landroidx/core/view/NestedScrollingChildHelper;->dispatchNestedPreFling(FF)Z
+
+    move-result p0
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public dispatchNestedPreScroll(II[I[I)Z
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/material/edgeeffect/SpringListView;->mScrollingChildHelper:Landroidx/core/view/NestedScrollingChildHelper;
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0, p1, p2, p3, p4}, Landroidx/core/view/NestedScrollingChildHelper;->dispatchNestedPreScroll(II[I[I)Z
+
+    move-result p0
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public dispatchNestedScroll(IIII[I)Z
+    .locals 6
+
+    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringListView;->mScrollingChildHelper:Landroidx/core/view/NestedScrollingChildHelper;
+
+    if-eqz v0, :cond_0
+
+    move v1, p1
+
+    move v2, p2
+
+    move v3, p3
+
+    move v4, p4
+
+    move-object v5, p5
+
+    invoke-virtual/range {v0 .. v5}, Landroidx/core/view/NestedScrollingChildHelper;->dispatchNestedScroll(IIII[I)Z
+
+    move-result p0
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
 .end method
 
 .method dispatchOnScrolled(II)V
@@ -1095,10 +1205,93 @@
     return-void
 .end method
 
+.method public fling(I)V
+    .locals 4
+
+    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringListView;->mAppbarLayout:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
+
+    if-eqz v0, :cond_2
+
+    const/16 v1, 0x1f4
+
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    const/16 v3, 0x1388
+
+    if-le p1, v1, :cond_0
+
+    if-ge p1, v3, :cond_0
+
+    invoke-virtual {v0}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->getFraction()F
+
+    move-result v0
+
+    cmpg-float v0, v0, v2
+
+    if-gez v0, :cond_0
+
+    const/16 p1, 0x190
+
+    invoke-super {p0, p1}, Landroid/widget/ListView;->fling(I)V
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x0
+
+    if-le p1, v3, :cond_1
+
+    iget-object v1, p0, Lcom/google/android/material/edgeeffect/SpringListView;->mAppbarLayout:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
+
+    invoke-virtual {v1}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->getFraction()F
+
+    move-result v1
+
+    cmpg-float v1, v1, v2
+
+    if-gez v1, :cond_1
+
+    iget-object v1, p0, Lcom/google/android/material/edgeeffect/SpringListView;->mAppbarLayout:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
+
+    invoke-virtual {v1, v0}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->scrollTop(Z)V
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v1, p0, Lcom/google/android/material/edgeeffect/SpringListView;->mAppbarLayout:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
+
+    invoke-virtual {v1, v0}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->setOverFling(Z)V
+
+    :cond_2
+    :goto_0
+    invoke-super {p0, p1}, Landroid/widget/ListView;->fling(I)V
+
+    return-void
+.end method
+
 .method public getScrollState()I
     .locals 0
 
     iget p0, p0, Lcom/google/android/material/edgeeffect/SpringListView;->mScrollState:I
+
+    return p0
+.end method
+
+.method public hasNestedScrollingParent()Z
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/material/edgeeffect/SpringListView;->mScrollingChildHelper:Landroidx/core/view/NestedScrollingChildHelper;
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Landroidx/core/view/NestedScrollingChildHelper;->hasNestedScrollingParent()Z
+
+    move-result p0
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
 
     return p0
 .end method
@@ -1113,6 +1306,25 @@
     iput-object v0, p0, Lcom/google/android/material/edgeeffect/SpringListView;->mTopGlow:Landroid/widget/EdgeEffect;
 
     return-void
+.end method
+
+.method public isNestedScrollingEnabled()Z
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/material/edgeeffect/SpringListView;->mScrollingChildHelper:Landroidx/core/view/NestedScrollingChildHelper;
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Landroidx/core/view/NestedScrollingChildHelper;->isNestedScrollingEnabled()Z
+
+    move-result p0
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
 .end method
 
 .method isUserOnScrollListener(Landroid/widget/AbsListView$OnScrollListener;)Z
@@ -1272,7 +1484,7 @@
 
     invoke-virtual {v0}, Landroid/view/VelocityTracker;->clear()V
 
-    invoke-virtual {p0}, Landroid/widget/ListView;->stopNestedScroll()V
+    invoke-virtual {p0}, Lcom/google/android/material/edgeeffect/SpringListView;->stopNestedScroll()V
 
     goto :goto_1
 
@@ -1362,7 +1574,7 @@
 
     aput v4, v0, v4
 
-    invoke-virtual {p0, v3}, Landroid/widget/ListView;->startNestedScroll(I)Z
+    invoke-virtual {p0, v3}, Lcom/google/android/material/edgeeffect/SpringListView;->startNestedScroll(I)Z
 
     :cond_d
     :goto_1
@@ -1383,6 +1595,42 @@
     move-result p0
 
     return p0
+.end method
+
+.method protected onMeasure(II)V
+    .locals 1
+
+    invoke-virtual {p0}, Landroid/widget/ListView;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Landroid/widget/ListView;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    instance-of v0, v0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;
+
+    if-eqz v0, :cond_0
+
+    const p2, 0x1fffffff
+
+    const/high16 v0, -0x80000000
+
+    invoke-static {p2, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+
+    move-result p2
+
+    invoke-super {p0, p1, p2}, Landroid/widget/ListView;->onMeasure(II)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-super {p0, p1, p2}, Landroid/widget/ListView;->onMeasure(II)V
+
+    :goto_0
+    return-void
 .end method
 
 .method public onScrolled(II)V
@@ -1689,7 +1937,7 @@
     invoke-virtual {v1}, Landroid/view/View;->getBottom()I
 
     :cond_d
-    invoke-virtual {p0, v5}, Landroid/widget/ListView;->startNestedScroll(I)Z
+    invoke-virtual {p0, v5}, Lcom/google/android/material/edgeeffect/SpringListView;->startNestedScroll(I)Z
 
     :cond_e
     :goto_3
@@ -1903,6 +2151,19 @@
     return-void
 .end method
 
+.method public setNestedScrollingEnabled(Z)V
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/material/edgeeffect/SpringListView;->mScrollingChildHelper:Landroidx/core/view/NestedScrollingChildHelper;
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0, p1}, Landroidx/core/view/NestedScrollingChildHelper;->setNestedScrollingEnabled(Z)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public setOnScrollListener(Landroid/widget/AbsListView$OnScrollListener;)V
     .locals 1
 
@@ -1949,5 +2210,37 @@
 
     iput-object p1, p0, Lcom/google/android/material/edgeeffect/SpringListView;->mSpringListener:Lcom/google/android/material/edgeeffect/SpringEffectListener;
 
+    return-void
+.end method
+
+.method public startNestedScroll(I)Z
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/material/edgeeffect/SpringListView;->mScrollingChildHelper:Landroidx/core/view/NestedScrollingChildHelper;
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0, p1}, Landroidx/core/view/NestedScrollingChildHelper;->startNestedScroll(I)Z
+
+    move-result p0
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public stopNestedScroll()V
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/material/edgeeffect/SpringListView;->mScrollingChildHelper:Landroidx/core/view/NestedScrollingChildHelper;
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Landroidx/core/view/NestedScrollingChildHelper;->stopNestedScroll()V
+
+    :cond_0
     return-void
 .end method

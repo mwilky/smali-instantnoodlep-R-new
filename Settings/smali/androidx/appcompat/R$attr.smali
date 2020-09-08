@@ -72,24 +72,26 @@
 
 .field public static final listPopupWindowStyle:I = 0x7f04030d
 
-.field public static final panelMenuListTheme:I = 0x7f0403d4
+.field public static final panelMenuListTheme:I = 0x7f0403d1
 
-.field public static final popupMenuStyle:I = 0x7f04040c
+.field public static final popupMenuStyle:I = 0x7f040409
 
-.field public static final ratingBarStyle:I = 0x7f040438
+.field public static final ratingBarStyle:I = 0x7f040435
 
-.field public static final searchViewStyle:I = 0x7f040469
+.field public static final searchViewStyle:I = 0x7f040466
 
-.field public static final seekBarStyle:I = 0x7f040470
+.field public static final seekBarStyle:I = 0x7f04046d
 
-.field public static final spinnerStyle:I = 0x7f0404a5
+.field public static final spinnerStyle:I = 0x7f0404a2
 
-.field public static final state_indeterminate:I = 0x7f0404b4
+.field public static final state_indeterminate:I = 0x7f0404b1
 
-.field public static final switchStyle:I = 0x7f040527
+.field public static final switchStyle:I = 0x7f040524
 
-.field public static final textColorSearchUrl:I = 0x7f040568
+.field public static final textColorSearchUrl:I = 0x7f040565
 
-.field public static final toolbarNavigationButtonStyle:I = 0x7f0405a1
+.field public static final toastStyle:I = 0x7f04059c
 
-.field public static final toolbarStyle:I = 0x7f0405a2
+.field public static final toolbarNavigationButtonStyle:I = 0x7f04059e
+
+.field public static final toolbarStyle:I = 0x7f04059f

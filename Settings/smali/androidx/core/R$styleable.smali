@@ -157,7 +157,7 @@
         0x7f040201
         0x7f040202
         0x7f040203
-        0x7f0405b7
+        0x7f0405b4
     .end array-data
 
     :array_3

@@ -22,13 +22,7 @@
 # instance fields
 .field private mDialog:Landroidx/appcompat/app/AlertDialog;
 
-.field private final mHasPriorityInSorting:Z
-
 .field private final mImi:Landroid/view/inputmethod/InputMethodInfo;
-
-.field private final mInputMethodSettingValues:Lcom/android/settingslib/inputmethod/InputMethodSettingValuesWrapper;
-
-.field private final mIsAllowedByOrganization:Z
 
 .field private final mOnSaveListener:Lcom/android/settingslib/OPInputMethodPreference$OnSavePreferenceListener;
 
@@ -49,41 +43,39 @@
 .end method
 
 .method constructor <init>(Landroid/content/Context;Landroid/view/inputmethod/InputMethodInfo;Ljava/lang/CharSequence;ZLcom/android/settingslib/OPInputMethodPreference$OnSavePreferenceListener;)V
-    .locals 2
+    .locals 1
     .annotation build Lcom/android/internal/annotations/VisibleForTesting;
     .end annotation
 
     invoke-direct {p0, p1}, Lcom/oneplus/settings/ui/OPRestrictedSwitchPreference;-><init>(Landroid/content/Context;)V
 
-    sget v0, Lcom/android/settings/R$layout;->op_preference_material_input:I
+    sget p4, Lcom/android/settings/R$layout;->op_preference_material_input:I
 
-    invoke-virtual {p0, v0}, Landroidx/preference/Preference;->setLayoutResource(I)V
+    invoke-virtual {p0, p4}, Landroidx/preference/Preference;->setLayoutResource(I)V
+
+    const/4 p4, 0x0
+
+    iput-object p4, p0, Lcom/android/settingslib/OPInputMethodPreference;->mDialog:Landroidx/appcompat/app/AlertDialog;
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settingslib/OPInputMethodPreference;->mDialog:Landroidx/appcompat/app/AlertDialog;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v1}, Landroidx/preference/Preference;->setPersistent(Z)V
+    invoke-virtual {p0, v0}, Landroidx/preference/Preference;->setPersistent(Z)V
 
     iput-object p2, p0, Lcom/android/settingslib/OPInputMethodPreference;->mImi:Landroid/view/inputmethod/InputMethodInfo;
 
-    iput-boolean p4, p0, Lcom/android/settingslib/OPInputMethodPreference;->mIsAllowedByOrganization:Z
-
     iput-object p5, p0, Lcom/android/settingslib/OPInputMethodPreference;->mOnSaveListener:Lcom/android/settingslib/OPInputMethodPreference$OnSavePreferenceListener;
 
-    const-string p4, ""
+    const-string p5, ""
 
-    invoke-virtual {p0, p4}, Landroidx/preference/SwitchPreference;->setSwitchTextOn(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, p5}, Landroidx/preference/SwitchPreference;->setSwitchTextOn(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {p0, p4}, Landroidx/preference/SwitchPreference;->setSwitchTextOff(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, p5}, Landroidx/preference/SwitchPreference;->setSwitchTextOff(Ljava/lang/CharSequence;)V
 
     invoke-virtual {p2}, Landroid/view/inputmethod/InputMethodInfo;->getId()Ljava/lang/String;
 
-    move-result-object p4
+    move-result-object p5
 
-    invoke-virtual {p0, p4}, Landroidx/preference/Preference;->setKey(Ljava/lang/String;)V
+    invoke-virtual {p0, p5}, Landroidx/preference/Preference;->setKey(Ljava/lang/String;)V
 
     invoke-virtual {p0, p3}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
 
@@ -93,11 +85,11 @@
 
     invoke-static {p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result p4
+    move-result p5
 
-    if-eqz p4, :cond_0
+    if-eqz p5, :cond_0
 
-    invoke-virtual {p0, v0}, Landroidx/preference/Preference;->setIntent(Landroid/content/Intent;)V
+    invoke-virtual {p0, p4}, Landroidx/preference/Preference;->setIntent(Landroid/content/Intent;)V
 
     goto :goto_0
 
@@ -119,10 +111,6 @@
     :goto_0
     invoke-static {p1}, Lcom/android/settingslib/inputmethod/InputMethodSettingValuesWrapper;->getInstance(Landroid/content/Context;)Lcom/android/settingslib/inputmethod/InputMethodSettingValuesWrapper;
 
-    move-result-object p1
-
-    iput-object p1, p0, Lcom/android/settingslib/OPInputMethodPreference;->mInputMethodSettingValues:Lcom/android/settingslib/inputmethod/InputMethodSettingValuesWrapper;
-
     invoke-virtual {p2}, Landroid/view/inputmethod/InputMethodInfo;->isSystem()Z
 
     move-result p1
@@ -133,97 +121,12 @@
 
     move-result p1
 
-    if-eqz p1, :cond_1
-
-    const/4 v1, 0x1
-
     :cond_1
-    iput-boolean v1, p0, Lcom/android/settingslib/OPInputMethodPreference;->mHasPriorityInSorting:Z
-
     invoke-virtual {p0, p0}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
     invoke-virtual {p0, p0}, Landroidx/preference/Preference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
 
     return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/view/inputmethod/InputMethodInfo;ZZLcom/android/settingslib/OPInputMethodPreference$OnSavePreferenceListener;)V
-    .locals 7
-
-    invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v0
-
-    invoke-virtual {p2, v0}, Landroid/view/inputmethod/InputMethodInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
-
-    move-result-object v4
-
-    move-object v1, p0
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move v5, p4
-
-    move-object v6, p5
-
-    invoke-direct/range {v1 .. v6}, Lcom/android/settingslib/OPInputMethodPreference;-><init>(Landroid/content/Context;Landroid/view/inputmethod/InputMethodInfo;Ljava/lang/CharSequence;ZLcom/android/settingslib/OPInputMethodPreference$OnSavePreferenceListener;)V
-
-    if-nez p3, :cond_0
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Landroidx/preference/Preference;->setWidgetLayoutResource(I)V
-
-    :cond_0
-    return-void
-.end method
-
-.method private getInputMethodManager()Landroid/view/inputmethod/InputMethodManager;
-    .locals 1
-
-    invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    const-string v0, "input_method"
-
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/view/inputmethod/InputMethodManager;
-
-    return-object p0
-.end method
-
-.method private getSummaryString()Ljava/lang/String;
-    .locals 3
-
-    invoke-direct {p0}, Lcom/android/settingslib/OPInputMethodPreference;->getInputMethodManager()Landroid/view/inputmethod/InputMethodManager;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/android/settingslib/OPInputMethodPreference;->mImi:Landroid/view/inputmethod/InputMethodInfo;
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v1, v2}, Landroid/view/inputmethod/InputMethodManager;->getEnabledInputMethodSubtypeList(Landroid/view/inputmethod/InputMethodInfo;Z)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    iget-object p0, p0, Lcom/android/settingslib/OPInputMethodPreference;->mImi:Landroid/view/inputmethod/InputMethodInfo;
-
-    invoke-static {v0, v1, p0}, Lcom/android/settingslib/inputmethod/InputMethodAndSubtypeUtil;->getSubtypeLocaleNameListAsSentence(Ljava/util/List;Landroid/content/Context;Landroid/view/inputmethod/InputMethodInfo;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
 .end method
 
 .method private isImeEnabler()Z
@@ -530,91 +433,6 @@
 
 
 # virtual methods
-.method public compareTo(Lcom/android/settingslib/OPInputMethodPreference;Ljava/text/Collator;)I
-    .locals 4
-
-    const/4 v0, 0x0
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    iget-boolean v1, p0, Lcom/android/settingslib/OPInputMethodPreference;->mHasPriorityInSorting:Z
-
-    iget-boolean v2, p1, Lcom/android/settingslib/OPInputMethodPreference;->mHasPriorityInSorting:Z
-
-    const/4 v3, -0x1
-
-    if-eq v1, v2, :cond_2
-
-    if-eqz v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v3, 0x1
-
-    :goto_0
-    return v3
-
-    :cond_2
-    invoke-virtual {p0}, Landroidx/preference/Preference;->getTitle()Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    invoke-virtual {p1}, Landroidx/preference/Preference;->getTitle()Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v1, :cond_3
-
-    if-nez v2, :cond_3
-
-    invoke-interface {p0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p2, p0, p1}, Ljava/text/Collator;->compare(Ljava/lang/String;Ljava/lang/String;)I
-
-    move-result p0
-
-    goto :goto_2
-
-    :cond_3
-    if-eqz v1, :cond_4
-
-    move p0, v3
-
-    goto :goto_1
-
-    :cond_4
-    move p0, v0
-
-    :goto_1
-    if-eqz v2, :cond_5
-
-    move v0, v3
-
-    :cond_5
-    sub-int/2addr p0, v0
-
-    :goto_2
-    return p0
-.end method
-
 .method public synthetic lambda$showDirectBootWarnDialog$3$OPInputMethodPreference(Landroid/content/DialogInterface;I)V
     .locals 0
 
@@ -800,92 +618,4 @@
     :cond_1
     :goto_0
     return v0
-.end method
-
-.method public updatePreferenceViews()V
-    .locals 3
-
-    iget-object v0, p0, Lcom/android/settingslib/OPInputMethodPreference;->mInputMethodSettingValues:Lcom/android/settingslib/inputmethod/InputMethodSettingValuesWrapper;
-
-    iget-object v1, p0, Lcom/android/settingslib/OPInputMethodPreference;->mImi:Landroid/view/inputmethod/InputMethodInfo;
-
-    invoke-virtual {v0, v1}, Lcom/android/settingslib/inputmethod/InputMethodSettingValuesWrapper;->isAlwaysCheckedIme(Landroid/view/inputmethod/InputMethodInfo;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-direct {p0}, Lcom/android/settingslib/OPInputMethodPreference;->isImeEnabler()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lcom/android/settingslib/RestrictedSwitchPreference;->setDisabledByAdmin(Lcom/android/settingslib/RestrictedLockUtils$EnforcedAdmin;)V
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lcom/android/settingslib/RestrictedSwitchPreference;->setEnabled(Z)V
-
-    goto :goto_0
-
-    :cond_0
-    iget-boolean v0, p0, Lcom/android/settingslib/OPInputMethodPreference;->mIsAllowedByOrganization:Z
-
-    if-nez v0, :cond_1
-
-    invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/android/settingslib/OPInputMethodPreference;->mImi:Landroid/view/inputmethod/InputMethodInfo;
-
-    invoke-virtual {v1}, Landroid/view/inputmethod/InputMethodInfo;->getPackageName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {}, Landroid/os/UserHandle;->myUserId()I
-
-    move-result v2
-
-    invoke-static {v0, v1, v2}, Lcom/android/settingslib/RestrictedLockUtilsInternal;->checkIfInputMethodDisallowed(Landroid/content/Context;Ljava/lang/String;I)Lcom/android/settingslib/RestrictedLockUtils$EnforcedAdmin;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/android/settingslib/RestrictedSwitchPreference;->setDisabledByAdmin(Lcom/android/settingslib/RestrictedLockUtils$EnforcedAdmin;)V
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Lcom/android/settingslib/RestrictedSwitchPreference;->setEnabled(Z)V
-
-    :goto_0
-    iget-object v0, p0, Lcom/android/settingslib/OPInputMethodPreference;->mInputMethodSettingValues:Lcom/android/settingslib/inputmethod/InputMethodSettingValuesWrapper;
-
-    iget-object v1, p0, Lcom/android/settingslib/OPInputMethodPreference;->mImi:Landroid/view/inputmethod/InputMethodInfo;
-
-    invoke-virtual {v0, v1}, Lcom/android/settingslib/inputmethod/InputMethodSettingValuesWrapper;->isEnabledImi(Landroid/view/inputmethod/InputMethodInfo;)Z
-
-    move-result v0
-
-    invoke-virtual {p0, v0}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
-
-    invoke-virtual {p0}, Lcom/android/settingslib/RestrictedSwitchPreference;->isDisabledByAdmin()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    invoke-direct {p0}, Lcom/android/settingslib/OPInputMethodPreference;->getSummaryString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
-
-    :cond_2
-    return-void
 .end method

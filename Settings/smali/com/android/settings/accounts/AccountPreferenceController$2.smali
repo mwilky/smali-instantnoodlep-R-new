@@ -3,12 +3,12 @@
 .source "AccountPreferenceController.java"
 
 # interfaces
-.implements Landroidx/preference/Preference$OnPreferenceClickListener;
+.implements Ljava/util/Comparator;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accounts/AccountPreferenceController;->newAddOneplusAccountPreference(Landroid/content/Context;)Lcom/android/settingslib/RestrictedPreference;
+    value = Lcom/android/settings/accounts/AccountPreferenceController;->getAccountTypePreferences(Lcom/android/settingslib/accounts/AuthenticatorHelper;Landroid/os/UserHandle;Landroid/util/ArrayMap;)Ljava/util/ArrayList;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -16,16 +16,19 @@
     name = null
 .end annotation
 
-
-# instance fields
-.field final synthetic this$0:Lcom/android/settings/accounts/AccountPreferenceController;
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator<",
+        "Lcom/android/settings/accounts/AccountTypePreference;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
 .method constructor <init>(Lcom/android/settings/accounts/AccountPreferenceController;)V
     .locals 0
-
-    iput-object p1, p0, Lcom/android/settings/accounts/AccountPreferenceController$2;->this$0:Lcom/android/settings/accounts/AccountPreferenceController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -34,67 +37,68 @@
 
 
 # virtual methods
-.method public onPreferenceClick(Landroidx/preference/Preference;)Z
-    .locals 8
+.method public compare(Lcom/android/settings/accounts/AccountTypePreference;Lcom/android/settings/accounts/AccountTypePreference;)I
+    .locals 1
 
-    iget-object p1, p0, Lcom/android/settings/accounts/AccountPreferenceController$2;->this$0:Lcom/android/settings/accounts/AccountPreferenceController;
-
-    invoke-static {p1}, Lcom/android/settings/accounts/AccountPreferenceController;->access$100(Lcom/android/settings/accounts/AccountPreferenceController;)Landroid/content/Context;
-
-    move-result-object p1
-
-    const-string v0, "com.oneplus.account"
-
-    invoke-static {p1, v0}, Lcom/oneplus/settings/utils/OPUtils;->isAppExist(Landroid/content/Context;Ljava/lang/String;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Lcom/android/settings/accounts/AccountPreferenceController$2;->this$0:Lcom/android/settings/accounts/AccountPreferenceController;
-
-    invoke-static {p1}, Lcom/android/settings/accounts/AccountPreferenceController;->access$200(Lcom/android/settings/accounts/AccountPreferenceController;)Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-static {p1}, Landroid/accounts/AccountManager;->get(Landroid/content/Context;)Landroid/accounts/AccountManager;
-
-    move-result-object v0
-
-    new-instance v4, Landroid/os/Bundle;
-
-    invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
-
-    const-string p1, "come_from"
-
-    const-string v1, "from_settings"
-
-    invoke-virtual {v4, p1, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v3, 0x0
-
-    iget-object p0, p0, Lcom/android/settings/accounts/AccountPreferenceController$2;->this$0:Lcom/android/settings/accounts/AccountPreferenceController;
-
-    invoke-static {p0}, Lcom/android/settings/accounts/AccountPreferenceController;->access$300(Lcom/android/settings/accounts/AccountPreferenceController;)Lcom/android/settings/SettingsPreferenceFragment;
+    invoke-virtual {p1}, Lcom/android/settings/accounts/AccountTypePreference;->getSummary()Ljava/lang/CharSequence;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+    invoke-interface {p0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object p0
 
-    const/4 v6, 0x0
+    invoke-virtual {p2}, Lcom/android/settings/accounts/AccountTypePreference;->getSummary()Ljava/lang/CharSequence;
 
-    const/4 v7, 0x0
+    move-result-object v0
 
-    const-string v1, "com.oneplus.account"
+    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
-    const-string v2, ""
+    move-result-object v0
 
-    invoke-virtual/range {v0 .. v7}, Landroid/accounts/AccountManager;->addAccount(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Activity;Landroid/accounts/AccountManagerCallback;Landroid/os/Handler;)Landroid/accounts/AccountManagerFuture;
+    invoke-virtual {p0, v0}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    const/4 p0, 0x1
+    invoke-virtual {p1}, Lcom/android/settings/accounts/AccountTypePreference;->getTitle()Ljava/lang/CharSequence;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p2}, Lcom/android/settings/accounts/AccountTypePreference;->getTitle()Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+
+    move-result p0
+
+    :goto_0
+    return p0
+.end method
+
+.method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 0
+
+    check-cast p1, Lcom/android/settings/accounts/AccountTypePreference;
+
+    check-cast p2, Lcom/android/settings/accounts/AccountTypePreference;
+
+    invoke-virtual {p0, p1, p2}, Lcom/android/settings/accounts/AccountPreferenceController$2;->compare(Lcom/android/settings/accounts/AccountTypePreference;Lcom/android/settings/accounts/AccountTypePreference;)I
+
+    move-result p0
 
     return p0
 .end method

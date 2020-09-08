@@ -205,7 +205,7 @@
 .end method
 
 .method private gotoAddFaceData()V
-    .locals 3
+    .locals 2
 
     const/4 v0, 0x0
 
@@ -217,19 +217,13 @@
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
 
     :try_start_1
-    const-string v0, "com.oneplus.faceunlock"
+    const-string v0, "com.oneplus.settings.FACEUNLOCK_INTRODUCTION"
 
-    const-string v2, "com.oneplus.faceunlock.FaceUnlockActivity"
+    invoke-virtual {v1, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    const/4 v0, 0x5
 
-    const-string v0, "FaceUnlockActivity.StartMode"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    invoke-virtual {p0, v1}, Landroidx/fragment/app/Fragment;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v1, v0}, Landroidx/fragment/app/Fragment;->startActivityForResult(Landroid/content/Intent;I)V
     :try_end_1
     .catch Landroid/content/ActivityNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
 

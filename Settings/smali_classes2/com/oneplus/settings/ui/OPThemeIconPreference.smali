@@ -32,7 +32,7 @@
 
     const/4 v1, 0x0
 
-    const/16 v2, 0x133
+    const/16 v2, 0x12c
 
     aput v2, v0, v1
 
@@ -104,7 +104,7 @@
 
     const-string v1, "aod_clock_style"
 
-    const/16 v2, 0x64
+    const/4 v2, 0x0
 
     invoke-static {p0, v1, v2, v0}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
@@ -112,11 +112,15 @@
 
     const/16 v0, 0x28
 
+    if-eq p0, v0, :cond_1
+
+    const/16 v0, 0x64
+
     if-eq p0, v0, :cond_0
 
     packed-switch p0, :pswitch_data_0
 
-    sget p0, Lcom/android/settings/R$drawable;->op_custom_aodpreview_default:I
+    sget p0, Lcom/android/settings/R$drawable;->op_custom_aodpreview_smart_space_default:I
 
     goto :goto_0
 
@@ -175,17 +179,17 @@
 
     goto :goto_0
 
-    :pswitch_b
-    sget p0, Lcom/android/settings/R$drawable;->op_custom_aodpreview_smart_space_default:I
+    :cond_0
+    sget p0, Lcom/android/settings/R$drawable;->op_custom_aodpreview_default:I
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     invoke-static {}, Lcom/oneplus/settings/utils/OPThemeUtils;->isSupportMclTheme()Z
 
     move-result p0
 
-    if-eqz p0, :cond_1
+    if-eqz p0, :cond_2
 
     const-string p0, "ro.boot.project_name"
 
@@ -199,21 +203,22 @@
 
     move-result p0
 
-    if-nez p0, :cond_1
+    if-nez p0, :cond_2
 
     sget p0, Lcom/android/settings/R$drawable;->op_custom_aodpreview_mcl:I
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     sget p0, Lcom/android/settings/R$drawable;->op_custom_aodpreview_analog_1:I
 
     :goto_0
     return p0
 
+    nop
+
     :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_b
+    .packed-switch 0x1
         :pswitch_a
         :pswitch_9
         :pswitch_8
@@ -642,7 +647,7 @@
 .end method
 
 .method public onClick(Landroid/view/View;)V
-    .locals 8
+    .locals 9
 
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
@@ -672,7 +677,7 @@
 
     invoke-virtual {p0, p1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    goto/16 :goto_5
+    goto/16 :goto_6
 
     :cond_0
     sget v1, Lcom/android/settings/R$id;->theme_clock_style:I
@@ -683,7 +688,7 @@
 
     const/4 v4, 0x1
 
-    if-ne v0, v1, :cond_6
+    if-ne v0, v1, :cond_9
 
     invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
@@ -693,13 +698,15 @@
 
     move-result-object v0
 
-    invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
+    const-string v1, "oem_acc_blackscreen_gestrue_enable"
 
-    move-result v1
+    invoke-static {v0, v1, v3}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
-    const-string v5, "single_tap_show_aod_enabled"
+    move-result v0
 
-    invoke-static {v0, v5, v4, v1}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+    const/16 v1, 0xb
+
+    invoke-static {v0, v1}, Lcom/oneplus/settings/gestures/OPGestureUtils;->get(II)I
 
     move-result v0
 
@@ -725,7 +732,7 @@
 
     move-result v5
 
-    const-string v6, "pickup_show_aod_enabled"
+    const-string v6, "prox_wake_enabled"
 
     invoke-static {v1, v6, v4, v5}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
@@ -741,10 +748,6 @@
     move v1, v3
 
     :goto_1
-    sget-boolean v5, Lcom/oneplus/settings/ui/OPThemeIconPreference;->IS_SUPPORT_AOD_ALWAYS_ON:Z
-
-    if-eqz v5, :cond_3
-
     invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
     move-result-object v5
@@ -757,13 +760,13 @@
 
     move-result v6
 
-    const-string v7, "always_on_state"
+    const-string v7, "aod_use_ambient_display_enabled"
 
-    invoke-static {v5, v7, v3, v6}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+    invoke-static {v5, v7, v4, v6}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result v5
 
-    if-eqz v5, :cond_3
+    if-ne v4, v5, :cond_3
 
     move v5, v4
 
@@ -773,19 +776,55 @@
     move v5, v3
 
     :goto_2
-    if-nez v0, :cond_4
+    sget-boolean v6, Lcom/oneplus/settings/ui/OPThemeIconPreference;->IS_SUPPORT_AOD_ALWAYS_ON:Z
 
-    if-nez v1, :cond_4
+    if-eqz v6, :cond_4
 
-    if-nez v5, :cond_4
+    invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v6
+
+    invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
+
+    move-result v7
+
+    const-string v8, "always_on_state"
+
+    invoke-static {v6, v8, v3, v7}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    move-result v6
+
+    if-eqz v6, :cond_4
+
+    move v6, v4
 
     goto :goto_3
 
     :cond_4
-    move v4, v3
+    move v6, v3
 
     :goto_3
-    if-eqz v4, :cond_5
+    if-nez v0, :cond_5
+
+    if-nez v1, :cond_5
+
+    if-eqz v6, :cond_7
+
+    :cond_5
+    if-nez v5, :cond_6
+
+    goto :goto_4
+
+    :cond_6
+    move v4, v3
+
+    :cond_7
+    :goto_4
+    if-eqz v4, :cond_8
 
     invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
@@ -821,7 +860,7 @@
 
     return-void
 
-    :cond_5
+    :cond_8
     new-instance p1, Lcom/android/settings/core/SubSettingLauncher;
 
     iget-object p0, p0, Lcom/oneplus/settings/ui/OPThemeIconPreference;->mContext:Landroid/content/Context;
@@ -844,12 +883,12 @@
 
     invoke-virtual {p1}, Lcom/android/settings/core/SubSettingLauncher;->launch()V
 
-    goto/16 :goto_5
+    goto/16 :goto_6
 
-    :cond_6
+    :cond_9
     sget v1, Lcom/android/settings/R$id;->theme_fingerprint:I
 
-    if-ne v0, v1, :cond_8
+    if-ne v0, v1, :cond_b
 
     iget-object v0, p0, Lcom/oneplus/settings/ui/OPThemeIconPreference;->mContext:Landroid/content/Context;
 
@@ -861,7 +900,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_7
+    if-nez v0, :cond_a
 
     invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
@@ -897,7 +936,7 @@
 
     return-void
 
-    :cond_7
+    :cond_a
     new-instance p1, Lcom/android/settings/core/SubSettingLauncher;
 
     iget-object p0, p0, Lcom/oneplus/settings/ui/OPThemeIconPreference;->mContext:Landroid/content/Context;
@@ -920,12 +959,12 @@
 
     invoke-virtual {p1}, Lcom/android/settings/core/SubSettingLauncher;->launch()V
 
-    goto :goto_5
+    goto :goto_6
 
-    :cond_8
+    :cond_b
     sget v1, Lcom/android/settings/R$id;->theme_notification:I
 
-    if-ne v0, v1, :cond_b
+    if-ne v0, v1, :cond_e
 
     invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
@@ -945,15 +984,15 @@
 
     move-result v0
 
-    if-ne v0, v4, :cond_9
+    if-ne v0, v4, :cond_c
 
-    goto :goto_4
+    goto :goto_5
 
-    :cond_9
+    :cond_c
     move v4, v3
 
-    :goto_4
-    if-nez v4, :cond_a
+    :goto_5
+    if-nez v4, :cond_d
 
     invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
@@ -989,7 +1028,7 @@
 
     return-void
 
-    :cond_a
+    :cond_d
     new-instance p1, Lcom/android/settings/core/SubSettingLauncher;
 
     iget-object p0, p0, Lcom/oneplus/settings/ui/OPThemeIconPreference;->mContext:Landroid/content/Context;
@@ -1012,8 +1051,8 @@
 
     invoke-virtual {p1}, Lcom/android/settings/core/SubSettingLauncher;->launch()V
 
-    :cond_b
-    :goto_5
+    :cond_e
+    :goto_6
     return-void
 .end method
 

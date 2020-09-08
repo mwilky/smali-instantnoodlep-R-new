@@ -420,7 +420,7 @@
 
     iput-object p1, p0, Lcom/android/settings/applications/ProcessStatsBase;->mFilterSpinner:Landroid/widget/Spinner;
 
-    new-instance p1, Lcom/android/settingslib/widget/settingsspinner/SettingsSpinnerAdapter;
+    new-instance p1, Lcom/oneplus/settings/widget/OPSettingsSpinnerAdapter;
 
     iget-object p2, p0, Lcom/android/settings/applications/ProcessStatsBase;->mFilterSpinner:Landroid/widget/Spinner;
 
@@ -428,7 +428,7 @@
 
     move-result-object p2
 
-    invoke-direct {p1, p2}, Lcom/android/settingslib/widget/settingsspinner/SettingsSpinnerAdapter;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, p2}, Lcom/oneplus/settings/widget/OPSettingsSpinnerAdapter;-><init>(Landroid/content/Context;)V
 
     iput-object p1, p0, Lcom/android/settings/applications/ProcessStatsBase;->mFilterAdapter:Landroid/widget/ArrayAdapter;
 

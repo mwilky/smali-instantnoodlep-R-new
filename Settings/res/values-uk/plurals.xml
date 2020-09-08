@@ -337,20 +337,20 @@
         <item quantity="many">%d активних додатків</item>
     </plurals>
     <plurals name="oneplus_applock_wrong_pattern_warning">
-        <item quantity="other">У вас залишилася %1$d спроб</item>
-        <item quantity="one">У вас залишилася %1$d спроба У вас залишилось %1$d спроб</item>
+        <item quantity="other">У вас залишилося %1$d спроби</item>
+        <item quantity="one">У вас залишилася %1$d спроба</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
-        <item quantity="other">Повторіть спробу через %d с.</item>
-        <item quantity="one">Повторіть спробу через %d сек.</item>
+        <item quantity="other">Повторіть спробу через %d секунди.</item>
+        <item quantity="one">Повторіть спробу через %d секунду.</item>
     </plurals>
     <plurals name="oneplus_zen_mode_duration_summary_time_hours">
         <item quantity="other">%d годин (якщо не ввімкнено автоматично)</item>
         <item quantity="one">%d година (якщо не ввімкнуто автоматично)</item>
     </plurals>
     <plurals name="op_location_settings_summary_location_on">
-        <item quantity="other">On - %1$d apps have access to location</item>
-        <item quantity="one">On - %1$d app has access to location</item>
+        <item quantity="other">Увімкнено – %1$d додатка має доступ до даних про розташування</item>
+        <item quantity="one">Увімкнено – %1$d додаток має доступ до даних про розташування</item>
     </plurals>
     <plurals name="permission_bar_chart_label">
         <item quantity="other">%s додатка</item>

@@ -194,28 +194,8 @@
 
     move-result p1
 
-    invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/oneplus/settings/utils/OPUtils;->isBlackModeOn(Landroid/content/ContentResolver;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
     sget v0, Lcom/android/settings/R$drawable;->op_btn_image_single_choice_selector:I
 
-    goto :goto_1
-
-    :cond_4
-    sget v0, Lcom/android/settings/R$drawable;->op_btn_image_single_choice_selector:I
-
-    :goto_1
     iget-object v1, p0, Lcom/oneplus/settings/widget/OPThemePresetDialogPreference;->mThemeColorChecked:Landroid/widget/CheckedTextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/CheckedTextView;->setCheckMarkDrawable(I)V
@@ -236,43 +216,43 @@
 
     const/4 v1, 0x1
 
-    if-ne p1, v0, :cond_5
+    if-ne p1, v0, :cond_4
 
     iget-object p0, p0, Lcom/oneplus/settings/widget/OPThemePresetDialogPreference;->mThemeColorChecked:Landroid/widget/CheckedTextView;
 
     invoke-virtual {p0, v1}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
-    goto :goto_2
+    goto :goto_1
 
-    :cond_5
-    if-nez p1, :cond_6
+    :cond_4
+    if-nez p1, :cond_5
 
     iget-object p0, p0, Lcom/oneplus/settings/widget/OPThemePresetDialogPreference;->mThemeLightChecked:Landroid/widget/CheckedTextView;
 
     invoke-virtual {p0, v1}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
-    goto :goto_2
+    goto :goto_1
 
-    :cond_6
-    if-ne p1, v1, :cond_7
+    :cond_5
+    if-ne p1, v1, :cond_6
 
     iget-object p0, p0, Lcom/oneplus/settings/widget/OPThemePresetDialogPreference;->mThemeDarkChecked:Landroid/widget/CheckedTextView;
 
     invoke-virtual {p0, v1}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
-    goto :goto_2
+    goto :goto_1
 
-    :cond_7
+    :cond_6
     const/4 v0, 0x3
 
-    if-ne p1, v0, :cond_8
+    if-ne p1, v0, :cond_7
 
     iget-object p0, p0, Lcom/oneplus/settings/widget/OPThemePresetDialogPreference;->mThemeMCLChecked:Landroid/widget/CheckedTextView;
 
     invoke-virtual {p0, v1}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
-    :cond_8
-    :goto_2
+    :cond_7
+    :goto_1
     return-void
 .end method
 

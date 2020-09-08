@@ -131,7 +131,7 @@
 
     invoke-virtual {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->addPreferencesFromResource(I)V
 
-    const-string p1, "unrestricted_access"
+    const-string/jumbo p1, "unrestricted_access"
 
     invoke-virtual {p0, p1}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 

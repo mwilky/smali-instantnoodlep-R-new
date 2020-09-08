@@ -225,20 +225,20 @@
         <item quantity="one">%d активна апликација</item>
     </plurals>
     <plurals name="oneplus_applock_wrong_pattern_warning">
-        <item quantity="other">Имате уште %1$d шанси</item>
-        <item quantity="one">Имате уште %1$d шанса</item>
+        <item quantity="other">Имате уште %1$d обида</item>
+        <item quantity="one">Имате уште %1$d обид</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
-        <item quantity="other">Пробајте пак за %d секунди.</item>
-        <item quantity="one">Пробајте пак за %d секунда.</item>
+        <item quantity="other">Обидете се повторно за %d секунди.</item>
+        <item quantity="one">Обидете се повторно за %d секунда.</item>
     </plurals>
     <plurals name="oneplus_zen_mode_duration_summary_time_hours">
         <item quantity="other">%d часа (освен ако е вклучено автоматски)</item>
         <item quantity="one">1 час (освен ако е вклучено автоматски)</item>
     </plurals>
     <plurals name="op_location_settings_summary_location_on">
-        <item quantity="other">On - %1$d apps have access to location</item>
-        <item quantity="one">On - %1$d app has access to location</item>
+        <item quantity="other">Вклучено - %1$d апликации имаат пристап до локацијата</item>
+        <item quantity="one">Вклучено - %1$d апликација има пристап до локацијата</item>
     </plurals>
     <plurals name="permission_bar_chart_label">
         <item quantity="other">%s апликации</item>

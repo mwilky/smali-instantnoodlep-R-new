@@ -51,6 +51,8 @@
 
 .field private mCurrentTempColor:Ljava/lang/String;
 
+.field private mDarkUiModePreference:Landroidx/preference/Preference;
+
 .field private mDefaultBacklight:F
 
 .field private mDefaultBacklightForVr:F
@@ -2770,24 +2772,27 @@
 
     move-result v2
 
-    if-nez v2, :cond_12
+    if-nez v2, :cond_13
 
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportScreenDisplayAdaption()Z
 
     move-result v2
 
-    if-eqz v2, :cond_13
+    if-eqz v2, :cond_12
 
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportAppsDisplayInFullscreen()Z
 
     move-result v2
 
-    if-eqz v2, :cond_13
+    if-eqz v2, :cond_12
+
+    goto :goto_5
 
     :cond_12
-    move v1, v4
+    move v4, v1
 
     :cond_13
+    :goto_5
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isGuestMode()Z
 
     move-result v2
@@ -2796,24 +2801,24 @@
 
     iget-object p1, p0, Lcom/android/settings/DisplaySettings;->mAdvancedSettingsPreference:Landroidx/preference/Preference;
 
-    iget-object p0, p0, Lcom/android/settings/DisplaySettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings/DisplaySettings;->mContext:Landroid/content/Context;
 
-    sget v0, Lcom/android/settings/R$string;->op_display_advanced_settings_summary_5:I
+    sget v2, Lcom/android/settings/R$string;->op_display_advanced_settings_summary_5:I
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p1, p0}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+    invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_5
+    goto/16 :goto_6
 
     :cond_14
     if-eqz p1, :cond_16
 
     if-eqz v0, :cond_16
 
-    if-eqz v1, :cond_16
+    if-eqz v4, :cond_16
 
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportHolePunchFrontCam()Z
 
@@ -2823,37 +2828,37 @@
 
     iget-object p1, p0, Lcom/android/settings/DisplaySettings;->mAdvancedSettingsPreference:Landroidx/preference/Preference;
 
-    iget-object p0, p0, Lcom/android/settings/DisplaySettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings/DisplaySettings;->mContext:Landroid/content/Context;
 
-    sget v0, Lcom/android/settings/R$string;->op_display_advanced_settings_summary_6:I
+    sget v2, Lcom/android/settings/R$string;->op_display_advanced_settings_summary_6:I
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p1, p0}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+    invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
-    goto :goto_5
+    goto :goto_6
 
     :cond_15
     iget-object p1, p0, Lcom/android/settings/DisplaySettings;->mAdvancedSettingsPreference:Landroidx/preference/Preference;
 
-    iget-object p0, p0, Lcom/android/settings/DisplaySettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings/DisplaySettings;->mContext:Landroid/content/Context;
 
-    sget v0, Lcom/android/settings/R$string;->op_display_advanced_settings_summary_1:I
+    sget v2, Lcom/android/settings/R$string;->op_display_advanced_settings_summary_1:I
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p1, p0}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+    invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
-    goto :goto_5
+    goto :goto_6
 
     :cond_16
     if-eqz v0, :cond_18
 
-    if-eqz v1, :cond_18
+    if-eqz v4, :cond_18
 
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportHolePunchFrontCam()Z
 
@@ -2863,32 +2868,32 @@
 
     iget-object p1, p0, Lcom/android/settings/DisplaySettings;->mAdvancedSettingsPreference:Landroidx/preference/Preference;
 
-    iget-object p0, p0, Lcom/android/settings/DisplaySettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings/DisplaySettings;->mContext:Landroid/content/Context;
 
-    sget v0, Lcom/android/settings/R$string;->op_display_advanced_settings_summary_7:I
+    sget v2, Lcom/android/settings/R$string;->op_display_advanced_settings_summary_7:I
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p1, p0}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+    invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
-    goto :goto_5
+    goto :goto_6
 
     :cond_17
     iget-object p1, p0, Lcom/android/settings/DisplaySettings;->mAdvancedSettingsPreference:Landroidx/preference/Preference;
 
-    iget-object p0, p0, Lcom/android/settings/DisplaySettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings/DisplaySettings;->mContext:Landroid/content/Context;
 
-    sget v0, Lcom/android/settings/R$string;->op_display_advanced_settings_summary_2:I
+    sget v2, Lcom/android/settings/R$string;->op_display_advanced_settings_summary_2:I
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p1, p0}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+    invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
-    goto :goto_5
+    goto :goto_6
 
     :cond_18
     if-eqz p1, :cond_19
@@ -2897,35 +2902,54 @@
 
     iget-object p1, p0, Lcom/android/settings/DisplaySettings;->mAdvancedSettingsPreference:Landroidx/preference/Preference;
 
-    iget-object p0, p0, Lcom/android/settings/DisplaySettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings/DisplaySettings;->mContext:Landroid/content/Context;
 
-    sget v0, Lcom/android/settings/R$string;->op_display_advanced_settings_summary_3:I
+    sget v2, Lcom/android/settings/R$string;->op_display_advanced_settings_summary_3:I
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p1, p0}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+    invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
-    goto :goto_5
+    goto :goto_6
 
     :cond_19
-    if-eqz v1, :cond_1a
+    if-eqz v4, :cond_1a
 
     iget-object p1, p0, Lcom/android/settings/DisplaySettings;->mAdvancedSettingsPreference:Landroidx/preference/Preference;
 
-    iget-object p0, p0, Lcom/android/settings/DisplaySettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings/DisplaySettings;->mContext:Landroid/content/Context;
 
-    sget v0, Lcom/android/settings/R$string;->op_display_advanced_settings_summary_4:I
+    sget v2, Lcom/android/settings/R$string;->op_display_advanced_settings_summary_4:I
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p1, p0}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+    invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
     :cond_1a
-    :goto_5
+    :goto_6
+    const-string p1, "dark_ui_mode"
+
+    invoke-virtual {p0, p1}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/android/settings/DisplaySettings;->mDarkUiModePreference:Landroidx/preference/Preference;
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isGuestMode()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1b
+
+    iget-object p0, p0, Lcom/android/settings/DisplaySettings;->mDarkUiModePreference:Landroidx/preference/Preference;
+
+    invoke-virtual {p0, v1}, Landroidx/preference/Preference;->setVisible(Z)V
+
+    :cond_1b
     return-void
 .end method
 
