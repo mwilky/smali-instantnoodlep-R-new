@@ -125,7 +125,7 @@
 .method static synthetic access$100(Lcom/oneplus/settings/ui/OPMemberPreference;)Landroid/widget/LinearLayout;
     .locals 0
 
-    iget-object p0, p0, Lcom/oneplus/settings/ui/OPMemberPreference;->mLlContent:Landroid/widget/LinearLayout;
+    iget-object p0, p0, Lcom/oneplus/settings/ui/OPMemberPreference;->mLlClickBg:Landroid/widget/LinearLayout;
 
     return-object p0
 .end method
@@ -133,7 +133,7 @@
 .method static synthetic access$200(Lcom/oneplus/settings/ui/OPMemberPreference;)Landroid/widget/LinearLayout;
     .locals 0
 
-    iget-object p0, p0, Lcom/oneplus/settings/ui/OPMemberPreference;->mLlClickBg:Landroid/widget/LinearLayout;
+    iget-object p0, p0, Lcom/oneplus/settings/ui/OPMemberPreference;->mLlContent:Landroid/widget/LinearLayout;
 
     return-object p0
 .end method

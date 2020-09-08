@@ -12,6 +12,10 @@
 .end annotation
 
 
+# static fields
+.field private static mBatteryStats:Lcom/android/internal/app/IBatteryStats;
+
+
 # instance fields
 .field public averageTimeToDischarge:J
 
@@ -410,96 +414,260 @@
 .end method
 
 .method private static getChargTimeToFull(Landroid/content/Intent;Landroid/os/BatteryStats;J)J
-    .locals 4
+    .locals 15
+
+    move-object v0, p0
 
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isProductSwarpChargSupport()Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_2
+    const-string v2, "lesYao chargeTimeRemaining = "
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v3, "get chargeTimeRemaining erro"
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v4, "batterystats"
 
-    const-string v1, "Settings BatteryInfo TimeToFull fastcharge_status:"
+    const-wide/16 v5, -0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-wide/16 v7, 0x3e8
 
-    const-string v1, "fastcharge_status"
+    const-wide/16 v9, 0x0
 
-    const/4 v2, 0x0
+    const-string v11, "BatteryInfo"
 
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    if-eqz v1, :cond_4
 
-    move-result v3
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v12, "Settings BatteryInfo TimeToFull fastcharge_status:"
 
-    move-result-object v0
+    invoke-virtual {v1, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v3, "BatteryInfo"
+    const-string v12, "fastcharge_status"
 
-    invoke-static {v3, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    const/4 v13, 0x0
 
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    invoke-virtual {p0, v12, v13}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
-    move-result v0
+    move-result v14
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v1, v14}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string p1, "estimate_time_to_full"
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const-wide/16 p2, 0x0
+    move-result-object v1
 
-    invoke-virtual {p0, p1, p2, p3}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
+    invoke-static {v11, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    move-result-wide p0
+    invoke-virtual {p0, v12, v13}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    move-result v1
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    if-eqz v1, :cond_1
 
-    const-string v1, "Settings BatteryInfo TimeToFull "
+    const-string v1, "estimate_time_to_full"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v1, v9, v10}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
 
-    invoke-virtual {v0, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    move-result-wide v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {v3, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    const-string v3, "Settings BatteryInfo TimeToFull "
 
-    cmp-long p2, p0, p2
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-lez p2, :cond_0
+    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-wide/16 p2, 0x3e8
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    mul-long/2addr p0, p2
+    move-result-object v2
 
-    mul-long/2addr p0, p2
+    invoke-static {v11, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    cmp-long v2, v0, v9
+
+    if-lez v2, :cond_0
+
+    mul-long/2addr v0, v7
+
+    mul-long/2addr v0, v7
 
     :cond_0
-    return-wide p0
+    return-wide v0
 
     :cond_1
-    invoke-virtual {p1, p2, p3}, Landroid/os/BatteryStats;->computeChargeTimeRemaining(J)J
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-wide p0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    return-wide p0
+    const-string v1, "getChargTimeToFull computeChargeTimeRemaining = "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual/range {p1 .. p3}, Landroid/os/BatteryStats;->computeChargeTimeRemaining(J)J
+
+    move-result-wide v12
+
+    invoke-virtual {v0, v12, v13}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v11, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual/range {p1 .. p3}, Landroid/os/BatteryStats;->computeChargeTimeRemaining(J)J
+
+    move-result-wide v0
+
+    cmp-long v0, v0, v5
+
+    if-nez v0, :cond_3
+
+    sget-object v0, Lcom/android/settings/fuelgauge/BatteryInfo;->mBatteryStats:Lcom/android/internal/app/IBatteryStats;
+
+    if-nez v0, :cond_2
+
+    invoke-static {v4}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/internal/app/IBatteryStats$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/app/IBatteryStats;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/android/settings/fuelgauge/BatteryInfo;->mBatteryStats:Lcom/android/internal/app/IBatteryStats;
 
     :cond_2
-    invoke-virtual {p1, p2, p3}, Landroid/os/BatteryStats;->computeChargeTimeRemaining(J)J
+    :try_start_0
+    sget-object v0, Lcom/android/settings/fuelgauge/BatteryInfo;->mBatteryStats:Lcom/android/internal/app/IBatteryStats;
 
-    move-result-wide p0
+    invoke-interface {v0}, Lcom/android/internal/app/IBatteryStats;->computeChargeTimeRemaining()J
 
-    return-wide p0
+    move-result-wide v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    mul-long v9, v0, v7
+
+    goto :goto_0
+
+    :catch_0
+    invoke-static {v11, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v9, v10}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v11, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-wide v9
+
+    :cond_3
+    invoke-virtual/range {p1 .. p3}, Landroid/os/BatteryStats;->computeChargeTimeRemaining(J)J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    :cond_4
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "getChargTimeToFull computeChargeTimeRemaining "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual/range {p1 .. p3}, Landroid/os/BatteryStats;->computeChargeTimeRemaining(J)J
+
+    move-result-wide v12
+
+    invoke-virtual {v0, v12, v13}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v11, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual/range {p1 .. p3}, Landroid/os/BatteryStats;->computeChargeTimeRemaining(J)J
+
+    move-result-wide v0
+
+    cmp-long v0, v0, v5
+
+    if-nez v0, :cond_6
+
+    sget-object v0, Lcom/android/settings/fuelgauge/BatteryInfo;->mBatteryStats:Lcom/android/internal/app/IBatteryStats;
+
+    if-nez v0, :cond_5
+
+    invoke-static {v4}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/internal/app/IBatteryStats$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/app/IBatteryStats;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/android/settings/fuelgauge/BatteryInfo;->mBatteryStats:Lcom/android/internal/app/IBatteryStats;
+
+    :cond_5
+    :try_start_1
+    sget-object v0, Lcom/android/settings/fuelgauge/BatteryInfo;->mBatteryStats:Lcom/android/internal/app/IBatteryStats;
+
+    invoke-interface {v0}, Lcom/android/internal/app/IBatteryStats;->computeChargeTimeRemaining()J
+
+    move-result-wide v0
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+
+    mul-long v9, v0, v7
+
+    goto :goto_1
+
+    :catch_1
+    invoke-static {v11, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v9, v10}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v11, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-wide v9
+
+    :cond_6
+    invoke-virtual/range {p1 .. p3}, Landroid/os/BatteryStats;->computeChargeTimeRemaining(J)J
+
+    move-result-wide v0
+
+    return-wide v0
 .end method
 
 .method public static varargs parse(Landroid/os/BatteryStats;[Lcom/android/settings/fuelgauge/BatteryInfo$BatteryDataParser;)V

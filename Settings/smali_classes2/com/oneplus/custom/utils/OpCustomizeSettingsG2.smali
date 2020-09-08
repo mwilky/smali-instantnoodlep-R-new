@@ -25,42 +25,45 @@
 
     const/4 v1, 0x3
 
-    if-eq v0, v1, :cond_3
-
-    const/4 v1, 0x6
-
-    if-eq v0, v1, :cond_2
-
-    const/4 v1, 0x7
-
-    if-eq v0, v1, :cond_1
-
-    const/16 v1, 0x8
-
     if-eq v0, v1, :cond_0
+
+    packed-switch v0, :pswitch_data_0
 
     goto :goto_0
 
-    :cond_0
+    :pswitch_0
+    sget-object p0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->CMCC:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+
+    goto :goto_0
+
+    :pswitch_1
     sget-object p0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->CYB:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 
     goto :goto_0
 
-    :cond_1
+    :pswitch_2
     sget-object p0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->OPR_RETAIL:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 
     goto :goto_0
 
-    :cond_2
+    :pswitch_3
     sget-object p0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->MCL:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 
     goto :goto_0
 
-    :cond_3
+    :cond_0
     sget-object p0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->AVG:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 
     :goto_0
     return-object p0
+
+    :pswitch_data_0
+    .packed-switch 0x6
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 .method protected getSoftwareType()Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;

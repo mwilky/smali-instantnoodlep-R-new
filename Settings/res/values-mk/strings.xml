@@ -40,9 +40,14 @@
     <string name="abc_slice_updated">Ажурирано %1$s</string>
     <string name="abc_slices_permission_request">%1$s сака да прикажува делови од %2$s</string>
     <string name="abc_toolbar_collapse_description">Собери</string>
+    <string name="about_action_bar_title">За</string>
+    <string name="about_app_version_text">Version %s</string>
     <string name="about_phone_device_name_warning">Името на уредот е видливо за апликациите на телефонот. Може да го видат и други луѓе кога ќе се поврзете со уреди со Bluetooth или кога ќе поставите Wi-Fi точка на пристап.</string>
+    <string name="about_privacy_policy">Политика за приватност</string>
+    <string name="about_release_note_title">Дневник на надградувања:</string>
     <string name="about_settings">За телефонот</string>
     <string name="about_settings_summary">Прикажи правни информации, статус, верзија на софтвер</string>
+    <string name="about_terms_service">Услови на услуга</string>
     <string name="accelerometer_summary_off">Автоматски префрли ја ориентацијата при ротирање на телефонот</string>
     <string name="accelerometer_summary_on">Автоматски префрли ја ориентацијата при ротирање на телефонот</string>
     <string name="accelerometer_title">Автоматско ротирање на екранот</string>
@@ -1118,8 +1123,8 @@
     <string name="buttons_brightness_title">Позадинска светлина</string>
     <string name="buttons_enable_on_screen_navkeys_summary">Вклучи ја навигациската лента за софтверот на екранот</string>
     <string name="buttons_enable_on_screen_navkeys_title">Навигациска лента на екранот</string>
-    <string name="buttons_force_home_summary">Keep hardware home button enabled when using on-screen keys</string>
-    <string name="buttons_force_home_title">Always enable home button</string>
+    <string name="buttons_force_home_summary">Копчето за почетен екран ќе биде секогаш активно кога ги користите копчињата на екранот</string>
+    <string name="buttons_force_home_title">Трајно активирање на копчето за почетен екран</string>
     <string name="buttons_settings">Копчиња</string>
     <string name="buttons_swap_navkeys_summary">Сменете го редоследот на копчињата за скорешни содржини и за враќање назад</string>
     <string name="buttons_swap_navkeys_title">Менување копчиња</string>
@@ -1131,7 +1136,7 @@
     <string name="cache_header_label">Кеш</string>
     <string name="cache_size_label">Кеш</string>
     <string name="cached">Кеширан процес во заднина</string>
-    <string name="cached_apps_freezer">Прекинете го извршувањето на кешираните апликации</string>
+    <string name="cached_apps_freezer">Суспендирај извршување на кеширани апликации</string>
     <string name="cached_apps_freezer_device_default">Стандардно за уредот</string>
     <string name="cached_apps_freezer_disabled">Оневозможено</string>
     <string name="cached_apps_freezer_enabled">Овозможено</string>
@@ -1580,7 +1585,7 @@
     <string name="data_usage_metered_yes">Со ограничен интернет</string>
     <string name="data_usage_ota">Ажурирања на системот</string>
     <string name="data_usage_other_apps">Други апликации вклучени во употребата</string>
-    <string name="data_usage_package_set">Циклус на наплата</string>
+    <string name="data_usage_package_set">Billing Cycle</string>
     <string name="data_usage_pick_cycle_day">Ден од месецот за ресетирање циклус на користење на интернет:</string>
     <string name="data_usage_rank_sim">Потрошен мобилен интернет</string>
     <string name="data_usage_rank_wifi">Потрошен Wi-Fi интернет</string>
@@ -2127,8 +2132,8 @@
     <string name="firewall_rule_data_only_batch">Само интернет за сè</string>
     <string name="firewall_rule_forbid">Забрането</string>
     <string name="firewall_rule_forbid_batch">Забрани за сè</string>
-    <string name="firewall_rule_wlan_only">Wi-Fi only</string>
-    <string name="firewall_rule_wlan_only_batch">Wi-Fi only all</string>
+    <string name="firewall_rule_wlan_only">Само Wi-Fi</string>
+    <string name="firewall_rule_wlan_only_batch">Само Wi-Fi за сè</string>
     <string name="firewall_title">Контрола на потрошен интернет</string>
     <string name="firmware_version">Верзија на Android</string>
     <string name="font_size_make_larger_desc">Зголеми</string>
@@ -2223,7 +2228,7 @@
     <string name="hardware_keys_action_voice_search">Гласовно пребарување</string>
     <string name="hardware_keys_back_key_title">Копче за назад</string>
     <string name="hardware_keys_double_tap_title">Дејство со двојно допирање</string>
-    <string name="hardware_keys_home_key_title">Home button</string>
+    <string name="hardware_keys_home_key_title">Копче за почетен екран</string>
     <string name="hardware_keys_long_press_title">Дејство со долго притискање</string>
     <string name="hardware_keys_menu_key_title">Копче за скорешни</string>
     <string name="hardware_revision">Верзија на хардвер</string>
@@ -2255,7 +2260,7 @@
 Ова може да го промените подоцна во „Поставки > Апликации и известувања“."</string>
     <string name="high_power_prompt_title">Да се извршува во заднина?</string>
     <string name="high_power_system">Оптимизација на батеријата не е достапна</string>
-    <string name="hint_data_used_alert">Data usage has exceeded %1$s</string>
+    <string name="hint_data_used_alert">Потрошено е повеќе од %1$s</string>
     <string name="hint_traffic_auto_close_network_title">Достигнато е месечното ограничување. Интернетот е автоматски исклучен.</string>
     <string name="hint_traffic_auto_close_network_title_vzw">"Го достигнавте наведеното ограничување за потрошен интернет, па мобилниот интернет е исклучен.
 
@@ -2438,6 +2443,7 @@
     <string name="keywords_lock_screen_notif">известувања на заклучен екран, известувања</string>
     <string name="keywords_lockscreen">лизгајте за отклучување, лозинка, шема, пин</string>
     <string name="keywords_lockscreen_bypass">Заклучен екран, прескокни, заобиколи</string>
+    <string name="keywords_media_controls">аудиовизуелни содржини</string>
     <string name="keywords_model_and_hardware">сериски број, верзија на хардвер</string>
     <string name="keywords_more_default_sms_app">текстуална порака, праќање текстуални пораки, пораки, праќање пораки, стандардно</string>
     <string name="keywords_more_mobile_networks">мобилна мрежа, мобилен, мобилен оператор, безжичен, податоци, 4g, 3g, 2g, lte</string>
@@ -2566,6 +2572,7 @@
     <string name="load_networks_progress">Се пребарува…</string>
     <string name="loading_injected_setting_summary">Се вчитува…</string>
     <string name="loading_notification_apps">Вчитување апликации…</string>
+    <string name="loading_text">Вчитување...</string>
     <string name="local_backup_password_summary_change">Допрете за да се промени или отстрани лозинката за целосен бекап на компјутерот</string>
     <string name="local_backup_password_summary_none">Целосниот бекап на компјутерот во моментов не е заштитен</string>
     <string name="local_backup_password_title">Лозинка за бекап на компјутер</string>
@@ -2841,6 +2848,12 @@
     <string name="master_clear_title">Избриши ги сите податоци (фабричко ресетирање)</string>
     <string name="maximum_memory_use">Макс. користење меморија</string>
     <string name="media_category">Медиуми</string>
+    <string name="media_controls_hide_player">Сокриј го плеерот</string>
+    <string name="media_controls_no_players">Нема достапни плеери</string>
+    <string name="media_controls_resume_description">Плеерот ви овозможува да ја продолжите сесијата од проширената табла „Брзи поставки“.</string>
+    <string name="media_controls_show_player">Прикажи го плеерот</string>
+    <string name="media_controls_summary">Сокриј го плеерот кога сесијата ќе заврши</string>
+    <string name="media_controls_title">Аудиовизуелни содржини</string>
     <string name="media_out_summary_ongoing_call_state">Недостапно за време на повици</string>
     <string name="media_output_default_summary">Овој уред</string>
     <string name="media_output_disconnected_status">%1$s (исклучен)</string>
@@ -2939,7 +2952,7 @@
     <string name="mobile_hotspot_airplane_off_error">За да вклучите хотспот, исклучете го режимот за патување со авион</string>
     <string name="mobile_hotspot_authoration_error">"За да користите мобилен хотспот, ќе треба да се претплатите на услугите за мобилен хотспот.
 
-За да се претплатите на мобилен хотспот, посетете го my verizon или јавете се на корисничката поддршка на (800) 922–0204."</string>
+За да се претплатите на мобилен хотспот, посетете го my verizon или јавете се во корисничката поддршка на (800) 922–0204."</string>
     <string name="mobile_hotspot_data_off_error">За да вклучите хотспот, вклучете го мобилниот интернет</string>
     <string name="mobile_insert_sim_card">Вметнете SIM картичката и рестартирајте</string>
     <string name="mobile_network_active_esim">Активна/Преземена SIM</string>
@@ -3114,7 +3127,7 @@
     <string name="night_display_text">Ноќното светло го обојува екранот во килибарна боја. Тоа го олеснува гледањето во екранот или читањето при слаба светлина и може да ви помогне полесно да заспиете.</string>
     <string name="night_display_title">Ноќно светло</string>
     <string name="no">Не</string>
-    <string name="no_5g_in_dsds_text">Ако користите две SIM-картички, телефонов ќе биде ограничен на 4G. <annotation id="url">Дознајте повеќе</annotation>.</string>
+    <string name="no_5g_in_dsds_text">Ако користите две SIM-картички, телефонов ќе биде ограничен на 4G. <annotation id="url">Дознајте повеќе</annotation></string>
     <string name="no_application">Ништо</string>
     <string name="no_applications">Нема апликации.</string>
     <string name="no_battery_summary">Нема употреба на батерија од последното целосно полнење</string>
@@ -3135,7 +3148,7 @@
     <string name="no_running_services">Ништо не работи.</string>
     <string name="no_services">Неактивни</string>
     <string name="no_sim_card">Нема SIM-картичка</string>
-    <string name="no_sim_card_available">No SIM card</string>
+    <string name="no_sim_card_available">Нема SIM-картичка</string>
     <string name="no_trust_agents">Нема достапни агенти од доверба</string>
     <string name="no_vr_listeners">Ниедна инсталирана апликација не побара да се извршува како VR помошните услуги.</string>
     <string name="not_allowed">Вашата SIM-картичка не дозволува поврзување на мрежава.</string>
@@ -3173,7 +3186,7 @@
     <string name="notification_conversation_add_to_home">Додајте во домот</string>
     <string name="notification_conversation_important">Приоритет</string>
     <string name="notification_conversation_summary_low">Без звук или вибрации и се појавува под делот за разговор</string>
-    <string name="notification_for_work_life">Известувања за режимот „живот-работа“</string>
+    <string name="notification_for_work_life">Известувања за режимите за живот и работа</string>
     <string name="notification_for_work_life_disabled">Допрете за да се вклучи оваа функција.</string>
     <string name="notification_group_title">Група на категорија известувања</string>
     <string name="notification_history">Историја на известувања</string>
@@ -3239,6 +3252,7 @@
     <string name="notification_priority_title">Приоритет</string>
     <string name="notification_pulse_title">Трепкај со сијаличката</string>
     <string name="notification_ringtone_title">Стандарден звук за известување</string>
+    <string name="notification_screen_summary">Историја на известувања, балончиња, неодамна испратени</string>
     <string name="notification_settings_work_profile">Пристапот до известувањата не е достапен за апликации во работниот профил.</string>
     <string name="notification_show_lights_title">Трепкај со сијаличката</string>
     <string name="notification_silence_title">Безгласно</string>
@@ -3335,6 +3349,7 @@
     <string name="oneplus_apps_notifications">Апликации и известувања</string>
     <string name="oneplus_apps_title">Апликации</string>
     <string name="oneplus_aptx_hd_support">aptX / aptX HD поддршка</string>
+    <string name="oneplus_at_a_glance">На прв поглед</string>
     <string name="oneplus_authentication_information">Информации за автентикација</string>
     <string name="oneplus_auto_activate">Автоматско вклучување</string>
     <string name="oneplus_auto_answer_via_bluetooth_summary">Кога ќе примите дојдовен повик, тој автоматски ќе биде одговорен откако ќе биде приклучен на Bluetooth уред</string>
@@ -3347,7 +3362,7 @@
     <string name="oneplus_auto_open_specified_app">Автоматско отворање на наведената апликација</string>
     <string name="oneplus_auto_play">Автоматско пуштање</string>
     <string name="oneplus_auto_play_summary">Автоматско продолжи да пушташ музика кога се поврзани слушалки</string>
-    <string name="oneplus_auto_switch_mobile_data">Интелигентна мрежна врска</string>
+    <string name="oneplus_auto_switch_mobile_data">Потрошен интернет</string>
     <string name="oneplus_auto_switch_mobile_data_summary">Користете и Wi-Fi и мобилен интернет за подобра стабилност кога мрежата е слаба</string>
     <string name="oneplus_auto_turn_on_apps">Автоматско вклучување за овие апликации</string>
     <string name="oneplus_auto_turn_on_car_charger_info_o2">Со поставките горе, можете да го активирате режимот „Не вознемирувај“ и да ја стартувате наведената апликација секојпат кога поврзувате со полнач во автомобил</string>
@@ -3355,8 +3370,8 @@
     <string name="oneplus_available_keyboard_category">Достапна тастатура</string>
     <string name="oneplus_available_keyboard_description">Инсталираните тастатури што се вклучени овде ќе бидат додадени во списокот на „Достапни тастатури“</string>
     <string name="oneplus_back_home">Почеток, назад</string>
-    <string name="oneplus_back_home_o2">Назад, почеток</string>
-    <string name="oneplus_back_home_summary">Лизгајте нагоре врз копчето за почетен екран</string>
+    <string name="oneplus_back_home_o2">Back, Home</string>
+    <string name="oneplus_back_home_summary">Swipe up on Home button</string>
     <string name="oneplus_back_topic_theme_summary">Автоматско менување на темата на системот при менување на задниот поклопец</string>
     <string name="oneplus_back_topic_theme_title">Тема на задниот поклопец</string>
     <string name="oneplus_battery_menu_stats_total">Приказ на детална употреба</string>
@@ -3364,7 +3379,7 @@
 
 Штедачот на батерија автоматски ќе се исклучи кога ќе го ставите телефонот да се полни."</string>
     <string name="oneplus_battery_saver_summary">Оваа функција може да не работи кај некои игри</string>
-    <string name="oneplus_bed_time_mode_summary">Тивко користење на OnePlus Warp безжичен полнач</string>
+    <string name="oneplus_bed_time_mode_summary">Тивко користење наOnePlus warp wireless charger</string>
     <string name="oneplus_bed_time_mode_title">Режим за спиење</string>
     <string name="oneplus_bed_time_mode_wall_text">За намалување на звукот на OnePlus Warp безжичниот полнач, брзината на полнење е исто така намалена. Телефонот мора да биде наместен на полначот за да се вклучи „Режимот за спиење“.</string>
     <string name="oneplus_bg_data_condition_turn_off">ВКЛУЧИ ШТЕДАЧ НА ИНТЕРНЕТ</string>
@@ -3413,8 +3428,9 @@
     <string name="oneplus_condition_bg_data_summary">Позадинскиот интернет е достапен само преку Wi-Fi. Ова може да има влијание врз одредени апликации или услуги кога нема Wi-Fi</string>
     <string name="oneplus_condition_bg_data_title">Штедачот на интернет е вклучен</string>
     <string name="oneplus_condition_hotspot_turn_off">ИСКЛУЧИ ХОТСПОТ</string>
+    <string name="oneplus_condition_night_display_title">Удобноста за видот е вклучена</string>
     <string name="oneplus_condition_night_mode_title">Вклучен е вечерниот режим</string>
-    <string name="oneplus_condition_night_mode_turn_off">ИСКЛУЧИ ВЕЧЕРЕН РЕЖИМ</string>
+    <string name="oneplus_condition_night_mode_turn_off">ИСКЛУЧИ РЕЖИМ ЗА УДОБНОСТ НА ВИДОТ</string>
     <string name="oneplus_condition_ota_summary">Откриена е нова верзија за надградбата</string>
     <string name="oneplus_connected_device_count">Поврзан е %1$s уред</string>
     <string name="oneplus_connected_device_management_title">Управувач со поврзани уреди</string>
@@ -3450,10 +3466,10 @@
     <string name="oneplus_device_warranty_expried_date">Датум на важност на гаранцијата</string>
     <string name="oneplus_dirac_audio_tuner">Dirac аудио штимер</string>
     <string name="oneplus_direct_boot_inputmethod_unaware_dialog_message">Ако го рестартирате телефонот и имате поставено заклучување на екранот, оваа тастатура нема да може да започне сѐ додека не го отклучите телефонот</string>
-    <string name="oneplus_disable_aosp_face_lock_message">Ако вклучите отклучување на OnePlus уредот со лице, ќе се отстрани зачуваното лице во „Паметно заклучување“. Дали сакате да продолжите?</string>
+    <string name="oneplus_disable_aosp_face_lock_message">Ако ја вклучите функцијата од OnePlus за отклучување со препознавање лице, ќе се отстрани зачуваното лице со функцијата за паметно заклучување. Дали сакате да продолжите?</string>
     <string name="oneplus_disconnected">Прекини врска</string>
     <string name="oneplus_display_dashboard_no_theme_summary">Статусна лента, амбиентален дисплеј, позадини</string>
-    <string name="oneplus_display_dashboard_no_theme_summary_801">Status bar, ambient display, Vision comfort, reading mode</string>
+    <string name="oneplus_display_dashboard_no_theme_summary_801">Статусна лента, амбиентален дисплеј, удобност за видот, режим за читање</string>
     <string name="oneplus_display_dashboard_summary">Статусна лента, амбиентален дисплеј, позадини, тема</string>
     <string name="oneplus_display_dashboard_summary_801">Статусна лента, амбиентален дисплеј, позадини, тема</string>
     <string name="oneplus_display_screen_timeout">Мирување</string>
@@ -3467,7 +3483,7 @@
     <string name="oneplus_do_not_disturb_answer_call_by_speaker_summary">Насочување на дојдовните повици на спикерфон додека е вклучен режимот за играње игри</string>
     <string name="oneplus_do_not_disturb_answer_call_by_speaker_title">Одговарајте на повици преку спикерфон</string>
     <string name="oneplus_do_not_disturb_settings">Поставки</string>
-    <string name="oneplus_donot_silence_or_block">Дозволи известувања</string>
+    <string name="oneplus_donot_silence_or_block">Дозволи ги сите известувања</string>
     <string name="oneplus_donot_silence_or_block_summary">Дозволи ги сите типови на известувања</string>
     <string name="oneplus_double_tap_power_gesture">Кликнете двапати на копчето за вклучување</string>
     <string name="oneplus_double_tap_power_gesture_app">ИЗБЕРЕТЕ ЈА ФУНКЦИЈАТА</string>
@@ -3478,7 +3494,7 @@
     <string name="oneplus_doze_summary_new">Покажи време, датум и известувања на екранот</string>
     <string name="oneplus_doze_title">Амбиентален дисплеј</string>
     <string name="oneplus_doze_title_801">Амбиентален дисплеј</string>
-    <string name="oneplus_draw_gesture_start_none">Ништо</string>
+    <string name="oneplus_draw_gesture_start_none">Нема</string>
     <string name="oneplus_draw_m_start_app">Нацртајте M</string>
     <string name="oneplus_draw_o_start_app">Нацртајте O</string>
     <string name="oneplus_draw_s_start_app">Нацртајте S</string>
@@ -3504,9 +3520,9 @@
     <string name="oneplus_emergency_rescue_settings">Спасување од итните служби</string>
     <string name="oneplus_emergency_rescue_settings_summary">Автоматски повик за помош со брзо притискање на копчето за вклучување</string>
     <string name="oneplus_emergency_tap_power_gesture_tips">Достапно по модифицирање на поставките за итно спасување со КОПЧЕТО ЗА ВКЛУЧУВАЊЕ на телефонот</string>
-    <string name="oneplus_enroll_fingerprint_tips_summary">"1.Please re-enter your fingerprint after each replacement of the protective film to ensure the availability of the fingerprint
+    <string name="oneplus_enroll_fingerprint_tips_summary">"1. Повторно внесете го отпечатокот секој пат откако ќе ја смените заштитната фолија за да се загарантира достапноста на отпечатокот
 
-2.In a single setup process, please enter only one finger's fingerprint information"</string>
+2. Во еден процес на поставување внесете информации за само еден отпечаток од прст"</string>
     <string name="oneplus_enroll_fingerprint_tips_title">Известување за поставување отпечаток</string>
     <string name="oneplus_enter_your_fingerprint">· Да додадете отпечаток</string>
     <string name="oneplus_erase_system_data">ИЗБРИШИ СИСТЕМСКИ ПОДАТОЦИ</string>
@@ -3526,8 +3542,8 @@
     <string name="oneplus_face_unlock_assistive_lighting_summary">Во ситуации каде што камерата не може да го препознае вашето лице, екранот ќе се осветли повеќе за камерата да може да ве препознае.</string>
     <string name="oneplus_face_unlock_assistive_lighting_title">Помошно осветлување за отклучување со лице</string>
     <string name="oneplus_face_unlock_choose_default_method">Стандарден метод за отклучување со лице</string>
-    <string name="oneplus_face_unlock_choose_default_mode">The default way to use Face Unlock</string>
-    <string name="oneplus_face_unlock_choose_swipe_up_mode">Swipe up to unlock</string>
+    <string name="oneplus_face_unlock_choose_default_mode">Стандарден начин за отклучување со лице</string>
+    <string name="oneplus_face_unlock_choose_swipe_up_mode">Лизгајте нагоре за да отклучите</string>
     <string name="oneplus_face_unlock_choose_swipe_up_mode_summary">Така ќе имате помош ако имате проблем со методот со отпечаток или другите методи за заклучување екран</string>
     <string name="oneplus_face_unlock_choose_use_power_button_mode">Притиснете го копчето за вклучување за да отклучите</string>
     <string name="oneplus_face_unlock_choose_use_power_button_mode_summary">Отклучување на телефонот веднаш штом екранот се вклучи без да мора прво да лизгате</string>
@@ -3547,17 +3563,17 @@
     <string name="oneplus_finger_input_fail_tips">Неуспешно внесување, приспособете ја позицијата и пробајте пак</string>
     <string name="oneplus_finger_print_anim_save">ЗАЧУВАЈ</string>
     <string name="oneplus_fingerprint">Отпечаток</string>
-    <string name="oneplus_fingerprint_acquired_imager_dirty">The fingerprint identification area is dirty. Please wipe it clean and try again.</string>
-    <string name="oneplus_fingerprint_acquired_partial">Partial fingerprint detected. Please completely cover the fingerprint identification area.</string>
-    <string name="oneplus_fingerprint_acquired_too_fast">Too fast to process your fingerprint. Please stay for a while when pressing.</string>
+    <string name="oneplus_fingerprint_acquired_imager_dirty">Делот за идентификација на отпечатокот е нечист. Исчистете го и обидете се повторно.</string>
+    <string name="oneplus_fingerprint_acquired_partial">Детектиран е делумен отпечаток. Целосно покријте го делот за идентификација на отпечатокот.</string>
+    <string name="oneplus_fingerprint_acquired_too_fast">Пребрзо за да се обработи вашиот отпечаток. Задржете малку кога притискате.</string>
     <string name="oneplus_fingerprint_acquired_too_similar">Откриени се слични податоци за отпечаток. Поместете го прстот малку за да се внесат податоци за различни делови на вашиот прст.</string>
     <string name="oneplus_fingerprint_animation_effect_title">Ефект на анимација за отпечаток</string>
     <string name="oneplus_fingerprint_delete_confirm_message">Дали сакате да се избрише?</string>
     <string name="oneplus_fingerprint_detail">Детали</string>
     <string name="oneplus_fingerprint_enrol_completed">Отпечатокот е зачуван</string>
-    <string name="oneplus_fingerprint_enroll_summary">Press and make your finger cover the fingerprint identification area as much as possible, then lift after you feel a vibration</string>
-    <string name="oneplus_fingerprint_findsendor_summary">When the fingerprint pattern appears at the bottom of the screen, simply press with your finger on the fingerprint identification area to use the fingerprint function.</string>
-    <string name="oneplus_fingerprint_findsendor_tilte">How to use fingerprint</string>
+    <string name="oneplus_fingerprint_enroll_summary">Притиснете и погрижете се вашиот прст да го покрие делот за идентификација на отпечатокот колку што е можно повеќе, па тргнете го откако ќе почувствувате вибрација</string>
+    <string name="oneplus_fingerprint_findsendor_summary">Кога шемата за отпечаток се појавува најдолу на екранот, само притиснете со прстот на делот за идентификација на отпечаток за да ја употребите функцијата за отпечаток.</string>
+    <string name="oneplus_fingerprint_findsendor_tilte">Како се користи отпечатокот</string>
     <string name="oneplus_fingerprint_functional_declaration">Декларација за функцијата за отпечатоци од прсти</string>
     <string name="oneplus_fingerprint_gesture_camera_summary">Додека екранот за камерата отворен, држете долго на сензорот за отпечаток за да фотографирате</string>
     <string name="oneplus_fingerprint_gesture_camera_title">Држете долго за фотографирање</string>
@@ -3577,7 +3593,7 @@
     <string name="oneplus_fnatic_mode_background_introduction_title">Подобрена регулација на процеси</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_summary">Блокирај ги сите известувања и повици (освен известувањата за слаба батерија, алармот и тајмерот). Пропуштените повици може да не се зачувуваат во дневникот за повици.</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_title">Напреден режим „Не вознемирувај“</string>
-    <string name="oneplus_fnatic_mode_enable_introduction_title">Gaming mode must be enabled first in order to use Fnatic mode</string>
+    <string name="oneplus_fnatic_mode_enable_introduction_title">Режимот за играње игри мора да биде вклучен за да го користите режимот Fnatic</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">Јачината на сигналот на примарната SIM-картичка е поставен како приоритетен за да се минимизираат пречките во играњето, како што е доцнењето на преносот на податоци. Како резултат на тоа, втората SIM-картичка ќе биде оневозможена и нема да можете да примате повици или пораки.</string>
     <string name="oneplus_fnatic_mode_network_introduction_summary">Подобрување на стабилноста на мрежната врска</string>
     <string name="oneplus_fnatic_mode_network_introduction_title">Засилување на мрежата</string>
@@ -3591,30 +3607,30 @@
     <string name="oneplus_font_style">Фонт</string>
     <string name="oneplus_font_switch">Смени фонт</string>
     <string name="oneplus_force_factory_reset_summary">Активирано е внесување лозинка при вклучување, внатрешната меморија ќе се избрише</string>
-    <string name="oneplus_forum_award_summary">This community is yours. Only you can define our course. Together, we define and refine. Breaking builds and writing codes. This is for you. Thank you for dreaming with us!</string>
+    <string name="oneplus_forum_award_summary">Оваа заедница е ваша. Само вие можете да ја дефинирате насоката во која таа ќе се развива. Кога сме заедно, ја дефинираме и плус ја подобруваме. Ги развиваме концептите и кодираме. Наменета е за вас. Ви благодариме што го споделувате нашиот сон!</string>
     <string name="oneplus_forum_award_title">Награда</string>
     <string name="oneplus_front_camera_app_display_fullscreen_summary">Ако содржината на некоја апликација е отсечена со површината за приказ на предната камера, префрлете се во стандарден режим</string>
     <string name="oneplus_front_camera_display_choose_title">Изберете дали да се сокрие предната камера</string>
     <string name="oneplus_front_camera_display_title">Површина за приказ на предната камера</string>
     <string name="oneplus_fullscreen_back_guide_summary">Лизгајте навнатре од долниот лев или десен раб на екранот</string>
-    <string name="oneplus_fullscreen_back_guide_summary_deprecated">Swipe up from the left or right side of the bottom of the screen</string>
+    <string name="oneplus_fullscreen_back_guide_summary_deprecated">Лизгајте нагоре од левата или десната страна на долниот дел од екранот</string>
     <string name="oneplus_fullscreen_back_guide_title">Назад</string>
     <string name="oneplus_fullscreen_disable_this_feature">Оваа функција не може да се користи кога е вклучена навигација со гестикулации.</string>
-    <string name="oneplus_fullscreen_gesture_guide_back">"Let's try using the gesture that replaces the back button.
-Swipe up from the left or right side of the bottom of the screen."</string>
+    <string name="oneplus_fullscreen_gesture_guide_back">"Ајде да се обидеме со гестикулацијата со која се заменува копчето за назад.
+Лизгајте нагоре од левата или десната страна на долниот дел на екранот."</string>
     <string name="oneplus_fullscreen_gesture_guide_done">"Сега ги знаете новите гестикулации за навигација.
 Можете да ги исклучите со повторно активирање на лентата за навигација во поставки."</string>
     <string name="oneplus_fullscreen_gesture_guide_gotit">Сфатив</string>
-    <string name="oneplus_fullscreen_gesture_guide_home">"Let's try using navigation gestures.
-To go to the home screen at any time, swipe up from the bottom center edge of the screen."</string>
-    <string name="oneplus_fullscreen_gesture_guide_multitask">For recent apps, swipe up from the bottom of the screen and pause.</string>
+    <string name="oneplus_fullscreen_gesture_guide_home">"Ајде да се обидеме со гестикулациите за навигација.
+За да отидете на почетниот екран во кое било време, лизгајте нагоре од долниот централен раб на екранот."</string>
+    <string name="oneplus_fullscreen_gesture_guide_multitask">За последно употребувани апликации, лизгајте нагоре од дното на екранот и паузирајте.</string>
     <string name="oneplus_fullscreen_gesture_guide_will_enable">Гестикулациите за навигација ќе бидат вклучени</string>
-    <string name="oneplus_fullscreen_home_guide_summary">Swipe up from the bottom edge of the screen</string>
-    <string name="oneplus_fullscreen_home_guide_summary_deprecated">Swipe up from the bottom center edge of the screen</string>
+    <string name="oneplus_fullscreen_home_guide_summary">Лизгајте нагоре од долниот раб на екранот</string>
+    <string name="oneplus_fullscreen_home_guide_summary_deprecated">Лизгајте нагоре од долниот централен раб на екранот</string>
     <string name="oneplus_fullscreen_home_guide_title">Почетна</string>
     <string name="oneplus_fullscreen_landscape_guide_summary">Гестикулациите за навигација може да се активираат од долниот раб на екранот, лизгајте од левиот или десниот раб за да се вратите назад</string>
     <string name="oneplus_fullscreen_landscape_guide_summary_deprecated">Исто како со портрет, гестикулациите за навигација започнуваат од долниот дел на уредот</string>
-    <string name="oneplus_fullscreen_landscape_guide_title">Landscape</string>
+    <string name="oneplus_fullscreen_landscape_guide_title">Пејзаж</string>
     <string name="oneplus_fullscreen_mode_summary">Дозволи апликациите што работат во цел екран да го користат делот со засекот</string>
     <string name="oneplus_fullscreen_mode_title">Режим на цел екран</string>
     <string name="oneplus_fullscreen_previous_app_guide_summary">Лизгајте лево или десно во делот со лентата најдолу</string>
@@ -3622,8 +3638,8 @@ To go to the home screen at any time, swipe up from the bottom center edge of th
     <string name="oneplus_fullscreen_previous_app_guide_title">Префрлување на последните апликации</string>
     <string name="oneplus_fullscreen_previous_app_no_bar_guide_summary">Лизгајте нагоре од долниот раб на екранот и потоа замавнете кон лево или десно</string>
     <string name="oneplus_fullscreen_previous_app_no_bar_guide_title">Префрлување на последните апликации</string>
-    <string name="oneplus_fullscreen_recent_guide_summary">Swipe up from the bottom edge of the screen and pause</string>
-    <string name="oneplus_fullscreen_recent_guide_summary_deprecated">Swipe up from the bottom center edge of the screen and pause</string>
+    <string name="oneplus_fullscreen_recent_guide_summary">Лизгајте нагоре од долниот раб на екранот и паузирајте</string>
+    <string name="oneplus_fullscreen_recent_guide_summary_deprecated">Лизгајте нагоре од долниот централен раб на екранот и паузирајте</string>
     <string name="oneplus_fullscreen_recent_guide_title">Неодамнешни апликации</string>
     <string name="oneplus_functional_terms">ОДРЕДБИ И УСЛОВИ</string>
     <string name="oneplus_game_haptic_feedback_summary">Додајте хаптички фидбек за поживописно гејминг доживување. Слушалки со Bluetooth сè уште не се поддржани.</string>
@@ -3636,9 +3652,9 @@ To go to the home screen at any time, swipe up from the bottom center edge of th
     <string name="oneplus_gaming_mode_close_automatic_brightness_summary">Осветленост на заклучениот екран кога е вклучен режимот за играње игри</string>
     <string name="oneplus_gaming_mode_game_battery_saver">Штедач на батерија за играње игри</string>
     <string name="oneplus_gaming_mode_game_battery_saver_close">Исклучено</string>
-    <string name="oneplus_gaming_mode_game_battery_saver_high">Високо</string>
+    <string name="oneplus_gaming_mode_game_battery_saver_high">Висок</string>
     <string name="oneplus_gaming_mode_game_battery_saver_high_summary">Резолуцијата и FPS на игрите ќе бидат ограничени</string>
-    <string name="oneplus_gaming_mode_game_battery_saver_light">Ниско</string>
+    <string name="oneplus_gaming_mode_game_battery_saver_light">Низок</string>
     <string name="oneplus_gaming_mode_game_battery_saver_light_summary">Резолуцијата на игрите ќе биде ограничена</string>
     <string name="oneplus_gaming_mode_game_battery_saver_summary">Препорачано за игри што не мора да бидат премногу оптимизирани, како малите вообичаени игри</string>
     <string name="oneplus_gaming_mode_network_acceleration">Засилување на мрежата</string>
@@ -3699,9 +3715,9 @@ To go to the home screen at any time, swipe up from the bottom center edge of th
     <string name="oneplus_hide_navkeys_summary">Додај копче за да се сокрие или прикаже навигациската лента</string>
     <string name="oneplus_hide_notch_display_summary">Апликациите не можат да го користат делот со засекот</string>
     <string name="oneplus_hide_notch_display_title">Сокриј го делот со засекот</string>
-    <string name="oneplus_how_to_use_fingerprint_summary">"When the fingerprint pattern appears at the bottom of the screen, simply press with your finger on the fingerprint identification area to use the fingerprint function: wake and unlock your phone, authorize purchases, or sign in to apps. 
+    <string name="oneplus_how_to_use_fingerprint_summary">"Кога шемата за отпечаток се појавува најдолу на екранот, само притиснете со прстот на делот за идентификација на отпечаток за да ја употребите функцијата за отпечаток: можете да го будите и отклучувате телефонот, да овластувате плаќања или да најавувате во апликации. 
 
-Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
+Забелешка: отпечатокот од прст може да е понебезбедна опција од опцијата за внесување шема или PIN."</string>
     <string name="oneplus_how_to_use_fingerprint_summary_no_note">Кога шемата за отпечаток се појавува најдолу на екранот, само притиснете со прстот на делот за идентификација на отпечаток за да ја употребите функцијата за отпечаток: можете да го будите и отклучувате телефонот, да овластувате плаќања или да најавувате во апликации.</string>
     <string name="oneplus_hydrogen_version">Верзија H₂OS</string>
     <string name="oneplus_ime_security_warning">%1$s може да го собере целиот текст што го пишувате, вклучувајќи ги и личните податоци како што се лозинки и броеви на кредитни картички</string>
@@ -3713,7 +3729,7 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_instrucitons">Упатства</string>
     <string name="oneplus_intelligently_select_best_wifi">Интелигентно бирање на најдоброто Wi‑Fi</string>
     <string name="oneplus_intelligently_select_best_wifi_summary">Интелигентно бирање и поврзување со најдобриот Wi‑Fi преку откривање и анализирање на можноста за поврзување на Wi‑Fi мрежите</string>
-    <string name="oneplus_intensely">Силни</string>
+    <string name="oneplus_intensely">Strong</string>
     <string name="oneplus_is_turn_on_feature">Дали сигурно сакате да се активира оваа функција?</string>
     <string name="oneplus_is_turn_on_feature_summary">"Кога е активирана, следните ситуации може да се случуваат повремено:
 1. Одредени делови на екранот може да се прикажуваат невообичаено
@@ -3737,7 +3753,7 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_levels">Нивоа</string>
     <string name="oneplus_lift_up_display">Дисплејот е вклучен секогаш или се вклучува при подигнување со рака</string>
     <string name="oneplus_light">Лесни</string>
-    <string name="oneplus_local_ringtone">Звук на ѕвонење од внатрешната меморија</string>
+    <string name="oneplus_local_ringtone">Мелодија на ѕвонење од внатрешната меморија</string>
     <string name="oneplus_location_information">Опис на услугите засновани врз локацијата</string>
     <string name="oneplus_lock_after_timeout">Автоматско заклучување по мирување</string>
     <string name="oneplus_lock_buttons">Копчиња за заклучување</string>
@@ -3762,28 +3778,28 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_memc_game_summary">За да се вклучи компензацијата на движења за игри потребно е резолуцијата да се префрли на FHD+</string>
     <string name="oneplus_memc_more_support_apps">Повеќе поддржани апликации</string>
     <string name="oneplus_memc_notice">Во овој режим, брзината на видео кадрите ќе се зголеми, намалувајќи го заматувањето на движењата на графиката, со што истата ќе стане појасна и поглатка. Ефективно е само за време на репродуцирање на цел екран.</string>
-    <string name="oneplus_memc_open">Вклучено</string>
+    <string name="oneplus_memc_open">Вкл.</string>
     <string name="oneplus_memc_support_apps">Поддржани апликации</string>
     <string name="oneplus_memc_support_no_apps">Не се инсталирани поддржани апликации</string>
     <string name="oneplus_memc_video">Измазнување на графиката на движења</string>
     <string name="oneplus_memc_video_effect">Ефект на компензација</string>
-    <string name="oneplus_memc_video_extreme">Екстремен</string>
+    <string name="oneplus_memc_video_extreme">Екстремно</string>
     <string name="oneplus_memc_video_nosupport_extreme_summary">За да се вклучи екстремен ефект потребно е резолуцијата да се префрли на FHD+</string>
     <string name="oneplus_memc_video_nosupport_extreme_text">Со префрлување на QHD+ резолуција, се ограничува компензацијата на графиката на движења</string>
-    <string name="oneplus_memc_video_smooth">Смут</string>
+    <string name="oneplus_memc_video_smooth">Глатко</string>
     <string name="oneplus_memc_video_theacme_summary">Брзината на видео кадрите ќе се зголеми на 120 fps за екстремно глатка графика, а истото може да предизвика дополнителна потрошувачка на батеријата. Привремено не е поддржана QHD+ резолуција.</string>
     <string name="oneplus_memc_video_theacme_title">Измазнување на пребрзи движења</string>
     <string name="oneplus_mobile_device_name_title">Име на телефон</string>
     <string name="oneplus_mode_choose">Избор на режим</string>
     <string name="oneplus_mode_settings">Поставки за Alert slider</string>
-    <string name="oneplus_moderate">Средни</string>
+    <string name="oneplus_moderate">Средно</string>
     <string name="oneplus_more">Повеќе</string>
     <string name="oneplus_motion_sensor_settings_title">Гестикулации за системот</string>
     <string name="oneplus_multi_app">Паралелни апликации</string>
     <string name="oneplus_multi_app_disable_apps">Поддржани апликации</string>
     <string name="oneplus_multi_app_disable_tips">Сите податоци во паралелната апликација ќе бидат избришани по исклучувањето. Дали сакате да продолжите?</string>
     <string name="oneplus_multi_app_enable_apps">Вклучени апликации</string>
-    <string name="oneplus_multi_app_init">Се вчитува...</string>
+    <string name="oneplus_multi_app_init">Вчитување...</string>
     <string name="oneplus_multi_app_init_failed">Неуспешно вклучување</string>
     <string name="oneplus_multi_app_init_failed_for_more_users">Паралелните апликации не може да се вклучат бидејќи има повеќе од 5 корисници. Избришете еден корисник и пробајте пак.</string>
     <string name="oneplus_multi_app_init_succeeded">Создадена е паралелна %1$s</string>
@@ -3803,7 +3819,7 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_night_mode_enabled_op">Вечерен режим</string>
     <string name="oneplus_night_mode_enabled_op_summary">Рачно вклучување на Вечерен режим</string>
     <string name="oneplus_night_mode_manual_open">Рачно</string>
-    <string name="oneplus_night_mode_open_tip">Вклучете го прво вечерниот режим</string>
+    <string name="oneplus_night_mode_open_tip">Прво, вклучете го режимот за удобност за видот</string>
     <string name="oneplus_night_mode_sensor_summary">Зависно од условите на амбиентална светлина, вечерниот режим автоматски ќе ја калибрира температурата на бојата за да се совпадне со средината. Ова може да го намали заморот и напрегањето на очите и може да ви помогне да спиете подобро.</string>
     <string name="oneplus_night_mode_strong">Најтопли бои</string>
     <string name="oneplus_night_mode_summary">Со вечерниот режим, екранот ќе се калибрира за да прикажува понежни бои за помал замор и помало напрегање на очите. Тоа може да ви помогне да спиете подобро. Се препорачува да го активирате режимот на редовна основа.</string>
@@ -3811,7 +3827,7 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_night_mode_weak">Слабо</string>
     <string name="oneplus_no_applications">Нема апликации</string>
     <string name="oneplus_no_assistant_app_dialog">Сè уште немате инсталирана апликација за помошник</string>
-    <string name="oneplus_no_choice">Не е избран звук на ѕвонење</string>
+    <string name="oneplus_no_choice">Не е избрана мелодија на ѕвонење</string>
     <string name="oneplus_no_device_connected">Нема поврзан уред</string>
     <string name="oneplus_no_file_tips">Нема датотеки за звуци на ѕвонење</string>
     <string name="oneplus_no_support_apps_installed">Не се инсталирани поддржани апликации</string>
@@ -3830,7 +3846,7 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_notch_display_title">Приказ кај засекот</string>
     <string name="oneplus_notice_vibrate_intensity">Известувања</string>
     <string name="oneplus_notification_advance_settings">Напредни поставки за известувања</string>
-    <string name="oneplus_notification_alert_title">Important</string>
+    <string name="oneplus_notification_alert_title">Важно</string>
     <string name="oneplus_notification_channel_summary_low">Исклучи звуци или вибрации за помалку важните</string>
     <string name="oneplus_notification_dialog_never_mode">Никогаш</string>
     <string name="oneplus_notification_dialog_ringtone">Звук за известување</string>
@@ -3849,13 +3865,13 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_notifications">Известувања</string>
     <string name="oneplus_notifications_3rd_calls">Известувања за повици од трета страна</string>
     <string name="oneplus_notifications_3rd_calls_summary">Гласовните или видео повиците од социјалните апликации ќе се прикажуваат како известувања</string>
-    <string name="oneplus_notifications_and_vibration">Звук за известувања и вибрации</string>
+    <string name="oneplus_notifications_and_vibration">Мелодија за известувања и вибрации</string>
     <string name="oneplus_notifications_free">Слободно</string>
     <string name="oneplus_notifications_meet">Средба</string>
-    <string name="oneplus_notifications_sound">Notification sound</string>
+    <string name="oneplus_notifications_sound">Мелодија за известувања</string>
     <string name="oneplus_o2_contributors">Соработници за OxygenOS</string>
     <string name="oneplus_open_bed_time_mode_schedule_summary">Вклучи во приспособен временски опсег</string>
-    <string name="oneplus_open_bed_time_mode_schedule_title">Распоред</string>
+    <string name="oneplus_open_bed_time_mode_schedule_title">Закажи</string>
     <string name="oneplus_open_bed_time_mode_summary">Можете рачно да го вклучите режимот за спиење</string>
     <string name="oneplus_open_bed_time_mode_title">Режим за спиење</string>
     <string name="oneplus_opfinger_input_completed_comfirm">Потврди</string>
@@ -3870,15 +3886,15 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_opfinger_input_recognize_title">Препознавање отпечаток од прст</string>
     <string name="oneplus_opfinger_input_saving_sub">Завршено, податоците се зачувуваат...</string>
     <string name="oneplus_opfinger_input_saving_title">Почекајте за зачувување</string>
-    <string name="oneplus_opfinger_input_setting_back_tips_sub">Поставете го прстот врз сензорот за отпечатокот. Подигнувајте го прстот по секое вибрирање и повторувајте.</string>
-    <string name="oneplus_opfinger_input_setting_tips_sub">Place your finger on the fingerprint sensor. After every vibration, lift your finger and repeat.</string>
+    <string name="oneplus_opfinger_input_setting_back_tips_sub">Поставете го прстот врз сензорот за отпечатоци. Подигнувајте го прстот по секое вибрирање и повторувајте.</string>
+    <string name="oneplus_opfinger_input_setting_tips_sub">Поставете го прстот врз сензорот за отпечатокот. Подигнувајте го прстот по секое вибрирање и повторувајте.</string>
     <string name="oneplus_opfinger_input_setting_tips_title">Поставување отпечаток</string>
     <string name="oneplus_opfinger_input_up_sub">Подигнете го прстот, приспособете ја позицијата и спуштете го пак.</string>
     <string name="oneplus_opfinger_input_up_title">Подигнете го прстот</string>
     <string name="oneplus_optional_reset">Изборно</string>
     <string name="oneplus_ota_available">Има надградба за системот</string>
     <string name="oneplus_otg_ota_shutdown_summary">Исклучи по 10 минути неактивност</string>
-    <string name="oneplus_otg_title">Because of 10 minutes inactivity, OTG has been turned off.</string>
+    <string name="oneplus_otg_title">OTG е исклучено поради неактивност од 10 минути.</string>
     <string name="oneplus_other_applications">Други апликации</string>
     <string name="oneplus_other_paired_bluetooth_devices">Други спарени уреди со Bluetooth</string>
     <string name="oneplus_passpoint_summary">Беспрекорно поврзете се со Wi‑Fi точки на пристап со Passpoint™ без потреба од лозинка</string>
@@ -3915,9 +3931,9 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_quick_launch_how_to_use_summary">"1. Продолжете да држите со прстот по отклучувањето за да се отвори панелот за брзо стартување
 2. Лизгајте за да ја изберете кратенката и пуштете го прстот за да се стартува"</string>
     <string name="oneplus_quick_launch_how_to_use_title">Употреба на брзо стартување</string>
-    <string name="oneplus_quick_launch_summary">Long press the fingerprint identification area to launch quick pay or activate apps</string>
+    <string name="oneplus_quick_launch_summary">Држете го прстот долго врз делот за идентификација за да се активира брзо плаќање или да се вклучат апликации</string>
     <string name="oneplus_quick_launch_title">Брзо стартување</string>
-    <string name="oneplus_quick_launch_toggle_summary">Long press the fingerprint identification area to launch quick pay or activate apps when the phone is locked</string>
+    <string name="oneplus_quick_launch_toggle_summary">Држете го прстот долго врз делот за идентификација за да се активира брзо плаќање или да се вклучат апликации кога телефонот е заклучен</string>
     <string name="oneplus_quick_launch_toggle_title">Активирајте брзо стартување</string>
     <string name="oneplus_quick_reply">Брз одговор во ориентација на пејзаж</string>
     <string name="oneplus_quick_reply_content">Погледнете ги и одговорете набрзина на известувањата без да го запрете видеото или играта. Повлечете ги надолу меурчињата за разговор за да го овозможите режимот „Не вознемирувај“ додека не излезете од апликацијата.</string>
@@ -3931,13 +3947,13 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_quick_turn_on_assistant_app_summary">Држете го копчето за вклучување на телефонот притиснато половина секунда за да се активира апликацијата за помошник и држете го 3 секунди за да се исклучи телефонот</string>
     <string name="oneplus_quick_turn_on_camera">Брзо вклучување на камерата</string>
     <string name="oneplus_quickpay">Брзо плаќање</string>
-    <string name="oneplus_quickpay_confirm_changehomebutton">Are you sure you want to change the long press action of the Home button from \"%1$s\" to \"Quick Pay\"?</string>
+    <string name="oneplus_quickpay_confirm_changehomebutton">Дали сте сигурни дека сакате брзото плаќање да се вклучува со долго држење на копчето за почетниот екран наместо „%1$s“?</string>
     <string name="oneplus_quickpay_entry_summary">Држете го копчето за почетниот екран долго за да се активира брзото плаќање</string>
     <string name="oneplus_quickpay_instructions">упатства</string>
-    <string name="oneplus_quickpay_lock_swtch_summary">Long press Home button with a registered finger to launch quick pay when the phone is locked</string>
+    <string name="oneplus_quickpay_lock_swtch_summary">Држете го копчето за почетниот екран долго со регистрираниот прст за да се активира функцијата за брзо плаќање кога телефонот е заклучен</string>
     <string name="oneplus_quickpay_lock_swtch_title">Брзо плаќање со исклучен екран</string>
     <string name="oneplus_quickpay_select_default_way">Избери стандардна опција за плаќање</string>
-    <string name="oneplus_quickpay_unlock_swtch_summary">Long press Home button to launch quick pay when the phone is unlocked</string>
+    <string name="oneplus_quickpay_unlock_swtch_summary">Држете го копчето за почетниот екран долго за да се активира функцијата за брзо плаќање кога телефонот е отклучен</string>
     <string name="oneplus_quickpay_unlock_swtch_title">Брзо плаќање со вклучен екран</string>
     <string name="oneplus_quickpay_way_alipay_qrcode">QR-код за Alipay</string>
     <string name="oneplus_quickpay_way_alipay_scanning">Се скенира Alipay</string>
@@ -3991,9 +4007,9 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_rotation_silent_enable_summary">Превртете го уредот кога ви ѕвони некој за да се стиши</string>
     <string name="oneplus_rotation_silent_enable_title">Превртете за да се стиши</string>
     <string name="oneplus_scene_mode">СЦЕНИ</string>
-    <string name="oneplus_schedule">Распоред</string>
+    <string name="oneplus_schedule">Закажи</string>
     <string name="oneplus_screen">ЕКРАН</string>
-    <string name="oneplus_screen_better_cold">Ладни бои</string>
+    <string name="oneplus_screen_better_cold">Ладно</string>
     <string name="oneplus_screen_better_nature">Природно</string>
     <string name="oneplus_screen_better_warm">Топли бои</string>
     <string name="oneplus_screen_color_mode_auto">Приспособливи профили на боја</string>
@@ -4003,8 +4019,8 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">Не е достапно бидејќи е вклучен режимот за читање</string>
     <string name="oneplus_screen_color_mode_soft">Нежно</string>
     <string name="oneplus_screen_color_mode_title">Калибрација на екран</string>
-    <string name="oneplus_screen_color_mode_title_summary">Не е достапно бидејќи е вклучен вечерниот режим</string>
-    <string name="oneplus_screen_features_not_available_toast">Кога се вклучени, функциите како што е калибрацијата на екранот, нема да бидат достапни</string>
+    <string name="oneplus_screen_color_mode_title_summary">Не е достапно бидејќи е режимот за удобност за видот</string>
+    <string name="oneplus_screen_features_not_available_toast">Кога се вклучени, функциите, како калибрацијата на екранот, нема да бидат достапни</string>
     <string name="oneplus_screen_refresh_rate">Брзина на освежување</string>
     <string name="oneplus_screen_refresh_rate_60hz_summary">Помалку глатка слика за поиздржлива батерија</string>
     <string name="oneplus_screen_refresh_rate_auto_summary">Ултра глатка слика при поголема стапка на освежување</string>
@@ -4012,15 +4028,15 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_screen_resolution_adjust">Резолуција</string>
     <string name="oneplus_screen_resolution_adjust_1080p_summary">Одличен приказ, помала потрошувачка на батеријата (2340×1080)</string>
     <string name="oneplus_screen_resolution_adjust_1080p_summary_19811">Одличен приказ, помала потрошувачка на батеријата (2376×1080)</string>
-    <string name="oneplus_screen_resolution_adjust_intelligent_switch">Auto switch</string>
+    <string name="oneplus_screen_resolution_adjust_intelligent_switch">Автоматско префрлување</string>
     <string name="oneplus_screen_resolution_adjust_intelligent_switch_summary">Автоматско менување во соодветната резолуција</string>
     <string name="oneplus_screen_resolution_adjust_other_summary">Максимално чиста слика, зголемена потрошувачка на батеријата (3120×1440)</string>
     <string name="oneplus_screen_resolution_adjust_other_summary_19811">Максимално чиста слика, зголемена потрошувачка на батеријата (3168×1440)</string>
-    <string name="oneplus_search_keyword_about_settings">device name, android version, build number, model, CPU, storage, RAM, ROM, camera, pixel, screen, Verification, Legal information, Warranty card, preinstalled list, Award</string>
+    <string name="oneplus_search_keyword_about_settings">име на уред, верзија на android, број на верзија, модел, процесор, меморија, RAM, ROM, камера, пиксел, екран, верификација, правни информации, картичка за гаранција, список на фабрички инсталирани, награда</string>
     <string name="oneplus_search_keyword_accent_color">боја</string>
     <string name="oneplus_search_keyword_app_lock">заклучување, PIN, лозинки</string>
     <string name="oneplus_search_keyword_connected_device_manager">управувач со поврзани уреди, уред</string>
-    <string name="oneplus_search_keyword_data_usage_control">контрола на потрошен интернет</string>
+    <string name="oneplus_search_keyword_data_usage_control">Контрола на потрошен интернет</string>
     <string name="oneplus_search_keyword_default_launcher_app">стартувач, стандардни апликации, стандардна апликација за почетен екран, апликација за почетна</string>
     <string name="oneplus_search_keyword_discoverable_device">може да ме пронаоѓаат</string>
     <string name="oneplus_search_keyword_double_click_light_screen">екран, будење</string>
@@ -4035,7 +4051,7 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_search_keyword_gesture_to_control_calls">одговарање, менување</string>
     <string name="oneplus_search_keyword_hide_navkeys">сокриј ја навигациската лента</string>
     <string name="oneplus_search_keyword_home_key">почетна</string>
-    <string name="oneplus_search_keyword_icon_manager">управувач со икони</string>
+    <string name="oneplus_search_keyword_icon_manager">Управувач со икони</string>
     <string name="oneplus_search_keyword_incoming_call_vibrate_mode">вибрации</string>
     <string name="oneplus_search_keyword_input_keyboard">пишување, тастатура</string>
     <string name="oneplus_search_keyword_led_settings">боја, светло, LED</string>
@@ -4055,8 +4071,11 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_search_keyword_swap_navkeys">менување копчиња</string>
     <string name="oneplus_search_keyword_switch">пренос, миграција на податоци</string>
     <string name="oneplus_search_keyword_theme_settings">ПРИСПОСОБУВАЊЕ ЗАКЛУЧЕН ЕКРАН, позадини, стил на часовник, анимација за отпечатоци, Horizon light, ПРИСПОСОБУВАЊЕ НА СИСТЕМОТ, нагласена боја, форма, фонт, тон, пакет икони, расветлување, нијансирана темнина, вибрирачки бои</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl">ПРИСПОСОБУВАЊЕ ЗАКЛУЧЕН ЕКРАН, позадини, стил на часовник, анимација за отпечатоци од прст, Horizon light, ПРИСПОСОБУВАЊЕ НА СИСТЕМОТ, нагласена боја, форма, фонт, тон, пакет икони, расветлување, нијансирана темнина, вибрирачки бои, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light">ПРИСПОСОБУВАЊЕ ЗАКЛУЧЕН ЕКРАН, позадини, стил на часовник, анимација за отпечатоци, ПРИСПОСОБУВАЊЕ НА СИСТЕМОТ, нагласена боја, форма, фонт, тон, пакет икони, расветлување, нијансирана темнина, вибрирачки бои</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">Приспособување заклучен екран, позадини, стил на часовник, анимација за отпечатоци, Horizon Light, приспособување на системот, нагласена боја, форма, фонт, тон, пакет икони, расветлување, нијансирана темнина, вибрирачки бои, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Приспособување заклучен екран, позадини, стил на часовник, анимација за отпечатоци, Horizon Light, приспособување на системот, нагласена боја, форма, фонт, тон, пакет икони, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_new">Приспособување заклучен екран, позадини, стил на часовник, анимација за отпечатоци, Horizon Light, приспособување на системот, нагласена боја, форма, фонт, тон, пакет икони</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light">Приспособување заклучен екран, позадини, стил на часовник, анимација за отпечатоци, приспособување на системот, нагласена боја, форма, фонт, тон, пакет икони, расветлување, нијансирана темнина, вибрирачки бои</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Приспособување заклучен екран, позадини, стил на часовник, анимација за отпечатоци, приспособување на системот, нагласена боја, форма, фонт, тон, пакет икони</string>
     <string name="oneplus_search_keyword_three_screenshots">слика од екранот</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">известувања, искуство, програма, подобрување</string>
@@ -4070,11 +4089,11 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_security_lock_settings_summary">Отклучување претпочитани вредности, услуги за локација, брава за апликации</string>
     <string name="oneplus_security_lock_settings_title">Безбедност и приватност</string>
     <string name="oneplus_security_settings_fingerprint_enroll_error_dialog_title">Неуспешно поставување</string>
-    <string name="oneplus_security_settings_fingerprint_enroll_introduction_message">"Just press the fingerprint identification area to unlock your phone, authorize purchases, or sign in to apps. 
+    <string name="oneplus_security_settings_fingerprint_enroll_introduction_message">"Притиснете го делот за идентификација на отпечатокот за да го отклучите телефонот, да овластувате плаќања или да се најавите во апликации. 
 
-Note: 
-1.Your fingerprint may be less secure than a strong pattern or PIN.
-2.Please re-enter your fingerprint after each replacement of the protective film to ensure the availability of the fingerprint."</string>
+Забелешка: 
+1.Отпечатокот од прст може да е понебезбедна опција од опцијата за внесување шема или PIN.
+2.Повторно внесете го отпечатокот секој пат откако ќе ја смените заштитната фолија за да се загарантира достапноста на отпечатокот."</string>
     <string name="oneplus_security_settings_fingerprint_exists_dialog_message">Отпечатокот е веќе внесен, пробајте со друг прст.</string>
     <string name="oneplus_security_settings_fingerprint_toggle_category_title">Прикажи ја иконата за отпечаток во амбиенталниот дисплеј</string>
     <string name="oneplus_security_settings_fingerprint_toggle_category_title_for_always_on">ПРЕТПОЧИТАН ИЗБОР ЗА ИКОНАТА ЗА ОТПЕЧАТОК</string>
@@ -4083,9 +4102,9 @@ Note:
     <string name="oneplus_security_settings_fingerprint_toggle_two_toast_1">Вклучено е „Допрете двапати за да се разбуди“ и ќе биде исклучено „Допрете го екранот за да се прикаже“</string>
     <string name="oneplus_security_settings_fingerprint_toggle_two_toast_2">Вклучено е „Допрете го екранот за да се прикаже“ и ќе биде исклучено „Допрете двапати за да се разбуди“</string>
     <string name="oneplus_security_settings_fingerprint_tolocation_advanced_settingsggle_two_title">Допрете го екранот за да се прикаже</string>
-    <string name="oneplus_select_fingerprint_animation_effect_1">Cosmos</string>
-    <string name="oneplus_select_fingerprint_animation_effect_2">Wave</string>
-    <string name="oneplus_select_fingerprint_animation_effect_3">Stripe</string>
+    <string name="oneplus_select_fingerprint_animation_effect_1">Космос</string>
+    <string name="oneplus_select_fingerprint_animation_effect_2">Бран</string>
+    <string name="oneplus_select_fingerprint_animation_effect_3">Лента</string>
     <string name="oneplus_select_fingerprint_animation_effect_4">Бранување</string>
     <string name="oneplus_select_fingerprint_animation_effect_6">Енергија</string>
     <string name="oneplus_select_fingerprint_animation_effect_mcl">McLaren</string>
@@ -4094,10 +4113,10 @@ Note:
     <string name="oneplus_service_messaging_summary">Дозволете OnePlus да ви овозможи брзи услуги за праќање пораки преку облак со кои ќе се загарантира оптимизирана употреба на производот</string>
     <string name="oneplus_service_messaging_title">Услуга за праќање пораки на OnePlus</string>
     <string name="oneplus_set_time">Закажан е Вечерен режим</string>
-    <string name="oneplus_setting_ringtone">Постави звук на ѕвонење</string>
-    <string name="oneplus_setting_sim_ringtone_switch">Поставете звук на ѕвонење за секоја SIM-картичка</string>
-    <string name="oneplus_settings_lab_feature_boost_summary">Based on your daily usage, Smart Boost takes full advantage of the large RAM of OnePlus phones, which leverages the performance of loading apps and games.</string>
-    <string name="oneplus_settings_lab_feature_boost_title">Smart Boost</string>
+    <string name="oneplus_setting_ringtone">Постави мелодија на ѕвонење</string>
+    <string name="oneplus_setting_sim_ringtone_switch">Поставете мелодија на ѕвонење за секоја SIM-картичка</string>
+    <string name="oneplus_settings_lab_feature_boost_summary">Според секојдневното користење, паметното засилување зема голем дел од големиот RAM на OnePlus телефоните, што се одразува на перформансите на вчитување на апликации и игри.</string>
+    <string name="oneplus_settings_lab_feature_boost_title">Паметно засилување</string>
     <string name="oneplus_settings_refresh_rate_settings_120">ПОСТАВКИ ЗА 120Hz</string>
     <string name="oneplus_settings_refresh_rate_settings_90">ПОСТАВКИ ЗА 90Hz</string>
     <string name="oneplus_settings_refresh_rate_settings_summary">Автоматски префрлува во содветната брзина на освежување без да ја потроши батеријата</string>
@@ -4120,6 +4139,7 @@ Note:
     <string name="oneplus_silent_mode_on">Вклучен е режимот за тишина</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Повиците и известувањата ќе бидат стишени, освен алармите</string>
     <string name="oneplus_silent_mode_summary">Повиците и известувањата ќе бидат стишени, освен алармите</string>
+    <string name="oneplus_silent_notifications_status_bar">Сокриј ги тивките известувања во статусната лента</string>
     <string name="oneplus_sim1_ringtone_switch">SIM-картичка 1</string>
     <string name="oneplus_sim2_ringtone_switch">SIM-картичка 2</string>
     <string name="oneplus_simcard_title">SIM</string>
@@ -4129,7 +4149,7 @@ Note:
     <string name="oneplus_smart_background_management_title">Присилно мирување и хибернација на апликации</string>
     <string name="oneplus_smart_wifi_connection">паметно поврзување со Wi‑Fi</string>
     <string name="oneplus_sms">SMS</string>
-    <string name="oneplus_sms_and_vibration">Звук за SMS и вибрации</string>
+    <string name="oneplus_sms_and_vibration">Мелодија за SMS и вибрации на телефонот</string>
     <string name="oneplus_snooze_options_title">Одложете ги известувањата од панелот за известувања</string>
     <string name="oneplus_sound_and_vibrate">Звуци и вибрации</string>
     <string name="oneplus_sound_effects_and_modes">Звучни ефекти и режими</string>
@@ -4137,7 +4157,7 @@ Note:
     <string name="oneplus_sound_tuner">Dolby Atmos</string>
     <string name="oneplus_status_summary">Телефонски број, сигнал, итн</string>
     <string name="oneplus_stop_run">Присилно запирање</string>
-    <string name="oneplus_storage">МЕМОРИЈА</string>
+    <string name="oneplus_storage">STORAGE</string>
     <string name="oneplus_sunrise_sunset">Автоматско вклучување кога заоѓа сонцето и исклучување кога изгрева</string>
     <string name="oneplus_support_apps">ПОДДРЖАНИ АПЛИКАЦИИ</string>
     <string name="oneplus_support_summary">Совети и ЧПП во врска со употребата на уредот</string>
@@ -4146,7 +4166,7 @@ Note:
     <string name="oneplus_suspension_notice">Внимавај</string>
     <string name="oneplus_suspension_notice_summary">Дозволи апликациите да прикажуваат известувања како предупредувања</string>
     <string name="oneplus_switch">OnePlus Switch</string>
-    <string name="oneplus_switch_resolution_kill_process_confirm">Смени</string>
+    <string name="oneplus_switch_resolution_kill_process_confirm">Switch</string>
     <string name="oneplus_switch_resolution_kill_process_tips">Менувањето на резолуцијата може да предизвика одредени апликации во позадина да се затворат. Дали сакате да ја потврдите промената?</string>
     <string name="oneplus_switch_screen_lock_type">Се менува типот на заклучен екран, почекајте...</string>
     <string name="oneplus_system_data_summary">Вклучени се сите информации за сметката, контактите и податоците од апликации</string>
@@ -4160,17 +4180,17 @@ Note:
     <string name="oneplus_system_stability_title">Програма за стабилност на системот</string>
     <string name="oneplus_system_vibrate">Системски вибрации</string>
     <string name="oneplus_theme_accent_color">Нагласена боја</string>
-    <string name="oneplus_theme_accent_color_customization">CUSTOMIZATION</string>
+    <string name="oneplus_theme_accent_color_customization">ПРИСПОСОБУВАЊЕ</string>
     <string name="oneplus_theme_accent_color_presetcolor">ПРЕТХОДНО ОДРЕДЕНА БОЈА</string>
-    <string name="oneplus_theme_accent_color_select">ИЗБЕРИ НАГЛАСЕНА БОЈА</string>
+    <string name="oneplus_theme_accent_color_select">Избери нагласена боја</string>
     <string name="oneplus_theme_apply_summary">Откако ќе се примени, приспособените опции ќе бидат отфрлени</string>
     <string name="oneplus_theme_apply_title">Дали сакате да се примени оваа тема?</string>
     <string name="oneplus_theme_clock">Стил на часовник</string>
     <string name="oneplus_theme_clock_snake_action">ВКЛУЧИ ГО АМБИЕНТАЛНИОТ ДИСПЛЕЈ</string>
-    <string name="oneplus_theme_clock_snake_tip">This feature will be available when ambient display is on</string>
+    <string name="oneplus_theme_clock_snake_tip">Оваа функција ќе биде достапна кога ќе биде вклучен амбиенталниот дисплеј</string>
     <string name="oneplus_theme_colorpicker_colorvalue">КОД НА БОЈА</string>
-    <string name="oneplus_theme_drop_summary">Discard modifications?</string>
-    <string name="oneplus_theme_drop_title">Излез од уредување</string>
+    <string name="oneplus_theme_drop_summary">Дали да се отфрлат модификациите?</string>
+    <string name="oneplus_theme_drop_title">Излез од режим за уредување</string>
     <string name="oneplus_theme_entrance_summary">Позадини, нагласена боја, фонт, тон</string>
     <string name="oneplus_theme_entrance_title">Приспособување</string>
     <string name="oneplus_theme_fingerprint">Анимација за отпечатоци од прсти</string>
@@ -4178,7 +4198,7 @@ Note:
     <string name="oneplus_theme_fingerprint_snake_tip">Оваа функција ќе биде достапна кога ќе биде вклучено отклучувањето со отпечаток</string>
     <string name="oneplus_theme_font">Фонт</string>
     <string name="oneplus_theme_font_content">Споделувајте ја најдобрата технологија во светот</string>
-    <string name="oneplus_theme_icon_pack">Пакет икони</string>
+    <string name="oneplus_theme_icon_pack">Пакети икони</string>
     <string name="oneplus_theme_lock_screen_customization">ПРИСПОСОБУВАЊЕ ЗАКЛУЧЕН ЕКРАН</string>
     <string name="oneplus_theme_preset">Претходно одредена тема</string>
     <string name="oneplus_theme_preset_color">Динамични нијанси</string>
@@ -4196,19 +4216,19 @@ Note:
     <string name="oneplus_theme_system_customization">ПРИСПОСОБУВАЊЕ НА СИСТЕМОТ</string>
     <string name="oneplus_theme_tone">Тон</string>
     <string name="oneplus_theme_tone_effect_color">Шарено</string>
-    <string name="oneplus_theme_tone_effect_dark">Темна</string>
+    <string name="oneplus_theme_tone_effect_dark">Темен</string>
     <string name="oneplus_theme_tone_effect_light">Лесни</string>
     <string name="oneplus_theme_tone_effect_title">Избери тон</string>
     <string name="oneplus_theme_wallpaper">Позадини</string>
     <string name="oneplus_three_screenshots_enable_summary">Лизгајте со три прсти на екранот за да се направи слика од екранот</string>
     <string name="oneplus_three_screenshots_enable_title">Слика од екранот со три прсти</string>
-    <string name="oneplus_timepower_power_off_title">Поставете го времето за исклучување</string>
+    <string name="oneplus_timepower_power_off_title">Поставете го времето за вклучување</string>
     <string name="oneplus_timepower_power_on_title">Поставете го времето за вклучување</string>
     <string name="oneplus_timer_shutdown_disable_summary">Исклучете ја лозинката што се појавува при вклучување за да се отклучи оваа функција</string>
     <string name="oneplus_timer_shutdown_summary">Телефонот автоматски ќе се исклучи за %d секунди. Потврдете за веднаш да се исклучи.</string>
     <string name="oneplus_to_select_assistant_app_dialog">Изберете ја апликацијата за помошник што сакате да ја активирате</string>
-    <string name="oneplus_tools_quicklaunch_summary">Режим за играње игри, брзо стартување, паралелни апликации</string>
-    <string name="oneplus_tools_quicklaunch_summary_no_gamingmode">Брзо стартување, паралелни апликации</string>
+    <string name="oneplus_tools_quicklaunch_summary">Режим за играње игри, брзо стартување, паралелни апликации, брава за апликации</string>
+    <string name="oneplus_tools_quicklaunch_summary_no_gamingmode">Брзо стартување, паралелни апликации, брава за апликации</string>
     <string name="oneplus_tools_summary">Режим за играње игри, брава за апликации, паралелни апликации</string>
     <string name="oneplus_tools_summary_U30">Режим за играње игри, режим за во џеб, закажано вклучување/исклучување на уредот</string>
     <string name="oneplus_tools_summary_no_gamingmode">Брава за апликации, паралелни апликации</string>
@@ -4219,7 +4239,7 @@ Note:
     <string name="oneplus_top_level_cloud_h2_summary">Синхронизирање податоци во облак, пронајди го мојот телефон</string>
     <string name="oneplus_top_level_cloud_o2_summary">Синхронизирање податоци во облак</string>
     <string name="oneplus_top_level_connected_summary">NFC, емитување, допри и плати</string>
-    <string name="oneplus_top_level_display_summary">Status bar, ambient display, Vision comfort, reading mode</string>
+    <string name="oneplus_top_level_display_summary">Статусна лента, амбиентален дисплеј, удобност за видот, режим за читање</string>
     <string name="oneplus_top_level_network_summary">SIM, мобилна мрежа, потрошен интернет, хотспот</string>
     <string name="oneplus_top_level_privacy_summary">Дозволи, лични податоци</string>
     <string name="oneplus_top_level_security_dashboard_summary">Отпечаток, отклучување со лице, итно спасување</string>
@@ -4248,7 +4268,7 @@ Note:
     <string name="oneplus_user_enjoy_plan_title">Приклучете се во Програмата за кориснички искуства</string>
     <string name="oneplus_vibrant_color_effect">Професионален ефект на вибрирачки бои</string>
     <string name="oneplus_vibrate">Вибрации</string>
-    <string name="oneplus_vibrate_dynamic_mode">Динамична</string>
+    <string name="oneplus_vibrate_dynamic_mode">Динамички</string>
     <string name="oneplus_vibrate_intensity">Интензитет на вибрации</string>
     <string name="oneplus_vibrate_on_touch_intensity">Вибрации при допир</string>
     <string name="oneplus_vibrate_rhythm">Шаблон на вибрации</string>
@@ -4269,7 +4289,7 @@ Note:
     <string name="oneplus_volume_keys_adjust_ringtones">Гласност на ѕвонење</string>
     <string name="oneplus_weak_text_reminding">Само текст</string>
     <string name="oneplus_weak_text_reminding_summary">Дозволи апликациите да прикажуваат известувања како предупредувања</string>
-    <string name="oneplus_wellbeing_grayscale_open_tip">Вечерниот режим моментално не е достапен поради тоа што е вклучена функцијата за сиви бои</string>
+    <string name="oneplus_wellbeing_grayscale_open_tip">Режимот за удобноста на видот моментално не е достапен поради тоа што е вклучена функцијата за сиви бои</string>
     <string name="oneplus_wifi_6_standard_hotspot_cancel">ОТКАЖИ</string>
     <string name="oneplus_wifi_6_standard_hotspot_enable">ВКЛУЧИ</string>
     <string name="oneplus_wifi_6_standard_hotspot_title">Хотспот за стандардот Wi‑Fi 6</string>
@@ -4307,17 +4327,15 @@ Note:
     <string name="onscreen_keyboard_settings_summary">Поставки на тастатура на екран</string>
     <string name="op_advanced_settings">Напредно</string>
     <string name="op_android_mode_cannot_change_color_accent">Стандардната тема може да ја употребува само бојата на системската тема</string>
-    <string name="op_aod_parsons_info_button">ОК</string>
-    <string name="op_aod_parsons_info_message">"Every 24 hours, a masterpiece is created.
-
-Insight, designed together by OnePlus &amp; students from Parsons School of Design, transforms time into a visible color bar. The device's usage data drives the pattern. Every time the phone is unlocked, it leaves a groove on the bar. The longer is the utility time; the wider is the groove and vice versa. Through the insight of those grooves, take a peek at your digital life."</string>
-    <string name="op_aod_parsons_info_title">Insight</string>
+    <string name="op_aod_parsons_info_button">Ок</string>
+    <string name="op_aod_parsons_info_message">"Кога се отвора, се создава едно ремек-дело.
+Insight, дизајниран заедно од OnePlus &amp; од студенти од Факултетот за дизајн – Парсонс, го претвора времето во видлива лента во боја. Податоците за употреба на уредот ја водат шемата. Секој пат кога телефонот ќе се отклучи, остава ознака на лентата. Колку подолго се користи уредот, толку е поголема ознаката и обратно. Преку увидот на тие ознаки, погледнете во вашиот дигитален живот."</string>
     <string name="op_app_already_uninstalled">Деинсталирано</string>
     <string name="op_audio_settings">Аудио штимер</string>
     <string name="op_auto_power_saving">Автоматско штедење на батеријата</string>
     <string name="op_auto_power_saving_summary">Автоматски префрлува во содветната резолуција без да ја потроши батеријата</string>
-    <string name="op_battery_saver_description">Battery Saver turns off or restricts background activity, some visual effects &amp; other high-power features to extend battery life.</string>
-    <string name="op_battery_suggestion_summary">Turn on Adaptive Battery</string>
+    <string name="op_battery_saver_description">Штедачот на батеријата се исклучува или ја ограничува активноста во позадина, некои визуелни ефекти &amp; други одлики со голема моќност за да го продолжи работниот век на батеријата.</string>
+    <string name="op_battery_suggestion_summary">Вклучете ја прилагодливата батерија</string>
     <string name="op_cast_description">Прикажете ги екранот и аудио записот од вашиот телефон на уред како што е телевизор</string>
     <string name="op_cast_nearby">Уреди во близина</string>
     <string name="op_cast_no_devices">Не се пронајдени уреди во близина</string>
@@ -4326,7 +4344,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_charging_Station_mute_notifications">Стиши ги известувањата</string>
     <string name="op_charging_footer_text">Ќе бидете известени за секоја станица за полнење во близина кога ќе посетите партнерски локации како аеродроми или Oneplus настани како што се „Pop-ups“.</string>
     <string name="op_charging_optimization">Оптимизирано полнење</string>
-    <string name="op_charging_optimization_summary">Оптимизирање на шаблонот на полнење согласно вашите навики на употреба</string>
+    <string name="op_charging_optimization_summary">Оптимизирање на шаблонот на полнење согласно вашите навики на употреба со цел помало оптоварување на батеријата и подолго траење</string>
     <string name="op_charging_station">Станици за полнење во близина</string>
     <string name="op_charging_station_no_station">Нема станици за полнење во близина</string>
     <string name="op_charging_station_summary">Извести ме кога ќе има станица за полнење во близина</string>
@@ -4351,7 +4369,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_custom_color_value">Вредност за боја</string>
     <string name="op_custom_color_value_edit">Внесете вредност за боја</string>
     <string name="op_custom_color_value_invalid">Неважечка вредност за боја</string>
-    <string name="op_dark_mode_title">Темна</string>
+    <string name="op_dark_mode_title">Темен</string>
     <string name="op_data_vowlan_enable_summary">Употребувај јавување преку Wi-Fi кога е тоа достапно</string>
     <string name="op_default_apps_summary">Почетна, прелистувач</string>
     <string name="op_default_luncher_title">Апликација за почетен екран</string>
@@ -4368,7 +4386,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_display_motion_graphics_compensation_summary">Засилете ја брзината на кадрите за графика за подобри ефекти на видеата и игрите</string>
     <string name="op_dnd_summary">Не вознемирувај</string>
     <string name="op_enable_location_services">За да пронајдете и следите станици за полнење во близина, овозможете ги услугите за локацијата</string>
-    <string name="op_enable_text">Вклучи</string>
+    <string name="op_enable_text">Овозможи</string>
     <string name="op_face_unlock_set_unlock_password">Отклучување со лице + Лозинка</string>
     <string name="op_face_unlock_set_unlock_pattern">Отклучување со лице + Шема</string>
     <string name="op_face_unlock_set_unlock_pin">Отклучување со лице + PIN</string>
@@ -4383,9 +4401,15 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
  Додека телефонот ги идентификува и бара вашите отпечатоци, осветленоста на екранот на телефонот ќе се зголеми, а бојата ќе се промени привремено."</string>
     <string name="op_fragment">Кратко</string>
     <string name="op_gamespace">Game Space</string>
+    <string name="op_global_drak_mode_apps_manage">Управувајте со апликациите во темен режим</string>
+    <string name="op_global_drak_mode_full_support_list">Поддржани апликации</string>
+    <string name="op_global_drak_mode_not_full_support_list">Неподдржани апликации</string>
+    <string name="op_global_drak_mode_support_description">Апликациите што не се поддржани може да не работат соодветно во темниот режим</string>
+    <string name="op_gps_off_warn_msg">Прво, вклучете ја локацијата</string>
     <string name="op_high_power_app_manager">Апликации што трошат многу батерија</string>
+    <string name="op_history_toggled_on_summary">Скорешните известувања ќе се појават тука</string>
     <string name="op_keep_location_services">За да пронајдете и следите станици за полнење во близина, услугите за локацијата нека останат овозможени</string>
-    <string name="op_light_mode_title">Светла</string>
+    <string name="op_light_mode_title">Светол</string>
     <string name="op_linked_launch_summary">Управувањето со апликациите може да се поврзе со вклучувањето во позадина</string>
     <string name="op_linked_launch_title">Автоматско вклучување апликации</string>
     <string name="op_lockpassword_choose_your_password_header_for_face">За да користите отклучување со лице, поставете лозинка</string>
@@ -4393,9 +4417,11 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_lockpassword_choose_your_pin_header_for_face">За да користите отклучување со лице, поставете PIN</string>
     <string name="op_member_description">Поврзете го вашиот уред за да добиете ексклузивни погодности</string>
     <string name="op_member_title">Најавете се на OnePlus сметката</string>
-    <string name="op_night_display_title">Vision comfort</string>
+    <string name="op_night_display_title">Удобност за видот</string>
     <string name="op_not_disturb">Претпочитани вредност за „Не вознемирувај“</string>
     <string name="op_not_disturb_summary">Стишени повици и известувања и исклучени вибрации, освен аларми</string>
+    <string name="op_notification_history_off_summary">Вклучете ја историјата за известувања за да ги видите скорешните известувања</string>
+    <string name="op_notification_history_summary">Прикажи скорешни известувања</string>
     <string name="op_oneplus_roaming_summary">Овозможување пристап до глобални услуги на интернет</string>
     <string name="op_oneplus_roaming_title">OnePlus Roaming</string>
     <string name="op_primary_charm_purple_label">Темно виолетова</string>
@@ -4406,6 +4432,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_primary_grass_green_label">Светло зелена</string>
     <string name="op_primary_lemon_yellow_label">Портокалова</string>
     <string name="op_primary_red_label">Црвена</string>
+    <string name="op_primary_rose_red_label">Розово-црвена</string>
     <string name="op_primary_royal_blue_label">Кралско сина</string>
     <string name="op_primary_sky_blue_label">Синозелена</string>
     <string name="op_primary_vigour_red_label">Розева</string>
@@ -4414,15 +4441,15 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_screenshot">Звук при правење слика од екран</string>
     <string name="op_security_lock_settings_title">Безбедност и заклучување екран</string>
     <string name="op_security_settings_back_fingerprint_enroll_find_sensor_message">Се наоѓа на задниот дел од телефонот</string>
-    <string name="op_security_settings_fingerprint_enroll_find_sensor_message">Locate the fingerprint sensor on the home button</string>
+    <string name="op_security_settings_fingerprint_enroll_find_sensor_message">Лоцирајте го сензорот за отпечатоци на копчето за почетен екран</string>
     <string name="op_security_settings_title">Безбедност и отпечатоци</string>
     <string name="op_sim_card_with_slotid">SIM-картичка  %1$s</string>
     <string name="op_sim_cord">SIM и мрежа</string>
     <string name="op_sim_cord_summary">Стандардна SIM-картичка, потрошена количина на пренос на податоци</string>
     <string name="op_sim_name_with_prefix">  (%1$s)</string>
-    <string name="op_smart_battery_manager_title">Adaptive Battery</string>
-    <string name="op_smart_battery_title">Use Adaptive Battery</string>
-    <string name="op_sms_ringtone">Звук за SMS</string>
+    <string name="op_smart_battery_manager_title">Прилагодлива батерија</string>
+    <string name="op_smart_battery_title">Користете ја прилагодливата батерија</string>
+    <string name="op_sms_ringtone">Мелодија за SMS</string>
     <string name="op_starwar_mode_cannot_change_color_accent">Темата „Војна на ѕвездите“ може да ја употребува само бојата на системската тема</string>
     <string name="op_starwar_mode_title">Војна на ѕвездите</string>
     <string name="op_storage">Складирање и меморија</string>
@@ -4431,9 +4458,9 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_tcp_timestamps_randomization_title">TCP случајно знаменце за временски печат</string>
     <string name="op_theme_2__cannot_change_color_accent">Темата „Одмаздници“ може да ја употребува само бојата на системската тема</string>
     <string name="op_theme_2__title">Одмаздници</string>
-    <string name="op_theme_3_cannot_change_color_accent">McLaren theme can only use the system color theme</string>
+    <string name="op_theme_3_cannot_change_color_accent">McLaren темата може да ја употребува само бојата на системската тема</string>
     <string name="op_theme_3_title">McLaren</string>
-    <string name="op_theme_entrance_summary">Wallpapers, accent color, font</string>
+    <string name="op_theme_entrance_summary">Позадини, нагласена боја, фонт</string>
     <string name="op_theme_mode_title">Тема</string>
     <string name="op_use_cast">Користи префрлување на екран</string>
     <string name="op_user_manual_settings">Прирачник за корисници</string>
@@ -4448,7 +4475,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_wlan_settings_and_management">Поставки за Wi‑Fi</string>
     <string name="op_zen_mode_automation_settings_title">Автоматско вклучување</string>
     <string name="op_zen_mode_behavior_settings_title">Исклучоци</string>
-    <string name="op_zen_mode_restrict_notifications_title">Restrict notifications</string>
+    <string name="op_zen_mode_restrict_notifications_title">Ограничи известувања</string>
     <string name="opcustom_tone_dark_tile_text">Темен режим</string>
     <string name="open_hotspot_warning_message">"Со отворена заштита, уредите ќе можат да го користат вашиот мобилен хотспот без да внесуваат лозинка. Наместо тоа, изберете WPA2 заштита ако сакате да се бара лозинка. "</string>
     <string name="open_supported_links_footer">Апликацијата тврди дека може да ги отвора следниве линкови:</string>
@@ -4524,6 +4551,8 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="platform_compat_dashboard_title">Промени на компатибилноста на апликацијата</string>
     <string name="platform_compat_default_disabled_title">Стандардно оневозможени промени</string>
     <string name="platform_compat_default_enabled_title">Стандардно овозможени промени</string>
+    <string name="platform_compat_dialog_text_no_apps">Промени во компатибилноста на апликациите може да се вршат само за апликации во кои може да се отстрануваат грешки. Инсталирајте апликација во која може да се отстрануваат грешки и обидете се повторно.</string>
+    <string name="platform_compat_dialog_title_no_apps">Нема апликации</string>
     <string name="please_select_phase2">Автентикација во фаза 2</string>
     <string name="please_type_passphrase">Лозинка за безжична мрежа</string>
     <string name="pointer_location">Локација на покажувач</string>
@@ -4925,7 +4954,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="scanning_status_text_wifi_on_ble_on">Вклучено е скенирање за Wi‑Fi и Bluetooth</string>
     <string name="schedule_reminders">Потсетници за настани</string>
     <string name="screen_color_mode_advanced">Напредно</string>
-    <string name="screen_color_mode_advanced_settings">Advanced settings</string>
+    <string name="screen_color_mode_advanced_settings">Напредни поставки</string>
     <string name="screen_color_mode_vivid">Живописно</string>
     <string name="screen_compatibility_label">Компатибилност на екран</string>
     <string name="screen_compatibility_text">Оваа апликација може да не е дизајнирана за вашиот екран. Може да контролирате како се прилагодува на вашиот екран тука.</string>
@@ -5684,7 +5713,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="summary_separator">" / "</string>
     <string name="summary_voice_network">VoLTE, јавување преку Wi-Fi</string>
     <string name="summary_voice_volte_only">VoLTE</string>
-    <string name="summary_voice_wfc_only">Јавување преку Wi-Fi</string>
+    <string name="summary_voice_wfc_only">Повикување преку Wi-Fi</string>
     <string name="support_summary">Статии за помош, телефон и разговор, вовед</string>
     <string name="swipe_direction_ltr">Влечи надесно за да го отфрлам; налево за да го прикажам менито</string>
     <string name="swipe_direction_rtl">Влечи налево за да го отфрлам; надесно за да го прикажам менито</string>
@@ -5745,7 +5774,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="tether_error_message">Не сте претплатени на %1$s.</string>
     <string name="tether_error_title">Грешка, %1$s</string>
     <string name="tether_no_sim_message">Вметнете SIM-картичка за да ја употребувате опцијата Мобилен хотспот и останатите опции за поврзување</string>
-    <string name="tether_no_sim_title">No SIM card</string>
+    <string name="tether_no_sim_title">Нема SIM-картичка</string>
     <string name="tether_settings_disabled_on_data_saver">Не може да се врзе или се да користат преносни точки на пристап додека е вклучен Штедачот на интернет</string>
     <string name="tether_settings_summary_all">Точка на пристап, USB, Bluetooth, етернет</string>
     <string name="tether_settings_summary_bluetooth_and_ethernet">Bluetooth, етернет</string>
@@ -5824,7 +5853,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="traffic_day_dimension" />
     <string name="traffic_limit_value_title">Ограничен интернет</string>
     <string name="traffic_package_used">Потрошен интернет</string>
-    <string name="traffic_reset_day_summary">Monthly cycle starts on the %1$s of every month</string>
+    <string name="traffic_reset_day_summary">Месечниот циклус започнува на %1$s секој месец</string>
     <string name="traffic_reset_day_title">Циклус на наплата</string>
     <string name="traffic_set_limit_description_vzw">Исклучи го поврзувањето преку мобилен интернет кога ќе ја искористам оваа количина на мобилен интернет</string>
     <string name="traffic_set_limit_title">Постави ограничување</string>
@@ -5841,7 +5870,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="traffic_usage_runout_title_vzw">Мобилниот интернет сега е исклучен</string>
     <string name="traffic_usage_settings">Поставки за мобилен интернет</string>
     <string name="traffic_usage_warn_title">Известување за потрошен интернет</string>
-    <string name="traffic_used_summary">" %1$s is used in the current billing cycle"</string>
+    <string name="traffic_used_summary">" %1$s е потрошено во моменталниот циклус до наплата"</string>
     <string name="traffic_used_title">Количина на потрошен интернет</string>
     <string name="traffic_warn_value_title">Известување за интернет</string>
     <string name="transition_animation_scale_title">Опсег на преодна анимац.</string>
@@ -6733,6 +6762,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="wizard_next">Следно</string>
     <string name="work_alarm_ringtone_title">Стандарден звук за службен аларм</string>
     <string name="work_life_balance">Work Life Balance</string>
+    <string name="work_life_banner_summary">Известувањата можат да ви го одземат вниманието. Приоритизирајте ги за да ја најдете перфектната рамнотежа помеѓу работата и секојдневниот живот.</string>
     <string name="work_life_disabled_toast">Функцијата Work Life Balance е оневозможена.</string>
     <string name="work_mode_label">Работен профил</string>
     <string name="work_mode_off_summary">Апликациите и известувањата се исклучени</string>

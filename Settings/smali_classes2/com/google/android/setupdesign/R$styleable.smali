@@ -215,7 +215,7 @@
 
     new-array v6, v1, [I
 
-    const v7, 0x7f0404fd
+    const v7, 0x7f0404fa
 
     aput v7, v6, v4
 
@@ -229,7 +229,7 @@
 
     new-array v6, v1, [I
 
-    const v8, 0x7f0404e4
+    const v8, 0x7f0404e1
 
     aput v8, v6, v4
 
@@ -237,7 +237,7 @@
 
     new-array v6, v1, [I
 
-    const v8, 0x7f040511
+    const v8, 0x7f04050e
 
     aput v8, v6, v4
 
@@ -301,8 +301,8 @@
 
     :array_0
     .array-data 4
-        0x7f0404db
-        0x7f0404dc
+        0x7f0404d8
+        0x7f0404d9
     .end array-data
 
     :array_1
@@ -317,13 +317,13 @@
     .array-data 4
         0x101012a
         0x1010214
-        0x7f0404f2
+        0x7f0404ef
     .end array-data
 
     :array_3
     .array-data 4
-        0x7f0404ee
-        0x7f0404f8
+        0x7f0404eb
+        0x7f0404f5
     .end array-data
 
     :array_4
@@ -334,18 +334,18 @@
 
     :array_5
     .array-data 4
-        0x7f0404e6
-        0x7f0404e7
-        0x7f0404ef
-        0x7f04050e
-        0x7f040510
+        0x7f0404e3
+        0x7f0404e4
+        0x7f0404ec
+        0x7f04050b
+        0x7f04050d
     .end array-data
 
     :array_6
     .array-data 4
         0x1010002
-        0x7f0404ff
-        0x7f04050f
+        0x7f0404fc
+        0x7f04050c
     .end array-data
 
     :array_7
@@ -362,42 +362,42 @@
         0x1010194
         0x10101e1
         0x10101e9
-        0x7f0404fe
-        0x7f0404ff
+        0x7f0404fb
+        0x7f0404fc
     .end array-data
 
     :array_9
     .array-data 4
         0x10100b2
-        0x7f0404f3
-        0x7f0404f4
-        0x7f0404f5
+        0x7f0404f0
+        0x7f0404f1
+        0x7f0404f2
     .end array-data
 
     :array_a
     .array-data 4
         0x1010031
         0x101030e
-        0x7f040475
+        0x7f040472
     .end array-data
 
     :array_b
     .array-data 4
         0x10100b2
-        0x7f0404f3
-        0x7f0404f4
-        0x7f0404f5
-        0x7f0404fc
+        0x7f0404f0
+        0x7f0404f1
+        0x7f0404f2
+        0x7f0404f9
     .end array-data
 
     :array_c
     .array-data 4
+        0x7f0404e2
         0x7f0404e5
-        0x7f0404e8
-        0x7f0404f1
+        0x7f0404ee
+        0x7f0404fd
+        0x7f0404fe
+        0x7f0404ff
         0x7f040500
-        0x7f040501
-        0x7f040502
-        0x7f040503
     .end array-data
 .end method

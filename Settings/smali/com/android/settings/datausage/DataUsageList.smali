@@ -57,6 +57,8 @@
 
 .field private mHeader:Landroid/view/View;
 
+.field private mIsHotSpot:Z
+
 .field mLoadingViewController:Lcom/android/settings/widget/LoadingViewController;
 
 .field final mNetworkCycleDataCallbacks:Landroidx/loader/app/LoaderManager$LoaderCallbacks;
@@ -182,7 +184,15 @@
     return-void
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/datausage/DataUsageList;)Landroidx/preference/Preference;
+.method static synthetic access$500(Lcom/android/settings/datausage/DataUsageList;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/settings/datausage/DataUsageList;->mIsHotSpot:Z
+
+    return p0
+.end method
+
+.method static synthetic access$600(Lcom/android/settings/datausage/DataUsageList;)Landroidx/preference/Preference;
     .locals 0
 
     iget-object p0, p0, Lcom/android/settings/datausage/DataUsageList;->mUsageAmount:Landroidx/preference/Preference;
@@ -190,7 +200,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/datausage/DataUsageList;Landroid/app/usage/NetworkStats;[I)V
+.method static synthetic access$700(Lcom/android/settings/datausage/DataUsageList;Landroid/app/usage/NetworkStats;[I)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/android/settings/datausage/DataUsageList;->bindStats(Landroid/app/usage/NetworkStats;[I)V
@@ -198,7 +208,7 @@
     return-void
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/datausage/DataUsageList;)Landroidx/preference/PreferenceGroup;
+.method static synthetic access$800(Lcom/android/settings/datausage/DataUsageList;)Landroidx/preference/PreferenceGroup;
     .locals 0
 
     iget-object p0, p0, Lcom/android/settings/datausage/DataUsageList;->mApps:Landroidx/preference/PreferenceGroup;
@@ -273,7 +283,7 @@
 .end method
 
 .method private bindStats(Landroid/app/usage/NetworkStats;[I)V
-    .locals 22
+    .locals 23
 
     move-object/from16 v1, p0
 
@@ -331,6 +341,8 @@
 
     move-result v3
 
+    const/4 v9, 0x2
+
     const/4 v4, 0x0
 
     if-eqz v3, :cond_7
@@ -343,19 +355,17 @@
 
     invoke-virtual {v8}, Landroid/app/usage/NetworkStats$Bucket;->getUid()I
 
-    move-result v9
+    move-result v7
 
-    invoke-static {v9}, Landroid/os/UserHandle;->getUserId(I)I
+    invoke-static {v7}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v3
 
-    invoke-static {v9}, Landroid/os/UserHandle;->isApp(I)Z
+    invoke-static {v7}, Landroid/os/UserHandle;->isApp(I)Z
 
     move-result v5
 
     const/4 v6, -0x4
-
-    const/16 v20, 0x2
 
     if-eqz v5, :cond_4
 
@@ -381,11 +391,15 @@
 
     move-object v5, v8
 
+    move/from16 v20, v7
+
     move-object v7, v10
 
-    move-object/from16 v21, v8
+    move-object/from16 v22, v8
 
-    move v0, v9
+    move/from16 v21, v11
+
+    move v11, v9
 
     move-wide/from16 v8, v18
 
@@ -393,74 +407,92 @@
 
     move-result-wide v18
 
-    goto :goto_2
+    goto :goto_1
 
     :cond_1
-    move-object/from16 v21, v8
+    move/from16 v20, v7
 
-    move v0, v9
+    move-object/from16 v22, v8
 
-    goto :goto_2
+    move/from16 v21, v11
+
+    move v11, v9
+
+    :goto_1
+    move v6, v11
+
+    move-wide/from16 v8, v18
+
+    move/from16 v3, v20
+
+    goto :goto_5
 
     :cond_2
-    move-object/from16 v21, v8
+    move-object/from16 v22, v8
+
+    move/from16 v21, v11
+
+    move v11, v9
 
     invoke-virtual {v12, v3}, Landroid/os/UserManager;->getUserInfo(I)Landroid/content/pm/UserInfo;
 
-    move-result-object v0
+    move-result-object v5
 
-    if-nez v0, :cond_3
+    if-nez v5, :cond_3
 
-    move/from16 v4, v20
+    move v9, v11
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_3
     invoke-static {v3}, Lcom/android/settingslib/net/UidDetailProvider;->buildKeyForUser(I)I
 
     move-result v6
 
-    :goto_1
+    move v9, v4
+
+    :goto_2
     move v3, v6
 
-    move-wide/from16 v8, v18
+    move v6, v9
 
-    move v6, v4
+    goto :goto_4
+
+    :cond_4
+    move v3, v7
+
+    move-object/from16 v22, v8
+
+    move/from16 v21, v11
+
+    move v11, v9
+
+    if-eq v3, v6, :cond_6
+
+    const/4 v4, -0x5
+
+    if-eq v3, v4, :cond_6
+
+    const/16 v4, 0x425
+
+    if-ne v3, v4, :cond_5
 
     goto :goto_3
 
-    :cond_4
-    move-object/from16 v21, v8
-
-    move v0, v9
-
-    if-eq v0, v6, :cond_6
-
-    const/4 v3, -0x5
-
-    if-eq v0, v3, :cond_6
-
-    const/16 v3, 0x425
-
-    if-ne v0, v3, :cond_5
-
-    goto :goto_2
-
     :cond_5
-    const/16 v0, 0x3e8
+    const/16 v3, 0x3e8
 
     :cond_6
-    :goto_2
-    move v3, v0
+    :goto_3
+    move v6, v11
 
+    :goto_4
     move-wide/from16 v8, v18
 
-    move/from16 v6, v20
-
-    :goto_3
+    :goto_5
     move-object v4, v14
 
-    move-object/from16 v5, v21
+    move-object/from16 v5, v22
 
     move-object v7, v10
 
@@ -468,20 +500,22 @@
 
     move-result-wide v18
 
-    move-object/from16 v0, p1
+    move/from16 v11, v21
 
-    move-object/from16 v8, v21
+    move-object/from16 v8, v22
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_7
+    move v11, v9
+
     invoke-virtual/range {p1 .. p1}, Landroid/app/usage/NetworkStats;->close()V
 
     array-length v3, v2
 
     move v5, v4
 
-    :goto_4
+    :goto_6
     if-ge v5, v3, :cond_b
 
     aget v6, v2, v5
@@ -500,7 +534,7 @@
 
     if-nez v0, :cond_8
 
-    goto :goto_5
+    goto :goto_7
 
     :cond_8
     const/4 v7, 0x1
@@ -534,7 +568,7 @@
 
     if-lez v0, :cond_9
 
-    goto :goto_5
+    goto :goto_7
 
     :catch_0
     move-exception v0
@@ -583,12 +617,35 @@
     :cond_a
     iput-boolean v7, v0, Lcom/android/settingslib/AppItem;->restricted:Z
 
-    :goto_5
+    :goto_7
     add-int/lit8 v5, v5, 0x1
 
-    goto :goto_4
+    goto :goto_6
 
     :cond_b
+    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isUsvMode()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_c
+
+    new-instance v0, Lcom/android/settingslib/AppItem;
+
+    const/16 v2, 0x97
+
+    invoke-direct {v0, v2}, Lcom/android/settingslib/AppItem;-><init>(I)V
+
+    invoke-static {}, Lcom/android/settings/datausage/DataUsageUtils;->getVtDataUsageBytes()J
+
+    move-result-wide v2
+
+    iput-wide v2, v0, Lcom/android/settingslib/AppItem;->total:J
+
+    iput v11, v0, Lcom/android/settingslib/AppItem;->category:I
+
+    invoke-virtual {v10, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_c
     invoke-static {v10}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
@@ -599,16 +656,16 @@
 
     move v0, v4
 
-    :goto_6
+    :goto_8
     invoke-virtual {v10}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
-    if-ge v0, v2, :cond_f
+    if-ge v0, v2, :cond_10
 
     cmp-long v2, v18, v16
 
-    if-eqz v2, :cond_c
+    if-eqz v2, :cond_d
 
     invoke-virtual {v10, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -626,12 +683,12 @@
 
     long-to-int v2, v2
 
-    goto :goto_7
+    goto :goto_9
 
-    :cond_c
+    :cond_d
     move v2, v4
 
-    :goto_7
+    :goto_9
     new-instance v3, Lcom/android/settings/datausage/AppDataUsagePreference;
 
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
@@ -668,11 +725,11 @@
 
     move-result v2
 
-    if-eqz v2, :cond_d
+    if-eqz v2, :cond_e
 
-    goto :goto_8
+    goto :goto_a
 
-    :cond_d
+    :cond_e
     iget-object v2, v1, Lcom/android/settings/datausage/DataUsageList;->mExistedItems:Landroid/util/SparseArray;
 
     invoke-virtual {v10, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -687,11 +744,11 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_e
+    if-eqz v2, :cond_f
 
-    goto :goto_8
+    goto :goto_a
 
-    :cond_e
+    :cond_f
     new-instance v2, Lcom/android/settings/datausage/DataUsageList$3;
 
     invoke-direct {v2, v1}, Lcom/android/settings/datausage/DataUsageList$3;-><init>(Lcom/android/settings/datausage/DataUsageList;)V
@@ -720,12 +777,12 @@
 
     invoke-virtual {v2, v3, v5}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    :goto_8
+    :goto_a
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_6
+    goto :goto_8
 
-    :cond_f
+    :cond_10
     return-void
 .end method
 
@@ -1394,33 +1451,33 @@
 
     move-result-object v0
 
-    const-string v1, "sub_id"
+    const/4 v1, 0x0
 
-    const-string v2, "network_template"
+    const-string v2, "sub_id"
 
-    const/4 v3, -0x1
+    const-string v3, "network_template"
+
+    const/4 v4, -0x1
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
+    invoke-virtual {v0, v2, v4}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
-    move-result v4
+    move-result v5
 
-    iput v4, p0, Lcom/android/settings/datausage/DataUsageList;->mSubId:I
+    iput v5, p0, Lcom/android/settings/datausage/DataUsageList;->mSubId:I
 
-    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+    invoke-virtual {v0, v3}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
-    move-result-object v4
+    move-result-object v5
 
-    check-cast v4, Landroid/net/NetworkTemplate;
+    check-cast v5, Landroid/net/NetworkTemplate;
 
-    iput-object v4, p0, Lcom/android/settings/datausage/DataUsageList;->mTemplate:Landroid/net/NetworkTemplate;
-
-    const/4 v4, 0x0
+    iput-object v5, p0, Lcom/android/settings/datausage/DataUsageList;->mTemplate:Landroid/net/NetworkTemplate;
 
     const-string v5, "network_type"
 
-    invoke-virtual {v0, v5, v4}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
+    invoke-virtual {v0, v5, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
@@ -1433,19 +1490,19 @@
 
     iget v0, p0, Lcom/android/settings/datausage/DataUsageList;->mSubId:I
 
-    if-ne v0, v3, :cond_1
+    if-ne v0, v4, :cond_1
 
     invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    invoke-virtual {v0, v2, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
-    move-result v1
+    move-result v2
 
-    iput v1, p0, Lcom/android/settings/datausage/DataUsageList;->mSubId:I
+    iput v2, p0, Lcom/android/settings/datausage/DataUsageList;->mSubId:I
 
-    invoke-virtual {v0, v2}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
+    invoke-virtual {v0, v3}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v0
 
@@ -1460,21 +1517,21 @@
 
     iget v0, p0, Lcom/android/settings/datausage/DataUsageList;->mSubId:I
 
-    if-ne v0, v3, :cond_2
+    if-ne v0, v4, :cond_2
 
     invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    const-string v1, "android.provider.extra.SUB_ID"
+    const-string v2, "android.provider.extra.SUB_ID"
 
-    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    invoke-virtual {v0, v2, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
-    move-result v1
+    move-result v2
 
-    iput v1, p0, Lcom/android/settings/datausage/DataUsageList;->mSubId:I
+    iput v2, p0, Lcom/android/settings/datausage/DataUsageList;->mSubId:I
 
-    invoke-virtual {v0, v2}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
+    invoke-virtual {v0, v3}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v0
 
@@ -1483,6 +1540,25 @@
     iput-object v0, p0, Lcom/android/settings/datausage/DataUsageList;->mTemplate:Landroid/net/NetworkTemplate;
 
     :cond_2
+    invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-string v2, "is_hotspot"
+
+    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/android/settings/datausage/DataUsageList;->mIsHotSpot:Z
+
+    iget-object p0, p0, Lcom/android/settings/datausage/DataUsageList;->mChart:Lcom/android/settings/datausage/ChartDataUsagePreference;
+
+    if-eqz p0, :cond_3
+
+    invoke-virtual {p0, v0}, Lcom/android/settings/datausage/ChartDataUsagePreference;->setIsHotspot(Z)V
+
+    :cond_3
     return-void
 .end method
 

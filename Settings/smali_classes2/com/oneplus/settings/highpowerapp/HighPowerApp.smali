@@ -55,12 +55,58 @@
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;IIZZJ)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/oneplus/settings/highpowerapp/HighPowerApp;->pkgName:Ljava/lang/String;
+
+    iput p2, p0, Lcom/oneplus/settings/highpowerapp/HighPowerApp;->uid:I
+
+    iput p3, p0, Lcom/oneplus/settings/highpowerapp/HighPowerApp;->powerLevel:I
+
+    iput-boolean p4, p0, Lcom/oneplus/settings/highpowerapp/HighPowerApp;->isLocked:Z
+
+    iput-boolean p5, p0, Lcom/oneplus/settings/highpowerapp/HighPowerApp;->isStopped:Z
+
+    iput-wide p6, p0, Lcom/oneplus/settings/highpowerapp/HighPowerApp;->timeStamp:J
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;IZZJ)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/oneplus/settings/highpowerapp/HighPowerApp;->pkgName:Ljava/lang/String;
+
+    iput p2, p0, Lcom/oneplus/settings/highpowerapp/HighPowerApp;->powerLevel:I
+
+    iput-boolean p3, p0, Lcom/oneplus/settings/highpowerapp/HighPowerApp;->isLocked:Z
+
+    iput-boolean p4, p0, Lcom/oneplus/settings/highpowerapp/HighPowerApp;->isStopped:Z
+
+    iput-wide p5, p0, Lcom/oneplus/settings/highpowerapp/HighPowerApp;->timeStamp:J
+
+    return-void
+.end method
+
 
 # virtual methods
 .method public describeContents()I
     .locals 0
 
     const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public getState()I
+    .locals 0
+
+    iget p0, p0, Lcom/oneplus/settings/highpowerapp/HighPowerApp;->powerLevel:I
 
     return p0
 .end method

@@ -237,8 +237,8 @@
         <item quantity="one">1 ora (eccetto in caso di attivazione automatica)</item>
     </plurals>
     <plurals name="op_location_settings_summary_location_on">
-        <item quantity="other">On - %1$d apps have access to location</item>
-        <item quantity="one">On - %1$d app has access to location</item>
+        <item quantity="other">On - %1$d app hanno accesso alla posizione</item>
+        <item quantity="one">On - %1$d app ha accesso alla posizione</item>
     </plurals>
     <plurals name="permission_bar_chart_label">
         <item quantity="other">%s app</item>

@@ -225,20 +225,20 @@
         <item quantity="one">%d برنامه فعال</item>
     </plurals>
     <plurals name="oneplus_applock_wrong_pattern_warning">
-        <item quantity="other">همچنان %1$d فرصت در اختیار دارید</item>
-        <item quantity="one">همچنان %1$d فرصت در اختیار دارید</item>
+        <item quantity="other">شما هنوز %1$d شانس دارید</item>
+        <item quantity="one">شما هنوز %1$d شانس دارید</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
-        <item quantity="other">بعد از %d ثانیه امتحان کنید.</item>
-        <item quantity="one">بعد از %d ثانیه امتحان کنید.</item>
+        <item quantity="other">در %d ثانیه مجدداً تلاش کنید.</item>
+        <item quantity="one">در %d ثانیه مجدداً تلاش کنید.</item>
     </plurals>
     <plurals name="oneplus_zen_mode_duration_summary_time_hours">
         <item quantity="other">%d ساعت (مگر اینکه به صورت خودکار روشن شده باشد)</item>
         <item quantity="one">1 ساعت (مگر اینکه به صورت خودکار روشن شده باشد)</item>
     </plurals>
     <plurals name="op_location_settings_summary_location_on">
-        <item quantity="other">On - %1$d apps have access to location</item>
-        <item quantity="one">On - %1$d app has access to location</item>
+        <item quantity="other">روشن - %1$d برنامه‌ها به موقعیت مکانی دسترسی دارند</item>
+        <item quantity="one">روشن - %1$d برنامه به موقعیت مکانی دسترسی دارد</item>
     </plurals>
     <plurals name="permission_bar_chart_label">
         <item quantity="other">%s برنامه</item>
@@ -365,7 +365,7 @@
         <item quantity="one">کد پین سیم‌کارت اشتباه است، %d بار دیگر می‌توانید تلاش کنید.</item>
     </plurals>
     <plurals name="zen_mode_bypassing_apps_subtext">
-        <item quantity="other">%s می‌تواند وقفه ایجاد کند</item>
+        <item quantity="other">%s می‌توانند وقفه ایجاد کند</item>
         <item quantity="one">%s می‌تواند وقفه ایجاد کند</item>
     </plurals>
     <plurals name="zen_mode_contacts_count">
@@ -381,7 +381,7 @@
         <item quantity="one">%d ساعت</item>
     </plurals>
     <plurals name="zen_mode_other_sounds_summary">
-        <item quantity="other">%s می‌تواند وقفه ایجاد کند</item>
+        <item quantity="other">%s می‌توانند وقفه ایجاد کند</item>
         <item quantity="one">%s می‌تواند وقفه ایجاد کند</item>
     </plurals>
     <plurals name="zen_mode_settings_summary_on">

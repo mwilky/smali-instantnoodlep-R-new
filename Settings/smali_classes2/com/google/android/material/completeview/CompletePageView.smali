@@ -26,6 +26,8 @@
 
 .field private mMiddleTopActionButton:Landroid/widget/Button;
 
+.field private mPreBottomMargin:I
+
 .field private mStatus:I
 
 .field private mSubHeadingText:Landroid/widget/TextView;
@@ -70,6 +72,8 @@
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/google/android/material/completeview/CompletePageView;->mStatus:I
+
+    iput v0, p0, Lcom/google/android/material/completeview/CompletePageView;->mPreBottomMargin:I
 
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
@@ -536,6 +540,77 @@
     iget-object p0, p0, Lcom/google/android/material/completeview/CompletePageView;->mContentText:Landroid/widget/TextView;
 
     return-object p0
+.end method
+
+.method protected onLayout(ZIIII)V
+    .locals 0
+
+    invoke-super/range {p0 .. p5}, Landroid/widget/LinearLayout;->onLayout(ZIIII)V
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/oneplus/common/NavigationButtonUtils;->isGestureNavigationBar(Landroid/content/Context;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/oneplus/common/NavigationButtonUtils;->isGestureButtonShowOnCreen(Landroid/content/Context;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/16 p1, 0x1a
+
+    goto :goto_0
+
+    :cond_0
+    const/16 p1, 0x2a
+
+    :goto_0
+    iget p2, p0, Lcom/google/android/material/completeview/CompletePageView;->mPreBottomMargin:I
+
+    if-eq p1, p2, :cond_1
+
+    sget p2, Lcom/google/android/material/R$id;->complete_buttons:I
+
+    invoke-virtual {p0, p2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_1
+
+    invoke-virtual {p2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object p3
+
+    check-cast p3, Landroid/widget/LinearLayout$LayoutParams;
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
+
+    move-result-object p4
+
+    invoke-static {p4, p1}, Lcom/oneplus/common/AppUtils;->dpToPx(Landroid/content/Context;I)F
+
+    move-result p4
+
+    float-to-int p4, p4
+
+    iput p4, p3, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
+
+    iput p1, p0, Lcom/google/android/material/completeview/CompletePageView;->mPreBottomMargin:I
+
+    invoke-virtual {p2, p3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    :cond_1
+    return-void
 .end method
 
 .method public setCompleteSubHeading(Ljava/lang/CharSequence;)V

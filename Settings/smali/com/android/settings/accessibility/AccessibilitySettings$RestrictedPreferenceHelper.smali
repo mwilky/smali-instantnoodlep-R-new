@@ -536,7 +536,7 @@
     const/4 v14, 0x0
 
     :goto_0
-    if-ge v14, v11, :cond_3
+    if-ge v14, v11, :cond_4
 
     move-object/from16 v15, p1
 
@@ -588,6 +588,23 @@
 
     move-result-object v18
 
+    const-string v0, "com.oneplus.screenshot"
+
+    invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    move-object/from16 v19, v9
+
+    move-object/from16 v16, v10
+
+    move/from16 v18, v11
+
+    goto/16 :goto_3
+
+    :cond_0
     iget-object v0, v8, Lcom/android/settings/accessibility/AccessibilitySettings$RestrictedPreferenceHelper;->mPm:Landroid/content/pm/PackageManager;
 
     invoke-virtual {v7, v0}, Landroid/content/pm/ResolveInfo;->loadIcon(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
@@ -598,7 +615,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_0
+    if-nez v2, :cond_1
 
     iget-object v0, v8, Lcom/android/settings/accessibility/AccessibilitySettings$RestrictedPreferenceHelper;->mContext:Landroid/content/Context;
 
@@ -608,7 +625,7 @@
 
     move-result-object v0
 
-    :cond_0
+    :cond_1
     move-object/from16 v19, v0
 
     move-object/from16 v0, p0
@@ -633,22 +650,22 @@
 
     move-result-object v5
 
-    if-eqz v10, :cond_2
+    if-eqz v10, :cond_3
 
     invoke-interface {v10, v9}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     goto :goto_1
 
-    :cond_1
+    :cond_2
     const/4 v0, 0x0
 
     goto :goto_2
 
-    :cond_2
+    :cond_3
     :goto_1
     const/4 v0, 0x1
 
@@ -713,6 +730,7 @@
 
     invoke-interface {v12, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    :goto_3
     add-int/lit8 v14, v14, 0x1
 
     move-object/from16 v10, v16
@@ -723,6 +741,6 @@
 
     goto/16 :goto_0
 
-    :cond_3
+    :cond_4
     return-object v12
 .end method

@@ -112,7 +112,7 @@
 
     const/4 v4, 0x0
 
-    const/16 v5, 0x107
+    const/16 v5, 0x100
 
     aput v5, v2, v4
 

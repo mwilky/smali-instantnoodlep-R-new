@@ -40,9 +40,14 @@
     <string name="abc_slice_updated">وقت التحديث الأخير: %1$s</string>
     <string name="abc_slices_permission_request">يريد تطبيق %1$s عرض شرائح تطبيق %2$s.</string>
     <string name="abc_toolbar_collapse_description">تصغير</string>
+    <string name="about_action_bar_title">حول</string>
+    <string name="about_app_version_text">Version %s</string>
     <string name="about_phone_device_name_warning">‏اسم جهازك مرئي للتطبيقات على هاتفك. ويمكن أيضًا أن يراه أشخاص آخرون عند الاتصال بأجهزة بلوتوث أو إعداد نقطة اتصال Wi-Fi.</string>
+    <string name="about_privacy_policy">سياسة الخصوصية</string>
+    <string name="about_release_note_title">سجل التحديث:</string>
     <string name="about_settings">لمحة عن الهاتف</string>
     <string name="about_settings_summary">عرض المعلومات القانونية والحالة وإصدار البرنامج</string>
+    <string name="about_terms_service">شروط الخدمة</string>
     <string name="accelerometer_summary_off">تبديل الاتجاه تلقائيًا عند تدوير الهاتف</string>
     <string name="accelerometer_summary_on">تبديل الاتجاه تلقائيًا عند تدوير الهاتف</string>
     <string name="accelerometer_title">التدوير التلقائي للشاشة</string>
@@ -267,7 +272,7 @@
     <string name="action_drag_label_move_up">نقل لأعلى</string>
     <string name="action_drag_label_remove">إزالة اللغة</string>
     <string name="activate_one_handed_mode">الوصول السريع</string>
-    <string name="activate_one_handed_mode_description">اسحب لأسفل الجزء السفلي من الشاشة لتنشيط الوصول السريع مؤقتًا. وباستخدام الوصول السريع، يمكنك الوصول إلى محتوى الجزء العلوي من شاشة هاتفك. اسحب لأعلى للخروج ولاستعادة الشاشة‑بأكملها.</string>
+    <string name="activate_one_handed_mode_description">اسحب لأسفل في الجزء السفلي من الشاشة لتنشيط الوصول السريع مؤقتًا. من خلال الوصول السريع، يمكنك الوصول إلى محتوى الجزء العلوي من شاشة هاتفك. اسحب لأعلى للخروج واستعادة ملء الشاشة‑.</string>
     <string name="active_device_admin_msg">تطبيق مشرف الجهاز</string>
     <string name="active_input_method_subtypes">طرق الإدخال النشطة</string>
     <string name="activity_not_found">لم يتم تثبيت التطبيق على هاتفك.</string>
@@ -426,7 +431,7 @@
     <string name="aod_clock_minimalism_1">الحجم الصغير 2</string>
     <string name="aod_clock_none">لا شيء</string>
     <string name="aod_clock_parsons">Insight</string>
-    <string name="aod_clock_select_style_text">تحديد نمط الساعة</string>
+    <string name="aod_clock_select_style_text">حدد نمط الساعة</string>
     <string name="aod_clock_text_clock">ساعة نصية</string>
     <string name="aod_horizon_light_SM8750">مؤشر الإشعارات</string>
     <string name="aod_horizon_light_effect_1">أزرق</string>
@@ -439,14 +444,14 @@
     <string name="aod_horizon_light_effect_8">برتقالي</string>
     <string name="aod_horizon_light_select">تحديد اللون</string>
     <string name="aod_horizon_light_snake_action">تشغيل</string>
-    <string name="aod_horizon_light_snake_tip">سيتم إتاحة تلك الميزة عند تشغيل \"الإشعارات الجديدة\"</string>
+    <string name="aod_horizon_light_snake_tip">ستتم إتاحة تلك الميزة عند تشغيل \"الإشعارات الجديدة\"</string>
     <string name="apn_apn">APN</string>
     <string name="apn_auth_type">نوع المصادقة</string>
     <string name="apn_auth_type_chap">‏بروتوكول CHAP</string>
     <string name="apn_auth_type_none">بدون</string>
     <string name="apn_auth_type_pap">بروتوكول مصادقة كلمات المرور</string>
     <string name="apn_auth_type_pap_chap">‏بروتوكول مصادقة كلمات المرور أو بروتوكول CHAP</string>
-    <string name="apn_edit">تعديل نقطة الدخول</string>
+    <string name="apn_edit">تعديل نقطة الوصول</string>
     <string name="apn_http_port">المنفذ</string>
     <string name="apn_http_proxy">الخادم الوكيل</string>
     <string name="apn_mcc">MCC</string>
@@ -508,7 +513,7 @@
     <string name="app_notification_led_enabled_title">إخطارات LED</string>
     <string name="app_notification_listing_summary_zero">مفعّلة لجميع التطبيقات</string>
     <string name="app_notification_no_ongoing_on_keyguard_summary">عدم إظهار الإخطارات المستمرة من هذا التطبيق على شاشة القفل مطلقًا</string>
-    <string name="app_notification_no_ongoing_on_keyguard_title">تعطيل الإخطار المستمر على شاشة القفل</string>
+    <string name="app_notification_no_ongoing_on_keyguard_title">تعطيل الإشعار المستمر على شاشة القفل</string>
     <string name="app_notification_override_dnd_summary">السماح لهذه الإشعارات بمقاطعتك عندما يكون وضع \"عدم الإزعاج\" مفعلاً</string>
     <string name="app_notification_override_dnd_title">إلغاء وضع \"عدم الإزعاج\"</string>
     <string name="app_notification_preferences">إعدادات التطبيقات</string>
@@ -1109,7 +1114,7 @@
     <string name="bugreport_in_power_summary">عرض زر في قائمة زر التشغيل لإعداد تقرير بالأخطاء</string>
     <string name="build_number">رقم الإصدار</string>
     <string name="built_in_app_updates_summary">اسمح لـ OnePlus بالتحقق من تحديثات التطبيقات المُدمجة وإرسالها إليك، مما يهدف إلى تحسين استقرار التطبيق</string>
-    <string name="built_in_app_updates_title">تحديثات التطبيق المدمج</string>
+    <string name="built_in_app_updates_title">تحديثات التطبيقات المدمجة</string>
     <string name="builtin_keyboard_settings_summary">إعدادات لوحة المفاتيح الفعلية</string>
     <string name="builtin_keyboard_settings_title">لوحة مفاتيح فعلية</string>
     <string name="button_confirm_convert_fbe">مسح وتحويل</string>
@@ -1189,7 +1194,7 @@
     <string name="carrier_enabled">‏تفعيل/إيقاف APN</string>
     <string name="carrier_enabled_summaryOff">‏تم إيقاف APN</string>
     <string name="carrier_enabled_summaryOn">‏تم تفعيل APN</string>
-    <string name="carrier_info_default_summary">غير معروف</string>
+    <string name="carrier_info_default_summary">مجهول</string>
     <string name="carrier_provisioning">معلومات توفير خدمة مشغل شبكة الجوال</string>
     <string name="carrier_settings_euicc">مشغّل شبكة جوّال</string>
     <string name="carrier_settings_title">إعدادات مشغّل شبكة الجوال</string>
@@ -1261,7 +1266,7 @@
     <string name="color_picker_default">الافتراضي</string>
     <string name="color_picker_led_color_message">اختر لون LED</string>
     <string name="color_picker_message_default">اختر اللون المفضل لك.</string>
-    <string name="color_picker_unknown_label">مجهول</string>
+    <string name="color_picker_unknown_label">غير معروف</string>
     <string name="color_purple">أرجواني</string>
     <string name="color_red">أحمر</string>
     <string name="color_temperature">ألوان هادئة</string>
@@ -1580,10 +1585,10 @@
     <string name="data_usage_metered_yes">تفرض تكلفة استخدام</string>
     <string name="data_usage_ota">تحديثات النظام</string>
     <string name="data_usage_other_apps">التطبيقات الأخرى المضمّنة في الاستخدام</string>
-    <string name="data_usage_package_set">دورة الفوترة</string>
+    <string name="data_usage_package_set">Billing Cycle</string>
     <string name="data_usage_pick_cycle_day">يوم من الشهر لإعادة تعيين دورة استخدام البيانات:</string>
     <string name="data_usage_rank_sim">استخدام البيانات الخلوية</string>
-    <string name="data_usage_rank_wifi">استخدام بيانات Wi‑Fi</string>
+    <string name="data_usage_rank_wifi">استخدام بيانات Wi-Fi</string>
     <string name="data_usage_rank_wlan">استخدام البيانات الخلوية</string>
     <string name="data_usage_received_sent">تم استلام %1$s، تم إرسال %2$s</string>
     <string name="data_usage_restrict_background">‏في حالة تقييد بيانات الجوّال في الخلفية، لن تعمل بعض التطبيقات والخدمات ما لم تكن متصلاً بشبكة Wi‑Fi.</string>
@@ -1732,7 +1737,7 @@
 لحلّ هذه المشكلة، يمكنك إيقاف خدمة الموقع لهذا التطبيق."</string>
     <string name="dialog_location_ok">إيقاف</string>
     <string name="dialog_location_title">هل تريد إيقاف تحديد الموقع؟</string>
-    <string name="dialog_mhs_error">يُرجى الانتظار أثناء التحقق..</string>
+    <string name="dialog_mhs_error">يُرجى الانتظار بينما يتم التحقق..</string>
     <string name="dialog_open_network_cancel">إلغاء</string>
     <string name="dialog_open_network_connect">اتصال</string>
     <string name="dialog_open_network_title">أنت متصل بشبكة Wi-Fi غير آمنة (مفتوحة)</string>
@@ -1827,7 +1832,7 @@
     <string name="dock_audio_summary_desk">إعدادات إرساء سطح المكتب المرفق</string>
     <string name="dock_audio_summary_none">لم يتم إرساء الهاتف</string>
     <string name="dock_audio_summary_unknown">إعدادات الإرساء المرفق</string>
-    <string name="dock_not_found_text">يلزمك إرساء الهاتف قبل تهيئة إعدادات الإرساء الصوتية.</string>
+    <string name="dock_not_found_text">يلزمك إرساء الهاتف قبل ضبط إعدادات الإرساء الصوتية.</string>
     <string name="dock_not_found_title">لم يتم العثور على الإرساء</string>
     <string name="dock_settings">إرساء</string>
     <string name="dock_settings_summary">الإعدادات الصوتية للإرساء المرفق</string>
@@ -2270,14 +2275,14 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="homepage_all_settings">جميع الإعدادات</string>
     <string name="homepage_condition_footer_content_description">تصغير</string>
     <string name="homepage_personal_settings">اقتراحات</string>
-    <string name="hotspot_tip_message" formatted="false">"تقوم نقطة اتصال الجوال بمشاركة بيانات هاتفك المحمول مع الأجهزة الأخرى التي تدعم Wi-Fi.: \u0009 
+    <string name="hotspot_tip_message" formatted="false">"تقوم نقطة اتصال الجوال بمشاركة بيانات هاتفك المحمول مع الأجهزة الأخرى التي تدعم Wi-Fi: للاتصال بنقطة اتصال الجوال: \u0009 
  1: قم بتشغيل Wi-Fi على الجهاز الآخر.
  2: حدد %s في قائمة شبكات Wi-Fi المتاحة. 
  3: في حالة طلب كلمة المرور، أدخل %s لتوفير طاقة البطارية، حافظ على توصيل هاتفك عند استخدام نقطة اتصال الجوال. "</string>
     <string name="hotspot_tip_title">نقطة اتصال الجوال</string>
     <string name="hwui_force_dark_summary">لإلغاء ميزة فرض تعتيم الشاشة بحيث يتم تفعيلها دائمًا</string>
     <string name="hwui_force_dark_title">إلغاء ميزة فرض تعتيم الشاشة</string>
-    <string name="icon_attributions">حزم الرموز</string>
+    <string name="icon_attributions">حزم الأيقونات</string>
     <string name="ignore_optimizations_off">تحسين</string>
     <string name="ignore_optimizations_off_desc">مُوصى بها لزيادة عمر البطارية</string>
     <string name="ignore_optimizations_on">عدم تحسين</string>
@@ -2438,6 +2443,7 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="keywords_lock_screen_notif">إشعار شاشة القفل، الإشعارات</string>
     <string name="keywords_lockscreen">مرر لإلغاء التأمين، كلمة مرور، نقش، رقم تعريف شخصي</string>
     <string name="keywords_lockscreen_bypass">شاشة القفل، شاشة القفل، التخطي، التجاوز</string>
+    <string name="keywords_media_controls">الوسائط</string>
     <string name="keywords_model_and_hardware">رقم تسلسلي، إصدار الجهاز</string>
     <string name="keywords_more_default_sms_app">الرسالة النصية، رسائل نصية، رسائل، مراسلة، الافتراضي</string>
     <string name="keywords_more_mobile_networks">‏خلوي، جوّال، مشغل شبكة جوال، لاسلكي، بيانات، جيل رابع، جيل ثالث، جيل ثاني، lte</string>
@@ -2547,7 +2553,7 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="led_settings_battery_low_summary">عندما تكون شحنة البطارية أقل من 15%</string>
     <string name="led_settings_battery_low_title">البطارية منخفضة</string>
     <string name="led_settings_global_notification_summary">عندما يكون لون تعريف LED غير محدد بواسطة التطبيق</string>
-    <string name="led_settings_global_notification_title">إخطار افتراضي</string>
+    <string name="led_settings_global_notification_title">إشعار افتراضي</string>
     <string name="led_settings_per_app_notification_title">حسب إخطار التطبيق</string>
     <string name="led_settings_summary">تخصيص لون LED</string>
     <string name="led_settings_title">إخطارات LED</string>
@@ -2566,6 +2572,7 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="load_networks_progress">جارٍ البحث…</string>
     <string name="loading_injected_setting_summary">جارٍ التحميل…</string>
     <string name="loading_notification_apps">جارٍ تحميل التطبيقات...</string>
+    <string name="loading_text">جارِ التحميل...</string>
     <string name="local_backup_password_summary_change">انقر لتغيير كلمة مرور النسخ الاحتياطية الكاملة لسطح المكتب أو إزالتها.</string>
     <string name="local_backup_password_summary_none">النُسخ الاحتياطية الكاملة لسطح المكتب غير محمية في الوقت الحالي</string>
     <string name="local_backup_password_title">كلمة مرور احتياطية للكمبيوتر</string>
@@ -2841,6 +2848,12 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="master_clear_title">محو جميع البيانات (إعادة الضبط على الإعدادات الأصلية)</string>
     <string name="maximum_memory_use">الاستخدام الأقصى للذاكرة</string>
     <string name="media_category">الوسائط</string>
+    <string name="media_controls_hide_player">إخفاء المشغِّل</string>
+    <string name="media_controls_no_players">ما مِن مشغِّلات متاحة</string>
+    <string name="media_controls_resume_description">يسمح لك المشغِّل باستئناف جلسة من اللوحة الموسَّعة \"الإعدادات السريعة\".</string>
+    <string name="media_controls_show_player">إظهار المشغِّل</string>
+    <string name="media_controls_summary">إخفاء المشغِّل عندما تنتهي جلسة الوسائط</string>
+    <string name="media_controls_title">الوسائط</string>
     <string name="media_out_summary_ongoing_call_state">غير متاح أثناء المكالمات</string>
     <string name="media_output_default_summary">هذا الجهاز</string>
     <string name="media_output_disconnected_status">%1$s (غير متّصل)</string>
@@ -2939,7 +2952,7 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="mobile_hotspot_airplane_off_error">لتشغيل نقطة الاتصال، يُرجى إيقاف تشغيل وضع الطائرة</string>
     <string name="mobile_hotspot_authoration_error">"لاستخدام نقطة اتصال الجوال، سيتعين عليك الاشتراك في خدمات نقطة الاتصال.
 
-للاشتراك في نقطة الاتصال، تفضل بزيارة My Verizon أو اتصل بخدمة العملاء على (800) 922–0204."</string>
+للاشتراك في نقطة الاتصال، تفضل بزيارة verizon أو اتصل بخدمة العملاء على (800) 922–0204."</string>
     <string name="mobile_hotspot_data_off_error">لتشغيل نقطة الاتصال، يُرجى تشغيل بيانات الجوال</string>
     <string name="mobile_insert_sim_card">‏يُرجى إدخال شريحة SIM وإعادة التشغيل</string>
     <string name="mobile_network_active_esim">‏مفعّلة / شريحة SIM التي تم تنزيلها</string>
@@ -3146,7 +3159,7 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="not_optimized_apps">تطبيقات غير محسّنة</string>
     <string name="not_set">لم يتمّ تحديد قيمة.</string>
     <string name="notification_access_detail_switch">السماح بالوصول إلى الإشعارات</string>
-    <string name="notification_alert_title">تلقائي</string>
+    <string name="notification_alert_title">تلقائية</string>
     <string name="notification_app_settings_button">إعدادات الإشعارات</string>
     <string name="notification_app_switch_label">جميع إشعارات %1$s</string>
     <string name="notification_assistant_security_warning_summary">"سيكون بإمكان \"%1$s\" قراءة جميع الإشعارات، بما في ذلك المعلومات الشخصية، مثلاً أسماء جهات الاتصال ونصوص الرسائل التي تتلقّاها. وسيتمكّن أيضًا من إغلاق الإشعارات أو اتخاذ إجراءات من خلال الأزرار في الإشعارات بما في ذلك الردّ على المكالمات الهاتفية. 
@@ -3168,12 +3181,12 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="notification_channel_title">فئة الإشعارات</string>
     <string name="notification_channels">الفئات</string>
     <string name="notification_channels_other">غير ذلك</string>
-    <string name="notification_content_block_summary">‏عدم عرض الإشعارات في مركز الإشعارات أو على الأجهزة المرتبطة بحساب Google</string>
+    <string name="notification_content_block_summary">عدم عرض الإشعارات في مركز الإشعارات أو على الأجهزة الملحقة</string>
     <string name="notification_content_block_title">عرض الإشعارات</string>
     <string name="notification_conversation_add_to_home">إضافة إلى الشاشة الرئيسية</string>
     <string name="notification_conversation_important">الأولوية</string>
     <string name="notification_conversation_summary_low">بدون صوت أو اهتزاز وتظهر في موضع أسفل في قسم المحادثات</string>
-    <string name="notification_for_work_life">إشعارات وضع العمل والحياة</string>
+    <string name="notification_for_work_life">إشعارات وضع work-life balance</string>
     <string name="notification_for_work_life_disabled">انقر لتمكين هذه الميزة.</string>
     <string name="notification_group_title">مجموعة فئات الإشعارات</string>
     <string name="notification_history">سجلّ الإشعارات</string>
@@ -3239,6 +3252,7 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="notification_priority_title">الأولوية</string>
     <string name="notification_pulse_title">وميض الضوء</string>
     <string name="notification_ringtone_title">الصوت التلقائي للإشعارات</string>
+    <string name="notification_screen_summary">سجلّ الإشعارات، فقاعات المحادثات، الإشعارات المرسَلة مؤخرًا</string>
     <string name="notification_settings_work_profile">لا تتوفر إمكانية الدخول إلى الإشعارات للتطبيقات في الملف الشخصي للعمل.</string>
     <string name="notification_show_lights_title">وميض الضوء</string>
     <string name="notification_silence_title">صامت</string>
@@ -3310,12 +3324,12 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_app_display_compatibility">وضع التوافق</string>
     <string name="oneplus_app_display_fullscreen">وضع الشاشة الكاملة</string>
     <string name="oneplus_app_display_fullscreen_summary">إذا كان محتوى التطبيق مغطى بمنطقة الحز، فيُرجى التبديل إلى الوضع الافتراضي</string>
-    <string name="oneplus_app_display_fullscreen_title">عرض التطبيق في الشاشة الكاملة</string>
+    <string name="oneplus_app_display_fullscreen_title">عرض التطبيقات في وضع ملء الشاشة</string>
     <string name="oneplus_app_list">قائمة التطبيقات</string>
     <string name="oneplus_app_list_empty">قائمة فارغة</string>
     <string name="oneplus_app_locker_add_apps">إضافة تطبيقات</string>
     <string name="oneplus_app_locker_catagory">الخصوصية</string>
-    <string name="oneplus_app_locker_open_apps">قائمة خزانة التطبيق</string>
+    <string name="oneplus_app_locker_open_apps">قائمة وحدة قفل التطبيق</string>
     <string name="oneplus_app_locker_summary">تحديد تطبيقات للتشفير</string>
     <string name="oneplus_app_locker_switch">إخفاء محتوى الإشعار</string>
     <string name="oneplus_app_locker_switch_summary">سيتم إخفاء محتوى الإشعار للتطبيقات التي تم تمكين وحدة قفل التطبيق لها</string>
@@ -3327,14 +3341,15 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_app_uninstall_remark">الرجاء تثبيت تطبيقات الدفع السابقة لاستخدام \"الدفع السريع\"</string>
     <string name="oneplus_app_wechat">WeChat</string>
     <string name="oneplus_applications_settings_summary">إشعارات التطبيق، التطبيقات الموازية، والأذونات</string>
-    <string name="oneplus_applock_at_least_four_points">ارسم لتضمين 4 نقاط على الأقل</string>
+    <string name="oneplus_applock_at_least_four_points">ارسم لتضمين 4 على الأقل</string>
     <string name="oneplus_applock_lockpassword_confirm_your_pin_header">أدخل رقم PIN</string>
     <string name="oneplus_applock_need_to_unlock_wrong">رقم PIN خاطئ</string>
     <string name="oneplus_applock_pattern_header">ارسم النمط الخاص بك</string>
     <string name="oneplus_applock_wrong_pattern_header">نمط خاطئ</string>
-    <string name="oneplus_apps_notifications">إشعارات &amp; التطبيقات</string>
+    <string name="oneplus_apps_notifications">التطبيقات والإشعارات</string>
     <string name="oneplus_apps_title">التطبيقات</string>
     <string name="oneplus_aptx_hd_support">دعم aptX / aptX HD</string>
+    <string name="oneplus_at_a_glance">ظرة سريعة</string>
     <string name="oneplus_authentication_information">معلومات المصادقة</string>
     <string name="oneplus_auto_activate">تشغيل تلقائياً</string>
     <string name="oneplus_auto_answer_via_bluetooth_summary">أثناء استلام مكالمة واردة، سيتم تلقائيًا الرد عليها بعد الاتصال بجهاز بلوتوث</string>
@@ -3347,16 +3362,16 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_auto_open_specified_app">فتح التطبيق المحدد تلقائيًا</string>
     <string name="oneplus_auto_play">تشغيل تلقائي</string>
     <string name="oneplus_auto_play_summary">استئناف تشغيل الموسيقى تلقائيًا عند توصيل السماعات</string>
-    <string name="oneplus_auto_switch_mobile_data">اتصال الشبكة الذكي</string>
+    <string name="oneplus_auto_switch_mobile_data">استخدام البيانات</string>
     <string name="oneplus_auto_switch_mobile_data_summary">استخدم كلا من Wi‑Fi وبيانات الجوال عندما يكون الاتصال ضعيفًا لتحسين الاستقرار</string>
     <string name="oneplus_auto_turn_on_apps">تشغيل هذه التطبيقات تلقائيًا</string>
-    <string name="oneplus_auto_turn_on_car_charger_info_o2">من خلال إعداد العناصر أعلاه، يمكنك تنشيط \"عدم الإزعاج\" وتشغيل التطبيق المحدد في كل مرة يتم فيها توصيل شاحن السيارة</string>
+    <string name="oneplus_auto_turn_on_car_charger_info_o2">من خلال إعداد العناصر أعلاه، يمكنك تنشيط وضع \"عدم الإزعاج\" وتشغيل التطبيق المحدد في كل مرة يتم فيها توصيل شاحن السيارة</string>
     <string name="oneplus_auto_turn_on_dnd">تشغيل وضع عدم الإزعاج تلقائيًا</string>
     <string name="oneplus_available_keyboard_category">لوحة مفاتيح متاحة</string>
     <string name="oneplus_available_keyboard_description">سيتم إضافة لوحات المفاتيح المثبتة والتي تم تمكيها هنا إلى قائمة \"لوحات المفاتيح المتاحة\"</string>
     <string name="oneplus_back_home">الصفحة الرئيسية، رجوع</string>
-    <string name="oneplus_back_home_o2">رجوع، الصفحة الرئيسية</string>
-    <string name="oneplus_back_home_summary">مرر لأعلى على زر الصفحة الرئيسية</string>
+    <string name="oneplus_back_home_o2">Back, Home</string>
+    <string name="oneplus_back_home_summary">Swipe up on Home button</string>
     <string name="oneplus_back_topic_theme_summary">تبديل ثمة النظام عند فتح الموضوع مرة أخرى تلقائيًا</string>
     <string name="oneplus_back_topic_theme_title">ثمة الغلاف الخلفي</string>
     <string name="oneplus_battery_menu_stats_total">عرض الاستخدام التفصيلي</string>
@@ -3373,7 +3388,7 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_block_all_notifications_summary">حظر كافة الإخطارات من التطبيق</string>
     <string name="oneplus_block_notifications">حظر الإخطارات</string>
     <string name="oneplus_block_notifications_summary">يستثنى من ذلك المكالمات والإنذارات</string>
-    <string name="oneplus_block_peek_notifications">حظر الإخطارات الخاطفة</string>
+    <string name="oneplus_block_peek_notifications">حظر الإشعارات الخاطفة</string>
     <string name="oneplus_bluetooth_aptX">aptX</string>
     <string name="oneplus_bluetooth_aptx_hd">aptX HD</string>
     <string name="oneplus_bluetooth_audio_codec">برنامج ترميز صوت البلوتوث</string>
@@ -3413,8 +3428,9 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_condition_bg_data_summary">البيانات في الخلفية متاحة فقط عبر Wi-Fi. قد يكون لذلك تأثيرًا على بعض التطبيقات أو الخدمات عندما تكون Wi-Fi غير متاحة</string>
     <string name="oneplus_condition_bg_data_title">ترشيد البيانات قيد التشغيل</string>
     <string name="oneplus_condition_hotspot_turn_off">إيقاف تشغيل نقطة الاتصال</string>
+    <string name="oneplus_condition_night_display_title">حماية الرؤية قيد التشغيل</string>
     <string name="oneplus_condition_night_mode_title">الوضع الليلي قيد التشغيل</string>
-    <string name="oneplus_condition_night_mode_turn_off">إيقاف تشغيل الوضع الليلي</string>
+    <string name="oneplus_condition_night_mode_turn_off">قم بإيقاف تشغيل وضع حماية الرؤية</string>
     <string name="oneplus_condition_ota_summary">تم اكتشاف إصدار جديد لإجراء تحديث</string>
     <string name="oneplus_connected_device_count">يوجد %1$s جهاز متصل</string>
     <string name="oneplus_connected_device_management_title">مدير الجهاز المتصل</string>
@@ -3450,10 +3466,10 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_device_warranty_expried_date">تاريخ انتهاء صلاحية الضمان</string>
     <string name="oneplus_dirac_audio_tuner">موالف الصوت Dirac</string>
     <string name="oneplus_direct_boot_inputmethod_unaware_dialog_message">إذا قمت بإعادة تشغيل هاتفك وتعيين قفل الشاشة، فلن تبدأ لوحة المفاتيح حتى تقوم بإلغاء قفل هاتفك</string>
-    <string name="oneplus_disable_aosp_face_lock_message">سيؤدي تمكين إلغاء القفل عن طريق الوجه في OnePlus إلى تعطيل ميزة الوجه الموثوق للقفل الذكي. هل ترغب في الاستمرار؟</string>
+    <string name="oneplus_disable_aosp_face_lock_message">تمكين إلغاء القفل في OnePlus عن طريق الوجه سيؤدي إلى تعطيل ميزة الوجه الموثوق به للقفل الذكي. هل تريد الاستمرار؟</string>
     <string name="oneplus_disconnected">قطع الاتصال</string>
     <string name="oneplus_display_dashboard_no_theme_summary">شريط الحالة، عرض المحيط، الخلفيات</string>
-    <string name="oneplus_display_dashboard_no_theme_summary_801">Status bar, ambient display, Vision comfort, reading mode</string>
+    <string name="oneplus_display_dashboard_no_theme_summary_801">شريط الحالة، الشاشة المحيطة، راحة الرؤية، وضع القراءة</string>
     <string name="oneplus_display_dashboard_summary">شريط الحالة، الشاشة المحيطة، الخلفية، الموضوع</string>
     <string name="oneplus_display_dashboard_summary_801">شريط الحالة، الشاشة المحيطة، الخلفية، الموضوع</string>
     <string name="oneplus_display_screen_timeout">وضع السكون</string>
@@ -3464,10 +3480,10 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_displaysettings_summary">إضفاء طابع شخصي، الشاشة المكتنفة</string>
     <string name="oneplus_dnd_condition_turn_off">إيقاف تشغيل وضع عدم الإزعاج</string>
     <string name="oneplus_do_not_disturb">عدم الإزعاج</string>
-    <string name="oneplus_do_not_disturb_answer_call_by_speaker_summary">توجيه المكالمات الواردة إلى السماعة عند تشغيل وضع الألعاب</string>
+    <string name="oneplus_do_not_disturb_answer_call_by_speaker_summary">توجيه المكالمات الواردة إلى مكبر الصوت عند تشغيل وضع الألعاب</string>
     <string name="oneplus_do_not_disturb_answer_call_by_speaker_title">الرد على المكالمات من خلال السماعة</string>
     <string name="oneplus_do_not_disturb_settings">الإعدادات</string>
-    <string name="oneplus_donot_silence_or_block">سماح بالإخطارات</string>
+    <string name="oneplus_donot_silence_or_block">السماح بالإشعارات</string>
     <string name="oneplus_donot_silence_or_block_summary">السماح بجميع أنواع الإخطارات</string>
     <string name="oneplus_double_tap_power_gesture">انقر مرتين على زر التشغيل</string>
     <string name="oneplus_double_tap_power_gesture_app">تحديد الوظيفة</string>
@@ -3476,8 +3492,8 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_double_tap_power_none">لا شيء</string>
     <string name="oneplus_doze_summary_801">اعرض الساعة وغيرها من المعلومات على شاشة الاستعداد</string>
     <string name="oneplus_doze_summary_new">إظهار الوقت، والتاريخ، والإشعارات على الشاشة</string>
-    <string name="oneplus_doze_title">الشاشة المكتنفة</string>
-    <string name="oneplus_doze_title_801">الشاشة المكتنفة</string>
+    <string name="oneplus_doze_title">الشاشة المحيطة</string>
+    <string name="oneplus_doze_title_801">الشاشة المحيطة</string>
     <string name="oneplus_draw_gesture_start_none">لا شيء</string>
     <string name="oneplus_draw_m_start_app">ارسم حرف M</string>
     <string name="oneplus_draw_o_start_app">ارسم حرف O</string>
@@ -3500,13 +3516,13 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_e_sports_mode_summary">تخلص من الانقاطاعات وقم بتحويل هاتفك إلى جهاز ألعاب مخصص</string>
     <string name="oneplus_e_sports_mode_title">وضع Esports</string>
     <string name="oneplus_earphone">سماعة</string>
-    <string name="oneplus_earphone_mode">وضع السماعة</string>
+    <string name="oneplus_earphone_mode">وضع سماعة الأذن</string>
     <string name="oneplus_emergency_rescue_settings">الإنقاذ في حالات الطوارئ</string>
     <string name="oneplus_emergency_rescue_settings_summary">الاتصال التلقائي للحصول على المساعدة عن طريق الضغط بسرعة على زر الطاقة</string>
-    <string name="oneplus_emergency_tap_power_gesture_tips">متاح بعد تعديل إعدادات مفتاح الطاقة للإنقاذ في حالة الطوارئ</string>
-    <string name="oneplus_enroll_fingerprint_tips_summary">"1.الرجاء إدخال بصمة الإصبع كلما استبدلت فيلم الحماية لضمان إتاحة بصمة الإصبع
+    <string name="oneplus_emergency_tap_power_gesture_tips">متاح بعد تعديل إعدادات زر الطاقة للإنقاذ في حالة الطوارئ</string>
+    <string name="oneplus_enroll_fingerprint_tips_summary">"1. يُرجى إعادة إدخال بصمة إصبعك بعد كل استبدال للاصقة الواقية لضمان توفر بصمة الإصبع
 
-2. الرجاء إدخال معلومات بصمة إصبع واحدة في كل عملية إعداد"</string>
+2. في عملية إعداد واحدة، يُرجى إدخال معلومات بصمة إصبع واحد فقط"</string>
     <string name="oneplus_enroll_fingerprint_tips_title">طلب إعداد بصمة الإصبع</string>
     <string name="oneplus_enter_your_fingerprint">· تسجيل بصمة إصبعك</string>
     <string name="oneplus_erase_system_data">حذف بيانات النظام</string>
@@ -3547,17 +3563,17 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_finger_input_fail_tips">فشل الإدخال، الرجاء ضبط الوضع وإعادة المحاولة</string>
     <string name="oneplus_finger_print_anim_save">حفظ</string>
     <string name="oneplus_fingerprint">بصمة الإصبع</string>
-    <string name="oneplus_fingerprint_acquired_imager_dirty">The fingerprint identification area is dirty. Please wipe it clean and try again.</string>
-    <string name="oneplus_fingerprint_acquired_partial">Partial fingerprint detected. Please completely cover the fingerprint identification area.</string>
-    <string name="oneplus_fingerprint_acquired_too_fast">Too fast to process your fingerprint. Please stay for a while when pressing.</string>
+    <string name="oneplus_fingerprint_acquired_imager_dirty">منطقة التعرف على بصمات الأصابع متسخة. يُرجى مسحها لتنظيفها والمحاولة مرة أخرى.</string>
+    <string name="oneplus_fingerprint_acquired_partial">تم اكتشاف بصمة إصبع جزئية. يُرجى تغطية منطقة التعرف على بصمة الإصبع بالكامل.</string>
+    <string name="oneplus_fingerprint_acquired_too_fast">سريع جدًا في معالجة بصمة إصبعك. يرجى البقاء لفترة من الوقت عند الضغط.</string>
     <string name="oneplus_fingerprint_acquired_too_similar">تم اكتشاف بيانات بصمات مماثلة. يُرجى تحريك إصبعك قليلاً لإدخال البيانات من مناطق مختلفة من بصمة إصبعك.</string>
     <string name="oneplus_fingerprint_animation_effect_title">تأثير حركة بصمة الإصبع</string>
     <string name="oneplus_fingerprint_delete_confirm_message">هل تريد حذفها؟</string>
     <string name="oneplus_fingerprint_detail">التفاصيل</string>
     <string name="oneplus_fingerprint_enrol_completed">تم حفظ بصمة الإصبع</string>
-    <string name="oneplus_fingerprint_enroll_summary">اضغط واجعل إصبعك يغطي منطقة التعرف على البصمة قدر الإمكان، ثم ارفعه عند الشعور بإهتزاز</string>
-    <string name="oneplus_fingerprint_findsendor_summary">When the fingerprint pattern appears at the bottom of the screen, simply press with your finger on the fingerprint identification area to use the fingerprint function.</string>
-    <string name="oneplus_fingerprint_findsendor_tilte">How to use fingerprint</string>
+    <string name="oneplus_fingerprint_enroll_summary">اضغط على منطقة التعرف على بصمة الإصبع واجعل إصبعك يغطيها قدر الإمكان، ثم ارفعه بعد أن تشعر بالاهتزاز</string>
+    <string name="oneplus_fingerprint_findsendor_summary">عندما يظهر نمط بصمة الإصبع في أسفل الشاشة، فما عليك سوى الضغط بإصبعك على منطقة التعرف على بصمة الإصبع لاستخدام وظيفة بصمة الإصبع.</string>
+    <string name="oneplus_fingerprint_findsendor_tilte">كيفية استخدام بصمة الإصبع</string>
     <string name="oneplus_fingerprint_functional_declaration">تعريف وظيفة بصمة الإصبع</string>
     <string name="oneplus_fingerprint_gesture_camera_summary">من شاشة معين المنظر، اضغط مطولًا على مستشعر بصمة الإصبع لالتقاط صورة</string>
     <string name="oneplus_fingerprint_gesture_camera_title">الضغط مطولا لالتقاط صورة</string>
@@ -3597,20 +3613,20 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_front_camera_display_choose_title">اختر إما أن تقوم بإخفاء الكاميرا الأمامية</string>
     <string name="oneplus_front_camera_display_title">منطقة عرض الكاميرا الأمامية</string>
     <string name="oneplus_fullscreen_back_guide_summary">اسحب الحافة اليسرى أو اليمنى من الشاشة للداخل</string>
-    <string name="oneplus_fullscreen_back_guide_summary_deprecated">مرر لأعلى من الجانب الأيمن أو الأيسر للشاشة</string>
+    <string name="oneplus_fullscreen_back_guide_summary_deprecated">اسحب لأعلى من الجانب الأيسر أو الأيمن من أسفل الشاشة</string>
     <string name="oneplus_fullscreen_back_guide_title">رجوع</string>
     <string name="oneplus_fullscreen_disable_this_feature">لا يمكن استخدام هذه الميزة عندما تكون إيماءات التنقل ممكّنة.</string>
     <string name="oneplus_fullscreen_gesture_guide_back">"هيا نجرب استخدام الإيماءات التي تحل محل زر الخلف.
 امسح لأعلى من الجانب الأيسر إلى الأيمن أسفل الشاشة."</string>
     <string name="oneplus_fullscreen_gesture_guide_done">"أنت الآن تعرف إيماءات التنقل.
 يمكنك إيقاف تشغيل هذه الإيماءات من خلال إعادة تمكين شريط التنقل في الإعدادات."</string>
-    <string name="oneplus_fullscreen_gesture_guide_gotit">حسنًا</string>
+    <string name="oneplus_fullscreen_gesture_guide_gotit">فهمت ذلك</string>
     <string name="oneplus_fullscreen_gesture_guide_home">"هيا نجرب إيماءات التنقل.
 للذهاب إلى الشاشة الرئيسية في أي وقت، مرر لأعلى من الحافة الوسطى السفلية للشاشة."</string>
     <string name="oneplus_fullscreen_gesture_guide_multitask">للوصول إلى التطبيقات الأخيرة، مرر لأعلى من أسفل الشاشة وتوقف مؤقتًا.</string>
     <string name="oneplus_fullscreen_gesture_guide_will_enable">سيتم تمكين إيماءات التنقل</string>
     <string name="oneplus_fullscreen_home_guide_summary">اسحب لأعلى من الحافة السفلية للشاشة</string>
-    <string name="oneplus_fullscreen_home_guide_summary_deprecated">مرر لأعلى من الحافة الوسطى السفلية للشاشة</string>
+    <string name="oneplus_fullscreen_home_guide_summary_deprecated">اسحب لأعلى من الحافة الوسطى السفلية للشاشة</string>
     <string name="oneplus_fullscreen_home_guide_title">الصفحة الرئيسية</string>
     <string name="oneplus_fullscreen_landscape_guide_summary">ما يزال من الممكن إيماءات التنقل من الحافة السفلية للشاشة، يُرجى سحب الحافة اليسرى أو اليمنى للعودة</string>
     <string name="oneplus_fullscreen_landscape_guide_summary_deprecated">ما تزال إيماءات التنقل من أسفل الجهاز، مثل الطولي</string>
@@ -3623,7 +3639,7 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_fullscreen_previous_app_no_bar_guide_summary">اسحب لأعلى من الحافة السفلية للشاشة ثم ممرها إلى اليسار أو اليمين</string>
     <string name="oneplus_fullscreen_previous_app_no_bar_guide_title">التبديل بين التطبيقات الحديثة</string>
     <string name="oneplus_fullscreen_recent_guide_summary">اسحب الحافة السفلية من الشاشة لأعلى وتوقف مؤقتًا</string>
-    <string name="oneplus_fullscreen_recent_guide_summary_deprecated">مرر لأعلى من الحافة الوسطى السفلية للشاشة وأوقف مؤقتًا</string>
+    <string name="oneplus_fullscreen_recent_guide_summary_deprecated">اسحب لأعلى من الحافة الوسطى السفلية للشاشة وتوقف مؤقتًا</string>
     <string name="oneplus_fullscreen_recent_guide_title">التطبيقات الأخيرة</string>
     <string name="oneplus_functional_terms">البنود والأحكام</string>
     <string name="oneplus_game_haptic_feedback_summary">أضف تأثيرًا لمسيًا لجعل تجربة الألعاب أكثر حيوية. لم يتم دعم سماعات الأذن التي تعمل بتقنية البلوتوث بعد.</string>
@@ -3642,7 +3658,7 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_gaming_mode_game_battery_saver_light_summary">ستكون نسبة وضوح اللعبة محدودة</string>
     <string name="oneplus_gaming_mode_game_battery_saver_summary">موصى به للألعاب التي ليس من الضروري أن تكون سريعة للغاية، مثل الألعاب السهلة</string>
     <string name="oneplus_gaming_mode_network_acceleration">تعزيز الشبكة</string>
-    <string name="oneplus_gaming_mode_network_acceleration_summary">تقييم استخدام التطبيقات الأخرى للشبكة عند تشغيل وضع الألعاب</string>
+    <string name="oneplus_gaming_mode_network_acceleration_summary">تحديد استخدام التطبيقات الأخرى للشبكة عند تشغيل وضع الألعاب</string>
     <string name="oneplus_gaming_mode_summary">سيتم تشغيل وضع الألعاب تلقائيًا عند فتح هذه التطبيقات ويتوقف تشغيله عند إغلاقها.</string>
     <string name="oneplus_gaming_toast_title">يمكن إيقاف تشغيل خيار واحد فقط.</string>
     <string name="oneplus_gesture_hidden_bar_summary">مرر لليسار أو لليمين بعد السحب لأعلى للتبديل بين التطبيقات</string>
@@ -3650,9 +3666,9 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_gesture_navigation_bar_summary">استخدام الإيماءات لاستبدال شريط التنقل</string>
     <string name="oneplus_gesture_navigation_bar_summary_for_bottom">اسحب لأعلى من الحافة السفلية للعودة</string>
     <string name="oneplus_gesture_navigation_bar_summary_for_deprecated">اسحب للداخل من الحافة اليسرى أو اليمنى للعودة</string>
-    <string name="oneplus_gesture_navigation_bar_title">إيماءات التنقل</string>
-    <string name="oneplus_gesture_navigation_bar_title_for_bottom">إيماءات التنقل (بالأسفل)</string>
-    <string name="oneplus_gesture_navigation_bar_title_for_deprecated">إيماءات التنقل (يسارًا ويمينًا)</string>
+    <string name="oneplus_gesture_navigation_bar_title">إيماءات التوجيه</string>
+    <string name="oneplus_gesture_navigation_bar_title_for_bottom">إيماءات التوجيه (بالأسفل)</string>
+    <string name="oneplus_gesture_navigation_bar_title_for_deprecated">إيماءات التوجيه (يسارًا ويمينًا)</string>
     <string name="oneplus_gesture_of_answer_call_info">عندما يكون هناك مكالمة واردة، يمكنك الرد عليها برفع الهاتف على الأذن.</string>
     <string name="oneplus_gesture_of_answer_call_summary">الرد على المكالمات الواردة تلقائيًا برفع الهاتف على الأذن</string>
     <string name="oneplus_gesture_of_answer_call_title">الرد على المكالمات بإيماءة</string>
@@ -3682,7 +3698,7 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_h2_contributors">مساهمو HydrogenOS</string>
     <string name="oneplus_hand_up_proximity_summary">إيقاظ الشاشة عند التقاط الهاتف</string>
     <string name="oneplus_hand_up_proximity_title">شاشة الرفع</string>
-    <string name="oneplus_hand_up_to_show">التقط هاتفك للإظهار</string>
+    <string name="oneplus_hand_up_to_show">التقط هاتفك للعرض</string>
     <string name="oneplus_haptic_feedback_no_app">لا توجد ألعاب مدعومة مثبتة</string>
     <string name="oneplus_haptic_feedback_no_app_tip">يمكنك تثبيت PUBG Mobile وAsphalt 9</string>
     <string name="oneplus_haptic_feedback_summary">تقديم إفادة لمسية أفضل للألعاب المدعومة</string>
@@ -3699,9 +3715,9 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_hide_navkeys_summary">إضافة زر لإخفاء شريط التنقل أو إظهاره</string>
     <string name="oneplus_hide_notch_display_summary">لا يمكن للتطبيقات استخدام منطقة الحز</string>
     <string name="oneplus_hide_notch_display_title">إخفاء منطقة الحز</string>
-    <string name="oneplus_how_to_use_fingerprint_summary">"اضغط على منطقة التعرف على بصمة الإصبع عند ظهور النمط في أسفل الشاشة لاستخدام بصمة الإصبع في: إيقاظ الهاتف وفتحه، وتصديق عمليات الشراء، وتسجيل الدخول للتطبيقات. 
+    <string name="oneplus_how_to_use_fingerprint_summary">"عند ظهور نمط بصمة الإصبع في الجزء السفلي من الشاشة، ما عليك سوى الضغط بإصبعك على منطقة التعرف على بصمة الإصبع لاستخدام وظيفة بصمة الإصبع: إيقاظ الهاتف وإلغاء قفله، أو السماح بعمليات الشراء، أو تسجيل الدخول إلى التطبيقات. 
 
-ملاحظة: قد تكون بصمة الإصبع أقل أماناً من نمط قوي أو رمز PIN"</string>
+ملاحظة: قد تكون بصمة إصبعك أقل أمانًا من النمط القوي أو رقم الدخول"</string>
     <string name="oneplus_how_to_use_fingerprint_summary_no_note">عندما يظهر نمط بصمة الإصبع في أسفل الشاشة، فما عليك سوى الضغط بإصبعك على منطقة التعرف على بصمة الإصبع لاستخدام وظيفة بصمة الإصبع: قم بإبقاظ هاتفك وإلغاء قفله أو إصدار أذونات عمليات الشراء أو تسجيل الدخول إلى التطبيقات.</string>
     <string name="oneplus_hydrogen_version">إصدار H₂OS</string>
     <string name="oneplus_ime_security_warning">%1$s قد يتمكن من جمع كل النصوص التي تكتبها، بما في ذلك البيانات الشخصية مثل كلمات المرور وأرقام بطاقة الإئتمان</string>
@@ -3713,7 +3729,7 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_instrucitons">التعليمات</string>
     <string name="oneplus_intelligently_select_best_wifi">تحديد أفضل Wi‑Fi بذكاء</string>
     <string name="oneplus_intelligently_select_best_wifi_summary">تحديد أفضل Wi‑Fi والاتصال بها بذكاء من خلال الكشف عن اتصال شبكات Wi‑Fi وتحليله</string>
-    <string name="oneplus_intensely">قوي</string>
+    <string name="oneplus_intensely">Strong</string>
     <string name="oneplus_is_turn_on_feature">هل أنت متأكد من رغبتك في تشغيل هذه الميزة؟</string>
     <string name="oneplus_is_turn_on_feature_summary">"عند تشغيله، قد تحدث المواقف التالية بين الحين والآخر:
 1.تكون بعض مناطق عرض الشاشة غير طبيعية
@@ -3737,12 +3753,12 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_levels">المستويات</string>
     <string name="oneplus_lift_up_display">تشغيل الشاشة دائمًا أو رفع الشاشة</string>
     <string name="oneplus_light">خفيف</string>
-    <string name="oneplus_local_ringtone">نغمة رنين من ذاكرة التخزين الداخلية</string>
+    <string name="oneplus_local_ringtone">نغمة رنين من وحدة تخزين داخلية</string>
     <string name="oneplus_location_information">وصف الخدمات المستندة إلى الموقع</string>
     <string name="oneplus_lock_after_timeout">القفل تلقائيًا بعد وضع السكون</string>
     <string name="oneplus_lock_buttons">قفل الأزرار</string>
     <string name="oneplus_lock_buttons_summary">قفل الأزرار السعوية عندما يكون وضع الألعاب قيد التشغيل</string>
-    <string name="oneplus_lock_screen_intro_skip_dialog_text">إذا حددت تخطي بيانات تسجيل الوجه، سيتم الاقتراح عليك بتمكين طريقة أخرى مثل بصمة الإصبع أو رقم تعريف شخصي لحماية جهازك ومعلوماتك الشخصية. يمكنك أيضًا تحديد كلمة مرور على تطبيقات معينة. لتمكين الحماية، يرجى الذهاب إلى \";الإعدادات\"; &amp;;gt; \";الأمان وشاشة القفل\";.</string>
+    <string name="oneplus_lock_screen_intro_skip_dialog_text">إذا قمت بتحديد تخطي تسجيل بيانات الوجه، فيُقترح عليك تمكين طريقة أخرى مثل بصمة الإصبع أو رقم الدخول لحماية جهازك ومعلوماتك الشخصية. ويمكنك أيضًا تعيين كلمة مرور على تطبيقات معينة. لتمكين الحماية، يرجى الانتقال إلى \"الإعدادات\">\"الأمان وشاشة القفل\".</string>
     <string name="oneplus_lock_screen_notifications_summary_hide">عرض المحتوى الخاص فقط عند إلغاء القفل</string>
     <string name="oneplus_lock_screen_notifs_show_alerting">عرض الإشعارات المهمة فقط</string>
     <string name="oneplus_lock_screen_notifs_show_all">عرض الإشعارات المهمة والأخرى</string>
@@ -3767,15 +3783,15 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_memc_support_no_apps">لم يتم تثبيت تطبيقات مدعومة</string>
     <string name="oneplus_memc_video">سلاسة الرسومات المتحركة</string>
     <string name="oneplus_memc_video_effect">تأثير التعويض</string>
-    <string name="oneplus_memc_video_extreme">شديد</string>
+    <string name="oneplus_memc_video_extreme">الحد الأقصى</string>
     <string name="oneplus_memc_video_nosupport_extreme_summary">يتطلب تشغيل الحد الأقصى تبديل الدقة إلى FHD+</string>
     <string name="oneplus_memc_video_nosupport_extreme_text">التبديل إلى دقة QHD+، تعويض الرسومات المتحركة محدود</string>
-    <string name="oneplus_memc_video_smooth">ناعم</string>
+    <string name="oneplus_memc_video_smooth">سلس</string>
     <string name="oneplus_memc_video_theacme_summary">سيتم رفع معدل إطار مقطع الفيديو إلى 120 إطار/ث للتمتع بأقصى حد من السلاسة للرسومات، التي قد تسبب في استهلاك إضافي للطاقة. دقة QHD+ غير مدعومة مؤقتًا.</string>
     <string name="oneplus_memc_video_theacme_title">سلاسة الحركة التشعبية</string>
     <string name="oneplus_mobile_device_name_title">اسم الهاتف</string>
     <string name="oneplus_mode_choose">تحديد الوضع</string>
-    <string name="oneplus_mode_settings">إعداد Alert Slider</string>
+    <string name="oneplus_mode_settings">إعدادات Alert Slider</string>
     <string name="oneplus_moderate">متوسط</string>
     <string name="oneplus_more">المزيد</string>
     <string name="oneplus_motion_sensor_settings_title">إيماءات النظام</string>
@@ -3790,7 +3806,7 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_multitasking_clean_way">إدارة التطبيقات الأخيرة</string>
     <string name="oneplus_navigation_bar_custom_settings">تخصيص الإعدادات</string>
     <string name="oneplus_navigation_bar_summary">إعداد شريط التنقل</string>
-    <string name="oneplus_navigation_bar_title">إيماءات &amp; شريط التنقل</string>
+    <string name="oneplus_navigation_bar_title">شريط التوجيه والإيماءات</string>
     <string name="oneplus_network_auto_change_summary">يعتمد التبديل التلقائي بين الشبكة اللاسلكية وبيانات الجوال على إمكانية الاتصال وقوة الإشارة</string>
     <string name="oneplus_network_auto_change_title">مبادل Wi-Fi الذكي</string>
     <string name="oneplus_network_dashboard_title">Wi-Fi والشبكة</string>
@@ -3801,9 +3817,9 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_night_mode_brightness_strong">أكثر ظلمة</string>
     <string name="oneplus_night_mode_color_temperature">درجة حرارة اللون</string>
     <string name="oneplus_night_mode_enabled_op">الوضع الليلي</string>
-    <string name="oneplus_night_mode_enabled_op_summary">تشغيل الوضع الليلي يدوياً</string>
+    <string name="oneplus_night_mode_enabled_op_summary">تشغيل الوضع الليلي يدويًا</string>
     <string name="oneplus_night_mode_manual_open">يدوي</string>
-    <string name="oneplus_night_mode_open_tip">يُرجى تشغيل \"الوضع الليلي\" أولاً</string>
+    <string name="oneplus_night_mode_open_tip">يُرجى تشغيل وضع راحة الرؤية أولاً</string>
     <string name="oneplus_night_mode_sensor_summary">تبعاً لظروف الإضاءة المحيطة، سيقوم الوضع الليلي تلقائياً بضبط درجة حرارة لون الشاشة لتتناسب مع البيئة، وهذا يمكنه أن يقلل من إجهاد العين والتوتر ويربما يساعدك على النوم الأفضل.</string>
     <string name="oneplus_night_mode_strong">أكثر دفئًا</string>
     <string name="oneplus_night_mode_summary">سيقوم الوضع الليلي بمعايرة الشاشة إلى ألوان أكثر دفئا للحد من إرهاق وإجهاد العينين، وهذا قد يساعدك على النوم بشكل أفضل. يوصى بتنشيطه بشكل منتظم.</string>
@@ -3822,7 +3838,7 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_none_default_gallery">بدون معرض صور افتراضي</string>
     <string name="oneplus_none_default_music">بدون مشغل موسيقى افتراضي</string>
     <string name="oneplus_normal_clear_way">المسح العادي</string>
-    <string name="oneplus_normal_clear_way_summary">مسح قائمة المهام والذاكرة الخاصة بها دون مسح العمليات التي تتم في الخلفية.</string>
+    <string name="oneplus_normal_clear_way_summary">مسح قائمة المهام وذاكرة التخزين المؤقت دون مسح عمليات الخلفية.</string>
     <string name="oneplus_not_disturb_on">تم تشغيل \"عدم الإزعاج\"</string>
     <string name="oneplus_not_show">لا تعرض هذا مجددًا</string>
     <string name="oneplus_notch_display_area">الحز</string>
@@ -3843,7 +3859,7 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_notification_ringtone_silent_mode">دائمًا</string>
     <string name="oneplus_notification_ringtone_title">نغمة رنين الإخطار في السماعات</string>
     <string name="oneplus_notification_silence_title">أخرى</string>
-    <string name="oneplus_notification_sound_default">إخطار افتراضي</string>
+    <string name="oneplus_notification_sound_default">إشعار افتراضي</string>
     <string name="oneplus_notification_ways">وضع العرض</string>
     <string name="oneplus_notification_ways_title">كيفية إظهار الإشعارات</string>
     <string name="oneplus_notifications">الإشعارات</string>
@@ -3852,7 +3868,7 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_notifications_and_vibration">صوت الإشعارات والاهتزاز</string>
     <string name="oneplus_notifications_free">مجاناً</string>
     <string name="oneplus_notifications_meet">مقابلة</string>
-    <string name="oneplus_notifications_sound">Notification sound</string>
+    <string name="oneplus_notifications_sound">صوت الإشعار</string>
     <string name="oneplus_o2_contributors">مساهمو OxygenOS</string>
     <string name="oneplus_open_bed_time_mode_schedule_summary">التشغيل في نطاق زمني مخصص</string>
     <string name="oneplus_open_bed_time_mode_schedule_title">الجدول</string>
@@ -3891,7 +3907,7 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_pin_code_attempts_count">"أدخل رقم PIN لبطاقة SIM الخاصة بك.
  المتبقي %d من المحاولات."</string>
     <string name="oneplus_pocket_mode_summary">يمكنك منع اللمسات غير المقصودة للشاشة عندما يكون الهاتف في جيبك</string>
-    <string name="oneplus_pre_application">قائمة التطبيقات المثبتة مسبقاً</string>
+    <string name="oneplus_pre_application">قائمة التطبيقات المثبتة مسبقًا</string>
     <string name="oneplus_preference_settings">السلوك</string>
     <string name="oneplus_preference_settings_auto_activate">مجدول</string>
     <string name="oneplus_preference_settings_behavior">تفضيلات</string>
@@ -3903,7 +3919,7 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_prior_to_use_you_need_to">قبل الاستخدام، يلزمك:</string>
     <string name="oneplus_privacy_policy">سياسة الخصوصية</string>
     <string name="oneplus_privacy_protection_title">مساحة مُشفرة</string>
-    <string name="oneplus_product_info_introduce">معلومات الجهاز &amp; بطاقة الضمان</string>
+    <string name="oneplus_product_info_introduce">معلومات الجهاز وبطاقة الضمان</string>
     <string name="oneplus_product_info_summary">بطاقة الضمان، والقائمة المثبتة مسبقًا</string>
     <string name="oneplus_proximity_summary_disable">غير متوفر لأن الشاشة المحيطة قيد إيقاف التشغيل</string>
     <string name="oneplus_quick_clipboard">حافظة سريعة</string>
@@ -3913,11 +3929,11 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_quick_launch_how_to_exit_summary">مرر لأسفل للخروج من لوحة التشغيل السريع</string>
     <string name="oneplus_quick_launch_how_to_exit_title">الخروج من التشغيل السريع</string>
     <string name="oneplus_quick_launch_how_to_use_summary">"استمر في الضغط بإصبعك بعد إلغاء القفل لفتح لوحة التشغيل السريع.
-2مرر لتحديد الاختصار وحرّر إصبعك لتشغيله"</string>
+2اسحب لتحديد الاختصار وحرّر إصبعك لتشغيله"</string>
     <string name="oneplus_quick_launch_how_to_use_title">استخدام التشغيل السريع</string>
-    <string name="oneplus_quick_launch_summary">اضغط مطولاً على منطقة تحديد بصمات الأصابع لبدء الدفع السريع أو تنشيط التطبيقات</string>
+    <string name="oneplus_quick_launch_summary">اضغط لفترة طويلة على منطقة التعرف على بصمة الإصبع لبدء الدفع السريع أو تنشيط التطبيقات</string>
     <string name="oneplus_quick_launch_title">التشغيل السريع</string>
-    <string name="oneplus_quick_launch_toggle_summary">اضغط مطولاً على منطقة تحديد بصمات الأصابع لبدء الدفع السريع أو تنشيط التطبيقات عندما يكون الهاتف مقفلاً</string>
+    <string name="oneplus_quick_launch_toggle_summary">اضغط لفترة طويلة على منطقة التعرف على بصمة الإصبع لبدء الدفع السريع أو تنشيط التطبيقات عندما يكون الهاتف مقفلاً</string>
     <string name="oneplus_quick_launch_toggle_title">تشغيل التشغيل السريع</string>
     <string name="oneplus_quick_reply">الرد السريع في الوضع الأفقي</string>
     <string name="oneplus_quick_reply_content">يمكنك عرض الإشعارات والرد عليها بسرعة دون إيقاف الفيديو أو اللعبة. اسحب فقاعات الدردشة لأسفل لتمكين وضع عدم الإزعاج حتى تغادر التطبيق.</string>
@@ -3937,11 +3953,11 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_quickpay_lock_swtch_summary">اضغط مطولا على زر الصفحة الرئيسية باستخدام إصبع مسجل لإطلاق الدفع السريع عند قفل الهاتف.</string>
     <string name="oneplus_quickpay_lock_swtch_title">شاشة إيقاف الدفع السريع</string>
     <string name="oneplus_quickpay_select_default_way">اختر خيار الدفع الافتراضي</string>
-    <string name="oneplus_quickpay_unlock_swtch_summary">اضغط مطولا على زر الصفحة الرئيسية لإطلاق الدفع السريع عند إلغاء قفل الهاتف</string>
+    <string name="oneplus_quickpay_unlock_swtch_summary">اضغط مطولاً على زر الصفحة الرئيسية لإطلاق الدفع السريع عند إلغاء قفل الهاتف</string>
     <string name="oneplus_quickpay_unlock_swtch_title">شاشة تشغيل الدفع السريع</string>
     <string name="oneplus_quickpay_way_alipay_qrcode">رمز QR لـ Alipay</string>
     <string name="oneplus_quickpay_way_alipay_scanning">مسح Alipay</string>
-    <string name="oneplus_quickpay_way_paytm">الدفع</string>
+    <string name="oneplus_quickpay_way_paytm">Paytm</string>
     <string name="oneplus_quickpay_way_wecaht_qrcode">رمز QR لـ WeChat</string>
     <string name="oneplus_quickpay_way_wecaht_ridecode">رمز QR لنقل WeChat</string>
     <string name="oneplus_quickpay_way_wecaht_scanning">مسح ضوئي لـ WeChat</string>
@@ -3954,9 +3970,9 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_reading_mode_activate_manual">تنشيط يدوياً</string>
     <string name="oneplus_reading_mode_add_apps">إضافة تطبيقات لوضع القراءة</string>
     <string name="oneplus_reading_mode_ask">سؤال في كل مرة</string>
-    <string name="oneplus_reading_mode_auto_summary">سيتم تشغيل وضع القراءة تلقائيًا عند فتح تلك التطبيقات وإغلاقه عند إغلاق تلك التطبيقات</string>
+    <string name="oneplus_reading_mode_auto_summary">سيتم تشغيل وضع القراءة تلقائيًا عند فتح هذه التطبيقات ويتوقف تشغيله عند إغلاقها</string>
     <string name="oneplus_reading_mode_available">لا يوجد تأثير</string>
-    <string name="oneplus_reading_mode_block_peek_notifications">حظر الإخطارات الخاطفة</string>
+    <string name="oneplus_reading_mode_block_peek_notifications">حظر الإشعارات الخاطفة</string>
     <string name="oneplus_reading_mode_chromatic">زيغ لوني</string>
     <string name="oneplus_reading_mode_default_state">الحالة الافتراضية</string>
     <string name="oneplus_reading_mode_manual_settings">إعدادات يدوية</string>
@@ -3964,7 +3980,7 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_reading_mode_mono">تأثير أحادي</string>
     <string name="oneplus_reading_mode_select_effect">حدد التأثير</string>
     <string name="oneplus_reading_mode_select_effect_for_app">حدد تأثير لـ \"%1$s\"</string>
-    <string name="oneplus_reading_mode_summary">تبعًا لظروف الإضاءة المحيطة، سيقوم وضع القراءة تلقائيًا بضبط درجة حرارة لون الشاشة والمعايرة المحسنة لقراءة النص لتتناسب مع البيئة، وهذا يمكن أن يحسن من تجربة القراءة.</string>
+    <string name="oneplus_reading_mode_summary">استنادًا إلى ظروف الإضاءة المحيطة، سيعمل وضع القراءة تلقائيًا على ضبط درجة حرارة لون الشاشة والمعايرة المحسّنة لقراءة النص جتى تتوافق مع البيئة، مما يعمل على تحسن تجربة القراءة.</string>
     <string name="oneplus_reading_mode_summary_no_sensor">يعمل وضع القراءة على تحسين عرض الشاشة والنص، مما يجعل تجربة القراءة مريحة مثل قارئ الكتب الإلكترونية.</string>
     <string name="oneplus_reading_mode_tips">يجعلك التأثير الأحادي أكثر انغماسًا قولاً؛ حيث يقدم لك الزيغ اللوني تجربة قراءة تتمتع بالمزيد من الألوان المريحة</string>
     <string name="oneplus_reading_mode_turn_on">تشغيل وضع القراءة</string>
@@ -4003,7 +4019,7 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">غير متوفر لأن وضع القراءة قيد التشغيل</string>
     <string name="oneplus_screen_color_mode_soft">مرن</string>
     <string name="oneplus_screen_color_mode_title">معايرة الشاشة</string>
-    <string name="oneplus_screen_color_mode_title_summary">غير متوفر لأن الوضع الليلي قيد التشغيل</string>
+    <string name="oneplus_screen_color_mode_title_summary">غير متوفر لأن وضع راحة الرؤية قيد التشغيل</string>
     <string name="oneplus_screen_features_not_available_toast">عند التشغيل، لن تتوفر ميزات مثل ميزة معايرة الشاشة</string>
     <string name="oneplus_screen_refresh_rate">معدل التحديث</string>
     <string name="oneplus_screen_refresh_rate_60hz_summary">سلاسة أقل مع تحسين عمر البطارية</string>
@@ -4016,12 +4032,12 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_screen_resolution_adjust_intelligent_switch_summary">التبديل إلى الدقة المناسبة تلقائيًا</string>
     <string name="oneplus_screen_resolution_adjust_other_summary">الحد الأقصى من الوضوح، زيادة استهلاك الطاقة (3120×1440)</string>
     <string name="oneplus_screen_resolution_adjust_other_summary_19811">الحد الأقصى من الوضوح، زيادة استهلاك الطاقة (3168×1440)</string>
-    <string name="oneplus_search_keyword_about_settings">device name, android version, build number, model, CPU, storage, RAM, ROM, camera, pixel, screen, Verification, Legal information, Warranty card, preinstalled list, Award</string>
+    <string name="oneplus_search_keyword_about_settings">اسم الجهاز، إصدار إندرويد، رقم الإصدار، الطراز، وحدة المعالجة المركزية، التخزين، ذاكرة الوصول العشوائي، ذاكرة القراءة فقط، الكاميرا، البكسل، الشاشة، التحقق، المعلومات القانونية، بطاقة الضمان، القائمة المثبتة مسبقًا، الجائزة</string>
     <string name="oneplus_search_keyword_accent_color">اللون</string>
     <string name="oneplus_search_keyword_app_lock">القفل، رمز PIN، كلمات المرور</string>
     <string name="oneplus_search_keyword_connected_device_manager">مدير الجهاز المتصل، الجهاز</string>
     <string name="oneplus_search_keyword_data_usage_control">التحكم في استخدام البيانات</string>
-    <string name="oneplus_search_keyword_default_launcher_app">المشغل، الافتراضي، التطبيقات، التطبيق الرئيسي الافتراضي، التطبيق الرئيسي</string>
+    <string name="oneplus_search_keyword_default_launcher_app">مشغل الواجهة الرئيسية، الافتراضي، التطبيقات، التطبيق الرئيسي الافتراضي، التطبيق الرئيسي</string>
     <string name="oneplus_search_keyword_discoverable_device">قابل للاكتشاف</string>
     <string name="oneplus_search_keyword_double_click_light_screen">الشاشة،ايقاظ</string>
     <string name="oneplus_search_keyword_double_tap_power_gesture">الكاميرا،زر الطاقة</string>
@@ -4054,9 +4070,12 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_search_keyword_sounds_and_notifications_interruptions">عدم ’ الإزعاج، قاطع، المقاطعة، الاستراحة، الوضع</string>
     <string name="oneplus_search_keyword_swap_navkeys">بدل الأزرار</string>
     <string name="oneplus_search_keyword_switch">النقل، ترحيل البيانات</string>
-    <string name="oneplus_search_keyword_theme_settings">تخصيص شاشة القفل، الخلفيات، نمط الساعة، حركة بصمة الإصبع، Horizon Light، تخصيص النظام، درجة اللون، الشكل، الخط، الأسلوب، حزم الأيقونات، المصباح المضيء، الظلام الملون، الألوان النابضة بالحياة</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl">تخصيص شاشة القفل، الخلفيات، نمط الساعة، حركة بصمة الإصبع، Horizon Light، تخصيص النظام، درجة اللون، الشكل، الخط، الأسلوب، حزم الأيقونات، المصباح المضئ، الظلام الملون، الألوان النابضة بالحياة، McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light">تخصيص شاشة القفل، الخلفيات، نمط الساعة، حركة بصمة الإصبع، الضوء الأفقي، تخصيص النظام، درجة اللون، الشكل، الخط، والأسلوب، حزم الأيقونات، المصباح المضيء، الظلام الملون، الألوان النابضة بالحياة</string>
+    <string name="oneplus_search_keyword_theme_settings">تخصيص شاشة القفل، الخلفيات، نمط الساعة، حركة بصمة الإصبع، تخصيص النظام، درجة اللون، الشكل، الخط، الأسلوب، حزم الأيقونات، المصباح المضئ، الظلام الملون، الألوان النابضة بالحياة</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">تخصيص شاشة القفل، الخلفيات، نمط الساعة، حركة بصمة الإصبع، تخصيص النظام، درجة اللون، الشكل، الخط، الأسلوب، حزم الأيقونات، المصباح المضيء، الظلام الملون، الألوان النابضة بالحياة، McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">تخصيص شاشة القفل، الخلفيات، نمط الساعة، حركة بصمة الإصبع، تخصيص النظام، Horizon Light، درجة اللون، الشكل، الخط، الأسلوب، حزم الأيقونات، McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_new">تخصيص شاشة القفل، الخلفيات، نمط الساعة، حركة بصمة الإصبع، Horizon Light، تخصيص النظام، درجة اللون، الشكل، الخط، الأسلوب، حزم الأيقونات</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light">تخصيص شاشة القفل، الخلفيات، نمط الساعة، حركة بصمة الإصبع، تخصيص النظام، درجة اللون، الشكل، الخط، الأسلوب، حزم الأيقونات، المصباح المضئ، الظلام الملون، الألوان النابضة بالحياة</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">تخصيص شاشة القفل، الخلفيات، نمط الساعة، حركة بصمة الإصبع، تخصيص النظام، درجة اللون، الشكل، الخط، الأسلوب، حزم الأيقونات</string>
     <string name="oneplus_search_keyword_three_screenshots">لقطة شاشة</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">الإشعارات،التجربة،البرنامج،التحسن</string>
@@ -4070,11 +4089,11 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_security_lock_settings_summary">فتح قفل التفضيلات، وخدمة الموقع، ووحدة قفل التطبيق</string>
     <string name="oneplus_security_lock_settings_title">الأمان والخصوصية</string>
     <string name="oneplus_security_settings_fingerprint_enroll_error_dialog_title">فشل الإعداد</string>
-    <string name="oneplus_security_settings_fingerprint_enroll_introduction_message">"كل ما عليك فعله لفتح الهاتف أو تصديق عمليات الشراء أو تسجيل الدخول إلى التطبيقات هو ملامسة منطقة التعرف على بصمة الإصبع فقط. 
+    <string name="oneplus_security_settings_fingerprint_enroll_introduction_message">"ما عليك سوى الضغط على منطقة التعرف على بصمة الإصبع لإلغاء قفل هاتفك أو الإذن بعمليات الشراء أو تسجيل الدخول إلى التطبيقات. 
 
 ملاحظة: 
- 1. قد تكون بصمة الإصبع أقل أماناً من نمط قوي أو رمز PIN.
-2. الرجاء إدخال بصمة الإصبع كلما استبدلت فيلم الحماية لضمان إتاحة بصمة الإصبع."</string>
+1.قد تكون بصمة إصبعك أقل أمانًا من النمط القوي أو رقم الدخول. 
+2.يرجى إعادة إدخال بصمة إصبعك بعد كل عملية استبدال للاصقة القوية لضمان توفر بصمة الإصبع."</string>
     <string name="oneplus_security_settings_fingerprint_exists_dialog_message">تم بالفعل تسجيل بصمة الإصبع هذه، الرجاء المحاولة بإصبع آخر.</string>
     <string name="oneplus_security_settings_fingerprint_toggle_category_title">عرض أيقونة بصمة الإصبع في الشاشة المحيطة</string>
     <string name="oneplus_security_settings_fingerprint_toggle_category_title_for_always_on">تفضيلات أيقونة بصمة الإصبع</string>
@@ -4083,9 +4102,9 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_security_settings_fingerprint_toggle_two_toast_1">\"النقر المزدوج لايقاظ الشاشة\" ممكّن وسيتم تعطيل \"النقر على الشاشة للإظهار\"</string>
     <string name="oneplus_security_settings_fingerprint_toggle_two_toast_2">\"النقر على الشاشة للإظهار\" ممكّن وسيتم تعطيل \"النقر المزدوج لايقاظ الشاشة\"</string>
     <string name="oneplus_security_settings_fingerprint_tolocation_advanced_settingsggle_two_title">انقر على الشاشة للعرض</string>
-    <string name="oneplus_select_fingerprint_animation_effect_1">الكون</string>
-    <string name="oneplus_select_fingerprint_animation_effect_2">الموجة</string>
-    <string name="oneplus_select_fingerprint_animation_effect_3">الخط</string>
+    <string name="oneplus_select_fingerprint_animation_effect_1">كون</string>
+    <string name="oneplus_select_fingerprint_animation_effect_2">موجة</string>
+    <string name="oneplus_select_fingerprint_animation_effect_3">شريط</string>
     <string name="oneplus_select_fingerprint_animation_effect_4">تموج</string>
     <string name="oneplus_select_fingerprint_animation_effect_6">طاقة</string>
     <string name="oneplus_select_fingerprint_animation_effect_mcl">McLaren</string>
@@ -4095,8 +4114,8 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_service_messaging_title">مراسلة خدمة OnePlus</string>
     <string name="oneplus_set_time">وضع ليلي مجدول</string>
     <string name="oneplus_setting_ringtone">تعيين نغمة رنين</string>
-    <string name="oneplus_setting_sim_ringtone_switch">إعداد نغمة رنين لكل بطاقة SIM</string>
-    <string name="oneplus_settings_lab_feature_boost_summary">يستغل التعزيز الذكي ذاكرة RAM الكبيرة في هواتف OnePlus وفقاً لاستخدامك اليومي، وذلك لتقوية الأداء في تحميل التطبيقات والألعاب.</string>
+    <string name="oneplus_setting_sim_ringtone_switch">تعيين نغمات الرنين لكل بطاقة SIM</string>
+    <string name="oneplus_settings_lab_feature_boost_summary">بناءً على استخدامك اليومي، يستفيد التعزيز الذكي بشكل كامل من ذاكرة الوصول العشوائي الكبيرة لهواتف OnePlus، والتي تعزز أداء تحميل التطبيقات والألعاب.</string>
     <string name="oneplus_settings_lab_feature_boost_title">التعزيز الذكي</string>
     <string name="oneplus_settings_refresh_rate_settings_120">إعدادات 120Hz</string>
     <string name="oneplus_settings_refresh_rate_settings_90">إعدادات 90Hz</string>
@@ -4120,24 +4139,25 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_silent_mode_on">الوضع الصامت قيد التشغيل</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">سيتم كتم صوت المكالمات والإخطارات، باستثناء التنبيهات</string>
     <string name="oneplus_silent_mode_summary">سيتم كتم صوت المكالمات والإخطارات، باستثناء التنبيهات</string>
-    <string name="oneplus_sim1_ringtone_switch">بطاقات SIM 1</string>
-    <string name="oneplus_sim2_ringtone_switch">بطاقات SIM 2</string>
-    <string name="oneplus_simcard_title">SIM</string>
+    <string name="oneplus_silent_notifications_status_bar">إخفاء الإشعار الصامت في شريط الحالة</string>
+    <string name="oneplus_sim1_ringtone_switch">بطاقة SIM 1</string>
+    <string name="oneplus_sim2_ringtone_switch">بطاقة SIM 2</string>
+    <string name="oneplus_simcard_title">بطاقة SIM</string>
     <string name="oneplus_sla_down_load_app_summary">لن يتوفر تسريع التنزيل أثناء تشغيل نقطة الاتصال أو Wi‑Fi direct</string>
     <string name="oneplus_sleep_standby_summary">تحسين عمر البطارية (على سبيل المثال، عن طريق تعطيل الشبكة) عندما تكون نائمًا. سيؤدي هذا إلى جعل التطبيقات غير قادرة على تلقي الإشعارات في الوقت المناسب.</string>
     <string name="oneplus_sleep_standby_title">تحسين وضع الاستعداد للنوم</string>
     <string name="oneplus_smart_background_management_title">سكون إجباري &amp; إسبات التطبيق</string>
     <string name="oneplus_smart_wifi_connection">اتصال Wi‑Fi ذكي</string>
     <string name="oneplus_sms">الرسائل القصيرة</string>
-    <string name="oneplus_sms_and_vibration">نغمة رنين الرسائل النصية والاهتزاز</string>
+    <string name="oneplus_sms_and_vibration">نغمة رنين الرسائل النصية القصيرة والاهتزاز</string>
     <string name="oneplus_snooze_options_title">غفوة الإشعارات من قائمة الإشعارات</string>
     <string name="oneplus_sound_and_vibrate">الأصوات والاهتزاز</string>
     <string name="oneplus_sound_effects_and_modes">المؤثرات الصوتية والأوضاع</string>
-    <string name="oneplus_sound_settings_summary">وضع عدم الإزعاج، سماعة الأذن</string>
+    <string name="oneplus_sound_settings_summary">وضع عدم الإزعاج، وسماعة الأذن</string>
     <string name="oneplus_sound_tuner">Dolby Atmos</string>
     <string name="oneplus_status_summary">رقم الهاتف والإشارة وغير ذلك</string>
     <string name="oneplus_stop_run">إيقاف إجباري</string>
-    <string name="oneplus_storage">ذاكرة التخزين</string>
+    <string name="oneplus_storage">STORAGE</string>
     <string name="oneplus_sunrise_sunset">تمكين تلقائياً من الغروب إلى شروق الشمس</string>
     <string name="oneplus_support_apps">تطبيقات مدعومة</string>
     <string name="oneplus_support_summary">النصائح والأسئلة المتداولة حول استخدام الجهاز</string>
@@ -4159,15 +4179,15 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_system_stability_summary">السماح لـ OnePlus بالوصول إلى سجلات النظام بهوية مجهولة. وفي حالة حدوث خطأ، يتم السماح بإرسال تقرير خطأ مع السجلات. سيتم استخدام السجلات فقط في تحليل أخطاء النظام وتحسينات الاستقرار</string>
     <string name="oneplus_system_stability_title">برنامج استقرار النظام</string>
     <string name="oneplus_system_vibrate">اهتزاز النظام</string>
-    <string name="oneplus_theme_accent_color">لون تمييزي</string>
-    <string name="oneplus_theme_accent_color_customization">التخصيص</string>
+    <string name="oneplus_theme_accent_color">درجة اللون</string>
+    <string name="oneplus_theme_accent_color_customization">تخصيص</string>
     <string name="oneplus_theme_accent_color_presetcolor">الإعداد المسبق للون</string>
-    <string name="oneplus_theme_accent_color_select">حدد اللون التمييزي</string>
+    <string name="oneplus_theme_accent_color_select">تحديد درجة اللون</string>
     <string name="oneplus_theme_apply_summary">بعد تطبيق هذه السمة، سيتم إلغاء خيارات التخصيص الخاصة بك</string>
     <string name="oneplus_theme_apply_title">هل تريد تطبيق هذه السمة؟</string>
     <string name="oneplus_theme_clock">نمط الساعة</string>
     <string name="oneplus_theme_clock_snake_action">تشغيل العرض المحيط</string>
-    <string name="oneplus_theme_clock_snake_tip">سيتم إتاحة تلك الميزة عند تشغيل العرض المحيط</string>
+    <string name="oneplus_theme_clock_snake_tip">ستكون هذه الميزة متاحة عندما تكون الشاشة المحيطة قيد التشغيل</string>
     <string name="oneplus_theme_colorpicker_colorvalue">رمز اللون</string>
     <string name="oneplus_theme_drop_summary">تجاهل التعديلات؟</string>
     <string name="oneplus_theme_drop_title">إنهاء وضع التحرير</string>
@@ -4178,7 +4198,7 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_theme_fingerprint_snake_tip">ستكون هذه الميزة متاحة عند تشغيل بصمة الإصبع</string>
     <string name="oneplus_theme_font">الخط</string>
     <string name="oneplus_theme_font_content">شارك أفضل تقنية مع العالم، معك يدًا بيد</string>
-    <string name="oneplus_theme_icon_pack">حزمة الرموز</string>
+    <string name="oneplus_theme_icon_pack">حزمة الأيقونات</string>
     <string name="oneplus_theme_lock_screen_customization">تخصيص شاشة القفل</string>
     <string name="oneplus_theme_preset">الإعداد المسبق للسمة</string>
     <string name="oneplus_theme_preset_color">ألوان نابضة بالحياة</string>
@@ -4189,7 +4209,7 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_theme_preset_summary_tmp">تأتي السمات المعينة مسبقًا مع مجموعة متنوعة من الخلفيات ودرجات الألوان والأساليب وغيرها</string>
     <string name="oneplus_theme_shape">أيقونات النظام</string>
     <string name="oneplus_theme_shape_effect_round">دائري</string>
-    <string name="oneplus_theme_shape_effect_round_rectangle">مستطيل ذات زوايا منحنية</string>
+    <string name="oneplus_theme_shape_effect_round_rectangle">مستطيل دائري</string>
     <string name="oneplus_theme_shape_effect_square">مربع</string>
     <string name="oneplus_theme_shape_effect_teardrop">دمعة</string>
     <string name="oneplus_theme_shape_effect_title">تحديد الشكل</string>
@@ -4201,25 +4221,25 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_theme_tone_effect_title">تحديد نغمة</string>
     <string name="oneplus_theme_wallpaper">الخلفيات</string>
     <string name="oneplus_three_screenshots_enable_summary">المس بثلاثة أصابع على الشاشة لأخذ لقطة شاشة</string>
-    <string name="oneplus_three_screenshots_enable_title">لقطة شاشة من ثلاث أصابع</string>
-    <string name="oneplus_timepower_power_off_title">إعداد وقت إيقاف الطاقة</string>
-    <string name="oneplus_timepower_power_on_title">إعداد وقت تشغيل الطاقة</string>
+    <string name="oneplus_three_screenshots_enable_title">لقطة شاشة باستخدام ثلاث أصابع</string>
+    <string name="oneplus_timepower_power_off_title">تعيين وقت إيقاف التشغيل</string>
+    <string name="oneplus_timepower_power_on_title">تعيين وقت تشغيل الطاقة</string>
     <string name="oneplus_timer_shutdown_disable_summary">تعطيل كلمة المرور عند بدء التشغيل لإلغاء قفل هذه الميزة</string>
     <string name="oneplus_timer_shutdown_summary">سيتم إيقاف تشغيل هاتف تلقائيًا في غضون%ds. قم بالتأكيد لإيقاف التشغيل تلقائيًا.</string>
     <string name="oneplus_to_select_assistant_app_dialog">يُرجى تحديد التطبيق المساعد الذي ترغب في تنشيطه</string>
-    <string name="oneplus_tools_quicklaunch_summary">وضع الألعاب، التشغيل السريع، تطبيقات موازية</string>
-    <string name="oneplus_tools_quicklaunch_summary_no_gamingmode">التشغيل السريع، تطبيقات موازية</string>
+    <string name="oneplus_tools_quicklaunch_summary">وضع الألعاب، والتشغيل السريع، والتطبيقات الموازية، ووحدة قفل التطبيق</string>
+    <string name="oneplus_tools_quicklaunch_summary_no_gamingmode">التشغيل السريع، والتطبيقات المتوازية، ووحدة قفل التطبيق</string>
     <string name="oneplus_tools_summary">وضع الألعاب، وحدة قفل التطبيق، التطبيقات موازية</string>
     <string name="oneplus_tools_summary_U30">وضع الألعاب، ووضع الجيب، وتشغيل/إيقاف الطاقة المجدول</string>
     <string name="oneplus_tools_summary_no_gamingmode">وحدة قفل التطبيق، التطبيقات الموازية</string>
     <string name="oneplus_tools_title">الأدوات المساعدة</string>
     <string name="oneplus_top_level_accounts_summary">حساب OnePlus، حسابات أخرى</string>
     <string name="oneplus_top_level_apps_and_notifs_summary">التطبيقات، والإشعارات، والأذونات الافتراضية</string>
-    <string name="oneplus_top_level_buttons_and_gestures_summary">Alert Slider، شريط التنقل &amp; الإيماءات</string>
+    <string name="oneplus_top_level_buttons_and_gestures_summary">Alert Slider، شريط التنقل والإيماءات</string>
     <string name="oneplus_top_level_cloud_h2_summary">مزامنة البيانات مع السحابة، العثور على هاتفي</string>
     <string name="oneplus_top_level_cloud_o2_summary">مزامنة البيانات مع السحابة</string>
     <string name="oneplus_top_level_connected_summary">NFC، البث، انقر على &amp; الدفع</string>
-    <string name="oneplus_top_level_display_summary">Status bar, ambient display, Vision comfort, reading mode</string>
+    <string name="oneplus_top_level_display_summary">شريط الحالة، الشاشة المحيطة، راحة الرؤية، وضع القراءة</string>
     <string name="oneplus_top_level_network_summary">SIM، شبكة الجوال، استخدام البيانات، نقطة اتصال</string>
     <string name="oneplus_top_level_privacy_summary">الأذونات، البيانات الشخصية</string>
     <string name="oneplus_top_level_security_dashboard_summary">بصمة الإصبع، إلغاء القفل باستخدام الوجه، الإنقاذ في حالات الطوارئ</string>
@@ -4247,13 +4267,13 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_user_agreement">اتفاقية ترخيص المستخدم النهائي</string>
     <string name="oneplus_user_enjoy_plan_title">الانضمام إلى برنامج تجربة المستخدم</string>
     <string name="oneplus_vibrant_color_effect">تأثير الألوان النابضة بالحياة الاحترافي</string>
-    <string name="oneplus_vibrate">الاهتزاز</string>
+    <string name="oneplus_vibrate">اهتزاز</string>
     <string name="oneplus_vibrate_dynamic_mode">ديناميكي</string>
     <string name="oneplus_vibrate_intensity">كثافة الاهتزاز</string>
     <string name="oneplus_vibrate_on_touch_intensity">اهتزاز عند اللمس</string>
     <string name="oneplus_vibrate_rhythm">نمط الاهتزاز</string>
-    <string name="oneplus_vibrate_strength">نمط الاهتزاز وكثافته</string>
-    <string name="oneplus_vibration_settings_soc_tri_state">اهتزاز</string>
+    <string name="oneplus_vibrate_strength">نمط الاهتزاز والكثافة</string>
+    <string name="oneplus_vibration_settings_soc_tri_state">الاهتزاز</string>
     <string name="oneplus_vibration_settings_soc_tri_state_summary">سيتم كتم صوت المكالمات والإخطارات والتعيين على الاهتزاز فقط، باستثناء التنبيهات</string>
     <string name="oneplus_vibration_summary">سيتم تشغيل رنين التنبيه دائمًا</string>
     <string name="oneplus_video_enhancer">تأثير الألوان النابضة بالحياة</string>
@@ -4269,7 +4289,7 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_volume_keys_adjust_ringtones">مستوى صوت نغمة الرنين</string>
     <string name="oneplus_weak_text_reminding">النص فقط</string>
     <string name="oneplus_weak_text_reminding_summary">السماح للتطبيقات بعرض إشعارات المتابعة</string>
-    <string name="oneplus_wellbeing_grayscale_open_tip">الوضع الليلي غير متاح حاليًا لأن ميزة \"تدرج الرمادي\" قيد التشغيل</string>
+    <string name="oneplus_wellbeing_grayscale_open_tip">وضع راحة الرؤية غير متاح حاليًا لأن ميزة \"تدرج الرمادي\" قيد التشغيل</string>
     <string name="oneplus_wifi_6_standard_hotspot_cancel">إلغاء الأمر</string>
     <string name="oneplus_wifi_6_standard_hotspot_enable">تمكين</string>
     <string name="oneplus_wifi_6_standard_hotspot_title">نقطة اتصال قياسية لـ Wi‑Fi 6</string>
@@ -4283,9 +4303,9 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_wifi_ipv6_surport_summary">تعطيل IPv6 يمكن أن يجنب مشكلات التوافق مع أجهزة توجيه Wi-Fi معينة.</string>
     <string name="oneplus_wifi_ipv6_surport_title">دعم IPv6</string>
     <string name="oneplus_wifi_list">قائمة Wi‑Fi</string>
-    <string name="oneplus_wifi_name">اسم النقطة الفعالة للهاتف</string>
-    <string name="oneplus_wifi_name_dialog_message">إذا قمت بإيقاف تشغيل خيار ‎اسم شبكة البث (SSID)‏، فلن يكون هاتفك مرئيًا للأجهزة الأخرى ولن يظهر في قائمة شبكات Wi-Fi المتوفرة. لا يزال يمكن للأجهزة الأخرى الاتصال بالنقطة الفعالة الخاصة بك من خلال إدخال اسم شبكتها يدويًا.</string>
-    <string name="oneplus_wifi_name_dialog_title">النقطة الفعالة الخاصة بك غير مرئية الآن</string>
+    <string name="oneplus_wifi_name">اسم نقطة اتصال الهاتف</string>
+    <string name="oneplus_wifi_name_dialog_message">إذا قمت بإيقاف تشغيل خيار اسم شبكة البث (SSID)، فلن يكون هاتفك مرئيًا للأجهزة الأخرى ولن يظهر في قائمة شبكات Wi-Fi المتاحة. لا يزال بإمكان الأجهزة الأخرى الاتصال بنقطة الاتصال الخاصة بك عن طريق إدخال اسم شبكتها يدويًا.</string>
+    <string name="oneplus_wifi_name_dialog_title">نقطة الاتصال الخاصة بك غير مرئية الآن</string>
     <string name="oneplus_wifi_scan_always_available">المسح دائمًا متوفر</string>
     <string name="oneplus_wifi_scan_always_available_summary">السماح بخدمات الموقع أو التطبيقات الأخرى بالبحث عن الشبكات، حتي عندما يكون اتصال Wi‑Fi قيد إيقاف التشغيل</string>
     <string name="oneplus_wifi_scan_always_available_title">السماح دوماً بالبحث</string>
@@ -4296,7 +4316,7 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="oneplus_zen_mode_duration_summary_always_prompt">اسأل في كل مرة (ما لم يتم تشغيله تلقائيًا)</string>
     <string name="oneplus_zen_mode_duration_summary_forever">حتى تقوم بإيقاف التشغيل (ما لم يتم إيقاف تشغيله تلقائيًا)</string>
     <string name="oneplus_zen_mode_duration_summary_time_minutes">%d دقيقة (ما لم يتم إيقاف تشغيله تلقائيًا)</string>
-    <string name="oneplus_zen_mode_footer_info">عند تغيل عدم الإزعاج، سيتم إغلاق الصوت والاهتزاز، باستثناء الحالات التي تسمح بها أعلاه</string>
+    <string name="oneplus_zen_mode_footer_info">عند تشغيل وضع عدم الإزعاج، سيتم إغلاق الصوت والاهتزاز باستثناء الحالات التي تسمح بها أعلاه</string>
     <string name="oneplus_zen_mode_mode_manual_switch_summary">يمكنك تشغيل وضع عدم الإزعاج يدويًا</string>
     <string name="oneplus_zen_mode_settings">سلوك</string>
     <string name="oneplus_zen_mode_switch">تشغيل وضع عدم الإزعاج</string>
@@ -4308,16 +4328,14 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="op_advanced_settings">متقدم</string>
     <string name="op_android_mode_cannot_change_color_accent">السمة الافتراضية يمكنها فقط استخدام سمة لون النظام</string>
     <string name="op_aod_parsons_info_button">موافق</string>
-    <string name="op_aod_parsons_info_message">"Every 24 hours, a masterpiece is created.
-
-Insight, designed together by OnePlus &amp; students from Parsons School of Design, transforms time into a visible color bar. The device's usage data drives the pattern. Every time the phone is unlocked, it leaves a groove on the bar. The longer is the utility time; the wider is the groove and vice versa. Through the insight of those grooves, take a peek at your digital life."</string>
-    <string name="op_aod_parsons_info_title">Insight</string>
+    <string name="op_aod_parsons_info_message">"عندما يتم فتحها يتم إنشاء قطعة فنية.
+الرؤية، تم تصميمها معًا بواسطة OnePlus والطلاب من مدرسة بارسونز للتصميم، تحول الوقت إلى شريط لون مرئي. وتدفع بيانات استخدام الجهاز النمط. وفي كل مرة يتم فيها إلغاء قفل الهاتف، يترك تجويفًا على الشريط. كلما كانت مدة الأداة أطول؛ كلما كان التجويف أوسع والعكس صحيح. من خلال رؤية هذه التجاويف، ألق نظرة خاطفة على حياتك الرقمية."</string>
     <string name="op_app_already_uninstalled">غير مثبت</string>
     <string name="op_audio_settings">موالف الصوت</string>
     <string name="op_auto_power_saving">توفير الطاقة التلقائي</string>
     <string name="op_auto_power_saving_summary">التبديل تلقائيًا إلى الدقة المناسبة دون استنزاف البطارية</string>
-    <string name="op_battery_saver_description">Battery Saver turns off or restricts background activity, some visual effects &amp; other high-power features to extend battery life.</string>
-    <string name="op_battery_suggestion_summary">Turn on Adaptive Battery</string>
+    <string name="op_battery_saver_description">يقوم \"توفير شحن البطارية\" بإيقاف تشغيل نشاط الخلفية أو تقييده، وبعض التأثيرات المرئية &amp; وميزات أخرى عالية الطاقة لإطالة عمر البطارية.</string>
+    <string name="op_battery_suggestion_summary">تشغيل البطارية التكيفية</string>
     <string name="op_cast_description">اعرض شاشة هاتفك والصوت على جهاز مثل التلفزيون</string>
     <string name="op_cast_nearby">الأجهزة القريبة</string>
     <string name="op_cast_no_devices">لم يتم العثور على أجهزة قريبة</string>
@@ -4326,7 +4344,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_charging_Station_mute_notifications">كتم صوت الإشعارات</string>
     <string name="op_charging_footer_text">سيتم إعلامك بمحطات الشحن القريبة، عندما تزور مواقع الشركاء مثل المطارات أو فعاليات OnePlus مثل Pop-ups.</string>
     <string name="op_charging_optimization">شحن محسن</string>
-    <string name="op_charging_optimization_summary">قم بتحسين نمط الشحن وفقًا لعادات استخدامك</string>
+    <string name="op_charging_optimization_summary">تحسين نمط الشحن وفقًا لعادات الاستخدام لتقليل تحميل البطارية وإطالة عمرها</string>
     <string name="op_charging_station">محطات الشحن القريبة</string>
     <string name="op_charging_station_no_station">لا توجد محطة شحن قريبة</string>
     <string name="op_charging_station_summary">الإشعار عند وجود محطة شحن قريبة</string>
@@ -4345,7 +4363,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_cloud_service_title">خدمة السحابة</string>
     <string name="op_confirm_enable_oem_unlock_text">تحذير: قد لا تعمل ميزات حماية الجهاز والتحقق منه، على سبيل المثال، قد لا يعمل الدفع ببصمة الإصبع ومفتاح DRM المتقدم أثناء إلغاء قفل OEM.</string>
     <string name="op_control_accent_color_amber_label">كهرماني</string>
-    <string name="op_control_accent_color_gin_label">Sloe gin fizz</string>
+    <string name="op_control_accent_color_gin_label">سلو جين فيز</string>
     <string name="op_control_accent_color_indigo_label">نيلي</string>
     <string name="op_control_accent_color_teal_label">أزرق مخضر</string>
     <string name="op_custom_color_value">قيمة اللون</string>
@@ -4383,7 +4401,13 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
           أثناء قيام الهاتف بتحديد بصمات أصابعك ومطابقتها، سيزداد سطوع شاشة الهاتف وسيتغير ملف تعريف الألوان مؤقتًا."</string>
     <string name="op_fragment">قصيرة</string>
     <string name="op_gamespace">منطقة الألعاب</string>
-    <string name="op_high_power_app_manager">إدارة التطبيقات كثيفة استهلاك الطاقة</string>
+    <string name="op_global_drak_mode_apps_manage">إدارة التطبيقات في الوضع الليلي</string>
+    <string name="op_global_drak_mode_full_support_list">تطبيقات مدعومة</string>
+    <string name="op_global_drak_mode_not_full_support_list">تطبيقات غير مدعومة</string>
+    <string name="op_global_drak_mode_support_description">قد لا تعمل التطبيقات غير المدعومة بشكل مناسب في الوضع الليلي</string>
+    <string name="op_gps_off_warn_msg">يُرجى تشغيل الموقع أولاً</string>
+    <string name="op_high_power_app_manager">التطبيقات المستخدمة للطاقة العالية</string>
+    <string name="op_history_toggled_on_summary">ستظهر الإشعارات الأخيرة هنا</string>
     <string name="op_keep_location_services">للعثور على محطات الشحن القريبة وتتبعها، ابقِ خدمات الموقع ممكنة</string>
     <string name="op_light_mode_title">مضيء</string>
     <string name="op_linked_launch_summary">تشغيل تطبيقات الإدارة التي يمكن ربطها في الخلفية</string>
@@ -4393,9 +4417,11 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_lockpassword_choose_your_pin_header_for_face">لاستخدام إلغاء القفل باستخدام الوجه، قم بتعيين رقم دخول</string>
     <string name="op_member_description">قم بربط جهازك للتمتع بمزايا استثنائية</string>
     <string name="op_member_title">تسجيل الدخول إلى حساب OnePlus</string>
-    <string name="op_night_display_title">Vision comfort</string>
+    <string name="op_night_display_title">حماية الرؤية</string>
     <string name="op_not_disturb">تفضيلات عدم الإزعاج</string>
     <string name="op_not_disturb_summary">كتم صوت المكالمات والتنبيهات وإيقاف تشغيل الاهتزاز، باستثناء المنبهات</string>
+    <string name="op_notification_history_off_summary">قم بتشغيل سجل الإشعارات لرؤية الإشعارات الأخيرة</string>
+    <string name="op_notification_history_summary">عرض الإشعارات الأخيرة</string>
     <string name="op_oneplus_roaming_summary">توفير خدمات الوصول إلى شبكة الإنترنت الدولية</string>
     <string name="op_oneplus_roaming_title">OnePlus Roaming</string>
     <string name="op_primary_charm_purple_label">أرجواني غامق</string>
@@ -4406,6 +4432,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_primary_grass_green_label">أخضر خفيف</string>
     <string name="op_primary_lemon_yellow_label">برتقالي</string>
     <string name="op_primary_red_label">أحمر</string>
+    <string name="op_primary_rose_red_label">وردة حمراء</string>
     <string name="op_primary_royal_blue_label">أزرق ملكي</string>
     <string name="op_primary_sky_blue_label">سماوي</string>
     <string name="op_primary_vigour_red_label">وردي</string>
@@ -4415,15 +4442,15 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_security_lock_settings_title">الأمان وقفل الشاشة</string>
     <string name="op_security_settings_back_fingerprint_enroll_find_sensor_message">يمكنك العثور عليه في مؤخرة الهاتف</string>
     <string name="op_security_settings_fingerprint_enroll_find_sensor_message">تحديد مكان مستشعر البصمة على زر الصفحة الرئيسية</string>
-    <string name="op_security_settings_title">الأمان والبصمة</string>
-    <string name="op_sim_card_with_slotid">SIM  %1$s</string>
-    <string name="op_sim_cord">SIM والشبكة</string>
+    <string name="op_security_settings_title">الأمان وبصمة الإصبع</string>
+    <string name="op_sim_card_with_slotid">SIM %1$s</string>
+    <string name="op_sim_cord">بطافة SIM والشبكة</string>
     <string name="op_sim_cord_summary">بطاقة SIM الافتراضية، واستخدام النطاق الترددي</string>
     <string name="op_sim_name_with_prefix">  (%1$s)</string>
-    <string name="op_smart_battery_manager_title">Adaptive Battery</string>
-    <string name="op_smart_battery_title">Use Adaptive Battery</string>
+    <string name="op_smart_battery_manager_title">البطارية التكيفية</string>
+    <string name="op_smart_battery_title">استخدام البطارية التكيفية</string>
     <string name="op_sms_ringtone">نغمة رنين SMS</string>
-    <string name="op_starwar_mode_cannot_change_color_accent">يمكن لنسق حرب النجوم StarWar استخدام نسق لون النظام فقط</string>
+    <string name="op_starwar_mode_cannot_change_color_accent">يمكن لسمة حرب النجوم استخدام سمة لون النظام فقط</string>
     <string name="op_starwar_mode_title">حرب النجوم</string>
     <string name="op_storage">التخزين والذاكرة</string>
     <string name="op_system_dashboard_summary">اللغات والوقت وإعادة التعيين والتحديثات</string>
@@ -4431,9 +4458,9 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_tcp_timestamps_randomization_title">علامة الطوابع الزمنية العشوائية TCP</string>
     <string name="op_theme_2__cannot_change_color_accent">لا يمكن استخدام موضوع المنتقمون (Avengers) إلا لموضوع لون النظام</string>
     <string name="op_theme_2__title">المنتقمون (Avengers)</string>
-    <string name="op_theme_3_cannot_change_color_accent">يمكن ان يستخدم نسق Mclaren نسق الوان النظام</string>
+    <string name="op_theme_3_cannot_change_color_accent">سمة McLaren يمكنها فقط استخدام سمة لون النظام</string>
     <string name="op_theme_3_title">McLaren</string>
-    <string name="op_theme_entrance_summary">Wallpapers, accent color, font</string>
+    <string name="op_theme_entrance_summary">الخلفيات، درجة اللون، الخط</string>
     <string name="op_theme_mode_title">الموضوع</string>
     <string name="op_use_cast">استخدام البث</string>
     <string name="op_user_manual_settings">دليل المستخدم</string>
@@ -4447,8 +4474,8 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_wifi_verbose_multi_broadcast_title">تصفية البث/WLAN متعدد للتطبيق</string>
     <string name="op_wlan_settings_and_management">إعدادات Wi‑Fi</string>
     <string name="op_zen_mode_automation_settings_title">تشغيل تلقائياً</string>
-    <string name="op_zen_mode_behavior_settings_title">‏‏الاستثناءات</string>
-    <string name="op_zen_mode_restrict_notifications_title">Restrict notifications</string>
+    <string name="op_zen_mode_behavior_settings_title">الاستثناءات</string>
+    <string name="op_zen_mode_restrict_notifications_title">تقييد الإشعارات</string>
     <string name="opcustom_tone_dark_tile_text">الوضع الليلي</string>
     <string name="open_hotspot_warning_message">"من خلال نظام الأمان المفتوح، ستتمكن الأجهزة من استخدام نقطة اتصال الجوال الخاصة بك دون إدخال كلمة المرور. وبدلاً من ذلك، حدد أمان WPA2، إذا كنت تريد طلب كلمة المرور. "</string>
     <string name="open_supported_links_footer">يطلب التطبيق معالجة الروابط التالية:</string>
@@ -4524,6 +4551,8 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="platform_compat_dashboard_title">التغييرات في توافق التطبيقات</string>
     <string name="platform_compat_default_disabled_title">التغييرات التي يتم إيقافها تلقائيًا</string>
     <string name="platform_compat_default_enabled_title">التغييرات التي يتم تفعيلها تلقائيًا</string>
+    <string name="platform_compat_dialog_text_no_apps">يمكن تعديل تغييرات التوافق فقط للتطبيقات التي تتيح تصحيح الأخطاء فيها. ما عليك سوى تثبيت تطبيق يمكن تصحيح الأخطاء فيه، ثم إعادة المحاولة.</string>
+    <string name="platform_compat_dialog_title_no_apps">ما مِن تطبيقات متاحة</string>
     <string name="please_select_phase2">مصادقة المرحلة الثانية</string>
     <string name="please_type_passphrase">كلمة مرور الشبكة اللاسلكية</string>
     <string name="pointer_location">موقع المؤشر</string>
@@ -4559,7 +4588,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="power_menu_privacy_show_controls">إظهار عناصر التحكّم في حال القفل</string>
     <string name="power_menu_setting_name">قائمة التشغيل</string>
     <string name="power_menu_setting_title">قائمة زر التشغيل</string>
-    <string name="power_off">إيقاف الطاقة</string>
+    <string name="power_off">إيقاف التشغيل</string>
     <string name="power_off_summary">سيتم إيقاف تشغيل جهازك</string>
     <string name="power_overcounted">استخدام زائد عن الحد</string>
     <string name="power_phone">المكالمات الصوتية</string>
@@ -4739,7 +4768,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="proxy_warning_limited_support">‏يتم استخدام الخادم الوكيل HTTP على المتصفّح، ولكن قد لا تستخدمه التطبيقات الأخرى.</string>
     <string name="qtifeedback_settings_subtitle">ملاحظات حول أجهزة Qualcomm Technologies, Inc</string>
     <string name="qtifeedback_settings_title">الإبلاغ عن</string>
-    <string name="quick_controls_lower">أدوات التحكم بالجهاز</string>
+    <string name="quick_controls_lower">أدوات التحكم بالأجهزة</string>
     <string name="quick_settings_developer_tiles">فئات مطوّري البرامج في الإعدادات السريعة</string>
     <string name="quick_unlock_summary">عند التمكين، سيتم إلغاء قفل الشاشة تلقائيًا بمجرد اكتشاف رقم PIN الصحيح أو كلمة المرور الصحيحة.</string>
     <string name="quick_unlock_title">إلغاء قفل سريع</string>
@@ -5307,7 +5336,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="sim_editor_title">‏%1$d لمنفذ SIM</string>
     <string name="sim_enable_sim_lock">‏قفل شريحة SIM</string>
     <string name="sim_enabled">ممكّنة</string>
-    <string name="sim_enabler_airplane_on">خطأ، وضع الطائرة قيد التشغيل!</string>
+    <string name="sim_enabler_airplane_on">خطأ. وضع الطائرة قيد التشغيل!</string>
     <string name="sim_enabler_both_inactive">خطأ، لا يمكن تعطيل جميع بطاقات SIM</string>
     <string name="sim_enabler_disabling">إلغاء التنشيط...</string>
     <string name="sim_enabler_enabling">تنشيط...</string>
@@ -5424,7 +5453,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="status_bar_settings_airplane_title">وضع الطائرة</string>
     <string name="status_bar_settings_alarm_title">إنذار</string>
     <string name="status_bar_settings_auto_rotation_title">تدوير تلقائي للشاشة</string>
-    <string name="status_bar_settings_bluetooth_title">بلوتوث</string>
+    <string name="status_bar_settings_bluetooth_title">البلوتوث</string>
     <string name="status_bar_settings_cast_title">إصدار</string>
     <string name="status_bar_settings_cellular_title">البيانات الخلوية</string>
     <string name="status_bar_settings_dnd_title">عدم الإزعاج</string>
@@ -5697,8 +5726,8 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="swipe_up_to_switch_apps_suggestion_title">تجربة زر \"الشاشة الرئيسية\" الجديد</string>
     <string name="swipe_up_to_switch_apps_summary">للتبديل بين التطبيقات، مرّر سريعًا للأعلى على زر \"الشاشة الرئيسية\". للاطّلاع على كل التطبيقات، مرّر سريعًا للأعلى مرة أخرى. للرجوع، انقر على زر الرجوع.</string>
     <string name="swipe_up_to_switch_apps_title">التنقل باستخدام زرّين</string>
-    <string name="switch_off_text">غير مفعّلة</string>
-    <string name="switch_on_text">مفعّلة</string>
+    <string name="switch_off_text">غير مفعّل</string>
+    <string name="switch_on_text">مفعّل</string>
     <string name="switch_skin_doing">تغيير السمة...</string>
     <string name="switch_theme_has_success">تم</string>
     <string name="sync_active">المزامنة نشطة</string>
@@ -5783,7 +5812,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="tethering_interface_options">التوصيل</string>
     <string name="tethering_settings_not_available">لا تتوفر إعدادات الربط لهذا المستخدم</string>
     <string name="text_waiting">تحميل...</string>
-    <string name="theme_accent_color_title">لون تمييزي</string>
+    <string name="theme_accent_color_title">درجة اللون</string>
     <string name="theme_customization_device_default">الإعداد التلقائي للجهاز</string>
     <string name="theme_switch_dark">الظلام</string>
     <string name="theme_switch_dark_mode_summary">تمكين نسق الظلام في النظام بأكمله</string>
@@ -5800,13 +5829,13 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="time_picker_title">الوقت</string>
     <string name="time_spent_in_app_pref_title">وقت النظر إلى الشاشة</string>
     <string name="time_unit_just_now">للتو</string>
-    <string name="timepower_edit_title">إعداد تشغيل/إيقاف الطاقة المجدول</string>
+    <string name="timepower_edit_title">إعداد تشغيل/إيقاف التشغيل المجدول</string>
     <string name="timepower_power_off">إيقاف الطاقة</string>
     <string name="timepower_power_off_title">جدولة إيقاف الطاقة</string>
     <string name="timepower_power_on">تشغيل الطاقة</string>
     <string name="timepower_power_on_title">جدولة تشغيل الطاقة</string>
     <string name="timepower_time_duplicate">إعداد الوقت المتكرر. الرجاء إعادة المحاولة!</string>
-    <string name="timer_shutdown_startup_settings_title">تشغيل/إيقاف الطاقة المجدول</string>
+    <string name="timer_shutdown_startup_settings_title">تشغيل/إيقاف التشغيل المجدول</string>
     <string name="title_activity_traffic_usage_settings">@string/data_usage_package_set</string>
     <string name="title_convert_fbe">التحويل إلى ترميز على الملف</string>
     <string name="title_font_size">حجم الخط</string>
@@ -5817,7 +5846,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="touchscreen_camera_gesture_summary">ارسم حرف O لفتح الكاميرا</string>
     <string name="touchscreen_camera_gesture_title">فتح الكاميرا</string>
     <string name="touchscreen_double_tap_to_wake_gesture_summary">المس الشاشة مرتين لتنشيط الجهاز</string>
-    <string name="touchscreen_double_tap_to_wake_gesture_title">اللمس مرتين للتنشيط</string>
+    <string name="touchscreen_double_tap_to_wake_gesture_title">النقر مرتين للتنشيط</string>
     <string name="touchscreen_flashlight_gesture_summary">ارسم حرف V لتشغيل المصباح</string>
     <string name="touchscreen_flashlight_gesture_title">تشغيل المصباح</string>
     <string name="touchscreen_music_gesture_summary">ارسم || باستخدام إصبعين لتشغيل الموسيقى أو إيقافها مؤقتًا. ارسم &lt; أو > لتشغيل المسار السابق أو التالي</string>
@@ -6633,7 +6662,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="wifi_scan_throttling">‏تقييد البحث عن شبكات Wi-Fi</string>
     <string name="wifi_scan_throttling_summary">لتقليل استنفاد البطارية وتحسين أداء الشبكة.</string>
     <string name="wifi_security">الأمان</string>
-    <string name="wifi_security_dialog">مع فتح الأمان، يمكن لأي جهاز الاتصال بنقطة اتصال الجوال الخاص بك واستخدام اتصال بيانات الجوال الخاص بك.</string>
+    <string name="wifi_security_dialog">باستخدام أمان الفتح، يمكن لأي جهاز الاتصال بنقطة الاتصال الخاصة بجوالك واستخدام بيانات جوالك.</string>
     <string name="wifi_security_none">بلا أمان</string>
     <string name="wifi_security_open">فتح</string>
     <string name="wifi_select_network">‏تحديد Wi-Fi</string>
@@ -6741,8 +6770,9 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="wizard_finish">إنهاء</string>
     <string name="wizard_next">التالي</string>
     <string name="work_alarm_ringtone_title">الصوت التلقائي لمنبّه العمل</string>
-    <string name="work_life_balance">Work Life Balance</string>
-    <string name="work_life_disabled_toast">تم تعطيل ميزة التوازن بين العمل والحياة.</string>
+    <string name="work_life_balance">التوازن بين العمل والحياة</string>
+    <string name="work_life_banner_summary">يمكن أن تُشتت الإشعارات. أعطهم الأولوية للعثور على work-life balance المثالي.</string>
+    <string name="work_life_disabled_toast">تم تعطيل ميزة work-life balance.</string>
     <string name="work_mode_label">الملف الشخصي للعمل</string>
     <string name="work_mode_off_summary">التطبيقات والإشعارات غير مفعّلة</string>
     <string name="work_mode_on_summary">ملف شخصي للعمل تديره مؤسستك</string>

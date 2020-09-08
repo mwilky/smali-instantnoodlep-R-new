@@ -17,7 +17,7 @@
 .method public getPreferenceKey()Ljava/lang/String;
     .locals 0
 
-    const-string p0, "unlock_set_or_change_profile"
+    const-string/jumbo p0, "unlock_set_or_change_profile"
 
     return-object p0
 .end method

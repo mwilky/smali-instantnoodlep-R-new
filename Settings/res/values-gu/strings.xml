@@ -2173,6 +2173,7 @@ Codec પસંદગી ટ્રિગર કરો: પ્લેબૅક ક
     <string name="keywords_lock_screen_notif">લૉક સ્ક્રીન નોટિફિકેશન, નોટિફિકેશન</string>
     <string name="keywords_lockscreen">અનલૉક કરવા માટે સ્લાઇડ કરો, પાસવર્ડ, પૅટર્ન, પિન</string>
     <string name="keywords_lockscreen_bypass">લૉક સ્ક્રીન, લૉક સ્ક્રીન, છોડો, બાયપાસ</string>
+    <string name="keywords_media_controls">મીડિયા</string>
     <string name="keywords_model_and_hardware">અનુક્રમ નંબર, હાર્ડવેર વર્ઝન</string>
     <string name="keywords_more_mobile_networks">સેલ્યુલર, મોબાઇલ, સેલ કૅરિઅર, વાયરલેસ, ડેટા, 4g, 3g, 2g, lte</string>
     <string name="keywords_network_reset">ફરીથી સેટ કરો, પુનઃસ્થાપિત કરો, ફેક્ટરી</string>
@@ -2549,6 +2550,12 @@ Codec પસંદગી ટ્રિગર કરો: પ્લેબૅક ક
     <string name="master_clear_title">બધો ડેટા કાઢી નાખો (ફેક્ટરી રીસેટ)</string>
     <string name="maximum_memory_use">મહત્તમ મેમરી વપરાશ</string>
     <string name="media_category">મીડિયા</string>
+    <string name="media_controls_hide_player">પ્લેયર છુપાવો</string>
+    <string name="media_controls_no_players">કોઈ પ્લેયર ઉપલબ્ધ નથી</string>
+    <string name="media_controls_resume_description">આ પ્લેયર ઝડપી સેટિંગના મોટા કરેલા પૅનલમાંથી કોઈ સત્ર ફરીથી શરૂ કરવાની મંજૂરી આપે છે.</string>
+    <string name="media_controls_show_player">પ્લેયર બતાવો</string>
+    <string name="media_controls_summary">મીડિયાનું સત્ર સમાપ્ત થઈ જાય ત્યારે, પ્લેયર છુપાવો</string>
+    <string name="media_controls_title">મીડિયા</string>
     <string name="media_out_summary_ongoing_call_state">કૉલ દરમિયાન અનુપલબ્ધ</string>
     <string name="media_output_default_summary">આ ડિવાઇસ</string>
     <string name="media_output_disconnected_status">%1$s (ડિસ્કનેક્ટ થયેલું)</string>
@@ -2806,7 +2813,6 @@ Codec પસંદગી ટ્રિગર કરો: પ્લેબૅક ક
     <string name="night_display_text">રાત્રિ પ્રકાશ, તમારી સ્ક્રીન પર પીળાશ પડતી નારંગી રંગછટા કરી દે છે. આ મંદ પ્રકાશમાં તમારી સ્ક્રીન પર જોવાનું અથવા વાંચવાનું સરળ બનાવે છે અને વધુ સહેલાઈથી ઊંઘવામાં તમારી સહાય કરી શકે છે.</string>
     <string name="night_display_title">રાત્રિ પ્રકાશ</string>
     <string name="no">નહીં</string>
-    <string name="no_5g_in_dsds_text">2 સિમનો ઉપયોગ કરવા પર, આ ફોન 4G નેટવર્ક સુધી મર્યાદિત રહેશે. <annotation id="url">વધુ જાણો</annotation>.</string>
     <string name="no_application">કંઈ નહીં</string>
     <string name="no_applications">કોઈ ઍપ્લિકેશનો નથી.</string>
     <string name="no_battery_summary">છેલ્લા પૂર્ણ ચાર્જ પછી કોઈ બૅટરી ઉપયોગ નહીં</string>
@@ -2923,6 +2929,7 @@ Codec પસંદગી ટ્રિગર કરો: પ્લેબૅક ક
     <string name="notification_priority_title">પ્રાધાન્યતા</string>
     <string name="notification_pulse_title">લાઇટ ઝબકવી</string>
     <string name="notification_ringtone_title">ડિફૉલ્ટ નોટિફિકેશન સાઉન્ડ</string>
+    <string name="notification_screen_summary">નોટિફિકેશન ઇતિહાસ, બબલ, તાજેતરમાં મોકલેલા</string>
     <string name="notification_settings_work_profile">કાર્યાલયની પ્રોફાઇલમાં ઍપ માટે નોટિફિકેશન ઍક્સેસ ઉપલબ્ધ નથી.</string>
     <string name="notification_show_lights_title">લાઇટ ઝબકવી</string>
     <string name="notification_silence_title">સાઇલન્ટ</string>
@@ -3030,6 +3037,8 @@ Codec પસંદગી ટ્રિગર કરો: પ્લેબૅક ક
     <string name="platform_compat_dashboard_title">ઍપની સુસંગતતામાં ફેરફારો</string>
     <string name="platform_compat_default_disabled_title">ડિફૉલ્ટ રીતે બંધ કરેલા ફેરફારો</string>
     <string name="platform_compat_default_enabled_title">ડિફૉલ્ટ રીતે ચાલુ કરેલા ફેરફારો</string>
+    <string name="platform_compat_dialog_text_no_apps">ફક્ત ડિબગ કરી શકાય તેવી ઍપ માટે જ ઍપની સુસંગતતામાંના ફેરફારોમાં બદલાવ કરી શકાય છે. ડિબગ કરી શકાય તેવી ઍપ ઇન્સ્ટૉલ કરો અને ફરી પ્રયાસ કરો.</string>
+    <string name="platform_compat_dialog_title_no_apps">કોઈ ઍપ ઉપલબ્ધ નથી</string>
     <string name="please_select_phase2">ફેઝ 2 પ્રમાણીકરણ</string>
     <string name="pointer_location">પોઇન્ટર સ્થાન</string>
     <string name="pointer_location_summary">વર્તમાન ટચ ડેટા દર્શાવતું સ્ક્રીન ઓવરલે</string>

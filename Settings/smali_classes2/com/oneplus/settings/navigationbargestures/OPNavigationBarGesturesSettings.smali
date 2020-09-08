@@ -77,7 +77,7 @@
 
     move-result-object p0
 
-    const v0, 0x10e0086
+    const v0, 0x10e008c
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -103,7 +103,7 @@
 
     move-result-object p0
 
-    const v0, 0x10e0086
+    const v0, 0x10e008c
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -139,7 +139,7 @@
 
     move-result-object p0
 
-    const v0, 0x10e0086
+    const v0, 0x10e008c
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -319,11 +319,45 @@
 .end method
 
 .method private static setNavBarInteractionMode(Landroid/content/om/IOverlayManager;Ljava/lang/String;)V
-    .locals 1
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "setNavBarInteractionMode overlayPackage : "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "OPNavigationBarGesturesSettings"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :try_start_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "setEnabledExclusiveInCategory overlayPackage : "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, -0x2
 
-    :try_start_0
     invoke-interface {p0, p1, v0}, Landroid/content/om/IOverlayManager;->setEnabledExclusiveInCategory(Ljava/lang/String;I)Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -916,7 +950,7 @@
 
     invoke-direct {p2, p0}, Lcom/oneplus/settings/navigationbargestures/-$$Lambda$OPNavigationBarGesturesSettings$FBs9QW0KxYbC2etmrPZQQKvglhQ;-><init>(Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;)V
 
-    const-wide/16 v0, 0x3e8
+    const-wide/16 v0, 0xbb8
 
     invoke-virtual {p1, p2, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
@@ -1015,7 +1049,7 @@
     :cond_1
     iget-object v0, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mGestureNavigationBar:Lcom/android/settings/widget/RadioButtonPreference;
 
-    const-wide/16 v3, 0x1f4
+    const-wide/16 v3, 0xbb8
 
     const-string v5, "com.android.internal.systemui.navbar.gestural"
 

@@ -352,6 +352,66 @@
     return-void
 .end method
 
+.method private getAdaptiveIconDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    .locals 2
+
+    :try_start_0
+    instance-of p0, p1, Landroid/graphics/drawable/BitmapDrawable;
+
+    if-eqz p0, :cond_0
+
+    return-object p1
+
+    :cond_0
+    instance-of p0, p1, Landroid/graphics/drawable/AdaptiveIconDrawable;
+
+    if-eqz p0, :cond_1
+
+    const/4 p0, 0x2
+
+    new-array p0, p0, [Landroid/graphics/drawable/Drawable;
+
+    const/4 v0, 0x0
+
+    move-object v1, p1
+
+    check-cast v1, Landroid/graphics/drawable/AdaptiveIconDrawable;
+
+    invoke-virtual {v1}, Landroid/graphics/drawable/AdaptiveIconDrawable;->getBackground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    aput-object v1, p0, v0
+
+    const/4 v0, 0x1
+
+    check-cast p1, Landroid/graphics/drawable/AdaptiveIconDrawable;
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/AdaptiveIconDrawable;->getForeground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    aput-object p1, p0, v0
+
+    new-instance p1, Landroid/graphics/drawable/LayerDrawable;
+
+    invoke-direct {p1, p0}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_1
+    return-object p1
+
+    :catch_0
+    move-exception p0
+
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
 .method private getAppRestrictBackground()Z
     .locals 1
 
@@ -590,9 +650,11 @@
 
 # virtual methods
 .method bindData(I)V
-    .locals 7
+    .locals 9
 
     iget-object v0, p0, Lcom/android/settings/datausage/AppDataUsage;->mUsageData:Ljava/util/List;
+
+    const-wide/16 v1, 0x0
 
     if-eqz v0, :cond_1
 
@@ -615,48 +677,99 @@
 
     invoke-virtual {p1}, Lcom/android/settingslib/net/NetworkCycleDataForUid;->getBackgroudUsage()J
 
-    move-result-wide v0
+    move-result-wide v3
 
     invoke-virtual {p1}, Lcom/android/settingslib/net/NetworkCycleDataForUid;->getForegroudUsage()J
 
-    move-result-wide v2
+    move-result-wide v5
 
     goto :goto_1
 
     :cond_1
     :goto_0
-    const-wide/16 v0, 0x0
+    move-wide v3, v1
 
-    move-wide v2, v0
+    move-wide v5, v3
 
     :goto_1
-    add-long v4, v0, v2
+    add-long v7, v3, v5
+
+    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isUsvMode()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    iget-object p1, p0, Lcom/android/settings/datausage/AppDataUsage;->mAppItem:Lcom/android/settingslib/AppItem;
+
+    iget p1, p1, Lcom/android/settingslib/AppItem;->key:I
+
+    const/16 v0, 0x97
+
+    if-ne p1, v0, :cond_2
+
+    invoke-static {}, Lcom/android/settings/datausage/DataUsageUtils;->getVtDataUsageBytes()J
+
+    move-result-wide v3
 
     iget-object p1, p0, Lcom/android/settings/datausage/AppDataUsage;->mTotalUsage:Landroidx/preference/Preference;
 
-    iget-object v6, p0, Lcom/android/settings/datausage/AppDataUsage;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings/datausage/AppDataUsage;->mContext:Landroid/content/Context;
 
-    invoke-static {v6, v4, v5}, Lcom/android/settings/datausage/DataUsageUtils;->formatDataUsage(Landroid/content/Context;J)Ljava/lang/CharSequence;
+    invoke-static {v0, v3, v4}, Lcom/android/settings/datausage/DataUsageUtils;->formatDataUsage(Landroid/content/Context;J)Ljava/lang/CharSequence;
 
-    move-result-object v4
+    move-result-object v0
 
-    invoke-virtual {p1, v4}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+    invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
     iget-object p1, p0, Lcom/android/settings/datausage/AppDataUsage;->mForegroundUsage:Landroidx/preference/Preference;
 
-    iget-object v4, p0, Lcom/android/settings/datausage/AppDataUsage;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings/datausage/AppDataUsage;->mContext:Landroid/content/Context;
 
-    invoke-static {v4, v2, v3}, Lcom/android/settings/datausage/DataUsageUtils;->formatDataUsage(Landroid/content/Context;J)Ljava/lang/CharSequence;
+    invoke-static {v0, v3, v4}, Lcom/android/settings/datausage/DataUsageUtils;->formatDataUsage(Landroid/content/Context;J)Ljava/lang/CharSequence;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {p1, v2}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+    invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
     iget-object p1, p0, Lcom/android/settings/datausage/AppDataUsage;->mBackgroundUsage:Landroidx/preference/Preference;
 
     iget-object p0, p0, Lcom/android/settings/datausage/AppDataUsage;->mContext:Landroid/content/Context;
 
-    invoke-static {p0, v0, v1}, Lcom/android/settings/datausage/DataUsageUtils;->formatDataUsage(Landroid/content/Context;J)Ljava/lang/CharSequence;
+    invoke-static {p0, v1, v2}, Lcom/android/settings/datausage/DataUsageUtils;->formatDataUsage(Landroid/content/Context;J)Ljava/lang/CharSequence;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+
+    return-void
+
+    :cond_2
+    iget-object p1, p0, Lcom/android/settings/datausage/AppDataUsage;->mTotalUsage:Landroidx/preference/Preference;
+
+    iget-object v0, p0, Lcom/android/settings/datausage/AppDataUsage;->mContext:Landroid/content/Context;
+
+    invoke-static {v0, v7, v8}, Lcom/android/settings/datausage/DataUsageUtils;->formatDataUsage(Landroid/content/Context;J)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+
+    iget-object p1, p0, Lcom/android/settings/datausage/AppDataUsage;->mForegroundUsage:Landroidx/preference/Preference;
+
+    iget-object v0, p0, Lcom/android/settings/datausage/AppDataUsage;->mContext:Landroid/content/Context;
+
+    invoke-static {v0, v5, v6}, Lcom/android/settings/datausage/DataUsageUtils;->formatDataUsage(Landroid/content/Context;J)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+
+    iget-object p1, p0, Lcom/android/settings/datausage/AppDataUsage;->mBackgroundUsage:Landroidx/preference/Preference;
+
+    iget-object p0, p0, Lcom/android/settings/datausage/AppDataUsage;->mContext:Landroid/content/Context;
+
+    invoke-static {p0, v3, v4}, Lcom/android/settings/datausage/DataUsageUtils;->formatDataUsage(Landroid/content/Context;J)Ljava/lang/CharSequence;
 
     move-result-object p0
 
@@ -1173,15 +1286,15 @@
 
     const-string v7, "restrict_background"
 
-    const-string v8, "unrestricted_data_saver"
+    const-string/jumbo v8, "unrestricted_data_saver"
 
-    if-lez v2, :cond_16
+    if-lez v2, :cond_18
 
     invoke-static {v2}, Landroid/os/UserHandle;->isApp(I)Z
 
     move-result v2
 
-    if-nez v2, :cond_e
+    if-nez v2, :cond_f
 
     iget-object v2, p0, Lcom/android/settings/datausage/AppDataUsage;->mAppItem:Lcom/android/settingslib/AppItem;
 
@@ -1191,6 +1304,45 @@
 
     move-result-object p1
 
+    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isUsvMode()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_e
+
+    iget-object v2, p0, Lcom/android/settings/datausage/AppDataUsage;->mAppItem:Lcom/android/settingslib/AppItem;
+
+    iget v2, v2, Lcom/android/settingslib/AppItem;->key:I
+
+    const/16 v9, 0x97
+
+    if-ne v2, v9, :cond_e
+
+    new-instance p1, Lcom/android/settingslib/net/UidDetail;
+
+    invoke-direct {p1}, Lcom/android/settingslib/net/UidDetail;-><init>()V
+
+    sget v2, Lcom/android/settings/R$string;->data_usage_video_call_title:I
+
+    invoke-virtual {p0, v2}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    iput-object v2, p1, Lcom/android/settingslib/net/UidDetail;->label:Ljava/lang/CharSequence;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    sget v9, Lcom/android/settings/R$drawable;->ic_video_call_icon:I
+
+    invoke-virtual {v2, v9}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v2
+
+    iput-object v2, p1, Lcom/android/settingslib/net/UidDetail;->icon:Landroid/graphics/drawable/Drawable;
+
+    :cond_e
     iget-object v2, p1, Lcom/android/settingslib/net/UidDetail;->icon:Landroid/graphics/drawable/Drawable;
 
     iput-object v2, p0, Lcom/android/settings/datausage/AppDataUsage;->mIcon:Landroid/graphics/drawable/Drawable;
@@ -1205,16 +1357,16 @@
 
     invoke-virtual {p0, v6}, Lcom/android/settings/SettingsPreferenceFragment;->removePreference(Ljava/lang/String;)Z
 
-    goto/16 :goto_a
+    goto/16 :goto_b
 
-    :cond_e
+    :cond_f
     iget-object p1, p0, Lcom/android/settings/datausage/AppDataUsage;->mPackages:Landroid/util/ArraySet;
 
     invoke-virtual {p1}, Landroid/util/ArraySet;->size()I
 
     move-result p1
 
-    if-eqz p1, :cond_f
+    if-eqz p1, :cond_11
 
     :try_start_0
     iget-object p1, p0, Lcom/android/settings/datausage/AppDataUsage;->mPackageManager:Landroid/content/pm/PackageManager;
@@ -1238,6 +1390,40 @@
     invoke-virtual {p1, v2, v3, v9}, Landroid/content/pm/PackageManager;->getApplicationInfoAsUser(Ljava/lang/String;II)Landroid/content/pm/ApplicationInfo;
 
     move-result-object p1
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
+
+    :try_start_1
+    iget-object v2, p0, Lcom/android/settings/datausage/AppDataUsage;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v2
+
+    iget-object v9, p1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v2, v9, v3}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+
+    move-result-object v9
+
+    invoke-virtual {v9, v2}, Landroid/content/pm/ApplicationInfo;->loadIcon(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v2
+    :try_end_1
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
+
+    goto :goto_a
+
+    :catch_0
+    move-exception v2
+
+    :try_start_2
+    invoke-virtual {v2}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
+
+    move-object v2, v0
+
+    :goto_a
+    if-nez v2, :cond_10
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -1248,6 +1434,11 @@
     move-result-object v2
 
     invoke-virtual {v2, p1}, Landroid/util/IconDrawableFactory;->getBadgedIcon(Landroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v2
+
+    :cond_10
+    invoke-direct {p0, v2}, Lcom/android/settings/datausage/AppDataUsage;->getAdaptiveIconDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
@@ -1264,16 +1455,16 @@
     iget-object p1, p1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
     iput-object p1, p0, Lcom/android/settings/datausage/AppDataUsage;->mPackageName:Ljava/lang/String;
-    :try_end_0
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_2
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_2 .. :try_end_2} :catch_1
 
-    :catch_0
-    :cond_f
+    :catch_1
+    :cond_11
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUss()Z
 
     move-result p1
 
-    if-nez p1, :cond_10
+    if-nez p1, :cond_12
 
     invoke-virtual {p0, v6}, Lcom/android/settings/SettingsPreferenceFragment;->removePreference(Ljava/lang/String;)Z
 
@@ -1297,9 +1488,9 @@
 
     invoke-virtual {p1, p0}, Landroidx/preference/Preference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
 
-    goto :goto_a
+    goto :goto_b
 
-    :cond_10
+    :cond_12
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -1356,7 +1547,7 @@
 
     array-length v6, v2
 
-    if-le v6, p1, :cond_11
+    if-le v6, p1, :cond_13
 
     iget-object v6, p0, Lcom/android/settings/datausage/AppDataUsage;->mRestrictBackgroundUss:Lcom/android/settingslib/RestrictedPreference;
 
@@ -1364,7 +1555,7 @@
 
     invoke-virtual {v6, p1}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
-    :cond_11
+    :cond_13
     iget-object p1, p0, Lcom/android/settings/datausage/AppDataUsage;->mRestrictBackgroundUss:Lcom/android/settingslib/RestrictedPreference;
 
     new-instance v2, Lcom/android/settings/datausage/AppDataUsage$1;
@@ -1373,7 +1564,7 @@
 
     invoke-virtual {p1, v2}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    :goto_a
+    :goto_b
     new-instance p1, Lcom/android/settings/datausage/DataSaverBackend;
 
     iget-object v2, p0, Lcom/android/settings/datausage/AppDataUsage;->mContext:Landroid/content/Context;
@@ -1410,12 +1601,12 @@
 
     move-result-object v2
 
-    :cond_12
+    :cond_14
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v6
 
-    if-eqz v6, :cond_13
+    if-eqz v6, :cond_15
 
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1433,25 +1624,25 @@
 
     move-result-object v6
 
-    if-eqz v6, :cond_12
+    if-eqz v6, :cond_14
 
     move v3, v1
 
-    :cond_13
-    if-nez v3, :cond_14
+    :cond_15
+    if-nez v3, :cond_16
 
     invoke-virtual {p0, v5}, Lcom/android/settings/SettingsPreferenceFragment;->removePreference(Ljava/lang/String;)Z
 
     iput-object v0, p0, Lcom/android/settings/datausage/AppDataUsage;->mAppSettings:Landroidx/preference/Preference;
 
-    :cond_14
+    :cond_16
     iget-object p1, p0, Lcom/android/settings/datausage/AppDataUsage;->mPackages:Landroid/util/ArraySet;
 
     invoke-virtual {p1}, Landroid/util/ArraySet;->size()I
 
     move-result p1
 
-    if-le p1, v1, :cond_15
+    if-le p1, v1, :cond_17
 
     invoke-virtual {p0, v4}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
@@ -1473,14 +1664,14 @@
 
     invoke-virtual {p1, v0, v1, p0}, Landroidx/loader/app/LoaderManager;->restartLoader(ILandroid/os/Bundle;Landroidx/loader/app/LoaderManager$LoaderCallbacks;)Landroidx/loader/content/Loader;
 
-    goto :goto_b
+    goto :goto_c
 
-    :cond_15
+    :cond_17
     invoke-virtual {p0, v4}, Lcom/android/settings/SettingsPreferenceFragment;->removePreference(Ljava/lang/String;)Z
 
-    goto :goto_b
+    goto :goto_c
 
-    :cond_16
+    :cond_18
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -1517,7 +1708,7 @@
 
     invoke-virtual {p0, v6}, Lcom/android/settings/SettingsPreferenceFragment;->removePreference(Ljava/lang/String;)Z
 
-    :goto_b
+    :goto_c
     return-void
 .end method
 
@@ -1740,7 +1931,7 @@
 .end method
 
 .method public onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
-    .locals 6
+    .locals 7
 
     invoke-super {p0, p1, p2}, Landroidx/preference/PreferenceFragmentCompat;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
@@ -1770,95 +1961,95 @@
     move-object p1, p2
 
     :goto_0
+    const-string v1, "AppDataUsage"
+
     if-eqz p1, :cond_1
 
     :try_start_0
-    iget-object v1, p0, Lcom/android/settings/datausage/AppDataUsage;->mPackageManager:Landroid/content/pm/PackageManager;
+    iget-object v2, p0, Lcom/android/settings/datausage/AppDataUsage;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    iget-object v2, p0, Lcom/android/settings/datausage/AppDataUsage;->mAppItem:Lcom/android/settingslib/AppItem;
+    iget-object v3, p0, Lcom/android/settings/datausage/AppDataUsage;->mAppItem:Lcom/android/settingslib/AppItem;
 
-    iget v2, v2, Lcom/android/settingslib/AppItem;->key:I
+    iget v3, v3, Lcom/android/settingslib/AppItem;->key:I
 
-    invoke-static {v2}, Landroid/os/UserHandle;->getUserId(I)I
+    invoke-static {v3}, Landroid/os/UserHandle;->getUserId(I)I
+
+    move-result v3
+
+    invoke-virtual {v2, p1, v3}, Landroid/content/pm/PackageManager;->getPackageUidAsUser(Ljava/lang/String;I)I
 
     move-result v2
-
-    invoke-virtual {v1, p1, v2}, Landroid/content/pm/PackageManager;->getPackageUidAsUser(Ljava/lang/String;I)I
-
-    move-result v1
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_1
 
     :catch_0
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "Skipping UID because cannot find package "
+    const-string v3, "Skipping UID because cannot find package "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    const-string v2, "AppDataUsage"
-
-    invoke-static {v2, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
-    move v1, v0
+    move v2, v0
 
     :goto_1
-    iget-object v2, p0, Lcom/android/settings/datausage/AppDataUsage;->mAppItem:Lcom/android/settingslib/AppItem;
+    iget-object v3, p0, Lcom/android/settings/datausage/AppDataUsage;->mAppItem:Lcom/android/settingslib/AppItem;
 
-    iget v2, v2, Lcom/android/settingslib/AppItem;->key:I
+    iget v3, v3, Lcom/android/settingslib/AppItem;->key:I
 
-    if-lez v2, :cond_2
+    if-lez v3, :cond_2
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
     goto :goto_2
 
     :cond_2
-    move v2, v0
+    move v3, v0
 
     :goto_2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
-    move-result-object v3
-
-    invoke-static {v3}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
     move-result-object v4
 
-    sget v5, Lcom/android/settings/R$layout;->op_settings_entity_header:I
+    invoke-static {v4}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
-    invoke-virtual {v4, v5, p2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+    move-result-object v5
+
+    sget v6, Lcom/android/settings/R$layout;->op_settings_entity_header:I
+
+    invoke-virtual {v5, v6, p2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p2
 
-    invoke-static {v3, p0, p2}, Lcom/android/settings/widget/EntityHeaderController;->newInstance(Landroid/app/Activity;Landroidx/fragment/app/Fragment;Landroid/view/View;)Lcom/android/settings/widget/EntityHeaderController;
+    invoke-static {v4, p0, p2}, Lcom/android/settings/widget/EntityHeaderController;->newInstance(Landroid/app/Activity;Landroidx/fragment/app/Fragment;Landroid/view/View;)Lcom/android/settings/widget/EntityHeaderController;
 
     move-result-object p2
 
     invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getListView()Landroidx/recyclerview/widget/RecyclerView;
 
-    move-result-object v4
+    move-result-object v5
 
     invoke-virtual {p0}, Lcom/android/settingslib/core/lifecycle/ObservablePreferenceFragment;->getSettingsLifecycle()Lcom/android/settingslib/core/lifecycle/Lifecycle;
 
-    move-result-object v5
+    move-result-object v6
 
-    invoke-virtual {p2, v4, v5}, Lcom/android/settings/widget/EntityHeaderController;->setRecyclerView(Landroidx/recyclerview/widget/RecyclerView;Lcom/android/settingslib/core/lifecycle/Lifecycle;)Lcom/android/settings/widget/EntityHeaderController;
+    invoke-virtual {p2, v5, v6}, Lcom/android/settings/widget/EntityHeaderController;->setRecyclerView(Landroidx/recyclerview/widget/RecyclerView;Lcom/android/settingslib/core/lifecycle/Lifecycle;)Lcom/android/settings/widget/EntityHeaderController;
 
-    invoke-virtual {p2, v1}, Lcom/android/settings/widget/EntityHeaderController;->setUid(I)Lcom/android/settings/widget/EntityHeaderController;
+    invoke-virtual {p2, v2}, Lcom/android/settings/widget/EntityHeaderController;->setUid(I)Lcom/android/settings/widget/EntityHeaderController;
 
-    invoke-virtual {p2, v2}, Lcom/android/settings/widget/EntityHeaderController;->setHasAppInfoLink(Z)Lcom/android/settings/widget/EntityHeaderController;
+    invoke-virtual {p2, v3}, Lcom/android/settings/widget/EntityHeaderController;->setHasAppInfoLink(Z)Lcom/android/settings/widget/EntityHeaderController;
 
     invoke-virtual {p2, v0, v0}, Lcom/android/settings/widget/EntityHeaderController;->setButtonActions(II)Lcom/android/settings/widget/EntityHeaderController;
 
@@ -1876,16 +2067,61 @@
 
     move-result-object p1
 
-    invoke-virtual {p2, v3, p1}, Lcom/android/settings/widget/EntityHeaderController;->done(Landroid/app/Activity;Landroid/content/Context;)Lcom/android/settingslib/widget/LayoutPreference;
+    invoke-virtual {p2, v4, p1}, Lcom/android/settings/widget/EntityHeaderController;->done(Landroid/app/Activity;Landroid/content/Context;)Lcom/android/settingslib/widget/LayoutPreference;
 
     move-result-object p1
 
     invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
 
+    move-result-object p2
+
+    invoke-virtual {p2, p1}, Landroidx/preference/PreferenceGroup;->addPreference(Landroidx/preference/Preference;)Z
+
+    iget-object p2, p0, Lcom/android/settings/datausage/AppDataUsage;->mIcon:Landroid/graphics/drawable/Drawable;
+
+    instance-of p2, p2, Landroid/graphics/drawable/LayerDrawable;
+
+    if-eqz p2, :cond_3
+
+    const-string/jumbo p2, "updateState drawable instanceof LayerDrawable"
+
+    invoke-static {v1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object p2, p0, Lcom/android/settings/datausage/AppDataUsage;->mContext:Landroid/content/Context;
+
+    invoke-static {p2}, Lcom/bumptech/glide/Glide;->with(Landroid/content/Context;)Lcom/bumptech/glide/RequestManager;
+
+    move-result-object p2
+
+    iget-object p0, p0, Lcom/android/settings/datausage/AppDataUsage;->mIcon:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {p2, p0}, Lcom/bumptech/glide/RequestManager;->load(Landroid/graphics/drawable/Drawable;)Lcom/bumptech/glide/RequestBuilder;
+
     move-result-object p0
 
-    invoke-virtual {p0, p1}, Landroidx/preference/PreferenceGroup;->addPreference(Landroidx/preference/Preference;)Z
+    new-instance p2, Lcom/bumptech/glide/load/resource/bitmap/CircleCrop;
 
+    invoke-direct {p2}, Lcom/bumptech/glide/load/resource/bitmap/CircleCrop;-><init>()V
+
+    invoke-static {p2}, Lcom/bumptech/glide/request/RequestOptions;->bitmapTransform(Lcom/bumptech/glide/load/Transformation;)Lcom/bumptech/glide/request/RequestOptions;
+
+    move-result-object p2
+
+    invoke-virtual {p0, p2}, Lcom/bumptech/glide/RequestBuilder;->apply(Lcom/bumptech/glide/request/BaseRequestOptions;)Lcom/bumptech/glide/RequestBuilder;
+
+    move-result-object p0
+
+    sget p2, Lcom/android/settings/R$id;->entity_header_icon:I
+
+    invoke-virtual {p1, p2}, Lcom/android/settingslib/widget/LayoutPreference;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/ImageView;
+
+    invoke-virtual {p0, p1}, Lcom/bumptech/glide/RequestBuilder;->into(Landroid/widget/ImageView;)Lcom/bumptech/glide/request/target/ViewTarget;
+
+    :cond_3
     return-void
 .end method
 

@@ -4,4 +4,4 @@
 
 
 # static fields
-.field public static final default_icon_bitmap_size:I = 0x7f070128
+.field public static final default_icon_bitmap_size:I = 0x7f07012b

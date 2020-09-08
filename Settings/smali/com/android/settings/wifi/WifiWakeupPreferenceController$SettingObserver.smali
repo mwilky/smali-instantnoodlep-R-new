@@ -79,11 +79,19 @@
 .method public register(Landroid/content/ContentResolver;Z)V
     .locals 1
 
+    if-eqz p2, :cond_0
+
     iget-object p2, p0, Lcom/android/settings/wifi/WifiWakeupPreferenceController$SettingObserver;->WIFI_WAKE_UP_ENABLED_URI:Landroid/net/Uri;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, p2, v0, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1, p0}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
+
+    :goto_0
     return-void
 .end method

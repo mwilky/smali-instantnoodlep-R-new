@@ -44,7 +44,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x4b
+    const/16 v2, 0x49
 
     const/4 v3, 0x0
 
@@ -58,7 +58,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0xef
+    const/16 v2, 0xe7
 
     aput v2, v1, v3
 

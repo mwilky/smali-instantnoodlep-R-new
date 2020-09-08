@@ -39,7 +39,11 @@
 
     iget-object p0, p0, Lcom/android/settings/users/UserSettings$7;->this$0:Lcom/android/settings/users/UserSettings;
 
-    invoke-static {p0}, Lcom/android/settings/users/UserSettings;->access$800(Lcom/android/settings/users/UserSettings;)V
+    invoke-static {p0}, Lcom/android/settings/users/UserSettings;->access$900(Lcom/android/settings/users/UserSettings;)I
+
+    move-result p1
+
+    invoke-static {p0, p1}, Lcom/android/settings/users/UserSettings;->access$1000(Lcom/android/settings/users/UserSettings;I)V
 
     return-void
 .end method

@@ -37,16 +37,6 @@
 .method public run()V
     .locals 3
 
-    iget-object v0, p0, Lcom/oneplus/settings/OPColorPickerActivity$2;->this$0:Lcom/oneplus/settings/OPColorPickerActivity;
-
-    invoke-static {v0}, Lcom/oneplus/settings/OPColorPickerActivity;->access$400(Lcom/oneplus/settings/OPColorPickerActivity;)Landroid/app/ActivityManager;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lcom/oneplus/settings/utils/OPApplicationUtils;->killProcess(Landroid/app/ActivityManager;Z)V
-
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V

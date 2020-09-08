@@ -67,6 +67,32 @@
     return p0
 .end method
 
+.method private synthetic lambda$onCreate$0(Landroid/view/View;)V
+    .locals 2
+
+    new-instance p1, Landroid/content/Intent;
+
+    const-string v0, "android.oem.intent.action.OP_LEGAL"
+
+    invoke-direct {p1, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string v0, "op_legal_notices_type"
+
+    const/16 v1, 0x8
+
+    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    const-string v0, "key_from_settings"
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    invoke-virtual {p0, p1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
+
+    return-void
+.end method
+
 .method private setFingerprintCount(Landroid/content/Intent;)Landroid/content/Intent;
     .locals 1
 
@@ -219,6 +245,14 @@
     return-void
 .end method
 
+.method public synthetic lambda$onCreate$0$SetupFingerprintEnrollIntroduction(Landroid/view/View;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/settings/biometrics/fingerprint/SetupFingerprintEnrollIntroduction;->lambda$onCreate$0(Landroid/view/View;)V
+
+    return-void
+.end method
+
 .method protected onActivityResult(IILandroid/content/Intent;)V
     .locals 1
 
@@ -353,6 +387,42 @@
     iput-boolean p1, p0, Lcom/android/settings/biometrics/fingerprint/SetupFingerprintEnrollIntroduction;->mAlreadyHadLockScreenSetup:Z
 
     :goto_0
+    sget p1, Lcom/android/settings/R$id;->functional_terms:I
+
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/TextView;
+
+    if-eqz p1, :cond_2
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isO2()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Landroidx/appcompat/app/AppCompatActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lcom/android/settings/R$color;->op_setupwizard_oxygen_accent_color:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    :cond_1
+    new-instance v0, Lcom/android/settings/biometrics/fingerprint/-$$Lambda$SetupFingerprintEnrollIntroduction$xs4t6BYGNOKxMXZZE2E8-lyO6og;
+
+    invoke-direct {v0, p0}, Lcom/android/settings/biometrics/fingerprint/-$$Lambda$SetupFingerprintEnrollIntroduction$xs4t6BYGNOKxMXZZE2E8-lyO6og;-><init>(Lcom/android/settings/biometrics/fingerprint/SetupFingerprintEnrollIntroduction;)V
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    :cond_2
     return-void
 .end method
 

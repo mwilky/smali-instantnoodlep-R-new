@@ -20,4 +20,4 @@
 
 .field public static final meter_consumed_color:I = 0x7f06015b
 
-.field public static final usage_graph_dots:I = 0x7f06040b
+.field public static final usage_graph_dots:I = 0x7f06040e

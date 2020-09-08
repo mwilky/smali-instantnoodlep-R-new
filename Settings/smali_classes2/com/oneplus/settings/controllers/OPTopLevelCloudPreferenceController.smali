@@ -50,7 +50,7 @@
 
     iget-object v0, p0, Lcom/oneplus/settings/controllers/OPTopLevelCloudPreferenceController;->mContext:Landroid/content/Context;
 
-    const-string v1, "com.oneplus.cloud"
+    const-string v1, "com.heytap.cloud"
 
     invoke-static {v0, v1}, Lcom/oneplus/settings/utils/OPUtils;->isAppExist(Landroid/content/Context;Ljava/lang/String;)Z
 
@@ -71,7 +71,7 @@
     :cond_0
     iget-object v0, p0, Lcom/oneplus/settings/controllers/OPTopLevelCloudPreferenceController;->mContext:Landroid/content/Context;
 
-    const-string v1, "com.heytap.cloud"
+    const-string v1, "com.oneplus.cloud"
 
     invoke-static {v0, v1}, Lcom/oneplus/settings/utils/OPUtils;->isAppExist(Landroid/content/Context;Ljava/lang/String;)Z
 
@@ -235,9 +235,9 @@
 .method public handlePreferenceTreeClick(Landroidx/preference/Preference;)Z
     .locals 3
 
-    const-string v0, "com.heytap.cloud"
+    const-string v0, "com.oneplus.cloud"
 
-    const-string v1, "com.oneplus.cloud"
+    const-string v1, "com.heytap.cloud"
 
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
@@ -262,13 +262,11 @@
 
     new-instance p1, Landroid/content/Intent;
 
-    const-string v0, "android.intent.action.ONEPLUSCLOUD"
+    const-string v0, "intent.action.ocloud.MAIN"
 
     invoke-direct {p1, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    const-string v0, "com.oneplus.cloud.activity.OPMainActivity"
-
-    invoke-virtual {p1, v1, v0}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {p1, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     iget-object p0, p0, Lcom/oneplus/settings/controllers/OPTopLevelCloudPreferenceController;->mContext:Landroid/content/Context;
 
@@ -287,11 +285,13 @@
 
     new-instance p1, Landroid/content/Intent;
 
-    const-string v1, "intent.action.ocloud.MAIN"
+    const-string v1, "android.intent.action.ONEPLUSCLOUD"
 
     invoke-direct {p1, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+    const-string v1, "com.oneplus.cloud.activity.OPMainActivity"
+
+    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     iget-object p0, p0, Lcom/oneplus/settings/controllers/OPTopLevelCloudPreferenceController;->mContext:Landroid/content/Context;
 

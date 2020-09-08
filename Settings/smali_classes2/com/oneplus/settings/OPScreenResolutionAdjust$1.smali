@@ -17,9 +17,15 @@
 .end annotation
 
 
+# instance fields
+.field final synthetic this$0:Lcom/oneplus/settings/OPScreenResolutionAdjust;
+
+
 # direct methods
 .method constructor <init>(Lcom/oneplus/settings/OPScreenResolutionAdjust;)V
     .locals 0
+
+    iput-object p1, p0, Lcom/oneplus/settings/OPScreenResolutionAdjust$1;->this$0:Lcom/oneplus/settings/OPScreenResolutionAdjust;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -32,6 +38,10 @@
     .locals 0
 
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+
+    iget-object p0, p0, Lcom/oneplus/settings/OPScreenResolutionAdjust$1;->this$0:Lcom/oneplus/settings/OPScreenResolutionAdjust;
+
+    invoke-static {p0}, Lcom/oneplus/settings/OPScreenResolutionAdjust;->access$000(Lcom/oneplus/settings/OPScreenResolutionAdjust;)V
 
     return-void
 .end method

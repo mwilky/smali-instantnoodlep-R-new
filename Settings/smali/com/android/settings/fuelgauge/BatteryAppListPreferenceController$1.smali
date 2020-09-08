@@ -38,9 +38,13 @@
 
     const/4 v1, 0x1
 
-    if-eq v0, v1, :cond_1
+    if-eq v0, v1, :cond_2
 
     const/4 v1, 0x2
+
+    if-eq v0, v1, :cond_1
+
+    const/16 v1, 0x3e8
 
     if-eq v0, v1, :cond_0
 
@@ -49,17 +53,40 @@
     :cond_0
     iget-object v0, p0, Lcom/android/settings/fuelgauge/BatteryAppListPreferenceController$1;->this$0:Lcom/android/settings/fuelgauge/BatteryAppListPreferenceController;
 
+    invoke-static {v0}, Lcom/android/settings/fuelgauge/BatteryAppListPreferenceController;->access$200(Lcom/android/settings/fuelgauge/BatteryAppListPreferenceController;)Lcom/oneplus/settings/highpowerapp/HighPowerAppModel;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oneplus/settings/highpowerapp/HighPowerAppModel;->update()V
+
+    iget-object v0, p0, Lcom/android/settings/fuelgauge/BatteryAppListPreferenceController$1;->this$0:Lcom/android/settings/fuelgauge/BatteryAppListPreferenceController;
+
+    invoke-static {v0}, Lcom/android/settings/fuelgauge/BatteryAppListPreferenceController;->access$300(Lcom/android/settings/fuelgauge/BatteryAppListPreferenceController;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    iget-object v0, p0, Lcom/android/settings/fuelgauge/BatteryAppListPreferenceController$1;->this$0:Lcom/android/settings/fuelgauge/BatteryAppListPreferenceController;
+
+    invoke-static {v0}, Lcom/android/settings/fuelgauge/BatteryAppListPreferenceController;->access$400(Lcom/android/settings/fuelgauge/BatteryAppListPreferenceController;)V
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Lcom/android/settings/fuelgauge/BatteryAppListPreferenceController$1;->this$0:Lcom/android/settings/fuelgauge/BatteryAppListPreferenceController;
+
     invoke-static {v0}, Lcom/android/settings/fuelgauge/BatteryAppListPreferenceController;->access$100(Lcom/android/settings/fuelgauge/BatteryAppListPreferenceController;)Lcom/android/settings/SettingsActivity;
 
     move-result-object v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     invoke-virtual {v0}, Landroid/app/Activity;->reportFullyDrawn()V
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/settings/fuelgauge/BatteryEntry;
@@ -86,7 +113,7 @@
 
     check-cast v1, Lcom/android/settings/fuelgauge/PowerGaugePreference;
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
     iget-object v2, v0, Lcom/android/settings/fuelgauge/BatteryEntry;->sipper:Lcom/android/internal/os/BatterySipper;
 
@@ -128,13 +155,13 @@
 
     sget-object v3, Lcom/android/internal/os/BatterySipper$DrainType;->APP:Lcom/android/internal/os/BatterySipper$DrainType;
 
-    if-ne v2, v3, :cond_2
+    if-ne v2, v3, :cond_3
 
     iget-object v0, v0, Lcom/android/settings/fuelgauge/BatteryEntry;->name:Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Lcom/android/settings/fuelgauge/PowerGaugePreference;->setContentDescription(Ljava/lang/String;)V
 
-    :cond_2
+    :cond_3
     :goto_0
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 

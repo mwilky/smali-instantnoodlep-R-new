@@ -22,6 +22,8 @@
 
 .field private final mMode:I
 
+.field private mWindow:Landroid/view/Window;
+
 
 # direct methods
 .method static constructor <clinit>()V
@@ -482,6 +484,31 @@
     return p0
 .end method
 
+.method public isPickerModeClockEnabled()Z
+    .locals 1
+
+    iget-object p0, p0, Lcom/google/android/material/picker/TimePicker;->mDelegate:Lcom/google/android/material/picker/TimePicker$TimePickerDelegate;
+
+    if-eqz p0, :cond_0
+
+    instance-of v0, p0, Lcom/google/android/material/picker/TimePickerClockDelegate;
+
+    if-eqz v0, :cond_0
+
+    check-cast p0, Lcom/google/android/material/picker/TimePickerClockDelegate;
+
+    invoke-virtual {p0}, Lcom/google/android/material/picker/TimePickerClockDelegate;->isRadialPickerModeEnabled()Z
+
+    move-result p0
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
 .method protected onRestoreInstanceState(Landroid/os/Parcelable;)V
     .locals 1
 
@@ -618,6 +645,27 @@
 
     invoke-interface {p0, p1}, Lcom/google/android/material/picker/TimePicker$TimePickerDelegate;->setOnTimeChangedListener(Lcom/google/android/material/picker/TimePicker$OnTimeChangedListener;)V
 
+    return-void
+.end method
+
+.method public setWindow(Landroid/view/Window;)V
+    .locals 1
+
+    iput-object p1, p0, Lcom/google/android/material/picker/TimePicker;->mWindow:Landroid/view/Window;
+
+    iget-object p0, p0, Lcom/google/android/material/picker/TimePicker;->mDelegate:Lcom/google/android/material/picker/TimePicker$TimePickerDelegate;
+
+    if-eqz p0, :cond_0
+
+    instance-of v0, p0, Lcom/google/android/material/picker/TimePickerClockDelegate;
+
+    if-eqz v0, :cond_0
+
+    check-cast p0, Lcom/google/android/material/picker/TimePickerClockDelegate;
+
+    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->setWindow(Landroid/view/Window;)V
+
+    :cond_0
     return-void
 .end method
 

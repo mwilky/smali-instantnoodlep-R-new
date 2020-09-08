@@ -3,7 +3,6 @@
 .source "OPPowerMenuPreferenceController.java"
 
 # interfaces
-.implements Lcom/android/settings/widget/RadioButtonPreference$OnClickListener;
 .implements Lcom/android/settingslib/core/lifecycle/LifecycleObserver;
 .implements Lcom/android/settingslib/core/lifecycle/events/OnResume;
 .implements Lcom/android/settingslib/core/lifecycle/events/OnPause;
@@ -24,7 +23,7 @@
 # instance fields
 .field final mKEY:Ljava/lang/String;
 
-.field private mPreference:Lcom/android/settings/widget/RadioButtonPreference;
+.field private mPreference:Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;
 
 .field private mSettingObserver:Lcom/oneplus/settings/OPPowerMenuPreferenceController$SettingObserver;
 
@@ -75,12 +74,54 @@
     return-object p0
 .end method
 
-.method static synthetic access$200(Lcom/oneplus/settings/OPPowerMenuPreferenceController;)Lcom/android/settings/widget/RadioButtonPreference;
+.method static synthetic access$200(Lcom/oneplus/settings/OPPowerMenuPreferenceController;)Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;
     .locals 0
 
-    iget-object p0, p0, Lcom/oneplus/settings/OPPowerMenuPreferenceController;->mPreference:Lcom/android/settings/widget/RadioButtonPreference;
+    iget-object p0, p0, Lcom/oneplus/settings/OPPowerMenuPreferenceController;->mPreference:Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;
 
     return-object p0
+.end method
+
+.method private synthetic lambda$displayPreference$0(Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;)V
+    .locals 1
+
+    new-instance p1, Landroid/content/Intent;
+
+    invoke-direct {p1}, Landroid/content/Intent;-><init>()V
+
+    const-string v0, "android.settings.ACTION_POWER_MENU_SETTINGS"
+
+    invoke-virtual {p1, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0, p1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    return-void
+.end method
+
+.method private synthetic lambda$displayPreference$1(Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;)V
+    .locals 1
+
+    iget-object p1, p0, Lcom/oneplus/settings/OPPowerMenuPreferenceController;->mPreference:Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;->setChecked(Z)V
+
+    iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    const-string p1, "quick_turn_on_voice_assistant"
+
+    const/4 v0, 0x0
+
+    invoke-static {p0, p1, v0}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+
+    return-void
 .end method
 
 
@@ -106,11 +147,23 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/android/settings/widget/RadioButtonPreference;
+    check-cast p1, Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;
 
-    iput-object p1, p0, Lcom/oneplus/settings/OPPowerMenuPreferenceController;->mPreference:Lcom/android/settings/widget/RadioButtonPreference;
+    iput-object p1, p0, Lcom/oneplus/settings/OPPowerMenuPreferenceController;->mPreference:Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;
 
-    invoke-virtual {p1, p0}, Lcom/android/settings/widget/RadioButtonPreference;->setOnClickListener(Lcom/android/settings/widget/RadioButtonPreference$OnClickListener;)V
+    new-instance v0, Lcom/oneplus/settings/-$$Lambda$OPPowerMenuPreferenceController$Tt4_EhPuCQOEXd_T6GIn-4LcaSs;
+
+    invoke-direct {v0, p0}, Lcom/oneplus/settings/-$$Lambda$OPPowerMenuPreferenceController$Tt4_EhPuCQOEXd_T6GIn-4LcaSs;-><init>(Lcom/oneplus/settings/OPPowerMenuPreferenceController;)V
+
+    invoke-virtual {p1, v0}, Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;->setOnGearClickListener(Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference$OnGearClickListener;)V
+
+    iget-object p1, p0, Lcom/oneplus/settings/OPPowerMenuPreferenceController;->mPreference:Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;
+
+    new-instance v0, Lcom/oneplus/settings/-$$Lambda$OPPowerMenuPreferenceController$vbC30vzQbsKGxQm6wiQf2dpOXH0;
+
+    invoke-direct {v0, p0}, Lcom/oneplus/settings/-$$Lambda$OPPowerMenuPreferenceController$vbC30vzQbsKGxQm6wiQf2dpOXH0;-><init>(Lcom/oneplus/settings/OPPowerMenuPreferenceController;)V
+
+    invoke-virtual {p1, v0}, Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;->setOnRadioButtonClickListener(Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference$OnRadioButtonClickListener;)V
 
     new-instance p1, Lcom/oneplus/settings/OPPowerMenuPreferenceController$SettingObserver;
 
@@ -206,6 +259,22 @@
     return p0
 .end method
 
+.method public synthetic lambda$displayPreference$0$OPPowerMenuPreferenceController(Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/oneplus/settings/OPPowerMenuPreferenceController;->lambda$displayPreference$0(Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;)V
+
+    return-void
+.end method
+
+.method public synthetic lambda$displayPreference$1$OPPowerMenuPreferenceController(Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/oneplus/settings/OPPowerMenuPreferenceController;->lambda$displayPreference$1(Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;)V
+
+    return-void
+.end method
+
 .method public onPause()V
     .locals 2
 
@@ -224,30 +293,6 @@
     invoke-virtual {v0, p0, v1}, Lcom/oneplus/settings/OPPowerMenuPreferenceController$SettingObserver;->register(Landroid/content/ContentResolver;Z)V
 
     :cond_0
-    return-void
-.end method
-
-.method public onRadioButtonClicked(Lcom/android/settings/widget/RadioButtonPreference;)V
-    .locals 1
-
-    iget-object p1, p0, Lcom/oneplus/settings/OPPowerMenuPreferenceController;->mPreference:Lcom/android/settings/widget/RadioButtonPreference;
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
-
-    iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
-
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object p0
-
-    const-string p1, "quick_turn_on_voice_assistant"
-
-    const/4 v0, 0x0
-
-    invoke-static {p0, p1, v0}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
-
     return-void
 .end method
 
@@ -277,7 +322,7 @@
 
     invoke-super {p0, p1}, Lcom/android/settingslib/core/AbstractPreferenceController;->updateState(Landroidx/preference/Preference;)V
 
-    iget-object p1, p0, Lcom/oneplus/settings/OPPowerMenuPreferenceController;->mPreference:Lcom/android/settings/widget/RadioButtonPreference;
+    iget-object p1, p0, Lcom/oneplus/settings/OPPowerMenuPreferenceController;->mPreference:Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;
 
     iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
 
@@ -298,7 +343,7 @@
     const/4 v1, 0x1
 
     :cond_0
-    invoke-virtual {p1, v1}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+    invoke-virtual {p1, v1}, Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;->setChecked(Z)V
 
     return-void
 .end method

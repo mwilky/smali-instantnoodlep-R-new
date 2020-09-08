@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="about_action_bar_title">O</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Politika privatnosti</string>
+    <string name="about_release_note_title">Dnevnik ažuriranja:</string>
+    <string name="about_terms_service">Uslovi korištenja</string>
     <string name="access_permissions">Dozvola za pristup</string>
     <string name="activate_one_handed_mode">Aktiviraj režim za korišćenje jednom rukom</string>
     <string name="activate_one_handed_mode_description">Povucite ekran prema dolje povlačenjem prsta prema dolje po lijevoj ili desnoj ivici ekrana. Za vraćanje ekrana prevucite prstom unazad</string>
@@ -225,6 +230,7 @@ Turn on Airplane mode?"</string>
     <string name="led_settings_title">LED obavještenja</string>
     <string name="list_saved_fingerprints">Sačuvani otisci prstiju</string>
     <string name="list_saved_fingerprints_footer">Može se snimiti do pet otisaka prstiju. Dodirnite bilo koji od sačuvanih otisaka prstiju iznad da ih preimenujete ili izbrišete.</string>
+    <string name="loading_text">Učitavanje...</string>
     <string name="lockpassword_choose_your_fingerprint_header">Otisak prsta</string>
     <string name="long_press_power_button">Pritisnite i držite tipku za uključivanje</string>
     <string name="mail_application_title">Aplikacija za e-poštu</string>

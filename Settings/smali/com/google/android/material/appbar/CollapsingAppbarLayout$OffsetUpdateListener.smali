@@ -39,21 +39,21 @@
 
     iget-object p1, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$OffsetUpdateListener;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
 
-    invoke-static {p1}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$600(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Z
+    invoke-static {p1}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$700(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Z
 
     move-result p1
 
-    if-nez p1, :cond_b
+    if-nez p1, :cond_e
 
     iget-object p1, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$OffsetUpdateListener;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
 
-    invoke-static {p1}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$700(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Z
+    invoke-static {p1}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$800(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    goto/16 :goto_3
+    goto/16 :goto_4
 
     :cond_0
     iget-object p1, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$OffsetUpdateListener;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
@@ -202,7 +202,7 @@
 
     iget-object p1, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$OffsetUpdateListener;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
 
-    invoke-static {p1, v0}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$802(Lcom/google/android/material/appbar/CollapsingAppbarLayout;I)I
+    invoke-static {p1, v0}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$902(Lcom/google/android/material/appbar/CollapsingAppbarLayout;I)I
 
     :cond_6
     invoke-static {p2}, Ljava/lang/Math;->abs(I)I
@@ -215,7 +215,7 @@
 
     iget-object p2, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$OffsetUpdateListener;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
 
-    invoke-static {p2}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$900(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Lcom/google/android/material/emptyview/EmptyPageView;
+    invoke-static {p2}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$1000(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Lcom/google/android/material/emptyview/EmptyPageView;
 
     move-result-object p2
 
@@ -223,13 +223,13 @@
 
     iget-object p2, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$OffsetUpdateListener;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
 
-    invoke-static {p2}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$900(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Lcom/google/android/material/emptyview/EmptyPageView;
+    invoke-static {p2}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$1000(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Lcom/google/android/material/emptyview/EmptyPageView;
 
     move-result-object p2
 
     iget-object v2, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$OffsetUpdateListener;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
 
-    invoke-static {v2}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$900(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Lcom/google/android/material/emptyview/EmptyPageView;
+    invoke-static {v2}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$1000(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Lcom/google/android/material/emptyview/EmptyPageView;
 
     move-result-object v2
 
@@ -237,51 +237,41 @@
 
     move-result v2
 
-    iget-object v4, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$OffsetUpdateListener;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
-
-    invoke-virtual {v4}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    sget v5, Lcom/google/android/material/R$dimen;->control_empty_image_margin_top:I
-
-    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
-
-    move-result v4
-
-    int-to-float v4, v4
-
-    mul-float/2addr v4, p1
-
-    invoke-static {v4}, Ljava/lang/Math;->abs(F)F
-
-    move-result v4
-
-    float-to-int v4, v4
-
     iget-object v5, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$OffsetUpdateListener;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
 
-    invoke-static {v5}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$900(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Lcom/google/android/material/emptyview/EmptyPageView;
+    invoke-virtual {v5}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Landroid/widget/LinearLayout;->getPaddingRight()I
+    sget v6, Lcom/google/android/material/R$dimen;->control_empty_image_margin_top:I
+
+    invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
     move-result v5
 
+    int-to-float v5, v5
+
+    mul-float/2addr v5, p1
+
+    invoke-static {v5}, Ljava/lang/Math;->abs(F)F
+
+    move-result v5
+
+    float-to-int v5, v5
+
     iget-object v6, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$OffsetUpdateListener;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
 
-    invoke-static {v6}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$900(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Lcom/google/android/material/emptyview/EmptyPageView;
+    invoke-static {v6}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$1000(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Lcom/google/android/material/emptyview/EmptyPageView;
 
     move-result-object v6
 
-    invoke-virtual {v6}, Lcom/google/android/material/emptyview/EmptyPageView;->getEmptyPaddingBottom()I
+    invoke-virtual {v6}, Landroid/widget/LinearLayout;->getPaddingRight()I
 
     move-result v6
 
     iget-object v7, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$OffsetUpdateListener;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
 
-    invoke-static {v7}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$900(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Lcom/google/android/material/emptyview/EmptyPageView;
+    invoke-static {v7}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$1000(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Lcom/google/android/material/emptyview/EmptyPageView;
 
     move-result-object v7
 
@@ -289,41 +279,56 @@
 
     move-result v7
 
+    iget-object v8, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$OffsetUpdateListener;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
+
+    invoke-static {v8}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$1000(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Lcom/google/android/material/emptyview/EmptyPageView;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Lcom/google/android/material/emptyview/EmptyPageView;->getEmptyPaddingBottom()I
+
+    move-result v8
+
     div-int/2addr v1, v3
 
-    if-le v7, v1, :cond_7
+    if-le v8, v1, :cond_7
 
-    iget-object v0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$OffsetUpdateListener;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
+    iget-object v1, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$OffsetUpdateListener;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
 
-    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v1}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v0
+    move-result-object v1
 
-    sget v1, Lcom/google/android/material/R$dimen;->control_empty_image_margin_top:I
+    sget v3, Lcom/google/android/material/R$dimen;->control_empty_image_margin_top:I
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
-    move-result v0
+    move-result v1
 
-    int-to-float v0, v0
+    int-to-float v1, v1
 
-    mul-float/2addr v0, p1
+    mul-float/2addr v1, p1
 
-    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
+    invoke-static {v1}, Ljava/lang/Math;->abs(F)F
 
-    move-result v0
+    move-result v1
 
-    float-to-int v0, v0
+    float-to-int v1, v1
+
+    goto :goto_3
 
     :cond_7
-    sub-int/2addr v6, v0
+    move v1, v0
 
-    invoke-virtual {p2, v2, v4, v5, v6}, Lcom/google/android/material/emptyview/EmptyPageView;->setEmptyPadding(IIII)V
+    :goto_3
+    sub-int/2addr v7, v1
+
+    invoke-virtual {p2, v2, v5, v6, v7}, Lcom/google/android/material/emptyview/EmptyPageView;->setEmptyPadding(IIII)V
 
     :cond_8
     iget-object p2, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$OffsetUpdateListener;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
 
-    invoke-static {p2}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$000(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Z
+    invoke-static {p2}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$100(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Z
 
     move-result p2
 
@@ -336,40 +341,71 @@
     invoke-virtual {p2, p1}, Lcom/google/android/material/internal/MultiCollapsingHelper;->setExpansionFraction(F)V
 
     :cond_9
+    const p2, 0x3f4ccccd    # 0.8f
+
+    cmpl-float p2, p1, p2
+
+    if-lez p2, :cond_a
+
+    cmpg-float p2, p1, v4
+
+    if-gez p2, :cond_a
+
     iget-object p2, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$OffsetUpdateListener;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
 
-    invoke-static {p2}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$1000(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Lcom/google/android/material/appbar/CollapsingAppbarLayout$OnFractionChangeListener;
+    invoke-static {p2}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$1100(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_b
+
+    :cond_a
+    const p2, 0x3e4ccccd    # 0.2f
+
+    cmpg-float p2, p1, p2
+
+    if-gez p2, :cond_c
+
+    :cond_b
+    iget-object p2, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$OffsetUpdateListener;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
+
+    invoke-static {p2, v0}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$102(Lcom/google/android/material/appbar/CollapsingAppbarLayout;Z)Z
+
+    :cond_c
+    iget-object p2, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$OffsetUpdateListener;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
+
+    invoke-static {p2}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$1200(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Lcom/google/android/material/appbar/CollapsingAppbarLayout$OnFractionChangeListener;
 
     move-result-object p2
 
-    if-eqz p2, :cond_a
+    if-eqz p2, :cond_d
 
     iget-object p2, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$OffsetUpdateListener;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
 
-    invoke-static {p2}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$1000(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Lcom/google/android/material/appbar/CollapsingAppbarLayout$OnFractionChangeListener;
+    invoke-static {p2}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$1200(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Lcom/google/android/material/appbar/CollapsingAppbarLayout$OnFractionChangeListener;
 
     move-result-object p2
 
     invoke-interface {p2, p1}, Lcom/google/android/material/appbar/CollapsingAppbarLayout$OnFractionChangeListener;->onFractionChanged(F)V
 
-    :cond_a
+    :cond_d
     iget-object p2, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$OffsetUpdateListener;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
 
-    invoke-static {p2}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$1100(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Lcom/google/android/material/appbar/CollapsingAppbarLayout$OnFractionChangeListener;
+    invoke-static {p2}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$1300(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Lcom/google/android/material/appbar/CollapsingAppbarLayout$OnFractionChangeListener;
 
     move-result-object p2
 
-    if-eqz p2, :cond_b
+    if-eqz p2, :cond_e
 
     iget-object p0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$OffsetUpdateListener;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
 
-    invoke-static {p0}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$1100(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Lcom/google/android/material/appbar/CollapsingAppbarLayout$OnFractionChangeListener;
+    invoke-static {p0}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$1300(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Lcom/google/android/material/appbar/CollapsingAppbarLayout$OnFractionChangeListener;
 
     move-result-object p0
 
     invoke-interface {p0, p1}, Lcom/google/android/material/appbar/CollapsingAppbarLayout$OnFractionChangeListener;->onFractionChanged(F)V
 
-    :cond_b
-    :goto_3
+    :cond_e
+    :goto_4
     return-void
 .end method

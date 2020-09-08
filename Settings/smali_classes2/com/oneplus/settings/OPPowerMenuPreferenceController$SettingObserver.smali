@@ -84,22 +84,22 @@
 
     iget-object p0, p0, Lcom/oneplus/settings/OPPowerMenuPreferenceController$SettingObserver;->this$0:Lcom/oneplus/settings/OPPowerMenuPreferenceController;
 
-    invoke-static {p0}, Lcom/oneplus/settings/OPPowerMenuPreferenceController;->access$200(Lcom/oneplus/settings/OPPowerMenuPreferenceController;)Lcom/android/settings/widget/RadioButtonPreference;
+    invoke-static {p0}, Lcom/oneplus/settings/OPPowerMenuPreferenceController;->access$200(Lcom/oneplus/settings/OPPowerMenuPreferenceController;)Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;
 
     move-result-object p0
 
-    invoke-virtual {p0, p2}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+    invoke-virtual {p0, p2}, Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;->setChecked(Z)V
 
     goto :goto_1
 
     :cond_1
     iget-object p0, p0, Lcom/oneplus/settings/OPPowerMenuPreferenceController$SettingObserver;->this$0:Lcom/oneplus/settings/OPPowerMenuPreferenceController;
 
-    invoke-static {p0}, Lcom/oneplus/settings/OPPowerMenuPreferenceController;->access$200(Lcom/oneplus/settings/OPPowerMenuPreferenceController;)Lcom/android/settings/widget/RadioButtonPreference;
+    invoke-static {p0}, Lcom/oneplus/settings/OPPowerMenuPreferenceController;->access$200(Lcom/oneplus/settings/OPPowerMenuPreferenceController;)Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;
 
     move-result-object p0
 
-    invoke-virtual {p0, v0}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+    invoke-virtual {p0, v0}, Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;->setChecked(Z)V
 
     :cond_2
     :goto_1

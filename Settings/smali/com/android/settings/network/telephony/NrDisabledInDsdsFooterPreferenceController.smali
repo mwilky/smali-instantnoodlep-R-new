@@ -90,6 +90,10 @@
 
     move-result-object p0
 
+    invoke-static {p0}, Lcom/android/settings/utils/AnnotationSpan;->textWithoutLink(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p0
+
     return-object p0
 .end method
 

@@ -1186,7 +1186,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v8, "updateAccountSwitches: added authority "
+    const-string/jumbo v8, "updateAccountSwitches: added authority "
 
     invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

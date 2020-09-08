@@ -41,6 +41,10 @@
 
     invoke-direct {p1}, Landroid/util/ArrayMap;-><init>()V
 
+    invoke-static {p1}, Ljava/util/Collections;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
+
+    move-result-object p1
+
     iput-object p1, p0, Lcom/android/settings/slices/SliceBackgroundWorker$NotifySliceChangeHandler;->mLastUpdateTimeLookup:Ljava/util/Map;
 
     return-void

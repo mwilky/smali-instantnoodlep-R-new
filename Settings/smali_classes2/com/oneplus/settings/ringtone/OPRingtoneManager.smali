@@ -728,7 +728,7 @@
     return-object v0
 .end method
 
-.method private static getDefaultRingtoneFileName(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+.method public static getDefaultRingtoneFileName(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
     new-instance p0, Ljava/lang/StringBuilder;
@@ -753,7 +753,7 @@
 .end method
 
 .method private getInternalRingtones()Landroid/database/Cursor;
-    .locals 8
+    .locals 7
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -787,23 +787,37 @@
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    sget-object v3, Landroid/provider/MediaStore$Audio$Media;->INTERNAL_CONTENT_URI:Landroid/net/Uri;
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportSortByTrack()Z
 
-    sget-object v4, Lcom/oneplus/settings/ringtone/OPRingtoneManager;->INTERNAL_COLUMNS:[Ljava/lang/String;
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "track"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v0, "title_key"
+
+    :goto_0
+    move-object v6, v0
+
+    sget-object v2, Landroid/provider/MediaStore$Audio$Media;->INTERNAL_CONTENT_URI:Landroid/net/Uri;
+
+    sget-object v3, Lcom/oneplus/settings/ringtone/OPRingtoneManager;->INTERNAL_COLUMNS:[Ljava/lang/String;
 
     iget-object v0, p0, Lcom/oneplus/settings/ringtone/OPRingtoneManager;->mFilterColumns:Ljava/util/List;
 
     invoke-static {v0}, Lcom/oneplus/settings/ringtone/OPRingtoneManager;->constructBooleanTrueWhereClause(Ljava/util/List;)Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v4
 
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
-    const-string v7, "title_key"
+    move-object v1, p0
 
-    move-object v2, p0
-
-    invoke-direct/range {v2 .. v7}, Lcom/oneplus/settings/ringtone/OPRingtoneManager;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-direct/range {v1 .. v6}, Lcom/oneplus/settings/ringtone/OPRingtoneManager;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object p0
 

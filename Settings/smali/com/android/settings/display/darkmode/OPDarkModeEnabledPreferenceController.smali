@@ -215,59 +215,61 @@
 .method public enableDarkMode(Z)V
     .locals 5
 
-    iget-object v0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+    iget-object p1, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v0
+    move-result-object p1
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
-    move-result-object v0
+    move-result-object p1
 
-    iget v0, v0, Landroid/content/res/Configuration;->uiMode:I
+    iget p1, p1, Landroid/content/res/Configuration;->uiMode:I
 
-    and-int/lit8 v0, v0, 0x20
+    and-int/lit8 p1, p1, 0x20
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    if-eqz v0, :cond_0
+    if-eqz p1, :cond_0
 
-    move v0, v1
+    move p1, v0
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p1, 0x0
 
     :goto_0
     if-eqz p1, :cond_1
 
-    const-string v2, "1"
+    const-string v1, "0"
 
     goto :goto_1
 
     :cond_1
-    const-string v2, "0"
+    const-string v1, "1"
 
     :goto_1
-    iget-object v3, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object v3
+    move-result-object v2
+
+    xor-int/lit8 v3, p1, 0x1
 
     const-string v4, "oem_black_mode"
 
-    invoke-static {v3, v4, p1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+    invoke-static {v2, v4, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    const-string p1, "persist.sys.theme.status"
+    const-string v2, "persist.sys.theme.status"
 
-    invoke-static {p1, v2}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object p0, p0, Lcom/android/settings/display/darkmode/OPDarkModeEnabledPreferenceController;->mUiModeManager:Landroid/app/UiModeManager;
 
-    xor-int/lit8 p1, v0, 0x1
+    xor-int/2addr p1, v0
 
     invoke-virtual {p0, p1}, Landroid/app/UiModeManager;->setNightModeActivated(Z)Z
 

@@ -23,6 +23,8 @@
 
 .field isDefault:Z
 
+.field isUicc:Z
+
 .field public label:Ljava/lang/CharSequence;
 
 .field public settingsComponent:Landroid/content/ComponentName;

@@ -617,6 +617,17 @@
 
     check-cast p1, Landroidx/appcompat/app/AlertDialog;
 
+    if-nez p1, :cond_0
+
+    const-string p0, "ConfigDialogFragment"
+
+    const-string p1, "AlertDialog object is null"
+
+    invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_0
     const/4 v0, -0x1
 
     invoke-virtual {p1, v0}, Landroidx/appcompat/app/AlertDialog;->getButton(I)Landroid/widget/Button;

@@ -37,37 +37,9 @@
 .method public onGlobalLayout()V
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "mLlContent.getHeight():"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lcom/oneplus/settings/ui/OPMemberPreference$1;->this$0:Lcom/oneplus/settings/ui/OPMemberPreference;
-
-    invoke-static {v1}, Lcom/oneplus/settings/ui/OPMemberPreference;->access$100(Lcom/oneplus/settings/ui/OPMemberPreference;)Landroid/widget/LinearLayout;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getHeight()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "OPMemberPreference"
-
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     iget-object v0, p0, Lcom/oneplus/settings/ui/OPMemberPreference$1;->this$0:Lcom/oneplus/settings/ui/OPMemberPreference;
 
-    invoke-static {v0}, Lcom/oneplus/settings/ui/OPMemberPreference;->access$200(Lcom/oneplus/settings/ui/OPMemberPreference;)Landroid/widget/LinearLayout;
+    invoke-static {v0}, Lcom/oneplus/settings/ui/OPMemberPreference;->access$100(Lcom/oneplus/settings/ui/OPMemberPreference;)Landroid/widget/LinearLayout;
 
     move-result-object v0
 
@@ -77,7 +49,7 @@
 
     iget-object v1, p0, Lcom/oneplus/settings/ui/OPMemberPreference$1;->this$0:Lcom/oneplus/settings/ui/OPMemberPreference;
 
-    invoke-static {v1}, Lcom/oneplus/settings/ui/OPMemberPreference;->access$100(Lcom/oneplus/settings/ui/OPMemberPreference;)Landroid/widget/LinearLayout;
+    invoke-static {v1}, Lcom/oneplus/settings/ui/OPMemberPreference;->access$200(Lcom/oneplus/settings/ui/OPMemberPreference;)Landroid/widget/LinearLayout;
 
     move-result-object v1
 
@@ -89,7 +61,7 @@
 
     iget-object v1, p0, Lcom/oneplus/settings/ui/OPMemberPreference$1;->this$0:Lcom/oneplus/settings/ui/OPMemberPreference;
 
-    invoke-static {v1}, Lcom/oneplus/settings/ui/OPMemberPreference;->access$200(Lcom/oneplus/settings/ui/OPMemberPreference;)Landroid/widget/LinearLayout;
+    invoke-static {v1}, Lcom/oneplus/settings/ui/OPMemberPreference;->access$100(Lcom/oneplus/settings/ui/OPMemberPreference;)Landroid/widget/LinearLayout;
 
     move-result-object v1
 
@@ -97,7 +69,7 @@
 
     iget-object v0, p0, Lcom/oneplus/settings/ui/OPMemberPreference$1;->this$0:Lcom/oneplus/settings/ui/OPMemberPreference;
 
-    invoke-static {v0}, Lcom/oneplus/settings/ui/OPMemberPreference;->access$100(Lcom/oneplus/settings/ui/OPMemberPreference;)Landroid/widget/LinearLayout;
+    invoke-static {v0}, Lcom/oneplus/settings/ui/OPMemberPreference;->access$200(Lcom/oneplus/settings/ui/OPMemberPreference;)Landroid/widget/LinearLayout;
 
     move-result-object v0
 

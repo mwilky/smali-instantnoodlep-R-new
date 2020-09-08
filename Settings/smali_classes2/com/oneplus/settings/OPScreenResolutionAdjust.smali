@@ -34,16 +34,16 @@
 
 .field private mQHDSettingsCatagory:Landroidx/preference/PreferenceCategory;
 
-.field private mWarnDialog:Landroidx/appcompat/app/AlertDialog;
+.field private mWarnDialog:Landroid/app/AlertDialog;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/oneplus/settings/OPScreenResolutionAdjust$4;
+    new-instance v0, Lcom/oneplus/settings/OPScreenResolutionAdjust$5;
 
-    invoke-direct {v0}, Lcom/oneplus/settings/OPScreenResolutionAdjust$4;-><init>()V
+    invoke-direct {v0}, Lcom/oneplus/settings/OPScreenResolutionAdjust$5;-><init>()V
 
     sput-object v0, Lcom/oneplus/settings/OPScreenResolutionAdjust;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/BaseSearchIndexProvider;
 
@@ -73,18 +73,65 @@
 
     :array_0
     .array-data 4
+        0x17c
         0x1a4
-        0x1c2
         0x1e0
-        0x1fe
+        0x1f4
         0x21c
     .end array-data
 .end method
 
-.method static synthetic access$000(Lcom/oneplus/settings/OPScreenResolutionAdjust;I)V
+.method static synthetic access$000(Lcom/oneplus/settings/OPScreenResolutionAdjust;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/oneplus/settings/OPScreenResolutionAdjust;->cancelDialog()V
+
+    return-void
+.end method
+
+.method static synthetic access$100(Lcom/oneplus/settings/OPScreenResolutionAdjust;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/settings/OPScreenResolutionAdjust;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$200(Lcom/oneplus/settings/OPScreenResolutionAdjust;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/oneplus/settings/OPScreenResolutionAdjust;->changeScreenResolution(I)V
+
+    return-void
+.end method
+
+.method private cancelDialog()V
+    .locals 3
+
+    iget-object v0, p0, Lcom/oneplus/settings/OPScreenResolutionAdjust;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const-string v1, "oneplus_screen_resolution_auto_adjust"
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v1, v2}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v0
+
+    iget-object p0, p0, Lcom/oneplus/settings/OPScreenResolutionAdjust;->mIntelligentSwitchResolutionMode:Landroidx/preference/SwitchPreference;
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    move v2, v1
+
+    :cond_0
+    invoke-virtual {p0, v2}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
 
     return-void
 .end method
@@ -229,24 +276,32 @@
 
     invoke-static {p1, v5, v3}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
-    move-result p1
+    if-ne v0, v4, :cond_5
 
-    iget-object v5, p0, Lcom/oneplus/settings/OPScreenResolutionAdjust;->mContext:Landroid/content/Context;
+    iget-object p1, p0, Lcom/oneplus/settings/OPScreenResolutionAdjust;->mIntelligentSwitchResolutionMode:Landroidx/preference/SwitchPreference;
 
-    invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p1, v4}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
 
-    move-result-object v5
+    iget-object p1, p0, Lcom/oneplus/settings/OPScreenResolutionAdjust;->mContext:Landroid/content/Context;
 
-    if-ne p1, v4, :cond_5
+    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p1
+
+    invoke-static {p1, v1, v2}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     goto :goto_0
 
     :cond_5
-    move v2, v3
+    iget-object p1, p0, Lcom/oneplus/settings/OPScreenResolutionAdjust;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p1
+
+    invoke-static {p1, v1, v3}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     :goto_0
-    invoke-static {v5, v1, v2}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
-
     if-ne v0, v4, :cond_8
 
     iget-object p1, p0, Lcom/oneplus/settings/OPScreenResolutionAdjust;->mAm:Landroid/app/ActivityManager;
@@ -855,7 +910,7 @@
 .end method
 
 .method public onPreferenceChange(Landroidx/preference/Preference;Ljava/lang/Object;)Z
-    .locals 2
+    .locals 1
 
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
@@ -869,21 +924,7 @@
 
     if-eqz p1, :cond_1
 
-    iget-object p1, p0, Lcom/oneplus/settings/OPScreenResolutionAdjust;->mContext:Landroid/content/Context;
-
-    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object p1
-
     check-cast p2, Ljava/lang/Boolean;
-
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    const-string v1, "oneplus_screen_resolution_auto_adjust"
-
-    invoke-static {p1, v1, v0}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -899,7 +940,7 @@
     const/4 p1, 0x0
 
     :goto_0
-    invoke-direct {p0, p1}, Lcom/oneplus/settings/OPScreenResolutionAdjust;->changeScreenResolution(I)V
+    invoke-virtual {p0, p1}, Lcom/oneplus/settings/OPScreenResolutionAdjust;->showWarnigDialog(I)V
 
     :cond_1
     const/4 p0, 0x1
@@ -1201,17 +1242,19 @@
 .method public showWarnigDialog(I)V
     .locals 3
 
-    new-instance v0, Landroidx/appcompat/app/AlertDialog$Builder;
+    new-instance v0, Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     sget v1, Lcom/android/settings/R$string;->oneplus_switch_resolution_kill_process_tips:I
 
-    invoke-virtual {v0, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setTitle(I)Landroidx/appcompat/app/AlertDialog$Builder;
+    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v0
 
     sget v1, Lcom/android/settings/R$string;->oneplus_switch_resolution_kill_process_confirm:I
 
@@ -1219,23 +1262,35 @@
 
     invoke-direct {v2, p0, p1}, Lcom/oneplus/settings/OPScreenResolutionAdjust$2;-><init>(Lcom/oneplus/settings/OPScreenResolutionAdjust;I)V
 
-    invoke-virtual {v0, v1, v2}, Landroidx/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
+    invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    sget p1, Lcom/android/settings/R$string;->cancel:I
+    move-result-object p1
+
+    sget v0, Lcom/android/settings/R$string;->cancel:I
 
     new-instance v1, Lcom/oneplus/settings/OPScreenResolutionAdjust$1;
 
     invoke-direct {v1, p0}, Lcom/oneplus/settings/OPScreenResolutionAdjust$1;-><init>(Lcom/oneplus/settings/OPScreenResolutionAdjust;)V
 
-    invoke-virtual {v0, p1, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
-
-    invoke-virtual {v0}, Landroidx/appcompat/app/AlertDialog$Builder;->create()Landroidx/appcompat/app/AlertDialog;
+    invoke-virtual {p1, v0, v1}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/oneplus/settings/OPScreenResolutionAdjust;->mWarnDialog:Landroidx/appcompat/app/AlertDialog;
+    invoke-virtual {p1}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
-    invoke-virtual {p1}, Landroid/app/Dialog;->show()V
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/oneplus/settings/OPScreenResolutionAdjust;->mWarnDialog:Landroid/app/AlertDialog;
+
+    new-instance v0, Lcom/oneplus/settings/OPScreenResolutionAdjust$3;
+
+    invoke-direct {v0, p0}, Lcom/oneplus/settings/OPScreenResolutionAdjust$3;-><init>(Lcom/oneplus/settings/OPScreenResolutionAdjust;)V
+
+    invoke-virtual {p1, v0}, Landroid/app/AlertDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
+
+    iget-object p0, p0, Lcom/oneplus/settings/OPScreenResolutionAdjust;->mWarnDialog:Landroid/app/AlertDialog;
+
+    invoke-virtual {p0}, Landroid/app/AlertDialog;->show()V
 
     return-void
 .end method

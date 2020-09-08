@@ -229,16 +229,16 @@
         <item quantity="one">Todavía tienes %1$d posibilidad</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
-        <item quantity="other">Prueba de nuevo en %d segundos.</item>
-        <item quantity="one">Prueba de nuevo en %d segundo.</item>
+        <item quantity="other">Vuelve a intentarlo en %d segundos.</item>
+        <item quantity="one">Vuelve a intentarlo en %d segundo.</item>
     </plurals>
     <plurals name="oneplus_zen_mode_duration_summary_time_hours">
         <item quantity="other">%d horas (excepto si se activa automáticamente)</item>
         <item quantity="one">1 hora (excepto si se activa automáticamente)</item>
     </plurals>
     <plurals name="op_location_settings_summary_location_on">
-        <item quantity="other">On - %1$d apps have access to location</item>
-        <item quantity="one">On - %1$d app has access to location</item>
+        <item quantity="other">Activado: %1$d aplicaciones tienen acceso a la ubicación</item>
+        <item quantity="one">Activado: %1$d aplicación tiene acceso a la ubicación</item>
     </plurals>
     <plurals name="permission_bar_chart_label">
         <item quantity="other">%s aplicaciones</item>

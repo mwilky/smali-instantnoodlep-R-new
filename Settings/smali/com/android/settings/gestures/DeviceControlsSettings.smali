@@ -7,6 +7,10 @@
 .field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/BaseSearchIndexProvider;
 
 
+# instance fields
+.field private mDeviceControlAnim:Lcom/oneplus/settings/widget/OPLottieAnimPreference;
+
+
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
@@ -54,4 +58,60 @@
     sget p0, Lcom/android/settings/R$xml;->device_controls_settings:I
 
     return p0
+.end method
+
+.method public onCreate(Landroid/os/Bundle;)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/android/settings/dashboard/DashboardFragment;->onCreate(Landroid/os/Bundle;)V
+
+    const-string p1, "op_device_controls_instructions_anim"
+
+    invoke-virtual {p0, p1}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/oneplus/settings/widget/OPLottieAnimPreference;
+
+    iput-object p1, p0, Lcom/android/settings/gestures/DeviceControlsSettings;->mDeviceControlAnim:Lcom/oneplus/settings/widget/OPLottieAnimPreference;
+
+    return-void
+.end method
+
+.method public onDestroy()V
+    .locals 0
+
+    invoke-super {p0}, Lcom/android/settingslib/core/lifecycle/ObservablePreferenceFragment;->onDestroy()V
+
+    iget-object p0, p0, Lcom/android/settings/gestures/DeviceControlsSettings;->mDeviceControlAnim:Lcom/oneplus/settings/widget/OPLottieAnimPreference;
+
+    invoke-virtual {p0}, Lcom/oneplus/settings/widget/OPLottieAnimPreference;->releaseAnimation()V
+
+    return-void
+.end method
+
+.method public onPause()V
+    .locals 0
+
+    invoke-super {p0}, Lcom/android/settingslib/core/lifecycle/ObservablePreferenceFragment;->onPause()V
+
+    iget-object p0, p0, Lcom/android/settings/gestures/DeviceControlsSettings;->mDeviceControlAnim:Lcom/oneplus/settings/widget/OPLottieAnimPreference;
+
+    invoke-virtual {p0}, Lcom/oneplus/settings/widget/OPLottieAnimPreference;->stopAnimation()V
+
+    return-void
+.end method
+
+.method public onResume()V
+    .locals 1
+
+    invoke-super {p0}, Lcom/android/settings/dashboard/DashboardFragment;->onResume()V
+
+    iget-object p0, p0, Lcom/android/settings/gestures/DeviceControlsSettings;->mDeviceControlAnim:Lcom/oneplus/settings/widget/OPLottieAnimPreference;
+
+    sget v0, Lcom/android/settings/R$raw;->op_device_control_lottie:I
+
+    invoke-virtual {p0, v0}, Lcom/oneplus/settings/widget/OPLottieAnimPreference;->startAnimation(I)V
+
+    return-void
 .end method

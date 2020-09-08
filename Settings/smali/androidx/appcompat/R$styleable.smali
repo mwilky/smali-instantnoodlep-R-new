@@ -438,6 +438,10 @@
 
 .field public static final TextAppearance_textLocale:I = 0xf
 
+.field public static final Toast:[I
+
+.field public static final Toast_android_layout:I = 0x0
+
 .field public static final Toolbar:[I
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
@@ -705,47 +709,55 @@
 
     sput-object v1, Landroidx/appcompat/R$styleable;->SearchView:[I
 
-    new-array v0, v0, [I
-
-    const v1, 0x7f040135
-
-    aput v1, v0, v3
-
-    sput-object v0, Landroidx/appcompat/R$styleable;->SmoothRoundLayout:[I
-
-    const/4 v0, 0x5
-
     new-array v1, v0, [I
 
-    fill-array-data v1, :array_15
+    const v2, 0x7f040135
 
-    sput-object v1, Landroidx/appcompat/R$styleable;->Spinner:[I
+    aput v2, v1, v3
 
-    const/16 v1, 0xf
+    sput-object v1, Landroidx/appcompat/R$styleable;->SmoothRoundLayout:[I
 
-    new-array v1, v1, [I
+    const/4 v1, 0x5
 
-    fill-array-data v1, :array_16
+    new-array v2, v1, [I
 
-    sput-object v1, Landroidx/appcompat/R$styleable;->SwitchCompat:[I
+    fill-array-data v2, :array_15
 
-    const/16 v1, 0x10
+    sput-object v2, Landroidx/appcompat/R$styleable;->Spinner:[I
 
-    new-array v1, v1, [I
+    const/16 v2, 0xf
 
-    fill-array-data v1, :array_17
+    new-array v2, v2, [I
 
-    sput-object v1, Landroidx/appcompat/R$styleable;->TextAppearance:[I
+    fill-array-data v2, :array_16
 
-    const/16 v1, 0x1e
+    sput-object v2, Landroidx/appcompat/R$styleable;->SwitchCompat:[I
 
-    new-array v1, v1, [I
+    const/16 v2, 0x10
 
-    fill-array-data v1, :array_18
+    new-array v2, v2, [I
 
-    sput-object v1, Landroidx/appcompat/R$styleable;->Toolbar:[I
+    fill-array-data v2, :array_17
+
+    sput-object v2, Landroidx/appcompat/R$styleable;->TextAppearance:[I
 
     new-array v0, v0, [I
+
+    const v2, 0x10100f2
+
+    aput v2, v0, v3
+
+    sput-object v0, Landroidx/appcompat/R$styleable;->Toast:[I
+
+    const/16 v0, 0x1e
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_18
+
+    sput-object v0, Landroidx/appcompat/R$styleable;->Toolbar:[I
+
+    new-array v0, v1, [I
 
     fill-array-data v0, :array_19
 
@@ -764,8 +776,6 @@
     sput-object v0, Landroidx/appcompat/R$styleable;->ViewStubCompat:[I
 
     return-void
-
-    nop
 
     :array_0
     .array-data 4
@@ -791,13 +801,13 @@
         0x7f04029c
         0x7f040315
         0x7f040375
-        0x7f04040d
-        0x7f040429
-        0x7f04042b
-        0x7f0404c5
-        0x7f0404cb
-        0x7f04058b
-        0x7f04059e
+        0x7f04040a
+        0x7f040426
+        0x7f040428
+        0x7f0404c2
+        0x7f0404c8
+        0x7f040588
+        0x7f04059b
     .end array-data
 
     :array_1
@@ -806,8 +816,8 @@
         0x7f040059
         0x7f0400e5
         0x7f04024e
-        0x7f0404cb
-        0x7f04059e
+        0x7f0404c8
+        0x7f04059b
     .end array-data
 
     :array_2
@@ -824,9 +834,9 @@
         0x7f04030a
         0x7f04030b
         0x7f040372
-        0x7f04042c
-        0x7f04048d
-        0x7f040492
+        0x7f040429
+        0x7f04048a
+        0x7f04048f
     .end array-data
 
     :array_4
@@ -837,23 +847,23 @@
         0x101046f
         0x1010470
         0x7f04027e
-        0x7f040576
+        0x7f040573
     .end array-data
 
     :array_5
     .array-data 4
         0x1010119
-        0x7f0404a7
-        0x7f040588
-        0x7f04058a
+        0x7f0404a4
+        0x7f040585
+        0x7f040587
     .end array-data
 
     :array_6
     .array-data 4
         0x1010142
-        0x7f040582
-        0x7f040583
-        0x7f040584
+        0x7f04057f
+        0x7f040580
+        0x7f040581
     .end array-data
 
     :array_7
@@ -888,8 +898,8 @@
         0x7f040202
         0x7f0402b8
         0x7f040303
-        0x7f04054d
-        0x7f04056d
+        0x7f04054a
+        0x7f04056a
     .end array-data
 
     :array_9
@@ -980,37 +990,40 @@
         0x7f040312
         0x7f040313
         0x7f040314
-        0x7f0403d3
-        0x7f0403d4
-        0x7f0403d5
-        0x7f04040c
-        0x7f04040e
+        0x7f0403d0
+        0x7f0403d1
+        0x7f0403d2
+        0x7f040409
+        0x7f04040b
+        0x7f040432
         0x7f040435
-        0x7f040438
-        0x7f040439
-        0x7f04043a
-        0x7f040469
-        0x7f040470
-        0x7f040475
-        0x7f040476
-        0x7f0404a4
-        0x7f0404a5
-        0x7f040527
+        0x7f040436
+        0x7f040437
+        0x7f040466
+        0x7f04046d
+        0x7f040472
+        0x7f040473
+        0x7f0404a1
+        0x7f0404a2
+        0x7f040524
+        0x7f040555
+        0x7f040557
         0x7f040558
-        0x7f04055a
-        0x7f04055b
+        0x7f040559
         0x7f04055c
+        0x7f04055d
+        0x7f04055e
         0x7f04055f
-        0x7f040560
-        0x7f040561
-        0x7f040562
-        0x7f040566
-        0x7f040568
+        0x7f040563
+        0x7f040565
+        0x7f04059e
+        0x7f04059f
+        0x7f0405a0
         0x7f0405a1
-        0x7f0405a2
-        0x7f0405a3
-        0x7f0405a4
-        0x7f0405c5
+        0x7f0405c2
+        0x7f0405d1
+        0x7f0405d2
+        0x7f0405d3
         0x7f0405d4
         0x7f0405d5
         0x7f0405d6
@@ -1018,9 +1031,6 @@
         0x7f0405d8
         0x7f0405d9
         0x7f0405da
-        0x7f0405db
-        0x7f0405dc
-        0x7f0405dd
     .end array-data
 
     :array_a
@@ -1048,7 +1058,7 @@
         0x7f040179
         0x7f04017c
         0x7f040345
-        0x7f040487
+        0x7f040484
     .end array-data
 
     :array_d
@@ -1098,8 +1108,8 @@
         0x7f04026e
         0x7f040270
         0x7f040380
-        0x7f040486
-        0x7f0405a5
+        0x7f040483
+        0x7f0405a2
     .end array-data
 
     :array_11
@@ -1111,21 +1121,21 @@
         0x101012f
         0x1010130
         0x1010131
-        0x7f040422
-        0x7f0404c3
+        0x7f04041f
+        0x7f0404c0
     .end array-data
 
     :array_12
     .array-data 4
         0x1010176
         0x10102c9
-        0x7f0403c6
+        0x7f0403c3
     .end array-data
 
     :array_13
     .array-data 4
-        0x7f0403cb
-        0x7f0403d1
+        0x7f0403c8
+        0x7f0403ce
     .end array-data
 
     :array_14
@@ -1140,13 +1150,13 @@
         0x7f04020a
         0x7f040271
         0x7f0402b9
-        0x7f040432
-        0x7f040433
-        0x7f040462
-        0x7f040463
-        0x7f0404c4
-        0x7f040515
-        0x7f0405c8
+        0x7f04042f
+        0x7f040430
+        0x7f04045f
+        0x7f040460
+        0x7f0404c1
+        0x7f040512
+        0x7f0405c5
     .end array-data
 
     :array_15
@@ -1155,7 +1165,7 @@
         0x1010176
         0x101017b
         0x1010262
-        0x7f04040d
+        0x7f04040a
     .end array-data
 
     :array_16
@@ -1164,17 +1174,17 @@
         0x1010125
         0x1010142
         0x10101a8
-        0x7f04048c
-        0x7f0404a6
-        0x7f040523
-        0x7f040524
-        0x7f040528
-        0x7f04057a
-        0x7f04057b
-        0x7f04057c
+        0x7f040489
+        0x7f0404a3
+        0x7f040520
+        0x7f040521
+        0x7f040525
+        0x7f040577
+        0x7f040578
+        0x7f040579
+        0x7f0405a9
+        0x7f0405ab
         0x7f0405ac
-        0x7f0405ae
-        0x7f0405af
     .end array-data
 
     :array_17
@@ -1193,8 +1203,8 @@
         0x1010585
         0x7f0401fa
         0x7f040202
-        0x7f04054d
-        0x7f04056d
+        0x7f04054a
+        0x7f04056a
     .end array-data
 
     :array_18
@@ -1216,28 +1226,28 @@
         0x7f040356
         0x7f040373
         0x7f040374
-        0x7f04040d
-        0x7f0404c5
-        0x7f0404c9
-        0x7f0404ca
-        0x7f04058b
+        0x7f04040a
+        0x7f0404c2
+        0x7f0404c6
+        0x7f0404c7
+        0x7f040588
+        0x7f040590
+        0x7f040591
+        0x7f040592
         0x7f040593
         0x7f040594
         0x7f040595
-        0x7f040596
-        0x7f040597
-        0x7f040598
-        0x7f04059c
-        0x7f04059d
+        0x7f040599
+        0x7f04059a
     .end array-data
 
     :array_19
     .array-data 4
         0x1010000
         0x10100da
+        0x7f0403ca
         0x7f0403cd
-        0x7f0403d0
-        0x7f040574
+        0x7f040571
     .end array-data
 
     :array_1a

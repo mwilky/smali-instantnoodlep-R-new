@@ -253,6 +253,17 @@
     invoke-virtual {p0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :goto_1
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isGuestMode()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_f
+
+    const-string p1, "dark_ui_mode"
+
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_f
     return-object p0
 .end method
 

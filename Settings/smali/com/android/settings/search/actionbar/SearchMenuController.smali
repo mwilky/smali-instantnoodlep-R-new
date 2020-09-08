@@ -67,7 +67,7 @@
 .end method
 
 .method private synthetic lambda$onCreateOptionsMenu$0(Landroid/app/Activity;Landroid/view/MenuItem;)Z
-    .locals 4
+    .locals 3
 
     invoke-static {p1}, Lcom/android/settings/overlay/FeatureFactory;->getFactory(Landroid/content/Context;)Lcom/android/settings/overlay/FeatureFactory;
 
@@ -83,27 +83,6 @@
 
     move-result-object p2
 
-    invoke-virtual {p1}, Landroid/app/Activity;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v0
-
-    const/high16 v1, 0x10000
-
-    invoke-virtual {v0, p2, v1}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_0
-
-    return v1
-
-    :cond_0
     invoke-static {p1}, Lcom/android/settings/overlay/FeatureFactory;->getFactory(Landroid/content/Context;)Lcom/android/settings/overlay/FeatureFactory;
 
     move-result-object v0
@@ -112,13 +91,13 @@
 
     move-result-object v0
 
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Landroid/util/Pair;
+
     const/16 v2, 0xe2
 
-    const/4 v3, 0x0
-
-    new-array v3, v3, [Landroid/util/Pair;
-
-    invoke-virtual {v0, p1, v2, v3}, Lcom/android/settingslib/core/instrumentation/MetricsFeatureProvider;->action(Landroid/content/Context;I[Landroid/util/Pair;)V
+    invoke-virtual {v0, p1, v2, v1}, Lcom/android/settingslib/core/instrumentation/MetricsFeatureProvider;->action(Landroid/content/Context;I[Landroid/util/Pair;)V
 
     iget-object p0, p0, Lcom/android/settings/search/actionbar/SearchMenuController;->mHost:Landroidx/fragment/app/Fragment;
 
@@ -126,7 +105,9 @@
 
     invoke-virtual {p0, p2, p1}, Landroidx/fragment/app/Fragment;->startActivityForResult(Landroid/content/Intent;I)V
 
-    return v1
+    const/4 p0, 0x1
+
+    return p0
 .end method
 
 

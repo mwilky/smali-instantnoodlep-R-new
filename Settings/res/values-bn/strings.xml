@@ -1027,7 +1027,7 @@
     <string name="cached_apps_freezer_device_default">ডিভাইসের ডিফল্ট</string>
     <string name="cached_apps_freezer_disabled">বন্ধ করা আছে</string>
     <string name="cached_apps_freezer_enabled">চালু করা আছে</string>
-    <string name="cached_apps_freezer_reboot_dialog_text">এই পরিবর্তনটি প্রয়োগ করার জন্য আপনার ডিভাইসটি অবশ্যই রিবুট করতে হবে। এখন রিবুট করুন বা বাতিল করুন।</string>
+    <string name="cached_apps_freezer_reboot_dialog_text">এই পরিবর্তনটি প্রয়োগ করার জন্য আপনার ডিভাইসটি অবশ্যই রিবুট করতে হবে। এখনই রিবুট করুন বা বাতিল করুন।</string>
     <string name="call_category">কল করা হচ্ছে</string>
     <string name="call_manager_enable_summary">আপনার কল কীভাবে করা হবে তা পরিচালনা করতে এই পরিষেবাকে অনুমতি দিন।</string>
     <string name="call_manager_enable_title">কল ম্যানেজার সক্ষম করুন</string>
@@ -2173,6 +2173,7 @@
     <string name="keywords_lock_screen_notif">লক স্ক্রিনের বিজ্ঞপ্তি, বিজ্ঞপ্তি</string>
     <string name="keywords_lockscreen">আনলক করতে, পাসওয়ার্ড, প্যাটার্ন, পিন স্লাইড করুন</string>
     <string name="keywords_lockscreen_bypass">লক স্ক্রিন, লকস্ক্রিন, স্কিপ, বাইপাস</string>
+    <string name="keywords_media_controls">মিডিয়া</string>
     <string name="keywords_model_and_hardware">সিরিয়াল নম্বর, হার্ডওয়্যার ভার্সন</string>
     <string name="keywords_more_mobile_networks">সেলুলার, মোবাইল, সেলুলার পরিষেবা প্রদানকারী, ওয়্যারলেস, ডেটা, 4g, 3g, 2g, lte</string>
     <string name="keywords_network_reset">আবার সেট করুন, পুনরুদ্ধার করুন, ফ্যাক্টরি</string>
@@ -2549,6 +2550,12 @@
     <string name="master_clear_title">সমস্ত ডেটা মুছুন (ফ্যাক্টরি রিসেট)</string>
     <string name="maximum_memory_use">সর্বাধিক মেমরির ব্যবহার</string>
     <string name="media_category">মিডিয়া</string>
+    <string name="media_controls_hide_player">প্লেয়ার লুকান</string>
+    <string name="media_controls_no_players">কোনও প্লেয়ার উপলভ্য নেই</string>
+    <string name="media_controls_resume_description">আপনি প্লেয়ার ব্যবহার করে বড় করা দ্রুত সেটিংস প্যানেল থেকে সেশন আবার শুরু করতে পারবেন।</string>
+    <string name="media_controls_show_player">প্লেয়ার দেখুন</string>
+    <string name="media_controls_summary">মিডিয়া সেশন শেষ হয়ে গেলে প্লেয়ার লুকান</string>
+    <string name="media_controls_title">মিডিয়া</string>
     <string name="media_out_summary_ongoing_call_state">কলের সময় অনুপলভ্য</string>
     <string name="media_output_default_summary">এই ডিভাইস</string>
     <string name="media_output_disconnected_status">%1$s (কানেকশন নেই)</string>
@@ -2565,7 +2572,7 @@
     <string name="media_output_switch_error_text">পাল্টানো যাচ্ছে না। আবার চেষ্টা করতে ট্যাপ করুন।</string>
     <string name="media_output_switching">পাল্টানো হচ্ছে…</string>
     <string name="media_output_title">মিডিয়া এতে চালান</string>
-    <string name="media_transfer_this_device_name">ফেনের স্পিকার</string>
+    <string name="media_transfer_this_device_name">ফোনের স্পিকার</string>
     <string name="media_transfer_wired_device_name">ওয়্যার অডিও ডিভাইস</string>
     <string name="media_transfer_wired_usb_device_name">তার যুক্ত হেডফোন</string>
     <string name="media_volume_option_title">মিডিয়া ভলিউম</string>
@@ -2923,6 +2930,7 @@
     <string name="notification_priority_title">অগ্রাধিকার</string>
     <string name="notification_pulse_title">মিটমিট করা আলো</string>
     <string name="notification_ringtone_title">ডিফল্ট বিজ্ঞপ্তির সাউন্ড</string>
+    <string name="notification_screen_summary">বিজ্ঞপ্তির ইতিহাস, বাবল, সম্প্রতি পাঠানো</string>
     <string name="notification_settings_work_profile">কাজের প্রোফাইলে অ্যাপের জন্য বিজ্ঞপ্তি অ্যাক্সেস উপলভ্য নয়।</string>
     <string name="notification_show_lights_title">মিটমিট করা আলো</string>
     <string name="notification_silence_title">সাইলেন্ট</string>
@@ -3030,6 +3038,8 @@
     <string name="platform_compat_dashboard_title">ডিভাইসে অ্যাপ মানানসই করা সম্পর্কিত পরিবর্তন</string>
     <string name="platform_compat_default_disabled_title">ডিফল্ট হিসেবে বন্ধ করে দেওয়া পরিবর্তন</string>
     <string name="platform_compat_default_enabled_title">ডিফল্ট হিসেবে চালু করা পরিবর্তন</string>
+    <string name="platform_compat_dialog_text_no_apps">অ্যাপ মানানসই করা সম্পর্কিত পরিবর্তন শুধুমাত্র ডিবাগ করা যাবে এমন অ্যাপগুলির ক্ষেত্রে প্রযোজ্য। ডিবাগ করা যাবে এমন একটি অ্যাপ ইনস্টল করে আবার চেষ্টা করুন।</string>
+    <string name="platform_compat_dialog_title_no_apps">অ্যাপ উপলভ্য নেই</string>
     <string name="please_select_phase2">ধাপ ২ যাচাইকরণ</string>
     <string name="pointer_location">পয়েন্টারের লোকেশন</string>
     <string name="pointer_location_summary">স্ক্রিন ওভারলে বর্তমান স্পর্শ ডেটা দেখাচ্ছে</string>

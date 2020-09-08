@@ -1,5 +1,5 @@
 .class public Lcom/android/settings/security/InstallCaCertificateWarning;
-.super Landroid/app/Activity;
+.super Lcom/oneplus/settings/BaseActivity;
 .source "InstallCaCertificateWarning.java"
 
 
@@ -7,7 +7,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Landroid/app/Activity;-><init>()V
+    invoke-direct {p0}, Lcom/oneplus/settings/BaseActivity;-><init>()V
 
     return-void
 .end method
@@ -93,65 +93,67 @@
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 2
+    .locals 4
 
-    invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/oneplus/settings/BaseActivity;->mNeedShowAppBar:Z
+
+    invoke-super {p0, p1}, Lcom/oneplus/settings/BaseActivity;->onCreate(Landroid/os/Bundle;)V
 
     sget p1, Lcom/android/settings/R$layout;->ca_certificate_warning_dialog:I
 
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->setContentView(I)V
+    invoke-virtual {p0, p1}, Lcom/oneplus/settings/BaseActivity;->setContentView(I)V
 
     sget p1, Lcom/android/settings/R$id;->setup_wizard_layout:I
 
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
     check-cast p1, Lcom/google/android/setupdesign/GlifLayout;
 
-    const-class v0, Lcom/google/android/setupcompat/template/FooterBarMixin;
+    const-class v1, Lcom/google/android/setupcompat/template/FooterBarMixin;
 
-    invoke-virtual {p1, v0}, Lcom/google/android/setupcompat/internal/TemplateLayout;->getMixin(Ljava/lang/Class;)Lcom/google/android/setupcompat/template/Mixin;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/google/android/setupcompat/template/FooterBarMixin;
-
-    new-instance v0, Lcom/google/android/setupcompat/template/FooterButton$Builder;
-
-    invoke-direct {v0, p0}, Lcom/google/android/setupcompat/template/FooterButton$Builder;-><init>(Landroid/content/Context;)V
-
-    sget v1, Lcom/android/settings/R$string;->certificate_warning_install_anyway:I
-
-    invoke-virtual {v0, v1}, Lcom/google/android/setupcompat/template/FooterButton$Builder;->setText(I)Lcom/google/android/setupcompat/template/FooterButton$Builder;
-
-    invoke-direct {p0}, Lcom/android/settings/security/InstallCaCertificateWarning;->installCaCertificate()Landroid/view/View$OnClickListener;
+    invoke-virtual {p1, v1}, Lcom/google/android/setupcompat/internal/TemplateLayout;->getMixin(Ljava/lang/Class;)Lcom/google/android/setupcompat/template/Mixin;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/google/android/setupcompat/template/FooterButton$Builder;->setListener(Landroid/view/View$OnClickListener;)Lcom/google/android/setupcompat/template/FooterButton$Builder;
+    check-cast v1, Lcom/google/android/setupcompat/template/FooterBarMixin;
 
-    const/4 v1, 0x0
+    new-instance v2, Lcom/google/android/setupcompat/template/FooterButton$Builder;
 
-    invoke-virtual {v0, v1}, Lcom/google/android/setupcompat/template/FooterButton$Builder;->setButtonType(I)Lcom/google/android/setupcompat/template/FooterButton$Builder;
+    invoke-direct {v2, p0}, Lcom/google/android/setupcompat/template/FooterButton$Builder;-><init>(Landroid/content/Context;)V
 
-    sget v1, Lcom/android/settings/R$style;->OnePlusSecondaryButtonStyle:I
+    sget v3, Lcom/android/settings/R$string;->certificate_warning_install_anyway:I
 
-    invoke-virtual {v0, v1}, Lcom/google/android/setupcompat/template/FooterButton$Builder;->setTheme(I)Lcom/google/android/setupcompat/template/FooterButton$Builder;
+    invoke-virtual {v2, v3}, Lcom/google/android/setupcompat/template/FooterButton$Builder;->setText(I)Lcom/google/android/setupcompat/template/FooterButton$Builder;
 
-    invoke-virtual {v0}, Lcom/google/android/setupcompat/template/FooterButton$Builder;->build()Lcom/google/android/setupcompat/template/FooterButton;
+    invoke-direct {p0}, Lcom/android/settings/security/InstallCaCertificateWarning;->installCaCertificate()Landroid/view/View$OnClickListener;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Lcom/google/android/setupcompat/template/FooterButton$Builder;->setListener(Landroid/view/View$OnClickListener;)Lcom/google/android/setupcompat/template/FooterButton$Builder;
+
+    invoke-virtual {v2, v0}, Lcom/google/android/setupcompat/template/FooterButton$Builder;->setButtonType(I)Lcom/google/android/setupcompat/template/FooterButton$Builder;
+
+    sget v0, Lcom/android/settings/R$style;->OnePlusSecondaryButtonStyle:I
+
+    invoke-virtual {v2, v0}, Lcom/google/android/setupcompat/template/FooterButton$Builder;->setTheme(I)Lcom/google/android/setupcompat/template/FooterButton$Builder;
+
+    invoke-virtual {v2}, Lcom/google/android/setupcompat/template/FooterButton$Builder;->build()Lcom/google/android/setupcompat/template/FooterButton;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/google/android/setupcompat/template/FooterBarMixin;->setSecondaryButton(Lcom/google/android/setupcompat/template/FooterButton;)V
+    invoke-virtual {v1, v0}, Lcom/google/android/setupcompat/template/FooterBarMixin;->setSecondaryButton(Lcom/google/android/setupcompat/template/FooterButton;)V
 
     new-instance v0, Lcom/google/android/setupcompat/template/FooterButton$Builder;
 
     invoke-direct {v0, p0}, Lcom/google/android/setupcompat/template/FooterButton$Builder;-><init>(Landroid/content/Context;)V
 
-    sget v1, Lcom/android/settings/R$string;->certificate_warning_dont_install:I
+    sget v2, Lcom/android/settings/R$string;->certificate_warning_dont_install:I
 
-    invoke-virtual {v0, v1}, Lcom/google/android/setupcompat/template/FooterButton$Builder;->setText(I)Lcom/google/android/setupcompat/template/FooterButton$Builder;
+    invoke-virtual {v0, v2}, Lcom/google/android/setupcompat/template/FooterButton$Builder;->setText(I)Lcom/google/android/setupcompat/template/FooterButton$Builder;
 
     invoke-direct {p0}, Lcom/android/settings/security/InstallCaCertificateWarning;->returnToInstallCertificateFromStorage()Landroid/view/View$OnClickListener;
 
@@ -171,7 +173,11 @@
 
     move-result-object p0
 
-    invoke-virtual {p1, p0}, Lcom/google/android/setupcompat/template/FooterBarMixin;->setPrimaryButton(Lcom/google/android/setupcompat/template/FooterButton;)V
+    invoke-virtual {v1, p0}, Lcom/google/android/setupcompat/template/FooterBarMixin;->setPrimaryButton(Lcom/google/android/setupcompat/template/FooterButton;)V
+
+    const/4 p0, 0x1
+
+    invoke-virtual {p1, p0}, Landroid/widget/FrameLayout;->setFitsSystemWindows(Z)V
 
     return-void
 .end method

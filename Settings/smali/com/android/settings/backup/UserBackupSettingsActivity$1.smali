@@ -77,6 +77,12 @@
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isO2()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
     new-instance p2, Lcom/android/settingslib/search/SearchIndexableRaw;
 
     invoke-direct {p2, p1}, Lcom/android/settingslib/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
@@ -129,5 +135,6 @@
 
     invoke-interface {p0, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    :cond_0
     return-object p0
 .end method

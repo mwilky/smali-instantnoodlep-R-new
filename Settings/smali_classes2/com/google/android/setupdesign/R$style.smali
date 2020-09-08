@@ -4,12 +4,12 @@
 
 
 # static fields
-.field public static final SudButtonItem:I = 0x7f14028a
+.field public static final SudButtonItem:I = 0x7f14028f
 
-.field public static final SudNavBarThemeDark:I = 0x7f1402b0
+.field public static final SudNavBarThemeDark:I = 0x7f1402b5
 
-.field public static final SudNavBarThemeLight:I = 0x7f1402b1
+.field public static final SudNavBarThemeLight:I = 0x7f1402b6
 
-.field public static final SudThemeGlif_Light:I = 0x7f1402b7
+.field public static final SudThemeGlif_Light:I = 0x7f1402bc
 
-.field public static final SudThemeMaterial_Light:I = 0x7f1402c0
+.field public static final SudThemeMaterial_Light:I = 0x7f1402c5

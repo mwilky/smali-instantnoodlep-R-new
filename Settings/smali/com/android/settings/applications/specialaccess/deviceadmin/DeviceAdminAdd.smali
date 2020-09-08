@@ -1,5 +1,5 @@
 .class public Lcom/android/settings/applications/specialaccess/deviceadmin/DeviceAdminAdd;
-.super Landroid/app/Activity;
+.super Lcom/oneplus/settings/BaseActivity;
 .source "DeviceAdminAdd.java"
 
 
@@ -61,7 +61,7 @@
 .method public constructor <init>()V
     .locals 1
 
-    invoke-direct {p0}, Landroid/app/Activity;-><init>()V
+    invoke-direct {p0}, Lcom/oneplus/settings/BaseActivity;-><init>()V
 
     new-instance v0, Landroid/os/Binder;
 
@@ -101,7 +101,7 @@
 .end method
 
 .method private addDeviceAdminPolicies(Z)V
-    .locals 5
+    .locals 8
 
     iget-boolean v0, p0, Lcom/android/settings/applications/specialaccess/deviceadmin/DeviceAdminAdd;->mAdminPoliciesInitialized:Z
 
@@ -160,29 +160,84 @@
     iget v2, v2, Landroid/app/admin/DeviceAdminInfo$PolicyInfo;->labelForSecondaryUsers:I
 
     :goto_2
+    new-instance v5, Landroid/widget/LinearLayout;
+
+    invoke-direct {v5, p0}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+
+    const/high16 v6, 0x41400000    # 12.0f
+
+    invoke-static {p0, v6}, Lcom/oneplus/security/utils/Utils;->dip2px(Landroid/content/Context;F)I
+
+    move-result v6
+
+    const/4 v7, 0x0
+
+    invoke-virtual {v5, v7, v6, v7, v6}, Landroid/widget/LinearLayout;->setPadding(IIII)V
+
+    invoke-virtual {v5, v3}, Landroid/widget/LinearLayout;->setOrientation(I)V
+
+    new-instance v3, Landroid/widget/TextView;
+
+    invoke-direct {v3, p0}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    sget v6, Lcom/android/settings/R$style;->op_control_text_style_h6:I
+
+    invoke-virtual {v3, v6}, Landroid/widget/TextView;->setTextAppearance(I)V
+
+    invoke-virtual {p0}, Landroidx/appcompat/app/AppCompatActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v6
+
+    sget v7, Lcom/android/settings/R$color;->op_control_text_color_secondary:I
+
+    invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v6
+
+    invoke-virtual {v3, v6}, Landroid/widget/TextView;->setTextColor(I)V
+
     invoke-virtual {p0, v2}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v2
 
+    invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {v5, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+
     if-eqz p1, :cond_2
+
+    new-instance v2, Landroid/widget/TextView;
+
+    invoke-direct {v2, p0}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    sget v3, Lcom/android/settings/R$style;->oneplus_contorl_text_style_body1:I
+
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setTextAppearance(I)V
+
+    invoke-virtual {p0}, Landroidx/appcompat/app/AppCompatActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    sget v6, Lcom/android/settings/R$color;->op_control_text_color_secondary:I
+
+    invoke-virtual {v3, v6}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
     invoke-virtual {p0, v4}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
 
-    move-result-object v4
+    move-result-object v3
 
-    goto :goto_3
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {v5, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     :cond_2
-    const-string v4, ""
+    iget-object v2, p0, Lcom/android/settings/applications/specialaccess/deviceadmin/DeviceAdminAdd;->mAdminPolicies:Landroid/view/ViewGroup;
 
-    :goto_3
-    invoke-static {p0, v2, v4, v3}, Landroid/widget/AppSecurityPermissions;->getPermissionItemView(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Landroid/view/View;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/android/settings/applications/specialaccess/deviceadmin/DeviceAdminAdd;->mAdminPolicies:Landroid/view/ViewGroup;
-
-    invoke-virtual {v3, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    invoke-virtual {v2, v5}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     goto :goto_0
 
@@ -752,7 +807,7 @@
 
     const-string v1, "Unable to retrieve device policy "
 
-    invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/oneplus/settings/BaseActivity;->onCreate(Landroid/os/Bundle;)V
 
     new-instance p1, Landroid/os/Handler;
 
@@ -1480,11 +1535,11 @@
     :cond_11
     sget p1, Lcom/android/settings/R$layout;->device_admin_add:I
 
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->setContentView(I)V
+    invoke-virtual {p0, p1}, Lcom/oneplus/settings/BaseActivity;->setContentView(I)V
 
     sget p1, Lcom/android/settings/R$id;->admin_icon:I
 
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -1494,7 +1549,7 @@
 
     sget p1, Lcom/android/settings/R$id;->admin_name:I
 
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -1504,7 +1559,7 @@
 
     sget p1, Lcom/android/settings/R$id;->admin_description:I
 
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -1514,7 +1569,7 @@
 
     sget p1, Lcom/android/settings/R$id;->profile_owner_warning:I
 
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -1522,7 +1577,7 @@
 
     sget p1, Lcom/android/settings/R$id;->add_msg:I
 
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -1532,7 +1587,7 @@
 
     sget p1, Lcom/android/settings/R$id;->add_msg_expander:I
 
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -1566,7 +1621,7 @@
 
     sget p1, Lcom/android/settings/R$id;->admin_warning:I
 
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -1576,7 +1631,7 @@
 
     sget p1, Lcom/android/settings/R$id;->admin_policies:I
 
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -1586,7 +1641,7 @@
 
     sget p1, Lcom/android/settings/R$id;->admin_support_message:I
 
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -1596,7 +1651,7 @@
 
     sget p1, Lcom/android/settings/R$id;->cancel_button:I
 
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -1616,7 +1671,7 @@
 
     sget p1, Lcom/android/settings/R$id;->uninstall_button:I
 
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -1636,7 +1691,7 @@
 
     sget p1, Lcom/android/settings/R$id;->action_button:I
 
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -1646,7 +1701,7 @@
 
     sget p1, Lcom/android/settings/R$id;->restricted_action:I
 
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -1774,7 +1829,7 @@
 .method protected onPause()V
     .locals 4
 
-    invoke-super {p0}, Landroid/app/Activity;->onPause()V
+    invoke-super {p0}, Landroidx/fragment/app/FragmentActivity;->onPause()V
 
     iget-object v0, p0, Lcom/android/settings/applications/specialaccess/deviceadmin/DeviceAdminAdd;->mActionButton:Landroid/widget/Button;
 
@@ -1814,7 +1869,7 @@
 .method protected onResume()V
     .locals 4
 
-    invoke-super {p0}, Landroid/app/Activity;->onResume()V
+    invoke-super {p0}, Landroidx/fragment/app/FragmentActivity;->onResume()V
 
     iget-object v0, p0, Lcom/android/settings/applications/specialaccess/deviceadmin/DeviceAdminAdd;->mActionButton:Landroid/widget/Button;
 
@@ -1944,7 +1999,7 @@
 
     sget v0, Lcom/android/settings/R$id;->restricted_icon:I
 
-    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -2125,7 +2180,7 @@
     :cond_2
     sget v5, Lcom/android/settings/R$id;->restricted_icon:I
 
-    invoke-virtual {p0, v5}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v5}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v5
 
@@ -2286,16 +2341,16 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object p0, p0, Lcom/android/settings/applications/specialaccess/deviceadmin/DeviceAdminAdd;->mSupportMessage:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings/applications/specialaccess/deviceadmin/DeviceAdminAdd;->mSupportMessage:Landroid/widget/TextView;
 
-    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto :goto_6
 
     :cond_a
-    iget-object p0, p0, Lcom/android/settings/applications/specialaccess/deviceadmin/DeviceAdminAdd;->mSupportMessage:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings/applications/specialaccess/deviceadmin/DeviceAdminAdd;->mSupportMessage:Landroid/widget/TextView;
 
-    invoke-virtual {p0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto :goto_6
 
@@ -2368,5 +2423,17 @@
     iput-boolean v3, p0, Lcom/android/settings/applications/specialaccess/deviceadmin/DeviceAdminAdd;->mAdding:Z
 
     :goto_6
+    iget-object v0, p0, Lcom/android/settings/applications/specialaccess/deviceadmin/DeviceAdminAdd;->mDeviceAdmin:Landroid/app/admin/DeviceAdminInfo;
+
+    invoke-virtual {p0}, Landroid/app/Activity;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/app/admin/DeviceAdminInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->setTitle(Ljava/lang/CharSequence;)V
+
     return-void
 .end method

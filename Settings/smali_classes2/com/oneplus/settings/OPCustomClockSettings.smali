@@ -65,6 +65,21 @@
     return p0
 .end method
 
+.method public onActivityResult(IILandroid/content/Intent;)V
+    .locals 0
+
+    invoke-super {p0, p1, p2, p3}, Landroidx/fragment/app/Fragment;->onActivityResult(IILandroid/content/Intent;)V
+
+    iget-object p0, p0, Lcom/oneplus/settings/OPCustomClockSettings;->mOPCustomClockPreference:Lcom/oneplus/settings/ui/OPCustomClockPreference;
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0, p1, p2, p3}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->onActivityResult(IILandroid/content/Intent;)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public onCancelPressed()V
     .locals 0
 

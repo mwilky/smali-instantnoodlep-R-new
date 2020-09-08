@@ -173,7 +173,7 @@
 
     move-result v5
 
-    if-eqz v5, :cond_13
+    if-eqz v5, :cond_14
 
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -185,13 +185,13 @@
 
     iget-object v6, v6, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
 
-    if-eqz v6, :cond_12
+    if-eqz v6, :cond_13
 
     invoke-virtual {v6, v1}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v7
 
-    if-eqz v7, :cond_12
+    if-eqz v7, :cond_13
 
     iget-object v7, v5, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
@@ -218,7 +218,7 @@
     :goto_1
     array-length v11, v6
 
-    if-ge v10, v11, :cond_12
+    if-ge v10, v11, :cond_13
 
     new-instance v11, Lcom/oneplus/settings/laboratory/OPLabPluginModel;
 
@@ -628,7 +628,7 @@
 
     if-eqz v1, :cond_d
 
-    goto :goto_f
+    goto/16 :goto_f
 
     :cond_d
     :goto_c
@@ -689,6 +689,47 @@
     goto :goto_f
 
     :cond_10
+    const-string v1, "OPLabFeatureActivity"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "fetchLockedAppListByPackageInfo featureKey "
+
+    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string v1, "oneplus_dc_dimming_value"
+
+    invoke-virtual {v1, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_11
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isO2()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_11
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportDC()Z
+
+    move-result v1
+
+    if-nez v1, :cond_11
+
+    goto :goto_f
+
+    :cond_11
     invoke-virtual {v11, v2}, Lcom/oneplus/settings/laboratory/OPLabPluginModel;->setToggleCount(I)V
 
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
@@ -701,7 +742,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_11
+    if-nez v1, :cond_12
 
     const-string v1, "op_iris_video_memc_extreme_status"
 
@@ -709,11 +750,11 @@
 
     move-result v1
 
-    if-eqz v1, :cond_11
+    if-eqz v1, :cond_12
 
     goto :goto_f
 
-    :cond_11
+    :cond_12
     invoke-interface {v4, v11}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
@@ -735,7 +776,7 @@
 
     goto/16 :goto_1
 
-    :cond_12
+    :cond_13
     move-object/from16 v20, v1
 
     move-object/from16 v21, v3
@@ -748,7 +789,7 @@
 
     goto/16 :goto_0
 
-    :cond_13
+    :cond_14
     return-object v4
 
     :catch_0

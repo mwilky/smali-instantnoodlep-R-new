@@ -13,7 +13,7 @@
 .method static constructor <clinit>()V
     .locals 25
 
-    const/16 v0, 0xc9
+    const/16 v0, 0xca
 
     new-array v0, v0, [Ljava/lang/String;
 
@@ -2024,6 +2024,16 @@
     move-result-object v1
 
     const/16 v24, 0xc8
+
+    aput-object v1, v0, v24
+
+    const-class v1, Lcom/android/settings/network/ExtendedNetworkList;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v24, 0xc9
 
     aput-object v1, v0, v24
 

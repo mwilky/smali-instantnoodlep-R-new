@@ -9,6 +9,7 @@
         Landroidx/preference/PreferenceManager$OnActivityResultListener;,
         Landroidx/preference/PreferenceManager$PreferenceComparisonCallback;,
         Landroidx/preference/PreferenceManager$OnNavigateToScreenListener;,
+        Landroidx/preference/PreferenceManager$OnDisMissPreferenceDialogListener;,
         Landroidx/preference/PreferenceManager$OnDisplayPreferenceDialogListener;,
         Landroidx/preference/PreferenceManager$OnPreferenceTreeClickListener;
     }
@@ -488,6 +489,12 @@
     .locals 0
 
     iput-object p1, p0, Landroidx/preference/PreferenceManager;->mActivity:Landroid/app/Activity;
+
+    return-void
+.end method
+
+.method public setOnDisMissPreferenceDialogListener(Landroidx/preference/PreferenceManager$OnDisMissPreferenceDialogListener;)V
+    .locals 0
 
     return-void
 .end method

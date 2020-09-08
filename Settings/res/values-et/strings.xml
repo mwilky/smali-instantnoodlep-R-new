@@ -1023,7 +1023,7 @@ See mõjutab teisi rakendusi või vestlusi, millel on luba mullis kuvamiseks."</
     <string name="cache_header_label">Vahemälu</string>
     <string name="cache_size_label">Vahemälu</string>
     <string name="cached">Vahemällu salvestatud taustaprotsess</string>
-    <string name="cached_apps_freezer">Vahemälus olevate rakenduste käivitamise peatamine</string>
+    <string name="cached_apps_freezer">Vahemälus olevate rakenduste täitmise peatamine</string>
     <string name="cached_apps_freezer_device_default">Seadme vaikeseade</string>
     <string name="cached_apps_freezer_disabled">Keelatud</string>
     <string name="cached_apps_freezer_enabled">Lubatud</string>
@@ -2173,6 +2173,7 @@ Saate seda hiljem muuta jaotises Seaded > Rakendused ja märguanded."</string>
     <string name="keywords_lock_screen_notif">lukustuskuva märguanne, märguanded</string>
     <string name="keywords_lockscreen">libista avamiseks, parool, muster, PIN</string>
     <string name="keywords_lockscreen_bypass">Lukustuskuva, lukustuskuva, vahelejätmine, mittekasutamine</string>
+    <string name="keywords_media_controls">meedia</string>
     <string name="keywords_model_and_hardware">seerianumber, riistvaraversioon</string>
     <string name="keywords_more_mobile_networks">mobiilne, mobiil, mobiilioperaator, juhtmeta, andmed, 4g,3g, 2g, lte</string>
     <string name="keywords_network_reset">lähtesta, taasta, tehaseseaded</string>
@@ -2549,6 +2550,12 @@ Seadmes on teisi kasutajaid.
     <string name="master_clear_title">Kõigi andmete kustutamine (tehaseseadetele lähtestamine)</string>
     <string name="maximum_memory_use">Maksimaalne mälukasutus</string>
     <string name="media_category">Meedia</string>
+    <string name="media_controls_hide_player">Peida pleier</string>
+    <string name="media_controls_no_players">Ühtegi pleierit pole saadaval</string>
+    <string name="media_controls_resume_description">Pleier võimaldab teil seanssi jätkata kiirseadete laiendatud paneelil.</string>
+    <string name="media_controls_show_player">Kuva pleier</string>
+    <string name="media_controls_summary">Peida pleier, kui meediaseanss on lõppenud</string>
+    <string name="media_controls_title">Meedia</string>
     <string name="media_out_summary_ongoing_call_state">Pole kõnede ajal saadaval</string>
     <string name="media_output_default_summary">See seade</string>
     <string name="media_output_disconnected_status">%1$s (pole ühendatud)</string>
@@ -2806,7 +2813,7 @@ See määrab uueks vaikemakserakenduseks rakenduse %2$s."</string>
     <string name="night_display_text">Funktsioon Öövalgus toonib ekraani oranžkollaseks. Nii on hämaras ekraani mugavam vaadata ja sellelt teksti lugeda. See võib aidata teil ka hõlpsamini magama jääda.</string>
     <string name="night_display_title">Öövalgus</string>
     <string name="no">Ei</string>
-    <string name="no_5g_in_dsds_text">Kui kasutate kaht SIM-kaarti, saab see telefon kasutada ainult 4G-võrku. <annotation id="url">Vaadake lisateavet</annotation>.</string>
+    <string name="no_5g_in_dsds_text">Kui kasutate kaht SIM-kaarti, saab see telefon kasutada ainult 4G-võrku. <annotation id="url">Lisateave</annotation></string>
     <string name="no_application">Mitte ühtegi</string>
     <string name="no_applications">Rakendusi pole.</string>
     <string name="no_battery_summary">Akut pole pärast viimast täislaadimist kasutatud</string>
@@ -2923,6 +2930,7 @@ See võimaldab rakendusel ka lülitada sisse või välja funktsiooni Mitte segad
     <string name="notification_priority_title">Prioriteet</string>
     <string name="notification_pulse_title">Vilkuv tuli</string>
     <string name="notification_ringtone_title">Märguande vaikeheli</string>
+    <string name="notification_screen_summary">Märguannete ajalugu, mullid, hiljuti saadetud</string>
     <string name="notification_settings_work_profile">Tööprofiilil pole märguannete juurdepääs rakenduste puhul saadaval.</string>
     <string name="notification_show_lights_title">Vilkuv tuli</string>
     <string name="notification_silence_title">Hääletu</string>
@@ -3030,6 +3038,8 @@ See võimaldab rakendusel ka lülitada sisse või välja funktsiooni Mitte segad
     <string name="platform_compat_dashboard_title">Rakenduste ühilduvuse muudatused</string>
     <string name="platform_compat_default_disabled_title">Vaikimisi keelatud rakenduste muudatused</string>
     <string name="platform_compat_default_enabled_title">Vaikimisi lubatud rakenduste muudatused</string>
+    <string name="platform_compat_dialog_text_no_apps">Rakenduse ühilduvuse muudatusi saab muuta silutavate rakenduste puhul. Installige silutav rakendus ja proovige uuesti.</string>
+    <string name="platform_compat_dialog_title_no_apps">Rakendusi pole</string>
     <string name="please_select_phase2">2. etapi autentimine</string>
     <string name="pointer_location">Kursori asukoht</string>
     <string name="pointer_location_summary">Praegusi puuteandmeid kuvav ekraani ülekate</string>

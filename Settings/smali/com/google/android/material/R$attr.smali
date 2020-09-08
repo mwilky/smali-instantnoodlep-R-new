@@ -90,46 +90,46 @@
 
 .field public static final numberPickerStyle:I = 0x7f04037d
 
-.field public static final pickerColorActivated:I = 0x7f0403e5
+.field public static final pickerColorActivated:I = 0x7f0403e2
 
-.field public static final pickerColorUnActivated:I = 0x7f0403e6
+.field public static final pickerColorUnActivated:I = 0x7f0403e3
 
-.field public static final pickerInputLabelUnActivated:I = 0x7f0403e7
+.field public static final pickerInputLabelUnActivated:I = 0x7f0403e4
 
-.field public static final radioButtonStyle:I = 0x7f040435
+.field public static final radioButtonStyle:I = 0x7f040432
 
-.field public static final rectangleFloatingActionButtonStyle:I = 0x7f04043b
+.field public static final rectangleFloatingActionButtonStyle:I = 0x7f040438
 
-.field public static final sliderStyle:I = 0x7f04049b
+.field public static final sliderStyle:I = 0x7f040498
 
-.field public static final state_collapsed:I = 0x7f0404b0
+.field public static final state_collapsed:I = 0x7f0404ad
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end field
 
-.field public static final state_collapsible:I = 0x7f0404b1
+.field public static final state_collapsible:I = 0x7f0404ae
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end field
 
-.field public static final state_dragged:I = 0x7f0404b2
+.field public static final state_dragged:I = 0x7f0404af
 
-.field public static final state_liftable:I = 0x7f0404b5
+.field public static final state_liftable:I = 0x7f0404b2
 
-.field public static final state_lifted:I = 0x7f0404b6
+.field public static final state_lifted:I = 0x7f0404b3
 
-.field public static final switchFloatingActionButtonStyle:I = 0x7f040522
+.field public static final switchFloatingActionButtonStyle:I = 0x7f04051f
 
-.field public static final switchStyle:I = 0x7f040527
+.field public static final switchStyle:I = 0x7f040524
 
-.field public static final tabBarStyle:I = 0x7f04052c
+.field public static final tabBarStyle:I = 0x7f040529
 
-.field public static final tabStyle:I = 0x7f040542
+.field public static final tabStyle:I = 0x7f04053f
 
-.field public static final textAppearanceLineHeightEnabled:I = 0x7f040559
+.field public static final textAppearanceLineHeightEnabled:I = 0x7f040556
 
-.field public static final theme:I = 0x7f040574
+.field public static final theme:I = 0x7f040571
 
-.field public static final timePickerStyle:I = 0x7f040586
+.field public static final timePickerStyle:I = 0x7f040583
 
-.field public static final toolbarStyle:I = 0x7f0405a2
+.field public static final toolbarStyle:I = 0x7f04059f

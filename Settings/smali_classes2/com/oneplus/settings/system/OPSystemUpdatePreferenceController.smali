@@ -97,6 +97,12 @@
 
     if-eqz p1, :cond_2
 
+    sget v0, Lcom/android/settings/R$layout;->op_layout_sys_update_icon1:I
+
+    invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setWidgetLayoutResource(I)V
+
+    iget-object p1, p0, Lcom/oneplus/settings/system/OPSystemUpdatePreferenceController;->mUpdatePreference:Lcom/oneplus/settings/system/OPSystemUpdatePreference;
+
     invoke-virtual {p1}, Landroidx/preference/Preference;->getIntent()Landroid/content/Intent;
 
     move-result-object p1
@@ -234,11 +240,19 @@
 
     iget-object p0, p0, Lcom/oneplus/settings/system/OPSystemUpdatePreferenceController;->mUm:Landroid/os/UserManager;
 
+    if-eqz p0, :cond_0
+
     invoke-virtual {p0}, Landroid/os/UserManager;->isAdminUser()Z
 
     move-result p0
 
     if-eqz p0, :cond_0
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportGota()Z
+
+    move-result p0
+
+    if-nez p0, :cond_0
 
     const/4 p0, 0x1
 

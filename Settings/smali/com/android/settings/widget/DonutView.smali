@@ -706,7 +706,7 @@
 
     move-result p1
 
-    const/16 p2, 0xa
+    const/16 p2, 0x8
 
     if-le p1, p2, :cond_0
 

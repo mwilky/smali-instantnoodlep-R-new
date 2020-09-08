@@ -266,35 +266,3 @@
     :cond_1
     return-object p0
 .end method
-
-.method public static createSetupUserDialog(Landroid/content/Context;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/Dialog;
-    .locals 1
-
-    new-instance v0, Landroidx/appcompat/app/AlertDialog$Builder;
-
-    invoke-direct {v0, p0}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
-
-    sget p0, Lcom/android/settingslib/R$string;->user_setup_dialog_title:I
-
-    invoke-virtual {v0, p0}, Landroidx/appcompat/app/AlertDialog$Builder;->setTitle(I)Landroidx/appcompat/app/AlertDialog$Builder;
-
-    sget p0, Lcom/android/settingslib/R$string;->user_setup_dialog_message:I
-
-    invoke-virtual {v0, p0}, Landroidx/appcompat/app/AlertDialog$Builder;->setMessage(I)Landroidx/appcompat/app/AlertDialog$Builder;
-
-    sget p0, Lcom/android/settingslib/R$string;->user_setup_button_setup_now:I
-
-    invoke-virtual {v0, p0, p1}, Landroidx/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
-
-    sget p0, Lcom/android/settingslib/R$string;->user_setup_button_setup_later:I
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v0, p0, p1}, Landroidx/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
-
-    invoke-virtual {v0}, Landroidx/appcompat/app/AlertDialog$Builder;->create()Landroidx/appcompat/app/AlertDialog;
-
-    move-result-object p0
-
-    return-object p0
-.end method

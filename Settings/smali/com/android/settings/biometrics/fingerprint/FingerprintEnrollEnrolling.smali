@@ -31,7 +31,7 @@
 
 .field private final mDelayedShowLottieRunnable:Ljava/lang/Runnable;
 
-.field private mDialog:Landroidx/appcompat/app/AlertDialog;
+.field protected mDialog:Landroidx/appcompat/app/AlertDialog;
 
 .field private mEdgeEnrollAnimView:Lcom/airbnb/lottie/LottieAnimationView;
 
@@ -61,7 +61,7 @@
 
 .field private mNeedJumpToFingerprintSettings:Z
 
-.field private mNextButton:Landroid/widget/Button;
+.field protected mNextButton:Landroid/widget/Button;
 
 .field protected mOPFingerPrintDynamicEnrollView:Lcom/oneplus/settings/opfinger/OPFingerPrintDynamicEnrollView;
 
@@ -223,44 +223,36 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)Landroidx/appcompat/app/AlertDialog;
+.method static synthetic access$000(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)Landroid/widget/ProgressBar;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->mDialog:Landroidx/appcompat/app/AlertDialog;
+    iget-object p0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->mProgressBar:Landroid/widget/ProgressBar;
 
     return-object p0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->delayCallFingerprintService()V
-
-    return-void
-.end method
-
-.method static synthetic access$1000(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)Lcom/airbnb/lottie/LottieAnimationView;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->mEdgeEnrollAnimView:Lcom/airbnb/lottie/LottieAnimationView;
-
-    return-object p0
-.end method
-
-.method static synthetic access$1100(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)Landroid/os/PowerManager$WakeLock;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->mWakeLock:Landroid/os/PowerManager$WakeLock;
-
-    return-object p0
-.end method
-
-.method static synthetic access$1200(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)V
+.method static synthetic access$1000(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->releaseWakeLock()V
 
     return-void
+.end method
+
+.method static synthetic access$1100(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)Lcom/android/settings/biometrics/BiometricEnrollSidecar;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/biometrics/BiometricsEnrollEnrolling;->mSidecar:Lcom/android/settings/biometrics/BiometricEnrollSidecar;
+
+    return-object p0
+.end method
+
+.method static synthetic access$1202(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;Lcom/android/settings/biometrics/BiometricEnrollSidecar;)Lcom/android/settings/biometrics/BiometricEnrollSidecar;
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/settings/biometrics/BiometricsEnrollEnrolling;->mSidecar:Lcom/android/settings/biometrics/BiometricEnrollSidecar;
+
+    return-object p1
 .end method
 
 .method static synthetic access$1300(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)Lcom/android/settings/biometrics/BiometricEnrollSidecar;
@@ -271,15 +263,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1402(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;Lcom/android/settings/biometrics/BiometricEnrollSidecar;)Lcom/android/settings/biometrics/BiometricEnrollSidecar;
-    .locals 0
-
-    iput-object p1, p0, Lcom/android/settings/biometrics/BiometricsEnrollEnrolling;->mSidecar:Lcom/android/settings/biometrics/BiometricEnrollSidecar;
-
-    return-object p1
-.end method
-
-.method static synthetic access$1500(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)Lcom/android/settings/biometrics/BiometricEnrollSidecar;
+.method static synthetic access$1400(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)Lcom/android/settings/biometrics/BiometricEnrollSidecar;
     .locals 0
 
     iget-object p0, p0, Lcom/android/settings/biometrics/BiometricsEnrollEnrolling;->mSidecar:Lcom/android/settings/biometrics/BiometricEnrollSidecar;
@@ -287,23 +271,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1600(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)Lcom/android/settings/biometrics/BiometricEnrollSidecar;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/settings/biometrics/BiometricsEnrollEnrolling;->mSidecar:Lcom/android/settings/biometrics/BiometricEnrollSidecar;
-
-    return-object p0
-.end method
-
-.method static synthetic access$200(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)Landroid/widget/ProgressBar;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->mProgressBar:Landroid/widget/ProgressBar;
-
-    return-object p0
-.end method
-
-.method static synthetic access$400(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)[B
+.method static synthetic access$200(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)[B
     .locals 0
 
     iget-object p0, p0, Lcom/android/settings/biometrics/BiometricEnrollBase;->mToken:[B
@@ -311,7 +279,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)Z
+.method static synthetic access$300(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->mAnimationCancelled:Z
@@ -319,7 +287,7 @@
     return p0
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)V
+.method static synthetic access$400(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->startIconAnimation()V
@@ -327,7 +295,7 @@
     return-void
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)V
+.method static synthetic access$600(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->clearError()V
@@ -335,12 +303,28 @@
     return-void
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;Ljava/lang/CharSequence;)V
+.method static synthetic access$700(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;Ljava/lang/CharSequence;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->showError(Ljava/lang/CharSequence;)V
 
     return-void
+.end method
+
+.method static synthetic access$800(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)Lcom/airbnb/lottie/LottieAnimationView;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->mEdgeEnrollAnimView:Lcom/airbnb/lottie/LottieAnimationView;
+
+    return-object p0
+.end method
+
+.method static synthetic access$900(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;)Landroid/os/PowerManager$WakeLock;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+
+    return-object p0
 .end method
 
 .method private acquireWakeLock()V
@@ -393,9 +377,7 @@
 
     move-result v0
 
-    const/high16 v1, 0x41600000    # 14.0f
-
-    const/high16 v2, 0x41900000    # 18.0f
+    const/high16 v1, 0x41900000    # 18.0f
 
     if-eqz v0, :cond_0
 
@@ -407,7 +389,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextSize(F)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextSize(F)V
 
     sget v0, Lcom/android/settings/R$id;->start_message:I
 
@@ -416,6 +398,8 @@
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
+
+    const/high16 v1, 0x41600000    # 14.0f
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextSize(F)V
 
@@ -482,15 +466,19 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextSize(F)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextSize(F)V
 
     iget-object v0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->mStartMessage:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextSize(F)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextSize(F)V
 
     iget-object v0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->mRepeatMessage:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextSize(F)V
+    const/4 v1, 0x0
+
+    const/high16 v2, 0x42400000    # 48.0f
+
+    invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextSize(IF)V
 
     :cond_1
     :goto_0
@@ -680,26 +668,6 @@
     return-void
 .end method
 
-.method private delayCallFingerprintService()V
-    .locals 3
-
-    iget-object v0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->mHandler:Landroid/os/Handler;
-
-    iget-object v1, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->callFingerprintServiceRunnable:Ljava/lang/Runnable;
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
-
-    iget-object v0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->mHandler:Landroid/os/Handler;
-
-    iget-object p0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->callFingerprintServiceRunnable:Ljava/lang/Runnable;
-
-    const-wide/16 v1, 0x96
-
-    invoke-virtual {v0, p0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    return-void
-.end method
-
 .method private disableRecentAndHomeKey()V
     .locals 2
 
@@ -771,24 +739,6 @@
     invoke-virtual {p0, v0}, Landroid/app/StatusBarManager;->disable(I)V
 
     :cond_0
-    return-void
-.end method
-
-.method private expandViewTouchDelegate(Landroid/view/View;I)V
-    .locals 2
-
-    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/View;
-
-    new-instance v1, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling$2;
-
-    invoke-direct {v1, p0, p1, p2}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling$2;-><init>(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;Landroid/view/View;I)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
     return-void
 .end method
 
@@ -1578,22 +1528,9 @@
 .method private showErrorDialog(Ljava/lang/CharSequence;I)V
     .locals 1
 
-    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportCustomFingerprint()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p1, p2}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling$FingerprintErrorDialog;->newInstance(Ljava/lang/CharSequence;I)Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling$FingerprintErrorDialog;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :cond_0
     iget-boolean v0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->isSetupPage:Z
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
@@ -1603,7 +1540,7 @@
 
     goto :goto_0
 
-    :cond_1
+    :cond_0
     invoke-static {p1, p2}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling$FingerprintErrorDialog;->newInstance(Ljava/lang/CharSequence;I)Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling$FingerprintErrorDialog;
 
     move-result-object p1
@@ -1914,6 +1851,26 @@
 
 
 # virtual methods
+.method protected delayCallFingerprintService()V
+    .locals 3
+
+    iget-object v0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->mHandler:Landroid/os/Handler;
+
+    iget-object v1, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->callFingerprintServiceRunnable:Ljava/lang/Runnable;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    iget-object v0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->mHandler:Landroid/os/Handler;
+
+    iget-object p0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->callFingerprintServiceRunnable:Ljava/lang/Runnable;
+
+    const-wide/16 v1, 0x96
+
+    invoke-virtual {v0, p0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    return-void
+.end method
+
 .method public disableAllKey()V
     .locals 2
 
@@ -1961,6 +1918,24 @@
     invoke-direct {p0, v1}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->showScreenNavBar(Z)V
 
     :cond_1
+    return-void
+.end method
+
+.method protected expandViewTouchDelegate(Landroid/view/View;I)V
+    .locals 2
+
+    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/View;
+
+    new-instance v1, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling$2;
+
+    invoke-direct {v1, p0, p1, p2}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling$2;-><init>(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;Landroid/view/View;I)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
     return-void
 .end method
 
@@ -2029,6 +2004,12 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[B)Landroid/content/Intent;
 
+    iget-boolean p1, p0, Lcom/android/settings/biometrics/BiometricEnrollBase;->mFromSettingsSummary:Z
+
+    const-string v1, "from_settings_summary"
+
+    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
     iget p1, p0, Lcom/android/settings/biometrics/BiometricEnrollBase;->mUserId:I
 
     const/16 v1, -0x2710
@@ -2071,6 +2052,12 @@
     invoke-direct {p0, v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->changeEnrollStateByFocusChanged(Z)V
 
     invoke-super {p0}, Lcom/android/settings/biometrics/BiometricsEnrollEnrolling;->onBackPressed()V
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->setResult(I)V
+
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     return-void
 .end method
@@ -2117,13 +2104,31 @@
 
     move-result v0
 
+    if-eqz v0, :cond_1
+
+    iget-boolean v0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->isSetupPage:Z
+
     if-eqz v0, :cond_0
 
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isO2()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget v0, Lcom/android/settings/R$style;->SetupOnePlusFingerprintEnrolling:I
+
+    invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->setTheme(I)V
+
+    goto :goto_0
+
+    :cond_0
     sget v0, Lcom/android/settings/R$style;->OnePlusFingerprintEnrolling:I
 
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->setTheme(I)V
 
-    :cond_0
+    :cond_1
+    :goto_0
     invoke-super {p0, p1}, Lcom/android/settings/biometrics/BiometricEnrollBase;->onCreate(Landroid/os/Bundle;)V
 
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportCustomFingerprint()Z
@@ -2132,7 +2137,7 @@
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
@@ -2144,12 +2149,12 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setSystemUiVisibility(I)V
 
-    :cond_1
+    :cond_2
     invoke-virtual {p0}, Landroid/app/Activity;->isInMultiWindowMode()Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     sget v0, Lcom/android/settings/R$string;->oneplus_cannot_enroll_fingerprint_in_splitting_screen:I
 
@@ -2161,7 +2166,7 @@
 
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
-    :cond_2
+    :cond_3
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -2180,7 +2185,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
@@ -2192,14 +2197,14 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setSystemUiVisibility(I)V
 
-    :cond_3
+    :cond_4
     invoke-virtual {p0}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
     const/4 v2, 0x1
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
     invoke-virtual {v0, v2}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
 
@@ -2211,75 +2216,75 @@
 
     invoke-virtual {v0, v3}, Landroid/app/ActionBar;->setElevation(F)V
 
-    :cond_4
+    :cond_5
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportDynamicEnrollAnimation()Z
 
     move-result v0
 
     const/4 v3, -0x1
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     iget v0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->overlayLayoutId:I
 
-    if-eq v0, v3, :cond_5
+    if-eq v0, v3, :cond_6
 
-    goto :goto_0
-
-    :cond_5
-    sget v0, Lcom/android/settings/R$layout;->op_fod_fingerprint_dynamic_enroll_enrolling_base:I
-
-    goto :goto_0
+    goto :goto_1
 
     :cond_6
+    sget v0, Lcom/android/settings/R$layout;->op_fod_fingerprint_dynamic_enroll_enrolling_base:I
+
+    goto :goto_1
+
+    :cond_7
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportCustomFingerprint()Z
 
     move-result v0
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_a
 
     iget v0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->overlayLayoutId:I
 
-    if-eq v0, v3, :cond_7
+    if-eq v0, v3, :cond_8
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_7
+    :cond_8
     iget-boolean v0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->isSetupPage:Z
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_9
 
     sget v0, Lcom/android/settings/R$layout;->op_fod_setup_fingerprint_enroll_enrolling_base:I
 
-    goto :goto_0
-
-    :cond_8
-    sget v0, Lcom/android/settings/R$layout;->op_fod_fingerprint_enroll_enrolling_base:I
-
-    goto :goto_0
+    goto :goto_1
 
     :cond_9
+    sget v0, Lcom/android/settings/R$layout;->op_fod_fingerprint_enroll_enrolling_base:I
+
+    goto :goto_1
+
+    :cond_a
     invoke-static {p0}, Lcom/oneplus/settings/utils/OPUtils;->isSurportBackFingerprint(Landroid/content/Context;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_c
 
     iget v0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->overlayLayoutId:I
 
-    if-eq v0, v3, :cond_a
+    if-eq v0, v3, :cond_b
 
-    goto :goto_0
-
-    :cond_a
-    sget v0, Lcom/android/settings/R$layout;->op_back_fingerprint_enroll_enrolling_base:I
-
-    goto :goto_0
+    goto :goto_1
 
     :cond_b
+    sget v0, Lcom/android/settings/R$layout;->op_back_fingerprint_enroll_enrolling_base:I
+
+    goto :goto_1
+
+    :cond_c
     sget v0, Lcom/android/settings/R$layout;->fingerprint_enroll_enrolling_base:I
 
-    :goto_0
+    :goto_1
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->setContentView(I)V
 
     sget v0, Lcom/android/settings/R$string;->security_settings_fingerprint_enroll_repeat_title:I
@@ -2366,18 +2371,18 @@
 
     move-result v0
 
-    if-eqz v0, :cond_c
+    if-eqz v0, :cond_d
 
     iget-object v0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->mRepeatMessage:Landroid/widget/TextView;
 
     invoke-static {v0}, Lcom/google/android/setupdesign/util/DescriptionStyler;->applyPartnerCustomizationStyle(Landroid/widget/TextView;)V
 
-    :cond_c
+    :cond_d
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportCustomFingerprint()Z
 
     move-result v0
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_e
 
     sget v0, Lcom/android/settings/R$id;->continue_enroll_button:I
 
@@ -2409,7 +2414,7 @@
 
     invoke-virtual {v0, v2}, Lcom/airbnb/lottie/LottieAnimationView;->loop(Z)V
 
-    :cond_d
+    :cond_e
     invoke-direct {p0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->initFingerPrintEnrollView()V
 
     const-string v0, "statusbar"
@@ -2432,11 +2437,11 @@
 
     move-result v0
 
-    if-ne v0, v2, :cond_e
+    if-ne v0, v2, :cond_f
 
     move v1, v2
 
-    :cond_e
+    :cond_f
     iput-boolean v1, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->mScreenNavBarEnabled:Z
 
     sget v0, Lcom/android/settings/R$anim;->shake_anim:I
@@ -2972,39 +2977,26 @@
     invoke-virtual {p0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->enableAllKey()V
 
     :goto_0
-    invoke-virtual {p0}, Landroid/app/Activity;->isChangingConfigurations()Z
-
-    move-result v0
-
-    if-nez v0, :cond_5
-
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->mCurrentProgress:I
 
     iput v0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->mEnrollSuccessCount:I
 
-    iget-object v1, p0, Lcom/android/settings/biometrics/BiometricsEnrollEnrolling;->mSidecar:Lcom/android/settings/biometrics/BiometricEnrollSidecar;
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v1}, Lcom/android/settings/biometrics/BiometricEnrollSidecar;->cancelEnrollment()Z
-
-    :cond_2
     invoke-direct {p0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->releaseWakeLock()V
 
     iget-boolean v1, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->mConfirmCompleted:Z
 
-    if-nez v1, :cond_3
+    if-nez v1, :cond_2
 
     iget-boolean v1, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->mOnBackPress:Z
 
-    :cond_3
+    :cond_2
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportDynamicEnrollAnimation()Z
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_3
 
     iget-object v1, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->mOPFingerPrintDynamicEnrollView:Lcom/oneplus/settings/opfinger/OPFingerPrintDynamicEnrollView;
 
@@ -3012,7 +3004,7 @@
 
     goto :goto_1
 
-    :cond_4
+    :cond_3
     iget-object v1, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->mOPFingerPrintEnrollView:Lcom/oneplus/settings/opfinger/OPFingerPrintEnrollView;
 
     invoke-virtual {v1}, Lcom/oneplus/settings/opfinger/OPFingerPrintEnrollView;->hideWarningTips()V
@@ -3030,17 +3022,19 @@
 
     iput-boolean v0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->mHasInputCompleted:Z
 
+    invoke-virtual {p0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->onBackPressed()V
+
     const/16 v1, 0xa
 
     invoke-direct {p0, v0, v1}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->resumeEnroll(ZI)V
 
-    const/4 v0, 0x1
+    iget-object p0, p0, Lcom/android/settings/biometrics/BiometricsEnrollEnrolling;->mSidecar:Lcom/android/settings/biometrics/BiometricEnrollSidecar;
 
-    invoke-virtual {p0, v0}, Landroid/app/Activity;->setResult(I)V
+    if-eqz p0, :cond_4
 
-    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings/biometrics/BiometricEnrollSidecar;->cancelEnrollment()Z
 
-    :cond_5
+    :cond_4
     return-void
 .end method
 
@@ -3140,7 +3134,7 @@
 
     if-ne v0, v1, :cond_0
 
-    invoke-direct {p0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->delayCallFingerprintService()V
+    invoke-virtual {p0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->delayCallFingerprintService()V
 
     goto :goto_0
 
@@ -3306,7 +3300,7 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/CheckBox;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    invoke-direct {p0, v2, v1}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->expandViewTouchDelegate(Landroid/view/View;I)V
+    invoke-virtual {p0, v2, v1}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->expandViewTouchDelegate(Landroid/view/View;I)V
 
     new-instance v1, Landroidx/appcompat/app/AlertDialog$Builder;
 

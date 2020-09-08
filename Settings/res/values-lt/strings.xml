@@ -2173,6 +2173,7 @@ Tai galėsite pakeisti nuėję į skiltį „Nustatymai“ > „Programos ir pra
     <string name="keywords_lock_screen_notif">užrakinimo ekrano pranešimas, pranešimai</string>
     <string name="keywords_lockscreen">slysti ir atrakinti, slaptažodis, šablonas, PIN kodas</string>
     <string name="keywords_lockscreen_bypass">užrakinimo ekranas, praleisti, apeiti</string>
+    <string name="keywords_media_controls">medija</string>
     <string name="keywords_model_and_hardware">serijos numeris, aparatinės įrangos versija</string>
     <string name="keywords_more_mobile_networks">mobilusis, mobiliojo ryšio operatorius, belaidis, duomenys, 4G, 3G, 2G, LTE</string>
     <string name="keywords_network_reset">nustatyti iš naujo, atkurti, gamykliniai duomenys</string>
@@ -2549,6 +2550,12 @@ Yra kitų šio įrenginio naudotojų.
     <string name="master_clear_title">Ištrinti visus duomenis (atkurti gamyklinius duomenis)</string>
     <string name="maximum_memory_use">Daugiausia panaudota atminties</string>
     <string name="media_category">Medija</string>
+    <string name="media_controls_hide_player">Slėpti leistuvę</string>
+    <string name="media_controls_no_players">Nėra jokių pasiekiamų leistuvių</string>
+    <string name="media_controls_resume_description">Naudodami leistuvę galite tęsti seansą iš išskleisto sparčiųjų nustatymų skydelio.</string>
+    <string name="media_controls_show_player">Rodyti leistuvę</string>
+    <string name="media_controls_summary">Slėpti leistuvę pasibaigus medijos seansui</string>
+    <string name="media_controls_title">Medija</string>
     <string name="media_out_summary_ongoing_call_state">Nepasiekiama skambučių metu</string>
     <string name="media_output_default_summary">Šis įrenginys</string>
     <string name="media_output_disconnected_status">„%1$s“ (atjungta)</string>
@@ -2806,7 +2813,7 @@ Tai pakeičia „%2$s“ kaip numatytąją mokėjimo programą."</string>
     <string name="night_display_text">Nustačius Nakties šviesą, naktį rodomas gintaro atspalvio ekranas. Taip bus patogiau žiūrėti į ekraną prietemoje ir galbūt lengviau užmigsite.</string>
     <string name="night_display_title">Nakties šviesa</string>
     <string name="no">Ne</string>
-    <string name="no_5g_in_dsds_text">Naudojant dvi SIM korteles, šiame telefone bus galima naudoti tik 4G. <annotation id="url">Sužinokite daugiau</annotation>.</string>
+    <string name="no_5g_in_dsds_text">Naudojant dvi SIM korteles, šiame telefone bus galima naudoti tik 4G. <annotation id="url">Sužinokite daugiau</annotation></string>
     <string name="no_application">Nieko</string>
     <string name="no_applications">Nėra programų</string>
     <string name="no_battery_summary">Akumuliatorius nenaudotas nuo paskutinio visiško įkrovimo</string>
@@ -2923,6 +2930,7 @@ Programa taip pat galės įjungti ar išjungti režimą „Netrukdyti“ ir keis
     <string name="notification_priority_title">Prioritetas</string>
     <string name="notification_pulse_title">Mirksinti šviesa</string>
     <string name="notification_ringtone_title">Numatytasis pranešimo garsas</string>
+    <string name="notification_screen_summary">Pranešimų istorija, burbulai, neseniai išsiųsta</string>
     <string name="notification_settings_work_profile">Prieiga prie pranešimų negalima darbo profilio programoms.</string>
     <string name="notification_show_lights_title">Mirksinti šviesa</string>
     <string name="notification_silence_title">Tylūs</string>
@@ -3030,6 +3038,8 @@ Programa taip pat galės įjungti ar išjungti režimą „Netrukdyti“ ir keis
     <string name="platform_compat_dashboard_title">Programos suderinamumo pakeitimai</string>
     <string name="platform_compat_default_disabled_title">Numatytieji išjungti pakeitimai</string>
     <string name="platform_compat_default_enabled_title">Numatytieji įgalinti pakeitimai</string>
+    <string name="platform_compat_dialog_text_no_apps">Galima keisti tik derinamų programų suderinamumą. Įdiekite derinamą programą ir bandykite dar kartą.</string>
+    <string name="platform_compat_dialog_title_no_apps">Programų nėra</string>
     <string name="please_select_phase2">2 tapatybės nustatymo fazė</string>
     <string name="pointer_location">Žymiklio vieta</string>
     <string name="pointer_location_summary">Ekrano perdanga rodo dabartinius lietimo duomenis</string>

@@ -9,7 +9,7 @@
 
 
 # instance fields
-.field private final mBatteryBroadcastReceiver:Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver;
+.field private mBatteryBroadcastReceiver:Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver;
 
 .field private mBatteryInfo:Lcom/android/settings/fuelgauge/BatteryInfo;
 
@@ -119,6 +119,34 @@
     new-instance v0, Lcom/android/settings/fuelgauge/-$$Lambda$TopLevelBatteryPreferenceController$sfaKl_Ba9LgHCHIeh29r_Q8XWZA;
 
     invoke-direct {v0, p0}, Lcom/android/settings/fuelgauge/-$$Lambda$TopLevelBatteryPreferenceController$sfaKl_Ba9LgHCHIeh29r_Q8XWZA;-><init>(Lcom/android/settings/fuelgauge/TopLevelBatteryPreferenceController;)V
+
+    const/4 p0, 0x1
+
+    invoke-static {p1, v0, p0}, Lcom/android/settings/fuelgauge/BatteryInfo;->getBatteryInfo(Landroid/content/Context;Lcom/android/settings/fuelgauge/BatteryInfo$Callback;Z)V
+
+    return-void
+.end method
+
+.method private synthetic lambda$onStart$2(Lcom/android/settings/fuelgauge/BatteryInfo;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/settings/fuelgauge/TopLevelBatteryPreferenceController;->mBatteryInfo:Lcom/android/settings/fuelgauge/BatteryInfo;
+
+    iget-object p1, p0, Lcom/android/settings/fuelgauge/TopLevelBatteryPreferenceController;->mPreference:Landroidx/preference/Preference;
+
+    invoke-virtual {p0, p1}, Lcom/android/settingslib/core/AbstractPreferenceController;->updateState(Landroidx/preference/Preference;)V
+
+    return-void
+.end method
+
+.method private synthetic lambda$onStart$3(I)V
+    .locals 1
+
+    iget-object p1, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    new-instance v0, Lcom/android/settings/fuelgauge/-$$Lambda$TopLevelBatteryPreferenceController$I1pChPHtQkj-ktazhyhvPlLMcME;
+
+    invoke-direct {v0, p0}, Lcom/android/settings/fuelgauge/-$$Lambda$TopLevelBatteryPreferenceController$I1pChPHtQkj-ktazhyhvPlLMcME;-><init>(Lcom/android/settings/fuelgauge/TopLevelBatteryPreferenceController;)V
 
     const/4 p0, 0x1
 
@@ -282,9 +310,44 @@
     return-void
 .end method
 
-.method public onStart()V
+.method public synthetic lambda$onStart$2$TopLevelBatteryPreferenceController(Lcom/android/settings/fuelgauge/BatteryInfo;)V
     .locals 0
 
+    invoke-direct {p0, p1}, Lcom/android/settings/fuelgauge/TopLevelBatteryPreferenceController;->lambda$onStart$2(Lcom/android/settings/fuelgauge/BatteryInfo;)V
+
+    return-void
+.end method
+
+.method public synthetic lambda$onStart$3$TopLevelBatteryPreferenceController(I)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/settings/fuelgauge/TopLevelBatteryPreferenceController;->lambda$onStart$3(I)V
+
+    return-void
+.end method
+
+.method public onStart()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/settings/fuelgauge/TopLevelBatteryPreferenceController;->mBatteryBroadcastReceiver:Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver;
+
+    iget-object v1, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-direct {v0, v1}, Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/android/settings/fuelgauge/TopLevelBatteryPreferenceController;->mBatteryBroadcastReceiver:Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver;
+
+    new-instance v1, Lcom/android/settings/fuelgauge/-$$Lambda$TopLevelBatteryPreferenceController$6eBs6ym5J3TDPguAayTPJrWp6EM;
+
+    invoke-direct {v1, p0}, Lcom/android/settings/fuelgauge/-$$Lambda$TopLevelBatteryPreferenceController$6eBs6ym5J3TDPguAayTPJrWp6EM;-><init>(Lcom/android/settings/fuelgauge/TopLevelBatteryPreferenceController;)V
+
+    invoke-virtual {v0, v1}, Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver;->setBatteryChangedListener(Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver$OnBatteryChangedListener;)V
+
+    :cond_0
     iget-object p0, p0, Lcom/android/settings/fuelgauge/TopLevelBatteryPreferenceController;->mBatteryBroadcastReceiver:Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver;
 
     invoke-virtual {p0}, Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver;->register()V
@@ -293,11 +356,20 @@
 .end method
 
 .method public onStop()V
-    .locals 0
+    .locals 2
 
-    iget-object p0, p0, Lcom/android/settings/fuelgauge/TopLevelBatteryPreferenceController;->mBatteryBroadcastReceiver:Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver;
+    iget-object v0, p0, Lcom/android/settings/fuelgauge/TopLevelBatteryPreferenceController;->mBatteryBroadcastReceiver:Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver;
 
-    invoke-virtual {p0}, Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver;->unRegister()V
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver;->unRegister()V
+
+    iput-object v1, p0, Lcom/android/settings/fuelgauge/TopLevelBatteryPreferenceController;->mBatteryBroadcastReceiver:Lcom/android/settings/fuelgauge/BatteryBroadcastReceiver;
+
+    :cond_0
+    iput-object v1, p0, Lcom/android/settings/fuelgauge/TopLevelBatteryPreferenceController;->mBatteryInfo:Lcom/android/settings/fuelgauge/BatteryInfo;
 
     return-void
 .end method

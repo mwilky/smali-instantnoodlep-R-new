@@ -33,8 +33,8 @@
         <item quantity="one">短め（%1$s 秒）</item>
     </plurals>
     <plurals name="app_link_open_always_summary">
-        <item quantity="other">アプリは %d 個のリンクを処理するとしています</item>
-        <item quantity="one">アプリは %d 個のリンクを処理するとしています</item>
+        <item quantity="other">%d 個のリンクをアプリで処理します</item>
+        <item quantity="one">%d 個のリンクをアプリで処理します</item>
     </plurals>
     <plurals name="app_notification_listing_summary_others">
         <item quantity="other">%d 個のアプリで OFF</item>
@@ -225,7 +225,7 @@
         <item quantity="one">有効なアプリ: %d 個</item>
     </plurals>
     <plurals name="oneplus_applock_wrong_pattern_warning">
-        <item quantity="other">チャンスはあと %1$d 回</item>
+        <item quantity="other">チャンスはあと %1$d 回です</item>
         <item quantity="one">You still have %1$d chance</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
@@ -237,7 +237,7 @@
         <item quantity="one">1 hour (unless turned on automatically)</item>
     </plurals>
     <plurals name="op_location_settings_summary_location_on">
-        <item quantity="other">On - %1$d apps have access to location</item>
+        <item quantity="other">オン - %1$d 個のアプリが位置情報にアクセスできます</item>
         <item quantity="one">On - %1$d app has access to location</item>
     </plurals>
     <plurals name="permission_bar_chart_label">

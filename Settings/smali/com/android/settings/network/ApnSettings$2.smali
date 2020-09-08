@@ -107,6 +107,18 @@
 
     if-eq p2, p1, :cond_1
 
+    const-string p1, "Save previous sub info"
+
+    invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object p1, p0, Lcom/android/settings/network/ApnSettings$2;->this$0:Lcom/android/settings/network/ApnSettings;
+
+    invoke-static {p1}, Lcom/android/settings/network/ApnSettings;->access$500(Lcom/android/settings/network/ApnSettings;)Landroid/telephony/SubscriptionInfo;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Lcom/android/settings/network/ApnSettings;->access$402(Lcom/android/settings/network/ApnSettings;Landroid/telephony/SubscriptionInfo;)Landroid/telephony/SubscriptionInfo;
+
     iget-object p1, p0, Lcom/android/settings/network/ApnSettings$2;->this$0:Lcom/android/settings/network/ApnSettings;
 
     invoke-static {p1, p2}, Lcom/android/settings/network/ApnSettings;->access$302(Lcom/android/settings/network/ApnSettings;I)I
@@ -117,11 +129,11 @@
 
     move-result p2
 
-    invoke-static {p1, p2}, Lcom/android/settings/network/ApnSettings;->access$500(Lcom/android/settings/network/ApnSettings;I)Landroid/telephony/SubscriptionInfo;
+    invoke-static {p1, p2}, Lcom/android/settings/network/ApnSettings;->access$600(Lcom/android/settings/network/ApnSettings;I)Landroid/telephony/SubscriptionInfo;
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lcom/android/settings/network/ApnSettings;->access$402(Lcom/android/settings/network/ApnSettings;Landroid/telephony/SubscriptionInfo;)Landroid/telephony/SubscriptionInfo;
+    invoke-static {p1, p2}, Lcom/android/settings/network/ApnSettings;->access$502(Lcom/android/settings/network/ApnSettings;Landroid/telephony/SubscriptionInfo;)Landroid/telephony/SubscriptionInfo;
 
     iget-object p1, p0, Lcom/android/settings/network/ApnSettings$2;->this$0:Lcom/android/settings/network/ApnSettings;
 
@@ -129,7 +141,7 @@
 
     move-result p2
 
-    invoke-static {p1, p2}, Lcom/android/settings/network/ApnSettings;->access$600(Lcom/android/settings/network/ApnSettings;I)V
+    invoke-static {p1, p2}, Lcom/android/settings/network/ApnSettings;->access$700(Lcom/android/settings/network/ApnSettings;I)V
 
     :cond_1
     iget-object p0, p0, Lcom/android/settings/network/ApnSettings$2;->this$0:Lcom/android/settings/network/ApnSettings;
@@ -168,7 +180,7 @@
     :cond_3
     iget-object p0, p0, Lcom/android/settings/network/ApnSettings$2;->this$0:Lcom/android/settings/network/ApnSettings;
 
-    invoke-static {p0, v0}, Lcom/android/settings/network/ApnSettings;->access$700(Lcom/android/settings/network/ApnSettings;I)V
+    invoke-static {p0, v0}, Lcom/android/settings/network/ApnSettings;->access$800(Lcom/android/settings/network/ApnSettings;I)V
 
     goto/16 :goto_0
 
@@ -183,7 +195,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_7
+    if-eqz p1, :cond_9
 
     const-string p1, "phone"
 
@@ -248,16 +260,37 @@
 
     move-result p2
 
-    if-eqz p2, :cond_b
+    if-eqz p2, :cond_d
 
     :cond_6
+    iget-object p2, p0, Lcom/android/settings/network/ApnSettings$2;->this$0:Lcom/android/settings/network/ApnSettings;
+
+    invoke-static {p2}, Lcom/android/settings/network/ApnSettings;->access$500(Lcom/android/settings/network/ApnSettings;)Landroid/telephony/SubscriptionInfo;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_7
+
+    iget-object p2, p0, Lcom/android/settings/network/ApnSettings$2;->this$0:Lcom/android/settings/network/ApnSettings;
+
+    invoke-static {p2}, Lcom/android/settings/network/ApnSettings;->access$500(Lcom/android/settings/network/ApnSettings;)Landroid/telephony/SubscriptionInfo;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/telephony/SubscriptionInfo;->getSimSlotIndex()I
+
+    move-result p2
+
+    if-eq p2, p1, :cond_8
+
+    :cond_7
     iget-object p2, p0, Lcom/android/settings/network/ApnSettings$2;->this$0:Lcom/android/settings/network/ApnSettings;
 
     invoke-static {p2}, Lcom/android/settings/network/ApnSettings;->access$400(Lcom/android/settings/network/ApnSettings;)Landroid/telephony/SubscriptionInfo;
 
     move-result-object p2
 
-    if-eqz p2, :cond_b
+    if-eqz p2, :cond_d
 
     iget-object p2, p0, Lcom/android/settings/network/ApnSettings$2;->this$0:Lcom/android/settings/network/ApnSettings;
 
@@ -269,15 +302,16 @@
 
     move-result p2
 
-    if-ne p2, p1, :cond_b
+    if-ne p2, p1, :cond_d
 
+    :cond_8
     iget-object p0, p0, Lcom/android/settings/network/ApnSettings$2;->this$0:Lcom/android/settings/network/ApnSettings;
 
     invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->finish()V
 
     goto/16 :goto_0
 
-    :cond_7
+    :cond_9
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -288,7 +322,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_8
+    if-eqz p1, :cond_a
 
     const-string p1, "reason"
 
@@ -312,13 +346,13 @@
 
     invoke-static {v1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-eqz p1, :cond_b
+    if-eqz p1, :cond_d
 
     invoke-static {}, Lcom/android/settings/network/ApnSettings;->access$000()Z
 
     move-result p2
 
-    if-nez p2, :cond_b
+    if-nez p2, :cond_d
 
     const-string p2, "homekey"
 
@@ -326,7 +360,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_b
+    if-eqz p1, :cond_d
 
     iget-object p0, p0, Lcom/android/settings/network/ApnSettings$2;->this$0:Lcom/android/settings/network/ApnSettings;
 
@@ -334,7 +368,7 @@
 
     goto/16 :goto_0
 
-    :cond_8
+    :cond_a
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -345,7 +379,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_a
+    if-eqz p1, :cond_c
 
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -371,19 +405,19 @@
 
     move-result p1
 
+    if-eqz p1, :cond_d
+
+    iget-object p1, p0, Lcom/android/settings/network/ApnSettings$2;->this$0:Lcom/android/settings/network/ApnSettings;
+
+    invoke-static {p1}, Lcom/android/settings/network/ApnSettings;->access$900(Lcom/android/settings/network/ApnSettings;)Landroid/os/HandlerThread;
+
+    move-result-object p1
+
     if-eqz p1, :cond_b
 
     iget-object p1, p0, Lcom/android/settings/network/ApnSettings$2;->this$0:Lcom/android/settings/network/ApnSettings;
 
-    invoke-static {p1}, Lcom/android/settings/network/ApnSettings;->access$800(Lcom/android/settings/network/ApnSettings;)Landroid/os/HandlerThread;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_9
-
-    iget-object p1, p0, Lcom/android/settings/network/ApnSettings$2;->this$0:Lcom/android/settings/network/ApnSettings;
-
-    invoke-static {p1}, Lcom/android/settings/network/ApnSettings;->access$800(Lcom/android/settings/network/ApnSettings;)Landroid/os/HandlerThread;
+    invoke-static {p1}, Lcom/android/settings/network/ApnSettings;->access$900(Lcom/android/settings/network/ApnSettings;)Landroid/os/HandlerThread;
 
     move-result-object p1
 
@@ -393,13 +427,13 @@
 
     const/4 p2, 0x0
 
-    invoke-static {p1, p2}, Lcom/android/settings/network/ApnSettings;->access$802(Lcom/android/settings/network/ApnSettings;Landroid/os/HandlerThread;)Landroid/os/HandlerThread;
+    invoke-static {p1, p2}, Lcom/android/settings/network/ApnSettings;->access$902(Lcom/android/settings/network/ApnSettings;Landroid/os/HandlerThread;)Landroid/os/HandlerThread;
 
     iget-object p1, p0, Lcom/android/settings/network/ApnSettings$2;->this$0:Lcom/android/settings/network/ApnSettings;
 
-    invoke-static {p1, p2}, Lcom/android/settings/network/ApnSettings;->access$902(Lcom/android/settings/network/ApnSettings;Lcom/android/settings/network/ApnSettings$RestoreApnProcessHandler;)Lcom/android/settings/network/ApnSettings$RestoreApnProcessHandler;
+    invoke-static {p1, p2}, Lcom/android/settings/network/ApnSettings;->access$1002(Lcom/android/settings/network/ApnSettings;Lcom/android/settings/network/ApnSettings$RestoreApnProcessHandler;)Lcom/android/settings/network/ApnSettings$RestoreApnProcessHandler;
 
-    :cond_9
+    :cond_b
     iget-object p1, p0, Lcom/android/settings/network/ApnSettings$2;->this$0:Lcom/android/settings/network/ApnSettings;
 
     invoke-static {p1}, Lcom/android/settings/network/ApnSettings;->access$100(Lcom/android/settings/network/ApnSettings;)V
@@ -420,7 +454,7 @@
 
     iget-object p1, p0, Lcom/android/settings/network/ApnSettings$2;->this$0:Lcom/android/settings/network/ApnSettings;
 
-    invoke-static {p1, v0}, Lcom/android/settings/network/ApnSettings;->access$1000(Lcom/android/settings/network/ApnSettings;I)V
+    invoke-static {p1, v0}, Lcom/android/settings/network/ApnSettings;->access$1100(Lcom/android/settings/network/ApnSettings;I)V
 
     iget-object p1, p0, Lcom/android/settings/network/ApnSettings$2;->this$0:Lcom/android/settings/network/ApnSettings;
 
@@ -448,7 +482,7 @@
 
     goto :goto_0
 
-    :cond_a
+    :cond_c
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -459,7 +493,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_b
+    if-eqz p1, :cond_d
 
     const-string p1, "subscription"
 
@@ -471,17 +505,17 @@
 
     move-result p1
 
-    if-eqz p1, :cond_b
+    if-eqz p1, :cond_d
 
     iget-object p1, p0, Lcom/android/settings/network/ApnSettings$2;->this$0:Lcom/android/settings/network/ApnSettings;
 
-    invoke-static {p1}, Lcom/android/settings/network/ApnSettings;->access$1100(Lcom/android/settings/network/ApnSettings;)V
+    invoke-static {p1}, Lcom/android/settings/network/ApnSettings;->access$1200(Lcom/android/settings/network/ApnSettings;)V
 
     iget-object p0, p0, Lcom/android/settings/network/ApnSettings$2;->this$0:Lcom/android/settings/network/ApnSettings;
 
     invoke-static {p0}, Lcom/android/settings/network/ApnSettings;->access$100(Lcom/android/settings/network/ApnSettings;)V
 
-    :cond_b
+    :cond_d
     :goto_0
     return-void
 .end method

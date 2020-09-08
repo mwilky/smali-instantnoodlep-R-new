@@ -48,11 +48,11 @@
 
     iget p2, p2, Lcom/oneplus/settings/ui/OPCustomClockPreference$ItemEntity;->type:I
 
-    invoke-static {p4, p2}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$500(Lcom/oneplus/settings/ui/OPCustomClockPreference;I)V
+    invoke-static {p4, p2}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$800(Lcom/oneplus/settings/ui/OPCustomClockPreference;I)V
 
     iget-object p2, p0, Lcom/oneplus/settings/ui/OPCustomClockPreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomClockPreference;
 
-    invoke-static {p2}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$400(Lcom/oneplus/settings/ui/OPCustomClockPreference;)Lcom/oneplus/settings/ui/OPCustomItemEntityViewHolder;
+    invoke-static {p2}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$700(Lcom/oneplus/settings/ui/OPCustomClockPreference;)Lcom/oneplus/settings/ui/OPCustomItemEntityViewHolder;
 
     move-result-object p2
 
@@ -62,7 +62,7 @@
 
     iget-object p2, p0, Lcom/oneplus/settings/ui/OPCustomClockPreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomClockPreference;
 
-    invoke-static {p2}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$400(Lcom/oneplus/settings/ui/OPCustomClockPreference;)Lcom/oneplus/settings/ui/OPCustomItemEntityViewHolder;
+    invoke-static {p2}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$700(Lcom/oneplus/settings/ui/OPCustomClockPreference;)Lcom/oneplus/settings/ui/OPCustomItemEntityViewHolder;
 
     move-result-object p2
 
@@ -72,7 +72,7 @@
 
     iget-object p2, p0, Lcom/oneplus/settings/ui/OPCustomClockPreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomClockPreference;
 
-    invoke-static {p2}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$400(Lcom/oneplus/settings/ui/OPCustomClockPreference;)Lcom/oneplus/settings/ui/OPCustomItemEntityViewHolder;
+    invoke-static {p2}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$700(Lcom/oneplus/settings/ui/OPCustomClockPreference;)Lcom/oneplus/settings/ui/OPCustomItemEntityViewHolder;
 
     move-result-object p2
 
@@ -85,7 +85,7 @@
     :cond_0
     iget-object p2, p0, Lcom/oneplus/settings/ui/OPCustomClockPreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomClockPreference;
 
-    invoke-static {p2}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$400(Lcom/oneplus/settings/ui/OPCustomClockPreference;)Lcom/oneplus/settings/ui/OPCustomItemEntityViewHolder;
+    invoke-static {p2}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$700(Lcom/oneplus/settings/ui/OPCustomClockPreference;)Lcom/oneplus/settings/ui/OPCustomItemEntityViewHolder;
 
     move-result-object p2
 
@@ -95,7 +95,7 @@
 
     iget-object p2, p0, Lcom/oneplus/settings/ui/OPCustomClockPreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomClockPreference;
 
-    invoke-static {p2}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$400(Lcom/oneplus/settings/ui/OPCustomClockPreference;)Lcom/oneplus/settings/ui/OPCustomItemEntityViewHolder;
+    invoke-static {p2}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$700(Lcom/oneplus/settings/ui/OPCustomClockPreference;)Lcom/oneplus/settings/ui/OPCustomItemEntityViewHolder;
 
     move-result-object p2
 
@@ -106,7 +106,7 @@
     :cond_1
     iget-object p2, p0, Lcom/oneplus/settings/ui/OPCustomClockPreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomClockPreference;
 
-    invoke-static {p2}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$400(Lcom/oneplus/settings/ui/OPCustomClockPreference;)Lcom/oneplus/settings/ui/OPCustomItemEntityViewHolder;
+    invoke-static {p2}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$700(Lcom/oneplus/settings/ui/OPCustomClockPreference;)Lcom/oneplus/settings/ui/OPCustomItemEntityViewHolder;
 
     move-result-object p2
 
@@ -116,7 +116,7 @@
 
     iget-object p2, p0, Lcom/oneplus/settings/ui/OPCustomClockPreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomClockPreference;
 
-    invoke-static {p2}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$400(Lcom/oneplus/settings/ui/OPCustomClockPreference;)Lcom/oneplus/settings/ui/OPCustomItemEntityViewHolder;
+    invoke-static {p2}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$700(Lcom/oneplus/settings/ui/OPCustomClockPreference;)Lcom/oneplus/settings/ui/OPCustomItemEntityViewHolder;
 
     move-result-object p2
 
@@ -141,7 +141,7 @@
 
     iget-object p2, p0, Lcom/oneplus/settings/ui/OPCustomClockPreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomClockPreference;
 
-    invoke-static {p2, p3}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$402(Lcom/oneplus/settings/ui/OPCustomClockPreference;Lcom/oneplus/settings/ui/OPCustomItemEntityViewHolder;)Lcom/oneplus/settings/ui/OPCustomItemEntityViewHolder;
+    invoke-static {p2, p3}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$702(Lcom/oneplus/settings/ui/OPCustomClockPreference;Lcom/oneplus/settings/ui/OPCustomItemEntityViewHolder;)Lcom/oneplus/settings/ui/OPCustomItemEntityViewHolder;
 
     move p2, p4
 
@@ -275,7 +275,7 @@
 
     iget-object v1, p0, Lcom/oneplus/settings/ui/OPCustomClockPreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomClockPreference;
 
-    invoke-static {v1, p1}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$402(Lcom/oneplus/settings/ui/OPCustomClockPreference;Lcom/oneplus/settings/ui/OPCustomItemEntityViewHolder;)Lcom/oneplus/settings/ui/OPCustomItemEntityViewHolder;
+    invoke-static {v1, p1}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$702(Lcom/oneplus/settings/ui/OPCustomClockPreference;Lcom/oneplus/settings/ui/OPCustomItemEntityViewHolder;)Lcom/oneplus/settings/ui/OPCustomItemEntityViewHolder;
 
     goto :goto_0
 

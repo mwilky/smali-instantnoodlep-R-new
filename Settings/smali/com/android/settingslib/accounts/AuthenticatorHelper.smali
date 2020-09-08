@@ -735,22 +735,6 @@
     return-void
 .end method
 
-.method public preloadDrawableForType(Landroid/content/Context;Ljava/lang/String;)V
-    .locals 1
-
-    new-instance v0, Lcom/android/settingslib/accounts/AuthenticatorHelper$1;
-
-    invoke-direct {v0, p0, p1, p2}, Lcom/android/settingslib/accounts/AuthenticatorHelper$1;-><init>(Lcom/android/settingslib/accounts/AuthenticatorHelper;Landroid/content/Context;Ljava/lang/String;)V
-
-    sget-object p0, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v0, p0, p1}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
-
-    return-void
-.end method
-
 .method public stopListeningToAccountUpdates()V
     .locals 1
 

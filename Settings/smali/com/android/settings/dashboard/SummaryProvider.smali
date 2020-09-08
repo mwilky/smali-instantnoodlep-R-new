@@ -15,7 +15,7 @@
 
 # virtual methods
 .method public call(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
-    .locals 4
+    .locals 8
 
     new-instance p3, Landroid/os/Bundle;
 
@@ -27,9 +27,15 @@
 
     const v1, -0x533f8a3e
 
-    const/4 v2, 0x0
+    const/4 v2, 0x2
 
     const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    if-eq v0, v1, :cond_2
+
+    const v1, -0x42622d5a
 
     if-eq v0, v1, :cond_1
 
@@ -46,35 +52,50 @@
 
     move-result p1
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_3
 
-    move p1, v3
+    move p1, v2
 
     goto :goto_1
 
     :cond_1
+    const-string v0, "languages_input"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    move p1, v4
+
+    goto :goto_1
+
+    :cond_2
     const-string v0, "backup"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_3
 
-    move p1, v2
+    move p1, v3
 
     goto :goto_1
 
-    :cond_2
+    :cond_3
     :goto_0
     const/4 p1, -0x1
 
     :goto_1
     const-string v0, "com.android.settings.summary"
 
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_6
 
-    if-ne p1, v3, :cond_3
+    if-eq p1, v3, :cond_5
+
+    if-ne p1, v2, :cond_4
 
     invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
@@ -102,7 +123,7 @@
 
     iget-object p1, p1, Landroid/content/pm/UserInfo;->name:Ljava/lang/String;
 
-    aput-object p1, v1, v2
+    aput-object p1, v1, v4
 
     invoke-virtual {p0, p2, v1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -110,9 +131,9 @@
 
     invoke-virtual {p3, v0, p0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_2
+    goto/16 :goto_3
 
-    :cond_3
+    :cond_4
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -133,7 +154,7 @@
 
     throw p0
 
-    :cond_4
+    :cond_5
     new-instance p1, Lcom/android/settings/backup/BackupSettingsHelper;
 
     invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
@@ -148,7 +169,138 @@
 
     invoke-virtual {p3, v0, p0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
+    goto/16 :goto_3
+
+    :cond_6
+    invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p1
+
+    const-string p2, "default_input_method"
+
+    invoke-static {p1, p2}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result p2
+
+    const-string v1, ""
+
+    if-nez p2, :cond_9
+
+    invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object p2
+
+    invoke-static {p1}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
+
+    move-result-object v5
+
+    const-string v6, "input_method"
+
+    invoke-virtual {v5, v6}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/view/inputmethod/InputMethodManager;
+
+    invoke-virtual {v5}, Landroid/view/inputmethod/InputMethodManager;->getInputMethodList()Ljava/util/List;
+
+    move-result-object v5
+
+    invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v5
+
+    :cond_7
     :goto_2
+    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_8
+
+    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Landroid/view/inputmethod/InputMethodInfo;
+
+    invoke-virtual {v6}, Landroid/view/inputmethod/InputMethodInfo;->getPackageName()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v7, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_7
+
+    invoke-virtual {v6, p2}, Landroid/view/inputmethod/InputMethodInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_2
+
+    :cond_8
+    invoke-static {}, Lcom/android/internal/app/LocalePicker;->getLocales()Landroid/os/LocaleList;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v4}, Landroid/os/LocaleList;->get(I)Ljava/util/Locale;
+
+    move-result-object p1
+
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object p2
+
+    invoke-static {p1, p2, v4}, Lcom/android/internal/app/LocaleHelper;->getDisplayName(Ljava/util/Locale;Ljava/util/Locale;Z)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    sget p2, Lcom/android/settings/R$string;->oneplus_language_and_input:I
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    aput-object p1, v2, v4
+
+    aput-object v1, v2, v3
+
+    invoke-virtual {p0, p2, v2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    :cond_9
+    invoke-virtual {p3, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_3
     return-object p3
 .end method
 

@@ -7,6 +7,8 @@
 
 
 # instance fields
+.field private final mAccount:Landroid/accounts/Account;
+
 .field private final mFragment:Ljava/lang/String;
 
 .field private final mFragmentArguments:Landroid/os/Bundle;
@@ -31,6 +33,8 @@
     iget-object p1, p3, Landroid/accounts/Account;->name:Ljava/lang/String;
 
     iput-object p1, p0, Lcom/android/settings/accounts/AccountTypePreference;->mTitle:Ljava/lang/CharSequence;
+
+    iput-object p3, p0, Lcom/android/settings/accounts/AccountTypePreference;->mAccount:Landroid/accounts/Account;
 
     iput-object p4, p0, Lcom/android/settings/accounts/AccountTypePreference;->mTitleResPackageName:Ljava/lang/String;
 
@@ -79,6 +83,14 @@
 
 
 # virtual methods
+.method public getAccount()Landroid/accounts/Account;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/accounts/AccountTypePreference;->mAccount:Landroid/accounts/Account;
+
+    return-object p0
+.end method
+
 .method public getSummary()Ljava/lang/CharSequence;
     .locals 0
 

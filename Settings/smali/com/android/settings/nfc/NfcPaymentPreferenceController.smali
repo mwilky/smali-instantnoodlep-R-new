@@ -48,7 +48,23 @@
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/nfc/NfcPaymentPreferenceController;)Lcom/android/settings/nfc/PaymentBackend;
+.method static synthetic access$100(Lcom/android/settings/nfc/NfcPaymentPreferenceController;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$200(Lcom/android/settings/nfc/NfcPaymentPreferenceController;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$300(Lcom/android/settings/nfc/NfcPaymentPreferenceController;)Lcom/android/settings/nfc/PaymentBackend;
     .locals 0
 
     iget-object p0, p0, Lcom/android/settings/nfc/NfcPaymentPreferenceController;->mPaymentBackend:Lcom/android/settings/nfc/PaymentBackend;
@@ -56,7 +72,15 @@
     return-object p0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/nfc/NfcPaymentPreferenceController;)Lcom/android/settings/nfc/NfcPaymentPreference;
+.method static synthetic access$400(Lcom/android/settings/nfc/NfcPaymentPreferenceController;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$500(Lcom/android/settings/nfc/NfcPaymentPreferenceController;)Lcom/android/settings/nfc/NfcPaymentPreference;
     .locals 0
 
     iget-object p0, p0, Lcom/android/settings/nfc/NfcPaymentPreferenceController;->mPreference:Lcom/android/settings/nfc/NfcPaymentPreference;

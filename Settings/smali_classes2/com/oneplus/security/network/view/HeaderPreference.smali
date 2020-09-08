@@ -179,6 +179,8 @@
 .method public onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
     .locals 1
 
+    invoke-super {p0, p1}, Landroidx/preference/Preference;->onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
+
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     sget v0, Lcom/android/settings/R$id;->data_usage_layout:I

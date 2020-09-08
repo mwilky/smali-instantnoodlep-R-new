@@ -225,20 +225,20 @@
         <item quantity="one">%d aktív alkalmazás</item>
     </plurals>
     <plurals name="oneplus_applock_wrong_pattern_warning">
-        <item quantity="other">Még mindíg van %1$d esélye</item>
-        <item quantity="one">Még mindíg van %1$d esélye</item>
+        <item quantity="other">Még %1$d lehetősége maradt</item>
+        <item quantity="one">Még %1$d lehetősége maradt</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
-        <item quantity="other">Próbálja újra %d másodpercen belül.</item>
-        <item quantity="one">Próbálja újra %d másodpercen belül.</item>
+        <item quantity="other">Próbálkozzon újra %d másodperc múlva.</item>
+        <item quantity="one">Próbálkozzon újra %d másodperc múlva.</item>
     </plurals>
     <plurals name="oneplus_zen_mode_duration_summary_time_hours">
         <item quantity="other">%d óra (hacsak automatikusan nem kapcsolódik be)</item>
         <item quantity="one">1 óra (hacsak automatikusan nem kapcsolódik be)</item>
     </plurals>
     <plurals name="op_location_settings_summary_location_on">
-        <item quantity="other">On - %1$d apps have access to location</item>
-        <item quantity="one">On - %1$d app has access to location</item>
+        <item quantity="other">Be – A(z) %1$d alkalmazás hozzáfér a helyadatokhoz</item>
+        <item quantity="one">Be – A(z) %1$d alkalmazás hozzáfér a helyadatokhoz</item>
     </plurals>
     <plurals name="permission_bar_chart_label">
         <item quantity="other">%s alkalmazás</item>

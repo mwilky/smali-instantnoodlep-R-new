@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="about_action_bar_title">Teave</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Privaatsuspoliitika</string>
+    <string name="about_release_note_title">Uuenduste logi:</string>
+    <string name="about_terms_service">Teenusetingimused</string>
     <string name="access_permissions">Ligipääsuõigused</string>
     <string name="activate_one_handed_mode">Kiirpääs</string>
     <string name="activate_one_handed_mode_description">Nipsake ekraani alaosas alla, et aktiveerida ajutiselt kiirpääs. Kiirpääs võimaldab juurdepääsu ekraani ülaosale. Väljumiseks ja täisekraani taastamiseks nipsake üles.</string>
@@ -28,7 +33,7 @@ Kas lennurežiim on sisse lülitada?"</string>
     <string name="alert_dialog_cancel">Tühista</string>
     <string name="alert_slider_settings_title">Prioriteedisätted</string>
     <string name="alert_slider_silent_title">Hääletu režiimi sätted</string>
-    <string name="alertslider_settings">Alert slider</string>
+    <string name="alertslider_settings">Alert Slider</string>
     <string name="alertslider_settings_soc_tri_state_summary">Hääletu, vibratsioon, helin</string>
     <string name="android_am">"AM "</string>
     <string name="android_pm">"PM "</string>
@@ -75,8 +80,8 @@ Kas lennurežiim on sisse lülitada?"</string>
     <string name="app_ops_last_used_prefix_new">Viimati kasutatud</string>
     <string name="app_ops_never_used_new">Pole kunagi kasutatud</string>
     <string name="app_ops_running_new">Praegu kasutusel</string>
-    <string name="app_ops_settings_new">Rakenduse õigused</string>
-    <string name="app_ops_title_new">Rakenduse õigused</string>
+    <string name="app_ops_settings_new">Rakenduste õigused</string>
+    <string name="app_ops_title_new">Rakenduste õigused</string>
     <string name="app_permissions_warning_message">Õiguste keelamine võib takistada rakenduse toimimist. Olge jätkamisel ettevaatlik.</string>
     <string name="app_permissions_warning_title">Hoiatus</string>
     <string name="automatic">Automaatne</string>
@@ -119,7 +124,7 @@ Kas lennurežiim on sisse lülitada?"</string>
     <string name="color_picker_unknown_label">Tundmatu</string>
     <string name="condition_cloud_summary">Klõpsake pilveteenuse kasutamiseks ja tagage andmete säilimine</string>
     <string name="condition_cloud_title">Alusta pilveteenuse kasutamist</string>
-    <string name="condition_cloud_turn_off">HÜLGA</string>
+    <string name="condition_cloud_turn_off">LOOBU</string>
     <string name="condition_hotspot_summary">Kantav Wi-Fi kuumpunkt %1$s on aktiivne, selle seadme Wi-Fi lülitatakse välja.</string>
     <string name="condition_hotspot_title">Kuumpunkt on sisse lülitatud</string>
     <string name="connected_to_the_verizon_network">Ühendatud Verizoni võrguga</string>
@@ -139,7 +144,7 @@ Kas lennurežiim on sisse lülitada?"</string>
     <string name="data_usage_less_than_value">Alla 0,01</string>
     <string name="data_usage_limit_label">Piirang</string>
     <string name="data_usage_metered_title">Võrgupiirangud</string>
-    <string name="data_usage_package_set">Arveperiood</string>
+    <string name="data_usage_package_set">Billing Cycle</string>
     <string name="data_usage_rank_sim">Mobiilandmeside kasutus</string>
     <string name="data_usage_rank_wifi">Wi-Fi andmekasutus</string>
     <string name="data_usage_rank_wlan">Mobiilandmeside kasutus</string>
@@ -206,7 +211,7 @@ Kas lennurežiim on sisse lülitada?"</string>
     <string name="fingerprint_duplicated">Oled selle sõrmejälje juba registreerinud. Kasutage teist sõrme.</string>
     <string name="fingerprint_go_to_security_sumary">Sõrmejäljega seadme avamiseks peate esmalt määrama turvalise avamismeetodi. Kas soovite seda kohe teha?</string>
     <string name="fingerprint_manage">Halda sõrmejälgi</string>
-    <string name="fingerprint_next">Järgmine</string>
+    <string name="fingerprint_next">Edasi</string>
     <string name="fingerprint_not_recognized">Ei tuvastatud</string>
     <string name="fingerprint_password_hint">Sisestage varuparool</string>
     <string name="fingerprint_password_manage_title">Sõrmejälg</string>
@@ -219,7 +224,7 @@ Kas lennurežiim on sisse lülitada?"</string>
     <string name="fingerprint_wizard_add_button_label">Lisa teine</string>
     <string name="fingerprint_wizard_cancel_button_label">Tühista</string>
     <string name="fingerprint_wizard_finish_button_label">Lõpeta</string>
-    <string name="fingerprint_wizard_next_button_label">Järgmine</string>
+    <string name="fingerprint_wizard_next_button_label">Edasi</string>
     <string name="firewall_rule_allow">Luba</string>
     <string name="firewall_rule_allow_batch">Luba kõik</string>
     <string name="firewall_rule_batch_operating">Toiming pooleli...</string>
@@ -292,6 +297,7 @@ Kui lülitate mobiilandmeside uuesti sisse, võib operaator andmekasutuse eest t
     <string name="list_saved_fingerprints">Salvestatud sõrmejäljed</string>
     <string name="list_saved_fingerprints_footer">Salvestada saab kuni viis sõrmejälge. Sõrmejälgede ümbernimetamiseks või kustutamiseks toksake nendel.</string>
     <string name="load_error">Laadimisviga</string>
+    <string name="loading_text">Laadimine...</string>
     <string name="location_carrier_location_access">Operaatori juurdepääs asukohale</string>
     <string name="location_text">Asukoht</string>
     <string name="lockpassword_choose_your_fingerprint_header">Sõrmejälg</string>
@@ -307,7 +313,7 @@ Kui lülitate mobiilandmeside uuesti sisse, võib operaator andmekasutuse eest t
     <string name="menu_uninstallapps">Desinstalli</string>
     <string name="mhs_app">Ava My Verizon</string>
     <string name="mhs_call_back_error">Andmeühendus pole saadaval.</string>
-    <string name="mobile_hotspot_airplane_off_error">Kuumpunkti sisselülitamiseks lülitage lennukirežiim välja</string>
+    <string name="mobile_hotspot_airplane_off_error">Kuumpunkti sisselülitamiseks lülitage lennurežiim välja</string>
     <string name="mobile_hotspot_authoration_error">"Mobiilse kuumpunkti kasutamiseks peate tellima mobiilse kuumpunkti teenused.
 
 Mobiilse kuupunkti tellimuse tühistamiseks külastage veebisaiti My Verizon või helistage klienditoele telefonil (800) 922–0204."</string>
@@ -364,18 +370,19 @@ Mobiilse kuupunkti tellimuse tühistamiseks külastage veebisaiti My Verizon võ
     <string name="oneplus_app_network_settings">Andmekasutuse kontroll</string>
     <string name="oneplus_app_notification_allow_led">LED sees</string>
     <string name="oneplus_app_notification_not_allow_led">LED Off</string>
-    <string name="oneplus_app_ops_title">Rakenduse õigused</string>
+    <string name="oneplus_app_ops_title">Rakenduste õigused</string>
     <string name="oneplus_app_uninstall_remark">Kiirmakse kasutamiseks installige ülal mainitud makserakendused</string>
     <string name="oneplus_app_wechat">WeChat</string>
     <string name="oneplus_applications_settings_summary">Rakenduse teavitused, paralleelrakendused, õigused</string>
     <string name="oneplus_applock_at_least_four_points">Joonistus peab sisaldama vähemalt 4 punkti</string>
-    <string name="oneplus_applock_lockpassword_confirm_your_pin_header">Sisesta PIN-kood</string>
+    <string name="oneplus_applock_lockpassword_confirm_your_pin_header">Sisestage PIN-kood</string>
     <string name="oneplus_applock_need_to_unlock_wrong">Vale PIN-kood</string>
     <string name="oneplus_applock_pattern_header">Joonista muster</string>
     <string name="oneplus_applock_wrong_pattern_header">Vale muster</string>
     <string name="oneplus_apps_notifications">Rakendused ja teavitused</string>
     <string name="oneplus_apps_title">Rakendused</string>
     <string name="oneplus_aptx_hd_support">aptX / aptX HD tugi</string>
+    <string name="oneplus_at_a_glance">Ülevaade</string>
     <string name="oneplus_authentication_information">Autentimisteave</string>
     <string name="oneplus_auto_activate">Lülita automaatselt sisse</string>
     <string name="oneplus_auto_answer_via_bluetooth_summary">Sissetuleva kõne vastuvõtmisel vastatakse sellele automaatselt pärast Bluetooth-seadmega ühendamist</string>
@@ -388,7 +395,7 @@ Mobiilse kuupunkti tellimuse tühistamiseks külastage veebisaiti My Verizon võ
     <string name="oneplus_auto_open_specified_app">Ava vastav rakendus automaatselt</string>
     <string name="oneplus_auto_play">Autom. esitus</string>
     <string name="oneplus_auto_play_summary">Jätkab kuularite ühendamisel automaatselt muusika esitamist</string>
-    <string name="oneplus_auto_switch_mobile_data">Nutikas võrguühendus</string>
+    <string name="oneplus_auto_switch_mobile_data">Andmekasutus</string>
     <string name="oneplus_auto_switch_mobile_data_summary">Kui ühendus on halb, siis stabiilsuse parandamiseks kasutage Wi‑Fi ühendust ja mobiilandmesidet samaaegselt</string>
     <string name="oneplus_auto_turn_on_apps">Lülita nende rakenduste puhul automaatselt sisse</string>
     <string name="oneplus_auto_turn_on_car_charger_info_o2">Ülaltoodud seadete määramisel saate aktiveerida režiimi \"Ära sega\" ning käivitada määratud rakenduse iga kord, kui autolaadija ühendate</string>
@@ -396,8 +403,8 @@ Mobiilse kuupunkti tellimuse tühistamiseks külastage veebisaiti My Verizon võ
     <string name="oneplus_available_keyboard_category">Saadaolev klaviatuur</string>
     <string name="oneplus_available_keyboard_description">Installitud klaviatuurid, mis on siin lubatud, lisatakse loendisse „Saadaolevad klaviatuurid”</string>
     <string name="oneplus_back_home">Avakuva, tagasi</string>
-    <string name="oneplus_back_home_o2">Tagasi, avakuva</string>
-    <string name="oneplus_back_home_summary">Nipsa avakuva nupul üles</string>
+    <string name="oneplus_back_home_o2">Back, Home</string>
+    <string name="oneplus_back_home_summary">Swipe up on Home button</string>
     <string name="oneplus_back_topic_theme_summary">Vaheta süsteemi teemat tagakaane vahetamisel automaatselt</string>
     <string name="oneplus_back_topic_theme_title">Tagakaane teema</string>
     <string name="oneplus_battery_menu_stats_total">Kuva täpsemad kasutusandmed</string>
@@ -414,7 +421,7 @@ Akusäästja lülitub seadme laadimisel automaatselt välja."</string>
     <string name="oneplus_block_all_notifications_summary">Blokeeri kõik rakenduse teavitused</string>
     <string name="oneplus_block_notifications">Blokeeri teavitused</string>
     <string name="oneplus_block_notifications_summary">Kõned ja alarmid välja arvatud</string>
-    <string name="oneplus_block_peek_notifications">Blokeeri teavitused</string>
+    <string name="oneplus_block_peek_notifications">Blokeeri eelvaateteavitused</string>
     <string name="oneplus_bluetooth_aptX">aptX</string>
     <string name="oneplus_bluetooth_aptx_hd">aptX HD</string>
     <string name="oneplus_bluetooth_audio_codec">Bluetooth audiokoodek</string>
@@ -454,8 +461,9 @@ Akusäästja lülitub seadme laadimisel automaatselt välja."</string>
     <string name="oneplus_condition_bg_data_summary">Taustaandmed on saadaval ainult Wi-Fi kaudu. See võib mõjutada teatud rakendusi ja teenuseid, kui Wi-Fi ei ole saadaval</string>
     <string name="oneplus_condition_bg_data_title">Andmesäästja on sees</string>
     <string name="oneplus_condition_hotspot_turn_off">LÜLITA KUUMPUNKT VÄLJA</string>
+    <string name="oneplus_condition_night_display_title">Nägemismugavus on sisse lülitatud</string>
     <string name="oneplus_condition_night_mode_title">Öörežiim on sees</string>
-    <string name="oneplus_condition_night_mode_turn_off">LÜLITA ÖÖREŽIIM VÄLJA</string>
+    <string name="oneplus_condition_night_mode_turn_off">LÜLITA NÄGEMISMUGAVUSE REŽIIM VÄLJA</string>
     <string name="oneplus_condition_ota_summary">Tuvastati uus versioon</string>
     <string name="oneplus_connected_device_count">Ühendatud on %1$s seade</string>
     <string name="oneplus_connected_device_management_title">Ühendatud seadme haldur</string>
@@ -494,7 +502,7 @@ Akusäästja lülitub seadme laadimisel automaatselt välja."</string>
     <string name="oneplus_disable_aosp_face_lock_message">OnePlus näotuvastusfunktsiooni lubamine lülitab nutiluku välja. Kas jätkate?</string>
     <string name="oneplus_disconnected">Katkesta ühendus</string>
     <string name="oneplus_display_dashboard_no_theme_summary">Olekuriba, ekraan, taustapildid</string>
-    <string name="oneplus_display_dashboard_no_theme_summary_801">Status bar, ambient display, Vision comfort, reading mode</string>
+    <string name="oneplus_display_dashboard_no_theme_summary_801">Olekuriba, muutuv kuva, nägemismugavuse režiim, lugemisrežiim</string>
     <string name="oneplus_display_dashboard_summary">Olekuriba, ekraan, taustapildid, teema</string>
     <string name="oneplus_display_dashboard_summary_801">Olekuriba, ekraan, taustapildid, teema</string>
     <string name="oneplus_display_screen_timeout">Unerežiim</string>
@@ -544,10 +552,10 @@ Selliste funktsioonide sisselülitamisel suureneb andmeside kasutus ja tegelik a
     <string name="oneplus_earphone_mode">Kuulari režiim</string>
     <string name="oneplus_emergency_rescue_settings">Hädaabikõne</string>
     <string name="oneplus_emergency_rescue_settings_summary">Vajutage toitenuppu ja kutsuga automaatselt abi</string>
-    <string name="oneplus_emergency_tap_power_gesture_tips">Kasutatav pärast hädaabikõne TOITENUPU sätete muutmist</string>
-    <string name="oneplus_enroll_fingerprint_tips_summary">"1.Please re-enter your fingerprint after each replacement of the protective film to ensure the availability of the fingerprint
+    <string name="oneplus_emergency_tap_power_gesture_tips">Kasutatav pärast hädaabikõne toitenupu sätete muutmist</string>
+    <string name="oneplus_enroll_fingerprint_tips_summary">"Pärast mobiiltelefoni kaitsekile vahetamist sisestage sõrmejälg uuesti, et see oleks kindlasti täpne
 
-2.In a single setup process, please enter only one finger's fingerprint information"</string>
+2.sisestage ühe seadistamise vältel ainult ühe sõrme sõrmejälje andmed"</string>
     <string name="oneplus_enroll_fingerprint_tips_title">Sõrmejälje seadistamise viibe</string>
     <string name="oneplus_enter_your_fingerprint">· Registreerige sõrmejälg</string>
     <string name="oneplus_erase_system_data">KUSTUTA SÜSTEEMIANDMED</string>
@@ -588,17 +596,17 @@ Tähelepanu: näotuvastusfunktsioon on ebaturvalisem kui sõrmejälg või parool
     <string name="oneplus_finger_input_fail_tips">Sisestamine nurjus, seadistage asendit ja proovige uuesti</string>
     <string name="oneplus_finger_print_anim_save">SALVESTA</string>
     <string name="oneplus_fingerprint">Sõrmejälg</string>
-    <string name="oneplus_fingerprint_acquired_imager_dirty">The fingerprint identification area is dirty. Please wipe it clean and try again.</string>
-    <string name="oneplus_fingerprint_acquired_partial">Partial fingerprint detected. Please completely cover the fingerprint identification area.</string>
-    <string name="oneplus_fingerprint_acquired_too_fast">Too fast to process your fingerprint. Please stay for a while when pressing.</string>
+    <string name="oneplus_fingerprint_acquired_imager_dirty">Sõrmejälje tuvastusala on määrdunud. Pühkige see puhtaks ja proovige uuesti.</string>
+    <string name="oneplus_fingerprint_acquired_partial">Tuvastati osaline sõrmejälg. katke sõrmejälje tuvastusala täielikult.</string>
+    <string name="oneplus_fingerprint_acquired_too_fast">Liiga suur kiirus teie sõrmejälje töötlemiseks. Hoidke vajutades kauem.</string>
     <string name="oneplus_fingerprint_acquired_too_similar">Tuvastati sarnased sõrmejälje andmed. Liigutage sõrme natuke, et sisestada sõrmejälje muude piirkondade andmed.</string>
     <string name="oneplus_fingerprint_animation_effect_title">Sõrmejälje animatsioon</string>
     <string name="oneplus_fingerprint_delete_confirm_message">Kas soovite selle kustutada?</string>
     <string name="oneplus_fingerprint_detail">Üksikasjad</string>
     <string name="oneplus_fingerprint_enrol_completed">Sõrmejälg on salvestatud</string>
-    <string name="oneplus_fingerprint_enroll_summary">Press and make your finger cover the fingerprint identification area as much as possible, then lift after you feel a vibration</string>
-    <string name="oneplus_fingerprint_findsendor_summary">When the fingerprint pattern appears at the bottom of the screen, simply press with your finger on the fingerprint identification area to use the fingerprint function.</string>
-    <string name="oneplus_fingerprint_findsendor_tilte">How to use fingerprint</string>
+    <string name="oneplus_fingerprint_enroll_summary">Vajutage ja katke sõrmejälje tuvastusala võimalikult täielikult, seejärel tõstke sõrm pärast vibratsiooni</string>
+    <string name="oneplus_fingerprint_findsendor_summary">Sõrmejälje funktsiooni kasutamiseks lihtsalt asetage sõrm sõrmejäljelugejale siis, kui ekraani allosas kuvatakse sõrmejälje muster.</string>
+    <string name="oneplus_fingerprint_findsendor_tilte">Kuidas sõrmejälge kasutada</string>
     <string name="oneplus_fingerprint_functional_declaration">Sõrmejäljefunktsiooni avaldus</string>
     <string name="oneplus_fingerprint_gesture_camera_summary">Pildistamiseks tehke pildinäidiku ekraanil sõrmejälje anduril pikk vajutus</string>
     <string name="oneplus_fingerprint_gesture_camera_title">Pildistamiseks hoidke all</string>
@@ -624,7 +632,7 @@ Tähelepanu: näotuvastusfunktsioon on ebaturvalisem kui sõrmejälg või parool
     <string name="oneplus_fnatic_mode_network_introduction_title">Võrgutäiustus</string>
     <string name="oneplus_fnatic_mode_summary">Elavdage oma mängukogemust</string>
     <string name="oneplus_fnatic_mode_summary_2">E-spordi entusiastide loodud täiustatud mängurežiim</string>
-    <string name="oneplus_fnatic_mode_title">Fnatic-režiim</string>
+    <string name="oneplus_fnatic_mode_title">Režiim Fnatic</string>
     <string name="oneplus_fnatic_mode_unlock_wallpapers">Olete lukust avanud %1$s spetsiaalset taustapilti</string>
     <string name="oneplus_fnatic_mode_view_in_wallpapers">Kuva taustapiltides</string>
     <string name="oneplus_fnatic_mode_wallpapers_added">%1$s taustapilti on lisatud</string>
@@ -632,13 +640,13 @@ Tähelepanu: näotuvastusfunktsioon on ebaturvalisem kui sõrmejälg või parool
     <string name="oneplus_font_style">Kirjatüüp</string>
     <string name="oneplus_font_switch">Kirjatüübi lüliti</string>
     <string name="oneplus_force_factory_reset_summary">Parooli nõudmine käivitamisel on sisse lülitatud, sisemälu kustutatakse</string>
-    <string name="oneplus_forum_award_summary">See kogukond on teie oma. Suuna saate määrata ainult teie. Koos me määrame ja täpsustame. Murrame loodut ja kirjutame koode. See kõik on teile. Aitäh, et koos meiega unistate!</string>
+    <string name="oneplus_forum_award_summary">See kogukond on teie oma. Ainult teie määrate, mis suunas me liigume. Üheskoos täiustame ja parandame. Eemaldame vana ja loome uut. See kõik on teile. Aitäh, et koos meiega unistate!</string>
     <string name="oneplus_forum_award_title">Auhind</string>
     <string name="oneplus_front_camera_app_display_fullscreen_summary">Kui esikaamera kuvaala katab rakenduse sisu, lülituge vaikerežiimi</string>
     <string name="oneplus_front_camera_display_choose_title">Valige, kas esikaamera peita</string>
     <string name="oneplus_front_camera_display_title">Esikaamera kuvaala</string>
     <string name="oneplus_fullscreen_back_guide_summary">Nipsake ekraani vasakust või paremast alumisest servast ekraani keskosa suunas</string>
-    <string name="oneplus_fullscreen_back_guide_summary_deprecated">Nipsake ekraani allservas vasakult või paremalt üles</string>
+    <string name="oneplus_fullscreen_back_guide_summary_deprecated">Nipsake ekraani allservast vasakult või paremalt üles</string>
     <string name="oneplus_fullscreen_back_guide_title">Tagasi</string>
     <string name="oneplus_fullscreen_disable_this_feature">Funktsiooni ei saa kasutada, kui navigeerimisviiped on lubatud.</string>
     <string name="oneplus_fullscreen_gesture_guide_back">"Proovime viibet, mis asendab nuppu „Tagasi“.
@@ -664,7 +672,7 @@ Suvalisel hetkel avakuva avamiseks nipsake ekraani alumisest servast keskelt ül
     <string name="oneplus_fullscreen_previous_app_no_bar_guide_summary">Nipsake ekraani allservast keskelt üles ning seejärel tõmmake sõrmega vasakule või paremale</string>
     <string name="oneplus_fullscreen_previous_app_no_bar_guide_title">Vahetage hiljuti kasutatud rakenduste vahel</string>
     <string name="oneplus_fullscreen_recent_guide_summary">Nipsake ekraani allservast üles ja peatuge</string>
-    <string name="oneplus_fullscreen_recent_guide_summary_deprecated">Nipsake ekraani altservast üles ja peatuge</string>
+    <string name="oneplus_fullscreen_recent_guide_summary_deprecated">Nipsake ekraani allserva keskosast üles ja peatuge</string>
     <string name="oneplus_fullscreen_recent_guide_title">Viimati kasutatud rakendused</string>
     <string name="oneplus_functional_terms">NÕUDED JA TINGIMUSED</string>
     <string name="oneplus_game_haptic_feedback_summary">Lisage värintagasiside, et mängukogemust elavdada. Bluetooth-kõrvaklappe veel ei toetata.</string>
@@ -740,9 +748,9 @@ Suvalisel hetkel avakuva avamiseks nipsake ekraani alumisest servast keskelt ül
     <string name="oneplus_hide_navkeys_summary">Lisa nupp navigatsiooniriba peitmiseks või kuvamiseks</string>
     <string name="oneplus_hide_notch_display_summary">Rakendused ei saa saki ala kasutada</string>
     <string name="oneplus_hide_notch_display_title">Peida saki ala</string>
-    <string name="oneplus_how_to_use_fingerprint_summary">"When the fingerprint pattern appears at the bottom of the screen, simply press with your finger on the fingerprint identification area to use the fingerprint function: wake and unlock your phone, authorize purchases, or sign in to apps. 
+    <string name="oneplus_how_to_use_fingerprint_summary">"Sõrmejälje funktsiooni kasutamiseks lihtsalt asetage sõrm sõrmejäljelugejale siis, kui ekraani allosas kuvatakse sõrmejälje muster: äratage ja avage telefon, kinnitage ostud või logige rakendustesse. 
 
-Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
+Märkus: teie sõrmejälg võib olla vähem turvaline kui tugev muster või PIN-kood"</string>
     <string name="oneplus_how_to_use_fingerprint_summary_no_note">Sõrmejälje funktsiooni kasutamiseks lihtsalt asetage sõrm sõrmejäljelugejale siis, kui ekraani allosas kuvatakse sõrmejälje muster: äratage ja avage telefon, kinnitage ostud või logige rakendustesse.</string>
     <string name="oneplus_hydrogen_version">H₂OS versioon</string>
     <string name="oneplus_ime_security_warning">%1$s võib koguda kogu teie sisestatavat teksti, sh isikuandmeid, nagu paroole ja krediitkaardinumbreid</string>
@@ -754,7 +762,7 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_instrucitons">Juhised</string>
     <string name="oneplus_intelligently_select_best_wifi">Valige nutikalt parim Wi‑Fi</string>
     <string name="oneplus_intelligently_select_best_wifi_summary">Valige nutikalt parim Wi‑Fi ja looge sellega ühendus, selleks tuvastage Wi‑Fi-võrkude ühendus ja analüüsige seda</string>
-    <string name="oneplus_intensely">Tugev</string>
+    <string name="oneplus_intensely">Strong</string>
     <string name="oneplus_is_turn_on_feature">Kas soovite kindlasti selle funktsiooni sisse lülitada?</string>
     <string name="oneplus_is_turn_on_feature_summary">"Kui selle sisse lülitate, võib juhtuda järgmine.
 1.Mõned ekraani alad ei ole normipärased 
@@ -783,7 +791,7 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_lock_after_timeout">Lukusta unerežiimi sisenedes automaatselt</string>
     <string name="oneplus_lock_buttons">Lukustusnupud</string>
     <string name="oneplus_lock_buttons_summary">Lukusta füüsilised nupud, kui mängurežiim on sisse lülitatud</string>
-    <string name="oneplus_lock_screen_intro_skip_dialog_text">Kui otsustate näotuvastusandmete salvestamise vahele jätta, soovitatakse teil seadme ja isikuandmete kaitseks valida muu meetod, nagu sõrmejälg või PIN-kood. Teatud rakenduste kasutamise saate piirata ka parooliga. Seadme kaitsemiseks avage Sätted > Turvalisus &amp; lukustuskuva.</string>
+    <string name="oneplus_lock_screen_intro_skip_dialog_text">Kui otsustate näotuvastusandmete salvestamise vahele jätta, soovitatakse teil seadme ja isikuandmete kaitseks valida muu meetod, nagu sõrmejälg või PIN-kood. Teatud rakenduste kasutamise saate piirata ka parooliga. Seadme kaitsemiseks avage Sätted > Turvalisus &amp; Lukustuskuva.</string>
     <string name="oneplus_lock_screen_notifications_summary_hide">Kuva privaatne sisu ainult siis, kui seade on avatud</string>
     <string name="oneplus_lock_screen_notifs_show_alerting">Kuva ainult olulised teavitused</string>
     <string name="oneplus_lock_screen_notifs_show_all">Kuva olulised ja ka muud teavitused</string>
@@ -831,10 +839,10 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_multitasking_clean_way">Viimati kasutatud rakenduse haldus</string>
     <string name="oneplus_navigation_bar_custom_settings">KOHANDATUD SÄTTED</string>
     <string name="oneplus_navigation_bar_summary">Seadista navigatsiooniriba</string>
-    <string name="oneplus_navigation_bar_title">Navigatsiooniriba &amp; viiped</string>
+    <string name="oneplus_navigation_bar_title">Navigatsiooniriba ja viiped</string>
     <string name="oneplus_network_auto_change_summary">Vahetab ühendusest ja signaalitugevusest olenevalt Wi-Fi-võrgu ja mobiilandmeside vahel</string>
     <string name="oneplus_network_auto_change_title">Nutikas Wi-Fi lüliti</string>
-    <string name="oneplus_network_dashboard_title">Wi-Fi ja võrk network</string>
+    <string name="oneplus_network_dashboard_title">Wi-Fi ja võrk</string>
     <string name="oneplus_network_datausage_restrict_title">Keela andmekasutus</string>
     <string name="oneplus_network_wifi_restrict_title">Keela Wi‑Fi</string>
     <string name="oneplus_never_auto">Keelatud</string>
@@ -844,7 +852,7 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_night_mode_enabled_op">Öörežiim</string>
     <string name="oneplus_night_mode_enabled_op_summary">Lülitage öörežiim käsitsi sisse</string>
     <string name="oneplus_night_mode_manual_open">Käsitsi</string>
-    <string name="oneplus_night_mode_open_tip">Lülitage esmalt öörežiim sisse</string>
+    <string name="oneplus_night_mode_open_tip">Lülitage esmalt nägemismugavuse režiim sisse</string>
     <string name="oneplus_night_mode_sensor_summary">Öörežiim kalibreerib ekraani värvitemperatuuri vastavalt keskkonna valgustusele. See võib vähendada silmadele avalduvat pinget ning aitab paremini magada.</string>
     <string name="oneplus_night_mode_strong">Kõige soojem</string>
     <string name="oneplus_night_mode_summary">Öörežiim kalibreerib ekraani silmade säästmiseks soojematele toonidele. See võib aidata teil paremini magada. Soovitame aktiveerida kellaajaliselt.</string>
@@ -893,7 +901,7 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_notifications_and_vibration">Teavituse märguanne ja vibratsioon</string>
     <string name="oneplus_notifications_free">Vaba</string>
     <string name="oneplus_notifications_meet">Kohtumine</string>
-    <string name="oneplus_notifications_sound">Notification sound</string>
+    <string name="oneplus_notifications_sound">Teavituse heli</string>
     <string name="oneplus_o2_contributors">OxygenOS panustajad</string>
     <string name="oneplus_open_bed_time_mode_schedule_summary">Sisselülitamine kohandatud ajavahemikus</string>
     <string name="oneplus_open_bed_time_mode_schedule_title">Ajakava</string>
@@ -943,8 +951,8 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_preference_settings_turn_on_time">Saatja</string>
     <string name="oneplus_prior_to_use_you_need_to">Enne kasutamist peate toimima järgmiselt.</string>
     <string name="oneplus_privacy_policy">Privaatsuspoliitika</string>
-    <string name="oneplus_privacy_protection_title">Krüpteeritud ruum</string>
-    <string name="oneplus_product_info_introduce">Seadme teave &amp; garantiikaart</string>
+    <string name="oneplus_privacy_protection_title">Krüptitud ruum</string>
+    <string name="oneplus_product_info_introduce">Seadme teave ja garantiikaart</string>
     <string name="oneplus_product_info_summary">Garantiikaart, eelinstallitute loend</string>
     <string name="oneplus_proximity_summary_disable">Pole kasutatav, sest ekraan on väljas</string>
     <string name="oneplus_quick_clipboard">Kiire lõikelaud</string>
@@ -956,10 +964,10 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_quick_launch_how_to_use_summary">"1. Kiirkäivituse paneeli avamiseks hoidke sõrme pärast lukust avamist ikka all
 2. Nipsake ja valige otsetee ning käivitamiseks tõstke sõrm"</string>
     <string name="oneplus_quick_launch_how_to_use_title">Kiirkäivituse kasutamine</string>
-    <string name="oneplus_quick_launch_summary">Long press the fingerprint identification area to launch quick pay or activate apps</string>
+    <string name="oneplus_quick_launch_summary">Kiirmakserakenduse avamiseks või rakenduste aktiveerimiseks tehke sõrmejälje tuvastusalal pikk vajutus</string>
     <string name="oneplus_quick_launch_title">Kiirkäivitus</string>
-    <string name="oneplus_quick_launch_toggle_summary">Long press the fingerprint identification area to launch quick pay or activate apps when the phone is locked</string>
-    <string name="oneplus_quick_launch_toggle_title">Lülita kiirkäivitus</string>
+    <string name="oneplus_quick_launch_toggle_summary">Kiirmakserakenduse avamiseks või rakenduste aktiveerimiseks tehke sõrmejälje tuvastusalal pikk vajutus, kui telefon on lukustatud</string>
+    <string name="oneplus_quick_launch_toggle_title">Lülita kiirkäivitus sisse</string>
     <string name="oneplus_quick_reply">Kiirvastus horisontaalpaigutusrežiimis</string>
     <string name="oneplus_quick_reply_content">Vaadake teavitused kiirelt üle ja vastake neile video või mängu peatamata. Lohistage jutumullid alla, et aktiveerida režiim Ära sega, kuni rakendusest väljute.</string>
     <string name="oneplus_quick_reply_description">Saate vormistada kiirvastuse, kui saate sõnumi rakendusest WeChat, QQ või muust rakendusest</string>
@@ -995,9 +1003,9 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_reading_mode_activate_manual">Aktiveeri käsitsi</string>
     <string name="oneplus_reading_mode_add_apps">Lisa rakendused lugemisrežiimi</string>
     <string name="oneplus_reading_mode_ask">Küsi iga kord</string>
-    <string name="oneplus_reading_mode_auto_summary">Lugemisrežiim lülitub automaatselt nende rakenduste avamisel sisse ja sulgemisel välja</string>
+    <string name="oneplus_reading_mode_auto_summary">Lugemisrežiim lülitub nende rakenduste avamisel ja sulgemisel automaatselt sisse ja välja</string>
     <string name="oneplus_reading_mode_available">Efekt puudub</string>
-    <string name="oneplus_reading_mode_block_peek_notifications">Blokeeri teavitused</string>
+    <string name="oneplus_reading_mode_block_peek_notifications">Blokeeri eelvaateteavitused</string>
     <string name="oneplus_reading_mode_chromatic">Kromaatiline efekt</string>
     <string name="oneplus_reading_mode_default_state">vaikeolek</string>
     <string name="oneplus_reading_mode_manual_settings">Käsitsi sätted</string>
@@ -1005,7 +1013,7 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_reading_mode_mono">Monoefekt</string>
     <string name="oneplus_reading_mode_select_effect">Vali efekt</string>
     <string name="oneplus_reading_mode_select_effect_for_app">Valige rakendusele \"%1$s\" efekt</string>
-    <string name="oneplus_reading_mode_summary">Lugemisrežiim seadistab ekraani värvitemperatuuri automaatselt ümbritsevate valgustingimuste põhjal ning kalibreerib selle teksti lugemiseks, et pakkuda paremat kasutuskogemust.</string>
+    <string name="oneplus_reading_mode_summary">Lugemisrežiim seadistab ekraani värvitemperatuuri automaatselt vastavalt keskkonna valgustatuse tasemele ning kalibreerib selle teksti lugemiseks, parandades nii kasutuskogemust.</string>
     <string name="oneplus_reading_mode_summary_no_sensor">Lugemisrežiim optimeerib ekraanikuva ja teksti ning muudab lugemise sama mugavaks kui e-lugeri puhul.</string>
     <string name="oneplus_reading_mode_tips">Monoefekt võimaldab teksti süveneda; kromaatiline efekt tagab mugavama ja värvikirevama lugemiskogemuse</string>
     <string name="oneplus_reading_mode_turn_on">Lülita lugemisrežiim sisse</string>
@@ -1041,10 +1049,10 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_screen_color_mode_default">Kuva-P3（vaikeseade）</string>
     <string name="oneplus_screen_color_mode_defined">Kohandatud värv</string>
     <string name="oneplus_screen_color_mode_ntsc">Lai värvigamma AMOLED</string>
-    <string name="oneplus_screen_color_mode_reading_mode_on_summary">Ei ole saadaval, sest lugemisrežiim on sees</string>
+    <string name="oneplus_screen_color_mode_reading_mode_on_summary">Pole kasutatav, sest lugemisrežiim on sees</string>
     <string name="oneplus_screen_color_mode_soft">Pehme</string>
     <string name="oneplus_screen_color_mode_title">Ekraani kalibreerimine</string>
-    <string name="oneplus_screen_color_mode_title_summary">Pole kasutatav, sest öörežiim on sees</string>
+    <string name="oneplus_screen_color_mode_title_summary">Pole kasutatav, sest nägemismugavuse režiim on sees</string>
     <string name="oneplus_screen_features_not_available_toast">Kui funktsioon on sisse lülitatud, ei saa kasutada selliseid funktsioone nagu ekraani kalibreerimine</string>
     <string name="oneplus_screen_refresh_rate">Värskendussagedus</string>
     <string name="oneplus_screen_refresh_rate_60hz_summary">Väiksem sujuvus, kuid pikem aku kasutusaeg</string>
@@ -1057,11 +1065,11 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_screen_resolution_adjust_intelligent_switch_summary">Lülitu sobivale eraldusvõimele automaatselt</string>
     <string name="oneplus_screen_resolution_adjust_other_summary">Maksimaalne selgus, suurem energiatarve (3120 × 1440)</string>
     <string name="oneplus_screen_resolution_adjust_other_summary_19811">Maksimaalne selgus, suurem energiatarve (3168 × 1440)</string>
-    <string name="oneplus_search_keyword_about_settings">device name, android version, build number, model, CPU, storage, RAM, ROM, camera, pixel, screen, Verification, Legal information, Warranty card, preinstalled list, Award</string>
+    <string name="oneplus_search_keyword_about_settings">Seadme nimi, Androidi versioon, koostenumber, mudel, CPU, mäluruum, RAM, ROM, kaamera, piksel, ekraan, kinnitus, juriidiline teave, garantiikaart, eelinstallitute loend, auhind</string>
     <string name="oneplus_search_keyword_accent_color">värv</string>
     <string name="oneplus_search_keyword_app_lock">lukk, PIN, paroolid</string>
     <string name="oneplus_search_keyword_connected_device_manager">ühendatud seadme haldur, seade</string>
-    <string name="oneplus_search_keyword_data_usage_control">andmekasutuse kontroll</string>
+    <string name="oneplus_search_keyword_data_usage_control">Andmekasutuse kontroll</string>
     <string name="oneplus_search_keyword_default_launcher_app">launcher, vaikesäte, rakendused, avakuva vaikerakendus, avakuva rakendus</string>
     <string name="oneplus_search_keyword_discoverable_device">leitav</string>
     <string name="oneplus_search_keyword_double_click_light_screen">ekraan, äratus</string>
@@ -1076,7 +1084,7 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_search_keyword_gesture_to_control_calls">vasta, lülita</string>
     <string name="oneplus_search_keyword_hide_navkeys">peida navigatsiooniriba</string>
     <string name="oneplus_search_keyword_home_key">avakuva</string>
-    <string name="oneplus_search_keyword_icon_manager">ikoonihaldur</string>
+    <string name="oneplus_search_keyword_icon_manager">Ikoonihaldur</string>
     <string name="oneplus_search_keyword_incoming_call_vibrate_mode">vibratsioon</string>
     <string name="oneplus_search_keyword_input_keyboard">sisend, klaviatuur</string>
     <string name="oneplus_search_keyword_led_settings">värv, tuli, LED</string>
@@ -1095,9 +1103,12 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_search_keyword_sounds_and_notifications_interruptions">ära sega, katkesta, katkestus, katke, režiim</string>
     <string name="oneplus_search_keyword_swap_navkeys">vaheta nuppe</string>
     <string name="oneplus_search_keyword_switch">edastamine, andmete migratsioon</string>
-    <string name="oneplus_search_keyword_theme_settings">LUKUSTUSKUVA KOHANDAMINE, taustapildid, kella stiil, sõrmejälje animatsioon, Horizon Light, SÜSTEEMI KOHANDAMINE, rõhutusvärv, kuju, kirjatüüp, toon, ikoonipakett, dekoratiivvalgustus, tume varjund, elavad värvid</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl">LUKUSTUSKUVA KOHANDAMINE, taustapildid, kella stiil, sõrmejälje animatsioon, Horizon Light, SÜSTEEMI KOHANDAMINE, rõhutusvärv, kuju, kirjatüüp, toon, ikoonipakett, dekoratiivvalgustus, tume varjund, elavad värvid, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light">LUKUSTUSKUVA KOHANDAMINE, taustapildid, kella stiil, sõrmejälje animatsioon, SÜSTEEMI KOHANDAMINE, rõhutusvärv, kuju, kirjatüüp, toon, ikoonipakett, dekoratiivvalgustus, tume varjund, elavad värvid</string>
+    <string name="oneplus_search_keyword_theme_settings">Lukustuskuva kohandamine, taustapildid, kella stiil, sõrmejälje animatsioon, Horizon Light, süsteemi kohandamine, rõhutusvärv, kuju, kirjatüüp, toon, ikoonipakett, dekoratiivvalgustus, tume varjund, elavad värvid</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">Lukustuskuva kohandamine, taustapildid, kella stiil, sõrmejälje animatsioon, Horizon Light, süsteemi kohandamine, rõhutusvärv, kuju, kirjatüüp, toon, ikoonipakett, dekoratiivvalgustus, tume varjund, elavad värvid, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lukustuskuva kohandamine, taustapildid, kella stiil, sõrmejälje animatsioon, Horizon Light, süsteemi kohandamine, rõhutusvärv, kuju, kirjatüüp, toon, ikoonipakett, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_new">Lukustuskuva kohandamine, taustapildid, kella stiil, sõrmejälje animatsioon, Horizon Light, süsteemi kohandamine, rõhutusvärv, kuju, kirjatüüp, toon, ikoonipakett</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light">Lukustuskuva kohandamine, taustapildid, kella stiil, sõrmejälje animatsioon, süsteemi kohandamine, rõhutusvärv, kuju, kirjatüüp, toon, ikoonipakett, dekoratiivvalgustus, tume varjund, elavad värvid</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lukustuskuva kohandamine, taustapildid, kella stiil, sõrmejälje animatsioon, süsteemi kohandamine, rõhutusvärv, kuju, kirjatüüp, toon, ikoonipakett</string>
     <string name="oneplus_search_keyword_three_screenshots">kuvatõmmis</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">teavitused, kogemus, programm, täiustus</string>
@@ -1111,19 +1122,19 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_security_lock_settings_summary">Ava eelistused, asukohateenus ja rakenduste sahtel</string>
     <string name="oneplus_security_lock_settings_title">Turvalisus ja privaatsus</string>
     <string name="oneplus_security_settings_fingerprint_enroll_error_dialog_title">Seadistamine nurjus</string>
-    <string name="oneplus_security_settings_fingerprint_enroll_introduction_message">"Just press the fingerprint identification area to unlock your phone, authorize purchases, or sign in to apps. 
+    <string name="oneplus_security_settings_fingerprint_enroll_introduction_message">"Vajutage telefoni avamiseks, ostude kinnitamiseks või rakendustesse sisselogimiseks lihtsalt sõrmejälje tuvastusala. 
 
-Note: 
-1.Your fingerprint may be less secure than a strong pattern or PIN.
-2.Please re-enter your fingerprint after each replacement of the protective film to ensure the availability of the fingerprint."</string>
+Märkus: 
+1.teie sõrmejälg võib olla vähem turvaline kui tugev muster või PIN-kood.
+2.sõrmejälje kättesaadavuse tagamiseks sisestage sõrmejälg pärast iga kaitsekile vahetust uuesti."</string>
     <string name="oneplus_security_settings_fingerprint_exists_dialog_message">See sõrmejälg on juba registreeritud, proovige muud sõrme.</string>
     <string name="oneplus_security_settings_fingerprint_toggle_category_title">Sõrmejäljeikooni kuvamine muutuval kuval</string>
     <string name="oneplus_security_settings_fingerprint_toggle_category_title_for_always_on">SÕRMEJÄLJEIKOONI EELISTUSED</string>
     <string name="oneplus_security_settings_fingerprint_toggle_one_title">Näitamiseks liigutage telefoni veidi</string>
-    <string name="oneplus_security_settings_fingerprint_toggle_two_title">Kuvamiseks toksake ekraanil</string>
+    <string name="oneplus_security_settings_fingerprint_toggle_two_title">Kuvamiseks puudutage ekraani</string>
     <string name="oneplus_security_settings_fingerprint_toggle_two_toast_1">„Äratamiseks tehke topelttoks“ on lubatud ja „Kuvamiseks toksake ekraanil“ keelatakse</string>
     <string name="oneplus_security_settings_fingerprint_toggle_two_toast_2">„Kuvamiseks toksake ekraanil“ on lubatud ja „Äratamiseks tehke topelttoks“ keelatakse</string>
-    <string name="oneplus_security_settings_fingerprint_tolocation_advanced_settingsggle_two_title">Kuvamiseks toksake ekraanil</string>
+    <string name="oneplus_security_settings_fingerprint_tolocation_advanced_settingsggle_two_title">Kuvamiseks puudutage ekraani</string>
     <string name="oneplus_select_fingerprint_animation_effect_1">Cosmos</string>
     <string name="oneplus_select_fingerprint_animation_effect_2">Wave</string>
     <string name="oneplus_select_fingerprint_animation_effect_3">Stripe</string>
@@ -1137,8 +1148,8 @@ Note:
     <string name="oneplus_set_time">Kellaajaline öörežiim</string>
     <string name="oneplus_setting_ringtone">Määra helin</string>
     <string name="oneplus_setting_sim_ringtone_switch">Määra iga SIM-kaardi jaoks helin</string>
-    <string name="oneplus_settings_lab_feature_boost_summary">Based on your daily usage, Smart Boost takes full advantage of the large RAM of OnePlus phones, which leverages the performance of loading apps and games.</string>
-    <string name="oneplus_settings_lab_feature_boost_title">Smart Boost</string>
+    <string name="oneplus_settings_lab_feature_boost_summary">Nutikas võimendus kasutab teie igapäevase kasutamise põhjal täielikult ära OnePlusi telefonide suurt RAM-i, parandades rakenduste ja mängude laadimisjõudlust.</string>
+    <string name="oneplus_settings_lab_feature_boost_title">Nutikas võimendus</string>
     <string name="oneplus_settings_refresh_rate_settings_120">120 Hz SÄTTED</string>
     <string name="oneplus_settings_refresh_rate_settings_90">90 Hz SÄTTED</string>
     <string name="oneplus_settings_refresh_rate_settings_summary">Sobiva värskendussageduse automaatne valimine, ilma et aku tühjeneks</string>
@@ -1161,6 +1172,7 @@ Note:
     <string name="oneplus_silent_mode_on">Hääletu režiim on sees</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Kõned ja teavitused vaigistatakse, v.a alarmid</string>
     <string name="oneplus_silent_mode_summary">Kõned ja teavitused vaigistatakse, v.a alarmid</string>
+    <string name="oneplus_silent_notifications_status_bar">Peida vaikne teavitus olekuribalt</string>
     <string name="oneplus_sim1_ringtone_switch">SIM-kaart 1</string>
     <string name="oneplus_sim2_ringtone_switch">SIM-kaart 2</string>
     <string name="oneplus_simcard_title">SIM</string>
@@ -1178,7 +1190,7 @@ Note:
     <string name="oneplus_sound_tuner">Dolby Atmos</string>
     <string name="oneplus_status_summary">Telefoninumber, signaal jne</string>
     <string name="oneplus_stop_run">Sundseisak</string>
-    <string name="oneplus_storage">MÄLURUUM</string>
+    <string name="oneplus_storage">STORAGE</string>
     <string name="oneplus_sunrise_sunset">Luba ehast koiduni automaatselt</string>
     <string name="oneplus_support_apps">TOETATUD RAKENDUSED</string>
     <string name="oneplus_support_summary">Seadme kasutuse nõuanded ja KKK</string>
@@ -1187,13 +1199,13 @@ Note:
     <string name="oneplus_suspension_notice">Olge valmis</string>
     <string name="oneplus_suspension_notice_summary">Võimaldab rakendustel kuvada valmisoleku teavitusi</string>
     <string name="oneplus_switch">OnePlus Switch</string>
-    <string name="oneplus_switch_resolution_kill_process_confirm">Muuda</string>
+    <string name="oneplus_switch_resolution_kill_process_confirm">Rakenduse Switch</string>
     <string name="oneplus_switch_resolution_kill_process_tips">Eraldusvõime muutmisel võivad mõned taustal töötavad rakendused sulguda. Kas soovite kindlasti seda muuta?</string>
     <string name="oneplus_switch_screen_lock_type">Vahetan ekraaniluku tüüpi, oodake...</string>
     <string name="oneplus_system_data_summary">Sh konto teave, kontaktid ja rakenduste andmed</string>
     <string name="oneplus_system_data_title">Süsteemi andmed</string>
     <string name="oneplus_system_default">Süsteemi vaikesäte</string>
-    <string name="oneplus_system_ringtone">Süsteemiheli</string>
+    <string name="oneplus_system_ringtone">Süsteemihelid</string>
     <string name="oneplus_system_settings_summary">Ligipääsetavus, kuupäev &amp; kellaaeg, keel &amp; sisend</string>
     <string name="oneplus_system_settings_title">Süsteemi sätted</string>
     <string name="oneplus_system_stability_add">Liituge süsteemi stabiilsuse parendusprogrammiga</string>
@@ -1203,7 +1215,7 @@ Note:
     <string name="oneplus_theme_accent_color">Rõhutav värv</string>
     <string name="oneplus_theme_accent_color_customization">KOHANDAMINE</string>
     <string name="oneplus_theme_accent_color_presetcolor">EELSÄTTE VÄRV</string>
-    <string name="oneplus_theme_accent_color_select">VALI RÕHUTAV VÄRV</string>
+    <string name="oneplus_theme_accent_color_select">Vali rõhutav värv</string>
     <string name="oneplus_theme_apply_summary">Pärast teema rakendamist teie kohandamisvalikud alistatakse</string>
     <string name="oneplus_theme_apply_title">Kas soovite selle teema rakendada?</string>
     <string name="oneplus_theme_clock">Kella stiil</string>
@@ -1211,7 +1223,7 @@ Note:
     <string name="oneplus_theme_clock_snake_tip">See funktsioon on saadaval, kui ekraan on sisse lülitatud</string>
     <string name="oneplus_theme_colorpicker_colorvalue">VÄRVIKOOD</string>
     <string name="oneplus_theme_drop_summary">Viskad muudatused ära?</string>
-    <string name="oneplus_theme_drop_title">Välju töötlusrežiimist</string>
+    <string name="oneplus_theme_drop_title">Muutmisrežiimist väljumine</string>
     <string name="oneplus_theme_entrance_summary">Taustapildid, rõhutusvärv, kirjatüüp, toon</string>
     <string name="oneplus_theme_entrance_title">Kohandamine</string>
     <string name="oneplus_theme_fingerprint">Sõrmejälje animatsioon</string>
@@ -1248,8 +1260,8 @@ Note:
     <string name="oneplus_timer_shutdown_disable_summary">Funktsiooni avamiseks keelake käivitamisel parooli küsimine</string>
     <string name="oneplus_timer_shutdown_summary">Telefon lülitub %ds pärast välja. Kohe välja lülitamiseks kinnitage.</string>
     <string name="oneplus_to_select_assistant_app_dialog">Valige assistendirakendus, mille soovite aktiveerida</string>
-    <string name="oneplus_tools_quicklaunch_summary">Mängurežiim, kiirkäivitus, paralleelrakendused</string>
-    <string name="oneplus_tools_quicklaunch_summary_no_gamingmode">Kiirkäivitus, paralleelrakendused</string>
+    <string name="oneplus_tools_quicklaunch_summary">Mängurežiim, kiirkäivitus, paralleelrakendused, rakenduste kapp</string>
+    <string name="oneplus_tools_quicklaunch_summary_no_gamingmode">Kiirkäivitus, paralleelrakendused, rakenduste kapp</string>
     <string name="oneplus_tools_summary">Mängurežiim, rakenduste sahtel, paralleelrakendused</string>
     <string name="oneplus_tools_summary_U30">Mängurežiim, taskurežiim, ajakavastatud sisse-/väljalülitus</string>
     <string name="oneplus_tools_summary_no_gamingmode">Rakenduste sahtel, paralleelrakendused</string>
@@ -1260,12 +1272,12 @@ Note:
     <string name="oneplus_top_level_cloud_h2_summary">Andmete sünkroonimine pilvega, funktsioon Leia mu telefon</string>
     <string name="oneplus_top_level_cloud_o2_summary">Andmete sünkroonimine pilvega</string>
     <string name="oneplus_top_level_connected_summary">NFC, ülekandmine, puuduta ja maksa</string>
-    <string name="oneplus_top_level_display_summary">Status bar, ambient display, Vision comfort, reading mode</string>
+    <string name="oneplus_top_level_display_summary">Olekuriba, muutuv kuva, nägemismugavuse režiim, lugemisrežiim</string>
     <string name="oneplus_top_level_network_summary">SIM, mobiilivõrk, andmekasutus, kuumpunkt</string>
     <string name="oneplus_top_level_privacy_summary">Õigused, isikuandmed</string>
-    <string name="oneplus_top_level_security_dashboard_summary">Sõrmejälg, näotuvastus, näotuvastusega avamine</string>
-    <string name="oneplus_top_level_security_summary">Sõrmejälg, näotuvastus, näotuvastusega avamine</string>
-    <string name="oneplus_top_level_sound_summary">Ära sega, kõlarirežiim, helin</string>
+    <string name="oneplus_top_level_security_dashboard_summary">Sõrmejälg, näotuvastusega avamine, hädaabiteenus</string>
+    <string name="oneplus_top_level_security_summary">Sõrmejälg, näotuvastusega avamine, hädaabiteenus</string>
+    <string name="oneplus_top_level_sound_summary">Ära sega, kuulari režiim, helin</string>
     <string name="oneplus_top_level_system_summary">Keel ja klaviatuur, aeg, lähtestamine, süsteemiuuendused</string>
     <string name="oneplus_top_level_system_summary_verizon">Keel ja klaviatuur, kellaaeg, lähtestamine</string>
     <string name="oneplus_touch_vibrate">Puute vibratsioon</string>
@@ -1310,7 +1322,7 @@ Märkus. Näotuvastus võib olla ebaturvalisem kui sõrmejälg, PIN-kood või mu
     <string name="oneplus_volume_keys_adjust_ringtones">Helina helitugevus</string>
     <string name="oneplus_weak_text_reminding">Ainult tekst</string>
     <string name="oneplus_weak_text_reminding_summary">Võimaldab rakendustel kuvada valmisoleku teavitusi</string>
-    <string name="oneplus_wellbeing_grayscale_open_tip">Öörežiim ei ole praegu saadaval, sest funktsioon Hallskaala on sisse lülitatud</string>
+    <string name="oneplus_wellbeing_grayscale_open_tip">Nägemismugavuse režiim ei ole praegu saadaval, sest funktsioon Hallskaala on sisse lülitatud</string>
     <string name="oneplus_wifi_6_standard_hotspot_cancel">TÜHISTA</string>
     <string name="oneplus_wifi_6_standard_hotspot_enable">LUBA</string>
     <string name="oneplus_wifi_6_standard_hotspot_title">Wi‑Fi 6 kuumpunkt</string>
@@ -1324,7 +1336,7 @@ Kui võrgu peidate, ei muuda see ruuteri sätteid."</string>
     <string name="oneplus_wifi_ipv6_surport_summary">IPv6 blokeerimine aitab vältida teatud Wi-Fi ruuterite probleeme.</string>
     <string name="oneplus_wifi_ipv6_surport_title">IPv6 tugi</string>
     <string name="oneplus_wifi_list">Wi-Fi loend</string>
-    <string name="oneplus_wifi_name">Mobiili kuumpunkti nimi</string>
+    <string name="oneplus_wifi_name">Mobiilse kuumpunkti nimi</string>
     <string name="oneplus_wifi_name_dialog_message">Kui lülitate edastusvõrgu nime (SSID) välja, pole teie telefon teistele seadmetele nähtav ning seda ei kuvata kasutatavate Wi-Fi-võrkude loendis. Muud seadmed saavad teie kuumpunktiga ühenduse luua, kui võrgu nimi käsitsi sisestada.</string>
     <string name="oneplus_wifi_name_dialog_title">Teie kuumpunkt pole praegu nähtav</string>
     <string name="oneplus_wifi_scan_always_available">Alati skannimine kasutatav</string>
@@ -1347,17 +1359,15 @@ Kui võrgu peidate, ei muuda see ruuteri sätteid."</string>
     <string name="onplus_software_version_info">Tarkvaraversioon</string>
     <string name="op_advanced_settings">Täpsem</string>
     <string name="op_android_mode_cannot_change_color_accent">Vaiketeema saab kasutada ainult süsteemi värviteemat</string>
-    <string name="op_aod_parsons_info_button">OK</string>
-    <string name="op_aod_parsons_info_message">"Every 24 hours, a masterpiece is created.
-
-Insight, designed together by OnePlus &amp; students from Parsons School of Design, transforms time into a visible color bar. The device's usage data drives the pattern. Every time the phone is unlocked, it leaves a groove on the bar. The longer is the utility time; the wider is the groove and vice versa. Through the insight of those grooves, take a peek at your digital life."</string>
-    <string name="op_aod_parsons_info_title">Insight</string>
+    <string name="op_aod_parsons_info_button">Ok</string>
+    <string name="op_aod_parsons_info_message">"Avamisel luuakse meistriteos.
+Pilguheit, mille on koos loonud OnePlus ja Parsonsi disainikooli tudengid, muudab aja nähtavaks värviribaks. Muster tuleneb seadme kasutusandmetest. Iga kord kui telefon avatakse, jääb ribale joon. Mida pikem on kasutusaeg, seda laiem joon jääb ja vastupidi. Nende joonte kaudu saate heita pilgu oma digitaalsesse ellu."</string>
     <string name="op_app_already_uninstalled">Maha installitud</string>
     <string name="op_audio_settings">Helituuner</string>
     <string name="op_auto_power_saving">Automaatne energiasääst</string>
     <string name="op_auto_power_saving_summary">Sobiva eraldusvõime automaatne valimine, ilma et aku tühjeneks</string>
-    <string name="op_battery_saver_description">Battery Saver turns off or restricts background activity, some visual effects &amp; other high-power features to extend battery life.</string>
-    <string name="op_battery_suggestion_summary">Turn on Adaptive Battery</string>
+    <string name="op_battery_saver_description">Akusäästja lülitab aku tööea pikendamiseks välja või piirab taustategevusi, mõningaid visuaalseid efekte &amp; muid suurt võimsust nõudvaid funktsioone.</string>
+    <string name="op_battery_suggestion_summary">Lülita kohanduv aku sisse</string>
     <string name="op_cast_description">Kasuta telefoni kuva ja heli teisel seadmel, nt teleriekraanil</string>
     <string name="op_cast_nearby">Lähedal asuvad seadmed</string>
     <string name="op_cast_no_devices">Lähedal asuvaid seadmeid ei leitud</string>
@@ -1366,7 +1376,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_charging_Station_mute_notifications">Vaigista teavitused</string>
     <string name="op_charging_footer_text">Teid teavitatakse, kui läheduses on mõni laadimisjaam, kui külastate partnerasukohti, nagu lennujaamad, või Oneplusi sündmusi, nagu Pop-ups.</string>
     <string name="op_charging_optimization">Optimeeritud laadimine</string>
-    <string name="op_charging_optimization_summary">Optimeerige laadimismustrit kasutusharjumuste järgi</string>
+    <string name="op_charging_optimization_summary">Optimeerige laadimismustrit oma kasutusharjumuste järgi, et aku koormust vähendada ja aku kasutusiga pikendada</string>
     <string name="op_charging_station">Läheduses olevad laadimisjaamad</string>
     <string name="op_charging_station_no_station">Läheduses ei ole laadimisjaamu</string>
     <string name="op_charging_station_summary">Teavita, kui läheduses on laadimisjaam</string>
@@ -1423,7 +1433,13 @@ Sõrmejäljega avamine ei pruugi kolmandate isikute ekraanikaitsmetega ühilduda
  Kui telefon teie sõrmejälgi tuvastab ja vastendab, suureneb telefoni ekraani heledus ning värviprofiil muutub ajutiselt."</string>
     <string name="op_fragment">Lühike</string>
     <string name="op_gamespace">Game Space</string>
+    <string name="op_global_drak_mode_apps_manage">Halda rakendusi tumedas režiimis</string>
+    <string name="op_global_drak_mode_full_support_list">Toetatud rakendused</string>
+    <string name="op_global_drak_mode_not_full_support_list">Toetuseta rakendused</string>
+    <string name="op_global_drak_mode_support_description">Toetuseta rakendused ei pruugi tumedas režiimis õigesti töötada</string>
+    <string name="op_gps_off_warn_msg">Lülitage esmalt asukoht sisse</string>
     <string name="op_high_power_app_manager">Suure energiatarbega rakendused</string>
+    <string name="op_history_toggled_on_summary">Teie hiljutised teavitused ilmuvad siia</string>
     <string name="op_keep_location_services">Läheduses asuvate laadimisjaamada leidmiseks jätke asukohateenused lubatuks</string>
     <string name="op_light_mode_title">Hele</string>
     <string name="op_linked_launch_summary">Hallatavaid rakendusi saab taustal käivitada</string>
@@ -1433,9 +1449,11 @@ Sõrmejäljega avamine ei pruugi kolmandate isikute ekraanikaitsmetega ühilduda
     <string name="op_lockpassword_choose_your_pin_header_for_face">Näotuvastusega avamiseks määrake PIN-kood</string>
     <string name="op_member_description">Siduge seade eksklusiivsete eeliste saamiseks</string>
     <string name="op_member_title">Logi OnePlus kontole sisse</string>
-    <string name="op_night_display_title">Vision comfort</string>
+    <string name="op_night_display_title">Nägemismugavus</string>
     <string name="op_not_disturb">Režiimi „Ära sega“ eelistused</string>
     <string name="op_not_disturb_summary">Vaigista kõned ja teavitused ning lülita vibratsioon välja, v.a alarmid</string>
+    <string name="op_notification_history_off_summary">Lülitage hiljutiste teavituste kuvamiseks teavituste ajalugu sisse</string>
+    <string name="op_notification_history_summary">Kuva hiljutised teavitused</string>
     <string name="op_oneplus_roaming_summary">Pakub globaalseid Internetiteenuseid</string>
     <string name="op_oneplus_roaming_title">OnePlus Roaming</string>
     <string name="op_primary_charm_purple_label">Sügavlilla</string>
@@ -1446,22 +1464,23 @@ Sõrmejäljega avamine ei pruugi kolmandate isikute ekraanikaitsmetega ühilduda
     <string name="op_primary_grass_green_label">Heleroheline</string>
     <string name="op_primary_lemon_yellow_label">Oranž</string>
     <string name="op_primary_red_label">Punane</string>
+    <string name="op_primary_rose_red_label">Roosipunane</string>
     <string name="op_primary_royal_blue_label">Süvasinine</string>
     <string name="op_primary_sky_blue_label">Tsüaan</string>
     <string name="op_primary_vigour_red_label">Roosa</string>
     <string name="op_reset">Lähtesta</string>
     <string name="op_reset_options_summary">Tehasesätete taastamine, rakendused ja võrgu lähtestamine</string>
     <string name="op_screenshot">Kuvatõmmise heli</string>
-    <string name="op_security_lock_settings_title">Turvalisus &amp; lukustuskuva</string>
+    <string name="op_security_lock_settings_title">Turvalisus ja lukustuskuva</string>
     <string name="op_security_settings_back_fingerprint_enroll_find_sensor_message">Telefoni tagaküljelt seda ei leia</string>
     <string name="op_security_settings_fingerprint_enroll_find_sensor_message">Leia sõrmejälje andur avakuva nupul</string>
     <string name="op_security_settings_title">Turvalisus &amp; sõrmejälg</string>
-    <string name="op_sim_card_with_slotid">SIM-kaart  %1$s</string>
+    <string name="op_sim_card_with_slotid">SIM %1$s</string>
     <string name="op_sim_cord">SIM- kaart ja võrk</string>
     <string name="op_sim_cord_summary">Vaike SIM-kaart, sagedusriba kasutus</string>
     <string name="op_sim_name_with_prefix">  (%1$s)</string>
-    <string name="op_smart_battery_manager_title">Adaptive Battery</string>
-    <string name="op_smart_battery_title">Use Adaptive Battery</string>
+    <string name="op_smart_battery_manager_title">Kohanduv aku</string>
+    <string name="op_smart_battery_title">Kasuta kohanduvat akut</string>
     <string name="op_sms_ringtone">SMS-i helin</string>
     <string name="op_starwar_mode_cannot_change_color_accent">Teema Star Wars saab kasutada ainult süsteemi värviteemat</string>
     <string name="op_starwar_mode_title">Star Wars</string>
@@ -1471,9 +1490,9 @@ Sõrmejäljega avamine ei pruugi kolmandate isikute ekraanikaitsmetega ühilduda
     <string name="op_tcp_timestamps_randomization_title">Juhuslike TCP-ajatemplite tähis</string>
     <string name="op_theme_2__cannot_change_color_accent">Teema The Avengers saab kasutada ainult süsteemi värviteemat</string>
     <string name="op_theme_2__title">The Avengers</string>
-    <string name="op_theme_3_cannot_change_color_accent">McLaren theme can only use the system color theme</string>
+    <string name="op_theme_3_cannot_change_color_accent">Teema McLaren saab kasutada ainult süsteemi värviteemat</string>
     <string name="op_theme_3_title">McLaren</string>
-    <string name="op_theme_entrance_summary">Wallpapers, accent color, font</string>
+    <string name="op_theme_entrance_summary">Taustapildid, rõhutusvärv, kirjatüüp</string>
     <string name="op_theme_mode_title">Teema</string>
     <string name="op_use_cast">Kasuta suunamist</string>
     <string name="op_user_manual_settings">Kasutusjuhend</string>
@@ -1488,7 +1507,7 @@ Sõrmejäljega avamine ei pruugi kolmandate isikute ekraanikaitsmetega ühilduda
     <string name="op_wlan_settings_and_management">Wi-Fi sätted</string>
     <string name="op_zen_mode_automation_settings_title">Lülita automaatselt sisse</string>
     <string name="op_zen_mode_behavior_settings_title">Erandid</string>
-    <string name="op_zen_mode_restrict_notifications_title">Restrict notifications</string>
+    <string name="op_zen_mode_restrict_notifications_title">Piira teavitusi</string>
     <string name="opcustom_tone_dark_tile_text">Tume režiim</string>
     <string name="open_hotspot_warning_message">"Avatud turvalisuse abil saavad seadmed kasutada mobiilset kuumpunkti ima parooli sisestamata. Kui soovite siiski parooli küsida, valige selle asemel WPA2 turvalisus. "</string>
     <string name="openid_dialog_reset">LÄHTESTA</string>
@@ -1505,7 +1524,7 @@ Sõrmejäljega avamine ei pruugi kolmandate isikute ekraanikaitsmetega ühilduda
     <string name="oxygen_version_default">Tundmatu</string>
     <string name="please_type_passphrase">Juhtmevaba ühenduse parool</string>
     <string name="power_menu">Toitemenüü</string>
-    <string name="power_off">Toide väljas</string>
+    <string name="power_off">Välja</string>
     <string name="power_off_summary">Teie seade lülitub välja</string>
     <string name="power_show_in_statusbar_title">Kuva aku protsent</string>
     <string name="ppp_number">ppp_number</string>
@@ -1652,7 +1671,7 @@ Kas soovite süsteemi sätted lähtestada? Seda toimingut ei saa tagasi võtta"<
     <string name="touchscreen_camera_gesture_summary">Kaamera avamiseks joonistage O</string>
     <string name="touchscreen_camera_gesture_title">Ava kaamera</string>
     <string name="touchscreen_double_tap_to_wake_gesture_summary">Seadme äratamiseks tehke ekraanil kaks toksu</string>
-    <string name="touchscreen_double_tap_to_wake_gesture_title">Äratamiseks tehke topelttoks</string>
+    <string name="touchscreen_double_tap_to_wake_gesture_title">Avamiseks topeltpuudutage</string>
     <string name="touchscreen_flashlight_gesture_summary">Taskulambi lülitamiseks joonistage V</string>
     <string name="touchscreen_flashlight_gesture_title">Lülita taskulampi</string>
     <string name="touchscreen_music_gesture_summary">Muusika esitamiseks joonistage kahe sõrmega ||. Eelmise või järgmise pala esitamiseks joonistage &lt; või ></string>
@@ -1790,7 +1809,8 @@ Kas soovite süsteemi sätted lähtestada? Seda toimingut ei saa tagasi võtta"<
     <string name="wifi_wapi_cert_uninstall_button">Installi maha</string>
     <string name="wifi_wapi_certification_dont_exist">Sisestatud võrguparool on vale. Proovige uuesti.</string>
     <string name="wifi_wapi_user_cert">Kasutaja sertifikaat</string>
-    <string name="work_life_balance">Work Life Balance</string>
+    <string name="work_life_balance">Töö- ja eraelu tasakaal</string>
+    <string name="work_life_banner_summary">Teavitused võivad häirida! Seadke need tähtsuse järjekorda, et leida täiuslik töö- ja eraelu tasakaal.</string>
     <string name="work_life_disabled_toast">Funktsioon Work Life Balance on keelatud.</string>
     <string name="zen_mode_alarm_info_new">Alarmid katkestavad alati</string>
     <string name="zen_mode_alarms_summary">Luba alarmiheli</string>

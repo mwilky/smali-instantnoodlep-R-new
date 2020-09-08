@@ -6,7 +6,7 @@
     <ListPreference android:persistent="true" android:entries="@array/dark_ui_scheduler_preference_titles" android:title="@string/oneplus_auto_activate" android:key="dark_ui_auto_mode" android:summary="%s" android:entryValues="@array/dark_ui_scheduler_preference_titles" settings:controller="com.android.settings.display.darkmode.DarkModeScheduleSelectorController" />
     <Preference android:title="@string/night_display_start_time_title" android:key="dark_theme_start_time" settings:searchable="false" />
     <Preference android:title="@string/night_display_end_time_title" android:key="dark_theme_end_time" settings:searchable="false" />
-    <Preference android:title="@string/oneplus_global_dark_mode_title" android:key="oneplus_global_dark_mode">
+    <Preference android:title="@string/op_global_drak_mode_apps_manage" android:key="oneplus_global_dark_mode">
         <intent android:action="oneplus.intent.GLOBLE_DARK_MODE" />
     </Preference>
 </PreferenceScreen>

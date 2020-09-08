@@ -21,13 +21,13 @@
         <item>accessibility_control_timeout_1min</item>
         <item>accessibility_control_timeout_2mins</item>
     </string-array>
-    <integer-array name="accessibility_timeout_selector_values">
+    <string-array name="accessibility_timeout_selector_values">
         <item>0</item>
         <item>10000</item>
         <item>30000</item>
         <item>60000</item>
         <item>120000</item>
-    </integer-array>
+    </string-array>
     <string-array name="accessibility_timeout_summaries">
         <item>@string/accessibility_timeout_default</item>
         <item>@string/accessibility_timeout_10secs</item>
@@ -533,7 +533,6 @@
     </string-array>
     <string-array name="bluetooth_max_connected_audio_devices">
         <item>Use System Default: %1$d</item>
-        <item>1</item>
         <item>2</item>
         <item>3</item>
         <item>4</item>
@@ -541,7 +540,6 @@
     </string-array>
     <string-array name="bluetooth_max_connected_audio_devices_values">
         <item></item>
-        <item>1</item>
         <item>2</item>
         <item>3</item>
         <item>4</item>
@@ -1374,6 +1372,11 @@
         <item>\@aufdiecouch</item>
         <item>\@obol2</item>
         <item>GopalB.</item>
+        <item>Its.Leandroo</item>
+        <item>JustASoftwareEngineer</item>
+        <item>Kar7hik</item>
+        <item>Batman360</item>
+        <item>TiramisuNY</item>
     </string-array>
     <string-array name="gesture_prevent_ringing_entries">
         <item>@string/prevent_ringing_option_vibrate</item>
@@ -2666,6 +2669,64 @@
         <item>com.tencent.mobileqqi</item>
         <item>com.tencent.qqlite</item>
     </string-array>
+    <string-array name="oneplus_lunar_day_translate">
+        <item>初一</item>
+        <item>初二</item>
+        <item>初三</item>
+        <item>初四</item>
+        <item>初五</item>
+        <item>初六</item>
+        <item>初七</item>
+        <item>初八</item>
+        <item>初九</item>
+        <item>初十</item>
+        <item>十一</item>
+        <item>十二</item>
+        <item>十三</item>
+        <item>十四</item>
+        <item>十五</item>
+        <item>十六</item>
+        <item>十七</item>
+        <item>十八</item>
+        <item>十九</item>
+        <item>二十</item>
+        <item>廿一</item>
+        <item>廿二</item>
+        <item>廿三</item>
+        <item>廿四</item>
+        <item>廿五</item>
+        <item>廿六</item>
+        <item>廿七</item>
+        <item>廿八</item>
+        <item>廿九</item>
+        <item>三十</item>
+    </string-array>
+    <string-array name="oneplus_lunar_month_translate">
+        <item>正月</item>
+        <item>二月</item>
+        <item>三月</item>
+        <item>四月</item>
+        <item>五月</item>
+        <item>六月</item>
+        <item>七月</item>
+        <item>八月</item>
+        <item>九月</item>
+        <item>十月</item>
+        <item>十一月</item>
+        <item>十二月</item>
+    </string-array>
+    <string-array name="oneplus_lunar_year_translate">
+        <item>〇</item>
+        <item>一</item>
+        <item>二</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+        <item>七</item>
+        <item>八</item>
+        <item>九</item>
+    </string-array>
     <string-array name="oneplus_model_19811">
         <item>IN2020</item>
         <item>IN2021</item>
@@ -2704,14 +2765,15 @@
         <item>@string/oneplus_model_18865_for_cn</item>
     </string-array>
     <string-array name="oneplus_not_kill_app_white_list">
-        <item>com.android.systemui:ui</item>
-        <item>net.oneplus.launcher:dcs_v2</item>
+        <item>com.android.systemui</item>
+        <item>net.oneplus.launcher</item>
         <item>com.tencent.mtt</item>
         <item>android.process.acore</item>
         <item>com.redteamobile.oneplus.roaming</item>
         <item>com.redteamobile.virtual.softsim</item>
         <item>com.oneplus.soundrecorder</item>
         <item>.qtidataservices</item>
+        <item>com.google.android.googlequicksearchbox</item>
     </string-array>
     <string-array name="oneplus_notification_ringtone">
         <item>@string/oneplus_notification_dialog_ringtone_mode</item>
@@ -3008,7 +3070,7 @@
         <item>@string/op_control_accent_color_green_label</item>
         <item>@string/op_control_accent_color_amber_label</item>
         <item>@string/op_control_accent_color_orange_label</item>
-        <item>@string/op_control_accent_color_pink_label</item>
+        <item>@string/op_control_accent_color_rose_red_label</item>
         <item>@string/op_control_accent_color_purple_label</item>
         <item>@string/op_control_accent_color_deeppurple_label</item>
         <item>@string/op_control_accent_color_gin_label</item>
@@ -3062,7 +3124,6 @@
         <item>com.gameloft.android.ANMP.GloftA9HM</item>
     </string-array>
     <string-array name="op_local_sla_down_load_white_list_app">
-        <item>com.android.vending</item>
         <item>com.google.android.apps.docs</item>
         <item>com.google.android.apps.translate</item>
         <item>com.google.android.apps.docs.editors.docs</item>
@@ -3261,6 +3322,14 @@
         <item>东方财富信息股份有限公司</item>
         <item>喜大（上海）网络科技有限公司</item>
         <item>掌阅科技股份有限公司</item>
+        <item>深圳市万普拉斯科技有限公司</item>
+        <item>深圳市万普拉斯科技有限公司</item>
+        <item>深圳市万普拉斯科技有限公司</item>
+        <item>深圳市万普拉斯科技有限公司</item>
+        <item>深圳市万普拉斯科技有限公司</item>
+        <item>深圳市万普拉斯科技有限公司</item>
+        <item>深圳市万普拉斯科技有限公司</item>
+        <item>深圳市万普拉斯科技有限公司</item>
     </string-array>
     <string-array name="pre_installed_app_function_kebab">
         <item>新闻浏览</item>
@@ -3290,6 +3359,14 @@
         <item>金融服务</item>
         <item>收听音频内容</item>
         <item>阅读服务</item>
+        <item>记录事项</item>
+        <item>短信卡券</item>
+        <item>查看天气</item>
+        <item>数据迁移</item>
+        <item>社区讨论</item>
+        <item>境外上网服务</item>
+        <item>桌面图标</item>
+        <item>桌面图标</item>
     </string-array>
     <string-array name="pre_installed_app_name_kebab">
         <item>腾讯新闻</item>
@@ -3319,6 +3396,14 @@
         <item>东方财富</item>
         <item>喜马拉雅</item>
         <item>阅读</item>
+        <item>便签</item>
+        <item>卡券</item>
+        <item>天气</item>
+        <item>一加搬家</item>
+        <item>一加社区</item>
+        <item>国际上网</item>
+        <item>一加氢图标包</item>
+        <item>一加氧图标包</item>
     </string-array>
     <string-array name="preferred_network_mode_choices">
         <item>GSM/WCDMA preferred</item>
@@ -3447,6 +3532,7 @@
         <item>com.android.providers.downloads.ui</item>
         <item>com.android.documentsui</item>
         <item>com.google.android.gms</item>
+        <item>com.google.android.documentsui</item>
     </string-array>
     <string-array name="restrict_background_values">
         <item>@string/restrict_background_uss_never</item>

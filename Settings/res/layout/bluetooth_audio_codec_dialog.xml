@@ -8,7 +8,9 @@
             <include android:id="@id/bluetooth_audio_codec_aac" layout="@layout/preference_widget_dialog_radiobutton" />
             <include android:id="@id/bluetooth_audio_codec_aptx" layout="@layout/preference_widget_dialog_radiobutton" />
             <include android:id="@id/bluetooth_audio_codec_aptx_hd" layout="@layout/preference_widget_dialog_radiobutton" />
+            <include android:id="@id/bluetooth_audio_codec_aptx_adaptive" layout="@layout/preference_widget_dialog_radiobutton" />
             <include android:id="@id/bluetooth_audio_codec_ldac" layout="@layout/preference_widget_dialog_radiobutton" />
+            <include android:id="@id/bluetooth_audio_codec_aptx_twsp" layout="@layout/preference_widget_dialog_radiobutton" />
         </RadioGroup>
         <include android:id="@id/bluetooth_audio_codec_help_info" layout="@layout/preference_widget_dialog_summary" />
     </LinearLayout>

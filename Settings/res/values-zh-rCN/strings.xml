@@ -182,10 +182,8 @@
 
 轻触并按住“无障碍”按钮，即可在多项功能之间切换。"</string>
     <string name="accessibility_shortcut_edit_dialog_summary_software_gesture">"用两根手指从屏幕底部向上滑动。
-
 用两根手指向上滑动并按住，即可在多项功能之间切换。"</string>
     <string name="accessibility_shortcut_edit_dialog_summary_software_gesture_talkback">"用三根手指从屏幕底部向上滑动。
-
 用三根手指向上滑动并按住，即可在多项功能之间切换。"</string>
     <string name="accessibility_shortcut_edit_dialog_summary_triple_tap">快速点按屏幕 3 次。此快捷方式可能会减慢设备的运行速度。</string>
     <string name="accessibility_shortcut_edit_dialog_title_advance">高级</string>
@@ -1433,7 +1431,7 @@
     <string name="cryptkeeper_return_to_call">返回通话</string>
     <string name="cryptkeeper_wrong_password">密码错误</string>
     <string name="cryptkeeper_wrong_pattern">图案错误</string>
-    <string name="cryptkeeper_wrong_pin">PIN 码错误</string>
+    <string name="cryptkeeper_wrong_pin">数字密码错误</string>
     <string name="current_backup_pw_prompt">在此键入您当前的完整备份密码</string>
     <string name="current_input_method">当前输入法</string>
     <string name="current_screen_lock">当前屏幕锁定设置</string>
@@ -1700,9 +1698,9 @@
     <string name="device_admin_status">此管理应用已启用，且允许应用“%1$s”执行以下操作：</string>
     <string name="device_admin_warning">启用此管理应用将允许“%1$s”应用执行以下操作：</string>
     <string name="device_admin_warning_simplified">此设备将由%1$s负责管理和监控。</string>
-    <string name="device_controls_sentence">设备控件</string>
+    <string name="device_controls_sentence">设备控制器</string>
     <string name="device_controls_setting_subtitle">按住电源按钮即可获取用于控制已关联设备的选项</string>
-    <string name="device_controls_setting_toggle">显示设备控件</string>
+    <string name="device_controls_setting_toggle">显示设备控制器</string>
     <string name="device_details_title">设备详细信息</string>
     <string name="device_feedback">发送有关此设备的反馈</string>
     <string name="device_info_default">未知</string>
@@ -2361,7 +2359,7 @@
     <string name="keywords_default_links">默认</string>
     <string name="keywords_default_payment_app">付款, 默认</string>
     <string name="keywords_default_phone_app">电话, 拨号器, 默认</string>
-    <string name="keywords_device_controls">设备控件, 控件</string>
+    <string name="keywords_device_controls">设备控制器, 控制器</string>
     <string name="keywords_device_feedback">错误</string>
     <string name="keywords_display">屏幕, 触摸屏</string>
     <string name="keywords_display_adaptive_sleep">调暗屏幕, 休眠, 电池, 超时, 感知, 显示, 屏幕, 闲置</string>
@@ -2390,6 +2388,7 @@
     <string name="keywords_lock_screen_notif">锁定屏幕通知, 通知</string>
     <string name="keywords_lockscreen">滑动解锁, 复杂密码, 图案,数字密码</string>
     <string name="keywords_lockscreen_bypass">锁定屏幕, 锁屏, 跳过, 绕过</string>
+    <string name="keywords_media_controls">媒体</string>
     <string name="keywords_model_and_hardware">序列号, 硬件版本</string>
     <string name="keywords_more_default_sms_app">短信, 发短信, 消息, 发消息, 默认</string>
     <string name="keywords_more_mobile_networks">移动网络, 移动, 手机运营商, 无线, 数据, 4G, 3G, 2G, LTE</string>
@@ -2527,7 +2526,7 @@
     <string name="locale_remove_menu">移除</string>
     <string name="location_access_summary">允许得到您许可的应用使用您的位置信息</string>
     <string name="location_access_title">允许使用我的位置信息</string>
-    <string name="location_app_level_permissions">应用的位置信息使用权</string>
+    <string name="location_app_level_permissions">应用位置信息权限</string>
     <string name="location_app_permission_summary_location_off">位置信息服务已关闭</string>
     <string name="location_carrier_location_access">运营商位置信息</string>
     <string name="location_category_location_services">位置信息服务</string>
@@ -2557,14 +2556,14 @@
     <string name="location_text">地点</string>
     <string name="location_title">我的位置</string>
     <string name="lock_after_timeout">设备空闲多久后锁定</string>
-    <string name="lock_after_timeout_summary">空闲 %1$s后</string>
-    <string name="lock_after_timeout_summary_with_exception">空闲%1$s后（%2$s 让屏幕保持解锁状态时除外）</string>
+    <string name="lock_after_timeout_summary">休眠 %1$s后</string>
+    <string name="lock_after_timeout_summary_with_exception">休眠%1$s后（%2$s 让屏幕保持解锁状态时除外）</string>
     <string name="lock_failed_attempts_before_wipe">请重试。已尝试 %1$d 次，最多 %2$d 次。</string>
     <string name="lock_failed_attempts_now_wiping_device">错误次数过多。系统将删除此设备上的数据。</string>
     <string name="lock_failed_attempts_now_wiping_dialog_dismiss">关闭</string>
     <string name="lock_failed_attempts_now_wiping_profile">错误次数过多。系统将删除此工作资料和相关数据。</string>
     <string name="lock_failed_attempts_now_wiping_user">错误次数过多。系统将删除此用户。</string>
-    <string name="lock_immediately_summary_with_exception">空闲后立即锁定（%1$s 让屏幕保持解锁状态时除外）</string>
+    <string name="lock_immediately_summary_with_exception">休眠后立即锁定（%1$s 让屏幕保持解锁状态时除外）</string>
     <string name="lock_last_attempt_before_wipe_warning_title">您的数据将被删除</string>
     <string name="lock_last_password_attempt_before_wipe_device">如果您下次输入的密码仍然有误，系统将删除此设备上的数据</string>
     <string name="lock_last_password_attempt_before_wipe_profile">如果您下次输入的复杂密码仍然有误，系统将删除您的工作资料和相关数据</string>
@@ -2583,7 +2582,7 @@
     <string name="lock_screen_notifications_interstitial_title">锁定屏幕</string>
     <string name="lock_screen_notifications_interstitial_title_profile">个人资料通知</string>
     <string name="lock_screen_notifications_summary_disable">完全不显示通知</string>
-    <string name="lock_screen_notifications_summary_hide">仅在解锁状态下显示敏感内容</string>
+    <string name="lock_screen_notifications_summary_hide">仅在解锁状态下显示通知内容</string>
     <string name="lock_screen_notifications_summary_hide_profile">隐藏敏感工作内容</string>
     <string name="lock_screen_notifications_summary_show">显示所有通知内容</string>
     <string name="lock_screen_notifications_summary_show_profile">显示所有工作通知内容</string>
@@ -2635,11 +2634,11 @@
     <string name="lockpassword_clear_label">清除</string>
     <string name="lockpassword_confirm_label">确认</string>
     <string name="lockpassword_confirm_passwords_dont_match">复杂密码不匹配</string>
-    <string name="lockpassword_confirm_pins_dont_match">PIN 码不匹配！</string>
+    <string name="lockpassword_confirm_pins_dont_match">数字密码不匹配！</string>
     <string name="lockpassword_confirm_your_password_details_frp">您的手机已恢复出厂设置。要使用此手机，请输入您以前的密码。</string>
     <string name="lockpassword_confirm_your_password_generic">请输入您的设备复杂密码以继续</string>
     <string name="lockpassword_confirm_your_password_generic_profile">请输入您的工作密码以继续</string>
-    <string name="lockpassword_confirm_your_password_header">再次输入复杂密码</string>
+    <string name="lockpassword_confirm_your_password_header">重新输入复杂密码</string>
     <string name="lockpassword_confirm_your_password_header_frp">验证复杂密码</string>
     <string name="lockpassword_confirm_your_pattern_details_frp">您的手机已恢复出厂设置。要使用此手机，请输入您以前的解锁图案。</string>
     <string name="lockpassword_confirm_your_pattern_generic">请绘制您的设备解锁图案以继续</string>
@@ -2649,7 +2648,7 @@
     <string name="lockpassword_confirm_your_pin_details_frp">您的手机已恢复出厂设置。要使用此手机，请输入您以前的数字密码。</string>
     <string name="lockpassword_confirm_your_pin_generic">请输入您的设备数字密码以继续</string>
     <string name="lockpassword_confirm_your_pin_generic_profile">需输入您的工作资料数字密码才能继续</string>
-    <string name="lockpassword_confirm_your_pin_header">再次输入数字复杂密码</string>
+    <string name="lockpassword_confirm_your_pin_header">重新输入数字密码</string>
     <string name="lockpassword_confirm_your_pin_header_frp">验证数字密码</string>
     <string name="lockpassword_confirm_your_work_password_header">请输入您的工作密码</string>
     <string name="lockpassword_confirm_your_work_pattern_header">请绘制您的工作解锁图案</string>
@@ -2662,7 +2661,7 @@
     <string name="lockpassword_forgot_pin">忘记了数字密码？</string>
     <string name="lockpassword_illegal_character">复杂密码不得包含无效字符</string>
     <string name="lockpassword_invalid_password">复杂密码错误</string>
-    <string name="lockpassword_invalid_pin">PIN 码错误</string>
+    <string name="lockpassword_invalid_pin">数字密码错误</string>
     <string name="lockpassword_password_blacklisted_by_admin">常用密码已被您的 IT 管理员屏蔽。请尝试一个不同的复杂密码。</string>
     <string name="lockpassword_password_recently_used">设备管理员不允许使用最近用过的复杂密码</string>
     <string name="lockpassword_password_requires_alpha">必须包含至少 1 个字母</string>
@@ -2789,6 +2788,12 @@
     <string name="master_clear_title">清除所有数据（恢复出厂设置）</string>
     <string name="maximum_memory_use">最高内存使用量</string>
     <string name="media_category">媒体</string>
+    <string name="media_controls_hide_player">隐藏播放器</string>
+    <string name="media_controls_no_players">没有可用的播放器</string>
+    <string name="media_controls_resume_description">播放器允许您通过展开的快捷设置面板恢复会话。</string>
+    <string name="media_controls_show_player">显示播放器</string>
+    <string name="media_controls_summary">在媒体会话结束后隐藏播放器</string>
+    <string name="media_controls_title">媒体</string>
     <string name="media_out_summary_ongoing_call_state">通话期间无法使用</string>
     <string name="media_output_default_summary">此设备</string>
     <string name="media_output_disconnected_status">%1$s（已断开连接）</string>
@@ -3064,7 +3069,7 @@
     <string name="night_display_text">护眼模式会将您的屏幕色调调为琥珀色，可让您在光线昏暗的环境下更舒适地查看屏幕或阅读文字，并有助您入睡。</string>
     <string name="night_display_title">护眼模式</string>
     <string name="no">否</string>
-    <string name="no_5g_in_dsds_text">使用 2 个 SIM 卡时，此手机只能使用 4G 网络。<annotation id="url">了解详情</annotation>。</string>
+    <string name="no_5g_in_dsds_text">使用 2 个 SIM 卡时，此手机将仅限使用 4G 网络。<annotation id="url">了解详情</annotation></string>
     <string name="no_application">无</string>
     <string name="no_applications">无应用。</string>
     <string name="no_battery_summary">自上次充满电后未消耗任何电量</string>
@@ -3186,6 +3191,7 @@
     <string name="notification_priority_title">优先</string>
     <string name="notification_pulse_title">闪烁指示灯</string>
     <string name="notification_ringtone_title">默认通知提示音</string>
+    <string name="notification_screen_summary">通知历史记录、对话泡、最近发送的通知</string>
     <string name="notification_settings_work_profile">工作资料中的应用无法访问通知。</string>
     <string name="notification_show_lights_title">闪烁指示灯</string>
     <string name="notification_silence_title">静音</string>
@@ -3291,6 +3297,7 @@
     <string name="oneplus_apps_notifications">应用和通知</string>
     <string name="oneplus_apps_title">应用</string>
     <string name="oneplus_aptx_hd_support">aptX / aptX HD 支持</string>
+    <string name="oneplus_at_a_glance">一目了然</string>
     <string name="oneplus_authentication_information">认证信息</string>
     <string name="oneplus_auto_activate">自动开启</string>
     <string name="oneplus_auto_answer_via_bluetooth_summary">来电状态下，连接蓝牙设备成功后自动接听该次来电</string>
@@ -3374,8 +3381,9 @@
     <string name="oneplus_condition_bg_data_summary">您必须连接 WLAN 网络才能使用后台数据，若无法连接 WLAN，则部分应用或服务可能会受到影响</string>
     <string name="oneplus_condition_bg_data_title">“流量节省程序”已开启</string>
     <string name="oneplus_condition_hotspot_turn_off">关闭热点</string>
+    <string name="oneplus_condition_night_display_title">护眼模式已开启</string>
     <string name="oneplus_condition_night_mode_title">“夜间模式”已开启</string>
-    <string name="oneplus_condition_night_mode_turn_off">关闭夜间模式</string>
+    <string name="oneplus_condition_night_mode_turn_off">关闭护眼模式</string>
     <string name="oneplus_condition_ota_summary">检测到新版本可供升级</string>
     <string name="oneplus_connected_device_count">已有%1$s个设备连入</string>
     <string name="oneplus_connected_device_management_title">连入设备管理</string>
@@ -4088,7 +4096,10 @@
     <string name="oneplus_search_keyword_theme_mode">@string/oneplus_search_keyword_screen_color_mode</string>
     <string name="oneplus_search_keyword_theme_settings">锁屏个性化, 壁纸, 时钟样式, 指纹动画效果, 通知光效, 系统个性化, 强调色, 形状, 字体, 色调, 图标包, 简约, 沉浸, 活泼</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">锁屏个性化, 壁纸, 时钟样式, 指纹动画效果, 通知光效, 系统个性化, 强调色, 形状, 字体, 色调, 图标包, 迈凯伦, 简约, 沉浸, 活泼</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">锁屏个性化, 壁纸, 时钟样式, 指纹动画效果, 通知光效, 系统个性化, 强调色, 形状, 字体, 色调, 图标包, 迈凯伦</string>
+    <string name="oneplus_search_keyword_theme_settings_new">锁屏个性化, 壁纸, 时钟样式, 指纹动画效果, 通知光效, 系统个性化, 强调色, 形状, 字体, 色调, 图标包</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">锁屏个性化, 壁纸, 时钟样式, 指纹动画效果, 系统个性化, 强调色, 形状, 字体, 色调, 图标包, 简约, 沉浸, 活泼</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">锁屏个性化, 壁纸, 时钟样式, 指纹动画效果, 系统个性化, 强调色, 形状, 字体, 色调, 图标包</string>
     <string name="oneplus_search_keyword_three_screenshots">截屏</string>
     <string name="oneplus_search_keyword_timer_boot">开机, 关机</string>
     <string name="oneplus_search_keyword_user_experience">推送, 体验, 改进, 计划, 方案</string>
@@ -4156,6 +4167,7 @@
     <string name="oneplus_silent_mode_on">静音模式已开启</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">将会禁止来电、通知的声音和振动（闹钟除外）</string>
     <string name="oneplus_silent_mode_summary">禁止来电和通知发出声音，且不允许振动（闹钟除外）</string>
+    <string name="oneplus_silent_notifications_status_bar">隐藏状态栏中的次要通知</string>
     <string name="oneplus_sim1_ringtone_switch">SIM卡1来电铃声</string>
     <string name="oneplus_sim2_ringtone_switch">SIM卡2来电铃声</string>
     <string name="oneplus_simcard_title">SIM 卡</string>
@@ -4190,6 +4202,8 @@
     <string name="oneplus_switch">一加搬家</string>
     <string name="oneplus_switch_resolution_kill_process_confirm">切换</string>
     <string name="oneplus_switch_resolution_kill_process_tips">切换分辨率可能造成部分后台应用关闭，是否确认切换？</string>
+    <string name="oneplus_switch_sa_option">NSA + SA 驻网</string>
+    <string name="oneplus_switch_sa_option_summary">根据运营商 5G 基站支持情况，自动注册 NSA 组网或 SA 组网。关闭选项时，只自动注册 NSA 组网。</string>
     <string name="oneplus_switch_screen_lock_type">正在切换锁屏方式，请稍候...</string>
     <string name="oneplus_system_data_summary">包括账号信息、联系人信息、下载应用等数据</string>
     <string name="oneplus_system_data_title">系统数据</string>
@@ -4265,6 +4279,7 @@
     <string name="oneplus_top_level_buttons_and_gestures_summary">三段式开关、虚拟按键和全屏手势、快捷手势</string>
     <string name="oneplus_top_level_cloud_h2_summary">与云端同步数据、找回手机</string>
     <string name="oneplus_top_level_cloud_o2_summary">与云端同步数据</string>
+    <string name="oneplus_top_level_connected_android_auto_summary">NFC、Android Auto、投射屏幕、触碰付款</string>
     <string name="oneplus_top_level_connected_summary">NFC、投射屏幕、触碰付款</string>
     <string name="oneplus_top_level_display_summary">状态栏、息屏显示、护眼模式、阅读模式</string>
     <string name="oneplus_top_level_network_summary">SIM 卡、移动网络、流量使用、热点</string>
@@ -4364,10 +4379,9 @@
     <string name="op_android_beam_explained">开启后，只需要将本机与另外一台支持NFC的设备靠在一起(通常是背靠背)，然后触摸屏幕即可将你手机的内容同步给对方</string>
     <string name="op_android_mode_cannot_change_color_accent">Android 主题下只能使用系统色</string>
     <string name="op_android_mode_title">Android 主题</string>
-    <string name="op_aod_parsons_info_button">好</string>
-    <string name="op_aod_parsons_info_message">"一天 24 小时，每次唤醒都是一件艺术品。
-OnePlus 与知名设计学院 Parsons School of Design 的学生，一起设计了 “时光”，将今天从日出开始的 24 个小時幻化为一条缤纷彩带。基于手机使用时长数据，每一次唤醒在彩带上留下独特刻痕。使用時間越長，刻痕越宽，反之亦然。在彩带上记录着今天的时光，也刻画着独属于你的数字记忆。"</string>
-    <string name="op_aod_parsons_info_title">时光</string>
+    <string name="op_aod_parsons_info_button">好的</string>
+    <string name="op_aod_parsons_info_message">"每一天，每次唤醒都是一件艺术品。
+OnePlus 与知名设计学院 Parsons School of Design 的学生，一起设计了 “时光”，将今天从日出开始的 24 个小时幻化为一条缤纷彩带。基于手机使用时长数据，每一次唤醒在彩带上留下独特刻痕。使用时间越长，刻痕越宽，反之亦然。在彩带上记录着今天的时光，也刻画着独属于你的数字记忆。"</string>
     <string name="op_app_already_uninstalled">该应用已卸载</string>
     <string name="op_app_security_check_text_legal_oppo">相关欢太隐私政策可参阅：</string>
     <string name="op_app_security_check_text_legal_oppo_link">欢太隐私政策</string>
@@ -4492,14 +4506,20 @@ OnePlus 与知名设计学院 Parsons School of Design 的学生，一起设计�
 指纹识别进行中会暂时提高屏幕亮度和调整色彩。"</string>
     <string name="op_first_time_add_fingerprint_tips">你需要先设置一个密码，以便在指纹解锁不可用时使用</string>
     <string name="op_gamespace">游戏空间</string>
+    <string name="op_global_drak_mode_apps_manage">暗色模式应用管理</string>
     <string name="op_global_drak_mode_full_support_list">已完全适配的应用</string>
     <string name="op_global_drak_mode_not_full_support_list">未完全适配的应用</string>
-    <string name="op_global_drak_mode_support_description">未完全适配的应用，在暗色模式下无法呈现预期的效果</string>
+    <string name="op_global_drak_mode_support_description">未完全适配的应用，在暗色模式下可能无法呈现预期的效果</string>
+    <string name="op_gps_off_warn_msg">请先开启位置信息</string>
     <string name="op_high_power_app_manager">高耗电应用管理</string>
+    <string name="op_history_toggled_on_summary">您近期的通知会显示在此处</string>
     <string name="op_keep_location_services">为搜索和定位附近的充电站，请勿关闭位置信息</string>
+    <string name="op_lab_dc_still_on">仍要开启</string>
+    <string name="op_lab_dc_warn_message">开启 DC 调光，在某些情况下可能存在显示颜色不均匀和异常，确认要开启吗？</string>
     <string name="op_light_mode_title">白色主题</string>
     <string name="op_linked_launch_summary">管理应用在后台相互启动</string>
     <string name="op_linked_launch_title">自启动管理</string>
+    <string name="op_lock_after_timeout_summary">空闲后立即锁定</string>
     <string name="op_lockpassword_choose_your_password_header_for_face">要使用人脸识别，请设置复杂密码</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">要使用人脸识别，请设置解锁图案</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">要使用人脸识别，请设置数字密码</string>
@@ -4514,8 +4534,13 @@ OnePlus 与知名设计学院 Parsons School of Design 的学生，一起设计�
     <string name="op_night_display_title">护眼模式</string>
     <string name="op_not_disturb">勿扰模式设置</string>
     <string name="op_not_disturb_summary">将会禁止来电、通知的声音及振动（闹钟除外）</string>
+    <string name="op_notification_history_off_summary">开启通知历史记录即可查看近期通知</string>
+    <string name="op_notification_history_summary">显示近期通知</string>
     <string name="op_oneplus_roaming_summary">提供国际境外上网服务</string>
     <string name="op_oneplus_roaming_title">国际上网</string>
+    <string name="op_powerkey_menu_cards_description">开启即可显示付款方式和银行卡内容</string>
+    <string name="op_powerkey_menu_device_controller_description">开启即可访问已关联设备的控制器</string>
+    <string name="op_powerkey_menu_lock_display_title">锁屏显示</string>
     <string name="op_primary_charm_purple_dark_label">深紫色</string>
     <string name="op_primary_charm_purple_label">深紫色</string>
     <string name="op_primary_charm_purple_light_label">深紫色</string>
@@ -4536,6 +4561,7 @@ OnePlus 与知名设计学院 Parsons School of Design 的学生，一起设计�
     <string name="op_primary_lemon_yellow_label">橘色</string>
     <string name="op_primary_lemon_yellow_light_label">橙色</string>
     <string name="op_primary_red_label">红色</string>
+    <string name="op_primary_rose_red_label">玫瑰红</string>
     <string name="op_primary_royal_blue_label">宝石蓝</string>
     <string name="op_primary_sky_blue_dark_label">青色</string>
     <string name="op_primary_sky_blue_label">青色</string>
@@ -4563,6 +4589,9 @@ OnePlus 与知名设计学院 Parsons School of Design 的学生，一起设计�
     <string name="op_starwar_mode_cannot_change_color_accent">Star Wars 主题下只能使用系统色</string>
     <string name="op_starwar_mode_title">Star Wars 主题</string>
     <string name="op_storage">存储和内存</string>
+    <string name="op_switch_record_info">%1$s，使用一加搬家迁移数据至 %2$s 手机</string>
+    <string name="op_switch_record_none">暂无纪录</string>
+    <string name="op_switch_record_title">数据迁移纪录</string>
     <string name="op_system">系统</string>
     <string name="op_system_dashboard_summary">语言、时间、重置、更新</string>
     <string name="op_system_update_settings">系统更新</string>
@@ -4655,12 +4684,14 @@ OnePlus 与知名设计学院 Parsons School of Design 的学生，一起设计�
     <string name="picture_in_picture_empty_text">已安装的应用均不支持画中画</string>
     <string name="picture_in_picture_keywords">画中画, 画中, pip, picture in</string>
     <string name="picture_in_picture_title">画中画</string>
-    <string name="pin_failed">SIM 卡 PIN 码操作失败！</string>
+    <string name="pin_failed">SIM 卡 数字密码操作失败！</string>
     <string name="ping_test_label">运行 ping 测试</string>
     <string name="platform_compat_dashboard_summary">在应用兼容性变更之间切换</string>
     <string name="platform_compat_dashboard_title">应用兼容性变更</string>
     <string name="platform_compat_default_disabled_title">默认停用的应用兼容性变更</string>
     <string name="platform_compat_default_enabled_title">默认启用的应用兼容性变更</string>
+    <string name="platform_compat_dialog_text_no_apps">只能修改可调试应用的应用兼容性变更。请安装可调试的应用，然后重试。</string>
+    <string name="platform_compat_dialog_title_no_apps">没有可用的应用</string>
     <string name="please_select_phase2">阶段 2 身份验证</string>
     <string name="please_type_passphrase">无线密码</string>
     <string name="plmn_failure_radio_off">选网失败，原因天线未打开或不可达</string>
@@ -4686,7 +4717,7 @@ OnePlus 与知名设计学院 Parsons School of Design 的学生，一起设计�
     <string name="power_menu">关机菜单</string>
     <string name="power_menu_cards_passes">显示银行卡和卡券</string>
     <string name="power_menu_cards_passes_device_controls">显示支付卡、票券和设备控件</string>
-    <string name="power_menu_device_controls">显示设备控件</string>
+    <string name="power_menu_device_controls">显示设备控制器</string>
     <string name="power_menu_lock_screen_category">锁定屏幕</string>
     <string name="power_menu_none">不显示任何内容</string>
     <string name="power_menu_privacy">敏感内容</string>
@@ -4873,7 +4904,7 @@ OnePlus 与知名设计学院 Parsons School of Design 的学生，一起设计�
     <string name="proxy_warning_limited_support">浏览器会使用 HTTP 代理，但其他应用可能不会使用。</string>
     <string name="qtifeedback_settings_subtitle">Qualcomm Technologies, Inc 报告</string>
     <string name="qtifeedback_settings_title">硬件反馈</string>
-    <string name="quick_controls_lower">设备控件</string>
+    <string name="quick_controls_lower">设备控制器</string>
     <string name="quick_settings_developer_tiles">快捷设置开发者图块</string>
     <string name="radioInfo_data_connected">已连接</string>
     <string name="radioInfo_data_connecting">正在连接</string>
@@ -5278,7 +5309,7 @@ OnePlus 与知名设计学院 Parsons School of Design 的学生，一起设计�
     <string name="security_settings_fingerprint_enroll_touch_dialog_message">请用您的食指触摸位于手机背面的传感器。</string>
     <string name="security_settings_fingerprint_enroll_touch_dialog_title">糟糕，这不是传感器</string>
     <string name="security_settings_fingerprint_preference_summary_none" />
-    <string name="security_settings_fingerprint_preference_title">指纹</string>
+    <string name="security_settings_fingerprint_preference_title">指纹解锁</string>
     <string name="security_settings_summary">设置我的位置、屏幕解锁、SIM 卡锁定和凭据存储锁定</string>
     <string name="security_settings_title">安全</string>
     <string name="security_status_title">安全状态</string>
@@ -5395,7 +5426,7 @@ OnePlus 与知名设计学院 Parsons School of Design 的学生，一起设计�
     <string name="show_touches_summary">显示点按操作的视觉反馈</string>
     <string name="shutdown_confirm">您的手机将会关机。</string>
     <string name="silent_notifications_status_bar">隐藏状态栏中的无声通知</string>
-    <string name="sim_bad_pin">PIN 码不正确</string>
+    <string name="sim_bad_pin">数字密码不正确</string>
     <string name="sim_call_back_title">使用默认SIM卡回电</string>
     <string name="sim_calls_always_use">一律使用这张卡进行通话</string>
     <string name="sim_calls_ask_first_prefs_title">每次都询问</string>
@@ -5410,8 +5441,8 @@ OnePlus 与知名设计学院 Parsons School of Design 的学生，一起设计�
     <string name="sim_change_data_title">要使用%1$s的移动数据吗？</string>
     <string name="sim_change_failed">"无法更改PIN码。
 输入的PIN码可能不正确。"</string>
-    <string name="sim_change_pin">SIM 卡 PIN 码</string>
-    <string name="sim_change_succeeded">已成功更改 SIM 卡 PIN 码</string>
+    <string name="sim_change_pin">SIM 卡 数字密码</string>
+    <string name="sim_change_succeeded">已成功更改 SIM 卡 数字密码</string>
     <string name="sim_combination_warning_notification_title">SIM 卡组合功能发生问题</string>
     <string name="sim_disable_sim_lock">解锁 SIM 卡</string>
     <string name="sim_editor_carrier">运营商</string>
@@ -5421,14 +5452,14 @@ OnePlus 与知名设计学院 Parsons School of Design 的学生，一起设计�
     <string name="sim_editor_title">SIM 卡插槽 %1$d</string>
     <string name="sim_enable_sim_lock">锁定 SIM 卡</string>
     <string name="sim_enter_cancel">取消</string>
-    <string name="sim_enter_new">新 SIM 卡 PIN 码</string>
+    <string name="sim_enter_new">新 SIM 卡 数字密码</string>
     <string name="sim_enter_ok">确定</string>
-    <string name="sim_enter_old">旧 SIM 卡 PIN 码</string>
+    <string name="sim_enter_old">旧 SIM 卡 数字密码</string>
     <string name="sim_enter_pin">SIM 卡 PIN 码</string>
     <string name="sim_lock_failed">"无法更改 SIM 卡锁定状态。
-PIN 码可能不正确。"</string>
-    <string name="sim_lock_off">需要输入数字密码才能使用手机</string>
-    <string name="sim_lock_on">需要输入数字密码才能使用手机</string>
+数字密码可能不正确。"</string>
+    <string name="sim_lock_off">需要输入PIN码才能使用手机</string>
+    <string name="sim_lock_on">需要输入PIN码才能使用手机</string>
     <string name="sim_lock_settings">SIM 卡锁定设置</string>
     <string name="sim_lock_settings_category">SIM 卡锁定</string>
     <string name="sim_lock_settings_summary_off">关闭</string>
@@ -5443,10 +5474,10 @@ PIN 码可能不正确。"</string>
     <string name="sim_other_call_settings">其他通话设置</string>
     <string name="sim_outgoing_call_title">用于外拨电话的 SIM 卡</string>
     <string name="sim_pin_change">更改 SIM 卡 PIN 码</string>
-    <string name="sim_pin_disable_failed">无法停用 PIN 码。</string>
-    <string name="sim_pin_enable_failed">无法启用 PIN 码。</string>
+    <string name="sim_pin_disable_failed">无法停用 数字密码。</string>
+    <string name="sim_pin_enable_failed">无法启用 数字密码。</string>
     <string name="sim_pin_toggle">锁定 SIM 卡</string>
-    <string name="sim_pins_dont_match">PIN 码不匹配</string>
+    <string name="sim_pins_dont_match">数字密码不匹配</string>
     <string name="sim_preferred_message">“%1$s”是此设备上唯一的 SIM 卡。您要将此 SIM 卡用于移动数据网络、通话和收发短信吗？</string>
     <string name="sim_preferred_title">要更新首选 SIM 卡吗？</string>
     <string name="sim_reenter_new">重新输入新的PIN码</string>
@@ -6067,7 +6098,7 @@ PIN 码可能不正确。"</string>
     <string name="unlock_disable_frp_warning_title_profile">要移除个人资料保护功能吗？</string>
     <string name="unlock_disable_lock_title">关闭屏幕锁定</string>
     <string name="unlock_footer_high_complexity_requested">%1$s建议使用安全系数高的数字密码或复杂密码，否则，该应用可能无法按预期运行</string>
-    <string name="unlock_footer_low_complexity_requested">%1$s建议使用新的解锁图案、PIN 码或复杂密码，否则，该应用可能无法按预期运行</string>
+    <string name="unlock_footer_low_complexity_requested">%1$s建议使用新的解锁图案、数字密码或复杂密码，否则，该应用可能无法按预期运行</string>
     <string name="unlock_footer_medium_complexity_requested">%1$s建议使用新的数字密码或复杂密码，否则，该应用可能无法按预期运行</string>
     <string name="unlock_footer_none_complexity_requested">%1$s建议使用新的屏幕锁定方式</string>
     <string name="unlock_set_do_later_title">以后再说</string>
@@ -6077,13 +6108,13 @@ PIN 码可能不正确。"</string>
     <string name="unlock_set_unlock_launch_picker_enable_summary">选择屏幕锁定方式</string>
     <string name="unlock_set_unlock_launch_picker_summary_lock_after_timeout">%1$s / 休眠 %2$s后启动</string>
     <string name="unlock_set_unlock_launch_picker_summary_lock_immediately">%1$s / 休眠后立即启动</string>
-    <string name="unlock_set_unlock_launch_picker_title">屏幕锁定</string>
+    <string name="unlock_set_unlock_launch_picker_title">锁屏密码</string>
     <string name="unlock_set_unlock_launch_picker_title_profile">工作资料屏幕锁定方式</string>
     <string name="unlock_set_unlock_mode_none">滑动</string>
     <string name="unlock_set_unlock_mode_off">无</string>
     <string name="unlock_set_unlock_mode_password">复杂密码</string>
     <string name="unlock_set_unlock_mode_pattern">图案</string>
-    <string name="unlock_set_unlock_mode_pin">PIN 码</string>
+    <string name="unlock_set_unlock_mode_pin">数字密码</string>
     <string name="unlock_set_unlock_none_summary">无安全措施</string>
     <string name="unlock_set_unlock_none_title">滑动</string>
     <string name="unlock_set_unlock_off_summary" />
@@ -6093,13 +6124,15 @@ PIN 码可能不正确。"</string>
     <string name="unlock_set_unlock_pattern_summary">中等安全性</string>
     <string name="unlock_set_unlock_pattern_title">图案</string>
     <string name="unlock_set_unlock_pin_summary">中高等安全性</string>
-    <string name="unlock_set_unlock_pin_title">PIN 码</string>
+    <string name="unlock_set_unlock_pin_title">数字密码</string>
     <string name="unlock_setup_wizard_fingerprint_details">设置了屏幕锁定后，您还可以在“设置”>“安全”中设置指纹。</string>
     <string name="unmount_inform_text">系统将会卸载USB存储设备。</string>
     <string name="unrestricted_app_summary">允许在流量节省程序开启时无限量使用数据流量</string>
     <string name="unrestricted_app_title">不限制数据流量用量</string>
     <string name="unrestricted_data_saver">不受流量限制</string>
     <string name="unsupported_setting_summary">此手机不支持这项设置</string>
+    <string name="update_from_local">本地升级</string>
+    <string name="update_from_online">在线更新</string>
     <string name="update_prl">更新 PRL</string>
     <string name="update_profile">更新配置文件</string>
     <string name="updating_settings">正在更新设置...</string>
@@ -6847,8 +6880,8 @@ PIN 码可能不正确。"</string>
     <string name="write_settings_summary">已允许 %1$d 个应用（共 %2$d 个）修改系统设置</string>
     <string name="write_settings_title">可修改系统设置</string>
     <string name="write_system_settings">修改系统设置</string>
-    <string name="wrong_pin_code_one">SIM 卡 PIN 码不正确，您还有 1 次尝试机会。如果仍不正确，则必须联系运营商帮您解锁设备。</string>
-    <string name="wrong_pin_code_pukked">SIM 卡 PIN 码不正确，您现在必须联系运营商为您解锁设备。</string>
+    <string name="wrong_pin_code_one">SIM 卡 数字密码不正确，您还有 1 次尝试机会。如果仍不正确，则必须联系运营商帮您解锁设备。</string>
+    <string name="wrong_pin_code_pukked">SIM 卡 数字密码不正确，您现在必须联系运营商为您解锁设备。</string>
     <string name="yes">是</string>
     <string name="zen_access_detail_switch">允许勿扰模式</string>
     <string name="zen_access_disabled_package_warning">必须保持启用状态，因为通知访问权限已开启</string>

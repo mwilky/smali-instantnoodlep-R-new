@@ -22,8 +22,6 @@
 
 .field private static final INVALIDATE_REFRESH_RATE:F = -1.0f
 
-.field private static final KEY_PEAK_REFRESH_RATE_DEFAULT:Ljava/lang/String; = "peak_refresh_rate_default"
-
 .field private static final TAG:Ljava/lang/String; = "RefreshRatePrefCtr"
 
 
@@ -51,11 +49,15 @@
 
     invoke-direct {p0, p1, p2}, Lcom/android/settings/core/TogglePreferenceController;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    new-instance p1, Landroid/os/Handler;
+    new-instance p2, Landroid/os/Handler;
 
-    invoke-direct {p1}, Landroid/os/Handler;-><init>()V
+    invoke-virtual {p1}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
 
-    iput-object p1, p0, Lcom/android/settings/display/PeakRefreshRatePreferenceController;->mHandler:Landroid/os/Handler;
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object p2, p0, Lcom/android/settings/display/PeakRefreshRatePreferenceController;->mHandler:Landroid/os/Handler;
 
     new-instance p1, Lcom/android/settings/display/PeakRefreshRatePreferenceController$DeviceConfigDisplaySettings;
 

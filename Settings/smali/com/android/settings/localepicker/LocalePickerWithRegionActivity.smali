@@ -1,16 +1,16 @@
 .class public Lcom/android/settings/localepicker/LocalePickerWithRegionActivity;
-.super Landroid/app/Activity;
+.super Lcom/oneplus/settings/BaseAppCompatActivity;
 .source "LocalePickerWithRegionActivity.java"
 
 # interfaces
-.implements Lcom/android/internal/app/LocalePickerWithRegion$LocaleSelectedListener;
+.implements Lcom/oneplus/settings/localepicker/OPLocalePickerWithRegion$LocaleSelectedListener;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Landroid/app/Activity;-><init>()V
+    invoke-direct {p0}, Lcom/oneplus/settings/BaseAppCompatActivity;-><init>()V
 
     return-void
 .end method
@@ -30,7 +30,7 @@
 
     if-le v0, v1, :cond_0
 
-    invoke-super {p0}, Landroid/app/Activity;->onBackPressed()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 
@@ -58,23 +58,88 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 2
 
-    invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/oneplus/settings/BaseAppCompatActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const p1, 0x1030223
+    sget p1, Lcom/android/settings/R$layout;->settings_base_layout:I
 
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->setTheme(I)V
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->setContentView(I)V
 
-    invoke-virtual {p0}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
+    sget p1, Lcom/android/settings/R$id;->action_bar:I
+
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Landroidx/appcompat/widget/Toolbar;
+
+    if-eqz p1, :cond_1
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isO2()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const v1, 0x1040432
+
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const v1, 0x50f006e
+
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroidx/appcompat/widget/Toolbar;->setTitle(Ljava/lang/CharSequence;)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/app/Activity;->getTitle()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroidx/appcompat/widget/Toolbar;->setTitle(Ljava/lang/CharSequence;)V
+
+    :goto_0
+    new-instance v0, Lcom/android/settings/localepicker/LocalePickerWithRegionActivity$1;
+
+    invoke-direct {v0, p0}, Lcom/android/settings/localepicker/LocalePickerWithRegionActivity$1;-><init>(Lcom/android/settings/localepicker/LocalePickerWithRegionActivity;)V
+
+    invoke-virtual {p1, v0}, Landroidx/appcompat/widget/Toolbar;->setNavigationOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->setSupportActionBar(Landroidx/appcompat/widget/Toolbar;)V
+
+    invoke-virtual {p0}, Landroidx/appcompat/app/AppCompatActivity;->getSupportActionBar()Landroidx/appcompat/app/ActionBar;
 
     move-result-object p1
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
+    invoke-virtual {p1, v0}, Landroidx/appcompat/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
 
+    :cond_1
     const/4 p1, 0x0
 
-    invoke-static {p0, p0, p1}, Lcom/android/internal/app/LocalePickerWithRegion;->createLanguagePicker(Landroid/content/Context;Lcom/android/internal/app/LocalePickerWithRegion$LocaleSelectedListener;Z)Lcom/android/internal/app/LocalePickerWithRegion;
+    invoke-static {p0, p0, p1}, Lcom/oneplus/settings/localepicker/OPLocalePickerWithRegion;->createLanguagePicker(Landroid/content/Context;Lcom/oneplus/settings/localepicker/OPLocalePickerWithRegion$LocaleSelectedListener;Z)Lcom/oneplus/settings/localepicker/OPLocalePickerWithRegion;
 
     move-result-object p1
 
@@ -92,7 +157,7 @@
 
     move-result-object v0
 
-    const v1, 0x1020002
+    sget v1, Lcom/android/settings/R$id;->content_frame:I
 
     invoke-virtual {v0, v1, p1}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
 
@@ -110,9 +175,9 @@
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    new-instance v1, Lcom/android/settings/localepicker/LocalePickerWithRegionActivity$1;
+    new-instance v1, Lcom/android/settings/localepicker/LocalePickerWithRegionActivity$2;
 
-    invoke-direct {v1, p0, p1}, Lcom/android/settings/localepicker/LocalePickerWithRegionActivity$1;-><init>(Lcom/android/settings/localepicker/LocalePickerWithRegionActivity;Lcom/android/internal/app/LocalePickerWithRegion;)V
+    invoke-direct {v1, p0, p1}, Lcom/android/settings/localepicker/LocalePickerWithRegionActivity$2;-><init>(Lcom/android/settings/localepicker/LocalePickerWithRegionActivity;Lcom/oneplus/settings/localepicker/OPLocalePickerWithRegion;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -162,4 +227,69 @@
     move-result p0
 
     return p0
+.end method
+
+.method protected onTitleChanged(Ljava/lang/CharSequence;I)V
+    .locals 1
+
+    invoke-super {p0, p1, p2}, Landroidx/appcompat/app/AppCompatActivity;->onTitleChanged(Ljava/lang/CharSequence;I)V
+
+    sget p1, Lcom/android/settings/R$id;->action_bar:I
+
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Landroidx/appcompat/widget/Toolbar;
+
+    if-eqz p1, :cond_1
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isO2()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const v0, 0x1040432
+
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, " "
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const v0, 0x50f006e
+
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Landroidx/appcompat/widget/Toolbar;->setTitle(Ljava/lang/CharSequence;)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/app/Activity;->getTitle()Ljava/lang/CharSequence;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Landroidx/appcompat/widget/Toolbar;->setTitle(Ljava/lang/CharSequence;)V
+
+    :cond_1
+    :goto_0
+    return-void
 .end method

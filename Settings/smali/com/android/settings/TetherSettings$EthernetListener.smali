@@ -55,7 +55,7 @@
 
     iget-object p1, p0, Lcom/android/settings/TetherSettings$EthernetListener;->this$0:Lcom/android/settings/TetherSettings;
 
-    invoke-static {p1}, Lcom/android/settings/TetherSettings;->access$1600(Lcom/android/settings/TetherSettings;)Landroid/os/Handler;
+    invoke-static {p1}, Lcom/android/settings/TetherSettings;->access$2000(Lcom/android/settings/TetherSettings;)Landroid/os/Handler;
 
     move-result-object p1
 

@@ -273,6 +273,8 @@
     return-object v0
 
     :cond_0
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+
     new-instance p0, Ljava/lang/IllegalStateException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -294,6 +296,8 @@
     throw p0
 
     :cond_1
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+
     new-instance p0, Ljava/lang/IllegalStateException;
 
     new-instance v0, Ljava/lang/StringBuilder;

@@ -32,7 +32,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
-            "Lcom/android/settingslib/OPInputMethodPreference;",
+            "Lcom/android/settingslib/inputmethod/InputMethodPreference;",
             ">;"
         }
     .end annotation
@@ -86,10 +86,10 @@
     return p0
 .end method
 
-.method static synthetic lambda$updateInputMethodPreferenceViews$1(Ljava/text/Collator;Lcom/android/settingslib/OPInputMethodPreference;Lcom/android/settingslib/OPInputMethodPreference;)I
+.method static synthetic lambda$updateInputMethodPreferenceViews$1(Ljava/text/Collator;Lcom/android/settingslib/inputmethod/InputMethodPreference;Lcom/android/settingslib/inputmethod/InputMethodPreference;)I
     .locals 0
 
-    invoke-virtual {p1, p2, p0}, Lcom/android/settingslib/OPInputMethodPreference;->compareTo(Lcom/android/settingslib/OPInputMethodPreference;Ljava/text/Collator;)I
+    invoke-virtual {p1, p2, p0}, Lcom/android/settingslib/inputmethod/InputMethodPreference;->compareTo(Lcom/android/settingslib/inputmethod/InputMethodPreference;Ljava/text/Collator;)I
 
     move-result p0
 
@@ -200,7 +200,7 @@
 
     move-result-object v12
 
-    new-instance v13, Lcom/android/settingslib/OPInputMethodPreference;
+    new-instance v13, Lcom/android/settingslib/inputmethod/InputMethodPreference;
 
     const/4 v4, 0x0
 
@@ -210,7 +210,7 @@
 
     move-object v2, v7
 
-    invoke-direct/range {v1 .. v6}, Lcom/android/settingslib/OPInputMethodPreference;-><init>(Landroid/content/Context;Landroid/view/inputmethod/InputMethodInfo;ZZLcom/android/settingslib/OPInputMethodPreference$OnSavePreferenceListener;)V
+    invoke-direct/range {v1 .. v6}, Lcom/android/settingslib/inputmethod/InputMethodPreference;-><init>(Landroid/content/Context;Landroid/view/inputmethod/InputMethodInfo;ZZLcom/android/settingslib/inputmethod/InputMethodPreference$OnSavePreferenceListener;)V
 
     invoke-virtual {v13, v12}, Landroidx/preference/Preference;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
@@ -229,9 +229,9 @@
 
     iget-object v1, p0, Lcom/android/settings/inputmethod/VirtualKeyboardFragment;->mInputMethodPreferenceList:Ljava/util/ArrayList;
 
-    new-instance v2, Lcom/android/settings/inputmethod/-$$Lambda$VirtualKeyboardFragment$SLLd3dtxj7HqQ80Fz3c43WyC6tQ;
+    new-instance v2, Lcom/android/settings/inputmethod/-$$Lambda$VirtualKeyboardFragment$xYS3WflULV55AewEbwJsyOWMfA8;
 
-    invoke-direct {v2, v0}, Lcom/android/settings/inputmethod/-$$Lambda$VirtualKeyboardFragment$SLLd3dtxj7HqQ80Fz3c43WyC6tQ;-><init>(Ljava/text/Collator;)V
+    invoke-direct {v2, v0}, Lcom/android/settings/inputmethod/-$$Lambda$VirtualKeyboardFragment$xYS3WflULV55AewEbwJsyOWMfA8;-><init>(Ljava/text/Collator;)V
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->sort(Ljava/util/Comparator;)V
 
@@ -248,7 +248,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settingslib/OPInputMethodPreference;
+    check-cast v0, Lcom/android/settingslib/inputmethod/InputMethodPreference;
 
     invoke-virtual {v0, v9}, Landroidx/preference/Preference;->setOrder(I)V
 
@@ -258,7 +258,7 @@
 
     invoke-static {v0}, Lcom/android/settingslib/inputmethod/InputMethodAndSubtypeUtilCompat;->removeUnnecessaryNonPersistentPreference(Landroidx/preference/Preference;)V
 
-    invoke-virtual {v0}, Lcom/android/settingslib/OPInputMethodPreference;->updatePreferenceViews()V
+    invoke-virtual {v0}, Lcom/android/settingslib/inputmethod/InputMethodPreference;->updatePreferenceViews()V
 
     add-int/lit8 v9, v9, 0x1
 

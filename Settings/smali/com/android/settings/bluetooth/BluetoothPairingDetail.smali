@@ -191,29 +191,18 @@
     return-void
 .end method
 
-.method public onDeviceBondStateChanged(Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;I)V
+.method public onConnectionStateChanged(Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;I)V
     .locals 1
 
-    const/16 v0, 0xc
-
-    if-ne p2, v0, :cond_0
-
-    invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->finish()V
-
-    return-void
-
-    :cond_0
     iget-object v0, p0, Lcom/android/settings/bluetooth/DeviceListPreferenceFragment;->mSelectedDevice:Landroid/bluetooth/BluetoothDevice;
 
-    if-eqz v0, :cond_1
-
-    if-eqz p1, :cond_1
+    if-eqz v0, :cond_0
 
     invoke-virtual {p1}, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->getDevice()Landroid/bluetooth/BluetoothDevice;
 
     move-result-object p1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcom/android/settings/bluetooth/DeviceListPreferenceFragment;->mSelectedDevice:Landroid/bluetooth/BluetoothDevice;
 
@@ -221,15 +210,64 @@
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x2
+
+    if-ne p2, p1, :cond_0
+
+    invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->finish()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public onDeviceBondStateChanged(Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;I)V
+    .locals 1
+
+    const/16 v0, 0xc
+
+    if-ne p2, v0, :cond_1
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isO2()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->finish()V
+
+    :cond_0
+    return-void
+
+    :cond_1
+    iget-object v0, p0, Lcom/android/settings/bluetooth/DeviceListPreferenceFragment;->mSelectedDevice:Landroid/bluetooth/BluetoothDevice;
+
+    if-eqz v0, :cond_2
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1}, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->getDevice()Landroid/bluetooth/BluetoothDevice;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_2
+
+    iget-object v0, p0, Lcom/android/settings/bluetooth/DeviceListPreferenceFragment;->mSelectedDevice:Landroid/bluetooth/BluetoothDevice;
+
+    invoke-virtual {v0, p1}, Landroid/bluetooth/BluetoothDevice;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
 
     const/16 p1, 0xa
 
-    if-ne p2, p1, :cond_1
+    if-ne p2, p1, :cond_2
 
     invoke-virtual {p0}, Lcom/android/settings/bluetooth/BluetoothPairingDetail;->enableScanning()V
 
-    :cond_1
+    :cond_2
     return-void
 .end method
 

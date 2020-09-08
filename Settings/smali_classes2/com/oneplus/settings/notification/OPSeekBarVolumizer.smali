@@ -37,6 +37,8 @@
 
 .field private final mContext:Landroid/content/Context;
 
+.field private mCurrentStreamType:I
+
 .field private final mDefaultUri:Landroid/net/Uri;
 
 .field private mHandler:Landroid/os/Handler;
@@ -1065,7 +1067,25 @@
 .end method
 
 .method private postSetVolume(I)V
-    .locals 1
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "postSetVolume progress: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "OPSeekBarVolumizer"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object v0, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mHandler:Landroid/os/Handler;
 
@@ -1178,15 +1198,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/media/AudioManager;->registerVolumeGroupCallback(Ljava/util/concurrent/Executor;Landroid/media/AudioManager$VolumeGroupCallback;)V
 
-    iget-object v0, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mAudioManager:Landroid/media/AudioManager;
-
-    iget v1, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mStreamType:I
-
-    invoke-virtual {v0, v1}, Landroid/media/AudioManager;->getStreamVolume(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mLastProgress:I
+    invoke-direct {p0}, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->updateSlider()V
 
     :cond_0
     return-void
@@ -1295,17 +1307,17 @@
 .end method
 
 .method public handleMessage(Landroid/os/Message;)Z
-    .locals 5
+    .locals 6
 
     iget v0, p1, Landroid/os/Message;->what:I
 
-    const-string v1, "OPSeekBarVolumizer"
+    const/4 v1, 0x1
 
-    const/4 v2, 0x1
+    const-string v2, "OPSeekBarVolumizer"
 
     if-eqz v0, :cond_3
 
-    if-eq v0, v2, :cond_2
+    if-eq v0, v1, :cond_2
 
     const/4 v3, 0x2
 
@@ -1331,116 +1343,149 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :cond_0
     iget-boolean p1, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mPlaySample:Z
 
-    if-eqz p1, :cond_6
+    if-eqz p1, :cond_7
 
     invoke-direct {p0}, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->onInitSample()V
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :cond_1
     iget-boolean p1, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mPlaySample:Z
 
-    if-eqz p1, :cond_6
+    if-eqz p1, :cond_7
 
     invoke-direct {p0}, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->onStopSample()V
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :cond_2
     iget-boolean p1, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mPlaySample:Z
 
-    if-eqz p1, :cond_6
+    if-eqz p1, :cond_7
 
     invoke-direct {p0}, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->onStartSample()V
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :cond_3
-    iget-boolean p1, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mMuted:Z
+    iget p1, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mCurrentStreamType:I
 
-    const/4 v0, 0x0
+    iget v0, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mStreamType:I
 
-    if-eqz p1, :cond_4
+    if-eq p1, v0, :cond_4
 
-    iget p1, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mLastProgress:I
-
-    if-lez p1, :cond_4
-
-    iget-object p1, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mAudioManager:Landroid/media/AudioManager;
-
-    iget v3, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mStreamType:I
-
-    const/16 v4, 0x64
-
-    invoke-virtual {p1, v3, v4, v0}, Landroid/media/AudioManager;->adjustStreamVolume(III)V
-
-    goto :goto_0
+    goto :goto_1
 
     :cond_4
-    iget-boolean p1, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mMuted:Z
-
-    if-nez p1, :cond_5
-
-    iget p1, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mLastProgress:I
-
-    if-nez p1, :cond_5
-
-    iget-object p1, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mAudioManager:Landroid/media/AudioManager;
-
-    iget v3, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mStreamType:I
-
-    const/16 v4, -0x64
-
-    invoke-virtual {p1, v3, v4, v0}, Landroid/media/AudioManager;->adjustStreamVolume(III)V
-
-    :cond_5
-    :goto_0
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v0, "MSG_SET_STREAM_VOLUME setStreamVolume mStreamType : "
+    const-string v0, "MSG_SET_STREAM_VOLUME mMuted = "
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v0, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mStreamType:I
+    iget-boolean v0, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mMuted:Z
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     const-string v0, " mLastProgress : "
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v0, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mLastProgress:I
+    iget v3, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mLastProgress:I
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object p1, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mAudioManager:Landroid/media/AudioManager;
 
-    iget v0, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mStreamType:I
+    iget v3, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mStreamType:I
+
+    iget v4, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mLastProgress:I
+
+    const/16 v5, 0x400
+
+    invoke-virtual {p1, v3, v4, v5}, Landroid/media/AudioManager;->setStreamVolume(III)V
+
+    iget-boolean p1, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mMuted:Z
+
+    const/4 v3, 0x0
+
+    if-eqz p1, :cond_5
+
+    iget p1, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mLastProgress:I
+
+    if-lez p1, :cond_5
+
+    iget-object p1, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mAudioManager:Landroid/media/AudioManager;
+
+    iget v4, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mStreamType:I
+
+    const/16 v5, 0x64
+
+    invoke-virtual {p1, v4, v5, v3}, Landroid/media/AudioManager;->adjustStreamVolume(III)V
+
+    goto :goto_0
+
+    :cond_5
+    iget-boolean p1, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mMuted:Z
+
+    if-nez p1, :cond_6
+
+    iget p1, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mLastProgress:I
+
+    if-nez p1, :cond_6
+
+    iget-object p1, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mAudioManager:Landroid/media/AudioManager;
+
+    iget v4, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mStreamType:I
+
+    const/16 v5, -0x64
+
+    invoke-virtual {p1, v4, v5, v3}, Landroid/media/AudioManager;->adjustStreamVolume(III)V
+
+    :cond_6
+    :goto_0
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "MSG_SET_STREAM_VOLUME setStreamVolume mStreamType : "
+
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v3, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mStreamType:I
+
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget p0, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mLastProgress:I
 
-    const/16 v1, 0x400
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0, p0, v1}, Landroid/media/AudioManager;->setStreamVolume(III)V
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :cond_6
+    move-result-object p0
+
+    invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_7
     :goto_1
-    return v2
+    return v1
 .end method
 
 .method public isSamplePlaying()Z
@@ -1537,11 +1582,21 @@
 .method public onStartTrackingTouch(Landroid/widget/SeekBar;)V
     .locals 0
 
+    iget p1, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mStreamType:I
+
+    iput p1, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->mCurrentStreamType:I
+
     return-void
 .end method
 
 .method public onStopTrackingTouch(Landroid/widget/SeekBar;)V
-    .locals 0
+    .locals 2
+
+    const-string v0, "OPSeekBarVolumizer"
+
+    const-string v1, "onStopTrackingTouch"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-virtual {p1}, Landroid/widget/SeekBar;->getProgress()I
 

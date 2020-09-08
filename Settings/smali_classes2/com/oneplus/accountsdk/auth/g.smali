@@ -11,3 +11,15 @@
 
 .method public abstract b(Landroid/content/Context;)V
 .end method
+
+.method public abstract b(Landroid/content/Context;Lcom/oneplus/accountsdk/auth/OPAuthListener;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Lcom/oneplus/accountsdk/auth/OPAuthListener<",
+            "Lcom/oneplus/accountsdk/entity/UserTokenInfo;",
+            ">;)V"
+        }
+    .end annotation
+.end method

@@ -429,22 +429,24 @@
     :cond_4
     iget-object v0, p0, Lcom/android/settings/notification/WorkSoundPreferenceController;->mWorkAlarmRingtonePreference:Landroidx/preference/Preference;
 
+    const/4 v1, 0x0
+
     if-nez v0, :cond_5
 
     iget-object v0, p0, Lcom/android/settings/notification/WorkSoundPreferenceController;->mWorkPreferenceCategory:Landroidx/preference/PreferenceGroup;
 
-    const-string/jumbo v1, "work_alarm_ringtone"
+    const-string/jumbo v2, "work_alarm_ringtone"
 
-    invoke-direct {p0, v0, v1}, Lcom/android/settings/notification/WorkSoundPreferenceController;->initWorkPreference(Landroidx/preference/PreferenceGroup;Ljava/lang/String;)Lcom/android/settings/DefaultRingtonePreference;
+    invoke-direct {p0, v0, v2}, Lcom/android/settings/notification/WorkSoundPreferenceController;->initWorkPreference(Landroidx/preference/PreferenceGroup;Ljava/lang/String;)Lcom/android/settings/DefaultRingtonePreference;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/settings/notification/WorkSoundPreferenceController;->mWorkAlarmRingtonePreference:Landroidx/preference/Preference;
 
+    invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setVisible(Z)V
+
     :cond_5
     iget-boolean v0, p0, Lcom/android/settings/notification/WorkSoundPreferenceController;->mVoiceCapable:Z
-
-    const/4 v1, 0x0
 
     if-nez v0, :cond_6
 

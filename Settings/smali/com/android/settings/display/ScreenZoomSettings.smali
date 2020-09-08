@@ -37,7 +37,7 @@
 
 # virtual methods
 .method protected commit()V
-    .locals 2
+    .locals 4
 
     iget-object v0, p0, Lcom/android/settings/display/ScreenZoomSettings;->mValues:[I
 
@@ -45,20 +45,49 @@
 
     aget v0, v0, v1
 
-    iget p0, p0, Lcom/android/settings/display/ScreenZoomSettings;->mDefaultDensity:I
+    iget v1, p0, Lcom/android/settings/display/ScreenZoomSettings;->mDefaultDensity:I
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    if-ne v0, p0, :cond_0
+    if-ne v0, v1, :cond_2
 
-    invoke-static {v1}, Lcom/android/settingslib/display/DisplayDensityConfiguration;->clearForcedDisplayDensity(I)V
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    const-string v1, "oneplus_screen_resolution_adjust"
+
+    const/4 v3, 0x2
+
+    invoke-static {p0, v1, v3}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    if-ne p0, v3, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-static {v1, v0}, Lcom/android/settingslib/display/DisplayDensityConfiguration;->setForcedDisplayDensity(II)V
+    invoke-static {v2}, Lcom/android/settingslib/display/DisplayDensityConfiguration;->clearForcedDisplayDensity(I)V
 
+    goto :goto_1
+
+    :cond_1
     :goto_0
+    invoke-static {v2, v0}, Lcom/android/settingslib/display/DisplayDensityConfiguration;->setForcedDisplayDensity(II)V
+
+    goto :goto_1
+
+    :cond_2
+    invoke-static {v2, v0}, Lcom/android/settingslib/display/DisplayDensityConfiguration;->setForcedDisplayDensity(II)V
+
+    :goto_1
     return-void
 .end method
 
@@ -234,7 +263,11 @@
 
     iput v0, p0, Lcom/android/settings/display/PreviewSeekBarPreferenceFragment;->mInitialIndex:I
 
-    invoke-virtual {p1}, Lcom/oneplus/settings/utils/OPDisplayDensityUtils;->getDefaultDensity()I
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lcom/oneplus/settings/utils/OPDisplayDensityUtils;->getDefaultDensity(Landroid/content/Context;)I
 
     move-result p1
 

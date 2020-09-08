@@ -54,7 +54,7 @@
     :array_0
     .array-data 4
         0x7f0402b2
-        0x7f0404ba
+        0x7f0404b7
     .end array-data
 
     :array_1

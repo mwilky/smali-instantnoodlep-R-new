@@ -237,8 +237,8 @@
         <item quantity="one">"1 hora (tret que s'activi automàticament)"</item>
     </plurals>
     <plurals name="op_location_settings_summary_location_on">
-        <item quantity="other">On - %1$d apps have access to location</item>
-        <item quantity="one">On - %1$d app has access to location</item>
+        <item quantity="other">Sí - %1$d aplicacions tenen accés a la ubicació</item>
+        <item quantity="one">Sí - %1$d aplicació té accés a la ubicació</item>
     </plurals>
     <plurals name="permission_bar_chart_label">
         <item quantity="other">%s aplicacions</item>

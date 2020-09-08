@@ -111,7 +111,7 @@
     :goto_0
     iget-object p1, p0, Lcom/android/settings/accounts/AccountPreferenceController$ManagedProfileBroadcastReceiver;->this$0:Lcom/android/settings/accounts/AccountPreferenceController;
 
-    invoke-static {p1}, Lcom/android/settings/accounts/AccountPreferenceController;->access$300(Lcom/android/settings/accounts/AccountPreferenceController;)Lcom/android/settings/SettingsPreferenceFragment;
+    invoke-static {p1}, Lcom/android/settings/accounts/AccountPreferenceController;->access$600(Lcom/android/settings/accounts/AccountPreferenceController;)Lcom/android/settings/SettingsPreferenceFragment;
 
     move-result-object p1
 
@@ -121,7 +121,7 @@
 
     iget-object p0, p0, Lcom/android/settings/accounts/AccountPreferenceController$ManagedProfileBroadcastReceiver;->this$0:Lcom/android/settings/accounts/AccountPreferenceController;
 
-    invoke-static {p0}, Lcom/android/settings/accounts/AccountPreferenceController;->access$300(Lcom/android/settings/accounts/AccountPreferenceController;)Lcom/android/settings/SettingsPreferenceFragment;
+    invoke-static {p0}, Lcom/android/settings/accounts/AccountPreferenceController;->access$600(Lcom/android/settings/accounts/AccountPreferenceController;)Lcom/android/settings/SettingsPreferenceFragment;
 
     move-result-object p0
 
@@ -136,15 +136,15 @@
     :cond_2
     iget-object p1, p0, Lcom/android/settings/accounts/AccountPreferenceController$ManagedProfileBroadcastReceiver;->this$0:Lcom/android/settings/accounts/AccountPreferenceController;
 
-    invoke-static {p1}, Lcom/android/settings/accounts/AccountPreferenceController;->access$400(Lcom/android/settings/accounts/AccountPreferenceController;)V
+    invoke-static {p1}, Lcom/android/settings/accounts/AccountPreferenceController;->access$700(Lcom/android/settings/accounts/AccountPreferenceController;)V
 
     iget-object p1, p0, Lcom/android/settings/accounts/AccountPreferenceController$ManagedProfileBroadcastReceiver;->this$0:Lcom/android/settings/accounts/AccountPreferenceController;
 
-    invoke-static {p1}, Lcom/android/settings/accounts/AccountPreferenceController;->access$500(Lcom/android/settings/accounts/AccountPreferenceController;)V
+    invoke-static {p1}, Lcom/android/settings/accounts/AccountPreferenceController;->access$800(Lcom/android/settings/accounts/AccountPreferenceController;)V
 
     iget-object p0, p0, Lcom/android/settings/accounts/AccountPreferenceController$ManagedProfileBroadcastReceiver;->this$0:Lcom/android/settings/accounts/AccountPreferenceController;
 
-    invoke-static {p0}, Lcom/android/settings/accounts/AccountPreferenceController;->access$600(Lcom/android/settings/accounts/AccountPreferenceController;)V
+    invoke-static {p0}, Lcom/android/settings/accounts/AccountPreferenceController;->access$900(Lcom/android/settings/accounts/AccountPreferenceController;)V
 
     :goto_1
     return-void

@@ -36,7 +36,7 @@
     return-object p0
 .end method
 
-.method private static createEditDialogContentView(Landroid/content/Context;I)Landroid/view/View;
+.method static createEditDialogContentView(Landroid/content/Context;I)Landroid/view/View;
     .locals 3
 
     const-string v0, "layout_inflater"
@@ -90,8 +90,6 @@
     invoke-static {p0, p1}, Lcom/android/settings/accessibility/AccessibilityEditDialogUtils;->initHardwareShortcut(Landroid/content/Context;Landroid/view/View;)V
 
     invoke-static {p0, p1}, Lcom/android/settings/accessibility/AccessibilityEditDialogUtils;->initMagnifyShortcut(Landroid/content/Context;Landroid/view/View;)V
-
-    invoke-static {p1}, Lcom/android/settings/accessibility/AccessibilityEditDialogUtils;->initAdvancedWidget(Landroid/view/View;)V
 
     goto :goto_0
 
@@ -156,32 +154,6 @@
     return-object v1
 .end method
 
-.method private static initAdvancedWidget(Landroid/view/View;)V
-    .locals 2
-
-    sget v0, Lcom/android/settings/R$id;->advanced_shortcut:I
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout;
-
-    sget v1, Lcom/android/settings/R$id;->triple_tap_shortcut:I
-
-    invoke-virtual {p0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p0
-
-    new-instance v1, Lcom/android/settings/accessibility/-$$Lambda$AccessibilityEditDialogUtils$qZNea3BDK7CGbVgZxt24eIpFx3w;
-
-    invoke-direct {v1, v0, p0}, Lcom/android/settings/accessibility/-$$Lambda$AccessibilityEditDialogUtils$qZNea3BDK7CGbVgZxt24eIpFx3w;-><init>(Landroid/widget/LinearLayout;Landroid/view/View;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    return-void
-.end method
-
 .method private static initHardwareShortcut(Landroid/content/Context;Landroid/view/View;)V
     .locals 2
 
@@ -203,7 +175,7 @@
 
     move-result-object p0
 
-    sget v1, Lcom/android/settings/R$drawable;->accessibility_shortcut_type_hardware:I
+    sget v1, Lcom/android/settings/R$drawable;->op_accessibility_shortcut_type_hardware:I
 
     invoke-static {p1, v0, p0, v1}, Lcom/android/settings/accessibility/AccessibilityEditDialogUtils;->setupShortcutWidget(Landroid/view/View;Ljava/lang/CharSequence;Ljava/lang/CharSequence;I)V
 
@@ -253,7 +225,7 @@
 
     move-result-object p0
 
-    sget v1, Lcom/android/settings/R$drawable;->accessibility_shortcut_type_triple_tap:I
+    sget v1, Lcom/android/settings/R$drawable;->op_accessibility_shortcut_type_triple_tap:I
 
     invoke-static {p1, v0, p0, v1}, Lcom/android/settings/accessibility/AccessibilityEditDialogUtils;->setupShortcutWidget(Landroid/view/View;Ljava/lang/CharSequence;Ljava/lang/CharSequence;I)V
 
@@ -309,13 +281,11 @@
 
     invoke-static {p0, v0}, Lcom/android/settings/accessibility/AccessibilityEditDialogUtils;->retrieveSummary(Landroid/content/Context;I)Ljava/lang/CharSequence;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-static {p0}, Lcom/android/settings/accessibility/AccessibilityEditDialogUtils;->retrieveImageResId(Landroid/content/Context;)I
+    sget v0, Lcom/android/settings/R$drawable;->op_accessibility_shortcut_type_software:I
 
-    move-result p0
-
-    invoke-static {p1, v1, v0, p0}, Lcom/android/settings/accessibility/AccessibilityEditDialogUtils;->setupShortcutWidget(Landroid/view/View;Ljava/lang/CharSequence;Ljava/lang/CharSequence;I)V
+    invoke-static {p1, v1, p0, v0}, Lcom/android/settings/accessibility/AccessibilityEditDialogUtils;->setupShortcutWidget(Landroid/view/View;Ljava/lang/CharSequence;Ljava/lang/CharSequence;I)V
 
     return-void
 .end method
@@ -326,51 +296,6 @@
     invoke-interface {p0}, Landroid/content/DialogInterface;->dismiss()V
 
     return-void
-.end method
-
-.method static synthetic lambda$initAdvancedWidget$1(Landroid/widget/LinearLayout;Landroid/view/View;Landroid/view/View;)V
-    .locals 0
-
-    const/16 p2, 0x8
-
-    invoke-virtual {p0, p2}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    const/4 p0, 0x0
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->setVisibility(I)V
-
-    return-void
-.end method
-
-.method private static retrieveImageResId(Landroid/content/Context;)I
-    .locals 2
-
-    sget v0, Lcom/android/settings/R$drawable;->accessibility_shortcut_type_software:I
-
-    invoke-static {p0}, Lcom/android/settings/accessibility/AccessibilityUtil;->isGestureNavigateEnabled(Landroid/content/Context;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-static {p0}, Lcom/android/settings/accessibility/AccessibilityUtil;->isTouchExploreEnabled(Landroid/content/Context;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    sget p0, Lcom/android/settings/R$drawable;->accessibility_shortcut_type_software_gesture_talkback:I
-
-    goto :goto_0
-
-    :cond_0
-    sget p0, Lcom/android/settings/R$drawable;->accessibility_shortcut_type_software_gesture:I
-
-    :goto_0
-    move v0, p0
-
-    :cond_1
-    return v0
 .end method
 
 .method private static retrieveSummary(Landroid/content/Context;I)Ljava/lang/CharSequence;
@@ -474,15 +399,15 @@
 .method private static setupShortcutWidget(Landroid/view/View;Ljava/lang/CharSequence;Ljava/lang/CharSequence;I)V
     .locals 1
 
-    sget v0, Lcom/android/settings/R$id;->checkbox:I
+    sget v0, Lcom/android/settings/R$id;->checkbox_text:I
 
     invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/CheckBox;
+    check-cast v0, Landroid/widget/TextView;
 
-    invoke-virtual {v0, p1}, Landroid/widget/CheckBox;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     sget p1, Lcom/android/settings/R$id;->summary:I
 

@@ -23,6 +23,8 @@
 
 
 # instance fields
+.field private mLastClickTime:J
+
 .field private final mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
 .field private mOwnerInfoPref:Lcom/android/settingslib/RestrictedPreference;
@@ -133,7 +135,7 @@
 .end method
 
 .method public handlePreferenceTreeClick(Landroidx/preference/Preference;)Z
-    .locals 1
+    .locals 4
 
     invoke-virtual {p0}, Lcom/android/settings/security/OwnerInfoPreferenceController;->getPreferenceKey()Ljava/lang/String;
 
@@ -147,17 +149,38 @@
 
     move-result p1
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_1
 
-    iget-object p0, p0, Lcom/android/settings/security/OwnerInfoPreferenceController;->mParent:Lcom/android/settingslib/core/lifecycle/ObservablePreferenceFragment;
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    invoke-static {p0}, Lcom/android/settings/users/OwnerInfoSettings;->show(Landroidx/fragment/app/Fragment;)V
+    move-result-wide v0
 
+    iget-wide v2, p0, Lcom/android/settings/security/OwnerInfoPreferenceController;->mLastClickTime:J
+
+    sub-long/2addr v0, v2
+
+    const-wide/16 v2, 0x12c
+
+    cmp-long p1, v0, v2
+
+    if-lez p1, :cond_0
+
+    iget-object p1, p0, Lcom/android/settings/security/OwnerInfoPreferenceController;->mParent:Lcom/android/settingslib/core/lifecycle/ObservablePreferenceFragment;
+
+    invoke-static {p1}, Lcom/android/settings/users/OwnerInfoSettings;->show(Landroidx/fragment/app/Fragment;)V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/android/settings/security/OwnerInfoPreferenceController;->mLastClickTime:J
+
+    :cond_0
     const/4 p0, 0x1
 
     return p0
 
-    :cond_0
+    :cond_1
     const/4 p0, 0x0
 
     return p0

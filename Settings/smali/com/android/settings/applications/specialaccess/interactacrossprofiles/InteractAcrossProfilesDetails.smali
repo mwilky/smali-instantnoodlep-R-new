@@ -682,6 +682,16 @@
 .method private logEvent(I)V
     .locals 3
 
+    iget-object v0, p0, Lcom/android/settings/applications/specialaccess/interactacrossprofiles/InteractAcrossProfilesDetails;->mContext:Landroid/content/Context;
+
+    iget-object v1, p0, Lcom/android/settings/applications/specialaccess/interactacrossprofiles/InteractAcrossProfilesDetails;->mWorkProfile:Landroid/os/UserHandle;
+
+    invoke-static {v0, v1}, Lcom/android/settingslib/RestrictedLockUtils;->getProfileOrDeviceOwner(Landroid/content/Context;Landroid/os/UserHandle;)Lcom/android/settingslib/RestrictedLockUtils$EnforcedAdmin;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
     invoke-static {p1}, Landroid/app/admin/DevicePolicyEventLogger;->createEvent(I)Landroid/app/admin/DevicePolicyEventLogger;
 
     move-result-object p1
@@ -690,11 +700,11 @@
 
     new-array v0, v0, [Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/android/settings/applications/AppInfoBase;->mPackageName:Ljava/lang/String;
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    iget-object v2, p0, Lcom/android/settings/applications/AppInfoBase;->mPackageName:Ljava/lang/String;
 
-    aput-object v1, v0, v2
+    aput-object v2, v0, v1
 
     invoke-virtual {p1, v0}, Landroid/app/admin/DevicePolicyEventLogger;->setStrings([Ljava/lang/String;)Landroid/app/admin/DevicePolicyEventLogger;
 
@@ -724,6 +734,7 @@
 
     invoke-virtual {p0}, Landroid/app/admin/DevicePolicyEventLogger;->write()V
 
+    :cond_0
     return-void
 .end method
 

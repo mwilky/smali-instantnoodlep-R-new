@@ -2098,11 +2098,11 @@
 
     iget-boolean p1, p0, Lcom/google/android/material/textfield/TextInputLayout;->mHintEnabled:Z
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_2
 
     iget-object p1, p0, Lcom/google/android/material/textfield/TextInputLayout;->mEditText:Landroid/widget/EditText;
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_2
 
     iget-object p2, p0, Lcom/google/android/material/textfield/TextInputLayout;->mTmpRect:Landroid/graphics/Rect;
 
@@ -2128,6 +2128,59 @@
 
     sub-int/2addr p4, v0
 
+    iget-object v0, p0, Lcom/google/android/material/textfield/TextInputLayout;->mEditText:Landroid/widget/EditText;
+
+    instance-of v0, v0, Lcom/google/android/material/textfield/TextInputEditText;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/material/textfield/TextInputLayout;->mCollapsingTextHelper:Lcom/google/android/material/internal/CollapsingTextHelper;
+
+    iget v1, p2, Landroid/graphics/Rect;->top:I
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    sget v3, Lcom/google/android/material/R$dimen;->op_control_margin_space2:I
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+
+    move-result v2
+
+    add-int/2addr v1, v2
+
+    add-int/lit8 v1, v1, 0x3
+
+    iget p2, p2, Landroid/graphics/Rect;->bottom:I
+
+    iget-object v2, p0, Lcom/google/android/material/textfield/TextInputLayout;->mEditText:Landroid/widget/EditText;
+
+    invoke-virtual {v2}, Landroid/widget/EditText;->getCompoundPaddingBottom()I
+
+    move-result v2
+
+    sub-int/2addr p2, v2
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    sget v3, Lcom/google/android/material/R$dimen;->op_control_margin_space1:I
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+
+    move-result v2
+
+    add-int/2addr p2, v2
+
+    add-int/lit8 p2, p2, 0x3
+
+    invoke-virtual {v0, p1, v1, p4, p2}, Lcom/google/android/material/internal/CollapsingTextHelper;->setExpandedBounds(IIII)V
+
+    goto :goto_0
+
+    :cond_0
     iget-object v0, p0, Lcom/google/android/material/textfield/TextInputLayout;->mCollapsingTextHelper:Lcom/google/android/material/internal/CollapsingTextHelper;
 
     iget v1, p2, Landroid/graphics/Rect;->top:I
@@ -2156,6 +2209,56 @@
 
     invoke-virtual {v0, p1, v1, p4, p2}, Lcom/google/android/material/internal/CollapsingTextHelper;->setExpandedBounds(IIII)V
 
+    :goto_0
+    iget-object p2, p0, Lcom/google/android/material/textfield/TextInputLayout;->mEditText:Landroid/widget/EditText;
+
+    instance-of p2, p2, Lcom/google/android/material/textfield/TextInputEditText;
+
+    if-eqz p2, :cond_1
+
+    iget-object p2, p0, Lcom/google/android/material/textfield/TextInputLayout;->mCollapsingTextHelper:Lcom/google/android/material/internal/CollapsingTextHelper;
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getPaddingTop()I
+
+    move-result v0
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Lcom/google/android/material/R$dimen;->op_control_margin_space1:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    sub-int/2addr p5, p3
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getPaddingBottom()I
+
+    move-result p3
+
+    sub-int/2addr p5, p3
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p3
+
+    sget v1, Lcom/google/android/material/R$dimen;->op_control_margin_space1:I
+
+    invoke-virtual {p3, v1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+
+    move-result p3
+
+    add-int/2addr p5, p3
+
+    invoke-virtual {p2, p1, v0, p4, p5}, Lcom/google/android/material/internal/CollapsingTextHelper;->setCollapsedBounds(IIII)V
+
+    goto :goto_1
+
+    :cond_1
     iget-object p2, p0, Lcom/google/android/material/textfield/TextInputLayout;->mCollapsingTextHelper:Lcom/google/android/material/internal/CollapsingTextHelper;
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getPaddingTop()I
@@ -2172,11 +2275,12 @@
 
     invoke-virtual {p2, p1, v0, p4, p5}, Lcom/google/android/material/internal/CollapsingTextHelper;->setCollapsedBounds(IIII)V
 
+    :goto_1
     iget-object p0, p0, Lcom/google/android/material/textfield/TextInputLayout;->mCollapsingTextHelper:Lcom/google/android/material/internal/CollapsingTextHelper;
 
     invoke-virtual {p0}, Lcom/google/android/material/internal/CollapsingTextHelper;->recalculate()V
 
-    :cond_0
+    :cond_2
     return-void
 .end method
 

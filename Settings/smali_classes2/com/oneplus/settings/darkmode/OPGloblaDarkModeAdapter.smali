@@ -26,8 +26,6 @@
 
 .field private mEnableList:Z
 
-.field private mFirstUnFullSupportPosition:I
-
 .field private mInflater:Landroid/view/LayoutInflater;
 
 .field private mSelectedList:Ljava/util/List;
@@ -68,10 +66,6 @@
 
     iput-object v0, p0, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter;->mSelectedList:Ljava/util/List;
 
-    const/4 v0, -0x1
-
-    iput v0, p0, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter;->mFirstUnFullSupportPosition:I
-
     iput-object p2, p0, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter;->mAppList:Ljava/util/List;
 
     iput-object p1, p0, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter;->mContext:Landroid/content/Context;
@@ -91,6 +85,39 @@
     iput-object p1, p0, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     return-void
+.end method
+
+.method private isGrayList(I)Z
+    .locals 0
+
+    const/16 p0, 0x69
+
+    if-eq p1, p0, :cond_1
+
+    const/16 p0, 0x6c
+
+    if-eq p1, p0, :cond_1
+
+    const/16 p0, 0x66
+
+    if-eq p1, p0, :cond_1
+
+    const/16 p0, 0x65
+
+    if-ne p1, p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_1
+    :goto_0
+    const/4 p0, 0x1
+
+    return p0
 .end method
 
 
@@ -318,68 +345,69 @@
 
     invoke-virtual {v2, v4}, Landroid/view/View;->setVisibility(I)V
 
-    if-nez p1, :cond_1
+    if-nez p1, :cond_2
 
     iget-object v2, v1, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter$ItemViewHolder;->titleTv:Landroid/widget/TextView;
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
+    invoke-virtual {p3}, Lcom/oneplus/settings/better/OPAppModel;->getAppopsMode()I
+
+    move-result v2
+
+    invoke-direct {p0, v2}, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter;->isGrayList(I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    iget-object v2, v1, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter$ItemViewHolder;->titleTv:Landroid/widget/TextView;
+
+    sget v5, Lcom/android/settings/R$string;->op_global_drak_mode_not_full_support_list:I
+
+    invoke-virtual {v2, v5}, Landroid/widget/TextView;->setText(I)V
+
+    goto :goto_1
+
+    :cond_1
     iget-object v2, v1, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter$ItemViewHolder;->titleTv:Landroid/widget/TextView;
 
     sget v5, Lcom/android/settings/R$string;->op_global_drak_mode_full_support_list:I
 
     invoke-virtual {v2, v5}, Landroid/widget/TextView;->setText(I)V
 
-    goto :goto_2
-
-    :cond_1
-    invoke-virtual {p3}, Lcom/oneplus/settings/better/OPAppModel;->getAppopsMode()I
-
-    move-result v2
-
-    const/16 v5, 0x69
-
-    if-eq v2, v5, :cond_3
-
-    invoke-virtual {p3}, Lcom/oneplus/settings/better/OPAppModel;->getAppopsMode()I
-
-    move-result v2
-
-    const/16 v5, 0x6c
-
-    if-eq v2, v5, :cond_3
-
-    invoke-virtual {p3}, Lcom/oneplus/settings/better/OPAppModel;->getAppopsMode()I
-
-    move-result v2
-
-    const/16 v5, 0x66
-
-    if-ne v2, v5, :cond_2
-
     goto :goto_1
 
     :cond_2
-    iget-object v2, v1, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter$ItemViewHolder;->titleTv:Landroid/widget/TextView;
+    invoke-virtual {p3}, Lcom/oneplus/settings/better/OPAppModel;->getAppopsMode()I
 
-    invoke-virtual {v2, v4}, Landroid/widget/TextView;->setVisibility(I)V
+    move-result v2
 
-    goto :goto_2
+    invoke-direct {p0, v2}, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter;->isGrayList(I)Z
 
-    :cond_3
-    :goto_1
-    iget v2, p0, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter;->mFirstUnFullSupportPosition:I
+    move-result v2
 
-    const/4 v5, -0x1
+    if-eqz v2, :cond_3
 
-    if-ne v2, v5, :cond_4
+    iget-object v2, p0, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter;->mAppList:Ljava/util/List;
 
-    iput p1, p0, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter;->mFirstUnFullSupportPosition:I
+    add-int/lit8 v5, p1, -0x1
 
-    :cond_4
-    iget v2, p0, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter;->mFirstUnFullSupportPosition:I
+    invoke-interface {v2, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    if-ne v2, p1, :cond_5
+    move-result-object v2
+
+    check-cast v2, Lcom/oneplus/settings/better/OPAppModel;
+
+    invoke-virtual {v2}, Lcom/oneplus/settings/better/OPAppModel;->getAppopsMode()I
+
+    move-result v2
+
+    invoke-direct {p0, v2}, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter;->isGrayList(I)Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
 
     iget-object v2, v1, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter$ItemViewHolder;->titleTv:Landroid/widget/TextView;
 
@@ -391,14 +419,14 @@
 
     invoke-virtual {v2, v5}, Landroid/widget/TextView;->setText(I)V
 
-    goto :goto_2
+    goto :goto_1
 
-    :cond_5
+    :cond_3
     iget-object v2, v1, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter$ItemViewHolder;->titleTv:Landroid/widget/TextView;
 
     invoke-virtual {v2, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
-    :goto_2
+    :goto_1
     iget-object v2, p0, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter;->mAppList:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
@@ -407,7 +435,7 @@
 
     const/4 v5, 0x1
 
-    if-ne v2, v5, :cond_6
+    if-ne v2, v5, :cond_4
 
     invoke-virtual {p3}, Lcom/oneplus/settings/better/OPAppModel;->getPkgName()Ljava/lang/String;
 
@@ -417,7 +445,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_6
+    if-eqz v2, :cond_4
 
     invoke-virtual {p3}, Lcom/oneplus/settings/better/OPAppModel;->getLabel()Ljava/lang/String;
 
@@ -427,7 +455,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_6
+    if-eqz v2, :cond_4
 
     invoke-virtual {p2, v5}, Landroid/view/View;->setClickable(Z)V
 
@@ -453,9 +481,9 @@
 
     invoke-virtual {v2, v4}, Landroid/widget/TextView;->setText(I)V
 
-    goto :goto_3
+    goto :goto_2
 
-    :cond_6
+    :cond_4
     invoke-virtual {p2, v3}, Landroid/view/View;->setClickable(Z)V
 
     invoke-virtual {p2, v5}, Landroid/view/View;->setEnabled(Z)V
@@ -488,7 +516,7 @@
 
     invoke-virtual {v2, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    :goto_3
+    :goto_2
     iget-object v2, v1, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter$ItemViewHolder;->switchBt:Landroid/widget/Switch;
 
     invoke-virtual {v2, v3}, Landroid/widget/Switch;->setClickable(Z)V
@@ -501,46 +529,46 @@
 
     move-result p3
 
-    if-nez p3, :cond_8
+    if-nez p3, :cond_6
 
     iget-boolean p3, p0, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter;->mEnableList:Z
 
-    if-nez p3, :cond_7
+    if-nez p3, :cond_5
 
-    goto :goto_4
+    goto :goto_3
 
-    :cond_7
+    :cond_5
     iget-object p3, v1, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter$ItemViewHolder;->switchBt:Landroid/widget/Switch;
 
     invoke-virtual {p3, v5}, Landroid/widget/Switch;->setEnabled(Z)V
 
-    goto :goto_5
+    goto :goto_4
 
-    :cond_8
-    :goto_4
+    :cond_6
+    :goto_3
     iget-object p3, v1, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter$ItemViewHolder;->switchBt:Landroid/widget/Switch;
 
     invoke-virtual {p3, v3}, Landroid/widget/Switch;->setEnabled(Z)V
 
-    :goto_5
+    :goto_4
     invoke-virtual {p0, p1}, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter;->getSelected(I)Z
 
     move-result p0
 
-    if-eqz p0, :cond_9
+    if-eqz p0, :cond_7
 
     iget-object p0, v1, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter$ItemViewHolder;->switchBt:Landroid/widget/Switch;
 
     invoke-virtual {p0, v5}, Landroid/widget/Switch;->setChecked(Z)V
 
-    goto :goto_6
+    goto :goto_5
 
-    :cond_9
+    :cond_7
     iget-object p0, v1, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter$ItemViewHolder;->switchBt:Landroid/widget/Switch;
 
     invoke-virtual {p0, v3}, Landroid/widget/Switch;->setChecked(Z)V
 
-    :goto_6
+    :goto_5
     return-object p2
 .end method
 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <plurals name="oneplus_applock_wrong_pattern_warning">
-        <item quantity="other">Liko %1$d bandymai (-ų)</item>
-        <item quantity="one">Liko %1$d bandymas</item>
+        <item quantity="other">Dar turite %1$d bandymų</item>
+        <item quantity="one">Dar turite %1$d bandymą</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
         <item quantity="other">Bandykite dar kartą po %d sek.</item>
@@ -13,7 +13,7 @@
         <item quantity="one">1 val. (nebent įjungiama automatiškai)</item>
     </plurals>
     <plurals name="op_location_settings_summary_location_on">
-        <item quantity="other">On - %1$d apps have access to location</item>
-        <item quantity="one">On - %1$d app has access to location</item>
+        <item quantity="other">Įjungta – %1$d programų turi prieigą prie vietos</item>
+        <item quantity="one">Įjungta – %1$d programa turi prieigą prie vietos</item>
     </plurals>
 </resources>

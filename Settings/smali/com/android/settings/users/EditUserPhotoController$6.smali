@@ -212,58 +212,72 @@
     invoke-virtual {v1, v3}, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
 
     move-result-object v1
+    :try_end_6
+    .catch Ljava/io/FileNotFoundException; {:try_start_6 .. :try_end_6} :catch_7
+    .catchall {:try_start_6 .. :try_end_6} :catchall_3
 
+    :try_start_7
     invoke-static {v1}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
 
-    move-result-object v1
-    :try_end_6
-    .catch Ljava/io/FileNotFoundException; {:try_start_6 .. :try_end_6} :catch_5
+    move-result-object v3
+    :try_end_7
+    .catch Ljava/io/FileNotFoundException; {:try_start_7 .. :try_end_7} :catch_8
+    .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
     if-eqz v1, :cond_4
 
-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
+    :try_start_8
+    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
+    :try_end_8
+    .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_5
+
+    :catch_5
+    :cond_4
+    if-eqz v3, :cond_5
+
+    invoke-virtual {v3}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v1
+
+    invoke-virtual {v3}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v2
 
-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getHeight()I
+    invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
 
-    move-result v3
+    move-result v1
 
-    invoke-static {v2, v3}, Ljava/lang/Math;->min(II)I
+    invoke-virtual {v3}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v2
 
-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
+    sub-int/2addr v2, v1
 
-    move-result v3
+    div-int/lit8 v2, v2, 0x2
 
-    sub-int/2addr v3, v2
-
-    div-int/lit8 v3, v3, 0x2
-
-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getHeight()I
+    invoke-virtual {v3}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v4
 
-    sub-int/2addr v4, v2
+    sub-int/2addr v4, v1
 
     div-int/lit8 v4, v4, 0x2
 
     new-instance v5, Landroid/graphics/Rect;
 
-    add-int v6, v3, v2
+    add-int v6, v2, v1
 
-    add-int/2addr v2, v4
+    add-int/2addr v1, v4
 
-    invoke-direct {v5, v3, v4, v6, v2}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-direct {v5, v2, v4, v6, v1}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    new-instance v2, Landroid/graphics/Rect;
+    new-instance v1, Landroid/graphics/Rect;
 
-    iget-object v3, p0, Lcom/android/settings/users/EditUserPhotoController$6;->this$0:Lcom/android/settings/users/EditUserPhotoController;
+    iget-object v2, p0, Lcom/android/settings/users/EditUserPhotoController$6;->this$0:Lcom/android/settings/users/EditUserPhotoController;
 
-    invoke-static {v3}, Lcom/android/settings/users/EditUserPhotoController;->access$700(Lcom/android/settings/users/EditUserPhotoController;)I
+    invoke-static {v2}, Lcom/android/settings/users/EditUserPhotoController;->access$700(Lcom/android/settings/users/EditUserPhotoController;)I
 
-    move-result v3
+    move-result v2
 
     iget-object p0, p0, Lcom/android/settings/users/EditUserPhotoController$6;->this$0:Lcom/android/settings/users/EditUserPhotoController;
 
@@ -273,18 +287,54 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v2, v4, v4, v3, p0}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-direct {v1, v4, v4, v2, p0}, Landroid/graphics/Rect;-><init>(IIII)V
 
     new-instance p0, Landroid/graphics/Paint;
 
     invoke-direct {p0}, Landroid/graphics/Paint;-><init>()V
 
-    invoke-virtual {v0, v1, v5, v2, p0}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
+    invoke-virtual {v0, v3, v5, v1, p0}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
     return-object p1
 
-    :catch_5
-    :cond_4
+    :cond_5
+    return-object v2
+
+    :catchall_2
+    move-exception p0
+
+    move-object v2, v1
+
+    goto :goto_5
+
+    :catchall_3
+    move-exception p0
+
+    :goto_5
+    if-eqz v2, :cond_6
+
+    :try_start_9
+    invoke-virtual {v2}, Ljava/io/InputStream;->close()V
+    :try_end_9
+    .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_6
+
+    :catch_6
+    :cond_6
+    throw p0
+
+    :catch_7
+    move-object v1, v2
+
+    :catch_8
+    if-eqz v1, :cond_7
+
+    :try_start_a
+    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
+    :try_end_a
+    .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_9
+
+    :catch_9
+    :cond_7
     return-object v2
 .end method
 

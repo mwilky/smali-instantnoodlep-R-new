@@ -18,6 +18,8 @@
 
 .field private mPreference:Landroidx/preference/Preference;
 
+.field private mTimeFormatter:Ljava/text/DateFormat;
+
 .field private final mUiModeManager:Landroid/app/UiModeManager;
 
 
@@ -53,11 +55,25 @@
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
+    move-result-object p2
+
+    check-cast p2, Landroid/app/UiModeManager;
+
+    iput-object p2, p0, Lcom/android/settings/display/darkmode/DarkModeCustomPreferenceController;->mUiModeManager:Landroid/app/UiModeManager;
+
+    invoke-static {p1}, Landroid/text/format/DateFormat;->getTimeFormat(Landroid/content/Context;)Ljava/text/DateFormat;
+
     move-result-object p1
 
-    check-cast p1, Landroid/app/UiModeManager;
+    iput-object p1, p0, Lcom/android/settings/display/darkmode/DarkModeCustomPreferenceController;->mTimeFormatter:Ljava/text/DateFormat;
 
-    iput-object p1, p0, Lcom/android/settings/display/darkmode/DarkModeCustomPreferenceController;->mUiModeManager:Landroid/app/UiModeManager;
+    const-string p0, "UTC"
+
+    invoke-static {p0}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Ljava/text/DateFormat;->setTimeZone(Ljava/util/TimeZone;)V
 
     return-void
 .end method
@@ -69,6 +85,20 @@
 
     iput-object p3, p0, Lcom/android/settings/display/darkmode/DarkModeCustomPreferenceController;->mFragmet:Lcom/android/settings/display/darkmode/DarkModeSettingsFragment;
 
+    invoke-static {p1}, Landroid/text/format/DateFormat;->getTimeFormat(Landroid/content/Context;)Ljava/text/DateFormat;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/android/settings/display/darkmode/DarkModeCustomPreferenceController;->mTimeFormatter:Ljava/text/DateFormat;
+
+    const-string p0, "UTC"
+
+    invoke-static {p0}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Ljava/text/DateFormat;->setTimeZone(Ljava/util/TimeZone;)V
+
     return-void
 .end method
 
@@ -79,11 +109,79 @@
 
     iput-object p4, p0, Lcom/android/settings/display/darkmode/DarkModeCustomPreferenceController;->mFormat:Lcom/android/settings/display/darkmode/TimeFormatter;
 
+    invoke-static {p1}, Landroid/text/format/DateFormat;->getTimeFormat(Landroid/content/Context;)Ljava/text/DateFormat;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/android/settings/display/darkmode/DarkModeCustomPreferenceController;->mTimeFormatter:Ljava/text/DateFormat;
+
+    const-string p0, "UTC"
+
+    invoke-static {p0}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Ljava/text/DateFormat;->setTimeZone(Ljava/util/TimeZone;)V
+
     return-void
 .end method
 
+.method private getFormattedTimeString(Ljava/time/LocalTime;)Ljava/lang/String;
+    .locals 3
+
+    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/settings/display/darkmode/DarkModeCustomPreferenceController;->mTimeFormatter:Ljava/text/DateFormat;
+
+    invoke-virtual {v1}, Ljava/text/DateFormat;->getTimeZone()Ljava/util/TimeZone;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/Calendar;->setTimeZone(Ljava/util/TimeZone;)V
+
+    invoke-virtual {p1}, Ljava/time/LocalTime;->getHour()I
+
+    move-result v1
+
+    const/16 v2, 0xb
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/Calendar;->set(II)V
+
+    invoke-virtual {p1}, Ljava/time/LocalTime;->getMinute()I
+
+    move-result p1
+
+    const/16 v1, 0xc
+
+    invoke-virtual {v0, v1, p1}, Ljava/util/Calendar;->set(II)V
+
+    const/16 p1, 0xd
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, p1, v1}, Ljava/util/Calendar;->set(II)V
+
+    const/16 p1, 0xe
+
+    invoke-virtual {v0, p1, v1}, Ljava/util/Calendar;->set(II)V
+
+    iget-object p0, p0, Lcom/android/settings/display/darkmode/DarkModeCustomPreferenceController;->mTimeFormatter:Ljava/text/DateFormat;
+
+    invoke-virtual {v0}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method private synthetic lambda$getDialog$0(Lcom/google/android/material/picker/TimePicker;II)V
-    .locals 0
+    .locals 1
 
     invoke-static {p2, p3}, Ljava/time/LocalTime;->of(II)Ljava/time/LocalTime;
 
@@ -99,15 +197,83 @@
 
     move-result p2
 
+    const/4 p3, 0x1
+
+    if-eqz p2, :cond_1
+
+    iget-object p2, p0, Lcom/android/settings/display/darkmode/DarkModeCustomPreferenceController;->mUiModeManager:Landroid/app/UiModeManager;
+
+    invoke-virtual {p2}, Landroid/app/UiModeManager;->getCustomNightModeEnd()Ljava/time/LocalTime;
+
+    move-result-object p2
+
+    invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
     if-eqz p2, :cond_0
 
+    iget-object p1, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    sget p2, Lcom/android/settings/R$string;->timepower_time_duplicate:I
+
+    invoke-static {p1, p2, p3}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/widget/Toast;->show()V
+
+    goto :goto_0
+
+    :cond_0
     iget-object p2, p0, Lcom/android/settings/display/darkmode/DarkModeCustomPreferenceController;->mUiModeManager:Landroid/app/UiModeManager;
 
     invoke-virtual {p2, p1}, Landroid/app/UiModeManager;->setCustomNightModeStart(Ljava/time/LocalTime;)V
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
+    iget-object p2, p0, Lcom/android/settings/display/darkmode/DarkModeCustomPreferenceController;->mUiModeManager:Landroid/app/UiModeManager;
+
+    invoke-virtual {p2}, Landroid/app/UiModeManager;->getCustomNightModeStart()Ljava/time/LocalTime;
+
+    move-result-object p2
+
+    invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    iget-object p1, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    sget p2, Lcom/android/settings/R$string;->timepower_time_duplicate:I
+
+    invoke-static {p1, p2, p3}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/widget/Toast;->show()V
+
+    goto :goto_0
+
+    :cond_2
     iget-object p2, p0, Lcom/android/settings/display/darkmode/DarkModeCustomPreferenceController;->mUiModeManager:Landroid/app/UiModeManager;
 
     invoke-virtual {p2, p1}, Landroid/app/UiModeManager;->setCustomNightModeEnd(Ljava/time/LocalTime;)V
@@ -115,11 +281,11 @@
     :goto_0
     iget-object p0, p0, Lcom/android/settings/display/darkmode/DarkModeCustomPreferenceController;->mFragmet:Lcom/android/settings/display/darkmode/DarkModeSettingsFragment;
 
-    if-eqz p0, :cond_1
+    if-eqz p0, :cond_3
 
     invoke-virtual {p0}, Lcom/android/settings/display/darkmode/DarkModeSettingsFragment;->refresh()V
 
-    :cond_1
+    :cond_3
     return-void
 .end method
 
@@ -381,9 +547,7 @@
     move-result-object v0
 
     :goto_0
-    iget-object p0, p0, Lcom/android/settings/display/darkmode/DarkModeCustomPreferenceController;->mFormat:Lcom/android/settings/display/darkmode/TimeFormatter;
-
-    invoke-virtual {p0, v0}, Lcom/android/settings/display/darkmode/TimeFormatter;->of(Ljava/time/LocalTime;)Ljava/lang/String;
+    invoke-direct {p0, v0}, Lcom/android/settings/display/darkmode/DarkModeCustomPreferenceController;->getFormattedTimeString(Ljava/time/LocalTime;)Ljava/lang/String;
 
     move-result-object p0
 

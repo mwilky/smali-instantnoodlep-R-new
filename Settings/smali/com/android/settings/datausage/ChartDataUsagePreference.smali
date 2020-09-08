@@ -14,6 +14,8 @@
 # instance fields
 .field private mEnd:J
 
+.field private mIsHotSpot:Z
+
 .field private final mLimitColor:I
 
 .field private mNetworkCycleChartData:Lcom/android/settingslib/net/NetworkCycleChartData;
@@ -24,6 +26,8 @@
 
 .field private mStart:J
 
+.field private mSubId:I
+
 .field private mUsageAmount:Landroid/widget/TextView;
 
 .field private mUsageAmountString:Ljava/lang/String;
@@ -33,17 +37,19 @@
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 0
+    .locals 1
 
     invoke-direct {p0, p1, p2}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    const/4 p2, 0x0
+
+    iput p2, p0, Lcom/android/settings/datausage/ChartDataUsagePreference;->mSubId:I
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-object p2
+    move-result-object v0
 
-    iput-object p2, p0, Lcom/android/settings/datausage/ChartDataUsagePreference;->mResources:Landroid/content/res/Resources;
-
-    const/4 p2, 0x0
+    iput-object v0, p0, Lcom/android/settings/datausage/ChartDataUsagePreference;->mResources:Landroid/content/res/Resources;
 
     invoke-virtual {p0, p2}, Landroidx/preference/Preference;->setSelectable(Z)V
 
@@ -115,6 +121,10 @@
     cmp-long v3, v1, v3
 
     if-eqz v3, :cond_2
+
+    iget-boolean v3, p0, Lcom/android/settings/datausage/ChartDataUsagePreference;->mIsHotSpot:Z
+
+    if-nez v3, :cond_2
 
     const-wide/32 v3, 0x80000
 
@@ -950,22 +960,38 @@
     return-void
 .end method
 
+.method public setIsHotspot(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/settings/datausage/ChartDataUsagePreference;->mIsHotSpot:Z
+
+    return-void
+.end method
+
 .method public setNetworkCycleData(Lcom/android/settingslib/net/NetworkCycleChartData;)V
-    .locals 2
+    .locals 4
 
     iput-object p1, p0, Lcom/android/settings/datausage/ChartDataUsagePreference;->mNetworkCycleChartData:Lcom/android/settingslib/net/NetworkCycleChartData;
 
-    invoke-virtual {p1}, Lcom/android/settingslib/net/NetworkCycleData;->getStartTime()J
+    invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
-    move-result-wide v0
+    move-result-object p1
 
-    iput-wide v0, p0, Lcom/android/settings/datausage/ChartDataUsagePreference;->mStart:J
+    iget v0, p0, Lcom/android/settings/datausage/ChartDataUsagePreference;->mSubId:I
 
-    invoke-virtual {p1}, Lcom/android/settingslib/net/NetworkCycleData;->getEndTime()J
+    invoke-static {p1, v0}, Lcom/android/settings/datausage/OPDataUsageUtils;->getDataUsageSectionTimeMillByAccountDay(Landroid/content/Context;I)[J
 
-    move-result-wide v0
+    move-result-object p1
 
-    iput-wide v0, p0, Lcom/android/settings/datausage/ChartDataUsagePreference;->mEnd:J
+    const/4 v0, 0x0
+
+    aget-wide v0, p1, v0
+
+    const/4 v2, 0x1
+
+    aget-wide v2, p1, v2
+
+    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/settings/datausage/ChartDataUsagePreference;->setVisibleRange(JJ)V
 
     invoke-virtual {p0}, Landroidx/preference/Preference;->notifyChanged()V
 
@@ -973,10 +999,85 @@
 .end method
 
 .method public setNetworkPolicy(Landroid/net/NetworkPolicy;)V
-    .locals 0
+    .locals 5
 
     iput-object p1, p0, Lcom/android/settings/datausage/ChartDataUsagePreference;->mPolicy:Landroid/net/NetworkPolicy;
 
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    iget v0, p0, Lcom/android/settings/datausage/ChartDataUsagePreference;->mSubId:I
+
+    invoke-static {p1, v0}, Lcom/android/settings/datausage/OPDataUsageUtils;->getDataWarnState(Landroid/content/Context;I)I
+
+    move-result p1
+
+    invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    iget v1, p0, Lcom/android/settings/datausage/ChartDataUsagePreference;->mSubId:I
+
+    invoke-static {v0, v1}, Lcom/android/settings/datausage/OPDataUsageUtils;->getDataWarnBytes(Landroid/content/Context;I)J
+
+    move-result-wide v0
+
+    const-wide/16 v2, -0x1
+
+    const/4 v4, 0x1
+
+    if-ne p1, v4, :cond_0
+
+    iget-object p1, p0, Lcom/android/settings/datausage/ChartDataUsagePreference;->mPolicy:Landroid/net/NetworkPolicy;
+
+    iput-wide v0, p1, Landroid/net/NetworkPolicy;->warningBytes:J
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p1, p0, Lcom/android/settings/datausage/ChartDataUsagePreference;->mPolicy:Landroid/net/NetworkPolicy;
+
+    iput-wide v2, p1, Landroid/net/NetworkPolicy;->warningBytes:J
+
+    :goto_0
+    invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    iget v0, p0, Lcom/android/settings/datausage/ChartDataUsagePreference;->mSubId:I
+
+    invoke-static {p1, v0}, Lcom/android/settings/datausage/OPDataUsageUtils;->getDataLimitState(Landroid/content/Context;I)I
+
+    move-result p1
+
+    invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    iget v1, p0, Lcom/android/settings/datausage/ChartDataUsagePreference;->mSubId:I
+
+    invoke-static {v0, v1}, Lcom/android/settings/datausage/OPDataUsageUtils;->getDataLimitBytes(Landroid/content/Context;I)J
+
+    move-result-wide v0
+
+    if-ne p1, v4, :cond_1
+
+    iget-object p1, p0, Lcom/android/settings/datausage/ChartDataUsagePreference;->mPolicy:Landroid/net/NetworkPolicy;
+
+    iput-wide v0, p1, Landroid/net/NetworkPolicy;->limitBytes:J
+
+    goto :goto_1
+
+    :cond_1
+    iget-object p1, p0, Lcom/android/settings/datausage/ChartDataUsagePreference;->mPolicy:Landroid/net/NetworkPolicy;
+
+    iput-wide v2, p1, Landroid/net/NetworkPolicy;->limitBytes:J
+
+    :cond_2
+    :goto_1
     invoke-virtual {p0}, Landroidx/preference/Preference;->notifyChanged()V
 
     return-void
@@ -990,6 +1091,8 @@
 
 .method public setSubId(I)V
     .locals 0
+
+    iput p1, p0, Lcom/android/settings/datausage/ChartDataUsagePreference;->mSubId:I
 
     return-void
 .end method

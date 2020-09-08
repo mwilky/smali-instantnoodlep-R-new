@@ -482,33 +482,12 @@
 .end method
 
 .method public onStop()V
-    .locals 3
+    .locals 0
 
     invoke-super {p0}, Landroidx/appcompat/app/AppCompatActivity;->onStop()V
 
-    invoke-virtual {p0}, Lcom/android/settings/SettingsActivity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v0
-
-    const-string v1, "foreground_only"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
-
-    move-result v0
-
     invoke-virtual {p0}, Landroid/app/Activity;->isChangingConfigurations()Z
 
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lcom/android/settings/password/ConfirmDeviceCredentialBaseActivity;->finish()V
-
-    :cond_0
     return-void
 .end method
 

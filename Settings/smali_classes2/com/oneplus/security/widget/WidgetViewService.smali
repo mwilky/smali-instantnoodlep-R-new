@@ -540,32 +540,35 @@
     return-void
 .end method
 
-.method public notifyMonthlyRemainingDataChanged(JJ)V
-    .locals 8
+.method public declared-synchronized notifyMonthlyRemainingDataChanged(JJ)V
+    .locals 6
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    monitor-enter p0
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    :try_start_0
+    const-string v0, "WidgetViewService"
 
-    const-string v1, "--------notifyMonthlyRemainingDataChanged-----------total="
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    const-string v2, "--------notifyMonthlyRemainingDataChanged-----------total="
 
-    const-string v1, ",used="
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p3, p4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    const-string v2, ",used="
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    invoke-virtual {v1, p3, p4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string v1, "WidgetViewService"
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-static {v1, v0}, Lcom/oneplus/security/utils/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/oneplus/security/utils/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iput-wide p3, p0, Lcom/oneplus/security/widget/WidgetViewService;->mUsed:J
 
@@ -575,58 +578,64 @@
 
     invoke-direct {v0}, Lcom/oneplus/security/widget/WidgetData;-><init>()V
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, v2}, Lcom/oneplus/security/widget/WidgetData;->setType(I)V
+    invoke-virtual {v0, v1}, Lcom/oneplus/security/widget/WidgetData;->setType(I)V
 
-    sget-object v3, Lcom/oneplus/security/widget/WidgetViewService;->dataLeftTitle:Ljava/lang/String;
+    sget-object v2, Lcom/oneplus/security/widget/WidgetViewService;->dataLeftTitle:Ljava/lang/String;
 
-    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v3
+    move-result v2
 
-    if-nez v3, :cond_0
+    if-nez v2, :cond_0
 
-    sget-object v3, Lcom/oneplus/security/widget/WidgetViewService;->dataUsedTitle:Ljava/lang/String;
+    sget-object v2, Lcom/oneplus/security/widget/WidgetViewService;->dataUsedTitle:Ljava/lang/String;
 
-    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v3
+    move-result v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-eqz v3, :cond_1
+    if-eqz v2, :cond_1
 
     :cond_0
-    :try_start_0
+    :try_start_1
     invoke-virtual {p0}, Landroid/app/Service;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v3
+    move-result-object v2
 
-    sget v4, Lcom/android/settings/R$string;->data_usage_left_title:I
+    sget v3, Lcom/android/settings/R$string;->data_usage_left_title:I
 
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    sput-object v3, Lcom/oneplus/security/widget/WidgetViewService;->dataLeftTitle:Ljava/lang/String;
+    sput-object v2, Lcom/oneplus/security/widget/WidgetViewService;->dataLeftTitle:Ljava/lang/String;
 
     invoke-virtual {p0}, Landroid/app/Service;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v3
+    move-result-object v2
 
-    sget v4, Lcom/android/settings/R$string;->traffic_package_used:I
+    sget v3, Lcom/android/settings/R$string;->traffic_package_used:I
 
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    sput-object v3, Lcom/oneplus/security/widget/WidgetViewService;->dataUsedTitle:Ljava/lang/String;
-    :try_end_0
-    .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    sput-object v2, Lcom/oneplus/security/widget/WidgetViewService;->dataUsedTitle:Ljava/lang/String;
+    :try_end_1
+    .catch Landroid/content/res/Resources$NotFoundException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
     :catch_0
-    move-exception v3
+    move-exception v2
+
+    :try_start_2
+    const-string v3, "WidgetViewService"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -636,7 +645,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Landroid/content/res/Resources$NotFoundException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v2}, Landroid/content/res/Resources$NotFoundException;->getMessage()Ljava/lang/String;
 
     move-result-object v5
 
@@ -646,53 +655,63 @@
 
     move-result-object v4
 
-    invoke-static {v1, v4}, Lcom/oneplus/security/utils/LogUtils;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/oneplus/security/utils/LogUtils;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v3}, Landroid/content/res/Resources$NotFoundException;->printStackTrace()V
+    invoke-virtual {v2}, Landroid/content/res/Resources$NotFoundException;->printStackTrace()V
 
     :cond_1
     :goto_0
-    const-wide/16 v3, -0x1
+    const-wide/16 v2, -0x1
 
-    cmp-long v3, p3, v3
+    cmp-long v2, p3, v2
 
-    const-string v4, ""
-
-    if-nez v3, :cond_2
+    if-nez v2, :cond_2
 
     const-string p1, "-"
 
     invoke-virtual {v0, p1}, Lcom/oneplus/security/widget/WidgetData;->setValue(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v4}, Lcom/oneplus/security/widget/WidgetData;->setUnits(Ljava/lang/String;)V
+    const-string p1, ""
+
+    invoke-virtual {v0, p1}, Lcom/oneplus/security/widget/WidgetData;->setUnits(Ljava/lang/String;)V
 
     sget-object p1, Lcom/oneplus/security/widget/WidgetViewService;->dataUsedTitle:Ljava/lang/String;
 
     invoke-virtual {v0, p1}, Lcom/oneplus/security/widget/WidgetData;->setTitle(Ljava/lang/String;)V
 
-    goto :goto_3
+    goto/16 :goto_4
 
     :cond_2
-    iget v3, p0, Lcom/oneplus/security/widget/WidgetViewService;->mCurrentDataSim:I
+    iget v2, p0, Lcom/oneplus/security/widget/WidgetViewService;->mCurrentDataSim:I
 
-    invoke-static {p0, v3}, Lcom/oneplus/security/network/trafficalarm/TrafficUsageAlarmUtils;->getDataTotalState(Landroid/content/Context;I)Z
+    invoke-static {p0, v2}, Lcom/oneplus/security/network/trafficalarm/TrafficUsageAlarmUtils;->getDataTotalState(Landroid/content/Context;I)Z
 
-    move-result v3
+    move-result v2
 
-    const/4 v5, 0x1
+    const/4 v3, 0x1
 
-    xor-int/2addr v3, v5
+    if-nez v2, :cond_3
 
-    iput-boolean v3, p0, Lcom/oneplus/security/widget/WidgetViewService;->dataTitleIsUsed:Z
+    move v2, v3
 
-    :try_start_1
+    goto :goto_1
+
+    :cond_3
+    move v2, v1
+
+    :goto_1
+    iput-boolean v2, p0, Lcom/oneplus/security/widget/WidgetViewService;->dataTitleIsUsed:Z
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :try_start_3
     invoke-virtual {p0}, Landroid/app/Service;->getApplicationContext()Landroid/content/Context;
 
-    move-result-object v3
+    move-result-object v2
 
     sub-long/2addr p1, p3
 
-    invoke-static {v3, p1, p2, v5, v5}, Lcom/oneplus/security/utils/Utils;->getFormattedFileSizeAndUnitForDisplay(Landroid/content/Context;JZZ)[Ljava/lang/String;
+    invoke-static {v2, p1, p2, v3, v3}, Lcom/oneplus/security/utils/Utils;->getFormattedFileSizeAndUnitForDisplay(Landroid/content/Context;JZZ)[Ljava/lang/String;
 
     move-result-object p1
 
@@ -700,40 +719,52 @@
 
     move-result-object p2
 
-    const-wide/16 v6, 0x0
+    const-wide/16 v4, 0x0
 
-    cmp-long v3, p3, v6
+    cmp-long v2, p3, v4
 
-    if-lez v3, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    move-wide p3, v6
-
-    :goto_1
-    invoke-static {p2, p3, p4, v5, v5}, Lcom/oneplus/security/utils/Utils;->getFormattedFileSizeAndUnitForDisplay(Landroid/content/Context;JZZ)[Ljava/lang/String;
-
-    move-result-object p2
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+    if-lez v2, :cond_4
 
     goto :goto_2
+
+    :cond_4
+    move-wide p3, v4
+
+    :goto_2
+    invoke-static {p2, p3, p4, v3, v3}, Lcom/oneplus/security/utils/Utils;->getFormattedFileSizeAndUnitForDisplay(Landroid/content/Context;JZZ)[Ljava/lang/String;
+
+    move-result-object p2
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    goto :goto_3
 
     :catch_1
     move-exception p1
 
-    filled-new-array {v4, v4}, [Ljava/lang/String;
+    :try_start_4
+    const-string p2, ""
+
+    const-string p3, ""
+
+    filled-new-array {p2, p3}, [Ljava/lang/String;
 
     move-result-object p2
 
-    filled-new-array {v4, v4}, [Ljava/lang/String;
+    const-string p3, ""
+
+    const-string p4, ""
+
+    filled-new-array {p3, p4}, [Ljava/lang/String;
 
     move-result-object p3
 
-    const-string p4, "getFormattedFileSizeAndUnit error!!!"
+    const-string p4, "WidgetViewService"
 
-    invoke-static {v1, p4}, Lcom/oneplus/security/utils/LogUtils;->e(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v2, "getFormattedFileSizeAndUnit error!!!"
+
+    invoke-static {p4, v2}, Lcom/oneplus/security/utils/LogUtils;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -741,16 +772,16 @@
 
     move-object p2, p3
 
-    :goto_2
+    :goto_3
     iget-boolean p3, p0, Lcom/oneplus/security/widget/WidgetViewService;->dataTitleIsUsed:Z
 
-    if-nez p3, :cond_4
+    if-nez p3, :cond_5
 
-    aget-object p2, p1, v2
+    aget-object p2, p1, v1
 
     invoke-virtual {v0, p2}, Lcom/oneplus/security/widget/WidgetData;->setValue(Ljava/lang/String;)V
 
-    aget-object p1, p1, v5
+    aget-object p1, p1, v3
 
     invoke-virtual {v0, p1}, Lcom/oneplus/security/widget/WidgetData;->setUnits(Ljava/lang/String;)V
 
@@ -758,14 +789,14 @@
 
     invoke-virtual {v0, p1}, Lcom/oneplus/security/widget/WidgetData;->setTitle(Ljava/lang/String;)V
 
-    goto :goto_3
+    goto :goto_4
 
-    :cond_4
-    aget-object p1, p2, v2
+    :cond_5
+    aget-object p1, p2, v1
 
     invoke-virtual {v0, p1}, Lcom/oneplus/security/widget/WidgetData;->setValue(Ljava/lang/String;)V
 
-    aget-object p1, p2, v5
+    aget-object p1, p2, v3
 
     invoke-virtual {v0, p1}, Lcom/oneplus/security/widget/WidgetData;->setUnits(Ljava/lang/String;)V
 
@@ -773,16 +804,18 @@
 
     invoke-virtual {v0, p1}, Lcom/oneplus/security/widget/WidgetData;->setTitle(Ljava/lang/String;)V
 
-    :goto_3
+    :goto_4
     iget-object p1, p0, Lcom/oneplus/security/widget/WidgetViewService;->mDataUsage:Lcom/oneplus/security/widget/WidgetData;
 
-    if-eqz p1, :cond_5
+    if-eqz p1, :cond_6
+
+    iget-object p1, p0, Lcom/oneplus/security/widget/WidgetViewService;->mDataUsage:Lcom/oneplus/security/widget/WidgetData;
 
     invoke-virtual {p1}, Lcom/oneplus/security/widget/WidgetData;->getValue()Ljava/lang/String;
 
     move-result-object p1
 
-    if-eqz p1, :cond_5
+    if-eqz p1, :cond_6
 
     iget-object p1, p0, Lcom/oneplus/security/widget/WidgetViewService;->mDataUsage:Lcom/oneplus/security/widget/WidgetData;
 
@@ -798,7 +831,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_5
+    if-eqz p1, :cond_6
 
     iget-object p1, p0, Lcom/oneplus/security/widget/WidgetViewService;->mDataUsage:Lcom/oneplus/security/widget/WidgetData;
 
@@ -806,7 +839,7 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_5
+    if-eqz p1, :cond_6
 
     iget-object p1, p0, Lcom/oneplus/security/widget/WidgetViewService;->mDataUsage:Lcom/oneplus/security/widget/WidgetData;
 
@@ -822,7 +855,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_5
+    if-eqz p1, :cond_6
 
     iget-object p1, p0, Lcom/oneplus/security/widget/WidgetViewService;->mDataUsage:Lcom/oneplus/security/widget/WidgetData;
 
@@ -830,7 +863,7 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_5
+    if-eqz p1, :cond_6
 
     iget-object p1, p0, Lcom/oneplus/security/widget/WidgetViewService;->mDataUsage:Lcom/oneplus/security/widget/WidgetData;
 
@@ -846,15 +879,22 @@
 
     move-result p1
 
-    if-eqz p1, :cond_5
+    if-eqz p1, :cond_6
 
-    const-string p0, "mDataUsage == data"
+    const-string p1, "WidgetViewService"
 
-    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    const-string p2, "mDataUsage == data"
+
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    monitor-exit p0
 
     return-void
 
-    :cond_5
+    :cond_6
+    :try_start_5
     iput-object v0, p0, Lcom/oneplus/security/widget/WidgetViewService;->mDataUsage:Lcom/oneplus/security/widget/WidgetData;
 
     const/4 p1, 0x2
@@ -862,8 +902,19 @@
     const-wide/16 p2, 0x3e8
 
     invoke-direct {p0, p1, v0, p2, p3}, Lcom/oneplus/security/widget/WidgetViewService;->sendHandlerMessage(ILcom/oneplus/security/widget/WidgetData;J)V
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    monitor-exit p0
 
     return-void
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit p0
+
+    throw p1
 .end method
 
 .method public onBind(Landroid/content/Intent;)Landroid/os/IBinder;

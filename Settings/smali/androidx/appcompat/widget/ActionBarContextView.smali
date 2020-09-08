@@ -323,6 +323,14 @@
     return p0
 .end method
 
+.method public getCloseView()Landroid/view/View;
+    .locals 0
+
+    iget-object p0, p0, Landroidx/appcompat/widget/ActionBarContextView;->mClose:Landroid/view/View;
+
+    return-object p0
+.end method
+
 .method public bridge synthetic getContentHeight()I
     .locals 0
 
@@ -331,6 +339,14 @@
     move-result p0
 
     return p0
+.end method
+
+.method public getMenuView()Landroidx/appcompat/widget/ActionMenuView;
+    .locals 0
+
+    iget-object p0, p0, Landroidx/appcompat/widget/AbsActionBarView;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
+
+    return-object p0
 .end method
 
 .method public getSubtitle()Ljava/lang/CharSequence;

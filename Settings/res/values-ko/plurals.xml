@@ -229,7 +229,7 @@
         <item quantity="one">You still have %1$d chance</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
-        <item quantity="other">%d초 후 다시 시도하십시오.</item>
+        <item quantity="other">%d초 후 다시 시도하세요.</item>
         <item quantity="one">Try again in %d second.</item>
     </plurals>
     <plurals name="oneplus_zen_mode_duration_summary_time_hours">
@@ -237,7 +237,7 @@
         <item quantity="one">1 hour (unless turned on automatically)</item>
     </plurals>
     <plurals name="op_location_settings_summary_location_on">
-        <item quantity="other">On - %1$d apps have access to location</item>
+        <item quantity="other">켬 - 앱 %1$d개가 위치에 액세스할 수 있음</item>
         <item quantity="one">On - %1$d app has access to location</item>
     </plurals>
     <plurals name="permission_bar_chart_label">
@@ -389,8 +389,8 @@
         <item quantity="one">예약 1개 설정됨</item>
     </plurals>
     <plurals name="zen_mode_sound_summary_summary_off_info">
-        <item quantity="other">%d개의 예약이 자동으로 설정될 수 있습니다.</item>
-        <item quantity="one">1개의 예약이 자동으로 설정될 수 있습니다.</item>
+        <item quantity="other">%d개의 예약이 자동으로 사용 설정될 수 있습니다.</item>
+        <item quantity="one">1개의 예약이 자동으로 사용 설정될 수 있습니다.</item>
     </plurals>
     <plurals name="zen_mode_starred_contacts_summary_additional_contacts">
         <item quantity="other">외 %d명</item>

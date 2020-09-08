@@ -50,6 +50,14 @@
     return-void
 .end method
 
+.method static synthetic access$000(Lcom/oneplus/settings/SettingsBaseApplication;Landroid/content/Context;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/oneplus/settings/SettingsBaseApplication;->startOtherTask(Landroid/content/Context;)V
+
+    return-void
+.end method
+
 .method public static getContext()Landroid/content/Context;
     .locals 1
 
@@ -216,7 +224,7 @@
 .end method
 
 .method public onCreate()V
-    .locals 1
+    .locals 4
 
     invoke-super {p0}, Landroid/app/Application;->onCreate()V
 
@@ -236,9 +244,17 @@
 
     invoke-virtual {v0}, Lcom/oneplus/settings/OPOnlineConfigManager;->init()V
 
-    sget-object v0, Lcom/oneplus/settings/SettingsBaseApplication;->mApplication:Landroid/app/Application;
+    invoke-static {}, Lcom/oneplus/settings/SettingsBaseApplication;->getHandler()Landroid/os/Handler;
 
-    invoke-direct {p0, v0}, Lcom/oneplus/settings/SettingsBaseApplication;->startOtherTask(Landroid/content/Context;)V
+    move-result-object v0
+
+    new-instance v1, Lcom/oneplus/settings/SettingsBaseApplication$1;
+
+    invoke-direct {v1, p0}, Lcom/oneplus/settings/SettingsBaseApplication$1;-><init>(Lcom/oneplus/settings/SettingsBaseApplication;)V
+
+    const-wide/16 v2, 0x3e8
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     return-void
 .end method

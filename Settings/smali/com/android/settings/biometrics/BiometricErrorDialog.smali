@@ -37,6 +37,24 @@
 
     move-result p1
 
+    sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v2, "zhuyang-BiometricErrorDialog-onCreateDialog-forSetup:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
     if-eqz p1, :cond_1
 
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isO2()Z
@@ -129,16 +147,62 @@
 .end method
 
 .method public onStart()V
-    .locals 0
+    .locals 4
 
     invoke-super {p0}, Lcom/android/settingslib/core/lifecycle/ObservableDialogFragment;->onStart()V
 
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
+
+    move-result-object v0
+
+    const-string v1, "setup_for_back_fingerprint"
+
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
+
+    move-result v0
+
+    sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v3, "zhuyang--forSetup:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/android/settings/biometrics/BiometricErrorDialog;->mAlertDialog:Landroidx/appcompat/app/AlertDialog;
+
+    if-eqz v1, :cond_1
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isO2()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
     iget-object p0, p0, Lcom/android/settings/biometrics/BiometricErrorDialog;->mAlertDialog:Landroidx/appcompat/app/AlertDialog;
 
-    if-eqz p0, :cond_0
+    invoke-static {p0}, Lcom/oneplus/settings/utils/OPThemeUtils;->setDialogTextColorForO2SUW(Landroidx/appcompat/app/AlertDialog;)V
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p0, p0, Lcom/android/settings/biometrics/BiometricErrorDialog;->mAlertDialog:Landroidx/appcompat/app/AlertDialog;
 
     invoke-static {p0}, Lcom/oneplus/settings/utils/OPThemeUtils;->setDialogTextColor(Landroidx/appcompat/app/AlertDialog;)V
 
-    :cond_0
+    :cond_1
+    :goto_0
     return-void
 .end method

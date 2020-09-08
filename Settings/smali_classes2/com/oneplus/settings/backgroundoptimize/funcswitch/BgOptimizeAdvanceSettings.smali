@@ -10,7 +10,7 @@
 
 .field private mSleepStandBySwitchPreference:Landroidx/preference/SwitchPreference;
 
-.field private mSmartatteryBySwitchPreference:Landroidx/preference/SwitchPreference;
+.field private mSmartatteryBySwitchPreference:Lcom/android/settings/widget/MasterSwitchPreference;
 
 .field private mUserManager:Landroid/os/UserManager;
 
@@ -89,9 +89,9 @@
 
     move-result-object v1
 
-    check-cast v1, Landroidx/preference/SwitchPreference;
+    check-cast v1, Lcom/android/settings/widget/MasterSwitchPreference;
 
-    iput-object v1, p0, Lcom/oneplus/settings/backgroundoptimize/funcswitch/BgOptimizeAdvanceSettings;->mSmartatteryBySwitchPreference:Landroidx/preference/SwitchPreference;
+    iput-object v1, p0, Lcom/oneplus/settings/backgroundoptimize/funcswitch/BgOptimizeAdvanceSettings;->mSmartatteryBySwitchPreference:Lcom/android/settings/widget/MasterSwitchPreference;
 
     if-eqz v1, :cond_0
 
@@ -222,13 +222,13 @@
 
     invoke-virtual {p2, p0}, Landroidx/preference/Preference;->setSummary(I)V
 
-    instance-of p0, p2, Landroidx/preference/SwitchPreference;
+    instance-of p0, p2, Lcom/android/settings/widget/MasterSwitchPreference;
 
     if-eqz p0, :cond_3
 
-    check-cast p2, Landroidx/preference/SwitchPreference;
+    check-cast p2, Lcom/android/settings/widget/MasterSwitchPreference;
 
-    invoke-virtual {p2, v1}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+    invoke-virtual {p2, v1}, Lcom/android/settings/widget/MasterSwitchPreference;->setChecked(Z)V
 
     goto :goto_1
 
@@ -237,13 +237,13 @@
 
     invoke-virtual {p2, p0}, Landroidx/preference/Preference;->setSummary(I)V
 
-    instance-of p0, p2, Landroidx/preference/SwitchPreference;
+    instance-of p0, p2, Lcom/android/settings/widget/MasterSwitchPreference;
 
     if-eqz p0, :cond_3
 
-    check-cast p2, Landroidx/preference/SwitchPreference;
+    check-cast p2, Lcom/android/settings/widget/MasterSwitchPreference;
 
-    invoke-virtual {p2, v0}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+    invoke-virtual {p2, v0}, Lcom/android/settings/widget/MasterSwitchPreference;->setChecked(Z)V
 
     :cond_3
     :goto_1
@@ -382,11 +382,11 @@
     const/4 v2, 0x0
 
     :goto_1
-    iget-object p0, p0, Lcom/oneplus/settings/backgroundoptimize/funcswitch/BgOptimizeAdvanceSettings;->mSmartatteryBySwitchPreference:Landroidx/preference/SwitchPreference;
+    iget-object p0, p0, Lcom/oneplus/settings/backgroundoptimize/funcswitch/BgOptimizeAdvanceSettings;->mSmartatteryBySwitchPreference:Lcom/android/settings/widget/MasterSwitchPreference;
 
     if-eqz p0, :cond_2
 
-    invoke-virtual {p0, v2}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+    invoke-virtual {p0, v2}, Lcom/android/settings/widget/MasterSwitchPreference;->setChecked(Z)V
 
     :cond_2
     return-void

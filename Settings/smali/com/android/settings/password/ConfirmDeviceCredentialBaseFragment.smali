@@ -16,6 +16,8 @@
 
 
 # instance fields
+.field protected isLockedOutStage:Z
+
 .field protected mCancelButton:Landroid/widget/Button;
 
 .field protected mDevicePolicyManager:Landroid/app/admin/DevicePolicyManager;

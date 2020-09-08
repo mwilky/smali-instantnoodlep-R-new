@@ -86,6 +86,46 @@
     return-void
 .end method
 
+.method private addUICCAppInfo(Ljava/util/ArrayList;)Ljava/util/ArrayList;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList<",
+            "Lcom/android/settings/nfc/PaymentBackend$PaymentAppInfo;",
+            ">;)",
+            "Ljava/util/ArrayList<",
+            "Lcom/android/settings/nfc/PaymentBackend$PaymentAppInfo;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iget-object p0, p0, Lcom/android/settings/nfc/PaymentBackend;->mContext:Landroid/content/Context;
+
+    invoke-static {p0}, Lcom/android/settings/nfc/NfcUiccUtils;->getSEList(Landroid/content/Context;)Ljava/util/List;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+
+    :cond_0
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+
+    return-object v0
+.end method
+
 
 # virtual methods
 .method public getDefaultApp()Lcom/android/settings/nfc/PaymentBackend$PaymentAppInfo;
@@ -121,6 +161,18 @@
 
     :cond_0
     const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method getDefaultUiccPaymentApp()Lcom/android/settings/nfc/PaymentBackend$PaymentAppInfo;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/nfc/PaymentBackend;->mContext:Landroid/content/Context;
+
+    invoke-static {p0}, Lcom/android/settings/nfc/NfcUiccUtils;->getUICCDefaultAppInfo(Landroid/content/Context;)Lcom/android/settings/nfc/PaymentBackend$PaymentAppInfo;
+
+    move-result-object p0
 
     return-object p0
 .end method
@@ -386,8 +438,76 @@
     goto :goto_0
 
     :cond_6
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportNfcUicc()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    invoke-direct {p0, v2}, Lcom/android/settings/nfc/PaymentBackend;->addUICCAppInfo(Ljava/util/ArrayList;)Ljava/util/ArrayList;
+
+    move-result-object v2
+
+    invoke-virtual {p0}, Lcom/android/settings/nfc/PaymentBackend;->getDefaultUiccPaymentApp()Lcom/android/settings/nfc/PaymentBackend$PaymentAppInfo;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_7
+
+    move-object v5, v0
+
+    :cond_7
     iput-object v2, p0, Lcom/android/settings/nfc/PaymentBackend;->mAppInfos:Ljava/util/ArrayList;
 
+    iget-object v0, p0, Lcom/android/settings/nfc/PaymentBackend;->fragment:Landroidx/fragment/app/Fragment;
+
+    if-eqz v0, :cond_9
+
+    instance-of v0, v0, Lcom/android/settings/nfc/PaymentSettings;
+
+    if-eqz v0, :cond_9
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_8
+
+    iget-object v0, p0, Lcom/android/settings/nfc/PaymentBackend;->fragment:Landroidx/fragment/app/Fragment;
+
+    check-cast v0, Lcom/android/settings/nfc/PaymentSettings;
+
+    invoke-virtual {v0}, Lcom/android/settings/SettingsPreferenceFragment;->getEmptyView()Landroid/view/View;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    goto :goto_2
+
+    :cond_8
+    iget-object v0, p0, Lcom/android/settings/nfc/PaymentBackend;->fragment:Landroidx/fragment/app/Fragment;
+
+    check-cast v0, Lcom/android/settings/nfc/PaymentSettings;
+
+    invoke-virtual {v0}, Lcom/android/settings/SettingsPreferenceFragment;->getEmptyView()Landroid/view/View;
+
+    move-result-object v0
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_9
+    :goto_2
     iput-object v5, p0, Lcom/android/settings/nfc/PaymentBackend;->mDefaultAppInfo:Lcom/android/settings/nfc/PaymentBackend$PaymentAppInfo;
 
     invoke-virtual {p0}, Lcom/android/settings/nfc/PaymentBackend;->makeCallbacks()V

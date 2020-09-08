@@ -44,7 +44,7 @@
 
 .field protected mPm:Landroid/content/pm/PackageManager;
 
-.field private mPreference:Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;
+.field private mPreference:Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;
 
 .field private mSelectAssistantAppDialog:Landroidx/appcompat/app/AlertDialog;
 
@@ -131,10 +131,10 @@
     return-object p0
 .end method
 
-.method static synthetic access$200(Lcom/oneplus/settings/OPDefaultAssistPreferenceController;)Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;
+.method static synthetic access$200(Lcom/oneplus/settings/OPDefaultAssistPreferenceController;)Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;
     .locals 0
 
-    iget-object p0, p0, Lcom/oneplus/settings/OPDefaultAssistPreferenceController;->mPreference:Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;
+    iget-object p0, p0, Lcom/oneplus/settings/OPDefaultAssistPreferenceController;->mPreference:Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;
 
     return-object p0
 .end method
@@ -479,7 +479,7 @@
     return p0
 .end method
 
-.method private synthetic lambda$displayPreference$0(Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;)V
+.method private synthetic lambda$displayPreference$0(Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;)V
     .locals 2
 
     new-instance p1, Landroid/content/Intent;
@@ -503,14 +503,14 @@
     return-void
 .end method
 
-.method private synthetic lambda$displayPreference$1(Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;)V
+.method private synthetic lambda$displayPreference$1(Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;)V
     .locals 4
 
-    iget-object p1, p0, Lcom/oneplus/settings/OPDefaultAssistPreferenceController;->mPreference:Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;
+    iget-object p1, p0, Lcom/oneplus/settings/OPDefaultAssistPreferenceController;->mPreference:Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;->setChecked(Z)V
+    invoke-virtual {p1, v0}, Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;->setChecked(Z)V
 
     invoke-direct {p0}, Lcom/oneplus/settings/OPDefaultAssistPreferenceController;->getCandidates()Ljava/util/List;
 
@@ -696,23 +696,23 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;
+    check-cast p1, Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;
 
-    iput-object p1, p0, Lcom/oneplus/settings/OPDefaultAssistPreferenceController;->mPreference:Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;
+    iput-object p1, p0, Lcom/oneplus/settings/OPDefaultAssistPreferenceController;->mPreference:Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;
 
-    new-instance v0, Lcom/oneplus/settings/-$$Lambda$OPDefaultAssistPreferenceController$r1cqR3PuUfUsiZG_rt-ejjs673M;
+    new-instance v0, Lcom/oneplus/settings/-$$Lambda$OPDefaultAssistPreferenceController$KWKnr-rDcn-7SAkG4n3ugI9yE2M;
 
-    invoke-direct {v0, p0}, Lcom/oneplus/settings/-$$Lambda$OPDefaultAssistPreferenceController$r1cqR3PuUfUsiZG_rt-ejjs673M;-><init>(Lcom/oneplus/settings/OPDefaultAssistPreferenceController;)V
+    invoke-direct {v0, p0}, Lcom/oneplus/settings/-$$Lambda$OPDefaultAssistPreferenceController$KWKnr-rDcn-7SAkG4n3ugI9yE2M;-><init>(Lcom/oneplus/settings/OPDefaultAssistPreferenceController;)V
 
-    invoke-virtual {p1, v0}, Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;->setOnGearClickListener(Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference$OnGearClickListener;)V
+    invoke-virtual {p1, v0}, Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;->setOnGearClickListener(Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference$OnGearClickListener;)V
 
-    iget-object p1, p0, Lcom/oneplus/settings/OPDefaultAssistPreferenceController;->mPreference:Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;
+    iget-object p1, p0, Lcom/oneplus/settings/OPDefaultAssistPreferenceController;->mPreference:Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;
 
-    new-instance v0, Lcom/oneplus/settings/-$$Lambda$OPDefaultAssistPreferenceController$cuUOQkPXJoNFauS9gjMOUskXozE;
+    new-instance v0, Lcom/oneplus/settings/-$$Lambda$OPDefaultAssistPreferenceController$EwxuNvCBke1qXrvlZH54u4VRWNM;
 
-    invoke-direct {v0, p0}, Lcom/oneplus/settings/-$$Lambda$OPDefaultAssistPreferenceController$cuUOQkPXJoNFauS9gjMOUskXozE;-><init>(Lcom/oneplus/settings/OPDefaultAssistPreferenceController;)V
+    invoke-direct {v0, p0}, Lcom/oneplus/settings/-$$Lambda$OPDefaultAssistPreferenceController$EwxuNvCBke1qXrvlZH54u4VRWNM;-><init>(Lcom/oneplus/settings/OPDefaultAssistPreferenceController;)V
 
-    invoke-virtual {p1, v0}, Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;->setOnRadioButtonClickListener(Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference$OnRadioButtonClickListener;)V
+    invoke-virtual {p1, v0}, Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;->setOnRadioButtonClickListener(Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference$OnRadioButtonClickListener;)V
 
     new-instance p1, Lcom/oneplus/settings/OPDefaultAssistPreferenceController$SettingObserver;
 
@@ -824,18 +824,18 @@
     return p0
 .end method
 
-.method public synthetic lambda$displayPreference$0$OPDefaultAssistPreferenceController(Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;)V
+.method public synthetic lambda$displayPreference$0$OPDefaultAssistPreferenceController(Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/oneplus/settings/OPDefaultAssistPreferenceController;->lambda$displayPreference$0(Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;)V
+    invoke-direct {p0, p1}, Lcom/oneplus/settings/OPDefaultAssistPreferenceController;->lambda$displayPreference$0(Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;)V
 
     return-void
 .end method
 
-.method public synthetic lambda$displayPreference$1$OPDefaultAssistPreferenceController(Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;)V
+.method public synthetic lambda$displayPreference$1$OPDefaultAssistPreferenceController(Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/oneplus/settings/OPDefaultAssistPreferenceController;->lambda$displayPreference$1(Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;)V
+    invoke-direct {p0, p1}, Lcom/oneplus/settings/OPDefaultAssistPreferenceController;->lambda$displayPreference$1(Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;)V
 
     return-void
 .end method
@@ -924,7 +924,7 @@
 
     if-nez v1, :cond_1
 
-    iget-object v0, p0, Lcom/oneplus/settings/OPDefaultAssistPreferenceController;->mPreference:Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;
+    iget-object v0, p0, Lcom/oneplus/settings/OPDefaultAssistPreferenceController;->mPreference:Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;
 
     iget-object v1, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
 
@@ -946,7 +946,7 @@
     move v1, v5
 
     :goto_0
-    invoke-virtual {v0, v1}, Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;->setChecked(Z)V
+    invoke-virtual {v0, v1}, Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;->setChecked(Z)V
 
     goto :goto_3
 
@@ -982,9 +982,9 @@
 
     if-nez v0, :cond_3
 
-    iget-object v0, p0, Lcom/oneplus/settings/OPDefaultAssistPreferenceController;->mPreference:Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;
+    iget-object v0, p0, Lcom/oneplus/settings/OPDefaultAssistPreferenceController;->mPreference:Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;
 
-    invoke-virtual {v0, v5}, Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;->setChecked(Z)V
+    invoke-virtual {v0, v5}, Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;->setChecked(Z)V
 
     iget-object v0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
 
@@ -997,7 +997,7 @@
     goto :goto_3
 
     :cond_3
-    iget-object v0, p0, Lcom/oneplus/settings/OPDefaultAssistPreferenceController;->mPreference:Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;
+    iget-object v0, p0, Lcom/oneplus/settings/OPDefaultAssistPreferenceController;->mPreference:Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;
 
     iget-object v1, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
 
@@ -1019,15 +1019,15 @@
     move v1, v5
 
     :goto_1
-    invoke-virtual {v0, v1}, Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;->setChecked(Z)V
+    invoke-virtual {v0, v1}, Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;->setChecked(Z)V
 
     goto :goto_3
 
     :cond_5
     :goto_2
-    iget-object v0, p0, Lcom/oneplus/settings/OPDefaultAssistPreferenceController;->mPreference:Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;
+    iget-object v0, p0, Lcom/oneplus/settings/OPDefaultAssistPreferenceController;->mPreference:Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;
 
-    invoke-virtual {v0, v5}, Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;->setChecked(Z)V
+    invoke-virtual {v0, v5}, Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;->setChecked(Z)V
 
     iget-object v0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
 
@@ -1120,7 +1120,7 @@
 
     move-result-object v0
 
-    iget-object p0, p0, Lcom/oneplus/settings/OPDefaultAssistPreferenceController;->mPreference:Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;
+    iget-object p0, p0, Lcom/oneplus/settings/OPDefaultAssistPreferenceController;->mPreference:Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;
 
     invoke-virtual {p0, v0}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
@@ -1128,7 +1128,7 @@
 
     :cond_8
     :goto_4
-    iget-object p0, p0, Lcom/oneplus/settings/OPDefaultAssistPreferenceController;->mPreference:Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;
+    iget-object p0, p0, Lcom/oneplus/settings/OPDefaultAssistPreferenceController;->mPreference:Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;
 
     sget v0, Lcom/android/settings/R$string;->no_notification_assistant:I
 
@@ -1137,7 +1137,7 @@
     goto :goto_5
 
     :cond_9
-    iget-object p0, p0, Lcom/oneplus/settings/OPDefaultAssistPreferenceController;->mPreference:Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;
+    iget-object p0, p0, Lcom/oneplus/settings/OPDefaultAssistPreferenceController;->mPreference:Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;
 
     sget v0, Lcom/android/settings/R$string;->no_notification_assistant:I
 
@@ -1152,7 +1152,7 @@
 
     invoke-super {p0, p1}, Lcom/android/settingslib/core/AbstractPreferenceController;->updateState(Landroidx/preference/Preference;)V
 
-    iget-object p1, p0, Lcom/oneplus/settings/OPDefaultAssistPreferenceController;->mPreference:Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;
+    iget-object p1, p0, Lcom/oneplus/settings/OPDefaultAssistPreferenceController;->mPreference:Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;
 
     iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
 
@@ -1175,7 +1175,7 @@
     move v1, v0
 
     :cond_0
-    invoke-virtual {p1, v1}, Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;->setChecked(Z)V
+    invoke-virtual {p1, v1}, Lcom/oneplus/settings/widget/OPCustomTwoTargetPreference;->setChecked(Z)V
 
     return-void
 .end method

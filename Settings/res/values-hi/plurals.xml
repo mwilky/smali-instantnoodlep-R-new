@@ -229,16 +229,16 @@
         <item quantity="one">आपके पास अभी भी %1$d अवसर है</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
-        <item quantity="other">%d सेकंड्स में दुबारा कोशिश करें।</item>
-        <item quantity="one">%d सेकंड में दुबारा कोशिश करें।</item>
+        <item quantity="other">%dसेकंड में पुनः प्रयास करें।</item>
+        <item quantity="one">%dसेकंड में पुन: प्रयास करें।</item>
     </plurals>
     <plurals name="oneplus_zen_mode_duration_summary_time_hours">
         <item quantity="other">घंटे (जब तक कि अपने आप से चालू न हो)</item>
         <item quantity="one">1 घंटे (जब तक कि अपने आप से चालू न हो)</item>
     </plurals>
     <plurals name="op_location_settings_summary_location_on">
-        <item quantity="other">On - %1$d apps have access to location</item>
-        <item quantity="one">On - %1$d app has access to location</item>
+        <item quantity="other">%1$d ऐप्स का स्थान पर एक्सेस है</item>
+        <item quantity="one">%1$d ऐप का स्थान पर एक्सेस है</item>
     </plurals>
     <plurals name="permission_bar_chart_label">
         <item quantity="other">%s ऐप्लिकेशन</item>

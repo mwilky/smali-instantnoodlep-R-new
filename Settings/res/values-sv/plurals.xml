@@ -225,8 +225,8 @@
         <item quantity="one">%d aktiv app</item>
     </plurals>
     <plurals name="oneplus_applock_wrong_pattern_warning">
-        <item quantity="other">Du har fortfarande %1$d chanser</item>
-        <item quantity="one">Du har fortfarande %1$d chans</item>
+        <item quantity="other">Du har %1$d försök kvar</item>
+        <item quantity="one">Du har %1$d försök kvar</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
         <item quantity="other">Försök igen om %d sekunder.</item>
@@ -237,8 +237,8 @@
         <item quantity="one">1 timme (om det inte stängs av automatiskt)</item>
     </plurals>
     <plurals name="op_location_settings_summary_location_on">
-        <item quantity="other">On - %1$d apps have access to location</item>
-        <item quantity="one">On - %1$d app has access to location</item>
+        <item quantity="other">På: %1$d appar har platsåtkomst</item>
+        <item quantity="one">På: %1$d app har platsåtkomst</item>
     </plurals>
     <plurals name="permission_bar_chart_label">
         <item quantity="other">%s appar</item>

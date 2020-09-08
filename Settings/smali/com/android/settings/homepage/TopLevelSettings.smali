@@ -131,6 +131,14 @@
     return p0
 .end method
 
+.method public getPostDelayTime()I
+    .locals 0
+
+    const/16 p0, 0xc8
+
+    return p0
+.end method
+
 .method protected getPreferenceScreenResId()I
     .locals 0
 
@@ -250,7 +258,7 @@
 .method protected shouldForceRoundedIcon()Z
     .locals 1
 
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->getPrefContext()Landroid/content/Context;
 
     move-result-object p0
 

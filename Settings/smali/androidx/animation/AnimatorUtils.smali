@@ -26,6 +26,8 @@
 
 .field public static final op_control_interpolator_fast_out_slow_in_auxiliary:Landroid/view/animation/Interpolator;
 
+.field public static final op_control_interpolator_fast_out_slow_in_standard:Landroid/view/animation/Interpolator;
+
 .field public static final op_control_interpolator_linear_out_slow_in:Landroid/view/animation/Interpolator;
 
 
@@ -44,6 +46,8 @@
     const/high16 v4, 0x3f800000    # 1.0f
 
     invoke-direct {v0, v1, v2, v3, v4}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
+
+    sput-object v0, Landroidx/animation/AnimatorUtils;->op_control_interpolator_fast_out_slow_in_standard:Landroid/view/animation/Interpolator;
 
     new-instance v0, Landroid/view/animation/PathInterpolator;
 

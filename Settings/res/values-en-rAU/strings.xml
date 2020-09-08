@@ -549,7 +549,7 @@ Just bring the devices together (typically back to back) and then tap your scree
     <string name="autofill_reset_developer_options_complete">Auto-fill developer options have been reset</string>
     <string name="automatic_brightness">Automatic brightness</string>
     <string name="automatic_storage_manager_activation_warning">Your storage is now being managed by the storage manager</string>
-    <string name="automatic_storage_manager_days_title">Remove photos &amp; videos</string>
+    <string name="automatic_storage_manager_days_title">Remove photos and videos</string>
     <string name="automatic_storage_manager_deactivation_warning">Turn off the storage manager?</string>
     <string name="automatic_storage_manager_freed_bytes">"%1$s total made available
 
@@ -697,7 +697,7 @@ To restrict the app, first turn on battery optimisation."</string>
 
 Top apps by battery usage:"</string>
     <string name="battery_tip_dialog_message_footer">Includes high-power background activity</string>
-    <string name="battery_tip_dialog_summary_message">"Your apps are using a normal amount of battery. If apps use too much battery, your phone will suggest actions that you can take.
+    <string name="battery_tip_dialog_summary_message">"Your apps are using a normal amount of battery. If apps use too much battery, your phone will suggest actions to take.
 
 You can always turn on Battery Saver if you’re running low on battery."</string>
     <string name="battery_tip_early_heads_up_done_summary">Some features may be limited</string>
@@ -728,7 +728,7 @@ Apps:
     <string name="battery_used_by">%1$s used by %2$s</string>
     <string name="battery_used_for">Used for ^1</string>
     <string name="bearer">Bearer</string>
-    <string name="billing_cycle">Data warning &amp; limit</string>
+    <string name="billing_cycle">Data warning and limit</string>
     <string name="billing_cycle_fragment_summary">Monthly on day %1$s</string>
     <string name="billing_cycle_less_than_one_day_left">Less than one day left</string>
     <string name="billing_cycle_none_left">No time remaining</string>
@@ -1415,9 +1415,9 @@ Some accounts may also automatically copy any changes that you make on the phone
     <string name="data_usage_forground_label">Foreground:</string>
     <string name="data_usage_label_background">Background</string>
     <string name="data_usage_label_foreground">Foreground</string>
-    <string name="data_usage_limit_dialog_mobile">"Your phone will turn off mobile data once it reaches the limit that you set.
+    <string name="data_usage_limit_dialog_mobile">"Your phone will turn off mobile data once it reaches the limit you set.
 
-Since data usage is measured by your phone, and your operator may account for usage differently, consider setting a conservative limit."</string>
+Since data usage is measured by your phone, and your carrier may account for usage differently, consider setting a conservative limit."</string>
     <string name="data_usage_limit_dialog_title">Limiting data usage</string>
     <string name="data_usage_limit_editor_title">Set data usage limit</string>
     <string name="data_usage_list_mobile">Mobile</string>
@@ -1893,7 +1893,7 @@ For more details, contact your organisation's admin."</string>
     <string name="fingerprint_intro_error_max">You’ve added the maximum number of fingerprints</string>
     <string name="fingerprint_intro_error_unknown">Can’t add more fingerprints</string>
     <string name="fingerprint_last_delete_confirm">Yes, remove</string>
-    <string name="fingerprint_last_delete_message">"You won't be able to use your fingerprints to unlock your phone, authorise purchases or sign in to apps"</string>
+    <string name="fingerprint_last_delete_message">"You won't be able to use your fingerprints to unlock your phone, authorise purchases, or sign in to apps"</string>
     <string name="fingerprint_last_delete_message_profile_challenge">"You won't be able to use your fingerprints to unlock your work profile, authorise purchases or sign in to work apps"</string>
     <string name="fingerprint_last_delete_title">Remove all fingerprints?</string>
     <string name="fingerprint_lock_screen_setup_skip_dialog_text">Protect your phone with a screen lock option so that no one will be able to use it if it is lost or stolen. You also need a screen lock option to set up fingerprint. Tap Cancel, then set a PIN, pattern or password.</string>
@@ -1992,8 +1992,8 @@ When you turn on automatic backup, device and app data is periodically saved rem
     <string name="header_category_wireless_networks">Wireless &amp; networks</string>
     <string name="header_data_and_synchronization">Data &amp; synchronisation</string>
     <string name="heavy_weight_stop_description">"This app can't be stopped safely. If you stop it, you may lose some of your current work."</string>
-    <string name="help_feedback_label">Help &amp; feedback</string>
-    <string name="help_label">Help &amp; feedback</string>
+    <string name="help_feedback_label">Help and feedback</string>
+    <string name="help_label">Help and feedback</string>
     <string name="hide_extra_apps">Show app usage</string>
     <string name="hide_silent_icons_summary">"Icons from gentle notifications aren't shown in the status bar"</string>
     <string name="hide_silent_icons_title">Hide icons from gentle notifications</string>
@@ -2173,6 +2173,7 @@ You can change this later from Settings > Apps and notifications."</string>
     <string name="keywords_lock_screen_notif">lock screen notification, notifications</string>
     <string name="keywords_lockscreen">slide to unlock, password, pattern, PIN</string>
     <string name="keywords_lockscreen_bypass">Lock screen, Lockscreen, Skip, Bypass</string>
+    <string name="keywords_media_controls">media</string>
     <string name="keywords_model_and_hardware">serial number, hardware version</string>
     <string name="keywords_more_mobile_networks">mobile, mobile operator, wireless, data, 4g,3g, 2g, lte</string>
     <string name="keywords_network_reset">reset, restore, factory</string>
@@ -2536,8 +2537,8 @@ To clear music, pictures and other user data, the "<b>USB storage</b> needs to b
 This will not cancel your mobile service plan."</string>
     <string name="master_clear_failed">"No reset was performed because the System Clear service isn't available."</string>
     <string name="master_clear_final_button_text">Erase everything</string>
-    <string name="master_clear_final_desc">All of your personal information and downloaded apps will be deleted. You can’t undo this action.</string>
-    <string name="master_clear_final_desc_esim">All of your personal information, including downloaded apps &amp; SIMs, will be deleted. You can’t undo this action.</string>
+    <string name="master_clear_final_desc">"All of your personal information and downloaded apps will be deleted. You can't undo this action."</string>
+    <string name="master_clear_final_desc_esim">"All of your personal information, including downloaded apps &amp; SIMs, will be deleted. You can't undo this action."</string>
     <string name="master_clear_not_available">Factory reset is not available for this user</string>
     <string name="master_clear_other_users_present">"
 
@@ -2549,6 +2550,12 @@ There are other users present on this device.
     <string name="master_clear_title">Delete all data (factory reset)</string>
     <string name="maximum_memory_use">Maximum memory use</string>
     <string name="media_category">Media</string>
+    <string name="media_controls_hide_player">Hide player</string>
+    <string name="media_controls_no_players">No players available</string>
+    <string name="media_controls_resume_description">The player allows you to resume a session from the expanded Quick Settings panel.</string>
+    <string name="media_controls_show_player">Show player</string>
+    <string name="media_controls_summary">Hide player when the media session has ended</string>
+    <string name="media_controls_title">Media</string>
     <string name="media_out_summary_ongoing_call_state">Unavailable during calls</string>
     <string name="media_output_default_summary">This device</string>
     <string name="media_output_disconnected_status">%1$s (disconnected)</string>
@@ -2728,7 +2735,7 @@ Switching to %1$s won't cancel your %2$s service."</string>
     <string name="network_dashboard_summary_data_usage">data usage</string>
     <string name="network_dashboard_summary_hotspot">hotspot</string>
     <string name="network_dashboard_summary_mobile">mobile</string>
-    <string name="network_dashboard_title">Network and Internet</string>
+    <string name="network_dashboard_title">Network and internet</string>
     <string name="network_disconnected">Disconnected</string>
     <string name="network_lte">LTE (recommended)</string>
     <string name="network_operator_category">Network</string>
@@ -2806,7 +2813,7 @@ This replaces %2$s as your default payment app."</string>
     <string name="night_display_text">Night Light tints your screen amber. This makes it easier to look at your screen or read in dim light, and may help you fall asleep more easily.</string>
     <string name="night_display_title">Night Light</string>
     <string name="no">No</string>
-    <string name="no_5g_in_dsds_text">When using two SIMs, this phone will be limited to 4G. <annotation id="url">Learn more</annotation>.</string>
+    <string name="no_5g_in_dsds_text">When using two SIMs, this phone will be limited to 4G. <annotation id="url">Learn more</annotation></string>
     <string name="no_application">Nothing</string>
     <string name="no_applications">No apps.</string>
     <string name="no_battery_summary">No battery use since last full charge</string>
@@ -2923,6 +2930,7 @@ This will also give the app the ability to turn Do Not Disturb on or off and cha
     <string name="notification_priority_title">Priority</string>
     <string name="notification_pulse_title">Blink light</string>
     <string name="notification_ringtone_title">Default notification sound</string>
+    <string name="notification_screen_summary">Notification history, bubbles, recently sent</string>
     <string name="notification_settings_work_profile">Notification access is not available for apps in the work profile.</string>
     <string name="notification_show_lights_title">Blink light</string>
     <string name="notification_silence_title">Silent</string>
@@ -3030,6 +3038,8 @@ This will also give the app the ability to turn Do Not Disturb on or off and cha
     <string name="platform_compat_dashboard_title">App compatibility changes</string>
     <string name="platform_compat_default_disabled_title">Default disabled changes</string>
     <string name="platform_compat_default_enabled_title">Default enabled changes</string>
+    <string name="platform_compat_dialog_text_no_apps">App compatibility changes can only be modified for debuggable apps. Install a debuggable app and try again.</string>
+    <string name="platform_compat_dialog_title_no_apps">No apps available</string>
     <string name="please_select_phase2">Phase 2 authentication</string>
     <string name="pointer_location">Pointer location</string>
     <string name="pointer_location_summary">Screen overlay showing current touch data</string>
@@ -3286,7 +3296,7 @@ You will not lose any app data."</string>
     <string name="reset_dashboard_summary">Network, apps or device can be reset</string>
     <string name="reset_dashboard_summary_onlyApps">Apps can be reset</string>
     <string name="reset_dashboard_title">Reset options</string>
-    <string name="reset_esim_desc">To download replacement SIMs, contact your operator. This won’t cancel any mobile service plans.</string>
+    <string name="reset_esim_desc">"To download replacement SIMs, contact your carrier. This won't cancel any mobile service plans."</string>
     <string name="reset_esim_error_msg">"Downloaded SIMs can’t be deleted due to an error.
 
 Restart your device and try again."</string>
@@ -3301,9 +3311,9 @@ Restart your device and try again."</string>
 "<li>Mobile data</li>"
 "<li>Bluetooth</li></string>
     <string name="reset_network_final_button_text">Reset settings</string>
-    <string name="reset_network_final_desc">Reset all network settings? You can’t undo this action.</string>
-    <string name="reset_network_final_desc_esim">Reset all network settings and delete downloaded SIMs? You can’t undo this action.</string>
-    <string name="reset_network_title">Reset Wi-Fi, mobile &amp; Bluetooth</string>
+    <string name="reset_network_final_desc">"Reset all network settings? You can't undo this action."</string>
+    <string name="reset_network_final_desc_esim">"Reset all network settings and erase downloaded SIMs? You can't undo this action."</string>
+    <string name="reset_network_title">Reset wi-fi, mobile and Bluetooth</string>
     <string name="reset_shortcut_manager_throttling">Reset ShortcutManager rate-limiting</string>
     <string name="reset_shortcut_manager_throttling_complete">ShortcutManager rate-limiting has been reset</string>
     <string name="restore_default_apn">Restoring default APN settings.</string>
@@ -3585,7 +3595,7 @@ You can still use your fingerprint to authorise purchases and app access. "<anno
     <string name="security_settings_fingerprint_enroll_error_generic_dialog_message">"Fingerprint enrolment didn't work. Try again or use a different finger."</string>
     <string name="security_settings_fingerprint_enroll_error_timeout_dialog_message">Fingerprint enrolment time limit reached. Try again.</string>
     <string name="security_settings_fingerprint_enroll_find_sensor_content_description">Illustration with device and fingerprint sensor location</string>
-    <string name="security_settings_fingerprint_enroll_find_sensor_message">It’s on the back of your phone. Use your index finger.</string>
+    <string name="security_settings_fingerprint_enroll_find_sensor_message">"It's on the back of your phone. Use your index finger."</string>
     <string name="security_settings_fingerprint_enroll_find_sensor_title">Touch the sensor</string>
     <string name="security_settings_fingerprint_enroll_finish_message">When you see this icon, use your fingerprint for identification or to approve purchases</string>
     <string name="security_settings_fingerprint_enroll_finish_title">Fingerprint added</string>
@@ -3792,7 +3802,7 @@ Possibly incorrect PIN."</string>
     <string name="slot_number">(Slot%1$d)</string>
     <string name="smart_battery_footer">When Battery Manager detects that apps are draining battery, you’ll have the option to restrict these apps. Restricted apps may not work properly and notifications may be delayed.</string>
     <string name="smart_battery_manager_title">Battery Manager</string>
-    <string name="smart_battery_summary">Limit battery for apps that you don’t use often</string>
+    <string name="smart_battery_summary">"Limit battery for apps that you don't use often"</string>
     <string name="smart_battery_title">Manage apps automatically</string>
     <string name="smart_notifications_title">Adaptive notifications</string>
     <string name="sms_application_title">SMS app</string>
@@ -3935,8 +3945,8 @@ This ^1 is formatted to work on this device only. It won’t work on any others.
     <string name="storage_menu_unmount">Eject</string>
     <string name="storage_mount_failure">"Couldn't mount %1$s"</string>
     <string name="storage_mount_success">%1$s is mounted</string>
-    <string name="storage_movies_tv">Movie &amp; TV apps</string>
-    <string name="storage_music_audio">Music &amp; audio</string>
+    <string name="storage_movies_tv">Movie and TV apps</string>
+    <string name="storage_music_audio">Music and audio</string>
     <string name="storage_other_apps">Other apps</string>
     <string name="storage_other_users">Other users</string>
     <string name="storage_percent_full">used</string>

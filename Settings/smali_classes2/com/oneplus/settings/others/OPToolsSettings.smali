@@ -48,7 +48,7 @@
 
 .field private mWlbFeatureObserver:Lcom/oneplus/settings/others/OPToolsSettings$WLBFeatureObserver;
 
-.field private mWorkLifeBalancePreference:Landroidx/preference/Preference;
+.field private mWorkLifeBalancePreference:Lcom/oneplus/settings/worklifebalance/OPWLBBannerPreference;
 
 
 # direct methods
@@ -272,7 +272,7 @@
 .method private updatePreferencesVisibility()V
     .locals 1
 
-    iget-object v0, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mWorkLifeBalancePreference:Landroidx/preference/Preference;
+    iget-object v0, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mWorkLifeBalancePreference:Lcom/oneplus/settings/worklifebalance/OPWLBBannerPreference;
 
     if-eqz v0, :cond_1
 
@@ -286,7 +286,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object p0, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mWorkLifeBalancePreference:Landroidx/preference/Preference;
+    iget-object p0, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mWorkLifeBalancePreference:Lcom/oneplus/settings/worklifebalance/OPWLBBannerPreference;
 
     const/4 v0, 0x0
 
@@ -295,7 +295,7 @@
     goto :goto_0
 
     :cond_0
-    iget-object p0, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mWorkLifeBalancePreference:Landroidx/preference/Preference;
+    iget-object p0, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mWorkLifeBalancePreference:Lcom/oneplus/settings/worklifebalance/OPWLBBannerPreference;
 
     const/4 v0, 0x1
 
@@ -370,13 +370,34 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mWorkLifeBalancePreference:Landroidx/preference/Preference;
+    check-cast v1, Lcom/oneplus/settings/worklifebalance/OPWLBBannerPreference;
 
+    iput-object v1, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mWorkLifeBalancePreference:Lcom/oneplus/settings/worklifebalance/OPWLBBannerPreference;
+
+    new-instance v1, Lcom/oneplus/settings/worklifebalance/OPWLBBannerPrefController;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mWorkLifeBalancePreference:Lcom/oneplus/settings/worklifebalance/OPWLBBannerPreference;
+
+    invoke-direct {v1, v3, v4}, Lcom/oneplus/settings/worklifebalance/OPWLBBannerPrefController;-><init>(Landroid/content/Context;Lcom/oneplus/settings/worklifebalance/OPWLBBannerPreference;)V
+
+    invoke-virtual {p0}, Lcom/android/settingslib/core/lifecycle/ObservablePreferenceFragment;->getSettingsLifecycle()Lcom/android/settingslib/core/lifecycle/Lifecycle;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v3, v1}, Lcom/android/settingslib/core/lifecycle/Lifecycle;->addObserver(Landroidx/lifecycle/LifecycleObserver;)V
+
+    :cond_1
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportQuickLaunch()Z
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     iget-object v1, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mQuickPayPreference:Landroidx/preference/Preference;
 
@@ -384,7 +405,7 @@
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     iget-object v1, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mQuickLaunchPreference:Landroidx/preference/Preference;
 
     invoke-virtual {v1, v2}, Landroidx/preference/Preference;->setVisible(Z)V
@@ -394,13 +415,13 @@
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
     iget-object v1, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mQuickLaunchPreference:Landroidx/preference/Preference;
 
     invoke-virtual {v1, v2}, Landroidx/preference/Preference;->setVisible(Z)V
 
-    :cond_2
+    :cond_3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -409,27 +430,27 @@
 
     move-result v1
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_4
 
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isGuestMode()Z
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_5
 
-    :cond_3
+    :cond_4
     iget-object v1, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mQuickPayPreference:Landroidx/preference/Preference;
 
     invoke-virtual {v1, v2}, Landroidx/preference/Preference;->setVisible(Z)V
 
-    :cond_4
+    :cond_5
     sget-object v1, Lcom/oneplus/settings/SettingsBaseApplication;->mApplication:Landroid/app/Application;
 
     invoke-static {v1}, Lcom/oneplus/settings/utils/OPUtils;->isSurportBackFingerprint(Landroid/content/Context;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_6
 
     iget-object v1, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mQuickPayPreference:Landroidx/preference/Preference;
 
@@ -439,7 +460,7 @@
 
     goto :goto_1
 
-    :cond_5
+    :cond_6
     iget-object v1, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mQuickPayPreference:Landroidx/preference/Preference;
 
     sget v3, Lcom/android/settings/R$string;->oneplus_quickpay_entry_summary:I
@@ -473,13 +494,13 @@
 
     const/4 v4, 0x1
 
-    if-nez v3, :cond_6
+    if-nez v3, :cond_7
 
     move v3, v2
 
     goto :goto_2
 
-    :cond_6
+    :cond_7
     move v3, v4
 
     :goto_2
@@ -489,16 +510,16 @@
 
     move-result v1
 
-    if-nez v1, :cond_7
+    if-nez v1, :cond_8
 
     iget-object v1, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mAntiMisOperationTouch:Landroidx/preference/SwitchPreference;
 
     invoke-virtual {v1, v2}, Landroidx/preference/Preference;->setVisible(Z)V
 
-    :cond_7
+    :cond_8
     new-array v1, v4, [I
 
-    const/16 v3, 0x3f
+    const/16 v3, 0x3d
 
     aput v3, v1, v2
 
@@ -506,7 +527,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_8
+    if-nez v1, :cond_9
 
     iget-object v1, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mAntiMisOperationTouch:Landroidx/preference/SwitchPreference;
 
@@ -514,7 +535,7 @@
 
     invoke-virtual {v1, v3}, Landroidx/preference/Preference;->setSummary(I)V
 
-    :cond_8
+    :cond_9
     const-string v1, "timer_shutdown_startup_settings"
 
     invoke-virtual {p0, v1}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
@@ -527,7 +548,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_9
+    if-eqz v1, :cond_a
 
     iget-object v1, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mTimerShutdownPreference:Landroidx/preference/Preference;
 
@@ -541,7 +562,7 @@
 
     goto :goto_3
 
-    :cond_9
+    :cond_a
     iget-object v1, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mTimerShutdownPreference:Landroidx/preference/Preference;
 
     invoke-virtual {v1, v4}, Landroidx/preference/Preference;->setEnabled(Z)V
@@ -569,18 +590,18 @@
 
     move-result v1
 
-    if-nez v1, :cond_a
+    if-nez v1, :cond_b
 
     iget-object v1, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mOneplusQuickReply:Landroidx/preference/Preference;
 
     invoke-virtual {v0, v1}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
 
-    :cond_a
+    :cond_b
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isGuestMode()Z
 
     move-result v1
 
-    if-eqz v1, :cond_b
+    if-eqz v1, :cond_c
 
     iget-object v1, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mTimerShutdownPreference:Landroidx/preference/Preference;
 
@@ -606,22 +627,22 @@
 
     invoke-virtual {v0, v1}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
 
-    iget-object v1, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mWorkLifeBalancePreference:Landroidx/preference/Preference;
+    iget-object v1, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mWorkLifeBalancePreference:Lcom/oneplus/settings/worklifebalance/OPWLBBannerPreference;
 
     invoke-virtual {v0, v1}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
 
-    :cond_b
+    :cond_c
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isLaboratoryFeatureExist()Z
 
     move-result v1
 
-    if-nez v1, :cond_c
+    if-nez v1, :cond_d
 
     iget-object v1, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mOneplusLaboratorySettings:Landroidx/preference/Preference;
 
     invoke-virtual {v0, v1}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
 
-    :cond_c
+    :cond_d
     const-string v1, "switch"
 
     invoke-virtual {p0, v1}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
@@ -642,7 +663,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_d
+    if-nez v1, :cond_e
 
     invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
 
@@ -652,7 +673,7 @@
 
     invoke-virtual {v1, v3}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
 
-    :cond_d
+    :cond_e
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v1
@@ -663,7 +684,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_e
+    if-eqz v1, :cond_f
 
     const-string v1, "gaming_mode"
 
@@ -671,7 +692,7 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_e
+    if-eqz v1, :cond_f
 
     invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
 
@@ -679,7 +700,7 @@
 
     invoke-virtual {v3, v1}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
 
-    :cond_e
+    :cond_f
     const-string v1, "game_space"
 
     invoke-virtual {p0, v1}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
@@ -698,18 +719,18 @@
 
     move-result v1
 
-    if-nez v1, :cond_f
+    if-nez v1, :cond_10
 
-    iget-object v1, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mWorkLifeBalancePreference:Landroidx/preference/Preference;
+    iget-object v1, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mWorkLifeBalancePreference:Lcom/oneplus/settings/worklifebalance/OPWLBBannerPreference;
 
-    if-eqz v1, :cond_f
+    if-eqz v1, :cond_10
 
     invoke-virtual {v0, v1}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
 
-    :cond_f
+    :cond_10
     iget-object v0, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mWlbFeatureObserver:Lcom/oneplus/settings/others/OPToolsSettings$WLBFeatureObserver;
 
-    if-nez v0, :cond_10
+    if-nez v0, :cond_11
 
     new-instance v0, Lcom/oneplus/settings/others/OPToolsSettings$WLBFeatureObserver;
 
@@ -737,7 +758,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    :cond_10
+    :cond_11
     invoke-direct {p0}, Lcom/oneplus/settings/others/OPToolsSettings;->updateWLBPreferenceSummary()V
 
     return-void
@@ -746,7 +767,7 @@
 .method private updateWLBPreferenceSummary()V
     .locals 3
 
-    iget-object v0, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mWorkLifeBalancePreference:Landroidx/preference/Preference;
+    iget-object v0, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mWorkLifeBalancePreference:Lcom/oneplus/settings/worklifebalance/OPWLBBannerPreference;
 
     if-nez v0, :cond_0
 
@@ -769,7 +790,7 @@
 
     if-nez v0, :cond_1
 
-    iget-object p0, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mWorkLifeBalancePreference:Landroidx/preference/Preference;
+    iget-object p0, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mWorkLifeBalancePreference:Lcom/oneplus/settings/worklifebalance/OPWLBBannerPreference;
 
     sget v0, Lcom/android/settings/R$string;->notification_for_work_life:I
 
@@ -782,7 +803,7 @@
 
     if-ne v0, v1, :cond_2
 
-    iget-object p0, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mWorkLifeBalancePreference:Landroidx/preference/Preference;
+    iget-object p0, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mWorkLifeBalancePreference:Lcom/oneplus/settings/worklifebalance/OPWLBBannerPreference;
 
     sget v0, Lcom/android/settings/R$string;->notification_for_work_life_disabled:I
 

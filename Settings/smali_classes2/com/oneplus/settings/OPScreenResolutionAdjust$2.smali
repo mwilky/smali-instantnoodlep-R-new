@@ -39,15 +39,43 @@
 
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 0
+    .locals 1
 
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
     iget-object p1, p0, Lcom/oneplus/settings/OPScreenResolutionAdjust$2;->this$0:Lcom/oneplus/settings/OPScreenResolutionAdjust;
 
+    invoke-static {p1}, Lcom/oneplus/settings/OPScreenResolutionAdjust;->access$100(Lcom/oneplus/settings/OPScreenResolutionAdjust;)Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p1
+
+    iget p2, p0, Lcom/oneplus/settings/OPScreenResolutionAdjust$2;->val$mode:I
+
+    const/4 v0, 0x2
+
+    if-ne p2, v0, :cond_0
+
+    const/4 p2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p2, 0x0
+
+    :goto_0
+    const-string v0, "oneplus_screen_resolution_auto_adjust"
+
+    invoke-static {p1, v0, p2}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+
+    iget-object p1, p0, Lcom/oneplus/settings/OPScreenResolutionAdjust$2;->this$0:Lcom/oneplus/settings/OPScreenResolutionAdjust;
+
     iget p0, p0, Lcom/oneplus/settings/OPScreenResolutionAdjust$2;->val$mode:I
 
-    invoke-static {p1, p0}, Lcom/oneplus/settings/OPScreenResolutionAdjust;->access$000(Lcom/oneplus/settings/OPScreenResolutionAdjust;I)V
+    invoke-static {p1, p0}, Lcom/oneplus/settings/OPScreenResolutionAdjust;->access$200(Lcom/oneplus/settings/OPScreenResolutionAdjust;I)V
 
     return-void
 .end method

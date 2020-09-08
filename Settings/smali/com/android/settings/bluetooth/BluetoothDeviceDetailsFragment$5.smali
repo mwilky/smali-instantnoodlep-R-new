@@ -32,7 +32,7 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 7
+    .locals 6
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -52,9 +52,7 @@
 
     const-string v4, "BTDeviceDetailsFrg"
 
-    const/4 v5, 0x1
-
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
     if-eqz v0, :cond_3
 
@@ -95,7 +93,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, v6}, Landroidx/preference/Preference;->setVisible(Z)V
+    invoke-virtual {p1, v5}, Landroidx/preference/Preference;->setVisible(Z)V
 
     iget-object p1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment$5;->this$0:Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;
 
@@ -103,7 +101,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, v6}, Landroidx/preference/Preference;->setVisible(Z)V
+    invoke-virtual {p1, v5}, Landroidx/preference/Preference;->setVisible(Z)V
 
     iget-object p1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment$5;->this$0:Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;
 
@@ -111,7 +109,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, v6}, Landroidx/preference/Preference;->setVisible(Z)V
+    invoke-virtual {p1, v5}, Landroidx/preference/Preference;->setVisible(Z)V
 
     iget-object p1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment$5;->this$0:Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;
 
@@ -119,7 +117,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, v6}, Landroidx/preference/Preference;->setVisible(Z)V
+    invoke-virtual {p1, v5}, Landroidx/preference/Preference;->setVisible(Z)V
 
     iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment$5;->this$0:Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;
 
@@ -131,7 +129,7 @@
 
     iput-object p1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mCachedDevice:Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
 
-    goto/16 :goto_1
+    goto/16 :goto_0
 
     :cond_1
     :try_start_0
@@ -140,6 +138,8 @@
     invoke-static {p1}, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->access$500(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;)Lcom/oos/onepluspods/service/aidl/IOnePlusPodDevice;
 
     move-result-object p1
+
+    const/4 v0, 0x1
 
     if-eqz p1, :cond_2
 
@@ -151,13 +151,13 @@
 
     invoke-virtual {p2}, Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-interface {p1, v0}, Lcom/oos/onepluspods/service/aidl/IOnePlusPodDevice;->isOnePlusPods(Ljava/lang/String;)Z
+    invoke-interface {p1, v1}, Lcom/oos/onepluspods/service/aidl/IOnePlusPodDevice;->isOnePlusPods(Ljava/lang/String;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_7
+    if-eqz p1, :cond_6
 
     iget-object p1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment$5;->this$0:Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;
 
@@ -173,32 +173,32 @@
 
     move-result-object p0
 
-    invoke-virtual {p0, v5}, Landroidx/preference/Preference;->setVisible(Z)V
+    invoke-virtual {p0, v0}, Landroidx/preference/Preference;->setVisible(Z)V
 
-    goto/16 :goto_1
+    goto/16 :goto_0
 
     :cond_2
     new-instance p1, Landroid/content/Intent;
 
     invoke-direct {p1}, Landroid/content/Intent;-><init>()V
 
-    const-string v0, "com.oneplus.twspods"
+    const-string v1, "com.oneplus.twspods"
 
-    const-string v1, "com.oos.onepluspods.service.MultiDeviceCoreService"
+    const-string v2, "com.oos.onepluspods.service.MultiDeviceCoreService"
 
-    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {p1, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    const-string v0, "address"
+    const-string v1, "address"
 
     invoke-virtual {p2}, Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {p1, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    const-string v0, "device"
+    const-string v1, "device"
 
-    invoke-virtual {p1, v0, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+    invoke-virtual {p1, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     iget-object p2, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment$5;->this$0:Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;
 
@@ -212,11 +212,11 @@
 
     move-result-object p0
 
-    invoke-virtual {p2, p1, p0, v5}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
+    invoke-virtual {p2, p1, p0, v0}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto/16 :goto_1
+    goto/16 :goto_0
 
     :catch_0
     move-exception p0
@@ -237,7 +237,7 @@
 
     invoke-static {v4, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto/16 :goto_1
+    goto/16 :goto_0
 
     :cond_3
     const-string v0, "android.bluetooth.headset.action.VENDOR_SPECIFIC_HEADSET_EVENT"
@@ -246,7 +246,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_5
 
     :try_start_1
     iget-object p1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment$5;->this$0:Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;
@@ -255,7 +255,7 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_7
+    if-eqz p1, :cond_6
 
     invoke-virtual {p2, v2}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -282,7 +282,7 @@
     return-void
 
     :cond_4
-    if-eqz p1, :cond_7
+    if-eqz p1, :cond_6
 
     iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment$5;->this$0:Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;
 
@@ -298,7 +298,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_6
 
     const-string v0, "android.bluetooth.headset.extra.VENDOR_SPECIFIC_HEADSET_EVENT_CMD"
 
@@ -318,107 +318,85 @@
 
     check-cast p2, [Ljava/lang/Object;
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_6
 
-    if-eqz p2, :cond_7
+    if-eqz p2, :cond_6
 
     array-length v0, p2
 
     const/4 v2, 0x7
 
-    if-ne v0, v2, :cond_7
+    if-ne v0, v2, :cond_6
 
-    aget-object v0, p2, v1
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    add-int/2addr v0, v5
-
-    mul-int/lit8 v0, v0, 0xa
-
-    const/4 v1, 0x4
+    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment$5;->this$0:Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;
 
     aget-object v1, p2, v1
 
-    check-cast v1, Ljava/lang/Integer;
+    invoke-static {v0, v1}, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->access$2100(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;Ljava/lang/Object;)I
 
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+    move-result v0
+
+    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment$5;->this$0:Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;
+
+    const/4 v2, 0x4
+
+    aget-object v2, p2, v2
+
+    invoke-static {v1, v2}, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->access$2100(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;Ljava/lang/Object;)I
 
     move-result v1
 
-    add-int/2addr v1, v5
+    iget-object v2, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment$5;->this$0:Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;
 
-    mul-int/lit8 v1, v1, 0xa
+    const/4 v3, 0x6
 
-    const/4 v2, 0x6
+    aget-object p2, p2, v3
 
-    aget-object v3, p2, v2
-
-    instance-of v3, v3, Ljava/lang/String;
-
-    if-eqz v3, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    aget-object p2, p2, v2
-
-    check-cast p2, Ljava/lang/Integer;
-
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
+    invoke-static {v2, p2}, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->access$2100(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;Ljava/lang/Object;)I
 
     move-result p2
 
-    add-int/2addr p2, v5
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    mul-int/lit8 v5, p2, 0xa
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    :goto_0
-    new-instance p2, Ljava/lang/StringBuilder;
+    const-string v3, "ACTION_VENDOR_SPECIFIC_HEADSET_EVENT address = "
 
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "ACTION_VENDOR_SPECIFIC_HEADSET_EVENT address = "
-
-    invoke-virtual {p2, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
 
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, ", leftLevel: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v3, ", rightLevel: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v3, ", boxLevel: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
     move-result-object v2
 
-    invoke-virtual {p2, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v4, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-string v2, ", leftLevel: "
+    iget-object v2, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment$5;->this$0:Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;
 
-    invoke-virtual {p2, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, ", rightLevel: "
-
-    invoke-virtual {p2, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, ", boxLevel: "
-
-    invoke-virtual {p2, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-static {v4, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget-object p2, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment$5;->this$0:Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;
-
-    invoke-static {p2, v0, v1, v5}, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->access$1900(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;III)Ljava/lang/String;
+    invoke-static {v2, v0, v1, p2}, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->access$1900(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;III)Ljava/lang/String;
 
     move-result-object p2
 
@@ -436,7 +414,7 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    goto :goto_1
+    goto :goto_0
 
     :catch_1
     move-exception p0
@@ -457,16 +435,16 @@
 
     invoke-static {v4, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_1
+    goto :goto_0
 
-    :cond_6
+    :cond_5
     const-string v0, "android.bluetooth.adapter.action.STATE_CHANGED"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_7
+    if-eqz p1, :cond_6
 
     const-string p1, "android.bluetooth.adapter.extra.STATE"
 
@@ -476,7 +454,7 @@
 
     const/16 p2, 0xc
 
-    if-eq p1, p2, :cond_7
+    if-eq p1, p2, :cond_6
 
     iget-object p1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment$5;->this$0:Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;
 
@@ -484,7 +462,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, v6}, Landroidx/preference/Preference;->setVisible(Z)V
+    invoke-virtual {p1, v5}, Landroidx/preference/Preference;->setVisible(Z)V
 
     iget-object p1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment$5;->this$0:Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;
 
@@ -492,7 +470,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, v6}, Landroidx/preference/Preference;->setVisible(Z)V
+    invoke-virtual {p1, v5}, Landroidx/preference/Preference;->setVisible(Z)V
 
     iget-object p1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment$5;->this$0:Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;
 
@@ -500,7 +478,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, v6}, Landroidx/preference/Preference;->setVisible(Z)V
+    invoke-virtual {p1, v5}, Landroidx/preference/Preference;->setVisible(Z)V
 
     iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment$5;->this$0:Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;
 
@@ -508,9 +486,9 @@
 
     move-result-object p0
 
-    invoke-virtual {p0, v6}, Landroidx/preference/Preference;->setVisible(Z)V
+    invoke-virtual {p0, v5}, Landroidx/preference/Preference;->setVisible(Z)V
 
-    :cond_7
-    :goto_1
+    :cond_6
+    :goto_0
     return-void
 .end method

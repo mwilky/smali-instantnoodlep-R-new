@@ -494,13 +494,36 @@
 
     iget-object v0, p0, Lcom/oneplus/settings/gestures/OPQuickTurnOnAssistantApp;->mWallet:Lcom/android/settings/ui/RadioButtonPreference;
 
+    iget-object v1, p0, Lcom/oneplus/settings/gestures/OPQuickTurnOnAssistantApp;->mContext:Landroid/content/Context;
+
+    invoke-static {v1}, Lcom/oneplus/settings/gestures/OPQuickTurnOnAssistantApp;->checkSupportWalletFlag(Landroid/content/Context;)Z
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setEnabled(Z)V
+
+    iget-object v0, p0, Lcom/oneplus/settings/gestures/OPQuickTurnOnAssistantApp;->mAskAlexa:Lcom/android/settings/ui/RadioButtonPreference;
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportAskAlexa()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
     iget-object p0, p0, Lcom/oneplus/settings/gestures/OPQuickTurnOnAssistantApp;->mContext:Landroid/content/Context;
 
-    invoke-static {p0}, Lcom/oneplus/settings/gestures/OPQuickTurnOnAssistantApp;->checkSupportWalletFlag(Landroid/content/Context;)Z
+    const-string v1, "com.amazon.dee.app"
+
+    invoke-static {p0, v1}, Lcom/oneplus/settings/utils/OPUtils;->isAppExist(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result p0
 
-    invoke-virtual {v0, p0}, Landroidx/preference/Preference;->setEnabled(Z)V
+    if-eqz p0, :cond_0
+
+    const/4 v2, 0x1
+
+    :cond_0
+    invoke-virtual {v0, v2}, Landroidx/preference/Preference;->setVisible(Z)V
 
     return-void
 .end method

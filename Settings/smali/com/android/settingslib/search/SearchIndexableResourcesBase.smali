@@ -412,16 +412,6 @@
 
     new-instance v0, Lcom/android/settingslib/search/SearchIndexableData;
 
-    const-class v1, Lcom/android/settings/gestures/AssistGestureSettings;
-
-    sget-object v2, Lcom/android/settings/gestures/AssistGestureSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/BaseSearchIndexProvider;
-
-    invoke-direct {v0, v1, v2}, Lcom/android/settingslib/search/SearchIndexableData;-><init>(Ljava/lang/Class;Lcom/android/settingslib/search/Indexable$SearchIndexProvider;)V
-
-    invoke-virtual {p0, v0}, Lcom/android/settingslib/search/SearchIndexableResourcesBase;->addIndex(Lcom/android/settingslib/search/SearchIndexableData;)V
-
-    new-instance v0, Lcom/android/settingslib/search/SearchIndexableData;
-
     const-class v1, Lcom/android/settings/gestures/DeviceControlsSettings;
 
     sget-object v2, Lcom/android/settings/gestures/DeviceControlsSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/BaseSearchIndexProvider;
@@ -974,7 +964,7 @@
 
     const-class v1, Lcom/oneplus/settings/OPGestureSettings;
 
-    sget-object v2, Lcom/oneplus/settings/OPGestureSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settingslib/search/Indexable$SearchIndexProvider;
+    sget-object v2, Lcom/oneplus/settings/OPGestureSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/BaseSearchIndexProvider;
 
     invoke-direct {v0, v1, v2}, Lcom/android/settingslib/search/SearchIndexableData;-><init>(Ljava/lang/Class;Lcom/android/settingslib/search/Indexable$SearchIndexProvider;)V
 

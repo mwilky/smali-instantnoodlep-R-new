@@ -103,9 +103,9 @@
 
     iget-object p0, p0, Lcom/android/settings/display/PreviewSeekBarPreferenceFragment;->mSeekBar:Lcom/android/settings/widget/LabeledSeekBar;
 
-    const/4 v0, 0x1
+    add-int/lit8 p1, p1, -0x1
 
-    sub-int/2addr p1, v0
+    const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Landroid/widget/SeekBar;->setProgress(IZ)V
 
@@ -132,9 +132,9 @@
 
     iget-object p0, p0, Lcom/android/settings/display/PreviewSeekBarPreferenceFragment;->mSeekBar:Lcom/android/settings/widget/LabeledSeekBar;
 
-    const/4 v0, 0x1
+    add-int/lit8 p1, p1, 0x1
 
-    add-int/2addr p1, v0
+    const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Landroid/widget/SeekBar;->setProgress(IZ)V
 

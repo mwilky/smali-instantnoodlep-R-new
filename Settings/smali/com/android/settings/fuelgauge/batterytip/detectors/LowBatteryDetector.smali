@@ -37,7 +37,7 @@
 
     move-result-object p1
 
-    const p2, 0x10e0070
+    const p2, 0x10e0076
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getInteger(I)I
 

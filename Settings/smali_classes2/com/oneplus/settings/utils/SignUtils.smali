@@ -57,6 +57,13 @@
 
     move-result-object v0
 
+    if-nez v0, :cond_0
+
+    const-string p0, ""
+
+    return-object p0
+
+    :cond_0
     invoke-static {p1}, Ljava/security/Signature;->getInstance(Ljava/lang/String;)Ljava/security/Signature;
 
     move-result-object p1

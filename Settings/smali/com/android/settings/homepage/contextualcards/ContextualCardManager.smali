@@ -1091,6 +1091,8 @@
 
     invoke-interface {v3}, Lcom/android/settingslib/core/lifecycle/events/OnStart;->onStart()V
 
+    invoke-interface {v2, p0}, Lcom/android/settings/homepage/contextualcards/ContextualCardController;->setCardUpdateListener(Lcom/android/settings/homepage/contextualcards/ContextualCardUpdateListener;)V
+
     :cond_2
     if-nez p1, :cond_0
 

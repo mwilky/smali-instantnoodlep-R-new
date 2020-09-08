@@ -6,6 +6,10 @@
 .implements Landroid/content/DialogInterface$OnClickListener;
 
 
+# instance fields
+.field private mAlertDialog:Landroidx/appcompat/app/AlertDialog;
+
+
 # direct methods
 .method public constructor <init>()V
     .locals 0
@@ -15,7 +19,7 @@
     return-void
 .end method
 
-.method public static newInstance(ZZZZZ)Lcom/android/settings/password/SetupSkipDialog;
+.method public static newInstance(ZZZZZZ)Lcom/android/settings/password/SetupSkipDialog;
     .locals 3
 
     new-instance v0, Lcom/android/settings/password/SetupSkipDialog;
@@ -45,6 +49,10 @@
     const-string p0, "for_face"
 
     invoke-virtual {v1, p0, p4}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
+
+    const-string p0, "skip_dialog"
+
+    invoke-virtual {v1, p0, p5}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     invoke-virtual {v0, v1}, Landroidx/fragment/app/Fragment;->setArguments(Landroid/os/Bundle;)V
 
@@ -92,13 +100,15 @@
 
     invoke-virtual {p0}, Lcom/android/settings/password/SetupSkipDialog;->onCreateDialogBuilder()Landroidx/appcompat/app/AlertDialog$Builder;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-virtual {p0}, Landroidx/appcompat/app/AlertDialog$Builder;->create()Landroidx/appcompat/app/AlertDialog;
+    invoke-virtual {p1}, Landroidx/appcompat/app/AlertDialog$Builder;->create()Landroidx/appcompat/app/AlertDialog;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    iput-object p1, p0, Lcom/android/settings/password/SetupSkipDialog;->mAlertDialog:Landroidx/appcompat/app/AlertDialog;
+
+    return-object p1
 .end method
 
 .method public onCreateDialogBuilder()Landroidx/appcompat/app/AlertDialog$Builder;
@@ -229,6 +239,37 @@
     invoke-virtual {v2, p0}, Landroidx/appcompat/app/AlertDialog$Builder;->setMessage(I)Landroidx/appcompat/app/AlertDialog$Builder;
 
     return-object v2
+.end method
+
+.method public onStart()V
+    .locals 2
+
+    invoke-super {p0}, Lcom/android/settingslib/core/lifecycle/ObservableDialogFragment;->onStart()V
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
+
+    move-result-object v0
+
+    const-string v1, "skip_dialog"
+
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
+
+    iget-object v0, p0, Lcom/android/settings/password/SetupSkipDialog;->mAlertDialog:Landroidx/appcompat/app/AlertDialog;
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isO2()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object p0, p0, Lcom/android/settings/password/SetupSkipDialog;->mAlertDialog:Landroidx/appcompat/app/AlertDialog;
+
+    invoke-static {p0}, Lcom/oneplus/settings/utils/OPThemeUtils;->setDialogButtonColorForO2SUW(Landroidx/appcompat/app/AlertDialog;)V
+
+    :cond_0
+    return-void
 .end method
 
 .method public show(Landroidx/fragment/app/FragmentManager;)V

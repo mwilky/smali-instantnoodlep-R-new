@@ -45,7 +45,7 @@
 
     invoke-direct {p1}, Landroid/content/Intent;-><init>()V
 
-    const-string p2, "com.oneplus.intent.DefaultAssistPicker"
+    const-string p2, "com.oneplus.intent.OPDefaultVoiceAssistPicker"
 
     invoke-virtual {p1, p2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 

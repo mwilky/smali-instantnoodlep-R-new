@@ -226,7 +226,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_e
+    if-eqz v3, :cond_d
 
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -311,11 +311,11 @@
 
     const/16 v12, 0x69
 
-    const/16 v11, 0x65
+    const/16 v11, 0x6a
 
-    const/16 v10, 0x6a
+    const/16 v10, 0x66
 
-    const/16 v8, 0x66
+    const/16 v8, 0x65
 
     if-eq v14, v4, :cond_5
 
@@ -323,11 +323,11 @@
 
     if-eq v14, v7, :cond_5
 
-    if-eq v14, v10, :cond_5
-
     if-eq v14, v11, :cond_5
 
     if-eq v14, v8, :cond_5
+
+    if-eq v14, v10, :cond_5
 
     if-eq v14, v12, :cond_5
 
@@ -376,59 +376,56 @@
 
     const/4 v3, 0x1
 
-    if-eq v14, v4, :cond_7
-
     const/16 v5, 0x65
+
+    const/16 v7, 0x66
+
+    if-eq v14, v4, :cond_7
 
     if-eq v14, v5, :cond_7
 
-    const/16 v5, 0x66
+    if-eq v14, v7, :cond_7
 
-    if-eq v14, v5, :cond_8
+    const/16 v8, 0x6a
 
-    const/16 v7, 0x6a
-
-    if-ne v14, v7, :cond_6
+    if-ne v14, v8, :cond_6
 
     goto :goto_2
 
     :cond_6
-    const/4 v7, 0x0
+    const/4 v8, 0x0
 
     goto :goto_3
 
     :cond_7
-    const/16 v5, 0x66
-
-    :cond_8
     :goto_2
-    move v7, v3
+    move v8, v3
 
     :goto_3
-    invoke-virtual {v15, v7}, Lcom/oneplus/settings/better/OPDarkModeAppModel;->setSelected(Z)V
+    invoke-virtual {v15, v8}, Lcom/oneplus/settings/better/OPDarkModeAppModel;->setSelected(Z)V
 
     invoke-virtual {v15, v14}, Lcom/oneplus/settings/better/OPDarkModeAppModel;->setAppopsMode(I)V
 
-    const/16 v7, 0x6b
+    const/16 v8, 0x6b
 
-    if-eq v14, v7, :cond_a
+    if-eq v14, v8, :cond_9
 
-    const/16 v7, 0x68
+    const/16 v8, 0x68
 
-    if-ne v14, v7, :cond_9
+    if-ne v14, v8, :cond_8
 
     goto :goto_4
 
-    :cond_9
-    const/4 v7, 0x0
+    :cond_8
+    const/4 v8, 0x0
 
-    invoke-virtual {v15, v7}, Lcom/oneplus/settings/better/OPDarkModeAppModel;->setDisable(Z)V
+    invoke-virtual {v15, v8}, Lcom/oneplus/settings/better/OPDarkModeAppModel;->setDisable(Z)V
 
     goto :goto_5
 
-    :cond_a
+    :cond_9
     :goto_4
-    const/4 v7, 0x0
+    const/4 v8, 0x0
 
     invoke-virtual {v15, v3}, Lcom/oneplus/settings/better/OPDarkModeAppModel;->setDisable(Z)V
 
@@ -437,9 +434,9 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v8, "GlobalDarkMode--packageName:"
+    const-string v9, "GlobalDarkMode--packageName:"
 
-    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -473,26 +470,28 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-eq v14, v5, :cond_c
+    if-eq v14, v7, :cond_b
 
     const/16 v3, 0x69
 
-    if-eq v14, v3, :cond_c
+    if-eq v14, v3, :cond_b
 
     const/16 v3, 0x6c
 
-    if-ne v14, v3, :cond_b
+    if-eq v14, v3, :cond_b
+
+    if-ne v14, v5, :cond_a
 
     goto :goto_6
 
-    :cond_b
+    :cond_a
     iget-object v3, v0, Lcom/oneplus/settings/darkmode/OPGlobleDarkModeApplicationLoader;->mWhiteAppList:Ljava/util/List;
 
     invoke-interface {v3, v15}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v3
 
-    if-nez v3, :cond_d
+    if-nez v3, :cond_c
 
     iget-object v3, v0, Lcom/oneplus/settings/darkmode/OPGlobleDarkModeApplicationLoader;->mWhiteAppList:Ljava/util/List;
 
@@ -500,7 +499,7 @@
 
     goto :goto_7
 
-    :cond_c
+    :cond_b
     :goto_6
     iget-object v3, v0, Lcom/oneplus/settings/darkmode/OPGlobleDarkModeApplicationLoader;->mGrayAppList:Ljava/util/List;
 
@@ -508,19 +507,19 @@
 
     move-result v3
 
-    if-nez v3, :cond_d
+    if-nez v3, :cond_c
 
     iget-object v3, v0, Lcom/oneplus/settings/darkmode/OPGlobleDarkModeApplicationLoader;->mGrayAppList:Ljava/util/List;
 
     invoke-interface {v3, v15}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    :cond_d
+    :cond_c
     :goto_7
-    move v5, v7
+    move v5, v8
 
     goto/16 :goto_1
 
-    :cond_e
+    :cond_d
     iget-object v2, v0, Lcom/oneplus/settings/darkmode/OPGlobleDarkModeApplicationLoader;->mWhiteAppList:Ljava/util/List;
 
     sget-object v3, Lcom/oneplus/settings/apploader/OPApplicationLoader;->ALPHA_COMPARATOR:Ljava/util/Comparator;

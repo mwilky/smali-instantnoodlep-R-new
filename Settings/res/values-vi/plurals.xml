@@ -225,7 +225,7 @@
         <item quantity="one">%d ứng dụng đang hoạt động</item>
     </plurals>
     <plurals name="oneplus_applock_wrong_pattern_warning">
-        <item quantity="other">Bạn còn %1$d cơ hội</item>
+        <item quantity="other">Bạn vẫn còn %1$d cơ hội</item>
         <item quantity="one">You still have %1$d chance</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
@@ -237,7 +237,7 @@
         <item quantity="one">1 hour (unless turned on automatically)</item>
     </plurals>
     <plurals name="op_location_settings_summary_location_on">
-        <item quantity="other">On - %1$d apps have access to location</item>
+        <item quantity="other">Bật - %1$d ứng dụng có quyền truy cập vào vị trí</item>
         <item quantity="one">On - %1$d app has access to location</item>
     </plurals>
     <plurals name="permission_bar_chart_label">

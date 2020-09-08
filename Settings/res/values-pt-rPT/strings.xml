@@ -140,7 +140,7 @@ Não é possível aumentar o zoom no teclado nem na barra de navegação."</stri
     <string name="accessibility_service_default_description">Nenhuma descrição fornecida.</string>
     <string name="accessibility_service_master_open_title">Abra a app %1$s</string>
     <string name="accessibility_service_master_switch_title">Utilizar %1$s</string>
-    <string name="accessibility_service_screen_control_description">Pode ler todo o conteúdo do ecrã e sobrepor conteúdo a outras aplicações.</string>
+    <string name="accessibility_service_screen_control_description">Pode ler todo o conteúdo do ecrã e sobrepor conteúdo a outras apps.</string>
     <string name="accessibility_service_screen_control_title">Ver e controlar o ecrã</string>
     <string name="accessibility_service_warning">O serviço %1$s está a solicitar o controlo total deste dispositivo. O serviço pode ler o ecrã e agir em nome de utilizadores com necessidades de acessibilidade. Este nível de controlo não é adequado para a maioria das aplicações.</string>
     <string name="accessibility_service_warning_description">O controlo total é adequado para aplicações que ajudam nas necessidades de acessibilidade, mas não para a maioria das aplicações.</string>
@@ -466,7 +466,7 @@ Basta aproximar os dispositivos um do outro (normalmente, de costas) e, em segui
     <string name="application_info_label">Informações da app</string>
     <string name="application_restrictions">Permitir aplicações e conteúdo</string>
     <string name="application_size_label">Tamanho da aplicação</string>
-    <string name="applications_settings">Info. da aplicação</string>
+    <string name="applications_settings">Info. da app</string>
     <string name="applications_settings_header">Definições da aplicação</string>
     <string name="applications_settings_summary">Gerir aplicações, configurar atalhos de início rápido</string>
     <string name="apply">Aplicar</string>
@@ -600,7 +600,7 @@ P/ restringir a app, ative a otimiz. da bateria."</string>
     <string name="backup_summary_state_off">Desativada</string>
     <string name="backup_summary_state_on">Ativada</string>
     <string name="baseband_version">Versão de banda base</string>
-    <string name="battery_action_app_details">Info. da aplicação</string>
+    <string name="battery_action_app_details">Info. da app</string>
     <string name="battery_action_app_settings">Definições da aplicação</string>
     <string name="battery_action_bluetooth">Definições de Bluetooth</string>
     <string name="battery_action_display">Definições do ecrã</string>
@@ -1245,8 +1245,8 @@ Estas informações identificam se os seus contactos podem utilizar determinadas
     <string name="conversation_category_title">Conversa</string>
     <string name="conversation_onboarding_summary">"Quando marcar uma conversa como tendo prioridade ou efetuar qualquer outra alteração às conversas, as mesmas aparecem aqui. 
 
-Para alterar as definições de conversa: 
-Deslize rapidamente para baixo a partir da parte superior do ecrã para abrir o painel pendente e, em seguida, toque sem soltar numa conversa."</string>
+Para alterar as definições de conversa, 
+deslize rapidamente para baixo a partir da parte superior do ecrã para abrir o painel pendente e, em seguida, toque sem soltar numa conversa."</string>
     <string name="conversation_onboarding_title">As conversas com prioridade e modificadas são apresentadas aqui</string>
     <string name="conversation_section_switch_summary">Permita que a app utilize a secção de conversas.</string>
     <string name="conversation_section_switch_title">Secção de conversas</string>
@@ -1373,7 +1373,7 @@ Para voltar a utilizar o telemóvel, é necessário efetuar uma reposição para
     <string name="data_switch_started">A mudar o SIM de dados. Esta ação pode demorar, no máximo, 1 minuto...</string>
     <string name="data_usage_accounting">A contagem do operador de dados pode diferir do seu dispositivo.</string>
     <string name="data_usage_app">Utilização da aplicação</string>
-    <string name="data_usage_app_info_label">INFO. DA APLICAÇÃO</string>
+    <string name="data_usage_app_info_label">INFO. DA APP</string>
     <string name="data_usage_app_items_header_text">Utilização da aplicação</string>
     <string name="data_usage_app_restrict_background">Dados de segundo plano</string>
     <string name="data_usage_app_restrict_background_summary">Ativar a utilização de dados móveis em segundo plano</string>
@@ -1611,7 +1611,7 @@ Se isto continuar a acontecer, pode ser necessário desinstalar a aplicação pa
     <string name="disable_wifi_hotspot_when_usb_on">Partilhar a Internet apenas através de USB e Bluetooth</string>
     <string name="disabled">Desativada</string>
     <string name="disabled_because_no_backup_security">Para utilizar, defina primeiro um bloqueio de ecrã</string>
-    <string name="disabled_by_admin">Desativada pelo administrador</string>
+    <string name="disabled_by_admin">Desativado pelo administrador</string>
     <string name="disabled_by_admin_summary_text">Controlado pelo gestor</string>
     <string name="disabled_by_administrator_summary">Não disponível.</string>
     <string name="disabled_by_policy_title">Ação não permitida</string>
@@ -1691,7 +1691,7 @@ Se isto continuar a acontecer, pode ser necessário desinstalar a aplicação pa
     <string name="doze_always_on_title">Mostrar sempre hora e informações</string>
     <string name="doze_summary">Quando o ecrã está escuro, acende-se se surgirem novas notificações</string>
     <string name="doze_title">Ativar ecrã para notificações</string>
-    <string name="draw_overlay">Sobrepor a outras aplicações</string>
+    <string name="draw_overlay">Sobrepor a outras apps</string>
     <string name="dtmf_tone_enable_title">Sons dos toques no teclado</string>
     <string name="dual_cdma_sim_warning_notification_channel_title">Combinação de SIMs</string>
     <string name="dual_cdma_sim_warning_notification_summary">A utilização dos operadores %1$s pode limitar a funcionalidade. Toque para saber mais.</string>
@@ -2059,7 +2059,7 @@ Pode alterar esta definição mais tarde em Definições > Apps e notificações
     <string name="install_all_warning">O seu telemóvel e os dados pessoais são mais vulneráveis a ataques de aplicações desconhecidas. Ao instalar aplicações desta fonte, aceita ser responsável por quaisquer danos no telemóvel ou perdas de dados que possam resultar da utilização do mesmo.</string>
     <string name="install_applications">Fontes desconhecidas</string>
     <string name="install_applications_title">Permit. todas as fontes app</string>
-    <string name="install_other_apps">Instalar aplicações desconhecidas</string>
+    <string name="install_other_apps">Instalar apps desconhecidas</string>
     <string name="install_text">Instalar</string>
     <string name="install_type_instant">App instantânea</string>
     <string name="installed">Instalada</string>
@@ -2167,12 +2167,13 @@ Pode alterar esta definição mais tarde em Definições > Apps e notificações
     <string name="keywords_hotspot_tethering">ligação à Internet via USB, ligação à Internet via Bluetooth, zona Wi-Fi</string>
     <string name="keywords_ignore_optimizations">ignorar otimizações, soneca, modo de espera das apps</string>
     <string name="keywords_imei_info">imei, meid, min, versão de prl, imei sv</string>
-    <string name="keywords_install_other_apps">instalar aplicações fontes desconhecidas</string>
+    <string name="keywords_install_other_apps">instalar apps de fontes desconhecidas</string>
     <string name="keywords_keyboard_and_ime">correção de texto, corrigir, som, vibrar, idioma, automático, gesto, sugerir, sugestão, tema, palavra, ofensiva, escrever, emoji, internacional</string>
     <string name="keywords_location">próximo, localização, histórico, relatórios, GPS</string>
     <string name="keywords_lock_screen_notif">notificação do ecrã de bloqueio, notificações</string>
     <string name="keywords_lockscreen">deslizar lentamente para desbloquear, palavra-passe, padrão, PIN</string>
     <string name="keywords_lockscreen_bypass">Ecrã de bloqueio, ignorar</string>
+    <string name="keywords_media_controls">multimédia</string>
     <string name="keywords_model_and_hardware">número de série, versão de hardware</string>
     <string name="keywords_more_mobile_networks">telemóvel, dispositivo móvel, operador de telemóvel, sem fios, dados, 4g, 3g, 2g, lte</string>
     <string name="keywords_network_reset">repor, restaurar, fábrica</string>
@@ -2549,6 +2550,12 @@ Existem outros utilizadores presentes neste dispositivo.
     <string name="master_clear_title">Apagar todos os dados (reposição de dados de fábrica)</string>
     <string name="maximum_memory_use">Utilização máxima da memória</string>
     <string name="media_category">Multimédia</string>
+    <string name="media_controls_hide_player">Ocultar leitor</string>
+    <string name="media_controls_no_players">Nenhum leitor disponível.</string>
+    <string name="media_controls_resume_description">O leitor permite-lhe retomar uma sessão a partir do painel Definições rápidas expandido.</string>
+    <string name="media_controls_show_player">Mostrar leitor</string>
+    <string name="media_controls_summary">Oculte o leitor quando sessão multimédia terminar</string>
+    <string name="media_controls_title">Multimédia</string>
     <string name="media_out_summary_ongoing_call_state">Indisponível durante as chamadas.</string>
     <string name="media_output_default_summary">Este dispositivo</string>
     <string name="media_output_disconnected_status">%1$s (desligado)</string>
@@ -2806,7 +2813,7 @@ Esta substitui a app %2$s como app de pagamento predefinida."</string>
     <string name="night_display_text">A Luz noturna aplica uma tonalidade âmbar ao ecrã que torna mais fácil olhar para ele ou ler com pouca luz. Também pode ajudar a adormecer mais facilmente.</string>
     <string name="night_display_title">Luz noturna</string>
     <string name="no">Não</string>
-    <string name="no_5g_in_dsds_text">Quando utiliza 2 SIMs, este telemóvel fica limitado ao 4G. <annotation id="url">Saiba mais</annotation>.</string>
+    <string name="no_5g_in_dsds_text">Quando utiliza 2 SIMs, este telemóvel fica limitado ao 4G. <annotation id="url">Saiba mais</annotation></string>
     <string name="no_application">Nenhuma</string>
     <string name="no_applications">Sem aplicações.</string>
     <string name="no_battery_summary">Não utilizou bateria desde o último carregamento completo</string>
@@ -2923,6 +2930,7 @@ Deste modo, a app também pode ativar ou desativar o modo Não incomodar e alter
     <string name="notification_priority_title">Prioridade</string>
     <string name="notification_pulse_title">Emitir luz intermitente</string>
     <string name="notification_ringtone_title">Som de notificação padrão</string>
+    <string name="notification_screen_summary">Histórico de notificações, balões, enviadas recentemente</string>
     <string name="notification_settings_work_profile">O acesso às notificações não está disponível para aplicações no perfil de trabalho.</string>
     <string name="notification_show_lights_title">Emitir luz intermitente</string>
     <string name="notification_silence_title">Silencioso</string>
@@ -2986,7 +2994,7 @@ Deste modo, a app também pode ativar ou desativar o modo Não incomodar e alter
     <string name="other_sound_settings">Outros sons</string>
     <string name="overlay_display_devices_title">Simular apresentações secundárias</string>
     <string name="overlay_option_device_default">Predefinição do dispositivo</string>
-    <string name="overlay_settings">Sobrepor a outras aplicações</string>
+    <string name="overlay_settings">Sobrepor a outras apps</string>
     <string name="overlay_settings_summary">Permita que as apps que se podem sobrepor a outras apps se sobreponham a ecrãs de Definições.</string>
     <string name="overlay_settings_title">Permitir sobreposições de ecrãs nas Definições</string>
     <string name="overlay_toast_failed_to_apply">Falha ao aplicar a sobreposição.</string>
@@ -3007,7 +3015,7 @@ Deste modo, a app também pode ativar ou desativar o modo Não incomodar e alter
     <string name="permission_bar_chart_empty_text">0 aplicações utilizaram autorizações</string>
     <string name="permission_bar_chart_title">Utilização das autorizações nas últimas 24 horas</string>
     <string name="permissions_label">Permissões</string>
-    <string name="permit_draw_overlay">Permitir sobreposição a outras aplicações</string>
+    <string name="permit_draw_overlay">Permitir sobreposição a outras apps</string>
     <string name="permit_manage_external_storage">Permitir acesso para gerir todos os ficheiros</string>
     <string name="permit_usage_access">Permitir acesso de utilização</string>
     <string name="permit_write_settings">Permitir alteração das definições do sistema</string>
@@ -3030,6 +3038,8 @@ Deste modo, a app também pode ativar ou desativar o modo Não incomodar e alter
     <string name="platform_compat_dashboard_title">Alterações de compatibilidade da aplicação</string>
     <string name="platform_compat_default_disabled_title">Alterações desativadas predefinidas</string>
     <string name="platform_compat_default_enabled_title">Alterações ativadas predefinidas</string>
+    <string name="platform_compat_dialog_text_no_apps">As alterações de compatibilidade das apps apenas podem ser modificadas para apps depuráveis. Instale uma app depurável e tente novamente.</string>
+    <string name="platform_compat_dialog_title_no_apps">Sem apps disponíveis</string>
     <string name="please_select_phase2">Autenticação da fase 2</string>
     <string name="pointer_location">Localização do ponteiro</string>
     <string name="pointer_location_summary">Apresentar dados atuais de toque</string>
@@ -3418,7 +3428,7 @@ Para utilizar a afixação de apps: \u0009
 1.\u0009Ative a afixação de apps \u0009
 2.\u0009Abra a Vista geral \u0009
 3.\u0009Toque no ícone da app na parte superior do ecrã e, em seguida, toque em Afixar."</string>
-    <string name="screen_pinning_title">Afixação de apps</string>
+    <string name="screen_pinning_title">Fixação de apps</string>
     <string name="screen_pinning_unlock_none">Bloquear dispositivo ao soltar</string>
     <string name="screen_pinning_unlock_password">Pedir palavra-passe antes de soltar</string>
     <string name="screen_pinning_unlock_pattern">Pedir padrão de desbloqueio antes de soltar</string>
@@ -3819,7 +3829,7 @@ PIN possivelmente incorreto."</string>
     <string name="sound_settings_summary_silent">Campainha definida como silenciosa</string>
     <string name="sound_settings_summary_vibrate">Campainha definida como vibração</string>
     <string name="sound_work_settings">Sons do perfil de trabalho</string>
-    <string name="special_access">Acesso especial a aplicações</string>
+    <string name="special_access">Acesso especial a apps</string>
     <string name="special_access_more">Veja mais</string>
     <string name="speed_label_fast">Rápida</string>
     <string name="speed_label_medium">Média</string>
@@ -4108,10 +4118,10 @@ Experimente utilizar um ^3 mais rápido ou, em alternativa, utilize este ^4 como
 %1$s"</string>
     <string name="sync_plug"><font fgcolor="#ffffffff">Bem-vindo ao Google Sync!</font>" 
 Uma abordagem da Google à sincronização de dados, que permite aceder aos contactos, compromissos e outros itens a partir de qualquer local onde se encontre."</string>
-    <string name="system_alert_window_access_title">Sobrepor a outras aplicações</string>
+    <string name="system_alert_window_access_title">Sobrepor a outras apps</string>
     <string name="system_alert_window_apps_title">Aplicações</string>
-    <string name="system_alert_window_settings">Sobrepor a outras aplicações</string>
-    <string name="system_alert_window_summary">%1$d de %2$d aplicações autorizadas a sobreporem-se a outras aplicações</string>
+    <string name="system_alert_window_settings">Sobrepor a outras apps</string>
+    <string name="system_alert_window_summary">%1$d de %2$d apps autorizadas a sobreporem-se a outras apps</string>
     <string name="system_app">(Sistema)</string>
     <string name="system_dashboard_summary">Idiomas, gestos, hora, cópia de segurança</string>
     <string name="system_default_app">(Predefinição do sistema)</string>
@@ -5065,9 +5075,9 @@ Permitir esta opção para todas as aplicações que pretenderem verificar?"</st
     <string name="zen_mode_bypassing_apps_all_summary">Todas as notificações</string>
     <string name="zen_mode_bypassing_apps_footer">As pessoas selecionadas podem continuar a entrar em contacto consigo, mesmo que não permita que as apps interrompam.</string>
     <string name="zen_mode_bypassing_apps_header">Apps que podem interromper</string>
-    <string name="zen_mode_bypassing_apps_none">Nenhuma app selecionada.</string>
+    <string name="zen_mode_bypassing_apps_none">Nenhuma app selecionada</string>
     <string name="zen_mode_bypassing_apps_some_summary">Algumas notificações</string>
-    <string name="zen_mode_bypassing_apps_subtext_none">Nenhuma app pode interromper.</string>
+    <string name="zen_mode_bypassing_apps_subtext_none">Nenhuma app pode interromper</string>
     <string name="zen_mode_bypassing_apps_summary_all">Todas as notificações</string>
     <string name="zen_mode_bypassing_apps_summary_some">Algumas notificações</string>
     <string name="zen_mode_bypassing_apps_title">Apps</string>
@@ -5086,7 +5096,7 @@ Permitir esta opção para todas as aplicações que pretenderem verificar?"</st
     <string name="zen_mode_custom_behavior_category_title">Para \"%1$s\"</string>
     <string name="zen_mode_custom_behavior_summary">Criar definições personalizadas para este horário</string>
     <string name="zen_mode_custom_behavior_summary_default">Utilizar predefinições</string>
-    <string name="zen_mode_custom_behavior_title">Não incomodar</string>
+    <string name="zen_mode_custom_behavior_title">Comportamento do Não incomodar</string>
     <string name="zen_mode_custom_calls_footer">As chamadas recebidas são bloqueadas no horário \"%1$s\". Pode ajustar as definições para permitir que os seus amigos, a sua família ou outras pessoas o contactem.</string>
     <string name="zen_mode_custom_messages_footer">Para \"%1$s\", as mensagens recebidas estão bloqueadas. Pode ajustar as definições para permitir que os seus amigos, família ou outras pessoas o contactem.</string>
     <string name="zen_mode_delete_automatic_rules">Elimine horários</string>
@@ -5136,10 +5146,10 @@ Permitir esta opção para todas as aplicações que pretenderem verificar?"</st
     <string name="zen_mode_other_options">outras opções</string>
     <string name="zen_mode_other_sounds_list_count">Mais %d.</string>
     <string name="zen_mode_other_sounds_none">Nada pode interromper.</string>
-    <string name="zen_mode_people_all">Todas as pessoas podem interromper.</string>
+    <string name="zen_mode_people_all">Todas as pessoas podem interromper</string>
     <string name="zen_mode_people_calls_messages_section_title">Quem pode interromper</string>
-    <string name="zen_mode_people_none">Ninguém pode interromper.</string>
-    <string name="zen_mode_people_some">Algumas pessoas podem interromper.</string>
+    <string name="zen_mode_people_none">Ninguém pode interromper</string>
+    <string name="zen_mode_people_some">Algumas pessoas podem interromper</string>
     <string name="zen_mode_qs_set_behavior">Não é possível alterar estas definições neste momento. O modo Não incomodar foi ativado manualmente com comportamento personalizado.</string>
     <string name="zen_mode_reminders">Lembretes</string>
     <string name="zen_mode_reminders_list">lembretes</string>
@@ -5197,7 +5207,7 @@ Quando desativa a funcionalidade Não incomodar, pode encontrar as notificaçõe
     <string name="zen_mode_settings_dnd_manual_end_time">O modo Não incomodar está ativado até à(s) %s.</string>
     <string name="zen_mode_settings_dnd_manual_indefinite">O modo Não incomodar continua ativo até o desativar.</string>
     <string name="zen_mode_settings_summary">Receber notificações apenas de pessoas e apps importantes</string>
-    <string name="zen_mode_settings_summary_off">Nenhum.</string>
+    <string name="zen_mode_settings_summary_off">Nenhum</string>
     <string name="zen_mode_settings_title">Não incomodar</string>
     <string name="zen_mode_settings_turn_on_dialog_title">Ativar o modo Não incomodar</string>
     <string name="zen_mode_slice_subtitle">Limite as interrupções</string>

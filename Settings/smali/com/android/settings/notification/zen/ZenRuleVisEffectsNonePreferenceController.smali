@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private mPreference:Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;
+.field private mPreference:Lcom/android/settings/notification/OPZenNoDividerCustomRadioButtonPreference;
 
 
 # direct methods
@@ -19,7 +19,7 @@
     return-void
 .end method
 
-.method private synthetic lambda$displayPreference$0(Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;)V
+.method private synthetic lambda$displayPreference$0(Lcom/android/settings/notification/OPZenNoDividerCustomRadioButtonPreference;)V
     .locals 4
 
     iget-object p1, p0, Lcom/android/settings/notification/zen/AbstractZenModePreferenceController;->mMetricsFeatureProvider:Lcom/android/settingslib/core/instrumentation/MetricsFeatureProvider;
@@ -98,23 +98,23 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;
+    check-cast p1, Lcom/android/settings/notification/OPZenNoDividerCustomRadioButtonPreference;
 
-    iput-object p1, p0, Lcom/android/settings/notification/zen/ZenRuleVisEffectsNonePreferenceController;->mPreference:Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;
+    iput-object p1, p0, Lcom/android/settings/notification/zen/ZenRuleVisEffectsNonePreferenceController;->mPreference:Lcom/android/settings/notification/OPZenNoDividerCustomRadioButtonPreference;
 
-    new-instance v0, Lcom/android/settings/notification/zen/-$$Lambda$ZenRuleVisEffectsNonePreferenceController$AP1QKlHaRg-FPBgDmk9Vnq-c-DA;
+    new-instance v0, Lcom/android/settings/notification/zen/-$$Lambda$ZenRuleVisEffectsNonePreferenceController$NrD8yTWxDhSD4OCpQsktYNqU7kM;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/notification/zen/-$$Lambda$ZenRuleVisEffectsNonePreferenceController$AP1QKlHaRg-FPBgDmk9Vnq-c-DA;-><init>(Lcom/android/settings/notification/zen/ZenRuleVisEffectsNonePreferenceController;)V
+    invoke-direct {v0, p0}, Lcom/android/settings/notification/zen/-$$Lambda$ZenRuleVisEffectsNonePreferenceController$NrD8yTWxDhSD4OCpQsktYNqU7kM;-><init>(Lcom/android/settings/notification/zen/ZenRuleVisEffectsNonePreferenceController;)V
 
-    invoke-virtual {p1, v0}, Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;->setOnRadioButtonClickListener(Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference$OnRadioButtonClickListener;)V
+    invoke-virtual {p1, v0}, Lcom/android/settings/notification/OPZenNoDividerCustomRadioButtonPreference;->setOnRadioButtonClickListener(Lcom/android/settings/notification/OPZenNoDividerCustomRadioButtonPreference$OnRadioButtonClickListener;)V
 
     return-void
 .end method
 
-.method public synthetic lambda$displayPreference$0$ZenRuleVisEffectsNonePreferenceController(Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;)V
+.method public synthetic lambda$displayPreference$0$ZenRuleVisEffectsNonePreferenceController(Lcom/android/settings/notification/OPZenNoDividerCustomRadioButtonPreference;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/settings/notification/zen/ZenRuleVisEffectsNonePreferenceController;->lambda$displayPreference$0(Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;)V
+    invoke-direct {p0, p1}, Lcom/android/settings/notification/zen/ZenRuleVisEffectsNonePreferenceController;->lambda$displayPreference$0(Lcom/android/settings/notification/OPZenNoDividerCustomRadioButtonPreference;)V
 
     return-void
 .end method
@@ -141,7 +141,7 @@
     goto :goto_0
 
     :cond_0
-    iget-object p1, p0, Lcom/android/settings/notification/zen/ZenRuleVisEffectsNonePreferenceController;->mPreference:Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;
+    iget-object p1, p0, Lcom/android/settings/notification/zen/ZenRuleVisEffectsNonePreferenceController;->mPreference:Lcom/android/settings/notification/OPZenNoDividerCustomRadioButtonPreference;
 
     iget-object p0, p0, Lcom/android/settings/notification/zen/AbstractZenCustomRulePreferenceController;->mRule:Landroid/app/AutomaticZenRule;
 
@@ -153,7 +153,7 @@
 
     move-result p0
 
-    invoke-virtual {p1, p0}, Lcom/android/settings/notification/zen/ZenCustomRadioButtonPreference;->setChecked(Z)V
+    invoke-virtual {p1, p0}, Lcom/android/settings/notification/OPZenNoDividerCustomRadioButtonPreference;->setChecked(Z)V
 
     :cond_1
     :goto_0

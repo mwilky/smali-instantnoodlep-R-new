@@ -229,16 +229,16 @@
         <item quantity="one">మీకు ఇంకా %1$d అవకాశం ఉంది</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
-        <item quantity="other">%d సెకండ్లలో తిరిగి ప్రయత్నించండి.</item>
-        <item quantity="one">%d సెకండ్లో తిరిగి ప్రయత్నించండి.</item>
+        <item quantity="other">%d సెకనులలో మళ్లీ ప్రయత్నించండి.</item>
+        <item quantity="one">%d సెకనులో మళ్లీ ప్రయత్నించండి.</item>
     </plurals>
     <plurals name="oneplus_zen_mode_duration_summary_time_hours">
         <item quantity="other">%d గంటలు (ఆటోమేటిక్‌గా ఆన్ అయితే మినహా)</item>
         <item quantity="one">1 గంట (ఆటోమేటిక్‌గా ఆన్ అయితే మినహా)</item>
     </plurals>
     <plurals name="op_location_settings_summary_location_on">
-        <item quantity="other">On - %1$d apps have access to location</item>
-        <item quantity="one">On - %1$d app has access to location</item>
+        <item quantity="other">%1$d యాప్‌లు ప్రదేశానికి ప్రాప్తి కలిగి ఉన్నాయి</item>
+        <item quantity="one">%1$d పై యాప్ ప్రదేశానికి ప్రాప్తి కలిగి ఉంది</item>
     </plurals>
     <plurals name="permission_bar_chart_label">
         <item quantity="other">%s యాప్‌లు</item>

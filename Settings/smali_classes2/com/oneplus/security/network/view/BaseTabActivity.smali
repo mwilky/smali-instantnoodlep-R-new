@@ -30,6 +30,8 @@
 
 .field protected mViewPager:Landroidx/viewpager/widget/ViewPager;
 
+.field private restartFlag:Z
+
 
 # direct methods
 .method public constructor <init>()V
@@ -38,6 +40,22 @@
     invoke-direct {p0}, Lcom/oneplus/settings/BaseAppCompatActivity;-><init>()V
 
     return-void
+.end method
+
+.method static synthetic access$000(Lcom/oneplus/security/network/view/BaseTabActivity;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/oneplus/security/network/view/BaseTabActivity;->restartFlag:Z
+
+    return p0
+.end method
+
+.method static synthetic access$002(Lcom/oneplus/security/network/view/BaseTabActivity;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/oneplus/security/network/view/BaseTabActivity;->restartFlag:Z
+
+    return p1
 .end method
 
 

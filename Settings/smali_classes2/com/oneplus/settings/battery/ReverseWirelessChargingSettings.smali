@@ -262,21 +262,21 @@
 
     iget-object v0, p0, Lcom/oneplus/settings/battery/ReverseWirelessChargingSettings;->mSwitch:Landroidx/preference/SwitchPreference;
 
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const/4 v3, -0x2
+    const/4 v2, -0x2
 
-    invoke-static {v0, v1, v4, v3}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+    invoke-static {v0, v1, v4, v2}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result v0
 
     iget-object v1, p0, Lcom/oneplus/settings/battery/ReverseWirelessChargingSettings;->mSwitch:Landroidx/preference/SwitchPreference;
+
+    const/4 v2, 0x1
 
     if-eqz v0, :cond_0
 
@@ -290,7 +290,6 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
 
-    :cond_1
     iget-object v0, p0, Lcom/oneplus/settings/battery/ReverseWirelessChargingSettings;->mBatteryManager:Landroid/os/BatteryManager;
 
     const/4 v1, 0x4
@@ -309,11 +308,11 @@
 
     const/16 v3, 0xf
 
-    if-le v0, v3, :cond_2
+    if-le v0, v3, :cond_1
 
     const/4 v0, 0x2
 
-    if-eq v1, v0, :cond_2
+    if-eq v1, v0, :cond_1
 
     iget-object p0, p0, Lcom/oneplus/settings/battery/ReverseWirelessChargingSettings;->mSwitch:Landroidx/preference/SwitchPreference;
 
@@ -321,11 +320,12 @@
 
     goto :goto_1
 
-    :cond_2
+    :cond_1
     iget-object p0, p0, Lcom/oneplus/settings/battery/ReverseWirelessChargingSettings;->mSwitch:Landroidx/preference/SwitchPreference;
 
     invoke-virtual {p0, v4}, Landroidx/preference/Preference;->setEnabled(Z)V
 
+    :cond_2
     :goto_1
     return-void
 .end method

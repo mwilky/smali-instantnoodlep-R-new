@@ -15,10 +15,10 @@
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(I)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0, p1}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>(I)V
 
     return-void
 .end method
@@ -49,6 +49,12 @@
     if-eqz p1, :cond_0
 
     invoke-static {}, Lcom/oneplus/settings/utils/OPThemeUtils;->isSupportCustomeTheme()Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isGuestMode()Z
 
     move-result p1
 
@@ -86,6 +92,12 @@
 
     if-nez p2, :cond_0
 
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isGuestMode()Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
+
     new-instance p2, Lcom/android/settingslib/search/SearchIndexableRaw;
 
     invoke-direct {p2, p1}, Lcom/android/settingslib/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
@@ -110,7 +122,7 @@
 
     iput-object v0, p2, Lcom/android/settingslib/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
 
-    sget v0, Lcom/android/settings/R$string;->oneplus_search_keyword_theme_settings_no_notification_light:I
+    sget v0, Lcom/android/settings/R$string;->oneplus_search_keyword_theme_settings_no_notification_light_new:I
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -128,6 +140,12 @@
     move-result p2
 
     if-eqz p2, :cond_1
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isGuestMode()Z
+
+    move-result p2
+
+    if-nez p2, :cond_1
 
     new-instance p2, Lcom/android/settingslib/search/SearchIndexableRaw;
 
@@ -153,7 +171,7 @@
 
     iput-object v0, p2, Lcom/android/settingslib/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
 
-    sget v0, Lcom/android/settings/R$string;->oneplus_search_keyword_theme_settings_mcl:I
+    sget v0, Lcom/android/settings/R$string;->oneplus_search_keyword_theme_settings_mcl_new:I
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

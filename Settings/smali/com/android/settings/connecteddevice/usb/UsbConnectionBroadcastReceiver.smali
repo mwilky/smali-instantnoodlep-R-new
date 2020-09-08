@@ -158,7 +158,7 @@
 
     move-result p1
 
-    const-string v4, "unlocked"
+    const-string/jumbo v4, "unlocked"
 
     if-eqz p1, :cond_2
 

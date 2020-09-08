@@ -45,7 +45,7 @@
 
 .field protected mIsAlphaMode:Z
 
-.field private mLayout:Lcom/google/android/setupdesign/GlifLayout;
+.field protected mLayout:Lcom/google/android/setupdesign/GlifLayout;
 
 .field private mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
@@ -57,13 +57,13 @@
 
 .field private mNextButton:Lcom/google/android/setupcompat/template/FooterButton;
 
-.field private mPasswordEntry:Landroid/widget/ImeAwareEditText;
+.field protected mPasswordEntry:Landroid/widget/ImeAwareEditText;
 
 .field private mPasswordEntryInputDisabler:Lcom/android/internal/widget/TextViewInputDisabler;
 
 .field private mPasswordHistoryHashFactor:[B
 
-.field private mPasswordRequirementAdapter:Lcom/android/settings/password/PasswordRequirementAdapter;
+.field protected mPasswordRequirementAdapter:Lcom/android/settings/password/PasswordRequirementAdapter;
 
 .field private mPasswordRestrictionView:Landroidx/recyclerview/widget/RecyclerView;
 

@@ -63,8 +63,20 @@
 
     invoke-virtual {p1, p0}, Lcom/android/settings/core/SubSettingLauncher;->setSourceMetricsCategory(I)Lcom/android/settings/core/SubSettingLauncher;
 
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isO2()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    sget p0, Lcom/android/settings/R$string;->language_picker_title_o2:I
+
+    goto :goto_0
+
+    :cond_1
     sget p0, Lcom/android/settings/R$string;->language_picker_title:I
 
+    :goto_0
     invoke-virtual {p1, p0}, Lcom/android/settings/core/SubSettingLauncher;->setTitleRes(I)Lcom/android/settings/core/SubSettingLauncher;
 
     invoke-virtual {p1}, Lcom/android/settings/core/SubSettingLauncher;->launch()V

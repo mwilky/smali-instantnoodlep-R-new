@@ -47,7 +47,7 @@
 
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    sget v1, Lcom/android/settings/R$string;->oneplus_model_19811_for_us:I
+    sget v1, Lcom/android/settings/R$string;->oneplus_model_kebab_for_01:I
 
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -59,7 +59,7 @@
 
     if-eqz v0, :cond_0
 
-    sget v0, Lcom/android/settings/R$string;->oneplus_19811_us_fcc_id:I
+    sget v0, Lcom/android/settings/R$string;->oneplus_model_kebab_for_01_fcc_id:I
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -68,6 +68,52 @@
     return-object p0
 
     :cond_0
+    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    sget v1, Lcom/android/settings/R$string;->oneplus_model_kebabt:I
+
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    sget v0, Lcom/android/settings/R$string;->oneplus_kebabt_fcc_id:I
+
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_1
+    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    sget v1, Lcom/android/settings/R$string;->oneplus_model_19811_for_us:I
+
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    sget v0, Lcom/android/settings/R$string;->oneplus_19811_us_fcc_id:I
+
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_2
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     sget v1, Lcom/android/settings/R$string;->oneplus_model_19821_for_us:I
@@ -80,7 +126,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_3
 
     sget v0, Lcom/android/settings/R$string;->oneplus_19821_us_fcc_id:I
 
@@ -90,7 +136,7 @@
 
     return-object p0
 
-    :cond_1
+    :cond_3
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     sget v1, Lcom/android/settings/R$string;->oneplus_model_19867_for_vzw:I
@@ -103,47 +149,9 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
-
-    sget v0, Lcom/android/settings/R$string;->oneplus_19867_vzw_fcc_id:I
-
-    invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_2
-    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
-
-    const-string v1, "GM1917"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    sget v0, Lcom/android/settings/R$string;->oneplus_18821_us_fcc_id:I
-
-    invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_3
-    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
-
-    const-string v1, "GM1915"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
     if-eqz v0, :cond_4
 
-    sget v0, Lcom/android/settings/R$string;->oneplus_18831_us_fcc_id:I
+    sget v0, Lcom/android/settings/R$string;->oneplus_19867_vzw_fcc_id:I
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -154,7 +162,7 @@
     :cond_4
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    const-string v1, "GM1905"
+    const-string v1, "GM1917"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -162,7 +170,7 @@
 
     if-eqz v0, :cond_5
 
-    sget v0, Lcom/android/settings/R$string;->oneplus_18857_us_fcc_id:I
+    sget v0, Lcom/android/settings/R$string;->oneplus_18821_us_fcc_id:I
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -173,7 +181,7 @@
     :cond_5
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    const-string v1, "HD1907"
+    const-string v1, "GM1915"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -181,7 +189,7 @@
 
     if-eqz v0, :cond_6
 
-    sget v0, Lcom/android/settings/R$string;->oneplus_19863_tmo_fcc_id:I
+    sget v0, Lcom/android/settings/R$string;->oneplus_18831_us_fcc_id:I
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -192,7 +200,7 @@
     :cond_6
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    const-string v1, "HD1905"
+    const-string v1, "GM1905"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -200,7 +208,7 @@
 
     if-eqz v0, :cond_7
 
-    sget v0, Lcom/android/settings/R$string;->oneplus_18865_us_fcc_id:I
+    sget v0, Lcom/android/settings/R$string;->oneplus_18857_us_fcc_id:I
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -211,7 +219,7 @@
     :cond_7
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    const-string v1, "HD1925"
+    const-string v1, "HD1907"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -219,7 +227,7 @@
 
     if-eqz v0, :cond_8
 
-    sget v0, Lcom/android/settings/R$string;->oneplus_19861_tmo_fcc_id:I
+    sget v0, Lcom/android/settings/R$string;->oneplus_19863_tmo_fcc_id:I
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -230,7 +238,7 @@
     :cond_8
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    const-string v1, "ONEPLUS A6003"
+    const-string v1, "HD1905"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -238,7 +246,7 @@
 
     if-eqz v0, :cond_9
 
-    sget v0, Lcom/android/settings/R$string;->oneplus_a6003_fcc_id:I
+    sget v0, Lcom/android/settings/R$string;->oneplus_18865_us_fcc_id:I
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -249,7 +257,7 @@
     :cond_9
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    const-string v1, "ONEPLUS A6013"
+    const-string v1, "HD1925"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -257,7 +265,7 @@
 
     if-eqz v0, :cond_a
 
-    sget v0, Lcom/android/settings/R$string;->oneplus_a6013_fcc_id:I
+    sget v0, Lcom/android/settings/R$string;->oneplus_19861_tmo_fcc_id:I
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -268,7 +276,7 @@
     :cond_a
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    const-string v1, "ONEPLUS A5000"
+    const-string v1, "ONEPLUS A6003"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -276,7 +284,7 @@
 
     if-eqz v0, :cond_b
 
-    sget v0, Lcom/android/settings/R$string;->oneplus_a5000_fcc_id:I
+    sget v0, Lcom/android/settings/R$string;->oneplus_a6003_fcc_id:I
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -287,7 +295,7 @@
     :cond_b
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    const-string v1, "ONEPLUS A5010"
+    const-string v1, "ONEPLUS A6013"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -295,7 +303,7 @@
 
     if-eqz v0, :cond_c
 
-    sget v0, Lcom/android/settings/R$string;->oneplus_a5010_fcc_id:I
+    sget v0, Lcom/android/settings/R$string;->oneplus_a6013_fcc_id:I
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -306,13 +314,51 @@
     :cond_c
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    const-string v1, "IN2017"
+    const-string v1, "ONEPLUS A5000"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_d
+
+    sget v0, Lcom/android/settings/R$string;->oneplus_a5000_fcc_id:I
+
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_d
+    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    const-string v1, "ONEPLUS A5010"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_e
+
+    sget v0, Lcom/android/settings/R$string;->oneplus_a5010_fcc_id:I
+
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_e
+    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    const-string v1, "IN2017"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_f
 
     sget v0, Lcom/android/settings/R$string;->oneplus_19855_tmo_fcc_id:I
 
@@ -322,7 +368,7 @@
 
     return-object p0
 
-    :cond_d
+    :cond_f
     const-string p0, "none"
 
     return-object p0
@@ -330,6 +376,20 @@
 
 .method private isShowCanadaInfo()Z
     .locals 2
+
+    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    sget v1, Lcom/android/settings/R$string;->oneplus_model_kebab_for_01:I
+
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
 
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
@@ -445,6 +505,20 @@
 
 .method private isShowIndiaSar()Z
     .locals 2
+
+    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    sget v1, Lcom/android/settings/R$string;->oneplus_model_kebab_for_03:I
+
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
 
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
@@ -679,7 +753,7 @@
 
     sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    sget v2, Lcom/android/settings/R$string;->oneplus_model_19811_for_us:I
+    sget v2, Lcom/android/settings/R$string;->oneplus_model_kebab_for_01:I
 
     invoke-virtual {p0, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -690,6 +764,41 @@
     move-result v1
 
     if-eqz v1, :cond_0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget v0, Lcom/android/settings/R$string;->oneplus_kebab_canada_ic:I
+
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto/16 :goto_0
+
+    :cond_0
+    sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    sget v2, Lcom/android/settings/R$string;->oneplus_model_19811_for_us:I
+
+    invoke-virtual {p0, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -711,7 +820,7 @@
 
     goto/16 :goto_0
 
-    :cond_0
+    :cond_1
     sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     sget v2, Lcom/android/settings/R$string;->oneplus_model_19821_for_us:I
@@ -724,7 +833,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -746,7 +855,7 @@
 
     goto/16 :goto_0
 
-    :cond_1
+    :cond_2
     sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     const-string v2, "GM1917"
@@ -755,7 +864,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -777,7 +886,7 @@
 
     goto/16 :goto_0
 
-    :cond_2
+    :cond_3
     sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     const-string v2, "GM1905"
@@ -786,7 +895,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_4
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -808,7 +917,7 @@
 
     goto/16 :goto_0
 
-    :cond_3
+    :cond_4
     sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     const-string v2, "HD1905"
@@ -817,7 +926,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_5
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -839,7 +948,7 @@
 
     goto/16 :goto_0
 
-    :cond_4
+    :cond_5
     sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     const-string v2, "ONEPLUS A6003"
@@ -848,7 +957,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_6
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -870,7 +979,7 @@
 
     goto :goto_0
 
-    :cond_5
+    :cond_6
     sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     const-string v2, "ONEPLUS A6013"
@@ -879,7 +988,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_7
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -901,7 +1010,7 @@
 
     goto :goto_0
 
-    :cond_6
+    :cond_7
     sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     const-string v2, "ONEPLUS A5000"
@@ -910,7 +1019,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_7
+    if-eqz v1, :cond_8
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -932,7 +1041,7 @@
 
     goto :goto_0
 
-    :cond_7
+    :cond_8
     sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     const-string v2, "ONEPLUS A5010"
@@ -941,7 +1050,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_8
+    if-eqz v1, :cond_9
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -961,7 +1070,7 @@
 
     move-result-object v0
 
-    :cond_8
+    :cond_9
     :goto_0
     iget-object p0, p0, Lcom/oneplus/settings/OPRegulatoryInfoDisplayActivity;->mRegulatoryInfoCanadaIC:Landroid/widget/TextView;
 
@@ -1158,7 +1267,7 @@
 
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    sget v2, Lcom/android/settings/R$string;->oneplus_model_19811_for_in:I
+    sget v2, Lcom/android/settings/R$string;->oneplus_model_kebab_for_03:I
 
     invoke-virtual {p0, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -1171,6 +1280,35 @@
     const-string v2, "XXX"
 
     if-eqz v0, :cond_0
+
+    sget v0, Lcom/android/settings/R$string;->oneplus_kebab_in_head:I
+
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    sget v0, Lcom/android/settings/R$string;->oneplus_kebab_in_body:I
+
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto/16 :goto_0
+
+    :cond_0
+    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    sget v3, Lcom/android/settings/R$string;->oneplus_model_19811_for_in:I
+
+    invoke-virtual {p0, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
 
     sget v0, Lcom/android/settings/R$string;->oneplus_19811_in_head:I
 
@@ -1186,7 +1324,7 @@
 
     goto/16 :goto_0
 
-    :cond_0
+    :cond_1
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     sget v3, Lcom/android/settings/R$string;->oneplus_model_19821_for_in:I
@@ -1199,7 +1337,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     sget v0, Lcom/android/settings/R$string;->oneplus_19821_in_head:I
 
@@ -1215,7 +1353,7 @@
 
     goto/16 :goto_0
 
-    :cond_1
+    :cond_2
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     const-string v3, "GM1911"
@@ -1224,7 +1362,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     sget v0, Lcom/android/settings/R$string;->oneplus_18821_in_head:I
 
@@ -1240,7 +1378,7 @@
 
     goto/16 :goto_0
 
-    :cond_2
+    :cond_3
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     const-string v3, "GM1901"
@@ -1249,7 +1387,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     sget v0, Lcom/android/settings/R$string;->oneplus_18857_in_head:I
 
@@ -1265,7 +1403,7 @@
 
     goto :goto_0
 
-    :cond_3
+    :cond_4
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     const-string v3, "HD1901"
@@ -1274,7 +1412,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
     sget v0, Lcom/android/settings/R$string;->oneplus_18865_in_head:I
 
@@ -1290,7 +1428,7 @@
 
     goto :goto_0
 
-    :cond_4
+    :cond_5
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     const-string v3, "HD1911"
@@ -1299,7 +1437,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     sget v0, Lcom/android/settings/R$string;->oneplus_19801_in_head:I
 
@@ -1315,7 +1453,7 @@
 
     goto :goto_0
 
-    :cond_5
+    :cond_6
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     const-string v3, "ONEPLUS A6000"
@@ -1324,7 +1462,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     sget v0, Lcom/android/settings/R$string;->oneplus_a6000_in_head:I
 
@@ -1340,7 +1478,7 @@
 
     goto :goto_0
 
-    :cond_6
+    :cond_7
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     const-string v3, "ONEPLUS A6010"
@@ -1349,7 +1487,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_8
 
     sget v0, Lcom/android/settings/R$string;->oneplus_a6010_in_head:I
 
@@ -1365,7 +1503,7 @@
 
     goto :goto_0
 
-    :cond_7
+    :cond_8
     move-object v0, v2
 
     :goto_0

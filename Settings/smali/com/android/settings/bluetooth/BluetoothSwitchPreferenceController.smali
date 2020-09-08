@@ -19,6 +19,10 @@
 
 .field private mFooterPreference:Lcom/oneplus/settings/widget/OPFooterPreference;
 
+.field private mIntentFilter:Landroid/content/IntentFilter;
+
+.field private final mReceiver:Landroid/content/BroadcastReceiver;
+
 .field private mRestrictionUtils:Lcom/android/settings/bluetooth/RestrictionUtils;
 
 .field private mSwitch:Lcom/android/settings/widget/SwitchWidgetController;
@@ -29,6 +33,12 @@
     .locals 6
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lcom/android/settings/bluetooth/BluetoothSwitchPreferenceController$1;
+
+    invoke-direct {v0, p0}, Lcom/android/settings/bluetooth/BluetoothSwitchPreferenceController$1;-><init>(Lcom/android/settings/bluetooth/BluetoothSwitchPreferenceController;)V
+
+    iput-object v0, p0, Lcom/android/settings/bluetooth/BluetoothSwitchPreferenceController;->mReceiver:Landroid/content/BroadcastReceiver;
 
     iput-object p2, p0, Lcom/android/settings/bluetooth/BluetoothSwitchPreferenceController;->mRestrictionUtils:Lcom/android/settings/bluetooth/RestrictionUtils;
 
@@ -213,15 +223,35 @@
     invoke-virtual {p0, v0}, Lcom/android/settings/bluetooth/BluetoothSwitchPreferenceController;->updateText(Z)V
 
     :cond_1
+    new-instance v0, Landroid/content/IntentFilter;
+
+    const-string v1, "android.bluetooth.adapter.action.STATE_CHANGED"
+
+    invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+
+    iput-object v0, p0, Lcom/android/settings/bluetooth/BluetoothSwitchPreferenceController;->mIntentFilter:Landroid/content/IntentFilter;
+
+    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothSwitchPreferenceController;->mContext:Landroid/content/Context;
+
+    iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothSwitchPreferenceController;->mReceiver:Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {v1, p0, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
     return-void
 .end method
 
 .method public onStop()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothSwitchPreferenceController;->mBluetoothEnabler:Lcom/android/settings/bluetooth/BluetoothEnabler;
+    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothSwitchPreferenceController;->mBluetoothEnabler:Lcom/android/settings/bluetooth/BluetoothEnabler;
 
-    invoke-virtual {p0}, Lcom/android/settings/bluetooth/BluetoothEnabler;->pause()V
+    invoke-virtual {v0}, Lcom/android/settings/bluetooth/BluetoothEnabler;->pause()V
+
+    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothSwitchPreferenceController;->mContext:Landroid/content/Context;
+
+    iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothSwitchPreferenceController;->mReceiver:Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {v0, p0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     return-void
 .end method

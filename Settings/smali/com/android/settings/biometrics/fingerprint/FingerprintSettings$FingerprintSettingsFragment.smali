@@ -862,12 +862,19 @@
 
     move-result-object v0
 
-    const v1, 0x10e0060
+    const v1, 0x10e0066
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v0
 
+    const/4 v1, -0x1
+
+    if-ne v0, v1, :cond_1
+
+    const/4 v0, 0x5
+
+    :cond_1
     iget-object v1, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintSettings$FingerprintSettingsFragment;->mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
     iget v2, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintSettings$FingerprintSettingsFragment;->mUserId:I
@@ -884,13 +891,13 @@
 
     const/4 v3, 0x0
 
-    if-lt v1, v0, :cond_1
+    if-lt v1, v0, :cond_2
 
     move v1, v2
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     move v1, v3
 
     :goto_0
@@ -900,7 +907,7 @@
 
     move-result v4
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
@@ -922,7 +929,7 @@
 
     goto :goto_1
 
-    :cond_2
+    :cond_3
     const-string v0, ""
 
     :goto_1
@@ -934,13 +941,13 @@
 
     invoke-virtual {p0, v0}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
-    if-nez v1, :cond_3
+    if-nez v1, :cond_4
 
-    if-nez v4, :cond_3
+    if-nez v4, :cond_4
 
     goto :goto_2
 
-    :cond_3
+    :cond_4
     move v2, v3
 
     :goto_2

@@ -56,8 +56,8 @@
         0x7f0401db
         0x7f0401dc
         0x7f0402bc
-        0x7f040448
-        0x7f0404a2
-        0x7f0404a8
+        0x7f040445
+        0x7f04049f
+        0x7f0404a5
     .end array-data
 .end method

@@ -391,6 +391,8 @@
 
     move-result-object p1
 
+    if-eqz p1, :cond_1
+
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p1

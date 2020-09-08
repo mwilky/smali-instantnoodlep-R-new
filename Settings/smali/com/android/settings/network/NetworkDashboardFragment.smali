@@ -700,6 +700,67 @@
     return p0
 .end method
 
+.method public onPreferenceTreeClick(Landroidx/preference/Preference;)Z
+    .locals 2
+
+    invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "data_usage_summary"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/Activity;->isInMultiWindowMode()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->getPrefContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    sget v0, Lcom/android/settings/R$string;->feature_not_support_split_screen:I
+
+    invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, p0, v0}, Landroidx/appcompat/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroidx/appcompat/widget/Toast;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/widget/Toast;->show()V
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    invoke-super {p0, p1}, Lcom/android/settings/dashboard/DashboardFragment;->onPreferenceTreeClick(Landroidx/preference/Preference;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
 .method public onStart()V
     .locals 4
 

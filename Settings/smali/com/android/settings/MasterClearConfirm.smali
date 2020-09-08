@@ -240,6 +240,8 @@
 
     check-cast v0, Lcom/google/android/setupcompat/template/FooterBarMixin;
 
+    if-eqz v0, :cond_3
+
     new-instance v1, Lcom/google/android/setupcompat/template/FooterButton$Builder;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -280,6 +282,7 @@
 
     invoke-virtual {v0, p0}, Lcom/google/android/setupcompat/template/FooterBarMixin;->setPrimaryButton(Lcom/google/android/setupcompat/template/FooterButton;)V
 
+    :cond_3
     return-void
 .end method
 
@@ -735,16 +738,25 @@
 
     iput-object p1, p0, Lcom/android/settings/MasterClearConfirm;->mContentView:Landroid/view/View;
 
-    sget p2, Lcom/android/settings/R$id;->setup_wizard_layout:I
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
 
+    sget p2, Lcom/android/settings/R$id;->content_parent:I
+
+    invoke-virtual {p1, p2}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/FrameLayout;
+
+    if-eqz p1, :cond_2
+
     const/4 p2, 0x1
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setFitsSystemWindows(Z)V
+    invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->setFitsSystemWindows(Z)V
 
+    :cond_2
     invoke-direct {p0}, Lcom/android/settings/MasterClearConfirm;->setUpActionBarAndTitle()V
 
     invoke-direct {p0}, Lcom/android/settings/MasterClearConfirm;->establishFinalConfirmationState()V

@@ -1,11 +1,14 @@
 .class Lcom/android/settings/TetherSettings$2;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.super Ljava/lang/Object;
 .source "TetherSettings.java"
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/TetherSettings;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/android/settings/TetherSettings;->onPreferenceTreeClick(Landroidx/preference/Preference;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -14,181 +17,132 @@
 .end annotation
 
 
+# instance fields
+.field final synthetic this$0:Lcom/android/settings/TetherSettings;
+
+.field final synthetic val$dontShowAgain:Landroid/widget/CheckBox;
+
+
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Lcom/android/settings/TetherSettings;Landroid/widget/CheckBox;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    iput-object p1, p0, Lcom/android/settings/TetherSettings$2;->this$0:Lcom/android/settings/TetherSettings;
+
+    iput-object p2, p0, Lcom/android/settings/TetherSettings$2;->val$dontShowAgain:Landroid/widget/CheckBox;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public getNonIndexableKeys(Landroid/content/Context;)Ljava/util/List;
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/content/Context;",
-            ")",
-            "Ljava/util/List<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 2
 
-    invoke-super {p0, p1}, Lcom/android/settings/search/BaseSearchIndexProvider;->getNonIndexableKeys(Landroid/content/Context;)Ljava/util/List;
+    iget-object p1, p0, Lcom/android/settings/TetherSettings$2;->val$dontShowAgain:Landroid/widget/CheckBox;
 
-    move-result-object p0
-
-    const-class v0, Landroid/net/ConnectivityManager;
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/net/ConnectivityManager;
-
-    invoke-static {p1}, Lcom/android/settingslib/TetherUtil;->isTetherAvailable(Landroid/content/Context;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const-string v1, "tether_prefs_screen"
-
-    invoke-interface {p0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    const-string/jumbo v1, "wifi_tether"
-
-    invoke-interface {p0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getTetherableUsbRegexs()[Ljava/lang/String;
-
-    move-result-object v1
-
-    array-length v1, v1
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    if-eqz v1, :cond_1
-
-    move v1, v3
-
-    goto :goto_0
-
-    :cond_1
-    move v1, v2
-
-    :goto_0
-    if-eqz v1, :cond_2
-
-    invoke-static {}, Lcom/android/settings/Utils;->isMonkeyRunning()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    :cond_2
-    const-string/jumbo v1, "usb_tether_settings"
-
-    invoke-interface {p0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    :cond_3
-    invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getTetherableBluetoothRegexs()[Ljava/lang/String;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    if-eqz v0, :cond_4
-
-    move v2, v3
-
-    :cond_4
-    if-nez v2, :cond_5
-
-    const-string v0, "enable_bluetooth_tethering"
-
-    invoke-interface {p0, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    :cond_5
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    const v0, 0x1040220
-
-    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-virtual {p1}, Landroid/widget/CheckBox;->isChecked()Z
 
     move-result p1
 
-    xor-int/2addr p1, v3
+    if-eqz p1, :cond_0
 
-    if-nez p1, :cond_6
+    const-string p1, "checked"
 
-    const-string p1, "enable_ethernet_tethering"
+    goto :goto_0
 
-    invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :cond_0
+    const-string p1, "unchecked"
 
-    :cond_6
-    return-object p0
-.end method
+    :goto_0
+    iget-object p2, p0, Lcom/android/settings/TetherSettings$2;->this$0:Lcom/android/settings/TetherSettings;
 
-.method public getXmlResourcesToIndex(Landroid/content/Context;Z)Ljava/util/List;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/content/Context;",
-            "Z)",
-            "Ljava/util/List<",
-            "Landroid/provider/SearchIndexableResource;",
-            ">;"
-        }
-    .end annotation
+    invoke-virtual {p2}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
-    new-instance p0, Landroid/provider/SearchIndexableResource;
+    move-result-object p2
 
-    invoke-direct {p0, p1}, Landroid/provider/SearchIndexableResource;-><init>(Landroid/content/Context;)V
+    const-string v0, "tether_settings_prefs"
 
-    sget p1, Lcom/android/settings/R$xml;->tether_prefs:I
+    const/4 v1, 0x0
 
-    iput p1, p0, Landroid/provider/SearchIndexableResource;->xmlResId:I
+    invoke-virtual {p2, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
-    const/4 p1, 0x1
+    move-result-object p2
 
-    new-array p1, p1, [Landroid/provider/SearchIndexableResource;
+    invoke-interface {p2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    const/4 p2, 0x0
+    move-result-object p2
 
-    aput-object p0, p1, p2
+    const-string v0, "checkbox_status"
 
-    invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    invoke-interface {p2, v0, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    move-result-object p0
+    invoke-interface {p2}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    return-object p0
-.end method
+    iget-object p1, p0, Lcom/android/settings/TetherSettings$2;->this$0:Lcom/android/settings/TetherSettings;
 
-.method protected isPageSearchEnabled(Landroid/content/Context;)Z
-    .locals 0
+    invoke-static {p1}, Lcom/android/settings/TetherSettings;->access$1600(Lcom/android/settings/TetherSettings;)Landroidx/preference/SwitchPreference;
 
-    const-string p0, "settings_tether_all_in_one"
+    move-result-object p1
 
-    invoke-static {p1, p0}, Landroid/util/FeatureFlagUtils;->isEnabled(Landroid/content/Context;Ljava/lang/String;)Z
+    const/4 p2, 0x1
 
-    move-result p0
+    invoke-virtual {p1, p2}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
 
-    xor-int/lit8 p0, p0, 0x1
+    iget-object p1, p0, Lcom/android/settings/TetherSettings$2;->this$0:Lcom/android/settings/TetherSettings;
 
-    return p0
+    invoke-static {p1}, Lcom/android/settings/TetherSettings;->access$1700(Lcom/android/settings/TetherSettings;)Landroid/net/wifi/WifiManager;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v1}, Landroid/net/wifi/WifiManager;->setWifiEnabled(Z)Z
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUss()Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    invoke-static {}, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->isVerizon()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    iget-object p1, p0, Lcom/android/settings/TetherSettings$2;->this$0:Lcom/android/settings/TetherSettings;
+
+    invoke-static {p1}, Lcom/android/settings/TetherSettings;->access$1800(Lcom/android/settings/TetherSettings;)Landroid/app/ProgressDialog;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    iget-object p0, p0, Lcom/android/settings/TetherSettings$2;->this$0:Lcom/android/settings/TetherSettings;
+
+    const-wide/16 v0, 0x61a8
+
+    invoke-static {p0, p2, v0, v1}, Lcom/android/settings/TetherSettings;->access$1900(Lcom/android/settings/TetherSettings;IJ)V
+
+    goto :goto_1
+
+    :cond_1
+    iget-object p0, p0, Lcom/android/settings/TetherSettings$2;->this$0:Lcom/android/settings/TetherSettings;
+
+    invoke-static {p0, p2}, Lcom/android/settings/TetherSettings;->access$500(Lcom/android/settings/TetherSettings;I)V
+
+    goto :goto_1
+
+    :cond_2
+    iget-object p0, p0, Lcom/android/settings/TetherSettings$2;->this$0:Lcom/android/settings/TetherSettings;
+
+    invoke-static {p0}, Lcom/android/settings/TetherSettings;->access$1600(Lcom/android/settings/TetherSettings;)Landroidx/preference/SwitchPreference;
+
+    move-result-object p1
+
+    invoke-static {p0, p1, p2}, Lcom/android/settings/TetherSettings;->access$700(Lcom/android/settings/TetherSettings;Landroidx/preference/SwitchPreference;I)V
+
+    :goto_1
+    return-void
 .end method

@@ -109,7 +109,7 @@
 
     move-result v2
 
-    if-eq v2, v0, :cond_1
+    if-eqz v2, :cond_1
 
     move v1, v0
 
@@ -129,7 +129,7 @@
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     :cond_2
-    if-nez v1, :cond_3
+    if-eqz v1, :cond_3
 
     iget-object p0, p0, Lcom/oneplus/settings/ui/OPScreenColorModeSummary;->mSummary:Landroid/widget/TextView;
 
@@ -150,16 +150,12 @@
 .method public setSummary(Ljava/lang/CharSequence;)V
     .locals 0
 
-    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lcom/oneplus/settings/ui/OPScreenColorModeSummary;->setTextSummary(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/oneplus/settings/ui/OPScreenColorModeSummary;->setTextSummary(Ljava/lang/CharSequence;)V
 
     return-void
 .end method
 
-.method public setTextSummary(Ljava/lang/String;)V
+.method public setTextSummary(Ljava/lang/CharSequence;)V
     .locals 1
 
     iget-object v0, p0, Lcom/oneplus/settings/ui/OPScreenColorModeSummary;->mSummary:Landroid/widget/TextView;

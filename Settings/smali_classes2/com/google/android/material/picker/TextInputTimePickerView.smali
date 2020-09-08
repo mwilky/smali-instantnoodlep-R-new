@@ -16,15 +16,13 @@
 
 .field private final mAmPmGroup:Landroid/widget/RadioGroup;
 
-.field private final mAmPmParent:Landroid/widget/LinearLayout;
+.field private final mAmPmParent:Landroid/widget/RelativeLayout;
 
 .field private final mClickListener:Landroid/view/View$OnClickListener;
 
 .field private final mErrorLabel:Landroid/widget/TextView;
 
 .field private mErrorShowing:Z
-
-.field private final mHeaderLabel:Landroid/widget/TextView;
 
 .field private final mHourEditText:Landroid/widget/EditText;
 
@@ -128,9 +126,9 @@
 
     move-result-object p4
 
-    check-cast p4, Landroid/widget/LinearLayout;
+    check-cast p4, Landroid/widget/RelativeLayout;
 
-    iput-object p4, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mAmPmParent:Landroid/widget/LinearLayout;
+    iput-object p4, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mAmPmParent:Landroid/widget/RelativeLayout;
 
     sget p4, Lcom/google/android/material/R$id;->input_block:I
 
@@ -159,16 +157,6 @@
     check-cast p4, Landroid/widget/EditText;
 
     iput-object p4, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mMinuteEditText:Landroid/widget/EditText;
-
-    sget p4, Lcom/google/android/material/R$id;->top_label:I
-
-    invoke-virtual {p0, p4}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object p4
-
-    check-cast p4, Landroid/widget/TextView;
-
-    iput-object p4, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mHeaderLabel:Landroid/widget/TextView;
 
     sget p4, Lcom/google/android/material/R$id;->label_error:I
 
@@ -894,6 +882,14 @@
 
 
 # virtual methods
+.method public getHourView()Landroid/widget/EditText;
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mHourEditText:Landroid/widget/EditText;
+
+    return-object p0
+.end method
+
 .method public getInputBlock()Landroid/view/View;
     .locals 0
 
@@ -903,64 +899,101 @@
 .end method
 
 .method public setAmPmAtStart(Z)V
-    .locals 2
+    .locals 4
 
     iget-boolean v0, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mIs24Hour:Z
 
     if-eqz v0, :cond_0
 
-    iget-object p1, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mAmPmParent:Landroid/widget/LinearLayout;
+    iget-object p1, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mAmPmParent:Landroid/widget/RelativeLayout;
 
     iget-object p0, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mAmPmGroup:Landroid/widget/RadioGroup;
 
-    invoke-virtual {p1, p0}, Landroid/widget/LinearLayout;->removeView(Landroid/view/View;)V
+    invoke-virtual {p1, p0}, Landroid/widget/RelativeLayout;->removeView(Landroid/view/View;)V
 
     return-void
 
     :cond_0
     iget-boolean v0, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mIsAmPmAtStart:Z
 
-    if-eq v0, p1, :cond_2
+    if-eq v0, p1, :cond_3
 
     iput-boolean p1, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mIsAmPmAtStart:Z
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_2
 
-    iget-object p1, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mAmPmParent:Landroid/widget/LinearLayout;
+    iget-object p1, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mAmPmGroup:Landroid/widget/RadioGroup;
 
-    iget-object v0, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mAmPmGroup:Landroid/widget/RadioGroup;
+    invoke-virtual {p1}, Landroid/widget/RadioGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    invoke-virtual {p1, v0}, Landroid/widget/LinearLayout;->removeView(Landroid/view/View;)V
+    move-result-object p1
 
-    iget-object p1, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mAmPmParent:Landroid/widget/LinearLayout;
-
-    iget-object v0, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mAmPmGroup:Landroid/widget/RadioGroup;
+    instance-of v0, p1, Landroid/widget/RelativeLayout$LayoutParams;
 
     const/4 v1, 0x0
 
-    invoke-virtual {p1, v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;I)V
+    if-eqz v0, :cond_1
+
+    move-object v0, p1
+
+    check-cast v0, Landroid/widget/RelativeLayout$LayoutParams;
+
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    sget v3, Lcom/google/android/material/R$dimen;->op_control_margin_space6:I
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+
+    move-result v2
+
+    iput v2, v0, Landroid/widget/RelativeLayout$LayoutParams;->leftMargin:I
+
+    iput v1, v0, Landroid/widget/RelativeLayout$LayoutParams;->rightMargin:I
+
+    const/16 v2, 0x14
+
+    invoke-virtual {v0, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
+
+    iget-object v0, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mAmPmGroup:Landroid/widget/RadioGroup;
+
+    invoke-virtual {v0, p1}, Landroid/widget/RadioGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    :cond_1
+    iget-object p1, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mAmPmParent:Landroid/widget/RelativeLayout;
+
+    iget-object v0, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mAmPmGroup:Landroid/widget/RadioGroup;
+
+    invoke-virtual {p1, v0}, Landroid/widget/RelativeLayout;->removeView(Landroid/view/View;)V
+
+    iget-object p1, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mAmPmParent:Landroid/widget/RelativeLayout;
+
+    iget-object v0, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mAmPmGroup:Landroid/widget/RadioGroup;
+
+    invoke-virtual {p1, v0, v1}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;I)V
 
     goto :goto_0
 
-    :cond_1
-    iget-object p1, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mAmPmParent:Landroid/widget/LinearLayout;
+    :cond_2
+    iget-object p1, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mAmPmParent:Landroid/widget/RelativeLayout;
 
     iget-object v0, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mAmPmGroup:Landroid/widget/RadioGroup;
 
-    invoke-virtual {p1, v0}, Landroid/widget/LinearLayout;->removeView(Landroid/view/View;)V
+    invoke-virtual {p1, v0}, Landroid/widget/RelativeLayout;->removeView(Landroid/view/View;)V
 
-    iget-object p1, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mAmPmParent:Landroid/widget/LinearLayout;
+    iget-object p1, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mAmPmParent:Landroid/widget/RelativeLayout;
 
     iget-object v0, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mAmPmGroup:Landroid/widget/RadioGroup;
 
-    invoke-virtual {p1, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+    invoke-virtual {p1, v0}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
     :goto_0
-    iget-object p0, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mAmPmParent:Landroid/widget/LinearLayout;
+    iget-object p0, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mAmPmParent:Landroid/widget/RelativeLayout;
 
-    invoke-virtual {p0}, Landroid/widget/LinearLayout;->requestLayout()V
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->requestLayout()V
 
-    :cond_2
+    :cond_3
     return-void
 .end method
 
@@ -1118,32 +1151,6 @@
 
     invoke-virtual {p1}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    iget-object p1, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mHeaderLabel:Landroid/widget/TextView;
-
-    invoke-virtual {p1}, Landroid/widget/TextView;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object p1
-
-    iget v1, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mLabelAlphaDuration:I
-
-    int-to-long v1, v1
-
-    invoke-virtual {p1, v1, v2}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object p1
-
-    sget-object v1, Landroidx/animation/AnimatorUtils;->FastOutSlowInInterpolator:Landroid/view/animation/Interpolator;
-
-    invoke-virtual {p1, v1}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/view/ViewPropertyAnimator;->start()V
-
     iget-object p1, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mHourLabel:Landroid/widget/TextView;
 
     invoke-virtual {p1}, Landroid/widget/TextView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -1202,32 +1209,6 @@
     invoke-virtual {p1}, Landroid/view/ViewPropertyAnimator;->start()V
 
     iget-object p1, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mMinuteLabel:Landroid/widget/TextView;
-
-    invoke-virtual {p1}, Landroid/widget/TextView;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object p1
-
-    iget v1, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mLabelAlphaDuration:I
-
-    int-to-long v1, v1
-
-    invoke-virtual {p1, v1, v2}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object p1
-
-    sget-object v1, Landroidx/animation/AnimatorUtils;->FastOutSlowInInterpolator:Landroid/view/animation/Interpolator;
-
-    invoke-virtual {p1, v1}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/view/ViewPropertyAnimator;->start()V
-
-    iget-object p1, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mHeaderLabel:Landroid/widget/TextView;
 
     invoke-virtual {p1}, Landroid/widget/TextView;->animate()Landroid/view/ViewPropertyAnimator;
 

@@ -186,7 +186,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_c
+    if-nez v1, :cond_d
 
     sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
@@ -334,7 +334,7 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :cond_9
     sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
@@ -407,6 +407,41 @@
     goto :goto_1
 
     :cond_b
+    sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    sget v4, Lcom/android/settings/R$string;->oneplus_model_kebab_for_02:I
+
+    invoke-virtual {p0, v4}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_c
+
+    iget-object v1, p0, Lcom/oneplus/settings/OPAuthenticationInformationSettings;->mCmiitIdView:Landroid/widget/TextView;
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    sget v4, Lcom/android/settings/R$string;->oneplus_model_kebab_for_02_cmittid:I
+
+    invoke-virtual {p0, v4}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v3, v2
+
+    invoke-static {v0, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    goto :goto_1
+
+    :cond_c
     iget-object v1, p0, Lcom/oneplus/settings/OPAuthenticationInformationSettings;->mCmiitIdView:Landroid/widget/TextView;
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -423,7 +458,7 @@
 
     goto :goto_1
 
-    :cond_c
+    :cond_d
     :goto_0
     iget-object v1, p0, Lcom/oneplus/settings/OPAuthenticationInformationSettings;->mCmiitIdView:Landroid/widget/TextView;
 
@@ -452,7 +487,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_e
 
     iget-object p0, p0, Lcom/oneplus/settings/OPAuthenticationInformationSettings;->mAuthenticationImage:Landroid/widget/ImageView;
 
@@ -462,7 +497,7 @@
 
     goto :goto_2
 
-    :cond_d
+    :cond_e
     iget-object p0, p0, Lcom/oneplus/settings/OPAuthenticationInformationSettings;->mAuthenticationImage:Landroid/widget/ImageView;
 
     sget v0, Lcom/android/settings/R$drawable;->op_authentication_information_image_light:I

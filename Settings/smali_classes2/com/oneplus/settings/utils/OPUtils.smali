@@ -1665,20 +1665,32 @@
 .end method
 
 .method private static getThemeMode()I
-    .locals 2
+    .locals 1
 
-    const-string v0, "persist.sys.theme.status"
+    sget-object v0, Lcom/oneplus/settings/SettingsBaseApplication;->mApplication:Landroid/app/Application;
 
-    const-string v1, "0"
-
-    invoke-static {v0, v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/app/Application;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
-    move-result v0
+    move-result-object v0
 
+    iget v0, v0, Landroid/content/res/Configuration;->uiMode:I
+
+    and-int/lit8 v0, v0, 0x20
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
     return v0
 .end method
 
@@ -2084,29 +2096,10 @@
 .end method
 
 .method public static initHwId()V
-    .locals 2
-
-    sget-object v0, Lcom/oneplus/settings/SettingsBaseApplication;->mApplication:Landroid/app/Application;
-
-    invoke-virtual {v0}, Landroid/app/Application;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    const-string v1, "hw_version_ui"
-
-    invoke-static {v0, v1}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
+    .locals 0
 
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->setHardwareVersion()V
 
-    :cond_0
     return-void
 .end method
 
@@ -2788,6 +2781,32 @@
     return v0
 .end method
 
+.method public static isEn(Landroid/content/Context;)Z
+    .locals 1
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object p0
+
+    iget-object p0, p0, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+
+    invoke-virtual {p0}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "en"
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
 .method public static isFaceUnlockEnabled(Landroid/content/Context;)Z
     .locals 2
 
@@ -2921,7 +2940,7 @@
 
     move-result-object p0
 
-    const v0, 0x10e0086
+    const v0, 0x10e008c
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -3370,7 +3389,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_5
+    if-eqz v4, :cond_7
 
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -3427,7 +3446,7 @@
 
     move-result-object v9
 
-    const/4 v10, 0x2
+    const/4 v10, 0x3
 
     aget-object v11, v8, v10
 
@@ -3476,15 +3495,73 @@
 
     invoke-virtual {v9, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v8
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    move-result v9
 
-    if-eqz v8, :cond_4
+    if-eqz v9, :cond_4
 
     goto :goto_2
 
     :cond_4
+    const-string v9, "OPLabFeatureActivity"
+
+    new-instance v10, Ljava/lang/StringBuilder;
+
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v11, "fetchLockedAppListByPackageInfo featureKey "
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportMotionGraphicsCompensation()Z
+
+    move-result v9
+
+    if-nez v9, :cond_5
+
+    const-string v9, "op_iris_video_memc_extreme_status"
+
+    invoke-virtual {v9, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-eqz v9, :cond_5
+
+    goto :goto_2
+
+    :cond_5
+    const-string v9, "oneplus_dc_dimming_value"
+
+    invoke-virtual {v9, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_6
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isO2()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_6
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportDC()Z
+
+    move-result v8
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+
+    if-nez v8, :cond_6
+
+    goto :goto_2
+
+    :cond_6
     const/4 v3, 0x1
 
     :goto_2
@@ -3513,14 +3590,14 @@
 
     move v3, v1
 
-    :cond_5
-    if-eqz v3, :cond_6
+    :cond_7
+    if-eqz v3, :cond_8
 
     const-string v0, "true"
 
     goto :goto_4
 
-    :cond_6
+    :cond_8
     const-string v0, "false"
 
     :goto_4
@@ -3809,7 +3886,7 @@
 
     const/4 v1, 0x0
 
-    const/16 v2, 0x49
+    const/16 v2, 0x47
 
     aput v2, v0, v1
 
@@ -3829,7 +3906,7 @@
 
     const/4 v1, 0x0
 
-    const/16 v2, 0xf5
+    const/16 v2, 0xee
 
     aput v2, v0, v1
 
@@ -4198,6 +4275,18 @@
     return v0
 .end method
 
+.method public static isSupportDC()Z
+    .locals 1
+
+    const-string v0, "OP_FEATURE_MM_DC_SUPPORT"
+
+    invoke-static {v0}, Lcom/oneplus/common/ReflectUtil;->isFeatureSupported(Ljava/lang/String;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public static isSupportDynamicEnrollAnimation()Z
     .locals 3
 
@@ -4409,6 +4498,18 @@
     return v0
 .end method
 
+.method public static isSupportGota()Z
+    .locals 1
+
+    const-string v0, "OP_FEATURE_GOTA"
+
+    invoke-static {v0}, Lcom/oneplus/common/ReflectUtil;->isFeatureSupported(Ljava/lang/String;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public static isSupportHearingAid()Z
     .locals 1
 
@@ -4539,6 +4640,38 @@
     invoke-static {v0}, Lcom/oneplus/common/ReflectUtil;->isFeatureSupported(Ljava/lang/String;)Z
 
     move-result v0
+
+    return v0
+.end method
+
+.method public static isSupportNfcUicc()Z
+    .locals 3
+
+    const-string v0, "persist.vendor.radio.uicc_se_enabled"
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "isSupportNfcUicc = "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "OPUtils"
+
+    invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
 .end method
@@ -4685,6 +4818,27 @@
     move-result v0
 
     return v0
+.end method
+
+.method public static isSupportSortByTrack()Z
+    .locals 3
+
+    const-string v0, "ro.product.first_api_level"
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    const/16 v2, 0x1e
+
+    if-lt v0, v2, :cond_0
+
+    const/4 v1, 0x1
+
+    :cond_0
+    return v1
 .end method
 
 .method public static isSupportSystemProductionRingtone()Z
@@ -5148,6 +5302,41 @@
     const/4 p0, 0x0
 
     :goto_0
+    return p0
+.end method
+
+.method public static isZh(Landroid/content/Context;)Z
+    .locals 1
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object p0
+
+    iget-object p0, p0, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+
+    invoke-virtual {p0}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "zh"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
     return p0
 .end method
 

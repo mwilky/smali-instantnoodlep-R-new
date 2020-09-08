@@ -48,6 +48,34 @@
     return p0
 .end method
 
+.method public static getAuthToken(Landroid/content/Context;Lcom/oneplus/accountsdk/auth/OPAuthInfo;Lcom/oneplus/accountsdk/auth/OPAuthListener;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Lcom/oneplus/accountsdk/auth/OPAuthInfo;",
+            "Lcom/oneplus/accountsdk/auth/OPAuthListener<",
+            "Lcom/oneplus/accountsdk/entity/UserTokenInfo;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-static {p0}, Lcom/oneplus/accountsdk/auth/OPAuth;->checkContextNotNull(Landroid/content/Context;)V
+
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    sput-object p1, Lcom/oneplus/accountsdk/b;->a:Landroid/content/Context;
+
+    sget-object p1, Lcom/oneplus/accountsdk/auth/OPAuth;->mAuth:Lcom/oneplus/accountsdk/auth/g;
+
+    invoke-interface {p1, p0, p2}, Lcom/oneplus/accountsdk/auth/g;->b(Landroid/content/Context;Lcom/oneplus/accountsdk/auth/OPAuthListener;)V
+
+    return-void
+.end method
+
 .method protected static sendBindResult(Lcom/oneplus/accountsdk/entity/UserBindInfo;)V
     .locals 1
 

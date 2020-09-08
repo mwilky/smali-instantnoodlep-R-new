@@ -32,6 +32,8 @@
 
 .field private mContext:Landroid/content/Context;
 
+.field private mFooterPreference:Lcom/oneplus/settings/widget/OPFooterPreference;
+
 .field private mHandler:Landroid/os/Handler;
 
 .field private mOPApplicationLoader:Lcom/oneplus/settings/apploader/OPApplicationLoader;
@@ -342,6 +344,20 @@
     invoke-virtual {p1, p0}, Landroidx/preference/Preference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
 
     :cond_1
+    const-string p1, "oneplus_reading_mode_footer"
+
+    invoke-virtual {p0, p1}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/oneplus/settings/widget/OPFooterPreference;
+
+    iput-object p1, p0, Lcom/oneplus/settings/better/OPReadingMode;->mFooterPreference:Lcom/oneplus/settings/widget/OPFooterPreference;
+
+    sget p0, Lcom/android/settings/R$string;->oneplus_reading_mode_auto_summary:I
+
+    invoke-virtual {p1, p0}, Landroidx/preference/Preference;->setTitle(I)V
+
     return-void
 .end method
 

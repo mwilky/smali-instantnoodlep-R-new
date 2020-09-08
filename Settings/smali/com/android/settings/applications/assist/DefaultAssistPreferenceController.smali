@@ -37,23 +37,11 @@
 
     if-eqz p1, :cond_0
 
-    new-instance p2, Landroid/content/Intent;
+    new-instance p1, Landroid/content/Intent;
 
-    const-string p3, "android.intent.action.MANAGE_DEFAULT_APP"
+    const-string p2, "com.oneplus.intent.OPDefaultVoiceAssistPicker"
 
-    invoke-direct {p2, p3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p2, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
-
-    move-result-object p1
-
-    const-string p2, "android.intent.extra.ROLE_NAME"
-
-    const-string p3, "android.app.role.ASSISTANT"
-
-    invoke-virtual {p1, p2, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    move-result-object p1
+    invoke-direct {p1, p2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/android/settings/applications/assist/DefaultAssistPreferenceController;->mIntent:Landroid/content/Intent;
 
@@ -97,14 +85,83 @@
     return-object p0
 .end method
 
-.method protected getDefaultAppInfo()Lcom/android/settingslib/applications/DefaultAppInfo;
-    .locals 4
+.method public getCurrentAssist()Landroid/content/ComponentName;
+    .locals 6
 
-    iget-object v0, p0, Lcom/android/settings/applications/assist/DefaultAssistPreferenceController;->mAssistUtils:Lcom/android/internal/app/AssistUtils;
+    iget-object v0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
 
     iget v1, p0, Lcom/android/settings/applications/defaultapps/DefaultAppPreferenceController;->mUserId:I
 
-    invoke-virtual {v0, v1}, Lcom/android/internal/app/AssistUtils;->getAssistComponentForUser(I)Landroid/content/ComponentName;
+    const-string v2, "oneplus_default_voice_assist_picker_service"
+
+    invoke-static {v0, v2, v1}, Landroid/provider/Settings$Secure;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    iget-object v1, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    const-string v3, "/"
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v4
+
+    const/4 v5, 0x0
+
+    aget-object v4, v4, v5
+
+    invoke-static {v1, v4}, Lcom/oneplus/settings/utils/OPUtils;->isAppPakExist(Landroid/content/Context;Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v1
+
+    aget-object v1, v1, v5
+
+    invoke-static {p0, v1}, Lcom/oneplus/settings/utils/OPUtils;->isApplicationEnabled(Landroid/content/Context;Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_1
+
+    :cond_0
+    return-object v2
+
+    :cond_1
+    if-eqz v0, :cond_2
+
+    invoke-static {v0}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_2
+    return-object v2
+.end method
+
+.method protected getDefaultAppInfo()Lcom/android/settingslib/applications/DefaultAppInfo;
+    .locals 4
+
+    invoke-virtual {p0}, Lcom/android/settings/applications/assist/DefaultAssistPreferenceController;->getCurrentAssist()Landroid/content/ComponentName;
 
     move-result-object v0
 
