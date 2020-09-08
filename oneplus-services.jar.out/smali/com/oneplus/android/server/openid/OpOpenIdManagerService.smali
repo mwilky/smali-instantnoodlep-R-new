@@ -339,7 +339,7 @@
 
 # virtual methods
 .method public dma()V
-    .locals 2
+    .locals 4
 
     const-string v0, "OpenIdManager"
 
@@ -361,18 +361,35 @@
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-nez v1, :cond_0
 
+    const/4 v1, 0x1
+
+    new-array v1, v1, [I
+
+    const/4 v2, 0x0
+
+    const/16 v3, 0x135
+
+    aput v3, v1, v2
+
+    invoke-static {v1}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    :cond_0
     :try_start_0
     sget-boolean v1, Lcom/oneplus/android/server/openid/OpOpenIdManagerService;->kth:Z
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
     const-string v1, "Start openid service"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_0
+    :cond_1
     const-string v1, "openid"
 
     iget-object p0, p0, Lcom/oneplus/android/server/openid/OpOpenIdManagerService;->cno:Landroid/os/IBinder;
@@ -390,7 +407,7 @@
 
     invoke-static {v0, v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    :cond_1
+    :cond_2
     :goto_0
     return-void
 .end method

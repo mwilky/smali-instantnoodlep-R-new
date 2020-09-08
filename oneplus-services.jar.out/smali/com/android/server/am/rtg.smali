@@ -28,7 +28,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/rtg;->zta:Lcom/android/server/am/i;
 
-    invoke-virtual {p0}, Lcom/android/server/am/i;->ywr()V
+    invoke-virtual {p0}, Lcom/android/server/am/i;->ibl()V
 
     return-void
 .end method

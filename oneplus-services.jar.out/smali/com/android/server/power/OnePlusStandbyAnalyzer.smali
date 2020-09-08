@@ -152,11 +152,11 @@
 
 .field public static o1:Ljava/lang/String; = null
 
-.field public static final p1:Ljava/lang/String; = "/d/rpmh/stats"
+.field public static final p1:Ljava/lang/String; = "/sys/power/rpmh/stats"
 
 .field public static q1:Ljava/lang/String; = null
 
-.field public static final r1:Ljava/lang/String; = "/d/rpmh/master_stats"
+.field public static final r1:Ljava/lang/String; = "/sys/power/rpmh/master_stats"
 
 .field public static final s1:Ljava/lang/String; = "/data/system/power/diagnosis_standby.txt"
 
@@ -1077,7 +1077,7 @@
     return-void
 .end method
 
-.method private B(Ljava/lang/String;Ljava/util/Map;Z)V
+.method private A(Ljava/lang/String;Ljava/util/Map;Z)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1148,7 +1148,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     add-int/lit8 v0, v0, 0x1
 
@@ -1160,7 +1160,7 @@
     return-void
 .end method
 
-.method private B0()V
+.method private A0()V
     .locals 5
 
     new-instance v0, Lcom/android/internal/os/PowerProfile;
@@ -1387,7 +1387,7 @@
     return-void
 .end method
 
-.method private C(Ljava/lang/String;Ljava/util/List;Z)V
+.method private B(Ljava/lang/String;Ljava/util/List;Z)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1445,7 +1445,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     add-int/lit8 v0, v0, 0x1
 
@@ -1457,7 +1457,7 @@
     return-void
 .end method
 
-.method private C0()V
+.method private B0()V
     .locals 10
 
     new-instance v0, Ljava/util/HashMap;
@@ -1649,7 +1649,7 @@
     return-void
 .end method
 
-.method private D0()V
+.method private C0()V
     .locals 4
 
     iget-boolean v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->b:Z
@@ -1745,7 +1745,7 @@
 
     sget-object v2, Lcom/android/server/power/OnePlusStandbyAnalyzer$StatisticType;->sis:Lcom/android/server/power/OnePlusStandbyAnalyzer$StatisticType;
 
-    invoke-virtual {p0, v0, v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->Y0(Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;Lcom/android/server/power/OnePlusStandbyAnalyzer$StatisticType;)V
+    invoke-virtual {p0, v0, v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->X0(Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;Lcom/android/server/power/OnePlusStandbyAnalyzer$StatisticType;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1777,7 +1777,7 @@
     return-void
 .end method
 
-.method private E(Ljava/util/List;)V
+.method private D(Ljava/util/List;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1827,7 +1827,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     add-int/lit8 v0, v0, 0x1
 
@@ -1847,7 +1847,7 @@
     return-void
 .end method
 
-.method private E0()Z
+.method private D0()Z
     .locals 1
 
     const-string p0, "persist.vendor.qxdm.copylog"
@@ -1862,21 +1862,21 @@
 
     const-string p0, "QXDM log is ready"
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     return v0
 
     :cond_0
     const-string p0, "QXDM log is NOT ready"
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
     return p0
 .end method
 
-.method private F(Ljava/util/List;)V
+.method private E(Ljava/util/List;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1920,7 +1920,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     add-int/lit8 v0, v0, 0x1
 
@@ -1940,7 +1940,7 @@
     return-void
 .end method
 
-.method private static F0(I)Z
+.method private static E0(I)Z
     .locals 0
 
     invoke-static {p0}, Landroid/os/UserHandle;->getAppIdFromSharedAppGid(I)I
@@ -1960,7 +1960,7 @@
     return p0
 .end method
 
-.method private G(Ljava/lang/String;Ljava/util/Map;)V
+.method private F(Ljava/lang/String;Ljava/util/Map;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -2036,7 +2036,7 @@
 
     move-result-object p2
 
-    invoke-static {p2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -2044,7 +2044,7 @@
     return-void
 .end method
 
-.method private static G0(I)Z
+.method private static F0(I)Z
     .locals 1
 
     const/16 v0, 0x3e8
@@ -2066,7 +2066,7 @@
     return p0
 .end method
 
-.method private H(Ljava/lang/String;Ljava/util/List;Z)V
+.method private G(Ljava/lang/String;Ljava/util/List;Z)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -2133,14 +2133,14 @@
     :cond_1
     const-string p0, "list == null"
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     :cond_2
     :goto_1
     return-void
 .end method
 
-.method private H0()Ljava/lang/String;
+.method private G0()Ljava/lang/String;
     .locals 16
 
     move-object/from16 v0, p0
@@ -2294,7 +2294,7 @@
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     cmp-long v6, v4, v8
 
@@ -2356,7 +2356,7 @@
     const-string v3, "[judgeRPM] longestAccTime == 0"
 
     :goto_1
-    invoke-static {v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     sget v3, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N1:F
 
@@ -2447,7 +2447,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iget-object v2, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->J:Ljava/util/List;
 
@@ -2579,7 +2579,7 @@
 
     iget-object v7, v7, Lcom/android/server/power/OnePlusStandbyAnalyzer$cjf;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmMasterType;
 
-    invoke-direct {v0, v7}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->i0(Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmMasterType;)J
+    invoke-direct {v0, v7}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->h0(Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmMasterType;)J
 
     move-result-wide v10
 
@@ -2613,7 +2613,7 @@
 
     move-result-object v7
 
-    invoke-static {v7}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v7}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     cmp-long v7, v10, v8
 
@@ -2695,7 +2695,7 @@
 
     move-result-object v14
 
-    invoke-static {v14}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v14}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     sget v14, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N1:F
 
@@ -2732,7 +2732,7 @@
 
     const-string v11, "[judgeRPM] longestRPMSAD == 0"
 
-    invoke-static {v11}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v11}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     goto :goto_6
 
@@ -2788,12 +2788,12 @@
     :goto_8
     const-string v0, "[judgeRPM] oops, rpm data is not well retrieved, just return UNKNOWN"
 
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     return-object v1
 .end method
 
-.method private I(Ljava/util/List;)V
+.method private H(Ljava/util/List;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -2851,7 +2851,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     :cond_0
     add-int/lit8 p0, p0, 0x1
@@ -2862,7 +2862,7 @@
     return-void
 .end method
 
-.method private I0()Z
+.method private H0()Z
     .locals 33
 
     move-object/from16 v0, p0
@@ -2916,7 +2916,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     return v8
 
@@ -3028,7 +3028,7 @@
 
     move-result-object v11
 
-    invoke-static {v11}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v11}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     invoke-virtual {v10, v8}, Ljava/lang/StringBuilder;->setLength(I)V
 
@@ -3052,7 +3052,7 @@
 
     move-result-object v11
 
-    invoke-static {v11}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v11}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iget-object v11, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->sis:Ljava/util/Map;
 
@@ -3082,7 +3082,7 @@
 
     move-result-object v11
 
-    invoke-static {v11}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v11}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     invoke-virtual {v10, v8}, Ljava/lang/StringBuilder;->setLength(I)V
 
@@ -3136,7 +3136,7 @@
 
     move-result-object v11
 
-    invoke-static {v11}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v11}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iget-object v11, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->sis:Ljava/util/Map;
 
@@ -3188,7 +3188,7 @@
 
     const-string v4, "###### Minor exceeding, lower down the criteria accordingly"
 
-    invoke-static {v4}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v4}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     sget v4, Lcom/android/server/power/OnePlusStandbyAnalyzer;->I1:I
 
@@ -3207,7 +3207,7 @@
     :cond_2
     const-string v4, "###### Normal exceeding, use the normal criteria accordingly"
 
-    invoke-static {v4}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v4}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     sget v4, Lcom/android/server/power/OnePlusStandbyAnalyzer;->B1:I
 
@@ -3232,7 +3232,7 @@
 
     const-string v20, "oops, observe the magic number - 999.0, skip checkifRPMAbnormal at this round"
 
-    invoke-static/range {v20 .. v20}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static/range {v20 .. v20}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     const/16 v20, 0x1
 
@@ -3264,7 +3264,7 @@
 
     move-result-object v14
 
-    invoke-static {v14}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v14}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     invoke-virtual {v10, v8}, Ljava/lang/StringBuilder;->setLength(I)V
 
@@ -3286,7 +3286,7 @@
 
     move-result-object v14
 
-    invoke-static {v14}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v14}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     invoke-virtual {v10, v8}, Ljava/lang/StringBuilder;->setLength(I)V
 
@@ -3308,7 +3308,7 @@
 
     move-result-object v14
 
-    invoke-static {v14}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v14}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     new-instance v14, Ljava/lang/StringBuilder;
 
@@ -3330,7 +3330,7 @@
 
     move-result-object v14
 
-    invoke-static {v14}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v14}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     sget-boolean v14, Lcom/android/server/power/OnePlusStandbyAnalyzer;->H0:Z
 
@@ -3344,7 +3344,7 @@
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v8, v14, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->C(Ljava/lang/String;Ljava/util/List;Z)V
+    invoke-direct {v0, v8, v14, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->B(Ljava/lang/String;Ljava/util/List;Z)V
 
     goto :goto_3
 
@@ -3374,29 +3374,29 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iget-object v1, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->u:Ljava/util/List;
 
-    invoke-direct {v0, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->I(Ljava/util/List;)V
+    invoke-direct {v0, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->H(Ljava/util/List;)V
 
     iget-object v1, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->I:Ljava/util/List;
 
     const-string v5, "Diff-RPM"
 
-    invoke-direct {v0, v5, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->w(Ljava/lang/String;Ljava/util/List;)V
+    invoke-direct {v0, v5, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->v(Ljava/lang/String;Ljava/util/List;)V
 
     iget-object v1, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->J:Ljava/util/List;
 
     const-string v6, "Diff-RPMMaster"
 
-    invoke-direct {v0, v6, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->v(Ljava/lang/String;Ljava/util/List;)V
+    invoke-direct {v0, v6, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->u(Ljava/lang/String;Ljava/util/List;)V
 
     iget-object v1, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->I:Ljava/util/List;
 
     iget-object v6, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->J:Ljava/util/List;
 
-    invoke-direct {v0, v1, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->W(Ljava/util/List;Ljava/util/List;)Ljava/util/List;
+    invoke-direct {v0, v1, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->V(Ljava/util/List;Ljava/util/List;)Ljava/util/List;
 
     move-result-object v1
 
@@ -3422,13 +3422,13 @@
 
     iget-object v6, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->J:Ljava/util/List;
 
-    invoke-direct {v0, v5, v1, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->V(Ljava/lang/String;Ljava/util/List;Ljava/util/List;)Ljava/lang/String;
+    invoke-direct {v0, v5, v1, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->U(Ljava/lang/String;Ljava/util/List;Ljava/util/List;)Ljava/lang/String;
 
     move-result-object v1
 
     iget-object v5, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->J:Ljava/util/List;
 
-    invoke-direct {v0, v5}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->T(Ljava/util/List;)Ljava/lang/String;
+    invoke-direct {v0, v5}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->S(Ljava/util/List;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -3456,7 +3456,7 @@
 
     const/4 v8, 0x1
 
-    invoke-direct {v0, v7, v5, v8}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->H(Ljava/lang/String;Ljava/util/List;Z)V
+    invoke-direct {v0, v7, v5, v8}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->G(Ljava/lang/String;Ljava/util/List;Z)V
 
     const/4 v5, 0x0
 
@@ -3480,7 +3480,7 @@
 
     move-result-object v7
 
-    invoke-static {v7}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v7}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     invoke-virtual {v10, v5}, Ljava/lang/StringBuilder;->setLength(I)V
 
@@ -3500,7 +3500,7 @@
 
     move-result-object v5
 
-    invoke-static {v5}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v5}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iget-wide v7, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->p0:J
 
@@ -3520,11 +3520,11 @@
 
     move-result-object v5
 
-    invoke-static {v5}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v5}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iget-object v5, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->K:Ljava/util/List;
 
-    invoke-direct {v0, v5}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->Y(Ljava/util/List;)Ljava/lang/String;
+    invoke-direct {v0, v5}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->X(Ljava/util/List;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -3546,7 +3546,7 @@
 
     iget-object v5, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->K:Ljava/util/List;
 
-    invoke-direct {v0, v5}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->g0(Ljava/util/List;)Lcom/android/server/power/OnePlusStandbyAnalyzer$fto;
+    invoke-direct {v0, v5}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->f0(Ljava/util/List;)Lcom/android/server/power/OnePlusStandbyAnalyzer$fto;
 
     move-result-object v5
 
@@ -3576,7 +3576,7 @@
 
     const/4 v8, 0x1
 
-    invoke-direct {v0, v7, v6, v8}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q(Ljava/lang/String;Ljava/util/List;Z)V
+    invoke-direct {v0, v7, v6, v8}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->p(Ljava/lang/String;Ljava/util/List;Z)V
 
     :cond_5
     iget-object v6, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->r0:Ljava/util/List;
@@ -3599,7 +3599,7 @@
 
     const/4 v8, 0x1
 
-    invoke-direct {v0, v7, v6, v8}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q(Ljava/lang/String;Ljava/util/List;Z)V
+    invoke-direct {v0, v7, v6, v8}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->p(Ljava/lang/String;Ljava/util/List;Z)V
 
     :cond_6
     iget-object v6, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->sis:Ljava/util/Map;
@@ -3656,7 +3656,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iget-object v3, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->sis:Ljava/util/Map;
 
@@ -3720,7 +3720,7 @@
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iget-object v6, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->sis:Ljava/util/Map;
 
@@ -3786,7 +3786,7 @@
 
     move-result-object v7
 
-    invoke-static {v7}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v7}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iget-object v7, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->sis:Ljava/util/Map;
 
@@ -3816,7 +3816,7 @@
 
     move-result-object v7
 
-    invoke-static {v7}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v7}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iget-object v7, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->sis:Ljava/util/Map;
 
@@ -3848,7 +3848,7 @@
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v4}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iget-wide v10, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->o0:J
 
@@ -3904,7 +3904,7 @@
 
     move-result-object v10
 
-    invoke-static {v10}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v10}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iget-object v10, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->sis:Ljava/util/Map;
 
@@ -3972,7 +3972,7 @@
 
     move-result-object v11
 
-    invoke-static {v11}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v11}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iget-object v11, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->sis:Ljava/util/Map;
 
@@ -3984,7 +3984,7 @@
 
     invoke-interface {v11, v12, v13}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct/range {p0 .. p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->H0()Ljava/lang/String;
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->G0()Ljava/lang/String;
 
     move-result-object v11
 
@@ -4002,7 +4002,7 @@
 
     move-result-object v12
 
-    invoke-static {v12}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v12}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iget-object v12, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->sis:Ljava/util/Map;
 
@@ -4114,7 +4114,7 @@
 
     move-result-object v12
 
-    invoke-static {v12}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v12}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iget-object v12, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->sis:Ljava/util/Map;
 
@@ -4131,7 +4131,7 @@
     :cond_7
     const-string v10, "###### existd unaccounted sipper, but mStadbyTotalPowerMah is 0"
 
-    invoke-static {v10}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v10}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     goto :goto_4
 
@@ -4140,7 +4140,7 @@
 
     const-string v10, "###### No-unaccounted sipper existed."
 
-    invoke-static {v10}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v10}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iget-object v10, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->sis:Ljava/util/Map;
 
@@ -4154,7 +4154,7 @@
     const-wide/high16 v10, -0x4010000000000000L    # -1.0
 
     :goto_5
-    invoke-direct/range {p0 .. p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->r()V
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q()V
 
     iget-object v12, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->sis:Ljava/util/Map;
 
@@ -4164,7 +4164,7 @@
 
     invoke-interface {v12, v14, v15}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct/range {p0 .. p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->P0()V
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->O0()V
 
     iget-boolean v12, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->wtn:Z
 
@@ -4576,7 +4576,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     move v14, v1
 
@@ -4682,7 +4682,7 @@
 
     move-result-object v5
 
-    invoke-static {v5}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v5}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     invoke-virtual {v9, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4736,7 +4736,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmMasterType;->cno:Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmMasterType;
 
@@ -4839,7 +4839,7 @@
 
     move-result-object v7
 
-    invoke-static {v7}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v7}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     invoke-virtual {v9, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5271,7 +5271,7 @@
 
     const-string v2, ""
 
-    invoke-direct {v0, v2, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->P(Ljava/lang/String;Lcom/android/internal/os/BatterySipper;)Ljava/lang/String;
+    invoke-direct {v0, v2, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->O(Ljava/lang/String;Lcom/android/internal/os/BatterySipper;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -5281,7 +5281,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     move-object v4, v1
 
@@ -5298,7 +5298,7 @@
 
     const-string v1, ""
 
-    invoke-direct {v0, v1, v4}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->P(Ljava/lang/String;Lcom/android/internal/os/BatterySipper;)Ljava/lang/String;
+    invoke-direct {v0, v1, v4}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->O(Ljava/lang/String;Lcom/android/internal/os/BatterySipper;)Ljava/lang/String;
 
     goto :goto_1b
 
@@ -5307,7 +5307,7 @@
 
     :cond_2b
     :goto_1b
-    invoke-direct {v0, v4}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->s0(Lcom/android/internal/os/BatterySipper;)Ljava/lang/String;
+    invoke-direct {v0, v4}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->r0(Lcom/android/internal/os/BatterySipper;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -5355,7 +5355,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iget-object v1, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q:Ljava/util/List;
 
@@ -5377,7 +5377,7 @@
 
     const-string v1, "1st-WL is one of Audio skipping lists, skip audio-relative MDM-reporting"
 
-    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     sget v1, Landroid/os/OPDiagnoseManager;->ISSUE_POWER_MUSIC:I
 
@@ -5423,7 +5423,7 @@
 
     iput-object v3, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->rtg:Ljava/lang/String;
 
-    invoke-direct/range {p0 .. p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->J0()Z
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->I0()Z
 
     move-result v3
 
@@ -5483,7 +5483,7 @@
 
     if-eqz v1, :cond_37
 
-    invoke-direct {v0, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->f0(Ljava/util/List;)Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;
+    invoke-direct {v0, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->e0(Ljava/util/List;)Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;
 
     move-result-object v1
 
@@ -5574,7 +5574,7 @@
 
     move-result-object v5
 
-    invoke-static {v5}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v5}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iget-object v5, v2, Lcom/android/server/power/OnePlusStandbyAnalyzer$zgw;->you:Ljava/lang/String;
 
@@ -5733,7 +5733,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -5749,7 +5749,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -5795,7 +5795,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -5811,7 +5811,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iget-boolean v1, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->g:Z
 
@@ -5824,7 +5824,7 @@
     const-string v0, "This round of abnormal diagnoses as normal, skip MDM-reporting"
 
     :goto_24
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     goto :goto_25
 
@@ -5908,12 +5908,12 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     return v22
 .end method
 
-.method private J0()Z
+.method private I0()Z
     .locals 8
 
     iget-object v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q:Ljava/util/List;
@@ -5969,7 +5969,7 @@
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iget-object v6, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->U:Ljava/util/List;
 
@@ -6042,7 +6042,7 @@
 
     const-string p0, "Match audio-normal pattern, diagnosis as normal"
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     goto :goto_3
 
@@ -6053,7 +6053,7 @@
     return v1
 .end method
 
-.method static synthetic K0(Ljava/util/Map$Entry;Ljava/util/Map$Entry;)I
+.method static synthetic J0(Ljava/util/Map$Entry;Ljava/util/Map$Entry;)I
     .locals 0
 
     invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
@@ -6075,7 +6075,7 @@
     return p0
 .end method
 
-.method private M(Ljava/io/PrintWriter;)V
+.method private L(Ljava/io/PrintWriter;)V
     .locals 1
 
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
@@ -6094,7 +6094,7 @@
     return-void
 .end method
 
-.method public static N0(Ljava/lang/String;)V
+.method public static M0(Ljava/lang/String;)V
     .locals 1
 
     sget-boolean v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->F0:Z
@@ -6109,7 +6109,7 @@
     return-void
 .end method
 
-.method private O(Z)V
+.method private N(Z)V
     .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -6134,7 +6134,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->kth:Z
 
@@ -6144,7 +6144,7 @@
 
     const-string p1, "[opbugreportlite] report it !, in 20 sec later"
 
-    invoke-static {p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iget-object p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->qeg:Lcom/android/server/power/OnePlusStandbyAnalyzer$vdb;
 
@@ -6159,15 +6159,15 @@
     :cond_0
     const-string p1, "[opbugreportlite] NOT report it, check if need cleanup qxdm logs immediately."
 
-    invoke-static {p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->T0()V
+    invoke-virtual {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->S0()V
 
     :goto_0
     return-void
 .end method
 
-.method private P(Ljava/lang/String;Lcom/android/internal/os/BatterySipper;)Ljava/lang/String;
+.method private O(Ljava/lang/String;Lcom/android/internal/os/BatterySipper;)Ljava/lang/String;
     .locals 5
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -6302,7 +6302,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -6311,7 +6311,7 @@
     return-object p0
 .end method
 
-.method private P0()V
+.method private O0()V
     .locals 5
 
     iget-object v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q:Ljava/util/List;
@@ -6358,7 +6358,7 @@
 
     move-result-object v3
 
-    invoke-direct {p0, v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->Q0(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->P0(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -6441,7 +6441,7 @@
 
     move-result-object v3
 
-    invoke-direct {p0, v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->Q0(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->P0(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -6522,7 +6522,7 @@
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->Q0(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->P0(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -6568,7 +6568,7 @@
     return-void
 .end method
 
-.method private Q(Ljava/io/PrintWriter;)V
+.method private P(Ljava/io/PrintWriter;)V
     .locals 6
 
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
@@ -6904,7 +6904,7 @@
     return-void
 .end method
 
-.method private Q0(Ljava/lang/String;)Ljava/lang/String;
+.method private P0(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
     if-eqz p1, :cond_0
@@ -6939,7 +6939,7 @@
     return-object p1
 .end method
 
-.method private R(Ljava/io/PrintWriter;)V
+.method private Q(Ljava/io/PrintWriter;)V
     .locals 7
 
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
@@ -7014,7 +7014,7 @@
     return-void
 .end method
 
-.method private S(Ljava/io/PrintWriter;)V
+.method private R(Ljava/io/PrintWriter;)V
     .locals 4
 
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
@@ -7091,7 +7091,7 @@
     return-void
 .end method
 
-.method private S0(Lorg/json/JSONArray;)V
+.method private R0(Lorg/json/JSONArray;)V
     .locals 11
 
     const-string v0, "[OnlineConfig], error message:"
@@ -7149,7 +7149,7 @@
 
     iput-boolean v6, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->ugm:Z
 
-    invoke-virtual {p0, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->n1(Z)V
+    invoke-virtual {p0, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->m1(Z)V
 
     sget-boolean v6, Lcom/android/server/power/OnePlusStandbyAnalyzer;->F0:Z
 
@@ -7347,7 +7347,7 @@
 
     sget-object v8, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
-    invoke-virtual {p0, v8, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
+    invoke-virtual {p0, v8, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->p1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
 
     sget-boolean v8, Lcom/android/server/power/OnePlusStandbyAnalyzer;->F0:Z
 
@@ -7396,7 +7396,7 @@
 
     sget-object v8, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->you:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
-    invoke-virtual {p0, v8, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
+    invoke-virtual {p0, v8, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->p1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
 
     sget-boolean v8, Lcom/android/server/power/OnePlusStandbyAnalyzer;->F0:Z
 
@@ -7445,7 +7445,7 @@
 
     sget-object v8, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->sis:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
-    invoke-virtual {p0, v8, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
+    invoke-virtual {p0, v8, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->p1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
 
     sget-boolean v8, Lcom/android/server/power/OnePlusStandbyAnalyzer;->F0:Z
 
@@ -7494,7 +7494,7 @@
 
     sget-object v8, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->tsu:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
-    invoke-virtual {p0, v8, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
+    invoke-virtual {p0, v8, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->p1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
 
     sget-boolean v8, Lcom/android/server/power/OnePlusStandbyAnalyzer;->F0:Z
 
@@ -7537,7 +7537,7 @@
 
     int-to-float v9, v6
 
-    invoke-virtual {p0, v8, v9}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
+    invoke-virtual {p0, v8, v9}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->p1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
 
     sget-boolean v8, Lcom/android/server/power/OnePlusStandbyAnalyzer;->F0:Z
 
@@ -7580,7 +7580,7 @@
 
     int-to-float v9, v6
 
-    invoke-virtual {p0, v8, v9}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
+    invoke-virtual {p0, v8, v9}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->p1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
 
     sget-boolean v8, Lcom/android/server/power/OnePlusStandbyAnalyzer;->F0:Z
 
@@ -7629,7 +7629,7 @@
 
     sget-object v8, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->cno:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
-    invoke-virtual {p0, v8, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
+    invoke-virtual {p0, v8, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->p1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
 
     sget-boolean v8, Lcom/android/server/power/OnePlusStandbyAnalyzer;->F0:Z
 
@@ -7678,7 +7678,7 @@
 
     sget-object v8, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->kth:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
-    invoke-virtual {p0, v8, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
+    invoke-virtual {p0, v8, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->p1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
 
     sget-boolean v8, Lcom/android/server/power/OnePlusStandbyAnalyzer;->F0:Z
 
@@ -7730,7 +7730,7 @@
 
     sget-object v8, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->qbh:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
-    invoke-virtual {p0, v8, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
+    invoke-virtual {p0, v8, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->p1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
 
     sget-boolean v8, Lcom/android/server/power/OnePlusStandbyAnalyzer;->F0:Z
 
@@ -7779,7 +7779,7 @@
 
     sget-object v8, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->oif:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
-    invoke-virtual {p0, v8, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
+    invoke-virtual {p0, v8, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->p1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
 
     sget-boolean v8, Lcom/android/server/power/OnePlusStandbyAnalyzer;->F0:Z
 
@@ -7828,7 +7828,7 @@
 
     sget-object v8, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->bio:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
-    invoke-virtual {p0, v8, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
+    invoke-virtual {p0, v8, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->p1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
 
     sget-boolean v8, Lcom/android/server/power/OnePlusStandbyAnalyzer;->F0:Z
 
@@ -7877,7 +7877,7 @@
 
     sget-object v8, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->igw:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
-    invoke-virtual {p0, v8, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
+    invoke-virtual {p0, v8, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->p1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
 
     sget-boolean v8, Lcom/android/server/power/OnePlusStandbyAnalyzer;->F0:Z
 
@@ -7926,7 +7926,7 @@
 
     sget-object v8, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->wtn:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
-    invoke-virtual {p0, v8, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
+    invoke-virtual {p0, v8, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->p1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
 
     sget-boolean v8, Lcom/android/server/power/OnePlusStandbyAnalyzer;->F0:Z
 
@@ -7975,7 +7975,7 @@
 
     sget-object v8, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->gck:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
-    invoke-virtual {p0, v8, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
+    invoke-virtual {p0, v8, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->p1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
 
     sget-boolean v8, Lcom/android/server/power/OnePlusStandbyAnalyzer;->F0:Z
 
@@ -8024,7 +8024,7 @@
 
     sget-object v8, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->dma:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
-    invoke-virtual {p0, v8, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
+    invoke-virtual {p0, v8, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->p1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
 
     sget-boolean v8, Lcom/android/server/power/OnePlusStandbyAnalyzer;->F0:Z
 
@@ -8073,7 +8073,7 @@
 
     sget-object v8, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->ywr:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
-    invoke-virtual {p0, v8, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
+    invoke-virtual {p0, v8, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->p1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
 
     sget-boolean v8, Lcom/android/server/power/OnePlusStandbyAnalyzer;->F0:Z
 
@@ -8112,7 +8112,7 @@
 
     move-result v6
 
-    invoke-virtual {p0, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->j1(Z)V
+    invoke-virtual {p0, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->i1(Z)V
 
     sget-boolean v8, Lcom/android/server/power/OnePlusStandbyAnalyzer;->F0:Z
 
@@ -8151,7 +8151,7 @@
 
     move-result-wide v8
 
-    invoke-virtual {p0, v8, v9}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->k1(J)V
+    invoke-virtual {p0, v8, v9}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->j1(J)V
 
     sget-boolean v6, Lcom/android/server/power/OnePlusStandbyAnalyzer;->F0:Z
 
@@ -8190,7 +8190,7 @@
 
     move-result-wide v8
 
-    invoke-virtual {p0, v8, v9}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->i1(J)V
+    invoke-virtual {p0, v8, v9}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->h1(J)V
 
     sget-boolean v6, Lcom/android/server/power/OnePlusStandbyAnalyzer;->F0:Z
 
@@ -8229,7 +8229,7 @@
 
     move-result-wide v8
 
-    invoke-virtual {p0, v8, v9}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->r1(J)V
+    invoke-virtual {p0, v8, v9}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q1(J)V
 
     sget-boolean v6, Lcom/android/server/power/OnePlusStandbyAnalyzer;->F0:Z
 
@@ -8330,7 +8330,7 @@
 
     iput-boolean v5, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->ugm:Z
 
-    invoke-virtual {p0, v5}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->n1(Z)V
+    invoke-virtual {p0, v5}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->m1(Z)V
 
     :cond_1e
     sget-boolean v5, Lcom/android/server/power/OnePlusStandbyAnalyzer;->F0:Z
@@ -8404,7 +8404,7 @@
     return-void
 .end method
 
-.method private T(Ljava/util/List;)Ljava/lang/String;
+.method private S(Ljava/util/List;)Ljava/lang/String;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -8468,7 +8468,7 @@
     return-object p0
 .end method
 
-.method private U(Ljava/io/PrintWriter;)V
+.method private T(Ljava/io/PrintWriter;)V
     .locals 2
 
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
@@ -8522,7 +8522,7 @@
     return-void
 .end method
 
-.method private V(Ljava/lang/String;Ljava/util/List;Ljava/util/List;)Ljava/lang/String;
+.method private U(Ljava/lang/String;Ljava/util/List;Ljava/util/List;)Ljava/lang/String;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -8619,7 +8619,7 @@
     return-object p0
 .end method
 
-.method private W(Ljava/util/List;Ljava/util/List;)Ljava/util/List;
+.method private V(Ljava/util/List;Ljava/util/List;)Ljava/util/List;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -8699,7 +8699,7 @@
     return-object p0
 .end method
 
-.method private X(Ljava/io/PrintWriter;)V
+.method private W(Ljava/io/PrintWriter;)V
     .locals 1
 
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
@@ -8718,7 +8718,7 @@
     return-void
 .end method
 
-.method private Y(Ljava/util/List;)Ljava/lang/String;
+.method private X(Ljava/util/List;)Ljava/lang/String;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -8782,7 +8782,7 @@
     return-object p0
 .end method
 
-.method private Z(Ljava/io/PrintWriter;)V
+.method private Y(Ljava/io/PrintWriter;)V
     .locals 2
 
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
@@ -9277,43 +9277,43 @@
 
     iget-object v3, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q:Ljava/util/List;
 
-    invoke-direct {v0, v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->E(Ljava/util/List;)V
+    invoke-direct {v0, v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->D(Ljava/util/List;)V
 
     iget-object v3, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->u:Ljava/util/List;
 
-    invoke-direct {v0, v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->s(Ljava/util/List;)V
+    invoke-direct {v0, v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->r(Ljava/util/List;)V
 
     iget-object v3, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->B:Ljava/util/List;
 
-    invoke-direct {v0, v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->F(Ljava/util/List;)V
+    invoke-direct {v0, v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->E(Ljava/util/List;)V
 
     iget-object v3, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->S:Ljava/util/List;
 
-    invoke-direct {v0, v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->t(Ljava/util/List;)V
+    invoke-direct {v0, v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->s(Ljava/util/List;)V
 
     iget-object v3, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->H:Ljava/util/List;
 
     const-string v5, "Diff-Signal"
 
-    invoke-direct {v0, v5, v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->y(Ljava/lang/String;Ljava/util/List;)V
+    invoke-direct {v0, v5, v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->x(Ljava/lang/String;Ljava/util/List;)V
 
     iget-object v3, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->I:Ljava/util/List;
 
     const-string v5, "Diff-RPM"
 
-    invoke-direct {v0, v5, v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->w(Ljava/lang/String;Ljava/util/List;)V
+    invoke-direct {v0, v5, v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->v(Ljava/lang/String;Ljava/util/List;)V
 
     iget-object v3, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->J:Ljava/util/List;
 
     const-string v5, "Diff-RPMMaster"
 
-    invoke-direct {v0, v5, v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->v(Ljava/lang/String;Ljava/util/List;)V
+    invoke-direct {v0, v5, v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->u(Ljava/lang/String;Ljava/util/List;)V
 
     iget-object v3, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N:Ljava/util/List;
 
     const-string v5, "Diff-WiFiWakeUp"
 
-    invoke-direct {v0, v5, v3, v4}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->H(Ljava/lang/String;Ljava/util/List;Z)V
+    invoke-direct {v0, v5, v3, v4}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->G(Ljava/lang/String;Ljava/util/List;Z)V
 
     :cond_9
     new-instance v0, Ljava/lang/StringBuilder;
@@ -9340,7 +9340,85 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method private a0(Ljava/io/PrintWriter;)V
+    .locals 2
+
+    invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
+
+    const-string v0, "**** Standby Diagnosis WL info ****"
+
+    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q:Ljava/util/List;
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x0
+
+    :goto_0
+    iget-object v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_1
+
+    const/4 v1, 0x3
+
+    if-lt v0, v1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    iget-object v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q:Ljava/util/List;
+
+    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$obl;
+
+    invoke-virtual {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer$obl;->you()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    return-void
+.end method
+
+.method private a1()V
+    .locals 2
+
+    new-instance v0, Landroid/content/IntentFilter;
+
+    const-string v1, "android.intent.action.SIM_STATE_CHANGED"
+
+    invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+
+    iput-object v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->t0:Landroid/content/IntentFilter;
+
+    iget-object v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->i:Landroid/content/Context;
+
+    iget-object p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->u0:Lcom/android/server/power/OnePlusStandbyAnalyzer$ear;
+
+    invoke-virtual {v1, p0, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    const-string p0, "Start listen SIM Change events..."
+
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -9453,18 +9531,18 @@
 
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    const-string v0, "**** Standby Diagnosis WL info ****"
+    const-string v0, "**** Standby Diagnosis WR info ****"
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q:Ljava/util/List;
+    iget-object v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->B:Ljava/util/List;
 
     if-eqz v0, :cond_1
 
     const/4 v0, 0x0
 
     :goto_0
-    iget-object v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q:Ljava/util/List;
+    iget-object v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->B:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -9479,15 +9557,15 @@
     goto :goto_1
 
     :cond_0
-    iget-object v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q:Ljava/util/List;
+    iget-object v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->B:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$obl;
+    check-cast v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$veq;
 
-    invoke-virtual {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer$obl;->you()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer$veq;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -9503,26 +9581,57 @@
 .end method
 
 .method private b1()V
-    .locals 2
+    .locals 6
 
-    new-instance v0, Landroid/content/IntentFilter;
+    new-instance v0, Ljava/util/ArrayList;
 
-    const-string v1, "android.intent.action.SIM_STATE_CHANGED"
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+    iput-object v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->K:Ljava/util/List;
 
-    iput-object v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->t0:Landroid/content/IntentFilter;
+    invoke-static {}, Lcom/android/server/power/OnePlusStandbyAnalyzer$TelephonyType;->values()[Lcom/android/server/power/OnePlusStandbyAnalyzer$TelephonyType;
 
-    iget-object v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->i:Landroid/content/Context;
+    move-result-object v0
 
-    iget-object p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->u0:Lcom/android/server/power/OnePlusStandbyAnalyzer$ear;
+    array-length v1, v0
 
-    invoke-virtual {v1, p0, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    const/4 v2, 0x0
 
-    const-string p0, "Start listen SIM Change events..."
+    :goto_0
+    if-ge v2, v1, :cond_0
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    aget-object v3, v0, v2
 
+    iget-object v4, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->K:Ljava/util/List;
+
+    new-instance v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$fto;
+
+    invoke-direct {v5, v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer$fto;-><init>(Lcom/android/server/power/OnePlusStandbyAnalyzer$TelephonyType;)V
+
+    invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->j:Landroid/telephony/TelephonyManager;
+
+    if-eqz v0, :cond_1
+
+    const-string v0, "Start listen Telephony Anomaly..."
+
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->j:Landroid/telephony/TelephonyManager;
+
+    iget-object p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->y0:Landroid/telephony/PhoneStateListener;
+
+    const v1, 0x10000001
+
+    invoke-virtual {v0, p0, v1}, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener;I)V
+
+    :cond_1
     return-void
 .end method
 
@@ -9545,7 +9654,7 @@
 .method static synthetic bvj(Lcom/android/server/power/OnePlusStandbyAnalyzer;Ljava/lang/String;Ljava/util/List;Z)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q(Ljava/lang/String;Ljava/util/List;Z)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->p(Ljava/lang/String;Ljava/util/List;Z)V
 
     return-void
 .end method
@@ -9614,7 +9723,7 @@
 
     move-result-object p2
 
-    invoke-static {p2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iget-object p2, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->r0:Ljava/util/List;
 
@@ -9667,13 +9776,13 @@
 
     check-cast v4, Lcom/android/internal/os/BatterySipper;
 
-    invoke-direct {p0, v2, v4}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->y0(Lcom/android/internal/os/BatterySipper;Lcom/android/internal/os/BatterySipper;)Z
+    invoke-direct {p0, v2, v4}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->x0(Lcom/android/internal/os/BatterySipper;Lcom/android/internal/os/BatterySipper;)Z
 
     move-result v5
 
     if-eqz v5, :cond_1
 
-    invoke-direct {p0, v4, v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->d1(Lcom/android/internal/os/BatterySipper;Lcom/android/internal/os/BatterySipper;)V
+    invoke-direct {p0, v4, v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->c1(Lcom/android/internal/os/BatterySipper;Lcom/android/internal/os/BatterySipper;)V
 
     const/4 v1, 0x1
 
@@ -9690,7 +9799,7 @@
 
     const-string v3, "No-Match"
 
-    invoke-direct {p0, v3, v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->P(Ljava/lang/String;Lcom/android/internal/os/BatterySipper;)Ljava/lang/String;
+    invoke-direct {p0, v3, v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->O(Ljava/lang/String;Lcom/android/internal/os/BatterySipper;)Ljava/lang/String;
 
     :cond_3
     iget-wide v3, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->s0:D
@@ -9719,7 +9828,7 @@
     :cond_5
     const-string p0, "## fetal error, mStandbySipperList == null"
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     :goto_3
     return-void
@@ -9727,124 +9836,586 @@
     :cond_6
     const-string p0, "## one of sippers is null, can\'t calculate just return."
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method private c0(Ljava/io/PrintWriter;)V
-    .locals 2
+.method private c1(Lcom/android/internal/os/BatterySipper;Lcom/android/internal/os/BatterySipper;)V
+    .locals 8
 
-    invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
+    iget-wide v0, p2, Lcom/android/internal/os/BatterySipper;->wakeLockTimeMs:J
 
-    const-string v0, "**** Standby Diagnosis WR info ****"
+    iget-wide v2, p1, Lcom/android/internal/os/BatterySipper;->wakeLockTimeMs:J
 
-    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    cmp-long v0, v0, v2
 
-    iget-object v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->B:Ljava/util/List;
+    const/4 v1, 0x1
 
-    if-eqz v0, :cond_1
+    const-string v2, "]"
 
-    const/4 v0, 0x0
+    const-string v3, ", "
 
-    :goto_0
-    iget-object v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->B:Ljava/util/List;
+    if-gez v0, :cond_0
 
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result v1
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    if-ge v0, v1, :cond_1
+    const-string v4, "##[Abn][wakeLockTimeMs] ["
 
-    const/4 v1, 0x3
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-lt v0, v1, :cond_0
+    iget-wide v4, p1, Lcom/android/internal/os/BatterySipper;->wakeLockTimeMs:J
 
-    goto :goto_1
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    :cond_0
-    iget-object v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->B:Ljava/util/List;
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->wakeLockTimeMs:J
 
-    move-result-object v1
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    check-cast v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$veq;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer$veq;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    :goto_1
-    return-void
-.end method
-
-.method private c1()V
-    .locals 6
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->K:Ljava/util/List;
-
-    invoke-static {}, Lcom/android/server/power/OnePlusStandbyAnalyzer$TelephonyType;->values()[Lcom/android/server/power/OnePlusStandbyAnalyzer$TelephonyType;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    array-length v1, v0
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_0
-
-    aget-object v3, v0, v2
-
-    iget-object v4, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->K:Ljava/util/List;
-
-    new-instance v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$fto;
-
-    invoke-direct {v5, v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer$fto;-><init>(Lcom/android/server/power/OnePlusStandbyAnalyzer$TelephonyType;)V
-
-    invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v2, v2, 0x1
+    move v0, v1
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->j:Landroid/telephony/TelephonyManager;
+    const/4 v0, 0x0
 
-    if-eqz v0, :cond_1
+    :goto_0
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->wakeLockTimeMs:J
 
-    const-string v0, "Start listen Telephony Anomaly..."
+    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->wakeLockTimeMs:J
 
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    sub-long/2addr v4, v6
 
-    iget-object v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->j:Landroid/telephony/TelephonyManager;
+    iput-wide v4, p2, Lcom/android/internal/os/BatterySipper;->wakeLockTimeMs:J
 
-    iget-object p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->y0:Landroid/telephony/PhoneStateListener;
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->usagePowerMah:D
 
-    const v1, 0x10000001
+    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->usagePowerMah:D
 
-    invoke-virtual {v0, p0, v1}, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener;I)V
+    cmpg-double v4, v4, v6
+
+    if-gez v4, :cond_1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "##[Abn][usagePowerMah] ["
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v4, p1, Lcom/android/internal/os/BatterySipper;->usagePowerMah:D
+
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->usagePowerMah:D
+
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
+
+    move v0, v1
 
     :cond_1
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->usagePowerMah:D
+
+    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->usagePowerMah:D
+
+    sub-double/2addr v4, v6
+
+    iput-wide v4, p2, Lcom/android/internal/os/BatterySipper;->usagePowerMah:D
+
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->cpuPowerMah:D
+
+    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->cpuPowerMah:D
+
+    cmpg-double v4, v4, v6
+
+    if-gez v4, :cond_2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "##[Abn][cpuPowerMah] ["
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v4, p1, Lcom/android/internal/os/BatterySipper;->cpuPowerMah:D
+
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->cpuPowerMah:D
+
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
+
+    move v0, v1
+
+    :cond_2
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->cpuPowerMah:D
+
+    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->cpuPowerMah:D
+
+    sub-double/2addr v4, v6
+
+    iput-wide v4, p2, Lcom/android/internal/os/BatterySipper;->cpuPowerMah:D
+
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->wakeLockPowerMah:D
+
+    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->wakeLockPowerMah:D
+
+    cmpg-double v4, v4, v6
+
+    if-gez v4, :cond_3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "##[Abn][wakeLockPowerMah] ["
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v4, p1, Lcom/android/internal/os/BatterySipper;->wakeLockPowerMah:D
+
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->wakeLockPowerMah:D
+
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
+
+    move v0, v1
+
+    :cond_3
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->wakeLockPowerMah:D
+
+    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->wakeLockPowerMah:D
+
+    sub-double/2addr v4, v6
+
+    iput-wide v4, p2, Lcom/android/internal/os/BatterySipper;->wakeLockPowerMah:D
+
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->mobileRadioPowerMah:D
+
+    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->mobileRadioPowerMah:D
+
+    cmpg-double v4, v4, v6
+
+    if-gez v4, :cond_4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "##[Abn][mobileRadioPowerMah] ["
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v4, p1, Lcom/android/internal/os/BatterySipper;->mobileRadioPowerMah:D
+
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->mobileRadioPowerMah:D
+
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
+
+    move v0, v1
+
+    :cond_4
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->mobileRadioPowerMah:D
+
+    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->mobileRadioPowerMah:D
+
+    sub-double/2addr v4, v6
+
+    iput-wide v4, p2, Lcom/android/internal/os/BatterySipper;->mobileRadioPowerMah:D
+
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->wifiPowerMah:D
+
+    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->wifiPowerMah:D
+
+    cmpg-double v4, v4, v6
+
+    if-gez v4, :cond_5
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "##[Abn][wifiPowerMah] ["
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v4, p1, Lcom/android/internal/os/BatterySipper;->wifiPowerMah:D
+
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->wifiPowerMah:D
+
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
+
+    move v0, v1
+
+    :cond_5
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->wifiPowerMah:D
+
+    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->wifiPowerMah:D
+
+    sub-double/2addr v4, v6
+
+    iput-wide v4, p2, Lcom/android/internal/os/BatterySipper;->wifiPowerMah:D
+
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->bluetoothPowerMah:D
+
+    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->bluetoothPowerMah:D
+
+    cmpg-double v4, v4, v6
+
+    if-gez v4, :cond_6
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "##[Abn][bluetoothPowerMah] ["
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v4, p1, Lcom/android/internal/os/BatterySipper;->bluetoothPowerMah:D
+
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->bluetoothPowerMah:D
+
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
+
+    move v0, v1
+
+    :cond_6
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->bluetoothPowerMah:D
+
+    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->bluetoothPowerMah:D
+
+    sub-double/2addr v4, v6
+
+    iput-wide v4, p2, Lcom/android/internal/os/BatterySipper;->bluetoothPowerMah:D
+
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->gpsPowerMah:D
+
+    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->gpsPowerMah:D
+
+    cmpg-double v4, v4, v6
+
+    if-gez v4, :cond_7
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "##[Abn][gpsPowerMah] ["
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v4, p1, Lcom/android/internal/os/BatterySipper;->gpsPowerMah:D
+
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->gpsPowerMah:D
+
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
+
+    move v0, v1
+
+    :cond_7
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->gpsPowerMah:D
+
+    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->gpsPowerMah:D
+
+    sub-double/2addr v4, v6
+
+    iput-wide v4, p2, Lcom/android/internal/os/BatterySipper;->gpsPowerMah:D
+
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->sensorPowerMah:D
+
+    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->sensorPowerMah:D
+
+    cmpg-double v4, v4, v6
+
+    if-gez v4, :cond_8
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "##[Abn][sensorPowerMah] ["
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v4, p1, Lcom/android/internal/os/BatterySipper;->sensorPowerMah:D
+
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->sensorPowerMah:D
+
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
+
+    move v0, v1
+
+    :cond_8
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->sensorPowerMah:D
+
+    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->sensorPowerMah:D
+
+    sub-double/2addr v4, v6
+
+    iput-wide v4, p2, Lcom/android/internal/os/BatterySipper;->sensorPowerMah:D
+
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->cameraPowerMah:D
+
+    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->cameraPowerMah:D
+
+    cmpg-double v4, v4, v6
+
+    if-gez v4, :cond_9
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "##[Abn][cameraPowerMah] ["
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v4, p1, Lcom/android/internal/os/BatterySipper;->cameraPowerMah:D
+
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->cameraPowerMah:D
+
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
+
+    move v0, v1
+
+    :cond_9
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->cameraPowerMah:D
+
+    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->cameraPowerMah:D
+
+    sub-double/2addr v4, v6
+
+    iput-wide v4, p2, Lcom/android/internal/os/BatterySipper;->cameraPowerMah:D
+
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->flashlightPowerMah:D
+
+    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->flashlightPowerMah:D
+
+    cmpg-double v4, v4, v6
+
+    if-gez v4, :cond_a
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "##[Abn][flashlightPowerMah] ["
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v4, p1, Lcom/android/internal/os/BatterySipper;->flashlightPowerMah:D
+
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->flashlightPowerMah:D
+
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
+
+    move v0, v1
+
+    :cond_a
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->flashlightPowerMah:D
+
+    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->flashlightPowerMah:D
+
+    sub-double/2addr v4, v6
+
+    iput-wide v4, p2, Lcom/android/internal/os/BatterySipper;->flashlightPowerMah:D
+
+    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->totalPowerMah:D
+
+    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->totalPowerMah:D
+
+    cmpg-double v4, v4, v6
+
+    if-gez v4, :cond_b
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "##[Abn][totalPowerMah] ["
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v4, p1, Lcom/android/internal/os/BatterySipper;->totalPowerMah:D
+
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v3, p2, Lcom/android/internal/os/BatterySipper;->totalPowerMah:D
+
+    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
+
+    goto :goto_1
+
+    :cond_b
+    move v1, v0
+
+    :goto_1
+    iget-wide v2, p2, Lcom/android/internal/os/BatterySipper;->totalPowerMah:D
+
+    iget-wide v4, p1, Lcom/android/internal/os/BatterySipper;->totalPowerMah:D
+
+    sub-double/2addr v2, v4
+
+    iput-wide v2, p2, Lcom/android/internal/os/BatterySipper;->totalPowerMah:D
+
+    if-eqz v1, :cond_c
+
+    const-string v0, "Abn-Start"
+
+    invoke-direct {p0, v0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->O(Ljava/lang/String;Lcom/android/internal/os/BatterySipper;)Ljava/lang/String;
+
+    const-string p1, "Abn-End"
+
+    invoke-direct {p0, p1, p2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->O(Ljava/lang/String;Lcom/android/internal/os/BatterySipper;)Ljava/lang/String;
+
+    :cond_c
     return-void
 .end method
 
 .method static synthetic cgv(Lcom/android/server/power/OnePlusStandbyAnalyzer;Z)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->O(Z)V
+    invoke-direct {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N(Z)V
 
     return-void
 .end method
@@ -9989,574 +10560,57 @@
     return-void
 .end method
 
-.method private d1(Lcom/android/internal/os/BatterySipper;Lcom/android/internal/os/BatterySipper;)V
-    .locals 8
+.method private d0(Ljava/io/PrintWriter;)V
+    .locals 2
 
-    iget-wide v0, p2, Lcom/android/internal/os/BatterySipper;->wakeLockTimeMs:J
+    invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    iget-wide v2, p1, Lcom/android/internal/os/BatterySipper;->wakeLockTimeMs:J
+    const-string v0, "**** Standby Diagnosis Wifi Wakeup info ****"
 
-    cmp-long v0, v0, v2
+    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    const/4 v1, 0x1
+    iget-object v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N:Ljava/util/List;
 
-    const-string v2, "]"
+    if-eqz v0, :cond_1
 
-    const-string v3, ", "
-
-    if-gez v0, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "##[Abn][wakeLockTimeMs] ["
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v4, p1, Lcom/android/internal/os/BatterySipper;->wakeLockTimeMs:J
-
-    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->wakeLockTimeMs:J
-
-    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
-
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_0
     const/4 v0, 0x0
 
     :goto_0
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->wakeLockTimeMs:J
+    iget-object v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N:Ljava/util/List;
 
-    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->wakeLockTimeMs:J
+    invoke-interface {v1}, Ljava/util/List;->size()I
 
-    sub-long/2addr v4, v6
+    move-result v1
 
-    iput-wide v4, p2, Lcom/android/internal/os/BatterySipper;->wakeLockTimeMs:J
+    if-ge v0, v1, :cond_1
 
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->usagePowerMah:D
+    const/4 v1, 0x3
 
-    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->usagePowerMah:D
-
-    cmpg-double v4, v4, v6
-
-    if-gez v4, :cond_1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "##[Abn][usagePowerMah] ["
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v4, p1, Lcom/android/internal/os/BatterySipper;->usagePowerMah:D
-
-    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->usagePowerMah:D
-
-    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
-
-    move v0, v1
-
-    :cond_1
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->usagePowerMah:D
-
-    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->usagePowerMah:D
-
-    sub-double/2addr v4, v6
-
-    iput-wide v4, p2, Lcom/android/internal/os/BatterySipper;->usagePowerMah:D
-
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->cpuPowerMah:D
-
-    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->cpuPowerMah:D
-
-    cmpg-double v4, v4, v6
-
-    if-gez v4, :cond_2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "##[Abn][cpuPowerMah] ["
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v4, p1, Lcom/android/internal/os/BatterySipper;->cpuPowerMah:D
-
-    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->cpuPowerMah:D
-
-    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
-
-    move v0, v1
-
-    :cond_2
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->cpuPowerMah:D
-
-    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->cpuPowerMah:D
-
-    sub-double/2addr v4, v6
-
-    iput-wide v4, p2, Lcom/android/internal/os/BatterySipper;->cpuPowerMah:D
-
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->wakeLockPowerMah:D
-
-    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->wakeLockPowerMah:D
-
-    cmpg-double v4, v4, v6
-
-    if-gez v4, :cond_3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "##[Abn][wakeLockPowerMah] ["
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v4, p1, Lcom/android/internal/os/BatterySipper;->wakeLockPowerMah:D
-
-    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->wakeLockPowerMah:D
-
-    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
-
-    move v0, v1
-
-    :cond_3
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->wakeLockPowerMah:D
-
-    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->wakeLockPowerMah:D
-
-    sub-double/2addr v4, v6
-
-    iput-wide v4, p2, Lcom/android/internal/os/BatterySipper;->wakeLockPowerMah:D
-
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->mobileRadioPowerMah:D
-
-    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->mobileRadioPowerMah:D
-
-    cmpg-double v4, v4, v6
-
-    if-gez v4, :cond_4
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "##[Abn][mobileRadioPowerMah] ["
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v4, p1, Lcom/android/internal/os/BatterySipper;->mobileRadioPowerMah:D
-
-    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->mobileRadioPowerMah:D
-
-    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
-
-    move v0, v1
-
-    :cond_4
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->mobileRadioPowerMah:D
-
-    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->mobileRadioPowerMah:D
-
-    sub-double/2addr v4, v6
-
-    iput-wide v4, p2, Lcom/android/internal/os/BatterySipper;->mobileRadioPowerMah:D
-
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->wifiPowerMah:D
-
-    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->wifiPowerMah:D
-
-    cmpg-double v4, v4, v6
-
-    if-gez v4, :cond_5
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "##[Abn][wifiPowerMah] ["
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v4, p1, Lcom/android/internal/os/BatterySipper;->wifiPowerMah:D
-
-    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->wifiPowerMah:D
-
-    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
-
-    move v0, v1
-
-    :cond_5
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->wifiPowerMah:D
-
-    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->wifiPowerMah:D
-
-    sub-double/2addr v4, v6
-
-    iput-wide v4, p2, Lcom/android/internal/os/BatterySipper;->wifiPowerMah:D
-
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->bluetoothPowerMah:D
-
-    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->bluetoothPowerMah:D
-
-    cmpg-double v4, v4, v6
-
-    if-gez v4, :cond_6
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "##[Abn][bluetoothPowerMah] ["
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v4, p1, Lcom/android/internal/os/BatterySipper;->bluetoothPowerMah:D
-
-    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->bluetoothPowerMah:D
-
-    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
-
-    move v0, v1
-
-    :cond_6
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->bluetoothPowerMah:D
-
-    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->bluetoothPowerMah:D
-
-    sub-double/2addr v4, v6
-
-    iput-wide v4, p2, Lcom/android/internal/os/BatterySipper;->bluetoothPowerMah:D
-
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->gpsPowerMah:D
-
-    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->gpsPowerMah:D
-
-    cmpg-double v4, v4, v6
-
-    if-gez v4, :cond_7
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "##[Abn][gpsPowerMah] ["
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v4, p1, Lcom/android/internal/os/BatterySipper;->gpsPowerMah:D
-
-    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->gpsPowerMah:D
-
-    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
-
-    move v0, v1
-
-    :cond_7
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->gpsPowerMah:D
-
-    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->gpsPowerMah:D
-
-    sub-double/2addr v4, v6
-
-    iput-wide v4, p2, Lcom/android/internal/os/BatterySipper;->gpsPowerMah:D
-
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->sensorPowerMah:D
-
-    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->sensorPowerMah:D
-
-    cmpg-double v4, v4, v6
-
-    if-gez v4, :cond_8
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "##[Abn][sensorPowerMah] ["
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v4, p1, Lcom/android/internal/os/BatterySipper;->sensorPowerMah:D
-
-    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->sensorPowerMah:D
-
-    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
-
-    move v0, v1
-
-    :cond_8
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->sensorPowerMah:D
-
-    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->sensorPowerMah:D
-
-    sub-double/2addr v4, v6
-
-    iput-wide v4, p2, Lcom/android/internal/os/BatterySipper;->sensorPowerMah:D
-
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->cameraPowerMah:D
-
-    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->cameraPowerMah:D
-
-    cmpg-double v4, v4, v6
-
-    if-gez v4, :cond_9
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "##[Abn][cameraPowerMah] ["
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v4, p1, Lcom/android/internal/os/BatterySipper;->cameraPowerMah:D
-
-    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->cameraPowerMah:D
-
-    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
-
-    move v0, v1
-
-    :cond_9
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->cameraPowerMah:D
-
-    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->cameraPowerMah:D
-
-    sub-double/2addr v4, v6
-
-    iput-wide v4, p2, Lcom/android/internal/os/BatterySipper;->cameraPowerMah:D
-
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->flashlightPowerMah:D
-
-    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->flashlightPowerMah:D
-
-    cmpg-double v4, v4, v6
-
-    if-gez v4, :cond_a
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "##[Abn][flashlightPowerMah] ["
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v4, p1, Lcom/android/internal/os/BatterySipper;->flashlightPowerMah:D
-
-    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->flashlightPowerMah:D
-
-    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
-
-    move v0, v1
-
-    :cond_a
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->flashlightPowerMah:D
-
-    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->flashlightPowerMah:D
-
-    sub-double/2addr v4, v6
-
-    iput-wide v4, p2, Lcom/android/internal/os/BatterySipper;->flashlightPowerMah:D
-
-    iget-wide v4, p2, Lcom/android/internal/os/BatterySipper;->totalPowerMah:D
-
-    iget-wide v6, p1, Lcom/android/internal/os/BatterySipper;->totalPowerMah:D
-
-    cmpg-double v4, v4, v6
-
-    if-gez v4, :cond_b
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "##[Abn][totalPowerMah] ["
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v4, p1, Lcom/android/internal/os/BatterySipper;->totalPowerMah:D
-
-    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v3, p2, Lcom/android/internal/os/BatterySipper;->totalPowerMah:D
-
-    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    if-lt v0, v1, :cond_0
 
     goto :goto_1
 
-    :cond_b
-    move v1, v0
+    :cond_0
+    iget-object v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N:Ljava/util/List;
 
+    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$cgv;
+
+    invoke-virtual {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer$cgv;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
     :goto_1
-    iget-wide v2, p2, Lcom/android/internal/os/BatterySipper;->totalPowerMah:D
-
-    iget-wide v4, p1, Lcom/android/internal/os/BatterySipper;->totalPowerMah:D
-
-    sub-double/2addr v2, v4
-
-    iput-wide v2, p2, Lcom/android/internal/os/BatterySipper;->totalPowerMah:D
-
-    if-eqz v1, :cond_c
-
-    const-string v0, "Abn-Start"
-
-    invoke-direct {p0, v0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->P(Ljava/lang/String;Lcom/android/internal/os/BatterySipper;)Ljava/lang/String;
-
-    const-string p1, "Abn-End"
-
-    invoke-direct {p0, p1, p2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->P(Ljava/lang/String;Lcom/android/internal/os/BatterySipper;)Ljava/lang/String;
-
-    :cond_c
     return-void
 .end method
 
@@ -10688,58 +10742,99 @@
     return-void
 .end method
 
-.method private e0(Ljava/io/PrintWriter;)V
-    .locals 2
-
-    invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
-
-    const-string v0, "**** Standby Diagnosis Wifi Wakeup info ****"
-
-    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N:Ljava/util/List;
-
-    if-eqz v0, :cond_1
+.method private e0(Ljava/util/List;)Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;",
+            ">;)",
+            "Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
+    if-eqz p1, :cond_2
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
     :goto_0
-    iget-object v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N:Ljava/util/List;
+    invoke-interface {p1}, Ljava/util/List;->size()I
 
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    move-result v3
 
-    move-result v1
+    if-ge v1, v3, :cond_2
 
-    if-ge v0, v1, :cond_1
+    iget-object v3, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->T:Ljava/util/List;
 
-    const/4 v1, 0x3
+    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    if-lt v0, v1, :cond_0
+    move-result-object v4
 
-    goto :goto_1
+    check-cast v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;
+
+    iget-object v4, v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;->zta:Ljava/lang/String;
+
+    invoke-interface {v3, v4}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    if-nez v0, :cond_0
+
+    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;
 
     :cond_0
-    iget-object v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N:Ljava/util/List;
+    const/4 v3, 0x3
 
-    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    if-ge v2, v3, :cond_2
 
-    move-result-object v1
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    check-cast v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$cgv;
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer$cgv;->toString()Ljava/lang/String;
+    add-int/lit8 v2, v2, 0x1
 
-    move-result-object v1
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    const-string v4, " st-KWL:"
 
-    add-int/lit8 v0, v0, 0x1
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;
+
+    invoke-virtual {v4}, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
+
+    :cond_1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    :cond_1
-    :goto_1
-    return-void
+    :cond_2
+    return-object v0
 .end method
 
 .method static synthetic ear(Lcom/android/server/power/OnePlusStandbyAnalyzer;I)I
@@ -10860,110 +10955,7 @@
     return-void
 .end method
 
-.method private f0(Ljava/util/List;)Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;
-    .locals 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;",
-            ">;)",
-            "Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;"
-        }
-    .end annotation
-
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_2
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v3
-
-    if-ge v1, v3, :cond_2
-
-    iget-object v3, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->T:Ljava/util/List;
-
-    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;
-
-    iget-object v4, v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;->zta:Ljava/lang/String;
-
-    invoke-interface {v3, v4}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_1
-
-    if-nez v0, :cond_0
-
-    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;
-
-    :cond_0
-    const/4 v3, 0x3
-
-    if-ge v2, v3, :cond_2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    add-int/lit8 v2, v2, 0x1
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v4, " st-KWL:"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;
-
-    invoke-virtual {v4}, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
-
-    :cond_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    return-object v0
-.end method
-
-.method static synthetic fto(Lcom/android/server/power/OnePlusStandbyAnalyzer;J)J
-    .locals 0
-
-    iput-wide p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->f0:J
-
-    return-wide p1
-.end method
-
-.method private g0(Ljava/util/List;)Lcom/android/server/power/OnePlusStandbyAnalyzer$fto;
+.method private f0(Ljava/util/List;)Lcom/android/server/power/OnePlusStandbyAnalyzer$fto;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -11040,12 +11032,12 @@
     return-object p0
 .end method
 
-.method private g1()V
+.method private f1()V
     .locals 2
 
     const-string v0, "Trigger QXDM cleanUp task..."
 
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     new-instance v0, Landroid/content/Intent;
 
@@ -11066,10 +11058,18 @@
     return-void
 .end method
 
+.method static synthetic fto(Lcom/android/server/power/OnePlusStandbyAnalyzer;J)J
+    .locals 0
+
+    iput-wide p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->f0:J
+
+    return-wide p1
+.end method
+
 .method static synthetic gck(Lcom/android/server/power/OnePlusStandbyAnalyzer;Lorg/json/JSONArray;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->S0(Lorg/json/JSONArray;)V
+    invoke-direct {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->R0(Lorg/json/JSONArray;)V
 
     return-void
 .end method
@@ -11077,20 +11077,12 @@
 .method static synthetic gwm(Lcom/android/server/power/OnePlusStandbyAnalyzer;Ljava/lang/String;Ljava/util/List;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->y(Ljava/lang/String;Ljava/util/List;)V
+    invoke-direct {p0, p1, p2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->x(Ljava/lang/String;Ljava/util/List;)V
 
     return-void
 .end method
 
-.method static synthetic hmo(Lcom/android/server/power/OnePlusStandbyAnalyzer;F)F
-    .locals 0
-
-    iput p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->j0:F
-
-    return p1
-.end method
-
-.method private i0(Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmMasterType;)J
+.method private h0(Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmMasterType;)J
     .locals 5
 
     const-wide/16 v0, 0x0
@@ -11169,10 +11161,18 @@
     return-wide v0
 .end method
 
+.method static synthetic hmo(Lcom/android/server/power/OnePlusStandbyAnalyzer;F)F
+    .locals 0
+
+    iput p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->j0:F
+
+    return p1
+.end method
+
 .method static synthetic ibl(Lcom/android/server/power/OnePlusStandbyAnalyzer;Ljava/lang/String;Ljava/util/Map;Z)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->B(Ljava/lang/String;Ljava/util/Map;Z)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->A(Ljava/lang/String;Ljava/util/Map;Z)V
 
     return-void
 .end method
@@ -11271,7 +11271,7 @@
     :cond_1
     const-string p1, "list == null"
 
-    invoke-static {p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     :cond_2
     :goto_1
@@ -11340,11 +11340,59 @@
     :cond_1
     const-string p1, "list == null"
 
-    invoke-static {p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     :cond_2
     :goto_1
     return p0
+.end method
+
+.method private k1(Z)V
+    .locals 3
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "Update QXDM packing-flag to "
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "1"
+
+    const-string v1, "0"
+
+    if-eqz p1, :cond_0
+
+    move-object v2, v0
+
+    goto :goto_0
+
+    :cond_0
+    move-object v2, v1
+
+    :goto_0
+    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
+
+    if-eqz p1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    move-object v0, v1
+
+    :goto_1
+    const-string p0, "persist.sys.standby_qxdm"
+
+    invoke-static {p0, v0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
 .end method
 
 .method static synthetic kth(Lcom/android/server/power/OnePlusStandbyAnalyzer;Z)Z
@@ -11398,7 +11446,7 @@
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v0, "Update QXDM packing-flag to "
+    const-string v0, "Update QXDM recording-flag to "
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -11422,7 +11470,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     if-eqz p1, :cond_1
 
@@ -11432,7 +11480,7 @@
     move-object v0, v1
 
     :goto_1
-    const-string p0, "persist.sys.standby_qxdm"
+    const-string p0, "persist.sys.standby_qxdm_recording"
 
     invoke-static {p0, v0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -11507,7 +11555,7 @@
     :cond_0
     const-string p0, "## fetal error, oriList == null"
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -11515,110 +11563,7 @@
     return-object p0
 .end method
 
-.method private m1(Z)V
-    .locals 3
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "Update QXDM recording-flag to "
-
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "1"
-
-    const-string v1, "0"
-
-    if-eqz p1, :cond_0
-
-    move-object v2, v0
-
-    goto :goto_0
-
-    :cond_0
-    move-object v2, v1
-
-    :goto_0
-    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
-
-    if-eqz p1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    move-object v0, v1
-
-    :goto_1
-    const-string p0, "persist.sys.standby_qxdm_recording"
-
-    invoke-static {p0, v0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method private o(C)V
-    .locals 1
-
-    :try_start_0
-    new-instance p0, Ljava/io/FileWriter;
-
-    const-string v0, "/proc/sysrq-trigger"
-
-    invoke-direct {p0, v0}, Ljava/io/FileWriter;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0, p1}, Ljava/io/FileWriter;->write(I)V
-
-    invoke-virtual {p0}, Ljava/io/FileWriter;->close()V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p0
-
-    const-string p1, "OPSA"
-
-    const-string v0, "Failed to write to /proc/sysrq-trigger"
-
-    invoke-static {p1, v0, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :goto_0
-    return-void
-.end method
-
-.method static synthetic obl(Lcom/android/server/power/OnePlusStandbyAnalyzer;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->D0()V
-
-    return-void
-.end method
-
-.method static synthetic oif(Lcom/android/server/power/OnePlusStandbyAnalyzer;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->x0:Z
-
-    return p0
-.end method
-
-.method static synthetic oxb(Lcom/android/server/power/OnePlusStandbyAnalyzer;)Lcom/android/server/power/OnePlusStandbyAnalyzer$vdb;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->qeg:Lcom/android/server/power/OnePlusStandbyAnalyzer$vdb;
-
-    return-object p0
-.end method
-
-.method private p(Ljava/util/List;)V
+.method private o(Ljava/util/List;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -11662,7 +11607,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     add-int/lit8 v0, v0, 0x1
 
@@ -11682,7 +11627,7 @@
     return-void
 .end method
 
-.method private p1(Landroid/telephony/ServiceState;)V
+.method private o1(Landroid/telephony/ServiceState;)V
     .locals 3
 
     invoke-virtual {p1}, Landroid/telephony/ServiceState;->getState()I
@@ -11707,7 +11652,7 @@
 
     const-string p1, "[ServiceState] STATE_UNKNOWN"
 
-    invoke-static {p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iget-boolean p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->v0:Z
 
@@ -11718,7 +11663,7 @@
     :cond_0
     const-string p1, "[ServiceState] STATE_POWER_OFF"
 
-    invoke-static {p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iget-boolean p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->v0:Z
 
@@ -11729,7 +11674,7 @@
     :cond_1
     const-string p1, "[ServiceState] STATE_EMERGENCY_ONLY"
 
-    invoke-static {p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iget-boolean p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->v0:Z
 
@@ -11740,7 +11685,7 @@
     :cond_2
     const-string p1, "[ServiceState] STATE_OUT_OF_SERVICE"
 
-    invoke-static {p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iget-boolean p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->v0:Z
 
@@ -11758,7 +11703,7 @@
     :cond_3
     const-string p1, "[ServiceState] STATE_IN_SERVICE"
 
-    invoke-static {p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iget-boolean p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->v0:Z
 
@@ -11776,7 +11721,31 @@
     return-void
 .end method
 
-.method private q(Ljava/lang/String;Ljava/util/List;Z)V
+.method static synthetic obl(Lcom/android/server/power/OnePlusStandbyAnalyzer;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->C0()V
+
+    return-void
+.end method
+
+.method static synthetic oif(Lcom/android/server/power/OnePlusStandbyAnalyzer;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->x0:Z
+
+    return p0
+.end method
+
+.method static synthetic oxb(Lcom/android/server/power/OnePlusStandbyAnalyzer;)Lcom/android/server/power/OnePlusStandbyAnalyzer$vdb;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->qeg:Lcom/android/server/power/OnePlusStandbyAnalyzer$vdb;
+
+    return-object p0
+.end method
+
+.method private p(Ljava/lang/String;Ljava/util/List;Z)V
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -11828,7 +11797,7 @@
     if-ge v3, v5, :cond_1
 
     :cond_0
-    invoke-direct {p0, p1, v4}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->P(Ljava/lang/String;Lcom/android/internal/os/BatterySipper;)Ljava/lang/String;
+    invoke-direct {p0, p1, v4}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->O(Ljava/lang/String;Lcom/android/internal/os/BatterySipper;)Ljava/lang/String;
 
     :cond_1
     add-int/lit8 v3, v3, 0x1
@@ -11864,28 +11833,12 @@
     const-string p0, "sippers == null or sippers.size() == 0"
 
     :goto_1
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method static synthetic qbh(Lcom/android/server/power/OnePlusStandbyAnalyzer;Z)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->l1(Z)V
-
-    return-void
-.end method
-
-.method static synthetic qeg(Lcom/android/server/power/OnePlusStandbyAnalyzer;)J
-    .locals 2
-
-    iget-wide v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->veq:J
-
-    return-wide v0
-.end method
-
-.method private r()V
+.method private q()V
     .locals 3
 
     new-instance p0, Ljava/lang/StringBuilder;
@@ -12010,20 +11963,28 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method static synthetic rtg(Lcom/android/server/power/OnePlusStandbyAnalyzer;Landroid/telephony/ServiceState;)V
+.method static synthetic qbh(Lcom/android/server/power/OnePlusStandbyAnalyzer;Z)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->p1(Landroid/telephony/ServiceState;)V
+    invoke-direct {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->k1(Z)V
 
     return-void
 .end method
 
-.method private s(Ljava/util/List;)V
+.method static synthetic qeg(Lcom/android/server/power/OnePlusStandbyAnalyzer;)J
+    .locals 2
+
+    iget-wide v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->veq:J
+
+    return-wide v0
+.end method
+
+.method private r(Ljava/util/List;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -12067,7 +12028,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     add-int/lit8 v0, v0, 0x1
 
@@ -12087,7 +12048,7 @@
     return-void
 .end method
 
-.method private s0(Lcom/android/internal/os/BatterySipper;)Ljava/lang/String;
+.method private r0(Lcom/android/internal/os/BatterySipper;)Ljava/lang/String;
     .locals 2
 
     if-eqz p1, :cond_2
@@ -12116,7 +12077,7 @@
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->Q0(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->P0(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -12138,23 +12099,15 @@
     return-object p0
 .end method
 
-.method static synthetic sis(Lcom/android/server/power/OnePlusStandbyAnalyzer;)Lcom/android/server/power/OnePlusStandbyAnalyzer$ugm;
+.method static synthetic rtg(Lcom/android/server/power/OnePlusStandbyAnalyzer;Landroid/telephony/ServiceState;)V
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->w0:Lcom/android/server/power/OnePlusStandbyAnalyzer$ugm;
+    invoke-direct {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->o1(Landroid/telephony/ServiceState;)V
 
-    return-object p0
+    return-void
 .end method
 
-.method static synthetic ssp(Lcom/android/server/power/OnePlusStandbyAnalyzer;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->ssp:Z
-
-    return p0
-.end method
-
-.method private t(Ljava/util/List;)V
+.method private s(Ljava/util/List;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -12198,7 +12151,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     add-int/lit8 v0, v0, 0x1
 
@@ -12218,15 +12171,23 @@
     return-void
 .end method
 
-.method static synthetic tsu(Lcom/android/server/power/OnePlusStandbyAnalyzer;Z)Z
+.method static synthetic sis(Lcom/android/server/power/OnePlusStandbyAnalyzer;)Lcom/android/server/power/OnePlusStandbyAnalyzer$ugm;
     .locals 0
 
-    iput-boolean p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->v0:Z
+    iget-object p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->w0:Lcom/android/server/power/OnePlusStandbyAnalyzer$ugm;
 
-    return p1
+    return-object p0
 .end method
 
-.method private u(Ljava/lang/String;Ljava/lang/String;)V
+.method static synthetic ssp(Lcom/android/server/power/OnePlusStandbyAnalyzer;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->ssp:Z
+
+    return p0
+.end method
+
+.method private t(Ljava/lang/String;Ljava/lang/String;)V
     .locals 5
 
     const/16 p0, 0x400
@@ -12251,7 +12212,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -12302,7 +12263,7 @@
 
     const-string p0, "**** Exceed read timeout, force exit ***"
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_2
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
@@ -12368,7 +12329,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
@@ -12400,7 +12361,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
@@ -12435,10 +12396,82 @@
     throw p0
 .end method
 
+.method static synthetic tsu(Lcom/android/server/power/OnePlusStandbyAnalyzer;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->v0:Z
+
+    return p1
+.end method
+
+.method private u(Ljava/lang/String;Ljava/util/List;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/util/List<",
+            "Lcom/android/server/power/OnePlusStandbyAnalyzer$cjf;",
+            ">;)V"
+        }
+    .end annotation
+
+    const-string p0, "OPSA"
+
+    if-eqz p2, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-interface {p2}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_1
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "["
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "], "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface {p2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {p0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const-string p1, "list == null"
+
+    invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    return-void
+.end method
+
 .method static synthetic ugm(Lcom/android/server/power/OnePlusStandbyAnalyzer;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->u(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, p1, p2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->t(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -12450,7 +12483,7 @@
             "(",
             "Ljava/lang/String;",
             "Ljava/util/List<",
-            "Lcom/android/server/power/OnePlusStandbyAnalyzer$cjf;",
+            "Lcom/android/server/power/OnePlusStandbyAnalyzer$oxb;",
             ">;)V"
         }
     .end annotation
@@ -12526,7 +12559,7 @@
 .method static synthetic veq(Lcom/android/server/power/OnePlusStandbyAnalyzer;)Z
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->I0()Z
+    invoke-direct {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->H0()Z
 
     move-result p0
 
@@ -12541,79 +12574,7 @@
     return-wide v0
 .end method
 
-.method private w(Ljava/lang/String;Ljava/util/List;)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "Ljava/util/List<",
-            "Lcom/android/server/power/OnePlusStandbyAnalyzer$oxb;",
-            ">;)V"
-        }
-    .end annotation
-
-    const-string p0, "OPSA"
-
-    if-eqz p2, :cond_0
-
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-interface {p2}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    if-ge v0, v1, :cond_1
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "["
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "], "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-interface {p2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {p0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const-string p1, "list == null"
-
-    invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_1
-    return-void
-.end method
-
-.method static synthetic wtn(Lcom/android/server/power/OnePlusStandbyAnalyzer;Z)Z
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->cno:Z
-
-    return p1
-.end method
-
-.method private x(Ljava/lang/String;Ljava/util/Map;)V
+.method private w(Ljava/lang/String;Ljava/util/Map;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -12689,7 +12650,7 @@
 
     move-result-object p2
 
-    invoke-static {p2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -12697,7 +12658,15 @@
     return-void
 .end method
 
-.method private y(Ljava/lang/String;Ljava/util/List;)V
+.method static synthetic wtn(Lcom/android/server/power/OnePlusStandbyAnalyzer;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->cno:Z
+
+    return p1
+.end method
+
+.method private x(Ljava/lang/String;Ljava/util/List;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -12727,13 +12696,13 @@
     :cond_0
     const-string p0, "list == null"
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     :cond_1
     return-void
 .end method
 
-.method private y0(Lcom/android/internal/os/BatterySipper;Lcom/android/internal/os/BatterySipper;)Z
+.method private x0(Lcom/android/internal/os/BatterySipper;Lcom/android/internal/os/BatterySipper;)Z
     .locals 2
 
     iget-object p0, p1, Lcom/android/internal/os/BatterySipper;->uidObj:Landroid/os/BatteryStats$Uid;
@@ -12801,7 +12770,7 @@
 .method static synthetic zgw(Lcom/android/server/power/OnePlusStandbyAnalyzer;Ljava/lang/String;Ljava/util/Map;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->G(Ljava/lang/String;Ljava/util/Map;)V
+    invoke-direct {p0, p1, p2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->F(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
 .end method
@@ -12816,85 +12785,7 @@
 
 
 # virtual methods
-.method public A(Ljava/io/PrintWriter;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->Q(Ljava/io/PrintWriter;)V
-
-    invoke-direct {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->R(Ljava/io/PrintWriter;)V
-
-    invoke-direct {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->b0(Ljava/io/PrintWriter;)V
-
-    invoke-direct {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->S(Ljava/io/PrintWriter;)V
-
-    invoke-direct {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->c0(Ljava/io/PrintWriter;)V
-
-    invoke-virtual {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->d0(Ljava/io/PrintWriter;)V
-
-    invoke-direct {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->e0(Ljava/io/PrintWriter;)V
-
-    invoke-direct {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->U(Ljava/io/PrintWriter;)V
-
-    invoke-direct {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M(Ljava/io/PrintWriter;)V
-
-    invoke-direct {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->X(Ljava/io/PrintWriter;)V
-
-    invoke-direct {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->Z(Ljava/io/PrintWriter;)V
-
-    return-void
-.end method
-
-.method public declared-synchronized A0(Z)V
-    .locals 3
-
-    monitor-enter p0
-
-    :try_start_0
-    const-string v0, "OPSA"
-
-    const-string v1, "======BE_IMFORMED_SCREEN_ON======"
-
-    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->ssp:Z
-
-    iget-object v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->qeg:Lcom/android/server/power/OnePlusStandbyAnalyzer$vdb;
-
-    const/16 v2, 0x3f2
-
-    invoke-virtual {v1, v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer$vdb;->ssp(I)V
-
-    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$TelephonyType;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$TelephonyType;
-
-    if-eqz p1, :cond_0
-
-    sget-object p1, Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;->tsu:Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;
-
-    goto :goto_0
-
-    :cond_0
-    sget-object p1, Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;->rtg:Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;
-
-    :goto_0
-    invoke-virtual {p0, v0, v1, p1, v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->J(ZLcom/android/server/power/OnePlusStandbyAnalyzer$TelephonyType;Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;Z)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit p0
-
-    throw p1
-.end method
-
-.method public D(Ljava/lang/String;Ljava/util/Map;Z)V
+.method public C(Ljava/lang/String;Ljava/util/Map;Z)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -12923,13 +12814,13 @@
 
     invoke-static {v0, p2}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    invoke-direct {p0, p1, v0, p3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->C(Ljava/lang/String;Ljava/util/List;Z)V
+    invoke-direct {p0, p1, v0, p3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->B(Ljava/lang/String;Ljava/util/List;Z)V
 
     :cond_0
     return-void
 .end method
 
-.method public declared-synchronized J(ZLcom/android/server/power/OnePlusStandbyAnalyzer$TelephonyType;Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;Z)V
+.method public declared-synchronized I(ZLcom/android/server/power/OnePlusStandbyAnalyzer$TelephonyType;Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;Z)V
     .locals 10
 
     monitor-enter p0
@@ -13060,7 +12951,7 @@
 
     const-string v5, "it\'s time to enable 1st-QXDM-recording now under this round of standby period"
 
-    invoke-static {v5}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v5}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->you:[I
 
@@ -13108,7 +12999,7 @@
 
     move-result-object p3
 
-    invoke-static {p3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iget-boolean p3, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->igw:Z
 
@@ -13237,7 +13128,7 @@
 
     invoke-static {p1, p2}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {p0, v4}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->m1(Z)V
+    invoke-direct {p0, v4}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->l1(Z)V
 
     const-string p1, "persist.sys.qxdm"
 
@@ -13307,7 +13198,7 @@
     const-string p1, "already have telephony-abn action, do nothing."
 
     :goto_6
-    invoke-static {p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     goto/16 :goto_9
 
@@ -13383,7 +13274,7 @@
 
     move-result-object p2
 
-    invoke-static {p2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iget-boolean p2, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->igw:Z
 
@@ -13403,7 +13294,7 @@
 
     invoke-static {p1, p2}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {p0, v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->m1(Z)V
+    invoke-direct {p0, v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->l1(Z)V
 
     const-string p1, "diag_mdlog_stop"
 
@@ -13472,7 +13363,7 @@
     :cond_14
     const-string p1, "QXDM is already disabled, do nothing."
 
-    invoke-static {p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     sget-object p1, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->you:[I
 
@@ -13493,7 +13384,7 @@
 
     const-string p1, "[opbugreportlite] Ever gen-QXDM logs, so schedule 10 sec later to cleanUp Sdcard\'s QXDM logs."
 
-    invoke-static {p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iget-object p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->qeg:Lcom/android/server/power/OnePlusStandbyAnalyzer$vdb;
 
@@ -13519,7 +13410,7 @@
     throw p1
 .end method
 
-.method public K(Z)V
+.method public J(Z)V
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->lqr:Z
@@ -13527,7 +13418,7 @@
     return-void
 .end method
 
-.method public L()V
+.method public K()V
     .locals 4
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -13573,7 +13464,7 @@
     return-void
 .end method
 
-.method public L0(Z)V
+.method public K0(Z)V
     .locals 7
 
     iget-boolean v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->zta:Z
@@ -13695,7 +13586,7 @@
     invoke-static {v6, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_5
-    invoke-virtual {p0, p1, v1, v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->x0(IJ)Z
+    invoke-virtual {p0, p1, v1, v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->w0(IJ)Z
 
     move-result v0
 
@@ -13712,12 +13603,12 @@
 
     :cond_7
     :goto_3
-    invoke-virtual {p0, v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->A0(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->z0(Z)V
 
     return-void
 .end method
 
-.method public M0()V
+.method public L0()V
     .locals 6
 
     iget-boolean v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->ssp:Z
@@ -13748,13 +13639,13 @@
 
     sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer;->o1:Ljava/lang/String;
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->p0(Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;Ljava/lang/String;)V
+    invoke-virtual {p0, v0, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->o0(Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;Ljava/lang/String;)V
 
     sget-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;->you:Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
 
     sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q1:Ljava/lang/String;
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->r0(Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;Ljava/lang/String;)V
+    invoke-virtual {p0, v0, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q0(Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->I:Ljava/util/List;
 
@@ -13766,9 +13657,9 @@
 
     const-string v0, "Middle Check : Observe aosd / vmin no increase !"
 
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
-    invoke-direct {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->H0()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->G0()Ljava/lang/String;
 
     move-result-object v0
 
@@ -13786,7 +13677,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     if-eqz v0, :cond_1
 
@@ -13810,21 +13701,21 @@
 
     const/4 v3, 0x0
 
-    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->J(ZLcom/android/server/power/OnePlusStandbyAnalyzer$TelephonyType;Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;Z)V
+    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->I(ZLcom/android/server/power/OnePlusStandbyAnalyzer$TelephonyType;Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;Z)V
 
     goto :goto_0
 
     :cond_0
     const-string p0, "Middle Check : Nothing special..."
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     :cond_1
     :goto_0
     return-void
 .end method
 
-.method public N()V
+.method public M()V
     .locals 4
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -13867,7 +13758,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -13900,7 +13791,7 @@
     return-void
 .end method
 
-.method public O0()V
+.method public N0()V
     .locals 1
 
     const/4 v0, 0x1
@@ -13910,7 +13801,7 @@
     return-void
 .end method
 
-.method public R0()V
+.method public Q0()V
     .locals 2
 
     const-wide/16 v0, -0x1
@@ -13920,20 +13811,20 @@
     return-void
 .end method
 
-.method public T0()V
+.method public S0()V
     .locals 1
 
     iget-boolean v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->cno:Z
 
     if-eqz v0, :cond_1
 
-    invoke-direct {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->E0()Z
+    invoke-direct {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->D0()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->g1()V
+    invoke-direct {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->f1()V
 
     const/4 v0, 0x0
 
@@ -13950,13 +13841,13 @@
     const-string p0, "No need to cleanup due to no qxdm generation at this round."
 
     :goto_0
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     :goto_1
     return-void
 .end method
 
-.method public U0(Lcom/android/server/am/BatteryStatsService;)V
+.method public T0(Lcom/android/server/am/BatteryStatsService;)V
     .locals 3
 
     const-string v0, "OPSA"
@@ -14015,7 +13906,7 @@
 
     iput-object p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->qeg:Lcom/android/server/power/OnePlusStandbyAnalyzer$vdb;
 
-    invoke-direct {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->B0()V
+    invoke-direct {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->A0()V
 
     const-string p1, "ro.board.platform"
 
@@ -14052,11 +13943,11 @@
     :cond_0
     iput-boolean v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->W:Z
 
-    const-string p1, "/d/rpmh/stats"
+    const-string p1, "/sys/power/rpmh/stats"
 
     sput-object p1, Lcom/android/server/power/OnePlusStandbyAnalyzer;->o1:Ljava/lang/String;
 
-    const-string p1, "/d/rpmh/master_stats"
+    const-string p1, "/sys/power/rpmh/master_stats"
 
     sput-object p1, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q1:Ljava/lang/String;
 
@@ -14101,18 +13992,18 @@
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-direct {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->C0()V
+    invoke-direct {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->B0()V
+
+    invoke-direct {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->a1()V
 
     invoke-direct {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->b1()V
-
-    invoke-direct {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->c1()V
 
     iput-boolean v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->zta:Z
 
     return-void
 .end method
 
-.method public V0(J)V
+.method public U0(J)V
     .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -14129,14 +14020,14 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iput-wide p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->oif:J
 
     return-void
 .end method
 
-.method public W0(Ljava/lang/String;Ljava/io/PrintWriter;Landroid/os/ShellCommand;)Z
+.method public V0(Ljava/lang/String;Ljava/io/PrintWriter;Landroid/os/ShellCommand;)Z
     .locals 26
 
     move-object/from16 v0, p0
@@ -14214,7 +14105,7 @@
 
     iput-boolean v11, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->ugm:Z
 
-    invoke-virtual {v0, v11}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->n1(Z)V
+    invoke-virtual {v0, v11}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->m1(Z)V
 
     const-string v0, "abn_reporting is enabled"
 
@@ -14232,7 +14123,7 @@
 
     iput-boolean v12, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->ugm:Z
 
-    invoke-virtual {v0, v12}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->n1(Z)V
+    invoke-virtual {v0, v12}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->m1(Z)V
 
     const-string v0, "abn_reporting is disabled"
 
@@ -14581,31 +14472,31 @@
 
     move-result v1
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->m0()Z
+    invoke-virtual/range {p0 .. p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->l0()Z
 
     move-result v3
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->o0()Z
+    invoke-virtual/range {p0 .. p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->n0()Z
 
     move-result v4
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->n0()J
+    invoke-virtual/range {p0 .. p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->m0()J
 
     move-result-wide v8
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->l0()J
+    invoke-virtual/range {p0 .. p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->k0()J
 
     move-result-wide v10
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->t0()J
+    invoke-virtual/range {p0 .. p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->s0()J
 
     move-result-wide v17
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->h0()J
+    invoke-virtual/range {p0 .. p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->g0()J
 
     move-result-wide v19
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->j0()J
+    invoke-virtual/range {p0 .. p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->i0()J
 
     move-result-wide v21
 
@@ -14891,7 +14782,7 @@
 
     if-eqz v5, :cond_12
 
-    invoke-virtual {v0, v6, v7}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->V0(J)V
+    invoke-virtual {v0, v6, v7}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->U0(J)V
 
     const-string v0, "reset lastGrabTimeStamp to 0"
 
@@ -14968,7 +14859,7 @@
     goto :goto_4
 
     :cond_13
-    invoke-virtual {v0, v8, v9}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->V0(J)V
+    invoke-virtual {v0, v8, v9}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->U0(J)V
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -15028,7 +14919,7 @@
     goto :goto_5
 
     :cond_15
-    invoke-virtual {v0, v8, v9}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->k1(J)V
+    invoke-virtual {v0, v8, v9}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->j1(J)V
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -15088,7 +14979,7 @@
     goto/16 :goto_5
 
     :cond_17
-    invoke-virtual {v0, v8, v9}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->i1(J)V
+    invoke-virtual {v0, v8, v9}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->h1(J)V
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -15172,7 +15063,7 @@
     goto :goto_6
 
     :goto_7
-    invoke-virtual {v0, v8, v9}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->r1(J)V
+    invoke-virtual {v0, v8, v9}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q1(J)V
     :try_end_8
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_0
     .catchall {:try_start_8 .. :try_end_8} :catchall_3
@@ -15208,7 +15099,7 @@
 
     const/4 v3, 0x1
 
-    invoke-virtual {v0, v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->j1(Z)V
+    invoke-virtual {v0, v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->i1(Z)V
 
     const-string v0, "config QXDMGrabMechanism to true"
 
@@ -15223,7 +15114,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->j1(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->i1(Z)V
 
     const-string v0, "config QXDMGrabMechanism to false"
 
@@ -15254,7 +15145,7 @@
 
     const/4 v5, 0x1
 
-    invoke-virtual {v0, v5}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->X0(Z)V
+    invoke-virtual {v0, v5}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->W0(Z)V
 
     goto/16 :goto_9
 
@@ -15275,7 +15166,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->X0(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->W0(Z)V
 
     goto :goto_9
 
@@ -15406,7 +15297,7 @@
     return v11
 .end method
 
-.method public declared-synchronized X0(Z)V
+.method public declared-synchronized W0(Z)V
     .locals 3
 
     monitor-enter p0
@@ -15418,7 +15309,7 @@
 
     sget-object v2, Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;
 
-    invoke-virtual {p0, v0, v1, v2, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->J(ZLcom/android/server/power/OnePlusStandbyAnalyzer$TelephonyType;Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;Z)V
+    invoke-virtual {p0, v0, v1, v2, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->I(ZLcom/android/server/power/OnePlusStandbyAnalyzer$TelephonyType;Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;Z)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -15434,7 +15325,7 @@
     throw p1
 .end method
 
-.method public Y0(Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;Lcom/android/server/power/OnePlusStandbyAnalyzer$StatisticType;)V
+.method public X0(Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;Lcom/android/server/power/OnePlusStandbyAnalyzer$StatisticType;)V
     .locals 2
 
     iget-object v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->qeg:Lcom/android/server/power/OnePlusStandbyAnalyzer$vdb;
@@ -15448,7 +15339,7 @@
     return-void
 .end method
 
-.method public Z0(Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;Lcom/android/server/power/OnePlusStandbyAnalyzer$StatisticType;IFFJZ)V
+.method public Y0(Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;Lcom/android/server/power/OnePlusStandbyAnalyzer$StatisticType;IFFJZ)V
     .locals 12
 
     move-object v1, p0
@@ -15480,7 +15371,7 @@
     return-void
 .end method
 
-.method public a0(Lcom/android/internal/os/BatteryStatsImpl;JLcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;)Ljava/util/Map;
+.method public Z(Lcom/android/internal/os/BatteryStatsImpl;JLcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;)Ljava/util/Map;
     .locals 24
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -15604,7 +15495,7 @@
 
     move-wide/from16 v10, v20
 
-    invoke-virtual/range {v1 .. v11}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->k0(Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;IJJJJ)V
+    invoke-virtual/range {v1 .. v11}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->j0(Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;IJJJJ)V
 
     invoke-virtual/range {v22 .. v22}, Landroid/os/BatteryStats$Uid;->getWakelockStats()Landroid/util/ArrayMap;
 
@@ -15836,7 +15727,7 @@
     return-object v15
 .end method
 
-.method public a1(Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;Lcom/android/server/power/OnePlusStandbyAnalyzer$StatisticType;J)V
+.method public Z0(Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;Lcom/android/server/power/OnePlusStandbyAnalyzer$StatisticType;J)V
     .locals 2
 
     iget-object v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->qeg:Lcom/android/server/power/OnePlusStandbyAnalyzer$vdb;
@@ -15850,7 +15741,7 @@
     return-void
 .end method
 
-.method public d0(Ljava/io/PrintWriter;)V
+.method public c0(Ljava/io/PrintWriter;)V
     .locals 2
 
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
@@ -15904,12 +15795,12 @@
     return-void
 .end method
 
-.method public e1()V
+.method public d1()V
     .locals 1
 
     const-string v0, "triggering clean-up QXDM trash under vendor partition directly"
 
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -15924,7 +15815,7 @@
     return-void
 .end method
 
-.method public f1()V
+.method public e1()V
     .locals 3
 
     const-string v0, "OPSA"
@@ -15976,6 +15867,22 @@
 
     :goto_0
     return v1
+.end method
+
+.method public g0()J
+    .locals 2
+
+    iget-wide v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->oif:J
+
+    return-wide v0
+.end method
+
+.method public g1(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->b:Z
+
+    return-void
 .end method
 
 .method public h(Landroid/content/Intent;)V
@@ -16119,96 +16026,13 @@
     :cond_3
     const/4 p1, 0x0
 
-    invoke-virtual {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->L0(Z)V
+    invoke-virtual {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->K0(Z)V
 
     :cond_4
     return-void
 .end method
 
-.method public h0()J
-    .locals 2
-
-    iget-wide v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->oif:J
-
-    return-wide v0
-.end method
-
-.method public h1(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->b:Z
-
-    return-void
-.end method
-
-.method public i()V
-    .locals 3
-
-    invoke-direct {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->E0()Z
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_0
-
-    invoke-direct {p0, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->l1(Z)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "mQxdmReadyCheckCount ="
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v2, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->bvj:I
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
-
-    iget v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->bvj:I
-
-    const/4 v2, 0x3
-
-    if-ge v0, v2, :cond_1
-
-    add-int/2addr v0, v1
-
-    iput v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->bvj:I
-
-    const-string v0, "re-schedule 5 sec later to check again."
-
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->qeg:Lcom/android/server/power/OnePlusStandbyAnalyzer$vdb;
-
-    const/16 v0, 0x3f0
-
-    const-wide/16 v1, 0x1388
-
-    invoke-virtual {p0, v0, v1, v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer$vdb;->cno(IJ)V
-
-    goto :goto_0
-
-    :cond_1
-    const-string p0, "reach maximum checking, abort re-schedule"
-
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
-
-    :goto_0
-    return-void
-.end method
-
-.method public i1(J)V
+.method public h1(J)V
     .locals 2
 
     const-wide/16 v0, 0x0
@@ -16235,7 +16059,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iput-wide p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->ywr:J
 
@@ -16243,7 +16067,74 @@
     return-void
 .end method
 
-.method public j0()J
+.method public i()V
+    .locals 3
+
+    invoke-direct {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->D0()Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_0
+
+    invoke-direct {p0, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->k1(Z)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "mQxdmReadyCheckCount ="
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v2, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->bvj:I
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
+
+    iget v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->bvj:I
+
+    const/4 v2, 0x3
+
+    if-ge v0, v2, :cond_1
+
+    add-int/2addr v0, v1
+
+    iput v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->bvj:I
+
+    const-string v0, "re-schedule 5 sec later to check again."
+
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->qeg:Lcom/android/server/power/OnePlusStandbyAnalyzer$vdb;
+
+    const/16 v0, 0x3f0
+
+    const-wide/16 v1, 0x1388
+
+    invoke-virtual {p0, v0, v1, v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer$vdb;->cno(IJ)V
+
+    goto :goto_0
+
+    :cond_1
+    const-string p0, "reach maximum checking, abort re-schedule"
+
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
+
+    :goto_0
+    return-void
+.end method
+
+.method public i0()J
     .locals 2
 
     iget-wide v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->qbh:J
@@ -16251,7 +16142,7 @@
     return-wide v0
 .end method
 
-.method public j1(Z)V
+.method public i1(Z)V
     .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -16268,14 +16159,14 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iput-boolean p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->bio:Z
 
     return-void
 .end method
 
-.method public k0(Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;IJJJJ)V
+.method public j0(Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;IJJJJ)V
     .locals 14
 
     move-object v0, p0
@@ -16379,7 +16270,7 @@
     return-void
 .end method
 
-.method public k1(J)V
+.method public j1(J)V
     .locals 2
 
     const-wide/16 v0, 0x0
@@ -16406,7 +16297,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iput-wide p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->dma:J
 
@@ -16414,7 +16305,7 @@
     return-void
 .end method
 
-.method public l0()J
+.method public k0()J
     .locals 2
 
     iget-wide v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->ywr:J
@@ -16422,7 +16313,7 @@
     return-wide v0
 .end method
 
-.method public m0()Z
+.method public l0()Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->bio:Z
@@ -16430,37 +16321,7 @@
     return p0
 .end method
 
-.method public n(Ljava/util/Map;)Ljava/util/List;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/Map<",
-            "Ljava/lang/Integer;",
-            "Lcom/android/server/power/OnePlusStandbyAnalyzer$zgw;",
-            ">;)",
-            "Ljava/util/List<",
-            "Lcom/android/server/power/OnePlusStandbyAnalyzer$zgw;",
-            ">;"
-        }
-    .end annotation
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-interface {p1}, Ljava/util/Map;->values()Ljava/util/Collection;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    iget-object p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->A0:Ljava/util/Comparator;
-
-    invoke-static {v0, p0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
-
-    return-object v0
-.end method
-
-.method public n0()J
+.method public m0()J
     .locals 2
 
     iget-wide v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->dma:J
@@ -16468,7 +16329,7 @@
     return-wide v0
 .end method
 
-.method public declared-synchronized n1(Z)V
+.method public declared-synchronized m1(Z)V
     .locals 3
 
     monitor-enter p0
@@ -16508,7 +16369,37 @@
     throw p1
 .end method
 
-.method public declared-synchronized o0()Z
+.method public n(Ljava/util/Map;)Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map<",
+            "Ljava/lang/Integer;",
+            "Lcom/android/server/power/OnePlusStandbyAnalyzer$zgw;",
+            ">;)",
+            "Ljava/util/List<",
+            "Lcom/android/server/power/OnePlusStandbyAnalyzer$zgw;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-interface {p1}, Ljava/util/Map;->values()Ljava/util/Collection;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    iget-object p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->A0:Ljava/util/Comparator;
+
+    invoke-static {v0, p0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
+
+    return-object v0
+.end method
+
+.method public declared-synchronized n0()Z
     .locals 1
 
     monitor-enter p0
@@ -16530,7 +16421,7 @@
     throw v0
 .end method
 
-.method public o1(Z)V
+.method public n1(Z)V
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->ivd:Z
@@ -16538,7 +16429,7 @@
     return-void
 .end method
 
-.method public p0(Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;Ljava/lang/String;)V
+.method public o0(Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;Ljava/lang/String;)V
     .locals 12
 
     sget-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
@@ -16615,7 +16506,7 @@
 
     const-string v0, "RPM Matched...."
 
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
@@ -16863,7 +16754,7 @@
     :cond_9
     const-string p2, "RPM Can\'t matched...."
 
-    invoke-static {p2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     :goto_7
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -16880,7 +16771,7 @@
 
     const-string p0, "**** Exceed read timeout, force exit ***"
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
     :try_end_2
     .catch Ljava/io/FileNotFoundException; {:try_start_2 .. :try_end_2} :catch_3
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
@@ -16954,7 +16845,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
@@ -16986,7 +16877,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
@@ -17018,7 +16909,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
@@ -17053,7 +16944,7 @@
     throw p0
 .end method
 
-.method public q0(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
+.method public p0(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -17134,7 +17025,7 @@
 
     const-string v1, "Matched...."
 
-    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     const/4 v1, 0x1
 
@@ -17161,7 +17052,7 @@
     :cond_2
     const-string p2, "Can\'t matched...."
 
-    invoke-static {p2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     :goto_2
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -17178,7 +17069,7 @@
 
     const-string p0, "**** Exceed read timeout, force exit ***"
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_2
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
@@ -17244,7 +17135,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
@@ -17276,7 +17167,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
@@ -17311,7 +17202,7 @@
     throw p0
 .end method
 
-.method public q1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
+.method public p1(Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;F)V
     .locals 0
 
     sget-object p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->sis:[I
@@ -17343,7 +17234,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     int-to-long p0, p1
 
@@ -17366,7 +17257,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     sput p2, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N1:F
 
@@ -17389,7 +17280,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     int-to-long p0, p1
 
@@ -17412,7 +17303,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     sput p2, Lcom/android/server/power/OnePlusStandbyAnalyzer;->F1:F
 
@@ -17433,7 +17324,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     sput p2, Lcom/android/server/power/OnePlusStandbyAnalyzer;->L1:F
 
@@ -17454,7 +17345,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     sput p2, Lcom/android/server/power/OnePlusStandbyAnalyzer;->E1:F
 
@@ -17475,7 +17366,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     sput p2, Lcom/android/server/power/OnePlusStandbyAnalyzer;->K1:F
 
@@ -17496,7 +17387,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     sput p2, Lcom/android/server/power/OnePlusStandbyAnalyzer;->D1:F
 
@@ -17517,7 +17408,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     sput p2, Lcom/android/server/power/OnePlusStandbyAnalyzer;->J1:F
 
@@ -17538,7 +17429,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     sput p2, Lcom/android/server/power/OnePlusStandbyAnalyzer;->C1:F
 
@@ -17561,7 +17452,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     sput p1, Lcom/android/server/power/OnePlusStandbyAnalyzer;->I1:I
 
@@ -17584,7 +17475,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     sput p1, Lcom/android/server/power/OnePlusStandbyAnalyzer;->B1:I
 
@@ -17605,7 +17496,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     sput p2, Lcom/android/server/power/OnePlusStandbyAnalyzer;->H1:F
 
@@ -17626,7 +17517,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     sput p2, Lcom/android/server/power/OnePlusStandbyAnalyzer;->A1:F
 
@@ -17647,7 +17538,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     sput p2, Lcom/android/server/power/OnePlusStandbyAnalyzer;->G1:F
 
@@ -17668,7 +17559,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     sput p2, Lcom/android/server/power/OnePlusStandbyAnalyzer;->z1:F
 
@@ -17698,7 +17589,7 @@
     .end packed-switch
 .end method
 
-.method public r0(Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;Ljava/lang/String;)V
+.method public q0(Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;Ljava/lang/String;)V
     .locals 21
 
     move-object/from16 v0, p0
@@ -17811,7 +17702,7 @@
 
     move-result-object v11
 
-    invoke-static {v11}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v11}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iget-boolean v11, v0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->W:Z
 
@@ -18014,7 +17905,7 @@
 
     move-result-object v8
 
-    invoke-static {v8}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v8}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     :cond_8
     :goto_4
@@ -18037,7 +17928,7 @@
 
     const-string v0, "**** Exceed read timeout, force exit ***"
 
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_3
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
@@ -18117,7 +18008,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
@@ -18149,7 +18040,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
@@ -18181,7 +18072,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
@@ -18218,7 +18109,7 @@
     throw v1
 .end method
 
-.method public r1(J)V
+.method public q1(J)V
     .locals 2
 
     const-wide/16 v0, 0x0
@@ -18245,7 +18136,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     iput-wide p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->qbh:J
 
@@ -18254,7 +18145,7 @@
     :cond_0
     const-string p1, "Opps, Update mMiddleCheckPeriod to negative value, disable middle_check mechanism"
 
-    invoke-static {p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     const-wide/16 p1, -0x1
 
@@ -18270,7 +18161,7 @@
     return-void
 .end method
 
-.method public t0()J
+.method public s0()J
     .locals 2
 
     iget-wide v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->v:J
@@ -18278,7 +18169,7 @@
     return-wide v0
 .end method
 
-.method public u0(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
+.method public t0(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -18374,7 +18265,7 @@
 
     const-string v2, "Matched...."
 
-    invoke-static {v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     const/4 v2, 0x1
 
@@ -18669,7 +18560,7 @@
     :cond_1
     const-string p2, "Can\'t matched...."
 
-    invoke-static {p2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     :goto_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -18686,7 +18577,7 @@
 
     const-string p0, "**** Exceed read timeout, force exit ***"
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_2
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
@@ -18752,7 +18643,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
@@ -18784,7 +18675,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
@@ -18819,7 +18710,7 @@
     throw p0
 .end method
 
-.method public v0()Z
+.method public u0()Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->you:Z
@@ -18827,7 +18718,7 @@
     return p0
 .end method
 
-.method public w0()Z
+.method public v0()Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->cno:Z
@@ -18835,7 +18726,7 @@
     return p0
 .end method
 
-.method public x0(IJ)Z
+.method public w0(IJ)Z
     .locals 4
 
     if-lez p1, :cond_3
@@ -19018,7 +18909,7 @@
     return p2
 .end method
 
-.method public z(Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;)V
+.method public y(Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;)V
     .locals 3
 
     sget-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->tsu:[I
@@ -19048,7 +18939,7 @@
 
     if-eqz p1, :cond_1
 
-    invoke-direct {p0, v0, p1, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q(Ljava/lang/String;Ljava/util/List;Z)V
+    invoke-direct {p0, v0, p1, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->p(Ljava/lang/String;Ljava/util/List;Z)V
 
     :cond_1
     iget-object p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->p:Ljava/util/Map;
@@ -19057,14 +18948,14 @@
 
     const-string v2, "End-WL"
 
-    invoke-direct {p0, v2, p1, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->B(Ljava/lang/String;Ljava/util/Map;Z)V
+    invoke-direct {p0, v2, p1, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->A(Ljava/lang/String;Ljava/util/Map;Z)V
 
     :cond_2
     iget-object p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->Q:Ljava/util/Map;
 
     if-eqz p1, :cond_3
 
-    invoke-virtual {p0, v0, p1, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->D(Ljava/lang/String;Ljava/util/Map;Z)V
+    invoke-virtual {p0, v0, p1, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->C(Ljava/lang/String;Ljava/util/Map;Z)V
 
     :cond_3
     iget-object p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->G:Ljava/util/List;
@@ -19073,7 +18964,7 @@
 
     const-string v0, "End-Signal"
 
-    invoke-direct {p0, v0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->y(Ljava/lang/String;Ljava/util/List;)V
+    invoke-direct {p0, v0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->x(Ljava/lang/String;Ljava/util/List;)V
 
     :cond_4
     iget-object p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M:Ljava/util/Map;
@@ -19091,7 +18982,7 @@
 
     if-eqz p1, :cond_6
 
-    invoke-direct {p0, v0, p1, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->q(Ljava/lang/String;Ljava/util/List;Z)V
+    invoke-direct {p0, v0, p1, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->p(Ljava/lang/String;Ljava/util/List;Z)V
 
     :cond_6
     iget-object p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->o:Ljava/util/Map;
@@ -19100,14 +18991,14 @@
 
     const-string v2, "Start-WL"
 
-    invoke-direct {p0, v2, p1, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->B(Ljava/lang/String;Ljava/util/Map;Z)V
+    invoke-direct {p0, v2, p1, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->A(Ljava/lang/String;Ljava/util/Map;Z)V
 
     :cond_7
     iget-object p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->O:Ljava/util/Map;
 
     if-eqz p1, :cond_8
 
-    invoke-virtual {p0, v0, p1, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->D(Ljava/lang/String;Ljava/util/Map;Z)V
+    invoke-virtual {p0, v0, p1, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->C(Ljava/lang/String;Ljava/util/Map;Z)V
 
     :cond_8
     iget-object p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->F:Ljava/util/List;
@@ -19116,7 +19007,7 @@
 
     const-string v0, "Start-Signal"
 
-    invoke-direct {p0, v0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->y(Ljava/lang/String;Ljava/util/List;)V
+    invoke-direct {p0, v0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->x(Ljava/lang/String;Ljava/util/List;)V
 
     :cond_9
     iget-object p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->L:Ljava/util/Map;
@@ -19126,17 +19017,95 @@
     const-string v0, "Start-WiFi"
 
     :goto_0
-    invoke-direct {p0, v0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->G(Ljava/lang/String;Ljava/util/Map;)V
+    invoke-direct {p0, v0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->F(Ljava/lang/String;Ljava/util/Map;)V
 
     :cond_a
     :goto_1
     return-void
 .end method
 
-.method public z0()Z
+.method public y0()Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->ssp:Z
 
     return p0
+.end method
+
+.method public z(Ljava/io/PrintWriter;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->P(Ljava/io/PrintWriter;)V
+
+    invoke-direct {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->Q(Ljava/io/PrintWriter;)V
+
+    invoke-direct {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->a0(Ljava/io/PrintWriter;)V
+
+    invoke-direct {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->R(Ljava/io/PrintWriter;)V
+
+    invoke-direct {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->b0(Ljava/io/PrintWriter;)V
+
+    invoke-virtual {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->c0(Ljava/io/PrintWriter;)V
+
+    invoke-direct {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->d0(Ljava/io/PrintWriter;)V
+
+    invoke-direct {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->T(Ljava/io/PrintWriter;)V
+
+    invoke-direct {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->L(Ljava/io/PrintWriter;)V
+
+    invoke-direct {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->W(Ljava/io/PrintWriter;)V
+
+    invoke-direct {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->Y(Ljava/io/PrintWriter;)V
+
+    return-void
+.end method
+
+.method public declared-synchronized z0(Z)V
+    .locals 3
+
+    monitor-enter p0
+
+    :try_start_0
+    const-string v0, "OPSA"
+
+    const-string v1, "======BE_IMFORMED_SCREEN_ON======"
+
+    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->ssp:Z
+
+    iget-object v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer;->qeg:Lcom/android/server/power/OnePlusStandbyAnalyzer$vdb;
+
+    const/16 v2, 0x3f2
+
+    invoke-virtual {v1, v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer$vdb;->ssp(I)V
+
+    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$TelephonyType;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$TelephonyType;
+
+    if-eqz p1, :cond_0
+
+    sget-object p1, Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;->tsu:Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p1, Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;->rtg:Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;
+
+    :goto_0
+    invoke-virtual {p0, v0, v1, p1, v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->I(ZLcom/android/server/power/OnePlusStandbyAnalyzer$TelephonyType;Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;Z)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit p0
+
+    throw p1
 .end method

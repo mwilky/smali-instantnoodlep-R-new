@@ -4,6 +4,7 @@
 
 # interfaces
 .implements Lcom/android/server/wm/IOnePlusPerfManager;
+.implements Lcom/android/server/OnePlusUtil$zta$you;
 
 
 # annotations
@@ -592,6 +593,12 @@
     invoke-direct {p0}, Lcom/android/server/wm/OnePlusPerfManager;->initUsbConnectorProtector()V
 
     invoke-direct {p0}, Lcom/android/server/wm/OnePlusPerfManager;->readXml()I
+
+    invoke-static {}, Lcom/android/server/OnePlusUtil$zta;->rtg()Lcom/android/server/OnePlusUtil$zta;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Lcom/android/server/OnePlusUtil$zta;->bio(Lcom/android/server/OnePlusUtil$zta$you;)V
 
     return-void
 .end method
@@ -5286,6 +5293,57 @@
     return-void
 .end method
 
+.method private synthetic sis(Lcom/android/server/wm/WindowState;)V
+    .locals 3
+
+    invoke-virtual {p0, p1}, Lcom/android/server/wm/OnePlusPerfManager;->getWindowProcessController(Lcom/android/server/wm/WindowState;)Lcom/android/server/wm/WindowProcessController;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "add to boost list:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p1, " in pid "
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lcom/android/server/wm/OnePlusPerfManager;->myLog(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lcom/android/server/wm/OnePlusPerfManager;->mUxBoostList:Ljava/util/ArrayList;
+
+    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v0}, Lcom/android/server/wm/WindowProcessController;->getPid()I
+
+    move-result p0
+
+    invoke-virtual {v0}, Lcom/android/server/wm/WindowProcessController;->getPid()I
+
+    move-result p1
+
+    const-string v0, "1"
+
+    invoke-static {p0, p1, v0}, Lcom/oneplus/uifirst/UIFirstUtils;->setUxThread(IILjava/lang/String;)V
+
+    :cond_0
+    return-void
+.end method
+
 .method private startSpeedSchedtune(Ljava/lang/String;)V
     .locals 5
 
@@ -5509,54 +5567,13 @@
     throw p0
 .end method
 
-.method private synthetic zta(Lcom/android/server/wm/WindowState;)V
-    .locals 3
+.method private synthetic zta(Ljava/lang/String;)V
+    .locals 1
 
-    invoke-virtual {p0, p1}, Lcom/android/server/wm/OnePlusPerfManager;->getWindowProcessController(Lcom/android/server/wm/WindowState;)Lcom/android/server/wm/WindowProcessController;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    invoke-direct {p0, p1, v0}, Lcom/android/server/wm/OnePlusPerfManager;->runAppMayWithPerf(Ljava/lang/String;I)Z
 
-    if-eqz v0, :cond_0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "add to boost list:"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p1, " in pid "
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lcom/android/server/wm/OnePlusPerfManager;->myLog(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lcom/android/server/wm/OnePlusPerfManager;->mUxBoostList:Ljava/util/ArrayList;
-
-    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    invoke-virtual {v0}, Lcom/android/server/wm/WindowProcessController;->getPid()I
-
-    move-result p0
-
-    invoke-virtual {v0}, Lcom/android/server/wm/WindowProcessController;->getPid()I
-
-    move-result p1
-
-    const-string v0, "1"
-
-    invoke-static {p0, p1, v0}, Lcom/oneplus/uifirst/UIFirstUtils;->setUxThread(IILjava/lang/String;)V
-
-    :cond_0
     return-void
 .end method
 
@@ -5811,6 +5828,20 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     throw p0
+.end method
+
+.method public frontPackageChanged(Ljava/lang/String;IILjava/lang/String;II)V
+    .locals 0
+
+    iget-object p2, p0, Lcom/android/server/wm/OnePlusPerfManager;->mPerfHandler:Lcom/android/server/wm/OnePlusPerfManager$tsu;
+
+    new-instance p3, Lcom/android/server/wm/tsu;
+
+    invoke-direct {p3, p0, p1}, Lcom/android/server/wm/tsu;-><init>(Lcom/android/server/wm/OnePlusPerfManager;Ljava/lang/String;)V
+
+    invoke-virtual {p2, p3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
 .end method
 
 .method public getPccoreState()Z
@@ -6149,18 +6180,6 @@
     throw p0
 .end method
 
-.method public runAppMayWithPerf(Ljava/lang/String;)Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lcom/android/server/wm/OnePlusPerfManager;->runAppMayWithPerf(Ljava/lang/String;I)Z
-
-    move-result p0
-
-    return p0
-.end method
-
 .method public screenFrozenBoost(Z)V
     .locals 5
 
@@ -6181,9 +6200,9 @@
 
     iget-object p1, p1, Lcom/android/server/wm/WindowManagerService;->mRoot:Lcom/android/server/wm/RootWindowContainer;
 
-    new-instance v1, Lcom/android/server/wm/tsu;
+    new-instance v1, Lcom/android/server/wm/rtg;
 
-    invoke-direct {v1, p0}, Lcom/android/server/wm/tsu;-><init>(Lcom/android/server/wm/OnePlusPerfManager;)V
+    invoke-direct {v1, p0}, Lcom/android/server/wm/rtg;-><init>(Lcom/android/server/wm/OnePlusPerfManager;)V
 
     const/4 p0, 0x1
 
@@ -6565,6 +6584,14 @@
     return-void
 .end method
 
+.method public synthetic tsu(Lcom/android/server/wm/WindowState;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/server/wm/OnePlusPerfManager;->sis(Lcom/android/server/wm/WindowState;)V
+
+    return-void
+.end method
+
 .method public updateCurrentLauncherPid(I)V
     .locals 1
 
@@ -6593,10 +6620,10 @@
     return-void
 .end method
 
-.method public synthetic you(Lcom/android/server/wm/WindowState;)V
+.method public synthetic you(Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/server/wm/OnePlusPerfManager;->zta(Lcom/android/server/wm/WindowState;)V
+    invoke-direct {p0, p1}, Lcom/android/server/wm/OnePlusPerfManager;->zta(Ljava/lang/String;)V
 
     return-void
 .end method

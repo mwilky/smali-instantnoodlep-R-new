@@ -16,7 +16,7 @@
 
 
 # static fields
-.field public static final ssp:Ljava/lang/String; = "vendor.pixelworks.hardware.display@1.1::IIrisCallback"
+.field public static final cno:Ljava/lang/String; = "vendor.pixelworks.hardware.display@1.1::IIrisCallback"
 
 
 # direct methods
@@ -207,14 +207,6 @@
     .end annotation
 .end method
 
-.method public abstract bud(J)V
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-.end method
-
 .method public abstract cno()Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -234,6 +226,14 @@
         }
     .end annotation
 
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract les(J)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -282,14 +282,6 @@
     .end annotation
 .end method
 
-.method public abstract t(JI)I
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-.end method
-
 .method public abstract tsu()Lzta/zta/zta/zta/zta;
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -299,6 +291,14 @@
 .end method
 
 .method public abstract unlinkToDeath(Landroid/os/IHwBinder$DeathRecipient;)Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract w(JI)I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

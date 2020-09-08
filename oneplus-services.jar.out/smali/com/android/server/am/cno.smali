@@ -28,7 +28,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/cno;->zta:Lcom/android/server/am/StartAppSpecialUidsPolicy;
 
-    invoke-virtual {p0}, Lcom/android/server/am/StartAppSpecialUidsPolicy;->ywr()V
+    invoke-virtual {p0}, Lcom/android/server/am/StartAppSpecialUidsPolicy;->bvj()V
 
     return-void
 .end method

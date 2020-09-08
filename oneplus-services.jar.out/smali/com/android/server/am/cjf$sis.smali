@@ -34,7 +34,7 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
-    sget-boolean v0, Lcom/android/server/am/cjf;->obl:Z
+    sget-boolean v0, Lcom/android/server/am/cjf;->cjf:Z
 
     if-eqz v0, :cond_0
 
@@ -68,26 +68,41 @@
     :pswitch_0
     iget-object p0, p0, Lcom/android/server/am/cjf$sis;->zta:Lcom/android/server/am/cjf;
 
-    invoke-static {p0}, Lcom/android/server/am/cjf;->ibl(Lcom/android/server/am/cjf;)Z
+    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
 
-    invoke-static {p0, p1}, Lcom/android/server/am/cjf;->vdb(Lcom/android/server/am/cjf;Z)Z
+    invoke-static {p0, p1}, Lcom/android/server/am/cjf;->obl(Lcom/android/server/am/cjf;Z)Z
 
     goto/16 :goto_1
 
     :pswitch_1
     iget-object p0, p0, Lcom/android/server/am/cjf$sis;->zta:Lcom/android/server/am/cjf;
 
-    invoke-static {p0}, Lcom/android/server/am/cjf;->qbh(Lcom/android/server/am/cjf;)Z
+    invoke-static {p0}, Lcom/android/server/am/cjf;->gwm(Lcom/android/server/am/cjf;)Z
 
     move-result p1
 
-    invoke-static {p0, p1}, Lcom/android/server/am/cjf;->bvj(Lcom/android/server/am/cjf;Z)Z
+    invoke-static {p0, p1}, Lcom/android/server/am/cjf;->zgw(Lcom/android/server/am/cjf;Z)Z
+
+    goto/16 :goto_1
+
+    :pswitch_2
+    iget-object p0, p0, Lcom/android/server/am/cjf$sis;->zta:Lcom/android/server/am/cjf;
+
+    invoke-static {p0}, Lcom/android/server/am/cjf;->oif(Lcom/android/server/am/cjf;)Z
+
+    move-result p1
+
+    invoke-static {p0, p1}, Lcom/android/server/am/cjf;->ibl(Lcom/android/server/am/cjf;Z)Z
 
     goto :goto_1
 
-    :pswitch_2
+    :pswitch_3
     iget-object v0, p0, Lcom/android/server/am/cjf$sis;->zta:Lcom/android/server/am/cjf;
 
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -98,11 +113,11 @@
 
     move-result p1
 
-    invoke-static {v0, p1}, Lcom/android/server/am/cjf;->gwm(Lcom/android/server/am/cjf;Z)Z
+    invoke-static {v0, p1}, Lcom/android/server/am/cjf;->ugm(Lcom/android/server/am/cjf;Z)Z
 
     iget-object p1, p0, Lcom/android/server/am/cjf$sis;->zta:Lcom/android/server/am/cjf;
 
-    invoke-static {p1}, Lcom/android/server/am/cjf;->ugm(Lcom/android/server/am/cjf;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/android/server/am/cjf;->vdb(Lcom/android/server/am/cjf;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -116,7 +131,7 @@
 
     iget-object p1, p0, Lcom/android/server/am/cjf$sis;->zta:Lcom/android/server/am/cjf;
 
-    invoke-static {p1}, Lcom/android/server/am/cjf;->ugm(Lcom/android/server/am/cjf;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/android/server/am/cjf;->vdb(Lcom/android/server/am/cjf;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -133,7 +148,7 @@
 
     goto :goto_0
 
-    :pswitch_3
+    :pswitch_4
     iget-object v0, p0, Lcom/android/server/am/cjf$sis;->zta:Lcom/android/server/am/cjf;
 
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -144,7 +159,7 @@
 
     move-result p1
 
-    invoke-static {v0, p1}, Lcom/android/server/am/cjf;->oif(Lcom/android/server/am/cjf;Z)Z
+    invoke-static {v0, p1}, Lcom/android/server/am/cjf;->bvj(Lcom/android/server/am/cjf;Z)Z
 
     const/4 p1, 0x6
 
@@ -155,12 +170,12 @@
 
     goto :goto_1
 
-    :pswitch_4
+    :pswitch_5
     new-instance p1, Lcom/oneplus/config/ConfigGrabber;
 
     iget-object v0, p0, Lcom/android/server/am/cjf$sis;->zta:Lcom/android/server/am/cjf;
 
-    invoke-static {v0}, Lcom/android/server/am/cjf;->dma(Lcom/android/server/am/cjf;)Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/server/am/cjf;->ywr(Lcom/android/server/am/cjf;)Landroid/content/Context;
 
     move-result-object v0
 
@@ -174,11 +189,11 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Lcom/android/server/am/cjf;->ywr(Lcom/android/server/am/cjf;Lorg/json/JSONArray;)V
+    invoke-static {p0, p1}, Lcom/android/server/am/cjf;->qbh(Lcom/android/server/am/cjf;Lorg/json/JSONArray;)V
 
     goto :goto_1
 
-    :pswitch_5
+    :pswitch_6
     iget-object p0, p0, Lcom/android/server/am/cjf$sis;->zta:Lcom/android/server/am/cjf;
 
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -193,7 +208,7 @@
 
     goto :goto_1
 
-    :pswitch_6
+    :pswitch_7
     iget-object p0, p0, Lcom/android/server/am/cjf$sis;->zta:Lcom/android/server/am/cjf;
 
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -206,10 +221,9 @@
     :goto_1
     return-void
 
-    nop
-
     :pswitch_data_0
     .packed-switch 0x1
+        :pswitch_7
         :pswitch_6
         :pswitch_5
         :pswitch_4

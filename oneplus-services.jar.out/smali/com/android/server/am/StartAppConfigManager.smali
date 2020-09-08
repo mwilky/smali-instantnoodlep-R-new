@@ -350,7 +350,7 @@
     const-string p0, "addNewConfig: all null. ignore."
 
     :goto_0
-    invoke-static {p0}, Lcom/android/server/am/hmo;->les(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/am/hmo;->h(Ljava/lang/String;)V
 
     return p3
 
@@ -854,7 +854,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/server/am/hmo;->les(Ljava/lang/String;)V
+    invoke-static {v2}, Lcom/android/server/am/hmo;->h(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -892,7 +892,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/server/am/hmo;->les(Ljava/lang/String;)V
+    invoke-static {v2}, Lcom/android/server/am/hmo;->h(Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -930,7 +930,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/server/am/hmo;->les(Ljava/lang/String;)V
+    invoke-static {v2}, Lcom/android/server/am/hmo;->h(Ljava/lang/String;)V
 
     goto :goto_2
 
@@ -968,7 +968,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/server/am/hmo;->les(Ljava/lang/String;)V
+    invoke-static {v2}, Lcom/android/server/am/hmo;->h(Ljava/lang/String;)V
 
     goto :goto_3
 
@@ -1006,7 +1006,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/server/am/hmo;->les(Ljava/lang/String;)V
+    invoke-static {v2}, Lcom/android/server/am/hmo;->h(Ljava/lang/String;)V
 
     goto :goto_4
 
@@ -1044,7 +1044,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/server/am/hmo;->les(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/android/server/am/hmo;->h(Ljava/lang/String;)V
 
     goto :goto_5
 

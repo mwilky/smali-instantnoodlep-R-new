@@ -45,7 +45,7 @@
     const-string p0, "# mDebugReceiver # onReceive # sInstance is null, return"
 
     :goto_0
-    invoke-static {v0, p0}, Lcom/android/server/kth$zta;->sis(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, p0}, Lcom/android/server/bio$zta;->sis(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
@@ -75,7 +75,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string v1, ""
 
@@ -108,7 +108,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, p1}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string p1, "dump"
 
@@ -195,7 +195,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/android/server/kth$zta;->sis(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, p1}, Lcom/android/server/bio$zta;->sis(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 

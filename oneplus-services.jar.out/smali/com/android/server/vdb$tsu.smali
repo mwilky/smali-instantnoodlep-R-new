@@ -1,5 +1,5 @@
 .class Lcom/android/server/vdb$tsu;
-.super Landroid/os/Handler;
+.super Ljava/lang/Object;
 .source ""
 
 
@@ -15,182 +15,228 @@
 
 
 # instance fields
-.field final synthetic zta:Lcom/android/server/vdb;
+.field private rtg:J
+
+.field private sis:I
+
+.field final synthetic ssp:Lcom/android/server/vdb;
+
+.field private tsu:Z
+
+.field private you:I
+
+.field private zta:I
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/server/vdb;Landroid/os/Looper;)V
+.method constructor <init>(Lcom/android/server/vdb;II)V
     .locals 0
 
-    iput-object p1, p0, Lcom/android/server/vdb$tsu;->zta:Lcom/android/server/vdb;
+    iput-object p1, p0, Lcom/android/server/vdb$tsu;->ssp:Lcom/android/server/vdb;
 
-    invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p2, p0, Lcom/android/server/vdb$tsu;->zta:I
+
+    iput p3, p0, Lcom/android/server/vdb$tsu;->you:I
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lcom/android/server/vdb$tsu;->rtg:J
+
+    return-void
+.end method
+
+.method constructor <init>(Lcom/android/server/vdb;IIZI)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/server/vdb$tsu;->ssp:Lcom/android/server/vdb;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p2, p0, Lcom/android/server/vdb$tsu;->zta:I
+
+    iput p3, p0, Lcom/android/server/vdb$tsu;->you:I
+
+    iput p5, p0, Lcom/android/server/vdb$tsu;->sis:I
+
+    iput-boolean p4, p0, Lcom/android/server/vdb$tsu;->tsu:Z
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lcom/android/server/vdb$tsu;->rtg:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public handleMessage(Landroid/os/Message;)V
+.method rtg()I
+    .locals 0
+
+    iget p0, p0, Lcom/android/server/vdb$tsu;->you:I
+
+    return p0
+.end method
+
+.method sis()I
+    .locals 0
+
+    iget p0, p0, Lcom/android/server/vdb$tsu;->sis:I
+
+    return p0
+.end method
+
+.method ssp()J
+    .locals 2
+
+    iget-wide v0, p0, Lcom/android/server/vdb$tsu;->rtg:J
+
+    return-wide v0
+.end method
+
+.method public toString()Ljava/lang/String;
     .locals 3
 
-    iget p1, p1, Landroid/os/Message;->what:I
+    new-instance v0, Ljava/util/Date;
 
-    const/4 v0, 0x1
+    iget-wide v1, p0, Lcom/android/server/vdb$tsu;->rtg:J
 
-    if-eq p1, v0, :cond_4
+    invoke-direct {v0, v1, v2}, Ljava/util/Date;-><init>(J)V
 
-    const/4 v0, 0x2
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x4
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    if-eq p1, v0, :cond_2
+    const-string v2, "BatteryRecord {time="
 
-    const/4 v0, 0x3
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eq p1, v0, :cond_1
+    sget-object v2, Lcom/android/server/vdb;->J:Ljava/text/SimpleDateFormat;
 
-    if-eq p1, v1, :cond_0
-
-    goto/16 :goto_1
-
-    :cond_0
-    iget-object p1, p0, Lcom/android/server/vdb$tsu;->zta:Lcom/android/server/vdb;
-
-    invoke-static {p1}, Lcom/android/server/vdb;->ywr(Lcom/android/server/vdb;)Landroid/os/PowerManager$WakeLock;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_5
-
-    iget-object p1, p0, Lcom/android/server/vdb$tsu;->zta:Lcom/android/server/vdb;
-
-    invoke-static {p1}, Lcom/android/server/vdb;->ywr(Lcom/android/server/vdb;)Landroid/os/PowerManager$WakeLock;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_5
-
-    iget-object p1, p0, Lcom/android/server/vdb$tsu;->zta:Lcom/android/server/vdb;
-
-    invoke-static {p1}, Lcom/android/server/vdb;->ywr(Lcom/android/server/vdb;)Landroid/os/PowerManager$WakeLock;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/os/PowerManager$WakeLock;->release()V
-
-    iget-object p0, p0, Lcom/android/server/vdb$tsu;->zta:Lcom/android/server/vdb;
-
-    const-string p1, "cpu wakelock released"
-
-    goto :goto_0
-
-    :cond_1
-    iget-object p1, p0, Lcom/android/server/vdb$tsu;->zta:Lcom/android/server/vdb;
-
-    invoke-static {p1}, Lcom/android/server/vdb;->ywr(Lcom/android/server/vdb;)Landroid/os/PowerManager$WakeLock;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_5
-
-    iget-object p1, p0, Lcom/android/server/vdb$tsu;->zta:Lcom/android/server/vdb;
-
-    invoke-static {p1}, Lcom/android/server/vdb;->ywr(Lcom/android/server/vdb;)Landroid/os/PowerManager$WakeLock;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/os/PowerManager$WakeLock;->acquire()V
-
-    iget-object p0, p0, Lcom/android/server/vdb$tsu;->zta:Lcom/android/server/vdb;
-
-    const-string p1, "cpu wakelock acquired"
-
-    :goto_0
-    invoke-static {p0, p1}, Lcom/android/server/vdb;->you(Lcom/android/server/vdb;Ljava/lang/String;)V
-
-    goto :goto_1
-
-    :cond_2
-    iget-object p1, p0, Lcom/android/server/vdb$tsu;->zta:Lcom/android/server/vdb;
-
-    const-string v0, "detect timeout"
-
-    invoke-static {p1, v0}, Lcom/android/server/vdb;->you(Lcom/android/server/vdb;Ljava/lang/String;)V
-
-    iget-object p1, p0, Lcom/android/server/vdb$tsu;->zta:Lcom/android/server/vdb;
-
-    monitor-enter p1
-
-    :try_start_0
-    iget-object v0, p0, Lcom/android/server/vdb$tsu;->zta:Lcom/android/server/vdb;
-
-    invoke-static {v0}, Lcom/android/server/vdb;->kth(Lcom/android/server/vdb;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lcom/android/server/vdb$tsu;->zta:Lcom/android/server/vdb;
-
-    invoke-static {v0}, Lcom/android/server/vdb;->bio(Lcom/android/server/vdb;)V
-
-    iget-object v0, p0, Lcom/android/server/vdb$tsu;->zta:Lcom/android/server/vdb;
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, v2}, Lcom/android/server/vdb;->igw(Lcom/android/server/vdb;Z)Z
-
-    iget-object v0, p0, Lcom/android/server/vdb$tsu;->zta:Lcom/android/server/vdb;
-
-    invoke-static {v0, v2}, Lcom/android/server/vdb;->wtn(Lcom/android/server/vdb;Z)Z
-
-    iget-object v0, p0, Lcom/android/server/vdb$tsu;->zta:Lcom/android/server/vdb;
-
-    invoke-static {v0}, Lcom/android/server/vdb;->gck(Lcom/android/server/vdb;)V
-
-    iget-object v0, p0, Lcom/android/server/vdb$tsu;->zta:Lcom/android/server/vdb;
-
-    invoke-static {v0}, Lcom/android/server/vdb;->dma(Lcom/android/server/vdb;)Lcom/android/server/vdb$tsu;
+    invoke-virtual {v2, v0}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object p0, p0, Lcom/android/server/vdb$tsu;->zta:Lcom/android/server/vdb;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p0}, Lcom/android/server/vdb;->dma(Lcom/android/server/vdb;)Lcom/android/server/vdb$tsu;
+    const-string v0, ", level="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v0, p0, Lcom/android/server/vdb$tsu;->zta:I
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, ", temp="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v0, p0, Lcom/android/server/vdb$tsu;->you:I
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, " ,charging="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v0, p0, Lcom/android/server/vdb$tsu;->tsu:Z
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, ", plug="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v0, p0, Lcom/android/server/vdb$tsu;->sis:I
+
+    invoke-virtual {p0, v0}, Lcom/android/server/vdb$tsu;->zta(I)Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-virtual {p0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, "}"
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-virtual {v0, p0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+    return-object p0
+.end method
+
+.method tsu()Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/server/vdb$tsu;->tsu:Z
+
+    return p0
+.end method
+
+.method you(J)J
+    .locals 4
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v2
+
+    sub-long/2addr v0, v2
+
+    add-long/2addr v0, p1
+
+    return-wide v0
+.end method
+
+.method zta(I)Ljava/lang/String;
+    .locals 0
+
+    const/4 p0, 0x1
+
+    if-eq p1, p0, :cond_3
+
+    const/4 p0, 0x2
+
+    if-eq p1, p0, :cond_2
+
+    const/4 p0, 0x4
+
+    if-eq p1, p0, :cond_1
+
+    const/16 p0, 0x8
+
+    if-eq p1, p0, :cond_0
+
+    const-string p0, "UNKNOWN"
+
+    return-object p0
+
+    :cond_0
+    const-string p0, "FAST_CHARGE"
+
+    return-object p0
+
+    :cond_1
+    const-string p0, "WIRELESS"
+
+    return-object p0
+
+    :cond_2
+    const-string p0, "USB"
+
+    return-object p0
 
     :cond_3
-    monitor-exit p1
+    const-string p0, "AC"
 
-    goto :goto_1
-
-    :catchall_0
-    move-exception p0
-
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
-
-    :cond_4
-    iget-object p0, p0, Lcom/android/server/vdb$tsu;->zta:Lcom/android/server/vdb;
-
-    invoke-static {p0}, Lcom/android/server/vdb;->zta(Lcom/android/server/vdb;)V
-
-    :cond_5
-    :goto_1
-    return-void
+    return-object p0
 .end method

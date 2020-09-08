@@ -32,170 +32,104 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 1
+    .locals 4
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    const-string v0, "com.traffic.action.test"
+    const-string v0, "android.os.action.LIGHT_DEVICE_IDLE_MODE_CHANGED"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
+    move-result v0
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    if-eqz v0, :cond_1
+
+    const-string p1, "LightIdle_Status"
+
+    invoke-virtual {p2, p1, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
     move-result p1
 
-    if-eqz p1, :cond_5
+    if-eqz p1, :cond_0
 
-    const-string p1, "code"
+    goto :goto_0
 
-    invoke-virtual {p2, p1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    :cond_0
+    iget-object p1, p0, Lcom/android/server/gck$zta;->zta:Lcom/android/server/gck;
+
+    invoke-static {p1}, Lcom/android/server/gck;->sis(Lcom/android/server/gck;)Landroid/os/PowerManager;
 
     move-result-object p1
 
-    const-string p2, "dump"
+    invoke-virtual {p1}, Landroid/os/PowerManager;->isDeviceIdleMode()Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    goto :goto_1
+
+    :cond_1
+    const-string p2, "android.os.action.DEVICE_IDLE_MODE_CHANGED"
 
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result p2
+    move-result p1
 
-    if-eqz p2, :cond_0
+    if-eqz p1, :cond_3
 
-    iget-object p0, p0, Lcom/android/server/gck$zta;->zta:Lcom/android/server/gck;
+    iget-object p1, p0, Lcom/android/server/gck$zta;->zta:Lcom/android/server/gck;
 
-    invoke-static {p0}, Lcom/android/server/gck;->tsu(Lcom/android/server/gck;)V
-
-    goto/16 :goto_0
-
-    :cond_0
-    const-string p2, "@cachetime@"
-
-    invoke-virtual {p1, p2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result p2
-
-    const/16 v0, 0xb
-
-    if-eqz p2, :cond_1
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    invoke-static {p1}, Lcom/android/server/gck;->sis(Lcom/android/server/gck;)Landroid/os/PowerManager;
 
     move-result-object p1
 
-    iget-object p0, p0, Lcom/android/server/gck$zta;->zta:Lcom/android/server/gck;
-
-    invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+    invoke-virtual {p1}, Landroid/os/PowerManager;->isDeviceIdleMode()Z
 
     move-result p1
 
-    invoke-static {p0, p1}, Lcom/android/server/gck;->rtg(Lcom/android/server/gck;I)I
+    if-eqz p1, :cond_2
 
-    goto :goto_0
-
-    :cond_1
-    const-string p2, "@polltime@"
-
-    invoke-virtual {p1, p2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_2
-
-    const/16 p2, 0xa
-
-    invoke-virtual {p1, p2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object p1
-
+    :goto_0
     iget-object p0, p0, Lcom/android/server/gck$zta;->zta:Lcom/android/server/gck;
 
-    invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+    invoke-static {p0}, Lcom/android/server/gck;->ssp(Lcom/android/server/gck;)Lcom/android/server/gck$sis;
+
+    move-result-object p0
+
+    invoke-static {v3, v2}, Lcom/android/server/gck;->wtn(II)I
 
     move-result p1
 
-    invoke-static {p0, p1}, Lcom/android/server/gck;->ssp(Lcom/android/server/gck;I)I
-
-    goto :goto_0
+    goto :goto_2
 
     :cond_2
-    const-string p2, "@threshold@"
-
-    invoke-virtual {p1, p2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_3
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object p1
-
+    :goto_1
     iget-object p0, p0, Lcom/android/server/gck$zta;->zta:Lcom/android/server/gck;
 
-    invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+    invoke-static {p0}, Lcom/android/server/gck;->ssp(Lcom/android/server/gck;)Lcom/android/server/gck$sis;
+
+    move-result-object p0
+
+    invoke-static {v3, v1}, Lcom/android/server/gck;->wtn(II)I
 
     move-result p1
 
-    mul-int/lit16 p1, p1, 0x400
+    :goto_2
+    invoke-virtual {p0, p1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
-    int-to-long p1, p1
+    move-result-object p0
 
-    invoke-static {p0, p1, p2}, Lcom/android/server/gck;->cno(Lcom/android/server/gck;J)J
-
-    goto :goto_0
+    invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     :cond_3
-    const-string p2, "@thresholdhigh@"
-
-    invoke-virtual {p1, p2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_4
-
-    const/16 p2, 0xf
-
-    invoke-virtual {p1, p2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    iget-object p0, p0, Lcom/android/server/gck$zta;->zta:Lcom/android/server/gck;
-
-    invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result p1
-
-    mul-int/lit16 p1, p1, 0x400
-
-    int-to-long p1, p1
-
-    invoke-static {p0, p1, p2}, Lcom/android/server/gck;->kth(Lcom/android/server/gck;J)J
-
-    goto :goto_0
-
-    :cond_4
-    const-string p2, "@defaultcount@"
-
-    invoke-virtual {p1, p2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_5
-
-    const/16 p2, 0xe
-
-    invoke-virtual {p1, p2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    iget-object p0, p0, Lcom/android/server/gck$zta;->zta:Lcom/android/server/gck;
-
-    invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result p1
-
-    invoke-static {p0, p1}, Lcom/android/server/gck;->dma(Lcom/android/server/gck;I)I
-
-    :cond_5
-    :goto_0
     return-void
 .end method

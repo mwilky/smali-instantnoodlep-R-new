@@ -23,7 +23,13 @@
 
 
 # static fields
-.field private static final rtg:Ljava/util/Map;
+.field private static final synthetic cno:[Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
+
+.field public static final enum rtg:Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
+
+.field public static final enum sis:Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
+
+.field private static final ssp:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -33,10 +39,6 @@
         }
     .end annotation
 .end field
-
-.field public static final enum sis:Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
-
-.field private static final synthetic ssp:[Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
 
 .field public static final enum tsu:Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
 
@@ -51,7 +53,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 7
+    .locals 8
 
     new-instance v0, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
 
@@ -101,31 +103,47 @@
 
     sput-object v0, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->tsu:Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
 
-    const/4 v1, 0x4
+    new-instance v0, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
+
+    const-string v1, "Job"
+
+    const/4 v6, 0x4
+
+    const-string v7, "job"
+
+    invoke-direct {v0, v1, v6, v7}, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->rtg:Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
+
+    const/4 v1, 0x5
 
     new-array v1, v1, [Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
 
-    sget-object v6, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->zta:Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
+    sget-object v7, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->zta:Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
 
-    aput-object v6, v1, v2
+    aput-object v7, v1, v2
 
-    sget-object v6, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->you:Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
+    sget-object v7, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->you:Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
 
-    aput-object v6, v1, v3
+    aput-object v7, v1, v3
 
     sget-object v3, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->sis:Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
 
     aput-object v3, v1, v4
 
-    aput-object v0, v1, v5
+    sget-object v3, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->tsu:Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
 
-    sput-object v1, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->ssp:[Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
+    aput-object v3, v1, v5
+
+    aput-object v0, v1, v6
+
+    sput-object v1, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->cno:[Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
 
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->rtg:Ljava/util/Map;
+    sput-object v0, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->ssp:Ljava/util/Map;
 
     invoke-static {}, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->values()[Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
 
@@ -138,7 +156,7 @@
 
     aget-object v3, v0, v2
 
-    sget-object v4, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->rtg:Ljava/util/Map;
+    sget-object v4, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->ssp:Ljava/util/Map;
 
     iget-object v5, v3, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->label:Ljava/lang/String;
 
@@ -186,7 +204,7 @@
 .method public static values()[Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
     .locals 1
 
-    sget-object v0, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->ssp:[Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
+    sget-object v0, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->cno:[Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
 
     invoke-virtual {v0}, [Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->clone()Ljava/lang/Object;
 
@@ -200,7 +218,7 @@
 .method public static zta(Ljava/lang/String;)Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
     .locals 1
 
-    sget-object v0, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->rtg:Ljava/util/Map;
+    sget-object v0, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->ssp:Ljava/util/Map;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 

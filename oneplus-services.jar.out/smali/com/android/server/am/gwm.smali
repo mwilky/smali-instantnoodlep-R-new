@@ -171,12 +171,19 @@
     invoke-virtual {p0}, Lcom/android/server/ServiceThread;->start()V
 
     :cond_0
+    invoke-static {}, Lcom/android/server/am/zgw;->zgw()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
     invoke-static {}, Lcom/android/server/am/OPSystemCpuLoadMonitor;->tsu()Lcom/android/server/am/OPSystemCpuLoadMonitor;
 
     move-result-object p0
 
     invoke-virtual {p0}, Lcom/android/server/am/OPSystemCpuLoadMonitor;->init()V
 
+    :cond_1
     return-void
 .end method
 
@@ -325,6 +332,12 @@
 .method public speedMonitor(ZI)V
     .locals 1
 
+    invoke-static {}, Lcom/android/server/am/zgw;->zgw()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
     const-string p0, "OPBroadcast"
 
     const-string v0, "speedMonitor"
@@ -337,6 +350,7 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/am/OPBRPorcessSpeedMonitor;->speedMonitor(ZI)V
 
+    :cond_0
     return-void
 .end method
 

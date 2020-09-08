@@ -139,7 +139,7 @@
 
     const-string v2, "silent5G construct"
 
-    invoke-static {v1, v2}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     iput-object p1, p0, Lcom/android/server/am/c;->tsu:Landroid/content/Context;
 
@@ -205,7 +205,7 @@
 
     const-string v1, "initOnlineConfig"
 
-    invoke-static {v0, v1}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     new-instance v1, Lcom/oneplus/config/ConfigObserver;
 
@@ -301,7 +301,7 @@
 
     const-string v1, "Slient5G"
 
-    invoke-static {v1, v0}, Lcom/android/server/kth$zta;->sis(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Lcom/android/server/bio$zta;->sis(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -377,7 +377,7 @@
 
     const-string v2, "Slient5G"
 
-    invoke-static {v2, v1}, Lcom/android/server/kth$zta;->sis(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v1}, Lcom/android/server/bio$zta;->sis(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -661,7 +661,7 @@
 
     const-string v1, "Slient5G"
 
-    invoke-static {v1, v0}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object v0, p0, Lcom/android/server/am/c;->ssp:Ljava/util/HashSet;
 
@@ -704,7 +704,7 @@
 
     move-result-object p0
 
-    invoke-static {p1, p0}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p1, p0}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     monitor-exit v0
 
@@ -808,7 +808,7 @@
 
     const-string v0, "initLists"
 
-    invoke-static {p0, v0}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, v0}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method
@@ -875,7 +875,7 @@
 
     const-string p1, "resolveConfigFromJSON jsonArray is null, return"
 
-    invoke-static {p0, p1}, Lcom/android/server/kth$zta;->sis(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, p1}, Lcom/android/server/bio$zta;->sis(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
@@ -1066,7 +1066,7 @@
 
     const-string v0, "Slient5G"
 
-    invoke-static {v0, p1}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, p1}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -1087,7 +1087,7 @@
 
     const-string p1, "Slient5G"
 
-    invoke-static {p1, p0}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p1, p0}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_4
 
@@ -1120,7 +1120,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/android/server/kth$zta;->sis(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/android/server/bio$zta;->sis(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_7
@@ -1144,7 +1144,7 @@
 
     const-string v0, "Slient5G"
 
-    invoke-static {v0, p1}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, p1}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -1176,7 +1176,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/android/server/kth$zta;->sis(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/android/server/bio$zta;->sis(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-virtual {p1}, Lorg/json/JSONException;->printStackTrace()V
     :try_end_8
@@ -1200,7 +1200,7 @@
 
     const-string v0, "Slient5G"
 
-    invoke-static {v0, p1}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, p1}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -1230,7 +1230,7 @@
 
     const-string v1, "Slient5G"
 
-    invoke-static {v1, v0}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1250,7 +1250,7 @@
 
     const-string v0, "Slient5G"
 
-    invoke-static {v0, p0}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, p0}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     throw p1
 .end method
@@ -1321,7 +1321,7 @@
 
     const-string v1, "Slient5G"
 
-    invoke-static {v1, v0}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1339,7 +1339,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1357,7 +1357,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1375,7 +1375,7 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, p0}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method
@@ -1437,7 +1437,7 @@
 
     move-result-object p2
 
-    invoke-static {v1, p2}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, p2}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
     :try_start_0
@@ -1491,7 +1491,7 @@
 
     move-result-object p2
 
-    invoke-static {v1, p2}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, p2}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_3
     iget-object p2, p0, Lcom/android/server/am/c;->cno:Ljava/lang/reflect/Method;
@@ -1549,7 +1549,7 @@
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lcom/android/server/kth$zta;->sis(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, p1}, Lcom/android/server/bio$zta;->sis(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 

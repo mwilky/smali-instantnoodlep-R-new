@@ -324,7 +324,7 @@
 
     new-array v2, v1, [I
 
-    const/16 v3, 0x7b
+    const/16 v3, 0x74
 
     aput v3, v2, v0
 
@@ -336,7 +336,7 @@
 
     new-array v2, v1, [I
 
-    const/16 v3, 0xcf
+    const/16 v3, 0xc7
 
     aput v3, v2, v0
 
@@ -1174,7 +1174,7 @@
 .end method
 
 .method private j()V
-    .locals 7
+    .locals 8
 
     iget-object v0, p0, Lcom/android/server/policy/DeviceKeyHandler;->you:Landroid/content/Context;
 
@@ -1194,55 +1194,138 @@
 
     iput v1, p0, Lcom/android/server/policy/DeviceKeyHandler;->dma:I
 
-    sget-boolean v1, Lcom/android/server/policy/DeviceKeyHandler;->i:Z
+    const-string v1, "doze_always_on"
 
-    if-eqz v1, :cond_0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "updateH2OemSettings(): mBlackKeySettingState = "
-
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v4, p0, Lcom/android/server/policy/DeviceKeyHandler;->dma:I
-
-    invoke-static {v4}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v4, "DeviceKeyHandler"
-
-    invoke-static {v4, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    iget v1, p0, Lcom/android/server/policy/DeviceKeyHandler;->dma:I
-
-    const/4 v4, 0x7
-
-    invoke-static {v1, v4}, Lcom/android/server/policy/DeviceKeyHandler;->obl(II)I
+    invoke-static {v0, v1, v2, v3}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result v1
 
     const/4 v4, 0x1
 
-    if-ne v1, v4, :cond_1
+    if-ne v1, v4, :cond_0
 
     move v1, v4
 
     goto :goto_0
 
-    :cond_1
+    :cond_0
     move v1, v2
 
     :goto_0
+    sget-boolean v5, Lcom/android/server/policy/DeviceKeyHandler;->i:Z
+
+    const-string v6, "DeviceKeyHandler"
+
+    if-eqz v5, :cond_1
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "updateH2OemSettings(): mBlackKeySettingState = "
+
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v7, p0, Lcom/android/server/policy/DeviceKeyHandler;->dma:I
+
+    invoke-static {v7}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v7, ", alwaysOn= "
+
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v6, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    if-eqz v1, :cond_4
+
+    invoke-static {}, Lcom/oneplus/systemui/OpSystemUIInjector;->isFingerprintEnabled()Z
+
+    move-result v1
+
+    iget v5, p0, Lcom/android/server/policy/DeviceKeyHandler;->dma:I
+
+    or-int/lit16 v5, v5, 0x800
+
+    iput v5, p0, Lcom/android/server/policy/DeviceKeyHandler;->dma:I
+
+    new-array v5, v4, [I
+
+    const/16 v7, 0x114
+
+    aput v7, v5, v2
+
+    invoke-static {v5}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v5
+
+    if-nez v5, :cond_2
+
+    iget v5, p0, Lcom/android/server/policy/DeviceKeyHandler;->dma:I
+
+    const v7, 0xff7f
+
+    and-int/2addr v5, v7
+
+    iput v5, p0, Lcom/android/server/policy/DeviceKeyHandler;->dma:I
+
+    :cond_2
+    if-eqz v1, :cond_3
+
+    iget v5, p0, Lcom/android/server/policy/DeviceKeyHandler;->dma:I
+
+    const v7, 0x8000
+
+    or-int/2addr v5, v7
+
+    iput v5, p0, Lcom/android/server/policy/DeviceKeyHandler;->dma:I
+
+    :cond_3
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "always on enabled, override black gesture! hasFingerprintEnrolled= "
+
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v6, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_4
+    iget v1, p0, Lcom/android/server/policy/DeviceKeyHandler;->dma:I
+
+    const/4 v5, 0x7
+
+    invoke-static {v1, v5}, Lcom/android/server/policy/DeviceKeyHandler;->obl(II)I
+
+    move-result v1
+
+    if-ne v1, v4, :cond_5
+
+    move v1, v4
+
+    goto :goto_1
+
+    :cond_5
+    move v1, v2
+
+    :goto_1
     iput-boolean v1, p0, Lcom/android/server/policy/DeviceKeyHandler;->ugm:Z
 
     iget v1, p0, Lcom/android/server/policy/DeviceKeyHandler;->dma:I
@@ -1253,16 +1336,16 @@
 
     move-result v1
 
-    if-ne v1, v4, :cond_2
+    if-ne v1, v4, :cond_6
 
     move v1, v4
 
-    goto :goto_1
+    goto :goto_2
 
-    :cond_2
+    :cond_6
     move v1, v2
 
-    :goto_1
+    :goto_2
     iput-boolean v1, p0, Lcom/android/server/policy/DeviceKeyHandler;->qbh:Z
 
     iget v1, p0, Lcom/android/server/policy/DeviceKeyHandler;->dma:I
@@ -1273,16 +1356,16 @@
 
     move-result v1
 
-    if-ne v1, v4, :cond_3
+    if-ne v1, v4, :cond_7
 
     move v1, v4
 
-    goto :goto_2
+    goto :goto_3
 
-    :cond_3
+    :cond_7
     move v1, v2
 
-    :goto_2
+    :goto_3
     iput-boolean v1, p0, Lcom/android/server/policy/DeviceKeyHandler;->oif:Z
 
     iget v1, p0, Lcom/android/server/policy/DeviceKeyHandler;->dma:I
@@ -1293,16 +1376,16 @@
 
     move-result v1
 
-    if-ne v1, v4, :cond_4
+    if-ne v1, v4, :cond_8
 
     move v1, v4
 
-    goto :goto_3
+    goto :goto_4
 
-    :cond_4
+    :cond_8
     move v1, v2
 
-    :goto_3
+    :goto_4
     iput-boolean v1, p0, Lcom/android/server/policy/DeviceKeyHandler;->bvj:Z
 
     iget v1, p0, Lcom/android/server/policy/DeviceKeyHandler;->dma:I
@@ -1313,16 +1396,16 @@
 
     move-result v1
 
-    if-ne v1, v4, :cond_5
+    if-ne v1, v4, :cond_9
 
     move v1, v4
 
-    goto :goto_4
+    goto :goto_5
 
-    :cond_5
+    :cond_9
     move v1, v2
 
-    :goto_4
+    :goto_5
     iput-boolean v1, p0, Lcom/android/server/policy/DeviceKeyHandler;->ibl:Z
 
     iget v1, p0, Lcom/android/server/policy/DeviceKeyHandler;->dma:I
@@ -1331,16 +1414,16 @@
 
     move-result v1
 
-    if-ne v1, v4, :cond_6
+    if-ne v1, v4, :cond_a
 
     move v1, v4
 
-    goto :goto_5
+    goto :goto_6
 
-    :cond_6
+    :cond_a
     move v1, v2
 
-    :goto_5
+    :goto_6
     iput-boolean v1, p0, Lcom/android/server/policy/DeviceKeyHandler;->gwm:Z
 
     iget v1, p0, Lcom/android/server/policy/DeviceKeyHandler;->dma:I
@@ -1351,16 +1434,16 @@
 
     move-result v1
 
-    if-ne v1, v4, :cond_7
+    if-ne v1, v4, :cond_b
 
     move v1, v4
 
-    goto :goto_6
+    goto :goto_7
 
-    :cond_7
+    :cond_b
     move v1, v2
 
-    :goto_6
+    :goto_7
     iput-boolean v1, p0, Lcom/android/server/policy/DeviceKeyHandler;->vdb:Z
 
     iget v1, p0, Lcom/android/server/policy/DeviceKeyHandler;->dma:I
@@ -1369,25 +1452,25 @@
 
     move-result v1
 
-    if-ne v1, v4, :cond_8
+    if-ne v1, v4, :cond_c
 
     move v1, v4
 
-    goto :goto_7
+    goto :goto_8
 
-    :cond_8
+    :cond_c
     move v1, v2
 
-    :goto_7
+    :goto_8
     iput-boolean v1, p0, Lcom/android/server/policy/DeviceKeyHandler;->zgw:Z
 
     iget-boolean v1, p0, Lcom/android/server/policy/DeviceKeyHandler;->gwm:Z
 
-    if-ne v1, v4, :cond_9
+    if-ne v1, v4, :cond_d
 
     iput-boolean v4, p0, Lcom/android/server/policy/DeviceKeyHandler;->ibl:Z
 
-    :cond_9
+    :cond_d
     invoke-virtual {p0, v0}, Lcom/android/server/policy/DeviceKeyHandler;->ire(Landroid/content/ContentResolver;)V
 
     new-array v1, v5, [B
@@ -1418,11 +1501,11 @@
 
     move-result v0
 
-    if-ne v0, v4, :cond_a
+    if-ne v0, v4, :cond_e
 
     move v2, v4
 
-    :cond_a
+    :cond_e
     iput-boolean v2, p0, Lcom/android/server/policy/DeviceKeyHandler;->qeg:Z
 
     return-void
@@ -1809,7 +1892,7 @@
 
     new-array v2, v9, [I
 
-    const/16 v4, 0x3e
+    const/16 v4, 0x3c
 
     aput v4, v2, v3
 

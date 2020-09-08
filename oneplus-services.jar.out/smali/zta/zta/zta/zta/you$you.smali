@@ -28,7 +28,7 @@
 
 
 # virtual methods
-.method public N(Ljava/lang/String;)V
+.method public S(Ljava/lang/String;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {

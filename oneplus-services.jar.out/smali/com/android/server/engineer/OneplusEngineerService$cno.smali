@@ -1,6 +1,9 @@
 .class Lcom/android/server/engineer/OneplusEngineerService$cno;
-.super Ljava/lang/Thread;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -24,7 +27,7 @@
 
     iput-object p1, p0, Lcom/android/server/engineer/OneplusEngineerService$cno;->zta:Lcom/android/server/engineer/OneplusEngineerService;
 
-    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

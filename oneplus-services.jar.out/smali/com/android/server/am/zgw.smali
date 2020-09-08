@@ -121,7 +121,7 @@
 
     new-array v2, v0, [I
 
-    const/16 v3, 0x134
+    const/16 v3, 0x12d
 
     aput v3, v2, v1
 
@@ -135,7 +135,7 @@
 
     sput-boolean v0, Lcom/android/server/am/zgw;->wtn:Z
 
-    sput-boolean v0, Lcom/android/server/am/zgw;->gck:Z
+    sput-boolean v1, Lcom/android/server/am/zgw;->gck:Z
 
     sput-boolean v0, Lcom/android/server/am/zgw;->dma:Z
 
@@ -360,7 +360,7 @@
 
     move-result v1
 
-    if-ge v0, v1, :cond_1f
+    if-ge v0, v1, :cond_1e
 
     invoke-virtual {p1, v0}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
@@ -686,60 +686,13 @@
 
     move-result-object v3
 
-    const-string v4, "enableDelayStrategy"
-
-    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_b
-
-    const-string v3, "value"
-
-    invoke-virtual {v1, v3}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
-
-    move-result-object v3
-
-    invoke-virtual {v3, p0}, Lorg/json/JSONArray;->getBoolean(I)Z
-
-    move-result v3
-
-    sput-boolean v3, Lcom/android/server/am/zgw;->gck:Z
-
-    const-string v3, "OPVIPBroadcastController"
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "[OnlineConfig] sEnableDelayStrategy = "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-boolean v5, Lcom/android/server/am/zgw;->gck:Z
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Lcom/android/server/am/Slogger;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_b
-    const-string v3, "name"
-
-    invoke-virtual {v1, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
     const-string v4, "enableDelayStartProcessStrategy"
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_c
+    if-eqz v3, :cond_b
 
     const-string v3, "value"
 
@@ -773,7 +726,7 @@
 
     invoke-static {v3, v4}, Lcom/android/server/am/Slogger;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_c
+    :cond_b
     const-string v3, "name"
 
     invoke-virtual {v1, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -786,7 +739,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_d
+    if-eqz v3, :cond_c
 
     const-string v3, "value"
 
@@ -820,7 +773,7 @@
 
     invoke-static {v3, v4}, Lcom/android/server/am/Slogger;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_d
+    :cond_c
     const-string v3, "name"
 
     invoke-virtual {v1, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -833,7 +786,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_e
+    if-eqz v3, :cond_d
 
     const-string v3, "value"
 
@@ -867,7 +820,7 @@
 
     invoke-static {v3, v4}, Lcom/android/server/am/Slogger;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_e
+    :cond_d
     const-string v3, "name"
 
     invoke-virtual {v1, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -880,7 +833,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_f
+    if-eqz v3, :cond_e
 
     const-string v3, "value"
 
@@ -914,7 +867,7 @@
 
     invoke-static {v3, v4}, Lcom/android/server/am/Slogger;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_f
+    :cond_e
     const-string v3, "name"
 
     invoke-virtual {v1, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -927,7 +880,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_10
+    if-eqz v3, :cond_f
 
     const-string v3, "value"
 
@@ -961,7 +914,7 @@
 
     invoke-static {v3, v4}, Lcom/android/server/am/Slogger;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_10
+    :cond_f
     const-string v3, "name"
 
     invoke-virtual {v1, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -974,7 +927,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_11
+    if-eqz v3, :cond_10
 
     const-string v3, "value"
 
@@ -1008,7 +961,7 @@
 
     invoke-static {v3, v4}, Lcom/android/server/am/Slogger;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_11
+    :cond_10
     const-string v3, "name"
 
     invoke-virtual {v1, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1021,7 +974,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_12
+    if-eqz v3, :cond_11
 
     const-string v3, "value"
 
@@ -1055,7 +1008,7 @@
 
     invoke-static {v3, v4}, Lcom/android/server/am/Slogger;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_12
+    :cond_11
     const-string v3, "name"
 
     invoke-virtual {v1, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1068,7 +1021,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_13
+    if-eqz v3, :cond_12
 
     const-string v3, "value"
 
@@ -1102,7 +1055,7 @@
 
     invoke-static {v3, v4}, Lcom/android/server/am/Slogger;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_13
+    :cond_12
     const-string v3, "name"
 
     invoke-virtual {v1, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1115,7 +1068,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_14
+    if-eqz v3, :cond_13
 
     const-string v3, "value"
 
@@ -1149,7 +1102,7 @@
 
     invoke-static {v3, v4}, Lcom/android/server/am/Slogger;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_14
+    :cond_13
     const-string v3, "name"
 
     invoke-virtual {v1, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1162,7 +1115,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_15
+    if-eqz v3, :cond_14
 
     const-string v3, "value"
 
@@ -1196,7 +1149,7 @@
 
     invoke-static {v3, v4}, Lcom/android/server/am/Slogger;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_15
+    :cond_14
     const-string v3, "name"
 
     invoke-virtual {v1, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1209,7 +1162,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_16
+    if-eqz v3, :cond_15
 
     const-string v3, "value"
 
@@ -1243,7 +1196,7 @@
 
     invoke-static {v3, v4}, Lcom/android/server/am/Slogger;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_16
+    :cond_15
     const-string v3, "name"
 
     invoke-virtual {v1, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1256,7 +1209,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_17
+    if-eqz v3, :cond_16
 
     const-string v3, "value"
 
@@ -1290,7 +1243,7 @@
 
     invoke-static {v3, v4}, Lcom/android/server/am/Slogger;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_17
+    :cond_16
     const-string v3, "name"
 
     invoke-virtual {v1, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1303,7 +1256,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_18
+    if-eqz v3, :cond_17
 
     const-string v3, "value"
 
@@ -1337,7 +1290,7 @@
 
     invoke-static {v3, v4}, Lcom/android/server/am/Slogger;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_18
+    :cond_17
     const-string v3, "name"
 
     invoke-virtual {v1, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1350,7 +1303,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_19
+    if-eqz v3, :cond_18
 
     const-string v3, "value"
 
@@ -1384,7 +1337,7 @@
 
     invoke-static {v3, v4}, Lcom/android/server/am/Slogger;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_19
+    :cond_18
     const-string v3, "name"
 
     invoke-virtual {v1, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1397,7 +1350,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_1a
+    if-eqz v3, :cond_19
 
     const-string v3, "value"
 
@@ -1417,7 +1370,7 @@
 
     invoke-static {v3, v4}, Lcom/android/server/am/Slogger;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_1a
+    :cond_19
     const-string v3, "name"
 
     invoke-virtual {v1, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1430,7 +1383,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_1c
+    if-eqz v3, :cond_1b
 
     const-string v3, "value"
 
@@ -1449,7 +1402,7 @@
 
     move-result v5
 
-    if-ge v4, v5, :cond_1b
+    if-ge v4, v5, :cond_1a
 
     sget-object v5, Lcom/android/server/am/zgw;->fto:Ljava/util/List;
 
@@ -1463,7 +1416,7 @@
 
     goto :goto_5
 
-    :cond_1b
+    :cond_1a
     const-string v3, "OPVIPBroadcastController"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1488,7 +1441,7 @@
 
     invoke-static {v3, v4}, Lcom/android/server/am/Slogger;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_1c
+    :cond_1b
     const-string v3, "name"
 
     invoke-virtual {v1, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1501,7 +1454,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_1e
+    if-eqz v3, :cond_1d
 
     const-string v3, "value"
 
@@ -1520,7 +1473,7 @@
 
     move-result v4
 
-    if-ge v3, v4, :cond_1d
+    if-ge v3, v4, :cond_1c
 
     sget-object v4, Lcom/android/server/am/zgw;->lqr:Ljava/util/List;
 
@@ -1534,7 +1487,7 @@
 
     goto :goto_6
 
-    :cond_1d
+    :cond_1c
     const-string v1, "OPVIPBroadcastController"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1559,7 +1512,7 @@
 
     invoke-static {v1, v3}, Lcom/android/server/am/Slogger;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_1e
+    :cond_1d
     monitor-exit v2
 
     add-int/lit8 v0, v0, 0x1
@@ -1579,12 +1532,12 @@
     .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    :cond_1f
+    :cond_1e
     invoke-static {}, Lcom/android/server/am/zgw;->ugm()Z
 
     move-result p0
 
-    if-eqz p0, :cond_20
+    if-eqz p0, :cond_1f
 
     :goto_7
     invoke-static {}, Lcom/android/server/am/vdb;->vdb()V
@@ -1628,11 +1581,11 @@
 
     move-result p0
 
-    if-eqz p0, :cond_20
+    if-eqz p0, :cond_1f
 
     goto :goto_7
 
-    :cond_20
+    :cond_1f
     :goto_8
     return-void
 
@@ -1641,11 +1594,11 @@
 
     move-result p1
 
-    if-eqz p1, :cond_21
+    if-eqz p1, :cond_20
 
     invoke-static {}, Lcom/android/server/am/vdb;->vdb()V
 
-    :cond_21
+    :cond_20
     throw p0
 .end method
 
@@ -2028,8 +1981,6 @@
 
     :try_start_0
     sput-boolean v1, Lcom/android/server/am/zgw;->dma:Z
-
-    sput-boolean v1, Lcom/android/server/am/zgw;->gck:Z
 
     sput-boolean v1, Lcom/android/server/am/zgw;->qbh:Z
 

@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/wifi/OpSlaNetlinkHelper;->y1()V
+    value = Lcom/android/server/wifi/OpSlaNetlinkHelper;->z1()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -154,6 +154,28 @@
     const/4 v3, 0x4
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    iget-object v2, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper$qbh;->zta:Lcom/android/server/wifi/OpSlaNetlinkHelper;
+
+    iget-object v3, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper$qbh;->zta:Lcom/android/server/wifi/OpSlaNetlinkHelper;
+
+    invoke-static {v3}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->U(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Lcom/android/server/wifi/WifiSettingsConfigStore;
+
+    move-result-object v3
+
+    sget-object v5, Lcom/android/server/wifi/WifiSettingsConfigStore;->WIFI_VERBOSE_LOGGING_ENABLED:Lcom/android/server/wifi/WifiSettingsConfigStore$Key;
+
+    invoke-virtual {v3, v5}, Lcom/android/server/wifi/WifiSettingsConfigStore;->get(Lcom/android/server/wifi/WifiSettingsConfigStore$Key;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/Boolean;
+
+    invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->v0(Z)V
 
     :cond_0
     :goto_0
@@ -358,7 +380,59 @@
 
     iget-object v3, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper$qbh;->zta:Lcom/android/server/wifi/OpSlaNetlinkHelper;
 
-    invoke-static {v3}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->Z(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/net/Network;
+    invoke-static {v3}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->a0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/net/Network;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Landroid/net/ConnectivityManager;->reportBadNetwork(Landroid/net/Network;)V
+
+    iget-object v2, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper$qbh;->zta:Lcom/android/server/wifi/OpSlaNetlinkHelper;
+
+    invoke-static {v2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->ugm(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v3, 0x50f00ea
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper$qbh;->zta:Lcom/android/server/wifi/OpSlaNetlinkHelper;
+
+    invoke-static {v3}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->b0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/os/Handler;
+
+    move-result-object v3
+
+    iget-object v5, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper$qbh;->zta:Lcom/android/server/wifi/OpSlaNetlinkHelper;
+
+    invoke-static {v5}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->b0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/os/Handler;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v8, v2}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object v2
+
+    :goto_3
+    invoke-virtual {v3, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    goto/16 :goto_0
+
+    :cond_4
+    iget-object v2, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper$qbh;->zta:Lcom/android/server/wifi/OpSlaNetlinkHelper;
+
+    invoke-static {v2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->D(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/net/ConnectivityManager;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper$qbh;->zta:Lcom/android/server/wifi/OpSlaNetlinkHelper;
+
+    invoke-static {v3}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->c0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/net/Network;
 
     move-result-object v3
 
@@ -382,65 +456,13 @@
 
     iget-object v3, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper$qbh;->zta:Lcom/android/server/wifi/OpSlaNetlinkHelper;
 
-    invoke-static {v3}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->a0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/os/Handler;
+    invoke-static {v3}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->b0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/os/Handler;
 
     move-result-object v3
 
     iget-object v5, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper$qbh;->zta:Lcom/android/server/wifi/OpSlaNetlinkHelper;
 
-    invoke-static {v5}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->a0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/os/Handler;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v8, v2}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object v2
-
-    :goto_3
-    invoke-virtual {v3, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    goto/16 :goto_0
-
-    :cond_4
-    iget-object v2, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper$qbh;->zta:Lcom/android/server/wifi/OpSlaNetlinkHelper;
-
-    invoke-static {v2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->D(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/net/ConnectivityManager;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper$qbh;->zta:Lcom/android/server/wifi/OpSlaNetlinkHelper;
-
-    invoke-static {v3}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->b0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/net/Network;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Landroid/net/ConnectivityManager;->reportBadNetwork(Landroid/net/Network;)V
-
-    iget-object v2, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper$qbh;->zta:Lcom/android/server/wifi/OpSlaNetlinkHelper;
-
-    invoke-static {v2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->ugm(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    const v3, 0x50f00e8
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper$qbh;->zta:Lcom/android/server/wifi/OpSlaNetlinkHelper;
-
-    invoke-static {v3}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->a0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/os/Handler;
-
-    move-result-object v3
-
-    iget-object v5, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper$qbh;->zta:Lcom/android/server/wifi/OpSlaNetlinkHelper;
-
-    invoke-static {v5}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->a0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/os/Handler;
+    invoke-static {v5}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->b0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/os/Handler;
 
     move-result-object v5
 
@@ -463,7 +485,7 @@
 
     iget-object v3, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper$qbh;->zta:Lcom/android/server/wifi/OpSlaNetlinkHelper;
 
-    invoke-static {v3}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->c0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
+    invoke-static {v3}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->d0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
 
     move-result v3
 
@@ -473,7 +495,7 @@
 
     iget-object v3, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper$qbh;->zta:Lcom/android/server/wifi/OpSlaNetlinkHelper;
 
-    invoke-static {v3}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->U(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
+    invoke-static {v3}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->V(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
 
     move-result v3
 
@@ -491,7 +513,7 @@
 
     iget-object v3, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper$qbh;->zta:Lcom/android/server/wifi/OpSlaNetlinkHelper;
 
-    invoke-static {v3}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->d0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)I
+    invoke-static {v3}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->e0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)I
 
     move-result v3
 
@@ -513,7 +535,7 @@
 
     iget-object v3, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper$qbh;->zta:Lcom/android/server/wifi/OpSlaNetlinkHelper;
 
-    invoke-static {v3}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->d0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)I
+    invoke-static {v3}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->e0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)I
 
     move-result v3
 
@@ -524,7 +546,7 @@
 
     iget-object v3, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper$qbh;->zta:Lcom/android/server/wifi/OpSlaNetlinkHelper;
 
-    invoke-static {v3}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->U(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
+    invoke-static {v3}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->V(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
 
     move-result v3
 
@@ -538,7 +560,7 @@
 
     iget-object v2, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper$qbh;->zta:Lcom/android/server/wifi/OpSlaNetlinkHelper;
 
-    invoke-static {v2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->W(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
+    invoke-static {v2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->X(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
 
     move-result v2
 
@@ -559,7 +581,7 @@
 
     iget-object v2, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper$qbh;->zta:Lcom/android/server/wifi/OpSlaNetlinkHelper;
 
-    invoke-static {v2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->W(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
+    invoke-static {v2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->X(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
 
     move-result v2
 
@@ -567,7 +589,7 @@
 
     iget-object v2, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper$qbh;->zta:Lcom/android/server/wifi/OpSlaNetlinkHelper;
 
-    invoke-static {v2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->X(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
+    invoke-static {v2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->Z(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
 
     move-result v2
 
@@ -687,7 +709,7 @@
 
     iget-object v3, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper$qbh;->zta:Lcom/android/server/wifi/OpSlaNetlinkHelper;
 
-    invoke-static {v3}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->U(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
+    invoke-static {v3}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->V(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
 
     move-result v3
 
@@ -722,7 +744,7 @@
     :cond_f
     iget-object v2, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper$qbh;->zta:Lcom/android/server/wifi/OpSlaNetlinkHelper;
 
-    invoke-static {v2, v7}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->V(Lcom/android/server/wifi/OpSlaNetlinkHelper;I)I
+    invoke-static {v2, v7}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->W(Lcom/android/server/wifi/OpSlaNetlinkHelper;I)I
 
     goto/16 :goto_0
 
@@ -789,7 +811,7 @@
 
     iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper$qbh;->zta:Lcom/android/server/wifi/OpSlaNetlinkHelper;
 
-    invoke-static {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->e0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
+    invoke-static {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->f0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
 
     return-void
 .end method

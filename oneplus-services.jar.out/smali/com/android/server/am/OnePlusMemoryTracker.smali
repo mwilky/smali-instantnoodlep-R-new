@@ -130,9 +130,11 @@
 
 .field private mDeviceTotalMemory:Ljava/lang/String;
 
-.field private mFirstReport:Z
-
 .field private mHandler:Lcom/android/server/am/OnePlusMemoryTracker$cno;
+
+.field private mIsDumping:Z
+
+.field private mLastReportCriticalTime:J
 
 .field private mLastReportNoCacheTime:J
 
@@ -342,15 +344,13 @@
 
     iput-object p1, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mDeviceTotalMemory:Ljava/lang/String;
 
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mFirstReport:Z
-
     const/4 p1, 0x0
 
     iput-boolean p1, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mStartReportNoCache:Z
 
     iput-boolean p1, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mCriticalReport:Z
+
+    iput-boolean p1, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mIsDumping:Z
 
     new-instance p1, Ljava/util/HashMap;
 
@@ -470,7 +470,23 @@
     return-void
 .end method
 
-.method static synthetic access$1000(Lcom/android/server/am/OnePlusMemoryTracker;)V
+.method static synthetic access$1000()J
+    .locals 2
+
+    sget-wide v0, Lcom/android/server/am/OnePlusMemoryTracker;->sReportNoCacheInterval:J
+
+    return-wide v0
+.end method
+
+.method static synthetic access$1002(J)J
+    .locals 0
+
+    sput-wide p0, Lcom/android/server/am/OnePlusMemoryTracker;->sReportNoCacheInterval:J
+
+    return-wide p0
+.end method
+
+.method static synthetic access$1100(Lcom/android/server/am/OnePlusMemoryTracker;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/server/am/OnePlusMemoryTracker;->reportNoCacheMDM()V
@@ -478,7 +494,7 @@
     return-void
 .end method
 
-.method static synthetic access$1100(Lcom/android/server/am/OnePlusMemoryTracker;)Z
+.method static synthetic access$1200(Lcom/android/server/am/OnePlusMemoryTracker;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mStartReportNoCache:Z
@@ -486,7 +502,7 @@
     return p0
 .end method
 
-.method static synthetic access$1102(Lcom/android/server/am/OnePlusMemoryTracker;Z)Z
+.method static synthetic access$1202(Lcom/android/server/am/OnePlusMemoryTracker;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mStartReportNoCache:Z
@@ -494,7 +510,7 @@
     return p1
 .end method
 
-.method static synthetic access$1200()Z
+.method static synthetic access$1300()Z
     .locals 1
 
     sget-boolean v0, Lcom/android/server/am/OnePlusMemoryTracker;->sDebug:Z
@@ -502,7 +518,7 @@
     return v0
 .end method
 
-.method static synthetic access$1202(Z)Z
+.method static synthetic access$1302(Z)Z
     .locals 0
 
     sput-boolean p0, Lcom/android/server/am/OnePlusMemoryTracker;->sDebug:Z
@@ -510,7 +526,7 @@
     return p0
 .end method
 
-.method static synthetic access$1300(Lcom/android/server/am/OnePlusMemoryTracker;Z)V
+.method static synthetic access$1400(Lcom/android/server/am/OnePlusMemoryTracker;Z)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/am/OnePlusMemoryTracker;->updateEnable(Z)V
@@ -518,7 +534,7 @@
     return-void
 .end method
 
-.method static synthetic access$1400(Lcom/android/server/am/OnePlusMemoryTracker;Z)V
+.method static synthetic access$1500(Lcom/android/server/am/OnePlusMemoryTracker;Z)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/am/OnePlusMemoryTracker;->updateMDMEnable(Z)V
@@ -526,7 +542,7 @@
     return-void
 .end method
 
-.method static synthetic access$1500()Z
+.method static synthetic access$1600()Z
     .locals 1
 
     sget-boolean v0, Lcom/android/server/am/OnePlusMemoryTracker;->sMdm:Z
@@ -534,7 +550,7 @@
     return v0
 .end method
 
-.method static synthetic access$1600(Lcom/android/server/am/OnePlusMemoryTracker;Z)V
+.method static synthetic access$1700(Lcom/android/server/am/OnePlusMemoryTracker;Z)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/am/OnePlusMemoryTracker;->updateDropboxEnable(Z)V
@@ -542,7 +558,7 @@
     return-void
 .end method
 
-.method static synthetic access$1700()Z
+.method static synthetic access$1800()Z
     .locals 1
 
     sget-boolean v0, Lcom/android/server/am/OnePlusMemoryTracker;->sDropbox:Z
@@ -550,7 +566,7 @@
     return v0
 .end method
 
-.method static synthetic access$1800(Lcom/android/server/am/OnePlusMemoryTracker;J)V
+.method static synthetic access$1900(Lcom/android/server/am/OnePlusMemoryTracker;J)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/am/OnePlusMemoryTracker;->updateTimeout(J)V
@@ -558,7 +574,7 @@
     return-void
 .end method
 
-.method static synthetic access$1900(Lcom/android/server/am/OnePlusMemoryTracker;J)V
+.method static synthetic access$2000(Lcom/android/server/am/OnePlusMemoryTracker;J)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/am/OnePlusMemoryTracker;->updateInterval(J)V
@@ -566,15 +582,15 @@
     return-void
 .end method
 
-.method static synthetic access$200()J
-    .locals 2
+.method static synthetic access$202(Lcom/android/server/am/OnePlusMemoryTracker;Z)Z
+    .locals 0
 
-    sget-wide v0, Lcom/android/server/am/OnePlusMemoryTracker;->sSwitchBackgroundTimeount:J
+    iput-boolean p1, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mIsDumping:Z
 
-    return-wide v0
+    return p1
 .end method
 
-.method static synthetic access$2000()J
+.method static synthetic access$2100()J
     .locals 2
 
     sget-wide v0, Lcom/android/server/am/OnePlusMemoryTracker;->sReportInterval:J
@@ -582,7 +598,7 @@
     return-wide v0
 .end method
 
-.method static synthetic access$2002(J)J
+.method static synthetic access$2102(J)J
     .locals 0
 
     sput-wide p0, Lcom/android/server/am/OnePlusMemoryTracker;->sReportInterval:J
@@ -590,15 +606,7 @@
     return-wide p0
 .end method
 
-.method static synthetic access$202(J)J
-    .locals 0
-
-    sput-wide p0, Lcom/android/server/am/OnePlusMemoryTracker;->sSwitchBackgroundTimeount:J
-
-    return-wide p0
-.end method
-
-.method static synthetic access$2100(Lcom/android/server/am/OnePlusMemoryTracker;I)V
+.method static synthetic access$2200(Lcom/android/server/am/OnePlusMemoryTracker;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/am/OnePlusMemoryTracker;->updateLogcatLineNumber(I)V
@@ -606,7 +614,7 @@
     return-void
 .end method
 
-.method static synthetic access$2200()I
+.method static synthetic access$2300()I
     .locals 1
 
     sget v0, Lcom/android/server/am/OnePlusMemoryTracker;->sLogcatLineNum:I
@@ -614,7 +622,7 @@
     return v0
 .end method
 
-.method static synthetic access$2300(Lcom/android/server/am/OnePlusMemoryTracker;I)V
+.method static synthetic access$2400(Lcom/android/server/am/OnePlusMemoryTracker;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/am/OnePlusMemoryTracker;->updateDropboxSize(I)V
@@ -622,7 +630,7 @@
     return-void
 .end method
 
-.method static synthetic access$2400()I
+.method static synthetic access$2500()I
     .locals 1
 
     sget v0, Lcom/android/server/am/OnePlusMemoryTracker;->sDropboxMaxSize:I
@@ -630,7 +638,7 @@
     return v0
 .end method
 
-.method static synthetic access$2500(Lcom/android/server/am/OnePlusMemoryTracker;I)V
+.method static synthetic access$2600(Lcom/android/server/am/OnePlusMemoryTracker;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/am/OnePlusMemoryTracker;->updateCommandFlag(I)V
@@ -638,7 +646,7 @@
     return-void
 .end method
 
-.method static synthetic access$2600(Lcom/android/server/am/OnePlusMemoryTracker;)I
+.method static synthetic access$2700(Lcom/android/server/am/OnePlusMemoryTracker;)I
     .locals 0
 
     iget p0, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mCommandFlag:I
@@ -646,7 +654,7 @@
     return p0
 .end method
 
-.method static synthetic access$2602(Lcom/android/server/am/OnePlusMemoryTracker;I)I
+.method static synthetic access$2702(Lcom/android/server/am/OnePlusMemoryTracker;I)I
     .locals 0
 
     iput p1, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mCommandFlag:I
@@ -654,7 +662,7 @@
     return p1
 .end method
 
-.method static synthetic access$2700()Z
+.method static synthetic access$2800()Z
     .locals 1
 
     sget-boolean v0, Lcom/android/server/am/OnePlusMemoryTracker;->sReport:Z
@@ -662,7 +670,7 @@
     return v0
 .end method
 
-.method static synthetic access$2702(Z)Z
+.method static synthetic access$2802(Z)Z
     .locals 0
 
     sput-boolean p0, Lcom/android/server/am/OnePlusMemoryTracker;->sReport:Z
@@ -670,7 +678,7 @@
     return p0
 .end method
 
-.method static synthetic access$2800()Z
+.method static synthetic access$2900()Z
     .locals 1
 
     sget-boolean v0, Lcom/android/server/am/OnePlusMemoryTracker;->sReportNoCache:Z
@@ -678,7 +686,7 @@
     return v0
 .end method
 
-.method static synthetic access$2802(Z)Z
+.method static synthetic access$2902(Z)Z
     .locals 0
 
     sput-boolean p0, Lcom/android/server/am/OnePlusMemoryTracker;->sReportNoCache:Z
@@ -686,7 +694,15 @@
     return p0
 .end method
 
-.method static synthetic access$2900(Lcom/android/server/am/OnePlusMemoryTracker;I)Ljava/util/ArrayList;
+.method static synthetic access$300()J
+    .locals 2
+
+    sget-wide v0, Lcom/android/server/am/OnePlusMemoryTracker;->sSwitchBackgroundTimeount:J
+
+    return-wide v0
+.end method
+
+.method static synthetic access$3000(Lcom/android/server/am/OnePlusMemoryTracker;I)Ljava/util/ArrayList;
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/am/OnePlusMemoryTracker;->getCommand(I)Ljava/util/ArrayList;
@@ -696,15 +712,15 @@
     return-object p0
 .end method
 
-.method static synthetic access$300(Lcom/android/server/am/OnePlusMemoryTracker;)V
+.method static synthetic access$302(J)J
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/am/OnePlusMemoryTracker;->registerOnlineConfig()V
+    sput-wide p0, Lcom/android/server/am/OnePlusMemoryTracker;->sSwitchBackgroundTimeount:J
 
-    return-void
+    return-wide p0
 .end method
 
-.method static synthetic access$3000(Lcom/android/server/am/OnePlusMemoryTracker;)V
+.method static synthetic access$3100(Lcom/android/server/am/OnePlusMemoryTracker;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/server/am/OnePlusMemoryTracker;->getLruApps()V
@@ -712,7 +728,7 @@
     return-void
 .end method
 
-.method static synthetic access$3100(Lcom/android/server/am/OnePlusMemoryTracker;Z)Ljava/lang/String;
+.method static synthetic access$3200(Lcom/android/server/am/OnePlusMemoryTracker;Z)Ljava/lang/String;
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/am/OnePlusMemoryTracker;->getMemoryInfo(Z)Ljava/lang/String;
@@ -722,7 +738,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$3200(Lcom/android/server/am/OnePlusMemoryTracker;Lcom/android/server/am/OnePlusMemoryTracker$tsu;)V
+.method static synthetic access$3300(Lcom/android/server/am/OnePlusMemoryTracker;Lcom/android/server/am/OnePlusMemoryTracker$tsu;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/am/OnePlusMemoryTracker;->doWriteLogToDropbox(Lcom/android/server/am/OnePlusMemoryTracker$tsu;)V
@@ -730,7 +746,7 @@
     return-void
 .end method
 
-.method static synthetic access$3302(Z)Z
+.method static synthetic access$3402(Z)Z
     .locals 0
 
     sput-boolean p0, Lcom/android/server/am/OnePlusMemoryTracker;->sDebugCritical:Z
@@ -741,7 +757,7 @@
 .method static synthetic access$400(Lcom/android/server/am/OnePlusMemoryTracker;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/am/OnePlusMemoryTracker;->grabOnlineConfig()V
+    invoke-direct {p0}, Lcom/android/server/am/OnePlusMemoryTracker;->registerOnlineConfig()V
 
     return-void
 .end method
@@ -749,12 +765,20 @@
 .method static synthetic access$500(Lcom/android/server/am/OnePlusMemoryTracker;)V
     .locals 0
 
+    invoke-direct {p0}, Lcom/android/server/am/OnePlusMemoryTracker;->grabOnlineConfig()V
+
+    return-void
+.end method
+
+.method static synthetic access$600(Lcom/android/server/am/OnePlusMemoryTracker;)V
+    .locals 0
+
     invoke-direct {p0}, Lcom/android/server/am/OnePlusMemoryTracker;->initMemoryInfo()V
 
     return-void
 .end method
 
-.method static synthetic access$600()Z
+.method static synthetic access$700()Z
     .locals 1
 
     sget-boolean v0, Lcom/android/server/am/OnePlusMemoryTracker;->DEBUG_MODE:Z
@@ -762,7 +786,7 @@
     return v0
 .end method
 
-.method static synthetic access$700(Lcom/android/server/am/OnePlusMemoryTracker;)Ljava/util/HashMap;
+.method static synthetic access$800(Lcom/android/server/am/OnePlusMemoryTracker;)Ljava/util/HashMap;
     .locals 0
 
     iget-object p0, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mNoCacheTopRecords:Ljava/util/HashMap;
@@ -770,7 +794,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$800(Lcom/android/server/am/OnePlusMemoryTracker;)J
+.method static synthetic access$900(Lcom/android/server/am/OnePlusMemoryTracker;)J
     .locals 2
 
     iget-wide v0, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mLastReportNoCacheTime:J
@@ -778,28 +802,12 @@
     return-wide v0
 .end method
 
-.method static synthetic access$802(Lcom/android/server/am/OnePlusMemoryTracker;J)J
+.method static synthetic access$902(Lcom/android/server/am/OnePlusMemoryTracker;J)J
     .locals 0
 
     iput-wide p1, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mLastReportNoCacheTime:J
 
     return-wide p1
-.end method
-
-.method static synthetic access$900()J
-    .locals 2
-
-    sget-wide v0, Lcom/android/server/am/OnePlusMemoryTracker;->sReportNoCacheInterval:J
-
-    return-wide v0
-.end method
-
-.method static synthetic access$902(J)J
-    .locals 0
-
-    sput-wide p0, Lcom/android/server/am/OnePlusMemoryTracker;->sReportNoCacheInterval:J
-
-    return-wide p0
 .end method
 
 .method private doWriteLogToDropbox(Lcom/android/server/am/OnePlusMemoryTracker$tsu;)V
@@ -808,8 +816,6 @@
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
-
-    invoke-direct {p0}, Lcom/android/server/am/OnePlusMemoryTracker;->getLruApps()V
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1501,7 +1507,7 @@
 .end method
 
 .method private getMemoryInfo(Z)Ljava/lang/String;
-    .locals 34
+    .locals 39
 
     move-object/from16 v0, p0
 
@@ -1547,28 +1553,32 @@
 
     const-wide/16 v13, 0x0
 
+    const-wide/16 v15, 0x0
+
     :goto_0
-    if-ltz v7, :cond_8
+    if-ltz v7, :cond_9
 
-    iget-object v8, v0, Lcom/android/server/am/OnePlusMemoryTracker;->mLruApps:Ljava/util/ArrayList;
+    iget-object v9, v0, Lcom/android/server/am/OnePlusMemoryTracker;->mLruApps:Ljava/util/ArrayList;
 
-    invoke-virtual {v8, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v9, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    move-result-object v8
+    move-result-object v9
 
-    check-cast v8, Lcom/android/server/am/OnePlusMemoryTracker$tsu;
+    check-cast v9, Lcom/android/server/am/OnePlusMemoryTracker$tsu;
 
-    iget-object v9, v8, Lcom/android/server/am/OnePlusMemoryTracker$tsu;->cno:Landroid/app/IApplicationThread;
+    iget-object v8, v9, Lcom/android/server/am/OnePlusMemoryTracker$tsu;->cno:Landroid/app/IApplicationThread;
 
-    iget v15, v8, Lcom/android/server/am/OnePlusMemoryTracker$tsu;->sis:I
+    move-object/from16 v29, v1
 
-    move-object/from16 v26, v1
+    iget v1, v9, Lcom/android/server/am/OnePlusMemoryTracker$tsu;->sis:I
 
-    iget v1, v8, Lcom/android/server/am/OnePlusMemoryTracker$tsu;->tsu:I
+    iget v0, v9, Lcom/android/server/am/OnePlusMemoryTracker$tsu;->tsu:I
 
-    iget-boolean v0, v8, Lcom/android/server/am/OnePlusMemoryTracker$tsu;->ssp:Z
+    move/from16 v30, v7
 
-    if-eqz v9, :cond_7
+    iget-boolean v7, v9, Lcom/android/server/am/OnePlusMemoryTracker$tsu;->ssp:Z
+
+    if-eqz v8, :cond_8
 
     if-nez v10, :cond_0
 
@@ -1577,17 +1587,17 @@
     invoke-direct {v10}, Landroid/os/Debug$MemoryInfo;-><init>()V
 
     :cond_0
-    invoke-static {v15, v10}, Landroid/os/Debug;->getMemoryInfo(ILandroid/os/Debug$MemoryInfo;)Z
+    invoke-static {v1, v10}, Landroid/os/Debug;->getMemoryInfo(ILandroid/os/Debug$MemoryInfo;)Z
 
     invoke-virtual {v10}, Landroid/os/Debug$MemoryInfo;->getTotalPss()I
 
-    move-result v9
+    move-result v8
 
-    move-object/from16 v27, v6
+    move-object/from16 v31, v5
 
-    move/from16 v28, v7
+    move-object/from16 v32, v6
 
-    int-to-long v6, v9
+    int-to-long v5, v8
 
     invoke-virtual {v10}, Landroid/os/Debug$MemoryInfo;->getTotalUss()I
 
@@ -1595,31 +1605,31 @@
 
     invoke-virtual {v10}, Landroid/os/Debug$MemoryInfo;->getTotalSwappedOutPss()I
 
-    move-result v9
+    move-result v8
 
-    move-object/from16 v30, v3
+    move-object/from16 v34, v3
 
-    move/from16 v29, v4
+    move/from16 v33, v4
 
-    int-to-long v3, v9
+    int-to-long v3, v8
 
-    if-eqz v10, :cond_6
+    if-eqz v10, :cond_7
 
-    add-long/2addr v11, v6
+    add-long/2addr v11, v5
 
     add-long/2addr v13, v3
 
-    new-instance v9, Lcom/android/server/am/OnePlusMemoryTracker$rtg;
+    new-instance v8, Lcom/android/server/am/OnePlusMemoryTracker$rtg;
 
-    move-object/from16 v31, v10
+    move-object/from16 v35, v10
 
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-wide/from16 v32, v11
+    move-wide/from16 v36, v11
 
-    iget-object v11, v8, Lcom/android/server/am/OnePlusMemoryTracker$tsu;->zta:Ljava/lang/String;
+    iget-object v11, v9, Lcom/android/server/am/OnePlusMemoryTracker$tsu;->zta:Ljava/lang/String;
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1627,9 +1637,9 @@
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v10, v15}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v10, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_1
+    if-eqz v7, :cond_1
 
     const-string v11, " / activities)"
 
@@ -1643,325 +1653,338 @@
 
     invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v18
+    move-result-object v21
 
-    iget-object v8, v8, Lcom/android/server/am/OnePlusMemoryTracker$tsu;->zta:Ljava/lang/String;
+    iget-object v9, v9, Lcom/android/server/am/OnePlusMemoryTracker$tsu;->zta:Ljava/lang/String;
 
-    move-object/from16 v17, v9
+    move-object/from16 v20, v8
 
-    move-object/from16 v19, v8
+    move-object/from16 v22, v9
 
-    move-wide/from16 v20, v6
+    move-wide/from16 v23, v5
 
-    move-wide/from16 v22, v3
+    move-wide/from16 v25, v3
 
-    move/from16 v24, v15
+    move/from16 v27, v1
 
-    move/from16 v25, v0
+    move/from16 v28, v7
 
-    invoke-direct/range {v17 .. v25}, Lcom/android/server/am/OnePlusMemoryTracker$rtg;-><init>(Ljava/lang/String;Ljava/lang/String;JJIZ)V
+    invoke-direct/range {v20 .. v28}, Lcom/android/server/am/OnePlusMemoryTracker$rtg;-><init>(Ljava/lang/String;Ljava/lang/String;JJIZ)V
 
-    invoke-virtual {v2, v15, v9}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    invoke-virtual {v2, v1, v8}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    move/from16 v0, v29
+    const/16 v1, 0x384
 
-    const/4 v15, 0x0
+    if-lt v0, v1, :cond_2
+
+    add-long/2addr v15, v5
+
+    :cond_2
+    move/from16 v7, v33
+
+    const/4 v1, 0x0
 
     :goto_2
-    if-ge v15, v0, :cond_5
+    if-ge v1, v7, :cond_6
 
-    add-int/lit8 v8, v0, -0x1
+    add-int/lit8 v9, v7, -0x1
 
-    if-eq v15, v8, :cond_3
+    if-eq v1, v9, :cond_4
 
-    sget-object v8, Lcom/android/server/am/OnePlusMemoryTracker;->DUMP_MEM_OOM_ADJ:[I
+    sget-object v9, Lcom/android/server/am/OnePlusMemoryTracker;->DUMP_MEM_OOM_ADJ:[I
 
-    aget v10, v8, v15
+    aget v10, v9, v1
 
-    if-lt v1, v10, :cond_2
+    if-lt v0, v10, :cond_3
 
-    add-int/lit8 v10, v15, 0x1
+    add-int/lit8 v10, v1, 0x1
 
-    aget v8, v8, v10
+    aget v9, v9, v10
 
-    if-ge v1, v8, :cond_2
+    if-ge v0, v9, :cond_3
 
     goto :goto_3
 
-    :cond_2
-    add-int/lit8 v15, v15, 0x1
+    :cond_3
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    :cond_3
-    :goto_3
-    aget-wide v10, v5, v15
-
-    add-long/2addr v10, v6
-
-    aput-wide v10, v5, v15
-
-    aget-wide v6, v27, v15
-
-    add-long/2addr v6, v3
-
-    aput-wide v6, v27, v15
-
-    aget-object v1, v30, v15
-
-    if-nez v1, :cond_4
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    aput-object v1, v30, v15
-
     :cond_4
-    aget-object v1, v30, v15
+    :goto_3
+    aget-wide v9, v31, v1
 
-    invoke-virtual {v1, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    add-long/2addr v9, v5
+
+    aput-wide v9, v31, v1
+
+    aget-wide v5, v32, v1
+
+    add-long/2addr v5, v3
+
+    aput-wide v5, v32, v1
+
+    aget-object v0, v34, v1
+
+    if-nez v0, :cond_5
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    aput-object v0, v34, v1
 
     :cond_5
-    move-object/from16 v10, v31
+    aget-object v0, v34, v1
 
-    move-wide/from16 v11, v32
-
-    goto :goto_4
+    invoke-virtual {v0, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_6
-    move-object/from16 v31, v10
+    move-object/from16 v10, v35
 
-    move/from16 v0, v29
+    move-wide/from16 v11, v36
 
     goto :goto_4
 
     :cond_7
-    move-object/from16 v30, v3
+    move-object/from16 v35, v10
 
-    move v0, v4
+    move/from16 v7, v33
 
-    move-object/from16 v27, v6
+    goto :goto_4
 
-    move/from16 v28, v7
+    :cond_8
+    move-object/from16 v34, v3
+
+    move v7, v4
+
+    move-object/from16 v31, v5
+
+    move-object/from16 v32, v6
 
     :goto_4
-    add-int/lit8 v7, v28, -0x1
+    add-int/lit8 v0, v30, -0x1
 
-    move v4, v0
+    move v4, v7
 
-    move-object/from16 v1, v26
+    move-object/from16 v1, v29
 
-    move-object/from16 v6, v27
+    move-object/from16 v5, v31
 
-    move-object/from16 v3, v30
+    move-object/from16 v6, v32
+
+    move-object/from16 v3, v34
+
+    move v7, v0
 
     move-object/from16 v0, p0
 
     goto/16 :goto_0
 
-    :cond_8
-    move-object/from16 v26, v1
+    :cond_9
+    move-object/from16 v29, v1
 
-    move-object/from16 v30, v3
+    move-object/from16 v34, v3
 
-    move-object/from16 v27, v6
+    move v7, v4
 
-    move-object v1, v0
+    move-object/from16 v31, v5
 
-    move v0, v4
+    move-object/from16 v32, v6
 
-    iget-object v3, v1, Lcom/android/server/am/OnePlusMemoryTracker;->mProcessCpuTracker:Lcom/android/internal/os/ProcessCpuTracker;
+    iget-object v1, v0, Lcom/android/server/am/OnePlusMemoryTracker;->mProcessCpuTracker:Lcom/android/internal/os/ProcessCpuTracker;
 
-    if-nez v3, :cond_9
+    if-nez v1, :cond_a
 
-    new-instance v3, Lcom/android/internal/os/ProcessCpuTracker;
+    new-instance v1, Lcom/android/internal/os/ProcessCpuTracker;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, v3}, Lcom/android/internal/os/ProcessCpuTracker;-><init>(Z)V
+
+    iput-object v1, v0, Lcom/android/server/am/OnePlusMemoryTracker;->mProcessCpuTracker:Lcom/android/internal/os/ProcessCpuTracker;
+
+    invoke-virtual {v1}, Lcom/android/internal/os/ProcessCpuTracker;->init()V
+
+    :cond_a
+    iget-object v1, v0, Lcom/android/server/am/OnePlusMemoryTracker;->mProcessCpuTracker:Lcom/android/internal/os/ProcessCpuTracker;
+
+    monitor-enter v1
+
+    :try_start_0
+    iget-object v3, v0, Lcom/android/server/am/OnePlusMemoryTracker;->mProcessCpuTracker:Lcom/android/internal/os/ProcessCpuTracker;
+
+    invoke-virtual {v3}, Lcom/android/internal/os/ProcessCpuTracker;->countStats()I
+
+    move-result v3
 
     const/4 v4, 0x0
 
-    invoke-direct {v3, v4}, Lcom/android/internal/os/ProcessCpuTracker;-><init>(Z)V
-
-    iput-object v3, v1, Lcom/android/server/am/OnePlusMemoryTracker;->mProcessCpuTracker:Lcom/android/internal/os/ProcessCpuTracker;
-
-    invoke-virtual {v3}, Lcom/android/internal/os/ProcessCpuTracker;->init()V
-
-    :cond_9
-    iget-object v3, v1, Lcom/android/server/am/OnePlusMemoryTracker;->mProcessCpuTracker:Lcom/android/internal/os/ProcessCpuTracker;
-
-    monitor-enter v3
-
-    :try_start_0
-    iget-object v4, v1, Lcom/android/server/am/OnePlusMemoryTracker;->mProcessCpuTracker:Lcom/android/internal/os/ProcessCpuTracker;
-
-    invoke-virtual {v4}, Lcom/android/internal/os/ProcessCpuTracker;->countStats()I
-
-    move-result v4
-
-    const/4 v6, 0x0
-
     :goto_5
-    if-ge v6, v4, :cond_d
+    if-ge v4, v3, :cond_e
 
-    iget-object v7, v1, Lcom/android/server/am/OnePlusMemoryTracker;->mProcessCpuTracker:Lcom/android/internal/os/ProcessCpuTracker;
+    iget-object v5, v0, Lcom/android/server/am/OnePlusMemoryTracker;->mProcessCpuTracker:Lcom/android/internal/os/ProcessCpuTracker;
 
-    invoke-virtual {v7, v6}, Lcom/android/internal/os/ProcessCpuTracker;->getStats(I)Lcom/android/internal/os/ProcessCpuTracker$Stats;
+    invoke-virtual {v5, v4}, Lcom/android/internal/os/ProcessCpuTracker;->getStats(I)Lcom/android/internal/os/ProcessCpuTracker$Stats;
 
-    move-result-object v7
+    move-result-object v5
 
-    iget-wide v8, v7, Lcom/android/internal/os/ProcessCpuTracker$Stats;->vsize:J
+    iget-wide v8, v5, Lcom/android/internal/os/ProcessCpuTracker$Stats;->vsize:J
 
-    const-wide/16 v15, 0x0
+    const-wide/16 v17, 0x0
 
-    cmp-long v8, v8, v15
+    cmp-long v6, v8, v17
 
-    if-lez v8, :cond_c
+    if-lez v6, :cond_d
 
-    iget v8, v7, Lcom/android/internal/os/ProcessCpuTracker$Stats;->pid:I
+    iget v6, v5, Lcom/android/internal/os/ProcessCpuTracker$Stats;->pid:I
 
-    invoke-virtual {v2, v8}, Landroid/util/SparseArray;->indexOfKey(I)I
+    invoke-virtual {v2, v6}, Landroid/util/SparseArray;->indexOfKey(I)I
 
-    move-result v8
+    move-result v6
 
-    if-gez v8, :cond_c
+    if-gez v6, :cond_d
 
-    if-nez v10, :cond_a
+    if-nez v10, :cond_b
 
     new-instance v10, Landroid/os/Debug$MemoryInfo;
 
     invoke-direct {v10}, Landroid/os/Debug$MemoryInfo;-><init>()V
 
-    :cond_a
-    iget v8, v7, Lcom/android/internal/os/ProcessCpuTracker$Stats;->pid:I
+    :cond_b
+    iget v6, v5, Lcom/android/internal/os/ProcessCpuTracker$Stats;->pid:I
 
-    invoke-static {v8, v10}, Landroid/os/Debug;->getMemoryInfo(ILandroid/os/Debug$MemoryInfo;)Z
+    invoke-static {v6, v10}, Landroid/os/Debug;->getMemoryInfo(ILandroid/os/Debug$MemoryInfo;)Z
 
     invoke-virtual {v10}, Landroid/os/Debug$MemoryInfo;->getTotalPss()I
 
-    move-result v8
+    move-result v6
 
-    int-to-long v8, v8
+    int-to-long v8, v6
 
     invoke-virtual {v10}, Landroid/os/Debug$MemoryInfo;->getTotalSwappedOutPss()I
 
-    move-result v15
+    move-result v6
 
-    move-object/from16 v28, v2
+    move-object/from16 v30, v2
 
-    int-to-long v1, v15
+    move/from16 v33, v3
+
+    int-to-long v2, v6
 
     add-long/2addr v11, v8
 
-    add-long/2addr v13, v1
+    add-long/2addr v13, v2
 
-    new-instance v15, Lcom/android/server/am/OnePlusMemoryTracker$rtg;
+    new-instance v6, Lcom/android/server/am/OnePlusMemoryTracker$rtg;
 
-    move/from16 v29, v4
+    move-wide/from16 v35, v11
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    new-instance v11, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-wide/from16 v31, v11
+    iget-object v12, v5, Lcom/android/internal/os/ProcessCpuTracker$Stats;->name:Ljava/lang/String;
 
-    iget-object v11, v7, Lcom/android/internal/os/ProcessCpuTracker$Stats;->name:Ljava/lang/String;
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v12, " (pid "
 
-    const-string v11, " (pid "
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v12, v5, Lcom/android/internal/os/ProcessCpuTracker$Stats;->pid:I
 
-    iget v11, v7, Lcom/android/internal/os/ProcessCpuTracker$Stats;->pid:I
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v11}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-string v12, ")"
 
-    const-string v11, ")"
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v21
 
-    move-result-object v18
-
-    iget-object v4, v7, Lcom/android/internal/os/ProcessCpuTracker$Stats;->name:Ljava/lang/String;
+    iget-object v11, v5, Lcom/android/internal/os/ProcessCpuTracker$Stats;->name:Ljava/lang/String;
 
     invoke-virtual {v10}, Landroid/os/Debug$MemoryInfo;->getSummaryTotalSwapPss()I
 
-    move-result v11
+    move-result v12
 
-    int-to-long v11, v11
+    move-wide/from16 v37, v13
 
-    iget v7, v7, Lcom/android/internal/os/ProcessCpuTracker$Stats;->pid:I
+    int-to-long v12, v12
 
-    const/16 v25, 0x0
+    iget v5, v5, Lcom/android/internal/os/ProcessCpuTracker$Stats;->pid:I
 
-    move-object/from16 v17, v15
+    const/16 v28, 0x0
 
-    move-object/from16 v19, v4
+    move-object/from16 v20, v6
 
-    move-wide/from16 v20, v8
+    move-object/from16 v22, v11
 
-    move-wide/from16 v22, v11
+    move-wide/from16 v23, v8
 
-    move/from16 v24, v7
+    move-wide/from16 v25, v12
 
-    invoke-direct/range {v17 .. v25}, Lcom/android/server/am/OnePlusMemoryTracker$rtg;-><init>(Ljava/lang/String;Ljava/lang/String;JJIZ)V
+    move/from16 v27, v5
 
-    const/4 v4, 0x0
+    invoke-direct/range {v20 .. v28}, Lcom/android/server/am/OnePlusMemoryTracker$rtg;-><init>(Ljava/lang/String;Ljava/lang/String;JJIZ)V
 
-    aget-wide v11, v5, v4
+    const/4 v5, 0x0
+
+    aget-wide v11, v31, v5
 
     add-long/2addr v11, v8
 
-    aput-wide v11, v5, v4
+    aput-wide v11, v31, v5
 
-    aget-wide v7, v27, v4
+    aget-wide v8, v32, v5
 
-    add-long/2addr v7, v1
+    add-long/2addr v8, v2
 
-    aput-wide v7, v27, v4
+    aput-wide v8, v32, v5
 
-    aget-object v1, v30, v4
+    aget-object v2, v34, v5
 
-    if-nez v1, :cond_b
+    if-nez v2, :cond_c
 
-    new-instance v1, Ljava/util/ArrayList;
+    new-instance v2, Ljava/util/ArrayList;
 
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    aput-object v1, v30, v4
+    aput-object v2, v34, v5
 
-    :cond_b
-    aget-object v1, v30, v4
+    :cond_c
+    aget-object v2, v34, v5
 
-    invoke-virtual {v1, v15}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    move-wide/from16 v11, v31
+    move-wide/from16 v11, v35
+
+    move-wide/from16 v13, v37
 
     goto :goto_6
 
-    :cond_c
-    move-object/from16 v28, v2
+    :cond_d
+    move-object/from16 v30, v2
 
-    move/from16 v29, v4
+    move/from16 v33, v3
 
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
     :goto_6
-    add-int/lit8 v6, v6, 0x1
+    add-int/lit8 v4, v4, 0x1
 
-    move-object/from16 v1, p0
+    move-object/from16 v2, v30
 
-    move-object/from16 v2, v28
-
-    move/from16 v4, v29
+    move/from16 v3, v33
 
     goto/16 :goto_5
 
-    :cond_d
-    const/4 v4, 0x0
+    :cond_e
+    const/4 v5, 0x0
 
-    monitor-exit v3
+    monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1969,32 +1992,32 @@
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    move v15, v4
+    move v8, v5
 
     :goto_7
-    if-ge v15, v0, :cond_f
+    if-ge v8, v7, :cond_10
 
-    aget-wide v2, v5, v15
+    aget-wide v2, v31, v8
 
-    const-wide/16 v6, 0x0
+    const-wide/16 v4, 0x0
 
-    cmp-long v2, v2, v6
+    cmp-long v2, v2, v4
 
-    if-eqz v2, :cond_e
+    if-eqz v2, :cond_f
 
     sget-object v2, Lcom/android/server/am/OnePlusMemoryTracker;->DUMP_MEM_OOM_LABEL:[Ljava/lang/String;
 
-    aget-object v19, v2, v15
+    aget-object v19, v2, v8
 
     new-instance v2, Lcom/android/server/am/OnePlusMemoryTracker$rtg;
 
-    aget-wide v20, v5, v15
+    aget-wide v20, v31, v8
 
-    aget-wide v22, v27, v15
+    aget-wide v22, v32, v8
 
     sget-object v3, Lcom/android/server/am/OnePlusMemoryTracker;->DUMP_MEM_OOM_ADJ:[I
 
-    aget v24, v3, v15
+    aget v24, v3, v8
 
     move-object/from16 v17, v2
 
@@ -2002,40 +2025,38 @@
 
     invoke-direct/range {v17 .. v24}, Lcom/android/server/am/OnePlusMemoryTracker$rtg;-><init>(Ljava/lang/String;Ljava/lang/String;JJI)V
 
-    aget-object v3, v30, v15
+    aget-object v3, v34, v8
 
     iput-object v3, v2, Lcom/android/server/am/OnePlusMemoryTracker$rtg;->kth:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_e
-    add-int/lit8 v15, v15, 0x1
+    :cond_f
+    add-int/lit8 v8, v8, 0x1
 
     goto :goto_7
 
-    :cond_f
-    const-string v0, "Total PSS by OOM adjustment:\n"
-
-    move-object/from16 v2, v26
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-eqz p1, :cond_10
-
-    const-string v0, "OPMT"
-
-    const-string v3, "Total PSS by OOM adjustment:\n"
-
-    invoke-static {v0, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     :cond_10
-    move-object/from16 v0, p0
+    const-string v2, "Total PSS by OOM adjustment:\n"
 
+    move-object/from16 v3, v29
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    if-eqz p1, :cond_11
+
+    const-string v2, "OPMT"
+
+    const-string v4, "Total PSS by OOM adjustment:\n"
+
+    invoke-static {v2, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_11
     invoke-direct {v0, v1}, Lcom/android/server/am/OnePlusMemoryTracker;->getAllProcessMeminfo(Ljava/util/ArrayList;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     new-instance v1, Lcom/android/internal/util/MemInfoReader;
 
@@ -2043,15 +2064,15 @@
 
     invoke-virtual {v1}, Lcom/android/internal/util/MemInfoReader;->readMemInfo()V
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
     const/16 v4, 0x200
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v2, v4}, Ljava/lang/StringBuilder;-><init>(I)V
 
     const-string v4, "Total RAM: "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Lcom/android/internal/util/MemInfoReader;->getTotalSizeKb()J
 
@@ -2061,49 +2082,47 @@
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v4, "\n"
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v4, "Free RAM: "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Lcom/android/internal/util/MemInfoReader;->getCachedSizeKb()J
 
     move-result-wide v4
 
-    const-wide/16 v6, 0x0
-
-    add-long v8, v6, v4
+    add-long/2addr v4, v15
 
     invoke-virtual {v1}, Lcom/android/internal/util/MemInfoReader;->getFreeSizeKb()J
 
-    move-result-wide v4
+    move-result-wide v6
 
-    add-long/2addr v8, v4
+    add-long/2addr v4, v6
 
-    invoke-static {v8, v9}, Lcom/android/server/am/OnePlusMemoryTracker;->stringifyKBSize(J)Ljava/lang/String;
+    invoke-static {v4, v5}, Lcom/android/server/am/OnePlusMemoryTracker;->stringifyKBSize(J)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v4, "("
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v6, v7}, Lcom/android/server/am/OnePlusMemoryTracker;->stringifyKBSize(J)Ljava/lang/String;
+    invoke-static/range {v15 .. v16}, Lcom/android/server/am/OnePlusMemoryTracker;->stringifyKBSize(J)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v4, " cached pss + "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Lcom/android/internal/util/MemInfoReader;->getCachedSizeKb()J
 
@@ -2113,11 +2132,11 @@
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v4, " cached kernel + "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Lcom/android/internal/util/MemInfoReader;->getFreeSizeKb()J
 
@@ -2127,19 +2146,17 @@
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v4, " free)\n"
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v4, "Used RAM: "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-wide/16 v4, 0x0
-
-    sub-long v4, v11, v4
+    sub-long v4, v11, v15
 
     invoke-virtual {v1}, Lcom/android/internal/util/MemInfoReader;->getKernelUsedSizeKb()J
 
@@ -2151,21 +2168,21 @@
 
     move-result-object v6
 
-    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v6, "("
 
-    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-static {v4, v5}, Lcom/android/server/am/OnePlusMemoryTracker;->stringifyKBSize(J)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v4, " used pss + "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Lcom/android/internal/util/MemInfoReader;->getKernelUsedSizeKb()J
 
@@ -2175,11 +2192,11 @@
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v4, " kernel)\n"
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Lcom/android/internal/util/MemInfoReader;->getTotalSizeKb()J
 
@@ -2215,21 +2232,21 @@
 
     const-string v6, "Lost RAM: "
 
-    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-static {v4, v5}, Lcom/android/server/am/OnePlusMemoryTracker;->stringifyKBSize(J)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v4, "\n"
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v4, "ZRAM: "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Lcom/android/internal/util/MemInfoReader;->getZramTotalSizeKb()J
 
@@ -2239,11 +2256,11 @@
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v4, " physical used for "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Lcom/android/internal/util/MemInfoReader;->getSwapTotalSizeKb()J
 
@@ -2259,11 +2276,11 @@
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v4, " in swap ("
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Lcom/android/internal/util/MemInfoReader;->getSwapTotalSizeKb()J
 
@@ -2273,15 +2290,15 @@
 
     move-result-object v1
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, " total swap)"
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz p1, :cond_11
+    if-eqz p1, :cond_12
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -2289,20 +2306,20 @@
 
     invoke-static {v4, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_11
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_12
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-direct/range {p0 .. p0}, Lcom/android/server/am/OnePlusMemoryTracker;->getOtherMemoryUsage()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -2312,7 +2329,7 @@
     move-exception v0
 
     :try_start_1
-    monitor-exit v3
+    monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -2342,27 +2359,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, "========dumpsys media.drm=====\n"
+    const-string v1, "========dumpsys media.player=====\n"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, ""
-
-    filled-new-array {v1}, [Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "media.drm"
-
-    invoke-direct {p0, v3, v2}, Lcom/android/server/am/OnePlusMemoryTracker;->runDumpService(Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "========dumpsys media.player=====\n"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     filled-new-array {v1}, [Ljava/lang/String;
 
@@ -2618,257 +2619,164 @@
 .end method
 
 .method private reportAppEvent(Lcom/android/server/am/OnePlusMemoryTracker$tsu;)V
-    .locals 18
+    .locals 2
 
-    move-object/from16 v0, p0
+    sget-boolean v0, Lcom/android/server/am/OnePlusMemoryTracker;->sDebug:Z
 
-    move-object/from16 v1, p1
+    if-eqz v0, :cond_0
 
-    sget-boolean v2, Lcom/android/server/am/OnePlusMemoryTracker;->sDebug:Z
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "reportAppEvent: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "OPMT"
+
+    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    sget-boolean v0, Lcom/android/server/am/OnePlusMemoryTracker;->sMdm:Z
+
+    if-eqz v0, :cond_1
+
+    invoke-direct {p0, p1}, Lcom/android/server/am/OnePlusMemoryTracker;->reportToMDM(Lcom/android/server/am/OnePlusMemoryTracker$tsu;)V
+
+    :cond_1
+    return-void
+.end method
+
+.method private reportCritical(Lcom/android/server/am/ProcessRecord;)V
+    .locals 7
+
+    sget-boolean v0, Lcom/android/server/am/OnePlusMemoryTracker;->sReport:Z
+
+    if-eqz v0, :cond_6
+
+    iget-boolean v0, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mStartReportNoCache:Z
+
+    if-eqz v0, :cond_6
+
+    if-eqz p1, :cond_6
+
+    iget p1, p1, Lcom/android/server/am/ProcessRecord;->setAdj:I
+
+    const/16 v0, 0x2bc
+
+    if-gt p1, v0, :cond_6
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v1
+
+    iget-wide v3, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mLastReportCriticalTime:J
+
+    const-wide/16 v5, 0x0
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_0
+
+    sub-long v3, v1, v3
+
+    sget-wide v5, Lcom/android/server/am/OnePlusMemoryTracker;->sReportInterval:J
+
+    cmp-long p1, v3, v5
+
+    if-lez p1, :cond_6
+
+    :cond_0
+    iget-boolean p1, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mIsDumping:Z
 
     const-string v3, "OPMT"
 
-    if-eqz v2, :cond_0
+    if-eqz p1, :cond_2
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    sget-boolean p0, Lcom/android/server/am/OnePlusMemoryTracker;->DEBUG_MODE:Z
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    if-eqz p0, :cond_1
 
-    const-string v4, "reportAppEvent: "
+    const-string p0, "Dumping memory now, skip this time"
 
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v3, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    sget-boolean v2, Lcom/android/server/am/OnePlusMemoryTracker;->sMdm:Z
-
-    if-eqz v2, :cond_1
-
-    invoke-direct/range {p0 .. p1}, Lcom/android/server/am/OnePlusMemoryTracker;->reportToMDM(Lcom/android/server/am/OnePlusMemoryTracker$tsu;)V
+    invoke-static {v3, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
-    sget-boolean v2, Lcom/android/server/am/OnePlusMemoryTracker;->sDropbox:Z
-
-    const/4 v4, 0x1
-
-    const-string v5, ", pid="
-
-    const-string v6, ", uid="
-
-    const-string v7, "ignore this dropbox event cause too freq! ["
-
-    const/16 v8, 0x2bc
-
-    const/4 v9, 0x0
-
-    const-wide/16 v10, 0x0
-
-    if-eqz v2, :cond_6
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v12
-
-    iget-wide v14, v0, Lcom/android/server/am/OnePlusMemoryTracker;->mLastReportTime:J
-
-    cmp-long v2, v14, v10
-
-    if-eqz v2, :cond_4
-
-    sub-long v14, v12, v14
-
-    sget-wide v16, Lcom/android/server/am/OnePlusMemoryTracker;->sReportInterval:J
-
-    cmp-long v2, v14, v16
-
-    if-gez v2, :cond_4
-
-    if-eqz v1, :cond_2
-
-    iget v2, v1, Lcom/android/server/am/OnePlusMemoryTracker$tsu;->rtg:I
-
-    if-gt v2, v8, :cond_2
-
-    iget-boolean v2, v0, Lcom/android/server/am/OnePlusMemoryTracker;->mCriticalReport:Z
-
-    if-nez v2, :cond_2
-
-    iput-boolean v4, v0, Lcom/android/server/am/OnePlusMemoryTracker;->mCriticalReport:Z
-
-    goto :goto_0
+    return-void
 
     :cond_2
-    sget-boolean v0, Lcom/android/server/am/OnePlusMemoryTracker;->sDebug:Z
+    const/4 p1, 0x1
 
-    if-eqz v0, :cond_3
+    iput-boolean p1, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mIsDumping:Z
 
-    if-eqz v1, :cond_3
+    invoke-direct {p0}, Lcom/android/server/am/OnePlusMemoryTracker;->getLruApps()V
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v4, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mLruApps:Ljava/util/ArrayList;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v1, Lcom/android/server/am/OnePlusMemoryTracker$tsu;->zta:Ljava/lang/String;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v2, v1, Lcom/android/server/am/OnePlusMemoryTracker$tsu;->you:I
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, v1, Lcom/android/server/am/OnePlusMemoryTracker$tsu;->sis:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v3, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    move-result-object v4
 
     :cond_3
-    return-void
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_5
+
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lcom/android/server/am/OnePlusMemoryTracker$tsu;
+
+    iget v5, v5, Lcom/android/server/am/OnePlusMemoryTracker$tsu;->rtg:I
+
+    if-le v5, v0, :cond_3
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mCriticalReport:Z
+
+    iput-boolean p1, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mIsDumping:Z
+
+    sget-boolean p0, Lcom/android/server/am/OnePlusMemoryTracker;->sDebug:Z
+
+    if-eqz p0, :cond_4
+
+    const-string p0, "Skip this critical report, still has process adj > 700"
+
+    invoke-static {v3, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_4
-    iget-wide v14, v0, Lcom/android/server/am/OnePlusMemoryTracker;->mLastReportTime:J
-
-    cmp-long v2, v14, v10
-
-    if-eqz v2, :cond_5
-
-    sub-long v14, v12, v14
-
-    sget-wide v16, Lcom/android/server/am/OnePlusMemoryTracker;->sReportInterval:J
-
-    cmp-long v2, v14, v16
-
-    if-ltz v2, :cond_5
-
-    iput-boolean v9, v0, Lcom/android/server/am/OnePlusMemoryTracker;->mCriticalReport:Z
+    return-void
 
     :cond_5
-    :goto_0
-    iput-wide v12, v0, Lcom/android/server/am/OnePlusMemoryTracker;->mLastReportTime:J
-
-    invoke-direct/range {p0 .. p1}, Lcom/android/server/am/OnePlusMemoryTracker;->doWriteLogToDropbox(Lcom/android/server/am/OnePlusMemoryTracker$tsu;)V
-
-    :cond_6
-    sget-boolean v2, Lcom/android/server/am/OnePlusMemoryTracker;->sReport:Z
-
-    if-eqz v2, :cond_b
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v12
-
-    iget-wide v14, v0, Lcom/android/server/am/OnePlusMemoryTracker;->mLastReportTime:J
-
-    cmp-long v2, v14, v10
-
-    if-eqz v2, :cond_9
-
-    sub-long v14, v12, v14
-
-    sget-wide v16, Lcom/android/server/am/OnePlusMemoryTracker;->sReportInterval:J
-
-    cmp-long v2, v14, v16
-
-    if-gez v2, :cond_9
-
-    if-eqz v1, :cond_7
-
-    iget v2, v1, Lcom/android/server/am/OnePlusMemoryTracker$tsu;->rtg:I
-
-    if-gt v2, v8, :cond_7
-
-    iget-boolean v2, v0, Lcom/android/server/am/OnePlusMemoryTracker;->mCriticalReport:Z
-
-    if-nez v2, :cond_7
-
-    iput-boolean v4, v0, Lcom/android/server/am/OnePlusMemoryTracker;->mCriticalReport:Z
-
-    goto :goto_1
-
-    :cond_7
-    sget-boolean v0, Lcom/android/server/am/OnePlusMemoryTracker;->sDebug:Z
-
-    if-eqz v0, :cond_8
-
-    if-eqz v1, :cond_8
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v1, Lcom/android/server/am/OnePlusMemoryTracker$tsu;->zta:Ljava/lang/String;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v2, v1, Lcom/android/server/am/OnePlusMemoryTracker$tsu;->you:I
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, v1, Lcom/android/server/am/OnePlusMemoryTracker$tsu;->sis:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "Dump critical low memory"
 
     invoke-static {v3, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_8
-    return-void
+    iput-boolean p1, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mCriticalReport:Z
 
-    :cond_9
-    iget-wide v2, v0, Lcom/android/server/am/OnePlusMemoryTracker;->mLastReportTime:J
+    iput-wide v1, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mLastReportCriticalTime:J
 
-    cmp-long v4, v2, v10
+    const/4 p1, 0x0
 
-    if-eqz v4, :cond_a
+    invoke-direct {p0, p1}, Lcom/android/server/am/OnePlusMemoryTracker;->doWriteLogToDropbox(Lcom/android/server/am/OnePlusMemoryTracker$tsu;)V
 
-    sub-long v2, v12, v2
-
-    sget-wide v4, Lcom/android/server/am/OnePlusMemoryTracker;->sReportInterval:J
-
-    cmp-long v2, v2, v4
-
-    if-ltz v2, :cond_a
-
-    iput-boolean v9, v0, Lcom/android/server/am/OnePlusMemoryTracker;->mCriticalReport:Z
-
-    :cond_a
-    :goto_1
-    iput-wide v12, v0, Lcom/android/server/am/OnePlusMemoryTracker;->mLastReportTime:J
-
-    invoke-direct/range {p0 .. p1}, Lcom/android/server/am/OnePlusMemoryTracker;->doWriteLogToDropbox(Lcom/android/server/am/OnePlusMemoryTracker$tsu;)V
-
-    :cond_b
+    :cond_6
     return-void
 .end method
 
 .method private reportMemoryDump(II)V
-    .locals 9
+    .locals 8
 
     sget-boolean v0, Lcom/android/server/am/OnePlusMemoryTracker;->sReport:Z
 
@@ -2886,25 +2794,44 @@
     return-void
 
     :cond_1
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_8
 
-    iget-boolean v0, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mFirstReport:Z
+    iget-boolean v0, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mStartReportNoCache:Z
 
-    const/4 v1, 0x0
+    const-string v1, "OPMT"
 
-    if-eqz v0, :cond_2
+    if-nez v0, :cond_3
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    sget-boolean p1, Lcom/android/server/am/OnePlusMemoryTracker;->DEBUG_MODE:Z
 
-    move-result-wide p1
+    if-eqz p1, :cond_2
 
-    iput-wide p1, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mLastReportTime:J
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    iput-boolean v1, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mFirstReport:Z
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    return-void
+    const-string p2, "mStartReportNoCache is "
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean p0, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mStartReportNoCache:Z
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string p0, ", please wait"
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
+    return-void
+
+    :cond_3
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
@@ -2915,41 +2842,57 @@
 
     cmp-long v0, v4, v6
 
-    const-string v6, "OPMT"
-
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
     sub-long v4, v2, v4
 
-    sget-wide v7, Lcom/android/server/am/OnePlusMemoryTracker;->sReportInterval:J
+    sget-wide v6, Lcom/android/server/am/OnePlusMemoryTracker;->sReportInterval:J
 
-    cmp-long v0, v4, v7
+    cmp-long v0, v4, v6
 
-    if-gez v0, :cond_4
+    if-gez v0, :cond_5
 
     sget-boolean p0, Lcom/android/server/am/OnePlusMemoryTracker;->DEBUG_MODE:Z
 
-    if-eqz p0, :cond_3
+    if-eqz p0, :cond_4
 
     const-string p0, "ignore this dropbox event cause too freq"
 
-    invoke-static {v6, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_3
-    return-void
+    invoke-static {v1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_4
-    iput-wide v2, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mLastReportTime:J
+    return-void
 
-    iput-boolean v1, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mCriticalReport:Z
+    :cond_5
+    iget-boolean v0, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mIsDumping:Z
+
+    if-eqz v0, :cond_7
+
+    sget-boolean p0, Lcom/android/server/am/OnePlusMemoryTracker;->DEBUG_MODE:Z
+
+    if-eqz p0, :cond_6
+
+    const-string p0, "Dumping memory now, skip this time"
+
+    invoke-static {v1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_6
+    return-void
+
+    :cond_7
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mIsDumping:Z
+
+    iput-wide v2, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mLastReportTime:J
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "numCached : "
+    const-string v2, "numCached : "
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2963,13 +2906,15 @@
 
     move-result-object p1
 
-    invoke-static {v6, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-direct {p0}, Lcom/android/server/am/OnePlusMemoryTracker;->getLruApps()V
 
     const/4 p1, 0x0
 
     invoke-direct {p0, p1}, Lcom/android/server/am/OnePlusMemoryTracker;->doWriteLogToDropbox(Lcom/android/server/am/OnePlusMemoryTracker$tsu;)V
 
-    :cond_5
+    :cond_8
     return-void
 .end method
 
@@ -3669,402 +3614,390 @@
 .end method
 
 .method private writeLogToDropbox(Lcom/android/server/am/OnePlusMemoryTracker$tsu;)V
-    .locals 17
+    .locals 16
 
     move-object/from16 v0, p0
 
-    move-object/from16 v1, p1
+    iget-object v1, v0, Lcom/android/server/am/OnePlusMemoryTracker;->mContext:Landroid/content/Context;
 
-    iget-object v2, v0, Lcom/android/server/am/OnePlusMemoryTracker;->mContext:Landroid/content/Context;
-
-    if-nez v2, :cond_0
+    if-nez v1, :cond_0
 
     return-void
 
     :cond_0
-    const-string v2, "OPMT"
+    const-string v1, "OPMT"
 
-    const-string v3, "start log."
+    const-string v2, "start log."
 
-    invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-string v3, "persist.sys.opmt.copyion"
+    const-string v2, "persist.sys.opmt.copyion"
 
-    const-string v4, "1"
+    const-string v3, "1"
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    move-result-wide v3
+    move-result-wide v2
 
-    iget-object v5, v0, Lcom/android/server/am/OnePlusMemoryTracker;->mProcessCpuTracker:Lcom/android/internal/os/ProcessCpuTracker;
+    iget-object v4, v0, Lcom/android/server/am/OnePlusMemoryTracker;->mProcessCpuTracker:Lcom/android/internal/os/ProcessCpuTracker;
 
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
-    if-nez v5, :cond_1
+    if-nez v4, :cond_1
 
-    new-instance v5, Lcom/android/internal/os/ProcessCpuTracker;
+    new-instance v4, Lcom/android/internal/os/ProcessCpuTracker;
 
-    invoke-direct {v5, v6}, Lcom/android/internal/os/ProcessCpuTracker;-><init>(Z)V
+    invoke-direct {v4, v5}, Lcom/android/internal/os/ProcessCpuTracker;-><init>(Z)V
 
-    iput-object v5, v0, Lcom/android/server/am/OnePlusMemoryTracker;->mProcessCpuTracker:Lcom/android/internal/os/ProcessCpuTracker;
+    iput-object v4, v0, Lcom/android/server/am/OnePlusMemoryTracker;->mProcessCpuTracker:Lcom/android/internal/os/ProcessCpuTracker;
 
-    invoke-virtual {v5}, Lcom/android/internal/os/ProcessCpuTracker;->init()V
+    invoke-virtual {v4}, Lcom/android/internal/os/ProcessCpuTracker;->init()V
 
     goto :goto_0
 
     :cond_1
-    invoke-virtual {v5}, Lcom/android/internal/os/ProcessCpuTracker;->update()V
+    invoke-virtual {v4}, Lcom/android/internal/os/ProcessCpuTracker;->update()V
 
     :goto_0
-    iget-object v5, v0, Lcom/android/server/am/OnePlusMemoryTracker;->mContext:Landroid/content/Context;
+    iget-object v4, v0, Lcom/android/server/am/OnePlusMemoryTracker;->mContext:Landroid/content/Context;
 
-    const-string v7, "dropbox"
+    const-string v6, "dropbox"
 
-    invoke-virtual {v5, v7}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v4, v6}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result-object v5
+    move-result-object v4
 
-    check-cast v5, Landroid/os/DropBoxManager;
+    check-cast v4, Landroid/os/DropBoxManager;
 
-    new-instance v7, Ljava/lang/StringBuilder;
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    const/16 v8, 0x2000
+    const/16 v7, 0x2000
 
-    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->length()I
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->length()I
 
-    move-result v8
+    move-result v7
 
-    new-instance v8, Ljava/util/Date;
+    new-instance v7, Ljava/util/Date;
 
-    invoke-direct {v8}, Ljava/util/Date;-><init>()V
+    invoke-direct {v7}, Ljava/util/Date;-><init>()V
 
-    new-instance v9, Ljava/text/SimpleDateFormat;
+    new-instance v8, Ljava/text/SimpleDateFormat;
 
-    const-string v10, "yyyy-MM-dd HH:mm:ss"
+    const-string v9, "yyyy-MM-dd HH:mm:ss"
 
-    invoke-direct {v9, v10}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
+    invoke-direct {v8, v9}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    const-string v10, "ro.build.display.id"
+    const-string v9, "ro.build.display.id"
+
+    invoke-static {v9}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v9
+
+    const-string v10, "ro.build.fingerprint"
 
     invoke-static {v10}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
-    const-string v11, "ro.build.fingerprint"
+    const-string v11, "ro.build.version.sdk"
 
     invoke-static {v11}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v11
 
-    const-string v12, "ro.build.version.sdk"
+    const-string v12, "ro.product.model"
 
     invoke-static {v12}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v12
 
-    const-string v13, "ro.product.model"
+    const-string v13, "persist.sys.timezone"
 
     invoke-static {v13}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v13
 
-    const-string v14, "persist.sys.timezone"
+    const-string v14, "========================================================\n"
 
-    invoke-static {v14}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v6, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v14
+    new-instance v15, Ljava/lang/StringBuilder;
 
-    const-string v15, "========================================================\n"
-
-    invoke-virtual {v7, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
-    move-object/from16 v16, v5
+    invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v5, "== dumpstate: "
 
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9, v8}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+    invoke-virtual {v8, v7}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const/16 v5, 0xa
 
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v7
 
-    invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v7, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v8, "Build: "
 
-    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v7
 
-    invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v8, "Build fingerprint: \'"
 
-    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const/16 v8, 0x27
 
-    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v7
 
-    invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v8, "DeviceTotalMemory: "
 
-    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-direct/range {p0 .. p0}, Lcom/android/server/am/OnePlusMemoryTracker;->getDeviceTotalMemory()Ljava/lang/String;
 
     move-result-object v8
 
-    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v7
 
-    invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v8, "[ro.build.version.sdk]: ["
 
-    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const/16 v8, 0x5d
 
-    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v7
 
-    invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v9, "[ro.product.model]: ["
 
-    invoke-virtual {v6, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v7
 
-    invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v9, "[persist.sys.timezone]: ["
 
-    invoke-virtual {v6, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v1, :cond_2
+    if-eqz p1, :cond_2
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "current event: "
+    const-string v7, "current event: "
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/am/OnePlusMemoryTracker$tsu;->toString()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v7
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v6, "\n"
+    const-string v7, "\n"
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_2
-    invoke-virtual {v7, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const/4 v5, 0x0
 
     invoke-direct {v0, v5}, Lcom/android/server/am/OnePlusMemoryTracker;->getMemoryInfo(Z)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v7
 
-    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "\nDump meminfo took: "
+    const-string v7, "\nDump meminfo took: "
 
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v5
-
-    sub-long/2addr v5, v3
-
-    const-wide/16 v8, 0x3e8
-
-    div-long/2addr v5, v8
-
-    invoke-virtual {v0, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v5, "s\n"
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-boolean v0, Lcom/android/server/am/OnePlusMemoryTracker;->sDebug:Z
-
-    if-eqz v0, :cond_3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "dump info took: "
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    move-result-wide v5
+    move-result-wide v7
 
-    sub-long/2addr v5, v3
+    sub-long/2addr v7, v2
 
-    div-long/2addr v5, v8
+    const-wide/16 v9, 0x3e8
 
-    invoke-virtual {v0, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    div-long/2addr v7, v9
 
-    const-string v3, "s"
+    invoke-virtual {v5, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v7, "s\n"
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-static {v2, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    move-result-object v5
+
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-boolean v5, Lcom/android/server/am/OnePlusMemoryTracker;->sDebug:Z
+
+    if-eqz v5, :cond_3
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "dump info took: "
+
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v7
+
+    sub-long/2addr v7, v2
+
+    div-long/2addr v7, v9
+
+    invoke-virtual {v5, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v2, "s"
+
+    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_3
+    iget-boolean v1, v0, Lcom/android/server/am/OnePlusMemoryTracker;->mCriticalReport:Z
+
     if-eqz v1, :cond_4
 
-    iget v0, v1, Lcom/android/server/am/OnePlusMemoryTracker$tsu;->rtg:I
-
-    const/16 v1, 0x2bc
-
-    if-le v0, v1, :cond_5
-
-    :cond_4
-    sget-boolean v0, Lcom/android/server/am/OnePlusMemoryTracker;->sDebugCritical:Z
-
-    if-eqz v0, :cond_6
-
-    :cond_5
-    const-string v0, "critical_low_memory_tracker"
+    const-string v1, "critical_low_memory_tracker"
 
     goto :goto_1
 
-    :cond_6
-    const-string v0, "memory_tracker"
+    :cond_4
+    const-string v1, "memory_tracker"
 
     :goto_1
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    move-object/from16 v5, v16
+    invoke-virtual {v4, v1, v2}, Landroid/os/DropBoxManager;->addText(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v5, v0, v1}, Landroid/os/DropBoxManager;->addText(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v1, 0x0
+
+    iput-boolean v1, v0, Lcom/android/server/am/OnePlusMemoryTracker;->mCriticalReport:Z
 
     return-void
 .end method
@@ -4152,6 +4085,8 @@
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
+    invoke-direct {p0, p1}, Lcom/android/server/am/OnePlusMemoryTracker;->reportCritical(Lcom/android/server/am/ProcessRecord;)V
+
     iget-boolean v0, p1, Lcom/android/server/am/ProcessRecord;->hasShownUi:Z
 
     if-nez v0, :cond_1

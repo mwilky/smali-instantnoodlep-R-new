@@ -74,6 +74,8 @@
 
 .field private mAppOpsChangedListener:Landroid/app/AppOpsManager$OnOpChangedListener;
 
+.field private final mConfigLock:Ljava/lang/Object;
+
 .field private mContext:Landroid/content/Context;
 
 .field private final mGeneralAppConfig:Lcom/android/server/am/OpForceDarkController$ssp;
@@ -81,6 +83,16 @@
 .field private final mGlobalFallbackConfig:Lcom/android/server/am/OpForceDarkController$cno;
 
 .field private mHandler:Landroid/os/Handler;
+
+.field private final mIgnoreApps:Ljava/util/HashSet;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashSet<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field private mIsInit:Z
 
@@ -202,6 +214,18 @@
 
     iput-object v0, p0, Lcom/android/server/am/OpForceDarkController;->mRefinedEffectiveConfigs:Landroid/util/LruCache;
 
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lcom/android/server/am/OpForceDarkController;->mConfigLock:Ljava/lang/Object;
+
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    iput-object v0, p0, Lcom/android/server/am/OpForceDarkController;->mIgnoreApps:Ljava/util/HashSet;
+
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/android/server/am/OpForceDarkController;->mLastChangeTime:J
@@ -297,30 +321,26 @@
     return-void
 .end method
 
-.method static synthetic access$1600(Lcom/android/server/am/OpForceDarkController;Ljava/lang/String;I)I
+.method static synthetic access$1600(Lcom/android/server/am/OpForceDarkController;)Landroid/content/Context;
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/android/server/am/OpForceDarkController;->getPackageUid(Ljava/lang/String;I)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method static synthetic access$1700(Lcom/android/server/am/OpForceDarkController;I)Ljava/lang/String;
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/server/am/OpForceDarkController;->debugGetStateDesc(I)Ljava/lang/String;
-
-    move-result-object p0
+    iget-object p0, p0, Lcom/android/server/am/OpForceDarkController;->mContext:Landroid/content/Context;
 
     return-object p0
 .end method
 
-.method static synthetic access$1800(Lcom/android/server/am/OpForceDarkController;)Landroid/content/Context;
+.method static synthetic access$1800(Lcom/android/server/am/OpForceDarkController;Lcom/android/server/am/OpForceDarkController$ssp;I)V
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/am/OpForceDarkController;->mContext:Landroid/content/Context;
+    invoke-direct {p0, p1, p2}, Lcom/android/server/am/OpForceDarkController;->scheduleNotifyChangedApp(Lcom/android/server/am/OpForceDarkController$ssp;I)V
+
+    return-void
+.end method
+
+.method static synthetic access$1900(Lcom/android/server/am/OpForceDarkController;)Lcom/android/server/am/OpForceDarkController$cno;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/server/am/OpForceDarkController;->mGlobalFallbackConfig:Lcom/android/server/am/OpForceDarkController$cno;
 
     return-object p0
 .end method
@@ -333,18 +353,18 @@
     return-void
 .end method
 
-.method static synthetic access$2000(Lcom/android/server/am/OpForceDarkController;Lcom/android/server/am/OpForceDarkController$ssp;I)V
+.method static synthetic access$2000(Lcom/android/server/am/OpForceDarkController;)Ljava/lang/Object;
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/android/server/am/OpForceDarkController;->scheduleNotifyChangedApp(Lcom/android/server/am/OpForceDarkController$ssp;I)V
+    iget-object p0, p0, Lcom/android/server/am/OpForceDarkController;->mConfigLock:Ljava/lang/Object;
 
-    return-void
+    return-object p0
 .end method
 
-.method static synthetic access$2100(Lcom/android/server/am/OpForceDarkController;)Lcom/android/server/am/OpForceDarkController$cno;
+.method static synthetic access$2100(Lcom/android/server/am/OpForceDarkController;)Ljava/util/HashSet;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/am/OpForceDarkController;->mGlobalFallbackConfig:Lcom/android/server/am/OpForceDarkController$cno;
+    iget-object p0, p0, Lcom/android/server/am/OpForceDarkController;->mIgnoreApps:Ljava/util/HashSet;
 
     return-object p0
 .end method
@@ -401,75 +421,6 @@
     iget-object p0, p0, Lcom/android/server/am/OpForceDarkController;->mAppOps:Landroid/app/AppOpsManager;
 
     return-object p0
-.end method
-
-.method private cacheEffectiveConfig(Lcom/android/server/am/OpForceDarkController$ssp;)V
-    .locals 3
-
-    if-nez p1, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lcom/android/server/am/OpForceDarkController;->mRefinedEffectiveConfigs:Landroid/util/LruCache;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Lcom/android/server/am/OpForceDarkController;->mRefinedEffectiveConfigs:Landroid/util/LruCache;
-
-    invoke-virtual {p1}, Lcom/android/server/am/OpForceDarkController$ssp;->gck()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2, p1}, Landroid/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "+++++ Add Efftive "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Lcom/android/server/am/OpForceDarkController$ssp;->tsu()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, ", Current Count = "
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p1, p0, Lcom/android/server/am/OpForceDarkController;->mRefinedEffectiveConfigs:Landroid/util/LruCache;
-
-    invoke-virtual {p1}, Landroid/util/LruCache;->size()I
-
-    move-result p1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 v1, 0x1
-
-    invoke-direct {p0, p1, v1}, Lcom/android/server/am/OpForceDarkController;->debugLog(Ljava/lang/String;Z)V
-
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
 .end method
 
 .method private debugGetStateDesc(I)Ljava/lang/String;
@@ -986,7 +937,7 @@
 .end method
 
 .method private getUserVisiblePackages()Ljava/util/HashSet;
-    .locals 9
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -1019,57 +970,31 @@
 
     move-result-object v4
 
-    move v5, v2
-
     :cond_0
     :goto_0
     invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v6
+    move-result v5
 
-    if-eqz v6, :cond_1
+    if-eqz v5, :cond_1
 
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v6
-
-    check-cast v6, Landroid/content/pm/PackageInfo;
-
-    iget-object v7, v6, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {v3, v7}, Landroid/content/pm/PackageManager;->getLaunchIntentForPackage(Ljava/lang/String;)Landroid/content/Intent;
-
-    move-result-object v7
-
-    if-eqz v7, :cond_0
-
-    iget-object v7, v6, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {v1, v7}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
-
-    add-int/lit8 v8, v5, 0x1
-
-    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v5, " Visible "
-
-    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v5, v6, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
     move-result-object v5
 
-    invoke-direct {p0, v5, v2}, Lcom/android/server/am/OpForceDarkController;->debugLog(Ljava/lang/String;Z)V
+    check-cast v5, Landroid/content/pm/PackageInfo;
 
-    move v5, v8
+    iget-object v6, v5, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v3, v6}, Landroid/content/pm/PackageManager;->getLaunchIntentForPackage(Ljava/lang/String;)Landroid/content/Intent;
+
+    move-result-object v6
+
+    if-eqz v6, :cond_0
+
+    iget-object v5, v5, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v1, v5}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
@@ -1521,6 +1446,34 @@
 
     :cond_1
     return v0
+.end method
+
+.method private ignoreApp(Ljava/lang/String;)Z
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/am/OpForceDarkController;->mConfigLock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object p0, p0, Lcom/android/server/am/OpForceDarkController;->mIgnoreApps:Ljava/util/HashSet;
+
+    invoke-virtual {p0, p1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    monitor-exit v0
+
+    return p0
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
 .end method
 
 .method private initAppOps()V
@@ -2791,155 +2744,210 @@
 .end method
 
 .method private updatePkgAppOps(Ljava/lang/String;II)V
-    .locals 6
+    .locals 7
 
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    if-nez v0, :cond_7
+    if-nez v0, :cond_8
 
     iget-object v0, p0, Lcom/android/server/am/OpForceDarkController;->mAppOps:Landroid/app/AppOpsManager;
 
     if-nez v0, :cond_0
 
-    goto/16 :goto_2
+    goto/16 :goto_4
 
     :cond_0
-    const/4 v0, -0x1
+    invoke-direct {p0, p1}, Lcom/android/server/am/OpForceDarkController;->ignoreApp(Ljava/lang/String;)Z
 
-    if-ne p2, v0, :cond_1
+    move-result v0
+
+    const/4 v1, -0x1
+
+    if-ne p2, v1, :cond_1
 
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
-    move-result v0
+    move-result v1
 
-    invoke-direct {p0, p1, v0}, Lcom/android/server/am/OpForceDarkController;->updatePkgAppOpsForUser(Ljava/lang/String;I)V
+    invoke-direct {p0, p1, v1}, Lcom/android/server/am/OpForceDarkController;->updatePkgAppOpsForUser(Ljava/lang/String;I)V
 
     :cond_1
-    iget-object v0, p0, Lcom/android/server/am/OpForceDarkController;->mAppOps:Landroid/app/AppOpsManager;
+    iget-object v1, p0, Lcom/android/server/am/OpForceDarkController;->mAppOps:Landroid/app/AppOpsManager;
 
-    const/16 v1, 0x3f2
+    const/16 v2, 0x3f2
 
-    invoke-virtual {v0, v1, p2, p1}, Landroid/app/AppOpsManager;->checkOpNoThrow(IILjava/lang/String;)I
+    invoke-virtual {v1, v2, p2, p1}, Landroid/app/AppOpsManager;->checkOpNoThrow(IILjava/lang/String;)I
 
-    move-result v0
+    move-result v1
 
+    const/4 v3, 0x1
+
+    if-eqz v0, :cond_3
+
+    if-eq v1, v3, :cond_2
+
+    new-instance p3, Ljava/lang/StringBuilder;
+
+    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "Reset "
+
+    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", drop "
+
+    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p3
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p3, v0}, Lcom/android/server/am/OpForceDarkController;->debugLog(Ljava/lang/String;Z)V
+
+    :cond_2
+    iget-object v0, p0, Lcom/android/server/am/OpForceDarkController;->mRefinedEffectiveConfigs:Landroid/util/LruCache;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object p3, p0, Lcom/android/server/am/OpForceDarkController;->mRefinedEffectiveConfigs:Landroid/util/LruCache;
+
+    invoke-virtual {p3, p1}, Landroid/util/LruCache;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iget-object p0, p0, Lcom/android/server/am/OpForceDarkController;->mAppOps:Landroid/app/AppOpsManager;
+
+    invoke-virtual {p0, v2, p2, p1, v3}, Landroid/app/AppOpsManager;->setMode(IILjava/lang/String;I)V
+
+    goto :goto_3
+
+    :catchall_0
+    move-exception p0
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p0
+
+    :cond_3
     invoke-direct {p0, p1}, Lcom/android/server/am/OpForceDarkController;->getCopyOfRawConfigForApp(Ljava/lang/String;)Lcom/android/server/am/OpForceDarkController$ssp;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v2, v0, p2}, Lcom/android/server/am/OpForceDarkController$ssp;->ugm(II)I
-
-    move-result v3
-
-    if-ne v3, v0, :cond_3
-
-    invoke-direct {p0, v2}, Lcom/android/server/am/OpForceDarkController;->isNewDifferentConfig(Lcom/android/server/am/OpForceDarkController$ssp;)Z
+    invoke-virtual {v0, v1, p2}, Lcom/android/server/am/OpForceDarkController$ssp;->ugm(II)I
 
     move-result v4
 
-    if-eqz v4, :cond_2
+    if-ne v4, v1, :cond_5
 
-    goto :goto_0
+    invoke-direct {p0, v0}, Lcom/android/server/am/OpForceDarkController;->isNewDifferentConfig(Lcom/android/server/am/OpForceDarkController$ssp;)Z
 
-    :cond_2
-    const/16 v4, 0x3e7
+    move-result v5
 
-    if-ne p3, v4, :cond_4
+    if-eqz v5, :cond_4
 
     goto :goto_1
 
-    :cond_3
-    :goto_0
-    invoke-direct {p0, v2}, Lcom/android/server/am/OpForceDarkController;->cacheEffectiveConfig(Lcom/android/server/am/OpForceDarkController$ssp;)V
-
-    :goto_1
-    invoke-direct {p0, v2, p2}, Lcom/android/server/am/OpForceDarkController;->scheduleNotifyChangedApp(Lcom/android/server/am/OpForceDarkController$ssp;I)V
-
     :cond_4
-    const/4 p3, 0x1
+    const/16 v3, 0x3e7
 
-    if-eq v3, p3, :cond_7
+    if-ne p3, v3, :cond_6
 
-    if-ne v3, v0, :cond_5
+    :goto_0
+    invoke-direct {p0, v0, p2}, Lcom/android/server/am/OpForceDarkController;->scheduleNotifyChangedApp(Lcom/android/server/am/OpForceDarkController$ssp;I)V
 
     goto :goto_2
 
     :cond_5
-    invoke-virtual {v2}, Lcom/android/server/am/OpForceDarkController$ssp;->ywr()Z
+    :goto_1
+    iget-object p3, p0, Lcom/android/server/am/OpForceDarkController;->mRefinedEffectiveConfigs:Landroid/util/LruCache;
 
-    move-result v0
+    monitor-enter p3
 
-    const/4 v2, 0x2
+    :try_start_2
+    iget-object v5, p0, Lcom/android/server/am/OpForceDarkController;->mRefinedEffectiveConfigs:Landroid/util/LruCache;
 
-    const/4 v4, 0x0
+    invoke-virtual {v0}, Lcom/android/server/am/OpForceDarkController$ssp;->gck()Ljava/lang/String;
 
-    const/4 v5, 0x3
+    move-result-object v6
 
-    if-eqz v0, :cond_6
+    invoke-virtual {v5, v6, v0}, Landroid/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-array v0, v5, [Ljava/lang/Object;
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "Add Efftive "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Lcom/android/server/am/OpForceDarkController$ssp;->tsu()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v6, ", Current Count = "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v6, p0, Lcom/android/server/am/OpForceDarkController;->mRefinedEffectiveConfigs:Landroid/util/LruCache;
+
+    invoke-virtual {v6}, Landroid/util/LruCache;->size()I
+
+    move-result v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v5
 
-    aput-object v5, v0, v4
+    invoke-direct {p0, v5, v3}, Lcom/android/server/am/OpForceDarkController;->debugLog(Ljava/lang/String;Z)V
 
-    aput-object p1, v0, p3
+    monitor-exit p3
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v0, v2
-
-    const-string v2, "SetMode pkgUID %d, pkg %s, Mode %d "
-
-    invoke-static {v2, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p0, v0, p3}, Lcom/android/server/am/OpForceDarkController;->debugLog(Ljava/lang/String;Z)V
-
-    iget-object p0, p0, Lcom/android/server/am/OpForceDarkController;->mAppOps:Landroid/app/AppOpsManager;
-
-    invoke-virtual {p0, v1, p2, p1, v3}, Landroid/app/AppOpsManager;->setMode(IILjava/lang/String;I)V
-
-    goto :goto_2
+    goto :goto_0
 
     :cond_6
-    new-array v0, v5, [Ljava/lang/Object;
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v0, v4
-
-    aput-object p1, v0, p3
-
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v0, v2
-
-    const-string v2, "RE-SetMode pkgUID %d, pkg %s, Mode %d "
-
-    invoke-static {v2, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p0, v0, p3}, Lcom/android/server/am/OpForceDarkController;->debugLog(Ljava/lang/String;Z)V
+    :goto_2
+    if-eq v4, v1, :cond_7
 
     iget-object p0, p0, Lcom/android/server/am/OpForceDarkController;->mAppOps:Landroid/app/AppOpsManager;
 
-    invoke-virtual {p0, v1, p2, p1, p3}, Landroid/app/AppOpsManager;->setMode(IILjava/lang/String;I)V
+    invoke-virtual {p0, v2, p2, p1, v4}, Landroid/app/AppOpsManager;->setMode(IILjava/lang/String;I)V
 
     :cond_7
-    :goto_2
+    :goto_3
+    return-void
+
+    :catchall_1
+    move-exception p0
+
+    :try_start_3
+    monitor-exit p3
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    throw p0
+
+    :cond_8
+    :goto_4
     return-void
 .end method
 
@@ -2992,19 +3000,17 @@
 
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
-    move-result-object p2
+    move-result-object p0
 
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    const-string p2, "OPFD_CTRL_SVC"
+    const-string p1, "OPFD_CTRL_SVC"
 
-    invoke-static {p2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
+    invoke-static {p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
     :goto_0
@@ -3051,11 +3057,11 @@
 
     const/4 v0, 0x0
 
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_5
 
     if-nez p2, :cond_0
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
     :cond_0
     iget-object v1, p2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
@@ -3066,27 +3072,17 @@
 
     const/4 v2, 0x1
 
-    if-nez v1, :cond_1
+    if-eqz v1, :cond_4
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    iget-object v1, p2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {p0, v1}, Lcom/android/server/am/OpForceDarkController;->ignoreApp(Ljava/lang/String;)Z
 
-    const-string v0, "Skip dispatch. Invisible App "
+    move-result v1
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v1, :cond_1
 
-    iget-object p2, p2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1, v2}, Lcom/android/server/am/OpForceDarkController;->debugLog(Ljava/lang/String;Z)V
-
-    return-void
+    goto/16 :goto_1
 
     :cond_1
     iget-boolean v1, p0, Lcom/android/server/am/OpForceDarkController;->mIsInit:Z
@@ -3230,6 +3226,28 @@
 
     :cond_4
     :goto_1
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "Ignore App "
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p2, p2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1, v2}, Lcom/android/server/am/OpForceDarkController;->debugLog(Ljava/lang/String;Z)V
+
+    return-void
+
+    :cond_5
+    :goto_2
     const-string p1, "Skip dispatch. Null appThread/appInfo"
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/am/OpForceDarkController;->debugLog(Ljava/lang/String;Z)V

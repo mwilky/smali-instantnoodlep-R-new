@@ -156,15 +156,19 @@
 .method public sis(I)I
     .locals 4
 
+    invoke-static {}, Lcom/android/server/am/OnePlusBackgroundFrozen;->les()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
     invoke-direct {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen$bio;->rtg()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    const/4 p0, -0x1
-
-    return p0
+    goto :goto_2
 
     :cond_0
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
@@ -227,10 +231,22 @@
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw p0
+
+    :cond_1
+    :goto_2
+    const/4 p0, -0x1
+
+    return p0
 .end method
 
 .method public you(I)I
     .locals 4
+
+    invoke-static {}, Lcom/android/server/am/OnePlusBackgroundFrozen;->les()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
 
     invoke-direct {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen$bio;->rtg()Z
 
@@ -238,9 +254,7 @@
 
     if-nez v0, :cond_0
 
-    const/4 p0, -0x1
-
-    return p0
+    goto :goto_2
 
     :cond_0
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
@@ -303,4 +317,10 @@
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw p0
+
+    :cond_1
+    :goto_2
+    const/4 p0, -0x1
+
+    return p0
 .end method

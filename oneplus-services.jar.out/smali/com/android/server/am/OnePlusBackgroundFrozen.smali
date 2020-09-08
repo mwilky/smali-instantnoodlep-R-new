@@ -535,7 +535,7 @@
 
 .field private qeg:Lcom/android/server/am/OnePlusBackgroundFrozen$rtg;
 
-.field private rtg:Lcom/android/server/gwm;
+.field private rtg:Lcom/android/server/ugm;
 
 .field private sis:Landroid/content/pm/PackageManager;
 
@@ -720,7 +720,7 @@
 
     const-string v1, "persist.sys.opbf.nativenable"
 
-    invoke-static {v1, v0}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {v1, v2}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v1
 
@@ -782,7 +782,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v3, 0x50
+    const/16 v3, 0x4e
 
     aput v3, v1, v2
 
@@ -875,7 +875,7 @@
 
     iput-object v0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->tsu:Landroid/os/PowerManager;
 
-    iput-object v0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->rtg:Lcom/android/server/gwm;
+    iput-object v0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->rtg:Lcom/android/server/ugm;
 
     iput-object v0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->ssp:Lcom/oneplus/config/ConfigObserver;
 
@@ -2180,11 +2180,11 @@
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    iget-object v1, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->rtg:Lcom/android/server/gwm;
+    iget-object v1, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->rtg:Lcom/android/server/ugm;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcom/android/server/gwm;->dma()[I
+    invoke-virtual {v1}, Lcom/android/server/ugm;->dma()[I
 
     move-result-object v1
 
@@ -2874,6 +2874,10 @@
     invoke-direct {p0, p1, v1, v2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->s3(ILjava/lang/String;Z)V
 
     invoke-static {v0}, Lcom/android/server/am/OnePlusBackgroundFrozen$qbh;->irq(Lcom/android/server/am/OnePlusBackgroundFrozen$qbh;)V
+
+    sget-boolean v1, Lcom/android/server/am/OnePlusBackgroundFrozen;->l0:Z
+
+    if-eqz v1, :cond_4
 
     iget-object v1, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->bvj:Lcom/android/server/am/OnePlusBackgroundFrozen$bio;
 
@@ -11267,9 +11271,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/server/gwm;
+    check-cast v0, Lcom/android/server/ugm;
 
-    iput-object v0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->rtg:Lcom/android/server/gwm;
+    iput-object v0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->rtg:Lcom/android/server/ugm;
 
     return-void
 .end method
@@ -16528,13 +16532,13 @@
     monitor-enter v0
 
     :try_start_1
-    iget-object v2, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->rtg:Lcom/android/server/gwm;
+    iget-object v2, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->rtg:Lcom/android/server/ugm;
 
     if-eqz v2, :cond_4
 
-    iget-object v2, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->rtg:Lcom/android/server/gwm;
+    iget-object v2, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->rtg:Lcom/android/server/ugm;
 
-    invoke-virtual {v2}, Lcom/android/server/gwm;->dma()[I
+    invoke-virtual {v2}, Lcom/android/server/ugm;->dma()[I
 
     move-result-object v2
 

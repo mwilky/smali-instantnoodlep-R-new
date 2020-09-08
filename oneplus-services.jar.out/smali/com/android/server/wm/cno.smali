@@ -3,32 +3,36 @@
 .source ""
 
 # interfaces
-.implements Lcom/android/server/wm/SurfaceAnimator$OnAnimationFinishedCallback;
+.implements Ljava/util/function/Predicate;
 
 
 # instance fields
-.field public final synthetic zta:Lcom/android/server/wm/OpScreenRotationImprovement$you;
+.field public final synthetic zta:Lcom/android/server/wm/OpScreenModeService;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/android/server/wm/OpScreenRotationImprovement$you;)V
+.method public synthetic constructor <init>(Lcom/android/server/wm/OpScreenModeService;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/android/server/wm/cno;->zta:Lcom/android/server/wm/OpScreenRotationImprovement$you;
+    iput-object p1, p0, Lcom/android/server/wm/cno;->zta:Lcom/android/server/wm/OpScreenModeService;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationFinished(ILcom/android/server/wm/AnimationAdapter;)V
+.method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/wm/cno;->zta:Lcom/android/server/wm/OpScreenRotationImprovement$you;
+    iget-object p0, p0, Lcom/android/server/wm/cno;->zta:Lcom/android/server/wm/OpScreenModeService;
 
-    invoke-static {p0, p1, p2}, Lcom/android/server/wm/OpScreenRotationImprovement$you;->rtg(Lcom/android/server/wm/OpScreenRotationImprovement$you;ILcom/android/server/wm/AnimationAdapter;)V
+    check-cast p1, Landroid/media/AudioRecordingConfiguration;
 
-    return-void
+    invoke-virtual {p0, p1}, Lcom/android/server/wm/OpScreenModeService;->tsu(Landroid/media/AudioRecordingConfiguration;)Z
+
+    move-result p0
+
+    return p0
 .end method

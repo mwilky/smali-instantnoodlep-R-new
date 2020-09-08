@@ -132,7 +132,7 @@
 
     iget-object v3, p0, Lcom/oneplus/android/server/iris/tsu;->zta:Lcom/oneplus/android/server/iris/tsu$you;
 
-    invoke-interface {v2, p1, v1, v3}, Lsis/you/zta/zta/zta/sis;->d(ILjava/util/ArrayList;Lsis/you/zta/zta/zta/sis$tsu;)V
+    invoke-interface {v2, p1, v1, v3}, Lsis/you/zta/zta/zta/sis;->f(ILjava/util/ArrayList;Lsis/you/zta/zta/zta/sis$tsu;)V
 
     iget-object p1, p0, Lcom/oneplus/android/server/iris/tsu;->zta:Lcom/oneplus/android/server/iris/tsu$you;
 
@@ -360,7 +360,7 @@
     :cond_4
     iget-object p0, p0, Lcom/oneplus/android/server/iris/tsu;->you:Lsis/you/zta/zta/you/bio;
 
-    invoke-interface {p0, p1, v3}, Lsis/you/zta/zta/zta/sis;->les(ILjava/util/ArrayList;)I
+    invoke-interface {p0, p1, v3}, Lsis/you/zta/zta/zta/sis;->irq(ILjava/util/ArrayList;)I
 
     move-result p0
     :try_end_0

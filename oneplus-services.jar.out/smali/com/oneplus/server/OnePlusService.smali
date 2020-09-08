@@ -26,7 +26,7 @@
 
 .field private mOnePlusThemeController:Lcom/oneplus/server/theme/zta;
 
-.field private mOpCommonFrontMonitor:Lcom/android/server/oif;
+.field private mOpCommonFrontMonitor:Lcom/android/server/bvj;
 
 .field private mSurfaceFlinger:Landroid/os/IBinder;
 
@@ -238,7 +238,7 @@
 
     const/4 v0, 0x0
 
-    const/16 v1, 0x55
+    const/16 v1, 0x52
 
     aput v1, p0, v0
 
@@ -658,7 +658,7 @@
 
     const/4 v0, 0x0
 
-    const/16 v1, 0x55
+    const/16 v1, 0x52
 
     aput v1, p0, v0
 
@@ -695,15 +695,15 @@
 
     invoke-virtual {v0}, Lcom/oneplus/server/theme/zta;->ibl()V
 
-    invoke-static {}, Lcom/android/server/oif;->oif()Lcom/android/server/oif;
+    invoke-static {}, Lcom/android/server/bvj;->vdb()Lcom/android/server/bvj;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/oneplus/server/OnePlusService;->mOpCommonFrontMonitor:Lcom/android/server/oif;
+    iput-object v0, p0, Lcom/oneplus/server/OnePlusService;->mOpCommonFrontMonitor:Lcom/android/server/bvj;
 
     iget-object v1, p0, Lcom/oneplus/server/OnePlusService;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/android/server/oif;->ugm(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/android/server/bvj;->cjf(Landroid/content/Context;)V
 
     sget-boolean v0, Lcom/oneplus/server/zta;->o:Z
 
@@ -745,7 +745,7 @@
 
     const/4 v2, 0x0
 
-    const/16 v3, 0x108
+    const/16 v3, 0x101
 
     aput v3, v1, v2
 
@@ -837,7 +837,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/oneplus/server/zta;->M(Ljava/lang/String;FD)V
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/oneplus/server/zta;->O(Ljava/lang/String;FD)V
 
     :cond_0
     return-void

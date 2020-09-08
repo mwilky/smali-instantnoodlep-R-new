@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field private kth:Landroid/os/IHwBinder;
+.field private bio:Landroid/os/IHwBinder;
 
 
 # direct methods
@@ -31,14 +31,14 @@
 
     check-cast p1, Landroid/os/IHwBinder;
 
-    iput-object p1, p0, Lsis/you/zta/zta/you/igw$zta;->kth:Landroid/os/IHwBinder;
+    iput-object p1, p0, Lsis/you/zta/zta/you/igw$zta;->bio:Landroid/os/IHwBinder;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public L(ILjava/util/ArrayList;)V
+.method public Q(ILjava/util/ArrayList;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -72,7 +72,7 @@
     invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
 
     :try_start_0
-    iget-object p0, p0, Lsis/you/zta/zta/you/igw$zta;->kth:Landroid/os/IHwBinder;
+    iget-object p0, p0, Lsis/you/zta/zta/you/igw$zta;->bio:Landroid/os/IHwBinder;
 
     const/4 p2, 0x1
 
@@ -101,7 +101,7 @@
 .method public asBinder()Landroid/os/IHwBinder;
     .locals 0
 
-    iget-object p0, p0, Lsis/you/zta/zta/you/igw$zta;->kth:Landroid/os/IHwBinder;
+    iget-object p0, p0, Lsis/you/zta/zta/you/igw$zta;->bio:Landroid/os/IHwBinder;
 
     return-object p0
 .end method
@@ -135,7 +135,7 @@
     invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
 
     :try_start_0
-    iget-object p0, p0, Lsis/you/zta/zta/you/igw$zta;->kth:Landroid/os/IHwBinder;
+    iget-object p0, p0, Lsis/you/zta/zta/you/igw$zta;->bio:Landroid/os/IHwBinder;
 
     const v2, 0xf485348
 
@@ -217,55 +217,6 @@
     throw p0
 .end method
 
-.method public bud(J)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    new-instance v0, Landroid/os/HwParcel;
-
-    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
-
-    const-string v1, "vendor.pixelworks.hardware.display@1.1::IIrisCallback"
-
-    invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1, p2}, Landroid/os/HwParcel;->writeInt64(J)V
-
-    new-instance p1, Landroid/os/HwParcel;
-
-    invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
-
-    :try_start_0
-    iget-object p0, p0, Lsis/you/zta/zta/you/igw$zta;->kth:Landroid/os/IHwBinder;
-
-    const/4 p2, 0x2
-
-    const/4 v1, 0x0
-
-    invoke-interface {p0, p2, v0, p1, v1}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
-
-    invoke-virtual {p1}, Landroid/os/HwParcel;->verifySuccess()V
-
-    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
-
-    throw p0
-.end method
-
 .method public cno()Ljava/lang/String;
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
@@ -287,7 +238,7 @@
     invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
 
     :try_start_0
-    iget-object p0, p0, Lsis/you/zta/zta/you/igw$zta;->kth:Landroid/os/IHwBinder;
+    iget-object p0, p0, Lsis/you/zta/zta/you/igw$zta;->bio:Landroid/os/IHwBinder;
 
     const v2, 0xf445343
 
@@ -362,7 +313,7 @@
     invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
 
     :try_start_0
-    iget-object p0, p0, Lsis/you/zta/zta/you/igw$zta;->kth:Landroid/os/IHwBinder;
+    iget-object p0, p0, Lsis/you/zta/zta/you/igw$zta;->bio:Landroid/os/IHwBinder;
 
     const p2, 0xf444247
 
@@ -402,6 +353,55 @@
     return p0
 .end method
 
+.method public les(J)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    new-instance v0, Landroid/os/HwParcel;
+
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    const-string v1, "vendor.pixelworks.hardware.display@1.1::IIrisCallback"
+
+    invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1, p2}, Landroid/os/HwParcel;->writeInt64(J)V
+
+    new-instance p1, Landroid/os/HwParcel;
+
+    invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
+
+    :try_start_0
+    iget-object p0, p0, Lsis/you/zta/zta/you/igw$zta;->bio:Landroid/os/IHwBinder;
+
+    const/4 p2, 0x2
+
+    const/4 v1, 0x0
+
+    invoke-interface {p0, p2, v0, p1, v1}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    invoke-virtual {p1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
+
+    throw p0
+.end method
+
 .method public linkToDeath(Landroid/os/IHwBinder$DeathRecipient;J)Z
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
@@ -410,7 +410,7 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lsis/you/zta/zta/you/igw$zta;->kth:Landroid/os/IHwBinder;
+    iget-object p0, p0, Lsis/you/zta/zta/you/igw$zta;->bio:Landroid/os/IHwBinder;
 
     invoke-interface {p0, p1, p2, p3}, Landroid/os/IHwBinder;->linkToDeath(Landroid/os/IHwBinder$DeathRecipient;J)Z
 
@@ -444,7 +444,7 @@
     invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
 
     :try_start_0
-    iget-object p0, p0, Lsis/you/zta/zta/you/igw$zta;->kth:Landroid/os/IHwBinder;
+    iget-object p0, p0, Lsis/you/zta/zta/you/igw$zta;->bio:Landroid/os/IHwBinder;
 
     const/4 p2, 0x4
 
@@ -500,7 +500,7 @@
     invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
 
     :try_start_0
-    iget-object p0, p0, Lsis/you/zta/zta/you/igw$zta;->kth:Landroid/os/IHwBinder;
+    iget-object p0, p0, Lsis/you/zta/zta/you/igw$zta;->bio:Landroid/os/IHwBinder;
 
     const v2, 0xf43484e
 
@@ -551,7 +551,7 @@
     invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
 
     :try_start_0
-    iget-object p0, p0, Lsis/you/zta/zta/you/igw$zta;->kth:Landroid/os/IHwBinder;
+    iget-object p0, p0, Lsis/you/zta/zta/you/igw$zta;->bio:Landroid/os/IHwBinder;
 
     const v2, 0xf504e47
 
@@ -573,61 +573,6 @@
     move-exception p0
 
     invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
-
-    throw p0
-.end method
-
-.method public t(JI)I
-    .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    new-instance v0, Landroid/os/HwParcel;
-
-    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
-
-    const-string v1, "vendor.pixelworks.hardware.display@1.1::IIrisCallback"
-
-    invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1, p2}, Landroid/os/HwParcel;->writeInt64(J)V
-
-    invoke-virtual {v0, p3}, Landroid/os/HwParcel;->writeInt32(I)V
-
-    new-instance p1, Landroid/os/HwParcel;
-
-    invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
-
-    :try_start_0
-    iget-object p0, p0, Lsis/you/zta/zta/you/igw$zta;->kth:Landroid/os/IHwBinder;
-
-    const/4 p2, 0x3
-
-    const/4 p3, 0x0
-
-    invoke-interface {p0, p2, v0, p1, p3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
-
-    invoke-virtual {p1}, Landroid/os/HwParcel;->verifySuccess()V
-
-    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
-
-    invoke-virtual {p1}, Landroid/os/HwParcel;->readInt32()I
-
-    move-result p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
-
-    return p0
-
-    :catchall_0
-    move-exception p0
-
-    invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
 
     throw p0
 .end method
@@ -685,7 +630,7 @@
     invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
 
     :try_start_0
-    iget-object p0, p0, Lsis/you/zta/zta/you/igw$zta;->kth:Landroid/os/IHwBinder;
+    iget-object p0, p0, Lsis/you/zta/zta/you/igw$zta;->bio:Landroid/os/IHwBinder;
 
     const v2, 0xf524546
 
@@ -725,13 +670,68 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lsis/you/zta/zta/you/igw$zta;->kth:Landroid/os/IHwBinder;
+    iget-object p0, p0, Lsis/you/zta/zta/you/igw$zta;->bio:Landroid/os/IHwBinder;
 
     invoke-interface {p0, p1}, Landroid/os/IHwBinder;->unlinkToDeath(Landroid/os/IHwBinder$DeathRecipient;)Z
 
     move-result p0
 
     return p0
+.end method
+
+.method public w(JI)I
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    new-instance v0, Landroid/os/HwParcel;
+
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    const-string v1, "vendor.pixelworks.hardware.display@1.1::IIrisCallback"
+
+    invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1, p2}, Landroid/os/HwParcel;->writeInt64(J)V
+
+    invoke-virtual {v0, p3}, Landroid/os/HwParcel;->writeInt32(I)V
+
+    new-instance p1, Landroid/os/HwParcel;
+
+    invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
+
+    :try_start_0
+    iget-object p0, p0, Lsis/you/zta/zta/you/igw$zta;->bio:Landroid/os/IHwBinder;
+
+    const/4 p2, 0x3
+
+    const/4 p3, 0x0
+
+    invoke-interface {p0, p2, v0, p1, p3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    invoke-virtual {p1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    invoke-virtual {p1}, Landroid/os/HwParcel;->readInt32()I
+
+    move-result p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
+
+    return p0
+
+    :catchall_0
+    move-exception p0
+
+    invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
+
+    throw p0
 .end method
 
 .method public wtn()V
@@ -755,7 +755,7 @@
     invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
 
     :try_start_0
-    iget-object p0, p0, Lsis/you/zta/zta/you/igw$zta;->kth:Landroid/os/IHwBinder;
+    iget-object p0, p0, Lsis/you/zta/zta/you/igw$zta;->bio:Landroid/os/IHwBinder;
 
     const v2, 0xf494e54
 
@@ -800,7 +800,7 @@
     invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
 
     :try_start_0
-    iget-object p0, p0, Lsis/you/zta/zta/you/igw$zta;->kth:Landroid/os/IHwBinder;
+    iget-object p0, p0, Lsis/you/zta/zta/you/igw$zta;->bio:Landroid/os/IHwBinder;
 
     const v2, 0xf535953
 

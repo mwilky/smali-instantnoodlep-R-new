@@ -105,11 +105,11 @@
 
     iget-object p1, p0, Lcom/android/server/am/cjf$zta;->zta:Lcom/android/server/am/cjf;
 
-    invoke-static {p1}, Lcom/android/server/am/cjf;->zgw(Lcom/android/server/am/cjf;)V
+    invoke-static {p1}, Lcom/android/server/am/cjf;->sis(Lcom/android/server/am/cjf;)V
 
     iget-object p0, p0, Lcom/android/server/am/cjf$zta;->zta:Lcom/android/server/am/cjf;
 
-    invoke-static {p0}, Lcom/android/server/am/cjf;->sis(Lcom/android/server/am/cjf;)V
+    invoke-static {p0}, Lcom/android/server/am/cjf;->tsu(Lcom/android/server/am/cjf;)V
 
     goto/16 :goto_1
 
@@ -124,7 +124,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/cjf$zta;->zta:Lcom/android/server/am/cjf;
 
-    invoke-static {p0}, Lcom/android/server/am/cjf;->tsu(Lcom/android/server/am/cjf;)V
+    invoke-static {p0}, Lcom/android/server/am/cjf;->rtg(Lcom/android/server/am/cjf;)V
 
     goto/16 :goto_1
 
@@ -139,7 +139,7 @@
 
     iget-object v0, p0, Lcom/android/server/am/cjf$zta;->zta:Lcom/android/server/am/cjf;
 
-    invoke-static {v0}, Lcom/android/server/am/cjf;->rtg(Lcom/android/server/am/cjf;)Landroid/telephony/TelephonyManager;
+    invoke-static {v0}, Lcom/android/server/am/cjf;->ssp(Lcom/android/server/am/cjf;)Landroid/telephony/TelephonyManager;
 
     move-result-object v0
 
@@ -149,7 +149,7 @@
 
     iget-object v0, p0, Lcom/android/server/am/cjf$zta;->zta:Lcom/android/server/am/cjf;
 
-    invoke-static {v0}, Lcom/android/server/am/cjf;->dma(Lcom/android/server/am/cjf;)Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/server/am/cjf;->ywr(Lcom/android/server/am/cjf;)Landroid/content/Context;
 
     move-result-object v2
 
@@ -159,12 +159,12 @@
 
     check-cast v2, Landroid/telephony/TelephonyManager;
 
-    invoke-static {v0, v2}, Lcom/android/server/am/cjf;->ssp(Lcom/android/server/am/cjf;Landroid/telephony/TelephonyManager;)Landroid/telephony/TelephonyManager;
+    invoke-static {v0, v2}, Lcom/android/server/am/cjf;->cno(Lcom/android/server/am/cjf;Landroid/telephony/TelephonyManager;)Landroid/telephony/TelephonyManager;
 
     :cond_3
     iget-object v0, p0, Lcom/android/server/am/cjf$zta;->zta:Lcom/android/server/am/cjf;
 
-    invoke-static {v0}, Lcom/android/server/am/cjf;->rtg(Lcom/android/server/am/cjf;)Landroid/telephony/TelephonyManager;
+    invoke-static {v0}, Lcom/android/server/am/cjf;->ssp(Lcom/android/server/am/cjf;)Landroid/telephony/TelephonyManager;
 
     move-result-object v0
 
@@ -172,7 +172,7 @@
 
     iget-object v0, p0, Lcom/android/server/am/cjf$zta;->zta:Lcom/android/server/am/cjf;
 
-    invoke-static {v0}, Lcom/android/server/am/cjf;->rtg(Lcom/android/server/am/cjf;)Landroid/telephony/TelephonyManager;
+    invoke-static {v0}, Lcom/android/server/am/cjf;->ssp(Lcom/android/server/am/cjf;)Landroid/telephony/TelephonyManager;
 
     move-result-object v0
 
@@ -198,7 +198,7 @@
 
     iget-object v2, p0, Lcom/android/server/am/cjf$zta;->zta:Lcom/android/server/am/cjf;
 
-    invoke-static {v2}, Lcom/android/server/am/cjf;->cno(Lcom/android/server/am/cjf;)[Ljava/lang/String;
+    invoke-static {v2}, Lcom/android/server/am/cjf;->kth(Lcom/android/server/am/cjf;)[Ljava/lang/String;
 
     move-result-object v2
 
@@ -210,7 +210,7 @@
 
     aput-object p2, v2, v0
 
-    sget-boolean p2, Lcom/android/server/am/cjf;->obl:Z
+    sget-boolean p2, Lcom/android/server/am/cjf;->cjf:Z
 
     if-eqz p2, :cond_4
 
@@ -230,7 +230,7 @@
 
     iget-object v2, p0, Lcom/android/server/am/cjf$zta;->zta:Lcom/android/server/am/cjf;
 
-    invoke-static {v2}, Lcom/android/server/am/cjf;->cno(Lcom/android/server/am/cjf;)[Ljava/lang/String;
+    invoke-static {v2}, Lcom/android/server/am/cjf;->kth(Lcom/android/server/am/cjf;)[Ljava/lang/String;
 
     move-result-object v2
 
@@ -247,7 +247,7 @@
     :cond_4
     iget-object p1, p0, Lcom/android/server/am/cjf$zta;->zta:Lcom/android/server/am/cjf;
 
-    invoke-static {p1}, Lcom/android/server/am/cjf;->cno(Lcom/android/server/am/cjf;)[Ljava/lang/String;
+    invoke-static {p1}, Lcom/android/server/am/cjf;->kth(Lcom/android/server/am/cjf;)[Ljava/lang/String;
 
     move-result-object p1
 
@@ -261,7 +261,7 @@
 
     if-eqz p1, :cond_5
 
-    invoke-static {}, Lcom/android/server/am/cjf;->kth()[Z
+    invoke-static {}, Lcom/android/server/am/cjf;->bio()[Z
 
     move-result-object p1
 
@@ -269,12 +269,12 @@
 
     iget-object p1, p0, Lcom/android/server/am/cjf$zta;->zta:Lcom/android/server/am/cjf;
 
-    invoke-static {p1}, Lcom/android/server/am/cjf;->bio(Lcom/android/server/am/cjf;)V
+    invoke-static {p1}, Lcom/android/server/am/cjf;->igw(Lcom/android/server/am/cjf;)V
 
     goto :goto_0
 
     :cond_5
-    invoke-static {}, Lcom/android/server/am/cjf;->kth()[Z
+    invoke-static {}, Lcom/android/server/am/cjf;->bio()[Z
 
     move-result-object p1
 
@@ -285,7 +285,7 @@
     :goto_0
     iget-object p1, p0, Lcom/android/server/am/cjf$zta;->zta:Lcom/android/server/am/cjf;
 
-    invoke-static {p1}, Lcom/android/server/am/cjf;->cno(Lcom/android/server/am/cjf;)[Ljava/lang/String;
+    invoke-static {p1}, Lcom/android/server/am/cjf;->kth(Lcom/android/server/am/cjf;)[Ljava/lang/String;
 
     move-result-object p1
 
@@ -293,7 +293,7 @@
 
     iget-object p2, p0, Lcom/android/server/am/cjf$zta;->zta:Lcom/android/server/am/cjf;
 
-    invoke-static {p2}, Lcom/android/server/am/cjf;->igw(Lcom/android/server/am/cjf;)[Ljava/lang/String;
+    invoke-static {p2}, Lcom/android/server/am/cjf;->wtn(Lcom/android/server/am/cjf;)[Ljava/lang/String;
 
     move-result-object p2
 
@@ -307,22 +307,22 @@
 
     iget-object p1, p0, Lcom/android/server/am/cjf$zta;->zta:Lcom/android/server/am/cjf;
 
-    invoke-static {p1}, Lcom/android/server/am/cjf;->wtn(Lcom/android/server/am/cjf;)V
+    invoke-static {p1}, Lcom/android/server/am/cjf;->gck(Lcom/android/server/am/cjf;)V
 
     iget-object p1, p0, Lcom/android/server/am/cjf$zta;->zta:Lcom/android/server/am/cjf;
 
-    invoke-static {p1}, Lcom/android/server/am/cjf;->gck(Lcom/android/server/am/cjf;)V
+    invoke-static {p1}, Lcom/android/server/am/cjf;->dma(Lcom/android/server/am/cjf;)V
 
     :cond_6
     iget-object p1, p0, Lcom/android/server/am/cjf$zta;->zta:Lcom/android/server/am/cjf;
 
-    invoke-static {p1}, Lcom/android/server/am/cjf;->igw(Lcom/android/server/am/cjf;)[Ljava/lang/String;
+    invoke-static {p1}, Lcom/android/server/am/cjf;->wtn(Lcom/android/server/am/cjf;)[Ljava/lang/String;
 
     move-result-object p1
 
     iget-object p0, p0, Lcom/android/server/am/cjf$zta;->zta:Lcom/android/server/am/cjf;
 
-    invoke-static {p0}, Lcom/android/server/am/cjf;->cno(Lcom/android/server/am/cjf;)[Ljava/lang/String;
+    invoke-static {p0}, Lcom/android/server/am/cjf;->kth(Lcom/android/server/am/cjf;)[Ljava/lang/String;
 
     move-result-object p0
 
@@ -353,7 +353,7 @@
 
     check-cast p0, Landroid/net/NetworkInfo;
 
-    sget-boolean p0, Lcom/android/server/am/cjf;->obl:Z
+    sget-boolean p0, Lcom/android/server/am/cjf;->cjf:Z
 
     goto :goto_1
 
@@ -368,7 +368,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/cjf$zta;->zta:Lcom/android/server/am/cjf;
 
-    invoke-static {p0}, Lcom/android/server/am/cjf;->bio(Lcom/android/server/am/cjf;)V
+    invoke-static {p0}, Lcom/android/server/am/cjf;->igw(Lcom/android/server/am/cjf;)V
 
     :cond_9
     :goto_1

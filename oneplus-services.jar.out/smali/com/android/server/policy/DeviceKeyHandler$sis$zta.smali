@@ -79,7 +79,7 @@
 
     const/4 v3, 0x0
 
-    const/16 v4, 0x6c
+    const/16 v4, 0x66
 
     aput v4, v0, v3
 

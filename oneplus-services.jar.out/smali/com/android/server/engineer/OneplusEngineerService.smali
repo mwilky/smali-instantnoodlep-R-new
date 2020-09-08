@@ -223,7 +223,7 @@
 
     move-result-object v1
 
-    const-string v2, "persist.sys.allcommode"
+    const-string v2, "persist.vendor.sys.allcommode"
 
     invoke-static {v2, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -231,7 +231,7 @@
 
     move-result-object v0
 
-    const-string v1, "persist.allcommode"
+    const-string v1, "persist.vendor.allcommode"
 
     invoke-static {v1, v0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -973,11 +973,15 @@
 
     invoke-virtual {p1}, Ljava/lang/Thread;->start()V
 
-    new-instance p1, Lcom/android/server/engineer/OneplusEngineerService$cno;
+    iget-object p1, p0, Lcom/android/server/engineer/OneplusEngineerService;->sis:Lcom/android/server/engineer/OneplusEngineerService$bio;
 
-    invoke-direct {p1, p0}, Lcom/android/server/engineer/OneplusEngineerService$cno;-><init>(Lcom/android/server/engineer/OneplusEngineerService;)V
+    new-instance v0, Lcom/android/server/engineer/OneplusEngineerService$cno;
 
-    invoke-virtual {p1}, Ljava/lang/Thread;->start()V
+    invoke-direct {v0, p0}, Lcom/android/server/engineer/OneplusEngineerService$cno;-><init>(Lcom/android/server/engineer/OneplusEngineerService;)V
+
+    const-wide/16 v1, 0x1f4
+
+    invoke-virtual {p1, v0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     iget-object p1, p0, Lcom/android/server/engineer/OneplusEngineerService;->zta:Landroid/content/Context;
 

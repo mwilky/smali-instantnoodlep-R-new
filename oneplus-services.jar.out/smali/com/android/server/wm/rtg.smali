@@ -3,32 +3,34 @@
 .source ""
 
 # interfaces
-.implements Lcom/android/server/wm/SurfaceAnimator$OnAnimationFinishedCallback;
+.implements Ljava/util/function/Consumer;
 
 
 # instance fields
-.field public final synthetic zta:Lcom/android/server/wm/bvj$zta;
+.field public final synthetic zta:Lcom/android/server/wm/OnePlusPerfManager;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/android/server/wm/bvj$zta;)V
+.method public synthetic constructor <init>(Lcom/android/server/wm/OnePlusPerfManager;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/android/server/wm/rtg;->zta:Lcom/android/server/wm/bvj$zta;
+    iput-object p1, p0, Lcom/android/server/wm/rtg;->zta:Lcom/android/server/wm/OnePlusPerfManager;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationFinished(ILcom/android/server/wm/AnimationAdapter;)V
+.method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/wm/rtg;->zta:Lcom/android/server/wm/bvj$zta;
+    iget-object p0, p0, Lcom/android/server/wm/rtg;->zta:Lcom/android/server/wm/OnePlusPerfManager;
 
-    invoke-static {p0, p1, p2}, Lcom/android/server/wm/bvj$zta;->rtg(Lcom/android/server/wm/bvj$zta;ILcom/android/server/wm/AnimationAdapter;)V
+    check-cast p1, Lcom/android/server/wm/WindowState;
+
+    invoke-virtual {p0, p1}, Lcom/android/server/wm/OnePlusPerfManager;->tsu(Lcom/android/server/wm/WindowState;)V
 
     return-void
 .end method

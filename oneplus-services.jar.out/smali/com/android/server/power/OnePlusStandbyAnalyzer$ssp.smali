@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/power/OnePlusStandbyAnalyzer;->L()V
+    value = Lcom/android/server/power/OnePlusStandbyAnalyzer;->K()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

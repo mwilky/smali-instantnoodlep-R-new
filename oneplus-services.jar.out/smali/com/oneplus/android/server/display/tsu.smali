@@ -97,7 +97,7 @@
 
     new-array v0, v0, [I
 
-    const/16 v1, 0x12c
+    const/16 v1, 0x125
 
     const/4 v2, 0x0
 

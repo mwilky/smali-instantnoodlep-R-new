@@ -42,6 +42,8 @@
 
 .field private mIsFullscreen:Z
 
+.field mLastUpdateUid:I
+
 .field mOpForceDarkStatus:Z
 
 .field private final mOpWindowLock:Ljava/lang/Object;
@@ -303,7 +305,7 @@
 .end method
 
 .method private resolveWindowManagerConfigFromJSON(Lorg/json/JSONArray;)V
-    .locals 9
+    .locals 10
 
     if-nez p1, :cond_0
 
@@ -321,190 +323,133 @@
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
-    const/4 v0, 0x0
+    new-instance v0, Ljava/util/ArrayList;
 
-    move v1, v0
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    const/4 v1, 0x0
+
+    move v2, v1
 
     :goto_0
     invoke-virtual {p1}, Lorg/json/JSONArray;->length()I
 
-    move-result v2
-
-    if-ge v1, v2, :cond_5
-
-    invoke-virtual {p1, v1}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
-
-    move-result-object v2
-
-    const-string v3, "op_force_not_size_compat_app_config"
-
-    const-string v4, "name"
-
-    invoke-virtual {v2, v4}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     move-result v3
 
-    if-eqz v3, :cond_2
+    if-ge v2, v3, :cond_7
 
-    const-string v3, "value"
+    invoke-virtual {p1, v2}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
-    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+    move-result-object v3
 
-    move-result-object v2
+    const-string v4, "op_force_not_size_compat_app_config"
 
-    invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
+    const-string v5, "name"
 
-    move-result v3
+    invoke-virtual {v3, v5}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    move v4, v0
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    const-string v4, "value"
+
+    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lorg/json/JSONArray;->length()I
+
+    move-result v4
+
+    move v5, v1
 
     :goto_1
-    if-ge v4, v3, :cond_4
+    if-ge v5, v4, :cond_6
 
-    invoke-virtual {v2, v4}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
+    invoke-virtual {v3, v5}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v6
 
-    invoke-virtual {p0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    sget-boolean v6, Lcom/android/server/wm/OpWindowManagerService;->DEBUG:Z
+    sget-boolean v7, Lcom/android/server/wm/OpWindowManagerService;->DEBUG:Z
 
-    if-eqz v6, :cond_1
+    if-eqz v7, :cond_1
 
-    const-string v6, "OpWindowManagerService"
+    const-string v7, "OpWindowManagerService"
 
-    new-instance v7, Ljava/lang/StringBuilder;
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v8, "add force not size compat app pkg:"
+    const-string v9, "add force not size compat app pkg:"
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v6
 
-    invoke-static {v6, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v7, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
-    add-int/lit8 v4, v4, 0x1
+    add-int/lit8 v5, v5, 0x1
 
     goto :goto_1
 
     :cond_2
-    const-string v3, "op_snapshot_scale_fraction_config"
+    const-string v4, "op_snapshot_scale_fraction_config"
 
-    const-string v4, "name"
+    const-string v5, "name"
 
-    invoke-virtual {v2, v4}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v3, v5}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v4
 
-    if-eqz v3, :cond_3
+    if-eqz v4, :cond_3
 
-    const-string v3, "value"
+    const-string v4, "value"
 
-    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(Ljava/lang/String;)Ljava/lang/Float;
+    invoke-static {v3}, Ljava/lang/Float;->valueOf(Ljava/lang/String;)Ljava/lang/Float;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v2}, Ljava/lang/Float;->floatValue()F
-
-    move-result v2
-
-    const/4 v3, 0x0
-
-    cmpl-float v3, v2, v3
-
-    if-lez v3, :cond_4
-
-    const/high16 v3, 0x3f800000    # 1.0f
-
-    cmpg-float v3, v2, v3
-
-    if-gtz v3, :cond_4
-
-    sput v2, Lcom/android/server/wm/OpWindowManagerServiceInjector;->sOpSnapshotScaleFraction:F
-
-    sget-boolean v3, Lcom/android/server/wm/OpWindowManagerService;->DEBUG:Z
-
-    if-eqz v3, :cond_4
-
-    const-string v3, "OpWindowManagerService"
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "update sOpSnapshotScaleFraction to "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v3, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_2
-
-    :cond_3
-    const-string v3, "op_snapshot_mismatch_time_config"
-
-    const-string v4, "name"
-
-    invoke-virtual {v2, v4}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v3}, Ljava/lang/Float;->floatValue()F
 
     move-result v3
 
-    if-eqz v3, :cond_4
+    const/4 v4, 0x0
 
-    const-string v3, "value"
+    cmpl-float v4, v3, v4
 
-    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    if-lez v4, :cond_6
 
-    move-result-object v2
+    const/high16 v4, 0x3f800000    # 1.0f
 
-    invoke-static {v2}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
+    cmpg-float v4, v3, v4
 
-    move-result-object v2
+    if-gtz v4, :cond_6
 
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    const-wide/16 v4, 0x0
-
-    cmp-long v4, v2, v4
-
-    if-ltz v4, :cond_4
-
-    sput-wide v2, Lcom/android/server/wm/TaskSnapshotSurface;->SIZE_MISMATCH_MINIMUM_TIME_MS:J
+    sput v3, Lcom/android/server/wm/OpWindowManagerServiceInjector;->sOpSnapshotScaleFraction:F
 
     sget-boolean v4, Lcom/android/server/wm/OpWindowManagerService;->DEBUG:Z
 
-    if-eqz v4, :cond_4
+    if-eqz v4, :cond_6
 
     const-string v4, "OpWindowManagerService"
 
@@ -512,25 +457,151 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "update SIZE_MISMATCH_MINIMUM_TIME_MS to "
+    const-string v6, "update sOpSnapshotScaleFraction to "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-static {v4, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v4, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto/16 :goto_3
+
+    :cond_3
+    const-string v4, "op_snapshot_mismatch_time_config"
+
+    const-string v5, "name"
+
+    invoke-virtual {v3, v5}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_4
+
+    const-string v4, "value"
+
+    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v3
+
+    const-wide/16 v5, 0x0
+
+    cmp-long v5, v3, v5
+
+    if-ltz v5, :cond_6
+
+    sput-wide v3, Lcom/android/server/wm/TaskSnapshotSurface;->SIZE_MISMATCH_MINIMUM_TIME_MS:J
+
+    sget-boolean v5, Lcom/android/server/wm/OpWindowManagerService;->DEBUG:Z
+
+    if-eqz v5, :cond_6
+
+    const-string v5, "OpWindowManagerService"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "update SIZE_MISMATCH_MINIMUM_TIME_MS to "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v5, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_3
 
     :cond_4
+    const-string v4, "op_force_nav_gesture_fullscreen_app_config"
+
+    const-string v5, "name"
+
+    invoke-virtual {v3, v5}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_6
+
+    const-string v4, "value"
+
+    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lorg/json/JSONArray;->length()I
+
+    move-result v4
+
+    move v5, v1
+
     :goto_2
-    add-int/lit8 v1, v1, 0x1
+    if-ge v5, v4, :cond_6
+
+    invoke-virtual {v3, v5}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v0, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    sget-boolean v7, Lcom/android/server/wm/OpWindowManagerService;->DEBUG:Z
+
+    if-eqz v7, :cond_5
+
+    const-string v7, "OpWindowManagerService"
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v9, "add force NavGesture fullscreen app pkg:"
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v7, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_5
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_2
+
+    :cond_6
+    :goto_3
+    add-int/lit8 v2, v2, 0x1
 
     goto/16 :goto_0
 
-    :cond_5
+    :cond_7
     sget-object p1, Lcom/android/server/wm/OpWindowManagerService;->sConfigock:Ljava/lang/Object;
 
     monitor-enter p1
@@ -541,13 +612,22 @@
     :try_start_1
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
-    move-result v0
+    move-result v1
 
-    if-lez v0, :cond_6
+    if-lez v1, :cond_8
 
     sput-object p0, Lcom/android/server/wm/OpWindowManagerServiceInjector;->sForceNotSizeCompatList:Ljava/util/List;
 
-    :cond_6
+    :cond_8
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result p0
+
+    if-lez p0, :cond_9
+
+    sput-object v0, Lcom/android/server/wm/OpWindowManagerServiceInjector;->sNavGestureFullscreenList:Ljava/util/List;
+
+    :cond_9
     monitor-exit p1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -562,7 +642,7 @@
     .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_1
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    goto :goto_4
+    goto :goto_5
 
     :catchall_0
     move-exception p0
@@ -593,7 +673,7 @@
 
     move-result-object p0
 
-    goto :goto_3
+    goto :goto_4
 
     :catch_1
     move-exception p0
@@ -610,7 +690,7 @@
 
     move-result-object p0
 
-    :goto_3
+    :goto_4
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -621,7 +701,7 @@
 
     invoke-static {p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :goto_4
+    :goto_5
     return-void
 .end method
 
@@ -883,7 +963,7 @@
     invoke-static {v1, p0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    new-instance p0, Lcom/android/server/wm/bvj;
+    new-instance p0, Lcom/android/server/wm/gwm;
 
     iget-object v3, p1, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
 
@@ -907,7 +987,7 @@
 
     move-object v7, p1
 
-    invoke-direct/range {v2 .. v8}, Lcom/android/server/wm/bvj;-><init>(Landroid/content/Context;Lcom/android/server/wm/DisplayContent;ZZLcom/android/server/wm/WindowManagerService;I)V
+    invoke-direct/range {v2 .. v8}, Lcom/android/server/wm/gwm;-><init>(Landroid/content/Context;Lcom/android/server/wm/DisplayContent;ZZLcom/android/server/wm/WindowManagerService;I)V
 
     goto :goto_0
 
@@ -946,7 +1026,7 @@
     invoke-static {v1, p0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_4
-    new-instance p0, Lcom/android/server/wm/bvj;
+    new-instance p0, Lcom/android/server/wm/gwm;
 
     iget-object v3, p1, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
 
@@ -970,7 +1050,7 @@
 
     move v8, p3
 
-    invoke-direct/range {v2 .. v8}, Lcom/android/server/wm/bvj;-><init>(Landroid/content/Context;Lcom/android/server/wm/DisplayContent;ZZLcom/android/server/wm/WindowManagerService;I)V
+    invoke-direct/range {v2 .. v8}, Lcom/android/server/wm/gwm;-><init>(Landroid/content/Context;Lcom/android/server/wm/DisplayContent;ZZLcom/android/server/wm/WindowManagerService;I)V
 
     :goto_0
     return-object p0
@@ -994,27 +1074,25 @@
     return-void
 .end method
 
-.method public forceDarkSystemUI(I)I
-    .locals 2
+.method public forceDarkSystemUI(Lcom/android/server/wm/WindowState;I)I
+    .locals 1
 
-    invoke-static {}, Landroid/os/Binder;->getCallingUid()I
+    if-eqz p1, :cond_0
 
-    move-result v0
+    iget v0, p0, Lcom/android/server/wm/OpWindowManagerService;->mLastUpdateUid:I
 
-    const/16 v1, 0x3e8
+    iget p1, p1, Lcom/android/server/wm/WindowState;->mOwnerUid:I
 
-    if-ne v0, v1, :cond_0
+    if-ne v0, p1, :cond_0
 
     iget-boolean p0, p0, Lcom/android/server/wm/OpWindowManagerService;->mOpForceDarkStatus:Z
 
     if-eqz p0, :cond_0
 
-    and-int/lit16 p0, p1, -0x2001
-
-    return p0
+    and-int/lit8 p2, p2, -0x9
 
     :cond_0
-    return p1
+    return p2
 .end method
 
 .method public getQuickReplyList(I)Ljava/util/List;
@@ -1146,9 +1224,9 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    new-instance v2, Lcom/android/server/wm/kth;
+    new-instance v2, Lcom/android/server/wm/igw;
 
-    invoke-direct {v2, v0}, Lcom/android/server/wm/kth;-><init>(Ljava/util/List;)V
+    invoke-direct {v2, v0}, Lcom/android/server/wm/igw;-><init>(Ljava/util/List;)V
 
     invoke-virtual {p1, v2}, Lcom/android/server/wm/Task;->forAllActivities(Ljava/util/function/Consumer;)V
 
@@ -1201,6 +1279,18 @@
     .locals 0
 
     iget-boolean p0, p0, Lcom/android/server/wm/OpWindowManagerService;->mIsFullscreen:Z
+
+    return p0
+.end method
+
+.method public isInNavGestureFullscreenList(Ljava/lang/String;)Z
+    .locals 0
+
+    sget-object p0, Lcom/android/server/wm/OpWindowManagerServiceInjector;->sNavGestureFullscreenList:Ljava/util/List;
+
+    invoke-interface {p0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result p0
 
     return p0
 .end method
@@ -1578,9 +1668,9 @@
 
     if-eqz p1, :cond_2
 
-    new-instance v0, Lcom/android/server/wm/igw;
+    new-instance v0, Lcom/android/server/wm/gck;
 
-    invoke-direct {v0, p0}, Lcom/android/server/wm/igw;-><init>(Lcom/android/server/wm/OpWindowManagerService;)V
+    invoke-direct {v0, p0}, Lcom/android/server/wm/gck;-><init>(Lcom/android/server/wm/OpWindowManagerService;)V
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -1611,9 +1701,9 @@
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/OpWindowManagerService;->mHandler:Landroid/os/Handler;
 
-    new-instance v1, Lcom/android/server/wm/bio;
+    new-instance v1, Lcom/android/server/wm/wtn;
 
-    invoke-direct {v1, p0, p1}, Lcom/android/server/wm/bio;-><init>(Lcom/android/server/wm/OpWindowManagerService;Landroid/os/Bundle;)V
+    invoke-direct {v1, p0, p1}, Lcom/android/server/wm/wtn;-><init>(Lcom/android/server/wm/OpWindowManagerService;Landroid/os/Bundle;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
     :try_end_0
@@ -1989,7 +2079,7 @@
 
     new-array v2, v1, [I
 
-    const/16 v3, 0x3e
+    const/16 v3, 0x3c
 
     const/4 v4, 0x0
 
@@ -2158,13 +2248,6 @@
 .method public updateForceDarkFlag(Z)V
     .locals 5
 
-    iget-boolean v0, p0, Lcom/android/server/wm/OpWindowManagerService;->mOpForceDarkStatus:Z
-
-    if-ne p1, v0, :cond_0
-
-    return-void
-
-    :cond_0
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -2173,6 +2256,17 @@
 
     move-result-wide v1
 
+    iget-boolean v3, p0, Lcom/android/server/wm/OpWindowManagerService;->mOpForceDarkStatus:Z
+
+    if-ne p1, v3, :cond_0
+
+    iget v3, p0, Lcom/android/server/wm/OpWindowManagerService;->mLastUpdateUid:I
+
+    if-ne v0, v3, :cond_0
+
+    return-void
+
+    :cond_0
     :try_start_0
     invoke-static {}, Lcom/android/server/wm/WindowManagerService;->getInstance()Lcom/android/server/wm/WindowManagerService;
 
@@ -2220,6 +2314,8 @@
     if-ne v3, v0, :cond_2
 
     iput-boolean p1, p0, Lcom/android/server/wm/OpWindowManagerService;->mOpForceDarkStatus:Z
+
+    iput v0, p0, Lcom/android/server/wm/OpWindowManagerService;->mLastUpdateUid:I
 
     :cond_2
     monitor-exit v4

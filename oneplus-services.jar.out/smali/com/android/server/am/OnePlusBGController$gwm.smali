@@ -402,7 +402,7 @@
 
     new-array v2, v3, [I
 
-    const/16 v3, 0x7c
+    const/16 v3, 0x75
 
     aput v3, v2, v4
 

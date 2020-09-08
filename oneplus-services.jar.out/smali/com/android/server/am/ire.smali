@@ -18,35 +18,39 @@
 
 
 # static fields
-.field private static final A:I = 0x9
+.field private static final A:I = 0x7
 
-.field private static final B:I = 0xa
+.field private static final B:I = 0x8
 
-.field private static final C:I = 0xb
+.field private static final C:I = 0x9
 
-.field private static final D:I = 0xd
+.field private static final D:I = 0xa
 
-.field private static final E:I = 0xe
+.field private static final E:I = 0xb
 
-.field private static final F:I = 0x10
+.field private static final F:I = 0xd
 
-.field private static final G:Ljava/lang/String; = "ramboost"
+.field private static final G:I = 0xe
 
-.field private static final H:Ljava/lang/String; = "smartboost"
+.field private static final H:I = 0x10
 
-.field private static final I:Ljava/lang/String; = "version"
+.field private static final I:Ljava/lang/String; = "ramboost"
 
-.field private static final J:Ljava/lang/String; = "pkg"
+.field private static final J:Ljava/lang/String; = "smartboost"
 
-.field private static final K:Ljava/lang/String; = "name"
+.field private static final K:Ljava/lang/String; = "version"
 
-.field private static final L:Ljava/lang/String; = "hotcount"
+.field private static final L:Ljava/lang/String; = "pkg"
 
-.field private static final M:Ljava/lang/String; = "switch"
+.field private static final M:Ljava/lang/String; = "name"
 
-.field private static final N:Ljava/lang/String; = "ioppreload"
+.field private static final N:Ljava/lang/String; = "hotcount"
 
-.field private static final O:Ljava/lang/String; = "iop"
+.field private static final O:Ljava/lang/String; = "switch"
+
+.field private static final P:Ljava/lang/String; = "ioppreload"
+
+.field private static final Q:Ljava/lang/String; = "iop"
 
 .field private static final a:I = 0x2
 
@@ -120,13 +124,13 @@
 
 .field private static s:Ljava/lang/String; = null
 
-.field private static final t:I = 0x1
+.field private static final t:Ljava/lang/String; = "/sys/module/houston/parameters/hwui_boost_enable"
 
-.field private static final u:I = 0x2
+.field private static final u:Ljava/lang/String; = "/sys/module/houston/parameters/fuse_boost"
 
 .field private static ugm:Z = false
 
-.field private static final v:I = 0x3
+.field private static final v:I = 0x1
 
 .field private static vdb:Z = false
 
@@ -136,13 +140,13 @@
 
 .field private static final vju:Ljava/lang/String; = "persist.vendor.memplus.enable"
 
-.field private static final w:I = 0x4
+.field private static final w:I = 0x2
 
-.field private static final x:I = 0x5
+.field private static final x:I = 0x3
 
-.field private static final y:I = 0x7
+.field private static final y:I = 0x4
 
-.field private static final z:I = 0x8
+.field private static final z:I = 0x5
 
 .field private static zgw:Z
 
@@ -247,7 +251,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x6f
+    const/16 v2, 0x69
 
     const/4 v3, 0x0
 
@@ -1162,7 +1166,7 @@
 
     move-result v2
 
-    if-ge v1, v2, :cond_19
+    if-ge v1, v2, :cond_1c
 
     invoke-virtual {p1, v1}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
@@ -2002,18 +2006,136 @@
 
     invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
-    move-result-object v2
+    move-result-object v3
 
-    const-string v3, "persist.sys.memplus.direct_swappiness"
+    const-string v4, "persist.sys.memplus.direct_swappiness"
 
-    invoke-direct {p0, v3, v2}, Lcom/android/server/am/ire;->qeg(Ljava/lang/String;Lorg/json/JSONArray;)V
+    invoke-direct {p0, v4, v3}, Lcom/android/server/am/ire;->qeg(Ljava/lang/String;Lorg/json/JSONArray;)V
 
     :cond_18
+    const-string v3, "name"
+
+    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v4, "hwui_boost"
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1a
+
+    const-string v3, "value"
+
+    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+
+    const-string v4, "OnePlusSmartBoostManager"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "[OnlineConfig] hwui boost: "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string v4, "/sys/module/houston/parameters/hwui_boost_enable"
+
+    if-nez v3, :cond_19
+
+    const-string v3, "0"
+
+    goto :goto_9
+
+    :cond_19
+    const-string v3, "1"
+
+    :goto_9
+    invoke-direct {p0, v4, v3}, Lcom/android/server/am/ire;->bvj(Ljava/lang/String;Ljava/lang/String;)Z
+
+    :cond_1a
+    const-string v3, "name"
+
+    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v4, "fuse_boost"
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1b
+
+    const-string v3, "value"
+
+    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+
+    const-string v4, "OnePlusSmartBoostManager"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "[OnlineConfig] fuse_boost "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v4, v3}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string v3, "/sys/module/houston/parameters/fuse_boost"
+
+    const-string v4, "value"
+
+    invoke-virtual {v2, v4}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {p0, v3, v2}, Lcom/android/server/am/ire;->bvj(Ljava/lang/String;Ljava/lang/String;)Z
+
+    :cond_1b
     add-int/lit8 v1, v1, 0x1
 
     goto/16 :goto_0
 
-    :cond_19
+    :cond_1c
     invoke-direct {p0, v0}, Lcom/android/server/am/ire;->c(Z)V
 
     const-string p0, "OnePlusSmartBoostManager"
@@ -2025,7 +2147,7 @@
     .catch Lorg/json/JSONException; {:try_start_18 .. :try_end_18} :catch_1
     .catch Ljava/lang/Exception; {:try_start_18 .. :try_end_18} :catch_0
 
-    goto :goto_a
+    goto :goto_b
 
     :catch_0
     move-exception p0
@@ -2042,7 +2164,7 @@
 
     move-result-object p0
 
-    goto :goto_9
+    goto :goto_a
 
     :catch_1
     move-exception p0
@@ -2059,7 +2181,7 @@
 
     move-result-object p0
 
-    :goto_9
+    :goto_a
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -2070,7 +2192,7 @@
 
     invoke-static {p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :goto_a
+    :goto_b
     return-void
 .end method
 

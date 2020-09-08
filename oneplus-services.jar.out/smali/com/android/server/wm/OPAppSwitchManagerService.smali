@@ -9,11 +9,12 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/server/wm/OPAppSwitchManagerService$cno;,
         Lcom/android/server/wm/OPAppSwitchManagerService$kth;,
-        Lcom/android/server/wm/OPAppSwitchManagerService$igw;,
+        Lcom/android/server/wm/OPAppSwitchManagerService$bio;,
+        Lcom/android/server/wm/OPAppSwitchManagerService$wtn;,
+        Lcom/android/server/wm/OPAppSwitchManagerService$cno;,
         Lcom/android/server/wm/OPAppSwitchManagerService$ssp;,
-        Lcom/android/server/wm/OPAppSwitchManagerService$bio;
+        Lcom/android/server/wm/OPAppSwitchManagerService$igw;
     }
 .end annotation
 
@@ -31,6 +32,8 @@
 
 .field private static final MSG_GET_ONLINECONFIG:I = 0x1
 
+.field private static final MSG_REBIND_INSTANT:I = 0x3
+
 .field private static final MSG_REBIND_OPOS:I = 0x2
 
 .field private static final OPOS_APP_PERMISSIONS:Ljava/util/Set;
@@ -45,13 +48,25 @@
 
 .field private static final SERVICE_ACTION:Ljava/lang/String; = "com.opos.ads.ColorAppServicesManagerClient"
 
+.field private static final SERVICE_ACTION_I:Ljava/lang/String; = "com.oneplus.instant.local.service.ColorAppServicesManagerClient"
+
 .field private static final SERVICE_NAME:Ljava/lang/String; = "com.opos.ads.ColorAppServicesManagerClient"
+
+.field private static final SERVICE_NAME_I:Ljava/lang/String; = "com.oneplus.instant.local.service.ColorAppServicesManagerClient"
 
 .field private static final SERVICE_PACKAGE:Ljava/lang/String; = "com.opos.ads"
 
+.field private static final SERVICE_PACKAGE_I:Ljava/lang/String; = "com.oneplus.instant.local.service"
+
 .field private static final TAG:Ljava/lang/String; = "OPAppSwitchManagerService"
 
+.field private static final TAG_INSTANT:Ljava/lang/String; = "OPInstantAppDeviceManagerService"
+
 .field private static final URI_OEM_SPLASH_ADS_ENABLE:Landroid/net/Uri;
+
+.field private static bindInstantCount:I
+
+.field private static bindOposCount:I
 
 .field private static goingToPackageIsNull:Z
 
@@ -83,6 +98,10 @@
 
 .field private iService:Landroid/os/IBinder;
 
+.field private iServiceI:Landroid/os/IBinder;
+
+.field private isBindInstantService:Z
+
 .field private isBindOposService:Z
 
 .field private mAm:Landroid/app/ActivityManager;
@@ -95,7 +114,9 @@
 
 .field private mConfigObserver:Lcom/oneplus/config/ConfigObserver;
 
-.field private mConnection:Lcom/android/server/wm/OPAppSwitchManagerService$bio;
+.field private mConnection:Lcom/android/server/wm/OPAppSwitchManagerService$igw;
+
+.field private mConnectionI:Lcom/android/server/wm/OPAppSwitchManagerService$ssp;
 
 .field private mContext:Landroid/content/Context;
 
@@ -148,7 +169,7 @@
 
 .field private mSettings:Lcom/android/server/wm/OPAppSwitchSettings;
 
-.field private mSettingsObserver:Lcom/android/server/wm/OPAppSwitchManagerService$igw;
+.field private mSettingsObserver:Lcom/android/server/wm/OPAppSwitchManagerService$wtn;
 
 .field private nowTopr:Lcom/android/server/wm/ActivityRecord;
 
@@ -187,9 +208,13 @@
 
     sput-boolean v0, Lcom/android/server/wm/OPAppSwitchManagerService;->goingToPackageIsNull:Z
 
-    const-string v0, ""
+    const-string v1, ""
 
-    sput-object v0, Lcom/android/server/wm/OPAppSwitchManagerService;->goingToPackageName:Ljava/lang/String;
+    sput-object v1, Lcom/android/server/wm/OPAppSwitchManagerService;->goingToPackageName:Ljava/lang/String;
+
+    sput v0, Lcom/android/server/wm/OPAppSwitchManagerService;->bindOposCount:I
+
+    sput v0, Lcom/android/server/wm/OPAppSwitchManagerService;->bindInstantCount:I
 
     new-instance v0, Landroid/util/ArraySet;
 
@@ -257,6 +282,8 @@
 
     iput-boolean v2, v0, Lcom/android/server/wm/OPAppSwitchManagerService;->isBindOposService:Z
 
+    iput-boolean v2, v0, Lcom/android/server/wm/OPAppSwitchManagerService;->isBindInstantService:Z
+
     new-instance v2, Landroid/content/IntentFilter;
 
     invoke-direct {v2}, Landroid/content/IntentFilter;-><init>()V
@@ -269,11 +296,17 @@
 
     iput-object v2, v0, Lcom/android/server/wm/OPAppSwitchManagerService;->mScreenStateReceiver:Landroid/content/BroadcastReceiver;
 
-    new-instance v2, Lcom/android/server/wm/OPAppSwitchManagerService$bio;
+    new-instance v2, Lcom/android/server/wm/OPAppSwitchManagerService$igw;
 
-    invoke-direct {v2, v0, v1}, Lcom/android/server/wm/OPAppSwitchManagerService$bio;-><init>(Lcom/android/server/wm/OPAppSwitchManagerService;Lcom/android/server/wm/OPAppSwitchManagerService$zta;)V
+    invoke-direct {v2, v0, v1}, Lcom/android/server/wm/OPAppSwitchManagerService$igw;-><init>(Lcom/android/server/wm/OPAppSwitchManagerService;Lcom/android/server/wm/OPAppSwitchManagerService$zta;)V
 
-    iput-object v2, v0, Lcom/android/server/wm/OPAppSwitchManagerService;->mConnection:Lcom/android/server/wm/OPAppSwitchManagerService$bio;
+    iput-object v2, v0, Lcom/android/server/wm/OPAppSwitchManagerService;->mConnection:Lcom/android/server/wm/OPAppSwitchManagerService$igw;
+
+    new-instance v2, Lcom/android/server/wm/OPAppSwitchManagerService$ssp;
+
+    invoke-direct {v2, v0, v1}, Lcom/android/server/wm/OPAppSwitchManagerService$ssp;-><init>(Lcom/android/server/wm/OPAppSwitchManagerService;Lcom/android/server/wm/OPAppSwitchManagerService$zta;)V
+
+    iput-object v2, v0, Lcom/android/server/wm/OPAppSwitchManagerService;->mConnectionI:Lcom/android/server/wm/OPAppSwitchManagerService$ssp;
 
     iput-object v1, v0, Lcom/android/server/wm/OPAppSwitchManagerService;->permManagerInternal:Lcom/android/server/pm/permission/PermissionManagerServiceInternal;
 
@@ -343,7 +376,7 @@
 
     iput-object v1, v0, Lcom/android/server/wm/OPAppSwitchManagerService;->mCleanUpReceiver:Landroid/content/BroadcastReceiver;
 
-    new-instance v1, Lcom/android/server/wm/OPAppSwitchManagerService$ssp;
+    new-instance v1, Lcom/android/server/wm/OPAppSwitchManagerService$cno;
 
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
 
@@ -353,7 +386,7 @@
 
     move-result-object v2
 
-    invoke-direct {v1, v0, v2}, Lcom/android/server/wm/OPAppSwitchManagerService$ssp;-><init>(Lcom/android/server/wm/OPAppSwitchManagerService;Landroid/os/Looper;)V
+    invoke-direct {v1, v0, v2}, Lcom/android/server/wm/OPAppSwitchManagerService$cno;-><init>(Lcom/android/server/wm/OPAppSwitchManagerService;Landroid/os/Looper;)V
 
     iput-object v1, v0, Lcom/android/server/wm/OPAppSwitchManagerService;->mHandler:Landroid/os/Handler;
 
@@ -376,20 +409,12 @@
     return-object p0
 .end method
 
-.method static synthetic access$1000()Lnet/oneplus/odm/OpDeviceManagerInjector;
+.method static synthetic access$1000()Landroid/net/Uri;
     .locals 1
 
-    sget-object v0, Lcom/android/server/wm/OPAppSwitchManagerService;->mOpDeviceManagerInjector:Lnet/oneplus/odm/OpDeviceManagerInjector;
+    sget-object v0, Lcom/android/server/wm/OPAppSwitchManagerService;->URI_OEM_SPLASH_ADS_ENABLE:Landroid/net/Uri;
 
     return-object v0
-.end method
-
-.method static synthetic access$1002(Lnet/oneplus/odm/OpDeviceManagerInjector;)Lnet/oneplus/odm/OpDeviceManagerInjector;
-    .locals 0
-
-    sput-object p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mOpDeviceManagerInjector:Lnet/oneplus/odm/OpDeviceManagerInjector;
-
-    return-object p0
 .end method
 
 .method static synthetic access$102(Lcom/android/server/wm/OPAppSwitchManagerService;Landroid/os/IBinder;)Landroid/os/IBinder;
@@ -403,7 +428,7 @@
 .method static synthetic access$1100(Lcom/android/server/wm/OPAppSwitchManagerService;)Z
     .locals 0
 
-    iget-boolean p0, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mGrantOposPerms:Z
+    iget-boolean p0, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mOpAdsSettingsOn:Z
 
     return p0
 .end method
@@ -411,12 +436,44 @@
 .method static synthetic access$1102(Lcom/android/server/wm/OPAppSwitchManagerService;Z)Z
     .locals 0
 
+    iput-boolean p1, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mOpAdsSettingsOn:Z
+
+    return p1
+.end method
+
+.method static synthetic access$1200()Lnet/oneplus/odm/OpDeviceManagerInjector;
+    .locals 1
+
+    sget-object v0, Lcom/android/server/wm/OPAppSwitchManagerService;->mOpDeviceManagerInjector:Lnet/oneplus/odm/OpDeviceManagerInjector;
+
+    return-object v0
+.end method
+
+.method static synthetic access$1202(Lnet/oneplus/odm/OpDeviceManagerInjector;)Lnet/oneplus/odm/OpDeviceManagerInjector;
+    .locals 0
+
+    sput-object p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mOpDeviceManagerInjector:Lnet/oneplus/odm/OpDeviceManagerInjector;
+
+    return-object p0
+.end method
+
+.method static synthetic access$1300(Lcom/android/server/wm/OPAppSwitchManagerService;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mGrantOposPerms:Z
+
+    return p0
+.end method
+
+.method static synthetic access$1302(Lcom/android/server/wm/OPAppSwitchManagerService;Z)Z
+    .locals 0
+
     iput-boolean p1, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mGrantOposPerms:Z
 
     return p1
 .end method
 
-.method static synthetic access$1200()Ljava/util/Set;
+.method static synthetic access$1400()Ljava/util/Set;
     .locals 1
 
     sget-object v0, Lcom/android/server/wm/OPAppSwitchManagerService;->OPOS_APP_PERMISSIONS:Ljava/util/Set;
@@ -424,7 +481,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$1300(Lcom/android/server/wm/OPAppSwitchManagerService;)Landroid/permission/IPermissionManager;
+.method static synthetic access$1500(Lcom/android/server/wm/OPAppSwitchManagerService;)Landroid/permission/IPermissionManager;
     .locals 0
 
     iget-object p0, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mPermissionManagerService:Landroid/permission/IPermissionManager;
@@ -432,7 +489,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1400(Lcom/android/server/wm/OPAppSwitchManagerService;Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/ActivityRecord;Z)V
+.method static synthetic access$1600(Lcom/android/server/wm/OPAppSwitchManagerService;Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/ActivityRecord;Z)V
     .locals 0
 
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/wm/OPAppSwitchManagerService;->onActivityPaused(Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/ActivityRecord;Z)V
@@ -440,7 +497,7 @@
     return-void
 .end method
 
-.method static synthetic access$1500(Lcom/android/server/wm/OPAppSwitchManagerService;Lcom/android/server/wm/ActivityRecord;Z)V
+.method static synthetic access$1700(Lcom/android/server/wm/OPAppSwitchManagerService;Lcom/android/server/wm/ActivityRecord;Z)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/wm/OPAppSwitchManagerService;->onActivityResumed(Lcom/android/server/wm/ActivityRecord;Z)V
@@ -448,7 +505,7 @@
     return-void
 .end method
 
-.method static synthetic access$1600(Lcom/android/server/wm/OPAppSwitchManagerService;Lorg/json/JSONArray;)V
+.method static synthetic access$1800(Lcom/android/server/wm/OPAppSwitchManagerService;Lorg/json/JSONArray;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/wm/OPAppSwitchManagerService;->resolveOnlineConfig(Lorg/json/JSONArray;)V
@@ -466,7 +523,23 @@
     return p0
 .end method
 
-.method static synthetic access$400(Lcom/android/server/wm/OPAppSwitchManagerService;)Landroid/os/Handler;
+.method static synthetic access$300(Lcom/android/server/wm/OPAppSwitchManagerService;)Landroid/os/IBinder;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->iServiceI:Landroid/os/IBinder;
+
+    return-object p0
+.end method
+
+.method static synthetic access$302(Lcom/android/server/wm/OPAppSwitchManagerService;Landroid/os/IBinder;)Landroid/os/IBinder;
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->iServiceI:Landroid/os/IBinder;
+
+    return-object p1
+.end method
+
+.method static synthetic access$500(Lcom/android/server/wm/OPAppSwitchManagerService;)Landroid/os/Handler;
     .locals 0
 
     iget-object p0, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mHandler:Landroid/os/Handler;
@@ -474,7 +547,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$500()Z
+.method static synthetic access$700()Z
     .locals 1
 
     sget-boolean v0, Lcom/android/server/wm/OPAppSwitchManagerService;->mOpAdsEnable:Z
@@ -482,7 +555,7 @@
     return v0
 .end method
 
-.method static synthetic access$600()Z
+.method static synthetic access$800()Z
     .locals 1
 
     sget-boolean v0, Lcom/android/server/wm/OPAppSwitchManagerService;->mOpAdsPermEnable:Z
@@ -490,36 +563,12 @@
     return v0
 .end method
 
-.method static synthetic access$700(Lcom/android/server/wm/OPAppSwitchManagerService;)Landroid/content/Context;
+.method static synthetic access$900(Lcom/android/server/wm/OPAppSwitchManagerService;)Landroid/content/Context;
     .locals 0
 
     iget-object p0, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mContext:Landroid/content/Context;
 
     return-object p0
-.end method
-
-.method static synthetic access$800()Landroid/net/Uri;
-    .locals 1
-
-    sget-object v0, Lcom/android/server/wm/OPAppSwitchManagerService;->URI_OEM_SPLASH_ADS_ENABLE:Landroid/net/Uri;
-
-    return-object v0
-.end method
-
-.method static synthetic access$900(Lcom/android/server/wm/OPAppSwitchManagerService;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mOpAdsSettingsOn:Z
-
-    return p0
-.end method
-
-.method static synthetic access$902(Lcom/android/server/wm/OPAppSwitchManagerService;Z)Z
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mOpAdsSettingsOn:Z
-
-    return p1
 .end method
 
 .method private getGrantedAppPermissionsCount(Landroid/content/Context;Ljava/lang/String;)I
@@ -946,8 +995,8 @@
     return p0
 .end method
 
-.method private isAllowToBind()Z
-    .locals 3
+.method private isAllowToBind(Ljava/lang/String;)Z
+    .locals 2
 
     const-string p0, "OPAppSwitchManagerService"
 
@@ -956,19 +1005,29 @@
 
     move-result-object v0
 
-    const-string v1, "com.opos.ads"
-
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
-    move-result v2
+    move-result v1
 
-    invoke-interface {v0, v1, v2}, Landroid/content/pm/IPackageManager;->checkPackageStartable(Ljava/lang/String;I)V
+    invoke-interface {v0, p1, v1}, Landroid/content/pm/IPackageManager;->checkPackageStartable(Ljava/lang/String;I)V
 
     sget-boolean v0, Lcom/android/server/wm/OPAppSwitchManagerService;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    const-string v0, "isAllowToBind : true"
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "isAllowToBind : true"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     invoke-static {p0, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
@@ -985,9 +1044,21 @@
 
     if-eqz v0, :cond_1
 
-    const-string v0, "isAllowToBind : false"
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {p0, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, "isAllowToBind : false"
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
     const/4 p0, 0x0
@@ -2145,35 +2216,45 @@
 
 
 # virtual methods
-.method public bindOposService()V
-    .locals 8
+.method public bindInstantService()V
+    .locals 12
 
-    const-string v0, "OPAppSwitchManagerService"
+    const-string v0, "give up binding instant service !"
 
-    new-instance v1, Landroid/content/Intent;
+    const-string v1, "OPAppSwitchManagerService"
 
-    invoke-direct {v1}, Landroid/content/Intent;-><init>()V
+    const-string v2, "OPInstantAppDeviceManagerService"
 
-    new-instance v2, Landroid/content/ComponentName;
+    new-instance v3, Landroid/content/Intent;
 
-    const-string v3, "com.opos.ads"
+    invoke-direct {v3}, Landroid/content/Intent;-><init>()V
 
-    const-string v4, "com.opos.ads.ColorAppServicesManagerClient"
+    new-instance v4, Landroid/content/ComponentName;
 
-    invoke-direct {v2, v3, v4}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v5, "com.oneplus.instant.local.service"
 
-    invoke-virtual {v1, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+    const-string v6, "com.oneplus.instant.local.service.ColorAppServicesManagerClient"
 
-    invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-direct {v4, v5, v6}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v4}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v3, v4}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    const-wide/16 v2, 0x3e8
+    invoke-virtual {v3, v5, v6}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    const/4 v4, 0x2
+    invoke-virtual {v3, v6}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    const-wide/16 v6, 0x3e8
+
+    const/4 v4, 0x3
+
+    const/16 v8, 0xa
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x1
 
     :try_start_0
-    invoke-direct {p0}, Lcom/android/server/wm/OPAppSwitchManagerService;->isAllowToBind()Z
+    invoke-direct {p0, v5}, Lcom/android/server/wm/OPAppSwitchManagerService;->isAllowToBind(Ljava/lang/String;)Z
 
     move-result v5
 
@@ -2181,43 +2262,47 @@
 
     iget-object v5, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mContext:Landroid/content/Context;
 
-    iget-object v6, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mConnection:Lcom/android/server/wm/OPAppSwitchManagerService$bio;
+    iget-object v11, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mConnectionI:Lcom/android/server/wm/OPAppSwitchManagerService$ssp;
 
-    const/4 v7, 0x1
+    invoke-virtual {v5, v3, v11, v10}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
-    invoke-virtual {v5, v1, v6, v7}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
+    move-result v3
 
-    move-result v1
-
-    if-nez v1, :cond_0
+    if-nez v3, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iput-boolean v7, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->isBindOposService:Z
+    iput-boolean v10, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->isBindInstantService:Z
 
-    sget-boolean v1, Lcom/android/server/wm/OPAppSwitchManagerService;->DEBUG:Z
+    sput v9, Lcom/android/server/wm/OPAppSwitchManagerService;->bindInstantCount:I
 
-    if-eqz v1, :cond_4
+    sget-boolean v3, Lcom/android/server/wm/OPAppSwitchManagerService;->DEBUG:Z
 
-    const-string v1, "bind opos service done!"
+    if-eqz v3, :cond_a
 
-    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    const-string v3, "bind instant service done!"
 
-    goto :goto_2
+    invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_3
 
     :cond_1
     :goto_0
-    sget-boolean v1, Lcom/android/server/wm/OPAppSwitchManagerService;->DEBUG:Z
+    sget-boolean v3, Lcom/android/server/wm/OPAppSwitchManagerService;->DEBUG:Z
 
-    if-eqz v1, :cond_2
+    if-eqz v3, :cond_2
 
-    const-string v1, "bind opos service fail! - > rebind it in 1"
+    const-string v3, "bind instant service fail! - > rebind it in 1"
 
-    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
-    iget-object v1, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mHandler:Landroid/os/Handler;
+    sget v3, Lcom/android/server/wm/OPAppSwitchManagerService;->bindInstantCount:I
+
+    if-ge v3, v8, :cond_3
+
+    iget-object v3, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mHandler:Landroid/os/Handler;
 
     iget-object v5, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mHandler:Landroid/os/Handler;
 
@@ -2225,43 +2310,289 @@
 
     move-result-object v5
 
-    invoke-virtual {v1, v5, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+    invoke-virtual {v3, v5, v6, v7}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+
+    sget v3, Lcom/android/server/wm/OPAppSwitchManagerService;->bindInstantCount:I
+
+    add-int/2addr v3, v10
+
+    sput v3, Lcom/android/server/wm/OPAppSwitchManagerService;->bindInstantCount:I
+
+    goto :goto_3
+
+    :cond_3
+    sget-boolean v3, Lcom/android/server/wm/OPAppSwitchManagerService;->DEBUG:Z
+
+    if-eqz v3, :cond_4
+
+    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_4
+    sput v9, Lcom/android/server/wm/OPAppSwitchManagerService;->bindInstantCount:I
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_2
+    goto :goto_3
 
     :catch_0
-    sget-boolean v1, Lcom/android/server/wm/OPAppSwitchManagerService;->DEBUG:Z
+    sget-boolean v3, Lcom/android/server/wm/OPAppSwitchManagerService;->DEBUG:Z
 
-    if-eqz v1, :cond_3
+    if-eqz v3, :cond_5
 
-    const-string v1, "bind opos service fail![Exception] - > rebind it in 1"
+    const-string v3, "bind instant service fail![Exception] - > rebind it in 1"
 
-    goto :goto_1
+    invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :catch_1
-    sget-boolean v1, Lcom/android/server/wm/OPAppSwitchManagerService;->DEBUG:Z
+    :cond_5
+    sget v2, Lcom/android/server/wm/OPAppSwitchManagerService;->bindInstantCount:I
 
-    if-eqz v1, :cond_3
-
-    const-string v1, "bind opos service fail![SecurityException] - > rebind it in 1"
+    if-ge v2, v8, :cond_6
 
     :goto_1
-    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_3
     iget-object p0, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {p0, v4}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+    invoke-virtual {p0, v0, v6, v7}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+
+    sget p0, Lcom/android/server/wm/OPAppSwitchManagerService;->bindInstantCount:I
+
+    add-int/2addr p0, v10
+
+    sput p0, Lcom/android/server/wm/OPAppSwitchManagerService;->bindInstantCount:I
+
+    goto :goto_3
+
+    :cond_6
+    sget-boolean p0, Lcom/android/server/wm/OPAppSwitchManagerService;->DEBUG:Z
+
+    if-eqz p0, :cond_7
+
+    :goto_2
+    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_7
+    sput v9, Lcom/android/server/wm/OPAppSwitchManagerService;->bindInstantCount:I
+
+    goto :goto_3
+
+    :catch_1
+    sget-boolean v3, Lcom/android/server/wm/OPAppSwitchManagerService;->DEBUG:Z
+
+    if-eqz v3, :cond_8
+
+    const-string v3, "bind instant service fail![SecurityException] - > rebind it in 1"
+
+    invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_8
+    sget v2, Lcom/android/server/wm/OPAppSwitchManagerService;->bindInstantCount:I
+
+    if-ge v2, v8, :cond_9
+
+    goto :goto_1
+
+    :cond_9
+    sget-boolean p0, Lcom/android/server/wm/OPAppSwitchManagerService;->DEBUG:Z
+
+    if-eqz p0, :cond_7
+
+    goto :goto_2
+
+    :cond_a
+    :goto_3
+    return-void
+.end method
+
+.method public bindOposService()V
+    .locals 11
+
+    const-string v0, "give up binding opos service !"
+
+    const-string v1, "OPAppSwitchManagerService"
+
+    new-instance v2, Landroid/content/Intent;
+
+    invoke-direct {v2}, Landroid/content/Intent;-><init>()V
+
+    new-instance v3, Landroid/content/ComponentName;
+
+    const-string v4, "com.opos.ads"
+
+    const-string v5, "com.opos.ads.ColorAppServicesManagerClient"
+
+    invoke-direct {v3, v4, v5}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v2, v3}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+
+    invoke-virtual {v2, v4, v5}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    invoke-virtual {v2, v5}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    const-wide/16 v5, 0x3e8
+
+    const/4 v3, 0x2
+
+    const/16 v7, 0xa
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x1
+
+    :try_start_0
+    invoke-direct {p0, v4}, Lcom/android/server/wm/OPAppSwitchManagerService;->isAllowToBind(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    iget-object v4, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mContext:Landroid/content/Context;
+
+    iget-object v10, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mConnection:Lcom/android/server/wm/OPAppSwitchManagerService$igw;
+
+    invoke-virtual {v4, v2, v10, v9}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iput-boolean v9, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->isBindOposService:Z
+
+    sput v8, Lcom/android/server/wm/OPAppSwitchManagerService;->bindOposCount:I
+
+    sget-boolean v2, Lcom/android/server/wm/OPAppSwitchManagerService;->DEBUG:Z
+
+    if-eqz v2, :cond_a
+
+    const-string v2, "bind opos service done!"
+
+    invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_3
+
+    :cond_1
+    :goto_0
+    sget-boolean v2, Lcom/android/server/wm/OPAppSwitchManagerService;->DEBUG:Z
+
+    if-eqz v2, :cond_2
+
+    const-string v2, "bind opos service fail! - > rebind it in 1"
+
+    invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_2
+    sget v2, Lcom/android/server/wm/OPAppSwitchManagerService;->bindOposCount:I
+
+    if-ge v2, v7, :cond_3
+
+    iget-object v2, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mHandler:Landroid/os/Handler;
+
+    iget-object v4, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mHandler:Landroid/os/Handler;
+
+    invoke-virtual {v4, v3}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+
+    move-result-object v4
+
+    invoke-virtual {v2, v4, v5, v6}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+
+    sget v2, Lcom/android/server/wm/OPAppSwitchManagerService;->bindOposCount:I
+
+    add-int/2addr v2, v9
+
+    sput v2, Lcom/android/server/wm/OPAppSwitchManagerService;->bindOposCount:I
+
+    goto :goto_3
+
+    :cond_3
+    sget-boolean v2, Lcom/android/server/wm/OPAppSwitchManagerService;->DEBUG:Z
+
+    if-eqz v2, :cond_4
+
+    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_4
+    sput v8, Lcom/android/server/wm/OPAppSwitchManagerService;->bindOposCount:I
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_3
+
+    :catch_0
+    sget-boolean v2, Lcom/android/server/wm/OPAppSwitchManagerService;->DEBUG:Z
+
+    if-eqz v2, :cond_5
+
+    const-string v2, "bind opos service fail![Exception] - > rebind it in 1"
+
+    invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_5
+    sget v2, Lcom/android/server/wm/OPAppSwitchManagerService;->bindOposCount:I
+
+    if-ge v2, v7, :cond_6
+
+    :goto_1
+    iget-object p0, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mHandler:Landroid/os/Handler;
+
+    invoke-virtual {p0, v3}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0, v5, v6}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+
+    sget p0, Lcom/android/server/wm/OPAppSwitchManagerService;->bindOposCount:I
+
+    add-int/2addr p0, v9
+
+    sput p0, Lcom/android/server/wm/OPAppSwitchManagerService;->bindOposCount:I
+
+    goto :goto_3
+
+    :cond_6
+    sget-boolean p0, Lcom/android/server/wm/OPAppSwitchManagerService;->DEBUG:Z
+
+    if-eqz p0, :cond_7
+
     :goto_2
+    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_7
+    sput v8, Lcom/android/server/wm/OPAppSwitchManagerService;->bindOposCount:I
+
+    goto :goto_3
+
+    :catch_1
+    sget-boolean v2, Lcom/android/server/wm/OPAppSwitchManagerService;->DEBUG:Z
+
+    if-eqz v2, :cond_8
+
+    const-string v2, "bind opos service fail![SecurityException] - > rebind it in 1"
+
+    invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_8
+    sget v2, Lcom/android/server/wm/OPAppSwitchManagerService;->bindOposCount:I
+
+    if-ge v2, v7, :cond_9
+
+    goto :goto_1
+
+    :cond_9
+    sget-boolean p0, Lcom/android/server/wm/OPAppSwitchManagerService;->DEBUG:Z
+
+    if-eqz p0, :cond_7
+
+    goto :goto_2
+
+    :cond_a
+    :goto_3
     return-void
 .end method
 
@@ -2724,29 +3055,29 @@
 
     iput-object p2, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mPermissionManagerService:Landroid/permission/IPermissionManager;
 
-    new-instance p2, Lcom/android/server/wm/OPAppSwitchManagerService$igw;
+    new-instance p2, Lcom/android/server/wm/OPAppSwitchManagerService$wtn;
 
     iget-object v1, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mHandler:Landroid/os/Handler;
 
-    invoke-direct {p2, p0, v1}, Lcom/android/server/wm/OPAppSwitchManagerService$igw;-><init>(Lcom/android/server/wm/OPAppSwitchManagerService;Landroid/os/Handler;)V
+    invoke-direct {p2, p0, v1}, Lcom/android/server/wm/OPAppSwitchManagerService$wtn;-><init>(Lcom/android/server/wm/OPAppSwitchManagerService;Landroid/os/Handler;)V
 
-    iput-object p2, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mSettingsObserver:Lcom/android/server/wm/OPAppSwitchManagerService$igw;
+    iput-object p2, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mSettingsObserver:Lcom/android/server/wm/OPAppSwitchManagerService$wtn;
 
     const/4 v1, 0x0
 
-    invoke-virtual {p2, v1}, Lcom/android/server/wm/OPAppSwitchManagerService$igw;->you(Landroid/net/Uri;)V
+    invoke-virtual {p2, v1}, Lcom/android/server/wm/OPAppSwitchManagerService$wtn;->you(Landroid/net/Uri;)V
 
-    iget-object p2, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mSettingsObserver:Lcom/android/server/wm/OPAppSwitchManagerService$igw;
+    iget-object p2, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mSettingsObserver:Lcom/android/server/wm/OPAppSwitchManagerService$wtn;
 
-    invoke-virtual {p2}, Lcom/android/server/wm/OPAppSwitchManagerService$igw;->zta()V
+    invoke-virtual {p2}, Lcom/android/server/wm/OPAppSwitchManagerService$wtn;->zta()V
 
     new-instance p2, Lcom/oneplus/config/ConfigObserver;
 
     iget-object v1, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mHandler:Landroid/os/Handler;
 
-    new-instance v2, Lcom/android/server/wm/OPAppSwitchManagerService$cno;
+    new-instance v2, Lcom/android/server/wm/OPAppSwitchManagerService$kth;
 
-    invoke-direct {v2, p0}, Lcom/android/server/wm/OPAppSwitchManagerService$cno;-><init>(Lcom/android/server/wm/OPAppSwitchManagerService;)V
+    invoke-direct {v2, p0}, Lcom/android/server/wm/OPAppSwitchManagerService$kth;-><init>(Lcom/android/server/wm/OPAppSwitchManagerService;)V
 
     sget-object v3, Lcom/android/server/wm/OPAppSwitchManagerService;->mOpAdsOn:Ljava/lang/String;
 
@@ -2785,6 +3116,18 @@
     move-result-object p2
 
     const-wide/32 v0, 0xea60
+
+    invoke-virtual {p1, p2, v0, v1}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+
+    iget-object p1, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mHandler:Landroid/os/Handler;
+
+    const/4 p2, 0x3
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+
+    move-result-object p2
+
+    const-wide/32 v0, 0x11170
 
     invoke-virtual {p1, p2, v0, v1}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
@@ -3093,9 +3436,9 @@
 
     move-result-object v2
 
-    new-instance v3, Lcom/android/server/wm/OPAppSwitchManagerService$kth;
+    new-instance v3, Lcom/android/server/wm/OPAppSwitchManagerService$bio;
 
-    invoke-direct {v3, p0, p1, p3}, Lcom/android/server/wm/OPAppSwitchManagerService$kth;-><init>(Lcom/android/server/wm/OPAppSwitchManagerService;Ljava/lang/String;Lcom/color/app/ColorAppSwitchConfig;)V
+    invoke-direct {v3, p0, p1, p3}, Lcom/android/server/wm/OPAppSwitchManagerService$bio;-><init>(Lcom/android/server/wm/OPAppSwitchManagerService;Ljava/lang/String;Lcom/color/app/ColorAppSwitchConfig;)V
 
     iput-object v3, v2, Lcom/android/server/wm/OPAppSwitchRuleInfo;->deathRecipient:Landroid/os/IBinder$DeathRecipient;
 

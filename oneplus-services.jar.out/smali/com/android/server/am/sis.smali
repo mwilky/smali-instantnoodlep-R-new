@@ -34,7 +34,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/sis;->you:Lorg/json/JSONArray;
 
-    invoke-virtual {v0, p0}, Lcom/android/server/am/hmo;->vju(Lorg/json/JSONArray;)V
+    invoke-virtual {v0, p0}, Lcom/android/server/am/hmo;->f(Lorg/json/JSONArray;)V
 
     return-void
 .end method

@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/wifi/OpSlaNetlinkHelper;->r1()V
+    value = Lcom/android/server/wifi/OpSlaNetlinkHelper;->s1()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

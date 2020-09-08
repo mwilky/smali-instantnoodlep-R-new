@@ -107,6 +107,14 @@
 
 .field public static final FULL_DATE_FORMAT:Ljava/text/SimpleDateFormat;
 
+.field public static final HORAE_OCRYPT:Ljava/lang/String; = "/system_ext/bin/horae_ocrypt"
+
+.field public static final HYPNUS_CONF_FOLDER:Ljava/lang/String; = "/data/system/hypnus"
+
+.field public static final HYPNUS_CONF_IN_FILEPATH:Ljava/lang/String; = "/data/system/hypnus/horae_in.conf"
+
+.field public static final HYPNUS_CONF_OUT_FILEPATH:Ljava/lang/String; = "/data/system/hypnus/horae.conf"
+
 .field private static final INTENT_OPSM_CHECK:Ljava/lang/String; = "net.oneplus.powercontroller.intent.OPSM"
 
 .field private static final LATEST_DAILY_PROTO_FILE:Ljava/lang/String; = "/data/system/latest_daily_proto.bin"
@@ -210,6 +218,8 @@
 .field private static final PROBE_TIMEOUT_MS:I = 0xbb8
 
 .field private static final PROJECT_CONFIG_NAME:Ljava/lang/String; = "PowerControl"
+
+.field private static final PROP_HYPNUS:Ljava/lang/String; = "persist.sys.hypnus.daemon.enable"
 
 .field private static final PROP_LAST_OTA_KEY:Ljava/lang/String; = "persist.sys.version.lastota"
 
@@ -348,6 +358,8 @@
 .field private static mTimeOutBeforeUserAwake:I
 
 .field private static mTolerance:I
+
+.field private static sHypnusService:Lcom/android/internal/app/IHypnusService;
 
 .field private static sPkgFirewallList:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
@@ -520,19 +532,19 @@
     .end annotation
 .end field
 
-.field mOnePlusChargingGuarder:Lcom/android/server/bio;
+.field mOnePlusChargingGuarder:Lcom/android/server/igw;
 
-.field mOnePlusSensorManager:Lcom/android/server/wtn;
+.field mOnePlusSensorManager:Lcom/android/server/gck;
 
-.field private mOpAlarmAlignment:Lcom/android/server/ywr;
+.field private mOpAlarmAlignment:Lcom/android/server/qbh;
 
-.field private mOpAlarmManager:Lcom/android/server/qbh;
+.field private mOpAlarmManager:Lcom/android/server/oif;
 
 .field private mOpDeviceManagerInjector:Lnet/oneplus/odm/OpDeviceManagerInjector;
 
 .field private mOpPowerManager:Lcom/android/server/power/sis;
 
-.field mOverHeatingDiagnosis:Lcom/android/server/ugm;
+.field mOverHeatingDiagnosis:Lcom/android/server/vdb;
 
 .field private mPowerManager:Landroid/os/PowerManager;
 
@@ -656,6 +668,10 @@
     sget-object v1, Ljava/time/format/DateTimeFormatter;->ISO_LOCAL_TIME:Ljava/time/format/DateTimeFormatter;
 
     sput-object v1, Lcom/android/server/OpPowerControllerService;->SIMPLE_TIME_FORMAT:Ljava/time/format/DateTimeFormatter;
+
+    const/4 v1, 0x0
+
+    sput-object v1, Lcom/android/server/OpPowerControllerService;->sHypnusService:Lcom/android/internal/app/IHypnusService;
 
     sput-boolean v0, Lcom/android/server/OpPowerControllerService;->mIsDeepSleep:Z
 
@@ -2292,7 +2308,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/server/gwm;
+    check-cast v0, Lcom/android/server/ugm;
 
     iget-object v1, p0, Lcom/android/server/OpPowerControllerService;->mAddedDeviceIdleWhitelist:Ljava/util/Set;
 
@@ -2320,7 +2336,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v2}, Lcom/android/server/gwm;->isSmartOptApp(Ljava/lang/String;)Z
+    invoke-virtual {v0, v2}, Lcom/android/server/ugm;->isSmartOptApp(Ljava/lang/String;)Z
 
     move-result v5
 
@@ -2357,7 +2373,7 @@
 
     move-result-object v2
 
-    invoke-static {v4, v2}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v4, v2}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2393,7 +2409,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0, v1}, Lcom/android/server/gwm;->isSmartOptApp(Ljava/lang/String;)Z
+    invoke-virtual {v0, v1}, Lcom/android/server/ugm;->isSmartOptApp(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -2430,7 +2446,7 @@
 
     move-result-object v1
 
-    invoke-static {v4, v1}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v4, v1}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -2775,7 +2791,7 @@
 
     iget-object v1, p0, Lcom/android/server/OpPowerControllerService;->mContext:Landroid/content/Context;
 
-    const v2, 0x50f00eb
+    const v2, 0x50f00ec
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2783,7 +2799,7 @@
 
     iget-object v2, p0, Lcom/android/server/OpPowerControllerService;->mContext:Landroid/content/Context;
 
-    const v3, 0x50f00ea
+    const v3, 0x50f00eb
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2797,7 +2813,7 @@
 
     invoke-direct {v3, v4, v5}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    const v4, 0x507016d
+    const v4, 0x507016e
 
     invoke-virtual {v3, v4}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
@@ -3925,6 +3941,46 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    const-string v0, "**** HYPNUS CONFIGURATION ****"
+
+    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Hypnus   : "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "persist.sys.hypnus.daemon.enable"
+
+    const/4 v2, 0x1
+
+    invoke-static {v1, v2}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result v1
+
+    const/4 v3, 0x0
+
+    if-ne v1, v2, :cond_0
+
+    move v1, v2
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v3
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
     const-string v0, "**** USER DEEP SLEEP CONFIGURATION ****"
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
@@ -4027,17 +4083,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x1
+    new-array v1, v2, [Ljava/lang/Object;
 
-    new-array v1, v1, [Ljava/lang/Object;
+    sget-wide v4, Lcom/android/server/OpPowerControllerService;->mCoefVar:D
 
-    sget-wide v2, Lcom/android/server/OpPowerControllerService;->mCoefVar:D
-
-    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    invoke-static {v4, v5}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v2
-
-    const/4 v3, 0x0
 
     aput-object v2, v1, v3
 
@@ -4217,7 +4269,7 @@
 
     iget-object v0, p0, Lcom/android/server/OpPowerControllerService;->mWifiManager:Landroid/net/wifi/WifiManager;
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -4241,10 +4293,10 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    :cond_0
+    :cond_1
     iget-object v0, p0, Lcom/android/server/OpPowerControllerService;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -4268,7 +4320,7 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    :cond_1
+    :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4369,13 +4421,13 @@
 
     const-string v1, "Screen-off time = "
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_3
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_2
+    :cond_3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4398,10 +4450,10 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    :goto_0
+    :goto_1
     iget-object v0, p0, Lcom/android/server/OpPowerControllerService;->mLastEnterOpsmTime:Ljava/time/LocalDateTime;
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -4427,10 +4479,10 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    :cond_3
+    :cond_4
     iget-object v0, p0, Lcom/android/server/OpPowerControllerService;->mLastExitOpsmTime:Ljava/time/LocalDateTime;
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -4456,7 +4508,7 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    :cond_4
+    :cond_5
     invoke-static {}, Ljava/time/LocalDateTime;->now()Ljava/time/LocalDateTime;
 
     move-result-object v0
@@ -4541,7 +4593,7 @@
 
     iget-object v0, p0, Lcom/android/server/OpPowerControllerService;->mIdleStats:Lcom/android/server/OpPowerControllerService$dma;
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_b
 
     invoke-virtual {v0}, Lcom/android/server/OpPowerControllerService$dma;->rtg()Ljava/time/LocalTime;
 
@@ -4601,15 +4653,15 @@
 
     move-result-object v4
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_7
 
-    if-nez v4, :cond_5
+    if-nez v4, :cond_6
 
-    goto :goto_1
+    goto :goto_2
 
-    :cond_5
+    :cond_6
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -4658,17 +4710,17 @@
 
     move-result-object v0
 
-    goto :goto_2
+    goto :goto_3
 
-    :cond_6
-    :goto_1
+    :cond_7
+    :goto_2
     const-string v0, "Last update time: 0"
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "deep-sleep: start=0, length=0"
 
-    :goto_2
+    :goto_3
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
@@ -4679,7 +4731,7 @@
 
     iget-object v0, p0, Lcom/android/server/OpPowerControllerService;->mSleepStartOverridden:Ljava/time/LocalDateTime;
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_8
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -4695,7 +4747,7 @@
 
     move-result-object v1
 
-    :goto_3
+    :goto_4
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -4704,10 +4756,10 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    goto :goto_4
+    goto :goto_5
 
-    :cond_7
-    if-eqz v2, :cond_8
+    :cond_8
+    if-eqz v2, :cond_9
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -4723,13 +4775,13 @@
 
     move-result-object v1
 
-    goto :goto_3
+    goto :goto_4
 
-    :cond_8
-    :goto_4
+    :cond_9
+    :goto_5
     iget-object v0, p0, Lcom/android/server/OpPowerControllerService;->mSleepEndOverridden:Ljava/time/LocalDateTime;
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_a
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -4751,13 +4803,13 @@
 
     move-result-object p0
 
-    :goto_5
+    :goto_6
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    goto :goto_6
+    goto :goto_7
 
-    :cond_9
-    if-eqz v3, :cond_a
+    :cond_a
+    if-eqz v3, :cond_b
 
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -4779,10 +4831,10 @@
 
     move-result-object p0
 
-    goto :goto_5
+    goto :goto_6
 
-    :cond_a
-    :goto_6
+    :cond_b
+    :goto_7
     return-void
 .end method
 
@@ -4809,7 +4861,7 @@
 
     const-string v2, "OpPowerControllerService"
 
-    invoke-static {v2, v1}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v1}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-static {v0}, Landroid/telephony/SubscriptionManager;->isValidSubscriptionId(I)Z
 
@@ -4837,7 +4889,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v1}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object p0, p0, Lcom/android/server/OpPowerControllerService;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
@@ -5779,6 +5831,149 @@
     throw p0
 .end method
 
+.method private parseHypnus(Lorg/json/JSONObject;)V
+    .locals 4
+
+    const-string p0, "OpPowerControllerService"
+
+    const-string v0, "parseHypnus..."
+
+    invoke-static {p0, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string v0, "enabled"
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
+
+    move-result p1
+
+    const-string v0, "persist.sys.hypnus.daemon.enable"
+
+    invoke-static {v0, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "curVal: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v3, ", setVal: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {p0, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-eq p1, v1, :cond_0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "configure Hypnus status to "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {p0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method private parseHypnusConf(Lorg/json/JSONObject;)V
+    .locals 2
+
+    const-string v0, "OpPowerControllerService"
+
+    const-string v1, "parseHypnusConf..."
+
+    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :try_start_0
+    const-string v1, "config"
+
+    invoke-virtual {p1, v1}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+
+    move-result-object p1
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v1}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
+
+    move-result-object p1
+
+    sget-boolean v1, Lcom/android/server/OpPowerControllerService;->mDebugOneplus:Z
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    invoke-virtual {p1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Lcom/android/server/OpPowerControllerService;->saveConfToLocal(Ljava/lang/String;)V
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p0
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "[OnlineConfig] parseHypnusConf, error message:"
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lorg/json/JSONException;->getMessage()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_0
+    return-void
+.end method
+
 .method private parseNetworkRestrict(Lorg/json/JSONObject;)V
     .locals 7
 
@@ -6160,9 +6355,9 @@
 
     iput-object p1, p0, Lcom/android/server/OpPowerControllerService;->mDeepSleepWhitelistAppIdArray:[I
 
-    iget-object v1, p0, Lcom/android/server/OpPowerControllerService;->mOpAlarmManager:Lcom/android/server/qbh;
+    iget-object v1, p0, Lcom/android/server/OpPowerControllerService;->mOpAlarmManager:Lcom/android/server/oif;
 
-    invoke-virtual {v1, p1}, Lcom/android/server/qbh;->setDeepSleepWhitelist([I)V
+    invoke-virtual {v1, p1}, Lcom/android/server/oif;->setDeepSleepWhitelist([I)V
 
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOpPowerManager:Lcom/android/server/power/sis;
 
@@ -7025,7 +7220,7 @@
 
     sparse-switch v7, :sswitch_data_0
 
-    goto :goto_2
+    goto/16 :goto_2
 
     :sswitch_0
     const-string v7, "deep_clean_whitelist"
@@ -7038,9 +7233,22 @@
 
     const/4 v6, 0x6
 
-    goto :goto_2
+    goto/16 :goto_2
 
     :sswitch_1
+    const-string v7, "hypnus_conf"
+
+    invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
+    const/16 v6, 0xa
+
+    goto :goto_2
+
+    :sswitch_2
     const-string v7, "dailyproto"
 
     invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -7053,7 +7261,7 @@
 
     goto :goto_2
 
-    :sswitch_2
+    :sswitch_3
     const-string v7, "network_restrict"
 
     invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -7066,7 +7274,7 @@
 
     goto :goto_2
 
-    :sswitch_3
+    :sswitch_4
     const-string v7, "wakelocks"
 
     invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -7079,7 +7287,7 @@
 
     goto :goto_2
 
-    :sswitch_4
+    :sswitch_5
     const-string v7, "usersleep"
 
     invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -7092,7 +7300,7 @@
 
     goto :goto_2
 
-    :sswitch_5
+    :sswitch_6
     const-string v7, "idle_whitelist"
 
     invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -7105,7 +7313,7 @@
 
     goto :goto_2
 
-    :sswitch_6
+    :sswitch_7
     const-string v7, "opsm"
 
     invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -7118,7 +7326,7 @@
 
     goto :goto_2
 
-    :sswitch_7
+    :sswitch_8
     const-string v7, "chargingguadrder"
 
     invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -7131,7 +7339,7 @@
 
     goto :goto_2
 
-    :sswitch_8
+    :sswitch_9
     const-string v7, "bad_process"
 
     invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -7142,6 +7350,19 @@
 
     const/4 v6, 0x3
 
+    goto :goto_2
+
+    :sswitch_a
+    const-string v7, "hypnus"
+
+    invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
+    const/16 v6, 0x9
+
     :cond_2
     :goto_2
     packed-switch v6, :pswitch_data_0
@@ -7149,20 +7370,30 @@
     goto :goto_3
 
     :pswitch_0
-    iget-object v5, p0, Lcom/android/server/OpPowerControllerService;->mOnePlusChargingGuarder:Lcom/android/server/bio;
-
-    if-eqz v5, :cond_3
-
-    iget-object v5, p0, Lcom/android/server/OpPowerControllerService;->mOnePlusChargingGuarder:Lcom/android/server/bio;
-
-    invoke-virtual {v5, v4}, Lcom/android/server/bio;->v(Lorg/json/JSONObject;)V
+    invoke-direct {p0, v4}, Lcom/android/server/OpPowerControllerService;->parseHypnusConf(Lorg/json/JSONObject;)V
 
     goto :goto_3
 
     :pswitch_1
+    invoke-direct {p0, v4}, Lcom/android/server/OpPowerControllerService;->parseHypnus(Lorg/json/JSONObject;)V
+
+    goto :goto_3
+
+    :pswitch_2
+    iget-object v5, p0, Lcom/android/server/OpPowerControllerService;->mOnePlusChargingGuarder:Lcom/android/server/igw;
+
+    if-eqz v5, :cond_3
+
+    iget-object v5, p0, Lcom/android/server/OpPowerControllerService;->mOnePlusChargingGuarder:Lcom/android/server/igw;
+
+    invoke-virtual {v5, v4}, Lcom/android/server/igw;->v(Lorg/json/JSONObject;)V
+
+    goto :goto_3
+
+    :pswitch_3
     new-array v5, v8, [I
 
-    const/16 v6, 0xe6
+    const/16 v6, 0xde
 
     aput v6, v5, v2
 
@@ -7176,20 +7407,20 @@
 
     goto :goto_3
 
-    :pswitch_2
+    :pswitch_4
     invoke-direct {p0, v4}, Lcom/android/server/OpPowerControllerService;->parseDeepCleanWhitelist(Lorg/json/JSONObject;)V
 
     goto :goto_3
 
-    :pswitch_3
+    :pswitch_5
     invoke-direct {p0, v4}, Lcom/android/server/OpPowerControllerService;->parseDozeWhitelist(Lorg/json/JSONObject;)V
 
     goto :goto_3
 
-    :pswitch_4
+    :pswitch_6
     new-array v5, v8, [I
 
-    const/16 v6, 0x7c
+    const/16 v6, 0x75
 
     aput v6, v5, v2
 
@@ -7203,15 +7434,15 @@
 
     goto :goto_3
 
-    :pswitch_5
+    :pswitch_7
     invoke-direct {p0, v4}, Lcom/android/server/OpPowerControllerService;->parseBadProcess(Lorg/json/JSONObject;)V
 
     goto :goto_3
 
-    :pswitch_6
+    :pswitch_8
     new-array v5, v8, [I
 
-    const/16 v6, 0x47
+    const/16 v6, 0x45
 
     aput v6, v5, v2
 
@@ -7225,12 +7456,12 @@
 
     goto :goto_3
 
-    :pswitch_7
+    :pswitch_9
     invoke-direct {p0, v4}, Lcom/android/server/OpPowerControllerService;->parseUserSleep(Lorg/json/JSONObject;)V
 
     goto :goto_3
 
-    :pswitch_8
+    :pswitch_a
     invoke-direct {p0, v4}, Lcom/android/server/OpPowerControllerService;->parseWakeLock(Lorg/json/JSONObject;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -7265,19 +7496,23 @@
 
     :sswitch_data_0
     .sparse-switch
-        -0xbc793cb -> :sswitch_8
-        -0xaa4e31f -> :sswitch_7
-        0x3427fb -> :sswitch_6
-        0x10ffc19c -> :sswitch_5
-        0x1552e9ec -> :sswitch_4
-        0x16dbb584 -> :sswitch_3
-        0x478c25ad -> :sswitch_2
-        0x5bf4d36f -> :sswitch_1
+        -0x47aa4e53 -> :sswitch_a
+        -0xbc793cb -> :sswitch_9
+        -0xaa4e31f -> :sswitch_8
+        0x3427fb -> :sswitch_7
+        0x10ffc19c -> :sswitch_6
+        0x1552e9ec -> :sswitch_5
+        0x16dbb584 -> :sswitch_4
+        0x478c25ad -> :sswitch_3
+        0x5bf4d36f -> :sswitch_2
+        0x6b30ba76 -> :sswitch_1
         0x78cf647e -> :sswitch_0
     .end sparse-switch
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_a
+        :pswitch_9
         :pswitch_8
         :pswitch_7
         :pswitch_6
@@ -7288,6 +7523,413 @@
         :pswitch_1
         :pswitch_0
     .end packed-switch
+.end method
+
+.method private declared-synchronized saveConfToLocal(Ljava/lang/String;)V
+    .locals 7
+
+    monitor-enter p0
+
+    :try_start_0
+    const-string v0, "OpPowerControllerService"
+
+    const-string v1, "saveConfToLocal..."
+
+    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-eqz p1, :cond_6
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_3
+
+    if-lez v0, :cond_6
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    :try_start_1
+    new-instance v3, Ljava/io/File;
+
+    const-string v4, "/data/system/hypnus"
+
+    invoke-direct {v3, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3}, Ljava/io/File;->exists()Z
+
+    move-result v4
+
+    if-nez v4, :cond_0
+
+    invoke-virtual {v3}, Ljava/io/File;->mkdir()Z
+
+    :cond_0
+    new-instance v3, Ljava/io/FileWriter;
+
+    const-string v4, "/data/system/hypnus/horae_in.conf"
+
+    invoke-direct {v3, v4}, Ljava/io/FileWriter;-><init>(Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_3
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :try_start_2
+    new-instance v4, Ljava/io/BufferedWriter;
+
+    invoke-direct {v4, v3}, Ljava/io/BufferedWriter;-><init>(Ljava/io/Writer;)V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    :try_start_3
+    invoke-virtual {v4, p1}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
+
+    invoke-virtual {v4}, Ljava/io/BufferedWriter;->flush()V
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :try_start_4
+    invoke-virtual {v4}, Ljava/io/BufferedWriter;->close()V
+
+    invoke-virtual {v3}, Ljava/io/FileWriter;->close()V
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
+    .catchall {:try_start_4 .. :try_end_4} :catchall_3
+
+    :catch_0
+    move p1, v1
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    move-object v0, v4
+
+    goto/16 :goto_4
+
+    :catch_1
+    move-exception p1
+
+    move-object v0, v4
+
+    goto :goto_0
+
+    :catch_2
+    move-exception p1
+
+    goto :goto_0
+
+    :catchall_1
+    move-exception p1
+
+    move-object v3, v0
+
+    goto/16 :goto_4
+
+    :catch_3
+    move-exception p1
+
+    move-object v3, v0
+
+    :goto_0
+    :try_start_5
+    invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
+
+    const-string v4, "OpPowerControllerService"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "saveConfToLocal got exception :"
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v4, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_2
+
+    if-eqz v0, :cond_1
+
+    :try_start_6
+    invoke-virtual {v0}, Ljava/io/BufferedWriter;->close()V
+
+    :cond_1
+    if-eqz v3, :cond_2
+
+    invoke-virtual {v3}, Ljava/io/FileWriter;->close()V
+    :try_end_6
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_4
+    .catchall {:try_start_6 .. :try_end_6} :catchall_3
+
+    :catch_4
+    :cond_2
+    move p1, v2
+
+    :goto_1
+    if-nez p1, :cond_3
+
+    :try_start_7
+    const-string p1, "OpPowerControllerService"
+
+    const-string v0, "saveConfToLocal OK, start encrypting..."
+
+    invoke-static {p1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_3
+
+    :try_start_8
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+
+    move-result-object p1
+
+    const-string v0, "/system_ext/bin/horae_ocrypt -e /data/system/hypnus/horae_in.conf /data/system/hypnus/horae.conf"
+
+    invoke-virtual {p1, v0}, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Process;->waitFor()I
+
+    move-result p1
+
+    const-string v0, "OpPowerControllerService"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "encrypt status: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string p1, "chmod a+r /data/system/hypnus/horae.conf"
+
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Process;->waitFor()I
+
+    move-result p1
+
+    const-string v0, "OpPowerControllerService"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "chmod status: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string p1, "persist.sys.hypnus.daemon.enable"
+
+    invoke-static {p1, v2}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result p1
+
+    if-ne p1, v2, :cond_3
+
+    const-string p1, "OpPowerControllerService"
+
+    const-string v0, "Hypnus restarting..."
+
+    invoke-static {p1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string p1, "persist.sys.hypnus.daemon.enable"
+
+    invoke-static {v1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string p1, "persist.sys.hypnus.daemon.enable"
+
+    invoke-static {v2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_8
+    .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_6
+    .catch Ljava/lang/InterruptedException; {:try_start_8 .. :try_end_8} :catch_5
+    .catchall {:try_start_8 .. :try_end_8} :catchall_3
+
+    goto :goto_3
+
+    :catch_5
+    move-exception p1
+
+    :try_start_9
+    const-string v0, "OpPowerControllerService"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "encrypt got InterruptedException :"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    :goto_2
+    invoke-static {v0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_3
+
+    :catch_6
+    move-exception p1
+
+    const-string v0, "OpPowerControllerService"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "encrypt got IOException :"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    goto :goto_2
+
+    :cond_3
+    :goto_3
+    new-instance p1, Ljava/io/File;
+
+    const-string v0, "/data/system/hypnus/horae_in.conf"
+
+    invoke-direct {p1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_3
+
+    :try_start_a
+    const-string v0, "OpPowerControllerService"
+
+    const-string v1, "deleting plain conf..."
+
+    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {p1}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    invoke-virtual {p1}, Ljava/io/File;->delete()Z
+    :try_end_a
+    .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_7
+    .catchall {:try_start_a .. :try_end_a} :catchall_3
+
+    goto :goto_5
+
+    :catch_7
+    move-exception p1
+
+    :try_start_b
+    const-string v0, "OpPowerControllerService"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "delete IOException :"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_b
+    .catchall {:try_start_b .. :try_end_b} :catchall_3
+
+    goto :goto_5
+
+    :catchall_2
+    move-exception p1
+
+    :goto_4
+    if-eqz v0, :cond_4
+
+    :try_start_c
+    invoke-virtual {v0}, Ljava/io/BufferedWriter;->close()V
+
+    :cond_4
+    if-eqz v3, :cond_5
+
+    invoke-virtual {v3}, Ljava/io/FileWriter;->close()V
+    :try_end_c
+    .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_8
+    .catchall {:try_start_c .. :try_end_c} :catchall_3
+
+    :catch_8
+    :cond_5
+    :try_start_d
+    throw p1
+    :try_end_d
+    .catchall {:try_start_d .. :try_end_d} :catchall_3
+
+    :cond_6
+    :goto_5
+    monitor-exit p0
+
+    return-void
+
+    :catchall_3
+    move-exception p1
+
+    monitor-exit p0
+
+    throw p1
 .end method
 
 .method private sendHttpProbe(Ljava/net/URL;)Z
@@ -7604,7 +8246,7 @@
 
     iget-object p0, p0, Lcom/android/server/OpPowerControllerService;->mDeepCleanWhitelist:Ljava/util/List;
 
-    invoke-static {p0}, Lcom/android/server/cno;->tsu(Ljava/util/List;)V
+    invoke-static {p0}, Lcom/android/server/kth;->tsu(Ljava/util/List;)V
 
     return-void
 .end method
@@ -7666,7 +8308,7 @@
 
     move-result-object v5
 
-    invoke-static {v4, v5}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v4, v5}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
     const/high16 v4, 0x400000
@@ -7713,7 +8355,7 @@
 
     move-result-object v4
 
-    invoke-static {v5, v4}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v5, v4}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -7809,7 +8451,7 @@
 
     const/4 v1, 0x0
 
-    const/16 v2, 0x47
+    const/16 v2, 0x45
 
     aput v2, v0, v1
 
@@ -7826,7 +8468,7 @@
 
     const-string v1, "acquireNetworkTemp"
 
-    invoke-static {v0, v1}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object v0, p0, Lcom/android/server/OpPowerControllerService;->mContext:Landroid/content/Context;
 
@@ -7970,7 +8612,7 @@
 
     const-string v3, "applyEarlyRestriction"
 
-    invoke-static {v1, v3}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v3}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-static {}, Lcom/android/server/net/OpNetworkPolicyInjector;->setEarlyRestriction()V
 
@@ -7978,13 +8620,13 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/power/sis;->cgv(Z)Z
 
-    iget-object v1, p0, Lcom/android/server/OpPowerControllerService;->mOpAlarmAlignment:Lcom/android/server/ywr;
+    iget-object v1, p0, Lcom/android/server/OpPowerControllerService;->mOpAlarmAlignment:Lcom/android/server/qbh;
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lcom/android/server/OpPowerControllerService;->mOpAlarmAlignment:Lcom/android/server/ywr;
+    iget-object v1, p0, Lcom/android/server/OpPowerControllerService;->mOpAlarmAlignment:Lcom/android/server/qbh;
 
-    invoke-virtual {v1, v2}, Lcom/android/server/ywr;->dma(Z)V
+    invoke-virtual {v1, v2}, Lcom/android/server/qbh;->dma(Z)V
 
     :cond_1
     iput-boolean v2, p0, Lcom/android/server/OpPowerControllerService;->mEarlyRestrictionEnabled:Z
@@ -8012,9 +8654,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/server/qbh;
+    check-cast v0, Lcom/android/server/oif;
 
-    iput-object v0, p0, Lcom/android/server/OpPowerControllerService;->mOpAlarmManager:Lcom/android/server/qbh;
+    iput-object v0, p0, Lcom/android/server/OpPowerControllerService;->mOpAlarmManager:Lcom/android/server/oif;
 
     sget-object v0, Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;->oneplus_alarm_alignment:Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;
 
@@ -8022,9 +8664,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/server/ywr;
+    check-cast v0, Lcom/android/server/qbh;
 
-    iput-object v0, p0, Lcom/android/server/OpPowerControllerService;->mOpAlarmAlignment:Lcom/android/server/ywr;
+    iput-object v0, p0, Lcom/android/server/OpPowerControllerService;->mOpAlarmAlignment:Lcom/android/server/qbh;
 
     sget-object v0, Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;->oneplus_power_manager:Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;
 
@@ -8050,7 +8692,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0xe6
+    const/16 v2, 0xde
 
     const/4 v3, 0x0
 
@@ -8108,7 +8750,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v4, 0x47
+    const/16 v4, 0x45
 
     aput v4, v1, v3
 
@@ -8141,7 +8783,7 @@
     :cond_1
     new-array v1, v0, [I
 
-    const/16 v4, 0x7c
+    const/16 v4, 0x75
 
     aput v4, v1, v3
 
@@ -8322,7 +8964,7 @@
     :cond_8
     new-array v1, v0, [I
 
-    const/16 v4, 0x8c
+    const/16 v4, 0x85
 
     aput v4, v1, v3
 
@@ -8332,9 +8974,9 @@
 
     if-eqz v1, :cond_9
 
-    iget-object v1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/ugm;
+    iget-object v1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/vdb;
 
-    invoke-virtual {v1}, Lcom/android/server/ugm;->Y()V
+    invoke-virtual {v1}, Lcom/android/server/vdb;->Y()V
 
     :cond_9
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -8774,7 +9416,7 @@
     :try_start_0
     new-array p3, p1, [I
 
-    const/16 v1, 0x47
+    const/16 v1, 0x45
 
     aput v1, p3, v0
 
@@ -8789,7 +9431,7 @@
     :cond_5
     new-array p3, p1, [I
 
-    const/16 v1, 0x8c
+    const/16 v1, 0x85
 
     aput v1, p3, v0
 
@@ -8799,9 +9441,9 @@
 
     if-eqz p3, :cond_6
 
-    iget-object p3, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/ugm;
+    iget-object p3, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/vdb;
 
-    invoke-virtual {p3, p2}, Lcom/android/server/ugm;->v(Ljava/io/PrintWriter;)V
+    invoke-virtual {p3, p2}, Lcom/android/server/vdb;->v(Ljava/io/PrintWriter;)V
 
     :cond_6
     const-string p3, "**** OverHeat Diagnosis Records ****"
@@ -8931,7 +9573,7 @@
 
     move-result-object p1
 
-    invoke-static {v6, p1}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, p1}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     move v8, v5
 
@@ -8946,7 +9588,7 @@
 
     const-string p1, "Abort entering OPSM mode because of audio playing"
 
-    invoke-static {v6, p1}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, p1}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v8, 0x2
 
@@ -8975,7 +9617,7 @@
 
     move-result-object p1
 
-    invoke-static {v6, p1}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, p1}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v8, 0x3
 
@@ -8988,7 +9630,7 @@
 
     const-string p1, "Abort entering OPSM mode because of charging"
 
-    invoke-static {v6, p1}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, p1}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v8, 0x4
 
@@ -9001,7 +9643,7 @@
 
     const-string p1, "Abort entering OPSM mode because OPSM is already active."
 
-    invoke-static {v6, p1}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, p1}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
@@ -9032,7 +9674,7 @@
 
     const-string p1, "Abort entering OPSM mode because of Screen-off Timeout"
 
-    invoke-static {v6, p1}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, p1}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v8, 0x6
 
@@ -9048,7 +9690,7 @@
 
     const-string p1, "Abort entering OPSM mode because of screen on"
 
-    invoke-static {v6, p1}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, p1}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v8, 0x7
 
@@ -9113,7 +9755,7 @@
 
     move-result-object p1
 
-    invoke-static {v6, p1}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, p1}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mSleepEndOverridden:Ljava/time/LocalDateTime;
 
@@ -9254,7 +9896,7 @@
 
     move-result-object v2
 
-    invoke-static {v6, v2}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, v2}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_c
     new-instance v2, Ljava/lang/StringBuilder;
@@ -9277,7 +9919,7 @@
 
     move-result-object v2
 
-    invoke-static {v6, v2}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, v2}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object v2, p0, Lcom/android/server/OpPowerControllerService;->mSavedTetheredIfaces:[Ljava/lang/String;
 
@@ -9316,7 +9958,7 @@
 
     move-result-object v9
 
-    invoke-static {v6, v9}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, v9}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     add-int/lit8 v8, v8, 0x1
 
@@ -9327,9 +9969,9 @@
 
     invoke-static {v5}, Lcom/android/server/BatteryServiceInjector;->setDeepSleepMode(Z)V
 
-    iget-object v2, p0, Lcom/android/server/OpPowerControllerService;->mOpAlarmManager:Lcom/android/server/qbh;
+    iget-object v2, p0, Lcom/android/server/OpPowerControllerService;->mOpAlarmManager:Lcom/android/server/oif;
 
-    invoke-virtual {v2, v5}, Lcom/android/server/qbh;->setDeepSleepMode(Z)V
+    invoke-virtual {v2, v5}, Lcom/android/server/oif;->setDeepSleepMode(Z)V
 
     iget-object v2, p0, Lcom/android/server/OpPowerControllerService;->mOpPowerManager:Lcom/android/server/power/sis;
 
@@ -9362,7 +10004,7 @@
 
     const-string v1, "Disable NFC"
 
-    invoke-static {v6, v1}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, v1}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_f
     if-eqz v0, :cond_11
@@ -9381,7 +10023,7 @@
 
     const-string p1, "Set BLE_SCAN_ALWAYS_AVAILABLE to 0"
 
-    invoke-static {v6, p1}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, p1}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_10
     iget-boolean p1, p0, Lcom/android/server/OpPowerControllerService;->mSavedBluetoothState:Z
@@ -9392,7 +10034,7 @@
 
     const-string p1, "Disable bluetooth"
 
-    invoke-static {v6, p1}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, p1}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_11
     iput-boolean v5, p0, Lcom/android/server/OpPowerControllerService;->mOPSMActive:Z
@@ -9651,7 +10293,7 @@
 
     const-string p1, "OpPowerControllerService"
 
-    invoke-static {p1, p0}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p1, p0}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_5
     return v0
@@ -9864,7 +10506,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x8c
+    const/16 v2, 0x85
 
     const/4 v3, 0x0
 
@@ -9876,16 +10518,16 @@
 
     if-eqz v1, :cond_0
 
-    new-instance v1, Lcom/android/server/ugm;
+    new-instance v1, Lcom/android/server/vdb;
 
     iget-object v2, p0, Lcom/android/server/OpPowerControllerService;->mContext:Landroid/content/Context;
 
-    invoke-direct {v1, v2}, Lcom/android/server/ugm;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v2}, Lcom/android/server/vdb;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/ugm;
+    iput-object v1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/vdb;
 
     :cond_0
-    new-instance v1, Lcom/android/server/wtn;
+    new-instance v1, Lcom/android/server/gck;
 
     iget-object v2, p0, Lcom/android/server/OpPowerControllerService;->mContext:Landroid/content/Context;
 
@@ -9893,13 +10535,13 @@
 
     iget-object v6, p0, Lcom/android/server/OpPowerControllerService;->mPowerManager:Landroid/os/PowerManager;
 
-    invoke-direct {v1, v2, v5, v6}, Lcom/android/server/wtn;-><init>(Landroid/content/Context;Landroid/hardware/SensorManager;Landroid/os/PowerManager;)V
+    invoke-direct {v1, v2, v5, v6}, Lcom/android/server/gck;-><init>(Landroid/content/Context;Landroid/hardware/SensorManager;Landroid/os/PowerManager;)V
 
-    iput-object v1, p0, Lcom/android/server/OpPowerControllerService;->mOnePlusSensorManager:Lcom/android/server/wtn;
+    iput-object v1, p0, Lcom/android/server/OpPowerControllerService;->mOnePlusSensorManager:Lcom/android/server/gck;
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x114
+    const/16 v2, 0x10d
 
     aput v2, v1, v3
 
@@ -9911,11 +10553,11 @@
 
     iget-object v1, p0, Lcom/android/server/OpPowerControllerService;->mContext:Landroid/content/Context;
 
-    invoke-static {v1}, Lcom/android/server/bio;->q(Landroid/content/Context;)Lcom/android/server/bio;
+    invoke-static {v1}, Lcom/android/server/igw;->q(Landroid/content/Context;)Lcom/android/server/igw;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/server/OpPowerControllerService;->mOnePlusChargingGuarder:Lcom/android/server/bio;
+    iput-object v1, p0, Lcom/android/server/OpPowerControllerService;->mOnePlusChargingGuarder:Lcom/android/server/igw;
 
     :cond_1
     const-string v1, "ro.boot.opcarrier"
@@ -10013,7 +10655,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x47
+    const/16 v2, 0x45
 
     aput v2, v1, v3
 
@@ -10149,7 +10791,7 @@
     :cond_7
     new-array v0, v0, [I
 
-    const/16 v1, 0x7c
+    const/16 v1, 0x75
 
     aput v1, v0, v3
 
@@ -10635,7 +11277,7 @@
 
     move-result-object v8
 
-    invoke-static {v0, v8}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v8}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object v8, p0, Lcom/android/server/OpPowerControllerService;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
@@ -10664,7 +11306,7 @@
 
     const-string v2, "Enable nfc"
 
-    invoke-static {v0, v2}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
     const/4 v2, 0x1
@@ -10687,7 +11329,7 @@
 
     const-string v3, "Set BLE_SCAN_ALWAYS_AVAILABLE to 1"
 
-    invoke-static {v0, v3}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v3}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_3
     iget-boolean v3, p0, Lcom/android/server/OpPowerControllerService;->mSavedBluetoothState:Z
@@ -10698,14 +11340,14 @@
 
     const-string v1, "Enable bluetooth"
 
-    invoke-static {v0, v1}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_4
     invoke-static {v5}, Lcom/android/server/BatteryServiceInjector;->setDeepSleepMode(Z)V
 
-    iget-object v0, p0, Lcom/android/server/OpPowerControllerService;->mOpAlarmManager:Lcom/android/server/qbh;
+    iget-object v0, p0, Lcom/android/server/OpPowerControllerService;->mOpAlarmManager:Lcom/android/server/oif;
 
-    invoke-virtual {v0, v5}, Lcom/android/server/qbh;->setDeepSleepMode(Z)V
+    invoke-virtual {v0, v5}, Lcom/android/server/oif;->setDeepSleepMode(Z)V
 
     iget-object v0, p0, Lcom/android/server/OpPowerControllerService;->mOpPowerManager:Lcom/android/server/power/sis;
 
@@ -10830,27 +11472,74 @@
 .end method
 
 .method notifyScreenStateInternal(I)V
-    .locals 9
+    .locals 8
 
-    const/16 v0, 0x47
+    sget-object v0, Lcom/android/server/OpPowerControllerService;->sHypnusService:Lcom/android/internal/app/IHypnusService;
 
-    const/4 v1, 0x0
+    if-nez v0, :cond_0
 
-    const/4 v2, 0x1
+    sget-object v0, Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;->oneplus_hypnus:Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;
 
-    const/16 v3, 0x8
+    invoke-static {v0}, Lcom/oneplus/android/server/context/OneplusContextStub;->queryInterface(Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;)Ljava/lang/Object;
 
-    const-string v4, "OpPowerControllerService"
+    move-result-object v0
 
-    if-nez p1, :cond_2
+    check-cast v0, Lcom/android/internal/app/IHypnusService;
+
+    sput-object v0, Lcom/android/server/OpPowerControllerService;->sHypnusService:Lcom/android/internal/app/IHypnusService;
+
+    :cond_0
+    sget-object v0, Lcom/android/server/OpPowerControllerService;->sHypnusService:Lcom/android/internal/app/IHypnusService;
+
+    const-string v1, "OpPowerControllerService"
+
+    if-eqz v0, :cond_1
+
+    :try_start_0
+    invoke-interface {v0, p1}, Lcom/android/internal/app/IHypnusService;->hypnusScreenStatus(I)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "HypnusService: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    :goto_0
+    const/16 v0, 0x45
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    const/16 v4, 0x8
+
+    if-nez p1, :cond_4
 
     const-string p1, "SCREEN is OFF"
 
-    invoke-static {v4, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mScreenOffStart:Ljava/time/LocalDateTime;
 
-    if-nez p1, :cond_1
+    if-nez p1, :cond_3
 
     invoke-static {}, Ljava/time/LocalDateTime;->now()Ljava/time/LocalDateTime;
 
@@ -10880,66 +11569,66 @@
 
     move-result-object p1
 
-    invoke-static {v4, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    new-array p1, v2, [I
+    new-array p1, v3, [I
 
-    aput v0, p1, v1
+    aput v0, p1, v2
 
     invoke-static {p1}, Landroid/util/OpFeatures;->isSupport([I)Z
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_3
 
     iget p1, p0, Lcom/android/server/OpPowerControllerService;->mOPSMEnabled:I
 
-    if-lez p1, :cond_1
+    if-lez p1, :cond_3
 
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mHandler:Lcom/android/server/OpPowerControllerService$qbh;
 
-    invoke-virtual {p1, v3}, Landroid/os/Handler;->hasMessages(I)Z
+    invoke-virtual {p1, v4}, Landroid/os/Handler;->hasMessages(I)Z
 
     move-result p1
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_2
 
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mHandler:Lcom/android/server/OpPowerControllerService$qbh;
 
-    invoke-virtual {p1, v3}, Landroid/os/Handler;->removeMessages(I)V
+    invoke-virtual {p1, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    :cond_0
+    :cond_2
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mHandler:Lcom/android/server/OpPowerControllerService$qbh;
 
-    invoke-virtual {p1, v3}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {p1, v4}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object p1
 
-    iget-object v3, p0, Lcom/android/server/OpPowerControllerService;->mHandler:Lcom/android/server/OpPowerControllerService$qbh;
+    iget-object v1, p0, Lcom/android/server/OpPowerControllerService;->mHandler:Lcom/android/server/OpPowerControllerService$qbh;
 
     const-wide/16 v4, 0x7d0
 
-    invoke-virtual {v3, p1, v4, v5}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+    invoke-virtual {v1, p1, v4, v5}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    :cond_1
-    new-array p1, v2, [I
+    :cond_3
+    new-array p1, v3, [I
 
-    aput v0, p1, v1
+    aput v0, p1, v2
 
     invoke-static {p1}, Landroid/util/OpFeatures;->isSupport([I)Z
 
     move-result p1
 
-    if-eqz p1, :cond_8
+    if-eqz p1, :cond_a
 
     invoke-virtual {p0}, Lcom/android/server/OpPowerControllerService;->scheduleAlarmToEnterOPSM()V
 
-    goto/16 :goto_2
+    goto/16 :goto_3
 
-    :cond_2
+    :cond_4
     const-string p1, "SCREEN is ON"
 
-    invoke-static {v4, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-static {}, Ljava/time/LocalDateTime;->now()Ljava/time/LocalDateTime;
 
@@ -10947,86 +11636,86 @@
 
     iget-object v5, p0, Lcom/android/server/OpPowerControllerService;->mScreenOffStart:Ljava/time/LocalDateTime;
 
-    if-eqz v5, :cond_7
+    if-eqz v5, :cond_9
 
-    new-array v5, v2, [I
+    new-array v5, v3, [I
 
-    aput v0, v5, v1
+    aput v0, v5, v2
 
     invoke-static {v5}, Landroid/util/OpFeatures;->isSupport([I)Z
 
     move-result v5
 
-    if-eqz v5, :cond_4
+    if-eqz v5, :cond_6
 
     iget-object v5, p0, Lcom/android/server/OpPowerControllerService;->mHandler:Lcom/android/server/OpPowerControllerService$qbh;
 
-    invoke-virtual {v5, v3}, Landroid/os/Handler;->hasMessages(I)Z
+    invoke-virtual {v5, v4}, Landroid/os/Handler;->hasMessages(I)Z
 
     move-result v5
 
-    if-eqz v5, :cond_3
+    if-eqz v5, :cond_5
 
     iget-object v5, p0, Lcom/android/server/OpPowerControllerService;->mHandler:Lcom/android/server/OpPowerControllerService$qbh;
 
-    invoke-virtual {v5, v3}, Landroid/os/Handler;->removeMessages(I)V
+    invoke-virtual {v5, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_3
+    :cond_5
     invoke-virtual {p0}, Lcom/android/server/OpPowerControllerService;->releaseEarlyRestriction()V
 
-    :cond_4
-    :goto_0
-    iget-object v3, p0, Lcom/android/server/OpPowerControllerService;->mScreenOffStart:Ljava/time/LocalDateTime;
+    :cond_6
+    :goto_1
+    iget-object v4, p0, Lcom/android/server/OpPowerControllerService;->mScreenOffStart:Ljava/time/LocalDateTime;
 
-    invoke-static {v3, p1}, Ljava/time/Duration;->between(Ljava/time/temporal/Temporal;Ljava/time/temporal/Temporal;)Ljava/time/Duration;
+    invoke-static {v4, p1}, Ljava/time/Duration;->between(Ljava/time/temporal/Temporal;Ljava/time/temporal/Temporal;)Ljava/time/Duration;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {v3}, Ljava/time/Duration;->toMillis()J
+    invoke-virtual {v4}, Ljava/time/Duration;->toMillis()J
 
-    move-result-wide v5
+    move-result-wide v4
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v7, "screen off duration: "
 
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v6
 
-    invoke-static {v4, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    sget v3, Lcom/android/server/OpPowerControllerService;->mMinIdleLength:I
+    sget v6, Lcom/android/server/OpPowerControllerService;->mMinIdleLength:I
 
-    int-to-long v7, v3
+    int-to-long v6, v6
 
-    cmp-long v3, v5, v7
+    cmp-long v6, v4, v6
 
-    if-lez v3, :cond_7
+    if-lez v6, :cond_9
 
-    sget v3, Lcom/android/server/OpPowerControllerService;->mMaxIdleLength:I
+    sget v6, Lcom/android/server/OpPowerControllerService;->mMaxIdleLength:I
 
-    int-to-long v7, v3
+    int-to-long v6, v6
 
-    cmp-long v3, v5, v7
+    cmp-long v4, v4, v6
 
-    if-gez v3, :cond_7
+    if-gez v4, :cond_9
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v5, "mScreenOffStart: "
 
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v5, p0, Lcom/android/server/OpPowerControllerService;->mScreenOffStart:Ljava/time/LocalDateTime;
 
@@ -11036,21 +11725,21 @@
 
     move-result-object v5
 
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-static {v4, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v5, "screenOffEnd: "
 
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     sget-object v5, Lcom/android/server/OpPowerControllerService;->SIMPLE_DATE_FORMAT:Ljava/time/format/DateTimeFormatter;
 
@@ -11058,65 +11747,65 @@
 
     move-result-object v5
 
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-static {v4, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object v3, p0, Lcom/android/server/OpPowerControllerService;->mIdleStats:Lcom/android/server/OpPowerControllerService$dma;
+    iget-object v4, p0, Lcom/android/server/OpPowerControllerService;->mIdleStats:Lcom/android/server/OpPowerControllerService$dma;
 
     iget-object v5, p0, Lcom/android/server/OpPowerControllerService;->mScreenOffStart:Ljava/time/LocalDateTime;
 
-    invoke-virtual {v3, v5, p1}, Lcom/android/server/OpPowerControllerService$dma;->zta(Ljava/time/LocalDateTime;Ljava/time/LocalDateTime;)V
+    invoke-virtual {v4, v5, p1}, Lcom/android/server/OpPowerControllerService$dma;->zta(Ljava/time/LocalDateTime;Ljava/time/LocalDateTime;)V
 
-    iget-object v3, p0, Lcom/android/server/OpPowerControllerService;->mIdleStats:Lcom/android/server/OpPowerControllerService$dma;
+    iget-object v4, p0, Lcom/android/server/OpPowerControllerService;->mIdleStats:Lcom/android/server/OpPowerControllerService$dma;
 
-    invoke-virtual {v3}, Lcom/android/server/OpPowerControllerService$dma;->ssp()Ljava/time/LocalDateTime;
+    invoke-virtual {v4}, Lcom/android/server/OpPowerControllerService$dma;->ssp()Ljava/time/LocalDateTime;
 
-    move-result-object v3
+    move-result-object v4
 
-    if-nez v3, :cond_5
+    if-nez v4, :cond_7
 
-    const-wide v5, 0x7fffffffffffffffL
+    const-wide v4, 0x7fffffffffffffffL
 
-    goto :goto_1
+    goto :goto_2
 
-    :cond_5
-    invoke-static {v3, p1}, Ljava/time/Duration;->between(Ljava/time/temporal/Temporal;Ljava/time/temporal/Temporal;)Ljava/time/Duration;
+    :cond_7
+    invoke-static {v4, p1}, Ljava/time/Duration;->between(Ljava/time/temporal/Temporal;Ljava/time/temporal/Temporal;)Ljava/time/Duration;
 
     move-result-object p1
 
     invoke-virtual {p1}, Ljava/time/Duration;->toMillis()J
 
-    move-result-wide v5
+    move-result-wide v4
 
-    :goto_1
+    :goto_2
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "record duration: "
+    const-string v6, "record duration: "
 
-    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {v4, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     sget p1, Lcom/android/server/OpPowerControllerService;->mMinRecordTime:I
 
-    int-to-long v3, p1
+    int-to-long v6, p1
 
-    cmp-long p1, v5, v3
+    cmp-long p1, v4, v6
 
-    if-lez p1, :cond_7
+    if-lez p1, :cond_9
 
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mIdleStats:Lcom/android/server/OpPowerControllerService$dma;
 
@@ -11124,51 +11813,51 @@
 
     move-result p1
 
-    sget v3, Lcom/android/server/OpPowerControllerService;->mMinIdleItems:I
+    sget v1, Lcom/android/server/OpPowerControllerService;->mMinIdleItems:I
 
     const-wide/16 v4, 0x1388
 
-    if-lt p1, v3, :cond_6
+    if-lt p1, v1, :cond_8
 
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mHandler:Lcom/android/server/OpPowerControllerService$qbh;
 
-    const/4 v3, 0x4
+    const/4 v1, 0x4
 
-    invoke-virtual {p1, v3}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {p1, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object p1
 
-    iget-object v3, p0, Lcom/android/server/OpPowerControllerService;->mHandler:Lcom/android/server/OpPowerControllerService$qbh;
+    iget-object v1, p0, Lcom/android/server/OpPowerControllerService;->mHandler:Lcom/android/server/OpPowerControllerService$qbh;
 
-    invoke-virtual {v3, p1, v4, v5}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+    invoke-virtual {v1, p1, v4, v5}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    :cond_6
+    :cond_8
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mHandler:Lcom/android/server/OpPowerControllerService$qbh;
 
-    const/4 v3, 0x5
+    const/4 v1, 0x5
 
-    invoke-virtual {p1, v3}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {p1, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object p1
 
-    iget-object v3, p0, Lcom/android/server/OpPowerControllerService;->mHandler:Lcom/android/server/OpPowerControllerService$qbh;
+    iget-object v1, p0, Lcom/android/server/OpPowerControllerService;->mHandler:Lcom/android/server/OpPowerControllerService$qbh;
 
-    invoke-virtual {v3, p1, v4, v5}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+    invoke-virtual {v1, p1, v4, v5}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    :cond_7
+    :cond_9
     const/4 p1, 0x0
 
     iput-object p1, p0, Lcom/android/server/OpPowerControllerService;->mScreenOffStart:Ljava/time/LocalDateTime;
 
-    new-array p1, v2, [I
+    new-array p1, v3, [I
 
-    aput v0, p1, v1
+    aput v0, p1, v2
 
     invoke-static {p1}, Landroid/util/OpFeatures;->isSupport([I)Z
 
     move-result p1
 
-    if-eqz p1, :cond_8
+    if-eqz p1, :cond_a
 
     iget-object p0, p0, Lcom/android/server/OpPowerControllerService;->mHandler:Lcom/android/server/OpPowerControllerService$qbh;
 
@@ -11180,8 +11869,8 @@
 
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
-    :cond_8
-    :goto_2
+    :cond_a
+    :goto_3
     return-void
 .end method
 
@@ -11377,7 +12066,7 @@
 
     sput-boolean v3, Lcom/android/server/OpPowerControllerService;->mDebugOneplus:Z
 
-    sput-boolean v3, Lcom/android/server/kth$zta;->ssp:Z
+    sput-boolean v3, Lcom/android/server/bio$zta;->ssp:Z
 
     const-string p1, "log is on"
 
@@ -11397,7 +12086,7 @@
 
     sput-boolean v4, Lcom/android/server/OpPowerControllerService;->mDebugOneplus:Z
 
-    sput-boolean v4, Lcom/android/server/kth$zta;->ssp:Z
+    sput-boolean v4, Lcom/android/server/bio$zta;->ssp:Z
 
     const-string p1, "log is off"
 
@@ -11901,7 +12590,7 @@
 
     new-array p2, v3, [I
 
-    const/16 v1, 0x7c
+    const/16 v1, 0x75
 
     aput v1, p2, v4
 
@@ -12057,7 +12746,7 @@
     :cond_1a
     new-array v1, v3, [I
 
-    const/16 v5, 0x47
+    const/16 v5, 0x45
 
     aput v5, v1, v4
 
@@ -12807,7 +13496,7 @@
     :cond_36
     new-array v1, v3, [I
 
-    const/16 v6, 0x8c
+    const/16 v6, 0x85
 
     aput v6, v1, v4
 
@@ -12855,9 +13544,9 @@
 
     if-eqz v5, :cond_37
 
-    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/ugm;
+    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/vdb;
 
-    invoke-virtual {p1, v3}, Lcom/android/server/ugm;->Q(Z)V
+    invoke-virtual {p1, v3}, Lcom/android/server/vdb;->Q(Z)V
 
     goto/16 :goto_13
 
@@ -12870,9 +13559,9 @@
 
     if-eqz v5, :cond_38
 
-    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/ugm;
+    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/vdb;
 
-    invoke-virtual {p1, v4}, Lcom/android/server/ugm;->Q(Z)V
+    invoke-virtual {p1, v4}, Lcom/android/server/vdb;->Q(Z)V
 
     goto/16 :goto_13
 
@@ -12889,13 +13578,13 @@
 
     move-result-object p1
 
-    iget-object p2, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/ugm;
+    iget-object p2, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/vdb;
 
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p1
 
-    invoke-virtual {p2, p1}, Lcom/android/server/ugm;->S(I)V
+    invoke-virtual {p2, p1}, Lcom/android/server/vdb;->S(I)V
 
     goto/16 :goto_13
 
@@ -12912,13 +13601,13 @@
 
     move-result-object p1
 
-    iget-object p2, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/ugm;
+    iget-object p2, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/vdb;
 
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p1
 
-    invoke-virtual {p2, p1}, Lcom/android/server/ugm;->U(I)V
+    invoke-virtual {p2, p1}, Lcom/android/server/vdb;->U(I)V
 
     goto/16 :goto_13
 
@@ -12935,13 +13624,13 @@
 
     move-result-object p1
 
-    iget-object p2, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/ugm;
+    iget-object p2, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/vdb;
 
     invoke-static {p1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide v5
 
-    invoke-virtual {p2, v5, v6}, Lcom/android/server/ugm;->T(J)V
+    invoke-virtual {p2, v5, v6}, Lcom/android/server/vdb;->T(J)V
 
     goto/16 :goto_13
 
@@ -12966,9 +13655,9 @@
 
     if-eqz v5, :cond_3c
 
-    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/ugm;
+    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/vdb;
 
-    invoke-virtual {p1, v3}, Lcom/android/server/ugm;->R(Z)V
+    invoke-virtual {p1, v3}, Lcom/android/server/vdb;->R(Z)V
 
     goto/16 :goto_13
 
@@ -12981,9 +13670,9 @@
 
     if-eqz p1, :cond_3d
 
-    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/ugm;
+    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/vdb;
 
-    invoke-virtual {p1, v4}, Lcom/android/server/ugm;->R(Z)V
+    invoke-virtual {p1, v4}, Lcom/android/server/vdb;->R(Z)V
 
     goto/16 :goto_13
 
@@ -13032,9 +13721,9 @@
 
     if-eqz v3, :cond_3f
 
-    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/ugm;
+    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/vdb;
 
-    invoke-virtual {p1}, Lcom/android/server/ugm;->Z()V
+    invoke-virtual {p1}, Lcom/android/server/vdb;->Z()V
 
     goto/16 :goto_13
 
@@ -13047,9 +13736,9 @@
 
     if-eqz v3, :cond_40
 
-    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/ugm;
+    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/vdb;
 
-    invoke-virtual {p1}, Lcom/android/server/ugm;->b0()V
+    invoke-virtual {p1}, Lcom/android/server/vdb;->b0()V
 
     goto/16 :goto_13
 
@@ -13062,9 +13751,9 @@
 
     if-eqz p1, :cond_41
 
-    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/ugm;
+    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/vdb;
 
-    invoke-virtual {p1}, Lcom/android/server/ugm;->x()V
+    invoke-virtual {p1}, Lcom/android/server/vdb;->x()V
 
     goto/16 :goto_13
 
@@ -13110,9 +13799,9 @@
 
     if-eqz p2, :cond_43
 
-    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/ugm;
+    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/vdb;
 
-    invoke-virtual {p1, v3}, Lcom/android/server/ugm;->V(Z)V
+    invoke-virtual {p1, v3}, Lcom/android/server/vdb;->V(Z)V
 
     goto/16 :goto_13
 
@@ -13125,9 +13814,9 @@
 
     if-eqz p2, :cond_44
 
-    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/ugm;
+    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/vdb;
 
-    invoke-virtual {p1, v4}, Lcom/android/server/ugm;->V(Z)V
+    invoke-virtual {p1, v4}, Lcom/android/server/vdb;->V(Z)V
 
     goto/16 :goto_13
 
@@ -13173,9 +13862,9 @@
 
     if-eqz p2, :cond_46
 
-    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/ugm;
+    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/vdb;
 
-    invoke-virtual {p1, v3}, Lcom/android/server/ugm;->N(Z)V
+    invoke-virtual {p1, v3}, Lcom/android/server/vdb;->N(Z)V
 
     goto/16 :goto_13
 
@@ -13188,9 +13877,9 @@
 
     if-eqz p2, :cond_47
 
-    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/ugm;
+    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/vdb;
 
-    invoke-virtual {p1, v4}, Lcom/android/server/ugm;->N(Z)V
+    invoke-virtual {p1, v4}, Lcom/android/server/vdb;->N(Z)V
 
     goto/16 :goto_13
 
@@ -13236,9 +13925,9 @@
 
     if-eqz p2, :cond_49
 
-    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/ugm;
+    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/vdb;
 
-    invoke-virtual {p1, v3}, Lcom/android/server/ugm;->P(Z)V
+    invoke-virtual {p1, v3}, Lcom/android/server/vdb;->P(Z)V
 
     goto :goto_13
 
@@ -13251,9 +13940,9 @@
 
     if-eqz p2, :cond_4a
 
-    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/ugm;
+    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/vdb;
 
-    invoke-virtual {p1, v4}, Lcom/android/server/ugm;->P(Z)V
+    invoke-virtual {p1, v4}, Lcom/android/server/vdb;->P(Z)V
 
     goto :goto_13
 
@@ -13291,13 +13980,13 @@
 
     move-result-object p1
 
-    iget-object p2, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/ugm;
+    iget-object p2, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/vdb;
 
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p1
 
-    invoke-virtual {p2, p1}, Lcom/android/server/ugm;->O(I)V
+    invoke-virtual {p2, p1}, Lcom/android/server/vdb;->O(I)V
 
     goto :goto_13
 
@@ -13334,9 +14023,9 @@
     throw p1
 
     :cond_4d
-    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/ugm;
+    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/vdb;
 
-    invoke-virtual {p1, v0}, Lcom/android/server/ugm;->v(Ljava/io/PrintWriter;)V
+    invoke-virtual {p1, v0}, Lcom/android/server/vdb;->v(Ljava/io/PrintWriter;)V
 
     const-string p1, "**** OverHeat Diagnosis Records ****"
 
@@ -13469,9 +14158,9 @@
     throw p1
 
     :cond_51
-    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOnePlusSensorManager:Lcom/android/server/wtn;
+    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOnePlusSensorManager:Lcom/android/server/gck;
 
-    invoke-virtual {p1, v0}, Lcom/android/server/wtn;->qbh(Ljava/io/PrintWriter;)V
+    invoke-virtual {p1, v0}, Lcom/android/server/gck;->qbh(Ljava/io/PrintWriter;)V
 
     :goto_16
     monitor-exit p0
@@ -13498,7 +14187,7 @@
 
     new-array v1, v3, [I
 
-    const/16 v6, 0x114
+    const/16 v6, 0x10d
 
     aput v6, v1, v4
 
@@ -13538,9 +14227,9 @@
 
     if-eqz v3, :cond_53
 
-    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOnePlusChargingGuarder:Lcom/android/server/bio;
+    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOnePlusChargingGuarder:Lcom/android/server/igw;
 
-    invoke-virtual {p1}, Lcom/android/server/bio;->l()V
+    invoke-virtual {p1}, Lcom/android/server/igw;->l()V
 
     goto :goto_17
 
@@ -13553,9 +14242,9 @@
 
     if-eqz v3, :cond_54
 
-    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOnePlusChargingGuarder:Lcom/android/server/bio;
+    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOnePlusChargingGuarder:Lcom/android/server/igw;
 
-    invoke-virtual {p1}, Lcom/android/server/bio;->n()V
+    invoke-virtual {p1}, Lcom/android/server/igw;->n()V
 
     goto :goto_17
 
@@ -13576,9 +14265,9 @@
 
     move-result-wide p1
 
-    iget-object v0, p0, Lcom/android/server/OpPowerControllerService;->mOnePlusChargingGuarder:Lcom/android/server/bio;
+    iget-object v0, p0, Lcom/android/server/OpPowerControllerService;->mOnePlusChargingGuarder:Lcom/android/server/igw;
 
-    invoke-virtual {v0, p1, p2}, Lcom/android/server/bio;->B(J)V
+    invoke-virtual {v0, p1, p2}, Lcom/android/server/igw;->B(J)V
 
     goto :goto_17
 
@@ -13599,9 +14288,9 @@
 
     move-result-wide p1
 
-    iget-object v0, p0, Lcom/android/server/OpPowerControllerService;->mOnePlusChargingGuarder:Lcom/android/server/bio;
+    iget-object v0, p0, Lcom/android/server/OpPowerControllerService;->mOnePlusChargingGuarder:Lcom/android/server/igw;
 
-    invoke-virtual {v0, p1, p2}, Lcom/android/server/bio;->A(J)V
+    invoke-virtual {v0, p1, p2}, Lcom/android/server/igw;->A(J)V
 
     goto :goto_17
 
@@ -13614,9 +14303,9 @@
 
     if-eqz p1, :cond_57
 
-    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOnePlusChargingGuarder:Lcom/android/server/bio;
+    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOnePlusChargingGuarder:Lcom/android/server/igw;
 
-    invoke-virtual {p1}, Lcom/android/server/bio;->D()V
+    invoke-virtual {p1}, Lcom/android/server/igw;->D()V
 
     goto :goto_17
 
@@ -13669,9 +14358,9 @@
     throw p1
 
     :cond_58
-    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOnePlusChargingGuarder:Lcom/android/server/bio;
+    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOnePlusChargingGuarder:Lcom/android/server/igw;
 
-    invoke-virtual {p1, v0}, Lcom/android/server/bio;->m(Ljava/io/PrintWriter;)V
+    invoke-virtual {p1, v0}, Lcom/android/server/igw;->m(Ljava/io/PrintWriter;)V
 
     :goto_18
     monitor-exit p0
@@ -13830,9 +14519,9 @@
 
     iput-object p1, p0, Lcom/android/server/OpPowerControllerService;->mDeepSleepWhitelistAppIdArray:[I
 
-    iget-object p2, p0, Lcom/android/server/OpPowerControllerService;->mOpAlarmManager:Lcom/android/server/qbh;
+    iget-object p2, p0, Lcom/android/server/OpPowerControllerService;->mOpAlarmManager:Lcom/android/server/oif;
 
-    invoke-virtual {p2, p1}, Lcom/android/server/qbh;->setDeepSleepWhitelist([I)V
+    invoke-virtual {p2, p1}, Lcom/android/server/oif;->setDeepSleepWhitelist([I)V
 
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOpPowerManager:Lcom/android/server/power/sis;
 
@@ -13915,11 +14604,11 @@
 
     invoke-static {p1, p2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOpAlarmManager:Lcom/android/server/qbh;
+    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOpAlarmManager:Lcom/android/server/oif;
 
     new-array p2, v4, [I
 
-    invoke-virtual {p1, p2}, Lcom/android/server/qbh;->setDeepSleepWhitelist([I)V
+    invoke-virtual {p1, p2}, Lcom/android/server/oif;->setDeepSleepWhitelist([I)V
 
     iget-object p0, p0, Lcom/android/server/OpPowerControllerService;->mOpPowerManager:Lcom/android/server/power/sis;
 
@@ -14493,7 +15182,7 @@
     :cond_75
     new-array v1, v3, [I
 
-    const/16 v5, 0x4e
+    const/16 v5, 0x4c
 
     aput v5, v1, v4
 
@@ -14517,7 +15206,7 @@
 
     move-result-object p0
 
-    check-cast p0, Lcom/android/server/gwm;
+    check-cast p0, Lcom/android/server/ugm;
 
     sget-boolean p2, Lcom/android/server/OpPowerControllerService;->mDebugOneplus:Z
 
@@ -14539,7 +15228,7 @@
 
     if-eqz p1, :cond_76
 
-    invoke-virtual {p0, v0}, Lcom/android/server/gwm;->kth(Ljava/io/PrintWriter;)V
+    invoke-virtual {p0, v0}, Lcom/android/server/ugm;->kth(Ljava/io/PrintWriter;)V
 
     goto :goto_22
 
@@ -14551,7 +15240,7 @@
     return v4
 
     :cond_77
-    invoke-virtual {p0, v0}, Lcom/android/server/gwm;->shellCommand(Ljava/io/PrintWriter;)Z
+    invoke-virtual {p0, v0}, Lcom/android/server/ugm;->shellCommand(Ljava/io/PrintWriter;)Z
 
     return v4
 
@@ -14564,7 +15253,7 @@
     :cond_79
     new-array v1, v3, [I
 
-    const/16 v5, 0xe6
+    const/16 v5, 0xde
 
     aput v5, v1, v4
 
@@ -14724,7 +15413,7 @@
 
     move-result p2
 
-    const/16 v1, 0x89
+    const/16 v1, 0x82
 
     if-eqz p2, :cond_80
 
@@ -14788,7 +15477,7 @@
 
     move-result p2
 
-    const/16 v1, 0x55
+    const/16 v1, 0x52
 
     if-eqz p2, :cond_83
 
@@ -14953,7 +15642,7 @@
 
     const-string v2, "releaseEarlyRestriction"
 
-    invoke-static {v1, v2}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object v1, p0, Lcom/android/server/OpPowerControllerService;->mOpPowerManager:Lcom/android/server/power/sis;
 
@@ -14961,13 +15650,13 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/power/sis;->cgv(Z)Z
 
-    iget-object v1, p0, Lcom/android/server/OpPowerControllerService;->mOpAlarmAlignment:Lcom/android/server/ywr;
+    iget-object v1, p0, Lcom/android/server/OpPowerControllerService;->mOpAlarmAlignment:Lcom/android/server/qbh;
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lcom/android/server/OpPowerControllerService;->mOpAlarmAlignment:Lcom/android/server/ywr;
+    iget-object v1, p0, Lcom/android/server/OpPowerControllerService;->mOpAlarmAlignment:Lcom/android/server/qbh;
 
-    invoke-virtual {v1, v2}, Lcom/android/server/ywr;->dma(Z)V
+    invoke-virtual {v1, v2}, Lcom/android/server/qbh;->dma(Z)V
 
     :cond_1
     iput-boolean v2, p0, Lcom/android/server/OpPowerControllerService;->mEarlyRestrictionEnabled:Z
@@ -15005,7 +15694,7 @@
 
     const-string v0, "Restore wifi scan"
 
-    invoke-static {v1, v0}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/OpPowerControllerService;->mSavedWifiState:Z
@@ -15018,7 +15707,7 @@
 
     const-string v0, "Restore wifi network"
 
-    invoke-static {v1, v0}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
     iget-boolean v0, p0, Lcom/android/server/OpPowerControllerService;->mSavedDataState:Z
@@ -15029,7 +15718,7 @@
 
     const-string p0, "Restore data network"
 
-    invoke-static {v1, p0}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, p0}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
     return-void
@@ -15058,7 +15747,7 @@
     const-string v0, "Data network is disabled"
 
     :goto_0
-    invoke-static {v3, v0}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v0}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -15076,7 +15765,7 @@
 
     move-result-object v0
 
-    invoke-static {v3, v0}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v0}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-boolean v0, p0, Lcom/android/server/OpPowerControllerService;->mSavedWifiState:Z
 
@@ -15094,7 +15783,7 @@
     const-string v0, "Wifi network is disabled"
 
     :goto_1
-    invoke-static {v3, v0}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v0}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -15112,7 +15801,7 @@
 
     move-result-object v0
 
-    invoke-static {v3, v0}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v0}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-boolean v0, p0, Lcom/android/server/OpPowerControllerService;->mSavedWifiScanState:Z
 
@@ -15132,7 +15821,7 @@
     const-string p0, "Wifi scan is disabled"
 
     :goto_2
-    invoke-static {v3, p0}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, p0}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method
@@ -15572,25 +16261,9 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcom/android/server/OpPowerControllerService;->mIdleStats:Lcom/android/server/OpPowerControllerService$dma;
-
-    monitor-enter v0
-
-    :try_start_0
     invoke-virtual {p0}, Lcom/android/server/OpPowerControllerService;->shutdownInternal()V
 
-    monitor-exit v0
-
     return-void
-
-    :catchall_0
-    move-exception p0
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
 .end method
 
 .method shutdownInternal()V

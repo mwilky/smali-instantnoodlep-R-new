@@ -216,7 +216,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/am/hmo;->les(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/am/hmo;->h(Ljava/lang/String;)V
 
     return-void
 .end method

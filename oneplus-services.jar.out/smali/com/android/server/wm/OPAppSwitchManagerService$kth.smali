@@ -1,9 +1,9 @@
-.class final Lcom/android/server/wm/OPAppSwitchManagerService$kth;
+.class Lcom/android/server/wm/OPAppSwitchManagerService$kth;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements Landroid/os/IBinder$DeathRecipient;
+.implements Lcom/oneplus/config/ConfigObserver$ConfigUpdater;
 
 
 # annotations
@@ -12,73 +12,54 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x10
+    accessFlags = 0x0
     name = "kth"
 .end annotation
 
 
 # instance fields
-.field final synthetic sis:Lcom/android/server/wm/OPAppSwitchManagerService;
-
-.field you:Lcom/color/app/ColorAppSwitchConfig;
-
-.field final zta:Ljava/lang/String;
+.field final synthetic zta:Lcom/android/server/wm/OPAppSwitchManagerService;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/server/wm/OPAppSwitchManagerService;Ljava/lang/String;Lcom/color/app/ColorAppSwitchConfig;)V
+.method constructor <init>(Lcom/android/server/wm/OPAppSwitchManagerService;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/android/server/wm/OPAppSwitchManagerService$kth;->sis:Lcom/android/server/wm/OPAppSwitchManagerService;
+    iput-object p1, p0, Lcom/android/server/wm/OPAppSwitchManagerService$kth;->zta:Lcom/android/server/wm/OPAppSwitchManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lcom/android/server/wm/OPAppSwitchManagerService$kth;->zta:Ljava/lang/String;
-
-    iput-object p3, p0, Lcom/android/server/wm/OPAppSwitchManagerService$kth;->you:Lcom/color/app/ColorAppSwitchConfig;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public binderDied()V
-    .locals 2
+.method public updateConfig(Lorg/json/JSONArray;)V
+    .locals 1
 
-    invoke-static {}, Lcom/android/server/wm/OPAppSwitchManagerService;->access$000()Z
+    iget-object v0, p0, Lcom/android/server/wm/OPAppSwitchManagerService$kth;->zta:Lcom/android/server/wm/OPAppSwitchManagerService;
 
-    move-result v0
+    invoke-static {v0, p1}, Lcom/android/server/wm/OPAppSwitchManagerService;->access$1800(Lcom/android/server/wm/OPAppSwitchManagerService;Lorg/json/JSONArray;)V
 
-    if-eqz v0, :cond_0
+    iget-object p1, p0, Lcom/android/server/wm/OPAppSwitchManagerService$kth;->zta:Lcom/android/server/wm/OPAppSwitchManagerService;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lcom/android/server/wm/OPAppSwitchManagerService;->access$500(Lcom/android/server/wm/OPAppSwitchManagerService;)Landroid/os/Handler;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    move-result-object p1
 
-    const-string v1, "hanldeBinderDied config = "
+    iget-object p0, p0, Lcom/android/server/wm/OPAppSwitchManagerService$kth;->zta:Lcom/android/server/wm/OPAppSwitchManagerService;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p0}, Lcom/android/server/wm/OPAppSwitchManagerService;->access$500(Lcom/android/server/wm/OPAppSwitchManagerService;)Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/android/server/wm/OPAppSwitchManagerService$kth;->you:Lcom/color/app/ColorAppSwitchConfig;
+    move-result-object p0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0, v0}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
-    move-result-object v0
+    move-result-object p0
 
-    const-string v1, "OPAppSwitchManagerService"
-
-    invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    iget-object v0, p0, Lcom/android/server/wm/OPAppSwitchManagerService$kth;->sis:Lcom/android/server/wm/OPAppSwitchManagerService;
-
-    iget-object v1, p0, Lcom/android/server/wm/OPAppSwitchManagerService$kth;->zta:Ljava/lang/String;
-
-    iget-object p0, p0, Lcom/android/server/wm/OPAppSwitchManagerService$kth;->you:Lcom/color/app/ColorAppSwitchConfig;
-
-    invoke-virtual {v0, v1, p0}, Lcom/android/server/wm/OPAppSwitchManagerService;->unregisterAppSwitchObserver(Ljava/lang/String;Lcom/color/app/ColorAppSwitchConfig;)Z
+    invoke-virtual {p1, p0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     return-void
 .end method

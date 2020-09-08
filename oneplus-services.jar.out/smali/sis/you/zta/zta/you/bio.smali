@@ -19,7 +19,7 @@
 
 
 # static fields
-.field public static final rtg:Ljava/lang/String; = "vendor.pixelworks.hardware.display@1.1::IIris"
+.field public static final ssp:Ljava/lang/String; = "vendor.pixelworks.hardware.display@1.1::IIris"
 
 
 # direct methods
@@ -191,7 +191,7 @@
 
 
 # virtual methods
-.method public abstract B(JIZZ)I
+.method public abstract B(JIJ)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -199,7 +199,7 @@
     .end annotation
 .end method
 
-.method public abstract C(JII)I
+.method public abstract C(Lsis/you/zta/zta/you/sis;)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -207,7 +207,7 @@
     .end annotation
 .end method
 
-.method public abstract D(JJI)V
+.method public abstract E(JIZZ)I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -215,7 +215,7 @@
     .end annotation
 .end method
 
-.method public abstract E(JJI)V
+.method public abstract F(JII)I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -223,7 +223,7 @@
     .end annotation
 .end method
 
-.method public abstract F(JJLandroid/os/NativeHandle;ILsis/you/zta/zta/you/zta;)V
+.method public abstract G(JJI)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -231,7 +231,23 @@
     .end annotation
 .end method
 
-.method public abstract H(JILjava/util/ArrayList;Lsis/you/zta/zta/you/bio$rtg;)V
+.method public abstract I(JJI)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract J(JJLandroid/os/NativeHandle;ILsis/you/zta/zta/you/zta;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract L(JILjava/util/ArrayList;Lsis/you/zta/zta/you/bio$rtg;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(JI",
@@ -250,7 +266,7 @@
     .end annotation
 .end method
 
-.method public abstract M(JZ)V
+.method public abstract R(JZ)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -261,7 +277,7 @@
 .method public abstract asBinder()Landroid/os/IHwBinder;
 .end method
 
-.method public abstract b(JII)I
+.method public abstract b(I)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -285,14 +301,6 @@
     .end annotation
 .end method
 
-.method public abstract c(Lsis/you/zta/zta/you/bio$sis;)V
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-.end method
-
 .method public abstract cno()Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -301,7 +309,7 @@
     .end annotation
 .end method
 
-.method public abstract e(JLsis/you/zta/zta/you/sis;)V
+.method public abstract d(JII)I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -309,7 +317,7 @@
     .end annotation
 .end method
 
-.method public abstract f(I)I
+.method public abstract e(Lsis/you/zta/zta/you/bio$sis;)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -317,7 +325,7 @@
     .end annotation
 .end method
 
-.method public abstract g(JJ)V
+.method public abstract g(JLsis/you/zta/zta/you/sis;)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -351,6 +359,14 @@
     .end annotation
 .end method
 
+.method public abstract h(I)I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract ibl(Lsis/you/zta/zta/you/wtn;)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -367,7 +383,7 @@
     .end annotation
 .end method
 
-.method public abstract irq(J)Ljava/lang/String;
+.method public abstract ivd(JJ)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -375,23 +391,7 @@
     .end annotation
 .end method
 
-.method public abstract ivd(I)V
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-.end method
-
-.method public abstract k(JILsis/you/zta/zta/you/bio$tsu;)V
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-.end method
-
-.method public abstract l(JLsis/you/zta/zta/you/igw;)V
+.method public abstract j(JJ)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -407,7 +407,15 @@
     .end annotation
 .end method
 
-.method public abstract m(JI)V
+.method public abstract n(JILsis/you/zta/zta/you/bio$tsu;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract o(JLsis/you/zta/zta/you/igw;)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -431,15 +439,7 @@
     .end annotation
 .end method
 
-.method public abstract p(J)I
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-.end method
-
-.method public abstract q(JLsis/you/zta/zta/you/bvj;)V
+.method public abstract p(JI)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -472,7 +472,23 @@
     .end annotation
 .end method
 
+.method public abstract s(J)I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract ssp()V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract t(JLsis/you/zta/zta/you/bvj;)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -496,7 +512,7 @@
     .end annotation
 .end method
 
-.method public abstract vdw(JJ)V
+.method public abstract vdw(J)Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -512,23 +528,7 @@
     .end annotation
 .end method
 
-.method public abstract w(JI)I
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-.end method
-
 .method public abstract wtn()V
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-.end method
-
-.method public abstract y(JIJ)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -544,7 +544,7 @@
     .end annotation
 .end method
 
-.method public abstract z(Lsis/you/zta/zta/you/sis;)V
+.method public abstract z(JI)I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

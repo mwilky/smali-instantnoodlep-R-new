@@ -52,13 +52,13 @@
 
     move-result p0
 
-    if-eqz p0, :cond_3
+    if-eqz p0, :cond_6
 
     const-string p0, "keeps opos service alive[screen]"
 
     invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_0
     const-string v0, "android.intent.action.SCREEN_ON"
@@ -67,7 +67,7 @@
 
     move-result p2
 
-    if-eqz p2, :cond_3
+    if-eqz p2, :cond_6
 
     iget-object p2, p0, Lcom/android/server/wm/OPAppSwitchManagerService$zta;->zta:Lcom/android/server/wm/OPAppSwitchManagerService;
 
@@ -87,11 +87,11 @@
 
     invoke-static {v1, p2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object p0, p0, Lcom/android/server/wm/OPAppSwitchManagerService$zta;->zta:Lcom/android/server/wm/OPAppSwitchManagerService;
+    iget-object p2, p0, Lcom/android/server/wm/OPAppSwitchManagerService$zta;->zta:Lcom/android/server/wm/OPAppSwitchManagerService;
 
-    const-string p2, "com.opos.ads"
+    const-string v0, "com.opos.ads"
 
-    invoke-static {p0, p1, p2}, Lcom/android/server/wm/OPAppSwitchManagerService;->access$200(Lcom/android/server/wm/OPAppSwitchManagerService;Landroid/content/Context;Ljava/lang/String;)I
+    invoke-static {p2, p1, v0}, Lcom/android/server/wm/OPAppSwitchManagerService;->access$200(Lcom/android/server/wm/OPAppSwitchManagerService;Landroid/content/Context;Ljava/lang/String;)I
 
     goto :goto_0
 
@@ -107,11 +107,51 @@
     invoke-static {v1, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
-    iget-object p0, p0, Lcom/android/server/wm/OPAppSwitchManagerService$zta;->zta:Lcom/android/server/wm/OPAppSwitchManagerService;
+    iget-object p1, p0, Lcom/android/server/wm/OPAppSwitchManagerService$zta;->zta:Lcom/android/server/wm/OPAppSwitchManagerService;
 
-    invoke-virtual {p0}, Lcom/android/server/wm/OPAppSwitchManagerService;->bindOposService()V
+    invoke-virtual {p1}, Lcom/android/server/wm/OPAppSwitchManagerService;->bindOposService()V
 
     :cond_3
     :goto_0
+    iget-object p1, p0, Lcom/android/server/wm/OPAppSwitchManagerService$zta;->zta:Lcom/android/server/wm/OPAppSwitchManagerService;
+
+    invoke-static {p1}, Lcom/android/server/wm/OPAppSwitchManagerService;->access$300(Lcom/android/server/wm/OPAppSwitchManagerService;)Landroid/os/IBinder;
+
+    move-result-object p1
+
+    const-string p2, "OPInstantAppDeviceManagerService"
+
+    if-eqz p1, :cond_4
+
+    invoke-static {}, Lcom/android/server/wm/OPAppSwitchManagerService;->access$000()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_6
+
+    const-string p0, "instant service is still alive[screen]"
+
+    invoke-static {p2, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_1
+
+    :cond_4
+    invoke-static {}, Lcom/android/server/wm/OPAppSwitchManagerService;->access$000()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    const-string p1, "instant service is died, bind again[screen]"
+
+    invoke-static {p2, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_5
+    iget-object p0, p0, Lcom/android/server/wm/OPAppSwitchManagerService$zta;->zta:Lcom/android/server/wm/OPAppSwitchManagerService;
+
+    invoke-virtual {p0}, Lcom/android/server/wm/OPAppSwitchManagerService;->bindInstantService()V
+
+    :cond_6
+    :goto_1
     return-void
 .end method

@@ -30,7 +30,7 @@
 
     check-cast p2, Ljava/lang/Boolean;
 
-    invoke-virtual {p0, p1, p2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->k1(Lcom/android/server/wifi/WifiSettingsConfigStore$Key;Ljava/lang/Boolean;)V
+    invoke-virtual {p0, p1, p2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->l1(Lcom/android/server/wifi/WifiSettingsConfigStore$Key;Ljava/lang/Boolean;)V
 
     return-void
 .end method

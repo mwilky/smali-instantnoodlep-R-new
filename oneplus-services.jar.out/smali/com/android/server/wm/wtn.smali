@@ -3,42 +3,38 @@
 .source ""
 
 # interfaces
-.implements Lcom/android/server/wm/oxb/rtg$tsu;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final synthetic zta:Lcom/android/server/wm/wtn;
+# instance fields
+.field public final synthetic you:Landroid/os/Bundle;
+
+.field public final synthetic zta:Lcom/android/server/wm/OpWindowManagerService;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lcom/android/server/wm/wtn;
-
-    invoke-direct {v0}, Lcom/android/server/wm/wtn;-><init>()V
-
-    sput-object v0, Lcom/android/server/wm/wtn;->zta:Lcom/android/server/wm/wtn;
-
-    return-void
-.end method
-
-.method private synthetic constructor <init>()V
+.method public synthetic constructor <init>(Lcom/android/server/wm/OpWindowManagerService;Landroid/os/Bundle;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/android/server/wm/wtn;->zta:Lcom/android/server/wm/OpWindowManagerService;
+
+    iput-object p2, p0, Lcom/android/server/wm/wtn;->you:Landroid/os/Bundle;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final zta(I)Ljava/io/File;
-    .locals 0
+.method public final run()V
+    .locals 1
 
-    invoke-static {p1}, Landroid/os/Environment;->getDataSystemCeDirectory(I)Ljava/io/File;
+    iget-object v0, p0, Lcom/android/server/wm/wtn;->zta:Lcom/android/server/wm/OpWindowManagerService;
 
-    move-result-object p0
+    iget-object p0, p0, Lcom/android/server/wm/wtn;->you:Landroid/os/Bundle;
 
-    return-object p0
+    invoke-virtual {v0, p0}, Lcom/android/server/wm/OpWindowManagerService;->rtg(Landroid/os/Bundle;)V
+
+    return-void
 .end method

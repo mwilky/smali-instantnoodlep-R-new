@@ -96,7 +96,7 @@
 
     const-string p2, "OpPowerControllerService"
 
-    invoke-static {p2, p1}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p2, p1}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$cno;->zta:Lcom/android/server/OpPowerControllerService;
 
@@ -217,7 +217,7 @@
 
     const-string p2, "OpPowerControllerService"
 
-    invoke-static {p2, p1}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p2, p1}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object p0, p0, Lcom/android/server/OpPowerControllerService$cno;->zta:Lcom/android/server/OpPowerControllerService;
 
@@ -603,7 +603,7 @@
 
     const-string p2, "OpPowerControllerService"
 
-    invoke-static {p2, p1}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p2, p1}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$000()Ljava/lang/Object;
 

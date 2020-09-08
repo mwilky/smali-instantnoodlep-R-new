@@ -1,5 +1,5 @@
 .class Lcom/android/server/gck$sis;
-.super Ljava/lang/Object;
+.super Landroid/os/Handler;
 .source ""
 
 
@@ -9,568 +9,398 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x2
     name = "sis"
 .end annotation
 
 
+# static fields
+.field public static final cno:I = 0x6
+
+.field public static final kth:I = 0xea60
+
+.field public static final rtg:I = 0x4
+
+.field public static final sis:I = 0x1
+
+.field public static final ssp:I = 0x5
+
+.field public static final tsu:I = 0x3
+
+
 # instance fields
-.field private cno:Z
+.field final synthetic you:Lcom/android/server/gck;
 
-.field final synthetic kth:Lcom/android/server/gck;
-
-.field private rtg:J
-
-.field private sis:J
-
-.field private ssp:Z
-
-.field private tsu:J
-
-.field private you:Ljava/lang/String;
-
-.field private zta:I
+.field zta:I
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/server/gck;ILjava/lang/String;)V
-    .locals 2
+.method constructor <init>(Lcom/android/server/gck;Landroid/os/Looper;)V
+    .locals 0
 
-    iput-object p1, p0, Lcom/android/server/gck$sis;->kth:Lcom/android/server/gck;
+    iput-object p1, p0, Lcom/android/server/gck$sis;->you:Lcom/android/server/gck;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 p1, 0x0
-
-    iput-boolean p1, p0, Lcom/android/server/gck$sis;->ssp:Z
-
-    iput-boolean p1, p0, Lcom/android/server/gck$sis;->cno:Z
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lcom/android/server/gck$sis;->sis:J
-
-    iput p2, p0, Lcom/android/server/gck$sis;->zta:I
-
-    iput-object p3, p0, Lcom/android/server/gck$sis;->you:Ljava/lang/String;
+    invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
 .end method
 
-.method static synthetic cno(Lcom/android/server/gck$sis;)Z
-    .locals 0
 
-    iget-boolean p0, p0, Lcom/android/server/gck$sis;->cno:Z
+# virtual methods
+.method public handleMessage(Landroid/os/Message;)V
+    .locals 8
 
-    return p0
-.end method
+    iget-object v0, p0, Lcom/android/server/gck$sis;->you:Lcom/android/server/gck;
 
-.method static synthetic rtg(Lcom/android/server/gck$sis;)Z
-    .locals 0
+    iget v1, p1, Landroid/os/Message;->what:I
 
-    iget-boolean p0, p0, Lcom/android/server/gck$sis;->ssp:Z
+    invoke-static {v0, v1}, Lcom/android/server/gck;->zta(Lcom/android/server/gck;I)I
 
-    return p0
-.end method
+    move-result v0
 
-.method static synthetic sis(Lcom/android/server/gck$sis;)J
-    .locals 2
+    sget-boolean v1, Lcom/android/server/gck;->gck:Z
 
-    iget-wide v0, p0, Lcom/android/server/gck$sis;->rtg:J
+    const-string v2, "OnePlusSensorManager"
 
-    return-wide v0
-.end method
+    if-eqz v1, :cond_0
 
-.method static synthetic ssp(Lcom/android/server/gck$sis;)Ljava/lang/String;
-    .locals 0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/android/server/gck$sis;->you:Ljava/lang/String;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    return-object p0
-.end method
+    const-string v3, "msg.what:"
 
-.method static synthetic tsu(Lcom/android/server/gck$sis;)J
-    .locals 2
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v0, p0, Lcom/android/server/gck$sis;->sis:J
+    iget v3, p1, Landroid/os/Message;->what:I
 
-    return-wide v0
-.end method
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-.method static synthetic you(Lcom/android/server/gck$sis;)J
-    .locals 2
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-wide v0, p0, Lcom/android/server/gck$sis;->tsu:J
+    move-result-object v1
 
-    return-wide v0
-.end method
+    invoke-static {v2, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-.method static synthetic zta(Lcom/android/server/gck$sis;)I
-    .locals 0
+    :cond_0
+    const-string v1, "):"
+
+    const-string v3, "AppRecordManager.getUidState("
+
+    const/4 v4, -0x1
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x1
+
+    if-eq v0, v6, :cond_7
+
+    const/4 v7, 0x3
+
+    if-eq v0, v7, :cond_4
+
+    const/4 v1, 0x4
+
+    if-eq v0, v1, :cond_3
+
+    const/4 v1, 0x5
+
+    if-eq v0, v1, :cond_2
+
+    const/4 p1, 0x6
+
+    if-eq v0, p1, :cond_1
+
+    goto/16 :goto_2
+
+    :cond_1
+    iget-object p1, p0, Lcom/android/server/gck$sis;->you:Lcom/android/server/gck;
+
+    new-instance v0, Lcom/oneplus/config/ConfigObserver;
+
+    iget-object v1, p0, Lcom/android/server/gck$sis;->you:Lcom/android/server/gck;
+
+    invoke-static {v1}, Lcom/android/server/gck;->rtg(Lcom/android/server/gck;)Landroid/content/Context;
+
+    move-result-object v1
+
+    iget-object v3, p0, Lcom/android/server/gck$sis;->you:Lcom/android/server/gck;
+
+    invoke-static {v3}, Lcom/android/server/gck;->ssp(Lcom/android/server/gck;)Lcom/android/server/gck$sis;
+
+    move-result-object v3
+
+    new-instance v4, Lcom/android/server/gck$you;
+
+    iget-object v5, p0, Lcom/android/server/gck$sis;->you:Lcom/android/server/gck;
+
+    const/4 v6, 0x0
+
+    invoke-direct {v4, v5, v6}, Lcom/android/server/gck$you;-><init>(Lcom/android/server/gck;Lcom/android/server/gck$zta;)V
+
+    invoke-direct {v0, v1, v3, v4, v2}, Lcom/oneplus/config/ConfigObserver;-><init>(Landroid/content/Context;Landroid/os/Handler;Lcom/oneplus/config/ConfigObserver$ConfigUpdater;Ljava/lang/String;)V
+
+    invoke-static {p1, v0}, Lcom/android/server/gck;->tsu(Lcom/android/server/gck;Lcom/oneplus/config/ConfigObserver;)Lcom/oneplus/config/ConfigObserver;
+
+    iget-object p1, p0, Lcom/android/server/gck$sis;->you:Lcom/android/server/gck;
+
+    invoke-static {p1}, Lcom/android/server/gck;->you(Lcom/android/server/gck;)Lcom/oneplus/config/ConfigObserver;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/oneplus/config/ConfigObserver;->register()V
+
+    new-instance p1, Lcom/oneplus/config/ConfigGrabber;
+
+    iget-object v0, p0, Lcom/android/server/gck$sis;->you:Lcom/android/server/gck;
+
+    invoke-static {v0}, Lcom/android/server/gck;->rtg(Lcom/android/server/gck;)Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0, v2}, Lcom/oneplus/config/ConfigGrabber;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    iget-object p0, p0, Lcom/android/server/gck$sis;->you:Lcom/android/server/gck;
+
+    invoke-virtual {p1}, Lcom/oneplus/config/ConfigGrabber;->grabConfig()Lorg/json/JSONArray;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Lcom/android/server/gck;->cno(Lcom/android/server/gck;Lorg/json/JSONArray;)V
+
+    goto/16 :goto_2
+
+    :cond_2
+    iget-object v0, p0, Lcom/android/server/gck$sis;->you:Lcom/android/server/gck;
+
+    iget p1, p1, Landroid/os/Message;->what:I
+
+    invoke-static {v0, p1}, Lcom/android/server/gck;->igw(Lcom/android/server/gck;I)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/android/server/gck$sis;->zta:I
+
+    iget-object p1, p0, Lcom/android/server/gck$sis;->you:Lcom/android/server/gck;
+
+    invoke-static {p1}, Lcom/android/server/gck;->bio(Lcom/android/server/gck;)Landroid/hardware/SensorManager;
+
+    move-result-object p1
 
     iget p0, p0, Lcom/android/server/gck$sis;->zta:I
 
-    return p0
-.end method
+    invoke-virtual {p1, p0, v6}, Landroid/hardware/SensorManager;->setSensorAccessState(IZ)V
 
+    goto/16 :goto_2
 
-# virtual methods
-.method public bio()Z
-    .locals 15
+    :cond_3
+    iget-object v0, p0, Lcom/android/server/gck$sis;->you:Lcom/android/server/gck;
+
+    iget p1, p1, Landroid/os/Message;->what:I
+
+    invoke-static {v0, p1}, Lcom/android/server/gck;->igw(Lcom/android/server/gck;I)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/android/server/gck$sis;->zta:I
+
+    invoke-static {p1}, Lcom/android/server/am/AppRecordManager;->ywr(I)I
+
+    move-result p1
+
+    if-ne p1, v6, :cond_a
+
+    iget-object p1, p0, Lcom/android/server/gck$sis;->you:Lcom/android/server/gck;
+
+    invoke-static {p1}, Lcom/android/server/gck;->bio(Lcom/android/server/gck;)Landroid/hardware/SensorManager;
+
+    move-result-object p1
+
+    iget p0, p0, Lcom/android/server/gck$sis;->zta:I
+
+    invoke-virtual {p1, p0, v5}, Landroid/hardware/SensorManager;->setSensorAccessState(IZ)V
+
+    goto/16 :goto_2
+
+    :cond_4
+    :goto_0
+    iget-object p1, p0, Lcom/android/server/gck$sis;->you:Lcom/android/server/gck;
+
+    invoke-static {p1}, Lcom/android/server/gck;->kth(Lcom/android/server/gck;)Ljava/util/ArrayList;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+
+    move-result p1
+
+    if-ge v5, p1, :cond_a
+
+    iget-object p1, p0, Lcom/android/server/gck$sis;->you:Lcom/android/server/gck;
+
+    invoke-static {p1}, Lcom/android/server/gck;->kth(Lcom/android/server/gck;)Ljava/util/ArrayList;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/String;
+
+    invoke-static {p1}, Lcom/android/server/am/AppRecordManager;->dma(Ljava/lang/String;)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/android/server/gck$sis;->zta:I
+
+    sget-boolean p1, Lcom/android/server/gck;->gck:Z
+
+    if-eqz p1, :cond_5
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v0, p0, Lcom/android/server/gck$sis;->zta:I
 
-    invoke-static {v0}, Landroid/net/TrafficStats;->getUidTxBytes(I)J
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-wide v0
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v2, p0, Lcom/android/server/gck$sis;->zta:I
+    iget v0, p0, Lcom/android/server/gck$sis;->zta:I
 
-    invoke-static {v2}, Landroid/net/TrafficStats;->getUidRxBytes(I)J
+    invoke-static {v0}, Lcom/android/server/am/AppRecordManager;->ywr(I)I
 
-    move-result-wide v2
+    move-result v0
 
-    iget-wide v4, p0, Lcom/android/server/gck$sis;->tsu:J
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    sub-long v4, v0, v4
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-wide v6, p0, Lcom/android/server/gck$sis;->rtg:J
+    move-result-object p1
 
-    sub-long v6, v2, v6
+    invoke-static {v2, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iput-wide v0, p0, Lcom/android/server/gck$sis;->tsu:J
+    :cond_5
+    iget p1, p0, Lcom/android/server/gck$sis;->zta:I
 
-    iput-wide v2, p0, Lcom/android/server/gck$sis;->rtg:J
+    if-eq p1, v4, :cond_6
 
-    iget-object v8, p0, Lcom/android/server/gck$sis;->kth:Lcom/android/server/gck;
+    invoke-static {p1}, Lcom/android/server/am/AppRecordManager;->ywr(I)I
 
-    add-long v9, v4, v6
+    move-result p1
 
-    invoke-static {v8, v9, v10}, Lcom/android/server/gck;->igw(Lcom/android/server/gck;J)Z
+    if-ne p1, v6, :cond_6
 
-    move-result v8
+    iget-object p1, p0, Lcom/android/server/gck$sis;->you:Lcom/android/server/gck;
 
-    iget-boolean v11, p0, Lcom/android/server/gck$sis;->cno:Z
+    invoke-static {p1}, Lcom/android/server/gck;->bio(Lcom/android/server/gck;)Landroid/hardware/SensorManager;
 
-    const/4 v12, 0x0
+    move-result-object p1
 
-    const/4 v13, 0x1
+    iget v0, p0, Lcom/android/server/gck$sis;->zta:I
 
-    if-eq v11, v8, :cond_4
+    invoke-virtual {p1, v0, v6}, Landroid/hardware/SensorManager;->setSensorAccessState(IZ)V
 
-    if-eqz v8, :cond_2
-
-    iget-object v8, p0, Lcom/android/server/gck$sis;->kth:Lcom/android/server/gck;
-
-    invoke-static {v8}, Lcom/android/server/gck;->wtn(Lcom/android/server/gck;)Ljava/util/HashMap;
-
-    move-result-object v8
-
-    iget v11, p0, Lcom/android/server/gck$sis;->zta:I
-
-    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v11
-
-    invoke-virtual {v8, v11}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v8
-
-    if-eqz v8, :cond_0
-
-    iget-object v8, p0, Lcom/android/server/gck$sis;->kth:Lcom/android/server/gck;
-
-    invoke-static {v8}, Lcom/android/server/gck;->wtn(Lcom/android/server/gck;)Ljava/util/HashMap;
-
-    move-result-object v8
-
-    iget v11, p0, Lcom/android/server/gck$sis;->zta:I
-
-    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v11
-
-    invoke-virtual {v8, v11}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Ljava/lang/Integer;
-
-    invoke-virtual {v8}, Ljava/lang/Integer;->intValue()I
-
-    move-result v8
-
-    iget-object v11, p0, Lcom/android/server/gck$sis;->kth:Lcom/android/server/gck;
-
-    invoke-static {v11}, Lcom/android/server/gck;->gck(Lcom/android/server/gck;)I
-
-    move-result v11
-
-    if-eq v8, v11, :cond_1
-
-    :cond_0
-    iget-object v8, p0, Lcom/android/server/gck$sis;->kth:Lcom/android/server/gck;
-
-    invoke-static {v8}, Lcom/android/server/gck;->wtn(Lcom/android/server/gck;)Ljava/util/HashMap;
-
-    move-result-object v8
-
-    iget v11, p0, Lcom/android/server/gck$sis;->zta:I
-
-    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v11
-
-    iget-object v14, p0, Lcom/android/server/gck$sis;->kth:Lcom/android/server/gck;
-
-    invoke-static {v14}, Lcom/android/server/gck;->gck(Lcom/android/server/gck;)I
-
-    move-result v14
-
-    invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v14
-
-    invoke-virtual {v8, v11, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_1
-    iput-boolean v13, p0, Lcom/android/server/gck$sis;->cno:Z
-
-    invoke-static {}, Lcom/android/server/am/AppRecordManagerService;->getInstance()Lcom/android/server/am/AppRecordManagerService;
-
-    move-result-object v8
-
-    iget v11, p0, Lcom/android/server/gck$sis;->zta:I
-
-    iget-object v14, p0, Lcom/android/server/gck$sis;->you:Ljava/lang/String;
-
-    invoke-virtual {v8, v11, v14}, Lcom/android/server/am/AppRecordManagerService;->noteStartTrafficHigh(ILjava/lang/String;)V
-
-    goto/16 :goto_0
-
-    :cond_2
-    iget-object v8, p0, Lcom/android/server/gck$sis;->kth:Lcom/android/server/gck;
-
-    invoke-static {v8}, Lcom/android/server/gck;->wtn(Lcom/android/server/gck;)Ljava/util/HashMap;
-
-    move-result-object v8
-
-    iget v11, p0, Lcom/android/server/gck$sis;->zta:I
-
-    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v11
-
-    invoke-virtual {v8, v11}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Ljava/lang/Integer;
-
-    invoke-virtual {v8}, Ljava/lang/Integer;->intValue()I
-
-    move-result v8
-
-    if-nez v8, :cond_3
-
-    iget-object v8, p0, Lcom/android/server/gck$sis;->kth:Lcom/android/server/gck;
-
-    invoke-static {v8}, Lcom/android/server/gck;->wtn(Lcom/android/server/gck;)Ljava/util/HashMap;
-
-    move-result-object v8
-
-    iget v11, p0, Lcom/android/server/gck$sis;->zta:I
-
-    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v11
-
-    iget-object v14, p0, Lcom/android/server/gck$sis;->kth:Lcom/android/server/gck;
-
-    invoke-static {v14}, Lcom/android/server/gck;->gck(Lcom/android/server/gck;)I
-
-    move-result v14
-
-    invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v14
-
-    invoke-virtual {v8, v11, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iput-boolean v12, p0, Lcom/android/server/gck$sis;->cno:Z
-
-    invoke-static {}, Lcom/android/server/am/AppRecordManagerService;->getInstance()Lcom/android/server/am/AppRecordManagerService;
-
-    move-result-object v8
-
-    iget v11, p0, Lcom/android/server/gck$sis;->zta:I
-
-    iget-object v14, p0, Lcom/android/server/gck$sis;->you:Ljava/lang/String;
-
-    invoke-virtual {v8, v11, v14}, Lcom/android/server/am/AppRecordManagerService;->noteStopTrafficHigh(ILjava/lang/String;)V
-
-    goto/16 :goto_0
-
-    :cond_3
-    iget-object v8, p0, Lcom/android/server/gck$sis;->kth:Lcom/android/server/gck;
-
-    invoke-static {v8}, Lcom/android/server/gck;->wtn(Lcom/android/server/gck;)Ljava/util/HashMap;
-
-    move-result-object v8
-
-    iget v11, p0, Lcom/android/server/gck$sis;->zta:I
-
-    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v11
-
-    invoke-virtual {v8, v11}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Ljava/lang/Integer;
-
-    invoke-virtual {v8}, Ljava/lang/Integer;->intValue()I
-
-    move-result v8
-
-    sub-int/2addr v8, v13
-
-    if-ltz v8, :cond_6
-
-    iget-object v11, p0, Lcom/android/server/gck$sis;->kth:Lcom/android/server/gck;
-
-    invoke-static {v11}, Lcom/android/server/gck;->wtn(Lcom/android/server/gck;)Ljava/util/HashMap;
-
-    move-result-object v11
-
-    iget v14, p0, Lcom/android/server/gck$sis;->zta:I
-
-    invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v14
-
-    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v8
-
-    invoke-virtual {v11, v14, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_6
+    add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
-    :cond_4
-    if-eqz v8, :cond_6
-
-    iget-object v8, p0, Lcom/android/server/gck$sis;->kth:Lcom/android/server/gck;
-
-    invoke-static {v8}, Lcom/android/server/gck;->wtn(Lcom/android/server/gck;)Ljava/util/HashMap;
-
-    move-result-object v8
-
-    iget v11, p0, Lcom/android/server/gck$sis;->zta:I
-
-    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v11
-
-    invoke-virtual {v8, v11}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v8
-
-    if-eqz v8, :cond_5
-
-    iget-object v8, p0, Lcom/android/server/gck$sis;->kth:Lcom/android/server/gck;
-
-    invoke-static {v8}, Lcom/android/server/gck;->wtn(Lcom/android/server/gck;)Ljava/util/HashMap;
-
-    move-result-object v8
-
-    iget v11, p0, Lcom/android/server/gck$sis;->zta:I
-
-    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v11
-
-    invoke-virtual {v8, v11}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Ljava/lang/Integer;
-
-    invoke-virtual {v8}, Ljava/lang/Integer;->intValue()I
-
-    move-result v8
-
-    iget-object v11, p0, Lcom/android/server/gck$sis;->kth:Lcom/android/server/gck;
-
-    invoke-static {v11}, Lcom/android/server/gck;->gck(Lcom/android/server/gck;)I
-
-    move-result v11
-
-    if-eq v8, v11, :cond_6
-
-    :cond_5
-    iget-object v8, p0, Lcom/android/server/gck$sis;->kth:Lcom/android/server/gck;
-
-    invoke-static {v8}, Lcom/android/server/gck;->wtn(Lcom/android/server/gck;)Ljava/util/HashMap;
-
-    move-result-object v8
-
-    iget v11, p0, Lcom/android/server/gck$sis;->zta:I
-
-    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v11
-
-    iget-object v14, p0, Lcom/android/server/gck$sis;->kth:Lcom/android/server/gck;
-
-    invoke-static {v14}, Lcom/android/server/gck;->gck(Lcom/android/server/gck;)I
-
-    move-result v14
-
-    invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v14
-
-    invoke-virtual {v8, v11, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_6
-    :goto_0
-    iget-object v8, p0, Lcom/android/server/gck$sis;->kth:Lcom/android/server/gck;
-
-    invoke-static {v8, v9, v10}, Lcom/android/server/gck;->ywr(Lcom/android/server/gck;J)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_8
-
-    iget-boolean v8, p0, Lcom/android/server/gck$sis;->ssp:Z
-
-    if-nez v8, :cond_7
-
-    iput-boolean v13, p0, Lcom/android/server/gck$sis;->ssp:Z
-
-    invoke-static {}, Lcom/android/server/am/AppRecordManagerService;->getInstance()Lcom/android/server/am/AppRecordManagerService;
-
-    move-result-object v8
-
-    iget v9, p0, Lcom/android/server/gck$sis;->zta:I
-
-    iget-object v10, p0, Lcom/android/server/gck$sis;->you:Ljava/lang/String;
-
-    invoke-virtual {v8, v9, v10}, Lcom/android/server/am/AppRecordManagerService;->noteStartTraffic(ILjava/lang/String;)V
-
     :cond_7
-    invoke-static {}, Lcom/android/server/gck;->sis()Z
+    move p1, v5
 
-    move-result v8
+    :goto_1
+    iget-object v0, p0, Lcom/android/server/gck$sis;->you:Lcom/android/server/gck;
 
-    if-eqz v8, :cond_9
-
-    new-instance v8, Ljava/lang/StringBuilder;
-
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v9, "updateUidTrafficLocked "
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v9, p0, Lcom/android/server/gck$sis;->zta:I
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v9, " "
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v9, p0, Lcom/android/server/gck$sis;->you:Ljava/lang/String;
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v9, ": incTx("
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v4, "), incRx("
-
-    invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v4, "), nowTx="
-
-    invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v0, ", nowRx="
-
-    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0}, Lcom/android/server/gck;->kth(Lcom/android/server/gck;)Ljava/util/ArrayList;
 
     move-result-object v0
 
-    const-string v1, "OPTraffic"
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    move-result v0
+
+    if-ge p1, v0, :cond_a
+
+    iget-object v0, p0, Lcom/android/server/gck$sis;->you:Lcom/android/server/gck;
+
+    invoke-static {v0}, Lcom/android/server/gck;->kth(Lcom/android/server/gck;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/android/server/am/AppRecordManager;->dma(Ljava/lang/String;)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/android/server/gck$sis;->zta:I
+
+    sget-boolean v0, Lcom/android/server/gck;->gck:Z
+
+    if-eqz v0, :cond_8
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v7, p0, Lcom/android/server/gck$sis;->zta:I
+
+    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v7, p0, Lcom/android/server/gck$sis;->zta:I
+
+    invoke-static {v7}, Lcom/android/server/am/AppRecordManager;->ywr(I)I
+
+    move-result v7
+
+    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_8
+    iget v0, p0, Lcom/android/server/gck$sis;->zta:I
+
+    if-eq v0, v4, :cond_9
+
+    invoke-static {v0}, Lcom/android/server/am/AppRecordManager;->ywr(I)I
+
+    move-result v0
+
+    if-ne v0, v6, :cond_9
+
+    iget-object v0, p0, Lcom/android/server/gck$sis;->you:Lcom/android/server/gck;
+
+    invoke-static {v0}, Lcom/android/server/gck;->bio(Lcom/android/server/gck;)Landroid/hardware/SensorManager;
+
+    move-result-object v0
+
+    iget v7, p0, Lcom/android/server/gck$sis;->zta:I
+
+    invoke-virtual {v0, v7, v5}, Landroid/hardware/SensorManager;->setSensorAccessState(IZ)V
+
+    :cond_9
+    add-int/lit8 p1, p1, 0x1
 
     goto :goto_1
 
-    :cond_8
-    iget-boolean v0, p0, Lcom/android/server/gck$sis;->ssp:Z
-
-    if-eqz v0, :cond_9
-
-    iput-boolean v12, p0, Lcom/android/server/gck$sis;->ssp:Z
-
-    invoke-static {}, Lcom/android/server/am/AppRecordManagerService;->getInstance()Lcom/android/server/am/AppRecordManagerService;
-
-    move-result-object v0
-
-    iget v1, p0, Lcom/android/server/gck$sis;->zta:I
-
-    iget-object v2, p0, Lcom/android/server/gck$sis;->you:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Lcom/android/server/am/AppRecordManagerService;->noteStopTraffic(ILjava/lang/String;)V
-
-    :cond_9
-    :goto_1
-    iget-boolean v0, p0, Lcom/android/server/gck$sis;->ssp:Z
-
-    if-nez v0, :cond_a
-
-    iget-boolean p0, p0, Lcom/android/server/gck$sis;->cno:Z
-
-    if-eqz p0, :cond_b
-
     :cond_a
-    move v12, v13
-
-    :cond_b
-    return v12
-.end method
-
-.method public kth()V
-    .locals 2
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lcom/android/server/gck$sis;->sis:J
-
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lcom/android/server/gck$sis;->tsu:J
-
-    iput-wide v0, p0, Lcom/android/server/gck$sis;->rtg:J
-
+    :goto_2
     return-void
 .end method

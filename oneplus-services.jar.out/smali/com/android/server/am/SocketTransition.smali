@@ -269,7 +269,7 @@
 
     new-array v1, v1, [I
 
-    const/16 v2, 0xfe
+    const/16 v2, 0xf7
 
     aput v2, v1, v0
 
@@ -695,7 +695,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/android/server/am/bio;->sis()I
+    invoke-virtual {v4}, Lcom/android/server/am/bio;->tsu()I
 
     move-result v4
 
@@ -735,7 +735,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/bio;->sis()I
+    invoke-virtual {p0}, Lcom/android/server/am/bio;->tsu()I
 
     move-result p0
 
@@ -774,7 +774,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/bio;->sis()I
+    invoke-virtual {p0}, Lcom/android/server/am/bio;->tsu()I
 
     move-result p0
 
@@ -819,7 +819,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/server/am/bio;->sis()I
+    invoke-virtual {v0}, Lcom/android/server/am/bio;->tsu()I
 
     move-result v0
 
@@ -856,7 +856,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/server/am/bio;->ssp()Ljava/util/HashMap;
+    invoke-virtual {v0}, Lcom/android/server/am/bio;->cno()Ljava/util/HashMap;
 
     move-result-object v0
 
@@ -867,7 +867,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, p2}, Lcom/android/server/am/bio;->rtg(I)Lcom/android/server/am/e;
+    invoke-virtual {v1, p2}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/e;
 
     move-result-object v1
 
@@ -881,7 +881,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, p2}, Lcom/android/server/am/bio;->rtg(I)Lcom/android/server/am/e;
+    invoke-virtual {v1, p2}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/e;
 
     move-result-object v1
 
@@ -944,7 +944,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/server/am/bio;->sis()I
+    invoke-virtual {v0}, Lcom/android/server/am/bio;->tsu()I
 
     move-result v0
 
@@ -1809,7 +1809,7 @@
 
     const/4 v1, 0x0
 
-    const/16 v2, 0xfe
+    const/16 v2, 0xf7
 
     aput v2, v0, v1
 
@@ -1866,7 +1866,7 @@
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0, p2}, Lcom/android/server/am/bio;->rtg(I)Lcom/android/server/am/e;
+    invoke-virtual {p0, p2}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/e;
 
     move-result-object p0
 
@@ -1922,7 +1922,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, p2}, Lcom/android/server/am/bio;->rtg(I)Lcom/android/server/am/e;
+    invoke-virtual {p1, p2}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/e;
 
     move-result-object p1
 

@@ -83,7 +83,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x65
+    const/16 v2, 0x61
 
     const/4 v3, 0x0
 
@@ -387,7 +387,7 @@
 
     iput-boolean p1, p0, Lcom/oneplus/android/server/scene/OemSceneXLinearVibrationMotorController;->mLastEnableAwinic:Z
 
-    const/16 v0, 0xd3
+    const/16 v0, 0xcb
 
     const-string v1, "enableXLinearVibrator: "
 

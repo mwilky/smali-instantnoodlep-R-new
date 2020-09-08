@@ -1,5 +1,5 @@
 .class Lcom/android/server/ugm$sis;
-.super Landroid/content/BroadcastReceiver;
+.super Ljava/lang/Object;
 .source ""
 
 
@@ -13,292 +13,126 @@
     name = "sis"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<K:",
+        "Ljava/lang/Object;",
+        "V:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic zta:Lcom/android/server/ugm;
+.field final synthetic you:Lcom/android/server/ugm;
+
+.field private zta:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map<",
+            "TK;TV;>;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method private constructor <init>(Lcom/android/server/ugm;)V
+.method public constructor <init>(Lcom/android/server/ugm;Ljava/util/Map;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map<",
+            "TK;TV;>;)V"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/server/ugm$sis;->zta:Lcom/android/server/ugm;
+    iput-object p1, p0, Lcom/android/server/ugm$sis;->you:Lcom/android/server/ugm;
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-.method synthetic constructor <init>(Lcom/android/server/ugm;Lcom/android/server/ugm$zta;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/server/ugm$sis;-><init>(Lcom/android/server/ugm;)V
+    iput-object p2, p0, Lcom/android/server/ugm$sis;->zta:Ljava/util/Map;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 6
-
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
-
-    move-result-object p1
+.method public toString()Ljava/lang/String;
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "action: "
+    iget-object p0, p0, Lcom/android/server/ugm$sis;->zta:Ljava/util/Map;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    move-result-object v0
-
-    const-string v1, "OverHeatingDiagnosis"
-
-    invoke-static {v1, v0}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
-
-    if-nez p1, :cond_0
-
-    return-void
+    move-result-object p0
 
     :cond_0
-    iget-object v0, p0, Lcom/android/server/ugm$sis;->zta:Lcom/android/server/ugm;
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-static {v0}, Lcom/android/server/ugm;->wtn(Lcom/android/server/ugm;)Z
+    move-result v1
 
-    move-result v0
+    if-eqz v1, :cond_1
 
-    if-nez v0, :cond_1
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    return-void
+    move-result-object v1
 
-    :cond_1
-    const-string v0, "android.intent.action.BATTERY_CHANGED"
+    check-cast v1, Ljava/util/Map$Entry;
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v2
 
-    const/4 v2, 0x1
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_8
+    const/16 v2, 0x3d
 
-    const-string p1, "level"
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
+    const/16 v2, 0x22
 
-    invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    move-result p1
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-    const/16 v3, 0x64
+    move-result-object v1
 
-    mul-int/2addr p1, v3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v4, "scale"
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2, v4, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v3
+    move-result v1
 
-    div-int/2addr p1, v3
+    if-eqz v1, :cond_0
 
-    const-string v3, "status"
+    const/16 v1, 0x2c
 
-    const/4 v4, -0x1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2, v3, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    const/16 v1, 0x20
 
-    move-result v3
-
-    const-string v5, "fastcharge_status"
-
-    invoke-virtual {p2, v5, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result v5
-
-    if-lez v5, :cond_2
-
-    move v5, v2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    :cond_2
-    move v5, v0
-
-    :goto_0
-    if-eqz v5, :cond_3
-
-    const/16 v4, 0x8
-
-    goto :goto_1
-
-    :cond_3
-    const-string v5, "plugged"
-
-    invoke-virtual {p2, v5, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result v4
-
-    :goto_1
-    const/4 v5, 0x2
-
-    if-eq v3, v5, :cond_4
-
-    const/4 v5, 0x5
-
-    if-ne v3, v5, :cond_5
-
-    :cond_4
-    move v0, v2
-
-    :cond_5
-    iget-object v3, p0, Lcom/android/server/ugm$sis;->zta:Lcom/android/server/ugm;
-
-    invoke-static {v3}, Lcom/android/server/ugm;->tsu(Lcom/android/server/ugm;)I
-
-    move-result v3
-
-    if-ne v3, v2, :cond_7
-
-    iget-object v3, p0, Lcom/android/server/ugm$sis;->zta:Lcom/android/server/ugm;
-
-    invoke-static {v3}, Lcom/android/server/ugm;->zta(Lcom/android/server/ugm;)I
-
-    move-result v3
-
-    and-int/lit8 v3, v3, 0xf
-
-    if-eqz v3, :cond_6
-
-    iget-object v3, p0, Lcom/android/server/ugm$sis;->zta:Lcom/android/server/ugm;
-
-    invoke-static {v3}, Lcom/android/server/ugm;->dma(Lcom/android/server/ugm;)Lcom/android/server/ugm$rtg;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lcom/android/server/ugm$rtg;->sis()V
-
-    goto :goto_2
-
-    :cond_6
-    iget-object v3, p0, Lcom/android/server/ugm$sis;->zta:Lcom/android/server/ugm;
-
-    invoke-static {v3}, Lcom/android/server/ugm;->dma(Lcom/android/server/ugm;)Lcom/android/server/ugm$rtg;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lcom/android/server/ugm$rtg;->tsu()V
-
-    :cond_7
-    :goto_2
-    iget-object v3, p0, Lcom/android/server/ugm$sis;->zta:Lcom/android/server/ugm;
-
-    invoke-static {v3}, Lcom/android/server/ugm;->ywr(Lcom/android/server/ugm;)I
-
-    move-result v3
-
-    if-eq p1, v3, :cond_9
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "onReceive: "
-
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p2, " level="
-
-    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-static {v1, p2}, Lcom/android/server/kth$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget-object p2, p0, Lcom/android/server/ugm$sis;->zta:Lcom/android/server/ugm;
-
-    invoke-static {p2, p1}, Lcom/android/server/ugm;->qbh(Lcom/android/server/ugm;I)I
-
-    iget-object p0, p0, Lcom/android/server/ugm$sis;->zta:Lcom/android/server/ugm;
-
-    invoke-static {p0}, Lcom/android/server/ugm;->cno(Lcom/android/server/ugm;)Lcom/android/server/ugm$cno;
+    :cond_1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p2
-
-    invoke-virtual {p0, v2, p1, v4, p2}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
-
-    goto :goto_3
-
-    :cond_8
-    const-string v0, "android.intent.action.PACKAGE_ADDED"
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_9
-
-    invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
-
-    move-result-object p1
-
-    iget-object p2, p0, Lcom/android/server/ugm$sis;->zta:Lcom/android/server/ugm;
-
-    invoke-static {p2}, Lcom/android/server/ugm;->tsu(Lcom/android/server/ugm;)I
-
-    move-result p2
-
-    if-ne p2, v2, :cond_9
-
-    if-eqz p1, :cond_9
-
-    iget-object p2, p0, Lcom/android/server/ugm$sis;->zta:Lcom/android/server/ugm;
-
-    invoke-static {p2}, Lcom/android/server/ugm;->oif(Lcom/android/server/ugm;)Ljava/util/ArrayList;
-
-    move-result-object p2
-
-    invoke-virtual {p2, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_9
-
-    iget-object p0, p0, Lcom/android/server/ugm$sis;->zta:Lcom/android/server/ugm;
-
-    invoke-static {p0}, Lcom/android/server/ugm;->oif(Lcom/android/server/ugm;)Ljava/util/ArrayList;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_9
-    :goto_3
-    return-void
+    return-object p0
 .end method

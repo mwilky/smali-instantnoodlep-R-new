@@ -204,7 +204,7 @@
 
     iget-object v1, p0, Lcom/oneplus/android/server/scene/ssp;->oif:Landroid/widget/TextView;
 
-    const v2, 0x50f0082
+    const v2, 0x50f0083
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
@@ -217,7 +217,7 @@
     :cond_1
     iget-object v1, p0, Lcom/oneplus/android/server/scene/ssp;->qbh:Landroid/widget/ImageView;
 
-    const v2, 0x507015b
+    const v2, 0x507015c
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -229,7 +229,7 @@
 
     iget-object v1, p0, Lcom/oneplus/android/server/scene/ssp;->oif:Landroid/widget/TextView;
 
-    const v2, 0x50f0084
+    const v2, 0x50f0085
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 

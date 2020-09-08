@@ -72,7 +72,7 @@
 
     iget-object p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$vdb;->sis:Lcom/android/server/power/OnePlusStandbyAnalyzer;
 
-    invoke-virtual {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0()V
+    invoke-virtual {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->L0()V
 
     goto/16 :goto_1
 
@@ -105,7 +105,7 @@
 
     iget-object p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$vdb;->sis:Lcom/android/server/power/OnePlusStandbyAnalyzer;
 
-    invoke-virtual {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N()V
+    invoke-virtual {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M()V
 
     goto/16 :goto_1
 
@@ -171,7 +171,7 @@
 
     iget-object p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$vdb;->sis:Lcom/android/server/power/OnePlusStandbyAnalyzer;
 
-    invoke-virtual {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->f1()V
+    invoke-virtual {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->e1()V
 
     goto/16 :goto_1
 
@@ -204,7 +204,7 @@
 
     iget-object p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$vdb;->sis:Lcom/android/server/power/OnePlusStandbyAnalyzer;
 
-    invoke-virtual {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->T0()V
+    invoke-virtual {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->S0()V
 
     goto/16 :goto_1
 
@@ -237,7 +237,7 @@
 
     iget-object p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$vdb;->sis:Lcom/android/server/power/OnePlusStandbyAnalyzer;
 
-    invoke-virtual {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->e1()V
+    invoke-virtual {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->d1()V
 
     goto :goto_1
 
@@ -276,7 +276,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0, v1, p1, v0, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->J(ZLcom/android/server/power/OnePlusStandbyAnalyzer$TelephonyType;Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;Z)V
+    invoke-virtual {p0, v1, p1, v0, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->I(ZLcom/android/server/power/OnePlusStandbyAnalyzer$TelephonyType;Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;Z)V
 
     goto :goto_1
 

@@ -242,6 +242,8 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
+    if-eqz v5, :cond_0
+
     :try_start_4
     invoke-virtual {v5}, Ljava/io/BufferedWriter;->close()V
 
@@ -290,6 +292,7 @@
 
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
 
+    :cond_0
     :goto_1
     const/4 v3, 0x0
 
@@ -300,6 +303,8 @@
     move-exception v3
 
     :goto_3
+    if-eqz v5, :cond_1
+
     :try_start_5
     invoke-virtual {v5}, Ljava/io/BufferedWriter;->close()V
 
@@ -348,6 +353,7 @@
 
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
 
+    :cond_1
     :goto_4
     throw v3
 .end method

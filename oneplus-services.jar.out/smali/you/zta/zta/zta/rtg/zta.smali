@@ -127,7 +127,7 @@
 
     iget-object p0, p0, Lyou/zta/zta/zta/rtg/zta;->sis:Lyou/zta/zta/zta/rtg/zta$you;
 
-    invoke-virtual {p0, p1}, Lyou/zta/zta/zta/rtg/zta$you;->you(Ljava/util/Properties;)V
+    invoke-virtual {p0, p1}, Lyou/zta/zta/zta/rtg/zta$you;->rtg(Ljava/util/Properties;)V
 
     return-void
 .end method

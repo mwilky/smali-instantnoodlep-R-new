@@ -109,6 +109,12 @@
 
     invoke-static {v0, v1}, Lcom/android/server/am/AppRecordManager;->ugm(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/qbh;)V
 
+    invoke-static {}, Lcom/android/server/am/zgw;->zgw()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
     invoke-static {}, Lcom/android/server/am/OPSystemCpuLoadMonitor;->tsu()Lcom/android/server/am/OPSystemCpuLoadMonitor;
 
     move-result-object v0
@@ -125,5 +131,6 @@
 
     invoke-virtual {v0, p0}, Lcom/android/server/am/OPBRPorcessSpeedMonitor;->kth(Lcom/android/server/am/OPBRPorcessSpeedMonitor$sis;)V
 
+    :cond_0
     return-void
 .end method
