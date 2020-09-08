@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/oneplus/houston/apkserver/bridge/HoustonServer$ServiceConnectedCallback;,
         Lcom/oneplus/houston/apkserver/bridge/HoustonServer$HoustonGlobalConfigUpdater;,
         Lcom/oneplus/houston/apkserver/bridge/HoustonServer$MainHandler;,
         Lcom/oneplus/houston/apkserver/bridge/HoustonServer$FrontActivityInfo;,
@@ -27,6 +28,8 @@
 
 .field private static final MSG_REMOVE_PROCESS:I = 0x6
 
+.field private static final MSG_REPORT_SYSTEM_UI_PID:I = 0x8
+
 .field private static final MSG_RESET_ASSERT_SCREEN:I = 0x7
 
 .field private static final MSG_THREEE_HOURS_TIMEOUT:I = 0x0
@@ -45,6 +48,8 @@
 
 
 # instance fields
+.field private mAms:Lcom/android/server/am/ActivityManagerService;
+
 .field private final mClient:Lcom/oneplus/houston/apkserver/bridge/HoustonClient;
 
 .field private final mContext:Landroid/content/Context;
@@ -77,7 +82,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Landroid/content/Context;)V
+.method private constructor <init>(Lcom/android/server/am/ActivityManagerService;Landroid/content/Context;)V
     .locals 3
 
     invoke-direct {p0}, Lcom/oneplus/houston/common/client/HoustonServiceNative;-><init>()V
@@ -86,7 +91,9 @@
 
     iput-boolean v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonServer;->timeReached:Z
 
-    iput-object p1, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonServer;->mContext:Landroid/content/Context;
+    iput-object p2, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonServer;->mContext:Landroid/content/Context;
+
+    iput-object p1, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonServer;->mAms:Lcom/android/server/am/ActivityManagerService;
 
     new-instance v0, Landroid/os/HandlerThread;
 
@@ -114,40 +121,22 @@
 
     iget-object v2, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonServer;->mLooper:Landroid/os/Looper;
 
-    invoke-direct {v1, p1, v2}, Lcom/oneplus/houston/apkserver/bridge/HoustonClient;-><init>(Landroid/content/Context;Landroid/os/Looper;)V
+    invoke-direct {v1, p2, v2}, Lcom/oneplus/houston/apkserver/bridge/HoustonClient;-><init>(Landroid/content/Context;Landroid/os/Looper;)V
 
     iput-object v1, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonServer;->mClient:Lcom/oneplus/houston/apkserver/bridge/HoustonClient;
+
+    new-instance v2, Lcom/oneplus/houston/apkserver/bridge/HoustonServer$1;
+
+    invoke-direct {v2, p0}, Lcom/oneplus/houston/apkserver/bridge/HoustonServer$1;-><init>(Lcom/oneplus/houston/apkserver/bridge/HoustonServer;)V
+
+    invoke-virtual {v1, v2}, Lcom/oneplus/houston/apkserver/bridge/HoustonClient;->setConnectedCallback(Lcom/oneplus/houston/apkserver/bridge/HoustonServer$ServiceConnectedCallback;)V
 
     invoke-direct {p0}, Lcom/oneplus/houston/apkserver/bridge/HoustonServer;->initDefaultConfig()V
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/oneplus/houston/apkserver/bridge/HoustonServer;)Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonServer;->timeReached:Z
-
-    return v0
-.end method
-
-.method static synthetic access$002(Lcom/oneplus/houston/apkserver/bridge/HoustonServer;Z)Z
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonServer;->timeReached:Z
-
-    return p1
-.end method
-
-.method static synthetic access$100(Lcom/oneplus/houston/apkserver/bridge/HoustonServer;)Landroid/content/Context;
-    .locals 1
-
-    iget-object v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonServer;->mContext:Landroid/content/Context;
-
-    return-object v0
-.end method
-
-.method static synthetic access$200(Lcom/oneplus/houston/apkserver/bridge/HoustonServer;)Lcom/oneplus/houston/apkserver/bridge/HoustonServer$MainHandler;
+.method static synthetic access$000(Lcom/oneplus/houston/apkserver/bridge/HoustonServer;)Lcom/oneplus/houston/apkserver/bridge/HoustonServer$MainHandler;
     .locals 1
 
     iget-object v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonServer;->mMainHandler:Lcom/oneplus/houston/apkserver/bridge/HoustonServer$MainHandler;
@@ -155,7 +144,39 @@
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/oneplus/houston/apkserver/bridge/HoustonServer;)V
+.method static synthetic access$100(Lcom/oneplus/houston/apkserver/bridge/HoustonServer;)Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonServer;->timeReached:Z
+
+    return v0
+.end method
+
+.method static synthetic access$102(Lcom/oneplus/houston/apkserver/bridge/HoustonServer;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonServer;->timeReached:Z
+
+    return p1
+.end method
+
+.method static synthetic access$200(Lcom/oneplus/houston/apkserver/bridge/HoustonServer;)Landroid/content/Context;
+    .locals 1
+
+    iget-object v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonServer;->mContext:Landroid/content/Context;
+
+    return-object v0
+.end method
+
+.method static synthetic access$300(Lcom/oneplus/houston/apkserver/bridge/HoustonServer;)Lcom/android/server/am/ActivityManagerService;
+    .locals 1
+
+    iget-object v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonServer;->mAms:Lcom/android/server/am/ActivityManagerService;
+
+    return-object v0
+.end method
+
+.method static synthetic access$400(Lcom/oneplus/houston/apkserver/bridge/HoustonServer;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/houston/apkserver/bridge/HoustonServer;->resetCollectorTimer()V
@@ -163,7 +184,7 @@
     return-void
 .end method
 
-.method static synthetic access$400(Lcom/oneplus/houston/apkserver/bridge/HoustonServer;Lorg/json/JSONArray;)V
+.method static synthetic access$500(Lcom/oneplus/houston/apkserver/bridge/HoustonServer;Lorg/json/JSONArray;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/oneplus/houston/apkserver/bridge/HoustonServer;->parseConfigFromJSON(Lorg/json/JSONArray;)V
@@ -172,50 +193,58 @@
 .end method
 
 .method private generateMessage(Lcom/oneplus/houston/common/client/Event;)Ljava/lang/String;
-    .locals 6
+    .locals 7
 
     const-string v0, "message"
 
-    const-string v1, "packageName"
+    const-string v1, "activityName"
 
-    const-string v2, "timestamp"
+    const-string v2, "packageName"
 
-    const-string v3, "reason"
+    const-string v3, "timestamp"
 
-    new-instance v4, Lorg/json/JSONObject;
+    const-string v4, "reason"
 
-    invoke-direct {v4}, Lorg/json/JSONObject;-><init>()V
+    new-instance v5, Lorg/json/JSONObject;
+
+    invoke-direct {v5}, Lorg/json/JSONObject;-><init>()V
 
     :try_start_0
+    invoke-virtual {p1, v4}, Lcom/oneplus/houston/common/client/Event;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v4, v6}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
     invoke-virtual {p1, v3}, Lcom/oneplus/houston/common/client/Event;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v4
 
-    invoke-virtual {v4, v3, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v5, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     invoke-virtual {p1, v2}, Lcom/oneplus/houston/common/client/Event;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v4, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v5, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     invoke-virtual {p1, v1}, Lcom/oneplus/houston/common/client/Event;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v4, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v5, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     invoke-virtual {p1, v0}, Lcom/oneplus/houston/common/client/Event;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v4, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v5, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :goto_0
-    invoke-virtual {v4}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+    invoke-virtual {v5}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -704,7 +733,7 @@
     return-void
 .end method
 
-.method public static publish(Landroid/content/Context;)V
+.method public static publish(Lcom/android/server/am/ActivityManagerService;Landroid/content/Context;)V
     .locals 2
 
     sget-object v0, Lcom/oneplus/houston/apkserver/bridge/HoustonServer;->sInstance:Lcom/oneplus/houston/apkserver/bridge/HoustonServer;
@@ -713,7 +742,7 @@
 
     new-instance v0, Lcom/oneplus/houston/apkserver/bridge/HoustonServer;
 
-    invoke-direct {v0, p0}, Lcom/oneplus/houston/apkserver/bridge/HoustonServer;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0, p1}, Lcom/oneplus/houston/apkserver/bridge/HoustonServer;-><init>(Lcom/android/server/am/ActivityManagerService;Landroid/content/Context;)V
 
     sput-object v0, Lcom/oneplus/houston/apkserver/bridge/HoustonServer;->sInstance:Lcom/oneplus/houston/apkserver/bridge/HoustonServer;
 
@@ -1223,11 +1252,23 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, "\r\nPackageName: "
+    const-string v1, "\r\nPackage: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, "packageName"
+
+    invoke-virtual {p1, v1}, Lcom/oneplus/houston/common/client/Event;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\r\nActivity: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "activityName"
 
     invoke-virtual {p1, v1}, Lcom/oneplus/houston/common/client/Event;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1306,11 +1347,7 @@
     :cond_0
     iget-object v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonServer;->mMainHandler:Lcom/oneplus/houston/apkserver/bridge/HoustonServer$MainHandler;
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/houston/apkserver/bridge/HoustonServer$MainHandler;->obtainMessage(I)Landroid/os/Message;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/oneplus/houston/apkserver/bridge/HoustonServer$MainHandler;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v0, v1}, Lcom/oneplus/houston/apkserver/bridge/HoustonServer$MainHandler;->sendEmptyMessage(I)Z
 
     invoke-direct {p0}, Lcom/oneplus/houston/apkserver/bridge/HoustonServer;->resetCollectorTimer()V
 

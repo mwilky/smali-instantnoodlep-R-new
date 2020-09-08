@@ -477,12 +477,6 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p2, Lcom/android/server/wm/WindowState;->mWinAnimator:Lcom/android/server/wm/WindowStateAnimator;
-
-    iget-boolean v0, v0, Lcom/android/server/wm/WindowStateAnimator;->mEnterAnimationPending:Z
-
-    if-nez v0, :cond_0
-
     iget v0, p0, Lcom/android/server/wm/AccessibilityController$DisplayMagnifier$MagnifiedViewport;->mTempLayer:I
 
     add-int/lit8 v0, v0, 0x1

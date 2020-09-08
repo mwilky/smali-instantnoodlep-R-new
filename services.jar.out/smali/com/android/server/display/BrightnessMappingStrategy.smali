@@ -177,7 +177,7 @@
 
     new-array v12, v3, [I
 
-    const/16 v13, 0x66
+    const/16 v13, 0x62
 
     const/4 v14, 0x0
 
@@ -217,7 +217,7 @@
 
     sput v12, Lcom/android/server/display/BrightnessMappingStrategy;->mHBMLuxThreshold:I
 
-    const v12, 0x10e007d
+    const v12, 0x10e0083
 
     invoke-virtual {v0, v12}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -225,7 +225,7 @@
 
     sput v12, Lcom/android/server/display/BrightnessMappingStrategy;->mMinHBMLevel:I
 
-    const v12, 0x10e0073
+    const v12, 0x10e0079
 
     invoke-virtual {v0, v12}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -268,13 +268,13 @@
 
     if-eqz v2, :cond_5
 
-    const v2, 0x10e00b0
+    const v2, 0x10e00b6
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v2
 
-    const v11, 0x10e00af
+    const v11, 0x10e00b5
 
     invoke-virtual {v0, v11}, Landroid/content/res/Resources;->getInteger(I)I
 

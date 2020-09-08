@@ -4,16 +4,6 @@
 
 
 # static fields
-.field private static final CLOUD_COMMUNICATION_PERMISSIONS:Ljava/util/Set;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Set<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
-
 .field private static final CLOUD_SERVICE_PERMISSIONS:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -84,6 +74,16 @@
     .end annotation
 .end field
 
+.field private static final OPREGSERVICE_PERMISSIONS:Ljava/util/Set;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Set<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field private static final SPEECHASSIST_PERMISSIONS:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -103,7 +103,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 16
+    .locals 14
 
     new-instance v0, Landroid/util/ArraySet;
 
@@ -179,32 +179,6 @@
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
-    sput-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->CLOUD_COMMUNICATION_PERMISSIONS:Ljava/util/Set;
-
-    const-string v5, "android.permission.READ_CALL_LOG"
-
-    invoke-interface {v0, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->CLOUD_COMMUNICATION_PERMISSIONS:Ljava/util/Set;
-
-    invoke-interface {v0, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->CLOUD_COMMUNICATION_PERMISSIONS:Ljava/util/Set;
-
-    const-string v6, "android.permission.WRITE_CALL_LOG"
-
-    invoke-interface {v0, v6}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->CLOUD_COMMUNICATION_PERMISSIONS:Ljava/util/Set;
-
-    const-string v6, "android.permission.WRITE_CONTACTS"
-
-    invoke-interface {v0, v6}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    new-instance v0, Landroid/util/ArraySet;
-
-    invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
-
     sput-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->INSTANT_APP_PERMISSIONS:Ljava/util/Set;
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
@@ -215,39 +189,39 @@
 
     sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->INSTANT_APP_PERMISSIONS:Ljava/util/Set;
 
-    const-string v7, "android.permission.WRITE_CALENDAR"
+    const-string v5, "android.permission.WRITE_CALENDAR"
+
+    invoke-interface {v0, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->INSTANT_APP_PERMISSIONS:Ljava/util/Set;
+
+    const-string v6, "android.permission.READ_CALENDAR"
+
+    invoke-interface {v0, v6}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->INSTANT_APP_PERMISSIONS:Ljava/util/Set;
+
+    const-string v7, "android.permission.CAMERA"
 
     invoke-interface {v0, v7}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->INSTANT_APP_PERMISSIONS:Ljava/util/Set;
 
-    const-string v8, "android.permission.READ_CALENDAR"
+    const-string v7, "android.permission.ACCESS_FINE_LOCATION"
+
+    invoke-interface {v0, v7}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->INSTANT_APP_PERMISSIONS:Ljava/util/Set;
+
+    const-string v8, "android.permission.ACCESS_COARSE_LOCATION"
 
     invoke-interface {v0, v8}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->INSTANT_APP_PERMISSIONS:Ljava/util/Set;
 
-    const-string v9, "android.permission.CAMERA"
+    const-string v9, "android.permission.RECORD_AUDIO"
 
     invoke-interface {v0, v9}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->INSTANT_APP_PERMISSIONS:Ljava/util/Set;
-
-    const-string v9, "android.permission.ACCESS_FINE_LOCATION"
-
-    invoke-interface {v0, v9}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->INSTANT_APP_PERMISSIONS:Ljava/util/Set;
-
-    const-string v10, "android.permission.ACCESS_COARSE_LOCATION"
-
-    invoke-interface {v0, v10}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->INSTANT_APP_PERMISSIONS:Ljava/util/Set;
-
-    const-string v11, "android.permission.RECORD_AUDIO"
-
-    invoke-interface {v0, v11}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->INSTANT_APP_PERMISSIONS:Ljava/util/Set;
 
@@ -259,21 +233,21 @@
 
     sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->INSTANT_APP_PERMISSIONS:Ljava/util/Set;
 
-    const-string v12, "android.permission.SEND_SMS"
+    const-string v10, "android.permission.SEND_SMS"
+
+    invoke-interface {v0, v10}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->INSTANT_APP_PERMISSIONS:Ljava/util/Set;
+
+    const-string v11, "android.permission.READ_SMS"
+
+    invoke-interface {v0, v11}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->INSTANT_APP_PERMISSIONS:Ljava/util/Set;
+
+    const-string v12, "android.permission.RECEIVE_SMS"
 
     invoke-interface {v0, v12}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->INSTANT_APP_PERMISSIONS:Ljava/util/Set;
-
-    const-string v13, "android.permission.READ_SMS"
-
-    invoke-interface {v0, v13}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->INSTANT_APP_PERMISSIONS:Ljava/util/Set;
-
-    const-string v14, "android.permission.RECEIVE_SMS"
-
-    invoke-interface {v0, v14}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     new-instance v0, Landroid/util/ArraySet;
 
@@ -281,17 +255,17 @@
 
     sput-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->LOCATION_PERMISSIONS:Ljava/util/Set;
 
-    invoke-interface {v0, v9}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, v7}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->LOCATION_PERMISSIONS:Ljava/util/Set;
 
-    invoke-interface {v0, v10}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, v8}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->LOCATION_PERMISSIONS:Ljava/util/Set;
 
-    const-string v15, "android.permission.ACCESS_BACKGROUND_LOCATION"
+    const-string v13, "android.permission.ACCESS_BACKGROUND_LOCATION"
 
-    invoke-interface {v0, v15}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, v13}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->LOCATION_PERMISSIONS:Ljava/util/Set;
 
@@ -311,7 +285,7 @@
 
     sput-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->SPEECHASSIST_PERMISSIONS:Ljava/util/Set;
 
-    invoke-interface {v0, v11}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, v9}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->SPEECHASSIST_PERMISSIONS:Ljava/util/Set;
 
@@ -327,29 +301,7 @@
 
     sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->SPEECHASSIST_PERMISSIONS:Ljava/util/Set;
 
-    invoke-interface {v0, v10}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->SPEECHASSIST_PERMISSIONS:Ljava/util/Set;
-
-    invoke-interface {v0, v9}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->SPEECHASSIST_PERMISSIONS:Ljava/util/Set;
-
-    invoke-interface {v0, v15}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->SPEECHASSIST_PERMISSIONS:Ljava/util/Set;
-
-    invoke-interface {v0, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->SPEECHASSIST_PERMISSIONS:Ljava/util/Set;
-
-    invoke-interface {v0, v6}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->SPEECHASSIST_PERMISSIONS:Ljava/util/Set;
-
-    const-string v1, "android.permission.CALL_PHONE"
-
-    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, v8}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->SPEECHASSIST_PERMISSIONS:Ljava/util/Set;
 
@@ -357,11 +309,39 @@
 
     sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->SPEECHASSIST_PERMISSIONS:Ljava/util/Set;
 
-    invoke-interface {v0, v8}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, v13}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->SPEECHASSIST_PERMISSIONS:Ljava/util/Set;
 
-    invoke-interface {v0, v13}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->SPEECHASSIST_PERMISSIONS:Ljava/util/Set;
+
+    const-string v3, "android.permission.WRITE_CONTACTS"
+
+    invoke-interface {v0, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->SPEECHASSIST_PERMISSIONS:Ljava/util/Set;
+
+    const-string v9, "android.permission.CALL_PHONE"
+
+    invoke-interface {v0, v9}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->SPEECHASSIST_PERMISSIONS:Ljava/util/Set;
+
+    invoke-interface {v0, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->SPEECHASSIST_PERMISSIONS:Ljava/util/Set;
+
+    invoke-interface {v0, v6}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->SPEECHASSIST_PERMISSIONS:Ljava/util/Set;
+
+    invoke-interface {v0, v11}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->SPEECHASSIST_PERMISSIONS:Ljava/util/Set;
+
+    invoke-interface {v0, v10}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->SPEECHASSIST_PERMISSIONS:Ljava/util/Set;
 
@@ -369,9 +349,7 @@
 
     sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->SPEECHASSIST_PERMISSIONS:Ljava/util/Set;
 
-    invoke-interface {v0, v14}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->SPEECHASSIST_PERMISSIONS:Ljava/util/Set;
+    const-string v5, "android.permission.READ_CALL_LOG"
 
     invoke-interface {v0, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
@@ -385,13 +363,37 @@
 
     sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->CONTACTS_PERMISSIONS:Ljava/util/Set;
 
-    invoke-interface {v0, v6}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->CONTACTS_PERMISSIONS:Ljava/util/Set;
 
-    const-string v1, "android.permission.GET_ACCOUNTS"
+    const-string v3, "android.permission.GET_ACCOUNTS"
+
+    invoke-interface {v0, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    new-instance v0, Landroid/util/ArraySet;
+
+    invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
+
+    sput-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->OPREGSERVICE_PERMISSIONS:Ljava/util/Set;
+
+    invoke-interface {v0, v7}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->OPREGSERVICE_PERMISSIONS:Ljava/util/Set;
+
+    invoke-interface {v0, v8}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->OPREGSERVICE_PERMISSIONS:Ljava/util/Set;
+
+    invoke-interface {v0, v13}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->OPREGSERVICE_PERMISSIONS:Ljava/util/Set;
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->OPREGSERVICE_PERMISSIONS:Ljava/util/Set;
+
+    invoke-interface {v0, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
@@ -546,40 +548,6 @@
     const/4 v0, 0x0
 
     return-object v0
-.end method
-
-.method public static grantDefaultPermissionToCloudCommunicationApp(Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;[I)V
-    .locals 6
-
-    array-length v0, p1
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    :goto_0
-    if-ge v2, v0, :cond_0
-
-    aget v3, p1, v2
-
-    const/4 v4, 0x1
-
-    new-array v4, v4, [Ljava/util/Set;
-
-    sget-object v5, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->CLOUD_COMMUNICATION_PERMISSIONS:Ljava/util/Set;
-
-    aput-object v5, v4, v1
-
-    const-string v5, "com.oneplus.communication.sync"
-
-    invoke-static {p0, v5, v3, v4}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->grantPermissionsToSystemPackage(Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;Ljava/lang/String;I[Ljava/util/Set;)V
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
 .end method
 
 .method public static grantDefaultPermissionToCloudServiceApp(Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;[I)V
@@ -746,6 +714,40 @@
     return-void
 .end method
 
+.method public static grantDefaultPermissionToOpRegService(Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;[I)V
+    .locals 6
+
+    array-length v0, p1
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_0
+    if-ge v2, v0, :cond_0
+
+    aget v3, p1, v2
+
+    const/4 v4, 0x1
+
+    new-array v4, v4, [Ljava/util/Set;
+
+    sget-object v5, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->OPREGSERVICE_PERMISSIONS:Ljava/util/Set;
+
+    aput-object v5, v4, v1
+
+    const-string v5, "com.oneplus.regservice"
+
+    invoke-static {p0, v5, v3, v4}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->grantPermissionsToSystemPackage(Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;Ljava/lang/String;I[Ljava/util/Set;)V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
 .method public static grantDefaultPermissionToSpeechAssist(Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;[I)V
     .locals 6
 
@@ -805,9 +807,9 @@
 
     invoke-static {p0, p1}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->grantDefaultPermissionToCloudServiceApp(Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;[I)V
 
-    invoke-static {p0, p1}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->grantDefaultPermissionToCloudCommunicationApp(Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;[I)V
-
     invoke-static {p0, p1}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->grantDefaultPermissionToSpeechAssist(Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;[I)V
+
+    invoke-static {p0, p1}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->grantDefaultPermissionToOpRegService(Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;[I)V
 
     sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->CONTACTS_PERMISSIONS:Ljava/util/Set;
 
@@ -815,21 +817,7 @@
 
     invoke-static {p0, v1, p1, v0}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->grantPermissionsToPackage(Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;Ljava/lang/String;[ILjava/util/Set;)V
 
-    goto :goto_0
-
     :cond_0
-    invoke-static {}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->getBuildFlag()I
-
-    move-result v0
-
-    const/4 v1, 0x3
-
-    if-ne v0, v1, :cond_1
-
-    invoke-static {p0, p1}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->grantDefaultPermissionToCloudCommunicationApp(Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;[I)V
-
-    :cond_1
-    :goto_0
     return-void
 .end method
 

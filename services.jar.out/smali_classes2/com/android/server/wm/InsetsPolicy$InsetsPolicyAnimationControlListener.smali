@@ -36,7 +36,7 @@
 
     nop
 
-    invoke-static {p1}, Lcom/android/server/wm/InsetsPolicy;->access$200(Lcom/android/server/wm/InsetsPolicy;)Lcom/android/server/wm/DisplayContent;
+    invoke-static {p1}, Lcom/android/server/wm/InsetsPolicy;->access$400(Lcom/android/server/wm/InsetsPolicy;)Lcom/android/server/wm/DisplayContent;
 
     move-result-object p1
 

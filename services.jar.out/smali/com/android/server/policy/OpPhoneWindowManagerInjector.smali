@@ -47,6 +47,18 @@
     return-void
 .end method
 
+.method public static forceShuttingDownPortait()V
+    .locals 1
+
+    invoke-static {}, Lcom/android/server/policy/OpPhoneWindowManagerInjector;->ensureInterfaceNotNull()V
+
+    sget-object v0, Lcom/android/server/policy/OpPhoneWindowManagerInjector;->sOpPhoneWindowManager:Lcom/android/server/policy/IOpPhoneWindowManager;
+
+    invoke-interface {v0}, Lcom/android/server/policy/IOpPhoneWindowManager;->forceShuttingDownPortait()V
+
+    return-void
+.end method
+
 .method public static getInstance()Ljava/lang/Object;
     .locals 1
 
@@ -109,6 +121,20 @@
     sget-object v0, Lcom/android/server/policy/OpPhoneWindowManagerInjector;->sOpPhoneWindowManager:Lcom/android/server/policy/IOpPhoneWindowManager;
 
     invoke-interface {v0}, Lcom/android/server/policy/IOpPhoneWindowManager;->isGestureSideEnabled()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static isShuttingDown()Z
+    .locals 1
+
+    invoke-static {}, Lcom/android/server/policy/OpPhoneWindowManagerInjector;->ensureInterfaceNotNull()V
+
+    sget-object v0, Lcom/android/server/policy/OpPhoneWindowManagerInjector;->sOpPhoneWindowManager:Lcom/android/server/policy/IOpPhoneWindowManager;
+
+    invoke-interface {v0}, Lcom/android/server/policy/IOpPhoneWindowManager;->isShuttingDown()Z
 
     move-result v0
 

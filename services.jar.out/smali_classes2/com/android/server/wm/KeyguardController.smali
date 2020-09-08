@@ -1212,45 +1212,44 @@
 .method setKeyguardShown(ZZ)V
     .locals 6
 
-    iget-boolean v0, p0, Lcom/android/server/wm/KeyguardController;->mKeyguardShowing:Z
+    iget-boolean v0, p0, Lcom/android/server/wm/KeyguardController;->mAodShowing:Z
 
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    if-ne p1, v0, :cond_1
+    if-eq p2, v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/android/server/wm/KeyguardController;->mKeyguardGoingAway:Z
-
-    if-eqz v0, :cond_0
-
-    if-eqz p1, :cond_0
+    move v0, v1
 
     goto :goto_0
 
     :cond_0
     move v0, v2
 
+    :goto_0
+    iget-boolean v3, p0, Lcom/android/server/wm/KeyguardController;->mKeyguardShowing:Z
+
+    if-ne p1, v3, :cond_2
+
+    iget-boolean v3, p0, Lcom/android/server/wm/KeyguardController;->mKeyguardGoingAway:Z
+
+    if-eqz v3, :cond_1
+
+    if-eqz p1, :cond_1
+
+    if-nez v0, :cond_1
+
     goto :goto_1
 
     :cond_1
-    :goto_0
-    move v0, v1
-
-    :goto_1
-    iget-boolean v3, p0, Lcom/android/server/wm/KeyguardController;->mAodShowing:Z
-
-    if-eq p2, v3, :cond_2
-
-    goto :goto_2
-
-    :cond_2
     move v1, v2
 
-    :goto_2
-    if-nez v0, :cond_3
-
+    :cond_2
+    :goto_1
     if-nez v1, :cond_3
+
+    if-nez v0, :cond_3
 
     return-void
 
@@ -1273,7 +1272,7 @@
 
     invoke-virtual {v3, p2}, Lcom/android/server/wm/WindowManagerService;->setAodShowing(Z)V
 
-    if-eqz v0, :cond_4
+    if-eqz v1, :cond_4
 
     invoke-direct {p0}, Lcom/android/server/wm/KeyguardController;->dismissDockedStackIfNeeded()V
 

@@ -427,7 +427,8 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eqz v1, :cond_0
@@ -464,100 +465,115 @@
 
     const/4 v3, 0x0
 
-    const/16 v6, 0xa
+    const/4 v6, 0x2
 
-    const/4 v7, 0x2
+    new-array v7, v6, [I
 
-    new-array v8, v7, [I
+    aput v6, v7, v5
 
-    aput v7, v8, v5
+    const/16 v8, 0xa
 
-    aput v6, v8, v4
+    aput v8, v7, v4
 
-    const-class v6, Ljava/lang/String;
+    const-class v9, Ljava/lang/String;
 
-    invoke-static {v6, v8}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;[I)Ljava/lang/Object;
+    invoke-static {v9, v7}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;[I)Ljava/lang/Object;
 
-    move-result-object v6
+    move-result-object v7
 
-    check-cast v6, [[Ljava/lang/String;
+    check-cast v7, [[Ljava/lang/String;
 
     :goto_1
     invoke-virtual {v1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v9
 
-    move-object v8, v7
+    move-object v10, v9
 
-    if-eqz v7, :cond_2
+    if-eqz v9, :cond_4
 
-    const-string v7, "\\s+"
+    const-string v9, "\\s+"
 
-    invoke-virtual {v8, v7}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    invoke-virtual {v10, v9}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v9
 
-    aget-object v9, v6, v3
+    array-length v11, v9
 
-    aget-object v10, v7, v4
+    if-ne v11, v6, :cond_2
 
-    aput-object v10, v9, v4
+    aget-object v11, v7, v3
 
-    aget-object v9, v6, v3
+    aget-object v12, v9, v4
 
-    aget-object v10, v7, v5
+    aput-object v12, v11, v4
 
-    aput-object v10, v9, v5
+    aget-object v11, v7, v3
 
-    nop
+    aget-object v12, v9, v5
+
+    aput-object v12, v11, v5
 
     add-int/lit8 v3, v3, 0x1
 
+    :cond_2
+    if-lt v3, v8, :cond_3
+
+    sget-object v6, Lcom/android/server/connectivity/DnsManager;->TAG:Ljava/lang/String;
+
+    const-string/jumbo v8, "string array is full now, exit while loop"
+
+    invoke-static {v6, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_2
+
+    :cond_3
     goto :goto_1
 
-    :cond_2
-    new-instance v7, Landroid/net/ResolverOptionsParcel;
-
-    invoke-direct {v7}, Landroid/net/ResolverOptionsParcel;-><init>()V
-
-    new-array v9, v3, [Landroid/net/ResolverHostsParcel;
-
-    iput-object v9, v7, Landroid/net/ResolverOptionsParcel;->hosts:[Landroid/net/ResolverHostsParcel;
-
-    const/4 v9, 0x0
-
+    :cond_4
     :goto_2
-    if-ge v9, v3, :cond_3
+    new-instance v6, Landroid/net/ResolverOptionsParcel;
 
-    iget-object v10, v7, Landroid/net/ResolverOptionsParcel;->hosts:[Landroid/net/ResolverHostsParcel;
+    invoke-direct {v6}, Landroid/net/ResolverOptionsParcel;-><init>()V
+
+    new-array v8, v3, [Landroid/net/ResolverHostsParcel;
+
+    iput-object v8, v6, Landroid/net/ResolverOptionsParcel;->hosts:[Landroid/net/ResolverHostsParcel;
+
+    const/4 v8, 0x0
+
+    :goto_3
+    if-ge v8, v3, :cond_5
+
+    iget-object v9, v6, Landroid/net/ResolverOptionsParcel;->hosts:[Landroid/net/ResolverHostsParcel;
 
     new-instance v11, Landroid/net/ResolverHostsParcel;
 
     invoke-direct {v11}, Landroid/net/ResolverHostsParcel;-><init>()V
 
-    aput-object v11, v10, v9
+    aput-object v11, v9, v8
 
-    add-int/lit8 v9, v9, 0x1
+    add-int/lit8 v8, v8, 0x1
 
-    goto :goto_2
+    goto :goto_3
 
-    :cond_3
-    const/4 v9, 0x0
+    :cond_5
+    const/4 v8, 0x0
 
-    :goto_3
-    if-ge v9, v3, :cond_4
+    :goto_4
+    if-ge v8, v3, :cond_6
 
-    iget-object v10, v7, Landroid/net/ResolverOptionsParcel;->hosts:[Landroid/net/ResolverHostsParcel;
+    iget-object v9, v6, Landroid/net/ResolverOptionsParcel;->hosts:[Landroid/net/ResolverHostsParcel;
 
-    aget-object v10, v10, v9
+    aget-object v9, v9, v8
 
-    aget-object v11, v6, v9
+    aget-object v11, v7, v8
 
     aget-object v11, v11, v5
 
-    iput-object v11, v10, Landroid/net/ResolverHostsParcel;->hostName:Ljava/lang/String;
+    iput-object v11, v9, Landroid/net/ResolverHostsParcel;->hostName:Ljava/lang/String;
 
-    sget-object v10, Lcom/android/server/connectivity/DnsManager;->TAG:Ljava/lang/String;
+    sget-object v9, Lcom/android/server/connectivity/DnsManager;->TAG:Ljava/lang/String;
 
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -567,9 +583,9 @@
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v12, v7, Landroid/net/ResolverOptionsParcel;->hosts:[Landroid/net/ResolverHostsParcel;
+    iget-object v12, v6, Landroid/net/ResolverOptionsParcel;->hosts:[Landroid/net/ResolverHostsParcel;
 
-    aget-object v12, v12, v9
+    aget-object v12, v12, v8
 
     iget-object v12, v12, Landroid/net/ResolverHostsParcel;->hostName:Ljava/lang/String;
 
@@ -579,31 +595,31 @@
 
     move-result-object v11
 
-    invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v9, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object v10, v7, Landroid/net/ResolverOptionsParcel;->hosts:[Landroid/net/ResolverHostsParcel;
+    iget-object v9, v6, Landroid/net/ResolverOptionsParcel;->hosts:[Landroid/net/ResolverHostsParcel;
 
-    aget-object v10, v10, v9
+    aget-object v9, v9, v8
 
-    aget-object v11, v6, v9
+    aget-object v11, v7, v8
 
     aget-object v11, v11, v4
 
-    iput-object v11, v10, Landroid/net/ResolverHostsParcel;->ipAddr:Ljava/lang/String;
+    iput-object v11, v9, Landroid/net/ResolverHostsParcel;->ipAddr:Ljava/lang/String;
 
-    sget-object v10, Lcom/android/server/connectivity/DnsManager;->TAG:Ljava/lang/String;
+    sget-object v9, Lcom/android/server/connectivity/DnsManager;->TAG:Ljava/lang/String;
 
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v12, "ipAddr"
+    const-string/jumbo v12, "ipAddr"
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v12, v7, Landroid/net/ResolverOptionsParcel;->hosts:[Landroid/net/ResolverHostsParcel;
+    iget-object v12, v6, Landroid/net/ResolverOptionsParcel;->hosts:[Landroid/net/ResolverHostsParcel;
 
-    aget-object v12, v12, v9
+    aget-object v12, v12, v8
 
     iget-object v12, v12, Landroid/net/ResolverHostsParcel;->ipAddr:Ljava/lang/String;
 
@@ -613,18 +629,19 @@
 
     move-result-object v11
 
-    invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v9, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    add-int/lit8 v9, v9, 0x1
+    add-int/lit8 v8, v8, 0x1
 
-    goto :goto_3
+    goto :goto_4
 
-    :cond_4
+    :cond_6
     nop
 
-    iput-object v7, p2, Landroid/net/ResolverParamsParcel;->resolverOptions:Landroid/net/ResolverOptionsParcel;
+    iput-object v6, p2, Landroid/net/ResolverParamsParcel;->resolverOptions:Landroid/net/ResolverOptionsParcel;
     :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_3
+    .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_2 .. :try_end_2} :catch_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     nop
@@ -634,20 +651,20 @@
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
 
-    :goto_4
-    goto :goto_5
+    :goto_5
+    goto :goto_6
 
     :catch_1
     move-exception v2
 
     invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
 
-    goto :goto_4
+    goto :goto_5
 
     :catchall_0
     move-exception v2
 
-    goto :goto_6
+    goto :goto_7
 
     :catch_2
     move-exception v2
@@ -655,44 +672,67 @@
     :try_start_4
     sget-object v3, Lcom/android/server/connectivity/DnsManager;->TAG:Ljava/lang/String;
 
-    const-string v4, "file does not exist"
+    const-string v4, "ArrayIndexOutOfBounds"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
+    invoke-virtual {v2}, Ljava/lang/ArrayIndexOutOfBoundsException;->printStackTrace()V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_7
 
     :try_start_5
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_1
 
-    goto :goto_4
-
-    :cond_5
-    :goto_5
-    return-void
-
-    :goto_6
-    if-eqz v1, :cond_6
-
-    :try_start_6
-    invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
-    :try_end_6
-    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_3
-
-    goto :goto_7
+    goto :goto_5
 
     :catch_3
+    move-exception v2
+
+    :try_start_6
+    sget-object v3, Lcom/android/server/connectivity/DnsManager;->TAG:Ljava/lang/String;
+
+    const-string v4, "file does not exist"
+
+    invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_0
+
+    if-eqz v1, :cond_7
+
+    :try_start_7
+    invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
+    :try_end_7
+    .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_1
+
+    goto :goto_5
+
+    :cond_7
+    :goto_6
+    return-void
+
+    :goto_7
+    if-eqz v1, :cond_8
+
+    :try_start_8
+    invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
+    :try_end_8
+    .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_4
+
+    goto :goto_8
+
+    :catch_4
     move-exception v3
 
     invoke-virtual {v3}, Ljava/io/IOException;->printStackTrace()V
 
-    :cond_6
-    :goto_7
+    :cond_8
+    :goto_8
     throw v2
 .end method
 

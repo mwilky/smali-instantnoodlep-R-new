@@ -420,7 +420,7 @@
 
     new-array v6, v4, [I
 
-    const/16 v7, 0x65
+    const/16 v7, 0x61
 
     aput v7, v6, v3
 

@@ -10,6 +10,9 @@
 .method public abstract endUserSwitching(Lcom/android/server/am/ActivityManagerService;)V
 .end method
 
+.method public abstract gameModeShowToolBox(II)Z
+.end method
+
 .method public abstract handleEvaluateGameMode(ZZ)V
 .end method
 

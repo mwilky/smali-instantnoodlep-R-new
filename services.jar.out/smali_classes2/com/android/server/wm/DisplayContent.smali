@@ -275,6 +275,8 @@
     .end annotation
 .end field
 
+.field public final mOPFeatureInputMethod:Z
+
 .field mOffToken:Lcom/android/server/wm/ActivityTaskManagerInternal$SleepToken;
 
 .field public mOpIrisWindowInfo:Lcom/oneplus/iris/OpIrisWindowInfo;
@@ -364,6 +366,8 @@
 .end field
 
 .field mShouldOverrideDisplayConfiguration:Z
+
+.field public mShowIMEWithWindowAnimation:Z
 
 .field mSingleTaskInstance:Z
 
@@ -887,7 +891,7 @@
 
     new-array v2, v1, [I
 
-    const/16 v4, 0x12b
+    const/16 v4, 0x124
 
     aput v4, v2, v0
 
@@ -954,6 +958,20 @@
     invoke-direct {v2, p0}, Lcom/android/server/wm/-$$Lambda$DisplayContent$qxt4izS31fb0LF2uo_OF9DMa7gc;-><init>(Lcom/android/server/wm/DisplayContent;)V
 
     iput-object v2, p0, Lcom/android/server/wm/DisplayContent;->mApplySurfaceChangesTransaction:Ljava/util/function/Consumer;
+
+    new-array v2, v1, [I
+
+    const/16 v4, 0x139
+
+    aput v4, v2, v0
+
+    invoke-static {v2}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v2
+
+    iput-boolean v2, p0, Lcom/android/server/wm/DisplayContent;->mOPFeatureInputMethod:Z
+
+    iput-boolean v0, p0, Lcom/android/server/wm/DisplayContent;->mShowIMEWithWindowAnimation:Z
 
     iget-object v2, p0, Lcom/android/server/wm/DisplayContent;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
@@ -1272,6 +1290,12 @@
     move-result-object v4
 
     invoke-virtual {v4}, Landroid/view/SurfaceControl$Builder;->setContainerLayer()Landroid/view/SurfaceControl$Builder;
+
+    move-result-object v4
+
+    const-string v5, "DisplayContent"
+
+    invoke-virtual {v4, v5}, Landroid/view/SurfaceControl$Builder;->setCallsite(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
 
     move-result-object v4
 
@@ -2820,7 +2844,7 @@
 .method private isImeControlledByApp()Z
     .locals 1
 
-    iget-object v0, p0, Lcom/android/server/wm/DisplayContent;->mInputMethodTarget:Lcom/android/server/wm/WindowState;
+    iget-object v0, p0, Lcom/android/server/wm/DisplayContent;->mInputMethodInputTarget:Lcom/android/server/wm/WindowState;
 
     if-eqz v0, :cond_0
 
@@ -3972,7 +3996,7 @@
 
     invoke-direct {p0}, Lcom/android/server/wm/DisplayContent;->updateImeParent()V
 
-    invoke-direct {p0}, Lcom/android/server/wm/DisplayContent;->updateImeControlTarget()V
+    invoke-virtual {p0}, Lcom/android/server/wm/DisplayContent;->updateImeControlTarget()V
 
     return-void
 .end method
@@ -4505,57 +4529,6 @@
     return-object v1
 .end method
 
-.method private updateImeControlTarget()V
-    .locals 4
-
-    invoke-virtual {p0}, Lcom/android/server/wm/DisplayContent;->computeImeControlTarget()Lcom/android/server/wm/InsetsControlTarget;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/android/server/wm/DisplayContent;->mInputMethodControlTarget:Lcom/android/server/wm/InsetsControlTarget;
-
-    iget-object v1, p0, Lcom/android/server/wm/DisplayContent;->mInsetsStateController:Lcom/android/server/wm/InsetsStateController;
-
-    invoke-virtual {v1, v0}, Lcom/android/server/wm/InsetsStateController;->onImeControlTargetChanged(Lcom/android/server/wm/InsetsControlTarget;)V
-
-    iget-object v0, p0, Lcom/android/server/wm/DisplayContent;->mInputMethodControlTarget:Lcom/android/server/wm/InsetsControlTarget;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lcom/android/server/wm/InsetsControlTarget;->getWindow()Lcom/android/server/wm/WindowState;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_0
-    move-object v0, v1
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    iget-object v1, v0, Lcom/android/server/wm/WindowState;->mClient:Landroid/view/IWindow;
-
-    invoke-interface {v1}, Landroid/view/IWindow;->asBinder()Landroid/os/IBinder;
-
-    move-result-object v1
-
-    :cond_1
-    iget-object v2, p0, Lcom/android/server/wm/DisplayContent;->mWmService:Lcom/android/server/wm/WindowManagerService;
-
-    iget-object v2, v2, Lcom/android/server/wm/WindowManagerService;->mH:Lcom/android/server/wm/WindowManagerService$H;
-
-    new-instance v3, Lcom/android/server/wm/-$$Lambda$DisplayContent$-xtu90EUfC_AM8Qe5g8vDDI07_E;
-
-    invoke-direct {v3, v1}, Lcom/android/server/wm/-$$Lambda$DisplayContent$-xtu90EUfC_AM8Qe5g8vDDI07_E;-><init>(Landroid/os/IBinder;)V
-
-    invoke-virtual {v2, v3}, Lcom/android/server/wm/WindowManagerService$H;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-.end method
-
 .method private updateImeParent()V
     .locals 3
 
@@ -4747,7 +4720,7 @@
 .end method
 
 .method addShellRoot(Landroid/view/IWindow;I)Landroid/view/SurfaceControl;
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayContent;->mShellRoots:Landroid/util/SparseArray;
 
@@ -4804,7 +4777,9 @@
 
     new-instance v2, Landroid/view/SurfaceControl;
 
-    invoke-direct {v2, v1}, Landroid/view/SurfaceControl;-><init>(Landroid/view/SurfaceControl;)V
+    const-string v3, "DisplayContent.addShellRoot"
+
+    invoke-direct {v2, v1, v3}, Landroid/view/SurfaceControl;-><init>(Landroid/view/SurfaceControl;Ljava/lang/String;)V
 
     return-object v2
 .end method
@@ -5828,66 +5803,8 @@
     return v1
 .end method
 
-.method checkCompleteDeferredRemoval()Z
-    .locals 6
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0}, Lcom/android/server/wm/DisplayContent;->getChildCount()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    sub-int/2addr v1, v2
-
-    :goto_0
-    const/4 v3, 0x0
-
-    if-ltz v1, :cond_1
-
-    invoke-virtual {p0, v1}, Lcom/android/server/wm/DisplayContent;->getChildAt(I)Lcom/android/server/wm/WindowContainer;
-
-    move-result-object v4
-
-    check-cast v4, Lcom/android/server/wm/DisplayContent$DisplayChildWindowContainer;
-
-    invoke-virtual {v4}, Lcom/android/server/wm/DisplayContent$DisplayChildWindowContainer;->checkCompleteDeferredRemoval()Z
-
-    move-result v5
-
-    or-int/2addr v0, v5
-
-    invoke-virtual {p0}, Lcom/android/server/wm/DisplayContent;->getChildCount()I
-
-    move-result v5
-
-    if-nez v5, :cond_0
-
-    return v3
-
-    :cond_0
-    add-int/lit8 v1, v1, -0x1
-
-    goto :goto_0
-
-    :cond_1
-    if-nez v0, :cond_2
-
-    iget-boolean v1, p0, Lcom/android/server/wm/DisplayContent;->mDeferredRemoval:Z
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {p0}, Lcom/android/server/wm/DisplayContent;->removeImmediately()V
-
-    return v3
-
-    :cond_2
-    return v2
-.end method
-
 .method computeImeControlTarget()Lcom/android/server/wm/InsetsControlTarget;
-    .locals 1
+    .locals 2
 
     invoke-direct {p0}, Lcom/android/server/wm/DisplayContent;->isImeControlledByApp()Z
 
@@ -5897,11 +5814,31 @@
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayContent;->mRemoteInsetsControlTarget:Lcom/android/server/wm/DisplayContent$RemoteInsetsControlTarget;
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_1
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/server/wm/DisplayContent;->mInputMethodInputTarget:Lcom/android/server/wm/WindowState;
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Lcom/android/server/wm/WindowState;->getWindow()Lcom/android/server/wm/WindowState;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/android/server/wm/DisplayContent;->getImeHostOrFallback(Lcom/android/server/wm/WindowState;)Lcom/android/server/wm/InsetsControlTarget;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/server/wm/DisplayContent;->mRemoteInsetsControlTarget:Lcom/android/server/wm/DisplayContent$RemoteInsetsControlTarget;
+
+    if-ne v0, v1, :cond_2
+
+    :cond_1
+    iget-object v0, p0, Lcom/android/server/wm/DisplayContent;->mRemoteInsetsControlTarget:Lcom/android/server/wm/DisplayContent$RemoteInsetsControlTarget;
 
     return-object v0
 
-    :cond_0
+    :cond_2
     iget-object v0, p0, Lcom/android/server/wm/DisplayContent;->mInputMethodInputTarget:Lcom/android/server/wm/WindowState;
 
     return-object v0
@@ -5955,7 +5892,7 @@
 .end method
 
 .method computeImeTarget(Z)Lcom/android/server/wm/WindowState;
-    .locals 12
+    .locals 13
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayContent;->mInputMethodWindow:Lcom/android/server/wm/WindowState;
 
@@ -6086,76 +6023,106 @@
     invoke-static {v3, v6}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_6
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_9
 
     iget-boolean v6, v0, Lcom/android/server/wm/WindowState;->mRemoved:Z
 
-    if-nez v6, :cond_8
+    if-nez v6, :cond_9
 
     invoke-virtual {v0}, Lcom/android/server/wm/WindowState;->isDisplayedLw()Z
 
     move-result v6
 
-    if-eqz v6, :cond_8
+    if-eqz v6, :cond_9
 
     invoke-virtual {v0}, Lcom/android/server/wm/WindowState;->isClosing()Z
 
     move-result v6
 
-    if-eqz v6, :cond_8
+    if-eqz v6, :cond_9
 
+    invoke-virtual {v0}, Lcom/android/server/wm/WindowState;->isActivityTypeHome()Z
+
+    move-result v6
+
+    if-nez v6, :cond_9
+
+    iget-boolean v6, p0, Lcom/android/server/wm/DisplayContent;->mOPFeatureInputMethod:Z
+
+    if-eqz v6, :cond_7
+
+    iget-boolean v6, p0, Lcom/android/server/wm/DisplayContent;->mShowIMEWithWindowAnimation:Z
+
+    if-eqz v6, :cond_7
+
+    sget-boolean v6, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_INPUT_METHOD:Z
+
+    if-eqz v6, :cond_9
+
+    const-string v6, "change input target by OPFeatureInputMethod"
+
+    invoke-static {v3, v6}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    :cond_7
     sget-boolean v1, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_INPUT_METHOD:Z
 
-    if-eqz v1, :cond_7
+    if-eqz v1, :cond_8
 
     const-string v1, "Not changing target till current window is closing and not removed"
 
     invoke-static {v3, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_7
+    :cond_8
     return-object v0
 
-    :cond_8
-    sget-boolean v6, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_INPUT_METHOD:Z
-
-    if-eqz v6, :cond_9
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v7, "Desired input method target="
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v7, " updateImeTarget="
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-static {v3, v6}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
-
     :cond_9
-    const/4 v6, 0x4
+    :goto_0
+    const/4 v6, 0x0
 
-    const-string v7, " Callers="
+    iput-boolean v6, p0, Lcom/android/server/wm/DisplayContent;->mShowIMEWithWindowAnimation:Z
 
-    const-string v8, ""
+    sget-boolean v7, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_INPUT_METHOD:Z
 
-    if-nez v4, :cond_d
+    if-eqz v7, :cond_a
 
-    if-eqz p1, :cond_c
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "Desired input method target="
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v8, " updateImeTarget="
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v3, v7}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_a
+    const/4 v7, 0x4
+
+    const-string v8, " Callers="
+
+    const-string v9, ""
+
+    if-nez v4, :cond_e
+
+    if-eqz p1, :cond_d
 
     sget-boolean v5, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_INPUT_METHOD:Z
 
-    if-eqz v5, :cond_b
+    if-eqz v5, :cond_c
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -6171,15 +6138,15 @@
 
     sget-boolean v1, Lcom/android/server/wm/WindowManagerDebugConfig;->SHOW_STACK_CRAWLS:Z
 
-    if-eqz v1, :cond_a
+    if-eqz v1, :cond_b
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v6}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
+    invoke-static {v7}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
 
     move-result-object v6
 
@@ -6187,15 +6154,15 @@
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v9
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_a
+    :cond_b
     nop
 
-    :goto_0
-    invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :goto_1
+    invoke-virtual {v5, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -6203,95 +6170,95 @@
 
     invoke-static {v3, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_b
+    :cond_c
     iget-boolean v1, p0, Lcom/android/server/wm/DisplayContent;->mInputMethodTargetWaitingAnim:Z
 
     invoke-direct {p0, v2, v1}, Lcom/android/server/wm/DisplayContent;->setInputMethodTarget(Lcom/android/server/wm/WindowState;Z)V
 
-    :cond_c
+    :cond_d
     return-object v2
 
-    :cond_d
-    if-eqz p1, :cond_14
-
-    if-nez v0, :cond_e
-
-    goto :goto_1
-
     :cond_e
+    if-eqz p1, :cond_15
+
+    if-nez v0, :cond_f
+
+    goto :goto_2
+
+    :cond_f
     iget-object v2, v0, Lcom/android/server/wm/WindowState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
-    :goto_1
-    if-eqz v2, :cond_11
+    :goto_2
+    if-eqz v2, :cond_12
 
-    const/4 v9, 0x0
+    const/4 v10, 0x0
 
     invoke-virtual {v2, v5}, Lcom/android/server/wm/ActivityRecord;->isAnimating(I)Z
 
-    move-result v10
+    move-result v11
 
-    if-eqz v10, :cond_f
+    if-eqz v11, :cond_10
 
     invoke-virtual {v2, v0}, Lcom/android/server/wm/ActivityRecord;->getHighestAnimLayerWindow(Lcom/android/server/wm/WindowState;)Lcom/android/server/wm/WindowState;
 
-    move-result-object v9
+    move-result-object v10
 
-    :cond_f
-    if-eqz v9, :cond_11
+    :cond_10
+    if-eqz v10, :cond_12
 
-    sget-boolean v10, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_INPUT_METHOD:Z
+    sget-boolean v11, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_INPUT_METHOD:Z
 
-    if-eqz v10, :cond_10
+    if-eqz v11, :cond_11
 
-    new-instance v10, Ljava/lang/StringBuilder;
+    new-instance v11, Ljava/lang/StringBuilder;
 
-    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v11, p0, Lcom/android/server/wm/DisplayContent;->mAppTransition:Lcom/android/server/wm/AppTransition;
+    iget-object v12, p0, Lcom/android/server/wm/DisplayContent;->mAppTransition:Lcom/android/server/wm/AppTransition;
 
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v11, " "
+    const-string v12, " "
 
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v10, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v11, " animating="
+    const-string v12, " animating="
 
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9, v5}, Lcom/android/server/wm/WindowState;->isAnimating(I)Z
+    invoke-virtual {v10, v5}, Lcom/android/server/wm/WindowState;->isAnimating(I)Z
 
     move-result v5
 
-    invoke-virtual {v10, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-static {v3, v5}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_10
+    :cond_11
     iget-object v5, p0, Lcom/android/server/wm/DisplayContent;->mAppTransition:Lcom/android/server/wm/AppTransition;
 
     invoke-virtual {v5}, Lcom/android/server/wm/AppTransition;->isTransitionSet()Z
 
     move-result v5
 
-    if-eqz v5, :cond_11
+    if-eqz v5, :cond_12
 
     const/4 v1, 0x1
 
-    invoke-direct {p0, v9, v1}, Lcom/android/server/wm/DisplayContent;->setInputMethodTarget(Lcom/android/server/wm/WindowState;Z)V
+    invoke-direct {p0, v10, v1}, Lcom/android/server/wm/DisplayContent;->setInputMethodTarget(Lcom/android/server/wm/WindowState;Z)V
 
-    return-object v9
+    return-object v10
 
-    :cond_11
+    :cond_12
     sget-boolean v5, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_INPUT_METHOD:Z
 
-    if-eqz v5, :cond_13
+    if-eqz v5, :cond_14
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -6309,26 +6276,26 @@
 
     sget-boolean v1, Lcom/android/server/wm/WindowManagerDebugConfig;->SHOW_STACK_CRAWLS:Z
 
-    if-eqz v1, :cond_12
+    if-eqz v1, :cond_13
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
+    invoke-virtual {v1, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {v7}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
+
+    move-result-object v7
+
     invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {v6}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v9
 
-    :cond_12
-    invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_13
+    invoke-virtual {v5, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -6336,12 +6303,10 @@
 
     invoke-static {v3, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_13
-    const/4 v1, 0x0
-
-    invoke-direct {p0, v4, v1}, Lcom/android/server/wm/DisplayContent;->setInputMethodTarget(Lcom/android/server/wm/WindowState;Z)V
-
     :cond_14
+    invoke-direct {p0, v4, v6}, Lcom/android/server/wm/DisplayContent;->setInputMethodTarget(Lcom/android/server/wm/WindowState;Z)V
+
+    :cond_15
     return-object v4
 .end method
 
@@ -7641,20 +7606,16 @@
 
     if-eqz v2, :cond_c
 
-    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
     const-string v3, "  mScreenRotationAnimation:"
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    invoke-interface {v2, v1, p1}, Lcom/android/server/wm/IScreenRotationAnimation;->printTo(Ljava/lang/String;Ljava/io/PrintWriter;)V
+    invoke-interface {v2, v0, p1}, Lcom/android/server/wm/IScreenRotationAnimation;->printTo(Ljava/lang/String;Ljava/io/PrintWriter;)V
 
     goto :goto_5
 
     :cond_c
     if-eqz p3, :cond_d
-
-    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v3, "  no ScreenRotationAnimation "
 
@@ -8773,7 +8734,7 @@
 .end method
 
 .method getImeFallback()Lcom/android/server/wm/InsetsControlTarget;
-    .locals 2
+    .locals 3
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayContent;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
@@ -8783,23 +8744,23 @@
 
     invoke-virtual {v0}, Lcom/android/server/wm/DisplayContent;->getDisplayPolicy()Lcom/android/server/wm/DisplayPolicy;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Lcom/android/server/wm/DisplayPolicy;->getStatusBar()Lcom/android/server/wm/WindowState;
+    invoke-virtual {v1}, Lcom/android/server/wm/DisplayPolicy;->getStatusBar()Lcom/android/server/wm/WindowState;
 
-    move-result-object v0
+    move-result-object v1
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
-    move-object v1, v0
+    move-object v2, v1
 
     goto :goto_0
 
     :cond_0
-    iget-object v1, p0, Lcom/android/server/wm/DisplayContent;->mRemoteInsetsControlTarget:Lcom/android/server/wm/DisplayContent$RemoteInsetsControlTarget;
+    iget-object v2, v0, Lcom/android/server/wm/DisplayContent;->mRemoteInsetsControlTarget:Lcom/android/server/wm/DisplayContent$RemoteInsetsControlTarget;
 
     :goto_0
-    return-object v1
+    return-object v2
 .end method
 
 .method getImeHostOrFallback(Lcom/android/server/wm/WindowState;)Lcom/android/server/wm/InsetsControlTarget;
@@ -9755,6 +9716,29 @@
     return-void
 .end method
 
+.method handleCompleteDeferredRemoval()Z
+    .locals 2
+
+    invoke-super {p0}, Lcom/android/server/wm/WindowContainer;->handleCompleteDeferredRemoval()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-boolean v1, p0, Lcom/android/server/wm/DisplayContent;->mDeferredRemoval:Z
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p0}, Lcom/android/server/wm/DisplayContent;->removeImmediately()V
+
+    const/4 v1, 0x0
+
+    return v1
+
+    :cond_0
+    return v0
+.end method
+
 .method handleTopActivityLaunchingInDifferentOrientation(Lcom/android/server/wm/ActivityRecord;Z)Z
     .locals 4
 
@@ -9787,7 +9771,22 @@
     return v2
 
     :cond_2
-    if-eqz p2, :cond_4
+    invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->occludesParent()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_b
+
+    invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->isVisible()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    if-eqz p2, :cond_6
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayContent;->mAppTransition:Lcom/android/server/wm/AppTransition;
 
@@ -9795,7 +9794,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_5
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayContent;->mOpeningApps:Landroid/util/ArraySet;
 
@@ -9803,32 +9802,48 @@
 
     move-result v0
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_4
 
-    :cond_3
-    return v1
+    goto :goto_0
 
     :cond_4
-    invoke-virtual {p0}, Lcom/android/server/wm/DisplayContent;->topRunningActivity()Lcom/android/server/wm/ActivityRecord;
+    iget-object v0, p0, Lcom/android/server/wm/DisplayContent;->mAppTransition:Lcom/android/server/wm/AppTransition;
 
-    move-result-object v0
+    invoke-virtual {v0}, Lcom/android/server/wm/AppTransition;->getTransitFlags()I
 
-    if-eq p1, v0, :cond_5
+    move-result v0
+
+    and-int/lit8 v0, v0, 0x2
+
+    if-eqz v0, :cond_7
 
     return v1
 
     :cond_5
+    :goto_0
+    return v1
+
+    :cond_6
+    invoke-virtual {p0}, Lcom/android/server/wm/DisplayContent;->topRunningActivity()Lcom/android/server/wm/ActivityRecord;
+
+    move-result-object v0
+
+    if-eq p1, v0, :cond_7
+
+    return v1
+
+    :cond_7
     invoke-virtual {p0, p1}, Lcom/android/server/wm/DisplayContent;->rotationForActivityInDifferentOrientation(Lcom/android/server/wm/ActivityRecord;)I
 
     move-result v0
 
     const/4 v3, -0x1
 
-    if-ne v0, v3, :cond_6
+    if-ne v0, v3, :cond_8
 
     return v1
 
-    :cond_6
+    :cond_8
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getParent()Lcom/android/server/wm/WindowContainer;
 
     move-result-object v3
@@ -9837,25 +9852,29 @@
 
     move-result v3
 
-    if-nez v3, :cond_7
+    if-nez v3, :cond_9
 
     return v1
 
-    :cond_7
+    :cond_9
     iget-object v3, p0, Lcom/android/server/wm/DisplayContent;->mPinnedStackControllerLocked:Lcom/android/server/wm/PinnedStackController;
 
     invoke-virtual {v3}, Lcom/android/server/wm/PinnedStackController;->isPipActiveOrWindowingModeChanging()Z
 
     move-result v3
 
-    if-eqz v3, :cond_8
+    if-eqz v3, :cond_a
 
     return v1
 
-    :cond_8
+    :cond_a
     invoke-virtual {p0, p1, v0}, Lcom/android/server/wm/DisplayContent;->setFixedRotationLaunchingApp(Lcom/android/server/wm/ActivityRecord;I)V
 
     return v2
+
+    :cond_b
+    :goto_1
+    return v1
 .end method
 
 .method handlesOrientationChangeFromDescendant()Z
@@ -10141,6 +10160,8 @@
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayContent;->mInputMethodTarget:Lcom/android/server/wm/WindowState;
 
+    if-eqz v0, :cond_0
+
     iget-object v0, v0, Lcom/android/server/wm/WindowState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
     if-eqz v0, :cond_0
@@ -10421,14 +10442,6 @@
     const/4 v0, 0x0
 
     :goto_0
-    return v0
-.end method
-
-.method isRemovalDeferred()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/android/server/wm/DisplayContent;->mDeferredRemoval:Z
-
     return v0
 .end method
 
@@ -12782,6 +12795,33 @@
 
     iput-boolean v1, v0, Lcom/android/server/wm/WindowManagerService;->mWindowsChanged:Z
 
+    iget-object v0, p0, Lcom/android/server/wm/DisplayContent;->mFixedRotationLaunchingApp:Lcom/android/server/wm/ActivityRecord;
+
+    if-eqz v0, :cond_0
+
+    iget-boolean v0, v0, Lcom/android/server/wm/ActivityRecord;->mVisibleRequested:Z
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/server/wm/DisplayContent;->mFixedRotationLaunchingApp:Lcom/android/server/wm/ActivityRecord;
+
+    invoke-virtual {v0}, Lcom/android/server/wm/ActivityRecord;->isVisible()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/server/wm/DisplayContent;->mDisplayRotation:Lcom/android/server/wm/DisplayRotation;
+
+    invoke-virtual {v0}, Lcom/android/server/wm/DisplayRotation;->isRotatingSeamlessly()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-direct {p0}, Lcom/android/server/wm/DisplayContent;->clearFixedRotationLaunchingApp()V
+
+    :cond_0
     return-void
 .end method
 
@@ -14141,6 +14181,17 @@
     :cond_1
     invoke-virtual {v2}, Lcom/android/server/wm/ActivityRecord;->onRemovedFromDisplay()V
 
+    iget-object v1, p0, Lcom/android/server/wm/DisplayContent;->mFixedRotationLaunchingApp:Lcom/android/server/wm/ActivityRecord;
+
+    if-ne v2, v1, :cond_2
+
+    invoke-virtual {v2}, Lcom/android/server/wm/ActivityRecord;->finishFixedRotationTransform()V
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v1}, Lcom/android/server/wm/DisplayContent;->setFixedRotationLaunchingAppUnchecked(Lcom/android/server/wm/ActivityRecord;)V
+
+    :cond_2
     return-void
 .end method
 
@@ -14265,6 +14316,8 @@
     iput-boolean v0, p0, Lcom/android/server/wm/DisplayContent;->mRemovingDisplay:Z
 
     const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/android/server/wm/DisplayContent;->mDeferredRemoval:Z
 
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/DisplayContent;->mParentWindow:Lcom/android/server/wm/WindowState;
@@ -15787,7 +15840,7 @@
     :cond_0
     iput-object p1, p0, Lcom/android/server/wm/DisplayContent;->mInputMethodInputTarget:Lcom/android/server/wm/WindowState;
 
-    invoke-direct {p0}, Lcom/android/server/wm/DisplayContent;->updateImeControlTarget()V
+    invoke-virtual {p0}, Lcom/android/server/wm/DisplayContent;->updateImeControlTarget()V
 
     :cond_1
     return-void
@@ -15839,7 +15892,7 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/wm/DisplayContent;->computeImeTarget(Z)Lcom/android/server/wm/WindowState;
 
-    invoke-direct {p0}, Lcom/android/server/wm/DisplayContent;->updateImeControlTarget()V
+    invoke-virtual {p0}, Lcom/android/server/wm/DisplayContent;->updateImeControlTarget()V
 
     return-void
 .end method
@@ -17235,6 +17288,52 @@
     const/4 v9, 0x1
 
     return v9
+.end method
+
+.method updateImeControlTarget()V
+    .locals 4
+
+    invoke-virtual {p0}, Lcom/android/server/wm/DisplayContent;->computeImeControlTarget()Lcom/android/server/wm/InsetsControlTarget;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/server/wm/DisplayContent;->mInputMethodControlTarget:Lcom/android/server/wm/InsetsControlTarget;
+
+    iget-object v1, p0, Lcom/android/server/wm/DisplayContent;->mInsetsStateController:Lcom/android/server/wm/InsetsStateController;
+
+    invoke-virtual {v1, v0}, Lcom/android/server/wm/InsetsStateController;->onImeControlTargetChanged(Lcom/android/server/wm/InsetsControlTarget;)V
+
+    iget-object v0, p0, Lcom/android/server/wm/DisplayContent;->mInputMethodControlTarget:Lcom/android/server/wm/InsetsControlTarget;
+
+    invoke-static {v0}, Lcom/android/server/wm/InsetsControlTarget;->asWindowOrNull(Lcom/android/server/wm/InsetsControlTarget;)Lcom/android/server/wm/WindowState;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, v0, Lcom/android/server/wm/WindowState;->mClient:Landroid/view/IWindow;
+
+    invoke-interface {v1}, Landroid/view/IWindow;->asBinder()Landroid/os/IBinder;
+
+    move-result-object v1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    iget-object v2, p0, Lcom/android/server/wm/DisplayContent;->mWmService:Lcom/android/server/wm/WindowManagerService;
+
+    iget-object v2, v2, Lcom/android/server/wm/WindowManagerService;->mH:Lcom/android/server/wm/WindowManagerService$H;
+
+    new-instance v3, Lcom/android/server/wm/-$$Lambda$DisplayContent$-xtu90EUfC_AM8Qe5g8vDDI07_E;
+
+    invoke-direct {v3, v1}, Lcom/android/server/wm/-$$Lambda$DisplayContent$-xtu90EUfC_AM8Qe5g8vDDI07_E;-><init>(Landroid/os/IBinder;)V
+
+    invoke-virtual {v2, v3}, Lcom/android/server/wm/WindowManagerService$H;->post(Ljava/lang/Runnable;)Z
+
+    return-void
 .end method
 
 .method updateLocation(Lcom/android/server/wm/WindowState;II)V

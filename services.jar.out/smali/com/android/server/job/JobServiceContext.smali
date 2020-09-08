@@ -753,7 +753,7 @@
 
     invoke-static {v3, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-string v0, "invalid timeout"
+    const-string/jumbo v0, "invalid timeout"
 
     invoke-direct {p0, v2, v0}, Lcom/android/server/job/JobServiceContext;->closeAndCleanupJobLocked(ZLjava/lang/String;)V
 

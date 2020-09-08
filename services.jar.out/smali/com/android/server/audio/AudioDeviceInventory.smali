@@ -1208,7 +1208,7 @@
 
     const/4 v4, 0x0
 
-    const/16 v6, 0x94
+    const/16 v6, 0x8d
 
     aput v6, v1, v4
 
@@ -1378,7 +1378,7 @@
 
     new-array v2, v1, [I
 
-    const/16 v3, 0x94
+    const/16 v3, 0x8d
 
     const/4 v4, 0x0
 
@@ -2035,7 +2035,7 @@
 
     move-result-wide v1
 
-    const/4 v6, -0x2
+    const/4 v6, -0x1
 
     :try_start_0
     invoke-static {v0, v6}, Landroid/app/ActivityManager;->broadcastStickyIntent(Landroid/content/Intent;I)V
@@ -2048,7 +2048,7 @@
 
     new-array v6, v8, [I
 
-    const/16 v7, 0x94
+    const/16 v7, 0x8d
 
     aput v7, v6, v5
 
@@ -3476,7 +3476,7 @@
     :try_start_3
     const-string v0, "AS.AudioDeviceInventory"
 
-    const-string v1, "invalid null DeviceInfo in onBluetoothA2dpActiveDeviceChange"
+    const-string/jumbo v1, "invalid null DeviceInfo in onBluetoothA2dpActiveDeviceChange"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -3651,7 +3651,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x94
+    const/16 v2, 0x8d
 
     const/4 v3, 0x0
 
@@ -5135,13 +5135,13 @@
 
     const-string v1, "AS.AudioDeviceInventory"
 
-    const-string v2, "invalid null DeviceInfo in onToggleHdmi"
+    const-string/jumbo v2, "invalid null DeviceInfo in onToggleHdmi"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     sget-object v1, Landroid/media/MediaMetrics$Property;->EARLY_RETURN:Landroid/media/MediaMetrics$Key;
 
-    const-string v2, "invalid null DeviceInfo"
+    const-string/jumbo v2, "invalid null DeviceInfo"
 
     invoke-virtual {v7, v1, v2}, Landroid/media/MediaMetrics$Item;->set(Landroid/media/MediaMetrics$Key;Ljava/lang/Object;)Landroid/media/MediaMetrics$Item;
 
@@ -5258,7 +5258,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "invalid profile "
+    const-string/jumbo v2, "invalid profile "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5338,7 +5338,7 @@
     :cond_4
     const-string v0, "AS.AudioDeviceInventory"
 
-    const-string v5, "invalid null DeviceInfo in setBluetoothA2dpDeviceConnectionState"
+    const-string/jumbo v5, "invalid null DeviceInfo in setBluetoothA2dpDeviceConnectionState"
 
     invoke-static {v0, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 

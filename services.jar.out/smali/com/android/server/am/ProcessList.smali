@@ -3639,107 +3639,107 @@
 
     move-result v0
 
-    const/4 v3, 0x1
+    const/4 v10, 0x1
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v2, v3}, Lcom/android/server/am/ProcessRecord;->setHasForegroundActivities(Z)V
+    invoke-virtual {v2, v10}, Lcom/android/server/am/ProcessRecord;->setHasForegroundActivities(Z)V
 
     :cond_0
-    const/4 v4, 0x0
+    const/4 v3, 0x0
 
-    iget-boolean v5, v1, Lcom/android/server/am/ProcessList;->mAppDataIsolationEnabled:Z
+    iget-boolean v4, v1, Lcom/android/server/am/ProcessList;->mAppDataIsolationEnabled:Z
 
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
-    if-eqz v5, :cond_2
+    if-eqz v4, :cond_2
 
-    iget v5, v2, Lcom/android/server/am/ProcessRecord;->uid:I
+    iget v4, v2, Lcom/android/server/am/ProcessRecord;->uid:I
 
-    invoke-static {v5}, Landroid/os/UserHandle;->isApp(I)Z
+    invoke-static {v4}, Landroid/os/UserHandle;->isApp(I)Z
 
-    move-result v5
+    move-result v4
 
-    if-nez v5, :cond_1
+    if-nez v4, :cond_1
 
-    iget v5, v2, Lcom/android/server/am/ProcessRecord;->uid:I
+    iget v4, v2, Lcom/android/server/am/ProcessRecord;->uid:I
 
-    invoke-static {v5}, Landroid/os/UserHandle;->isIsolated(I)Z
+    invoke-static {v4}, Landroid/os/UserHandle;->isIsolated(I)Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_2
+    if-eqz v4, :cond_2
 
     :cond_1
-    iget-object v5, v1, Lcom/android/server/am/ProcessList;->mPlatformCompat:Lcom/android/server/compat/PlatformCompat;
+    iget-object v4, v1, Lcom/android/server/am/ProcessList;->mPlatformCompat:Lcom/android/server/compat/PlatformCompat;
 
-    const-wide/32 v7, 0x89450c5
+    const-wide/32 v6, 0x89450c5
 
-    iget-object v9, v2, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
+    iget-object v8, v2, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
-    invoke-virtual {v5, v7, v8, v9}, Lcom/android/server/compat/PlatformCompat;->isChangeEnabled(JLandroid/content/pm/ApplicationInfo;)Z
+    invoke-virtual {v4, v6, v7, v8}, Lcom/android/server/compat/PlatformCompat;->isChangeEnabled(JLandroid/content/pm/ApplicationInfo;)Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_2
+    if-eqz v4, :cond_2
 
-    move v5, v3
+    move v4, v10
 
     goto :goto_0
 
     :cond_2
-    move v5, v6
+    move v4, v5
 
     :goto_0
-    iget-object v7, v1, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;
+    iget-object v6, v1, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;
 
-    invoke-virtual {v7}, Lcom/android/server/am/ActivityManagerService;->getPackageManagerInternalLocked()Landroid/content/pm/PackageManagerInternal;
+    invoke-virtual {v6}, Lcom/android/server/am/ActivityManagerService;->getPackageManagerInternalLocked()Landroid/content/pm/PackageManagerInternal;
 
-    move-result-object v7
+    move-result-object v6
 
-    move-object v10, v7
+    move-object v9, v6
+
+    iget-object v6, v2, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
+
+    iget-object v6, v6, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    iget v7, v2, Lcom/android/server/am/ProcessRecord;->userId:I
+
+    invoke-virtual {v9, v6, v7}, Landroid/content/pm/PackageManagerInternal;->getSharedUserPackagesForPackage(Ljava/lang/String;I)[Ljava/lang/String;
+
+    move-result-object v6
+
+    move-object v8, v6
+
+    array-length v6, v8
+
+    if-nez v6, :cond_3
+
+    new-array v6, v10, [Ljava/lang/String;
 
     iget-object v7, v2, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
     iget-object v7, v7, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    iget v8, v2, Lcom/android/server/am/ProcessRecord;->userId:I
-
-    invoke-virtual {v10, v7, v8}, Landroid/content/pm/PackageManagerInternal;->getSharedUserPackagesForPackage(Ljava/lang/String;I)[Ljava/lang/String;
-
-    move-result-object v7
-
-    move-object v9, v7
-
-    array-length v7, v9
-
-    if-nez v7, :cond_3
-
-    new-array v7, v3, [Ljava/lang/String;
-
-    iget-object v8, v2, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
-
-    iget-object v8, v8, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
-
-    aput-object v8, v7, v6
+    aput-object v7, v6, v5
 
     goto :goto_1
 
     :cond_3
-    move-object v7, v9
+    move-object v6, v8
 
     :goto_1
-    move-object v8, v7
+    move-object v7, v6
 
-    invoke-direct {v1, v10, v8, v15}, Lcom/android/server/am/ProcessList;->getPackageAppDataInfoMap(Landroid/content/pm/PackageManagerInternal;[Ljava/lang/String;I)Ljava/util/Map;
+    invoke-direct {v1, v9, v7, v15}, Lcom/android/server/am/ProcessList;->getPackageAppDataInfoMap(Landroid/content/pm/PackageManagerInternal;[Ljava/lang/String;I)Ljava/util/Map;
 
-    move-result-object v7
+    move-result-object v6
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_4
+    .catchall {:try_start_0 .. :try_end_0} :catchall_5
 
-    if-nez v7, :cond_4
+    if-nez v6, :cond_4
 
-    const/4 v5, 0x0
+    const/4 v4, 0x0
 
     :cond_4
     :try_start_1
@@ -3751,91 +3751,91 @@
 
     move-object v12, v11
 
-    array-length v11, v8
+    array-length v11, v7
 
-    move v3, v6
+    move v10, v5
 
     :goto_2
-    if-ge v3, v11, :cond_5
+    if-ge v10, v11, :cond_5
 
-    aget-object v19, v8, v3
+    aget-object v19, v7, v10
 
     move-object/from16 v20, v19
 
-    move-object/from16 v6, v20
+    move-object/from16 v5, v20
 
-    invoke-interface {v12, v6}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+    invoke-interface {v12, v5}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
     nop
 
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v10, v10, 0x1
 
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
     goto :goto_2
 
     :cond_5
-    const/4 v3, 0x0
-
-    new-array v6, v3, [Ljava/lang/String;
-
-    invoke-interface {v12, v6}, Ljava/util/Set;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, [Ljava/lang/String;
-
-    invoke-direct {v1, v10, v3, v15}, Lcom/android/server/am/ProcessList;->getPackageAppDataInfoMap(Landroid/content/pm/PackageManagerInternal;[Ljava/lang/String;I)Ljava/util/Map;
-
-    move-result-object v3
-
-    if-nez v3, :cond_6
-
     const/4 v5, 0x0
 
-    move/from16 v26, v5
+    new-array v10, v5, [Ljava/lang/String;
+
+    invoke-interface {v12, v10}, Ljava/util/Set;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, [Ljava/lang/String;
+
+    invoke-direct {v1, v9, v5, v15}, Lcom/android/server/am/ProcessList;->getPackageAppDataInfoMap(Landroid/content/pm/PackageManagerInternal;[Ljava/lang/String;I)Ljava/util/Map;
+
+    move-result-object v5
+
+    if-nez v5, :cond_6
+
+    const/4 v4, 0x0
+
+    move/from16 v26, v4
 
     goto :goto_3
 
     :cond_6
-    move/from16 v26, v5
+    move/from16 v26, v4
 
     :goto_3
     invoke-static/range {p4 .. p4}, Landroid/os/UserHandle;->getUserId(I)I
 
-    move-result v5
+    move-result v4
 
-    move v11, v5
+    move v11, v4
 
-    const-class v5, Landroid/os/storage/StorageManagerInternal;
+    const-class v4, Landroid/os/storage/StorageManagerInternal;
 
-    invoke-static {v5}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {v4}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
-    move-result-object v5
+    move-result-object v4
 
-    check-cast v5, Landroid/os/storage/StorageManagerInternal;
+    check-cast v4, Landroid/os/storage/StorageManagerInternal;
 
-    move-object v6, v5
+    move-object v10, v4
 
-    invoke-direct {v1, v6, v2}, Lcom/android/server/am/ProcessList;->needsStorageDataIsolation(Landroid/os/storage/StorageManagerInternal;Lcom/android/server/am/ProcessRecord;)Z
+    invoke-direct {v1, v10, v2}, Lcom/android/server/am/ProcessList;->needsStorageDataIsolation(Landroid/os/storage/StorageManagerInternal;Lcom/android/server/am/ProcessRecord;)Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_9
+    if-eqz v4, :cond_9
 
-    const/4 v4, 0x1
+    const/4 v3, 0x1
 
-    if-eqz v7, :cond_8
+    if-eqz v6, :cond_8
 
-    invoke-interface {v7}, Ljava/util/Map;->keySet()Ljava/util/Set;
+    invoke-interface {v6}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
-    move-result-object v5
+    move-result-object v4
 
-    move-object/from16 v20, v3
+    move/from16 v20, v3
 
     iget-object v3, v2, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
-    invoke-virtual {v6, v11, v5, v3}, Landroid/os/storage/StorageManagerInternal;->prepareStorageDirs(ILjava/util/Set;Ljava/lang/String;)Z
+    invoke-virtual {v10, v11, v4, v3}, Landroid/os/storage/StorageManagerInternal;->prepareStorageDirs(ILjava/util/Set;Ljava/lang/String;)Z
 
     move-result v3
 
@@ -3844,55 +3844,53 @@
     goto :goto_4
 
     :cond_7
-    move/from16 v27, v4
+    move/from16 v27, v20
 
     goto :goto_5
 
     :cond_8
-    move-object/from16 v20, v3
+    move/from16 v20, v3
 
     :goto_4
     const/4 v3, 0x1
 
     iput-boolean v3, v2, Lcom/android/server/am/ProcessRecord;->bindMountPending:Z
 
-    const/4 v4, 0x0
+    const/4 v3, 0x0
 
-    move/from16 v27, v4
+    move/from16 v27, v3
 
     goto :goto_5
 
     :cond_9
-    move-object/from16 v20, v3
-
-    move/from16 v27, v4
+    move/from16 v27, v3
 
     :goto_5
     iget-boolean v3, v2, Lcom/android/server/am/ProcessRecord;->isolated:Z
 
     if-eqz v3, :cond_a
 
-    const/4 v7, 0x0
+    const/4 v6, 0x0
 
-    const/4 v3, 0x0
+    const/4 v5, 0x0
 
-    move-object/from16 v28, v3
+    move-object/from16 v28, v5
 
-    move-object/from16 v29, v7
+    move-object/from16 v29, v6
 
     goto :goto_6
 
     :cond_a
-    move-object/from16 v29, v7
+    move-object/from16 v28, v5
 
-    move-object/from16 v28, v20
+    move-object/from16 v29, v6
 
     :goto_6
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/am/HostingRecord;->usesWebviewZygote()Z
 
     move-result v3
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_3
+    .catchall {:try_start_1 .. :try_end_1} :catchall_4
 
     const-string/jumbo v4, "seq="
 
@@ -3903,7 +3901,7 @@
 
     iget-object v3, v2, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
-    iget v7, v3, Landroid/content/pm/ApplicationInfo;->targetSdkVersion:I
+    iget v6, v3, Landroid/content/pm/ApplicationInfo;->targetSdkVersion:I
 
     iget-object v3, v2, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
@@ -3919,43 +3917,39 @@
 
     iget-object v15, v2, Lcom/android/server/am/ProcessRecord;->mDisabledCompatChanges:[J
 
-    move-object/from16 v22, v3
+    move-object/from16 v22, v10
 
-    const/4 v3, 0x1
+    move-object/from16 v18, v15
 
-    new-array v3, v3, [Ljava/lang/String;
+    const/4 v10, 0x1
 
-    move-object/from16 v18, v6
+    new-array v15, v10, [Ljava/lang/String;
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    new-instance v10, Ljava/lang/StringBuilder;
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v10, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move/from16 v24, v7
+    move-object/from16 v24, v3
 
-    move-object/from16 v23, v8
+    iget-wide v3, v2, Lcom/android/server/am/ProcessRecord;->startSeq:J
 
-    iget-wide v7, v2, Lcom/android/server/am/ProcessRecord;->startSeq:J
+    invoke-virtual {v10, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v3
 
-    move-result-object v4
+    const/4 v4, 0x0
 
-    const/4 v6, 0x0
-
-    aput-object v4, v3, v6
+    aput-object v3, v15, v4
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     move-object/from16 v19, v21
 
-    move-object/from16 v21, v22
-
-    move-object/from16 v22, v3
+    move-object/from16 v21, v24
 
     move-object/from16 v3, p2
 
@@ -3963,15 +3957,15 @@
 
     move/from16 v5, p4
 
-    move-object/from16 v30, v18
+    move v10, v6
 
     move/from16 v6, p4
 
-    move/from16 v18, v24
+    move-object/from16 v30, v7
 
     move-object/from16 v7, p5
 
-    move-object/from16 v31, v23
+    move-object/from16 v31, v8
 
     move/from16 v8, p6
 
@@ -3979,9 +3973,7 @@
 
     move/from16 v9, p8
 
-    move-object/from16 v33, v10
-
-    move/from16 v10, v18
+    move-object/from16 v33, v22
 
     move/from16 v34, v11
 
@@ -3997,18 +3989,20 @@
 
     move-object/from16 v14, v19
 
-    move-object/from16 v17, v15
+    move-object/from16 v17, v18
+
+    move-object/from16 v18, v15
 
     move-object/from16 v15, v20
 
     move-object/from16 v16, v21
 
-    move-object/from16 v18, v22
-
     :try_start_3
     invoke-static/range {v3 .. v18}, Landroid/os/Process;->startWebView(Ljava/lang/String;Ljava/lang/String;II[IIIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[J[Ljava/lang/String;)Landroid/os/Process$ProcessStartResult;
 
     move-result-object v3
+
+    const/4 v1, 0x1
 
     goto/16 :goto_7
 
@@ -4020,7 +4014,7 @@
     goto/16 :goto_8
 
     :cond_b
-    move-object/from16 v30, v6
+    move-object/from16 v30, v7
 
     move-object/from16 v31, v8
 
@@ -4037,9 +4031,12 @@
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/am/HostingRecord;->usesAppZygote()Z
 
     move-result v3
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_3
 
     if-eqz v3, :cond_c
 
+    :try_start_4
     invoke-direct {v1, v2}, Lcom/android/server/am/ProcessList;->createAppZygoteForProcessIfNeeded(Lcom/android/server/am/ProcessRecord;)Landroid/os/AppZygote;
 
     move-result-object v3
@@ -4066,7 +4063,7 @@
 
     iget-object v14, v6, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    const/16 v20, 0x0
+    const/16 v18, 0x0
 
     iget-object v13, v2, Lcom/android/server/am/ProcessRecord;->mDisabledCompatChanges:[J
 
@@ -4074,9 +4071,9 @@
 
     const/16 v24, 0x0
 
-    const/4 v6, 0x1
+    const/4 v12, 0x1
 
-    new-array v12, v6, [Ljava/lang/String;
+    new-array v10, v12, [Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -4094,7 +4091,7 @@
 
     const/4 v6, 0x0
 
-    aput-object v4, v12, v6
+    aput-object v4, v10, v6
 
     move-object/from16 v4, p2
 
@@ -4106,13 +4103,15 @@
 
     move/from16 v9, p6
 
+    move-object/from16 v25, v10
+
     move/from16 v10, p8
 
-    move-object/from16 v25, v12
+    move v1, v12
 
     move-object/from16 v12, p9
 
-    move-object/from16 v21, v13
+    move-object/from16 v20, v13
 
     move-object/from16 v13, p10
 
@@ -4120,11 +4119,7 @@
 
     move-object/from16 v14, p11
 
-    move/from16 v18, v20
-
     move/from16 v19, v0
-
-    move-object/from16 v20, v21
 
     move-object/from16 v21, v29
 
@@ -4137,6 +4132,8 @@
     goto :goto_7
 
     :cond_c
+    const/4 v1, 0x1
+
     iget-object v5, v2, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
     iget-object v3, v2, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
@@ -4153,9 +4150,7 @@
 
     iget-object v13, v2, Lcom/android/server/am/ProcessRecord;->mDisabledCompatChanges:[J
 
-    const/4 v3, 0x1
-
-    new-array v12, v3, [Ljava/lang/String;
+    new-array v12, v1, [Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -4261,29 +4256,33 @@
     invoke-static {v4, v5, v6}, Lcom/oneplus/uifirst/UIFirstUtils;->setUxThread(IILjava/lang/String;)V
 
     :cond_d
-    sget-object v4, Lcom/android/server/am/ProcessList;->mPerfServiceStartHint:Landroid/util/BoostFramework;
+    invoke-virtual {v2, v1}, Lcom/android/server/am/ProcessRecord;->setHasTopUi(Z)V
 
-    const/16 v5, 0x1081
+    sget-object v1, Lcom/android/server/am/ProcessList;->mPerfServiceStartHint:Landroid/util/BoostFramework;
 
-    iget-object v6, v2, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
+    const/16 v4, 0x1081
 
-    iget v7, v3, Landroid/os/Process$ProcessStartResult;->pid:I
+    iget-object v5, v2, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
-    const/16 v8, 0x65
+    iget v6, v3, Landroid/os/Process$ProcessStartResult;->pid:I
 
-    invoke-virtual {v4, v5, v6, v7, v8}, Landroid/util/BoostFramework;->perfHint(ILjava/lang/String;II)I
+    const/16 v7, 0x65
+
+    invoke-virtual {v1, v4, v5, v6, v7}, Landroid/util/BoostFramework;->perfHint(ILjava/lang/String;II)I
 
     :cond_e
-    const-string/jumbo v4, "startProcess: returned from zygote!"
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_2
+    const-string/jumbo v1, "startProcess: returned from zygote!"
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+
+    move-object/from16 v4, p0
 
     move-wide/from16 v5, p13
 
-    :try_start_4
-    invoke-direct {v1, v5, v6, v4}, Lcom/android/server/am/ProcessList;->checkSlow(JLjava/lang/String;)V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+    :try_start_5
+    invoke-direct {v4, v5, v6, v1}, Lcom/android/server/am/ProcessList;->checkSlow(JLjava/lang/String;)V
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
     nop
 
@@ -4299,7 +4298,8 @@
     :catchall_2
     move-exception v0
 
-    :goto_8
+    move-object/from16 v4, p0
+
     move-wide/from16 v5, p13
 
     goto :goto_9
@@ -4307,14 +4307,28 @@
     :catchall_3
     move-exception v0
 
+    :goto_8
+    move-wide/from16 v5, p13
+
+    move-object v4, v1
+
+    goto :goto_9
+
+    :catchall_4
+    move-exception v0
+
+    move-object v4, v1
+
     move-wide v5, v13
 
     const-wide/16 v35, 0x40
 
     goto :goto_9
 
-    :catchall_4
+    :catchall_5
     move-exception v0
+
+    move-object v4, v1
 
     move-wide/from16 v35, v11
 
@@ -5197,7 +5211,7 @@
 
     move-result-object v6
 
-    const v7, 0x10e0072
+    const v7, 0x10e0078
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -5207,7 +5221,7 @@
 
     move-result-object v7
 
-    const v8, 0x10e0071
+    const v8, 0x10e0077
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -5415,7 +5429,7 @@
 
     move-result-object v11
 
-    const v12, 0x10e005e
+    const v12, 0x10e0064
 
     invoke-virtual {v11, v12}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -5425,7 +5439,7 @@
 
     move-result-object v12
 
-    const v13, 0x10e005d
+    const v13, 0x10e0063
 
     invoke-virtual {v12, v13}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -7491,7 +7505,7 @@
 
     new-array v0, v15, [I
 
-    const/16 v3, 0x4b
+    const/16 v3, 0x49
 
     aput v3, v0, v14
 
@@ -7503,7 +7517,7 @@
 
     new-array v0, v15, [I
 
-    const/16 v3, 0xbf
+    const/16 v3, 0xb7
 
     aput v3, v0, v14
 

@@ -1140,11 +1140,9 @@
     return-object v0
 
     :pswitch_10
-    const-string v0, "intercepted"
+    const-string/jumbo v0, "intercepted"
 
     return-object v0
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x1

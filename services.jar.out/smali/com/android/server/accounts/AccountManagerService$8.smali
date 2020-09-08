@@ -295,7 +295,7 @@
 
     if-nez v4, :cond_7
 
-    const-string v4, "invalid intent in bundle returned"
+    const-string/jumbo v4, "invalid intent in bundle returned"
 
     invoke-virtual {v0, v13, v4}, Lcom/android/server/accounts/AccountManagerService$8;->onError(ILjava/lang/String;)V
 

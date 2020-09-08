@@ -1562,11 +1562,11 @@
 
     move-result v0
 
-    const-string v10, "PackageDexOptimizer"
+    const/4 v10, -0x1
 
-    const/4 v9, -0x1
+    const-string v9, "PackageDexOptimizer"
 
-    if-ne v0, v9, :cond_1
+    if-ne v0, v10, :cond_1
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1600,7 +1600,7 @@
 
     invoke-direct {v2}, Ljava/lang/Throwable;-><init>()V
 
-    invoke-static {v10, v1, v2}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v9, v1, v2}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/16 v0, 0x270f
 
@@ -1740,18 +1740,20 @@
 
     move-result v0
 
-    if-ge v3, v0, :cond_13
+    if-ge v3, v0, :cond_12
 
     aget-boolean v0, v6, v3
 
     if-nez v0, :cond_6
 
-    goto :goto_6
+    move-object/from16 v18, v13
+
+    goto :goto_8
 
     :cond_6
     aget-object v0, v4, v3
 
-    if-eqz v0, :cond_12
+    if-eqz v0, :cond_11
 
     invoke-interface {v11, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1785,35 +1787,16 @@
 
     if-nez v0, :cond_7
 
-    nop
+    move-object/from16 v18, v13
 
-    :goto_6
-    move/from16 v31, v3
-
-    move-object/from16 v32, v4
-
-    move-object/from16 v19, v6
-
-    move/from16 v33, v8
-
-    move v3, v9
-
-    move-object/from16 v26, v10
-
-    move-object/from16 v34, v11
-
-    move-object/from16 v35, v12
-
-    move-object/from16 v23, v13
-
-    goto/16 :goto_11
+    goto :goto_8
 
     :cond_7
     if-nez v3, :cond_8
 
     const/4 v0, 0x0
 
-    goto :goto_7
+    goto :goto_6
 
     :cond_8
     invoke-interface/range {p1 .. p1}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getSplitNames()[Ljava/lang/String;
@@ -1824,91 +1807,85 @@
 
     aget-object v0, v0, v18
 
-    :goto_7
+    :goto_6
+    move-object/from16 v18, v13
+
     invoke-static {v0}, Landroid/content/pm/dex/ArtManager;->getProfileName(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v9
+    move-result-object v13
 
-    invoke-virtual/range {p6 .. p6}, Lcom/android/server/pm/dex/DexoptOptions;->getCompilationReason()I
+    invoke-virtual/range {p6 .. p6}, Lcom/android/server/pm/dex/DexoptOptions;->isCheckForProfileSize()Z
 
     move-result v0
 
-    const/4 v5, -0x1
+    if-eqz v0, :cond_9
 
-    if-ne v0, v5, :cond_a
-
-    const/4 v5, 0x0
+    const/16 v19, 0x0
 
     :try_start_0
     iget-object v0, v15, Lcom/android/server/pm/PackageDexOptimizer;->mInstaller:Lcom/android/server/pm/Installer;
 
     invoke-interface/range {p1 .. p1}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getUid()I
 
-    move-result v7
-    :try_end_0
-    .catch Lcom/android/server/pm/Installer$InstallerException; {:try_start_0 .. :try_end_0} :catch_1
+    move-result v5
 
-    move/from16 v21, v5
-
-    :try_start_1
     invoke-interface/range {p1 .. p1}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v7
 
-    invoke-virtual {v0, v7, v5, v9}, Lcom/android/server/pm/Installer;->checkProfileSize(ILjava/lang/String;Ljava/lang/String;)Z
+    invoke-virtual {v0, v5, v7, v13}, Lcom/android/server/pm/Installer;->checkProfileSize(ILjava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
-    :try_end_1
-    .catch Lcom/android/server/pm/Installer$InstallerException; {:try_start_1 .. :try_end_1} :catch_0
+    :try_end_0
+    .catch Lcom/android/server/pm/Installer$InstallerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    move v5, v0
+    move/from16 v19, v0
 
-    goto :goto_9
+    goto :goto_7
 
     :catch_0
     move-exception v0
 
-    goto :goto_8
-
-    :catch_1
-    move-exception v0
-
-    move/from16 v21, v5
-
-    :goto_8
     const-string v5, "Failed call checkProfileSize "
 
-    invoke-static {v10, v5, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v9, v5, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    move/from16 v5, v21
-
-    :goto_9
-    if-nez v5, :cond_9
+    :goto_7
+    if-nez v19, :cond_9
 
     const-string/jumbo v0, "profile size is too small, do nothing."
 
-    invoke-static {v10, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v9, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    const/16 v18, -0x1
+    nop
 
-    return v18
+    :goto_8
+    move/from16 v31, v3
+
+    move-object/from16 v32, v4
+
+    move-object/from16 v20, v6
+
+    move/from16 v33, v8
+
+    move-object/from16 v26, v9
+
+    move v3, v10
+
+    move-object/from16 v34, v11
+
+    move-object/from16 v35, v12
+
+    goto/16 :goto_f
 
     :cond_9
-    const/16 v18, -0x1
-
-    goto :goto_a
-
-    :cond_a
-    move/from16 v18, v5
-
-    :goto_a
     const/4 v0, 0x0
 
     invoke-virtual/range {p6 .. p6}, Lcom/android/server/pm/dex/DexoptOptions;->isDexoptInstallWithDexMetadata()Z
 
     move-result v5
 
-    if-eqz v5, :cond_c
+    if-eqz v5, :cond_b
 
     new-instance v5, Ljava/io/File;
 
@@ -1918,26 +1895,26 @@
 
     move-result-object v5
 
-    if-nez v5, :cond_b
+    if-nez v5, :cond_a
 
     const/4 v7, 0x0
 
-    goto :goto_b
+    goto :goto_9
 
-    :cond_b
+    :cond_a
     invoke-virtual {v5}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v7
 
-    :goto_b
+    :goto_9
     move-object v0, v7
 
-    :cond_c
+    :cond_b
     invoke-virtual/range {p6 .. p6}, Lcom/android/server/pm/dex/DexoptOptions;->isDexoptAsSharedLibrary()Z
 
     move-result v5
 
-    if-nez v5, :cond_e
+    if-nez v5, :cond_d
 
     move-object/from16 v5, p5
 
@@ -1945,54 +1922,52 @@
 
     move-result v7
 
-    if-eqz v7, :cond_d
+    if-eqz v7, :cond_c
 
-    goto :goto_c
+    goto :goto_a
 
-    :cond_d
+    :cond_c
     move/from16 v7, v17
 
-    goto :goto_d
+    goto :goto_b
 
-    :cond_e
+    :cond_d
     move-object/from16 v5, p5
 
-    :goto_c
+    :goto_a
     const/4 v7, 0x1
 
-    :goto_d
+    :goto_b
     nop
-
-    move-object/from16 v20, v2
 
     invoke-virtual/range {p6 .. p6}, Lcom/android/server/pm/dex/DexoptOptions;->getCompilerFilter()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v10
 
-    invoke-direct {v15, v14, v2, v7}, Lcom/android/server/pm/PackageDexOptimizer;->getRealCompilerFilter(Lcom/android/server/pm/parsing/pkg/AndroidPackage;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-direct {v15, v14, v10, v7}, Lcom/android/server/pm/PackageDexOptimizer;->getRealCompilerFilter(Lcom/android/server/pm/parsing/pkg/AndroidPackage;Ljava/lang/String;Z)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v10
 
     invoke-virtual/range {p6 .. p6}, Lcom/android/server/pm/dex/DexoptOptions;->isCheckForProfileUpdates()Z
 
     move-result v21
 
-    if-eqz v21, :cond_f
+    if-eqz v21, :cond_e
 
-    invoke-direct {v15, v14, v8, v9, v2}, Lcom/android/server/pm/PackageDexOptimizer;->isProfileUpdated(Lcom/android/server/pm/parsing/pkg/AndroidPackage;ILjava/lang/String;Ljava/lang/String;)Z
+    invoke-direct {v15, v14, v8, v13, v10}, Lcom/android/server/pm/PackageDexOptimizer;->isProfileUpdated(Lcom/android/server/pm/parsing/pkg/AndroidPackage;ILjava/lang/String;Ljava/lang/String;)Z
 
     move-result v21
 
-    if-eqz v21, :cond_f
+    if-eqz v21, :cond_e
 
     const/16 v21, 0x1
 
-    goto :goto_e
+    goto :goto_c
 
-    :cond_f
+    :cond_e
     move/from16 v21, v17
 
-    :goto_e
+    :goto_c
     move/from16 v22, v7
 
     move/from16 v7, v21
@@ -2003,7 +1978,7 @@
 
     move-object/from16 v13, p6
 
-    invoke-direct {v15, v14, v7, v2, v13}, Lcom/android/server/pm/PackageDexOptimizer;->getDexFlags(Lcom/android/server/pm/parsing/pkg/AndroidPackage;Lcom/android/server/pm/PackageSetting;Ljava/lang/String;Lcom/android/server/pm/dex/DexoptOptions;)I
+    invoke-direct {v15, v14, v7, v10, v13}, Lcom/android/server/pm/PackageDexOptimizer;->getDexFlags(Lcom/android/server/pm/parsing/pkg/AndroidPackage;Lcom/android/server/pm/PackageSetting;Ljava/lang/String;Lcom/android/server/pm/dex/DexoptOptions;)I
 
     move-result v24
 
@@ -2011,8 +1986,8 @@
 
     move/from16 v15, v17
 
-    :goto_f
-    if-ge v15, v7, :cond_11
+    :goto_d
+    if-ge v15, v7, :cond_10
 
     aget-object v25, v12, v15
 
@@ -2040,23 +2015,23 @@
 
     move-object/from16 v32, v4
 
-    move-object/from16 v4, v20
+    move-object/from16 v4, v30
 
     move-object/from16 v5, v25
 
-    move-object/from16 v19, v6
+    move-object/from16 v20, v6
 
-    move-object/from16 v6, v30
+    move-object v6, v10
 
     move/from16 v33, v8
 
     move-object/from16 v8, v26
 
-    move-object/from16 v18, v9
+    move-object/from16 v26, v9
 
     move/from16 v9, v24
 
-    move-object/from16 v26, v10
+    move-object/from16 v19, v10
 
     move/from16 v10, v33
 
@@ -2068,7 +2043,7 @@
 
     move/from16 v12, v27
 
-    move-object/from16 v13, v18
+    move-object/from16 v13, v23
 
     move-object v14, v0
 
@@ -2090,18 +2065,18 @@
 
     const/4 v3, -0x1
 
-    if-eq v2, v3, :cond_10
+    if-eq v2, v3, :cond_f
 
-    if-eqz v1, :cond_10
+    if-eqz v1, :cond_f
 
     move v2, v1
 
-    goto :goto_10
+    goto :goto_e
 
-    :cond_10
+    :cond_f
     move v1, v2
 
-    :goto_10
+    :goto_e
     add-int/lit8 v15, v27, 0x1
 
     move-object/from16 v14, p1
@@ -2110,13 +2085,15 @@
 
     move-object/from16 v13, p6
 
-    move-object/from16 v9, v18
+    move-object/from16 v10, v19
 
-    move-object/from16 v6, v19
+    move-object/from16 v6, v20
 
-    move-object/from16 v10, v26
+    move-object/from16 v9, v26
 
     move-object/from16 v2, v30
+
+    move/from16 v3, v31
 
     move-object/from16 v4, v32
 
@@ -2126,44 +2103,40 @@
 
     move-object/from16 v12, v35
 
-    move/from16 v18, v3
-
-    move/from16 v3, v31
-
     move/from16 v36, v21
 
     move/from16 v21, v7
 
     move/from16 v7, v36
 
-    goto :goto_f
+    goto :goto_d
 
-    :cond_11
+    :cond_10
     move-object/from16 v30, v2
 
     move/from16 v31, v3
 
     move-object/from16 v32, v4
 
-    move-object/from16 v19, v6
+    move-object/from16 v20, v6
 
     move/from16 v33, v8
 
-    move-object/from16 v26, v10
+    move-object/from16 v26, v9
+
+    move-object/from16 v19, v10
 
     move-object/from16 v34, v11
 
     move-object/from16 v35, v12
 
-    move/from16 v3, v18
-
     move/from16 v7, v21
+
+    const/4 v3, -0x1
 
     move v2, v1
 
-    move-object/from16 v18, v9
-
-    :goto_11
+    :goto_f
     move/from16 v2, v31
 
     add-int/lit8 v0, v2, 0x1
@@ -2172,13 +2145,13 @@
 
     move-object/from16 v14, p1
 
-    move v9, v3
+    move v10, v3
 
-    move-object/from16 v6, v19
+    move-object/from16 v13, v18
 
-    move-object/from16 v13, v23
+    move-object/from16 v6, v20
 
-    move-object/from16 v10, v26
+    move-object/from16 v9, v26
 
     move-object/from16 v4, v32
 
@@ -2192,7 +2165,7 @@
 
     goto/16 :goto_5
 
-    :cond_12
+    :cond_11
     move v2, v3
 
     move-object/from16 v32, v4
@@ -2233,12 +2206,12 @@
 
     throw v0
 
-    :cond_13
+    :cond_12
     move v2, v3
 
     move-object/from16 v32, v4
 
-    move-object/from16 v19, v6
+    move-object/from16 v20, v6
 
     move/from16 v33, v8
 
@@ -2246,15 +2219,15 @@
 
     move-object/from16 v35, v12
 
-    move-object/from16 v23, v13
+    move-object/from16 v18, v13
 
     const/4 v2, 0x1
 
-    if-ne v1, v2, :cond_14
+    if-ne v1, v2, :cond_13
 
     sput-boolean v2, Lcom/android/server/pm/OpReserveAppInjector;->runningDexoptState:Z
 
-    :cond_14
+    :cond_13
     return v1
 .end method
 

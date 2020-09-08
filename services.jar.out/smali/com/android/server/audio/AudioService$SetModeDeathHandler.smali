@@ -22,6 +22,8 @@
 
 .field private mMode:I
 
+.field private mPackage:Ljava/lang/String;
+
 .field private mPackageName:Ljava/lang/String;
 
 .field private final mPid:I
@@ -32,7 +34,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/server/audio/AudioService;Landroid/os/IBinder;II)V
+.method constructor <init>(Lcom/android/server/audio/AudioService;Landroid/os/IBinder;IILjava/lang/String;)V
     .locals 0
 
     iput-object p1, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->this$0:Lcom/android/server/audio/AudioService;
@@ -52,6 +54,8 @@
     iput p3, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mPid:I
 
     iput p4, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mUid:I
+
+    iput-object p5, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mPackage:Ljava/lang/String;
 
     return-void
 .end method
@@ -171,6 +175,14 @@
     iget v0, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mMode:I
 
     return v0
+.end method
+
+.method public getPackage()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mPackage:Ljava/lang/String;
+
+    return-object v0
 .end method
 
 .method public getPackageName()Ljava/lang/String;

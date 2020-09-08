@@ -54,9 +54,9 @@
 
 .field private final mDownTime:[J
 
-.field private final mDownX:[F
+.field final mDownX:[F
 
-.field private final mDownY:[F
+.field final mDownY:[F
 
 .field private mGestureDetector:Landroid/view/GestureDetector;
 
@@ -65,6 +65,8 @@
 .field private mLastFlingTime:J
 
 .field private mMouseHoveringAtEdge:Z
+
+.field mOpSystemGestures:Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;
 
 .field private mScrollFired:Z
 
@@ -127,6 +129,17 @@
 
     invoke-virtual {p0}, Lcom/android/server/wm/SystemGesturesPointerEventListener;->onConfigurationChanged()V
 
+    sget-boolean v0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->OP_MOVE_DISTANCE_ENABLED:Z
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;
+
+    invoke-direct {v0, p1}, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mOpSystemGestures:Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;
+
+    :cond_0
     return-void
 .end method
 
@@ -185,7 +198,7 @@
 
     move-result v0
 
-    invoke-direct {p0, v0}, Lcom/android/server/wm/SystemGesturesPointerEventListener;->findIndex(I)I
+    invoke-virtual {p0, v0}, Lcom/android/server/wm/SystemGesturesPointerEventListener;->findIndex(I)I
 
     move-result v1
 
@@ -284,7 +297,7 @@
 
     const-wide/16 v5, 0x1f4
 
-    if-gtz v4, :cond_0
+    if-gtz v4, :cond_1
 
     iget v4, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mSwipeDistanceThreshold:I
 
@@ -294,24 +307,39 @@
 
     cmpl-float v4, p5, v4
 
-    if-lez v4, :cond_0
+    if-lez v4, :cond_1
 
     cmp-long v4, v2, v5
 
-    if-gez v4, :cond_0
+    if-gez v4, :cond_1
 
-    const/4 v4, 0x1
+    float-to-int v4, v0
+
+    float-to-int v5, v1
+
+    invoke-static {v4, v5}, Lcom/android/server/wm/OnePlusSceneManagerInjector;->gameModeShowToolBox(II)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    const/4 v4, -0x1
 
     return v4
 
     :cond_0
+    const/4 v4, 0x1
+
+    return v4
+
+    :cond_1
     iget v4, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mSwipeStartThreshold:I
 
     invoke-static {}, Lcom/android/server/policy/OpPhoneWindowManagerInjector;->isGestureButtonWithoutHideBarEnabled()Z
 
     move-result v7
 
-    if-eqz v7, :cond_1
+    if-eqz v7, :cond_2
 
     iget-object v7, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mContext:Landroid/content/Context;
 
@@ -325,7 +353,7 @@
 
     move-result v4
 
-    :cond_1
+    :cond_2
     iget v7, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->screenHeight:I
 
     sub-int/2addr v7, v4
@@ -334,7 +362,7 @@
 
     cmpl-float v7, v1, v7
 
-    if-ltz v7, :cond_2
+    if-ltz v7, :cond_3
 
     iget v7, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mSwipeDistanceThreshold:I
 
@@ -344,17 +372,17 @@
 
     cmpg-float v7, p5, v7
 
-    if-gez v7, :cond_2
+    if-gez v7, :cond_3
 
     cmp-long v7, v2, v5
 
-    if-gez v7, :cond_2
+    if-gez v7, :cond_3
 
     const/4 v5, 0x2
 
     return v5
 
-    :cond_2
+    :cond_3
     iget v7, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->screenWidth:I
 
     iget v8, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mSwipeStartThreshold:I
@@ -365,7 +393,7 @@
 
     cmpl-float v7, v0, v7
 
-    if-ltz v7, :cond_3
+    if-ltz v7, :cond_4
 
     iget v7, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mSwipeDistanceThreshold:I
 
@@ -375,24 +403,24 @@
 
     cmpg-float v7, p4, v7
 
-    if-gez v7, :cond_3
+    if-gez v7, :cond_4
 
     cmp-long v7, v2, v5
 
-    if-gez v7, :cond_3
+    if-gez v7, :cond_4
 
     const/4 v5, 0x3
 
     return v5
 
-    :cond_3
+    :cond_4
     iget v7, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mSwipeStartThreshold:I
 
     int-to-float v7, v7
 
     cmpg-float v7, v0, v7
 
-    if-gtz v7, :cond_4
+    if-gtz v7, :cond_5
 
     iget v7, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mSwipeDistanceThreshold:I
 
@@ -402,17 +430,17 @@
 
     cmpl-float v7, p4, v7
 
-    if-lez v7, :cond_4
+    if-lez v7, :cond_5
 
     cmp-long v5, v2, v5
 
-    if-gez v5, :cond_4
+    if-gez v5, :cond_5
 
     const/4 v5, 0x4
 
     return v5
 
-    :cond_4
+    :cond_5
     const/4 v5, 0x0
 
     return v5
@@ -442,7 +470,7 @@
 
     move-object/from16 v11, p0
 
-    invoke-direct {v11, v4}, Lcom/android/server/wm/SystemGesturesPointerEventListener;->findIndex(I)I
+    invoke-virtual {v11, v4}, Lcom/android/server/wm/SystemGesturesPointerEventListener;->findIndex(I)I
 
     move-result v12
 
@@ -530,7 +558,33 @@
     return v3
 .end method
 
-.method private findIndex(I)I
+
+# virtual methods
+.method protected currentGestureStartedInRegion(Landroid/graphics/Region;)Z
+    .locals 3
+
+    iget-object v0, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mDownX:[F
+
+    const/4 v1, 0x0
+
+    aget v0, v0, v1
+
+    float-to-int v0, v0
+
+    iget-object v2, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mDownY:[F
+
+    aget v1, v2, v1
+
+    float-to-int v1, v1
+
+    invoke-virtual {p1, v0, v1}, Landroid/graphics/Region;->contains(II)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method findIndex(I)I
     .locals 3
 
     const/4 v0, 0x0
@@ -580,32 +634,6 @@
     :cond_3
     :goto_1
     return v2
-.end method
-
-
-# virtual methods
-.method protected currentGestureStartedInRegion(Landroid/graphics/Region;)Z
-    .locals 3
-
-    iget-object v0, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mDownX:[F
-
-    const/4 v1, 0x0
-
-    aget v0, v0, v1
-
-    float-to-int v0, v0
-
-    iget-object v2, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mDownY:[F
-
-    aget v1, v2, v1
-
-    float-to-int v1, v1
-
-    invoke-virtual {p1, v0, v1}, Landroid/graphics/Region;->contains(II)Z
-
-    move-result v0
-
-    return v0
 .end method
 
 .method public synthetic lambda$systemReady$0$SystemGesturesPointerEventListener()V
@@ -1058,6 +1086,17 @@
 
     :cond_10
     :goto_2
+    sget-boolean v0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->OP_MOVE_DISTANCE_ENABLED:Z
+
+    if-eqz v0, :cond_11
+
+    iget-object v0, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mOpSystemGestures:Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;
+
+    if-eqz v0, :cond_11
+
+    invoke-virtual {v0, p0, p1}, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->recordSwipe(Lcom/android/server/wm/SystemGesturesPointerEventListener;Landroid/view/MotionEvent;)V
+
+    :cond_11
     return-void
 .end method
 

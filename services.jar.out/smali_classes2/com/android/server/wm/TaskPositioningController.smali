@@ -613,7 +613,7 @@
 
     if-eq v0, p1, :cond_0
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/TaskPositioningController;->mService:Lcom/android/server/wm/WindowManagerService;
@@ -645,6 +645,12 @@
     const-string v2, "Drag and Drop Input Consumer"
 
     invoke-virtual {v1, v2}, Landroid/view/SurfaceControl$Builder;->setName(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
+
+    move-result-object v1
+
+    const-string v2, "TaskPositioningController.showInputSurface"
+
+    invoke-virtual {v1, v2}, Landroid/view/SurfaceControl$Builder;->setCallsite(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
 
     move-result-object v1
 

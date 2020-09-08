@@ -25,64 +25,74 @@
 
 # direct methods
 .method constructor <init>(Landroid/view/IWindow;Lcom/android/server/wm/DisplayContent;I)V
-    .locals 12
+    .locals 15
+
+    move-object v1, p0
+
+    move-object/from16 v10, p2
+
+    move/from16 v11, p3
+
+    const-string v12, "ShellRoot"
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/server/wm/ShellRoot;->mSurfaceControl:Landroid/view/SurfaceControl;
+    iput-object v0, v1, Lcom/android/server/wm/ShellRoot;->mSurfaceControl:Landroid/view/SurfaceControl;
 
-    iput-object p2, p0, Lcom/android/server/wm/ShellRoot;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
+    iput-object v10, v1, Lcom/android/server/wm/ShellRoot;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    new-instance v1, Lcom/android/server/wm/-$$Lambda$ShellRoot$ZIRxB0zj35u-emFBSiaW8a8zUus;
+    new-instance v2, Lcom/android/server/wm/-$$Lambda$ShellRoot$ZIRxB0zj35u-emFBSiaW8a8zUus;
 
-    invoke-direct {v1, p0, p3}, Lcom/android/server/wm/-$$Lambda$ShellRoot$ZIRxB0zj35u-emFBSiaW8a8zUus;-><init>(Lcom/android/server/wm/ShellRoot;I)V
+    invoke-direct {v2, p0, v11}, Lcom/android/server/wm/-$$Lambda$ShellRoot$ZIRxB0zj35u-emFBSiaW8a8zUus;-><init>(Lcom/android/server/wm/ShellRoot;I)V
 
-    iput-object v1, p0, Lcom/android/server/wm/ShellRoot;->mDeathRecipient:Landroid/os/IBinder$DeathRecipient;
+    iput-object v2, v1, Lcom/android/server/wm/ShellRoot;->mDeathRecipient:Landroid/os/IBinder$DeathRecipient;
 
     :try_start_0
-    invoke-interface {p1}, Landroid/view/IWindow;->asBinder()Landroid/os/IBinder;
+    invoke-interface/range {p1 .. p1}, Landroid/view/IWindow;->asBinder()Landroid/os/IBinder;
 
-    move-result-object v1
+    move-result-object v2
 
-    iget-object v2, p0, Lcom/android/server/wm/ShellRoot;->mDeathRecipient:Landroid/os/IBinder$DeathRecipient;
+    iget-object v3, v1, Lcom/android/server/wm/ShellRoot;->mDeathRecipient:Landroid/os/IBinder$DeathRecipient;
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
-    invoke-interface {v1, v2, v3}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
+    invoke-interface {v2, v3, v4}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     nop
 
-    iput-object p1, p0, Lcom/android/server/wm/ShellRoot;->mClient:Landroid/view/IWindow;
+    move-object/from16 v13, p1
 
-    new-instance v1, Lcom/android/server/wm/WindowToken;
+    iput-object v13, v1, Lcom/android/server/wm/ShellRoot;->mClient:Landroid/view/IWindow;
 
-    iget-object v5, p2, Lcom/android/server/wm/DisplayContent;->mWmService:Lcom/android/server/wm/WindowManagerService;
+    new-instance v14, Lcom/android/server/wm/WindowToken;
 
-    invoke-interface {p1}, Landroid/view/IWindow;->asBinder()Landroid/os/IBinder;
+    iget-object v3, v10, Lcom/android/server/wm/DisplayContent;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
-    move-result-object v6
+    invoke-interface/range {p1 .. p1}, Landroid/view/IWindow;->asBinder()Landroid/os/IBinder;
+
+    move-result-object v4
+
+    const/4 v6, 0x1
 
     const/4 v8, 0x1
 
-    const/4 v10, 0x1
+    const/4 v9, 0x0
 
-    const/4 v11, 0x0
+    move-object v2, v14
 
-    move-object v4, v1
+    move/from16 v5, p3
 
-    move v7, p3
+    move-object/from16 v7, p2
 
-    move-object v9, p2
+    invoke-direct/range {v2 .. v9}, Lcom/android/server/wm/WindowToken;-><init>(Lcom/android/server/wm/WindowManagerService;Landroid/os/IBinder;IZLcom/android/server/wm/DisplayContent;ZZ)V
 
-    invoke-direct/range {v4 .. v11}, Lcom/android/server/wm/WindowToken;-><init>(Lcom/android/server/wm/WindowManagerService;Landroid/os/IBinder;IZLcom/android/server/wm/DisplayContent;ZZ)V
+    iput-object v14, v1, Lcom/android/server/wm/ShellRoot;->mToken:Lcom/android/server/wm/WindowToken;
 
-    iput-object v1, p0, Lcom/android/server/wm/ShellRoot;->mToken:Lcom/android/server/wm/WindowToken;
-
-    invoke-virtual {v1, v0}, Lcom/android/server/wm/WindowToken;->makeChildSurface(Lcom/android/server/wm/WindowContainer;)Landroid/view/SurfaceControl$Builder;
+    invoke-virtual {v14, v0}, Lcom/android/server/wm/WindowToken;->makeChildSurface(Lcom/android/server/wm/WindowContainer;)Landroid/view/SurfaceControl$Builder;
 
     move-result-object v0
 
@@ -90,25 +100,29 @@
 
     move-result-object v0
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "Shell Root Leash "
+    const-string v3, "Shell Root Leash "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2}, Lcom/android/server/wm/DisplayContent;->getDisplayId()I
+    invoke-virtual/range {p2 .. p2}, Lcom/android/server/wm/DisplayContent;->getDisplayId()I
 
-    move-result v2
+    move-result v3
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Landroid/view/SurfaceControl$Builder;->setName(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
+    invoke-virtual {v0, v2}, Landroid/view/SurfaceControl$Builder;->setName(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v12}, Landroid/view/SurfaceControl$Builder;->setCallsite(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
 
     move-result-object v0
 
@@ -116,50 +130,50 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/server/wm/ShellRoot;->mSurfaceControl:Landroid/view/SurfaceControl;
+    iput-object v0, v1, Lcom/android/server/wm/ShellRoot;->mSurfaceControl:Landroid/view/SurfaceControl;
 
-    iget-object v0, p0, Lcom/android/server/wm/ShellRoot;->mToken:Lcom/android/server/wm/WindowToken;
+    iget-object v0, v1, Lcom/android/server/wm/ShellRoot;->mToken:Lcom/android/server/wm/WindowToken;
 
     invoke-virtual {v0}, Lcom/android/server/wm/WindowToken;->getPendingTransaction()Landroid/view/SurfaceControl$Transaction;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/server/wm/ShellRoot;->mSurfaceControl:Landroid/view/SurfaceControl;
+    iget-object v2, v1, Lcom/android/server/wm/ShellRoot;->mSurfaceControl:Landroid/view/SurfaceControl;
 
-    invoke-virtual {v0, v1}, Landroid/view/SurfaceControl$Transaction;->show(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
+    invoke-virtual {v0, v2}, Landroid/view/SurfaceControl$Transaction;->show(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
 
     return-void
 
     :catch_0
     move-exception v0
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    move-object/from16 v13, p1
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string v2, "Unable to add shell root for layer "
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v3, "Unable to add shell root for layer "
 
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v2, " on display "
+    invoke-virtual {v2, v11}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v3, " on display "
 
-    invoke-virtual {p2}, Lcom/android/server/wm/DisplayContent;->getDisplayId()I
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v2
+    invoke-virtual/range {p2 .. p2}, Lcom/android/server/wm/DisplayContent;->getDisplayId()I
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result v3
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const-string v2, "ShellRoot"
+    move-result-object v2
 
-    invoke-static {v2, v1, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v12, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-void
 .end method

@@ -3,12 +3,12 @@
 .source "ActivityManagerService.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/Comparator;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/am/ActivityManagerService;->cleanUpApplicationRecordLocked(Lcom/android/server/am/ProcessRecord;ZZIZ)Z
+    value = Lcom/android/server/am/ActivityManagerService;->reportMemUsage(Ljava/util/ArrayList;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -16,20 +16,25 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator<",
+        "Lcom/android/server/am/ProcessMemInfo;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
 .field final synthetic this$0:Lcom/android/server/am/ActivityManagerService;
 
-.field final synthetic val$app:Lcom/android/server/am/ProcessRecord;
-
 
 # direct methods
-.method constructor <init>(Lcom/android/server/am/ActivityManagerService;Lcom/android/server/am/ProcessRecord;)V
+.method constructor <init>(Lcom/android/server/am/ActivityManagerService;)V
     .locals 0
 
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$26;->this$0:Lcom/android/server/am/ActivityManagerService;
-
-    iput-object p2, p0, Lcom/android/server/am/ActivityManagerService$26;->val$app:Lcom/android/server/am/ProcessRecord;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,39 +43,71 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method public compare(Lcom/android/server/am/ProcessMemInfo;Lcom/android/server/am/ProcessMemInfo;)I
+    .locals 6
 
-    :try_start_0
-    const-string v0, "backup"
+    iget v0, p1, Lcom/android/server/am/ProcessMemInfo;->oomAdj:I
 
-    invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+    iget v1, p2, Lcom/android/server/am/ProcessMemInfo;->oomAdj:I
 
-    move-result-object v0
+    const/4 v2, -0x1
 
-    invoke-static {v0}, Landroid/app/backup/IBackupManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/app/backup/IBackupManager;
+    const/4 v3, 0x1
 
-    move-result-object v0
+    if-eq v0, v1, :cond_1
 
-    iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$26;->val$app:Lcom/android/server/am/ProcessRecord;
+    iget v0, p1, Lcom/android/server/am/ProcessMemInfo;->oomAdj:I
 
-    iget v1, v1, Lcom/android/server/am/ProcessRecord;->userId:I
+    iget v1, p2, Lcom/android/server/am/ProcessMemInfo;->oomAdj:I
 
-    iget-object v2, p0, Lcom/android/server/am/ActivityManagerService$26;->val$app:Lcom/android/server/am/ProcessRecord;
-
-    iget-object v2, v2, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
-
-    iget-object v2, v2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
-
-    invoke-interface {v0, v1, v2}, Landroid/app/backup/IBackupManager;->agentDisconnectedForUser(ILjava/lang/String;)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    if-ge v0, v1, :cond_0
 
     goto :goto_0
 
-    :catch_0
-    move-exception v0
+    :cond_0
+    move v2, v3
 
     :goto_0
-    return-void
+    return v2
+
+    :cond_1
+    iget-wide v0, p1, Lcom/android/server/am/ProcessMemInfo;->pss:J
+
+    iget-wide v4, p2, Lcom/android/server/am/ProcessMemInfo;->pss:J
+
+    cmp-long v0, v0, v4
+
+    if-eqz v0, :cond_3
+
+    iget-wide v0, p1, Lcom/android/server/am/ProcessMemInfo;->pss:J
+
+    iget-wide v4, p2, Lcom/android/server/am/ProcessMemInfo;->pss:J
+
+    cmp-long v0, v0, v4
+
+    if-gez v0, :cond_2
+
+    move v2, v3
+
+    :cond_2
+    return v2
+
+    :cond_3
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 0
+
+    check-cast p1, Lcom/android/server/am/ProcessMemInfo;
+
+    check-cast p2, Lcom/android/server/am/ProcessMemInfo;
+
+    invoke-virtual {p0, p1, p2}, Lcom/android/server/am/ActivityManagerService$26;->compare(Lcom/android/server/am/ProcessMemInfo;Lcom/android/server/am/ProcessMemInfo;)I
+
+    move-result p1
+
+    return p1
 .end method

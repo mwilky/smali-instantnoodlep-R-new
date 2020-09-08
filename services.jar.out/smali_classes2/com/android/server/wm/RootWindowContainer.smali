@@ -2504,132 +2504,138 @@
 .end method
 
 .method applySleepTokens(Z)V
-    .locals 10
+    .locals 11
 
     invoke-virtual {p0}, Lcom/android/server/wm/RootWindowContainer;->getChildCount()I
 
     move-result v0
 
-    add-int/lit8 v0, v0, -0x1
+    const/4 v1, 0x1
+
+    sub-int/2addr v0, v1
 
     :goto_0
     if-ltz v0, :cond_8
 
     invoke-virtual {p0, v0}, Lcom/android/server/wm/RootWindowContainer;->getChildAt(I)Lcom/android/server/wm/WindowContainer;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Lcom/android/server/wm/DisplayContent;
+    check-cast v2, Lcom/android/server/wm/DisplayContent;
 
-    invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->shouldSleep()Z
-
-    move-result v2
-
-    invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->isSleeping()Z
+    invoke-virtual {v2}, Lcom/android/server/wm/DisplayContent;->shouldSleep()Z
 
     move-result v3
 
-    if-ne v2, v3, :cond_0
+    invoke-virtual {v2}, Lcom/android/server/wm/DisplayContent;->isSleeping()Z
+
+    move-result v4
+
+    if-ne v3, v4, :cond_0
 
     goto :goto_4
 
     :cond_0
-    invoke-virtual {v1, v2}, Lcom/android/server/wm/DisplayContent;->setIsSleeping(Z)V
+    invoke-virtual {v2, v3}, Lcom/android/server/wm/DisplayContent;->setIsSleeping(Z)V
 
     if-nez p1, :cond_1
 
     goto :goto_4
 
     :cond_1
-    invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->getTaskDisplayAreaCount()I
+    invoke-virtual {v2}, Lcom/android/server/wm/DisplayContent;->getTaskDisplayAreaCount()I
 
-    move-result v3
+    move-result v4
 
-    add-int/lit8 v3, v3, -0x1
+    sub-int/2addr v4, v1
 
     :goto_1
-    if-ltz v3, :cond_7
+    if-ltz v4, :cond_7
 
-    invoke-virtual {v1, v3}, Lcom/android/server/wm/DisplayContent;->getTaskDisplayAreaAt(I)Lcom/android/server/wm/TaskDisplayArea;
+    invoke-virtual {v2, v4}, Lcom/android/server/wm/DisplayContent;->getTaskDisplayAreaAt(I)Lcom/android/server/wm/TaskDisplayArea;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-virtual {v4}, Lcom/android/server/wm/TaskDisplayArea;->getStackCount()I
+    invoke-virtual {v5}, Lcom/android/server/wm/TaskDisplayArea;->getStackCount()I
 
-    move-result v5
+    move-result v6
 
-    add-int/lit8 v5, v5, -0x1
+    sub-int/2addr v6, v1
 
     :goto_2
-    if-ltz v5, :cond_6
+    if-ltz v6, :cond_6
 
-    invoke-virtual {v4, v5}, Lcom/android/server/wm/TaskDisplayArea;->getStackAt(I)Lcom/android/server/wm/ActivityStack;
+    invoke-virtual {v5, v6}, Lcom/android/server/wm/TaskDisplayArea;->getStackAt(I)Lcom/android/server/wm/ActivityStack;
 
-    move-result-object v6
+    move-result-object v7
 
-    const/4 v7, 0x0
+    const/4 v8, 0x0
 
-    if-eqz v2, :cond_2
+    if-eqz v3, :cond_2
 
-    invoke-virtual {v6, v7}, Lcom/android/server/wm/ActivityStack;->goToSleepIfPossible(Z)Z
+    invoke-virtual {v7, v8}, Lcom/android/server/wm/ActivityStack;->goToSleepIfPossible(Z)Z
 
     goto :goto_3
 
     :cond_2
-    invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->isSingleTaskInstance()Z
+    invoke-virtual {v2}, Lcom/android/server/wm/DisplayContent;->isSingleTaskInstance()Z
 
-    move-result v8
+    move-result v9
 
-    if-eqz v8, :cond_3
+    if-eqz v9, :cond_3
 
-    iget-object v8, v1, Lcom/android/server/wm/DisplayContent;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
+    iget-object v9, v2, Lcom/android/server/wm/DisplayContent;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    const/16 v9, 0x1c
+    const/16 v10, 0x1c
 
-    invoke-virtual {v8, v9, v7}, Lcom/android/server/wm/DisplayContent;->prepareAppTransition(IZ)V
+    invoke-virtual {v9, v10, v8, v8, v1}, Lcom/android/server/wm/DisplayContent;->prepareAppTransition(IZIZ)V
 
     :cond_3
-    invoke-virtual {v6}, Lcom/android/server/wm/ActivityStack;->awakeFromSleepingLocked()V
+    invoke-virtual {v7}, Lcom/android/server/wm/ActivityStack;->awakeFromSleepingLocked()V
 
-    invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->isSingleTaskInstance()Z
+    invoke-virtual {v2}, Lcom/android/server/wm/DisplayContent;->isSingleTaskInstance()Z
 
-    move-result v7
+    move-result v9
 
-    if-eqz v7, :cond_4
+    if-eqz v9, :cond_4
 
-    invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->executeAppTransition()V
+    invoke-virtual {v2}, Lcom/android/server/wm/DisplayContent;->executeAppTransition()V
 
     :cond_4
-    invoke-virtual {v6}, Lcom/android/server/wm/ActivityStack;->isFocusedStackOnDisplay()Z
+    invoke-virtual {v7}, Lcom/android/server/wm/ActivityStack;->isFocusedStackOnDisplay()Z
 
-    move-result v7
+    move-result v9
 
-    if-eqz v7, :cond_5
+    if-eqz v9, :cond_5
 
-    iget-object v7, p0, Lcom/android/server/wm/RootWindowContainer;->mStackSupervisor:Lcom/android/server/wm/ActivityStackSupervisor;
+    iget-object v9, p0, Lcom/android/server/wm/RootWindowContainer;->mStackSupervisor:Lcom/android/server/wm/ActivityStackSupervisor;
 
-    invoke-virtual {v7}, Lcom/android/server/wm/ActivityStackSupervisor;->getKeyguardController()Lcom/android/server/wm/KeyguardController;
+    invoke-virtual {v9}, Lcom/android/server/wm/ActivityStackSupervisor;->getKeyguardController()Lcom/android/server/wm/KeyguardController;
 
-    move-result-object v7
+    move-result-object v9
 
-    iget v8, v1, Lcom/android/server/wm/DisplayContent;->mDisplayId:I
+    iget v10, v2, Lcom/android/server/wm/DisplayContent;->mDisplayId:I
 
-    invoke-virtual {v7, v8}, Lcom/android/server/wm/KeyguardController;->isKeyguardOrAodShowing(I)Z
+    invoke-virtual {v9, v10}, Lcom/android/server/wm/KeyguardController;->isKeyguardOrAodShowing(I)Z
 
-    move-result v7
+    move-result v9
 
-    if-nez v7, :cond_5
+    if-nez v9, :cond_5
 
     invoke-virtual {p0}, Lcom/android/server/wm/RootWindowContainer;->resumeFocusedStacksTopActivities()Z
 
     :cond_5
+    const/4 v9, 0x0
+
+    invoke-virtual {v7, v9, v8, v8}, Lcom/android/server/wm/ActivityStack;->ensureActivitiesVisible(Lcom/android/server/wm/ActivityRecord;IZ)V
+
     :goto_3
-    add-int/lit8 v5, v5, -0x1
+    add-int/lit8 v6, v6, -0x1
 
     goto :goto_2
 
     :cond_6
-    add-int/lit8 v3, v3, -0x1
+    add-int/lit8 v4, v4, -0x1
 
     goto :goto_1
 
@@ -8246,7 +8252,7 @@
     :catchall_0
     move-exception v0
 
-    goto/16 :goto_b
+    goto/16 :goto_a
 
     :catch_0
     move-exception v0
@@ -8805,32 +8811,8 @@
     goto :goto_9
 
     :cond_20
-    iget-object v4, v1, Lcom/android/server/wm/RootWindowContainer;->mChildren:Lcom/android/server/wm/WindowList;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/server/wm/RootWindowContainer;->handleCompleteDeferredRemoval()Z
 
-    invoke-virtual {v4}, Lcom/android/server/wm/WindowList;->size()I
-
-    move-result v4
-
-    sub-int/2addr v4, v11
-
-    :goto_a
-    if-ltz v4, :cond_21
-
-    iget-object v6, v1, Lcom/android/server/wm/RootWindowContainer;->mChildren:Lcom/android/server/wm/WindowList;
-
-    invoke-virtual {v6, v4}, Lcom/android/server/wm/WindowList;->get(I)Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lcom/android/server/wm/DisplayContent;
-
-    invoke-virtual {v6}, Lcom/android/server/wm/DisplayContent;->checkCompleteDeferredRemoval()Z
-
-    add-int/lit8 v4, v4, -0x1
-
-    goto :goto_a
-
-    :cond_21
     sget-object v4, Lcom/android/server/wm/-$$Lambda$RootWindowContainer$-XbbIpkF4p2mF3v0qeXeat-_w3E;->INSTANCE:Lcom/android/server/wm/-$$Lambda$RootWindowContainer$-XbbIpkF4p2mF3v0qeXeat-_w3E;
 
     invoke-virtual {v1, v4}, Lcom/android/server/wm/RootWindowContainer;->forAllDisplays(Ljava/util/function/Consumer;)V
@@ -8853,16 +8835,16 @@
 
     sget-boolean v4, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_WINDOW_TRACE:Z
 
-    if-eqz v4, :cond_22
+    if-eqz v4, :cond_21
 
     const-string v4, "performSurfacePlacementInner exit"
 
     invoke-static {v5, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_22
+    :cond_21
     return-void
 
-    :goto_b
+    :goto_a
     iget-object v4, v1, Lcom/android/server/wm/RootWindowContainer;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     invoke-virtual {v4, v3}, Lcom/android/server/wm/WindowManagerService;->closeSurfaceTransaction(Ljava/lang/String;)V
@@ -8871,11 +8853,11 @@
 
     sget-boolean v3, Lcom/android/server/wm/WindowManagerDebugConfig;->SHOW_LIGHT_TRANSACTIONS:Z
 
-    if-eqz v3, :cond_23
+    if-eqz v3, :cond_22
 
     invoke-static {v5, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_23
+    :cond_22
     throw v0
 .end method
 

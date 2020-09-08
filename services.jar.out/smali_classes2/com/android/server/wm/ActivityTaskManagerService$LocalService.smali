@@ -6135,11 +6135,13 @@
 .end method
 
 .method public startActivitiesAsPackage(Ljava/lang/String;Ljava/lang/String;I[Landroid/content/Intent;Landroid/os/Bundle;)I
-    .locals 20
+    .locals 21
 
     move-object/from16 v1, p0
 
     move-object/from16 v14, p4
+
+    move-object/from16 v15, p5
 
     const-string v0, "intents"
 
@@ -6147,7 +6149,7 @@
 
     array-length v0, v14
 
-    new-array v15, v0, [Ljava/lang/String;
+    new-array v13, v0, [Ljava/lang/String;
 
     const/4 v2, 0x0
 
@@ -6177,7 +6179,7 @@
 
     move-result-object v3
 
-    aput-object v3, v15, v0
+    aput-object v3, v13, v0
 
     add-int/lit8 v0, v0, 0x1
 
@@ -6193,12 +6195,12 @@
 
     const/high16 v3, 0x10000000
 
-    move-object/from16 v13, p1
+    move-object/from16 v12, p1
 
-    move/from16 v12, p3
+    move/from16 v11, p3
 
     :try_start_1
-    invoke-interface {v0, v13, v3, v12}, Landroid/content/pm/IPackageManager;->getPackageUid(Ljava/lang/String;II)I
+    invoke-interface {v0, v12, v3, v11}, Landroid/content/pm/IPackageManager;->getPackageUid(Ljava/lang/String;II)I
 
     move-result v0
     :try_end_1
@@ -6224,9 +6226,9 @@
     :catchall_1
     move-exception v0
 
-    move-object/from16 v13, p1
+    move-object/from16 v12, p1
 
-    move/from16 v12, p3
+    move/from16 v11, p3
 
     :goto_1
     invoke-static/range {v16 .. v17}, Landroid/os/Binder;->restoreCallingIdentity(J)V
@@ -6236,9 +6238,9 @@
     :catch_1
     move-exception v0
 
-    move-object/from16 v13, p1
+    move-object/from16 v12, p1
 
-    move/from16 v12, p3
+    move/from16 v11, p3
 
     :goto_2
     invoke-static/range {v16 .. v17}, Landroid/os/Binder;->restoreCallingIdentity(J)V
@@ -6260,12 +6262,40 @@
 
     move-result-object v9
 
-    const/4 v11, 0x0
-
     const/16 v18, 0x0
 
     const/16 v19, 0x0
 
+    invoke-static {}, Landroid/os/Binder;->getCallingUid()I
+
+    move-result v3
+
+    const/16 v4, 0x3e8
+
+    const/4 v5, 0x1
+
+    if-ne v3, v4, :cond_1
+
+    if-eqz v15, :cond_1
+
+    const-string v3, "DeviceKeyHandler"
+
+    invoke-virtual {v15, v3}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-ne v3, v5, :cond_1
+
+    move/from16 v20, v5
+
+    goto :goto_4
+
+    :cond_1
+    const/4 v3, 0x0
+
+    move/from16 v20, v3
+
+    :goto_4
     move v3, v0
 
     move-object/from16 v4, p1
@@ -6274,13 +6304,17 @@
 
     move-object/from16 v6, p4
 
-    move-object v7, v15
+    move-object v7, v13
 
     move/from16 v10, p3
 
-    move-object/from16 v12, v18
+    move/from16 v11, v18
 
-    move/from16 v13, v19
+    move-object/from16 v12, v19
+
+    move-object/from16 v18, v13
+
+    move/from16 v13, v20
 
     invoke-virtual/range {v2 .. v13}, Lcom/android/server/wm/ActivityStartController;->startActivitiesInPackage(ILjava/lang/String;Ljava/lang/String;[Landroid/content/Intent;[Ljava/lang/String;Landroid/os/IBinder;Lcom/android/server/wm/SafeActivityOptions;IZLcom/android/server/am/PendingIntentRecord;Z)I
 
@@ -6290,32 +6324,21 @@
 .end method
 
 .method public startActivitiesInPackage(IIILjava/lang/String;Ljava/lang/String;[Landroid/content/Intent;[Ljava/lang/String;Landroid/os/IBinder;Lcom/android/server/wm/SafeActivityOptions;IZLcom/android/server/am/PendingIntentRecord;Z)I
-    .locals 17
+    .locals 16
 
-    move-object/from16 v1, p0
+    move-object/from16 v0, p0
 
-    iget-object v0, v1, Lcom/android/server/wm/ActivityTaskManagerService$LocalService;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
+    iget-object v1, v0, Lcom/android/server/wm/ActivityTaskManagerService$LocalService;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
 
     move-object/from16 v15, p4
 
-    invoke-virtual {v0, v15}, Lcom/android/server/wm/ActivityTaskManagerService;->assertPackageMatchesCallingUid(Ljava/lang/String;)V
+    invoke-virtual {v1, v15}, Lcom/android/server/wm/ActivityTaskManagerService;->assertPackageMatchesCallingUid(Ljava/lang/String;)V
 
-    iget-object v0, v1, Lcom/android/server/wm/ActivityTaskManagerService$LocalService;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
+    iget-object v1, v0, Lcom/android/server/wm/ActivityTaskManagerService$LocalService;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
 
-    iget-object v14, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
-
-    monitor-enter v14
-
-    :try_start_0
-    invoke-static {}, Lcom/android/server/wm/WindowManagerService;->boostPriorityForLockedSection()V
-
-    iget-object v0, v1, Lcom/android/server/wm/ActivityTaskManagerService$LocalService;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
-
-    invoke-virtual {v0}, Lcom/android/server/wm/ActivityTaskManagerService;->getActivityStartController()Lcom/android/server/wm/ActivityStartController;
+    invoke-virtual {v1}, Lcom/android/server/wm/ActivityTaskManagerService;->getActivityStartController()Lcom/android/server/wm/ActivityStartController;
 
     move-result-object v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move/from16 v3, p1
 
@@ -6339,44 +6362,15 @@
 
     move/from16 v13, p11
 
-    move-object/from16 v16, v14
-
     move-object/from16 v14, p12
 
     move/from16 v15, p13
 
-    :try_start_1
     invoke-virtual/range {v2 .. v15}, Lcom/android/server/wm/ActivityStartController;->startActivitiesInPackage(IIILjava/lang/String;Ljava/lang/String;[Landroid/content/Intent;[Ljava/lang/String;Landroid/os/IBinder;Lcom/android/server/wm/SafeActivityOptions;IZLcom/android/server/am/PendingIntentRecord;Z)I
 
-    move-result v0
+    move-result v1
 
-    monitor-exit v16
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    invoke-static {}, Lcom/android/server/wm/WindowManagerService;->resetPriorityAfterLockedSection()V
-
-    return v0
-
-    :catchall_0
-    move-exception v0
-
-    move-object/from16 v16, v14
-
-    :goto_0
-    :try_start_2
-    monitor-exit v16
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    invoke-static {}, Lcom/android/server/wm/WindowManagerService;->resetPriorityAfterLockedSection()V
-
-    throw v0
-
-    :catchall_1
-    move-exception v0
-
-    goto :goto_0
+    return v1
 .end method
 
 .method public startActivityAsUser(Landroid/app/IApplicationThread;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;Landroid/os/IBinder;ILandroid/os/Bundle;I)I
@@ -6430,103 +6424,67 @@
 .end method
 
 .method public startActivityInPackage(IIILjava/lang/String;Ljava/lang/String;Landroid/content/Intent;Ljava/lang/String;Landroid/os/IBinder;Ljava/lang/String;IILcom/android/server/wm/SafeActivityOptions;ILcom/android/server/wm/Task;Ljava/lang/String;ZLcom/android/server/am/PendingIntentRecord;Z)I
-    .locals 22
+    .locals 21
 
-    move-object/from16 v1, p0
+    move-object/from16 v0, p0
 
-    iget-object v0, v1, Lcom/android/server/wm/ActivityTaskManagerService$LocalService;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
+    move/from16 v2, p1
 
-    move-object/from16 v15, p4
+    move/from16 v3, p2
 
-    invoke-virtual {v0, v15}, Lcom/android/server/wm/ActivityTaskManagerService;->assertPackageMatchesCallingUid(Ljava/lang/String;)V
+    move/from16 v4, p3
 
-    iget-object v0, v1, Lcom/android/server/wm/ActivityTaskManagerService$LocalService;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
+    move-object/from16 v5, p4
 
-    iget-object v14, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
+    move-object/from16 v6, p5
 
-    monitor-enter v14
+    move-object/from16 v7, p6
 
-    :try_start_0
-    invoke-static {}, Lcom/android/server/wm/WindowManagerService;->boostPriorityForLockedSection()V
+    move-object/from16 v8, p7
 
-    iget-object v0, v1, Lcom/android/server/wm/ActivityTaskManagerService$LocalService;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
+    move-object/from16 v9, p8
 
-    invoke-virtual {v0}, Lcom/android/server/wm/ActivityTaskManagerService;->getActivityStartController()Lcom/android/server/wm/ActivityStartController;
+    move-object/from16 v10, p9
 
-    move-result-object v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move/from16 v11, p10
 
-    move/from16 v3, p1
+    move/from16 v12, p11
 
-    move/from16 v4, p2
+    move-object/from16 v13, p12
 
-    move/from16 v5, p3
+    move/from16 v14, p13
 
-    move-object/from16 v6, p4
+    move-object/from16 v15, p14
 
-    move-object/from16 v7, p5
+    move-object/from16 v16, p15
 
-    move-object/from16 v8, p6
+    move/from16 v17, p16
 
-    move-object/from16 v9, p7
+    move-object/from16 v18, p17
 
-    move-object/from16 v10, p8
+    move/from16 v19, p18
 
-    move-object/from16 v11, p9
+    iget-object v1, v0, Lcom/android/server/wm/ActivityTaskManagerService$LocalService;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
 
-    move/from16 v12, p10
+    move/from16 v20, v2
 
-    move/from16 v13, p11
+    move-object/from16 v2, p4
 
-    move-object/from16 v21, v14
+    invoke-virtual {v1, v2}, Lcom/android/server/wm/ActivityTaskManagerService;->assertPackageMatchesCallingUid(Ljava/lang/String;)V
 
-    move-object/from16 v14, p12
+    iget-object v1, v0, Lcom/android/server/wm/ActivityTaskManagerService$LocalService;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
 
-    move/from16 v15, p13
+    invoke-virtual {v1}, Lcom/android/server/wm/ActivityTaskManagerService;->getActivityStartController()Lcom/android/server/wm/ActivityStartController;
 
-    move-object/from16 v16, p14
+    move-result-object v1
 
-    move-object/from16 v17, p15
+    move/from16 v2, v20
 
-    move/from16 v18, p16
+    invoke-virtual/range {v1 .. v19}, Lcom/android/server/wm/ActivityStartController;->startActivityInPackage(IIILjava/lang/String;Ljava/lang/String;Landroid/content/Intent;Ljava/lang/String;Landroid/os/IBinder;Ljava/lang/String;IILcom/android/server/wm/SafeActivityOptions;ILcom/android/server/wm/Task;Ljava/lang/String;ZLcom/android/server/am/PendingIntentRecord;Z)I
 
-    move-object/from16 v19, p17
+    move-result v1
 
-    move/from16 v20, p18
-
-    :try_start_1
-    invoke-virtual/range {v2 .. v20}, Lcom/android/server/wm/ActivityStartController;->startActivityInPackage(IIILjava/lang/String;Ljava/lang/String;Landroid/content/Intent;Ljava/lang/String;Landroid/os/IBinder;Ljava/lang/String;IILcom/android/server/wm/SafeActivityOptions;ILcom/android/server/wm/Task;Ljava/lang/String;ZLcom/android/server/am/PendingIntentRecord;Z)I
-
-    move-result v0
-
-    monitor-exit v21
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    invoke-static {}, Lcom/android/server/wm/WindowManagerService;->resetPriorityAfterLockedSection()V
-
-    return v0
-
-    :catchall_0
-    move-exception v0
-
-    move-object/from16 v21, v14
-
-    :goto_0
-    :try_start_2
-    monitor-exit v21
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    invoke-static {}, Lcom/android/server/wm/WindowManagerService;->resetPriorityAfterLockedSection()V
-
-    throw v0
-
-    :catchall_1
-    move-exception v0
-
-    goto :goto_0
+    return v1
 .end method
 
 .method public startConfirmDeviceCredentialIntent(Landroid/content/Intent;Landroid/os/Bundle;)V

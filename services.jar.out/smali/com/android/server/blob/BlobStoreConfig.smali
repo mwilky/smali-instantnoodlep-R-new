@@ -257,6 +257,59 @@
     return-wide v0
 .end method
 
+.method public static getMaxActiveSessions()I
+    .locals 1
+
+    sget v0, Lcom/android/server/blob/BlobStoreConfig$DeviceConfigProperties;->MAX_ACTIVE_SESSIONS:I
+
+    return v0
+.end method
+
+.method public static getMaxCommittedBlobs()I
+    .locals 1
+
+    sget v0, Lcom/android/server/blob/BlobStoreConfig$DeviceConfigProperties;->MAX_COMMITTED_BLOBS:I
+
+    return v0
+.end method
+
+.method public static getMaxLeasedBlobs()I
+    .locals 1
+
+    sget v0, Lcom/android/server/blob/BlobStoreConfig$DeviceConfigProperties;->MAX_LEASED_BLOBS:I
+
+    return v0
+.end method
+
+.method public static getMaxPermittedPackages()I
+    .locals 1
+
+    sget v0, Lcom/android/server/blob/BlobStoreConfig$DeviceConfigProperties;->MAX_BLOB_ACCESS_PERMITTED_PACKAGES:I
+
+    return v0
+.end method
+
+.method public static getTruncatedLeaseDescription(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    .locals 1
+
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-object p0
+
+    :cond_0
+    sget v0, Lcom/android/server/blob/BlobStoreConfig$DeviceConfigProperties;->LEASE_DESC_CHAR_LIMIT:I
+
+    invoke-static {p0, v0}, Landroid/text/TextUtils;->trimToLengthWithEllipsis(Ljava/lang/CharSequence;I)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method private static hasCommitCoolOffPeriodElapsed(J)Z
     .locals 4
 

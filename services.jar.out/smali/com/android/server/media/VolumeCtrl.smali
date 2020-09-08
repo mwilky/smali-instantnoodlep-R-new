@@ -666,7 +666,7 @@
     :catch_0
     move-exception v0
 
-    const-string v1, "invalid stream"
+    const-string/jumbo v1, "invalid stream"
 
     return-object v1
 .end method

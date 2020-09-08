@@ -95,15 +95,9 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    const-string v0, "ZenModeHelper"
-
-    const/4 v1, 0x3
-
-    invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result v0
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
     sput-boolean v0, Lcom/android/server/notification/ZenModeHelper;->DEBUG:Z
 
@@ -2880,24 +2874,6 @@
 
     move-result v9
 
-    if-eqz v9, :cond_4
-
-    iget-object v9, v0, Lcom/android/server/notification/ZenModeHelper;->mConsolidatedPolicy:Landroid/app/NotificationManager$Policy;
-
-    invoke-virtual {v9}, Landroid/app/NotificationManager$Policy;->allowCallsFrom()I
-
-    move-result v9
-
-    if-nez v9, :cond_4
-
-    move v9, v2
-
-    goto :goto_4
-
-    :cond_4
-    const/4 v9, 0x0
-
-    :goto_4
     iget-object v10, v0, Lcom/android/server/notification/ZenModeHelper;->mConsolidatedPolicy:Landroid/app/NotificationManager$Policy;
 
     invoke-virtual {v10}, Landroid/app/NotificationManager$Policy;->allowRepeatCallers()Z
@@ -2924,7 +2900,7 @@
 
     const-wide/16 v14, 0x0
 
-    if-nez v1, :cond_6
+    if-nez v1, :cond_5
 
     iget-wide v2, v0, Lcom/android/server/notification/ZenModeHelper;->mSuppressedEffects:J
 
@@ -2934,37 +2910,37 @@
 
     cmp-long v2, v2, v14
 
-    if-eqz v2, :cond_5
+    if-eqz v2, :cond_4
+
+    goto :goto_4
+
+    :cond_4
+    const/4 v2, 0x0
 
     goto :goto_5
 
     :cond_5
-    const/4 v2, 0x0
+    :goto_4
+    const/4 v2, 0x1
+
+    :goto_5
+    if-nez v7, :cond_9
+
+    if-eqz v4, :cond_7
+
+    if-nez v9, :cond_7
+
+    if-eqz v10, :cond_6
 
     goto :goto_6
 
     :cond_6
-    :goto_5
-    const/4 v2, 0x1
-
-    :goto_6
-    if-nez v7, :cond_a
-
-    if-eqz v4, :cond_8
-
-    if-nez v9, :cond_8
-
-    if-eqz v10, :cond_7
+    move/from16 v16, v9
 
     goto :goto_7
 
     :cond_7
-    move/from16 v16, v9
-
-    goto :goto_8
-
-    :cond_8
-    :goto_7
+    :goto_6
     move/from16 v16, v9
 
     iget-wide v8, v0, Lcom/android/server/notification/ZenModeHelper;->mSuppressedEffects:J
@@ -2975,67 +2951,67 @@
 
     cmp-long v8, v8, v14
 
-    if-eqz v8, :cond_9
+    if-eqz v8, :cond_8
+
+    goto :goto_7
+
+    :cond_8
+    const/4 v8, 0x0
 
     goto :goto_8
 
     :cond_9
-    const/4 v8, 0x0
+    move/from16 v16, v9
+
+    :goto_7
+    const/4 v8, 0x1
+
+    :goto_8
+    if-eqz v4, :cond_a
+
+    if-nez v13, :cond_a
+
+    const/4 v9, 0x1
 
     goto :goto_9
 
     :cond_a
-    move/from16 v16, v9
-
-    :goto_8
-    const/4 v8, 0x1
+    const/4 v9, 0x0
 
     :goto_9
     if-eqz v4, :cond_b
 
-    if-nez v13, :cond_b
+    if-nez v12, :cond_b
 
-    const/4 v9, 0x1
+    const/4 v14, 0x1
 
     goto :goto_a
 
     :cond_b
-    const/4 v9, 0x0
+    const/4 v14, 0x0
 
     :goto_a
+    if-nez v7, :cond_d
+
     if-eqz v4, :cond_c
 
-    if-nez v12, :cond_c
-
-    const/4 v14, 0x1
+    if-nez v11, :cond_c
 
     goto :goto_b
 
     :cond_c
-    const/4 v14, 0x0
-
-    :goto_b
-    if-nez v7, :cond_e
-
-    if-eqz v4, :cond_d
-
-    if-nez v11, :cond_d
+    const/4 v15, 0x0
 
     goto :goto_c
 
     :cond_d
-    const/4 v15, 0x0
-
-    goto :goto_d
-
-    :cond_e
-    :goto_c
+    :goto_b
     const/4 v15, 0x1
 
-    :goto_d
-    if-nez v5, :cond_10
+    :goto_c
+    if-nez v5, :cond_f
 
-    if-eqz v4, :cond_f
+    if-eqz v4, :cond_e
 
     iget-object v3, v0, Lcom/android/server/notification/ZenModeHelper;->mConsolidatedPolicy:Landroid/app/NotificationManager$Policy;
 
@@ -3043,20 +3019,20 @@
 
     move-result v3
 
-    if-eqz v3, :cond_f
+    if-eqz v3, :cond_e
+
+    goto :goto_d
+
+    :cond_e
+    const/4 v3, 0x0
 
     goto :goto_e
 
     :cond_f
-    const/4 v3, 0x0
-
-    goto :goto_f
-
-    :cond_10
-    :goto_e
+    :goto_d
     const/4 v3, 0x1
 
-    :goto_f
+    :goto_e
     sget-object v6, Landroid/media/AudioAttributes;->SDK_USAGES:[I
 
     move/from16 v19, v1
@@ -3067,8 +3043,8 @@
 
     const/4 v3, 0x0
 
-    :goto_10
-    if-ge v3, v1, :cond_24
+    :goto_f
+    if-ge v3, v1, :cond_23
 
     move/from16 v21, v1
 
@@ -3086,7 +3062,7 @@
 
     const/4 v6, 0x3
 
-    if-ne v5, v6, :cond_11
+    if-ne v5, v6, :cond_10
 
     move/from16 v6, v20
 
@@ -3098,148 +3074,148 @@
 
     move/from16 v24, v2
 
-    goto/16 :goto_1c
+    goto/16 :goto_1b
 
-    :cond_11
+    :cond_10
     move/from16 v6, v20
 
     move/from16 v20, v7
 
     const/4 v7, 0x1
 
-    if-ne v5, v7, :cond_14
+    if-ne v5, v7, :cond_13
 
-    if-nez v2, :cond_13
+    if-nez v2, :cond_12
 
-    if-eqz v6, :cond_12
+    if-eqz v6, :cond_11
 
-    goto :goto_11
+    goto :goto_10
 
-    :cond_12
+    :cond_11
     const/4 v7, 0x0
 
-    :cond_13
-    :goto_11
+    :cond_12
+    :goto_10
     invoke-virtual {v0, v4, v7, v1}, Lcom/android/server/notification/ZenModeHelper;->applyRestrictions(ZZI)V
 
     move/from16 v24, v2
 
     const/4 v7, 0x0
 
-    goto/16 :goto_1c
+    goto/16 :goto_1b
 
-    :cond_14
+    :cond_13
     const/4 v7, 0x2
 
-    if-ne v5, v7, :cond_17
+    if-ne v5, v7, :cond_16
 
-    if-nez v8, :cond_16
+    if-nez v8, :cond_15
 
-    if-eqz v6, :cond_15
+    if-eqz v6, :cond_14
+
+    goto :goto_11
+
+    :cond_14
+    const/4 v7, 0x0
 
     goto :goto_12
 
     :cond_15
-    const/4 v7, 0x0
-
-    goto :goto_13
-
-    :cond_16
-    :goto_12
+    :goto_11
     const/4 v7, 0x1
 
-    :goto_13
+    :goto_12
     invoke-virtual {v0, v4, v7, v1}, Lcom/android/server/notification/ZenModeHelper;->applyRestrictions(ZZI)V
 
     move/from16 v24, v2
 
     const/4 v7, 0x0
 
-    goto/16 :goto_1c
+    goto/16 :goto_1b
 
-    :cond_17
+    :cond_16
     const/4 v7, 0x4
 
-    if-ne v5, v7, :cond_1a
+    if-ne v5, v7, :cond_19
 
-    if-nez v9, :cond_19
+    if-nez v9, :cond_18
 
-    if-eqz v6, :cond_18
+    if-eqz v6, :cond_17
+
+    goto :goto_13
+
+    :cond_17
+    const/4 v7, 0x0
 
     goto :goto_14
 
     :cond_18
-    const/4 v7, 0x0
-
-    goto :goto_15
-
-    :cond_19
-    :goto_14
+    :goto_13
     const/4 v7, 0x1
 
-    :goto_15
+    :goto_14
     invoke-virtual {v0, v4, v7, v1}, Lcom/android/server/notification/ZenModeHelper;->applyRestrictions(ZZI)V
 
     move/from16 v24, v2
 
     const/4 v7, 0x0
 
-    goto :goto_1c
+    goto :goto_1b
 
-    :cond_1a
+    :cond_19
     const/4 v7, 0x5
 
-    if-ne v5, v7, :cond_1d
+    if-ne v5, v7, :cond_1c
 
-    if-nez v14, :cond_1c
+    if-nez v14, :cond_1b
 
-    if-eqz v6, :cond_1b
+    if-eqz v6, :cond_1a
+
+    goto :goto_15
+
+    :cond_1a
+    const/4 v7, 0x0
 
     goto :goto_16
 
     :cond_1b
-    const/4 v7, 0x0
-
-    goto :goto_17
-
-    :cond_1c
-    :goto_16
+    :goto_15
     const/4 v7, 0x1
 
-    :goto_17
+    :goto_16
     invoke-virtual {v0, v4, v7, v1}, Lcom/android/server/notification/ZenModeHelper;->applyRestrictions(ZZI)V
 
     move/from16 v24, v2
 
     const/4 v7, 0x0
 
-    goto :goto_1c
+    goto :goto_1b
 
-    :cond_1d
+    :cond_1c
     const/4 v7, 0x6
 
-    if-ne v5, v7, :cond_23
+    if-ne v5, v7, :cond_22
 
     const/16 v7, 0xd
 
-    if-ne v1, v7, :cond_20
+    if-ne v1, v7, :cond_1f
 
-    if-nez v15, :cond_1f
+    if-nez v15, :cond_1e
 
-    if-eqz v6, :cond_1e
+    if-eqz v6, :cond_1d
+
+    goto :goto_17
+
+    :cond_1d
+    const/4 v7, 0x0
 
     goto :goto_18
 
     :cond_1e
-    const/4 v7, 0x0
-
-    goto :goto_19
-
-    :cond_1f
-    :goto_18
+    :goto_17
     const/4 v7, 0x1
 
-    :goto_19
+    :goto_18
     move/from16 v24, v2
 
     const/16 v2, 0x1c
@@ -3252,43 +3228,43 @@
 
     invoke-virtual {v0, v4, v7, v1, v2}, Lcom/android/server/notification/ZenModeHelper;->applyRestrictions(ZZII)V
 
-    goto :goto_1c
+    goto :goto_1b
 
-    :cond_20
+    :cond_1f
     move/from16 v24, v2
 
     const/4 v2, 0x3
 
     const/4 v7, 0x0
 
-    if-nez v15, :cond_22
+    if-nez v15, :cond_21
 
-    if-eqz v6, :cond_21
+    if-eqz v6, :cond_20
+
+    goto :goto_19
+
+    :cond_20
+    move v2, v7
 
     goto :goto_1a
 
     :cond_21
-    move v2, v7
+    :goto_19
+    const/4 v2, 0x1
+
+    :goto_1a
+    invoke-virtual {v0, v4, v2, v1}, Lcom/android/server/notification/ZenModeHelper;->applyRestrictions(ZZI)V
 
     goto :goto_1b
 
     :cond_22
-    :goto_1a
-    const/4 v2, 0x1
-
-    :goto_1b
-    invoke-virtual {v0, v4, v2, v1}, Lcom/android/server/notification/ZenModeHelper;->applyRestrictions(ZZI)V
-
-    goto :goto_1c
-
-    :cond_23
     move/from16 v24, v2
 
     const/4 v7, 0x0
 
     invoke-virtual {v0, v4, v6, v1}, Lcom/android/server/notification/ZenModeHelper;->applyRestrictions(ZZI)V
 
-    :goto_1c
+    :goto_1b
     add-int/lit8 v3, v3, 0x1
 
     move/from16 v7, v20
@@ -3303,9 +3279,9 @@
 
     move-object/from16 v6, v23
 
-    goto/16 :goto_10
+    goto/16 :goto_f
 
-    :cond_24
+    :cond_23
     return-void
 .end method
 
@@ -5761,10 +5737,6 @@
     if-eqz v2, :cond_1
 
     iget-boolean v3, v2, Landroid/service/notification/ZenModeConfig$ZenRule;->modified:Z
-
-    if-nez v3, :cond_1
-
-    iget-boolean v3, v2, Landroid/service/notification/ZenModeConfig$ZenRule;->enabled:Z
 
     if-nez v3, :cond_1
 

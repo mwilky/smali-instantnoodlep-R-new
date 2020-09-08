@@ -221,7 +221,7 @@
 
     iput-boolean v0, p0, Lcom/android/server/wm/DisplayRotation;->mSupportAutoRotation:Z
 
-    const v0, 0x10e0068
+    const v0, 0x10e006e
 
     invoke-direct {p0, v0}, Lcom/android/server/wm/DisplayRotation;->readRotation(I)I
 
@@ -245,7 +245,7 @@
 
     iput v0, p0, Lcom/android/server/wm/DisplayRotation;->mDeskDockRotation:I
 
-    const v0, 0x10e00c6
+    const v0, 0x10e00cc
 
     invoke-direct {p0, v0}, Lcom/android/server/wm/DisplayRotation;->readRotation(I)I
 
@@ -2929,7 +2929,7 @@
 
     const/4 v7, 0x7
 
-    const/4 v10, 0x2
+    const/4 v10, 0x0
 
     const/4 v11, 0x1
 
@@ -2989,9 +2989,7 @@
 
     new-array v6, v7, [Ljava/lang/Object;
 
-    const/16 v20, 0x0
-
-    aput-object v3, v6, v20
+    aput-object v3, v6, v10
 
     invoke-static {v12, v13}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -2999,7 +2997,9 @@
 
     aput-object v23, v6, v11
 
-    aput-object v14, v6, v10
+    const/16 v20, 0x2
+
+    aput-object v14, v6, v20
 
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -3034,22 +3034,53 @@
     invoke-static {v15, v7, v10, v11, v6}, Lcom/android/server/protolog/ProtoLogImpl;->v(Lcom/android/server/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
     :cond_1
-    invoke-virtual/range {p0 .. p0}, Lcom/android/server/wm/DisplayRotation;->isFixedToUserRotation()Z
+    const/4 v3, 0x1
+
+    new-array v4, v3, [I
+
+    const/16 v3, 0x3e
+
+    const/4 v5, 0x0
+
+    aput v3, v4, v5
+
+    invoke-static {v4}, Landroid/util/OpFeatures;->isSupport([I)Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
+    invoke-static {}, Lcom/android/server/policy/OpPhoneWindowManagerInjector;->isShuttingDown()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    const-string v3, "WindowManager"
+
+    const-string v4, "Power off return ROTATION_0"
+
+    invoke-static {v3, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v5
+
+    :cond_2
+    invoke-virtual/range {p0 .. p0}, Lcom/android/server/wm/DisplayRotation;->isFixedToUserRotation()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
     iget v3, v0, Lcom/android/server/wm/DisplayRotation;->mUserRotation:I
 
     return v3
 
-    :cond_2
+    :cond_3
     iget-object v3, v0, Lcom/android/server/wm/DisplayRotation;->mOrientationListener:Lcom/android/server/wm/DisplayRotation$OrientationListener;
 
     const/4 v4, -0x1
 
-    if-eqz v3, :cond_3
+    if-eqz v3, :cond_4
 
     invoke-virtual {v3}, Lcom/android/server/wm/DisplayRotation$OrientationListener;->getProposedRotation()I
 
@@ -3057,17 +3088,17 @@
 
     goto :goto_1
 
-    :cond_3
+    :cond_4
     move v3, v4
 
     :goto_1
     nop
 
-    if-gez v3, :cond_4
+    if-gez v3, :cond_5
 
     move/from16 v3, p2
 
-    :cond_4
+    :cond_5
     iget-object v5, v0, Lcom/android/server/wm/DisplayRotation;->mDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
 
     invoke-virtual {v5}, Lcom/android/server/wm/DisplayPolicy;->getLidState()I
@@ -3104,228 +3135,228 @@
 
     const/16 v12, 0xb
 
-    if-nez v10, :cond_5
+    if-nez v10, :cond_6
 
     iget v4, v0, Lcom/android/server/wm/DisplayRotation;->mUserRotation:I
 
     goto/16 :goto_7
 
-    :cond_5
+    :cond_6
     const/4 v10, 0x1
 
-    if-ne v5, v10, :cond_6
+    if-ne v5, v10, :cond_7
 
     iget v10, v0, Lcom/android/server/wm/DisplayRotation;->mLidOpenRotation:I
 
-    if-ltz v10, :cond_6
+    if-ltz v10, :cond_7
 
     iget v4, v0, Lcom/android/server/wm/DisplayRotation;->mLidOpenRotation:I
 
     goto/16 :goto_7
 
-    :cond_6
+    :cond_7
     const/4 v10, 0x2
 
-    if-ne v6, v10, :cond_9
+    if-ne v6, v10, :cond_a
 
-    if-nez v8, :cond_7
+    if-nez v8, :cond_8
 
     iget v10, v0, Lcom/android/server/wm/DisplayRotation;->mCarDockRotation:I
 
-    if-ltz v10, :cond_9
+    if-ltz v10, :cond_a
 
-    :cond_7
-    if-eqz v8, :cond_8
+    :cond_8
+    if-eqz v8, :cond_9
 
     move v4, v3
 
     goto :goto_2
 
-    :cond_8
+    :cond_9
     iget v4, v0, Lcom/android/server/wm/DisplayRotation;->mCarDockRotation:I
 
     :goto_2
     goto/16 :goto_7
 
-    :cond_9
+    :cond_a
     const/4 v10, 0x1
 
-    if-eq v6, v10, :cond_a
+    if-eq v6, v10, :cond_b
 
     const/4 v10, 0x3
 
-    if-eq v6, v10, :cond_a
+    if-eq v6, v10, :cond_b
 
     const/4 v10, 0x4
 
-    if-ne v6, v10, :cond_b
+    if-ne v6, v10, :cond_c
 
-    :cond_a
-    if-nez v9, :cond_1c
+    :cond_b
+    if-nez v9, :cond_1d
 
     iget v10, v0, Lcom/android/server/wm/DisplayRotation;->mDeskDockRotation:I
 
-    if-ltz v10, :cond_b
+    if-ltz v10, :cond_c
 
     goto/16 :goto_6
 
-    :cond_b
-    if-nez v7, :cond_c
+    :cond_c
+    if-nez v7, :cond_d
 
     iget-boolean v10, v0, Lcom/android/server/wm/DisplayRotation;->mWifiDisplayConnected:Z
 
-    if-eqz v10, :cond_d
+    if-eqz v10, :cond_e
 
-    :cond_c
+    :cond_d
     iget-boolean v10, v0, Lcom/android/server/wm/DisplayRotation;->mDemoHdmiRotationLock:Z
 
-    if-eqz v10, :cond_d
+    if-eqz v10, :cond_e
 
     iget v4, v0, Lcom/android/server/wm/DisplayRotation;->mDemoHdmiRotation:I
 
     goto/16 :goto_7
 
-    :cond_d
+    :cond_e
     iget-boolean v10, v0, Lcom/android/server/wm/DisplayRotation;->mWifiDisplayConnected:Z
 
-    if-eqz v10, :cond_e
+    if-eqz v10, :cond_f
 
     iget v10, v0, Lcom/android/server/wm/DisplayRotation;->mWifiDisplayRotation:I
 
-    if-le v10, v4, :cond_e
+    if-le v10, v4, :cond_f
 
     iget v4, v0, Lcom/android/server/wm/DisplayRotation;->mWifiDisplayRotation:I
 
     goto/16 :goto_7
 
-    :cond_e
-    if-eqz v7, :cond_f
+    :cond_f
+    if-eqz v7, :cond_10
 
-    if-nez v6, :cond_f
+    if-nez v6, :cond_10
 
     iget v10, v0, Lcom/android/server/wm/DisplayRotation;->mUndockedHdmiRotation:I
 
-    if-ltz v10, :cond_f
+    if-ltz v10, :cond_10
 
     iget v4, v0, Lcom/android/server/wm/DisplayRotation;->mUndockedHdmiRotation:I
 
     goto/16 :goto_7
 
-    :cond_f
+    :cond_10
     iget-boolean v10, v0, Lcom/android/server/wm/DisplayRotation;->mDemoRotationLock:Z
 
-    if-eqz v10, :cond_10
+    if-eqz v10, :cond_11
 
     iget v4, v0, Lcom/android/server/wm/DisplayRotation;->mDemoRotation:I
 
     goto/16 :goto_7
 
-    :cond_10
+    :cond_11
     iget-object v10, v0, Lcom/android/server/wm/DisplayRotation;->mDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
 
     invoke-virtual {v10}, Lcom/android/server/wm/DisplayPolicy;->isPersistentVrModeEnabled()Z
 
     move-result v10
 
-    if-eqz v10, :cond_11
+    if-eqz v10, :cond_12
 
     iget v4, v0, Lcom/android/server/wm/DisplayRotation;->mPortraitRotation:I
 
     goto/16 :goto_7
 
-    :cond_11
+    :cond_12
     const/16 v10, 0xe
 
-    if-ne v1, v10, :cond_12
+    if-ne v1, v10, :cond_13
 
     move/from16 v4, p2
 
     goto/16 :goto_7
 
-    :cond_12
+    :cond_13
     iget-boolean v10, v0, Lcom/android/server/wm/DisplayRotation;->mSupportAutoRotation:Z
 
-    if-nez v10, :cond_13
+    if-nez v10, :cond_14
 
     const/4 v4, -0x1
 
     goto/16 :goto_7
 
-    :cond_13
+    :cond_14
     iget v10, v0, Lcom/android/server/wm/DisplayRotation;->mUserRotationMode:I
 
     const/16 v13, 0xd
 
     const/16 v14, 0xa
 
-    if-nez v10, :cond_14
+    if-nez v10, :cond_15
 
     const/4 v10, 0x2
 
-    if-eq v1, v10, :cond_17
+    if-eq v1, v10, :cond_18
 
-    if-eq v1, v4, :cond_17
+    if-eq v1, v4, :cond_18
 
-    if-eq v1, v12, :cond_17
+    if-eq v1, v12, :cond_18
 
-    if-eq v1, v11, :cond_17
+    if-eq v1, v11, :cond_18
 
-    if-eq v1, v13, :cond_17
+    if-eq v1, v13, :cond_18
 
-    :cond_14
+    :cond_15
     const/4 v10, 0x4
 
-    if-eq v1, v10, :cond_17
+    if-eq v1, v10, :cond_18
 
-    if-eq v1, v14, :cond_17
+    if-eq v1, v14, :cond_18
 
     const/4 v10, 0x6
 
-    if-eq v1, v10, :cond_17
+    if-eq v1, v10, :cond_18
 
     const/4 v10, 0x7
 
-    if-ne v1, v10, :cond_15
+    if-ne v1, v10, :cond_16
 
     goto :goto_3
 
-    :cond_15
+    :cond_16
     iget v4, v0, Lcom/android/server/wm/DisplayRotation;->mUserRotationMode:I
 
     const/4 v10, 0x1
 
-    if-ne v4, v10, :cond_16
+    if-ne v4, v10, :cond_17
 
     const/4 v4, 0x5
 
-    if-eq v1, v4, :cond_16
+    if-eq v1, v4, :cond_17
 
-    if-eqz v1, :cond_16
+    if-eqz v1, :cond_17
 
-    if-eq v1, v10, :cond_16
+    if-eq v1, v10, :cond_17
 
     const/16 v4, 0x8
 
-    if-eq v1, v4, :cond_16
+    if-eq v1, v4, :cond_17
 
     const/16 v4, 0x9
 
-    if-eq v1, v4, :cond_16
+    if-eq v1, v4, :cond_17
 
     iget v4, v0, Lcom/android/server/wm/DisplayRotation;->mUserRotation:I
 
     goto :goto_7
 
-    :cond_16
+    :cond_17
     const/4 v4, -0x1
 
     goto :goto_7
 
-    :cond_17
+    :cond_18
     :goto_3
     iget v10, v0, Lcom/android/server/wm/DisplayRotation;->mAllowAllRotations:I
 
-    if-ne v10, v4, :cond_19
+    if-ne v10, v4, :cond_1a
 
     iget-object v4, v0, Lcom/android/server/wm/DisplayRotation;->mContext:Landroid/content/Context;
 
@@ -3339,75 +3370,75 @@
 
     move-result v4
 
-    if-eqz v4, :cond_18
+    if-eqz v4, :cond_19
 
     const/4 v4, 0x1
 
     goto :goto_4
 
-    :cond_18
+    :cond_19
     const/4 v4, 0x0
 
     :goto_4
     iput v4, v0, Lcom/android/server/wm/DisplayRotation;->mAllowAllRotations:I
 
-    :cond_19
+    :cond_1a
     const/4 v4, 0x2
 
-    if-ne v3, v4, :cond_1b
+    if-ne v3, v4, :cond_1c
 
     iget v4, v0, Lcom/android/server/wm/DisplayRotation;->mAllowAllRotations:I
 
     const/4 v10, 0x1
 
-    if-eq v4, v10, :cond_1b
+    if-eq v4, v10, :cond_1c
 
-    if-eq v1, v14, :cond_1b
+    if-eq v1, v14, :cond_1c
 
-    if-ne v1, v13, :cond_1a
+    if-ne v1, v13, :cond_1b
 
     goto :goto_5
 
-    :cond_1a
+    :cond_1b
     move/from16 v4, p2
 
     goto :goto_7
 
-    :cond_1b
+    :cond_1c
     :goto_5
     move v4, v3
 
     goto :goto_7
 
-    :cond_1c
+    :cond_1d
     :goto_6
-    if-eqz v9, :cond_1d
+    if-eqz v9, :cond_1e
 
     move v4, v3
 
     goto :goto_7
 
-    :cond_1d
+    :cond_1e
     iget v4, v0, Lcom/android/server/wm/DisplayRotation;->mDeskDockRotation:I
 
     :goto_7
-    if-eqz v1, :cond_29
+    if-eqz v1, :cond_2a
 
     const/4 v10, 0x1
 
-    if-eq v1, v10, :cond_27
+    if-eq v1, v10, :cond_28
 
-    if-eq v1, v12, :cond_24
+    if-eq v1, v12, :cond_25
 
-    if-eq v1, v11, :cond_21
+    if-eq v1, v11, :cond_22
 
     packed-switch v1, :pswitch_data_0
 
-    if-ltz v4, :cond_1e
+    if-ltz v4, :cond_1f
 
     return v4
 
-    :cond_1e
+    :cond_1f
     const/4 v10, 0x0
 
     return v10
@@ -3417,11 +3448,11 @@
 
     move-result v10
 
-    if-eqz v10, :cond_1f
+    if-eqz v10, :cond_20
 
     return v4
 
-    :cond_1f
+    :cond_20
     iget v10, v0, Lcom/android/server/wm/DisplayRotation;->mUpsideDownRotation:I
 
     return v10
@@ -3431,87 +3462,87 @@
 
     move-result v10
 
-    if-eqz v10, :cond_20
+    if-eqz v10, :cond_21
 
     return v4
 
-    :cond_20
+    :cond_21
     iget v10, v0, Lcom/android/server/wm/DisplayRotation;->mSeascapeRotation:I
 
     return v10
 
-    :cond_21
+    :cond_22
     :pswitch_2
     invoke-direct {v0, v4}, Lcom/android/server/wm/DisplayRotation;->isAnyPortrait(I)Z
 
     move-result v10
 
-    if-eqz v10, :cond_22
+    if-eqz v10, :cond_23
 
     return v4
 
-    :cond_22
+    :cond_23
     invoke-direct {v0, v2}, Lcom/android/server/wm/DisplayRotation;->isAnyPortrait(I)Z
 
     move-result v10
 
-    if-eqz v10, :cond_23
+    if-eqz v10, :cond_24
 
     return v2
 
-    :cond_23
+    :cond_24
     iget v10, v0, Lcom/android/server/wm/DisplayRotation;->mPortraitRotation:I
 
     return v10
 
-    :cond_24
+    :cond_25
     :pswitch_3
     invoke-direct {v0, v4}, Lcom/android/server/wm/DisplayRotation;->isLandscapeOrSeascape(I)Z
 
     move-result v10
 
-    if-eqz v10, :cond_25
+    if-eqz v10, :cond_26
 
     return v4
 
-    :cond_25
+    :cond_26
     invoke-direct {v0, v2}, Lcom/android/server/wm/DisplayRotation;->isLandscapeOrSeascape(I)Z
 
     move-result v10
 
-    if-eqz v10, :cond_26
+    if-eqz v10, :cond_27
 
     return v2
 
-    :cond_26
+    :cond_27
     iget v10, v0, Lcom/android/server/wm/DisplayRotation;->mLandscapeRotation:I
 
     return v10
 
-    :cond_27
+    :cond_28
     invoke-direct {v0, v4}, Lcom/android/server/wm/DisplayRotation;->isAnyPortrait(I)Z
 
     move-result v10
 
-    if-eqz v10, :cond_28
+    if-eqz v10, :cond_29
 
     return v4
 
-    :cond_28
+    :cond_29
     iget v10, v0, Lcom/android/server/wm/DisplayRotation;->mPortraitRotation:I
 
     return v10
 
-    :cond_29
+    :cond_2a
     invoke-direct {v0, v4}, Lcom/android/server/wm/DisplayRotation;->isLandscapeOrSeascape(I)Z
 
     move-result v10
 
-    if-eqz v10, :cond_2a
+    if-eqz v10, :cond_2b
 
     return v4
 
-    :cond_2a
+    :cond_2b
     iget v10, v0, Lcom/android/server/wm/DisplayRotation;->mLandscapeRotation:I
 
     return v10

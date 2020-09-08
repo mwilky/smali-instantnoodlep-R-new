@@ -2446,7 +2446,7 @@
 
     new-instance v5, Lcom/android/server/am/-$$Lambda$AppExitInfoTracker$eDSFQ6mRzgNt-3VDBtVv4kawCFk;
 
-    invoke-direct {v5, p0, p2, p5, p3}, Lcom/android/server/am/-$$Lambda$AppExitInfoTracker$eDSFQ6mRzgNt-3VDBtVv4kawCFk;-><init>(Lcom/android/server/am/AppExitInfoTracker;ILjava/util/ArrayList;I)V
+    invoke-direct {v5, p0, p2, v4, p3}, Lcom/android/server/am/-$$Lambda$AppExitInfoTracker$eDSFQ6mRzgNt-3VDBtVv4kawCFk;-><init>(Lcom/android/server/am/AppExitInfoTracker;ILjava/util/ArrayList;I)V
 
     invoke-direct {p0, v5}, Lcom/android/server/am/AppExitInfoTracker;->forEachPackageLocked(Ljava/util/function/BiFunction;)V
 

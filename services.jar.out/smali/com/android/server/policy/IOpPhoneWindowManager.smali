@@ -4,6 +4,9 @@
 
 
 # virtual methods
+.method public abstract forceShuttingDownPortait()V
+.end method
+
 .method public abstract init(Landroid/content/Context;Landroid/view/IWindowManager;Lcom/android/server/policy/WindowManagerPolicy$WindowManagerFuncs;)V
 .end method
 
@@ -20,6 +23,9 @@
 .end method
 
 .method public abstract isGestureSideEnabled()Z
+.end method
+
+.method public abstract isShuttingDown()Z
 .end method
 
 .method public abstract notifyLockTaskMode(Z)V

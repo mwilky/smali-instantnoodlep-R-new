@@ -210,7 +210,7 @@
 .end method
 
 .method public getPrimaryClipDescription(Ljava/lang/String;I)Landroid/content/ClipDescription;
-    .locals 5
+    .locals 7
 
     monitor-enter p0
 
@@ -219,50 +219,56 @@
 
     invoke-static {v0, p1, p2}, Lcom/android/server/clipboard/ClipboardService;->access$300(Lcom/android/server/clipboard/ClipboardService;Ljava/lang/String;I)I
 
+    move-result v4
+
+    invoke-static {v4}, Landroid/os/UserHandle;->getUserId(I)I
+
     move-result v0
 
-    invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
+    iget-object v1, p0, Lcom/android/server/clipboard/ClipboardService$ClipboardImpl;->this$0:Lcom/android/server/clipboard/ClipboardService;
+
+    const/16 v2, 0x1d
+
+    const/4 v6, 0x0
+
+    move-object v3, p1
+
+    move v5, v0
+
+    invoke-static/range {v1 .. v6}, Lcom/android/server/clipboard/ClipboardService;->access$800(Lcom/android/server/clipboard/ClipboardService;ILjava/lang/String;IIZ)Z
 
     move-result v1
 
-    iget-object v2, p0, Lcom/android/server/clipboard/ClipboardService$ClipboardImpl;->this$0:Lcom/android/server/clipboard/ClipboardService;
+    const/4 v2, 0x0
 
-    const/16 v3, 0x1d
+    if-eqz v1, :cond_2
 
-    invoke-static {v2, v3, p1, v0, v1}, Lcom/android/server/clipboard/ClipboardService;->access$400(Lcom/android/server/clipboard/ClipboardService;ILjava/lang/String;II)Z
+    iget-object v1, p0, Lcom/android/server/clipboard/ClipboardService$ClipboardImpl;->this$0:Lcom/android/server/clipboard/ClipboardService;
 
-    move-result v2
+    invoke-static {v1, v0}, Lcom/android/server/clipboard/ClipboardService;->access$600(Lcom/android/server/clipboard/ClipboardService;I)Z
 
-    const/4 v3, 0x0
+    move-result v1
 
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lcom/android/server/clipboard/ClipboardService$ClipboardImpl;->this$0:Lcom/android/server/clipboard/ClipboardService;
-
-    invoke-static {v2, v1}, Lcom/android/server/clipboard/ClipboardService;->access$600(Lcom/android/server/clipboard/ClipboardService;I)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
+    if-eqz v1, :cond_0
 
     goto :goto_1
 
     :cond_0
-    iget-object v2, p0, Lcom/android/server/clipboard/ClipboardService$ClipboardImpl;->this$0:Lcom/android/server/clipboard/ClipboardService;
+    iget-object v1, p0, Lcom/android/server/clipboard/ClipboardService$ClipboardImpl;->this$0:Lcom/android/server/clipboard/ClipboardService;
 
-    invoke-static {v2, v1}, Lcom/android/server/clipboard/ClipboardService;->access$100(Lcom/android/server/clipboard/ClipboardService;I)Lcom/android/server/clipboard/ClipboardService$PerUserClipboard;
+    invoke-static {v1, v0}, Lcom/android/server/clipboard/ClipboardService;->access$100(Lcom/android/server/clipboard/ClipboardService;I)Lcom/android/server/clipboard/ClipboardService$PerUserClipboard;
+
+    move-result-object v1
+
+    iget-object v3, v1, Lcom/android/server/clipboard/ClipboardService$PerUserClipboard;->primaryClip:Landroid/content/ClipData;
+
+    if-eqz v3, :cond_1
+
+    iget-object v2, v1, Lcom/android/server/clipboard/ClipboardService$PerUserClipboard;->primaryClip:Landroid/content/ClipData;
+
+    invoke-virtual {v2}, Landroid/content/ClipData;->getDescription()Landroid/content/ClipDescription;
 
     move-result-object v2
-
-    iget-object v4, v2, Lcom/android/server/clipboard/ClipboardService$PerUserClipboard;->primaryClip:Landroid/content/ClipData;
-
-    if-eqz v4, :cond_1
-
-    iget-object v3, v2, Lcom/android/server/clipboard/ClipboardService$PerUserClipboard;->primaryClip:Landroid/content/ClipData;
-
-    invoke-virtual {v3}, Landroid/content/ClipData;->getDescription()Landroid/content/ClipDescription;
-
-    move-result-object v3
 
     goto :goto_0
 
@@ -272,13 +278,13 @@
     :goto_0
     monitor-exit p0
 
-    return-object v3
+    return-object v2
 
     :cond_2
     :goto_1
     monitor-exit p0
 
-    return-object v3
+    return-object v2
 
     :catchall_0
     move-exception v0
@@ -291,7 +297,7 @@
 .end method
 
 .method public hasClipboardText(Ljava/lang/String;I)Z
-    .locals 6
+    .locals 7
 
     monitor-enter p0
 
@@ -300,80 +306,86 @@
 
     invoke-static {v0, p1, p2}, Lcom/android/server/clipboard/ClipboardService;->access$300(Lcom/android/server/clipboard/ClipboardService;Ljava/lang/String;I)I
 
+    move-result v4
+
+    invoke-static {v4}, Landroid/os/UserHandle;->getUserId(I)I
+
     move-result v0
 
-    invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
+    iget-object v1, p0, Lcom/android/server/clipboard/ClipboardService$ClipboardImpl;->this$0:Lcom/android/server/clipboard/ClipboardService;
+
+    const/16 v2, 0x1d
+
+    const/4 v6, 0x0
+
+    move-object v3, p1
+
+    move v5, v0
+
+    invoke-static/range {v1 .. v6}, Lcom/android/server/clipboard/ClipboardService;->access$800(Lcom/android/server/clipboard/ClipboardService;ILjava/lang/String;IIZ)Z
 
     move-result v1
 
-    iget-object v2, p0, Lcom/android/server/clipboard/ClipboardService$ClipboardImpl;->this$0:Lcom/android/server/clipboard/ClipboardService;
+    const/4 v2, 0x0
 
-    const/16 v3, 0x1d
+    if-eqz v1, :cond_3
 
-    invoke-static {v2, v3, p1, v0, v1}, Lcom/android/server/clipboard/ClipboardService;->access$400(Lcom/android/server/clipboard/ClipboardService;ILjava/lang/String;II)Z
+    iget-object v1, p0, Lcom/android/server/clipboard/ClipboardService$ClipboardImpl;->this$0:Lcom/android/server/clipboard/ClipboardService;
 
-    move-result v2
+    invoke-static {v1, v0}, Lcom/android/server/clipboard/ClipboardService;->access$600(Lcom/android/server/clipboard/ClipboardService;I)Z
 
-    const/4 v3, 0x0
+    move-result v1
 
-    if-eqz v2, :cond_3
-
-    iget-object v2, p0, Lcom/android/server/clipboard/ClipboardService$ClipboardImpl;->this$0:Lcom/android/server/clipboard/ClipboardService;
-
-    invoke-static {v2, v1}, Lcom/android/server/clipboard/ClipboardService;->access$600(Lcom/android/server/clipboard/ClipboardService;I)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
+    if-eqz v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget-object v2, p0, Lcom/android/server/clipboard/ClipboardService$ClipboardImpl;->this$0:Lcom/android/server/clipboard/ClipboardService;
+    iget-object v1, p0, Lcom/android/server/clipboard/ClipboardService$ClipboardImpl;->this$0:Lcom/android/server/clipboard/ClipboardService;
 
-    invoke-static {v2, v1}, Lcom/android/server/clipboard/ClipboardService;->access$100(Lcom/android/server/clipboard/ClipboardService;I)Lcom/android/server/clipboard/ClipboardService$PerUserClipboard;
+    invoke-static {v1, v0}, Lcom/android/server/clipboard/ClipboardService;->access$100(Lcom/android/server/clipboard/ClipboardService;I)Lcom/android/server/clipboard/ClipboardService$PerUserClipboard;
 
-    move-result-object v2
+    move-result-object v1
 
-    iget-object v4, v2, Lcom/android/server/clipboard/ClipboardService$PerUserClipboard;->primaryClip:Landroid/content/ClipData;
+    iget-object v3, v1, Lcom/android/server/clipboard/ClipboardService$PerUserClipboard;->primaryClip:Landroid/content/ClipData;
 
-    if-eqz v4, :cond_2
+    if-eqz v3, :cond_2
 
-    iget-object v4, v2, Lcom/android/server/clipboard/ClipboardService$PerUserClipboard;->primaryClip:Landroid/content/ClipData;
+    iget-object v3, v1, Lcom/android/server/clipboard/ClipboardService$PerUserClipboard;->primaryClip:Landroid/content/ClipData;
 
-    invoke-virtual {v4, v3}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
+    invoke-virtual {v3, v2}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-virtual {v4}, Landroid/content/ClipData$Item;->getText()Ljava/lang/CharSequence;
+    invoke-virtual {v3}, Landroid/content/ClipData$Item;->getText()Ljava/lang/CharSequence;
 
-    move-result-object v4
+    move-result-object v3
 
-    if-eqz v4, :cond_1
+    if-eqz v3, :cond_1
 
-    invoke-interface {v4}, Ljava/lang/CharSequence;->length()I
+    invoke-interface {v3}, Ljava/lang/CharSequence;->length()I
 
     move-result v5
 
     if-lez v5, :cond_1
 
-    const/4 v3, 0x1
+    const/4 v2, 0x1
 
     :cond_1
     monitor-exit p0
 
-    return v3
+    return v2
 
     :cond_2
     monitor-exit p0
 
-    return v3
+    return v2
 
     :cond_3
     :goto_0
     monitor-exit p0
 
-    return v3
+    return v2
 
     :catchall_0
     move-exception v0
@@ -386,7 +398,7 @@
 .end method
 
 .method public hasPrimaryClip(Ljava/lang/String;I)Z
-    .locals 4
+    .locals 7
 
     monitor-enter p0
 
@@ -395,57 +407,63 @@
 
     invoke-static {v0, p1, p2}, Lcom/android/server/clipboard/ClipboardService;->access$300(Lcom/android/server/clipboard/ClipboardService;Ljava/lang/String;I)I
 
+    move-result v4
+
+    invoke-static {v4}, Landroid/os/UserHandle;->getUserId(I)I
+
     move-result v0
 
-    invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
+    iget-object v1, p0, Lcom/android/server/clipboard/ClipboardService$ClipboardImpl;->this$0:Lcom/android/server/clipboard/ClipboardService;
+
+    const/16 v2, 0x1d
+
+    const/4 v6, 0x0
+
+    move-object v3, p1
+
+    move v5, v0
+
+    invoke-static/range {v1 .. v6}, Lcom/android/server/clipboard/ClipboardService;->access$800(Lcom/android/server/clipboard/ClipboardService;ILjava/lang/String;IIZ)Z
 
     move-result v1
 
-    iget-object v2, p0, Lcom/android/server/clipboard/ClipboardService$ClipboardImpl;->this$0:Lcom/android/server/clipboard/ClipboardService;
+    const/4 v2, 0x0
 
-    const/16 v3, 0x1d
+    if-eqz v1, :cond_2
 
-    invoke-static {v2, v3, p1, v0, v1}, Lcom/android/server/clipboard/ClipboardService;->access$400(Lcom/android/server/clipboard/ClipboardService;ILjava/lang/String;II)Z
+    iget-object v1, p0, Lcom/android/server/clipboard/ClipboardService$ClipboardImpl;->this$0:Lcom/android/server/clipboard/ClipboardService;
 
-    move-result v2
+    invoke-static {v1, v0}, Lcom/android/server/clipboard/ClipboardService;->access$600(Lcom/android/server/clipboard/ClipboardService;I)Z
 
-    const/4 v3, 0x0
+    move-result v1
 
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lcom/android/server/clipboard/ClipboardService$ClipboardImpl;->this$0:Lcom/android/server/clipboard/ClipboardService;
-
-    invoke-static {v2, v1}, Lcom/android/server/clipboard/ClipboardService;->access$600(Lcom/android/server/clipboard/ClipboardService;I)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
+    if-eqz v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget-object v2, p0, Lcom/android/server/clipboard/ClipboardService$ClipboardImpl;->this$0:Lcom/android/server/clipboard/ClipboardService;
+    iget-object v1, p0, Lcom/android/server/clipboard/ClipboardService$ClipboardImpl;->this$0:Lcom/android/server/clipboard/ClipboardService;
 
-    invoke-static {v2, v1}, Lcom/android/server/clipboard/ClipboardService;->access$100(Lcom/android/server/clipboard/ClipboardService;I)Lcom/android/server/clipboard/ClipboardService$PerUserClipboard;
+    invoke-static {v1, v0}, Lcom/android/server/clipboard/ClipboardService;->access$100(Lcom/android/server/clipboard/ClipboardService;I)Lcom/android/server/clipboard/ClipboardService$PerUserClipboard;
 
-    move-result-object v2
+    move-result-object v1
 
-    iget-object v2, v2, Lcom/android/server/clipboard/ClipboardService$PerUserClipboard;->primaryClip:Landroid/content/ClipData;
+    iget-object v1, v1, Lcom/android/server/clipboard/ClipboardService$PerUserClipboard;->primaryClip:Landroid/content/ClipData;
 
-    if-eqz v2, :cond_1
+    if-eqz v1, :cond_1
 
-    const/4 v3, 0x1
+    const/4 v2, 0x1
 
     :cond_1
     monitor-exit p0
 
-    return v3
+    return v2
 
     :cond_2
     :goto_0
     monitor-exit p0
 
-    return v3
+    return v2
 
     :catchall_0
     move-exception v0
@@ -499,7 +517,7 @@
     :try_start_0
     iget-object v0, p0, Lcom/android/server/clipboard/ClipboardService$ClipboardImpl;->this$0:Lcom/android/server/clipboard/ClipboardService;
 
-    invoke-static {v0, p2, p3}, Lcom/android/server/clipboard/ClipboardService;->access$800(Lcom/android/server/clipboard/ClipboardService;Ljava/lang/String;I)I
+    invoke-static {v0, p2, p3}, Lcom/android/server/clipboard/ClipboardService;->access$900(Lcom/android/server/clipboard/ClipboardService;Ljava/lang/String;I)I
 
     move-result v0
 

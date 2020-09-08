@@ -101,7 +101,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x3f
+    const/16 v2, 0x3d
 
     const/4 v3, 0x0
 
@@ -115,7 +115,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x3e
+    const/16 v2, 0x3c
 
     aput v2, v1, v3
 
@@ -1251,32 +1251,32 @@
     return-object v1
 .end method
 
-.method public getAuthenticatorId(Ljava/lang/String;)J
+.method public getAuthenticatorId(I)J
     .locals 4
 
-    invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0, p1}, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->getUserOrWorkProfileId(Ljava/lang/String;I)I
 
     move-result v0
 
-    invoke-virtual {p0, p1, v0}, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->getUserOrWorkProfileId(Ljava/lang/String;I)I
+    const-wide/16 v1, 0x0
 
-    move-result v0
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
+    move-result-object v1
 
-    move-result v1
+    const/16 v2, 0x3e7
 
-    const-wide/16 v2, 0x0
+    if-ne p1, v2, :cond_0
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    const-string v2, "OpFingerprintService"
 
-    move-result-object v2
+    const-string v3, "getAuthenticatorId double"
 
-    const/16 v3, 0x3e7
+    invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-ne v1, v3, :cond_0
-
-    iget-object v1, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mAuthenticatorIds:Ljava/util/Map;
+    iget-object v2, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mAuthenticatorIds:Ljava/util/Map;
 
     const/4 v3, 0x0
 
@@ -1284,7 +1284,7 @@
 
     move-result-object v3
 
-    invoke-interface {v1, v3, v2}, Ljava/util/Map;->getOrDefault(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v2, v3, v1}, Ljava/util/Map;->getOrDefault(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -1297,13 +1297,13 @@
     return-wide v1
 
     :cond_0
-    iget-object v1, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mAuthenticatorIds:Ljava/util/Map;
+    iget-object v2, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mAuthenticatorIds:Ljava/util/Map;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    invoke-interface {v1, v3, v2}, Ljava/util/Map;->getOrDefault(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v2, v3, v1}, Ljava/util/Map;->getOrDefault(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -1380,7 +1380,7 @@
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mExtDaemon:Lvendor/oneplus/fingerprint/extension/V1_0/IVendorFingerprintExtensions;
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_0
 
     const-string v0, "OpFingerprintService"
 
@@ -1441,17 +1441,6 @@
 
     :cond_0
     :try_start_3
-    iget-object v0, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mExtDaemon:Lvendor/oneplus/fingerprint/extension/V1_0/IVendorFingerprintExtensions;
-
-    invoke-interface {v0}, Lvendor/oneplus/fingerprint/extension/V1_0/IVendorFingerprintExtensions;->asBinder()Landroid/os/IHwBinder;
-
-    move-result-object v0
-
-    const-wide/16 v1, 0x0
-
-    invoke-interface {v0, p0, v1, v2}, Landroid/os/IHwBinder;->linkToDeath(Landroid/os/IHwBinder$DeathRecipient;J)Z
-
-    :cond_1
     iget-object v0, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mExtDaemon:Lvendor/oneplus/fingerprint/extension/V1_0/IVendorFingerprintExtensions;
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -1717,7 +1706,7 @@
 
     new-array v0, v0, [I
 
-    const/16 v1, 0x70
+    const/16 v1, 0x6a
 
     const/4 v2, 0x0
 
@@ -1808,6 +1797,18 @@
     iget-object v0, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mFingerprintConfig:Lcom/oneplus/onlineconfig/OpFingerprintConfig;
 
     invoke-virtual {v0}, Lcom/oneplus/onlineconfig/OpFingerprintConfig;->resolveOnlineConfig()V
+
+    return-void
+.end method
+
+.method public serviceDied(J)V
+    .locals 1
+
+    invoke-super {p0, p1, p2}, Lcom/android/server/biometrics/BiometricServiceBase;->serviceDied(J)V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mExtDaemon:Lvendor/oneplus/fingerprint/extension/V1_0/IVendorFingerprintExtensions;
 
     return-void
 .end method

@@ -49,6 +49,14 @@
     return-void
 .end method
 
+.method static synthetic lambda$onPermissionRevoked$2(IILjava/lang/String;)V
+    .locals 0
+
+    invoke-static {p0, p1, p2}, Lcom/android/server/pm/permission/PermissionManagerService;->killUid(IILjava/lang/String;)V
+
+    return-void
+.end method
+
 
 # virtual methods
 .method public onGidsChanged(II)V
@@ -173,7 +181,7 @@
     return-void
 .end method
 
-.method public onPermissionRevoked(II)V
+.method public onPermissionRevoked(IILjava/lang/String;)V
     .locals 3
 
     iget-object v0, p0, Lcom/android/server/pm/permission/PermissionManagerService$1;->this$0:Lcom/android/server/pm/permission/PermissionManagerService;
@@ -198,6 +206,8 @@
 
     move-result v0
 
+    if-nez p3, :cond_0
+
     iget-object v1, p0, Lcom/android/server/pm/permission/PermissionManagerService$1;->this$0:Lcom/android/server/pm/permission/PermissionManagerService;
 
     invoke-static {v1}, Lcom/android/server/pm/permission/PermissionManagerService;->access$000(Lcom/android/server/pm/permission/PermissionManagerService;)Landroid/os/Handler;
@@ -210,6 +220,22 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
+    goto :goto_0
+
+    :cond_0
+    iget-object v1, p0, Lcom/android/server/pm/permission/PermissionManagerService$1;->this$0:Lcom/android/server/pm/permission/PermissionManagerService;
+
+    invoke-static {v1}, Lcom/android/server/pm/permission/PermissionManagerService;->access$000(Lcom/android/server/pm/permission/PermissionManagerService;)Landroid/os/Handler;
+
+    move-result-object v1
+
+    new-instance v2, Lcom/android/server/pm/permission/-$$Lambda$PermissionManagerService$1$5y_AV_Q7BQ7QMC5yBezSflQuMpw;
+
+    invoke-direct {v2, v0, p2, p3}, Lcom/android/server/pm/permission/-$$Lambda$PermissionManagerService$1$5y_AV_Q7BQ7QMC5yBezSflQuMpw;-><init>(IILjava/lang/String;)V
+
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    :goto_0
     return-void
 .end method
 

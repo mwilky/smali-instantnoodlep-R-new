@@ -20,6 +20,8 @@
 
 .field private final mRemoteRenderService:Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;
 
+.field private final mSessionId:I
+
 .field private final mStartIntentSenderFromClientApp:Ljava/util/function/Consumer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -29,6 +31,8 @@
         }
     .end annotation
 .end field
+
+.field private final mUserId:I
 
 
 # direct methods
@@ -46,12 +50,13 @@
     return-void
 .end method
 
-.method constructor <init>(Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;Landroid/service/autofill/InlinePresentation;Landroid/os/IBinder;ILjava/lang/Runnable;Ljava/lang/Runnable;Ljava/util/function/Consumer;)V
+.method constructor <init>(Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;IILandroid/service/autofill/InlinePresentation;Landroid/os/IBinder;ILjava/lang/Runnable;Ljava/lang/Runnable;Ljava/util/function/Consumer;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;",
+            "II",
             "Landroid/service/autofill/InlinePresentation;",
             "Landroid/os/IBinder;",
             "I",
@@ -67,17 +72,21 @@
 
     iput-object p1, p0, Lcom/android/server/autofill/ui/RemoteInlineSuggestionViewConnector;->mRemoteRenderService:Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;
 
-    iput-object p2, p0, Lcom/android/server/autofill/ui/RemoteInlineSuggestionViewConnector;->mInlinePresentation:Landroid/service/autofill/InlinePresentation;
+    iput-object p4, p0, Lcom/android/server/autofill/ui/RemoteInlineSuggestionViewConnector;->mInlinePresentation:Landroid/service/autofill/InlinePresentation;
 
-    iput-object p3, p0, Lcom/android/server/autofill/ui/RemoteInlineSuggestionViewConnector;->mHostInputToken:Landroid/os/IBinder;
+    iput-object p5, p0, Lcom/android/server/autofill/ui/RemoteInlineSuggestionViewConnector;->mHostInputToken:Landroid/os/IBinder;
 
-    iput p4, p0, Lcom/android/server/autofill/ui/RemoteInlineSuggestionViewConnector;->mDisplayId:I
+    iput p6, p0, Lcom/android/server/autofill/ui/RemoteInlineSuggestionViewConnector;->mDisplayId:I
 
-    iput-object p5, p0, Lcom/android/server/autofill/ui/RemoteInlineSuggestionViewConnector;->mOnAutofillCallback:Ljava/lang/Runnable;
+    iput p2, p0, Lcom/android/server/autofill/ui/RemoteInlineSuggestionViewConnector;->mUserId:I
 
-    iput-object p6, p0, Lcom/android/server/autofill/ui/RemoteInlineSuggestionViewConnector;->mOnErrorCallback:Ljava/lang/Runnable;
+    iput p3, p0, Lcom/android/server/autofill/ui/RemoteInlineSuggestionViewConnector;->mSessionId:I
 
-    iput-object p7, p0, Lcom/android/server/autofill/ui/RemoteInlineSuggestionViewConnector;->mStartIntentSenderFromClientApp:Ljava/util/function/Consumer;
+    iput-object p7, p0, Lcom/android/server/autofill/ui/RemoteInlineSuggestionViewConnector;->mOnAutofillCallback:Ljava/lang/Runnable;
+
+    iput-object p8, p0, Lcom/android/server/autofill/ui/RemoteInlineSuggestionViewConnector;->mOnErrorCallback:Ljava/lang/Runnable;
+
+    iput-object p9, p0, Lcom/android/server/autofill/ui/RemoteInlineSuggestionViewConnector;->mStartIntentSenderFromClientApp:Ljava/util/function/Consumer;
 
     return-void
 .end method
@@ -146,7 +155,7 @@
 .end method
 
 .method public renderSuggestion(IILandroid/service/autofill/IInlineSuggestionUiCallback;)Z
-    .locals 9
+    .locals 11
 
     iget-object v0, p0, Lcom/android/server/autofill/ui/RemoteInlineSuggestionViewConnector;->mRemoteRenderService:Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;
 
@@ -171,13 +180,17 @@
 
     iget v8, p0, Lcom/android/server/autofill/ui/RemoteInlineSuggestionViewConnector;->mDisplayId:I
 
+    iget v9, p0, Lcom/android/server/autofill/ui/RemoteInlineSuggestionViewConnector;->mUserId:I
+
+    iget v10, p0, Lcom/android/server/autofill/ui/RemoteInlineSuggestionViewConnector;->mSessionId:I
+
     move-object v3, p3
 
     move v5, p1
 
     move v6, p2
 
-    invoke-virtual/range {v2 .. v8}, Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;->renderSuggestion(Landroid/service/autofill/IInlineSuggestionUiCallback;Landroid/service/autofill/InlinePresentation;IILandroid/os/IBinder;I)V
+    invoke-virtual/range {v2 .. v10}, Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;->renderSuggestion(Landroid/service/autofill/IInlineSuggestionUiCallback;Landroid/service/autofill/InlinePresentation;IILandroid/os/IBinder;III)V
 
     const/4 v0, 0x1
 

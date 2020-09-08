@@ -502,7 +502,7 @@
 
     if-eqz v5, :cond_1
 
-    const-string v5, "Startup: Bluetooth persisted state is ON."
+    const-string v5, "Startup: Bluetooth persisted state is ON. Setup mEnableExternal = true"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -3103,7 +3103,7 @@
 
     if-nez v1, :cond_0
 
-    const-string v1, "invalid bluetooth name and address stored"
+    const-string/jumbo v1, "invalid bluetooth name and address stored"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -5318,7 +5318,7 @@
 .end method
 
 .method public disable(Ljava/lang/String;Z)Z
-    .locals 7
+    .locals 8
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -5438,6 +5438,28 @@
 
     iput-boolean v2, p0, Lcom/android/server/BluetoothManagerService;->mEnableExternal:Z
 
+    const-string v5, "BluetoothManagerService"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "disable(): Setup mEnableExternal = false. isBluetoothPersistedStateOnAirplane() = "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Lcom/android/server/BluetoothManagerService;->isBluetoothPersistedStateOnAirplane()Z
+
+    move-result v7
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v5, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     :cond_3
     if-eqz p2, :cond_4
 
@@ -5467,6 +5489,12 @@
     invoke-virtual {v5}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;->lock()V
 
     iput-boolean v2, p0, Lcom/android/server/BluetoothManagerService;->mEnableExternal:Z
+
+    const-string v5, "BluetoothManagerService"
+
+    const-string v6, "disable(): Setup mEnableExternal = false"
+
+    invoke-static {v5, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object v5, p0, Lcom/android/server/BluetoothManagerService;->mBluetooth:Landroid/bluetooth/IBluetooth;
 
@@ -6366,7 +6394,7 @@
 .end method
 
 .method public enable(Ljava/lang/String;)Z
-    .locals 6
+    .locals 7
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -6489,6 +6517,12 @@
     iput-boolean v2, p0, Lcom/android/server/BluetoothManagerService;->mQuietEnableExternal:Z
 
     iput-boolean v0, p0, Lcom/android/server/BluetoothManagerService;->mEnableExternal:Z
+
+    const-string v5, "BluetoothManagerService"
+
+    const-string v6, "enable(): Setup mEnableExternal = true"
+
+    invoke-static {v5, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-direct {p0, v2, v0, p1}, Lcom/android/server/BluetoothManagerService;->sendEnableMsg(ZILjava/lang/String;)V
 
@@ -6643,7 +6677,7 @@
 .end method
 
 .method public enableNoAutoConnect(Ljava/lang/String;)Z
-    .locals 3
+    .locals 5
 
     const/4 v0, 0x0
 
@@ -6733,6 +6767,12 @@
     iput-boolean v2, p0, Lcom/android/server/BluetoothManagerService;->mQuietEnableExternal:Z
 
     iput-boolean v2, p0, Lcom/android/server/BluetoothManagerService;->mEnableExternal:Z
+
+    const-string v3, "BluetoothManagerService"
+
+    const-string v4, "enableNoAutoConnect(): Setup mEnableExternal = true"
+
+    invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-direct {p0, v2, v2, p1}, Lcom/android/server/BluetoothManagerService;->sendEnableMsg(ZILjava/lang/String;)V
 

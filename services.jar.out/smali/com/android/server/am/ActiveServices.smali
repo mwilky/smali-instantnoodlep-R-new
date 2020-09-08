@@ -175,7 +175,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 4
 
     sget-boolean v0, Lcom/android/server/am/ActivityManagerDebugConfig;->DEBUG_SERVICE:Z
 
@@ -217,7 +217,9 @@
 
     const-string v2, "com.tencent.mm"
 
-    filled-new-array {v1, v2}, [Ljava/lang/String;
+    const-string v3, "com.whatsapp"
+
+    filled-new-array {v1, v2, v3}, [Ljava/lang/String;
 
     move-result-object v1
 
@@ -8894,10 +8896,6 @@
 
     if-ne v11, v10, :cond_1d
 
-    and-int/lit8 v11, v10, 0x8
-
-    if-eqz v11, :cond_6
-
     iget-boolean v11, v2, Lcom/android/server/am/ServiceRecord;->mAllowWhileInUsePermissionInFgs:Z
 
     if-nez v11, :cond_6
@@ -8906,7 +8904,7 @@
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v12, "BG started FGS can not have location capability: service "
+    const-string v12, "Foreground service started from background can not have location/camera/microphone access: service "
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -17653,7 +17651,7 @@
 
     const/4 v6, 0x1
 
-    if-eqz v13, :cond_4
+    if-eqz v13, :cond_3
 
     iget-object v0, v12, Lcom/android/server/am/ActiveServices;->mAm:Lcom/android/server/am/ActivityManagerService;
 
@@ -17661,94 +17659,72 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/android/server/am/ActivityManagerServiceInjector;->getInstance()Lcom/android/server/am/ActivityManagerServiceInjector;
+    if-eqz v0, :cond_2
 
-    move-result-object v1
-
-    invoke-virtual {v1, v10}, Lcom/android/server/am/ActivityManagerServiceInjector;->isAllowLaunchBackground(Ljava/lang/String;)Z
-
-    move-result v1
+    iget v1, v0, Lcom/android/server/am/ProcessRecord;->setSchedGroup:I
 
     if-eqz v1, :cond_1
 
-    const/4 v1, 0x1
+    move v1, v6
 
     goto :goto_1
 
     :cond_1
-    move/from16 v1, p10
+    move v1, v7
 
     :goto_1
-    if-eqz v0, :cond_3
+    move v0, v1
 
-    iget v2, v0, Lcom/android/server/am/ProcessRecord;->setSchedGroup:I
-
-    if-eqz v2, :cond_2
-
-    move v2, v6
+    move v5, v0
 
     goto :goto_2
 
     :cond_2
-    move v2, v7
+    new-instance v1, Ljava/lang/SecurityException;
 
-    :goto_2
-    move v0, v2
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    move v5, v0
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    move/from16 v16, v1
+    const-string v3, "Unable to find app for caller "
 
-    goto :goto_3
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v3, " (pid="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v15}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v3, ") when starting service "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
+
+    throw v1
 
     :cond_3
-    new-instance v2, Ljava/lang/SecurityException;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "Unable to find app for caller "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v4, " (pid="
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v15}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v4, ") when starting service "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
-
-    throw v2
-
-    :cond_4
     const/4 v0, 0x1
-
-    move/from16 v16, p10
 
     move v5, v0
 
-    :goto_3
+    :goto_2
     const/4 v2, 0x0
 
-    const/16 v17, 0x1
+    const/16 v16, 0x1
+
+    const/16 v17, 0x0
 
     const/16 v18, 0x0
-
-    const/16 v19, 0x0
 
     move-object/from16 v0, p0
 
@@ -17758,7 +17734,7 @@
 
     move-object/from16 v4, p7
 
-    move/from16 p10, v5
+    move/from16 v19, v5
 
     move/from16 v5, p4
 
@@ -17766,17 +17742,17 @@
 
     move/from16 v7, p9
 
-    move/from16 v8, v17
+    move/from16 v8, v16
 
     move-object/from16 v21, v9
 
-    move/from16 v9, p10
+    move/from16 v9, v19
 
-    move/from16 v10, v18
+    move/from16 v10, v17
 
     move v13, v11
 
-    move/from16 v11, v19
+    move/from16 v11, v18
 
     invoke-direct/range {v0 .. v11}, Lcom/android/server/am/ActiveServices;->retrieveServiceLocked(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIIZZZZ)Lcom/android/server/am/ActiveServices$ServiceLookupResult;
 
@@ -17784,36 +17760,36 @@
 
     const/4 v9, 0x0
 
-    if-nez v8, :cond_5
+    if-nez v8, :cond_4
 
     return-object v9
 
-    :cond_5
+    :cond_4
     iget-object v0, v8, Lcom/android/server/am/ActiveServices$ServiceLookupResult;->record:Lcom/android/server/am/ServiceRecord;
 
-    if-nez v0, :cond_7
+    if-nez v0, :cond_6
 
     new-instance v0, Landroid/content/ComponentName;
 
     iget-object v1, v8, Lcom/android/server/am/ActiveServices$ServiceLookupResult;->permission:Ljava/lang/String;
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_5
 
     iget-object v1, v8, Lcom/android/server/am/ActiveServices$ServiceLookupResult;->permission:Ljava/lang/String;
 
-    goto :goto_4
+    goto :goto_3
 
-    :cond_6
+    :cond_5
     const-string/jumbo v1, "private to package"
 
-    :goto_4
+    :goto_3
     const-string v2, "!"
 
     invoke-direct {v0, v2, v1}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
 
-    :cond_7
+    :cond_6
     iget-object v10, v8, Lcom/android/server/am/ActiveServices$ServiceLookupResult;->record:Lcom/android/server/am/ServiceRecord;
 
     iget-object v0, v12, Lcom/android/server/am/ActiveServices;->mAm:Lcom/android/server/am/ActivityManagerService;
@@ -17826,7 +17802,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_8
+    if-nez v0, :cond_7
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -17850,7 +17826,7 @@
 
     return-object v9
 
-    :cond_8
+    :cond_7
     move-object/from16 v11, v21
 
     iget-object v0, v12, Lcom/android/server/am/ActiveServices;->mAm:Lcom/android/server/am/ActivityManagerService;
@@ -17871,7 +17847,7 @@
 
     const/4 v0, 0x0
 
-    if-eqz v6, :cond_a
+    if-eqz v6, :cond_9
 
     iget-object v1, v10, Lcom/android/server/am/ServiceRecord;->appInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -17883,11 +17859,11 @@
 
     move-result v1
 
-    if-eqz v1, :cond_a
+    if-eqz v1, :cond_9
 
     sget-boolean v1, Lcom/android/server/am/ActivityManagerDebugConfig;->DEBUG_FOREGROUND_SERVICE:Z
 
-    if-eqz v1, :cond_9
+    if-eqz v1, :cond_8
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -17911,7 +17887,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move/from16 v5, p10
+    move/from16 v5, v19
 
     invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -17921,24 +17897,24 @@
 
     invoke-static {v11, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    goto :goto_4
+
+    :cond_8
+    move/from16 v5, v19
+
+    :goto_4
+    const/4 v0, 0x1
+
+    move/from16 v16, v0
+
     goto :goto_5
 
     :cond_9
-    move/from16 v5, p10
+    move/from16 v5, v19
+
+    move/from16 v16, v0
 
     :goto_5
-    const/4 v0, 0x1
-
-    move/from16 v17, v0
-
-    goto :goto_6
-
-    :cond_a
-    move/from16 v5, p10
-
-    move/from16 v17, v0
-
-    :goto_6
     const/4 v0, 0x0
 
     const-string v4, " pkg="
@@ -17949,7 +17925,7 @@
 
     const-string v1, " uid="
 
-    if-eqz p6, :cond_e
+    if-eqz p6, :cond_d
 
     iget-object v9, v12, Lcom/android/server/am/ActiveServices;->mAm:Lcom/android/server/am/ActivityManagerService;
 
@@ -17973,15 +17949,15 @@
 
     move-result v0
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_c
 
     const/4 v7, 0x1
 
-    if-eq v0, v7, :cond_c
+    if-eq v0, v7, :cond_b
 
     const/4 v5, 0x3
 
-    if-eq v0, v5, :cond_b
+    if-eq v0, v5, :cond_a
 
     new-instance v1, Landroid/content/ComponentName;
 
@@ -17993,12 +17969,12 @@
 
     return-object v1
 
-    :cond_b
+    :cond_a
     move-object/from16 v9, p7
 
-    goto :goto_7
+    goto :goto_6
 
-    :cond_c
+    :cond_b
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -18039,51 +18015,51 @@
 
     const/16 v18, 0x1
 
-    goto :goto_9
+    goto :goto_8
 
-    :cond_d
+    :cond_c
     move-object/from16 v9, p7
 
     const/4 v7, 0x1
 
-    :goto_7
-    goto :goto_8
+    :goto_6
+    goto :goto_7
 
-    :cond_e
+    :cond_d
     move-object/from16 v9, p7
 
     move/from16 v19, v0
 
     move/from16 v21, v5
 
-    :goto_8
+    :goto_7
     move/from16 v5, p6
 
     move/from16 v18, v19
 
-    :goto_9
+    :goto_8
     invoke-static {v9, v13, v14, v10}, Lcom/android/server/am/OpStartAppControlInjector;->canServiceGo(Ljava/lang/String;ILandroid/content/Intent;Lcom/android/server/am/ServiceRecord;)Z
 
     move-result v0
 
-    if-nez v0, :cond_f
+    if-nez v0, :cond_e
 
     const/4 v0, 0x0
 
     return-object v0
 
-    :cond_f
-    if-nez v17, :cond_11
+    :cond_e
+    if-nez v16, :cond_10
 
     iget-boolean v0, v10, Lcom/android/server/am/ServiceRecord;->startRequested:Z
 
-    if-nez v0, :cond_10
+    if-nez v0, :cond_f
 
-    if-nez v5, :cond_10
+    if-nez v5, :cond_f
 
-    goto :goto_a
+    goto :goto_9
 
-    :cond_10
+    :cond_f
     move/from16 v22, v6
 
     move-object/from16 v19, v8
@@ -18094,10 +18070,10 @@
 
     move v8, v5
 
-    goto/16 :goto_e
+    goto/16 :goto_d
 
-    :cond_11
-    :goto_a
+    :cond_10
+    :goto_9
     iget-object v0, v12, Lcom/android/server/am/ActiveServices;->mAm:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v7, v10, Lcom/android/server/am/ServiceRecord;->appInfo:Landroid/content/pm/ApplicationInfo;
@@ -18146,12 +18122,25 @@
 
     move-object v12, v7
 
-    move/from16 v7, v17
+    move/from16 v7, v16
 
     invoke-virtual/range {v0 .. v7}, Lcom/android/server/am/ActivityManagerService;->getAppStartModeLocked(ILjava/lang/String;IIZZZ)I
 
     move-result v0
 
+    invoke-static {}, Lcom/android/server/am/ActivityManagerServiceInjector;->getInstance()Lcom/android/server/am/ActivityManagerServiceInjector;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v9}, Lcom/android/server/am/ActivityManagerServiceInjector;->isAllowLaunchBackground(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_11
+
+    const/4 v0, 0x0
+
+    :cond_11
     const-string v1, "com.coloros.mcs"
 
     invoke-virtual {v1, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -18200,18 +18189,18 @@
 
     if-eqz v1, :cond_12
 
-    goto :goto_b
+    goto :goto_a
 
     :cond_12
     const/4 v7, 0x0
 
-    goto :goto_c
+    goto :goto_b
 
     :cond_13
-    :goto_b
+    :goto_a
     const/4 v7, 0x1
 
-    :goto_c
+    :goto_b
     move v1, v7
 
     if-eqz v0, :cond_18
@@ -18272,10 +18261,10 @@
 
     move-object/from16 v6, p0
 
-    goto :goto_d
+    goto :goto_c
 
     :cond_14
-    if-eqz v17, :cond_16
+    if-eqz v16, :cond_16
 
     if-eqz v8, :cond_16
 
@@ -18332,7 +18321,7 @@
     :cond_17
     move-object/from16 v6, p0
 
-    :goto_d
+    :goto_c
     const/4 v2, 0x0
 
     return-object v2
@@ -18344,7 +18333,7 @@
 
     move-object/from16 v12, v25
 
-    :goto_e
+    :goto_d
     iget-object v0, v10, Lcom/android/server/am/ServiceRecord;->appInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v0, v0, Landroid/content/pm/ApplicationInfo;->targetSdkVersion:I
@@ -18624,7 +18613,7 @@
 
     if-le v3, v4, :cond_20
 
-    goto :goto_f
+    goto :goto_e
 
     :cond_20
     invoke-virtual {v2}, Lcom/android/server/am/ProcessRecord;->getCurProcState()I
@@ -18657,7 +18646,7 @@
 
     invoke-static {v11, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto/16 :goto_10
+    goto/16 :goto_f
 
     :cond_21
     sget-boolean v3, Lcom/android/server/am/ActiveServices;->DEBUG_DELAYED_STARTS:Z
@@ -18713,10 +18702,10 @@
 
     invoke-static {v11, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto/16 :goto_10
+    goto/16 :goto_f
 
     :cond_23
-    :goto_f
+    :goto_e
     sget-boolean v1, Lcom/android/server/am/ActiveServices;->DEBUG_DELAYED_SERVICE:Z
 
     if-eqz v1, :cond_24
@@ -18837,10 +18826,10 @@
     const/4 v0, 0x1
 
     :cond_29
-    :goto_10
+    :goto_f
     move v11, v0
 
-    goto/16 :goto_13
+    goto/16 :goto_12
 
     :cond_2a
     sget-boolean v2, Lcom/android/server/am/ActiveServices;->DEBUG_DELAYED_STARTS:Z
@@ -18851,7 +18840,7 @@
 
     if-eqz v8, :cond_2b
 
-    goto :goto_11
+    goto :goto_10
 
     :cond_2b
     iget-object v2, v10, Lcom/android/server/am/ServiceRecord;->app:Lcom/android/server/am/ProcessRecord;
@@ -18880,7 +18869,7 @@
 
     invoke-static {v11, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_12
+    goto :goto_11
 
     :cond_2c
     new-instance v1, Ljava/lang/StringBuilder;
@@ -18907,10 +18896,10 @@
 
     invoke-static {v11, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_12
+    goto :goto_11
 
     :cond_2d
-    :goto_11
+    :goto_10
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -18948,11 +18937,11 @@
     invoke-static {v11, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2e
-    :goto_12
+    :goto_11
     move v11, v0
 
-    :goto_13
-    if-eqz v16, :cond_2f
+    :goto_12
+    if-eqz p10, :cond_2f
 
     invoke-virtual {v10}, Lcom/android/server/am/ServiceRecord;->whitelistBgActivityStartsOnServiceStart()V
 
@@ -18991,7 +18980,7 @@
 
     move-object v5, v10
 
-    move/from16 v6, v16
+    move/from16 v6, p10
 
     invoke-direct/range {v0 .. v6}, Lcom/android/server/am/ActiveServices;->shouldAllowWhileInUsePermissionInFgsLocked(Ljava/lang/String;IILandroid/content/Intent;Lcom/android/server/am/ServiceRecord;Z)Z
 

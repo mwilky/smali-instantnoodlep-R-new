@@ -1248,7 +1248,7 @@
 
     packed-switch v0, :pswitch_data_0
 
-    goto/16 :goto_11
+    goto/16 :goto_12
 
     :pswitch_0
     iget v0, p1, Landroid/os/Message;->arg1:I
@@ -1267,7 +1267,7 @@
 
     if-ne v0, v1, :cond_1
 
-    goto/16 :goto_11
+    goto/16 :goto_12
 
     :cond_1
     iget v0, p1, Landroid/os/Message;->arg1:I
@@ -1286,35 +1286,35 @@
 
     if-nez v0, :cond_3
 
-    goto/16 :goto_11
+    goto/16 :goto_12
 
     :cond_3
     if-eqz v8, :cond_4
 
     iget-boolean v0, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->mConnected:Z
 
-    if-nez v0, :cond_20
+    if-nez v0, :cond_21
 
     invoke-virtual {p0, v5, v6, v7}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->setEnabledFunctions(JZ)V
 
-    goto/16 :goto_11
+    goto/16 :goto_12
 
     :cond_4
     iget-wide v0, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->mScreenUnlockedFunctions:J
 
     cmp-long v0, v0, v5
 
-    if-eqz v0, :cond_20
+    if-eqz v0, :cond_21
 
     iget-wide v0, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->mCurrentFunctions:J
 
     cmp-long v0, v0, v5
 
-    if-nez v0, :cond_20
+    if-nez v0, :cond_21
 
     invoke-direct {p0}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->setScreenUnlockedFunctions()V
 
-    goto/16 :goto_11
+    goto/16 :goto_12
 
     :pswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -1374,19 +1374,19 @@
 
     invoke-direct {p0}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->setScreenUnlockedFunctions()V
 
-    goto/16 :goto_11
+    goto/16 :goto_12
 
     :cond_6
     invoke-virtual {p0, v5, v6, v7}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->setEnabledFunctions(JZ)V
 
-    goto/16 :goto_11
+    goto/16 :goto_12
 
     :pswitch_2
     invoke-virtual {p0, v8}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->updateAdbNotification(Z)V
 
     invoke-virtual {p0, v8}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->updateUsbNotification(Z)V
 
-    goto/16 :goto_11
+    goto/16 :goto_12
 
     :pswitch_3
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -1541,7 +1541,7 @@
     :cond_b
     invoke-virtual {p0, v7}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->updateUsbNotification(Z)V
 
-    goto/16 :goto_11
+    goto/16 :goto_12
 
     :pswitch_4
     iget v0, p1, Landroid/os/Message;->arg1:I
@@ -1558,7 +1558,7 @@
 
     invoke-virtual {p0, v7}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->updateUsbNotification(Z)V
 
-    goto/16 :goto_11
+    goto/16 :goto_12
 
     :pswitch_5
     invoke-static {}, Lcom/android/server/usb/UsbDeviceManager;->access$000()Ljava/lang/String;
@@ -1593,12 +1593,12 @@
 
     cmp-long v0, v0, v5
 
-    if-nez v0, :cond_20
+    if-nez v0, :cond_21
 
     :cond_d
     invoke-direct {p0}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->notifyAccessoryModeExit()V
 
-    goto/16 :goto_11
+    goto/16 :goto_12
 
     :pswitch_6
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -1749,7 +1749,7 @@
 
     if-nez v4, :cond_14
 
-    if-eqz v1, :cond_20
+    if-eqz v1, :cond_21
 
     :cond_14
     iget-wide v4, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->mCurrentFunctions:J
@@ -1760,12 +1760,12 @@
 
     invoke-virtual {p0, v4, v5}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->updateUsbStateBroadcastIfNeeded(J)V
 
-    goto/16 :goto_11
+    goto/16 :goto_12
 
     :cond_15
     iput-boolean v8, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->mPendingBootBroadcast:Z
 
-    goto/16 :goto_11
+    goto/16 :goto_12
 
     :pswitch_7
     iget-wide v0, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->mCurrentFunctions:J
@@ -1774,24 +1774,24 @@
 
     move-result v0
 
-    if-eqz v0, :cond_20
+    if-eqz v0, :cond_21
 
     invoke-virtual {p0}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->isUsbTransferAllowed()Z
 
     move-result v0
 
-    if-nez v0, :cond_20
+    if-nez v0, :cond_21
 
     invoke-virtual {p0, v5, v6, v8}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->setEnabledFunctions(JZ)V
 
-    goto/16 :goto_11
+    goto/16 :goto_12
 
     :pswitch_8
     iget v0, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->mCurrentUser:I
 
     iget v2, p1, Landroid/os/Message;->arg1:I
 
-    if-eq v0, v2, :cond_20
+    if-eq v0, v2, :cond_21
 
     invoke-static {}, Lcom/android/server/usb/UsbDeviceManager;->access$000()Ljava/lang/String;
 
@@ -1858,14 +1858,14 @@
     :cond_16
     invoke-virtual {p0, v5, v6, v7}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->setEnabledFunctions(JZ)V
 
-    goto/16 :goto_11
+    goto/16 :goto_12
 
     :pswitch_9
     iput-boolean v8, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->mBootCompleted:Z
 
     invoke-virtual {p0}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->finishBoot()V
 
-    goto/16 :goto_11
+    goto/16 :goto_12
 
     :pswitch_a
     iget-object v0, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->mContext:Landroid/content/Context;
@@ -1923,7 +1923,7 @@
 
     invoke-virtual {p0}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->finishBoot()V
 
-    goto/16 :goto_11
+    goto/16 :goto_12
 
     :pswitch_b
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -1936,7 +1936,7 @@
 
     invoke-virtual {p0, v0, v1, v7}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->setEnabledFunctions(JZ)V
 
-    goto/16 :goto_11
+    goto/16 :goto_12
 
     :pswitch_c
     iget v0, p1, Landroid/os/Message;->arg1:I
@@ -1948,7 +1948,7 @@
     :cond_18
     invoke-direct {p0, v7}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->setAdbEnabled(Z)V
 
-    goto :goto_11
+    goto/16 :goto_12
 
     :pswitch_d
     iget v0, p1, Landroid/os/Message;->arg1:I
@@ -1979,13 +1979,33 @@
     :goto_f
     iput-boolean v0, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->mConfigured:Z
 
+    invoke-virtual {p0}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->isAdbEnabled()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1b
+
+    iget-boolean v0, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->mConnected:Z
+
+    if-eqz v0, :cond_1b
+
+    move v0, v8
+
+    goto :goto_10
+
+    :cond_1b
+    move v0, v7
+
+    :goto_10
+    invoke-static {v0}, Lcom/android/server/pm/OpPackageManagerHelperInjector;->setAdbState(Z)V
+
     invoke-virtual {p0, v7}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->updateUsbNotification(Z)V
 
     invoke-virtual {p0, v7}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->updateAdbNotification(Z)V
 
     iget-boolean v0, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->mBootCompleted:Z
 
-    if-eqz v0, :cond_1b
+    if-eqz v0, :cond_1c
 
     iget-wide v0, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->mCurrentFunctions:J
 
@@ -1995,25 +2015,25 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->updateUsbStateBroadcastIfNeeded(J)V
 
-    :cond_1b
+    :cond_1c
     iget-wide v0, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->mCurrentFunctions:J
 
     and-long/2addr v0, v2
 
     cmp-long v0, v0, v5
 
-    if-eqz v0, :cond_1c
+    if-eqz v0, :cond_1d
 
     invoke-direct {p0}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->updateCurrentAccessory()V
 
-    :cond_1c
+    :cond_1d
     iget-boolean v0, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->mBootCompleted:Z
 
-    if-eqz v0, :cond_1f
+    if-eqz v0, :cond_20
 
     iget-boolean v0, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->mConnected:Z
 
-    if-nez v0, :cond_1e
+    if-nez v0, :cond_1f
 
     const/16 v0, 0x8
 
@@ -2021,7 +2041,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_1e
+    if-nez v0, :cond_1f
 
     const/16 v0, 0x11
 
@@ -2029,39 +2049,41 @@
 
     move-result v0
 
-    if-nez v0, :cond_1e
+    if-nez v0, :cond_1f
 
     iget-boolean v0, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->mScreenLocked:Z
 
-    if-nez v0, :cond_1d
+    if-nez v0, :cond_1e
 
     iget-wide v0, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->mScreenUnlockedFunctions:J
 
     cmp-long v0, v0, v5
 
-    if-eqz v0, :cond_1d
+    if-eqz v0, :cond_1e
 
     invoke-direct {p0}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->setScreenUnlockedFunctions()V
 
-    goto :goto_10
-
-    :cond_1d
-    invoke-virtual {p0, v5, v6, v7}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->setEnabledFunctions(JZ)V
-
-    :cond_1e
-    :goto_10
-    invoke-direct {p0}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->updateUsbFunctions()V
-
     goto :goto_11
 
+    :cond_1e
+    invoke-virtual {p0, v5, v6, v7}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->setEnabledFunctions(JZ)V
+
     :cond_1f
+    :goto_11
+    invoke-direct {p0}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->updateUsbFunctions()V
+
+    goto :goto_12
+
+    :cond_20
     iput-boolean v8, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->mPendingBootBroadcast:Z
 
     nop
 
-    :cond_20
-    :goto_11
+    :cond_21
+    :goto_12
     return-void
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

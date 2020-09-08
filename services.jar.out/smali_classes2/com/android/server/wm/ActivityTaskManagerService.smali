@@ -17673,7 +17673,7 @@
 
     new-array v2, v3, [I
 
-    const/16 v5, 0x4b
+    const/16 v5, 0x49
 
     const/4 v6, 0x0
 
@@ -17687,7 +17687,7 @@
 
     new-array v2, v3, [I
 
-    const/16 v5, 0xbf
+    const/16 v5, 0xb7
 
     aput v5, v2, v6
 
@@ -22704,7 +22704,7 @@
 
     new-array v8, v6, [I
 
-    const/16 v9, 0xd3
+    const/16 v9, 0xcb
 
     aput v9, v8, v4
 

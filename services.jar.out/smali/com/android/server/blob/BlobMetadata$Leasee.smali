@@ -364,7 +364,7 @@
 
     cmp-long v0, v0, v2
 
-    if-gtz v0, :cond_0
+    if-ltz v0, :cond_0
 
     goto :goto_0
 

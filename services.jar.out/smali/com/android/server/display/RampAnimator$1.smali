@@ -200,19 +200,13 @@
 
     invoke-static {v5, v6}, Lcom/android/server/display/RampAnimator;->access$402(Lcom/android/server/display/RampAnimator;F)F
 
-    const v5, 0x461c4000    # 10000.0f
+    iget-object v5, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
 
-    mul-float v6, v4, v5
+    invoke-static {v5}, Lcom/android/server/display/RampAnimator;->access$400(Lcom/android/server/display/RampAnimator;)F
 
-    iget-object v7, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
+    move-result v5
 
-    invoke-static {v7}, Lcom/android/server/display/RampAnimator;->access$400(Lcom/android/server/display/RampAnimator;)F
-
-    move-result v7
-
-    mul-float/2addr v7, v5
-
-    invoke-static {v6, v7}, Lcom/android/internal/BrightnessSynchronizer;->floatEquals(FF)Z
+    invoke-static {v4, v5}, Lcom/android/server/display/OpBrightnessReasonAndRate;->EqualsWithMargin(FF)Z
 
     move-result v5
 
@@ -251,7 +245,7 @@
 
     move-result v6
 
-    invoke-static {v5, v6}, Lcom/android/internal/BrightnessSynchronizer;->floatEquals(FF)Z
+    invoke-static {v5, v6}, Lcom/android/server/display/OpBrightnessReasonAndRate;->EqualsWithMargin(FF)Z
 
     move-result v5
 

@@ -265,6 +265,8 @@
 
     :cond_4
     :goto_1
+    iput-object v0, p0, Lcom/android/server/wm/DisplayArea$Tokens;->mLastOrientationSource:Lcom/android/server/wm/WindowContainer;
+
     return v1
 .end method
 

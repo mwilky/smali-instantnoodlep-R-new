@@ -95,7 +95,7 @@
     :cond_3
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v1, "invalid interface index"
+    const-string/jumbo v1, "invalid interface index"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
@@ -109,6 +109,8 @@
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
+
+    nop
 
     :array_0
     .array-data 1

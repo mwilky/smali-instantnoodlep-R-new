@@ -788,6 +788,12 @@
 
     move-result-object v2
 
+    const-string v3, "ColorFade.createSurface"
+
+    invoke-virtual {v2, v3}, Landroid/view/SurfaceControl$Builder;->setCallsite(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
+
+    move-result-object v2
+
     iget v3, p0, Lcom/android/server/display/ColorFade;->mMode:I
 
     const/4 v4, 0x2

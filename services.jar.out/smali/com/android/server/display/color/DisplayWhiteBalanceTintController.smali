@@ -1059,7 +1059,7 @@
     goto :goto_0
 
     :cond_3
-    const v4, 0x10e004d
+    const v4, 0x10e0050
 
     invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getInteger(I)I
 

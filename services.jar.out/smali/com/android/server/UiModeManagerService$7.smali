@@ -43,7 +43,7 @@
     :try_start_0
     iget-object v1, p0, Lcom/android/server/UiModeManagerService$7;->this$0:Lcom/android/server/UiModeManagerService;
 
-    invoke-static {v1, p1}, Lcom/android/server/UiModeManagerService;->access$802(Lcom/android/server/UiModeManagerService;Z)Z
+    invoke-static {v1, p1}, Lcom/android/server/UiModeManagerService;->access$1002(Lcom/android/server/UiModeManagerService;Z)Z
 
     iget-object v1, p0, Lcom/android/server/UiModeManagerService$7;->this$0:Lcom/android/server/UiModeManagerService;
 

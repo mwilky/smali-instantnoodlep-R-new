@@ -394,7 +394,7 @@
 
     iget-object v0, v0, Lcom/android/server/job/JobSchedulerService;->mPendingJobs:Ljava/util/ArrayList;
 
-    invoke-static {}, Lcom/android/server/job/JobSchedulerService;->access$300()Ljava/util/Comparator;
+    invoke-static {}, Lcom/android/server/job/JobSchedulerService;->access$200()Ljava/util/Comparator;
 
     move-result-object v1
 

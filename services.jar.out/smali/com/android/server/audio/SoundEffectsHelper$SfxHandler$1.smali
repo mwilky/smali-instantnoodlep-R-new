@@ -20,16 +20,20 @@
 # instance fields
 .field final synthetic this$1:Lcom/android/server/audio/SoundEffectsHelper$SfxHandler;
 
-.field final synthetic val$msg:Landroid/os/Message;
+.field final synthetic val$effect:I
+
+.field final synthetic val$volume:I
 
 
 # direct methods
-.method constructor <init>(Lcom/android/server/audio/SoundEffectsHelper$SfxHandler;Landroid/os/Message;)V
+.method constructor <init>(Lcom/android/server/audio/SoundEffectsHelper$SfxHandler;II)V
     .locals 0
 
     iput-object p1, p0, Lcom/android/server/audio/SoundEffectsHelper$SfxHandler$1;->this$1:Lcom/android/server/audio/SoundEffectsHelper$SfxHandler;
 
-    iput-object p2, p0, Lcom/android/server/audio/SoundEffectsHelper$SfxHandler$1;->val$msg:Landroid/os/Message;
+    iput p2, p0, Lcom/android/server/audio/SoundEffectsHelper$SfxHandler$1;->val$effect:I
+
+    iput p3, p0, Lcom/android/server/audio/SoundEffectsHelper$SfxHandler$1;->val$volume:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,13 +51,9 @@
 
     iget-object v0, v0, Lcom/android/server/audio/SoundEffectsHelper$SfxHandler;->this$0:Lcom/android/server/audio/SoundEffectsHelper;
 
-    iget-object v1, p0, Lcom/android/server/audio/SoundEffectsHelper$SfxHandler$1;->val$msg:Landroid/os/Message;
+    iget v1, p0, Lcom/android/server/audio/SoundEffectsHelper$SfxHandler$1;->val$effect:I
 
-    iget v1, v1, Landroid/os/Message;->arg1:I
-
-    iget-object v2, p0, Lcom/android/server/audio/SoundEffectsHelper$SfxHandler$1;->val$msg:Landroid/os/Message;
-
-    iget v2, v2, Landroid/os/Message;->arg2:I
+    iget v2, p0, Lcom/android/server/audio/SoundEffectsHelper$SfxHandler$1;->val$volume:I
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/audio/SoundEffectsHelper;->onPlaySoundEffect(II)V
 

@@ -69,7 +69,7 @@
     return-void
 .end method
 
-.method private killAppForOpChange(IILjava/lang/String;)V
+.method private killAppForOpChange(II)V
     .locals 5
 
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
@@ -420,9 +420,7 @@
     :cond_0
     if-eqz p4, :cond_1
 
-    if-eqz p3, :cond_1
-
-    invoke-direct {p0, p1, p2, p3}, Lcom/android/server/StorageManagerService$StorageManagerInternalImpl;->killAppForOpChange(IILjava/lang/String;)V
+    invoke-direct {p0, p1, p2}, Lcom/android/server/StorageManagerService$StorageManagerInternalImpl;->killAppForOpChange(II)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -455,7 +453,7 @@
 
     :cond_4
     :try_start_2
-    invoke-direct {p0, p1, p2, p3}, Lcom/android/server/StorageManagerService$StorageManagerInternalImpl;->killAppForOpChange(IILjava/lang/String;)V
+    invoke-direct {p0, p1, p2}, Lcom/android/server/StorageManagerService$StorageManagerInternalImpl;->killAppForOpChange(II)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 

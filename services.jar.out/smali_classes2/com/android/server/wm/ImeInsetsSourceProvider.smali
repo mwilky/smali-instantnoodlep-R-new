@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private mImeTargetFromIme:Lcom/android/server/wm/WindowState;
+.field private mImeTargetFromIme:Lcom/android/server/wm/InsetsControlTarget;
 
 .field private mIsImeLayoutDrawn:Z
 
@@ -44,7 +44,7 @@
     invoke-static {v0, v3, v1, v2, v4}, Lcom/android/server/protolog/ProtoLogImpl;->d(Lcom/android/server/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
     :cond_0
-    iput-object v2, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/WindowState;
+    iput-object v2, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/InsetsControlTarget;
 
     iput-boolean v1, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mIsImeLayoutDrawn:Z
 
@@ -60,7 +60,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/WindowState;
+    iget-object v0, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/InsetsControlTarget;
 
     if-eqz v0, :cond_1
 
@@ -103,6 +103,31 @@
     return-void
 .end method
 
+.method public dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
+    .locals 1
+
+    invoke-super {p0, p1, p2}, Lcom/android/server/wm/InsetsSourceProvider;->dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/InsetsControlTarget;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    const-string v0, "showImePostLayout pending for mImeTargetFromIme="
+
+    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/InsetsControlTarget;
+
+    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/Object;)V
+
+    invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
+
+    :cond_0
+    return-void
+.end method
+
 .method isImeTargetFromDisplayContentAndImeSame()Z
     .locals 10
 
@@ -116,20 +141,20 @@
 
     const/4 v2, 0x0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
-    iget-object v3, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/WindowState;
+    iget-object v3, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/InsetsControlTarget;
 
     if-nez v3, :cond_0
 
-    goto :goto_2
+    goto/16 :goto_3
 
     :cond_0
     sget-boolean v3, Lcom/android/server/protolog/ProtoLog$Cache;->WM_DEBUG_IME_enabled:Z
 
     const/4 v4, 0x1
 
-    if-eqz v3, :cond_1
+    if-eqz v3, :cond_2
 
     invoke-virtual {v0}, Lcom/android/server/wm/WindowState;->getName()Ljava/lang/String;
 
@@ -139,12 +164,30 @@
 
     move-result-object v3
 
-    iget-object v5, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/WindowState;
+    iget-object v5, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/InsetsControlTarget;
+
+    invoke-interface {v5}, Lcom/android/server/wm/InsetsControlTarget;->getWindow()Lcom/android/server/wm/WindowState;
+
+    move-result-object v5
+
+    if-nez v5, :cond_1
+
+    iget-object v5, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/InsetsControlTarget;
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v5, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/InsetsControlTarget;
+
+    invoke-interface {v5}, Lcom/android/server/wm/InsetsControlTarget;->getWindow()Lcom/android/server/wm/WindowState;
+
+    move-result-object v5
 
     invoke-virtual {v5}, Lcom/android/server/wm/WindowState;->getName()Ljava/lang/String;
 
     move-result-object v5
 
+    :goto_0
     invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
@@ -165,40 +208,50 @@
 
     invoke-static {v6, v7, v2, v8, v9}, Lcom/android/server/protolog/ProtoLogImpl;->d(Lcom/android/server/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    :cond_1
+    :cond_2
     invoke-virtual {v0}, Lcom/android/server/wm/WindowState;->isClosing()Z
 
     move-result v3
 
-    if-nez v3, :cond_2
+    if-nez v3, :cond_3
 
-    iget-object v3, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/WindowState;
+    iget-object v3, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/InsetsControlTarget;
 
-    if-eq v3, v0, :cond_5
+    if-eq v3, v0, :cond_6
 
-    :cond_2
-    iget-object v3, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/WindowState;
+    :cond_3
+    iget-object v3, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/InsetsControlTarget;
 
-    if-eqz v3, :cond_3
+    if-eqz v3, :cond_4
+
+    invoke-interface {v3}, Lcom/android/server/wm/InsetsControlTarget;->getWindow()Lcom/android/server/wm/WindowState;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_4
 
     invoke-virtual {v0}, Lcom/android/server/wm/WindowState;->getParentWindow()Lcom/android/server/wm/WindowState;
 
     move-result-object v3
 
-    iget-object v5, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/WindowState;
+    iget-object v5, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/InsetsControlTarget;
 
-    if-ne v3, v5, :cond_3
+    if-ne v3, v5, :cond_4
 
     iget v3, v0, Lcom/android/server/wm/WindowState;->mSubLayer:I
 
-    iget-object v5, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/WindowState;
+    iget-object v5, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/InsetsControlTarget;
+
+    invoke-interface {v5}, Lcom/android/server/wm/InsetsControlTarget;->getWindow()Lcom/android/server/wm/WindowState;
+
+    move-result-object v5
 
     iget v5, v5, Lcom/android/server/wm/WindowState;->mSubLayer:I
 
-    if-gt v3, v5, :cond_5
+    if-gt v3, v5, :cond_6
 
-    :cond_3
-    iget-object v3, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/WindowState;
+    :cond_4
+    iget-object v3, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/InsetsControlTarget;
 
     iget-object v5, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -206,36 +259,44 @@
 
     move-result-object v5
 
-    if-eq v3, v5, :cond_5
+    if-eq v3, v5, :cond_6
 
-    iget-object v3, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/WindowState;
+    iget-object v3, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/InsetsControlTarget;
 
-    if-ne v1, v3, :cond_4
+    if-ne v1, v3, :cond_5
 
-    iget-object v3, v0, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
+    invoke-interface {v3}, Lcom/android/server/wm/InsetsControlTarget;->getWindow()Lcom/android/server/wm/WindowState;
 
-    iget v3, v3, Landroid/view/WindowManager$LayoutParams;->format:I
+    move-result-object v3
 
-    invoke-static {v3}, Landroid/graphics/PixelFormat;->formatHasAlpha(I)Z
+    if-eqz v3, :cond_6
+
+    iget-object v3, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/InsetsControlTarget;
+
+    invoke-interface {v3}, Lcom/android/server/wm/InsetsControlTarget;->getWindow()Lcom/android/server/wm/WindowState;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/android/server/wm/WindowState;->isClosing()Z
 
     move-result v3
 
-    if-eqz v3, :cond_4
+    if-nez v3, :cond_5
 
-    goto :goto_0
-
-    :cond_4
     goto :goto_1
 
     :cond_5
-    :goto_0
-    move v2, v4
-
-    :goto_1
-    return v2
+    goto :goto_2
 
     :cond_6
+    :goto_1
+    move v2, v4
+
     :goto_2
+    return v2
+
+    :cond_7
+    :goto_3
     return v2
 .end method
 
@@ -320,7 +381,7 @@
 
     invoke-interface {v0, v3, v5}, Lcom/android/server/wm/InsetsControlTarget;->showInsets(IZ)V
 
-    iget-object v3, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/WindowState;
+    iget-object v3, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/InsetsControlTarget;
 
     if-eq v0, v3, :cond_4
 
@@ -330,17 +391,17 @@
 
     if-eqz v3, :cond_4
 
-    iget-object v3, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/WindowState;
+    iget-object v3, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/InsetsControlTarget;
 
-    invoke-virtual {v3}, Lcom/android/server/wm/WindowState;->getWindow()Lcom/android/server/wm/WindowState;
+    invoke-interface {v3}, Lcom/android/server/wm/InsetsControlTarget;->getWindow()Lcom/android/server/wm/WindowState;
 
     move-result-object v3
 
     if-eqz v3, :cond_3
 
-    iget-object v3, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/WindowState;
+    iget-object v3, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/InsetsControlTarget;
 
-    invoke-virtual {v3}, Lcom/android/server/wm/WindowState;->getWindow()Lcom/android/server/wm/WindowState;
+    invoke-interface {v3}, Lcom/android/server/wm/InsetsControlTarget;->getWindow()Lcom/android/server/wm/WindowState;
 
     move-result-object v3
 
@@ -369,10 +430,10 @@
     return-void
 .end method
 
-.method scheduleShowImePostLayout(Lcom/android/server/wm/WindowState;)V
+.method scheduleShowImePostLayout(Lcom/android/server/wm/InsetsControlTarget;)V
     .locals 7
 
-    iget-object v0, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/WindowState;
+    iget-object v0, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/InsetsControlTarget;
 
     const/4 v1, 0x1
 
@@ -384,13 +445,37 @@
 
     if-eqz p1, :cond_0
 
-    iget-object v3, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mShowImeRunner:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mShowImeRunner:Ljava/lang/Runnable;
 
-    if-eqz v3, :cond_0
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1}, Lcom/android/server/wm/InsetsControlTarget;->getWindow()Lcom/android/server/wm/WindowState;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/InsetsControlTarget;
+
+    invoke-interface {v0}, Lcom/android/server/wm/InsetsControlTarget;->getWindow()Lcom/android/server/wm/WindowState;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/InsetsControlTarget;
+
+    invoke-interface {v0}, Lcom/android/server/wm/InsetsControlTarget;->getWindow()Lcom/android/server/wm/WindowState;
+
+    move-result-object v0
 
     iget-object v0, v0, Lcom/android/server/wm/WindowState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
-    iget-object v3, p1, Lcom/android/server/wm/WindowState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
+    invoke-interface {p1}, Lcom/android/server/wm/InsetsControlTarget;->getWindow()Lcom/android/server/wm/WindowState;
+
+    move-result-object v3
+
+    iget-object v3, v3, Lcom/android/server/wm/WindowState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
     if-ne v0, v3, :cond_0
 
@@ -402,7 +487,7 @@
     move v0, v2
 
     :goto_0
-    iput-object p1, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/WindowState;
+    iput-object p1, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/InsetsControlTarget;
 
     const/4 v3, 0x0
 
@@ -430,14 +515,32 @@
     :cond_2
     sget-boolean v4, Lcom/android/server/protolog/ProtoLog$Cache;->WM_DEBUG_IME_enabled:Z
 
-    if-eqz v4, :cond_3
+    if-eqz v4, :cond_4
 
-    iget-object v4, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/WindowState;
+    iget-object v4, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/InsetsControlTarget;
+
+    invoke-interface {v4}, Lcom/android/server/wm/InsetsControlTarget;->getWindow()Lcom/android/server/wm/WindowState;
+
+    move-result-object v4
+
+    if-nez v4, :cond_3
+
+    iget-object v4, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/InsetsControlTarget;
+
+    goto :goto_1
+
+    :cond_3
+    iget-object v4, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/InsetsControlTarget;
+
+    invoke-interface {v4}, Lcom/android/server/wm/InsetsControlTarget;->getWindow()Lcom/android/server/wm/WindowState;
+
+    move-result-object v4
 
     invoke-virtual {v4}, Lcom/android/server/wm/WindowState;->getName()Ljava/lang/String;
 
     move-result-object v4
 
+    :goto_1
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
@@ -452,7 +555,7 @@
 
     invoke-static {v5, v6, v2, v3, v1}, Lcom/android/server/protolog/ProtoLogImpl;->d(Lcom/android/server/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    :cond_3
+    :cond_4
     new-instance v1, Lcom/android/server/wm/-$$Lambda$ImeInsetsSourceProvider$1aCwANZDoNIzXR0mfeN2iV_k2Yo;
 
     invoke-direct {v1, p0}, Lcom/android/server/wm/-$$Lambda$ImeInsetsSourceProvider$1aCwANZDoNIzXR0mfeN2iV_k2Yo;-><init>(Lcom/android/server/wm/ImeInsetsSourceProvider;)V

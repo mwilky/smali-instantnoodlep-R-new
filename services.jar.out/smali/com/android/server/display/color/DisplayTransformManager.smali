@@ -792,7 +792,7 @@
 
     const-string v4, "DisplayTransformManager"
 
-    const-string v5, "inversion and daltonizer turn on, do not set onrplusMatrix"
+    const-string/jumbo v5, "inversion and daltonizer turn on, do not set onrplusMatrix"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 

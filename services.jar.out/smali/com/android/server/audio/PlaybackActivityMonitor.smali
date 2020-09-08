@@ -1760,6 +1760,75 @@
     return v0
 .end method
 
+.method public isPlaybackActiveForUid(I)Z
+    .locals 4
+
+    iget-object v0, p0, Lcom/android/server/audio/PlaybackActivityMonitor;->mPlayerLock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lcom/android/server/audio/PlaybackActivityMonitor;->mPlayers:Ljava/util/HashMap;
+
+    invoke-virtual {v1}, Ljava/util/HashMap;->values()Ljava/util/Collection;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/media/AudioPlaybackConfiguration;
+
+    invoke-virtual {v2}, Landroid/media/AudioPlaybackConfiguration;->isActive()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    invoke-virtual {v2}, Landroid/media/AudioPlaybackConfiguration;->getClientUid()I
+
+    move-result v3
+
+    if-ne v3, p1, :cond_0
+
+    const/4 v1, 0x1
+
+    monitor-exit v0
+
+    return v1
+
+    :cond_0
+    goto :goto_0
+
+    :cond_1
+    monitor-exit v0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
 .method public mutePlayersForCall([I)V
     .locals 11
 

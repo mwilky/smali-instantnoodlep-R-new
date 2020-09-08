@@ -809,7 +809,7 @@
 
     invoke-direct {p0}, Lcom/android/server/locksettings/recoverablekeystore/RecoverableKeyStoreManager;->checkRecoverKeyStorePermission()V
 
-    const-string v0, "invalid session"
+    const-string/jumbo v0, "invalid session"
 
     invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2644,7 +2644,7 @@
 
     move-result-object v8
 
-    const-string v0, "invalid session"
+    const-string/jumbo v0, "invalid session"
 
     move-object/from16 v9, p1
 

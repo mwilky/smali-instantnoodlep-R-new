@@ -4,6 +4,8 @@
 
 
 # static fields
+.field private static final RECENT_N:I = 0xa
+
 .field private static final TAG:Ljava/lang/String; = "ActivityManager"
 
 .field private static final TAG_MU:Ljava/lang/String; = "ActivityManager_MU"
@@ -13,6 +15,8 @@
 .field mAmInternal:Landroid/app/ActivityManagerInternal;
 
 .field final mAtmInternal:Lcom/android/server/wm/ActivityTaskManagerInternal;
+
+.field private final mConstants:Lcom/android/server/am/ActivityManagerConstants;
 
 .field final mH:Landroid/os/Handler;
 
@@ -28,13 +32,26 @@
     .end annotation
 .end field
 
+.field private final mIntentsPerUid:Landroid/util/SparseIntArray;
+
 .field final mLock:Ljava/lang/Object;
+
+.field private final mRecentIntentsPerUid:Landroid/util/SparseArray;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/util/SparseArray<",
+            "Lcom/android/internal/util/RingBuffer<",
+            "Ljava/lang/String;",
+            ">;>;"
+        }
+    .end annotation
+.end field
 
 .field final mUserController:Lcom/android/server/am/UserController;
 
 
 # direct methods
-.method constructor <init>(Landroid/os/Looper;Lcom/android/server/am/UserController;)V
+.method constructor <init>(Landroid/os/Looper;Lcom/android/server/am/UserController;Lcom/android/server/am/ActivityManagerConstants;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,6 +67,18 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/PendingIntentController;->mIntentSenderRecords:Ljava/util/HashMap;
+
+    new-instance v0, Landroid/util/SparseIntArray;
+
+    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
+
+    iput-object v0, p0, Lcom/android/server/am/PendingIntentController;->mIntentsPerUid:Landroid/util/SparseIntArray;
+
+    new-instance v0, Landroid/util/SparseArray;
+
+    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object v0, p0, Lcom/android/server/am/PendingIntentController;->mRecentIntentsPerUid:Landroid/util/SparseArray;
 
     new-instance v0, Landroid/os/Handler;
 
@@ -68,6 +97,8 @@
     iput-object v0, p0, Lcom/android/server/am/PendingIntentController;->mAtmInternal:Lcom/android/server/wm/ActivityTaskManagerInternal;
 
     iput-object p2, p0, Lcom/android/server/am/PendingIntentController;->mUserController:Lcom/android/server/am/UserController;
+
+    iput-object p3, p0, Lcom/android/server/am/PendingIntentController;->mConstants:Lcom/android/server/am/ActivityManagerConstants;
 
     return-void
 .end method
@@ -358,6 +389,8 @@
 
     invoke-virtual {v1, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
+    invoke-virtual {p0, p1}, Lcom/android/server/am/PendingIntentController;->decrementUidStatLocked(Lcom/android/server/am/PendingIntentRecord;)V
+
     if-eqz p2, :cond_0
 
     iget-object v1, p1, Lcom/android/server/am/PendingIntentRecord;->key:Lcom/android/server/am/PendingIntentRecord$Key;
@@ -395,6 +428,58 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v1
+.end method
+
+.method decrementUidStatLocked(Lcom/android/server/am/PendingIntentRecord;)V
+    .locals 4
+
+    iget v0, p1, Lcom/android/server/am/PendingIntentRecord;->uid:I
+
+    iget-object v1, p0, Lcom/android/server/am/PendingIntentController;->mIntentsPerUid:Landroid/util/SparseIntArray;
+
+    invoke-virtual {v1, v0}, Landroid/util/SparseIntArray;->indexOfKey(I)I
+
+    move-result v1
+
+    if-ltz v1, :cond_2
+
+    iget-object v2, p0, Lcom/android/server/am/PendingIntentController;->mIntentsPerUid:Landroid/util/SparseIntArray;
+
+    invoke-virtual {v2, v1}, Landroid/util/SparseIntArray;->valueAt(I)I
+
+    move-result v2
+
+    add-int/lit8 v2, v2, -0x1
+
+    iget-object v3, p0, Lcom/android/server/am/PendingIntentController;->mConstants:Lcom/android/server/am/ActivityManagerConstants;
+
+    iget v3, v3, Lcom/android/server/am/ActivityManagerConstants;->PENDINGINTENT_WARNING_THRESHOLD:I
+
+    add-int/lit8 v3, v3, -0xa
+
+    if-ne v2, v3, :cond_0
+
+    iget-object v3, p0, Lcom/android/server/am/PendingIntentController;->mRecentIntentsPerUid:Landroid/util/SparseArray;
+
+    invoke-virtual {v3, v0}, Landroid/util/SparseArray;->delete(I)V
+
+    :cond_0
+    if-nez v2, :cond_1
+
+    iget-object v3, p0, Lcom/android/server/am/PendingIntentController;->mIntentsPerUid:Landroid/util/SparseIntArray;
+
+    invoke-virtual {v3, v1}, Landroid/util/SparseIntArray;->removeAt(I)V
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v3, p0, Lcom/android/server/am/PendingIntentController;->mIntentsPerUid:Landroid/util/SparseIntArray;
+
+    invoke-virtual {v3, v1, v2}, Landroid/util/SparseIntArray;->setValueAt(II)V
+
+    :cond_2
+    :goto_0
+    return-void
 .end method
 
 .method dumpPendingIntents(Ljava/io/PrintWriter;ZLjava/lang/String;)V
@@ -651,13 +736,55 @@
     goto :goto_4
 
     :cond_8
-    if-nez v1, :cond_9
+    iget-object v2, p0, Lcom/android/server/am/PendingIntentController;->mIntentsPerUid:Landroid/util/SparseIntArray;
 
-    const-string v2, "  (nothing)"
+    invoke-virtual {v2}, Landroid/util/SparseIntArray;->size()I
 
-    invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    move-result v2
+
+    if-lez v2, :cond_9
+
+    const/4 v3, 0x0
+
+    :goto_5
+    if-ge v3, v2, :cond_9
+
+    const-string v4, "  * UID: "
+
+    invoke-virtual {p1, v4}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    iget-object v4, p0, Lcom/android/server/am/PendingIntentController;->mIntentsPerUid:Landroid/util/SparseIntArray;
+
+    invoke-virtual {v4, v3}, Landroid/util/SparseIntArray;->keyAt(I)I
+
+    move-result v4
+
+    invoke-virtual {p1, v4}, Ljava/io/PrintWriter;->print(I)V
+
+    const-string v4, " total: "
+
+    invoke-virtual {p1, v4}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    iget-object v4, p0, Lcom/android/server/am/PendingIntentController;->mIntentsPerUid:Landroid/util/SparseIntArray;
+
+    invoke-virtual {v4, v3}, Landroid/util/SparseIntArray;->valueAt(I)I
+
+    move-result v4
+
+    invoke-virtual {p1, v4}, Ljava/io/PrintWriter;->println(I)V
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_5
 
     :cond_9
+    if-nez v1, :cond_a
+
+    const-string v3, "  (nothing)"
+
+    invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    :cond_a
     monitor-exit v0
 
     return-void
@@ -958,6 +1085,8 @@
 
     invoke-virtual {v0, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
+    invoke-virtual {v1, v6}, Lcom/android/server/am/PendingIntentController;->decrementUidStatLocked(Lcom/android/server/am/PendingIntentRecord;)V
+
     goto :goto_7
 
     :cond_b
@@ -980,6 +1109,8 @@
     iget-object v6, v0, Lcom/android/server/am/PendingIntentRecord;->ref:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v5, v3, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v1, v0}, Lcom/android/server/am/PendingIntentController;->incrementUidStatLocked(Lcom/android/server/am/PendingIntentRecord;)V
 
     monitor-exit v21
 
@@ -1021,6 +1152,155 @@
     move-exception v0
 
     goto :goto_8
+.end method
+
+.method incrementUidStatLocked(Lcom/android/server/am/PendingIntentRecord;)V
+    .locals 8
+
+    iget v0, p1, Lcom/android/server/am/PendingIntentRecord;->uid:I
+
+    iget-object v1, p0, Lcom/android/server/am/PendingIntentController;->mIntentsPerUid:Landroid/util/SparseIntArray;
+
+    invoke-virtual {v1, v0}, Landroid/util/SparseIntArray;->indexOfKey(I)I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-ltz v1, :cond_0
+
+    iget-object v3, p0, Lcom/android/server/am/PendingIntentController;->mIntentsPerUid:Landroid/util/SparseIntArray;
+
+    invoke-virtual {v3, v1}, Landroid/util/SparseIntArray;->valueAt(I)I
+
+    move-result v3
+
+    add-int/lit8 v2, v3, 0x1
+
+    iget-object v3, p0, Lcom/android/server/am/PendingIntentController;->mIntentsPerUid:Landroid/util/SparseIntArray;
+
+    invoke-virtual {v3, v1, v2}, Landroid/util/SparseIntArray;->setValueAt(II)V
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v3, p0, Lcom/android/server/am/PendingIntentController;->mIntentsPerUid:Landroid/util/SparseIntArray;
+
+    invoke-virtual {v3, v0, v2}, Landroid/util/SparseIntArray;->put(II)V
+
+    :goto_0
+    iget-object v3, p0, Lcom/android/server/am/PendingIntentController;->mConstants:Lcom/android/server/am/ActivityManagerConstants;
+
+    iget v3, v3, Lcom/android/server/am/ActivityManagerConstants;->PENDINGINTENT_WARNING_THRESHOLD:I
+
+    const/16 v4, 0xa
+
+    sub-int/2addr v3, v4
+
+    add-int/lit8 v3, v3, 0x1
+
+    const/4 v5, 0x0
+
+    if-ne v2, v3, :cond_1
+
+    new-instance v6, Lcom/android/internal/util/RingBuffer;
+
+    const-class v7, Ljava/lang/String;
+
+    invoke-direct {v6, v7, v4}, Lcom/android/internal/util/RingBuffer;-><init>(Ljava/lang/Class;I)V
+
+    move-object v5, v6
+
+    iget-object v6, p0, Lcom/android/server/am/PendingIntentController;->mRecentIntentsPerUid:Landroid/util/SparseArray;
+
+    invoke-virtual {v6, v0, v5}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_1
+    if-le v2, v3, :cond_2
+
+    iget-object v6, p0, Lcom/android/server/am/PendingIntentController;->mConstants:Lcom/android/server/am/ActivityManagerConstants;
+
+    iget v6, v6, Lcom/android/server/am/ActivityManagerConstants;->PENDINGINTENT_WARNING_THRESHOLD:I
+
+    if-gt v2, v6, :cond_2
+
+    iget-object v6, p0, Lcom/android/server/am/PendingIntentController;->mRecentIntentsPerUid:Landroid/util/SparseArray;
+
+    invoke-virtual {v6, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v6
+
+    move-object v5, v6
+
+    check-cast v5, Lcom/android/internal/util/RingBuffer;
+
+    :cond_2
+    :goto_1
+    if-nez v5, :cond_3
+
+    return-void
+
+    :cond_3
+    iget-object v6, p1, Lcom/android/server/am/PendingIntentRecord;->key:Lcom/android/server/am/PendingIntentRecord$Key;
+
+    invoke-virtual {v6}, Lcom/android/server/am/PendingIntentRecord$Key;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Lcom/android/internal/util/RingBuffer;->append(Ljava/lang/Object;)V
+
+    iget-object v6, p0, Lcom/android/server/am/PendingIntentController;->mConstants:Lcom/android/server/am/ActivityManagerConstants;
+
+    iget v6, v6, Lcom/android/server/am/ActivityManagerConstants;->PENDINGINTENT_WARNING_THRESHOLD:I
+
+    if-ne v2, v6, :cond_4
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "Too many PendingIntent created for uid "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v7, ", recent "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v4, ": "
+
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Lcom/android/internal/util/RingBuffer;->toArray()[Ljava/lang/Object;
+
+    move-result-object v4
+
+    invoke-static {v4}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string v6, "ActivityManager"
+
+    invoke-static {v6, v4}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v4, p0, Lcom/android/server/am/PendingIntentController;->mRecentIntentsPerUid:Landroid/util/SparseArray;
+
+    invoke-virtual {v4, v0}, Landroid/util/SparseArray;->remove(I)V
+
+    :cond_4
+    return-void
 .end method
 
 .method onActivityManagerInternalAdded()V
@@ -1246,6 +1526,8 @@
     invoke-interface {v2}, Ljava/util/Iterator;->remove()V
 
     invoke-direct {p0, v4}, Lcom/android/server/am/PendingIntentController;->makeIntentSenderCanceled(Lcom/android/server/am/PendingIntentRecord;)V
+
+    invoke-virtual {p0, v4}, Lcom/android/server/am/PendingIntentController;->decrementUidStatLocked(Lcom/android/server/am/PendingIntentRecord;)V
 
     iget-object v5, v4, Lcom/android/server/am/PendingIntentRecord;->key:Lcom/android/server/am/PendingIntentRecord$Key;
 

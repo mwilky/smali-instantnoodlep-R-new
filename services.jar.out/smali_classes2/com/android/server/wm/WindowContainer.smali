@@ -2576,44 +2576,6 @@
     return-void
 .end method
 
-.method checkCompleteDeferredRemoval()Z
-    .locals 4
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lcom/android/server/wm/WindowContainer;->mChildren:Lcom/android/server/wm/WindowList;
-
-    invoke-virtual {v1}, Lcom/android/server/wm/WindowList;->size()I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, -0x1
-
-    :goto_0
-    if-ltz v1, :cond_0
-
-    iget-object v2, p0, Lcom/android/server/wm/WindowContainer;->mChildren:Lcom/android/server/wm/WindowList;
-
-    invoke-virtual {v2, v1}, Lcom/android/server/wm/WindowList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/android/server/wm/WindowContainer;
-
-    invoke-virtual {v2}, Lcom/android/server/wm/WindowContainer;->checkCompleteDeferredRemoval()Z
-
-    move-result v3
-
-    or-int/2addr v0, v3
-
-    add-int/lit8 v1, v1, -0x1
-
-    goto :goto_0
-
-    :cond_0
-    return v0
-.end method
-
 .method clearMagnificationSpec(Landroid/view/SurfaceControl$Transaction;)V
     .locals 7
 
@@ -2980,6 +2942,31 @@
     invoke-virtual {v0, p1, v1}, Lcom/android/server/wm/SurfaceAnimator;->dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
     :cond_0
+    iget-object v0, p0, Lcom/android/server/wm/WindowContainer;->mLastOrientationSource:Lcom/android/server/wm/WindowContainer;
+
+    if-eqz v0, :cond_1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "mLastOrientationSource="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcom/android/server/wm/WindowContainer;->mLastOrientationSource:Lcom/android/server/wm/WindowContainer;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    :cond_1
     return-void
 .end method
 
@@ -5591,6 +5578,55 @@
     return-object v0
 .end method
 
+.method handleCompleteDeferredRemoval()Z
+    .locals 4
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lcom/android/server/wm/WindowContainer;->mChildren:Lcom/android/server/wm/WindowList;
+
+    invoke-virtual {v1}, Lcom/android/server/wm/WindowList;->size()I
+
+    move-result v1
+
+    add-int/lit8 v1, v1, -0x1
+
+    :goto_0
+    if-ltz v1, :cond_1
+
+    iget-object v2, p0, Lcom/android/server/wm/WindowContainer;->mChildren:Lcom/android/server/wm/WindowList;
+
+    invoke-virtual {v2, v1}, Lcom/android/server/wm/WindowList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/android/server/wm/WindowContainer;
+
+    invoke-virtual {v2}, Lcom/android/server/wm/WindowContainer;->handleCompleteDeferredRemoval()Z
+
+    move-result v3
+
+    or-int/2addr v0, v3
+
+    invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->hasChild()Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    const/4 v3, 0x0
+
+    return v3
+
+    :cond_0
+    add-int/lit8 v1, v1, -0x1
+
+    goto :goto_0
+
+    :cond_1
+    return v0
+.end method
+
 .method handlesOrientationChangeFromDescendant()Z
     .locals 2
 
@@ -6428,6 +6464,10 @@
     iget-object v0, p0, Lcom/android/server/wm/WindowContainer;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/wm/WindowManagerService;->onAnimationFinished()V
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/android/server/wm/WindowContainer;->mNeedsZBoost:Z
 
     return-void
 .end method
@@ -7562,7 +7602,13 @@
 .method setInitialSurfaceControlProperties(Landroid/view/SurfaceControl$Builder;)V
     .locals 2
 
-    invoke-virtual {p1}, Landroid/view/SurfaceControl$Builder;->build()Landroid/view/SurfaceControl;
+    const-string v0, "WindowContainer.setInitialSurfaceControlProperties"
+
+    invoke-virtual {p1, v0}, Landroid/view/SurfaceControl$Builder;->setCallsite(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/SurfaceControl$Builder;->build()Landroid/view/SurfaceControl;
 
     move-result-object v0
 

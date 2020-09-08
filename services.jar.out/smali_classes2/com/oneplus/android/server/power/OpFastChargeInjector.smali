@@ -27,7 +27,7 @@
 
     const/4 v1, 0x0
 
-    const/16 v2, 0x90
+    const/16 v2, 0x89
 
     aput v2, v0, v1
 
@@ -151,7 +151,7 @@
     return v1
 .end method
 
-.method public static init(Landroid/content/Context;)Z
+.method public static init(Landroid/content/Context;Landroid/os/Handler;)Z
     .locals 3
 
     sget-boolean v0, Lcom/oneplus/android/server/power/OpFastChargeInjector;->ENABLED:Z
@@ -200,7 +200,7 @@
 
     if-eqz v0, :cond_3
 
-    invoke-interface {v0, p0}, Lcom/oneplus/android/server/power/IOpFastCharge;->init(Landroid/content/Context;)V
+    invoke-interface {v0, p0, p1}, Lcom/oneplus/android/server/power/IOpFastCharge;->init(Landroid/content/Context;Landroid/os/Handler;)V
 
     :cond_3
     sget-object v0, Lcom/oneplus/android/server/power/OpFastChargeInjector;->opFastCharge:Lcom/oneplus/android/server/power/IOpFastCharge;

@@ -134,6 +134,15 @@
 .method public static mayClearFlagsForLegacyApp(Lcom/android/server/pm/parsing/pkg/AndroidPackage;Ljava/lang/String;ILjava/lang/String;)I
     .locals 6
 
+    invoke-static {}, Lcom/android/server/pm/OpPackageManagerHelperInjector;->isInSpecialTesting()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return p2
+
+    :cond_0
     const-class v0, Landroid/content/pm/PackageManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -160,7 +169,7 @@
 
     move-result v3
 
-    if-nez v3, :cond_2
+    if-nez v3, :cond_3
 
     invoke-interface {v2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
@@ -172,24 +181,20 @@
 
     move-result v3
 
-    if-eqz v3, :cond_0
+    if-eqz v3, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    invoke-interface {p0}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
-
-    move-result-object v3
-
+    :cond_1
     invoke-interface {p0}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getTargetSdkVersion()I
-
-    move-result v4
-
-    invoke-static {v3, v4}, Lcom/android/server/pm/PermissionPmInjector;->shouldDropPermissionReviewFlagForLegacyApps(Ljava/lang/String;I)Z
 
     move-result v3
 
-    if-eqz v3, :cond_1
+    invoke-static {v3}, Lcom/android/server/pm/PermissionPmInjector;->shouldDropPermissionReviewFlagForLegacyApps(I)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
 
     sget-object v3, Lcom/android/server/pm/PermissionPmInjector;->TAG:Ljava/lang/String;
 
@@ -227,10 +232,10 @@
 
     and-int/lit8 p2, p2, -0x41
 
-    :cond_1
+    :cond_2
     return p2
 
-    :cond_2
+    :cond_3
     :goto_0
     return p2
 .end method
@@ -384,7 +389,7 @@
     return-void
 .end method
 
-.method private static shouldDropPermissionReviewFlagForLegacyApps(Ljava/lang/String;I)Z
+.method private static shouldDropPermissionReviewFlagForLegacyApps(I)Z
     .locals 1
 
     sget-boolean v0, Lcom/android/server/pm/PermissionPmInjector;->ENABLED:Z
@@ -393,31 +398,7 @@
 
     const/16 v0, 0x17
 
-    if-ge p1, v0, :cond_0
-
-    const-string v0, "com.android.cts.usepermission"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const-string v0, "android.permission.cts"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const-string v0, "android.permission2.cts"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
+    if-ge p0, v0, :cond_0
 
     const/4 v0, 0x1
 

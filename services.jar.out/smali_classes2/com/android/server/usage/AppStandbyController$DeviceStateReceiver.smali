@@ -37,10 +37,10 @@
     return-void
 .end method
 
-.method static synthetic lambda$onReceive$0(Lcom/android/server/usage/AppStandbyController$Injector;)V
+.method static synthetic lambda$onReceive$0(Lcom/android/server/usage/AppStandbyController;)V
     .locals 0
 
-    invoke-static {p0}, Lcom/android/server/usage/AppStandbyController$Injector;->access$1400(Lcom/android/server/usage/AppStandbyController$Injector;)V
+    invoke-static {p0}, Lcom/android/server/usage/AppStandbyController;->access$1400(Lcom/android/server/usage/AppStandbyController;)V
 
     return-void
 .end method
@@ -147,13 +147,9 @@
 
     iget-object v1, p0, Lcom/android/server/usage/AppStandbyController$DeviceStateReceiver;->this$0:Lcom/android/server/usage/AppStandbyController;
 
-    iget-object v1, v1, Lcom/android/server/usage/AppStandbyController;->mInjector:Lcom/android/server/usage/AppStandbyController$Injector;
+    new-instance v2, Lcom/android/server/usage/-$$Lambda$AppStandbyController$DeviceStateReceiver$RN_jp43kPH7Xnk2Lb7iMS9-lEWs;
 
-    invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v2, Lcom/android/server/usage/-$$Lambda$AppStandbyController$DeviceStateReceiver$Y2Xqpay4_Feg6q--O1JMW7GNm44;
-
-    invoke-direct {v2, v1}, Lcom/android/server/usage/-$$Lambda$AppStandbyController$DeviceStateReceiver$Y2Xqpay4_Feg6q--O1JMW7GNm44;-><init>(Lcom/android/server/usage/AppStandbyController$Injector;)V
+    invoke-direct {v2, v1}, Lcom/android/server/usage/-$$Lambda$AppStandbyController$DeviceStateReceiver$RN_jp43kPH7Xnk2Lb7iMS9-lEWs;-><init>(Lcom/android/server/usage/AppStandbyController;)V
 
     invoke-virtual {v0, v2}, Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;->post(Ljava/lang/Runnable;)Z
 

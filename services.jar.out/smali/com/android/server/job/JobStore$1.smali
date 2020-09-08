@@ -170,7 +170,7 @@
 
     move-result-object v0
 
-    const-string v2, "internalFlags"
+    const-string/jumbo v2, "internalFlags"
 
     invoke-interface {p1, v1, v2, v0}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 

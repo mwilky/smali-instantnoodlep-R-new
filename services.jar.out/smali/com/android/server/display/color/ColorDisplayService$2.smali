@@ -118,6 +118,19 @@
     goto/16 :goto_1
 
     :sswitch_4
+    const-string/jumbo v2, "screen_color_mode_advanced_settings_value"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const/16 v1, 0x10
+
+    goto/16 :goto_1
+
+    :sswitch_5
     const-string/jumbo v2, "oem_nightmode_progress_status"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -130,7 +143,7 @@
 
     goto/16 :goto_1
 
-    :sswitch_5
+    :sswitch_6
     const-string v2, "display_white_balance_enabled"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -143,7 +156,7 @@
 
     goto/16 :goto_1
 
-    :sswitch_6
+    :sswitch_7
     const-string/jumbo v2, "night_display_activated"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -156,7 +169,7 @@
 
     goto/16 :goto_1
 
-    :sswitch_7
+    :sswitch_8
     const-string v2, "accessibility_display_daltonizer"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -169,7 +182,7 @@
 
     goto :goto_1
 
-    :sswitch_8
+    :sswitch_9
     const-string/jumbo v2, "screen_color_mode_settings_value"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -182,7 +195,7 @@
 
     goto :goto_1
 
-    :sswitch_9
+    :sswitch_a
     const-string v2, "fod_mode"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -191,11 +204,11 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v1, 0x10
+    const/16 v1, 0x11
 
     goto :goto_1
 
-    :sswitch_a
+    :sswitch_b
     const-string v2, "accessibility_display_inversion_enabled"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -208,7 +221,7 @@
 
     goto :goto_1
 
-    :sswitch_b
+    :sswitch_c
     const-string v2, "accessibility_display_daltonizer_enabled"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -221,7 +234,7 @@
 
     goto :goto_1
 
-    :sswitch_c
+    :sswitch_d
     const-string/jumbo v2, "night_display_color_temperature"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -234,7 +247,7 @@
 
     goto :goto_1
 
-    :sswitch_d
+    :sswitch_e
     const-string/jumbo v2, "oem_screen_better_value"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -247,7 +260,7 @@
 
     goto :goto_1
 
-    :sswitch_e
+    :sswitch_f
     const-string/jumbo v2, "night_display_custom_end_time"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -260,7 +273,7 @@
 
     goto :goto_1
 
-    :sswitch_f
+    :sswitch_10
     const-string/jumbo v2, "night_display_auto_mode"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -273,7 +286,7 @@
 
     goto :goto_1
 
-    :sswitch_10
+    :sswitch_11
     const-string/jumbo v2, "oem_nightmode_brightness_progress"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -541,21 +554,24 @@
     :goto_2
     return-void
 
+    nop
+
     :sswitch_data_0
     .sparse-switch
-        -0x7b8b0f11 -> :sswitch_10
-        -0x797bb571 -> :sswitch_f
-        -0x6900ebe5 -> :sswitch_e
-        -0x563eaf93 -> :sswitch_d
-        -0x39c8c50c -> :sswitch_c
-        -0x28f198ce -> :sswitch_b
-        -0x20db1ad9 -> :sswitch_a
-        0x39e22a7 -> :sswitch_9
-        0xf66fb82 -> :sswitch_8
-        0x1ccf6530 -> :sswitch_7
-        0x2fb0ca2d -> :sswitch_6
-        0x425e310b -> :sswitch_5
-        0x482cf6d8 -> :sswitch_4
+        -0x7b8b0f11 -> :sswitch_11
+        -0x797bb571 -> :sswitch_10
+        -0x6900ebe5 -> :sswitch_f
+        -0x563eaf93 -> :sswitch_e
+        -0x39c8c50c -> :sswitch_d
+        -0x28f198ce -> :sswitch_c
+        -0x20db1ad9 -> :sswitch_b
+        0x39e22a7 -> :sswitch_a
+        0xf66fb82 -> :sswitch_9
+        0x1ccf6530 -> :sswitch_8
+        0x2fb0ca2d -> :sswitch_7
+        0x425e310b -> :sswitch_6
+        0x482cf6d8 -> :sswitch_5
+        0x51621985 -> :sswitch_4
         0x5d15789c -> :sswitch_3
         0x5e128274 -> :sswitch_2
         0x77e1d08f -> :sswitch_1
@@ -579,6 +595,7 @@
         :pswitch_4
         :pswitch_3
         :pswitch_2
+        :pswitch_1
         :pswitch_1
         :pswitch_0
     .end packed-switch

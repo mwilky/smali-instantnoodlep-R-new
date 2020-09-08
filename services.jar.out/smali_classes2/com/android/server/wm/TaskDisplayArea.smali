@@ -92,6 +92,12 @@
     .end annotation
 .end field
 
+.field private mTmpLayerForAnimationLayer:I
+
+.field private mTmpLayerForSplitScreenDividerAnchor:I
+
+.field private final mTmpNeedsZBoostIndexes:Landroid/util/IntArray;
+
 .field private final mTmpNormalStacks:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -157,6 +163,12 @@
 
     iput-object v0, p0, Lcom/android/server/wm/TaskDisplayArea;->mTmpHomeStacks:Ljava/util/ArrayList;
 
+    new-instance v0, Landroid/util/IntArray;
+
+    invoke-direct {v0}, Landroid/util/IntArray;-><init>()V
+
+    iput-object v0, p0, Lcom/android/server/wm/TaskDisplayArea;->mTmpNeedsZBoostIndexes:Landroid/util/IntArray;
+
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -194,6 +206,157 @@
     iput-object v0, p0, Lcom/android/server/wm/TaskDisplayArea;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     return-void
+.end method
+
+.method private adjustNormalStackLayer(Lcom/android/server/wm/ActivityStack;I)I
+    .locals 1
+
+    invoke-virtual {p1}, Lcom/android/server/wm/ActivityStack;->inSplitScreenWindowingMode()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    add-int/lit8 v0, p2, 0x1
+
+    iput p2, p0, Lcom/android/server/wm/TaskDisplayArea;->mTmpLayerForSplitScreenDividerAnchor:I
+
+    move p2, v0
+
+    :cond_0
+    invoke-virtual {p1}, Lcom/android/server/wm/ActivityStack;->isTaskAnimating()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {p1}, Lcom/android/server/wm/ActivityStack;->isAppTransitioning()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    :cond_1
+    add-int/lit8 v0, p2, 0x1
+
+    iput p2, p0, Lcom/android/server/wm/TaskDisplayArea;->mTmpLayerForAnimationLayer:I
+
+    move p2, v0
+
+    :cond_2
+    return p2
+.end method
+
+.method private adjustRootTaskLayer(Landroid/view/SurfaceControl$Transaction;Ljava/util/ArrayList;IZ)I
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/view/SurfaceControl$Transaction;",
+            "Ljava/util/ArrayList<",
+            "Lcom/android/server/wm/ActivityStack;",
+            ">;IZ)I"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/android/server/wm/TaskDisplayArea;->mTmpNeedsZBoostIndexes:Landroid/util/IntArray;
+
+    invoke-virtual {v0}, Landroid/util/IntArray;->clear()V
+
+    invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v0, :cond_2
+
+    invoke-virtual {p2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/android/server/wm/ActivityStack;
+
+    invoke-virtual {v2}, Lcom/android/server/wm/ActivityStack;->needsZBoost()Z
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    add-int/lit8 v3, p3, 0x1
+
+    invoke-virtual {v2, p1, p3}, Lcom/android/server/wm/ActivityStack;->assignLayer(Landroid/view/SurfaceControl$Transaction;I)V
+
+    if-eqz p4, :cond_0
+
+    invoke-direct {p0, v2, v3}, Lcom/android/server/wm/TaskDisplayArea;->adjustNormalStackLayer(Lcom/android/server/wm/ActivityStack;I)I
+
+    move-result p3
+
+    goto :goto_1
+
+    :cond_0
+    move p3, v3
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v3, p0, Lcom/android/server/wm/TaskDisplayArea;->mTmpNeedsZBoostIndexes:Landroid/util/IntArray;
+
+    invoke-virtual {v3, v1}, Landroid/util/IntArray;->add(I)V
+
+    :goto_1
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v1, p0, Lcom/android/server/wm/TaskDisplayArea;->mTmpNeedsZBoostIndexes:Landroid/util/IntArray;
+
+    invoke-virtual {v1}, Landroid/util/IntArray;->size()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    :goto_2
+    if-ge v2, v1, :cond_4
+
+    iget-object v3, p0, Lcom/android/server/wm/TaskDisplayArea;->mTmpNeedsZBoostIndexes:Landroid/util/IntArray;
+
+    invoke-virtual {v3, v2}, Landroid/util/IntArray;->get(I)I
+
+    move-result v3
+
+    invoke-virtual {p2, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lcom/android/server/wm/ActivityStack;
+
+    add-int/lit8 v4, p3, 0x1
+
+    invoke-virtual {v3, p1, p3}, Lcom/android/server/wm/ActivityStack;->assignLayer(Landroid/view/SurfaceControl$Transaction;I)V
+
+    if-eqz p4, :cond_3
+
+    invoke-direct {p0, v3, v4}, Lcom/android/server/wm/TaskDisplayArea;->adjustNormalStackLayer(Lcom/android/server/wm/ActivityStack;I)I
+
+    move-result p3
+
+    goto :goto_3
+
+    :cond_3
+    move p3, v4
+
+    :goto_3
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_2
+
+    :cond_4
+    return p3
 .end method
 
 .method private findMaxPositionForStack(Lcom/android/server/wm/ActivityStack;)I
@@ -1461,7 +1624,7 @@
 .end method
 
 .method assignStackOrdering(Landroid/view/SurfaceControl$Transaction;)V
-    .locals 8
+    .locals 5
 
     invoke-virtual {p0}, Lcom/android/server/wm/TaskDisplayArea;->getParent()Lcom/android/server/wm/WindowContainer;
 
@@ -1541,156 +1704,57 @@
     :cond_3
     const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    iget-object v1, p0, Lcom/android/server/wm/TaskDisplayArea;->mTmpHomeStacks:Ljava/util/ArrayList;
 
-    :goto_2
-    iget-object v2, p0, Lcom/android/server/wm/TaskDisplayArea;->mTmpHomeStacks:Ljava/util/ArrayList;
+    const/4 v2, 0x0
 
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+    invoke-direct {p0, p1, v1, v0, v2}, Lcom/android/server/wm/TaskDisplayArea;->adjustRootTaskLayer(Landroid/view/SurfaceControl$Transaction;Ljava/util/ArrayList;IZ)I
 
-    move-result v2
+    move-result v0
 
-    if-ge v1, v2, :cond_4
-
-    iget-object v2, p0, Lcom/android/server/wm/TaskDisplayArea;->mTmpHomeStacks:Ljava/util/ArrayList;
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/android/server/wm/ActivityStack;
-
-    add-int/lit8 v3, v0, 0x1
-
-    invoke-virtual {v2, p1, v0}, Lcom/android/server/wm/ActivityStack;->assignLayer(Landroid/view/SurfaceControl$Transaction;I)V
-
-    add-int/lit8 v1, v1, 0x1
-
-    move v0, v3
-
-    goto :goto_2
-
-    :cond_4
     add-int/lit8 v1, v0, 0x1
 
-    add-int/lit8 v2, v1, 0x1
+    add-int/lit8 v3, v1, 0x1
 
-    add-int/lit8 v3, v2, 0x1
+    iput v1, p0, Lcom/android/server/wm/TaskDisplayArea;->mTmpLayerForSplitScreenDividerAnchor:I
 
-    const/4 v4, 0x0
+    add-int/lit8 v1, v3, 0x1
 
-    :goto_3
-    iget-object v5, p0, Lcom/android/server/wm/TaskDisplayArea;->mTmpNormalStacks:Ljava/util/ArrayList;
+    iput v3, p0, Lcom/android/server/wm/TaskDisplayArea;->mTmpLayerForAnimationLayer:I
 
-    invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
+    iget-object v3, p0, Lcom/android/server/wm/TaskDisplayArea;->mTmpNormalStacks:Ljava/util/ArrayList;
 
-    move-result v5
+    const/4 v4, 0x1
 
-    if-ge v4, v5, :cond_8
+    invoke-direct {p0, p1, v3, v1, v4}, Lcom/android/server/wm/TaskDisplayArea;->adjustRootTaskLayer(Landroid/view/SurfaceControl$Transaction;Ljava/util/ArrayList;IZ)I
 
-    iget-object v5, p0, Lcom/android/server/wm/TaskDisplayArea;->mTmpNormalStacks:Ljava/util/ArrayList;
+    move-result v1
 
-    invoke-virtual {v5, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    add-int/lit8 v3, v1, 0x1
 
-    move-result-object v5
+    iget-object v4, p0, Lcom/android/server/wm/TaskDisplayArea;->mTmpAlwaysOnTopStacks:Ljava/util/ArrayList;
 
-    check-cast v5, Lcom/android/server/wm/ActivityStack;
+    invoke-direct {p0, p1, v4, v3, v2}, Lcom/android/server/wm/TaskDisplayArea;->adjustRootTaskLayer(Landroid/view/SurfaceControl$Transaction;Ljava/util/ArrayList;IZ)I
 
-    add-int/lit8 v6, v3, 0x1
+    iget-object v2, p0, Lcom/android/server/wm/TaskDisplayArea;->mHomeAppAnimationLayer:Landroid/view/SurfaceControl;
 
-    invoke-virtual {v5, p1, v3}, Lcom/android/server/wm/ActivityStack;->assignLayer(Landroid/view/SurfaceControl$Transaction;I)V
+    invoke-virtual {p1, v2, v0}, Landroid/view/SurfaceControl$Transaction;->setLayer(Landroid/view/SurfaceControl;I)Landroid/view/SurfaceControl$Transaction;
 
-    invoke-virtual {v5}, Lcom/android/server/wm/ActivityStack;->inSplitScreenWindowingMode()Z
+    iget-object v2, p0, Lcom/android/server/wm/TaskDisplayArea;->mAppAnimationLayer:Landroid/view/SurfaceControl;
 
-    move-result v3
+    iget v4, p0, Lcom/android/server/wm/TaskDisplayArea;->mTmpLayerForAnimationLayer:I
 
-    if-eqz v3, :cond_5
+    invoke-virtual {p1, v2, v4}, Landroid/view/SurfaceControl$Transaction;->setLayer(Landroid/view/SurfaceControl;I)Landroid/view/SurfaceControl$Transaction;
 
-    add-int/lit8 v3, v6, 0x1
+    iget-object v2, p0, Lcom/android/server/wm/TaskDisplayArea;->mSplitScreenDividerAnchor:Landroid/view/SurfaceControl;
 
-    move v1, v6
+    iget v4, p0, Lcom/android/server/wm/TaskDisplayArea;->mTmpLayerForSplitScreenDividerAnchor:I
 
-    move v6, v3
+    invoke-virtual {p1, v2, v4}, Landroid/view/SurfaceControl$Transaction;->setLayer(Landroid/view/SurfaceControl;I)Landroid/view/SurfaceControl$Transaction;
 
-    :cond_5
-    invoke-virtual {v5}, Lcom/android/server/wm/ActivityStack;->isTaskAnimating()Z
+    iget-object v2, p0, Lcom/android/server/wm/TaskDisplayArea;->mBoostedAppAnimationLayer:Landroid/view/SurfaceControl;
 
-    move-result v3
-
-    if-nez v3, :cond_7
-
-    invoke-virtual {v5}, Lcom/android/server/wm/ActivityStack;->isAppTransitioning()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_6
-
-    goto :goto_4
-
-    :cond_6
-    move v3, v6
-
-    goto :goto_5
-
-    :cond_7
-    :goto_4
-    add-int/lit8 v3, v6, 0x1
-
-    move v2, v6
-
-    :goto_5
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_3
-
-    :cond_8
-    add-int/lit8 v4, v3, 0x1
-
-    const/4 v5, 0x0
-
-    :goto_6
-    iget-object v6, p0, Lcom/android/server/wm/TaskDisplayArea;->mTmpAlwaysOnTopStacks:Ljava/util/ArrayList;
-
-    invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
-
-    move-result v6
-
-    if-ge v5, v6, :cond_9
-
-    iget-object v6, p0, Lcom/android/server/wm/TaskDisplayArea;->mTmpAlwaysOnTopStacks:Ljava/util/ArrayList;
-
-    invoke-virtual {v6, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lcom/android/server/wm/ActivityStack;
-
-    add-int/lit8 v7, v4, 0x1
-
-    invoke-virtual {v6, p1, v4}, Lcom/android/server/wm/ActivityStack;->assignLayer(Landroid/view/SurfaceControl$Transaction;I)V
-
-    add-int/lit8 v5, v5, 0x1
-
-    move v4, v7
-
-    goto :goto_6
-
-    :cond_9
-    iget-object v5, p0, Lcom/android/server/wm/TaskDisplayArea;->mHomeAppAnimationLayer:Landroid/view/SurfaceControl;
-
-    invoke-virtual {p1, v5, v0}, Landroid/view/SurfaceControl$Transaction;->setLayer(Landroid/view/SurfaceControl;I)Landroid/view/SurfaceControl$Transaction;
-
-    iget-object v5, p0, Lcom/android/server/wm/TaskDisplayArea;->mAppAnimationLayer:Landroid/view/SurfaceControl;
-
-    invoke-virtual {p1, v5, v2}, Landroid/view/SurfaceControl$Transaction;->setLayer(Landroid/view/SurfaceControl;I)Landroid/view/SurfaceControl$Transaction;
-
-    iget-object v5, p0, Lcom/android/server/wm/TaskDisplayArea;->mSplitScreenDividerAnchor:Landroid/view/SurfaceControl;
-
-    invoke-virtual {p1, v5, v1}, Landroid/view/SurfaceControl$Transaction;->setLayer(Landroid/view/SurfaceControl;I)Landroid/view/SurfaceControl$Transaction;
-
-    iget-object v5, p0, Lcom/android/server/wm/TaskDisplayArea;->mBoostedAppAnimationLayer:Landroid/view/SurfaceControl;
-
-    invoke-virtual {p1, v5, v3}, Landroid/view/SurfaceControl$Transaction;->setLayer(Landroid/view/SurfaceControl;I)Landroid/view/SurfaceControl$Transaction;
+    invoke-virtual {p1, v2, v1}, Landroid/view/SurfaceControl$Transaction;->setLayer(Landroid/view/SurfaceControl;I)Landroid/view/SurfaceControl$Transaction;
 
     return-void
 .end method
@@ -2089,58 +2153,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    invoke-super {p0, p1, p2, p3}, Lcom/android/server/wm/DisplayArea;->dump(Ljava/io/PrintWriter;Ljava/lang/String;Z)V
-
-    iget-object v0, p0, Lcom/android/server/wm/TaskDisplayArea;->mPreferredTopFocusableStack:Lcom/android/server/wm/ActivityStack;
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "  mPreferredTopFocusableStack="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lcom/android/server/wm/TaskDisplayArea;->mPreferredTopFocusableStack:Lcom/android/server/wm/ActivityStack;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    :cond_0
-    iget-object v0, p0, Lcom/android/server/wm/TaskDisplayArea;->mLastFocusedStack:Lcom/android/server/wm/ActivityStack;
-
-    if-eqz v0, :cond_1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "  mLastFocusedStack="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lcom/android/server/wm/TaskDisplayArea;->mLastFocusedStack:Lcom/android/server/wm/ActivityStack;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2155,6 +2167,58 @@
 
     move-result-object v0
 
+    invoke-super {p0, p1, v0, p3}, Lcom/android/server/wm/DisplayArea;->dump(Ljava/io/PrintWriter;Ljava/lang/String;Z)V
+
+    iget-object v2, p0, Lcom/android/server/wm/TaskDisplayArea;->mPreferredTopFocusableStack:Lcom/android/server/wm/ActivityStack;
+
+    if-eqz v2, :cond_0
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, "mPreferredTopFocusableStack="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lcom/android/server/wm/TaskDisplayArea;->mPreferredTopFocusableStack:Lcom/android/server/wm/ActivityStack;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    :cond_0
+    iget-object v2, p0, Lcom/android/server/wm/TaskDisplayArea;->mLastFocusedStack:Lcom/android/server/wm/ActivityStack;
+
+    if-eqz v2, :cond_1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, "mLastFocusedStack="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lcom/android/server/wm/TaskDisplayArea;->mLastFocusedStack:Lcom/android/server/wm/ActivityStack;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    :cond_1
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2229,6 +2293,13 @@
 .method ensureActivitiesVisible(Lcom/android/server/wm/ActivityRecord;IZZ)V
     .locals 2
 
+    iget-object v0, p0, Lcom/android/server/wm/TaskDisplayArea;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
+
+    iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mStackSupervisor:Lcom/android/server/wm/ActivityStackSupervisor;
+
+    invoke-virtual {v0}, Lcom/android/server/wm/ActivityStackSupervisor;->beginActivityVisibilityUpdate()V
+
+    :try_start_0
     invoke-virtual {p0}, Lcom/android/server/wm/TaskDisplayArea;->getStackCount()I
 
     move-result v0
@@ -2243,13 +2314,34 @@
     move-result-object v1
 
     invoke-virtual {v1, p1, p2, p3, p4}, Lcom/android/server/wm/ActivityStack;->ensureActivitiesVisible(Lcom/android/server/wm/ActivityRecord;IZZ)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
     :cond_0
+    iget-object v0, p0, Lcom/android/server/wm/TaskDisplayArea;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
+
+    iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mStackSupervisor:Lcom/android/server/wm/ActivityStackSupervisor;
+
+    invoke-virtual {v0}, Lcom/android/server/wm/ActivityStackSupervisor;->endActivityVisibilityUpdate()V
+
+    nop
+
     return-void
+
+    :catchall_0
+    move-exception v0
+
+    iget-object v1, p0, Lcom/android/server/wm/TaskDisplayArea;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
+
+    iget-object v1, v1, Lcom/android/server/wm/ActivityTaskManagerService;->mStackSupervisor:Lcom/android/server/wm/ActivityStackSupervisor;
+
+    invoke-virtual {v1}, Lcom/android/server/wm/ActivityStackSupervisor;->endActivityVisibilityUpdate()V
+
+    throw v0
 .end method
 
 .method findTaskLocked(Lcom/android/server/wm/ActivityRecord;ZLcom/android/server/wm/RootWindowContainer$FindTaskResult;)V
@@ -3052,27 +3144,23 @@
 
     move-result v1
 
-    const/4 v2, -0x2
+    const/4 v2, 0x1
 
-    if-eqz v1, :cond_2
+    const/4 v3, 0x0
 
-    iget-object v0, p0, Lcom/android/server/wm/TaskDisplayArea;->mRootHomeTask:Lcom/android/server/wm/ActivityStack;
+    const/4 v4, -0x2
 
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lcom/android/server/wm/ActivityStack;->isVisible()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_4
 
     iget-object v0, p0, Lcom/android/server/wm/TaskDisplayArea;->mRootHomeTask:Lcom/android/server/wm/ActivityStack;
+
+    if-eqz v0, :cond_2
 
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityStack;->isResizeable()Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_2
 
     iget-object v0, p0, Lcom/android/server/wm/TaskDisplayArea;->mRootHomeTask:Lcom/android/server/wm/ActivityStack;
 
@@ -3080,15 +3168,40 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/server/wm/Task;->getOrientation()I
+    invoke-virtual {v0}, Lcom/android/server/wm/Task;->getTopNonFinishingActivity()Lcom/android/server/wm/ActivityRecord;
 
-    move-result v1
+    move-result-object v1
 
-    if-eq v1, v2, :cond_0
+    if-eqz v1, :cond_0
 
-    return v1
+    iget-boolean v5, v1, Lcom/android/server/wm/ActivityRecord;->mVisibleRequested:Z
+
+    if-eqz v5, :cond_0
+
+    goto :goto_0
 
     :cond_0
+    move v2, v3
+
+    :goto_0
+    invoke-virtual {v0}, Lcom/android/server/wm/Task;->isVisible()Z
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    if-eqz v2, :cond_2
+
+    :cond_1
+    invoke-virtual {v0}, Lcom/android/server/wm/Task;->getOrientation()I
+
+    move-result v3
+
+    if-eq v3, v4, :cond_2
+
+    return v3
+
+    :cond_2
     iget-object v0, p0, Lcom/android/server/wm/TaskDisplayArea;->mRootHomeTask:Lcom/android/server/wm/ActivityStack;
 
     iget-object v1, p0, Lcom/android/server/wm/TaskDisplayArea;->mRootSplitScreenPrimaryTask:Lcom/android/server/wm/ActivityStack;
@@ -3097,60 +3210,56 @@
 
     move-result v0
 
-    if-eq v0, v2, :cond_1
+    if-eq v0, v4, :cond_3
 
     return v0
 
-    :cond_1
+    :cond_3
     const/4 v1, -0x1
 
     return v1
 
-    :cond_2
+    :cond_4
     const/4 v1, 0x5
 
     invoke-virtual {p0, v1}, Lcom/android/server/wm/TaskDisplayArea;->isStackVisible(I)Z
 
-    move-result v3
+    move-result v5
 
-    if-eqz v3, :cond_3
+    if-eqz v5, :cond_5
 
-    iget-object v3, p0, Lcom/android/server/wm/TaskDisplayArea;->mRootHomeTask:Lcom/android/server/wm/ActivityStack;
+    iget-object v5, p0, Lcom/android/server/wm/TaskDisplayArea;->mRootHomeTask:Lcom/android/server/wm/ActivityStack;
 
-    iget-object v4, p0, Lcom/android/server/wm/TaskDisplayArea;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
+    iget-object v6, p0, Lcom/android/server/wm/TaskDisplayArea;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    iget-object v4, v4, Lcom/android/server/wm/DisplayContent;->mFocusedApp:Lcom/android/server/wm/ActivityRecord;
+    iget-object v6, v6, Lcom/android/server/wm/DisplayContent;->mFocusedApp:Lcom/android/server/wm/ActivityRecord;
 
-    invoke-static {v3, v4}, Lcom/android/server/wm/OpQuickReplyInjector;->getQuickReplyOrientation(Lcom/android/server/wm/ActivityStack;Lcom/android/server/wm/ActivityRecord;)I
+    invoke-static {v5, v6}, Lcom/android/server/wm/OpQuickReplyInjector;->getQuickReplyOrientation(Lcom/android/server/wm/ActivityStack;Lcom/android/server/wm/ActivityRecord;)I
 
-    move-result v3
+    move-result v5
 
-    if-eq v3, v2, :cond_3
+    if-eq v5, v4, :cond_5
 
-    return v3
+    return v5
 
-    :cond_3
+    :cond_5
     invoke-super {p0, p1}, Lcom/android/server/wm/DisplayArea;->getOrientation(I)I
 
-    move-result v3
-
-    const/4 v4, 0x1
-
-    const/4 v5, 0x0
+    move-result v5
 
     const/4 v6, 0x2
 
     const/4 v7, 0x0
 
-    if-eq v3, v2, :cond_5
+    if-eq v5, v4, :cond_7
 
-    if-eq v3, v0, :cond_5
+    if-eq v5, v0, :cond_7
 
     sget-boolean v0, Lcom/android/server/protolog/ProtoLog$Cache;->WM_DEBUG_ORIENTATION_enabled:Z
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_6
 
-    int-to-long v8, v3
+    int-to-long v8, v5
 
     iget-object v0, p0, Lcom/android/server/wm/TaskDisplayArea;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -3160,7 +3269,7 @@
 
     sget-object v0, Lcom/android/server/wm/ProtoLogGroup;->WM_DEBUG_ORIENTATION:Lcom/android/server/wm/ProtoLogGroup;
 
-    const v2, 0x5253dbca
+    const v4, 0x5253dbca
 
     new-array v6, v6, [Ljava/lang/Object;
 
@@ -3168,23 +3277,23 @@
 
     move-result-object v12
 
-    aput-object v12, v6, v5
+    aput-object v12, v6, v3
 
     invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v5
+    move-result-object v3
 
-    aput-object v5, v6, v4
+    aput-object v3, v6, v2
 
-    invoke-static {v0, v2, v1, v7, v6}, Lcom/android/server/protolog/ProtoLogImpl;->v(Lcom/android/server/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v4, v1, v7, v6}, Lcom/android/server/protolog/ProtoLogImpl;->v(Lcom/android/server/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    :cond_4
-    return v3
+    :cond_6
+    return v5
 
-    :cond_5
+    :cond_7
     sget-boolean v0, Lcom/android/server/protolog/ProtoLog$Cache;->WM_DEBUG_ORIENTATION_enabled:Z
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_8
 
     iget-object v0, p0, Lcom/android/server/wm/TaskDisplayArea;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -3202,7 +3311,7 @@
 
     sget-object v0, Lcom/android/server/wm/ProtoLogGroup;->WM_DEBUG_ORIENTATION:Lcom/android/server/wm/ProtoLogGroup;
 
-    const v2, 0x61c711e7
+    const v4, 0x61c711e7
 
     new-array v6, v6, [Ljava/lang/Object;
 
@@ -3210,17 +3319,17 @@
 
     move-result-object v12
 
-    aput-object v12, v6, v5
+    aput-object v12, v6, v3
 
     invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v5
+    move-result-object v3
 
-    aput-object v5, v6, v4
+    aput-object v3, v6, v2
 
-    invoke-static {v0, v2, v1, v7, v6}, Lcom/android/server/protolog/ProtoLogImpl;->v(Lcom/android/server/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v4, v1, v7, v6}, Lcom/android/server/protolog/ProtoLogImpl;->v(Lcom/android/server/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    :cond_6
+    :cond_8
     iget-object v0, p0, Lcom/android/server/wm/TaskDisplayArea;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     invoke-virtual {v0}, Lcom/android/server/wm/DisplayContent;->getLastOrientation()I
@@ -3790,7 +3899,7 @@
 .end method
 
 .method public synthetic lambda$onParentChanged$1$TaskDisplayArea()V
-    .locals 3
+    .locals 4
 
     const/4 v0, 0x0
 
@@ -3804,6 +3913,12 @@
 
     move-result-object v1
 
+    const-string v2, "TaskDisplayArea.onParentChanged"
+
+    invoke-virtual {v1, v2}, Landroid/view/SurfaceControl$Builder;->setCallsite(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
+
+    move-result-object v1
+
     invoke-virtual {v1}, Landroid/view/SurfaceControl$Builder;->build()Landroid/view/SurfaceControl;
 
     move-result-object v1
@@ -3814,9 +3929,13 @@
 
     move-result-object v1
 
-    const-string v2, "boostedAnimationLayer"
+    const-string v3, "boostedAnimationLayer"
 
-    invoke-virtual {v1, v2}, Landroid/view/SurfaceControl$Builder;->setName(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
+    invoke-virtual {v1, v3}, Landroid/view/SurfaceControl$Builder;->setName(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v2}, Landroid/view/SurfaceControl$Builder;->setCallsite(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
 
     move-result-object v1
 
@@ -3830,9 +3949,13 @@
 
     move-result-object v1
 
-    const-string v2, "homeAnimationLayer"
+    const-string v3, "homeAnimationLayer"
 
-    invoke-virtual {v1, v2}, Landroid/view/SurfaceControl$Builder;->setName(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
+    invoke-virtual {v1, v3}, Landroid/view/SurfaceControl$Builder;->setName(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v2}, Landroid/view/SurfaceControl$Builder;->setCallsite(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
 
     move-result-object v1
 
@@ -3849,6 +3972,10 @@
     const-string v1, "splitScreenDividerAnchor"
 
     invoke-virtual {v0, v1}, Landroid/view/SurfaceControl$Builder;->setName(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Landroid/view/SurfaceControl$Builder;->setCallsite(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
 
     move-result-object v0
 

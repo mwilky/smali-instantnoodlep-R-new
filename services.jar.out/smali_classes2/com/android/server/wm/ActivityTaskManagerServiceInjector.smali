@@ -14,6 +14,8 @@
 
 .field private static opProcessResident:Lcom/android/server/wm/IOpProcessResident;
 
+.field public static sHypnusService:Lcom/android/internal/app/IHypnusService;
+
 .field private static sOpActivityTaskManagerService:Lcom/android/server/wm/IOpActivityTaskManagerService;
 
 
@@ -29,7 +31,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x60
+    const/16 v2, 0x5d
 
     const/4 v3, 0x0
 
@@ -47,7 +49,7 @@
 
     new-array v0, v0, [I
 
-    const/16 v2, 0xb7
+    const/16 v2, 0xb0
 
     aput v2, v0, v3
 
@@ -56,6 +58,8 @@
     move-result v0
 
     sput-boolean v0, Lcom/android/server/wm/ActivityTaskManagerServiceInjector;->IS_LANDSCAPE_APP_ANIMATION_IMPROVEMENT_ENABLED:Z
+
+    sput-object v1, Lcom/android/server/wm/ActivityTaskManagerServiceInjector;->sHypnusService:Lcom/android/internal/app/IHypnusService;
 
     sput-object v1, Lcom/android/server/wm/ActivityTaskManagerServiceInjector;->sOpActivityTaskManagerService:Lcom/android/server/wm/IOpActivityTaskManagerService;
 
@@ -149,6 +153,16 @@
     sput-object v0, Lcom/android/server/wm/ActivityTaskManagerServiceInjector;->sOpActivityTaskManagerService:Lcom/android/server/wm/IOpActivityTaskManagerService;
 
     :cond_0
+    sget-object v0, Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;->oneplus_hypnus:Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;
+
+    invoke-static {v0}, Lcom/oneplus/android/server/context/OneplusContextStub;->queryInterface(Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/internal/app/IHypnusService;
+
+    sput-object v0, Lcom/android/server/wm/ActivityTaskManagerServiceInjector;->sHypnusService:Lcom/android/internal/app/IHypnusService;
+
     return-void
 .end method
 
@@ -261,7 +275,7 @@
 .end method
 
 .method public static setResumedActivityUncheckLocked(Lcom/android/server/wm/ActivityRecord;)V
-    .locals 1
+    .locals 5
 
     invoke-static {}, Lcom/android/server/wm/ActivityTaskManagerServiceInjector;->initInstance()V
 
@@ -272,6 +286,83 @@
     invoke-interface {v0, p0}, Lcom/android/server/wm/IOpActivityTaskManagerService;->setResumedActivityUncheckLocked(Lcom/android/server/wm/ActivityRecord;)V
 
     :cond_0
+    sget-object v0, Lcom/android/server/wm/ActivityTaskManagerServiceInjector;->sHypnusService:Lcom/android/internal/app/IHypnusService;
+
+    if-nez v0, :cond_1
+
+    sget-object v0, Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;->oneplus_hypnus:Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;
+
+    invoke-static {v0}, Lcom/oneplus/android/server/context/OneplusContextStub;->queryInterface(Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/internal/app/IHypnusService;
+
+    sput-object v0, Lcom/android/server/wm/ActivityTaskManagerServiceInjector;->sHypnusService:Lcom/android/internal/app/IHypnusService;
+
+    :cond_1
+    sget-object v0, Lcom/android/server/wm/ActivityTaskManagerServiceInjector;->sHypnusService:Lcom/android/internal/app/IHypnusService;
+
+    if-eqz v0, :cond_2
+
+    if-eqz p0, :cond_2
+
+    :try_start_0
+    iget-object v0, p0, Lcom/android/server/wm/ActivityRecord;->info:Landroid/content/pm/ActivityInfo;
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/android/server/wm/ActivityRecord;->appInfo:Landroid/content/pm/ApplicationInfo;
+
+    if-eqz v0, :cond_2
+
+    sget-object v0, Lcom/android/server/wm/ActivityTaskManagerServiceInjector;->sHypnusService:Lcom/android/internal/app/IHypnusService;
+
+    iget-object v1, p0, Lcom/android/server/wm/ActivityRecord;->packageName:Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/android/server/wm/ActivityRecord;->info:Landroid/content/pm/ActivityInfo;
+
+    iget-object v2, v2, Landroid/content/pm/ActivityInfo;->targetActivity:Ljava/lang/String;
+
+    iget-object v3, p0, Lcom/android/server/wm/ActivityRecord;->appInfo:Landroid/content/pm/ApplicationInfo;
+
+    iget v3, v3, Landroid/content/pm/ApplicationInfo;->uid:I
+
+    invoke-virtual {p0}, Lcom/android/server/wm/ActivityRecord;->getPid()I
+
+    move-result v4
+
+    invoke-interface {v0, v1, v2, v3, v4}, Lcom/android/internal/app/IHypnusService;->hypnusSetScene(Ljava/lang/String;Ljava/lang/String;II)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "HypnusService: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "ActivityTaskManagerInjector"
+
+    invoke-static {v2, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    nop
+
+    :cond_2
+    :goto_0
     return-void
 .end method
 

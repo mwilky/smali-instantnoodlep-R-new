@@ -457,7 +457,7 @@
 
     new-instance v2, Ljava/io/FileReader;
 
-    const-string v3, "/sys/kernel/debug/binder/state"
+    const-string v3, "/dev/binderfs/binder_logs/state"
 
     invoke-direct {v2, v3}, Ljava/io/FileReader;-><init>(Ljava/lang/String;)V
 
@@ -1351,7 +1351,7 @@
 .end method
 
 .method public run()V
-    .locals 25
+    .locals 26
 
     move-object/from16 v7, p0
 
@@ -1716,7 +1716,7 @@
 
     iget-object v14, v7, Lcom/android/server/Watchdog;->mTraceDateFormat:Ljava/text/SimpleDateFormat;
 
-    move-object/from16 v17, v1
+    move-object/from16 v18, v1
 
     new-instance v1, Ljava/util/Date;
 
@@ -1758,26 +1758,26 @@
 
     invoke-direct {v0, v1, v14}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    move-object/from16 v18, v0
+    move-object/from16 v19, v0
 
     :try_start_5
-    invoke-virtual/range {v18 .. v18}, Ljava/io/File;->createNewFile()Z
+    invoke-virtual/range {v19 .. v19}, Ljava/io/File;->createNewFile()Z
 
     move-result v0
 
     if-eqz v0, :cond_10
 
-    invoke-virtual/range {v18 .. v18}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    invoke-virtual/range {v19 .. v19}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v0
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_6
 
-    move-object/from16 v19, v1
+    move-object/from16 v20, v1
 
     const/16 v1, 0x180
 
-    move-object/from16 v20, v2
+    move-object/from16 v21, v2
 
     const/4 v2, -0x1
 
@@ -1795,21 +1795,21 @@
 
     invoke-virtual {v9}, Ljava/io/File;->lastModified()J
 
-    move-result-wide v21
+    move-result-wide v22
 
-    sub-long v0, v0, v21
+    sub-long v0, v0, v22
 
-    const-wide/32 v21, 0x493e0
+    const-wide/32 v22, 0x493e0
 
-    const-wide/32 v23, 0x493e0
+    const-wide/32 v24, 0x493e0
 
-    cmp-long v2, v0, v23
+    cmp-long v2, v0, v24
 
     if-gez v2, :cond_d
 
     const-string v2, "Watchdog"
 
-    move-wide/from16 v23, v0
+    move-wide/from16 v24, v0
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1833,7 +1833,7 @@
     :try_end_7
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_2
 
-    move-object/from16 v2, v18
+    move-object/from16 v2, v19
 
     :try_start_8
     invoke-direct {v7, v2, v9}, Lcom/android/server/Watchdog;->appendFile(Ljava/io/File;Ljava/io/File;)V
@@ -1841,9 +1841,9 @@
     goto :goto_7
 
     :cond_d
-    move-wide/from16 v23, v0
+    move-wide/from16 v24, v0
 
-    move-object/from16 v2, v18
+    move-object/from16 v2, v19
 
     const-string v0, "Watchdog"
 
@@ -1859,21 +1859,21 @@
     :catch_1
     move-exception v0
 
-    move-object/from16 v18, v3
+    move-object/from16 v19, v3
 
     goto/16 :goto_a
 
     :catch_2
     move-exception v0
 
-    move-object/from16 v2, v18
+    move-object/from16 v2, v19
 
-    move-object/from16 v18, v3
+    move-object/from16 v19, v3
 
     goto :goto_a
 
     :cond_e
-    move-object/from16 v2, v18
+    move-object/from16 v2, v19
 
     :try_start_9
     const-string v0, "Watchdog"
@@ -1893,7 +1893,7 @@
     :try_end_9
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_3
 
-    move-object/from16 v18, v3
+    move-object/from16 v19, v3
 
     :try_start_a
     const-string v3, "Second set of traces taken from "
@@ -1917,7 +1917,7 @@
     goto :goto_9
 
     :cond_f
-    move-object/from16 v18, v3
+    move-object/from16 v19, v3
 
     const-string v0, "Watchdog"
 
@@ -1930,27 +1930,27 @@
     :catch_3
     move-exception v0
 
-    move-object/from16 v18, v3
+    move-object/from16 v19, v3
 
     goto :goto_a
 
     :catch_4
     move-exception v0
 
-    move-object/from16 v2, v18
+    move-object/from16 v2, v19
 
-    move-object/from16 v18, v3
+    move-object/from16 v19, v3
 
     goto :goto_a
 
     :cond_10
-    move-object/from16 v19, v1
+    move-object/from16 v20, v1
 
-    move-object/from16 v20, v2
+    move-object/from16 v21, v2
 
-    move-object/from16 v2, v18
+    move-object/from16 v2, v19
 
-    move-object/from16 v18, v3
+    move-object/from16 v19, v3
 
     const-string v0, "Watchdog"
 
@@ -1971,13 +1971,13 @@
     :catch_6
     move-exception v0
 
-    move-object/from16 v19, v1
+    move-object/from16 v20, v1
 
-    move-object/from16 v20, v2
+    move-object/from16 v21, v2
 
-    move-object/from16 v2, v18
+    move-object/from16 v2, v19
 
-    move-object/from16 v18, v3
+    move-object/from16 v19, v3
 
     :goto_a
     const-string v1, "Watchdog"
@@ -1993,17 +1993,17 @@
 
     move-object v1, v0
 
-    move-object/from16 v21, v2
+    move-object/from16 v22, v2
 
     move-object/from16 v2, p0
 
-    move-wide/from16 v22, v4
+    move-wide/from16 v23, v4
 
     move-object v4, v11
 
-    move-object/from16 v5, v18
+    move-object/from16 v5, v19
 
-    move-object/from16 v24, v6
+    move-object/from16 v25, v6
 
     move-object v6, v13
 
@@ -2127,7 +2127,7 @@
 
     invoke-static {v0, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_f
+    goto/16 :goto_10
 
     :cond_15
     if-lez v10, :cond_16
@@ -2138,7 +2138,7 @@
 
     invoke-static {v0, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_f
+    goto :goto_10
 
     :cond_16
     if-nez v15, :cond_17
@@ -2149,7 +2149,7 @@
 
     invoke-static {v0, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_f
+    goto :goto_10
 
     :cond_17
     new-instance v0, Ljava/lang/StringBuilder;
@@ -2195,7 +2195,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_19
+    if-eqz v0, :cond_1a
 
     const-string v0, "Watchdog"
 
@@ -2203,6 +2203,30 @@
 
     invoke-static {v0, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    invoke-static {}, Lcom/android/internal/os/RuntimeInit;->getInitializedFinished()Z
+
+    move-result v0
+
+    if-nez v0, :cond_19
+
+    :try_start_e
+    invoke-static/range {v16 .. v17}, Ljava/lang/Thread;->sleep(J)V
+    :try_end_e
+    .catch Ljava/lang/InterruptedException; {:try_start_e .. :try_end_e} :catch_9
+
+    goto :goto_f
+
+    :catch_9
+    move-exception v0
+
+    move-object v4, v0
+
+    move-object v0, v4
+
+    invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
+
+    :cond_19
+    :goto_f
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v0
@@ -2213,16 +2237,16 @@
 
     invoke-static {v0}, Ljava/lang/System;->exit(I)V
 
-    goto :goto_f
+    goto :goto_10
 
-    :cond_19
+    :cond_1a
     const-string v0, "Watchdog"
 
     const-string v4, "After KillingAllProcessesByWatchdog:  Watchdog is *not* killing the system process"
 
     invoke-static {v0, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    :goto_f
+    :goto_10
     const/4 v8, 0x0
 
     goto/16 :goto_0
@@ -2230,10 +2254,10 @@
     :catchall_0
     move-exception v0
 
-    :try_start_e
+    :try_start_f
     monitor-exit p0
-    :try_end_e
-    .catchall {:try_start_e .. :try_end_e} :catchall_0
+    :try_end_f
+    .catchall {:try_start_f .. :try_end_f} :catchall_0
 
     throw v0
 
@@ -2242,16 +2266,16 @@
 
     move v1, v10
 
-    goto :goto_10
+    goto :goto_11
 
     :catchall_2
     move-exception v0
 
-    :goto_10
-    :try_start_f
+    :goto_11
+    :try_start_10
     monitor-exit p0
-    :try_end_f
-    .catchall {:try_start_f .. :try_end_f} :catchall_2
+    :try_end_10
+    .catchall {:try_start_10 .. :try_end_10} :catchall_2
 
     throw v0
 .end method

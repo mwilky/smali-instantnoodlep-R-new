@@ -101,7 +101,7 @@
 
     new-array v1, v1, [I
 
-    const/16 v2, 0x11d
+    const/16 v2, 0x116
 
     aput v2, v1, v0
 
@@ -161,7 +161,7 @@
 
     move-result-object v1
 
-    const v2, 0x10e00a4
+    const v2, 0x10e00aa
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -3092,7 +3092,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "invalid bluetooth data given: "
+    const-string/jumbo v1, "invalid bluetooth data given: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3787,7 +3787,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "invalid modem data given: "
+    const-string/jumbo v1, "invalid modem data given: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4411,6 +4411,8 @@
     iget-object v1, p0, Lcom/android/server/am/BatteryStatsService;->mStats:Lcom/android/internal/os/BatteryStatsImpl;
 
     invoke-virtual {v1, p1}, Lcom/android/internal/os/BatteryStatsImpl;->noteScreenStateLocked(I)V
+
+    invoke-static {p1}, Lcom/android/server/wm/OpPowerConsumpStatsInjector;->updateScreenState(I)V
 
     monitor-exit v0
 
@@ -5258,7 +5260,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "invalid wifi data given: "
+    const-string/jumbo v1, "invalid wifi data given: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

@@ -139,6 +139,14 @@
     return-void
 .end method
 
+.method static synthetic access$000(Lcom/android/server/wm/InsetsStateController;)Lcom/android/server/wm/DisplayContent;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/wm/InsetsStateController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
+
+    return-object v0
+.end method
+
 .method private addToControlMaps(Lcom/android/server/wm/InsetsControlTarget;IZ)V
     .locals 2
 
@@ -176,7 +184,7 @@
 .end method
 
 .method private getInsetsForDispatchInner(IIZZ)Landroid/view/InsetsState;
-    .locals 8
+    .locals 9
 
     iget-object v0, p0, Lcom/android/server/wm/InsetsStateController;->mState:Landroid/view/InsetsState;
 
@@ -188,7 +196,7 @@
 
     const/4 v4, 0x0
 
-    if-eq p1, v1, :cond_3
+    if-eq p1, v1, :cond_5
 
     new-instance v1, Landroid/view/InsetsState;
 
@@ -214,7 +222,7 @@
     invoke-virtual {v0, v1}, Landroid/view/InsetsState;->removeSource(I)V
 
     :cond_1
-    if-ne p1, v2, :cond_3
+    if-ne p1, v2, :cond_5
 
     iget-object v1, p0, Lcom/android/server/wm/InsetsStateController;->mProviders:Landroid/util/ArrayMap;
 
@@ -271,19 +279,150 @@
     goto :goto_0
 
     :cond_3
+    iget-object v1, p0, Lcom/android/server/wm/InsetsStateController;->mProviders:Landroid/util/ArrayMap;
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    invoke-virtual {v1, v5}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/server/wm/InsetsSourceProvider;
+
+    if-eqz v1, :cond_5
+
+    iget-object v5, v1, Lcom/android/server/wm/InsetsSourceProvider;->mWin:Lcom/android/server/wm/WindowState;
+
+    if-nez v5, :cond_5
+
+    new-instance v5, Landroid/view/InsetsSource;
+
+    invoke-virtual {v0, v3}, Landroid/view/InsetsState;->getSource(I)Landroid/view/InsetsSource;
+
+    move-result-object v6
+
+    invoke-direct {v5, v6}, Landroid/view/InsetsSource;-><init>(Landroid/view/InsetsSource;)V
+
+    iget-object v6, p0, Lcom/android/server/wm/InsetsStateController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
+
+    iget-object v6, v6, Lcom/android/server/wm/DisplayContent;->mInputMethodWindow:Lcom/android/server/wm/WindowState;
+
+    const-string v7, "WindowManager"
+
+    if-eqz v6, :cond_4
+
+    iget-object v6, p0, Lcom/android/server/wm/InsetsStateController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
+
+    iget-object v6, v6, Lcom/android/server/wm/DisplayContent;->mInputMethodWindow:Lcom/android/server/wm/WindowState;
+
+    invoke-virtual {v6}, Lcom/android/server/wm/WindowState;->isVisibleOrAdding()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_4
+
+    iget-object v6, p0, Lcom/android/server/wm/InsetsStateController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
+
+    iget-object v6, v6, Lcom/android/server/wm/DisplayContent;->mInputMethodWindow:Lcom/android/server/wm/WindowState;
+
+    iget-object v6, v6, Lcom/android/server/wm/WindowState;->mImeOffsetRect:Landroid/graphics/Rect;
+
+    invoke-virtual {v6}, Landroid/graphics/Rect;->isEmpty()Z
+
+    move-result v6
+
+    if-nez v6, :cond_4
+
+    invoke-virtual {v5, v3}, Landroid/view/InsetsSource;->setVisible(Z)V
+
+    iget-object v6, p0, Lcom/android/server/wm/InsetsStateController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
+
+    iget-object v6, v6, Lcom/android/server/wm/DisplayContent;->mInputMethodWindow:Lcom/android/server/wm/WindowState;
+
+    iget-object v6, v6, Lcom/android/server/wm/WindowState;->mImeOffsetRect:Landroid/graphics/Rect;
+
+    invoke-virtual {v5, v6}, Landroid/view/InsetsSource;->setFrame(Landroid/graphics/Rect;)V
+
+    invoke-virtual {v0, v5}, Landroid/view/InsetsState;->addSource(Landroid/view/InsetsSource;)V
+
+    sget-boolean v6, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz v6, :cond_5
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "getInsetsForDispatchInner set IME rect:"
+
+    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v8, p0, Lcom/android/server/wm/InsetsStateController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
+
+    iget-object v8, v8, Lcom/android/server/wm/DisplayContent;->mInputMethodWindow:Lcom/android/server/wm/WindowState;
+
+    iget-object v8, v8, Lcom/android/server/wm/WindowState;->mImeOffsetRect:Landroid/graphics/Rect;
+
+    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v7, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_1
+
+    :cond_4
+    invoke-virtual {v5, v4}, Landroid/view/InsetsSource;->setVisible(Z)V
+
+    invoke-virtual {v5, v4, v4, v4, v4}, Landroid/view/InsetsSource;->setFrame(IIII)V
+
+    invoke-virtual {v0, v5}, Landroid/view/InsetsState;->addSource(Landroid/view/InsetsSource;)V
+
+    sget-boolean v6, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz v6, :cond_5
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "getInsetsForDispatchInner hide IME rect:"
+
+    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v8, p0, Lcom/android/server/wm/InsetsStateController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
+
+    iget-object v8, v8, Lcom/android/server/wm/DisplayContent;->mInputMethodWindow:Lcom/android/server/wm/WindowState;
+
+    iget-object v8, v8, Lcom/android/server/wm/WindowState;->mImeOffsetRect:Landroid/graphics/Rect;
+
+    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v7, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_5
+    :goto_1
     invoke-static {p2}, Landroid/app/WindowConfiguration;->isFloating(I)Z
 
     move-result v1
 
-    if-nez v1, :cond_4
+    if-nez v1, :cond_6
 
     const/4 v1, 0x6
 
-    if-ne p2, v1, :cond_6
+    if-ne p2, v1, :cond_8
 
-    if-eqz p3, :cond_6
+    if-eqz p3, :cond_8
 
-    :cond_4
+    :cond_6
     new-instance v1, Landroid/view/InsetsState;
 
     invoke-direct {v1, v0}, Landroid/view/InsetsState;-><init>(Landroid/view/InsetsState;)V
@@ -294,27 +433,27 @@
 
     move-result v1
 
-    if-nez v1, :cond_5
+    if-nez v1, :cond_7
 
     invoke-virtual {v0, v4}, Landroid/view/InsetsState;->removeSource(I)V
 
-    :cond_5
+    :cond_7
     invoke-virtual {v0, v3}, Landroid/view/InsetsState;->removeSource(I)V
 
-    :cond_6
-    if-eqz p4, :cond_7
+    :cond_8
+    if-eqz p4, :cond_9
 
     invoke-virtual {v0, v2}, Landroid/view/InsetsState;->peekSource(I)Landroid/view/InsetsSource;
 
     move-result-object v1
 
-    if-eqz v1, :cond_7
+    if-eqz v1, :cond_9
 
     invoke-virtual {v1}, Landroid/view/InsetsSource;->isVisible()Z
 
     move-result v2
 
-    if-eqz v2, :cond_7
+    if-eqz v2, :cond_9
 
     new-instance v2, Landroid/view/InsetsSource;
 
@@ -334,7 +473,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/InsetsState;->addSource(Landroid/view/InsetsSource;)V
 
-    :cond_7
+    :cond_9
     return-object v0
 .end method
 
@@ -937,6 +1076,78 @@
     const/4 v1, -0x1
 
     :goto_0
+    invoke-static {}, Lcom/android/server/policy/OpPhoneWindowManagerInjector;->isGestureButtonWithoutHideBarEnabled()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    sget-object v2, Lcom/android/server/wm/OpWindowManagerServiceInjector;->sNavGestureFullscreenList:Ljava/util/List;
+
+    invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->getOwningPackage()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-interface {v2, v3}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->getWindowingMode()I
+
+    move-result v2
+
+    invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->isAlwaysOnTop()Z
+
+    move-result v3
+
+    invoke-direct {p0, p1}, Lcom/android/server/wm/InsetsStateController;->isAboveIme(Lcom/android/server/wm/WindowContainer;)Z
+
+    move-result v4
+
+    invoke-direct {p0, v1, v2, v3, v4}, Lcom/android/server/wm/InsetsStateController;->getInsetsForDispatchInner(IIZZ)Landroid/view/InsetsState;
+
+    move-result-object v2
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v2, v3}, Landroid/view/InsetsState;->peekSource(I)Landroid/view/InsetsSource;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v3}, Landroid/view/InsetsSource;->isVisible()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    new-instance v4, Landroid/view/InsetsSource;
+
+    invoke-direct {v4, v3}, Landroid/view/InsetsSource;-><init>(Landroid/view/InsetsSource;)V
+
+    move-object v3, v4
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v3, v4}, Landroid/view/InsetsSource;->setVisible(Z)V
+
+    invoke-virtual {v3, v4, v4, v4, v4}, Landroid/view/InsetsSource;->setFrame(IIII)V
+
+    new-instance v4, Landroid/view/InsetsState;
+
+    invoke-direct {v4, v2}, Landroid/view/InsetsState;-><init>(Landroid/view/InsetsState;)V
+
+    move-object v2, v4
+
+    invoke-virtual {v2, v3}, Landroid/view/InsetsState;->addSource(Landroid/view/InsetsSource;)V
+
+    :cond_1
+    return-object v2
+
+    :cond_2
     invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->getWindowingMode()I
 
     move-result v2
@@ -957,7 +1168,7 @@
 .end method
 
 .method getInsetsForWindowMetrics(Landroid/view/WindowManager$LayoutParams;)Landroid/view/InsetsState;
-    .locals 5
+    .locals 8
 
     iget v0, p1, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -987,26 +1198,93 @@
     move v3, v2
 
     :goto_0
+    const/4 v4, 0x1
+
     if-eqz v1, :cond_1
 
     invoke-virtual {v1}, Lcom/android/server/wm/WindowToken;->isAlwaysOnTop()Z
 
-    move-result v4
+    move-result v5
 
-    if-eqz v4, :cond_1
+    if-eqz v5, :cond_1
 
-    const/4 v2, 0x1
+    move v5, v4
+
+    goto :goto_1
 
     :cond_1
+    move v5, v2
+
+    :goto_1
+    invoke-static {}, Lcom/android/server/policy/OpPhoneWindowManagerInjector;->isGestureButtonWithoutHideBarEnabled()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_3
+
+    sget-object v6, Lcom/android/server/wm/OpWindowManagerServiceInjector;->sNavGestureFullscreenList:Ljava/util/List;
+
+    iget-object v7, p1, Landroid/view/WindowManager$LayoutParams;->packageName:Ljava/lang/String;
+
+    invoke-interface {v6, v7}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_3
+
+    nop
+
     invoke-direct {p0, v1}, Lcom/android/server/wm/InsetsStateController;->isAboveIme(Lcom/android/server/wm/WindowContainer;)Z
 
-    move-result v4
+    move-result v6
 
-    invoke-direct {p0, v0, v3, v2, v4}, Lcom/android/server/wm/InsetsStateController;->getInsetsForDispatchInner(IIZZ)Landroid/view/InsetsState;
+    invoke-direct {p0, v0, v3, v5, v6}, Lcom/android/server/wm/InsetsStateController;->getInsetsForDispatchInner(IIZZ)Landroid/view/InsetsState;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v4}, Landroid/view/InsetsState;->peekSource(I)Landroid/view/InsetsSource;
 
     move-result-object v4
 
-    return-object v4
+    if-eqz v4, :cond_2
+
+    invoke-virtual {v4}, Landroid/view/InsetsSource;->isVisible()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_2
+
+    new-instance v7, Landroid/view/InsetsSource;
+
+    invoke-direct {v7, v4}, Landroid/view/InsetsSource;-><init>(Landroid/view/InsetsSource;)V
+
+    move-object v4, v7
+
+    invoke-virtual {v4, v2}, Landroid/view/InsetsSource;->setVisible(Z)V
+
+    invoke-virtual {v4, v2, v2, v2, v2}, Landroid/view/InsetsSource;->setFrame(IIII)V
+
+    new-instance v2, Landroid/view/InsetsState;
+
+    invoke-direct {v2, v6}, Landroid/view/InsetsState;-><init>(Landroid/view/InsetsState;)V
+
+    move-object v6, v2
+
+    invoke-virtual {v6, v4}, Landroid/view/InsetsState;->addSource(Landroid/view/InsetsSource;)V
+
+    :cond_2
+    return-object v6
+
+    :cond_3
+    invoke-direct {p0, v1}, Lcom/android/server/wm/InsetsStateController;->isAboveIme(Lcom/android/server/wm/WindowContainer;)Z
+
+    move-result v2
+
+    invoke-direct {p0, v0, v3, v5, v2}, Lcom/android/server/wm/InsetsStateController;->getInsetsForDispatchInner(IIZZ)Landroid/view/InsetsState;
+
+    move-result-object v2
+
+    return-object v2
 .end method
 
 .method getRawInsetsState()Landroid/view/InsetsState;

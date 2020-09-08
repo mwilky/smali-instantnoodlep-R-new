@@ -668,7 +668,7 @@
     invoke-virtual {v6, v8}, Landroid/app/job/JobInfo$Builder;->setFlags(I)Landroid/app/job/JobInfo$Builder;
 
     :cond_1
-    const-string v8, "internalFlags"
+    const-string/jumbo v8, "internalFlags"
 
     invoke-interface {v2, v5, v8}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 

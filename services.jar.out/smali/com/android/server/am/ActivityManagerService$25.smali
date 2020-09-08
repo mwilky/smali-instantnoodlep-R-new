@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/am/ActivityManagerService;->reportMemUsage(Ljava/util/ArrayList;)V
+    value = Lcom/android/server/am/ActivityManagerService;->sortMemItems(Ljava/util/List;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,21 +20,21 @@
     value = {
         "Ljava/lang/Object;",
         "Ljava/util/Comparator<",
-        "Lcom/android/server/am/ProcessMemInfo;",
+        "Lcom/android/server/am/ActivityManagerService$MemItem;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/server/am/ActivityManagerService;
+.field final synthetic val$pss:Z
 
 
 # direct methods
-.method constructor <init>(Lcom/android/server/am/ActivityManagerService;)V
+.method constructor <init>(Z)V
     .locals 0
 
-    iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$25;->this$0:Lcom/android/server/am/ActivityManagerService;
+    iput-boolean p1, p0, Lcom/android/server/am/ActivityManagerService$25;->val$pss:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,69 +43,64 @@
 
 
 # virtual methods
-.method public compare(Lcom/android/server/am/ProcessMemInfo;Lcom/android/server/am/ProcessMemInfo;)I
-    .locals 6
+.method public compare(Lcom/android/server/am/ActivityManagerService$MemItem;Lcom/android/server/am/ActivityManagerService$MemItem;)I
+    .locals 5
 
-    iget v0, p1, Lcom/android/server/am/ProcessMemInfo;->oomAdj:I
+    iget-boolean v0, p0, Lcom/android/server/am/ActivityManagerService$25;->val$pss:Z
 
-    iget v1, p2, Lcom/android/server/am/ProcessMemInfo;->oomAdj:I
+    if-eqz v0, :cond_0
 
-    const/4 v2, -0x1
-
-    const/4 v3, 0x1
-
-    if-eq v0, v1, :cond_1
-
-    iget v0, p1, Lcom/android/server/am/ProcessMemInfo;->oomAdj:I
-
-    iget v1, p2, Lcom/android/server/am/ProcessMemInfo;->oomAdj:I
-
-    if-ge v0, v1, :cond_0
+    iget-wide v0, p1, Lcom/android/server/am/ActivityManagerService$MemItem;->pss:J
 
     goto :goto_0
 
     :cond_0
-    move v2, v3
+    iget-wide v0, p1, Lcom/android/server/am/ActivityManagerService$MemItem;->mRss:J
 
     :goto_0
-    return v2
+    iget-boolean v2, p0, Lcom/android/server/am/ActivityManagerService$25;->val$pss:Z
+
+    if-eqz v2, :cond_1
+
+    iget-wide v2, p2, Lcom/android/server/am/ActivityManagerService$MemItem;->pss:J
+
+    goto :goto_1
 
     :cond_1
-    iget-wide v0, p1, Lcom/android/server/am/ProcessMemInfo;->pss:J
+    iget-wide v2, p2, Lcom/android/server/am/ActivityManagerService$MemItem;->mRss:J
 
-    iget-wide v4, p2, Lcom/android/server/am/ProcessMemInfo;->pss:J
+    :goto_1
+    cmp-long v4, v0, v2
 
-    cmp-long v0, v0, v4
+    if-gez v4, :cond_2
 
-    if-eqz v0, :cond_3
+    const/4 v4, 0x1
 
-    iget-wide v0, p1, Lcom/android/server/am/ProcessMemInfo;->pss:J
-
-    iget-wide v4, p2, Lcom/android/server/am/ProcessMemInfo;->pss:J
-
-    cmp-long v0, v0, v4
-
-    if-gez v0, :cond_2
-
-    move v2, v3
+    return v4
 
     :cond_2
-    return v2
+    cmp-long v4, v0, v2
+
+    if-lez v4, :cond_3
+
+    const/4 v4, -0x1
+
+    return v4
 
     :cond_3
-    const/4 v0, 0x0
+    const/4 v4, 0x0
 
-    return v0
+    return v4
 .end method
 
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    check-cast p1, Lcom/android/server/am/ProcessMemInfo;
+    check-cast p1, Lcom/android/server/am/ActivityManagerService$MemItem;
 
-    check-cast p2, Lcom/android/server/am/ProcessMemInfo;
+    check-cast p2, Lcom/android/server/am/ActivityManagerService$MemItem;
 
-    invoke-virtual {p0, p1, p2}, Lcom/android/server/am/ActivityManagerService$25;->compare(Lcom/android/server/am/ProcessMemInfo;Lcom/android/server/am/ProcessMemInfo;)I
+    invoke-virtual {p0, p1, p2}, Lcom/android/server/am/ActivityManagerService$25;->compare(Lcom/android/server/am/ActivityManagerService$MemItem;Lcom/android/server/am/ActivityManagerService$MemItem;)I
 
     move-result p1
 

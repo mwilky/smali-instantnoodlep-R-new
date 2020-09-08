@@ -85,7 +85,15 @@
 
 .field private static final HALT_MODE_SHUTDOWN:I = 0x0
 
-.field private static final INCALL_UI:Ljava/lang/String; = "com.oneplus.dialer"
+.field private static final INCALL_UIS:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field private static final INVALID_BRIGHTNESS_IN_CONFIG:F = -2.0f
 
@@ -472,7 +480,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 3
 
     sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
@@ -483,6 +491,24 @@
     sput-boolean v0, Lcom/android/server/power/PowerManagerService;->DEBUG:Z
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerService;->DEBUG_SPEW:Z
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    const-string v1, "com.google.android.dialer"
+
+    const-string v2, "com.oneplus.dialer"
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    sput-object v0, Lcom/android/server/power/PowerManagerService;->INCALL_UIS:Ljava/util/ArrayList;
 
     return-void
 .end method
@@ -861,7 +887,7 @@
 
     move-result-object v12
 
-    const v4, 0x10e00b0
+    const v4, 0x10e00b6
 
     invoke-virtual {v12, v4}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -879,7 +905,7 @@
 
     move-result-object v4
 
-    const v12, 0x10e00af
+    const v12, 0x10e00b5
 
     invoke-virtual {v4, v12}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -897,7 +923,7 @@
 
     move-result-object v4
 
-    const v12, 0x10e00ae
+    const v12, 0x10e00b4
 
     invoke-virtual {v4, v12}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -920,7 +946,7 @@
 
     move-result-object v4
 
-    const v12, 0x10e00aa
+    const v12, 0x10e00b0
 
     invoke-virtual {v4, v12}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -948,7 +974,7 @@
 
     move-result-object v4
 
-    const v12, 0x10e00a9
+    const v12, 0x10e00af
 
     invoke-virtual {v4, v12}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1033,7 +1059,7 @@
 
     move-result-object v0
 
-    const v11, 0x10e00ad
+    const v11, 0x10e00b3
 
     invoke-virtual {v0, v11}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1055,7 +1081,7 @@
 
     move-result-object v0
 
-    const v2, 0x10e00ac
+    const v2, 0x10e00b2
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1075,7 +1101,7 @@
 
     move-result-object v0
 
-    const v2, 0x10e00ab
+    const v2, 0x10e00b1
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -6136,11 +6162,11 @@
 
     iget-boolean v0, p0, Lcom/android/server/power/PowerManagerService;->mWakefulnessChanging:Z
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
     iget-boolean v0, p0, Lcom/android/server/power/PowerManagerService;->mDisplayReady:Z
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
     invoke-virtual {p0}, Lcom/android/server/power/PowerManagerService;->getWakefulnessLocked()I
 
@@ -6185,7 +6211,7 @@
 
     const/4 v2, 0x1
 
-    if-ne v1, v2, :cond_3
+    if-ne v1, v2, :cond_4
 
     const-wide/32 v1, 0x20000
 
@@ -6231,11 +6257,12 @@
 
     invoke-static {v3, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    :cond_3
     invoke-static {}, Landroid/os/PerfMonitor;->isEnable()Z
 
     move-result v2
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_4
 
     const/16 v2, 0x12c
 
@@ -6245,14 +6272,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Plog;->i(ILjava/lang/String;)V
 
-    :cond_3
+    :cond_4
     iput-boolean v0, p0, Lcom/android/server/power/PowerManagerService;->mWakefulnessChanging:Z
 
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService;->mNotifier:Lcom/android/server/power/Notifier;
 
     invoke-virtual {v0}, Lcom/android/server/power/Notifier;->onWakefulnessChangeFinished()V
 
-    :cond_4
+    :cond_5
     return-void
 .end method
 
@@ -6746,11 +6773,11 @@
     return v1
 
     :cond_2
-    iget-object v0, p1, Lcom/android/server/power/PowerManagerService$WakeLock;->mPackageName:Ljava/lang/String;
+    sget-object v0, Lcom/android/server/power/PowerManagerService;->INCALL_UIS:Ljava/util/ArrayList;
 
-    const-string v2, "com.oneplus.dialer"
+    iget-object v2, p1, Lcom/android/server/power/PowerManagerService$WakeLock;->mPackageName:Ljava/lang/String;
 
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -14607,7 +14634,7 @@
 
     iput-boolean v1, p0, Lcom/android/server/power/PowerManagerService;->mDreamsEnabledOnBatteryConfig:Z
 
-    const v1, 0x10e005a
+    const v1, 0x10e0060
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -14615,7 +14642,7 @@
 
     iput v1, p0, Lcom/android/server/power/PowerManagerService;->mDreamsBatteryLevelMinimumWhenPoweredConfig:I
 
-    const v1, 0x10e0059
+    const v1, 0x10e005f
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -14623,7 +14650,7 @@
 
     iput v1, p0, Lcom/android/server/power/PowerManagerService;->mDreamsBatteryLevelMinimumWhenNotPoweredConfig:I
 
-    const v1, 0x10e0058
+    const v1, 0x10e005e
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -14639,7 +14666,7 @@
 
     iput-boolean v1, p0, Lcom/android/server/power/PowerManagerService;->mDozeAfterScreenOff:Z
 
-    const v1, 0x10e0081
+    const v1, 0x10e0087
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -14649,7 +14676,7 @@
 
     iput-wide v1, p0, Lcom/android/server/power/PowerManagerService;->mMinimumScreenOffTimeoutConfig:J
 
-    const v1, 0x10e007b
+    const v1, 0x10e0081
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 

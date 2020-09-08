@@ -1320,13 +1320,13 @@
 
     move-result-object v2
 
-    const-string v3, "is-bot"
+    const-string/jumbo v3, "is-bot"
 
     invoke-static {p0, v3}, Lcom/android/server/pm/ShortcutService;->parseBooleanAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
     move-result v3
 
-    const-string v4, "is-important"
+    const-string/jumbo v4, "is-important"
 
     invoke-static {p0, v4}, Lcom/android/server/pm/ShortcutService;->parseBooleanAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
@@ -2807,7 +2807,7 @@
 
     move-result v12
 
-    const-string v13, "is-bot"
+    const-string/jumbo v13, "is-bot"
 
     invoke-static {v0, v13, v12}, Lcom/android/server/pm/ShortcutService;->writeAttr(Lorg/xmlpull/v1/XmlSerializer;Ljava/lang/String;Z)V
 
@@ -2815,7 +2815,7 @@
 
     move-result v12
 
-    const-string v13, "is-important"
+    const-string/jumbo v13, "is-important"
 
     invoke-static {v0, v13, v12}, Lcom/android/server/pm/ShortcutService;->writeAttr(Lorg/xmlpull/v1/XmlSerializer;Ljava/lang/String;Z)V
 

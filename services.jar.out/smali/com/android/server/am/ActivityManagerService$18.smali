@@ -1,11 +1,14 @@
 .class Lcom/android/server/am/ActivityManagerService$18;
-.super Landroid/content/BroadcastReceiver;
+.super Ljava/lang/Object;
 .source "ActivityManagerService.java"
+
+# interfaces
+.implements Landroid/os/IBinder$DeathRecipient;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/am/ActivityManagerService;->restart()V
+    value = Lcom/android/server/am/ActivityManagerService;->hang(Landroid/os/IBinder;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,41 +27,31 @@
 
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$18;->this$0:Lcom/android/server/am/ActivityManagerService;
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 3
+.method public binderDied()V
+    .locals 1
 
-    const-string v0, "ActivityManager"
+    monitor-enter p0
 
-    const-string v1, "Shutting down activity manager..."
+    :try_start_0
+    invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$18;->this$0:Lcom/android/server/am/ActivityManagerService;
-
-    const/16 v2, 0x2710
-
-    invoke-virtual {v1, v2}, Lcom/android/server/am/ActivityManagerService;->shutdown(I)Z
-
-    const-string v1, "Shutdown complete, restarting!"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    invoke-static {}, Landroid/os/Process;->myPid()I
-
-    move-result v0
-
-    invoke-static {v0}, Landroid/os/Process;->killProcess(I)V
-
-    const/16 v0, 0xa
-
-    invoke-static {v0}, Ljava/lang/System;->exit(I)V
+    monitor-exit p0
 
     return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
 .end method

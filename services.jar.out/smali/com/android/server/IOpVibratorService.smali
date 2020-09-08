@@ -88,6 +88,9 @@
 .method public abstract setVibratorEffect(Lcom/android/server/VibratorService$Vibration;ILjava/lang/Object;)I
 .end method
 
+.method public abstract turnOffLinearMotorVibrator()V
+.end method
+
 .method public abstract updateVibrator()V
 .end method
 

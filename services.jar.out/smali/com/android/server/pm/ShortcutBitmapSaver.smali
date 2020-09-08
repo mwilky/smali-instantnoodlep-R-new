@@ -776,7 +776,7 @@
 
     const-string v2, "ShortcutService"
 
-    const-string v3, "interrupted"
+    const-string/jumbo v3, "interrupted"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 

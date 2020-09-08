@@ -63,6 +63,14 @@
 
 .field private static final PERIODIC_JOB_WINDOW_BUFFER:J = 0x1b7740L
 
+.field private static final QUOTA_CATEGORIZER:Lcom/android/server/utils/quota/Categorizer;
+
+.field private static final QUOTA_TRACKER_CATEGORY_SCHEDULE_LOGGED:Lcom/android/server/utils/quota/Category;
+
+.field private static final QUOTA_TRACKER_CATEGORY_SCHEDULE_PERSISTED:Lcom/android/server/utils/quota/Category;
+
+.field private static final QUOTA_TRACKER_SCHEDULE_LOGGED:Ljava/lang/String; = ".schedulePersisted out-of-quota logged"
+
 .field private static final QUOTA_TRACKER_SCHEDULE_PERSISTED_TAG:Ljava/lang/String; = ".schedulePersisted()"
 
 .field public static final RARE_INDEX:I = 0x3
@@ -277,7 +285,27 @@
 
     sput-object v0, Lcom/android/server/job/JobSchedulerService;->sElapsedRealtimeClock:Ljava/time/Clock;
 
-    sget-object v0, Lcom/android/server/job/-$$Lambda$JobSchedulerService$V6_ZmVmzJutg4w0s0LktDOsRAss;->INSTANCE:Lcom/android/server/job/-$$Lambda$JobSchedulerService$V6_ZmVmzJutg4w0s0LktDOsRAss;
+    new-instance v0, Lcom/android/server/utils/quota/Category;
+
+    const-string v1, ".schedulePersisted()"
+
+    invoke-direct {v0, v1}, Lcom/android/server/utils/quota/Category;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Lcom/android/server/job/JobSchedulerService;->QUOTA_TRACKER_CATEGORY_SCHEDULE_PERSISTED:Lcom/android/server/utils/quota/Category;
+
+    new-instance v0, Lcom/android/server/utils/quota/Category;
+
+    const-string v1, ".schedulePersisted out-of-quota logged"
+
+    invoke-direct {v0, v1}, Lcom/android/server/utils/quota/Category;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Lcom/android/server/job/JobSchedulerService;->QUOTA_TRACKER_CATEGORY_SCHEDULE_LOGGED:Lcom/android/server/utils/quota/Category;
+
+    sget-object v0, Lcom/android/server/job/-$$Lambda$JobSchedulerService$vjPMLQ-SEWWeqjJkyucZKbr772U;->INSTANCE:Lcom/android/server/job/-$$Lambda$JobSchedulerService$vjPMLQ-SEWWeqjJkyucZKbr772U;
+
+    sput-object v0, Lcom/android/server/job/JobSchedulerService;->QUOTA_CATEGORIZER:Lcom/android/server/utils/quota/Categorizer;
+
+    sget-object v0, Lcom/android/server/job/-$$Lambda$JobSchedulerService$SyDoBnH1urvVqu31d-xC2ZPsCBo;->INSTANCE:Lcom/android/server/job/-$$Lambda$JobSchedulerService$SyDoBnH1urvVqu31d-xC2ZPsCBo;
 
     sput-object v0, Lcom/android/server/job/JobSchedulerService;->sPendingJobComparator:Ljava/util/Comparator;
 
@@ -359,9 +387,9 @@
 
     iput-object v0, p0, Lcom/android/server/job/JobSchedulerService;->mTimeSetReceiver:Landroid/content/BroadcastReceiver;
 
-    new-instance v0, Lcom/android/server/job/-$$Lambda$JobSchedulerService$nXpbkYDrU0yC5DuTafFiblXBdTY;
+    new-instance v0, Lcom/android/server/job/-$$Lambda$JobSchedulerService$oCsDzEV0rgDVnZl-2bTNBQfZW9I;
 
-    invoke-direct {v0, p0}, Lcom/android/server/job/-$$Lambda$JobSchedulerService$nXpbkYDrU0yC5DuTafFiblXBdTY;-><init>(Lcom/android/server/job/JobSchedulerService;)V
+    invoke-direct {v0, p0}, Lcom/android/server/job/-$$Lambda$JobSchedulerService$oCsDzEV0rgDVnZl-2bTNBQfZW9I;-><init>(Lcom/android/server/job/JobSchedulerService;)V
 
     iput-object v0, p0, Lcom/android/server/job/JobSchedulerService;->mJobTimeUpdater:Ljava/lang/Runnable;
 
@@ -455,13 +483,13 @@
 
     new-instance v0, Lcom/android/server/utils/quota/CountQuotaTracker;
 
-    sget-object v1, Lcom/android/server/utils/quota/Categorizer;->SINGLE_CATEGORIZER:Lcom/android/server/utils/quota/Categorizer;
+    sget-object v1, Lcom/android/server/job/JobSchedulerService;->QUOTA_CATEGORIZER:Lcom/android/server/utils/quota/Categorizer;
 
     invoke-direct {v0, p1, v1}, Lcom/android/server/utils/quota/CountQuotaTracker;-><init>(Landroid/content/Context;Lcom/android/server/utils/quota/Categorizer;)V
 
     iput-object v0, p0, Lcom/android/server/job/JobSchedulerService;->mQuotaTracker:Lcom/android/server/utils/quota/CountQuotaTracker;
 
-    sget-object v1, Lcom/android/server/utils/quota/Category;->SINGLE_CATEGORY:Lcom/android/server/utils/quota/Category;
+    sget-object v1, Lcom/android/server/job/JobSchedulerService;->QUOTA_TRACKER_CATEGORY_SCHEDULE_PERSISTED:Lcom/android/server/utils/quota/Category;
 
     iget-object v2, p0, Lcom/android/server/job/JobSchedulerService;->mConstants:Lcom/android/server/job/JobSchedulerService$Constants;
 
@@ -470,6 +498,16 @@
     iget-object v3, p0, Lcom/android/server/job/JobSchedulerService;->mConstants:Lcom/android/server/job/JobSchedulerService$Constants;
 
     iget-wide v3, v3, Lcom/android/server/job/JobSchedulerService$Constants;->API_QUOTA_SCHEDULE_WINDOW_MS:J
+
+    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/android/server/utils/quota/CountQuotaTracker;->setCountLimit(Lcom/android/server/utils/quota/Category;IJ)V
+
+    iget-object v0, p0, Lcom/android/server/job/JobSchedulerService;->mQuotaTracker:Lcom/android/server/utils/quota/CountQuotaTracker;
+
+    sget-object v1, Lcom/android/server/job/JobSchedulerService;->QUOTA_TRACKER_CATEGORY_SCHEDULE_LOGGED:Lcom/android/server/utils/quota/Category;
+
+    const/4 v2, 0x1
+
+    const-wide/32 v3, 0xea60
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/android/server/utils/quota/CountQuotaTracker;->setCountLimit(Lcom/android/server/utils/quota/Category;IJ)V
 
@@ -659,15 +697,7 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/server/job/JobSchedulerService;)Lcom/android/server/utils/quota/CountQuotaTracker;
-    .locals 1
-
-    iget-object v0, p0, Lcom/android/server/job/JobSchedulerService;->mQuotaTracker:Lcom/android/server/utils/quota/CountQuotaTracker;
-
-    return-object v0
-.end method
-
-.method static synthetic access$100(Lcom/android/server/job/JobSchedulerService;Landroid/content/Intent;)Ljava/lang/String;
+.method static synthetic access$000(Lcom/android/server/job/JobSchedulerService;Landroid/content/Intent;)Ljava/lang/String;
     .locals 1
 
     invoke-direct {p0, p1}, Lcom/android/server/job/JobSchedulerService;->getPackageName(Landroid/content/Intent;)Ljava/lang/String;
@@ -677,7 +707,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/server/job/JobSchedulerService;)Ljava/lang/Runnable;
+.method static synthetic access$100(Lcom/android/server/job/JobSchedulerService;)Ljava/lang/Runnable;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/job/JobSchedulerService;->mJobTimeUpdater:Ljava/lang/Runnable;
@@ -685,7 +715,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$300()Ljava/util/Comparator;
+.method static synthetic access$200()Ljava/util/Comparator;
     .locals 1
 
     sget-object v0, Lcom/android/server/job/JobSchedulerService;->sPendingJobComparator:Ljava/util/Comparator;
@@ -693,7 +723,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/server/job/JobSchedulerService;)V
+.method static synthetic access$300(Lcom/android/server/job/JobSchedulerService;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/server/job/JobSchedulerService;->queueReadyJobsForExecutionLocked()V
@@ -701,7 +731,7 @@
     return-void
 .end method
 
-.method static synthetic access$500(Lcom/android/server/job/JobSchedulerService;)V
+.method static synthetic access$400(Lcom/android/server/job/JobSchedulerService;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/server/job/JobSchedulerService;->maybeQueueReadyJobsForExecutionLocked()V
@@ -709,7 +739,7 @@
     return-void
 .end method
 
-.method static synthetic access$600(Lcom/android/server/job/JobSchedulerService;Lcom/android/server/job/controllers/JobStatus;Lcom/android/server/job/controllers/JobStatus;Ljava/lang/String;)V
+.method static synthetic access$500(Lcom/android/server/job/JobSchedulerService;Lcom/android/server/job/controllers/JobStatus;Lcom/android/server/job/controllers/JobStatus;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/job/JobSchedulerService;->cancelJobImplLocked(Lcom/android/server/job/controllers/JobStatus;Lcom/android/server/job/controllers/JobStatus;Ljava/lang/String;)V
@@ -717,7 +747,7 @@
     return-void
 .end method
 
-.method static synthetic access$700(Lcom/android/server/job/JobSchedulerService;)Lcom/android/server/job/controllers/DeviceIdleJobsController;
+.method static synthetic access$600(Lcom/android/server/job/JobSchedulerService;)Lcom/android/server/job/controllers/DeviceIdleJobsController;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/job/JobSchedulerService;->mDeviceIdleJobsController:Lcom/android/server/job/controllers/DeviceIdleJobsController;
@@ -725,7 +755,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$800(Lcom/android/server/job/JobSchedulerService;)Ljava/lang/String;
+.method static synthetic access$700(Lcom/android/server/job/JobSchedulerService;)Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/job/JobSchedulerService;->mSystemGalleryPackage:Ljava/lang/String;
@@ -733,7 +763,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$900(Lcom/android/server/job/JobSchedulerService;Lcom/android/server/job/controllers/JobStatus;)Z
+.method static synthetic access$800(Lcom/android/server/job/JobSchedulerService;Lcom/android/server/job/controllers/JobStatus;)Z
     .locals 1
 
     invoke-direct {p0, p1}, Lcom/android/server/job/JobSchedulerService;->isCurrentlyActiveLocked(Lcom/android/server/job/controllers/JobStatus;)Z
@@ -1281,7 +1311,7 @@
     return p0
 .end method
 
-.method static synthetic lambda$dumpInternal$3(ILcom/android/server/job/controllers/JobStatus;)Z
+.method static synthetic lambda$dumpInternal$4(ILcom/android/server/job/controllers/JobStatus;)Z
     .locals 1
 
     const/4 v0, -0x1
@@ -1323,7 +1353,7 @@
     return v0
 .end method
 
-.method static synthetic lambda$dumpInternalProto$4(ILcom/android/server/job/controllers/JobStatus;)Z
+.method static synthetic lambda$dumpInternalProto$5(ILcom/android/server/job/controllers/JobStatus;)Z
     .locals 1
 
     const/4 v0, -0x1
@@ -1365,7 +1395,28 @@
     return v0
 .end method
 
-.method static synthetic lambda$static$0(Lcom/android/server/job/controllers/JobStatus;Lcom/android/server/job/controllers/JobStatus;)I
+.method static synthetic lambda$static$0(ILjava/lang/String;Ljava/lang/String;)Lcom/android/server/utils/quota/Category;
+    .locals 1
+
+    const-string v0, ".schedulePersisted()"
+
+    invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lcom/android/server/job/JobSchedulerService;->QUOTA_TRACKER_CATEGORY_SCHEDULE_PERSISTED:Lcom/android/server/utils/quota/Category;
+
+    return-object v0
+
+    :cond_0
+    sget-object v0, Lcom/android/server/job/JobSchedulerService;->QUOTA_TRACKER_CATEGORY_SCHEDULE_LOGGED:Lcom/android/server/utils/quota/Category;
+
+    return-object v0
+.end method
+
+.method static synthetic lambda$static$1(Lcom/android/server/job/controllers/JobStatus;Lcom/android/server/job/controllers/JobStatus;)I
     .locals 4
 
     iget v0, p0, Lcom/android/server/job/controllers/JobStatus;->overrideState:I
@@ -2378,9 +2429,9 @@
 
     move-result-wide v14
 
-    new-instance v6, Lcom/android/server/job/-$$Lambda$JobSchedulerService$e8zIA2HHN2tnGMuc6TZ2xWw_c20;
+    new-instance v6, Lcom/android/server/job/-$$Lambda$JobSchedulerService$VVCk0M0TpfxhVRrY-28dggbYJQc;
 
-    invoke-direct {v6, v9}, Lcom/android/server/job/-$$Lambda$JobSchedulerService$e8zIA2HHN2tnGMuc6TZ2xWw_c20;-><init>(I)V
+    invoke-direct {v6, v9}, Lcom/android/server/job/-$$Lambda$JobSchedulerService$VVCk0M0TpfxhVRrY-28dggbYJQc;-><init>(I)V
 
     iget-object v7, v1, Lcom/android/server/job/JobSchedulerService;->mLock:Ljava/lang/Object;
 
@@ -3575,9 +3626,9 @@
 
     move-result-wide v17
 
-    new-instance v10, Lcom/android/server/job/-$$Lambda$JobSchedulerService$rARZcsrvtM2sYbF4SrEE2BXDQ3U;
+    new-instance v10, Lcom/android/server/job/-$$Lambda$JobSchedulerService$eQqdX2w3FwBMn_LMfN2Y0HQCDq4;
 
-    invoke-direct {v10, v12}, Lcom/android/server/job/-$$Lambda$JobSchedulerService$rARZcsrvtM2sYbF4SrEE2BXDQ3U;-><init>(I)V
+    invoke-direct {v10, v12}, Lcom/android/server/job/-$$Lambda$JobSchedulerService$eQqdX2w3FwBMn_LMfN2Y0HQCDq4;-><init>(I)V
 
     iget-object v8, v1, Lcom/android/server/job/JobSchedulerService;->mLock:Ljava/lang/Object;
 
@@ -6689,7 +6740,7 @@
     return v1
 .end method
 
-.method public synthetic lambda$new$1$JobSchedulerService()V
+.method public synthetic lambda$new$2$JobSchedulerService()V
     .locals 10
 
     new-instance v0, Ljava/util/ArrayList;
@@ -6784,7 +6835,7 @@
     throw v3
 .end method
 
-.method public synthetic lambda$onBootPhase$2$JobSchedulerService(Lcom/android/server/job/controllers/JobStatus;)V
+.method public synthetic lambda$onBootPhase$3$JobSchedulerService(Lcom/android/server/job/controllers/JobStatus;)V
     .locals 4
 
     invoke-direct {p0, p1}, Lcom/android/server/job/JobSchedulerService;->isComponentUsable(Lcom/android/server/job/controllers/JobStatus;)Z
@@ -7198,9 +7249,9 @@
     :cond_3
     iget-object v2, p0, Lcom/android/server/job/JobSchedulerService;->mJobs:Lcom/android/server/job/JobStore;
 
-    new-instance v3, Lcom/android/server/job/-$$Lambda$JobSchedulerService$Lfddr1PhKRLtm92W7niRGMWO69M;
+    new-instance v3, Lcom/android/server/job/-$$Lambda$JobSchedulerService$0Wz_b63Vzxu3lYEmfPzreSihZzE;
 
-    invoke-direct {v3, p0}, Lcom/android/server/job/-$$Lambda$JobSchedulerService$Lfddr1PhKRLtm92W7niRGMWO69M;-><init>(Lcom/android/server/job/JobSchedulerService;)V
+    invoke-direct {v3, p0}, Lcom/android/server/job/-$$Lambda$JobSchedulerService$0Wz_b63Vzxu3lYEmfPzreSihZzE;-><init>(Lcom/android/server/job/JobSchedulerService;)V
 
     invoke-virtual {v2, v3}, Lcom/android/server/job/JobStore;->forEachJob(Ljava/util/function/Consumer;)V
 
@@ -7916,7 +7967,7 @@
 .end method
 
 .method public scheduleAsPackage(Landroid/app/job/JobInfo;Landroid/app/job/JobWorkItem;ILjava/lang/String;ILjava/lang/String;)I
-    .locals 29
+    .locals 31
 
     move-object/from16 v1, p0
 
@@ -7930,6 +7981,14 @@
 
     move/from16 v13, p5
 
+    invoke-virtual/range {p1 .. p1}, Landroid/app/job/JobInfo;->getService()Landroid/content/ComponentName;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v12
+
     invoke-virtual/range {p1 .. p1}, Landroid/app/job/JobInfo;->isPersisted()Z
 
     move-result v0
@@ -7938,9 +7997,18 @@
 
     const/4 v4, 0x0
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_9
 
-    if-nez v14, :cond_0
+    if-eqz v14, :cond_0
+
+    invoke-virtual {v14, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_9
+
+    :cond_0
+    if-nez v14, :cond_1
 
     invoke-virtual/range {p1 .. p1}, Landroid/app/job/JobInfo;->getService()Landroid/content/ComponentName;
 
@@ -7952,7 +8020,7 @@
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     move-object v0, v14
 
     :goto_0
@@ -7966,7 +8034,17 @@
 
     move-result v0
 
-    if-nez v0, :cond_6
+    if-nez v0, :cond_8
+
+    iget-object v0, v1, Lcom/android/server/job/JobSchedulerService;->mQuotaTracker:Lcom/android/server/utils/quota/CountQuotaTracker;
+
+    const-string v6, ".schedulePersisted out-of-quota logged"
+
+    invoke-virtual {v0, v13, v5, v6}, Lcom/android/server/utils/quota/CountQuotaTracker;->isWithinQuota(ILjava/lang/String;Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -7990,8 +8068,15 @@
 
     const-string v6, "JobScheduler"
 
-    invoke-static {v6, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, v0}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
+    iget-object v0, v1, Lcom/android/server/job/JobSchedulerService;->mQuotaTracker:Lcom/android/server/utils/quota/CountQuotaTracker;
+
+    const-string v6, ".schedulePersisted out-of-quota logged"
+
+    invoke-virtual {v0, v13, v5, v6}, Lcom/android/server/utils/quota/CountQuotaTracker;->noteEvent(ILjava/lang/String;Ljava/lang/String;)Z
+
+    :cond_2
     iget-object v0, v1, Lcom/android/server/job/JobSchedulerService;->mAppStandbyInternal:Lcom/android/server/usage/AppStandbyInternal;
 
     const/4 v6, 0x4
@@ -8002,7 +8087,7 @@
 
     iget-boolean v0, v0, Lcom/android/server/job/JobSchedulerService$Constants;->API_QUOTA_SCHEDULE_THROW_EXCEPTION:Z
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_7
 
     iget-object v6, v1, Lcom/android/server/job/JobSchedulerService;->mLock:Ljava/lang/Object;
 
@@ -8017,7 +8102,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-nez v0, :cond_3
+    if-nez v0, :cond_5
 
     :try_start_1
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
@@ -8028,7 +8113,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_4
 
     iget-object v7, v1, Lcom/android/server/job/JobSchedulerService;->mDebuggableApps:Landroid/util/ArrayMap;
 
@@ -8036,15 +8121,17 @@
 
     and-int/lit8 v8, v8, 0x2
 
-    if-eqz v8, :cond_1
+    if-eqz v8, :cond_3
+
+    move/from16 v8, v20
 
     goto :goto_1
 
-    :cond_1
-    move/from16 v20, v4
+    :cond_3
+    move v8, v4
 
     :goto_1
-    invoke-static/range {v20 .. v20}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v8}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v8
 
@@ -8055,7 +8142,7 @@
 
     goto :goto_2
 
-    :cond_2
+    :cond_4
     :try_start_2
     monitor-exit v6
 
@@ -8070,7 +8157,7 @@
 
     throw v4
 
-    :cond_3
+    :cond_5
     :goto_2
     iget-object v0, v1, Lcom/android/server/job/JobSchedulerService;->mDebuggableApps:Landroid/util/ArrayMap;
 
@@ -8088,11 +8175,11 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    if-nez v0, :cond_4
+    if-nez v0, :cond_6
 
     goto :goto_3
 
-    :cond_4
+    :cond_6
     new-instance v4, Landroid/os/LimitExceededException;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -8105,7 +8192,7 @@
 
     iget-object v7, v1, Lcom/android/server/job/JobSchedulerService;->mQuotaTracker:Lcom/android/server/utils/quota/CountQuotaTracker;
 
-    sget-object v8, Lcom/android/server/utils/quota/Category;->SINGLE_CATEGORY:Lcom/android/server/utils/quota/Category;
+    sget-object v8, Lcom/android/server/job/JobSchedulerService;->QUOTA_TRACKER_CATEGORY_SCHEDULE_PERSISTED:Lcom/android/server/utils/quota/Category;
 
     invoke-virtual {v7, v8}, Lcom/android/server/utils/quota/CountQuotaTracker;->getLimit(Lcom/android/server/utils/quota/Category;)I
 
@@ -8119,7 +8206,7 @@
 
     iget-object v7, v1, Lcom/android/server/job/JobSchedulerService;->mQuotaTracker:Lcom/android/server/utils/quota/CountQuotaTracker;
 
-    sget-object v8, Lcom/android/server/utils/quota/Category;->SINGLE_CATEGORY:Lcom/android/server/utils/quota/Category;
+    sget-object v8, Lcom/android/server/job/JobSchedulerService;->QUOTA_TRACKER_CATEGORY_SCHEDULE_PERSISTED:Lcom/android/server/utils/quota/Category;
 
     invoke-virtual {v7, v8}, Lcom/android/server/utils/quota/CountQuotaTracker;->getWindowSizeMs(Lcom/android/server/utils/quota/Category;)J
 
@@ -8127,7 +8214,7 @@
 
     invoke-virtual {v6, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string/jumbo v7, "ms"
+    const-string/jumbo v7, "ms. See the documentation for more information."
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8149,18 +8236,24 @@
 
     throw v0
 
-    :cond_5
+    :cond_7
     :goto_3
+    iget-object v0, v1, Lcom/android/server/job/JobSchedulerService;->mConstants:Lcom/android/server/job/JobSchedulerService$Constants;
+
+    iget-boolean v0, v0, Lcom/android/server/job/JobSchedulerService$Constants;->API_QUOTA_SCHEDULE_RETURN_FAILURE_RESULT:Z
+
+    if-eqz v0, :cond_8
+
     return v4
 
-    :cond_6
+    :cond_8
     iget-object v0, v1, Lcom/android/server/job/JobSchedulerService;->mQuotaTracker:Lcom/android/server/utils/quota/CountQuotaTracker;
 
     const-string v6, ".schedulePersisted()"
 
     invoke-virtual {v0, v13, v5, v6}, Lcom/android/server/utils/quota/CountQuotaTracker;->noteEvent(ILjava/lang/String;Ljava/lang/String;)Z
 
-    :cond_7
+    :cond_9
     :try_start_4
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
 
@@ -8178,7 +8271,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_a
 
     const-string v0, "JobScheduler"
 
@@ -8216,16 +8309,16 @@
 
     return v4
 
-    :cond_8
+    :cond_a
     goto :goto_4
 
     :catch_1
     move-exception v0
 
     :goto_4
-    iget-object v12, v1, Lcom/android/server/job/JobSchedulerService;->mLock:Ljava/lang/Object;
+    iget-object v11, v1, Lcom/android/server/job/JobSchedulerService;->mLock:Ljava/lang/Object;
 
-    monitor-enter v12
+    monitor-enter v11
 
     :try_start_5
     iget-object v0, v1, Lcom/android/server/job/JobSchedulerService;->mJobs:Lcom/android/server/job/JobStore;
@@ -8237,11 +8330,14 @@
     invoke-virtual {v0, v15, v4}, Lcom/android/server/job/JobStore;->getJobByUidAndJobId(II)Lcom/android/server/job/controllers/JobStatus;
 
     move-result-object v0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    if-eqz v3, :cond_9
+    if-eqz v3, :cond_b
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_b
 
+    :try_start_6
     invoke-virtual {v0}, Lcom/android/server/job/controllers/JobStatus;->getJob()Landroid/app/job/JobInfo;
 
     move-result-object v4
@@ -8250,7 +8346,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_9
+    if-eqz v4, :cond_b
 
     invoke-virtual {v0, v3}, Lcom/android/server/job/controllers/JobStatus;->enqueueWorkLocked(Landroid/app/job/JobWorkItem;)V
 
@@ -8258,27 +8354,42 @@
 
     invoke-virtual {v0, v4}, Lcom/android/server/job/controllers/JobStatus;->maybeAddForegroundExemption(Ljava/util/function/Predicate;)V
 
-    monitor-exit v12
+    monitor-exit v11
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
     return v20
 
-    :cond_9
-    move-object/from16 v11, p6
+    :catchall_1
+    move-exception v0
 
-    invoke-static {v2, v15, v14, v13, v11}, Lcom/android/server/job/controllers/JobStatus;->createFromJobInfo(Landroid/app/job/JobInfo;ILjava/lang/String;ILjava/lang/String;)Lcom/android/server/job/controllers/JobStatus;
+    move-object/from16 v29, v11
+
+    move-object/from16 v30, v12
+
+    goto/16 :goto_8
+
+    :cond_b
+    move-object/from16 v10, p6
+
+    :try_start_7
+    invoke-static {v2, v15, v14, v13, v10}, Lcom/android/server/job/controllers/JobStatus;->createFromJobInfo(Landroid/app/job/JobInfo;ILjava/lang/String;ILjava/lang/String;)Lcom/android/server/job/controllers/JobStatus;
 
     move-result-object v4
 
-    move-object v10, v4
+    move-object v9, v4
 
     iget-object v4, v1, Lcom/android/server/job/JobSchedulerService;->mIsUidActivePredicate:Ljava/util/function/Predicate;
 
-    invoke-virtual {v10, v4}, Lcom/android/server/job/controllers/JobStatus;->maybeAddForegroundExemption(Ljava/util/function/Predicate;)V
+    invoke-virtual {v9, v4}, Lcom/android/server/job/controllers/JobStatus;->maybeAddForegroundExemption(Ljava/util/function/Predicate;)V
 
     sget-boolean v4, Lcom/android/server/job/JobSchedulerService;->DEBUG:Z
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
-    if-eqz v4, :cond_a
+    if-eqz v4, :cond_c
 
+    :try_start_8
     const-string v4, "JobScheduler"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -8289,7 +8400,7 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v10}, Lcom/android/server/job/controllers/JobStatus;->toShortString()Ljava/lang/String;
+    invoke-virtual {v9}, Lcom/android/server/job/controllers/JobStatus;->toShortString()Ljava/lang/String;
 
     move-result-object v6
 
@@ -8301,8 +8412,8 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_a
-    if-nez v14, :cond_c
+    :cond_c
+    if-nez v14, :cond_e
 
     iget-object v4, v1, Lcom/android/server/job/JobSchedulerService;->mJobs:Lcom/android/server/job/JobStore;
 
@@ -8312,11 +8423,11 @@
 
     const/16 v5, 0x64
 
-    if-gt v4, v5, :cond_b
+    if-gt v4, v5, :cond_d
 
     goto :goto_5
 
-    :cond_b
+    :cond_d
     const-string v4, "JobScheduler"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -8342,120 +8453,139 @@
     invoke-direct {v4, v5}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v4
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
-    :cond_c
+    :cond_e
     :goto_5
-    invoke-virtual {v10}, Lcom/android/server/job/controllers/JobStatus;->prepareLocked()V
+    :try_start_9
+    invoke-virtual {v9}, Lcom/android/server/job/controllers/JobStatus;->prepareLocked()V
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_2
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_f
 
+    :try_start_a
     const-string/jumbo v4, "job rescheduled by app"
 
-    invoke-direct {v1, v0, v10, v4}, Lcom/android/server/job/JobSchedulerService;->cancelJobImplLocked(Lcom/android/server/job/controllers/JobStatus;Lcom/android/server/job/controllers/JobStatus;Ljava/lang/String;)V
+    invoke-direct {v1, v0, v9, v4}, Lcom/android/server/job/JobSchedulerService;->cancelJobImplLocked(Lcom/android/server/job/controllers/JobStatus;Lcom/android/server/job/controllers/JobStatus;Ljava/lang/String;)V
+    :try_end_a
+    .catchall {:try_start_a .. :try_end_a} :catchall_1
 
     goto :goto_6
 
-    :cond_d
+    :cond_f
     const/4 v4, 0x0
 
-    invoke-direct {v1, v10, v4}, Lcom/android/server/job/JobSchedulerService;->startTrackingJobLocked(Lcom/android/server/job/controllers/JobStatus;Lcom/android/server/job/controllers/JobStatus;)V
+    :try_start_b
+    invoke-direct {v1, v9, v4}, Lcom/android/server/job/JobSchedulerService;->startTrackingJobLocked(Lcom/android/server/job/controllers/JobStatus;Lcom/android/server/job/controllers/JobStatus;)V
+    :try_end_b
+    .catchall {:try_start_b .. :try_end_b} :catchall_2
 
     :goto_6
-    if-eqz v3, :cond_e
+    if-eqz v3, :cond_10
 
-    invoke-virtual {v10, v3}, Lcom/android/server/job/controllers/JobStatus;->enqueueWorkLocked(Landroid/app/job/JobWorkItem;)V
+    :try_start_c
+    invoke-virtual {v9, v3}, Lcom/android/server/job/controllers/JobStatus;->enqueueWorkLocked(Landroid/app/job/JobWorkItem;)V
+    :try_end_c
+    .catchall {:try_start_c .. :try_end_c} :catchall_1
 
-    :cond_e
+    :cond_10
     const/16 v4, 0x8
 
     const/4 v6, 0x0
 
-    invoke-virtual {v10}, Lcom/android/server/job/controllers/JobStatus;->getBatteryName()Ljava/lang/String;
+    :try_start_d
+    invoke-virtual {v9}, Lcom/android/server/job/controllers/JobStatus;->getBatteryName()Ljava/lang/String;
 
     move-result-object v7
 
     const/4 v8, 0x2
 
-    const/4 v9, 0x0
+    const/16 v16, 0x0
 
-    invoke-virtual {v10}, Lcom/android/server/job/controllers/JobStatus;->getStandbyBucket()I
-
-    move-result v16
-
-    invoke-virtual {v10}, Lcom/android/server/job/controllers/JobStatus;->getJobId()I
+    invoke-virtual {v9}, Lcom/android/server/job/controllers/JobStatus;->getStandbyBucket()I
 
     move-result v17
 
-    invoke-virtual {v10}, Lcom/android/server/job/controllers/JobStatus;->hasChargingConstraint()Z
+    invoke-virtual {v9}, Lcom/android/server/job/controllers/JobStatus;->getJobId()I
 
     move-result v18
 
-    invoke-virtual {v10}, Lcom/android/server/job/controllers/JobStatus;->hasBatteryNotLowConstraint()Z
+    invoke-virtual {v9}, Lcom/android/server/job/controllers/JobStatus;->hasChargingConstraint()Z
 
     move-result v19
 
-    invoke-virtual {v10}, Lcom/android/server/job/controllers/JobStatus;->hasStorageNotLowConstraint()Z
+    invoke-virtual {v9}, Lcom/android/server/job/controllers/JobStatus;->hasBatteryNotLowConstraint()Z
 
     move-result v21
 
-    invoke-virtual {v10}, Lcom/android/server/job/controllers/JobStatus;->hasTimingDelayConstraint()Z
+    invoke-virtual {v9}, Lcom/android/server/job/controllers/JobStatus;->hasStorageNotLowConstraint()Z
 
     move-result v22
 
-    invoke-virtual {v10}, Lcom/android/server/job/controllers/JobStatus;->hasDeadlineConstraint()Z
+    invoke-virtual {v9}, Lcom/android/server/job/controllers/JobStatus;->hasTimingDelayConstraint()Z
 
     move-result v23
 
-    invoke-virtual {v10}, Lcom/android/server/job/controllers/JobStatus;->hasIdleConstraint()Z
+    invoke-virtual {v9}, Lcom/android/server/job/controllers/JobStatus;->hasDeadlineConstraint()Z
 
     move-result v24
 
-    invoke-virtual {v10}, Lcom/android/server/job/controllers/JobStatus;->hasConnectivityConstraint()Z
+    invoke-virtual {v9}, Lcom/android/server/job/controllers/JobStatus;->hasIdleConstraint()Z
 
     move-result v25
 
-    invoke-virtual {v10}, Lcom/android/server/job/controllers/JobStatus;->hasContentTriggerConstraint()Z
+    invoke-virtual {v9}, Lcom/android/server/job/controllers/JobStatus;->hasConnectivityConstraint()Z
 
     move-result v26
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+
+    invoke-virtual {v9}, Lcom/android/server/job/controllers/JobStatus;->hasContentTriggerConstraint()Z
+
+    move-result v27
+    :try_end_d
+    .catchall {:try_start_d .. :try_end_d} :catchall_2
 
     move/from16 v5, p3
 
-    move-object/from16 v27, v10
+    move-object/from16 v28, v9
 
-    move/from16 v10, v16
+    move/from16 v9, v16
 
-    move/from16 v11, v17
+    move/from16 v10, v17
 
-    move-object/from16 v28, v12
+    move-object/from16 v29, v11
 
-    move/from16 v12, v18
+    move/from16 v11, v18
 
-    move/from16 v13, v19
+    move-object/from16 v30, v12
 
-    move/from16 v14, v21
+    move/from16 v12, v19
 
-    move/from16 v15, v22
+    move/from16 v13, v21
 
-    move/from16 v16, v23
+    move/from16 v14, v22
 
-    move/from16 v17, v24
+    move/from16 v15, v23
 
-    move/from16 v18, v25
+    move/from16 v16, v24
 
-    move/from16 v19, v26
+    move/from16 v17, v25
 
-    :try_start_6
+    move/from16 v18, v26
+
+    move/from16 v19, v27
+
+    :try_start_e
     invoke-static/range {v4 .. v19}, Lcom/android/internal/util/FrameworkStatsLog;->write_non_chained(IILjava/lang/String;Ljava/lang/String;IIIIZZZZZZZZ)V
 
-    move-object/from16 v4, v27
+    move-object/from16 v4, v28
 
     invoke-virtual {v1, v4}, Lcom/android/server/job/JobSchedulerService;->isReadyToBeExecutedLocked(Lcom/android/server/job/controllers/JobStatus;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_f
+    if-eqz v5, :cond_11
 
     iget-object v5, v1, Lcom/android/server/job/JobSchedulerService;->mJobPackageTracker:Lcom/android/server/job/JobPackageTracker;
 
@@ -8471,27 +8601,29 @@
 
     goto :goto_7
 
-    :cond_f
+    :cond_11
     invoke-virtual {v1, v4}, Lcom/android/server/job/JobSchedulerService;->evaluateControllerStatesLocked(Lcom/android/server/job/controllers/JobStatus;)V
 
     :goto_7
-    monitor-exit v28
+    monitor-exit v29
 
     return v20
 
-    :catchall_1
+    :catchall_2
     move-exception v0
 
-    move-object/from16 v28, v12
+    move-object/from16 v29, v11
+
+    move-object/from16 v30, v12
 
     :goto_8
-    monitor-exit v28
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_2
+    monitor-exit v29
+    :try_end_e
+    .catchall {:try_start_e .. :try_end_e} :catchall_3
 
     throw v0
 
-    :catchall_2
+    :catchall_3
     move-exception v0
 
     goto :goto_8
@@ -8568,6 +8700,34 @@
     sget-object v2, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
+
+    return-void
+.end method
+
+.method updateQuotaTracker()V
+    .locals 5
+
+    iget-object v0, p0, Lcom/android/server/job/JobSchedulerService;->mQuotaTracker:Lcom/android/server/utils/quota/CountQuotaTracker;
+
+    iget-object v1, p0, Lcom/android/server/job/JobSchedulerService;->mConstants:Lcom/android/server/job/JobSchedulerService$Constants;
+
+    iget-boolean v1, v1, Lcom/android/server/job/JobSchedulerService$Constants;->ENABLE_API_QUOTAS:Z
+
+    invoke-virtual {v0, v1}, Lcom/android/server/utils/quota/CountQuotaTracker;->setEnabled(Z)V
+
+    iget-object v0, p0, Lcom/android/server/job/JobSchedulerService;->mQuotaTracker:Lcom/android/server/utils/quota/CountQuotaTracker;
+
+    sget-object v1, Lcom/android/server/job/JobSchedulerService;->QUOTA_TRACKER_CATEGORY_SCHEDULE_PERSISTED:Lcom/android/server/utils/quota/Category;
+
+    iget-object v2, p0, Lcom/android/server/job/JobSchedulerService;->mConstants:Lcom/android/server/job/JobSchedulerService$Constants;
+
+    iget v2, v2, Lcom/android/server/job/JobSchedulerService$Constants;->API_QUOTA_SCHEDULE_COUNT:I
+
+    iget-object v3, p0, Lcom/android/server/job/JobSchedulerService;->mConstants:Lcom/android/server/job/JobSchedulerService$Constants;
+
+    iget-wide v3, v3, Lcom/android/server/job/JobSchedulerService$Constants;->API_QUOTA_SCHEDULE_WINDOW_MS:J
+
+    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/android/server/utils/quota/CountQuotaTracker;->setCountLimit(Lcom/android/server/utils/quota/Category;IJ)V
 
     return-void
 .end method

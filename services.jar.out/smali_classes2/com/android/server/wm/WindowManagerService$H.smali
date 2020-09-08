@@ -213,9 +213,7 @@
 
     check-cast v0, Lcom/android/server/wm/WindowState;
 
-    invoke-virtual {v0, v5}, Lcom/android/server/wm/WindowState;->finishDrawing(Landroid/view/SurfaceControl$Transaction;)Z
-
-    nop
+    invoke-virtual {v0}, Lcom/android/server/wm/WindowState;->immediatelyNotifyBlastSync()V
 
     monitor-exit v3
     :try_end_0
@@ -1914,8 +1912,6 @@
     invoke-static {}, Lcom/android/server/wm/WindowManagerService;->resetPriorityAfterLockedSection()V
 
     throw v0
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0xe

@@ -3083,6 +3083,18 @@
 
     iput-object v4, v0, Lcom/android/server/pm/PackageSetting;->resourcePath:Ljava/io/File;
 
+    invoke-virtual/range {p5 .. p5}, Ljava/io/File;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/android/server/pm/PackageSetting;->codePathString:Ljava/lang/String;
+
+    invoke-virtual/range {p6 .. p6}, Ljava/io/File;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/android/server/pm/PackageSetting;->resourcePathString:Ljava/lang/String;
+
     move-object/from16 v3, p9
 
     iput-object v3, v0, Lcom/android/server/pm/PackageSetting;->secondaryCpuAbiString:Ljava/lang/String;
@@ -19011,7 +19023,7 @@
 
     const-string v11, "external"
 
-    const-string v4, "internal"
+    const-string/jumbo v4, "internal"
 
     if-eqz v0, :cond_15
 
@@ -22231,7 +22243,13 @@
 
     move-result v6
 
-    if-nez v6, :cond_4
+    if-eqz v6, :cond_3
+
+    iget-object v6, v3, Lcom/android/server/pm/PreferredActivity;->mPref:Lcom/android/server/pm/PreferredComponent;
+
+    iget-boolean v6, v6, Lcom/android/server/pm/PreferredComponent;->mAlways:Z
+
+    if-eqz v6, :cond_4
 
     :cond_3
     invoke-virtual {v4, v3}, Lcom/android/server/pm/PreferredIntentResolver;->addFilter(Ljava/lang/Object;)V

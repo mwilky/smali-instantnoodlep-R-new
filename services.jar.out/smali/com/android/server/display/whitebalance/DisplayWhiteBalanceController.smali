@@ -204,7 +204,7 @@
     if-eqz v0, :cond_1
 
     :cond_0
-    const-string v0, "invalid low light ambient brightness to bias spline, bias must begin at 0.0 and end at 1.0."
+    const-string/jumbo v0, "invalid low light ambient brightness to bias spline, bias must begin at 0.0 and end at 1.0."
 
     invoke-static {v4, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -276,7 +276,7 @@
     if-eqz v0, :cond_3
 
     :cond_2
-    const-string v0, "invalid high light ambient brightness to bias spline, bias must begin at 0.0 and end at 1.0."
+    const-string/jumbo v0, "invalid high light ambient brightness to bias spline, bias must begin at 0.0 and end at 1.0."
 
     invoke-static {v4, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -307,7 +307,7 @@
 
     if-lez v0, :cond_4
 
-    const-string v0, "invalid low light and high light ambient brightness to bias spline combination, defined domains must not intersect."
+    const-string/jumbo v0, "invalid low light and high light ambient brightness to bias spline combination, defined domains must not intersect."
 
     invoke-static {v4, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 

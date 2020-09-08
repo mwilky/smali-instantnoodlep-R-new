@@ -47,7 +47,7 @@
 
     iget-object v0, v0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->this$0:Lcom/android/server/media/MediaSessionService;
 
-    invoke-static {v0}, Lcom/android/server/media/MediaSessionService;->access$4400(Lcom/android/server/media/MediaSessionService;)Lcom/android/server/media/MediaKeyDispatcher;
+    invoke-static {v0}, Lcom/android/server/media/MediaSessionService;->access$4500(Lcom/android/server/media/MediaSessionService;)Lcom/android/server/media/MediaKeyDispatcher;
 
     move-result-object v0
 
@@ -59,7 +59,7 @@
 
     iget-object v0, v0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->this$0:Lcom/android/server/media/MediaSessionService;
 
-    invoke-static {v0}, Lcom/android/server/media/MediaSessionService;->access$4400(Lcom/android/server/media/MediaSessionService;)Lcom/android/server/media/MediaKeyDispatcher;
+    invoke-static {v0}, Lcom/android/server/media/MediaSessionService;->access$4500(Lcom/android/server/media/MediaSessionService;)Lcom/android/server/media/MediaKeyDispatcher;
 
     move-result-object v0
 
@@ -67,7 +67,7 @@
 
     iget-object v2, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler$1;->val$keyEvent:Landroid/view/KeyEvent;
 
-    invoke-static {v1, v2}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->access$5700(Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;Landroid/view/KeyEvent;)Landroid/view/KeyEvent;
+    invoke-static {v1, v2}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->access$5800(Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;Landroid/view/KeyEvent;)Landroid/view/KeyEvent;
 
     move-result-object v1
 
@@ -76,7 +76,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler$1;->this$2:Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;
 
-    invoke-static {v0}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->access$5800(Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;)V
+    invoke-static {v0}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->access$5900(Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;)V
 
     return-void
 .end method

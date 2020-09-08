@@ -76,7 +76,7 @@
 
     iget-object v1, p0, Lcom/android/server/job/JobSchedulerService$5;->this$0:Lcom/android/server/job/JobSchedulerService;
 
-    invoke-static {v1}, Lcom/android/server/job/JobSchedulerService;->access$200(Lcom/android/server/job/JobSchedulerService;)Ljava/lang/Runnable;
+    invoke-static {v1}, Lcom/android/server/job/JobSchedulerService;->access$100(Lcom/android/server/job/JobSchedulerService;)Ljava/lang/Runnable;
 
     move-result-object v1
 

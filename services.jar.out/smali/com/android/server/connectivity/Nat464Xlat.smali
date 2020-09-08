@@ -420,7 +420,7 @@
 
     aput-object v4, v2, v3
 
-    const-string v3, "interface %s is up, adding stacked link %s on top of %s"
+    const-string/jumbo v3, "interface %s is up, adding stacked link %s on top of %s"
 
     invoke-static {v3, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -490,7 +490,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "interface "
+    const-string/jumbo v2, "interface "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

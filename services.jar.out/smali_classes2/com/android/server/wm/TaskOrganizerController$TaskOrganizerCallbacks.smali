@@ -133,7 +133,9 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Landroid/view/SurfaceControl;-><init>(Landroid/view/SurfaceControl;)V
+    const-string v2, "TaskOrganizerController.onTaskAppeared"
+
+    invoke-direct {v0, v1, v2}, Landroid/view/SurfaceControl;-><init>(Landroid/view/SurfaceControl;Ljava/lang/String;)V
 
     iget-boolean v1, p1, Lcom/android/server/wm/Task;->mCreatedByOrganizer:Z
 

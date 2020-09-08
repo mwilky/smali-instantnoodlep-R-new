@@ -7,7 +7,7 @@
 .method public abstract createScreenRotationAnimation(Lcom/android/server/wm/WindowManagerService;Lcom/android/server/wm/DisplayContent;II)Lcom/android/server/wm/IScreenRotationAnimation;
 .end method
 
-.method public abstract forceDarkSystemUI(I)I
+.method public abstract forceDarkSystemUI(Lcom/android/server/wm/WindowState;I)I
 .end method
 
 .method public abstract isFullscreenScene()Z

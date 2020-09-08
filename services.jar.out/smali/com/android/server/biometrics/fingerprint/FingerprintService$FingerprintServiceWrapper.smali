@@ -50,11 +50,11 @@
 
     const-string v1, "android.permission.MANAGE_FINGERPRINT"
 
-    invoke-static {v0, v1}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->access$5700(Lcom/android/server/biometrics/fingerprint/FingerprintService;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->access$5600(Lcom/android/server/biometrics/fingerprint/FingerprintService;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/android/server/biometrics/fingerprint/FingerprintService$FingerprintServiceWrapper;->this$0:Lcom/android/server/biometrics/fingerprint/FingerprintService;
 
-    invoke-static {v0}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->access$5800(Lcom/android/server/biometrics/fingerprint/FingerprintService;)Ljava/util/concurrent/CopyOnWriteArrayList;
+    invoke-static {v0}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->access$5700(Lcom/android/server/biometrics/fingerprint/FingerprintService;)Ljava/util/concurrent/CopyOnWriteArrayList;
 
     move-result-object v0
 
@@ -484,7 +484,7 @@
 
     iget-object v0, p0, Lcom/android/server/biometrics/fingerprint/FingerprintService$FingerprintServiceWrapper;->this$0:Lcom/android/server/biometrics/fingerprint/FingerprintService;
 
-    invoke-static {v0, p1}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->access$5000(Lcom/android/server/biometrics/fingerprint/FingerprintService;I)J
+    invoke-virtual {v0, p1}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->getAuthenticatorId(I)J
 
     move-result-wide v0
 
@@ -604,11 +604,11 @@
 
     const-string v1, "android.permission.USE_BIOMETRIC_INTERNAL"
 
-    invoke-static {v0, v1}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->access$6000(Lcom/android/server/biometrics/fingerprint/FingerprintService;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->access$5900(Lcom/android/server/biometrics/fingerprint/FingerprintService;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/android/server/biometrics/fingerprint/FingerprintService$FingerprintServiceWrapper;->this$0:Lcom/android/server/biometrics/fingerprint/FingerprintService;
 
-    invoke-static {v0, p1}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->access$6100(Lcom/android/server/biometrics/fingerprint/FingerprintService;I)V
+    invoke-static {v0, p1}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->access$6000(Lcom/android/server/biometrics/fingerprint/FingerprintService;I)V
 
     return-void
 .end method
@@ -632,7 +632,7 @@
 
     const-string v1, "android.permission.MANAGE_FINGERPRINT"
 
-    invoke-static {v0, v1}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->access$5400(Lcom/android/server/biometrics/fingerprint/FingerprintService;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->access$5300(Lcom/android/server/biometrics/fingerprint/FingerprintService;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/android/server/biometrics/fingerprint/FingerprintService$FingerprintServiceWrapper;->this$0:Lcom/android/server/biometrics/fingerprint/FingerprintService;
 
@@ -641,7 +641,7 @@
     :try_start_0
     iget-object v1, p0, Lcom/android/server/biometrics/fingerprint/FingerprintService$FingerprintServiceWrapper;->this$0:Lcom/android/server/biometrics/fingerprint/FingerprintService;
 
-    invoke-static {v1}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->access$5500(Lcom/android/server/biometrics/fingerprint/FingerprintService;)Lcom/android/server/biometrics/ClientMonitor;
+    invoke-static {v1}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->access$5400(Lcom/android/server/biometrics/fingerprint/FingerprintService;)Lcom/android/server/biometrics/ClientMonitor;
 
     move-result-object v1
 
@@ -649,7 +649,7 @@
 
     iget-object v1, p0, Lcom/android/server/biometrics/fingerprint/FingerprintService$FingerprintServiceWrapper;->this$0:Lcom/android/server/biometrics/fingerprint/FingerprintService;
 
-    invoke-static {v1}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->access$5600(Lcom/android/server/biometrics/fingerprint/FingerprintService;)Lcom/android/server/biometrics/ClientMonitor;
+    invoke-static {v1}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->access$5500(Lcom/android/server/biometrics/fingerprint/FingerprintService;)Lcom/android/server/biometrics/ClientMonitor;
 
     move-result-object v1
 
@@ -1001,11 +1001,11 @@
 
     const-string v1, "android.permission.MANAGE_FINGERPRINT"
 
-    invoke-static {v0, v1}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->access$5900(Lcom/android/server/biometrics/fingerprint/FingerprintService;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->access$5800(Lcom/android/server/biometrics/fingerprint/FingerprintService;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/android/server/biometrics/fingerprint/FingerprintService$FingerprintServiceWrapper;->this$0:Lcom/android/server/biometrics/fingerprint/FingerprintService;
 
-    invoke-static {v0}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->access$5800(Lcom/android/server/biometrics/fingerprint/FingerprintService;)Ljava/util/concurrent/CopyOnWriteArrayList;
+    invoke-static {v0}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->access$5700(Lcom/android/server/biometrics/fingerprint/FingerprintService;)Ljava/util/concurrent/CopyOnWriteArrayList;
 
     move-result-object v0
 
@@ -1056,11 +1056,11 @@
 
     const-string v1, "android.permission.RESET_FINGERPRINT_LOCKOUT"
 
-    invoke-static {v0, v1}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->access$5100(Lcom/android/server/biometrics/fingerprint/FingerprintService;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->access$5000(Lcom/android/server/biometrics/fingerprint/FingerprintService;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/android/server/biometrics/fingerprint/FingerprintService$FingerprintServiceWrapper;->this$0:Lcom/android/server/biometrics/fingerprint/FingerprintService;
 
-    invoke-static {v0}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->access$5200(Lcom/android/server/biometrics/fingerprint/FingerprintService;)I
+    invoke-static {v0}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->access$5100(Lcom/android/server/biometrics/fingerprint/FingerprintService;)I
 
     move-result v1
 
@@ -1081,7 +1081,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/fingerprint/FingerprintService$FingerprintServiceWrapper;->this$0:Lcom/android/server/biometrics/fingerprint/FingerprintService;
 
-    invoke-static {v0}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->access$5300(Lcom/android/server/biometrics/fingerprint/FingerprintService;)Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->access$5200(Lcom/android/server/biometrics/fingerprint/FingerprintService;)Landroid/os/Handler;
 
     move-result-object v0
 

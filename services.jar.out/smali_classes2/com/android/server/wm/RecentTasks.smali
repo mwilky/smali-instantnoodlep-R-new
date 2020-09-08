@@ -2436,6 +2436,10 @@
 .method private removeForAddTask(Lcom/android/server/wm/Task;)V
     .locals 5
 
+    iget-object v0, p0, Lcom/android/server/wm/RecentTasks;->mHiddenTasks:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
     invoke-direct {p0, p1}, Lcom/android/server/wm/RecentTasks;->findRemoveIndexForAddTask(Lcom/android/server/wm/Task;)I
 
     move-result v0
@@ -2458,10 +2462,6 @@
     const/4 v2, 0x0
 
     if-eq v1, p1, :cond_2
-
-    iget-object v3, p0, Lcom/android/server/wm/RecentTasks;->mHiddenTasks:Ljava/util/ArrayList;
-
-    invoke-virtual {v3, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
     invoke-virtual {v1}, Lcom/android/server/wm/Task;->hasChild()Z
 
@@ -2609,7 +2609,7 @@
     add-int/lit8 v0, v0, -0x1
 
     :goto_0
-    if-ltz v0, :cond_3
+    if-ltz v0, :cond_4
 
     iget-object v1, p0, Lcom/android/server/wm/RecentTasks;->mHiddenTasks:Ljava/util/ArrayList;
 
@@ -2623,11 +2623,11 @@
 
     move-result v2
 
-    if-nez v2, :cond_0
+    if-eqz v2, :cond_2
 
-    iget-object v2, p0, Lcom/android/server/wm/RecentTasks;->mHiddenTasks:Ljava/util/ArrayList;
+    iget-boolean v2, v1, Lcom/android/server/wm/Task;->inRecents:Z
 
-    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+    if-eqz v2, :cond_0
 
     goto :goto_1
 
@@ -2636,7 +2636,7 @@
 
     move-result v2
 
-    if-ne v2, p1, :cond_2
+    if-ne v2, p1, :cond_3
 
     invoke-virtual {v1}, Lcom/android/server/wm/Task;->getTopVisibleActivity()Lcom/android/server/wm/ActivityRecord;
 
@@ -2644,7 +2644,7 @@
 
     if-eqz v2, :cond_1
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_1
     iget-object v2, p0, Lcom/android/server/wm/RecentTasks;->mHiddenTasks:Ljava/util/ArrayList;
@@ -2659,13 +2659,23 @@
 
     invoke-virtual {v2, v1, v3, v3, v4}, Lcom/android/server/wm/ActivityStackSupervisor;->removeTask(Lcom/android/server/wm/Task;ZZLjava/lang/String;)V
 
+    goto :goto_2
+
     :cond_2
     :goto_1
+    iget-object v2, p0, Lcom/android/server/wm/RecentTasks;->mHiddenTasks:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    nop
+
+    :cond_3
+    :goto_2
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    :cond_3
+    :cond_4
     return-void
 .end method
 
@@ -3451,10 +3461,6 @@
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_6
-    iget-object v1, p1, Lcom/android/server/wm/Task;->affinity:Ljava/lang/String;
-
-    invoke-static {v1}, Lcom/android/server/wm/OnePlusPerfManagerInjector;->runAppMayWithPerf(Ljava/lang/String;)Z
-
     return-void
 
     :cond_7
@@ -3520,7 +3526,7 @@
 
     iget-boolean v7, p1, Lcom/android/server/wm/Task;->inRecents:Z
 
-    if-eqz v7, :cond_d
+    if-eqz v7, :cond_c
 
     iget-object v7, p0, Lcom/android/server/wm/RecentTasks;->mTasks:Ljava/util/ArrayList;
 
@@ -3528,13 +3534,13 @@
 
     move-result v7
 
-    if-ltz v7, :cond_c
+    if-ltz v7, :cond_b
 
-    if-nez v3, :cond_d
+    if-nez v3, :cond_c
 
     iget-boolean v2, p0, Lcom/android/server/wm/RecentTasks;->mFreezeTaskListReordering:Z
 
-    if-nez v2, :cond_b
+    if-nez v2, :cond_a
 
     iget-object v2, p0, Lcom/android/server/wm/RecentTasks;->mTasks:Ljava/util/ArrayList;
 
@@ -3583,16 +3589,11 @@
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_a
-    iget-object v1, p1, Lcom/android/server/wm/Task;->affinity:Ljava/lang/String;
-
-    invoke-static {v1}, Lcom/android/server/wm/OnePlusPerfManagerInjector;->runAppMayWithPerf(Ljava/lang/String;)Z
-
-    :cond_b
     invoke-virtual {p0, p1, v5}, Lcom/android/server/wm/RecentTasks;->notifyTaskPersisterLocked(Lcom/android/server/wm/Task;Z)V
 
     return-void
 
-    :cond_c
+    :cond_b
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -3611,10 +3612,10 @@
 
     const/4 v6, 0x1
 
-    :cond_d
+    :cond_c
     sget-boolean v7, Lcom/android/server/wm/ActivityTaskManagerDebugConfig;->DEBUG_RECENTS:Z
 
-    if-eqz v7, :cond_e
+    if-eqz v7, :cond_d
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -3632,28 +3633,28 @@
 
     invoke-static {v1, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_e
+    :cond_d
     invoke-direct {p0, p1}, Lcom/android/server/wm/RecentTasks;->removeForAddTask(Lcom/android/server/wm/Task;)V
 
     iput-boolean v2, p1, Lcom/android/server/wm/Task;->inRecents:Z
 
-    if-eqz v3, :cond_18
+    if-eqz v3, :cond_17
 
-    if-eqz v6, :cond_f
+    if-eqz v6, :cond_e
 
     goto/16 :goto_4
 
-    :cond_f
-    if-eqz v3, :cond_1a
+    :cond_e
+    if-eqz v3, :cond_19
 
     iget-object v2, p1, Lcom/android/server/wm/Task;->mNextAffiliate:Lcom/android/server/wm/Task;
 
-    if-nez v2, :cond_10
+    if-nez v2, :cond_f
 
     iget-object v2, p1, Lcom/android/server/wm/Task;->mPrevAffiliate:Lcom/android/server/wm/Task;
 
-    :cond_10
-    if-eqz v2, :cond_16
+    :cond_f
+    if-eqz v2, :cond_15
 
     iget-object v7, p0, Lcom/android/server/wm/RecentTasks;->mTasks:Ljava/util/ArrayList;
 
@@ -3661,23 +3662,23 @@
 
     move-result v7
 
-    if-ltz v7, :cond_14
+    if-ltz v7, :cond_13
 
     iget-object v8, p1, Lcom/android/server/wm/Task;->mNextAffiliate:Lcom/android/server/wm/Task;
 
-    if-ne v2, v8, :cond_11
+    if-ne v2, v8, :cond_10
 
     add-int/lit8 v8, v7, 0x1
 
     goto :goto_2
 
-    :cond_11
+    :cond_10
     move v8, v7
 
     :goto_2
     sget-boolean v9, Lcom/android/server/wm/ActivityTaskManagerDebugConfig;->DEBUG_RECENTS:Z
 
-    if-eqz v9, :cond_12
+    if-eqz v9, :cond_11
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -3701,7 +3702,7 @@
 
     invoke-static {v1, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_12
+    :cond_11
     iget-object v9, p0, Lcom/android/server/wm/RecentTasks;->mTasks:Ljava/util/ArrayList;
 
     invoke-virtual {v9, v8, p1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
@@ -3724,19 +3725,19 @@
 
     move-result v9
 
-    if-eqz v9, :cond_13
+    if-eqz v9, :cond_12
 
     return-void
 
-    :cond_13
+    :cond_12
     const/4 v6, 0x1
 
     goto :goto_3
 
-    :cond_14
+    :cond_13
     sget-boolean v8, Lcom/android/server/wm/ActivityTaskManagerDebugConfig;->DEBUG_RECENTS:Z
 
-    if-eqz v8, :cond_15
+    if-eqz v8, :cond_14
 
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -3754,16 +3755,16 @@
 
     invoke-static {v1, v8}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_15
+    :cond_14
     const/4 v6, 0x1
 
     :goto_3
     goto :goto_5
 
-    :cond_16
+    :cond_15
     sget-boolean v7, Lcom/android/server/wm/ActivityTaskManagerDebugConfig;->DEBUG_RECENTS:Z
 
-    if-eqz v7, :cond_17
+    if-eqz v7, :cond_16
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -3781,12 +3782,12 @@
 
     invoke-static {v1, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_17
+    :cond_16
     const/4 v6, 0x1
 
     goto :goto_5
 
-    :cond_18
+    :cond_17
     :goto_4
     iget-object v2, p0, Lcom/android/server/wm/RecentTasks;->mTasks:Ljava/util/ArrayList;
 
@@ -3796,7 +3797,7 @@
 
     sget-boolean v2, Lcom/android/server/wm/ActivityTaskManagerDebugConfig;->DEBUG_RECENTS:Z
 
-    if-eqz v2, :cond_19
+    if-eqz v2, :cond_18
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -3814,7 +3815,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_19
+    :cond_18
     iget-object v2, p0, Lcom/android/server/wm/RecentTasks;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v2, v2, Lcom/android/server/wm/ActivityTaskManagerService;->mContext:Landroid/content/Context;
@@ -3827,33 +3828,29 @@
 
     invoke-virtual {v2, v7}, Lcom/android/server/am/ColdStartInjector;->addHistoryTask(Landroid/content/ComponentName;)V
 
-    iget-object v2, p1, Lcom/android/server/wm/Task;->affinity:Ljava/lang/String;
-
-    invoke-static {v2}, Lcom/android/server/wm/OnePlusPerfManagerInjector;->runAppMayWithPerf(Ljava/lang/String;)Z
-
-    :cond_1a
+    :cond_19
     :goto_5
-    if-eqz v6, :cond_1c
+    if-eqz v6, :cond_1b
 
     sget-boolean v2, Lcom/android/server/wm/ActivityTaskManagerDebugConfig;->DEBUG_RECENTS:Z
 
-    if-eqz v2, :cond_1b
+    if-eqz v2, :cond_1a
 
     const-string v2, "addRecent: regrouping affiliations"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_1b
+    :cond_1a
     iget v1, p1, Lcom/android/server/wm/Task;->mUserId:I
 
     invoke-virtual {p0, v1}, Lcom/android/server/wm/RecentTasks;->cleanupLocked(I)V
 
-    :cond_1c
-    if-eqz v0, :cond_1d
+    :cond_1b
+    if-eqz v0, :cond_1c
 
     invoke-direct {p0}, Lcom/android/server/wm/RecentTasks;->trimInactiveRecentTasks()V
 
-    :cond_1d
+    :cond_1c
     invoke-virtual {p0, p1, v5}, Lcom/android/server/wm/RecentTasks;->notifyTaskPersisterLocked(Lcom/android/server/wm/Task;Z)V
 
     return-void
@@ -5987,7 +5984,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x10e0080
+    const v0, 0x10e0086
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -5995,7 +5992,7 @@
 
     iput v0, p0, Lcom/android/server/wm/RecentTasks;->mMinNumVisibleTasks:I
 
-    const v0, 0x10e0076
+    const v0, 0x10e007c
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -6016,7 +6013,7 @@
 
     if-eqz v0, :cond_1
 
-    const v0, 0x10e007f
+    const v0, 0x10e0085
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -6024,7 +6021,7 @@
 
     iput v0, p0, Lcom/android/server/wm/RecentTasks;->mMinNumVisibleTasks:I
 
-    const v0, 0x10e0075
+    const v0, 0x10e007b
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -6035,7 +6032,7 @@
     goto :goto_0
 
     :cond_1
-    const v0, 0x10e007e
+    const v0, 0x10e0084
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -6043,7 +6040,7 @@
 
     iput v0, p0, Lcom/android/server/wm/RecentTasks;->mMinNumVisibleTasks:I
 
-    const v0, 0x10e0074
+    const v0, 0x10e007a
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getInteger(I)I
 

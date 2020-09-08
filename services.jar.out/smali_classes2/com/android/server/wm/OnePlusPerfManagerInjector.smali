@@ -33,7 +33,7 @@
 
     const/4 v1, 0x0
 
-    const/16 v2, 0xa1
+    const/16 v2, 0x9a
 
     aput v2, v0, v1
 
@@ -114,40 +114,6 @@
 
     :cond_1
     return-void
-.end method
-
-.method public static runAppMayWithPerf(Ljava/lang/String;)Z
-    .locals 2
-
-    sget-boolean v0, Lcom/android/server/wm/OnePlusPerfManagerInjector;->ENABLED:Z
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_0
-    sget-boolean v0, Lcom/android/server/wm/OnePlusPerfManagerInjector;->DEBUG:Z
-
-    if-eqz v0, :cond_1
-
-    const-string v0, "OnePlusPerfManagerInjector"
-
-    const-string v1, "call OnePlusPerfManagerInjector.runAppMayWithPerf()"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_1
-    invoke-static {}, Lcom/android/server/wm/OnePlusPerfManagerInjector;->initInstance()V
-
-    sget-object v0, Lcom/android/server/wm/OnePlusPerfManagerInjector;->onePlusPerfManager:Lcom/android/server/wm/IOnePlusPerfManager;
-
-    invoke-interface {v0, p0}, Lcom/android/server/wm/IOnePlusPerfManager;->runAppMayWithPerf(Ljava/lang/String;)Z
-
-    move-result v0
-
-    return v0
 .end method
 
 .method public static screenFrozenBoost(Z)V

@@ -56,7 +56,19 @@
 
     check-cast v0, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;
 
-    invoke-static {v0, p1, p2}, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->access$500(Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;Landroid/view/inputmethod/InlineSuggestionsRequest;Lcom/android/internal/view/IInlineSuggestionsResponseCallback;)V
+    invoke-static {v0, p1, p2}, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->access$600(Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;Landroid/view/inputmethod/InlineSuggestionsRequest;Lcom/android/internal/view/IInlineSuggestionsResponseCallback;)V
+
+    return-void
+.end method
+
+.method static synthetic lambda$onInlineSuggestionsSessionInvalidated$6(Ljava/lang/Object;)V
+    .locals 1
+
+    move-object v0, p0
+
+    check-cast v0, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;
+
+    invoke-static {v0}, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->access$300(Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;)V
 
     return-void
 .end method
@@ -68,7 +80,7 @@
 
     check-cast v0, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;
 
-    invoke-static {v0, p1, p2}, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->access$500(Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;Landroid/view/inputmethod/InlineSuggestionsRequest;Lcom/android/internal/view/IInlineSuggestionsResponseCallback;)V
+    invoke-static {v0, p1, p2}, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->access$600(Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;Landroid/view/inputmethod/InlineSuggestionsRequest;Lcom/android/internal/view/IInlineSuggestionsResponseCallback;)V
 
     return-void
 .end method
@@ -80,7 +92,7 @@
 
     check-cast v0, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;
 
-    invoke-static {v0, p1, p2}, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->access$300(Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;ZZ)V
+    invoke-static {v0, p1, p2}, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->access$400(Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;ZZ)V
 
     return-void
 .end method
@@ -92,7 +104,7 @@
 
     check-cast v0, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;
 
-    invoke-static {v0, p1, p2}, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->access$300(Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;ZZ)V
+    invoke-static {v0, p1, p2}, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->access$400(Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;ZZ)V
 
     return-void
 .end method
@@ -104,7 +116,7 @@
 
     check-cast v0, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;
 
-    invoke-static {v0, p1, p2, p3}, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->access$400(Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;Landroid/view/autofill/AutofillId;ZZ)V
+    invoke-static {v0, p1, p2, p3}, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->access$500(Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;Landroid/view/autofill/AutofillId;ZZ)V
 
     return-void
 .end method
@@ -116,7 +128,7 @@
 
     check-cast v0, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;
 
-    invoke-static {v0, p1, p2}, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->access$300(Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;ZZ)V
+    invoke-static {v0, p1, p2}, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->access$400(Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;ZZ)V
 
     return-void
 .end method
@@ -168,6 +180,53 @@
     sget-object v2, Lcom/android/server/autofill/-$$Lambda$AutofillInlineSuggestionsRequestSession$InlineSuggestionsRequestCallbackImpl$6TT1A0vQ00WTlDjmpSijK-STPXw;->INSTANCE:Lcom/android/server/autofill/-$$Lambda$AutofillInlineSuggestionsRequestSession$InlineSuggestionsRequestCallbackImpl$6TT1A0vQ00WTlDjmpSijK-STPXw;
 
     invoke-static {v2, v0, p1, p2}, Lcom/android/internal/util/function/pooled/PooledLambda;->obtainMessage(Lcom/android/internal/util/function/TriConsumer;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Landroid/os/Message;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    :cond_1
+    return-void
+.end method
+
+.method public onInlineSuggestionsSessionInvalidated()V
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    sget-boolean v0, Lcom/android/server/autofill/Helper;->sDebug:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->access$100()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "onInlineSuggestionsSessionInvalidated() called."
+
+    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession$InlineSuggestionsRequestCallbackImpl;->mSession:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;
+
+    if-eqz v0, :cond_1
+
+    invoke-static {v0}, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->access$200(Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;)Landroid/os/Handler;
+
+    move-result-object v1
+
+    sget-object v2, Lcom/android/server/autofill/-$$Lambda$AutofillInlineSuggestionsRequestSession$InlineSuggestionsRequestCallbackImpl$nuqiI4phD-yzdqPJfiNUB3iWieA;->INSTANCE:Lcom/android/server/autofill/-$$Lambda$AutofillInlineSuggestionsRequestSession$InlineSuggestionsRequestCallbackImpl$nuqiI4phD-yzdqPJfiNUB3iWieA;
+
+    invoke-static {v2, v0}, Lcom/android/internal/util/function/pooled/PooledLambda;->obtainMessage(Ljava/util/function/Consumer;Ljava/lang/Object;)Landroid/os/Message;
 
     move-result-object v2
 

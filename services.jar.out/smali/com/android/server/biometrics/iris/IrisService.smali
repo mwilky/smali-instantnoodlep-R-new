@@ -172,7 +172,7 @@
 
     invoke-direct {v0, p0, v1}, Lcom/android/server/biometrics/iris/IrisService$IrisServiceWrapper;-><init>(Lcom/android/server/biometrics/iris/IrisService;Lcom/android/server/biometrics/iris/IrisService$1;)V
 
-    const-string v1, "iris"
+    const-string/jumbo v1, "iris"
 
     invoke-virtual {p0, v1, v0}, Lcom/android/server/biometrics/iris/IrisService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
 

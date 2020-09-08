@@ -3,7 +3,7 @@
 .source "DisplayPowerController.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/android/server/display/RampAnimator$Listener;
 
 
 # annotations
@@ -34,12 +34,24 @@
 
 
 # virtual methods
-.method public run()V
+.method public onAnimationEnd()V
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$4;->this$0:Lcom/android/server/display/DisplayPowerController;
 
-    invoke-static {v0}, Lcom/android/server/display/DisplayPowerController;->access$200(Lcom/android/server/display/DisplayPowerController;)V
+    invoke-static {v0}, Lcom/android/server/display/DisplayPowerController;->access$500(Lcom/android/server/display/DisplayPowerController;)V
+
+    iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$4;->this$0:Lcom/android/server/display/DisplayPowerController;
+
+    invoke-static {v0}, Lcom/android/server/display/DisplayPowerController;->access$600(Lcom/android/server/display/DisplayPowerController;)Lcom/android/server/display/OpBrightnessReasonAndRate;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/server/display/OpBrightnessReasonAndRate;->updateBrightnessValue()V
+
+    iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$4;->this$0:Lcom/android/server/display/DisplayPowerController;
+
+    invoke-static {v0}, Lcom/android/server/display/DisplayPowerController;->access$700(Lcom/android/server/display/DisplayPowerController;)V
 
     return-void
 .end method

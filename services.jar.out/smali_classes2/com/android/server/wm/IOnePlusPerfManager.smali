@@ -7,9 +7,6 @@
 .method public abstract acquirePerfForStartSpeed(Ljava/lang/String;Landroid/util/BoostFramework;)Z
 .end method
 
-.method public abstract runAppMayWithPerf(Ljava/lang/String;)Z
-.end method
-
 .method public abstract screenFrozenBoost(Z)V
 .end method
 

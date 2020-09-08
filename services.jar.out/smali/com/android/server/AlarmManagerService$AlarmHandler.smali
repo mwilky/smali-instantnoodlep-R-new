@@ -389,7 +389,7 @@
     :cond_5
     new-array v0, v3, [I
 
-    const/16 v1, 0x4f
+    const/16 v1, 0x4d
 
     aput v1, v0, v2
 

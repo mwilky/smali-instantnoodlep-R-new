@@ -115,7 +115,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e00bd
+    const v1, 0x10e00c3
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1119,113 +1119,126 @@
 .end method
 
 .method onPlaySoundEffect(II)V
-    .locals 10
-
-    const-string v0, "AS.SfxHelper"
+    .locals 9
 
     if-gez p2, :cond_0
 
-    const-wide/high16 v1, 0x4024000000000000L    # 10.0
+    const-wide/high16 v0, 0x4024000000000000L    # 10.0
 
-    iget v3, p0, Lcom/android/server/audio/SoundEffectsHelper;->mSfxAttenuationDb:I
+    iget v2, p0, Lcom/android/server/audio/SoundEffectsHelper;->mSfxAttenuationDb:I
 
-    int-to-float v3, v3
+    int-to-float v2, v2
 
-    const/high16 v4, 0x41a00000    # 20.0f
+    const/high16 v3, 0x41a00000    # 20.0f
 
-    div-float/2addr v3, v4
+    div-float/2addr v2, v3
 
-    float-to-double v3, v3
+    float-to-double v2, v2
 
-    invoke-static {v1, v2, v3, v4}, Ljava/lang/Math;->pow(DD)D
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->pow(DD)D
 
-    move-result-wide v1
+    move-result-wide v0
 
-    double-to-float v1, v1
+    double-to-float v0, v0
 
     goto :goto_0
 
     :cond_0
-    int-to-float v1, p2
+    int-to-float v0, p2
 
-    const/high16 v2, 0x447a0000    # 1000.0f
+    const/high16 v1, 0x447a0000    # 1000.0f
 
-    div-float/2addr v1, v2
+    div-float/2addr v0, v1
 
     :goto_0
-    iget-object v2, p0, Lcom/android/server/audio/SoundEffectsHelper;->mResources:Ljava/util/List;
+    const/16 v1, 0xa
+
+    const-string v2, "AS.SfxHelper"
+
+    if-ge p1, v1, :cond_3
+
+    if-gez p1, :cond_1
+
+    goto/16 :goto_3
+
+    :cond_1
+    iget-object v1, p0, Lcom/android/server/audio/SoundEffectsHelper;->mResources:Ljava/util/List;
 
     iget-object v3, p0, Lcom/android/server/audio/SoundEffectsHelper;->mEffects:[I
 
     aget v3, v3, p1
 
-    invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v1
 
-    move-object v9, v2
+    move-object v8, v1
 
-    check-cast v9, Lcom/android/server/audio/SoundEffectsHelper$Resource;
+    check-cast v8, Lcom/android/server/audio/SoundEffectsHelper$Resource;
 
-    iget v2, v9, Lcom/android/server/audio/SoundEffectsHelper$Resource;->mSampleId:I
+    iget-object v1, p0, Lcom/android/server/audio/SoundEffectsHelper;->mSoundPool:Landroid/media/SoundPool;
 
-    if-eqz v2, :cond_1
+    if-eqz v1, :cond_2
 
-    iget-boolean v2, v9, Lcom/android/server/audio/SoundEffectsHelper$Resource;->mLoaded:Z
+    iget v1, v8, Lcom/android/server/audio/SoundEffectsHelper$Resource;->mSampleId:I
 
-    if-eqz v2, :cond_1
+    if-eqz v1, :cond_2
 
-    iget-object v2, p0, Lcom/android/server/audio/SoundEffectsHelper;->mSoundPool:Landroid/media/SoundPool;
+    iget-boolean v1, v8, Lcom/android/server/audio/SoundEffectsHelper$Resource;->mLoaded:Z
 
-    iget v3, v9, Lcom/android/server/audio/SoundEffectsHelper$Resource;->mSampleId:I
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lcom/android/server/audio/SoundEffectsHelper;->mSoundPool:Landroid/media/SoundPool;
+
+    iget v2, v8, Lcom/android/server/audio/SoundEffectsHelper$Resource;->mSampleId:I
+
+    const/4 v5, 0x0
 
     const/4 v6, 0x0
 
-    const/4 v7, 0x0
+    const/high16 v7, 0x3f800000    # 1.0f
 
-    const/high16 v8, 0x3f800000    # 1.0f
+    move v3, v0
 
-    move v4, v1
+    move v4, v0
 
-    move v5, v1
-
-    invoke-virtual/range {v2 .. v8}, Landroid/media/SoundPool;->play(IFFIIF)I
+    invoke-virtual/range {v1 .. v7}, Landroid/media/SoundPool;->play(IFFIIF)I
 
     goto :goto_2
 
-    :cond_1
-    new-instance v2, Landroid/media/MediaPlayer;
+    :cond_2
+    new-instance v1, Landroid/media/MediaPlayer;
 
-    invoke-direct {v2}, Landroid/media/MediaPlayer;-><init>()V
+    invoke-direct {v1}, Landroid/media/MediaPlayer;-><init>()V
 
     :try_start_0
-    invoke-direct {p0, v9}, Lcom/android/server/audio/SoundEffectsHelper;->getResourceFilePath(Lcom/android/server/audio/SoundEffectsHelper$Resource;)Ljava/lang/String;
+    invoke-direct {p0, v8}, Lcom/android/server/audio/SoundEffectsHelper;->getResourceFilePath(Lcom/android/server/audio/SoundEffectsHelper$Resource;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Landroid/media/MediaPlayer;->setDataSource(Ljava/lang/String;)V
+    invoke-virtual {v1, v3}, Landroid/media/MediaPlayer;->setDataSource(Ljava/lang/String;)V
 
     const/4 v4, 0x1
 
-    invoke-virtual {v2, v4}, Landroid/media/MediaPlayer;->setAudioStreamType(I)V
+    invoke-virtual {v1, v4}, Landroid/media/MediaPlayer;->setAudioStreamType(I)V
 
-    invoke-virtual {v2}, Landroid/media/MediaPlayer;->prepare()V
+    invoke-virtual {v1}, Landroid/media/MediaPlayer;->prepare()V
 
-    invoke-virtual {v2, v1}, Landroid/media/MediaPlayer;->setVolume(F)V
+    invoke-virtual {v1, v0}, Landroid/media/MediaPlayer;->setVolume(F)V
 
     new-instance v4, Lcom/android/server/audio/SoundEffectsHelper$3;
 
     invoke-direct {v4, p0}, Lcom/android/server/audio/SoundEffectsHelper$3;-><init>(Lcom/android/server/audio/SoundEffectsHelper;)V
 
-    invoke-virtual {v2, v4}, Landroid/media/MediaPlayer;->setOnCompletionListener(Landroid/media/MediaPlayer$OnCompletionListener;)V
+    invoke-virtual {v1, v4}, Landroid/media/MediaPlayer;->setOnCompletionListener(Landroid/media/MediaPlayer$OnCompletionListener;)V
 
     new-instance v4, Lcom/android/server/audio/SoundEffectsHelper$4;
 
     invoke-direct {v4, p0}, Lcom/android/server/audio/SoundEffectsHelper$4;-><init>(Lcom/android/server/audio/SoundEffectsHelper;)V
 
-    invoke-virtual {v2, v4}, Landroid/media/MediaPlayer;->setOnErrorListener(Landroid/media/MediaPlayer$OnErrorListener;)V
+    invoke-virtual {v1, v4}, Landroid/media/MediaPlayer;->setOnErrorListener(Landroid/media/MediaPlayer$OnErrorListener;)V
 
-    invoke-virtual {v2}, Landroid/media/MediaPlayer;->start()V
+    invoke-virtual {v1}, Landroid/media/MediaPlayer;->start()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
@@ -1250,7 +1263,7 @@
 
     move-result-object v4
 
-    invoke-static {v0, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_2
 
@@ -1271,7 +1284,7 @@
 
     move-result-object v4
 
-    invoke-static {v0, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
@@ -1292,12 +1305,36 @@
 
     move-result-object v4
 
-    invoke-static {v0, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_1
     nop
 
     :goto_2
+    return-void
+
+    :cond_3
+    :goto_3
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "SfxHelper effectType value "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v3, " out of range"
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v2, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
 .end method
 

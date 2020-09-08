@@ -466,7 +466,7 @@
 
     move-result-object v4
     :try_end_1
-    .catch Ljava/security/GeneralSecurityException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     nop

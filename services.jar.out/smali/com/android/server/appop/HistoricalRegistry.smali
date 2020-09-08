@@ -725,7 +725,7 @@
     goto :goto_1
 
     :cond_4
-    const-string v14, "intervalMultiplier"
+    const-string/jumbo v14, "intervalMultiplier"
 
     invoke-virtual {v11, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

@@ -59,7 +59,7 @@
 
     move-result-object v0
 
-    const-string v1, "intent_filter"
+    const-string/jumbo v1, "intent_filter"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 

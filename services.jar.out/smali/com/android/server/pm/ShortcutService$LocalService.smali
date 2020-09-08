@@ -542,7 +542,7 @@
     const/4 v0, 0x0
 
     :goto_0
-    const-string v8, "invalid cacheFlags"
+    const-string/jumbo v8, "invalid cacheFlags"
 
     invoke-static {v0, v8}, Lcom/android/internal/util/Preconditions;->checkState(ZLjava/lang/String;)V
 

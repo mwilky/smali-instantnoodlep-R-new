@@ -384,7 +384,7 @@
 
     const-string v14, "checkLauncherActivity"
 
-    const-string v15, "isActivityEnabled"
+    const-string/jumbo v15, "isActivityEnabled"
 
     const-string/jumbo v16, "packageUpdateCheck"
 

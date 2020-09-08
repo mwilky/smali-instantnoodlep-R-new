@@ -1001,6 +1001,24 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    iget-object v0, p0, Lcom/oneplus/onlineconfig/OpFingerprintConfig;->mAppUnsupportAccelerateList:Ljava/util/ArrayList;
+
+    const-string v1, "com.tencent.mm"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/oneplus/onlineconfig/OpFingerprintConfig;->mAppUnsupportAccelerateList:Ljava/util/ArrayList;
+
+    const-string v1, "com.sdu.didi.psnger"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/oneplus/onlineconfig/OpFingerprintConfig;->mAppUnsupportAccelerateList:Ljava/util/ArrayList;
+
+    const-string v1, "com.oppo.im"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
     return-void
 .end method
 
@@ -1088,7 +1106,7 @@
     :cond_0
     new-array v0, v1, [I
 
-    const/16 v2, 0x3e
+    const/16 v2, 0x3c
 
     const/4 v3, 0x0
 

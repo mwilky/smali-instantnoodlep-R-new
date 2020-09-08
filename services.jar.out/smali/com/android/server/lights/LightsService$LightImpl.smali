@@ -565,7 +565,7 @@
 
     iget-object v0, p0, Lcom/android/server/lights/LightsService$LightImpl;->this$0:Lcom/android/server/lights/LightsService;
 
-    invoke-static {v0}, Lcom/android/server/lights/LightsService;->access$900(Lcom/android/server/lights/LightsService;)Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/server/lights/LightsService;->access$1000(Lcom/android/server/lights/LightsService;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -674,40 +674,66 @@
     :catchall_0
     move-exception v0
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
     :cond_1
-    if-nez p2, :cond_5
+    if-nez p2, :cond_7
 
     invoke-direct {p0}, Lcom/android/server/lights/LightsService$LightImpl;->shouldBeInLowPersistenceMode()Z
 
     move-result v0
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_7
 
     iget v0, p0, Lcom/android/server/lights/LightsService$LightImpl;->mSurfaceControlMaximumBrightness:I
 
     const/16 v1, 0xff
 
-    if-ne v0, v1, :cond_5
+    if-ne v0, v1, :cond_7
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    cmpg-float v1, p1, v0
+
+    if-gtz v1, :cond_4
 
     sget-boolean v0, Lcom/android/server/lights/LightsService;->DEBUG:Z
+
+    if-eqz v0, :cond_3
+
+    invoke-static {}, Lcom/android/server/lights/LightsService;->access$500()Z
+
+    move-result v0
 
     if-eqz v0, :cond_2
 
     const-string v0, "LightsService"
 
-    const-string v1, "Using new setBrightness path!"
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Set brightness: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const v2, 0x45fff800    # 8191.0f
+
+    mul-float/2addr v2, p1
+
+    float-to-int v2, v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    goto :goto_0
+
     :cond_2
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    cmpg-float v1, p1, v0
-
-    if-gtz v1, :cond_3
-
     const-string v0, "LightsService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -726,27 +752,29 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    :cond_3
+    :goto_0
     iget-object v0, p0, Lcom/android/server/lights/LightsService$LightImpl;->mDisplayToken:Landroid/os/IBinder;
 
     invoke-static {v0, p1}, Landroid/view/SurfaceControl;->setDisplayBrightness(Landroid/os/IBinder;F)Z
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
-    :cond_3
+    :cond_4
     iget-object v1, p0, Lcom/android/server/lights/LightsService$LightImpl;->this$0:Lcom/android/server/lights/LightsService;
 
-    invoke-static {v1}, Lcom/android/server/lights/LightsService;->access$500(Lcom/android/server/lights/LightsService;)Z
+    invoke-static {v1}, Lcom/android/server/lights/LightsService;->access$600(Lcom/android/server/lights/LightsService;)Z
 
     move-result v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_6
 
     :try_start_1
     iget-object v1, p0, Lcom/android/server/lights/LightsService$LightImpl;->this$0:Lcom/android/server/lights/LightsService;
 
-    invoke-static {v1}, Lcom/android/server/lights/LightsService;->access$600(Lcom/android/server/lights/LightsService;)I
+    invoke-static {v1}, Lcom/android/server/lights/LightsService;->access$700(Lcom/android/server/lights/LightsService;)I
 
     move-result v1
 
@@ -754,7 +782,7 @@
 
     iget-object v2, p0, Lcom/android/server/lights/LightsService$LightImpl;->this$0:Lcom/android/server/lights/LightsService;
 
-    invoke-static {v2}, Lcom/android/server/lights/LightsService;->access$700(Lcom/android/server/lights/LightsService;)I
+    invoke-static {v2}, Lcom/android/server/lights/LightsService;->access$800(Lcom/android/server/lights/LightsService;)I
 
     move-result v2
 
@@ -771,6 +799,10 @@
     invoke-static {v0}, Ljava/lang/Math;->round(F)I
 
     move-result v0
+
+    sget-boolean v1, Lcom/android/server/lights/LightsService;->DEBUG:Z
+
+    if-eqz v1, :cond_5
 
     const-string v1, "LightsService"
 
@@ -790,9 +822,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    :cond_5
     iget-object v1, p0, Lcom/android/server/lights/LightsService$LightImpl;->this$0:Lcom/android/server/lights/LightsService;
 
-    invoke-static {v1}, Lcom/android/server/lights/LightsService;->access$800(Lcom/android/server/lights/LightsService;)Lvendor/oneplus/hardware/display/V1_0/IOneplusDisplay;
+    invoke-static {v1}, Lcom/android/server/lights/LightsService;->access$900(Lcom/android/server/lights/LightsService;)Lvendor/oneplus/hardware/display/V1_0/IOneplusDisplay;
 
     move-result-object v1
 
@@ -801,7 +834,7 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    goto :goto_0
+    goto :goto_1
 
     :catch_0
     move-exception v0
@@ -817,18 +850,18 @@
 
     nop
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_4
+    :cond_6
     const-string v0, "LightsService"
 
     const-string v1, "Invalid brightness value (brightness > 1.0f) !"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_5
+    :cond_7
     iget-object v0, p0, Lcom/android/server/lights/LightsService$LightImpl;->this$0:Lcom/android/server/lights/LightsService;
 
     invoke-virtual {v0}, Lcom/android/server/lights/LightsService;->getContext()Landroid/content/Context;
@@ -867,12 +900,12 @@
 
     invoke-direct/range {v3 .. v8}, Lcom/android/server/lights/LightsService$LightImpl;->setLightLocked(IIIII)V
 
-    :goto_0
+    :goto_1
     monitor-exit p0
 
     return-void
 
-    :goto_1
+    :goto_2
     monitor-exit p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -962,7 +995,7 @@
 
     iget-object v0, p0, Lcom/android/server/lights/LightsService$LightImpl;->this$0:Lcom/android/server/lights/LightsService;
 
-    invoke-static {v0}, Lcom/android/server/lights/LightsService;->access$1000(Lcom/android/server/lights/LightsService;)I
+    invoke-static {v0}, Lcom/android/server/lights/LightsService;->access$1100(Lcom/android/server/lights/LightsService;)I
 
     move-result v0
 

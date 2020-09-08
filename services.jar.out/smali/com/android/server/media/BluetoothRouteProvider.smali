@@ -168,31 +168,23 @@
     return-void
 .end method
 
-.method static synthetic access$1000(Lcom/android/server/media/BluetoothRouteProvider;)V
+.method static synthetic access$1000(Lcom/android/server/media/BluetoothRouteProvider;I)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/media/BluetoothRouteProvider;->clearActiveRoutes()V
+    invoke-direct {p0, p1}, Lcom/android/server/media/BluetoothRouteProvider;->clearActiveRoutesWithType(I)V
 
     return-void
 .end method
 
-.method static synthetic access$1100(Lcom/android/server/media/BluetoothRouteProvider;)V
+.method static synthetic access$1100(Lcom/android/server/media/BluetoothRouteProvider;Landroid/bluetooth/BluetoothDevice;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/media/BluetoothRouteProvider;->clearActiveDevices()V
+    invoke-direct {p0, p1}, Lcom/android/server/media/BluetoothRouteProvider;->addActiveHearingAidDevices(Landroid/bluetooth/BluetoothDevice;)V
 
     return-void
 .end method
 
-.method static synthetic access$1200(Lcom/android/server/media/BluetoothRouteProvider;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/server/media/BluetoothRouteProvider;->findAndSetActiveHearingAidDevices()V
-
-    return-void
-.end method
-
-.method static synthetic access$1300(Lcom/android/server/media/BluetoothRouteProvider;Lcom/android/server/media/BluetoothRouteProvider$BluetoothRouteInfo;)V
+.method static synthetic access$1200(Lcom/android/server/media/BluetoothRouteProvider;Lcom/android/server/media/BluetoothRouteProvider$BluetoothRouteInfo;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/media/BluetoothRouteProvider;->removeActiveRoute(Lcom/android/server/media/BluetoothRouteProvider$BluetoothRouteInfo;)V
@@ -239,6 +231,114 @@
 
     invoke-direct {p0}, Lcom/android/server/media/BluetoothRouteProvider;->buildBluetoothRoutes()V
 
+    return-void
+.end method
+
+.method private addActiveHearingAidDevices(Landroid/bluetooth/BluetoothDevice;)V
+    .locals 5
+
+    sget-boolean v0, Lcom/android/server/media/BluetoothRouteProvider;->DEBUG:Z
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Setting active hearing aid devices. device="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "BTRouteProvider"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/server/media/BluetoothRouteProvider;->mBluetoothRoutes:Ljava/util/Map;
+
+    invoke-virtual {p1}, Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/server/media/BluetoothRouteProvider$BluetoothRouteInfo;
+
+    invoke-direct {p0, v0}, Lcom/android/server/media/BluetoothRouteProvider;->addActiveRoute(Lcom/android/server/media/BluetoothRouteProvider$BluetoothRouteInfo;)V
+
+    iget-object v1, p0, Lcom/android/server/media/BluetoothRouteProvider;->mBluetoothRoutes:Ljava/util/Map;
+
+    invoke-interface {v1}, Ljava/util/Map;->values()Ljava/util/Collection;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/android/server/media/BluetoothRouteProvider$BluetoothRouteInfo;
+
+    iget-object v3, v2, Lcom/android/server/media/BluetoothRouteProvider$BluetoothRouteInfo;->route:Landroid/media/MediaRoute2Info;
+
+    invoke-virtual {v3}, Landroid/media/MediaRoute2Info;->getId()Ljava/lang/String;
+
+    move-result-object v3
+
+    iget-object v4, v0, Lcom/android/server/media/BluetoothRouteProvider$BluetoothRouteInfo;->route:Landroid/media/MediaRoute2Info;
+
+    invoke-virtual {v4}, Landroid/media/MediaRoute2Info;->getId()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    iget-object v3, v2, Lcom/android/server/media/BluetoothRouteProvider$BluetoothRouteInfo;->btDevice:Landroid/bluetooth/BluetoothDevice;
+
+    invoke-virtual {v3}, Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
+
+    move-result-object v3
+
+    iget-object v4, v0, Lcom/android/server/media/BluetoothRouteProvider$BluetoothRouteInfo;->btDevice:Landroid/bluetooth/BluetoothDevice;
+
+    invoke-virtual {v4}, Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    invoke-direct {p0, v2}, Lcom/android/server/media/BluetoothRouteProvider;->addActiveRoute(Lcom/android/server/media/BluetoothRouteProvider$BluetoothRouteInfo;)V
+
+    :cond_1
+    goto :goto_0
+
+    :cond_2
     return-void
 .end method
 
@@ -390,18 +490,30 @@
     return-void
 .end method
 
-.method private clearActiveRoutes()V
+.method private clearActiveRoutesWithType(I)V
     .locals 3
 
     sget-boolean v0, Lcom/android/server/media/BluetoothRouteProvider;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    const-string v0, "BTRouteProvider"
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "Clearing active routes"
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    const-string v1, "Clearing active routes with type. type="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "BTRouteProvider"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
     iget-object v0, p0, Lcom/android/server/media/BluetoothRouteProvider;->mActiveRoutes:Ljava/util/List;
@@ -415,7 +527,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -423,17 +535,24 @@
 
     check-cast v1, Lcom/android/server/media/BluetoothRouteProvider$BluetoothRouteInfo;
 
+    iget-object v2, v1, Lcom/android/server/media/BluetoothRouteProvider$BluetoothRouteInfo;->route:Landroid/media/MediaRoute2Info;
+
+    invoke-virtual {v2}, Landroid/media/MediaRoute2Info;->getType()I
+
+    move-result v2
+
+    if-ne v2, p1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->remove()V
+
     const/4 v2, 0x0
 
     invoke-direct {p0, v1, v2}, Lcom/android/server/media/BluetoothRouteProvider;->setRouteConnectionState(Lcom/android/server/media/BluetoothRouteProvider$BluetoothRouteInfo;I)V
 
+    :cond_1
     goto :goto_0
 
-    :cond_1
-    iget-object v0, p0, Lcom/android/server/media/BluetoothRouteProvider;->mActiveRoutes:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->clear()V
-
+    :cond_2
     return-void
 .end method
 
@@ -630,71 +749,6 @@
     iput-object v4, v0, Lcom/android/server/media/BluetoothRouteProvider$BluetoothRouteInfo;->route:Landroid/media/MediaRoute2Info;
 
     return-object v0
-.end method
-
-.method private findAndSetActiveHearingAidDevices()V
-    .locals 5
-
-    sget-boolean v0, Lcom/android/server/media/BluetoothRouteProvider;->DEBUG:Z
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "BTRouteProvider"
-
-    const-string v1, "Setting active hearing aid devices"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    iget-object v0, p0, Lcom/android/server/media/BluetoothRouteProvider;->mHearingAidProfile:Landroid/bluetooth/BluetoothHearingAid;
-
-    if-nez v0, :cond_1
-
-    return-void
-
-    :cond_1
-    invoke-virtual {v0}, Landroid/bluetooth/BluetoothHearingAid;->getActiveDevices()Ljava/util/List;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/android/server/media/BluetoothRouteProvider;->mBluetoothRoutes:Ljava/util/Map;
-
-    invoke-interface {v2}, Ljava/util/Map;->values()Ljava/util/Collection;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lcom/android/server/media/BluetoothRouteProvider$BluetoothRouteInfo;
-
-    iget-object v4, v3, Lcom/android/server/media/BluetoothRouteProvider$BluetoothRouteInfo;->btDevice:Landroid/bluetooth/BluetoothDevice;
-
-    invoke-interface {v1, v4}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_2
-
-    invoke-direct {p0, v3}, Lcom/android/server/media/BluetoothRouteProvider;->addActiveRoute(Lcom/android/server/media/BluetoothRouteProvider$BluetoothRouteInfo;)V
-
-    :cond_2
-    goto :goto_0
-
-    :cond_3
-    return-void
 .end method
 
 .method static declared-synchronized getInstance(Landroid/content/Context;Lcom/android/server/media/BluetoothRouteProvider$BluetoothRoutesUpdatedListener;)Lcom/android/server/media/BluetoothRouteProvider;

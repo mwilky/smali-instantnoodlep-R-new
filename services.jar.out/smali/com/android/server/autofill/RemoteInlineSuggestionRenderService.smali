@@ -232,6 +232,19 @@
     return-object v2
 .end method
 
+.method static synthetic lambda$destroySuggestionViews$2(IILandroid/service/autofill/IInlineSuggestionRenderService;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-interface {p2, p0, p1}, Landroid/service/autofill/IInlineSuggestionRenderService;->destroySuggestionViews(II)V
+
+    return-void
+.end method
+
 .method static synthetic lambda$getInlineSuggestionsRendererInfo$1(Landroid/os/RemoteCallback;Landroid/service/autofill/IInlineSuggestionRenderService;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
@@ -245,15 +258,15 @@
     return-void
 .end method
 
-.method static synthetic lambda$renderSuggestion$0(Landroid/service/autofill/IInlineSuggestionUiCallback;Landroid/service/autofill/InlinePresentation;IILandroid/os/IBinder;ILandroid/service/autofill/IInlineSuggestionRenderService;)V
-    .locals 7
+.method static synthetic lambda$renderSuggestion$0(Landroid/service/autofill/IInlineSuggestionUiCallback;Landroid/service/autofill/InlinePresentation;IILandroid/os/IBinder;IIILandroid/service/autofill/IInlineSuggestionRenderService;)V
+    .locals 9
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
         }
     .end annotation
 
-    move-object v0, p6
+    move-object/from16 v0, p8
 
     move-object v1, p0
 
@@ -267,13 +280,29 @@
 
     move v6, p5
 
-    invoke-interface/range {v0 .. v6}, Landroid/service/autofill/IInlineSuggestionRenderService;->renderSuggestion(Landroid/service/autofill/IInlineSuggestionUiCallback;Landroid/service/autofill/InlinePresentation;IILandroid/os/IBinder;I)V
+    move v7, p6
+
+    move/from16 v8, p7
+
+    invoke-interface/range {v0 .. v8}, Landroid/service/autofill/IInlineSuggestionRenderService;->renderSuggestion(Landroid/service/autofill/IInlineSuggestionUiCallback;Landroid/service/autofill/InlinePresentation;IILandroid/os/IBinder;III)V
 
     return-void
 .end method
 
 
 # virtual methods
+.method public destroySuggestionViews(II)V
+    .locals 1
+
+    new-instance v0, Lcom/android/server/autofill/-$$Lambda$RemoteInlineSuggestionRenderService$TuHcQ-1NgaycY4boDHeJGU4PhnA;
+
+    invoke-direct {v0, p1, p2}, Lcom/android/server/autofill/-$$Lambda$RemoteInlineSuggestionRenderService$TuHcQ-1NgaycY4boDHeJGU4PhnA;-><init>(II)V
+
+    invoke-virtual {p0, v0}, Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;->scheduleAsyncRequest(Lcom/android/internal/infra/AbstractRemoteService$AsyncRequest;)V
+
+    return-void
+.end method
+
 .method public ensureBound()V
     .locals 0
 
@@ -345,12 +374,12 @@
     return-void
 .end method
 
-.method public renderSuggestion(Landroid/service/autofill/IInlineSuggestionUiCallback;Landroid/service/autofill/InlinePresentation;IILandroid/os/IBinder;I)V
-    .locals 8
+.method public renderSuggestion(Landroid/service/autofill/IInlineSuggestionUiCallback;Landroid/service/autofill/InlinePresentation;IILandroid/os/IBinder;III)V
+    .locals 10
 
-    new-instance v7, Lcom/android/server/autofill/-$$Lambda$RemoteInlineSuggestionRenderService$a3hMUCdIdu8-3SB6ZLhLjH9Na2A;
+    new-instance v9, Lcom/android/server/autofill/-$$Lambda$RemoteInlineSuggestionRenderService$Ynu9LYMZF_i1OFnFcaANpQNOYfo;
 
-    move-object v0, v7
+    move-object v0, v9
 
     move-object v1, p1
 
@@ -362,11 +391,17 @@
 
     move-object v5, p5
 
-    move v6, p6
+    move/from16 v6, p6
 
-    invoke-direct/range {v0 .. v6}, Lcom/android/server/autofill/-$$Lambda$RemoteInlineSuggestionRenderService$a3hMUCdIdu8-3SB6ZLhLjH9Na2A;-><init>(Landroid/service/autofill/IInlineSuggestionUiCallback;Landroid/service/autofill/InlinePresentation;IILandroid/os/IBinder;I)V
+    move/from16 v7, p7
 
-    invoke-virtual {p0, v7}, Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;->scheduleAsyncRequest(Lcom/android/internal/infra/AbstractRemoteService$AsyncRequest;)V
+    move/from16 v8, p8
+
+    invoke-direct/range {v0 .. v8}, Lcom/android/server/autofill/-$$Lambda$RemoteInlineSuggestionRenderService$Ynu9LYMZF_i1OFnFcaANpQNOYfo;-><init>(Landroid/service/autofill/IInlineSuggestionUiCallback;Landroid/service/autofill/InlinePresentation;IILandroid/os/IBinder;III)V
+
+    move-object v0, p0
+
+    invoke-virtual {p0, v9}, Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;->scheduleAsyncRequest(Lcom/android/internal/infra/AbstractRemoteService$AsyncRequest;)V
 
     return-void
 .end method

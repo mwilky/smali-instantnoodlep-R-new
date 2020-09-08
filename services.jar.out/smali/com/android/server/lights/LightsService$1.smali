@@ -36,7 +36,7 @@
 
     iget-object v0, p0, Lcom/android/server/lights/LightsService$1;->this$0:Lcom/android/server/lights/LightsService;
 
-    invoke-static {v0}, Lcom/android/server/lights/LightsService;->access$1400(Lcom/android/server/lights/LightsService;)[Lcom/android/server/lights/LightsService$LightImpl;
+    invoke-static {v0}, Lcom/android/server/lights/LightsService;->access$1500(Lcom/android/server/lights/LightsService;)[Lcom/android/server/lights/LightsService$LightImpl;
 
     move-result-object v0
 
@@ -46,7 +46,7 @@
 
     iget-object v0, p0, Lcom/android/server/lights/LightsService$1;->this$0:Lcom/android/server/lights/LightsService;
 
-    invoke-static {v0}, Lcom/android/server/lights/LightsService;->access$1400(Lcom/android/server/lights/LightsService;)[Lcom/android/server/lights/LightsService$LightImpl;
+    invoke-static {v0}, Lcom/android/server/lights/LightsService;->access$1500(Lcom/android/server/lights/LightsService;)[Lcom/android/server/lights/LightsService$LightImpl;
 
     move-result-object v0
 
@@ -56,7 +56,7 @@
 
     iget-object v0, p0, Lcom/android/server/lights/LightsService$1;->this$0:Lcom/android/server/lights/LightsService;
 
-    invoke-static {v0}, Lcom/android/server/lights/LightsService;->access$1400(Lcom/android/server/lights/LightsService;)[Lcom/android/server/lights/LightsService$LightImpl;
+    invoke-static {v0}, Lcom/android/server/lights/LightsService;->access$1500(Lcom/android/server/lights/LightsService;)[Lcom/android/server/lights/LightsService$LightImpl;
 
     move-result-object v0
 

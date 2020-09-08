@@ -8951,7 +8951,7 @@
 
     new-array v4, v2, [I
 
-    const/16 v5, 0x94
+    const/16 v5, 0x8d
 
     aput v5, v4, v1
 
@@ -11773,7 +11773,7 @@
 
     new-array v15, v11, [I
 
-    const/16 v11, 0x65
+    const/16 v11, 0x61
 
     aput v11, v15, v9
 
@@ -17352,7 +17352,7 @@
 
     new-instance v0, Lcom/android/server/notification/NotificationManagerService$Archive;
 
-    const v2, 0x10e0093
+    const v2, 0x10e0099
 
     invoke-virtual {v4, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -17498,7 +17498,7 @@
 
     move-result-object v0
 
-    const v2, 0x10e0095
+    const v2, 0x10e009b
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -17514,7 +17514,7 @@
 
     move-result-object v0
 
-    const v2, 0x10e0094
+    const v2, 0x10e009a
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getInteger(I)I
 

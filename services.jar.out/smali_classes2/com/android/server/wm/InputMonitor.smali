@@ -289,18 +289,6 @@
 
     iput-boolean v0, p0, Landroid/view/InputWindowHandle;->hasFocus:Z
 
-    invoke-static {}, Landroid/os/Process;->myPid()I
-
-    move-result v0
-
-    iput v0, p0, Landroid/view/InputWindowHandle;->ownerPid:I
-
-    invoke-static {}, Landroid/os/Process;->myUid()I
-
-    move-result v0
-
-    iput v0, p0, Landroid/view/InputWindowHandle;->ownerUid:I
-
     const/4 v0, 0x2
 
     iput v0, p0, Landroid/view/InputWindowHandle;->inputFeatures:I
@@ -309,9 +297,21 @@
 
     iput v0, p0, Landroid/view/InputWindowHandle;->scaleFactor:F
 
-    const/16 v0, 0x20
+    const/16 v0, 0x38
 
     iput v0, p0, Landroid/view/InputWindowHandle;->layoutParamsFlags:I
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Landroid/view/InputWindowHandle;->portalToDisplayId:I
+
+    iget-object v0, p0, Landroid/view/InputWindowHandle;->touchableRegion:Landroid/graphics/Region;
+
+    invoke-virtual {v0}, Landroid/graphics/Region;->setEmpty()V
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Landroid/view/InputWindowHandle;->setTouchableRegionCrop(Landroid/view/SurfaceControl;)V
 
     return-void
 .end method

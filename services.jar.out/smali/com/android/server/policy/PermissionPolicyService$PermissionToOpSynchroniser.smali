@@ -653,59 +653,77 @@
     move v6, v4
 
     :goto_1
-    if-eqz v6, :cond_3
+    if-eqz v6, :cond_5
 
-    new-array v7, v3, [I
+    new-array v3, v3, [I
 
-    const/16 v8, 0xb
+    const/16 v7, 0xb
 
-    aput v8, v7, v4
+    aput v7, v3, v4
 
-    invoke-static {v7}, Landroid/util/OpFeatures;->isSupport([I)Z
+    invoke-static {v3}, Landroid/util/OpFeatures;->isSupport([I)Z
 
-    move-result v7
+    move-result v3
 
-    if-nez v7, :cond_3
+    if-eqz v3, :cond_4
 
-    return v4
+    invoke-static {}, Lcom/android/server/pm/OpPackageManagerHelperInjector;->isInSpecialTesting()Z
+
+    move-result v3
+
+    if-nez v3, :cond_3
+
+    iget-object v3, p1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    iget v3, v3, Landroid/content/pm/ApplicationInfo;->targetSdkVersion:I
+
+    const/16 v7, 0x17
+
+    if-lt v3, v7, :cond_4
 
     :cond_3
+    return v4
+
+    :cond_4
+    return v4
+
+    :cond_5
     invoke-virtual {p3}, Landroid/content/pm/PermissionInfo;->isHardRestricted()Z
 
     move-result v7
 
-    if-eqz v7, :cond_6
+    if-eqz v7, :cond_8
 
     and-int/lit16 v7, v5, 0x4000
 
     const/16 v8, 0x4000
 
-    if-ne v7, v8, :cond_4
+    if-ne v7, v8, :cond_6
 
     move v7, v3
 
     goto :goto_2
 
-    :cond_4
+    :cond_6
     move v7, v4
 
     :goto_2
-    if-nez v7, :cond_5
+    if-nez v7, :cond_7
 
     goto :goto_3
 
-    :cond_5
+    :cond_7
     move v3, v4
 
     :goto_3
     return v3
 
-    :cond_6
+    :cond_8
     invoke-virtual {p3}, Landroid/content/pm/PermissionInfo;->isSoftRestricted()Z
 
     move-result v4
 
-    if-eqz v4, :cond_7
+    if-eqz v4, :cond_9
 
     iget-object v3, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mContext:Landroid/content/Context;
 
@@ -727,7 +745,7 @@
 
     return v4
 
-    :cond_7
+    :cond_9
     return v3
 .end method
 
@@ -973,7 +991,7 @@
 
 # virtual methods
 .method addPackage(Ljava/lang/String;)V
-    .locals 7
+    .locals 8
 
     const-class v0, Landroid/content/pm/PackageManagerInternal;
 
@@ -1000,54 +1018,79 @@
 
     nop
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_5
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_5
+
+    iget-object v3, v1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    if-eqz v3, :cond_5
 
     iget-object v3, v1, Landroid/content/pm/PackageInfo;->requestedPermissions:[Ljava/lang/String;
 
     if-nez v3, :cond_0
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_0
-    iget-object v3, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mPackageManager:Landroid/content/pm/PackageManager;
+    iget-object v3, v1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    iget-object v4, v1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+    iget v3, v3, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    iget v4, v4, Landroid/content/pm/ApplicationInfo;->uid:I
-
-    invoke-static {v3, p1, v4}, Lcom/oneplus/android/os/OnePlusParallelAppUtils;->isNotInstallForParallelUser(Landroid/content/pm/PackageManager;Ljava/lang/String;I)Z
+    invoke-static {v3}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v3
 
-    if-eqz v3, :cond_1
+    if-eqz v3, :cond_4
+
+    const/16 v4, 0x3e8
+
+    if-ne v3, v4, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v4, p0, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->mPackageManager:Landroid/content/pm/PackageManager;
+
+    iget-object v5, v1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    iget v5, v5, Landroid/content/pm/ApplicationInfo;->uid:I
+
+    invoke-static {v4, p1, v5}, Lcom/oneplus/android/os/OnePlusParallelAppUtils;->isNotInstallForParallelUser(Landroid/content/pm/PackageManager;Ljava/lang/String;I)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
 
     return-void
 
-    :cond_1
-    iget-object v3, v1, Landroid/content/pm/PackageInfo;->requestedPermissions:[Ljava/lang/String;
+    :cond_2
+    iget-object v4, v1, Landroid/content/pm/PackageInfo;->requestedPermissions:[Ljava/lang/String;
 
-    array-length v4, v3
+    array-length v5, v4
 
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
     :goto_0
-    if-ge v5, v4, :cond_2
+    if-ge v6, v5, :cond_3
 
-    aget-object v6, v3, v5
+    aget-object v7, v4, v6
 
-    invoke-direct {p0, v1, v2, v6}, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->addAppOps(Landroid/content/pm/PackageInfo;Lcom/android/server/pm/parsing/pkg/AndroidPackage;Ljava/lang/String;)V
+    invoke-direct {p0, v1, v2, v7}, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->addAppOps(Landroid/content/pm/PackageInfo;Lcom/android/server/pm/parsing/pkg/AndroidPackage;Ljava/lang/String;)V
 
-    add-int/lit8 v5, v5, 0x1
+    add-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
-    :cond_2
+    :cond_3
     return-void
 
-    :cond_3
+    :cond_4
     :goto_1
+    return-void
+
+    :cond_5
+    :goto_2
     return-void
 
     :catch_0

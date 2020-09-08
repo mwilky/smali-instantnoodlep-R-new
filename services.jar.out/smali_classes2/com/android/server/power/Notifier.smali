@@ -799,7 +799,7 @@
 
     new-array v2, v2, [I
 
-    const/16 v3, 0xc8
+    const/16 v3, 0xc0
 
     aput v3, v2, v1
 

@@ -752,7 +752,7 @@
 .end method
 
 .method public allowPackageAccess(Ljava/lang/String;[B)V
-    .locals 4
+    .locals 5
 
     invoke-direct {p0}, Lcom/android/server/blob/BlobStoreSession;->assertCallerIsOwner()V
 
@@ -769,7 +769,19 @@
 
     const/4 v2, 0x1
 
-    if-ne v1, v2, :cond_0
+    if-ne v1, v2, :cond_1
+
+    iget-object v1, p0, Lcom/android/server/blob/BlobStoreSession;->mBlobAccessMode:Lcom/android/server/blob/BlobAccessMode;
+
+    invoke-virtual {v1}, Lcom/android/server/blob/BlobAccessMode;->getNumWhitelistedPackages()I
+
+    move-result v1
+
+    invoke-static {}, Lcom/android/server/blob/BlobStoreConfig;->getMaxPermittedPackages()I
+
+    move-result v2
+
+    if-ge v1, v2, :cond_0
 
     iget-object v1, p0, Lcom/android/server/blob/BlobStoreSession;->mBlobAccessMode:Lcom/android/server/blob/BlobAccessMode;
 
@@ -780,6 +792,37 @@
     return-void
 
     :cond_0
+    new-instance v1, Landroid/os/ParcelableException;
+
+    new-instance v2, Landroid/os/LimitExceededException;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Too many packages permitted to access the blob: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v4, p0, Lcom/android/server/blob/BlobStoreSession;->mBlobAccessMode:Lcom/android/server/blob/BlobAccessMode;
+
+    invoke-virtual {v4}, Lcom/android/server/blob/BlobAccessMode;->getNumWhitelistedPackages()I
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3}, Landroid/os/LimitExceededException;-><init>(Ljava/lang/String;)V
+
+    invoke-direct {v1, v2}, Landroid/os/ParcelableException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+
+    :cond_1
     new-instance v1, Ljava/lang/IllegalStateException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1066,6 +1109,20 @@
     invoke-static {v0, v1}, Landroid/os/Trace;->traceEnd(J)V
 
     throw v2
+.end method
+
+.method destroy()V
+    .locals 1
+
+    invoke-direct {p0}, Lcom/android/server/blob/BlobStoreSession;->revokeAllFds()V
+
+    invoke-virtual {p0}, Lcom/android/server/blob/BlobStoreSession;->getSessionFile()Ljava/io/File;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/io/File;->delete()Z
+
+    return-void
 .end method
 
 .method dump(Lcom/android/internal/util/IndentingPrintWriter;Lcom/android/server/blob/BlobStoreManagerService$DumpArgs;)V

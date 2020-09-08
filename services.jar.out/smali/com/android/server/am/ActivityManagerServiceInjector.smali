@@ -148,7 +148,7 @@
 
     new-array v0, v0, [I
 
-    const/16 v1, 0xb4
+    const/16 v1, 0xad
 
     const/4 v2, 0x0
 
@@ -759,7 +759,7 @@
 
     new-array v0, v0, [I
 
-    const/16 v1, 0x4e
+    const/16 v1, 0x4c
 
     const/4 v2, 0x0
 

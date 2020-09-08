@@ -231,6 +231,12 @@
 
     move-result-object v0
 
+    const-string v1, "Dimmer.makeDimLayer"
+
+    invoke-virtual {v0, v1}, Landroid/view/SurfaceControl$Builder;->setCallsite(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
+
+    move-result-object v0
+
     invoke-virtual {v0}, Landroid/view/SurfaceControl$Builder;->build()Landroid/view/SurfaceControl;
 
     move-result-object v0

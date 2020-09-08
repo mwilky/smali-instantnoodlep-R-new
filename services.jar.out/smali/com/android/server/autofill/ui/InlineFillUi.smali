@@ -195,8 +195,8 @@
     return-object v0
 .end method
 
-.method public static forAugmentedAutofill(Landroid/view/inputmethod/InlineSuggestionsRequest;Ljava/util/List;Landroid/view/autofill/AutofillId;Ljava/lang/String;Lcom/android/server/autofill/ui/InlineFillUi$InlineSuggestionUiCallback;Ljava/lang/Runnable;Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;)Lcom/android/server/autofill/ui/InlineFillUi;
-    .locals 6
+.method public static forAugmentedAutofill(Landroid/view/inputmethod/InlineSuggestionsRequest;Ljava/util/List;Landroid/view/autofill/AutofillId;Ljava/lang/String;Lcom/android/server/autofill/ui/InlineFillUi$InlineSuggestionUiCallback;Ljava/lang/Runnable;Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;II)Lcom/android/server/autofill/ui/InlineFillUi;
+    .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -209,7 +209,7 @@
             "Lcom/android/server/autofill/ui/InlineFillUi$InlineSuggestionUiCallback;",
             "Ljava/lang/Runnable;",
             "Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;",
-            ")",
+            "II)",
             "Lcom/android/server/autofill/ui/InlineFillUi;"
         }
     .end annotation
@@ -228,19 +228,29 @@
 
     move-object v5, p6
 
-    invoke-static/range {v0 .. v5}, Lcom/android/server/autofill/ui/InlineSuggestionFactory;->createAugmentedAutofillInlineSuggestions(Landroid/view/inputmethod/InlineSuggestionsRequest;Ljava/util/List;Landroid/view/autofill/AutofillId;Lcom/android/server/autofill/ui/InlineFillUi$InlineSuggestionUiCallback;Ljava/lang/Runnable;Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;)Landroid/util/SparseArray;
+    move v6, p7
+
+    move/from16 v7, p8
+
+    invoke-static/range {v0 .. v7}, Lcom/android/server/autofill/ui/InlineSuggestionFactory;->createAugmentedAutofillInlineSuggestions(Landroid/view/inputmethod/InlineSuggestionsRequest;Ljava/util/List;Landroid/view/autofill/AutofillId;Lcom/android/server/autofill/ui/InlineFillUi$InlineSuggestionUiCallback;Ljava/lang/Runnable;Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;II)Landroid/util/SparseArray;
 
     move-result-object v0
 
     new-instance v1, Lcom/android/server/autofill/ui/InlineFillUi;
+
+    move-object v3, p3
 
     invoke-direct {v1, p2, v0, p3}, Lcom/android/server/autofill/ui/InlineFillUi;-><init>(Landroid/view/autofill/AutofillId;Landroid/util/SparseArray;Ljava/lang/String;)V
 
     return-object v1
 .end method
 
-.method public static forAutofill(Landroid/view/inputmethod/InlineSuggestionsRequest;Landroid/service/autofill/FillResponse;Landroid/view/autofill/AutofillId;Ljava/lang/String;Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;Ljava/lang/Runnable;Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;)Lcom/android/server/autofill/ui/InlineFillUi;
-    .locals 8
+.method public static forAutofill(Landroid/view/inputmethod/InlineSuggestionsRequest;Landroid/service/autofill/FillResponse;Landroid/view/autofill/AutofillId;Ljava/lang/String;Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;Ljava/lang/Runnable;Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;II)Lcom/android/server/autofill/ui/InlineFillUi;
+    .locals 11
+
+    move-object v9, p2
+
+    move-object v10, p3
 
     invoke-static {p1}, Lcom/android/server/autofill/ui/InlineSuggestionFactory;->responseNeedAuthentication(Landroid/service/autofill/FillResponse;)Z
 
@@ -254,15 +264,17 @@
 
     move-object v1, p1
 
-    move-object v2, p2
+    move-object v2, p4
 
-    move-object v3, p4
+    move-object/from16 v3, p5
 
-    move-object v4, p5
+    move-object/from16 v4, p6
 
-    move-object v5, p6
+    move/from16 v5, p7
 
-    invoke-static/range {v0 .. v5}, Lcom/android/server/autofill/ui/InlineSuggestionFactory;->createInlineAuthentication(Landroid/view/inputmethod/InlineSuggestionsRequest;Landroid/service/autofill/FillResponse;Landroid/view/autofill/AutofillId;Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;Ljava/lang/Runnable;Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;)Landroid/view/inputmethod/InlineSuggestion;
+    move/from16 v6, p8
+
+    invoke-static/range {v0 .. v6}, Lcom/android/server/autofill/ui/InlineSuggestionFactory;->createInlineAuthentication(Landroid/view/inputmethod/InlineSuggestionsRequest;Landroid/service/autofill/FillResponse;Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;Ljava/lang/Runnable;Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;II)Landroid/view/inputmethod/InlineSuggestion;
 
     move-result-object v0
 
@@ -283,23 +295,27 @@
 
     invoke-virtual {p1}, Landroid/service/autofill/FillResponse;->getRequestId()I
 
-    move-result v2
+    move-result v1
 
     invoke-virtual {p1}, Landroid/service/autofill/FillResponse;->getDatasets()Ljava/util/List;
 
-    move-result-object v3
+    move-result-object v2
 
-    move-object v1, p0
+    move-object v0, p0
 
-    move-object v4, p2
+    move-object v3, p2
 
-    move-object v5, p4
+    move-object v4, p4
 
-    move-object v6, p5
+    move-object/from16 v5, p5
 
-    move-object v7, p6
+    move-object/from16 v6, p6
 
-    invoke-static/range {v1 .. v7}, Lcom/android/server/autofill/ui/InlineSuggestionFactory;->createAutofillInlineSuggestions(Landroid/view/inputmethod/InlineSuggestionsRequest;ILjava/util/List;Landroid/view/autofill/AutofillId;Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;Ljava/lang/Runnable;Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;)Landroid/util/SparseArray;
+    move/from16 v7, p7
+
+    move/from16 v8, p8
+
+    invoke-static/range {v0 .. v8}, Lcom/android/server/autofill/ui/InlineSuggestionFactory;->createAutofillInlineSuggestions(Landroid/view/inputmethod/InlineSuggestionsRequest;ILjava/util/List;Landroid/view/autofill/AutofillId;Lcom/android/server/autofill/ui/AutoFillUI$AutoFillUiCallback;Ljava/lang/Runnable;Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;II)Landroid/util/SparseArray;
 
     move-result-object v0
 

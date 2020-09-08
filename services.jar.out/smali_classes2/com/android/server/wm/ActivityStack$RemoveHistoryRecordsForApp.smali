@@ -371,7 +371,7 @@
 
     const/4 v4, 0x0
 
-    const/16 v5, 0x13d
+    const/16 v5, 0x136
 
     aput v5, v1, v4
 

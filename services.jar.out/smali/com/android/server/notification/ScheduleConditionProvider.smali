@@ -1295,7 +1295,7 @@
 
     const/4 v0, 0x3
 
-    const-string v1, "invalidId"
+    const-string/jumbo v1, "invalidId"
 
     invoke-direct {p0, p1, v0, v1}, Lcom/android/server/notification/ScheduleConditionProvider;->createCondition(Landroid/net/Uri;ILjava/lang/String;)Landroid/service/notification/Condition;
 

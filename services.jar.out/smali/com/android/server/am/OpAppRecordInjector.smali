@@ -78,6 +78,21 @@
     return-void
 .end method
 
+.method public static forceStopPackageSmart(Ljava/lang/String;I)V
+    .locals 1
+
+    invoke-static {}, Lcom/android/server/am/OpAppRecordInjector;->initInstance()V
+
+    sget-object v0, Lcom/android/server/am/OpAppRecordInjector;->sIOpAppRecord:Lcom/android/server/am/IOpAppRecord;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0, p0, p1}, Lcom/android/server/am/IOpAppRecord;->forceStopPackageSmart(Ljava/lang/String;I)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public static initAppRecord(Lcom/android/server/pm/PackageManagerService;Landroid/util/ArrayMap;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;

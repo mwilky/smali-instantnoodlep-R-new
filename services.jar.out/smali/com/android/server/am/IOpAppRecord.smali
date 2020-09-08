@@ -10,6 +10,9 @@
 .method public abstract dumpsysOMM(Ljava/lang/String;Ljava/io/PrintWriter;)V
 .end method
 
+.method public abstract forceStopPackageSmart(Ljava/lang/String;I)V
+.end method
+
 .method public abstract initAppRecord(Lcom/android/server/pm/PackageManagerService;Landroid/util/ArrayMap;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {

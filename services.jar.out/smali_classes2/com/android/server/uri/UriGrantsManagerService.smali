@@ -36,7 +36,7 @@
 
 .field private static final ENABLE_DYNAMIC_PERMISSIONS:Z = false
 
-.field private static final MAX_PERSISTED_URI_GRANTS:I = 0x80
+.field private static final MAX_PERSISTED_URI_GRANTS:I = 0x200
 
 .field private static final TAG:Ljava/lang/String; = "UriGrantsManagerService"
 
@@ -993,6 +993,26 @@
     if-eqz v20, :cond_12
 
     if-eqz v17, :cond_12
+
+    iget-object v0, v7, Lcom/android/server/uri/UriGrantsManagerService;->mPmInternal:Landroid/content/pm/PackageManagerInternal;
+
+    invoke-static {v6}, Landroid/os/UserHandle;->getUserId(I)I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    invoke-static {v6}, Landroid/os/UserHandle;->getAppId(I)I
+
+    move-result v3
+
+    iget-object v4, v15, Landroid/content/pm/ProviderInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    iget v4, v4, Landroid/content/pm/ApplicationInfo;->uid:I
+
+    const/4 v5, 0x0
+
+    invoke-virtual/range {v0 .. v5}, Landroid/content/pm/PackageManagerInternal;->grantImplicitAccess(ILandroid/content/Intent;IIZ)V
 
     const/4 v0, -0x1
 
@@ -2386,7 +2406,7 @@
 
     move-result v2
 
-    const/16 v3, 0x80
+    const/16 v3, 0x200
 
     if-ge v2, v3, :cond_1
 
@@ -2473,7 +2493,7 @@
 .end method
 
 .method private readGrantedUriPermissionsLocked()V
-    .locals 25
+    .locals 31
 
     move-object/from16 v1, p0
 
@@ -2549,6 +2569,8 @@
 
     move v11, v9
 
+    move v15, v11
+
     goto :goto_1
 
     :cond_0
@@ -2564,90 +2586,98 @@
 
     move-result v11
 
+    move v15, v11
+
     :goto_1
-    const-string v12, "sourcePkg"
+    const-string v11, "sourcePkg"
 
-    const/4 v13, 0x0
+    const/4 v12, 0x0
 
-    invoke-interface {v0, v13, v12}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0, v12, v11}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v12
+    move-result-object v11
 
-    const-string v14, "targetPkg"
+    move-object v14, v11
 
-    invoke-interface {v0, v13, v14}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const-string v11, "targetPkg"
 
-    move-result-object v14
+    invoke-interface {v0, v12, v11}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    const-string v15, "uri"
+    move-result-object v11
 
-    invoke-interface {v0, v13, v15}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-object v13, v11
 
-    move-result-object v13
+    const-string v11, "uri"
 
-    invoke-static {v13}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-interface {v0, v12, v11}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v13
+    move-result-object v11
 
-    const-string v15, "prefix"
+    invoke-static {v11}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
-    invoke-static {v0, v15}, Lcom/android/internal/util/XmlUtils;->readBooleanAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+    move-result-object v11
 
-    move-result v15
+    move-object v12, v11
 
-    move-object/from16 v16, v7
+    const-string v11, "prefix"
 
-    const-string v7, "modeFlags"
+    invoke-static {v0, v11}, Lcom/android/internal/util/XmlUtils;->readBooleanAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
-    invoke-static {v0, v7}, Lcom/android/internal/util/XmlUtils;->readIntAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+    move-result v11
 
-    move-result v7
+    move/from16 v17, v11
 
-    move/from16 v17, v8
+    const-string v11, "modeFlags"
 
-    const-string v8, "createdTime"
+    invoke-static {v0, v11}, Lcom/android/internal/util/XmlUtils;->readIntAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
 
-    invoke-static {v0, v8, v4, v5}, Lcom/android/internal/util/XmlUtils;->readLongAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;J)J
+    move-result v11
 
-    move-result-wide v18
+    move-object/from16 v18, v7
 
-    move-wide/from16 v20, v18
+    const-string v7, "createdTime"
 
-    invoke-virtual {v13}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
+    invoke-static {v0, v7, v4, v5}, Lcom/android/internal/util/XmlUtils;->readLongAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;J)J
 
-    move-result-object v8
+    move-result-wide v19
 
-    move-object/from16 v18, v0
+    move-wide/from16 v21, v19
+
+    invoke-virtual {v12}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
+
+    move-result-object v7
+
+    move-object/from16 v19, v0
 
     const/high16 v0, 0xc0000
 
-    invoke-direct {v1, v8, v10, v0}, Lcom/android/server/uri/UriGrantsManagerService;->getProviderInfo(Ljava/lang/String;II)Landroid/content/pm/ProviderInfo;
+    invoke-direct {v1, v7, v10, v0}, Lcom/android/server/uri/UriGrantsManagerService;->getProviderInfo(Ljava/lang/String;II)Landroid/content/pm/ProviderInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
-    iget-object v8, v0, Landroid/content/pm/ProviderInfo;->packageName:Ljava/lang/String;
+    iget-object v7, v0, Landroid/content/pm/ProviderInfo;->packageName:Ljava/lang/String;
 
-    invoke-virtual {v12, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v14, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v8
+    move-result v7
 
-    if-eqz v8, :cond_3
+    if-eqz v7, :cond_3
 
-    iget-object v8, v1, Lcom/android/server/uri/UriGrantsManagerService;->mPmInternal:Landroid/content/pm/PackageManagerInternal;
+    iget-object v7, v1, Lcom/android/server/uri/UriGrantsManagerService;->mPmInternal:Landroid/content/pm/PackageManagerInternal;
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_5
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_4
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_3
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-wide/from16 v22, v4
+    move-wide/from16 v23, v4
 
     const/16 v4, 0x2000
 
     :try_start_1
-    invoke-virtual {v8, v14, v4, v11}, Landroid/content/pm/PackageManagerInternal;->getPackageUidInternal(Ljava/lang/String;II)I
+    invoke-virtual {v7, v13, v4, v15}, Landroid/content/pm/PackageManagerInternal;->getPackageUidInternal(Ljava/lang/String;II)I
 
     move-result v4
 
@@ -2657,68 +2687,128 @@
 
     new-instance v5, Lcom/android/server/uri/GrantUri;
 
-    if-eqz v15, :cond_1
+    if-eqz v17, :cond_1
 
-    const/16 v8, 0x80
+    const/16 v7, 0x80
 
     goto :goto_2
 
     :cond_1
-    const/4 v8, 0x0
+    const/4 v7, 0x0
 
     :goto_2
-    invoke-direct {v5, v10, v13, v8}, Lcom/android/server/uri/GrantUri;-><init>(ILandroid/net/Uri;I)V
+    invoke-direct {v5, v10, v12, v7}, Lcom/android/server/uri/GrantUri;-><init>(ILandroid/net/Uri;I)V
 
-    invoke-direct {v1, v12, v14, v4, v5}, Lcom/android/server/uri/UriGrantsManagerService;->findOrCreateUriPermissionLocked(Ljava/lang/String;Ljava/lang/String;ILcom/android/server/uri/GrantUri;)Lcom/android/server/uri/UriPermission;
+    invoke-direct {v1, v14, v13, v4, v5}, Lcom/android/server/uri/UriGrantsManagerService;->findOrCreateUriPermissionLocked(Ljava/lang/String;Ljava/lang/String;ILcom/android/server/uri/GrantUri;)Lcom/android/server/uri/UriPermission;
 
-    move-result-object v8
+    move-result-object v7
 
-    move/from16 v19, v4
+    move-object/from16 v20, v13
 
-    move-object/from16 v24, v5
+    move-object/from16 v16, v14
 
-    move-wide/from16 v4, v20
+    move-wide/from16 v13, v21
 
-    invoke-virtual {v8, v7, v4, v5}, Lcom/android/server/uri/UriPermission;->initPersistedModes(IJ)V
+    invoke-virtual {v7, v11, v13, v14}, Lcom/android/server/uri/UriPermission;->initPersistedModes(IJ)V
+
+    move-object/from16 v21, v5
+
+    iget-object v5, v1, Lcom/android/server/uri/UriGrantsManagerService;->mPmInternal:Landroid/content/pm/PackageManagerInternal;
+
+    const/16 v22, 0x0
+
+    invoke-static {v4}, Landroid/os/UserHandle;->getAppId(I)I
+
+    move-result v25
+
+    iget-object v1, v0, Landroid/content/pm/ProviderInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    iget v1, v1, Landroid/content/pm/ApplicationInfo;->uid:I
+
+    const/16 v26, 0x0
+
+    move/from16 v27, v11
+
+    move-object v11, v5
+
+    move-object v5, v12
+
+    move v12, v15
+
+    move-wide/from16 v28, v13
+
+    move-object/from16 v13, v22
+
+    move-object/from16 v30, v16
+
+    move/from16 v14, v25
+
+    move/from16 v22, v15
+
+    move v15, v1
+
+    move/from16 v16, v26
+
+    invoke-virtual/range {v11 .. v16}, Landroid/content/pm/PackageManagerInternal;->grantImplicitAccess(ILandroid/content/Intent;IIZ)V
 
     goto :goto_3
 
     :cond_2
-    move/from16 v19, v4
+    move/from16 v27, v11
 
-    move-wide/from16 v4, v20
+    move-object v5, v12
+
+    move-object/from16 v20, v13
+
+    move-object/from16 v30, v14
+
+    move-wide/from16 v28, v21
+
+    move/from16 v22, v15
 
     :goto_3
     goto :goto_4
 
     :cond_3
-    move-wide/from16 v22, v4
+    move-wide/from16 v23, v4
 
-    move-wide/from16 v4, v20
+    move/from16 v27, v11
 
-    new-instance v8, Ljava/lang/StringBuilder;
+    move-object v5, v12
 
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+    move-object/from16 v20, v13
 
-    const-string v1, "Persisted grant for "
+    move-object/from16 v30, v14
 
-    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-wide/from16 v28, v21
 
-    invoke-virtual {v8, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move/from16 v22, v15
 
-    const-string v1, " had source "
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v8, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v4, "Persisted grant for "
 
-    const-string v1, " but instead found "
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v4, " had source "
 
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-object/from16 v4, v30
+
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v7, " but instead found "
+
+    invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -2747,54 +2837,48 @@
     goto :goto_8
 
     :cond_4
-    move-object/from16 v18, v0
+    move-object/from16 v19, v0
 
-    move-wide/from16 v22, v4
+    move-wide/from16 v23, v4
 
-    move-object/from16 v16, v7
-
-    move/from16 v17, v8
+    move-object/from16 v18, v7
 
     goto :goto_4
 
     :cond_5
-    move-object/from16 v18, v0
+    move-object/from16 v19, v0
 
-    move-wide/from16 v22, v4
+    move-wide/from16 v23, v4
 
-    move-object/from16 v16, v7
-
-    move/from16 v17, v8
+    move-object/from16 v18, v7
 
     :goto_4
     move-object/from16 v1, p0
 
-    move-object/from16 v0, v18
+    move-object/from16 v0, v19
 
-    move-wide/from16 v4, v22
+    move-wide/from16 v4, v23
 
     goto/16 :goto_0
 
     :cond_6
-    move-object/from16 v18, v0
+    move-object/from16 v19, v0
 
-    move-wide/from16 v22, v4
-
-    move/from16 v17, v8
+    move-wide/from16 v23, v4
 
     goto :goto_8
 
     :catchall_0
     move-exception v0
 
-    move-wide/from16 v22, v4
+    move-wide/from16 v23, v4
 
     goto :goto_7
 
     :catch_3
     move-exception v0
 
-    move-wide/from16 v22, v4
+    move-wide/from16 v23, v4
 
     :goto_5
     :try_start_2
@@ -2807,7 +2891,7 @@
     :catch_4
     move-exception v0
 
-    move-wide/from16 v22, v4
+    move-wide/from16 v23, v4
 
     :goto_6
     invoke-static {v3, v2, v0}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
@@ -2829,7 +2913,7 @@
     :catch_5
     move-exception v0
 
-    move-wide/from16 v22, v4
+    move-wide/from16 v23, v4
 
     :goto_8
     nop

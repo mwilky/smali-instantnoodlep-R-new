@@ -71,91 +71,6 @@
     return-void
 .end method
 
-.method static synthetic access$1400(Lcom/android/server/usage/AppStandbyController$Injector;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/server/usage/AppStandbyController$Injector;->updatePowerWhitelistCache()V
-
-    return-void
-.end method
-
-.method private updatePowerWhitelistCache()V
-    .locals 6
-
-    iget v0, p0, Lcom/android/server/usage/AppStandbyController$Injector;->mBootPhase:I
-
-    const/16 v1, 0x1f4
-
-    if-ge v0, v1, :cond_0
-
-    return-void
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Lcom/android/server/usage/AppStandbyController$Injector;->mDeviceIdleController:Landroid/os/IDeviceIdleController;
-
-    invoke-interface {v0}, Landroid/os/IDeviceIdleController;->getFullPowerWhitelistExceptIdle()[Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/android/server/usage/AppStandbyController$Injector;->mPowerWhitelistedApps:Landroid/util/ArraySet;
-
-    monitor-enter v1
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :try_start_1
-    iget-object v2, p0, Lcom/android/server/usage/AppStandbyController$Injector;->mPowerWhitelistedApps:Landroid/util/ArraySet;
-
-    invoke-virtual {v2}, Landroid/util/ArraySet;->clear()V
-
-    array-length v2, v0
-
-    const/4 v3, 0x0
-
-    :goto_0
-    if-ge v3, v2, :cond_1
-
-    iget-object v4, p0, Lcom/android/server/usage/AppStandbyController$Injector;->mPowerWhitelistedApps:Landroid/util/ArraySet;
-
-    aget-object v5, v0, v3
-
-    invoke-virtual {v4, v5}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    monitor-exit v1
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception v2
-
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :try_start_2
-    throw v2
-    :try_end_2
-    .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "AppStandbyController"
-
-    const-string v2, "Failed to get power whitelist"
-
-    invoke-static {v1, v2, v0}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :goto_1
-    return-void
-.end method
-
 
 # virtual methods
 .method currentTimeMillis()J
@@ -815,5 +730,73 @@
 
     invoke-virtual {v0, p1, p2}, Landroid/hardware/display/DisplayManager;->registerDisplayListener(Landroid/hardware/display/DisplayManager$DisplayListener;Landroid/os/Handler;)V
 
+    return-void
+.end method
+
+.method updatePowerWhitelistCache()V
+    .locals 6
+
+    :try_start_0
+    iget-object v0, p0, Lcom/android/server/usage/AppStandbyController$Injector;->mDeviceIdleController:Landroid/os/IDeviceIdleController;
+
+    invoke-interface {v0}, Landroid/os/IDeviceIdleController;->getFullPowerWhitelistExceptIdle()[Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/server/usage/AppStandbyController$Injector;->mPowerWhitelistedApps:Landroid/util/ArraySet;
+
+    monitor-enter v1
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :try_start_1
+    iget-object v2, p0, Lcom/android/server/usage/AppStandbyController$Injector;->mPowerWhitelistedApps:Landroid/util/ArraySet;
+
+    invoke-virtual {v2}, Landroid/util/ArraySet;->clear()V
+
+    array-length v2, v0
+
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ge v3, v2, :cond_0
+
+    iget-object v4, p0, Lcom/android/server/usage/AppStandbyController$Injector;->mPowerWhitelistedApps:Landroid/util/ArraySet;
+
+    aget-object v5, v0, v3
+
+    invoke-virtual {v4, v5}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    monitor-exit v1
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v2
+
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :try_start_2
+    throw v2
+    :try_end_2
+    .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "AppStandbyController"
+
+    const-string v2, "Failed to get power whitelist"
+
+    invoke-static {v1, v2, v0}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_1
     return-void
 .end method

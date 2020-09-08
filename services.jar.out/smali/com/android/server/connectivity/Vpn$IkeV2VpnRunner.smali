@@ -67,7 +67,7 @@
 
     move-result-object v1
 
-    const-string v2, "ipsec"
+    const-string/jumbo v2, "ipsec"
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 

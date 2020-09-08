@@ -46,6 +46,8 @@
 
 .field private static final DEFAULT_OOMADJ_UPDATE_POLICY:I = 0x1
 
+.field private static final DEFAULT_PENDINGINTENT_WARNING_THRESHOLD:I = 0x7d0
+
 .field private static final DEFAULT_POWER_CHECK_INTERVAL:J
 
 .field private static final DEFAULT_POWER_CHECK_MAX_CPU_1:I = 0x19
@@ -125,6 +127,8 @@
 .field private static final KEY_MIN_ASSOC_LOG_DURATION:Ljava/lang/String; = "min_assoc_log_duration"
 
 .field private static final KEY_OOMADJ_UPDATE_POLICY:Ljava/lang/String; = "oomadj_update_policy"
+
+.field static final KEY_PENDINGINTENT_WARNING_THRESHOLD:Ljava/lang/String; = "pendingintent_warning_threshold"
 
 .field private static final KEY_POWER_CHECK_INTERVAL:Ljava/lang/String; = "power_check_interval"
 
@@ -241,6 +245,8 @@
 .field public MEMORY_INFO_THROTTLE_TIME:J
 
 .field public OOMADJ_UPDATE_QUICK:Z
+
+.field public PENDINGINTENT_WARNING_THRESHOLD:I
 
 .field POWER_CHECK_INTERVAL:J
 
@@ -572,6 +578,10 @@
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/ActivityManagerConstants;->IMPERCEPTIBLE_KILL_EXEMPT_PROC_STATES:Landroid/util/ArraySet;
+
+    const/16 v0, 0x7d0
+
+    iput v0, p0, Lcom/android/server/am/ActivityManagerConstants;->PENDINGINTENT_WARNING_THRESHOLD:I
 
     iput-boolean v4, p0, Lcom/android/server/am/ActivityManagerConstants;->OOMADJ_UPDATE_QUICK:Z
 
@@ -1315,6 +1325,18 @@
     move-result-wide v2
 
     iput-wide v2, p0, Lcom/android/server/am/ActivityManagerConstants;->TOP_TO_FGS_GRACE_DURATION:J
+
+    iget-object v2, p0, Lcom/android/server/am/ActivityManagerConstants;->mParser:Landroid/util/KeyValueListParser;
+
+    const-string/jumbo v3, "pendingintent_warning_threshold"
+
+    const/16 v4, 0x7d0
+
+    invoke-virtual {v2, v3, v4}, Landroid/util/KeyValueListParser;->getInt(Ljava/lang/String;I)I
+
+    move-result v2
+
+    iput v2, p0, Lcom/android/server/am/ActivityManagerConstants;->PENDINGINTENT_WARNING_THRESHOLD:I
 
     monitor-exit v1
     :try_end_1

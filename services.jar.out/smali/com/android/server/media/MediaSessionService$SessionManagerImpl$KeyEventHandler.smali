@@ -21,6 +21,8 @@
 
 
 # instance fields
+.field private mButtonDownFlag:Z
+
 .field private mIsLongPressing:Z
 
 .field private mKeyType:I
@@ -40,18 +42,22 @@
 
 # direct methods
 .method constructor <init>(Lcom/android/server/media/MediaSessionService$SessionManagerImpl;I)V
-    .locals 0
+    .locals 1
 
     iput-object p1, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->this$1:Lcom/android/server/media/MediaSessionService$SessionManagerImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->mButtonDownFlag:Z
 
     iput p2, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->mKeyType:I
 
     return-void
 .end method
 
-.method static synthetic access$5700(Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;Landroid/view/KeyEvent;)Landroid/view/KeyEvent;
+.method static synthetic access$5800(Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;Landroid/view/KeyEvent;)Landroid/view/KeyEvent;
     .locals 1
 
     invoke-direct {p0, p1}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->createCanceledKeyEvent(Landroid/view/KeyEvent;)Landroid/view/KeyEvent;
@@ -61,7 +67,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$5800(Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;)V
+.method static synthetic access$5900(Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->resetLongPressTracking()V
@@ -69,7 +75,7 @@
     return-void
 .end method
 
-.method static synthetic access$5900(Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;)V
+.method static synthetic access$6000(Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->resetMultiTapTrackingLocked()V
@@ -77,7 +83,7 @@
     return-void
 .end method
 
-.method static synthetic access$6000(Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;Ljava/lang/String;IIZLandroid/view/KeyEvent;ZLjava/lang/String;IZ)V
+.method static synthetic access$6100(Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;Ljava/lang/String;IIZLandroid/view/KeyEvent;ZLjava/lang/String;IZ)V
     .locals 0
 
     invoke-direct/range {p0 .. p9}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->dispatchDownAndUpKeyEventsLocked(Ljava/lang/String;IIZLandroid/view/KeyEvent;ZLjava/lang/String;IZ)V
@@ -241,7 +247,7 @@
 
     move/from16 v9, p9
 
-    invoke-static/range {v1 .. v9}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->access$5100(Lcom/android/server/media/MediaSessionService$SessionManagerImpl;Ljava/lang/String;Ljava/lang/String;IIZLandroid/view/KeyEvent;IZ)V
+    invoke-static/range {v1 .. v9}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->access$5200(Lcom/android/server/media/MediaSessionService$SessionManagerImpl;Ljava/lang/String;Ljava/lang/String;IIZLandroid/view/KeyEvent;IZ)V
 
     iput-object v11, v0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->mTrackingFirstDownKeyEvent:Landroid/view/KeyEvent;
 
@@ -254,7 +260,7 @@
 
     move-result v2
 
-    invoke-static {v1, v2}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->access$5300(Lcom/android/server/media/MediaSessionService$SessionManagerImpl;I)Z
+    invoke-static {v1, v2}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->access$5400(Lcom/android/server/media/MediaSessionService$SessionManagerImpl;I)Z
 
     move-result v1
 
@@ -274,7 +280,7 @@
 
     move/from16 v7, p6
 
-    invoke-static/range {v1 .. v7}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->access$4900(Lcom/android/server/media/MediaSessionService$SessionManagerImpl;Ljava/lang/String;IIZLandroid/view/KeyEvent;Z)V
+    invoke-static/range {v1 .. v7}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->access$5000(Lcom/android/server/media/MediaSessionService$SessionManagerImpl;Ljava/lang/String;IIZLandroid/view/KeyEvent;Z)V
 
     iput-object v11, v0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->mTrackingFirstDownKeyEvent:Landroid/view/KeyEvent;
 
@@ -369,13 +375,13 @@
 
     move/from16 v10, p9
 
-    invoke-static/range {v2 .. v10}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->access$5100(Lcom/android/server/media/MediaSessionService$SessionManagerImpl;Ljava/lang/String;Ljava/lang/String;IIZLandroid/view/KeyEvent;IZ)V
+    invoke-static/range {v2 .. v10}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->access$5200(Lcom/android/server/media/MediaSessionService$SessionManagerImpl;Ljava/lang/String;Ljava/lang/String;IIZLandroid/view/KeyEvent;IZ)V
 
     iget-object v2, v0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->this$1:Lcom/android/server/media/MediaSessionService$SessionManagerImpl;
 
     move-object/from16 v8, p5
 
-    invoke-static/range {v2 .. v10}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->access$5100(Lcom/android/server/media/MediaSessionService$SessionManagerImpl;Ljava/lang/String;Ljava/lang/String;IIZLandroid/view/KeyEvent;IZ)V
+    invoke-static/range {v2 .. v10}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->access$5200(Lcom/android/server/media/MediaSessionService$SessionManagerImpl;Ljava/lang/String;Ljava/lang/String;IIZLandroid/view/KeyEvent;IZ)V
 
     goto :goto_0
 
@@ -394,13 +400,13 @@
 
     move/from16 v8, p6
 
-    invoke-static/range {v2 .. v8}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->access$4900(Lcom/android/server/media/MediaSessionService$SessionManagerImpl;Ljava/lang/String;IIZLandroid/view/KeyEvent;Z)V
+    invoke-static/range {v2 .. v8}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->access$5000(Lcom/android/server/media/MediaSessionService$SessionManagerImpl;Ljava/lang/String;IIZLandroid/view/KeyEvent;Z)V
 
     iget-object v2, v0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->this$1:Lcom/android/server/media/MediaSessionService$SessionManagerImpl;
 
     move-object/from16 v7, p5
 
-    invoke-static/range {v2 .. v8}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->access$4900(Lcom/android/server/media/MediaSessionService$SessionManagerImpl;Ljava/lang/String;IIZLandroid/view/KeyEvent;Z)V
+    invoke-static/range {v2 .. v8}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->access$5000(Lcom/android/server/media/MediaSessionService$SessionManagerImpl;Ljava/lang/String;IIZLandroid/view/KeyEvent;Z)V
 
     :goto_0
     return-void
@@ -413,7 +419,7 @@
 
     iget-object v0, v0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->this$0:Lcom/android/server/media/MediaSessionService;
 
-    invoke-static {v0}, Lcom/android/server/media/MediaSessionService;->access$4400(Lcom/android/server/media/MediaSessionService;)Lcom/android/server/media/MediaKeyDispatcher;
+    invoke-static {v0}, Lcom/android/server/media/MediaSessionService;->access$4500(Lcom/android/server/media/MediaSessionService;)Lcom/android/server/media/MediaKeyDispatcher;
 
     move-result-object v0
 
@@ -429,7 +435,7 @@
 
     iget-object v0, v0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->this$0:Lcom/android/server/media/MediaSessionService;
 
-    invoke-static {v0}, Lcom/android/server/media/MediaSessionService;->access$4400(Lcom/android/server/media/MediaSessionService;)Lcom/android/server/media/MediaKeyDispatcher;
+    invoke-static {v0}, Lcom/android/server/media/MediaSessionService;->access$4500(Lcom/android/server/media/MediaSessionService;)Lcom/android/server/media/MediaKeyDispatcher;
 
     move-result-object v0
 
@@ -479,7 +485,7 @@
 
     iget-object v1, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->mLongPressTimeoutRunnable:Ljava/lang/Runnable;
 
-    invoke-static {}, Lcom/android/server/media/MediaSessionService;->access$5400()I
+    invoke-static {}, Lcom/android/server/media/MediaSessionService;->access$5500()I
 
     move-result v2
 
@@ -513,14 +519,14 @@
 
     iget-object v1, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->mTrackingFirstDownKeyEvent:Landroid/view/KeyEvent;
 
-    invoke-static {v0, v1}, Lcom/android/server/media/MediaSessionService;->access$5500(Lcom/android/server/media/MediaSessionService;Landroid/view/KeyEvent;)V
+    invoke-static {v0, v1}, Lcom/android/server/media/MediaSessionService;->access$5600(Lcom/android/server/media/MediaSessionService;Landroid/view/KeyEvent;)V
 
     :cond_4
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->this$1:Lcom/android/server/media/MediaSessionService$SessionManagerImpl;
 
     iget-object v0, v0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->this$0:Lcom/android/server/media/MediaSessionService;
 
-    invoke-static {v0, p1}, Lcom/android/server/media/MediaSessionService;->access$5500(Lcom/android/server/media/MediaSessionService;Landroid/view/KeyEvent;)V
+    invoke-static {v0, p1}, Lcom/android/server/media/MediaSessionService;->access$5600(Lcom/android/server/media/MediaSessionService;Landroid/view/KeyEvent;)V
 
     goto :goto_0
 
@@ -537,7 +543,7 @@
 
     move-result v1
 
-    invoke-static {v0, v1}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->access$5300(Lcom/android/server/media/MediaSessionService$SessionManagerImpl;I)Z
+    invoke-static {v0, v1}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->access$5400(Lcom/android/server/media/MediaSessionService$SessionManagerImpl;I)Z
 
     move-result v0
 
@@ -545,7 +551,7 @@
 
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->this$1:Lcom/android/server/media/MediaSessionService$SessionManagerImpl;
 
-    invoke-static {v0, p2}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->access$5600(Lcom/android/server/media/MediaSessionService$SessionManagerImpl;Z)V
+    invoke-static {v0, p2}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->access$5700(Lcom/android/server/media/MediaSessionService$SessionManagerImpl;Z)V
 
     invoke-direct {p0}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->resetLongPressTracking()V
 
@@ -685,7 +691,7 @@
 
     move-result v3
 
-    invoke-static {v2, v3}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->access$5300(Lcom/android/server/media/MediaSessionService$SessionManagerImpl;I)Z
+    invoke-static {v2, v3}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->access$5400(Lcom/android/server/media/MediaSessionService$SessionManagerImpl;I)Z
 
     move-result v2
 
@@ -706,7 +712,7 @@
 
     iget-object v0, v0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->this$0:Lcom/android/server/media/MediaSessionService;
 
-    invoke-static {v0}, Lcom/android/server/media/MediaSessionService;->access$4400(Lcom/android/server/media/MediaSessionService;)Lcom/android/server/media/MediaKeyDispatcher;
+    invoke-static {v0}, Lcom/android/server/media/MediaSessionService;->access$4500(Lcom/android/server/media/MediaSessionService;)Lcom/android/server/media/MediaKeyDispatcher;
 
     move-result-object v0
 
@@ -877,6 +883,14 @@
     return-object v12
 .end method
 
+.method getButtonDownFlag()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->mButtonDownFlag:Z
+
+    return v0
+.end method
+
 .method handleKeyEventLocked(Ljava/lang/String;IIZLandroid/view/KeyEvent;ZLjava/lang/String;IZ)V
     .locals 17
 
@@ -897,7 +911,7 @@
 
     iget-object v0, v0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->this$0:Lcom/android/server/media/MediaSessionService;
 
-    invoke-static {v0}, Lcom/android/server/media/MediaSessionService;->access$4400(Lcom/android/server/media/MediaSessionService;)Lcom/android/server/media/MediaKeyDispatcher;
+    invoke-static {v0}, Lcom/android/server/media/MediaSessionService;->access$4500(Lcom/android/server/media/MediaSessionService;)Lcom/android/server/media/MediaKeyDispatcher;
 
     move-result-object v0
 
@@ -914,7 +928,7 @@
 
     iget-object v0, v0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->this$0:Lcom/android/server/media/MediaSessionService;
 
-    invoke-static {v0}, Lcom/android/server/media/MediaSessionService;->access$4400(Lcom/android/server/media/MediaSessionService;)Lcom/android/server/media/MediaKeyDispatcher;
+    invoke-static {v0}, Lcom/android/server/media/MediaSessionService;->access$4500(Lcom/android/server/media/MediaSessionService;)Lcom/android/server/media/MediaKeyDispatcher;
 
     move-result-object v0
 
@@ -973,7 +987,7 @@
 
     const/4 v15, 0x1
 
-    if-nez v0, :cond_3
+    if-nez v0, :cond_4
 
     iget v0, v12, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->mKeyType:I
 
@@ -997,11 +1011,34 @@
 
     move/from16 v8, p9
 
-    invoke-static/range {v0 .. v8}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->access$5100(Lcom/android/server/media/MediaSessionService$SessionManagerImpl;Ljava/lang/String;Ljava/lang/String;IIZLandroid/view/KeyEvent;IZ)V
+    invoke-static/range {v0 .. v8}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->access$5200(Lcom/android/server/media/MediaSessionService$SessionManagerImpl;Ljava/lang/String;Ljava/lang/String;IIZLandroid/view/KeyEvent;IZ)V
 
     goto :goto_1
 
     :cond_2
+    invoke-virtual/range {p5 .. p5}, Landroid/view/KeyEvent;->getAction()I
+
+    move-result v0
+
+    if-ne v0, v15, :cond_3
+
+    iget-object v0, v12, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->mTrackingFirstDownKeyEvent:Landroid/view/KeyEvent;
+
+    if-nez v0, :cond_3
+
+    iget-boolean v0, v12, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->mButtonDownFlag:Z
+
+    if-ne v0, v15, :cond_3
+
+    const-string v0, "MediaSessionService"
+
+    const-string v1, "FirstDownKeyEvent is null when action up!"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {v12, v11}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->setButtonDownFlag(Z)V
+
+    :cond_3
     iget-object v0, v12, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->this$1:Lcom/android/server/media/MediaSessionService$SessionManagerImpl;
 
     move-object/from16 v1, p1
@@ -1016,17 +1053,17 @@
 
     move/from16 v6, p6
 
-    invoke-static/range {v0 .. v6}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->access$4900(Lcom/android/server/media/MediaSessionService$SessionManagerImpl;Ljava/lang/String;IIZLandroid/view/KeyEvent;Z)V
+    invoke-static/range {v0 .. v6}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->access$5000(Lcom/android/server/media/MediaSessionService$SessionManagerImpl;Ljava/lang/String;IIZLandroid/view/KeyEvent;Z)V
 
     :goto_1
     return-void
 
-    :cond_3
+    :cond_4
     invoke-direct {v12, v13}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->isFirstDownKeyEvent(Landroid/view/KeyEvent;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
     iput-object v13, v12, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->mTrackingFirstDownKeyEvent:Landroid/view/KeyEvent;
 
@@ -1034,19 +1071,19 @@
 
     return-void
 
-    :cond_4
+    :cond_5
     invoke-direct {v12, v13}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->isFirstLongPressKeyEvent(Landroid/view/KeyEvent;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     iput-boolean v15, v12, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->mIsLongPressing:Z
 
-    :cond_5
+    :cond_6
     iget-boolean v0, v12, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->mIsLongPressing:Z
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     move/from16 v11, p6
 
@@ -1054,14 +1091,14 @@
 
     return-void
 
-    :cond_6
+    :cond_7
     move/from16 v11, p6
 
     invoke-virtual/range {p5 .. p5}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v0
 
-    if-ne v0, v15, :cond_d
+    if-ne v0, v15, :cond_e
 
     const/4 v0, 0x0
 
@@ -1071,11 +1108,11 @@
 
     move-result v0
 
-    if-eqz v0, :cond_c
+    if-eqz v0, :cond_d
 
     iget v0, v12, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->mMultiTapCount:I
 
-    if-nez v0, :cond_8
+    if-nez v0, :cond_9
 
     nop
 
@@ -1113,19 +1150,19 @@
 
     move-result v0
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_8
 
     invoke-static {v14}, Lcom/android/server/media/MediaKeyDispatcher;->isDoubleTapOverridden(I)Z
 
     move-result v0
 
-    if-nez v0, :cond_7
+    if-nez v0, :cond_8
 
     invoke-static {v14}, Lcom/android/server/media/MediaKeyDispatcher;->isTripleTapOverridden(I)Z
 
     move-result v0
 
-    if-nez v0, :cond_7
+    if-nez v0, :cond_8
 
     iget-object v0, v12, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->mMultiTapTimeoutRunnable:Ljava/lang/Runnable;
 
@@ -1135,7 +1172,7 @@
 
     goto/16 :goto_2
 
-    :cond_7
+    :cond_8
     iget-object v0, v12, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->this$1:Lcom/android/server/media/MediaSessionService$SessionManagerImpl;
 
     iget-object v0, v0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->this$0:Lcom/android/server/media/MediaSessionService;
@@ -1146,7 +1183,7 @@
 
     iget-object v1, v12, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->mMultiTapTimeoutRunnable:Ljava/lang/Runnable;
 
-    invoke-static {}, Lcom/android/server/media/MediaSessionService;->access$5200()I
+    invoke-static {}, Lcom/android/server/media/MediaSessionService;->access$5300()I
 
     move-result v2
 
@@ -1166,10 +1203,10 @@
 
     goto/16 :goto_2
 
-    :cond_8
+    :cond_9
     const/4 v10, 0x2
 
-    if-ne v0, v15, :cond_a
+    if-ne v0, v15, :cond_b
 
     iget-object v0, v12, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->this$1:Lcom/android/server/media/MediaSessionService$SessionManagerImpl;
 
@@ -1229,7 +1266,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_a
 
     iget-object v0, v12, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->this$1:Lcom/android/server/media/MediaSessionService$SessionManagerImpl;
 
@@ -1241,7 +1278,7 @@
 
     iget-object v1, v12, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->mMultiTapTimeoutRunnable:Ljava/lang/Runnable;
 
-    invoke-static {}, Lcom/android/server/media/MediaSessionService;->access$5200()I
+    invoke-static {}, Lcom/android/server/media/MediaSessionService;->access$5300()I
 
     move-result v2
 
@@ -1255,7 +1292,7 @@
 
     goto :goto_2
 
-    :cond_9
+    :cond_a
     iget-object v0, v12, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->mMultiTapTimeoutRunnable:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
@@ -1264,10 +1301,10 @@
 
     goto :goto_2
 
-    :cond_a
+    :cond_b
     move v13, v10
 
-    if-ne v0, v13, :cond_b
+    if-ne v0, v13, :cond_c
 
     iget-object v0, v12, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->this$1:Lcom/android/server/media/MediaSessionService$SessionManagerImpl;
 
@@ -1287,19 +1324,19 @@
 
     goto :goto_2
 
-    :cond_b
+    :cond_c
     move-object/from16 v0, p5
 
     goto :goto_2
 
-    :cond_c
+    :cond_d
     move-object v0, v13
 
     invoke-direct/range {p0 .. p9}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->dispatchDownAndUpKeyEventsLocked(Ljava/lang/String;IIZLandroid/view/KeyEvent;ZLjava/lang/String;IZ)V
 
     goto :goto_2
 
-    :cond_d
+    :cond_e
     move-object v0, v13
 
     :goto_2
@@ -1358,6 +1395,14 @@
     move/from16 v9, p8
 
     invoke-virtual/range {v0 .. v9}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->handleKeyEventLocked(Ljava/lang/String;IIZLandroid/view/KeyEvent;ZLjava/lang/String;IZ)V
+
+    return-void
+.end method
+
+.method setButtonDownFlag(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->mButtonDownFlag:Z
 
     return-void
 .end method

@@ -2205,7 +2205,7 @@
 
     const-string v3, "Deferring adb confirmation until after vold decrypt"
 
-    invoke-static {v1, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object v1, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->this$0:Lcom/android/server/adb/AdbDebuggingManager;
 
@@ -2236,7 +2236,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "persist.sys.allcommode"
+    const-string/jumbo v3, "persist.vendor.sys.allcommode"
 
     const-string v4, "false"
 
@@ -2371,6 +2371,12 @@
     move-result-object v0
 
     if-eqz v0, :cond_22
+
+    const-string v0, "AdbDebuggingManager"
+
+    const-string v1, "Denying adb confirmation"
+
+    invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object v0, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->this$0:Lcom/android/server/adb/AdbDebuggingManager;
 
@@ -2560,8 +2566,6 @@
     :cond_22
     :goto_7
     return-void
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x1

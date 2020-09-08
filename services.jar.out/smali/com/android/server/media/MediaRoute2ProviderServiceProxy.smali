@@ -34,6 +34,16 @@
 
 .field private mLastDiscoveryPreference:Landroid/media/RouteDiscoveryPreference;
 
+.field final mReleasingSessions:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Landroid/media/RoutingSessionInfo;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field private mRunning:Z
 
 .field private final mUserId:I
@@ -64,6 +74,12 @@
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->mLastDiscoveryPreference:Landroid/media/RouteDiscoveryPreference;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->mReleasingSessions:Ljava/util/List;
 
     const-string v0, "Context must not be null."
 
@@ -152,6 +168,38 @@
     invoke-direct {p0, p1}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->onConnectionReady(Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;)V
 
     return-void
+.end method
+
+.method private assignProviderIdForSession(Landroid/media/RoutingSessionInfo;)Landroid/media/RoutingSessionInfo;
+    .locals 2
+
+    new-instance v0, Landroid/media/RoutingSessionInfo$Builder;
+
+    invoke-direct {v0, p1}, Landroid/media/RoutingSessionInfo$Builder;-><init>(Landroid/media/RoutingSessionInfo;)V
+
+    iget-object v1, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->mComponentName:Landroid/content/ComponentName;
+
+    invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/media/RoutingSessionInfo$Builder;->setOwnerPackageName(Ljava/lang/String;)Landroid/media/RoutingSessionInfo$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->getUniqueId()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/media/RoutingSessionInfo$Builder;->setProviderId(Ljava/lang/String;)Landroid/media/RoutingSessionInfo$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/media/RoutingSessionInfo$Builder;->build()Landroid/media/RoutingSessionInfo;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method private bind()V
@@ -318,6 +366,10 @@
 
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
+    iget-object v1, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->mReleasingSessions:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->clear()V
+
     monitor-exit v0
 
     goto :goto_1
@@ -334,6 +386,34 @@
     :cond_1
     :goto_1
     return-void
+.end method
+
+.method static synthetic lambda$onSessionCreated$0(Ljava/lang/String;Landroid/media/RoutingSessionInfo;)Z
+    .locals 1
+
+    invoke-virtual {p1}, Landroid/media/RoutingSessionInfo;->getId()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0, p0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method static synthetic lambda$onSessionCreated$1(Ljava/lang/String;Landroid/media/RoutingSessionInfo;)Z
+    .locals 1
+
+    invoke-virtual {p1}, Landroid/media/RoutingSessionInfo;->getId()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0, p0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    return v0
 .end method
 
 .method private onConnectionDied(Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;)V
@@ -464,7 +544,7 @@
 .end method
 
 .method private onSessionCreated(Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;JLandroid/media/RoutingSessionInfo;)V
-    .locals 5
+    .locals 4
 
     iget-object v0, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->mActiveConnection:Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;
 
@@ -479,7 +559,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "onSessionCreated: Ignoring null sessionInfo sent from "
+    const-string/jumbo v1, "onSessionCreated: Ignoring null session sent from "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -498,61 +578,54 @@
     return-void
 
     :cond_1
-    invoke-direct {p0, p4}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->updateSessionInfo(Landroid/media/RoutingSessionInfo;)Landroid/media/RoutingSessionInfo;
+    invoke-direct {p0, p4}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->assignProviderIdForSession(Landroid/media/RoutingSessionInfo;)Landroid/media/RoutingSessionInfo;
 
     move-result-object p4
 
-    const/4 v0, 0x0
+    invoke-virtual {p4}, Landroid/media/RoutingSessionInfo;->getId()Ljava/lang/String;
+
+    move-result-object v0
 
     iget-object v1, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    const/4 v2, 0x0
-
-    :goto_0
     :try_start_0
-    iget-object v3, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->mSessionInfos:Ljava/util/List;
+    iget-object v2, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->mSessionInfos:Ljava/util/List;
 
-    invoke-interface {v3}, Ljava/util/List;->size()I
+    invoke-interface {v2}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
 
-    move-result v3
+    move-result-object v2
 
-    if-ge v2, v3, :cond_3
+    new-instance v3, Lcom/android/server/media/-$$Lambda$MediaRoute2ProviderServiceProxy$WA3Fu7tOFsQNw6OAd-ZxtqiCFhg;
 
-    iget-object v3, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->mSessionInfos:Ljava/util/List;
+    invoke-direct {v3, v0}, Lcom/android/server/media/-$$Lambda$MediaRoute2ProviderServiceProxy$WA3Fu7tOFsQNw6OAd-ZxtqiCFhg;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v2, v3}, Ljava/util/stream/Stream;->anyMatch(Ljava/util/function/Predicate;)Z
 
-    move-result-object v3
+    move-result v2
 
-    check-cast v3, Landroid/media/RoutingSessionInfo;
+    if-nez v2, :cond_3
 
-    invoke-virtual {v3}, Landroid/media/RoutingSessionInfo;->getId()Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->mReleasingSessions:Ljava/util/List;
 
-    move-result-object v3
+    invoke-interface {v2}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
 
-    invoke-virtual {p4}, Landroid/media/RoutingSessionInfo;->getId()Ljava/lang/String;
+    move-result-object v2
 
-    move-result-object v4
+    new-instance v3, Lcom/android/server/media/-$$Lambda$MediaRoute2ProviderServiceProxy$MYTnvIMc8LhawnA0G27isTUVHis;
 
-    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-direct {v3, v0}, Lcom/android/server/media/-$$Lambda$MediaRoute2ProviderServiceProxy$MYTnvIMc8LhawnA0G27isTUVHis;-><init>(Ljava/lang/String;)V
 
-    move-result v3
+    invoke-interface {v2, v3}, Ljava/util/stream/Stream;->anyMatch(Ljava/util/function/Predicate;)Z
 
-    if-eqz v3, :cond_2
+    move-result v2
 
-    const/4 v0, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    add-int/lit8 v2, v2, 0x1
+    if-eqz v2, :cond_2
 
     goto :goto_0
 
-    :cond_3
-    :goto_1
+    :cond_2
     iget-object v2, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->mSessionInfos:Ljava/util/List;
 
     invoke-interface {v2, p4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -561,27 +634,28 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-eqz v0, :cond_4
-
-    const-string v1, "MR2ProviderSvcProxy"
-
-    const-string/jumbo v2, "onSessionCreated: Duplicate session already exists. Ignoring."
-
-    invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-
-    :cond_4
     iget-object v1, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->mCallback:Lcom/android/server/media/MediaRoute2Provider$Callback;
 
     invoke-interface {v1, p0, p2, p3, p4}, Lcom/android/server/media/MediaRoute2Provider$Callback;->onSessionCreated(Lcom/android/server/media/MediaRoute2Provider;JLandroid/media/RoutingSessionInfo;)V
 
     return-void
 
+    :cond_3
+    :goto_0
+    :try_start_1
+    const-string v2, "MR2ProviderSvcProxy"
+
+    const-string/jumbo v3, "onSessionCreated: Duplicate session already exists. Ignoring."
+
+    invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    monitor-exit v1
+
+    return-void
+
     :catchall_0
     move-exception v2
 
-    :try_start_1
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -590,7 +664,7 @@
 .end method
 
 .method private onSessionReleased(Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;Landroid/media/RoutingSessionInfo;)V
-    .locals 5
+    .locals 6
 
     iget-object v0, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->mActiveConnection:Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;
 
@@ -605,7 +679,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "onSessionReleased: Ignoring null sessionInfo sent from "
+    const-string/jumbo v1, "onSessionReleased: Ignoring null session sent from "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -624,7 +698,7 @@
     return-void
 
     :cond_1
-    invoke-direct {p0, p2}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->updateSessionInfo(Landroid/media/RoutingSessionInfo;)Landroid/media/RoutingSessionInfo;
+    invoke-direct {p0, p2}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->assignProviderIdForSession(Landroid/media/RoutingSessionInfo;)Landroid/media/RoutingSessionInfo;
 
     move-result-object p2
 
@@ -634,21 +708,21 @@
 
     monitor-enter v1
 
-    const/4 v2, 0x0
+    :try_start_0
+    iget-object v2, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->mSessionInfos:Ljava/util/List;
+
+    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
 
     :goto_0
-    :try_start_0
-    iget-object v3, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->mSessionInfos:Ljava/util/List;
-
-    invoke-interface {v3}, Ljava/util/List;->size()I
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v3
 
-    if-ge v2, v3, :cond_3
+    if-eqz v3, :cond_3
 
-    iget-object v3, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->mSessionInfos:Ljava/util/List;
-
-    invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
 
@@ -656,38 +730,83 @@
 
     invoke-virtual {v3}, Landroid/media/RoutingSessionInfo;->getId()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
     invoke-virtual {p2}, Landroid/media/RoutingSessionInfo;->getId()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v5}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
-    move-result v3
+    move-result v4
 
-    if-eqz v3, :cond_2
+    if-eqz v4, :cond_2
 
-    iget-object v3, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->mSessionInfos:Ljava/util/List;
+    iget-object v2, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->mSessionInfos:Ljava/util/List;
 
-    invoke-interface {v3, v2}, Ljava/util/List;->remove(I)Ljava/lang/Object;
+    invoke-interface {v2, v3}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
     const/4 v0, 0x1
 
     goto :goto_1
 
     :cond_2
-    add-int/lit8 v2, v2, 0x1
-
     goto :goto_0
 
     :cond_3
     :goto_1
+    if-nez v0, :cond_5
+
+    iget-object v2, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->mReleasingSessions:Ljava/util/List;
+
+    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_2
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_5
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/media/RoutingSessionInfo;
+
+    invoke-virtual {v3}, Landroid/media/RoutingSessionInfo;->getId()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {p2}, Landroid/media/RoutingSessionInfo;->getId()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_4
+
+    iget-object v2, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->mReleasingSessions:Ljava/util/List;
+
+    invoke-interface {v2, v3}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+
+    monitor-exit v1
+
+    return-void
+
+    :cond_4
+    goto :goto_2
+
+    :cond_5
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-nez v0, :cond_4
+    if-nez v0, :cond_6
 
     const-string v1, "MR2ProviderSvcProxy"
 
@@ -697,7 +816,7 @@
 
     return-void
 
-    :cond_4
+    :cond_6
     iget-object v1, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->mCallback:Lcom/android/server/media/MediaRoute2Provider$Callback;
 
     invoke-interface {v1, p0, p2}, Lcom/android/server/media/MediaRoute2Provider$Callback;->onSessionReleased(Lcom/android/server/media/MediaRoute2Provider;Landroid/media/RoutingSessionInfo;)V
@@ -716,7 +835,7 @@
 .end method
 
 .method private onSessionUpdated(Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;Landroid/media/RoutingSessionInfo;)V
-    .locals 5
+    .locals 6
 
     iget-object v0, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->mActiveConnection:Lcom/android/server/media/MediaRoute2ProviderServiceProxy$Connection;
 
@@ -731,7 +850,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "onSessionUpdated: Ignoring null sessionInfo sent from "
+    const-string/jumbo v1, "onSessionUpdated: Ignoring null session sent from "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -750,7 +869,7 @@
     return-void
 
     :cond_1
-    invoke-direct {p0, p2}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->updateSessionInfo(Landroid/media/RoutingSessionInfo;)Landroid/media/RoutingSessionInfo;
+    invoke-direct {p0, p2}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->assignProviderIdForSession(Landroid/media/RoutingSessionInfo;)Landroid/media/RoutingSessionInfo;
 
     move-result-object p2
 
@@ -809,21 +928,64 @@
 
     :cond_3
     :goto_1
+    if-nez v0, :cond_6
+
+    iget-object v2, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->mReleasingSessions:Ljava/util/List;
+
+    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_2
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_5
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/media/RoutingSessionInfo;
+
+    invoke-virtual {v3}, Landroid/media/RoutingSessionInfo;->getId()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {p2}, Landroid/media/RoutingSessionInfo;->getId()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_4
+
     monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-nez v0, :cond_4
-
-    const-string v1, "MR2ProviderSvcProxy"
-
-    const-string/jumbo v2, "onSessionUpdated: Matching session info not found"
-
-    invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
     :cond_4
+    goto :goto_2
+
+    :cond_5
+    const-string v2, "MR2ProviderSvcProxy"
+
+    const-string/jumbo v3, "onSessionUpdated: Matching session info not found"
+
+    invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    monitor-exit v1
+
+    return-void
+
+    :cond_6
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
     iget-object v1, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->mCallback:Lcom/android/server/media/MediaRoute2Provider$Callback;
 
     invoke-interface {v1, p0, p2}, Lcom/android/server/media/MediaRoute2Provider$Callback;->onSessionUpdated(Lcom/android/server/media/MediaRoute2Provider;Landroid/media/RoutingSessionInfo;)V
@@ -920,38 +1082,6 @@
 
     :goto_0
     return-void
-.end method
-
-.method private updateSessionInfo(Landroid/media/RoutingSessionInfo;)Landroid/media/RoutingSessionInfo;
-    .locals 2
-
-    new-instance v0, Landroid/media/RoutingSessionInfo$Builder;
-
-    invoke-direct {v0, p1}, Landroid/media/RoutingSessionInfo$Builder;-><init>(Landroid/media/RoutingSessionInfo;)V
-
-    iget-object v1, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->mComponentName:Landroid/content/ComponentName;
-
-    invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/media/RoutingSessionInfo$Builder;->setOwnerPackageName(Ljava/lang/String;)Landroid/media/RoutingSessionInfo$Builder;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->getUniqueId()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/media/RoutingSessionInfo$Builder;->setProviderId(Ljava/lang/String;)Landroid/media/RoutingSessionInfo$Builder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/media/RoutingSessionInfo$Builder;->build()Landroid/media/RoutingSessionInfo;
-
-    move-result-object v0
-
-    return-object v0
 .end method
 
 
@@ -1301,6 +1431,72 @@
     invoke-direct {p0}, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->disconnect()V
 
     return-void
+.end method
+
+.method public prepareReleaseSession(Ljava/lang/String;)V
+    .locals 4
+
+    iget-object v0, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->mLock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->mSessionInfos:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/media/RoutingSessionInfo;
+
+    invoke-virtual {v2}, Landroid/media/RoutingSessionInfo;->getId()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    iget-object v1, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->mSessionInfos:Ljava/util/List;
+
+    invoke-interface {v1, v2}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+
+    iget-object v1, p0, Lcom/android/server/media/MediaRoute2ProviderServiceProxy;->mReleasingSessions:Ljava/util/List;
+
+    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    :cond_0
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
 .end method
 
 .method public rebindIfDisconnected()V

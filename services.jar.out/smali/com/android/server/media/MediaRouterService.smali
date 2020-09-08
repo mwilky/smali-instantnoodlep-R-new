@@ -1471,24 +1471,6 @@
     throw v1
 .end method
 
-.method public notifySessionHintsForCreatingSession(Landroid/media/IMediaRouter2;JLandroid/media/MediaRoute2Info;Landroid/os/Bundle;)V
-    .locals 6
-
-    iget-object v0, p0, Lcom/android/server/media/MediaRouterService;->mService2:Lcom/android/server/media/MediaRouter2ServiceImpl;
-
-    move-object v1, p1
-
-    move-wide v2, p2
-
-    move-object v4, p4
-
-    move-object v5, p5
-
-    invoke-virtual/range {v0 .. v5}, Lcom/android/server/media/MediaRouter2ServiceImpl;->notifySessionHintsForCreatingSession(Landroid/media/IMediaRouter2;JLandroid/media/MediaRoute2Info;Landroid/os/Bundle;)V
-
-    return-void
-.end method
-
 .method public registerClientAsUser(Landroid/media/IMediaRouterClient;Ljava/lang/String;I)V
     .locals 16
 
@@ -1783,22 +1765,34 @@
     return-void
 .end method
 
-.method public requestCreateSessionWithManager(Landroid/media/IMediaRouter2Manager;ILjava/lang/String;Landroid/media/MediaRoute2Info;)V
+.method public requestCreateSessionWithManager(Landroid/media/IMediaRouter2Manager;ILandroid/media/RoutingSessionInfo;Landroid/media/MediaRoute2Info;)V
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/media/MediaRouterService;->mService2:Lcom/android/server/media/MediaRouter2ServiceImpl;
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/android/server/media/MediaRouter2ServiceImpl;->requestCreateSessionWithManager(Landroid/media/IMediaRouter2Manager;ILjava/lang/String;Landroid/media/MediaRoute2Info;)V
+    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/android/server/media/MediaRouter2ServiceImpl;->requestCreateSessionWithManager(Landroid/media/IMediaRouter2Manager;ILandroid/media/RoutingSessionInfo;Landroid/media/MediaRoute2Info;)V
 
     return-void
 .end method
 
-.method public requestCreateSessionWithRouter2(Landroid/media/IMediaRouter2;ILandroid/media/MediaRoute2Info;Landroid/os/Bundle;)V
-    .locals 1
+.method public requestCreateSessionWithRouter2(Landroid/media/IMediaRouter2;IJLandroid/media/RoutingSessionInfo;Landroid/media/MediaRoute2Info;Landroid/os/Bundle;)V
+    .locals 8
 
     iget-object v0, p0, Lcom/android/server/media/MediaRouterService;->mService2:Lcom/android/server/media/MediaRouter2ServiceImpl;
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/android/server/media/MediaRouter2ServiceImpl;->requestCreateSessionWithRouter2(Landroid/media/IMediaRouter2;ILandroid/media/MediaRoute2Info;Landroid/os/Bundle;)V
+    move-object v1, p1
+
+    move v2, p2
+
+    move-wide v3, p3
+
+    move-object v5, p5
+
+    move-object v6, p6
+
+    move-object v7, p7
+
+    invoke-virtual/range {v0 .. v7}, Lcom/android/server/media/MediaRouter2ServiceImpl;->requestCreateSessionWithRouter2(Landroid/media/IMediaRouter2;IJLandroid/media/RoutingSessionInfo;Landroid/media/MediaRoute2Info;Landroid/os/Bundle;)V
 
     return-void
 .end method

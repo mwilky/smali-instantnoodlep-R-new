@@ -567,7 +567,7 @@
 .end method
 
 .method private enqueueToast(Ljava/lang/String;Landroid/os/IBinder;Ljava/lang/CharSequence;Landroid/app/ITransientNotification;IILandroid/app/ITransientNotificationCallback;)V
-    .locals 33
+    .locals 32
 
     move-object/from16 v1, p0
 
@@ -960,9 +960,9 @@
     :catchall_1
     move-exception v0
 
-    move-object/from16 v31, v9
+    move-object/from16 v30, v9
 
-    move/from16 v32, v10
+    move/from16 v31, v10
 
     goto/16 :goto_d
 
@@ -971,9 +971,9 @@
 
     move v14, v8
 
-    move-object/from16 v31, v9
+    move-object/from16 v30, v9
 
-    move/from16 v32, v10
+    move/from16 v31, v10
 
     goto/16 :goto_c
 
@@ -1006,9 +1006,9 @@
 
     move v14, v8
 
-    move-object/from16 v31, v9
+    move-object/from16 v30, v9
 
-    move/from16 v32, v10
+    move/from16 v31, v10
 
     goto/16 :goto_a
 
@@ -1130,8 +1130,6 @@
     :try_end_c
     .catchall {:try_start_c .. :try_end_c} :catchall_4
 
-    const/16 v3, 0x7d5
-
     if-eqz v2, :cond_12
 
     :try_start_d
@@ -1141,9 +1139,9 @@
 
     move-result-object v2
 
-    const/16 v4, 0x8ff
+    const/16 v3, 0x8ff
 
-    invoke-virtual {v2, v0, v4, v11}, Lcom/android/server/wm/WindowManagerInternal;->addWindowToken(Landroid/os/IBinder;II)V
+    invoke-virtual {v2, v0, v3, v11}, Lcom/android/server/wm/WindowManagerInternal;->addWindowToken(Landroid/os/IBinder;II)V
     :try_end_d
     .catchall {:try_start_d .. :try_end_d} :catchall_2
 
@@ -1157,23 +1155,11 @@
 
     move-result-object v2
 
+    const/16 v3, 0x7d5
+
     invoke-virtual {v2, v0, v3, v11}, Lcom/android/server/wm/WindowManagerInternal;->addWindowToken(Landroid/os/IBinder;II)V
 
     :goto_9
-    new-instance v2, Landroid/os/Binder;
-
-    invoke-direct {v2}, Landroid/os/Binder;-><init>()V
-
-    move-object v6, v2
-
-    iget-object v2, v1, Lcom/android/server/notification/NotificationManagerService$11;->this$0:Lcom/android/server/notification/NotificationManagerService;
-
-    invoke-static {v2}, Lcom/android/server/notification/NotificationManagerService;->access$4800(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/wm/WindowManagerInternal;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v6, v3, v11}, Lcom/android/server/wm/WindowManagerInternal;->addWindowToken(Landroid/os/IBinder;II)V
-
     iget-object v2, v1, Lcom/android/server/notification/NotificationManagerService$11;->this$0:Lcom/android/server/notification/NotificationManagerService;
     :try_end_e
     .catchall {:try_start_e .. :try_end_e} :catchall_4
@@ -1184,11 +1170,9 @@
 
     move-object/from16 v5, p1
 
-    move-object/from16 v29, v6
-
     move-object/from16 v6, p2
 
-    move/from16 v30, v7
+    move/from16 v29, v7
 
     move-object/from16 v7, p3
 
@@ -1196,13 +1180,13 @@
 
     move-object/from16 v8, p4
 
-    move-object/from16 v31, v9
+    move-object/from16 v30, v9
 
     move/from16 v9, p5
 
-    move/from16 v32, v10
+    move/from16 v31, v10
 
-    move-object/from16 v10, v29
+    move-object v10, v0
 
     move/from16 v11, p6
 
@@ -1258,7 +1242,7 @@
 
     nop
 
-    monitor-exit v31
+    monitor-exit v30
 
     return-void
 
@@ -1267,9 +1251,9 @@
 
     move v14, v8
 
-    move-object/from16 v31, v9
+    move-object/from16 v30, v9
 
-    move/from16 v32, v10
+    move/from16 v31, v10
 
     :goto_c
     invoke-static/range {v25 .. v26}, Landroid/os/Binder;->restoreCallingIdentity(J)V
@@ -1281,12 +1265,12 @@
     :catchall_5
     move-exception v0
 
-    move-object/from16 v31, v9
+    move-object/from16 v30, v9
 
-    move/from16 v32, v10
+    move/from16 v31, v10
 
     :goto_d
-    monitor-exit v31
+    monitor-exit v30
     :try_end_10
     .catchall {:try_start_10 .. :try_end_10} :catchall_6
 
@@ -1300,7 +1284,7 @@
     :catchall_7
     move-exception v0
 
-    move/from16 v32, v10
+    move/from16 v31, v10
 
     invoke-static/range {v21 .. v22}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 

@@ -79,6 +79,8 @@
     .end annotation
 .end field
 
+.field private final mRecordThread:Landroid/os/HandlerThread;
+
 .field final mRemoteVolumeControllers:Landroid/os/RemoteCallbackList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -171,6 +173,14 @@
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/media/MediaSessionService;->mLock:Ljava/lang/Object;
+
+    new-instance v0, Landroid/os/HandlerThread;
+
+    const-string v1, "SessionRecordThread"
+
+    invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+
+    iput-object v0, p0, Lcom/android/server/media/MediaSessionService;->mRecordThread:Landroid/os/HandlerThread;
 
     new-instance v0, Landroid/util/SparseIntArray;
 
@@ -355,7 +365,15 @@
     return-object v0
 .end method
 
-.method static synthetic access$2500(Lcom/android/server/media/MediaSessionService;I)Lcom/android/server/media/MediaSessionService$FullUserRecord;
+.method static synthetic access$2500(Lcom/android/server/media/MediaSessionService;)Landroid/os/HandlerThread;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/media/MediaSessionService;->mRecordThread:Landroid/os/HandlerThread;
+
+    return-object v0
+.end method
+
+.method static synthetic access$2600(Lcom/android/server/media/MediaSessionService;I)Lcom/android/server/media/MediaSessionService$FullUserRecord;
     .locals 1
 
     invoke-direct {p0, p1}, Lcom/android/server/media/MediaSessionService;->getFullUserRecordLocked(I)Lcom/android/server/media/MediaSessionService$FullUserRecord;
@@ -365,7 +383,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$2600(Lcom/android/server/media/MediaSessionService;I)Ljava/util/List;
+.method static synthetic access$2700(Lcom/android/server/media/MediaSessionService;I)Ljava/util/List;
     .locals 1
 
     invoke-direct {p0, p1}, Lcom/android/server/media/MediaSessionService;->getActiveSessionsLocked(I)Ljava/util/List;
@@ -375,7 +393,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$2700(Lcom/android/server/media/MediaSessionService;Landroid/media/session/IActiveSessionsListener;)I
+.method static synthetic access$2800(Lcom/android/server/media/MediaSessionService;Landroid/media/session/IActiveSessionsListener;)I
     .locals 1
 
     invoke-direct {p0, p1}, Lcom/android/server/media/MediaSessionService;->findIndexOfSessionsListenerLocked(Landroid/media/session/IActiveSessionsListener;)I
@@ -385,7 +403,7 @@
     return v0
 .end method
 
-.method static synthetic access$2800(Lcom/android/server/media/MediaSessionService;Landroid/media/session/ISession2TokensListener;)I
+.method static synthetic access$2900(Lcom/android/server/media/MediaSessionService;Landroid/media/session/ISession2TokensListener;)I
     .locals 1
 
     invoke-direct {p0, p1}, Lcom/android/server/media/MediaSessionService;->findIndexOfSession2TokensListenerLocked(Landroid/media/session/ISession2TokensListener;)I
@@ -395,7 +413,7 @@
     return v0
 .end method
 
-.method static synthetic access$3100(Lcom/android/server/media/MediaSessionService;Landroid/media/session/MediaSession$Token;)Lcom/android/server/media/MediaSessionRecord;
+.method static synthetic access$3200(Lcom/android/server/media/MediaSessionService;Landroid/media/session/MediaSession$Token;)Lcom/android/server/media/MediaSessionRecord;
     .locals 1
 
     invoke-direct {p0, p1}, Lcom/android/server/media/MediaSessionService;->getMediaSessionRecordLocked(Landroid/media/session/MediaSession$Token;)Lcom/android/server/media/MediaSessionRecord;
@@ -405,7 +423,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$3200(Lcom/android/server/media/MediaSessionService;II)Z
+.method static synthetic access$3300(Lcom/android/server/media/MediaSessionService;II)Z
     .locals 1
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/media/MediaSessionService;->hasMediaControlPermission(II)Z
@@ -415,7 +433,7 @@
     return v0
 .end method
 
-.method static synthetic access$3500(Lcom/android/server/media/MediaSessionService;Ljava/lang/String;II)V
+.method static synthetic access$3600(Lcom/android/server/media/MediaSessionService;Ljava/lang/String;II)V
     .locals 0
 
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/media/MediaSessionService;->enforceStatusBarServicePermission(Ljava/lang/String;II)V
@@ -423,7 +441,7 @@
     return-void
 .end method
 
-.method static synthetic access$3600(Lcom/android/server/media/MediaSessionService;)Landroid/util/SparseArray;
+.method static synthetic access$3700(Lcom/android/server/media/MediaSessionService;)Landroid/util/SparseArray;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService;->mUserRecords:Landroid/util/SparseArray;
@@ -431,7 +449,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$3800(Lcom/android/server/media/MediaSessionService;Ljava/lang/String;)V
+.method static synthetic access$3900(Lcom/android/server/media/MediaSessionService;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/media/MediaSessionService;->instantiateCustomDispatcher(Ljava/lang/String;)V
@@ -439,7 +457,7 @@
     return-void
 .end method
 
-.method static synthetic access$3900(Lcom/android/server/media/MediaSessionService;Ljava/lang/String;)V
+.method static synthetic access$4000(Lcom/android/server/media/MediaSessionService;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/media/MediaSessionService;->instantiateCustomProvider(Ljava/lang/String;)V
@@ -447,7 +465,7 @@
     return-void
 .end method
 
-.method static synthetic access$4000(Lcom/android/server/media/MediaSessionService;Landroid/content/ComponentName;III)V
+.method static synthetic access$4100(Lcom/android/server/media/MediaSessionService;Landroid/content/ComponentName;III)V
     .locals 0
 
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/media/MediaSessionService;->enforceMediaPermissions(Landroid/content/ComponentName;III)V
@@ -455,7 +473,7 @@
     return-void
 .end method
 
-.method static synthetic access$4100(Lcom/android/server/media/MediaSessionService;)Landroid/app/INotificationManager;
+.method static synthetic access$4200(Lcom/android/server/media/MediaSessionService;)Landroid/app/INotificationManager;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService;->mNotificationManager:Landroid/app/INotificationManager;
@@ -463,7 +481,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$4200(Lcom/android/server/media/MediaSessionService;)Landroid/media/AudioManagerInternal;
+.method static synthetic access$4300(Lcom/android/server/media/MediaSessionService;)Landroid/media/AudioManagerInternal;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService;->mAudioManagerInternal:Landroid/media/AudioManagerInternal;
@@ -471,7 +489,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$4400(Lcom/android/server/media/MediaSessionService;)Lcom/android/server/media/MediaKeyDispatcher;
+.method static synthetic access$4500(Lcom/android/server/media/MediaSessionService;)Lcom/android/server/media/MediaKeyDispatcher;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService;->mCustomMediaKeyDispatcher:Lcom/android/server/media/MediaKeyDispatcher;
@@ -479,7 +497,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$4600(Lcom/android/server/media/MediaSessionService;)Landroid/app/KeyguardManager;
+.method static synthetic access$4700(Lcom/android/server/media/MediaSessionService;)Landroid/app/KeyguardManager;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService;->mKeyguardManager:Landroid/app/KeyguardManager;
@@ -487,7 +505,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$4700(Lcom/android/server/media/MediaSessionService;)Landroid/os/PowerManager$WakeLock;
+.method static synthetic access$4800(Lcom/android/server/media/MediaSessionService;)Landroid/os/PowerManager$WakeLock;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService;->mMediaEventWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -495,7 +513,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$4800(Lcom/android/server/media/MediaSessionService;)Z
+.method static synthetic access$4900(Lcom/android/server/media/MediaSessionService;)Z
     .locals 1
 
     iget-boolean v0, p0, Lcom/android/server/media/MediaSessionService;->mHasFeatureLeanback:Z
@@ -503,7 +521,7 @@
     return v0
 .end method
 
-.method static synthetic access$5200()I
+.method static synthetic access$5300()I
     .locals 1
 
     sget v0, Lcom/android/server/media/MediaSessionService;->MULTI_TAP_TIMEOUT:I
@@ -511,7 +529,7 @@
     return v0
 .end method
 
-.method static synthetic access$5400()I
+.method static synthetic access$5500()I
     .locals 1
 
     sget v0, Lcom/android/server/media/MediaSessionService;->LONG_PRESS_TIMEOUT:I
@@ -519,7 +537,7 @@
     return v0
 .end method
 
-.method static synthetic access$5500(Lcom/android/server/media/MediaSessionService;Landroid/view/KeyEvent;)V
+.method static synthetic access$5600(Lcom/android/server/media/MediaSessionService;Landroid/view/KeyEvent;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/media/MediaSessionService;->dispatchVolumeKeyLongPressLocked(Landroid/view/KeyEvent;)V
@@ -527,7 +545,7 @@
     return-void
 .end method
 
-.method static synthetic access$6100(Lcom/android/server/media/MediaSessionService;I)V
+.method static synthetic access$6200(Lcom/android/server/media/MediaSessionService;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/media/MediaSessionService;->pushSession1Changed(I)V
@@ -661,9 +679,9 @@
     :try_start_1
     new-instance v0, Lcom/android/server/media/MediaSessionRecord;
 
-    iget-object v1, v12, Lcom/android/server/media/MediaSessionService;->mHandler:Lcom/android/server/media/MediaSessionService$MessageHandler;
+    iget-object v1, v12, Lcom/android/server/media/MediaSessionService;->mRecordThread:Landroid/os/HandlerThread;
 
-    invoke-virtual {v1}, Lcom/android/server/media/MediaSessionService$MessageHandler;->getLooper()Landroid/os/Looper;
+    invoke-virtual {v1}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
     move-result-object v18
     :try_end_1
@@ -3229,6 +3247,10 @@
     invoke-direct {p0, v2}, Lcom/android/server/media/MediaSessionService;->instantiateCustomProvider(Ljava/lang/String;)V
 
     invoke-direct {p0, v2}, Lcom/android/server/media/MediaSessionService;->instantiateCustomDispatcher(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/android/server/media/MediaSessionService;->mRecordThread:Landroid/os/HandlerThread;
+
+    invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
     return-void
 .end method

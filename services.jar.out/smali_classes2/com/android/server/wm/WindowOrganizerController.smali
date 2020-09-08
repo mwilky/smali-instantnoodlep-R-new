@@ -310,13 +310,13 @@
 .end method
 
 .method private sanitizeAndApplyHierarchyOp(Lcom/android/server/wm/WindowContainer;Landroid/window/WindowContainerTransaction$HierarchyOp;)I
-    .locals 10
+    .locals 11
 
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->asTask()Lcom/android/server/wm/Task;
 
     move-result-object v0
 
-    if-eqz v0, :cond_10
+    if-eqz v0, :cond_11
 
     invoke-virtual {v0}, Lcom/android/server/wm/Task;->getDisplayContent()Lcom/android/server/wm/DisplayContent;
 
@@ -359,7 +359,7 @@
 
     const/high16 v7, -0x80000000
 
-    if-eqz v5, :cond_c
+    if-eqz v5, :cond_d
 
     nop
 
@@ -395,7 +395,7 @@
     move v5, v3
 
     :goto_0
-    if-eqz v5, :cond_b
+    if-eqz v5, :cond_c
 
     invoke-virtual {p2}, Landroid/window/WindowContainerTransaction$HierarchyOp;->getNewParent()Landroid/os/IBinder;
 
@@ -427,10 +427,49 @@
 
     move-result-object v9
 
-    if-eq v9, v8, :cond_8
+    if-eq v9, v8, :cond_9
 
-    if-nez v8, :cond_5
+    const-string v9, " task="
 
+    if-nez v8, :cond_6
+
+    invoke-virtual {v0}, Lcom/android/server/wm/Task;->getParent()Lcom/android/server/wm/WindowContainer;
+
+    move-result-object v6
+
+    invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->getDefaultTaskDisplayArea()Lcom/android/server/wm/TaskDisplayArea;
+
+    move-result-object v7
+
+    if-ne v6, v7, :cond_5
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "Can\'t reparent task to DefaultTaskDisplayArea if its parent is already DefaultTaskDisplayArea task.getParent()="
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Lcom/android/server/wm/Task;->getParent()Lcom/android/server/wm/WindowContainer;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v2, v6}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v3
+
+    :cond_5
     invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->getDefaultTaskDisplayArea()Lcom/android/server/wm/TaskDisplayArea;
 
     move-result-object v2
@@ -443,24 +482,24 @@
 
     goto :goto_4
 
-    :cond_5
+    :cond_6
     invoke-virtual {v8}, Lcom/android/server/wm/Task;->inMultiWindowMode()Z
 
-    move-result v9
+    move-result v10
 
-    if-eqz v9, :cond_6
+    if-eqz v10, :cond_7
 
     invoke-virtual {v0}, Lcom/android/server/wm/Task;->isResizeable()Z
 
-    move-result v9
+    move-result v10
 
-    if-nez v9, :cond_6
+    if-nez v10, :cond_7
 
     invoke-virtual {v0}, Lcom/android/server/wm/Task;->isLeafTask()Z
 
-    move-result v9
+    move-result v10
 
-    if-eqz v9, :cond_6
+    if-eqz v10, :cond_7
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -472,9 +511,7 @@
 
     invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v7, " task="
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -486,7 +523,7 @@
 
     return v3
 
-    :cond_6
+    :cond_7
     move-object v2, v8
 
     check-cast v2, Lcom/android/server/wm/ActivityStack;
@@ -495,11 +532,11 @@
 
     move-result v9
 
-    if-eqz v9, :cond_7
+    if-eqz v9, :cond_8
 
     goto :goto_2
 
-    :cond_7
+    :cond_8
     move v6, v7
 
     :goto_2
@@ -509,14 +546,14 @@
 
     goto :goto_4
 
-    :cond_8
-    if-eqz v8, :cond_9
+    :cond_9
+    if-eqz v8, :cond_a
 
     move-object v2, v8
 
     goto :goto_3
 
-    :cond_9
+    :cond_a
     invoke-virtual {v0}, Lcom/android/server/wm/Task;->getRootTask()Lcom/android/server/wm/Task;
 
     move-result-object v2
@@ -528,7 +565,7 @@
 
     move-result v6
 
-    if-eqz v6, :cond_a
+    if-eqz v6, :cond_b
 
     invoke-virtual {v4}, Lcom/android/server/wm/ActivityStack;->getDisplayArea()Lcom/android/server/wm/TaskDisplayArea;
 
@@ -538,7 +575,7 @@
 
     goto :goto_4
 
-    :cond_a
+    :cond_b
     invoke-virtual {v4}, Lcom/android/server/wm/ActivityStack;->getDisplayArea()Lcom/android/server/wm/TaskDisplayArea;
 
     move-result-object v3
@@ -550,7 +587,7 @@
 
     goto :goto_6
 
-    :cond_b
+    :cond_c
     new-instance v2, Ljava/lang/RuntimeException;
 
     const-string v3, "Reparenting leaf Tasks is not supported now."
@@ -559,18 +596,18 @@
 
     throw v2
 
-    :cond_c
+    :cond_d
     invoke-virtual {v0}, Lcom/android/server/wm/Task;->isRootTask()Z
 
     move-result v2
 
-    if-eqz v2, :cond_e
+    if-eqz v2, :cond_f
 
     invoke-virtual {p2}, Landroid/window/WindowContainerTransaction$HierarchyOp;->getToTop()Z
 
     move-result v2
 
-    if-eqz v2, :cond_d
+    if-eqz v2, :cond_e
 
     invoke-virtual {v4}, Lcom/android/server/wm/ActivityStack;->getDisplayArea()Lcom/android/server/wm/TaskDisplayArea;
 
@@ -580,7 +617,7 @@
 
     goto :goto_6
 
-    :cond_d
+    :cond_e
     invoke-virtual {v4}, Lcom/android/server/wm/ActivityStack;->getDisplayArea()Lcom/android/server/wm/TaskDisplayArea;
 
     move-result-object v2
@@ -589,7 +626,7 @@
 
     goto :goto_6
 
-    :cond_e
+    :cond_f
     invoke-virtual {v0}, Lcom/android/server/wm/Task;->getParent()Lcom/android/server/wm/WindowContainer;
 
     move-result-object v2
@@ -598,11 +635,11 @@
 
     move-result v5
 
-    if-eqz v5, :cond_f
+    if-eqz v5, :cond_10
 
     goto :goto_5
 
-    :cond_f
+    :cond_10
     move v6, v7
 
     :goto_5
@@ -613,7 +650,7 @@
 
     return v2
 
-    :cond_10
+    :cond_11
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "Invalid container in hierarchy op"
@@ -1337,6 +1374,8 @@
     :catch_0
     move-exception v2
 
+    invoke-virtual {v1}, Landroid/view/SurfaceControl$Transaction;->apply()V
+
     :goto_1
     iget-object v2, p0, Lcom/android/server/wm/WindowOrganizerController;->mTransactionCallbacksByPendingSyncId:Ljava/util/HashMap;
 
@@ -1380,7 +1419,7 @@
 .end method
 
 .method public takeScreenshot(Landroid/window/WindowContainerToken;Landroid/view/SurfaceControl;)Z
-    .locals 7
+    .locals 8
 
     iget-object v0, p0, Lcom/android/server/wm/WindowOrganizerController;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -1497,25 +1536,31 @@
 
     move-result-object v2
 
+    const-string v5, "WindowOrganizerController.takeScreenshot"
+
+    invoke-virtual {v2, v5}, Landroid/view/SurfaceControl$Builder;->setCallsite(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
+
+    move-result-object v2
+
     invoke-virtual {v2}, Landroid/view/SurfaceControl$Builder;->build()Landroid/view/SurfaceControl;
 
     move-result-object v2
 
-    new-instance v5, Landroid/view/Surface;
+    new-instance v6, Landroid/view/Surface;
 
-    invoke-direct {v5}, Landroid/view/Surface;-><init>()V
+    invoke-direct {v6}, Landroid/view/Surface;-><init>()V
 
-    invoke-virtual {v5, v2}, Landroid/view/Surface;->copyFrom(Landroid/view/SurfaceControl;)V
+    invoke-virtual {v6, v2}, Landroid/view/Surface;->copyFrom(Landroid/view/SurfaceControl;)V
 
     invoke-virtual {v3}, Landroid/view/SurfaceControl$ScreenshotGraphicBuffer;->getGraphicBuffer()Landroid/graphics/GraphicBuffer;
 
-    move-result-object v6
+    move-result-object v7
 
-    invoke-virtual {v5, v6, v4}, Landroid/view/Surface;->attachAndQueueBufferWithColorSpace(Landroid/graphics/GraphicBuffer;Landroid/graphics/ColorSpace;)V
+    invoke-virtual {v6, v7, v4}, Landroid/view/Surface;->attachAndQueueBufferWithColorSpace(Landroid/graphics/GraphicBuffer;Landroid/graphics/ColorSpace;)V
 
-    invoke-virtual {v5}, Landroid/view/Surface;->release()V
+    invoke-virtual {v6}, Landroid/view/Surface;->release()V
 
-    invoke-virtual {p2, v2}, Landroid/view/SurfaceControl;->copyFrom(Landroid/view/SurfaceControl;)V
+    invoke-virtual {p2, v2, v5}, Landroid/view/SurfaceControl;->copyFrom(Landroid/view/SurfaceControl;Ljava/lang/String;)V
 
     const/4 v4, 0x1
 

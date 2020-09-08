@@ -217,6 +217,30 @@
     return v0
 .end method
 
+.method private getContentFrame(Lcom/android/server/wm/WindowState;)Landroid/graphics/Rect;
+    .locals 2
+
+    iget-object v0, p1, Lcom/android/server/wm/WindowState;->mToken:Lcom/android/server/wm/WindowToken;
+
+    iget v1, p0, Lcom/android/server/wm/BarController;->mWindowType:I
+
+    invoke-virtual {v0, v1}, Lcom/android/server/wm/WindowToken;->getFixedRotationBarContentFrame(I)Landroid/graphics/Rect;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    move-object v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v1, p0, Lcom/android/server/wm/BarController;->mContentFrame:Landroid/graphics/Rect;
+
+    :goto_0
+    return-object v1
+.end method
+
 .method private setTransientBarState(I)V
     .locals 2
 
@@ -720,6 +744,29 @@
     throw v1
 .end method
 
+.method isLightAppearanceAllowed(Lcom/android/server/wm/WindowState;)Z
+    .locals 2
+
+    const/4 v0, 0x1
+
+    if-nez p1, :cond_0
+
+    return v0
+
+    :cond_0
+    invoke-direct {p0, p1}, Lcom/android/server/wm/BarController;->getContentFrame(Lcom/android/server/wm/WindowState;)Landroid/graphics/Rect;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Lcom/android/server/wm/WindowState;->isLetterboxedOverlappingWith(Landroid/graphics/Rect;)Z
+
+    move-result v1
+
+    xor-int/2addr v0, v1
+
+    return v0
+.end method
+
 .method isTransientShowRequested()Z
     .locals 2
 
@@ -759,7 +806,7 @@
 .end method
 
 .method isTransparentAllowed(Lcom/android/server/wm/WindowState;)Z
-    .locals 3
+    .locals 1
 
     if-nez p1, :cond_0
 
@@ -768,29 +815,15 @@
     return v0
 
     :cond_0
-    iget-object v0, p1, Lcom/android/server/wm/WindowState;->mToken:Lcom/android/server/wm/WindowToken;
-
-    iget v1, p0, Lcom/android/server/wm/BarController;->mWindowType:I
-
-    invoke-virtual {v0, v1}, Lcom/android/server/wm/WindowToken;->getFixedRotationBarContentFrame(I)Landroid/graphics/Rect;
+    invoke-direct {p0, p1}, Lcom/android/server/wm/BarController;->getContentFrame(Lcom/android/server/wm/WindowState;)Landroid/graphics/Rect;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    invoke-virtual {p1, v0}, Lcom/android/server/wm/WindowState;->letterboxNotIntersectsOrFullyContains(Landroid/graphics/Rect;)Z
 
-    move-object v1, v0
+    move-result v0
 
-    goto :goto_0
-
-    :cond_1
-    iget-object v1, p0, Lcom/android/server/wm/BarController;->mContentFrame:Landroid/graphics/Rect;
-
-    :goto_0
-    invoke-virtual {p1, v1}, Lcom/android/server/wm/WindowState;->letterboxNotIntersectsOrFullyContains(Landroid/graphics/Rect;)Z
-
-    move-result v2
-
-    return v2
+    return v0
 .end method
 
 .method setBarShowingLw(Z)Z

@@ -137,15 +137,15 @@
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/server/wm/InsetsPolicy;)Lcom/android/server/wm/DisplayContent;
+.method static synthetic access$200(Lcom/android/server/wm/InsetsPolicy;)Lcom/android/server/wm/WindowState;
     .locals 1
 
-    iget-object v0, p0, Lcom/android/server/wm/InsetsPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
+    iget-object v0, p0, Lcom/android/server/wm/InsetsPolicy;->mFocusedWin:Lcom/android/server/wm/WindowState;
 
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/server/wm/InsetsPolicy;)Lcom/android/server/wm/DisplayPolicy;
+.method static synthetic access$300(Lcom/android/server/wm/InsetsPolicy;)Lcom/android/server/wm/DisplayPolicy;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/wm/InsetsPolicy;->mPolicy:Lcom/android/server/wm/DisplayPolicy;
@@ -153,7 +153,15 @@
     return-object v0
 .end method
 
-.method static synthetic access$600(Lcom/android/server/wm/InsetsPolicy;)Z
+.method static synthetic access$400(Lcom/android/server/wm/InsetsPolicy;)Lcom/android/server/wm/DisplayContent;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/wm/InsetsPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
+
+    return-object v0
+.end method
+
+.method static synthetic access$700(Lcom/android/server/wm/InsetsPolicy;)Z
     .locals 1
 
     iget-boolean v0, p0, Lcom/android/server/wm/InsetsPolicy;->mAnimatingShown:Z
@@ -161,20 +169,12 @@
     return v0
 .end method
 
-.method static synthetic access$602(Lcom/android/server/wm/InsetsPolicy;Z)Z
+.method static synthetic access$702(Lcom/android/server/wm/InsetsPolicy;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/server/wm/InsetsPolicy;->mAnimatingShown:Z
 
     return p1
-.end method
-
-.method static synthetic access$700(Lcom/android/server/wm/InsetsPolicy;)Lcom/android/server/wm/WindowState;
-    .locals 1
-
-    iget-object v0, p0, Lcom/android/server/wm/InsetsPolicy;->mFocusedWin:Lcom/android/server/wm/WindowState;
-
-    return-object v0
 .end method
 
 .method static synthetic access$800(Lcom/android/server/wm/InsetsPolicy;)[F
@@ -186,7 +186,7 @@
 .end method
 
 .method private checkAbortTransient(Lcom/android/server/wm/WindowState;Landroid/view/InsetsState;)V
-    .locals 4
+    .locals 5
 
     iget-object v0, p0, Lcom/android/server/wm/InsetsPolicy;->mShowingTransientTypes:Landroid/util/IntArray;
 
@@ -194,7 +194,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     new-instance v0, Landroid/util/IntArray;
 
@@ -209,7 +209,7 @@
     add-int/lit8 v1, v1, -0x1
 
     :goto_0
-    if-ltz v1, :cond_1
+    if-ltz v1, :cond_2
 
     iget-object v2, p0, Lcom/android/server/wm/InsetsPolicy;->mShowingTransientTypes:Landroid/util/IntArray;
 
@@ -223,7 +223,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_0
+    if-eqz v3, :cond_1
 
     invoke-virtual {p2, v2}, Landroid/view/InsetsState;->getSource(I)Landroid/view/InsetsSource;
 
@@ -233,25 +233,85 @@
 
     move-result v3
 
+    if-eqz v3, :cond_1
+
+    if-nez v2, :cond_0
+
+    iget-object v3, p0, Lcom/android/server/wm/InsetsPolicy;->mPolicy:Lcom/android/server/wm/DisplayPolicy;
+
+    invoke-virtual {v3}, Lcom/android/server/wm/DisplayPolicy;->topAppHidesStatusBar()Z
+
+    move-result v3
+
     if-eqz v3, :cond_0
 
+    iget-object v3, p0, Lcom/android/server/wm/InsetsPolicy;->mPolicy:Lcom/android/server/wm/DisplayPolicy;
+
+    invoke-virtual {v3}, Lcom/android/server/wm/DisplayPolicy;->getTopFullscreenOpaqueWindow()Lcom/android/server/wm/WindowState;
+
+    move-result-object v3
+
+    invoke-virtual {p1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    sget-boolean v3, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_ONEPLUS:Z
+
+    if-eqz v3, :cond_1
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "checkAbortTransient skip for nonFull="
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v4, " topFull="
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v4, p0, Lcom/android/server/wm/InsetsPolicy;->mPolicy:Lcom/android/server/wm/DisplayPolicy;
+
+    invoke-virtual {v4}, Lcom/android/server/wm/DisplayPolicy;->getTopFullscreenOpaqueWindow()Lcom/android/server/wm/WindowState;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v4, "WindowManager"
+
+    invoke-static {v4, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_1
+
+    :cond_0
     iget-object v3, p0, Lcom/android/server/wm/InsetsPolicy;->mShowingTransientTypes:Landroid/util/IntArray;
 
     invoke-virtual {v3, v1}, Landroid/util/IntArray;->remove(I)V
 
     invoke-virtual {v0, v2}, Landroid/util/IntArray;->add(I)V
 
-    :cond_0
+    :cond_1
+    :goto_1
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     invoke-virtual {v0}, Landroid/util/IntArray;->size()I
 
     move-result v1
 
-    if-lez v1, :cond_2
+    if-lez v1, :cond_3
 
     iget-object v1, p0, Lcom/android/server/wm/InsetsPolicy;->mPolicy:Lcom/android/server/wm/DisplayPolicy;
 
@@ -271,7 +331,7 @@
 
     invoke-interface {v1, v2, v3}, Lcom/android/server/statusbar/StatusBarManagerInternal;->abortTransient(I[I)V
 
-    :cond_2
+    :cond_3
     return-void
 .end method
 
@@ -294,7 +354,7 @@
 
     iget-object v1, v0, Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener;->mControlCallbacks:Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener$InsetsPolicyAnimationControlCallbacks;
 
-    invoke-static {v1, p1, p2, p3}, Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener$InsetsPolicyAnimationControlCallbacks;->access$400(Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener$InsetsPolicyAnimationControlCallbacks;ILandroid/util/SparseArray;Z)V
+    invoke-static {v1, p1, p2, p3}, Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener$InsetsPolicyAnimationControlCallbacks;->access$600(Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener$InsetsPolicyAnimationControlCallbacks;ILandroid/util/SparseArray;Z)V
 
     return-void
 .end method
@@ -449,7 +509,7 @@
 .end method
 
 .method private getNavControlTarget(Lcom/android/server/wm/WindowState;Z)Lcom/android/server/wm/InsetsControlTarget;
-    .locals 2
+    .locals 3
 
     iget-object v0, p0, Lcom/android/server/wm/InsetsPolicy;->mShowingTransientTypes:Landroid/util/IntArray;
 
@@ -474,29 +534,97 @@
 
     move-result-object v0
 
-    if-ne p1, v0, :cond_1
+    if-ne p1, v0, :cond_3
 
-    return-object p1
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->getDisplayContent()Lcom/android/server/wm/DisplayContent;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/android/server/wm/InsetsPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
+
+    iget-object v0, v0, Lcom/android/server/wm/DisplayContent;->mFocusedApp:Lcom/android/server/wm/ActivityRecord;
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->getDisplayContent()Lcom/android/server/wm/DisplayContent;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/android/server/wm/DisplayContent;->mAppTransition:Lcom/android/server/wm/AppTransition;
+
+    invoke-virtual {v0}, Lcom/android/server/wm/AppTransition;->getAppTransition()I
+
+    move-result v0
+
+    invoke-static {v0}, Lcom/android/server/wm/AppTransition;->isKeyguardGoingAwayTransit(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/android/server/wm/InsetsPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
+
+    iget-object v0, v0, Lcom/android/server/wm/DisplayContent;->mFocusedApp:Lcom/android/server/wm/ActivityRecord;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/android/server/wm/ActivityRecord;->findMainWindow(Z)Lcom/android/server/wm/WindowState;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    sget-boolean v1, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_ONEPLUS:Z
+
+    if-eqz v1, :cond_1
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "skip focus on NotificationShade for going away appWin="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "WindowManager"
+
+    invoke-static {v2, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
-    if-eqz p2, :cond_2
+    return-object v0
+
+    :cond_2
+    return-object p1
+
+    :cond_3
+    if-eqz p2, :cond_4
 
     const/4 v0, 0x0
 
     return-object v0
 
-    :cond_2
+    :cond_4
     invoke-direct {p0}, Lcom/android/server/wm/InsetsPolicy;->forceShowsNavigationBarTransiently()Z
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_5
 
     iget-object v0, p0, Lcom/android/server/wm/InsetsPolicy;->mDummyControlTarget:Lcom/android/server/wm/InsetsControlTarget;
 
     return-object v0
 
-    :cond_3
+    :cond_5
     return-object p1
 .end method
 
@@ -1122,13 +1250,13 @@
 
     const/4 v4, 0x0
 
-    invoke-static {v3, v1, v4}, Lcom/android/server/wm/InsetsPolicy$BarWindow;->access$300(Lcom/android/server/wm/InsetsPolicy$BarWindow;Lcom/android/server/wm/InsetsControlTarget;I)V
+    invoke-static {v3, v1, v4}, Lcom/android/server/wm/InsetsPolicy$BarWindow;->access$500(Lcom/android/server/wm/InsetsPolicy$BarWindow;Lcom/android/server/wm/InsetsControlTarget;I)V
 
     iget-object v3, p0, Lcom/android/server/wm/InsetsPolicy;->mNavBar:Lcom/android/server/wm/InsetsPolicy$BarWindow;
 
     const/4 v4, 0x1
 
-    invoke-static {v3, v2, v4}, Lcom/android/server/wm/InsetsPolicy$BarWindow;->access$300(Lcom/android/server/wm/InsetsPolicy$BarWindow;Lcom/android/server/wm/InsetsControlTarget;I)V
+    invoke-static {v3, v2, v4}, Lcom/android/server/wm/InsetsPolicy$BarWindow;->access$500(Lcom/android/server/wm/InsetsPolicy$BarWindow;Lcom/android/server/wm/InsetsControlTarget;I)V
 
     iget-object v3, p0, Lcom/android/server/wm/InsetsPolicy;->mPolicy:Lcom/android/server/wm/DisplayPolicy;
 

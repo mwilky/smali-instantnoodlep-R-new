@@ -460,13 +460,13 @@
 
     move-object/from16 v56, v8
 
-    move-object v8, v10
+    move-object v7, v10
 
     move-object/from16 v59, v12
 
-    move-object v6, v14
+    move-object v4, v14
 
-    move-object v7, v15
+    move-object v6, v15
 
     goto/16 :goto_3
 
@@ -523,13 +523,13 @@
 
     move-object/from16 v55, v7
 
-    move-object v8, v10
+    move-object v7, v10
 
     move-object/from16 v59, v12
 
-    move-object v6, v14
+    move-object v4, v14
 
-    move-object v7, v15
+    move-object v6, v15
 
     move-object/from16 v56, v17
 
@@ -542,13 +542,13 @@
 
     move-object/from16 v56, v8
 
-    move-object v8, v10
+    move-object v7, v10
 
     move-object/from16 v59, v12
 
-    move-object v6, v14
+    move-object v4, v14
 
-    move-object v7, v15
+    move-object v6, v15
 
     goto/16 :goto_3
 
@@ -564,19 +564,21 @@
 
     if-nez v8, :cond_2
 
+    move-object/from16 v22, v4
+
     move-object/from16 v20, v6
 
     move-object/from16 v55, v7
 
     move-object/from16 v57, v8
 
-    move-object v8, v10
+    move-object v7, v10
 
     move-object/from16 v59, v12
 
-    move-object v6, v14
+    move-object v4, v14
 
-    move-object v7, v15
+    move-object v6, v15
 
     move-object/from16 v56, v17
 
@@ -801,11 +803,25 @@
 
     move-result-object v2
 
+    move-object/from16 v18, v0
+
+    new-instance v0, Landroid/view/InsetsState;
+
+    move-object/from16 v22, v4
+
     invoke-virtual {v2, v8}, Lcom/android/server/wm/InsetsPolicy;->getInsetsForDispatch(Lcom/android/server/wm/WindowState;)Landroid/view/InsetsState;
 
-    move-result-object v18
+    move-result-object v4
 
-    move-object/from16 v5, v18
+    invoke-direct {v0, v4}, Landroid/view/InsetsState;-><init>(Landroid/view/InsetsState;)V
+
+    move-object v4, v0
+
+    invoke-virtual {v8}, Lcom/android/server/wm/WindowState;->getRequestedInsetsState()Landroid/view/InsetsState;
+
+    move-result-object v0
+
+    invoke-static {v4, v0}, Lcom/android/server/wm/TaskSnapshotController;->mergeInsetsSources(Landroid/view/InsetsState;Landroid/view/InsetsState;)V
 
     monitor-exit v3
     :try_end_9
@@ -814,9 +830,9 @@
     invoke-static {}, Lcom/android/server/wm/WindowManagerService;->resetPriorityAfterLockedSection()V
 
     :try_start_a
-    iget v4, v14, Lcom/android/server/wm/TaskSnapshotSurface$Window;->mSeq:I
+    iget v0, v14, Lcom/android/server/wm/TaskSnapshotSurface$Window;->mSeq:I
 
-    const/16 v0, 0x8
+    const/16 v18, 0x8
 
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/ActivityRecord;->getDisplayContent()Lcom/android/server/wm/DisplayContent;
 
@@ -824,11 +840,11 @@
 
     invoke-virtual {v2}, Lcom/android/server/wm/DisplayContent;->getDisplayId()I
 
-    move-result v18
+    move-result v20
     :try_end_a
     .catch Landroid/os/RemoteException; {:try_start_a .. :try_end_a} :catch_1
 
-    const/16 v20, 0x0
+    const/16 v21, 0x0
 
     move/from16 v52, v19
 
@@ -836,17 +852,21 @@
 
     move-object v3, v14
 
+    move-object v5, v4
+
+    move v4, v0
+
     move-object/from16 v53, v5
 
     move-object v5, v15
 
     move-object/from16 v54, v6
 
-    move v6, v0
+    move/from16 v6, v18
 
     move-object/from16 v55, v7
 
-    move/from16 v7, v18
+    move/from16 v7, v20
 
     move-object/from16 v57, v8
 
@@ -860,7 +880,7 @@
 
     move-object/from16 v59, v12
 
-    move-object/from16 v12, v20
+    move-object/from16 v12, v21
 
     move-object/from16 v60, v14
 
@@ -906,7 +926,7 @@
     :catch_1
     move-exception v0
 
-    move-object/from16 v53, v5
+    move-object/from16 v53, v4
 
     move-object/from16 v54, v6
 
@@ -955,12 +975,12 @@
 
     move-object v2, v0
 
-    move-object/from16 v6, v60
+    move-object/from16 v4, v60
 
-    invoke-virtual {v6, v2}, Lcom/android/server/wm/TaskSnapshotSurface$Window;->setOuter(Lcom/android/server/wm/TaskSnapshotSurface;)V
+    invoke-virtual {v4, v2}, Lcom/android/server/wm/TaskSnapshotSurface$Window;->setOuter(Lcom/android/server/wm/TaskSnapshotSurface;)V
 
     :try_start_c
-    iget v0, v6, Lcom/android/server/wm/TaskSnapshotSurface$Window;->mSeq:I
+    iget v0, v4, Lcom/android/server/wm/TaskSnapshotSurface$Window;->mSeq:I
 
     const/16 v19, -0x1
 
@@ -978,15 +998,15 @@
     :try_end_c
     .catch Landroid/os/RemoteException; {:try_start_c .. :try_end_c} :catch_3
 
-    move-object v7, v15
+    move-object v6, v15
 
     move-object/from16 v15, v59
 
-    move-object/from16 v16, v6
+    move-object/from16 v16, v4
 
     move/from16 v17, v0
 
-    move-object/from16 v18, v7
+    move-object/from16 v18, v6
 
     move-object/from16 v25, v58
 
@@ -1017,37 +1037,39 @@
     :catch_3
     move-exception v0
 
-    move-object v7, v15
+    move-object v6, v15
 
     :goto_1
     move-object/from16 v3, v53
 
-    move-object/from16 v8, v58
+    move-object/from16 v7, v58
 
-    invoke-static {v8, v3}, Lcom/android/server/wm/TaskSnapshotController;->getSystemBarInsets(Landroid/graphics/Rect;Landroid/view/InsetsState;)Landroid/graphics/Rect;
+    invoke-static {v7, v3}, Lcom/android/server/wm/TaskSnapshotController;->getSystemBarInsets(Landroid/graphics/Rect;Landroid/view/InsetsState;)Landroid/graphics/Rect;
 
     move-result-object v0
 
-    invoke-virtual {v2, v8, v0}, Lcom/android/server/wm/TaskSnapshotSurface;->setFrames(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
+    invoke-virtual {v2, v7, v0}, Lcom/android/server/wm/TaskSnapshotSurface;->setFrames(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
 
     invoke-direct {v2}, Lcom/android/server/wm/TaskSnapshotSurface;->drawSnapshot()V
 
     return-object v2
 
     :cond_6
+    move-object/from16 v22, v4
+
     move-object/from16 v20, v6
 
     move-object/from16 v55, v7
 
     move-object/from16 v57, v8
 
-    move-object v8, v10
+    move-object v7, v10
 
     move-object/from16 v59, v12
 
-    move-object v6, v14
+    move-object v4, v14
 
-    move-object v7, v15
+    move-object v6, v15
 
     move-object/from16 v56, v17
 
@@ -1059,9 +1081,9 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v10, "TaskSnapshotSurface.create: Failed to find main window for activity="
+    const-string v8, "TaskSnapshotSurface.create: Failed to find main window for activity="
 
-    invoke-virtual {v2, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1084,13 +1106,13 @@
 
     move-object/from16 v55, v7
 
-    move-object v8, v10
+    move-object v7, v10
 
     move-object/from16 v59, v12
 
-    move-object v6, v14
+    move-object v4, v14
 
-    move-object v7, v15
+    move-object v6, v15
 
     move-object/from16 v56, v17
 
@@ -1103,13 +1125,13 @@
 
     move-object/from16 v56, v8
 
-    move-object v8, v10
+    move-object v7, v10
 
     move-object/from16 v59, v12
 
-    move-object v6, v14
+    move-object v4, v14
 
-    move-object v7, v15
+    move-object v6, v15
 
     :goto_3
     :try_start_f
@@ -1281,6 +1303,12 @@
     iget-object v4, p0, Lcom/android/server/wm/TaskSnapshotSurface;->mSurfaceControl:Landroid/view/SurfaceControl;
 
     invoke-virtual {v3, v4}, Landroid/view/SurfaceControl$Builder;->setParent(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Builder;
+
+    move-result-object v3
+
+    const-string v4, "TaskSnapshotSurface.drawSizeMismatchSnapshot"
+
+    invoke-virtual {v3, v4}, Landroid/view/SurfaceControl$Builder;->setCallsite(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
 
     move-result-object v3
 

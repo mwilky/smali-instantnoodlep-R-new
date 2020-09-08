@@ -16,7 +16,7 @@
 .method public abstract getLastFastChargeStatus()Z
 .end method
 
-.method public abstract init(Landroid/content/Context;)V
+.method public abstract init(Landroid/content/Context;Landroid/os/Handler;)V
 .end method
 
 .method public abstract registerObserver(ILandroid/os/Handler;)V
