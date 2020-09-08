@@ -136,7 +136,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/service/GlobalNotification$Builder;->mResources:Landroid/content/res/Resources;
 
-    const v1, 0x7f0f0082
+    const v1, 0x7f0f008e
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -156,7 +156,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/service/GlobalNotification$Builder;->mPreview:Landroid/graphics/Bitmap;
 
-    const v1, 0x7f0a00d7
+    const v1, 0x7f0a00d9
 
     if-eqz v0, :cond_0
 
@@ -178,7 +178,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/service/GlobalNotification$Builder;->mPreview:Landroid/graphics/Bitmap;
 
-    const v1, 0x7f0a00d6
+    const v1, 0x7f0a00d8
 
     if-eqz v0, :cond_0
 

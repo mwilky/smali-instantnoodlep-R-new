@@ -186,29 +186,23 @@
 
 .field public static final about_app_icon_size:I = 0x7f070055
 
-.field public static final btn_highlight_alpha_material:I = 0x7f070064
+.field public static final button_elevation_material:I = 0x7f070066
 
-.field public static final btn_highlight_alpha_material_dark:I = 0x7f070065
+.field public static final button_pressed_z_material:I = 0x7f070067
 
-.field public static final btn_highlight_alpha_material_light:I = 0x7f070066
+.field public static final compat_button_inset_horizontal_material:I = 0x7f07006d
 
-.field public static final button_elevation_material:I = 0x7f070069
+.field public static final compat_button_inset_vertical_material:I = 0x7f07006e
 
-.field public static final button_pressed_z_material:I = 0x7f07006a
+.field public static final compat_button_padding_horizontal_material:I = 0x7f07006f
 
-.field public static final compat_button_inset_horizontal_material:I = 0x7f070070
+.field public static final compat_button_padding_vertical_material:I = 0x7f070070
 
-.field public static final compat_button_inset_vertical_material:I = 0x7f070071
+.field public static final compat_control_corner_material:I = 0x7f070071
 
-.field public static final compat_button_padding_horizontal_material:I = 0x7f070072
+.field public static final compat_notification_large_icon_max_height:I = 0x7f070072
 
-.field public static final compat_button_padding_vertical_material:I = 0x7f070073
-
-.field public static final compat_control_corner_material:I = 0x7f070074
-
-.field public static final compat_notification_large_icon_max_height:I = 0x7f070075
-
-.field public static final compat_notification_large_icon_max_width:I = 0x7f070076
+.field public static final compat_notification_large_icon_max_width:I = 0x7f070073
 
 .field public static final disabled_alpha_material_dark:I = 0x7f07013d
 
@@ -462,19 +456,17 @@
 
 .field public static final op_dialog_picker_background_inset:I = 0x7f0702ab
 
-.field public static final op_line_space_multiplier_h2:I = 0x7f0702b0
+.field public static final op_line_space_multiplier_h2:I = 0x7f0702b1
 
-.field public static final op_list_item_min_height:I = 0x7f0702b1
+.field public static final op_list_item_min_height:I = 0x7f0702b2
 
-.field public static final op_progress_dialog_right_padding:I = 0x7f0702b2
+.field public static final op_progress_dialog_right_padding:I = 0x7f0702b3
 
-.field public static final op_reduce_padding_space2:I = 0x7f0702b3
+.field public static final op_reduce_padding_space2:I = 0x7f0702b4
 
-.field public static final op_ripple_radius:I = 0x7f0702b4
+.field public static final op_ripple_radius:I = 0x7f0702b5
 
-.field public static final op_seekbar_track_background_height_material:I = 0x7f0702b5
-
-.field public static final op_seekbar_track_progress_height_material:I = 0x7f0702b6
+.field public static final op_seekbar_track_background_height_material:I = 0x7f0702b6
 
 .field public static final op_spinner_material_padding_left:I = 0x7f0702b7
 
@@ -502,35 +494,39 @@
 
 .field public static final op_text_size_subtitle:I = 0x7f0702c3
 
-.field public static final op_toolbar_navigation_max_button_height:I = 0x7f0702c4
+.field public static final op_text_style_dialog_body1_size:I = 0x7f0702c4
 
-.field public static final search_view_preferred_height:I = 0x7f0702dc
+.field public static final op_text_style_dialog_title_size:I = 0x7f0702c5
 
-.field public static final search_view_preferred_width:I = 0x7f0702dd
+.field public static final op_toolbar_navigation_max_button_height:I = 0x7f0702c6
 
-.field public static final search_view_text_min_width:I = 0x7f0702de
+.field public static final search_view_preferred_height:I = 0x7f0702de
 
-.field public static final text_selection_highlight_alpha_material:I = 0x7f0702eb
+.field public static final search_view_preferred_width:I = 0x7f0702df
 
-.field public static final toolbar_elevation:I = 0x7f070305
+.field public static final search_view_text_min_width:I = 0x7f0702e0
 
-.field public static final toolbar_icon_min_width:I = 0x7f070306
+.field public static final text_selection_highlight_alpha_material:I = 0x7f0702ed
 
-.field public static final tooltip_corner_radius:I = 0x7f070307
+.field public static final toolbar_elevation:I = 0x7f070307
 
-.field public static final tooltip_horizontal_padding:I = 0x7f070308
+.field public static final toolbar_icon_min_width:I = 0x7f070308
 
-.field public static final tooltip_margin:I = 0x7f070309
+.field public static final tooltip_corner_radius:I = 0x7f070309
 
-.field public static final tooltip_precise_anchor_extra_offset:I = 0x7f07030a
+.field public static final tooltip_horizontal_padding:I = 0x7f07030a
 
-.field public static final tooltip_precise_anchor_threshold:I = 0x7f07030b
+.field public static final tooltip_margin:I = 0x7f07030b
 
-.field public static final tooltip_vertical_padding:I = 0x7f07030c
+.field public static final tooltip_precise_anchor_extra_offset:I = 0x7f07030c
 
-.field public static final tooltip_y_offset_non_touch:I = 0x7f07030d
+.field public static final tooltip_precise_anchor_threshold:I = 0x7f07030d
 
-.field public static final tooltip_y_offset_touch:I = 0x7f07030e
+.field public static final tooltip_vertical_padding:I = 0x7f07030e
+
+.field public static final tooltip_y_offset_non_touch:I = 0x7f07030f
+
+.field public static final tooltip_y_offset_touch:I = 0x7f070310
 
 
 # direct methods

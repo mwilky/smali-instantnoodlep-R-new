@@ -27,10 +27,16 @@
     <string name="abc_shareactionprovider_share_with">Delen met</string>
     <string name="abc_shareactionprovider_share_with_application">Delen met %s</string>
     <string name="abc_toolbar_collapse_description">Samenvouwen</string>
+    <string name="about_action_bar_title">Over</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Privacybeleid</string>
+    <string name="about_release_note_title">Updatelogboek:</string>
+    <string name="about_terms_service">Algemene gebruiksvoorwaarden</string>
     <string name="app_name">Schermafdruk</string>
     <string name="copy">Kopiëren</string>
     <string name="expand_button_title">Geavanceerd</string>
     <string name="got_it">Begrepen</string>
+    <string name="loading_text">Laden...</string>
     <string name="longshot_guide_not_support">Verlengde schermafdruk wordt niet ondersteund op deze pagina.</string>
     <string name="longshot_guide_support">Tap hier om Verlengde Schermafdruk te proberen.</string>
     <string name="not_set">Niet ingesteld</string>

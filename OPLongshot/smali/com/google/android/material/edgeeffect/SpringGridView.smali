@@ -1039,27 +1039,31 @@
 .end method
 
 .method public fling(I)V
-    .locals 4
+    .locals 3
 
     iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringGridView;->mAppbarLayout:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
 
     if-eqz v0, :cond_2
 
-    const/16 v1, 0x1f4
+    invoke-virtual {v0, p1}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->setContentViewVelocity(I)V
 
-    const/high16 v2, 0x3f800000    # 1.0f
+    const/16 v0, 0x1f4
 
-    const/16 v3, 0x1388
+    const/high16 v1, 0x3f800000    # 1.0f
 
-    if-le p1, v1, :cond_0
+    const/16 v2, 0x1388
 
-    if-ge p1, v3, :cond_0
+    if-le p1, v0, :cond_0
+
+    if-ge p1, v2, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringGridView;->mAppbarLayout:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
 
     invoke-virtual {v0}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->getFraction()F
 
     move-result v0
 
-    cmpg-float v0, v0, v2
+    cmpg-float v0, v0, v1
 
     if-gez v0, :cond_0
 
@@ -1070,7 +1074,7 @@
     return-void
 
     :cond_0
-    if-le p1, v3, :cond_1
+    if-le p1, v2, :cond_1
 
     iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringGridView;->mAppbarLayout:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
 
@@ -1078,13 +1082,15 @@
 
     move-result v0
 
-    cmpg-float v0, v0, v2
+    cmpg-float v0, v0, v1
 
     if-gez v0, :cond_1
 
     iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringGridView;->mAppbarLayout:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
 
-    invoke-virtual {v0}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->scrollTop()V
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->scrollTop(Z)V
 
     goto :goto_0
 

@@ -6,12 +6,42 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/oneplus/compat/app/ActivityManagerNative$IProcessObserverNative;,
+        Lcom/oneplus/compat/app/ActivityManagerNative$TaskSnapshotNative;,
+        Lcom/oneplus/compat/app/ActivityManagerNative$ITaskStackListenerNative;,
         Lcom/oneplus/compat/app/ActivityManagerNative$RecentTaskInfoNative;
     }
 .end annotation
 
 
+# static fields
+.field private static final TAG:Ljava/lang/String; = "ActivityManagerNative"
+
+.field private static mIProcessObserverMap:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap<",
+            "Lcom/oneplus/compat/app/ActivityManagerNative$IProcessObserverNative;",
+            "Lcom/oneplus/inner/app/ActivityManagerWrapper$IProcessObserverWrapper;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
 # direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    sput-object v0, Lcom/oneplus/compat/app/ActivityManagerNative;->mIProcessObserverMap:Ljava/util/HashMap;
+
+    return-void
+.end method
+
 .method public constructor <init>()V
     .locals 0
 
@@ -304,6 +334,48 @@
     return v0
 .end method
 
+.method public static getFilteredTasks(IZ)Ljava/util/List;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(IZ)",
+            "Ljava/util/List<",
+            "Landroid/app/ActivityManager$RunningTaskInfo;",
+            ">;"
+        }
+    .end annotation
+
+    invoke-static {p0, p1}, Lcom/oneplus/inner/app/ActivityManagerWrapper;->getFilteredTasks(IZ)Ljava/util/List;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static getTaskPkgList(I)Ljava/util/List;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)",
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-static {p0}, Lcom/oneplus/inner/app/ActivityManagerWrapper;->getTaskPkgList(I)Ljava/util/List;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method public static killUid(Landroid/app/ActivityManager;ILjava/lang/String;)V
     .locals 6
 
@@ -397,5 +469,117 @@
     invoke-static {v0, p0, v1}, Lcom/oneplus/utils/reflection/MethodReflection;->invokeMethod(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     :goto_1
+    return-void
+.end method
+
+.method public static registerProcessObserver(Lcom/oneplus/compat/app/ActivityManagerNative$IProcessObserverNative;)V
+    .locals 2
+
+    if-eqz p0, :cond_1
+
+    :try_start_0
+    sget-object v0, Lcom/oneplus/compat/app/ActivityManagerNative;->mIProcessObserverMap:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p0}, Lcom/oneplus/compat/app/ActivityManagerNative;->unregisterProcessObserver(Lcom/oneplus/compat/app/ActivityManagerNative$IProcessObserverNative;)V
+
+    :cond_0
+    new-instance v0, Lcom/oneplus/compat/app/ActivityManagerNative$2;
+
+    invoke-direct {v0, p0}, Lcom/oneplus/compat/app/ActivityManagerNative$2;-><init>(Lcom/oneplus/compat/app/ActivityManagerNative$IProcessObserverNative;)V
+
+    invoke-static {v0}, Lcom/oneplus/inner/app/ActivityManagerWrapper;->registerProcessObserver(Lcom/oneplus/inner/app/ActivityManagerWrapper$IProcessObserverWrapper;)V
+
+    sget-object v1, Lcom/oneplus/compat/app/ActivityManagerNative;->mIProcessObserverMap:Ljava/util/HashMap;
+
+    invoke-virtual {v1, p0, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    invoke-virtual {p0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "ActivityManagerNative"
+
+    invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
+.method public static registerTaskStackListener(Lcom/oneplus/compat/app/ActivityManagerNative$ITaskStackListenerNative;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    new-instance v0, Lcom/oneplus/compat/app/ActivityManagerNative$1;
+
+    invoke-direct {v0, p0}, Lcom/oneplus/compat/app/ActivityManagerNative$1;-><init>(Lcom/oneplus/compat/app/ActivityManagerNative$ITaskStackListenerNative;)V
+
+    invoke-static {v0}, Lcom/oneplus/inner/app/ActivityManagerWrapper;->registerTaskStackListener(Lcom/oneplus/inner/app/ActivityManagerWrapper$ITaskStackListenerWrapper;)V
+
+    return-void
+.end method
+
+.method public static unregisterProcessObserver(Lcom/oneplus/compat/app/ActivityManagerNative$IProcessObserverNative;)V
+    .locals 1
+
+    if-eqz p0, :cond_0
+
+    :try_start_0
+    sget-object v0, Lcom/oneplus/compat/app/ActivityManagerNative;->mIProcessObserverMap:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lcom/oneplus/compat/app/ActivityManagerNative;->mIProcessObserverMap:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oneplus/inner/app/ActivityManagerWrapper$IProcessObserverWrapper;
+
+    invoke-static {v0}, Lcom/oneplus/inner/app/ActivityManagerWrapper;->unregisterProcessObserver(Lcom/oneplus/inner/app/ActivityManagerWrapper$IProcessObserverWrapper;)V
+
+    sget-object v0, Lcom/oneplus/compat/app/ActivityManagerNative;->mIProcessObserverMap:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    invoke-virtual {p0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "ActivityManagerNative"
+
+    invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    :goto_0
     return-void
 .end method

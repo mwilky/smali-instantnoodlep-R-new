@@ -1272,6 +1272,104 @@
     return-void
 .end method
 
+.method public setSelection(I)V
+    .locals 7
+
+    invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatSpinner;->getSelectedItemPosition()I
+
+    move-result v0
+
+    if-ne p1, v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-super {p0, p1}, Landroid/widget/Spinner;->setSelection(I)V
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatSpinner;->getOnItemSelectedListener()Landroid/widget/AdapterView$OnItemSelectedListener;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatSpinner;->getOnItemSelectedListener()Landroid/widget/AdapterView$OnItemSelectedListener;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatSpinner;->getSelectedView()Landroid/view/View;
+
+    move-result-object v3
+
+    invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatSpinner;->getSelectedItemId()J
+
+    move-result-wide v5
+
+    move-object v2, p0
+
+    move v4, p1
+
+    invoke-interface/range {v1 .. v6}, Landroid/widget/AdapterView$OnItemSelectedListener;->onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public setSelection(IZ)V
+    .locals 6
+
+    invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatSpinner;->getSelectedItemPosition()I
+
+    move-result v0
+
+    if-ne p1, v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-super {p0, p1, p2}, Landroid/widget/Spinner;->setSelection(IZ)V
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatSpinner;->getOnItemSelectedListener()Landroid/widget/AdapterView$OnItemSelectedListener;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_1
+
+    invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatSpinner;->getOnItemSelectedListener()Landroid/widget/AdapterView$OnItemSelectedListener;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatSpinner;->getSelectedView()Landroid/view/View;
+
+    move-result-object v2
+
+    invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatSpinner;->getSelectedItemId()J
+
+    move-result-wide v4
+
+    move-object v1, p0
+
+    move v3, p1
+
+    invoke-interface/range {v0 .. v5}, Landroid/widget/AdapterView$OnItemSelectedListener;->onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+
+    :cond_1
+    return-void
+.end method
+
 .method public setSupportBackgroundTintList(Landroid/content/res/ColorStateList;)V
     .locals 1
 

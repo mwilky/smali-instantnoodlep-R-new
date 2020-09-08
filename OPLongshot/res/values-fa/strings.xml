@@ -27,10 +27,16 @@
     <string name="abc_shareactionprovider_share_with">هم‌رسانی با</string>
     <string name="abc_shareactionprovider_share_with_application">هم‌رسانی با %s</string>
     <string name="abc_toolbar_collapse_description">کوچک کردن</string>
+    <string name="about_action_bar_title">درباره</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">سیاست حفظ حریم خصوصی</string>
+    <string name="about_release_note_title">گزارش به‌روزرسانی:</string>
+    <string name="about_terms_service">شرایط استفاده از خدمات</string>
     <string name="app_name">عکس صفحه نمایش</string>
     <string name="copy">کپی</string>
     <string name="expand_button_title">پیشرفته</string>
     <string name="got_it">متوجه شدم</string>
+    <string name="loading_text">در حال بارگذاری...</string>
     <string name="longshot_guide_not_support">تصویر گسترش یافته در این صفحه پشتیبانی نمی شود.</string>
     <string name="longshot_guide_support">برای خروج از عکس صفحه نمایش گسترش یافته اینجا ضربه بزنید.</string>
     <string name="not_set">تنظیم نشده است</string>

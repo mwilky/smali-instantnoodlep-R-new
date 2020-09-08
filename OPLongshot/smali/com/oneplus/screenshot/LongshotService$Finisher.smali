@@ -46,9 +46,7 @@
     .locals 2
 
     :try_start_0
-    invoke-static {}, Lcom/oneplus/screenshot/LongshotService;->access$000()Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "Longshot.LongshotService"
 
     const-string v1, "Finisher.run"
 

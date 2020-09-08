@@ -50,6 +50,8 @@
 
 .field private lastStartedType:I
 
+.field private mContentVelocity:I
+
 .field private mFabList:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -245,7 +247,7 @@
 .end method
 
 .method private animateOffsetTo(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;IF)V
-    .locals 2
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -256,42 +258,75 @@
 
     invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->getTopBottomOffsetForScrollingSibling()I
 
-    move-result v0
+    move-result p4
 
-    sub-int/2addr v0, p3
+    sub-int/2addr p4, p3
+
+    invoke-static {p4}, Ljava/lang/Math;->abs(I)I
+
+    move-result p4
+
+    iget v0, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->mContentVelocity:I
 
     invoke-static {v0}, Ljava/lang/Math;->abs(I)I
 
     move-result v0
 
-    invoke-static {p4}, Ljava/lang/Math;->abs(F)F
-
-    move-result p4
-
-    const/4 v1, 0x0
-
-    cmpl-float v1, p4, v1
-
-    if-lez v1, :cond_0
+    int-to-float v0, v0
 
     const/high16 v1, 0x447a0000    # 1000.0f
 
-    int-to-float v0, v0
+    cmpg-float v1, v0, v1
 
-    div-float/2addr v0, p4
+    const/16 v2, 0xe1
 
-    mul-float/2addr v0, v1
+    if-gez v1, :cond_0
 
-    invoke-static {v0}, Ljava/lang/Math;->round(F)I
+    const/high16 v1, 0x43fa0000    # 500.0f
+
+    int-to-float p4, p4
+
+    div-float/2addr p4, v0
+
+    mul-float/2addr p4, v1
+
+    invoke-static {p4}, Ljava/lang/Math;->round(F)I
 
     move-result p4
 
-    mul-int/lit8 p4, p4, 0x3
+    invoke-static {v2, p4}, Ljava/lang/Math;->max(II)I
+
+    move-result p4
 
     goto :goto_0
 
     :cond_0
-    int-to-float p4, v0
+    const v1, 0x44bb8000    # 1500.0f
+
+    cmpl-float v1, v0, v1
+
+    if-lez v1, :cond_1
+
+    const v1, 0x451c4000    # 2500.0f
+
+    int-to-float p4, p4
+
+    div-float/2addr p4, v0
+
+    mul-float/2addr p4, v1
+
+    invoke-static {p4}, Ljava/lang/Math;->round(F)I
+
+    move-result p4
+
+    invoke-static {v2, p4}, Ljava/lang/Math;->max(II)I
+
+    move-result p4
+
+    goto :goto_0
+
+    :cond_1
+    int-to-float p4, p4
 
     invoke-virtual {p2}, Lcom/google/android/material/appbar/AppBarLayout;->getHeight()I
 
@@ -370,11 +405,11 @@
     :cond_2
     new-instance p1, Landroid/view/animation/PathInterpolator;
 
-    const p2, 0x3f19999a    # 0.6f
+    const p2, 0x3ebd70a4    # 0.37f
 
     const/4 v1, 0x0
 
-    const v2, 0x3ebd70a4    # 0.37f
+    const v2, 0x3f2b851f    # 0.67f
 
     const/high16 v3, 0x3f800000    # 1.0f
 
@@ -391,11 +426,13 @@
     goto :goto_0
 
     :cond_3
-    iget-object p1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->offsetAnimator:Landroid/animation/ValueAnimator;
+    new-instance p1, Landroid/view/animation/PathInterpolator;
 
-    sget-object p2, Landroidx/animation/AnimatorUtils;->op_control_interpolator_fast_out_slow_in_auxiliary:Landroid/view/animation/Interpolator;
+    invoke-direct {p1, v2, v1, v3, v3}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
 
-    invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+    iget-object p2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->offsetAnimator:Landroid/animation/ValueAnimator;
+
+    invoke-virtual {p2, p1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
     :goto_0
     iget-object p1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->offsetAnimator:Landroid/animation/ValueAnimator;
@@ -2408,6 +2445,14 @@
     invoke-direct {p1, p3}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object p1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->lastNestedScrollingChildRef:Ljava/lang/ref/WeakReference;
+
+    return-void
+.end method
+
+.method public setContentVelocity(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->mContentVelocity:I
 
     return-void
 .end method

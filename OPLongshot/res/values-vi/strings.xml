@@ -27,10 +27,16 @@
     <string name="abc_shareactionprovider_share_with">Chia sẻ với</string>
     <string name="abc_shareactionprovider_share_with_application">Chia sẻ với %s</string>
     <string name="abc_toolbar_collapse_description">Thu gọn</string>
+    <string name="about_action_bar_title">Giới thiệu</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Chính sách Riêng tư</string>
+    <string name="about_release_note_title">Lịch sử cập nhật:</string>
+    <string name="about_terms_service">Điều khoản Dịch vụ</string>
     <string name="app_name">Ảnh chụp màn hình</string>
     <string name="copy">Sao chép</string>
     <string name="expand_button_title">Nâng cao</string>
     <string name="got_it">Đã hiểu</string>
+    <string name="loading_text">Đang tải...</string>
     <string name="longshot_guide_not_support">Chụp màn hình mở rộng không được hỗ trợ trên trang này.</string>
     <string name="longshot_guide_support">Chạm vào đây để thử Chụp Màn hình Mở rộng.</string>
     <string name="not_set">Chưa đặt</string>

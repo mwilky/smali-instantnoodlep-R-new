@@ -27,10 +27,16 @@
     <string name="abc_shareactionprovider_share_with">Jaa…</string>
     <string name="abc_shareactionprovider_share_with_application">Jaa: %s</string>
     <string name="abc_toolbar_collapse_description">Tiivistä</string>
+    <string name="about_action_bar_title">Tietoja</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Yksityisyyden suoja</string>
+    <string name="about_release_note_title">Päivitysloki:</string>
+    <string name="about_terms_service">Palveluehdot</string>
     <string name="app_name">Kuvakaappaus</string>
     <string name="copy">Kopioi</string>
     <string name="expand_button_title">Lisäasetukset</string>
     <string name="got_it">Selvä</string>
+    <string name="loading_text">Ladataan...</string>
     <string name="longshot_guide_not_support">Laajennettuja kuvakaappauksia ei tueta tällä sivulla.</string>
     <string name="longshot_guide_support">Kokeile laajennettua kuvakaappausta napauttamalla tästä.</string>
     <string name="not_set">Ei asetettu</string>

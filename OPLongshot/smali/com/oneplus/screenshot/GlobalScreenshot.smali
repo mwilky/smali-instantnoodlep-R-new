@@ -381,7 +381,7 @@
 
     iput-object v6, v0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotLayout:Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;
 
-    const v8, 0x7f0a00c0
+    const v8, 0x7f0a00c2
 
     invoke-virtual {v6, v8}, Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -393,7 +393,7 @@
 
     iget-object v6, v0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotLayout:Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;
 
-    const v8, 0x7f0a00bf
+    const v8, 0x7f0a00c1
 
     invoke-virtual {v6, v8}, Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -405,7 +405,7 @@
 
     iget-object v6, v0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotLayout:Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;
 
-    const v8, 0x7f0a00c1
+    const v8, 0x7f0a00c3
 
     invoke-virtual {v6, v8}, Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -417,7 +417,7 @@
 
     iget-object v6, v0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotLayout:Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;
 
-    const v8, 0x7f0a00c9
+    const v8, 0x7f0a00cb
 
     invoke-virtual {v6, v8}, Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -435,7 +435,7 @@
 
     iget-object v6, v0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotLayout:Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;
 
-    const v9, 0x7f0a00c2
+    const v9, 0x7f0a00c4
 
     invoke-virtual {v6, v9}, Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -447,7 +447,7 @@
 
     iget-object v6, v0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotLayout:Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;
 
-    const v9, 0x7f0a00c7
+    const v9, 0x7f0a00c9
 
     invoke-virtual {v6, v9}, Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -465,7 +465,7 @@
 
     iget-object v6, v0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotLayout:Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;
 
-    const v9, 0x7f0a00c6
+    const v9, 0x7f0a00c8
 
     invoke-virtual {v6, v9}, Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -483,7 +483,7 @@
 
     iget-object v6, v0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotLayout:Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;
 
-    const v9, 0x7f0a00c5
+    const v9, 0x7f0a00c7
 
     invoke-virtual {v6, v9}, Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -501,7 +501,7 @@
 
     iget-object v6, v0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotLayout:Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;
 
-    const v9, 0x7f0a00c3
+    const v9, 0x7f0a00c5
 
     invoke-virtual {v6, v9}, Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -513,7 +513,7 @@
 
     iget-object v6, v0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotLayout:Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;
 
-    const v9, 0x7f0a00c4
+    const v9, 0x7f0a00c6
 
     invoke-virtual {v6, v9}, Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -529,7 +529,7 @@
 
     iget-object v6, v0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotLayout:Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;
 
-    const v9, 0x7f0a0116
+    const v9, 0x7f0a0118
 
     invoke-virtual {v6, v9}, Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -543,7 +543,7 @@
 
     iget-object v6, v0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotLayout:Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;
 
-    const v9, 0x7f0a0114
+    const v9, 0x7f0a0116
 
     invoke-virtual {v6, v9}, Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -561,7 +561,7 @@
 
     iget-object v6, v0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotLayout:Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;
 
-    const v9, 0x7f0a0115
+    const v9, 0x7f0a0117
 
     invoke-virtual {v6, v9}, Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -818,7 +818,7 @@
 
     iput-object v1, v0, Lcom/oneplus/screenshot/GlobalScreenshot;->mQuickShareScreen:Landroid/view/ViewGroup;
 
-    const v2, 0x7f0a0176
+    const v2, 0x7f0a0177
 
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -830,7 +830,7 @@
 
     iget-object v1, v0, Lcom/oneplus/screenshot/GlobalScreenshot;->mQuickShareScreen:Landroid/view/ViewGroup;
 
-    const v2, 0x7f0a0177
+    const v2, 0x7f0a0178
 
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -842,7 +842,7 @@
 
     iget-object v1, v0, Lcom/oneplus/screenshot/GlobalScreenshot;->mQuickShareScreen:Landroid/view/ViewGroup;
 
-    const v2, 0x7f0a0178
+    const v2, 0x7f0a0179
 
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -854,7 +854,7 @@
 
     iget-object v1, v0, Lcom/oneplus/screenshot/GlobalScreenshot;->mQuickShareScreen:Landroid/view/ViewGroup;
 
-    const v2, 0x7f0a0172
+    const v2, 0x7f0a0173
 
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -866,7 +866,7 @@
 
     iget-object v1, v0, Lcom/oneplus/screenshot/GlobalScreenshot;->mQuickShareScreen:Landroid/view/ViewGroup;
 
-    const v2, 0x7f0a0174
+    const v2, 0x7f0a0175
 
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -1612,7 +1612,7 @@
 
     iget-object v0, v11, Lcom/oneplus/screenshot/GlobalScreenshot;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f0c0009
+    const v1, 0x7f0c000a
 
     invoke-static {v0, v1}, Landroid/view/animation/AnimationUtils;->loadInterpolator(Landroid/content/Context;I)Landroid/view/animation/Interpolator;
 
@@ -2749,17 +2749,36 @@
 
     iget p1, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mWindowState:I
 
-    if-nez p1, :cond_a
+    if-nez p1, :cond_b
 
+    iget-object p1, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mSaveInBgTask:Landroid/os/AsyncTask;
+
+    invoke-virtual {p1}, Landroid/os/AsyncTask;->getStatus()Landroid/os/AsyncTask$Status;
+
+    move-result-object p1
+
+    sget-object v0, Landroid/os/AsyncTask$Status;->FINISHED:Landroid/os/AsyncTask$Status;
+
+    if-eq p1, v0, :cond_a
+
+    iget-object p1, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mSaveInBgTask:Landroid/os/AsyncTask;
+
+    invoke-virtual {p1}, Landroid/os/AsyncTask;->isCancelled()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_b
+
+    :cond_a
     iget-object p1, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenBitmap:Landroid/graphics/Bitmap;
 
-    if-eqz p1, :cond_a
+    if-eqz p1, :cond_b
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->isRecycled()Z
 
     move-result p1
 
-    if-nez p1, :cond_a
+    if-nez p1, :cond_b
 
     iget-object p1, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenBitmap:Landroid/graphics/Bitmap;
 
@@ -2767,7 +2786,7 @@
 
     iput-object v3, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenBitmap:Landroid/graphics/Bitmap;
 
-    :cond_a
+    :cond_b
     const-string p1, "endSmallScreenshotAnim end"
 
     invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
@@ -3129,7 +3148,7 @@
 
     check-cast v0, Landroid/view/LayoutInflater;
 
-    const v1, 0x7f0d00b1
+    const v1, 0x7f0d00b2
 
     const/4 v2, 0x0
 
@@ -3141,7 +3160,7 @@
 
     iput-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mSmallScreen:Landroid/view/ViewGroup;
 
-    const v1, 0x7f0a018b
+    const v1, 0x7f0a018c
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -3153,7 +3172,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mSmallScreen:Landroid/view/ViewGroup;
 
-    const v1, 0x7f0a018c
+    const v1, 0x7f0a018d
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -3165,7 +3184,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mSmallScreen:Landroid/view/ViewGroup;
 
-    const v1, 0x7f0a0189
+    const v1, 0x7f0a018a
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -3177,7 +3196,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mSmallScreen:Landroid/view/ViewGroup;
 
-    const v1, 0x7f0a018a
+    const v1, 0x7f0a018b
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -3414,7 +3433,7 @@
 
     invoke-direct {v1, p0, v2}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    const v2, 0x7f0f007b
+    const v2, 0x7f0f0087
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3436,7 +3455,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0801c6
+    const v1, 0x7f0801c4
 
     invoke-virtual {v0, v1}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
@@ -3466,7 +3485,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f060202
+    const v1, 0x7f0601f7
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getColor(I)I
 
@@ -3757,7 +3776,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0702e8
+    const v3, 0x7f0702ea
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -4193,13 +4212,23 @@
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    sget-boolean v2, Lcom/oneplus/screenshot/longshot/util/Configs;->isEncryptImage:Z
+
+    if-eqz v2, :cond_0
+
+    const-string v2, "image/png"
+
+    goto :goto_0
+
+    :cond_0
     const-string v2, "image/jpeg"
 
+    :goto_0
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
     const v2, 0x10008000
 
-    invoke-virtual {v1, v2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+    invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     const v2, -0x7fffff3d
 
@@ -4261,7 +4290,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
     invoke-virtual {p1}, Lcom/oneplus/screenshot/util/AppIconInfo;->getPackagName()Ljava/lang/String;
 
@@ -4273,9 +4302,9 @@
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_0
+    :cond_1
     const-string p1, "SHARE"
 
     invoke-static {v1, p1}, Landroid/content/Intent;->createChooser(Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;
@@ -4292,14 +4321,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    goto :goto_1
 
     :catch_0
     move-exception p1
 
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
-    :goto_0
+    :goto_1
     return-void
 .end method
 
@@ -4472,7 +4501,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotShareGuider:Landroid/view/ViewGroup;
 
-    const v1, 0x7f0a00fa
+    const v1, 0x7f0a00fc
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -4482,7 +4511,7 @@
 
     iget-object v1, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotShareGuider:Landroid/view/ViewGroup;
 
-    const v2, 0x7f0a00fb
+    const v2, 0x7f0a00fd
 
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -4492,7 +4521,7 @@
 
     iget-object v2, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotShareGuider:Landroid/view/ViewGroup;
 
-    const v3, 0x7f0a0173
+    const v3, 0x7f0a0174
 
     invoke-virtual {v2, v3}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -4500,7 +4529,7 @@
 
     iget-object v3, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotShareGuider:Landroid/view/ViewGroup;
 
-    const v4, 0x7f0a01e5
+    const v4, 0x7f0a01e7
 
     invoke-virtual {v3, v4}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -4510,7 +4539,7 @@
 
     iget-object v4, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotShareGuider:Landroid/view/ViewGroup;
 
-    const v5, 0x7f0a011a
+    const v5, 0x7f0a011c
 
     invoke-virtual {v4, v5}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -4530,7 +4559,7 @@
 
     iget-object v6, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mContext:Landroid/content/Context;
 
-    const v7, 0x7f0f0076
+    const v7, 0x7f0f0082
 
     invoke-virtual {v6, v7}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -4540,7 +4569,7 @@
 
     iget-object v3, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mContext:Landroid/content/Context;
 
-    const v6, 0x7f0f0073
+    const v6, 0x7f0f007f
 
     invoke-virtual {v3, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -4584,7 +4613,7 @@
 
     move-result-object v7
 
-    const v8, 0x7f0702e1
+    const v8, 0x7f0702e3
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -4790,6 +4819,16 @@
     iget v2, p6, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     or-int/lit16 v2, v2, 0x400
+
+    iput v2, p6, Landroid/view/WindowManager$LayoutParams;->flags:I
+
+    iget-object p6, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mWindowLayoutParams:Landroid/view/WindowManager$LayoutParams;
+
+    iget v2, p6, Landroid/view/WindowManager$LayoutParams;->flags:I
+
+    const/high16 v4, 0x8000000
+
+    or-int/2addr v2, v4
 
     iput v2, p6, Landroid/view/WindowManager$LayoutParams;->flags:I
 
@@ -5049,7 +5088,7 @@
 .end method
 
 .method private updateSmall()V
-    .locals 5
+    .locals 4
 
     iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mContext:Landroid/content/Context;
 
@@ -5061,46 +5100,6 @@
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
-
-    const v1, 0x7f070228
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v1
-
-    const v2, 0x7f0702e2
-
-    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v2
-
-    const v3, 0x7f0702e1
-
-    invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v4
-
-    sub-int/2addr v2, v4
-
-    div-int/lit8 v2, v2, 0x2
-
-    sub-int/2addr v1, v2
-
-    iget-object v2, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mSmallScreenWindowLayoutParams:Landroid/view/WindowManager$LayoutParams;
-
-    iget v4, v2, Landroid/view/WindowManager$LayoutParams;->x:I
-
-    add-int/2addr v4, v1
-
-    iput v4, v2, Landroid/view/WindowManager$LayoutParams;->x:I
-
-    iget-object v1, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mWindowManager:Landroid/view/WindowManager;
-
-    iget-object v2, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mSmallScreen:Landroid/view/ViewGroup;
-
-    iget-object v4, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mSmallScreenWindowLayoutParams:Landroid/view/WindowManager$LayoutParams;
-
-    invoke-interface {v1, v2, v4}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     iget-object v1, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mDisplayMetrics:Landroid/util/DisplayMetrics;
 
@@ -5120,7 +5119,9 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    const v2, 0x7f0702e3
+
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
@@ -5269,7 +5270,7 @@
 .end method
 
 .method public onClick(Landroid/view/View;)V
-    .locals 3
+    .locals 4
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -5293,9 +5294,9 @@
 
     move-result v0
 
-    const v1, 0x7f0a0114
+    const v1, 0x7f0a0116
 
-    if-eq v0, v1, :cond_2
+    if-eq v0, v1, :cond_3
 
     packed-switch v0, :pswitch_data_0
 
@@ -5310,7 +5311,7 @@
 
     move-result p1
 
-    if-nez p1, :cond_1
+    if-nez p1, :cond_2
 
     iget-object p1, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mSmallScreenContorller:Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;
 
@@ -5318,11 +5319,11 @@
 
     move-result p1
 
-    if-nez p1, :cond_1
+    if-nez p1, :cond_2
 
     sget-boolean p1, Lcom/oneplus/screenshot/longshot/util/Configs;->isLongshotRunning:Z
 
-    if-nez p1, :cond_1
+    if-nez p1, :cond_2
 
     const/4 p1, 0x1
 
@@ -5368,21 +5369,36 @@
 
     invoke-direct {v0, v2}, Lcom/oneplus/screenshot/DeleteImageInBackgroundTask;-><init>(Landroid/content/Context;)V
 
-    new-array p1, p1, [Landroid/net/Uri;
+    new-array v2, p1, [Landroid/net/Uri;
 
-    iget-object v2, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mSaveInBgTask:Landroid/os/AsyncTask;
+    iget-object v3, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mSaveInBgTask:Landroid/os/AsyncTask;
 
-    check-cast v2, Lcom/oneplus/screenshot/SaveImageInBackgroundTask;
+    check-cast v3, Lcom/oneplus/screenshot/SaveImageInBackgroundTask;
 
-    invoke-virtual {v2}, Lcom/oneplus/screenshot/SaveImageInBackgroundTask;->getImageUri()Landroid/net/Uri;
+    invoke-virtual {v3}, Lcom/oneplus/screenshot/SaveImageInBackgroundTask;->getImageUri()Landroid/net/Uri;
 
-    move-result-object v2
+    move-result-object v3
 
-    aput-object v2, p1, v1
+    aput-object v3, v2, v1
 
-    invoke-virtual {v0, p1}, Lcom/oneplus/screenshot/DeleteImageInBackgroundTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v0, v2}, Lcom/oneplus/screenshot/DeleteImageInBackgroundTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     :cond_0
+    iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mSaveInBgTask:Landroid/os/AsyncTask;
+
+    invoke-virtual {v0}, Landroid/os/AsyncTask;->getStatus()Landroid/os/AsyncTask$Status;
+
+    move-result-object v0
+
+    sget-object v1, Landroid/os/AsyncTask$Status;->RUNNING:Landroid/os/AsyncTask$Status;
+
+    if-ne v0, v1, :cond_1
+
+    iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mSaveInBgTask:Landroid/os/AsyncTask;
+
+    invoke-virtual {v0, p1}, Landroid/os/AsyncTask;->cancel(Z)Z
+
+    :cond_1
     iget-object p1, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mNotificationManager:Landroid/app/NotificationManager;
 
     sget v0, Lcom/oneplus/compat/messages/nano/SystemMessageProtoNative$SystemMessage;->NOTE_GLOBAL_SCREENSHOT:I
@@ -5405,7 +5421,7 @@
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    :cond_1
+    :cond_2
     :pswitch_1
     return-void
 
@@ -5440,7 +5456,7 @@
 
     return-void
 
-    :cond_2
+    :cond_3
     invoke-direct {p0}, Lcom/oneplus/screenshot/GlobalScreenshot;->hideLongshotGuider()V
 
     iget-object p1, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotLayout:Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;
@@ -5455,10 +5471,8 @@
 
     return-void
 
-    nop
-
     :pswitch_data_0
-    .packed-switch 0x7f0a00c4
+    .packed-switch 0x7f0a00c6
         :pswitch_5
         :pswitch_4
         :pswitch_3
@@ -5466,7 +5480,7 @@
     .end packed-switch
 
     :pswitch_data_1
-    .packed-switch 0x7f0a0189
+    .packed-switch 0x7f0a018a
         :pswitch_1
         :pswitch_0
     .end packed-switch
@@ -6110,7 +6124,7 @@
 
     iget-object v1, v7, Lcom/oneplus/screenshot/GlobalScreenshot;->mNotificationManager:Landroid/app/NotificationManager;
 
-    const v2, 0x7f0f007c
+    const v2, 0x7f0f0088
 
     invoke-static {v0, v1, v2}, Lcom/oneplus/screenshot/GlobalScreenshot;->notifyScreenshotError(Landroid/content/Context;Landroid/app/NotificationManager;I)V
 
@@ -6418,7 +6432,7 @@
 
     iput-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotLayout:Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;
 
-    const v1, 0x7f0a00c0
+    const v1, 0x7f0a00c2
 
     invoke-virtual {v0, v1}, Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -6430,7 +6444,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotLayout:Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;
 
-    const v1, 0x7f0a00bf
+    const v1, 0x7f0a00c1
 
     invoke-virtual {v0, v1}, Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -6442,7 +6456,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotLayout:Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;
 
-    const v1, 0x7f0a00c1
+    const v1, 0x7f0a00c3
 
     invoke-virtual {v0, v1}, Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -6454,7 +6468,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotLayout:Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;
 
-    const v1, 0x7f0a00c9
+    const v1, 0x7f0a00cb
 
     invoke-virtual {v0, v1}, Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -6472,7 +6486,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotLayout:Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;
 
-    const v2, 0x7f0a00c2
+    const v2, 0x7f0a00c4
 
     invoke-virtual {v0, v2}, Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -6484,7 +6498,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotLayout:Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;
 
-    const v2, 0x7f0a00c7
+    const v2, 0x7f0a00c9
 
     invoke-virtual {v0, v2}, Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -6504,7 +6518,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotLayout:Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;
 
-    const v3, 0x7f0a00c6
+    const v3, 0x7f0a00c8
 
     invoke-virtual {v0, v3}, Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -6522,7 +6536,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotLayout:Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;
 
-    const v3, 0x7f0a00c5
+    const v3, 0x7f0a00c7
 
     invoke-virtual {v0, v3}, Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -6540,7 +6554,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotLayout:Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;
 
-    const v3, 0x7f0a00c3
+    const v3, 0x7f0a00c5
 
     invoke-virtual {v0, v3}, Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -6552,7 +6566,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotLayout:Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;
 
-    const v3, 0x7f0a00c4
+    const v3, 0x7f0a00c6
 
     invoke-virtual {v0, v3}, Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -6568,7 +6582,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotLayout:Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;
 
-    const v2, 0x7f0a0116
+    const v2, 0x7f0a0118
 
     invoke-virtual {v0, v2}, Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -6582,7 +6596,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotLayout:Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;
 
-    const v2, 0x7f0a0114
+    const v2, 0x7f0a0116
 
     invoke-virtual {v0, v2}, Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -6600,7 +6614,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotLayout:Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;
 
-    const v1, 0x7f0a0115
+    const v1, 0x7f0a0117
 
     invoke-virtual {v0, v1}, Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;->findViewById(I)Landroid/view/View;
 

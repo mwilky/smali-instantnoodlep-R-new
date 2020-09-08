@@ -1703,6 +1703,48 @@
     return p1
 .end method
 
+.method public dispatchTouchEvent(Landroid/view/MotionEvent;)Z
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/google/android/material/appbar/Appbar;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    instance-of v0, v0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Lcom/google/android/material/appbar/Appbar;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;
+
+    invoke-virtual {v0}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->isExistSynsText()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_0
+    invoke-super {p0, p1}, Landroid/view/ViewGroup;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_1
+    invoke-super {p0, p1}, Landroid/view/ViewGroup;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
 .method ensureCollapseButtonView()V
     .locals 4
 

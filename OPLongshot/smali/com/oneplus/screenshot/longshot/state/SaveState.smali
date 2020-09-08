@@ -235,7 +235,7 @@
 
     const/4 p2, 0x0
 
-    const v0, 0x7f0d00a6
+    const v0, 0x7f0d00a7
 
     invoke-interface {p1, p2, v0, p0}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->show(IILcom/oneplus/screenshot/longshot/app/LongshotDialog$OnShowListener;)V
 

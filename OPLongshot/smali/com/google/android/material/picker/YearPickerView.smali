@@ -107,6 +107,20 @@
 
     invoke-virtual {p1, p2}, Lcom/google/android/material/picker/NumberPicker;->setSelectNumberCount(I)V
 
+    iget-object p1, p0, Lcom/google/android/material/picker/YearPickerView;->mPicker:Lcom/google/android/material/picker/NumberPicker;
+
+    const/4 p2, 0x0
+
+    invoke-virtual {p1, p2}, Lcom/google/android/material/picker/NumberPicker;->setWithoutSelectBoldText(Z)V
+
+    iget-object p1, p0, Lcom/google/android/material/picker/YearPickerView;->mPicker:Lcom/google/android/material/picker/NumberPicker;
+
+    new-instance p2, Lcom/google/android/material/picker/YearPickerView$1;
+
+    invoke-direct {p2, p0}, Lcom/google/android/material/picker/YearPickerView$1;-><init>(Lcom/google/android/material/picker/YearPickerView;)V
+
+    invoke-virtual {p1, p2}, Lcom/google/android/material/picker/NumberPicker;->setOnValueChangedListener(Lcom/google/android/material/picker/NumberPicker$OnValueChangeListener;)V
+
     return-void
 .end method
 

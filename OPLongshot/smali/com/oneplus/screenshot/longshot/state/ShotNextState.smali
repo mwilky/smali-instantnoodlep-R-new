@@ -169,14 +169,41 @@
 .end method
 
 .method public onCaptureSuccess(Landroid/graphics/Bitmap;)V
-    .locals 1
+    .locals 3
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/ShotNextState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
-    invoke-static {p1, v0}, Lcom/oneplus/screenshot/longshot/util/Configs;->processBitmapIfStitchByView(Landroid/graphics/Bitmap;Lcom/oneplus/screenshot/longshot/state/LongshotContext;)Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lcom/oneplus/screenshot/longshot/state/ShotNextState;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
+
+    invoke-virtual {v1}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->size()I
+
+    move-result v1
+
+    invoke-static {p1, v0, v1}, Lcom/oneplus/screenshot/longshot/util/Configs;->processBitmapIfStitchByView(Landroid/graphics/Bitmap;Lcom/oneplus/screenshot/longshot/state/LongshotContext;I)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
+    invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->blockLongshotByViewVisibility()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/ShotNextState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+
+    sget-object v1, Lcom/oneplus/screenshot/longshot/state/LongshotState;->UNSUPPORTED:Lcom/oneplus/screenshot/longshot/state/LongshotState;
+
+    const/4 v2, 0x0
+
+    invoke-interface {v0, v1, v2}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->updateState(Lcom/oneplus/screenshot/longshot/state/LongshotState;Lcom/oneplus/screenshot/longshot/state/LongshotAction$OnStateListener;)V
+
+    const-string v0, "Longshot.ShotNextState"
+
+    const-string v1, "unsupported blockScreenByViewVisibility"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
     iput-object p1, p0, Lcom/oneplus/screenshot/longshot/state/ShotNextState;->mBitmap:Landroid/graphics/Bitmap;
 
     iget-object p1, p0, Lcom/oneplus/screenshot/longshot/state/ShotNextState;->mBackgroundHandler:Landroid/os/Handler;

@@ -10,6 +10,7 @@
         Landroidx/preference/PreferenceManager$SimplePreferenceComparisonCallback;,
         Landroidx/preference/PreferenceManager$PreferenceComparisonCallback;,
         Landroidx/preference/PreferenceManager$OnNavigateToScreenListener;,
+        Landroidx/preference/PreferenceManager$OnDisMissPreferenceDialogListener;,
         Landroidx/preference/PreferenceManager$OnDisplayPreferenceDialogListener;,
         Landroidx/preference/PreferenceManager$OnPreferenceTreeClickListener;
     }
@@ -48,6 +49,8 @@
 .field private mNextRequestCode:I
 
 .field private mNoCommit:Z
+
+.field private mOnDisMissPreferenceDialogListener:Landroidx/preference/PreferenceManager$OnDisMissPreferenceDialogListener;
 
 .field private mOnDisplayPreferenceDialogListener:Landroidx/preference/PreferenceManager$OnDisplayPreferenceDialogListener;
 
@@ -240,6 +243,19 @@
     invoke-virtual {v0, p0}, Landroidx/preference/PreferenceScreen;->onAttachedToHierarchy(Landroidx/preference/PreferenceManager;)V
 
     return-object v0
+.end method
+
+.method protected disMissDialog()V
+    .locals 1
+
+    iget-object v0, p0, Landroidx/preference/PreferenceManager;->mOnDisMissPreferenceDialogListener:Landroidx/preference/PreferenceManager$OnDisMissPreferenceDialogListener;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Landroidx/preference/PreferenceManager$OnDisMissPreferenceDialogListener;->onDismissPreferenceDialog()V
+
+    :cond_0
+    return-void
 .end method
 
 .method public findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
@@ -641,6 +657,14 @@
     .locals 0
 
     iput-object p1, p0, Landroidx/preference/PreferenceManager;->mFragment:Landroidx/preference/PreferenceFragment;
+
+    return-void
+.end method
+
+.method public setOnDisMissPreferenceDialogListener(Landroidx/preference/PreferenceManager$OnDisMissPreferenceDialogListener;)V
+    .locals 0
+
+    iput-object p1, p0, Landroidx/preference/PreferenceManager;->mOnDisMissPreferenceDialogListener:Landroidx/preference/PreferenceManager$OnDisMissPreferenceDialogListener;
 
     return-void
 .end method

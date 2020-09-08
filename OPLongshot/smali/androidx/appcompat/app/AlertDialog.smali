@@ -224,25 +224,46 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    if-nez v0, :cond_1
 
+    iget-object v0, p0, Landroidx/appcompat/app/AlertDialog;->mContext:Landroid/content/Context;
+
+    instance-of v0, v0, Landroid/app/Activity;
+
+    if-eqz v0, :cond_3
+
+    :cond_1
     iget-object v0, p0, Landroidx/appcompat/app/AlertDialog;->mAlert:Landroidx/appcompat/app/AlertController;
 
     iget-boolean v0, v0, Landroidx/appcompat/app/AlertController;->mBottomShow:Z
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_3
 
     invoke-virtual {p0}, Landroidx/appcompat/app/AlertDialog;->getOwnerActivity()Landroid/app/Activity;
 
     move-result-object v0
 
+    if-nez v0, :cond_2
+
+    iget-object v0, p0, Landroidx/appcompat/app/AlertDialog;->mContext:Landroid/content/Context;
+
+    check-cast v0, Landroid/app/Activity;
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p0}, Landroidx/appcompat/app/AlertDialog;->getOwnerActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    :goto_0
     new-instance v1, Landroidx/appcompat/app/AlertDialog$1;
 
     invoke-direct {v1, p0}, Landroidx/appcompat/app/AlertDialog$1;-><init>(Landroidx/appcompat/app/AlertDialog;)V
 
     invoke-static {v0, v1}, Landroidx/appcompat/app/SoftKeyBoardListener;->setListener(Landroid/app/Activity;Landroidx/appcompat/app/SoftKeyBoardListener$OnSoftKeyBoardChangeListener;)V
 
-    :cond_1
+    :cond_3
     return-void
 .end method
 

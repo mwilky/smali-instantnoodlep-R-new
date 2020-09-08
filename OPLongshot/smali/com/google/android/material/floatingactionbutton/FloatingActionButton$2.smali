@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->showWithAnim()V
+    value = Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->hideWithAnim()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -41,7 +41,19 @@
 .end method
 
 .method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 0
+    .locals 1
+
+    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$2;->this$0:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->setClickable(Z)V
+
+    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$2;->this$0:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    const/4 v0, 0x4
+
+    invoke-virtual {p1, v0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->setVisibility(I)V
 
     return-void
 .end method
@@ -53,19 +65,7 @@
 .end method
 
 .method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 1
-
-    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$2;->this$0:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->setVisibility(I)V
-
-    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$2;->this$0:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->setClickable(Z)V
+    .locals 0
 
     return-void
 .end method

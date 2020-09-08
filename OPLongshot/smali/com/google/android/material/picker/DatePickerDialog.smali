@@ -320,6 +320,48 @@
     return-object v0
 .end method
 
+.method public onAttachedToWindow()V
+    .locals 3
+
+    invoke-super {p0}, Landroidx/appcompat/app/AlertDialog;->onAttachedToWindow()V
+
+    iget-object v0, p0, Lcom/google/android/material/picker/DatePickerDialog;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lcom/google/android/material/R$drawable;->op_dialog_material_background_bottom:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    new-instance v1, Landroid/graphics/drawable/InsetDrawable;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v0, v2}, Landroid/graphics/drawable/InsetDrawable;-><init>(Landroid/graphics/drawable/Drawable;I)V
+
+    iget-object v0, p0, Lcom/google/android/material/picker/DatePickerDialog;->mContext:Landroid/content/Context;
+
+    sget v2, Lcom/google/android/material/R$color;->op_control_bg_color_popup_default:I
+
+    invoke-virtual {v0, v2}, Landroid/content/Context;->getColor(I)I
+
+    move-result v0
+
+    invoke-virtual {v1, v0}, Landroid/graphics/drawable/InsetDrawable;->setTint(I)V
+
+    invoke-virtual {p0}, Lcom/google/android/material/picker/DatePickerDialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+.end method
+
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 3
 

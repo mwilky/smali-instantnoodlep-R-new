@@ -27,6 +27,8 @@
 
 .field public static final enum ATT:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
+.field public static final enum C532:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+
 .field public static final enum DEFAULT:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
 .field public static final enum EU:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
@@ -46,7 +48,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 12
+    .locals 13
 
     new-instance v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
@@ -138,13 +140,23 @@
 
     sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->ATT:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
-    const/16 v1, 0x9
+    new-instance v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+
+    const-string v1, "C532"
+
+    const/16 v11, 0x9
+
+    invoke-direct {v0, v1, v11}, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->C532:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+
+    const/16 v1, 0xa
 
     new-array v1, v1, [Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
-    sget-object v11, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->DEFAULT:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+    sget-object v12, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->DEFAULT:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
-    aput-object v11, v1, v2
+    aput-object v12, v1, v2
 
     sget-object v2, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->O2:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
@@ -174,7 +186,11 @@
 
     aput-object v2, v1, v9
 
-    aput-object v0, v1, v10
+    sget-object v2, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->ATT:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+
+    aput-object v2, v1, v10
+
+    aput-object v0, v1, v11
 
     sput-object v1, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->$VALUES:[Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 

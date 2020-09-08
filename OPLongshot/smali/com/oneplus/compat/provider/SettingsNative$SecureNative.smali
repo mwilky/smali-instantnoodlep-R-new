@@ -25,55 +25,75 @@
 
 .field public static final LOCATION_MODE_ON:I
 
+.field public static final NAVIGATION_MODE:Ljava/lang/String;
+
+.field public static final USER_SETUP_COMPLETE:Ljava/lang/String;
+
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 7
+    .locals 8
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const-string v1, "accessibility_shortcut_enabled"
+    const-string v1, "user_setup_complete"
 
-    const-string v2, "accessibility_shortcut_target_service"
+    const-string v2, "navigation_mode"
 
-    const-string v3, "location_changer"
+    const-string v3, "accessibility_shortcut_target_service"
 
-    const/4 v4, 0x1
+    const-string v4, "location_changer"
 
-    const/4 v5, 0x3
+    const/4 v5, 0x1
 
-    const/16 v6, 0x1d
+    const/4 v6, 0x3
 
-    if-lt v0, v6, :cond_0
+    const/16 v7, 0x1d
 
-    invoke-static {}, Lcom/oneplus/utils/Utils;->isWrapperSupport()Z
+    if-lt v0, v7, :cond_0
+
+    const-string v0, "10.14.0"
+
+    invoke-static {v0}, Lcom/oneplus/utils/Utils;->isWrapperSupport(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    sput v5, Lcom/oneplus/compat/provider/SettingsNative$SecureNative;->LOCATION_MODE_ON:I
+    sput v6, Lcom/oneplus/compat/provider/SettingsNative$SecureNative;->LOCATION_MODE_ON:I
 
-    sput v4, Lcom/oneplus/compat/provider/SettingsNative$SecureNative;->LOCATION_CHANGER_SYSTEM_SETTINGS:I
+    sput v5, Lcom/oneplus/compat/provider/SettingsNative$SecureNative;->LOCATION_CHANGER_SYSTEM_SETTINGS:I
 
-    sput-object v3, Lcom/oneplus/compat/provider/SettingsNative$SecureNative;->LOCATION_CHANGER:Ljava/lang/String;
+    sput-object v4, Lcom/oneplus/compat/provider/SettingsNative$SecureNative;->LOCATION_CHANGER:Ljava/lang/String;
 
-    sput-object v2, Lcom/oneplus/compat/provider/SettingsNative$SecureNative;->ACCESSIBILITY_SHORTCUT_TARGET_SERVICE:Ljava/lang/String;
+    sput-object v3, Lcom/oneplus/compat/provider/SettingsNative$SecureNative;->ACCESSIBILITY_SHORTCUT_TARGET_SERVICE:Ljava/lang/String;
 
-    sput-object v1, Lcom/oneplus/compat/provider/SettingsNative$SecureNative;->ACCESSIBILITY_SHORTCUT_ENABLED:Ljava/lang/String;
+    const-string v0, "DummyString"
+
+    sput-object v0, Lcom/oneplus/compat/provider/SettingsNative$SecureNative;->ACCESSIBILITY_SHORTCUT_ENABLED:Ljava/lang/String;
+
+    sput-object v2, Lcom/oneplus/compat/provider/SettingsNative$SecureNative;->NAVIGATION_MODE:Ljava/lang/String;
+
+    sput-object v1, Lcom/oneplus/compat/provider/SettingsNative$SecureNative;->USER_SETUP_COMPLETE:Ljava/lang/String;
 
     goto :goto_0
 
     :cond_0
-    sput v5, Lcom/oneplus/compat/provider/SettingsNative$SecureNative;->LOCATION_MODE_ON:I
+    sput v6, Lcom/oneplus/compat/provider/SettingsNative$SecureNative;->LOCATION_MODE_ON:I
 
-    sput v4, Lcom/oneplus/compat/provider/SettingsNative$SecureNative;->LOCATION_CHANGER_SYSTEM_SETTINGS:I
+    sput v5, Lcom/oneplus/compat/provider/SettingsNative$SecureNative;->LOCATION_CHANGER_SYSTEM_SETTINGS:I
 
-    sput-object v3, Lcom/oneplus/compat/provider/SettingsNative$SecureNative;->LOCATION_CHANGER:Ljava/lang/String;
+    sput-object v4, Lcom/oneplus/compat/provider/SettingsNative$SecureNative;->LOCATION_CHANGER:Ljava/lang/String;
 
-    sput-object v2, Lcom/oneplus/compat/provider/SettingsNative$SecureNative;->ACCESSIBILITY_SHORTCUT_TARGET_SERVICE:Ljava/lang/String;
+    sput-object v3, Lcom/oneplus/compat/provider/SettingsNative$SecureNative;->ACCESSIBILITY_SHORTCUT_TARGET_SERVICE:Ljava/lang/String;
 
-    sput-object v1, Lcom/oneplus/compat/provider/SettingsNative$SecureNative;->ACCESSIBILITY_SHORTCUT_ENABLED:Ljava/lang/String;
+    const-string v0, "accessibility_shortcut_enabled"
+
+    sput-object v0, Lcom/oneplus/compat/provider/SettingsNative$SecureNative;->ACCESSIBILITY_SHORTCUT_ENABLED:Ljava/lang/String;
+
+    sput-object v2, Lcom/oneplus/compat/provider/SettingsNative$SecureNative;->NAVIGATION_MODE:Ljava/lang/String;
+
+    sput-object v1, Lcom/oneplus/compat/provider/SettingsNative$SecureNative;->USER_SETUP_COMPLETE:Ljava/lang/String;
 
     :goto_0
     return-void

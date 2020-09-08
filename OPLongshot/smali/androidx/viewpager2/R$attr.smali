@@ -48,15 +48,15 @@
 
 .field public static final layoutManager:I = 0x7f0401dd
 
-.field public static final recyclerViewStyle:I = 0x7f04029a
+.field public static final recyclerViewStyle:I = 0x7f040297
 
-.field public static final reverseLayout:I = 0x7f04029b
+.field public static final reverseLayout:I = 0x7f040298
 
-.field public static final spanCount:I = 0x7f0402ce
+.field public static final spanCount:I = 0x7f0402cb
 
-.field public static final stackFromEnd:I = 0x7f0402d4
+.field public static final stackFromEnd:I = 0x7f0402d1
 
-.field public static final ttcIndex:I = 0x7f04036b
+.field public static final ttcIndex:I = 0x7f040368
 
 
 # direct methods

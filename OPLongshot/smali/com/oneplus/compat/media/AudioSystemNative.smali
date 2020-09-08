@@ -25,7 +25,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 10
+    .locals 8
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -33,21 +33,17 @@
 
     const/high16 v2, 0x8000000
 
-    const/16 v3, 0x70
+    const/4 v3, 0x2
 
-    const/16 v4, 0x380
+    const/4 v4, 0x0
 
-    const/4 v5, 0x2
+    const/16 v5, 0xa
 
-    const/4 v6, 0x0
+    const/4 v6, 0x1
 
-    const/16 v7, 0xa
+    const/16 v7, 0x1d
 
-    const/4 v8, 0x1
-
-    const/16 v9, 0x1d
-
-    if-lt v0, v9, :cond_0
+    if-lt v0, v7, :cond_0
 
     invoke-static {}, Lcom/oneplus/utils/Utils;->isWrapperSupport()Z
 
@@ -55,19 +51,21 @@
 
     if-eqz v0, :cond_0
 
-    sput v8, Lcom/oneplus/compat/media/AudioSystemNative;->FOR_MEDIA:I
+    sput v6, Lcom/oneplus/compat/media/AudioSystemNative;->FOR_MEDIA:I
 
-    sput v7, Lcom/oneplus/compat/media/AudioSystemNative;->FORCE_NO_BT_A2DP:I
+    sput v5, Lcom/oneplus/compat/media/AudioSystemNative;->FORCE_NO_BT_A2DP:I
 
-    sput v6, Lcom/oneplus/compat/media/AudioSystemNative;->FORCE_NONE:I
+    sput v4, Lcom/oneplus/compat/media/AudioSystemNative;->FORCE_NONE:I
 
-    sput v8, Lcom/oneplus/compat/media/AudioSystemNative;->FORCE_SPEAKER:I
+    sput v6, Lcom/oneplus/compat/media/AudioSystemNative;->FORCE_SPEAKER:I
 
-    sput v5, Lcom/oneplus/compat/media/AudioSystemNative;->FORCE_HEADPHONES:I
+    sput v3, Lcom/oneplus/compat/media/AudioSystemNative;->FORCE_HEADPHONES:I
 
-    sput v4, Lcom/oneplus/compat/media/AudioSystemNative;->DEVICE_OUT_ALL_A2DP:I
+    const/high16 v0, -0x80000000
 
-    sput v3, Lcom/oneplus/compat/media/AudioSystemNative;->DEVICE_OUT_ALL_SCO:I
+    sput v0, Lcom/oneplus/compat/media/AudioSystemNative;->DEVICE_OUT_ALL_A2DP:I
+
+    sput v0, Lcom/oneplus/compat/media/AudioSystemNative;->DEVICE_OUT_ALL_SCO:I
 
     sput v2, Lcom/oneplus/compat/media/AudioSystemNative;->DEVICE_OUT_HEARING_AID:I
 
@@ -76,19 +74,23 @@
     goto :goto_0
 
     :cond_0
-    sput v8, Lcom/oneplus/compat/media/AudioSystemNative;->FOR_MEDIA:I
+    sput v6, Lcom/oneplus/compat/media/AudioSystemNative;->FOR_MEDIA:I
 
-    sput v7, Lcom/oneplus/compat/media/AudioSystemNative;->FORCE_NO_BT_A2DP:I
+    sput v5, Lcom/oneplus/compat/media/AudioSystemNative;->FORCE_NO_BT_A2DP:I
 
-    sput v6, Lcom/oneplus/compat/media/AudioSystemNative;->FORCE_NONE:I
+    sput v4, Lcom/oneplus/compat/media/AudioSystemNative;->FORCE_NONE:I
 
-    sput v8, Lcom/oneplus/compat/media/AudioSystemNative;->FORCE_SPEAKER:I
+    sput v6, Lcom/oneplus/compat/media/AudioSystemNative;->FORCE_SPEAKER:I
 
-    sput v5, Lcom/oneplus/compat/media/AudioSystemNative;->FORCE_HEADPHONES:I
+    sput v3, Lcom/oneplus/compat/media/AudioSystemNative;->FORCE_HEADPHONES:I
 
-    sput v4, Lcom/oneplus/compat/media/AudioSystemNative;->DEVICE_OUT_ALL_A2DP:I
+    const/16 v0, 0x380
 
-    sput v3, Lcom/oneplus/compat/media/AudioSystemNative;->DEVICE_OUT_ALL_SCO:I
+    sput v0, Lcom/oneplus/compat/media/AudioSystemNative;->DEVICE_OUT_ALL_A2DP:I
+
+    const/16 v0, 0x70
+
+    sput v0, Lcom/oneplus/compat/media/AudioSystemNative;->DEVICE_OUT_ALL_SCO:I
 
     sput v2, Lcom/oneplus/compat/media/AudioSystemNative;->DEVICE_OUT_HEARING_AID:I
 

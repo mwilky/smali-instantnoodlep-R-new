@@ -27,9 +27,15 @@
     <string name="abc_shareactionprovider_share_with">వీరితో షేర్ చేస్తుంది</string>
     <string name="abc_shareactionprovider_share_with_application">%sతో షేర్ చేస్తుంది</string>
     <string name="abc_toolbar_collapse_description">కుదిస్తుంది</string>
+    <string name="about_action_bar_title">పరిచయం</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">గోప్యతా విధానం</string>
+    <string name="about_release_note_title">అప్‌డేట్ లాగ్:</string>
+    <string name="about_terms_service">సేవా నిబంధనలు</string>
     <string name="copy">కాపీ చేయి</string>
     <string name="expand_button_title">అధునాతనం</string>
     <string name="got_it">అర్థమైంది</string>
+    <string name="loading_text">లోడ్ అవుతోంది...</string>
     <string name="longshot_guide_not_support">ఈ పేజీ విస్తరించబడ్డ స్క్రీన్‌షాట్ మద్దతు ఇవ్వదు.</string>
     <string name="longshot_guide_support">విస్తరించబడ్డ స్క్రీన్‌షాట్ ప్రయత్నించడం కొరకు ఇక్కడ తట్టండి.</string>
     <string name="not_set">సెట్ చేయలేదు</string>

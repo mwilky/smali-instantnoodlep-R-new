@@ -27,10 +27,16 @@
     <string name="abc_shareactionprovider_share_with">Del med</string>
     <string name="abc_shareactionprovider_share_with_application">Del med %s</string>
     <string name="abc_toolbar_collapse_description">Skjul</string>
+    <string name="about_action_bar_title">Om</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Politik om beskyttelse af personlige oplysninger</string>
+    <string name="about_release_note_title">Opdateringslog:</string>
+    <string name="about_terms_service">Servicebetingelser</string>
     <string name="app_name">Skærmbillede</string>
     <string name="copy">Kopiér</string>
     <string name="expand_button_title">Avanceret</string>
     <string name="got_it">Forstået</string>
+    <string name="loading_text">Indlæser ...</string>
     <string name="longshot_guide_not_support">Udvidet screenshot understøttes ikke på denne side.</string>
     <string name="longshot_guide_support">Tryk her for at prøve Udvidet Screenshot.</string>
     <string name="not_set">Ikke angivet</string>

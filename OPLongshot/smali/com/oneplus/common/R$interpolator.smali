@@ -18,17 +18,17 @@
 
 .field public static final decelerate_quad:I = 0x7f0c0008
 
-.field public static final oneplus_control_grid_item_interpolator:I = 0x7f0c0011
+.field public static final oneplus_control_grid_item_interpolator:I = 0x7f0c0012
 
-.field public static final op_control_interpolator_fast_out_linear_in:I = 0x7f0c0012
+.field public static final op_control_interpolator_fast_out_linear_in:I = 0x7f0c0013
 
-.field public static final op_control_interpolator_fast_out_slow_in_auxiliary:I = 0x7f0c0013
+.field public static final op_control_interpolator_fast_out_slow_in_auxiliary:I = 0x7f0c0014
 
-.field public static final op_control_interpolator_fast_out_slow_in_reverse:I = 0x7f0c0014
+.field public static final op_control_interpolator_fast_out_slow_in_reverse:I = 0x7f0c0015
 
-.field public static final op_control_interpolator_fast_out_slow_in_standard:I = 0x7f0c0015
+.field public static final op_control_interpolator_fast_out_slow_in_standard:I = 0x7f0c0016
 
-.field public static final op_control_interpolator_linear_out_slow_in:I = 0x7f0c0016
+.field public static final op_control_interpolator_linear_out_slow_in:I = 0x7f0c0017
 
 
 # direct methods

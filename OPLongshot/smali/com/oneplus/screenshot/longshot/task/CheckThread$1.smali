@@ -43,7 +43,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/task/CheckThread$1;->val$context:Landroid/content/Context;
 
-    const v1, 0x7f0f00a7
+    const v1, 0x7f0f00b3
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

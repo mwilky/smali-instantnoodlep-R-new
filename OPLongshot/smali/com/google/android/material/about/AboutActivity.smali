@@ -232,6 +232,10 @@
 
     const/4 v4, 0x0
 
+    invoke-virtual {p0, v0}, Lcom/google/android/material/about/AboutActivity;->getSimpleVersion(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
     aput-object v0, v3, v4
 
     invoke-virtual {p0, v2, v3}, Lcom/google/android/material/about/AboutActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -323,6 +327,61 @@
     const/4 v0, 0x1
 
     return v0
+.end method
+
+.method public getAppNameTextView()Landroid/widget/TextView;
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/material/about/AboutActivity;->mAppName:Landroid/widget/TextView;
+
+    return-object v0
+.end method
+
+.method public getAppVersionTextView()Landroid/widget/TextView;
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/material/about/AboutActivity;->mAppVersion:Landroid/widget/TextView;
+
+    return-object v0
+.end method
+
+.method public getSimpleVersion(Ljava/lang/String;)Ljava/lang/String;
+    .locals 4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v1, "."
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->lastIndexOf(Ljava/lang/String;)I
+
+    move-result v1
+
+    if-lez v1, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v2
+
+    sub-int/2addr v2, v1
+
+    const/4 v3, 0x3
+
+    if-le v2, v3, :cond_0
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, p1, v1}, Ljava/lang/StringBuilder;->substring(II)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lcom/google/android/material/about/AboutActivity;->getSimpleVersion(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    :cond_0
+    return-object p1
 .end method
 
 .method public gotoPrivacy(Landroid/view/View;)V

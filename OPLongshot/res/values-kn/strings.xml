@@ -27,9 +27,15 @@
     <string name="abc_shareactionprovider_share_with">ಇವರೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಿ</string>
     <string name="abc_shareactionprovider_share_with_application">%s ನೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಿ</string>
     <string name="abc_toolbar_collapse_description">ಕುಗ್ಗಿಸಿ</string>
+    <string name="about_action_bar_title">ಕುರಿತು</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">ಖಾಸಗಿ ನೀತಿ</string>
+    <string name="about_release_note_title">ಪರಿಷ್ಕರಣೆ ಲಾಗ್:</string>
+    <string name="about_terms_service">ಸೇವೆಯ ನಿಯಮಗಳು</string>
     <string name="copy">ನಕಲಿಸಿ</string>
     <string name="expand_button_title">ಸುಧಾರಿತ</string>
     <string name="got_it">ಅರ್ಥವಾಯಿತು</string>
+    <string name="loading_text">ಲೋಡ್ ಆಗುತ್ತಿದೆ...</string>
     <string name="longshot_guide_not_support">ವಿಸ್ತೃತ ಸ್ಕ್ರೀನ್‌ಶಾಟ್ ಈ ಪುಟದಲ್ಲಿ ಬೆಂಬಲಿಸುವುದಿಲ್ಲ.</string>
     <string name="longshot_guide_support">ವಿಸ್ತೃತ ಸ್ಕ್ರೀನ್‌ಶಾಟ್ ಪ್ರಯತ್ನಿಸಲು ಇಲ್ಲಿ ಟ್ಯಾಪ್ ಮಾಡಿ.</string>
     <string name="not_set">ಹೊಂದಿಸಿಲ್ಲ</string>

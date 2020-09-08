@@ -71,30 +71,17 @@
 
     sub-int/2addr p1, v0
 
-    const/16 v0, 0x8
+    invoke-static {p1}, Lcom/oneplus/screenshot/longshot/util/Configs;->getPreviewScrollDyValue(I)I
 
-    const/4 v1, 0x5
+    move-result p1
 
-    if-ge p1, v1, :cond_0
-
-    move p1, v1
-
-    goto :goto_0
-
-    :cond_0
-    if-le p1, v0, :cond_1
-
-    move p1, v0
-
-    :cond_1
-    :goto_0
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$6;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
     invoke-static {v0}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$1300(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_1
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$6;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
@@ -114,7 +101,7 @@
 
     const/16 v2, 0xbb9
 
-    if-gt v0, v1, :cond_2
+    if-gt v0, v1, :cond_0
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$6;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
@@ -132,7 +119,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_1
 
     iget-object p1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$6;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
@@ -152,16 +139,16 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_1
+    goto :goto_0
 
-    :cond_2
+    :cond_0
     iget-object p1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$6;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
     invoke-static {p1}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$700(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Z
 
     move-result p1
 
-    if-nez p1, :cond_3
+    if-nez p1, :cond_1
 
     iget-object p1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$6;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
@@ -197,7 +184,7 @@
 
     invoke-virtual {v0, p1, v1, v2}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    :cond_3
-    :goto_1
+    :cond_1
+    :goto_0
     return-void
 .end method

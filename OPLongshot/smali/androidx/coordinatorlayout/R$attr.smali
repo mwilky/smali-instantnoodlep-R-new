@@ -52,9 +52,9 @@
 
 .field public static final layout_keyline:I = 0x7f0401e5
 
-.field public static final statusBarBackground:I = 0x7f0402e2
+.field public static final statusBarBackground:I = 0x7f0402df
 
-.field public static final ttcIndex:I = 0x7f04036b
+.field public static final ttcIndex:I = 0x7f040368
 
 
 # direct methods

@@ -36,64 +36,101 @@
 
 # virtual methods
 .method public onFling(II)Z
-    .locals 3
+    .locals 6
 
-    const/high16 v0, 0x3f800000    # 1.0f
+    iget-object v0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$2;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
 
-    const/16 v1, 0x1388
+    invoke-static {v0, p2}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$002(Lcom/google/android/material/appbar/CollapsingAppbarLayout;I)I
 
-    const/16 v2, 0x1f4
+    iget-object v0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$2;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
 
-    if-le p2, v2, :cond_0
+    invoke-virtual {v0}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->getFraction()F
 
-    if-ge p2, v1, :cond_0
+    move-result v0
+
+    const/16 v1, 0x190
+
+    if-eq p2, v1, :cond_0
 
     iget-object v2, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$2;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
 
-    invoke-virtual {v2}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->getFraction()F
+    invoke-virtual {v2, p2}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->setContentViewVelocity(I)V
 
-    move-result v2
+    :cond_0
+    const/16 v2, 0x1f4
 
-    cmpg-float v2, v2, v0
+    const/16 v3, 0x1388
 
-    if-gez v2, :cond_0
+    const/4 v4, 0x1
+
+    const/high16 v5, 0x3f800000    # 1.0f
+
+    if-le p2, v2, :cond_1
+
+    if-ge p2, v3, :cond_1
+
+    cmpg-float v2, v0, v5
+
+    if-gez v2, :cond_1
 
     iget-object p2, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$2;->val$view:Landroidx/recyclerview/widget/RecyclerView;
 
-    const/16 v0, 0x190
+    invoke-virtual {p2, p1, v1}, Landroidx/recyclerview/widget/RecyclerView;->fling(II)Z
 
-    invoke-virtual {p2, p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->fling(II)Z
+    return v4
 
-    const/4 p1, 0x1
+    :cond_1
+    const/4 v1, 0x0
 
-    return p1
+    if-le p2, v3, :cond_2
 
-    :cond_0
-    const/4 p1, 0x0
+    cmpg-float v2, v0, v5
 
-    if-le p2, v1, :cond_1
+    if-gez v2, :cond_2
 
-    iget-object p2, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$2;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
+    iget-object p1, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$2;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
 
-    invoke-virtual {p2}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->getFraction()F
-
-    move-result p2
-
-    cmpg-float p2, p2, v0
-
-    if-gez p2, :cond_1
-
-    iget-object p2, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$2;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
-
-    invoke-virtual {p2}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->scrollTop()V
+    invoke-virtual {p1, v1}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->scrollTop(Z)V
 
     goto :goto_0
 
-    :cond_1
-    iget-object p2, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$2;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
+    :cond_2
+    const/16 v2, -0x3e8
 
-    invoke-static {p2, p1}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$002(Lcom/google/android/material/appbar/CollapsingAppbarLayout;Z)Z
+    const/16 v3, -0x1388
+
+    if-ge p2, v2, :cond_3
+
+    if-le p2, v3, :cond_3
+
+    iget-object p2, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$2;->val$view:Landroidx/recyclerview/widget/RecyclerView;
+
+    const/16 v0, -0x190
+
+    invoke-virtual {p2, p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->fling(II)Z
+
+    return v4
+
+    :cond_3
+    if-ge p2, v3, :cond_4
+
+    cmpl-float p2, v0, v5
+
+    if-eqz p2, :cond_4
+
+    iget-object p2, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$2;->val$view:Landroidx/recyclerview/widget/RecyclerView;
+
+    const/16 v0, -0x258
+
+    invoke-virtual {p2, p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->fling(II)Z
+
+    return v4
+
+    :cond_4
+    iget-object p1, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$2;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
+
+    invoke-static {p1, v1}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$102(Lcom/google/android/material/appbar/CollapsingAppbarLayout;Z)Z
 
     :goto_0
-    return p1
+    return v1
 .end method

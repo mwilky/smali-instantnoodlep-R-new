@@ -27,10 +27,16 @@
     <string name="abc_shareactionprovider_share_with">Megosztás a következővel:</string>
     <string name="abc_shareactionprovider_share_with_application">Megosztás a következő alkalmazással: %s</string>
     <string name="abc_toolbar_collapse_description">Összecsukás</string>
+    <string name="about_action_bar_title">Névjegy</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Adatvédelmi politika</string>
+    <string name="about_release_note_title">Frissítési napló:</string>
+    <string name="about_terms_service">Szolgáltatási feltételek</string>
     <string name="app_name">Képernyőfelvétel</string>
     <string name="copy">Másolás</string>
     <string name="expand_button_title">Speciális</string>
     <string name="got_it">Értem</string>
+    <string name="loading_text">Töltés...</string>
     <string name="longshot_guide_not_support">A bővített képernyőkép nem támogatott ezen az oldalon.</string>
     <string name="longshot_guide_support">Koppintson ide, és próbálja ki a bővített képernyőképet.</string>
     <string name="not_set">Nincs beállítva</string>

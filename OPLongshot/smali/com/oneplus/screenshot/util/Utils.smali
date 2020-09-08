@@ -1121,43 +1121,51 @@
 .end method
 
 .method private static getIMEI(Landroid/content/Context;)Ljava/lang/String;
-    .locals 2
+    .locals 3
 
-    const-string v0, ""
+    const-string v0, "Longshot.Utils"
+
+    const-string v1, ""
 
     if-nez p0, :cond_0
 
-    return-object v0
+    const-string p0, "context is null. can\'t get IMEI"
+
+    invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-object v1
 
     :cond_0
     :try_start_0
-    const-string v1, "phone"
+    const-string v2, "phone"
 
-    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/telephony/TelephonyManager;
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    invoke-virtual {p0, v1}, Landroid/telephony/TelephonyManager;->getImei(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Landroid/telephony/TelephonyManager;->getImei(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
     :catch_0
-    const-string p0, "Longshot.Utils"
+    move-exception p0
 
-    const-string v1, "can\'t get IMEI"
+    const-string v2, "can\'t get IMEI"
 
-    invoke-static {p0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
-    return-object v0
+    return-object v1
 .end method
 
 .method public static getMD5(Ljava/lang/String;)Ljava/lang/String;
@@ -1868,7 +1876,7 @@
 .end method
 
 .method public static saveToFile(Landroid/content/Context;Lcom/oneplus/screenshot/util/FileInfo;Landroid/graphics/Bitmap;)Z
-    .locals 23
+    .locals 24
 
     move-object/from16 v0, p2
 
@@ -1910,67 +1918,67 @@
     :try_start_0
     invoke-virtual/range {p1 .. p1}, Lcom/oneplus/screenshot/util/FileInfo;->getName()Ljava/lang/String;
 
-    move-result-object v13
+    move-result-object v14
 
     invoke-virtual/range {p1 .. p1}, Lcom/oneplus/screenshot/util/FileInfo;->getPath()Ljava/lang/String;
 
-    move-result-object v14
+    move-result-object v15
 
     invoke-virtual/range {p1 .. p1}, Lcom/oneplus/screenshot/util/FileInfo;->getTime()J
 
-    move-result-wide v15
+    move-result-wide v16
 
-    sget-boolean v17, Lcom/oneplus/screenshot/longshot/util/Configs;->isEncryptImage:Z
+    sget-boolean v18, Lcom/oneplus/screenshot/longshot/util/Configs;->isEncryptImage:Z
 
-    const-string v18, "external_primary"
+    const-string v19, "external_primary"
 
-    invoke-static/range {v18 .. v18}, Landroid/provider/MediaStore$Images$Media;->getContentUri(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static/range {v19 .. v19}, Landroid/provider/MediaStore$Images$Media;->getContentUri(Ljava/lang/String;)Landroid/net/Uri;
 
-    move-result-object v12
+    move-result-object v13
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_c
-    .catchall {:try_start_0 .. :try_end_0} :catchall_6
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_a
+    .catchall {:try_start_0 .. :try_end_0} :catchall_4
 
     :try_start_1
     const-string v6, "relative_path"
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_b
-    .catchall {:try_start_1 .. :try_end_1} :catchall_6
 
-    move-wide/from16 v19, v8
+    new-instance v12, Ljava/lang/StringBuilder;
+
+    invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_9
+    .catchall {:try_start_1 .. :try_end_1} :catchall_4
+
+    move-wide/from16 v20, v8
 
     :try_start_2
-    new-instance v8, Ljava/lang/StringBuilder;
+    sget-object v8, Landroid/os/Environment;->DIRECTORY_PICTURES:Ljava/lang/String;
 
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v12, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v9, Landroid/os/Environment;->DIRECTORY_PICTURES:Ljava/lang/String;
+    sget-object v8, Ljava/io/File;->separator:Ljava/lang/String;
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-object v9, Ljava/io/File;->separator:Ljava/lang/String;
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v12, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual/range {p1 .. p1}, Lcom/oneplus/screenshot/util/FileInfo;->getDirName()Ljava/lang/String;
 
-    move-result-object v9
+    move-result-object v8
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v12, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v8
 
     invoke-virtual {v11, v6, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v11, v5, v13}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v11, v5, v14}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v11, v4, v13}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v11, v4, v14}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v6, "datetaken"
 
-    invoke-static/range {v15 .. v16}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static/range {v16 .. v17}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v8
 
@@ -1980,21 +1988,19 @@
 
     const-wide/16 v8, 0x3e8
 
-    div-long v21, v15, v8
+    div-long v22, v16, v8
 
-    invoke-static/range {v21 .. v22}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static/range {v22 .. v23}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v8
+    move-result-object v12
 
-    invoke-virtual {v11, v6, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
+    invoke-virtual {v11, v6, v12}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
     const-string v6, "date_modified"
 
-    const-wide/16 v8, 0x3e8
+    div-long v16, v16, v8
 
-    div-long/2addr v15, v8
-
-    invoke-static/range {v15 .. v16}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static/range {v16 .. v17}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v8
 
@@ -2027,164 +2033,157 @@
     move-result-object v8
 
     invoke-virtual {v11, v6, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
-
-    invoke-virtual {v10, v12, v11}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
-
-    move-result-object v6
     :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_a
-    .catchall {:try_start_2 .. :try_end_2} :catchall_6
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_8
+    .catchall {:try_start_2 .. :try_end_2} :catchall_4
 
-    if-eqz v6, :cond_1
+    const-string v6, "is_pending"
+
+    if-eqz v18, :cond_1
+
+    const/4 v8, 0x1
 
     :try_start_3
-    const-string v8, "rw"
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-virtual {v10, v6, v8}, Landroid/content/ContentResolver;->openOutputStream(Landroid/net/Uri;Ljava/lang/String;)Ljava/io/OutputStream;
+    move-result-object v9
 
-    move-result-object v8
+    invoke-virtual {v11, v6, v9}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
     :try_end_3
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    :try_start_4
-    sget-object v9, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
-
-    const/16 v12, 0x64
-
-    invoke-virtual {v0, v9, v12, v8}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
-
-    move-result v0
-
-    const-string v9, "compress end"
-
-    invoke-static {v7, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    invoke-virtual {v8}, Ljava/io/OutputStream;->flush()V
-    :try_end_4
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    move-object v9, v8
-
-    move v8, v0
-
-    goto :goto_2
+    goto :goto_0
 
     :catchall_0
     move-exception v0
 
     move-object v1, v0
 
-    move-object v12, v8
+    const/4 v13, 0x0
 
-    :goto_0
-    const/4 v3, 0x0
-
-    goto/16 :goto_17
+    goto/16 :goto_e
 
     :catch_0
     move-exception v0
 
-    move-object v3, v8
+    const/4 v6, 0x0
 
-    const/4 v1, 0x0
+    const/4 v13, 0x0
 
-    goto :goto_1
+    goto/16 :goto_a
+
+    :cond_1
+    :goto_0
+    :try_start_4
+    invoke-virtual {v10, v13, v11}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
+
+    move-result-object v8
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_8
+    .catchall {:try_start_4 .. :try_end_4} :catchall_4
+
+    if-eqz v8, :cond_2
+
+    :try_start_5
+    const-string v9, "rw"
+
+    invoke-virtual {v10, v8, v9}, Landroid/content/ContentResolver;->openOutputStream(Landroid/net/Uri;Ljava/lang/String;)Ljava/io/OutputStream;
+
+    move-result-object v9
+    :try_end_5
+    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    :try_start_6
+    sget-object v12, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
+
+    const/16 v13, 0x64
+
+    invoke-virtual {v0, v12, v13, v9}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
+
+    move-result v0
+
+    const-string v12, "compress end"
+
+    invoke-static {v7, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {v9}, Ljava/io/OutputStream;->flush()V
+    :try_end_6
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_1
+    .catchall {:try_start_6 .. :try_end_6} :catchall_1
+
+    move-object v12, v9
+
+    move v9, v0
+
+    goto :goto_2
 
     :catchall_1
     move-exception v0
 
     move-object v1, v0
 
-    const/4 v3, 0x0
+    move-object v13, v9
 
-    const/4 v12, 0x0
-
-    goto/16 :goto_17
+    goto/16 :goto_e
 
     :catch_1
     move-exception v0
 
-    const/4 v1, 0x0
-
-    const/4 v3, 0x0
+    move-object v13, v9
 
     :goto_1
-    const/4 v12, 0x0
+    const/4 v6, 0x0
 
-    goto/16 :goto_10
+    goto/16 :goto_a
 
-    :cond_1
-    :try_start_5
+    :cond_2
+    :try_start_7
     const-string v0, "Failed to create new MediaStore record"
 
     invoke-static {v7, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_5
-    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_a
-    .catchall {:try_start_5 .. :try_end_5} :catchall_6
-
-    const/4 v8, 0x0
+    :try_end_7
+    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_8
+    .catchall {:try_start_7 .. :try_end_7} :catchall_4
 
     const/4 v9, 0x0
 
-    :goto_2
-    if-eqz v17, :cond_3
+    const/4 v12, 0x0
 
-    :try_start_6
-    invoke-virtual {v14, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    :goto_2
+    if-eqz v18, :cond_4
+
+    :try_start_8
+    invoke-virtual {v15, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
+    new-instance v13, Ljava/lang/StringBuffer;
+    :try_end_8
+    .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_4
+    .catchall {:try_start_8 .. :try_end_8} :catchall_2
+
+    move-object/from16 p2, v12
+
+    const/16 v16, 0x0
+
+    :try_start_9
+    aget-object v12, v0, v16
+
+    invoke-direct {v13, v12}, Ljava/lang/StringBuffer;-><init>(Ljava/lang/String;)V
+
+    const-string v12, ".jpg"
+
+    invoke-virtual {v13, v12}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
     new-instance v12, Ljava/lang/StringBuffer;
-    :try_end_6
-    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_3
 
-    move-object/from16 p2, v9
+    aget-object v0, v0, v16
 
-    const/4 v15, 0x0
+    invoke-direct {v12, v0}, Ljava/lang/StringBuffer;-><init>(Ljava/lang/String;)V
 
-    :try_start_7
-    aget-object v9, v0, v15
-
-    invoke-direct {v12, v9}, Ljava/lang/StringBuffer;-><init>(Ljava/lang/String;)V
-
-    const-string v9, ".jpg"
-
-    invoke-virtual {v12, v9}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    new-instance v9, Ljava/lang/StringBuffer;
-
-    aget-object v0, v0, v15
-    :try_end_7
-    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_5
-    .catchall {:try_start_7 .. :try_end_7} :catchall_2
-
-    :try_start_8
-    invoke-direct {v9, v0}, Ljava/lang/StringBuffer;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v9, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->sImeiNumber:Ljava/lang/String;
-
-    const-string v15, " doencrypt s"
-
-    invoke-static {v7, v15}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    invoke-virtual {v12}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
-
-    move-result-object v12
-
-    invoke-virtual {v9}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
-
-    move-result-object v15
-
-    invoke-static {v12, v0, v15}, Lcom/oneplus/screenshot/Native;->doencrypt(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
-
-    const-string v0, " doencrypt e"
-
-    invoke-static {v7, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v12, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     const-string v0, " delete file s"
 
@@ -2192,40 +2191,40 @@
 
     new-instance v0, Ljava/io/File;
 
-    invoke-direct {v0, v14}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v15}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
     move-result-object v0
 
-    new-instance v12, Ljava/io/File;
+    new-instance v15, Ljava/io/File;
 
-    invoke-direct {v12, v0, v13}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
-    :try_end_8
-    .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_4
-    .catchall {:try_start_8 .. :try_end_8} :catchall_2
+    invoke-direct {v15, v0, v14}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+    :try_end_9
+    .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_3
+    .catchall {:try_start_9 .. :try_end_9} :catchall_3
 
-    :try_start_9
-    invoke-virtual {v12}, Ljava/io/File;->exists()Z
+    :try_start_a
+    invoke-virtual {v15}, Ljava/io/File;->exists()Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
-    invoke-virtual {v12}, Ljava/io/File;->delete()Z
-    :try_end_9
-    .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_2
-    .catchall {:try_start_9 .. :try_end_9} :catchall_2
+    invoke-virtual {v15}, Ljava/io/File;->delete()Z
+    :try_end_a
+    .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_2
+    .catchall {:try_start_a .. :try_end_a} :catchall_3
 
     goto :goto_3
 
     :catch_2
     move-exception v0
 
-    :try_start_a
+    :try_start_b
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    :cond_2
+    :cond_3
     :goto_3
     const-string v0, " delete file e"
 
@@ -2233,17 +2232,13 @@
 
     new-instance v0, Ljava/lang/StringBuffer;
 
-    invoke-virtual {v13, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    invoke-virtual {v14, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v2
-    :try_end_a
-    .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_4
-    .catchall {:try_start_a .. :try_end_a} :catchall_2
 
-    const/4 v12, 0x0
+    const/4 v14, 0x0
 
-    :try_start_b
-    aget-object v2, v2, v12
+    aget-object v2, v2, v14
 
     invoke-direct {v0, v2}, Ljava/lang/StringBuffer;-><init>(Ljava/lang/String;)V
 
@@ -2251,13 +2246,15 @@
 
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
-    move-result-object v13
+    move-result-object v14
 
-    invoke-virtual {v9}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {v12}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
-    invoke-virtual {v11, v5, v13}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v15
 
-    invoke-virtual {v11, v4, v13}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v11, v5, v14}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v11, v4, v14}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "image/png"
 
@@ -2265,68 +2262,67 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v10, v6, v11, v1, v1}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {v11, v6, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v10, v8, v11, v1, v1}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
+
+    const-string v0, " doencrypt s"
+
+    invoke-static {v7, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->sImeiNumber:Ljava/lang/String;
+
+    invoke-virtual {v13}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v12}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v0, v2}, Lcom/oneplus/screenshot/Native;->doencrypt(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string v0, " doencrypt e"
+
+    invoke-static {v7, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_b
     .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_3
-    .catchall {:try_start_b .. :try_end_b} :catchall_2
+    .catchall {:try_start_b .. :try_end_b} :catchall_3
 
-    goto :goto_7
+    goto :goto_5
 
     :catch_3
     move-exception v0
 
-    goto :goto_6
-
-    :catch_4
-    move-exception v0
-
-    goto :goto_5
+    goto :goto_4
 
     :catchall_2
     move-exception v0
 
-    goto :goto_4
+    move-object/from16 p2, v12
 
-    :catch_5
+    goto :goto_7
+
+    :catch_4
     move-exception v0
 
-    move v12, v15
-
-    goto :goto_6
-
-    :catchall_3
-    move-exception v0
-
-    move-object/from16 p2, v9
+    move-object/from16 p2, v12
 
     :goto_4
-    move-object/from16 v12, p2
+    move-object/from16 v13, p2
 
-    move-object v1, v0
+    goto/16 :goto_1
 
-    goto/16 :goto_0
-
-    :catch_6
-    move-exception v0
-
-    move-object/from16 p2, v9
+    :cond_4
+    move-object/from16 p2, v12
 
     :goto_5
-    const/4 v12, 0x0
-
-    :goto_6
-    move-object/from16 v3, p2
-
-    const/4 v1, 0x0
-
-    goto/16 :goto_10
-
-    :cond_3
-    move-object/from16 p2, v9
-
-    const/4 v12, 0x0
-
-    :goto_7
     :try_start_c
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2336,7 +2332,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -2346,227 +2342,186 @@
 
     move-object/from16 v1, p1
 
-    invoke-virtual {v1, v6}, Lcom/oneplus/screenshot/util/FileInfo;->setUri(Landroid/net/Uri;)V
+    invoke-virtual {v1, v8}, Lcom/oneplus/screenshot/util/FileInfo;->setUri(Landroid/net/Uri;)V
 
-    invoke-virtual {v10, v6}, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
-
-    move-result-object v1
-    :try_end_c
-    .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_9
-    .catchall {:try_start_c .. :try_end_c} :catchall_5
-
-    :try_start_d
-    invoke-virtual {v1}, Ljava/io/InputStream;->available()I
-
-    move-result v0
-
-    const-string v2, "_size"
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-virtual {v11, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
-
-    invoke-virtual {v6}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
-
-    move-result-object v2
-
-    const-string v3, "notifyMtp"
-
-    const-string v4, "1"
-
-    invoke-virtual {v2, v3, v4}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
-
-    move-result-object v2
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v10, v2, v11, v3, v3}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
-
-    if-eqz v0, :cond_5
-
-    if-nez v8, :cond_4
-
-    goto :goto_8
-
-    :cond_4
-    const/4 v6, 0x1
-
-    goto :goto_9
-
-    :cond_5
-    :goto_8
-    invoke-virtual {v10, v2, v3, v3}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "image file deleted due to fileLength is 0 or compress operation is fail. file size = "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v8}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v0
 
+    const-string v1, "notifyMtp"
+
+    const-string v2, "1"
+
+    invoke-virtual {v0, v1, v2}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v10, v0, v11, v1, v1}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
+    :try_end_c
+    .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_7
+    .catchall {:try_start_c .. :try_end_c} :catchall_3
+
+    if-nez v9, :cond_5
+
+    :try_start_d
+    invoke-virtual {v10, v0, v1, v1}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
+
+    const-string v0, "image file deleted due to compress operation is fail."
+
     invoke-static {v7, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_d
-    .catch Ljava/lang/Exception; {:try_start_d .. :try_end_d} :catch_8
-    .catchall {:try_start_d .. :try_end_d} :catchall_4
+    .catch Ljava/lang/Exception; {:try_start_d .. :try_end_d} :catch_3
+    .catchall {:try_start_d .. :try_end_d} :catchall_3
 
-    move v6, v12
+    const/4 v6, 0x0
 
-    :goto_9
-    if-eqz p2, :cond_6
+    goto :goto_6
+
+    :cond_5
+    const/4 v1, 0x1
 
     :try_start_e
+    new-array v0, v1, [Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    aput-object v15, v0, v2
+
+    new-instance v2, Lcom/oneplus/screenshot/util/Utils$1;
+
+    invoke-direct {v2}, Lcom/oneplus/screenshot/util/Utils$1;-><init>()V
+
+    const/4 v4, 0x0
+
+    move-object/from16 v3, p0
+
+    invoke-static {v3, v0, v4, v2}, Landroid/media/MediaScannerConnection;->scanFile(Landroid/content/Context;[Ljava/lang/String;[Ljava/lang/String;Landroid/media/MediaScannerConnection$OnScanCompletedListener;)V
+    :try_end_e
+    .catch Ljava/lang/Exception; {:try_start_e .. :try_end_e} :catch_6
+    .catchall {:try_start_e .. :try_end_e} :catchall_3
+
+    move v6, v1
+
+    :goto_6
+    if-eqz p2, :cond_6
+
+    :try_start_f
     invoke-virtual/range {p2 .. p2}, Ljava/io/OutputStream;->close()V
+    :try_end_f
+    .catch Ljava/lang/Exception; {:try_start_f .. :try_end_f} :catch_5
+
+    goto :goto_c
+
+    :catch_5
+    move-exception v0
+
+    move-object v1, v0
+
+    goto :goto_b
+
+    :catch_6
+    move-exception v0
+
+    move-object/from16 v13, p2
+
+    move v6, v1
 
     goto :goto_a
+
+    :catchall_3
+    move-exception v0
+
+    :goto_7
+    move-object/from16 v13, p2
+
+    goto :goto_d
 
     :catch_7
     move-exception v0
 
-    goto :goto_b
+    const/4 v2, 0x0
 
-    :cond_6
-    :goto_a
-    if-eqz v1, :cond_7
+    move-object/from16 v13, p2
 
-    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
-    :try_end_e
-    .catch Ljava/lang/Exception; {:try_start_e .. :try_end_e} :catch_7
+    move v6, v2
 
-    goto :goto_c
-
-    :goto_b
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
-
-    :cond_7
-    :goto_c
-    invoke-virtual {v11}, Landroid/content/ContentValues;->clear()V
-
-    goto :goto_14
-
-    :catchall_4
-    move-exception v0
-
-    move-object/from16 v12, p2
-
-    goto :goto_15
+    goto :goto_a
 
     :catch_8
     move-exception v0
 
-    goto :goto_d
-
-    :catchall_5
-    move-exception v0
-
-    const/4 v3, 0x0
-
-    move-object/from16 v12, p2
-
-    goto :goto_16
+    goto :goto_8
 
     :catch_9
     move-exception v0
 
-    const/4 v3, 0x0
+    move-wide/from16 v20, v8
 
-    move-object v1, v3
+    :goto_8
+    const/4 v2, 0x0
 
-    :goto_d
-    move-object/from16 v3, p2
+    const/4 v4, 0x0
 
-    goto :goto_10
+    move v6, v2
+
+    goto :goto_9
+
+    :catchall_4
+    move-exception v0
+
+    const/4 v4, 0x0
+
+    move-object v1, v0
+
+    move-object v13, v4
+
+    goto :goto_e
 
     :catch_a
     move-exception v0
 
-    goto :goto_e
+    move v2, v6
+
+    move-wide/from16 v20, v8
+
+    const/4 v4, 0x0
+
+    :goto_9
+    move-object v13, v4
+
+    :goto_a
+    :try_start_10
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+    :try_end_10
+    .catchall {:try_start_10 .. :try_end_10} :catchall_5
+
+    if-eqz v13, :cond_6
+
+    :try_start_11
+    invoke-virtual {v13}, Ljava/io/OutputStream;->close()V
+    :try_end_11
+    .catch Ljava/lang/Exception; {:try_start_11 .. :try_end_11} :catch_b
+
+    goto :goto_c
 
     :catch_b
     move-exception v0
 
-    move-wide/from16 v19, v8
-
-    :goto_e
-    const/4 v3, 0x0
-
-    const/4 v12, 0x0
-
-    goto :goto_f
-
-    :catchall_6
-    move-exception v0
-
-    const/4 v3, 0x0
-
     move-object v1, v0
 
-    move-object v12, v3
+    :goto_b
+    invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    goto :goto_17
-
-    :catch_c
-    move-exception v0
-
-    move v12, v6
-
-    move-wide/from16 v19, v8
-
-    const/4 v3, 0x0
-
-    :goto_f
-    move-object v1, v3
-
-    :goto_10
-    :try_start_f
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
-    :try_end_f
-    .catchall {:try_start_f .. :try_end_f} :catchall_7
-
-    if-eqz v3, :cond_8
-
-    :try_start_10
-    invoke-virtual {v3}, Ljava/io/OutputStream;->close()V
-
-    goto :goto_11
-
-    :catch_d
-    move-exception v0
-
-    goto :goto_12
-
-    :cond_8
-    :goto_11
-    if-eqz v1, :cond_9
-
-    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
-    :try_end_10
-    .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_10} :catch_d
-
-    goto :goto_13
-
-    :goto_12
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
-
-    :cond_9
-    :goto_13
+    :cond_6
+    :goto_c
     invoke-virtual {v11}, Landroid/content/ContentValues;->clear()V
 
-    move v6, v12
-
-    :goto_14
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2579,7 +2534,7 @@
 
     move-result-wide v1
 
-    sub-long v1, v1, v19
+    sub-long v1, v1, v20
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -2591,45 +2546,31 @@
 
     return v6
 
-    :catchall_7
+    :catchall_5
     move-exception v0
 
-    move-object v12, v3
-
-    :goto_15
-    move-object v3, v1
-
-    :goto_16
+    :goto_d
     move-object v1, v0
 
-    :goto_17
-    if-eqz v12, :cond_a
+    :goto_e
+    if-eqz v13, :cond_7
 
-    :try_start_11
-    invoke-virtual {v12}, Ljava/io/OutputStream;->close()V
+    :try_start_12
+    invoke-virtual {v13}, Ljava/io/OutputStream;->close()V
+    :try_end_12
+    .catch Ljava/lang/Exception; {:try_start_12 .. :try_end_12} :catch_c
 
-    goto :goto_18
+    goto :goto_f
 
-    :catch_e
+    :catch_c
     move-exception v0
 
-    goto :goto_19
+    move-object v2, v0
 
-    :cond_a
-    :goto_18
-    if-eqz v3, :cond_b
+    invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
-    invoke-virtual {v3}, Ljava/io/InputStream;->close()V
-    :try_end_11
-    .catch Ljava/lang/Exception; {:try_start_11 .. :try_end_11} :catch_e
-
-    goto :goto_1a
-
-    :goto_19
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
-
-    :cond_b
-    :goto_1a
+    :cond_7
+    :goto_f
     invoke-virtual {v11}, Landroid/content/ContentValues;->clear()V
 
     throw v1

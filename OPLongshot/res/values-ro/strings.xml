@@ -27,10 +27,16 @@
     <string name="abc_shareactionprovider_share_with">Trimiteți la</string>
     <string name="abc_shareactionprovider_share_with_application">Trimiteți folosind %s</string>
     <string name="abc_toolbar_collapse_description">Restrângeți</string>
+    <string name="about_action_bar_title">Despre</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Politica de confidențialitate</string>
+    <string name="about_release_note_title">Jurnal de actualizări:</string>
+    <string name="about_terms_service">Termenii serviciului</string>
     <string name="app_name">Captură de ecran</string>
     <string name="copy">Copiați</string>
     <string name="expand_button_title">Avansat</string>
     <string name="got_it">Am înțeles</string>
+    <string name="loading_text">Se încarcă...</string>
     <string name="longshot_guide_not_support">Captura de ecran extinsă nu este acceptată pe această pagină.</string>
     <string name="longshot_guide_support">Atingeți aici pentru a încerca o Captură de ecran extinsă.</string>
     <string name="not_set">Nesetată</string>

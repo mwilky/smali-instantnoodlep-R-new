@@ -722,7 +722,7 @@
 
     const-string v10, "Longshot.MoveTask"
 
-    if-gtz v0, :cond_8
+    if-gtz v0, :cond_9
 
     iget-object v0, v8, Lcom/oneplus/screenshot/longshot/task/MoveTask;->mMovePoint:Lcom/oneplus/screenshot/longshot/util/MovePoint;
 
@@ -849,6 +849,12 @@
     move/from16 v5, v21
 
     :goto_3
+    invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->shouldStitchByView()Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
     mul-float v7, v12, v20
 
     sget v0, Lcom/oneplus/screenshot/longshot/task/MoveTask;->overscrollCheckPoint:I
@@ -863,7 +869,7 @@
 
     cmpl-float v0, v7, v0
 
-    if-lez v0, :cond_4
+    if-lez v0, :cond_5
 
     invoke-direct {v8, v6}, Lcom/oneplus/screenshot/longshot/task/MoveTask;->checkCanScroll(I)V
 
@@ -872,6 +878,9 @@
     goto :goto_4
 
     :cond_4
+    move/from16 v6, v24
+
+    :cond_5
     move v3, v6
 
     :goto_4
@@ -881,15 +890,15 @@
 
     move-result v0
 
-    if-nez v0, :cond_6
+    if-nez v0, :cond_7
 
     iget-boolean v0, v8, Lcom/oneplus/screenshot/longshot/task/MoveTask;->mCanRunTask:Z
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_6
 
     goto :goto_5
 
-    :cond_5
+    :cond_6
     move v7, v11
 
     move/from16 v10, v19
@@ -898,15 +907,15 @@
 
     goto/16 :goto_1
 
-    :cond_6
+    :cond_7
     :goto_5
     sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsInjectAdditionalSwipe:Z
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_8
 
     return-void
 
-    :cond_7
+    :cond_8
     const/4 v2, 0x3
 
     iget-object v0, v8, Lcom/oneplus/screenshot/longshot/task/MoveTask;->mMovePoint:Lcom/oneplus/screenshot/longshot/util/MovePoint;
@@ -943,7 +952,7 @@
 
     return-void
 
-    :cond_8
+    :cond_9
     :goto_6
     move/from16 v11, v18
 
@@ -960,7 +969,7 @@
     const/4 v13, 0x0
 
     :goto_7
-    if-ge v13, v15, :cond_9
+    if-ge v13, v15, :cond_a
 
     const/4 v2, 0x2
 
@@ -992,7 +1001,7 @@
 
     goto :goto_7
 
-    :cond_9
+    :cond_a
     move/from16 v16, v4
 
     const/4 v0, 0x0
@@ -1237,7 +1246,7 @@
 .end method
 
 .method protected varargs doInBackground([Ljava/lang/Integer;)Ljava/lang/Void;
-    .locals 6
+    .locals 7
 
     const-string v0, "Longshot.MoveTask"
 
@@ -1347,10 +1356,63 @@
     iget v1, p0, Lcom/oneplus/screenshot/longshot/task/MoveTask;->mMoveDuration:I
 
     :goto_0
+    invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->shouldStitchByView()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
+
+    invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->isStitchByScrollDistance()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
+
+    const-string v5, "Attempted to scroll by new algo"
+
+    invoke-static {v0, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :try_start_0
+    invoke-static {}, Lcom/oneplus/screenshot/StitchViewService;->getInstance()Lcom/oneplus/screenshot/StitchViewService;
+
+    move-result-object v5
+
+    iget-object v5, v5, Lcom/oneplus/screenshot/StitchViewService;->mViewPropCallback:Ljava/lang/Object;
+
+    invoke-static {}, Lcom/oneplus/screenshot/StitchViewService;->getInstance()Lcom/oneplus/screenshot/StitchViewService;
+
+    move-result-object v6
+
+    iget v6, v6, Lcom/oneplus/screenshot/StitchViewService;->mScrollViewHeight:I
+
+    div-int/lit8 v6, v6, 0x2
+
+    invoke-static {v5, v4, v6}, Lcom/oneplus/compat/longshot/IViewPropCallbackNative;->performScroll(Ljava/lang/Object;II)Z
+
+    move-result v4
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v5
+
+    invoke-virtual {v5}, Ljava/lang/Exception;->printStackTrace()V
+
+    :cond_3
+    :goto_1
+    if-nez v4, :cond_4
+
+    const-string v4, "scrolling by old algo"
+
+    invoke-static {v0, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     iget v4, p0, Lcom/oneplus/screenshot/longshot/task/MoveTask;->inputSource:I
 
     invoke-direct {p0, v4, v1, p1}, Lcom/oneplus/screenshot/longshot/task/MoveTask;->sendSwipe(III)V
 
+    :cond_4
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V

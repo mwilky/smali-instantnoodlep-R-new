@@ -1,5 +1,5 @@
 .class Landroidx/appcompat/app/AppCompatDelegateImpl$7;
-.super Landroidx/core/view/ViewPropertyAnimatorListenerAdapter;
+.super Landroidx/animation/AnimatorListenerAdapter;
 .source "AppCompatDelegateImpl.java"
 
 
@@ -24,40 +24,194 @@
 
     iput-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$7;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    invoke-direct {p0}, Landroidx/core/view/ViewPropertyAnimatorListenerAdapter;-><init>()V
+    invoke-direct {p0}, Landroidx/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationEnd(Landroid/view/View;)V
-    .locals 1
+.method public onAnimationEnd(Landroidx/animation/Animator;)V
+    .locals 11
 
     iget-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$7;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    iget-object p1, p1, Landroidx/appcompat/app/AppCompatDelegateImpl;->mActionModeView:Landroidx/appcompat/widget/ActionBarContextView;
+    iget-object v0, p1, Landroidx/appcompat/app/AppCompatDelegateImpl;->mActionModeView:Landroidx/appcompat/widget/ActionBarContextView;
 
-    const/high16 v0, 0x3f800000    # 1.0f
+    invoke-static {v0}, Landroidx/core/view/ViewCompat;->animate(Landroid/view/View;)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
-    invoke-virtual {p1, v0}, Landroidx/appcompat/widget/ActionBarContextView;->setAlpha(F)V
+    move-result-object v0
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    invoke-virtual {v0, v1}, Landroidx/core/view/ViewPropertyAnimatorCompat;->alpha(F)Landroidx/core/view/ViewPropertyAnimatorCompat;
+
+    move-result-object v0
+
+    const-wide/16 v1, 0x96
+
+    invoke-virtual {v0, v1, v2}, Landroidx/core/view/ViewPropertyAnimatorCompat;->setDuration(J)Landroidx/core/view/ViewPropertyAnimatorCompat;
+
+    move-result-object v0
+
+    iput-object v0, p1, Landroidx/appcompat/app/AppCompatDelegateImpl;->mFadeAnim:Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     iget-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$7;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
     iget-object p1, p1, Landroidx/appcompat/app/AppCompatDelegateImpl;->mFadeAnim:Landroidx/core/view/ViewPropertyAnimatorCompat;
 
-    const/4 v0, 0x0
+    new-instance v0, Landroidx/appcompat/app/AppCompatDelegateImpl$7$1;
+
+    invoke-direct {v0, p0}, Landroidx/appcompat/app/AppCompatDelegateImpl$7$1;-><init>(Landroidx/appcompat/app/AppCompatDelegateImpl$7;)V
 
     invoke-virtual {p1, v0}, Landroidx/core/view/ViewPropertyAnimatorCompat;->setListener(Landroidx/core/view/ViewPropertyAnimatorListener;)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
-    iget-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$7;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
+    new-instance p1, Landroidx/animation/AnimatorSet;
 
-    iput-object v0, p1, Landroidx/appcompat/app/AppCompatDelegateImpl;->mFadeAnim:Landroidx/core/view/ViewPropertyAnimatorCompat;
+    invoke-direct {p1}, Landroidx/animation/AnimatorSet;-><init>()V
+
+    iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$7;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
+
+    iget-object v0, v0, Landroidx/appcompat/app/AppCompatDelegateImpl;->mActionModeView:Landroidx/appcompat/widget/ActionBarContextView;
+
+    invoke-virtual {v0}, Landroidx/appcompat/widget/ActionBarContextView;->getCloseView()Landroid/view/View;
+
+    move-result-object v0
+
+    const/4 v3, 0x2
+
+    new-array v4, v3, [F
+
+    fill-array-data v4, :array_0
+
+    const-string v5, "scaleX"
+
+    invoke-static {v0, v5, v4}, Landroidx/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroidx/animation/ObjectAnimator;
+
+    move-result-object v0
+
+    iget-object v4, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$7;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
+
+    iget-object v4, v4, Landroidx/appcompat/app/AppCompatDelegateImpl;->mActionModeView:Landroidx/appcompat/widget/ActionBarContextView;
+
+    invoke-virtual {v4}, Landroidx/appcompat/widget/ActionBarContextView;->getCloseView()Landroid/view/View;
+
+    move-result-object v4
+
+    new-array v6, v3, [F
+
+    fill-array-data v6, :array_1
+
+    const-string v7, "scaleY"
+
+    invoke-static {v4, v7, v6}, Landroidx/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroidx/animation/ObjectAnimator;
+
+    move-result-object v4
+
+    invoke-virtual {p1, v0}, Landroidx/animation/AnimatorSet;->play(Landroidx/animation/Animator;)Landroidx/animation/AnimatorSet$Builder;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v4}, Landroidx/animation/AnimatorSet$Builder;->with(Landroidx/animation/Animator;)Landroidx/animation/AnimatorSet$Builder;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v4}, Landroidx/animation/AnimatorSet$Builder;->with(Landroidx/animation/Animator;)Landroidx/animation/AnimatorSet$Builder;
+
+    iget-object v4, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$7;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
+
+    iget-object v4, v4, Landroidx/appcompat/app/AppCompatDelegateImpl;->mActionModeView:Landroidx/appcompat/widget/ActionBarContextView;
+
+    invoke-virtual {v4}, Landroidx/appcompat/widget/ActionBarContextView;->getMenuView()Landroidx/appcompat/widget/ActionMenuView;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroidx/appcompat/widget/ActionMenuView;->getChildCount()I
+
+    move-result v4
+
+    const/4 v6, 0x0
+
+    :goto_0
+    if-ge v6, v4, :cond_0
+
+    iget-object v8, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$7;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
+
+    iget-object v8, v8, Landroidx/appcompat/app/AppCompatDelegateImpl;->mActionModeView:Landroidx/appcompat/widget/ActionBarContextView;
+
+    invoke-virtual {v8}, Landroidx/appcompat/widget/ActionBarContextView;->getMenuView()Landroidx/appcompat/widget/ActionMenuView;
+
+    move-result-object v8
+
+    invoke-virtual {v8, v6}, Landroidx/appcompat/widget/ActionMenuView;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v8
+
+    new-array v9, v3, [F
+
+    fill-array-data v9, :array_2
+
+    invoke-static {v8, v7, v9}, Landroidx/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroidx/animation/ObjectAnimator;
+
+    move-result-object v9
+
+    new-array v10, v3, [F
+
+    fill-array-data v10, :array_3
+
+    invoke-static {v8, v5, v10}, Landroidx/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroidx/animation/ObjectAnimator;
+
+    move-result-object v8
+
+    invoke-virtual {p1, v0}, Landroidx/animation/AnimatorSet;->play(Landroidx/animation/Animator;)Landroidx/animation/AnimatorSet$Builder;
+
+    move-result-object v10
+
+    invoke-virtual {v10, v9}, Landroidx/animation/AnimatorSet$Builder;->with(Landroidx/animation/Animator;)Landroidx/animation/AnimatorSet$Builder;
+
+    move-result-object v9
+
+    invoke-virtual {v9, v8}, Landroidx/animation/AnimatorSet$Builder;->with(Landroidx/animation/Animator;)Landroidx/animation/AnimatorSet$Builder;
+
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1, v1, v2}, Landroidx/animation/AnimatorSet;->setDuration(J)Landroidx/animation/AnimatorSet;
+
+    invoke-virtual {p1}, Landroidx/animation/AnimatorSet;->start()V
 
     return-void
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x3f19999a    # 0.6f
+        0x3f800000    # 1.0f
+    .end array-data
+
+    :array_1
+    .array-data 4
+        0x3f19999a    # 0.6f
+        0x3f800000    # 1.0f
+    .end array-data
+
+    :array_2
+    .array-data 4
+        0x3f19999a    # 0.6f
+        0x3f800000    # 1.0f
+    .end array-data
+
+    :array_3
+    .array-data 4
+        0x3f19999a    # 0.6f
+        0x3f800000    # 1.0f
+    .end array-data
 .end method
 
-.method public onAnimationStart(Landroid/view/View;)V
+.method public onAnimationStart(Landroidx/animation/Animator;)V
     .locals 1
 
     iget-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$7;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;

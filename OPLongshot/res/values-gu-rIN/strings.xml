@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="about_action_bar_title">વિશે</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">ગોપનીયતા નીતિ</string>
+    <string name="about_release_note_title">અપડેટ લૉગ:</string>
+    <string name="about_terms_service">સેવાની શરતો</string>
     <string name="app_name">સ્ક્રીનશોટ</string>
     <string name="got_it">સમજાઈ ગયું</string>
+    <string name="loading_text">લોડ કરી રહ્યું છે...</string>
     <string name="longshot_guide_not_support">વિસ્તૃત સ્ક્રીનશૉટ આ પૃષ્ઠ પર આધારિત નથી.</string>
     <string name="longshot_guide_support">વિસ્તૃત સ્ક્રીનશોટ અજમાવવા માટે અહીં ટેપ કરો.</string>
     <string name="not_support_longshot">વિસ્તૃત સ્ક્રીનશૉટ આ પૃષ્ઠ પર આધારિત નથી.</string>

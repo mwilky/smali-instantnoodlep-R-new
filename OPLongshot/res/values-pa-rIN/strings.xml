@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="about_action_bar_title">ਇਸ ਦੇ ਬਾਰੇ</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">ਪਰਦੇਦਾਰੀ ਨੀਤੀ</string>
+    <string name="about_release_note_title">ਅੱਪਡੇਟ ਲੌਗ:</string>
+    <string name="about_terms_service">ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ</string>
     <string name="app_name">ਸਕ੍ਰੀਨਸ਼ੌਟ</string>
     <string name="got_it">ਸਮਝ ਆ ਗਈ</string>
+    <string name="loading_text">ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ...</string>
     <string name="longshot_guide_not_support">"ਇਸ ਪੰਨੇ 'ਤੇ ਵਿਸਤਾਰਿਤ ਸਕ੍ਰੀਨਸ਼ੌਟ ਸਮਰਥਿਤ ਨਹੀਂ ਹੈ।"</string>
     <string name="longshot_guide_support">ਵਿਸਤਾਰਿਤ ਸਕ੍ਰੀਨਸ਼ੌਟ ਨੂੰ ਅਜ਼ਮਾਉਣ ਲਈ ਇੱਥੇ ਟੈਪ ਕਰੋ।</string>
     <string name="not_support_longshot">"ਇਸ ਪੰਨੇ 'ਤੇ ਵਿਸਤਾਰਿਤ ਸਕ੍ਰੀਨਸ਼ੌਟ ਸਮਰਥਿਤ ਨਹੀਂ ਹੈ।"</string>

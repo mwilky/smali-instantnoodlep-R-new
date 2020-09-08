@@ -27,10 +27,16 @@
     <string name="abc_shareactionprovider_share_with">Sdílet s</string>
     <string name="abc_shareactionprovider_share_with_application">Sdílet s aplikací %s</string>
     <string name="abc_toolbar_collapse_description">Sbalit</string>
+    <string name="about_action_bar_title">O aplikaci</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Zásady ochrany osobních údajů</string>
+    <string name="about_release_note_title">Protokol aktualizace:</string>
+    <string name="about_terms_service">Podmínky služby</string>
     <string name="app_name">Snímek obrazovky</string>
     <string name="copy">Kopírovat</string>
     <string name="expand_button_title">Rozšířená nastavení</string>
     <string name="got_it">Rozumím</string>
+    <string name="loading_text">Načítání...</string>
     <string name="longshot_guide_not_support">Rozšířený snímek obrazovky není podporován na této stránce.</string>
     <string name="longshot_guide_support">Klepnutím sem vyzkoušíte rozšířený snímek obrazovky.</string>
     <string name="not_set">Nenastaveno</string>

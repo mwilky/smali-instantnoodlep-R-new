@@ -248,9 +248,24 @@
 .end method
 
 .method public static setField(Ljava/lang/reflect/Field;Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+    .locals 1
 
     :try_start_0
+    invoke-virtual {p0}, Ljava/lang/reflect/Field;->getModifiers()I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/reflect/Modifier;->isPrivate(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
+
+    :cond_0
     invoke-virtual {p0, p1, p2}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
     :try_end_0
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
