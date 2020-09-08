@@ -58,7 +58,13 @@
     :cond_0
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/ShotFirstState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
-    invoke-static {p1, v0}, Lcom/oneplus/screenshot/longshot/util/Configs;->processBitmapIfStitchByView(Landroid/graphics/Bitmap;Lcom/oneplus/screenshot/longshot/state/LongshotContext;)Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lcom/oneplus/screenshot/longshot/state/ShotFirstState;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
+
+    invoke-virtual {v1}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->size()I
+
+    move-result v1
+
+    invoke-static {p1, v0, v1}, Lcom/oneplus/screenshot/longshot/util/Configs;->processBitmapIfStitchByView(Landroid/graphics/Bitmap;Lcom/oneplus/screenshot/longshot/state/LongshotContext;I)Landroid/graphics/Bitmap;
 
     move-result-object p1
 

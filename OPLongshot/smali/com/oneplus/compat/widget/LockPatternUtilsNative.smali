@@ -755,6 +755,118 @@
     return p1
 .end method
 
+.method public setLockCredential(Lcom/oneplus/compat/widget/LockscreenCredentialNative;Lcom/oneplus/compat/widget/LockscreenCredentialNative;I)Z
+    .locals 7
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x1d
+
+    if-lt v0, v2, :cond_1
+
+    const-string v0, "11.1.0"
+
+    invoke-static {v0}, Lcom/oneplus/utils/Utils;->isWrapperSupport(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/oneplus/compat/widget/LockPatternUtilsNative;->mLockPatternUtils:Ljava/lang/Object;
+
+    if-eqz v0, :cond_0
+
+    instance-of v2, v0, Lcom/oneplus/inner/widget/LockPatternUtilsWrapper;
+
+    if-eqz v2, :cond_0
+
+    check-cast v0, Lcom/oneplus/inner/widget/LockPatternUtilsWrapper;
+
+    iget-object p1, p1, Lcom/oneplus/compat/widget/LockscreenCredentialNative;->mLockscreenCredential:Ljava/lang/Object;
+
+    check-cast p1, Lcom/oneplus/inner/widget/LockscreenCredentialWrapper;
+
+    iget-object p2, p2, Lcom/oneplus/compat/widget/LockscreenCredentialNative;->mLockscreenCredential:Ljava/lang/Object;
+
+    check-cast p2, Lcom/oneplus/inner/widget/LockscreenCredentialWrapper;
+
+    invoke-virtual {v0, p1, p2, p3}, Lcom/oneplus/inner/widget/LockPatternUtilsWrapper;->setLockCredential(Lcom/oneplus/inner/widget/LockscreenCredentialWrapper;Lcom/oneplus/inner/widget/LockscreenCredentialWrapper;I)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    return v1
+
+    :cond_1
+    const-string v0, "com.android.internal.widget.LockscreenCredential"
+
+    invoke-static {v0}, Lcom/oneplus/utils/reflection/ClassReflection;->findClass(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lcom/oneplus/compat/widget/LockPatternUtilsNative;->mLockPatternUtils:Ljava/lang/Object;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v2
+
+    const/4 v3, 0x3
+
+    new-array v4, v3, [Ljava/lang/Class;
+
+    aput-object v0, v4, v1
+
+    const/4 v5, 0x1
+
+    aput-object v0, v4, v5
+
+    sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    const/4 v6, 0x2
+
+    aput-object v0, v4, v6
+
+    const-string v0, "setLockCredential"
+
+    invoke-static {v2, v0, v4}, Lcom/oneplus/utils/reflection/MethodReflection;->findMethod(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lcom/oneplus/compat/widget/LockPatternUtilsNative;->mLockPatternUtils:Ljava/lang/Object;
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    iget-object p1, p1, Lcom/oneplus/compat/widget/LockscreenCredentialNative;->mLockscreenCredential:Ljava/lang/Object;
+
+    aput-object p1, v3, v1
+
+    iget-object p1, p2, Lcom/oneplus/compat/widget/LockscreenCredentialNative;->mLockscreenCredential:Ljava/lang/Object;
+
+    aput-object p1, v3, v5
+
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    aput-object p1, v3, v6
+
+    invoke-static {v0, v2, v3}, Lcom/oneplus/utils/reflection/MethodReflection;->invokeMethod(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    return p1
+.end method
+
 .method public setLockScreenDisabled(ZI)V
     .locals 6
 

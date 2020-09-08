@@ -9,7 +9,7 @@
             <nine-patch android:src="@drawable/abc_textfield_default_mtrl_alpha" android:tint="@color/op_edit_text_line_color_default" />
         </item>
         <item>
-            <nine-patch android:src="@drawable/abc_textfield_activated_mtrl_alpha" android:tint="@color/op_control_icon_color_active_default" />
+            <nine-patch android:src="@drawable/op_textfield_input_activated_mtrl_alpha" android:tint="@color/op_control_icon_color_active_default" />
         </item>
     </selector>
 </inset>

@@ -27,10 +27,16 @@
     <string name="abc_shareactionprovider_share_with">Поделиться с помощью</string>
     <string name="abc_shareactionprovider_share_with_application">Поделиться с помощью %s</string>
     <string name="abc_toolbar_collapse_description">Свернуть</string>
+    <string name="about_action_bar_title">Информация</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Политика конфиденциальности</string>
+    <string name="about_release_note_title">Журнал обновлений:</string>
+    <string name="about_terms_service">Условия обслуживания</string>
     <string name="app_name">Скриншот</string>
     <string name="copy">Копировать</string>
     <string name="expand_button_title">Дополнительно</string>
     <string name="got_it">Ясно</string>
+    <string name="loading_text">Загрузка...</string>
     <string name="longshot_guide_not_support">Расширенный скриншот не работает на этой странице.</string>
     <string name="longshot_guide_support">Нажмите здесь, чтобы сделать расширенный скриншот.</string>
     <string name="not_set">Не указано</string>

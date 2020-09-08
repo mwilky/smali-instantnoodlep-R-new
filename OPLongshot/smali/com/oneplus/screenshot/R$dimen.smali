@@ -214,243 +214,243 @@
 
 .field public static final btn_guide_text_size:I = 0x7f070063
 
-.field public static final btn_highlight_alpha_material:I = 0x7f070064
+.field public static final btn_longshot_bottom_shadow:I = 0x7f070064
 
-.field public static final btn_highlight_alpha_material_dark:I = 0x7f070065
+.field public static final btn_longshot_radius:I = 0x7f070065
 
-.field public static final btn_highlight_alpha_material_light:I = 0x7f070066
+.field public static final button_elevation_material:I = 0x7f070066
 
-.field public static final btn_longshot_bottom_shadow:I = 0x7f070067
+.field public static final button_pressed_z_material:I = 0x7f070067
 
-.field public static final btn_longshot_radius:I = 0x7f070068
+.field public static final buttons_padding_right:I = 0x7f070068
 
-.field public static final button_elevation_material:I = 0x7f070069
+.field public static final cardview_compat_inset_shadow:I = 0x7f070069
 
-.field public static final button_pressed_z_material:I = 0x7f07006a
+.field public static final cardview_default_elevation:I = 0x7f07006a
 
-.field public static final buttons_padding_right:I = 0x7f07006b
+.field public static final cardview_default_radius:I = 0x7f07006b
 
-.field public static final cardview_compat_inset_shadow:I = 0x7f07006c
+.field public static final cardview_margin:I = 0x7f07006c
 
-.field public static final cardview_default_elevation:I = 0x7f07006d
+.field public static final compat_button_inset_horizontal_material:I = 0x7f07006d
 
-.field public static final cardview_default_radius:I = 0x7f07006e
+.field public static final compat_button_inset_vertical_material:I = 0x7f07006e
 
-.field public static final cardview_margin:I = 0x7f07006f
+.field public static final compat_button_padding_horizontal_material:I = 0x7f07006f
 
-.field public static final compat_button_inset_horizontal_material:I = 0x7f070070
+.field public static final compat_button_padding_vertical_material:I = 0x7f070070
 
-.field public static final compat_button_inset_vertical_material:I = 0x7f070071
+.field public static final compat_control_corner_material:I = 0x7f070071
 
-.field public static final compat_button_padding_horizontal_material:I = 0x7f070072
+.field public static final compat_notification_large_icon_max_height:I = 0x7f070072
 
-.field public static final compat_button_padding_vertical_material:I = 0x7f070073
+.field public static final compat_notification_large_icon_max_width:I = 0x7f070073
 
-.field public static final compat_control_corner_material:I = 0x7f070074
+.field public static final complete_button_layout_minimum_width:I = 0x7f070074
 
-.field public static final compat_notification_large_icon_max_height:I = 0x7f070075
+.field public static final complete_content_layout_minimum_width:I = 0x7f070075
 
-.field public static final compat_notification_large_icon_max_width:I = 0x7f070076
+.field public static final complete_icon_margin_end:I = 0x7f070076
 
-.field public static final complete_button_layout_minimum_width:I = 0x7f070077
+.field public static final complete_icon_margin_start:I = 0x7f070077
 
-.field public static final complete_content_layout_minimum_width:I = 0x7f070078
+.field public static final complete_icon_margin_top:I = 0x7f070078
 
-.field public static final complete_icon_margin_end:I = 0x7f070079
+.field public static final complete_icon_size:I = 0x7f070079
 
-.field public static final complete_icon_margin_start:I = 0x7f07007a
+.field public static final config_big_top_offset:I = 0x7f07007a
 
-.field public static final complete_icon_margin_top:I = 0x7f07007b
+.field public static final config_large_top_offset:I = 0x7f07007b
 
-.field public static final complete_icon_size:I = 0x7f07007c
+.field public static final config_line_limit_left:I = 0x7f07007c
 
-.field public static final config_big_top_offset:I = 0x7f07007d
+.field public static final config_line_limit_right:I = 0x7f07007d
 
-.field public static final config_large_top_offset:I = 0x7f07007e
+.field public static final config_line_step:I = 0x7f07007e
 
-.field public static final config_line_limit_left:I = 0x7f07007f
+.field public static final config_list_sample_width:I = 0x7f07007f
 
-.field public static final config_line_limit_right:I = 0x7f070080
+.field public static final config_lower_list_height:I = 0x7f070080
 
-.field public static final config_line_step:I = 0x7f070081
+.field public static final config_move_distance:I = 0x7f070081
 
-.field public static final config_list_sample_width:I = 0x7f070082
+.field public static final config_shot_bgnext_offset:I = 0x7f070082
 
-.field public static final config_lower_list_height:I = 0x7f070083
+.field public static final config_shot_bgover_offset:I = 0x7f070083
 
-.field public static final config_move_distance:I = 0x7f070084
+.field public static final config_shot_last_offset_level_1:I = 0x7f070084
 
-.field public static final config_shot_bgnext_offset:I = 0x7f070085
+.field public static final config_shot_last_offset_level_2:I = 0x7f070085
 
-.field public static final config_shot_bgover_offset:I = 0x7f070086
+.field public static final config_shot_last_offset_level_3:I = 0x7f070086
 
-.field public static final config_shot_last_offset_level_1:I = 0x7f070087
+.field public static final config_shot_last_offset_level_4:I = 0x7f070087
 
-.field public static final config_shot_last_offset_level_2:I = 0x7f070088
+.field public static final config_shot_last_offset_level_5:I = 0x7f070088
 
-.field public static final config_shot_last_offset_level_3:I = 0x7f070089
+.field public static final config_shot_next_offset_level_1:I = 0x7f070089
 
-.field public static final config_shot_last_offset_level_4:I = 0x7f07008a
+.field public static final config_shot_next_offset_level_2:I = 0x7f07008a
 
-.field public static final config_shot_last_offset_level_5:I = 0x7f07008b
+.field public static final config_shot_next_offset_level_3:I = 0x7f07008b
 
-.field public static final config_shot_next_offset_level_1:I = 0x7f07008c
+.field public static final config_shot_next_offset_level_4:I = 0x7f07008c
 
-.field public static final config_shot_next_offset_level_2:I = 0x7f07008d
+.field public static final config_shot_next_offset_level_5:I = 0x7f07008d
 
-.field public static final config_shot_next_offset_level_3:I = 0x7f07008e
+.field public static final config_shot_over_offset_level_1:I = 0x7f07008e
 
-.field public static final config_shot_next_offset_level_4:I = 0x7f07008f
+.field public static final config_shot_over_offset_level_2:I = 0x7f07008f
 
-.field public static final config_shot_next_offset_level_5:I = 0x7f070090
+.field public static final config_shot_over_offset_level_3:I = 0x7f070090
 
-.field public static final config_shot_over_offset_level_1:I = 0x7f070091
+.field public static final config_shot_slast_offset:I = 0x7f070091
 
-.field public static final config_shot_over_offset_level_2:I = 0x7f070092
+.field public static final config_small_list_height:I = 0x7f070092
 
-.field public static final config_shot_over_offset_level_3:I = 0x7f070093
+.field public static final config_stitch_bgnext_lines:I = 0x7f070093
 
-.field public static final config_shot_slast_offset:I = 0x7f070094
+.field public static final config_stitch_bgnext_offset_curr:I = 0x7f070094
 
-.field public static final config_small_list_height:I = 0x7f070095
+.field public static final config_stitch_bgnext_offset_last:I = 0x7f070095
 
-.field public static final config_stitch_bgnext_lines:I = 0x7f070096
+.field public static final config_stitch_bgover_lines:I = 0x7f070096
 
-.field public static final config_stitch_bgnext_offset_curr:I = 0x7f070097
+.field public static final config_stitch_bgover_offset_curr:I = 0x7f070097
 
-.field public static final config_stitch_bgnext_offset_last:I = 0x7f070098
+.field public static final config_stitch_bgover_offset_last:I = 0x7f070098
 
-.field public static final config_stitch_bgover_lines:I = 0x7f070099
+.field public static final config_stitch_last_lines_level_1:I = 0x7f070099
 
-.field public static final config_stitch_bgover_offset_curr:I = 0x7f07009a
+.field public static final config_stitch_last_lines_level_2:I = 0x7f07009a
 
-.field public static final config_stitch_bgover_offset_last:I = 0x7f07009b
+.field public static final config_stitch_last_lines_level_3:I = 0x7f07009b
 
-.field public static final config_stitch_last_lines_level_1:I = 0x7f07009c
+.field public static final config_stitch_last_lines_level_4:I = 0x7f07009c
 
-.field public static final config_stitch_last_lines_level_2:I = 0x7f07009d
+.field public static final config_stitch_last_lines_level_5:I = 0x7f07009d
 
-.field public static final config_stitch_last_lines_level_3:I = 0x7f07009e
+.field public static final config_stitch_last_offset_curr:I = 0x7f07009e
 
-.field public static final config_stitch_last_lines_level_4:I = 0x7f07009f
+.field public static final config_stitch_last_offset_last_level_1:I = 0x7f07009f
 
-.field public static final config_stitch_last_lines_level_5:I = 0x7f0700a0
+.field public static final config_stitch_last_offset_last_level_2:I = 0x7f0700a0
 
-.field public static final config_stitch_last_offset_curr:I = 0x7f0700a1
+.field public static final config_stitch_last_offset_last_level_3:I = 0x7f0700a1
 
-.field public static final config_stitch_last_offset_last_level_1:I = 0x7f0700a2
+.field public static final config_stitch_last_offset_last_level_4:I = 0x7f0700a2
 
-.field public static final config_stitch_last_offset_last_level_2:I = 0x7f0700a3
+.field public static final config_stitch_last_offset_last_level_5:I = 0x7f0700a3
 
-.field public static final config_stitch_last_offset_last_level_3:I = 0x7f0700a4
+.field public static final config_stitch_last_step_level_1:I = 0x7f0700a4
 
-.field public static final config_stitch_last_offset_last_level_4:I = 0x7f0700a5
+.field public static final config_stitch_last_step_level_2:I = 0x7f0700a5
 
-.field public static final config_stitch_last_offset_last_level_5:I = 0x7f0700a6
+.field public static final config_stitch_last_step_level_3:I = 0x7f0700a6
 
-.field public static final config_stitch_last_step_level_1:I = 0x7f0700a7
+.field public static final config_stitch_last_step_level_4:I = 0x7f0700a7
 
-.field public static final config_stitch_last_step_level_2:I = 0x7f0700a8
+.field public static final config_stitch_last_step_level_5:I = 0x7f0700a8
 
-.field public static final config_stitch_last_step_level_3:I = 0x7f0700a9
+.field public static final config_stitch_left_side_offset_level_1:I = 0x7f0700a9
 
-.field public static final config_stitch_last_step_level_4:I = 0x7f0700aa
+.field public static final config_stitch_left_side_offset_level_1_5:I = 0x7f0700aa
 
-.field public static final config_stitch_last_step_level_5:I = 0x7f0700ab
+.field public static final config_stitch_left_side_offset_level_2:I = 0x7f0700ab
 
-.field public static final config_stitch_left_side_offset_level_1:I = 0x7f0700ac
+.field public static final config_stitch_left_side_offset_level_3:I = 0x7f0700ac
 
-.field public static final config_stitch_left_side_offset_level_2:I = 0x7f0700ad
+.field public static final config_stitch_left_side_offset_level_4:I = 0x7f0700ad
 
-.field public static final config_stitch_left_side_offset_level_3:I = 0x7f0700ae
+.field public static final config_stitch_next_extend_curr:I = 0x7f0700ae
 
-.field public static final config_stitch_left_side_offset_level_4:I = 0x7f0700af
+.field public static final config_stitch_next_extend_last:I = 0x7f0700af
 
-.field public static final config_stitch_next_extend_curr:I = 0x7f0700b0
+.field public static final config_stitch_next_lines_level_1:I = 0x7f0700b0
 
-.field public static final config_stitch_next_extend_last:I = 0x7f0700b1
+.field public static final config_stitch_next_lines_level_2:I = 0x7f0700b1
 
-.field public static final config_stitch_next_lines_level_1:I = 0x7f0700b2
+.field public static final config_stitch_next_lines_level_3:I = 0x7f0700b2
 
-.field public static final config_stitch_next_lines_level_2:I = 0x7f0700b3
+.field public static final config_stitch_next_lines_level_4:I = 0x7f0700b3
 
-.field public static final config_stitch_next_lines_level_3:I = 0x7f0700b4
+.field public static final config_stitch_next_lines_level_5:I = 0x7f0700b4
 
-.field public static final config_stitch_next_lines_level_4:I = 0x7f0700b5
+.field public static final config_stitch_next_offset_curr:I = 0x7f0700b5
 
-.field public static final config_stitch_next_lines_level_5:I = 0x7f0700b6
+.field public static final config_stitch_next_offset_last:I = 0x7f0700b6
 
-.field public static final config_stitch_next_offset_curr:I = 0x7f0700b7
+.field public static final config_stitch_next_step_level_0:I = 0x7f0700b7
 
-.field public static final config_stitch_next_offset_last:I = 0x7f0700b8
+.field public static final config_stitch_next_step_level_1:I = 0x7f0700b8
 
-.field public static final config_stitch_next_step_level_0:I = 0x7f0700b9
+.field public static final config_stitch_next_step_level_2:I = 0x7f0700b9
 
-.field public static final config_stitch_next_step_level_1:I = 0x7f0700ba
+.field public static final config_stitch_next_step_level_3:I = 0x7f0700ba
 
-.field public static final config_stitch_next_step_level_2:I = 0x7f0700bb
+.field public static final config_stitch_next_step_level_4:I = 0x7f0700bb
 
-.field public static final config_stitch_next_step_level_3:I = 0x7f0700bc
+.field public static final config_stitch_next_step_level_5:I = 0x7f0700bc
 
-.field public static final config_stitch_next_step_level_4:I = 0x7f0700bd
+.field public static final config_stitch_over_extend_curr_level_1:I = 0x7f0700bd
 
-.field public static final config_stitch_next_step_level_5:I = 0x7f0700be
+.field public static final config_stitch_over_extend_curr_level_2:I = 0x7f0700be
 
-.field public static final config_stitch_over_extend_curr_level_1:I = 0x7f0700bf
+.field public static final config_stitch_over_extend_curr_level_3:I = 0x7f0700bf
 
-.field public static final config_stitch_over_extend_curr_level_2:I = 0x7f0700c0
+.field public static final config_stitch_over_extend_last:I = 0x7f0700c0
 
-.field public static final config_stitch_over_extend_curr_level_3:I = 0x7f0700c1
+.field public static final config_stitch_over_lines_level_1:I = 0x7f0700c1
 
-.field public static final config_stitch_over_extend_last:I = 0x7f0700c2
+.field public static final config_stitch_over_lines_level_2:I = 0x7f0700c2
 
-.field public static final config_stitch_over_lines_level_1:I = 0x7f0700c3
+.field public static final config_stitch_over_lines_level_3:I = 0x7f0700c3
 
-.field public static final config_stitch_over_lines_level_2:I = 0x7f0700c4
+.field public static final config_stitch_over_offset_curr:I = 0x7f0700c4
 
-.field public static final config_stitch_over_lines_level_3:I = 0x7f0700c5
+.field public static final config_stitch_over_offset_last:I = 0x7f0700c5
 
-.field public static final config_stitch_over_offset_curr:I = 0x7f0700c6
+.field public static final config_stitch_over_step_level_1:I = 0x7f0700c6
 
-.field public static final config_stitch_over_offset_last:I = 0x7f0700c7
+.field public static final config_stitch_over_step_level_2:I = 0x7f0700c7
 
-.field public static final config_stitch_over_step_level_1:I = 0x7f0700c8
+.field public static final config_stitch_over_step_level_3:I = 0x7f0700c8
 
-.field public static final config_stitch_over_step_level_2:I = 0x7f0700c9
+.field public static final config_stitch_right_side_offset_level_1:I = 0x7f0700c9
 
-.field public static final config_stitch_over_step_level_3:I = 0x7f0700ca
+.field public static final config_stitch_right_side_offset_level_2:I = 0x7f0700ca
 
-.field public static final config_stitch_right_side_offset_level_1:I = 0x7f0700cb
+.field public static final config_stitch_slast_lines:I = 0x7f0700cb
 
-.field public static final config_stitch_right_side_offset_level_2:I = 0x7f0700cc
+.field public static final config_stitch_slast_offset_curr:I = 0x7f0700cc
 
-.field public static final config_stitch_slast_lines:I = 0x7f0700cd
+.field public static final config_stitch_slast_offset_last:I = 0x7f0700cd
 
-.field public static final config_stitch_slast_offset_curr:I = 0x7f0700ce
+.field public static final config_stitch_slast_step:I = 0x7f0700ce
 
-.field public static final config_stitch_slast_offset_last:I = 0x7f0700cf
+.field public static final config_undo_lines:I = 0x7f0700cf
 
-.field public static final config_stitch_slast_step:I = 0x7f0700d0
+.field public static final config_undo_offset:I = 0x7f0700d0
 
-.field public static final config_undo_lines:I = 0x7f0700d1
+.field public static final config_undo_step:I = 0x7f0700d1
 
-.field public static final config_undo_offset:I = 0x7f0700d2
+.field public static final control_app_bar_ar_margin:I = 0x7f0700d2
 
-.field public static final config_undo_step:I = 0x7f0700d3
+.field public static final control_empty_base_height:I = 0x7f0700d3
 
-.field public static final control_app_bar_ar_margin:I = 0x7f0700d4
+.field public static final control_empty_home_status_height:I = 0x7f0700d4
 
-.field public static final control_empty_home_status_height:I = 0x7f0700d5
+.field public static final control_empty_image_height:I = 0x7f0700d5
 
-.field public static final control_empty_image_height:I = 0x7f0700d6
+.field public static final control_empty_image_margin_bottom:I = 0x7f0700d6
 
-.field public static final control_empty_image_margin_bottom:I = 0x7f0700d7
+.field public static final control_empty_image_margin_top:I = 0x7f0700d7
 
-.field public static final control_empty_image_margin_top:I = 0x7f0700d8
+.field public static final control_empty_image_view_size:I = 0x7f0700d8
 
-.field public static final control_empty_image_view_size:I = 0x7f0700d9
+.field public static final control_empty_image_width:I = 0x7f0700d9
 
-.field public static final control_empty_image_width:I = 0x7f0700da
+.field public static final control_empty_min_margin:I = 0x7f0700da
 
 .field public static final control_empty_temp_height:I = 0x7f0700db
 
@@ -1382,27 +1382,27 @@
 
 .field public static final op_dialog_picker_background_inset:I = 0x7f0702ab
 
-.field public static final op_hint_search_view_height:I = 0x7f0702ac
+.field public static final op_float_action_button_shadow_z8:I = 0x7f0702ac
 
-.field public static final op_hint_search_view_icon_size:I = 0x7f0702ad
+.field public static final op_hint_search_view_height:I = 0x7f0702ad
 
-.field public static final op_hint_search_view_icon_src_size_left:I = 0x7f0702ae
+.field public static final op_hint_search_view_icon_size:I = 0x7f0702ae
 
-.field public static final op_hint_search_view_icon_src_size_right:I = 0x7f0702af
+.field public static final op_hint_search_view_icon_src_size_left:I = 0x7f0702af
 
-.field public static final op_line_space_multiplier_h2:I = 0x7f0702b0
+.field public static final op_hint_search_view_icon_src_size_right:I = 0x7f0702b0
 
-.field public static final op_list_item_min_height:I = 0x7f0702b1
+.field public static final op_line_space_multiplier_h2:I = 0x7f0702b1
 
-.field public static final op_progress_dialog_right_padding:I = 0x7f0702b2
+.field public static final op_list_item_min_height:I = 0x7f0702b2
 
-.field public static final op_reduce_padding_space2:I = 0x7f0702b3
+.field public static final op_progress_dialog_right_padding:I = 0x7f0702b3
 
-.field public static final op_ripple_radius:I = 0x7f0702b4
+.field public static final op_reduce_padding_space2:I = 0x7f0702b4
 
-.field public static final op_seekbar_track_background_height_material:I = 0x7f0702b5
+.field public static final op_ripple_radius:I = 0x7f0702b5
 
-.field public static final op_seekbar_track_progress_height_material:I = 0x7f0702b6
+.field public static final op_seekbar_track_background_height_material:I = 0x7f0702b6
 
 .field public static final op_spinner_material_padding_left:I = 0x7f0702b7
 
@@ -1430,155 +1430,159 @@
 
 .field public static final op_text_size_subtitle:I = 0x7f0702c3
 
-.field public static final op_toolbar_navigation_max_button_height:I = 0x7f0702c4
+.field public static final op_text_style_dialog_body1_size:I = 0x7f0702c4
 
-.field public static final picker_bottom_margin:I = 0x7f0702c5
+.field public static final op_text_style_dialog_title_size:I = 0x7f0702c5
 
-.field public static final picker_top_margin:I = 0x7f0702c6
+.field public static final op_toolbar_navigation_max_button_height:I = 0x7f0702c6
 
-.field public static final preference_dropdown_padding_start:I = 0x7f0702c7
+.field public static final picker_bottom_margin:I = 0x7f0702c7
 
-.field public static final preference_fragment_padding_side:I = 0x7f0702c8
+.field public static final picker_top_margin:I = 0x7f0702c8
 
-.field public static final preference_icon_minWidth:I = 0x7f0702c9
+.field public static final preference_dropdown_padding_start:I = 0x7f0702c9
 
-.field public static final preference_seekbar_padding_horizontal:I = 0x7f0702ca
+.field public static final preference_fragment_padding_side:I = 0x7f0702ca
 
-.field public static final preference_seekbar_padding_vertical:I = 0x7f0702cb
+.field public static final preference_icon_minWidth:I = 0x7f0702cb
 
-.field public static final preference_seekbar_value_minWidth:I = 0x7f0702cc
+.field public static final preference_seekbar_padding_horizontal:I = 0x7f0702cc
 
-.field public static final preference_widget_width:I = 0x7f0702cd
+.field public static final preference_seekbar_padding_vertical:I = 0x7f0702cd
 
-.field public static final qs_page_indicator_height:I = 0x7f0702ce
+.field public static final preference_seekbar_value_minWidth:I = 0x7f0702ce
 
-.field public static final qs_page_indicator_width:I = 0x7f0702cf
+.field public static final preference_widget_width:I = 0x7f0702cf
 
-.field public static final quick_share_app_icon_scale_size:I = 0x7f0702d0
+.field public static final qs_page_indicator_height:I = 0x7f0702d0
 
-.field public static final quick_share_app_icon_size:I = 0x7f0702d1
+.field public static final qs_page_indicator_width:I = 0x7f0702d1
 
-.field public static final quick_share_appicon_distance:I = 0x7f0702d2
+.field public static final quick_share_app_icon_scale_size:I = 0x7f0702d2
 
-.field public static final quick_share_circular_padding:I = 0x7f0702d3
+.field public static final quick_share_app_icon_size:I = 0x7f0702d3
 
-.field public static final quick_share_img_preview_height:I = 0x7f0702d4
+.field public static final quick_share_appicon_distance:I = 0x7f0702d4
 
-.field public static final quick_share_img_preview_margin_top:I = 0x7f0702d5
+.field public static final quick_share_circular_padding:I = 0x7f0702d5
 
-.field public static final quick_share_img_preview_width:I = 0x7f0702d6
+.field public static final quick_share_img_preview_height:I = 0x7f0702d6
 
-.field public static final quick_share_panel_height:I = 0x7f0702d7
+.field public static final quick_share_img_preview_margin_top:I = 0x7f0702d7
 
-.field public static final quick_share_panel_width:I = 0x7f0702d8
+.field public static final quick_share_img_preview_width:I = 0x7f0702d8
 
-.field public static final quick_share_thumb_size:I = 0x7f0702d9
+.field public static final quick_share_panel_height:I = 0x7f0702d9
 
-.field public static final reduce_padding_space2:I = 0x7f0702da
+.field public static final quick_share_panel_width:I = 0x7f0702da
 
-.field public static final screenshot_ic_size:I = 0x7f0702db
+.field public static final quick_share_thumb_size:I = 0x7f0702db
 
-.field public static final search_view_preferred_height:I = 0x7f0702dc
+.field public static final reduce_padding_space2:I = 0x7f0702dc
 
-.field public static final search_view_preferred_width:I = 0x7f0702dd
+.field public static final screenshot_ic_size:I = 0x7f0702dd
 
-.field public static final search_view_text_min_width:I = 0x7f0702de
+.field public static final search_view_preferred_height:I = 0x7f0702de
 
-.field public static final small_longshot_height:I = 0x7f0702df
+.field public static final search_view_preferred_width:I = 0x7f0702df
 
-.field public static final small_longshot_layout_height:I = 0x7f0702e0
+.field public static final search_view_text_min_width:I = 0x7f0702e0
 
-.field public static final small_longshot_layout_width:I = 0x7f0702e1
+.field public static final small_longshot_height:I = 0x7f0702e1
 
-.field public static final small_longshot_width:I = 0x7f0702e2
+.field public static final small_longshot_layout_height:I = 0x7f0702e2
 
-.field public static final small_screenshot_padding:I = 0x7f0702e3
+.field public static final small_longshot_layout_width:I = 0x7f0702e3
 
-.field public static final smallscreenshot_margin_bottom:I = 0x7f0702e4
+.field public static final small_longshot_width:I = 0x7f0702e4
 
-.field public static final smallscreenshotlayout_bottom_shadow:I = 0x7f0702e5
+.field public static final small_screenshot_padding:I = 0x7f0702e5
 
-.field public static final smallscreenshotlayout_right_shadow:I = 0x7f0702e6
+.field public static final smallscreenshot_margin_bottom:I = 0x7f0702e6
 
-.field public static final snackbar_control_item_half_width:I = 0x7f0702e7
+.field public static final smallscreenshotlayout_bottom_shadow:I = 0x7f0702e7
 
-.field public static final status_bar_height_default:I = 0x7f0702e8
+.field public static final smallscreenshotlayout_right_shadow:I = 0x7f0702e8
 
-.field public static final tabs_padding_end:I = 0x7f0702e9
+.field public static final snackbar_control_item_half_width:I = 0x7f0702e9
 
-.field public static final tabs_padding_start:I = 0x7f0702ea
+.field public static final status_bar_height_default:I = 0x7f0702ea
 
-.field public static final text_selection_highlight_alpha_material:I = 0x7f0702eb
+.field public static final tabs_padding_end:I = 0x7f0702eb
 
-.field public static final timepicker_am_top_padding:I = 0x7f0702ec
+.field public static final tabs_padding_start:I = 0x7f0702ec
 
-.field public static final timepicker_ampm_horizontal_padding:I = 0x7f0702ed
+.field public static final text_selection_highlight_alpha_material:I = 0x7f0702ed
 
-.field public static final timepicker_ampm_label_size:I = 0x7f0702ee
+.field public static final timepicker_am_top_padding:I = 0x7f0702ee
 
-.field public static final timepicker_ampm_vertical_padding:I = 0x7f0702ef
+.field public static final timepicker_ampm_horizontal_padding:I = 0x7f0702ef
 
-.field public static final timepicker_center_dot_radius:I = 0x7f0702f0
+.field public static final timepicker_ampm_label_size:I = 0x7f0702f0
 
-.field public static final timepicker_edit_text_size:I = 0x7f0702f1
+.field public static final timepicker_ampm_vertical_padding:I = 0x7f0702f1
 
-.field public static final timepicker_extra_time_label_margin:I = 0x7f0702f2
+.field public static final timepicker_center_dot_radius:I = 0x7f0702f2
 
-.field public static final timepicker_header_height:I = 0x7f0702f3
+.field public static final timepicker_edit_text_size:I = 0x7f0702f3
 
-.field public static final timepicker_input_field_width:I = 0x7f0702f4
+.field public static final timepicker_extra_time_label_margin:I = 0x7f0702f4
 
-.field public static final timepicker_minimum_margin_sides:I = 0x7f0702f5
+.field public static final timepicker_header_height:I = 0x7f0702f5
 
-.field public static final timepicker_minimum_margin_top_bottom:I = 0x7f0702f6
+.field public static final timepicker_input_field_width:I = 0x7f0702f6
 
-.field public static final timepicker_pm_top_padding:I = 0x7f0702f7
+.field public static final timepicker_minimum_margin_sides:I = 0x7f0702f7
 
-.field public static final timepicker_radial_picker_dimen:I = 0x7f0702f8
+.field public static final timepicker_minimum_margin_top_bottom:I = 0x7f0702f8
 
-.field public static final timepicker_radial_picker_left_margin:I = 0x7f0702f9
+.field public static final timepicker_pm_top_padding:I = 0x7f0702f9
 
-.field public static final timepicker_radial_picker_right_margin:I = 0x7f0702fa
+.field public static final timepicker_radial_picker_dimen:I = 0x7f0702fa
 
-.field public static final timepicker_radial_picker_top_margin:I = 0x7f0702fb
+.field public static final timepicker_radial_picker_left_margin:I = 0x7f0702fb
 
-.field public static final timepicker_selector_dot_radius:I = 0x7f0702fc
+.field public static final timepicker_radial_picker_right_margin:I = 0x7f0702fc
 
-.field public static final timepicker_selector_radius:I = 0x7f0702fd
+.field public static final timepicker_radial_picker_top_margin:I = 0x7f0702fd
 
-.field public static final timepicker_selector_stroke:I = 0x7f0702fe
+.field public static final timepicker_selector_dot_radius:I = 0x7f0702fe
 
-.field public static final timepicker_separator_padding:I = 0x7f0702ff
+.field public static final timepicker_selector_radius:I = 0x7f0702ff
 
-.field public static final timepicker_text_inset_inner:I = 0x7f070300
+.field public static final timepicker_selector_stroke:I = 0x7f070300
 
-.field public static final timepicker_text_inset_normal:I = 0x7f070301
+.field public static final timepicker_separator_padding:I = 0x7f070301
 
-.field public static final timepicker_text_size_inner:I = 0x7f070302
+.field public static final timepicker_text_inset_inner:I = 0x7f070302
 
-.field public static final timepicker_text_size_normal:I = 0x7f070303
+.field public static final timepicker_text_inset_normal:I = 0x7f070303
 
-.field public static final timepicker_time_label_size:I = 0x7f070304
+.field public static final timepicker_text_size_inner:I = 0x7f070304
 
-.field public static final toolbar_elevation:I = 0x7f070305
+.field public static final timepicker_text_size_normal:I = 0x7f070305
 
-.field public static final toolbar_icon_min_width:I = 0x7f070306
+.field public static final timepicker_time_label_size:I = 0x7f070306
 
-.field public static final tooltip_corner_radius:I = 0x7f070307
+.field public static final toolbar_elevation:I = 0x7f070307
 
-.field public static final tooltip_horizontal_padding:I = 0x7f070308
+.field public static final toolbar_icon_min_width:I = 0x7f070308
 
-.field public static final tooltip_margin:I = 0x7f070309
+.field public static final tooltip_corner_radius:I = 0x7f070309
 
-.field public static final tooltip_precise_anchor_extra_offset:I = 0x7f07030a
+.field public static final tooltip_horizontal_padding:I = 0x7f07030a
 
-.field public static final tooltip_precise_anchor_threshold:I = 0x7f07030b
+.field public static final tooltip_margin:I = 0x7f07030b
 
-.field public static final tooltip_vertical_padding:I = 0x7f07030c
+.field public static final tooltip_precise_anchor_extra_offset:I = 0x7f07030c
 
-.field public static final tooltip_y_offset_non_touch:I = 0x7f07030d
+.field public static final tooltip_precise_anchor_threshold:I = 0x7f07030d
 
-.field public static final tooltip_y_offset_touch:I = 0x7f07030e
+.field public static final tooltip_vertical_padding:I = 0x7f07030e
+
+.field public static final tooltip_y_offset_non_touch:I = 0x7f07030f
+
+.field public static final tooltip_y_offset_touch:I = 0x7f070310
 
 
 # direct methods

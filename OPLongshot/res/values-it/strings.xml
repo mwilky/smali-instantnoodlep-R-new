@@ -27,10 +27,16 @@
     <string name="abc_shareactionprovider_share_with">Condividi con</string>
     <string name="abc_shareactionprovider_share_with_application">Condividi tramite %s</string>
     <string name="abc_toolbar_collapse_description">Comprimi</string>
+    <string name="about_action_bar_title">Informazioni</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Informativa sulla privacy</string>
+    <string name="about_release_note_title">Registro aggiornamenti:</string>
+    <string name="about_terms_service">Termini di servizio</string>
     <string name="app_name">Screenshot</string>
     <string name="copy">Copia</string>
     <string name="expand_button_title">Avanzate</string>
     <string name="got_it">OK</string>
+    <string name="loading_text">Caricamento in corso...</string>
     <string name="longshot_guide_not_support">Lo screenshot esteso non è supportato in questa pagina.</string>
     <string name="longshot_guide_support">Tocca qui per provare Screenshot esteso.</string>
     <string name="not_set">Non impostato</string>

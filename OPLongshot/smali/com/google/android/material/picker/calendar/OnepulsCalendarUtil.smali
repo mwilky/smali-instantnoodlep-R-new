@@ -151,7 +151,7 @@
         0x74a3
         0xea50
         0x6b58
-        0x56c0
+        0x5ac0
         0xab60
         0x96d5
         0x92e0
@@ -369,13 +369,24 @@
 
     move-result v2
 
+    const/4 v3, 0x6
+
+    const/16 v4, 0x76c
+
+    if-ge v2, v4, :cond_0
+
+    invoke-virtual {p0, v3}, Ljava/util/Calendar;->get(I)I
+
+    move-result p0
+
+    return p0
+
+    :cond_0
     invoke-virtual {p0, p1}, Ljava/util/Calendar;->before(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v4
 
-    if-eqz v3, :cond_1
-
-    const/4 v3, 0x6
+    if-eqz v4, :cond_2
 
     invoke-virtual {p0, v3}, Ljava/util/Calendar;->get(I)I
 
@@ -398,7 +409,7 @@
 
     move-result p1
 
-    if-ge v5, p1, :cond_0
+    if-ge v5, p1, :cond_1
 
     invoke-virtual {p0, v3}, Ljava/util/Calendar;->getActualMaximum(I)I
 
@@ -412,10 +423,10 @@
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     return v4
 
-    :cond_1
+    :cond_2
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;

@@ -16,8 +16,6 @@
 # static fields
 .field public static final accessibility:I = 0x7f130000
 
-.field public static final provider_paths:I = 0x7f130001
-
 
 # direct methods
 .method private constructor <init>()V

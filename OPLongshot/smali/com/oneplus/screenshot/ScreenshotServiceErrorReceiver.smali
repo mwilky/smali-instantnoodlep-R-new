@@ -25,7 +25,7 @@
 
     check-cast p2, Landroid/app/NotificationManager;
 
-    const v0, 0x7f0f007e
+    const v0, 0x7f0f008a
 
     invoke-static {p1, p2, v0}, Lcom/oneplus/screenshot/GlobalScreenshot;->notifyScreenshotError(Landroid/content/Context;Landroid/app/NotificationManager;I)V
 

@@ -40,7 +40,15 @@
 
 .field private mHeaderMonthDay:Landroid/widget/TextView;
 
+.field private final mHeaderMonthSelection:Landroid/view/View;
+
+.field private mHeaderMonthSelectionHeight:I
+
 .field private mHeaderYear:Landroid/widget/TextView;
+
+.field private final mHeaderYearSelection:Landroid/view/View;
+
+.field private mHeaderYearSelectionHeight:I
 
 .field private final mMaxDate:Ljava/util/Calendar;
 
@@ -259,6 +267,16 @@
 
     iput-object p5, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderYear:Landroid/widget/TextView;
 
+    sget p5, Lcom/google/android/material/R$id;->date_picker_year_selection:I
+
+    invoke-virtual {p4, p5}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+
+    move-result-object p5
+
+    iput-object p5, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderYearSelection:Landroid/view/View;
+
+    iget-object p5, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderYear:Landroid/widget/TextView;
+
     iget-object v0, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mOnHeaderClickListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {p5, v0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
@@ -272,6 +290,16 @@
     check-cast p5, Landroid/widget/TextView;
 
     iput-object p5, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderMonthDay:Landroid/widget/TextView;
+
+    sget p5, Lcom/google/android/material/R$id;->date_picker_month_selection:I
+
+    invoke-virtual {p4, p5}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+
+    move-result-object p5
+
+    iput-object p5, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderMonthSelection:Landroid/view/View;
+
+    iget-object p5, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderMonthDay:Landroid/widget/TextView;
 
     iget-object v0, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mOnHeaderClickListener:Landroid/view/View$OnClickListener;
 
@@ -458,23 +486,7 @@
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/google/android/material/picker/DatePickerCalendarDelegate;I)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->setCurrentView(I)V
-
-    return-void
-.end method
-
-.method static synthetic access$200(Lcom/google/android/material/picker/DatePickerCalendarDelegate;)Landroid/widget/TextView;
-    .locals 0
-
-    iget-object p0, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderYear:Landroid/widget/TextView;
-
-    return-object p0
-.end method
-
-.method static synthetic access$300(Lcom/google/android/material/picker/DatePickerCalendarDelegate;)V
+.method static synthetic access$100(Lcom/google/android/material/picker/DatePickerCalendarDelegate;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->tryVibrate()V
@@ -482,12 +494,140 @@
     return-void
 .end method
 
-.method static synthetic access$400(Lcom/google/android/material/picker/DatePickerCalendarDelegate;)Lcom/google/android/material/picker/YearPickerView;
+.method static synthetic access$200(Lcom/google/android/material/picker/DatePickerCalendarDelegate;I)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->setCurrentView(I)V
+
+    return-void
+.end method
+
+.method static synthetic access$300(Lcom/google/android/material/picker/DatePickerCalendarDelegate;)Lcom/google/android/material/picker/YearPickerView;
     .locals 0
 
     iget-object p0, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mYearPickerView:Lcom/google/android/material/picker/YearPickerView;
 
     return-object p0
+.end method
+
+.method private animatorToYearSelection(Z)V
+    .locals 10
+
+    iget v0, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderYearSelectionHeight:I
+
+    if-lez v0, :cond_3
+
+    iget v0, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderMonthSelectionHeight:I
+
+    if-lez v0, :cond_3
+
+    new-instance v0, Landroid/animation/AnimatorSet;
+
+    invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
+
+    iget v1, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderYearSelectionHeight:I
+
+    int-to-float v1, v1
+
+    iget v2, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderMonthSelectionHeight:I
+
+    int-to-float v2, v2
+
+    div-float/2addr v1, v2
+
+    iget-object v2, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderMonthSelection:Landroid/view/View;
+
+    const/4 v3, 0x2
+
+    new-array v4, v3, [F
+
+    const/high16 v5, 0x3f800000    # 1.0f
+
+    if-eqz p1, :cond_0
+
+    move v6, v1
+
+    goto :goto_0
+
+    :cond_0
+    move v6, v5
+
+    :goto_0
+    const/4 v7, 0x0
+
+    aput v6, v4, v7
+
+    if-eqz p1, :cond_1
+
+    move v1, v5
+
+    :cond_1
+    const/4 v5, 0x1
+
+    aput v1, v4, v5
+
+    const-string v1, "scaleY"
+
+    invoke-static {v2, v1, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderMonthSelection:Landroid/view/View;
+
+    new-array v4, v5, [F
+
+    if-eqz p1, :cond_2
+
+    const/4 p1, 0x0
+
+    goto :goto_1
+
+    :cond_2
+    iget-object p1, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderYearSelection:Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getTop()I
+
+    move-result p1
+
+    iget-object v6, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderMonthSelection:Landroid/view/View;
+
+    invoke-virtual {v6}, Landroid/view/View;->getTop()I
+
+    move-result v6
+
+    sub-int/2addr p1, v6
+
+    int-to-float p1, p1
+
+    :goto_1
+    aput p1, v4, v7
+
+    const-string p1, "translationY"
+
+    invoke-static {v2, p1, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object p1
+
+    const-wide/16 v8, 0x7d
+
+    invoke-virtual {v0, v8, v9}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
+
+    sget-object v2, Landroidx/animation/AnimatorUtils;->op_control_interpolator_linear_out_slow_in:Landroid/view/animation/Interpolator;
+
+    invoke-virtual {v0, v2}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    new-array v2, v3, [Landroid/animation/Animator;
+
+    aput-object v1, v2, v7
+
+    aput-object p1, v2, v5
+
+    invoke-virtual {v0, v2}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
+
+    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
+
+    :cond_3
+    return-void
 .end method
 
 .method public static getDaysInMonth(II)I
@@ -545,6 +685,171 @@
         :pswitch_0
         :pswitch_2
     .end packed-switch
+.end method
+
+.method private initSelectionParams()V
+    .locals 5
+
+    iget-object v0, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderYearSelection:Landroid/view/View;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderMonthSelection:Landroid/view/View;
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderMonthSelectionHeight:I
+
+    if-nez v0, :cond_0
+
+    iget v0, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderYearSelectionHeight:I
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    iget-object v1, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mMonthDayFormat:Ljava/text/SimpleDateFormat;
+
+    iget-object v2, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mCurrentDate:Ljava/util/Calendar;
+
+    invoke-virtual {v2}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderMonthDay:Landroid/widget/TextView;
+
+    invoke-virtual {v2}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
+
+    move-result-object v2
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v2, v1, v4, v3, v0}, Landroid/text/TextPaint;->getTextBounds(Ljava/lang/String;IILandroid/graphics/Rect;)V
+
+    invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderMonthSelectionHeight:I
+
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    iget-object v1, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mYearFormat:Ljava/text/SimpleDateFormat;
+
+    iget-object v2, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mCurrentDate:Ljava/util/Calendar;
+
+    invoke-virtual {v2}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderYear:Landroid/widget/TextView;
+
+    invoke-virtual {v2}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
+
+    move-result-object v2
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    invoke-virtual {v2, v1, v4, v3, v0}, Landroid/text/TextPaint;->getTextBounds(Ljava/lang/String;IILandroid/graphics/Rect;)V
+
+    invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderYearSelectionHeight:I
+
+    iget-object v0, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderYearSelection:Landroid/view/View;
+
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/LinearLayout$LayoutParams;
+
+    iget v1, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderYearSelectionHeight:I
+
+    iput v1, v0, Landroid/widget/LinearLayout$LayoutParams;->height:I
+
+    iget-object v1, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderYearSelection:Landroid/view/View;
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object v0, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderMonthSelection:Landroid/view/View;
+
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/LinearLayout$LayoutParams;
+
+    iget v1, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderMonthSelectionHeight:I
+
+    iput v1, v0, Landroid/widget/LinearLayout$LayoutParams;->height:I
+
+    iget-object v1, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderYear:Landroid/widget/TextView;
+
+    invoke-virtual {v1}, Landroid/widget/TextView;->getMeasuredHeight()I
+
+    move-result v1
+
+    iget v2, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderYearSelectionHeight:I
+
+    sub-int/2addr v1, v2
+
+    div-int/lit8 v1, v1, 0x2
+
+    iget-object v2, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderYear:Landroid/widget/TextView;
+
+    invoke-virtual {v2}, Landroid/widget/TextView;->getPaddingBottom()I
+
+    move-result v2
+
+    sub-int/2addr v1, v2
+
+    invoke-static {v1}, Ljava/lang/Math;->abs(I)I
+
+    move-result v1
+
+    iget-object v2, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderMonthDay:Landroid/widget/TextView;
+
+    invoke-virtual {v2}, Landroid/widget/TextView;->getMeasuredHeight()I
+
+    move-result v2
+
+    iget v3, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderMonthSelectionHeight:I
+
+    sub-int/2addr v2, v3
+
+    div-int/lit8 v2, v2, 0x2
+
+    add-int/2addr v1, v2
+
+    iput v1, v0, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
+
+    iget-object v1, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderMonthSelection:Landroid/view/View;
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    :cond_0
+    return-void
 .end method
 
 .method private multiplyAlphaComponent(IF)I
@@ -634,7 +939,7 @@
 .end method
 
 .method private onDateChanged(ZZ)V
-    .locals 4
+    .locals 5
 
     iget-object v0, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mCurrentDate:Ljava/util/Calendar;
 
@@ -657,51 +962,51 @@
     :cond_0
     iget-object p2, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mCurrentDate:Ljava/util/Calendar;
 
-    const/4 v1, 0x2
+    const/4 v2, 0x2
 
-    invoke-virtual {p2, v1}, Ljava/util/Calendar;->get(I)I
+    invoke-virtual {p2, v2}, Ljava/util/Calendar;->get(I)I
 
     move-result p2
 
-    iget-object v1, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mCurrentDate:Ljava/util/Calendar;
+    iget-object v2, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mCurrentDate:Ljava/util/Calendar;
 
-    const/4 v2, 0x5
+    const/4 v3, 0x5
 
-    invoke-virtual {v1, v2}, Ljava/util/Calendar;->get(I)I
+    invoke-virtual {v2, v3}, Ljava/util/Calendar;->get(I)I
 
-    move-result v1
+    move-result v2
 
-    iget-object v2, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mOnDateChangedListener:Lcom/google/android/material/picker/DatePicker$OnDateChangedListener;
+    iget-object v3, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mOnDateChangedListener:Lcom/google/android/material/picker/DatePicker$OnDateChangedListener;
 
-    if-eqz v2, :cond_1
+    if-eqz v3, :cond_1
 
-    iget-object v2, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mOnDateChangedListener:Lcom/google/android/material/picker/DatePicker$OnDateChangedListener;
+    iget-object v3, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mOnDateChangedListener:Lcom/google/android/material/picker/DatePicker$OnDateChangedListener;
 
-    iget-object v3, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mDelegator:Lcom/google/android/material/picker/DatePicker;
+    iget-object v4, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mDelegator:Lcom/google/android/material/picker/DatePicker;
 
-    invoke-interface {v2, v3, v0, p2, v1}, Lcom/google/android/material/picker/DatePicker$OnDateChangedListener;->onDateChanged(Lcom/google/android/material/picker/DatePicker;III)V
+    invoke-interface {v3, v4, v0, p2, v2}, Lcom/google/android/material/picker/DatePicker$OnDateChangedListener;->onDateChanged(Lcom/google/android/material/picker/DatePicker;III)V
 
     :cond_1
-    iget-object v2, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mAutoFillChangeListener:Lcom/google/android/material/picker/DatePicker$OnDateChangedListener;
+    iget-object v3, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mAutoFillChangeListener:Lcom/google/android/material/picker/DatePicker$OnDateChangedListener;
 
-    if-eqz v2, :cond_2
+    if-eqz v3, :cond_2
 
-    iget-object v2, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mAutoFillChangeListener:Lcom/google/android/material/picker/DatePicker$OnDateChangedListener;
+    iget-object v3, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mAutoFillChangeListener:Lcom/google/android/material/picker/DatePicker$OnDateChangedListener;
 
-    iget-object v3, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mDelegator:Lcom/google/android/material/picker/DatePicker;
+    iget-object v4, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mDelegator:Lcom/google/android/material/picker/DatePicker;
 
-    invoke-interface {v2, v3, v0, p2, v1}, Lcom/google/android/material/picker/DatePicker$OnDateChangedListener;->onDateChanged(Lcom/google/android/material/picker/DatePicker;III)V
+    invoke-interface {v3, v4, v0, p2, v2}, Lcom/google/android/material/picker/DatePicker$OnDateChangedListener;->onDateChanged(Lcom/google/android/material/picker/DatePicker;III)V
 
     :cond_2
     iget-object p2, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mDayPickerView:Lcom/google/android/material/picker/DayPickerView;
 
-    iget-object v1, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mCurrentDate:Ljava/util/Calendar;
+    iget-object v2, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mCurrentDate:Ljava/util/Calendar;
 
-    invoke-virtual {v1}, Ljava/util/Calendar;->getTimeInMillis()J
+    invoke-virtual {v2}, Ljava/util/Calendar;->getTimeInMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {p2, v1, v2}, Lcom/google/android/material/picker/DayPickerView;->setDate(J)V
+    invoke-virtual {p2, v2, v3, v1}, Lcom/google/android/material/picker/DayPickerView;->setDate(JZ)V
 
     iget-object p2, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mYearPickerView:Lcom/google/android/material/picker/YearPickerView;
 
@@ -728,7 +1033,7 @@
 
     if-eq p1, v1, :cond_0
 
-    goto/16 :goto_0
+    goto :goto_0
 
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->changeYearLayoutParams()V
@@ -759,25 +1064,11 @@
 
     invoke-virtual {v2, v0}, Landroid/widget/TextView;->setActivated(Z)V
 
-    iget-object v2, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderMonthDay:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderYear:Landroid/widget/TextView;
 
-    invoke-virtual {v2}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
+    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setActivated(Z)V
 
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Landroid/text/TextPaint;->setFakeBoldText(Z)V
-
-    iget-object v0, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderYear:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setActivated(Z)V
-
-    iget-object v0, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderYear:Landroid/widget/TextView;
-
-    invoke-virtual {v0}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setFakeBoldText(Z)V
+    invoke-direct {p0, v0}, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->animatorToYearSelection(Z)V
 
     iget-object v0, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mAnimator:Landroid/widget/ViewAnimator;
 
@@ -813,25 +1104,11 @@
 
     invoke-virtual {v2, v1}, Landroid/widget/TextView;->setActivated(Z)V
 
-    iget-object v2, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderMonthDay:Landroid/widget/TextView;
-
-    invoke-virtual {v2}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Landroid/text/TextPaint;->setFakeBoldText(Z)V
+    invoke-direct {p0, v1}, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->animatorToYearSelection(Z)V
 
     iget-object v1, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderYear:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setActivated(Z)V
-
-    iget-object v1, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mHeaderYear:Landroid/widget/TextView;
-
-    invoke-virtual {v1}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/text/TextPaint;->setFakeBoldText(Z)V
 
     iget-object v1, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mAnimator:Landroid/widget/ViewAnimator;
 
@@ -1104,6 +1381,8 @@
     invoke-virtual {v1, v2}, Lcom/google/android/material/picker/YearPickerView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     :cond_1
+    invoke-direct {p0}, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->initSelectionParams()V
+
     return-void
 .end method
 

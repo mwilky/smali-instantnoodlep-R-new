@@ -27,10 +27,16 @@
     <string name="abc_shareactionprovider_share_with">แชร์กับ</string>
     <string name="abc_shareactionprovider_share_with_application">แชร์ทาง %s</string>
     <string name="abc_toolbar_collapse_description">ยุบ</string>
+    <string name="about_action_bar_title">เกี่ยวกับ</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">นโยบายความเป็นส่วนตัว</string>
+    <string name="about_release_note_title">ล็อกการอัปเดต:</string>
+    <string name="about_terms_service">เงื่อนไขการใช้บริการ</string>
     <string name="app_name">ภาพหน้าจอ</string>
     <string name="copy">คัดลอก</string>
     <string name="expand_button_title">ขั้นสูง</string>
     <string name="got_it">รับทราบ</string>
+    <string name="loading_text">กำลังโหลด...</string>
     <string name="longshot_guide_not_support">หน้านี้ไม่รองรับภาพหน้าจอแบบขยาย</string>
     <string name="longshot_guide_support">แตะที่นี่เพื่อลองภาพหน้าจอแบบขยาย</string>
     <string name="not_set">ไม่ได้ตั้งค่า</string>

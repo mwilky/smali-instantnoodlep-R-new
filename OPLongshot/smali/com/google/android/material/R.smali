@@ -7,6 +7,7 @@
     value = {
         Lcom/google/android/material/R$anim;,
         Lcom/google/android/material/R$animator;,
+        Lcom/google/android/material/R$array;,
         Lcom/google/android/material/R$attr;,
         Lcom/google/android/material/R$bool;,
         Lcom/google/android/material/R$color;,

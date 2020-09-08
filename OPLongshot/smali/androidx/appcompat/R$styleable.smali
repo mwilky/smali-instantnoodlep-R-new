@@ -748,89 +748,81 @@
 
 .field public static final OnePlusTheme_colorActionBarControlNormal:I = 0x2
 
-.field public static final OnePlusTheme_colorError:I = 0x3
+.field public static final OnePlusTheme_dropdownListItemSelectedColor:I = 0x3
 
-.field public static final OnePlusTheme_dropdownListItemSelectedColor:I = 0x4
+.field public static final OnePlusTheme_imageCheckboxStyle:I = 0x4
 
-.field public static final OnePlusTheme_imageCheckboxStyle:I = 0x5
+.field public static final OnePlusTheme_onePlusActionBarTitleColor:I = 0x5
 
-.field public static final OnePlusTheme_onePlusActionBarTitleColor:I = 0x6
+.field public static final OnePlusTheme_onePlusAppbarBgColor:I = 0x6
 
-.field public static final OnePlusTheme_onePlusActionbarIconAlpha:I = 0x7
+.field public static final OnePlusTheme_onePlusBgColor:I = 0x7
 
-.field public static final OnePlusTheme_onePlusAppbarBgColor:I = 0x8
+.field public static final OnePlusTheme_onePlusBgColorCard:I = 0x8
 
-.field public static final OnePlusTheme_onePlusBgColor:I = 0x9
+.field public static final OnePlusTheme_onePlusBgColorControl:I = 0x9
 
-.field public static final OnePlusTheme_onePlusBgColorCard:I = 0xa
+.field public static final OnePlusTheme_onePlusBgColorOverride:I = 0xa
 
-.field public static final OnePlusTheme_onePlusBgColorControl:I = 0xb
+.field public static final OnePlusTheme_onePlusBgColorPopup:I = 0xb
 
-.field public static final OnePlusTheme_onePlusBgColorOverride:I = 0xc
+.field public static final OnePlusTheme_onePlusBgColorSelected:I = 0xc
 
-.field public static final OnePlusTheme_onePlusBgColorPopup:I = 0xd
+.field public static final OnePlusTheme_onePlusBgColorToast:I = 0xd
 
-.field public static final OnePlusTheme_onePlusBgColorSelected:I = 0xe
+.field public static final OnePlusTheme_onePlusBgColorWeaken:I = 0xe
 
-.field public static final OnePlusTheme_onePlusBgColorToast:I = 0xf
+.field public static final OnePlusTheme_onePlusButtonDisableColor:I = 0xf
 
-.field public static final OnePlusTheme_onePlusBgColorWeaken:I = 0x10
+.field public static final OnePlusTheme_onePlusCardColorBorder:I = 0x10
 
-.field public static final OnePlusTheme_onePlusButtonDisableColor:I = 0x11
+.field public static final OnePlusTheme_onePlusCheckBoxBgColor:I = 0x11
 
-.field public static final OnePlusTheme_onePlusCardColorBorder:I = 0x12
+.field public static final OnePlusTheme_onePlusCheckBoxCheckedColor:I = 0x12
 
-.field public static final OnePlusTheme_onePlusCheckBoxBgColor:I = 0x13
+.field public static final OnePlusTheme_onePlusColorButtonNormal:I = 0x13
 
-.field public static final OnePlusTheme_onePlusCheckBoxCheckedColor:I = 0x14
+.field public static final OnePlusTheme_onePlusDividerColor:I = 0x14
 
-.field public static final OnePlusTheme_onePlusColorButtonNormal:I = 0x15
+.field public static final OnePlusTheme_onePlusEmptyTextTitleColor:I = 0x15
 
-.field public static final OnePlusTheme_onePlusColorControlHighlight:I = 0x16
+.field public static final OnePlusTheme_onePlusIconCheckboxColorInactive:I = 0x16
 
-.field public static final OnePlusTheme_onePlusDividerColor:I = 0x17
+.field public static final OnePlusTheme_onePlusIconColorActive:I = 0x17
 
-.field public static final OnePlusTheme_onePlusEmptyTextTitleColor:I = 0x18
+.field public static final OnePlusTheme_onePlusIconColorDisable:I = 0x18
 
-.field public static final OnePlusTheme_onePlusIconColorActive:I = 0x19
+.field public static final OnePlusTheme_onePlusIconColorInactive:I = 0x19
 
-.field public static final OnePlusTheme_onePlusIconColorDisable:I = 0x1a
+.field public static final OnePlusTheme_onePlusLabelStrokeColor:I = 0x1a
 
-.field public static final OnePlusTheme_onePlusIconColorInactive:I = 0x1b
+.field public static final OnePlusTheme_onePlusPreferenceDividerColor:I = 0x1b
 
-.field public static final OnePlusTheme_onePlusLabelStrokeColor:I = 0x1c
+.field public static final OnePlusTheme_onePlusRippleColor:I = 0x1c
 
-.field public static final OnePlusTheme_onePlusRippleColor:I = 0x1d
+.field public static final OnePlusTheme_onePlusSearchBgColor:I = 0x1d
 
-.field public static final OnePlusTheme_onePlusSearchBgColor:I = 0x1e
+.field public static final OnePlusTheme_onePlusSearchStrokeBgColor:I = 0x1e
 
-.field public static final OnePlusTheme_onePlusSearchIconColor:I = 0x1f
+.field public static final OnePlusTheme_onePlusTabLayoutSelectedColor:I = 0x1f
 
-.field public static final OnePlusTheme_onePlusSearchIconInActiveColor:I = 0x20
+.field public static final OnePlusTheme_onePlusTabLayoutUnSelectedColor:I = 0x20
 
-.field public static final OnePlusTheme_onePlusSearchStrokeBgColor:I = 0x21
+.field public static final OnePlusTheme_onePlusTabbarLineColorChecked:I = 0x21
 
-.field public static final OnePlusTheme_onePlusTabLayoutSelectedColor:I = 0x22
+.field public static final OnePlusTheme_onePlusTabbarLineColorUnchecked:I = 0x22
 
-.field public static final OnePlusTheme_onePlusTabLayoutUnSelectedColor:I = 0x23
+.field public static final OnePlusTheme_onePlusTextColorDisable:I = 0x23
 
-.field public static final OnePlusTheme_onePlusTabbarLineColorChecked:I = 0x24
+.field public static final OnePlusTheme_onePlusTextColorHint:I = 0x24
 
-.field public static final OnePlusTheme_onePlusTabbarLineColorUnchecked:I = 0x25
+.field public static final OnePlusTheme_onePlusTextColorPrimary:I = 0x25
 
-.field public static final OnePlusTheme_onePlusTextColorDisable:I = 0x26
+.field public static final OnePlusTheme_onePlusTextColorSecondary:I = 0x26
 
-.field public static final OnePlusTheme_onePlusTextColorHint:I = 0x27
+.field public static final OnePlusTheme_tabTextColorPrimary:I = 0x27
 
-.field public static final OnePlusTheme_onePlusTextColorLabel:I = 0x28
-
-.field public static final OnePlusTheme_onePlusTextColorPrimary:I = 0x29
-
-.field public static final OnePlusTheme_onePlusTextColorSecondary:I = 0x2a
-
-.field public static final OnePlusTheme_tabTextColorPrimary:I = 0x2b
-
-.field public static final OnePlusTheme_tabTextColorSecondary:I = 0x2c
+.field public static final OnePlusTheme_tabTextColorSecondary:I = 0x28
 
 .field public static final PopupWindow:[I
 
@@ -1327,13 +1319,13 @@
 
     new-array v5, v1, [I
 
-    const v6, 0x7f0402df
+    const v6, 0x7f0402dc
 
     aput v6, v5, v4
 
     sput-object v5, Landroidx/appcompat/R$styleable;->OPTriStateCheckBox:[I
 
-    const/16 v5, 0x2d
+    const/16 v5, 0x29
 
     new-array v5, v5, [I
 
@@ -1349,7 +1341,7 @@
 
     new-array v5, v1, [I
 
-    const v6, 0x7f0402db
+    const v6, 0x7f0402d8
 
     aput v6, v5, v4
 
@@ -1481,13 +1473,13 @@
         0x7f0401c4
         0x7f0401fc
         0x7f040224
-        0x7f040272
-        0x7f040287
-        0x7f040288
-        0x7f0402e9
-        0x7f0402ed
-        0x7f04034e
-        0x7f04035b
+        0x7f04026f
+        0x7f040284
+        0x7f040285
+        0x7f0402e6
+        0x7f0402ea
+        0x7f04034b
+        0x7f040358
     .end array-data
 
     :array_1
@@ -1496,8 +1488,8 @@
         0x7f040048
         0x7f0400b5
         0x7f040185
-        0x7f0402ed
-        0x7f04035b
+        0x7f0402ea
+        0x7f040358
     .end array-data
 
     :array_2
@@ -1514,9 +1506,9 @@
         0x7f0401f1
         0x7f0401f2
         0x7f040221
-        0x7f040289
-        0x7f0402c1
-        0x7f0402c3
+        0x7f040286
+        0x7f0402be
+        0x7f0402c0
     .end array-data
 
     :array_4
@@ -1551,23 +1543,23 @@
         0x101046f
         0x1010470
         0x7f0401a9
-        0x7f04033e
+        0x7f04033b
     .end array-data
 
     :array_8
     .array-data 4
         0x1010119
-        0x7f0402d3
-        0x7f04034b
-        0x7f04034d
+        0x7f0402d0
+        0x7f040348
+        0x7f04034a
     .end array-data
 
     :array_9
     .array-data 4
         0x1010142
-        0x7f040346
-        0x7f040347
-        0x7f040348
+        0x7f040343
+        0x7f040344
+        0x7f040345
     .end array-data
 
     :array_a
@@ -1602,8 +1594,8 @@
         0x7f040179
         0x7f0401db
         0x7f0401eb
-        0x7f04031c
-        0x7f04033a
+        0x7f040319
+        0x7f040337
     .end array-data
 
     :array_c
@@ -1692,47 +1684,47 @@
         0x7f0401f9
         0x7f0401fa
         0x7f0401fb
-        0x7f040261
-        0x7f040262
-        0x7f040263
-        0x7f040271
-        0x7f040273
+        0x7f04025e
+        0x7f04025f
+        0x7f040260
+        0x7f04026e
+        0x7f040270
+        0x7f040290
         0x7f040293
-        0x7f040296
-        0x7f040297
-        0x7f040298
+        0x7f040294
+        0x7f040295
+        0x7f0402a3
         0x7f0402a6
-        0x7f0402a9
-        0x7f0402ae
-        0x7f0402af
-        0x7f0402d0
-        0x7f0402d1
-        0x7f0402fa
+        0x7f0402ab
+        0x7f0402ac
+        0x7f0402cd
+        0x7f0402ce
+        0x7f0402f7
+        0x7f040324
+        0x7f040326
         0x7f040327
-        0x7f040329
-        0x7f04032a
+        0x7f040328
         0x7f04032b
+        0x7f04032c
+        0x7f04032d
         0x7f04032e
-        0x7f04032f
-        0x7f040330
         0x7f040331
-        0x7f040334
-        0x7f040336
+        0x7f040333
+        0x7f04035b
+        0x7f04035c
+        0x7f04035d
         0x7f04035e
-        0x7f04035f
-        0x7f040360
-        0x7f040361
-        0x7f040371
+        0x7f04036e
+        0x7f040373
+        0x7f040374
+        0x7f040375
         0x7f040376
         0x7f040377
         0x7f040378
         0x7f040379
-        0x7f04037a
         0x7f04037b
         0x7f04037c
-        0x7f04037e
-        0x7f04037f
-        0x7f040380
+        0x7f04037d
     .end array-data
 
     :array_d
@@ -1758,8 +1750,8 @@
         0x7f0400bf
         0x7f040126
         0x7f04017d
-        0x7f0402cf
-        0x7f04033d
+        0x7f0402cc
+        0x7f04033a
     .end array-data
 
     :array_10
@@ -1790,7 +1782,7 @@
         0x7f040178
         0x7f040179
         0x7f04017a
-        0x7f04036b
+        0x7f040368
     .end array-data
 
     :array_13
@@ -1825,7 +1817,7 @@
         0x7f04011a
         0x7f04011d
         0x7f040219
-        0x7f0402bd
+        0x7f0402ba
     .end array-data
 
     :array_16
@@ -1875,8 +1867,8 @@
         0x7f04019f
         0x7f0401a1
         0x7f04022b
-        0x7f0402bc
-        0x7f040362
+        0x7f0402b9
+        0x7f04035f
     .end array-data
 
     :array_1a
@@ -1888,8 +1880,8 @@
         0x101012f
         0x1010130
         0x1010131
-        0x7f040285
-        0x7f0402e7
+        0x7f040282
+        0x7f0402e4
     .end array-data
 
     :array_1b
@@ -1897,7 +1889,6 @@
         0x7f040001
         0x7f040033
         0x7f0400c1
-        0x7f0400c7
         0x7f04012d
         0x7f0401a6
         0x7f04022c
@@ -1934,24 +1925,21 @@
         0x7f04024b
         0x7f04024c
         0x7f04024d
-        0x7f04024e
-        0x7f04024f
-        0x7f040250
-        0x7f040318
-        0x7f040319
+        0x7f040315
+        0x7f040316
     .end array-data
 
     :array_1c
     .array-data 4
         0x1010176
         0x10102c9
-        0x7f040258
+        0x7f040255
     .end array-data
 
     :array_1d
     .array-data 4
-        0x7f04025a
-        0x7f040260
+        0x7f040257
+        0x7f04025d
     .end array-data
 
     :array_1e
@@ -1966,13 +1954,13 @@
         0x7f04017e
         0x7f0401a2
         0x7f0401dc
-        0x7f040290
-        0x7f040291
-        0x7f0402a4
-        0x7f0402a5
-        0x7f0402e8
-        0x7f0402f1
-        0x7f040373
+        0x7f04028d
+        0x7f04028e
+        0x7f0402a1
+        0x7f0402a2
+        0x7f0402e5
+        0x7f0402ee
+        0x7f040370
     .end array-data
 
     :array_1f
@@ -1981,7 +1969,7 @@
         0x1010176
         0x101017b
         0x1010262
-        0x7f040272
+        0x7f04026f
     .end array-data
 
     :array_20
@@ -2000,17 +1988,17 @@
         0x1010125
         0x1010142
         0x10101a8
-        0x7f0402c0
-        0x7f0402d2
-        0x7f0402f6
-        0x7f0402f7
-        0x7f0402fb
-        0x7f040342
-        0x7f040343
-        0x7f040344
+        0x7f0402bd
+        0x7f0402cf
+        0x7f0402f3
+        0x7f0402f4
+        0x7f0402f8
+        0x7f04033f
+        0x7f040340
+        0x7f040341
+        0x7f040363
+        0x7f040365
         0x7f040366
-        0x7f040368
-        0x7f040369
     .end array-data
 
     :array_22
@@ -2029,8 +2017,8 @@
         0x1010585
         0x7f040171
         0x7f040179
-        0x7f04031c
-        0x7f04033a
+        0x7f040319
+        0x7f040337
     .end array-data
 
     :array_23
@@ -2051,28 +2039,28 @@
         0x7f04021a
         0x7f040222
         0x7f040223
-        0x7f040272
+        0x7f04026f
+        0x7f0402e6
+        0x7f0402e8
         0x7f0402e9
-        0x7f0402eb
-        0x7f0402ec
-        0x7f04034e
+        0x7f04034b
+        0x7f04034f
+        0x7f040350
+        0x7f040351
         0x7f040352
         0x7f040353
         0x7f040354
-        0x7f040355
         0x7f040356
         0x7f040357
-        0x7f040359
-        0x7f04035a
     .end array-data
 
     :array_24
     .array-data 4
         0x1010000
         0x10100da
+        0x7f040259
         0x7f04025c
-        0x7f04025f
-        0x7f04033c
+        0x7f040339
     .end array-data
 
     :array_25

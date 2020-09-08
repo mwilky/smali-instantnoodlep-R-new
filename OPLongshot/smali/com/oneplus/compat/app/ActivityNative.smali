@@ -140,9 +140,11 @@
 
     :cond_3
     :goto_0
-    const-string v0, "android.app.Activity.TranslucentConversionListener"
+    const-class v0, Landroid/app/Activity;
 
-    invoke-static {v0}, Lcom/oneplus/utils/reflection/ClassReflection;->findClass(Ljava/lang/String;)Ljava/lang/Class;
+    const-string v1, "TranslucentConversionListener"
+
+    invoke-static {v0, v1}, Lcom/oneplus/utils/reflection/ClassReflection;->findInnerClass(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 

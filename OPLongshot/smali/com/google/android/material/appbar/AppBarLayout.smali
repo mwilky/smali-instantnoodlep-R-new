@@ -351,6 +351,49 @@
     return-void
 .end method
 
+.method private findFirstScrollingBehaviorChild(Landroidx/coordinatorlayout/widget/CoordinatorLayout;)Landroid/view/View;
+    .locals 4
+
+    invoke-virtual {p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getChildCount()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v0, :cond_1
+
+    invoke-virtual {p1, v1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v3
+
+    check-cast v3, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;
+
+    invoke-virtual {v3}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->getBehavior()Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;
+
+    move-result-object v3
+
+    instance-of v3, v3, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;
+
+    if-eqz v3, :cond_0
+
+    return-object v2
+
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
 .method private findLiftOnScrollTargetView(Landroid/view/View;)Landroid/view/View;
     .locals 3
 
@@ -1894,6 +1937,51 @@
 
     iput v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->pendingAction:I
 
+    return-void
+.end method
+
+.method public setContentVelocity(I)V
+    .locals 2
+
+    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    instance-of v0, v0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+
+    invoke-direct {p0, v0}, Lcom/google/android/material/appbar/AppBarLayout;->findFirstScrollingBehaviorChild(Landroidx/coordinatorlayout/widget/CoordinatorLayout;)Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;
+
+    invoke-virtual {v0}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->getBehavior()Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;
+
+    move-result-object v0
+
+    instance-of v1, v0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;
+
+    invoke-virtual {v0, p1}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->setContentVelocity(I)V
+
+    :cond_0
     return-void
 .end method
 

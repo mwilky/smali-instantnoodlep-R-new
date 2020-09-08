@@ -107,6 +107,14 @@
 
     iput-object p1, p0, Lcom/google/android/material/picker/TimePickerDialog;->mTimePicker:Lcom/google/android/material/picker/TimePicker;
 
+    invoke-virtual {p0}, Lcom/google/android/material/picker/TimePickerDialog;->getWindow()Landroid/view/Window;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Lcom/google/android/material/picker/TimePicker;->setWindow(Landroid/view/Window;)V
+
+    iget-object p1, p0, Lcom/google/android/material/picker/TimePickerDialog;->mTimePicker:Lcom/google/android/material/picker/TimePicker;
+
     iget-boolean p2, p0, Lcom/google/android/material/picker/TimePickerDialog;->mIs24HourView:Z
 
     invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -172,6 +180,62 @@
     return-object p0
 .end method
 
+.method static synthetic access$100(Lcom/google/android/material/picker/TimePickerDialog;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/material/picker/TimePickerDialog;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$200(Lcom/google/android/material/picker/TimePickerDialog;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/material/picker/TimePickerDialog;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$300(Lcom/google/android/material/picker/TimePickerDialog;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/material/picker/TimePickerDialog;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$400(Lcom/google/android/material/picker/TimePickerDialog;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/material/picker/TimePickerDialog;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$500(Lcom/google/android/material/picker/TimePickerDialog;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/material/picker/TimePickerDialog;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$600(Lcom/google/android/material/picker/TimePickerDialog;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/material/picker/TimePickerDialog;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$700(Lcom/google/android/material/picker/TimePickerDialog;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/material/picker/TimePickerDialog;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
 .method static resolveDialogTheme(Landroid/content/Context;I)I
     .locals 2
 
@@ -207,6 +271,63 @@
     iget-object v0, p0, Lcom/google/android/material/picker/TimePickerDialog;->mTimePicker:Lcom/google/android/material/picker/TimePicker;
 
     return-object v0
+.end method
+
+.method public onAttachedToWindow()V
+    .locals 3
+
+    iget-object v0, p0, Lcom/google/android/material/picker/TimePickerDialog;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lcom/google/android/material/R$drawable;->op_dialog_material_background_bottom:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    new-instance v1, Landroid/graphics/drawable/InsetDrawable;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v0, v2}, Landroid/graphics/drawable/InsetDrawable;-><init>(Landroid/graphics/drawable/Drawable;I)V
+
+    iget-object v0, p0, Lcom/google/android/material/picker/TimePickerDialog;->mContext:Landroid/content/Context;
+
+    sget v2, Lcom/google/android/material/R$color;->op_control_bg_color_popup_default:I
+
+    invoke-virtual {v0, v2}, Landroid/content/Context;->getColor(I)I
+
+    move-result v0
+
+    invoke-virtual {v1, v0}, Landroid/graphics/drawable/InsetDrawable;->setTint(I)V
+
+    invoke-virtual {p0}, Lcom/google/android/material/picker/TimePickerDialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    iget-object v0, p0, Lcom/google/android/material/picker/TimePickerDialog;->mContext:Landroid/content/Context;
+
+    instance-of v0, v0, Landroid/app/Activity;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/material/picker/TimePickerDialog;->mContext:Landroid/content/Context;
+
+    check-cast v0, Landroid/app/Activity;
+
+    new-instance v1, Lcom/google/android/material/picker/TimePickerDialog$1;
+
+    invoke-direct {v1, p0}, Lcom/google/android/material/picker/TimePickerDialog$1;-><init>(Lcom/google/android/material/picker/TimePickerDialog;)V
+
+    invoke-static {v0, v1}, Landroidx/appcompat/app/SoftKeyBoardListener;->setListener(Landroid/app/Activity;Landroidx/appcompat/app/SoftKeyBoardListener$OnSoftKeyBoardChangeListener;)V
+
+    :cond_0
+    return-void
 .end method
 
 .method public onClick(Landroid/content/DialogInterface;I)V
@@ -374,9 +495,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/material/picker/TimePickerDialog$1;
+    new-instance v1, Lcom/google/android/material/picker/TimePickerDialog$2;
 
-    invoke-direct {v1, p0}, Lcom/google/android/material/picker/TimePickerDialog$1;-><init>(Lcom/google/android/material/picker/TimePickerDialog;)V
+    invoke-direct {v1, p0}, Lcom/google/android/material/picker/TimePickerDialog$2;-><init>(Lcom/google/android/material/picker/TimePickerDialog;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

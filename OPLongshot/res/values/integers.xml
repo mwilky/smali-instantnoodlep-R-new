@@ -25,6 +25,7 @@
     <item type="integer" name="config_max_pages">@integer/max_pages</item>
     <integer name="config_move_delay">300</integer>
     <integer name="config_move_duration">400</integer>
+    <integer name="config_move_duration_level_0">200</integer>
     <integer name="config_move_duration_level_1">400</integer>
     <integer name="config_move_duration_level_2">600</integer>
     <integer name="config_move_duration_level_3">800</integer>
@@ -47,6 +48,8 @@
     <integer name="config_percent_move_top">2000</integer>
     <integer name="config_pixel_error_1">50</integer>
     <integer name="config_pixel_error_2">20</integer>
+    <integer name="config_preview_scroll_dy_level_2">4</integer>
+    <integer name="config_preview_scroll_dy_level_3">3</integer>
     <integer name="config_start_scroll_delay_0">0</integer>
     <integer name="config_start_scroll_delay_1">500</integer>
     <integer name="config_start_scroll_delay_2">700</integer>
@@ -88,9 +91,6 @@
     <integer name="op_control_time_600">600</integer>
     <integer name="op_control_time_75">75</integer>
     <integer name="op_date_picker_mode">2</integer>
-    <item type="integer" name="op_page_indicator_alpha_material">@integer/op_page_indicator_alpha_material_light</item>
-    <integer name="op_page_indicator_alpha_material_dark">30</integer>
-    <integer name="op_page_indicator_alpha_material_light">20</integer>
     <item type="integer" name="pageIndicator_alpha_material">@integer/pageIndicator_alpha_material_light</item>
     <integer name="pageIndicator_alpha_material_dark">30</integer>
     <integer name="pageIndicator_alpha_material_light">18</integer>

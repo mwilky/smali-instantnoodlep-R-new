@@ -702,3 +702,13 @@
 
     return-void
 .end method
+
+.method public show(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/google/android/material/snackbar/Snackbar;->mBottomMargin:I
+
+    invoke-virtual {p0}, Lcom/google/android/material/snackbar/Snackbar;->show()V
+
+    return-void
+.end method

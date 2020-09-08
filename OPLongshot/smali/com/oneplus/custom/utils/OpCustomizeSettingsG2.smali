@@ -101,6 +101,19 @@
     goto/16 :goto_1
 
     :sswitch_2
+    const-string v2, "fff8d0b6"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/16 v1, 0x15
+
+    goto/16 :goto_1
+
+    :sswitch_3
     const-string v2, "fff6f7f7"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -113,7 +126,7 @@
 
     goto/16 :goto_1
 
-    :sswitch_3
+    :sswitch_4
     const-string v2, "fff4d6b9"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -126,7 +139,7 @@
 
     goto/16 :goto_1
 
-    :sswitch_4
+    :sswitch_5
     const-string v2, "ffdea8bb"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -139,7 +152,7 @@
 
     goto/16 :goto_1
 
-    :sswitch_5
+    :sswitch_6
     const-string v2, "ffde0d39"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -152,7 +165,20 @@
 
     goto/16 :goto_1
 
-    :sswitch_6
+    :sswitch_7
+    const-string v2, "ffe4ecef"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/16 v1, 0x17
+
+    goto/16 :goto_1
+
+    :sswitch_8
     const-string v2, "ffc199b3"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -165,7 +191,7 @@
 
     goto/16 :goto_1
 
-    :sswitch_7
+    :sswitch_9
     const-string v2, "ff7b8ca0"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -178,7 +204,7 @@
 
     goto/16 :goto_1
 
-    :sswitch_8
+    :sswitch_a
     const-string v2, "ff868586"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -189,9 +215,22 @@
 
     const/16 v1, 0xa
 
-    goto :goto_1
+    goto/16 :goto_1
 
-    :sswitch_9
+    :sswitch_b
+    const-string v2, "ff84ebce"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/16 v1, 0x16
+
+    goto/16 :goto_1
+
+    :sswitch_c
     const-string v2, "ff828da7"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -202,9 +241,48 @@
 
     const/4 v1, 0x6
 
-    goto :goto_1
+    goto/16 :goto_1
 
-    :sswitch_a
+    :sswitch_d
+    const-string v2, "ff777b82"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/16 v1, 0x14
+
+    goto/16 :goto_1
+
+    :sswitch_e
+    const-string v2, "ff71d4e3"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/16 v1, 0x13
+
+    goto/16 :goto_1
+
+    :sswitch_f
+    const-string v2, "ff626267"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/16 v1, 0x12
+
+    goto/16 :goto_1
+
+    :sswitch_10
     const-string v2, "ff53eada"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -217,7 +295,7 @@
 
     goto :goto_1
 
-    :sswitch_b
+    :sswitch_11
     const-string v2, "ff3d3740"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -230,7 +308,7 @@
 
     goto :goto_1
 
-    :sswitch_c
+    :sswitch_12
     const-string v2, "ff49484d"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -243,7 +321,20 @@
 
     goto :goto_1
 
-    :sswitch_d
+    :sswitch_13
+    const-string v2, "ff474442"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/16 v1, 0x19
+
+    goto :goto_1
+
+    :sswitch_14
     const-string v2, "ff2c2630"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -256,7 +347,7 @@
 
     goto :goto_1
 
-    :sswitch_e
+    :sswitch_15
     const-string v2, "ff322d95"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -269,7 +360,7 @@
 
     goto :goto_1
 
-    :sswitch_f
+    :sswitch_16
     const-string v2, "ff30527a"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -282,7 +373,20 @@
 
     goto :goto_1
 
-    :sswitch_10
+    :sswitch_17
+    const-string v2, "ff1e2329"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/16 v1, 0x18
+
+    goto :goto_1
+
+    :sswitch_18
     const-string v2, "ff238ca9"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -295,7 +399,7 @@
 
     goto :goto_1
 
-    :sswitch_11
+    :sswitch_19
     const-string v2, "ff101214"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -315,123 +419,181 @@
     :goto_1
     packed-switch v1, :pswitch_data_0
 
-    goto :goto_2
+    goto/16 :goto_2
 
     :pswitch_0
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPINIB:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPN2GB:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
 
     goto :goto_2
 
     :pswitch_1
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPINGRD:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPN1MB:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
 
     goto :goto_2
 
     :pswitch_2
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPINBLU:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPKEBABSG:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
 
     goto :goto_2
 
     :pswitch_3
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPINGRN:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPKEBABBG:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
 
     goto :goto_2
 
     :pswitch_4
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPINBLK:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPKEBABGD:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
 
     goto :goto_2
 
     :pswitch_5
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPHDAGBL:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPAVICGRFR:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
 
     goto :goto_2
 
     :pswitch_6
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPHDMCL:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPAVICBLIC:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
 
     goto :goto_2
 
     :pswitch_7
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPHDSL:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPAVICGRIR:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
 
     goto :goto_2
 
     :pswitch_8
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPHDBL:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPINIB:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
 
     goto :goto_2
 
     :pswitch_9
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPRD:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPINGRD:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
 
     goto :goto_2
 
     :pswitch_a
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPGL:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPINBLU:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
 
     goto :goto_2
 
     :pswitch_b
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPBL:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPINGRN:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
 
     goto :goto_2
 
     :pswitch_c
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPGY:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPINBLK:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
 
     goto :goto_2
 
     :pswitch_d
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->DGZ:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPHDAGBL:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
 
     goto :goto_2
 
     :pswitch_e
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->HPH:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPHDMCL:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
 
     goto :goto_2
 
     :pswitch_f
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->YYB:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPHDSL:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
 
     goto :goto_2
 
     :pswitch_10
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->LCH:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPHDBL:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
 
     goto :goto_2
 
     :pswitch_11
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPRD:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+
+    goto :goto_2
+
+    :pswitch_12
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPGL:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+
+    goto :goto_2
+
+    :pswitch_13
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPBL:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+
+    goto :goto_2
+
+    :pswitch_14
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPGY:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+
+    goto :goto_2
+
+    :pswitch_15
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->DGZ:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+
+    goto :goto_2
+
+    :pswitch_16
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->HPH:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+
+    goto :goto_2
+
+    :pswitch_17
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->YYB:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+
+    goto :goto_2
+
+    :pswitch_18
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->LCH:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+
+    goto :goto_2
+
+    :pswitch_19
     sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->MYH:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
 
     :goto_2
     return-object v0
 
+    nop
+
     :sswitch_data_0
     .sparse-switch
-        -0x32339c9d -> :sswitch_11
-        -0x3050911c -> :sswitch_10
-        -0x2ec818fc -> :sswitch_f
-        -0x2eac8b53 -> :sswitch_e
-        -0x2daf91ae -> :sswitch_d
-        -0x2c94cb07 -> :sswitch_c
-        -0x2bec294f -> :sswitch_b
-        -0x2b1d9989 -> :sswitch_a
-        -0x26219124 -> :sswitch_9
-        -0x25e9e887 -> :sswitch_8
-        -0x2532055b -> :sswitch_7
-        0x23308d1f -> :sswitch_6
-        0x27beb05b -> :sswitch_5
-        0x27d45738 -> :sswitch_4
-        0x288cde37 -> :sswitch_3
-        0x28a9fa32 -> :sswitch_2
+        -0x32339c9d -> :sswitch_19
+        -0x3050911c -> :sswitch_18
+        -0x2f4846a4 -> :sswitch_17
+        -0x2ec818fc -> :sswitch_16
+        -0x2eac8b53 -> :sswitch_15
+        -0x2daf91ae -> :sswitch_14
+        -0x2cb1093f -> :sswitch_13
+        -0x2c94cb07 -> :sswitch_12
+        -0x2bec294f -> :sswitch_11
+        -0x2b1d9989 -> :sswitch_10
+        -0x298cec07 -> :sswitch_f
+        -0x27d134a8 -> :sswitch_e
+        -0x2790751b -> :sswitch_d
+        -0x26219124 -> :sswitch_c
+        -0x25f0f485 -> :sswitch_b
+        -0x25e9e887 -> :sswitch_a
+        -0x2532055b -> :sswitch_9
+        0x23308d1f -> :sswitch_8
+        0x26d9236e -> :sswitch_7
+        0x27beb05b -> :sswitch_6
+        0x27d45738 -> :sswitch_5
+        0x288cde37 -> :sswitch_4
+        0x28a9fa32 -> :sswitch_3
+        0x28c525b2 -> :sswitch_2
         0x294bc07d -> :sswitch_1
         0x2b29bee2 -> :sswitch_0
     .end sparse-switch
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_19
+        :pswitch_18
+        :pswitch_17
+        :pswitch_16
+        :pswitch_15
+        :pswitch_14
+        :pswitch_13
+        :pswitch_12
         :pswitch_11
         :pswitch_10
         :pswitch_f
@@ -464,29 +626,38 @@
 
     const/4 v2, 0x3
 
-    if-eq v1, v2, :cond_2
+    if-eq v1, v2, :cond_3
 
     const/4 v2, 0x6
 
-    if-eq v1, v2, :cond_1
+    if-eq v1, v2, :cond_2
 
     const/4 v2, 0x7
+
+    if-eq v1, v2, :cond_1
+
+    const/16 v2, 0x8
 
     if-eq v1, v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->OPR_RETAIL:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->CYB:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 
     goto :goto_0
 
     :cond_1
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->MCL:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->OPR_RETAIL:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 
     goto :goto_0
 
     :cond_2
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->MCL:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+
+    goto :goto_0
+
+    :cond_3
     sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->AVG:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 
     :goto_0
@@ -591,21 +762,26 @@
     goto :goto_0
 
     :pswitch_0
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->ATT:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->C532:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
     goto :goto_0
 
     :pswitch_1
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->VERIZON:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->ATT:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
     goto :goto_0
 
     :pswitch_2
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->SPRINT:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->VERIZON:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
     goto :goto_0
 
     :pswitch_3
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->SPRINT:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+
+    goto :goto_0
+
+    :pswitch_4
     sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->TMO:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
     goto :goto_0
@@ -636,10 +812,9 @@
     :goto_0
     return-object v0
 
-    nop
-
     :pswitch_data_0
     .packed-switch 0x65
+        :pswitch_4
         :pswitch_3
         :pswitch_2
         :pswitch_1

@@ -39,7 +39,7 @@
 
     iget-object v0, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$8;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
 
-    invoke-static {v0}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$1700(Lcom/google/android/material/picker/TimePickerClockDelegate;)Lcom/google/android/material/picker/NumericTextView;
+    invoke-static {v0}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$1900(Lcom/google/android/material/picker/TimePickerClockDelegate;)Lcom/google/android/material/picker/NumericTextView;
 
     move-result-object v1
 
@@ -47,7 +47,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->setMinute(I)V
+    invoke-virtual {v0, v1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->setHour(I)V
 
     return-void
 .end method

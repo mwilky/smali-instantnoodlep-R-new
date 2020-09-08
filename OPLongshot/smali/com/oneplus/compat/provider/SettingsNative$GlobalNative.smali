@@ -15,6 +15,12 @@
 
 
 # static fields
+.field public static final CALL_AUTO_RETRY:Ljava/lang/String;
+
+.field public static final MOBILE_DATA:Ljava/lang/String;
+
+.field public static final OP_OIMC_FUNC_ANSWER_WITHOUT_UI:Ljava/lang/String;
+
 .field public static final REQUIRE_PASSWORD_TO_DECRYPT:Ljava/lang/String;
 
 .field public static final THREE_KEY_MODE:Ljava/lang/String;
@@ -26,46 +32,68 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 8
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const-string v1, "require_password_to_decrypt"
+    const-string v1, "mobile_data"
 
-    const/4 v2, 0x0
+    const-string v2, "op_oimc_func_answer_without_ui"
 
-    const-string v3, "zen_mode"
+    const-string v3, "call_auto_retry"
 
-    const-string v4, "three_Key_mode"
+    const-string v4, "require_password_to_decrypt"
 
-    const/16 v5, 0x1d
+    const/4 v5, 0x0
 
-    if-lt v0, v5, :cond_0
+    const-string v6, "zen_mode"
 
-    invoke-static {}, Lcom/oneplus/utils/Utils;->isWrapperSupport()Z
+    const/16 v7, 0x1d
+
+    if-lt v0, v7, :cond_0
+
+    const-string v0, "10.14.0"
+
+    invoke-static {v0}, Lcom/oneplus/utils/Utils;->isWrapperSupport(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    sput-object v4, Lcom/oneplus/compat/provider/SettingsNative$GlobalNative;->THREE_KEY_MODE:Ljava/lang/String;
+    const-string v0, "DummyString"
 
-    sput-object v3, Lcom/oneplus/compat/provider/SettingsNative$GlobalNative;->ZEN_MODE:Ljava/lang/String;
+    sput-object v0, Lcom/oneplus/compat/provider/SettingsNative$GlobalNative;->THREE_KEY_MODE:Ljava/lang/String;
 
-    sput v2, Lcom/oneplus/compat/provider/SettingsNative$GlobalNative;->ZEN_MODE_OFF:I
+    sput-object v6, Lcom/oneplus/compat/provider/SettingsNative$GlobalNative;->ZEN_MODE:Ljava/lang/String;
 
-    sput-object v1, Lcom/oneplus/compat/provider/SettingsNative$GlobalNative;->REQUIRE_PASSWORD_TO_DECRYPT:Ljava/lang/String;
+    sput v5, Lcom/oneplus/compat/provider/SettingsNative$GlobalNative;->ZEN_MODE_OFF:I
+
+    sput-object v4, Lcom/oneplus/compat/provider/SettingsNative$GlobalNative;->REQUIRE_PASSWORD_TO_DECRYPT:Ljava/lang/String;
+
+    sput-object v3, Lcom/oneplus/compat/provider/SettingsNative$GlobalNative;->CALL_AUTO_RETRY:Ljava/lang/String;
+
+    sput-object v2, Lcom/oneplus/compat/provider/SettingsNative$GlobalNative;->OP_OIMC_FUNC_ANSWER_WITHOUT_UI:Ljava/lang/String;
+
+    sput-object v1, Lcom/oneplus/compat/provider/SettingsNative$GlobalNative;->MOBILE_DATA:Ljava/lang/String;
 
     goto :goto_0
 
     :cond_0
-    sput-object v4, Lcom/oneplus/compat/provider/SettingsNative$GlobalNative;->THREE_KEY_MODE:Ljava/lang/String;
+    const-string v0, "three_Key_mode"
 
-    sput-object v3, Lcom/oneplus/compat/provider/SettingsNative$GlobalNative;->ZEN_MODE:Ljava/lang/String;
+    sput-object v0, Lcom/oneplus/compat/provider/SettingsNative$GlobalNative;->THREE_KEY_MODE:Ljava/lang/String;
 
-    sput v2, Lcom/oneplus/compat/provider/SettingsNative$GlobalNative;->ZEN_MODE_OFF:I
+    sput-object v6, Lcom/oneplus/compat/provider/SettingsNative$GlobalNative;->ZEN_MODE:Ljava/lang/String;
 
-    sput-object v1, Lcom/oneplus/compat/provider/SettingsNative$GlobalNative;->REQUIRE_PASSWORD_TO_DECRYPT:Ljava/lang/String;
+    sput v5, Lcom/oneplus/compat/provider/SettingsNative$GlobalNative;->ZEN_MODE_OFF:I
+
+    sput-object v4, Lcom/oneplus/compat/provider/SettingsNative$GlobalNative;->REQUIRE_PASSWORD_TO_DECRYPT:Ljava/lang/String;
+
+    sput-object v3, Lcom/oneplus/compat/provider/SettingsNative$GlobalNative;->CALL_AUTO_RETRY:Ljava/lang/String;
+
+    sput-object v2, Lcom/oneplus/compat/provider/SettingsNative$GlobalNative;->OP_OIMC_FUNC_ANSWER_WITHOUT_UI:Ljava/lang/String;
+
+    sput-object v1, Lcom/oneplus/compat/provider/SettingsNative$GlobalNative;->MOBILE_DATA:Ljava/lang/String;
 
     :goto_0
     return-void

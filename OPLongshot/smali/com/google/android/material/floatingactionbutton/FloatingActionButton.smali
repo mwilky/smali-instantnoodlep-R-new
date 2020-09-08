@@ -64,6 +64,8 @@
 
 .field private impl:Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;
 
+.field mCardViewOutlineProvider:Landroid/view/ViewOutlineProvider;
+
 .field private mScrollHide:Z
 
 .field private maxImageSize:I
@@ -134,6 +136,12 @@
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->touchArea:Landroid/graphics/Rect;
+
+    new-instance v0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$1;
+
+    invoke-direct {v0, p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$1;-><init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)V
+
+    iput-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->mCardViewOutlineProvider:Landroid/view/ViewOutlineProvider;
 
     invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->getContext()Landroid/content/Context;
 
@@ -234,7 +242,7 @@
 
     move-result-object v2
 
-    sget v4, Lcom/google/android/material/R$dimen;->op_control_shadow_z5:I
+    sget v4, Lcom/google/android/material/R$dimen;->op_float_action_button_shadow_z8:I
 
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -408,6 +416,10 @@
     sget-object p1, Landroid/widget/ImageView$ScaleType;->MATRIX:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
+
+    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->mCardViewOutlineProvider:Landroid/view/ViewOutlineProvider;
+
+    invoke-virtual {p0, p1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
     return-void
 .end method
@@ -704,9 +716,9 @@
     return-object p1
 
     :cond_0
-    new-instance v0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$3;
+    new-instance v0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$4;
 
-    invoke-direct {v0, p0, p1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$3;-><init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;Lcom/google/android/material/floatingactionbutton/FloatingActionButton$OnVisibilityChangedListener;)V
+    invoke-direct {v0, p0, p1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$4;-><init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;Lcom/google/android/material/floatingactionbutton/FloatingActionButton$OnVisibilityChangedListener;)V
 
     return-object v0
 .end method
@@ -1172,9 +1184,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$1;
+    new-instance v1, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$2;
 
-    invoke-direct {v1, p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$1;-><init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)V
+    invoke-direct {v1, p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$2;-><init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
@@ -2152,9 +2164,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$2;
+    new-instance v1, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$3;
 
-    invoke-direct {v1, p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$2;-><init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)V
+    invoke-direct {v1, p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$3;-><init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 

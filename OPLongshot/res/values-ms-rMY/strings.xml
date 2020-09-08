@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="about_action_bar_title">Tentang</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Dasar Privasi</string>
+    <string name="about_release_note_title">Log kemas kini:</string>
+    <string name="about_terms_service">Terma Perkhidmatan</string>
     <string name="app_name">Syot layar</string>
     <string name="got_it">Dapat</string>
+    <string name="loading_text">Sedang memuat...</string>
     <string name="longshot_guide_not_support">Syot layar berkembang tidak disokong di laman ini.</string>
     <string name="longshot_guide_support">Ketik di sini untuk mencuba Syot Layar Berkembang.</string>
     <string name="not_support_longshot">Syot layar berkembang tidak disokong di laman ini.</string>

@@ -27,9 +27,15 @@
     <string name="abc_shareactionprovider_share_with">Bagikan dengan</string>
     <string name="abc_shareactionprovider_share_with_application">Bagikan dengan %s</string>
     <string name="abc_toolbar_collapse_description">Ciutkan</string>
+    <string name="about_action_bar_title">Tentang</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Kebijakan Privasi</string>
+    <string name="about_release_note_title">Perbarui log:</string>
+    <string name="about_terms_service">Ketentuan Layanan</string>
     <string name="copy">Salin</string>
     <string name="expand_button_title">Lanjutan</string>
     <string name="got_it">Mengerti</string>
+    <string name="loading_text">Memuat...</string>
     <string name="longshot_guide_not_support">Tangkapan panjang panjang tidak didukung untuk halaman ini.</string>
     <string name="longshot_guide_support">Ketuk di sini untuk mencoba Tangkapan Layar Panjang.</string>
     <string name="not_set">Belum disetel</string>

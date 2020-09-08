@@ -453,23 +453,15 @@
     return-object p0
 .end method
 
-.method static synthetic access$100(Lcom/google/android/material/picker/DayPickerView;)Landroid/widget/ImageButton;
+.method static synthetic access$100(Lcom/google/android/material/picker/DayPickerView;)Lcom/google/android/material/picker/DayPickerPagerAdapter;
     .locals 0
 
-    iget-object p0, p0, Lcom/google/android/material/picker/DayPickerView;->mPrevButton:Landroid/widget/ImageButton;
+    iget-object p0, p0, Lcom/google/android/material/picker/DayPickerView;->mAdapter:Lcom/google/android/material/picker/DayPickerPagerAdapter;
 
     return-object p0
 .end method
 
-.method static synthetic access$200(Lcom/google/android/material/picker/DayPickerView;)Landroid/widget/ImageButton;
-    .locals 0
-
-    iget-object p0, p0, Lcom/google/android/material/picker/DayPickerView;->mNextButton:Landroid/widget/ImageButton;
-
-    return-object p0
-.end method
-
-.method static synthetic access$300(Lcom/google/android/material/picker/DayPickerView;I)V
+.method static synthetic access$200(Lcom/google/android/material/picker/DayPickerView;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/google/android/material/picker/DayPickerView;->updateButtonVisibility(I)V
@@ -477,7 +469,23 @@
     return-void
 .end method
 
-.method static synthetic access$400(Lcom/google/android/material/picker/DayPickerView;)Landroid/view/accessibility/AccessibilityManager;
+.method static synthetic access$300(Lcom/google/android/material/picker/DayPickerView;)Landroid/widget/ImageButton;
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/material/picker/DayPickerView;->mPrevButton:Landroid/widget/ImageButton;
+
+    return-object p0
+.end method
+
+.method static synthetic access$400(Lcom/google/android/material/picker/DayPickerView;)Landroid/widget/ImageButton;
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/material/picker/DayPickerView;->mNextButton:Landroid/widget/ImageButton;
+
+    return-object p0
+.end method
+
+.method static synthetic access$500(Lcom/google/android/material/picker/DayPickerView;)Landroid/view/accessibility/AccessibilityManager;
     .locals 0
 
     iget-object p0, p0, Lcom/google/android/material/picker/DayPickerView;->mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
@@ -485,7 +493,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$500(Lcom/google/android/material/picker/DayPickerView;)Landroidx/viewpager/widget/ViewPager;
+.method static synthetic access$600(Lcom/google/android/material/picker/DayPickerView;)Landroidx/viewpager/widget/ViewPager;
     .locals 0
 
     iget-object p0, p0, Lcom/google/android/material/picker/DayPickerView;->mViewPager:Landroidx/viewpager/widget/ViewPager;

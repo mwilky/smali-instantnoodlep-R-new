@@ -3,12 +3,12 @@
 .source "FloatingActionButton.java"
 
 # interfaces
-.implements Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$InternalVisibilityChangedListener;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->wrapOnVisibilityChangedListener(Lcom/google/android/material/floatingactionbutton/FloatingActionButton$OnVisibilityChangedListener;)Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$InternalVisibilityChangedListener;
+    value = Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->showWithAnim()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,12 @@
 # instance fields
 .field final synthetic this$0:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
 
-.field final synthetic val$listener:Lcom/google/android/material/floatingactionbutton/FloatingActionButton$OnVisibilityChangedListener;
-
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;Lcom/google/android/material/floatingactionbutton/FloatingActionButton$OnVisibilityChangedListener;)V
+.method constructor <init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$3;->this$0:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
-
-    iput-object p2, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$3;->val$listener:Lcom/google/android/material/floatingactionbutton/FloatingActionButton$OnVisibilityChangedListener;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,26 +34,38 @@
 
 
 # virtual methods
-.method public onHidden()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$3;->val$listener:Lcom/google/android/material/floatingactionbutton/FloatingActionButton$OnVisibilityChangedListener;
-
-    iget-object v1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$3;->this$0:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
-
-    invoke-virtual {v0, v1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$OnVisibilityChangedListener;->onHidden(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)V
+.method public onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
 
     return-void
 .end method
 
-.method public onShown()V
-    .locals 2
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 0
 
-    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$3;->val$listener:Lcom/google/android/material/floatingactionbutton/FloatingActionButton$OnVisibilityChangedListener;
+    return-void
+.end method
 
-    iget-object v1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$3;->this$0:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+.method public onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
 
-    invoke-virtual {v0, v1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$OnVisibilityChangedListener;->onShown(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)V
+    return-void
+.end method
+
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 1
+
+    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$3;->this$0:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->setVisibility(I)V
+
+    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$3;->this$0:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->setClickable(Z)V
 
     return-void
 .end method

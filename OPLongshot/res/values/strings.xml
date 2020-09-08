@@ -105,9 +105,21 @@
     <string name="oneplus_contorl_font_family_button">Slate-medium</string>
     <string name="oneplus_contorl_font_family_subheading">Slate-book</string>
     <string name="oneplus_delete">Delete</string>
+    <string name="oneplus_lunar_leap">闰</string>
+    <string name="oneplus_lunar_year">年</string>
     <string name="oneplus_share">Share</string>
     <string name="op_accessibility_quick_settings_page">page %1$d ,Total %2$d pages</string>
     <string name="op_character_counter_pattern">%1$d / %2$d</string>
+    <string name="op_control_font_display_h1">sans-serif-light</string>
+    <string name="op_control_font_display_h2">sans-serif-light</string>
+    <string name="op_control_font_display_h3">sans-serif-light</string>
+    <string name="op_control_font_text_body1">sans-serif-light</string>
+    <string name="op_control_font_text_button">sans-serif-medium</string>
+    <string name="op_control_font_text_descriptions">sans-serif-regular</string>
+    <string name="op_control_font_text_h4">sans-serif-light</string>
+    <string name="op_control_font_text_h5">sans-serif-light</string>
+    <string name="op_control_font_text_h6">sans-serif-light</string>
+    <string name="op_control_font_text_subtitle">sans-serif-light</string>
     <string name="op_password_toggle_content_description">Toggle password visibility</string>
     <string name="password_toggle_content_description">Show password</string>
     <string name="path_password_eye">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
@@ -115,8 +127,7 @@
     <string name="path_password_eye_mask_visible">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_strike_through">M3.27,4.27 L19.74,20.74</string>
     <string name="preference_copied">\"%1$s\" copied to clipboard.</string>
-    <string name="quick_share_description1">"Long press the thumbnail to
-share"</string>
+    <string name="quick_share_description1">Long press the thumbnail to share</string>
     <string name="quick_share_more_text">More</string>
     <string name="quick_share_send_description_text">Send to friend</string>
     <string name="quick_share_title1">"Share the

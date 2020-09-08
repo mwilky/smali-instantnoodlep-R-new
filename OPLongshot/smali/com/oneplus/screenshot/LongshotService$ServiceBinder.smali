@@ -49,12 +49,271 @@
 
 
 # virtual methods
+.method public dumpViewInfo(Ljava/lang/String;Lcom/oneplus/longshot/IViewPropCallback;)V
+    .locals 5
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "dumpViewInfo:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "Longshot.LongshotService"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :try_start_0
+    new-instance v0, Lorg/json/JSONObject;
+
+    invoke-direct {v0, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+
+    sget-object p1, Lcom/oneplus/compat/longshot/LongshotUtilNative;->JSON_PARAM_COULD_FIND_SCROLL_VIEW:Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
+
+    move-result p1
+
+    const/4 v2, 0x1
+
+    if-eqz p1, :cond_1
+
+    invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->isAccessibilityServiceRunning()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    sget-object p1, Lcom/oneplus/compat/longshot/LongshotUtilNative;->JSON_PARAM_TOP:Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+
+    move-result p1
+
+    sget-object v3, Lcom/oneplus/compat/longshot/LongshotUtilNative;->JSON_PARAM_BOTTOM:Ljava/lang/String;
+
+    invoke-virtual {v0, v3}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+
+    move-result v3
+
+    invoke-static {}, Lcom/oneplus/screenshot/StitchViewService;->getInstance()Lcom/oneplus/screenshot/StitchViewService;
+
+    move-result-object v4
+
+    sub-int/2addr v3, p1
+
+    iput v3, v4, Lcom/oneplus/screenshot/StitchViewService;->mScrollViewHeight:I
+
+    sget-object p1, Lcom/oneplus/compat/longshot/LongshotUtilNative;->JSON_PARAM_ACCESSIBILITY_NODE_CLASS_NAME:Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_5
+
+    :try_start_1
+    sget-object p1, Lcom/oneplus/compat/longshot/LongshotUtilNative;->JSON_PARAM_CAN_PROVIDE_SCROLL_INFO:Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    invoke-static {}, Lcom/oneplus/screenshot/StitchViewService;->getInstance()Lcom/oneplus/screenshot/StitchViewService;
+
+    move-result-object p1
+
+    iput-boolean v2, p1, Lcom/oneplus/screenshot/StitchViewService;->providesScrollInfo:Z
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    :try_start_2
+    invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_5
+
+    :cond_0
+    :goto_0
+    :try_start_3
+    invoke-static {}, Lcom/oneplus/screenshot/StitchViewService;->getInstance()Lcom/oneplus/screenshot/StitchViewService;
+
+    move-result-object p1
+
+    sget-object v3, Lcom/oneplus/compat/longshot/LongshotUtilNative;->JSON_PARAM_WINDOW_ID:Ljava/lang/String;
+
+    invoke-virtual {v0, v3}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+
+    move-result v3
+
+    iput v3, p1, Lcom/oneplus/screenshot/StitchViewService;->mWindowId:I
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
+
+    goto :goto_1
+
+    :catch_1
+    move-exception p1
+
+    :try_start_4
+    invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_5
+
+    :goto_1
+    :try_start_5
+    invoke-static {}, Lcom/oneplus/screenshot/StitchViewService;->getInstance()Lcom/oneplus/screenshot/StitchViewService;
+
+    move-result-object p1
+
+    iput-object p2, p1, Lcom/oneplus/screenshot/StitchViewService;->mViewPropCallback:Ljava/lang/Object;
+    :try_end_5
+    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
+
+    goto :goto_2
+
+    :catch_2
+    move-exception p1
+
+    :try_start_6
+    invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
+    :try_end_6
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_5
+
+    :goto_2
+    :try_start_7
+    sget-object p1, Lcom/oneplus/compat/longshot/LongshotUtilNative;->JSON_PARAM_VIEW_ID:Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    :try_end_7
+    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_3
+
+    goto :goto_3
+
+    :catch_3
+    move-exception p1
+
+    :try_start_8
+    invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
+    :try_end_8
+    .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_5
+
+    :cond_1
+    :goto_3
+    :try_start_9
+    const-string p1, "viewVisibility"
+
+    invoke-virtual {v0, p1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "VISIBLE"
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "blockLongshotByViewVisibility : "
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    sput v2, Lcom/oneplus/screenshot/longshot/util/Configs;->blockScreenViewVisibility:I
+
+    goto :goto_4
+
+    :cond_2
+    const-string p2, "INVISIBLE"
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_3
+
+    const-string p2, "GONE"
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    :cond_3
+    const/4 p1, 0x0
+
+    sput p1, Lcom/oneplus/screenshot/longshot/util/Configs;->blockScreenViewVisibility:I
+    :try_end_9
+    .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_4
+
+    goto :goto_4
+
+    :catch_4
+    move-exception p1
+
+    :try_start_a
+    invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
+    :try_end_a
+    .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_5
+
+    goto :goto_4
+
+    :catch_5
+    move-exception p1
+
+    invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
+
+    :cond_4
+    :goto_4
+    return-void
+.end method
+
+.method public getConfigValues()Ljava/lang/String;
+    .locals 2
+
+    const-string v0, "Longshot.LongshotService"
+
+    const-string v1, "getConfigValues:"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->getConfigValuesForServer()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public isHandleState()Z
     .locals 1
 
     iget-object v0, p0, Lcom/oneplus/screenshot/LongshotService$ServiceBinder;->this$0:Lcom/oneplus/screenshot/LongshotService;
 
-    invoke-static {v0}, Lcom/oneplus/screenshot/LongshotService;->access$100(Lcom/oneplus/screenshot/LongshotService;)Lcom/oneplus/screenshot/longshot/state/LongshotMode;
+    invoke-static {v0}, Lcom/oneplus/screenshot/LongshotService;->access$000(Lcom/oneplus/screenshot/LongshotService;)Lcom/oneplus/screenshot/longshot/state/LongshotMode;
 
     move-result-object v0
 
@@ -70,7 +329,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/LongshotService$ServiceBinder;->this$0:Lcom/oneplus/screenshot/LongshotService;
 
-    invoke-static {v0}, Lcom/oneplus/screenshot/LongshotService;->access$100(Lcom/oneplus/screenshot/LongshotService;)Lcom/oneplus/screenshot/longshot/state/LongshotMode;
+    invoke-static {v0}, Lcom/oneplus/screenshot/LongshotService;->access$000(Lcom/oneplus/screenshot/LongshotService;)Lcom/oneplus/screenshot/longshot/state/LongshotMode;
 
     move-result-object v0
 
@@ -86,7 +345,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/LongshotService$ServiceBinder;->this$0:Lcom/oneplus/screenshot/LongshotService;
 
-    invoke-static {v0}, Lcom/oneplus/screenshot/LongshotService;->access$100(Lcom/oneplus/screenshot/LongshotService;)Lcom/oneplus/screenshot/longshot/state/LongshotMode;
+    invoke-static {v0}, Lcom/oneplus/screenshot/LongshotService;->access$000(Lcom/oneplus/screenshot/LongshotService;)Lcom/oneplus/screenshot/longshot/state/LongshotMode;
 
     move-result-object v0
 
@@ -96,35 +355,33 @@
 .end method
 
 .method public notifyScroll(Z)V
-    .locals 3
+    .locals 2
 
-    invoke-static {}, Lcom/oneplus/screenshot/LongshotService;->access$000()Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "notifyScroll "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, " "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsIgnoreOverScroll:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const-string v1, "Longshot.LongshotService"
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "notifyScroll "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v2, " "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-boolean v2, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsIgnoreOverScroll:Z
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsIgnoreOverScroll:Z
 
@@ -136,7 +393,7 @@
 
     iget-object p1, p0, Lcom/oneplus/screenshot/LongshotService$ServiceBinder;->this$0:Lcom/oneplus/screenshot/LongshotService;
 
-    invoke-static {p1}, Lcom/oneplus/screenshot/LongshotService;->access$100(Lcom/oneplus/screenshot/LongshotService;)Lcom/oneplus/screenshot/longshot/state/LongshotMode;
+    invoke-static {p1}, Lcom/oneplus/screenshot/LongshotService;->access$000(Lcom/oneplus/screenshot/LongshotService;)Lcom/oneplus/screenshot/longshot/state/LongshotMode;
 
     move-result-object p1
 
@@ -147,7 +404,7 @@
     :cond_0
     iget-object p1, p0, Lcom/oneplus/screenshot/LongshotService$ServiceBinder;->this$0:Lcom/oneplus/screenshot/LongshotService;
 
-    invoke-static {p1}, Lcom/oneplus/screenshot/LongshotService;->access$100(Lcom/oneplus/screenshot/LongshotService;)Lcom/oneplus/screenshot/longshot/state/LongshotMode;
+    invoke-static {p1}, Lcom/oneplus/screenshot/LongshotService;->access$000(Lcom/oneplus/screenshot/LongshotService;)Lcom/oneplus/screenshot/longshot/state/LongshotMode;
 
     move-result-object p1
 
@@ -162,7 +419,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/LongshotService$ServiceBinder;->this$0:Lcom/oneplus/screenshot/LongshotService;
 
-    invoke-static {v0}, Lcom/oneplus/screenshot/LongshotService;->access$100(Lcom/oneplus/screenshot/LongshotService;)Lcom/oneplus/screenshot/longshot/state/LongshotMode;
+    invoke-static {v0}, Lcom/oneplus/screenshot/LongshotService;->access$000(Lcom/oneplus/screenshot/LongshotService;)Lcom/oneplus/screenshot/longshot/state/LongshotMode;
 
     move-result-object v0
 
@@ -170,7 +427,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/LongshotService$ServiceBinder;->this$0:Lcom/oneplus/screenshot/LongshotService;
 
-    invoke-static {v0}, Lcom/oneplus/screenshot/LongshotService;->access$100(Lcom/oneplus/screenshot/LongshotService;)Lcom/oneplus/screenshot/longshot/state/LongshotMode;
+    invoke-static {v0}, Lcom/oneplus/screenshot/LongshotService;->access$000(Lcom/oneplus/screenshot/LongshotService;)Lcom/oneplus/screenshot/longshot/state/LongshotMode;
 
     move-result-object v0
 
@@ -190,11 +447,11 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/LongshotService$ServiceBinder;->this$0:Lcom/oneplus/screenshot/LongshotService;
 
-    invoke-static {v0, p1}, Lcom/oneplus/screenshot/LongshotService;->access$202(Lcom/oneplus/screenshot/LongshotService;I)I
+    invoke-static {v0, p1}, Lcom/oneplus/screenshot/LongshotService;->access$102(Lcom/oneplus/screenshot/LongshotService;I)I
 
     iget-object v0, p0, Lcom/oneplus/screenshot/LongshotService$ServiceBinder;->this$0:Lcom/oneplus/screenshot/LongshotService;
 
-    invoke-static {v0}, Lcom/oneplus/screenshot/LongshotService;->access$100(Lcom/oneplus/screenshot/LongshotService;)Lcom/oneplus/screenshot/longshot/state/LongshotMode;
+    invoke-static {v0}, Lcom/oneplus/screenshot/LongshotService;->access$000(Lcom/oneplus/screenshot/LongshotService;)Lcom/oneplus/screenshot/longshot/state/LongshotMode;
 
     move-result-object v0
 
@@ -202,7 +459,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/LongshotService$ServiceBinder;->this$0:Lcom/oneplus/screenshot/LongshotService;
 
-    invoke-static {v0}, Lcom/oneplus/screenshot/LongshotService;->access$100(Lcom/oneplus/screenshot/LongshotService;)Lcom/oneplus/screenshot/longshot/state/LongshotMode;
+    invoke-static {v0}, Lcom/oneplus/screenshot/LongshotService;->access$000(Lcom/oneplus/screenshot/LongshotService;)Lcom/oneplus/screenshot/longshot/state/LongshotMode;
 
     move-result-object v0
 
@@ -217,7 +474,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/LongshotService$ServiceBinder;->this$0:Lcom/oneplus/screenshot/LongshotService;
 
-    invoke-static {v0}, Lcom/oneplus/screenshot/LongshotService;->access$100(Lcom/oneplus/screenshot/LongshotService;)Lcom/oneplus/screenshot/longshot/state/LongshotMode;
+    invoke-static {v0}, Lcom/oneplus/screenshot/LongshotService;->access$000(Lcom/oneplus/screenshot/LongshotService;)Lcom/oneplus/screenshot/longshot/state/LongshotMode;
 
     move-result-object v0
 
@@ -229,9 +486,7 @@
 .method public onUnscrollableView()V
     .locals 2
 
-    invoke-static {}, Lcom/oneplus/screenshot/LongshotService;->access$000()Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "Longshot.LongshotService"
 
     const-string v1, "onUnscrollableView"
 
@@ -239,7 +494,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/LongshotService$ServiceBinder;->this$0:Lcom/oneplus/screenshot/LongshotService;
 
-    invoke-static {v0}, Lcom/oneplus/screenshot/LongshotService;->access$100(Lcom/oneplus/screenshot/LongshotService;)Lcom/oneplus/screenshot/longshot/state/LongshotMode;
+    invoke-static {v0}, Lcom/oneplus/screenshot/LongshotService;->access$000(Lcom/oneplus/screenshot/LongshotService;)Lcom/oneplus/screenshot/longshot/state/LongshotMode;
 
     move-result-object v0
 
@@ -247,7 +502,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/LongshotService$ServiceBinder;->this$0:Lcom/oneplus/screenshot/LongshotService;
 
-    invoke-static {v0}, Lcom/oneplus/screenshot/LongshotService;->access$100(Lcom/oneplus/screenshot/LongshotService;)Lcom/oneplus/screenshot/longshot/state/LongshotMode;
+    invoke-static {v0}, Lcom/oneplus/screenshot/LongshotService;->access$000(Lcom/oneplus/screenshot/LongshotService;)Lcom/oneplus/screenshot/longshot/state/LongshotMode;
 
     move-result-object v0
 
@@ -260,9 +515,7 @@
 .method public start(Lcom/oneplus/longshot/ILongScreenshotCallback;)V
     .locals 4
 
-    invoke-static {}, Lcom/oneplus/screenshot/LongshotService;->access$000()Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "Longshot.LongshotService"
 
     const-string v1, "start"
 
@@ -276,7 +529,7 @@
 
     iget-object v1, p0, Lcom/oneplus/screenshot/LongshotService$ServiceBinder;->this$0:Lcom/oneplus/screenshot/LongshotService;
 
-    invoke-static {v1}, Lcom/oneplus/screenshot/LongshotService;->access$100(Lcom/oneplus/screenshot/LongshotService;)Lcom/oneplus/screenshot/longshot/state/LongshotMode;
+    invoke-static {v1}, Lcom/oneplus/screenshot/LongshotService;->access$000(Lcom/oneplus/screenshot/LongshotService;)Lcom/oneplus/screenshot/longshot/state/LongshotMode;
 
     move-result-object v1
 
@@ -294,7 +547,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/LongshotService$ServiceBinder;->this$0:Lcom/oneplus/screenshot/LongshotService;
 
-    invoke-static {v0}, Lcom/oneplus/screenshot/LongshotService;->access$100(Lcom/oneplus/screenshot/LongshotService;)Lcom/oneplus/screenshot/longshot/state/LongshotMode;
+    invoke-static {v0}, Lcom/oneplus/screenshot/LongshotService;->access$000(Lcom/oneplus/screenshot/LongshotService;)Lcom/oneplus/screenshot/longshot/state/LongshotMode;
 
     move-result-object v0
 

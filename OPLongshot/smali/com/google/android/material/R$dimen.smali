@@ -188,63 +188,61 @@
 
 .field public static final appcompat_dialog_background_inset:I = 0x7f070059
 
-.field public static final btn_highlight_alpha_material:I = 0x7f070064
+.field public static final button_elevation_material:I = 0x7f070066
 
-.field public static final btn_highlight_alpha_material_dark:I = 0x7f070065
+.field public static final button_pressed_z_material:I = 0x7f070067
 
-.field public static final btn_highlight_alpha_material_light:I = 0x7f070066
+.field public static final cardview_compat_inset_shadow:I = 0x7f070069
 
-.field public static final button_elevation_material:I = 0x7f070069
+.field public static final cardview_default_elevation:I = 0x7f07006a
 
-.field public static final button_pressed_z_material:I = 0x7f07006a
+.field public static final cardview_default_radius:I = 0x7f07006b
 
-.field public static final cardview_compat_inset_shadow:I = 0x7f07006c
+.field public static final cardview_margin:I = 0x7f07006c
 
-.field public static final cardview_default_elevation:I = 0x7f07006d
+.field public static final compat_button_inset_horizontal_material:I = 0x7f07006d
 
-.field public static final cardview_default_radius:I = 0x7f07006e
+.field public static final compat_button_inset_vertical_material:I = 0x7f07006e
 
-.field public static final cardview_margin:I = 0x7f07006f
+.field public static final compat_button_padding_horizontal_material:I = 0x7f07006f
 
-.field public static final compat_button_inset_horizontal_material:I = 0x7f070070
+.field public static final compat_button_padding_vertical_material:I = 0x7f070070
 
-.field public static final compat_button_inset_vertical_material:I = 0x7f070071
+.field public static final compat_control_corner_material:I = 0x7f070071
 
-.field public static final compat_button_padding_horizontal_material:I = 0x7f070072
+.field public static final compat_notification_large_icon_max_height:I = 0x7f070072
 
-.field public static final compat_button_padding_vertical_material:I = 0x7f070073
+.field public static final compat_notification_large_icon_max_width:I = 0x7f070073
 
-.field public static final compat_control_corner_material:I = 0x7f070074
+.field public static final complete_button_layout_minimum_width:I = 0x7f070074
 
-.field public static final compat_notification_large_icon_max_height:I = 0x7f070075
+.field public static final complete_content_layout_minimum_width:I = 0x7f070075
 
-.field public static final compat_notification_large_icon_max_width:I = 0x7f070076
+.field public static final complete_icon_margin_end:I = 0x7f070076
 
-.field public static final complete_button_layout_minimum_width:I = 0x7f070077
+.field public static final complete_icon_margin_start:I = 0x7f070077
 
-.field public static final complete_content_layout_minimum_width:I = 0x7f070078
+.field public static final complete_icon_margin_top:I = 0x7f070078
 
-.field public static final complete_icon_margin_end:I = 0x7f070079
+.field public static final complete_icon_size:I = 0x7f070079
 
-.field public static final complete_icon_margin_start:I = 0x7f07007a
+.field public static final control_app_bar_ar_margin:I = 0x7f0700d2
 
-.field public static final complete_icon_margin_top:I = 0x7f07007b
+.field public static final control_empty_base_height:I = 0x7f0700d3
 
-.field public static final complete_icon_size:I = 0x7f07007c
+.field public static final control_empty_home_status_height:I = 0x7f0700d4
 
-.field public static final control_app_bar_ar_margin:I = 0x7f0700d4
+.field public static final control_empty_image_height:I = 0x7f0700d5
 
-.field public static final control_empty_home_status_height:I = 0x7f0700d5
+.field public static final control_empty_image_margin_bottom:I = 0x7f0700d6
 
-.field public static final control_empty_image_height:I = 0x7f0700d6
+.field public static final control_empty_image_margin_top:I = 0x7f0700d7
 
-.field public static final control_empty_image_margin_bottom:I = 0x7f0700d7
+.field public static final control_empty_image_view_size:I = 0x7f0700d8
 
-.field public static final control_empty_image_margin_top:I = 0x7f0700d8
+.field public static final control_empty_image_width:I = 0x7f0700d9
 
-.field public static final control_empty_image_view_size:I = 0x7f0700d9
-
-.field public static final control_empty_image_width:I = 0x7f0700da
+.field public static final control_empty_min_margin:I = 0x7f0700da
 
 .field public static final control_empty_temp_height:I = 0x7f0700db
 
@@ -1106,27 +1104,27 @@
 
 .field public static final op_dialog_picker_background_inset:I = 0x7f0702ab
 
-.field public static final op_hint_search_view_height:I = 0x7f0702ac
+.field public static final op_float_action_button_shadow_z8:I = 0x7f0702ac
 
-.field public static final op_hint_search_view_icon_size:I = 0x7f0702ad
+.field public static final op_hint_search_view_height:I = 0x7f0702ad
 
-.field public static final op_hint_search_view_icon_src_size_left:I = 0x7f0702ae
+.field public static final op_hint_search_view_icon_size:I = 0x7f0702ae
 
-.field public static final op_hint_search_view_icon_src_size_right:I = 0x7f0702af
+.field public static final op_hint_search_view_icon_src_size_left:I = 0x7f0702af
 
-.field public static final op_line_space_multiplier_h2:I = 0x7f0702b0
+.field public static final op_hint_search_view_icon_src_size_right:I = 0x7f0702b0
 
-.field public static final op_list_item_min_height:I = 0x7f0702b1
+.field public static final op_line_space_multiplier_h2:I = 0x7f0702b1
 
-.field public static final op_progress_dialog_right_padding:I = 0x7f0702b2
+.field public static final op_list_item_min_height:I = 0x7f0702b2
 
-.field public static final op_reduce_padding_space2:I = 0x7f0702b3
+.field public static final op_progress_dialog_right_padding:I = 0x7f0702b3
 
-.field public static final op_ripple_radius:I = 0x7f0702b4
+.field public static final op_reduce_padding_space2:I = 0x7f0702b4
 
-.field public static final op_seekbar_track_background_height_material:I = 0x7f0702b5
+.field public static final op_ripple_radius:I = 0x7f0702b5
 
-.field public static final op_seekbar_track_progress_height_material:I = 0x7f0702b6
+.field public static final op_seekbar_track_background_height_material:I = 0x7f0702b6
 
 .field public static final op_spinner_material_padding_left:I = 0x7f0702b7
 
@@ -1154,115 +1152,119 @@
 
 .field public static final op_text_size_subtitle:I = 0x7f0702c3
 
-.field public static final op_toolbar_navigation_max_button_height:I = 0x7f0702c4
+.field public static final op_text_style_dialog_body1_size:I = 0x7f0702c4
 
-.field public static final picker_bottom_margin:I = 0x7f0702c5
+.field public static final op_text_style_dialog_title_size:I = 0x7f0702c5
 
-.field public static final picker_top_margin:I = 0x7f0702c6
+.field public static final op_toolbar_navigation_max_button_height:I = 0x7f0702c6
 
-.field public static final preference_dropdown_padding_start:I = 0x7f0702c7
+.field public static final picker_bottom_margin:I = 0x7f0702c7
 
-.field public static final preference_fragment_padding_side:I = 0x7f0702c8
+.field public static final picker_top_margin:I = 0x7f0702c8
 
-.field public static final preference_icon_minWidth:I = 0x7f0702c9
+.field public static final preference_dropdown_padding_start:I = 0x7f0702c9
 
-.field public static final preference_seekbar_padding_horizontal:I = 0x7f0702ca
+.field public static final preference_fragment_padding_side:I = 0x7f0702ca
 
-.field public static final preference_seekbar_padding_vertical:I = 0x7f0702cb
+.field public static final preference_icon_minWidth:I = 0x7f0702cb
 
-.field public static final preference_seekbar_value_minWidth:I = 0x7f0702cc
+.field public static final preference_seekbar_padding_horizontal:I = 0x7f0702cc
 
-.field public static final preference_widget_width:I = 0x7f0702cd
+.field public static final preference_seekbar_padding_vertical:I = 0x7f0702cd
 
-.field public static final qs_page_indicator_height:I = 0x7f0702ce
+.field public static final preference_seekbar_value_minWidth:I = 0x7f0702ce
 
-.field public static final qs_page_indicator_width:I = 0x7f0702cf
+.field public static final preference_widget_width:I = 0x7f0702cf
 
-.field public static final reduce_padding_space2:I = 0x7f0702da
+.field public static final qs_page_indicator_height:I = 0x7f0702d0
 
-.field public static final search_view_preferred_height:I = 0x7f0702dc
+.field public static final qs_page_indicator_width:I = 0x7f0702d1
 
-.field public static final search_view_preferred_width:I = 0x7f0702dd
+.field public static final reduce_padding_space2:I = 0x7f0702dc
 
-.field public static final search_view_text_min_width:I = 0x7f0702de
+.field public static final search_view_preferred_height:I = 0x7f0702de
 
-.field public static final snackbar_control_item_half_width:I = 0x7f0702e7
+.field public static final search_view_preferred_width:I = 0x7f0702df
 
-.field public static final tabs_padding_end:I = 0x7f0702e9
+.field public static final search_view_text_min_width:I = 0x7f0702e0
 
-.field public static final tabs_padding_start:I = 0x7f0702ea
+.field public static final snackbar_control_item_half_width:I = 0x7f0702e9
 
-.field public static final text_selection_highlight_alpha_material:I = 0x7f0702eb
+.field public static final tabs_padding_end:I = 0x7f0702eb
 
-.field public static final timepicker_am_top_padding:I = 0x7f0702ec
+.field public static final tabs_padding_start:I = 0x7f0702ec
 
-.field public static final timepicker_ampm_horizontal_padding:I = 0x7f0702ed
+.field public static final text_selection_highlight_alpha_material:I = 0x7f0702ed
 
-.field public static final timepicker_ampm_label_size:I = 0x7f0702ee
+.field public static final timepicker_am_top_padding:I = 0x7f0702ee
 
-.field public static final timepicker_ampm_vertical_padding:I = 0x7f0702ef
+.field public static final timepicker_ampm_horizontal_padding:I = 0x7f0702ef
 
-.field public static final timepicker_center_dot_radius:I = 0x7f0702f0
+.field public static final timepicker_ampm_label_size:I = 0x7f0702f0
 
-.field public static final timepicker_edit_text_size:I = 0x7f0702f1
+.field public static final timepicker_ampm_vertical_padding:I = 0x7f0702f1
 
-.field public static final timepicker_extra_time_label_margin:I = 0x7f0702f2
+.field public static final timepicker_center_dot_radius:I = 0x7f0702f2
 
-.field public static final timepicker_header_height:I = 0x7f0702f3
+.field public static final timepicker_edit_text_size:I = 0x7f0702f3
 
-.field public static final timepicker_input_field_width:I = 0x7f0702f4
+.field public static final timepicker_extra_time_label_margin:I = 0x7f0702f4
 
-.field public static final timepicker_minimum_margin_sides:I = 0x7f0702f5
+.field public static final timepicker_header_height:I = 0x7f0702f5
 
-.field public static final timepicker_minimum_margin_top_bottom:I = 0x7f0702f6
+.field public static final timepicker_input_field_width:I = 0x7f0702f6
 
-.field public static final timepicker_pm_top_padding:I = 0x7f0702f7
+.field public static final timepicker_minimum_margin_sides:I = 0x7f0702f7
 
-.field public static final timepicker_radial_picker_dimen:I = 0x7f0702f8
+.field public static final timepicker_minimum_margin_top_bottom:I = 0x7f0702f8
 
-.field public static final timepicker_radial_picker_left_margin:I = 0x7f0702f9
+.field public static final timepicker_pm_top_padding:I = 0x7f0702f9
 
-.field public static final timepicker_radial_picker_right_margin:I = 0x7f0702fa
+.field public static final timepicker_radial_picker_dimen:I = 0x7f0702fa
 
-.field public static final timepicker_radial_picker_top_margin:I = 0x7f0702fb
+.field public static final timepicker_radial_picker_left_margin:I = 0x7f0702fb
 
-.field public static final timepicker_selector_dot_radius:I = 0x7f0702fc
+.field public static final timepicker_radial_picker_right_margin:I = 0x7f0702fc
 
-.field public static final timepicker_selector_radius:I = 0x7f0702fd
+.field public static final timepicker_radial_picker_top_margin:I = 0x7f0702fd
 
-.field public static final timepicker_selector_stroke:I = 0x7f0702fe
+.field public static final timepicker_selector_dot_radius:I = 0x7f0702fe
 
-.field public static final timepicker_separator_padding:I = 0x7f0702ff
+.field public static final timepicker_selector_radius:I = 0x7f0702ff
 
-.field public static final timepicker_text_inset_inner:I = 0x7f070300
+.field public static final timepicker_selector_stroke:I = 0x7f070300
 
-.field public static final timepicker_text_inset_normal:I = 0x7f070301
+.field public static final timepicker_separator_padding:I = 0x7f070301
 
-.field public static final timepicker_text_size_inner:I = 0x7f070302
+.field public static final timepicker_text_inset_inner:I = 0x7f070302
 
-.field public static final timepicker_text_size_normal:I = 0x7f070303
+.field public static final timepicker_text_inset_normal:I = 0x7f070303
 
-.field public static final timepicker_time_label_size:I = 0x7f070304
+.field public static final timepicker_text_size_inner:I = 0x7f070304
 
-.field public static final toolbar_elevation:I = 0x7f070305
+.field public static final timepicker_text_size_normal:I = 0x7f070305
 
-.field public static final toolbar_icon_min_width:I = 0x7f070306
+.field public static final timepicker_time_label_size:I = 0x7f070306
 
-.field public static final tooltip_corner_radius:I = 0x7f070307
+.field public static final toolbar_elevation:I = 0x7f070307
 
-.field public static final tooltip_horizontal_padding:I = 0x7f070308
+.field public static final toolbar_icon_min_width:I = 0x7f070308
 
-.field public static final tooltip_margin:I = 0x7f070309
+.field public static final tooltip_corner_radius:I = 0x7f070309
 
-.field public static final tooltip_precise_anchor_extra_offset:I = 0x7f07030a
+.field public static final tooltip_horizontal_padding:I = 0x7f07030a
 
-.field public static final tooltip_precise_anchor_threshold:I = 0x7f07030b
+.field public static final tooltip_margin:I = 0x7f07030b
 
-.field public static final tooltip_vertical_padding:I = 0x7f07030c
+.field public static final tooltip_precise_anchor_extra_offset:I = 0x7f07030c
 
-.field public static final tooltip_y_offset_non_touch:I = 0x7f07030d
+.field public static final tooltip_precise_anchor_threshold:I = 0x7f07030d
 
-.field public static final tooltip_y_offset_touch:I = 0x7f07030e
+.field public static final tooltip_vertical_padding:I = 0x7f07030e
+
+.field public static final tooltip_y_offset_non_touch:I = 0x7f07030f
+
+.field public static final tooltip_y_offset_touch:I = 0x7f070310
 
 
 # direct methods

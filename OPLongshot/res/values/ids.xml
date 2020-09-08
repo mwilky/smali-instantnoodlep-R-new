@@ -116,7 +116,9 @@
     <item type="id" name="date_picker_header_date" />
     <item type="id" name="date_picker_header_lunar" />
     <item type="id" name="date_picker_header_year" />
+    <item type="id" name="date_picker_month_selection" />
     <item type="id" name="date_picker_year_picker" />
+    <item type="id" name="date_picker_year_selection" />
     <item type="id" name="day" />
     <item type="id" name="day_picker_view_pager" />
     <item type="id" name="decor_content_parent" />
@@ -293,7 +295,6 @@
     <item type="id" name="positive_button" />
     <item type="id" name="prefs" />
     <item type="id" name="prefs_frame" />
-    <item type="id" name="pressed" />
     <item type="id" name="prev" />
     <item type="id" name="preview" />
     <item type="id" name="preview_container" />
@@ -398,17 +399,18 @@
     <item type="id" name="timePicker" />
     <item type="id" name="timePickerLayout" />
     <item type="id" name="time_header" />
+    <item type="id" name="time_header_layout" />
     <item type="id" name="title" />
     <item type="id" name="titleDividerNoCustom" />
     <item type="id" name="title_layout" />
     <item type="id" name="title_template" />
     <item type="id" name="together" />
     <item type="id" name="toggle_mode" />
+    <item type="id" name="toggle_mode_layout" />
     <item type="id" name="tool_bar" />
     <item type="id" name="toolbar" />
     <item type="id" name="tooltips_cancel" />
     <item type="id" name="topPanel" />
-    <item type="id" name="top_label" />
     <item type="id" name="touch_outside" />
     <item type="id" name="transition_current_scene" />
     <item type="id" name="transition_layout_save" />
@@ -417,7 +419,6 @@
     <item type="id" name="transition_transform" />
     <item type="id" name="transitionview" />
     <item type="id" name="unchecked" />
-    <item type="id" name="unpressed" />
     <item type="id" name="up" />
     <item type="id" name="view_offset_helper" />
     <item type="id" name="web_view_container" />

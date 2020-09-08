@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="about_action_bar_title">च्या बद्दल</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">खाजगीयता धोरण</string>
+    <string name="about_release_note_title">लॉग अद्यतनित करा:</string>
+    <string name="about_terms_service">सेवेच्या अटी</string>
     <string name="app_name">स्क्रीनशॉट</string>
     <string name="got_it">कळले</string>
+    <string name="loading_text">लोड करीत आहे...</string>
     <string name="longshot_guide_not_support">वाढविलेले स्क्रीनशॉट या पृष्ठावर समर्थित नाहीत.</string>
     <string name="longshot_guide_support">वाढविलेला स्क्रीनशॉट पाहण्यासाठी येथे टॅप करा.</string>
     <string name="not_support_longshot">वाढविलेले स्क्रीनशॉट या पृष्ठावर समर्थित नाहीत.</string>

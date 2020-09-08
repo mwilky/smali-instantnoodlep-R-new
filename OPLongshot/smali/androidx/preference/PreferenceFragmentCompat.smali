@@ -5,6 +5,7 @@
 # interfaces
 .implements Landroidx/preference/PreferenceManager$OnPreferenceTreeClickListener;
 .implements Landroidx/preference/PreferenceManager$OnDisplayPreferenceDialogListener;
+.implements Landroidx/preference/PreferenceManager$OnDisMissPreferenceDialogListener;
 .implements Landroidx/preference/PreferenceManager$OnNavigateToScreenListener;
 .implements Landroidx/preference/DialogPreference$TargetFragment;
 
@@ -646,6 +647,29 @@
     return-void
 .end method
 
+.method public onDismissPreferenceDialog()V
+    .locals 2
+
+    invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getFragmentManager()Landroidx/fragment/app/FragmentManager;
+
+    move-result-object v0
+
+    const-string v1, "androidx.preference.PreferenceFragment.DIALOG"
+
+    invoke-virtual {v0, v1}, Landroidx/fragment/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroidx/fragment/app/Fragment;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/fragment/app/DialogFragment;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroidx/fragment/app/DialogFragment;->dismiss()V
+
+    :cond_0
+    return-void
+.end method
+
 .method public onDisplayPreferenceDialog(Landroidx/preference/Preference;)V
     .locals 3
 
@@ -1033,6 +1057,10 @@
 
     invoke-virtual {v0, p0}, Landroidx/preference/PreferenceManager;->setOnDisplayPreferenceDialogListener(Landroidx/preference/PreferenceManager$OnDisplayPreferenceDialogListener;)V
 
+    iget-object v0, p0, Landroidx/preference/PreferenceFragmentCompat;->mPreferenceManager:Landroidx/preference/PreferenceManager;
+
+    invoke-virtual {v0, p0}, Landroidx/preference/PreferenceManager;->setOnDisMissPreferenceDialogListener(Landroidx/preference/PreferenceManager$OnDisMissPreferenceDialogListener;)V
+
     return-void
 .end method
 
@@ -1050,6 +1078,10 @@
     iget-object v0, p0, Landroidx/preference/PreferenceFragmentCompat;->mPreferenceManager:Landroidx/preference/PreferenceManager;
 
     invoke-virtual {v0, v1}, Landroidx/preference/PreferenceManager;->setOnDisplayPreferenceDialogListener(Landroidx/preference/PreferenceManager$OnDisplayPreferenceDialogListener;)V
+
+    iget-object v0, p0, Landroidx/preference/PreferenceFragmentCompat;->mPreferenceManager:Landroidx/preference/PreferenceManager;
+
+    invoke-virtual {v0, v1}, Landroidx/preference/PreferenceManager;->setOnDisMissPreferenceDialogListener(Landroidx/preference/PreferenceManager$OnDisMissPreferenceDialogListener;)V
 
     return-void
 .end method

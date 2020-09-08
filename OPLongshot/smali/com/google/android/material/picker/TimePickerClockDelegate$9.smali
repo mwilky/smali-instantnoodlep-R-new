@@ -3,7 +3,7 @@
 .source "TimePickerClockDelegate.java"
 
 # interfaces
-.implements Landroid/view/View$OnFocusChangeListener;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -34,67 +34,20 @@
 
 
 # virtual methods
-.method public onFocusChange(Landroid/view/View;Z)V
+.method public run()V
     .locals 2
 
-    if-eqz p2, :cond_3
+    iget-object v0, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$9;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
 
-    invoke-virtual {p1}, Landroid/view/View;->getId()I
+    invoke-static {v0}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$2100(Lcom/google/android/material/picker/TimePickerClockDelegate;)Lcom/google/android/material/picker/NumericTextView;
 
-    move-result p1
+    move-result-object v1
 
-    sget p2, Lcom/google/android/material/R$id;->am_label:I
+    invoke-virtual {v1}, Lcom/google/android/material/picker/NumericTextView;->getValue()I
 
-    const/4 v0, 0x0
+    move-result v1
 
-    if-ne p1, p2, :cond_0
+    invoke-virtual {v0, v1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->setMinute(I)V
 
-    iget-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$9;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
-
-    invoke-static {p1, v0}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$1400(Lcom/google/android/material/picker/TimePickerClockDelegate;I)V
-
-    goto :goto_0
-
-    :cond_0
-    sget p2, Lcom/google/android/material/R$id;->pm_label:I
-
-    const/4 v1, 0x1
-
-    if-ne p1, p2, :cond_1
-
-    iget-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$9;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
-
-    invoke-static {p1, v1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$1400(Lcom/google/android/material/picker/TimePickerClockDelegate;I)V
-
-    goto :goto_0
-
-    :cond_1
-    sget p2, Lcom/google/android/material/R$id;->hours:I
-
-    if-ne p1, p2, :cond_2
-
-    iget-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$9;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
-
-    invoke-static {p1, v0, v1, v1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$1000(Lcom/google/android/material/picker/TimePickerClockDelegate;IZZ)V
-
-    goto :goto_0
-
-    :cond_2
-    sget p2, Lcom/google/android/material/R$id;->minutes:I
-
-    if-ne p1, p2, :cond_3
-
-    iget-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$9;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
-
-    invoke-static {p1, v1, v1, v1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$1000(Lcom/google/android/material/picker/TimePickerClockDelegate;IZZ)V
-
-    :goto_0
-    iget-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$9;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
-
-    invoke-static {p1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$1900(Lcom/google/android/material/picker/TimePickerClockDelegate;)V
-
-    nop
-
-    :cond_3
     return-void
 .end method

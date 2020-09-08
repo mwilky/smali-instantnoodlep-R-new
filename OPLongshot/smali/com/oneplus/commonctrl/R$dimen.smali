@@ -180,15 +180,15 @@
 
 .field public static final op_dialog_picker_background_inset:I = 0x7f0702ab
 
-.field public static final op_line_space_multiplier_h2:I = 0x7f0702b0
+.field public static final op_line_space_multiplier_h2:I = 0x7f0702b1
 
-.field public static final op_list_item_min_height:I = 0x7f0702b1
+.field public static final op_list_item_min_height:I = 0x7f0702b2
 
-.field public static final op_progress_dialog_right_padding:I = 0x7f0702b2
+.field public static final op_progress_dialog_right_padding:I = 0x7f0702b3
 
-.field public static final op_reduce_padding_space2:I = 0x7f0702b3
+.field public static final op_reduce_padding_space2:I = 0x7f0702b4
 
-.field public static final op_ripple_radius:I = 0x7f0702b4
+.field public static final op_ripple_radius:I = 0x7f0702b5
 
 .field public static final op_spinner_material_padding_left:I = 0x7f0702b7
 
@@ -216,9 +216,9 @@
 
 .field public static final op_text_size_subtitle:I = 0x7f0702c3
 
-.field public static final op_toolbar_navigation_max_button_height:I = 0x7f0702c4
+.field public static final op_toolbar_navigation_max_button_height:I = 0x7f0702c6
 
-.field public static final text_selection_highlight_alpha_material:I = 0x7f0702eb
+.field public static final text_selection_highlight_alpha_material:I = 0x7f0702ed
 
 
 # direct methods

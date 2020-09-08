@@ -27,10 +27,16 @@
     <string name="abc_shareactionprovider_share_with">Dela med</string>
     <string name="abc_shareactionprovider_share_with_application">Dela med %s</string>
     <string name="abc_toolbar_collapse_description">Komprimera</string>
+    <string name="about_action_bar_title">Om</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Sekretesspolicy</string>
+    <string name="about_release_note_title">Uppdateringslogg:</string>
+    <string name="about_terms_service">Villkor för tjänsten</string>
     <string name="app_name">Skärmbild</string>
     <string name="copy">Kopiera</string>
     <string name="expand_button_title">Avancerat</string>
     <string name="got_it">Jag fattar</string>
+    <string name="loading_text">Läser in ...</string>
     <string name="longshot_guide_not_support">Utökad skärmbild stöds inte på denna sida.</string>
     <string name="longshot_guide_support">Tryck här för att testa utökad skärmbild.</string>
     <string name="not_set">Inte angett</string>

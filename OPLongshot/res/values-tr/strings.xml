@@ -27,10 +27,16 @@
     <string name="abc_shareactionprovider_share_with">Şununla paylaş:</string>
     <string name="abc_shareactionprovider_share_with_application">%s ile paylaş</string>
     <string name="abc_toolbar_collapse_description">Daralt</string>
+    <string name="about_action_bar_title">Hakkında</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Gizlilik Politikası</string>
+    <string name="about_release_note_title">Güncelleme kaydı:</string>
+    <string name="about_terms_service">Hizmet Koşulları</string>
     <string name="app_name">Ekran görüntüsü</string>
     <string name="copy">Kopyala</string>
     <string name="expand_button_title">Gelişmiş</string>
     <string name="got_it">Anladım</string>
+    <string name="loading_text">Yükleniyor...</string>
     <string name="longshot_guide_not_support">Genişletilmiş ekran görüntüsü bu sayfada desteklenmiyor.</string>
     <string name="longshot_guide_support">"Genişletilmiş Ekran Görüntüsü'nü denemek için buraya dokunun."</string>
     <string name="not_set">Ayarlanmadı</string>

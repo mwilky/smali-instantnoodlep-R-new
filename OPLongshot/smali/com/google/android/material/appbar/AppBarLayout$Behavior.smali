@@ -175,6 +175,14 @@
     return-void
 .end method
 
+.method public bridge synthetic setContentVelocity(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->setContentVelocity(I)V
+
+    return-void
+.end method
+
 .method public bridge synthetic setDragCallback(Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$BaseDragCallback;)V
     .locals 0
 

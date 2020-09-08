@@ -26,6 +26,10 @@
 # static fields
 .field private static final DESCRIPTOR:Ljava/lang/String; = "com.oneplus.longshot.ILongScreenshot"
 
+.field static final TRANSACTION_dumpViewInfo:I = 0xb
+
+.field static final TRANSACTION_getConfigValues:I = 0xc
+
 .field static final TRANSACTION_isHandleState:I = 0x4
 
 .field static final TRANSACTION_isMoveState:I = 0x3
@@ -158,6 +162,40 @@
     :pswitch_0
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    invoke-virtual {p0}, Lcom/oneplus/longshot/ILongScreenshot$Stub;->getConfigValues()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {p3, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    return v1
+
+    :pswitch_1
+    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lcom/oneplus/longshot/IViewPropCallback$Stub;->asInterface(Landroid/os/IBinder;)Lcom/oneplus/longshot/IViewPropCallback;
+
+    move-result-object p2
+
+    invoke-virtual {p0, p1, p2}, Lcom/oneplus/longshot/ILongScreenshot$Stub;->dumpViewInfo(Ljava/lang/String;Lcom/oneplus/longshot/IViewPropCallback;)V
+
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    return v1
+
+    :pswitch_2
+    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
@@ -176,7 +214,7 @@
 
     return v1
 
-    :pswitch_1
+    :pswitch_3
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
@@ -189,7 +227,7 @@
 
     return v1
 
-    :pswitch_2
+    :pswitch_4
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -214,7 +252,7 @@
 
     return v1
 
-    :pswitch_3
+    :pswitch_5
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcom/oneplus/longshot/ILongScreenshot$Stub;->onUnscrollableView()V
@@ -223,7 +261,7 @@
 
     return v1
 
-    :pswitch_4
+    :pswitch_6
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -236,7 +274,7 @@
 
     return v1
 
-    :pswitch_5
+    :pswitch_7
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -249,7 +287,7 @@
 
     return v1
 
-    :pswitch_6
+    :pswitch_8
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcom/oneplus/longshot/ILongScreenshot$Stub;->isHandleState()Z
@@ -262,7 +300,7 @@
 
     return v1
 
-    :pswitch_7
+    :pswitch_9
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcom/oneplus/longshot/ILongScreenshot$Stub;->isMoveState()Z
@@ -275,7 +313,7 @@
 
     return v1
 
-    :pswitch_8
+    :pswitch_a
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -298,7 +336,7 @@
 
     return v1
 
-    :pswitch_9
+    :pswitch_b
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
@@ -324,6 +362,8 @@
 
     :pswitch_data_0
     .packed-switch 0x1
+        :pswitch_b
+        :pswitch_a
         :pswitch_9
         :pswitch_8
         :pswitch_7

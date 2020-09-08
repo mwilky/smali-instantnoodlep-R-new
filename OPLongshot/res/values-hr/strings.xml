@@ -27,10 +27,16 @@
     <string name="abc_shareactionprovider_share_with">Dijeli s</string>
     <string name="abc_shareactionprovider_share_with_application">Dijeli putem aplikacije %s</string>
     <string name="abc_toolbar_collapse_description">Sažmi</string>
+    <string name="about_action_bar_title">Informacije</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Pravilnik o zaštiti privatnosti</string>
+    <string name="about_release_note_title">Zapisnik ažuriranja:</string>
+    <string name="about_terms_service">Uvjeti usluge</string>
     <string name="app_name">Snimka zaslona</string>
     <string name="copy">Kopiraj</string>
     <string name="expand_button_title">Napredno</string>
     <string name="got_it">U redu</string>
+    <string name="loading_text">Učitavanje...</string>
     <string name="longshot_guide_not_support">Proširena snimka zaslona nije podržana na ovoj stranici.</string>
     <string name="longshot_guide_support">Dodirnite ovdje i isprobajte proširenu snimku zaslona.</string>
     <string name="not_set">Nije postavljeno</string>

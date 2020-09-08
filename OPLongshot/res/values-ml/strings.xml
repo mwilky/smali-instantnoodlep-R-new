@@ -27,9 +27,15 @@
     <string name="abc_shareactionprovider_share_with">ഇനിപ്പറയുന്നതുമായി പങ്കിടുക</string>
     <string name="abc_shareactionprovider_share_with_application">%s എന്നതുമായി പങ്കിടുക</string>
     <string name="abc_toolbar_collapse_description">ചുരുക്കുക</string>
+    <string name="about_action_bar_title">വിവരം</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">സ്വകാര്യതാ നയം</string>
+    <string name="about_release_note_title">ലോഗ് അപ്‍ഡേറ്റ് ചെയ്യുക:</string>
+    <string name="about_terms_service">സേവന നിബന്ധനകൾ</string>
     <string name="copy">പകർത്തുക</string>
     <string name="expand_button_title">വിപുലമായത്</string>
     <string name="got_it">മനസ്സിലായി</string>
+    <string name="loading_text">ലോഡുചെയ്യുന്നു...</string>
     <string name="longshot_guide_not_support">ഈ പേജിനെ വികസിപ്പിച്ച സ്ക്രീന്‍ഷോട്ട് പിന്തുണയ്ക്കുന്നില്ല.</string>
     <string name="longshot_guide_support">വികസിപ്പിച്ച സ്ക്രീന്‍ഷോട്ട് പരീക്ഷിക്കുന്നതിന് ഇവിടെ ടാപ് ചെയ്യുക.</string>
     <string name="not_set">സജ്ജീകരിച്ചിട്ടില്ല</string>

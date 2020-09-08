@@ -34,6 +34,8 @@
 
 .field public static final UNSUPPORT_REASON_RINGING:I = 0x3e8
 
+.field public static final UNSUPPORT_REASON_SCREEN_BLOCK_BY_VIEW_VISIBILITY:I = 0xbb8
+
 .field private static sInstance:Lcom/oneplus/screenshot/longshot/state/LongshotMode;
 
 
@@ -2185,7 +2187,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f0f0079
+    const v0, 0x7f0f0085
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2796,7 +2798,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0f0084
+    const p2, 0x7f0f0090
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2815,7 +2817,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0f00a7
+    const p2, 0x7f0f00b3
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2871,7 +2873,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0f0091
+    const v2, 0x7f0f009d
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

@@ -20,9 +20,9 @@
 
 .field public static final oneplus_control_text_error_message_anim:I = 0x7f010026
 
-.field public static final popup_enter_material:I = 0x7f010040
+.field public static final popup_enter_material:I = 0x7f010042
 
-.field public static final popup_exit_material:I = 0x7f010041
+.field public static final popup_exit_material:I = 0x7f010043
 
 
 # direct methods

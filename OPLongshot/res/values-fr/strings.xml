@@ -27,10 +27,16 @@
     <string name="abc_shareactionprovider_share_with">Partager avec</string>
     <string name="abc_shareactionprovider_share_with_application">Partager avec %s</string>
     <string name="abc_toolbar_collapse_description">Réduire</string>
+    <string name="about_action_bar_title">À propos</string>
+    <string name="about_app_version_text">Version %s</string>
+    <string name="about_privacy_policy">Politique de confidentialité</string>
+    <string name="about_release_note_title">Journal de mise à jour :</string>
+    <string name="about_terms_service">Conditions de services</string>
     <string name="app_name">"Capture d'écran"</string>
     <string name="copy">Copier</string>
     <string name="expand_button_title">Paramètres avancés</string>
     <string name="got_it">Ok</string>
+    <string name="loading_text">Chargement…</string>
     <string name="longshot_guide_not_support">"La capture d'écran élargie n'est pas prise en charge sur cette page."</string>
     <string name="longshot_guide_support">"Appuyez ici pour essayer la Capture d'écran élargie."</string>
     <string name="not_set">Non définie</string>

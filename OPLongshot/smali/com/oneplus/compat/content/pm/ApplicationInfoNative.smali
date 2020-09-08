@@ -12,6 +12,47 @@
     return-void
 .end method
 
+.method public static getResourceDirs(Landroid/content/pm/ApplicationInfo;)[Ljava/lang/String;
+    .locals 2
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1d
+
+    if-lt v0, v1, :cond_0
+
+    const-string v0, "10.14.0"
+
+    invoke-static {v0}, Lcom/oneplus/utils/Utils;->isWrapperSupport(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p0}, Lcom/oneplus/inner/content/pm/ApplicationInfoWrapper;->getResourceDirs(Landroid/content/pm/ApplicationInfo;)[Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    const-class v0, Landroid/content/pm/ApplicationInfo;
+
+    const-string v1, "resourceDirs"
+
+    invoke-static {v0, v1}, Lcom/oneplus/utils/reflection/FieldReflection;->findField(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v0
+
+    invoke-static {v0, p0}, Lcom/oneplus/utils/reflection/FieldReflection;->getField(Ljava/lang/reflect/Field;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, [Ljava/lang/String;
+
+    return-object p0
+.end method
+
 .method public static getlongVersionCode(Landroid/content/pm/ApplicationInfo;)J
     .locals 3
 

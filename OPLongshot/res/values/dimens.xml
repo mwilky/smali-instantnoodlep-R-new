@@ -100,9 +100,6 @@
     <dimen name="btn_float_text_size">8.0sp</dimen>
     <dimen name="btn_float_width">84.0dip</dimen>
     <dimen name="btn_guide_text_size">15.0sp</dimen>
-    <item type="dimen" name="btn_highlight_alpha_material">@dimen/btn_highlight_alpha_material_light</item>
-    <item type="dimen" name="btn_highlight_alpha_material_dark">0.2</item>
-    <item type="dimen" name="btn_highlight_alpha_material_light">0.2</item>
     <dimen name="btn_longshot_bottom_shadow">7.6299744dip</dimen>
     <dimen name="btn_longshot_radius">9.0dip</dimen>
     <dimen name="button_elevation_material">2.0dip</dimen>
@@ -173,6 +170,7 @@
     <dimen name="config_stitch_last_step_level_4">10.0dip</dimen>
     <dimen name="config_stitch_last_step_level_5">10.0dip</dimen>
     <dimen name="config_stitch_left_side_offset_level_1">16.599976dip</dimen>
+    <dimen name="config_stitch_left_side_offset_level_1_5">25.0dip</dimen>
     <dimen name="config_stitch_left_side_offset_level_2">33.0dip</dimen>
     <dimen name="config_stitch_left_side_offset_level_3">65.0dip</dimen>
     <dimen name="config_stitch_left_side_offset_level_4">88.5dip</dimen>
@@ -213,12 +211,14 @@
     <dimen name="config_undo_offset">10.0dip</dimen>
     <dimen name="config_undo_step">1.0dip</dimen>
     <dimen name="control_app_bar_ar_margin">20.0dip</dimen>
+    <dimen name="control_empty_base_height">0.0px</dimen>
     <dimen name="control_empty_home_status_height">90.0dip</dimen>
     <dimen name="control_empty_image_height">400.0px</dimen>
     <dimen name="control_empty_image_margin_bottom">32.0px</dimen>
     <dimen name="control_empty_image_margin_top">318.0px</dimen>
     <dimen name="control_empty_image_view_size">490.0px</dimen>
     <dimen name="control_empty_image_width">720.0px</dimen>
+    <dimen name="control_empty_min_margin">0.0px</dimen>
     <dimen name="control_empty_temp_height">680.0px</dimen>
     <dimen name="control_tooltip_height">15.0dip</dimen>
     <dimen name="control_tooltip_width">18.0dip</dimen>
@@ -226,7 +226,7 @@
     <dimen name="date_picker_day_height">42.0dip</dimen>
     <dimen name="date_picker_day_of_week_height">36.0dip</dimen>
     <dimen name="date_picker_day_of_week_text_size">12.0sp</dimen>
-    <dimen name="date_picker_day_selector_radius">27.0dip</dimen>
+    <dimen name="date_picker_day_selector_radius">42.0dip</dimen>
     <dimen name="date_picker_day_text_size">12.0sp</dimen>
     <dimen name="date_picker_day_width">42.0dip</dimen>
     <dimen name="date_picker_month_height">56.0dip</dimen>
@@ -252,7 +252,7 @@
     <dimen name="datepicker_year_picker_padding_top">8.0dip</dimen>
     <dimen name="day_picker_button_margin_top">0.0dip</dimen>
     <dimen name="day_picker_padding_horizontal">18.0dip</dimen>
-    <dimen name="day_picker_padding_top">6.0dip</dimen>
+    <dimen name="day_picker_padding_top">0.0dip</dimen>
     <dimen name="design_appbar_elevation">0.0dip</dimen>
     <dimen name="design_bottom_navigation_active_item_max_width">168.0dip</dimen>
     <dimen name="design_bottom_navigation_active_item_min_width">96.0dip</dimen>
@@ -293,8 +293,8 @@
     <dimen name="design_snackbar_min_width">-1.0px</dimen>
     <dimen name="design_snackbar_padding_bottom">18.0dip</dimen>
     <dimen name="design_snackbar_padding_horizontal">12.0dip</dimen>
-    <dimen name="design_snackbar_padding_left">18.0dip</dimen>
-    <dimen name="design_snackbar_padding_right">18.0dip</dimen>
+    <item type="dimen" name="design_snackbar_padding_left">@dimen/op_control_margin_space3</item>
+    <dimen name="design_snackbar_padding_right">0.0dip</dimen>
     <dimen name="design_snackbar_padding_top">18.0dip</dimen>
     <dimen name="design_snackbar_padding_vertical">14.0dip</dimen>
     <dimen name="design_snackbar_padding_vertical_2lines">24.0dip</dimen>
@@ -570,7 +570,7 @@
     <dimen name="oneplus_dialog_image_panel_height">166.0dip</dimen>
     <dimen name="oneplus_dialog_subtitle_minHeight_multiline">56.0dip</dimen>
     <dimen name="oneplus_dialog_subtitle_minHeight_noline">21.0dip</dimen>
-    <dimen name="oneplus_dialog_subtitle_minHeight_singleline">112.0px</dimen>
+    <dimen name="oneplus_dialog_subtitle_minHeight_singleline">75.0px</dimen>
     <dimen name="oneplus_menu_double_line_height">73.0dip</dimen>
     <dimen name="oneplus_menu_icon_size">24.0dip</dimen>
     <dimen name="oneplus_menu_margin_left2">18.0dip</dimen>
@@ -588,7 +588,7 @@
     <dimen name="op_app_bar_collapsing_title_limit_one_menu_width">62.0dip</dimen>
     <dimen name="op_app_bar_collapsing_title_limit_three_menu_width">146.0dip</dimen>
     <dimen name="op_app_bar_collapsing_title_limit_two_menu_width">104.0dip</dimen>
-    <dimen name="op_app_bar_collapsing_title_limit_width">20.0dip</dimen>
+    <dimen name="op_app_bar_collapsing_title_limit_width">30.0dip</dimen>
     <dimen name="op_app_bar_distance">171.0dip</dimen>
     <dimen name="op_app_bar_expand_text_size">96.0px</dimen>
     <dimen name="op_app_bar_height_with_tab">54.0dip</dimen>
@@ -684,6 +684,7 @@
     <item type="dimen" name="op_control_zoom_ratio_95">0.95</item>
     <dimen name="op_dialog_background_inset">48.0dip</dimen>
     <dimen name="op_dialog_picker_background_inset">9.0dip</dimen>
+    <dimen name="op_float_action_button_shadow_z8">8.0dip</dimen>
     <dimen name="op_hint_search_view_height">40.0dip</dimen>
     <dimen name="op_hint_search_view_icon_size">40.0dip</dimen>
     <dimen name="op_hint_search_view_icon_src_size_left">21.0dip</dimen>
@@ -694,20 +695,21 @@
     <dimen name="op_reduce_padding_space2">-9.0dip</dimen>
     <dimen name="op_ripple_radius">22.599976dip</dimen>
     <dimen name="op_seekbar_track_background_height_material">4.0dip</dimen>
-    <dimen name="op_seekbar_track_progress_height_material">4.0dip</dimen>
     <dimen name="op_spinner_material_padding_left">18.0dip</dimen>
     <dimen name="op_spinner_material_padding_right">18.0dip</dimen>
     <dimen name="op_switch_ripple_radius">18.0dip</dimen>
     <dimen name="op_text_size_body1">13.0sp</dimen>
     <dimen name="op_text_size_button">14.0sp</dimen>
     <dimen name="op_text_size_descriptions">10.0sp</dimen>
-    <dimen name="op_text_size_h1">55.0sp</dimen>
-    <dimen name="op_text_size_h2">48.0sp</dimen>
+    <dimen name="op_text_size_h1">110.0px</dimen>
+    <dimen name="op_text_size_h2">96.0px</dimen>
     <dimen name="op_text_size_h3">32.0sp</dimen>
     <dimen name="op_text_size_h4">28.0sp</dimen>
-    <dimen name="op_text_size_h5">21.0sp</dimen>
+    <dimen name="op_text_size_h5">18.0sp</dimen>
     <dimen name="op_text_size_h6">16.0sp</dimen>
     <dimen name="op_text_size_subtitle">13.0sp</dimen>
+    <dimen name="op_text_style_dialog_body1_size">24.0px</dimen>
+    <dimen name="op_text_style_dialog_title_size">32.0px</dimen>
     <dimen name="op_toolbar_navigation_max_button_height">42.0dip</dimen>
     <dimen name="picker_bottom_margin">16.0dip</dimen>
     <dimen name="picker_top_margin">16.0dip</dimen>
@@ -760,7 +762,7 @@
     <dimen name="timepicker_minimum_margin_sides">48.0dip</dimen>
     <dimen name="timepicker_minimum_margin_top_bottom">24.0dip</dimen>
     <dimen name="timepicker_pm_top_padding">4.0dip</dimen>
-    <dimen name="timepicker_radial_picker_dimen">302.0dip</dimen>
+    <dimen name="timepicker_radial_picker_dimen">216.0dip</dimen>
     <dimen name="timepicker_radial_picker_left_margin">24.0dip</dimen>
     <dimen name="timepicker_radial_picker_right_margin">24.0dip</dimen>
     <dimen name="timepicker_radial_picker_top_margin">27.0dip</dimen>

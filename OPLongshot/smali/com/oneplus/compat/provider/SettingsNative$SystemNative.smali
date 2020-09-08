@@ -14,7 +14,41 @@
 .end annotation
 
 
+# static fields
+.field public static final OP_CAMERA_NOTCH_IGNORE:Ljava/lang/String;
+
+
 # direct methods
+.method static constructor <clinit>()V
+    .locals 3
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const-string v1, "op_camera_notch_ignore"
+
+    const/16 v2, 0x1d
+
+    if-lt v0, v2, :cond_0
+
+    const-string v0, "10.14.0"
+
+    invoke-static {v0}, Lcom/oneplus/utils/Utils;->isWrapperSupport(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sput-object v1, Lcom/oneplus/compat/provider/SettingsNative$SystemNative;->OP_CAMERA_NOTCH_IGNORE:Ljava/lang/String;
+
+    goto :goto_0
+
+    :cond_0
+    sput-object v1, Lcom/oneplus/compat/provider/SettingsNative$SystemNative;->OP_CAMERA_NOTCH_IGNORE:Ljava/lang/String;
+
+    :goto_0
+    return-void
+.end method
+
 .method public constructor <init>()V
     .locals 0
 

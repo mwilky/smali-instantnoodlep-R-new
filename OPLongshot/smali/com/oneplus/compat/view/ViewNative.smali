@@ -76,3 +76,56 @@
 
     throw p0
 .end method
+
+.method public static setSystemGestureExclusionRects(Landroid/view/View;Ljava/util/List;)V
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/view/View;",
+            "Ljava/util/List<",
+            "Landroid/graphics/Rect;",
+            ">;)V"
+        }
+    .end annotation
+
+    const-string v0, "10.14.0"
+
+    invoke-static {v0}, Lcom/oneplus/utils/Utils;->isWrapperSupport(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p0, p1}, Lcom/oneplus/inner/view/ViewWrapper;->setSystemGestureExclusionRects(Landroid/view/View;Ljava/util/List;)V
+
+    goto :goto_0
+
+    :cond_0
+    const-class v0, Landroid/view/View;
+
+    const/4 v1, 0x1
+
+    new-array v2, v1, [Ljava/lang/Class;
+
+    const-class v3, Ljava/util/List;
+
+    const/4 v4, 0x0
+
+    aput-object v3, v2, v4
+
+    const-string v3, "setSystemGestureExclusionRects"
+
+    invoke-static {v0, v3, v2}, Lcom/oneplus/utils/reflection/MethodReflection;->findMethod(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    aput-object p1, v1, v4
+
+    invoke-static {v0, p0, v1}, Lcom/oneplus/utils/reflection/MethodReflection;->invokeMethod(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    :goto_0
+    return-void
+.end method

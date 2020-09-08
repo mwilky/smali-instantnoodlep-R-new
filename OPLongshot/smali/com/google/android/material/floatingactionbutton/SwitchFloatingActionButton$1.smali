@@ -1,11 +1,11 @@
 .class Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton$1;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Landroid/view/ViewOutlineProvider;
 .source "SwitchFloatingActionButton.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->fabDisappear1()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,21 +24,31 @@
 
     iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton$1;->this$0:Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
+.method public getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
+    .locals 2
 
-    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton$1;->this$0:Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;
+    const v0, 0x3f666666    # 0.9f
 
-    const/16 v0, 0x8
+    invoke-virtual {p2, v0}, Landroid/graphics/Outline;->setAlpha(F)V
 
-    invoke-virtual {p1, v0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->setVisibility(I)V
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+
+    move-result v0
+
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+
+    move-result p1
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p2, v1, v1, v0, p1}, Landroid/graphics/Outline;->setOval(IIII)V
 
     return-void
 .end method

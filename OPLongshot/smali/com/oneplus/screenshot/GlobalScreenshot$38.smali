@@ -83,7 +83,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0702d7
+    const v3, 0x7f0702d9
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -149,7 +149,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0f0077
+    const v3, 0x7f0f0083
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -169,7 +169,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0f0075
+    const v3, 0x7f0f0081
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -384,6 +384,21 @@
 
     move-result-object v0
 
+    invoke-static {v0}, Lcom/oneplus/screenshot/util/Utils;->isKeyguardOn(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    return-void
+
+    :cond_1
+    iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot$38;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
+
+    invoke-static {v0}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$2600(Lcom/oneplus/screenshot/GlobalScreenshot;)Landroid/content/Context;
+
+    move-result-object v0
+
     const/4 v1, 0x0
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -484,7 +499,7 @@
 
     move-result-object v0
 
-    const v4, 0x7f0a0175
+    const v4, 0x7f0a0176
 
     invoke-virtual {v0, v4}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -656,7 +671,7 @@
 
     move-result-object v3
 
-    const v8, 0x7f0a0171
+    const v8, 0x7f0a0172
 
     invoke-virtual {v3, v8}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -704,7 +719,7 @@
 
     move-result-object v0
 
-    const v3, 0x7f0702d1
+    const v3, 0x7f0702d3
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -720,7 +735,7 @@
 
     move-result-object v3
 
-    const v8, 0x7f0702d0
+    const v8, 0x7f0702d2
 
     invoke-virtual {v3, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -749,7 +764,7 @@
 
     move-result v9
 
-    if-ge v1, v9, :cond_1
+    if-ge v1, v9, :cond_2
 
     invoke-interface {v8, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -801,7 +816,7 @@
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot$38;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
     invoke-static {v0}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$5000(Lcom/oneplus/screenshot/GlobalScreenshot;)Lcom/oneplus/screenshot/longshot/widget/QuickShareAppPanelView;

@@ -90,3 +90,83 @@
 
     return p0
 .end method
+
+.method public static setDrawableTint(Landroid/widget/RemoteViews;IZILandroid/graphics/PorterDuff$Mode;)V
+    .locals 8
+
+    const-string v0, "10.14.0"
+
+    invoke-static {v0}, Lcom/oneplus/utils/Utils;->isWrapperSupport(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p0, p1, p2, p3, p4}, Lcom/oneplus/inner/widget/RemoteViewsWrapper;->setDrawableTint(Landroid/widget/RemoteViews;IZILandroid/graphics/PorterDuff$Mode;)V
+
+    goto :goto_0
+
+    :cond_0
+    const-class v0, Landroid/widget/RemoteViews;
+
+    const/4 v1, 0x4
+
+    new-array v2, v1, [Ljava/lang/Class;
+
+    sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    const/4 v4, 0x0
+
+    aput-object v3, v2, v4
+
+    sget-object v3, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+
+    const/4 v5, 0x1
+
+    aput-object v3, v2, v5
+
+    sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    const/4 v6, 0x2
+
+    aput-object v3, v2, v6
+
+    const-class v3, Landroid/graphics/PorterDuff$Mode;
+
+    const/4 v7, 0x3
+
+    aput-object v3, v2, v7
+
+    const-string v3, "setDrawableTint"
+
+    invoke-static {v0, v3, v2}, Lcom/oneplus/utils/reflection/MethodReflection;->findMethod(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    aput-object p1, v1, v4
+
+    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    aput-object p1, v1, v5
+
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    aput-object p1, v1, v6
+
+    aput-object p4, v1, v7
+
+    invoke-static {v0, p0, v1}, Lcom/oneplus/utils/reflection/MethodReflection;->invokeMethod(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    :goto_0
+    return-void
+.end method

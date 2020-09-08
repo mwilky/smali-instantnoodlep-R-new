@@ -198,87 +198,111 @@
 
 .field public static final not_set:I = 0x7f0f0062
 
-.field public static final op_accessibility_quick_settings_page:I = 0x7f0f006a
+.field public static final oneplus_lunar_leap:I = 0x7f0f0069
 
-.field public static final op_character_counter_pattern:I = 0x7f0f006b
+.field public static final oneplus_lunar_year:I = 0x7f0f006a
 
-.field public static final op_password_toggle_content_description:I = 0x7f0f006c
+.field public static final op_accessibility_quick_settings_page:I = 0x7f0f006c
 
-.field public static final password_toggle_content_description:I = 0x7f0f006d
+.field public static final op_character_counter_pattern:I = 0x7f0f006d
 
-.field public static final path_password_eye:I = 0x7f0f006e
+.field public static final op_control_font_display_h1:I = 0x7f0f006e
 
-.field public static final path_password_eye_mask_strike_through:I = 0x7f0f006f
+.field public static final op_control_font_display_h2:I = 0x7f0f006f
 
-.field public static final path_password_eye_mask_visible:I = 0x7f0f0070
+.field public static final op_control_font_display_h3:I = 0x7f0f0070
 
-.field public static final path_password_strike_through:I = 0x7f0f0071
+.field public static final op_control_font_text_body1:I = 0x7f0f0071
 
-.field public static final preference_copied:I = 0x7f0f0072
+.field public static final op_control_font_text_button:I = 0x7f0f0072
 
-.field public static final search_menu_title:I = 0x7f0f0086
+.field public static final op_control_font_text_descriptions:I = 0x7f0f0073
 
-.field public static final searchview_description_clear:I = 0x7f0f0087
+.field public static final op_control_font_text_h4:I = 0x7f0f0074
 
-.field public static final searchview_description_search:I = 0x7f0f0088
+.field public static final op_control_font_text_h5:I = 0x7f0f0075
 
-.field public static final searchview_description_submit:I = 0x7f0f0089
+.field public static final op_control_font_text_h6:I = 0x7f0f0076
 
-.field public static final searchview_description_voice:I = 0x7f0f008a
+.field public static final op_control_font_text_subtitle:I = 0x7f0f0077
 
-.field public static final select_day:I = 0x7f0f008b
+.field public static final op_password_toggle_content_description:I = 0x7f0f0078
 
-.field public static final select_hours:I = 0x7f0f008c
+.field public static final password_toggle_content_description:I = 0x7f0f0079
 
-.field public static final select_minutes:I = 0x7f0f008d
+.field public static final path_password_eye:I = 0x7f0f007a
 
-.field public static final select_year:I = 0x7f0f008e
+.field public static final path_password_eye_mask_strike_through:I = 0x7f0f007b
 
-.field public static final skip_button_label:I = 0x7f0f008f
+.field public static final path_password_eye_mask_visible:I = 0x7f0f007c
 
-.field public static final status_bar_notification_info_overflow:I = 0x7f0f0090
+.field public static final path_password_strike_through:I = 0x7f0f007d
 
-.field public static final summary_collapsed_preference_list:I = 0x7f0f0093
+.field public static final preference_copied:I = 0x7f0f007e
 
-.field public static final time_picker_header_text:I = 0x7f0f0094
+.field public static final search_menu_title:I = 0x7f0f0092
 
-.field public static final time_picker_hour_label:I = 0x7f0f0095
+.field public static final searchview_description_clear:I = 0x7f0f0093
 
-.field public static final time_picker_input_error:I = 0x7f0f0096
+.field public static final searchview_description_search:I = 0x7f0f0094
 
-.field public static final time_picker_minute_label:I = 0x7f0f0097
+.field public static final searchview_description_submit:I = 0x7f0f0095
 
-.field public static final time_picker_prompt_label:I = 0x7f0f0098
+.field public static final searchview_description_voice:I = 0x7f0f0096
 
-.field public static final time_placeholder:I = 0x7f0f0099
+.field public static final select_day:I = 0x7f0f0097
 
-.field public static final timepicker_ampm_circle_radius_multiplier:I = 0x7f0f009a
+.field public static final select_hours:I = 0x7f0f0098
 
-.field public static final timepicker_circle_radius_multiplier:I = 0x7f0f009b
+.field public static final select_minutes:I = 0x7f0f0099
 
-.field public static final timepicker_circle_radius_multiplier_24HourMode:I = 0x7f0f009c
+.field public static final select_year:I = 0x7f0f009a
 
-.field public static final timepicker_numbers_radius_multiplier_inner:I = 0x7f0f009d
+.field public static final skip_button_label:I = 0x7f0f009b
 
-.field public static final timepicker_numbers_radius_multiplier_normal:I = 0x7f0f009e
+.field public static final status_bar_notification_info_overflow:I = 0x7f0f009c
 
-.field public static final timepicker_numbers_radius_multiplier_outer:I = 0x7f0f009f
+.field public static final summary_collapsed_preference_list:I = 0x7f0f009f
 
-.field public static final timepicker_selection_radius_multiplier:I = 0x7f0f00a0
+.field public static final time_picker_header_text:I = 0x7f0f00a0
 
-.field public static final timepicker_text_size_multiplier_inner:I = 0x7f0f00a1
+.field public static final time_picker_hour_label:I = 0x7f0f00a1
 
-.field public static final timepicker_text_size_multiplier_normal:I = 0x7f0f00a2
+.field public static final time_picker_input_error:I = 0x7f0f00a2
 
-.field public static final timepicker_text_size_multiplier_outer:I = 0x7f0f00a3
+.field public static final time_picker_minute_label:I = 0x7f0f00a3
 
-.field public static final timepicker_transition_end_radius_multiplier:I = 0x7f0f00a4
+.field public static final time_picker_prompt_label:I = 0x7f0f00a4
 
-.field public static final timepicker_transition_mid_radius_multiplier:I = 0x7f0f00a5
+.field public static final time_placeholder:I = 0x7f0f00a5
 
-.field public static final v7_preference_off:I = 0x7f0f00a8
+.field public static final timepicker_ampm_circle_radius_multiplier:I = 0x7f0f00a6
 
-.field public static final v7_preference_on:I = 0x7f0f00a9
+.field public static final timepicker_circle_radius_multiplier:I = 0x7f0f00a7
+
+.field public static final timepicker_circle_radius_multiplier_24HourMode:I = 0x7f0f00a8
+
+.field public static final timepicker_numbers_radius_multiplier_inner:I = 0x7f0f00a9
+
+.field public static final timepicker_numbers_radius_multiplier_normal:I = 0x7f0f00aa
+
+.field public static final timepicker_numbers_radius_multiplier_outer:I = 0x7f0f00ab
+
+.field public static final timepicker_selection_radius_multiplier:I = 0x7f0f00ac
+
+.field public static final timepicker_text_size_multiplier_inner:I = 0x7f0f00ad
+
+.field public static final timepicker_text_size_multiplier_normal:I = 0x7f0f00ae
+
+.field public static final timepicker_text_size_multiplier_outer:I = 0x7f0f00af
+
+.field public static final timepicker_transition_end_radius_multiplier:I = 0x7f0f00b0
+
+.field public static final timepicker_transition_mid_radius_multiplier:I = 0x7f0f00b1
+
+.field public static final v7_preference_off:I = 0x7f0f00b4
+
+.field public static final v7_preference_on:I = 0x7f0f00b5
 
 
 # direct methods
