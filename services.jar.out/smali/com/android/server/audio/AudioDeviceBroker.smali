@@ -388,15 +388,7 @@
     return-object p1
 .end method
 
-.method static synthetic access$1000(Lcom/android/server/audio/AudioDeviceBroker;Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/server/audio/AudioDeviceBroker;->speakerphoneClientDied(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method static synthetic access$1100(Lcom/android/server/audio/AudioDeviceBroker;I)V
+.method static synthetic access$1000(Lcom/android/server/audio/AudioDeviceBroker;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/audio/AudioDeviceBroker;->checkMessagesMuteMusic(I)V
@@ -404,7 +396,7 @@
     return-void
 .end method
 
-.method static synthetic access$1200()Ljava/util/Set;
+.method static synthetic access$1100()Ljava/util/Set;
     .locals 1
 
     sget-object v0, Lcom/android/server/audio/AudioDeviceBroker;->MESSAGES_MUTE_MUSIC:Ljava/util/Set;
@@ -412,7 +404,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$1300(Lcom/android/server/audio/AudioDeviceBroker;III)V
+.method static synthetic access$1200(Lcom/android/server/audio/AudioDeviceBroker;III)V
     .locals 0
 
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/audio/AudioDeviceBroker;->sendMsg(III)V
@@ -420,7 +412,7 @@
     return-void
 .end method
 
-.method static synthetic access$1400(I)Z
+.method static synthetic access$1300(I)Z
     .locals 1
 
     invoke-static {p0}, Lcom/android/server/audio/AudioDeviceBroker;->isMessageHandledUnderWakelock(I)Z
@@ -430,7 +422,7 @@
     return v0
 .end method
 
-.method static synthetic access$1500(Lcom/android/server/audio/AudioDeviceBroker;)Landroid/os/PowerManager$WakeLock;
+.method static synthetic access$1400(Lcom/android/server/audio/AudioDeviceBroker;)Landroid/os/PowerManager$WakeLock;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/audio/AudioDeviceBroker;->mBrokerEventWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -502,10 +494,10 @@
     return p1
 .end method
 
-.method static synthetic access$900(Lcom/android/server/audio/AudioDeviceBroker;Ljava/lang/String;)V
+.method static synthetic access$900(Lcom/android/server/audio/AudioDeviceBroker;Ljava/lang/Object;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/server/audio/AudioDeviceBroker;->updateSpeakerphoneOn(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lcom/android/server/audio/AudioDeviceBroker;->speakerphoneClientDied(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -903,7 +895,7 @@
 
     new-array v0, v0, [I
 
-    const/16 v1, 0x95
+    const/16 v1, 0x8e
 
     const/4 v2, 0x0
 
@@ -3578,18 +3570,25 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    const/4 v1, 0x3
+
     if-eqz p1, :cond_0
 
-    const/4 v1, 0x3
+    iput v1, p0, Lcom/android/server/audio/AudioDeviceBroker;->mForcedUseForCommExt:I
 
     goto :goto_0
 
     :cond_0
+    iget v2, p0, Lcom/android/server/audio/AudioDeviceBroker;->mForcedUseForCommExt:I
+
+    if-ne v2, v1, :cond_1
+
     const/4 v1, 0x0
 
-    :goto_0
     iput v1, p0, Lcom/android/server/audio/AudioDeviceBroker;->mForcedUseForCommExt:I
 
+    :cond_1
+    :goto_0
     monitor-exit v0
 
     return-void

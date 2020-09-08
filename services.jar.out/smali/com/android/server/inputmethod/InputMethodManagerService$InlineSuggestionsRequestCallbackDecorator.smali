@@ -125,6 +125,21 @@
     throw v0
 .end method
 
+.method public onInlineSuggestionsSessionInvalidated()V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$InlineSuggestionsRequestCallbackDecorator;->mCallback:Lcom/android/internal/view/IInlineSuggestionsRequestCallback;
+
+    invoke-interface {v0}, Lcom/android/internal/view/IInlineSuggestionsRequestCallback;->onInlineSuggestionsSessionInvalidated()V
+
+    return-void
+.end method
+
 .method public onInlineSuggestionsUnsupported()V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;

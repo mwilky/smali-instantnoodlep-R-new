@@ -261,7 +261,25 @@
     return v2
 .end method
 
-.method static synthetic lambda$prepare$0(Lcom/android/server/pm/PackageSetting;Lcom/android/server/pm/PackageSetting;)I
+.method static synthetic lambda$prepare$0(Lcom/android/server/pm/PackageSetting;)Z
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/server/pm/PackageSetting;->pkg:Lcom/android/server/pm/parsing/pkg/AndroidPackage;
+
+    invoke-interface {v0}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "android"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method static synthetic lambda$prepare$1(Lcom/android/server/pm/PackageSetting;Lcom/android/server/pm/PackageSetting;)I
     .locals 4
 
     nop
@@ -1144,7 +1162,7 @@
 .end method
 
 .method public declared-synchronized prepare()V
-    .locals 14
+    .locals 15
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -1158,338 +1176,344 @@
 
     if-nez v0, :cond_5
 
-    iget-object v0, p0, Lcom/android/server/pm/OtaDexoptService;->mPackageManagerService:Lcom/android/server/pm/PackageManagerService;
+    sget-object v0, Lcom/android/server/pm/-$$Lambda$OtaDexoptService$-kxeeF3jeQWWNnvm1X8l5hpWPQ8;->INSTANCE:Lcom/android/server/pm/-$$Lambda$OtaDexoptService$-kxeeF3jeQWWNnvm1X8l5hpWPQ8;
 
-    iget-object v0, v0, Lcom/android/server/pm/PackageManagerService;->mLock:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/android/server/pm/OtaDexoptService;->mPackageManagerService:Lcom/android/server/pm/PackageManagerService;
 
-    monitor-enter v0
+    iget-object v1, v1, Lcom/android/server/pm/PackageManagerService;->mLock:Ljava/lang/Object;
+
+    monitor-enter v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     :try_start_1
-    iget-object v1, p0, Lcom/android/server/pm/OtaDexoptService;->mPackageManagerService:Lcom/android/server/pm/PackageManagerService;
-
-    iget-object v1, v1, Lcom/android/server/pm/PackageManagerService;->mSettings:Lcom/android/server/pm/Settings;
-
-    iget-object v1, v1, Lcom/android/server/pm/Settings;->mPackages:Landroid/util/ArrayMap;
-
-    invoke-virtual {v1}, Landroid/util/ArrayMap;->values()Ljava/util/Collection;
-
-    move-result-object v1
-
     iget-object v2, p0, Lcom/android/server/pm/OtaDexoptService;->mPackageManagerService:Lcom/android/server/pm/PackageManagerService;
 
-    const/4 v3, 0x1
+    iget-object v2, v2, Lcom/android/server/pm/PackageManagerService;->mSettings:Lcom/android/server/pm/Settings;
 
-    invoke-static {v1, v2, v3}, Lcom/android/server/pm/PackageManagerServiceUtils;->getPackagesForDexopt(Ljava/util/Collection;Lcom/android/server/pm/PackageManagerService;Z)Ljava/util/List;
+    iget-object v2, v2, Lcom/android/server/pm/Settings;->mPackages:Landroid/util/ArrayMap;
 
-    move-result-object v1
+    invoke-virtual {v2}, Landroid/util/ArrayMap;->values()Ljava/util/Collection;
 
-    new-instance v2, Ljava/util/ArrayList;
+    move-result-object v2
 
     iget-object v3, p0, Lcom/android/server/pm/OtaDexoptService;->mPackageManagerService:Lcom/android/server/pm/PackageManagerService;
 
-    iget-object v3, v3, Lcom/android/server/pm/PackageManagerService;->mSettings:Lcom/android/server/pm/Settings;
+    const/4 v4, 0x1
 
-    iget-object v3, v3, Lcom/android/server/pm/Settings;->mPackages:Landroid/util/ArrayMap;
+    invoke-static {v2, v3, v4}, Lcom/android/server/pm/PackageManagerServiceUtils;->getPackagesForDexopt(Ljava/util/Collection;Lcom/android/server/pm/PackageManagerService;Z)Ljava/util/List;
 
-    invoke-virtual {v3}, Landroid/util/ArrayMap;->values()Ljava/util/Collection;
+    move-result-object v2
 
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    invoke-interface {v2, v1}, Ljava/util/List;->removeAll(Ljava/util/Collection;)Z
-
-    sget-object v3, Lcom/android/server/pm/PackageManagerServiceUtils;->REMOVE_IF_NULL_PKG:Ljava/util/function/Predicate;
-
-    invoke-interface {v2, v3}, Ljava/util/List;->removeIf(Ljava/util/function/Predicate;)Z
+    invoke-interface {v2, v0}, Ljava/util/List;->removeIf(Ljava/util/function/Predicate;)Z
 
     new-instance v3, Ljava/util/ArrayList;
 
     iget-object v4, p0, Lcom/android/server/pm/OtaDexoptService;->mPackageManagerService:Lcom/android/server/pm/PackageManagerService;
 
-    iget-object v4, v4, Lcom/android/server/pm/PackageManagerService;->mPackages:Landroid/util/ArrayMap;
+    iget-object v4, v4, Lcom/android/server/pm/PackageManagerService;->mSettings:Lcom/android/server/pm/Settings;
 
-    invoke-virtual {v4}, Landroid/util/ArrayMap;->size()I
+    iget-object v4, v4, Lcom/android/server/pm/Settings;->mPackages:Landroid/util/ArrayMap;
 
-    move-result v4
+    invoke-virtual {v4}, Landroid/util/ArrayMap;->values()Ljava/util/Collection;
 
-    mul-int/lit8 v4, v4, 0x3
+    move-result-object v4
 
-    div-int/lit8 v4, v4, 0x2
+    invoke-direct {v3, v4}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    invoke-direct {v3, v4}, Ljava/util/ArrayList;-><init>(I)V
+    invoke-interface {v3, v2}, Ljava/util/List;->removeAll(Ljava/util/Collection;)Z
 
-    iput-object v3, p0, Lcom/android/server/pm/OtaDexoptService;->mDexoptCommands:Ljava/util/List;
+    sget-object v4, Lcom/android/server/pm/PackageManagerServiceUtils;->REMOVE_IF_NULL_PKG:Ljava/util/function/Predicate;
 
-    monitor-exit v0
+    invoke-interface {v3, v4}, Ljava/util/List;->removeIf(Ljava/util/function/Predicate;)Z
+
+    invoke-interface {v3, v0}, Ljava/util/List;->removeIf(Ljava/util/function/Predicate;)Z
+
+    new-instance v4, Ljava/util/ArrayList;
+
+    iget-object v5, p0, Lcom/android/server/pm/OtaDexoptService;->mPackageManagerService:Lcom/android/server/pm/PackageManagerService;
+
+    iget-object v5, v5, Lcom/android/server/pm/PackageManagerService;->mPackages:Landroid/util/ArrayMap;
+
+    invoke-virtual {v5}, Landroid/util/ArrayMap;->size()I
+
+    move-result v5
+
+    mul-int/lit8 v5, v5, 0x3
+
+    div-int/lit8 v5, v5, 0x2
+
+    invoke-direct {v4, v5}, Ljava/util/ArrayList;-><init>(I)V
+
+    iput-object v4, p0, Lcom/android/server/pm/OtaDexoptService;->mDexoptCommands:Ljava/util/List;
+
+    monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     :try_start_2
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object v0
+    move-result-object v1
 
     :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v3
+    move-result v4
 
-    if-eqz v3, :cond_0
+    if-eqz v4, :cond_0
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object v4
 
-    check-cast v3, Lcom/android/server/pm/PackageSetting;
+    check-cast v4, Lcom/android/server/pm/PackageSetting;
 
-    iget-object v4, p0, Lcom/android/server/pm/OtaDexoptService;->mDexoptCommands:Ljava/util/List;
+    iget-object v5, p0, Lcom/android/server/pm/OtaDexoptService;->mDexoptCommands:Ljava/util/List;
 
-    iget-object v5, v3, Lcom/android/server/pm/PackageSetting;->pkg:Lcom/android/server/pm/parsing/pkg/AndroidPackage;
+    iget-object v6, v4, Lcom/android/server/pm/PackageSetting;->pkg:Lcom/android/server/pm/parsing/pkg/AndroidPackage;
 
-    const/4 v6, 0x4
+    const/4 v7, 0x4
 
-    invoke-direct {p0, v5, v3, v6}, Lcom/android/server/pm/OtaDexoptService;->generatePackageDexopts(Lcom/android/server/pm/parsing/pkg/AndroidPackage;Lcom/android/server/pm/PackageSetting;I)Ljava/util/List;
+    invoke-direct {p0, v6, v4, v7}, Lcom/android/server/pm/OtaDexoptService;->generatePackageDexopts(Lcom/android/server/pm/parsing/pkg/AndroidPackage;Lcom/android/server/pm/PackageSetting;I)Ljava/util/List;
 
-    move-result-object v5
+    move-result-object v6
 
-    invoke-interface {v4, v5}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+    invoke-interface {v5, v6}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     nop
 
     goto :goto_0
 
     :cond_0
-    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object v0
+    move-result-object v1
 
     :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lcom/android/server/pm/PackageSetting;
-
-    iget-object v4, v3, Lcom/android/server/pm/PackageSetting;->pkg:Lcom/android/server/pm/parsing/pkg/AndroidPackage;
-
-    invoke-interface {v4}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->isCoreApp()Z
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v4
 
-    if-nez v4, :cond_1
+    if-eqz v4, :cond_2
 
-    iget-object v4, p0, Lcom/android/server/pm/OtaDexoptService;->mDexoptCommands:Ljava/util/List;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    iget-object v5, v3, Lcom/android/server/pm/PackageSetting;->pkg:Lcom/android/server/pm/parsing/pkg/AndroidPackage;
+    move-result-object v4
 
-    const/4 v6, 0x0
+    check-cast v4, Lcom/android/server/pm/PackageSetting;
 
-    invoke-direct {p0, v5, v3, v6}, Lcom/android/server/pm/OtaDexoptService;->generatePackageDexopts(Lcom/android/server/pm/parsing/pkg/AndroidPackage;Lcom/android/server/pm/PackageSetting;I)Ljava/util/List;
+    iget-object v5, v4, Lcom/android/server/pm/PackageSetting;->pkg:Lcom/android/server/pm/parsing/pkg/AndroidPackage;
 
-    move-result-object v5
+    invoke-interface {v5}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->isCoreApp()Z
 
-    invoke-interface {v4, v5}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+    move-result v5
+
+    if-nez v5, :cond_1
+
+    iget-object v5, p0, Lcom/android/server/pm/OtaDexoptService;->mDexoptCommands:Ljava/util/List;
+
+    iget-object v6, v4, Lcom/android/server/pm/PackageSetting;->pkg:Lcom/android/server/pm/parsing/pkg/AndroidPackage;
+
+    const/4 v7, 0x0
+
+    invoke-direct {p0, v6, v4, v7}, Lcom/android/server/pm/OtaDexoptService;->generatePackageDexopts(Lcom/android/server/pm/parsing/pkg/AndroidPackage;Lcom/android/server/pm/PackageSetting;I)Ljava/util/List;
+
+    move-result-object v6
+
+    invoke-interface {v5, v6}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     nop
 
     goto :goto_1
 
     :cond_1
-    new-instance v0, Ljava/lang/IllegalStateException;
+    new-instance v1, Ljava/lang/IllegalStateException;
 
-    const-string v4, "Found a core app that\'s not important"
+    const-string v5, "Found a core app that\'s not important"
 
-    invoke-direct {v0, v4}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v5}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw v0
+    throw v1
 
     :cond_2
-    iget-object v0, p0, Lcom/android/server/pm/OtaDexoptService;->mDexoptCommands:Ljava/util/List;
+    iget-object v1, p0, Lcom/android/server/pm/OtaDexoptService;->mDexoptCommands:Ljava/util/List;
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    invoke-interface {v1}, Ljava/util/List;->size()I
 
-    move-result v0
+    move-result v1
 
-    iput v0, p0, Lcom/android/server/pm/OtaDexoptService;->completeSize:I
+    iput v1, p0, Lcom/android/server/pm/OtaDexoptService;->completeSize:I
 
     invoke-direct {p0}, Lcom/android/server/pm/OtaDexoptService;->getAvailableSpace()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    const-wide/32 v5, 0x40000000
+    const-wide/32 v6, 0x40000000
 
-    cmp-long v0, v3, v5
+    cmp-long v1, v4, v6
 
-    if-gez v0, :cond_3
+    if-gez v1, :cond_3
 
-    const-string v0, "OTADexopt"
+    const-string v1, "OTADexopt"
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "Low on space, deleting oat files in an attempt to free up space: "
+    const-string v7, "Low on space, deleting oat files in an attempt to free up space: "
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2}, Lcom/android/server/pm/PackageManagerServiceUtils;->packagesToString(Ljava/util/List;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/android/server/pm/PackageManagerServiceUtils;->packagesToString(Ljava/util/List;)Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object v5
-
-    invoke-static {v0, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
+    move-result-object v1
 
     :goto_2
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v5
+    move-result v6
 
-    if-eqz v5, :cond_3
+    if-eqz v6, :cond_3
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v5
+    move-result-object v6
 
-    check-cast v5, Lcom/android/server/pm/PackageSetting;
+    check-cast v6, Lcom/android/server/pm/PackageSetting;
 
-    iget-object v6, p0, Lcom/android/server/pm/OtaDexoptService;->mPackageManagerService:Lcom/android/server/pm/PackageManagerService;
+    iget-object v7, p0, Lcom/android/server/pm/OtaDexoptService;->mPackageManagerService:Lcom/android/server/pm/PackageManagerService;
 
-    iget-object v7, v5, Lcom/android/server/pm/PackageSetting;->name:Ljava/lang/String;
+    iget-object v8, v6, Lcom/android/server/pm/PackageSetting;->name:Ljava/lang/String;
 
-    invoke-virtual {v6, v7}, Lcom/android/server/pm/PackageManagerService;->deleteOatArtifactsOfPackage(Ljava/lang/String;)V
+    invoke-virtual {v7, v8}, Lcom/android/server/pm/PackageManagerService;->deleteOatArtifactsOfPackage(Ljava/lang/String;)V
 
     goto :goto_2
 
     :cond_3
     invoke-direct {p0}, Lcom/android/server/pm/OtaDexoptService;->getAvailableSpace()J
 
-    move-result-wide v10
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v6
+    move-result-wide v11
 
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v7
 
-    move-object v5, p0
+    invoke-interface {v3}, Ljava/util/List;->size()I
 
-    move-wide v8, v3
+    move-result v8
 
-    invoke-direct/range {v5 .. v11}, Lcom/android/server/pm/OtaDexoptService;->prepareMetricsLogging(IIJJ)V
+    move-object v6, p0
+
+    move-wide v9, v4
+
+    invoke-direct/range {v6 .. v12}, Lcom/android/server/pm/OtaDexoptService;->prepareMetricsLogging(IIJJ)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     :try_start_3
-    sget-object v0, Lcom/android/server/pm/-$$Lambda$OtaDexoptService$wNGdc46oIfkEYBuaHKdweqCmNM8;->INSTANCE:Lcom/android/server/pm/-$$Lambda$OtaDexoptService$wNGdc46oIfkEYBuaHKdweqCmNM8;
+    sget-object v1, Lcom/android/server/pm/-$$Lambda$OtaDexoptService$f-VUEY5wfogCtnGtBDIikkJ2pcE;->INSTANCE:Lcom/android/server/pm/-$$Lambda$OtaDexoptService$f-VUEY5wfogCtnGtBDIikkJ2pcE;
 
-    invoke-static {v1, v0}, Ljava/util/Collections;->max(Ljava/util/Collection;Ljava/util/Comparator;)Ljava/lang/Object;
+    invoke-static {v2, v1}, Ljava/util/Collections;->max(Ljava/util/Collection;Ljava/util/Comparator;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v1
 
-    check-cast v0, Lcom/android/server/pm/PackageSetting;
+    check-cast v1, Lcom/android/server/pm/PackageSetting;
 
-    const-string v5, "OTADexopt"
+    const-string v6, "OTADexopt"
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v7, "A/B OTA: lastUsed time = "
+    const-string v8, "A/B OTA: lastUsed time = "
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lcom/android/server/pm/PackageSetting;->getPkgState()Lcom/android/server/pm/pkg/PackageStateUnserialized;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Lcom/android/server/pm/pkg/PackageStateUnserialized;->getLatestForegroundPackageUseTimeInMills()J
-
-    move-result-wide v7
-
-    invoke-virtual {v6, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    const-string v5, "OTADexopt"
-
-    const-string v6, "A/B OTA: deprioritized packages:"
-
-    invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v5
-
-    :goto_3
-    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_4
-
-    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lcom/android/server/pm/PackageSetting;
-
-    const-string v7, "OTADexopt"
-
-    new-instance v8, Ljava/lang/StringBuilder;
-
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v9, "  "
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v9, v6, Lcom/android/server/pm/PackageSetting;->name:Ljava/lang/String;
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v9, " - "
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Lcom/android/server/pm/PackageSetting;->getPkgState()Lcom/android/server/pm/pkg/PackageStateUnserialized;
-
-    move-result-object v9
-
-    invoke-virtual {v9}, Lcom/android/server/pm/pkg/PackageStateUnserialized;->getLatestForegroundPackageUseTimeInMills()J
-
-    move-result-wide v12
-
-    invoke-virtual {v8, v12, v13}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/android/server/pm/PackageSetting;->getPkgState()Lcom/android/server/pm/pkg/PackageStateUnserialized;
 
     move-result-object v8
 
-    invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v8}, Lcom/android/server/pm/pkg/PackageStateUnserialized;->getLatestForegroundPackageUseTimeInMills()J
+
+    move-result-wide v8
+
+    invoke-virtual {v7, v8, v9}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string v6, "OTADexopt"
+
+    const-string v7, "A/B OTA: deprioritized packages:"
+
+    invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v6
+
+    :goto_3
+    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_4
+
+    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lcom/android/server/pm/PackageSetting;
+
+    const-string v8, "OTADexopt"
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v10, "  "
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v10, v7, Lcom/android/server/pm/PackageSetting;->name:Ljava/lang/String;
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v10, " - "
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Lcom/android/server/pm/PackageSetting;->getPkgState()Lcom/android/server/pm/pkg/PackageStateUnserialized;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Lcom/android/server/pm/pkg/PackageStateUnserialized;->getLatestForegroundPackageUseTimeInMills()J
+
+    move-result-wide v13
+
+    invoke-virtual {v9, v13, v14}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
@@ -1502,7 +1526,7 @@
     goto :goto_4
 
     :catch_0
-    move-exception v0
+    move-exception v1
 
     :goto_4
     monitor-exit p0
@@ -1510,15 +1534,15 @@
     return-void
 
     :catchall_0
-    move-exception v1
+    move-exception v2
 
     :try_start_4
-    monitor-exit v0
+    monitor-exit v1
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     :try_start_5
-    throw v1
+    throw v2
 
     :cond_5
     new-instance v0, Ljava/lang/IllegalStateException;

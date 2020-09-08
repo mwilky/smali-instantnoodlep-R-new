@@ -145,7 +145,7 @@
 
 # virtual methods
 .method public bind()Ljava/util/concurrent/CountDownLatch;
-    .locals 7
+    .locals 10
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/android/server/storage/StorageSessionController$ExternalStorageServiceException;
@@ -162,7 +162,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_5
 
     iget-object v1, p0, Lcom/android/server/storage/StorageUserConnection$ActiveConnection;->this$0:Lcom/android/server/storage/StorageUserConnection;
 
@@ -175,7 +175,7 @@
     :try_start_0
     iget-object v2, p0, Lcom/android/server/storage/StorageUserConnection$ActiveConnection;->mRemote:Landroid/service/storage/IExternalStorageService;
 
-    if-nez v2, :cond_2
+    if-nez v2, :cond_4
 
     iget-boolean v2, p0, Lcom/android/server/storage/StorageUserConnection$ActiveConnection;->mIsConnecting:Z
 
@@ -226,33 +226,53 @@
 
     iget-object v2, p0, Lcom/android/server/storage/StorageUserConnection$ActiveConnection;->this$0:Lcom/android/server/storage/StorageUserConnection;
 
+    invoke-static {v2}, Lcom/android/server/storage/StorageUserConnection;->access$900(Lcom/android/server/storage/StorageUserConnection;)Z
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lcom/android/server/storage/StorageUserConnection$ActiveConnection;->this$0:Lcom/android/server/storage/StorageUserConnection;
+
     invoke-static {v2}, Lcom/android/server/storage/StorageUserConnection;->access$300(Lcom/android/server/storage/StorageUserConnection;)Landroid/content/Context;
+
+    move-result-object v4
+
+    new-instance v2, Landroid/content/Intent;
+
+    invoke-direct {v2}, Landroid/content/Intent;-><init>()V
+
+    invoke-virtual {v2, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+
+    move-result-object v5
+
+    iget-object v6, p0, Lcom/android/server/storage/StorageUserConnection$ActiveConnection;->mServiceConnection:Landroid/content/ServiceConnection;
+
+    const/16 v7, 0x41
+
+    iget-object v2, p0, Lcom/android/server/storage/StorageUserConnection$ActiveConnection;->this$0:Lcom/android/server/storage/StorageUserConnection;
+
+    invoke-static {v2}, Lcom/android/server/storage/StorageUserConnection;->access$1000(Lcom/android/server/storage/StorageUserConnection;)Landroid/os/HandlerThread;
 
     move-result-object v2
 
-    new-instance v3, Landroid/content/Intent;
+    invoke-virtual {v2}, Landroid/os/HandlerThread;->getThreadHandler()Landroid/os/Handler;
 
-    invoke-direct {v3}, Landroid/content/Intent;-><init>()V
+    move-result-object v8
 
-    invoke-virtual {v3, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+    iget-object v2, p0, Lcom/android/server/storage/StorageUserConnection$ActiveConnection;->this$0:Lcom/android/server/storage/StorageUserConnection;
 
-    move-result-object v3
+    invoke-static {v2}, Lcom/android/server/storage/StorageUserConnection;->access$200(Lcom/android/server/storage/StorageUserConnection;)I
 
-    iget-object v4, p0, Lcom/android/server/storage/StorageUserConnection$ActiveConnection;->mServiceConnection:Landroid/content/ServiceConnection;
+    move-result v2
 
-    const/16 v5, 0x41
+    invoke-static {v2}, Landroid/os/UserHandle;->of(I)Landroid/os/UserHandle;
 
-    iget-object v6, p0, Lcom/android/server/storage/StorageUserConnection$ActiveConnection;->this$0:Lcom/android/server/storage/StorageUserConnection;
+    move-result-object v9
 
-    invoke-static {v6}, Lcom/android/server/storage/StorageUserConnection;->access$200(Lcom/android/server/storage/StorageUserConnection;)I
-
-    move-result v6
-
-    invoke-static {v6}, Landroid/os/UserHandle;->of(I)Landroid/os/UserHandle;
-
-    move-result-object v6
-
-    invoke-virtual {v2, v3, v4, v5, v6}, Landroid/content/Context;->bindServiceAsUser(Landroid/content/Intent;Landroid/content/ServiceConnection;ILandroid/os/UserHandle;)Z
+    invoke-virtual/range {v4 .. v9}, Landroid/content/Context;->bindServiceAsUser(Landroid/content/Intent;Landroid/content/ServiceConnection;ILandroid/os/Handler;Landroid/os/UserHandle;)Z
 
     move-result v2
 
@@ -289,9 +309,7 @@
     return-object v2
 
     :cond_1
-    const/4 v2, 0x0
-
-    iput-boolean v2, p0, Lcom/android/server/storage/StorageUserConnection$ActiveConnection;->mIsConnecting:Z
+    iput-boolean v3, p0, Lcom/android/server/storage/StorageUserConnection$ActiveConnection;->mIsConnecting:Z
 
     new-instance v2, Lcom/android/server/storage/StorageSessionController$ExternalStorageServiceException;
 
@@ -320,6 +338,100 @@
     throw v2
 
     :cond_2
+    iget-object v2, p0, Lcom/android/server/storage/StorageUserConnection$ActiveConnection;->this$0:Lcom/android/server/storage/StorageUserConnection;
+
+    invoke-static {v2}, Lcom/android/server/storage/StorageUserConnection;->access$300(Lcom/android/server/storage/StorageUserConnection;)Landroid/content/Context;
+
+    move-result-object v2
+
+    new-instance v4, Landroid/content/Intent;
+
+    invoke-direct {v4}, Landroid/content/Intent;-><init>()V
+
+    invoke-virtual {v4, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+
+    move-result-object v4
+
+    iget-object v5, p0, Lcom/android/server/storage/StorageUserConnection$ActiveConnection;->mServiceConnection:Landroid/content/ServiceConnection;
+
+    const/16 v6, 0x41
+
+    iget-object v7, p0, Lcom/android/server/storage/StorageUserConnection$ActiveConnection;->this$0:Lcom/android/server/storage/StorageUserConnection;
+
+    invoke-static {v7}, Lcom/android/server/storage/StorageUserConnection;->access$200(Lcom/android/server/storage/StorageUserConnection;)I
+
+    move-result v7
+
+    invoke-static {v7}, Landroid/os/UserHandle;->of(I)Landroid/os/UserHandle;
+
+    move-result-object v7
+
+    invoke-virtual {v2, v4, v5, v6, v7}, Landroid/content/Context;->bindServiceAsUser(Landroid/content/Intent;Landroid/content/ServiceConnection;ILandroid/os/UserHandle;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    const-string v2, "StorageUserConnection"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Bound to the ExternalStorageService for user "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v4, p0, Lcom/android/server/storage/StorageUserConnection$ActiveConnection;->this$0:Lcom/android/server/storage/StorageUserConnection;
+
+    invoke-static {v4}, Lcom/android/server/storage/StorageUserConnection;->access$200(Lcom/android/server/storage/StorageUserConnection;)I
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v2, p0, Lcom/android/server/storage/StorageUserConnection$ActiveConnection;->mLatch:Ljava/util/concurrent/CountDownLatch;
+
+    monitor-exit v1
+
+    return-object v2
+
+    :cond_3
+    iput-boolean v3, p0, Lcom/android/server/storage/StorageUserConnection$ActiveConnection;->mIsConnecting:Z
+
+    new-instance v2, Lcom/android/server/storage/StorageSessionController$ExternalStorageServiceException;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Failed to bind to the ExternalStorageService for user "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v4, p0, Lcom/android/server/storage/StorageUserConnection$ActiveConnection;->this$0:Lcom/android/server/storage/StorageUserConnection;
+
+    invoke-static {v4}, Lcom/android/server/storage/StorageUserConnection;->access$200(Lcom/android/server/storage/StorageUserConnection;)I
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3}, Lcom/android/server/storage/StorageSessionController$ExternalStorageServiceException;-><init>(Ljava/lang/String;)V
+
+    throw v2
+
+    :cond_4
     :goto_0
     iget-object v2, p0, Lcom/android/server/storage/StorageUserConnection$ActiveConnection;->mLatch:Ljava/util/concurrent/CountDownLatch;
 
@@ -336,7 +448,7 @@
 
     throw v2
 
-    :cond_3
+    :cond_5
     new-instance v1, Lcom/android/server/storage/StorageSessionController$ExternalStorageServiceException;
 
     new-instance v2, Ljava/lang/StringBuilder;

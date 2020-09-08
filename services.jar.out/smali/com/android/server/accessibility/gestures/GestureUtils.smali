@@ -60,6 +60,53 @@
     return-wide v0
 .end method
 
+.method public static distanceClosestPointerToPoint(Landroid/graphics/PointF;Landroid/view/MotionEvent;)D
+    .locals 6
+
+    const v0, 0x7f7fffff    # Float.MAX_VALUE
+
+    const/4 v1, 0x0
+
+    :goto_0
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getPointerCount()I
+
+    move-result v2
+
+    if-ge v1, v2, :cond_1
+
+    iget v2, p0, Landroid/graphics/PointF;->x:F
+
+    iget v3, p0, Landroid/graphics/PointF;->y:F
+
+    invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->getX(I)F
+
+    move-result v4
+
+    invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->getY(I)F
+
+    move-result v5
+
+    invoke-static {v2, v3, v4, v5}, Landroid/util/MathUtils;->dist(FFFF)F
+
+    move-result v2
+
+    cmpl-float v3, v0, v2
+
+    if-lez v3, :cond_0
+
+    move v0, v2
+
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    float-to-double v1, v0
+
+    return-wide v1
+.end method
+
 .method private static eventsWithinTimeAndDistanceSlop(Landroid/view/MotionEvent;Landroid/view/MotionEvent;II)Z
     .locals 6
 

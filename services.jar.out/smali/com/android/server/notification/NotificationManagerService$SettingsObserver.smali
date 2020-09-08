@@ -41,8 +41,6 @@
 
 .field private final NOTIFICATION_RATE_LIMIT_URI:Landroid/net/Uri;
 
-.field private final NOTIFICATION_SHOW_MEDIA_ON_QUICK_SETTINGS_URI:Landroid/net/Uri;
-
 .field private final NOTIFICATION_VIBRATE_WHEN_MUTE:Landroid/net/Uri;
 
 .field final synthetic this$0:Lcom/android/server/notification/NotificationManagerService;
@@ -172,16 +170,6 @@
 
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->NOTIFICATION_HISTORY_ENABLED:Landroid/net/Uri;
 
-    nop
-
-    const-string/jumbo p1, "qs_media_player"
-
-    invoke-static {p1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->NOTIFICATION_SHOW_MEDIA_ON_QUICK_SETTINGS_URI:Landroid/net/Uri;
-
     return-void
 .end method
 
@@ -224,7 +212,7 @@
 
     new-array v1, v1, [I
 
-    const/16 v4, 0x94
+    const/16 v4, 0x8d
 
     aput v4, v1, v2
 
@@ -273,15 +261,11 @@
 
     invoke-virtual {v1}, Lcom/oneplus/worklife/OPWLBInjector;->registerChanges()V
 
-    iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->NOTIFICATION_HISTORY_ENABLED:Landroid/net/Uri;
-
-    invoke-virtual {v0, v1, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
-
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->ESPORT_MODE_ENABLED:Landroid/net/Uri;
 
     invoke-virtual {v0, v1, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->NOTIFICATION_SHOW_MEDIA_ON_QUICK_SETTINGS_URI:Landroid/net/Uri;
+    iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->NOTIFICATION_HISTORY_ENABLED:Landroid/net/Uri;
 
     invoke-virtual {v0, v1, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
@@ -568,7 +552,7 @@
     :cond_12
     new-array v4, v2, [I
 
-    const/16 v5, 0x94
+    const/16 v5, 0x8d
 
     aput v5, v4, v3
 
@@ -695,24 +679,6 @@
     goto :goto_4
 
     :cond_1a
-    if-eqz p1, :cond_1b
-
-    iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->NOTIFICATION_SHOW_MEDIA_ON_QUICK_SETTINGS_URI:Landroid/net/Uri;
-
-    invoke-virtual {v1, p1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1c
-
-    :cond_1b
-    iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
-
-    iget-object v1, v1, Lcom/android/server/notification/NotificationManagerService;->mPreferencesHelper:Lcom/android/server/notification/PreferencesHelper;
-
-    invoke-virtual {v1}, Lcom/android/server/notification/PreferencesHelper;->updateMediaNotificationFilteringEnabled()V
-
-    :cond_1c
     return-void
 
     :catchall_0

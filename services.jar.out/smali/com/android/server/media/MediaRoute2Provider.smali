@@ -176,6 +176,9 @@
     return-void
 .end method
 
+.method public abstract prepareReleaseSession(Ljava/lang/String;)V
+.end method
+
 .method public abstract releaseSession(JLjava/lang/String;)V
 .end method
 

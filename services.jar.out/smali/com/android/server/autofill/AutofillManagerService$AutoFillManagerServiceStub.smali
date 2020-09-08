@@ -1520,7 +1520,7 @@
 
     aput-object v3, v1, v0
 
-    const-string v0, "invalid operation: %d"
+    const-string/jumbo v0, "invalid operation: %d"
 
     invoke-static {v2, v0, v1}, Lcom/android/internal/util/Preconditions;->checkArgument(ZLjava/lang/String;[Ljava/lang/Object;)V
 

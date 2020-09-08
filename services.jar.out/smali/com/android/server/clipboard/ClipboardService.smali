@@ -283,7 +283,17 @@
     return-void
 .end method
 
-.method static synthetic access$800(Lcom/android/server/clipboard/ClipboardService;Ljava/lang/String;I)I
+.method static synthetic access$800(Lcom/android/server/clipboard/ClipboardService;ILjava/lang/String;IIZ)Z
+    .locals 1
+
+    invoke-direct/range {p0 .. p5}, Lcom/android/server/clipboard/ClipboardService;->clipboardAccessAllowed(ILjava/lang/String;IIZ)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method static synthetic access$900(Lcom/android/server/clipboard/ClipboardService;Ljava/lang/String;I)I
     .locals 1
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/clipboard/ClipboardService;->getIntendingUserId(Ljava/lang/String;I)I
@@ -585,124 +595,156 @@
 .end method
 
 .method private clipboardAccessAllowed(ILjava/lang/String;II)Z
-    .locals 5
+    .locals 6
 
-    iget-object v0, p0, Lcom/android/server/clipboard/ClipboardService;->mAppOps:Landroid/app/AppOpsManager;
+    const/4 v5, 0x1
 
-    invoke-virtual {v0, p1, p3, p2}, Landroid/app/AppOpsManager;->noteOp(IILjava/lang/String;)I
+    move-object v0, p0
+
+    move v1, p1
+
+    move-object v2, p2
+
+    move v3, p3
+
+    move v4, p4
+
+    invoke-direct/range {v0 .. v5}, Lcom/android/server/clipboard/ClipboardService;->clipboardAccessAllowed(ILjava/lang/String;IIZ)Z
 
     move-result v0
 
-    const/4 v1, 0x0
+    return v0
+.end method
 
-    if-eqz v0, :cond_0
+.method private clipboardAccessAllowed(ILjava/lang/String;IIZ)Z
+    .locals 5
 
-    return v1
+    const/4 v0, 0x0
 
-    :cond_0
-    iget-object v0, p0, Lcom/android/server/clipboard/ClipboardService;->mPm:Landroid/content/pm/PackageManager;
+    iget-object v1, p0, Lcom/android/server/clipboard/ClipboardService;->mAppOps:Landroid/app/AppOpsManager;
+
+    invoke-virtual {v1, p3, p2}, Landroid/app/AppOpsManager;->checkPackage(ILjava/lang/String;)V
+
+    iget-object v1, p0, Lcom/android/server/clipboard/ClipboardService;->mPm:Landroid/content/pm/PackageManager;
 
     const-string v2, "android.permission.READ_CLIPBOARD_IN_BACKGROUND"
 
-    invoke-virtual {v0, v2, p2}, Landroid/content/pm/PackageManager;->checkPermission(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v1, v2, p2}, Landroid/content/pm/PackageManager;->checkPermission(Ljava/lang/String;Ljava/lang/String;)I
 
-    move-result v0
+    move-result v1
 
-    const/4 v2, 0x1
+    if-nez v1, :cond_0
 
-    if-nez v0, :cond_1
+    const/4 v0, 0x1
 
-    return v2
-
-    :cond_1
+    :cond_0
     invoke-virtual {p0}, Lcom/android/server/clipboard/ClipboardService;->getContext()Landroid/content/Context;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object v0
+    move-result-object v1
 
-    const-string v3, "default_input_method"
+    const-string v2, "default_input_method"
 
-    invoke-static {v0, v3, p4}, Landroid/provider/Settings$Secure;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v1, v2, p4}, Landroid/provider/Settings$Secure;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v3
+    move-result v2
 
-    if-nez v3, :cond_2
+    if-nez v2, :cond_1
 
-    invoke-static {v0}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v3, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_2
-
-    return v2
-
-    :cond_2
-    const/16 v3, 0x1d
-
-    if-eq p1, v3, :cond_4
-
-    const/16 v1, 0x1e
-
-    if-ne p1, v1, :cond_3
-
-    return v2
-
-    :cond_3
-    new-instance v1, Ljava/lang/IllegalArgumentException;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "Unknown clipboard appop "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v1}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
-    throw v1
+    move-result-object v2
 
-    :cond_4
-    iget-object v3, p0, Lcom/android/server/clipboard/ClipboardService;->mWm:Lcom/android/server/wm/WindowManagerInternal;
-
-    invoke-virtual {v3, p3}, Lcom/android/server/wm/WindowManagerInternal;->isUidFocused(I)Z
+    invoke-virtual {v2, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
-    if-nez v3, :cond_5
+    if-eqz v3, :cond_1
+
+    const/4 v0, 0x1
+
+    :cond_1
+    const/16 v2, 0x1d
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    if-eq p1, v2, :cond_3
+
+    const/16 v2, 0x1e
+
+    if-ne p1, v2, :cond_2
+
+    const/4 v0, 0x1
+
+    goto :goto_2
+
+    :cond_2
+    new-instance v2, Ljava/lang/IllegalArgumentException;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Unknown clipboard appop "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v2
+
+    :cond_3
+    if-nez v0, :cond_6
+
+    iget-object v2, p0, Lcom/android/server/clipboard/ClipboardService;->mWm:Lcom/android/server/wm/WindowManagerInternal;
+
+    invoke-virtual {v2, p3}, Lcom/android/server/wm/WindowManagerInternal;->isUidFocused(I)Z
+
+    move-result v2
+
+    if-nez v2, :cond_5
 
     invoke-direct {p0, p2}, Lcom/android/server/clipboard/ClipboardService;->isInternalSysWindowAppWithWindowFocus(Ljava/lang/String;)Z
 
-    move-result v3
+    move-result v2
 
-    if-eqz v3, :cond_6
+    if-eqz v2, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    move v2, v4
+
+    goto :goto_1
 
     :cond_5
-    move v1, v2
+    :goto_0
+    move v2, v3
+
+    :goto_1
+    move v0, v2
 
     :cond_6
-    if-nez v1, :cond_7
+    if-nez v0, :cond_7
 
     iget-object v2, p0, Lcom/android/server/clipboard/ClipboardService;->mContentCaptureInternal:Lcom/android/server/contentcapture/ContentCaptureManagerInternal;
 
@@ -710,10 +752,10 @@
 
     invoke-virtual {v2, p3, p4}, Lcom/android/server/contentcapture/ContentCaptureManagerInternal;->isContentCaptureServiceForUser(II)Z
 
-    move-result v1
+    move-result v0
 
     :cond_7
-    if-nez v1, :cond_8
+    if-nez v0, :cond_8
 
     iget-object v2, p0, Lcom/android/server/clipboard/ClipboardService;->mAutofillInternal:Landroid/view/autofill/AutofillManagerInternal;
 
@@ -721,10 +763,11 @@
 
     invoke-virtual {v2, p3, p4}, Landroid/view/autofill/AutofillManagerInternal;->isAugmentedAutofillServiceForUser(II)Z
 
-    move-result v1
+    move-result v0
 
     :cond_8
-    if-nez v1, :cond_9
+    :goto_2
+    if-nez v0, :cond_9
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -736,7 +779,7 @@
 
     invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v3, ", application is not in focus neither is a system service for user "
+    const-string v3, ", application is not in focus nor is it a system service for user "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -750,8 +793,36 @@
 
     invoke-static {v3, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    return v4
+
     :cond_9
-    return v1
+    if-eqz p5, :cond_a
+
+    iget-object v2, p0, Lcom/android/server/clipboard/ClipboardService;->mAppOps:Landroid/app/AppOpsManager;
+
+    invoke-virtual {v2, p1, p3, p2}, Landroid/app/AppOpsManager;->noteOp(IILjava/lang/String;)I
+
+    move-result v2
+
+    goto :goto_3
+
+    :cond_a
+    iget-object v2, p0, Lcom/android/server/clipboard/ClipboardService;->mAppOps:Landroid/app/AppOpsManager;
+
+    invoke-virtual {v2, p1, p3, p2}, Landroid/app/AppOpsManager;->checkOp(IILjava/lang/String;)I
+
+    move-result v2
+
+    :goto_3
+    if-nez v2, :cond_b
+
+    goto :goto_4
+
+    :cond_b
+    move v3, v4
+
+    :goto_4
+    return v3
 .end method
 
 .method private getClipboard(I)Lcom/android/server/clipboard/ClipboardService$PerUserClipboard;

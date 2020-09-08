@@ -265,7 +265,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e0070
+    const v1, 0x10e0076
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -279,7 +279,7 @@
 
     move-result-object v1
 
-    const v2, 0x10e006f
+    const v2, 0x10e0075
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -295,7 +295,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e00bb
+    const v1, 0x10e00c1
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -336,7 +336,9 @@
     invoke-virtual {v0, v1}, Landroid/os/UEventObserver;->startObserving(Ljava/lang/String;)V
 
     :cond_0
-    invoke-static {p1}, Lcom/oneplus/android/server/power/OpFastChargeInjector;->init(Landroid/content/Context;)Z
+    iget-object v0, p0, Lcom/android/server/BatteryService;->mHandler:Landroid/os/Handler;
+
+    invoke-static {p1, v0}, Lcom/oneplus/android/server/power/OpFastChargeInjector;->init(Landroid/content/Context;Landroid/os/Handler;)Z
 
     invoke-static {p1}, Lcom/android/server/OpWirelessChargeDisconnectDetectorInjector;->initContext(Landroid/content/Context;)V
 
@@ -3197,7 +3199,7 @@
 
     iget v2, p0, Lcom/android/server/BatteryService;->mInvalidCharger:I
 
-    const-string v3, "invalid_charger"
+    const-string/jumbo v3, "invalid_charger"
 
     invoke-virtual {v0, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
@@ -3750,7 +3752,7 @@
 
     move-result-object v1
 
-    const v2, 0x10e0070
+    const v2, 0x10e0076
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -3786,7 +3788,7 @@
 
     move-result-object v3
 
-    const v4, 0x10e006f
+    const v4, 0x10e0075
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -4074,7 +4076,7 @@
     goto :goto_2
 
     :sswitch_0
-    const-string v3, "invalid"
+    const-string/jumbo v3, "invalid"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4471,6 +4473,8 @@
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     throw v4
+
+    nop
 
     :sswitch_data_0
     .sparse-switch

@@ -400,6 +400,22 @@
 
 
 # virtual methods
+.method clear()V
+    .locals 1
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lcom/android/server/accessibility/gestures/EventDispatcher;->mLongPressingPointerId:I
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/android/server/accessibility/gestures/EventDispatcher;->mLongPressingPointerDeltaX:I
+
+    iput v0, p0, Lcom/android/server/accessibility/gestures/EventDispatcher;->mLongPressingPointerDeltaY:I
+
+    return-void
+.end method
+
 .method public clickWithTouchEvents(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)V
     .locals 27
 

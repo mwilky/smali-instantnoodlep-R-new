@@ -463,17 +463,19 @@
 
     const-string v0, "NetworkManagement"
 
-    const-string v2, "Bruce debug oemNetdBinder"
+    const-string v2, "OpLowLatencyModeController oemNetdBinder"
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {}, Landroid/net/util/NetdService;->get()Landroid/net/INetd;
+    :try_start_0
+    iget-object v0, p0, Lcom/android/server/NetworkManagementService;->mServices:Lcom/android/server/NetworkManagementService$SystemServices;
+
+    invoke-virtual {v0}, Lcom/android/server/NetworkManagementService$SystemServices;->getNetd()Landroid/net/INetd;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/NetworkManagementService;->mNetd:Landroid/net/INetd;
 
-    :try_start_0
     invoke-interface {v0}, Landroid/net/INetd;->getOemNetd()Landroid/os/IBinder;
 
     move-result-object v0

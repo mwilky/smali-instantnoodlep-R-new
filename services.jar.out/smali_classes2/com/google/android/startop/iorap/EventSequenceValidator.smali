@@ -15,6 +15,8 @@
 
 
 # static fields
+.field private static final DEBUG:Z
+
 .field static final TAG:Ljava/lang/String; = "EventSequenceValidator"
 
 
@@ -25,6 +27,22 @@
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    const-string v0, "persist.sys.assert.panic"
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    sput-boolean v0, Lcom/google/android/startop/iorap/EventSequenceValidator;->DEBUG:Z
+
+    return-void
+.end method
+
 .method public constructor <init>()V
     .locals 2
 
@@ -50,7 +68,7 @@
 
     cmp-long v2, v0, v2
 
-    if-lez v2, :cond_1
+    if-lez v2, :cond_2
 
     const-wide/16 v2, 0x1
 
@@ -68,6 +86,10 @@
     sub-long/2addr v0, v2
 
     iput-wide v0, p0, Lcom/google/android/startop/iorap/EventSequenceValidator;->accIntentStartedEvents:J
+
+    sget-boolean v2, Lcom/google/android/startop/iorap/EventSequenceValidator;->DEBUG:Z
+
+    if-eqz v2, :cond_1
 
     const/4 v2, 0x1
 
@@ -89,11 +111,12 @@
 
     const-string v1, "EventSequenceValidator"
 
-    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
+    return-void
+
+    :cond_2
     new-instance v0, Ljava/lang/AssertionError;
 
     const-string v1, "The number of unknowns cannot be negative"
@@ -151,7 +174,7 @@
 
     const-string v1, "EventSequenceValidator"
 
-    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
@@ -175,6 +198,10 @@
     new-instance v1, Ljava/io/PrintWriter;
 
     invoke-direct {v1, v0}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
+
+    sget-boolean v2, Lcom/google/android/startop/iorap/EventSequenceValidator;->DEBUG:Z
+
+    if-eqz v2, :cond_0
 
     new-instance v2, Ljava/lang/Throwable;
 
@@ -204,8 +231,9 @@
 
     const-string v3, "EventSequenceValidator"
 
-    invoke-static {v3, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    :cond_0
     return-void
 .end method
 
@@ -264,6 +292,10 @@
     return-void
 
     :cond_1
+    sget-boolean v0, Lcom/google/android/startop/iorap/EventSequenceValidator;->DEBUG:Z
+
+    if-eqz v0, :cond_2
+
     new-array v0, v4, [Ljava/lang/Object;
 
     iget-object v1, p0, Lcom/google/android/startop/iorap/EventSequenceValidator;->state:Lcom/google/android/startop/iorap/EventSequenceValidator$State;
@@ -282,8 +314,9 @@
 
     const-string v1, "EventSequenceValidator"
 
-    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    :cond_2
     sget-object v0, Lcom/google/android/startop/iorap/EventSequenceValidator$State;->ACTIVITY_CANCELLED:Lcom/google/android/startop/iorap/EventSequenceValidator$State;
 
     iput-object v0, p0, Lcom/google/android/startop/iorap/EventSequenceValidator;->state:Lcom/google/android/startop/iorap/EventSequenceValidator$State;
@@ -344,6 +377,10 @@
     return-void
 
     :cond_1
+    sget-boolean v0, Lcom/google/android/startop/iorap/EventSequenceValidator;->DEBUG:Z
+
+    if-eqz v0, :cond_2
+
     new-array v0, v4, [Ljava/lang/Object;
 
     iget-object v1, p0, Lcom/google/android/startop/iorap/EventSequenceValidator;->state:Lcom/google/android/startop/iorap/EventSequenceValidator$State;
@@ -362,8 +399,9 @@
 
     const-string v1, "EventSequenceValidator"
 
-    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    :cond_2
     sget-object v0, Lcom/google/android/startop/iorap/EventSequenceValidator$State;->ACTIVITY_FINISHED:Lcom/google/android/startop/iorap/EventSequenceValidator$State;
 
     iput-object v0, p0, Lcom/google/android/startop/iorap/EventSequenceValidator;->state:Lcom/google/android/startop/iorap/EventSequenceValidator$State;
@@ -422,6 +460,10 @@
     return-void
 
     :cond_1
+    sget-boolean v0, Lcom/google/android/startop/iorap/EventSequenceValidator;->DEBUG:Z
+
+    if-eqz v0, :cond_2
+
     new-array v0, v4, [Ljava/lang/Object;
 
     iget-object v1, p0, Lcom/google/android/startop/iorap/EventSequenceValidator;->state:Lcom/google/android/startop/iorap/EventSequenceValidator$State;
@@ -440,8 +482,9 @@
 
     const-string v1, "EventSequenceValidator"
 
-    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    :cond_2
     sget-object v0, Lcom/google/android/startop/iorap/EventSequenceValidator$State;->ACTIVITY_LAUNCHED:Lcom/google/android/startop/iorap/EventSequenceValidator$State;
 
     iput-object v0, p0, Lcom/google/android/startop/iorap/EventSequenceValidator;->state:Lcom/google/android/startop/iorap/EventSequenceValidator$State;
@@ -502,6 +545,10 @@
     return-void
 
     :cond_1
+    sget-boolean v0, Lcom/google/android/startop/iorap/EventSequenceValidator;->DEBUG:Z
+
+    if-eqz v0, :cond_2
+
     new-array v0, v4, [Ljava/lang/Object;
 
     iget-object v1, p0, Lcom/google/android/startop/iorap/EventSequenceValidator;->state:Lcom/google/android/startop/iorap/EventSequenceValidator$State;
@@ -520,8 +567,9 @@
 
     const-string v1, "EventSequenceValidator"
 
-    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    :cond_2
     sget-object v0, Lcom/google/android/startop/iorap/EventSequenceValidator$State;->INTENT_FAILED:Lcom/google/android/startop/iorap/EventSequenceValidator$State;
 
     iput-object v0, p0, Lcom/google/android/startop/iorap/EventSequenceValidator;->state:Lcom/google/android/startop/iorap/EventSequenceValidator$State;
@@ -620,6 +668,10 @@
     return-void
 
     :cond_1
+    sget-boolean v0, Lcom/google/android/startop/iorap/EventSequenceValidator;->DEBUG:Z
+
+    if-eqz v0, :cond_2
+
     new-array v0, v4, [Ljava/lang/Object;
 
     iget-object v1, p0, Lcom/google/android/startop/iorap/EventSequenceValidator;->state:Lcom/google/android/startop/iorap/EventSequenceValidator$State;
@@ -638,8 +690,9 @@
 
     const-string v1, "EventSequenceValidator"
 
-    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    :cond_2
     sget-object v0, Lcom/google/android/startop/iorap/EventSequenceValidator$State;->INTENT_STARTED:Lcom/google/android/startop/iorap/EventSequenceValidator$State;
 
     iput-object v0, p0, Lcom/google/android/startop/iorap/EventSequenceValidator;->state:Lcom/google/android/startop/iorap/EventSequenceValidator$State;
@@ -705,6 +758,10 @@
     return-void
 
     :cond_2
+    sget-boolean v0, Lcom/google/android/startop/iorap/EventSequenceValidator;->DEBUG:Z
+
+    if-eqz v0, :cond_3
+
     new-array v0, v4, [Ljava/lang/Object;
 
     iget-object v1, p0, Lcom/google/android/startop/iorap/EventSequenceValidator;->state:Lcom/google/android/startop/iorap/EventSequenceValidator$State;
@@ -723,8 +780,9 @@
 
     const-string v1, "EventSequenceValidator"
 
-    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    :cond_3
     sget-object v0, Lcom/google/android/startop/iorap/EventSequenceValidator$State;->REPORT_FULLY_DRAWN:Lcom/google/android/startop/iorap/EventSequenceValidator$State;
 
     iput-object v0, p0, Lcom/google/android/startop/iorap/EventSequenceValidator;->state:Lcom/google/android/startop/iorap/EventSequenceValidator$State;

@@ -509,6 +509,14 @@
     return-void
 .end method
 
+.method public removeImeSurfaceFromWindow(Landroid/os/IBinder;)V
+    .locals 0
+
+    invoke-static {}, Lcom/android/server/inputmethod/MultiClientInputMethodManagerService;->access$200()V
+
+    return-void
+.end method
+
 .method public reportActivityView(Lcom/android/internal/view/IInputMethodClient;I[F)V
     .locals 0
 

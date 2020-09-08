@@ -40,7 +40,7 @@
 
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
-    .locals 2
+    .locals 4
 
     iget v0, p1, Landroid/os/Message;->what:I
 
@@ -80,13 +80,17 @@
     goto :goto_0
 
     :cond_1
-    iget-object v0, p0, Lcom/android/server/audio/SoundEffectsHelper$SfxHandler;->this$0:Lcom/android/server/audio/SoundEffectsHelper;
+    iget v0, p1, Landroid/os/Message;->arg1:I
 
-    new-instance v1, Lcom/android/server/audio/SoundEffectsHelper$SfxHandler$1;
+    iget v1, p1, Landroid/os/Message;->arg2:I
 
-    invoke-direct {v1, p0, p1}, Lcom/android/server/audio/SoundEffectsHelper$SfxHandler$1;-><init>(Lcom/android/server/audio/SoundEffectsHelper$SfxHandler;Landroid/os/Message;)V
+    iget-object v2, p0, Lcom/android/server/audio/SoundEffectsHelper$SfxHandler;->this$0:Lcom/android/server/audio/SoundEffectsHelper;
 
-    invoke-static {v0, v1}, Lcom/android/server/audio/SoundEffectsHelper;->access$400(Lcom/android/server/audio/SoundEffectsHelper;Lcom/android/server/audio/SoundEffectsHelper$OnEffectsLoadCompleteHandler;)V
+    new-instance v3, Lcom/android/server/audio/SoundEffectsHelper$SfxHandler$1;
+
+    invoke-direct {v3, p0, v0, v1}, Lcom/android/server/audio/SoundEffectsHelper$SfxHandler$1;-><init>(Lcom/android/server/audio/SoundEffectsHelper$SfxHandler;II)V
+
+    invoke-static {v2, v3}, Lcom/android/server/audio/SoundEffectsHelper;->access$400(Lcom/android/server/audio/SoundEffectsHelper;Lcom/android/server/audio/SoundEffectsHelper$OnEffectsLoadCompleteHandler;)V
 
     goto :goto_0
 

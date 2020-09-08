@@ -1030,6 +1030,36 @@
     return-object v2
 .end method
 
+.method public handleShellCommand(Landroid/os/ParcelFileDescriptor;Landroid/os/ParcelFileDescriptor;Landroid/os/ParcelFileDescriptor;[Ljava/lang/String;)I
+    .locals 6
+
+    new-instance v0, Lcom/android/server/adb/AdbShellCommand;
+
+    invoke-direct {v0, p0}, Lcom/android/server/adb/AdbShellCommand;-><init>(Lcom/android/server/adb/AdbService;)V
+
+    invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
+
+    move-result-object v2
+
+    invoke-virtual {p2}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
+
+    move-result-object v3
+
+    invoke-virtual {p3}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
+
+    move-result-object v4
+
+    move-object v1, p0
+
+    move-object v5, p4
+
+    invoke-virtual/range {v0 .. v5}, Lcom/android/server/adb/AdbShellCommand;->exec(Landroid/os/Binder;Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;[Ljava/lang/String;)I
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public isAdbWifiQrSupported()Z
     .locals 3
 

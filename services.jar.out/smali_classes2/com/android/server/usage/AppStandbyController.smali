@@ -520,6 +520,14 @@
     return v0
 .end method
 
+.method static synthetic access$1400(Lcom/android/server/usage/AppStandbyController;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/server/usage/AppStandbyController;->updatePowerWhitelistCache()V
+
+    return-void
+.end method
+
 .method static synthetic access$1500(Lcom/android/server/usage/AppStandbyController;)Z
     .locals 1
 
@@ -2031,18 +2039,18 @@
     return v1
 .end method
 
-.method public static synthetic lambda$eFYmNoFgBdX9ZGJEOAzlovFS3-c(Lcom/android/server/usage/AppStandbyController;)V
+.method public static synthetic lambda$J3RrF9pXWs15TjJGaLdogSJkcZI(Lcom/android/server/usage/AppStandbyController;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/usage/AppStandbyController;->loadHeadlessSystemAppCache()V
+    invoke-direct {p0}, Lcom/android/server/usage/AppStandbyController;->updatePowerWhitelistCache()V
 
     return-void
 .end method
 
-.method static synthetic lambda$onBootPhase$0(Lcom/android/server/usage/AppStandbyController$Injector;)V
+.method public static synthetic lambda$eFYmNoFgBdX9ZGJEOAzlovFS3-c(Lcom/android/server/usage/AppStandbyController;)V
     .locals 0
 
-    invoke-static {p0}, Lcom/android/server/usage/AppStandbyController$Injector;->access$1400(Lcom/android/server/usage/AppStandbyController$Injector;)V
+    invoke-direct {p0}, Lcom/android/server/usage/AppStandbyController;->loadHeadlessSystemAppCache()V
 
     return-void
 .end method
@@ -3919,6 +3927,33 @@
     move-exception v0
 
     goto :goto_b
+.end method
+
+.method private updatePowerWhitelistCache()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/server/usage/AppStandbyController;->mInjector:Lcom/android/server/usage/AppStandbyController$Injector;
+
+    invoke-virtual {v0}, Lcom/android/server/usage/AppStandbyController$Injector;->getBootPhase()I
+
+    move-result v0
+
+    const/16 v1, 0x1f4
+
+    if-ge v0, v1, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/server/usage/AppStandbyController;->mInjector:Lcom/android/server/usage/AppStandbyController$Injector;
+
+    invoke-virtual {v0}, Lcom/android/server/usage/AppStandbyController$Injector;->updatePowerWhitelistCache()V
+
+    const/4 v0, -0x1
+
+    invoke-virtual {p0, v0}, Lcom/android/server/usage/AppStandbyController;->postCheckIdleStates(I)V
+
+    return-void
 .end method
 
 .method private usageEventToSubReason(I)I
@@ -5885,15 +5920,11 @@
 
     iget-object v1, p0, Lcom/android/server/usage/AppStandbyController;->mHandler:Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;
 
-    iget-object v2, p0, Lcom/android/server/usage/AppStandbyController;->mInjector:Lcom/android/server/usage/AppStandbyController$Injector;
+    new-instance v2, Lcom/android/server/usage/-$$Lambda$AppStandbyController$J3RrF9pXWs15TjJGaLdogSJkcZI;
 
-    invoke-static {v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v2, p0}, Lcom/android/server/usage/-$$Lambda$AppStandbyController$J3RrF9pXWs15TjJGaLdogSJkcZI;-><init>(Lcom/android/server/usage/AppStandbyController;)V
 
-    new-instance v3, Lcom/android/server/usage/-$$Lambda$AppStandbyController$hSlPOxczTLES70mHK8qfCQJsLwM;
-
-    invoke-direct {v3, v2}, Lcom/android/server/usage/-$$Lambda$AppStandbyController$hSlPOxczTLES70mHK8qfCQJsLwM;-><init>(Lcom/android/server/usage/AppStandbyController$Injector;)V
-
-    invoke-virtual {v1, v3}, Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v1, v2}, Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;->post(Ljava/lang/Runnable;)Z
 
     iget-object v2, p0, Lcom/android/server/usage/AppStandbyController;->mAppIdleLock:Ljava/lang/Object;
 
@@ -5911,14 +5942,6 @@
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    iget-object v2, p0, Lcom/android/server/usage/AppStandbyController;->mHandler:Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;
-
-    new-instance v4, Lcom/android/server/usage/-$$Lambda$AppStandbyController$eFYmNoFgBdX9ZGJEOAzlovFS3-c;
-
-    invoke-direct {v4, p0}, Lcom/android/server/usage/-$$Lambda$AppStandbyController$eFYmNoFgBdX9ZGJEOAzlovFS3-c;-><init>(Lcom/android/server/usage/AppStandbyController;)V
-
-    invoke-virtual {v2, v4}, Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;->post(Ljava/lang/Runnable;)Z
 
     iget-boolean v2, p0, Lcom/android/server/usage/AppStandbyController;->mPendingInitializeDefaults:Z
 
@@ -5970,6 +5993,14 @@
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/android/server/usage/AppStandbyController;->setChargingState(Z)V
+
+    iget-object v0, p0, Lcom/android/server/usage/AppStandbyController;->mHandler:Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;
+
+    new-instance v1, Lcom/android/server/usage/-$$Lambda$AppStandbyController$eFYmNoFgBdX9ZGJEOAzlovFS3-c;
+
+    invoke-direct {v1, p0}, Lcom/android/server/usage/-$$Lambda$AppStandbyController$eFYmNoFgBdX9ZGJEOAzlovFS3-c;-><init>(Lcom/android/server/usage/AppStandbyController;)V
+
+    invoke-virtual {v0, v1}, Lcom/android/server/usage/AppStandbyController$AppStandbyHandler;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_1
 

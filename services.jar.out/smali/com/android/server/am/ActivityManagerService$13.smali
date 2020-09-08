@@ -1,9 +1,6 @@
 .class Lcom/android/server/am/ActivityManagerService$13;
-.super Ljava/lang/Object;
+.super Landroid/content/BroadcastReceiver;
 .source "ActivityManagerService.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -27,56 +24,121 @@
 
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$13;->this$0:Lcom/android/server/am/ActivityManagerService;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 18
+
+    move-object/from16 v1, p0
+
+    const-string v0, "android.intent.extra.PACKAGES"
+
+    move-object/from16 v2, p2
+
+    invoke-virtual {v2, v0}, Landroid/content/Intent;->getStringArrayExtra(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_1
+
+    array-length v0, v3
+
+    const/4 v4, 0x0
+
+    :goto_0
+    if-ge v4, v0, :cond_1
+
+    aget-object v15, v3, v4
+
+    iget-object v14, v1, Lcom/android/server/am/ActivityManagerService$13;->this$0:Lcom/android/server/am/ActivityManagerService;
+
+    monitor-enter v14
 
     :try_start_0
-    const-string v0, "ActivityManager"
+    invoke-static {}, Lcom/android/server/am/ActivityManagerService;->boostPriorityForLockedSection()V
 
-    const-string v1, "About to commit checkpoint"
+    iget-object v5, v1, Lcom/android/server/am/ActivityManagerService$13;->this$0:Lcom/android/server/am/ActivityManagerService;
 
-    invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    const/4 v7, -0x1
 
-    invoke-static {}, Lcom/android/internal/content/PackageHelper;->getStorageManager()Landroid/os/storage/IStorageManager;
+    const/4 v8, 0x0
 
-    move-result-object v0
+    const/4 v9, 0x0
 
-    invoke-interface {v0}, Landroid/os/storage/IStorageManager;->commitChanges()V
+    const/4 v10, 0x0
+
+    const/4 v11, 0x0
+
+    const/4 v12, 0x0
+
+    const/4 v13, 0x0
+
+    const-string/jumbo v16, "query restart"
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-object v6, v15
+
+    move-object/from16 v17, v14
+
+    move-object/from16 v14, v16
+
+    :try_start_1
+    invoke-virtual/range {v5 .. v14}, Lcom/android/server/am/ActivityManagerService;->forceStopPackageLocked(Ljava/lang/String;IZZZZZILjava/lang/String;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_0
+
+    const/4 v0, -0x1
+
+    invoke-virtual {v1, v0}, Lcom/android/server/am/ActivityManagerService$13;->setResultCode(I)V
+
+    monitor-exit v17
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterLockedSection()V
+
+    return-void
+
+    :cond_0
+    :try_start_2
+    monitor-exit v17
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterLockedSection()V
+
+    add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    :catch_0
+    :catchall_0
     move-exception v0
 
-    iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$13;->this$0:Lcom/android/server/am/ActivityManagerService;
+    move-object/from16 v17, v14
 
-    iget-object v1, v1, Lcom/android/server/am/ActivityManagerService;->mInjector:Lcom/android/server/am/ActivityManagerService$Injector;
+    :goto_1
+    :try_start_3
+    monitor-exit v17
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    invoke-virtual {v1}, Lcom/android/server/am/ActivityManagerService$Injector;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterLockedSection()V
 
-    move-result-object v1
+    throw v0
 
-    const-string/jumbo v2, "power"
+    :catchall_1
+    move-exception v0
 
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    goto :goto_1
 
-    move-result-object v1
-
-    check-cast v1, Landroid/os/PowerManager;
-
-    const-string v2, "Checkpoint commit failed"
-
-    invoke-virtual {v1, v2}, Landroid/os/PowerManager;->reboot(Ljava/lang/String;)V
-
-    :goto_0
+    :cond_1
     return-void
 .end method

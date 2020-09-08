@@ -62,7 +62,7 @@
 .end method
 
 .method public onShortcutsChanged(Ljava/lang/String;Ljava/util/List;Landroid/os/UserHandle;)V
-    .locals 7
+    .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -93,130 +93,134 @@
 
     if-eqz v0, :cond_3
 
+    new-instance v2, Ljava/util/HashSet;
+
     invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Ljava/lang/String;
+    invoke-direct {v2, v3}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    const/4 v4, 0x0
+    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :goto_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_3
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/String;
 
     const/4 v5, 0x0
+
+    const/4 v6, 0x0
 
     :goto_1
     invoke-interface {p2}, Ljava/util/List;->size()I
 
-    move-result v6
+    move-result v7
 
-    if-ge v5, v6, :cond_1
+    if-ge v6, v7, :cond_1
 
-    invoke-interface {p2, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {p2, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v6
+    move-result-object v7
 
-    check-cast v6, Landroid/content/pm/ShortcutInfo;
+    check-cast v7, Landroid/content/pm/ShortcutInfo;
 
-    invoke-virtual {v6}, Landroid/content/pm/ShortcutInfo;->getId()Ljava/lang/String;
+    invoke-virtual {v7}, Landroid/content/pm/ShortcutInfo;->getId()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v7
 
-    invoke-virtual {v6, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v7, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v6
+    move-result v7
 
-    if-eqz v6, :cond_0
+    if-eqz v7, :cond_0
 
-    const/4 v4, 0x1
+    const/4 v5, 0x1
 
     goto :goto_2
 
     :cond_0
-    add-int/lit8 v5, v5, 0x1
+    add-int/lit8 v6, v6, 0x1
 
     goto :goto_1
 
     :cond_1
     :goto_2
-    if-nez v4, :cond_2
+    if-nez v5, :cond_2
 
-    invoke-virtual {v0, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/lang/String;
-
-    invoke-virtual {v1, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    invoke-virtual {v0, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v0}, Ljava/util/HashMap;->isEmpty()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_2
-
-    iget-object v5, p0, Lcom/android/server/notification/ShortcutHelper$1;->this$0:Lcom/android/server/notification/ShortcutHelper;
-
-    invoke-static {v5}, Lcom/android/server/notification/ShortcutHelper;->access$000(Lcom/android/server/notification/ShortcutHelper;)Ljava/util/HashMap;
-
-    move-result-object v5
-
-    invoke-virtual {v5, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v5, p0, Lcom/android/server/notification/ShortcutHelper$1;->this$0:Lcom/android/server/notification/ShortcutHelper;
-
-    invoke-static {v5}, Lcom/android/server/notification/ShortcutHelper;->access$100(Lcom/android/server/notification/ShortcutHelper;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_2
-
-    iget-object v5, p0, Lcom/android/server/notification/ShortcutHelper$1;->this$0:Lcom/android/server/notification/ShortcutHelper;
-
-    invoke-static {v5}, Lcom/android/server/notification/ShortcutHelper;->access$000(Lcom/android/server/notification/ShortcutHelper;)Ljava/util/HashMap;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/util/HashMap;->isEmpty()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_2
-
-    iget-object v5, p0, Lcom/android/server/notification/ShortcutHelper$1;->this$0:Lcom/android/server/notification/ShortcutHelper;
-
-    invoke-static {v5}, Lcom/android/server/notification/ShortcutHelper;->access$300(Lcom/android/server/notification/ShortcutHelper;)Landroid/content/pm/LauncherApps;
-
-    move-result-object v5
-
-    iget-object v6, p0, Lcom/android/server/notification/ShortcutHelper$1;->this$0:Lcom/android/server/notification/ShortcutHelper;
-
-    invoke-static {v6}, Lcom/android/server/notification/ShortcutHelper;->access$200(Lcom/android/server/notification/ShortcutHelper;)Landroid/content/pm/LauncherApps$Callback;
+    invoke-virtual {v0, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v6
 
-    invoke-virtual {v5, v6}, Landroid/content/pm/LauncherApps;->unregisterCallback(Landroid/content/pm/LauncherApps$Callback;)V
+    check-cast v6, Ljava/lang/String;
 
-    iget-object v5, p0, Lcom/android/server/notification/ShortcutHelper$1;->this$0:Lcom/android/server/notification/ShortcutHelper;
+    invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const/4 v6, 0x0
+    invoke-virtual {v0, v4}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v5, v6}, Lcom/android/server/notification/ShortcutHelper;->access$102(Lcom/android/server/notification/ShortcutHelper;Z)Z
+    invoke-virtual {v0}, Ljava/util/HashMap;->isEmpty()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_2
+
+    iget-object v6, p0, Lcom/android/server/notification/ShortcutHelper$1;->this$0:Lcom/android/server/notification/ShortcutHelper;
+
+    invoke-static {v6}, Lcom/android/server/notification/ShortcutHelper;->access$000(Lcom/android/server/notification/ShortcutHelper;)Ljava/util/HashMap;
+
+    move-result-object v6
+
+    invoke-virtual {v6, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v6, p0, Lcom/android/server/notification/ShortcutHelper$1;->this$0:Lcom/android/server/notification/ShortcutHelper;
+
+    invoke-static {v6}, Lcom/android/server/notification/ShortcutHelper;->access$100(Lcom/android/server/notification/ShortcutHelper;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_2
+
+    iget-object v6, p0, Lcom/android/server/notification/ShortcutHelper$1;->this$0:Lcom/android/server/notification/ShortcutHelper;
+
+    invoke-static {v6}, Lcom/android/server/notification/ShortcutHelper;->access$000(Lcom/android/server/notification/ShortcutHelper;)Ljava/util/HashMap;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/util/HashMap;->isEmpty()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_2
+
+    iget-object v6, p0, Lcom/android/server/notification/ShortcutHelper$1;->this$0:Lcom/android/server/notification/ShortcutHelper;
+
+    invoke-static {v6}, Lcom/android/server/notification/ShortcutHelper;->access$300(Lcom/android/server/notification/ShortcutHelper;)Landroid/content/pm/LauncherApps;
+
+    move-result-object v6
+
+    iget-object v7, p0, Lcom/android/server/notification/ShortcutHelper$1;->this$0:Lcom/android/server/notification/ShortcutHelper;
+
+    invoke-static {v7}, Lcom/android/server/notification/ShortcutHelper;->access$200(Lcom/android/server/notification/ShortcutHelper;)Landroid/content/pm/LauncherApps$Callback;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v7}, Landroid/content/pm/LauncherApps;->unregisterCallback(Landroid/content/pm/LauncherApps$Callback;)V
+
+    iget-object v6, p0, Lcom/android/server/notification/ShortcutHelper$1;->this$0:Lcom/android/server/notification/ShortcutHelper;
+
+    const/4 v7, 0x0
+
+    invoke-static {v6, v7}, Lcom/android/server/notification/ShortcutHelper;->access$102(Lcom/android/server/notification/ShortcutHelper;Z)Z
 
     :cond_2
     goto :goto_0

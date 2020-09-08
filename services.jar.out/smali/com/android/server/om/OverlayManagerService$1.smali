@@ -939,13 +939,13 @@
     return-void
 
     :cond_0
-    const-string v0, "invalidateCachesForOverlay"
+    const-string/jumbo v0, "invalidateCachesForOverlay"
 
     invoke-direct {p0, p2, v0}, Lcom/android/server/om/OverlayManagerService$1;->handleIncomingUser(ILjava/lang/String;)I
 
     move-result v0
 
-    const-string v1, "invalidateCachesForOverlay"
+    const-string/jumbo v1, "invalidateCachesForOverlay"
 
     invoke-direct {p0, p1, v1, v0}, Lcom/android/server/om/OverlayManagerService$1;->enforceActor(Ljava/lang/String;Ljava/lang/String;I)V
 

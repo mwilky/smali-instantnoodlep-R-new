@@ -2362,7 +2362,7 @@
 
     nop
 
-    const-string v0, "isAppEligibleForBackup()"
+    const-string/jumbo v0, "isAppEligibleForBackup()"
 
     invoke-virtual {p0, p1, v0}, Lcom/android/server/backup/BackupManagerService;->getServiceForUserIfCallerHasPermission(ILjava/lang/String;)Lcom/android/server/backup/UserBackupManagerService;
 

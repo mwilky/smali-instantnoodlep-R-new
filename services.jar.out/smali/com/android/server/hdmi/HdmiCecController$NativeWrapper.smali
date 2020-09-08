@@ -15,38 +15,41 @@
 
 
 # virtual methods
-.method public abstract nativeAddLogicalAddress(JI)I
+.method public abstract nativeAddLogicalAddress(I)I
 .end method
 
-.method public abstract nativeClearLogicalAddress(J)V
+.method public abstract nativeClearLogicalAddress()V
 .end method
 
-.method public abstract nativeEnableAudioReturnChannel(JIZ)V
+.method public abstract nativeEnableAudioReturnChannel(IZ)V
 .end method
 
-.method public abstract nativeGetPhysicalAddress(J)I
+.method public abstract nativeGetPhysicalAddress()I
 .end method
 
-.method public abstract nativeGetPortInfos(J)[Landroid/hardware/hdmi/HdmiPortInfo;
+.method public abstract nativeGetPortInfos()[Landroid/hardware/hdmi/HdmiPortInfo;
 .end method
 
-.method public abstract nativeGetVendorId(J)I
+.method public abstract nativeGetVendorId()I
 .end method
 
-.method public abstract nativeGetVersion(J)I
+.method public abstract nativeGetVersion()I
 .end method
 
-.method public abstract nativeInit(Lcom/android/server/hdmi/HdmiCecController;Landroid/os/MessageQueue;)J
+.method public abstract nativeInit()Ljava/lang/String;
 .end method
 
-.method public abstract nativeIsConnected(JI)Z
+.method public abstract nativeIsConnected(I)Z
 .end method
 
-.method public abstract nativeSendCecCommand(JII[B)I
+.method public abstract nativeSendCecCommand(II[B)I
 .end method
 
-.method public abstract nativeSetLanguage(JLjava/lang/String;)V
+.method public abstract nativeSetLanguage(Ljava/lang/String;)V
 .end method
 
-.method public abstract nativeSetOption(JIZ)V
+.method public abstract nativeSetOption(IZ)V
+.end method
+
+.method public abstract setCallback(Lcom/android/server/hdmi/HdmiCecController$HdmiCecCallback;)V
 .end method

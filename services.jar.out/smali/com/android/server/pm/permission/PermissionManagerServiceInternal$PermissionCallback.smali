@@ -75,7 +75,7 @@
     return-void
 .end method
 
-.method public onPermissionRevoked(II)V
+.method public onPermissionRevoked(IILjava/lang/String;)V
     .locals 0
 
     return-void

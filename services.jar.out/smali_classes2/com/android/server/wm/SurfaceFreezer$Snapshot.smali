@@ -106,6 +106,12 @@
 
     move-result-object v3
 
+    const-string v4, "SurfaceFreezer.Snapshot"
+
+    invoke-virtual {v3, v4}, Landroid/view/SurfaceControl$Builder;->setCallsite(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
+
+    move-result-object v3
+
     invoke-virtual {v3}, Landroid/view/SurfaceControl$Builder;->build()Landroid/view/SurfaceControl;
 
     move-result-object v3

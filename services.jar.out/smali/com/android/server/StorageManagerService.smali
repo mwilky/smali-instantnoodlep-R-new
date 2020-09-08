@@ -6168,7 +6168,7 @@
 
     if-eqz v0, :cond_0
 
-    const-string v0, "internal"
+    const-string/jumbo v0, "internal"
 
     return-object v0
 
@@ -9931,7 +9931,7 @@
 
     move-result v4
 
-    if-ge v0, v4, :cond_15
+    if-ge v0, v4, :cond_16
 
     iget-object v4, v1, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
 
@@ -10034,7 +10034,7 @@
 
     const/4 v13, 0x2
 
-    if-eqz v12, :cond_9
+    if-eqz v12, :cond_a
 
     if-eq v12, v13, :cond_6
 
@@ -10072,7 +10072,7 @@
     move/from16 v25, v9
 
     :try_start_6
-    const-string v9, "getVolumeList: mountedUserId = "
+    const-string v9, "getVolumeList: mountedUserId "
 
     invoke-virtual {v13, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -10090,17 +10090,22 @@
     move/from16 v25, v9
 
     :goto_6
-    if-eq v12, v3, :cond_a
+    if-eq v12, v3, :cond_b
 
     const/16 v9, 0x3e7
 
     if-ne v12, v9, :cond_8
 
-    if-nez v3, :cond_8
+    if-eqz v3, :cond_b
+
+    :cond_8
+    if-nez v12, :cond_9
+
+    if-ne v3, v9, :cond_9
 
     goto :goto_9
 
-    :cond_8
+    :cond_9
     :goto_7
     goto :goto_d
 
@@ -10117,17 +10122,17 @@
 
     goto/16 :goto_14
 
-    :cond_9
+    :cond_a
     move/from16 v25, v9
 
     :goto_8
     nop
 
-    :cond_a
+    :cond_b
     :goto_9
     const/4 v9, 0x0
 
-    if-eqz v6, :cond_b
+    if-eqz v6, :cond_c
 
     invoke-virtual {v5, v3}, Landroid/os/storage/VolumeInfo;->isVisibleForWrite(I)Z
 
@@ -10150,7 +10155,7 @@
 
     goto/16 :goto_14
 
-    :cond_b
+    :cond_c
     :try_start_7
     invoke-virtual {v5, v3}, Landroid/os/storage/VolumeInfo;->isVisibleForRead(I)Z
 
@@ -10158,9 +10163,9 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_9
 
-    if-nez v12, :cond_d
+    if-nez v12, :cond_e
 
-    if-eqz v8, :cond_c
+    if-eqz v8, :cond_d
 
     :try_start_8
     invoke-virtual {v5}, Landroid/os/storage/VolumeInfo;->getPath()Ljava/io/File;
@@ -10169,16 +10174,16 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_3
 
-    if-eqz v12, :cond_c
+    if-eqz v12, :cond_d
 
     goto :goto_a
 
-    :cond_c
+    :cond_d
     const/4 v12, 0x0
 
     goto :goto_b
 
-    :cond_d
+    :cond_e
     :goto_a
     const/4 v12, 0x1
 
@@ -10186,7 +10191,7 @@
     move v9, v12
 
     :goto_c
-    if-nez v9, :cond_e
+    if-nez v9, :cond_f
 
     :goto_d
     move/from16 v26, v6
@@ -10197,17 +10202,17 @@
 
     goto/16 :goto_11
 
-    :cond_e
+    :cond_f
     const/4 v12, 0x0
 
-    if-eqz v11, :cond_f
+    if-eqz v11, :cond_10
 
     move/from16 v26, v6
 
     goto/16 :goto_e
 
-    :cond_f
-    if-nez v10, :cond_10
+    :cond_10
+    if-nez v10, :cond_11
 
     const/4 v12, 0x1
 
@@ -10254,7 +10259,7 @@
 
     goto/16 :goto_14
 
-    :cond_10
+    :cond_11
     move/from16 v26, v6
 
     :try_start_b
@@ -10266,9 +10271,9 @@
 
     const/4 v13, 0x2
 
-    if-ne v6, v13, :cond_11
+    if-ne v6, v13, :cond_12
 
-    if-nez v15, :cond_11
+    if-nez v15, :cond_12
 
     const/4 v12, 0x1
 
@@ -10312,10 +10317,10 @@
 
     goto/16 :goto_14
 
-    :cond_11
-    if-nez v17, :cond_12
+    :cond_12
+    if-nez v17, :cond_13
 
-    if-nez v7, :cond_12
+    if-nez v7, :cond_13
 
     const-string v6, "StorageManagerService"
 
@@ -10343,7 +10348,7 @@
 
     const/4 v12, 0x1
 
-    :cond_12
+    :cond_13
     :goto_e
     :try_start_d
     iget-object v6, v1, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
@@ -10356,7 +10361,7 @@
     :try_end_d
     .catchall {:try_start_d .. :try_end_d} :catchall_8
 
-    if-eqz v13, :cond_13
+    if-eqz v13, :cond_14
 
     :try_start_e
     const-string v13, "StorageManagerService"
@@ -10393,7 +10398,7 @@
 
     goto :goto_f
 
-    :cond_13
+    :cond_14
     move-object/from16 v24, v4
 
     :goto_f
@@ -10404,7 +10409,7 @@
     :try_end_f
     .catchall {:try_start_f .. :try_end_f} :catchall_8
 
-    if-eqz v4, :cond_14
+    if-eqz v4, :cond_15
 
     move-object/from16 v4, v19
 
@@ -10428,7 +10433,7 @@
 
     goto/16 :goto_14
 
-    :cond_14
+    :cond_15
     move-object/from16 v4, v19
 
     :try_start_11
@@ -10507,7 +10512,7 @@
 
     goto/16 :goto_14
 
-    :cond_15
+    :cond_16
     move/from16 v26, v6
 
     move/from16 v25, v9
@@ -10520,7 +10525,7 @@
 
     move-object/from16 v14, v20
 
-    if-eqz v25, :cond_18
+    if-eqz v25, :cond_19
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -10539,7 +10544,7 @@
 
     move-result v9
 
-    if-ge v0, v9, :cond_18
+    if-ge v0, v9, :cond_19
 
     iget-object v9, v1, Lcom/android/server/StorageManagerService;->mRecords:Landroid/util/ArrayMap;
 
@@ -10555,24 +10560,24 @@
 
     move-result v12
 
-    if-eqz v12, :cond_16
+    if-eqz v12, :cond_17
 
     goto :goto_13
 
-    :cond_16
+    :cond_17
     iget-wide v12, v9, Landroid/os/storage/VolumeRecord;->lastSeenMillis:J
 
     const-wide/16 v19, 0x0
 
     cmp-long v12, v12, v19
 
-    if-lez v12, :cond_17
+    if-lez v12, :cond_18
 
     iget-wide v12, v9, Landroid/os/storage/VolumeRecord;->lastSeenMillis:J
 
     cmp-long v12, v12, v5
 
-    if-gez v12, :cond_17
+    if-gez v12, :cond_18
 
     iget-object v12, v1, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
@@ -10588,18 +10593,18 @@
 
     invoke-virtual {v14, v13}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    :cond_17
+    :cond_18
     :goto_13
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_12
 
-    :cond_18
+    :cond_19
     monitor-exit v2
     :try_end_12
     .catchall {:try_start_12 .. :try_end_12} :catchall_c
 
-    if-eqz v23, :cond_19
+    if-eqz v23, :cond_1a
 
     const-string v2, "demo"
 
@@ -10667,8 +10672,8 @@
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_19
-    if-nez v18, :cond_1a
+    :cond_1a
+    if-nez v18, :cond_1b
 
     const-string v0, "StorageManagerService"
 
@@ -10748,7 +10753,7 @@
 
     invoke-virtual {v4, v1, v0}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    :cond_1a
+    :cond_1b
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
     move-result v0

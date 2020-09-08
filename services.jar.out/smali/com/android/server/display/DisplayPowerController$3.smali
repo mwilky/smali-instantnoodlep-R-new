@@ -3,7 +3,7 @@
 .source "DisplayPowerController.java"
 
 # interfaces
-.implements Lcom/android/server/display/RampAnimator$Listener;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # annotations
@@ -34,20 +34,30 @@
 
 
 # virtual methods
-.method public onAnimationEnd()V
+.method public onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$3;->this$0:Lcom/android/server/display/DisplayPowerController;
 
-    invoke-static {v0}, Lcom/android/server/display/DisplayPowerController;->access$200(Lcom/android/server/display/DisplayPowerController;)V
+    invoke-static {v0}, Lcom/android/server/display/DisplayPowerController;->access$500(Lcom/android/server/display/DisplayPowerController;)V
 
-    iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$3;->this$0:Lcom/android/server/display/DisplayPowerController;
+    return-void
+.end method
 
-    invoke-static {v0}, Lcom/android/server/display/DisplayPowerController;->access$300(Lcom/android/server/display/DisplayPowerController;)Lcom/android/server/display/OpBrightnessReasonAndRate;
+.method public onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
 
-    move-result-object v0
+    return-void
+.end method
 
-    invoke-virtual {v0}, Lcom/android/server/display/OpBrightnessReasonAndRate;->updateBrightnessValue()V
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
 
     return-void
 .end method

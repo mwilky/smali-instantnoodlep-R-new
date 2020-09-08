@@ -914,7 +914,7 @@
 
     sget-object v13, Lcom/android/server/WiredAccessoryManager;->TAG:Ljava/lang/String;
 
-    const-string v14, "invalid transition, returning ..."
+    const-string/jumbo v14, "invalid transition, returning ..."
 
     invoke-static {v13, v14}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 

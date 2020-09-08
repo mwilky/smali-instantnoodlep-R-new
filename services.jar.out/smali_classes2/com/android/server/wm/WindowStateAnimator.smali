@@ -3497,8 +3497,6 @@
     invoke-virtual {v0}, Lcom/android/server/wm/WindowSurfaceController;->detachChildren()V
 
     :cond_1
-    invoke-virtual {p0}, Lcom/android/server/wm/WindowStateAnimator;->preserveSurfaceLocked()V
-
     return-void
 .end method
 

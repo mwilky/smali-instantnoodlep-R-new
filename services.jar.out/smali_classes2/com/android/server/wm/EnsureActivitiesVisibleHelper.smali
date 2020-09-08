@@ -231,7 +231,7 @@
     :goto_1
     new-array v0, v8, [I
 
-    const/16 v2, 0x3e
+    const/16 v2, 0x3c
 
     aput v2, v0, v1
 
@@ -367,6 +367,18 @@
     :cond_a
     iget-object v0, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mContiner:Lcom/android/server/wm/ActivityStack;
 
+    iget-object v0, v0, Lcom/android/server/wm/ActivityStack;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
+
+    invoke-virtual {v0}, Lcom/android/server/wm/ActivityTaskManagerService;->getLockTaskModeState()I
+
+    move-result v0
+
+    const/4 v2, 0x2
+
+    if-eq v0, v2, :cond_b
+
+    iget-object v0, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mContiner:Lcom/android/server/wm/ActivityStack;
+
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityStack;->isFocusedStackOnDisplay()Z
 
     move-result v0
@@ -375,15 +387,11 @@
 
     iget-object v0, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mContiner:Lcom/android/server/wm/ActivityStack;
 
-    iget-object v0, v0, Lcom/android/server/wm/ActivityStack;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
+    invoke-virtual {v0}, Lcom/android/server/wm/ActivityStack;->getCurrentUser()I
 
-    iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
+    move-result v0
 
-    iget-object v2, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mContiner:Lcom/android/server/wm/ActivityStack;
-
-    iget v2, v2, Lcom/android/server/wm/ActivityStack;->mCurrentUser:I
-
-    invoke-virtual {v0, v2}, Lcom/android/server/wm/WindowManagerService;->isKeyguardSecure(I)Z
+    invoke-static {v0}, Lcom/android/server/wm/OpWindowManagerServiceInjector;->isKeyguardSecure(I)Z
 
     move-result v0
 
@@ -686,7 +694,7 @@
 
     iget-boolean v0, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mNotifyClients:Z
 
-    if-eqz v0, :cond_19
+    if-eqz v0, :cond_1a
 
     iget-object v0, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mStarting:Lcom/android/server/wm/ActivityRecord;
 
@@ -695,13 +703,18 @@
     goto :goto_8
 
     :cond_18
+    if-eqz v15, :cond_19
+
+    iput-boolean v8, v7, Lcom/android/server/wm/ActivityRecord;->mIsMakeFocusedStackVisible:Z
+
+    :cond_19
     iget-object v0, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mStarting:Lcom/android/server/wm/ActivityRecord;
 
     iget-boolean v1, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mNotifyClients:Z
 
     invoke-virtual {v7, v0, v1}, Lcom/android/server/wm/ActivityRecord;->makeVisibleIfNeeded(Lcom/android/server/wm/ActivityRecord;Z)V
 
-    :cond_19
+    :cond_1a
     :goto_8
     iget v0, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mConfigChanges:I
 
@@ -720,7 +733,7 @@
 
     const/4 v1, 0x5
 
-    if-ne v0, v1, :cond_1a
+    if-ne v0, v1, :cond_1b
 
     iget-boolean v1, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mContainerShouldBeVisible:Z
 
@@ -730,10 +743,10 @@
 
     goto :goto_a
 
-    :cond_1a
+    :cond_1b
     iget-boolean v1, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mBehindFullscreenActivity:Z
 
-    if-nez v1, :cond_1c
+    if-nez v1, :cond_1d
 
     iget-object v1, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mContiner:Lcom/android/server/wm/ActivityStack;
 
@@ -741,17 +754,17 @@
 
     move-result v1
 
-    if-eqz v1, :cond_1c
+    if-eqz v1, :cond_1d
 
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/ActivityRecord;->isRootOfTask()Z
 
     move-result v1
 
-    if-eqz v1, :cond_1c
+    if-eqz v1, :cond_1d
 
     sget-boolean v1, Lcom/android/server/wm/ActivityTaskManagerDebugConfig;->DEBUG_VISIBILITY:Z
 
-    if-eqz v1, :cond_1b
+    if-eqz v1, :cond_1c
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -787,10 +800,10 @@
 
     invoke-static {v11, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_1b
+    :cond_1c
     iput-boolean v8, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mBehindFullscreenActivity:Z
 
-    :cond_1c
+    :cond_1d
     :goto_a
     return-void
 .end method

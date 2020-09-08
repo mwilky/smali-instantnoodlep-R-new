@@ -80,7 +80,7 @@
 .method public abstract getWindowOwnerUserId(Landroid/os/IBinder;)I
 .end method
 
-.method public abstract hideIme(Landroid/os/IBinder;)V
+.method public abstract hideIme(Landroid/os/IBinder;I)V
 .end method
 
 .method public abstract isAnimating()Z

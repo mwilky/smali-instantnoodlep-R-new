@@ -1137,7 +1137,7 @@
 
     move-result-object v0
 
-    const v14, 0x10e008d
+    const v14, 0x10e0093
 
     invoke-virtual {v0, v14}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -3074,6 +3074,8 @@
     :goto_2
     move-object v5, v0
 
+    const-string v6, "Exception in setNetworkPermission: "
+
     if-eq v12, v5, :cond_7
 
     if-eqz v12, :cond_5
@@ -3093,11 +3095,45 @@
 
     if-nez v0, :cond_6
 
-    iget-object v0, v5, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
+    :try_start_0
+    iget-object v0, v7, Lcom/android/server/ConnectivityService;->mNMS:Landroid/os/INetworkManagementService;
 
-    invoke-direct {v7, v5, v0}, Lcom/android/server/ConnectivityService;->updateNetworkPermissions(Lcom/android/server/connectivity/NetworkAgentInfo;Landroid/net/NetworkCapabilities;)V
+    iget-object v1, v5, Lcom/android/server/connectivity/NetworkAgentInfo;->network:Landroid/net/Network;
+
+    iget v1, v1, Landroid/net/Network;->netId:I
+
+    iget-object v2, v5, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
+
+    invoke-direct {v7, v2}, Lcom/android/server/ConnectivityService;->getNetworkPermission(Landroid/net/NetworkCapabilities;)I
+
+    move-result v2
+
+    invoke-interface {v0, v1, v2}, Landroid/os/INetworkManagementService;->setNetworkPermission(II)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Landroid/os/ServiceSpecificException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_3
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
 
     :cond_6
+    :goto_3
     invoke-direct {v7, v5}, Lcom/android/server/ConnectivityService;->makeDefault(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
     iget-object v0, v7, Lcom/android/server/ConnectivityService;->mDeps:Lcom/android/server/ConnectivityService$Dependencies;
@@ -3123,7 +3159,7 @@
 
     move-result-object v0
 
-    :goto_3
+    :goto_4
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
@@ -3134,36 +3170,40 @@
 
     move-result-object v1
 
-    move-object v6, v1
+    move-object v3, v1
 
-    check-cast v6, Lcom/android/server/ConnectivityService$NetworkReassignment$RequestReassignment;
+    check-cast v3, Lcom/android/server/ConnectivityService$NetworkReassignment$RequestReassignment;
 
-    iget-object v1, v6, Lcom/android/server/ConnectivityService$NetworkReassignment$RequestReassignment;->mRequest:Lcom/android/server/ConnectivityService$NetworkRequestInfo;
+    iget-object v1, v3, Lcom/android/server/ConnectivityService$NetworkReassignment$RequestReassignment;->mRequest:Lcom/android/server/ConnectivityService$NetworkRequestInfo;
 
     iget-object v1, v1, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
 
-    iget-object v2, v6, Lcom/android/server/ConnectivityService$NetworkReassignment$RequestReassignment;->mNewNetwork:Lcom/android/server/connectivity/NetworkAgentInfo;
+    iget-object v2, v3, Lcom/android/server/ConnectivityService$NetworkReassignment$RequestReassignment;->mNewNetwork:Lcom/android/server/connectivity/NetworkAgentInfo;
 
     invoke-direct {v7, v1, v2}, Lcom/android/server/ConnectivityService;->sendUpdatedScoreToFactories(Landroid/net/NetworkRequest;Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
-    iget-object v1, v6, Lcom/android/server/ConnectivityService$NetworkReassignment$RequestReassignment;->mNewNetwork:Lcom/android/server/connectivity/NetworkAgentInfo;
+    iget-object v1, v3, Lcom/android/server/ConnectivityService$NetworkReassignment$RequestReassignment;->mNewNetwork:Lcom/android/server/connectivity/NetworkAgentInfo;
 
     if-eqz v1, :cond_8
 
-    iget-object v1, v6, Lcom/android/server/ConnectivityService$NetworkReassignment$RequestReassignment;->mNewNetwork:Lcom/android/server/connectivity/NetworkAgentInfo;
+    iget-object v1, v3, Lcom/android/server/ConnectivityService$NetworkReassignment$RequestReassignment;->mNewNetwork:Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    iget-object v2, v6, Lcom/android/server/ConnectivityService$NetworkReassignment$RequestReassignment;->mRequest:Lcom/android/server/ConnectivityService$NetworkRequestInfo;
+    iget-object v2, v3, Lcom/android/server/ConnectivityService$NetworkReassignment$RequestReassignment;->mRequest:Lcom/android/server/ConnectivityService$NetworkRequestInfo;
 
     invoke-virtual {v7, v1, v2}, Lcom/android/server/ConnectivityService;->notifyNetworkAvailable(Lcom/android/server/connectivity/NetworkAgentInfo;Lcom/android/server/ConnectivityService$NetworkRequestInfo;)V
 
-    move-object/from16 v18, v13
+    move-object/from16 v16, v0
+
+    move-object v14, v6
+
+    move-object/from16 v19, v13
 
     move-object v13, v5
 
-    goto :goto_4
+    goto :goto_5
 
     :cond_8
-    iget-object v1, v6, Lcom/android/server/ConnectivityService$NetworkReassignment$RequestReassignment;->mOldNetwork:Lcom/android/server/connectivity/NetworkAgentInfo;
+    iget-object v1, v3, Lcom/android/server/ConnectivityService$NetworkReassignment$RequestReassignment;->mOldNetwork:Lcom/android/server/connectivity/NetworkAgentInfo;
 
     iget-object v1, v1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
@@ -3173,56 +3213,72 @@
 
     if-eqz v1, :cond_9
 
-    iget-object v1, v6, Lcom/android/server/ConnectivityService$NetworkReassignment$RequestReassignment;->mRequest:Lcom/android/server/ConnectivityService$NetworkRequestInfo;
+    iget-object v1, v3, Lcom/android/server/ConnectivityService$NetworkReassignment$RequestReassignment;->mRequest:Lcom/android/server/ConnectivityService$NetworkRequestInfo;
 
-    iget-object v2, v6, Lcom/android/server/ConnectivityService$NetworkReassignment$RequestReassignment;->mOldNetwork:Lcom/android/server/connectivity/NetworkAgentInfo;
+    iget-object v2, v3, Lcom/android/server/ConnectivityService$NetworkReassignment$RequestReassignment;->mOldNetwork:Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    const v3, 0x80004
+    const v4, 0x80004
 
-    const/4 v4, 0x0
+    move-object/from16 v16, v0
 
-    invoke-direct {v7, v1, v2, v3, v4}, Lcom/android/server/ConnectivityService;->callCallbackForRequest(Lcom/android/server/ConnectivityService$NetworkRequestInfo;Lcom/android/server/connectivity/NetworkAgentInfo;II)V
+    const/4 v0, 0x0
 
-    move-object/from16 v18, v13
+    invoke-direct {v7, v1, v2, v4, v0}, Lcom/android/server/ConnectivityService;->callCallbackForRequest(Lcom/android/server/ConnectivityService$NetworkRequestInfo;Lcom/android/server/connectivity/NetworkAgentInfo;II)V
+
+    move-object v14, v6
+
+    move-object/from16 v19, v13
 
     move-object v13, v5
 
-    goto :goto_4
+    goto :goto_5
 
     :cond_9
-    iget-object v1, v6, Lcom/android/server/ConnectivityService$NetworkReassignment$RequestReassignment;->mOldNetwork:Lcom/android/server/connectivity/NetworkAgentInfo;
+    move-object/from16 v16, v0
 
-    iget-object v2, v6, Lcom/android/server/ConnectivityService$NetworkReassignment$RequestReassignment;->mRequest:Lcom/android/server/ConnectivityService$NetworkRequestInfo;
+    iget-object v1, v3, Lcom/android/server/ConnectivityService$NetworkReassignment$RequestReassignment;->mOldNetwork:Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    iget-object v2, v2, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
+    iget-object v0, v3, Lcom/android/server/ConnectivityService$NetworkReassignment$RequestReassignment;->mRequest:Lcom/android/server/ConnectivityService$NetworkRequestInfo;
 
-    iget v3, v7, Lcom/android/server/ConnectivityService;->mNonDefaultSubscriptionLingerDelayMs:I
+    iget-object v2, v0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
 
-    int-to-long v3, v3
+    iget v0, v7, Lcom/android/server/ConnectivityService;->mNonDefaultSubscriptionLingerDelayMs:I
 
-    move-wide/from16 v16, v3
+    move-object/from16 v17, v5
+
+    move-object/from16 v18, v6
+
+    int-to-long v5, v0
+
+    move-object v0, v3
 
     move-wide/from16 v3, p2
 
-    move-object/from16 v19, v6
+    move-object/from16 v19, v13
 
-    move-object/from16 v18, v13
+    move-object/from16 v13, v17
 
-    move-object v13, v5
-
-    move-wide/from16 v5, v16
+    move-object/from16 v14, v18
 
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/connectivity/NetworkAgentInfo;->lingerRequest(Landroid/net/NetworkRequest;JJ)V
 
-    :goto_4
+    :goto_5
     move-object v5, v13
 
-    move-object/from16 v13, v18
+    move-object v6, v14
 
-    goto :goto_3
+    move-object/from16 v0, v16
+
+    move-object/from16 v13, v19
+
+    move-object/from16 v14, p1
+
+    goto :goto_4
 
     :cond_a
-    move-object/from16 v18, v13
+    move-object v14, v6
+
+    move-object/from16 v19, v13
 
     move-object v13, v5
 
@@ -3236,7 +3292,7 @@
 
     move-result-object v0
 
-    :goto_5
+    :goto_6
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
@@ -3258,14 +3314,14 @@
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_b
-    goto :goto_5
+    goto :goto_6
 
     :cond_c
     invoke-interface {v10}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    :goto_6
+    :goto_7
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
@@ -3282,7 +3338,7 @@
 
     if-nez v3, :cond_d
 
-    goto :goto_6
+    goto :goto_7
 
     :cond_d
     invoke-virtual {v11, v2}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
@@ -3302,7 +3358,7 @@
     :cond_e
     invoke-direct {v7, v2}, Lcom/android/server/ConnectivityService;->processNewlySatisfiedListenRequests(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
-    goto :goto_6
+    goto :goto_7
 
     :cond_f
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/ConnectivityService$NetworkReassignment;->getRequestReassignments()Ljava/lang/Iterable;
@@ -3313,7 +3369,7 @@
 
     move-result-object v2
 
-    :goto_7
+    :goto_8
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
@@ -3356,7 +3412,7 @@
 
     if-nez v0, :cond_10
 
-    :try_start_0
+    :try_start_1
     iget-object v0, v7, Lcom/android/server/ConnectivityService;->mNMS:Landroid/os/INetworkManagementService;
 
     iget-object v4, v3, Lcom/android/server/ConnectivityService$NetworkReassignment$RequestReassignment;->mOldNetwork:Lcom/android/server/connectivity/NetworkAgentInfo;
@@ -3368,21 +3424,19 @@
     const/4 v5, 0x1
 
     invoke-interface {v0, v4, v5}, Landroid/os/INetworkManagementService;->setNetworkPermission(II)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_1
+    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
-    goto :goto_8
+    goto :goto_9
 
-    :catch_0
+    :catch_1
     move-exception v0
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "Exception in setNetworkPermission: "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -3393,15 +3447,15 @@
     invoke-static {v4}, Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
 
     :cond_10
-    :goto_8
-    goto :goto_7
+    :goto_9
+    goto :goto_8
 
     :cond_11
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    :goto_9
+    :goto_a
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
@@ -3416,7 +3470,7 @@
 
     invoke-direct {v7, v2, v8, v9}, Lcom/android/server/ConnectivityService;->notifyNetworkLosing(Lcom/android/server/connectivity/NetworkAgentInfo;J)V
 
-    goto :goto_9
+    goto :goto_a
 
     :cond_12
     invoke-direct {v7, v12, v13, v10}, Lcom/android/server/ConnectivityService;->updateLegacyTypeTrackerAndVpnLockdownForRematch(Lcom/android/server/connectivity/NetworkAgentInfo;Lcom/android/server/connectivity/NetworkAgentInfo;Ljava/util/Collection;)V
@@ -3431,7 +3485,7 @@
 
     move-result-object v0
 
-    :goto_a
+    :goto_b
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
@@ -3470,7 +3524,7 @@
 
     invoke-direct {v7, v2, v8, v9}, Lcom/android/server/ConnectivityService;->notifyNetworkLosing(Lcom/android/server/connectivity/NetworkAgentInfo;J)V
 
-    goto :goto_b
+    goto :goto_c
 
     :cond_13
     new-instance v3, Ljava/lang/StringBuilder;
@@ -3496,8 +3550,8 @@
     invoke-direct {v7, v2}, Lcom/android/server/ConnectivityService;->teardownUnneededNetwork(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
     :cond_14
-    :goto_b
-    goto :goto_a
+    :goto_c
+    goto :goto_b
 
     :cond_15
     return-void
@@ -8239,7 +8293,7 @@
 
     new-array v2, v1, [I
 
-    const/16 v3, 0x4b
+    const/16 v3, 0x49
 
     const/4 v4, 0x0
 
@@ -9118,7 +9172,7 @@
 
     const/4 v2, 0x0
 
-    const/16 v3, 0xc2
+    const/16 v3, 0xba
 
     aput v3, v1, v2
 
@@ -9284,7 +9338,7 @@
 
     const/4 v2, 0x0
 
-    const/16 v3, 0xc2
+    const/16 v3, 0xba
 
     aput v3, v1, v2
 
@@ -13678,7 +13732,7 @@
 
     const/4 v1, 0x0
 
-    const/16 v3, 0x4b
+    const/16 v3, 0x49
 
     aput v3, v0, v1
 
@@ -14370,7 +14424,7 @@
 
     invoke-virtual {v1, v0, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    const-string v0, "isActive"
+    const-string/jumbo v0, "isActive"
 
     move/from16 v12, p2
 
@@ -18675,7 +18729,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e008e
+    const v1, 0x10e0094
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -18687,7 +18741,7 @@
 
     move-result-object v1
 
-    const v2, 0x10e008f
+    const v2, 0x10e0095
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -22690,16 +22744,6 @@
 
     move-result v1
 
-    iget-object v2, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
-
-    const/16 v3, 0x24
-
-    invoke-virtual {v2, v3, v0, v1, p1}, Lcom/android/server/ConnectivityService$InternalHandler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Lcom/android/server/ConnectivityService$InternalHandler;->sendMessage(Landroid/os/Message;)Z
-
     if-nez p1, :cond_0
 
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getDefaultNetwork()Lcom/android/server/connectivity/NetworkAgentInfo;
@@ -22729,6 +22773,16 @@
     invoke-virtual {v3, v4}, Lcom/android/server/ConnectivityService$ConnectivityDiagnosticsHandler;->sendMessage(Landroid/os/Message;)Z
 
     :cond_1
+    iget-object v3, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
+
+    const/16 v4, 0x24
+
+    invoke-virtual {v3, v4, v0, v1, p1}, Lcom/android/server/ConnectivityService$InternalHandler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Lcom/android/server/ConnectivityService$InternalHandler;->sendMessage(Landroid/os/Message;)Z
+
     return-void
 .end method
 

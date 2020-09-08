@@ -3,12 +3,12 @@
 .source "ActivityManagerService.java"
 
 # interfaces
-.implements Landroid/os/IBinder$DeathRecipient;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/am/ActivityManagerService;->hang(Landroid/os/IBinder;Z)V
+    value = Lcom/android/server/am/ActivityManagerService;->getProviderMimeType(Landroid/net/Uri;I)Ljava/lang/String;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,12 +20,20 @@
 # instance fields
 .field final synthetic this$0:Lcom/android/server/am/ActivityManagerService;
 
+.field final synthetic val$providerConnection:Landroid/os/IBinder;
+
+.field final synthetic val$providerName:Landroid/content/ComponentName;
+
 
 # direct methods
-.method constructor <init>(Lcom/android/server/am/ActivityManagerService;)V
+.method constructor <init>(Lcom/android/server/am/ActivityManagerService;Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 0
 
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$17;->this$0:Lcom/android/server/am/ActivityManagerService;
+
+    iput-object p2, p0, Lcom/android/server/am/ActivityManagerService$17;->val$providerName:Landroid/content/ComponentName;
+
+    iput-object p3, p0, Lcom/android/server/am/ActivityManagerService$17;->val$providerConnection:Landroid/os/IBinder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -34,24 +42,38 @@
 
 
 # virtual methods
-.method public binderDied()V
-    .locals 1
+.method public run()V
+    .locals 2
 
-    monitor-enter p0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    :try_start_0
-    invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    monitor-exit p0
+    const-string v1, "Provider "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$17;->val$providerName:Landroid/content/ComponentName;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, " didn\'t return from getType()."
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "ActivityManager"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$17;->this$0:Lcom/android/server/am/ActivityManagerService;
+
+    iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$17;->val$providerConnection:Landroid/os/IBinder;
+
+    invoke-virtual {v0, v1}, Lcom/android/server/am/ActivityManagerService;->appNotRespondingViaProvider(Landroid/os/IBinder;)V
 
     return-void
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
 .end method

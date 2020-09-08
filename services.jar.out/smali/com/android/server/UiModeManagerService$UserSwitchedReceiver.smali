@@ -63,26 +63,51 @@
 
     move-result-object v4
 
-    invoke-static {v3, p1, v4, v1}, Lcom/android/server/UiModeManagerService;->access$1200(Lcom/android/server/UiModeManagerService;Landroid/content/Context;Landroid/content/res/Resources;I)Z
+    invoke-static {v3, p1, v4, v1}, Lcom/android/server/UiModeManagerService;->access$1400(Lcom/android/server/UiModeManagerService;Landroid/content/Context;Landroid/content/res/Resources;I)Z
 
     move-result v3
 
-    if-nez v3, :cond_0
+    if-eqz v3, :cond_0
 
-    iget-object v3, p0, Lcom/android/server/UiModeManagerService$UserSwitchedReceiver;->this$0:Lcom/android/server/UiModeManagerService;
-
-    invoke-static {v3, p1, v1}, Lcom/android/server/UiModeManagerService;->access$3800(Lcom/android/server/UiModeManagerService;Landroid/content/Context;I)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    :cond_0
     iget-object v3, p0, Lcom/android/server/UiModeManagerService$UserSwitchedReceiver;->this$0:Lcom/android/server/UiModeManagerService;
 
     invoke-virtual {v3, v2, v2}, Lcom/android/server/UiModeManagerService;->updateLocked(II)V
 
-    :cond_1
+    :cond_0
+    const-string v2, "OpUiMode"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "User Switch to U:"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v4, ", uiMode:"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v4, p0, Lcom/android/server/UiModeManagerService$UserSwitchedReceiver;->this$0:Lcom/android/server/UiModeManagerService;
+
+    invoke-static {v4}, Lcom/android/server/UiModeManagerService;->access$3800(Lcom/android/server/UiModeManagerService;)Landroid/content/res/Configuration;
+
+    move-result-object v4
+
+    iget v4, v4, Landroid/content/res/Configuration;->uiMode:I
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    nop
+
     monitor-exit v0
 
     return-void

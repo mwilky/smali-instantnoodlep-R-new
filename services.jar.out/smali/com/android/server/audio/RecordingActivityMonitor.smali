@@ -311,6 +311,8 @@
     return-void
 
     :cond_0
+    invoke-static {p1}, Lcom/android/server/wm/OpScreenModeServiceInjector;->onRecordingConfigChanged(Ljava/util/List;)V
+
     iget-object v0, p0, Lcom/android/server/audio/RecordingActivityMonitor;->mClients:Ljava/util/ArrayList;
 
     monitor-enter v0
@@ -988,6 +990,75 @@
     move-result v0
 
     return v0
+.end method
+
+.method public isRecordingActiveForUid(I)Z
+    .locals 4
+
+    iget-object v0, p0, Lcom/android/server/audio/RecordingActivityMonitor;->mRecordStates:Ljava/util/List;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lcom/android/server/audio/RecordingActivityMonitor;->mRecordStates:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/android/server/audio/RecordingActivityMonitor$RecordingState;
+
+    invoke-virtual {v2}, Lcom/android/server/audio/RecordingActivityMonitor$RecordingState;->isActiveConfiguration()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    invoke-virtual {v2}, Lcom/android/server/audio/RecordingActivityMonitor$RecordingState;->getConfig()Landroid/media/AudioRecordingConfiguration;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/media/AudioRecordingConfiguration;->getClientUid()I
+
+    move-result v3
+
+    if-ne v3, p1, :cond_0
+
+    const/4 v1, 0x1
+
+    monitor-exit v0
+
+    return v1
+
+    :cond_0
+    goto :goto_0
+
+    :cond_1
+    monitor-exit v0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
 .end method
 
 .method onAudioServerDied()V

@@ -191,6 +191,8 @@
 
 .field private mHasBeenVisible:Z
 
+.field mInRemoveTask:Z
+
 .field mLastNoHistoryActivity:Lcom/android/server/wm/ActivityRecord;
 
 .field mLastNonFullscreenBounds:Landroid/graphics/Rect;
@@ -1273,33 +1275,78 @@
 .method private static finishActivityAbove(Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/ActivityRecord;)Z
     .locals 3
 
-    if-ne p0, p1, :cond_0
-
     const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
 
     return v0
 
     :cond_0
+    sget-boolean v1, Lcom/android/server/wm/OpAppLockerInjector;->IS_APP_LOCKER_ENABLED:Z
+
+    if-eqz v1, :cond_1
+
+    iget-boolean v1, p0, Lcom/android/server/wm/ActivityRecord;->finishing:Z
+
+    if-nez v1, :cond_1
+
+    iget-object v1, p0, Lcom/android/server/wm/ActivityRecord;->packageName:Ljava/lang/String;
+
+    const-string v2, "com.oneplus.applocker"
+
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-static {p1}, Lcom/android/server/wm/OpAppLockerInjector;->isAppLocked(Lcom/android/server/wm/ActivityRecord;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "AppLocker: finishActivityAbove skip for "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "ActivityTaskManager"
+
+    invoke-static {v2, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v0
+
+    :cond_1
     iget-boolean v0, p0, Lcom/android/server/wm/ActivityRecord;->finishing:Z
 
     const/4 v1, 0x0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_3
 
     invoke-virtual {p0, v1}, Lcom/android/server/wm/ActivityRecord;->takeOptionsLocked(Z)Landroid/app/ActivityOptions;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     invoke-virtual {p1, v0}, Lcom/android/server/wm/ActivityRecord;->updateOptionsLocked(Landroid/app/ActivityOptions;)V
 
-    :cond_1
+    :cond_2
     const-string v2, "clear-task-stack"
 
     invoke-virtual {p0, v2, v1}, Lcom/android/server/wm/ActivityRecord;->finishIfPossible(Ljava/lang/String;Z)I
 
-    :cond_2
+    :cond_3
     return v1
 .end method
 
@@ -2176,7 +2223,7 @@
     return p0
 .end method
 
-.method static synthetic lambda$performClearTaskAtIndexLocked$2(Ljava/lang/String;Lcom/android/server/wm/ActivityRecord;)V
+.method static synthetic lambda$performClearTask$2(Ljava/lang/String;Lcom/android/server/wm/ActivityRecord;)V
     .locals 7
 
     iget-boolean v0, p1, Lcom/android/server/wm/ActivityRecord;->finishing:Z
@@ -2297,34 +2344,6 @@
 
     :goto_0
     return v0
-.end method
-
-.method private performClearTaskAtIndexLocked(Ljava/lang/String;)V
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/android/server/wm/Task;->getStack()Lcom/android/server/wm/ActivityStack;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Lcom/android/server/wm/-$$Lambda$Task$LjJOB-VRSJKPbno7PZFOCThTirc;
-
-    invoke-direct {v0, p0}, Lcom/android/server/wm/-$$Lambda$Task$LjJOB-VRSJKPbno7PZFOCThTirc;-><init>(Lcom/android/server/wm/Task;)V
-
-    invoke-virtual {p0, v0}, Lcom/android/server/wm/Task;->forAllActivities(Ljava/util/function/Consumer;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Lcom/android/server/wm/-$$Lambda$Task$TZa8EpS1fM9BHkBe2HWJbm9X1-8;
-
-    invoke-direct {v0, p1}, Lcom/android/server/wm/-$$Lambda$Task$TZa8EpS1fM9BHkBe2HWJbm9X1-8;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0, v0}, Lcom/android/server/wm/Task;->forAllActivities(Ljava/util/function/Consumer;)V
-
-    :goto_0
-    return-void
 .end method
 
 .method private performClearTaskLocked(Lcom/android/server/wm/ActivityRecord;I)Lcom/android/server/wm/ActivityRecord;
@@ -9086,7 +9105,7 @@
 
     const/4 v2, 0x2
 
-    if-eqz v1, :cond_17
+    if-eqz v1, :cond_18
 
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wm/Task;->isForceHidden()Z
 
@@ -9096,7 +9115,7 @@
 
     move-object/from16 v14, p0
 
-    goto/16 :goto_9
+    goto/16 :goto_8
 
     :cond_0
     const/4 v1, 0x0
@@ -9358,46 +9377,56 @@
     goto :goto_6
 
     :cond_11
-    if-eqz v7, :cond_14
+    if-eqz v7, :cond_16
 
     return v2
 
     :cond_12
-    if-eqz v6, :cond_14
+    if-eqz v6, :cond_16
 
     return v2
 
     :cond_13
-    if-nez v6, :cond_16
-
     if-eqz v7, :cond_14
 
-    goto :goto_8
+    return v2
 
     :cond_14
-    :goto_6
-    if-eqz v5, :cond_15
+    if-eqz v6, :cond_16
 
-    const/4 v11, 0x1
+    sget-boolean v2, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_STACK:Z
+
+    if-eqz v2, :cond_15
+
+    const-string v2, "WindowManager"
+
+    const-string v11, "getVisibility: make stack invisible behind translucent split-screen primary"
+
+    invoke-static {v2, v11}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_15
+    const/4 v2, 0x2
+
+    return v2
+
+    :cond_16
+    :goto_6
+    if-eqz v5, :cond_17
+
+    move v11, v2
 
     goto :goto_7
 
-    :cond_15
+    :cond_17
     const/4 v11, 0x0
 
     :goto_7
     return v11
 
-    :cond_16
-    :goto_8
-    const/4 v2, 0x1
-
-    return v2
-
-    :cond_17
+    :cond_18
     move-object/from16 v14, p0
 
-    :goto_9
+    :goto_8
     const/4 v1, 0x2
 
     return v1
@@ -10007,7 +10036,7 @@
     return-object v0
 .end method
 
-.method public synthetic lambda$performClearTaskAtIndexLocked$1$Task(Lcom/android/server/wm/ActivityRecord;)V
+.method public synthetic lambda$performClearTask$1$Task(Lcom/android/server/wm/ActivityRecord;)V
     .locals 1
 
     iget-boolean v0, p1, Lcom/android/server/wm/ActivityRecord;->finishing:Z
@@ -10940,6 +10969,34 @@
     return v2
 .end method
 
+.method performClearTask(Ljava/lang/String;)V
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/android/server/wm/Task;->getStack()Lcom/android/server/wm/ActivityStack;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lcom/android/server/wm/-$$Lambda$Task$iKnNpBBRFRHs1rtFSWGK99Fqn1E;
+
+    invoke-direct {v0, p0}, Lcom/android/server/wm/-$$Lambda$Task$iKnNpBBRFRHs1rtFSWGK99Fqn1E;-><init>(Lcom/android/server/wm/Task;)V
+
+    invoke-virtual {p0, v0}, Lcom/android/server/wm/Task;->forAllActivities(Ljava/util/function/Consumer;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lcom/android/server/wm/-$$Lambda$Task$s8aJAJv5Mq4hljFdutdcLenli4o;
+
+    invoke-direct {v0, p1}, Lcom/android/server/wm/-$$Lambda$Task$s8aJAJv5Mq4hljFdutdcLenli4o;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0, v0}, Lcom/android/server/wm/Task;->forAllActivities(Ljava/util/function/Consumer;)V
+
+    :goto_0
+    return-void
+.end method
+
 .method performClearTaskForReuseLocked(Lcom/android/server/wm/ActivityRecord;I)Lcom/android/server/wm/ActivityRecord;
     .locals 2
 
@@ -10967,7 +11024,7 @@
 
     const-string v0, "clear-task-all"
 
-    invoke-direct {p0, v0}, Lcom/android/server/wm/Task;->performClearTaskAtIndexLocked(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/android/server/wm/Task;->performClearTask(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -11236,10 +11293,6 @@
 
 .method removeChild(Lcom/android/server/wm/WindowContainer;Ljava/lang/String;)V
     .locals 3
-
-    iget-object v0, p0, Lcom/android/server/wm/Task;->mTaskOrganizer:Landroid/window/ITaskOrganizer;
-
-    if-eqz v0, :cond_0
 
     iget-boolean v0, p0, Lcom/android/server/wm/Task;->mCreatedByOrganizer:Z
 
@@ -11554,14 +11607,6 @@
     invoke-virtual {p0, v0}, Lcom/android/server/wm/Task;->setTaskOrganizer(Landroid/window/ITaskOrganizer;)Z
 
     invoke-super {p0}, Lcom/android/server/wm/WindowContainer;->removeImmediately()V
-
-    return-void
-.end method
-
-.method removeTaskActivitiesLocked(Ljava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/server/wm/Task;->performClearTaskAtIndexLocked(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -13591,9 +13636,15 @@
 .end method
 
 .method setMainWindowSizeChangeTransaction(Landroid/view/SurfaceControl$Transaction;)V
-    .locals 0
+    .locals 2
 
     invoke-direct {p0, p1, p0}, Lcom/android/server/wm/Task;->setMainWindowSizeChangeTransaction(Landroid/view/SurfaceControl$Transaction;Lcom/android/server/wm/Task;)V
+
+    sget-object v0, Lcom/android/server/wm/-$$Lambda$6CGpg-bvz7DUll5JEZwd1mT8fPQ;->INSTANCE:Lcom/android/server/wm/-$$Lambda$6CGpg-bvz7DUll5JEZwd1mT8fPQ;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p0, v0, v1}, Lcom/android/server/wm/Task;->forAllWindows(Ljava/util/function/Consumer;Z)V
 
     return-void
 .end method

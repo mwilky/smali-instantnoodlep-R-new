@@ -39,7 +39,7 @@
 
     iget-object v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonServer$HoustonGlobalConfigUpdater;->this$0:Lcom/oneplus/houston/apkserver/bridge/HoustonServer;
 
-    invoke-static {v0, p1}, Lcom/oneplus/houston/apkserver/bridge/HoustonServer;->access$400(Lcom/oneplus/houston/apkserver/bridge/HoustonServer;Lorg/json/JSONArray;)V
+    invoke-static {v0, p1}, Lcom/oneplus/houston/apkserver/bridge/HoustonServer;->access$500(Lcom/oneplus/houston/apkserver/bridge/HoustonServer;Lorg/json/JSONArray;)V
 
     return-void
 .end method

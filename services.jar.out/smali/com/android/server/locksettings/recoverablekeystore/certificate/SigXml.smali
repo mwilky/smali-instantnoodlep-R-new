@@ -139,7 +139,7 @@
         }
     .end annotation
 
-    const-string v0, "intermediates"
+    const-string/jumbo v0, "intermediates"
 
     const-string v1, "cert"
 

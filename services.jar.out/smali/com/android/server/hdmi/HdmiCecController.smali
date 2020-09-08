@@ -9,6 +9,7 @@
         Lcom/android/server/hdmi/HdmiCecController$HotplugHistoryRecord;,
         Lcom/android/server/hdmi/HdmiCecController$MessageHistoryRecord;,
         Lcom/android/server/hdmi/HdmiCecController$Dumpable;,
+        Lcom/android/server/hdmi/HdmiCecController$HdmiCecCallback;,
         Lcom/android/server/hdmi/HdmiCecController$NativeWrapperImpl;,
         Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;,
         Lcom/android/server/hdmi/HdmiCecController$AllocateAddressCallback;
@@ -18,6 +19,10 @@
 
 # static fields
 .field private static final EMPTY_BODY:[B
+
+.field protected static final HDMI_CEC_HAL_DEATH_COOKIE:I = 0x161
+
+.field private static final INVALID_PHYSICAL_ADDRESS:I = 0xffff
 
 .field private static final MAX_HDMI_MESSAGE_HISTORY:I = 0xfa
 
@@ -50,8 +55,6 @@
         }
     .end annotation
 .end field
-
-.field private volatile mNativePtr:J
 
 .field private final mNativeWrapperImpl:Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;
 
@@ -159,114 +162,12 @@
     return v0
 .end method
 
-.method static synthetic access$1000(JII[B)I
-    .locals 1
-
-    invoke-static {p0, p1, p2, p3, p4}, Lcom/android/server/hdmi/HdmiCecController;->nativeSendCecCommand(JII[B)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method static synthetic access$1100(JI)I
-    .locals 1
-
-    invoke-static {p0, p1, p2}, Lcom/android/server/hdmi/HdmiCecController;->nativeAddLogicalAddress(JI)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method static synthetic access$1200(J)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/android/server/hdmi/HdmiCecController;->nativeClearLogicalAddress(J)V
-
-    return-void
-.end method
-
-.method static synthetic access$1300(J)I
-    .locals 1
-
-    invoke-static {p0, p1}, Lcom/android/server/hdmi/HdmiCecController;->nativeGetPhysicalAddress(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method static synthetic access$1400(J)I
-    .locals 1
-
-    invoke-static {p0, p1}, Lcom/android/server/hdmi/HdmiCecController;->nativeGetVersion(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method static synthetic access$1500(J)I
-    .locals 1
-
-    invoke-static {p0, p1}, Lcom/android/server/hdmi/HdmiCecController;->nativeGetVendorId(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method static synthetic access$1600(J)[Landroid/hardware/hdmi/HdmiPortInfo;
-    .locals 1
-
-    invoke-static {p0, p1}, Lcom/android/server/hdmi/HdmiCecController;->nativeGetPortInfos(J)[Landroid/hardware/hdmi/HdmiPortInfo;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method static synthetic access$1700(JIZ)V
-    .locals 0
-
-    invoke-static {p0, p1, p2, p3}, Lcom/android/server/hdmi/HdmiCecController;->nativeSetOption(JIZ)V
-
-    return-void
-.end method
-
-.method static synthetic access$1800(JLjava/lang/String;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/android/server/hdmi/HdmiCecController;->nativeSetLanguage(JLjava/lang/String;)V
-
-    return-void
-.end method
-
-.method static synthetic access$1900(JIZ)V
-    .locals 0
-
-    invoke-static {p0, p1, p2, p3}, Lcom/android/server/hdmi/HdmiCecController;->nativeEnableAudioReturnChannel(JIZ)V
-
-    return-void
-.end method
-
 .method static synthetic access$200(Lcom/android/server/hdmi/HdmiCecController;IILcom/android/server/hdmi/HdmiCecController$AllocateAddressCallback;)V
     .locals 0
 
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/hdmi/HdmiCecController;->handleAllocateLogicalAddress(IILcom/android/server/hdmi/HdmiCecController$AllocateAddressCallback;)V
 
     return-void
-.end method
-
-.method static synthetic access$2000(JI)Z
-    .locals 1
-
-    invoke-static {p0, p1, p2}, Lcom/android/server/hdmi/HdmiCecController;->nativeIsConnected(JI)Z
-
-    move-result v0
-
-    return v0
 .end method
 
 .method static synthetic access$300(Lcom/android/server/hdmi/HdmiCecController;III)Z
@@ -305,15 +206,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$700(Lcom/android/server/hdmi/HdmiCecController;)J
-    .locals 2
-
-    iget-wide v0, p0, Lcom/android/server/hdmi/HdmiCecController;->mNativePtr:J
-
-    return-wide v0
-.end method
-
-.method static synthetic access$800(Lcom/android/server/hdmi/HdmiCecController;)Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;
+.method static synthetic access$700(Lcom/android/server/hdmi/HdmiCecController;)Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecController;->mNativeWrapperImpl:Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;
@@ -321,14 +214,20 @@
     return-object v0
 .end method
 
-.method static synthetic access$900(Lcom/android/server/hdmi/HdmiCecController;Landroid/os/MessageQueue;)J
-    .locals 2
+.method static synthetic access$800(Lcom/android/server/hdmi/HdmiCecController;IZ)V
+    .locals 0
 
-    invoke-static {p0, p1}, Lcom/android/server/hdmi/HdmiCecController;->nativeInit(Lcom/android/server/hdmi/HdmiCecController;Landroid/os/MessageQueue;)J
+    invoke-direct {p0, p1, p2}, Lcom/android/server/hdmi/HdmiCecController;->handleHotplug(IZ)V
 
-    move-result-wide v0
+    return-void
+.end method
 
-    return-wide v0
+.method static synthetic access$900(Lcom/android/server/hdmi/HdmiCecController;II[B)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2, p3}, Lcom/android/server/hdmi/HdmiCecController;->handleIncomingCecCommand(II[B)V
+
+    return-void
 .end method
 
 .method private addCecMessageToHistory(ZLcom/android/server/hdmi/HdmiCecMessage;)V
@@ -481,40 +380,32 @@
 .end method
 
 .method static createWithNativeWrapper(Lcom/android/server/hdmi/HdmiControlService;Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;)Lcom/android/server/hdmi/HdmiCecController;
-    .locals 5
+    .locals 4
 
     new-instance v0, Lcom/android/server/hdmi/HdmiCecController;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/hdmi/HdmiCecController;-><init>(Lcom/android/server/hdmi/HdmiControlService;Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;)V
 
-    nop
-
-    invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiControlService;->getServiceLooper()Landroid/os/Looper;
+    invoke-interface {p1}, Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;->nativeInit()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/os/Looper;->getQueue()Landroid/os/MessageQueue;
+    if-nez v1, :cond_0
 
-    move-result-object v1
+    const/4 v2, 0x0
 
-    invoke-interface {p1, v0, v1}, Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;->nativeInit(Lcom/android/server/hdmi/HdmiCecController;Landroid/os/MessageQueue;)J
+    new-array v2, v2, [Ljava/lang/Object;
 
-    move-result-wide v1
+    const-string v3, "Couldn\'t get tv.cec service."
 
-    const-wide/16 v3, 0x0
+    invoke-static {v3, v2}, Lcom/android/server/hdmi/HdmiLogger;->warning(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    cmp-long v3, v1, v3
+    const/4 v2, 0x0
 
-    if-nez v3, :cond_0
-
-    const/4 v0, 0x0
-
-    const/4 v3, 0x0
-
-    return-object v3
+    return-object v2
 
     :cond_0
-    invoke-direct {v0, v1, v2}, Lcom/android/server/hdmi/HdmiCecController;->init(J)V
+    invoke-direct {v0, p1}, Lcom/android/server/hdmi/HdmiCecController;->init(Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;)V
 
     return-object v0
 .end method
@@ -750,7 +641,7 @@
     return-void
 .end method
 
-.method private init(J)V
+.method private init(Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;)V
     .locals 2
 
     new-instance v0, Landroid/os/Handler;
@@ -777,7 +668,11 @@
 
     iput-object v0, p0, Lcom/android/server/hdmi/HdmiCecController;->mControlHandler:Landroid/os/Handler;
 
-    iput-wide p1, p0, Lcom/android/server/hdmi/HdmiCecController;->mNativePtr:J
+    new-instance v0, Lcom/android/server/hdmi/HdmiCecController$HdmiCecCallback;
+
+    invoke-direct {v0, p0}, Lcom/android/server/hdmi/HdmiCecController$HdmiCecCallback;-><init>(Lcom/android/server/hdmi/HdmiCecController;)V
+
+    invoke-interface {p1, v0}, Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;->setCallback(Lcom/android/server/hdmi/HdmiCecController$HdmiCecCallback;)V
 
     return-void
 .end method
@@ -1133,7 +1028,7 @@
 .end method
 
 .method private sendPollMessage(III)Z
-    .locals 8
+    .locals 6
     .annotation runtime Lcom/android/server/hdmi/HdmiAnnotations$IoThreadOnly;
     .end annotation
 
@@ -1148,15 +1043,9 @@
 
     iget-object v2, p0, Lcom/android/server/hdmi/HdmiCecController;->mNativeWrapperImpl:Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;
 
-    iget-wide v3, p0, Lcom/android/server/hdmi/HdmiCecController;->mNativePtr:J
+    sget-object v3, Lcom/android/server/hdmi/HdmiCecController;->EMPTY_BODY:[B
 
-    sget-object v7, Lcom/android/server/hdmi/HdmiCecController;->EMPTY_BODY:[B
-
-    move v5, p1
-
-    move v6, p2
-
-    invoke-interface/range {v2 .. v7}, Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;->nativeSendCecCommand(JII[B)I
+    invoke-interface {v2, p1, p2, v3}, Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;->nativeSendCecCommand(II[B)I
 
     move-result v2
 
@@ -1223,7 +1112,7 @@
 .end method
 
 .method addLogicalAddress(I)I
-    .locals 3
+    .locals 1
     .annotation runtime Lcom/android/server/hdmi/HdmiAnnotations$ServiceThreadOnly;
     .end annotation
 
@@ -1237,9 +1126,7 @@
 
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecController;->mNativeWrapperImpl:Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;
 
-    iget-wide v1, p0, Lcom/android/server/hdmi/HdmiCecController;->mNativePtr:J
-
-    invoke-interface {v0, v1, v2, p1}, Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;->nativeAddLogicalAddress(JI)I
+    invoke-interface {v0, p1}, Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;->nativeAddLogicalAddress(I)I
 
     move-result v0
 
@@ -1282,7 +1169,7 @@
 .end method
 
 .method clearLogicalAddress()V
-    .locals 3
+    .locals 2
     .annotation runtime Lcom/android/server/hdmi/HdmiAnnotations$ServiceThreadOnly;
     .end annotation
 
@@ -1316,9 +1203,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecController;->mNativeWrapperImpl:Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;
 
-    iget-wide v1, p0, Lcom/android/server/hdmi/HdmiCecController;->mNativePtr:J
-
-    invoke-interface {v0, v1, v2}, Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;->nativeClearLogicalAddress(J)V
+    invoke-interface {v0}, Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;->nativeClearLogicalAddress()V
 
     return-void
 .end method
@@ -1424,7 +1309,7 @@
 .end method
 
 .method enableAudioReturnChannel(IZ)V
-    .locals 3
+    .locals 1
     .annotation runtime Lcom/android/server/hdmi/HdmiAnnotations$ServiceThreadOnly;
     .end annotation
 
@@ -1432,9 +1317,7 @@
 
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecController;->mNativeWrapperImpl:Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;
 
-    iget-wide v1, p0, Lcom/android/server/hdmi/HdmiCecController;->mNativePtr:J
-
-    invoke-interface {v0, v1, v2, p1, p2}, Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;->nativeEnableAudioReturnChannel(JIZ)V
+    invoke-interface {v0, p1, p2}, Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;->nativeEnableAudioReturnChannel(IZ)V
 
     return-void
 .end method
@@ -1495,7 +1378,7 @@
 .end method
 
 .method getPhysicalAddress()I
-    .locals 3
+    .locals 1
     .annotation runtime Lcom/android/server/hdmi/HdmiAnnotations$ServiceThreadOnly;
     .end annotation
 
@@ -1503,9 +1386,7 @@
 
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecController;->mNativeWrapperImpl:Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;
 
-    iget-wide v1, p0, Lcom/android/server/hdmi/HdmiCecController;->mNativePtr:J
-
-    invoke-interface {v0, v1, v2}, Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;->nativeGetPhysicalAddress(J)I
+    invoke-interface {v0}, Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;->nativeGetPhysicalAddress()I
 
     move-result v0
 
@@ -1513,13 +1394,11 @@
 .end method
 
 .method getPortInfos()[Landroid/hardware/hdmi/HdmiPortInfo;
-    .locals 3
+    .locals 1
 
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecController;->mNativeWrapperImpl:Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;
 
-    iget-wide v1, p0, Lcom/android/server/hdmi/HdmiCecController;->mNativePtr:J
-
-    invoke-interface {v0, v1, v2}, Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;->nativeGetPortInfos(J)[Landroid/hardware/hdmi/HdmiPortInfo;
+    invoke-interface {v0}, Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;->nativeGetPortInfos()[Landroid/hardware/hdmi/HdmiPortInfo;
 
     move-result-object v0
 
@@ -1527,7 +1406,7 @@
 .end method
 
 .method getVendorId()I
-    .locals 3
+    .locals 1
     .annotation runtime Lcom/android/server/hdmi/HdmiAnnotations$ServiceThreadOnly;
     .end annotation
 
@@ -1535,9 +1414,7 @@
 
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecController;->mNativeWrapperImpl:Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;
 
-    iget-wide v1, p0, Lcom/android/server/hdmi/HdmiCecController;->mNativePtr:J
-
-    invoke-interface {v0, v1, v2}, Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;->nativeGetVendorId(J)I
+    invoke-interface {v0}, Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;->nativeGetVendorId()I
 
     move-result v0
 
@@ -1545,7 +1422,7 @@
 .end method
 
 .method getVersion()I
-    .locals 3
+    .locals 1
     .annotation runtime Lcom/android/server/hdmi/HdmiAnnotations$ServiceThreadOnly;
     .end annotation
 
@@ -1553,9 +1430,7 @@
 
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecController;->mNativeWrapperImpl:Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;
 
-    iget-wide v1, p0, Lcom/android/server/hdmi/HdmiCecController;->mNativePtr:J
-
-    invoke-interface {v0, v1, v2}, Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;->nativeGetVersion(J)I
+    invoke-interface {v0}, Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;->nativeGetVersion()I
 
     move-result v0
 
@@ -1563,7 +1438,7 @@
 .end method
 
 .method isConnected(I)Z
-    .locals 3
+    .locals 1
     .annotation runtime Lcom/android/server/hdmi/HdmiAnnotations$ServiceThreadOnly;
     .end annotation
 
@@ -1571,9 +1446,7 @@
 
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecController;->mNativeWrapperImpl:Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;
 
-    iget-wide v1, p0, Lcom/android/server/hdmi/HdmiCecController;->mNativePtr:J
-
-    invoke-interface {v0, v1, v2, p1}, Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;->nativeIsConnected(JI)Z
+    invoke-interface {v0, p1}, Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;->nativeIsConnected(I)Z
 
     move-result v0
 
@@ -1693,7 +1566,7 @@
 .end method
 
 .method setLanguage(Ljava/lang/String;)V
-    .locals 3
+    .locals 1
     .annotation runtime Lcom/android/server/hdmi/HdmiAnnotations$ServiceThreadOnly;
     .end annotation
 
@@ -1710,9 +1583,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecController;->mNativeWrapperImpl:Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;
 
-    iget-wide v1, p0, Lcom/android/server/hdmi/HdmiCecController;->mNativePtr:J
-
-    invoke-interface {v0, v1, v2, p1}, Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;->nativeSetLanguage(JLjava/lang/String;)V
+    invoke-interface {v0, p1}, Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;->nativeSetLanguage(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1750,9 +1621,7 @@
 
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecController;->mNativeWrapperImpl:Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;
 
-    iget-wide v1, p0, Lcom/android/server/hdmi/HdmiCecController;->mNativePtr:J
-
-    invoke-interface {v0, v1, v2, p1, p2}, Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;->nativeSetOption(JIZ)V
+    invoke-interface {v0, p1, p2}, Lcom/android/server/hdmi/HdmiCecController$NativeWrapper;->nativeSetOption(IZ)V
 
     return-void
 .end method

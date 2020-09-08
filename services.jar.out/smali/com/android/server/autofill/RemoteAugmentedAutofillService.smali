@@ -122,10 +122,10 @@
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/server/autofill/RemoteAugmentedAutofillService;ILandroid/view/inputmethod/InlineSuggestionsRequest;Ljava/util/List;Landroid/os/Bundle;Landroid/view/autofill/AutofillId;Landroid/view/autofill/AutofillValue;Ljava/util/function/Function;Landroid/view/autofill/IAutoFillManagerClient;Ljava/lang/Runnable;Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;)V
+.method static synthetic access$200(Lcom/android/server/autofill/RemoteAugmentedAutofillService;ILandroid/view/inputmethod/InlineSuggestionsRequest;Ljava/util/List;Landroid/os/Bundle;Landroid/view/autofill/AutofillId;Landroid/view/autofill/AutofillValue;Ljava/util/function/Function;Landroid/view/autofill/IAutoFillManagerClient;Ljava/lang/Runnable;Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;I)V
     .locals 0
 
-    invoke-direct/range {p0 .. p10}, Lcom/android/server/autofill/RemoteAugmentedAutofillService;->maybeRequestShowInlineSuggestions(ILandroid/view/inputmethod/InlineSuggestionsRequest;Ljava/util/List;Landroid/os/Bundle;Landroid/view/autofill/AutofillId;Landroid/view/autofill/AutofillValue;Ljava/util/function/Function;Landroid/view/autofill/IAutoFillManagerClient;Ljava/lang/Runnable;Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;)V
+    invoke-direct/range {p0 .. p11}, Lcom/android/server/autofill/RemoteAugmentedAutofillService;->maybeRequestShowInlineSuggestions(ILandroid/view/inputmethod/InlineSuggestionsRequest;Ljava/util/List;Landroid/os/Bundle;Landroid/view/autofill/AutofillId;Landroid/view/autofill/AutofillValue;Ljava/util/function/Function;Landroid/view/autofill/IAutoFillManagerClient;Ljava/lang/Runnable;Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;I)V
 
     return-void
 .end method
@@ -277,8 +277,8 @@
     return-void
 .end method
 
-.method private maybeRequestShowInlineSuggestions(ILandroid/view/inputmethod/InlineSuggestionsRequest;Ljava/util/List;Landroid/os/Bundle;Landroid/view/autofill/AutofillId;Landroid/view/autofill/AutofillValue;Ljava/util/function/Function;Landroid/view/autofill/IAutoFillManagerClient;Ljava/lang/Runnable;Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;)V
-    .locals 16
+.method private maybeRequestShowInlineSuggestions(ILandroid/view/inputmethod/InlineSuggestionsRequest;Ljava/util/List;Landroid/os/Bundle;Landroid/view/autofill/AutofillId;Landroid/view/autofill/AutofillValue;Ljava/util/function/Function;Landroid/view/autofill/IAutoFillManagerClient;Ljava/lang/Runnable;Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;I)V
+    .locals 17
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -296,15 +296,15 @@
             "Landroid/view/autofill/IAutoFillManagerClient;",
             "Ljava/lang/Runnable;",
             "Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;",
-            ")V"
+            "I)V"
         }
     .end annotation
 
     move-object/from16 v7, p0
 
-    move/from16 v8, p1
+    move/from16 v15, p1
 
-    move-object/from16 v15, p7
+    move-object/from16 v14, p7
 
     if-eqz p3, :cond_3
 
@@ -314,22 +314,24 @@
 
     if-nez v0, :cond_3
 
-    if-eqz v15, :cond_3
+    if-eqz v14, :cond_3
 
     if-eqz p2, :cond_3
 
     if-nez p10, :cond_0
 
-    move-object/from16 v3, p4
+    move-object/from16 v4, p4
 
-    move-object v0, v15
+    move-object v0, v14
+
+    move v1, v15
 
     goto :goto_2
 
     :cond_0
     iget-object v0, v7, Lcom/android/server/autofill/RemoteAugmentedAutofillService;->mCallbacks:Lcom/android/server/autofill/RemoteAugmentedAutofillService$RemoteAugmentedAutofillServiceCallbacks;
 
-    invoke-interface {v0, v8}, Lcom/android/server/autofill/RemoteAugmentedAutofillService$RemoteAugmentedAutofillServiceCallbacks;->setLastResponse(I)V
+    invoke-interface {v0, v15}, Lcom/android/server/autofill/RemoteAugmentedAutofillService$RemoteAugmentedAutofillServiceCallbacks;->setLastResponse(I)V
 
     if-eqz p6, :cond_1
 
@@ -353,11 +355,11 @@
     const/4 v0, 0x0
 
     :goto_0
-    move-object v12, v0
+    move-object v11, v0
 
-    new-instance v13, Lcom/android/server/autofill/RemoteAugmentedAutofillService$2;
+    new-instance v12, Lcom/android/server/autofill/RemoteAugmentedAutofillService$2;
 
-    move-object v0, v13
+    move-object v0, v12
 
     move-object/from16 v1, p0
 
@@ -373,52 +375,60 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/server/autofill/RemoteAugmentedAutofillService$2;-><init>(Lcom/android/server/autofill/RemoteAugmentedAutofillService;ILandroid/os/Bundle;Landroid/view/autofill/IAutoFillManagerClient;Ljava/util/function/Function;Landroid/view/autofill/AutofillId;)V
 
-    move-object/from16 v9, p2
+    move-object/from16 v8, p2
 
-    move-object/from16 v10, p3
+    move-object/from16 v9, p3
 
-    move-object/from16 v11, p5
+    move-object/from16 v10, p5
 
-    move-object/from16 v14, p9
+    move-object/from16 v13, p9
 
-    move-object v0, v15
+    move-object v0, v14
 
-    move-object/from16 v15, p10
+    move-object/from16 v14, p10
 
-    invoke-static/range {v9 .. v15}, Lcom/android/server/autofill/ui/InlineFillUi;->forAugmentedAutofill(Landroid/view/inputmethod/InlineSuggestionsRequest;Ljava/util/List;Landroid/view/autofill/AutofillId;Ljava/lang/String;Lcom/android/server/autofill/ui/InlineFillUi$InlineSuggestionUiCallback;Ljava/lang/Runnable;Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;)Lcom/android/server/autofill/ui/InlineFillUi;
+    move v1, v15
 
-    move-result-object v1
+    move/from16 v15, p11
 
-    invoke-interface {v0, v1}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    move/from16 v16, p1
+
+    invoke-static/range {v8 .. v16}, Lcom/android/server/autofill/ui/InlineFillUi;->forAugmentedAutofill(Landroid/view/inputmethod/InlineSuggestionsRequest;Ljava/util/List;Landroid/view/autofill/AutofillId;Ljava/lang/String;Lcom/android/server/autofill/ui/InlineFillUi$InlineSuggestionUiCallback;Ljava/lang/Runnable;Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;II)Lcom/android/server/autofill/ui/InlineFillUi;
 
     move-result-object v2
 
-    check-cast v2, Ljava/lang/Boolean;
+    invoke-interface {v0, v2}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+    move-result-object v3
 
-    move-result v2
+    check-cast v3, Ljava/lang/Boolean;
 
-    if-eqz v2, :cond_2
+    invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
 
-    iget-object v2, v7, Lcom/android/server/autofill/RemoteAugmentedAutofillService;->mCallbacks:Lcom/android/server/autofill/RemoteAugmentedAutofillService$RemoteAugmentedAutofillServiceCallbacks;
+    move-result v3
 
-    move-object/from16 v3, p4
+    if-eqz v3, :cond_2
 
-    invoke-interface {v2, v8, v3}, Lcom/android/server/autofill/RemoteAugmentedAutofillService$RemoteAugmentedAutofillServiceCallbacks;->logAugmentedAutofillShown(ILandroid/os/Bundle;)V
+    iget-object v3, v7, Lcom/android/server/autofill/RemoteAugmentedAutofillService;->mCallbacks:Lcom/android/server/autofill/RemoteAugmentedAutofillService$RemoteAugmentedAutofillServiceCallbacks;
+
+    move-object/from16 v4, p4
+
+    invoke-interface {v3, v1, v4}, Lcom/android/server/autofill/RemoteAugmentedAutofillService$RemoteAugmentedAutofillServiceCallbacks;->logAugmentedAutofillShown(ILandroid/os/Bundle;)V
 
     goto :goto_1
 
     :cond_2
-    move-object/from16 v3, p4
+    move-object/from16 v4, p4
 
     :goto_1
     return-void
 
     :cond_3
-    move-object/from16 v3, p4
+    move-object/from16 v4, p4
 
-    move-object v0, v15
+    move-object v0, v14
+
+    move v1, v15
 
     :goto_2
     if-eqz v0, :cond_4
@@ -427,9 +437,9 @@
 
     invoke-static/range {p5 .. p5}, Lcom/android/server/autofill/ui/InlineFillUi;->emptyUi(Landroid/view/autofill/AutofillId;)Lcom/android/server/autofill/ui/InlineFillUi;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-interface {v0, v1}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_4
     return-void
@@ -476,8 +486,8 @@
     return-object v0
 .end method
 
-.method public synthetic lambda$onRequestAutofillLocked$0$RemoteAugmentedAutofillService(Landroid/view/autofill/IAutoFillManagerClient;IILandroid/content/ComponentName;Landroid/view/autofill/AutofillId;Landroid/view/autofill/AutofillValue;JLandroid/view/inputmethod/InlineSuggestionsRequest;Ljava/util/function/Function;Ljava/lang/Runnable;Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;Ljava/util/concurrent/atomic/AtomicReference;Landroid/service/autofill/augmented/IAugmentedAutofillService;)Ljava/util/concurrent/CompletableFuture;
-    .locals 19
+.method public synthetic lambda$onRequestAutofillLocked$0$RemoteAugmentedAutofillService(Landroid/view/autofill/IAutoFillManagerClient;IILandroid/content/ComponentName;Landroid/view/autofill/AutofillId;Landroid/view/autofill/AutofillValue;JLandroid/view/inputmethod/InlineSuggestionsRequest;Ljava/util/function/Function;Ljava/lang/Runnable;Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;ILjava/util/concurrent/atomic/AtomicReference;Landroid/service/autofill/augmented/IAugmentedAutofillService;)Ljava/util/concurrent/CompletableFuture;
+    .locals 20
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -508,31 +518,33 @@
 
     move-object/from16 v14, p12
 
-    move-object/from16 v16, p13
+    move/from16 v15, p13
 
-    move-object/from16 v2, p14
+    move-object/from16 v17, p14
+
+    move-object/from16 v2, p15
 
     new-instance v0, Lcom/android/internal/infra/AndroidFuture;
 
     invoke-direct {v0}, Lcom/android/internal/infra/AndroidFuture;-><init>()V
 
-    move-object/from16 v17, v0
+    move-object/from16 v18, v0
 
-    move-object/from16 v15, v17
+    move-object/from16 v16, v18
 
     new-instance v0, Lcom/android/server/autofill/RemoteAugmentedAutofillService$1;
 
-    move-object/from16 v18, v0
+    move-object/from16 v19, v0
 
-    invoke-direct/range {v0 .. v16}, Lcom/android/server/autofill/RemoteAugmentedAutofillService$1;-><init>(Lcom/android/server/autofill/RemoteAugmentedAutofillService;Landroid/service/autofill/augmented/IAugmentedAutofillService;IILandroid/content/ComponentName;Landroid/view/autofill/AutofillId;Landroid/view/autofill/AutofillValue;JLandroid/view/inputmethod/InlineSuggestionsRequest;Ljava/util/function/Function;Landroid/view/autofill/IAutoFillManagerClient;Ljava/lang/Runnable;Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;Lcom/android/internal/infra/AndroidFuture;Ljava/util/concurrent/atomic/AtomicReference;)V
+    invoke-direct/range {v0 .. v17}, Lcom/android/server/autofill/RemoteAugmentedAutofillService$1;-><init>(Lcom/android/server/autofill/RemoteAugmentedAutofillService;Landroid/service/autofill/augmented/IAugmentedAutofillService;IILandroid/content/ComponentName;Landroid/view/autofill/AutofillId;Landroid/view/autofill/AutofillValue;JLandroid/view/inputmethod/InlineSuggestionsRequest;Ljava/util/function/Function;Landroid/view/autofill/IAutoFillManagerClient;Ljava/lang/Runnable;Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;ILcom/android/internal/infra/AndroidFuture;Ljava/util/concurrent/atomic/AtomicReference;)V
 
     move-object/from16 v0, p1
 
-    move-object/from16 v1, v18
+    move-object/from16 v1, v19
 
     invoke-interface {v0, v1}, Landroid/view/autofill/IAutoFillManagerClient;->getAugmentedAutofillClient(Lcom/android/internal/os/IResultReceiver;)V
 
-    return-object v17
+    return-object v18
 .end method
 
 .method public synthetic lambda$onRequestAutofillLocked$1$RemoteAugmentedAutofillService(Ljava/util/concurrent/atomic/AtomicReference;Landroid/content/ComponentName;ILjava/lang/Void;Ljava/lang/Throwable;)V
@@ -653,8 +665,8 @@
     return-void
 .end method
 
-.method public onRequestAutofillLocked(ILandroid/view/autofill/IAutoFillManagerClient;ILandroid/content/ComponentName;Landroid/view/autofill/AutofillId;Landroid/view/autofill/AutofillValue;Landroid/view/inputmethod/InlineSuggestionsRequest;Ljava/util/function/Function;Ljava/lang/Runnable;Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;)V
-    .locals 19
+.method public onRequestAutofillLocked(ILandroid/view/autofill/IAutoFillManagerClient;ILandroid/content/ComponentName;Landroid/view/autofill/AutofillId;Landroid/view/autofill/AutofillValue;Landroid/view/inputmethod/InlineSuggestionsRequest;Ljava/util/function/Function;Ljava/lang/Runnable;Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;I)V
+    .locals 20
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -670,7 +682,7 @@
             ">;",
             "Ljava/lang/Runnable;",
             "Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;",
-            ")V"
+            "I)V"
         }
     .end annotation
 
@@ -686,7 +698,7 @@
 
     move-object v14, v0
 
-    new-instance v13, Lcom/android/server/autofill/-$$Lambda$RemoteAugmentedAutofillService$-Icm1WEZLv2n19GTOHkDYaCS_Oc;
+    new-instance v13, Lcom/android/server/autofill/-$$Lambda$RemoteAugmentedAutofillService$KCteNuX64yYMsA9ZYdqL9Q0ZJsw;
 
     move-object v0, v13
 
@@ -712,17 +724,21 @@
 
     move-object/from16 v12, p9
 
-    move-object v15, v13
+    move-object/from16 v18, v13
 
     move-object/from16 v13, p10
 
-    move-object/from16 v18, v14
+    move-object/from16 v19, v14
 
-    invoke-direct/range {v0 .. v14}, Lcom/android/server/autofill/-$$Lambda$RemoteAugmentedAutofillService$-Icm1WEZLv2n19GTOHkDYaCS_Oc;-><init>(Lcom/android/server/autofill/RemoteAugmentedAutofillService;Landroid/view/autofill/IAutoFillManagerClient;IILandroid/content/ComponentName;Landroid/view/autofill/AutofillId;Landroid/view/autofill/AutofillValue;JLandroid/view/inputmethod/InlineSuggestionsRequest;Ljava/util/function/Function;Ljava/lang/Runnable;Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;Ljava/util/concurrent/atomic/AtomicReference;)V
+    move/from16 v14, p11
+
+    move-object/from16 v15, v19
+
+    invoke-direct/range {v0 .. v15}, Lcom/android/server/autofill/-$$Lambda$RemoteAugmentedAutofillService$KCteNuX64yYMsA9ZYdqL9Q0ZJsw;-><init>(Lcom/android/server/autofill/RemoteAugmentedAutofillService;Landroid/view/autofill/IAutoFillManagerClient;IILandroid/content/ComponentName;Landroid/view/autofill/AutofillId;Landroid/view/autofill/AutofillValue;JLandroid/view/inputmethod/InlineSuggestionsRequest;Ljava/util/function/Function;Ljava/lang/Runnable;Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;ILjava/util/concurrent/atomic/AtomicReference;)V
 
     move-object/from16 v0, p0
 
-    move-object v1, v15
+    move-object/from16 v1, v18
 
     invoke-virtual {v0, v1}, Lcom/android/server/autofill/RemoteAugmentedAutofillService;->postAsync(Lcom/android/internal/infra/ServiceConnector$Job;)Lcom/android/internal/infra/AndroidFuture;
 
@@ -744,7 +760,7 @@
 
     move-object/from16 v4, p4
 
-    move-object/from16 v5, v18
+    move-object/from16 v5, v19
 
     invoke-direct {v2, v0, v5, v4, v3}, Lcom/android/server/autofill/-$$Lambda$RemoteAugmentedAutofillService$zt04rV6kTquQwdDYqT9tjLbRn14;-><init>(Lcom/android/server/autofill/RemoteAugmentedAutofillService;Ljava/util/concurrent/atomic/AtomicReference;Landroid/content/ComponentName;I)V
 

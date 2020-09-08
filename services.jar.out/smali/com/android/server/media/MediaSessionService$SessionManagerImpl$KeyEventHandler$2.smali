@@ -79,7 +79,7 @@
 
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler$2;->this$2:Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;
 
-    invoke-static {v0}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->access$5900(Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;)V
+    invoke-static {v0}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->access$6000(Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;)V
 
     iget-boolean v0, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler$2;->val$overridden:Z
 
@@ -91,7 +91,7 @@
 
     iget-object v0, v0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->this$0:Lcom/android/server/media/MediaSessionService;
 
-    invoke-static {v0}, Lcom/android/server/media/MediaSessionService;->access$4400(Lcom/android/server/media/MediaSessionService;)Lcom/android/server/media/MediaKeyDispatcher;
+    invoke-static {v0}, Lcom/android/server/media/MediaSessionService;->access$4500(Lcom/android/server/media/MediaSessionService;)Lcom/android/server/media/MediaKeyDispatcher;
 
     move-result-object v0
 
@@ -122,7 +122,7 @@
 
     iget-boolean v11, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler$2;->val$musicOnly:Z
 
-    invoke-static/range {v2 .. v11}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->access$6000(Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;Ljava/lang/String;IIZLandroid/view/KeyEvent;ZLjava/lang/String;IZ)V
+    invoke-static/range {v2 .. v11}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->access$6100(Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;Ljava/lang/String;IIZLandroid/view/KeyEvent;ZLjava/lang/String;IZ)V
 
     :goto_0
     return-void

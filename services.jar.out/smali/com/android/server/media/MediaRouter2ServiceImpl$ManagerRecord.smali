@@ -18,6 +18,8 @@
 
 
 # instance fields
+.field public mLastSessionCreationRequest:Lcom/android/server/media/MediaRouter2ServiceImpl$SessionCreationRequest;
+
 .field public final mManager:Landroid/media/IMediaRouter2Manager;
 
 .field public final mManagerId:I

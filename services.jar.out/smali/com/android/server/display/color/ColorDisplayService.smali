@@ -33,7 +33,7 @@
 
 .field private static final COLOR_TEMPERATURE_DEFAULT_VIVID:I = 0x1964
 
-.field private static final COLOR_TEMPERATURE_DELTA:I = 0xbb8
+.field private static final COLOR_TEMPERATURE_DELTA_FOR_SLIDER:I = 0x1388
 
 .field private static final COLOR_TEMPERATURE_MODE_AUTO:I = 0x2
 
@@ -60,6 +60,10 @@
 .field private static MATRIX_INIT:[F = null
 
 .field private static final MATRIX_INVERT_COLOR:[F
+
+.field private static final MAX_COLOR_TEMPERATURE_FOR_SLIDER:I = 0x2328
+
+.field private static final MIN_COLOR_TEMPERATURE_FOR_SLIDER:I = 0xfa0
 
 .field private static final MSG_APPLY_DISPLAY_WHITE_BALANCE:I = 0x5
 
@@ -89,6 +93,10 @@
 
 
 # instance fields
+.field private final DEFAULT_MAX_COLOR_TEMEPERATURE:I
+
+.field private final DEFAULT_MIN_COLOR_TEMEPERATURE:I
+
 .field private final KEY_COLOR_CORRECTION:Ljava/lang/String;
 
 .field private final mAppSaturationController:Lcom/android/server/display/color/AppSaturationController;
@@ -122,6 +130,22 @@
 .field private mIsIrisChip:Z
 
 .field private mIsSoftIris:Z
+
+.field private mMaxColorTemperature:I
+
+.field private mMaxColorTemperatureForNative:I
+
+.field private mMaxColorTemperatureForP3:I
+
+.field private mMaxColorTemperatureForSRGB:I
+
+.field private mMinColorTemperature:I
+
+.field private mMinColorTemperatureForNative:I
+
+.field private mMinColorTemperatureForP3:I
+
+.field private mMinColorTemperatureForSRGB:I
 
 .field private mNightDisplayAutoMode:Lcom/android/server/display/color/ColorDisplayService$NightDisplayAutoMode;
 
@@ -298,7 +322,7 @@
 
     new-array v3, v2, [I
 
-    const/16 v4, 0x12c
+    const/16 v4, 0x125
 
     aput v4, v3, v0
 
@@ -310,7 +334,7 @@
 
     new-array v3, v2, [I
 
-    const/16 v4, 0x12b
+    const/16 v4, 0x124
 
     aput v4, v3, v0
 
@@ -329,6 +353,30 @@
     iput-object v1, p0, Lcom/android/server/display/color/ColorDisplayService;->mIrisCmdHandler:Lcom/android/server/display/color/ColorDisplayService$IrisCmdHandler;
 
     iput-boolean v0, p0, Lcom/android/server/display/color/ColorDisplayService;->mIrisAutoMode:Z
+
+    const/16 v3, 0x1388
+
+    iput v3, p0, Lcom/android/server/display/color/ColorDisplayService;->DEFAULT_MIN_COLOR_TEMEPERATURE:I
+
+    const/16 v4, 0x1f40
+
+    iput v4, p0, Lcom/android/server/display/color/ColorDisplayService;->DEFAULT_MAX_COLOR_TEMEPERATURE:I
+
+    iput v3, p0, Lcom/android/server/display/color/ColorDisplayService;->mMinColorTemperature:I
+
+    iput v4, p0, Lcom/android/server/display/color/ColorDisplayService;->mMaxColorTemperature:I
+
+    iput v3, p0, Lcom/android/server/display/color/ColorDisplayService;->mMinColorTemperatureForNative:I
+
+    iput v4, p0, Lcom/android/server/display/color/ColorDisplayService;->mMaxColorTemperatureForNative:I
+
+    iput v3, p0, Lcom/android/server/display/color/ColorDisplayService;->mMinColorTemperatureForSRGB:I
+
+    iput v4, p0, Lcom/android/server/display/color/ColorDisplayService;->mMaxColorTemperatureForSRGB:I
+
+    iput v3, p0, Lcom/android/server/display/color/ColorDisplayService;->mMinColorTemperatureForP3:I
+
+    iput v4, p0, Lcom/android/server/display/color/ColorDisplayService;->mMaxColorTemperatureForP3:I
 
     new-instance v3, Lcom/android/server/display/color/ColorDisplayService$TintHandler;
 
@@ -1276,6 +1324,8 @@
 
     const/4 v4, 0x0
 
+    const/4 v5, 0x0
+
     goto :goto_0
 
     :cond_0
@@ -1311,21 +1361,35 @@
 
     move-result v4
 
-    :goto_0
-    const/4 v5, 0x1
+    invoke-virtual {p0}, Lcom/android/server/display/color/ColorDisplayService;->getContext()Landroid/content/Context;
 
-    if-ne v4, v5, :cond_1
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v5
+
+    iget v6, p0, Lcom/android/server/display/color/ColorDisplayService;->mCurrentUser:I
+
+    const-string/jumbo v7, "screen_color_mode_advanced_settings_value"
+
+    invoke-static {v5, v7, v3, v6}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    move-result v5
+
+    :goto_0
+    const/4 v6, 0x1
+
+    if-ne v4, v6, :cond_1
 
     return v0
 
     :cond_1
-    const/4 v5, 0x3
+    const/4 v6, 0x3
 
-    const/16 v6, 0x1f40
+    if-ne v6, v1, :cond_3
 
-    if-ne v5, v1, :cond_3
-
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
     iget v7, p0, Lcom/android/server/display/color/ColorDisplayService;->mCurrentUser:I
 
@@ -1353,9 +1417,9 @@
     const/16 v2, 0x32
 
     :goto_1
-    mul-int/lit8 v3, v2, 0x1e
+    mul-int/lit8 v3, v2, 0x32
 
-    rsub-int v2, v3, 0x1f40
+    rsub-int v2, v3, 0x2328
 
     goto :goto_2
 
@@ -1369,9 +1433,9 @@
 
     invoke-virtual {p0}, Lcom/android/server/display/color/ColorDisplayService;->getContext()Landroid/content/Context;
 
-    move-result-object v5
+    move-result-object v6
 
-    invoke-virtual {v3, v5}, Lcom/android/server/display/color/DisplayWhiteBalanceTintController;->isAvailable(Landroid/content/Context;)Z
+    invoke-virtual {v3, v6}, Lcom/android/server/display/color/DisplayWhiteBalanceTintController;->isAvailable(Landroid/content/Context;)Z
 
     move-result v3
 
@@ -1386,24 +1450,66 @@
     add-int/2addr v2, v3
 
     :cond_4
-    const/16 v3, 0x1388
+    invoke-direct {p0, v2, v1, v5}, Lcom/android/server/display/color/ColorDisplayService;->clampColorTemperature(III)I
 
-    if-le v2, v6, :cond_5
+    move-result v3
 
-    goto :goto_3
+    return v3
+.end method
 
-    :cond_5
-    if-ge v2, v3, :cond_6
+.method private clampColorTemperature(III)I
+    .locals 3
 
-    move v6, v3
+    iget v0, p0, Lcom/android/server/display/color/ColorDisplayService;->mMaxColorTemperature:I
 
-    goto :goto_3
+    iget v1, p0, Lcom/android/server/display/color/ColorDisplayService;->mMinColorTemperature:I
 
-    :cond_6
-    move v6, v2
+    const/4 v2, 0x3
 
-    :goto_3
-    return v6
+    if-ne p2, v2, :cond_3
+
+    if-eqz p3, :cond_2
+
+    const/4 v2, 0x1
+
+    if-eq p3, v2, :cond_1
+
+    const/4 v2, 0x2
+
+    if-eq p3, v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget v0, p0, Lcom/android/server/display/color/ColorDisplayService;->mMaxColorTemperatureForP3:I
+
+    iget v1, p0, Lcom/android/server/display/color/ColorDisplayService;->mMinColorTemperatureForP3:I
+
+    goto :goto_0
+
+    :cond_1
+    iget v0, p0, Lcom/android/server/display/color/ColorDisplayService;->mMaxColorTemperatureForSRGB:I
+
+    iget v1, p0, Lcom/android/server/display/color/ColorDisplayService;->mMinColorTemperatureForSRGB:I
+
+    goto :goto_0
+
+    :cond_2
+    iget v0, p0, Lcom/android/server/display/color/ColorDisplayService;->mMaxColorTemperatureForNative:I
+
+    iget v1, p0, Lcom/android/server/display/color/ColorDisplayService;->mMinColorTemperatureForNative:I
+
+    :cond_3
+    :goto_0
+    invoke-static {p1, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v2
+
+    invoke-static {v0, v2}, Ljava/lang/Math;->min(II)I
+
+    move-result v2
+
+    return v2
 .end method
 
 .method private dumpInternal(Ljava/io/PrintWriter;)V
@@ -1707,6 +1813,84 @@
     :cond_5
     :goto_0
     return v1
+.end method
+
+.method private getColorTemperatureLimit()V
+    .locals 2
+
+    invoke-virtual {p0}, Lcom/android/server/display/color/ColorDisplayService;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x10e0050
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
+
+    move-result v1
+
+    iput v1, p0, Lcom/android/server/display/color/ColorDisplayService;->mMinColorTemperature:I
+
+    const v1, 0x10e004c
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
+
+    move-result v1
+
+    iput v1, p0, Lcom/android/server/display/color/ColorDisplayService;->mMaxColorTemperature:I
+
+    const v1, 0x10e0051
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
+
+    move-result v1
+
+    iput v1, p0, Lcom/android/server/display/color/ColorDisplayService;->mMinColorTemperatureForNative:I
+
+    const v1, 0x10e004d
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
+
+    move-result v1
+
+    iput v1, p0, Lcom/android/server/display/color/ColorDisplayService;->mMaxColorTemperatureForNative:I
+
+    const v1, 0x10e0053
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
+
+    move-result v1
+
+    iput v1, p0, Lcom/android/server/display/color/ColorDisplayService;->mMinColorTemperatureForSRGB:I
+
+    const v1, 0x10e004f
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
+
+    move-result v1
+
+    iput v1, p0, Lcom/android/server/display/color/ColorDisplayService;->mMaxColorTemperatureForSRGB:I
+
+    const v1, 0x10e0052
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
+
+    move-result v1
+
+    iput v1, p0, Lcom/android/server/display/color/ColorDisplayService;->mMinColorTemperatureForP3:I
+
+    const v1, 0x10e004e
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
+
+    move-result v1
+
+    iput v1, p0, Lcom/android/server/display/color/ColorDisplayService;->mMaxColorTemperatureForP3:I
+
+    return-void
 .end method
 
 .method private getCompositionColorSpace(I)I
@@ -3306,6 +3490,18 @@
 
     invoke-virtual {v0, v1, v4, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
+    const-string/jumbo v1, "screen_color_mode_advanced_settings_value"
+
+    invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/android/server/display/color/ColorDisplayService;->mContentObserver:Landroid/database/ContentObserver;
+
+    iget v3, p0, Lcom/android/server/display/color/ColorDisplayService;->mCurrentUser:I
+
+    invoke-virtual {v0, v1, v4, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
+
     :cond_4
     invoke-direct {p0}, Lcom/android/server/display/color/ColorDisplayService;->onAccessibilityInversionChanged()V
 
@@ -3411,6 +3607,8 @@
     move-result v2
 
     iput v2, v1, Lcom/android/server/display/color/DisplayWhiteBalanceTintController;->mScreenColorTemperature:I
+
+    invoke-direct {p0}, Lcom/android/server/display/color/ColorDisplayService;->getColorTemperatureLimit()V
 
     iget-object v1, p0, Lcom/android/server/display/color/ColorDisplayService;->mDisplayWhiteBalanceTintController:Lcom/android/server/display/color/DisplayWhiteBalanceTintController;
 

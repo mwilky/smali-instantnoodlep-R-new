@@ -174,6 +174,31 @@
     return v0
 .end method
 
+.method public static canNotificationListenerServiceGo(Landroid/content/ComponentName;)Z
+    .locals 1
+
+    sget-boolean v0, Lcom/android/server/am/OpStartAppControlInjector;->ENABLED:Z
+
+    if-eqz v0, :cond_0
+
+    if-eqz p0, :cond_0
+
+    invoke-static {}, Lcom/android/server/am/OpStartAppControlInjector;->initInstance()V
+
+    sget-object v0, Lcom/android/server/am/OpStartAppControlInjector;->mStartAppControl:Lcom/android/server/am/IOpStartAppControl;
+
+    invoke-interface {v0, p0}, Lcom/android/server/am/IOpStartAppControl;->canNotificationListenerServiceGo(Landroid/content/ComponentName;)Z
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
 .method public static canProcGo(Lcom/android/server/am/ProcessRecord;Ljava/lang/String;)Z
     .locals 1
 
@@ -415,6 +440,37 @@
     check-cast v0, Lcom/android/server/am/IOpStartAppControl;
 
     sput-object v0, Lcom/android/server/am/OpStartAppControlInjector;->mStartAppControl:Lcom/android/server/am/IOpStartAppControl;
+
+    :cond_0
+    return-void
+.end method
+
+.method public static initPackages(Lcom/android/server/pm/PackageManagerService;Landroid/util/ArrayMap;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/android/server/pm/PackageManagerService;",
+            "Landroid/util/ArrayMap<",
+            "Ljava/lang/String;",
+            "Lcom/android/server/pm/parsing/pkg/AndroidPackage;",
+            ">;)V"
+        }
+    .end annotation
+
+    sget-boolean v0, Lcom/android/server/am/OpStartAppControlInjector;->ENABLED:Z
+
+    if-eqz v0, :cond_0
+
+    if-eqz p1, :cond_0
+
+    invoke-static {}, Lcom/android/server/am/OpStartAppControlInjector;->initInstance()V
+
+    sget-object v0, Lcom/android/server/am/OpStartAppControlInjector;->mStartAppControl:Lcom/android/server/am/IOpStartAppControl;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0, p0, p1}, Lcom/android/server/am/IOpStartAppControl;->initPackages(Lcom/android/server/pm/PackageManagerService;Landroid/util/ArrayMap;)V
 
     :cond_0
     return-void

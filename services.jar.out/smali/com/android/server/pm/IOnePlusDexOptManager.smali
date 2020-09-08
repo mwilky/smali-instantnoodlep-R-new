@@ -13,6 +13,9 @@
 .method public abstract notifyDexoptSecondaryDex(Ljava/lang/String;Ljava/lang/String;)V
 .end method
 
+.method public abstract notifyPrimaryDexDone(Ljava/lang/String;)V
+.end method
+
 .method public abstract packageRemoved(Ljava/lang/String;)V
 .end method
 

@@ -351,98 +351,181 @@
 .end method
 
 .method private setMdmEvent(JJJILjava/lang/String;)V
-    .locals 5
+    .locals 16
 
-    invoke-direct {p0, p7}, Lcom/android/server/audio/OpAudioMonitor;->convertDevice2MdmType(I)I
+    move-object/from16 v1, p0
 
-    move-result v0
+    move-wide/from16 v2, p5
 
-    const/4 v1, -0x1
+    move-object/from16 v4, p8
 
-    if-ne v0, v1, :cond_0
+    move/from16 v5, p7
+
+    invoke-direct {v1, v5}, Lcom/android/server/audio/OpAudioMonitor;->convertDevice2MdmType(I)I
+
+    move-result v6
+
+    const/4 v0, -0x1
+
+    if-ne v6, v0, :cond_0
 
     return-void
 
     :cond_0
-    new-instance v1, Ljava/util/HashMap;
+    new-instance v0, Ljava/util/HashMap;
 
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    move-object v7, v0
 
-    move-result-object v2
+    invoke-static {v6}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-    const-string/jumbo v3, "type"
+    move-result-object v0
 
-    invoke-interface {v1, v3, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const-string/jumbo v8, "type"
 
-    invoke-static {p5, p6}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    invoke-interface {v7, v8, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v2
+    invoke-static/range {p5 .. p6}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
-    const-string/jumbo v3, "use_time"
+    move-result-object v0
 
-    invoke-interface {v1, v3, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const-string/jumbo v8, "use_time"
 
-    invoke-static {p1, p2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    invoke-interface {v7, v8, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v2
+    invoke-static/range {p1 .. p2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
-    const-string/jumbo v3, "start_time"
+    move-result-object v0
 
-    invoke-interface {v1, v3, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const-string/jumbo v8, "start_time"
 
-    invoke-static {p3, p4}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    invoke-interface {v7, v8, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v2
+    invoke-static/range {p3 .. p4}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
-    const-string v3, "end_time"
+    move-result-object v0
 
-    invoke-interface {v1, v3, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v8, "end_time"
 
-    const-string/jumbo v2, "package_name"
+    invoke-interface {v7, v8, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-interface {v1, v2, p8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const-string/jumbo v0, "package_name"
 
-    new-instance v2, Ljava/util/HashMap;
+    invoke-interface {v7, v0, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
+    new-instance v0, Ljava/util/HashMap;
 
-    const-string v3, "appid"
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    const-string v4, "RBS8PPYT2W"
+    move-object v8, v0
 
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v0, "appid"
 
-    const-string v3, "audio_connect"
+    const-string v9, "RBS8PPYT2W"
 
-    invoke-virtual {p0, v3, v1, v2}, Lcom/android/server/audio/OpAudioMonitor;->logMdm(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;)V
+    invoke-interface {v8, v0, v9}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    const-string v0, "audio_connect"
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v1, v0, v7, v8}, Lcom/android/server/audio/OpAudioMonitor;->logMdm(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;)V
 
-    const-string v4, "MDM, playing,device:"
+    iget-object v0, v1, Lcom/android/server/audio/OpAudioMonitor;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v4, " lapse:"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, p5, p6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "OpAudioMonitor"
-
-    invoke-static {v4, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    if-nez v0, :cond_1
 
     return-void
+
+    :cond_1
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v9, "android.media.action.CALCULATE_PLAY_TIME"
+
+    invoke-direct {v0, v9}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    move-object v9, v0
+
+    const-string v0, "com.oneplus.account"
+
+    invoke-virtual {v9, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string/jumbo v0, "startTime"
+
+    move-wide/from16 v10, p1
+
+    invoke-virtual {v9, v0, v10, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
+
+    const-string v0, "endTime"
+
+    move-wide/from16 v12, p3
+
+    invoke-virtual {v9, v0, v12, v13}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
+
+    const-string/jumbo v0, "playingTime"
+
+    invoke-virtual {v9, v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
+
+    const-string/jumbo v0, "packageName"
+
+    invoke-virtual {v9, v0, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    const/high16 v0, 0x4000000
+
+    invoke-virtual {v9, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    const/high16 v0, 0x10000000
+
+    invoke-virtual {v9, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
+
+    move-result-wide v14
+
+    :try_start_0
+    iget-object v0, v1, Lcom/android/server/audio/OpAudioMonitor;->mContext:Landroid/content/Context;
+
+    sget-object v1, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
+
+    invoke-virtual {v0, v9, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-static {v14, v15}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    nop
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "MDM, playing,device:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " lapse:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "OpAudioMonitor"
+
+    invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v14, v15}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    throw v0
 .end method
 
 .method private setMdmVolumeEvent(III)V

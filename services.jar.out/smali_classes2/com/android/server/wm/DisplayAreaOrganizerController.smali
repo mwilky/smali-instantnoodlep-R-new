@@ -148,7 +148,7 @@
 
 # virtual methods
 .method onDisplayAreaAppeared(Landroid/window/IDisplayAreaOrganizer;Lcom/android/server/wm/DisplayArea;)V
-    .locals 2
+    .locals 3
 
     :try_start_0
     new-instance v0, Landroid/view/SurfaceControl;
@@ -157,7 +157,9 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Landroid/view/SurfaceControl;-><init>(Landroid/view/SurfaceControl;)V
+    const-string v2, "DisplayAreaOrganizerController.onDisplayAreaAppeared"
+
+    invoke-direct {v0, v1, v2}, Landroid/view/SurfaceControl;-><init>(Landroid/view/SurfaceControl;Ljava/lang/String;)V
 
     invoke-virtual {p2}, Lcom/android/server/wm/DisplayArea;->getDisplayAreaInfo()Landroid/window/DisplayAreaInfo;
 

@@ -159,7 +159,7 @@
     return-void
 .end method
 
-.method public onPermissionRevoked(II)V
+.method public onPermissionRevoked(IILjava/lang/String;)V
     .locals 3
 
     iget-object v0, p0, Lcom/android/server/pm/permission/PermissionManagerService$2;->val$revokedPermissions:Landroid/util/ArraySet;

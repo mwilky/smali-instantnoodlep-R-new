@@ -271,7 +271,7 @@
 
     const/16 v8, 0x3e8
 
-    const-string v9, "com.oneplus.dialer"
+    const-string v9, "INCALL_UI"
 
     const/16 v10, 0x3e8
 

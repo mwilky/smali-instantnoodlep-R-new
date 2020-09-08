@@ -85,7 +85,7 @@
 
     iget-object v1, v0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler$3;->this$2:Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;
 
-    invoke-static {v1}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->access$5900(Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;)V
+    invoke-static {v1}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->access$6000(Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;)V
 
     iget-boolean v1, v0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler$3;->val$doubleTapOverridden:Z
 
@@ -97,7 +97,7 @@
 
     iget-object v1, v1, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->this$0:Lcom/android/server/media/MediaSessionService;
 
-    invoke-static {v1}, Lcom/android/server/media/MediaSessionService;->access$4400(Lcom/android/server/media/MediaSessionService;)Lcom/android/server/media/MediaKeyDispatcher;
+    invoke-static {v1}, Lcom/android/server/media/MediaSessionService;->access$4500(Lcom/android/server/media/MediaSessionService;)Lcom/android/server/media/MediaKeyDispatcher;
 
     move-result-object v1
 
@@ -118,7 +118,7 @@
 
     iget-object v1, v1, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->this$0:Lcom/android/server/media/MediaSessionService;
 
-    invoke-static {v1}, Lcom/android/server/media/MediaSessionService;->access$4400(Lcom/android/server/media/MediaSessionService;)Lcom/android/server/media/MediaKeyDispatcher;
+    invoke-static {v1}, Lcom/android/server/media/MediaSessionService;->access$4500(Lcom/android/server/media/MediaSessionService;)Lcom/android/server/media/MediaKeyDispatcher;
 
     move-result-object v1
 
@@ -132,7 +132,7 @@
 
     iget-object v1, v1, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->this$0:Lcom/android/server/media/MediaSessionService;
 
-    invoke-static {v1}, Lcom/android/server/media/MediaSessionService;->access$4400(Lcom/android/server/media/MediaSessionService;)Lcom/android/server/media/MediaKeyDispatcher;
+    invoke-static {v1}, Lcom/android/server/media/MediaSessionService;->access$4500(Lcom/android/server/media/MediaSessionService;)Lcom/android/server/media/MediaKeyDispatcher;
 
     move-result-object v1
 
@@ -163,7 +163,7 @@
 
     iget-boolean v12, v0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler$3;->val$musicOnly:Z
 
-    invoke-static/range {v3 .. v12}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->access$6000(Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;Ljava/lang/String;IIZLandroid/view/KeyEvent;ZLjava/lang/String;IZ)V
+    invoke-static/range {v3 .. v12}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->access$6100(Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;Ljava/lang/String;IIZLandroid/view/KeyEvent;ZLjava/lang/String;IZ)V
 
     iget-object v13, v0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler$3;->this$2:Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;
 
@@ -199,7 +199,7 @@
 
     move/from16 v22, v7
 
-    invoke-static/range {v13 .. v22}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->access$6000(Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;Ljava/lang/String;IIZLandroid/view/KeyEvent;ZLjava/lang/String;IZ)V
+    invoke-static/range {v13 .. v22}, Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;->access$6100(Lcom/android/server/media/MediaSessionService$SessionManagerImpl$KeyEventHandler;Ljava/lang/String;IIZLandroid/view/KeyEvent;ZLjava/lang/String;IZ)V
 
     :goto_0
     return-void

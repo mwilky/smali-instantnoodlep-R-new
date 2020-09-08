@@ -44,6 +44,8 @@
 
 .field private mImeRequestReceived:Z
 
+.field private mImeSessionInvalidated:Z
+
 .field private mInlineFillUi:Lcom/android/server/autofill/ui/InlineFillUi;
 
 .field private final mInputMethodManagerInternal:Lcom/android/server/inputmethod/InputMethodManagerInternal;
@@ -108,6 +110,8 @@
 
     iput-boolean v0, p0, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->mDestroyed:Z
 
+    iput-boolean v0, p0, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->mImeSessionInvalidated:Z
+
     iput-object p1, p0, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->mInputMethodManagerInternal:Lcom/android/server/inputmethod/InputMethodManagerInternal;
 
     iput p2, p0, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->mUserId:I
@@ -145,7 +149,15 @@
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;ZZ)V
+.method static synthetic access$300(Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->handleOnReceiveImeSessionInvalidated()V
+
+    return-void
+.end method
+
+.method static synthetic access$400(Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;ZZ)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->handleOnReceiveImeStatusUpdated(ZZ)V
@@ -153,7 +165,7 @@
     return-void
 .end method
 
-.method static synthetic access$400(Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;Landroid/view/autofill/AutofillId;ZZ)V
+.method static synthetic access$500(Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;Landroid/view/autofill/AutofillId;ZZ)V
     .locals 0
 
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->handleOnReceiveImeStatusUpdated(Landroid/view/autofill/AutofillId;ZZ)V
@@ -161,7 +173,7 @@
     return-void
 .end method
 
-.method static synthetic access$500(Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;Landroid/view/inputmethod/InlineSuggestionsRequest;Lcom/android/internal/view/IInlineSuggestionsResponseCallback;)V
+.method static synthetic access$600(Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;Landroid/view/inputmethod/InlineSuggestionsRequest;Lcom/android/internal/view/IInlineSuggestionsResponseCallback;)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->handleOnReceiveImeRequest(Landroid/view/inputmethod/InlineSuggestionsRequest;Lcom/android/internal/view/IInlineSuggestionsResponseCallback;)V
@@ -192,6 +204,10 @@
 
     iput-boolean v1, p0, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->mImeRequestReceived:Z
 
+    const/4 v2, 0x0
+
+    iput-boolean v2, p0, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->mImeSessionInvalidated:Z
+
     if-eqz p1, :cond_1
 
     if-eqz p2, :cond_1
@@ -200,11 +216,9 @@
 
     iput-object p2, p0, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->mResponseCallback:Lcom/android/internal/view/IInlineSuggestionsResponseCallback;
 
-    iget-object v2, p0, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->mAutofillId:Landroid/view/autofill/AutofillId;
+    iget-object v3, p0, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->mAutofillId:Landroid/view/autofill/AutofillId;
 
-    const/4 v3, 0x0
-
-    invoke-direct {p0, v2, v1, v3}, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->handleOnReceiveImeStatusUpdated(Landroid/view/autofill/AutofillId;ZZ)V
+    invoke-direct {p0, v3, v1, v2}, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->handleOnReceiveImeStatusUpdated(Landroid/view/autofill/AutofillId;ZZ)V
 
     :cond_1
     iget-object v1, p0, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->mImeRequestConsumer:Ljava/util/function/Consumer;
@@ -228,6 +242,41 @@
 
     :cond_3
     :goto_0
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method private handleOnReceiveImeSessionInvalidated()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->mLock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-boolean v1, p0, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->mDestroyed:Z
+
+    if-eqz v1, :cond_0
+
+    monitor-exit v0
+
+    return-void
+
+    :cond_0
+    const/4 v1, 0x1
+
+    iput-boolean v1, p0, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->mImeSessionInvalidated:Z
+
     monitor-exit v0
 
     return-void
@@ -749,6 +798,10 @@
     return-void
 
     :cond_0
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->mImeSessionInvalidated:Z
+
     sget-boolean v0, Lcom/android/server/autofill/Helper;->sDebug:Z
 
     if-eqz v0, :cond_1
@@ -844,7 +897,11 @@
 
     iget-object v0, p0, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->mResponseCallback:Lcom/android/internal/view/IInlineSuggestionsResponseCallback;
 
-    if-nez v0, :cond_2
+    if-eqz v0, :cond_3
+
+    iget-boolean v0, p0, Lcom/android/server/autofill/AutofillInlineSuggestionsRequestSession;->mImeSessionInvalidated:Z
+
+    if-eqz v0, :cond_2
 
     goto :goto_0
 

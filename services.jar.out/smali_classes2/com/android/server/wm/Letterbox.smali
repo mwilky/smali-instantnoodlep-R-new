@@ -322,6 +322,41 @@
     return-void
 .end method
 
+.method public isOverlappingWith(Landroid/graphics/Rect;)Z
+    .locals 6
+
+    iget-object v0, p0, Lcom/android/server/wm/Letterbox;->mSurfaces:[Lcom/android/server/wm/Letterbox$LetterboxSurface;
+
+    array-length v1, v0
+
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    :goto_0
+    if-ge v3, v1, :cond_1
+
+    aget-object v4, v0, v3
+
+    invoke-virtual {v4, p1}, Lcom/android/server/wm/Letterbox$LetterboxSurface;->isOverlappingWith(Landroid/graphics/Rect;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return v2
+.end method
+
 .method public layout(Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Point;)V
     .locals 12
 

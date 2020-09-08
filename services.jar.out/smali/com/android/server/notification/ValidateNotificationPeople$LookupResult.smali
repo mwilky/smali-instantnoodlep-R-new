@@ -188,7 +188,7 @@
     :cond_0
     const/4 v2, -0x1
 
-    const-string v3, "invalid cursor: no _ID"
+    const-string/jumbo v3, "invalid cursor: no _ID"
 
     invoke-static {v1, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -261,7 +261,7 @@
 
     if-eqz v4, :cond_6
 
-    const-string v4, "invalid cursor: no STARRED"
+    const-string/jumbo v4, "invalid cursor: no STARRED"
 
     invoke-static {v1, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 

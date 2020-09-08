@@ -9908,7 +9908,7 @@
 
     const-string v1, "android.permission.BACKUP"
 
-    const-string v2, "isAppEligibleForBackup"
+    const-string/jumbo v2, "isAppEligibleForBackup"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 

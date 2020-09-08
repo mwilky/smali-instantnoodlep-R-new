@@ -79,6 +79,12 @@
     return-void
 .end method
 
+.method public removeImeSurface()V
+    .locals 0
+
+    return-void
+.end method
+
 .method public reportImeControl(Landroid/os/IBinder;)V
     .locals 0
 

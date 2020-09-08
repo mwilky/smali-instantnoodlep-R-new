@@ -22,6 +22,9 @@
 .method public abstract canJobSchedulerGo(Ljava/lang/Object;)Z
 .end method
 
+.method public abstract canNotificationListenerServiceGo(Landroid/content/ComponentName;)Z
+.end method
+
 .method public abstract canProcGo(Lcom/android/server/am/ProcessRecord;Ljava/lang/String;)Z
 .end method
 
@@ -47,6 +50,19 @@
 .end method
 
 .method public abstract initAms(Lcom/android/server/am/ActivityManagerService;)V
+.end method
+
+.method public abstract initPackages(Lcom/android/server/pm/PackageManagerService;Landroid/util/ArrayMap;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/android/server/pm/PackageManagerService;",
+            "Landroid/util/ArrayMap<",
+            "Ljava/lang/String;",
+            "Lcom/android/server/pm/parsing/pkg/AndroidPackage;",
+            ">;)V"
+        }
+    .end annotation
 .end method
 
 .method public abstract isJobRestrict(Ljava/lang/Object;)Z

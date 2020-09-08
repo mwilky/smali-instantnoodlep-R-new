@@ -167,7 +167,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e004e
+    const v1, 0x10e0054
 
     invoke-virtual {p2, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -183,13 +183,13 @@
 .method private static createThrottler(Landroid/content/res/Resources;)Lcom/android/server/display/whitebalance/DisplayWhiteBalanceThrottler;
     .locals 12
 
-    const v0, 0x10e004f
+    const v0, 0x10e0055
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v0
 
-    const v1, 0x10e0050
+    const v1, 0x10e0056
 
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 

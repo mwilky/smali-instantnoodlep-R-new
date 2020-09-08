@@ -80,7 +80,7 @@
 
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$MotionCheck;->this$0:Lcom/android/server/display/DisplayPowerController;
 
-    invoke-static {v0}, Lcom/android/server/display/DisplayPowerController;->access$2700(Lcom/android/server/display/DisplayPowerController;)Landroid/hardware/SensorManager;
+    invoke-static {v0}, Lcom/android/server/display/DisplayPowerController;->access$3200(Lcom/android/server/display/DisplayPowerController;)Landroid/hardware/SensorManager;
 
     move-result-object v0
 
@@ -135,7 +135,7 @@
 
     iget-object v1, p0, Lcom/android/server/display/DisplayPowerController$MotionCheck;->this$0:Lcom/android/server/display/DisplayPowerController;
 
-    invoke-static {v1}, Lcom/android/server/display/DisplayPowerController;->access$2700(Lcom/android/server/display/DisplayPowerController;)Landroid/hardware/SensorManager;
+    invoke-static {v1}, Lcom/android/server/display/DisplayPowerController;->access$3200(Lcom/android/server/display/DisplayPowerController;)Landroid/hardware/SensorManager;
 
     move-result-object v2
 
@@ -145,7 +145,7 @@
 
     iget-object v1, p0, Lcom/android/server/display/DisplayPowerController$MotionCheck;->this$0:Lcom/android/server/display/DisplayPowerController;
 
-    invoke-static {v1}, Lcom/android/server/display/DisplayPowerController;->access$2600(Lcom/android/server/display/DisplayPowerController;)Lcom/android/server/display/DisplayPowerController$DisplayControllerHandler;
+    invoke-static {v1}, Lcom/android/server/display/DisplayPowerController;->access$2100(Lcom/android/server/display/DisplayPowerController;)Lcom/android/server/display/DisplayPowerController$DisplayControllerHandler;
 
     move-result-object v7
 
@@ -172,10 +172,6 @@
     return-void
 
     :cond_0
-    iget v0, p0, Lcom/android/server/display/DisplayPowerController$MotionCheck;->mCurrentState:I
-
-    if-eqz v0, :cond_1
-
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_1
@@ -184,7 +180,7 @@
 
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$MotionCheck;->this$0:Lcom/android/server/display/DisplayPowerController;
 
-    invoke-static {v0}, Lcom/android/server/display/DisplayPowerController;->access$2600(Lcom/android/server/display/DisplayPowerController;)Lcom/android/server/display/DisplayPowerController$DisplayControllerHandler;
+    invoke-static {v0}, Lcom/android/server/display/DisplayPowerController;->access$2100(Lcom/android/server/display/DisplayPowerController;)Lcom/android/server/display/DisplayPowerController$DisplayControllerHandler;
 
     move-result-object v0
 
@@ -203,7 +199,7 @@
 
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$MotionCheck;->this$0:Lcom/android/server/display/DisplayPowerController;
 
-    invoke-static {v0}, Lcom/android/server/display/DisplayPowerController;->access$2700(Lcom/android/server/display/DisplayPowerController;)Landroid/hardware/SensorManager;
+    invoke-static {v0}, Lcom/android/server/display/DisplayPowerController;->access$3200(Lcom/android/server/display/DisplayPowerController;)Landroid/hardware/SensorManager;
 
     move-result-object v0
 
@@ -233,7 +229,7 @@
 
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$MotionCheck;->this$0:Lcom/android/server/display/DisplayPowerController;
 
-    invoke-static {v0}, Lcom/android/server/display/DisplayPowerController;->access$2700(Lcom/android/server/display/DisplayPowerController;)Landroid/hardware/SensorManager;
+    invoke-static {v0}, Lcom/android/server/display/DisplayPowerController;->access$3200(Lcom/android/server/display/DisplayPowerController;)Landroid/hardware/SensorManager;
 
     move-result-object v0
 
@@ -395,7 +391,7 @@
 
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$MotionCheck;->this$0:Lcom/android/server/display/DisplayPowerController;
 
-    invoke-static {v0}, Lcom/android/server/display/DisplayPowerController;->access$2600(Lcom/android/server/display/DisplayPowerController;)Lcom/android/server/display/DisplayPowerController$DisplayControllerHandler;
+    invoke-static {v0}, Lcom/android/server/display/DisplayPowerController;->access$2100(Lcom/android/server/display/DisplayPowerController;)Lcom/android/server/display/DisplayPowerController$DisplayControllerHandler;
 
     move-result-object v0
 

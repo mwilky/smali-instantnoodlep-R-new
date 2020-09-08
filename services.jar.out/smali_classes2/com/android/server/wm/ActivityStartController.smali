@@ -643,7 +643,7 @@
 .end method
 
 .method startActivities(Landroid/app/IApplicationThread;IIILjava/lang/String;Ljava/lang/String;[Landroid/content/Intent;[Ljava/lang/String;Landroid/os/IBinder;Lcom/android/server/wm/SafeActivityOptions;ILjava/lang/String;Lcom/android/server/am/PendingIntentRecord;Z)I
-    .locals 25
+    .locals 26
 
     move-object/from16 v1, p0
 
@@ -655,15 +655,15 @@
 
     move-object/from16 v5, p8
 
-    if-eqz v4, :cond_15
+    if-eqz v4, :cond_17
 
-    if-eqz v5, :cond_14
+    if-eqz v5, :cond_16
 
     array-length v0, v4
 
     array-length v6, v5
 
-    if-ne v0, v6, :cond_13
+    if-ne v0, v6, :cond_15
 
     if-eqz p3, :cond_0
 
@@ -714,11 +714,11 @@
 
     move v10, v8
 
-    move/from16 v24, v10
+    move/from16 v25, v10
 
     move v10, v9
 
-    move/from16 v9, v24
+    move/from16 v9, v25
 
     goto :goto_2
 
@@ -753,7 +753,7 @@
 
     check-cast v12, [Landroid/content/Intent;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_10
+    .catchall {:try_start_0 .. :try_end_0} :catchall_14
 
     move-object v4, v12
 
@@ -771,20 +771,22 @@
     :goto_3
     array-length v12, v4
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_f
+    .catchall {:try_start_1 .. :try_end_1} :catchall_13
 
     const/16 v21, 0x0
 
-    if-ge v13, v12, :cond_a
+    if-ge v13, v12, :cond_b
 
     :try_start_2
     aget-object v12, v4, v13
+
+    const/16 v22, 0x0
 
     invoke-virtual {v12}, Landroid/content/Intent;->hasFileDescriptors()Z
 
     move-result v16
 
-    if-nez v16, :cond_9
+    if-nez v16, :cond_a
 
     invoke-virtual {v12}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
@@ -816,7 +818,7 @@
 
     const/16 v18, 0x0
 
-    move/from16 v22, v13
+    move/from16 v23, v13
 
     move-object v13, v0
 
@@ -824,7 +826,7 @@
 
     move-object/from16 v14, v16
 
-    move-object/from16 v23, v7
+    move-object/from16 v24, v7
 
     move-object v7, v15
 
@@ -855,103 +857,143 @@
 
     move-object v12, v13
 
-    if-eqz v12, :cond_6
+    if-eqz v12, :cond_5
 
     :try_start_4
-    iget-object v13, v12, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+    iget-object v13, v1, Lcom/android/server/wm/ActivityStartController;->mSupervisor:Lcom/android/server/wm/ActivityStackSupervisor;
 
-    iget v13, v13, Landroid/content/pm/ApplicationInfo;->privateFlags:I
+    iget-object v13, v13, Lcom/android/server/wm/ActivityStackSupervisor;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
-    and-int/lit8 v13, v13, 0x2
-
-    if-nez v13, :cond_5
-
-    iget-object v13, v12, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
-
-    iget v13, v13, Landroid/content/pm/ApplicationInfo;->uid:I
+    iget-object v13, v13, Lcom/android/server/wm/ActivityTaskManagerService;->mUgmInternal:Lcom/android/server/uri/UriGrantsManagerInternal;
 
     iget-object v15, v12, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-object v15, v15, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    invoke-virtual {v7, v13, v15}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    iget-object v14, v12, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    iget v14, v14, Landroid/content/pm/ApplicationInfo;->uid:I
+
+    invoke-static {v14}, Landroid/os/UserHandle;->getUserId(I)I
+
+    move-result v14
+
+    invoke-interface {v13, v0, v11, v15, v14}, Lcom/android/server/uri/UriGrantsManagerInternal;->checkGrantUriPermissionFromIntent(Landroid/content/Intent;ILjava/lang/String;I)Lcom/android/server/uri/NeededUriGrants;
+
+    move-result-object v13
+
+    move-object/from16 v22, v13
 
     goto :goto_5
-
-    :cond_5
-    new-instance v13, Ljava/lang/IllegalArgumentException;
-
-    const-string v15, "FLAG_CANT_SAVE_STATE not supported here"
-
-    invoke-direct {v13, v15}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v13
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     :catchall_0
     move-exception v0
 
-    move-object/from16 v14, p6
-
-    move-object/from16 v18, p9
+    move-object/from16 v15, p9
 
     move-object/from16 v16, v4
 
-    move/from16 v17, v6
+    move/from16 v18, v6
 
-    goto/16 :goto_10
+    move v6, v11
+
+    move-object/from16 v11, p6
+
+    goto/16 :goto_12
+
+    :cond_5
+    move-object/from16 v13, v22
+
+    :goto_5
+    if-eqz v12, :cond_7
+
+    iget-object v14, v12, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    iget v14, v14, Landroid/content/pm/ApplicationInfo;->privateFlags:I
+
+    and-int/lit8 v14, v14, 0x2
+
+    if-nez v14, :cond_6
+
+    iget-object v14, v12, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    iget v14, v14, Landroid/content/pm/ApplicationInfo;->uid:I
+
+    iget-object v15, v12, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    iget-object v15, v15, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v7, v14, v15}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    goto :goto_6
 
     :cond_6
-    :goto_5
+    new-instance v14, Ljava/lang/IllegalArgumentException;
+
+    const-string v15, "FLAG_CANT_SAVE_STATE not supported here"
+
+    invoke-direct {v14, v15}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v14
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    :cond_7
+    :goto_6
     :try_start_5
-    array-length v13, v4
+    array-length v14, v4
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
     const/4 v15, 0x1
 
-    sub-int/2addr v13, v15
+    sub-int/2addr v14, v15
 
-    move/from16 v15, v22
+    move/from16 v15, v23
 
-    if-ne v15, v13, :cond_7
+    if-ne v15, v14, :cond_8
 
     const/16 v21, 0x1
 
-    :cond_7
-    move/from16 v13, v21
+    :cond_8
+    move/from16 v14, v21
 
-    if-eqz v13, :cond_8
+    if-eqz v14, :cond_9
 
     move-object/from16 v16, p10
 
-    goto :goto_6
+    goto :goto_7
 
-    :cond_8
+    :cond_9
     const/16 v16, 0x0
 
-    :goto_6
+    :goto_7
     move-object/from16 p7, v16
 
     move-object/from16 v16, v4
+
+    move/from16 v17, v11
 
     move-object/from16 v4, p12
 
     :try_start_6
     invoke-virtual {v1, v0, v4}, Lcom/android/server/wm/ActivityStartController;->obtainStarter(Landroid/content/Intent;Ljava/lang/String;)Lcom/android/server/wm/ActivityStarter;
 
-    move-result-object v14
+    move-result-object v11
 
-    invoke-virtual {v14, v2}, Lcom/android/server/wm/ActivityStarter;->setCaller(Landroid/app/IApplicationThread;)Lcom/android/server/wm/ActivityStarter;
+    invoke-virtual {v11, v13}, Lcom/android/server/wm/ActivityStarter;->setIntentGrants(Lcom/android/server/uri/NeededUriGrants;)Lcom/android/server/wm/ActivityStarter;
 
-    move-result-object v14
+    move-result-object v11
 
-    move-object/from16 v17, v0
+    invoke-virtual {v11, v2}, Lcom/android/server/wm/ActivityStarter;->setCaller(Landroid/app/IApplicationThread;)Lcom/android/server/wm/ActivityStarter;
+
+    move-result-object v11
+
+    move-object/from16 v18, v0
 
     aget-object v0, v5, v15
 
-    invoke-virtual {v14, v0}, Lcom/android/server/wm/ActivityStarter;->setResolvedType(Ljava/lang/String;)Lcom/android/server/wm/ActivityStarter;
+    invoke-virtual {v11, v0}, Lcom/android/server/wm/ActivityStarter;->setResolvedType(Ljava/lang/String;)Lcom/android/server/wm/ActivityStarter;
 
     move-result-object v0
 
@@ -959,9 +1001,9 @@
 
     move-result-object v0
 
-    const/4 v14, -0x1
+    const/4 v11, -0x1
 
-    invoke-virtual {v0, v14}, Lcom/android/server/wm/ActivityStarter;->setRequestCode(I)Lcom/android/server/wm/ActivityStarter;
+    invoke-virtual {v0, v11}, Lcom/android/server/wm/ActivityStarter;->setRequestCode(I)Lcom/android/server/wm/ActivityStarter;
 
     move-result-object v0
 
@@ -979,10 +1021,10 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
-    move-object/from16 v14, p6
+    move-object/from16 v11, p6
 
     :try_start_7
-    invoke-virtual {v0, v14}, Lcom/android/server/wm/ActivityStarter;->setCallingFeatureId(Ljava/lang/String;)Lcom/android/server/wm/ActivityStarter;
+    invoke-virtual {v0, v11}, Lcom/android/server/wm/ActivityStarter;->setCallingFeatureId(Ljava/lang/String;)Lcom/android/server/wm/ActivityStarter;
 
     move-result-object v0
 
@@ -1000,7 +1042,7 @@
 
     move-result-object v0
 
-    move-object/from16 v18, v2
+    move-object/from16 v21, v2
 
     move/from16 v2, p2
 
@@ -1008,11 +1050,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v13}, Lcom/android/server/wm/ActivityStarter;->setAllowPendingRemoteAnimationRegistryLookup(Z)Lcom/android/server/wm/ActivityStarter;
+    invoke-virtual {v0, v14}, Lcom/android/server/wm/ActivityStarter;->setAllowPendingRemoteAnimationRegistryLookup(Z)Lcom/android/server/wm/ActivityStarter;
 
     move-result-object v0
 
-    move/from16 v21, v2
+    move/from16 v22, v2
 
     move-object/from16 v2, p13
 
@@ -1029,7 +1071,7 @@
 
     move-result-object v0
 
-    aput-object v0, v23, v15
+    aput-object v0, v24, v15
 
     add-int/lit8 v13, v15, 0x1
 
@@ -1039,7 +1081,9 @@
 
     move-object/from16 v4, v16
 
-    move-object/from16 v14, v23
+    move/from16 v11, v17
+
+    move-object/from16 v14, v24
 
     const/4 v0, -0x1
 
@@ -1050,54 +1094,51 @@
     :catchall_1
     move-exception v0
 
-    move/from16 v2, p14
-
-    move-object/from16 v18, p9
-
-    move/from16 v17, v6
-
-    goto/16 :goto_10
+    goto :goto_8
 
     :catchall_2
     move-exception v0
 
-    move-object/from16 v14, p6
+    move-object/from16 v11, p6
 
+    :goto_8
     move/from16 v2, p14
 
-    move-object/from16 v18, p9
-
-    move/from16 v17, v6
-
-    goto/16 :goto_10
+    goto/16 :goto_b
 
     :catchall_3
     move-exception v0
 
-    move-object/from16 v14, p6
-
     move/from16 v2, p14
 
     move-object/from16 v16, v4
+
+    move/from16 v17, v11
+
+    move-object/from16 v11, p6
 
     move-object/from16 v4, p12
 
-    move-object/from16 v18, p9
+    move-object/from16 v15, p9
 
-    move/from16 v17, v6
+    move/from16 v18, v6
 
-    goto/16 :goto_10
+    move/from16 v6, v17
 
-    :cond_9
+    goto/16 :goto_12
+
+    :cond_a
     move/from16 v2, p14
 
     move-object/from16 v16, v4
 
-    move-object/from16 v23, v14
+    move/from16 v17, v11
+
+    move-object/from16 v24, v14
 
     move-object v7, v15
 
-    move-object/from16 v14, p6
+    move-object/from16 v11, p6
 
     move-object/from16 v4, p12
 
@@ -1116,32 +1157,38 @@
     :catchall_4
     move-exception v0
 
-    move-object/from16 v14, p6
-
     move/from16 v2, p14
 
     move-object/from16 v16, v4
 
+    move/from16 v17, v11
+
     move-object v7, v15
+
+    move-object/from16 v11, p6
 
     move-object/from16 v4, p12
 
-    move-object/from16 v18, p9
+    move-object/from16 v15, p9
 
-    move/from16 v17, v6
+    move/from16 v18, v6
 
-    goto/16 :goto_10
+    move/from16 v6, v17
 
-    :cond_a
+    goto/16 :goto_12
+
+    :cond_b
     move/from16 v2, p14
 
     move-object/from16 v16, v4
 
-    move-object/from16 v23, v14
+    move/from16 v17, v11
+
+    move-object/from16 v24, v14
 
     move-object v7, v15
 
-    move-object/from16 v14, p6
+    move-object/from16 v11, p6
 
     move-object/from16 v4, p12
 
@@ -1152,11 +1199,11 @@
 
     move-result v0
     :try_end_9
-    .catchall {:try_start_9 .. :try_end_9} :catchall_e
+    .catchall {:try_start_9 .. :try_end_9} :catchall_12
 
     const/4 v12, 0x1
 
-    if-le v0, v12, :cond_d
+    if-le v0, v12, :cond_e
 
     :try_start_a
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1171,36 +1218,36 @@
 
     const/4 v13, 0x0
 
-    :goto_7
-    if-ge v13, v12, :cond_c
+    :goto_9
+    if-ge v13, v12, :cond_d
 
     invoke-virtual {v7, v13}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
-    move-result-object v15
+    move-result-object v14
 
-    check-cast v15, Ljava/lang/String;
+    check-cast v14, Ljava/lang/String;
 
-    invoke-virtual {v0, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    add-int/lit8 v15, v12, -0x1
+    add-int/lit8 v14, v12, -0x1
 
-    if-ne v13, v15, :cond_b
+    if-ne v13, v14, :cond_c
 
-    const-string v15, "]"
+    const-string v14, "]"
 
-    goto :goto_8
+    goto :goto_a
 
-    :cond_b
-    const-string v15, ", "
+    :cond_c
+    const-string v14, ", "
 
-    :goto_8
-    invoke-virtual {v0, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :goto_a
+    invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     add-int/lit8 v13, v13, 0x1
 
-    goto :goto_7
+    goto :goto_9
 
-    :cond_c
+    :cond_d
     const-string v13, " from "
 
     invoke-virtual {v0, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1211,25 +1258,28 @@
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v15
+    move-result-object v14
 
-    invoke-static {v13, v15}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v13, v14}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_5
 
-    goto :goto_9
+    goto :goto_c
 
     :catchall_5
     move-exception v0
 
-    move-object/from16 v18, p9
+    :goto_b
+    move-object/from16 v15, p9
 
-    move/from16 v17, v6
+    move/from16 v18, v6
 
-    goto/16 :goto_10
+    move/from16 v6, v17
 
-    :cond_d
-    :goto_9
+    goto/16 :goto_12
+
+    :cond_e
+    :goto_c
     move-object/from16 v12, p9
 
     const/4 v0, 0x1
@@ -1239,11 +1289,11 @@
 
     iget-object v0, v1, Lcom/android/server/wm/ActivityStartController;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
-    iget-object v15, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
+    iget-object v14, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
 
-    monitor-enter v15
+    monitor-enter v14
     :try_end_b
-    .catchall {:try_start_b .. :try_end_b} :catchall_e
+    .catchall {:try_start_b .. :try_end_b} :catchall_12
 
     :try_start_c
     invoke-static {}, Lcom/android/server/wm/WindowManagerService;->boostPriorityForLockedSection()V
@@ -1252,211 +1302,267 @@
 
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityTaskManagerService;->deferWindowLayout()V
     :try_end_c
-    .catchall {:try_start_c .. :try_end_c} :catchall_b
+    .catchall {:try_start_c .. :try_end_c} :catchall_f
 
     const/4 v0, 0x0
 
-    move-object/from16 v2, p9
+    move-object/from16 v15, p9
 
-    :goto_a
-    move-object/from16 v3, v23
+    :goto_d
+    move-object/from16 v2, v24
 
     :try_start_d
-    array-length v4, v3
+    array-length v3, v2
 
-    if-ge v0, v4, :cond_12
+    if-ge v0, v3, :cond_14
 
-    aget-object v4, v3, v0
+    aget-object v3, v2, v0
 
-    invoke-virtual {v4, v2}, Lcom/android/server/wm/ActivityStarter;->setResultTo(Landroid/os/IBinder;)Lcom/android/server/wm/ActivityStarter;
+    invoke-virtual {v3, v15}, Lcom/android/server/wm/ActivityStarter;->setResultTo(Landroid/os/IBinder;)Lcom/android/server/wm/ActivityStarter;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-virtual {v4, v13}, Lcom/android/server/wm/ActivityStarter;->setOutActivity([Lcom/android/server/wm/ActivityRecord;)Lcom/android/server/wm/ActivityStarter;
+    invoke-virtual {v3, v13}, Lcom/android/server/wm/ActivityStarter;->setOutActivity([Lcom/android/server/wm/ActivityRecord;)Lcom/android/server/wm/ActivityStarter;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-virtual {v4}, Lcom/android/server/wm/ActivityStarter;->execute()I
+    invoke-virtual {v3}, Lcom/android/server/wm/ActivityStarter;->execute()I
 
-    move-result v4
+    move-result v3
     :try_end_d
-    .catchall {:try_start_d .. :try_end_d} :catchall_9
+    .catchall {:try_start_d .. :try_end_d} :catchall_e
 
-    if-gez v4, :cond_f
+    if-gez v3, :cond_10
 
-    add-int/lit8 v17, v0, 0x1
+    add-int/lit8 v18, v0, 0x1
 
-    move-object/from16 v18, v2
+    move/from16 v4, v18
 
-    move/from16 v2, v17
-
-    :goto_b
+    :goto_e
     :try_start_e
-    array-length v5, v3
+    array-length v5, v2
 
-    if-ge v2, v5, :cond_e
+    if-ge v4, v5, :cond_f
 
     iget-object v5, v1, Lcom/android/server/wm/ActivityStartController;->mFactory:Lcom/android/server/wm/ActivityStarter$Factory;
     :try_end_e
-    .catchall {:try_start_e .. :try_end_e} :catchall_6
+    .catchall {:try_start_e .. :try_end_e} :catchall_8
 
-    move/from16 v17, v6
+    move/from16 v18, v6
 
     :try_start_f
-    aget-object v6, v3, v2
+    aget-object v6, v2, v4
 
     invoke-interface {v5, v6}, Lcom/android/server/wm/ActivityStarter$Factory;->recycle(Lcom/android/server/wm/ActivityStarter;)V
     :try_end_f
-    .catchall {:try_start_f .. :try_end_f} :catchall_8
+    .catchall {:try_start_f .. :try_end_f} :catchall_6
 
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v4, v4, 0x1
 
     move-object/from16 v5, p8
 
+    move/from16 v6, v18
+
+    goto :goto_e
+
+    :catchall_6
+    move-exception v0
+
+    move-object/from16 v24, v2
+
     move/from16 v6, v17
 
-    goto :goto_b
+    goto/16 :goto_10
 
-    :cond_e
-    move/from16 v17, v6
+    :cond_f
+    move/from16 v18, v6
 
     nop
 
     :try_start_10
-    iget-object v2, v1, Lcom/android/server/wm/ActivityStartController;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
+    iget-object v4, v1, Lcom/android/server/wm/ActivityStartController;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
-    invoke-virtual {v2}, Lcom/android/server/wm/ActivityTaskManagerService;->continueWindowLayout()V
+    invoke-virtual {v4}, Lcom/android/server/wm/ActivityTaskManagerService;->continueWindowLayout()V
 
-    monitor-exit v15
+    monitor-exit v14
     :try_end_10
-    .catchall {:try_start_10 .. :try_end_10} :catchall_d
+    .catchall {:try_start_10 .. :try_end_10} :catchall_7
 
     invoke-static {}, Lcom/android/server/wm/WindowManagerService;->resetPriorityAfterLockedSection()V
 
     invoke-static/range {v19 .. v20}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    return v4
+    return v3
 
-    :catchall_6
+    :catchall_7
     move-exception v0
 
-    move/from16 v17, v6
+    move-object/from16 v24, v2
 
-    move-object/from16 v2, v18
+    move/from16 v6, v17
 
-    goto/16 :goto_e
+    goto/16 :goto_11
 
-    :cond_f
-    move-object/from16 v18, v2
+    :catchall_8
+    move-exception v0
 
-    move/from16 v17, v6
+    move/from16 v18, v6
 
-    :try_start_11
-    aget-object v2, v13, v21
+    move-object/from16 v24, v2
 
-    if-eqz v2, :cond_10
+    move/from16 v6, v17
 
-    invoke-virtual {v2}, Lcom/android/server/wm/ActivityRecord;->getUid()I
-
-    move-result v5
-
-    if-ne v5, v11, :cond_10
-
-    iget-object v5, v2, Lcom/android/server/wm/ActivityRecord;->appToken:Lcom/android/server/wm/ActivityRecord$Token;
-    :try_end_11
-    .catchall {:try_start_11 .. :try_end_11} :catchall_8
-
-    move-object v2, v5
-
-    const/16 v18, 0x1
-
-    goto :goto_d
+    goto/16 :goto_10
 
     :cond_10
-    move-object v5, v12
+    move/from16 v18, v6
+
+    :try_start_11
+    aget-object v4, v13, v21
+    :try_end_11
+    .catchall {:try_start_11 .. :try_end_11} :catchall_d
+
+    if-eqz v4, :cond_11
 
     :try_start_12
-    array-length v6, v3
+    invoke-virtual {v4}, Lcom/android/server/wm/ActivityRecord;->getUid()I
 
-    const/16 v18, 0x1
+    move-result v5
+    :try_end_12
+    .catchall {:try_start_12 .. :try_end_12} :catchall_a
 
-    add-int/lit8 v6, v6, -0x1
+    move/from16 v6, v17
 
-    if-ge v0, v6, :cond_11
+    if-ne v5, v6, :cond_12
 
-    add-int/lit8 v6, v0, 0x1
+    :try_start_13
+    iget-object v5, v4, Lcom/android/server/wm/ActivityRecord;->appToken:Lcom/android/server/wm/ActivityRecord$Token;
+    :try_end_13
+    .catchall {:try_start_13 .. :try_end_13} :catchall_9
 
-    aget-object v6, v3, v6
+    move-object/from16 v24, v2
 
-    invoke-virtual {v6}, Lcom/android/server/wm/ActivityStarter;->getIntent()Landroid/content/Intent;
+    move-object v15, v5
 
-    move-result-object v6
+    const/16 v17, 0x1
 
-    move-object/from16 p2, v2
+    goto :goto_f
+
+    :catchall_9
+    move-exception v0
+
+    move-object/from16 v24, v2
+
+    goto :goto_10
+
+    :catchall_a
+    move-exception v0
+
+    move/from16 v6, v17
+
+    move-object/from16 v24, v2
+
+    goto :goto_10
+
+    :cond_11
+    move/from16 v6, v17
+
+    :cond_12
+    move-object v15, v12
+
+    :try_start_14
+    array-length v5, v2
+
+    const/16 v17, 0x1
+
+    add-int/lit8 v5, v5, -0x1
+
+    if-ge v0, v5, :cond_13
+
+    add-int/lit8 v5, v0, 0x1
+
+    aget-object v5, v2, v5
+
+    invoke-virtual {v5}, Lcom/android/server/wm/ActivityStarter;->getIntent()Landroid/content/Intent;
+
+    move-result-object v5
+    :try_end_14
+    .catchall {:try_start_14 .. :try_end_14} :catchall_c
+
+    move-object/from16 v24, v2
 
     const/high16 v2, 0x10000000
 
-    invoke-virtual {v6, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
-    :try_end_12
-    .catchall {:try_start_12 .. :try_end_12} :catchall_7
+    :try_start_15
+    invoke-virtual {v5, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+    :try_end_15
+    .catchall {:try_start_15 .. :try_end_15} :catchall_b
 
-    goto :goto_c
+    goto :goto_f
 
-    :cond_11
-    move-object/from16 p2, v2
+    :catchall_b
+    move-exception v0
 
-    :goto_c
-    move-object v2, v5
+    goto :goto_10
 
-    :goto_d
+    :cond_13
+    move-object/from16 v24, v2
+
+    :goto_f
     add-int/lit8 v0, v0, 0x1
+
+    move-object/from16 v3, p5
 
     move-object/from16 v5, p8
 
     move-object/from16 v4, p12
 
-    move-object/from16 v23, v3
-
-    move/from16 v6, v17
-
-    move-object/from16 v3, p5
-
-    goto/16 :goto_a
-
-    :catchall_7
-    move-exception v0
-
-    move-object v2, v5
-
-    goto :goto_e
-
-    :catchall_8
-    move-exception v0
-
-    move-object/from16 v2, v18
-
-    goto :goto_e
-
-    :cond_12
-    move-object/from16 v18, v2
+    move/from16 v2, p14
 
     move/from16 v17, v6
 
-    :try_start_13
+    move/from16 v6, v18
+
+    goto/16 :goto_d
+
+    :catchall_c
+    move-exception v0
+
+    move-object/from16 v24, v2
+
+    goto :goto_10
+
+    :catchall_d
+    move-exception v0
+
+    move-object/from16 v24, v2
+
+    move/from16 v6, v17
+
+    goto :goto_10
+
+    :cond_14
+    move-object/from16 v24, v2
+
+    move/from16 v18, v6
+
+    move/from16 v6, v17
+
+    :try_start_16
     iget-object v0, v1, Lcom/android/server/wm/ActivityStartController;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityTaskManagerService;->continueWindowLayout()V
 
     nop
 
-    monitor-exit v15
-    :try_end_13
-    .catchall {:try_start_13 .. :try_end_13} :catchall_d
+    monitor-exit v14
+    :try_end_16
+    .catchall {:try_start_16 .. :try_end_16} :catchall_11
 
-    :try_start_14
+    :try_start_17
     invoke-static {}, Lcom/android/server/wm/WindowManagerService;->resetPriorityAfterLockedSection()V
-    :try_end_14
-    .catchall {:try_start_14 .. :try_end_14} :catchall_c
+    :try_end_17
+    .catchall {:try_start_17 .. :try_end_17} :catchall_10
 
     invoke-static/range {v19 .. v20}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -1464,108 +1570,106 @@
 
     return v21
 
-    :catchall_9
+    :catchall_e
     move-exception v0
 
-    move-object/from16 v18, v2
+    move-object/from16 v24, v2
 
-    move/from16 v17, v6
+    move/from16 v18, v6
 
-    :goto_e
-    :try_start_15
-    iget-object v4, v1, Lcom/android/server/wm/ActivityStartController;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
+    move/from16 v6, v17
 
-    invoke-virtual {v4}, Lcom/android/server/wm/ActivityTaskManagerService;->continueWindowLayout()V
+    :goto_10
+    :try_start_18
+    iget-object v2, v1, Lcom/android/server/wm/ActivityStartController;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
+
+    invoke-virtual {v2}, Lcom/android/server/wm/ActivityTaskManagerService;->continueWindowLayout()V
 
     nop
 
     throw v0
-    :try_end_15
-    .catchall {:try_start_15 .. :try_end_15} :catchall_a
-
-    :catchall_a
-    move-exception v0
-
-    move-object/from16 v18, v2
-
-    goto :goto_f
-
-    :catchall_b
-    move-exception v0
-
-    move/from16 v17, v6
-
-    move-object/from16 v3, v23
-
-    move-object/from16 v18, p9
-
-    :goto_f
-    :try_start_16
-    monitor-exit v15
-    :try_end_16
-    .catchall {:try_start_16 .. :try_end_16} :catchall_d
-
-    :try_start_17
-    invoke-static {}, Lcom/android/server/wm/WindowManagerService;->resetPriorityAfterLockedSection()V
-
-    throw v0
-    :try_end_17
-    .catchall {:try_start_17 .. :try_end_17} :catchall_c
-
-    :catchall_c
-    move-exception v0
-
-    goto :goto_10
-
-    :catchall_d
-    move-exception v0
-
-    goto :goto_f
-
-    :catchall_e
-    move-exception v0
-
-    move/from16 v17, v6
-
-    move-object/from16 v18, p9
-
-    goto :goto_10
 
     :catchall_f
     move-exception v0
 
-    move-object/from16 v14, p6
+    move/from16 v18, v6
 
-    move-object/from16 v16, v4
+    move/from16 v6, v17
 
-    move/from16 v17, v6
+    move-object/from16 v15, p9
 
-    move-object v7, v15
+    :goto_11
+    monitor-exit v14
+    :try_end_18
+    .catchall {:try_start_18 .. :try_end_18} :catchall_11
 
-    move-object/from16 v18, p9
+    :try_start_19
+    invoke-static {}, Lcom/android/server/wm/WindowManagerService;->resetPriorityAfterLockedSection()V
 
-    goto :goto_10
+    throw v0
+    :try_end_19
+    .catchall {:try_start_19 .. :try_end_19} :catchall_10
 
     :catchall_10
     move-exception v0
 
-    move-object/from16 v14, p6
+    goto :goto_12
 
-    move/from16 v17, v6
+    :catchall_11
+    move-exception v0
+
+    goto :goto_11
+
+    :catchall_12
+    move-exception v0
+
+    move/from16 v18, v6
+
+    move/from16 v6, v17
+
+    move-object/from16 v15, p9
+
+    goto :goto_12
+
+    :catchall_13
+    move-exception v0
+
+    move-object/from16 v16, v4
+
+    move/from16 v18, v6
+
+    move v6, v11
 
     move-object v7, v15
 
+    move-object/from16 v11, p6
+
+    move-object/from16 v15, p9
+
+    goto :goto_12
+
+    :catchall_14
+    move-exception v0
+
+    move/from16 v18, v6
+
+    move v6, v11
+
+    move-object v7, v15
+
+    move-object/from16 v11, p6
+
     move-object/from16 v16, p7
 
-    move-object/from16 v18, p9
+    move-object/from16 v15, p9
 
-    :goto_10
+    :goto_12
     invoke-static/range {v19 .. v20}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     throw v0
 
-    :cond_13
-    move-object/from16 v14, p6
+    :cond_15
+    move-object/from16 v11, p6
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1575,8 +1679,8 @@
 
     throw v0
 
-    :cond_14
-    move-object/from16 v14, p6
+    :cond_16
+    move-object/from16 v11, p6
 
     new-instance v0, Ljava/lang/NullPointerException;
 
@@ -1586,8 +1690,8 @@
 
     throw v0
 
-    :cond_15
-    move-object/from16 v14, p6
+    :cond_17
+    move-object/from16 v11, p6
 
     new-instance v0, Ljava/lang/NullPointerException;
 

@@ -50,6 +50,20 @@
     return-void
 .end method
 
+.method public static gameModeShowToolBox(II)Z
+    .locals 1
+
+    invoke-static {}, Lcom/android/server/wm/OnePlusSceneManagerInjector;->initOnePlusSceneManager()V
+
+    sget-object v0, Lcom/android/server/wm/OnePlusSceneManagerInjector;->sOnePlusSceneManager:Lcom/android/server/wm/IOnePlusSceneManager;
+
+    invoke-interface {v0, p0, p1}, Lcom/android/server/wm/IOnePlusSceneManager;->gameModeShowToolBox(II)Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public static handleEvaluateGameMode(ZZ)V
     .locals 1
 

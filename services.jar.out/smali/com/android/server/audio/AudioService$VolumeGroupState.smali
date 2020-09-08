@@ -260,7 +260,7 @@
     return-void
 .end method
 
-.method static synthetic access$4800(Lcom/android/server/audio/AudioService$VolumeGroupState;I)V
+.method static synthetic access$4900(Lcom/android/server/audio/AudioService$VolumeGroupState;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/audio/AudioService$VolumeGroupState;->persistVolumeGroup(I)V

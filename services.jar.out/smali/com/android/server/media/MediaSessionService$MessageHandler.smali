@@ -94,7 +94,7 @@
 
     move-result v1
 
-    invoke-static {v0, v1}, Lcom/android/server/media/MediaSessionService;->access$6100(Lcom/android/server/media/MediaSessionService;I)V
+    invoke-static {v0, v1}, Lcom/android/server/media/MediaSessionService;->access$6200(Lcom/android/server/media/MediaSessionService;I)V
 
     nop
 

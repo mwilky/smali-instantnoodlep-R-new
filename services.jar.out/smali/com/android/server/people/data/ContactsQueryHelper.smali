@@ -31,205 +31,231 @@
 .end method
 
 .method private queryContact(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Z
-    .locals 15
+    .locals 16
 
-    move-object v1, p0
+    move-object/from16 v1, p0
 
-    const/4 v2, 0x0
+    const-string v2, "ContactsQueryHelper"
 
     const/4 v3, 0x0
 
     const/4 v4, 0x0
 
+    const/4 v5, 0x0
+
+    :try_start_0
     iget-object v0, v1, Lcom/android/server/people/data/ContactsQueryHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object v5
+    move-result-object v6
 
-    const/4 v10, 0x0
+    const/4 v11, 0x0
 
-    move-object/from16 v6, p1
+    move-object/from16 v7, p1
 
-    move-object/from16 v7, p2
+    move-object/from16 v8, p2
 
-    move-object/from16 v8, p3
+    move-object/from16 v9, p3
 
-    move-object/from16 v9, p4
+    move-object/from16 v10, p4
 
-    invoke-virtual/range {v5 .. v10}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual/range {v6 .. v11}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
-    move-result-object v5
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-object v6, v0
 
     const/4 v0, 0x0
 
-    if-nez v5, :cond_1
+    if-nez v6, :cond_1
 
-    :try_start_0
-    const-string v6, "ContactsQueryHelper"
-
+    :try_start_1
     const-string v7, "Cursor is null when querying contact."
 
-    invoke-static {v6, v7}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-static {v2, v7}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     nop
 
-    if-eqz v5, :cond_0
+    if-eqz v6, :cond_0
 
-    invoke-interface {v5}, Landroid/database/Cursor;->close()V
+    :try_start_2
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
     :cond_0
     return v0
 
     :cond_1
     :goto_0
-    :try_start_1
-    invoke-interface {v5}, Landroid/database/Cursor;->moveToNext()Z
+    :try_start_3
+    invoke-interface {v6}, Landroid/database/Cursor;->moveToNext()Z
 
-    move-result v6
+    move-result v7
 
-    if-eqz v6, :cond_5
+    if-eqz v7, :cond_5
 
-    const-string v6, "_id"
+    const-string v7, "_id"
 
-    invoke-interface {v5, v6}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    invoke-interface {v6, v7}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
-    move-result v6
+    move-result v7
 
-    invoke-interface {v5, v6}, Landroid/database/Cursor;->getLong(I)J
+    invoke-interface {v6, v7}, Landroid/database/Cursor;->getLong(I)J
 
-    move-result-wide v7
+    move-result-wide v8
 
-    const-string/jumbo v9, "lookup"
+    const-string/jumbo v10, "lookup"
 
-    invoke-interface {v5, v9}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result v9
-
-    invoke-interface {v5, v9}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v10
-
-    move-object v2, v10
-
-    invoke-static {v7, v8, v2}, Landroid/provider/ContactsContract$Contacts;->getLookupUri(JLjava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v10
-
-    iput-object v10, v1, Lcom/android/server/people/data/ContactsQueryHelper;->mContactUri:Landroid/net/Uri;
-
-    const-string/jumbo v10, "starred"
-
-    invoke-interface {v5, v10}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    invoke-interface {v6, v10}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v10
 
-    invoke-interface {v5, v10}, Landroid/database/Cursor;->getInt(I)I
+    invoke-interface {v6, v10}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v11
+
+    move-object v3, v11
+
+    invoke-static {v8, v9, v3}, Landroid/provider/ContactsContract$Contacts;->getLookupUri(JLjava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v11
+
+    iput-object v11, v1, Lcom/android/server/people/data/ContactsQueryHelper;->mContactUri:Landroid/net/Uri;
+
+    const-string/jumbo v11, "starred"
+
+    invoke-interface {v6, v11}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v11
 
-    const/4 v12, 0x1
+    invoke-interface {v6, v11}, Landroid/database/Cursor;->getInt(I)I
 
-    if-eqz v11, :cond_2
+    move-result v12
 
-    move v11, v12
+    const/4 v13, 0x1
+
+    if-eqz v12, :cond_2
+
+    move v12, v13
 
     goto :goto_1
 
     :cond_2
-    move v11, v0
+    move v12, v0
 
     :goto_1
-    iput-boolean v11, v1, Lcom/android/server/people/data/ContactsQueryHelper;->mIsStarred:Z
+    iput-boolean v12, v1, Lcom/android/server/people/data/ContactsQueryHelper;->mIsStarred:Z
 
-    const-string v11, "has_phone_number"
+    const-string v12, "has_phone_number"
 
-    invoke-interface {v5, v11}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    invoke-interface {v6, v12}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
-    move-result v11
+    move-result v12
 
-    invoke-interface {v5, v11}, Landroid/database/Cursor;->getInt(I)I
+    invoke-interface {v6, v12}, Landroid/database/Cursor;->getInt(I)I
 
-    move-result v13
+    move-result v14
 
-    if-eqz v13, :cond_3
+    if-eqz v14, :cond_3
 
     goto :goto_2
 
     :cond_3
-    move v12, v0
+    move v13, v0
 
     :goto_2
-    move v3, v12
+    move v4, v13
 
-    const-string v12, "contact_last_updated_timestamp"
+    const-string v13, "contact_last_updated_timestamp"
 
-    invoke-interface {v5, v12}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    invoke-interface {v6, v13}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
-    move-result v12
+    move-result v13
 
-    if-ltz v12, :cond_4
+    if-ltz v13, :cond_4
 
-    invoke-interface {v5, v12}, Landroid/database/Cursor;->getLong(I)J
+    invoke-interface {v6, v13}, Landroid/database/Cursor;->getLong(I)J
 
-    move-result-wide v13
+    move-result-wide v14
 
-    iput-wide v13, v1, Lcom/android/server/people/data/ContactsQueryHelper;->mLastUpdatedTimestamp:J
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    iput-wide v14, v1, Lcom/android/server/people/data/ContactsQueryHelper;->mLastUpdatedTimestamp:J
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     :cond_4
-    const/4 v4, 0x1
+    const/4 v5, 0x1
 
     goto :goto_0
 
     :cond_5
-    if-eqz v5, :cond_6
+    if-eqz v6, :cond_6
 
-    invoke-interface {v5}, Landroid/database/Cursor;->close()V
+    :try_start_4
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 
     :cond_6
-    if-eqz v4, :cond_7
-
-    if-eqz v2, :cond_7
-
-    if-eqz v3, :cond_7
-
-    invoke-direct {p0, v2}, Lcom/android/server/people/data/ContactsQueryHelper;->queryPhoneNumber(Ljava/lang/String;)Z
-
-    move-result v0
-
-    return v0
-
-    :cond_7
-    return v4
+    goto :goto_4
 
     :catchall_0
     move-exception v0
 
-    move-object v6, v0
+    move-object v7, v0
 
-    if-eqz v5, :cond_8
+    if-eqz v6, :cond_7
 
-    :try_start_2
-    invoke-interface {v5}, Landroid/database/Cursor;->close()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    :try_start_5
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
     goto :goto_3
 
     :catchall_1
     move-exception v0
 
-    move-object v7, v0
+    move-object v8, v0
 
-    invoke-virtual {v6, v7}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+    :try_start_6
+    invoke-virtual {v7, v8}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+
+    :cond_7
+    :goto_3
+    throw v7
+    :try_end_6
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_0
+
+    :catch_0
+    move-exception v0
+
+    const/4 v5, 0x0
+
+    const-string/jumbo v6, "query contact Exception "
+
+    invoke-static {v2, v6, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_4
+    if-eqz v5, :cond_8
+
+    if-eqz v3, :cond_8
+
+    if-eqz v4, :cond_8
+
+    invoke-direct {v1, v3}, Lcom/android/server/people/data/ContactsQueryHelper;->queryPhoneNumber(Ljava/lang/String;)Z
+
+    move-result v0
+
+    return v0
 
     :cond_8
-    :goto_3
-    throw v6
+    return v5
 .end method
 
 .method private queryPhoneNumber(Ljava/lang/String;)Z

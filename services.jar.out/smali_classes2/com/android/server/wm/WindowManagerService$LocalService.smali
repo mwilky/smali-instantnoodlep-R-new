@@ -997,8 +997,8 @@
     throw v1
 .end method
 
-.method public hideIme(Landroid/os/IBinder;)V
-    .locals 6
+.method public hideIme(Landroid/os/IBinder;I)V
+    .locals 10
 
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
@@ -1019,8 +1019,107 @@
 
     check-cast v1, Lcom/android/server/wm/WindowState;
 
-    if-nez v1, :cond_0
+    sget-boolean v2, Lcom/android/server/protolog/ProtoLog$Cache;->WM_DEBUG_IME_enabled:Z
 
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    const/4 v5, 0x0
+
+    if-eqz v2, :cond_0
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    sget-object v6, Lcom/android/server/wm/ProtoLogGroup;->WM_DEBUG_IME:Lcom/android/server/wm/ProtoLogGroup;
+
+    const v7, 0x5ace442
+
+    new-array v8, v4, [Ljava/lang/Object;
+
+    aput-object v2, v8, v5
+
+    invoke-static {v6, v7, v5, v3, v8}, Lcom/android/server/protolog/ProtoLogImpl;->d(Lcom/android/server/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
+
+    :cond_0
+    iget-object v2, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
+
+    iget-object v2, v2, Lcom/android/server/wm/WindowManagerService;->mRoot:Lcom/android/server/wm/RootWindowContainer;
+
+    invoke-virtual {v2, p2}, Lcom/android/server/wm/RootWindowContainer;->getDisplayContent(I)Lcom/android/server/wm/DisplayContent;
+
+    move-result-object v2
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v1}, Lcom/android/server/wm/WindowState;->getImeControlTarget()Lcom/android/server/wm/InsetsControlTarget;
+
+    move-result-object v6
+
+    invoke-interface {v6}, Lcom/android/server/wm/InsetsControlTarget;->getWindow()Lcom/android/server/wm/WindowState;
+
+    move-result-object v6
+
+    move-object v1, v6
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Lcom/android/server/wm/WindowState;->getDisplayContent()Lcom/android/server/wm/DisplayContent;
+
+    move-result-object v6
+
+    move-object v2, v6
+
+    :cond_1
+    invoke-virtual {v2}, Lcom/android/server/wm/DisplayContent;->getInsetsStateController()Lcom/android/server/wm/InsetsStateController;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Lcom/android/server/wm/InsetsStateController;->getImeSourceProvider()Lcom/android/server/wm/ImeInsetsSourceProvider;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Lcom/android/server/wm/ImeInsetsSourceProvider;->abortShowImePostLayout()V
+
+    :cond_2
+    if-eqz v2, :cond_4
+
+    iget-object v6, v2, Lcom/android/server/wm/DisplayContent;->mInputMethodControlTarget:Lcom/android/server/wm/InsetsControlTarget;
+
+    if-eqz v6, :cond_4
+
+    sget-boolean v6, Lcom/android/server/protolog/ProtoLog$Cache;->WM_DEBUG_IME_enabled:Z
+
+    if-eqz v6, :cond_3
+
+    iget-object v6, v2, Lcom/android/server/wm/DisplayContent;->mInputMethodControlTarget:Lcom/android/server/wm/InsetsControlTarget;
+
+    invoke-static {v6}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v6
+
+    sget-object v7, Lcom/android/server/wm/ProtoLogGroup;->WM_DEBUG_IME:Lcom/android/server/wm/ProtoLogGroup;
+
+    const v8, -0x209c41bb
+
+    new-array v9, v4, [Ljava/lang/Object;
+
+    aput-object v6, v9, v5
+
+    invoke-static {v7, v8, v5, v3, v9}, Lcom/android/server/protolog/ProtoLogImpl;->d(Lcom/android/server/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
+
+    :cond_3
+    iget-object v3, v2, Lcom/android/server/wm/DisplayContent;->mInputMethodControlTarget:Lcom/android/server/wm/InsetsControlTarget;
+
+    invoke-static {}, Landroid/view/WindowInsets$Type;->ime()I
+
+    move-result v5
+
+    invoke-interface {v3, v5, v4}, Lcom/android/server/wm/InsetsControlTarget;->hideInsets(IZ)V
+
+    :cond_4
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1029,83 +1128,13 @@
 
     return-void
 
-    :cond_0
-    :try_start_1
-    invoke-virtual {v1}, Lcom/android/server/wm/WindowState;->getImeControlTarget()Lcom/android/server/wm/InsetsControlTarget;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Lcom/android/server/wm/InsetsControlTarget;->getWindow()Lcom/android/server/wm/WindowState;
-
-    move-result-object v2
-
-    move-object v1, v2
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Lcom/android/server/wm/WindowState;->getDisplayContent()Lcom/android/server/wm/DisplayContent;
-
-    move-result-object v2
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v2, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
-
-    invoke-virtual {v2}, Lcom/android/server/wm/WindowManagerService;->getDefaultDisplayContentLocked()Lcom/android/server/wm/DisplayContent;
-
-    move-result-object v2
-
-    :goto_0
-    invoke-virtual {v2}, Lcom/android/server/wm/DisplayContent;->getInsetsStateController()Lcom/android/server/wm/InsetsStateController;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lcom/android/server/wm/InsetsStateController;->getImeSourceProvider()Lcom/android/server/wm/ImeInsetsSourceProvider;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lcom/android/server/wm/ImeInsetsSourceProvider;->abortShowImePostLayout()V
-
-    iget-object v3, v2, Lcom/android/server/wm/DisplayContent;->mInputMethodControlTarget:Lcom/android/server/wm/InsetsControlTarget;
-
-    if-nez v3, :cond_2
-
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    invoke-static {}, Lcom/android/server/wm/WindowManagerService;->resetPriorityAfterLockedSection()V
-
-    return-void
-
-    :cond_2
-    :try_start_2
-    iget-object v3, v2, Lcom/android/server/wm/DisplayContent;->mInputMethodControlTarget:Lcom/android/server/wm/InsetsControlTarget;
-
-    invoke-static {}, Landroid/view/WindowInsets$Type;->ime()I
-
-    move-result v4
-
-    const/4 v5, 0x1
-
-    invoke-interface {v3, v4, v5}, Lcom/android/server/wm/InsetsControlTarget;->hideInsets(IZ)V
-
-    monitor-exit v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    invoke-static {}, Lcom/android/server/wm/WindowManagerService;->resetPriorityAfterLockedSection()V
-
-    return-void
-
     :catchall_0
     move-exception v1
 
-    :try_start_3
+    :try_start_1
     monitor-exit v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     invoke-static {}, Lcom/android/server/wm/WindowManagerService;->resetPriorityAfterLockedSection()V
 
@@ -2489,7 +2518,7 @@
 .end method
 
 .method public showImePostLayout(Landroid/os/IBinder;)V
-    .locals 4
+    .locals 5
 
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
@@ -2528,35 +2557,35 @@
 
     invoke-interface {v2}, Lcom/android/server/wm/InsetsControlTarget;->getWindow()Lcom/android/server/wm/WindowState;
 
-    move-result-object v2
+    move-result-object v3
 
-    move-object v1, v2
+    move-object v1, v3
 
     if-eqz v1, :cond_1
 
     invoke-virtual {v1}, Lcom/android/server/wm/WindowState;->getDisplayContent()Lcom/android/server/wm/DisplayContent;
 
-    move-result-object v2
+    move-result-object v3
 
     goto :goto_0
 
     :cond_1
-    iget-object v2, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
+    iget-object v3, p0, Lcom/android/server/wm/WindowManagerService$LocalService;->this$0:Lcom/android/server/wm/WindowManagerService;
 
-    invoke-virtual {v2}, Lcom/android/server/wm/WindowManagerService;->getDefaultDisplayContentLocked()Lcom/android/server/wm/DisplayContent;
+    invoke-virtual {v3}, Lcom/android/server/wm/WindowManagerService;->getDefaultDisplayContentLocked()Lcom/android/server/wm/DisplayContent;
 
-    move-result-object v2
+    move-result-object v3
 
     :goto_0
-    invoke-virtual {v2}, Lcom/android/server/wm/DisplayContent;->getInsetsStateController()Lcom/android/server/wm/InsetsStateController;
+    invoke-virtual {v3}, Lcom/android/server/wm/DisplayContent;->getInsetsStateController()Lcom/android/server/wm/InsetsStateController;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {v3}, Lcom/android/server/wm/InsetsStateController;->getImeSourceProvider()Lcom/android/server/wm/ImeInsetsSourceProvider;
+    invoke-virtual {v4}, Lcom/android/server/wm/InsetsStateController;->getImeSourceProvider()Lcom/android/server/wm/ImeInsetsSourceProvider;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {v3, v1}, Lcom/android/server/wm/ImeInsetsSourceProvider;->scheduleShowImePostLayout(Lcom/android/server/wm/WindowState;)V
+    invoke-virtual {v4, v2}, Lcom/android/server/wm/ImeInsetsSourceProvider;->scheduleShowImePostLayout(Lcom/android/server/wm/InsetsControlTarget;)V
 
     monitor-exit v0
     :try_end_1

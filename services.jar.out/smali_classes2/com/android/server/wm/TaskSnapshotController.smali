@@ -229,93 +229,103 @@
 
     move-result-object v6
 
+    new-instance v7, Landroid/view/InsetsState;
+
     invoke-virtual {v6, v3}, Lcom/android/server/wm/InsetsPolicy;->getInsetsForDispatch(Lcom/android/server/wm/WindowState;)Landroid/view/InsetsState;
-
-    move-result-object v14
-
-    invoke-virtual {v3}, Lcom/android/server/wm/WindowState;->getFrameLw()Landroid/graphics/Rect;
-
-    move-result-object v7
-
-    invoke-static {v7, v14}, Lcom/android/server/wm/TaskSnapshotController;->getSystemBarInsets(Landroid/graphics/Rect;Landroid/view/InsetsState;)Landroid/graphics/Rect;
-
-    move-result-object v15
-
-    new-instance v16, Lcom/android/server/wm/TaskSnapshotSurface$SystemBarBackgroundPainter;
-
-    iget v8, v5, Landroid/view/WindowManager$LayoutParams;->flags:I
-
-    iget v9, v5, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
-
-    iget v10, v5, Landroid/view/WindowManager$LayoutParams;->systemUiVisibility:I
-
-    invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/Task;->getTaskDescription()Landroid/app/ActivityManager$TaskDescription;
-
-    move-result-object v11
-
-    iget v12, v0, Lcom/android/server/wm/TaskSnapshotController;->mHighResTaskSnapshotScale:F
-
-    move-object/from16 v7, v16
-
-    move-object v13, v14
-
-    invoke-direct/range {v7 .. v13}, Lcom/android/server/wm/TaskSnapshotSurface$SystemBarBackgroundPainter;-><init>(IIILandroid/app/ActivityManager$TaskDescription;FLandroid/view/InsetsState;)V
-
-    invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/Task;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v8
 
-    invoke-virtual {v8}, Landroid/graphics/Rect;->width()I
+    invoke-direct {v7, v8}, Landroid/view/InsetsState;-><init>(Landroid/view/InsetsState;)V
 
-    move-result v8
+    invoke-virtual {v3}, Lcom/android/server/wm/WindowState;->getRequestedInsetsState()Landroid/view/InsetsState;
 
-    invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/Task;->getBounds()Landroid/graphics/Rect;
+    move-result-object v8
 
-    move-result-object v9
+    invoke-static {v7, v8}, Lcom/android/server/wm/TaskSnapshotController;->mergeInsetsSources(Landroid/view/InsetsState;Landroid/view/InsetsState;)V
 
-    invoke-virtual {v9}, Landroid/graphics/Rect;->height()I
+    invoke-virtual {v3}, Lcom/android/server/wm/WindowState;->getFrameLw()Landroid/graphics/Rect;
 
-    move-result v9
+    move-result-object v8
 
-    int-to-float v10, v8
+    invoke-static {v8, v7}, Lcom/android/server/wm/TaskSnapshotController;->getSystemBarInsets(Landroid/graphics/Rect;Landroid/view/InsetsState;)Landroid/graphics/Rect;
 
-    iget v11, v0, Lcom/android/server/wm/TaskSnapshotController;->mHighResTaskSnapshotScale:F
+    move-result-object v8
 
-    mul-float/2addr v10, v11
+    new-instance v16, Lcom/android/server/wm/TaskSnapshotSurface$SystemBarBackgroundPainter;
 
-    float-to-int v10, v10
+    iget v10, v5, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    int-to-float v12, v9
+    iget v11, v5, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
-    mul-float/2addr v12, v11
+    iget v12, v5, Landroid/view/WindowManager$LayoutParams;->systemUiVisibility:I
 
-    float-to-int v11, v12
-
-    const-string v12, "TaskSnapshotController"
-
-    invoke-static {v12, v2}, Landroid/graphics/RenderNode;->create(Ljava/lang/String;Landroid/graphics/RenderNode$AnimationHost;)Landroid/graphics/RenderNode;
-
-    move-result-object v12
-
-    const/4 v13, 0x0
-
-    invoke-virtual {v12, v13, v13, v10, v11}, Landroid/graphics/RenderNode;->setLeftTopRightBottom(IIII)Z
-
-    invoke-virtual {v12, v13}, Landroid/graphics/RenderNode;->setClipToBounds(Z)Z
-
-    invoke-virtual {v12, v10, v11}, Landroid/graphics/RenderNode;->start(II)Landroid/graphics/RecordingCanvas;
+    invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/Task;->getTaskDescription()Landroid/app/ActivityManager$TaskDescription;
 
     move-result-object v13
 
-    invoke-virtual {v13, v4}, Landroid/graphics/RecordingCanvas;->drawColor(I)V
+    iget v14, v0, Lcom/android/server/wm/TaskSnapshotController;->mHighResTaskSnapshotScale:F
 
-    invoke-virtual {v7, v15}, Lcom/android/server/wm/TaskSnapshotSurface$SystemBarBackgroundPainter;->setInsets(Landroid/graphics/Rect;)V
+    move-object/from16 v9, v16
 
-    invoke-virtual {v7, v13, v2}, Lcom/android/server/wm/TaskSnapshotSurface$SystemBarBackgroundPainter;->drawDecors(Landroid/graphics/Canvas;Landroid/graphics/Rect;)V
+    move-object v15, v7
 
-    invoke-virtual {v12, v13}, Landroid/graphics/RenderNode;->end(Landroid/graphics/RecordingCanvas;)V
+    invoke-direct/range {v9 .. v15}, Lcom/android/server/wm/TaskSnapshotSurface$SystemBarBackgroundPainter;-><init>(IIILandroid/app/ActivityManager$TaskDescription;FLandroid/view/InsetsState;)V
 
-    invoke-static {v12, v10, v11}, Landroid/view/ThreadedRenderer;->createHardwareBitmap(Landroid/graphics/RenderNode;II)Landroid/graphics/Bitmap;
+    invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/Task;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Landroid/graphics/Rect;->width()I
+
+    move-result v10
+
+    invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/Task;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v11
+
+    invoke-virtual {v11}, Landroid/graphics/Rect;->height()I
+
+    move-result v11
+
+    int-to-float v12, v10
+
+    iget v13, v0, Lcom/android/server/wm/TaskSnapshotController;->mHighResTaskSnapshotScale:F
+
+    mul-float/2addr v12, v13
+
+    float-to-int v12, v12
+
+    int-to-float v14, v11
+
+    mul-float/2addr v14, v13
+
+    float-to-int v13, v14
+
+    const-string v14, "TaskSnapshotController"
+
+    invoke-static {v14, v2}, Landroid/graphics/RenderNode;->create(Ljava/lang/String;Landroid/graphics/RenderNode$AnimationHost;)Landroid/graphics/RenderNode;
+
+    move-result-object v14
+
+    const/4 v15, 0x0
+
+    invoke-virtual {v14, v15, v15, v12, v13}, Landroid/graphics/RenderNode;->setLeftTopRightBottom(IIII)Z
+
+    invoke-virtual {v14, v15}, Landroid/graphics/RenderNode;->setClipToBounds(Z)Z
+
+    invoke-virtual {v14, v12, v13}, Landroid/graphics/RenderNode;->start(II)Landroid/graphics/RecordingCanvas;
+
+    move-result-object v15
+
+    invoke-virtual {v15, v4}, Landroid/graphics/RecordingCanvas;->drawColor(I)V
+
+    invoke-virtual {v9, v8}, Lcom/android/server/wm/TaskSnapshotSurface$SystemBarBackgroundPainter;->setInsets(Landroid/graphics/Rect;)V
+
+    invoke-virtual {v9, v15, v2}, Lcom/android/server/wm/TaskSnapshotSurface$SystemBarBackgroundPainter;->drawDecors(Landroid/graphics/Canvas;Landroid/graphics/Rect;)V
+
+    invoke-virtual {v14, v15}, Landroid/graphics/RenderNode;->end(Landroid/graphics/RecordingCanvas;)V
+
+    invoke-static {v14, v12, v13}, Landroid/view/ThreadedRenderer;->createHardwareBitmap(Landroid/graphics/RenderNode;II)Landroid/graphics/Bitmap;
 
     move-result-object v16
 
@@ -362,7 +372,7 @@
 
     new-instance v5, Landroid/graphics/Point;
 
-    invoke-direct {v5, v8, v9}, Landroid/graphics/Point;-><init>(II)V
+    invoke-direct {v5, v10, v11}, Landroid/graphics/Point;-><init>(II)V
 
     invoke-direct {v0, v3}, Lcom/android/server/wm/TaskSnapshotController;->getInsets(Lcom/android/server/wm/WindowState;)Landroid/graphics/Rect;
 
@@ -434,7 +444,7 @@
 .end method
 
 .method static getSystemBarInsets(Landroid/graphics/Rect;Landroid/view/InsetsState;)Landroid/graphics/Rect;
-    .locals 9
+    .locals 10
 
     const/4 v2, 0x0
 
@@ -450,11 +460,13 @@
 
     const/4 v8, 0x0
 
+    const/4 v9, 0x0
+
     move-object v0, p1
 
     move-object v1, p0
 
-    invoke-virtual/range {v0 .. v8}, Landroid/view/InsetsState;->calculateInsets(Landroid/graphics/Rect;Landroid/view/InsetsState;ZZLandroid/view/DisplayCutout;IILandroid/util/SparseIntArray;)Landroid/view/WindowInsets;
+    invoke-virtual/range {v0 .. v9}, Landroid/view/InsetsState;->calculateInsets(Landroid/graphics/Rect;Landroid/view/InsetsState;ZZLandroid/view/DisplayCutout;IIILandroid/util/SparseIntArray;)Landroid/view/WindowInsets;
 
     move-result-object v0
 
@@ -614,6 +626,33 @@
     const/4 v0, 0x0
 
     return v0
+.end method
+
+.method static mergeInsetsSources(Landroid/view/InsetsState;Landroid/view/InsetsState;)V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    :goto_0
+    const/16 v1, 0x10
+
+    if-ge v0, v1, :cond_1
+
+    invoke-virtual {p1, v0}, Landroid/view/InsetsState;->peekSource(I)Landroid/view/InsetsSource;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p0, v1}, Landroid/view/InsetsState;->addSource(Landroid/view/InsetsSource;)V
+
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-void
 .end method
 
 .method private minRect(Landroid/graphics/Rect;Landroid/graphics/Rect;)Landroid/graphics/Rect;

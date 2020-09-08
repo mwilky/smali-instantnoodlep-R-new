@@ -153,6 +153,8 @@
     move v6, v2
 
     :goto_1
+    invoke-static {p1, v1}, Lcom/android/server/wm/OpWindowManagerServiceInjector;->updateKeyguardSecure(IZ)V
+
     if-nez v6, :cond_4
 
     move v2, v3

@@ -4719,9 +4719,9 @@
 
     invoke-virtual {v5}, Lcom/android/server/wm/TaskChangeNotificationController;->notifyActivityDismissingDockedStack()V
 
-    invoke-virtual {p1}, Lcom/android/server/wm/Task;->getStack()Lcom/android/server/wm/ActivityStack;
+    move-object v5, p1
 
-    move-result-object v5
+    check-cast v5, Lcom/android/server/wm/ActivityStack;
 
     invoke-virtual {v4, v5}, Lcom/android/server/wm/TaskDisplayArea;->onSplitScreenModeDismissed(Lcom/android/server/wm/ActivityStack;)V
 
@@ -6565,42 +6565,67 @@
 .end method
 
 .method removeTask(Lcom/android/server/wm/Task;ZZLjava/lang/String;)V
-    .locals 3
+    .locals 4
 
-    invoke-virtual {p1, p4}, Lcom/android/server/wm/Task;->removeTaskActivitiesLocked(Ljava/lang/String;)V
-
-    invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/wm/ActivityStackSupervisor;->cleanUpRemovedTaskLocked(Lcom/android/server/wm/Task;ZZ)V
-
-    iget-object v0, p0, Lcom/android/server/wm/ActivityStackSupervisor;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
-
-    invoke-virtual {v0}, Lcom/android/server/wm/ActivityTaskManagerService;->getLockTaskController()Lcom/android/server/wm/LockTaskController;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lcom/android/server/wm/LockTaskController;->clearLockedTask(Lcom/android/server/wm/Task;)V
-
-    iget-object v0, p0, Lcom/android/server/wm/ActivityStackSupervisor;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
-
-    invoke-virtual {v0}, Lcom/android/server/wm/ActivityTaskManagerService;->getTaskChangeNotificationController()Lcom/android/server/wm/TaskChangeNotificationController;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/android/server/wm/TaskChangeNotificationController;->notifyTaskStackChanged()V
-
-    iget-boolean v0, p1, Lcom/android/server/wm/Task;->isPersistable:Z
+    iget-boolean v0, p1, Lcom/android/server/wm/Task;->mInRemoveTask:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/server/wm/ActivityStackSupervisor;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
+    return-void
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p1, Lcom/android/server/wm/Task;->mInRemoveTask:Z
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x1
+    :try_start_0
+    invoke-virtual {p1, p4}, Lcom/android/server/wm/Task;->performClearTask(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/server/wm/ActivityTaskManagerService;->notifyTaskPersisterLocked(Lcom/android/server/wm/Task;Z)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/wm/ActivityStackSupervisor;->cleanUpRemovedTaskLocked(Lcom/android/server/wm/Task;ZZ)V
 
-    :cond_0
+    iget-object v2, p0, Lcom/android/server/wm/ActivityStackSupervisor;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
+
+    invoke-virtual {v2}, Lcom/android/server/wm/ActivityTaskManagerService;->getLockTaskController()Lcom/android/server/wm/LockTaskController;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p1}, Lcom/android/server/wm/LockTaskController;->clearLockedTask(Lcom/android/server/wm/Task;)V
+
+    iget-object v2, p0, Lcom/android/server/wm/ActivityStackSupervisor;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
+
+    invoke-virtual {v2}, Lcom/android/server/wm/ActivityTaskManagerService;->getTaskChangeNotificationController()Lcom/android/server/wm/TaskChangeNotificationController;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/android/server/wm/TaskChangeNotificationController;->notifyTaskStackChanged()V
+
+    iget-boolean v2, p1, Lcom/android/server/wm/Task;->isPersistable:Z
+
+    if-eqz v2, :cond_1
+
+    iget-object v2, p0, Lcom/android/server/wm/ActivityStackSupervisor;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v3, v0}, Lcom/android/server/wm/ActivityTaskManagerService;->notifyTaskPersisterLocked(Lcom/android/server/wm/Task;Z)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :cond_1
+    iput-boolean v1, p1, Lcom/android/server/wm/Task;->mInRemoveTask:Z
+
+    nop
+
     return-void
+
+    :catchall_0
+    move-exception v0
+
+    iput-boolean v1, p1, Lcom/android/server/wm/Task;->mInRemoveTask:Z
+
+    throw v0
 .end method
 
 .method removeTaskById(IZZLjava/lang/String;)Z

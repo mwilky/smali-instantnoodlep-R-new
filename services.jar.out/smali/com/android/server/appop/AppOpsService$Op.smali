@@ -69,6 +69,12 @@
 
     iput v0, p0, Lcom/android/server/appop/AppOpsService$Op;->mode:I
 
+    invoke-static {p3, p4, v0}, Lcom/android/server/appop/OpAppOpsService;->maybeChangeOpModeToAllowed(Ljava/lang/String;II)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/android/server/appop/AppOpsService$Op;->mode:I
+
     return-void
 .end method
 

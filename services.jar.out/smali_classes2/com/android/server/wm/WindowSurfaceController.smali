@@ -197,23 +197,31 @@
 
     move-result-object v11
 
-    iget-object v15, v0, Lcom/android/server/wm/WindowSurfaceController;->mService:Lcom/android/server/wm/WindowManagerService;
+    const-string v15, "WindowSurfaceController"
 
-    iget-boolean v15, v15, Lcom/android/server/wm/WindowManagerService;->mUseBLAST:Z
+    invoke-virtual {v11, v15}, Landroid/view/SurfaceControl$Builder;->setCallsite(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
 
-    if-eqz v15, :cond_0
+    move-result-object v11
+
+    iget-object v7, v0, Lcom/android/server/wm/WindowSurfaceController;->mService:Lcom/android/server/wm/WindowManagerService;
+
+    iget-boolean v7, v7, Lcom/android/server/wm/WindowManagerService;->mUseBLAST:Z
+
+    if-eqz v7, :cond_0
 
     invoke-virtual {v8}, Lcom/android/server/wm/WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
-    move-result-object v15
+    move-result-object v7
 
-    iget v15, v15, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
+    iget v7, v7, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
     const/high16 v16, 0x2000000
 
-    and-int v15, v15, v16
+    and-int v7, v7, v16
 
-    if-eqz v15, :cond_0
+    if-eqz v7, :cond_0
+
+    const/4 v7, 0x1
 
     goto :goto_0
 
@@ -228,19 +236,19 @@
     :cond_1
     invoke-virtual {v11}, Landroid/view/SurfaceControl$Builder;->build()Landroid/view/SurfaceControl;
 
-    move-result-object v15
+    move-result-object v9
 
-    iput-object v15, v0, Lcom/android/server/wm/WindowSurfaceController;->mSurfaceControl:Landroid/view/SurfaceControl;
+    iput-object v9, v0, Lcom/android/server/wm/WindowSurfaceController;->mSurfaceControl:Landroid/view/SurfaceControl;
 
     if-eqz v7, :cond_2
 
     invoke-virtual {v8}, Lcom/android/server/wm/WindowState;->makeSurface()Landroid/view/SurfaceControl$Builder;
 
-    move-result-object v15
+    move-result-object v9
 
-    iget-object v9, v0, Lcom/android/server/wm/WindowSurfaceController;->mSurfaceControl:Landroid/view/SurfaceControl;
+    iget-object v10, v0, Lcom/android/server/wm/WindowSurfaceController;->mSurfaceControl:Landroid/view/SurfaceControl;
 
-    invoke-virtual {v15, v9}, Landroid/view/SurfaceControl$Builder;->setParent(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Builder;
+    invoke-virtual {v9, v10}, Landroid/view/SurfaceControl$Builder;->setParent(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Builder;
 
     move-result-object v9
 
@@ -250,23 +258,29 @@
 
     invoke-virtual {v10, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v15, "(BLAST)"
+    const-string v6, "(BLAST)"
 
-    invoke-virtual {v10, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v10, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v10
+    move-result-object v6
 
-    invoke-virtual {v9, v10}, Landroid/view/SurfaceControl$Builder;->setName(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
+    invoke-virtual {v9, v6}, Landroid/view/SurfaceControl$Builder;->setName(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
 
-    move-result-object v9
+    move-result-object v6
 
-    invoke-virtual {v9, v6}, Landroid/view/SurfaceControl$Builder;->setHidden(Z)Landroid/view/SurfaceControl$Builder;
+    const/4 v9, 0x0
+
+    invoke-virtual {v6, v9}, Landroid/view/SurfaceControl$Builder;->setHidden(Z)Landroid/view/SurfaceControl$Builder;
 
     move-result-object v6
 
     invoke-virtual {v6}, Landroid/view/SurfaceControl$Builder;->setBLASTLayer()Landroid/view/SurfaceControl$Builder;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v15}, Landroid/view/SurfaceControl$Builder;->setCallsite(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
 
     move-result-object v6
 
@@ -973,13 +987,15 @@
 .end method
 
 .method getBLASTSurfaceControl(Landroid/view/SurfaceControl;)V
-    .locals 1
+    .locals 2
 
     iget-object v0, p0, Lcom/android/server/wm/WindowSurfaceController;->mBLASTSurfaceControl:Landroid/view/SurfaceControl;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1, v0}, Landroid/view/SurfaceControl;->copyFrom(Landroid/view/SurfaceControl;)V
+    const-string v1, "WindowSurfaceController.getBLASTSurfaceControl"
+
+    invoke-virtual {p1, v0, v1}, Landroid/view/SurfaceControl;->copyFrom(Landroid/view/SurfaceControl;Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -1035,11 +1051,13 @@
 .end method
 
 .method getSurfaceControl(Landroid/view/SurfaceControl;)V
-    .locals 1
+    .locals 2
 
     iget-object v0, p0, Lcom/android/server/wm/WindowSurfaceController;->mSurfaceControl:Landroid/view/SurfaceControl;
 
-    invoke-virtual {p1, v0}, Landroid/view/SurfaceControl;->copyFrom(Landroid/view/SurfaceControl;)V
+    const-string v1, "WindowSurfaceController.getSurfaceControl"
+
+    invoke-virtual {p1, v0, v1}, Landroid/view/SurfaceControl;->copyFrom(Landroid/view/SurfaceControl;Ljava/lang/String;)V
 
     return-void
 .end method

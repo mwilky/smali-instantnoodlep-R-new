@@ -146,7 +146,7 @@
 
     check-cast v3, Lcom/android/server/media/BluetoothRouteProvider$BluetoothRouteInfo;
 
-    invoke-static {v2, v3}, Lcom/android/server/media/BluetoothRouteProvider;->access$1300(Lcom/android/server/media/BluetoothRouteProvider;Lcom/android/server/media/BluetoothRouteProvider$BluetoothRouteInfo;)V
+    invoke-static {v2, v3}, Lcom/android/server/media/BluetoothRouteProvider;->access$1200(Lcom/android/server/media/BluetoothRouteProvider;Lcom/android/server/media/BluetoothRouteProvider$BluetoothRouteInfo;)V
 
     iget-object v2, p0, Lcom/android/server/media/BluetoothRouteProvider$DeviceStateChangedReceiver;->this$0:Lcom/android/server/media/BluetoothRouteProvider;
 
@@ -262,13 +262,15 @@
     :cond_3
     iget-object v0, p0, Lcom/android/server/media/BluetoothRouteProvider$DeviceStateChangedReceiver;->this$0:Lcom/android/server/media/BluetoothRouteProvider;
 
-    invoke-static {v0}, Lcom/android/server/media/BluetoothRouteProvider;->access$1100(Lcom/android/server/media/BluetoothRouteProvider;)V
+    const/16 v1, 0x17
+
+    invoke-static {v0, v1}, Lcom/android/server/media/BluetoothRouteProvider;->access$1000(Lcom/android/server/media/BluetoothRouteProvider;I)V
 
     if-eqz p3, :cond_4
 
     iget-object v0, p0, Lcom/android/server/media/BluetoothRouteProvider$DeviceStateChangedReceiver;->this$0:Lcom/android/server/media/BluetoothRouteProvider;
 
-    invoke-static {v0}, Lcom/android/server/media/BluetoothRouteProvider;->access$1200(Lcom/android/server/media/BluetoothRouteProvider;)V
+    invoke-static {v0, p3}, Lcom/android/server/media/BluetoothRouteProvider;->access$1100(Lcom/android/server/media/BluetoothRouteProvider;Landroid/bluetooth/BluetoothDevice;)V
 
     :cond_4
     iget-object v0, p0, Lcom/android/server/media/BluetoothRouteProvider$DeviceStateChangedReceiver;->this$0:Lcom/android/server/media/BluetoothRouteProvider;
@@ -280,7 +282,9 @@
     :cond_5
     iget-object v0, p0, Lcom/android/server/media/BluetoothRouteProvider$DeviceStateChangedReceiver;->this$0:Lcom/android/server/media/BluetoothRouteProvider;
 
-    invoke-static {v0}, Lcom/android/server/media/BluetoothRouteProvider;->access$1000(Lcom/android/server/media/BluetoothRouteProvider;)V
+    const/16 v1, 0x8
+
+    invoke-static {v0, v1}, Lcom/android/server/media/BluetoothRouteProvider;->access$1000(Lcom/android/server/media/BluetoothRouteProvider;I)V
 
     if-eqz p3, :cond_6
 

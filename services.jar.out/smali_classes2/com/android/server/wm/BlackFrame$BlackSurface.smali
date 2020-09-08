@@ -69,9 +69,13 @@
 
     move-result-object v7
 
-    move-object/from16 v8, p8
+    move-object/from16 v9, p8
 
-    invoke-virtual {v7, v8}, Landroid/view/SurfaceControl$Builder;->setParent(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Builder;
+    invoke-virtual {v7, v9}, Landroid/view/SurfaceControl$Builder;->setParent(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Builder;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v8}, Landroid/view/SurfaceControl$Builder;->setCallsite(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
 
     move-result-object v7
 
@@ -85,9 +89,9 @@
 
     iget-object v7, v0, Lcom/android/server/wm/BlackFrame$BlackSurface;->surface:Landroid/view/SurfaceControl;
 
-    const/high16 v9, 0x3f800000    # 1.0f
+    const/high16 v8, 0x3f800000    # 1.0f
 
-    invoke-virtual {v1, v7, v9}, Landroid/view/SurfaceControl$Transaction;->setAlpha(Landroid/view/SurfaceControl;F)Landroid/view/SurfaceControl$Transaction;
+    invoke-virtual {v1, v7, v8}, Landroid/view/SurfaceControl$Transaction;->setAlpha(Landroid/view/SurfaceControl;F)Landroid/view/SurfaceControl$Transaction;
 
     iget-object v7, v0, Lcom/android/server/wm/BlackFrame$BlackSurface;->surface:Landroid/view/SurfaceControl;
 
@@ -95,15 +99,15 @@
 
     iget-object v7, v0, Lcom/android/server/wm/BlackFrame$BlackSurface;->surface:Landroid/view/SurfaceControl;
 
-    iget v9, v0, Lcom/android/server/wm/BlackFrame$BlackSurface;->left:I
+    iget v8, v0, Lcom/android/server/wm/BlackFrame$BlackSurface;->left:I
 
-    int-to-float v9, v9
+    int-to-float v8, v8
 
     iget v10, v0, Lcom/android/server/wm/BlackFrame$BlackSurface;->top:I
 
     int-to-float v10, v10
 
-    invoke-virtual {v1, v7, v9, v10}, Landroid/view/SurfaceControl$Transaction;->setPosition(Landroid/view/SurfaceControl;FF)Landroid/view/SurfaceControl$Transaction;
+    invoke-virtual {v1, v7, v8, v10}, Landroid/view/SurfaceControl$Transaction;->setPosition(Landroid/view/SurfaceControl;FF)Landroid/view/SurfaceControl$Transaction;
 
     iget-object v7, v0, Lcom/android/server/wm/BlackFrame$BlackSurface;->surface:Landroid/view/SurfaceControl;
 
@@ -119,9 +123,9 @@
 
     move-result-object v7
 
-    int-to-long v9, v2
+    int-to-long v10, v2
 
-    sget-object v11, Lcom/android/server/wm/ProtoLogGroup;->WM_SHOW_SURFACE_ALLOC:Lcom/android/server/wm/ProtoLogGroup;
+    sget-object v8, Lcom/android/server/wm/ProtoLogGroup;->WM_SHOW_SURFACE_ALLOC:Lcom/android/server/wm/ProtoLogGroup;
 
     const v12, 0x91d49e9
 
@@ -139,13 +143,13 @@
 
     const/16 v16, 0x1
 
-    invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v17
 
     aput-object v17, v15, v16
 
-    invoke-static {v11, v12, v13, v14, v15}, Lcom/android/server/protolog/ProtoLogImpl;->i(Lcom/android/server/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v8, v12, v13, v14, v15}, Lcom/android/server/protolog/ProtoLogImpl;->i(Lcom/android/server/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
     :cond_0
     return-void

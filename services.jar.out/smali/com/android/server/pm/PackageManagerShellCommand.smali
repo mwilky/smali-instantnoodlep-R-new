@@ -3672,7 +3672,7 @@
 
     iget-object v5, v0, Landroid/content/pm/PackageInstaller$SessionParams;->volumeUuid:Ljava/lang/String;
 
-    const-string v7, "internal"
+    const-string/jumbo v7, "internal"
 
     invoke-virtual {v7, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3952,6 +3952,8 @@
 
     :cond_8
     return-object v2
+
+    nop
 
     :sswitch_data_0
     .sparse-switch
@@ -6468,7 +6470,7 @@
 
     move-result v0
 
-    const-string v1, "invalid"
+    const-string/jumbo v1, "invalid"
 
     if-nez v0, :cond_0
 
@@ -6481,7 +6483,7 @@
 
     if-ne v0, v2, :cond_1
 
-    const-string v1, "internal"
+    const-string/jumbo v1, "internal"
 
     goto :goto_0
 
@@ -7191,7 +7193,9 @@
     :cond_4
     iget-object v5, p0, Lcom/android/server/pm/PackageManagerShellCommand;->mPermissionManager:Landroid/permission/IPermissionManager;
 
-    invoke-interface {v5, v2, v4, v3}, Landroid/permission/IPermissionManager;->revokeRuntimePermission(Ljava/lang/String;Ljava/lang/String;I)V
+    const/4 v6, 0x0
+
+    invoke-interface {v5, v2, v4, v3, v6}, Landroid/permission/IPermissionManager;->revokeRuntimePermission(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
 
     :goto_1
     const/4 v5, 0x0
@@ -13917,7 +13921,7 @@
 
     move-result-object v0
 
-    const-string v1, "internal"
+    const-string/jumbo v1, "internal"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -14925,224 +14929,228 @@
     return v1
 .end method
 
-.method private uninstallSystemUpdates()I
-    .locals 17
+.method private uninstallSystemUpdates(Ljava/lang/String;)I
+    .locals 14
 
-    move-object/from16 v1, p0
+    invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
-    const-string v2, "]"
+    move-result-object v0
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/server/pm/PackageManagerShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    :try_start_0
+    iget-object v3, p0, Lcom/android/server/pm/PackageManagerShellCommand;->mInterface:Landroid/content/pm/IPackageManager;
+
+    invoke-interface {v3}, Landroid/content/pm/IPackageManager;->getPackageInstaller()Landroid/content/pm/IPackageInstaller;
+
+    move-result-object v4
+
+    const/high16 v3, 0x100000
+
+    const/4 v10, 0x1
+
+    if-nez p1, :cond_0
+
+    iget-object v5, p0, Lcom/android/server/pm/PackageManagerShellCommand;->mInterface:Landroid/content/pm/IPackageManager;
+
+    invoke-interface {v5, v3, v2}, Landroid/content/pm/IPackageManager;->getInstalledApplications(II)Landroid/content/pm/ParceledListSlice;
 
     move-result-object v3
 
-    new-instance v0, Ljava/util/LinkedList;
+    invoke-virtual {v3}, Landroid/content/pm/ParceledListSlice;->getList()Ljava/util/List;
 
-    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+    move-result-object v5
 
-    move-object v4, v0
+    move-object v3, v5
 
-    const/4 v5, 0x0
+    goto :goto_0
 
-    :try_start_0
-    iget-object v0, v1, Lcom/android/server/pm/PackageManagerShellCommand;->mInterface:Landroid/content/pm/IPackageManager;
+    :cond_0
+    new-instance v5, Ljava/util/ArrayList;
 
-    const/high16 v6, 0x100000
+    invoke-direct {v5, v10}, Ljava/util/ArrayList;-><init>(I)V
 
-    invoke-interface {v0, v6, v5}, Landroid/content/pm/IPackageManager;->getInstalledApplications(II)Landroid/content/pm/ParceledListSlice;
+    iget-object v6, p0, Lcom/android/server/pm/PackageManagerShellCommand;->mInterface:Landroid/content/pm/IPackageManager;
 
-    move-result-object v0
+    invoke-interface {v6, p1, v3, v2}, Landroid/content/pm/IPackageManager;->getApplicationInfo(Ljava/lang/String;II)Landroid/content/pm/ApplicationInfo;
 
-    iget-object v6, v1, Lcom/android/server/pm/PackageManagerShellCommand;->mInterface:Landroid/content/pm/IPackageManager;
+    move-result-object v3
 
-    invoke-interface {v6}, Landroid/content/pm/IPackageManager;->getPackageInstaller()Landroid/content/pm/IPackageInstaller;
+    invoke-interface {v5, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    move-result-object v7
-
-    invoke-virtual {v0}, Landroid/content/pm/ParceledListSlice;->getList()Ljava/util/List;
-
-    move-result-object v6
-
-    invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v13
+    move-object v3, v5
 
     :goto_0
-    invoke-interface {v13}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v8
-
-    const/4 v14, 0x1
-
-    if-eqz v8, :cond_1
-
-    invoke-interface {v13}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Landroid/content/pm/ApplicationInfo;
-
-    move-object v15, v8
-
-    invoke-virtual {v15}, Landroid/content/pm/ApplicationInfo;->isUpdatedSystemApp()Z
-
-    move-result v8
-
-    if-eqz v8, :cond_0
-
-    new-instance v8, Ljava/lang/StringBuilder;
-
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v9, "Uninstalling updates to "
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v9, v15, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v9, "..."
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-virtual {v3, v8}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    new-instance v8, Lcom/android/server/pm/PackageManagerShellCommand$LocalIntentReceiver;
-
-    const/4 v9, 0x0
-
-    invoke-direct {v8, v9}, Lcom/android/server/pm/PackageManagerShellCommand$LocalIntentReceiver;-><init>(Lcom/android/server/pm/PackageManagerShellCommand$1;)V
-
-    move-object/from16 v16, v8
-
-    new-instance v8, Landroid/content/pm/VersionedPackage;
-
-    iget-object v9, v15, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
-
-    iget v10, v15, Landroid/content/pm/ApplicationInfo;->versionCode:I
-
-    invoke-direct {v8, v9, v10}, Landroid/content/pm/VersionedPackage;-><init>(Ljava/lang/String;I)V
-
-    const/4 v9, 0x0
-
-    const/4 v10, 0x0
-
-    invoke-virtual/range {v16 .. v16}, Lcom/android/server/pm/PackageManagerShellCommand$LocalIntentReceiver;->getIntentSender()Landroid/content/IntentSender;
+    invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v11
 
-    const/4 v12, 0x0
+    :goto_1
+    invoke-interface {v11}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-interface/range {v7 .. v12}, Landroid/content/pm/IPackageInstaller;->uninstall(Landroid/content/pm/VersionedPackage;Ljava/lang/String;ILandroid/content/IntentSender;I)V
+    move-result v5
 
-    invoke-virtual/range {v16 .. v16}, Lcom/android/server/pm/PackageManagerShellCommand$LocalIntentReceiver;->getResult()Landroid/content/Intent;
+    if-eqz v5, :cond_2
+
+    invoke-interface {v11}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/content/pm/ApplicationInfo;
+
+    move-object v12, v5
+
+    invoke-virtual {v12}, Landroid/content/pm/ApplicationInfo;->isUpdatedSystemApp()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_1
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "Uninstalling updates to "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v6, v12, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v6, "..."
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    new-instance v5, Lcom/android/server/pm/PackageManagerShellCommand$LocalIntentReceiver;
+
+    const/4 v6, 0x0
+
+    invoke-direct {v5, v6}, Lcom/android/server/pm/PackageManagerShellCommand$LocalIntentReceiver;-><init>(Lcom/android/server/pm/PackageManagerShellCommand$1;)V
+
+    move-object v13, v5
+
+    new-instance v5, Landroid/content/pm/VersionedPackage;
+
+    iget-object v6, v12, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    iget v7, v12, Landroid/content/pm/ApplicationInfo;->versionCode:I
+
+    invoke-direct {v5, v6, v7}, Landroid/content/pm/VersionedPackage;-><init>(Ljava/lang/String;I)V
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    invoke-virtual {v13}, Lcom/android/server/pm/PackageManagerShellCommand$LocalIntentReceiver;->getIntentSender()Landroid/content/IntentSender;
 
     move-result-object v8
 
-    const-string v9, "android.content.pm.extra.STATUS"
+    const/4 v9, 0x0
 
-    invoke-virtual {v8, v9, v14}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    invoke-interface/range {v4 .. v9}, Landroid/content/pm/IPackageInstaller;->uninstall(Landroid/content/pm/VersionedPackage;Ljava/lang/String;ILandroid/content/IntentSender;I)V
 
-    move-result v9
+    invoke-virtual {v13}, Lcom/android/server/pm/PackageManagerShellCommand$LocalIntentReceiver;->getResult()Landroid/content/Intent;
 
-    if-eqz v9, :cond_0
+    move-result-object v5
 
-    iget-object v10, v15, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+    const-string v6, "android.content.pm.extra.STATUS"
 
-    invoke-interface {v4, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v6, v10}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result v6
+
+    if-eqz v6, :cond_1
+
+    const/4 v1, 0x1
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "Couldn\'t uninstall package: "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v8, v12, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v0, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    :cond_0
-    goto :goto_0
-
     :cond_1
-    nop
-
-    invoke-interface {v4}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v6, "Failure [Couldn\'t uninstall packages: "
-
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v6, ", "
-
-    invoke-static {v6, v4}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v3, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    return v5
+    goto :goto_1
 
     :cond_2
-    const-string v0, "Success"
+    nop
 
-    invoke-virtual {v3, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    if-eqz v1, :cond_3
 
-    return v14
+    return v2
+
+    :cond_3
+    const-string v2, "Success"
+
+    invoke-virtual {v0, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    return v10
 
     :catch_0
-    move-exception v0
+    move-exception v3
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v7, "Failure ["
+    const-string v5, "Failure ["
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v7
+    move-result-object v5
 
-    invoke-virtual {v7}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {v5}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v5
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v7, " - "
+    const-string v5, " - "
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v3}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v5
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v5, "]"
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v3, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    move-result-object v4
 
-    return v5
+    invoke-virtual {v0, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    return v2
 .end method
 
 
@@ -16112,7 +16120,11 @@
     return v1
 
     :pswitch_4
-    invoke-direct {p0}, Lcom/android/server/pm/PackageManagerShellCommand;->uninstallSystemUpdates()I
+    invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerShellCommand;->getNextArg()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {p0, v2}, Lcom/android/server/pm/PackageManagerShellCommand;->uninstallSystemUpdates(Ljava/lang/String;)I
 
     move-result v1
 
@@ -17925,11 +17937,19 @@
 
     invoke-virtual {v0}, Ljava/io/PrintWriter;->println()V
 
-    const-string v2, "  uninstall-system-updates"
+    const-string v2, "  uninstall-system-updates [<PACKAGE>]"
 
     invoke-virtual {v0, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    const-string v2, "    Remove updates to all system applications and fall back to their /system version."
+    const-string v2, "    Removes updates to the given system application and falls back to its"
+
+    invoke-virtual {v0, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    const-string v2, "    /system version. Does nothing if the given package is not a system app."
+
+    invoke-virtual {v0, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    const-string v2, "    If no package is specified, removes updates to all system applications."
 
     invoke-virtual {v0, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
@@ -18588,7 +18608,7 @@
 
     move-result-object v2
 
-    const-string v3, "internal"
+    const-string/jumbo v3, "internal"
 
     invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -18687,7 +18707,7 @@
 
     move-result-object v0
 
-    const-string v1, "internal"
+    const-string/jumbo v1, "internal"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

@@ -93,6 +93,9 @@
 .method public abstract registerInputMethodListListener(Lcom/android/server/inputmethod/InputMethodManagerInternal$InputMethodListListener;)V
 .end method
 
+.method public abstract removeImeSurface()V
+.end method
+
 .method public abstract reportImeControl(Landroid/os/IBinder;)V
 .end method
 

@@ -132,9 +132,9 @@
 
     invoke-direct {v0, v1}, Landroid/os/RemoteCallback;-><init>(Landroid/os/RemoteCallback$OnResultListener;)V
 
-    const/4 v1, 0x0
+    const-string v1, "android.app.role.HOME"
 
-    const-string v2, "android.app.role.HOME"
+    const/4 v2, 0x0
 
     if-eqz p1, :cond_0
 
@@ -144,7 +144,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v3, v2, p1, v1, v0}, Landroid/app/role/RoleControllerManager;->onAddRoleHolder(Ljava/lang/String;Ljava/lang/String;ILandroid/os/RemoteCallback;)V
+    invoke-virtual {v3, v1, p1, v2, v0}, Landroid/app/role/RoleControllerManager;->onAddRoleHolder(Ljava/lang/String;Ljava/lang/String;ILandroid/os/RemoteCallback;)V
 
     goto :goto_0
 
@@ -155,8 +155,37 @@
 
     move-result-object v3
 
-    invoke-virtual {v3, v2, v1, v0}, Landroid/app/role/RoleControllerManager;->onClearRoleHolders(Ljava/lang/String;ILandroid/os/RemoteCallback;)V
+    invoke-virtual {v3, v1, v2, v0}, Landroid/app/role/RoleControllerManager;->onClearRoleHolders(Ljava/lang/String;ILandroid/os/RemoteCallback;)V
 
     :goto_0
+    const/4 v1, 0x1
+
+    new-array v1, v1, [I
+
+    const/16 v3, 0xfc
+
+    aput v3, v1, v2
+
+    invoke-static {v1}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, p0, Lcom/android/server/role/RoleManagerService$DefaultHomeProvider;->this$0:Lcom/android/server/role/RoleManagerService;
+
+    invoke-virtual {v1}, Lcom/android/server/role/RoleManagerService;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v1
+
+    const-string v2, "default_application_home"
+
+    invoke-static {v1, v2, p1, p2}, Landroid/provider/Settings$Secure;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
+
+    :cond_1
     return-void
 .end method

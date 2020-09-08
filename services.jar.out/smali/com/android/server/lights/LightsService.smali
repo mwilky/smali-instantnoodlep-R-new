@@ -16,6 +16,10 @@
 # static fields
 .field public static DEBUG:Z = false
 
+.field private static final IS_SUPPORT_BRIGHTNESS_SMOOTH:Z
+
+.field private static final MAX_BRIGHTNESS_LEVEL_FOR_SOFTIRIS:I = 0x1fff
+
 .field static final TAG:Ljava/lang/String; = "LightsService"
 
 
@@ -59,11 +63,25 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 3
 
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/android/server/lights/LightsService;->DEBUG:Z
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [I
+
+    const/16 v2, 0xeb
+
+    aput v2, v1, v0
+
+    invoke-static {v1}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v0
+
+    sput-boolean v0, Lcom/android/server/lights/LightsService;->IS_SUPPORT_BRIGHTNESS_SMOOTH:Z
 
     return-void
 .end method
@@ -166,7 +184,7 @@
 
     new-array v2, v1, [I
 
-    const/16 v3, 0x66
+    const/16 v3, 0x62
 
     aput v3, v2, v0
 
@@ -180,7 +198,7 @@
 
     move-result-object v2
 
-    const v3, 0x10e007d
+    const v3, 0x10e0083
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -192,7 +210,7 @@
 
     move-result-object v2
 
-    const v3, 0x10e0073
+    const v3, 0x10e0079
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -239,7 +257,15 @@
     return-object v0
 .end method
 
-.method static synthetic access$1000(Lcom/android/server/lights/LightsService;)I
+.method static synthetic access$1000(Lcom/android/server/lights/LightsService;)Landroid/os/Handler;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/lights/LightsService;->mH:Landroid/os/Handler;
+
+    return-object v0
+.end method
+
+.method static synthetic access$1100(Lcom/android/server/lights/LightsService;)I
     .locals 1
 
     invoke-direct {p0}, Lcom/android/server/lights/LightsService;->getVrDisplayMode()I
@@ -249,7 +275,7 @@
     return v0
 .end method
 
-.method static synthetic access$1400(Lcom/android/server/lights/LightsService;)[Lcom/android/server/lights/LightsService$LightImpl;
+.method static synthetic access$1500(Lcom/android/server/lights/LightsService;)[Lcom/android/server/lights/LightsService$LightImpl;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/lights/LightsService;->mLightsByType:[Lcom/android/server/lights/LightsService$LightImpl;
@@ -265,7 +291,15 @@
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/server/lights/LightsService;)Z
+.method static synthetic access$500()Z
+    .locals 1
+
+    sget-boolean v0, Lcom/android/server/lights/LightsService;->IS_SUPPORT_BRIGHTNESS_SMOOTH:Z
+
+    return v0
+.end method
+
+.method static synthetic access$600(Lcom/android/server/lights/LightsService;)Z
     .locals 1
 
     iget-boolean v0, p0, Lcom/android/server/lights/LightsService;->mHBMSupport:Z
@@ -273,7 +307,7 @@
     return v0
 .end method
 
-.method static synthetic access$600(Lcom/android/server/lights/LightsService;)I
+.method static synthetic access$700(Lcom/android/server/lights/LightsService;)I
     .locals 1
 
     iget v0, p0, Lcom/android/server/lights/LightsService;->mMinHBMLevel:I
@@ -281,7 +315,7 @@
     return v0
 .end method
 
-.method static synthetic access$700(Lcom/android/server/lights/LightsService;)I
+.method static synthetic access$800(Lcom/android/server/lights/LightsService;)I
     .locals 1
 
     iget v0, p0, Lcom/android/server/lights/LightsService;->mMaxHBMLevel:I
@@ -289,18 +323,10 @@
     return v0
 .end method
 
-.method static synthetic access$800(Lcom/android/server/lights/LightsService;)Lvendor/oneplus/hardware/display/V1_0/IOneplusDisplay;
+.method static synthetic access$900(Lcom/android/server/lights/LightsService;)Lvendor/oneplus/hardware/display/V1_0/IOneplusDisplay;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/lights/LightsService;->mDaemon:Lvendor/oneplus/hardware/display/V1_0/IOneplusDisplay;
-
-    return-object v0
-.end method
-
-.method static synthetic access$900(Lcom/android/server/lights/LightsService;)Landroid/os/Handler;
-    .locals 1
-
-    iget-object v0, p0, Lcom/android/server/lights/LightsService;->mH:Landroid/os/Handler;
 
     return-object v0
 .end method

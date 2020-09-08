@@ -78,75 +78,116 @@
 .end method
 
 .method public onServiceStateChanged(Landroid/telephony/ServiceState;)V
-    .locals 5
+    .locals 6
 
     invoke-virtual {p1}, Landroid/telephony/ServiceState;->getDataNetworkType()I
 
     move-result v0
 
-    invoke-static {v0}, Landroid/net/NetworkTemplate;->getCollapsedRatType(I)I
+    const/16 v1, 0xd
+
+    if-eq v0, v1, :cond_0
+
+    invoke-virtual {p1}, Landroid/telephony/ServiceState;->getDataNetworkType()I
+
+    move-result v0
+
+    const/16 v1, 0x13
+
+    if-ne v0, v1, :cond_1
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/telephony/ServiceState;->getNrState()I
+
+    move-result v0
+
+    const/4 v1, 0x3
+
+    if-ne v0, v1, :cond_1
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_2
+
+    const/4 v1, -0x2
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {p1}, Landroid/telephony/ServiceState;->getDataNetworkType()I
 
     move-result v1
 
-    iget v2, p0, Lcom/android/server/net/NetworkStatsSubscriptionsMonitor$RatTypeListener;->mLastCollapsedRatType:I
+    :goto_1
+    invoke-static {v1}, Landroid/net/NetworkTemplate;->getCollapsedRatType(I)I
 
-    if-ne v1, v2, :cond_0
-
-    return-void
-
-    :cond_0
-    sget-boolean v2, Lcom/android/server/net/NetworkStatsService;->LOGD:Z
-
-    if-eqz v2, :cond_1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string/jumbo v3, "subtype changed for sub("
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v3, p0, Lcom/android/server/net/NetworkStatsSubscriptionsMonitor$RatTypeListener;->mSubId:I
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v3, "): "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v2
 
     iget v3, p0, Lcom/android/server/net/NetworkStatsSubscriptionsMonitor$RatTypeListener;->mLastCollapsedRatType:I
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    if-ne v2, v3, :cond_3
 
-    const-string v3, " -> "
+    return-void
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_3
+    sget-boolean v3, Lcom/android/server/net/NetworkStatsService;->LOGD:Z
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    if-eqz v3, :cond_4
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "NetworkStats"
+    const-string/jumbo v4, "subtype changed for sub("
 
-    invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_1
-    iput v1, p0, Lcom/android/server/net/NetworkStatsSubscriptionsMonitor$RatTypeListener;->mLastCollapsedRatType:I
+    iget v4, p0, Lcom/android/server/net/NetworkStatsSubscriptionsMonitor$RatTypeListener;->mSubId:I
 
-    iget-object v2, p0, Lcom/android/server/net/NetworkStatsSubscriptionsMonitor$RatTypeListener;->mMonitor:Lcom/android/server/net/NetworkStatsSubscriptionsMonitor;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-static {v2}, Lcom/android/server/net/NetworkStatsSubscriptionsMonitor;->access$300(Lcom/android/server/net/NetworkStatsSubscriptionsMonitor;)Lcom/android/server/net/NetworkStatsSubscriptionsMonitor$Delegate;
+    const-string v4, "): "
 
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/android/server/net/NetworkStatsSubscriptionsMonitor$RatTypeListener;->mSubscriberId:Ljava/lang/String;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v4, p0, Lcom/android/server/net/NetworkStatsSubscriptionsMonitor$RatTypeListener;->mLastCollapsedRatType:I
 
-    invoke-interface {v2, v3, v4}, Lcom/android/server/net/NetworkStatsSubscriptionsMonitor$Delegate;->onCollapsedRatTypeChanged(Ljava/lang/String;I)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v4, " -> "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v4, "NetworkStats"
+
+    invoke-static {v4, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_4
+    iput v2, p0, Lcom/android/server/net/NetworkStatsSubscriptionsMonitor$RatTypeListener;->mLastCollapsedRatType:I
+
+    iget-object v3, p0, Lcom/android/server/net/NetworkStatsSubscriptionsMonitor$RatTypeListener;->mMonitor:Lcom/android/server/net/NetworkStatsSubscriptionsMonitor;
+
+    invoke-static {v3}, Lcom/android/server/net/NetworkStatsSubscriptionsMonitor;->access$300(Lcom/android/server/net/NetworkStatsSubscriptionsMonitor;)Lcom/android/server/net/NetworkStatsSubscriptionsMonitor$Delegate;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lcom/android/server/net/NetworkStatsSubscriptionsMonitor$RatTypeListener;->mSubscriberId:Ljava/lang/String;
+
+    iget v5, p0, Lcom/android/server/net/NetworkStatsSubscriptionsMonitor$RatTypeListener;->mLastCollapsedRatType:I
+
+    invoke-interface {v3, v4, v5}, Lcom/android/server/net/NetworkStatsSubscriptionsMonitor$Delegate;->onCollapsedRatTypeChanged(Ljava/lang/String;I)V
 
     return-void
 .end method

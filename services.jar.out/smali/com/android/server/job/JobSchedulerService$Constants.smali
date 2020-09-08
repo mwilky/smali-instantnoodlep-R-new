@@ -17,6 +17,8 @@
 # static fields
 .field private static final DEFAULT_API_QUOTA_SCHEDULE_COUNT:I = 0xfa
 
+.field private static final DEFAULT_API_QUOTA_SCHEDULE_RETURN_FAILURE_RESULT:Z = false
+
 .field private static final DEFAULT_API_QUOTA_SCHEDULE_THROW_EXCEPTION:Z = true
 
 .field private static final DEFAULT_API_QUOTA_SCHEDULE_WINDOW_MS:J = 0xea60L
@@ -79,6 +81,8 @@
 
 .field private static final KEY_API_QUOTA_SCHEDULE_COUNT:Ljava/lang/String; = "aq_schedule_count"
 
+.field private static final KEY_API_QUOTA_SCHEDULE_RETURN_FAILURE_RESULT:Ljava/lang/String; = "aq_schedule_return_failure"
+
 .field private static final KEY_API_QUOTA_SCHEDULE_THROW_EXCEPTION:Ljava/lang/String; = "aq_schedule_throw_exception"
 
 .field private static final KEY_API_QUOTA_SCHEDULE_WINDOW_MS:Ljava/lang/String; = "aq_schedule_window_ms"
@@ -104,6 +108,8 @@
 
 # instance fields
 .field public API_QUOTA_SCHEDULE_COUNT:I
+
+.field public API_QUOTA_SCHEDULE_RETURN_FAILURE_RESULT:Z
 
 .field public API_QUOTA_SCHEDULE_THROW_EXCEPTION:Z
 
@@ -340,6 +346,10 @@
 
     iput-boolean v1, v0, Lcom/android/server/job/JobSchedulerService$Constants;->API_QUOTA_SCHEDULE_THROW_EXCEPTION:Z
 
+    const/4 v1, 0x0
+
+    iput-boolean v1, v0, Lcom/android/server/job/JobSchedulerService$Constants;->API_QUOTA_SCHEDULE_RETURN_FAILURE_RESULT:Z
+
     new-instance v1, Landroid/util/KeyValueListParser;
 
     const/16 v2, 0x2c
@@ -443,6 +453,12 @@
     iget-boolean v0, p0, Lcom/android/server/job/JobSchedulerService$Constants;->API_QUOTA_SCHEDULE_THROW_EXCEPTION:Z
 
     const-wide v1, 0x10800000022L
+
+    invoke-virtual {p1, v1, v2, v0}, Landroid/util/proto/ProtoOutputStream;->write(JZ)V
+
+    iget-boolean v0, p0, Lcom/android/server/job/JobSchedulerService$Constants;->API_QUOTA_SCHEDULE_RETURN_FAILURE_RESULT:Z
+
+    const-wide v1, 0x10800000023L
 
     invoke-virtual {p1, v1, v2, v0}, Landroid/util/proto/ProtoOutputStream;->write(JZ)V
 
@@ -673,6 +689,20 @@
     move-result-object v0
 
     const-string v1, "aq_schedule_throw_exception"
+
+    invoke-virtual {p1, v1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)Lcom/android/internal/util/IndentingPrintWriter;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
+
+    iget-boolean v0, p0, Lcom/android/server/job/JobSchedulerService$Constants;->API_QUOTA_SCHEDULE_RETURN_FAILURE_RESULT:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    const-string v1, "aq_schedule_return_failure"
 
     invoke-virtual {p1, v1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)Lcom/android/internal/util/IndentingPrintWriter;
 
@@ -916,6 +946,18 @@
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/server/job/JobSchedulerService$Constants;->API_QUOTA_SCHEDULE_THROW_EXCEPTION:Z
+
+    iget-object v0, p0, Lcom/android/server/job/JobSchedulerService$Constants;->mParser:Landroid/util/KeyValueListParser;
+
+    const/4 v1, 0x0
+
+    const-string v2, "aq_schedule_return_failure"
+
+    invoke-virtual {v0, v2, v1}, Landroid/util/KeyValueListParser;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/android/server/job/JobSchedulerService$Constants;->API_QUOTA_SCHEDULE_RETURN_FAILURE_RESULT:Z
 
     return-void
 .end method

@@ -140,6 +140,10 @@
 
     invoke-static {p6, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    invoke-static {p3}, Lcom/android/server/blob/BlobStoreConfig;->getTruncatedLeaseDescription(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p3
+
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -283,13 +287,25 @@
 
     if-nez v1, :cond_0
 
+    :try_start_0
     iget-object v1, p0, Lcom/android/server/blob/BlobStoreManagerService$Stub;->this$0:Lcom/android/server/blob/BlobStoreManagerService;
 
     invoke-static {v1, p1, v0, p2}, Lcom/android/server/blob/BlobStoreManagerService;->access$1300(Lcom/android/server/blob/BlobStoreManagerService;Landroid/app/blob/BlobHandle;ILjava/lang/String;)J
 
     move-result-wide v1
+    :try_end_0
+    .catch Landroid/os/LimitExceededException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-wide v1
+
+    :catch_0
+    move-exception v1
+
+    new-instance v2, Landroid/os/ParcelableException;
+
+    invoke-direct {v2, v1}, Landroid/os/ParcelableException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v2
 
     :cond_0
     new-instance v1, Ljava/lang/SecurityException;

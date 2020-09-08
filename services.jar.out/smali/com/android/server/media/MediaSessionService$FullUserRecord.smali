@@ -155,22 +155,6 @@
     return-void
 .end method
 
-.method static synthetic access$2900(Lcom/android/server/media/MediaSessionService$FullUserRecord;)Landroid/media/session/IOnMediaKeyListener;
-    .locals 1
-
-    iget-object v0, p0, Lcom/android/server/media/MediaSessionService$FullUserRecord;->mOnMediaKeyListener:Landroid/media/session/IOnMediaKeyListener;
-
-    return-object v0
-.end method
-
-.method static synthetic access$2902(Lcom/android/server/media/MediaSessionService$FullUserRecord;Landroid/media/session/IOnMediaKeyListener;)Landroid/media/session/IOnMediaKeyListener;
-    .locals 0
-
-    iput-object p1, p0, Lcom/android/server/media/MediaSessionService$FullUserRecord;->mOnMediaKeyListener:Landroid/media/session/IOnMediaKeyListener;
-
-    return-object p1
-.end method
-
 .method static synthetic access$300(Lcom/android/server/media/MediaSessionService$FullUserRecord;)Lcom/android/server/media/MediaSessionStack;
     .locals 1
 
@@ -179,7 +163,23 @@
     return-object v0
 .end method
 
-.method static synthetic access$3300(Lcom/android/server/media/MediaSessionService$FullUserRecord;)I
+.method static synthetic access$3000(Lcom/android/server/media/MediaSessionService$FullUserRecord;)Landroid/media/session/IOnMediaKeyListener;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/media/MediaSessionService$FullUserRecord;->mOnMediaKeyListener:Landroid/media/session/IOnMediaKeyListener;
+
+    return-object v0
+.end method
+
+.method static synthetic access$3002(Lcom/android/server/media/MediaSessionService$FullUserRecord;Landroid/media/session/IOnMediaKeyListener;)Landroid/media/session/IOnMediaKeyListener;
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/server/media/MediaSessionService$FullUserRecord;->mOnMediaKeyListener:Landroid/media/session/IOnMediaKeyListener;
+
+    return-object p1
+.end method
+
+.method static synthetic access$3400(Lcom/android/server/media/MediaSessionService$FullUserRecord;)I
     .locals 1
 
     iget v0, p0, Lcom/android/server/media/MediaSessionService$FullUserRecord;->mOnVolumeKeyLongPressListenerUid:I
@@ -187,7 +187,7 @@
     return v0
 .end method
 
-.method static synthetic access$3302(Lcom/android/server/media/MediaSessionService$FullUserRecord;I)I
+.method static synthetic access$3402(Lcom/android/server/media/MediaSessionService$FullUserRecord;I)I
     .locals 0
 
     iput p1, p0, Lcom/android/server/media/MediaSessionService$FullUserRecord;->mOnVolumeKeyLongPressListenerUid:I
@@ -195,7 +195,7 @@
     return p1
 .end method
 
-.method static synthetic access$3400(Lcom/android/server/media/MediaSessionService$FullUserRecord;)I
+.method static synthetic access$3500(Lcom/android/server/media/MediaSessionService$FullUserRecord;)I
     .locals 1
 
     iget v0, p0, Lcom/android/server/media/MediaSessionService$FullUserRecord;->mOnMediaKeyListenerUid:I
@@ -203,7 +203,7 @@
     return v0
 .end method
 
-.method static synthetic access$3402(Lcom/android/server/media/MediaSessionService$FullUserRecord;I)I
+.method static synthetic access$3502(Lcom/android/server/media/MediaSessionService$FullUserRecord;I)I
     .locals 0
 
     iput p1, p0, Lcom/android/server/media/MediaSessionService$FullUserRecord;->mOnMediaKeyListenerUid:I
@@ -211,7 +211,7 @@
     return p1
 .end method
 
-.method static synthetic access$3700(Lcom/android/server/media/MediaSessionService$FullUserRecord;)Lcom/android/server/media/MediaButtonReceiverHolder;
+.method static synthetic access$3800(Lcom/android/server/media/MediaSessionService$FullUserRecord;)Lcom/android/server/media/MediaButtonReceiverHolder;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService$FullUserRecord;->mLastMediaButtonReceiverHolder:Lcom/android/server/media/MediaButtonReceiverHolder;
@@ -227,7 +227,7 @@
     return v0
 .end method
 
-.method static synthetic access$4300(Lcom/android/server/media/MediaSessionService$FullUserRecord;)Lcom/android/server/media/MediaSessionRecordImpl;
+.method static synthetic access$4400(Lcom/android/server/media/MediaSessionService$FullUserRecord;)Lcom/android/server/media/MediaSessionRecordImpl;
     .locals 1
 
     invoke-direct {p0}, Lcom/android/server/media/MediaSessionService$FullUserRecord;->getMediaButtonSessionLocked()Lcom/android/server/media/MediaSessionRecordImpl;

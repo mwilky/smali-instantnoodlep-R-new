@@ -37,7 +37,7 @@
 
     sput-object p1, Lcom/oneplus/houston/apkserver/bridge/HoustonInjector;->mContext:Landroid/content/Context;
 
-    invoke-static {p1}, Lcom/oneplus/houston/apkserver/bridge/HoustonServer;->publish(Landroid/content/Context;)V
+    invoke-static {p0, p1}, Lcom/oneplus/houston/apkserver/bridge/HoustonServer;->publish(Lcom/android/server/am/ActivityManagerService;Landroid/content/Context;)V
 
     return-void
 .end method

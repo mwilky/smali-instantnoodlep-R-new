@@ -1674,7 +1674,7 @@
     goto :goto_1
 
     :cond_1
-    invoke-static {p1}, Lcom/oneplus/android/os/OnePlusParallelAppUtils;->isParallelUser(I)Z
+    invoke-static {v4}, Lcom/oneplus/android/os/OnePlusParallelAppUtils;->isParallelUser(I)Z
 
     move-result v5
 

@@ -593,6 +593,12 @@
     throw v1
 .end method
 
+.method public prepareReleaseSession(Ljava/lang/String;)V
+    .locals 0
+
+    return-void
+.end method
+
 .method publishProviderState()V
     .locals 0
 

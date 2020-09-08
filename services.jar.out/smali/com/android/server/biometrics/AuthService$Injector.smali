@@ -100,7 +100,7 @@
 
     nop
 
-    const-string v0, "iris"
+    const-string/jumbo v0, "iris"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 

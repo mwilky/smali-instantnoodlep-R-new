@@ -17,12 +17,6 @@
     name = "UserHandler"
 .end annotation
 
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler$SessionCreationRequest;
-    }
-.end annotation
-
 
 # instance fields
 .field private final mLastProviderInfos:Ljava/util/List;
@@ -61,7 +55,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/CopyOnWriteArrayList<",
-            "Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler$SessionCreationRequest;",
+            "Lcom/android/server/media/MediaRouter2ServiceImpl$SessionCreationRequest;",
             ">;"
         }
     .end annotation
@@ -133,7 +127,7 @@
 
     new-instance v0, Lcom/android/server/media/SystemMediaRoute2Provider;
 
-    invoke-static {p1}, Lcom/android/server/media/MediaRouter2ServiceImpl;->access$300(Lcom/android/server/media/MediaRouter2ServiceImpl;)Landroid/content/Context;
+    invoke-static {p1}, Lcom/android/server/media/MediaRouter2ServiceImpl;->access$400(Lcom/android/server/media/MediaRouter2ServiceImpl;)Landroid/content/Context;
 
     move-result-object v1
 
@@ -147,7 +141,7 @@
 
     new-instance v0, Lcom/android/server/media/MediaRoute2ProviderWatcher;
 
-    invoke-static {p1}, Lcom/android/server/media/MediaRouter2ServiceImpl;->access$300(Lcom/android/server/media/MediaRouter2ServiceImpl;)Landroid/content/Context;
+    invoke-static {p1}, Lcom/android/server/media/MediaRouter2ServiceImpl;->access$400(Lcom/android/server/media/MediaRouter2ServiceImpl;)Landroid/content/Context;
 
     move-result-object v1
 
@@ -181,20 +175,28 @@
 .method static synthetic access$1000(Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;JLcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;Ljava/lang/String;Landroid/media/MediaRoute2Info;)V
     .locals 0
 
+    invoke-direct/range {p0 .. p5}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->deselectRouteOnHandler(JLcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;Ljava/lang/String;Landroid/media/MediaRoute2Info;)V
+
+    return-void
+.end method
+
+.method static synthetic access$1100(Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;JLcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;Ljava/lang/String;Landroid/media/MediaRoute2Info;)V
+    .locals 0
+
     invoke-direct/range {p0 .. p5}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->selectRouteOnHandler(JLcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;Ljava/lang/String;Landroid/media/MediaRoute2Info;)V
 
     return-void
 .end method
 
-.method static synthetic access$1100(Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;JLcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;Lcom/android/server/media/MediaRouter2ServiceImpl$ManagerRecord;Landroid/media/MediaRoute2Info;)V
+.method static synthetic access$1200(Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;JLcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;Lcom/android/server/media/MediaRouter2ServiceImpl$ManagerRecord;Landroid/media/RoutingSessionInfo;Landroid/media/MediaRoute2Info;)V
     .locals 0
 
-    invoke-direct/range {p0 .. p5}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->getSessionHintsForCreatingSessionOnHandler(JLcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;Lcom/android/server/media/MediaRouter2ServiceImpl$ManagerRecord;Landroid/media/MediaRoute2Info;)V
+    invoke-direct/range {p0 .. p6}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->requestRouterCreateSessionOnHandler(JLcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;Lcom/android/server/media/MediaRouter2ServiceImpl$ManagerRecord;Landroid/media/RoutingSessionInfo;Landroid/media/MediaRoute2Info;)V
 
     return-void
 .end method
 
-.method static synthetic access$1200(Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;JLandroid/media/MediaRoute2Info;I)V
+.method static synthetic access$1300(Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;JLandroid/media/MediaRoute2Info;I)V
     .locals 0
 
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->setRouteVolumeOnHandler(JLandroid/media/MediaRoute2Info;I)V
@@ -202,7 +204,7 @@
     return-void
 .end method
 
-.method static synthetic access$1300(Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;Landroid/media/IMediaRouter2Manager;)V
+.method static synthetic access$1400(Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;Landroid/media/IMediaRouter2Manager;)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->notifyPreferredFeaturesChangedToManager(Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;Landroid/media/IMediaRouter2Manager;)V
@@ -210,7 +212,7 @@
     return-void
 .end method
 
-.method static synthetic access$1400(Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;Landroid/media/IMediaRouter2Manager;)V
+.method static synthetic access$1500(Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;Landroid/media/IMediaRouter2Manager;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->notifyRoutesToManager(Landroid/media/IMediaRouter2Manager;)V
@@ -218,18 +220,10 @@
     return-void
 .end method
 
-.method static synthetic access$1500(Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;JLcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;Landroid/media/MediaRoute2Info;Landroid/os/Bundle;)V
+.method static synthetic access$1600(Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;JJLcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;Landroid/media/RoutingSessionInfo;Landroid/media/MediaRoute2Info;Landroid/os/Bundle;)V
     .locals 0
 
-    invoke-direct/range {p0 .. p5}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->requestCreateSessionWithManagerOnHandler(JLcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;Landroid/media/MediaRoute2Info;Landroid/os/Bundle;)V
-
-    return-void
-.end method
-
-.method static synthetic access$1600(Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;JLcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;Landroid/media/MediaRoute2Info;Landroid/os/Bundle;)V
-    .locals 0
-
-    invoke-direct/range {p0 .. p5}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->requestCreateSessionWithRouter2OnHandler(JLcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;Landroid/media/MediaRoute2Info;Landroid/os/Bundle;)V
+    invoke-direct/range {p0 .. p8}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->requestCreateSessionWithRouter2OnHandler(JJLcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;Landroid/media/RoutingSessionInfo;Landroid/media/MediaRoute2Info;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -274,7 +268,15 @@
     return-void
 .end method
 
-.method static synthetic access$500(Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;)V
+.method static synthetic access$300(Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;Landroid/media/IMediaRouter2Manager;II)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2, p3}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->notifyRequestFailedToManager(Landroid/media/IMediaRouter2Manager;II)V
+
+    return-void
+.end method
+
+.method static synthetic access$600(Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->start()V
@@ -282,7 +284,7 @@
     return-void
 .end method
 
-.method static synthetic access$600(Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;JLcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;Ljava/lang/String;)V
+.method static synthetic access$700(Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;JLcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->releaseSessionOnHandler(JLcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;Ljava/lang/String;)V
@@ -290,7 +292,7 @@
     return-void
 .end method
 
-.method static synthetic access$700(Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;JLjava/lang/String;I)V
+.method static synthetic access$800(Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;JLjava/lang/String;I)V
     .locals 0
 
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->setSessionVolumeOnHandler(JLjava/lang/String;I)V
@@ -298,18 +300,10 @@
     return-void
 .end method
 
-.method static synthetic access$800(Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;JLcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;Ljava/lang/String;Landroid/media/MediaRoute2Info;)V
-    .locals 0
-
-    invoke-direct/range {p0 .. p5}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->transferToRouteOnHandler(JLcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;Ljava/lang/String;Landroid/media/MediaRoute2Info;)V
-
-    return-void
-.end method
-
 .method static synthetic access$900(Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;JLcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;Ljava/lang/String;Landroid/media/MediaRoute2Info;)V
     .locals 0
 
-    invoke-direct/range {p0 .. p5}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->deselectRouteOnHandler(JLcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;Ljava/lang/String;Landroid/media/MediaRoute2Info;)V
+    invoke-direct/range {p0 .. p5}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->transferToRouteOnHandler(JLcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;Ljava/lang/String;Landroid/media/MediaRoute2Info;)V
 
     return-void
 .end method
@@ -557,7 +551,7 @@
     return-object v0
 
     :cond_0
-    invoke-static {v1}, Lcom/android/server/media/MediaRouter2ServiceImpl;->access$400(Lcom/android/server/media/MediaRouter2ServiceImpl;)Ljava/lang/Object;
+    invoke-static {v1}, Lcom/android/server/media/MediaRouter2ServiceImpl;->access$500(Lcom/android/server/media/MediaRouter2ServiceImpl;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -681,7 +675,7 @@
     return-object v1
 
     :cond_0
-    invoke-static {v0}, Lcom/android/server/media/MediaRouter2ServiceImpl;->access$400(Lcom/android/server/media/MediaRouter2ServiceImpl;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/android/server/media/MediaRouter2ServiceImpl;->access$500(Lcom/android/server/media/MediaRouter2ServiceImpl;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -738,7 +732,7 @@
     return-object v0
 
     :cond_0
-    invoke-static {v1}, Lcom/android/server/media/MediaRouter2ServiceImpl;->access$400(Lcom/android/server/media/MediaRouter2ServiceImpl;)Ljava/lang/Object;
+    invoke-static {v1}, Lcom/android/server/media/MediaRouter2ServiceImpl;->access$500(Lcom/android/server/media/MediaRouter2ServiceImpl;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -817,7 +811,7 @@
     return-object v0
 
     :cond_0
-    invoke-static {v1}, Lcom/android/server/media/MediaRouter2ServiceImpl;->access$400(Lcom/android/server/media/MediaRouter2ServiceImpl;)Ljava/lang/Object;
+    invoke-static {v1}, Lcom/android/server/media/MediaRouter2ServiceImpl;->access$500(Lcom/android/server/media/MediaRouter2ServiceImpl;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -871,67 +865,8 @@
     throw v3
 .end method
 
-.method private getSessionHintsForCreatingSessionOnHandler(JLcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;Lcom/android/server/media/MediaRouter2ServiceImpl$ManagerRecord;Landroid/media/MediaRoute2Info;)V
-    .locals 8
-
-    new-instance v7, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler$SessionCreationRequest;
-
-    move-object v0, v7
-
-    move-object v1, p0
-
-    move-object v2, p3
-
-    move-wide v3, p1
-
-    move-object v5, p5
-
-    move-object v6, p4
-
-    invoke-direct/range {v0 .. v6}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler$SessionCreationRequest;-><init>(Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;JLandroid/media/MediaRoute2Info;Lcom/android/server/media/MediaRouter2ServiceImpl$ManagerRecord;)V
-
-    iget-object v1, p0, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->mSessionCreationRequests:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
-
-    :try_start_0
-    iget-object v1, p3, Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;->mRouter:Landroid/media/IMediaRouter2;
-
-    invoke-interface {v1, p1, p2, p5}, Landroid/media/IMediaRouter2;->getSessionHintsForCreatingSession(JLandroid/media/MediaRoute2Info;)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v1
-
-    const-string v2, "MR2ServiceImpl"
-
-    const-string v3, "getSessionHintsForCreatingSessionOnHandler: Failed to request. Router probably died."
-
-    invoke-static {v2, v3, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    iget-object v2, p0, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->mSessionCreationRequests:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v2, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
-
-    iget-object v2, p4, Lcom/android/server/media/MediaRouter2ServiceImpl$ManagerRecord;->mManager:Landroid/media/IMediaRouter2Manager;
-
-    invoke-static {p1, p2}, Lcom/android/server/media/MediaRouter2ServiceImpl;->toOriginalRequestId(J)I
-
-    move-result v3
-
-    const/4 v4, 0x0
-
-    invoke-direct {p0, v2, v3, v4}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->notifyRequestFailedToManager(Landroid/media/IMediaRouter2Manager;II)V
-
-    :goto_0
-    return-void
-.end method
-
 .method private handleSessionCreationRequestFailed(Lcom/android/server/media/MediaRoute2Provider;JI)Z
-    .locals 5
+    .locals 6
 
     const/4 v0, 0x0
 
@@ -952,15 +887,15 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler$SessionCreationRequest;
+    check-cast v2, Lcom/android/server/media/MediaRouter2ServiceImpl$SessionCreationRequest;
 
-    iget-wide v3, v2, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler$SessionCreationRequest;->mUniqueRequestId:J
+    iget-wide v3, v2, Lcom/android/server/media/MediaRouter2ServiceImpl$SessionCreationRequest;->mUniqueRequestId:J
 
     cmp-long v3, v3, p2
 
     if-nez v3, :cond_0
 
-    iget-object v3, v2, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler$SessionCreationRequest;->mRoute:Landroid/media/MediaRoute2Info;
+    iget-object v3, v2, Lcom/android/server/media/MediaRouter2ServiceImpl$SessionCreationRequest;->mRoute:Landroid/media/MediaRoute2Info;
 
     invoke-virtual {v3}, Landroid/media/MediaRoute2Info;->getProviderId()Ljava/lang/String;
 
@@ -996,11 +931,15 @@
 
     invoke-virtual {v1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
-    iget-object v1, v0, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler$SessionCreationRequest;->mRequestedManagerRecord:Lcom/android/server/media/MediaRouter2ServiceImpl$ManagerRecord;
+    iget-wide v1, v0, Lcom/android/server/media/MediaRouter2ServiceImpl$SessionCreationRequest;->mManagerRequestId:J
+
+    const-wide/16 v3, 0x0
+
+    cmp-long v1, v1, v3
 
     if-nez v1, :cond_3
 
-    iget-object v1, v0, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler$SessionCreationRequest;->mRouterRecord:Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;
+    iget-object v1, v0, Lcom/android/server/media/MediaRouter2ServiceImpl$SessionCreationRequest;->mRouterRecord:Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;
 
     invoke-static {p2, p3}, Lcom/android/server/media/MediaRouter2ServiceImpl;->toOriginalRequestId(J)I
 
@@ -1011,16 +950,29 @@
     goto :goto_2
 
     :cond_3
-    iget-object v1, v0, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler$SessionCreationRequest;->mRequestedManagerRecord:Lcom/android/server/media/MediaRouter2ServiceImpl$ManagerRecord;
+    iget-wide v1, v0, Lcom/android/server/media/MediaRouter2ServiceImpl$SessionCreationRequest;->mManagerRequestId:J
 
-    iget-object v1, v1, Lcom/android/server/media/MediaRouter2ServiceImpl$ManagerRecord;->mManager:Landroid/media/IMediaRouter2Manager;
+    invoke-static {v1, v2}, Lcom/android/server/media/MediaRouter2ServiceImpl;->toRequesterId(J)I
 
-    invoke-static {p2, p3}, Lcom/android/server/media/MediaRouter2ServiceImpl;->toOriginalRequestId(J)I
+    move-result v1
 
-    move-result v2
+    invoke-virtual {p0, v1}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->findManagerWithId(I)Lcom/android/server/media/MediaRouter2ServiceImpl$ManagerRecord;
 
-    invoke-direct {p0, v1, v2, p4}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->notifyRequestFailedToManager(Landroid/media/IMediaRouter2Manager;II)V
+    move-result-object v2
 
+    if-eqz v2, :cond_4
+
+    iget-object v3, v2, Lcom/android/server/media/MediaRouter2ServiceImpl$ManagerRecord;->mManager:Landroid/media/IMediaRouter2Manager;
+
+    iget-wide v4, v0, Lcom/android/server/media/MediaRouter2ServiceImpl$SessionCreationRequest;->mManagerRequestId:J
+
+    invoke-static {v4, v5}, Lcom/android/server/media/MediaRouter2ServiceImpl;->toOriginalRequestId(J)I
+
+    move-result v4
+
+    invoke-direct {p0, v3, v4, p4}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->notifyRequestFailedToManager(Landroid/media/IMediaRouter2Manager;II)V
+
+    :cond_4
     :goto_2
     const/4 v1, 0x1
 
@@ -1127,7 +1079,7 @@
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-static {v0}, Lcom/android/server/media/MediaRouter2ServiceImpl;->access$400(Lcom/android/server/media/MediaRouter2ServiceImpl;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/android/server/media/MediaRouter2ServiceImpl;->access$500(Lcom/android/server/media/MediaRouter2ServiceImpl;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -1770,56 +1722,72 @@
     return-void
 .end method
 
-.method private notifySessionCreatedToManagers(Ljava/util/List;ILandroid/media/RoutingSessionInfo;)V
-    .locals 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Landroid/media/IMediaRouter2Manager;",
-            ">;I",
-            "Landroid/media/RoutingSessionInfo;",
-            ")V"
-        }
-    .end annotation
+.method private notifySessionCreatedToManagers(JLandroid/media/RoutingSessionInfo;)V
+    .locals 7
 
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-static {p1, p2}, Lcom/android/server/media/MediaRouter2ServiceImpl;->toRequesterId(J)I
 
-    move-result-object v0
+    move-result v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {p1, p2}, Lcom/android/server/media/MediaRouter2ServiceImpl;->toOriginalRequestId(J)I
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    invoke-direct {p0}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->getManagerRecords()Ljava/util/List;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result-object v2
 
-    move-result-object v1
+    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    check-cast v1, Landroid/media/IMediaRouter2Manager;
+    move-result-object v2
+
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lcom/android/server/media/MediaRouter2ServiceImpl$ManagerRecord;
 
     :try_start_0
-    invoke-interface {v1, p2, p3}, Landroid/media/IMediaRouter2Manager;->notifySessionCreated(ILandroid/media/RoutingSessionInfo;)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    iget-object v4, v3, Lcom/android/server/media/MediaRouter2ServiceImpl$ManagerRecord;->mManager:Landroid/media/IMediaRouter2Manager;
+
+    iget v5, v3, Lcom/android/server/media/MediaRouter2ServiceImpl$ManagerRecord;->mManagerId:I
+
+    if-ne v5, v0, :cond_0
+
+    move v5, v1
 
     goto :goto_1
 
-    :catch_0
-    move-exception v2
-
-    const-string v3, "MR2ServiceImpl"
-
-    const-string/jumbo v4, "notifySessionCreatedToManagers: failed to notify. Manager probably died."
-
-    invoke-static {v3, v4, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    :cond_0
+    const/4 v5, 0x0
 
     :goto_1
+    invoke-interface {v4, v5, p3}, Landroid/media/IMediaRouter2Manager;->notifySessionCreated(ILandroid/media/RoutingSessionInfo;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_2
+
+    :catch_0
+    move-exception v4
+
+    const-string v5, "MR2ServiceImpl"
+
+    const-string/jumbo v6, "notifySessionCreatedToManagers: Failed to notify. Manager probably died."
+
+    invoke-static {v5, v6, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_2
     goto :goto_0
 
-    :cond_0
+    :cond_1
     return-void
 .end method
 
@@ -2405,70 +2373,29 @@
 
     move-result v0
 
-    invoke-direct {p0}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->getManagerRecords()Ljava/util/List;
+    invoke-virtual {p0, v0}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->findManagerWithId(I)Lcom/android/server/media/MediaRouter2ServiceImpl$ManagerRecord;
 
     move-result-object v1
 
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    if-eqz v1, :cond_1
 
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/android/server/media/MediaRouter2ServiceImpl$ManagerRecord;
-
-    iget v3, v2, Lcom/android/server/media/MediaRouter2ServiceImpl$ManagerRecord;->mManagerId:I
-
-    if-ne v3, v0, :cond_1
-
-    iget-object v1, v2, Lcom/android/server/media/MediaRouter2ServiceImpl$ManagerRecord;->mManager:Landroid/media/IMediaRouter2Manager;
+    iget-object v2, v1, Lcom/android/server/media/MediaRouter2ServiceImpl$ManagerRecord;->mManager:Landroid/media/IMediaRouter2Manager;
 
     invoke-static {p2, p3}, Lcom/android/server/media/MediaRouter2ServiceImpl;->toOriginalRequestId(J)I
 
     move-result v3
 
-    invoke-direct {p0, v1, v3, p4}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->notifyRequestFailedToManager(Landroid/media/IMediaRouter2Manager;II)V
+    invoke-direct {p0, v2, v3, p4}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->notifyRequestFailedToManager(Landroid/media/IMediaRouter2Manager;II)V
 
     return-void
 
     :cond_1
-    goto :goto_0
-
-    :cond_2
     return-void
 .end method
 
 .method private onSessionCreatedOnHandler(Lcom/android/server/media/MediaRoute2Provider;JLandroid/media/RoutingSessionInfo;)V
     .locals 7
 
-    invoke-direct {p0}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->getManagers()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-static {p2, p3}, Lcom/android/server/media/MediaRouter2ServiceImpl;->toOriginalRequestId(J)I
-
-    move-result v1
-
-    invoke-direct {p0, v0, v1, p4}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->notifySessionCreatedToManagers(Ljava/util/List;ILandroid/media/RoutingSessionInfo;)V
-
-    const-wide/16 v0, 0x0
-
-    cmp-long v0, p2, v0
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
     const/4 v0, 0x0
 
     iget-object v1, p0, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->mSessionCreationRequests:Ljava/util/concurrent/CopyOnWriteArrayList;
@@ -2482,21 +2409,21 @@
 
     move-result v2
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_1
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler$SessionCreationRequest;
+    check-cast v2, Lcom/android/server/media/MediaRouter2ServiceImpl$SessionCreationRequest;
 
-    iget-wide v3, v2, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler$SessionCreationRequest;->mUniqueRequestId:J
+    iget-wide v3, v2, Lcom/android/server/media/MediaRouter2ServiceImpl$SessionCreationRequest;->mUniqueRequestId:J
 
     cmp-long v3, v3, p2
 
-    if-nez v3, :cond_1
+    if-nez v3, :cond_0
 
-    iget-object v3, v2, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler$SessionCreationRequest;->mRoute:Landroid/media/MediaRoute2Info;
+    iget-object v3, v2, Lcom/android/server/media/MediaRouter2ServiceImpl$SessionCreationRequest;->mRoute:Landroid/media/MediaRoute2Info;
 
     invoke-virtual {v3}, Landroid/media/MediaRoute2Info;->getProviderId()Ljava/lang/String;
 
@@ -2510,163 +2437,153 @@
 
     move-result v3
 
-    if-eqz v3, :cond_1
+    if-eqz v3, :cond_0
 
     move-object v0, v2
 
     goto :goto_1
 
-    :cond_1
+    :cond_0
     goto :goto_0
 
-    :cond_2
+    :cond_1
     :goto_1
-    const-string v1, ", sessionInfo="
+    if-nez v0, :cond_2
 
-    const-string v2, "MR2ServiceImpl"
+    const-wide/16 v1, 0x0
+
+    goto :goto_2
+
+    :cond_2
+    iget-wide v1, v0, Lcom/android/server/media/MediaRouter2ServiceImpl$SessionCreationRequest;->mManagerRequestId:J
+
+    :goto_2
+    nop
+
+    invoke-direct {p0, v1, v2, p4}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->notifySessionCreatedToManagers(JLandroid/media/RoutingSessionInfo;)V
+
+    const-string v3, "MR2ServiceImpl"
 
     if-nez v0, :cond_3
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "Ignoring session creation result for unknown request. uniqueRequestId="
+    const-string v5, "Ignoring session creation result for unknown request. uniqueRequestId="
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, p2, p3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, p2, p3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v5, ", sessionInfo="
 
-    invoke-virtual {v3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-static {v2, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+    move-result-object v4
+
+    invoke-static {v3, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
     :cond_3
-    iget-object v3, p0, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->mSessionCreationRequests:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v4, p0, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->mSessionCreationRequests:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    invoke-virtual {v3, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
-    if-nez p4, :cond_4
+    iget-object v4, v0, Lcom/android/server/media/MediaRouter2ServiceImpl$SessionCreationRequest;->mOldSession:Landroid/media/RoutingSessionInfo;
 
-    iget-object v1, v0, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler$SessionCreationRequest;->mRouterRecord:Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;
+    invoke-virtual {v4}, Landroid/media/RoutingSessionInfo;->getProviderId()Ljava/lang/String;
 
-    invoke-static {p2, p3}, Lcom/android/server/media/MediaRouter2ServiceImpl;->toOriginalRequestId(J)I
+    move-result-object v4
 
-    move-result v2
+    invoke-direct {p0, v4}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->findProvider(Ljava/lang/String;)Lcom/android/server/media/MediaRoute2Provider;
 
-    invoke-direct {p0, v1, v2}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->notifySessionCreationFailedToRouter(Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;I)V
+    move-result-object v4
 
-    return-void
+    if-eqz v4, :cond_4
 
-    :cond_4
-    iget-object v3, v0, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler$SessionCreationRequest;->mRoute:Landroid/media/MediaRoute2Info;
+    iget-object v3, v0, Lcom/android/server/media/MediaRouter2ServiceImpl$SessionCreationRequest;->mOldSession:Landroid/media/RoutingSessionInfo;
 
-    invoke-virtual {v3}, Landroid/media/MediaRoute2Info;->getId()Ljava/lang/String;
+    invoke-virtual {v3}, Landroid/media/RoutingSessionInfo;->getId()Ljava/lang/String;
 
     move-result-object v3
 
-    iget-object v4, v0, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler$SessionCreationRequest;->mRouterRecord:Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;
+    invoke-virtual {v4, v3}, Lcom/android/server/media/MediaRoute2Provider;->prepareReleaseSession(Ljava/lang/String;)V
 
-    invoke-virtual {p4}, Landroid/media/RoutingSessionInfo;->getSelectedRoutes()Ljava/util/List;
+    goto :goto_3
 
-    move-result-object v5
-
-    invoke-interface {v5, v3}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_5
-
+    :cond_4
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "Created session doesn\'t match the original request. originalRouteId="
+    const-string/jumbo v6, "onSessionCreatedOnHandler: Can\'t find provider for an old session. session="
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v6, v0, Lcom/android/server/media/MediaRouter2ServiceImpl$SessionCreationRequest;->mOldSession:Landroid/media/RoutingSessionInfo;
 
-    const-string v6, ", uniqueRequestId="
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, p2, p3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
-
-    invoke-static {v2, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget-object v1, v0, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler$SessionCreationRequest;->mRouterRecord:Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;
-
-    invoke-static {p2, p3}, Lcom/android/server/media/MediaRouter2ServiceImpl;->toOriginalRequestId(J)I
-
-    move-result v2
-
-    invoke-direct {p0, v1, v2}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->notifySessionCreationFailedToRouter(Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;I)V
-
-    return-void
-
-    :cond_5
-    invoke-virtual {p4}, Landroid/media/RoutingSessionInfo;->isSystemSession()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    iget-object v1, v0, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler$SessionCreationRequest;->mRouterRecord:Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;
-
-    iget-boolean v1, v1, Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;->mHasModifyAudioRoutingPermission:Z
-
-    if-nez v1, :cond_6
-
-    iget-object v1, v0, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler$SessionCreationRequest;->mRouterRecord:Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;
-
-    invoke-static {p2, p3}, Lcom/android/server/media/MediaRouter2ServiceImpl;->toOriginalRequestId(J)I
-
-    move-result v2
-
-    iget-object v5, p0, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->mSystemProvider:Lcom/android/server/media/SystemMediaRoute2Provider;
-
-    invoke-virtual {v5}, Lcom/android/server/media/SystemMediaRoute2Provider;->getDefaultSessionInfo()Landroid/media/RoutingSessionInfo;
-
     move-result-object v5
 
-    invoke-direct {p0, v1, v2, v5}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->notifySessionCreatedToRouter(Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;ILandroid/media/RoutingSessionInfo;)V
+    invoke-static {v3, v5}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_2
+    :goto_3
+    invoke-virtual {p4}, Landroid/media/RoutingSessionInfo;->isSystemSession()Z
 
-    :cond_6
-    iget-object v1, v0, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler$SessionCreationRequest;->mRouterRecord:Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;
+    move-result v3
+
+    if-eqz v3, :cond_5
+
+    iget-object v3, v0, Lcom/android/server/media/MediaRouter2ServiceImpl$SessionCreationRequest;->mRouterRecord:Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;
+
+    iget-boolean v3, v3, Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;->mHasModifyAudioRoutingPermission:Z
+
+    if-nez v3, :cond_5
+
+    iget-object v3, v0, Lcom/android/server/media/MediaRouter2ServiceImpl$SessionCreationRequest;->mRouterRecord:Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;
 
     invoke-static {p2, p3}, Lcom/android/server/media/MediaRouter2ServiceImpl;->toOriginalRequestId(J)I
 
-    move-result v2
+    move-result v5
 
-    invoke-direct {p0, v1, v2, p4}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->notifySessionCreatedToRouter(Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;ILandroid/media/RoutingSessionInfo;)V
+    iget-object v6, p0, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->mSystemProvider:Lcom/android/server/media/SystemMediaRoute2Provider;
 
-    :goto_2
-    iget-object v1, p0, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->mSessionToRouterMap:Ljava/util/Map;
+    invoke-virtual {v6}, Lcom/android/server/media/SystemMediaRoute2Provider;->getDefaultSessionInfo()Landroid/media/RoutingSessionInfo;
+
+    move-result-object v6
+
+    invoke-direct {p0, v3, v5, v6}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->notifySessionCreatedToRouter(Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;ILandroid/media/RoutingSessionInfo;)V
+
+    goto :goto_4
+
+    :cond_5
+    iget-object v3, v0, Lcom/android/server/media/MediaRouter2ServiceImpl$SessionCreationRequest;->mRouterRecord:Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;
+
+    invoke-static {p2, p3}, Lcom/android/server/media/MediaRouter2ServiceImpl;->toOriginalRequestId(J)I
+
+    move-result v5
+
+    invoke-direct {p0, v3, v5, p4}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->notifySessionCreatedToRouter(Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;ILandroid/media/RoutingSessionInfo;)V
+
+    :goto_4
+    iget-object v3, p0, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->mSessionToRouterMap:Ljava/util/Map;
 
     invoke-virtual {p4}, Landroid/media/RoutingSessionInfo;->getId()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v5
 
-    invoke-interface {v1, v2, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v6, v0, Lcom/android/server/media/MediaRouter2ServiceImpl$SessionCreationRequest;->mRouterRecord:Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;
+
+    invoke-interface {v3, v5, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -2945,153 +2862,22 @@
     return-void
 .end method
 
-.method private requestCreateSessionWithManagerOnHandler(JLcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;Landroid/media/MediaRoute2Info;Landroid/os/Bundle;)V
-    .locals 9
+.method private requestCreateSessionWithRouter2OnHandler(JJLcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;Landroid/media/RoutingSessionInfo;Landroid/media/MediaRoute2Info;Landroid/os/Bundle;)V
+    .locals 13
 
-    const/4 v0, 0x0
+    move-object v0, p0
 
-    iget-object v1, p0, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->mSessionCreationRequests:Ljava/util/concurrent/CopyOnWriteArrayList;
+    move-object/from16 v9, p5
 
-    invoke-virtual {v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    invoke-virtual/range {p7 .. p7}, Landroid/media/MediaRoute2Info;->getProviderId()Ljava/lang/String;
 
     move-result-object v1
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-direct {p0, v1}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->findProvider(Ljava/lang/String;)Lcom/android/server/media/MediaRoute2Provider;
 
-    move-result v2
+    move-result-object v10
 
-    if-eqz v2, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler$SessionCreationRequest;
-
-    iget-wide v3, v2, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler$SessionCreationRequest;->mUniqueRequestId:J
-
-    cmp-long v3, v3, p1
-
-    if-nez v3, :cond_0
-
-    move-object v0, v2
-
-    goto :goto_1
-
-    :cond_0
-    goto :goto_0
-
-    :cond_1
-    :goto_1
-    const-string v1, "MR2ServiceImpl"
-
-    if-nez v0, :cond_2
-
-    const-string/jumbo v2, "requestCreateSessionWithManagerOnHandler: Ignoring an unknown session creation request."
-
-    invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-
-    :cond_2
-    iget-object v2, v0, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler$SessionCreationRequest;->mRoute:Landroid/media/MediaRoute2Info;
-
-    invoke-virtual {v2}, Landroid/media/MediaRoute2Info;->getId()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p4}, Landroid/media/MediaRoute2Info;->getId()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_3
-
-    const-string/jumbo v2, "requestCreateSessionWithManagerOnHandler: The given route is different from the requested route."
-
-    invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-
-    :cond_3
-    invoke-virtual {p4}, Landroid/media/MediaRoute2Info;->getProviderId()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {p0, v2}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->findProvider(Ljava/lang/String;)Lcom/android/server/media/MediaRoute2Provider;
-
-    move-result-object v2
-
-    if-nez v2, :cond_4
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string/jumbo v4, "requestCreateSessionWithManagerOnHandler: Ignoring session creation request since no provider found for given route="
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v1, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget-object v1, p0, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->mSessionCreationRequests:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
-
-    iget-object v1, v0, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler$SessionCreationRequest;->mRequestedManagerRecord:Lcom/android/server/media/MediaRouter2ServiceImpl$ManagerRecord;
-
-    iget-object v1, v1, Lcom/android/server/media/MediaRouter2ServiceImpl$ManagerRecord;->mManager:Landroid/media/IMediaRouter2Manager;
-
-    invoke-static {p1, p2}, Lcom/android/server/media/MediaRouter2ServiceImpl;->toOriginalRequestId(J)I
-
-    move-result v3
-
-    const/4 v4, 0x3
-
-    invoke-direct {p0, v1, v3, v4}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->notifyRequestFailedToManager(Landroid/media/IMediaRouter2Manager;II)V
-
-    return-void
-
-    :cond_4
-    iget-object v6, p3, Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;->mPackageName:Ljava/lang/String;
-
-    invoke-virtual {p4}, Landroid/media/MediaRoute2Info;->getOriginalId()Ljava/lang/String;
-
-    move-result-object v7
-
-    move-object v3, v2
-
-    move-wide v4, p1
-
-    move-object v8, p5
-
-    invoke-virtual/range {v3 .. v8}, Lcom/android/server/media/MediaRoute2Provider;->requestCreateSession(JLjava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
-
-    return-void
-.end method
-
-.method private requestCreateSessionWithRouter2OnHandler(JLcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;Landroid/media/MediaRoute2Info;Landroid/os/Bundle;)V
-    .locals 9
-
-    invoke-virtual {p4}, Landroid/media/MediaRoute2Info;->getProviderId()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p0, v0}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->findProvider(Ljava/lang/String;)Lcom/android/server/media/MediaRoute2Provider;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
+    if-nez v10, :cond_0
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3101,7 +2887,9 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-object/from16 v11, p7
+
+    invoke-virtual {v1, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -3117,47 +2905,104 @@
 
     move-result v1
 
-    invoke-direct {p0, p3, v1}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->notifySessionCreationFailedToRouter(Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;I)V
+    invoke-direct {p0, v9, v1}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->notifySessionCreationFailedToRouter(Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;I)V
 
     return-void
 
     :cond_0
-    new-instance v1, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler$SessionCreationRequest;
+    move-object/from16 v11, p7
 
-    const/4 v8, 0x0
+    new-instance v12, Lcom/android/server/media/MediaRouter2ServiceImpl$SessionCreationRequest;
 
-    move-object v2, v1
+    move-object v1, v12
 
-    move-object v3, p0
+    move-object/from16 v2, p5
 
-    move-object v4, p3
+    move-wide v3, p1
 
-    move-wide v5, p1
+    move-wide/from16 v5, p3
 
-    move-object v7, p4
+    move-object/from16 v7, p6
 
-    invoke-direct/range {v2 .. v8}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler$SessionCreationRequest;-><init>(Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;JLandroid/media/MediaRoute2Info;Lcom/android/server/media/MediaRouter2ServiceImpl$ManagerRecord;)V
+    move-object/from16 v8, p7
 
-    move-object v7, v1
+    invoke-direct/range {v1 .. v8}, Lcom/android/server/media/MediaRouter2ServiceImpl$SessionCreationRequest;-><init>(Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;JJLandroid/media/RoutingSessionInfo;Landroid/media/MediaRoute2Info;)V
 
-    iget-object v1, p0, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->mSessionCreationRequests:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v2, v0, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->mSessionCreationRequests:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    invoke-virtual {v1, v7}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
-    iget-object v4, p3, Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;->mPackageName:Ljava/lang/String;
+    iget-object v5, v9, Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;->mPackageName:Ljava/lang/String;
 
-    invoke-virtual {p4}, Landroid/media/MediaRoute2Info;->getOriginalId()Ljava/lang/String;
+    invoke-virtual/range {p7 .. p7}, Landroid/media/MediaRoute2Info;->getOriginalId()Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v6
 
-    move-object v1, v0
+    move-object v2, v10
 
-    move-wide v2, p1
+    move-object/from16 v7, p8
 
-    move-object v6, p5
+    invoke-virtual/range {v2 .. v7}, Lcom/android/server/media/MediaRoute2Provider;->requestCreateSession(JLjava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
 
-    invoke-virtual/range {v1 .. v6}, Lcom/android/server/media/MediaRoute2Provider;->requestCreateSession(JLjava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
+    return-void
+.end method
 
+.method private requestRouterCreateSessionOnHandler(JLcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;Lcom/android/server/media/MediaRouter2ServiceImpl$ManagerRecord;Landroid/media/RoutingSessionInfo;Landroid/media/MediaRoute2Info;)V
+    .locals 4
+
+    :try_start_0
+    invoke-virtual {p6}, Landroid/media/MediaRoute2Info;->isSystemRoute()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-boolean v0, p3, Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;->mHasModifyAudioRoutingPermission:Z
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p3, Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;->mRouter:Landroid/media/IMediaRouter2;
+
+    iget-object v1, p0, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->mSystemProvider:Lcom/android/server/media/SystemMediaRoute2Provider;
+
+    invoke-virtual {v1}, Lcom/android/server/media/SystemMediaRoute2Provider;->getDefaultRoute()Landroid/media/MediaRoute2Info;
+
+    move-result-object v1
+
+    invoke-interface {v0, p1, p2, p5, v1}, Landroid/media/IMediaRouter2;->requestCreateSessionByManager(JLandroid/media/RoutingSessionInfo;Landroid/media/MediaRoute2Info;)V
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p3, Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;->mRouter:Landroid/media/IMediaRouter2;
+
+    invoke-interface {v0, p1, p2, p5, p6}, Landroid/media/IMediaRouter2;->requestCreateSessionByManager(JLandroid/media/RoutingSessionInfo;Landroid/media/MediaRoute2Info;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    goto :goto_1
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "MR2ServiceImpl"
+
+    const-string v2, "getSessionHintsForCreatingSessionOnHandler: Failed to request. Router probably died."
+
+    invoke-static {v1, v2, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    iget-object v1, p4, Lcom/android/server/media/MediaRouter2ServiceImpl$ManagerRecord;->mManager:Landroid/media/IMediaRouter2Manager;
+
+    invoke-static {p1, p2}, Lcom/android/server/media/MediaRouter2ServiceImpl;->toOriginalRequestId(J)I
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    invoke-direct {p0, v1, v2, v3}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->notifyRequestFailedToManager(Landroid/media/IMediaRouter2Manager;II)V
+
+    :goto_1
     return-void
 .end method
 
@@ -3385,7 +3230,7 @@
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-static {v0}, Lcom/android/server/media/MediaRouter2ServiceImpl;->access$400(Lcom/android/server/media/MediaRouter2ServiceImpl;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/android/server/media/MediaRouter2ServiceImpl;->access$500(Lcom/android/server/media/MediaRouter2ServiceImpl;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -3481,7 +3326,46 @@
 
 
 # virtual methods
-.method public findRouterforSessionLocked(Ljava/lang/String;)Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;
+.method public findManagerWithId(I)Lcom/android/server/media/MediaRouter2ServiceImpl$ManagerRecord;
+    .locals 3
+
+    invoke-direct {p0}, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->getManagerRecords()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/server/media/MediaRouter2ServiceImpl$ManagerRecord;
+
+    iget v2, v1, Lcom/android/server/media/MediaRouter2ServiceImpl$ManagerRecord;->mManagerId:I
+
+    if-ne v2, p1, :cond_0
+
+    return-object v1
+
+    :cond_0
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public findRouterWithSessionLocked(Ljava/lang/String;)Lcom/android/server/media/MediaRouter2ServiceImpl$RouterRecord;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/media/MediaRouter2ServiceImpl$UserHandler;->mSessionToRouterMap:Ljava/util/Map;

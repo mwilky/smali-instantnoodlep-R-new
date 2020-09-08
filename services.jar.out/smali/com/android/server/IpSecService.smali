@@ -2383,7 +2383,7 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    const-string v3, "ipsec"
+    const-string/jumbo v3, "ipsec"
 
     const/4 v6, 0x0
 

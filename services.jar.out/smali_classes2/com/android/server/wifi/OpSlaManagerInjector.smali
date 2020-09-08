@@ -19,7 +19,7 @@
 
     const/4 v1, 0x0
 
-    const/16 v2, 0xc2
+    const/16 v2, 0xba
 
     aput v2, v0, v1
 
@@ -52,8 +52,11 @@
     :cond_0
     sget-object v0, Lcom/android/server/wifi/OpSlaManagerInjector;->sOpSlaManager:Lcom/android/server/wifi/IOpSlaManager;
 
+    if-eqz v0, :cond_1
+
     invoke-interface {v0, p0}, Lcom/android/server/wifi/IOpSlaManager;->enableVerboseLogging(I)V
 
+    :cond_1
     return-void
 .end method
 
@@ -104,7 +107,10 @@
     :cond_0
     sget-object v0, Lcom/android/server/wifi/OpSlaManagerInjector;->sOpSlaManager:Lcom/android/server/wifi/IOpSlaManager;
 
+    if-eqz v0, :cond_1
+
     invoke-interface {v0, p0}, Lcom/android/server/wifi/IOpSlaManager;->sendWifiScoreToKernel(I)V
 
+    :cond_1
     return-void
 .end method

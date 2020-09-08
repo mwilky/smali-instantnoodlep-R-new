@@ -42,7 +42,7 @@
     return-void
 .end method
 
-.method static synthetic access$400(Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener$InsetsPolicyAnimationControlCallbacks;ILandroid/util/SparseArray;Z)V
+.method static synthetic access$600(Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener$InsetsPolicyAnimationControlCallbacks;ILandroid/util/SparseArray;Z)V
     .locals 0
 
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener$InsetsPolicyAnimationControlCallbacks;->controlAnimationUnchecked(ILandroid/util/SparseArray;Z)V
@@ -70,7 +70,7 @@
 
     iget-object v0, v0, Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener;->this$0:Lcom/android/server/wm/InsetsPolicy;
 
-    invoke-static {v0, p3}, Lcom/android/server/wm/InsetsPolicy;->access$602(Lcom/android/server/wm/InsetsPolicy;Z)Z
+    invoke-static {v0, p3}, Lcom/android/server/wm/InsetsPolicy;->access$702(Lcom/android/server/wm/InsetsPolicy;Z)Z
 
     new-instance v0, Landroid/view/InsetsAnimationControlImpl;
 
@@ -78,7 +78,7 @@
 
     iget-object v1, v1, Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener;->this$0:Lcom/android/server/wm/InsetsPolicy;
 
-    invoke-static {v1}, Lcom/android/server/wm/InsetsPolicy;->access$700(Lcom/android/server/wm/InsetsPolicy;)Lcom/android/server/wm/WindowState;
+    invoke-static {v1}, Lcom/android/server/wm/InsetsPolicy;->access$200(Lcom/android/server/wm/InsetsPolicy;)Lcom/android/server/wm/WindowState;
 
     move-result-object v1
 
@@ -138,7 +138,7 @@
 
     iget-object v1, v1, Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener;->this$0:Lcom/android/server/wm/InsetsPolicy;
 
-    invoke-static {v1}, Lcom/android/server/wm/InsetsPolicy;->access$700(Lcom/android/server/wm/InsetsPolicy;)Lcom/android/server/wm/WindowState;
+    invoke-static {v1}, Lcom/android/server/wm/InsetsPolicy;->access$200(Lcom/android/server/wm/InsetsPolicy;)Lcom/android/server/wm/WindowState;
 
     move-result-object v1
 
@@ -154,7 +154,7 @@
 
     iget-object v1, v1, Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener;->this$0:Lcom/android/server/wm/InsetsPolicy;
 
-    invoke-static {v1}, Lcom/android/server/wm/InsetsPolicy;->access$700(Lcom/android/server/wm/InsetsPolicy;)Lcom/android/server/wm/WindowState;
+    invoke-static {v1}, Lcom/android/server/wm/InsetsPolicy;->access$200(Lcom/android/server/wm/InsetsPolicy;)Lcom/android/server/wm/WindowState;
 
     move-result-object v1
 
@@ -264,7 +264,7 @@
 
     iget-object v2, v2, Lcom/android/server/wm/InsetsPolicy$InsetsPolicyAnimationControlListener;->this$0:Lcom/android/server/wm/InsetsPolicy;
 
-    invoke-static {v2}, Lcom/android/server/wm/InsetsPolicy;->access$600(Lcom/android/server/wm/InsetsPolicy;)Z
+    invoke-static {v2}, Lcom/android/server/wm/InsetsPolicy;->access$700(Lcom/android/server/wm/InsetsPolicy;)Z
 
     move-result v2
 

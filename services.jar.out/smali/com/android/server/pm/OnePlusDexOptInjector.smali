@@ -100,6 +100,23 @@
     return-void
 .end method
 
+.method public static notifyPrimaryDexDone(Ljava/lang/String;)V
+    .locals 1
+
+    invoke-static {}, Lcom/android/server/pm/OnePlusDexOptInjector;->makeSureInstanceInitialized()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lcom/android/server/pm/OnePlusDexOptInjector;->sOnePlusDexOptManager:Lcom/android/server/pm/IOnePlusDexOptManager;
+
+    invoke-interface {v0, p0}, Lcom/android/server/pm/IOnePlusDexOptManager;->notifyPrimaryDexDone(Ljava/lang/String;)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public static packageRemoved(Ljava/lang/String;)V
     .locals 1
 

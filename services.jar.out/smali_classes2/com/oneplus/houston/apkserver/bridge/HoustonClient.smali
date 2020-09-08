@@ -39,6 +39,8 @@
 
 
 # instance fields
+.field private mConnectedCallback:Lcom/oneplus/houston/apkserver/bridge/HoustonServer$ServiceConnectedCallback;
+
 .field private mContext:Landroid/content/Context;
 
 .field private mDelayedEventAccount:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -649,6 +651,15 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    :try_start_1
+    iget-object v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonClient;->mConnectedCallback:Lcom/oneplus/houston/apkserver/bridge/HoustonServer$ServiceConnectedCallback;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonClient;->mConnectedCallback:Lcom/oneplus/houston/apkserver/bridge/HoustonServer$ServiceConnectedCallback;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
     goto :goto_0
 
     :catchall_0
@@ -659,7 +670,7 @@
     :catch_0
     move-exception v0
 
-    :try_start_1
+    :try_start_2
     const-string v1, "HoustonClient"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -677,16 +688,44 @@
     move-result-object v2
 
     invoke-static {v1, v2}, Lcom/oneplus/houston/common/client/utils/Logger;->err(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :try_start_3
+    iget-object v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonClient;->mConnectedCallback:Lcom/oneplus/houston/apkserver/bridge/HoustonServer$ServiceConnectedCallback;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonClient;->mConnectedCallback:Lcom/oneplus/houston/apkserver/bridge/HoustonServer$ServiceConnectedCallback;
 
     :goto_0
+    invoke-interface {v0}, Lcom/oneplus/houston/apkserver/bridge/HoustonServer$ServiceConnectedCallback;->onServiceConnected()V
+
+    :cond_0
     monitor-exit p0
 
     return-void
 
     :goto_1
+    iget-object v1, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonClient;->mConnectedCallback:Lcom/oneplus/houston/apkserver/bridge/HoustonServer$ServiceConnectedCallback;
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonClient;->mConnectedCallback:Lcom/oneplus/houston/apkserver/bridge/HoustonServer$ServiceConnectedCallback;
+
+    invoke-interface {v1}, Lcom/oneplus/houston/apkserver/bridge/HoustonServer$ServiceConnectedCallback;->onServiceConnected()V
+
+    :cond_1
+    nop
+
+    throw v0
+
+    :catchall_1
+    move-exception v0
+
     monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     throw v0
 .end method
@@ -874,6 +913,14 @@
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
     :cond_0
+    return-void
+.end method
+
+.method public setConnectedCallback(Lcom/oneplus/houston/apkserver/bridge/HoustonServer$ServiceConnectedCallback;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonClient;->mConnectedCallback:Lcom/oneplus/houston/apkserver/bridge/HoustonServer$ServiceConnectedCallback;
+
     return-void
 .end method
 

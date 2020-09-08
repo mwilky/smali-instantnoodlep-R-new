@@ -388,7 +388,7 @@
     :goto_0
     iget v4, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mPendingBacklight:F
 
-    invoke-static {p2, v4}, Lcom/android/internal/BrightnessSynchronizer;->floatEquals(FF)Z
+    invoke-static {p2, v4}, Lcom/android/server/display/OpBrightnessReasonAndRate;->EqualsWithMargin(FF)Z
 
     move-result v4
 

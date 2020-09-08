@@ -105,6 +105,10 @@
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
+    invoke-static {v0}, Ljava/util/Collections;->synchronizedList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v0
+
     iput-object v0, p0, Lcom/android/server/job/controllers/TimeController;->mTrackedJobs:Ljava/util/List;
 
     new-instance v0, Lcom/android/server/job/controllers/TimeController$1;

@@ -33,7 +33,7 @@
 
     new-array v2, v0, [I
 
-    const/16 v3, 0xc7
+    const/16 v3, 0xbf
 
     aput v3, v2, v1
 

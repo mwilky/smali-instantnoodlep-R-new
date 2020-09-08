@@ -3797,7 +3797,7 @@
 
     move-object v14, v0
 
-    const-string v0, "ipsec"
+    const-string/jumbo v0, "ipsec"
 
     invoke-static {v0, v14}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
     :try_end_1d
@@ -6707,7 +6707,7 @@
 
     new-array v0, v1, [I
 
-    const/16 v1, 0x45
+    const/16 v1, 0x43
 
     const/4 v5, 0x0
 

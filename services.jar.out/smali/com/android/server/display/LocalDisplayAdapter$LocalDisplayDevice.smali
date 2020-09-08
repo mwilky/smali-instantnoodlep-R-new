@@ -2122,7 +2122,7 @@
 
     iget v0, v9, Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayDevice;->mBrightnessState:F
 
-    invoke-static {v0, v11}, Lcom/android/internal/BrightnessSynchronizer;->floatEquals(FF)Z
+    invoke-static {v0, v11}, Lcom/android/server/display/OpBrightnessReasonAndRate;->EqualsWithMargin(FF)Z
 
     move-result v0
 

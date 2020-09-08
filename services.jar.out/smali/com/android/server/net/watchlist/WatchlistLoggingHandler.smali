@@ -936,7 +936,7 @@
 
     invoke-virtual {v1, v2, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v2, "ipAddresses"
+    const-string/jumbo v2, "ipAddresses"
 
     invoke-virtual {v1, v2, p2}, Landroid/os/Bundle;->putStringArray(Ljava/lang/String;[Ljava/lang/String;)V
 
@@ -1145,7 +1145,7 @@
 
     move-result-object v3
 
-    const-string v1, "ipAddresses"
+    const-string/jumbo v1, "ipAddresses"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
 

@@ -455,7 +455,7 @@
     goto/16 :goto_a
 
     :cond_2
-    const-string v5, "ipAssignment"
+    const-string/jumbo v5, "ipAssignment"
 
     invoke-virtual {v7, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1418,7 +1418,7 @@
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    const-string v2, "ipAssignment"
+    const-string/jumbo v2, "ipAssignment"
 
     const/4 v3, 0x2
 

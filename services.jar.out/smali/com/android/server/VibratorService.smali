@@ -500,7 +500,7 @@
 
     move-result-object v4
 
-    const v5, 0x10e00a3
+    const v5, 0x10e00a9
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -710,7 +710,7 @@
 
     new-array v1, v2, [I
 
-    const/16 v2, 0x25
+    const/16 v2, 0x24
 
     aput v2, v1, v0
 
@@ -1052,7 +1052,7 @@
 
     const/4 v2, 0x0
 
-    const/16 v3, 0x25
+    const/16 v3, 0x24
 
     aput v3, v1, v2
 
@@ -1424,7 +1424,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
-    const/16 v2, 0x25
+    const/16 v2, 0x24
 
     const/4 v4, 0x1
 
@@ -1744,6 +1744,8 @@
     :cond_2
     invoke-static {}, Lcom/android/server/VibratorService;->vibratorOff()V
 
+    invoke-static {}, Lcom/android/server/OpVibratorServiceInjector;->turnOffLinearMotorVibrator()V
+
     :goto_1
     monitor-exit v2
     :try_end_1
@@ -1878,7 +1880,7 @@
 
     const/4 v5, 0x0
 
-    const/16 v6, 0x65
+    const/16 v6, 0x61
 
     aput v6, v4, v5
 
@@ -2003,7 +2005,7 @@
     :try_start_2
     new-array v1, v2, [I
 
-    const/16 v4, 0x65
+    const/16 v4, 0x61
 
     aput v4, v1, v3
 
@@ -2015,7 +2017,7 @@
 
     new-array v1, v2, [I
 
-    const/16 v2, 0x25
+    const/16 v2, 0x24
 
     aput v2, v1, v3
 
@@ -2230,7 +2232,7 @@
 
     const/4 v1, 0x0
 
-    const/16 v2, 0x25
+    const/16 v2, 0x24
 
     aput v2, v0, v1
 
@@ -4028,7 +4030,7 @@
 
     const/4 v4, 0x0
 
-    const/16 v5, 0x25
+    const/16 v5, 0x24
 
     aput v5, v3, v4
 
@@ -4454,7 +4456,7 @@
 
     const/4 v2, 0x0
 
-    const/16 v3, 0x25
+    const/16 v3, 0x24
 
     aput v3, v1, v2
 
@@ -4776,7 +4778,7 @@
 
     new-array v1, v1, [I
 
-    const/16 v3, 0x25
+    const/16 v3, 0x24
 
     aput v3, v1, v2
 
@@ -4965,7 +4967,7 @@
 
     new-array v1, v1, [I
 
-    const/16 v3, 0x25
+    const/16 v3, 0x24
 
     aput v3, v1, v2
 
@@ -5666,7 +5668,7 @@
 
     new-array v2, v6, [I
 
-    const/16 v3, 0x25
+    const/16 v3, 0x24
 
     const/4 v4, 0x0
 
@@ -5731,7 +5733,7 @@
     :cond_0
     new-array v2, v6, [I
 
-    const/16 v3, 0x65
+    const/16 v3, 0x61
 
     aput v3, v2, v4
 
@@ -6163,7 +6165,7 @@
 
     move-result v0
 
-    const/16 v2, 0x25
+    const/16 v2, 0x24
 
     const/4 v3, 0x1
 

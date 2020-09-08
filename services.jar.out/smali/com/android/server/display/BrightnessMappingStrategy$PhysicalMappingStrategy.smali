@@ -190,7 +190,7 @@
     :goto_0
     array-length v3, v10
 
-    if-ge v2, v3, :cond_0
+    if-ge v2, v3, :cond_1
 
     iget-object v3, p0, Lcom/android/server/display/BrightnessMappingStrategy$PhysicalMappingStrategy;->mNitsToBacklightSpline:Landroid/util/Spline;
 
@@ -202,11 +202,27 @@
 
     aput v3, v10, v2
 
+    aget v3, v10, v2
+
+    const/4 v4, 0x0
+
+    cmpg-float v3, v3, v4
+
+    if-gez v3, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    aget v4, v10, v2
+
+    :goto_1
+    aput v4, v10, v2
+
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     iget v5, p0, Lcom/android/server/display/BrightnessMappingStrategy$PhysicalMappingStrategy;->mUserLux:F
 
     iget v6, p0, Lcom/android/server/display/BrightnessMappingStrategy$PhysicalMappingStrategy;->mUserBrightness:F
@@ -239,10 +255,10 @@
 
     const/4 v6, 0x0
 
-    :goto_1
+    :goto_2
     array-length v7, v5
 
-    if-ge v6, v7, :cond_1
+    if-ge v6, v7, :cond_2
 
     iget-object v7, p0, Lcom/android/server/display/BrightnessMappingStrategy$PhysicalMappingStrategy;->mBacklightToNitsSpline:Landroid/util/Spline;
 
@@ -256,9 +272,9 @@
 
     add-int/lit8 v6, v6, 0x1
 
-    goto :goto_1
+    goto :goto_2
 
-    :cond_1
+    :cond_2
     invoke-static {v3, v5}, Landroid/util/Spline;->createSpline([F[F)Landroid/util/Spline;
 
     move-result-object v6

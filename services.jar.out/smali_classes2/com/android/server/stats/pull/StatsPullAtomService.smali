@@ -1321,7 +1321,7 @@
 .end method
 
 .method private addDataUsageBytesTransferAtoms(Lcom/android/server/stats/pull/netstats/NetworkStatsExt;Ljava/util/List;)V
-    .locals 6
+    .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1332,130 +1332,181 @@
         }
     .end annotation
 
-    new-instance v0, Landroid/net/NetworkStats$Entry;
-
-    invoke-direct {v0}, Landroid/net/NetworkStats$Entry;-><init>()V
+    iget v0, p1, Lcom/android/server/stats/pull/netstats/NetworkStatsExt;->ratType:I
 
     const/4 v1, 0x0
 
-    :goto_0
-    iget-object v2, p1, Lcom/android/server/stats/pull/netstats/NetworkStatsExt;->stats:Landroid/net/NetworkStats;
+    const/4 v2, 0x1
 
-    invoke-virtual {v2}, Landroid/net/NetworkStats;->size()I
+    const/4 v3, -0x2
 
-    move-result v2
+    if-ne v0, v3, :cond_0
 
-    if-ge v1, v2, :cond_1
-
-    iget-object v2, p1, Lcom/android/server/stats/pull/netstats/NetworkStatsExt;->stats:Landroid/net/NetworkStats;
-
-    invoke-virtual {v2, v1, v0}, Landroid/net/NetworkStats;->getValues(ILandroid/net/NetworkStats$Entry;)Landroid/net/NetworkStats$Entry;
-
-    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
-
-    move-result-object v2
-
-    const/16 v3, 0x2762
-
-    invoke-virtual {v2, v3}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
-
-    move-result-object v2
-
-    const/4 v3, 0x2
-
-    const/4 v4, 0x1
-
-    invoke-virtual {v2, v3, v4}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
-
-    move-result-object v2
-
-    iget v4, v0, Landroid/net/NetworkStats$Entry;->set:I
-
-    invoke-virtual {v2, v4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
-
-    move-result-object v2
-
-    iget-wide v4, v0, Landroid/net/NetworkStats$Entry;->rxBytes:J
-
-    invoke-virtual {v2, v4, v5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
-
-    move-result-object v2
-
-    iget-wide v4, v0, Landroid/net/NetworkStats$Entry;->rxPackets:J
-
-    invoke-virtual {v2, v4, v5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
-
-    move-result-object v2
-
-    iget-wide v4, v0, Landroid/net/NetworkStats$Entry;->txBytes:J
-
-    invoke-virtual {v2, v4, v5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
-
-    move-result-object v2
-
-    iget-wide v4, v0, Landroid/net/NetworkStats$Entry;->txPackets:J
-
-    invoke-virtual {v2, v4, v5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
-
-    move-result-object v2
-
-    iget v4, p1, Lcom/android/server/stats/pull/netstats/NetworkStatsExt;->ratType:I
-
-    invoke-virtual {v2, v4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
-
-    move-result-object v2
-
-    iget-object v4, p1, Lcom/android/server/stats/pull/netstats/NetworkStatsExt;->subInfo:Lcom/android/server/stats/pull/netstats/SubInfo;
-
-    iget-object v4, v4, Lcom/android/server/stats/pull/netstats/SubInfo;->mcc:Ljava/lang/String;
-
-    invoke-virtual {v2, v4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
-
-    move-result-object v2
-
-    iget-object v4, p1, Lcom/android/server/stats/pull/netstats/NetworkStatsExt;->subInfo:Lcom/android/server/stats/pull/netstats/SubInfo;
-
-    iget-object v4, v4, Lcom/android/server/stats/pull/netstats/SubInfo;->mnc:Ljava/lang/String;
-
-    invoke-virtual {v2, v4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
-
-    move-result-object v2
-
-    iget-object v4, p1, Lcom/android/server/stats/pull/netstats/NetworkStatsExt;->subInfo:Lcom/android/server/stats/pull/netstats/SubInfo;
-
-    iget v4, v4, Lcom/android/server/stats/pull/netstats/SubInfo;->carrierId:I
-
-    invoke-virtual {v2, v4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
-
-    move-result-object v2
-
-    iget-object v4, p1, Lcom/android/server/stats/pull/netstats/NetworkStatsExt;->subInfo:Lcom/android/server/stats/pull/netstats/SubInfo;
-
-    iget-boolean v4, v4, Lcom/android/server/stats/pull/netstats/SubInfo;->isOpportunistic:Z
-
-    if-eqz v4, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    const/4 v3, 0x3
-
-    :goto_1
-    invoke-virtual {v2, v3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
-
-    move-result-object v2
-
-    invoke-interface {p2, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v1, v1, 0x1
+    move v0, v2
 
     goto :goto_0
 
+    :cond_0
+    move v0, v1
+
+    :goto_0
+    if-nez v0, :cond_1
+
+    iget v3, p1, Lcom/android/server/stats/pull/netstats/NetworkStatsExt;->ratType:I
+
+    const/16 v4, 0x14
+
+    if-ne v3, v4, :cond_2
+
     :cond_1
+    move v1, v2
+
+    :cond_2
+    new-instance v3, Landroid/net/NetworkStats$Entry;
+
+    invoke-direct {v3}, Landroid/net/NetworkStats$Entry;-><init>()V
+
+    const/4 v4, 0x0
+
+    :goto_1
+    iget-object v5, p1, Lcom/android/server/stats/pull/netstats/NetworkStatsExt;->stats:Landroid/net/NetworkStats;
+
+    invoke-virtual {v5}, Landroid/net/NetworkStats;->size()I
+
+    move-result v5
+
+    if-ge v4, v5, :cond_6
+
+    iget-object v5, p1, Lcom/android/server/stats/pull/netstats/NetworkStatsExt;->stats:Landroid/net/NetworkStats;
+
+    invoke-virtual {v5, v4, v3}, Landroid/net/NetworkStats;->getValues(ILandroid/net/NetworkStats$Entry;)Landroid/net/NetworkStats$Entry;
+
+    iget v5, p1, Lcom/android/server/stats/pull/netstats/NetworkStatsExt;->ratType:I
+
+    if-nez v5, :cond_3
+
+    iget-object v6, p0, Lcom/android/server/stats/pull/StatsPullAtomService;->mTelephony:Landroid/telephony/TelephonyManager;
+
+    invoke-virtual {v6}, Landroid/telephony/TelephonyManager;->getDataNetworkType()I
+
+    move-result v5
+
+    :cond_3
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v6
+
+    const/16 v7, 0x2762
+
+    invoke-virtual {v6, v7}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    move-result-object v6
+
+    const/4 v7, 0x2
+
+    invoke-virtual {v6, v7, v2}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
+
+    move-result-object v6
+
+    iget v8, v3, Landroid/net/NetworkStats$Entry;->set:I
+
+    invoke-virtual {v6, v8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move-result-object v6
+
+    iget-wide v8, v3, Landroid/net/NetworkStats$Entry;->rxBytes:J
+
+    invoke-virtual {v6, v8, v9}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    move-result-object v6
+
+    iget-wide v8, v3, Landroid/net/NetworkStats$Entry;->rxPackets:J
+
+    invoke-virtual {v6, v8, v9}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    move-result-object v6
+
+    iget-wide v8, v3, Landroid/net/NetworkStats$Entry;->txBytes:J
+
+    invoke-virtual {v6, v8, v9}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    move-result-object v6
+
+    iget-wide v8, v3, Landroid/net/NetworkStats$Entry;->txPackets:J
+
+    invoke-virtual {v6, v8, v9}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    move-result-object v6
+
+    if-eqz v0, :cond_4
+
+    const/16 v8, 0xd
+
+    goto :goto_2
+
+    :cond_4
+    move v8, v5
+
+    :goto_2
+    invoke-virtual {v6, v8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move-result-object v6
+
+    iget-object v8, p1, Lcom/android/server/stats/pull/netstats/NetworkStatsExt;->subInfo:Lcom/android/server/stats/pull/netstats/SubInfo;
+
+    iget-object v8, v8, Lcom/android/server/stats/pull/netstats/SubInfo;->mcc:Ljava/lang/String;
+
+    invoke-virtual {v6, v8}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
+
+    move-result-object v6
+
+    iget-object v8, p1, Lcom/android/server/stats/pull/netstats/NetworkStatsExt;->subInfo:Lcom/android/server/stats/pull/netstats/SubInfo;
+
+    iget-object v8, v8, Lcom/android/server/stats/pull/netstats/SubInfo;->mnc:Ljava/lang/String;
+
+    invoke-virtual {v6, v8}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
+
+    move-result-object v6
+
+    iget-object v8, p1, Lcom/android/server/stats/pull/netstats/NetworkStatsExt;->subInfo:Lcom/android/server/stats/pull/netstats/SubInfo;
+
+    iget v8, v8, Lcom/android/server/stats/pull/netstats/SubInfo;->carrierId:I
+
+    invoke-virtual {v6, v8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move-result-object v6
+
+    iget-object v8, p1, Lcom/android/server/stats/pull/netstats/NetworkStatsExt;->subInfo:Lcom/android/server/stats/pull/netstats/SubInfo;
+
+    iget-boolean v8, v8, Lcom/android/server/stats/pull/netstats/SubInfo;->isOpportunistic:Z
+
+    if-eqz v8, :cond_5
+
+    goto :goto_3
+
+    :cond_5
+    const/4 v7, 0x3
+
+    :goto_3
+    invoke-virtual {v6, v7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object v6
+
+    invoke-interface {p2, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_1
+
+    :cond_6
     return-void
 .end method
 
@@ -4300,9 +4351,9 @@
     :goto_0
     array-length v3, v15
     :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_3
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_5
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_5
+    .catchall {:try_start_0 .. :try_end_0} :catchall_4
 
     if-ge v2, v3, :cond_1
 
@@ -4326,18 +4377,18 @@
 
     move-wide/from16 v18, v13
 
-    move-object/from16 v14, p3
+    move/from16 v14, p2
 
-    goto/16 :goto_4
+    goto/16 :goto_6
 
     :catch_0
     move-exception v0
 
     move-wide/from16 v18, v13
 
-    move-object/from16 v14, p3
+    move/from16 v14, p2
 
-    goto/16 :goto_3
+    goto/16 :goto_5
 
     :cond_1
     :try_start_2
@@ -4347,9 +4398,9 @@
 
     invoke-direct {v2, v8}, Lcom/android/internal/app/procstats/ProcessStats;-><init>(Z)V
     :try_end_2
-    .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_3
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_3
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+    .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_5
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_5
+    .catchall {:try_start_2 .. :try_end_2} :catchall_4
 
     move-object v3, v2
 
@@ -4384,98 +4435,140 @@
 
     invoke-virtual {v6, v15, v4, v5}, Lcom/android/internal/app/procstats/ProcessStats;->dumpAggregatedProtoForStatsd([Landroid/util/proto/ProtoOutputStream;J)V
 
-    array-length v4, v15
-
-    move v8, v14
+    const/4 v4, 0x0
 
     :goto_1
-    if-ge v8, v4, :cond_3
+    array-length v5, v15
+    :try_end_3
+    .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_4
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_4
+    .catchall {:try_start_3 .. :try_end_3} :catchall_3
 
-    aget-object v5, v15, v8
+    if-ge v4, v5, :cond_3
+
+    :try_start_4
+    aget-object v5, v15, v4
 
     invoke-virtual {v5}, Landroid/util/proto/ProtoOutputStream;->getBytes()[B
 
-    move-result-object v14
+    move-result-object v5
 
-    array-length v14, v14
+    array-length v8, v5
 
-    if-lez v14, :cond_2
+    if-lez v8, :cond_2
 
     invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
-    move-result-object v14
+    move-result-object v8
+    :try_end_4
+    .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_2
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    move/from16 v17, v4
+    move/from16 v14, p2
 
-    move/from16 v4, p2
+    :try_start_5
+    invoke-virtual {v8, v14}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
 
-    invoke-virtual {v14, v4}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+    move-result-object v8
 
-    move-result-object v14
+    invoke-virtual {v8, v5}, Landroid/util/StatsEvent$Builder;->writeByteArray([B)Landroid/util/StatsEvent$Builder;
 
-    invoke-virtual {v5}, Landroid/util/proto/ProtoOutputStream;->getBytes()[B
+    move-result-object v8
 
-    move-result-object v4
+    invoke-virtual {v8, v4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
 
-    invoke-virtual {v14, v4}, Landroid/util/StatsEvent$Builder;->writeByteArray([B)Landroid/util/StatsEvent$Builder;
+    move-result-object v8
 
-    move-result-object v4
+    invoke-virtual {v8}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
 
-    invoke-virtual {v4}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+    move-result-object v8
+    :try_end_5
+    .catch Landroid/os/RemoteException; {:try_start_5 .. :try_end_5} :catch_1
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_1
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    move-result-object v4
-    :try_end_3
-    .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_2
-    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    move-object/from16 v17, v5
 
-    move-object/from16 v14, p3
+    move-object/from16 v5, p3
 
-    :try_start_4
-    invoke-interface {v14, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :try_start_6
+    invoke-interface {v5, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
 
-    :cond_2
-    move-object/from16 v14, p3
+    :catchall_1
+    move-exception v0
 
-    move/from16 v17, v4
+    goto :goto_3
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_4
+
+    :cond_2
+    move/from16 v14, p2
+
+    move-object/from16 v17, v5
+
+    move-object/from16 v5, p3
 
     :goto_2
-    add-int/lit8 v8, v8, 0x1
-
-    move/from16 v4, v17
+    add-int/lit8 v4, v4, 0x1
 
     const/4 v14, 0x0
 
     goto :goto_1
 
+    :catchall_2
+    move-exception v0
+
+    move/from16 v14, p2
+
+    :goto_3
+    move-object/from16 v5, p3
+
+    goto/16 :goto_6
+
+    :catch_2
+    move-exception v0
+
+    move/from16 v14, p2
+
+    :goto_4
+    move-object/from16 v5, p3
+
+    goto :goto_5
+
     :cond_3
-    move-object/from16 v14, p3
+    move/from16 v14, p2
+
+    move-object/from16 v5, p3
 
     new-instance v4, Ljava/io/File;
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v8, v1, Lcom/android/server/stats/pull/StatsPullAtomService;->mBaseDir:Ljava/io/File;
+    iget-object v5, v1, Lcom/android/server/stats/pull/StatsPullAtomService;->mBaseDir:Ljava/io/File;
 
-    invoke-virtual {v8}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    invoke-virtual {v5}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v5
 
-    invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5, v12, v13}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v12, v13}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v5
 
@@ -4512,10 +4605,10 @@
     invoke-direct {v4, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v4}, Ljava/io/File;->createNewFile()Z
-    :try_end_4
-    .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_1
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
-    .catchall {:try_start_4 .. :try_end_4} :catchall_3
+    :try_end_6
+    .catch Landroid/os/RemoteException; {:try_start_6 .. :try_end_6} :catch_3
+    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_3
+    .catchall {:try_start_6 .. :try_end_6} :catchall_5
 
     nop
 
@@ -4527,50 +4620,50 @@
 
     return v0
 
-    :catch_1
-    move-exception v0
-
-    goto :goto_3
-
-    :catchall_1
-    move-exception v0
-
-    move-object/from16 v14, p3
-
-    goto :goto_4
-
-    :catch_2
-    move-exception v0
-
-    move-object/from16 v14, p3
-
-    goto :goto_3
-
-    :catchall_2
-    move-exception v0
-
-    move-wide/from16 v18, v13
-
-    move-object/from16 v14, p3
-
-    goto :goto_4
-
     :catch_3
     move-exception v0
 
+    goto :goto_5
+
+    :catchall_3
+    move-exception v0
+
+    move/from16 v14, p2
+
+    goto :goto_6
+
+    :catch_4
+    move-exception v0
+
+    move/from16 v14, p2
+
+    goto :goto_5
+
+    :catchall_4
+    move-exception v0
+
     move-wide/from16 v18, v13
 
-    move-object/from16 v14, p3
+    move/from16 v14, p2
 
-    :goto_3
-    :try_start_5
+    goto :goto_6
+
+    :catch_5
+    move-exception v0
+
+    move-wide/from16 v18, v13
+
+    move/from16 v14, p2
+
+    :goto_5
+    :try_start_7
     const-string v2, "StatsPullAtomService"
 
     const-string v3, "Getting procstats failed: "
 
     invoke-static {v2, v3, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_3
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_5
 
     nop
 
@@ -4580,10 +4673,10 @@
 
     return v2
 
-    :catchall_3
+    :catchall_5
     move-exception v0
 
-    :goto_4
+    :goto_6
     invoke-static/range {v18 .. v19}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     throw v0

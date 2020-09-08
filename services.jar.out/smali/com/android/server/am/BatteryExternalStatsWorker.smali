@@ -13,6 +13,8 @@
 
 .field private static final MAX_WIFI_STATS_SAMPLE_ERROR_MILLIS:J = 0x2eeL
 
+.field private static final RUN_AGING:Z
+
 .field private static final TAG:Ljava/lang/String; = "BatteryExternalStatsWorker"
 
 
@@ -78,6 +80,22 @@
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    const-string/jumbo v0, "sys.debug.watchdog"
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    sput-boolean v0, Lcom/android/server/am/BatteryExternalStatsWorker;->RUN_AGING:Z
+
+    return-void
+.end method
+
 .method constructor <init>(Landroid/content/Context;Lcom/android/internal/os/BatteryStatsImpl;)V
     .locals 15
 
@@ -1023,13 +1041,20 @@
 
     const/4 v4, 0x0
 
+    sget-boolean v5, Lcom/android/server/am/BatteryExternalStatsWorker;->RUN_AGING:Z
+
+    if-eqz v5, :cond_0
+
+    return-void
+
+    :cond_0
     and-int/lit8 v5, p2, 0x2
 
-    if-eqz v5, :cond_2
+    if-eqz v5, :cond_3
 
     iget-object v5, v1, Lcom/android/server/am/BatteryExternalStatsWorker;->mWifiManager:Landroid/net/wifi/WifiManager;
 
-    if-nez v5, :cond_0
+    if-nez v5, :cond_1
 
     const-string/jumbo v5, "wifi"
 
@@ -1037,7 +1062,7 @@
 
     move-result-object v5
 
-    if-eqz v5, :cond_0
+    if-eqz v5, :cond_1
 
     iget-object v5, v1, Lcom/android/server/am/BatteryExternalStatsWorker;->mContext:Landroid/content/Context;
 
@@ -1051,16 +1076,16 @@
 
     iput-object v5, v1, Lcom/android/server/am/BatteryExternalStatsWorker;->mWifiManager:Landroid/net/wifi/WifiManager;
 
-    :cond_0
+    :cond_1
     iget-object v5, v1, Lcom/android/server/am/BatteryExternalStatsWorker;->mWifiManager:Landroid/net/wifi/WifiManager;
 
-    if-eqz v5, :cond_1
+    if-eqz v5, :cond_2
 
     invoke-virtual {v5}, Landroid/net/wifi/WifiManager;->isEnhancedPowerReportingSupported()Z
 
     move-result v5
 
-    if-eqz v5, :cond_1
+    if-eqz v5, :cond_2
 
     new-instance v5, Landroid/os/SynchronousResultReceiver;
 
@@ -1084,7 +1109,7 @@
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     move-object v5, v0
 
     :goto_0
@@ -1112,19 +1137,19 @@
 
     throw v0
 
-    :cond_2
+    :cond_3
     move-object v5, v0
 
     :goto_1
     and-int/lit8 v0, p2, 0x8
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
     move-result-object v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     new-instance v6, Landroid/os/SynchronousResultReceiver;
 
@@ -1136,14 +1161,14 @@
 
     invoke-virtual {v0, v2}, Landroid/bluetooth/BluetoothAdapter;->requestControllerActivityEnergyInfo(Landroid/os/ResultReceiver;)V
 
-    :cond_3
+    :cond_4
     and-int/lit8 v0, p2, 0x4
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     iget-object v0, v1, Lcom/android/server/am/BatteryExternalStatsWorker;->mTelephony:Landroid/telephony/TelephonyManager;
 
-    if-nez v0, :cond_4
+    if-nez v0, :cond_5
 
     iget-object v0, v1, Lcom/android/server/am/BatteryExternalStatsWorker;->mContext:Landroid/content/Context;
 
@@ -1157,10 +1182,10 @@
 
     iput-object v0, v1, Lcom/android/server/am/BatteryExternalStatsWorker;->mTelephony:Landroid/telephony/TelephonyManager;
 
-    :cond_4
+    :cond_5
     iget-object v0, v1, Lcom/android/server/am/BatteryExternalStatsWorker;->mTelephony:Landroid/telephony/TelephonyManager;
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     new-instance v0, Landroid/os/SynchronousResultReceiver;
 
@@ -1174,8 +1199,8 @@
 
     invoke-virtual {v0, v3}, Landroid/telephony/TelephonyManager;->requestModemActivityInfo(Landroid/os/ResultReceiver;)V
 
-    :cond_5
-    if-nez v4, :cond_6
+    :cond_6
+    if-nez v4, :cond_7
 
     iget-object v6, v1, Lcom/android/server/am/BatteryExternalStatsWorker;->mStats:Lcom/android/internal/os/BatteryStatsImpl;
 
@@ -1199,7 +1224,7 @@
 
     throw v0
 
-    :cond_6
+    :cond_7
     :goto_2
     invoke-static {v5}, Lcom/android/server/am/BatteryExternalStatsWorker;->awaitControllerInfo(Landroid/os/SynchronousResultReceiver;)Landroid/os/Parcelable;
 
@@ -1250,9 +1275,9 @@
 
     and-int/lit8 v0, p2, 0x1
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_9
 
-    if-eqz p5, :cond_7
+    if-eqz p5, :cond_8
 
     iget-object v0, v1, Lcom/android/server/am/BatteryExternalStatsWorker;->mStats:Lcom/android/internal/os/BatteryStatsImpl;
 
@@ -1284,7 +1309,7 @@
 
     goto/16 :goto_8
 
-    :cond_7
+    :cond_8
     move/from16 v10, p3
 
     move/from16 v11, p4
@@ -1297,7 +1322,7 @@
 
     goto :goto_4
 
-    :cond_8
+    :cond_9
     move/from16 v10, p3
 
     move/from16 v11, p4
@@ -1305,7 +1330,7 @@
     :goto_4
     and-int/lit8 v0, p2, 0x1f
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_a
 
     iget-object v0, v1, Lcom/android/server/am/BatteryExternalStatsWorker;->mStats:Lcom/android/internal/os/BatteryStatsImpl;
 
@@ -1315,23 +1340,23 @@
 
     invoke-virtual {v0}, Lcom/android/internal/os/BatteryStatsImpl;->updateKernelMemoryBandwidthLocked()V
 
-    :cond_9
+    :cond_a
     and-int/lit8 v0, p2, 0x10
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_b
 
     iget-object v0, v1, Lcom/android/server/am/BatteryExternalStatsWorker;->mStats:Lcom/android/internal/os/BatteryStatsImpl;
 
     invoke-virtual {v0}, Lcom/android/internal/os/BatteryStatsImpl;->updateRpmStatsLocked()V
 
-    :cond_a
-    if-eqz v7, :cond_c
+    :cond_b
+    if-eqz v7, :cond_d
 
     invoke-virtual {v7}, Landroid/bluetooth/BluetoothActivityEnergyInfo;->isValid()Z
 
     move-result v0
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_c
 
     iget-object v0, v1, Lcom/android/server/am/BatteryExternalStatsWorker;->mStats:Lcom/android/internal/os/BatteryStatsImpl;
 
@@ -1339,7 +1364,7 @@
 
     goto :goto_5
 
-    :cond_b
+    :cond_c
     const-string v0, "BatteryExternalStatsWorker"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -1358,19 +1383,19 @@
 
     invoke-static {v0, v12}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_c
+    :cond_d
     :goto_5
     monitor-exit v9
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_4
 
-    if-eqz v6, :cond_e
+    if-eqz v6, :cond_f
 
     invoke-virtual {v6}, Landroid/os/connectivity/WifiActivityEnergyInfo;->isValid()Z
 
     move-result v0
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_e
 
     iget-object v0, v1, Lcom/android/server/am/BatteryExternalStatsWorker;->mStats:Lcom/android/internal/os/BatteryStatsImpl;
 
@@ -1382,7 +1407,7 @@
 
     goto :goto_6
 
-    :cond_d
+    :cond_e
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1401,15 +1426,15 @@
 
     invoke-static {v9, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_e
+    :cond_f
     :goto_6
-    if-eqz v8, :cond_10
+    if-eqz v8, :cond_11
 
     invoke-virtual {v8}, Landroid/telephony/ModemActivityInfo;->isValid()Z
 
     move-result v0
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_10
 
     iget-object v0, v1, Lcom/android/server/am/BatteryExternalStatsWorker;->mStats:Lcom/android/internal/os/BatteryStatsImpl;
 
@@ -1417,7 +1442,7 @@
 
     goto :goto_7
 
-    :cond_f
+    :cond_10
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1436,7 +1461,7 @@
 
     invoke-static {v9, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_10
+    :cond_11
     :goto_7
     return-void
 

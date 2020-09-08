@@ -100,8 +100,6 @@
 
 .field static final WAKEUP_STATS:Z
 
-.field static final WARN_SYSTEM_ON_ALARM_LIMIT:Z = true
-
 .field static final WORKING_INDEX:I = 0x1
 
 .field static localLOGV:Z
@@ -3537,7 +3535,7 @@
     :cond_1
     new-array v0, v0, [I
 
-    const/16 v4, 0x4f
+    const/16 v4, 0x4d
 
     const/4 v5, 0x0
 
@@ -3688,7 +3686,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x4f
+    const/16 v2, 0x4d
 
     const/4 v3, 0x0
 
@@ -8271,7 +8269,7 @@
 
     const/4 v3, 0x0
 
-    const/16 v4, 0x4f
+    const/16 v4, 0x4d
 
     aput v4, v2, v3
 
@@ -8532,7 +8530,7 @@
 
     const/4 v1, 0x0
 
-    const/16 v2, 0x4f
+    const/16 v2, 0x4d
 
     aput v2, v0, v1
 
@@ -8723,7 +8721,7 @@
 
     new-array v2, v2, [I
 
-    const/16 v3, 0x4f
+    const/16 v3, 0x4d
 
     aput v3, v2, v5
 
@@ -8821,7 +8819,7 @@
 
     const/4 v2, 0x0
 
-    const/16 v3, 0x4f
+    const/16 v3, 0x4d
 
     aput v3, v1, v2
 
@@ -11293,7 +11291,7 @@
     :try_start_1
     sget-boolean v1, Lcom/android/server/AlarmManagerService;->DEBUG_BATCH:Z
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_5
+    .catchall {:try_start_1 .. :try_end_1} :catchall_4
 
     if-eqz v1, :cond_b
 
@@ -11344,7 +11342,7 @@
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     move-wide/from16 v13, v28
 
@@ -11367,28 +11365,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     goto :goto_6
 
     :catchall_0
-    move-exception v0
-
-    move-object/from16 v26, v3
-
-    move-wide/from16 v27, v5
-
-    move-wide/from16 v35, v7
-
-    move-wide/from16 v37, v9
-
-    move-wide/from16 v39, v11
-
-    move-wide/from16 v41, v13
-
-    goto/16 :goto_8
-
-    :catchall_1
     move-exception v0
 
     move-object/from16 v26, v3
@@ -11422,7 +11403,7 @@
 
     iget v1, v1, Lcom/android/server/AlarmManagerService$Constants;->MAX_ALARMS_PER_UID:I
     :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_3
 
     if-lt v0, v1, :cond_d
 
@@ -11454,14 +11435,21 @@
     const-string v1, ", callingPackage: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
     move-object/from16 v2, p15
 
+    :try_start_6
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
+
+    const-string v1, "AlarmManager"
+
+    invoke-static {v1, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-static/range {p14 .. p14}, Landroid/os/UserHandle;->isCore(I)Z
 
@@ -11469,97 +11457,28 @@
 
     if-eqz v1, :cond_c
 
-    new-instance v1, Ljava/io/StringWriter;
-
-    invoke-direct {v1}, Ljava/io/StringWriter;-><init>()V
-
-    new-instance v2, Ljava/io/PrintWriter;
-
-    invoke-direct {v2, v1}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
-
-    invoke-virtual {v2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_3
-
-    move-wide/from16 v18, v5
-
-    :try_start_6
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v6, "Next 20 alarms for "
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v6, ":"
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v2, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    const/16 v5, 0x14
-
-    invoke-direct {v15, v2, v4, v5}, Lcom/android/server/AlarmManagerService;->dumpUpcomingNAlarmsForUid(Ljava/io/PrintWriter;II)V
-
-    invoke-virtual {v2}, Ljava/io/PrintWriter;->flush()V
-
-    const-string v5, "AlarmManager"
-
-    invoke-virtual {v1}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-static {v5, v6}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
-
-    nop
-
-    goto :goto_7
-
-    :cond_c
-    move-wide/from16 v18, v5
-
-    const-string v1, "AlarmManager"
-
-    invoke-static {v1, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    :goto_7
     invoke-direct {v15, v4}, Lcom/android/server/AlarmManagerService;->logAllAlarmsForUidLocked(I)V
 
+    :cond_c
     new-instance v1, Ljava/lang/IllegalStateException;
 
     invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v1
     :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_2
+    .catchall {:try_start_6 .. :try_end_6} :catchall_1
+
+    :catchall_1
+    move-exception v0
+
+    goto :goto_7
 
     :catchall_2
     move-exception v0
 
-    move-object/from16 v26, v3
+    move-object/from16 v2, p15
 
-    move-wide/from16 v35, v7
-
-    move-wide/from16 v37, v9
-
-    move-wide/from16 v39, v11
-
-    move-wide/from16 v41, v13
-
-    move-wide/from16 v27, v18
-
-    goto/16 :goto_8
-
-    :catchall_3
-    move-exception v0
-
+    :goto_7
     move-object/from16 v26, v3
 
     move-wide/from16 v27, v5
@@ -11575,7 +11494,7 @@
     goto :goto_8
 
     :cond_d
-    move-wide/from16 v18, v5
+    move-object/from16 v2, p15
 
     const/16 v17, 0x1
 
@@ -11587,7 +11506,7 @@
 
     move-wide v3, v11
 
-    move-wide/from16 v27, v18
+    move-wide/from16 v27, v5
 
     move-wide v5, v9
 
@@ -11628,7 +11547,7 @@
 
     return-void
 
-    :catchall_4
+    :catchall_3
     move-exception v0
 
     move-object/from16 v26, v3
@@ -11645,7 +11564,7 @@
 
     goto :goto_8
 
-    :catchall_5
+    :catchall_4
     move-exception v0
 
     move-object/from16 v26, v3
@@ -11663,11 +11582,11 @@
     :goto_8
     monitor-exit v26
     :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_6
+    .catchall {:try_start_7 .. :try_end_7} :catchall_5
 
     throw v0
 
-    :catchall_6
+    :catchall_5
     move-exception v0
 
     goto :goto_8
@@ -12204,7 +12123,7 @@
     :cond_5
     new-array v1, v13, [I
 
-    const/16 v2, 0x4f
+    const/16 v2, 0x4d
 
     aput v2, v1, v10
 

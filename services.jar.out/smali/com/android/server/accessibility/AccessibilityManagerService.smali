@@ -267,6 +267,12 @@
 
     iput v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService;->mCurrentUserId:I
 
+    new-instance v0, Landroid/graphics/Point;
+
+    invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
+
+    iput-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService;->mTempPoint:Landroid/graphics/Point;
+
     iput-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService;->mContext:Landroid/content/Context;
 
     const-string/jumbo v0, "power"
@@ -438,6 +444,12 @@
     iput-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService;->mUiAutomationManager:Lcom/android/server/accessibility/UiAutomationManager;
 
     iput v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService;->mCurrentUserId:I
+
+    new-instance v0, Landroid/graphics/Point;
+
+    invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
+
+    iput-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService;->mTempPoint:Landroid/graphics/Point;
 
     iput-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService;->mContext:Landroid/content/Context;
 

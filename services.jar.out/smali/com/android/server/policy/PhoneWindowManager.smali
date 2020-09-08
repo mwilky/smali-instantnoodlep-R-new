@@ -718,7 +718,7 @@
 
     new-array v2, v1, [I
 
-    const/16 v3, 0x3e
+    const/16 v3, 0x3c
 
     aput v3, v2, v0
 
@@ -5142,7 +5142,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e006c
+    const v1, 0x10e0072
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -5162,7 +5162,7 @@
     iput v2, p0, Lcom/android/server/policy/PhoneWindowManager;->mLongPressOnHomeBehavior:I
 
     :cond_1
-    const v1, 0x10e0053
+    const v1, 0x10e0059
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -5693,9 +5693,7 @@
     return v1
 
     :cond_1
-    iget-object v3, p0, Lcom/android/server/policy/PhoneWindowManager;->mDefaultDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
-
-    invoke-virtual {v3}, Lcom/android/server/wm/DisplayPolicy;->isKeyguardShowing()Z
+    invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->isKeyguardShowingAndNotOccluded()Z
 
     move-result v3
 
@@ -7685,21 +7683,75 @@
 .method public canBeHiddenByKeyguardLw(Lcom/android/server/policy/WindowManagerPolicy$WindowState;)Z
     .locals 3
 
-    sget-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mIsCustomFP:Z
+    invoke-interface {p1}, Lcom/android/server/policy/WindowManagerPolicy$WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/view/WindowManager$LayoutParams;->type:I
 
     const/4 v1, 0x0
 
+    const/16 v2, 0x7f6
+
+    if-ne v0, v2, :cond_1
+
+    invoke-interface {p1}, Lcom/android/server/policy/WindowManagerPolicy$WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
+
+    move-result-object v0
+
+    iget-object v0, v0, Landroid/view/WindowManager$LayoutParams;->packageName:Ljava/lang/String;
+
+    const-string v2, "android"
+
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p1}, Lcom/android/server/policy/WindowManagerPolicy$WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/WindowManager$LayoutParams;->getTitle()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    const-string v2, "ScreenDecorOverlayExpand"
+
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    sget-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->DEBUG_ONEPLUS:Z
+
     if-eqz v0, :cond_0
+
+    const-string v0, "WindowManager"
+
+    const-string v2, "Skip hide expand ScreenDecor by keyguard"
+
+    invoke-static {v0, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    return v1
+
+    :cond_1
+    sget-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mIsCustomFP:Z
+
+    if-eqz v0, :cond_2
 
     iget-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mPreShowSurface:Z
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_2
 
     invoke-interface {p1}, Lcom/android/server/policy/WindowManagerPolicy$WindowState;->getAppToken()Landroid/view/IApplicationToken;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_2
 
     iget v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mCurrentUserId:I
 
@@ -7707,7 +7759,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_2
 
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mDefaultDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
 
@@ -7719,7 +7771,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_2
 
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mDefaultDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
 
@@ -7727,30 +7779,30 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_2
 
     return v1
 
-    :cond_0
+    :cond_2
     sget-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mIsCustomFP:Z
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_3
 
     invoke-interface {p1}, Lcom/android/server/policy/WindowManagerPolicy$WindowState;->getAppToken()Landroid/view/IApplicationToken;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_3
 
     invoke-interface {p1}, Lcom/android/server/policy/WindowManagerPolicy$WindowState;->isActivityTypeHome()Z
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_3
 
     return v1
 
-    :cond_1
+    :cond_3
     invoke-interface {p1}, Lcom/android/server/policy/WindowManagerPolicy$WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v0
@@ -7759,19 +7811,19 @@
 
     const/16 v2, 0x7d0
 
-    if-eq v0, v2, :cond_3
+    if-eq v0, v2, :cond_5
 
     const/16 v2, 0x7dd
 
-    if-eq v0, v2, :cond_3
+    if-eq v0, v2, :cond_5
 
     const/16 v2, 0x7e3
 
-    if-eq v0, v2, :cond_3
+    if-eq v0, v2, :cond_5
 
     const/16 v2, 0x7f8
 
-    if-eq v0, v2, :cond_3
+    if-eq v0, v2, :cond_5
 
     invoke-virtual {p0, p1}, Lcom/android/server/policy/PhoneWindowManager;->getWindowLayerLw(Lcom/android/server/policy/WindowManagerPolicy$WindowState;)I
 
@@ -7781,14 +7833,14 @@
 
     move-result v2
 
-    if-ge v0, v2, :cond_2
+    if-ge v0, v2, :cond_4
 
     const/4 v1, 0x1
 
-    :cond_2
+    :cond_4
     return v1
 
-    :cond_3
+    :cond_5
     return v1
 .end method
 
@@ -10922,7 +10974,7 @@
 
     move-result-object v1
 
-    const v3, 0x10e0066
+    const v3, 0x10e006c
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -10936,7 +10988,7 @@
 
     move-result-object v1
 
-    const v3, 0x10e0067
+    const v3, 0x10e006d
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -11106,7 +11158,7 @@
 
     move-result-object v1
 
-    const v3, 0x10e006b
+    const v3, 0x10e0071
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -11120,7 +11172,7 @@
 
     move-result-object v1
 
-    const v3, 0x10e00b9
+    const v3, 0x10e00bf
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -11134,7 +11186,7 @@
 
     move-result-object v1
 
-    const v3, 0x10e006d
+    const v3, 0x10e0073
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -11148,7 +11200,7 @@
 
     move-result-object v1
 
-    const v3, 0x10e00c9
+    const v3, 0x10e00cf
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -11162,7 +11214,7 @@
 
     move-result-object v1
 
-    const v3, 0x10e0052
+    const v3, 0x10e0058
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -11176,7 +11228,7 @@
 
     move-result-object v1
 
-    const v3, 0x10e00c5
+    const v3, 0x10e00cb
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -11190,7 +11242,7 @@
 
     move-result-object v1
 
-    const v3, 0x10e00ba
+    const v3, 0x10e00c0
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -11204,7 +11256,7 @@
 
     move-result-object v1
 
-    const v3, 0x10e00ca
+    const v3, 0x10e00d0
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -11841,7 +11893,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v14, "interceptKeyTi keyCode="
+    const-string/jumbo v14, "interceptKeyTi keyCode="
 
     invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -13576,7 +13628,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "interceptKeyTq keycode="
+    const-string/jumbo v3, "interceptKeyTq keycode="
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -14299,7 +14351,7 @@
 
     if-eqz v0, :cond_2d
 
-    const-string v0, "interceptKeyBeforeQueueing: VOLUME key-down while ringing: Silence ringer!"
+    const-string/jumbo v0, "interceptKeyBeforeQueueing: VOLUME key-down while ringing: Silence ringer!"
 
     invoke-static {v6, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -14612,7 +14664,7 @@
 
     if-eqz v2, :cond_3f
 
-    const-string v2, "interceptKeyBeforeQueueing: CALL key-down while ringing: Answer the call!"
+    const-string/jumbo v2, "interceptKeyBeforeQueueing: CALL key-down while ringing: Answer the call!"
 
     invoke-static {v6, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -14802,6 +14854,8 @@
     :cond_4a
     return v0
 
+    nop
+
     :pswitch_data_0
     .packed-switch 0x18
         :pswitch_5
@@ -14926,6 +14980,43 @@
 
     :cond_0
     return v2
+.end method
+
+.method public isFODAndKeyguard()Z
+    .locals 2
+
+    sget-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mIsCustomFP:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Lcom/oneplus/systemui/OpSystemUIInjector;->isFingerprintEnabled()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->isKeyguardShowingAndNotOccluded()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mDefaultDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
+
+    invoke-virtual {v0}, Lcom/android/server/wm/DisplayPolicy;->getFocusedAppOrientation()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_0
+
+    return v1
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
 .method public isKeyguardDisabledAndNotShowing()Z
@@ -17420,7 +17511,7 @@
 
     move-result-object v8
 
-    const v9, 0x10e006d
+    const v9, 0x10e0073
 
     invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -17440,7 +17531,7 @@
 
     move-result-object v8
 
-    const v9, 0x10e00c9
+    const v9, 0x10e00cf
 
     invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getInteger(I)I
 

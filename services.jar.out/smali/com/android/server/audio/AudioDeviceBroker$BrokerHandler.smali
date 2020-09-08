@@ -202,7 +202,7 @@
     :pswitch_3
     iget-object v0, p0, Lcom/android/server/audio/AudioDeviceBroker$BrokerHandler;->this$0:Lcom/android/server/audio/AudioDeviceBroker;
 
-    invoke-static {v0, v2}, Lcom/android/server/audio/AudioDeviceBroker;->access$1100(Lcom/android/server/audio/AudioDeviceBroker;I)V
+    invoke-static {v0, v2}, Lcom/android/server/audio/AudioDeviceBroker;->access$1000(Lcom/android/server/audio/AudioDeviceBroker;I)V
 
     goto/16 :goto_1
 
@@ -220,7 +220,7 @@
 
     iget-object v3, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    invoke-static {v1, v3}, Lcom/android/server/audio/AudioDeviceBroker;->access$1000(Lcom/android/server/audio/AudioDeviceBroker;Ljava/lang/Object;)V
+    invoke-static {v1, v3}, Lcom/android/server/audio/AudioDeviceBroker;->access$900(Lcom/android/server/audio/AudioDeviceBroker;Ljava/lang/Object;)V
 
     monitor-exit v0
 
@@ -966,12 +966,6 @@
 
     iget-object v3, p0, Lcom/android/server/audio/AudioDeviceBroker$BrokerHandler;->this$0:Lcom/android/server/audio/AudioDeviceBroker;
 
-    const-string/jumbo v4, "setNewModeOwner"
-
-    invoke-static {v3, v4}, Lcom/android/server/audio/AudioDeviceBroker;->access$900(Lcom/android/server/audio/AudioDeviceBroker;Ljava/lang/String;)V
-
-    iget-object v3, p0, Lcom/android/server/audio/AudioDeviceBroker$BrokerHandler;->this$0:Lcom/android/server/audio/AudioDeviceBroker;
-
     invoke-static {v3}, Lcom/android/server/audio/AudioDeviceBroker;->access$800(Lcom/android/server/audio/AudioDeviceBroker;)I
 
     move-result v3
@@ -1126,7 +1120,7 @@
     :pswitch_18
     new-array v0, v1, [I
 
-    const/16 v1, 0x94
+    const/16 v1, 0x8d
 
     aput v1, v0, v2
 
@@ -1543,7 +1537,7 @@
     throw v1
 
     :goto_1
-    invoke-static {}, Lcom/android/server/audio/AudioDeviceBroker;->access$1200()Ljava/util/Set;
+    invoke-static {}, Lcom/android/server/audio/AudioDeviceBroker;->access$1100()Ljava/util/Set;
 
     move-result-object v0
 
@@ -1565,12 +1559,12 @@
 
     const/16 v3, 0x64
 
-    invoke-static {v0, v1, v2, v3}, Lcom/android/server/audio/AudioDeviceBroker;->access$1300(Lcom/android/server/audio/AudioDeviceBroker;III)V
+    invoke-static {v0, v1, v2, v3}, Lcom/android/server/audio/AudioDeviceBroker;->access$1200(Lcom/android/server/audio/AudioDeviceBroker;III)V
 
     :cond_3
     iget v0, p1, Landroid/os/Message;->what:I
 
-    invoke-static {v0}, Lcom/android/server/audio/AudioDeviceBroker;->access$1400(I)Z
+    invoke-static {v0}, Lcom/android/server/audio/AudioDeviceBroker;->access$1300(I)Z
 
     move-result v0
 
@@ -1579,7 +1573,7 @@
     :try_start_30
     iget-object v0, p0, Lcom/android/server/audio/AudioDeviceBroker$BrokerHandler;->this$0:Lcom/android/server/audio/AudioDeviceBroker;
 
-    invoke-static {v0}, Lcom/android/server/audio/AudioDeviceBroker;->access$1500(Lcom/android/server/audio/AudioDeviceBroker;)Landroid/os/PowerManager$WakeLock;
+    invoke-static {v0}, Lcom/android/server/audio/AudioDeviceBroker;->access$1400(Lcom/android/server/audio/AudioDeviceBroker;)Landroid/os/PowerManager$WakeLock;
 
     move-result-object v0
 

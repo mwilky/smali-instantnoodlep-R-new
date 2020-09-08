@@ -20,6 +20,12 @@
 
 .field private static final TAG:Ljava/lang/String; = "DisplayOLC"
 
+.field static mEnableDarkThemeLimit:Z
+
+.field private static mLimitPercent:D
+
+.field private static mMinDarkThemeLevel:F
+
 .field private static mOpMinBrightnessLevel:F
 
 
@@ -27,6 +33,8 @@
 .field private mBrightnessMapper:Lcom/android/server/display/BrightnessMappingStrategy;
 
 .field private final mContext:Landroid/content/Context;
+
+.field private mMinDarkThemeNit:F
 
 .field private mOnlineConfigHandler:Landroid/os/Handler;
 
@@ -39,11 +47,21 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
+
+    const-wide v0, 0x3fe999999999999aL    # 0.8
+
+    sput-wide v0, Lcom/android/server/display/DisplayOLC;->mLimitPercent:D
 
     const/4 v0, 0x0
 
     sput v0, Lcom/android/server/display/DisplayOLC;->mOpMinBrightnessLevel:F
+
+    sput v0, Lcom/android/server/display/DisplayOLC;->mMinDarkThemeLevel:F
+
+    const/4 v0, 0x0
+
+    sput-boolean v0, Lcom/android/server/display/DisplayOLC;->mEnableDarkThemeLimit:Z
 
     const/4 v0, 0x3
 
@@ -80,6 +98,10 @@
 
     iput v0, p0, Lcom/android/server/display/DisplayOLC;->mOpMinBrightnessNit:F
 
+    const/high16 v1, 0x40800000    # 4.0f
+
+    iput v1, p0, Lcom/android/server/display/DisplayOLC;->mMinDarkThemeNit:F
+
     iput-object p1, p0, Lcom/android/server/display/DisplayOLC;->mContext:Landroid/content/Context;
 
     iput-object p2, p0, Lcom/android/server/display/DisplayOLC;->mBrightnessMapper:Lcom/android/server/display/BrightnessMappingStrategy;
@@ -97,6 +119,16 @@
     move-result v1
 
     sput v1, Lcom/android/server/display/DisplayOLC;->mOpMinBrightnessLevel:F
+
+    iget-object v1, p0, Lcom/android/server/display/DisplayOLC;->mBrightnessMapper:Lcom/android/server/display/BrightnessMappingStrategy;
+
+    iget v2, p0, Lcom/android/server/display/DisplayOLC;->mMinDarkThemeNit:F
+
+    invoke-virtual {v1, v2}, Lcom/android/server/display/BrightnessMappingStrategy;->convertNitsToBrightness(F)F
+
+    move-result v1
+
+    sput v1, Lcom/android/server/display/DisplayOLC;->mMinDarkThemeLevel:F
 
     :cond_0
     sget v1, Lcom/android/server/display/DisplayOLC;->mOpMinBrightnessLevel:F
@@ -122,11 +154,27 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    const-string v1, "  "
+    const-string v1, ", mOpMinBrightnessLevel:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     sget v1, Lcom/android/server/display/DisplayOLC;->mOpMinBrightnessLevel:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mMinDarkThemeNit:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lcom/android/server/display/DisplayOLC;->mMinDarkThemeNit:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mMinDarkThemeLevel:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget v1, Lcom/android/server/display/DisplayOLC;->mMinDarkThemeLevel:F
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
@@ -157,8 +205,16 @@
     return-void
 .end method
 
+.method public static enableDarkThemeLimit(Z)V
+    .locals 0
+
+    sput-boolean p0, Lcom/android/server/display/DisplayOLC;->mEnableDarkThemeLimit:Z
+
+    return-void
+.end method
+
 .method private handleConfigChangeEvent(Lorg/json/JSONObject;Ljava/lang/String;)V
-    .locals 10
+    .locals 11
 
     const-string v0, "DisplayOLC"
 
@@ -172,35 +228,40 @@
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    const v3, -0x3ef647d8
+    const/4 v3, 0x0
 
-    const/4 v4, 0x0
+    const-string v4, "HBMThresholdDelta"
 
-    const-string v5, "HBMThresholdDelta"
+    const-string v5, "UseCurveGenAlgo"
 
-    const-string v6, "UseCurveGenAlgo"
+    const-string v6, "MiniBrightness"
 
-    const-string v7, "MiniBrightness"
+    const-string v7, "MiniPercent"
 
     const/4 v8, 0x2
 
-    const/4 v9, 0x1
+    const/4 v9, 0x3
 
-    if-eq v2, v3, :cond_3
+    const/4 v10, 0x1
 
-    const v3, -0xf572f25
-
-    if-eq v2, v3, :cond_2
-
-    const v3, 0xed85780
-
-    if-eq v2, v3, :cond_1
+    sparse-switch v2, :sswitch_data_0
 
     :cond_0
     goto :goto_0
 
-    :cond_1
+    :sswitch_0
     :try_start_1
+    invoke-virtual {p2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    move v1, v8
+
+    goto :goto_0
+
+    :sswitch_1
     invoke-virtual {p2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -211,37 +272,39 @@
 
     goto :goto_0
 
-    :cond_2
+    :sswitch_2
     invoke-virtual {p2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    move v1, v8
+    move v1, v3
 
     goto :goto_0
 
-    :cond_3
+    :sswitch_3
     invoke-virtual {p2, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    move v1, v4
+    move v1, v10
 
     :goto_0
-    if-eqz v1, :cond_8
+    if-eqz v1, :cond_6
 
-    if-eq v1, v9, :cond_6
+    if-eq v1, v10, :cond_5
 
-    if-eq v1, v8, :cond_4
+    if-eq v1, v8, :cond_3
+
+    if-eq v1, v9, :cond_1
 
     goto/16 :goto_3
 
-    :cond_4
-    invoke-virtual {p1, v6}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
+    :cond_1
+    invoke-virtual {p1, v5}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -249,9 +312,9 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "UseCurveGenAlgo: "
+    const-string v4, "UseCurveGenAlgo: "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -267,28 +330,26 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "use_curve_gen_algo"
+    const-string/jumbo v4, "use_curve_gen_algo"
 
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_2
 
-    move v4, v9
+    move v3, v10
 
-    :cond_5
-    invoke-static {v2, v3, v4}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+    :cond_2
+    invoke-static {v2, v4, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     goto/16 :goto_3
 
-    :cond_6
-    invoke-virtual {p1, v5}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+    :cond_3
+    invoke-virtual {p1, v4}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v1
 
     const/4 v2, 0x0
 
     :goto_1
-    const/4 v3, 0x3
-
-    if-ge v2, v3, :cond_7
+    if-ge v2, v9, :cond_4
 
     sget-object v3, Lcom/android/server/display/DisplayOLC;->HBM_THRESHOLD_DELTA:[I
 
@@ -336,11 +397,44 @@
 
     goto :goto_1
 
-    :cond_7
+    :cond_4
+    goto/16 :goto_3
+
+    :cond_5
+    invoke-virtual {p1, v7}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v1
+
+    float-to-double v1, v1
+
+    sput-wide v1, Lcom/android/server/display/DisplayOLC;->mLimitPercent:D
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v2, "mLimitPercent:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-wide v2, Lcom/android/server/display/DisplayOLC;->mLimitPercent:D
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
     goto :goto_3
 
-    :cond_8
-    invoke-virtual {p1, v7}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    :cond_6
+    invoke-virtual {p1, v6}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -362,11 +456,11 @@
 
     cmpl-float v3, v1, v2
 
-    if-ltz v3, :cond_9
+    if-ltz v3, :cond_7
 
     goto :goto_2
 
-    :cond_9
+    :cond_7
     move v1, v2
 
     :goto_2
@@ -456,6 +550,14 @@
 
     :goto_4
     return-void
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x7992c032 -> :sswitch_3
+        -0x3ef647d8 -> :sswitch_2
+        -0xf572f25 -> :sswitch_1
+        0xed85780 -> :sswitch_0
+    .end sparse-switch
 .end method
 
 .method private initOnlineConfig()Z
@@ -523,35 +625,28 @@
     return v0
 .end method
 
-.method public static limitTarget(F)F
-    .locals 2
+.method public static limitPercent(D)D
+    .locals 3
 
-    const/4 v0, 0x0
+    sget-wide v0, Lcom/android/server/display/DisplayOLC;->mLimitPercent:D
 
-    cmpl-float v0, p0, v0
+    cmpg-double v0, p0, v0
 
-    if-nez v0, :cond_0
+    if-gez v0, :cond_0
 
-    return p0
-
-    :cond_0
-    sget v0, Lcom/android/server/display/DisplayOLC;->mOpMinBrightnessLevel:F
-
-    cmpl-float v0, v0, p0
-
-    if-lez v0, :cond_1
+    sget-wide p0, Lcom/android/server/display/DisplayOLC;->mLimitPercent:D
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "TOBE:"
+    const-string/jumbo v1, "limitPercent "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget v1, Lcom/android/server/display/DisplayOLC;->mOpMinBrightnessLevel:F
+    sget-wide v1, Lcom/android/server/display/DisplayOLC;->mLimitPercent:D
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -559,13 +654,67 @@
 
     const-string v1, "DisplayOLC"
 
-    invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    return-wide p0
+.end method
+
+.method public static limitTarget(F)F
+    .locals 3
 
     sget v0, Lcom/android/server/display/DisplayOLC;->mOpMinBrightnessLevel:F
 
-    return v0
+    sget-boolean v1, Lcom/android/server/display/DisplayOLC;->mEnableDarkThemeLimit:Z
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    sget v1, Lcom/android/server/display/DisplayOLC;->mMinDarkThemeLevel:F
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v2
+
+    :goto_0
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(FF)F
+
+    move-result v0
+
+    cmpl-float v1, p0, v2
+
+    if-nez v1, :cond_1
+
+    return p0
 
     :cond_1
+    cmpl-float v1, v0, p0
+
+    if-lez v1, :cond_2
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "TOBE:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "DisplayOLC"
+
+    invoke-static {v2, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v0
+
+    :cond_2
     return p0
 .end method
 

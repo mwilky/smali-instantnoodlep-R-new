@@ -62,6 +62,12 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 5
 
+    const-string v0, "KeyguardServiceDelegate"
+
+    const-string v1, "*** Keyguard connected (yay!)"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$1;->this$0:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
 
     new-instance v1, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
@@ -312,6 +318,12 @@
 
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 2
+
+    const-string v0, "KeyguardServiceDelegate"
+
+    const-string v1, "*** Keyguard disconnected (boo!)"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$1;->this$0:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
 

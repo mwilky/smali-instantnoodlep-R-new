@@ -32,7 +32,7 @@
 
 # virtual methods
 .method public onChange(ZLandroid/net/Uri;)V
-    .locals 17
+    .locals 20
 
     move-object/from16 v0, p0
 
@@ -74,17 +74,19 @@
 
     move-result v4
 
-    const/4 v5, -0x2
+    const/4 v5, 0x2
 
-    const/4 v6, 0x1
+    const/4 v6, -0x2
 
-    const/4 v7, 0x0
+    const/4 v7, 0x1
 
-    if-eqz v4, :cond_2
+    const/4 v8, 0x0
+
+    if-eqz v4, :cond_3
 
     iget-object v4, v0, Lcom/android/server/display/DisplayPowerController$SettingsObserver;->this$0:Lcom/android/server/display/DisplayPowerController;
 
-    invoke-static {v4}, Lcom/android/server/display/DisplayPowerController;->access$1700(Lcom/android/server/display/DisplayPowerController;)Landroid/content/Context;
+    invoke-static {v4}, Lcom/android/server/display/DisplayPowerController;->access$200(Lcom/android/server/display/DisplayPowerController;)Landroid/content/Context;
 
     move-result-object v4
 
@@ -92,34 +94,51 @@
 
     move-result-object v4
 
-    invoke-static {v4, v2, v7, v5}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+    invoke-static {v4, v2, v8, v6}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result v2
 
-    if-ne v2, v6, :cond_0
+    if-ne v2, v7, :cond_0
 
-    iget-object v7, v0, Lcom/android/server/display/DisplayPowerController$SettingsObserver;->this$0:Lcom/android/server/display/DisplayPowerController;
+    iget-object v8, v0, Lcom/android/server/display/DisplayPowerController$SettingsObserver;->this$0:Lcom/android/server/display/DisplayPowerController;
 
-    const-wide v8, 0x3fecccccc0000000L    # 0.8999999761581421
+    const-wide v9, 0x3fecccccc0000000L    # 0.8999999761581421
 
-    const/high16 v10, 0x42f00000    # 120.0f
+    const/high16 v11, 0x42f00000    # 120.0f
 
-    const v11, 0x3f7d70a4    # 0.99f
+    const v12, 0x3f7d70a4    # 0.99f
 
-    const/high16 v12, 0x42a00000    # 80.0f
+    const/high16 v13, 0x42a00000    # 80.0f
 
-    invoke-virtual/range {v7 .. v12}, Lcom/android/server/display/DisplayPowerController;->animateScreenBrightness(DFFF)V
+    invoke-virtual/range {v8 .. v13}, Lcom/android/server/display/DisplayPowerController;->animateScreenBrightness(DFFF)V
 
     goto :goto_0
 
     :cond_0
-    const/4 v4, 0x2
+    if-ne v2, v5, :cond_1
 
-    if-ne v2, v4, :cond_1
+    iget-object v14, v0, Lcom/android/server/display/DisplayPowerController$SettingsObserver;->this$0:Lcom/android/server/display/DisplayPowerController;
+
+    const-wide v15, 0x3fe99999a0000000L    # 0.800000011920929
+
+    const/high16 v17, 0x42f00000    # 120.0f
+
+    const v18, 0x3f7d70a4    # 0.99f
+
+    const/high16 v19, 0x42a00000    # 80.0f
+
+    invoke-virtual/range {v14 .. v19}, Lcom/android/server/display/DisplayPowerController;->animateScreenBrightness(DFFF)V
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v4, 0x3
+
+    if-ne v2, v4, :cond_2
 
     iget-object v5, v0, Lcom/android/server/display/DisplayPowerController$SettingsObserver;->this$0:Lcom/android/server/display/DisplayPowerController;
 
-    const-wide v6, 0x3fe99999a0000000L    # 0.800000011920929
+    const-wide v6, 0x3fe6666660000000L    # 0.699999988079071
 
     const/high16 v8, 0x42f00000    # 120.0f
 
@@ -131,7 +150,7 @@
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     iget-object v11, v0, Lcom/android/server/display/DisplayPowerController$SettingsObserver;->this$0:Lcom/android/server/display/DisplayPowerController;
 
     const-wide/high16 v12, 0x3ff0000000000000L    # 1.0
@@ -145,9 +164,9 @@
     invoke-virtual/range {v11 .. v16}, Lcom/android/server/display/DisplayPowerController;->animateScreenBrightness(DFFF)V
 
     :goto_0
-    goto :goto_2
+    goto/16 :goto_4
 
-    :cond_2
+    :cond_3
     const-string v2, "game_mode_status"
 
     invoke-static {v2}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -158,11 +177,11 @@
 
     move-result v4
 
-    if-eqz v4, :cond_5
+    if-eqz v4, :cond_6
 
     iget-object v4, v0, Lcom/android/server/display/DisplayPowerController$SettingsObserver;->this$0:Lcom/android/server/display/DisplayPowerController;
 
-    invoke-static {v4}, Lcom/android/server/display/DisplayPowerController;->access$1700(Lcom/android/server/display/DisplayPowerController;)Landroid/content/Context;
+    invoke-static {v4}, Lcom/android/server/display/DisplayPowerController;->access$200(Lcom/android/server/display/DisplayPowerController;)Landroid/content/Context;
 
     move-result-object v4
 
@@ -170,13 +189,13 @@
 
     move-result-object v4
 
-    invoke-static {v4, v2, v7, v5}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+    invoke-static {v4, v2, v8, v6}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result v2
 
     iget-object v4, v0, Lcom/android/server/display/DisplayPowerController$SettingsObserver;->this$0:Lcom/android/server/display/DisplayPowerController;
 
-    invoke-static {v4}, Lcom/android/server/display/DisplayPowerController;->access$1700(Lcom/android/server/display/DisplayPowerController;)Landroid/content/Context;
+    invoke-static {v4}, Lcom/android/server/display/DisplayPowerController;->access$200(Lcom/android/server/display/DisplayPowerController;)Landroid/content/Context;
 
     move-result-object v4
 
@@ -184,60 +203,169 @@
 
     move-result-object v4
 
-    const-string v8, "game_mode_close_automatic_brightness"
+    const-string v5, "game_mode_close_automatic_brightness"
 
-    invoke-static {v4, v8, v7, v5}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+    invoke-static {v4, v5, v8, v6}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result v4
 
     iget-object v5, v0, Lcom/android/server/display/DisplayPowerController$SettingsObserver;->this$0:Lcom/android/server/display/DisplayPowerController;
 
-    invoke-static {v5}, Lcom/android/server/display/DisplayPowerController;->access$100(Lcom/android/server/display/DisplayPowerController;)Lcom/android/server/display/AutomaticBrightnessController;
+    invoke-static {v5}, Lcom/android/server/display/DisplayPowerController;->access$2900(Lcom/android/server/display/DisplayPowerController;)Lcom/android/server/display/AutomaticBrightnessController;
 
     move-result-object v5
 
-    if-eqz v5, :cond_4
+    if-eqz v5, :cond_5
 
-    if-ne v2, v6, :cond_3
+    if-ne v2, v7, :cond_4
 
-    if-ne v4, v6, :cond_3
+    if-ne v4, v7, :cond_4
 
     iget-object v5, v0, Lcom/android/server/display/DisplayPowerController$SettingsObserver;->this$0:Lcom/android/server/display/DisplayPowerController;
 
-    invoke-static {v5}, Lcom/android/server/display/DisplayPowerController;->access$100(Lcom/android/server/display/DisplayPowerController;)Lcom/android/server/display/AutomaticBrightnessController;
+    invoke-static {v5}, Lcom/android/server/display/DisplayPowerController;->access$2900(Lcom/android/server/display/DisplayPowerController;)Lcom/android/server/display/AutomaticBrightnessController;
 
     move-result-object v5
 
-    if-eqz v5, :cond_4
+    if-eqz v5, :cond_5
 
     iget-object v5, v0, Lcom/android/server/display/DisplayPowerController$SettingsObserver;->this$0:Lcom/android/server/display/DisplayPowerController;
 
-    invoke-static {v5}, Lcom/android/server/display/DisplayPowerController;->access$100(Lcom/android/server/display/DisplayPowerController;)Lcom/android/server/display/AutomaticBrightnessController;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v6}, Lcom/android/server/display/AutomaticBrightnessController;->blockLightSensorForGameMode(Z)V
-
-    goto :goto_1
-
-    :cond_3
-    iget-object v5, v0, Lcom/android/server/display/DisplayPowerController$SettingsObserver;->this$0:Lcom/android/server/display/DisplayPowerController;
-
-    invoke-static {v5}, Lcom/android/server/display/DisplayPowerController;->access$100(Lcom/android/server/display/DisplayPowerController;)Lcom/android/server/display/AutomaticBrightnessController;
+    invoke-static {v5}, Lcom/android/server/display/DisplayPowerController;->access$2900(Lcom/android/server/display/DisplayPowerController;)Lcom/android/server/display/AutomaticBrightnessController;
 
     move-result-object v5
 
     invoke-virtual {v5, v7}, Lcom/android/server/display/AutomaticBrightnessController;->blockLightSensorForGameMode(Z)V
 
+    goto :goto_1
+
     :cond_4
-    :goto_1
-    goto :goto_2
+    iget-object v5, v0, Lcom/android/server/display/DisplayPowerController$SettingsObserver;->this$0:Lcom/android/server/display/DisplayPowerController;
+
+    invoke-static {v5}, Lcom/android/server/display/DisplayPowerController;->access$2900(Lcom/android/server/display/DisplayPowerController;)Lcom/android/server/display/AutomaticBrightnessController;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v8}, Lcom/android/server/display/AutomaticBrightnessController;->blockLightSensorForGameMode(Z)V
 
     :cond_5
-    iget-object v2, v0, Lcom/android/server/display/DisplayPowerController$SettingsObserver;->this$0:Lcom/android/server/display/DisplayPowerController;
+    :goto_1
+    goto/16 :goto_4
 
-    invoke-static {v2, v7}, Lcom/android/server/display/DisplayPowerController;->access$2500(Lcom/android/server/display/DisplayPowerController;Z)V
+    :cond_6
+    const-string/jumbo v2, "ui_night_mode"
+
+    invoke-static {v2}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v4}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_8
+
+    iget-object v4, v0, Lcom/android/server/display/DisplayPowerController$SettingsObserver;->this$0:Lcom/android/server/display/DisplayPowerController;
+
+    invoke-static {v4}, Lcom/android/server/display/DisplayPowerController;->access$200(Lcom/android/server/display/DisplayPowerController;)Landroid/content/Context;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v4
+
+    invoke-static {v4, v2, v8, v8}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    move-result v2
+
+    if-ne v2, v5, :cond_7
+
+    goto :goto_2
+
+    :cond_7
+    move v7, v8
 
     :goto_2
+    move v2, v7
+
+    invoke-static {v2}, Lcom/android/server/display/DisplayOLC;->enableDarkThemeLimit(Z)V
+
+    invoke-static {}, Lcom/android/server/display/OpBrightnessReasonAndRate;->onDarkModeChanged()V
+
+    iget-object v4, v0, Lcom/android/server/display/DisplayPowerController$SettingsObserver;->this$0:Lcom/android/server/display/DisplayPowerController;
+
+    invoke-static {v4, v8}, Lcom/android/server/display/DisplayPowerController;->access$3000(Lcom/android/server/display/DisplayPowerController;Z)V
+
+    goto :goto_4
+
+    :cond_8
+    const-string v2, "flashlight_enabled"
+
+    invoke-static {v2}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v4}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_a
+
+    iget-object v4, v0, Lcom/android/server/display/DisplayPowerController$SettingsObserver;->this$0:Lcom/android/server/display/DisplayPowerController;
+
+    invoke-static {v4}, Lcom/android/server/display/DisplayPowerController;->access$200(Lcom/android/server/display/DisplayPowerController;)Landroid/content/Context;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v5
+
+    invoke-static {v5, v2, v8, v6}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    move-result v2
+
+    if-ne v2, v7, :cond_9
+
+    goto :goto_3
+
+    :cond_9
+    move v7, v8
+
+    :goto_3
+    invoke-static {v4, v7}, Lcom/android/server/display/DisplayPowerController;->access$3102(Lcom/android/server/display/DisplayPowerController;Z)Z
+
+    iget-object v2, v0, Lcom/android/server/display/DisplayPowerController$SettingsObserver;->this$0:Lcom/android/server/display/DisplayPowerController;
+
+    invoke-static {v2}, Lcom/android/server/display/DisplayPowerController;->access$400(Lcom/android/server/display/DisplayPowerController;)V
+
+    goto :goto_4
+
+    :cond_a
+    const-string v2, "fod_mode"
+
+    invoke-static {v2}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_b
+
+    iget-object v2, v0, Lcom/android/server/display/DisplayPowerController$SettingsObserver;->this$0:Lcom/android/server/display/DisplayPowerController;
+
+    invoke-static {v2}, Lcom/android/server/display/DisplayPowerController;->access$700(Lcom/android/server/display/DisplayPowerController;)V
+
+    goto :goto_4
+
+    :cond_b
+    iget-object v2, v0, Lcom/android/server/display/DisplayPowerController$SettingsObserver;->this$0:Lcom/android/server/display/DisplayPowerController;
+
+    invoke-static {v2, v8}, Lcom/android/server/display/DisplayPowerController;->access$3000(Lcom/android/server/display/DisplayPowerController;Z)V
+
+    :goto_4
     return-void
 .end method

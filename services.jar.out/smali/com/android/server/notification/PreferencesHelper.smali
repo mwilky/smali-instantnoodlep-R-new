@@ -117,9 +117,21 @@
 
 .field private mHideSilentStatusBarIcons:Z
 
-.field private mIsMediaNotificationFilteringEnabled:Z
+.field private final mIsMediaNotificationFilteringEnabled:Z
 
 .field private final mNotificationChannelLogger:Lcom/android/server/notification/NotificationChannelLogger;
+
+.field private mOemLockedApps:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;>;"
+        }
+    .end annotation
+.end field
 
 .field private final mPackagePreferences:Landroid/util/ArrayMap;
     .annotation system Ldalvik/annotation/Signature;
@@ -182,6 +194,12 @@
 
     iput-boolean v0, p0, Lcom/android/server/notification/PreferencesHelper;->mAllowInvalidShortcuts:Z
 
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lcom/android/server/notification/PreferencesHelper;->mOemLockedApps:Ljava/util/Map;
+
     iput-object p1, p0, Lcom/android/server/notification/PreferencesHelper;->mContext:Landroid/content/Context;
 
     iput-object p4, p0, Lcom/android/server/notification/PreferencesHelper;->mZenModeHelper:Lcom/android/server/notification/ZenModeHelper;
@@ -199,8 +217,6 @@
     invoke-virtual {p0}, Lcom/android/server/notification/PreferencesHelper;->updateBadgingEnabled()V
 
     invoke-virtual {p0}, Lcom/android/server/notification/PreferencesHelper;->updateBubblesEnabled()V
-
-    invoke-virtual {p0}, Lcom/android/server/notification/PreferencesHelper;->updateMediaNotificationFilteringEnabled()V
 
     iget-object v0, p0, Lcom/android/server/notification/PreferencesHelper;->mContext:Landroid/content/Context;
 
@@ -1124,7 +1140,7 @@
     :goto_0
     nop
 
-    if-nez v2, :cond_2
+    if-nez v2, :cond_5
 
     new-instance v3, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;
 
@@ -1148,12 +1164,55 @@
 
     iput p8, v2, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->bubblePreference:I
 
+    iget-object v3, p0, Lcom/android/server/notification/PreferencesHelper;->mOemLockedApps:Ljava/util/Map;
+
+    iget-object v4, v2, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->pkg:Ljava/lang/String;
+
+    invoke-interface {v3, v4}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    iget-object v3, p0, Lcom/android/server/notification/PreferencesHelper;->mOemLockedApps:Ljava/util/Map;
+
+    iget-object v4, v2, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->pkg:Ljava/lang/String;
+
+    invoke-interface {v3, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/util/List;
+
+    if-eqz v3, :cond_2
+
+    invoke-interface {v3}, Ljava/util/List;->isEmpty()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    iput-object v3, v2, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->oemLockedChannels:Ljava/util/List;
+
+    goto :goto_2
+
+    :cond_2
+    :goto_1
+    const/4 v4, 0x1
+
+    iput-boolean v4, v2, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->oemLockedImportance:Z
+
+    :cond_3
+    :goto_2
     :try_start_0
     invoke-direct {p0, v2}, Lcom/android/server/notification/PreferencesHelper;->createDefaultChannelIfNeededLocked(Lcom/android/server/notification/PreferencesHelper$PackagePreferences;)Z
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_1
+    goto :goto_3
 
     :catch_0
     move-exception v3
@@ -1176,10 +1235,10 @@
 
     invoke-static {v5, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :goto_1
+    :goto_3
     iget v3, v2, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->uid:I
 
-    if-ne v3, v1, :cond_1
+    if-ne v3, v1, :cond_4
 
     iget-object v1, p0, Lcom/android/server/notification/PreferencesHelper;->mRestoredWithoutUids:Landroid/util/ArrayMap;
 
@@ -1189,15 +1248,15 @@
 
     invoke-virtual {v1, v3, v2}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    goto :goto_2
+    goto :goto_4
 
-    :cond_1
+    :cond_4
     iget-object v1, p0, Lcom/android/server/notification/PreferencesHelper;->mPackagePreferences:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, v0, v2}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_2
-    :goto_2
+    :cond_5
+    :goto_4
     return-object v2
 .end method
 
@@ -5545,13 +5604,13 @@
 .method public isMediaNotificationFilteringEnabled()Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/android/server/notification/PreferencesHelper;->mIsMediaNotificationFilteringEnabled:Z
+    const/4 v0, 0x1
 
     return v0
 .end method
 
 .method public lockChannelsForOEM([Ljava/lang/String;)V
-    .locals 13
+    .locals 14
 
     if-nez p1, :cond_0
 
@@ -5565,7 +5624,7 @@
     move v2, v1
 
     :goto_0
-    if-ge v2, v0, :cond_8
+    if-ge v2, v0, :cond_a
 
     aget-object v3, p1, v2
 
@@ -5573,7 +5632,7 @@
 
     move-result v4
 
-    if-nez v4, :cond_7
+    if-nez v4, :cond_9
 
     const-string v4, ":"
 
@@ -5581,11 +5640,11 @@
 
     move-result-object v4
 
-    if-eqz v4, :cond_7
+    if-eqz v4, :cond_9
 
     array-length v5, v4
 
-    if-lez v5, :cond_7
+    if-lez v5, :cond_9
 
     aget-object v5, v4, v1
 
@@ -5609,66 +5668,70 @@
 
     monitor-enter v7
 
+    const/4 v9, 0x0
+
     :try_start_0
-    iget-object v9, p0, Lcom/android/server/notification/PreferencesHelper;->mPackagePreferences:Landroid/util/ArrayMap;
+    iget-object v10, p0, Lcom/android/server/notification/PreferencesHelper;->mPackagePreferences:Landroid/util/ArrayMap;
 
-    invoke-virtual {v9}, Landroid/util/ArrayMap;->values()Ljava/util/Collection;
-
-    move-result-object v9
-
-    invoke-interface {v9}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object v9
-
-    :goto_2
-    invoke-interface {v9}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v10
-
-    if-eqz v10, :cond_6
-
-    invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v10}, Landroid/util/ArrayMap;->values()Ljava/util/Collection;
 
     move-result-object v10
 
-    check-cast v10, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;
+    invoke-interface {v10}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
-    iget-object v11, v10, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->pkg:Ljava/lang/String;
+    move-result-object v10
 
-    invoke-virtual {v11, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :goto_2
+    invoke-interface {v10}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v11
 
-    if-eqz v11, :cond_5
+    if-eqz v11, :cond_6
 
-    if-nez v6, :cond_3
-
-    iput-boolean v8, v10, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->oemLockedImportance:Z
-
-    iget-object v11, v10, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->channels:Landroid/util/ArrayMap;
-
-    invoke-virtual {v11}, Landroid/util/ArrayMap;->values()Ljava/util/Collection;
+    invoke-interface {v10}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v11
 
-    invoke-interface {v11}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    check-cast v11, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;
 
-    move-result-object v11
+    iget-object v12, v11, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->pkg:Ljava/lang/String;
 
-    :goto_3
-    invoke-interface {v11}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v12, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v12
 
-    if-eqz v12, :cond_2
+    if-eqz v12, :cond_5
 
-    invoke-interface {v11}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const/4 v9, 0x1
+
+    if-nez v6, :cond_3
+
+    iput-boolean v8, v11, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->oemLockedImportance:Z
+
+    iget-object v12, v11, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->channels:Landroid/util/ArrayMap;
+
+    invoke-virtual {v12}, Landroid/util/ArrayMap;->values()Ljava/util/Collection;
 
     move-result-object v12
 
-    check-cast v12, Landroid/app/NotificationChannel;
+    invoke-interface {v12}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {v12, v8}, Landroid/app/NotificationChannel;->setImportanceLockedByOEM(Z)V
+    move-result-object v12
+
+    :goto_3
+    invoke-interface {v12}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v13
+
+    if-eqz v13, :cond_2
+
+    invoke-interface {v12}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v13
+
+    check-cast v13, Landroid/app/NotificationChannel;
+
+    invoke-virtual {v13, v8}, Landroid/app/NotificationChannel;->setImportanceLockedByOEM(Z)V
 
     goto :goto_3
 
@@ -5676,28 +5739,52 @@
     goto :goto_4
 
     :cond_3
-    iget-object v11, v10, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->channels:Landroid/util/ArrayMap;
+    iget-object v12, v11, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->channels:Landroid/util/ArrayMap;
 
-    invoke-virtual {v11, v6}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v12, v6}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v11
+    move-result-object v12
 
-    check-cast v11, Landroid/app/NotificationChannel;
+    check-cast v12, Landroid/app/NotificationChannel;
 
-    if-eqz v11, :cond_4
+    if-eqz v12, :cond_4
 
-    invoke-virtual {v11, v8}, Landroid/app/NotificationChannel;->setImportanceLockedByOEM(Z)V
+    invoke-virtual {v12, v8}, Landroid/app/NotificationChannel;->setImportanceLockedByOEM(Z)V
 
     :cond_4
-    iget-object v12, v10, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->oemLockedChannels:Ljava/util/List;
+    iget-object v13, v11, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->oemLockedChannels:Ljava/util/List;
 
-    invoke-interface {v12, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v13, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_5
     :goto_4
     goto :goto_2
 
     :cond_6
+    if-nez v9, :cond_8
+
+    iget-object v8, p0, Lcom/android/server/notification/PreferencesHelper;->mOemLockedApps:Ljava/util/Map;
+
+    new-instance v10, Ljava/util/ArrayList;
+
+    invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-interface {v8, v5, v10}, Ljava/util/Map;->getOrDefault(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Ljava/util/List;
+
+    if-eqz v6, :cond_7
+
+    invoke-interface {v8, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_7
+    iget-object v10, p0, Lcom/android/server/notification/PreferencesHelper;->mOemLockedApps:Ljava/util/Map;
+
+    invoke-interface {v10, v5, v8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_8
     monitor-exit v7
 
     goto :goto_5
@@ -5711,13 +5798,13 @@
 
     throw v0
 
-    :cond_7
+    :cond_9
     :goto_5
     add-int/lit8 v2, v2, 0x1
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    :cond_8
+    :cond_a
     return-void
 .end method
 
@@ -7007,7 +7094,7 @@
 
     move v7, v0
 
-    if-eq v0, v14, :cond_1b
+    if-eq v0, v14, :cond_1c
 
     :try_start_1
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
@@ -7049,7 +7136,7 @@
     goto/16 :goto_f
 
     :cond_4
-    if-ne v7, v13, :cond_1a
+    if-ne v7, v13, :cond_1b
 
     :try_start_3
     const-string/jumbo v0, "silent_status_icons"
@@ -7102,7 +7189,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_19
+    if-eqz v0, :cond_1a
 
     const-string/jumbo v0, "uid"
 
@@ -7130,7 +7217,7 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
-    if-nez v0, :cond_18
+    if-nez v0, :cond_19
 
     if-eqz p2, :cond_7
 
@@ -7357,7 +7444,7 @@
 
     move v4, v0
 
-    if-eq v0, v14, :cond_17
+    if-eq v0, v14, :cond_18
 
     const/4 v5, 0x3
 
@@ -7368,10 +7455,10 @@
 
     move-result v0
 
-    if-le v0, v2, :cond_17
+    if-le v0, v2, :cond_18
 
     :cond_b
-    if-eq v4, v5, :cond_16
+    if-eq v4, v5, :cond_17
 
     const/4 v0, 0x4
 
@@ -7435,7 +7522,7 @@
 
     move-result v5
 
-    if-eqz v5, :cond_13
+    if-eqz v5, :cond_14
 
     iget-object v5, v1, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->channels:Landroid/util/ArrayMap;
 
@@ -7447,7 +7534,7 @@
 
     if-lt v5, v6, :cond_f
 
-    if-nez v3, :cond_16
+    if-nez v3, :cond_17
 
     const-string v5, "NotificationPrefHelper"
 
@@ -7504,13 +7591,13 @@
 
     move-result v15
 
-    if-nez v15, :cond_13
+    if-nez v15, :cond_14
 
     invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v15
 
-    if-nez v15, :cond_13
+    if-nez v15, :cond_14
 
     new-instance v15, Landroid/app/NotificationChannel;
 
@@ -7532,13 +7619,38 @@
 
     invoke-virtual {v15, v7}, Landroid/app/NotificationChannel;->setImportanceLockedByCriticalDeviceFunction(Z)V
 
+    iget-boolean v7, v1, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->oemLockedImportance:Z
+
+    invoke-virtual {v15, v7}, Landroid/app/NotificationChannel;->setImportanceLockedByOEM(Z)V
+
+    invoke-virtual {v15}, Landroid/app/NotificationChannel;->isImportanceLockedByOEM()Z
+
+    move-result v7
+
+    if-nez v7, :cond_11
+
+    iget-object v7, v1, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->oemLockedChannels:Ljava/util/List;
+
+    invoke-virtual {v15}, Landroid/app/NotificationChannel;->getId()Ljava/lang/String;
+
+    move-result-object v13
+
+    invoke-interface {v7, v13}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_11
+
+    invoke-virtual {v15, v14}, Landroid/app/NotificationChannel;->setImportanceLockedByOEM(Z)V
+
+    :cond_11
     nop
 
     invoke-virtual {v15}, Landroid/app/NotificationChannel;->getConversationId()Ljava/lang/String;
 
     move-result-object v7
 
-    if-eqz v7, :cond_11
+    if-eqz v7, :cond_12
 
     invoke-virtual {v15}, Landroid/app/NotificationChannel;->getConversationId()Ljava/lang/String;
 
@@ -7550,39 +7662,39 @@
 
     move-result v7
 
-    if-eqz v7, :cond_11
+    if-eqz v7, :cond_12
 
     move v7, v14
 
     goto :goto_a
 
-    :cond_11
+    :cond_12
     const/4 v7, 0x0
 
     :goto_a
     iget-boolean v13, v10, Lcom/android/server/notification/PreferencesHelper;->mAllowInvalidShortcuts:Z
 
-    if-nez v13, :cond_12
+    if-nez v13, :cond_13
 
     iget-boolean v13, v10, Lcom/android/server/notification/PreferencesHelper;->mAllowInvalidShortcuts:Z
 
-    if-nez v13, :cond_13
+    if-nez v13, :cond_14
 
-    if-nez v7, :cond_13
+    if-nez v7, :cond_14
 
-    :cond_12
+    :cond_13
     iget-object v13, v1, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->channels:Landroid/util/ArrayMap;
 
     invoke-virtual {v13, v5, v15}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_13
+    :cond_14
     const-string v5, "delegate"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_15
+    if-eqz v5, :cond_16
 
     const-string/jumbo v5, "uid"
 
@@ -7612,13 +7724,13 @@
 
     const/4 v15, 0x0
 
-    if-eq v5, v6, :cond_14
+    if-eq v5, v6, :cond_15
 
     invoke-static {v7}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v20
 
-    if-nez v20, :cond_14
+    if-nez v20, :cond_15
 
     new-instance v6, Lcom/android/server/notification/PreferencesHelper$Delegate;
 
@@ -7626,15 +7738,15 @@
 
     move-object v15, v6
 
-    :cond_14
+    :cond_15
     iput-object v15, v1, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->delegate:Lcom/android/server/notification/PreferencesHelper$Delegate;
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_1
 
-    :cond_15
+    :cond_16
     nop
 
-    :cond_16
+    :cond_17
     :goto_b
     move/from16 v20, v4
 
@@ -7644,7 +7756,7 @@
 
     goto/16 :goto_7
 
-    :cond_17
+    :cond_18
     :try_start_b
     invoke-direct {v10, v1}, Lcom/android/server/notification/PreferencesHelper;->deleteDefaultChannelIfNeededLocked(Lcom/android/server/notification/PreferencesHelper$PackagePreferences;)Z
     :try_end_b
@@ -7704,7 +7816,7 @@
 
     goto :goto_f
 
-    :cond_18
+    :cond_19
     move-object/from16 v24, v2
 
     move-object/from16 v19, v6
@@ -7726,7 +7838,7 @@
 
     goto/16 :goto_2
 
-    :cond_19
+    :cond_1a
     move-object/from16 v19, v6
 
     move/from16 v20, v7
@@ -7750,7 +7862,7 @@
 
     goto :goto_f
 
-    :cond_1a
+    :cond_1b
     move-object/from16 v19, v6
 
     move/from16 v20, v7
@@ -7781,7 +7893,7 @@
 
     goto :goto_f
 
-    :cond_1b
+    :cond_1c
     move/from16 v20, v7
 
     move-object/from16 v21, v8
@@ -8638,45 +8750,6 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v1
-.end method
-
-.method public updateMediaNotificationFilteringEnabled()V
-    .locals 3
-
-    iget-object v0, p0, Lcom/android/server/notification/PreferencesHelper;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "qs_media_player"
-
-    const/4 v2, 0x1
-
-    invoke-static {v0, v1, v2}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
-
-    move-result v0
-
-    if-lez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v2, 0x0
-
-    :goto_0
-    move v0, v2
-
-    iget-boolean v1, p0, Lcom/android/server/notification/PreferencesHelper;->mIsMediaNotificationFilteringEnabled:Z
-
-    if-eq v0, v1, :cond_1
-
-    iput-boolean v0, p0, Lcom/android/server/notification/PreferencesHelper;->mIsMediaNotificationFilteringEnabled:Z
-
-    invoke-direct {p0}, Lcom/android/server/notification/PreferencesHelper;->updateConfig()V
-
-    :cond_1
-    return-void
 .end method
 
 .method public updateNotificationChannel(Ljava/lang/String;ILandroid/app/NotificationChannel;Z)V

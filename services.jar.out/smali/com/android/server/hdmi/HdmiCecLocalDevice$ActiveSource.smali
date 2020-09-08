@@ -174,7 +174,7 @@
 
     iget v1, p0, Lcom/android/server/hdmi/HdmiCecLocalDevice$ActiveSource;->logicalAddress:I
 
-    const-string v2, "invalid"
+    const-string/jumbo v2, "invalid"
 
     const/4 v3, 0x0
 

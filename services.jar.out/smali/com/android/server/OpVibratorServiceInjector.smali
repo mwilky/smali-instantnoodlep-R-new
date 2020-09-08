@@ -615,6 +615,29 @@
     return v0
 .end method
 
+.method public static turnOffLinearMotorVibrator()V
+    .locals 2
+
+    sget-boolean v0, Lcom/android/server/OpVibratorServiceInjector;->DEBUG_INJECTOR:Z
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lcom/android/server/OpVibratorServiceInjector;->TAG:Ljava/lang/String;
+
+    const-string v1, "call OpVibratorServiceInjector.turnOffLinearMotorVibrator()"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    invoke-static {}, Lcom/android/server/OpVibratorServiceInjector;->initInstance()V
+
+    sget-object v0, Lcom/android/server/OpVibratorServiceInjector;->sOpVibratorService:Lcom/android/server/IOpVibratorService;
+
+    invoke-interface {v0}, Lcom/android/server/IOpVibratorService;->turnOffLinearMotorVibrator()V
+
+    return-void
+.end method
+
 .method public static updateVibrator()V
     .locals 2
 

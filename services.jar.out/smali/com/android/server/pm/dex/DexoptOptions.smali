@@ -8,6 +8,8 @@
 
 .field public static final DEXOPT_BOOT_COMPLETE:I = 0x4
 
+.field public static final DEXOPT_CHECK_FOR_PROFILES_SIZE:I = 0x20000
+
 .field public static final DEXOPT_CHECK_FOR_PROFILES_UPDATES:I = 0x1
 
 .field public static final DEXOPT_CPUSET_ENABLE:I = 0x8000
@@ -115,7 +117,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const v0, 0x1ce7f
+    const v0, 0x3ce7f
 
     not-int v1, v0
 
@@ -219,6 +221,28 @@
     iget v0, p0, Lcom/android/server/pm/dex/DexoptOptions;->mFlags:I
 
     and-int/lit8 v0, v0, 0x4
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
+.method public isCheckForProfileSize()Z
+    .locals 2
+
+    iget v0, p0, Lcom/android/server/pm/dex/DexoptOptions;->mFlags:I
+
+    const/high16 v1, 0x20000
+
+    and-int/2addr v0, v1
 
     if-eqz v0, :cond_0
 

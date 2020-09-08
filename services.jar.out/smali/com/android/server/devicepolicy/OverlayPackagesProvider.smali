@@ -69,6 +69,298 @@
     return-void
 .end method
 
+.method private getCarrierDisallowedAppsSet(Ljava/lang/String;)Ljava/util/Set;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/Set<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const v1, -0x36de2734    # -662924.75f
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x1
+
+    if-eq v0, v1, :cond_3
+
+    const v1, -0x1ea9303f
+
+    if-eq v0, v1, :cond_2
+
+    const v1, -0x1450e22d
+
+    if-eq v0, v1, :cond_1
+
+    :cond_0
+    goto :goto_0
+
+    :cond_1
+    const-string v0, "android.app.action.PROVISION_MANAGED_PROFILE"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    move v0, v3
+
+    goto :goto_1
+
+    :cond_2
+    const-string v0, "android.app.action.PROVISION_MANAGED_USER"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_3
+    const-string v0, "android.app.action.PROVISION_MANAGED_DEVICE"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    move v0, v2
+
+    goto :goto_1
+
+    :goto_0
+    const/4 v0, -0x1
+
+    :goto_1
+    if-eqz v0, :cond_6
+
+    if-eq v0, v3, :cond_5
+
+    if-ne v0, v2, :cond_4
+
+    const v0, 0x502000e
+
+    goto :goto_2
+
+    :cond_4
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Provisioning type "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, " not supported."
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_5
+    const v0, 0x502000f
+
+    goto :goto_2
+
+    :cond_6
+    const v0, 0x5020010
+
+    nop
+
+    :goto_2
+    new-instance v1, Landroid/util/ArraySet;
+
+    iget-object v2, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Landroid/util/ArraySet;-><init>(Ljava/util/Collection;)V
+
+    return-object v1
+.end method
+
+.method private getCarrierRequiredAppsSet(Ljava/lang/String;)Ljava/util/Set;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/Set<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const v1, -0x36de2734    # -662924.75f
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x1
+
+    if-eq v0, v1, :cond_3
+
+    const v1, -0x1ea9303f
+
+    if-eq v0, v1, :cond_2
+
+    const v1, -0x1450e22d
+
+    if-eq v0, v1, :cond_1
+
+    :cond_0
+    goto :goto_0
+
+    :cond_1
+    const-string v0, "android.app.action.PROVISION_MANAGED_PROFILE"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    move v0, v3
+
+    goto :goto_1
+
+    :cond_2
+    const-string v0, "android.app.action.PROVISION_MANAGED_USER"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_3
+    const-string v0, "android.app.action.PROVISION_MANAGED_DEVICE"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    move v0, v2
+
+    goto :goto_1
+
+    :goto_0
+    const/4 v0, -0x1
+
+    :goto_1
+    if-eqz v0, :cond_6
+
+    if-eq v0, v3, :cond_5
+
+    if-ne v0, v2, :cond_4
+
+    const v0, 0x5020011
+
+    goto :goto_2
+
+    :cond_4
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Provisioning type "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, " not supported."
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_5
+    const v0, 0x5020012
+
+    goto :goto_2
+
+    :cond_6
+    const v0, 0x5020013
+
+    nop
+
+    :goto_2
+    new-instance v1, Landroid/util/ArraySet;
+
+    iget-object v2, p0, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Landroid/util/ArraySet;-><init>(Ljava/util/Collection;)V
+
+    return-object v1
+.end method
+
 .method private getDisallowedApps(Ljava/lang/String;)Ljava/util/Set;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
@@ -93,6 +385,12 @@
     invoke-interface {v0, v1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->getVendorDisallowedAppsSet(Ljava/lang/String;)Ljava/util/Set;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
+
+    invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->getCarrierDisallowedAppsSet(Ljava/lang/String;)Ljava/util/Set;
 
     move-result-object v1
 
@@ -334,6 +632,12 @@
     invoke-interface {v0, v1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->getVendorRequiredAppsSet(Ljava/lang/String;)Ljava/util/Set;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
+
+    invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/OverlayPackagesProvider;->getCarrierRequiredAppsSet(Ljava/lang/String;)Ljava/util/Set;
 
     move-result-object v1
 
