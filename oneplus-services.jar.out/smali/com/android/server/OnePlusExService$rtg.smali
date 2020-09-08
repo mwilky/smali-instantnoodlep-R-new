@@ -74,7 +74,7 @@
 
     if-eqz v1, :cond_8
 
-    const v1, 0x50f001a
+    const v1, 0x50f001b
 
     iget-object v4, p0, Lcom/android/server/OnePlusExService$rtg;->zta:Lcom/android/server/OnePlusExService;
 
@@ -211,7 +211,7 @@
 
     const/4 v6, 0x0
 
-    const v8, 0x50f001a
+    const v8, 0x50f001b
 
     move-object v7, p1
 
@@ -233,7 +233,7 @@
 
     move-result-object v10
 
-    const v8, 0x50f001a
+    const v8, 0x50f001b
 
     move-object v7, p1
 

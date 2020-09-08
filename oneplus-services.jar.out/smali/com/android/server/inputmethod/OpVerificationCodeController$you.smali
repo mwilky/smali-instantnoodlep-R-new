@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements Lcom/android/server/oxb/zta;
+.implements Lcom/android/server/cjf/zta;
 
 
 # annotations
@@ -77,12 +77,12 @@
     return p0
 .end method
 
-.method public sis(Lcom/android/server/oxb/zta$zta;)V
+.method public sis(Lcom/android/server/cjf/zta$zta;)V
     .locals 0
 
     iget-object p0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController$you;->zta:Lcom/android/server/inputmethod/OpVerificationCodeController;
 
-    invoke-static {p0, p1}, Lcom/android/server/inputmethod/OpVerificationCodeController;->access$1002(Lcom/android/server/inputmethod/OpVerificationCodeController;Lcom/android/server/oxb/zta$zta;)Lcom/android/server/oxb/zta$zta;
+    invoke-static {p0, p1}, Lcom/android/server/inputmethod/OpVerificationCodeController;->access$1002(Lcom/android/server/inputmethod/OpVerificationCodeController;Lcom/android/server/cjf/zta$zta;)Lcom/android/server/cjf/zta$zta;
 
     return-void
 .end method

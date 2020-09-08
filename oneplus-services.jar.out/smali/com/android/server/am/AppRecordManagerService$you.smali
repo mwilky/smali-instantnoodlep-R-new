@@ -106,7 +106,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcom/android/server/am/bio;->fto(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/server/am/bio;->lqr(Z)V
 
     goto :goto_0
 

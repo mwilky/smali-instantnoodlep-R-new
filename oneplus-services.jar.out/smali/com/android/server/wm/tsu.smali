@@ -3,34 +3,38 @@
 .source ""
 
 # interfaces
-.implements Ljava/util/function/Consumer;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
+.field public final synthetic you:Ljava/lang/String;
+
 .field public final synthetic zta:Lcom/android/server/wm/OnePlusPerfManager;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/android/server/wm/OnePlusPerfManager;)V
+.method public synthetic constructor <init>(Lcom/android/server/wm/OnePlusPerfManager;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/wm/tsu;->zta:Lcom/android/server/wm/OnePlusPerfManager;
 
+    iput-object p2, p0, Lcom/android/server/wm/tsu;->you:Ljava/lang/String;
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 0
+.method public final run()V
+    .locals 1
 
-    iget-object p0, p0, Lcom/android/server/wm/tsu;->zta:Lcom/android/server/wm/OnePlusPerfManager;
+    iget-object v0, p0, Lcom/android/server/wm/tsu;->zta:Lcom/android/server/wm/OnePlusPerfManager;
 
-    check-cast p1, Lcom/android/server/wm/WindowState;
+    iget-object p0, p0, Lcom/android/server/wm/tsu;->you:Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Lcom/android/server/wm/OnePlusPerfManager;->you(Lcom/android/server/wm/WindowState;)V
+    invoke-virtual {v0, p0}, Lcom/android/server/wm/OnePlusPerfManager;->you(Ljava/lang/String;)V
 
     return-void
 .end method

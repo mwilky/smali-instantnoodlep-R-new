@@ -9,9 +9,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
-    name = null
+    accessFlags = 0x2
+    name = "zta"
 .end annotation
+
+
+# static fields
+.field public static final you:I
 
 
 # instance fields
@@ -32,164 +36,35 @@
 
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
-    .locals 4
-
-    invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
-
-    move-result-object v0
+    .locals 2
 
     iget p1, p1, Landroid/os/Message;->what:I
 
-    const/4 v1, 0x1
+    if-eqz p1, :cond_0
 
-    if-eq p1, v1, :cond_1
-
-    const/4 v0, 0x5
-
-    if-eq p1, v0, :cond_0
-
-    goto/16 :goto_0
+    goto :goto_0
 
     :cond_0
-    iget-object p0, p0, Lcom/android/server/oif$zta;->zta:Lcom/android/server/oif;
+    new-instance p1, Lcom/oneplus/config/ConfigGrabber;
 
-    invoke-static {p0}, Lcom/android/server/oif;->rtg(Lcom/android/server/oif;)V
+    iget-object v0, p0, Lcom/android/server/oif$zta;->zta:Lcom/android/server/oif;
 
-    goto/16 :goto_0
+    invoke-static {v0}, Lcom/android/server/oif;->you(Lcom/android/server/oif;)Landroid/content/Context;
 
-    :cond_1
-    if-nez v0, :cond_2
+    move-result-object v0
 
-    const-string p0, "CommonFrontMonitor"
+    const-string v1, "ProcessManagement"
 
-    const-string p1, "[scene] arguments is null while handling CMD_FETCH_CONFIG"
-
-    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-
-    :cond_2
-    new-array p1, v1, [I
-
-    const/16 v2, 0xbe
-
-    const/4 v3, 0x0
-
-    aput v2, p1, v3
-
-    invoke-static {p1}, Landroid/util/OpFeatures;->isSupport([I)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    const-string p1, "CONFIG_NAME_VIDEO_ENHANCEMENT"
-
-    invoke-virtual {v0, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_3
-
-    iget-object v2, p0, Lcom/android/server/oif$zta;->zta:Lcom/android/server/oif;
-
-    invoke-static {v2, p1}, Lcom/android/server/oif;->zta(Lcom/android/server/oif;Ljava/lang/String;)V
-
-    :cond_3
-    new-array p1, v1, [I
-
-    const/16 v2, 0x6d
-
-    aput v2, p1, v3
-
-    invoke-static {p1}, Landroid/util/OpFeatures;->isSupport([I)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_4
-
-    const-string p1, "CONFIG_NAME_SMART5G"
-
-    invoke-virtual {v0, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_4
-
-    iget-object v2, p0, Lcom/android/server/oif$zta;->zta:Lcom/android/server/oif;
-
-    invoke-static {v2, p1}, Lcom/android/server/oif;->zta(Lcom/android/server/oif;Ljava/lang/String;)V
-
-    :cond_4
-    new-array p1, v1, [I
-
-    const/16 v2, 0xf6
-
-    aput v2, p1, v3
-
-    invoke-static {p1}, Landroid/util/OpFeatures;->isSupport([I)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_5
-
-    const-string p1, "CONFIG_NAME_FASTOUTPUT"
-
-    invoke-virtual {v0, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_5
-
-    iget-object v2, p0, Lcom/android/server/oif$zta;->zta:Lcom/android/server/oif;
-
-    invoke-static {v2, p1}, Lcom/android/server/oif;->zta(Lcom/android/server/oif;Ljava/lang/String;)V
-
-    :cond_5
-    new-array p1, v1, [I
-
-    const/16 v1, 0x119
-
-    aput v1, p1, v3
-
-    invoke-static {p1}, Landroid/util/OpFeatures;->isSupport([I)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_6
-
-    const-string p1, "CONFIG_NAME_GAME_DOLBY"
-
-    invoke-virtual {v0, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_6
-
-    iget-object v1, p0, Lcom/android/server/oif$zta;->zta:Lcom/android/server/oif;
-
-    invoke-static {v1, p1}, Lcom/android/server/oif;->zta(Lcom/android/server/oif;Ljava/lang/String;)V
-
-    :cond_6
-    invoke-static {}, Lcom/android/server/oif;->tsu()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_7
-
-    const-string p1, "CONFIG_NAME_LMKD_WATERMARK"
-
-    invoke-virtual {v0, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_7
+    invoke-direct {p1, v0, v1}, Lcom/oneplus/config/ConfigGrabber;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     iget-object p0, p0, Lcom/android/server/oif$zta;->zta:Lcom/android/server/oif;
 
-    invoke-static {p0, p1}, Lcom/android/server/oif;->zta(Lcom/android/server/oif;Ljava/lang/String;)V
+    invoke-virtual {p1}, Lcom/oneplus/config/ConfigGrabber;->grabConfig()Lorg/json/JSONArray;
 
-    :cond_7
+    move-result-object p1
+
+    invoke-static {p0, p1}, Lcom/android/server/oif;->zta(Lcom/android/server/oif;Lorg/json/JSONArray;)V
+
     :goto_0
     return-void
 .end method

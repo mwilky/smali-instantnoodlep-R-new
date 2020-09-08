@@ -45,13 +45,13 @@
 
     iget-object v1, p0, Lcom/android/server/pm/OpLauncherAppsService$zta;->zta:Lcom/android/server/pm/OpLauncherAppsService;
 
-    const v2, 0x50f00fc
+    const v2, 0x50f00fd
 
-    const v3, 0x50f00fb
+    const v3, 0x50f00fc
 
-    const v4, 0x50f00fa
+    const v4, 0x50f00fb
 
-    const v5, 0x50f00f5
+    const v5, 0x50f00f6
 
     new-instance v6, Lcom/android/server/pm/OpLauncherAppsService$zta$zta;
 
@@ -69,13 +69,13 @@
 
     iget-object v1, p0, Lcom/android/server/pm/OpLauncherAppsService$zta;->zta:Lcom/android/server/pm/OpLauncherAppsService;
 
-    const v2, 0x50f00f8
+    const v2, 0x50f00f9
 
-    const v3, 0x50f00f6
+    const v3, 0x50f00f7
 
-    const v4, 0x50f00f7
+    const v4, 0x50f00f8
 
-    const v5, 0x50f00f5
+    const v5, 0x50f00f6
 
     new-instance v6, Lcom/android/server/pm/OpLauncherAppsService$zta$you;
 

@@ -28,7 +28,7 @@
 
 
 # virtual methods
-.method public N(Ljava/lang/String;)V
+.method public S(Ljava/lang/String;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -398,7 +398,7 @@
 
     move-object v2, p0
 
-    invoke-interface/range {v2 .. v7}, Lsis/you/zta/zta/you/wtn;->a(JILjava/util/ArrayList;Lsis/you/zta/zta/you/wtn$sis;)V
+    invoke-interface/range {v2 .. v7}, Lsis/you/zta/zta/you/wtn;->c(JILjava/util/ArrayList;Lsis/you/zta/zta/you/wtn$sis;)V
 
     goto :goto_3
 
@@ -417,7 +417,7 @@
 
     move-result-object p2
 
-    invoke-interface {p0, v2, v3, p1, p2}, Lsis/you/zta/zta/you/wtn;->J(JILjava/util/ArrayList;)I
+    invoke-interface {p0, v2, v3, p1, p2}, Lsis/you/zta/zta/you/wtn;->N(JILjava/util/ArrayList;)I
 
     move-result p0
 

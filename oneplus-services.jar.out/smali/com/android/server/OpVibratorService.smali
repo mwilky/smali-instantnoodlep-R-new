@@ -214,6 +214,8 @@
 
 .field private repeatVibrate:Z
 
+.field private sLinearMotorVibrateService:Lsis/zta/you/zta/zta/zta;
+
 
 # direct methods
 .method static constructor <clinit>()V
@@ -334,6 +336,10 @@
     const-string v1, "/sys/class/leds/vibrator/vmax_mv"
 
     iput-object v1, p0, Lcom/android/server/OpVibratorService;->mVibratorIntensityPath:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lcom/android/server/OpVibratorService;->sLinearMotorVibrateService:Lsis/zta/you/zta/zta/zta;
 
     new-instance v1, Ljava/util/LinkedHashMap;
 
@@ -474,6 +480,40 @@
     iput v0, p0, Lcom/android/server/OpVibratorService;->mEffect:I
 
     return-void
+.end method
+
+.method private getLinearMotorVibrateService()Lsis/zta/you/zta/zta/zta;
+    .locals 3
+
+    iget-object v0, p0, Lcom/android/server/OpVibratorService;->sLinearMotorVibrateService:Lsis/zta/you/zta/zta/zta;
+
+    if-nez v0, :cond_0
+
+    :try_start_0
+    invoke-static {}, Lsis/zta/you/zta/zta/zta;->ywr()Lsis/zta/you/zta/zta/zta;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/server/OpVibratorService;->sLinearMotorVibrateService:Lsis/zta/you/zta/zta/zta;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    sget-object v1, Lcom/android/server/OpVibratorService;->TAG:Ljava/lang/String;
+
+    const-string v2, "Failed to get linear motor vibrator interface"
+
+    invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_0
+    :goto_0
+    iget-object p0, p0, Lcom/android/server/OpVibratorService;->sLinearMotorVibrateService:Lsis/zta/you/zta/zta/zta;
+
+    return-object p0
 .end method
 
 .method private getVibrationRules(Ljava/lang/String;)V
@@ -1122,7 +1162,7 @@
 
     const/4 v1, 0x0
 
-    const/16 v2, 0x65
+    const/16 v2, 0x61
 
     aput v2, v0, v1
 
@@ -1492,75 +1532,79 @@
 
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v2
 
-    invoke-static {p3, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p3, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    sget-object p1, Lcom/android/server/OpVibratorService;->TAG:Ljava/lang/String;
+    sget-object p3, Lcom/android/server/OpVibratorService;->TAG:Ljava/lang/String;
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string p3, "doVibratorOn: intensityEffectType = "
+    const-string v3, "doVibratorOn: intensityEffectType = "
 
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget p3, p0, Lcom/android/server/OpVibratorService;->intensityEffectType:I
+    iget v3, p0, Lcom/android/server/OpVibratorService;->intensityEffectType:I
 
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p2
+    move-result-object v2
 
-    invoke-static {p1, p2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p3, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    sget-object p1, Lcom/android/server/OpVibratorService;->TAG:Ljava/lang/String;
+    sget-object p3, Lcom/android/server/OpVibratorService;->TAG:Ljava/lang/String;
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string p3, "doVibratorOn: intensityStrengthType = "
+    const-string v3, "doVibratorOn: intensityStrengthType = "
 
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget p0, p0, Lcom/android/server/OpVibratorService;->intensityStrengthType:I
+    iget v3, p0, Lcom/android/server/OpVibratorService;->intensityStrengthType:I
 
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v2
 
-    invoke-static {p1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p3, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    sget-boolean p0, Lcom/android/server/OpVibratorService;->DEBUG_ONEPLUS:Z
+    sget-boolean p3, Lcom/android/server/OpVibratorService;->DEBUG_ONEPLUS:Z
 
-    if-eqz p0, :cond_1
+    if-eqz p3, :cond_1
 
-    sget-object p0, Lcom/android/server/OpVibratorService;->TAG:Ljava/lang/String;
+    sget-object p3, Lcom/android/server/OpVibratorService;->TAG:Ljava/lang/String;
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string p2, "doVibratorOn: vibratingPattern = "
+    const-string v3, "doVibratorOn: vibratingPattern = "
 
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v0
 
-    invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p3, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
-    invoke-static {v0, v1}, Lcom/android/server/VibratorService;->vibratorOn(J)V
+    iget p3, p0, Lcom/android/server/OpVibratorService;->intensityEffectType:I
+
+    iget v0, p0, Lcom/android/server/OpVibratorService;->intensityStrengthType:I
+
+    invoke-virtual {p0, p3, p1, p2, v0}, Lcom/android/server/OpVibratorService;->turnOnLinearmotorVibrator(IJI)V
 
     return-void
 .end method
@@ -2205,7 +2249,7 @@
 
     const/4 p2, 0x0
 
-    const/16 v0, 0x65
+    const/16 v0, 0x61
 
     aput v0, p1, p2
 
@@ -2897,6 +2941,84 @@
     goto :goto_2
 .end method
 
+.method public turnOffLinearMotorVibrator()V
+    .locals 2
+
+    :try_start_0
+    invoke-direct {p0}, Lcom/android/server/OpVibratorService;->getLinearMotorVibrateService()Lsis/zta/you/zta/zta/zta;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    sget-object v0, Lcom/android/server/OpVibratorService;->TAG:Ljava/lang/String;
+
+    const-string v1, "linearmotorVibratorOff"
+
+    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-interface {p0}, Lsis/zta/you/zta/zta/zta;->H()V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p0
+
+    sget-object v0, Lcom/android/server/OpVibratorService;->TAG:Ljava/lang/String;
+
+    const-string v1, "turnOffLinearMotorVibrator failed."
+
+    invoke-static {v0, v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_0
+    :goto_0
+    return-void
+.end method
+
+.method public turnOnLinearmotorVibrator(IJI)V
+    .locals 2
+
+    :try_start_0
+    invoke-direct {p0}, Lcom/android/server/OpVibratorService;->getLinearMotorVibrateService()Lsis/zta/you/zta/zta/zta;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    sget-object v0, Lcom/android/server/OpVibratorService;->TAG:Ljava/lang/String;
+
+    const-string v1, "linearmotorVibratorOn"
+
+    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    long-to-int p2, p2
+
+    int-to-short p1, p1
+
+    int-to-short p3, p4
+
+    invoke-interface {p0, p2, p1, p3}, Lsis/zta/you/zta/zta/zta;->P(ISS)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p0
+
+    sget-object p1, Lcom/android/server/OpVibratorService;->TAG:Ljava/lang/String;
+
+    const-string p2, "turnOnLinearmotorVibrator failed."
+
+    invoke-static {p1, p2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_0
+    :goto_0
+    return-void
+.end method
+
 .method public updateVibrator()V
     .locals 4
 
@@ -3020,7 +3142,7 @@
 
     const/16 v7, 0x5e4
 
-    const/16 v8, 0x65
+    const/16 v8, 0x61
 
     const/16 v9, 0x244
 
@@ -3527,7 +3649,7 @@
 
     new-array v7, v5, [I
 
-    const/16 v3, 0x65
+    const/16 v3, 0x61
 
     aput v3, v7, v12
 

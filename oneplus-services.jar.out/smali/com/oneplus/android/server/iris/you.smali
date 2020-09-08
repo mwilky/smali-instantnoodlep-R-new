@@ -1632,7 +1632,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0, p1}, Lcom/oneplus/server/zta;->I(Z)V
+    invoke-virtual {p0, p1}, Lcom/oneplus/server/zta;->K(Z)V
 
     :cond_1
     return-void

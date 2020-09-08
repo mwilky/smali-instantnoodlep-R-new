@@ -39,7 +39,7 @@
         }
     .end annotation
 
-    invoke-static {}, Lcom/android/server/wm/gck;->tsu()V
+    invoke-static {}, Lcom/android/server/wm/ywr;->tsu()V
 
     return-void
 .end method

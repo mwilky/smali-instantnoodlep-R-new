@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/wifi/OpSlaNetlinkHelper;->T0()V
+    value = Lcom/android/server/wifi/OpSlaNetlinkHelper;->U0()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -195,7 +195,7 @@
 
     iget-object p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper$dma;->zta:Lcom/android/server/wifi/OpSlaNetlinkHelper;
 
-    invoke-static {p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->f0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
+    invoke-static {p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->g0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
 
     iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper$dma;->zta:Lcom/android/server/wifi/OpSlaNetlinkHelper;
 

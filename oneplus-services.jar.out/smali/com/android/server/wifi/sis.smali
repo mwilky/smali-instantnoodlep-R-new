@@ -44,8 +44,11 @@
     :goto_0
     iget-object p0, p0, Lcom/android/server/wifi/sis;->you:Lcom/android/server/wifi/OpSlaNetlinkHelper;
 
-    invoke-virtual {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->u0(Z)V
+    if-eqz p0, :cond_1
 
+    invoke-virtual {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->v0(Z)V
+
+    :cond_1
     return-void
 .end method
 
@@ -78,7 +81,10 @@
 
     iget-object p0, p0, Lcom/android/server/wifi/sis;->you:Lcom/android/server/wifi/OpSlaNetlinkHelper;
 
-    invoke-virtual {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->H1(I)V
+    if-eqz p0, :cond_0
 
+    invoke-virtual {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->I1(I)V
+
+    :cond_0
     return-void
 .end method

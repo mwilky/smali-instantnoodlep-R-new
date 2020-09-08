@@ -232,6 +232,10 @@
     :goto_0
     iput-object p1, p0, Lcom/oneplus/server/theme/zta;->rtg:Ljava/util/ArrayList;
 
+    iget-object p0, p0, Lcom/oneplus/server/theme/zta;->zta:Landroid/content/Context;
+
+    invoke-static {p0}, Landroid/content/res/OpAccentColorUtils;->initForSystem(Landroid/content/Context;)V
+
     return-void
 .end method
 
@@ -488,10 +492,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    const-string v1, "android.intent.action.USER_SWITCHED"
-
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
     const-string v1, "oneplus.change_white_theme_again"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
@@ -601,58 +601,12 @@
 .end method
 
 .method private ssp()V
-    .locals 3
+    .locals 0
 
-    const-string p0, "OnePlusThemeController"
+    iget-object p0, p0, Lcom/oneplus/server/theme/zta;->zta:Landroid/content/Context;
 
-    const-string v0, "changeAccentColor"
+    invoke-static {p0}, Landroid/content/res/OpAccentColorUtils;->changeGlobalAccentColor(Landroid/content/Context;)V
 
-    invoke-static {p0, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :try_start_0
-    const-string v0, "persist.sys.theme.accentcolor"
-
-    invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    const-string v1, ""
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Landroid/app/IActivityManager;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v2
-
-    iput-object v0, v2, Landroid/content/res/Configuration;->oneplusAccentColor:Ljava/lang/String;
-
-    invoke-interface {v1, v2}, Landroid/app/IActivityManager;->updateConfiguration(Landroid/content/res/Configuration;)Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p0, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    :goto_0
     return-void
 .end method
 

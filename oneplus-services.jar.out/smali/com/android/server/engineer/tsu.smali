@@ -323,73 +323,40 @@
     return-object p1
 .end method
 
-.method private dma(Landroid/net/wifi/WifiManager;)Ljava/util/List;
-    .locals 3
+.method private dma()Ljava/util/List;
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(",
-            "Landroid/net/wifi/WifiManager;",
-            ")",
+            "()",
             "Ljava/util/List<",
             "Ljava/lang/String;",
             ">;"
         }
     .end annotation
 
-    :try_start_0
-    const-string p0, "android.net.wifi.WifiManager"
+    sget-object p0, Lcom/oneplus/android/context/IOneplusContext$EType;->ONEPLUS_WIFI_MANAGER:Lcom/oneplus/android/context/IOneplusContext$EType;
 
-    invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object p0
-
-    const-string v0, "getWifiMacFromNvItem"
-
-    const/4 v1, 0x0
-
-    new-array v2, v1, [Ljava/lang/Class;
-
-    invoke-virtual {p0, v0, v2}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    invoke-static {p0}, Lcom/oneplus/android/context/OneplusContext;->queryInterface(Lcom/oneplus/android/context/IOneplusContext$EType;)Ljava/lang/Object;
 
     move-result-object p0
 
-    new-array v0, v1, [Ljava/lang/Object;
+    check-cast p0, Lcom/oneplus/android/wifi/IOpWifiManager;
 
-    invoke-virtual {p0, p1, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz p0, :cond_0
+
+    sget-object v0, Lcom/android/server/engineer/tsu;->cno:Ljava/lang/String;
+
+    const-string v1, "opWifiManager.getWifiMacFromNvItem  "
+
+    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-interface {p0}, Lcom/oneplus/android/wifi/IOpWifiManager;->getWifiMacFromNvItem()Ljava/util/List;
 
     move-result-object p0
-
-    check-cast p0, Ljava/util/List;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     return-object p0
 
-    :catch_0
-    move-exception p0
-
-    sget-object p1, Lcom/android/server/engineer/tsu;->cno:Ljava/lang/String;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "exception happened: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
+    :cond_0
     const/4 p0, 0x0
 
     return-object p0
@@ -432,23 +399,41 @@
     move-object v0, v1
 
     :goto_0
-    iget-object v2, p0, Lcom/android/server/engineer/tsu;->you:Landroid/content/Context;
-
-    const-string v3, "wifi"
-
-    invoke-virtual {v2, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-direct {p0}, Lcom/android/server/engineer/tsu;->dma()Ljava/util/List;
 
     move-result-object v2
 
-    check-cast v2, Landroid/net/wifi/WifiManager;
+    sget-object v3, Lcom/android/server/engineer/tsu;->cno:Ljava/lang/String;
 
-    invoke-direct {p0, v2}, Lcom/android/server/engineer/tsu;->dma(Landroid/net/wifi/WifiManager;)Ljava/util/List;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "macList  size = "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface {v2}, Ljava/util/List;->size()I
+
+    move-result v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v3, 0x0
 
     if-eqz v2, :cond_1
+
+    invoke-interface {v2}, Ljava/util/List;->size()I
+
+    move-result v4
+
+    if-lez v4, :cond_1
 
     invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -459,7 +444,7 @@
     goto :goto_1
 
     :cond_1
-    move-object v2, v1
+    const/4 v2, 0x0
 
     :goto_1
     invoke-static {}, Lcom/android/server/engineer/sis;->rtg()[B
@@ -6313,7 +6298,7 @@
     const/4 v7, -0x1
 
     :goto_1
-    const/16 v17, 0xbf
+    const/16 v17, 0xb7
 
     const-string v12, "OK:"
 
@@ -7714,7 +7699,7 @@
     :try_start_18
     new-array v2, v2, [I
 
-    const/16 v3, 0x87
+    const/16 v3, 0x80
 
     const/4 v4, 0x0
 

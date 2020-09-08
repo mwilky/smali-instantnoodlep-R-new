@@ -226,7 +226,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x65
+    const/16 v2, 0x61
 
     const/4 v3, 0x0
 
@@ -261,7 +261,7 @@
     :cond_1
     new-array v0, v0, [I
 
-    const/16 v1, 0xc8
+    const/16 v1, 0xc0
 
     aput v1, v0, v3
 
@@ -301,7 +301,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x65
+    const/16 v2, 0x61
 
     const/4 v3, 0x0
 
@@ -334,7 +334,7 @@
     :cond_1
     new-array v0, v0, [I
 
-    const/16 v1, 0xc8
+    const/16 v1, 0xc0
 
     aput v1, v0, v3
 
@@ -376,7 +376,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x65
+    const/16 v2, 0x61
 
     const/4 v3, 0x0
 
@@ -417,7 +417,7 @@
     :cond_1
     new-array v0, v0, [I
 
-    const/16 v1, 0xc8
+    const/16 v1, 0xc0
 
     aput v1, v0, v3
 

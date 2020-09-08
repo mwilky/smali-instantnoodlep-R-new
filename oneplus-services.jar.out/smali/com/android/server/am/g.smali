@@ -29,7 +29,7 @@
 
     iput-object p1, p0, Lcom/android/server/am/g;->zta:Landroid/content/Context;
 
-    sget-object p1, Lcom/android/server/am/hmo;->l:Landroid/os/Handler;
+    sget-object p1, Lcom/android/server/am/hmo;->s:Landroid/os/Handler;
 
     iput-object p1, p0, Lcom/android/server/am/g;->you:Landroid/os/Handler;
 

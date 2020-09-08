@@ -17,7 +17,7 @@
 
 
 # static fields
-.field public static final cno:Ljava/lang/String; = "vendor.pixelworks.hardware.display@1.1::ISoftIrisClient"
+.field public static final kth:Ljava/lang/String; = "vendor.pixelworks.hardware.display@1.1::ISoftIrisClient"
 
 
 # direct methods
@@ -189,32 +189,13 @@
 
 
 # virtual methods
-.method public abstract J(JILjava/util/ArrayList;)I
+.method public abstract N(JILjava/util/ArrayList;)I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(JI",
             "Ljava/util/ArrayList<",
             "Ljava/lang/Integer;",
             ">;)I"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-.end method
-
-.method public abstract a(JILjava/util/ArrayList;Lsis/you/zta/zta/you/wtn$sis;)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(JI",
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/Integer;",
-            ">;",
-            "Lsis/you/zta/zta/you/wtn$sis;",
-            ")V"
         }
     .end annotation
 
@@ -234,6 +215,25 @@
             "()",
             "Ljava/util/ArrayList<",
             "[B>;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract c(JILjava/util/ArrayList;Lsis/you/zta/zta/you/wtn$sis;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(JI",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/Integer;",
+            ">;",
+            "Lsis/you/zta/zta/you/wtn$sis;",
+            ")V"
         }
     .end annotation
 

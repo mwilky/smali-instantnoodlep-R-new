@@ -28,6 +28,8 @@
 
 .field public static final you:I = 0x201
 
+.field public static final ywr:I = 0x20c
+
 .field public static final zta:I = 0x200
 
 
@@ -153,11 +155,20 @@
 
     if-ne p0, v0, :cond_c
 
-    const-string p0, "TYPE_MAX_V1_1"
+    const-string p0, "WHITE_POINT_SHIFT"
 
     return-object p0
 
     :cond_c
+    const/16 v0, 0x20c
+
+    if-ne p0, v0, :cond_d
+
+    const-string p0, "TYPE_MAX_V1_1"
+
+    return-object p0
+
+    :cond_d
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -347,14 +358,27 @@
 
     if-ne v1, v3, :cond_c
 
-    const-string v1, "TYPE_MAX_V1_1"
+    const-string v1, "WHITE_POINT_SHIFT"
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     or-int/lit16 v2, v2, 0x20b
 
     :cond_c
-    if-eq p0, v2, :cond_d
+    and-int/lit16 v1, p0, 0x20c
+
+    const/16 v3, 0x20c
+
+    if-ne v1, v3, :cond_d
+
+    const-string v1, "TYPE_MAX_V1_1"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    or-int/lit16 v2, v2, 0x20c
+
+    :cond_d
+    if-eq p0, v2, :cond_e
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -380,7 +404,7 @@
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_d
+    :cond_e
     const-string p0, " | "
 
     invoke-static {p0, v0}, Ljava/lang/String;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;

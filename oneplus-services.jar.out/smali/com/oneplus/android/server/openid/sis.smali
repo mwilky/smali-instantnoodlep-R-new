@@ -36,7 +36,7 @@
 
 .field private static final irq:Ljava/lang/String; = "apid"
 
-.field private static final ivd:I = 0x3e8
+.field private static final ivd:I = 0x1388
 
 .field private static final les:Ljava/lang/String; = "auid"
 
@@ -2554,7 +2554,7 @@
 
     invoke-direct {v1, p0, p1}, Lcom/oneplus/android/server/openid/you;-><init>(Lcom/oneplus/android/server/openid/sis;Landroid/content/Context;)V
 
-    const-wide/16 p0, 0x3e8
+    const-wide/16 p0, 0x1388
 
     invoke-virtual {v0, v1, p0, p1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
@@ -3369,7 +3369,7 @@
 .end method
 
 .method public hmo(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-    .locals 7
+    .locals 8
 
     invoke-virtual {p0}, Lcom/oneplus/android/server/openid/sis;->les()Z
 
@@ -3377,7 +3377,23 @@
 
     const-string v1, "OpenIdManager"
 
-    const-string v2, ""
+    const/4 v2, 0x0
+
+    const-string v3, ""
+
+    const/4 v4, 0x1
+
+    if-nez v0, :cond_0
+
+    new-array v0, v4, [I
+
+    const/16 v5, 0x135
+
+    aput v5, v0, v2
+
+    invoke-static {v0}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v0
 
     if-nez v0, :cond_0
 
@@ -3385,7 +3401,7 @@
 
     invoke-static {v1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    return-object v2
+    return-object v3
 
     :cond_0
     const/4 v0, -0x1
@@ -3393,79 +3409,80 @@
     :try_start_0
     invoke-virtual {p3}, Ljava/lang/String;->hashCode()I
 
-    move-result v3
+    move-result v5
 
-    const/4 v4, 0x3
+    const/4 v6, 0x3
 
-    const/4 v5, 0x2
+    const/4 v7, 0x2
 
-    const/4 v6, 0x1
-
-    sparse-switch v3, :sswitch_data_0
+    sparse-switch v5, :sswitch_data_0
 
     goto :goto_0
 
     :sswitch_0
-    const-string v3, "OUID"
+    const-string v2, "OUID"
 
-    invoke-virtual {p3, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v2
 
-    if-eqz v3, :cond_1
+    if-eqz v2, :cond_1
 
-    move v0, v6
+    move v2, v4
 
-    goto :goto_0
+    goto :goto_1
 
     :sswitch_1
-    const-string v3, "GUID"
+    const-string v5, "GUID"
 
-    invoke-virtual {p3, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p3, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v5
 
-    if-eqz v3, :cond_1
+    if-eqz v5, :cond_1
 
-    const/4 v0, 0x0
-
-    goto :goto_0
+    goto :goto_1
 
     :sswitch_2
-    const-string v3, "AUID"
+    const-string v2, "AUID"
 
-    invoke-virtual {p3, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v2
 
-    if-eqz v3, :cond_1
+    if-eqz v2, :cond_1
 
-    move v0, v5
+    move v2, v7
 
-    goto :goto_0
+    goto :goto_1
 
     :sswitch_3
-    const-string v3, "APID"
+    const-string v2, "APID"
 
-    invoke-virtual {p3, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v2
 
-    if-eqz v3, :cond_1
+    if-eqz v2, :cond_1
 
-    move v0, v4
+    move v2, v6
+
+    goto :goto_1
 
     :cond_1
     :goto_0
-    if-eqz v0, :cond_5
+    move v2, v0
 
-    if-eq v0, v6, :cond_4
+    :goto_1
+    if-eqz v2, :cond_5
 
-    if-eq v0, v5, :cond_3
+    if-eq v2, v4, :cond_4
 
-    if-eq v0, v4, :cond_2
+    if-eq v2, v7, :cond_3
 
-    return-object v2
+    if-eq v2, v6, :cond_2
+
+    return-object v3
 
     :cond_2
     invoke-direct {p0, p1, p2}, Lcom/oneplus/android/server/openid/sis;->ibl(Ljava/lang/String;I)Ljava/lang/String;
@@ -3526,7 +3543,7 @@
 
     invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    return-object v2
+    return-object v3
 
     nop
 

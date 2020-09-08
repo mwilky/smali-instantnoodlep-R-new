@@ -388,7 +388,7 @@
     :try_start_0
     const-string v0, "persist.sys.font"
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 

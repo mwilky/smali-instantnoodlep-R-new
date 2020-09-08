@@ -812,6 +812,7 @@
     iput-object p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->cjf:Lcom/android/internal/net/IOemNetd;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
@@ -988,29 +989,13 @@
 
     iput-object v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->sis:Landroid/os/Handler;
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->r1()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->s1()V
 
-    iget-object v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->vju:Lcom/android/server/wifi/WifiSettingsConfigStore;
-
-    sget-object v2, Lcom/android/server/wifi/WifiSettingsConfigStore;->WIFI_VERBOSE_LOGGING_ENABLED:Lcom/android/server/wifi/WifiSettingsConfigStore$Key;
-
-    invoke-virtual {v0, v2}, Lcom/android/server/wifi/WifiSettingsConfigStore;->get(Lcom/android/server/wifi/WifiSettingsConfigStore$Key;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    invoke-virtual {p0, v0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->u0(Z)V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->V0()V
 
     invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->U0()V
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->T0()V
-
-    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->V0(Landroid/os/HandlerThread;)V
+    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->W0(Landroid/os/HandlerThread;)V
 
     iget-object p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->zta:Landroid/content/Context;
 
@@ -1024,7 +1009,7 @@
 
     move-result p1
 
-    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->J1(I)V
+    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->K1(I)V
 
     iget-object p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->zta:Landroid/content/Context;
 
@@ -1040,15 +1025,15 @@
 
     iput p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->irq:I
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->Z0()Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->a1()Z
 
     move-result p1
 
     iput-boolean p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->v:Z
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->X0()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->Y0()V
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->s1()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->t1()V
 
     iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->sis:Landroid/os/Handler;
 
@@ -1076,6 +1061,77 @@
 
     move-result-object p0
 
+    const-string v0, "download_smart_link_aggregation"
+
+    const/4 v1, 0x0
+
+    invoke-static {p0, v0, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result p0
+
+    const/4 v0, 0x1
+
+    if-ne p0, v0, :cond_0
+
+    move v1, v0
+
+    :cond_0
+    return v1
+.end method
+
+.method private A1(Z)V
+    .locals 2
+
+    const/16 v0, 0x24
+
+    invoke-direct {p0, v0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->F1(SI)Z
+
+    move-result p0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "After sendScreenStateToKernel:result="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string p0, " screenState="
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string p1, "OpSlaNetlinkHelper"
+
+    invoke-static {p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method static synthetic B(Lcom/android/server/wifi/OpSlaNetlinkHelper;I)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->l0(I)V
+
+    return-void
+.end method
+
+.method private B0()Z
+    .locals 2
+
+    iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->zta:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
     const-string v0, "sla_downloading_dm_notify"
 
     const/4 v1, 0x0
@@ -1094,7 +1150,7 @@
     return v1
 .end method
 
-.method private A1()V
+.method private B1()V
     .locals 5
 
     new-instance v0, Landroid/os/Bundle;
@@ -1137,7 +1193,7 @@
 
     iget-object v1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->zta:Landroid/content/Context;
 
-    const v4, 0x50f00e5
+    const v4, 0x50f00e6
 
     invoke-virtual {v1, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1153,7 +1209,7 @@
 
     invoke-direct {v1, v4, v3}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    const v3, 0x5070171
+    const v3, 0x5070172
 
     invoke-virtual {v1, v3}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
@@ -1173,7 +1229,7 @@
 
     move-result-object v1
 
-    const v3, 0x50f00e7
+    const v3, 0x50f00e8
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1189,7 +1245,7 @@
 
     move-result-object v1
 
-    const v3, 0x50f00e6
+    const v3, 0x50f00e7
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1209,7 +1265,7 @@
 
     const-string v1, "android.intent.action.GO_ACCELERATION_SETTINGS"
 
-    invoke-direct {p0, v1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->y0(Ljava/lang/String;)Landroid/app/PendingIntent;
+    invoke-direct {p0, v1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->z0(Ljava/lang/String;)Landroid/app/PendingIntent;
 
     move-result-object v1
 
@@ -1242,15 +1298,15 @@
     return-void
 .end method
 
-.method static synthetic B(Lcom/android/server/wifi/OpSlaNetlinkHelper;I)V
+.method static synthetic C(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->k0(I)V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->h0()V
 
     return-void
 .end method
 
-.method private B0()Z
+.method private C0()Z
     .locals 2
 
     iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->zta:Landroid/content/Context;
@@ -1277,7 +1333,7 @@
     return v1
 .end method
 
-.method private B1()V
+.method private C1()V
     .locals 6
 
     new-instance v0, Landroid/os/Bundle;
@@ -1326,7 +1382,7 @@
 
     move-result-object v2
 
-    const v4, 0x50f00e2
+    const v4, 0x50f00e3
 
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1334,7 +1390,7 @@
 
     const-string v4, "android.intent.action.ENABLE_DOWNLOAD_SWITCH"
 
-    invoke-direct {p0, v4}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->y0(Ljava/lang/String;)Landroid/app/PendingIntent;
+    invoke-direct {p0, v4}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->z0(Ljava/lang/String;)Landroid/app/PendingIntent;
 
     move-result-object v4
 
@@ -1352,7 +1408,7 @@
 
     invoke-direct {v2, v4, v3}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    const v3, 0x5070172
+    const v3, 0x5070173
 
     invoke-virtual {v2, v3}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
@@ -1368,7 +1424,7 @@
 
     move-result-object v2
 
-    const v3, 0x50f00e4
+    const v3, 0x50f00e5
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1384,7 +1440,7 @@
 
     move-result-object v2
 
-    const v3, 0x50f00e3
+    const v3, 0x50f00e4
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1404,7 +1460,7 @@
 
     const-string v2, "android.intent.action.GO_ACCELERATION_SETTINGS"
 
-    invoke-direct {p0, v2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->y0(Ljava/lang/String;)Landroid/app/PendingIntent;
+    invoke-direct {p0, v2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->z0(Ljava/lang/String;)Landroid/app/PendingIntent;
 
     move-result-object v2
 
@@ -1437,15 +1493,15 @@
     return-void
 .end method
 
-.method static synthetic C(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
+.method static synthetic D(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/net/ConnectivityManager;
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->g0()V
+    iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->vdb:Landroid/net/ConnectivityManager;
 
-    return-void
+    return-object p0
 .end method
 
-.method private C0()Z
+.method private D0()Z
     .locals 2
 
     iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->zta:Landroid/content/Context;
@@ -1472,7 +1528,7 @@
     return v1
 .end method
 
-.method private C1()V
+.method private D1()V
     .locals 6
 
     new-instance v0, Landroid/os/Bundle;
@@ -1521,7 +1577,7 @@
 
     iget-object v1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->zta:Landroid/content/Context;
 
-    const v5, 0x50f00f3
+    const v5, 0x50f00f4
 
     invoke-virtual {v1, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1537,7 +1593,7 @@
 
     invoke-direct {v1, v5, v4}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    const v4, 0x5070173
+    const v4, 0x5070174
 
     invoke-virtual {v1, v4}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
@@ -1557,7 +1613,7 @@
 
     move-result-object v1
 
-    const v4, 0x50f00f2
+    const v4, 0x50f00f3
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1573,7 +1629,7 @@
 
     move-result-object v1
 
-    const v4, 0x50f00f1    # 6.7240006E-36f
+    const v4, 0x50f00f2
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1593,7 +1649,7 @@
 
     const-string v1, "android.intent.action.GO_ACCELERATION_SETTINGS"
 
-    invoke-direct {p0, v1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->y0(Ljava/lang/String;)Landroid/app/PendingIntent;
+    invoke-direct {p0, v1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->z0(Ljava/lang/String;)Landroid/app/PendingIntent;
 
     move-result-object v1
 
@@ -1636,15 +1692,15 @@
     return-void
 .end method
 
-.method static synthetic D(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/net/ConnectivityManager;
+.method static synthetic E(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/net/NetworkRequest;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->vdb:Landroid/net/ConnectivityManager;
+    iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->dma:Landroid/net/NetworkRequest;
 
     return-object p0
 .end method
 
-.method private D0()Z
+.method private E0()Z
     .locals 2
 
     iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->zta:Landroid/content/Context;
@@ -1671,7 +1727,7 @@
     return v1
 .end method
 
-.method private D1()V
+.method private E1()V
     .locals 6
 
     new-instance v0, Landroid/os/Bundle;
@@ -1720,7 +1776,7 @@
 
     move-result-object v2
 
-    const v4, 0x50f00ed
+    const v4, 0x50f00ee
 
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1728,7 +1784,7 @@
 
     const-string v4, "android.intent.action.ENABLE_SLS_APP_SWITCH"
 
-    invoke-direct {p0, v4}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->y0(Ljava/lang/String;)Landroid/app/PendingIntent;
+    invoke-direct {p0, v4}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->z0(Ljava/lang/String;)Landroid/app/PendingIntent;
 
     move-result-object v4
 
@@ -1746,7 +1802,7 @@
 
     invoke-direct {v2, v4, v3}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    const v3, 0x5070172
+    const v3, 0x5070173
 
     invoke-virtual {v2, v3}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
@@ -1762,7 +1818,7 @@
 
     move-result-object v2
 
-    const v3, 0x50f00ef    # 6.723999E-36f
+    const v3, 0x50f00f0    # 6.724E-36f
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1778,7 +1834,7 @@
 
     move-result-object v2
 
-    const v3, 0x50f00ee
+    const v3, 0x50f00ef    # 6.723999E-36f
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1798,7 +1854,7 @@
 
     const-string v2, "android.intent.action.GO_ACCELERATION_SETTINGS"
 
-    invoke-direct {p0, v2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->y0(Ljava/lang/String;)Landroid/app/PendingIntent;
+    invoke-direct {p0, v2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->z0(Ljava/lang/String;)Landroid/app/PendingIntent;
 
     move-result-object v2
 
@@ -1831,15 +1887,15 @@
     return-void
 .end method
 
-.method static synthetic E(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/net/NetworkRequest;
+.method static synthetic F(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/net/ConnectivityManager$NetworkCallback;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->dma:Landroid/net/NetworkRequest;
+    iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->veq:Landroid/net/ConnectivityManager$NetworkCallback;
 
     return-object p0
 .end method
 
-.method private E0()Ljava/util/Map;
+.method private F0()Ljava/util/Map;
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1903,7 +1959,7 @@
 
     move-result v5
 
-    invoke-direct {p0, v4}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->f1(I)Z
+    invoke-direct {p0, v4}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->g1(I)Z
 
     move-result v4
 
@@ -1996,7 +2052,7 @@
     return-object v1
 .end method
 
-.method private E1(SI)Z
+.method private F1(SI)Z
     .locals 9
 
     sget-object v0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->H:Ljava/io/FileDescriptor;
@@ -2103,7 +2159,7 @@
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->w0(S)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->x0(S)Ljava/lang/String;
 
     move-result-object p0
 
@@ -2140,15 +2196,15 @@
     return v1
 .end method
 
-.method static synthetic F(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/net/ConnectivityManager$NetworkCallback;
+.method static synthetic G(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/telephony/SubscriptionManager;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->veq:Landroid/net/ConnectivityManager$NetworkCallback;
+    iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->bio:Landroid/telephony/SubscriptionManager;
 
     return-object p0
 .end method
 
-.method private F0()Z
+.method private G0()Z
     .locals 2
 
     iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->zta:Landroid/content/Context;
@@ -2175,7 +2231,7 @@
     return v1
 .end method
 
-.method private F1(S[I)Z
+.method private G1(S[I)Z
     .locals 9
 
     sget-object v0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->H:Ljava/io/FileDescriptor;
@@ -2312,7 +2368,7 @@
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->w0(S)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->x0(S)Ljava/lang/String;
 
     move-result-object p0
 
@@ -2349,15 +2405,15 @@
     return v2
 .end method
 
-.method static synthetic G(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/telephony/SubscriptionManager;
+.method static synthetic H(Lcom/android/server/wifi/OpSlaNetlinkHelper;Z)V
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->bio:Landroid/telephony/SubscriptionManager;
+    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->m0(Z)V
 
-    return-object p0
+    return-void
 .end method
 
-.method private G0()Z
+.method private H0()Z
     .locals 2
 
     iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->zta:Landroid/content/Context;
@@ -2385,14 +2441,14 @@
     return v1
 .end method
 
-.method private G1()V
+.method private H1()V
     .locals 14
 
     iget-object v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->ywr:Lcom/android/server/pm/PackageManagerService;
 
     if-eqz v0, :cond_8
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->K0()Ljava/util/ArrayList;
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->L0()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -2662,7 +2718,7 @@
 
     const/16 v0, 0x1c
 
-    invoke-direct {p0, v0, v1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->F1(S[I)Z
+    invoke-direct {p0, v0, v1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->G1(S[I)Z
 
     goto :goto_3
 
@@ -2681,15 +2737,15 @@
     return-void
 .end method
 
-.method static synthetic H(Lcom/android/server/wifi/OpSlaNetlinkHelper;Z)V
+.method static synthetic I(Lcom/android/server/wifi/OpSlaNetlinkHelper;Z)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->l0(Z)V
+    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->P1(Z)V
 
     return-void
 .end method
 
-.method private H0()Z
+.method private I0()Z
     .locals 2
 
     iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->zta:Landroid/content/Context;
@@ -2716,15 +2772,15 @@
     return v1
 .end method
 
-.method static synthetic I(Lcom/android/server/wifi/OpSlaNetlinkHelper;Z)V
+.method static synthetic J(Lcom/android/server/wifi/OpSlaNetlinkHelper;Z)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->O1(Z)V
+    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->U1(Z)V
 
     return-void
 .end method
 
-.method private I0()Z
+.method private J0()Z
     .locals 2
 
     iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->zta:Landroid/content/Context;
@@ -2752,7 +2808,7 @@
     return v1
 .end method
 
-.method private I1(Z)V
+.method private J1(Z)V
     .locals 1
 
     iget-boolean v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->e:Z
@@ -2763,7 +2819,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->b1()Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->c1()Z
 
     move-result p1
 
@@ -2775,27 +2831,29 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->m1()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->n1()V
 
     goto :goto_0
 
     :cond_0
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->l1()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->m1()V
 
     :cond_1
     :goto_0
     return-void
 .end method
 
-.method static synthetic J(Lcom/android/server/wifi/OpSlaNetlinkHelper;Z)V
+.method static synthetic K(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->T1(Z)V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->Z1()Z
 
-    return-void
+    move-result p0
+
+    return p0
 .end method
 
-.method private J0()Ljava/util/ArrayList;
+.method private K0()Ljava/util/ArrayList;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -2826,7 +2884,7 @@
     return-object p0
 .end method
 
-.method private J1(I)V
+.method private K1(I)V
     .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -2874,31 +2932,29 @@
     if-nez p1, :cond_2
 
     :cond_1
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->y1()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->z1()V
 
     :cond_2
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->m1()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->n1()V
 
     goto :goto_1
 
     :cond_3
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->l1()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->m1()V
 
     :goto_1
     return-void
 .end method
 
-.method static synthetic K(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
+.method static synthetic L(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->Y1()Z
-
-    move-result p0
+    iget-boolean p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->n:Z
 
     return p0
 .end method
 
-.method private K0()Ljava/util/ArrayList;
+.method private L0()Ljava/util/ArrayList;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -2929,25 +2985,27 @@
     return-object p0
 .end method
 
-.method private K1([I)V
+.method private L1([I)V
     .locals 1
 
     const/16 v0, 0x2f
 
-    invoke-direct {p0, v0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->F1(S[I)Z
+    invoke-direct {p0, v0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->G1(S[I)Z
 
     return-void
 .end method
 
-.method static synthetic L(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
+.method static synthetic M(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
     .locals 0
 
-    iget-boolean p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->n:Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->A0()Z
+
+    move-result p0
 
     return p0
 .end method
 
-.method private L0()Landroid/content/ComponentName;
+.method private M0()Landroid/content/ComponentName;
     .locals 2
 
     iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->qbh:Landroid/app/ActivityManager;
@@ -2992,7 +3050,7 @@
     return-object v0
 .end method
 
-.method private L1(ZLandroid/net/NetworkCapabilities;)V
+.method private M1(ZLandroid/net/NetworkCapabilities;)V
     .locals 7
 
     const/4 v0, 0x2
@@ -3067,7 +3125,7 @@
 
     aput p1, v0, v1
 
-    invoke-direct {p0, v0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->K1([I)V
+    invoke-direct {p0, v0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->L1([I)V
 
     if-nez v2, :cond_5
 
@@ -3088,7 +3146,7 @@
 
     if-eqz p1, :cond_6
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->m1()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->n1()V
 
     goto :goto_3
 
@@ -3106,27 +3164,25 @@
     if-nez p1, :cond_8
 
     :cond_7
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->l1()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->m1()V
 
     :cond_8
     :goto_3
     return-void
 .end method
 
-.method static synthetic M(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
+.method static synthetic N(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->z0()Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->n0()V
 
-    move-result p0
-
-    return p0
+    return-void
 .end method
 
-.method private M0()Ljava/lang/String;
+.method private N0()Ljava/lang/String;
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->L0()Landroid/content/ComponentName;
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->M0()Landroid/content/ComponentName;
 
     move-result-object p0
 
@@ -3145,7 +3201,7 @@
     return-object p0
 .end method
 
-.method private M1()V
+.method private N1()V
     .locals 5
 
     iget v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->qeg:I
@@ -3213,35 +3269,35 @@
 
     iput-wide v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->b:J
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->p0()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->q0()V
 
     :cond_0
     return-void
 .end method
 
-.method static synthetic N(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
+.method static synthetic O(Lcom/android/server/wifi/OpSlaNetlinkHelper;Z)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->m0()V
+    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->o1(Z)V
 
     return-void
 .end method
 
-.method private N0()I
+.method private O0()I
     .locals 1
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->L0()Landroid/content/ComponentName;
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->M0()Landroid/content/ComponentName;
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->O0(Landroid/content/ComponentName;)I
+    invoke-direct {p0, v0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->P0(Landroid/content/ComponentName;)I
 
     move-result p0
 
     return p0
 .end method
 
-.method private N1()V
+.method private O1()V
     .locals 5
 
     iget-boolean v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->f:Z
@@ -3417,15 +3473,15 @@
     return-void
 .end method
 
-.method static synthetic O(Lcom/android/server/wifi/OpSlaNetlinkHelper;Z)V
+.method static synthetic P(Lcom/android/server/wifi/OpSlaNetlinkHelper;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->n1(Z)V
+    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->b2(I)V
 
     return-void
 .end method
 
-.method private O0(Landroid/content/ComponentName;)I
+.method private P0(Landroid/content/ComponentName;)I
     .locals 2
 
     if-nez p1, :cond_0
@@ -3452,7 +3508,7 @@
     return p0
 .end method
 
-.method private O1(Z)V
+.method private P1(Z)V
     .locals 1
 
     iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->zta:Landroid/content/Context;
@@ -3468,15 +3524,17 @@
     return-void
 .end method
 
-.method static synthetic P(Lcom/android/server/wifi/OpSlaNetlinkHelper;I)V
+.method static synthetic Q(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Ljava/util/ArrayList;
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->a2(I)V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->K0()Ljava/util/ArrayList;
 
-    return-void
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method private P0(Landroid/net/Network;)V
+.method private Q0(Landroid/net/Network;)V
     .locals 8
 
     iget-object v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->C:Ljava/util/HashMap;
@@ -3533,27 +3591,25 @@
     return-void
 .end method
 
-.method private P1(I)V
+.method private Q1(I)V
     .locals 1
 
     const/16 v0, 0x2e
 
-    invoke-direct {p0, v0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->E1(SI)Z
+    invoke-direct {p0, v0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->F1(SI)Z
 
     return-void
 .end method
 
-.method static synthetic Q(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Ljava/util/ArrayList;
-    .locals 0
+.method static synthetic R()Ljava/io/FileDescriptor;
+    .locals 1
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->J0()Ljava/util/ArrayList;
+    sget-object v0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->H:Ljava/io/FileDescriptor;
 
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method
 
-.method private Q0(Landroid/net/Network;Landroid/net/LinkProperties;)V
+.method private R0(Landroid/net/Network;Landroid/net/LinkProperties;)V
     .locals 10
 
     iget-object v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->C:Ljava/util/HashMap;
@@ -3627,26 +3683,26 @@
 
     const/4 v2, 0x1
 
-    invoke-direct {p0, v2, p2, v1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->n0(ZLandroid/net/LinkProperties;Landroid/net/NetworkCapabilities;)V
+    invoke-direct {p0, v2, p2, v1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->o0(ZLandroid/net/LinkProperties;Landroid/net/NetworkCapabilities;)V
 
     iget-object v1, v0, Landroid/net/NetworkState;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
-    invoke-direct {p0, v2, p2, v1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->j0(ZLandroid/net/LinkProperties;Landroid/net/NetworkCapabilities;)V
+    invoke-direct {p0, v2, p2, v1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->k0(ZLandroid/net/LinkProperties;Landroid/net/NetworkCapabilities;)V
 
     iget-object v1, v0, Landroid/net/NetworkState;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
-    invoke-direct {p0, v2, p2, v1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->Q1(ZLandroid/net/LinkProperties;Landroid/net/NetworkCapabilities;)V
+    invoke-direct {p0, v2, p2, v1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->R1(ZLandroid/net/LinkProperties;Landroid/net/NetworkCapabilities;)V
 
     iget-object v0, v0, Landroid/net/NetworkState;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->i0(Landroid/net/Network;Landroid/net/LinkProperties;Landroid/net/NetworkCapabilities;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->j0(Landroid/net/Network;Landroid/net/LinkProperties;Landroid/net/NetworkCapabilities;)V
 
     :cond_1
     :goto_0
     return-void
 .end method
 
-.method private Q1(ZLandroid/net/LinkProperties;Landroid/net/NetworkCapabilities;)V
+.method private R1(ZLandroid/net/LinkProperties;Landroid/net/NetworkCapabilities;)V
     .locals 9
 
     if-eqz p2, :cond_d
@@ -3805,7 +3861,7 @@
 
     if-eqz p2, :cond_7
 
-    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->U1(Z)V
+    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->V1(Z)V
 
     iget-boolean p3, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->p:Z
 
@@ -3828,7 +3884,7 @@
 
     if-eqz p3, :cond_b
 
-    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->I1(Z)V
+    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->J1(Z)V
 
     iget-boolean p3, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->q:Z
 
@@ -3965,7 +4021,7 @@
     iput-boolean p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->q:Z
 
     :goto_6
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->m1()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->n1()V
 
     :cond_b
     return-void
@@ -4005,15 +4061,15 @@
     return-void
 .end method
 
-.method static synthetic R()Ljava/io/FileDescriptor;
-    .locals 1
+.method static synthetic S(Ljava/io/FileDescriptor;)Ljava/io/FileDescriptor;
+    .locals 0
 
-    sget-object v0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->H:Ljava/io/FileDescriptor;
+    sput-object p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->H:Ljava/io/FileDescriptor;
 
-    return-object v0
+    return-object p0
 .end method
 
-.method private R0(Landroid/net/Network;)V
+.method private S0(Landroid/net/Network;)V
     .locals 3
 
     iget-object v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->C:Ljava/util/HashMap;
@@ -4059,28 +4115,28 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {p0, v2, v0, v1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->n0(ZLandroid/net/LinkProperties;Landroid/net/NetworkCapabilities;)V
+    invoke-direct {p0, v2, v0, v1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->o0(ZLandroid/net/LinkProperties;Landroid/net/NetworkCapabilities;)V
 
     iget-object v0, p1, Landroid/net/NetworkState;->linkProperties:Landroid/net/LinkProperties;
 
     iget-object v1, p1, Landroid/net/NetworkState;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
-    invoke-direct {p0, v2, v0, v1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->j0(ZLandroid/net/LinkProperties;Landroid/net/NetworkCapabilities;)V
+    invoke-direct {p0, v2, v0, v1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->k0(ZLandroid/net/LinkProperties;Landroid/net/NetworkCapabilities;)V
 
     iget-object v0, p1, Landroid/net/NetworkState;->linkProperties:Landroid/net/LinkProperties;
 
     iget-object v1, p1, Landroid/net/NetworkState;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
-    invoke-direct {p0, v2, v0, v1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->Q1(ZLandroid/net/LinkProperties;Landroid/net/NetworkCapabilities;)V
+    invoke-direct {p0, v2, v0, v1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->R1(ZLandroid/net/LinkProperties;Landroid/net/NetworkCapabilities;)V
 
     iget-object p1, p1, Landroid/net/NetworkState;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
-    invoke-direct {p0, v2, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->L1(ZLandroid/net/NetworkCapabilities;)V
+    invoke-direct {p0, v2, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->M1(ZLandroid/net/NetworkCapabilities;)V
 
     return-void
 .end method
 
-.method private R1(Z)V
+.method private S1(Z)V
     .locals 1
 
     iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->zta:Landroid/content/Context;
@@ -4096,15 +4152,17 @@
     return-void
 .end method
 
-.method static synthetic S(Ljava/io/FileDescriptor;)Ljava/io/FileDescriptor;
+.method static synthetic T(Lcom/android/server/wifi/OpSlaNetlinkHelper;SI)Z
     .locals 0
 
-    sput-object p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->H:Ljava/io/FileDescriptor;
+    invoke-direct {p0, p1, p2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->F1(SI)Z
 
-    return-object p0
+    move-result p0
+
+    return p0
 .end method
 
-.method private S0(Landroid/net/Network;Landroid/net/NetworkCapabilities;)V
+.method private T0(Landroid/net/Network;Landroid/net/NetworkCapabilities;)V
     .locals 10
 
     iget-object v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->C:Ljava/util/HashMap;
@@ -4178,20 +4236,20 @@
 
     const/4 v1, 0x1
 
-    invoke-direct {p0, v1, p1, p2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->n0(ZLandroid/net/LinkProperties;Landroid/net/NetworkCapabilities;)V
+    invoke-direct {p0, v1, p1, p2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->o0(ZLandroid/net/LinkProperties;Landroid/net/NetworkCapabilities;)V
 
     iget-object p1, v0, Landroid/net/NetworkState;->linkProperties:Landroid/net/LinkProperties;
 
-    invoke-direct {p0, v1, p1, p2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->Q1(ZLandroid/net/LinkProperties;Landroid/net/NetworkCapabilities;)V
+    invoke-direct {p0, v1, p1, p2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->R1(ZLandroid/net/LinkProperties;Landroid/net/NetworkCapabilities;)V
 
-    invoke-direct {p0, v1, p2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->L1(ZLandroid/net/NetworkCapabilities;)V
+    invoke-direct {p0, v1, p2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->M1(ZLandroid/net/NetworkCapabilities;)V
 
     :cond_1
     :goto_0
     return-void
 .end method
 
-.method private S1(Z)V
+.method private T1(Z)V
     .locals 1
 
     iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->zta:Landroid/content/Context;
@@ -4207,17 +4265,15 @@
     return-void
 .end method
 
-.method static synthetic T(Lcom/android/server/wifi/OpSlaNetlinkHelper;SI)Z
+.method static synthetic U(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Lcom/android/server/wifi/WifiSettingsConfigStore;
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->E1(SI)Z
+    iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->vju:Lcom/android/server/wifi/WifiSettingsConfigStore;
 
-    move-result p0
-
-    return p0
+    return-object p0
 .end method
 
-.method private T0()V
+.method private U0()V
     .locals 9
 
     new-instance v0, Landroid/content/IntentFilter;
@@ -4317,7 +4373,7 @@
     return-void
 .end method
 
-.method private T1(Z)V
+.method private U1(Z)V
     .locals 2
 
     iget-object v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->zta:Landroid/content/Context;
@@ -4343,17 +4399,17 @@
     return-void
 .end method
 
-.method static synthetic U(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
+.method static synthetic V(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->e1()Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->f1()Z
 
     move-result p0
 
     return p0
 .end method
 
-.method private U0()V
+.method private V0()V
     .locals 1
 
     new-instance v0, Lcom/android/server/wifi/OpSlaNetlinkHelper$igw;
@@ -4373,7 +4429,7 @@
     return-void
 .end method
 
-.method private U1(Z)V
+.method private V1(Z)V
     .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -4413,14 +4469,14 @@
     if-nez v0, :cond_1
 
     :cond_0
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->y1()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->z1()V
 
     :cond_1
     iput-boolean p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->f:Z
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->m1()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->n1()V
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->x0()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->y0()V
 
     iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->ire:Landroid/os/Handler;
 
@@ -4443,18 +4499,18 @@
 
     const/16 v0, -0xc8
 
-    invoke-direct {p0, v0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->a2(I)V
+    invoke-direct {p0, v0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->b2(I)V
 
     iput-boolean p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->f:Z
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->l1()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->m1()V
 
     :cond_3
     :goto_0
     return-void
 .end method
 
-.method static synthetic V(Lcom/android/server/wifi/OpSlaNetlinkHelper;I)I
+.method static synthetic W(Lcom/android/server/wifi/OpSlaNetlinkHelper;I)I
     .locals 0
 
     iput p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->ivd:I
@@ -4462,7 +4518,7 @@
     return p1
 .end method
 
-.method private V0(Landroid/os/HandlerThread;)V
+.method private W0(Landroid/os/HandlerThread;)V
     .locals 4
 
     new-instance v0, Lcom/android/server/wifi/OpSlaNetlinkHelper$gck;
@@ -4508,7 +4564,7 @@
     return-void
 .end method
 
-.method private V1(Ljava/lang/String;I)V
+.method private W1(Ljava/lang/String;I)V
     .locals 4
 
     iget-object v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->zta:Landroid/content/Context;
@@ -4546,17 +4602,17 @@
     return-void
 .end method
 
-.method static synthetic W(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
+.method static synthetic X(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->I0()Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->J0()Z
 
     move-result p0
 
     return p0
 .end method
 
-.method private W0()V
+.method private X0()V
     .locals 3
 
     iget-object v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->ibl:Landroid/telephony/TelephonyManager;
@@ -4582,7 +4638,7 @@
 
     move-result v0
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->b1()Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->c1()Z
 
     move-result v1
 
@@ -4630,7 +4686,7 @@
     return-void
 .end method
 
-.method private W1()V
+.method private X1()V
     .locals 2
 
     iget-object v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->you:Landroid/os/Handler;
@@ -4641,7 +4697,7 @@
 
     move-result-object p0
 
-    const v1, 0x50f00ec
+    const v1, 0x50f00ed
 
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -4658,27 +4714,27 @@
     return-void
 .end method
 
-.method static synthetic X(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
+.method static synthetic Y(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->X1()Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->H0()Z
 
     move-result p0
 
     return p0
 .end method
 
-.method private X0()V
+.method private Y0()V
     .locals 1
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->t0(Z)V
+    invoke-direct {p0, v0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->u0(Z)V
 
     return-void
 .end method
 
-.method private X1()Z
+.method private Y1()Z
     .locals 7
 
     iget-object v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->bvj:Landroid/telephony/TelephonyManager;
@@ -4703,15 +4759,15 @@
     move v0, v2
 
     :goto_0
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->Y0()Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->Z0()Z
 
     move-result v3
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->i1()Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->j1()Z
 
     move-result v4
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->b1()Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->c1()Z
 
     move-result v5
 
@@ -4867,17 +4923,17 @@
     return v2
 .end method
 
-.method static synthetic Y(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
+.method static synthetic Z(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->G0()Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->Y1()Z
 
     move-result p0
 
     return p0
 .end method
 
-.method private Y0()Z
+.method private Z0()Z
     .locals 3
 
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultDataSubscriptionId()I
@@ -4942,7 +4998,7 @@
     return p0
 .end method
 
-.method private Y1()Z
+.method private Z1()Z
     .locals 7
 
     iget-object v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->bvj:Landroid/telephony/TelephonyManager;
@@ -4967,15 +5023,15 @@
     move v0, v2
 
     :goto_0
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->Y0()Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->Z0()Z
 
     move-result v3
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->i1()Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->j1()Z
 
     move-result v4
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->b1()Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->c1()Z
 
     move-result v5
 
@@ -5071,7 +5127,15 @@
     return v2
 .end method
 
-.method static synthetic Z(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/net/Network;
+.method static synthetic a(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->y0()V
+
+    return-void
+.end method
+
+.method static synthetic a0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/net/Network;
     .locals 0
 
     iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->fto:Landroid/net/Network;
@@ -5079,7 +5143,7 @@
     return-object p0
 .end method
 
-.method private Z0()Z
+.method private a1()Z
     .locals 2
 
     iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->zta:Landroid/content/Context;
@@ -5106,7 +5170,7 @@
     return v1
 .end method
 
-.method private Z1()V
+.method private a2()V
     .locals 2
 
     const-string v0, "OpSlaNetlinkHelper"
@@ -5128,20 +5192,20 @@
     iput-object v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->tsu:Ljava/lang/Thread;
 
     :cond_0
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->l1()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->m1()V
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
+.method static synthetic b(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->x0()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->H1()V
 
     return-void
 .end method
 
-.method static synthetic a0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/os/Handler;
+.method static synthetic b0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/os/Handler;
     .locals 0
 
     iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->you:Landroid/os/Handler;
@@ -5149,7 +5213,7 @@
     return-object p0
 .end method
 
-.method private a1(I)Z
+.method private b1(I)Z
     .locals 2
 
     iget-object v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->x:Ljava/util/ArrayList;
@@ -5181,7 +5245,7 @@
     throw p0
 .end method
 
-.method private a2(I)V
+.method private b2(I)V
     .locals 0
 
     iput p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->les:I
@@ -5189,15 +5253,39 @@
     return-void
 .end method
 
-.method static synthetic b(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
+.method static synthetic bio(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->G1()V
+    iget-boolean p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->t:Z
+
+    return p0
+.end method
+
+.method static synthetic bud(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->q0()V
 
     return-void
 .end method
 
-.method static synthetic b0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/net/Network;
+.method static synthetic bvj(Lcom/android/server/wifi/OpSlaNetlinkHelper;Landroid/net/Network;Landroid/net/NetworkCapabilities;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->T0(Landroid/net/Network;Landroid/net/NetworkCapabilities;)V
+
+    return-void
+.end method
+
+.method static synthetic c()Z
+    .locals 1
+
+    sget-boolean v0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->G:Z
+
+    return v0
+.end method
+
+.method static synthetic c0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/net/Network;
     .locals 0
 
     iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->hmo:Landroid/net/Network;
@@ -5205,7 +5293,7 @@
     return-object p0
 .end method
 
-.method private b1()Z
+.method private c1()Z
     .locals 5
 
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultDataSubscriptionId()I
@@ -5292,80 +5380,6 @@
     return p0
 .end method
 
-.method static synthetic bio(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->t:Z
-
-    return p0
-.end method
-
-.method static synthetic bud(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->p0()V
-
-    return-void
-.end method
-
-.method static synthetic bvj(Lcom/android/server/wifi/OpSlaNetlinkHelper;Landroid/net/Network;Landroid/net/NetworkCapabilities;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->S0(Landroid/net/Network;Landroid/net/NetworkCapabilities;)V
-
-    return-void
-.end method
-
-.method static synthetic c()Z
-    .locals 1
-
-    sget-boolean v0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->G:Z
-
-    return v0
-.end method
-
-.method static synthetic c0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->c1()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method private c1()Z
-    .locals 2
-
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->L0()Landroid/content/ComponentName;
-
-    move-result-object v0
-
-    invoke-direct {p0, v0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->O0(Landroid/content/ComponentName;)I
-
-    move-result v0
-
-    const/16 v1, 0x3e8
-
-    if-le v0, v1, :cond_0
-
-    invoke-direct {p0, v0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->a1(I)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    return p0
-.end method
-
 .method static synthetic cgv(Lcom/android/server/wifi/OpSlaNetlinkHelper;Z)Z
     .locals 0
 
@@ -5377,7 +5391,7 @@
 .method static synthetic cjf(Lcom/android/server/wifi/OpSlaNetlinkHelper;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->w1(I)V
+    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->x1(I)V
 
     return-void
 .end method
@@ -5398,17 +5412,75 @@
     return p0
 .end method
 
-.method static synthetic d0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)I
+.method static synthetic d0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->N0()I
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->d1()Z
 
     move-result p0
 
     return p0
 .end method
 
-.method private d1(I)Z
+.method private d1()Z
+    .locals 2
+
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->M0()Landroid/content/ComponentName;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->P0(Landroid/content/ComponentName;)I
+
+    move-result v0
+
+    const/16 v1, 0x3e8
+
+    if-le v0, v1, :cond_0
+
+    invoke-direct {p0, v0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->b1(I)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+.end method
+
+.method static synthetic dma(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->i:Z
+
+    return p0
+.end method
+
+.method static synthetic e(Lcom/android/server/wifi/OpSlaNetlinkHelper;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->v:Z
+
+    return p1
+.end method
+
+.method static synthetic e0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)I
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->O0()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method private e1(I)Z
     .locals 4
 
     iget-object v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->D:Ljava/util/HashMap;
@@ -5548,38 +5620,40 @@
     return v1
 .end method
 
-.method static synthetic dma(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
+.method static synthetic ear(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
     .locals 0
 
-    iget-boolean p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->i:Z
-
-    return p0
-.end method
-
-.method static synthetic e(Lcom/android/server/wifi/OpSlaNetlinkHelper;Z)Z
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->v:Z
-
-    return p1
-.end method
-
-.method static synthetic e0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->Z1()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->w1()V
 
     return-void
 .end method
 
-.method private e1()Z
+.method static synthetic f(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->a1()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static synthetic f0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->a2()V
+
+    return-void
+.end method
+
+.method private f1()Z
     .locals 2
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->L0()Landroid/content/ComponentName;
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->M0()Landroid/content/ComponentName;
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->O0(Landroid/content/ComponentName;)I
+    invoke-direct {p0, v0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->P0(Landroid/content/ComponentName;)I
 
     move-result v0
 
@@ -5587,7 +5661,7 @@
 
     if-le v0, v1, :cond_0
 
-    invoke-direct {p0, v0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->g1(I)Z
+    invoke-direct {p0, v0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->h1(I)Z
 
     move-result p0
 
@@ -5604,33 +5678,31 @@
     return p0
 .end method
 
-.method static synthetic ear(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
+.method static synthetic fto(Lcom/android/server/wifi/OpSlaNetlinkHelper;Landroid/net/Network;Landroid/net/LinkProperties;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->v1()V
+    invoke-direct {p0, p1, p2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->R0(Landroid/net/Network;Landroid/net/LinkProperties;)V
 
     return-void
 .end method
 
-.method static synthetic f(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
+.method static synthetic g(Lcom/android/server/wifi/OpSlaNetlinkHelper;)I
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->Z0()Z
-
-    move-result p0
+    iget p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->qeg:I
 
     return p0
 .end method
 
-.method static synthetic f0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
+.method static synthetic g0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->o0()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->p0()V
 
     return-void
 .end method
 
-.method private f1(I)Z
+.method private g1(I)Z
     .locals 4
 
     iget-object v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->B:Ljava/util/List;
@@ -5673,23 +5745,33 @@
     return v1
 .end method
 
-.method static synthetic fto(Lcom/android/server/wifi/OpSlaNetlinkHelper;Landroid/net/Network;Landroid/net/LinkProperties;)V
+.method static synthetic gck(Lcom/android/server/wifi/OpSlaNetlinkHelper;Z)Z
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->Q0(Landroid/net/Network;Landroid/net/LinkProperties;)V
+    iput-boolean p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->u:Z
 
-    return-void
+    return p1
 .end method
 
-.method static synthetic g(Lcom/android/server/wifi/OpSlaNetlinkHelper;)I
+.method static synthetic gwm(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
     .locals 0
 
-    iget p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->qeg:I
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->C0()Z
+
+    move-result p0
 
     return p0
 .end method
 
-.method private g0()V
+.method static synthetic h(Lcom/android/server/wifi/OpSlaNetlinkHelper;I)I
+    .locals 0
+
+    iput p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->qeg:I
+
+    return p1
+.end method
+
+.method private h0()V
     .locals 2
 
     iget-object v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->vdb:Landroid/net/ConnectivityManager;
@@ -5712,7 +5794,7 @@
     return-void
 .end method
 
-.method private g1(I)Z
+.method private h1(I)Z
     .locals 2
 
     iget-object v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->w:Ljava/util/ArrayList;
@@ -5744,36 +5826,28 @@
     throw p0
 .end method
 
-.method static synthetic gck(Lcom/android/server/wifi/OpSlaNetlinkHelper;Z)Z
+.method static synthetic hmo(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
     .locals 0
 
-    iput-boolean p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->u:Z
-
-    return p1
-.end method
-
-.method static synthetic gwm(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->B0()Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->G0()Z
 
     move-result p0
 
     return p0
 .end method
 
-.method static synthetic h(Lcom/android/server/wifi/OpSlaNetlinkHelper;I)I
+.method static synthetic i(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
     .locals 0
 
-    iput p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->qeg:I
+    iget-boolean p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->j:Z
 
-    return p1
+    return p0
 .end method
 
-.method private h0()V
+.method private i0()V
     .locals 2
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->b1()Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->c1()Z
 
     move-result v0
 
@@ -5816,7 +5890,7 @@
 
     if-ne v0, v1, :cond_2
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->Y0()Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->Z0()Z
 
     move-result v0
 
@@ -5827,7 +5901,7 @@
     if-nez v0, :cond_2
 
     :cond_1
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->l1()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->m1()V
 
     goto :goto_0
 
@@ -5840,14 +5914,14 @@
 
     if-eqz v0, :cond_3
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->m1()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->n1()V
 
     :cond_3
     :goto_0
     return-void
 .end method
 
-.method private static h1()Z
+.method private static i1()Z
     .locals 2
 
     sget-object v0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->I:Ljava/lang/String;
@@ -5870,25 +5944,57 @@
     return v0
 .end method
 
-.method static synthetic hmo(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
+.method static synthetic ibl(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->F0()Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->D0()Z
 
     move-result p0
 
     return p0
 .end method
 
-.method static synthetic i(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
+.method static synthetic igw(Lcom/android/server/wifi/OpSlaNetlinkHelper;Z)Z
     .locals 0
 
-    iget-boolean p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->j:Z
+    iput-boolean p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->t:Z
+
+    return p1
+.end method
+
+.method static synthetic ire(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/os/Handler;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->sis:Landroid/os/Handler;
+
+    return-object p0
+.end method
+
+.method static synthetic irq(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->n1()V
+
+    return-void
+.end method
+
+.method static synthetic ivd(Lcom/android/server/wifi/OpSlaNetlinkHelper;I)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->Q1(I)V
+
+    return-void
+.end method
+
+.method static synthetic j(Lcom/android/server/wifi/OpSlaNetlinkHelper;)I
+    .locals 0
+
+    iget p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->bud:I
 
     return p0
 .end method
 
-.method private i0(Landroid/net/Network;Landroid/net/LinkProperties;Landroid/net/NetworkCapabilities;)V
+.method private j0(Landroid/net/Network;Landroid/net/LinkProperties;Landroid/net/NetworkCapabilities;)V
     .locals 5
 
     if-nez p3, :cond_0
@@ -5986,13 +6092,13 @@
 
     if-ne p1, v0, :cond_6
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->l1()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->m1()V
 
     :cond_6
     return-void
 .end method
 
-.method private i1()Z
+.method private j1()Z
     .locals 2
 
     :try_start_0
@@ -6072,57 +6178,15 @@
     return p0
 .end method
 
-.method static synthetic ibl(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
+.method static synthetic k(Lcom/android/server/wifi/OpSlaNetlinkHelper;I)I
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->C0()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method static synthetic igw(Lcom/android/server/wifi/OpSlaNetlinkHelper;Z)Z
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->t:Z
+    iput p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->bud:I
 
     return p1
 .end method
 
-.method static synthetic ire(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/os/Handler;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->sis:Landroid/os/Handler;
-
-    return-object p0
-.end method
-
-.method static synthetic irq(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->m1()V
-
-    return-void
-.end method
-
-.method static synthetic ivd(Lcom/android/server/wifi/OpSlaNetlinkHelper;I)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->P1(I)V
-
-    return-void
-.end method
-
-.method static synthetic j(Lcom/android/server/wifi/OpSlaNetlinkHelper;)I
-    .locals 0
-
-    iget p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->bud:I
-
-    return p0
-.end method
-
-.method private j0(ZLandroid/net/LinkProperties;Landroid/net/NetworkCapabilities;)V
+.method private k0(ZLandroid/net/LinkProperties;Landroid/net/NetworkCapabilities;)V
     .locals 1
 
     if-nez p3, :cond_0
@@ -6152,12 +6216,12 @@
 
     if-ne p1, v0, :cond_3
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->l1()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->m1()V
 
     goto :goto_0
 
     :cond_1
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->m1()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->n1()V
 
     goto :goto_0
 
@@ -6171,30 +6235,40 @@
     return-void
 .end method
 
-.method private synthetic j1(Lcom/android/server/wifi/WifiSettingsConfigStore$Key;Ljava/lang/Boolean;)V
+.method private synthetic k1(Lcom/android/server/wifi/WifiSettingsConfigStore$Key;Ljava/lang/Boolean;)V
     .locals 0
 
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
 
-    invoke-virtual {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->u0(Z)V
+    invoke-virtual {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->v0(Z)V
 
     return-void
 .end method
 
-.method static synthetic k(Lcom/android/server/wifi/OpSlaNetlinkHelper;I)I
+.method static synthetic kth(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
     .locals 0
 
-    iput p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->bud:I
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->B0()Z
 
-    return p1
+    move-result p0
+
+    return p0
 .end method
 
-.method private k0(I)V
+.method static synthetic l(Lcom/android/server/wifi/OpSlaNetlinkHelper;Landroid/telephony/ServiceState;)Landroid/telephony/ServiceState;
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->d1(I)Z
+    iput-object p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->ssp:Landroid/telephony/ServiceState;
+
+    return-object p1
+.end method
+
+.method private l0(I)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->e1(I)Z
 
     move-result p1
 
@@ -6212,31 +6286,39 @@
 
     if-nez p1, :cond_0
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->o0()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->p0()V
 
     :cond_0
     return-void
 .end method
 
-.method static synthetic kth(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
+.method static synthetic les(Lcom/android/server/wifi/OpSlaNetlinkHelper;Z)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->A0()Z
+    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->T1(Z)V
+
+    return-void
+.end method
+
+.method static synthetic lqr(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->I0()Z
 
     move-result p0
 
     return p0
 .end method
 
-.method static synthetic l(Lcom/android/server/wifi/OpSlaNetlinkHelper;Landroid/telephony/ServiceState;)Landroid/telephony/ServiceState;
+.method static synthetic m(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->ssp:Landroid/telephony/ServiceState;
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->i0()V
 
-    return-object p1
+    return-void
 .end method
 
-.method private l0(Z)V
+.method private m0(Z)V
     .locals 2
 
     const/4 v0, 0x2
@@ -6247,7 +6329,7 @@
 
     if-ne p1, v0, :cond_2
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->A1()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->B1()V
 
     goto :goto_0
 
@@ -6258,7 +6340,7 @@
 
     if-ne p1, v1, :cond_1
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->p0()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->q0()V
 
     iput v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->ivd:I
 
@@ -6267,7 +6349,7 @@
 
     if-ne p1, v1, :cond_2
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->o0()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->p0()V
 
     iput v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->a:I
 
@@ -6276,7 +6358,7 @@
     return-void
 .end method
 
-.method private l1()V
+.method private m1()V
     .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -6318,39 +6400,23 @@
 
     if-ne v0, v1, :cond_1
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->M1()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->N1()V
 
     :cond_1
     return-void
 .end method
 
-.method static synthetic les(Lcom/android/server/wifi/OpSlaNetlinkHelper;Z)V
+.method static synthetic n(Lcom/android/server/wifi/OpSlaNetlinkHelper;I)Z
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->S1(Z)V
-
-    return-void
-.end method
-
-.method static synthetic lqr(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->H0()Z
+    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->h1(I)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method static synthetic m(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->h0()V
-
-    return-void
-.end method
-
-.method private m0()V
+.method private n0()V
     .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -6361,7 +6427,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->H0()Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->I0()Z
 
     move-result v1
 
@@ -6371,7 +6437,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->I0()Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->J0()Z
 
     move-result v1
 
@@ -6385,13 +6451,13 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->H0()Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->I0()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->I0()Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->J0()Z
 
     move-result v0
 
@@ -6399,20 +6465,20 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->S1(Z)V
+    invoke-direct {p0, v0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->T1(Z)V
 
     :cond_0
     return-void
 .end method
 
-.method private m1()V
+.method private n1()V
     .locals 5
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->F0()Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->G0()Z
 
     move-result v0
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->H0()Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->I0()Z
 
     move-result v1
 
@@ -6432,13 +6498,13 @@
     const/4 v2, 0x0
 
     :goto_0
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->c1()Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->d1()Z
 
     move-result v3
 
     iput-boolean v3, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->g:Z
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->e1()Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->f1()Z
 
     move-result v3
 
@@ -6530,7 +6596,7 @@
     if-eqz v0, :cond_3
 
     :cond_2
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->X1()Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->Y1()Z
 
     move-result v0
 
@@ -6546,7 +6612,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->q1()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->r1()V
 
     iget-boolean v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->e:Z
 
@@ -6562,23 +6628,23 @@
 
     if-eqz v0, :cond_3
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->N1()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->O1()V
 
     :cond_3
     return-void
 .end method
 
-.method static synthetic n(Lcom/android/server/wifi/OpSlaNetlinkHelper;I)Z
+.method static synthetic o(Lcom/android/server/wifi/OpSlaNetlinkHelper;I)Z
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->g1(I)Z
+    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->b1(I)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method private n0(ZLandroid/net/LinkProperties;Landroid/net/NetworkCapabilities;)V
+.method private o0(ZLandroid/net/LinkProperties;Landroid/net/NetworkCapabilities;)V
     .locals 1
 
     if-eqz p2, :cond_0
@@ -6628,25 +6694,25 @@
     :cond_3
     if-eqz p1, :cond_4
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->l1()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->m1()V
 
     goto :goto_1
 
     :cond_4
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->m1()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->n1()V
 
     :goto_1
     return-void
 .end method
 
-.method private n1(Z)V
+.method private o1(Z)V
     .locals 2
 
     xor-int/lit8 v0, p1, 0x1
 
     const/16 v1, 0x2a
 
-    invoke-direct {p0, v1, v0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->E1(SI)Z
+    invoke-direct {p0, v1, v0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->F1(SI)Z
 
     move-result p0
 
@@ -6687,17 +6753,41 @@
     return-void
 .end method
 
-.method static synthetic o(Lcom/android/server/wifi/OpSlaNetlinkHelper;I)Z
+.method static synthetic obl(Lcom/android/server/wifi/OpSlaNetlinkHelper;)I
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->a1(I)Z
-
-    move-result p0
+    iget p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->irq:I
 
     return p0
 .end method
 
-.method private o0()V
+.method static synthetic oif(Lcom/android/server/wifi/OpSlaNetlinkHelper;I)I
+    .locals 0
+
+    iput p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->a:I
+
+    return p1
+.end method
+
+.method static synthetic oxb(Lcom/android/server/wifi/OpSlaNetlinkHelper;I)I
+    .locals 0
+
+    iput p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->irq:I
+
+    return p1
+.end method
+
+.method static synthetic p(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Ljava/util/ArrayList;
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->L0()Ljava/util/ArrayList;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method private p0()V
     .locals 4
 
     iget-object v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->kth:Landroid/app/NotificationManager;
@@ -6741,7 +6831,7 @@
     return-void
 .end method
 
-.method private o1(Lorg/json/JSONArray;)V
+.method private p1(Lorg/json/JSONArray;)V
     .locals 9
 
     if-nez p1, :cond_0
@@ -7076,41 +7166,15 @@
     return-void
 .end method
 
-.method static synthetic obl(Lcom/android/server/wifi/OpSlaNetlinkHelper;)I
+.method static synthetic q(Lcom/android/server/wifi/OpSlaNetlinkHelper;Ljava/lang/String;I)V
     .locals 0
 
-    iget p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->irq:I
+    invoke-direct {p0, p1, p2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->W1(Ljava/lang/String;I)V
 
-    return p0
+    return-void
 .end method
 
-.method static synthetic oif(Lcom/android/server/wifi/OpSlaNetlinkHelper;I)I
-    .locals 0
-
-    iput p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->a:I
-
-    return p1
-.end method
-
-.method static synthetic oxb(Lcom/android/server/wifi/OpSlaNetlinkHelper;I)I
-    .locals 0
-
-    iput p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->irq:I
-
-    return p1
-.end method
-
-.method static synthetic p(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Ljava/util/ArrayList;
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->K0()Ljava/util/ArrayList;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method private p0()V
+.method private q0()V
     .locals 4
 
     iget-object v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->kth:Landroid/app/NotificationManager;
@@ -7154,7 +7218,7 @@
     return-void
 .end method
 
-.method private p1(Ljava/lang/String;I)V
+.method private q1(Ljava/lang/String;I)V
     .locals 2
 
     const-string v0, "com.heytap.market"
@@ -7214,24 +7278,40 @@
     return-void
 .end method
 
-.method static synthetic q(Lcom/android/server/wifi/OpSlaNetlinkHelper;Ljava/lang/String;I)V
+.method static synthetic qbh(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->V1(Ljava/lang/String;I)V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->B1()V
 
     return-void
 .end method
 
-.method private q0(I)V
+.method static synthetic qeg(Lcom/android/server/wifi/OpSlaNetlinkHelper;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->g:Z
+
+    return p1
+.end method
+
+.method static synthetic r(Lcom/android/server/wifi/OpSlaNetlinkHelper;Ljava/lang/String;I)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->q1(Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method private r0(I)V
     .locals 4
 
     const-string v0, "OpSlaNetlinkHelper"
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->L0()Landroid/content/ComponentName;
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->M0()Landroid/content/ComponentName;
 
     move-result-object v1
 
-    invoke-direct {p0, v1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->O0(Landroid/content/ComponentName;)I
+    invoke-direct {p0, v1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->P0(Landroid/content/ComponentName;)I
 
     move-result v1
 
@@ -7247,7 +7327,7 @@
 
     if-gt p1, v2, :cond_0
 
-    invoke-direct {p0, v1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->a1(I)Z
+    invoke-direct {p0, v1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->b1(I)Z
 
     move-result v2
 
@@ -7312,7 +7392,7 @@
     return-void
 .end method
 
-.method private q1()V
+.method private r1()V
     .locals 4
 
     iget-object v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->lqr:Landroid/net/ConnectivityManager$NetworkCallback;
@@ -7381,31 +7461,25 @@
     return-void
 .end method
 
-.method static synthetic qbh(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
+.method static synthetic rtg(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->A1()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->E0()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static synthetic s(Lcom/android/server/wifi/OpSlaNetlinkHelper;Z)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->t0(Z)V
 
     return-void
 .end method
 
-.method static synthetic qeg(Lcom/android/server/wifi/OpSlaNetlinkHelper;Z)Z
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->g:Z
-
-    return p1
-.end method
-
-.method static synthetic r(Lcom/android/server/wifi/OpSlaNetlinkHelper;Ljava/lang/String;I)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->p1(Ljava/lang/String;I)V
-
-    return-void
-.end method
-
-.method private r0()V
+.method private s0()V
     .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -7469,7 +7543,7 @@
     return-void
 .end method
 
-.method private r1()V
+.method private s1()V
     .locals 5
 
     iget-object v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->zta:Landroid/content/Context;
@@ -7785,25 +7859,31 @@
     return-void
 .end method
 
-.method static synthetic rtg(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
+.method static synthetic sis(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->D0()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method static synthetic s(Lcom/android/server/wifi/OpSlaNetlinkHelper;Z)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->s0(Z)V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->X1()V
 
     return-void
 .end method
 
-.method private s0(Z)V
+.method static synthetic ssp(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->s:Z
+
+    return p0
+.end method
+
+.method static synthetic t(Lcom/android/server/wifi/OpSlaNetlinkHelper;J)J
+    .locals 0
+
+    iput-wide p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->c:J
+
+    return-wide p1
+.end method
+
+.method private t0(Z)V
     .locals 2
 
     if-eqz p1, :cond_0
@@ -7818,7 +7898,7 @@
     :goto_0
     const/4 v1, 0x0
 
-    invoke-direct {p0, v0, v1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->E1(SI)Z
+    invoke-direct {p0, v0, v1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->F1(SI)Z
 
     move-result p0
 
@@ -7849,10 +7929,10 @@
     return-void
 .end method
 
-.method private s1()V
+.method private t1()V
     .locals 3
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->z0()Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->A0()Z
 
     move-result v0
 
@@ -7860,28 +7940,28 @@
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->G0()Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->H0()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0, v1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->R1(Z)V
+    invoke-direct {p0, v1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->S1(Z)V
 
     :cond_0
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->H0()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
     invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->I0()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-direct {p0, v1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->S1(Z)V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->J0()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-direct {p0, v1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->T1(Z)V
 
     :cond_1
     iget-object v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->zta:Landroid/content/Context;
@@ -7917,50 +7997,42 @@
     return-void
 .end method
 
-.method static synthetic sis(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
+.method static synthetic tsu(Lcom/android/server/wifi/OpSlaNetlinkHelper;Z)V
     .locals 0
-
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->W1()V
-
-    return-void
-.end method
-
-.method static synthetic ssp(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->s:Z
-
-    return p0
-.end method
-
-.method static synthetic t(Lcom/android/server/wifi/OpSlaNetlinkHelper;J)J
-    .locals 0
-
-    iput-wide p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->c:J
-
-    return-wide p1
-.end method
-
-.method private t0(Z)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->R1(Z)V
 
     invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->S1(Z)V
 
     return-void
 .end method
 
-.method private t1()V
+.method static synthetic u(Lcom/android/server/wifi/OpSlaNetlinkHelper;Lorg/json/JSONArray;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->p1(Lorg/json/JSONArray;)V
+
+    return-void
+.end method
+
+.method private u0(Z)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->S1(Z)V
+
+    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->T1(Z)V
+
+    return-void
+.end method
+
+.method private u1()V
     .locals 3
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->H0()Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->I0()Z
 
     move-result v0
 
     const/16 v1, 0x30
 
-    invoke-direct {p0, v1, v0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->E1(SI)Z
+    invoke-direct {p0, v1, v0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->F1(SI)Z
 
     move-result p0
 
@@ -7991,26 +8063,26 @@
     return-void
 .end method
 
-.method static synthetic tsu(Lcom/android/server/wifi/OpSlaNetlinkHelper;Z)V
+.method static synthetic ugm(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/content/Context;
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->R1(Z)V
+    iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->zta:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic v(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->z1()V
 
     return-void
 .end method
 
-.method static synthetic u(Lcom/android/server/wifi/OpSlaNetlinkHelper;Lorg/json/JSONArray;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->o1(Lorg/json/JSONArray;)V
-
-    return-void
-.end method
-
-.method private u1()V
+.method private v1()V
     .locals 3
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->b1()Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->c1()Z
 
     move-result v0
 
@@ -8028,7 +8100,7 @@
     :goto_0
     const/16 v1, 0x25
 
-    invoke-direct {p0, v1, v0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->E1(SI)Z
+    invoke-direct {p0, v1, v0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->F1(SI)Z
 
     move-result v0
 
@@ -8066,28 +8138,52 @@
     return-void
 .end method
 
-.method static synthetic ugm(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Landroid/content/Context;
+.method static synthetic vdb(Lcom/android/server/wifi/OpSlaNetlinkHelper;I)V
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->zta:Landroid/content/Context;
-
-    return-object p0
-.end method
-
-.method static synthetic v(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->y1()V
+    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->K1(I)V
 
     return-void
 .end method
 
-.method private v0(Z)V
+.method static synthetic vdw(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->g:Z
+
+    return p0
+.end method
+
+.method static synthetic veq(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->h:Z
+
+    return p0
+.end method
+
+.method static synthetic vju(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->m1()V
+
+    return-void
+.end method
+
+.method static synthetic w(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->v1()V
+
+    return-void
+.end method
+
+.method private w0(Z)V
     .locals 2
 
     const/16 v0, 0x2d
 
-    invoke-direct {p0, v0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->E1(SI)Z
+    invoke-direct {p0, v0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->F1(SI)Z
 
     move-result p0
 
@@ -8118,18 +8214,18 @@
     return-void
 .end method
 
-.method private v1()V
+.method private w1()V
     .locals 15
 
     iget-object v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->ywr:Lcom/android/server/pm/PackageManagerService;
 
     if-eqz v0, :cond_a
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->E0()Ljava/util/Map;
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->F0()Ljava/util/Map;
 
     move-result-object v0
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->J0()Ljava/util/ArrayList;
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->K0()Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -8418,7 +8514,7 @@
 
     aput v7, v2, v6
 
-    invoke-direct {p0, v5, v2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->F1(S[I)Z
+    invoke-direct {p0, v5, v2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->G1(S[I)Z
 
     goto :goto_4
 
@@ -8433,7 +8529,7 @@
 
     aput v6, v2, v6
 
-    invoke-direct {p0, v5, v2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->F1(S[I)Z
+    invoke-direct {p0, v5, v2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->G1(S[I)Z
 
     monitor-exit v4
 
@@ -8453,47 +8549,23 @@
     return-void
 .end method
 
-.method static synthetic vdb(Lcom/android/server/wifi/OpSlaNetlinkHelper;I)V
+.method static synthetic wtn(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->J1(I)V
-
-    return-void
-.end method
-
-.method static synthetic vdw(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->g:Z
+    iget-boolean p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->u:Z
 
     return p0
 .end method
 
-.method static synthetic veq(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
+.method static synthetic x(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
     .locals 0
 
-    iget-boolean p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->h:Z
-
-    return p0
-.end method
-
-.method static synthetic vju(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->l1()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->y1()V
 
     return-void
 .end method
 
-.method static synthetic w(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->u1()V
-
-    return-void
-.end method
-
-.method private w0(S)Ljava/lang/String;
+.method private x0(S)Ljava/lang/String;
     .locals 2
 
     const/16 p0, 0x11
@@ -8534,12 +8606,12 @@
     return-object p0
 .end method
 
-.method private w1(I)V
+.method private x1(I)V
     .locals 2
 
     const/16 v0, 0x2c
 
-    invoke-direct {p0, v0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->E1(SI)Z
+    invoke-direct {p0, v0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->F1(SI)Z
 
     move-result p0
 
@@ -8570,23 +8642,15 @@
     return-void
 .end method
 
-.method static synthetic wtn(Lcom/android/server/wifi/OpSlaNetlinkHelper;)Z
+.method static synthetic y(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
     .locals 0
 
-    iget-boolean p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->u:Z
-
-    return p0
-.end method
-
-.method static synthetic x(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->x1()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->u1()V
 
     return-void
 .end method
 
-.method private x0()V
+.method private y0()V
     .locals 8
 
     iget-object v0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->A:Ljava/util/HashMap;
@@ -8727,16 +8791,16 @@
     throw p0
 .end method
 
-.method private x1()V
+.method private y1()V
     .locals 3
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->F0()Z
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->G0()Z
 
     move-result v0
 
     const/16 v1, 0x21
 
-    invoke-direct {p0, v1, v0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->E1(SI)Z
+    invoke-direct {p0, v1, v0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->F1(SI)Z
 
     move-result p0
 
@@ -8767,15 +8831,31 @@
     return-void
 .end method
 
-.method static synthetic y(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
+.method static synthetic you(Lcom/android/server/wifi/OpSlaNetlinkHelper;Landroid/net/Network;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->t1()V
+    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->S0(Landroid/net/Network;)V
 
     return-void
 .end method
 
-.method private y0(Ljava/lang/String;)Landroid/app/PendingIntent;
+.method static synthetic ywr(Lcom/android/server/wifi/OpSlaNetlinkHelper;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->i:Z
+
+    return p1
+.end method
+
+.method static synthetic z(Lcom/android/server/wifi/OpSlaNetlinkHelper;Z)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->A1(Z)V
+
+    return-void
+.end method
+
+.method private z0(Ljava/lang/String;)Landroid/app/PendingIntent;
     .locals 2
 
     new-instance v0, Landroid/content/Intent;
@@ -8799,7 +8879,7 @@
     return-object p0
 .end method
 
-.method private y1()V
+.method private z1()V
     .locals 1
 
     sget-object v0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->H:Ljava/io/FileDescriptor;
@@ -8834,97 +8914,10 @@
     return-void
 .end method
 
-.method static synthetic you(Lcom/android/server/wifi/OpSlaNetlinkHelper;Landroid/net/Network;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->R0(Landroid/net/Network;)V
-
-    return-void
-.end method
-
-.method static synthetic ywr(Lcom/android/server/wifi/OpSlaNetlinkHelper;Z)Z
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->i:Z
-
-    return p1
-.end method
-
-.method static synthetic z(Lcom/android/server/wifi/OpSlaNetlinkHelper;Z)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->z1(Z)V
-
-    return-void
-.end method
-
-.method private z0()Z
-    .locals 2
-
-    iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper;->zta:Landroid/content/Context;
-
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object p0
-
-    const-string v0, "download_smart_link_aggregation"
-
-    const/4 v1, 0x0
-
-    invoke-static {p0, v0, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
-
-    move-result p0
-
-    const/4 v0, 0x1
-
-    if-ne p0, v0, :cond_0
-
-    move v1, v0
-
-    :cond_0
-    return v1
-.end method
-
-.method private z1(Z)V
-    .locals 2
-
-    const/16 v0, 0x24
-
-    invoke-direct {p0, v0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->E1(SI)Z
-
-    move-result p0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "After sendScreenStateToKernel:result="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string p0, " screenState="
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string p1, "OpSlaNetlinkHelper"
-
-    invoke-static {p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-.end method
-
 .method static synthetic zgw(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->W0()V
+    invoke-direct {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->X0()V
 
     return-void
 .end method
@@ -8932,19 +8925,19 @@
 .method static synthetic zta(Lcom/android/server/wifi/OpSlaNetlinkHelper;Landroid/net/Network;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->P0(Landroid/net/Network;)V
+    invoke-direct {p0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->Q0(Landroid/net/Network;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public H1(I)V
+.method public I1(I)V
     .locals 2
 
     const/16 v0, 0x11
 
-    invoke-direct {p0, v0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->E1(SI)Z
+    invoke-direct {p0, v0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->F1(SI)Z
 
     move-result p0
 
@@ -8980,22 +8973,22 @@
     return-void
 .end method
 
-.method public synthetic k1(Lcom/android/server/wifi/WifiSettingsConfigStore$Key;Ljava/lang/Boolean;)V
+.method public synthetic l1(Lcom/android/server/wifi/WifiSettingsConfigStore$Key;Ljava/lang/Boolean;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->j1(Lcom/android/server/wifi/WifiSettingsConfigStore$Key;Ljava/lang/Boolean;)V
+    invoke-direct {p0, p1, p2}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->k1(Lcom/android/server/wifi/WifiSettingsConfigStore$Key;Ljava/lang/Boolean;)V
 
     return-void
 .end method
 
-.method public u0(Z)V
+.method public v0(Z)V
     .locals 1
 
     sput-boolean p1, Lcom/android/server/wifi/OpSlaNetlinkHelper;->G:Z
 
     const/16 v0, 0x29
 
-    invoke-direct {p0, v0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->E1(SI)Z
+    invoke-direct {p0, v0, p1}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->F1(SI)Z
 
     return-void
 .end method

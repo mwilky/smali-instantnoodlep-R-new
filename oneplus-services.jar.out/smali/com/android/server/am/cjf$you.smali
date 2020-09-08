@@ -39,7 +39,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/cjf$you;->zta:Lcom/android/server/am/cjf;
 
-    invoke-static {p0, p1}, Lcom/android/server/am/cjf;->ywr(Lcom/android/server/am/cjf;Lorg/json/JSONArray;)V
+    invoke-static {p0, p1}, Lcom/android/server/am/cjf;->qbh(Lcom/android/server/am/cjf;Lorg/json/JSONArray;)V
 
     return-void
 .end method

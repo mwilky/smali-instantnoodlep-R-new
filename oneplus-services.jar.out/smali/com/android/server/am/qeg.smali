@@ -322,7 +322,7 @@
 
     new-instance p1, Lcom/android/server/am/qeg$tsu;
 
-    sget-object v1, Lcom/android/server/am/hmo;->l:Landroid/os/Handler;
+    sget-object v1, Lcom/android/server/am/hmo;->s:Landroid/os/Handler;
 
     invoke-virtual {v1}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
@@ -1567,7 +1567,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/am/hmo;->les(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/am/hmo;->h(Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -1821,7 +1821,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/am/hmo;->les(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/am/hmo;->h(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -2338,7 +2338,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/am/hmo;->les(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/am/hmo;->h(Ljava/lang/String;)V
 
     return-object v0
 .end method

@@ -219,7 +219,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x3e
+    const/16 v2, 0x3c
 
     const/4 v3, 0x0
 
@@ -233,7 +233,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x12c
+    const/16 v2, 0x125
 
     aput v2, v1, v3
 
@@ -245,7 +245,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x12b
+    const/16 v2, 0x124
 
     aput v2, v1, v3
 
@@ -269,7 +269,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0xf2
+    const/16 v2, 0xeb
 
     aput v2, v1, v3
 
@@ -1004,9 +1004,15 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-eqz p1, :cond_7
+    if-eqz p1, :cond_8
 
-    const-wide/16 v2, 0x64
+    iget-object v0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mColorTintManager:Lcom/oneplus/android/server/display/tsu;
+
+    xor-int/lit8 v2, p1, 0x1
+
+    invoke-virtual {v0, v2}, Lcom/oneplus/android/server/display/tsu;->ear(Z)V
+
+    const-wide/16 v2, 0xfa
 
     :try_start_0
     invoke-static {v2, v3}, Landroid/os/HandlerThread;->sleep(J)V
@@ -1021,12 +1027,6 @@
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     :goto_0
-    iget-object v0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mColorTintManager:Lcom/oneplus/android/server/display/tsu;
-
-    xor-int/lit8 v2, p1, 0x1
-
-    invoke-virtual {v0, v2}, Lcom/oneplus/android/server/display/tsu;->ear(Z)V
-
     iget-object v0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mContext:Landroid/content/Context;
 
     const-string v2, "keyguard"
@@ -1176,7 +1176,20 @@
 
     iget-boolean v0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mHasFingerprint:Z
 
-    if-nez v0, :cond_6
+    if-eqz v0, :cond_4
+
+    iget-boolean v0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mExitFingerPrintModeReason:Z
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mColorTintManager:Lcom/oneplus/android/server/display/tsu;
+
+    invoke-virtual {v0, p1}, Lcom/oneplus/android/server/display/tsu;->oxb(Z)V
+
+    :cond_4
+    iget-boolean v0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mHasFingerprint:Z
+
+    if-nez v0, :cond_7
 
     const-string v0, "ColorDisable"
 
@@ -1184,7 +1197,7 @@
 
     move-result v0
 
-    if-ne v0, v2, :cond_4
+    if-ne v0, v2, :cond_5
 
     const/4 v0, 0x2
 
@@ -1192,30 +1205,30 @@
 
     invoke-static {v1, v0, v4}, Lcom/oneplus/server/you;->rtg(Ljava/lang/String;II)V
 
-    :cond_4
+    :cond_5
     sget-boolean v0, Lcom/oneplus/android/server/display/OpColorDisplayService;->SUPPORT_SOFTIRIS:Z
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     invoke-direct {p0, v4}, Lcom/oneplus/android/server/display/OpColorDisplayService;->notifyIrisFingerprintStatus(Z)V
 
-    :cond_5
+    :cond_6
     invoke-direct {p0, v4}, Lcom/oneplus/android/server/display/OpColorDisplayService;->revertStatus(Z)V
 
     goto :goto_4
 
-    :cond_6
+    :cond_7
     iget-boolean v0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->firstunlock:Z
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_9
 
-    :cond_7
+    :cond_8
     :goto_4
     iget-object p0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mColorTintManager:Lcom/oneplus/android/server/display/tsu;
 
     invoke-virtual {p0, p1}, Lcom/oneplus/android/server/display/tsu;->oxb(Z)V
 
-    :cond_8
+    :cond_9
     return-void
 .end method
 

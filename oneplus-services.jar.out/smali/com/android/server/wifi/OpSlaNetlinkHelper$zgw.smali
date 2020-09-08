@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/wifi/OpSlaNetlinkHelper;->r1()V
+    value = Lcom/android/server/wifi/OpSlaNetlinkHelper;->s1()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -114,7 +114,7 @@
     :cond_1
     iget-object p0, p0, Lcom/android/server/wifi/OpSlaNetlinkHelper$zgw;->zta:Lcom/android/server/wifi/OpSlaNetlinkHelper;
 
-    invoke-static {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->f0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
+    invoke-static {p0}, Lcom/android/server/wifi/OpSlaNetlinkHelper;->g0(Lcom/android/server/wifi/OpSlaNetlinkHelper;)V
 
     :cond_2
     :goto_0

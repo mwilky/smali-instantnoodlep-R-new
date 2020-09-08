@@ -186,7 +186,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x86
+    const/16 v2, 0x7f
 
     const/4 v3, 0x0
 
@@ -200,7 +200,7 @@
 
     new-array v0, v0, [I
 
-    const/16 v1, 0x11f
+    const/16 v1, 0x118
 
     aput v1, v0, v3
 
@@ -358,7 +358,7 @@
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v2
+    move-result-object v3
 
     iput v1, p0, Lcom/oneplus/server/zta;->vdw:I
 
@@ -394,7 +394,7 @@
 
     iput-object v1, p0, Lcom/oneplus/server/zta;->f:Lcom/android/server/wm/OpWindowManagerService$zta;
 
-    iput-boolean v0, p0, Lcom/oneplus/server/zta;->g:Z
+    iput-boolean v2, p0, Lcom/oneplus/server/zta;->g:Z
 
     iput-boolean v0, p0, Lcom/oneplus/server/zta;->h:Z
 
@@ -416,7 +416,7 @@
 
     iput-object v0, p0, Lcom/oneplus/server/zta;->k:Landroid/content/BroadcastReceiver;
 
-    invoke-direct {p0}, Lcom/oneplus/server/zta;->E()V
+    invoke-direct {p0}, Lcom/oneplus/server/zta;->D()V
 
     iget-object v0, p0, Lcom/oneplus/server/zta;->veq:Ljava/util/HashSet;
 
@@ -428,19 +428,37 @@
 
     const-string v1, "tv.danmaku.bili"
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     iget-object v0, p0, Lcom/oneplus/server/zta;->lqr:Ljava/util/HashMap;
 
-    const-string v1, "air.tv.douyu.android"
+    const-string v2, "air.tv.douyu.android"
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     iget-object v0, p0, Lcom/oneplus/server/zta;->lqr:Ljava/util/HashMap;
 
-    const-string v1, "com.duowan.kiwi"
+    const-string v4, "com.duowan.kiwi"
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v4, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v0, p0, Lcom/oneplus/server/zta;->i:Ljava/util/HashSet;
+
+    invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/oneplus/server/zta;->i:Ljava/util/HashSet;
+
+    invoke-virtual {v0, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/oneplus/server/zta;->i:Ljava/util/HashSet;
+
+    invoke-virtual {v0, v4}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/oneplus/server/zta;->i:Ljava/util/HashSet;
+
+    const-string v1, "cn.fighting.rrmeijutv.classic"
+
+    invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     sget-boolean v0, Lcom/oneplus/server/zta;->p:Z
 
@@ -609,78 +627,7 @@
     return-void
 .end method
 
-.method private C(II)V
-    .locals 2
-
-    invoke-direct {p0}, Lcom/oneplus/server/zta;->q()V
-
-    iget-object v0, p0, Lcom/oneplus/server/zta;->ear:Landroid/os/IBinder;
-
-    if-eqz v0, :cond_0
-
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v0
-
-    const-string v1, "android.ui.ISurfaceComposer"
-
-    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    :try_start_0
-    iget-object p0, p0, Lcom/oneplus/server/zta;->ear:Landroid/os/IBinder;
-
-    const/16 p1, 0x7536
-
-    const/4 p2, 0x0
-
-    const/4 v1, 0x0
-
-    invoke-interface {p0, p1, v0, p2, v1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :goto_0
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    goto :goto_2
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception p0
-
-    :try_start_1
-    const-string p1, "DynamicVsyncManager"
-
-    const-string p2, "Exception setFlingV2"
-
-    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_0
-
-    :goto_1
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    throw p0
-
-    :cond_0
-    :goto_2
-    return-void
-.end method
-
-.method private D(Ljava/lang/String;Ljava/lang/String;)V
+.method private C(Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
 
     const-string v0, ""
@@ -750,7 +697,7 @@
     return-void
 .end method
 
-.method private E()V
+.method private D()V
     .locals 4
 
     iget-object v0, p0, Lcom/oneplus/server/zta;->obl:Ljava/lang/Object;
@@ -845,7 +792,7 @@
     throw p0
 .end method
 
-.method private G(IIDDI)V
+.method private F(IIDDI)V
     .locals 2
 
     invoke-direct {p0}, Lcom/oneplus/server/zta;->q()V
@@ -926,7 +873,7 @@
     return-void
 .end method
 
-.method private H()V
+.method private G()V
     .locals 5
 
     invoke-direct {p0}, Lcom/oneplus/server/zta;->q()V
@@ -1058,7 +1005,7 @@
     const/4 v1, 0x1
 
     :try_start_4
-    invoke-direct {p0, v1}, Lcom/oneplus/server/zta;->L(Z)V
+    invoke-direct {p0, v1}, Lcom/oneplus/server/zta;->N(Z)V
 
     monitor-exit v0
 
@@ -1074,7 +1021,214 @@
     throw p0
 .end method
 
+.method private H(Z)V
+    .locals 3
+
+    invoke-direct {p0}, Lcom/oneplus/server/zta;->q()V
+
+    iget-object v0, p0, Lcom/oneplus/server/zta;->ear:Landroid/os/IBinder;
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    const-string v1, "android.ui.ISurfaceComposer"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
+
+    :try_start_0
+    iget-object p0, p0, Lcom/oneplus/server/zta;->ear:Landroid/os/IBinder;
+
+    const/16 p1, 0x7536
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    invoke-interface {p0, p1, v0, v1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :goto_0
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception p0
+
+    :try_start_1
+    const-string p1, "DynamicVsyncManager"
+
+    const-string v1, "Exception updateGrayEnable"
+
+    invoke-static {p1, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_0
+
+    :goto_1
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+
+    :cond_0
+    :goto_2
+    return-void
+.end method
+
+.method private I(I)V
+    .locals 3
+
+    invoke-direct {p0}, Lcom/oneplus/server/zta;->q()V
+
+    iget-object v0, p0, Lcom/oneplus/server/zta;->ear:Landroid/os/IBinder;
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    const-string v1, "android.ui.ISurfaceComposer"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
+
+    :try_start_0
+    iget-object p0, p0, Lcom/oneplus/server/zta;->ear:Landroid/os/IBinder;
+
+    const/16 p1, 0x7538
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    invoke-interface {p0, p1, v0, v1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :goto_0
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception p0
+
+    :try_start_1
+    const-string p1, "DynamicVsyncManager"
+
+    const-string v1, "Exception updateGrayPercentThreshold"
+
+    invoke-static {p1, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_0
+
+    :goto_1
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+
+    :cond_0
+    :goto_2
+    return-void
+.end method
+
 .method private J(I)V
+    .locals 3
+
+    invoke-direct {p0}, Lcom/oneplus/server/zta;->q()V
+
+    iget-object v0, p0, Lcom/oneplus/server/zta;->ear:Landroid/os/IBinder;
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    const-string v1, "android.ui.ISurfaceComposer"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
+
+    :try_start_0
+    iget-object p0, p0, Lcom/oneplus/server/zta;->ear:Landroid/os/IBinder;
+
+    const/16 p1, 0x7537
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    invoke-interface {p0, p1, v0, v1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :goto_0
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception p0
+
+    :try_start_1
+    const-string p1, "DynamicVsyncManager"
+
+    const-string v1, "Exception updateGrayThreshold"
+
+    invoke-static {p1, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_0
+
+    :goto_1
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+
+    :cond_0
+    :goto_2
+    return-void
+.end method
+
+.method private L(I)V
     .locals 3
 
     invoke-direct {p0}, Lcom/oneplus/server/zta;->q()V
@@ -1161,17 +1315,17 @@
     return-void
 .end method
 
-.method private K()V
+.method private M()V
     .locals 1
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/oneplus/server/zta;->L(Z)V
+    invoke-direct {p0, v0}, Lcom/oneplus/server/zta;->N(Z)V
 
     return-void
 .end method
 
-.method private L(Z)V
+.method private N(Z)V
     .locals 3
 
     invoke-direct {p0}, Lcom/oneplus/server/zta;->u()Z
@@ -1365,96 +1519,6 @@
     iput-boolean p1, p0, Lcom/oneplus/server/zta;->tsu:Z
 
     return p1
-.end method
-
-.method private d(I)V
-    .locals 3
-
-    invoke-direct {p0}, Lcom/oneplus/server/zta;->u()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-boolean v0, p0, Lcom/oneplus/server/zta;->zta:Z
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "doAnimation "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {p0, v0, v1}, Lcom/oneplus/server/zta;->v(ZLjava/lang/String;)V
-
-    invoke-direct {p0}, Lcom/oneplus/server/zta;->q()V
-
-    iget-object v0, p0, Lcom/oneplus/server/zta;->ear:Landroid/os/IBinder;
-
-    if-eqz v0, :cond_1
-
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v0
-
-    const-string v1, "android.ui.ISurfaceComposer"
-
-    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
-
-    :try_start_0
-    iget-object p0, p0, Lcom/oneplus/server/zta;->ear:Landroid/os/IBinder;
-
-    const/16 p1, 0x753c
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    invoke-interface {p0, p1, v0, v1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :goto_0
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    goto :goto_2
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception p0
-
-    :try_start_1
-    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_0
-
-    :goto_1
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    throw p0
-
-    :cond_1
-    :goto_2
-    return-void
 .end method
 
 .method static synthetic dma(Lcom/oneplus/server/zta;)I
@@ -2363,7 +2427,7 @@
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lcom/oneplus/server/zta;->J(I)V
+    invoke-direct {p0, v0}, Lcom/oneplus/server/zta;->L(I)V
 
     iget-object v0, p0, Lcom/oneplus/server/zta;->obl:Ljava/lang/Object;
 
@@ -2637,7 +2701,7 @@
 .method static synthetic qbh(Lcom/oneplus/server/zta;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/oneplus/server/zta;->K()V
+    invoke-direct {p0}, Lcom/oneplus/server/zta;->M()V
 
     return-void
 .end method
@@ -2692,7 +2756,7 @@
 .method static synthetic sis(Lcom/oneplus/server/zta;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/oneplus/server/zta;->H()V
+    invoke-direct {p0}, Lcom/oneplus/server/zta;->G()V
 
     return-void
 .end method
@@ -2900,7 +2964,7 @@
 
     move-result v3
 
-    if-ge v1, v3, :cond_f
+    if-ge v1, v3, :cond_12
 
     invoke-virtual {p1, v1}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
@@ -2938,7 +3002,7 @@
 
     move-result-object v4
 
-    invoke-direct {p0, v5, v4}, Lcom/oneplus/server/zta;->D(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v5, v4}, Lcom/oneplus/server/zta;->C(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-boolean v4, p0, Lcom/oneplus/server/zta;->tsu:Z
 
@@ -3285,13 +3349,148 @@
 
     move-result-object v4
 
-    const-string v6, "backlight"
+    const-string v6, "gray_enable"
 
     invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_8
+
+    const-string v4, "value"
+
+    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
+
+    move-result v4
+
+    invoke-direct {p0, v4}, Lcom/oneplus/server/zta;->H(Z)V
+
+    iget-boolean v6, p0, Lcom/oneplus/server/zta;->you:Z
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "[OnlineConfig] gray enable: "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-direct {p0, v6, v4}, Lcom/oneplus/server/zta;->v(ZLjava/lang/String;)V
+
+    :cond_8
+    const-string v4, "name"
+
+    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string v6, "gray"
+
+    invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_9
+
+    const-string v4, "value"
+
+    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v4
+
+    invoke-direct {p0, v4}, Lcom/oneplus/server/zta;->J(I)V
+
+    iget-boolean v6, p0, Lcom/oneplus/server/zta;->you:Z
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "[OnlineConfig] grayThreshold: "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-direct {p0, v6, v4}, Lcom/oneplus/server/zta;->v(ZLjava/lang/String;)V
+
+    :cond_9
+    const-string v4, "name"
+
+    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string v6, "percent"
+
+    invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_a
+
+    const-string v4, "value"
+
+    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v4
+
+    invoke-direct {p0, v4}, Lcom/oneplus/server/zta;->I(I)V
+
+    iget-boolean v6, p0, Lcom/oneplus/server/zta;->you:Z
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "[OnlineConfig] grayPercentThreshold: "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-direct {p0, v6, v4}, Lcom/oneplus/server/zta;->v(ZLjava/lang/String;)V
+
+    :cond_a
+    const-string v4, "name"
+
+    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string v6, "backlight"
+
+    invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_b
 
     iget-object v2, p0, Lcom/oneplus/server/zta;->cgv:Ljava/lang/Object;
 
@@ -3328,7 +3527,7 @@
     :try_start_e
     throw p1
 
-    :cond_8
+    :cond_b
     :goto_5
     const-string v4, "name"
 
@@ -3342,7 +3541,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_a
+    if-eqz v4, :cond_d
 
     iget-object v4, p0, Lcom/oneplus/server/zta;->i:Ljava/util/HashSet;
 
@@ -3368,7 +3567,7 @@
 
     move-result v7
 
-    if-ge v6, v7, :cond_9
+    if-ge v6, v7, :cond_c
 
     iget-object v7, p0, Lcom/oneplus/server/zta;->i:Ljava/util/HashSet;
 
@@ -3382,7 +3581,7 @@
 
     goto :goto_6
 
-    :cond_9
+    :cond_c
     monitor-exit v4
     :try_end_f
     .catchall {:try_start_f .. :try_end_f} :catchall_5
@@ -3427,7 +3626,7 @@
     :try_start_12
     throw p1
 
-    :cond_a
+    :cond_d
     :goto_7
     const-string v4, "name"
 
@@ -3441,7 +3640,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_c
+    if-eqz v4, :cond_f
 
     iget-object v4, p0, Lcom/oneplus/server/zta;->j:Ljava/util/HashSet;
 
@@ -3467,7 +3666,7 @@
 
     move-result v7
 
-    if-ge v6, v7, :cond_b
+    if-ge v6, v7, :cond_e
 
     iget-object v7, p0, Lcom/oneplus/server/zta;->j:Ljava/util/HashSet;
 
@@ -3481,7 +3680,7 @@
 
     goto :goto_8
 
-    :cond_b
+    :cond_e
     monitor-exit v4
     :try_end_13
     .catchall {:try_start_13 .. :try_end_13} :catchall_6
@@ -3526,7 +3725,7 @@
     :try_start_16
     throw p1
 
-    :cond_c
+    :cond_f
     :goto_9
     const-string v4, "name"
 
@@ -3540,7 +3739,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_e
+    if-eqz v4, :cond_11
 
     iget-object v4, p0, Lcom/oneplus/server/zta;->lqr:Ljava/util/HashMap;
 
@@ -3566,7 +3765,7 @@
 
     move-result v6
 
-    if-ge v5, v6, :cond_d
+    if-ge v5, v6, :cond_10
 
     invoke-virtual {v3, v5}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
@@ -3596,7 +3795,7 @@
 
     goto :goto_a
 
-    :cond_d
+    :cond_10
     monitor-exit v4
     :try_end_17
     .catchall {:try_start_17 .. :try_end_17} :catchall_7
@@ -3641,16 +3840,16 @@
     :try_start_1a
     throw p1
 
-    :cond_e
+    :cond_11
     :goto_b
     add-int/lit8 v1, v1, 0x1
 
     goto/16 :goto_0
 
-    :cond_f
-    if-eqz v2, :cond_10
+    :cond_12
+    if-eqz v2, :cond_13
 
-    invoke-direct {p0}, Lcom/oneplus/server/zta;->H()V
+    invoke-direct {p0}, Lcom/oneplus/server/zta;->G()V
     :try_end_1a
     .catch Ljava/lang/Exception; {:try_start_1a .. :try_end_1a} :catch_0
 
@@ -3677,7 +3876,7 @@
 
     invoke-direct {p0, v0, p1}, Lcom/oneplus/server/zta;->v(ZLjava/lang/String;)V
 
-    :cond_10
+    :cond_13
     :goto_c
     return-void
 .end method
@@ -3716,7 +3915,7 @@
 
 
 # virtual methods
-.method public F(Z)V
+.method public E(Z)V
     .locals 3
 
     iget-boolean v0, p0, Lcom/oneplus/server/zta;->tsu:Z
@@ -3759,7 +3958,7 @@
     return-void
 .end method
 
-.method public I(Z)V
+.method public K(Z)V
     .locals 1
 
     iget-object v0, p0, Lcom/oneplus/server/zta;->cgv:Ljava/lang/Object;
@@ -3769,7 +3968,7 @@
     :try_start_0
     iput-boolean p1, p0, Lcom/oneplus/server/zta;->h:Z
 
-    invoke-direct {p0}, Lcom/oneplus/server/zta;->K()V
+    invoke-direct {p0}, Lcom/oneplus/server/zta;->M()V
 
     monitor-exit v0
 
@@ -3785,7 +3984,7 @@
     throw p0
 .end method
 
-.method public M(Ljava/lang/String;FD)V
+.method public O(Ljava/lang/String;FD)V
     .locals 0
 
     iget p1, p0, Lcom/oneplus/server/zta;->sis:F
@@ -3800,7 +3999,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-direct {p0, p2}, Lcom/oneplus/server/zta;->J(I)V
+    invoke-direct {p0, p2}, Lcom/oneplus/server/zta;->L(I)V
 
     goto :goto_0
 
@@ -3837,6 +4036,98 @@
     return-void
 .end method
 
+.method public d(I)V
+    .locals 3
+
+    invoke-direct {p0}, Lcom/oneplus/server/zta;->u()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    if-gez p1, :cond_0
+
+    goto :goto_2
+
+    :cond_0
+    iget-boolean v0, p0, Lcom/oneplus/server/zta;->zta:Z
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "doAnimation "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {p0, v0, v1}, Lcom/oneplus/server/zta;->v(ZLjava/lang/String;)V
+
+    invoke-direct {p0}, Lcom/oneplus/server/zta;->q()V
+
+    iget-object v0, p0, Lcom/oneplus/server/zta;->ear:Landroid/os/IBinder;
+
+    if-eqz v0, :cond_1
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    const-string v1, "android.ui.ISurfaceComposer"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
+
+    :try_start_0
+    iget-object p0, p0, Lcom/oneplus/server/zta;->ear:Landroid/os/IBinder;
+
+    const/16 p1, 0x753c
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    invoke-interface {p0, p1, v0, v1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :goto_0
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception p0
+
+    :try_start_1
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_0
+
+    :goto_1
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+
+    :cond_1
+    :goto_2
+    return-void
+.end method
+
 .method public e()V
     .locals 2
 
@@ -3853,7 +4144,7 @@
     :try_start_0
     iget v1, p0, Lcom/oneplus/server/zta;->irq:I
 
-    invoke-direct {p0, v1}, Lcom/oneplus/server/zta;->d(I)V
+    invoke-virtual {p0, v1}, Lcom/oneplus/server/zta;->d(I)V
 
     monitor-exit v0
 
@@ -3881,7 +4172,7 @@
 
     iput p2, p0, Lcom/oneplus/server/zta;->c:I
 
-    invoke-direct {p0}, Lcom/oneplus/server/zta;->K()V
+    invoke-direct {p0}, Lcom/oneplus/server/zta;->M()V
 
     monitor-exit p3
 
@@ -3944,7 +4235,7 @@
 
     add-int/lit16 v1, v9, 0x3e8
 
-    invoke-direct {v0, v1}, Lcom/oneplus/server/zta;->d(I)V
+    invoke-virtual {v0, v1}, Lcom/oneplus/server/zta;->d(I)V
 
     :cond_2
     iget-boolean v1, v0, Lcom/oneplus/server/zta;->rtg:Z
@@ -4210,7 +4501,7 @@
 
     move v8, v12
 
-    invoke-direct/range {v1 .. v8}, Lcom/oneplus/server/zta;->G(IIDDI)V
+    invoke-direct/range {v1 .. v8}, Lcom/oneplus/server/zta;->F(IIDDI)V
 
     monitor-exit v10
 
@@ -4354,7 +4645,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     :try_start_2
-    invoke-direct {p0}, Lcom/oneplus/server/zta;->H()V
+    invoke-direct {p0}, Lcom/oneplus/server/zta;->G()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
@@ -4433,7 +4724,7 @@
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
     :try_start_6
-    invoke-direct {p0}, Lcom/oneplus/server/zta;->H()V
+    invoke-direct {p0}, Lcom/oneplus/server/zta;->G()V
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_0
 
@@ -4481,7 +4772,7 @@
     .catchall {:try_start_9 .. :try_end_9} :catchall_2
 
     :try_start_a
-    invoke-direct {p0}, Lcom/oneplus/server/zta;->H()V
+    invoke-direct {p0}, Lcom/oneplus/server/zta;->G()V
     :try_end_a
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_0
 
@@ -4886,7 +5177,7 @@
 
     if-eqz p1, :cond_1
 
-    invoke-direct {p0, v2}, Lcom/oneplus/server/zta;->J(I)V
+    invoke-direct {p0, v2}, Lcom/oneplus/server/zta;->L(I)V
 
     goto :goto_0
 

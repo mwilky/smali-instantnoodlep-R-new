@@ -505,7 +505,7 @@
 
     iget-object v1, p0, Lcom/oneplus/android/server/scene/OemSceneGameModePanel;->sis:Landroid/content/Context;
 
-    const v2, 0x50b0081
+    const v2, 0x50b0080
 
     const/4 v3, 0x1
 
@@ -564,7 +564,7 @@
 
     iget-object v1, p0, Lcom/oneplus/android/server/scene/OemSceneGameModePanel;->sis:Landroid/content/Context;
 
-    const v4, 0x50b0082
+    const v4, 0x50b0081
 
     invoke-direct {v0, v1, v4, p0, v3}, Lcom/oneplus/android/server/scene/ssp;-><init>(Landroid/content/Context;ILcom/oneplus/android/server/scene/OemSceneGameModePanel;Z)V
 

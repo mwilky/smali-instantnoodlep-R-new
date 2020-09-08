@@ -16,7 +16,7 @@
 
 
 # static fields
-.field public static final tsu:Ljava/lang/String; = "vendor.pixelworks.hardware.display@1.0::IIrisCallback"
+.field public static final rtg:Ljava/lang/String; = "vendor.pixelworks.hardware.display@1.0::IIrisCallback"
 
 
 # direct methods
@@ -188,7 +188,7 @@
 
 
 # virtual methods
-.method public abstract L(ILjava/util/ArrayList;)V
+.method public abstract Q(ILjava/util/ArrayList;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",

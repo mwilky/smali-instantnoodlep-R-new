@@ -42,81 +42,98 @@
 
     move-result p2
 
-    const v0, 0xa480416
+    const/4 v0, 0x3
 
     const/4 v1, 0x2
 
     const/4 v2, 0x1
 
-    if-eq p2, v0, :cond_2
-
-    const v0, 0x1f50b9c2
-
-    if-eq p2, v0, :cond_1
-
-    const v0, 0x5c1076e2
-
-    if-eq p2, v0, :cond_0
+    sparse-switch p2, :sswitch_data_0
 
     goto :goto_0
 
-    :cond_0
+    :sswitch_0
     const-string p2, "android.intent.action.PACKAGE_ADDED"
 
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_0
 
     const/4 p1, 0x0
 
     goto :goto_1
 
-    :cond_1
+    :sswitch_1
     const-string p2, "android.intent.action.PACKAGE_REMOVED"
 
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_0
 
     move p1, v2
 
     goto :goto_1
 
-    :cond_2
+    :sswitch_2
     const-string p2, "android.intent.action.PACKAGE_CHANGED"
 
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_0
 
     move p1, v1
 
     goto :goto_1
 
-    :cond_3
+    :sswitch_3
+    const-string p2, "android.intent.action.PACKAGE_REPLACED"
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    move p1, v0
+
+    goto :goto_1
+
+    :cond_0
     :goto_0
     const/4 p1, -0x1
 
     :goto_1
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_1
 
-    if-eq p1, v2, :cond_4
+    if-eq p1, v2, :cond_1
 
-    if-eq p1, v1, :cond_4
+    if-eq p1, v1, :cond_1
+
+    if-eq p1, v0, :cond_1
 
     goto :goto_2
 
-    :cond_4
+    :cond_1
     iget-object p0, p0, Lcom/android/server/am/StartAppSpecialUidsPolicy$you;->zta:Lcom/android/server/am/StartAppSpecialUidsPolicy;
 
     invoke-static {p0}, Lcom/android/server/am/StartAppSpecialUidsPolicy;->you(Lcom/android/server/am/StartAppSpecialUidsPolicy;)V
 
     :goto_2
     return-void
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x304ed112 -> :sswitch_3
+        0xa480416 -> :sswitch_2
+        0x1f50b9c2 -> :sswitch_1
+        0x5c1076e2 -> :sswitch_0
+    .end sparse-switch
 .end method

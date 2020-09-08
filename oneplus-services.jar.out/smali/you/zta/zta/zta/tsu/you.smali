@@ -59,6 +59,16 @@
     .end annotation
 .end field
 
+.field private static final qbh:Ljava/util/Set;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Set<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field private static final rtg:Ljava/lang/String; = "/product/media/shutdownanimation_flag_blank.zip"
 
 .field public static final sis:Ljava/lang/String; = "carrier_pre_load"
@@ -208,14 +218,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->gck:Ljava/util/Set;
-
-    invoke-interface {v0, v6}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->gck:Ljava/util/Set;
-
-    invoke-interface {v0, v7}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
@@ -226,49 +228,15 @@
 
     sget-object v0, Lyou/zta/zta/zta/tsu/you;->dma:Ljava/util/Set;
 
-    invoke-interface {v0, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     sget-object v0, Lyou/zta/zta/zta/tsu/you;->dma:Ljava/util/Set;
 
-    invoke-interface {v0, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, v6}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     sget-object v0, Lyou/zta/zta/zta/tsu/you;->dma:Ljava/util/Set;
 
-    invoke-interface {v0, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->dma:Ljava/util/Set;
-
-    const-string v4, "android.permission.RECEIVE_MMS"
-
-    invoke-interface {v0, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->dma:Ljava/util/Set;
-
-    invoke-interface {v0, v8}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->dma:Ljava/util/Set;
-
-    const-string v4, "android.permission.SEND_SMS"
-
-    invoke-interface {v0, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->dma:Ljava/util/Set;
-
-    const-string v5, "android.permission.READ_CONTACTS"
-
-    invoke-interface {v0, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->dma:Ljava/util/Set;
-
-    const-string v5, "android.permission.WRITE_CONTACTS"
-
-    invoke-interface {v0, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->dma:Ljava/util/Set;
-
-    const-string v5, "android.permission.GET_ACCOUNTS"
-
-    invoke-interface {v0, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, v7}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     new-instance v0, Landroid/util/ArraySet;
 
@@ -280,7 +248,21 @@
 
     sget-object v0, Lyou/zta/zta/zta/tsu/you;->ywr:Ljava/util/Set;
 
-    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->ywr:Ljava/util/Set;
+
+    invoke-interface {v0, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->ywr:Ljava/util/Set;
+
+    invoke-interface {v0, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->ywr:Ljava/util/Set;
+
+    const-string v4, "android.permission.RECEIVE_MMS"
+
+    invoke-interface {v0, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     sget-object v0, Lyou/zta/zta/zta/tsu/you;->ywr:Ljava/util/Set;
 
@@ -288,9 +270,49 @@
 
     sget-object v0, Lyou/zta/zta/zta/tsu/you;->ywr:Ljava/util/Set;
 
+    const-string v4, "android.permission.SEND_SMS"
+
     invoke-interface {v0, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     sget-object v0, Lyou/zta/zta/zta/tsu/you;->ywr:Ljava/util/Set;
+
+    const-string v5, "android.permission.READ_CONTACTS"
+
+    invoke-interface {v0, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->ywr:Ljava/util/Set;
+
+    const-string v5, "android.permission.WRITE_CONTACTS"
+
+    invoke-interface {v0, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->ywr:Ljava/util/Set;
+
+    const-string v5, "android.permission.GET_ACCOUNTS"
+
+    invoke-interface {v0, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    new-instance v0, Landroid/util/ArraySet;
+
+    invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
+
+    sput-object v0, Lyou/zta/zta/zta/tsu/you;->qbh:Ljava/util/Set;
+
+    invoke-interface {v0, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->qbh:Ljava/util/Set;
+
+    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->qbh:Ljava/util/Set;
+
+    invoke-interface {v0, v8}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->qbh:Ljava/util/Set;
+
+    invoke-interface {v0, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->qbh:Ljava/util/Set;
 
     invoke-interface {v0, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
@@ -597,7 +619,7 @@
 
     new-array v3, v2, [Ljava/util/Set;
 
-    sget-object v4, Lyou/zta/zta/zta/tsu/you;->gck:Ljava/util/Set;
+    sget-object v4, Lyou/zta/zta/zta/tsu/you;->dma:Ljava/util/Set;
 
     aput-object v4, v3, v5
 
@@ -641,7 +663,7 @@
 
     new-array v2, v2, [Ljava/util/Set;
 
-    sget-object v3, Lyou/zta/zta/zta/tsu/you;->dma:Ljava/util/Set;
+    sget-object v3, Lyou/zta/zta/zta/tsu/you;->ywr:Ljava/util/Set;
 
     aput-object v3, v2, v5
 
@@ -657,7 +679,7 @@
 
     new-array v0, v0, [I
 
-    const/16 v1, 0xbf
+    const/16 v1, 0xb7
 
     const/4 v2, 0x0
 
@@ -924,7 +946,7 @@
 
     new-array v6, v3, [Ljava/util/Set;
 
-    sget-object p1, Lyou/zta/zta/zta/tsu/you;->ywr:Ljava/util/Set;
+    sget-object p1, Lyou/zta/zta/zta/tsu/you;->qbh:Ljava/util/Set;
 
     aput-object p1, v6, v1
 
@@ -1581,7 +1603,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x87
+    const/16 v2, 0x80
 
     const/4 v3, 0x0
 
@@ -1591,7 +1613,7 @@
 
     move-result v1
 
-    const/16 v2, 0x40
+    const/16 v2, 0x3e
 
     if-eqz v1, :cond_1
 
@@ -1654,4 +1676,24 @@
 
     :goto_2
     return v0
+.end method
+
+.method public sis(Landroid/content/Context;)V
+    .locals 1
+
+    const-string p0, "ro.boot.opcarrier"
+
+    invoke-static {p0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p1
+
+    const-string v0, "carrier_pre_load"
+
+    invoke-static {p1, v0, p0}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
+
+    return-void
 .end method

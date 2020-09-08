@@ -3,38 +3,32 @@
 .source ""
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/android/server/wm/SurfaceAnimator$OnAnimationFinishedCallback;
 
 
 # instance fields
-.field public final synthetic you:Landroid/os/Bundle;
-
-.field public final synthetic zta:Lcom/android/server/wm/OpWindowManagerService;
+.field public final synthetic zta:Lcom/android/server/wm/OpScreenRotationImprovement$you;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/android/server/wm/OpWindowManagerService;Landroid/os/Bundle;)V
+.method public synthetic constructor <init>(Lcom/android/server/wm/OpScreenRotationImprovement$you;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/android/server/wm/bio;->zta:Lcom/android/server/wm/OpWindowManagerService;
-
-    iput-object p2, p0, Lcom/android/server/wm/bio;->you:Landroid/os/Bundle;
+    iput-object p1, p0, Lcom/android/server/wm/bio;->zta:Lcom/android/server/wm/OpScreenRotationImprovement$you;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final onAnimationFinished(ILcom/android/server/wm/AnimationAdapter;)V
+    .locals 0
 
-    iget-object v0, p0, Lcom/android/server/wm/bio;->zta:Lcom/android/server/wm/OpWindowManagerService;
+    iget-object p0, p0, Lcom/android/server/wm/bio;->zta:Lcom/android/server/wm/OpScreenRotationImprovement$you;
 
-    iget-object p0, p0, Lcom/android/server/wm/bio;->you:Landroid/os/Bundle;
-
-    invoke-virtual {v0, p0}, Lcom/android/server/wm/OpWindowManagerService;->rtg(Landroid/os/Bundle;)V
+    invoke-static {p0, p1, p2}, Lcom/android/server/wm/OpScreenRotationImprovement$you;->rtg(Lcom/android/server/wm/OpScreenRotationImprovement$you;ILcom/android/server/wm/AnimationAdapter;)V
 
     return-void
 .end method

@@ -725,7 +725,7 @@
 
     if-nez v0, :cond_0
 
-    const/16 p0, 0x13
+    const/16 p0, 0x14
 
     return p0
 

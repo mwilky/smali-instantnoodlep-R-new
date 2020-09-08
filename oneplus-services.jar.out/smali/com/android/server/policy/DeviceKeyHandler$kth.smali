@@ -122,6 +122,14 @@
 
     invoke-virtual {v0, v1, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
+    const-string v1, "doze_always_on"
+
+    invoke-static {v1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
+
     iget-object p0, p0, Lcom/android/server/policy/DeviceKeyHandler$kth;->zta:Lcom/android/server/policy/DeviceKeyHandler;
 
     invoke-static {p0}, Lcom/android/server/policy/DeviceKeyHandler;->ssp(Lcom/android/server/policy/DeviceKeyHandler;)V

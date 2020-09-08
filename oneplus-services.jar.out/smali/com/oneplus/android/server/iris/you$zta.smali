@@ -112,7 +112,7 @@
 
     check-cast v1, Landroid/view/LayoutInflater;
 
-    const v3, 0x50b0078
+    const v3, 0x50b0077
 
     invoke-virtual {v1, v3, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -126,7 +126,7 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    const v3, 0x50f0076
+    const v3, 0x50f0077
 
     iget-object v4, p0, Lcom/oneplus/android/server/iris/you$zta;->zta:Lcom/oneplus/android/server/iris/you;
 
@@ -136,7 +136,7 @@
 
     if-eqz v4, :cond_1
 
-    const v3, 0x50f0067
+    const v3, 0x50f0068
 
     :cond_1
     iget-object v4, p0, Lcom/oneplus/android/server/iris/you$zta;->zta:Lcom/oneplus/android/server/iris/you;

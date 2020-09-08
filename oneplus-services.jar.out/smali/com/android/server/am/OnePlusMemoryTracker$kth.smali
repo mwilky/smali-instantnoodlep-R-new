@@ -62,7 +62,7 @@
 
     sub-long/2addr v0, v2
 
-    invoke-static {}, Lcom/android/server/am/OnePlusMemoryTracker;->access$200()J
+    invoke-static {}, Lcom/android/server/am/OnePlusMemoryTracker;->access$300()J
 
     move-result-wide v2
 

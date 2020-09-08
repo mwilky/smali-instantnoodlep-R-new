@@ -58,7 +58,7 @@
 
     move-result-object p1
 
-    invoke-interface {v0, p0, p1, p2}, Lsis/zta/zta/zta/zta/zta;->h(ILjava/util/ArrayList;I)Z
+    invoke-interface {v0, p0, p1, p2}, Lsis/zta/zta/zta/zta/zta;->k(ILjava/util/ArrayList;I)Z
 
     move-result p0
     :try_end_0
@@ -278,7 +278,7 @@
 
     sget-object v0, Lcom/android/server/engineer/sis;->you:Lsis/zta/zta/zta/zta/zta;
 
-    invoke-interface {v0, p0}, Lsis/zta/zta/zta/zta/zta;->qeg(Z)Z
+    invoke-interface {v0, p0}, Lsis/zta/zta/zta/zta/zta;->a(Z)Z
 
     move-result p0
     :try_end_0
@@ -712,7 +712,7 @@
 
     sget-object v0, Lcom/android/server/engineer/sis;->you:Lsis/zta/zta/zta/zta/zta;
 
-    invoke-interface {v0}, Lsis/zta/zta/zta/zta/zta;->n()Z
+    invoke-interface {v0}, Lsis/zta/zta/zta/zta/zta;->q()Z
 
     move-result v0
     :try_end_0
@@ -886,7 +886,7 @@
 
     move v5, p3
 
-    invoke-interface/range {v1 .. v6}, Lsis/zta/zta/zta/zta/zta;->j(Ljava/lang/String;IZILjava/util/ArrayList;)I
+    invoke-interface/range {v1 .. v6}, Lsis/zta/zta/zta/zta/zta;->m(Ljava/lang/String;IZILjava/util/ArrayList;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

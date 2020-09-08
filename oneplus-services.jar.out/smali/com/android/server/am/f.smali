@@ -144,7 +144,7 @@
     move-result-object p0
 
     :goto_0
-    invoke-static {p0}, Lcom/android/server/am/hmo;->les(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/am/hmo;->h(Ljava/lang/String;)V
 
     return v1
 
@@ -209,13 +209,17 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     iget-object p1, p1, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
     iget-object p1, p1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    sget-object v0, Lcom/android/server/am/hmo;->l:Landroid/os/Handler;
+    sget-boolean v0, Lcom/android/server/am/hmo;->r:Z
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lcom/android/server/am/hmo;->s:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/am/tsu;
 
@@ -223,6 +227,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
+    :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -243,9 +248,9 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/am/hmo;->les(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/am/hmo;->h(Ljava/lang/String;)V
 
-    :cond_0
+    :cond_1
     return-void
 .end method
 
@@ -430,7 +435,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/server/am/hmo;->les(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/server/am/hmo;->h(Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
@@ -632,7 +637,7 @@
     goto/16 :goto_1
 
     :cond_4
-    invoke-static {}, Lcom/android/server/am/hmo;->ibl()Lcom/android/server/am/hmo;
+    invoke-static {}, Lcom/android/server/am/hmo;->ire()Lcom/android/server/am/hmo;
 
     move-result-object v1
 
@@ -640,7 +645,7 @@
 
     iget-object v2, v2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lcom/android/server/am/hmo;->ear(Ljava/lang/String;)Z
+    invoke-virtual {v1, v2}, Lcom/android/server/am/hmo;->irq(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -669,7 +674,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/am/hmo;->les(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/am/hmo;->h(Ljava/lang/String;)V
 
     return v0
 
@@ -713,7 +718,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/am/hmo;->les(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/am/hmo;->h(Ljava/lang/String;)V
 
     monitor-exit v1
 

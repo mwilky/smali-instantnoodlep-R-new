@@ -19,7 +19,7 @@
 
 
 # static fields
-.field public static final sis:Ljava/lang/String; = "vendor.pixelworks.hardware.display@1.0::IIris"
+.field public static final tsu:Ljava/lang/String; = "vendor.pixelworks.hardware.display@1.0::IIris"
 
 
 # direct methods
@@ -191,7 +191,7 @@
 
 
 # virtual methods
-.method public abstract K(ZBBZLjava/util/ArrayList;BLsis/you/zta/zta/zta/sis$rtg;)V
+.method public abstract O(ZBBZLjava/util/ArrayList;BLsis/you/zta/zta/zta/sis$rtg;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(ZBBZ",
@@ -237,7 +237,7 @@
     .end annotation
 .end method
 
-.method public abstract d(ILjava/util/ArrayList;Lsis/you/zta/zta/zta/sis$tsu;)V
+.method public abstract f(ILjava/util/ArrayList;Lsis/you/zta/zta/zta/sis$tsu;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -274,7 +274,7 @@
     .end annotation
 .end method
 
-.method public abstract les(ILjava/util/ArrayList;)I
+.method public abstract irq(ILjava/util/ArrayList;)I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -307,7 +307,7 @@
     .end annotation
 .end method
 
-.method public abstract o(ILjava/lang/String;Lsis/you/zta/zta/zta/sis$sis;)V
+.method public abstract r(ILjava/lang/String;Lsis/you/zta/zta/zta/sis$sis;)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

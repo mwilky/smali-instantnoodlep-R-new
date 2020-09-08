@@ -108,7 +108,7 @@
 
 .field private mHandler:Landroid/os/Handler;
 
-.field private mOpScreenDecor:Lcom/android/server/wm/ugm;
+.field private mOpScreenDecor:Lcom/android/server/wm/zgw;
 
 .field public mScreenCompatDefaultEnabledList:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
@@ -195,7 +195,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x32
+    const/16 v2, 0x31
 
     const/4 v3, 0x0
 
@@ -209,7 +209,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x20
+    const/16 v2, 0x1f
 
     aput v2, v1, v3
 
@@ -243,7 +243,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x33
+    const/16 v2, 0x32
 
     aput v2, v1, v3
 
@@ -1924,7 +1924,7 @@
 
     if-eqz v0, :cond_b
 
-    iget-object v0, p0, Lcom/android/server/wm/OpScreenCompat;->mOpScreenDecor:Lcom/android/server/wm/ugm;
+    iget-object v0, p0, Lcom/android/server/wm/OpScreenCompat;->mOpScreenDecor:Lcom/android/server/wm/zgw;
 
     if-eqz v0, :cond_b
 
@@ -2075,9 +2075,9 @@
 
     :cond_9
     :goto_6
-    iget-object v1, p0, Lcom/android/server/wm/OpScreenCompat;->mOpScreenDecor:Lcom/android/server/wm/ugm;
+    iget-object v1, p0, Lcom/android/server/wm/OpScreenCompat;->mOpScreenDecor:Lcom/android/server/wm/zgw;
 
-    iget-boolean v1, v1, Lcom/android/server/wm/ugm;->ywr:Z
+    iget-boolean v1, v1, Lcom/android/server/wm/zgw;->ywr:Z
 
     if-eq v1, v2, :cond_b
 
@@ -2204,9 +2204,9 @@
     invoke-static {p2, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_a
-    iget-object p0, p0, Lcom/android/server/wm/OpScreenCompat;->mOpScreenDecor:Lcom/android/server/wm/ugm;
+    iget-object p0, p0, Lcom/android/server/wm/OpScreenCompat;->mOpScreenDecor:Lcom/android/server/wm/zgw;
 
-    invoke-virtual {p0, v2}, Lcom/android/server/wm/ugm;->ssp(Z)V
+    invoke-virtual {p0, v2}, Lcom/android/server/wm/zgw;->ssp(Z)V
 
     :cond_b
     return-void
@@ -2343,13 +2343,13 @@
 
     iput-object v1, p0, Lcom/android/server/wm/OpScreenCompat;->mScreenCompatThirdPartyAppList:Ljava/util/ArrayList;
 
-    new-instance v1, Lcom/android/server/wm/ugm;
+    new-instance v1, Lcom/android/server/wm/zgw;
 
     iget-object v2, p0, Lcom/android/server/wm/OpScreenCompat;->mContext:Landroid/content/Context;
 
-    invoke-direct {v1, v2}, Lcom/android/server/wm/ugm;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v2}, Lcom/android/server/wm/zgw;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/android/server/wm/OpScreenCompat;->mOpScreenDecor:Lcom/android/server/wm/ugm;
+    iput-object v1, p0, Lcom/android/server/wm/OpScreenCompat;->mOpScreenDecor:Lcom/android/server/wm/zgw;
 
     :cond_2
     sget-boolean v1, Lcom/android/server/wm/OpScreenCompat;->IS_SUPPORT_HIDE_CAMERA_NOTCH:Z
@@ -2639,11 +2639,11 @@
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/android/server/wm/OpScreenCompat;->mOpScreenDecor:Lcom/android/server/wm/ugm;
+    iget-object v0, p0, Lcom/android/server/wm/OpScreenCompat;->mOpScreenDecor:Lcom/android/server/wm/zgw;
 
     if-eqz v0, :cond_2
 
-    iget-boolean v0, v0, Lcom/android/server/wm/ugm;->ywr:Z
+    iget-boolean v0, v0, Lcom/android/server/wm/zgw;->ywr:Z
 
     if-eqz v0, :cond_2
 
@@ -2679,9 +2679,9 @@
 
     :cond_1
     :goto_0
-    iget-object p0, p0, Lcom/android/server/wm/OpScreenCompat;->mOpScreenDecor:Lcom/android/server/wm/ugm;
+    iget-object p0, p0, Lcom/android/server/wm/OpScreenCompat;->mOpScreenDecor:Lcom/android/server/wm/zgw;
 
-    iget p0, p0, Lcom/android/server/wm/ugm;->bvj:I
+    iget p0, p0, Lcom/android/server/wm/zgw;->bvj:I
 
     monitor-exit v0
 
@@ -2941,11 +2941,11 @@
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lcom/android/server/wm/OpScreenCompat;->mOpScreenDecor:Lcom/android/server/wm/ugm;
+    iget-object p0, p0, Lcom/android/server/wm/OpScreenCompat;->mOpScreenDecor:Lcom/android/server/wm/zgw;
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/server/wm/ugm;->igw()V
+    invoke-virtual {p0}, Lcom/android/server/wm/zgw;->igw()V
 
     :cond_0
     return-void

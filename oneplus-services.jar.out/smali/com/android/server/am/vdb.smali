@@ -74,15 +74,7 @@
 
 .field gck:Lcom/android/server/am/OPSystemCpuLoadMonitor$SystemLoadType;
 
-.field private igw:Ljava/util/HashSet;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/HashSet<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private igw:Ljava/lang/String;
 
 .field private kth:Lcom/android/server/am/BroadcastQueue;
 
@@ -115,11 +107,9 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/HashSet;
+    const-string v0, "unknown"
 
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    iput-object v0, p0, Lcom/android/server/am/vdb;->igw:Ljava/util/HashSet;
+    iput-object v0, p0, Lcom/android/server/am/vdb;->igw:Ljava/lang/String;
 
     new-instance v0, Ljava/util/HashSet;
 
@@ -633,27 +623,7 @@
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {}, Lcom/android/server/am/zgw;->vdb()Z
-
-    move-result v1
-
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "sEnableDelayStartProcessStrategy  = "
-
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {}, Lcom/android/server/am/zgw;->ugm()Z
+    invoke-static {}, Lcom/android/server/am/zgw;->zgw()Z
 
     move-result v1
 
@@ -698,226 +668,6 @@
     move-result v1
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "sEnableStatistics  = "
-
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {}, Lcom/android/server/am/zgw;->ear()Z
-
-    move-result v1
-
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "sPeriodic  = "
-
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {}, Lcom/android/server/am/zgw;->kth()I
-
-    move-result v1
-
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "sLow  = "
-
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {}, Lcom/android/server/am/zgw;->ssp()I
-
-    move-result v1
-
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "sMedium  = "
-
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {}, Lcom/android/server/am/zgw;->cno()I
-
-    move-result v1
-
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "sHigh  = "
-
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {}, Lcom/android/server/am/zgw;->rtg()I
-
-    move-result v1
-
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "sVeryHigh  = "
-
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {}, Lcom/android/server/am/zgw;->bio()I
-
-    move-result v1
-
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "sSpeedPeriodic  = "
-
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {}, Lcom/android/server/am/zgw;->dma()I
-
-    move-result v1
-
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "sNormal  = "
-
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {}, Lcom/android/server/am/zgw;->gck()I
-
-    move-result v1
-
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "sSlow  = "
-
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {}, Lcom/android/server/am/zgw;->ywr()I
-
-    move-result v1
-
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "sSlower  = "
-
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {}, Lcom/android/server/am/zgw;->qbh()I
-
-    move-result v1
-
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "sSlowest  = "
-
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {}, Lcom/android/server/am/zgw;->oif()I
-
-    move-result v1
-
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -1217,20 +967,16 @@
 .method public dma(Landroid/content/pm/ApplicationInfo;)Z
     .locals 0
 
-    iget p0, p1, Landroid/content/pm/ApplicationInfo;->flags:I
+    invoke-static {}, Lcom/android/server/am/AppRecordManagerService;->getInstance()Lcom/android/server/am/AppRecordManagerService;
 
-    and-int/lit16 p0, p0, 0x81
+    move-result-object p0
 
-    if-eqz p0, :cond_0
+    iget-object p1, p1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    const/4 p0, 0x1
+    invoke-virtual {p0, p1}, Lcom/android/server/am/AppRecordManagerService;->isSystemApp(Ljava/lang/String;)Z
 
-    goto :goto_0
+    move-result p0
 
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
     return p0
 .end method
 
@@ -1271,17 +1017,27 @@
 
     if-eqz v0, :cond_0
 
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "processOrderedBroadcastForPriorityLocked isEnablePriorityStrategy  = "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     invoke-static {}, Lcom/android/server/am/zgw;->oxb()Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v0, "OPIntelligentBroadcastManager"
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const-string v1, "processOrderedBroadcastForPriorityLocked"
+    move-result-object v0
 
-    invoke-static {v0, v1}, Lcom/android/server/am/Slogger;->debug(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v1, "OPIntelligentBroadcastManager"
+
+    invoke-static {v1, v0}, Lcom/android/server/am/Slogger;->debug(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {}, Lcom/android/server/am/irq;->sis()Lcom/android/server/am/irq;
 
@@ -1289,7 +1045,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/vdb;->zta:Lcom/android/server/am/ActivityManagerService;
 
-    invoke-virtual {v0, p0, p1, p2}, Lcom/android/server/am/irq;->tsu(Lcom/android/server/am/ActivityManagerService;Lcom/android/server/am/BroadcastRecord;I)V
+    invoke-virtual {v0, p0, p1, p2}, Lcom/android/server/am/irq;->rtg(Lcom/android/server/am/ActivityManagerService;Lcom/android/server/am/BroadcastRecord;I)V
 
     :cond_0
     return-void
@@ -1357,39 +1113,15 @@
 .end method
 
 .method public oif(Ljava/lang/String;Z)V
-    .locals 4
+    .locals 1
 
     iget-object v0, p0, Lcom/android/server/am/vdb;->wtn:Ljava/util/HashSet;
 
     monitor-enter v0
 
-    :try_start_0
-    const-string v1, "OPIntelligentBroadcastManager"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "noteHighUsedAppChanged packageName = "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v3, " isHighUsedApp = "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/android/server/am/Slogger;->d(Ljava/lang/String;Ljava/lang/String;)V
-
     if-eqz p2, :cond_0
 
+    :try_start_0
     iget-object p0, p0, Lcom/android/server/am/vdb;->wtn:Ljava/util/HashSet;
 
     invoke-virtual {p0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
@@ -1463,7 +1195,7 @@
 .method public qbh(Ljava/lang/String;IILjava/lang/String;II)V
     .locals 4
 
-    iget-object v0, p0, Lcom/android/server/am/vdb;->igw:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/android/server/am/vdb;->igw:Ljava/lang/String;
 
     monitor-enter v0
 
@@ -1547,23 +1279,13 @@
     return-void
 
     :cond_0
-    iget-object p2, p0, Lcom/android/server/am/vdb;->igw:Ljava/util/HashSet;
+    iget-object p2, p0, Lcom/android/server/am/vdb;->igw:Ljava/lang/String;
 
-    invoke-virtual {p2, p4}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+    if-eq p2, p1, :cond_1
 
-    move-result p2
-
-    if-eqz p2, :cond_1
-
-    iget-object p2, p0, Lcom/android/server/am/vdb;->igw:Ljava/util/HashSet;
-
-    invoke-virtual {p2, p4}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
+    iput-object p1, p0, Lcom/android/server/am/vdb;->igw:Ljava/lang/String;
 
     :cond_1
-    iget-object p2, p0, Lcom/android/server/am/vdb;->igw:Ljava/util/HashSet;
-
-    invoke-virtual {p2, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
@@ -2517,7 +2239,7 @@
 .end method
 
 .method public you(Ljava/util/List;Landroid/content/Intent;)Ljava/util/List;
-    .locals 0
+    .locals 1
 
     invoke-static {}, Lcom/android/server/am/zgw;->obl()Z
 
@@ -2525,11 +2247,27 @@
 
     if-eqz p0, :cond_0
 
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "adjustReceiverListForSMS isEnablePriorityStrategy = "
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     invoke-static {}, Lcom/android/server/am/zgw;->oxb()Z
 
-    move-result p0
+    move-result v0
 
-    if-eqz p0, :cond_0
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "OPIntelligentBroadcastManager"
+
+    invoke-static {v0, p0}, Lcom/android/server/am/Slogger;->debug(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {}, Lcom/android/server/am/irq;->sis()Lcom/android/server/am/irq;
 
@@ -2548,14 +2286,14 @@
 .method public ywr(Ljava/lang/String;)Z
     .locals 1
 
-    iget-object v0, p0, Lcom/android/server/am/vdb;->igw:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/android/server/am/vdb;->igw:Ljava/lang/String;
 
     monitor-enter v0
 
     :try_start_0
-    iget-object p0, p0, Lcom/android/server/am/vdb;->igw:Ljava/util/HashSet;
+    iget-object p0, p0, Lcom/android/server/am/vdb;->igw:Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 

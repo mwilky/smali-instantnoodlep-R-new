@@ -142,7 +142,7 @@
 
     move-result-object p0
 
-    const v0, 0x50f0063
+    const v0, 0x50f0064
 
     invoke-virtual {p0, v0}, Landroid/app/NotificationManager;->cancel(I)V
 

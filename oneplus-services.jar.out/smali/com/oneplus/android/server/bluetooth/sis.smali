@@ -108,7 +108,7 @@
     return-void
 
     :cond_0
-    if-eqz p1, :cond_d
+    if-eqz p1, :cond_e
 
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
 
@@ -141,7 +141,7 @@
 
     iput-object v3, p0, Lcom/oneplus/android/server/bluetooth/sis;->you:Lnet/oneplus/odm/OpDeviceManagerInjector;
 
-    if-eqz v3, :cond_d
+    if-eqz v3, :cond_e
 
     :try_start_0
     const-string v3, "Check remote device bond fail info"
@@ -199,108 +199,114 @@
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothDevice;->getBluetoothClass()Landroid/bluetooth/BluetoothClass;
 
     move-result-object v4
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
+    const-string v5, "0"
+
+    if-eqz v4, :cond_5
+
+    :try_start_2
     invoke-virtual {v4}, Landroid/bluetooth/BluetoothClass;->toString()Ljava/lang/String;
 
     move-result-object v4
 
     invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v5
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    move-result v7
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    const-string v7, "0x"
+    const-string v8, "0x"
 
-    const-string v8, "c"
+    const-string v9, "c"
 
-    const-string v9, "0"
+    if-nez v7, :cond_4
 
-    if-eqz v5, :cond_4
+    :try_start_3
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    :try_start_2
-    invoke-virtual {v4, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v7
 
-    move-result v5
-
-    if-nez v5, :cond_3
+    if-eqz v7, :cond_3
 
     goto :goto_3
 
     :cond_3
-    new-instance v4, Ljava/lang/StringBuilder;
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v5, p0, Lcom/oneplus/android/server/bluetooth/sis;->tsu:Lcom/oneplus/android/server/bluetooth/sis$you;
+    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v5, v5, Lcom/oneplus/android/server/bluetooth/sis$you;->cno:I
-
-    const/16 v7, 0x10
-
-    invoke-static {v5, v7}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v4
 
     :goto_2
-    invoke-virtual {v3, v8, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3, v9, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_4
 
     :cond_4
     :goto_3
-    new-instance v5, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v7, p0, Lcom/oneplus/android/server/bluetooth/sis;->tsu:Lcom/oneplus/android/server/bluetooth/sis$you;
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget v7, v7, Lcom/oneplus/android/server/bluetooth/sis$you;->cno:I
+
+    const/16 v8, 0x10
+
+    invoke-static {v7, v8}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v4
 
     goto :goto_2
 
+    :cond_5
     :goto_4
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
 
     move-result-object v4
 
-    const/4 v5, 0x0
+    const/4 v7, 0x0
 
-    const/16 v7, 0x8
+    const/16 v8, 0x8
 
-    invoke-virtual {v4, v5, v7}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    invoke-virtual {v4, v7, v8}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v4
 
-    const-string v5, ":"
+    const-string v7, ":"
 
-    invoke-virtual {v4, v5, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v4, v7, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v4
 
     invoke-static {}, Lcom/oneplus/android/connectivity/OpConnectivityUtils;->getInstance()Lcom/oneplus/android/connectivity/OpConnectivityUtils;
 
-    move-result-object v5
+    move-result-object v6
 
-    if-eqz v5, :cond_5
+    if-eqz v6, :cond_6
 
-    invoke-virtual {v5, v4}, Lcom/oneplus/android/connectivity/OpConnectivityUtils;->ouiToString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v6, v4}, Lcom/oneplus/android/connectivity/OpConnectivityUtils;->ouiToString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    :cond_5
+    :cond_6
     const-string v4, "a"
 
     invoke-virtual {v3, v4, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -308,14 +314,14 @@
     invoke-virtual {v2, p1}, Landroid/bluetooth/BluetoothAdapter;->isCarkit(Landroid/bluetooth/BluetoothDevice;)Z
 
     move-result p1
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
 
     const-string v0, "model"
 
-    if-eqz p1, :cond_6
+    if-eqz p1, :cond_7
 
-    :try_start_3
+    :try_start_4
     const-string p1, "CAR"
 
     :goto_5
@@ -323,7 +329,7 @@
 
     goto :goto_6
 
-    :cond_6
+    :cond_7
     const-string p1, "NONE"
 
     goto :goto_5
@@ -344,14 +350,14 @@
     iget-object p1, p0, Lcom/oneplus/android/server/bluetooth/sis;->tsu:Lcom/oneplus/android/server/bluetooth/sis$you;
 
     iget p1, p1, Lcom/oneplus/android/server/bluetooth/sis$you;->tsu:I
-    :try_end_3
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 
     const-string v0, "lv"
 
-    if-eqz p1, :cond_7
+    if-eqz p1, :cond_8
 
-    :try_start_4
+    :try_start_5
     iget-object p1, p0, Lcom/oneplus/android/server/bluetooth/sis;->tsu:Lcom/oneplus/android/server/bluetooth/sis$you;
 
     iget p1, p1, Lcom/oneplus/android/server/bluetooth/sis$you;->tsu:I
@@ -365,7 +371,7 @@
 
     goto :goto_8
 
-    :cond_7
+    :cond_8
     iget-object p1, p0, Lcom/oneplus/android/server/bluetooth/sis;->sis:Lcom/oneplus/android/server/bluetooth/zta;
 
     iget-object v2, p0, Lcom/oneplus/android/server/bluetooth/sis;->tsu:Lcom/oneplus/android/server/bluetooth/sis$you;
@@ -378,25 +384,25 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_8
+    if-eqz p1, :cond_9
 
     goto :goto_7
 
-    :cond_8
-    invoke-virtual {v3, v0, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_9
+    invoke-virtual {v3, v0, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :goto_8
     iget-object p1, p0, Lcom/oneplus/android/server/bluetooth/sis;->tsu:Lcom/oneplus/android/server/bluetooth/sis$you;
 
     iget p1, p1, Lcom/oneplus/android/server/bluetooth/sis$you;->rtg:I
-    :try_end_4
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
+    :try_end_5
+    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
 
     const-string v0, "lsv"
 
-    if-eqz p1, :cond_9
+    if-eqz p1, :cond_a
 
-    :try_start_5
+    :try_start_6
     iget-object p1, p0, Lcom/oneplus/android/server/bluetooth/sis;->tsu:Lcom/oneplus/android/server/bluetooth/sis$you;
 
     iget p1, p1, Lcom/oneplus/android/server/bluetooth/sis$you;->rtg:I
@@ -410,7 +416,7 @@
 
     goto :goto_a
 
-    :cond_9
+    :cond_a
     iget-object p1, p0, Lcom/oneplus/android/server/bluetooth/sis;->sis:Lcom/oneplus/android/server/bluetooth/zta;
 
     iget-object v2, p0, Lcom/oneplus/android/server/bluetooth/sis;->tsu:Lcom/oneplus/android/server/bluetooth/sis$you;
@@ -423,25 +429,25 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_a
+    if-eqz p1, :cond_b
 
     goto :goto_9
 
-    :cond_a
-    invoke-virtual {v3, v0, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_b
+    invoke-virtual {v3, v0, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :goto_a
     iget-object p1, p0, Lcom/oneplus/android/server/bluetooth/sis;->tsu:Lcom/oneplus/android/server/bluetooth/sis$you;
 
     iget p1, p1, Lcom/oneplus/android/server/bluetooth/sis$you;->ssp:I
-    :try_end_5
-    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
+    :try_end_6
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_0
 
     const-string v0, "m"
 
-    if-eqz p1, :cond_b
+    if-eqz p1, :cond_c
 
-    :try_start_6
+    :try_start_7
     iget-object p1, p0, Lcom/oneplus/android/server/bluetooth/sis;->tsu:Lcom/oneplus/android/server/bluetooth/sis$you;
 
     iget p1, p1, Lcom/oneplus/android/server/bluetooth/sis$you;->ssp:I
@@ -455,7 +461,7 @@
 
     goto :goto_c
 
-    :cond_b
+    :cond_c
     iget-object p1, p0, Lcom/oneplus/android/server/bluetooth/sis;->sis:Lcom/oneplus/android/server/bluetooth/zta;
 
     iget-object v2, p0, Lcom/oneplus/android/server/bluetooth/sis;->tsu:Lcom/oneplus/android/server/bluetooth/sis$you;
@@ -468,12 +474,12 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_c
+    if-eqz p1, :cond_d
 
     goto :goto_b
 
-    :cond_c
-    invoke-virtual {v3, v0, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_d
+    invoke-virtual {v3, v0, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :goto_c
     iget-object p1, p0, Lcom/oneplus/android/server/bluetooth/sis;->tsu:Lcom/oneplus/android/server/bluetooth/sis$you;
@@ -505,8 +511,8 @@
     const-string v2, "bt_pair_fail"
 
     invoke-virtual {v0, p0, v2, v3, p1}, Lnet/oneplus/odm/OpDeviceManagerInjector;->preserveAppData(Landroid/content/Context;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;)V
-    :try_end_6
-    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_0
+    :try_end_7
+    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_0
 
     goto :goto_d
 
@@ -523,7 +529,7 @@
 
     invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_d
+    :cond_e
     :goto_d
     return-void
 .end method
@@ -725,6 +731,12 @@
 
     invoke-virtual {p0, v7, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    invoke-virtual {p1}, Landroid/bluetooth/BluetoothDevice;->getBluetoothClass()Landroid/bluetooth/BluetoothClass;
+
+    move-result-object v5
+
+    if-eqz v5, :cond_2
+
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -751,6 +763,7 @@
 
     invoke-virtual {p0, v7, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    :cond_2
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothDevice;->getType()I
 
     move-result v5
@@ -777,13 +790,13 @@
 
     const-string v5, "model"
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_3
 
     const-string v2, "CAR"
 
     goto :goto_1
 
-    :cond_2
+    :cond_3
     const-string v2, "NONE"
 
     :goto_1
@@ -801,7 +814,7 @@
 
     invoke-virtual {p0, v2, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_7
 
     array-length p1, v1
 
@@ -810,7 +823,7 @@
     move-object v2, v6
 
     :goto_2
-    if-ge v0, p1, :cond_5
+    if-ge v0, p1, :cond_6
 
     aget-object v5, v1, v0
 
@@ -828,13 +841,13 @@
 
     move-result v7
 
-    if-nez v7, :cond_4
+    if-nez v7, :cond_5
 
     invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
 
-    if-eqz v7, :cond_3
+    if-eqz v7, :cond_4
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -842,7 +855,7 @@
 
     goto :goto_3
 
-    :cond_3
+    :cond_4
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -868,19 +881,19 @@
 
     move-result-object v2
 
-    :cond_4
+    :cond_5
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    :cond_5
+    :cond_6
     const-string p1, "u"
 
     invoke-virtual {p0, p1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object p0
 
-    :cond_6
+    :cond_7
     return-object v0
 .end method
 
@@ -1060,6 +1073,11 @@
 .method public ssp(Landroid/bluetooth/BluetoothDevice;)V
     .locals 3
 
+    if-nez p1, :cond_0
+
+    return-void
+
+    :cond_0
     iget-object v0, p0, Lcom/oneplus/android/server/bluetooth/sis;->sis:Lcom/oneplus/android/server/bluetooth/zta;
 
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
@@ -1072,7 +1090,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     const-string v1, "1"
 
@@ -1080,11 +1098,11 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     return-void
 
-    :cond_0
+    :cond_1
     iget-object v0, p0, Lcom/oneplus/android/server/bluetooth/sis;->cno:Landroid/os/Handler;
 
     const/4 v1, 0x1
@@ -1093,15 +1111,12 @@
 
     move-result-object v0
 
-    if-eqz p1, :cond_1
-
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    :cond_1
     const-string p1, "OpBluetoothMonitorDeviceState"
 
     const-string v1, "Receive Bluetooth remote device bonded"

@@ -52,7 +52,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/server/am/hmo;->les(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/server/am/hmo;->h(Ljava/lang/String;)V
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
@@ -62,9 +62,9 @@
 
     const/4 v2, -0x1
 
-    const/4 v3, 0x0
+    const/4 v3, 0x1
 
-    const/4 v4, 0x1
+    const/4 v4, 0x0
 
     if-eq v0, v1, :cond_1
 
@@ -83,7 +83,7 @@
 
     if-eqz p1, :cond_2
 
-    move p1, v3
+    move p1, v4
 
     goto :goto_1
 
@@ -96,7 +96,7 @@
 
     if-eqz p1, :cond_2
 
-    move p1, v4
+    move p1, v3
 
     goto :goto_1
 
@@ -107,14 +107,14 @@
     :goto_1
     if-eqz p1, :cond_4
 
-    if-eq p1, v4, :cond_3
+    if-eq p1, v3, :cond_3
 
     goto/16 :goto_4
 
     :cond_3
     iget-object p0, p0, Lcom/android/server/am/hmo$zta;->zta:Lcom/android/server/am/hmo;
 
-    invoke-static {p0}, Lcom/android/server/am/hmo;->ywr(Lcom/android/server/am/hmo;)V
+    invoke-static {p0}, Lcom/android/server/am/hmo;->tsu(Lcom/android/server/am/hmo;)V
 
     goto/16 :goto_4
 
@@ -181,7 +181,7 @@
 
     if-eqz p1, :cond_5
 
-    move p1, v3
+    move p1, v4
 
     goto :goto_3
 
@@ -199,6 +199,19 @@
     goto :goto_3
 
     :sswitch_5
+    const-string v0, "blk_task"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    const/4 p1, 0x7
+
+    goto :goto_3
+
+    :sswitch_6
     const-string v0, "enable"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -211,7 +224,7 @@
 
     goto :goto_3
 
-    :sswitch_6
+    :sswitch_7
     const-string v0, "dumplist"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -220,7 +233,7 @@
 
     if-eqz p1, :cond_5
 
-    move p1, v4
+    move p1, v3
 
     goto :goto_3
 
@@ -229,14 +242,44 @@
     move p1, v2
 
     :goto_3
+    const-string v0, "add"
+
     packed-switch p1, :pswitch_data_0
 
     goto/16 :goto_4
 
     :pswitch_0
-    const-string p1, "add"
+    const-string p1, "task"
 
-    invoke-virtual {p2, p1, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+    invoke-virtual {p2, p1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p2, v0, v4}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result p2
+
+    if-eqz p1, :cond_8
+
+    iget-object p0, p0, Lcom/android/server/am/hmo$zta;->zta:Lcom/android/server/am/hmo;
+
+    invoke-static {p0}, Lcom/android/server/am/hmo;->ugm(Lcom/android/server/am/hmo;)Ljava/util/HashSet;
+
+    move-result-object p0
+
+    if-eqz p2, :cond_6
+
+    invoke-virtual {p0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    goto/16 :goto_4
+
+    :cond_6
+    invoke-virtual {p0, p1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
+
+    goto/16 :goto_4
+
+    :pswitch_1
+    invoke-virtual {p2, v0, v4}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p1
 
@@ -246,39 +289,32 @@
 
     move-result p2
 
-    if-eq p2, v2, :cond_7
+    if-eq p2, v2, :cond_8
 
     iget-object p0, p0, Lcom/android/server/am/hmo$zta;->zta:Lcom/android/server/am/hmo;
 
-    invoke-static {p0}, Lcom/android/server/am/hmo;->wtn(Lcom/android/server/am/hmo;)Lcom/android/server/am/StartAppSpecialUidsPolicy;
+    invoke-static {p0}, Lcom/android/server/am/hmo;->bvj(Lcom/android/server/am/hmo;)Lcom/android/server/am/StartAppSpecialUidsPolicy;
 
     move-result-object p0
 
-    if-eqz p1, :cond_6
+    if-eqz p1, :cond_7
 
-    invoke-virtual {p0, p2}, Lcom/android/server/am/StartAppSpecialUidsPolicy;->rtg(I)V
-
-    goto/16 :goto_4
-
-    :cond_6
-    invoke-virtual {p0, p2}, Lcom/android/server/am/StartAppSpecialUidsPolicy;->oif(I)V
+    invoke-virtual {p0, p2}, Lcom/android/server/am/StartAppSpecialUidsPolicy;->ssp(I)V
 
     goto/16 :goto_4
 
-    :pswitch_1
-    sput-boolean v3, Lcom/android/server/am/hmo;->i:Z
+    :cond_7
+    invoke-virtual {p0, p2}, Lcom/android/server/am/StartAppSpecialUidsPolicy;->gwm(I)V
 
     goto/16 :goto_4
 
     :pswitch_2
-    sput-boolean v4, Lcom/android/server/am/hmo;->i:Z
+    sput-boolean v4, Lcom/android/server/am/hmo;->n:Z
 
     goto/16 :goto_4
 
     :pswitch_3
-    iget-object p0, p0, Lcom/android/server/am/hmo$zta;->zta:Lcom/android/server/am/hmo;
-
-    iput-boolean v3, p0, Lcom/android/server/am/hmo;->zta:Z
+    sput-boolean v3, Lcom/android/server/am/hmo;->n:Z
 
     goto/16 :goto_4
 
@@ -290,29 +326,36 @@
     goto/16 :goto_4
 
     :pswitch_5
+    iget-object p0, p0, Lcom/android/server/am/hmo$zta;->zta:Lcom/android/server/am/hmo;
+
+    iput-boolean v3, p0, Lcom/android/server/am/hmo;->zta:Z
+
+    goto/16 :goto_4
+
+    :pswitch_6
     iget-object p1, p0, Lcom/android/server/am/hmo$zta;->zta:Lcom/android/server/am/hmo;
 
-    invoke-static {p1}, Lcom/android/server/am/hmo;->igw(Lcom/android/server/am/hmo;)V
+    invoke-static {p1}, Lcom/android/server/am/hmo;->oif(Lcom/android/server/am/hmo;)V
 
     iget-object p1, p0, Lcom/android/server/am/hmo$zta;->zta:Lcom/android/server/am/hmo;
 
-    invoke-static {p1}, Lcom/android/server/am/hmo;->wtn(Lcom/android/server/am/hmo;)Lcom/android/server/am/StartAppSpecialUidsPolicy;
+    invoke-static {p1}, Lcom/android/server/am/hmo;->bvj(Lcom/android/server/am/hmo;)Lcom/android/server/am/StartAppSpecialUidsPolicy;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/android/server/am/StartAppSpecialUidsPolicy;->igw()V
+    invoke-virtual {p1}, Lcom/android/server/am/StartAppSpecialUidsPolicy;->gck()V
 
     iget-object p1, p0, Lcom/android/server/am/hmo$zta;->zta:Lcom/android/server/am/hmo;
 
-    invoke-static {p1}, Lcom/android/server/am/hmo;->gck(Lcom/android/server/am/hmo;)Lcom/android/server/am/i;
+    invoke-static {p1}, Lcom/android/server/am/hmo;->ibl(Lcom/android/server/am/hmo;)Lcom/android/server/am/i;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/android/server/am/i;->kth()V
+    invoke-virtual {p1}, Lcom/android/server/am/i;->wtn()V
 
     iget-object p0, p0, Lcom/android/server/am/hmo$zta;->zta:Lcom/android/server/am/hmo;
 
-    invoke-static {p0}, Lcom/android/server/am/hmo;->dma(Lcom/android/server/am/hmo;)Lcom/android/server/am/StartAppConfigManager;
+    invoke-static {p0}, Lcom/android/server/am/hmo;->gwm(Lcom/android/server/am/hmo;)Lcom/android/server/am/StartAppConfigManager;
 
     move-result-object p0
 
@@ -320,7 +363,7 @@
 
     goto/16 :goto_4
 
-    :pswitch_6
+    :pswitch_7
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -329,7 +372,7 @@
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-boolean p2, Lcom/android/server/am/hmo;->i:Z
+    sget-boolean p2, Lcom/android/server/am/hmo;->n:Z
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -337,7 +380,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/android/server/am/hmo;->les(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/android/server/am/hmo;->h(Ljava/lang/String;)V
 
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -357,7 +400,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/android/server/am/hmo;->les(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/android/server/am/hmo;->h(Ljava/lang/String;)V
 
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -379,7 +422,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/android/server/am/hmo;->les(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/android/server/am/hmo;->h(Ljava/lang/String;)V
 
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -401,7 +444,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/android/server/am/hmo;->les(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/android/server/am/hmo;->h(Ljava/lang/String;)V
 
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -413,7 +456,7 @@
 
     iget-object p2, p0, Lcom/android/server/am/hmo$zta;->zta:Lcom/android/server/am/hmo;
 
-    invoke-static {p2}, Lcom/android/server/am/hmo;->cno(Lcom/android/server/am/hmo;)Z
+    invoke-static {p2}, Lcom/android/server/am/hmo;->dma(Lcom/android/server/am/hmo;)Z
 
     move-result p2
 
@@ -423,7 +466,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/android/server/am/hmo;->les(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/android/server/am/hmo;->h(Ljava/lang/String;)V
 
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -435,7 +478,7 @@
 
     iget-object p2, p0, Lcom/android/server/am/hmo$zta;->zta:Lcom/android/server/am/hmo;
 
-    invoke-static {p2}, Lcom/android/server/am/hmo;->kth(Lcom/android/server/am/hmo;)Z
+    invoke-static {p2}, Lcom/android/server/am/hmo;->ywr(Lcom/android/server/am/hmo;)Z
 
     move-result p2
 
@@ -445,7 +488,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/android/server/am/hmo;->les(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/android/server/am/hmo;->h(Ljava/lang/String;)V
 
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -457,7 +500,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/hmo$zta;->zta:Lcom/android/server/am/hmo;
 
-    invoke-static {p0}, Lcom/android/server/am/hmo;->bio(Lcom/android/server/am/hmo;)Z
+    invoke-static {p0}, Lcom/android/server/am/hmo;->qbh(Lcom/android/server/am/hmo;)Z
 
     move-result p0
 
@@ -467,9 +510,27 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/am/hmo;->les(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/am/hmo;->h(Ljava/lang/String;)V
 
-    :cond_7
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p1, "dump # sCanForceStop:"
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-boolean p1, Lcom/android/server/am/hmo;->r:Z
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/android/server/am/hmo;->h(Ljava/lang/String;)V
+
+    :cond_8
     :goto_4
     return-void
 
@@ -477,8 +538,9 @@
 
     :sswitch_data_0
     .sparse-switch
-        -0x7e742f6e -> :sswitch_6
-        -0x4d6ada7d -> :sswitch_5
+        -0x7e742f6e -> :sswitch_7
+        -0x4d6ada7d -> :sswitch_6
+        -0x2ea45a5d -> :sswitch_5
         -0xbcbee7d -> :sswitch_4
         0x2f39f4 -> :sswitch_3
         0x20a6d74b -> :sswitch_2
@@ -488,6 +550,7 @@
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_7
         :pswitch_6
         :pswitch_5
         :pswitch_4

@@ -308,7 +308,7 @@
 
     new-array v0, v0, [I
 
-    const/16 v1, 0xda
+    const/16 v1, 0xd2
 
     const/4 v2, 0x0
 
@@ -446,7 +446,7 @@
 
     new-array p1, v1, [I
 
-    const/16 v1, 0x3b
+    const/16 v1, 0x39
 
     aput v1, p1, v0
 
@@ -1202,18 +1202,18 @@
 
     iget-boolean v3, p0, Lcom/oneplus/android/server/scene/OemSceneModeController;->zta:Z
 
-    const/4 v4, 0x1
+    const/4 v4, 0x2
 
-    const/4 v5, 0x2
+    const/4 v5, 0x1
 
     if-eqz v3, :cond_0
 
-    move v3, v4
+    move v3, v5
 
     goto :goto_0
 
     :cond_0
-    move v3, v5
+    move v3, v4
 
     :goto_0
     const-string v6, "GameMode"
@@ -1231,6 +1231,8 @@
     iget-boolean v0, p0, Lcom/oneplus/android/server/scene/OemSceneModeController;->zta:Z
 
     if-nez v0, :cond_1
+
+    iput-boolean v5, p0, Lcom/oneplus/android/server/scene/OemSceneModeController;->wtn:Z
 
     iget-object v0, p0, Lcom/oneplus/android/server/scene/OemSceneModeController;->irq:Landroid/os/Handler;
 
@@ -1285,7 +1287,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, v4, v0}, Lcom/oneplus/android/server/scene/OemSceneModeController;->r(ZZ)V
+    invoke-direct {p0, v5, v0}, Lcom/oneplus/android/server/scene/OemSceneModeController;->r(ZZ)V
 
     iput-boolean v0, p0, Lcom/oneplus/android/server/scene/OemSceneModeController;->bio:Z
 
@@ -1382,7 +1384,7 @@
     if-eqz v0, :cond_7
 
     :cond_6
-    invoke-direct {p0, v5}, Lcom/oneplus/android/server/scene/OemSceneModeController;->c(I)V
+    invoke-direct {p0, v4}, Lcom/oneplus/android/server/scene/OemSceneModeController;->c(I)V
 
     :cond_7
     :goto_1
@@ -2619,7 +2621,7 @@
 
     iget-object v3, p0, Lcom/oneplus/android/server/scene/OemSceneModeController;->gck:Landroid/content/Context;
 
-    const v4, 0x50f008c
+    const v4, 0x50f008d
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2707,12 +2709,12 @@
 
     if-eqz p1, :cond_0
 
-    const v10, 0x50f0050
+    const v10, 0x50f0051
 
     goto :goto_0
 
     :cond_0
-    const v10, 0x50f0056
+    const v10, 0x50f0057
 
     :goto_0
     invoke-virtual {v9, v10}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -2731,7 +2733,7 @@
 
     iget-object v9, p0, Lcom/oneplus/android/server/scene/OemSceneModeController;->gck:Landroid/content/Context;
 
-    const v11, 0x50f005f
+    const v11, 0x50f0060
 
     invoke-virtual {v9, v11}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2769,7 +2771,7 @@
     goto :goto_1
 
     :cond_2
-    const v6, 0x507015d
+    const v6, 0x507015e
 
     :goto_1
     invoke-virtual {v8, v6}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
@@ -2780,7 +2782,7 @@
 
     iget-object v4, p0, Lcom/oneplus/android/server/scene/OemSceneModeController;->gck:Landroid/content/Context;
 
-    const v8, 0x50f0083
+    const v8, 0x50f0084
 
     invoke-virtual {v4, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2836,7 +2838,7 @@
 
     move-result-object v0
 
-    const v3, 0x50f0060
+    const v3, 0x50f0061
 
     if-eqz p1, :cond_4
 
@@ -3638,13 +3640,13 @@
 
     invoke-static {p0, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {}, Lcom/android/server/wm/gck;->rtg()Lcom/android/server/wm/gck$zta;
+    invoke-static {}, Lcom/android/server/wm/ywr;->rtg()Lcom/android/server/wm/ywr$zta;
 
     move-result-object p0
 
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/android/server/wm/gck$zta;->qbh(I)V
+    invoke-virtual {p0, v0}, Lcom/android/server/wm/ywr$zta;->bvj(I)V
 
     return-void
 .end method
@@ -3906,7 +3908,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    invoke-static {}, Lcom/android/server/wm/gck;->cno()V
+    invoke-static {}, Lcom/android/server/wm/ywr;->cno()V
 
     sget-object v0, Lcom/oneplus/android/server/scene/OemSceneModeController;->a0:Ljava/lang/String;
 
@@ -4147,13 +4149,13 @@
 
     invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/OemSceneModeController;->v(Lorg/json/JSONArray;)V
 
-    invoke-static {}, Lcom/android/server/wm/gck;->rtg()Lcom/android/server/wm/gck$zta;
+    invoke-static {}, Lcom/android/server/wm/ywr;->rtg()Lcom/android/server/wm/ywr$zta;
 
     move-result-object p0
 
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/android/server/wm/gck$zta;->qbh(I)V
+    invoke-virtual {p0, v0}, Lcom/android/server/wm/ywr$zta;->bvj(I)V
 
     return-void
 .end method

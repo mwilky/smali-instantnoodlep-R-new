@@ -45,5 +45,11 @@
 
     invoke-virtual {p0}, Lcom/oneplus/android/server/scene/OemSceneGameModePanel;->ire()V
 
+    invoke-static {}, Lcom/android/server/wm/ywr;->rtg()Lcom/android/server/wm/ywr$zta;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/server/wm/ywr$zta;->ibl()V
+
     return-void
 .end method

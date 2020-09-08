@@ -1289,16 +1289,95 @@
 
     const/4 v0, 0x0
 
-    if-eqz p4, :cond_f
+    if-eqz p4, :cond_12
 
     if-nez p3, :cond_0
 
     goto/16 :goto_5
 
     :cond_0
-    iget-object v1, p4, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+    sget-boolean v1, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->DBG:Z
+
+    const-string v2, "OemSceneCallBlock"
 
     if-eqz v1, :cond_1
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "isQuickReplyRunning: "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Lcom/android/server/wm/OpQuickReplyInjector;->isQuickReplyRunning()Z
+
+    move-result v3
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v3, ", isQuickReplyIM: "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p4, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    iget-object v3, v3, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
+
+    invoke-static {v3}, Lcom/android/server/wm/OpQuickReplyInjector;->isQuickReplyIM(Ljava/lang/String;)Z
+
+    move-result v3
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v3, ", "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p4, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    iget-object v3, v3, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    iget-object v1, p4, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    iget-object v1, v1, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
+
+    invoke-static {v1}, Lcom/android/server/wm/OpQuickReplyInjector;->isQuickReplyIM(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-static {}, Lcom/android/server/wm/OpQuickReplyInjector;->isQuickReplyRunning()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    sget-boolean p0, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->DBG:Z
+
+    if-eqz p0, :cond_2
+
+    const-string p0, "launching from quick reply IM, do not block"
+
+    invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_2
+    return v0
+
+    :cond_3
+    iget-object v1, p4, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    if-eqz v1, :cond_4
 
     iget-object v1, v1, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -1310,27 +1389,25 @@
 
     goto :goto_0
 
-    :cond_1
+    :cond_4
     move v1, v0
 
     :goto_0
     invoke-direct {p0, v1}, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->isCallBlockedOnForUser(I)Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_f
+    if-eqz v3, :cond_12
 
     invoke-direct {p0, v1}, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->isValidUserId(I)Z
 
     move-result v1
 
-    if-eqz v1, :cond_f
+    if-eqz v1, :cond_12
 
     sget-boolean v1, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->DBG:Z
 
-    const-string v2, "OemSceneCallBlock"
-
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_5
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1368,7 +1445,7 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_2
+    :cond_5
     invoke-virtual {p3}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v1
@@ -1385,11 +1462,11 @@
 
     const-string v4, "isCallBlocked: \'"
 
-    if-eqz v3, :cond_e
+    if-eqz v3, :cond_11
 
     sget-boolean v3, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->DBG:Z
 
-    if-eqz v3, :cond_3
+    if-eqz v3, :cond_6
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1407,14 +1484,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_3
+    :cond_6
     iget-object v3, p4, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v5, v3, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
-    if-eqz v5, :cond_7
+    if-eqz v5, :cond_a
 
-    if-eqz v3, :cond_4
+    if-eqz v3, :cond_7
 
     :try_start_0
     iget-object v3, v3, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1424,7 +1501,7 @@
 
     goto :goto_2
 
-    :cond_4
+    :cond_7
     iget-object v3, p0, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -1446,12 +1523,12 @@
 
     const-string v7, "\'("
 
-    if-eqz v6, :cond_6
+    if-eqz v6, :cond_9
 
     :try_start_1
     sget-boolean v6, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->DBG:Z
 
-    if-eqz v6, :cond_5
+    if-eqz v6, :cond_8
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -1475,13 +1552,13 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_5
+    :cond_8
     return v0
 
-    :cond_6
+    :cond_9
     sget-boolean v6, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->DBG_LOGV:Z
 
-    if-eqz v6, :cond_7
+    if-eqz v6, :cond_a
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -1534,7 +1611,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_7
+    :cond_a
     :goto_3
     invoke-virtual {p3}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
@@ -1548,7 +1625,7 @@
 
     move-result-object v5
 
-    if-eqz v5, :cond_c
+    if-eqz v5, :cond_f
 
     const-string v6, "android.intent.action.MAIN"
 
@@ -1556,13 +1633,13 @@
 
     move-result v6
 
-    if-eqz v6, :cond_a
+    if-eqz v6, :cond_d
 
     invoke-virtual {p3}, Landroid/content/Intent;->getCategories()Ljava/util/Set;
 
     move-result-object v6
 
-    if-eqz v6, :cond_a
+    if-eqz v6, :cond_d
 
     const-string v7, "android.intent.category.LAUNCHER"
 
@@ -1570,7 +1647,7 @@
 
     move-result v7
 
-    if-nez v7, :cond_8
+    if-nez v7, :cond_b
 
     const-string v7, "android.intent.category.HOME"
 
@@ -1578,12 +1655,12 @@
 
     move-result v6
 
-    if-eqz v6, :cond_a
+    if-eqz v6, :cond_d
 
-    :cond_8
+    :cond_b
     sget-boolean p0, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->DBG:Z
 
-    if-eqz p0, :cond_9
+    if-eqz p0, :cond_c
 
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -1603,17 +1680,17 @@
 
     invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_9
+    :cond_c
     return v0
 
-    :cond_a
+    :cond_d
     iget-object v1, p0, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->mImSpecialActions:Lcom/oneplus/util/MultiMap;
 
     invoke-virtual {v1, v3}, Lcom/oneplus/util/MultiMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_c
+    if-eqz v1, :cond_f
 
     iget-object v1, p0, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->mImSpecialActions:Lcom/oneplus/util/MultiMap;
 
@@ -1621,11 +1698,11 @@
 
     move-result-object v1
 
-    if-nez v1, :cond_c
+    if-nez v1, :cond_f
 
     sget-boolean p0, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->DBG:Z
 
-    if-eqz p0, :cond_b
+    if-eqz p0, :cond_e
 
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -1649,13 +1726,13 @@
 
     invoke-static {v2, p0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_b
+    :cond_e
     return v0
 
-    :cond_c
+    :cond_f
     iget-boolean v0, p0, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->mIsNotifyBlocked:Z
 
-    if-nez v0, :cond_d
+    if-nez v0, :cond_10
 
     :try_start_2
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->popNotify(Ljava/lang/String;ILandroid/content/Intent;Landroid/content/pm/ResolveInfo;)V
@@ -1671,16 +1748,16 @@
 
     invoke-static {v2, p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    :cond_d
+    :cond_10
     :goto_4
     const/4 p0, 0x1
 
     return p0
 
-    :cond_e
+    :cond_11
     sget-boolean p0, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->DBG:Z
 
-    if-eqz p0, :cond_f
+    if-eqz p0, :cond_12
 
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -1700,7 +1777,7 @@
 
     invoke-static {v2, p0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_f
+    :cond_12
     :goto_5
     return v0
 .end method
@@ -3156,7 +3233,7 @@
 
     move-result-object v1
 
-    const v2, 0x50b0083
+    const v2, 0x50b0082
 
     const/4 v11, 0x0
 
@@ -3180,7 +3257,7 @@
 
     move-result-object v2
 
-    const v3, 0x50f0157
+    const v3, 0x50f013f
 
     const/4 v14, 0x1
 
@@ -5989,7 +6066,7 @@
 
     const/4 v0, 0x0
 
-    const/16 v1, 0x13d
+    const/16 v1, 0x136
 
     aput v1, p1, v0
 

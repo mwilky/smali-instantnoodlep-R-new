@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/power/OnePlusStandbyAnalyzer;->x0(IJ)Z
+    value = Lcom/android/server/power/OnePlusStandbyAnalyzer;->w0(IJ)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -135,7 +135,7 @@
 
     move-result v10
 
-    invoke-virtual/range {v2 .. v10}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->Z0(Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;Lcom/android/server/power/OnePlusStandbyAnalyzer$StatisticType;IFFJZ)V
+    invoke-virtual/range {v2 .. v10}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->Y0(Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;Lcom/android/server/power/OnePlusStandbyAnalyzer$StatisticType;IFFJZ)V
 
     iget-object p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$cno;->sis:Lcom/android/server/power/OnePlusStandbyAnalyzer;
 
@@ -143,7 +143,7 @@
 
     sget-object v2, Lcom/android/server/power/OnePlusStandbyAnalyzer$StatisticType;->sis:Lcom/android/server/power/OnePlusStandbyAnalyzer$StatisticType;
 
-    invoke-virtual {p0, v0, v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->Y0(Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;Lcom/android/server/power/OnePlusStandbyAnalyzer$StatisticType;)V
+    invoke-virtual {p0, v0, v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->X0(Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;Lcom/android/server/power/OnePlusStandbyAnalyzer$StatisticType;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

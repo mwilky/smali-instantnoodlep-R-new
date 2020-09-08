@@ -437,23 +437,23 @@
     invoke-direct {p0, p1}, Lcom/oneplus/android/server/scene/ESportMode;->setTelephonyEsportMode(Z)V
 
     :goto_1
-    invoke-static {}, Lcom/android/server/obl/zta;->you()Lcom/android/server/obl/zta;
+    invoke-static {}, Lcom/android/server/oxb/zta;->you()Lcom/android/server/oxb/zta;
 
     move-result-object p0
 
-    invoke-virtual {p0, p1}, Lcom/android/server/obl/zta;->rtg(Z)V
+    invoke-virtual {p0, p1}, Lcom/android/server/oxb/zta;->rtg(Z)V
 
-    invoke-static {}, Lcom/android/server/am/cjf;->fto()Lcom/android/server/am/cjf;
+    invoke-static {}, Lcom/android/server/am/cjf;->lqr()Lcom/android/server/am/cjf;
 
     move-result-object p0
 
     if-eqz p0, :cond_3
 
-    invoke-static {}, Lcom/android/server/am/cjf;->fto()Lcom/android/server/am/cjf;
+    invoke-static {}, Lcom/android/server/am/cjf;->lqr()Lcom/android/server/am/cjf;
 
     move-result-object p0
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/cjf;->x(Z)V
+    invoke-virtual {p0, p1}, Lcom/android/server/am/cjf;->A(Z)V
 
     :cond_3
     return-void
@@ -844,7 +844,7 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x121
+    const/16 v2, 0x11a
 
     const/4 v3, 0x0
 
@@ -965,13 +965,13 @@
 
     if-eqz p2, :cond_5
 
-    invoke-static {}, Lcom/android/server/wm/gck;->rtg()Lcom/android/server/wm/gck$zta;
+    invoke-static {}, Lcom/android/server/wm/ywr;->rtg()Lcom/android/server/wm/ywr$zta;
 
     move-result-object p1
 
     iget-boolean p2, p0, Lcom/oneplus/android/server/scene/ESportMode;->mEnabled:Z
 
-    invoke-virtual {p1, p2}, Lcom/android/server/wm/gck$zta;->hmo(Z)V
+    invoke-virtual {p1, p2}, Lcom/android/server/wm/ywr$zta;->bud(Z)V
 
     :cond_5
     iget-boolean p1, p0, Lcom/oneplus/android/server/scene/ESportMode;->mEnabled:Z

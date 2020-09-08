@@ -235,7 +235,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Lcom/android/server/am/bio;->s(I)V
+    invoke-virtual {v2, v1}, Lcom/android/server/am/bio;->t(I)V
 
     iget-object v2, p0, Lcom/android/server/am/SocketTransition$sis;->you:Lcom/android/server/am/SocketTransition;
 
@@ -257,7 +257,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p2, v1}, Lcom/android/server/am/bio;->s(I)V
+    invoke-virtual {p2, v1}, Lcom/android/server/am/bio;->t(I)V
 
     iget-object p2, p0, Lcom/android/server/am/SocketTransition$sis;->you:Lcom/android/server/am/SocketTransition;
 
@@ -462,7 +462,7 @@
 
     move-result-object p5
 
-    invoke-virtual {p5, p3}, Lcom/android/server/am/bio;->rtg(I)Lcom/android/server/am/e;
+    invoke-virtual {p5, p3}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/e;
 
     move-result-object p6
 
@@ -508,7 +508,7 @@
 
     invoke-static {p6, p4, p3, p1}, Lcom/android/server/am/SocketTransition;->access$1100(Lcom/android/server/am/SocketTransition;IILjava/lang/String;)V
 
-    invoke-virtual {p5}, Lcom/android/server/am/bio;->sis()I
+    invoke-virtual {p5}, Lcom/android/server/am/bio;->tsu()I
 
     move-result p3
 
@@ -516,7 +516,7 @@
 
     if-eqz p3, :cond_1
 
-    invoke-virtual {p5, v1}, Lcom/android/server/am/bio;->s(I)V
+    invoke-virtual {p5, v1}, Lcom/android/server/am/bio;->t(I)V
 
     goto :goto_0
 
@@ -665,7 +665,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p2}, Lcom/android/server/am/bio;->rtg(I)Lcom/android/server/am/e;
+    invoke-virtual {v0, p2}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/e;
 
     move-result-object v0
 
@@ -904,7 +904,7 @@
 
     if-eqz v5, :cond_0
 
-    invoke-virtual {v5, p2}, Lcom/android/server/am/bio;->rtg(I)Lcom/android/server/am/e;
+    invoke-virtual {v5, p2}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/e;
 
     move-result-object v5
 

@@ -173,7 +173,7 @@
 
     sget-object p1, Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;
 
-    invoke-virtual {p0, v3, v0, p1, v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->J(ZLcom/android/server/power/OnePlusStandbyAnalyzer$TelephonyType;Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;Z)V
+    invoke-virtual {p0, v3, v0, p1, v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->I(ZLcom/android/server/power/OnePlusStandbyAnalyzer$TelephonyType;Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;Z)V
 
     goto :goto_2
 
@@ -181,7 +181,7 @@
     const-string p0, "oops!, the enum-definition is not matched with telephony"
 
     :goto_1
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
 
     goto :goto_2
 

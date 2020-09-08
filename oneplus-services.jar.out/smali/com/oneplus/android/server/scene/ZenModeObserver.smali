@@ -37,7 +37,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 13
+    .locals 14
 
     sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
@@ -67,9 +67,11 @@
 
     const-string v11, "com.google.android.permissioncontroller"
 
-    const-string v12, "com.oneplus.brickmode"
+    const-string v12, "com.oneplus.screenrecord"
 
-    filled-new-array/range {v1 .. v12}, [Ljava/lang/String;
+    const-string v13, "com.oneplus.brickmode"
+
+    filled-new-array/range {v1 .. v13}, [Ljava/lang/String;
 
     move-result-object v1
 

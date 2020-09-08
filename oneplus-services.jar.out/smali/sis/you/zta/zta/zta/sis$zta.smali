@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field private kth:Landroid/os/IHwBinder;
+.field private bio:Landroid/os/IHwBinder;
 
 
 # direct methods
@@ -31,14 +31,14 @@
 
     check-cast p1, Landroid/os/IHwBinder;
 
-    iput-object p1, p0, Lsis/you/zta/zta/zta/sis$zta;->kth:Landroid/os/IHwBinder;
+    iput-object p1, p0, Lsis/you/zta/zta/zta/sis$zta;->bio:Landroid/os/IHwBinder;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public K(ZBBZLjava/util/ArrayList;BLsis/you/zta/zta/zta/sis$rtg;)V
+.method public O(ZBBZLjava/util/ArrayList;BLsis/you/zta/zta/zta/sis$rtg;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -82,7 +82,7 @@
     invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
 
     :try_start_0
-    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->kth:Landroid/os/IHwBinder;
+    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->bio:Landroid/os/IHwBinder;
 
     const/4 p2, 0x5
 
@@ -121,7 +121,7 @@
 .method public asBinder()Landroid/os/IHwBinder;
     .locals 0
 
-    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->kth:Landroid/os/IHwBinder;
+    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->bio:Landroid/os/IHwBinder;
 
     return-object p0
 .end method
@@ -155,7 +155,7 @@
     invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
 
     :try_start_0
-    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->kth:Landroid/os/IHwBinder;
+    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->bio:Landroid/os/IHwBinder;
 
     const v2, 0xf485348
 
@@ -258,7 +258,7 @@
     invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
 
     :try_start_0
-    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->kth:Landroid/os/IHwBinder;
+    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->bio:Landroid/os/IHwBinder;
 
     const v2, 0xf445343
 
@@ -288,7 +288,17 @@
     throw p0
 .end method
 
-.method public d(ILjava/util/ArrayList;Lsis/you/zta/zta/zta/sis$tsu;)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 0
+
+    invoke-static {p0, p1}, Landroid/os/HidlSupport;->interfacesEqual(Landroid/os/IHwInterface;Ljava/lang/Object;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public f(ILjava/util/ArrayList;Lsis/you/zta/zta/zta/sis$tsu;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -324,7 +334,7 @@
     invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
 
     :try_start_0
-    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->kth:Landroid/os/IHwBinder;
+    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->bio:Landroid/os/IHwBinder;
 
     const/4 p2, 0x2
 
@@ -358,16 +368,6 @@
     invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
 
     throw p0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 0
-
-    invoke-static {p0, p1}, Landroid/os/HidlSupport;->interfacesEqual(Landroid/os/IHwInterface;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
 .end method
 
 .method public gck(Landroid/os/NativeHandle;Ljava/util/ArrayList;)V
@@ -405,7 +405,7 @@
     invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
 
     :try_start_0
-    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->kth:Landroid/os/IHwBinder;
+    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->bio:Landroid/os/IHwBinder;
 
     const p2, 0xf444247
 
@@ -445,7 +445,7 @@
     return p0
 .end method
 
-.method public les(ILjava/util/ArrayList;)I
+.method public irq(ILjava/util/ArrayList;)I
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -479,7 +479,7 @@
     invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
 
     :try_start_0
-    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->kth:Landroid/os/IHwBinder;
+    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->bio:Landroid/os/IHwBinder;
 
     const/4 p2, 0x1
 
@@ -517,7 +517,7 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->kth:Landroid/os/IHwBinder;
+    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->bio:Landroid/os/IHwBinder;
 
     invoke-interface {p0, p1, p2, p3}, Landroid/os/IHwBinder;->linkToDeath(Landroid/os/IHwBinder$DeathRecipient;J)Z
 
@@ -563,7 +563,7 @@
     invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
 
     :try_start_0
-    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->kth:Landroid/os/IHwBinder;
+    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->bio:Landroid/os/IHwBinder;
 
     const/4 p2, 0x4
 
@@ -587,7 +587,7 @@
     throw p0
 .end method
 
-.method public o(ILjava/lang/String;Lsis/you/zta/zta/zta/sis$sis;)V
+.method public r(ILjava/lang/String;Lsis/you/zta/zta/zta/sis$sis;)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -612,7 +612,7 @@
     invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
 
     :try_start_0
-    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->kth:Landroid/os/IHwBinder;
+    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->bio:Landroid/os/IHwBinder;
 
     const/4 p2, 0x6
 
@@ -678,7 +678,7 @@
     invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
 
     :try_start_0
-    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->kth:Landroid/os/IHwBinder;
+    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->bio:Landroid/os/IHwBinder;
 
     const v2, 0xf43484e
 
@@ -729,7 +729,7 @@
     invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
 
     :try_start_0
-    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->kth:Landroid/os/IHwBinder;
+    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->bio:Landroid/os/IHwBinder;
 
     const v2, 0xf504e47
 
@@ -808,7 +808,7 @@
     invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
 
     :try_start_0
-    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->kth:Landroid/os/IHwBinder;
+    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->bio:Landroid/os/IHwBinder;
 
     const v2, 0xf524546
 
@@ -848,7 +848,7 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->kth:Landroid/os/IHwBinder;
+    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->bio:Landroid/os/IHwBinder;
 
     invoke-interface {p0, p1}, Landroid/os/IHwBinder;->unlinkToDeath(Landroid/os/IHwBinder$DeathRecipient;)Z
 
@@ -892,7 +892,7 @@
     invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
 
     :try_start_0
-    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->kth:Landroid/os/IHwBinder;
+    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->bio:Landroid/os/IHwBinder;
 
     const/4 v1, 0x3
 
@@ -937,7 +937,7 @@
     invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
 
     :try_start_0
-    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->kth:Landroid/os/IHwBinder;
+    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->bio:Landroid/os/IHwBinder;
 
     const v2, 0xf494e54
 
@@ -982,7 +982,7 @@
     invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
 
     :try_start_0
-    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->kth:Landroid/os/IHwBinder;
+    iget-object p0, p0, Lsis/you/zta/zta/zta/sis$zta;->bio:Landroid/os/IHwBinder;
 
     const v2, 0xf535953
 

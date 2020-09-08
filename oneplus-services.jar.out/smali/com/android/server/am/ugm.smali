@@ -635,7 +635,7 @@
 
     iget-object v9, p0, Lcom/android/server/am/ugm;->cno:Lorg/json/JSONArray;
 
-    invoke-virtual {v9, v8}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
+    invoke-virtual {v9, v8}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v9
 
@@ -653,7 +653,7 @@
 
     if-eqz v10, :cond_3
 
-    invoke-virtual {v9, v7}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+    invoke-virtual {v9, v7}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object v4
 
@@ -741,7 +741,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "dataToJsonData Exception"
+    const-string v5, "dataToJsonData Exception "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1102,7 +1102,9 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v3, p0, Lcom/android/server/am/ugm;->sis:I
+    invoke-virtual {p0}, Lcom/android/server/am/ugm;->kth()I
+
+    move-result v3
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1120,7 +1122,9 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/android/server/am/ugm;->rtg:Ljava/util/HashMap;
+    invoke-virtual {p0}, Lcom/android/server/am/ugm;->wtn()Ljava/util/HashMap;
+
+    move-result-object p0
 
     invoke-virtual {p0}, Ljava/util/HashMap;->toString()Ljava/lang/String;
 

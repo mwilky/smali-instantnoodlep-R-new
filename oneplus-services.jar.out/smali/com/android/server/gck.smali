@@ -9,78 +9,56 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/server/gck$sis;,
-        Lcom/android/server/gck$you;
+        Lcom/android/server/gck$you;,
+        Lcom/android/server/gck$sis;
     }
 .end annotation
 
 
 # static fields
-.field public static bvj:Lcom/android/server/gck; = null
+.field private static final dma:J = 0x2bf20L
 
-.field private static final dma:Ljava/lang/String; = "persist.sys.optraffic.debug"
+.field public static gck:Z = false
 
-.field private static final gck:Z
+.field static final igw:Ljava/lang/String; = "OnePlusSensorManager"
 
-.field private static gwm:Landroid/util/ArrayMap; = null
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/util/ArrayMap<",
-            "Ljava/lang/Integer;",
-            "Lcom/android/server/gck$sis;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private static ibl:Z = false
-
-.field private static final obl:Ljava/lang/String; = "com.traffic.action.test"
-
-.field private static final oif:I = 0x400
-
-.field public static final qbh:Z = true
-
-.field private static final ugm:I = 0x1
-
-.field private static final vdb:I = 0x2
-
-.field public static final wtn:Ljava/lang/String; = "OPTraffic"
-
-.field private static ywr:Z = false
-
-.field private static final zgw:I = 0x3
+.field static final wtn:Ljava/lang/String; = "OnePlusSensorManager"
 
 
 # instance fields
-.field private bio:Lcom/android/server/gck$you;
+.field private bio:Landroid/content/BroadcastReceiver;
 
-.field private cno:Z
+.field private cno:Landroid/content/pm/PackageManager;
 
-.field private igw:Landroid/content/BroadcastReceiver;
+.field private kth:Landroid/os/PowerManager;
 
-.field private kth:Ljava/lang/Object;
-
-.field private rtg:I
-
-.field private sis:J
-
-.field private ssp:Ljava/util/HashMap;
+.field private rtg:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljava/util/HashMap<",
-            "Ljava/lang/Integer;",
-            "Ljava/lang/Integer;",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/String;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private tsu:I
+.field private sis:Lcom/android/server/gck$sis;
 
-.field private you:J
+.field private ssp:Landroid/hardware/SensorManager;
 
-.field private zta:I
+.field private tsu:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private you:Landroid/content/Context;
+
+.field private zta:Lcom/oneplus/config/ConfigObserver;
 
 
 # direct methods
@@ -91,91 +69,359 @@
 
     sput-boolean v0, Lcom/android/server/gck;->gck:Z
 
-    const/4 v0, 0x0
-
-    sput-boolean v0, Lcom/android/server/gck;->ywr:Z
-
-    sput-boolean v0, Lcom/android/server/gck;->ibl:Z
-
-    new-instance v0, Landroid/util/ArrayMap;
-
-    invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
-
-    sput-object v0, Lcom/android/server/gck;->gwm:Landroid/util/ArrayMap;
-
     return-void
 .end method
 
-.method private constructor <init>()V
-    .locals 2
+.method public constructor <init>(Landroid/content/Context;Landroid/hardware/SensorManager;Landroid/os/PowerManager;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/16 v0, 0x1388
-
-    iput v0, p0, Lcom/android/server/gck;->zta:I
-
-    const-wide/32 v0, 0x55400
-
-    iput-wide v0, p0, Lcom/android/server/gck;->you:J
-
-    const-wide/32 v0, 0x12c000
-
-    iput-wide v0, p0, Lcom/android/server/gck;->sis:J
-
-    const v0, 0x493e0
-
-    iput v0, p0, Lcom/android/server/gck;->tsu:I
-
-    const/4 v0, 0x5
-
-    iput v0, p0, Lcom/android/server/gck;->rtg:I
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lcom/android/server/gck;->ssp:Ljava/util/HashMap;
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/android/server/gck;->cno:Z
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lcom/android/server/gck;->kth:Ljava/lang/Object;
 
     new-instance v0, Lcom/android/server/gck$zta;
 
     invoke-direct {v0, p0}, Lcom/android/server/gck$zta;-><init>(Lcom/android/server/gck;)V
 
-    iput-object v0, p0, Lcom/android/server/gck;->igw:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/server/gck;->bio:Landroid/content/BroadcastReceiver;
 
-    sget-boolean v0, Lcom/android/server/gck;->ywr:Z
+    iput-object p1, p0, Lcom/android/server/gck;->you:Landroid/content/Context;
 
-    const-string v1, "persist.sys.optraffic.debug"
+    new-instance p1, Lcom/android/server/gck$sis;
 
-    invoke-static {v1, v0}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-direct {p1, p0, v0}, Lcom/android/server/gck$sis;-><init>(Lcom/android/server/gck;Landroid/os/Looper;)V
+
+    iput-object p1, p0, Lcom/android/server/gck;->sis:Lcom/android/server/gck$sis;
+
+    iput-object p2, p0, Lcom/android/server/gck;->ssp:Landroid/hardware/SensorManager;
+
+    iput-object p3, p0, Lcom/android/server/gck;->kth:Landroid/os/PowerManager;
+
+    iget-object p1, p0, Lcom/android/server/gck;->you:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/android/server/gck;->cno:Landroid/content/pm/PackageManager;
+
+    invoke-direct {p0}, Lcom/android/server/gck;->oif()V
+
+    return-void
+.end method
+
+.method static synthetic bio(Lcom/android/server/gck;)Landroid/hardware/SensorManager;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/server/gck;->ssp:Landroid/hardware/SensorManager;
+
+    return-object p0
+.end method
+
+.method private bvj(Lorg/json/JSONObject;Ljava/lang/String;Ljava/util/ArrayList;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lorg/json/JSONObject;",
+            "Ljava/lang/String;",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
+
+    :try_start_0
+    const-string p0, "name"
+
+    invoke-virtual {p1, p0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    const-string p0, "value"
+
+    invoke-virtual {p1, p0}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+
+    move-result-object p0
+
+    monitor-enter p3
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :try_start_1
+    invoke-virtual {p3}, Ljava/util/ArrayList;->clear()V
+
+    const/4 p1, 0x0
+
+    :goto_0
+    invoke-virtual {p0}, Lorg/json/JSONArray;->length()I
 
     move-result v0
 
-    sput-boolean v0, Lcom/android/server/gck;->ywr:Z
+    if-ge p1, v0, :cond_0
 
-    new-instance v0, Lcom/android/server/gck$you;
+    invoke-virtual {p0, p1}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
 
-    invoke-static {}, Lcom/android/server/am/oxb;->kth()Lcom/android/server/am/oxb;
+    move-result-object v0
 
-    move-result-object v1
+    invoke-virtual {p3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v1}, Lcom/android/server/am/oxb;->bio()Landroid/os/Looper;
+    add-int/lit8 p1, p1, 0x1
 
-    move-result-object v1
+    goto :goto_0
 
-    invoke-direct {v0, p0, v1}, Lcom/android/server/gck$you;-><init>(Lcom/android/server/gck;Landroid/os/Looper;)V
+    :cond_0
+    const-string p0, "OnePlusSensorManager"
 
-    iput-object v0, p0, Lcom/android/server/gck;->bio:Lcom/android/server/gck$you;
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p2, ":"
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    monitor-exit p3
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit p3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :try_start_2
+    throw p0
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+
+    :catch_0
+    move-exception p0
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p2, "[OnlineConfig] resolve config from JSON, error message: "
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string p1, "OnePlusSensorManager"
+
+    invoke-static {p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    :goto_1
+    return-void
+.end method
+
+.method static synthetic cno(Lcom/android/server/gck;Lorg/json/JSONArray;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/server/gck;->gwm(Lorg/json/JSONArray;)V
+
+    return-void
+.end method
+
+.method private dma(I)I
+    .locals 0
+
+    div-int/lit8 p1, p1, 0x64
+
+    return p1
+.end method
+
+.method private static gck(II)I
+    .locals 0
+
+    mul-int/lit8 p0, p0, 0x64
+
+    add-int/2addr p0, p1
+
+    return p0
+.end method
+
+.method private gwm(Lorg/json/JSONArray;)V
+    .locals 5
+
+    const-string v0, "OnePlusSensorManager"
+
+    if-nez p1, :cond_0
+
+    const-string p0, "[OnlineConfig] configList == null"
+
+    invoke-static {v0, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    :try_start_0
+    invoke-virtual {p1}, Lorg/json/JSONArray;->length()I
+
+    move-result v2
+
+    if-ge v1, v2, :cond_1
+
+    invoke-virtual {p1, v1}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
+
+    move-result-object v2
+
+    const-string v3, "disable_sensor_after_light_idle"
+
+    iget-object v4, p0, Lcom/android/server/gck;->tsu:Ljava/util/ArrayList;
+
+    invoke-direct {p0, v2, v3, v4}, Lcom/android/server/gck;->bvj(Lorg/json/JSONObject;Ljava/lang/String;Ljava/util/ArrayList;)V
+
+    const-string v3, "disable_sensor_background"
+
+    iget-object v4, p0, Lcom/android/server/gck;->rtg:Ljava/util/ArrayList;
+
+    invoke-direct {p0, v2, v3, v4}, Lcom/android/server/gck;->bvj(Lorg/json/JSONObject;Ljava/lang/String;Ljava/util/ArrayList;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p0
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "[OnlineConfig] resolve config from JSON, error message: "
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    return-void
+.end method
+
+.method private ibl()V
+    .locals 2
+
+    new-instance v0, Landroid/content/IntentFilter;
+
+    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
+
+    const v1, 0x7fffffff
+
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->setPriority(I)V
+
+    const-string v1, "android.os.action.LIGHT_DEVICE_IDLE_MODE_CHANGED"
+
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    const-string v1, "android.os.action.DEVICE_IDLE_MODE_CHANGED"
+
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/android/server/gck;->you:Landroid/content/Context;
+
+    iget-object p0, p0, Lcom/android/server/gck;->bio:Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {v1, p0, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    return-void
+.end method
+
+.method static synthetic igw(Lcom/android/server/gck;I)I
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/server/gck;->dma(I)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static synthetic kth(Lcom/android/server/gck;)Ljava/util/ArrayList;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/server/gck;->tsu:Ljava/util/ArrayList;
+
+    return-object p0
+.end method
+
+.method private oif()V
+    .locals 4
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/android/server/gck;->tsu:Ljava/util/ArrayList;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/android/server/gck;->rtg:Ljava/util/ArrayList;
+
+    iget-object v0, p0, Lcom/android/server/gck;->sis:Lcom/android/server/gck$sis;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x6
+
+    invoke-static {v1, v2}, Lcom/android/server/gck;->gck(II)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/server/gck;->sis:Lcom/android/server/gck$sis;
+
+    const-wide/32 v2, 0xea60
+
+    invoke-virtual {v1, v0, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+
+    invoke-direct {p0}, Lcom/android/server/gck;->ibl()V
 
     invoke-static {}, Lcom/android/server/OnePlusUtil$zta;->rtg()Lcom/android/server/OnePlusUtil$zta;
 
@@ -186,765 +432,82 @@
     return-void
 .end method
 
-.method static synthetic bio()Z
-    .locals 1
-
-    sget-boolean v0, Lcom/android/server/gck;->ywr:Z
-
-    return v0
-.end method
-
-.method private bvj(J)Z
-    .locals 3
-
-    iget-object v0, p0, Lcom/android/server/gck;->kth:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-wide v1, p0, Lcom/android/server/gck;->sis:J
-
-    cmp-long p0, p1, v1
-
-    if-ltz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    monitor-exit v0
-
-    return p0
-
-    :catchall_0
-    move-exception p0
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
-.end method
-
-.method static synthetic cno(Lcom/android/server/gck;J)J
+.method static synthetic rtg(Lcom/android/server/gck;)Landroid/content/Context;
     .locals 0
 
-    iput-wide p1, p0, Lcom/android/server/gck;->you:J
-
-    return-wide p1
-.end method
-
-.method static synthetic dma(Lcom/android/server/gck;I)I
-    .locals 0
-
-    iput p1, p0, Lcom/android/server/gck;->rtg:I
-
-    return p1
-.end method
-
-.method static synthetic gck(Lcom/android/server/gck;)I
-    .locals 0
-
-    iget p0, p0, Lcom/android/server/gck;->rtg:I
-
-    return p0
-.end method
-
-.method public static declared-synchronized gwm()Lcom/android/server/gck;
-    .locals 2
-
-    const-class v0, Lcom/android/server/gck;
-
-    monitor-enter v0
-
-    :try_start_0
-    sget-object v1, Lcom/android/server/gck;->bvj:Lcom/android/server/gck;
-
-    if-nez v1, :cond_0
-
-    new-instance v1, Lcom/android/server/gck;
-
-    invoke-direct {v1}, Lcom/android/server/gck;-><init>()V
-
-    sput-object v1, Lcom/android/server/gck;->bvj:Lcom/android/server/gck;
-
-    :cond_0
-    sget-object v1, Lcom/android/server/gck;->bvj:Lcom/android/server/gck;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return-object v1
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-
-    throw v1
-.end method
-
-.method private ibl()V
-    .locals 6
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, " mMaxCacheTimeout = "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lcom/android/server/gck;->tsu:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, "ms"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "OPTraffic"
-
-    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, " mPerformPollTimeout = "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lcom/android/server/gck;->zta:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, "ms"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "OPTraffic"
-
-    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, " mTrafficThreshold = "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lcom/android/server/gck;->you:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, "byte"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "OPTraffic"
-
-    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, " mTrafficThresholdHigh = "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lcom/android/server/gck;->sis:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, "byte"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "OPTraffic"
-
-    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, " mDefaultCount = "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget p0, p0, Lcom/android/server/gck;->rtg:I
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v0, "OPTraffic"
-
-    invoke-static {v0, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    sget-object p0, Lcom/android/server/gck;->gwm:Landroid/util/ArrayMap;
-
-    monitor-enter p0
-
-    :try_start_0
-    const-string v0, "OPTraffic"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, " mUidTraffic size="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-object v2, Lcom/android/server/gck;->gwm:Landroid/util/ArrayMap;
-
-    invoke-virtual {v2}, Landroid/util/ArrayMap;->size()I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    sget-object v0, Lcom/android/server/gck;->gwm:Landroid/util/ArrayMap;
-
-    invoke-virtual {v0}, Landroid/util/ArrayMap;->values()Ljava/util/Collection;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/android/server/gck$sis;
-
-    const-string v2, "OPTraffic"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, " traffic ["
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {v1}, Lcom/android/server/gck$sis;->zta(Lcom/android/server/gck$sis;)I
-
-    move-result v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v4, ", "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {v1}, Lcom/android/server/gck$sis;->ssp(Lcom/android/server/gck$sis;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v4, ", "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {v1}, Lcom/android/server/gck$sis;->you(Lcom/android/server/gck$sis;)J
-
-    move-result-wide v4
-
-    invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v4, ", "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {v1}, Lcom/android/server/gck$sis;->sis(Lcom/android/server/gck$sis;)J
-
-    move-result-wide v4
-
-    invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v4, ", time="
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {v1}, Lcom/android/server/gck$sis;->tsu(Lcom/android/server/gck$sis;)J
-
-    move-result-wide v4
-
-    invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v2, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
-
-    :cond_0
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-.end method
-
-.method static synthetic igw(Lcom/android/server/gck;J)Z
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/android/server/gck;->bvj(J)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method private ire()V
-    .locals 8
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v0
-
-    sget-object v2, Lcom/android/server/gck;->gwm:Landroid/util/ArrayMap;
-
-    monitor-enter v2
-
-    :try_start_0
-    sget-boolean v3, Lcom/android/server/gck;->ywr:Z
-
-    if-eqz v3, :cond_0
-
-    const-string v3, "OPTraffic"
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "updateUidsTraffic before size="
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-object v5, Lcom/android/server/gck;->gwm:Landroid/util/ArrayMap;
-
-    invoke-virtual {v5}, Landroid/util/ArrayMap;->size()I
-
-    move-result v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    sget-object v3, Lcom/android/server/gck;->gwm:Landroid/util/ArrayMap;
-
-    invoke-virtual {v3}, Landroid/util/ArrayMap;->entrySet()Ljava/util/Set;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v3
-
-    const/4 v4, 0x0
-
-    move v5, v4
-
-    :cond_1
-    :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_2
-
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Ljava/util/Map$Entry;
-
-    invoke-interface {v6}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lcom/android/server/gck$sis;
-
-    invoke-virtual {v6}, Lcom/android/server/gck$sis;->bio()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_1
-
-    if-nez v5, :cond_1
-
-    const/4 v5, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    sget-boolean v3, Lcom/android/server/gck;->ywr:Z
-
-    if-eqz v3, :cond_3
-
-    const-string v3, "OPTraffic"
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v7, "updateUidsTraffic after size="
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-object v7, Lcom/android/server/gck;->gwm:Landroid/util/ArrayMap;
-
-    invoke-virtual {v7}, Landroid/util/ArrayMap;->size()I
-
-    move-result v7
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-static {v3, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_3
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v2
-
-    sub-long/2addr v2, v0
-
-    sget-boolean v0, Lcom/android/server/gck;->gck:Z
-
-    if-eqz v0, :cond_4
-
-    const-wide/16 v0, 0x5
-
-    cmp-long v0, v2, v0
-
-    if-ltz v0, :cond_4
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "updateUidsTraffic took "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, "ms."
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "OPTraffic"
-
-    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_4
-    if-nez v5, :cond_5
-
-    sput-boolean v4, Lcom/android/server/gck;->ibl:Z
-
-    goto :goto_1
-
-    :cond_5
-    invoke-direct {p0}, Lcom/android/server/gck;->oxb()V
-
-    :goto_1
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    :try_start_1
-    monitor-exit v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p0
-.end method
-
-.method static synthetic kth(Lcom/android/server/gck;J)J
-    .locals 0
-
-    iput-wide p1, p0, Lcom/android/server/gck;->sis:J
-
-    return-wide p1
-.end method
-
-.method private oif(J)Z
-    .locals 3
-
-    iget-object v0, p0, Lcom/android/server/gck;->kth:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-wide v1, p0, Lcom/android/server/gck;->you:J
-
-    cmp-long p0, p1, v1
-
-    if-ltz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    monitor-exit v0
-
-    return p0
-
-    :catchall_0
-    move-exception p0
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
-.end method
-
-.method private oxb()V
-    .locals 4
-
-    sget-boolean v0, Lcom/android/server/gck;->gck:Z
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "schedulePerformPollTimeout mTracing="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-boolean v1, Lcom/android/server/gck;->ibl:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "OPTraffic"
-
-    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    new-instance v0, Landroid/os/Message;
-
-    invoke-direct {v0}, Landroid/os/Message;-><init>()V
-
-    const/4 v1, 0x1
-
-    iput v1, v0, Landroid/os/Message;->what:I
-
-    iget-object v2, p0, Lcom/android/server/gck;->bio:Lcom/android/server/gck$you;
-
-    invoke-virtual {v2, v1}, Landroid/os/Handler;->removeMessages(I)V
-
-    iget-object v1, p0, Lcom/android/server/gck;->bio:Lcom/android/server/gck$you;
-
-    iget p0, p0, Lcom/android/server/gck;->zta:I
-
-    int-to-long v2, p0
-
-    invoke-virtual {v1, v0, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
-
-    return-void
-.end method
-
-.method static synthetic rtg(Lcom/android/server/gck;I)I
-    .locals 0
-
-    iput p1, p0, Lcom/android/server/gck;->tsu:I
-
-    return p1
-.end method
-
-.method static synthetic sis()Z
-    .locals 1
-
-    sget-boolean v0, Lcom/android/server/gck;->gck:Z
-
-    return v0
-.end method
-
-.method static synthetic ssp(Lcom/android/server/gck;I)I
-    .locals 0
-
-    iput p1, p0, Lcom/android/server/gck;->zta:I
-
-    return p1
-.end method
-
-.method static synthetic tsu(Lcom/android/server/gck;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/server/gck;->ibl()V
-
-    return-void
-.end method
-
-.method static synthetic wtn(Lcom/android/server/gck;)Ljava/util/HashMap;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/server/gck;->ssp:Ljava/util/HashMap;
+    iget-object p0, p0, Lcom/android/server/gck;->you:Landroid/content/Context;
 
     return-object p0
 .end method
 
-.method static synthetic you()Landroid/util/ArrayMap;
-    .locals 1
-
-    sget-object v0, Lcom/android/server/gck;->gwm:Landroid/util/ArrayMap;
-
-    return-object v0
-.end method
-
-.method static synthetic ywr(Lcom/android/server/gck;J)Z
+.method static synthetic sis(Lcom/android/server/gck;)Landroid/os/PowerManager;
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/android/server/gck;->oif(J)Z
+    iget-object p0, p0, Lcom/android/server/gck;->kth:Landroid/os/PowerManager;
+
+    return-object p0
+.end method
+
+.method static synthetic ssp(Lcom/android/server/gck;)Lcom/android/server/gck$sis;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/server/gck;->sis:Lcom/android/server/gck$sis;
+
+    return-object p0
+.end method
+
+.method static synthetic tsu(Lcom/android/server/gck;Lcom/oneplus/config/ConfigObserver;)Lcom/oneplus/config/ConfigObserver;
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/server/gck;->zta:Lcom/oneplus/config/ConfigObserver;
+
+    return-object p1
+.end method
+
+.method static synthetic wtn(II)I
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/android/server/gck;->gck(II)I
 
     move-result p0
 
     return p0
 .end method
 
-.method static synthetic zta(Lcom/android/server/gck;)V
+.method static synthetic you(Lcom/android/server/gck;)Lcom/oneplus/config/ConfigObserver;
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/gck;->ire()V
+    iget-object p0, p0, Lcom/android/server/gck;->zta:Lcom/oneplus/config/ConfigObserver;
 
-    return-void
+    return-object p0
+.end method
+
+.method private ywr(I)I
+    .locals 0
+
+    rem-int/lit8 p1, p1, 0x64
+
+    return p1
+.end method
+
+.method static synthetic zta(Lcom/android/server/gck;I)I
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/server/gck;->ywr(I)I
+
+    move-result p0
+
+    return p0
 .end method
 
 
 # virtual methods
-.method public cjf(I)V
-    .locals 0
-
-    if-gtz p1, :cond_0
-
-    return-void
-
-    :cond_0
-    iput p1, p0, Lcom/android/server/gck;->zta:I
-
-    return-void
-.end method
-
-.method public ear(J)V
-    .locals 2
-
-    const-wide/16 v0, 0x0
-
-    cmp-long v0, p1, v0
-
-    if-gtz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lcom/android/server/gck;->kth:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iput-wide p1, p0, Lcom/android/server/gck;->you:J
-
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
-.end method
-
 .method public frontPackageChanged(Ljava/lang/String;IILjava/lang/String;II)V
-    .locals 0
+    .locals 3
 
-    sget-boolean p3, Lcom/android/server/gck;->ywr:Z
+    sget-boolean p3, Lcom/android/server/gck;->gck:Z
+
+    const-string p6, "OnePlusSensorManager"
 
     if-eqz p3, :cond_0
 
@@ -952,184 +515,190 @@
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string p6, "frontPackageChanged "
+    const-string v0, "change "
 
-    invoke-virtual {p3, p6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3, p5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p5, ":"
-
-    invoke-virtual {p3, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p4, " => "
-
-    invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, " to "
+
+    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, " from TOP"
+
+    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p3
 
-    const-string p4, "OPTraffic"
-
-    invoke-static {p4, p3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p6, p3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    const-string p3, "SCREEN OFF"
+    if-eq p2, p5, :cond_2
 
-    invoke-virtual {p3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget-object p3, p0, Lcom/android/server/gck;->rtg:Ljava/util/ArrayList;
+
+    invoke-virtual {p3, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
     move-result p3
 
+    const/4 v0, 0x4
+
+    const/4 v1, 0x1
+
     if-eqz p3, :cond_1
 
-    return-void
+    invoke-static {p2}, Lcom/android/server/am/AppRecordManager;->ywr(I)I
+
+    move-result p3
+
+    if-ne p3, v1, :cond_1
+
+    iget-object p3, p0, Lcom/android/server/gck;->sis:Lcom/android/server/gck$sis;
+
+    invoke-static {p2, v0}, Lcom/android/server/gck;->gck(II)I
+
+    move-result v2
+
+    invoke-virtual {p3, v2}, Landroid/os/Handler;->removeMessages(I)V
+
+    iget-object p3, p0, Lcom/android/server/gck;->sis:Lcom/android/server/gck$sis;
+
+    const/4 v2, 0x5
+
+    invoke-static {p2, v2}, Lcom/android/server/gck;->gck(II)I
+
+    move-result p2
+
+    invoke-virtual {p3, p2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+
+    move-result-object p2
+
+    iget-object p3, p0, Lcom/android/server/gck;->sis:Lcom/android/server/gck$sis;
+
+    invoke-virtual {p3, p2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    sget-boolean p2, Lcom/android/server/gck;->gck:Z
+
+    if-eqz p2, :cond_1
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, " set sensor access allow"
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p6, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
-    invoke-virtual {p0, p2, p1}, Lcom/android/server/gck;->qbh(ILjava/lang/String;)V
+    iget-object p1, p0, Lcom/android/server/gck;->rtg:Ljava/util/ArrayList;
 
+    invoke-virtual {p1, p4}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    invoke-static {p5}, Lcom/android/server/am/AppRecordManager;->ywr(I)I
+
+    move-result p1
+
+    if-ne p1, v1, :cond_2
+
+    iget-object p1, p0, Lcom/android/server/gck;->sis:Lcom/android/server/gck$sis;
+
+    invoke-static {p5, v0}, Lcom/android/server/gck;->gck(II)I
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+
+    move-result-object p1
+
+    iget-object p0, p0, Lcom/android/server/gck;->sis:Lcom/android/server/gck$sis;
+
+    const-wide/32 p2, 0x2bf20
+
+    invoke-virtual {p0, p1, p2, p3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+
+    sget-boolean p0, Lcom/android/server/gck;->gck:Z
+
+    if-eqz p0, :cond_2
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, " set sensor access deny"
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p6, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_2
     return-void
 .end method
 
-.method public obl()V
+.method qbh(Ljava/io/PrintWriter;)V
     .locals 2
 
-    sget-boolean v0, Lcom/android/server/gck;->ywr:Z
+    const-string v0, "**** OnePlusSensorManager ****"
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "schedulePerformPoll mTracing="
+    const-string v1, "lightIdleList="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-boolean v1, Lcom/android/server/gck;->ibl:Z
+    iget-object v1, p0, Lcom/android/server/gck;->tsu:Ljava/util/ArrayList;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "OPTraffic"
+    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    :cond_0
-    sget-boolean v0, Lcom/android/server/gck;->ibl:Z
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    if-nez v0, :cond_1
+    const-string v1, "backgroundList="
 
-    const/4 v0, 0x1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sput-boolean v0, Lcom/android/server/gck;->ibl:Z
+    iget-object p0, p0, Lcom/android/server/gck;->rtg:Ljava/util/ArrayList;
 
-    new-instance v1, Landroid/os/Message;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Landroid/os/Message;-><init>()V
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iput v0, v1, Landroid/os/Message;->what:I
+    move-result-object p0
 
-    iget-object p0, p0, Lcom/android/server/gck;->bio:Lcom/android/server/gck$you;
-
-    invoke-virtual {p0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    :cond_1
-    return-void
-.end method
-
-.method public qbh(ILjava/lang/String;)V
-    .locals 2
-
-    new-instance v0, Landroid/os/Message;
-
-    invoke-direct {v0}, Landroid/os/Message;-><init>()V
-
-    const/4 v1, 0x2
-
-    iput v1, v0, Landroid/os/Message;->what:I
-
-    iput p1, v0, Landroid/os/Message;->arg1:I
-
-    iput-object p2, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    iget-object p0, p0, Lcom/android/server/gck;->bio:Lcom/android/server/gck$you;
-
-    invoke-virtual {p0, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    return-void
-.end method
-
-.method public ugm()Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/android/server/gck;->cno:Z
-
-    return p0
-.end method
-
-.method public vdb(Landroid/content/Context;)V
-    .locals 2
-
-    if-nez p1, :cond_0
-
-    const-string p0, "OPTraffic"
-
-    const-string p1, "Fatal Exception # registerGeneralReceiver # mContext=null"
-
-    invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-
-    :cond_0
-    new-instance v0, Landroid/content/IntentFilter;
-
-    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
-
-    const v1, 0x7fffffff
-
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->setPriority(I)V
-
-    const-string v1, "com.traffic.action.test"
-
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lcom/android/server/gck;->igw:Landroid/content/BroadcastReceiver;
-
-    invoke-virtual {p1, p0, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
-
-    return-void
-.end method
-
-.method public zgw(I)V
-    .locals 2
-
-    new-instance v0, Landroid/os/Message;
-
-    invoke-direct {v0}, Landroid/os/Message;-><init>()V
-
-    const/4 v1, 0x3
-
-    iput v1, v0, Landroid/os/Message;->what:I
-
-    iput p1, v0, Landroid/os/Message;->arg1:I
-
-    iget-object p0, p0, Lcom/android/server/gck;->bio:Lcom/android/server/gck$you;
-
-    invoke-virtual {p0, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
 .end method

@@ -75,9 +75,9 @@
 
     const v7, 0xd6e3
 
-    const/16 v8, 0x53
+    const/16 v8, 0x50
 
-    const/16 v9, 0x56
+    const/16 v9, 0x53
 
     const v10, 0xd6e7
 

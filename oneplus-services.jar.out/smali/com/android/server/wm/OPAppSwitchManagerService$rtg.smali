@@ -52,7 +52,7 @@
 
     iget-boolean p0, p0, Lcom/android/server/wm/OPAppSwitchManagerService$rtg;->you:Z
 
-    invoke-static {v0, v1, p0}, Lcom/android/server/wm/OPAppSwitchManagerService;->access$1500(Lcom/android/server/wm/OPAppSwitchManagerService;Lcom/android/server/wm/ActivityRecord;Z)V
+    invoke-static {v0, v1, p0}, Lcom/android/server/wm/OPAppSwitchManagerService;->access$1700(Lcom/android/server/wm/OPAppSwitchManagerService;Lcom/android/server/wm/ActivityRecord;Z)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

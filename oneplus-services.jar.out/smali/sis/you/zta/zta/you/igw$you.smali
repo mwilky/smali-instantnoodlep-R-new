@@ -28,7 +28,7 @@
 
 
 # virtual methods
-.method public N(Ljava/lang/String;)V
+.method public S(Ljava/lang/String;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -452,7 +452,7 @@
 
     move-result p1
 
-    invoke-interface {p0, v1, v2, p1}, Lsis/you/zta/zta/you/igw;->t(JI)I
+    invoke-interface {p0, v1, v2, p1}, Lsis/you/zta/zta/you/igw;->w(JI)I
 
     move-result p0
 
@@ -469,7 +469,7 @@
 
     move-result-wide p1
 
-    invoke-interface {p0, p1, p2}, Lsis/you/zta/zta/you/igw;->bud(J)V
+    invoke-interface {p0, p1, p2}, Lsis/you/zta/zta/you/igw;->les(J)V
 
     goto :goto_1
 
@@ -486,7 +486,7 @@
 
     move-result-object p2
 
-    invoke-interface {p0, p1, p2}, Lsis/you/zta/zta/zta/tsu;->L(ILjava/util/ArrayList;)V
+    invoke-interface {p0, p1, p2}, Lsis/you/zta/zta/zta/tsu;->Q(ILjava/util/ArrayList;)V
 
     :goto_1
     invoke-virtual {p3, v0}, Landroid/os/HwParcel;->writeStatus(I)V

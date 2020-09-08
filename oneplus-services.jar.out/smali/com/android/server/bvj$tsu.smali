@@ -1,19 +1,16 @@
 .class Lcom/android/server/bvj$tsu;
-.super Ljava/lang/Object;
+.super Landroid/database/ContentObserver;
 .source ""
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/bvj;->chargeVibration()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/android/server/bvj;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
-    name = null
+    accessFlags = 0x2
+    name = "tsu"
 .end annotation
 
 
@@ -22,52 +19,43 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/server/bvj;)V
+.method public constructor <init>(Lcom/android/server/bvj;Landroid/content/Context;Landroid/os/Handler;)V
     .locals 0
 
     iput-object p1, p0, Lcom/android/server/bvj$tsu;->zta:Lcom/android/server/bvj;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p3}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public onChange(Z)V
+    .locals 1
 
-    invoke-static {}, Lcom/android/server/bvj;->qbh()Landroid/content/Context;
+    invoke-static {}, Lcom/android/server/bvj;->gck()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const-string p1, "CommonFrontMonitor"
+
+    const-string v0, "CarMode setting changed!"
+
+    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget-object p0, p0, Lcom/android/server/bvj$tsu;->zta:Lcom/android/server/bvj;
+
+    invoke-static {p0}, Lcom/android/server/bvj;->dma(Lcom/android/server/bvj;)Landroid/os/Handler;
 
     move-result-object p0
 
-    const-string v0, "vibrator"
+    const/4 p1, 0x2
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/os/Vibrator;
-
-    const/4 v0, 0x4
-
-    new-array v0, v0, [J
-
-    fill-array-data v0, :array_0
-
-    const/4 v1, -0x1
-
-    invoke-virtual {p0, v0, v1}, Landroid/os/Vibrator;->vibrate([JI)V
+    invoke-virtual {p0, p1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     return-void
-
-    nop
-
-    :array_0
-    .array-data 8
-        0x0
-        0xa
-        0x96
-        0xc
-    .end array-data
 .end method

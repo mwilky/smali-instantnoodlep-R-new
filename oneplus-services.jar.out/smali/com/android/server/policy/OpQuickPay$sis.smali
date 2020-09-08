@@ -309,7 +309,7 @@
 
     invoke-direct {v14, v1, v0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
 
-    const v1, 0x50f0168
+    const v1, 0x50f0150
 
     invoke-virtual {v14, v1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
@@ -372,7 +372,7 @@
 
     new-instance v6, Lcom/android/server/policy/OpQuickPay$sis$zta;
 
-    const v3, 0x50b008a
+    const v3, 0x50b0089
 
     const v4, 0x5080165
 

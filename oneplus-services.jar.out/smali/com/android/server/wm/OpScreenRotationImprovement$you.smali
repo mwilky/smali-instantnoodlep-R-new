@@ -124,9 +124,9 @@
 
     move-result-object v1
 
-    new-instance v2, Lcom/android/server/wm/cno;
+    new-instance v2, Lcom/android/server/wm/bio;
 
-    invoke-direct {v2, p0}, Lcom/android/server/wm/cno;-><init>(Lcom/android/server/wm/OpScreenRotationImprovement$you;)V
+    invoke-direct {v2, p0}, Lcom/android/server/wm/bio;-><init>(Lcom/android/server/wm/OpScreenRotationImprovement$you;)V
 
     invoke-direct {p0, v0, v1, v2}, Lcom/android/server/wm/OpScreenRotationImprovement$you;->cno(Lcom/android/server/wm/SurfaceAnimator$Animatable;Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;Lcom/android/server/wm/SurfaceAnimator$OnAnimationFinishedCallback;)Lcom/android/server/wm/SurfaceAnimator;
 
@@ -584,9 +584,9 @@
 
     move-result-object v1
 
-    new-instance v2, Lcom/android/server/wm/cno;
+    new-instance v2, Lcom/android/server/wm/bio;
 
-    invoke-direct {v2, p0}, Lcom/android/server/wm/cno;-><init>(Lcom/android/server/wm/OpScreenRotationImprovement$you;)V
+    invoke-direct {v2, p0}, Lcom/android/server/wm/bio;-><init>(Lcom/android/server/wm/OpScreenRotationImprovement$you;)V
 
     invoke-direct {p0, v0, v1, v2}, Lcom/android/server/wm/OpScreenRotationImprovement$you;->cno(Lcom/android/server/wm/SurfaceAnimator$Animatable;Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;Lcom/android/server/wm/SurfaceAnimator$OnAnimationFinishedCallback;)Lcom/android/server/wm/SurfaceAnimator;
 

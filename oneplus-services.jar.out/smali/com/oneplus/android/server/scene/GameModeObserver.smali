@@ -122,13 +122,13 @@
 
     iput-boolean p1, p0, Lcom/oneplus/android/server/scene/GameModeObserver;->mModeOn:Z
 
-    invoke-static {}, Lcom/android/server/zgw/you;->ivd()Lcom/android/server/zgw/you;
+    invoke-static {}, Lcom/android/server/obl/you;->ivd()Lcom/android/server/obl/you;
 
     move-result-object p1
 
     iget-boolean p0, p0, Lcom/oneplus/android/server/scene/GameModeObserver;->mModeOn:Z
 
-    invoke-virtual {p1, p0}, Lcom/android/server/zgw/you;->w(Z)V
+    invoke-virtual {p1, p0}, Lcom/android/server/obl/you;->w(Z)V
 
     const/4 p0, 0x0
 
@@ -153,13 +153,13 @@
 
     iput-boolean p1, p0, Lcom/oneplus/android/server/scene/GameModeObserver;->mModeOn:Z
 
-    invoke-static {}, Lcom/android/server/zgw/you;->ivd()Lcom/android/server/zgw/you;
+    invoke-static {}, Lcom/android/server/obl/you;->ivd()Lcom/android/server/obl/you;
 
     move-result-object v0
 
     iget-boolean p0, p0, Lcom/oneplus/android/server/scene/GameModeObserver;->mModeOn:Z
 
-    invoke-virtual {v0, p0}, Lcom/android/server/zgw/you;->w(Z)V
+    invoke-virtual {v0, p0}, Lcom/android/server/obl/you;->w(Z)V
 
     return p1
 .end method

@@ -1,5 +1,5 @@
-.class Lcom/android/server/am/hmo$tsu;
-.super Lcom/android/server/am/igw;
+.class synthetic Lcom/android/server/am/hmo$tsu;
+.super Ljava/lang/Object;
 .source ""
 
 
@@ -9,57 +9,58 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
-    name = "tsu"
+    accessFlags = 0x1008
+    name = null
 .end annotation
 
 
-# instance fields
-.field final synthetic you:Lcom/android/server/am/hmo;
+# static fields
+.field static final synthetic zta:[I
 
 
 # direct methods
-.method private constructor <init>(Lcom/android/server/am/hmo;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Lcom/android/server/am/hmo$tsu;->you:Lcom/android/server/am/hmo;
+    invoke-static {}, Lcom/android/server/am/StartAppRecorder$CanStart;->values()[Lcom/android/server/am/StartAppRecorder$CanStart;
 
-    invoke-direct {p0}, Lcom/android/server/am/igw;-><init>()V
+    move-result-object v0
 
-    return-void
-.end method
+    array-length v0, v0
 
-.method synthetic constructor <init>(Lcom/android/server/am/hmo;Lcom/android/server/am/hmo$zta;)V
-    .locals 0
+    new-array v0, v0, [I
 
-    invoke-direct {p0, p1}, Lcom/android/server/am/hmo$tsu;-><init>(Lcom/android/server/am/hmo;)V
+    sput-object v0, Lcom/android/server/am/hmo$tsu;->zta:[I
 
-    return-void
-.end method
+    :try_start_0
+    sget-object v1, Lcom/android/server/am/StartAppRecorder$CanStart;->you:Lcom/android/server/am/StartAppRecorder$CanStart;
 
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-# virtual methods
-.method public noteNotificationChanged(Ljava/lang/String;IIZ)V
-    .locals 0
+    move-result v1
 
-    iget-object p0, p0, Lcom/android/server/am/hmo$tsu;->you:Lcom/android/server/am/hmo;
+    const/4 v2, 0x1
 
-    invoke-static {p0, p2}, Lcom/android/server/am/hmo;->rtg(Lcom/android/server/am/hmo;I)V
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-void
-.end method
+    :catch_0
+    :try_start_1
+    sget-object v0, Lcom/android/server/am/hmo$tsu;->zta:[I
 
-.method public sis(II)V
-    .locals 1
+    sget-object v1, Lcom/android/server/am/StartAppRecorder$CanStart;->sis:Lcom/android/server/am/StartAppRecorder$CanStart;
 
-    const/4 v0, 0x6
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    if-gt p2, v0, :cond_0
+    move-result v1
 
-    iget-object p0, p0, Lcom/android/server/am/hmo$tsu;->you:Lcom/android/server/am/hmo;
+    const/4 v2, 0x2
 
-    invoke-static {p0, p1}, Lcom/android/server/am/hmo;->rtg(Lcom/android/server/am/hmo;I)V
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    :cond_0
+    :catch_1
     return-void
 .end method

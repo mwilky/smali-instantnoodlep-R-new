@@ -15,14 +15,14 @@
 
 
 # instance fields
-.field final synthetic kth:Lcom/oneplus/android/server/iris/you;
+.field final synthetic bio:Lcom/oneplus/android/server/iris/you;
 
 
 # direct methods
 .method constructor <init>(Lcom/oneplus/android/server/iris/you;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/oneplus/android/server/iris/you$you;->kth:Lcom/oneplus/android/server/iris/you;
+    iput-object p1, p0, Lcom/oneplus/android/server/iris/you$you;->bio:Lcom/oneplus/android/server/iris/you;
 
     invoke-direct {p0}, Lsis/you/zta/zta/you/igw$you;-><init>()V
 
@@ -31,7 +31,7 @@
 
 
 # virtual methods
-.method public L(ILjava/util/ArrayList;)V
+.method public Q(ILjava/util/ArrayList;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -84,7 +84,7 @@
 
     invoke-static {v2, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object v0, p0, Lcom/oneplus/android/server/iris/you$you;->kth:Lcom/oneplus/android/server/iris/you;
+    iget-object v0, p0, Lcom/oneplus/android/server/iris/you$you;->bio:Lcom/oneplus/android/server/iris/you;
 
     invoke-static {v0}, Lcom/oneplus/android/server/iris/you;->veq(Lcom/oneplus/android/server/iris/you;)Lcom/oneplus/android/server/iris/you$sis;
 
@@ -108,7 +108,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    iget-object p0, p0, Lcom/oneplus/android/server/iris/you$you;->kth:Lcom/oneplus/android/server/iris/you;
+    iget-object p0, p0, Lcom/oneplus/android/server/iris/you$you;->bio:Lcom/oneplus/android/server/iris/you;
 
     invoke-static {p0}, Lcom/oneplus/android/server/iris/you;->veq(Lcom/oneplus/android/server/iris/you;)Lcom/oneplus/android/server/iris/you$sis;
 
@@ -137,7 +137,7 @@
     return-void
 .end method
 
-.method public bud(J)V
+.method public les(J)V
     .locals 0
 
     return-void
@@ -149,7 +149,7 @@
     return-void
 .end method
 
-.method public t(JI)I
+.method public w(JI)I
     .locals 0
 
     const/4 p0, 0x0

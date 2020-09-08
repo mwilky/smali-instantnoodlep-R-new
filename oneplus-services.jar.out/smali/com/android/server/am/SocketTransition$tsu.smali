@@ -91,7 +91,7 @@
 
     if-eqz p1, :cond_7
 
-    invoke-virtual {p1, p4}, Lcom/android/server/am/bio;->rtg(I)Lcom/android/server/am/e;
+    invoke-virtual {p1, p4}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/e;
 
     move-result-object p1
 
@@ -190,7 +190,7 @@
 
     move-result v2
 
-    invoke-virtual {p1, v2}, Lcom/android/server/am/bio;->rtg(I)Lcom/android/server/am/e;
+    invoke-virtual {p1, v2}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/e;
 
     move-result-object p1
 
@@ -309,7 +309,7 @@
 
     move-result p4
 
-    invoke-virtual {p1, p4}, Lcom/android/server/am/bio;->rtg(I)Lcom/android/server/am/e;
+    invoke-virtual {p1, p4}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/e;
 
     move-result-object p1
 

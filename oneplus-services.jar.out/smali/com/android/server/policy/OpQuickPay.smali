@@ -376,7 +376,7 @@
 
     move-result-object v0
 
-    const v1, 0x50b0089
+    const v1, 0x50b0088
 
     const/4 v2, 0x0
 
@@ -1629,7 +1629,7 @@
     :cond_8
     iget-object p0, p0, Lcom/android/server/policy/OpQuickPay;->mContext:Landroid/content/Context;
 
-    const p1, 0x50f0167
+    const p1, 0x50f014f
 
     invoke-static {p0, p1, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 

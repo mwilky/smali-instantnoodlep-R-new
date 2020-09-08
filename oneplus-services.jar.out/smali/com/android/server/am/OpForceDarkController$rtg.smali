@@ -48,7 +48,7 @@
 
     iget-object p1, p0, Lcom/android/server/am/OpForceDarkController$rtg;->you:Lcom/android/server/am/OpForceDarkController;
 
-    invoke-static {p1}, Lcom/android/server/am/OpForceDarkController;->access$1800(Lcom/android/server/am/OpForceDarkController;)Landroid/content/Context;
+    invoke-static {p1}, Lcom/android/server/am/OpForceDarkController;->access$1600(Lcom/android/server/am/OpForceDarkController;)Landroid/content/Context;
 
     move-result-object p1
 

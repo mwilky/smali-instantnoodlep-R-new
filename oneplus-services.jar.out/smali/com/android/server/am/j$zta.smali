@@ -37,7 +37,7 @@
 .method public run()V
     .locals 3
 
-    sget-boolean v0, Lcom/android/server/am/hmo;->i:Z
+    sget-boolean v0, Lcom/android/server/am/hmo;->n:Z
 
     if-eqz v0, :cond_0
 
