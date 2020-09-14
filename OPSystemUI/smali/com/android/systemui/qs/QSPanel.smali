@@ -2028,7 +2028,7 @@
     return-object p0
 .end method
 
-.method getTileLayout()Lcom/android/systemui/qs/QSPanel$QSTileLayout;
+.method public getTileLayout()Lcom/android/systemui/qs/QSPanel$QSTileLayout;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/qs/QSPanel;->mTileLayout:Lcom/android/systemui/qs/QSPanel$QSTileLayout;
@@ -4006,5 +4006,15 @@
     invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->updateHeaderExpansion(F)V
 
     :cond_0
+    return-void
+.end method
+
+.method public updateCustomizer()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/systemui/qs/QSPanel;->mCustomizePanel:Lcom/android/systemui/qs/customize/QSCustomizer;
+    
+    invoke-virtual {v0}, Lcom/android/systemui/qs/customize/QSCustomizer;->updateCustomizer()V
+    
     return-void
 .end method
