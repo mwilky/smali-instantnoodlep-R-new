@@ -950,7 +950,9 @@
     :pswitch_9
     iget-object p0, p2, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->extraInfo:Ljava/lang/Object;
 
-    if-eqz p0, :cond_1
+    instance-of p2, p0, Lcom/android/settings/applications/AppStateAppOpsBridge$PermissionState;
+
+    if-eqz p2, :cond_1
 
     new-instance p2, Lcom/android/settings/applications/AppStateUsageBridge$UsageState;
 

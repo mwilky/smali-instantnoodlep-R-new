@@ -109,6 +109,74 @@
     return-void
 .end method
 
+.method private changeAccountPreferenceLayout()V
+    .locals 3
+
+    invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
+
+    move-result-object v0
+
+    const-string v1, "top_level_accounts"
+
+    invoke-virtual {v0, v1}, Landroidx/preference/PreferenceGroup;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    const-string v1, "DashboardFragment"
+
+    const-string v2, "account setLayoutResource"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    const-string v2, "com.oneplus.cloud"
+
+    invoke-static {v1, v2}, Lcom/oneplus/settings/utils/OPUtils;->isAppExist(Landroid/content/Context;Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    const-string v1, "com.heytap.cloud"
+
+    invoke-static {p0, v1}, Lcom/oneplus/settings/utils/OPUtils;->isAppExist(Landroid/content/Context;Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    :cond_0
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isGuestMode()Z
+
+    move-result p0
+
+    if-nez p0, :cond_1
+
+    sget p0, Lcom/android/settings/R$layout;->op_home_preference_card_middle:I
+
+    invoke-virtual {v0, p0}, Landroidx/preference/Preference;->setLayoutResource(I)V
+
+    goto :goto_0
+
+    :cond_1
+    sget p0, Lcom/android/settings/R$layout;->op_home_preference_card_top:I
+
+    invoke-virtual {v0, p0}, Landroidx/preference/Preference;->setLayoutResource(I)V
+
+    :cond_2
+    :goto_0
+    return-void
+.end method
+
 .method private displayResourceTiles()V
     .locals 1
 
@@ -708,17 +776,17 @@
 
     move-result-object v6
 
+    if-eqz v6, :cond_7
+
+    invoke-virtual {v14}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
+
+    move-result-object v6
+
     const-string v7, "com.google.android.apps.wellbeing.settings"
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v6
-
-    const-string v7, "account setLayoutResource"
-
-    const-string v8, "DashboardFragment"
-
-    const-string v9, "top_level_accounts"
 
     if-eqz v6, :cond_6
 
@@ -726,30 +794,16 @@
 
     invoke-virtual {v14, v6}, Landroidx/preference/Preference;->setLayoutResource(I)V
 
-    invoke-virtual/range {p0 .. p0}, Landroidx/preference/PreferenceFragmentCompat;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v9}, Landroidx/preference/PreferenceGroup;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
-
-    move-result-object v6
-
-    if-eqz v6, :cond_6
-
-    invoke-static {v8, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    sget v10, Lcom/android/settings/R$layout;->op_home_preference_card_middle:I
-
-    invoke-virtual {v6, v10}, Landroidx/preference/Preference;->setLayoutResource(I)V
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings/dashboard/DashboardFragment;->changeAccountPreferenceLayout()V
 
     :cond_6
     invoke-virtual {v14}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object v6
 
-    const-string v10, "com.google.android.gms.app.settings"
+    const-string v7, "com.google.android.gms.app.settings"
 
-    invoke-virtual {v6, v10}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    invoke-virtual {v6, v7}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v6
 
@@ -759,21 +813,7 @@
 
     invoke-virtual {v14, v6}, Landroidx/preference/Preference;->setLayoutResource(I)V
 
-    invoke-virtual/range {p0 .. p0}, Landroidx/preference/PreferenceFragmentCompat;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v9}, Landroidx/preference/PreferenceGroup;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
-
-    move-result-object v6
-
-    if-eqz v6, :cond_7
-
-    invoke-static {v8, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    sget v7, Lcom/android/settings/R$layout;->op_home_preference_card_middle:I
-
-    invoke-virtual {v6, v7}, Landroidx/preference/Preference;->setLayoutResource(I)V
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings/dashboard/DashboardFragment;->changeAccountPreferenceLayout()V
 
     :cond_7
     invoke-virtual {v2, v14}, Landroidx/preference/PreferenceGroup;->addPreference(Landroidx/preference/Preference;)Z

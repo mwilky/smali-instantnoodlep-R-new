@@ -332,7 +332,7 @@
 
     check-cast v1, Ljava/util/concurrent/Future;
 
-    const-wide/16 v2, 0x14
+    const-wide/16 v2, 0x50
 
     :try_start_0
     sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;

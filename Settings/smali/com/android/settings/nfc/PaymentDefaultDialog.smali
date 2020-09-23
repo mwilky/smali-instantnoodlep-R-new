@@ -356,6 +356,17 @@
     goto :goto_0
 
     :cond_0
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportNfcUicc()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_1
+
+    iget-object p2, p0, Lcom/android/settings/nfc/PaymentDefaultDialog;->mNewDefault:Landroid/content/ComponentName;
+
+    invoke-static {p0, p2}, Lcom/android/settings/nfc/NfcUiccUtils;->enableUnUICC(Landroid/content/Context;Landroid/content/ComponentName;)Z
+
+    :cond_1
     iget-object p2, p0, Lcom/android/settings/nfc/PaymentDefaultDialog;->mBackend:Lcom/android/settings/nfc/PaymentBackend;
 
     iget-object v0, p0, Lcom/android/settings/nfc/PaymentDefaultDialog;->mNewDefault:Landroid/content/ComponentName;

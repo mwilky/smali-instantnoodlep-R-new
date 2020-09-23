@@ -107,7 +107,7 @@
 
     move-result p1
 
-    if-nez p1, :cond_6
+    if-nez p1, :cond_7
 
     sget-object p1, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
@@ -136,7 +136,7 @@
 
     move-result p1
 
-    if-nez p1, :cond_5
+    if-nez p1, :cond_6
 
     sget-object p1, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
@@ -176,7 +176,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_7
+    if-eqz p1, :cond_5
 
     iget-object p1, p0, Lcom/android/settings/deviceinfo/legal/WallpaperAttributionsPreferenceController;->mPreference:Landroidx/preference/Preference;
 
@@ -187,6 +187,15 @@
     goto :goto_2
 
     :cond_5
+    iget-object p1, p0, Lcom/android/settings/deviceinfo/legal/WallpaperAttributionsPreferenceController;->mPreference:Landroidx/preference/Preference;
+
+    sget v0, Lcom/android/settings/R$string;->oneplus_wallpaper_attributions_values:I
+
+    invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setSummary(I)V
+
+    goto :goto_2
+
+    :cond_6
     :goto_0
     iget-object p1, p0, Lcom/android/settings/deviceinfo/legal/WallpaperAttributionsPreferenceController;->mPreference:Landroidx/preference/Preference;
 
@@ -196,7 +205,7 @@
 
     goto :goto_2
 
-    :cond_6
+    :cond_7
     :goto_1
     iget-object p1, p0, Lcom/android/settings/deviceinfo/legal/WallpaperAttributionsPreferenceController;->mPreference:Landroidx/preference/Preference;
 
@@ -204,7 +213,6 @@
 
     invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setSummary(I)V
 
-    :cond_7
     :goto_2
     sget-object p1, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->SW:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 

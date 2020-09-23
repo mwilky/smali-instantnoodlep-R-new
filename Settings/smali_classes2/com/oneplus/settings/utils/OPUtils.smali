@@ -105,6 +105,12 @@
 
     sput-boolean v0, Lcom/oneplus/settings/utils/OPUtils;->mAppUpdated:Z
 
+    new-instance v0, Ljava/io/File;
+
+    const-string v1, "/mnt/vendor/persist/engineermode/"
+
+    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
     const-string v0, "content://net.oneplus.launcher.features"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -436,18 +442,6 @@
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
-
-    return-void
-.end method
-
-.method public static disableWirelessAdbDebuging()V
-    .locals 2
-
-    const-string v0, "service.adb.tcp.port"
-
-    const-string v1, "-1"
-
-    invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

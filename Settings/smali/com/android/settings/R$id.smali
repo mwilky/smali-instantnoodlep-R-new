@@ -1024,6 +1024,8 @@
 
 .field public static final main_content:I = 0x7f0b0476
 
+.field public static final main_content_scrollable_container:I = 0x7f0b0477
+
 .field public static final main_frame:I = 0x7f0b0478
 
 .field public static final main_pager:I = 0x7f0b047b

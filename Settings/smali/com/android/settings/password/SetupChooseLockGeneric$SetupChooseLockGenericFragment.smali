@@ -286,7 +286,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "unlock_set_do_later"
+    const-string v1, "unlock_set_do_later"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

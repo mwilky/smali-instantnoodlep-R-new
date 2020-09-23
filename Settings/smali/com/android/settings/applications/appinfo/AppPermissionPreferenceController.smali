@@ -9,8 +9,6 @@
 
 
 # static fields
-.field private static final BREENO_VOICE_PKG:Ljava/lang/String; = "com.heytap.speechassist"
-
 .field private static final EXTRA_HIDE_INFO_BUTTON:Ljava/lang/String; = "hideInfoButton"
 
 .field private static final INVALID_SESSION_ID:J = 0x0L
@@ -59,14 +57,6 @@
     .locals 0
 
     iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
-
-    return-object p0
-.end method
-
-.method static synthetic access$100(Lcom/android/settings/applications/appinfo/AppPermissionPreferenceController;)Ljava/lang/String;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/settings/applications/appinfo/AppPermissionPreferenceController;->mPackageName:Ljava/lang/String;
 
     return-object p0
 .end method

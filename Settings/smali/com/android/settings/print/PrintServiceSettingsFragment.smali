@@ -622,7 +622,7 @@
 
     iget-boolean v0, p0, Lcom/android/settings/print/PrintServiceSettingsFragment;->mServiceEnabled:Z
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     iget-object v0, p0, Lcom/android/settings/print/PrintServiceSettingsFragment;->mPrintersAdapter:Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;
 
@@ -630,7 +630,7 @@
 
     move-result v0
 
-    if-lez v0, :cond_2
+    if-lez v0, :cond_3
 
     invoke-interface {p2}, Landroid/view/MenuItem;->getActionView()Landroid/view/View;
 
@@ -640,6 +640,11 @@
 
     iput-object p1, p0, Lcom/android/settings/print/PrintServiceSettingsFragment;->mSearchView:Landroid/widget/SearchView;
 
+    if-nez p1, :cond_2
+
+    return-void
+
+    :cond_2
     new-instance p2, Lcom/android/settings/print/PrintServiceSettingsFragment$2;
 
     invoke-direct {p2, p0}, Lcom/android/settings/print/PrintServiceSettingsFragment$2;-><init>(Lcom/android/settings/print/PrintServiceSettingsFragment;)V
@@ -656,7 +661,7 @@
 
     goto :goto_2
 
-    :cond_2
+    :cond_3
     sget p0, Lcom/android/settings/R$id;->print_menu_item_search:I
 
     invoke-interface {p1, p0}, Landroid/view/Menu;->removeItem(I)V
