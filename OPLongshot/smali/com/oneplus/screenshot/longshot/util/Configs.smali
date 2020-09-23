@@ -5689,7 +5689,7 @@
 
     sparse-switch v3, :sswitch_data_0
 
-    goto/16 :goto_0
+    goto :goto_0
 
     :sswitch_0
     const-string v1, "ComponentInfo{com.taobao.taobao/com.taobao.tao.TBMainActivity}"
@@ -5700,7 +5700,7 @@
 
     if-eqz v0, :cond_0
 
-    const/16 v1, 0x9
+    const/16 v1, 0x8
 
     goto :goto_1
 
@@ -5713,7 +5713,7 @@
 
     if-eqz v0, :cond_0
 
-    const/16 v1, 0x8
+    const/4 v1, 0x7
 
     goto :goto_1
 
@@ -5726,7 +5726,7 @@
 
     if-eqz v0, :cond_0
 
-    const/4 v1, 0x6
+    move v1, v4
 
     goto :goto_1
 
@@ -5739,7 +5739,7 @@
 
     if-eqz v0, :cond_0
 
-    const/4 v1, 0x7
+    const/4 v1, 0x6
 
     goto :goto_1
 
@@ -5765,24 +5765,11 @@
 
     if-eqz v0, :cond_0
 
-    const/4 v1, 0x4
-
-    goto :goto_1
-
-    :sswitch_6
-    const-string v1, "ComponentInfo{com.google.android.youtube/com.google.android.apps.youtube.app.WatchWhileActivity}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
     const/4 v1, 0x3
 
     goto :goto_1
 
-    :sswitch_7
+    :sswitch_6
     const-string v1, "ComponentInfo{com.autonavi.minimap/com.autonavi.map.activity.NewMapActivity}"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -5791,11 +5778,11 @@
 
     if-eqz v0, :cond_0
 
-    move v1, v4
+    const/4 v1, 0x4
 
     goto :goto_1
 
-    :sswitch_8
+    :sswitch_7
     const-string v3, "ComponentInfo{com.google.android.play.games/com.google.android.gms.games.ui.v2.MainActivity}"
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -5806,7 +5793,7 @@
 
     goto :goto_1
 
-    :sswitch_9
+    :sswitch_8
     const-string v1, "ComponentInfo{com.oneplus.note/com.oneplus.note.ui.EditActivity}"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -5858,10 +5845,9 @@
 
     :sswitch_data_0
     .sparse-switch
-        -0x432e60a7 -> :sswitch_9
-        -0x382d50c7 -> :sswitch_8
-        -0x31bd2b55 -> :sswitch_7
-        0xf3807c -> :sswitch_6
+        -0x432e60a7 -> :sswitch_8
+        -0x382d50c7 -> :sswitch_7
+        -0x31bd2b55 -> :sswitch_6
         0x1c56381 -> :sswitch_5
         0x42bf0c7 -> :sswitch_4
         0x3ca2a281 -> :sswitch_3
@@ -5874,7 +5860,6 @@
     .packed-switch 0x0
         :pswitch_4
         :pswitch_3
-        :pswitch_2
         :pswitch_2
         :pswitch_2
         :pswitch_2

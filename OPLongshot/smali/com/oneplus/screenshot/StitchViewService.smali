@@ -551,6 +551,12 @@
 
     move-result-object v0
 
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->getClassName()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
     invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v0

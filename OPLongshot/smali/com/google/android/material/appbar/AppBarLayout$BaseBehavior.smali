@@ -247,7 +247,7 @@
 .end method
 
 .method private animateOffsetTo(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;IF)V
-    .locals 3
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -266,66 +266,6 @@
 
     move-result p4
 
-    iget v0, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->mContentVelocity:I
-
-    invoke-static {v0}, Ljava/lang/Math;->abs(I)I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    const/high16 v1, 0x447a0000    # 1000.0f
-
-    cmpg-float v1, v0, v1
-
-    const/16 v2, 0xe1
-
-    if-gez v1, :cond_0
-
-    const/high16 v1, 0x43fa0000    # 500.0f
-
-    int-to-float p4, p4
-
-    div-float/2addr p4, v0
-
-    mul-float/2addr p4, v1
-
-    invoke-static {p4}, Ljava/lang/Math;->round(F)I
-
-    move-result p4
-
-    invoke-static {v2, p4}, Ljava/lang/Math;->max(II)I
-
-    move-result p4
-
-    goto :goto_0
-
-    :cond_0
-    const v1, 0x44bb8000    # 1500.0f
-
-    cmpl-float v1, v0, v1
-
-    if-lez v1, :cond_1
-
-    const v1, 0x451c4000    # 2500.0f
-
-    int-to-float p4, p4
-
-    div-float/2addr p4, v0
-
-    mul-float/2addr p4, v1
-
-    invoke-static {p4}, Ljava/lang/Math;->round(F)I
-
-    move-result p4
-
-    invoke-static {v2, p4}, Ljava/lang/Math;->max(II)I
-
-    move-result p4
-
-    goto :goto_0
-
-    :cond_1
     int-to-float p4, p4
 
     invoke-virtual {p2}, Lcom/google/android/material/appbar/AppBarLayout;->getHeight()I
@@ -346,7 +286,6 @@
 
     float-to-int p4, p4
 
-    :goto_0
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->animateOffsetWithDuration(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;II)V
 
     return-void

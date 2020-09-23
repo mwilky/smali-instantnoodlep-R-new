@@ -230,7 +230,6 @@
         <item>com.sina.weibo/com.sina.weibo.MainTabActivity</item>
         <item>com.sina.weibo/com.sina.weibo.VisitorMainTabActivity</item>
         <item>com.taobao.taobao/com.taobao.tao.TBMainActivity</item>
-        <item>com.google.android.youtube/com.google.android.apps.youtube.app.WatchWhileActivity</item>
         <item>com.facebook.orca/com.facebook.messenger.neue.MainActivity</item>
         <item>com.taobao.idlefish/com.taobao.fleamarket.home.activity.MainActivity</item>
         <item>com.autonavi.minimap/com.autonavi.map.activity.NewMapActivity</item>
@@ -270,6 +269,7 @@
         <item>com.whatsapp/com.whatsapp.SettingsNotifications</item>
         <item>com.oneplus.gamespace/com.oneplus.gamespace.ui.settings.SettingsActivity</item>
         <item>com.oneplus.note/com.oneplus.note.ui.MainActivity</item>
+        <item>com.google.android.youtube/com.google.android.apps.youtube.app.WatchWhileActivity</item>
     </string-array>
     <string-array name="level1_5_scrollbar_activity">
         <item>com.oneplus.dialer/com.android.dialer.oneplus.activity.OPDialtactsActivity</item>
@@ -503,7 +503,6 @@
         <item>com.instagram.android/com.instagram.modal.ModalActivity</item>
         <item>com.google.android.play.games/com.google.android.gms.games.ui.v2.MainActivity</item>
         <item>com.google.android.apps.photos/com.google.android.apps.photos.home.HomeActivity</item>
-        <item>com.google.android.youtube/com.google.android.apps.youtube.app.WatchWhileActivity</item>
         <item>com.android.settings/com.android.settings.Settings$OPPreInstalledAppListActivity</item>
         <item>com.tencent.mm/com.tencent.mm.plugin.appbrand.ui.AppBrandUI</item>
         <item>com.tencent.mm/com.tencent.mm.plugin.sns.ui.SnsTimeLineUI</item>

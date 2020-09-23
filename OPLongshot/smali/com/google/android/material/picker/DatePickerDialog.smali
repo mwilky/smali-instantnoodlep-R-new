@@ -325,6 +325,85 @@
 
     invoke-super {p0}, Landroidx/appcompat/app/AlertDialog;->onAttachedToWindow()V
 
+    invoke-virtual {p0}, Lcom/google/android/material/picker/DatePickerDialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    sget v1, Landroidx/appcompat/R$id;->parentPanel:I
+
+    invoke-virtual {v0, v1}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
+
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
+
+    const/4 v2, 0x0
+
+    iput v2, v1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-virtual {p0}, Lcom/google/android/material/picker/DatePickerDialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    sget v1, Landroidx/appcompat/R$id;->parentPanel:I
+
+    invoke-virtual {v0, v1}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/google/android/material/picker/DatePickerDialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    sget v1, Landroidx/appcompat/R$id;->parentPanel:I
+
+    invoke-virtual {v0, v1}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    instance-of v0, v0, Landroidx/appcompat/widget/SmoothRoundLayout;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/google/android/material/picker/DatePickerDialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    sget v1, Landroidx/appcompat/R$id;->parentPanel:I
+
+    invoke-virtual {v0, v1}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/appcompat/widget/SmoothRoundLayout;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/SmoothRoundLayout;->setCornerRadius(F)V
+
+    :cond_0
     iget-object v0, p0, Lcom/google/android/material/picker/DatePickerDialog;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -338,8 +417,6 @@
     move-result-object v0
 
     new-instance v1, Landroid/graphics/drawable/InsetDrawable;
-
-    const/4 v2, 0x0
 
     invoke-direct {v1, v0, v2}, Landroid/graphics/drawable/InsetDrawable;-><init>(Landroid/graphics/drawable/Drawable;I)V
 
