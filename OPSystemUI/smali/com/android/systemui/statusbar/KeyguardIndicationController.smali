@@ -600,6 +600,14 @@
     return-void
 .end method
 
+.method static synthetic access$402(Lcom/android/systemui/statusbar/KeyguardIndicationController;Landroid/widget/TextView;)Landroid/widget/TextView;
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mChargingInfo:Landroid/widget/TextView;
+
+    return-object p1
+.end method
+
 .method static synthetic access$500(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Landroid/widget/FrameLayout;
     .locals 0
 
@@ -614,6 +622,14 @@
     iget-object p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mChargingInfoLevel:Landroid/widget/TextView;
 
     return-object p0
+.end method
+
+.method static synthetic access$602(Lcom/android/systemui/statusbar/KeyguardIndicationController;Landroid/widget/TextView;)Landroid/widget/TextView;
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mChargingInfoLevel:Landroid/widget/TextView;
+
+    return-object p1
 .end method
 
 .method static synthetic access$700(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Z

@@ -48,15 +48,19 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
+    iget-object v0, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock$1;->this$0:Lcom/oneplus/aod/views/parsons/OpParsonsClock;
+
+    invoke-static {v0}, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->access$000(Lcom/oneplus/aod/views/parsons/OpParsonsClock;)Lcom/oneplus/aod/views/parsons/OpParsonsUnlockLabel;
+
+    move-result-object v0
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+
     iget-object p0, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock$1;->this$0:Lcom/oneplus/aod/views/parsons/OpParsonsClock;
 
-    invoke-static {p0}, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->access$000(Lcom/oneplus/aod/views/parsons/OpParsonsClock;)Lcom/oneplus/aod/views/parsons/OpParsonsUnlockLabel;
-
-    move-result-object p0
-
-    const/4 v0, 0x4
-
-    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-static {p0}, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->access$100(Lcom/oneplus/aod/views/parsons/OpParsonsClock;)V
 
     return-void
 .end method

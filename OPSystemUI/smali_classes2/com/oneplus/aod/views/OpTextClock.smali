@@ -1108,6 +1108,8 @@
 
     invoke-direct {p0}, Lcom/oneplus/aod/views/OpTextClock;->onTimeChanged()V
 
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
     return-void
 .end method
 

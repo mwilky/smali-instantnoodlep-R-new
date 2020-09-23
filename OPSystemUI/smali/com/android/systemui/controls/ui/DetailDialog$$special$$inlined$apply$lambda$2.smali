@@ -49,6 +49,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    :try_start_0
     iget-object v0, p0, Lcom/android/systemui/controls/ui/DetailDialog$$special$$inlined$apply$lambda$2;->this$0:Lcom/android/systemui/controls/ui/DetailDialog;
 
     invoke-virtual {v0}, Lcom/android/systemui/controls/ui/DetailDialog;->dismiss()V
@@ -67,17 +68,61 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
+    iget-object v0, p0, Lcom/android/systemui/controls/ui/DetailDialog$$special$$inlined$apply$lambda$2;->this$0:Lcom/android/systemui/controls/ui/DetailDialog;
+
+    invoke-virtual {v0}, Lcom/android/systemui/controls/ui/DetailDialog;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    const/high16 v1, 0x10000000
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
+    iget-object v0, p0, Lcom/android/systemui/controls/ui/DetailDialog$$special$$inlined$apply$lambda$2;->this$0:Lcom/android/systemui/controls/ui/DetailDialog;
+
+    invoke-virtual {v0}, Lcom/android/systemui/controls/ui/DetailDialog;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
     iget-object p0, p0, Lcom/android/systemui/controls/ui/DetailDialog$$special$$inlined$apply$lambda$2;->this$0:Lcom/android/systemui/controls/ui/DetailDialog;
 
-    invoke-virtual {p0}, Lcom/android/systemui/controls/ui/DetailDialog;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/systemui/controls/ui/DetailDialog;->getTAG()Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-virtual {p1, p0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "open_in_app Exception "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_0
     return-void
 .end method

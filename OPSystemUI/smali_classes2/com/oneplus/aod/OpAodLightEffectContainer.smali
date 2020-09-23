@@ -20,6 +20,8 @@
 
 .field private final mFrameRunnable:Ljava/lang/Runnable;
 
+.field private mFramesDuration:I
+
 .field private mHandler:Landroid/os/Handler;
 
 .field private mHandlerThread:Landroid/os/HandlerThread;
@@ -47,6 +49,10 @@
 
     iput p1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLightIndex:I
 
+    const/16 p1, 0x10
+
+    iput p1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mFramesDuration:I
+
     new-instance p1, Lcom/oneplus/aod/OpAodLightEffectContainer$1;
 
     invoke-direct {p1, p0}, Lcom/oneplus/aod/OpAodLightEffectContainer$1;-><init>(Lcom/oneplus/aod/OpAodLightEffectContainer;)V
@@ -71,6 +77,10 @@
 
     iput p1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLightIndex:I
 
+    const/16 p1, 0x10
+
+    iput p1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mFramesDuration:I
+
     new-instance p1, Lcom/oneplus/aod/OpAodLightEffectContainer$1;
 
     invoke-direct {p1, p0}, Lcom/oneplus/aod/OpAodLightEffectContainer$1;-><init>(Lcom/oneplus/aod/OpAodLightEffectContainer;)V
@@ -93,6 +103,10 @@
 
     iput p1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLightIndex:I
 
+    const/16 p1, 0x10
+
+    iput p1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mFramesDuration:I
+
     new-instance p1, Lcom/oneplus/aod/OpAodLightEffectContainer$1;
 
     invoke-direct {p1, p0}, Lcom/oneplus/aod/OpAodLightEffectContainer$1;-><init>(Lcom/oneplus/aod/OpAodLightEffectContainer;)V
@@ -114,6 +128,10 @@
     iput p1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mAnimateIndex:I
 
     iput p1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLightIndex:I
+
+    const/16 p1, 0x10
+
+    iput p1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mFramesDuration:I
 
     new-instance p1, Lcom/oneplus/aod/OpAodLightEffectContainer$1;
 
@@ -152,6 +170,22 @@
     return-object p0
 .end method
 
+.method static synthetic access$1000(Lcom/oneplus/aod/OpAodLightEffectContainer;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->decodeBitmap()V
+
+    return-void
+.end method
+
+.method static synthetic access$1100(Lcom/oneplus/aod/OpAodLightEffectContainer;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->decodeCyBitmap()V
+
+    return-void
+.end method
+
 .method static synthetic access$200(Lcom/oneplus/aod/OpAodLightEffectContainer;)Landroid/widget/ImageView;
     .locals 0
 
@@ -184,7 +218,15 @@
     return-object p0
 .end method
 
-.method static synthetic access$600(Lcom/oneplus/aod/OpAodLightEffectContainer;)Landroid/os/Handler;
+.method static synthetic access$600(Lcom/oneplus/aod/OpAodLightEffectContainer;)I
+    .locals 0
+
+    iget p0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mFramesDuration:I
+
+    return p0
+.end method
+
+.method static synthetic access$700(Lcom/oneplus/aod/OpAodLightEffectContainer;)Landroid/os/Handler;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mHandler:Landroid/os/Handler;
@@ -192,7 +234,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$700(Lcom/oneplus/aod/OpAodLightEffectContainer;)I
+.method static synthetic access$800(Lcom/oneplus/aod/OpAodLightEffectContainer;)I
     .locals 0
 
     iget p0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mDecodeIndex:I
@@ -200,20 +242,12 @@
     return p0
 .end method
 
-.method static synthetic access$800(Lcom/oneplus/aod/OpAodLightEffectContainer;)Landroid/os/Handler;
+.method static synthetic access$900(Lcom/oneplus/aod/OpAodLightEffectContainer;)Landroid/os/Handler;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mBgHandler:Landroid/os/Handler;
 
     return-object p0
-.end method
-
-.method static synthetic access$900(Lcom/oneplus/aod/OpAodLightEffectContainer;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->decodeBitmap()V
-
-    return-void
 .end method
 
 .method private animateNotification()V
@@ -385,6 +419,281 @@
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v2, "Failed to decodeBitmap. mBitmapLeft="
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mBitmapLeft:[Landroid/graphics/Bitmap;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, " mBitmapRight="
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mBitmapRight:[Landroid/graphics/Bitmap;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method private decodeCyBitmap()V
+    .locals 10
+
+    iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mBitmapLeft:[Landroid/graphics/Bitmap;
+
+    const-string v1, "OpAodLightEffectContainer"
+
+    if-eqz v0, :cond_9
+
+    iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mBitmapRight:[Landroid/graphics/Bitmap;
+
+    if-nez v0, :cond_0
+
+    goto/16 :goto_2
+
+    :cond_0
+    iget-object v0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    move v4, v3
+
+    :goto_0
+    const/16 v5, 0x64
+
+    if-ge v4, v5, :cond_7
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "aod_light_cy_l_"
+
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    new-array v5, v3, [Ljava/lang/Object;
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    const/4 v7, 0x0
+
+    aput-object v6, v5, v7
+
+    const-string v6, "%02d"
+
+    invoke-static {v6, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "aod_light_cy_r_"
+
+    invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    new-array v8, v3, [Ljava/lang/Object;
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v9
+
+    aput-object v9, v8, v7
+
+    invoke-static {v6, v8}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    iget-object v6, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v6}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v6
+
+    const-string v7, "drawable"
+
+    invoke-virtual {v0, v2, v7, v6}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v6
+
+    iget-object v8, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v8}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v0, v5, v7, v8}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v7
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v9, "name_l:"
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, ", name_r:"
+
+    invoke-virtual {v8, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, ", id_l:"
+
+    invoke-virtual {v8, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, ", id_r:"
+
+    invoke-virtual {v8, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-eqz v6, :cond_6
+
+    if-nez v7, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v0, v6}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
+
+    move-result-object v2
+
+    invoke-static {v2}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v2}, Landroid/graphics/Bitmap;->isRecycled()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
+    const-string p0, "decodeBitmapL but recycled"
+
+    invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_2
+    if-nez v2, :cond_3
+
+    const-string v5, "decode bitmap_l null"
+
+    invoke-static {v1, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_3
+    iget-object v5, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mBitmapLeft:[Landroid/graphics/Bitmap;
+
+    aput-object v2, v5, v4
+
+    invoke-virtual {v0, v7}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
+
+    move-result-object v2
+
+    invoke-static {v2}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
+
+    move-result-object v5
+
+    if-eqz v5, :cond_4
+
+    invoke-virtual {v5}, Landroid/graphics/Bitmap;->isRecycled()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_4
+
+    const-string p0, "decodeBitmapR but recycled"
+
+    invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_4
+    if-nez v5, :cond_5
+
+    const-string v6, "decode bitmap_r null"
+
+    invoke-static {v1, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_5
+    iget-object v6, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mBitmapRight:[Landroid/graphics/Bitmap;
+
+    aput-object v5, v6, v4
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto/16 :goto_0
+
+    :cond_6
+    :goto_1
+    const-string p0, "id_l or id_r 0, end"
+
+    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_7
+    if-eqz v2, :cond_8
+
+    :try_start_0
+    invoke-virtual {v2}, Ljava/io/InputStream;->close()V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :cond_8
+    return-void
+
+    :cond_9
+    :goto_2
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Failed to decodeCyBitmap. mBitmapLeft="
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -617,32 +926,40 @@
 
     const/16 v1, 0xa
 
-    if-ne v0, v1, :cond_0
+    if-eq v0, v1, :cond_1
 
-    const/4 v0, 0x1
+    const/16 v1, 0xb
+
+    if-ne v0, v1, :cond_0
 
     goto :goto_0
 
     :cond_0
     const/4 v0, 0x0
 
+    goto :goto_1
+
+    :cond_1
     :goto_0
+    const/4 v0, 0x1
+
+    :goto_1
     iget-object v1, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     sget v2, Lcom/android/systemui/R$dimen;->op_aod_light_effect_my_width:I
 
-    goto :goto_1
+    goto :goto_2
 
-    :cond_1
+    :cond_2
     sget v2, Lcom/android/systemui/R$dimen;->op_aod_light_effect_width:I
 
-    :goto_1
+    :goto_2
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v1
@@ -663,7 +980,7 @@
 
     iput v1, v2, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     const/high16 v0, 0x3f800000    # 1.0f
 
@@ -683,7 +1000,7 @@
 
     invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    :cond_2
+    :cond_3
     return-void
 .end method
 
@@ -692,7 +1009,7 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mHandlerThread:Landroid/os/HandlerThread;
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
     new-instance v0, Landroid/os/HandlerThread;
 
@@ -716,11 +1033,29 @@
 
     iput-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mBgHandler:Landroid/os/Handler;
 
+    iget p0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLightIndex:I
+
+    const/16 v1, 0xa
+
+    if-ne p0, v1, :cond_0
+
     const/16 p0, 0x100
 
     invoke-virtual {v0, p0}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
+    goto :goto_0
+
     :cond_0
+    const/16 v1, 0xb
+
+    if-ne p0, v1, :cond_1
+
+    const/16 p0, 0x110
+
+    invoke-virtual {v0, p0}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    :cond_1
+    :goto_0
     return-void
 .end method
 
@@ -742,6 +1077,10 @@
     iget v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLightIndex:I
 
     const/16 v1, 0xa
+
+    if-eq v0, v1, :cond_0
+
+    const/16 v1, 0xb
 
     if-eq v0, v1, :cond_0
 
@@ -791,6 +1130,12 @@
     if-eqz v0, :cond_3
 
     const/16 v2, 0x100
+
+    invoke-virtual {v0, v2}, Landroid/os/Handler;->removeMessages(I)V
+
+    iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mBgHandler:Landroid/os/Handler;
+
+    const/16 v2, 0x110
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeMessages(I)V
 
@@ -875,21 +1220,23 @@
 .end method
 
 .method public setLightIndex(I)V
-    .locals 3
+    .locals 6
 
     iget v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLightIndex:I
 
-    if-eq v0, p1, :cond_3
+    if-eq v0, p1, :cond_6
 
     invoke-static {}, Lcom/oneplus/util/OpUtils;->isMCLVersion()Z
 
     move-result v0
 
-    const/16 v1, 0xa
+    const-string v1, "OpAodLightEffectContainer"
+
+    const/16 v2, 0xa
 
     if-nez v0, :cond_0
 
-    if-ne p1, v1, :cond_0
+    if-ne p1, v2, :cond_0
 
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -905,32 +1252,84 @@
 
     move-result-object p0
 
-    const-string p1, "OpAodLightEffectContainer"
-
-    invoke-static {p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
     :cond_0
-    const/4 v0, 0x0
+    iget v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLightIndex:I
 
-    iget v2, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLightIndex:I
+    const/16 v3, 0xb
 
-    if-eq v2, v1, :cond_1
+    if-ne v0, v2, :cond_1
 
-    if-ne p1, v1, :cond_2
+    const/16 v0, 0x10
+
+    iput v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mFramesDuration:I
+
+    goto :goto_0
 
     :cond_1
-    const/4 v0, 0x1
+    if-ne v0, v3, :cond_2
+
+    const/16 v0, 0x28
+
+    iput v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mFramesDuration:I
 
     :cond_2
-    iput p1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLightIndex:I
+    :goto_0
+    const-string v0, "sys.debug.notify.light.frames"
+
+    const/4 v4, 0x0
+
+    invoke-static {v0, v4}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
 
     if-eqz v0, :cond_3
 
-    invoke-direct {p0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->relayoutViews()V
+    iput v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mFramesDuration:I
 
     :cond_3
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "setLightIndex, mFramesDuration: "
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v5, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mFramesDuration:I
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLightIndex:I
+
+    if-eq v0, v2, :cond_4
+
+    if-eq p1, v2, :cond_4
+
+    if-eq v0, v3, :cond_4
+
+    if-ne p1, v3, :cond_5
+
+    :cond_4
+    const/4 v4, 0x1
+
+    :cond_5
+    iput p1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLightIndex:I
+
+    if-eqz v4, :cond_6
+
+    invoke-direct {p0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->relayoutViews()V
+
+    :cond_6
     return-void
 .end method
 
@@ -941,19 +1340,51 @@
 
     const/16 v1, 0xa
 
-    if-ne v0, v1, :cond_1
+    if-eq v0, v1, :cond_2
 
+    const/16 v1, 0xb
+
+    if-ne v0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setAlpha(F)V
+
+    iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLightAnimator:Landroid/animation/ValueAnimator;
+
+    if-eqz v0, :cond_1
+
+    if-eqz v0, :cond_4
+
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isRunning()Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    :cond_1
+    invoke-direct {p0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->loadResources()V
+
+    invoke-direct {p0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->animateNotification()V
+
+    goto :goto_1
+
+    :cond_2
+    :goto_0
     invoke-direct {p0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->prepareResources()V
 
     iget v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mAnimateIndex:I
 
-    if-lez v0, :cond_0
+    if-lez v0, :cond_3
 
     const/16 v1, 0x64
 
-    if-lt v0, v1, :cond_3
+    if-lt v0, v1, :cond_4
 
-    :cond_0
+    :cond_3
     iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mFrameRunnable:Ljava/lang/Runnable;
@@ -968,31 +1399,7 @@
 
     invoke-virtual {v0, p0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    goto :goto_0
-
-    :cond_1
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setAlpha(F)V
-
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLightAnimator:Landroid/animation/ValueAnimator;
-
-    if-eqz v0, :cond_2
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isRunning()Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    :cond_2
-    invoke-direct {p0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->loadResources()V
-
-    invoke-direct {p0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->animateNotification()V
-
-    :cond_3
-    :goto_0
+    :cond_4
+    :goto_1
     return-void
 .end method

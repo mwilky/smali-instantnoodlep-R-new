@@ -56,11 +56,32 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView$1;->this$0:Lcom/android/keyguard/KeyguardAssistantView;
+
+    invoke-static {v0}, Lcom/android/keyguard/KeyguardAssistantView;->access$100(Lcom/android/keyguard/KeyguardAssistantView;)Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView$1;->this$0:Lcom/android/keyguard/KeyguardAssistantView;
+
+    invoke-static {p0}, Lcom/android/keyguard/KeyguardAssistantView;->access$000(Lcom/android/keyguard/KeyguardAssistantView;)Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string p1, "controller is null! return"
+
+    invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_0
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
-    if-ne p1, v1, :cond_0
+    if-ne p1, v1, :cond_1
 
     iget-object p1, p0, Lcom/android/keyguard/KeyguardAssistantView$1;->this$0:Lcom/android/keyguard/KeyguardAssistantView;
 
@@ -72,10 +93,10 @@
 
     goto/16 :goto_0
 
-    :cond_0
+    :cond_1
     const/4 v2, 0x2
 
-    if-ne p1, v2, :cond_1
+    if-ne p1, v2, :cond_2
 
     iget-object p1, p0, Lcom/android/keyguard/KeyguardAssistantView$1;->this$0:Lcom/android/keyguard/KeyguardAssistantView;
 
@@ -87,7 +108,7 @@
 
     goto/16 :goto_0
 
-    :cond_1
+    :cond_2
     const/4 v2, 0x3
 
     const-string v3, "com.google.android.apps.oemsmartspace.SMARTSPACE_ENABLE_DATE_KEY"
@@ -100,7 +121,7 @@
 
     const-string v7, "com.google.android.apps.oemsmartspace.SMARTSPACE_TYPE_KEY"
 
-    if-ne p1, v2, :cond_2
+    if-ne p1, v2, :cond_3
 
     new-instance p1, Landroid/os/Bundle;
 
@@ -136,7 +157,7 @@
 
     iget-object v1, p0, Lcom/android/keyguard/KeyguardAssistantView$1;->this$0:Lcom/android/keyguard/KeyguardAssistantView;
 
-    invoke-static {v1}, Lcom/android/keyguard/KeyguardAssistantView;->access$300(Lcom/android/keyguard/KeyguardAssistantView;)Landroid/view/ViewGroup;
+    invoke-static {v1}, Lcom/android/keyguard/KeyguardAssistantView;->access$300(Lcom/android/keyguard/KeyguardAssistantView;)Lcom/oneplus/aod/views/OpSmartspaceContainer;
 
     move-result-object v1
 
@@ -150,10 +171,10 @@
 
     goto :goto_0
 
-    :cond_2
+    :cond_3
     const/4 v1, 0x4
 
-    if-ne p1, v1, :cond_3
+    if-ne p1, v1, :cond_4
 
     new-instance p1, Landroid/os/Bundle;
 
@@ -189,7 +210,7 @@
 
     iget-object v1, p0, Lcom/android/keyguard/KeyguardAssistantView$1;->this$0:Lcom/android/keyguard/KeyguardAssistantView;
 
-    invoke-static {v1}, Lcom/android/keyguard/KeyguardAssistantView;->access$300(Lcom/android/keyguard/KeyguardAssistantView;)Landroid/view/ViewGroup;
+    invoke-static {v1}, Lcom/android/keyguard/KeyguardAssistantView;->access$300(Lcom/android/keyguard/KeyguardAssistantView;)Lcom/oneplus/aod/views/OpSmartspaceContainer;
 
     move-result-object v1
 
@@ -203,12 +224,12 @@
 
     goto :goto_0
 
-    :cond_3
+    :cond_4
     const/4 v0, 0x5
 
     const/16 v1, 0x64
 
-    if-ne p1, v0, :cond_4
+    if-ne p1, v0, :cond_5
 
     iget-object p1, p0, Lcom/android/keyguard/KeyguardAssistantView$1;->this$0:Lcom/android/keyguard/KeyguardAssistantView;
 
@@ -220,10 +241,10 @@
 
     goto :goto_0
 
-    :cond_4
+    :cond_5
     const/4 v0, 0x6
 
-    if-ne p1, v0, :cond_5
+    if-ne p1, v0, :cond_6
 
     iget-object p1, p0, Lcom/android/keyguard/KeyguardAssistantView$1;->this$0:Lcom/android/keyguard/KeyguardAssistantView;
 
@@ -233,7 +254,7 @@
 
     invoke-virtual {p1, v1}, Lcom/android/keyguard/KeyguardAssistantView$KeyguardViewUpdateListener;->onNoCardAndChipShown(I)V
 
-    :cond_5
+    :cond_6
     :goto_0
     iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView$1;->this$0:Lcom/android/keyguard/KeyguardAssistantView;
 

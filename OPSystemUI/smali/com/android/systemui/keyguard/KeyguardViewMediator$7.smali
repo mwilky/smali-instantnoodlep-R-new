@@ -62,7 +62,7 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 5
 
     const-string v0, "KeyguardViewMediator.mKeyGuardGoingAwayRunnable"
 
@@ -74,216 +74,248 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$7;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
+    iget-object v1, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$7;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    invoke-static {v0}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->access$1800(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Ldagger/Lazy;
+    invoke-static {v1}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->access$1800(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Ldagger/Lazy;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-interface {v0}, Ldagger/Lazy;->get()Ljava/lang/Object;
+    invoke-interface {v1}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v1
 
-    check-cast v0, Lcom/android/keyguard/KeyguardViewController;
+    check-cast v1, Lcom/android/keyguard/KeyguardViewController;
 
-    invoke-interface {v0}, Lcom/android/keyguard/KeyguardViewController;->keyguardGoingAway()V
+    invoke-interface {v1}, Lcom/android/keyguard/KeyguardViewController;->keyguardGoingAway()V
 
-    iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$7;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
+    iget-object v1, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$7;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    invoke-static {v0}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->access$1800(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Ldagger/Lazy;
+    invoke-static {v1}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->access$5500(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Z
 
-    move-result-object v0
+    move-result v1
 
-    invoke-interface {v0}, Ldagger/Lazy;->get()Ljava/lang/Object;
+    iget-object v2, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$7;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    move-result-object v0
+    invoke-static {v2}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->access$1800(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Ldagger/Lazy;
 
-    check-cast v0, Lcom/android/keyguard/KeyguardViewController;
+    move-result-object v2
 
-    invoke-interface {v0}, Lcom/android/keyguard/KeyguardViewController;->shouldDisableWindowAnimationsForUnlock()Z
+    invoke-interface {v2}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v2
 
-    if-nez v0, :cond_2
+    check-cast v2, Lcom/android/keyguard/KeyguardViewController;
 
-    iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$7;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
+    invoke-interface {v2}, Lcom/android/keyguard/KeyguardViewController;->shouldDisableWindowAnimationsForUnlock()Z
 
-    invoke-static {v0}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->access$5500(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Lcom/android/systemui/statusbar/phone/StatusBar;
+    move-result v2
 
-    move-result-object v0
+    if-nez v2, :cond_2
 
-    if-eqz v0, :cond_0
+    iget-object v2, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$7;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$7;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
+    invoke-static {v2}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->access$5600(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Lcom/android/systemui/statusbar/phone/StatusBar;
 
-    invoke-static {v0}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->access$5600(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Lcom/android/systemui/statusbar/phone/StatusBar;
+    move-result-object v2
 
-    move-result-object v0
+    if-eqz v2, :cond_0
 
-    invoke-virtual {v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getFacelockController()Lcom/oneplus/faceunlock/OpFacelockController;
+    iget-object v2, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$7;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    move-result-object v0
+    invoke-static {v2}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->access$5700(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Lcom/android/systemui/statusbar/phone/StatusBar;
 
-    if-eqz v0, :cond_0
+    move-result-object v2
 
-    iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$7;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
+    invoke-virtual {v2}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getFacelockController()Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-static {v0}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->access$5700(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Lcom/android/systemui/statusbar/phone/StatusBar;
+    move-result-object v2
 
-    move-result-object v0
+    if-eqz v2, :cond_0
 
-    invoke-virtual {v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getFacelockController()Lcom/oneplus/faceunlock/OpFacelockController;
+    iget-object v2, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$7;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    move-result-object v0
+    invoke-static {v2}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->access$5800(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Lcom/android/systemui/statusbar/phone/StatusBar;
 
-    invoke-virtual {v0}, Lcom/oneplus/faceunlock/OpFacelockController;->isScreenOffUnlock()Z
+    move-result-object v2
 
-    move-result v0
+    invoke-virtual {v2}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getFacelockController()Lcom/oneplus/faceunlock/OpFacelockController;
 
-    if-nez v0, :cond_2
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/oneplus/faceunlock/OpFacelockController;->isScreenOffUnlock()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    if-nez v1, :cond_2
 
     :cond_0
-    iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$7;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
+    iget-object v2, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$7;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    invoke-static {v0}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->access$5800(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Z
+    invoke-static {v2}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->access$5900(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Z
 
-    move-result v0
+    move-result v2
 
-    if-eqz v0, :cond_1
+    if-eqz v2, :cond_1
 
     invoke-static {}, Lcom/oneplus/util/OpUtils;->isHomeApp()Z
 
-    move-result v0
+    move-result v2
 
-    if-nez v0, :cond_1
+    if-nez v2, :cond_1
+
+    if-eqz v1, :cond_1
 
     goto :goto_0
 
     :cond_1
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
     goto :goto_1
 
     :cond_2
     :goto_0
-    const/4 v0, 0x2
+    const/4 v2, 0x2
 
     :goto_1
-    iget-object v1, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$7;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
+    iget-object v3, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$7;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    invoke-static {v1}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->access$1800(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Ldagger/Lazy;
+    invoke-static {v3}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->access$1800(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Ldagger/Lazy;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-interface {v1}, Ldagger/Lazy;->get()Ljava/lang/Object;
+    invoke-interface {v3}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v3
 
-    check-cast v1, Lcom/android/keyguard/KeyguardViewController;
+    check-cast v3, Lcom/android/keyguard/KeyguardViewController;
 
-    invoke-interface {v1}, Lcom/android/keyguard/KeyguardViewController;->isGoingToNotificationShade()Z
+    invoke-interface {v3}, Lcom/android/keyguard/KeyguardViewController;->isGoingToNotificationShade()Z
 
-    move-result v1
+    move-result v3
 
-    if-nez v1, :cond_3
+    if-nez v3, :cond_3
 
-    iget-object v1, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$7;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
+    iget-object v3, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$7;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    invoke-static {v1}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->access$5800(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Z
+    invoke-static {v3}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->access$5900(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Z
 
-    move-result v1
+    move-result v3
 
-    if-eqz v1, :cond_4
+    if-eqz v3, :cond_4
 
-    iget-object v1, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$7;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
+    iget-object v3, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$7;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    invoke-static {v1}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->access$5900(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Z
+    invoke-static {v3}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->access$6000(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Z
 
-    move-result v1
+    move-result v3
 
-    if-eqz v1, :cond_4
+    if-eqz v3, :cond_4
 
     :cond_3
-    or-int/lit8 v0, v0, 0x1
+    or-int/lit8 v2, v2, 0x1
 
     :cond_4
-    iget-object v1, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$7;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
+    iget-object v3, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$7;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    invoke-static {v1}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->access$1800(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Ldagger/Lazy;
+    invoke-static {v3}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->access$1800(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Ldagger/Lazy;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-interface {v1}, Ldagger/Lazy;->get()Ljava/lang/Object;
+    invoke-interface {v3}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v3
 
-    check-cast v1, Lcom/android/keyguard/KeyguardViewController;
+    check-cast v3, Lcom/android/keyguard/KeyguardViewController;
 
-    invoke-interface {v1}, Lcom/android/keyguard/KeyguardViewController;->isUnlockWithWallpaper()Z
+    invoke-interface {v3}, Lcom/android/keyguard/KeyguardViewController;->isUnlockWithWallpaper()Z
 
-    move-result v1
+    move-result v3
 
-    if-eqz v1, :cond_5
+    if-eqz v3, :cond_5
 
-    or-int/lit8 v0, v0, 0x4
+    or-int/lit8 v2, v2, 0x4
 
     :cond_5
-    iget-object v1, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$7;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
+    iget-object v3, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$7;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    invoke-static {v1}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->access$1800(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Ldagger/Lazy;
+    invoke-static {v3}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->access$1800(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Ldagger/Lazy;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-interface {v1}, Ldagger/Lazy;->get()Ljava/lang/Object;
+    invoke-interface {v3}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v3
 
-    check-cast v1, Lcom/android/keyguard/KeyguardViewController;
+    check-cast v3, Lcom/android/keyguard/KeyguardViewController;
 
-    invoke-interface {v1}, Lcom/android/keyguard/KeyguardViewController;->shouldSubtleWindowAnimationsForUnlock()Z
+    invoke-interface {v3}, Lcom/android/keyguard/KeyguardViewController;->shouldSubtleWindowAnimationsForUnlock()Z
 
-    move-result v1
+    move-result v3
 
-    if-eqz v1, :cond_6
+    if-eqz v3, :cond_6
 
-    or-int/lit8 v0, v0, 0x8
+    or-int/lit8 v2, v2, 0x8
 
     :cond_6
-    iget-object v1, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$7;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-static {v1}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->access$900(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "keyguardGoingAway supportAccelerate:"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, " flags:"
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    const/4 v2, 0x1
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {v1, v2}, Lcom/android/keyguard/KeyguardUpdateMonitor;->setKeyguardGoingAway(Z)V
+    iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$7;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    iget-object v1, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$7;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
+    invoke-static {v0}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->access$900(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-    invoke-static {v1}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->access$1800(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Ldagger/Lazy;
+    move-result-object v0
 
-    move-result-object v1
+    const/4 v1, 0x1
 
-    invoke-interface {v1}, Ldagger/Lazy;->get()Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->setKeyguardGoingAway(Z)V
 
-    move-result-object v1
+    iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$7;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    check-cast v1, Lcom/android/keyguard/KeyguardViewController;
+    invoke-static {v0}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->access$1800(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Ldagger/Lazy;
 
-    invoke-interface {v1, v2}, Lcom/android/keyguard/KeyguardViewController;->setKeyguardGoingAwayState(Z)V
+    move-result-object v0
+
+    invoke-interface {v0}, Ldagger/Lazy;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/keyguard/KeyguardViewController;
+
+    invoke-interface {v0, v1}, Lcom/android/keyguard/KeyguardViewController;->setKeyguardGoingAwayState(Z)V
 
     iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$7;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    invoke-static {p0}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->access$6000(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Ljava/util/concurrent/Executor;
+    invoke-static {p0}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->access$6100(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Ljava/util/concurrent/Executor;
 
     move-result-object p0
 
-    new-instance v1, Lcom/android/systemui/keyguard/-$$Lambda$KeyguardViewMediator$7$KooXr448I10DQHquWhJeRDn4i_w;
+    new-instance v0, Lcom/android/systemui/keyguard/-$$Lambda$KeyguardViewMediator$7$KooXr448I10DQHquWhJeRDn4i_w;
 
-    invoke-direct {v1, v0}, Lcom/android/systemui/keyguard/-$$Lambda$KeyguardViewMediator$7$KooXr448I10DQHquWhJeRDn4i_w;-><init>(I)V
+    invoke-direct {v0, v2}, Lcom/android/systemui/keyguard/-$$Lambda$KeyguardViewMediator$7$KooXr448I10DQHquWhJeRDn4i_w;-><init>(I)V
 
-    invoke-interface {p0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-interface {p0, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     invoke-static {}, Landroid/os/Trace;->endSection()V
 

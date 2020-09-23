@@ -939,7 +939,6 @@
     <string name="keyguard_fingerprint_unlock">השתמש בטביעת אצבע לביטול נעילה</string>
     <string name="keyguard_indication_charging_time">%2$s • בטעינה (%1$s עד לסיום)</string>
     <string name="keyguard_indication_charging_time_fast">%2$s • בטעינה מהירה (%1$s עד לסיום)</string>
-    <string name="keyguard_indication_charging_time_fast_vooc">(%s עד שמלא)</string>
     <string name="keyguard_indication_charging_time_slowly">%2$s • בטעינה איטית (%1$s עד לסיום)</string>
     <string name="keyguard_indication_charging_time_wireless">%2$s • בטעינה אלחוטית (%1$s עד לסיום)</string>
     <string name="keyguard_indication_trust_disabled">המכשיר יישאר נעול עד שתבטל את נעילתו באופן ידני</string>
@@ -1368,7 +1367,7 @@
     <string name="op_notification_channel_summary_low">הודעות חשובות פחות ללא צליל או רטט.</string>
     <string name="op_notification_section_header_gentle">הודעות אחרות</string>
     <string name="op_notification_silence_title">אחר</string>
-    <string name="op_protect_charging">" Protect charging"</string>
+    <string name="op_protect_charging">" Protected charging"</string>
     <string name="op_qs_dark_mode_tile_label">מצב כהה</string>
     <string name="op_qs_data_usage_used">%1$s: ‏שימוש ב-%2$s %3$s</string>
     <string name="op_quick_settings_night_display_label">נוחות ראייה</string>

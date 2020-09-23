@@ -1029,7 +1029,6 @@ only"</string>
     <string name="keyguard_fingerprint_unlock">Use fingerprint to unlock</string>
     <string name="keyguard_indication_charging_time">%2$s • Charging (%1$s until full)</string>
     <string name="keyguard_indication_charging_time_fast">%2$s • Charging rapidly (%1$s until full)</string>
-    <string name="keyguard_indication_charging_time_fast_vooc">(%s until full)</string>
     <string name="keyguard_indication_charging_time_slowly">%2$s • Charging slowly (%1$s until full)</string>
     <string name="keyguard_indication_charging_time_wireless">%2$s • Charging wirelessly (%1$s until full)</string>
     <string name="keyguard_indication_trust_disabled">Device will stay locked until you manually unlock</string>
@@ -1539,7 +1538,7 @@ You're also connected to a VPN, which can monitor your network activity."</strin
     <string name="op_notification_section_header_gentle">Other notifications</string>
     <string name="op_notification_silence_title">Other</string>
     <string name="op_password_toggle_content_description">Toggle password visibility</string>
-    <string name="op_protect_charging">" Protect charging"</string>
+    <string name="op_protect_charging">" Protected charging"</string>
     <string name="op_protect_charging_dot">" • [temp]"</string>
     <string name="op_qs_dark_mode_tile_label">Dark mode</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s used</string>
@@ -1856,9 +1855,9 @@ You're also connected to a VPN, which can monitor your network activity."</strin
     <string name="quick_settings_switch_user_storage_insufficient">Storage is full, cannot switch user</string>
     <string name="quick_settings_tethering_label">Tethering</string>
     <string name="quick_settings_tiles">default</string>
-    <string name="quick_settings_tiles_default">wifi,cell,bt,flashlight,rotation,battery,airplane,night,location,dataswitch,dnd,nfc,custom(com.android.phone/com.android.wificalling.OPWifiCallingTitle),game,read,dark,hotspot,opreversecharge,custom(com.oneplus.brickmode/.service.BreathModeTileService),custom(com.oneplus.screenrecord/.core.SystemUITileService),custom(com.heytap.speechassist/.skill.drivingmode.internal.DrivingModeTileService),custom(com.google.android.gms/.nearby.sharing.SharingTileService)</string>
+    <string name="quick_settings_tiles_default">wifi,cell,bt,flashlight,rotation,battery,airplane,night,location,dataswitch,dnd,nfc,custom(com.android.phone/com.android.wificalling.OPWifiCallingTitle),custom(com.google.android.gms/.nearby.sharing.SharingTileService),game,read,dark,hotspot,opreversecharge,custom(com.oneplus.brickmode/.service.BreathModeTileService),custom(com.oneplus.screenrecord/.core.SystemUITileService),custom(com.heytap.speechassist/.skill.drivingmode.internal.DrivingModeTileService)</string>
     <string name="quick_settings_tiles_guest">wifi,bt,flashlight,rotation,powersaving,airplane,night,location,game,nfc,hotspot,saver,opreversecharge</string>
-    <string name="quick_settings_tiles_retail_mode">wifi,cell,bt,flashlight,rotation,battery,airplane,night,location,dataswitch,dnd,nfc,custom(com.android.phone/com.android.wificalling.OPWifiCallingTitle),game,read,dark,hotspot,custom(com.oneplus.brickmode/.service.BreathModeTileService),custom(com.oneplus.screenrecord/.service.SystemUITileService),custom(com.heytap.speechassist/.skill.drivingmode.internal.DrivingModeTileService),custom(com.google.android.gms/.nearby.sharing.SharingTileService)</string>
+    <string name="quick_settings_tiles_retail_mode">wifi,cell,bt,flashlight,rotation,battery,airplane,night,location,dataswitch,dnd,nfc,custom(com.android.phone/com.android.wificalling.OPWifiCallingTitle),custom(com.google.android.gms/.nearby.sharing.SharingTileService),game,read,dark,hotspot,custom(com.oneplus.brickmode/.service.BreathModeTileService),custom(com.oneplus.screenrecord/.service.SystemUITileService),custom(com.heytap.speechassist/.skill.drivingmode.internal.DrivingModeTileService)</string>
     <string name="quick_settings_tiles_stock">wifi,cell,battery,bt,rotation,flashlight,airplane,night,location,hotspot,nfc,read,dark,game,otg,dnd,cast,saver,vpn,inversion,work,dataswitch,opreversecharge,screenrecord,reverse</string>
     <string name="quick_settings_time_label">Time</string>
     <string name="quick_settings_ui_mode_night_label">Dark theme</string>

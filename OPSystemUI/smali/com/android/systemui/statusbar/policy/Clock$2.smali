@@ -113,6 +113,16 @@
     return-void
 .end method
 
+.method private synthetic lambda$onReceive$3()V
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/policy/Clock$2;->this$0:Lcom/android/systemui/statusbar/policy/Clock;
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/Clock;->updateMinWidth()V
+
+    return-void
+.end method
+
 
 # virtual methods
 .method public synthetic lambda$onReceive$0$Clock$2(Ljava/lang/String;)V
@@ -135,6 +145,14 @@
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/Clock$2;->lambda$onReceive$2()V
+
+    return-void
+.end method
+
+.method public synthetic lambda$onReceive$3$Clock$2()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/Clock$2;->lambda$onReceive$3()V
 
     return-void
 .end method
@@ -356,6 +374,12 @@
     new-instance p2, Lcom/android/systemui/statusbar/policy/-$$Lambda$Clock$2$mOTwR4Tu5xrxBBIUbNE9701lx-4;
 
     invoke-direct {p2, p0}, Lcom/android/systemui/statusbar/policy/-$$Lambda$Clock$2$mOTwR4Tu5xrxBBIUbNE9701lx-4;-><init>(Lcom/android/systemui/statusbar/policy/Clock$2;)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    new-instance p2, Lcom/android/systemui/statusbar/policy/-$$Lambda$Clock$2$o-1RwRa8QxTjY8VoCzVUNtPcHSs;
+
+    invoke-direct {p2, p0}, Lcom/android/systemui/statusbar/policy/-$$Lambda$Clock$2$o-1RwRa8QxTjY8VoCzVUNtPcHSs;-><init>(Lcom/android/systemui/statusbar/policy/Clock$2;)V
 
     invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

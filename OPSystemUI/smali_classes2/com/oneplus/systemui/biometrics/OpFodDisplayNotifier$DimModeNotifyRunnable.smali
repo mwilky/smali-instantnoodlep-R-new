@@ -46,7 +46,7 @@
     :try_start_0
     iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier$DimModeNotifyRunnable;->this$0:Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;
 
-    invoke-static {v1}, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->access$200(Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;)Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
+    invoke-static {v1}, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->access$300(Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;)Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
 
     move-result-object v1
 
@@ -80,7 +80,7 @@
 
     iget-object v2, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier$DimModeNotifyRunnable;->this$0:Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;
 
-    invoke-static {v2}, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->access$100(Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;)Lvendor/oneplus/hardware/display/V1_0/IOneplusDisplay;
+    invoke-static {v2}, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->access$200(Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;)Lvendor/oneplus/hardware/display/V1_0/IOneplusDisplay;
 
     move-result-object v2
 
@@ -128,7 +128,7 @@
     :cond_2
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier$DimModeNotifyRunnable;->this$0:Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;
 
-    invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->access$300(Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;)Lcom/oneplus/core/oimc/OIMCServiceManager;
+    invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->access$400(Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;)Lcom/oneplus/core/oimc/OIMCServiceManager;
 
     move-result-object p0
 
@@ -139,7 +139,7 @@
     :cond_3
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier$DimModeNotifyRunnable;->this$0:Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;
 
-    invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->access$300(Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;)Lcom/oneplus/core/oimc/OIMCServiceManager;
+    invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->access$400(Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;)Lcom/oneplus/core/oimc/OIMCServiceManager;
 
     move-result-object p0
 

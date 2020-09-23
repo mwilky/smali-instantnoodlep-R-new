@@ -3,14 +3,12 @@
 .source "OpBatteryStatus.java"
 
 
-# static fields
-.field public static mTimeToFull:J = -0x1L
-
-
 # instance fields
 .field public fastCharge:I
 
 .field public mProtectCharging:Z
+
+.field public mTimeToFull:J
 
 .field public pdcharge:Z
 
@@ -22,16 +20,14 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 0
-
-    return-void
-.end method
-
 .method public constructor <init>(IIIIIIZZZZ)V
     .locals 0
 
     invoke-direct/range {p0 .. p5}, Lcom/android/settingslib/fuelgauge/BatteryStatus;-><init>(IIIII)V
+
+    const-wide/16 p1, -0x1
+
+    iput-wide p1, p0, Lcom/oneplus/battery/OpBatteryStatus;->mTimeToFull:J
 
     const/4 p1, 0x0
 
@@ -53,9 +49,13 @@
 .end method
 
 .method private constructor <init>(Landroid/content/Intent;)V
-    .locals 0
+    .locals 2
 
     invoke-direct {p0, p1}, Lcom/android/settingslib/fuelgauge/BatteryStatus;-><init>(Landroid/content/Intent;)V
+
+    const-wide/16 v0, -0x1
+
+    iput-wide v0, p0, Lcom/oneplus/battery/OpBatteryStatus;->mTimeToFull:J
 
     const/4 p1, 0x0
 
@@ -119,7 +119,7 @@
 
     if-eqz p2, :cond_0
 
-    sput-wide v0, Lcom/oneplus/battery/OpBatteryStatus;->mTimeToFull:J
+    iput-wide v0, p0, Lcom/oneplus/battery/OpBatteryStatus;->mTimeToFull:J
 
     :cond_0
     const-string p2, "protect_charging"
@@ -133,9 +133,9 @@
     goto :goto_0
 
     :cond_1
-    const-wide/16 p0, -0x1
+    const-wide/16 p1, -0x1
 
-    sput-wide p0, Lcom/oneplus/battery/OpBatteryStatus;->mTimeToFull:J
+    iput-wide p1, p0, Lcom/oneplus/battery/OpBatteryStatus;->mTimeToFull:J
 
     :goto_0
     return-void
@@ -204,6 +204,14 @@
     move-result p0
 
     return p0
+.end method
+
+.method public getSwarpRemainingTime()J
+    .locals 2
+
+    iget-wide v0, p0, Lcom/oneplus/battery/OpBatteryStatus;->mTimeToFull:J
+
+    return-wide v0
 .end method
 
 .method public isPdCharging()Z

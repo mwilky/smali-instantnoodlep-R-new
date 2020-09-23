@@ -378,7 +378,7 @@
 .end method
 
 .method private resolveIntermediateState(Lcom/android/systemui/doze/DozeMachine$State;)V
-    .locals 3
+    .locals 4
 
     sget-object v0, Lcom/android/systemui/doze/DozeMachine$1;->$SwitchMap$com$android$systemui$doze$DozeMachine$State:[I
 
@@ -413,15 +413,33 @@
 
     move-result-object v1
 
-    const/4 v2, -0x1
+    sget-object v2, Lcom/android/systemui/doze/DozeMachine$State;->INITIALIZED:Lcom/android/systemui/doze/DozeMachine$State;
 
-    if-eqz v1, :cond_1
+    const/4 v3, -0x1
+
+    if-eq p1, v2, :cond_2
+
+    const/4 p1, 0x2
+
+    if-eq v0, p1, :cond_1
+
+    const/4 p1, 0x1
+
+    if-ne v0, p1, :cond_2
+
+    :cond_1
+    sget-object p1, Lcom/android/systemui/doze/DozeMachine$State;->FINISH:Lcom/android/systemui/doze/DozeMachine$State;
+
+    goto :goto_0
+
+    :cond_2
+    if-eqz v1, :cond_3
 
     invoke-virtual {v1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isAlwaysOnEnabled()Z
 
-    move-result v1
+    move-result p1
 
-    if-eqz v1, :cond_1
+    if-eqz p1, :cond_3
 
     sget-object p1, Lcom/android/systemui/doze/DozeMachine$State;->DOZE_AOD:Lcom/android/systemui/doze/DozeMachine$State;
 
@@ -437,25 +455,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->updateForPulseReason(I)V
-
-    goto :goto_0
-
-    :cond_1
-    sget-object v1, Lcom/android/systemui/doze/DozeMachine$State;->INITIALIZED:Lcom/android/systemui/doze/DozeMachine$State;
-
-    if-eq p1, v1, :cond_3
-
-    const/4 p1, 0x2
-
-    if-eq v0, p1, :cond_2
-
-    const/4 p1, 0x1
-
-    if-ne v0, p1, :cond_3
-
-    :cond_2
-    sget-object p1, Lcom/android/systemui/doze/DozeMachine$State;->FINISH:Lcom/android/systemui/doze/DozeMachine$State;
+    invoke-virtual {v0, v3}, Lcom/oneplus/aod/OpAodDisplayViewManager;->updateForPulseReason(I)V
 
     goto :goto_0
 
@@ -489,7 +489,7 @@
     sget-object p1, Lcom/android/systemui/doze/DozeMachine$State;->DOZE:Lcom/android/systemui/doze/DozeMachine$State;
 
     :goto_0
-    invoke-direct {p0, p1, v2}, Lcom/android/systemui/doze/DozeMachine;->transitionTo(Lcom/android/systemui/doze/DozeMachine$State;I)V
+    invoke-direct {p0, p1, v3}, Lcom/android/systemui/doze/DozeMachine;->transitionTo(Lcom/android/systemui/doze/DozeMachine$State;I)V
 
     :goto_1
     return-void

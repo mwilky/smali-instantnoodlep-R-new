@@ -938,7 +938,6 @@
     <string name="keyguard_fingerprint_unlock">अनलॉक करने के लिए फिंगरप्रिंट का उपयोग करें</string>
     <string name="keyguard_indication_charging_time">%2$s • चार्ज हो रहा है (%1$s में पूरा होगा)</string>
     <string name="keyguard_indication_charging_time_fast">%2$s • तेज़ चार्ज हो रहा है (%1$s में पूरा होगा)</string>
-    <string name="keyguard_indication_charging_time_fast_vooc">(%s पूरा होने तक)</string>
     <string name="keyguard_indication_charging_time_slowly">%2$s • धीरे चार्ज हो रहा है (%1$s में पूरा होगा)</string>
     <string name="keyguard_indication_charging_time_wireless">%2$s • वायरलेस तरीके से चार्ज हो रहा है (%1$s में पूरा होगा)</string>
     <string name="keyguard_indication_trust_disabled">जब तक कि आप मैन्‍युअल रूप से अनलॉक नहीं करते तब तक डिवाइस लॉक रहेगा</string>
@@ -1363,7 +1362,7 @@
     <string name="op_notification_channel_summary_low">बिना किसी ध्वनि या कंपन के कम महत्वपूर्ण वाले नोटिफ़िकेशंस</string>
     <string name="op_notification_section_header_gentle">अन्य नोटिफिकेशंस</string>
     <string name="op_notification_silence_title">अन्य</string>
-    <string name="op_protect_charging">" Protect charging"</string>
+    <string name="op_protect_charging">" Protected charging"</string>
     <string name="op_qs_dark_mode_tile_label">डार्क मोड</string>
     <string name="op_qs_data_usage_used">%1$s%2$s%3$s प्रयुक्त</string>
     <string name="op_quick_settings_night_display_label">दृष्टि आराम</string>

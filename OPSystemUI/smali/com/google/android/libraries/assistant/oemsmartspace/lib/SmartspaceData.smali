@@ -33,6 +33,28 @@
 
 
 # virtual methods
+.method public clear()V
+    .locals 2
+
+    const-string v0, "SmartspaceData"
+
+    const-string v1, "Set all smartspace data to null"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceData;->weatherCard:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceCard;
+
+    iput-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceData;->currentCard:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceCard;
+
+    iput-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceData;->firstChip:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceChip;
+
+    iput-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceData;->secondChip:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceChip;
+
+    return-void
+.end method
+
 .method public getExpirationRemainingMillis()J
     .locals 6
 

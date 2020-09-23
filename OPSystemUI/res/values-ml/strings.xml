@@ -939,7 +939,6 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="keyguard_fingerprint_unlock">അണ്‍ലോക്ക് ചെയ്യാന്‍ വിരലടയാളം ഉപയോഗിക്കുക</string>
     <string name="keyguard_indication_charging_time">%2$s • ചാർജ് ചെയ്യുന്നു (പൂർണ്ണമാകാൻ %1$s)</string>
     <string name="keyguard_indication_charging_time_fast">%2$s • വേഗത്തിൽ ചാർജ് ചെയ്യുന്നു (പൂർണ്ണമാകാൻ %1$s)</string>
-    <string name="keyguard_indication_charging_time_fast_vooc">(%s നിറയുന്നത് വരെ)</string>
     <string name="keyguard_indication_charging_time_slowly">%2$s • പതുക്കെ ചാർജ് ചെയ്യുന്നു (പൂർണ്ണമാകാൻ %1$s)</string>
     <string name="keyguard_indication_charging_time_wireless">%2$s • വയർലെസ്സ് ആയി ചാർജ് ചെയ്യുന്നു (പൂർണ്ണമാകാൻ %1$s)</string>
     <string name="keyguard_indication_trust_disabled">നിങ്ങൾ സ്വമേധയാ അൺലോക്കുചെയ്യുന്നതുവരെ ഉപകരണം ലോക്കുചെയ്‌തതായി തുടരും</string>
@@ -1368,7 +1367,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="op_notification_channel_summary_low">ശബ്ദമോ വൈബ്രേഷനോ ഇല്ലാത്ത പ്രാധാന്യം കുറഞ്ഞ അറിയിപ്പുകൾ.</string>
     <string name="op_notification_section_header_gentle">മറ്റ് അറിയിപ്പുകള്‍</string>
     <string name="op_notification_silence_title">മറ്റുള്ളവ</string>
-    <string name="op_protect_charging">" Protect charging"</string>
+    <string name="op_protect_charging">" Protected charging"</string>
     <string name="op_qs_dark_mode_tile_label">ഡാർക്ക് മോഡ്</string>
     <string name="op_qs_data_usage_used">%1$s:%2$s%3$s ഉപയോഗിച്ചു</string>
     <string name="op_quick_settings_night_display_label">കാഴ്ചാ സുഖം</string>

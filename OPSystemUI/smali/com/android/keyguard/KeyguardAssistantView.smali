@@ -15,7 +15,9 @@
 # instance fields
 .field private TAG:Ljava/lang/String;
 
-.field private mAmbientIndicationContainer:Landroid/view/ViewGroup;
+.field private mAmbientIndicationContainer:Lcom/oneplus/aod/views/OpSmartspaceContainer;
+
+.field private mAttachStateListener:Landroid/view/View$OnAttachStateChangeListener;
 
 .field private final mCallbacks:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -90,11 +92,17 @@
 
     iput v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mRetryTimes:I
 
-    new-instance v0, Lcom/android/keyguard/KeyguardAssistantView$3;
+    new-instance v0, Lcom/android/keyguard/KeyguardAssistantView$2;
 
-    invoke-direct {v0, p0}, Lcom/android/keyguard/KeyguardAssistantView$3;-><init>(Lcom/android/keyguard/KeyguardAssistantView;)V
+    invoke-direct {v0, p0}, Lcom/android/keyguard/KeyguardAssistantView$2;-><init>(Lcom/android/keyguard/KeyguardAssistantView;)V
 
     iput-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mDelayForSetGoogleSmartspaceChildViewHeight:Ljava/lang/Runnable;
+
+    new-instance v0, Lcom/android/keyguard/KeyguardAssistantView$4;
+
+    invoke-direct {v0, p0}, Lcom/android/keyguard/KeyguardAssistantView$4;-><init>(Lcom/android/keyguard/KeyguardAssistantView;)V
+
+    iput-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAttachStateListener:Landroid/view/View$OnAttachStateChangeListener;
 
     iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->TAG:Ljava/lang/String;
 
@@ -164,21 +172,19 @@
 
     move-result-object p1
 
-    check-cast p1, Landroid/view/ViewGroup;
+    check-cast p1, Lcom/oneplus/aod/views/OpSmartspaceContainer;
 
-    iput-object p1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAmbientIndicationContainer:Landroid/view/ViewGroup;
+    iput-object p1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAmbientIndicationContainer:Lcom/oneplus/aod/views/OpSmartspaceContainer;
 
-    new-instance p2, Lcom/android/keyguard/KeyguardAssistantView$2;
+    iget-object p2, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAttachStateListener:Landroid/view/View$OnAttachStateChangeListener;
 
-    invoke-direct {p2, p0}, Lcom/android/keyguard/KeyguardAssistantView$2;-><init>(Lcom/android/keyguard/KeyguardAssistantView;)V
-
-    invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+    invoke-virtual {p1, p2}, Lcom/oneplus/aod/views/OpSmartspaceContainer;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
     new-instance p1, Lcom/android/keyguard/KeyguardAssistantView$KeyguardViewUpdateListener;
 
     const/4 p2, 0x0
 
-    invoke-direct {p1, p0, p2}, Lcom/android/keyguard/KeyguardAssistantView$KeyguardViewUpdateListener;-><init>(Lcom/android/keyguard/KeyguardAssistantView;Lcom/android/keyguard/KeyguardAssistantView$1;)V
+    invoke-direct {p1, p2}, Lcom/android/keyguard/KeyguardAssistantView$KeyguardViewUpdateListener;-><init>(Lcom/android/keyguard/KeyguardAssistantView$1;)V
 
     iput-object p1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mKeyguardViewUpdateListener:Lcom/android/keyguard/KeyguardAssistantView$KeyguardViewUpdateListener;
 
@@ -219,10 +225,10 @@
     return-object p0
 .end method
 
-.method static synthetic access$300(Lcom/android/keyguard/KeyguardAssistantView;)Landroid/view/ViewGroup;
+.method static synthetic access$300(Lcom/android/keyguard/KeyguardAssistantView;)Lcom/oneplus/aod/views/OpSmartspaceContainer;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAmbientIndicationContainer:Landroid/view/ViewGroup;
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAmbientIndicationContainer:Lcom/oneplus/aod/views/OpSmartspaceContainer;
 
     return-object p0
 .end method
@@ -308,11 +314,11 @@
 .method private setGoogleSmartspaceChildViewHeightInternal()Z
     .locals 6
 
-    iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAmbientIndicationContainer:Landroid/view/ViewGroup;
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAmbientIndicationContainer:Lcom/oneplus/aod/views/OpSmartspaceContainer;
 
     sget v1, Lcom/android/systemui/R$id;->title_leading_truncatable:I
 
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -352,11 +358,11 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAmbientIndicationContainer:Landroid/view/ViewGroup;
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAmbientIndicationContainer:Lcom/oneplus/aod/views/OpSmartspaceContainer;
 
     sget v2, Lcom/android/systemui/R$id;->title_trailing_truncatable:I
 
-    invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -392,11 +398,11 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAmbientIndicationContainer:Landroid/view/ViewGroup;
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAmbientIndicationContainer:Lcom/oneplus/aod/views/OpSmartspaceContainer;
 
     sget v2, Lcom/android/systemui/R$id;->subtitle_line:I
 
-    invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -408,9 +414,9 @@
 
     move-result-object v1
 
-    new-instance v2, Lcom/android/keyguard/KeyguardAssistantView$4;
+    new-instance v2, Lcom/android/keyguard/KeyguardAssistantView$3;
 
-    invoke-direct {v2, p0, v0}, Lcom/android/keyguard/KeyguardAssistantView$4;-><init>(Lcom/android/keyguard/KeyguardAssistantView;Landroid/view/ViewGroup;)V
+    invoke-direct {v2, p0, v0}, Lcom/android/keyguard/KeyguardAssistantView$3;-><init>(Lcom/android/keyguard/KeyguardAssistantView;Landroid/view/ViewGroup;)V
 
     invoke-virtual {v1, v2}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
@@ -534,7 +540,7 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAmbientIndicationContainer:Landroid/view/ViewGroup;
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAmbientIndicationContainer:Lcom/oneplus/aod/views/OpSmartspaceContainer;
 
     if-eqz v0, :cond_1
 
@@ -618,7 +624,7 @@
 
     iget-object v1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mController:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;
 
-    iget-object v2, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAmbientIndicationContainer:Landroid/view/ViewGroup;
+    iget-object v2, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAmbientIndicationContainer:Lcom/oneplus/aod/views/OpSmartspaceContainer;
 
     iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mKeyguardViewUpdateListener:Lcom/android/keyguard/KeyguardAssistantView$KeyguardViewUpdateListener;
 
@@ -637,7 +643,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAmbientIndicationContainer:Landroid/view/ViewGroup;
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAmbientIndicationContainer:Lcom/oneplus/aod/views/OpSmartspaceContainer;
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -671,6 +677,68 @@
 
     invoke-virtual {p0}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->refresh()V
 
+    return-void
+.end method
+
+.method public release()V
+    .locals 4
+
+    const-class v0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;
+
+    iget-object v1, p0, Lcom/android/keyguard/KeyguardAssistantView;->TAG:Ljava/lang/String;
+
+    const-string v2, "release"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mDemoCommandSettings:Lcom/android/systemui/qs/GlobalSetting;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Lcom/android/systemui/qs/GlobalSetting;->setListening(Z)V
+
+    iget-object v1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAmbientIndicationContainer:Lcom/oneplus/aod/views/OpSmartspaceContainer;
+
+    invoke-virtual {v1}, Lcom/oneplus/aod/views/OpSmartspaceContainer;->removeAllOnAttachStateChangeListener()V
+
+    iget-object v1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mController:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;
+
+    if-eqz v1, :cond_1
+
+    const-string v2, "alarmManager"
+
+    invoke-static {v0, v1, v2}, Lcom/oneplus/util/OpReflectionUtils;->getValue(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/app/AlarmManager;
+
+    if-eqz v1, :cond_0
+
+    iget-object v2, p0, Lcom/android/keyguard/KeyguardAssistantView;->mController:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;
+
+    const-string v3, "expireAlarmAction"
+
+    invoke-static {v0, v2, v3}, Lcom/oneplus/util/OpReflectionUtils;->getValue(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/AlarmManager$OnAlarmListener;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v1, v0}, Landroid/app/AlarmManager;->cancel(Landroid/app/AlarmManager$OnAlarmListener;)V
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mController:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;
+
+    invoke-virtual {v0}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->unsetView()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mController:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;
+
+    :cond_1
     return-void
 .end method
 
@@ -847,11 +915,11 @@
 .method public setVisibility(I)V
     .locals 1
 
-    iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAmbientIndicationContainer:Landroid/view/ViewGroup;
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAmbientIndicationContainer:Lcom/oneplus/aod/views/OpSmartspaceContainer;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->setVisibility(I)V
+    invoke-virtual {v0, p1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
     goto :goto_0
 

@@ -939,7 +939,6 @@ uniquement"</string>
     <string name="keyguard_fingerprint_unlock">"Utilisez l'empreinte digitale pour débloquer"</string>
     <string name="keyguard_indication_charging_time">%2$s • Recharge... (à 100 %% dans %1$s)</string>
     <string name="keyguard_indication_charging_time_fast">%2$s • Recharge rapide… (à 100 %% dans %1$s)</string>
-    <string name="keyguard_indication_charging_time_fast_vooc">"(%s jusqu'à plein)"</string>
     <string name="keyguard_indication_charging_time_slowly">%2$s • Recharge lente… (à 100 %% dans %1$s)</string>
     <string name="keyguard_indication_charging_time_wireless">%2$s • Recharge sans fil (à 100 %% dans %1$s)</string>
     <string name="keyguard_indication_trust_disabled">"L'appareil restera verrouillé jusqu'à ce que vous le déverrouilliez manuellement."</string>
@@ -1368,7 +1367,7 @@ Vous êtes également connecté à un VPN qui peut contrôler votre activité su
     <string name="op_notification_channel_summary_low">Des notifications moins importantes sans aucun son ni vibration.</string>
     <string name="op_notification_section_header_gentle">Autres notifications</string>
     <string name="op_notification_silence_title">Autre</string>
-    <string name="op_protect_charging">" Protect charging"</string>
+    <string name="op_protect_charging">" Protected charging"</string>
     <string name="op_qs_dark_mode_tile_label">Mode Sombre</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s utilisé</string>
     <string name="op_quick_settings_night_display_label">Confort de vision</string>

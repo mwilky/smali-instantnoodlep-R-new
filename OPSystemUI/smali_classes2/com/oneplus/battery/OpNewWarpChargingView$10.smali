@@ -45,7 +45,7 @@
 
     iget-object p1, p0, Lcom/oneplus/battery/OpNewWarpChargingView$10;->this$0:Lcom/oneplus/battery/OpNewWarpChargingView;
 
-    invoke-static {p1}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$1100(Lcom/oneplus/battery/OpNewWarpChargingView;)Z
+    invoke-static {p1}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$1000(Lcom/oneplus/battery/OpNewWarpChargingView;)Z
 
     move-result p1
 

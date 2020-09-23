@@ -66,19 +66,7 @@
 .end method
 
 .method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 1
-
-    iget-object p1, p0, Lcom/oneplus/aod/bg/OpSketchPaint$2;->this$0:Lcom/oneplus/aod/bg/OpSketchPaint;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$302(Lcom/oneplus/aod/bg/OpSketchPaint;I)I
-
-    iget-object p1, p0, Lcom/oneplus/aod/bg/OpSketchPaint$2;->this$0:Lcom/oneplus/aod/bg/OpSketchPaint;
-
-    invoke-static {p1, v0}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$502(Lcom/oneplus/aod/bg/OpSketchPaint;I)I
-
-    invoke-static {p1, v0}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$402(Lcom/oneplus/aod/bg/OpSketchPaint;I)I
+    .locals 0
 
     sget-boolean p1, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 

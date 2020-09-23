@@ -150,7 +150,7 @@
 .end method
 
 .method private init(Landroid/content/Context;)V
-    .locals 1
+    .locals 2
 
     new-instance p1, Landroid/graphics/Paint;
 
@@ -162,6 +162,43 @@
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
+    iget-object p1, p0, Lcom/oneplus/keyguard/OpEmergencyBubble;->mContext:Landroid/content/Context;
+
+    invoke-static {p1}, Lcom/android/systemui/assist/ui/DisplayUtils;->getWidth(Landroid/content/Context;)I
+
+    move-result p1
+
+    const/16 v0, 0x438
+
+    if-le p1, v0, :cond_0
+
+    iget-object p1, p0, Lcom/oneplus/keyguard/OpEmergencyBubble;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    sget v1, Lcom/android/systemui/R$dimen;->op_emergency_bubble_diameter:I
+
+    invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p1
+
+    int-to-float p1, p1
+
+    invoke-static {p1, v0}, Lcom/oneplus/util/OpUtils;->convertPxByResolutionProportion(FI)I
+
+    move-result p1
+
+    div-int/lit8 p1, p1, 0x2
+
+    int-to-float p1, p1
+
+    iput p1, p0, Lcom/oneplus/keyguard/OpEmergencyBubble;->mCircleRadius:F
+
+    goto :goto_0
+
+    :cond_0
     iget-object p1, p0, Lcom/oneplus/keyguard/OpEmergencyBubble;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -180,6 +217,7 @@
 
     iput p1, p0, Lcom/oneplus/keyguard/OpEmergencyBubble;->mCircleRadius:F
 
+    :goto_0
     return-void
 .end method
 

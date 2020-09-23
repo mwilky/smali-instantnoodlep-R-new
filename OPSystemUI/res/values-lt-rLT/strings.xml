@@ -76,7 +76,7 @@
     <string name="interruption_level_movie">Filmas</string>
     <string name="interruption_level_music">Muzika</string>
     <string name="keyguard_fingerprint_unlock">Atrakinkite piršto antspaudu</string>
-    <string name="keyguard_indication_charging_time_fast_vooc">(%s iki visos įkrovos)</string>
+    <string name="keyguard_indication_charging_time_fast">(%s iki visos įkrovos)</string>
     <string name="keyguard_plugged_in_charging_warp">%s • „Warp“ įkrovimas</string>
     <string name="keyguard_plugged_in_wireless_warp">%s • „Warp“ belaidis įkrovimas</string>
     <string name="kg_at_least_four_points">Piešdami apimkite bent 4 taškus</string>
@@ -173,7 +173,7 @@ Jei norite užsisakyti mobiliojo interneto prieigos taško paslaugą, apsilankyk
     <string name="op_notification_channel_summary_low">Mažiau svarbūs pranešimai be jokio garso ar vibracijos.</string>
     <string name="op_notification_section_header_gentle">Kiti pranešimai</string>
     <string name="op_notification_silence_title">Kita</string>
-    <string name="op_protect_charging">" Protect charging"</string>
+    <string name="op_protect_charging">" Protected charging"</string>
     <string name="op_qs_dark_mode_tile_label">Tamsusis režimas</string>
     <string name="op_qs_data_usage_used">%1$s: panaudota %2$s %3$s</string>
     <string name="op_quick_settings_night_display_label">Komfortas akims</string>

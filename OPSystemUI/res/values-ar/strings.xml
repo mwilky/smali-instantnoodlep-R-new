@@ -939,7 +939,6 @@
     <string name="keyguard_fingerprint_unlock">استخدام بصمة الأصابع لإلغاء القفل</string>
     <string name="keyguard_indication_charging_time">%2$s • جارٍ الشحن (يتبقى %1$s حتى الامتلاء)</string>
     <string name="keyguard_indication_charging_time_fast">%2$s • جارٍ الشحن سريعًا (يتبقى %1$s حتى الامتلاء)</string>
-    <string name="keyguard_indication_charging_time_fast_vooc">(%s حتى الاكتمال)</string>
     <string name="keyguard_indication_charging_time_slowly">%2$s • جارٍ الشحن ببطء (يتبقى %1$s حتى الامتلاء)</string>
     <string name="keyguard_indication_charging_time_wireless">%2$s • جارٍ الشحن لاسلكيًا (%1$s على اكتمال الشحن)</string>
     <string name="keyguard_indication_trust_disabled">سيظل الجهاز مقفلاً إلى أن يتم فتح قفله يدويًا</string>
@@ -1368,7 +1367,7 @@
     <string name="op_notification_channel_summary_low">الإشعارات الأقل أهمية دون إصدار صوت أو اهتزاز.</string>
     <string name="op_notification_section_header_gentle">إشعارات أخرى</string>
     <string name="op_notification_silence_title">أخرى</string>
-    <string name="op_protect_charging">" Protect charging"</string>
+    <string name="op_protect_charging">" Protected charging"</string>
     <string name="op_qs_dark_mode_tile_label">الوضع الليلي</string>
     <string name="op_qs_data_usage_used">%1$s: تم استخدام %2$s %3$s</string>
     <string name="op_quick_settings_night_display_label">حماية الرؤية</string>

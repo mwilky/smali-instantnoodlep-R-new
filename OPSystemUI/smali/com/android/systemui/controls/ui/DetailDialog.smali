@@ -5,11 +5,16 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nDetailDialog.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DetailDialog.kt\ncom/android/systemui/controls/ui/DetailDialog\n*L\n1#1,141:1\n*E\n"
+    value = "SMAP\nDetailDialog.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DetailDialog.kt\ncom/android/systemui/controls/ui/DetailDialog\n*L\n1#1,155:1\n*E\n"
 .end annotation
 
 
 # instance fields
+.field private TAG:Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
+
 .field private activityView:Landroid/app/ActivityView;
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
@@ -68,6 +73,10 @@
     iput-object p1, p0, Lcom/android/systemui/controls/ui/DetailDialog;->cvh:Lcom/android/systemui/controls/ui/ControlViewHolder;
 
     iput-object p2, p0, Lcom/android/systemui/controls/ui/DetailDialog;->intent:Landroid/content/Intent;
+
+    const-string p1, "DetailDialog"
+
+    iput-object p1, p0, Lcom/android/systemui/controls/ui/DetailDialog;->TAG:Ljava/lang/String;
 
     new-instance p1, Landroid/app/ActivityView;
 
@@ -326,6 +335,16 @@
     .end annotation
 
     iget-object p0, p0, Lcom/android/systemui/controls/ui/DetailDialog;->intent:Landroid/content/Intent;
+
+    return-object p0
+.end method
+
+.method public final getTAG()Ljava/lang/String;
+    .locals 0
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    iget-object p0, p0, Lcom/android/systemui/controls/ui/DetailDialog;->TAG:Ljava/lang/String;
 
     return-object p0
 .end method

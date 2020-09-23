@@ -939,7 +939,6 @@ prioritní"</string>
     <string name="keyguard_fingerprint_unlock">Odemkněte otiskem prstu</string>
     <string name="keyguard_indication_charging_time">%2$s • Nabíjení (plně nabito za %1$s)</string>
     <string name="keyguard_indication_charging_time_fast">%2$s • Rychlé nabíjení (plně nabito za %1$s)</string>
-    <string name="keyguard_indication_charging_time_fast_vooc">(%s až do plné)</string>
     <string name="keyguard_indication_charging_time_slowly">%2$s • Pomalé nabíjení (plně nabito za %1$s)</string>
     <string name="keyguard_indication_charging_time_wireless">%2$s • Bezdrátové nabíjení (plně nabito za %1$s)</string>
     <string name="keyguard_indication_trust_disabled">Zařízení zůstane uzamčeno, dokud je ručně neodemknete</string>
@@ -1376,7 +1375,7 @@ Jste také připojeni k síti VPN, která může sledovat vaši aktivitu v sí
     <string name="op_notification_channel_summary_low">Méně důležitá oznámení beze zvuku a vibrací.</string>
     <string name="op_notification_section_header_gentle">Ostatní oznámení</string>
     <string name="op_notification_silence_title">Ostatní</string>
-    <string name="op_protect_charging">" Protect charging"</string>
+    <string name="op_protect_charging">" Protected charging"</string>
     <string name="op_qs_dark_mode_tile_label">Tmavý režim</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s využitých</string>
     <string name="op_quick_settings_night_display_label">Pohodlný obraz</string>

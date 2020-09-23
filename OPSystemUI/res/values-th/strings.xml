@@ -939,7 +939,6 @@
     <string name="keyguard_fingerprint_unlock">ใช้ลายนิ้วมือเพื่อปลดล็อค</string>
     <string name="keyguard_indication_charging_time">%2$s • กำลังชาร์จ (อีก %1$s จะเต็ม)</string>
     <string name="keyguard_indication_charging_time_fast">%2$s • กำลังชาร์จอย่างเร็ว (อีก %1$s จะเต็ม)</string>
-    <string name="keyguard_indication_charging_time_fast_vooc">(%s ถึงจะเต็ม)</string>
     <string name="keyguard_indication_charging_time_slowly">%2$s • กำลังชาร์จอย่างช้าๆ (อีก %1$s จะเต็ม)</string>
     <string name="keyguard_indication_charging_time_wireless">%2$s • กำลังชาร์จแบบไร้สาย (อีก %1$s จะเต็ม)</string>
     <string name="keyguard_indication_trust_disabled">อุปกรณ์จะล็อกจนกว่าคุณจะปลดล็อกด้วยตนเอง</string>
@@ -1368,7 +1367,7 @@
     <string name="op_notification_channel_summary_low">การแจ้งเตือนที่สำคัญน้อยกว่าไม่มีเสียงหรือการสั่น</string>
     <string name="op_notification_section_header_gentle">การแจ้งเตือนอื่นๆ</string>
     <string name="op_notification_silence_title">อื่นๆ</string>
-    <string name="op_protect_charging">" Protect charging"</string>
+    <string name="op_protect_charging">" Protected charging"</string>
     <string name="op_qs_dark_mode_tile_label">โหมดมืด</string>
     <string name="op_qs_data_usage_used">ใช้งานไป %1$s: %2$s %3$s</string>
     <string name="op_quick_settings_night_display_label">การมองเห็นแบบสบายตา</string>

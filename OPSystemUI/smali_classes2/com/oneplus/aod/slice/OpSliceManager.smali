@@ -361,6 +361,29 @@
     return-void
 .end method
 
+.method private clearAssistantViewIfPossible()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mKeyguardAssistantView:Lcom/android/keyguard/KeyguardAssistantView;
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mKeyguardAssistantViewCallback:Lcom/android/keyguard/KeyguardAssistantView$Callback;
+
+    invoke-virtual {v0, v1}, Lcom/android/keyguard/KeyguardAssistantView;->removeCallback(Lcom/android/keyguard/KeyguardAssistantView$Callback;)V
+
+    iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mKeyguardAssistantView:Lcom/android/keyguard/KeyguardAssistantView;
+
+    invoke-virtual {v0}, Lcom/android/keyguard/KeyguardAssistantView;->release()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mKeyguardAssistantView:Lcom/android/keyguard/KeyguardAssistantView;
+
+    :cond_0
+    return-void
+.end method
+
 .method private getActiveSlice()I
     .locals 9
 
@@ -581,6 +604,8 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    invoke-direct {p0}, Lcom/oneplus/aod/slice/OpSliceManager;->clearAssistantViewIfPossible()V
+
     iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mContext:Landroid/content/Context;
 
     iget v1, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mUserId:I
@@ -589,9 +614,19 @@
 
     move-result v0
 
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mContext:Landroid/content/Context;
+
+    iget v1, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mUserId:I
+
+    invoke-static {v0, v1}, Lcom/oneplus/aod/OpAodUtils;->isAodNoneClockStyle(Landroid/content/Context;I)Z
+
+    move-result v0
+
     if-eqz v0, :cond_0
 
-    return-void
+    goto :goto_0
 
     :cond_0
     new-instance v0, Lcom/android/keyguard/KeyguardAssistantView;
@@ -625,6 +660,7 @@
     invoke-virtual {v0, p0}, Lcom/android/keyguard/KeyguardAssistantView;->setHideSensitiveData(Z)V
 
     :cond_1
+    :goto_0
     return-void
 .end method
 
@@ -1359,7 +1395,12 @@
 
     invoke-direct {p0}, Lcom/oneplus/aod/slice/OpSliceManager;->initAssitantView()V
 
+    goto :goto_0
+
     :cond_0
+    invoke-direct {p0}, Lcom/oneplus/aod/slice/OpSliceManager;->clearAssistantViewIfPossible()V
+
+    :goto_0
     return-void
 .end method
 
@@ -1424,26 +1465,23 @@
 
     invoke-virtual/range {v1 .. v6}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->updateSliceView(ZILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mOpKeyguardClockInfoView:Lcom/oneplus/keyguard/OpKeyguardClockInfoView;
+
     :cond_0
     iget-object p1, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mKeyguardAssistantView:Lcom/android/keyguard/KeyguardAssistantView;
 
-    if-nez p1, :cond_3
+    if-nez p1, :cond_2
 
     invoke-direct {p0}, Lcom/oneplus/aod/slice/OpSliceManager;->initAssitantView()V
 
     goto :goto_0
 
     :cond_1
-    iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mKeyguardAssistantView:Lcom/android/keyguard/KeyguardAssistantView;
+    invoke-direct {p0}, Lcom/oneplus/aod/slice/OpSliceManager;->clearAssistantViewIfPossible()V
 
-    if-eqz v0, :cond_2
-
-    iget-object v1, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mKeyguardAssistantViewCallback:Lcom/android/keyguard/KeyguardAssistantView$Callback;
-
-    invoke-virtual {v0, v1}, Lcom/android/keyguard/KeyguardAssistantView;->removeCallback(Lcom/android/keyguard/KeyguardAssistantView$Callback;)V
-
-    :cond_2
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_2
 
     invoke-interface {p1}, Lcom/oneplus/aod/controller/IOpClockController;->getClockView()Landroid/view/View;
 
@@ -1453,7 +1491,7 @@
 
     iput-object p1, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mOpKeyguardClockInfoView:Lcom/oneplus/keyguard/OpKeyguardClockInfoView;
 
-    :cond_3
+    :cond_2
     :goto_0
     return-void
 .end method

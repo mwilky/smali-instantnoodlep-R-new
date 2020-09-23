@@ -4,4 +4,4 @@
 
 
 # static fields
-.field public static final is_tablet:I = 0x7f050046
+.field public static final is_tablet:I = 0x7f050047

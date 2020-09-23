@@ -83,7 +83,7 @@
 
     iget-object p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView$19;->this$0:Lcom/oneplus/battery/OpNewWarpChargingView;
 
-    invoke-static {p0}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$1800(Lcom/oneplus/battery/OpNewWarpChargingView;)V
+    invoke-virtual {p0}, Lcom/oneplus/battery/OpNewWarpChargingView;->releaseAsset()V
 
     goto :goto_0
 

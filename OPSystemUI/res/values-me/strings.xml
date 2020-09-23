@@ -52,7 +52,7 @@
     <string name="interruption_level_movie">Film</string>
     <string name="interruption_level_music">Muzika</string>
     <string name="keyguard_fingerprint_unlock">Koristite otisak prsta za otključavanje</string>
-    <string name="keyguard_indication_charging_time_fast_vooc">(ostalo je još%s do potpunog punjenja)</string>
+    <string name="keyguard_indication_charging_time_fast">(ostalo je još%s do potpunog punjenja)</string>
     <string name="keyguard_plugged_in_charging_warp">%s • Warp punjenje</string>
     <string name="keyguard_plugged_in_wireless_warp">%s • Warp bežično punjenje</string>
     <string name="loading_text">Učitavanje...</string>

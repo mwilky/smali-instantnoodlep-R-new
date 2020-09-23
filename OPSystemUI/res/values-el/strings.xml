@@ -939,7 +939,6 @@
     <string name="keyguard_fingerprint_unlock">Χρησιμοποιήστε το δακτυλικό αποτύπωμα για να ξεκλειδώσετε</string>
     <string name="keyguard_indication_charging_time">%2$s • Φόρτιση (%1$s για πλήρη φόρτιση)</string>
     <string name="keyguard_indication_charging_time_fast">%2$s • Γρήγορη φόρτιση (%1$s για πλήρη φόρτιση)</string>
-    <string name="keyguard_indication_charging_time_fast_vooc">(%s μέχρι να γεμίσει τελείως)</string>
     <string name="keyguard_indication_charging_time_slowly">%2$s • Αργή φόρτιση (%1$s για πλήρη φόρτιση)</string>
     <string name="keyguard_indication_charging_time_wireless">%2$s • Ασύρματη φόρτιση (%1$s για πλήρη φόρτιση)</string>
     <string name="keyguard_indication_trust_disabled">Η συσκευή θα παραμείνει κλειδωμένη μέχρι να την ξεκλειδώσετε μη αυτόματα</string>
@@ -1367,7 +1366,7 @@
     <string name="op_notification_channel_summary_low">Λιγότερο σημαντικές ειδοποιήσεις χωρίς ήχο ή δόνηση.</string>
     <string name="op_notification_section_header_gentle">Άλλες ειδοποιήσεις</string>
     <string name="op_notification_silence_title">Άλλες</string>
-    <string name="op_protect_charging">" Protect charging"</string>
+    <string name="op_protect_charging">" Protected charging"</string>
     <string name="op_qs_dark_mode_tile_label">Λειτουργία σκούρων χρωμάτων</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s χρησιμοποιημένα</string>
     <string name="op_quick_settings_night_display_label">Άνεση προβολής</string>

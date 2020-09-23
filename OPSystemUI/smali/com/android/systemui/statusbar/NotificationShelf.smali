@@ -1086,7 +1086,7 @@
 
     if-nez v0, :cond_d
 
-    if-ne v1, v13, :cond_d
+    if-nez v1, :cond_d
 
     move v6, v2
 

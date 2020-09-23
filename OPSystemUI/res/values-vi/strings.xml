@@ -939,7 +939,6 @@ tắt tiếng"</string>
     <string name="keyguard_fingerprint_unlock">Sử dụng vân tay để mở khóa</string>
     <string name="keyguard_indication_charging_time">%2$s • Đang sạc (%1$s cho tới khi đầy)</string>
     <string name="keyguard_indication_charging_time_fast">%2$s • Đang sạc nhanh (%1$s cho tới khi đầy)</string>
-    <string name="keyguard_indication_charging_time_fast_vooc">(%s đến khi đầy)</string>
     <string name="keyguard_indication_charging_time_slowly">%2$s • Đang sạc chậm (%1$s cho tới khi đầy)</string>
     <string name="keyguard_indication_charging_time_wireless">%2$s • Đang sạc không dây (%1$s cho tới khi đầy)</string>
     <string name="keyguard_indication_trust_disabled">Thiết bị sẽ vẫn bị khóa cho tới khi bạn mở khóa theo cách thủ công</string>
@@ -1368,7 +1367,7 @@ Bạn cũng được kết nối với VPN. Dịch vụ này có thể giám sá
     <string name="op_notification_channel_summary_low">Những thông báo ít quan trọng hơn không có âm thanh hoặc rung.</string>
     <string name="op_notification_section_header_gentle">Thông báo khác</string>
     <string name="op_notification_silence_title">Khác</string>
-    <string name="op_protect_charging">" Protect charging"</string>
+    <string name="op_protect_charging">" Protected charging"</string>
     <string name="op_qs_dark_mode_tile_label">Chế độ tối</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s đã được sử dụng</string>
     <string name="op_quick_settings_night_display_label">Thoải mái cho mắt</string>

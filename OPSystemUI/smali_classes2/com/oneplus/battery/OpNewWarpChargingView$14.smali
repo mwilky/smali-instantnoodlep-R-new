@@ -57,7 +57,7 @@
 
     iget-object p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView$14;->this$0:Lcom/oneplus/battery/OpNewWarpChargingView;
 
-    invoke-static {p0}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$1500(Lcom/oneplus/battery/OpNewWarpChargingView;)Landroid/widget/ImageView;
+    invoke-static {p0}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$1400(Lcom/oneplus/battery/OpNewWarpChargingView;)Landroid/widget/ImageView;
 
     move-result-object p0
 

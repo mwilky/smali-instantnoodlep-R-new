@@ -76,7 +76,7 @@
     <string name="interruption_level_movie">মুভি</string>
     <string name="interruption_level_music">সঙ্গীত</string>
     <string name="keyguard_fingerprint_unlock">আনলক করতে আঙ্গুলের ছাপ ব্যবহার করুন</string>
-    <string name="keyguard_indication_charging_time_fast_vooc">(সম্পূর্ণ হতে %s)</string>
+    <string name="keyguard_indication_charging_time_fast">(সম্পূর্ণ হতে %s)</string>
     <string name="keyguard_plugged_in_charging_warp">%s • Warp চার্জিং</string>
     <string name="keyguard_plugged_in_wireless_warp">%s • Warp ওয়্যারলেস চার্জিং</string>
     <string name="kg_at_least_four_points">অন্তত 4 বিন্দু অন্তর্ভুক্ত করতে আঁকুন</string>
@@ -173,7 +173,7 @@
     <string name="op_notification_channel_summary_low">কম গুরুত্বপূর্ণ বিজ্ঞপ্তিগুলি কোনও শব্দ বা কম্পন ছাড়া।</string>
     <string name="op_notification_section_header_gentle">অন্যান্য বিজ্ঞপ্তি</string>
     <string name="op_notification_silence_title">অন্যান্য</string>
-    <string name="op_protect_charging">" Protect charging"</string>
+    <string name="op_protect_charging">" Protected charging"</string>
     <string name="op_qs_dark_mode_tile_label">অন্ধকার মোড</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s ব্যবহৃত হয়েছে</string>
     <string name="op_quick_settings_night_display_label">দৃষ্টি স্বস্তি</string>

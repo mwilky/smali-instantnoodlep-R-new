@@ -50,7 +50,7 @@
 
     const/4 v1, 0x1
 
-    const/4 v2, 0x0
+    const/4 v2, -0x2
 
     invoke-static {p1, v0, v1, v2}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
@@ -61,7 +61,7 @@
     goto :goto_0
 
     :cond_0
-    move v1, v2
+    const/4 v1, 0x0
 
     :goto_0
     invoke-static {p0, v1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$402(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;Z)Z

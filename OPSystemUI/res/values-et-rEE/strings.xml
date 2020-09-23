@@ -76,7 +76,7 @@ Kas lennurežiim on sisse lülitada?"</string>
     <string name="interruption_level_movie">Film</string>
     <string name="interruption_level_music">Muusika</string>
     <string name="keyguard_fingerprint_unlock">Kasutage avamiseks sõrmejälge</string>
-    <string name="keyguard_indication_charging_time_fast_vooc">(%s täis laadimiseni)</string>
+    <string name="keyguard_indication_charging_time_fast">(%s täis laadimiseni)</string>
     <string name="keyguard_plugged_in_charging_warp">%s • Warp-laadimine</string>
     <string name="keyguard_plugged_in_wireless_warp">%s • juhtmeta kiirlaadimine</string>
     <string name="kg_at_least_four_points">Joonistus peab sisaldama vähemalt 4 punkti</string>
@@ -173,7 +173,7 @@ Mobiilse kuupunkti tellimuse tühistamiseks külastage veebisaiti My Verizon võ
     <string name="op_notification_channel_summary_low">Vähem olulised teavitused ilma heli või vibratsioonita.</string>
     <string name="op_notification_section_header_gentle">Muud teavitused</string>
     <string name="op_notification_silence_title">Muu</string>
-    <string name="op_protect_charging">" Protect charging"</string>
+    <string name="op_protect_charging">" Protected charging"</string>
     <string name="op_qs_dark_mode_tile_label">Tume režiim</string>
     <string name="op_qs_data_usage_used">%1$s: kasutatud %2$s %3$s</string>
     <string name="op_quick_settings_night_display_label">Nägemismugavus</string>

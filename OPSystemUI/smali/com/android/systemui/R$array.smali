@@ -42,6 +42,8 @@
 
 .field public static final op_config_statusBarIconBlackList:I = 0x7f030053
 
+.field public static final op_light_start_animation:I = 0x7f030054
+
 .field public static final op_o2_uk_config_statusBarIconBlackList:I = 0x7f030055
 
 .field public static final op_wbus_config_value:I = 0x7f030059

@@ -336,12 +336,6 @@
 
     invoke-virtual {v7}, Lcom/oneplus/systemui/biometrics/OpFodHelper;->isFingerprintDetecting()Z
 
-    move-result v9
-
-    if-eqz v9, :cond_3
-
-    invoke-virtual {v7}, Lcom/oneplus/systemui/biometrics/OpFodHelper;->isAppLockerClient()Z
-
     move-result v7
 
     if-eqz v7, :cond_3

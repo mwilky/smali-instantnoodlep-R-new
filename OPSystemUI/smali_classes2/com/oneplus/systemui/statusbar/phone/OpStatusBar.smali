@@ -36,6 +36,8 @@
 
 .field protected mBackDisposition:I
 
+.field private mCameraAnim:Lcom/oneplus/anim/OpCameraAnimateController;
+
 .field private mCarModeReceiver:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$CarModeScreenshotReceiver;
 
 .field private final mCheckNavigationBarTask:Ljava/lang/Runnable;
@@ -1545,6 +1547,22 @@
     return p0
 .end method
 
+.method static synthetic lambda$checkGestureStartAssist$1(Landroid/os/Bundle;)V
+    .locals 1
+
+    const-class v0, Lcom/android/systemui/assist/AssistManager;
+
+    invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/systemui/assist/AssistManager;
+
+    invoke-virtual {v0, p0}, Lcom/android/systemui/assist/AssistManager;->startAssist(Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
 .method private synthetic lambda$new$0()V
     .locals 8
 
@@ -1901,6 +1919,39 @@
 
 
 # virtual methods
+.method public checkGestureStartAssist(Landroid/os/Bundle;)Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mNavShowing:Z
+
+    if-nez v0, :cond_0
+
+    invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getHandler()Landroid/os/Handler;
+
+    move-result-object p0
+
+    new-instance v0, Lcom/oneplus/systemui/statusbar/phone/-$$Lambda$OpStatusBar$pxcFa-Vpz_eOL3Jjz1zwym3ILn0;
+
+    invoke-direct {v0, p1}, Lcom/oneplus/systemui/statusbar/phone/-$$Lambda$OpStatusBar$pxcFa-Vpz_eOL3Jjz1zwym3ILn0;-><init>(Landroid/os/Bundle;)V
+
+    invoke-virtual {p0, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    const-string p0, "OpStatusBar"
+
+    const-string p1, "startAssist"
+
+    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
 .method public checkNavigationBarState()V
     .locals 6
 
@@ -2635,6 +2686,14 @@
     return-object p0
 .end method
 
+.method public getOpCameraAnimateController()Lcom/oneplus/anim/OpCameraAnimateController;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mCameraAnim:Lcom/oneplus/anim/OpCameraAnimateController;
+
+    return-object p0
+.end method
+
 .method public getOpStatusBarView()Landroid/view/View;
     .locals 3
 
@@ -3008,6 +3067,16 @@
     iput p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOrientation:I
 
     invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->setUpHighlightHintInfo()V
+
+    new-instance p1, Lcom/oneplus/anim/OpCameraAnimateController;
+
+    iget-object v0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
+
+    invoke-direct {p1, v0}, Lcom/oneplus/anim/OpCameraAnimateController;-><init>(Landroid/content/Context;)V
+
+    iput-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mCameraAnim:Lcom/oneplus/anim/OpCameraAnimateController;
+
+    invoke-virtual {p1}, Lcom/oneplus/anim/OpCameraAnimateController;->init()V
 
     return-void
 .end method

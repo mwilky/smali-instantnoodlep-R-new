@@ -42,20 +42,20 @@
 
 .field public static final main_image:I = 0x7f0b038c
 
-.field public static final picker:I = 0x7f0b04a6
+.field public static final picker:I = 0x7f0b04a7
 
-.field public static final playback_progress:I = 0x7f0b04b6
+.field public static final playback_progress:I = 0x7f0b04b7
 
-.field public static final row_content:I = 0x7f0b0531
+.field public static final row_content:I = 0x7f0b0532
 
-.field public static final search_orb:I = 0x7f0b0572
+.field public static final search_orb:I = 0x7f0b0573
 
-.field public static final title:I = 0x7f0b0642
+.field public static final title:I = 0x7f0b0643
 
-.field public static final title_badge:I = 0x7f0b0644
+.field public static final title_badge:I = 0x7f0b0645
 
-.field public static final title_orb:I = 0x7f0b0648
+.field public static final title_orb:I = 0x7f0b0649
 
-.field public static final title_text:I = 0x7f0b064a
+.field public static final title_text:I = 0x7f0b064b
 
-.field public static final transitionPosition:I = 0x7f0b066a
+.field public static final transitionPosition:I = 0x7f0b066b

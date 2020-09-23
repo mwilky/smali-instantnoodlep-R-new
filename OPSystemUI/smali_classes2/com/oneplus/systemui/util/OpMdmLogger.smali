@@ -15,6 +15,8 @@
 
 .field private static sCurOrien:Ljava/lang/String;
 
+.field private static sFpType:Ljava/lang/String;
+
 .field private static sHandler:Landroid/os/Handler;
 
 .field private static sHandlerThread:Landroid/os/HandlerThread;
@@ -75,6 +77,10 @@
     sput-boolean v1, Lcom/oneplus/systemui/util/OpMdmLogger;->sStatusBarPulled:Z
 
     sput-boolean v1, Lcom/oneplus/systemui/util/OpMdmLogger;->sAutomatic:Z
+
+    const/4 v0, 0x0
+
+    sput-object v0, Lcom/oneplus/systemui/util/OpMdmLogger;->sFpType:Ljava/lang/String;
 
     new-instance v0, Ljava/util/HashMap;
 
@@ -233,6 +239,30 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
+.end method
+
+.method static synthetic access$000()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lcom/oneplus/systemui/util/OpMdmLogger;->sFpType:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$002(Ljava/lang/String;)Ljava/lang/String;
+    .locals 0
+
+    sput-object p0, Lcom/oneplus/systemui/util/OpMdmLogger;->sFpType:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method static synthetic access$100()Landroid/content/Context;
+    .locals 1
+
+    sget-object v0, Lcom/oneplus/systemui/util/OpMdmLogger;->mContext:Landroid/content/Context;
+
+    return-object v0
 .end method
 
 .method public static brightnessSliderClicked()V
@@ -481,23 +511,23 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result v0
 
-    new-instance p0, Ljava/util/HashMap;
+    new-instance v0, Ljava/util/HashMap;
 
-    invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    const-string v0, "appid"
+    const-string v1, "appid"
 
-    invoke-virtual {p0, v0, p3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1, p3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object p0, Lcom/oneplus/systemui/util/OpMdmLogger;->sHandler:Landroid/os/Handler;
+    sget-object p3, Lcom/oneplus/systemui/util/OpMdmLogger;->sHandler:Landroid/os/Handler;
 
-    new-instance p3, Lcom/oneplus/systemui/util/OpMdmLogger$1;
+    new-instance v0, Lcom/oneplus/systemui/util/OpMdmLogger$1;
 
-    invoke-direct {p3, p1, p2}, Lcom/oneplus/systemui/util/OpMdmLogger$1;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, p1, p2, p0}, Lcom/oneplus/systemui/util/OpMdmLogger$1;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p0, p3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {p3, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method

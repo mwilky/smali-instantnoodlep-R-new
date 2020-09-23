@@ -4,6 +4,6 @@
 
 
 # static fields
-.field public static final smartspace_view:I = 0x7f0e023f
+.field public static final smartspace_view:I = 0x7f0e0241
 
-.field public static final ssc:I = 0x7f0e0241
+.field public static final ssc:I = 0x7f0e0243

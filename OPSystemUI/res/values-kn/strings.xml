@@ -939,7 +939,6 @@
     <string name="keyguard_fingerprint_unlock">ಅನ್‌ಲಾಕ್ ಮಾಡಲು ಬೆರಳಮುದ್ರೆ ಬಳಸಿ</string>
     <string name="keyguard_indication_charging_time">%2$s • ಚಾರ್ಜ್‌ಆಗುತ್ತಿದೆ (ಪೂರ್ಣಗೊಳ್ಳಲು %1$s ಸಮಯ ಬಾಕಿ)</string>
     <string name="keyguard_indication_charging_time_fast">%2$s • ವೇಗವಾಗಿ ಚಾರ್ಜ್ ಆಗುತ್ತಿದೆ (ಪೂರ್ಣಗೊಳ್ಳಲು %1$s ಸಮಯ ಬಾಕಿ)</string>
-    <string name="keyguard_indication_charging_time_fast_vooc">(%s ಪೂರ್ಣವಾಗುವವರೆಗೆ)</string>
     <string name="keyguard_indication_charging_time_slowly">%2$s • ನಿಧಾನವಾಗಿ ಚಾರ್ಜ್‌ಆಗುತ್ತಿದೆ (ಪೂರ್ಣವಾಗಲು %1$s ಸಮಯ ಬಾಕಿ)</string>
     <string name="keyguard_indication_charging_time_wireless">%2$s • ವೈರ್‌ಲೆಸ್ ಆಗಿ ಚಾರ್ಜ್ ಆಗುತ್ತಿದೆ (ಪೂರ್ಣಗೊಳ್ಳಲು %1$s ಸಮಯ ಬಾಕಿ ಉಳಿದಿದೆ)</string>
     <string name="keyguard_indication_trust_disabled">ನೀವಾಗಿಯೇ ಅನ್‌ಲಾಕ್‌ ಮಾಡುವವರೆಗೆ ಸಾಧನವು ಲಾಕ್‌ ಆಗಿಯೇ ಇರುತ್ತದೆ</string>
@@ -1366,7 +1365,7 @@
     <string name="op_notification_channel_summary_low">ಯಾವುದೇ ಶಬ್ಧ ಅಥವಾ ಕಂಪನವಿಲ್ಲದೆಯೇ ಕಡಿಮೆ ಪ್ರಾಮುಖ್ಯತೆಯುಳ್ಳ ಅಧಿಸೂಚನೆಗಳು.</string>
     <string name="op_notification_section_header_gentle">ಇತರೆ ಅಧಿಸೂಚನೆಗಳು</string>
     <string name="op_notification_silence_title">ಇತರೆ</string>
-    <string name="op_protect_charging">" Protect charging"</string>
+    <string name="op_protect_charging">" Protected charging"</string>
     <string name="op_qs_dark_mode_tile_label">ಡಾರ್ಕ್ ಮೋಡ್</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s ಬಳಸಲಾಗಿದೆ</string>
     <string name="op_quick_settings_night_display_label">ದೃಷ್ಟಿ ಆರಾಮ</string>

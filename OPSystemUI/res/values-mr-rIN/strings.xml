@@ -76,7 +76,7 @@
     <string name="interruption_level_movie">सिनेमा</string>
     <string name="interruption_level_music">संगीत</string>
     <string name="keyguard_fingerprint_unlock">अनलॉक करण्यासाठी बोटाचा ठसा वापरा</string>
-    <string name="keyguard_indication_charging_time_fast_vooc">(%s पूर्ण होईपर्यंत)</string>
+    <string name="keyguard_indication_charging_time_fast">(%s पूर्ण होईपर्यंत)</string>
     <string name="keyguard_plugged_in_charging_warp">%s • Warp चार्जिंग</string>
     <string name="keyguard_plugged_in_wireless_warp">%s • Warp वायरलेस चार्जिंग</string>
     <string name="kg_at_least_four_points">किमान 4 बिंदू समाविष्ट करण्यासाठी चित्र काढा</string>
@@ -173,7 +173,7 @@
     <string name="op_notification_channel_summary_low">कोणताही ध्‍वनी किंवा कंपनाशिवाय कमी महत्‍त्‍वाच्‍या सूचना.</string>
     <string name="op_notification_section_header_gentle">इतर सूचना</string>
     <string name="op_notification_silence_title">इतर</string>
-    <string name="op_protect_charging">" Protect charging"</string>
+    <string name="op_protect_charging">" Protected charging"</string>
     <string name="op_qs_dark_mode_tile_label">डार्क मोड</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s वापरले</string>
     <string name="op_quick_settings_night_display_label">दृष्टी आराम</string>

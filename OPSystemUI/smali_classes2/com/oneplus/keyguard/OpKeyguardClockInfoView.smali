@@ -1156,27 +1156,33 @@
     invoke-direct {v2, v3}, Landroid/icu/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
     :goto_0
-    new-instance v3, Landroid/icu/text/SimpleDateFormat;
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
-    iget-object v4, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mContext:Landroid/content/Context;
+    move-result-object v3
 
-    sget v5, Lcom/android/systemui/R$string;->op_date_format:I
+    const-string v4, "MMMMd"
 
-    invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-static {v3, v4}, Landroid/text/format/DateFormat;->getBestDateTimePattern(Ljava/util/Locale;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-direct {v3, v4}, Landroid/icu/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
+    new-instance v5, Landroid/icu/text/SimpleDateFormat;
 
-    iget-object v4, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mTextViewDateOfWeekLineOne:Landroid/widget/TextView;
+    invoke-interface {v4}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
-    if-eqz v4, :cond_1
+    move-result-object v4
+
+    invoke-direct {v5, v4, v3}, Landroid/icu/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+
+    iget-object v3, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mTextViewDateOfWeekLineOne:Landroid/widget/TextView;
+
+    if-eqz v3, :cond_1
 
     invoke-virtual {v1, v0}, Landroid/icu/text/SimpleDateFormat;->format(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v4, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v3, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     :cond_1
     iget-object v1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mTextViewTimeLineTwo:Lcom/oneplus/keyguard/OpKeyguardOneplusTextView;
@@ -1187,16 +1193,16 @@
 
     move-result-object v2
 
-    sget-object v4, Landroid/widget/TextView$BufferType;->SPANNABLE:Landroid/widget/TextView$BufferType;
+    sget-object v3, Landroid/widget/TextView$BufferType;->SPANNABLE:Landroid/widget/TextView$BufferType;
 
-    invoke-virtual {v1, v2, v4}, Lcom/oneplus/keyguard/OpKeyguardOneplusTextView;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
+    invoke-virtual {v1, v2, v3}, Lcom/oneplus/keyguard/OpKeyguardOneplusTextView;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
 
     :cond_2
     iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mTextViewDateLineThree:Landroid/widget/TextView;
 
     if-eqz p0, :cond_3
 
-    invoke-virtual {v3, v0}, Landroid/icu/text/SimpleDateFormat;->format(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v5, v0}, Landroid/icu/text/SimpleDateFormat;->format(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1883,6 +1889,29 @@
     invoke-direct {v0, p0}, Lcom/oneplus/keyguard/-$$Lambda$OpKeyguardClockInfoView$A4NxJH1ep6bbCOvImDLbIcrsN4M;-><init>(Lcom/oneplus/keyguard/OpKeyguardClockInfoView;)V
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public release()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mKeyguardAssistantView:Lcom/android/keyguard/KeyguardAssistantView;
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mKeyguardAssistantViewCallback:Lcom/android/keyguard/KeyguardAssistantView$Callback;
+
+    invoke-virtual {v0, v1}, Lcom/android/keyguard/KeyguardAssistantView;->removeCallback(Lcom/android/keyguard/KeyguardAssistantView$Callback;)V
+
+    iget-object v0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mKeyguardAssistantView:Lcom/android/keyguard/KeyguardAssistantView;
+
+    invoke-virtual {v0}, Lcom/android/keyguard/KeyguardAssistantView;->release()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mKeyguardAssistantView:Lcom/android/keyguard/KeyguardAssistantView;
 
     :cond_0
     return-void

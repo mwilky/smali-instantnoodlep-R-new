@@ -3954,6 +3954,12 @@
 
     if-eqz p0, :cond_0
 
+    const-string p0, "KeyguardUpdateMonitor"
+
+    const-string p1, " mFocusUpdateBatteryInfo"
+
+    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return v0
 
     :cond_0
@@ -3985,7 +3991,7 @@
     move v3, v2
 
     :goto_0
-    if-ne v1, p0, :cond_8
+    if-ne v1, p0, :cond_9
 
     if-eqz v3, :cond_2
 
@@ -4036,20 +4042,35 @@
 
     iget-boolean v1, p2, Lcom/oneplus/battery/OpBatteryStatus;->wirelessCharging:Z
 
-    if-ne p0, v1, :cond_8
+    if-ne p0, v1, :cond_9
 
     iget-boolean p0, p1, Lcom/oneplus/battery/OpBatteryStatus;->wirelessWarpCharging:Z
 
-    iget-boolean p1, p2, Lcom/oneplus/battery/OpBatteryStatus;->wirelessWarpCharging:Z
+    iget-boolean v1, p2, Lcom/oneplus/battery/OpBatteryStatus;->wirelessWarpCharging:Z
 
-    if-eq p0, p1, :cond_7
+    if-eq p0, v1, :cond_7
 
     goto :goto_1
 
     :cond_7
-    return v2
+    invoke-virtual {p1}, Lcom/oneplus/battery/OpBatteryStatus;->getSwarpRemainingTime()J
+
+    move-result-wide p0
+
+    invoke-virtual {p2}, Lcom/oneplus/battery/OpBatteryStatus;->getSwarpRemainingTime()J
+
+    move-result-wide v3
+
+    cmp-long p0, p0, v3
+
+    if-eqz p0, :cond_8
+
+    return v0
 
     :cond_8
+    return v2
+
+    :cond_9
     :goto_1
     return v0
 .end method
@@ -8583,14 +8604,16 @@
     goto :goto_0
 
     :cond_1
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
     :try_start_0
-    invoke-interface {p2, p0}, Landroid/os/IRemoteCallback;->sendResult(Landroid/os/Bundle;)V
+    invoke-interface {p2, v0}, Landroid/os/IRemoteCallback;->sendResult(Landroid/os/Bundle;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     :catch_0
+    invoke-virtual {p0, p1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->opHandleUserSwitch(I)V
+
     return-void
 .end method
 

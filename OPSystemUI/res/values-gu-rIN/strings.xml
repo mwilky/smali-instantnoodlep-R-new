@@ -76,7 +76,7 @@
     <string name="interruption_level_movie">ફિલ્મ</string>
     <string name="interruption_level_music">સંગીત</string>
     <string name="keyguard_fingerprint_unlock">અનલૉક કરવા માટે ફિંગરપ્રિન્ટનો ઉપયોગ કરો</string>
-    <string name="keyguard_indication_charging_time_fast_vooc">(%s પૂર્ણ થવા સુધી)</string>
+    <string name="keyguard_indication_charging_time_fast">(%s પૂર્ણ થવા સુધી)</string>
     <string name="keyguard_plugged_in_charging_warp">%s • Warp ચાર્જિંગ</string>
     <string name="keyguard_plugged_in_wireless_warp">%s • Warp વાયરલેસ ચાર્જિંગ</string>
     <string name="kg_at_least_four_points">ઓછામાં ઓછા 4 અંકનો સમાવેશ કરી ડ્રો કરો</string>
@@ -173,7 +173,7 @@
     <string name="op_notification_channel_summary_low">ઓછી મહત્વપૂર્ણ સૂચનાઓ કોઈપણ ધ્વનિ અથવા વાઇબ્રેશન વિના.</string>
     <string name="op_notification_section_header_gentle">અન્ય સૂચનાઓ</string>
     <string name="op_notification_silence_title">અન્ય</string>
-    <string name="op_protect_charging">" Protect charging"</string>
+    <string name="op_protect_charging">" Protected charging"</string>
     <string name="op_qs_dark_mode_tile_label">અંધકારમય પ્રકારમાં છે</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s વપરાયું</string>
     <string name="op_quick_settings_night_display_label">દ્રષ્ટિ આરામ</string>
