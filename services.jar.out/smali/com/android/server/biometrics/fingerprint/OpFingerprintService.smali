@@ -62,6 +62,8 @@
 
 .field private mFingerprintConfig:Lcom/oneplus/onlineconfig/OpFingerprintConfig;
 
+.field protected mFingerprintSensorMdmValue:Ljava/lang/String;
+
 .field private final mKeyguardPackage:Ljava/lang/String;
 
 .field private mOIMCServiceManager:Lcom/oneplus/core/oimc/OIMCServiceManager;
@@ -166,6 +168,8 @@
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mOIMCServiceManager:Lcom/oneplus/core/oimc/OIMCServiceManager;
+
+    iput-object v2, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mFingerprintSensorMdmValue:Ljava/lang/String;
 
     iput-object p1, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mContext:Landroid/content/Context;
 
@@ -1493,6 +1497,27 @@
     .locals 1
 
     const-string v0, ""
+
+    return-object v0
+.end method
+
+.method public getSensorType()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mFingerprintSensorMdmValue:Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    const-string/jumbo v0, "persist.vendor.oem.fp.version"
+
+    invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mFingerprintSensorMdmValue:Ljava/lang/String;
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mFingerprintSensorMdmValue:Ljava/lang/String;
 
     return-object v0
 .end method

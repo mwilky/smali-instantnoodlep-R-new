@@ -231,6 +231,16 @@
 
 .field mFixedRate:Z
 
+.field private mForceResumeTopActivity:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field private mFreezingScreen:Z
 
 .field mFrozenBounds:Ljava/util/ArrayDeque;
@@ -648,6 +658,24 @@
     iput-object v0, v7, Lcom/android/server/wm/ActivityRecord;->mCompleteFinishList:Ljava/util/ArrayList;
 
     iput-boolean v13, v7, Lcom/android/server/wm/ActivityRecord;->mIsMakeFocusedStackVisible:Z
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    const-string v1, "com.imusic.iting"
+
+    const-string v2, "com.sunboxsoft.oilforgdandroid"
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    iput-object v0, v7, Lcom/android/server/wm/ActivityRecord;->mForceResumeTopActivity:Ljava/util/ArrayList;
 
     new-instance v0, Lcom/android/server/wm/-$$Lambda$ActivityRecord$YSVwd546vKWMiMYy7MFzg1qRiio;
 
@@ -20347,7 +20375,7 @@
 
     iget-object v9, v8, Lcom/android/server/wm/DisplayContent;->mFocusedApp:Lcom/android/server/wm/ActivityRecord;
 
-    if-ne v9, v0, :cond_d
+    if-ne v9, v0, :cond_e
 
     sget-boolean v9, Lcom/android/server/protolog/ProtoLog$Cache;->WM_DEBUG_FOCUS_LIGHT_enabled:Z
 
@@ -20386,21 +20414,89 @@
 
     invoke-virtual {v6, v4, v1}, Lcom/android/server/wm/WindowManagerService;->updateFocusedWindowLocked(IZ)Z
 
+    iget-object v6, v0, Lcom/android/server/wm/ActivityRecord;->mForceResumeTopActivity:Ljava/util/ArrayList;
+
+    invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
+
+    move-result v6
+
+    if-lez v6, :cond_e
+
+    iget-object v6, v0, Lcom/android/server/wm/ActivityRecord;->mForceResumeTopActivity:Ljava/util/ArrayList;
+
+    invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
+
+    move-result v6
+
+    sub-int/2addr v6, v1
+
+    :goto_2
+    if-ltz v6, :cond_e
+
+    iget-object v1, v0, Lcom/android/server/wm/ActivityRecord;->mForceResumeTopActivity:Ljava/util/ArrayList;
+
+    invoke-virtual {v1, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    if-eqz v1, :cond_d
+
+    iget-object v7, v0, Lcom/android/server/wm/ActivityRecord;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v1, v7}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_d
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v9, "resumeFocusedStacksTopActivities when "
+
+    invoke-virtual {v7, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v9, " onRemovedFromDisplay"
+
+    invoke-virtual {v7, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    const-string v9, "ActivityTaskManager"
+
+    invoke-static {v9, v7}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v7, v0, Lcom/android/server/wm/ActivityRecord;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
+
+    invoke-virtual {v7}, Lcom/android/server/wm/RootWindowContainer;->resumeFocusedStacksTopActivities()Z
+
     :cond_d
+    add-int/lit8 v6, v6, -0x1
+
+    goto :goto_2
+
+    :cond_e
     iget-object v1, v0, Lcom/android/server/wm/ActivityRecord;->mLetterbox:Lcom/android/server/wm/Letterbox;
 
-    if-eqz v1, :cond_e
+    if-eqz v1, :cond_f
 
     invoke-virtual {v1}, Lcom/android/server/wm/Letterbox;->destroy()V
 
     iput-object v3, v0, Lcom/android/server/wm/ActivityRecord;->mLetterbox:Lcom/android/server/wm/Letterbox;
 
-    :cond_e
-    if-nez v2, :cond_f
+    :cond_f
+    if-nez v2, :cond_10
 
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wm/ActivityRecord;->updateReportedVisibilityLocked()V
 
-    :cond_f
+    :cond_10
     iget-object v1, v0, Lcom/android/server/wm/ActivityRecord;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     iget-object v1, v1, Lcom/android/server/wm/DisplayContent;->mPinnedStackControllerLocked:Lcom/android/server/wm/PinnedStackController;

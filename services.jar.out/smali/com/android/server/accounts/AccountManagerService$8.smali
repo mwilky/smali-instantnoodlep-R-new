@@ -114,7 +114,7 @@
 
     move-result v2
 
-    const-string v3, "intent"
+    const-string/jumbo v3, "intent"
 
     if-eqz v2, :cond_0
 

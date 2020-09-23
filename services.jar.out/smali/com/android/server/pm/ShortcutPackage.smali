@@ -1198,7 +1198,7 @@
         }
     .end annotation
 
-    const-string v0, "intent-base"
+    const-string/jumbo v0, "intent-base"
 
     invoke-static {p0, v0}, Lcom/android/server/pm/ShortcutService;->parseIntentAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -1458,7 +1458,7 @@
 
     move-result v7
 
-    const-string v8, "intent"
+    const-string/jumbo v8, "intent"
 
     invoke-static {v0, v8}, Lcom/android/server/pm/ShortcutService;->parseIntentAttributeNoDefault(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -1646,7 +1646,7 @@
     goto :goto_3
 
     :sswitch_3
-    const-string v3, "intent-extras"
+    const-string/jumbo v3, "intent-extras"
 
     invoke-virtual {v10, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2843,13 +2843,13 @@
 
     if-ge v11, v10, :cond_b
 
-    const-string v13, "intent"
+    const-string/jumbo v13, "intent"
 
     invoke-interface {v0, v5, v13}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     aget-object v14, v8, v11
 
-    const-string v15, "intent-base"
+    const-string/jumbo v15, "intent-base"
 
     invoke-static {v0, v15, v14}, Lcom/android/server/pm/ShortcutService;->writeAttr(Lorg/xmlpull/v1/XmlSerializer;Ljava/lang/String;Landroid/content/Intent;)V
 

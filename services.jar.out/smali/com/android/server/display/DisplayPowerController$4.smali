@@ -43,15 +43,21 @@
 
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$4;->this$0:Lcom/android/server/display/DisplayPowerController;
 
-    invoke-static {v0}, Lcom/android/server/display/DisplayPowerController;->access$600(Lcom/android/server/display/DisplayPowerController;)Lcom/android/server/display/OpBrightnessReasonAndRate;
+    invoke-static {v0}, Lcom/android/server/display/DisplayPowerController;->access$600(Lcom/android/server/display/DisplayPowerController;)V
 
-    move-result-object v0
+    return-void
+.end method
 
-    invoke-virtual {v0}, Lcom/android/server/display/OpBrightnessReasonAndRate;->updateBrightnessValue()V
+.method public onBrightnessChanged(F)V
+    .locals 1
 
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$4;->this$0:Lcom/android/server/display/DisplayPowerController;
 
-    invoke-static {v0}, Lcom/android/server/display/DisplayPowerController;->access$700(Lcom/android/server/display/DisplayPowerController;)V
+    invoke-static {v0}, Lcom/android/server/display/DisplayPowerController;->access$700(Lcom/android/server/display/DisplayPowerController;)Lcom/android/server/display/OpBrightnessReasonAndRate;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lcom/android/server/display/OpBrightnessReasonAndRate;->updateBrightnessValue(F)V
 
     return-void
 .end method

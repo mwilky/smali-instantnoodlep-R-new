@@ -44,3 +44,6 @@
 
 .method public abstract updateInputMethod(Z)V
 .end method
+
+.method public abstract updateKeepHighVsync(Z)V
+.end method

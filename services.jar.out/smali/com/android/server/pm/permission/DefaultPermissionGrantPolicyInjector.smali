@@ -103,7 +103,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 14
+    .locals 13
 
     new-instance v0, Landroid/util/ArraySet;
 
@@ -263,12 +263,6 @@
 
     sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->LOCATION_PERMISSIONS:Ljava/util/Set;
 
-    const-string v13, "android.permission.ACCESS_BACKGROUND_LOCATION"
-
-    invoke-interface {v0, v13}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->LOCATION_PERMISSIONS:Ljava/util/Set;
-
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->LOCATION_PERMISSIONS:Ljava/util/Set;
@@ -306,10 +300,6 @@
     sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->SPEECHASSIST_PERMISSIONS:Ljava/util/Set;
 
     invoke-interface {v0, v7}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->SPEECHASSIST_PERMISSIONS:Ljava/util/Set;
-
-    invoke-interface {v0, v13}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->SPEECHASSIST_PERMISSIONS:Ljava/util/Set;
 
@@ -385,7 +375,9 @@
 
     sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->OPREGSERVICE_PERMISSIONS:Ljava/util/Set;
 
-    invoke-interface {v0, v13}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    const-string v3, "android.permission.ACCESS_BACKGROUND_LOCATION"
+
+    invoke-interface {v0, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     sget-object v0, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->OPREGSERVICE_PERMISSIONS:Ljava/util/Set;
 
@@ -804,8 +796,6 @@
     invoke-static {p0, p1}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->grantDefaultPermissionToLocationApp(Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;[I)V
 
     invoke-static {p0, p1}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->grantDefaultPermissionToInstantApp(Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;[I)V
-
-    invoke-static {p0, p1}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->grantDefaultPermissionToCloudServiceApp(Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;[I)V
 
     invoke-static {p0, p1}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->grantDefaultPermissionToSpeechAssist(Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;[I)V
 

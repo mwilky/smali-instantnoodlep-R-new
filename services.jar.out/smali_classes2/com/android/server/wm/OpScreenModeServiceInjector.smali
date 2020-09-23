@@ -437,3 +437,38 @@
     :cond_2
     return-void
 .end method
+
+.method public static updateKeepHighVsync(Z)V
+    .locals 1
+
+    sget-boolean v0, Lcom/android/server/wm/OpScreenModeServiceInjector;->ENABLED:Z
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    sget-object v0, Lcom/android/server/wm/OpScreenModeServiceInjector;->opScreenMode:Lcom/android/server/wm/IOpScreenModeService;
+
+    if-nez v0, :cond_1
+
+    sget-object v0, Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;->oneplus_screenmode_service:Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;
+
+    invoke-static {v0}, Lcom/oneplus/android/server/context/OneplusContextStub;->queryInterface(Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/server/wm/IOpScreenModeService;
+
+    sput-object v0, Lcom/android/server/wm/OpScreenModeServiceInjector;->opScreenMode:Lcom/android/server/wm/IOpScreenModeService;
+
+    :cond_1
+    sget-object v0, Lcom/android/server/wm/OpScreenModeServiceInjector;->opScreenMode:Lcom/android/server/wm/IOpScreenModeService;
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0, p0}, Lcom/android/server/wm/IOpScreenModeService;->updateKeepHighVsync(Z)V
+
+    :cond_2
+    return-void
+.end method

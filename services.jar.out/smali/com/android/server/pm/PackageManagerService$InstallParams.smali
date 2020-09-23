@@ -1633,7 +1633,7 @@
 
     const-wide/32 v6, 0x40000
 
-    const-string v8, "integrity_verification"
+    const-string/jumbo v8, "integrity_verification"
 
     invoke-static {v6, v7, v8, v1}, Landroid/os/Trace;->asyncTraceBegin(JLjava/lang/String;I)V
 

@@ -302,6 +302,25 @@
     if-eqz v0, :cond_b
 
     :cond_7
+    iget-boolean v0, v7, Lcom/android/server/wm/ActivityRecord;->visibleIgnoringKeyguard:Z
+
+    if-eqz v0, :cond_b
+
+    iget-object v0, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mContiner:Lcom/android/server/wm/ActivityStack;
+
+    invoke-virtual {v0}, Lcom/android/server/wm/ActivityStack;->isActivityTypeHome()Z
+
+    move-result v0
+
+    if-nez v0, :cond_8
+
+    invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/ActivityRecord;->occludesParent()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_b
+
+    :cond_8
     iget-object v0, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mContiner:Lcom/android/server/wm/ActivityStack;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityStack;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
@@ -312,40 +331,29 @@
 
     move-result v0
 
-    if-eqz v0, :cond_8
+    if-nez v0, :cond_9
 
-    iget-boolean v0, v7, Lcom/android/server/wm/ActivityRecord;->visibleIgnoringKeyguard:Z
+    iget-object v0, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mContiner:Lcom/android/server/wm/ActivityStack;
 
-    if-nez v0, :cond_a
+    iget-object v0, v0, Lcom/android/server/wm/ActivityStack;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
 
-    :cond_8
-    invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/ActivityRecord;->canShowWhenLocked()Z
+    iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
+
+    invoke-virtual {v0}, Lcom/android/server/wm/WindowManagerService;->isKeyguardLocked()Z
 
     move-result v0
 
     if-nez v0, :cond_b
 
-    invoke-static {v14}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+    if-eqz v9, :cond_b
 
-    move-result v0
-
-    invoke-static/range {p1 .. p1}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
-
-    move-result v2
-
-    if-eq v0, v2, :cond_9
-
-    iget-boolean v0, v7, Lcom/android/server/wm/ActivityRecord;->visibleIgnoringKeyguard:Z
-
-    if-nez v0, :cond_b
-
-    :cond_9
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/ActivityRecord;->isSleeping()Z
 
     move-result v0
 
     if-eqz v0, :cond_b
 
+    :cond_9
     sget-boolean v0, Lcom/android/server/wm/OpAppLockerInjector;->IS_APP_LOCKER_ENABLED:Z
 
     if-eqz v0, :cond_a
@@ -365,18 +373,6 @@
     if-nez v0, :cond_b
 
     :cond_a
-    iget-object v0, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mContiner:Lcom/android/server/wm/ActivityStack;
-
-    iget-object v0, v0, Lcom/android/server/wm/ActivityStack;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
-
-    invoke-virtual {v0}, Lcom/android/server/wm/ActivityTaskManagerService;->getLockTaskModeState()I
-
-    move-result v0
-
-    const/4 v2, 0x2
-
-    if-eq v0, v2, :cond_b
-
     iget-object v0, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mContiner:Lcom/android/server/wm/ActivityStack;
 
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityStack;->isFocusedStackOnDisplay()Z
@@ -454,6 +450,74 @@
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-boolean v4, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mContainerShouldBeVisible:Z
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v4, " visibleIgnoringKeyguard:"
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v4, v7, Lcom/android/server/wm/ActivityRecord;->visibleIgnoringKeyguard:Z
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v4, " isTop:"
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v4, " occludesParent:"
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/ActivityRecord;->occludesParent()Z
+
+    move-result v4
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v4, " isSleeping:"
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/ActivityRecord;->isSleeping()Z
+
+    move-result v4
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v4, " canShowWhenLocked()"
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/ActivityRecord;->canShowWhenLocked()Z
+
+    move-result v4
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v4, " makeFocusedStackVisible:"
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v15}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v4, " reallyVisible:"
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v10}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v4, " isActivityTypeHome:"
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v4, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mContiner:Lcom/android/server/wm/ActivityStack;
+
+    invoke-virtual {v4}, Lcom/android/server/wm/ActivityStack;->isActivityTypeHome()Z
+
+    move-result v4
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 

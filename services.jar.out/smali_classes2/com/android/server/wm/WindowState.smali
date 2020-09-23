@@ -12181,7 +12181,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_2
 
     iget-object v2, p0, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
 
@@ -12189,13 +12189,13 @@
 
     and-int/lit8 v2, v2, 0x40
 
-    if-nez v2, :cond_1
+    if-nez v2, :cond_2
 
     invoke-virtual {p0}, Lcom/android/server/wm/WindowState;->isDragResizing()Z
 
     move-result v2
 
-    if-nez v2, :cond_1
+    if-nez v2, :cond_2
 
     invoke-virtual {p0}, Lcom/android/server/wm/WindowState;->getWindowConfiguration()Landroid/app/WindowConfiguration;
 
@@ -12205,28 +12205,47 @@
 
     move-result v2
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_2
 
     iget-object v2, p0, Lcom/android/server/wm/WindowState;->mWinAnimator:Lcom/android/server/wm/WindowStateAnimator;
 
     iget-boolean v2, v2, Lcom/android/server/wm/WindowStateAnimator;->mLastHidden:Z
 
-    if-nez v2, :cond_1
+    if-nez v2, :cond_2
 
     iget-boolean v2, p0, Lcom/android/server/wm/WindowState;->mSeamlesslyRotated:Z
 
-    if-nez v2, :cond_1
+    if-nez v2, :cond_2
 
-    invoke-direct {p0, v0, v1}, Lcom/android/server/wm/WindowState;->startMoveAnimation(II)V
+    invoke-virtual {p0}, Lcom/android/server/wm/WindowState;->getName()Ljava/lang/String;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {p0}, Lcom/android/server/wm/WindowState;->getName()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "com.baidu.haokan/com.baidu.haokan.app.activity.HomeActivity"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
 
     :cond_1
+    invoke-direct {p0, v0, v1}, Lcom/android/server/wm/WindowState;->startMoveAnimation(II)V
+
+    :cond_2
     iget-object v2, p0, Lcom/android/server/wm/WindowState;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v2, v2, Lcom/android/server/wm/WindowManagerService;->mAccessibilityController:Lcom/android/server/wm/AccessibilityController;
 
     const/4 v3, 0x0
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_3
 
     iget-object v2, p0, Lcom/android/server/wm/WindowState;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
@@ -12244,7 +12263,7 @@
 
     invoke-virtual {v2, v4}, Lcom/android/server/wm/AccessibilityController;->onSomeWindowResizedOrMovedLocked([I)V
 
-    :cond_2
+    :cond_3
     invoke-virtual {p0}, Lcom/android/server/wm/WindowState;->updateLocationInParentDisplayIfNeeded()V
 
     iget v2, p0, Lcom/android/server/wm/WindowState;->mOwnerUid:I

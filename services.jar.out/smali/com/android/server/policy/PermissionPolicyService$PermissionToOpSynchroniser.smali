@@ -655,31 +655,31 @@
     :goto_1
     if-eqz v6, :cond_5
 
-    new-array v3, v3, [I
+    new-array v7, v3, [I
 
-    const/16 v7, 0xb
+    const/16 v8, 0xb
 
-    aput v7, v3, v4
+    aput v8, v7, v4
 
-    invoke-static {v3}, Landroid/util/OpFeatures;->isSupport([I)Z
+    invoke-static {v7}, Landroid/util/OpFeatures;->isSupport([I)Z
 
-    move-result v3
+    move-result v7
 
-    if-eqz v3, :cond_4
+    if-eqz v7, :cond_4
+
+    iget-object v7, p1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    iget v7, v7, Landroid/content/pm/ApplicationInfo;->targetSdkVersion:I
+
+    const/16 v8, 0x17
+
+    if-ge v7, v8, :cond_3
 
     invoke-static {}, Lcom/android/server/pm/OpPackageManagerHelperInjector;->isInSpecialTesting()Z
 
-    move-result v3
+    move-result v7
 
-    if-nez v3, :cond_3
-
-    iget-object v3, p1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
-
-    iget v3, v3, Landroid/content/pm/ApplicationInfo;->targetSdkVersion:I
-
-    const/16 v7, 0x17
-
-    if-lt v3, v7, :cond_4
+    if-eqz v7, :cond_5
 
     :cond_3
     return v4

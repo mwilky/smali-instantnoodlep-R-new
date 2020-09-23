@@ -21,6 +21,10 @@
 
 .field private static final APPID:Ljava/lang/String; = "RBS8PPYT2W"
 
+.field private static final EAPPID:Ljava/lang/String; = "51WRFPTQT7"
+
+.field private static final EASC:Ljava/lang/String; = "audioserver.crash"
+
 .field private static final TAG:Ljava/lang/String; = "OpAudioMonitor"
 
 .field private static final VLST:Ljava/lang/String; = "volume_set"
@@ -953,6 +957,40 @@
     invoke-virtual/range {v0 .. v6}, Landroid/app/AlarmManager;->setExact(IJLjava/lang/String;Landroid/app/AlarmManager$OnAlarmListener;Landroid/os/Handler;)V
 
     :cond_1
+    return-void
+.end method
+
+.method public onAudioServerDied()V
+    .locals 4
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    const/4 v1, 0x1
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "audioserver_crash"
+
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v1, Ljava/util/HashMap;
+
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+
+    const-string v2, "appid"
+
+    const-string v3, "51WRFPTQT7"
+
+    invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v2, "audioserver.crash"
+
+    invoke-virtual {p0, v2, v0, v1}, Lcom/android/server/audio/OpAudioMonitor;->logMdm(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;)V
+
     return-void
 .end method
 

@@ -465,7 +465,7 @@
     goto :goto_2
 
     :sswitch_19
-    const-string v4, "intent"
+    const-string/jumbo v4, "intent"
 
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1682,8 +1682,6 @@
     const/4 v0, -0x1
 
     return v0
-
-    nop
 
     :sswitch_data_0
     .sparse-switch

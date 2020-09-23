@@ -544,6 +544,18 @@
     return-object v0
 .end method
 
+.method public getSensorType()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/biometrics/fingerprint/FingerprintService$FingerprintServiceWrapper;->this$0:Lcom/android/server/biometrics/fingerprint/FingerprintService;
+
+    invoke-virtual {v0}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->getSensorType()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public getStatus()I
     .locals 1
 

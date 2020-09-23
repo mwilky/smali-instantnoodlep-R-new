@@ -93,6 +93,10 @@
 
 .field private static mAutoBrightnessEnabled:Z
 
+.field private static mAutoRate:I
+
+.field private static mAutoStep:I
+
 .field public static mBoostBrightnessNormal:I
 
 .field private static mBrightnessAdjustmentFlags:I
@@ -157,6 +161,8 @@
 
 .field private static mPreStatus:I
 
+.field private static mRateVariable:Z
+
 .field private static mReason:I
 
 .field private static mRunningGeneration:J
@@ -164,6 +170,8 @@
 .field private static mStage1:F
 
 .field private static mStatus:I
+
+.field private static mStepCount:I
 
 .field private static mTargetValue:F
 
@@ -246,6 +254,8 @@
 
     sput v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCount:I
 
+    sput v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mStepCount:I
+
     sput v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCallingUid:I
 
     const-wide/16 v3, 0x0
@@ -261,6 +271,16 @@
     sput v1, Lcom/android/server/display/OpBrightnessReasonAndRate;->mTargetValue:F
 
     sput v1, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCurrentValue:F
+
+    const/4 v1, 0x1
+
+    sput v1, Lcom/android/server/display/OpBrightnessReasonAndRate;->mAutoStep:I
+
+    const/16 v1, 0x50
+
+    sput v1, Lcom/android/server/display/OpBrightnessReasonAndRate;->mAutoRate:I
+
+    sput-boolean v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mRateVariable:Z
 
     const/16 v1, 0x3c
 
@@ -325,6 +345,8 @@
     sput-object v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDimR:[Ljava/lang/String;
 
     return-void
+
+    nop
 
     :array_0
     .array-data 4
@@ -461,6 +483,52 @@
     return v1
 .end method
 
+.method public static IsSetValueEnable()Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    sget v1, Lcom/android/server/display/OpBrightnessReasonAndRate;->mAutoStep:I
+
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_0
+
+    return v0
+
+    :cond_0
+    sget v3, Lcom/android/server/display/OpBrightnessReasonAndRate;->mStepCount:I
+
+    add-int/2addr v3, v2
+
+    sput v3, Lcom/android/server/display/OpBrightnessReasonAndRate;->mStepCount:I
+
+    rem-int/2addr v3, v1
+
+    if-nez v3, :cond_1
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_0
+    sget v1, Lcom/android/server/display/OpBrightnessReasonAndRate;->mStepCount:I
+
+    const/16 v2, 0x2710
+
+    if-le v1, v2, :cond_2
+
+    const/4 v1, 0x0
+
+    sput v1, Lcom/android/server/display/OpBrightnessReasonAndRate;->mStepCount:I
+
+    :cond_2
+    return v0
+.end method
+
 .method static synthetic access$002(I)I
     .locals 0
 
@@ -477,7 +545,47 @@
     return-object v0
 .end method
 
-.method static synthetic access$1000(Lcom/android/server/display/OpBrightnessReasonAndRate;Z)V
+.method static synthetic access$1000()I
+    .locals 1
+
+    sget v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mAutoStep:I
+
+    return v0
+.end method
+
+.method static synthetic access$1002(I)I
+    .locals 0
+
+    sput p0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mAutoStep:I
+
+    return p0
+.end method
+
+.method static synthetic access$1100()I
+    .locals 1
+
+    sget v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mAutoRate:I
+
+    return v0
+.end method
+
+.method static synthetic access$1102(I)I
+    .locals 0
+
+    sput p0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mAutoRate:I
+
+    return p0
+.end method
+
+.method static synthetic access$1202(Z)Z
+    .locals 0
+
+    sput-boolean p0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mRateVariable:Z
+
+    return p0
+.end method
+
+.method static synthetic access$1300(Lcom/android/server/display/OpBrightnessReasonAndRate;Z)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/display/OpBrightnessReasonAndRate;->handleSettingsChange(Z)V
@@ -485,7 +593,7 @@
     return-void
 .end method
 
-.method static synthetic access$1102(Lcom/android/server/display/OpBrightnessReasonAndRate;Z)Z
+.method static synthetic access$1402(Lcom/android/server/display/OpBrightnessReasonAndRate;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mBlockHbm:Z
@@ -493,7 +601,7 @@
     return p1
 .end method
 
-.method static synthetic access$1200(Lcom/android/server/display/OpBrightnessReasonAndRate;)Lcom/android/server/display/DisplayPowerController;
+.method static synthetic access$1500(Lcom/android/server/display/OpBrightnessReasonAndRate;)Lcom/android/server/display/DisplayPowerController;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCallbacks:Lcom/android/server/display/DisplayPowerController;
@@ -614,15 +722,40 @@
 .end method
 
 .method public static frontPackageChanged(Ljava/lang/String;)V
-    .locals 0
+    .locals 2
 
     sput-object p0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mFrontPackageName:Ljava/lang/String;
 
+    sget-boolean v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDebug:Z
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v1, "mFrontPackageName:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v1, Lcom/android/server/display/OpBrightnessReasonAndRate;->mFrontPackageName:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "RampAnimator"
+
+    invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
     return-void
 .end method
 
 .method static getRate(F)F
-    .locals 12
+    .locals 11
 
     sget v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDimDebug:I
 
@@ -634,13 +767,13 @@
 
     const-string v4, "dim_rate"
 
-    const/4 v5, 0x1
+    const/4 v5, 0x0
 
-    const/4 v6, 0x0
+    const-string v6, "RampAnimator"
 
-    const-string v7, "RampAnimator"
+    const/4 v7, 0x1
 
-    if-ne v0, v5, :cond_1
+    if-ne v0, v7, :cond_1
 
     sget-object v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mContext:Landroid/content/Context;
 
@@ -648,7 +781,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v4, v6, v3}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+    invoke-static {v0, v4, v5, v3}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result v0
 
@@ -671,18 +804,18 @@
 
     move-result-object v1
 
-    invoke-static {v7, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return p0
 
     :cond_1
-    sput-boolean v6, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDarkModeInitiated:Z
+    sput-boolean v5, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDarkModeInitiated:Z
 
     sget v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mStatus:I
 
-    const/16 v8, 0x4b
+    const/16 v7, 0x4b
 
-    if-eq v0, v8, :cond_2
+    if-eq v0, v7, :cond_2
 
     const/16 v8, 0xc
 
@@ -713,26 +846,55 @@
 
     move-result-object v0
 
-    invoke-static {v7, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_3
+    sget v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mStatus:I
+
+    const-string v8, " rate:"
+
+    if-ne v0, v7, :cond_4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "PKG:"
+
+    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v7, Lcom/android/server/display/OpBrightnessReasonAndRate;->mFrontPackageName:Ljava/lang/String;
+
+    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v6, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_4
     const/4 v0, 0x0
 
     invoke-static {p0, v0}, Lcom/android/server/display/OpBrightnessReasonAndRate;->EqualsWithMargin(FF)Z
 
     move-result v0
 
-    const/16 v8, 0x19
+    const/16 v7, 0x19
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
     sget v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mStatus:I
 
-    if-eq v0, v8, :cond_4
+    if-eq v0, v7, :cond_5
 
     return p0
 
-    :cond_4
+    :cond_5
     sget v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mStatus:I
 
     const/16 v9, 0x46
@@ -741,32 +903,26 @@
 
     const/16 v9, 0x41
 
-    if-ne v0, v9, :cond_5
+    if-ne v0, v9, :cond_6
 
-    goto/16 :goto_4
+    goto/16 :goto_3
 
-    :cond_5
-    const/high16 v9, 0x40400000    # 3.0f
+    :cond_6
+    if-ne v0, v7, :cond_9
 
-    if-ne v0, v8, :cond_9
-
-    const/16 v0, 0x1388
+    const/16 v0, 0x1770
 
     invoke-static {v0}, Lcom/android/server/wm/OpScreenModeServiceInjector;->pokeDynamicVsyncAnimation(I)V
 
-    const-string/jumbo v0, "pokeDynamicVsyncAnimation 5000"
+    const-string/jumbo v0, "pokeDynamicVsyncAnimation 6000"
 
-    invoke-static {v7, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    move-result-wide v10
+    move-result-wide v9
 
-    sput-wide v10, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDimStartTimeMs:J
-
-    sget v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mFodMode:I
-
-    if-ne v0, v5, :cond_6
+    sput-wide v9, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDimStartTimeMs:J
 
     sget v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDelta:F
 
@@ -774,25 +930,15 @@
 
     move-result v0
 
-    const/high16 v5, 0x40800000    # 4.0f
+    const/high16 v7, 0x40800000    # 4.0f
 
-    mul-float/2addr v0, v5
+    mul-float/2addr v0, v7
 
-    goto :goto_0
+    sget p0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDimDebug:I
 
-    :cond_6
-    sget v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDelta:F
+    const/4 v7, 0x4
 
-    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
-
-    move-result v0
-
-    div-float/2addr v0, v9
-
-    :goto_0
-    sget-boolean p0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDebug:Z
-
-    if-eqz p0, :cond_8
+    if-ne p0, v7, :cond_8
 
     sget-object p0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mContext:Landroid/content/Context;
 
@@ -800,7 +946,7 @@
 
     move-result-object p0
 
-    invoke-static {p0, v4, v6, v3}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+    invoke-static {p0, v4, v5, v3}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result p0
 
@@ -823,16 +969,16 @@
 
     move-result-object v1
 
-    invoke-static {v7, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     move p0, v0
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_8
     move p0, v0
 
-    :goto_1
+    :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -855,9 +1001,9 @@
 
     move-result-object v0
 
-    invoke-static {v7, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto/16 :goto_5
+    goto/16 :goto_4
 
     :cond_9
     const/16 v1, 0x1e
@@ -874,18 +1020,20 @@
 
     mul-float/2addr v0, v1
 
-    cmpl-float p0, v0, v9
+    const/high16 p0, 0x40400000    # 3.0f
+
+    cmpl-float p0, v0, p0
 
     if-lez p0, :cond_a
 
     const/high16 p0, 0x40400000    # 3.0f
 
-    goto :goto_2
+    goto :goto_1
 
     :cond_a
     move p0, v0
 
-    :goto_2
+    :goto_1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -900,9 +1048,9 @@
 
     move-result-object v0
 
-    invoke-static {v7, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_5
+    goto :goto_4
 
     :cond_b
     const/16 v1, 0x23
@@ -913,7 +1061,7 @@
 
     if-ne v0, v1, :cond_c
 
-    goto :goto_3
+    goto :goto_2
 
     :cond_c
     sget v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mTargetValueReason:I
@@ -942,12 +1090,12 @@
 
     move-result-object v0
 
-    invoke-static {v7, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_5
+    goto :goto_4
 
     :cond_d
-    :goto_3
+    :goto_2
     sget v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDelta:F
 
     invoke-static {v0}, Ljava/lang/Math;->abs(F)F
@@ -972,12 +1120,12 @@
 
     move-result-object v0
 
-    invoke-static {v7, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_5
+    goto :goto_4
 
     :cond_e
-    :goto_4
+    :goto_3
     sget v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mTargetValue:F
 
     invoke-static {v0}, Lcom/android/server/display/OpBrightnessReasonAndRate;->getRateByBrightness(F)F
@@ -998,10 +1146,10 @@
 
     move-result-object v0
 
-    invoke-static {v7, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_f
-    :goto_5
+    :goto_4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1046,9 +1194,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    const-string v1, " rate:"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
@@ -1064,7 +1210,7 @@
 
     move-result-object v0
 
-    invoke-static {v7, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return p0
 .end method
@@ -1162,11 +1308,123 @@
     div-float v8, v1, v8
 
     :goto_0
+    const v2, 0x3c700780
+
+    cmpg-float v2, v8, v2
+
+    if-gez v2, :cond_7
+
+    const v8, 0x3c700780
+
+    :cond_7
     return v8
 .end method
 
+.method static getRateByDelta(F)F
+    .locals 8
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x0
+
+    cmpl-float v1, p0, v1
+
+    const/high16 v2, 0x40400000    # 3.0f
+
+    const/high16 v3, 0x40200000    # 2.5f
+
+    const/high16 v4, 0x3f000000    # 0.5f
+
+    const/high16 v5, 0x3e800000    # 0.25f
+
+    const/high16 v6, 0x3e000000    # 0.125f
+
+    const/high16 v7, 0x40000000    # 2.0f
+
+    if-ltz v1, :cond_3
+
+    cmpg-float v1, p0, v6
+
+    if-gez v1, :cond_0
+
+    mul-float/2addr v7, p0
+
+    goto :goto_0
+
+    :cond_0
+    cmpg-float v1, p0, v5
+
+    if-gez v1, :cond_1
+
+    move v7, p0
+
+    goto :goto_0
+
+    :cond_1
+    cmpg-float v1, p0, v4
+
+    if-gez v1, :cond_2
+
+    div-float v1, p0, v2
+
+    mul-float/2addr v7, v1
+
+    goto :goto_0
+
+    :cond_2
+    div-float v7, p0, v3
+
+    goto :goto_0
+
+    :cond_3
+    neg-float p0, p0
+
+    cmpg-float v1, p0, v6
+
+    if-gez v1, :cond_4
+
+    mul-float/2addr v7, p0
+
+    goto :goto_0
+
+    :cond_4
+    cmpg-float v1, p0, v5
+
+    if-gez v1, :cond_5
+
+    move v7, p0
+
+    goto :goto_0
+
+    :cond_5
+    cmpg-float v1, p0, v4
+
+    if-gez v1, :cond_6
+
+    div-float v1, p0, v2
+
+    mul-float/2addr v7, v1
+
+    goto :goto_0
+
+    :cond_6
+    div-float v7, p0, v3
+
+    :goto_0
+    const v0, 0x3c700780
+
+    cmpg-float v0, v7, v0
+
+    if-gez v0, :cond_7
+
+    const v7, 0x3c700780
+
+    :cond_7
+    return v7
+.end method
+
 .method static getRunningRate(FFFI)F
-    .locals 34
+    .locals 38
 
     move/from16 v0, p0
 
@@ -1174,13 +1432,17 @@
 
     const-wide/16 v2, 0x0
 
-    const/16 v4, 0x37
+    const/4 v4, 0x1
 
-    if-le v1, v4, :cond_0
+    sput v4, Lcom/android/server/display/OpBrightnessReasonAndRate;->mAutoStep:I
 
-    const/16 v4, 0x7a
+    const/16 v5, 0x37
 
-    if-ge v1, v4, :cond_0
+    if-le v1, v5, :cond_0
+
+    const/16 v5, 0x7a
+
+    if-ge v1, v5, :cond_0
 
     sput v1, Lcom/android/server/display/OpBrightnessReasonAndRate;->HZ:I
 
@@ -1189,1049 +1451,1198 @@
 
     sput p1, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCurrentValue:F
 
-    move/from16 v4, p2
+    move/from16 v5, p2
 
-    sub-float v5, v0, p1
-
-    invoke-static {v5}, Ljava/lang/Math;->abs(F)F
-
-    move-result v5
-
-    sget v6, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDelta:F
+    sub-float v6, v0, p1
 
     invoke-static {v6}, Ljava/lang/Math;->abs(F)F
 
     move-result v6
 
-    sget v7, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDimDebug:I
+    sget v7, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDelta:F
 
-    const-string v8, " mCurrentValue:"
+    invoke-static {v7}, Ljava/lang/Math;->abs(F)F
 
-    const-string v9, " mTargetValue:"
+    move-result v7
 
-    const-string v10, " preS:"
+    sget v8, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDimDebug:I
 
-    const-string v11, " S:"
+    const-string v9, " mCurrentValue:"
 
-    const-string v12, " runningTimeDelta:"
+    const-string v10, " mTargetValue:"
 
-    const-string v13, " mDelta:"
+    const-string v11, " preS:"
+
+    const-string v12, " S:"
+
+    const-string v13, " runningTimeDelta:"
+
+    const-string v14, " mDelta:"
 
     const-string v15, " level:"
 
-    const-string v14, "getRunningRate:"
-
-    const-string v1, "RampAnimator"
+    const-string v1, "getRunningRate:"
 
     move-wide/from16 v16, v2
 
-    const/4 v2, 0x1
+    const-string v2, "RampAnimator"
 
-    if-ne v7, v2, :cond_1
+    if-ne v8, v4, :cond_1
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v2, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/high16 v3, 0x46000000    # 8192.0f
+    const/high16 v1, 0x46000000    # 8192.0f
 
-    mul-float v14, v4, v3
+    mul-float v15, v5, v1
 
-    float-to-int v3, v14
+    float-to-int v1, v15
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget v3, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDelta:F
+    sget v1, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDelta:F
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget v3, Lcom/android/server/display/OpBrightnessReasonAndRate;->mStatus:I
+    sget v1, Lcom/android/server/display/OpBrightnessReasonAndRate;->mStatus:I
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget v3, Lcom/android/server/display/OpBrightnessReasonAndRate;->mPreStatus:I
+    sget v1, Lcom/android/server/display/OpBrightnessReasonAndRate;->mPreStatus:I
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget v3, Lcom/android/server/display/OpBrightnessReasonAndRate;->mTargetValue:F
+    sget v1, Lcom/android/server/display/OpBrightnessReasonAndRate;->mTargetValue:F
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget v3, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCurrentValue:F
+    sget v1, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCurrentValue:F
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    return v4
+    return v5
 
     :cond_1
     sget v3, Lcom/android/server/display/OpBrightnessReasonAndRate;->mStatus:I
 
-    const/16 v7, 0xa
+    const/4 v8, 0x0
 
-    const-wide/high16 v18, 0x3fd0000000000000L    # 0.25
+    const/16 v4, 0xa
 
-    const-wide/high16 v20, 0x3fe0000000000000L    # 0.5
+    const-wide v18, 0x3fc999999999999aL    # 0.2
 
-    const v22, 0x3e4ccccd    # 0.2f
+    const v20, 0x3e1604b0
 
-    const/high16 v23, 0x40000000    # 2.0f
+    const-wide/high16 v21, 0x3fe0000000000000L    # 0.5
 
-    const/high16 v24, 0x40400000    # 3.0f
+    const-wide v23, 0x3fd3333333333333L    # 0.3
 
-    const v25, 0x3dcccccd    # 0.1f
+    const/high16 v25, 0x40000000    # 2.0f
 
-    if-ne v3, v7, :cond_11
+    const/high16 v26, 0x40400000    # 3.0f
+
+    const v27, 0x3dcccccd    # 0.1f
+
+    const v28, 0x45fff800    # 8191.0f
+
+    if-ne v3, v4, :cond_11
 
     sget v3, Lcom/android/server/display/OpBrightnessReasonAndRate;->mPreStatus:I
 
-    if-ne v3, v7, :cond_11
+    if-ne v3, v4, :cond_11
 
     sget v3, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDelta:F
 
-    const/4 v7, 0x0
-
-    cmpg-float v3, v3, v7
+    cmpg-float v3, v3, v8
 
     if-gez v3, :cond_7
 
-    mul-float v24, v24, v6
+    mul-float v26, v26, v7
 
     const/high16 v3, 0x40800000    # 4.0f
 
-    div-float v24, v24, v3
+    div-float v26, v26, v3
 
-    cmpl-float v3, v5, v24
+    cmpl-float v3, v6, v26
 
     if-lez v3, :cond_2
 
     sget v3, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCurrentValue:F
 
-    float-to-double v2, v3
+    float-to-double v3, v3
 
-    cmpl-double v2, v2, v20
+    cmpl-double v3, v3, v21
 
-    if-lez v2, :cond_2
+    if-lez v3, :cond_2
 
-    const/high16 v2, 0x40c00000    # 6.0f
+    const/high16 v3, 0x40c00000    # 6.0f
 
-    div-float v2, v6, v2
+    div-float v3, v7, v3
 
     goto :goto_0
 
     :cond_2
-    const/high16 v2, 0x41000000    # 8.0f
+    const/high16 v3, 0x41000000    # 8.0f
 
-    div-float v2, v6, v2
+    div-float v3, v7, v3
 
-    div-float v3, v5, v6
+    div-float v4, v6, v7
 
-    mul-float/2addr v2, v3
+    mul-float/2addr v3, v4
 
     :goto_0
-    const v3, 0x3df5c28f    # 0.12f
+    const v4, 0x3df5c28f    # 0.12f
 
-    cmpg-float v3, v5, v3
+    cmpg-float v4, v6, v4
+
+    if-gez v4, :cond_3
 
     const v4, 0x3bf00780
 
-    if-gez v3, :cond_3
+    cmpl-float v4, v3, v4
 
-    cmpl-float v3, v2, v4
+    if-lez v4, :cond_3
 
-    if-lez v3, :cond_3
-
-    const v2, 0x3bf00780
+    const v3, 0x3bf00780
 
     :cond_3
-    sget v3, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCurrentValue:F
+    sget v4, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCurrentValue:F
 
-    move-object/from16 v26, v8
+    move-object/from16 v29, v9
 
-    float-to-double v7, v3
+    float-to-double v8, v4
 
-    const-wide v20, 0x3fd851eb851eb852L    # 0.38
+    const-wide v21, 0x3fd851eb851eb852L    # 0.38
 
-    cmpg-double v7, v7, v20
+    cmpg-double v5, v8, v21
 
-    if-gez v7, :cond_4
+    if-gez v5, :cond_4
 
-    float-to-double v7, v3
+    float-to-double v4, v4
 
-    cmpl-double v3, v7, v18
+    const-wide/high16 v8, 0x3fd0000000000000L    # 0.25
 
-    if-lez v3, :cond_4
+    cmpl-double v4, v4, v8
+
+    if-lez v4, :cond_4
+
+    const v4, 0x3c700780
+
+    cmpl-float v4, v3, v4
+
+    if-lez v4, :cond_4
 
     const v3, 0x3c700780
 
-    cmpl-float v3, v2, v3
+    :cond_4
+    sget v4, Lcom/android/server/display/OpBrightnessReasonAndRate;->mAutoRate:I
 
-    if-lez v3, :cond_5
+    int-to-float v4, v4
 
-    const v2, 0x3c700780
+    sget v5, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCurrentValue:F
+
+    const v8, 0x3ea5a52d
+
+    cmpg-float v5, v5, v8
+
+    if-gez v5, :cond_5
+
+    const/4 v5, 0x3
+
+    sput v5, Lcom/android/server/display/OpBrightnessReasonAndRate;->mAutoStep:I
+
+    div-float v3, v4, v28
+
+    :cond_5
+    div-float v5, v4, v28
+
+    cmpg-float v5, v3, v5
+
+    if-gez v5, :cond_6
+
+    div-float v3, v4, v28
+
+    :cond_6
+    move v5, v3
+
+    goto :goto_2
+
+    :cond_7
+    move-object/from16 v29, v9
+
+    const v3, 0x3e99999a    # 0.3f
+
+    cmpl-float v3, v7, v3
+
+    if-lez v3, :cond_9
+
+    mul-float v3, v7, v25
+
+    const v4, 0x3e4ccccd    # 0.2f
+
+    mul-float/2addr v4, v7
+
+    cmpg-float v4, v6, v4
+
+    if-gez v4, :cond_8
+
+    move v3, v7
+
+    :cond_8
+    mul-float v4, v7, v27
+
+    cmpg-float v4, v6, v4
+
+    if-gez v4, :cond_d
+
+    div-float v3, v7, v25
 
     goto :goto_1
 
-    :cond_4
-    sget v3, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCurrentValue:F
-
-    float-to-double v7, v3
-
-    cmpg-double v3, v7, v18
-
-    if-gez v3, :cond_5
-
-    const v2, 0x3bf00780
-
-    :cond_5
-    :goto_1
-    cmpg-float v3, v2, v4
-
-    if-gez v3, :cond_6
-
-    const v2, 0x3bf00780
-
-    move v4, v2
-
-    goto :goto_3
-
-    :cond_6
-    move v4, v2
-
-    goto :goto_3
-
-    :cond_7
-    move-object/from16 v26, v8
-
-    const v2, 0x3e99999a    # 0.3f
-
-    cmpl-float v2, v6, v2
-
-    if-lez v2, :cond_9
-
-    mul-float v2, v6, v23
-
-    mul-float v22, v22, v6
-
-    cmpg-float v3, v5, v22
-
-    if-gez v3, :cond_8
-
-    move v2, v6
-
-    :cond_8
-    mul-float v3, v6, v25
-
-    cmpg-float v3, v5, v3
-
-    if-gez v3, :cond_d
-
-    div-float v2, v6, v23
-
-    goto :goto_2
-
     :cond_9
-    const/high16 v2, 0x3e800000    # 0.25f
+    const/high16 v3, 0x3e800000    # 0.25f
 
-    cmpl-float v2, v6, v2
+    cmpl-float v3, v7, v3
 
-    if-lez v2, :cond_a
+    if-lez v3, :cond_a
 
-    const v2, 0x3fcccccd    # 1.6f
+    const v3, 0x3fcccccd    # 1.6f
 
-    mul-float/2addr v2, v6
+    mul-float/2addr v3, v7
 
-    goto :goto_2
+    goto :goto_1
 
     :cond_a
-    cmpl-float v2, v6, v22
+    const v3, 0x3e4ccccd    # 0.2f
 
-    if-lez v2, :cond_b
+    cmpl-float v3, v7, v3
 
-    const v2, 0x3f99999a    # 1.2f
+    if-lez v3, :cond_b
 
-    mul-float/2addr v2, v6
+    const v3, 0x3f99999a    # 1.2f
 
-    goto :goto_2
+    mul-float/2addr v3, v7
+
+    goto :goto_1
 
     :cond_b
-    const v2, 0x3e19999a    # 0.15f
+    const v3, 0x3e19999a    # 0.15f
 
-    cmpl-float v2, v6, v2
+    cmpl-float v3, v7, v3
 
-    if-lez v2, :cond_c
+    if-lez v3, :cond_c
 
-    const/high16 v2, 0x3fc00000    # 1.5f
+    const/high16 v3, 0x3fc00000    # 1.5f
 
-    div-float v2, v6, v2
+    div-float v3, v7, v3
+
+    goto :goto_1
+
+    :cond_c
+    div-float v3, v7, v26
+
+    :cond_d
+    :goto_1
+    cmpg-float v4, v6, v27
+
+    if-gez v4, :cond_f
+
+    sget v4, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCurrentValue:F
+
+    float-to-double v4, v4
+
+    cmpl-double v4, v4, v18
+
+    if-lez v4, :cond_e
+
+    const v3, 0x3cf00780
+
+    move v5, v3
 
     goto :goto_2
 
-    :cond_c
-    div-float v2, v6, v24
+    :cond_e
+    const v3, 0x3c700780
 
-    :cond_d
+    move v5, v3
+
+    goto :goto_2
+
+    :cond_f
+    move v5, v3
+
     :goto_2
-    cmpg-float v3, v5, v25
+    float-to-double v3, v0
 
-    if-gez v3, :cond_f
+    const-wide v8, 0x3fefae147ae147aeL    # 0.99
 
-    sget v3, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCurrentValue:F
+    cmpl-double v3, v3, v8
+
+    if-lez v3, :cond_10
+
+    sget v3, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDelta:F
 
     float-to-double v3, v3
 
-    const-wide v7, 0x3fc999999999999aL    # 0.2
+    const-wide v8, 0x3fb999999999999aL    # 0.1
 
-    cmpl-double v3, v3, v7
+    cmpl-double v3, v3, v8
 
-    if-lez v3, :cond_e
+    if-lez v3, :cond_10
 
-    const v2, 0x3cf00780
+    div-float v5, v7, v25
 
-    move v4, v2
+    move-object/from16 v30, v10
 
-    goto :goto_3
+    move-wide/from16 v3, v16
 
-    :cond_e
-    const v2, 0x3c700780
-
-    move v4, v2
-
-    goto :goto_3
-
-    :cond_f
-    move v4, v2
-
-    :goto_3
-    float-to-double v2, v0
-
-    const-wide v7, 0x3fefae147ae147aeL    # 0.99
-
-    cmpl-double v2, v2, v7
-
-    if-lez v2, :cond_10
-
-    sget v2, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDelta:F
-
-    float-to-double v2, v2
-
-    const-wide v7, 0x3fb999999999999aL    # 0.1
-
-    cmpl-double v2, v2, v7
-
-    if-lez v2, :cond_10
-
-    div-float v4, v6, v23
-
-    move-wide/from16 v2, v16
-
-    goto/16 :goto_a
+    goto/16 :goto_9
 
     :cond_10
-    move-wide/from16 v2, v16
+    move-object/from16 v30, v10
 
-    goto/16 :goto_a
+    move-wide/from16 v3, v16
+
+    goto/16 :goto_9
 
     :cond_11
-    move-object/from16 v26, v8
+    move-object/from16 v29, v9
 
-    sget v2, Lcom/android/server/display/OpBrightnessReasonAndRate;->mStatus:I
+    sget v3, Lcom/android/server/display/OpBrightnessReasonAndRate;->mStatus:I
 
-    const/16 v3, 0x19
+    const/16 v4, 0x19
 
-    if-ne v2, v3, :cond_2e
+    if-ne v3, v4, :cond_2e
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    move-result-wide v2
+    move-result-wide v3
 
-    sget-wide v7, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDimStartTimeMs:J
+    sget-wide v8, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDimStartTimeMs:J
 
-    sub-long/2addr v2, v7
+    sub-long/2addr v3, v8
 
-    sget v7, Lcom/android/server/display/OpBrightnessReasonAndRate;->mFodMode:I
+    sget v8, Lcom/android/server/display/OpBrightnessReasonAndRate;->mFodMode:I
 
-    const/4 v8, 0x1
+    const/4 v9, 0x1
 
-    if-eq v7, v8, :cond_34
-
-    const v8, 0x3f666666    # 0.9f
-
-    const/high16 v16, 0x3f800000    # 1.0f
-
-    sub-float v17, v16, v8
-
-    const v22, 0x3eb33333    # 0.35f
-
-    const v23, 0x3dcccccd    # 0.1f
-
-    const/high16 v24, 0x3f000000    # 0.5f
-
-    const v25, 0x3f59999a    # 0.85f
-
-    cmpl-float v25, v6, v25
-
-    if-lez v25, :cond_12
+    if-eq v8, v9, :cond_2d
 
     const v8, 0x3f666666    # 0.9f
 
-    const v18, 0x3eb33333    # 0.35f
+    const/high16 v9, 0x3f800000    # 1.0f
 
-    const v19, 0x3dcccccd    # 0.1f
+    sub-float v16, v9, v8
 
-    const/high16 v22, 0x3f800000    # 1.0f
+    const v17, 0x3eb33333    # 0.35f
 
-    goto/16 :goto_4
+    const v25, 0x3dcccccd    # 0.1f
+
+    const/high16 v26, 0x3f000000    # 0.5f
+
+    const v27, 0x3f59999a    # 0.85f
+
+    cmpl-float v27, v7, v27
+
+    if-lez v27, :cond_12
+
+    const v8, 0x3f666666    # 0.9f
+
+    const v17, 0x3eb33333    # 0.35f
+
+    const v25, 0x3dcccccd    # 0.1f
+
+    const/high16 v26, 0x3f800000    # 1.0f
+
+    move-object/from16 v30, v10
+
+    goto/16 :goto_3
 
     :cond_12
-    const/high16 v25, 0x3f400000    # 0.75f
+    const/high16 v27, 0x3f400000    # 0.75f
 
-    cmpl-float v25, v6, v25
+    cmpl-float v27, v7, v27
 
-    if-lez v25, :cond_13
+    if-lez v27, :cond_13
 
     const v8, 0x3f666666    # 0.9f
 
-    const v18, 0x3eb33333    # 0.35f
+    const v17, 0x3eb33333    # 0.35f
 
-    const v19, 0x3dcccccd    # 0.1f
+    const v25, 0x3dcccccd    # 0.1f
 
-    const/high16 v22, 0x3f800000    # 1.0f
+    const/high16 v26, 0x3f800000    # 1.0f
 
-    goto/16 :goto_4
+    move-object/from16 v30, v10
+
+    goto/16 :goto_3
 
     :cond_13
-    const v25, 0x3f266666    # 0.65f
+    const v27, 0x3f266666    # 0.65f
 
-    cmpl-float v25, v6, v25
+    cmpl-float v27, v7, v27
 
-    if-lez v25, :cond_14
+    if-lez v27, :cond_14
 
     const v8, 0x3f666666    # 0.9f
 
-    const v18, 0x3eb33333    # 0.35f
+    const v17, 0x3eb33333    # 0.35f
 
-    const v19, 0x3dcccccd    # 0.1f
+    const v25, 0x3dcccccd    # 0.1f
 
-    const v22, 0x3f99999a    # 1.2f
+    const v26, 0x3f99999a    # 1.2f
 
-    goto :goto_4
+    move-object/from16 v30, v10
+
+    goto :goto_3
 
     :cond_14
-    const v25, 0x3f0ccccd    # 0.55f
+    const v27, 0x3f0ccccd    # 0.55f
 
-    cmpl-float v25, v6, v25
+    cmpl-float v27, v7, v27
 
-    if-lez v25, :cond_15
+    if-lez v27, :cond_15
 
     const v8, 0x3f666666    # 0.9f
 
-    const v18, 0x3eb33333    # 0.35f
+    const v17, 0x3eb33333    # 0.35f
 
-    const v19, 0x3dcccccd    # 0.1f
+    const v25, 0x3dcccccd    # 0.1f
 
-    const v22, 0x3f99999a    # 1.2f
+    const v26, 0x3f4ccccd    # 0.8f
 
-    goto :goto_4
+    move-object/from16 v30, v10
+
+    goto :goto_3
 
     :cond_15
-    const v25, 0x3ee66666    # 0.45f
+    const v27, 0x3ee66666    # 0.45f
 
-    cmpl-float v25, v6, v25
+    cmpl-float v27, v7, v27
 
-    if-lez v25, :cond_16
+    if-lez v27, :cond_16
 
     const v8, 0x3f4ccccd    # 0.8f
 
-    const v18, 0x3eb33333    # 0.35f
+    const v17, 0x3eb33333    # 0.35f
 
-    const v19, 0x3dcccccd    # 0.1f
+    const v25, 0x3dcccccd    # 0.1f
 
-    const v22, 0x3fa66666    # 1.3f
+    const v26, 0x3f4ccccd    # 0.8f
 
-    goto :goto_4
+    move-object/from16 v30, v10
+
+    goto :goto_3
 
     :cond_16
-    const v25, 0x3eb33333    # 0.35f
+    const v27, 0x3eb33333    # 0.35f
 
-    cmpl-float v25, v6, v25
+    cmpl-float v27, v7, v27
 
-    if-lez v25, :cond_17
+    if-lez v27, :cond_17
 
     const v8, 0x3f4ccccd    # 0.8f
 
-    const v18, 0x3eb33333    # 0.35f
+    const v17, 0x3eb33333    # 0.35f
 
-    const v19, 0x3dcccccd    # 0.1f
+    const v25, 0x3dcccccd    # 0.1f
 
-    const v22, 0x3f99999a    # 1.2f
+    const v26, 0x3f4ccccd    # 0.8f
 
-    goto :goto_4
+    move-object/from16 v30, v10
+
+    goto :goto_3
 
     :cond_17
-    move/from16 v25, v8
+    move-object/from16 v30, v10
 
-    float-to-double v7, v6
+    float-to-double v9, v7
 
-    cmpl-double v7, v7, v18
+    const-wide/high16 v31, 0x3fd0000000000000L    # 0.25
 
-    if-lez v7, :cond_18
+    cmpl-double v9, v9, v31
+
+    if-lez v9, :cond_18
 
     const v8, 0x3f4ccccd    # 0.8f
 
-    const v18, 0x3eb33333    # 0.35f
+    const v17, 0x3eb33333    # 0.35f
 
-    const v19, 0x3dcccccd    # 0.1f
+    const v25, 0x3dcccccd    # 0.1f
 
-    const/high16 v22, 0x3f800000    # 1.0f
+    const/high16 v26, 0x3f800000    # 1.0f
 
-    goto :goto_4
+    goto :goto_3
 
     :cond_18
     const v8, 0x3f4ccccd    # 0.8f
 
-    const v18, 0x3eb33333    # 0.35f
+    const v17, 0x3eb33333    # 0.35f
 
-    const v19, 0x3dcccccd    # 0.1f
+    const v25, 0x3dcccccd    # 0.1f
 
-    const v22, 0x3f99999a    # 1.2f
+    const v26, 0x3f99999a    # 1.2f
 
-    :goto_4
-    sget v7, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDimDebug:I
+    :goto_3
+    sget v9, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDimDebug:I
 
-    const/4 v0, 0x3
+    const/4 v10, 0x3
 
-    if-ne v7, v0, :cond_19
+    if-ne v9, v10, :cond_19
 
     sget v8, Lcom/android/server/display/OpBrightnessReasonAndRate;->mStage1:F
 
-    sget v18, Lcom/android/server/display/OpBrightnessReasonAndRate;->mbke:F
+    sget v17, Lcom/android/server/display/OpBrightnessReasonAndRate;->mbke:F
 
-    sget v19, Lcom/android/server/display/OpBrightnessReasonAndRate;->mfe:F
+    sget v25, Lcom/android/server/display/OpBrightnessReasonAndRate;->mfe:F
 
-    sget v22, Lcom/android/server/display/OpBrightnessReasonAndRate;->mTime:F
+    sget v26, Lcom/android/server/display/OpBrightnessReasonAndRate;->mTime:F
 
     :cond_19
-    sub-float v0, v16, v8
+    const/high16 v9, 0x3f800000    # 1.0f
 
-    mul-float v7, v0, v6
+    sub-float v10, v9, v8
 
-    cmpl-float v7, v5, v7
+    mul-float v16, v10, v7
 
-    const-wide v23, 0x3fd3333333333333L    # 0.3
+    cmpl-float v16, v6, v16
 
-    if-lez v7, :cond_22
+    if-lez v16, :cond_22
 
-    mul-float v7, v8, v6
+    mul-float v16, v8, v7
 
-    mul-float v17, v7, v19
+    mul-float v31, v16, v25
 
-    sub-float v25, v16, v19
+    sub-float v32, v9, v25
 
-    sub-float v25, v25, v18
+    sub-float v32, v32, v17
 
-    mul-float v25, v25, v7
+    mul-float v32, v32, v16
 
-    div-float v25, v25, v22
+    div-float v32, v32, v26
 
-    sub-float v27, v6, v5
+    sub-float v9, v7, v6
 
-    const v28, 0x3cf00780
+    const v33, 0x3cf00780
 
-    div-float v28, v28, v25
+    div-float v33, v33, v32
 
-    mul-float v28, v28, v17
+    mul-float v33, v33, v31
 
-    add-float v27, v27, v28
+    add-float v9, v9, v33
 
-    div-float v28, v27, v17
+    div-float v33, v9, v31
 
-    cmpl-float v29, v28, v16
+    const/high16 v27, 0x3f800000    # 1.0f
 
-    if-lez v29, :cond_1a
+    cmpl-float v34, v33, v27
 
-    move/from16 v29, v16
+    if-lez v34, :cond_1a
 
-    goto :goto_5
+    const/high16 v34, 0x3f800000    # 1.0f
+
+    goto :goto_4
 
     :cond_1a
-    move/from16 v29, v28
+    move/from16 v34, v33
 
-    :goto_5
-    move/from16 v28, v29
+    :goto_4
+    move/from16 v33, v34
 
-    mul-float v29, v7, v19
+    mul-float v34, v16, v25
 
-    sub-float v29, v6, v29
+    sub-float v34, v7, v34
 
-    cmpl-float v29, v5, v29
+    cmpl-float v34, v6, v34
 
-    if-lez v29, :cond_1b
+    if-lez v34, :cond_1b
 
-    mul-float v4, v25, v28
+    mul-float v5, v32, v33
 
-    move/from16 v29, v0
+    move/from16 v34, v8
 
-    move/from16 v30, v8
-
-    goto :goto_7
+    goto :goto_6
 
     :cond_1b
-    sub-float v16, v16, v18
+    const/high16 v27, 0x3f800000    # 1.0f
 
-    mul-float v16, v16, v7
+    sub-float v27, v27, v17
 
-    sub-float v16, v6, v16
+    mul-float v27, v27, v16
 
-    cmpl-float v16, v5, v16
+    sub-float v27, v7, v27
 
-    if-lez v16, :cond_1c
+    cmpl-float v27, v6, v27
 
-    move/from16 v4, v25
+    if-lez v27, :cond_1c
 
-    move/from16 v29, v0
+    move/from16 v5, v32
 
-    move/from16 v30, v8
+    move/from16 v34, v8
 
-    goto :goto_7
+    goto :goto_6
 
     :cond_1c
-    mul-float v16, v6, v0
+    mul-float v27, v7, v10
 
-    sub-float v16, v5, v16
+    sub-float v27, v6, v27
 
-    mul-float v29, v6, v8
+    mul-float v34, v7, v8
 
-    mul-float v29, v29, v18
+    mul-float v34, v34, v17
 
-    div-float v16, v16, v29
+    div-float v27, v27, v34
 
-    mul-float v4, v25, v16
+    mul-float v5, v32, v27
 
-    const/16 v16, 0x0
-
-    move/from16 v29, v0
+    const/16 v27, 0x0
 
     sget v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCurrentValue:F
 
-    move/from16 v31, v7
+    move/from16 v34, v8
 
-    move/from16 v30, v8
+    move/from16 v35, v9
 
-    float-to-double v7, v0
+    float-to-double v8, v0
 
-    const-wide v32, 0x3fe3333333333333L    # 0.6
+    const-wide v36, 0x3fe3333333333333L    # 0.6
 
-    cmpl-double v7, v7, v32
+    cmpl-double v8, v8, v36
 
-    if-lez v7, :cond_1d
+    if-lez v8, :cond_1d
 
     const v0, 0x3e1604b0
 
-    goto :goto_6
+    goto :goto_5
 
     :cond_1d
-    float-to-double v7, v0
+    float-to-double v8, v0
 
-    cmpl-double v7, v7, v20
+    cmpl-double v8, v8, v21
 
-    if-lez v7, :cond_1e
+    if-lez v8, :cond_1e
 
     const v0, 0x3f83441a
 
-    goto :goto_6
+    goto :goto_5
 
     :cond_1e
-    float-to-double v7, v0
+    float-to-double v8, v0
 
-    const-wide v20, 0x3fd999999999999aL    # 0.4
+    const-wide v21, 0x3fd999999999999aL    # 0.4
 
-    cmpl-double v7, v7, v20
+    cmpl-double v8, v8, v21
 
-    if-lez v7, :cond_1f
+    if-lez v8, :cond_1f
 
     const v0, 0x3db405a0
 
-    goto :goto_6
+    goto :goto_5
 
     :cond_1f
-    float-to-double v7, v0
+    float-to-double v8, v0
 
-    cmpl-double v0, v7, v23
+    cmpl-double v0, v8, v23
 
     if-lez v0, :cond_20
 
     const v0, 0x3d870438
 
-    goto :goto_6
+    goto :goto_5
 
     :cond_20
     const v0, 0x3d700780
 
-    :goto_6
-    cmpg-float v7, v4, v0
+    :goto_5
+    cmpg-float v8, v5, v0
 
-    if-gez v7, :cond_21
+    if-gez v8, :cond_21
 
-    move v4, v0
+    move v5, v0
 
     :cond_21
-    :goto_7
-    goto :goto_8
+    :goto_6
+    goto :goto_7
 
     :cond_22
-    move/from16 v29, v0
-
-    move/from16 v30, v8
+    move/from16 v34, v8
 
     sget v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCurrentValue:F
 
-    float-to-double v7, v0
+    float-to-double v8, v0
 
-    const-wide v16, 0x3fe3333333333333L    # 0.6
+    const-wide v31, 0x3fe3333333333333L    # 0.6
 
-    cmpl-double v7, v7, v16
+    cmpl-double v8, v8, v31
 
-    if-lez v7, :cond_23
+    if-lez v8, :cond_23
 
-    const v4, 0x3db405a0
+    const v5, 0x3db405a0
 
-    goto :goto_8
+    goto :goto_7
 
     :cond_23
-    float-to-double v7, v0
+    float-to-double v8, v0
 
-    cmpl-double v7, v7, v20
+    cmpl-double v8, v8, v21
 
-    if-lez v7, :cond_24
+    if-lez v8, :cond_24
 
-    const v4, 0x3da50528
+    const v5, 0x3da50528
 
-    goto :goto_8
+    goto :goto_7
 
     :cond_24
-    float-to-double v7, v0
+    float-to-double v8, v0
 
-    const-wide v16, 0x3fd999999999999aL    # 0.4
+    const-wide v21, 0x3fd999999999999aL    # 0.4
 
-    cmpl-double v7, v7, v16
+    cmpl-double v8, v8, v21
 
-    if-lez v7, :cond_25
+    if-lez v8, :cond_25
 
-    const v4, 0x3d9604b0
+    const v5, 0x3d9604b0
 
-    goto :goto_8
+    goto :goto_7
 
     :cond_25
-    float-to-double v7, v0
+    float-to-double v8, v0
 
-    cmpl-double v7, v7, v23
+    cmpl-double v8, v8, v23
 
-    if-lez v7, :cond_26
+    if-lez v8, :cond_26
 
-    const v4, 0x3d870438
+    const v5, 0x3d870438
 
-    goto :goto_8
+    goto :goto_7
 
     :cond_26
-    float-to-double v7, v0
+    float-to-double v8, v0
 
-    const-wide v16, 0x3fc999999999999aL    # 0.2
-
-    cmpl-double v0, v7, v16
+    cmpl-double v0, v8, v18
 
     if-lez v0, :cond_27
 
-    const v4, 0x3d700780
+    const v5, 0x3d700780
 
-    goto :goto_8
+    goto :goto_7
 
     :cond_27
-    const v4, 0x3cf00780
+    const v5, 0x3cf00780
 
-    :goto_8
+    :goto_7
     sget v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCurrentValue:F
 
-    float-to-double v7, v0
+    float-to-double v8, v0
 
-    const-wide v16, 0x3fd6666666666666L    # 0.35
+    const-wide v21, 0x3fd6666666666666L    # 0.35
 
-    cmpg-double v7, v7, v16
+    cmpg-double v0, v8, v21
 
-    if-gez v7, :cond_28
+    if-gez v0, :cond_28
 
-    const v7, 0x3e1604b0
-
-    cmpl-float v0, v0, v7
+    cmpl-float v0, v5, v20
 
     if-lez v0, :cond_28
 
-    const v4, 0x3e1604b0
+    const v5, 0x3e1604b0
 
     :cond_28
     sget v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCurrentValue:F
 
-    float-to-double v7, v0
+    float-to-double v8, v0
 
-    cmpg-double v7, v7, v23
+    cmpg-double v0, v8, v23
 
-    if-gez v7, :cond_29
+    if-gez v0, :cond_29
 
-    const v7, 0x3df00780
+    const v0, 0x3df00780
 
-    cmpl-float v0, v0, v7
+    cmpl-float v0, v5, v0
 
     if-lez v0, :cond_29
 
-    const v4, 0x3df00780
+    const v5, 0x3df00780
 
     :cond_29
     const v0, 0x3c700780
 
-    cmpg-float v0, v4, v0
+    cmpg-float v0, v5, v0
 
     if-ltz v0, :cond_2a
 
     sget v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCurrentValue:F
 
-    float-to-double v7, v0
+    float-to-double v8, v0
 
-    const-wide v16, 0x3fb47ae147ae147bL    # 0.08
+    const-wide v21, 0x3fb47ae147ae147bL    # 0.08
 
-    cmpg-double v0, v7, v16
+    cmpg-double v0, v8, v21
 
     if-gez v0, :cond_2b
 
     :cond_2a
-    const v4, 0x3c700780
+    const v5, 0x3c700780
 
     :cond_2b
-    sget v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCurrentValue:F
+    const-wide/16 v8, 0xe42
 
-    float-to-double v7, v0
+    cmp-long v0, v3, v8
 
-    const-wide v16, 0x3fb1eb851eb851ecL    # 0.07
-
-    cmpg-double v0, v7, v16
-
-    if-gez v0, :cond_2c
-
-    const v4, 0x3bf00780
-
-    :cond_2c
-    const-wide/16 v7, 0xe42
-
-    cmp-long v0, v2, v7
-
-    if-lez v0, :cond_2d
+    if-lez v0, :cond_2c
 
     const v0, 0x358637bd    # 1.0E-6f
 
-    move v4, v0
+    move v5, v0
+
+    :cond_2c
+    goto :goto_9
 
     :cond_2d
-    goto :goto_a
+    move-object/from16 v30, v10
+
+    goto :goto_9
 
     :cond_2e
+    move-object/from16 v30, v10
+
     const/16 v0, 0x1e
 
-    if-ne v2, v0, :cond_33
+    if-ne v3, v0, :cond_33
 
-    sub-float v0, v6, v5
+    sub-float v0, v7, v6
 
-    div-float/2addr v0, v6
+    div-float/2addr v0, v7
 
-    const/high16 v2, 0x41a00000    # 20.0f
+    const/high16 v3, 0x41700000    # 15.0f
 
-    mul-float/2addr v2, v6
+    mul-float/2addr v3, v7
 
-    mul-float/2addr v0, v2
+    mul-float/2addr v0, v3
 
-    mul-float v2, v6, v25
+    mul-float v3, v7, v27
 
-    add-float/2addr v0, v2
+    add-float/2addr v0, v3
 
-    const v2, 0x3fe66666    # 1.8f
+    const v3, 0x3fe66666    # 1.8f
 
-    cmpl-float v2, v0, v2
+    cmpl-float v3, v0, v3
 
-    if-lez v2, :cond_2f
+    if-lez v3, :cond_2f
 
     const v0, 0x3fe66666    # 1.8f
 
     :cond_2f
-    const/high16 v2, 0x40a00000    # 5.0f
+    const/high16 v3, 0x40a00000    # 5.0f
 
-    mul-float v3, v6, v2
+    mul-float/2addr v3, v7
 
     cmpl-float v3, v0, v3
 
     if-lez v3, :cond_30
 
-    mul-float v0, v6, v2
+    const/high16 v3, 0x40a00000    # 5.0f
+
+    mul-float v0, v7, v3
 
     :cond_30
-    mul-float v22, v22, v6
+    const v3, 0x3e99999a    # 0.3f
 
-    cmpg-float v2, v5, v22
+    mul-float/2addr v3, v7
 
-    if-gez v2, :cond_31
+    cmpg-float v3, v6, v3
 
-    div-float v2, v6, v24
+    if-gez v3, :cond_31
 
-    mul-float v2, v2, v23
+    div-float v3, v7, v26
 
-    move v4, v2
+    mul-float v3, v3, v25
 
-    goto :goto_9
+    move v5, v3
+
+    goto :goto_8
 
     :cond_31
-    move v4, v0
+    move v5, v0
 
-    :goto_9
-    mul-float v25, v25, v6
+    :goto_8
+    mul-float v27, v27, v7
 
-    cmpg-float v0, v5, v25
+    cmpg-float v0, v6, v27
 
     if-gez v0, :cond_32
 
-    div-float v4, v6, v24
+    div-float v5, v7, v26
 
-    move-wide/from16 v2, v16
+    move-wide/from16 v3, v16
 
-    goto :goto_a
+    goto :goto_9
 
     :cond_32
-    move-wide/from16 v2, v16
+    move-wide/from16 v3, v16
+
+    goto :goto_9
+
+    :cond_33
+    move-wide/from16 v3, v16
+
+    :goto_9
+    sget v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mStatus:I
+
+    const/16 v8, 0x4b
+
+    if-ne v0, v8, :cond_3a
+
+    sget-boolean v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mIsSystemUIOrSetting:Z
+
+    if-eqz v0, :cond_3a
+
+    sget v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDelta:F
+
+    invoke-static {v0}, Lcom/android/server/display/OpBrightnessReasonAndRate;->getRateByDelta(F)F
+
+    move-result v0
+
+    sget v5, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDelta:F
+
+    const/4 v8, 0x0
+
+    cmpg-float v5, v5, v8
+
+    if-gez v5, :cond_38
+
+    sget v5, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCurrentValue:F
+
+    float-to-double v8, v5
+
+    const-wide v16, 0x3fdae147ae147ae1L    # 0.42
+
+    cmpg-double v5, v8, v16
+
+    if-gez v5, :cond_34
+
+    const v5, 0x3e610708
+
+    cmpl-float v5, v0, v5
+
+    if-lez v5, :cond_34
+
+    const v0, 0x3e610708
+
+    :cond_34
+    sget v5, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCurrentValue:F
+
+    float-to-double v8, v5
+
+    const-wide v16, 0x3fd6666666666666L    # 0.35
+
+    cmpg-double v5, v8, v16
+
+    if-gez v5, :cond_35
+
+    const v5, 0x3e480640
+
+    cmpl-float v5, v0, v5
+
+    if-lez v5, :cond_35
+
+    const v0, 0x3e480640
+
+    :cond_35
+    sget v5, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCurrentValue:F
+
+    float-to-double v8, v5
+
+    cmpg-double v5, v8, v23
+
+    if-gez v5, :cond_36
+
+    cmpl-float v5, v0, v20
+
+    if-lez v5, :cond_36
+
+    const v0, 0x3e1604b0
+
+    :cond_36
+    sget v5, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCurrentValue:F
+
+    float-to-double v8, v5
+
+    cmpg-double v5, v8, v18
+
+    if-gez v5, :cond_37
+
+    const v5, 0x3db405a0
+
+    cmpl-float v5, v0, v5
+
+    if-lez v5, :cond_37
+
+    const v0, 0x3db405a0
+
+    :cond_37
+    sget v5, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCurrentValue:F
+
+    float-to-double v8, v5
+
+    const-wide v16, 0x3fbeb851eb851eb8L    # 0.12
+
+    cmpg-double v5, v8, v16
+
+    if-gez v5, :cond_38
+
+    const v5, 0x3d3405a0
+
+    cmpl-float v5, v0, v5
+
+    if-lez v5, :cond_38
+
+    const v0, 0x3d3405a0
+
+    :cond_38
+    sget v5, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCurrentValue:F
+
+    float-to-double v8, v5
+
+    const-wide v16, 0x3feccccccccccccdL    # 0.9
+
+    cmpl-double v5, v8, v16
+
+    if-lez v5, :cond_39
+
+    cmpl-float v5, v0, v20
+
+    if-lez v5, :cond_39
+
+    const v0, 0x3e1604b0
+
+    move v5, v0
 
     goto :goto_a
 
-    :cond_33
-    move-wide/from16 v2, v16
+    :cond_39
+    move v5, v0
 
-    :cond_34
     :goto_a
-    sget v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mStatus:I
+    float-to-double v8, v6
 
-    const/16 v7, 0x4b
+    const-wide v16, 0x3f789374bc6a7efaL    # 0.006
 
-    if-ne v0, v7, :cond_35
+    cmpg-double v0, v8, v16
 
-    float-to-double v7, v5
+    if-gez v0, :cond_3a
 
-    const-wide v16, 0x3f847ae147ae147bL    # 0.01
+    const v5, 0x3c700780
 
-    cmpg-double v0, v7, v16
-
-    if-gez v0, :cond_35
-
-    const v4, 0x3bf00780
-
-    :cond_35
+    :cond_3a
     sget-boolean v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDebug:Z
 
-    if-eqz v0, :cond_36
+    if-eqz v0, :cond_3b
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/high16 v7, 0x46000000    # 8192.0f
-
-    mul-float v14, v4, v7
-
-    float-to-int v7, v14
-
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget v7, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDelta:F
-
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
+    invoke-virtual {v0, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/high16 v1, 0x46000000    # 8192.0f
+
+    mul-float v15, v5, v1
+
+    float-to-int v1, v15
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget v1, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDelta:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget v1, Lcom/android/server/display/OpBrightnessReasonAndRate;->mStatus:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
     invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget v7, Lcom/android/server/display/OpBrightnessReasonAndRate;->mStatus:I
+    sget v1, Lcom/android/server/display/OpBrightnessReasonAndRate;->mPreStatus:I
 
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-object/from16 v1, v30
 
-    sget v7, Lcom/android/server/display/OpBrightnessReasonAndRate;->mPreStatus:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    sget v1, Lcom/android/server/display/OpBrightnessReasonAndRate;->mTargetValue:F
 
-    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    sget v7, Lcom/android/server/display/OpBrightnessReasonAndRate;->mTargetValue:F
+    move-object/from16 v1, v29
 
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object/from16 v7, v26
+    sget v1, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCurrentValue:F
 
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    sget v7, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCurrentValue:F
+    const-string v1, " HZ:"
 
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v7, " HZ:"
+    sget v1, Lcom/android/server/display/OpBrightnessReasonAndRate;->HZ:I
 
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    sget v7, Lcom/android/server/display/OpBrightnessReasonAndRate;->HZ:I
+    const-string v1, " ms:"
 
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v7, " ms:"
-
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_36
+    :cond_3b
     sget v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCount:I
 
     const/4 v1, 0x1
@@ -2242,11 +2653,11 @@
 
     const/16 v1, 0x14
 
-    if-lt v0, v1, :cond_37
+    if-lt v0, v1, :cond_3c
 
     sget-boolean v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDebug:Z
 
-    if-eqz v0, :cond_37
+    if-eqz v0, :cond_3c
 
     const/4 v0, 0x0
 
@@ -2258,17 +2669,15 @@
 
     move-result-object v0
 
-    const v1, 0x45fff800    # 8191.0f
-
-    mul-float v1, v1, p1
+    mul-float v1, p1, v28
 
     float-to-int v1, v1
 
-    const/4 v7, -0x2
+    const/4 v2, -0x2
 
     const-string/jumbo v8, "screen_brightness_cur"
 
-    invoke-static {v0, v8, v1, v7}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
+    invoke-static {v0, v8, v1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
     sget-object v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mContext:Landroid/content/Context;
 
@@ -2276,18 +2685,16 @@
 
     move-result-object v0
 
-    const v1, 0x45fff800    # 8191.0f
-
-    mul-float/2addr v1, v4
+    mul-float v1, v5, v28
 
     float-to-int v1, v1
 
     const-string/jumbo v8, "screen_brightness_rate"
 
-    invoke-static {v0, v8, v1, v7}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
+    invoke-static {v0, v8, v1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    :cond_37
-    return v4
+    :cond_3c
+    return v5
 .end method
 
 .method public static getStatus()I
@@ -3602,32 +4009,6 @@
 
     move-result-object v0
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string/jumbo v2, "processName:"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, " uid:"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget v2, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCallingUid:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "RampAnimator"
-
-    invoke-static {v2, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
-
     const-string v1, "android.uid.system"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -3638,13 +4019,13 @@
 
     sget-object v1, Lcom/android/server/display/OpBrightnessReasonAndRate;->mFrontPackageName:Ljava/lang/String;
 
-    const-string v2, "com.oneplus.factorymode"
+    const-string v2, "com.android.settings"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-nez v1, :cond_1
 
     :cond_0
     const-string v1, "android.uid.systemui"
@@ -3665,6 +4046,42 @@
 
     :goto_0
     sput-boolean v1, Lcom/android/server/display/OpBrightnessReasonAndRate;->mIsSystemUIOrSetting:Z
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v2, "processName:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, " uid:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget v2, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCallingUid:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, " mIsSystemUIOrSetting:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-boolean v2, Lcom/android/server/display/OpBrightnessReasonAndRate;->mIsSystemUIOrSetting:Z
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "RampAnimator"
+
+    invoke-static {v2, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    sget-boolean v1, Lcom/android/server/display/OpBrightnessReasonAndRate;->mIsSystemUIOrSetting:Z
 
     return v1
 .end method
@@ -3812,33 +4229,33 @@
     return-void
 .end method
 
-.method public updateBrightnessValue()V
+.method public updateBrightnessValue(F)V
     .locals 5
 
-    sget v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mTargetValue:F
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    invoke-static {p1, v0}, Lcom/android/internal/BrightnessSynchronizer;->floatEquals(FF)Z
 
-    invoke-static {v0, v1}, Lcom/android/internal/BrightnessSynchronizer;->floatEquals(FF)Z
-
-    move-result v0
+    move-result v1
 
     const/4 v2, 0x1
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
+
+    iget-boolean v0, p0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mBlockHbm:Z
+
+    if-eqz v0, :cond_1
 
     iget-object v0, p0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mBrightnessReasonHandler:Lcom/android/server/display/OpBrightnessReasonAndRate$OpBrightnessReasonHandler;
 
-    const-wide/16 v3, 0x3e8
+    const-wide/16 v3, 0x9c4
 
     invoke-virtual {v0, v2, v3, v4}, Lcom/android/server/display/OpBrightnessReasonAndRate$OpBrightnessReasonHandler;->sendEmptyMessageDelayed(IJ)Z
 
     goto :goto_0
 
     :cond_0
-    sget v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mTargetValue:F
-
-    cmpg-float v0, v0, v1
+    cmpg-float v0, p1, v0
 
     if-gez v0, :cond_1
 

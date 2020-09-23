@@ -58883,6 +58883,43 @@
     return-object v0
 .end method
 
+.method public getRenderThreadTid(I)I
+    .locals 4
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lcom/android/server/am/ActivityManagerService;->mPidsSelfLocked:Lcom/android/server/am/ActivityManagerService$PidMap;
+
+    monitor-enter v1
+
+    :try_start_0
+    iget-object v2, p0, Lcom/android/server/am/ActivityManagerService;->mPidsSelfLocked:Lcom/android/server/am/ActivityManagerService$PidMap;
+
+    invoke-virtual {v2, p1}, Lcom/android/server/am/ActivityManagerService$PidMap;->get(I)Lcom/android/server/am/ProcessRecord;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_0
+
+    iget v3, v2, Lcom/android/server/am/ProcessRecord;->renderThreadTid:I
+
+    move v0, v3
+
+    :cond_0
+    monitor-exit v1
+
+    return v0
+
+    :catchall_0
+    move-exception v2
+
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v2
+.end method
+
 .method public getRunningAppProcesses()Ljava/util/List;
     .locals 10
     .annotation system Ldalvik/annotation/Signature;

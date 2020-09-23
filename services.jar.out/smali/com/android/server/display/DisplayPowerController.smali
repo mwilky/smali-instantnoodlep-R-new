@@ -1771,20 +1771,20 @@
     return-void
 .end method
 
-.method static synthetic access$600(Lcom/android/server/display/DisplayPowerController;)Lcom/android/server/display/OpBrightnessReasonAndRate;
-    .locals 1
-
-    iget-object v0, p0, Lcom/android/server/display/DisplayPowerController;->mOpBrightnessReasonAndRate:Lcom/android/server/display/OpBrightnessReasonAndRate;
-
-    return-object v0
-.end method
-
-.method static synthetic access$700(Lcom/android/server/display/DisplayPowerController;)V
+.method static synthetic access$600(Lcom/android/server/display/DisplayPowerController;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/server/display/DisplayPowerController;->updateDitherStatus()V
 
     return-void
+.end method
+
+.method static synthetic access$700(Lcom/android/server/display/DisplayPowerController;)Lcom/android/server/display/OpBrightnessReasonAndRate;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/display/DisplayPowerController;->mOpBrightnessReasonAndRate:Lcom/android/server/display/OpBrightnessReasonAndRate;
+
+    return-object v0
 .end method
 
 .method private animateScreenBrightness(FF)V
@@ -5155,18 +5155,18 @@
 .method private setScreenState(IZ)Z
     .locals 7
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
-    if-ne p1, v0, :cond_0
+    if-ne p1, v1, :cond_0
 
-    move v2, v0
+    move v2, v1
 
     goto :goto_0
 
     :cond_0
-    move v2, v1
+    move v2, v0
 
     :goto_0
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController;->mPowerState:Lcom/android/server/display/DisplayPowerState;
@@ -5185,7 +5185,7 @@
 
     const/4 v3, 0x2
 
-    if-eq p1, v0, :cond_2
+    if-eq p1, v1, :cond_2
 
     if-ne p1, v3, :cond_1
 
@@ -5198,7 +5198,7 @@
 
     const-string v6, "FingerPrintMode"
 
-    invoke-virtual {v5, v6, v0, v1}, Lcom/oneplus/core/oimc/OIMCServiceManager;->notifyModeChange(Ljava/lang/String;II)V
+    invoke-virtual {v5, v6, v1, v0}, Lcom/oneplus/core/oimc/OIMCServiceManager;->notifyModeChange(Ljava/lang/String;II)V
 
     goto :goto_2
 
@@ -5208,11 +5208,11 @@
 
     invoke-interface {v5, p1}, Lcom/oneplus/display/IOneplusColorDisplayManager;->screenStateChange(I)V
 
-    new-array v5, v0, [I
+    new-array v5, v1, [I
 
     const/16 v6, 0x124
 
-    aput v6, v5, v1
+    aput v6, v5, v0
 
     invoke-static {v5}, Landroid/util/OpFeatures;->isSupport([I)Z
 
@@ -5240,6 +5240,8 @@
 
     invoke-direct {p0}, Lcom/android/server/display/DisplayPowerController;->blockScreenOff()V
 
+    invoke-static {v1}, Lcom/android/server/wm/OpScreenModeServiceInjector;->updateKeepHighVsync(Z)V
+
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController;->mWindowManagerPolicy:Lcom/android/server/policy/WindowManagerPolicy;
 
     iget-object v5, p0, Lcom/android/server/display/DisplayPowerController;->mPendingScreenOffUnblocker:Lcom/android/server/display/DisplayPowerController$ScreenOffUnblocker;
@@ -5255,7 +5257,7 @@
 
     if-eqz v3, :cond_5
 
-    return v1
+    return v0
 
     :cond_5
     :goto_3
@@ -5303,7 +5305,7 @@
 
     if-nez v3, :cond_7
 
-    invoke-direct {p0, v1}, Lcom/android/server/display/DisplayPowerController;->setReportedScreenState(I)V
+    invoke-direct {p0, v0}, Lcom/android/server/display/DisplayPowerController;->setReportedScreenState(I)V
 
     invoke-direct {p0}, Lcom/android/server/display/DisplayPowerController;->unblockScreenOn()V
 
@@ -5326,7 +5328,7 @@
 
     invoke-interface {v3}, Lcom/android/server/policy/WindowManagerPolicy;->screenTurnedOff()V
 
-    invoke-direct {p0, v1}, Lcom/android/server/display/DisplayPowerController;->setReportedScreenState(I)V
+    invoke-direct {p0, v0}, Lcom/android/server/display/DisplayPowerController;->setReportedScreenState(I)V
 
     :cond_8
     :goto_5
@@ -5336,7 +5338,7 @@
 
     if-nez v3, :cond_a
 
-    invoke-direct {p0, v0}, Lcom/android/server/display/DisplayPowerController;->setReportedScreenState(I)V
+    invoke-direct {p0, v1}, Lcom/android/server/display/DisplayPowerController;->setReportedScreenState(I)V
 
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController;->mPowerState:Lcom/android/server/display/DisplayPowerState;
 
@@ -5367,7 +5369,7 @@
     :cond_a
     if-eqz v2, :cond_b
 
-    invoke-static {v1}, Lcom/android/server/am/OpRestartProcessManagerInjector;->doWriteRecord(Z)V
+    invoke-static {v0}, Lcom/android/server/am/OpRestartProcessManagerInjector;->doWriteRecord(Z)V
 
     :cond_b
     invoke-static {v2}, Lcom/android/server/am/OpRestartProcessManagerInjector;->setScreenState(Z)V
@@ -5376,12 +5378,9 @@
 
     if-nez v3, :cond_c
 
-    goto :goto_7
-
-    :cond_c
     move v0, v1
 
-    :goto_7
+    :cond_c
     return v0
 .end method
 
@@ -5607,7 +5606,7 @@
 .end method
 
 .method private updateDitherStatus()V
-    .locals 7
+    .locals 9
 
     const/4 v0, 0x0
 
@@ -5639,57 +5638,124 @@
     move v1, v3
 
     :goto_0
-    if-eqz v1, :cond_1
+    iget-object v5, p0, Lcom/android/server/display/DisplayPowerController;->mContext:Landroid/content/Context;
 
-    const/4 v0, 0x0
+    invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v5
+
+    const-string/jumbo v6, "oneplus_dc_dimming_value"
+
+    invoke-static {v5, v6, v3, v4}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    move-result v4
+
+    if-ne v4, v2, :cond_1
+
+    move v4, v2
 
     goto :goto_1
 
     :cond_1
-    iget-object v4, p0, Lcom/android/server/display/DisplayPowerController;->mScreenBrightnessRampAnimator:Lcom/android/server/display/RampAnimator;
+    move v4, v3
 
-    if-eqz v4, :cond_2
+    :goto_1
+    const/4 v5, 0x0
 
-    invoke-virtual {v4}, Lcom/android/server/display/RampAnimator;->isAnimating()Z
+    iget-object v6, p0, Lcom/android/server/display/DisplayPowerController;->mBrightnessMapper:Lcom/android/server/display/BrightnessMappingStrategy;
+
+    if-eqz v6, :cond_3
+
+    iget-object v6, p0, Lcom/android/server/display/DisplayPowerController;->mScreenBrightnessRampAnimator:Lcom/android/server/display/RampAnimator;
+
+    if-eqz v6, :cond_3
+
+    invoke-virtual {v6}, Lcom/android/server/display/RampAnimator;->getBrightnessValue()F
+
+    move-result v6
+
+    iget-object v7, p0, Lcom/android/server/display/DisplayPowerController;->mBrightnessMapper:Lcom/android/server/display/BrightnessMappingStrategy;
+
+    const/high16 v8, 0x42c80000    # 100.0f
+
+    invoke-virtual {v7, v8}, Lcom/android/server/display/BrightnessMappingStrategy;->convertNitsToBrightness(F)F
+
+    move-result v7
+
+    cmpg-float v6, v6, v7
+
+    if-gez v6, :cond_2
+
+    move v6, v2
+
+    goto :goto_2
+
+    :cond_2
+    move v6, v3
+
+    :goto_2
+    move v5, v6
+
+    :cond_3
+    if-eqz v1, :cond_4
+
+    const/4 v0, 0x0
+
+    goto :goto_4
+
+    :cond_4
+    iget-object v6, p0, Lcom/android/server/display/DisplayPowerController;->mScreenBrightnessRampAnimator:Lcom/android/server/display/RampAnimator;
+
+    if-eqz v6, :cond_5
+
+    invoke-virtual {v6}, Lcom/android/server/display/RampAnimator;->isAnimating()Z
 
     move-result v0
 
-    goto :goto_1
+    goto :goto_3
 
-    :cond_2
+    :cond_5
     const/4 v0, 0x0
 
-    :goto_1
-    :try_start_0
-    iget-object v4, p0, Lcom/android/server/display/DisplayPowerController;->mDitherLock:Ljava/lang/Object;
+    :goto_3
+    if-eqz v5, :cond_6
 
-    monitor-enter v4
+    if-nez v4, :cond_6
+
+    const/4 v0, 0x1
+
+    :cond_6
+    :goto_4
+    :try_start_0
+    iget-object v6, p0, Lcom/android/server/display/DisplayPowerController;->mDitherLock:Ljava/lang/Object;
+
+    monitor-enter v6
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :try_start_1
-    iget-boolean v5, p0, Lcom/android/server/display/DisplayPowerController;->mDitherEnabled:Z
+    iget-boolean v7, p0, Lcom/android/server/display/DisplayPowerController;->mDitherEnabled:Z
 
-    if-eq v0, v5, :cond_5
+    if-eq v0, v7, :cond_9
 
     invoke-static {}, Lvendor/oneplus/hardware/display/V1_0/IOneplusDisplay;->getService()Lvendor/oneplus/hardware/display/V1_0/IOneplusDisplay;
 
-    move-result-object v5
+    move-result-object v7
 
-    const/16 v6, 0x17
+    const/16 v8, 0x17
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_7
 
     move v3, v2
 
-    :cond_3
-    invoke-interface {v5, v6, v3}, Lvendor/oneplus/hardware/display/V1_0/IOneplusDisplay;->setMode(II)V
+    :cond_7
+    invoke-interface {v7, v8, v3}, Lvendor/oneplus/hardware/display/V1_0/IOneplusDisplay;->setMode(II)V
 
     iput-boolean v0, p0, Lcom/android/server/display/DisplayPowerController;->mDitherEnabled:Z
 
     sget-boolean v2, Lcom/android/server/display/DisplayPowerController;->DEBUG:Z
 
-    if-eqz v2, :cond_5
+    if-eqz v2, :cond_9
 
     const-string v2, "DisplayPowerController"
 
@@ -5697,21 +5763,21 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "updateDitherStatus(): "
+    const-string/jumbo v7, "updateDitherStatus(): "
 
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_8
 
-    const-string v5, "enable"
+    const-string v7, "enable"
 
-    goto :goto_2
+    goto :goto_5
 
-    :cond_4
-    const-string v5, "disable"
+    :cond_8
+    const-string v7, "disable"
 
-    :goto_2
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :goto_5
+    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -5719,15 +5785,15 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_5
-    monitor-exit v4
+    :cond_9
+    monitor-exit v6
 
-    goto :goto_4
+    goto :goto_7
 
     :catchall_0
     move-exception v2
 
-    monitor-exit v4
+    monitor-exit v6
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -5743,41 +5809,41 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "Failed to "
+    const-string v6, "Failed to "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_a
 
-    const-string v4, "enable"
+    const-string v6, "enable"
 
-    goto :goto_3
+    goto :goto_6
 
-    :cond_6
-    const-string v4, "disable"
+    :cond_a
+    const-string v6, "disable"
 
-    :goto_3
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :goto_6
+    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v4, " dither: "
+    const-string v6, " dither: "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v2}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v6
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
-    const-string v4, "DisplayPowerController"
+    const-string v6, "DisplayPowerController"
 
-    invoke-static {v4, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :goto_4
+    :goto_7
     return-void
 .end method
 

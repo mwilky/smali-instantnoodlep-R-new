@@ -1218,7 +1218,7 @@
 .end method
 
 .method public setNightModeActivated(Z)Z
-    .locals 10
+    .locals 8
 
     iget-object v0, p0, Lcom/android/server/UiModeManagerService$11;->this$0:Lcom/android/server/UiModeManagerService;
 
@@ -1244,11 +1244,7 @@
 
     move-result v4
 
-    const/4 v5, 0x0
-
-    const/4 v6, 0x2
-
-    const/4 v7, 0x1
+    const/4 v5, 0x1
 
     if-eqz v4, :cond_2
 
@@ -1258,9 +1254,9 @@
 
     move-result v4
 
-    const/4 v8, 0x3
+    const/4 v6, 0x3
 
-    if-ne v4, v8, :cond_0
+    if-ne v4, v6, :cond_0
 
     goto :goto_0
 
@@ -1271,7 +1267,9 @@
 
     move-result v4
 
-    if-ne v4, v7, :cond_1
+    const/4 v6, 0x2
+
+    if-ne v4, v5, :cond_1
 
     if-eqz p1, :cond_1
 
@@ -1294,7 +1292,7 @@
 
     iget-object v4, p0, Lcom/android/server/UiModeManagerService$11;->this$0:Lcom/android/server/UiModeManagerService;
 
-    invoke-static {v4, v7}, Lcom/android/server/UiModeManagerService;->access$302(Lcom/android/server/UiModeManagerService;I)I
+    invoke-static {v4, v5}, Lcom/android/server/UiModeManagerService;->access$302(Lcom/android/server/UiModeManagerService;I)I
 
     goto :goto_2
 
@@ -1308,15 +1306,15 @@
 
     if-nez p1, :cond_3
 
-    move v8, v7
+    move v6, v5
 
     goto :goto_1
 
     :cond_3
-    move v8, v5
+    const/4 v6, 0x0
 
     :goto_1
-    invoke-static {v4, v8}, Lcom/android/server/UiModeManagerService;->access$2702(Lcom/android/server/UiModeManagerService;Z)Z
+    invoke-static {v4, v6}, Lcom/android/server/UiModeManagerService;->access$2702(Lcom/android/server/UiModeManagerService;Z)Z
 
     iget-object v4, p0, Lcom/android/server/UiModeManagerService$11;->this$0:Lcom/android/server/UiModeManagerService;
 
@@ -1340,52 +1338,33 @@
 
     const-string v4, "OpUiMode"
 
-    new-instance v8, Ljava/lang/StringBuilder;
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v9, "P:"
+    const-string v7, "P:"
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
-    move-result v9
+    move-result v7
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v9, " SetNightModeActivated "
+    const-string v7, " SetNightModeActivated "
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v8, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v6
 
-    invoke-static {v4, v8}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v4, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_5
-    iget-object v4, p0, Lcom/android/server/UiModeManagerService$11;->this$0:Lcom/android/server/UiModeManagerService;
-
-    invoke-virtual {v4}, Lcom/android/server/UiModeManagerService;->getContext()Landroid/content/Context;
-
-    move-result-object v4
-
-    iget-object v8, p0, Lcom/android/server/UiModeManagerService$11;->this$0:Lcom/android/server/UiModeManagerService;
-
-    invoke-static {v8}, Lcom/android/server/UiModeManagerService;->access$300(Lcom/android/server/UiModeManagerService;)I
-
-    move-result v8
-
-    if-ne v8, v6, :cond_6
-
-    move v5, v7
-
-    :cond_6
-    invoke-static {v4, v5}, Landroid/content/res/OpAccentColorUtils;->preProcessForUiMode(Landroid/content/Context;Z)V
-
     iget-object v4, p0, Lcom/android/server/UiModeManagerService$11;->this$0:Lcom/android/server/UiModeManagerService;
 
     invoke-static {v4}, Lcom/android/server/UiModeManagerService;->access$1700(Lcom/android/server/UiModeManagerService;)V
@@ -1407,7 +1386,7 @@
 
     monitor-exit v0
 
-    return v7
+    return v5
 
     :catchall_0
     move-exception v4

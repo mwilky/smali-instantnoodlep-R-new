@@ -176,7 +176,7 @@
     invoke-virtual {v6, v0}, Landroid/util/SparseArray;->remove(I)V
 
     :cond_1
-    const-string v6, "integrity_verification"
+    const-string/jumbo v6, "integrity_verification"
 
     invoke-static {v8, v9, v6, v0}, Landroid/os/Trace;->asyncTraceEnd(JLjava/lang/String;I)V
 
@@ -289,7 +289,7 @@
     invoke-virtual {v6, v0}, Landroid/util/SparseArray;->remove(I)V
 
     :cond_4
-    const-string v6, "integrity_verification"
+    const-string/jumbo v6, "integrity_verification"
 
     invoke-static {v8, v9, v6, v0}, Landroid/os/Trace;->asyncTraceEnd(JLjava/lang/String;I)V
 

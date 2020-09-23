@@ -168,7 +168,7 @@
 
     move-result-object v0
 
-    const-string v1, "intent-filter"
+    const-string/jumbo v1, "intent-filter"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

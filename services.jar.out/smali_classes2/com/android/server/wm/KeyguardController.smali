@@ -1254,6 +1254,13 @@
     return-void
 
     :cond_3
+    if-nez p1, :cond_4
+
+    if-nez p2, :cond_4
+
+    invoke-static {v2}, Lcom/android/server/wm/OpScreenModeServiceInjector;->updateKeepHighVsync(Z)V
+
+    :cond_4
     nop
 
     nop
@@ -1272,17 +1279,17 @@
 
     invoke-virtual {v3, p2}, Lcom/android/server/wm/WindowManagerService;->setAodShowing(Z)V
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_5
 
     invoke-direct {p0}, Lcom/android/server/wm/KeyguardController;->dismissDockedStackIfNeeded()V
 
     invoke-direct {p0, v2}, Lcom/android/server/wm/KeyguardController;->setKeyguardGoingAway(Z)V
 
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_5
 
     iput-boolean v2, p0, Lcom/android/server/wm/KeyguardController;->mDismissalRequested:Z
 
-    :cond_4
+    :cond_5
     iget-object v3, p0, Lcom/android/server/wm/KeyguardController;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
 
     invoke-virtual {p0, v2}, Lcom/android/server/wm/KeyguardController;->isKeyguardOrAodShowing(I)Z
