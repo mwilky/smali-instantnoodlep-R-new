@@ -491,8 +491,6 @@
 
     invoke-static {p1}, Lcom/oneplus/settings/utils/OPUtils;->enablePackageInstaller(Landroid/content/Context;)V
 
-    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->disableWirelessAdbDebuging()V
-
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->sendAppTrackerForAllSettings()V
 
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->setCustomToneDarkModeLocation()V

@@ -303,7 +303,17 @@
 
     if-nez v0, :cond_0
 
-    const/4 p0, 0x0
+    iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    sget v0, Lcom/android/settings/R$drawable;->ic_remove_circle:I
+
+    invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p0
 
     return-object p0
 

@@ -389,44 +389,27 @@
 
     invoke-virtual {v2, v0}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
 
-    iget-object v0, p0, Lcom/android/settings/applications/AppInfoBase;->mPackageName:Ljava/lang/String;
-
-    const/4 v2, 0x0
-
-    if-eqz v0, :cond_1
-
-    const-string v3, "com.heytap.speechassist"
-
-    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object p0, p0, Lcom/android/settings/applications/appinfo/DrawOverlayDetails;->mSwitchPref:Landroidx/preference/SwitchPreference;
-
-    invoke-virtual {p0, v2}, Landroidx/preference/Preference;->setEnabled(Z)V
-
-    goto :goto_0
-
-    :cond_1
     iget-object v0, p0, Lcom/android/settings/applications/appinfo/DrawOverlayDetails;->mSwitchPref:Landroidx/preference/SwitchPreference;
 
     iget-object p0, p0, Lcom/android/settings/applications/appinfo/DrawOverlayDetails;->mOverlayState:Lcom/android/settings/applications/AppStateOverlayBridge$OverlayState;
 
-    iget-boolean v3, p0, Lcom/android/settings/applications/AppStateAppOpsBridge$PermissionState;->permissionDeclared:Z
+    iget-boolean v2, p0, Lcom/android/settings/applications/AppStateAppOpsBridge$PermissionState;->permissionDeclared:Z
 
-    if-eqz v3, :cond_2
+    if-eqz v2, :cond_1
 
     iget-boolean p0, p0, Lcom/android/settings/applications/AppStateOverlayBridge$OverlayState;->controlEnabled:Z
 
-    if-eqz p0, :cond_2
+    if-eqz p0, :cond_1
 
-    move v2, v1
+    move p0, v1
 
-    :cond_2
-    invoke-virtual {v0, v2}, Landroidx/preference/Preference;->setEnabled(Z)V
+    goto :goto_0
+
+    :cond_1
+    const/4 p0, 0x0
 
     :goto_0
+    invoke-virtual {v0, p0}, Landroidx/preference/Preference;->setEnabled(Z)V
+
     return v1
 .end method

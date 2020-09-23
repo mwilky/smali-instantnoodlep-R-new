@@ -3498,6 +3498,8 @@
 
 .field public static final oneplus_wallpaper_attributions_avg_values:I = 0x7f131276
 
+.field public static final oneplus_wallpaper_attributions_values:I = 0x7f131277
+
 .field public static final oneplus_weak_text_reminding:I = 0x7f13127a
 
 .field public static final oneplus_weak_text_reminding_summary:I = 0x7f13127b

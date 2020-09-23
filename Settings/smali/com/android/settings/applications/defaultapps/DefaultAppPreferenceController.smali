@@ -232,9 +232,9 @@
 
     invoke-virtual {p1, v1}, Landroidx/preference/Preference;->setSummary(I)V
 
-    const/4 v1, 0x0
+    sget v1, Lcom/android/settings/R$drawable;->ic_remove_circle:I
 
-    invoke-virtual {p1, v1}, Landroidx/preference/Preference;->setIcon(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p1, v1}, Landroidx/preference/Preference;->setIcon(I)V
 
     :goto_0
     invoke-direct {p0, v0, p1}, Lcom/android/settings/applications/defaultapps/DefaultAppPreferenceController;->mayUpdateGearIcon(Lcom/android/settingslib/applications/DefaultAppInfo;Landroidx/preference/Preference;)V

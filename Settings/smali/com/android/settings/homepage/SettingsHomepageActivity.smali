@@ -6,6 +6,8 @@
 # instance fields
 .field private mHandler:Landroid/os/Handler;
 
+.field private mSpringNestScrollView:Lcom/google/android/material/edgeeffect/SpringNestScrollView;
+
 .field private mToolbar:Landroidx/appcompat/widget/Toolbar;
 
 
@@ -28,6 +30,16 @@
     .locals 0
 
     invoke-direct {p0}, Lcom/android/settings/homepage/SettingsHomepageActivity;->showContextualCardsFragment()V
+
+    return-void
+.end method
+
+.method private synthetic lambda$onConfigurationChanged$0()V
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/homepage/SettingsHomepageActivity;->mSpringNestScrollView:Lcom/google/android/material/edgeeffect/SpringNestScrollView;
+
+    invoke-virtual {p0}, Landroidx/core/widget/NestedScrollView;->requestLayout()V
 
     return-void
 .end method
@@ -93,11 +105,50 @@
 
 
 # virtual methods
-.method public onConfigurationChanged(Landroid/content/res/Configuration;)V
+.method public synthetic lambda$onConfigurationChanged$0$SettingsHomepageActivity()V
     .locals 0
+
+    invoke-direct {p0}, Lcom/android/settings/homepage/SettingsHomepageActivity;->lambda$onConfigurationChanged$0()V
+
+    return-void
+.end method
+
+.method public onConfigurationChanged(Landroid/content/res/Configuration;)V
+    .locals 3
 
     invoke-super {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "onConfigurationChanged:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "SettingsHomepageActivity"
+
+    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object p1, p0, Lcom/android/settings/homepage/SettingsHomepageActivity;->mHandler:Landroid/os/Handler;
+
+    if-eqz p1, :cond_0
+
+    new-instance v0, Lcom/android/settings/homepage/-$$Lambda$SettingsHomepageActivity$ea6VmZQVI8D6y4CFImpE4BZvhy8;
+
+    invoke-direct {v0, p0}, Lcom/android/settings/homepage/-$$Lambda$SettingsHomepageActivity$ea6VmZQVI8D6y4CFImpE4BZvhy8;-><init>(Lcom/android/settings/homepage/SettingsHomepageActivity;)V
+
+    const-wide/16 v1, 0x32
+
+    invoke-virtual {p1, v0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    :cond_0
     return-void
 .end method
 
@@ -113,6 +164,16 @@
     sget p1, Lcom/android/settings/R$id;->settings_homepage_container:I
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
+
+    sget p1, Lcom/android/settings/R$id;->main_content_scrollable_container:I
+
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/android/material/edgeeffect/SpringNestScrollView;
+
+    iput-object p1, p0, Lcom/android/settings/homepage/SettingsHomepageActivity;->mSpringNestScrollView:Lcom/google/android/material/edgeeffect/SpringNestScrollView;
 
     sget p1, Lcom/android/settings/R$id;->appbar:I
 
