@@ -223,13 +223,13 @@
     <dimen name="control_tooltip_height">15.0dip</dimen>
     <dimen name="control_tooltip_width">18.0dip</dimen>
     <dimen name="date_picker_date_label_size">32.0sp</dimen>
-    <dimen name="date_picker_day_height">42.0dip</dimen>
+    <dimen name="date_picker_day_height">40.0dip</dimen>
     <dimen name="date_picker_day_of_week_height">36.0dip</dimen>
     <dimen name="date_picker_day_of_week_text_size">12.0sp</dimen>
-    <dimen name="date_picker_day_selector_radius">42.0dip</dimen>
+    <dimen name="date_picker_day_selector_radius">40.0dip</dimen>
     <dimen name="date_picker_day_text_size">12.0sp</dimen>
-    <dimen name="date_picker_day_width">42.0dip</dimen>
-    <dimen name="date_picker_month_height">56.0dip</dimen>
+    <dimen name="date_picker_day_width">40.0dip</dimen>
+    <dimen name="date_picker_month_height">46.0dip</dimen>
     <dimen name="date_picker_month_text_size">14.0sp</dimen>
     <dimen name="date_picker_year_label_size">32.0sp</dimen>
     <dimen name="datepicker_component_width">260.0dip</dimen>

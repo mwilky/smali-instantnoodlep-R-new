@@ -822,6 +822,10 @@
 
     move-result v2
 
+    mul-int/lit8 v2, v2, 0x3
+
+    div-int/lit8 v2, v2, 0x4
+
     sub-int/2addr v1, v2
 
     invoke-static {v1}, Ljava/lang/Math;->abs(I)I

@@ -3,7 +3,7 @@
 .source "TimePickerClockDelegate.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/google/android/material/picker/TextInputTimePickerView$OnValueTypedListener;
 
 
 # annotations
@@ -34,20 +34,42 @@
 
 
 # virtual methods
-.method public run()V
+.method public onValueChanged(II)V
     .locals 2
 
-    iget-object v0, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$8;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
+    const/4 v0, 0x2
 
-    invoke-static {v0}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$1900(Lcom/google/android/material/picker/TimePickerClockDelegate;)Lcom/google/android/material/picker/NumericTextView;
+    if-eqz p1, :cond_2
 
-    move-result-object v1
+    const/4 v1, 0x1
 
-    invoke-virtual {v1}, Lcom/google/android/material/picker/NumericTextView;->getValue()I
+    if-eq p1, v1, :cond_1
 
-    move-result v1
+    if-eq p1, v0, :cond_0
 
-    invoke-virtual {v0, v1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->setHour(I)V
+    goto :goto_0
 
+    :cond_0
+    iget-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$8;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
+
+    invoke-static {p1, p2}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$1800(Lcom/google/android/material/picker/TimePickerClockDelegate;I)V
+
+    goto :goto_0
+
+    :cond_1
+    iget-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$8;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
+
+    invoke-static {p1, p2, v0}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$1700(Lcom/google/android/material/picker/TimePickerClockDelegate;II)V
+
+    goto :goto_0
+
+    :cond_2
+    iget-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$8;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
+
+    const/4 v1, 0x0
+
+    invoke-static {p1, p2, v0, v1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$1300(Lcom/google/android/material/picker/TimePickerClockDelegate;IIZ)V
+
+    :goto_0
     return-void
 .end method

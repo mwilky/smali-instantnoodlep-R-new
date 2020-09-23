@@ -77,8 +77,6 @@
 
 .field private mSyncText:Ljava/lang/CharSequence;
 
-.field private mVelocity:I
-
 .field private menuMargin:I
 
 .field private menuToolbar:Landroidx/appcompat/widget/Toolbar;
@@ -179,10 +177,6 @@
     iput-boolean v2, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->mDisableCollapsed:Z
 
     iput-boolean v2, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->mNeverSync:Z
-
-    const/16 v3, 0xc8
-
-    iput v3, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->mVelocity:I
 
     new-instance v3, Lcom/google/android/material/internal/MultiCollapsingHelper;
 
@@ -677,39 +671,23 @@
     return-void
 .end method
 
-.method static synthetic access$002(Lcom/google/android/material/appbar/CollapsingAppbarLayout;I)I
+.method static synthetic access$000(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Ljava/lang/CharSequence;
     .locals 0
 
-    iput p1, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->mVelocity:I
-
-    return p1
-.end method
-
-.method static synthetic access$100(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->isOverFling:Z
-
-    return p0
-.end method
-
-.method static synthetic access$1000(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Lcom/google/android/material/emptyview/EmptyPageView;
-    .locals 0
-
-    iget-object p0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->mEmptyPageView:Lcom/google/android/material/emptyview/EmptyPageView;
+    iget-object p0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->syncCollapsTitle:Ljava/lang/CharSequence;
 
     return-object p0
 .end method
 
-.method static synthetic access$102(Lcom/google/android/material/appbar/CollapsingAppbarLayout;Z)Z
+.method static synthetic access$100(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Ljava/lang/CharSequence;
     .locals 0
 
-    iput-boolean p1, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->isOverFling:Z
+    iget-object p0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->syncSubtitile:Ljava/lang/CharSequence;
 
-    return p1
+    return-object p0
 .end method
 
-.method static synthetic access$1100(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Z
+.method static synthetic access$1000(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->mStillDisScroll:Z
@@ -717,7 +695,7 @@
     return p0
 .end method
 
-.method static synthetic access$1200(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Lcom/google/android/material/appbar/CollapsingAppbarLayout$OnFractionChangeListener;
+.method static synthetic access$1100(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Lcom/google/android/material/appbar/CollapsingAppbarLayout$OnFractionChangeListener;
     .locals 0
 
     iget-object p0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->onFractionChangeListener:Lcom/google/android/material/appbar/CollapsingAppbarLayout$OnFractionChangeListener;
@@ -725,7 +703,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1300(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Lcom/google/android/material/appbar/CollapsingAppbarLayout$OnFractionChangeListener;
+.method static synthetic access$1200(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Lcom/google/android/material/appbar/CollapsingAppbarLayout$OnFractionChangeListener;
     .locals 0
 
     iget-object p0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->onCollapsedSyncListener:Lcom/google/android/material/appbar/CollapsingAppbarLayout$OnFractionChangeListener;
@@ -736,28 +714,12 @@
 .method static synthetic access$200(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Ljava/lang/CharSequence;
     .locals 0
 
-    iget-object p0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->syncCollapsTitle:Ljava/lang/CharSequence;
-
-    return-object p0
-.end method
-
-.method static synthetic access$300(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Ljava/lang/CharSequence;
-    .locals 0
-
-    iget-object p0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->syncSubtitile:Ljava/lang/CharSequence;
-
-    return-object p0
-.end method
-
-.method static synthetic access$400(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Ljava/lang/CharSequence;
-    .locals 0
-
     iget-object p0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->syncTouchtext:Ljava/lang/CharSequence;
 
     return-object p0
 .end method
 
-.method static synthetic access$500(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Lcom/google/android/material/appbar/CollapsingAppbarLayout$OnSubTitleClickListener;
+.method static synthetic access$300(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Lcom/google/android/material/appbar/CollapsingAppbarLayout$OnSubTitleClickListener;
     .locals 0
 
     iget-object p0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->syncClickListener:Lcom/google/android/material/appbar/CollapsingAppbarLayout$OnSubTitleClickListener;
@@ -765,7 +727,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$600(Lcom/google/android/material/appbar/CollapsingAppbarLayout;FLjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Lcom/google/android/material/appbar/CollapsingAppbarLayout$OnSubTitleClickListener;)V
+.method static synthetic access$400(Lcom/google/android/material/appbar/CollapsingAppbarLayout;FLjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Lcom/google/android/material/appbar/CollapsingAppbarLayout$OnSubTitleClickListener;)V
     .locals 0
 
     invoke-direct/range {p0 .. p5}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->setCollapsedSyncText(FLjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Lcom/google/android/material/appbar/CollapsingAppbarLayout$OnSubTitleClickListener;)V
@@ -773,7 +735,7 @@
     return-void
 .end method
 
-.method static synthetic access$700(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Z
+.method static synthetic access$500(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->mDisableCollapsed:Z
@@ -781,7 +743,7 @@
     return p0
 .end method
 
-.method static synthetic access$800(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Z
+.method static synthetic access$600(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->mCollapsed:Z
@@ -789,10 +751,34 @@
     return p0
 .end method
 
-.method static synthetic access$902(Lcom/google/android/material/appbar/CollapsingAppbarLayout;I)I
+.method static synthetic access$702(Lcom/google/android/material/appbar/CollapsingAppbarLayout;I)I
     .locals 0
 
     iput p1, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->expandedMarginBottom:I
+
+    return p1
+.end method
+
+.method static synthetic access$800(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Lcom/google/android/material/emptyview/EmptyPageView;
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->mEmptyPageView:Lcom/google/android/material/emptyview/EmptyPageView;
+
+    return-object p0
+.end method
+
+.method static synthetic access$900(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->isOverFling:Z
+
+    return p0
+.end method
+
+.method static synthetic access$902(Lcom/google/android/material/appbar/CollapsingAppbarLayout;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->isOverFling:Z
 
     return p1
 .end method
@@ -834,9 +820,9 @@
 
     iget-object v0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->scrimAnimator:Landroid/animation/ValueAnimator;
 
-    new-instance v1, Lcom/google/android/material/appbar/CollapsingAppbarLayout$3;
+    new-instance v1, Lcom/google/android/material/appbar/CollapsingAppbarLayout$2;
 
-    invoke-direct {v1, p0}, Lcom/google/android/material/appbar/CollapsingAppbarLayout$3;-><init>(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)V
+    invoke-direct {v1, p0}, Lcom/google/android/material/appbar/CollapsingAppbarLayout$2;-><init>(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -1316,9 +1302,9 @@
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$4;
+    new-instance v0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$3;
 
-    invoke-direct {v0, p0}, Lcom/google/android/material/appbar/CollapsingAppbarLayout$4;-><init>(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)V
+    invoke-direct {v0, p0}, Lcom/google/android/material/appbar/CollapsingAppbarLayout$3;-><init>(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)V
 
     iput-object v0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->onCollapsedSyncListener:Lcom/google/android/material/appbar/CollapsingAppbarLayout$OnFractionChangeListener;
 
@@ -1370,19 +1356,28 @@
 
     iput-boolean v0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->isOverFling:Z
 
-    new-instance v0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$2;
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getParent()Landroid/view/ViewParent;
 
-    invoke-direct {v0, p0, p1}, Lcom/google/android/material/appbar/CollapsingAppbarLayout$2;-><init>(Lcom/google/android/material/appbar/CollapsingAppbarLayout;Landroidx/recyclerview/widget/RecyclerView;)V
+    move-result-object v0
 
-    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setOnFlingListener(Landroidx/recyclerview/widget/RecyclerView$OnFlingListener;)V
+    instance-of v0, v0, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;
 
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;
+
+    invoke-virtual {p1, p0}, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;->bindAppbarLayout(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)V
+
+    :cond_0
     return-void
 .end method
 
 .method public changeVelocity(I)V
     .locals 0
-
-    iput p1, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->mVelocity:I
 
     return-void
 .end method
@@ -1818,14 +1813,6 @@
     iget-object v0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->contentScrim:Landroid/graphics/drawable/Drawable;
 
     return-object v0
-.end method
-
-.method public getContentViewVelocity()I
-    .locals 1
-
-    iget v0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->mVelocity:I
-
-    return v0
 .end method
 
 .method public getExpandedSubtitleTypeface()Landroid/graphics/Typeface;
@@ -3523,8 +3510,6 @@
 
 .method public setContentViewVelocity(I)V
     .locals 2
-
-    iput p1, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->mVelocity:I
 
     invoke-virtual {p0}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->getParent()Landroid/view/ViewParent;
 

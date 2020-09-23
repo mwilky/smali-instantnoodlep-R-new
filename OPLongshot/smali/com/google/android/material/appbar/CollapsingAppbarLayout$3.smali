@@ -3,12 +3,12 @@
 .source "CollapsingAppbarLayout.java"
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Lcom/google/android/material/appbar/CollapsingAppbarLayout$OnFractionChangeListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/android/material/appbar/CollapsingAppbarLayout;->animateScrim(I)V
+    value = Lcom/google/android/material/appbar/CollapsingAppbarLayout;->addCollapsedSyncText(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Lcom/google/android/material/appbar/CollapsingAppbarLayout$OnSubTitleClickListener;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -34,22 +34,36 @@
 
 
 # virtual methods
-.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 1
+.method public onFractionChanged(F)V
+    .locals 6
 
     iget-object v0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$3;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    invoke-static {v0}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$000(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Ljava/lang/CharSequence;
 
-    move-result-object p1
+    move-result-object v2
 
-    check-cast p1, Ljava/lang/Integer;
+    iget-object v1, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$3;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    invoke-static {v1}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$100(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Ljava/lang/CharSequence;
 
-    move-result p1
+    move-result-object v3
 
-    invoke-virtual {v0, p1}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->setScrimAlpha(I)V
+    iget-object v1, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$3;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
+
+    invoke-static {v1}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$200(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Ljava/lang/CharSequence;
+
+    move-result-object v4
+
+    iget-object v1, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$3;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
+
+    invoke-static {v1}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$300(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Lcom/google/android/material/appbar/CollapsingAppbarLayout$OnSubTitleClickListener;
+
+    move-result-object v5
+
+    move v1, p1
+
+    invoke-static/range {v0 .. v5}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$400(Lcom/google/android/material/appbar/CollapsingAppbarLayout;FLjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Lcom/google/android/material/appbar/CollapsingAppbarLayout$OnSubTitleClickListener;)V
 
     return-void
 .end method
