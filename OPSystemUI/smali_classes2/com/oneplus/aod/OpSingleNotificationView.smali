@@ -4,8 +4,6 @@
 
 
 # instance fields
-.field private mContext:Landroid/content/Context;
-
 .field private mHandler:Landroid/os/Handler;
 
 .field private mHeader:Landroid/widget/TextView;
@@ -39,7 +37,7 @@
 
     invoke-direct {p0, p1, p2, v0}, Lcom/oneplus/aod/OpSingleNotificationView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    iput-object p1, p0, Lcom/oneplus/aod/OpSingleNotificationView;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
 
     return-void
 .end method
@@ -51,7 +49,7 @@
 
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/oneplus/aod/OpSingleNotificationView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    iput-object p1, p0, Lcom/oneplus/aod/OpSingleNotificationView;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
 
     return-void
 .end method
@@ -61,7 +59,7 @@
 
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    iput-object p1, p0, Lcom/oneplus/aod/OpSingleNotificationView;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
 
     invoke-direct {p0}, Lcom/oneplus/aod/OpSingleNotificationView;->initHandler()V
 
@@ -224,7 +222,7 @@
 
     if-nez v8, :cond_1
 
-    iget-object v9, p0, Lcom/oneplus/aod/OpSingleNotificationView;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
 
     invoke-virtual {v9}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -408,7 +406,7 @@
 
     if-eqz v3, :cond_9
 
-    iget-object p1, p0, Lcom/oneplus/aod/OpSingleNotificationView;->mContext:Landroid/content/Context;
+    iget-object p1, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3, p1}, Landroid/graphics/drawable/Icon;->loadDrawable(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
 
@@ -496,7 +494,7 @@
 
     if-eqz v10, :cond_c
 
-    iget-object v1, p0, Lcom/oneplus/aod/OpSingleNotificationView;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -710,7 +708,7 @@
     move-result-object p1
 
     :try_start_0
-    iget-object v0, p0, Lcom/oneplus/aod/OpSingleNotificationView;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
 
     invoke-static {v0, p1}, Landroid/app/Notification$Builder;->recoverBuilder(Landroid/content/Context;Landroid/app/Notification;)Landroid/app/Notification$Builder;
 
@@ -747,7 +745,7 @@
 
     check-cast p1, Landroid/content/pm/ApplicationInfo;
 
-    iget-object p0, p0, Lcom/oneplus/aod/OpSingleNotificationView;->mContext:Landroid/content/Context;
+    iget-object p0, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -842,7 +840,7 @@
 
     invoke-super {p0}, Landroid/widget/LinearLayout;->onAttachedToWindow()V
 
-    iget-object v0, p0, Lcom/oneplus/aod/OpSingleNotificationView;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -872,7 +870,7 @@
 
     move-result-object v0
 
-    iget-object v2, p0, Lcom/oneplus/aod/OpSingleNotificationView;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -886,7 +884,7 @@
 
     iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    iget-object v2, p0, Lcom/oneplus/aod/OpSingleNotificationView;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 

@@ -939,7 +939,6 @@
     <string name="keyguard_fingerprint_unlock">Розблокування за допомогою відбитку пальця</string>
     <string name="keyguard_indication_charging_time">%2$s • Заряджання (%1$s до повного)</string>
     <string name="keyguard_indication_charging_time_fast">%2$s • Швидке заряджання (%1$s до повного)</string>
-    <string name="keyguard_indication_charging_time_fast_vooc">(%s до повної зарядки)</string>
     <string name="keyguard_indication_charging_time_slowly">%2$s • Повільне заряджання (%1$s до повного)</string>
     <string name="keyguard_indication_charging_time_wireless">%2$s • Бездротове заряджання (залишилося %1$s)</string>
     <string name="keyguard_indication_trust_disabled">Пристрій залишатиметься заблокованим, доки ви не розблокуєте його вручну</string>
@@ -1368,7 +1367,7 @@ IT-адміністратор може відстежувати й контро�
     <string name="op_notification_channel_summary_low">Менш важливі сповіщення без звуку й вібрації</string>
     <string name="op_notification_section_header_gentle">Інші сповіщення</string>
     <string name="op_notification_silence_title">Інше</string>
-    <string name="op_protect_charging">" Protect charging"</string>
+    <string name="op_protect_charging">" Protected charging"</string>
     <string name="op_qs_dark_mode_tile_label">Темний режим</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s використано</string>
     <string name="op_quick_settings_night_display_label">Зоровий комфорт</string>

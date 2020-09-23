@@ -45,10 +45,44 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 5
 
     const-string v0, "OpFodDisplayNotifier"
 
+    iget v1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier$AodModeNotifyRunnable;->mAodMode:I
+
+    const/4 v2, -0x2
+
+    const-string v3, "auto_brightness_in_aod"
+
+    const/4 v4, 0x5
+
+    if-ne v1, v4, :cond_0
+
+    iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier$AodModeNotifyRunnable;->this$0:Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;
+
+    invoke-static {v1}, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->access$100(Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;)Landroid/content/ContentResolver;
+
+    move-result-object v1
+
+    const/4 v4, 0x0
+
+    invoke-static {v1, v3, v4, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier$AodModeNotifyRunnable;->this$0:Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;
+
+    invoke-static {v1}, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->access$100(Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;)Landroid/content/ContentResolver;
+
+    move-result-object v1
+
+    const/4 v4, 0x1
+
+    invoke-static {v1, v3, v4, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
+
+    :goto_0
     :try_start_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -70,7 +104,7 @@
 
     iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier$AodModeNotifyRunnable;->this$0:Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;
 
-    invoke-static {v1}, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->access$100(Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;)Lvendor/oneplus/hardware/display/V1_0/IOneplusDisplay;
+    invoke-static {v1}, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->access$200(Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;)Lvendor/oneplus/hardware/display/V1_0/IOneplusDisplay;
 
     move-result-object v1
 
@@ -82,7 +116,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    goto :goto_1
 
     :catch_0
     move-exception p0
@@ -107,7 +141,7 @@
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :goto_0
+    :goto_1
     return-void
 .end method
 

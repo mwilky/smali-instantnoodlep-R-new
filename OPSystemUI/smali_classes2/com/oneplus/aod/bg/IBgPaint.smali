@@ -27,8 +27,23 @@
 .method public abstract onSizeChanged(II)V
 .end method
 
+.method public recover()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public abstract release()V
+.end method
+
 .method public abstract reset()V
 .end method
 
 .method public abstract setup(Landroid/view/View;)V
+.end method
+
+.method public userActivityInAlwaysOn()V
+    .locals 0
+
+    return-void
 .end method

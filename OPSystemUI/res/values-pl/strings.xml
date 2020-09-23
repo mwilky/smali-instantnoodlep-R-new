@@ -939,7 +939,6 @@ priorytetowe"</string>
     <string name="keyguard_fingerprint_unlock">Użyj odcisku palca, aby odblokować</string>
     <string name="keyguard_indication_charging_time">%2$s • Ładowanie (%1$s do końca)</string>
     <string name="keyguard_indication_charging_time_fast">%2$s • Szybkie ładowanie (%1$s do końca)</string>
-    <string name="keyguard_indication_charging_time_fast_vooc">(%s do naładowania)</string>
     <string name="keyguard_indication_charging_time_slowly">%2$s • Wolne ładowanie (%1$s do końca)</string>
     <string name="keyguard_indication_charging_time_wireless">%2$s • Ładowanie bezprzewodowe (%1$s do pełnego naładowania)</string>
     <string name="keyguard_indication_trust_disabled">Urządzenie pozostanie zablokowane, aż odblokujesz je ręcznie</string>
@@ -1368,7 +1367,7 @@ Aby dowiedzieć się więcej, skontaktuj się z administratorem.
     <string name="op_notification_channel_summary_low">Mniej ważne powiadomienia bez jakiegokolwiek dźwięku lub wibracji.</string>
     <string name="op_notification_section_header_gentle">Inne powiadomienia</string>
     <string name="op_notification_silence_title">Inne</string>
-    <string name="op_protect_charging">" Protect charging"</string>
+    <string name="op_protect_charging">" Protected charging"</string>
     <string name="op_qs_dark_mode_tile_label">Ciemny tryb</string>
     <string name="op_qs_data_usage_used">%1$s: użyto %2$s %3$s</string>
     <string name="op_quick_settings_night_display_label">Komfort oglądania</string>

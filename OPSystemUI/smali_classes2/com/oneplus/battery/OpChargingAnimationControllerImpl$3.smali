@@ -135,7 +135,7 @@
 
     iget-object v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$3;->this$0:Lcom/oneplus/battery/OpChargingAnimationControllerImpl;
 
-    invoke-static {v1}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$1800(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Ljava/lang/Runnable;
+    invoke-static {v1}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$1900(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Ljava/lang/Runnable;
 
     move-result-object v1
 
@@ -149,7 +149,7 @@
 
     iget-object p0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$3;->this$0:Lcom/oneplus/battery/OpChargingAnimationControllerImpl;
 
-    invoke-static {p0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$1800(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Ljava/lang/Runnable;
+    invoke-static {p0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$1900(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Ljava/lang/Runnable;
 
     move-result-object p0
 

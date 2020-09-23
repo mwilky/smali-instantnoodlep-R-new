@@ -158,11 +158,11 @@
     goto/16 :goto_1
 
     :cond_4
-    invoke-virtual {p0}, Lcom/oneplus/systemui/biometrics/OpFodDisplayController$OpDisplayControl;->getPowerManager()Landroid/os/PowerManager;
+    invoke-virtual {p0}, Lcom/oneplus/systemui/biometrics/OpFodDisplayController$OpDisplayControl;->getUpdateMonitor()Lcom/android/keyguard/KeyguardUpdateMonitor;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/os/PowerManager;->isInteractive()Z
+    invoke-virtual {v0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isDeviceInteractive()Z
 
     move-result v0
 
@@ -213,11 +213,11 @@
     return v1
 
     :cond_5
-    invoke-virtual {p0}, Lcom/oneplus/systemui/biometrics/OpFodDisplayController$OpDisplayControl;->getPowerManager()Landroid/os/PowerManager;
+    invoke-virtual {p0}, Lcom/oneplus/systemui/biometrics/OpFodDisplayController$OpDisplayControl;->getUpdateMonitor()Lcom/android/keyguard/KeyguardUpdateMonitor;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/os/PowerManager;->isInteractive()Z
+    invoke-virtual {v0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isDeviceInteractive()Z
 
     move-result v0
 
@@ -248,11 +248,11 @@
     return v2
 
     :cond_6
-    invoke-virtual {p0}, Lcom/oneplus/systemui/biometrics/OpFodDisplayController$OpDisplayControl;->getPowerManager()Landroid/os/PowerManager;
+    invoke-virtual {p0}, Lcom/oneplus/systemui/biometrics/OpFodDisplayController$OpDisplayControl;->getUpdateMonitor()Lcom/android/keyguard/KeyguardUpdateMonitor;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/os/PowerManager;->isInteractive()Z
+    invoke-virtual {v0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isDeviceInteractive()Z
 
     move-result v0
 

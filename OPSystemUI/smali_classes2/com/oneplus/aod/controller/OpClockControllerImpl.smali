@@ -706,19 +706,21 @@
 .end method
 
 .method public onDestroyView()V
-    .locals 1
+    .locals 2
 
     iget-object v0, p0, Lcom/oneplus/aod/controller/OpClockControllerImpl;->mView:Landroid/view/View;
+
+    const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
     invoke-virtual {v0, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/oneplus/aod/controller/OpClockControllerImpl;->mView:Landroid/view/View;
+    iput-object v1, p0, Lcom/oneplus/aod/controller/OpClockControllerImpl;->mView:Landroid/view/View;
 
     :cond_0
+    iput-object v1, p0, Lcom/oneplus/aod/controller/OpClockControllerImpl;->mAodClockSettings:Lcom/oneplus/aod/utils/OpAodSettings;
+
     return-void
 .end method
 

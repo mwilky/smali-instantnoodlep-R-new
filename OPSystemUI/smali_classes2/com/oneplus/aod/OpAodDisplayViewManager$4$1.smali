@@ -57,15 +57,54 @@
 
     invoke-virtual {v0}, Lcom/oneplus/aod/slice/OpSliceManager;->onTimeChanged()V
 
+    iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4$1;->this$1:Lcom/oneplus/aod/OpAodDisplayViewManager$4;
+
+    iget-object v0, v0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
+
+    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$600(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpAodMain;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oneplus/aod/OpAodMain;->onTimeChanged()V
+
+    iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4$1;->this$1:Lcom/oneplus/aod/OpAodDisplayViewManager$4;
+
+    iget-object v0, v0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
+
+    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$700(Lcom/oneplus/aod/OpAodDisplayViewManager;)Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/oneplus/aod/utils/OpCanvasAodHelper;->isCanvasAodEnabled(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4$1;->this$1:Lcom/oneplus/aod/OpAodDisplayViewManager$4;
+
+    iget-object v0, v0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
+
+    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$800(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isAlwaysOnEnabled()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
     iget-object p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4$1;->this$1:Lcom/oneplus/aod/OpAodDisplayViewManager$4;
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    invoke-static {p0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$600(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpAodMain;
+    invoke-static {p0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$900(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/bg/OpAodCanvas;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/oneplus/aod/OpAodMain;->onTimeChanged()V
+    invoke-virtual {p0}, Lcom/oneplus/aod/bg/OpAodCanvas;->onTimeChanged()V
 
+    :cond_0
     return-void
 .end method

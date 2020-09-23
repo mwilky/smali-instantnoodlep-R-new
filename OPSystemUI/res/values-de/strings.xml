@@ -939,7 +939,6 @@ wichtige"</string>
     <string name="keyguard_fingerprint_unlock">Mit Fingerabdruck entsperren</string>
     <string name="keyguard_indication_charging_time">%2$s • Wird geladen (voll in %1$s)</string>
     <string name="keyguard_indication_charging_time_fast">%2$s • Wird schnell geladen (voll in %1$s)</string>
-    <string name="keyguard_indication_charging_time_fast_vooc">(%s für vollständiges Aufladen)</string>
     <string name="keyguard_indication_charging_time_slowly">%2$s • Wird langsam geladen (voll in %1$s)</string>
     <string name="keyguard_indication_charging_time_wireless">%2$s • Kabelloses Laden (voll in %1$s)</string>
     <string name="keyguard_indication_trust_disabled">Das Gerät bleibt gesperrt, bis du es manuell entsperrst.</string>
@@ -1368,7 +1367,7 @@ Außerdem bist du mit einem VPN verbunden, das deine Netzwerkaktivitäten erfass
     <string name="op_notification_channel_summary_low">Weniger wichtige Benachrichtigungen ohne Ton oder Vibration.</string>
     <string name="op_notification_section_header_gentle">Sonstige Benachrichtigungen</string>
     <string name="op_notification_silence_title">Sonstige</string>
-    <string name="op_protect_charging">" Protect charging"</string>
+    <string name="op_protect_charging">" Protected charging"</string>
     <string name="op_qs_dark_mode_tile_label">Dunkelmodus</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s verwendet</string>
     <string name="op_quick_settings_night_display_label">Lesekomfort</string>

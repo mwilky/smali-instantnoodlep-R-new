@@ -1453,19 +1453,13 @@
 
     const/4 v2, 0x1
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;->hideSilentNotificationsOnLockscreen()Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
-
-    invoke-virtual {p1}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->getBucket()I
-
-    move-result v0
-
-    if-eq v0, v2, :cond_1
+    if-eqz v0, :cond_1
 
     invoke-virtual {p1}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->getBucket()I
 
@@ -1473,22 +1467,13 @@
 
     const/4 v3, 0x6
 
-    if-eq v0, v3, :cond_3
+    if-eq v0, v3, :cond_2
 
-    invoke-virtual {p1}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->getImportance()I
-
-    move-result v0
-
-    const/4 v3, 0x3
-
-    if-lt v0, v3, :cond_3
-
-    :cond_1
     move v1, v2
 
     goto :goto_0
 
-    :cond_2
+    :cond_1
     invoke-virtual {p1}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->getRanking()Landroid/service/notification/NotificationListenerService$Ranking;
 
     move-result-object v0
@@ -1499,7 +1484,7 @@
 
     xor-int/lit8 v1, v0, 0x1
 
-    :cond_3
+    :cond_2
     :goto_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;->mEntryManager:Lcom/android/systemui/statusbar/notification/NotificationEntryManager;
 

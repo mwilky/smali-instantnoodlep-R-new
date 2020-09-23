@@ -153,7 +153,7 @@
 
     if-nez p1, :cond_1
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :cond_1
     iget-object p1, p0, Lcom/oneplus/battery/OpSWarpChargingView$4;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
@@ -201,6 +201,46 @@
     aput v2, v0, v1
 
     invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->setFloatValues([F)V
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "setSwarpAnimation : startLevel["
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v0, p0, Lcom/oneplus/battery/OpSWarpChargingView$4;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
+
+    invoke-static {v0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$900(Lcom/oneplus/battery/OpSWarpChargingView;)F
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v0, "], endLevel["
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v0, p0, Lcom/oneplus/battery/OpSWarpChargingView$4;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
+
+    invoke-static {v0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$1400(Lcom/oneplus/battery/OpSWarpChargingView;)F
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v0, "]"
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "OpSWarpChargingView"
+
+    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object p1, p0, Lcom/oneplus/battery/OpSWarpChargingView$4;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
 

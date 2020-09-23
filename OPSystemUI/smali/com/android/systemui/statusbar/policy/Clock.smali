@@ -611,6 +611,18 @@
     return-object v0
 .end method
 
+.method private measureText(Ljava/lang/String;FLandroid/graphics/Paint;)F
+    .locals 0
+
+    invoke-virtual {p3, p2}, Landroid/graphics/Paint;->setTextSize(F)V
+
+    invoke-virtual {p3, p1}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
+
+    move-result p0
+
+    return p0
+.end method
+
 .method private releaseReceiver()V
     .locals 2
 
@@ -645,7 +657,7 @@
 .end method
 
 .method private runSecondTick()V
-    .locals 5
+    .locals 6
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/policy/Clock;->mSecondsHandler:Landroid/os/Handler;
 
@@ -695,21 +707,23 @@
     :cond_1
     iget-object v0, p0, Lcom/android/systemui/statusbar/policy/Clock;->mSecondsHandler:Landroid/os/Handler;
 
-    iget-object p0, p0, Lcom/android/systemui/statusbar/policy/Clock;->mSecondTick:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/android/systemui/statusbar/policy/Clock;->mSecondTick:Ljava/lang/Runnable;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    const-wide/16 v3, 0x3e8
+    const-wide/16 v4, 0x3e8
 
-    div-long/2addr v1, v3
+    div-long/2addr v2, v4
 
-    mul-long/2addr v1, v3
+    mul-long/2addr v2, v4
 
-    add-long/2addr v1, v3
+    add-long/2addr v2, v4
 
-    invoke-virtual {v0, p0, v1, v2}, Landroid/os/Handler;->postAtTime(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postAtTime(Ljava/lang/Runnable;J)Z
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/Clock;->updateMinWidth()V
 
     :cond_2
     return-void
@@ -1504,6 +1518,8 @@
     :cond_0
     invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/Clock;->updateShowSeconds()V
 
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/Clock;->updateMinWidth()V
+
     goto :goto_0
 
     :cond_1
@@ -1615,9 +1631,18 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
+    invoke-virtual {p0}, Landroid/widget/TextView;->getMinimumWidth()I
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/Clock;->updateMinWidth()V
+
+    :cond_2
     iget-boolean v0, p0, Lcom/oneplus/systemui/statusbar/policy/OpClock;->mAlwaysVisible:Z
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/Clock;->getSmallTime()Ljava/lang/CharSequence;
 
@@ -1627,7 +1652,7 @@
 
     goto :goto_0
 
-    :cond_2
+    :cond_3
     invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/Clock;->getSmallTime()Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -1649,6 +1674,248 @@
 
     invoke-virtual {p0, v0}, Landroid/widget/TextView;->setContentDescription(Ljava/lang/CharSequence;)V
 
+    return-void
+.end method
+
+.method protected updateMinWidth()V
+    .locals 10
+
+    sget-object v0, Lcom/android/systemui/statusbar/policy/Clock;->TAG:Ljava/lang/String;
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/policy/Clock;->mCalendar:Ljava/util/Calendar;
+
+    if-eqz v1, :cond_7
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    goto/16 :goto_3
+
+    :cond_0
+    :try_start_0
+    invoke-virtual {p0}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    iget v2, p0, Lcom/android/systemui/statusbar/policy/Clock;->mCurrentUserId:I
+
+    invoke-static {v1, v2}, Landroid/text/format/DateFormat;->is24HourFormat(Landroid/content/Context;I)Z
+
+    move-result v1
+
+    new-instance v2, Landroid/graphics/Paint;
+
+    invoke-direct {v2}, Landroid/graphics/Paint;-><init>()V
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    sget v4, Lcom/android/systemui/R$dimen;->status_bar_clock_size:I
+
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v3
+
+    const-string v4, ":"
+
+    int-to-float v3, v3
+
+    invoke-direct {p0, v4, v3, v2}, Lcom/android/systemui/statusbar/policy/Clock;->measureText(Ljava/lang/String;FLandroid/graphics/Paint;)F
+
+    move-result v4
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    move v7, v6
+
+    :goto_0
+    const/16 v8, 0xa
+
+    if-ge v7, v8, :cond_2
+
+    invoke-static {v7}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-direct {p0, v8, v3, v2}, Lcom/android/systemui/statusbar/policy/Clock;->measureText(Ljava/lang/String;FLandroid/graphics/Paint;)F
+
+    move-result v8
+
+    cmpl-float v9, v8, v5
+
+    if-lez v9, :cond_1
+
+    move v5, v8
+
+    :cond_1
+    add-int/lit8 v7, v7, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    if-nez v1, :cond_3
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/policy/Clock;->mCalendar:Ljava/util/Calendar;
+
+    invoke-virtual {v1, v8}, Ljava/util/Calendar;->get(I)I
+
+    move-result v1
+
+    if-lez v1, :cond_3
+
+    if-ge v1, v8, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    const/4 v6, 0x1
+
+    :goto_1
+    iget-boolean v1, p0, Lcom/android/systemui/statusbar/policy/Clock;->mShowSeconds:Z
+
+    if-eqz v1, :cond_4
+
+    const/high16 v1, 0x40c00000    # 6.0f
+
+    mul-float/2addr v1, v5
+
+    const/high16 v2, 0x40000000    # 2.0f
+
+    goto :goto_2
+
+    :cond_4
+    const/high16 v1, 0x40800000    # 4.0f
+
+    mul-float/2addr v1, v5
+
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    :goto_2
+    mul-float/2addr v2, v4
+
+    add-float/2addr v1, v2
+
+    if-nez v6, :cond_5
+
+    sub-float/2addr v1, v5
+
+    :cond_5
+    invoke-virtual {p0}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    sget v3, Lcom/android/systemui/R$dimen;->status_bar_left_clock_end_padding:I
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    add-float/2addr v1, v2
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getMinimumWidth()I
+
+    move-result v2
+
+    float-to-int v3, v1
+
+    if-eq v2, v3, :cond_7
+
+    sget-boolean v2, Lcom/oneplus/util/OpUtils;->DEBUG_ONEPLUS:Z
+
+    if-eqz v2, :cond_6
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "colonWidth "
+
+    invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v4, " numberMaxWidth "
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v4, " minWidth "
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, " showTwoDigitsForHour "
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const/4 v1, 0x5
+
+    invoke-static {v1}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_6
+    invoke-virtual {p0, v3}, Landroid/widget/TextView;->setMinimumWidth(I)V
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->invalidate()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_3
+
+    :catch_0
+    move-exception p0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Exception "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_7
+    :goto_3
     return-void
 .end method
 

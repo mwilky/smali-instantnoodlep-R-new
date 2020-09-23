@@ -76,7 +76,7 @@
     <string name="interruption_level_movie">திரைப்படம்</string>
     <string name="interruption_level_music">இசை</string>
     <string name="keyguard_fingerprint_unlock">பூட்டுநீக்க கைரேகையைப் பயன்படுத்தவும்</string>
-    <string name="keyguard_indication_charging_time_fast_vooc">(முழுமையாவதற்கு %s நேரம் உள்ளது)</string>
+    <string name="keyguard_indication_charging_time_fast">(முழுமையாவதற்கு %s நேரம் உள்ளது)</string>
     <string name="keyguard_plugged_in_charging_warp">%s • Warp சார்ஜிங்</string>
     <string name="keyguard_plugged_in_wireless_warp">%s • Warp வயர்லெஸ் சார்ஜிங்</string>
     <string name="kg_at_least_four_points">குறைந்தது 4 புள்ளிகளைச் சேர்க்க வரையவும்</string>
@@ -173,7 +173,7 @@
     <string name="op_notification_channel_summary_low">எந்த ஒலி அல்லது அதிர்வு இல்லாத குறைந்த முக்கியத்துவம் கொண்ட அறிவிப்புகள்.</string>
     <string name="op_notification_section_header_gentle">மற்ற அறிவிப்புகள்</string>
     <string name="op_notification_silence_title">மற்றவை</string>
-    <string name="op_protect_charging">" Protect charging"</string>
+    <string name="op_protect_charging">" Protected charging"</string>
     <string name="op_qs_dark_mode_tile_label">அடர் முறை</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s பயன்படுத்தப்பட்டது</string>
     <string name="op_quick_settings_night_display_label">விஷன் வசதி</string>

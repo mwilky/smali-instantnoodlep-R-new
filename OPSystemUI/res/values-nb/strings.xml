@@ -939,7 +939,6 @@ Prioritet"</string>
     <string name="keyguard_fingerprint_unlock">Bruk fingeravtrykk for å låse opp</string>
     <string name="keyguard_indication_charging_time">%2$s • Lader (fulladet om %1$s)</string>
     <string name="keyguard_indication_charging_time_fast">%2$s • Lader raskt (fulladet om %1$s)</string>
-    <string name="keyguard_indication_charging_time_fast_vooc">(%s til fulladet)</string>
     <string name="keyguard_indication_charging_time_slowly">%2$s • Lader sakte (fulladet om %1$s)</string>
     <string name="keyguard_indication_charging_time_wireless">%2$s • Lader trådløst (fulladet om %1$s)</string>
     <string name="keyguard_indication_trust_disabled">Enheten forblir låst til du låser den opp manuelt</string>
@@ -1368,7 +1367,7 @@ Du er også tilkoblet en VPN som kan overvåke nettverksaktiviteten din."</strin
     <string name="op_notification_channel_summary_low">Mindre viktige varsler uten noe lyd eller vibrasjon.</string>
     <string name="op_notification_section_header_gentle">Andre varsler</string>
     <string name="op_notification_silence_title">Annet</string>
-    <string name="op_protect_charging">" Protect charging"</string>
+    <string name="op_protect_charging">" Protected charging"</string>
     <string name="op_qs_dark_mode_tile_label">Mørk modus</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s brukt</string>
     <string name="op_quick_settings_night_display_label">Synskomfort</string>

@@ -41,6 +41,8 @@
 
 .field private mHideUnlockMsgRunnable:Ljava/lang/Runnable;
 
+.field private mPowerManager:Landroid/os/PowerManager;
+
 .field private mTimeLabel:Landroid/widget/TextView;
 
 .field private mUnlockMarginBottom:I
@@ -50,6 +52,8 @@
 .field private mUnlocksMsg:Lcom/oneplus/aod/views/parsons/OpParsonsUnlockLabel;
 
 .field private mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+.field private mWakeLock:Landroid/os/PowerManager$WakeLock;
 
 
 # direct methods
@@ -172,15 +176,25 @@
 
     invoke-virtual {p0, p3}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    const-class p1, Lcom/android/keyguard/KeyguardUpdateMonitor;
+    const-class p2, Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-    invoke-static {p1}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {p2}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    iput-object p2, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    const-class p2, Landroid/os/PowerManager;
+
+    invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/android/keyguard/KeyguardUpdateMonitor;
+    check-cast p1, Landroid/os/PowerManager;
 
-    iput-object p1, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
+    iput-object p1, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mPowerManager:Landroid/os/PowerManager;
 
     return-void
 .end method
@@ -191,6 +205,34 @@
     iget-object p0, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mUnlocksMsg:Lcom/oneplus/aod/views/parsons/OpParsonsUnlockLabel;
 
     return-object p0
+.end method
+
+.method static synthetic access$100(Lcom/oneplus/aod/views/parsons/OpParsonsClock;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->releaseWakeLock()V
+
+    return-void
+.end method
+
+.method private acquireWakeLock()V
+    .locals 3
+
+    iget-object v0, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mPowerManager:Landroid/os/PowerManager;
+
+    const/4 v1, 0x1
+
+    const-string v2, "OpParsonsClock#hideHint"
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+
+    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
+
+    return-void
 .end method
 
 .method private applyRules(Landroid/widget/RelativeLayout$LayoutParams;I)V
@@ -360,8 +402,27 @@
     return v4
 .end method
 
+.method private releaseWakeLock()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+
+    :cond_0
+    return-void
+.end method
+
 .method private removeCallbacks()V
     .locals 1
+
+    invoke-direct {p0}, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->releaseWakeLock()V
 
     iget-object v0, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mHideUnlockMsgRunnable:Ljava/lang/Runnable;
 
@@ -728,6 +789,8 @@
     move-result v0
 
     if-eqz v0, :cond_1
+
+    invoke-direct {p0}, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->acquireWakeLock()V
 
     iget-object v0, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mHideUnlockMsgRunnable:Ljava/lang/Runnable;
 

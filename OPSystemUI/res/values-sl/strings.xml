@@ -939,7 +939,6 @@ prednostno"</string>
     <string name="keyguard_fingerprint_unlock">Odkleni s prstnim odtisom</string>
     <string name="keyguard_indication_charging_time">%2$s • polnjenje (%1$s do napolnjenosti)</string>
     <string name="keyguard_indication_charging_time_fast">%2$s • hitro polnjenje (%1$s do napolnjenosti)</string>
-    <string name="keyguard_indication_charging_time_fast_vooc">(Preostali čas do konca polnjenja: %s)</string>
     <string name="keyguard_indication_charging_time_slowly">%2$s • počasno polnjenje (%1$s do napolnjenosti)</string>
     <string name="keyguard_indication_charging_time_wireless">%2$s • brezžično polnjenje (%1$s do napolnjenosti)</string>
     <string name="keyguard_indication_trust_disabled">Naprava bo ostala zaklenjena, dokler je ročno ne odklenete.</string>
@@ -1368,7 +1367,7 @@ Povezani ste tudi z omrežjem VPN, ki lahko nadzira vašo omrežno dejavnost."</
     <string name="op_notification_channel_summary_low">Manj pomembna obvestila brez zvoka ali vibriranja.</string>
     <string name="op_notification_section_header_gentle">Druga obvestila</string>
     <string name="op_notification_silence_title">Drugo</string>
-    <string name="op_protect_charging">" Protect charging"</string>
+    <string name="op_protect_charging">" Protected charging"</string>
     <string name="op_qs_dark_mode_tile_label">Zatemnjeni način</string>
     <string name="op_qs_data_usage_used">Uporabljeno %1$s: %2$s %3$s</string>
     <string name="op_quick_settings_night_display_label">Udobno gledanje</string>

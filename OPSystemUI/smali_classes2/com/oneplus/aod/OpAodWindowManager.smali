@@ -313,7 +313,7 @@
 .end method
 
 .method private getAodViewLayoutParams()Landroid/view/WindowManager$LayoutParams;
-    .locals 5
+    .locals 4
 
     new-instance p0, Landroid/view/WindowManager$LayoutParams;
 
@@ -323,47 +323,29 @@
 
     iput v0, p0, Landroid/view/WindowManager$LayoutParams;->type:I
 
-    invoke-static {}, Lcom/oneplus/util/OpUtils;->isCtsInputmethodservice()Z
+    const/16 v0, 0x10
 
-    move-result v0
+    iput v0, p0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
-    if-eqz v0, :cond_0
+    const/4 v1, 0x3
 
-    const-string v0, "AodWindowManager"
+    iput v1, p0, Landroid/view/WindowManager$LayoutParams;->layoutInDisplayCutoutMode:I
 
-    const-string v1, "no focus flag"
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    const/16 v3, 0x1b
 
-    const v0, 0x1000508
+    if-lt v2, v3, :cond_0
 
-    goto :goto_0
+    const/high16 v2, 0x200000
+
+    or-int/2addr v0, v2
+
+    iput v0, p0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
     :cond_0
-    const v0, 0x1000500
+    const v0, 0x1000508
 
-    :goto_0
-    const/16 v1, 0x10
-
-    iput v1, p0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
-
-    const/4 v2, 0x3
-
-    iput v2, p0, Landroid/view/WindowManager$LayoutParams;->layoutInDisplayCutoutMode:I
-
-    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v4, 0x1b
-
-    if-lt v3, v4, :cond_1
-
-    const/high16 v3, 0x200000
-
-    or-int/2addr v1, v3
-
-    iput v1, p0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
-
-    :cond_1
     iput v0, p0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     const/4 v0, -0x2
@@ -388,7 +370,7 @@
 
     invoke-virtual {p0, v0}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    iput v2, p0, Landroid/view/WindowManager$LayoutParams;->softInputMode:I
+    iput v1, p0, Landroid/view/WindowManager$LayoutParams;->softInputMode:I
 
     return-object p0
 .end method

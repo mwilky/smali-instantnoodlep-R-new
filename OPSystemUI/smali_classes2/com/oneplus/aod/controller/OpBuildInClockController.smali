@@ -209,7 +209,7 @@
 
     check-cast v1, Landroid/widget/FrameLayout$LayoutParams;
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
     iget-object p0, p0, Lcom/oneplus/aod/controller/OpClockControllerImpl;->mContext:Landroid/content/Context;
 
@@ -268,15 +268,34 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
+    goto :goto_1
+
     :cond_2
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lcom/oneplus/aod/controller/OpBuildInClockController;->mViewImpl:Lcom/oneplus/aod/views/IOpAodClock;
+
+    :cond_3
+    :goto_1
     return-object v0
 .end method
 
 .method public onDestroyView()V
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Lcom/oneplus/aod/controller/OpBuildInClockController;->endSchedule()V
 
+    iget-object v0, p0, Lcom/oneplus/aod/controller/OpBuildInClockController;->mViewImpl:Lcom/oneplus/aod/views/IOpAodClock;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lcom/oneplus/aod/views/IOpAodClock;->release()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/oneplus/aod/controller/OpBuildInClockController;->mViewImpl:Lcom/oneplus/aod/views/IOpAodClock;
+
+    :cond_0
     invoke-super {p0}, Lcom/oneplus/aod/controller/OpClockControllerImpl;->onDestroyView()V
 
     return-void
@@ -365,9 +384,13 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/controller/OpClockControllerImpl;->mView:Landroid/view/View;
 
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/oneplus/aod/controller/OpBuildInClockController;->mViewImpl:Lcom/oneplus/aod/views/IOpAodClock;
+
     if-nez v0, :cond_0
 
-    return-void
+    goto :goto_0
 
     :cond_0
     invoke-super {p0}, Lcom/oneplus/aod/controller/OpClockControllerImpl;->onTimeTick()V
@@ -378,6 +401,8 @@
 
     invoke-interface {v0, p0}, Lcom/oneplus/aod/views/IOpAodClock;->onTimeChanged(Ljava/util/Calendar;)V
 
+    :cond_1
+    :goto_0
     return-void
 .end method
 

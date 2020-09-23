@@ -939,7 +939,6 @@
     <string name="keyguard_fingerprint_unlock">Использовать отпечаток пальца для разблокировки</string>
     <string name="keyguard_indication_charging_time">Идет зарядка (%2$s, ещё %1$s)</string>
     <string name="keyguard_indication_charging_time_fast">Идет быстрая зарядка (%2$s, ещё %1$s)</string>
-    <string name="keyguard_indication_charging_time_fast_vooc">(%s до полной зарядки)</string>
     <string name="keyguard_indication_charging_time_slowly">Идет медленная зарядка (%2$s, ещё %1$s)</string>
     <string name="keyguard_indication_charging_time_wireless">%2$s • Беспроводная зарядка (ещё %1$s)</string>
     <string name="keyguard_indication_trust_disabled">Устройство необходимо будет разблокировать вручную</string>
@@ -1368,7 +1367,7 @@
     <string name="op_notification_channel_summary_low">Менее важные уведомления без звука и вибрации.</string>
     <string name="op_notification_section_header_gentle">Другие уведомления</string>
     <string name="op_notification_silence_title">Другое</string>
-    <string name="op_protect_charging">" Protect charging"</string>
+    <string name="op_protect_charging">" Protected charging"</string>
     <string name="op_qs_dark_mode_tile_label">Темный режим</string>
     <string name="op_qs_data_usage_used">%1$s: использовано %2$s %3$s</string>
     <string name="op_quick_settings_night_display_label">Комфорт для глаз</string>

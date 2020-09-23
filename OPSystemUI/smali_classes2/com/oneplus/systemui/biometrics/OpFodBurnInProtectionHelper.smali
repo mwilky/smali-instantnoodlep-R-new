@@ -13,50 +13,64 @@
 
 .field private mHandler:Landroid/os/Handler;
 
+.field private mPowerManager:Landroid/os/PowerManager;
+
 .field private mShouldHiddenFod:Ljava/util/concurrent/atomic/AtomicBoolean;
 
 .field private mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
 .field private mUpdateMonitorCallback:Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
 
+.field private mWakeLock:Landroid/os/PowerManager$WakeLock;
+
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Lcom/android/keyguard/KeyguardUpdateMonitor;)V
-    .locals 1
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    iput-object p1, p0, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->mShouldHiddenFod:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iput-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->mShouldHiddenFod:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    new-instance p1, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper$1;
+    new-instance v0, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper$1;
 
-    invoke-direct {p1, p0}, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper$1;-><init>(Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;)V
+    invoke-direct {v0, p0}, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper$1;-><init>(Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;)V
 
-    iput-object p1, p0, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->mUpdateMonitorCallback:Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
+    iput-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->mUpdateMonitorCallback:Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
 
-    new-instance p1, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper$2;
+    new-instance v0, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper$2;
 
-    invoke-direct {p1, p0}, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper$2;-><init>(Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;)V
+    invoke-direct {v0, p0}, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper$2;-><init>(Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;)V
 
-    iput-object p1, p0, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->mCheckRunnable:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->mCheckRunnable:Ljava/lang/Runnable;
 
     iput-object p2, p0, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-    new-instance p1, Landroid/os/Handler;
+    new-instance p2, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    move-result-object p2
+    move-result-object v0
 
-    invoke-direct {p1, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    invoke-direct {p2, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    iput-object p1, p0, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->mHandler:Landroid/os/Handler;
+    iput-object p2, p0, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->mHandler:Landroid/os/Handler;
+
+    const-class p2, Landroid/os/PowerManager;
+
+    invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/os/PowerManager;
+
+    iput-object p1, p0, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->mPowerManager:Landroid/os/PowerManager;
 
     return-void
 .end method
@@ -95,6 +109,34 @@
     move-result p0
 
     return p0
+.end method
+
+.method static synthetic access$400(Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->releaseWakeLock()V
+
+    return-void
+.end method
+
+.method private acquireWakeLock()V
+    .locals 3
+
+    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->mPowerManager:Landroid/os/PowerManager;
+
+    const/4 v1, 0x1
+
+    const-string v2, "OpFodBurnInProtectionHelper#protect"
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+
+    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
+
+    return-void
 .end method
 
 .method private getDelayTime()I
@@ -266,6 +308,23 @@
     return v1
 .end method
 
+.method private releaseWakeLock()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+
+    :cond_0
+    return-void
+.end method
+
 .method private updateUI()V
     .locals 2
 
@@ -404,6 +463,8 @@
 
     invoke-static {v2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    invoke-direct {p0}, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->releaseWakeLock()V
+
     iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->mHandler:Landroid/os/Handler;
 
     iget-object v3, p0, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->mCheckRunnable:Ljava/lang/Runnable;
@@ -436,6 +497,8 @@
     invoke-direct {p0}, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->updateUI()V
 
     :cond_1
+    invoke-direct {p0}, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->acquireWakeLock()V
+
     iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->mHandler:Landroid/os/Handler;
 
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->mCheckRunnable:Ljava/lang/Runnable;

@@ -76,7 +76,7 @@ Ieslēgt Lidojuma režīmu?"</string>
     <string name="interruption_level_movie">Filmas</string>
     <string name="interruption_level_music">Mūzika</string>
     <string name="keyguard_fingerprint_unlock">Izmantojiet pirkstu nospiedumu, lai atbloķētu</string>
-    <string name="keyguard_indication_charging_time_fast_vooc">(līdz pilnai uzlādei atlikušas %s)</string>
+    <string name="keyguard_indication_charging_time_fast">(līdz pilnai uzlādei atlikušas %s)</string>
     <string name="keyguard_plugged_in_charging_warp">%s • Warp Charging</string>
     <string name="keyguard_plugged_in_wireless_warp">%s • Warp bezvadu uzlāde</string>
     <string name="kg_at_least_four_points">Zīmējiet tā, lai ietvertu vismaz 4 punktus</string>
@@ -173,7 +173,7 @@ Lai abonētu mobilo tīklāju, apmeklējiet My Verizon vai zvaniet klientu apkal
     <string name="op_notification_channel_summary_low">Mazāk svarīgiem paziņojumiem netiek lietota ne skaņa, ne vibrācija.</string>
     <string name="op_notification_section_header_gentle">Citi paziņojumi</string>
     <string name="op_notification_silence_title">Cits</string>
-    <string name="op_protect_charging">" Protect charging"</string>
+    <string name="op_protect_charging">" Protected charging"</string>
     <string name="op_qs_dark_mode_tile_label">Tumšais režīms</string>
     <string name="op_qs_data_usage_used">Izmantotais apjoms: %1$s: %2$s %3$s</string>
     <string name="op_quick_settings_night_display_label">Redzes komforts</string>

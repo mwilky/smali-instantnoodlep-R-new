@@ -939,7 +939,6 @@ prioritetno"</string>
     <string name="keyguard_fingerprint_unlock">Upotrijebi otisak prsta za otključavanje</string>
     <string name="keyguard_indication_charging_time">%2$s • punjenje (%1$s do napunjenosti)</string>
     <string name="keyguard_indication_charging_time_fast">%2$s • brzo punjenje (%1$s do napunjenosti)</string>
-    <string name="keyguard_indication_charging_time_fast_vooc">(%s do punog)</string>
     <string name="keyguard_indication_charging_time_slowly">%2$s • sporo punjenje (%1$s do napunjenosti)</string>
     <string name="keyguard_indication_charging_time_wireless">%2$s • bežično punjenje (%1$s do napunjenosti)</string>
     <string name="keyguard_indication_trust_disabled">Uređaj će ostati zaključan dok ga ručno ne otključate</string>
@@ -1368,7 +1367,7 @@ Povezani ste i s VPN-om koji može nadzirati vašu mrežnu aktivnost."</string>
     <string name="op_notification_channel_summary_low">Manje važne obavijesti bez zvuka ili vibracija.</string>
     <string name="op_notification_section_header_gentle">Druge obavijesti</string>
     <string name="op_notification_silence_title">Drugo</string>
-    <string name="op_protect_charging">" Protect charging"</string>
+    <string name="op_protect_charging">" Protected charging"</string>
     <string name="op_qs_dark_mode_tile_label">Tamni način</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s iskorišteno</string>
     <string name="op_quick_settings_night_display_label">Ugodnost gledanja</string>

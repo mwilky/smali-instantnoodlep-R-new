@@ -3,6 +3,17 @@
 .source "OpSketchBitmapHelper.java"
 
 
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/oneplus/aod/bg/OpSketchBitmapHelper;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "SketchPoint"
+.end annotation
+
+
 # instance fields
 .field private mDirection:I
 

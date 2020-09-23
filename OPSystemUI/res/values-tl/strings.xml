@@ -939,7 +939,6 @@ lang"</string>
     <string name="keyguard_fingerprint_unlock">Gamitin tatak ng daliri upang i-unlock</string>
     <string name="keyguard_indication_charging_time">%2$s • Nagcha-charge (%1$s hanggang mapuno)</string>
     <string name="keyguard_indication_charging_time_fast">%2$s • Mabilis na nagcha-charge (%1$s na lang)</string>
-    <string name="keyguard_indication_charging_time_fast_vooc">(%s hanggang mapuno)</string>
     <string name="keyguard_indication_charging_time_slowly">%2$s • Mabagal na nagcha-charge (%1$s na lang)</string>
     <string name="keyguard_indication_charging_time_wireless">%2$s • Wireless na nagcha-charge (%1$s bago mapuno)</string>
     <string name="keyguard_indication_trust_disabled">Mananatiling naka-lock ang device hanggang sa manual mong i-unlock</string>
@@ -1368,7 +1367,7 @@ Nakakonekta ka rin sa isang VPN, na may kakayahang subaybayan ang iyong aktibida
     <string name="op_notification_channel_summary_low">Mga hindi gaanong mahalagang notification na walang anumang tunog o pag-vibrate.</string>
     <string name="op_notification_section_header_gentle">Iba pang notification</string>
     <string name="op_notification_silence_title">Iba pa</string>
-    <string name="op_protect_charging">" Protect charging"</string>
+    <string name="op_protect_charging">" Protected charging"</string>
     <string name="op_qs_dark_mode_tile_label">Dark mode</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s ang nagamit</string>
     <string name="op_quick_settings_night_display_label">Ginhawa sa paningin</string>

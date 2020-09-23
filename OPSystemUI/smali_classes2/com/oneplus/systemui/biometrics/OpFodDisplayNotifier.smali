@@ -32,6 +32,8 @@
 
 .field private mPressModeRunnable:Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier$PressModeRunnable;
 
+.field private mResolver:Landroid/content/ContentResolver;
+
 .field private mUpdateMonitor:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
 
 
@@ -64,6 +66,14 @@
     iput-object v1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->mDaemon:Lvendor/oneplus/hardware/display/V1_0/IOneplusDisplay;
 
     iput-object p1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->mResolver:Landroid/content/ContentResolver;
+
+    iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->mContext:Landroid/content/Context;
 
     const-string v2, "power"
 
@@ -163,7 +173,15 @@
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;)Lvendor/oneplus/hardware/display/V1_0/IOneplusDisplay;
+.method static synthetic access$100(Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;)Landroid/content/ContentResolver;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->mResolver:Landroid/content/ContentResolver;
+
+    return-object p0
+.end method
+
+.method static synthetic access$200(Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;)Lvendor/oneplus/hardware/display/V1_0/IOneplusDisplay;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->mDaemon:Lvendor/oneplus/hardware/display/V1_0/IOneplusDisplay;
@@ -171,7 +189,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$200(Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;)Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
+.method static synthetic access$300(Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;)Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->mUpdateMonitor:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
@@ -179,7 +197,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$300(Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;)Lcom/oneplus/core/oimc/OIMCServiceManager;
+.method static synthetic access$400(Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;)Lcom/oneplus/core/oimc/OIMCServiceManager;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->mOIMCServiceManager:Lcom/oneplus/core/oimc/OIMCServiceManager;

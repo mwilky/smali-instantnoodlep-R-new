@@ -939,7 +939,6 @@
     <string name="keyguard_fingerprint_unlock">అన్‌లాక్ చేయడానికి ఫింగర్‌ప్రింట్ ఉపయోగించు</string>
     <string name="keyguard_indication_charging_time">%2$s • ఛార్జ్ అవుతోంది (పూర్తి కావడానికి %1$s)</string>
     <string name="keyguard_indication_charging_time_fast">%2$s • వేగంగా ఛార్జ్ అవుతోంది (పూర్తి కావడానికి %1$s)</string>
-    <string name="keyguard_indication_charging_time_fast_vooc">(%sపూర్తయ్యేంత వరకు)</string>
     <string name="keyguard_indication_charging_time_slowly">%2$s • నెమ్మదిగా ఛార్జ్ అవుతోంది (పూర్తి కావడానికి %1$s)</string>
     <string name="keyguard_indication_charging_time_wireless">%2$s • వైర్‌ లేకుండా ఛార్జ్ అవుతోంది (పూర్తి కావడానికి %1$s పడుతుంది)</string>
     <string name="keyguard_indication_trust_disabled">మీరు మాన్యువల్‌గా అన్‌లాక్ చేస్తే మినహా పరికరం లాక్ చేయబడి ఉంటుంది</string>
@@ -1368,7 +1367,7 @@
     <string name="op_notification_channel_summary_low">అంతగా ప్రాముఖ్యత లేని నోటిఫికేషన్‌లను ధ్వని లేదా వైబ్రేషన్ లేకుండా.</string>
     <string name="op_notification_section_header_gentle">ఇతర నోటిఫికేషన్‌లు</string>
     <string name="op_notification_silence_title">ఇతరం</string>
-    <string name="op_protect_charging">" Protect charging"</string>
+    <string name="op_protect_charging">" Protected charging"</string>
     <string name="op_qs_dark_mode_tile_label">డార్క్ మోడ్</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s ఉపయోగించిన</string>
     <string name="op_quick_settings_night_display_label">విజన్ కంఫర్ట్</string>

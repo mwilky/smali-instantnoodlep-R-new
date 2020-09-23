@@ -41,6 +41,7 @@
     <bool name="config_pipEnableRoundCorner">false</bool>
     <bool name="config_renderNotifications">true</bool>
     <bool name="config_roundedCornerMultipleRadius">false</bool>
+    <bool name="config_should_show_front_camera_animation">false</bool>
     <bool name="config_showActivity">true</bool>
     <bool name="config_showDividersWhenGroupNotificationExpanded">false</bool>
     <bool name="config_showEmergencyButton">false</bool>

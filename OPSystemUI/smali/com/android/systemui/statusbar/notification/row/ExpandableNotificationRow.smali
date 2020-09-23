@@ -4773,7 +4773,7 @@
 .end method
 
 .method public getOriginalIconColor()I
-    .locals 4
+    .locals 5
 
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mIsSummaryWithChildren:Z
 
@@ -4813,44 +4813,70 @@
     return v0
 
     :cond_1
-    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->getShelfIcon()Lcom/android/systemui/statusbar/StatusBarIconView;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-static {v2}, Lcom/oneplus/util/OpUtils;->isGlobalROM(Landroid/content/Context;)Z
+    const/4 v2, 0x0
 
-    move-result v2
+    if-eqz v0, :cond_2
 
-    if-nez v2, :cond_2
+    iget-object v3, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
 
-    return v0
+    invoke-static {v3}, Lcom/android/internal/util/ContrastColorUtil;->getInstance(Landroid/content/Context;)Lcom/android/internal/util/ContrastColorUtil;
+
+    move-result-object v3
+
+    invoke-static {v0, v3}, Lcom/android/systemui/statusbar/notification/NotificationUtils;->isGrayscale(Landroid/widget/ImageView;Lcom/android/internal/util/ContrastColorUtil;)Z
+
+    move-result v0
+
+    goto :goto_0
 
     :cond_2
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mEntry:Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
+    move v0, v2
 
-    iget-object v2, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+    :goto_0
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
-    iget-boolean v3, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mIsLowPriority:Z
+    move-result-object v3
 
-    if-eqz v3, :cond_3
-
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->isExpanded()Z
+    invoke-static {v3}, Lcom/oneplus/util/OpUtils;->isGlobalROM(Landroid/content/Context;)Z
 
     move-result v3
 
     if-nez v3, :cond_3
 
-    goto :goto_0
+    if-nez v0, :cond_3
+
+    return v2
 
     :cond_3
-    const/4 v1, 0x0
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mEntry:Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
 
-    :goto_0
+    iget-object v3, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+
+    iget-boolean v4, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mIsLowPriority:Z
+
+    if-eqz v4, :cond_4
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->isExpanded()Z
+
+    move-result v4
+
+    if-nez v4, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    move v1, v2
+
+    :goto_1
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/ActivatableNotificationView;->getBackgroundColorWithoutTint()I
 
     move-result p0
 
-    invoke-virtual {v0, v2, v1, p0}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->getContrastedColor(Landroid/content/Context;ZI)I
+    invoke-virtual {v0, v3, v1, p0}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->getContrastedColor(Landroid/content/Context;ZI)I
 
     move-result p0
 

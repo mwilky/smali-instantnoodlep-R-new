@@ -2621,3 +2621,38 @@
 
     return-void
 .end method
+
+.method public unsetView()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->containerView:Landroid/view/ViewGroup;
+
+    const-string v1, "SmartSpaceViewCtrl"
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "Clean up content views"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->containerView:Landroid/view/ViewGroup;
+
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
+
+    :cond_0
+    const-string v0, "Clean up SmartspaceViews and unregister the listeners"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-direct {p0}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->cleanup()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->smartspaceView:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;
+
+    iget-object p0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->smartspaceData:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceData;
+
+    invoke-virtual {p0}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceData;->clear()V
+
+    return-void
+.end method

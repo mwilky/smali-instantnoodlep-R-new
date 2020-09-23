@@ -967,6 +967,7 @@
     <item type="id" name="notification_guts" />
     <item type="id" name="notification_guts_stub" />
     <item type="id" name="notification_hidden" />
+    <item type="id" name="notification_icon" />
     <item type="id" name="notification_icon_area" />
     <item type="id" name="notification_icon_area_inner" />
     <item type="id" name="notification_lights_out" />

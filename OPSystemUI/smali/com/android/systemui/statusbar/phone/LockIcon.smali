@@ -163,7 +163,7 @@
 .end method
 
 .method onThemeChange(I)V
-    .locals 2
+    .locals 3
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/LockIcon;->mDrawableCache:Landroid/util/SparseArray;
 
@@ -183,11 +183,9 @@
 
     sget v0, Lcom/android/systemui/R$style;->Theme_SystemUI_Light:I
 
-    const/4 v1, 0x1
-
     if-ne p1, v0, :cond_0
 
-    move p1, v1
+    const/4 p1, 0x1
 
     goto :goto_0
 
@@ -197,7 +195,9 @@
     :goto_0
     if-eqz p1, :cond_1
 
-    invoke-virtual {p0, v1}, Landroid/widget/ImageView;->setAlpha(I)V
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setAlpha(F)V
 
     goto :goto_1
 
@@ -207,27 +207,37 @@
     invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setAlpha(F)V
 
     :goto_1
-    sget-boolean p0, Lcom/oneplus/util/OpUtils;->DEBUG_ONEPLUS:Z
+    sget-boolean v0, Lcom/oneplus/util/OpUtils;->DEBUG_ONEPLUS:Z
 
-    if-eqz p0, :cond_2
+    if-eqz v0, :cond_2
 
-    sget-object p0, Lcom/android/systemui/statusbar/phone/LockIcon;->TAG:Ljava/lang/String;
+    sget-object v0, Lcom/android/systemui/statusbar/phone/LockIcon;->TAG:Ljava/lang/String;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "onThemeChange, lightWpTheme:"
+    const-string v2, "onThemeChange, lightWpTheme:"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string p1, ", getAlpha():"
 
-    move-result-object p1
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {p0}, Landroid/widget/ImageView;->getAlpha()F
+
+    move-result p0
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
     return-void

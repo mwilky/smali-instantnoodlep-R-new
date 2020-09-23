@@ -41,7 +41,7 @@
     return-void
 .end method
 
-.method private onChange()V
+.method private onChangeInner(Z)Z
     .locals 5
 
     const-string v0, "OpAodCanvas"
@@ -78,21 +78,25 @@
     :cond_0
     iget-object p0, p0, Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;->this$0:Lcom/oneplus/aod/bg/OpAodCanvas;
 
-    invoke-static {p0, v1}, Lcom/oneplus/aod/bg/OpAodCanvas;->access$1100(Lcom/oneplus/aod/bg/OpAodCanvas;Landroid/os/Bundle;)V
+    invoke-static {p0, v1, p1}, Lcom/oneplus/aod/bg/OpAodCanvas;->access$1100(Lcom/oneplus/aod/bg/OpAodCanvas;Landroid/os/Bundle;Z)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    const/4 p0, 0x1
+
+    return p0
 
     :catch_0
     move-exception p0
 
-    const-string v1, "onChange occur error"
+    const-string p1, "onChange occur error"
 
-    invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v0, p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
-    return-void
+    const/4 p0, 0x0
+
+    return p0
 .end method
 
 
@@ -114,7 +118,9 @@
 
     invoke-static {p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-direct {p0}, Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;->onChange()V
+    const/4 p1, 0x1
+
+    invoke-direct {p0, p1}, Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;->onChangeInner(Z)Z
 
     :cond_0
     return-void
@@ -132,49 +138,61 @@
     return-void
 
     :cond_0
+    const/4 v1, 0x0
+
     :try_start_0
-    iget-object v1, p0, Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;->this$0:Lcom/oneplus/aod/bg/OpAodCanvas;
+    iget-object v2, p0, Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;->this$0:Lcom/oneplus/aod/bg/OpAodCanvas;
 
-    invoke-static {v1}, Lcom/oneplus/aod/bg/OpAodCanvas;->access$500(Lcom/oneplus/aod/bg/OpAodCanvas;)Landroid/content/Context;
+    invoke-static {v2}, Lcom/oneplus/aod/bg/OpAodCanvas;->access$500(Lcom/oneplus/aod/bg/OpAodCanvas;)Landroid/content/Context;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object v1
+    move-result-object v2
 
-    iget-object v2, p0, Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;->mUri:Landroid/net/Uri;
+    iget-object v3, p0, Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;->mUri:Landroid/net/Uri;
 
-    const/4 v3, 0x0
+    invoke-virtual {v2, v3, v1, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    invoke-virtual {v1, v2, v3, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
+    const-string v2, "register"
 
-    const-string v1, "register"
+    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    const/4 v2, 0x1
 
-    invoke-direct {p0}, Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;->onChange()V
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, p0, Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;->mResigerSuccess:Z
+    iput-boolean v2, p0, Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;->mResigerSuccess:Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-void
+    goto :goto_0
 
     :catch_0
-    move-exception v1
+    move-exception v2
 
-    sget-boolean v2, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+    sget-boolean v3, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
-    if-eqz v2, :cond_1
+    if-eqz v3, :cond_1
 
-    const-string v2, "AodBgObserver: registerContentObserver failed."
+    const-string v3, "AodBgObserver: registerContentObserver failed."
 
-    invoke-static {v0, v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v0, v3, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_1
+    :goto_0
+    iget-boolean v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;->mResigerSuccess:Z
+
+    if-eqz v0, :cond_2
+
+    invoke-direct {p0, v1}, Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;->onChangeInner(Z)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    goto :goto_1
+
+    :cond_2
     iget-object v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;->this$0:Lcom/oneplus/aod/bg/OpAodCanvas;
 
     invoke-static {v0}, Lcom/oneplus/aod/bg/OpAodCanvas;->access$800(Lcom/oneplus/aod/bg/OpAodCanvas;)Lcom/oneplus/aod/utils/OpCanvasAodHelper;
@@ -195,6 +213,7 @@
 
     invoke-virtual {v0, v1, p0}, Lcom/oneplus/aod/utils/OpCanvasAodHelper;->loadFromCache(Lcom/oneplus/aod/utils/OpCanvasAodHelper$OnBitmapHandleDoneListener;Landroid/os/Handler;)V
 
+    :goto_1
     return-void
 .end method
 

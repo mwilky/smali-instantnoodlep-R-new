@@ -1,11 +1,11 @@
 .class public final Lcom/android/systemui/statusbar/notification/row/ChannelRow;
-.super Landroid/widget/LinearLayout;
+.super Lcom/google/android/material/listview/ListItemView;
 .source "ChannelEditorListView.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nChannelEditorListView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ChannelEditorListView.kt\ncom/android/systemui/statusbar/notification/row/ChannelRow\n*L\n1#1,227:1\n*E\n"
+    value = "SMAP\nChannelEditorListView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ChannelEditorListView.kt\ncom/android/systemui/statusbar/notification/row/ChannelRow\n*L\n1#1,270:1\n*E\n"
 .end annotation
 
 
@@ -49,7 +49,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Lcom/google/android/material/listview/ListItemView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
@@ -305,17 +305,17 @@
 .end method
 
 .method protected onFinishInflate()V
-    .locals 2
+    .locals 3
 
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
-    sget v0, Lcom/android/systemui/R$id;->channel_name:I
+    sget v0, Lcom/android/systemui/R$id;->list_title:I
 
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    const-string v1, "findViewById(R.id.channel_name)"
+    const-string v1, "findViewById(R.id.list_title)"
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -323,13 +323,13 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/notification/row/ChannelRow;->channelName:Landroid/widget/TextView;
 
-    sget v0, Lcom/android/systemui/R$id;->channel_description:I
+    sget v0, Lcom/android/systemui/R$id;->list_summary:I
 
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    const-string v1, "findViewById(R.id.channel_description)"
+    const-string v1, "findViewById(R.id.list_summary)"
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -337,19 +337,37 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/notification/row/ChannelRow;->channelDescription:Landroid/widget/TextView;
 
-    sget v0, Lcom/android/systemui/R$id;->toggle:I
+    sget v0, Lcom/android/systemui/R$id;->list_widget_frame:I
 
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    const-string v1, "findViewById(R.id.toggle)"
+    const-string v1, "findViewById(R.id.list_widget_frame)"
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast v0, Landroid/widget/Switch;
+    check-cast v0, Landroid/view/ViewGroup;
+
+    new-instance v0, Landroid/widget/Switch;
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/widget/Switch;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/notification/row/ChannelRow;->switch:Landroid/widget/Switch;
+
+    const/4 v1, 0x0
+
+    const-string/jumbo v2, "switch"
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0, v0}, Lcom/google/android/material/listview/ListItemView;->addCustomView(Landroid/view/View;)V
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/ChannelRow;->switch:Landroid/widget/Switch;
 
     if-eqz v0, :cond_0
 
@@ -368,13 +386,14 @@
     return-void
 
     :cond_0
-    const-string/jumbo p0, "switch"
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+    throw v1
 
-    const/4 p0, 0x0
+    :cond_1
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
 
-    throw p0
+    throw v1
 .end method
 
 .method public final playHighlight()V

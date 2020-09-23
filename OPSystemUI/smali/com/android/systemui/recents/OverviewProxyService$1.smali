@@ -1414,7 +1414,7 @@
 .method public setShelfHeight(ZI)V
     .locals 2
 
-    const-string v0, "setShelfHeight"
+    const-string/jumbo v0, "setShelfHeight"
 
     invoke-direct {p0, v0}, Lcom/android/systemui/recents/OverviewProxyService$1;->verifyCaller(Ljava/lang/String;)Z
 
@@ -1489,6 +1489,25 @@
     return-void
 
     :cond_0
+    invoke-static {}, Lcom/oneplus/plugin/OpLsState;->getInstance()Lcom/oneplus/plugin/OpLsState;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oneplus/plugin/OpLsState;->getPhoneStatusBar()Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0, p1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->checkGestureStartAssist(Landroid/os/Bundle;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    return-void
+
+    :cond_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0

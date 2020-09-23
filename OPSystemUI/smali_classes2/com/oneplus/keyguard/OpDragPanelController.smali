@@ -128,6 +128,39 @@
 
     iget-object p1, p0, Lcom/oneplus/keyguard/OpDragPanelController;->mContext:Landroid/content/Context;
 
+    invoke-static {p1}, Lcom/android/systemui/assist/ui/DisplayUtils;->getWidth(Landroid/content/Context;)I
+
+    move-result p1
+
+    const/16 p2, 0x438
+
+    if-le p1, p2, :cond_0
+
+    iget-object p1, p0, Lcom/oneplus/keyguard/OpDragPanelController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    sget p3, Lcom/android/systemui/R$dimen;->op_emergency_bubble_drop_distance:I
+
+    invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p1
+
+    int-to-float p1, p1
+
+    invoke-static {p1, p2}, Lcom/oneplus/util/OpUtils;->convertPxByResolutionProportion(FI)I
+
+    move-result p1
+
+    sput p1, Lcom/oneplus/keyguard/OpDragPanelController;->mDropThreshold:I
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p1, p0, Lcom/oneplus/keyguard/OpDragPanelController;->mContext:Landroid/content/Context;
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -140,6 +173,7 @@
 
     sput p1, Lcom/oneplus/keyguard/OpDragPanelController;->mDropThreshold:I
 
+    :goto_0
     const-wide/16 p1, 0x74
 
     invoke-direct {p0, p1, p2}, Lcom/oneplus/keyguard/OpDragPanelController;->getZoomInAnimatorSet(J)Landroid/animation/AnimatorSet;

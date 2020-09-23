@@ -40,32 +40,43 @@
 
     const/16 v0, 0x100
 
+    if-eq p1, v0, :cond_1
+
+    const/16 v0, 0x110
+
     if-eq p1, v0, :cond_0
 
     goto :goto_0
 
     :cond_0
+    iget-object p0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$2;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
+
+    invoke-static {p0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$1100(Lcom/oneplus/aod/OpAodLightEffectContainer;)V
+
+    goto :goto_0
+
+    :cond_1
     iget-object p1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$2;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
 
-    invoke-static {p1}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$700(Lcom/oneplus/aod/OpAodLightEffectContainer;)I
+    invoke-static {p1}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$800(Lcom/oneplus/aod/OpAodLightEffectContainer;)I
 
     move-result p1
 
     const/16 v1, 0x64
 
-    if-ge p1, v1, :cond_1
+    if-ge p1, v1, :cond_2
 
     iget-object p1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$2;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
 
-    invoke-static {p1}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$800(Lcom/oneplus/aod/OpAodLightEffectContainer;)Landroid/os/Handler;
+    invoke-static {p1}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$900(Lcom/oneplus/aod/OpAodLightEffectContainer;)Landroid/os/Handler;
 
     move-result-object p1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_2
 
     iget-object p1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$2;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
 
-    invoke-static {p1}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$800(Lcom/oneplus/aod/OpAodLightEffectContainer;)Landroid/os/Handler;
+    invoke-static {p1}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$900(Lcom/oneplus/aod/OpAodLightEffectContainer;)Landroid/os/Handler;
 
     move-result-object p1
 
@@ -73,9 +84,9 @@
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer$2;->this$0:Lcom/oneplus/aod/OpAodLightEffectContainer;
 
-    invoke-static {p0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$900(Lcom/oneplus/aod/OpAodLightEffectContainer;)V
+    invoke-static {p0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->access$1000(Lcom/oneplus/aod/OpAodLightEffectContainer;)V
 
-    :cond_1
+    :cond_2
     :goto_0
     return-void
 .end method

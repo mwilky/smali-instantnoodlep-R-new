@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nChannelEditorListView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ChannelEditorListView.kt\ncom/android/systemui/statusbar/notification/row/ChannelEditorListView\n*L\n1#1,227:1\n*E\n"
+    value = "SMAP\nChannelEditorListView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ChannelEditorListView.kt\ncom/android/systemui/statusbar/notification/row/ChannelEditorListView\n*L\n1#1,270:1\n*E\n"
 .end annotation
 
 
@@ -13,6 +13,11 @@
 .field private appControlRow:Lcom/android/systemui/statusbar/notification/row/AppControlView;
 
 .field private appIcon:Landroid/graphics/drawable/Drawable;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
+
+.field private appIconView:Landroid/widget/ImageView;
     .annotation build Lorg/jetbrains/annotations/Nullable;
     .end annotation
 .end field
@@ -99,7 +104,7 @@
 .method private final addChannelRow(Landroid/app/NotificationChannel;Landroid/view/LayoutInflater;)V
     .locals 2
 
-    sget v0, Lcom/android/systemui/R$layout;->notif_half_shelf_row:I
+    sget v0, Lcom/android/systemui/R$layout;->op_notif_half_shelf_row:I
 
     const/4 v1, 0x0
 
@@ -147,6 +152,15 @@
 .method private final updateAppControlRow(Z)V
     .locals 8
 
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/ChannelEditorListView;->appIconView:Landroid/widget/ImageView;
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/notification/row/ChannelEditorListView;->appIcon:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/ChannelEditorListView;->appControlRow:Lcom/android/systemui/statusbar/notification/row/AppControlView;
 
     const/4 v1, 0x0
@@ -154,18 +168,6 @@
     const-string v2, "appControlRow"
 
     if-eqz v0, :cond_3
-
-    invoke-virtual {v0}, Lcom/android/systemui/statusbar/notification/row/AppControlView;->getIconView()Landroid/widget/ImageView;
-
-    move-result-object v0
-
-    iget-object v3, p0, Lcom/android/systemui/statusbar/notification/row/ChannelEditorListView;->appIcon:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/ChannelEditorListView;->appControlRow:Lcom/android/systemui/statusbar/notification/row/AppControlView;
-
-    if-eqz v0, :cond_2
 
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/notification/row/AppControlView;->getChannelName()Landroid/widget/TextView;
 
@@ -203,7 +205,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/ChannelEditorListView;->appControlRow:Lcom/android/systemui/statusbar/notification/row/AppControlView;
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/notification/row/AppControlView;->getSwitch()Landroid/widget/Switch;
 
@@ -213,7 +215,7 @@
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/notification/row/ChannelEditorListView;->appControlRow:Lcom/android/systemui/statusbar/notification/row/AppControlView;
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_1
 
     invoke-virtual {p1}, Lcom/android/systemui/statusbar/notification/row/AppControlView;->getSwitch()Landroid/widget/Switch;
 
@@ -226,11 +228,6 @@
     invoke-virtual {p1, v0}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
     return-void
-
-    :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
-
-    throw v1
 
     :cond_1
     invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
@@ -447,6 +444,16 @@
     check-cast v0, Lcom/android/systemui/statusbar/notification/row/AppControlView;
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/notification/row/ChannelEditorListView;->appControlRow:Lcom/android/systemui/statusbar/notification/row/AppControlView;
+
+    sget v0, Lcom/android/systemui/R$id;->notification_icon:I
+
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lcom/android/systemui/statusbar/notification/row/ChannelEditorListView;->appIconView:Landroid/widget/ImageView;
 
     return-void
 .end method

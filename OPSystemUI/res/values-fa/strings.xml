@@ -939,7 +939,6 @@
     <string name="keyguard_fingerprint_unlock">از اثر انگشت برای قفل‌گشایی استفاده کنید</string>
     <string name="keyguard_indication_charging_time">%2$s • درحال شارژ شدن (%1$s تا شارژ کامل)</string>
     <string name="keyguard_indication_charging_time_fast">%2$s • درحال شارژ سریع (%1$s تا شارژ کامل)</string>
-    <string name="keyguard_indication_charging_time_fast_vooc">(%s تا شارژ کامل)</string>
     <string name="keyguard_indication_charging_time_slowly">%2$s • آهسته‌آهسته شارژ می‌شود (%1$s تا شارژ کامل)</string>
     <string name="keyguard_indication_charging_time_wireless">%2$s • درحال شارژ بی‌سیم (%1$s تا شارژ کامل)</string>
     <string name="keyguard_indication_trust_disabled">دستگاه قفل باقی می‌ماند تا زمانی که قفل آن را به صورت دستی باز کنید</string>
@@ -1368,7 +1367,7 @@
     <string name="op_notification_channel_summary_low">اعلان‌های کم‌اهمیت‌تر بدون صدا یا لرزش خواهد بود.</string>
     <string name="op_notification_section_header_gentle">سایر اعلان‌ها</string>
     <string name="op_notification_silence_title">سایر موارد</string>
-    <string name="op_protect_charging">" Protect charging"</string>
+    <string name="op_protect_charging">" Protected charging"</string>
     <string name="op_qs_dark_mode_tile_label">حالت تاریک</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s%3$s استفاده شده</string>
     <string name="op_quick_settings_night_display_label">راحتی دید</string>

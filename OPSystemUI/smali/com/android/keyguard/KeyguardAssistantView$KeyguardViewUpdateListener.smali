@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0xa
     name = "KeyguardViewUpdateListener"
 .end annotation
 
@@ -20,24 +20,20 @@
 # instance fields
 .field private mKeyguardAssistantView:Lcom/android/keyguard/KeyguardAssistantView;
 
-.field final synthetic this$0:Lcom/android/keyguard/KeyguardAssistantView;
-
 
 # direct methods
-.method private constructor <init>(Lcom/android/keyguard/KeyguardAssistantView;)V
+.method private constructor <init>()V
     .locals 0
-
-    iput-object p1, p0, Lcom/android/keyguard/KeyguardAssistantView$KeyguardViewUpdateListener;->this$0:Lcom/android/keyguard/KeyguardAssistantView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/keyguard/KeyguardAssistantView;Lcom/android/keyguard/KeyguardAssistantView$1;)V
+.method synthetic constructor <init>(Lcom/android/keyguard/KeyguardAssistantView$1;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/keyguard/KeyguardAssistantView$KeyguardViewUpdateListener;-><init>(Lcom/android/keyguard/KeyguardAssistantView;)V
+    invoke-direct {p0}, Lcom/android/keyguard/KeyguardAssistantView$KeyguardViewUpdateListener;-><init>()V
 
     return-void
 .end method
@@ -102,7 +98,7 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView$KeyguardViewUpdateListener;->this$0:Lcom/android/keyguard/KeyguardAssistantView;
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView$KeyguardViewUpdateListener;->mKeyguardAssistantView:Lcom/android/keyguard/KeyguardAssistantView;
 
     invoke-virtual {p0}, Lcom/android/keyguard/KeyguardAssistantView;->setGoogleSmartspaceChildViewHeight()V
 
@@ -136,7 +132,7 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView$KeyguardViewUpdateListener;->this$0:Lcom/android/keyguard/KeyguardAssistantView;
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView$KeyguardViewUpdateListener;->mKeyguardAssistantView:Lcom/android/keyguard/KeyguardAssistantView;
 
     invoke-virtual {p0}, Lcom/android/keyguard/KeyguardAssistantView;->setGoogleSmartspaceChildViewHeight()V
 

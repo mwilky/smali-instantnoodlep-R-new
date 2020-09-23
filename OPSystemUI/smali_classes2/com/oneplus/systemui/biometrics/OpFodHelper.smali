@@ -563,18 +563,6 @@
     return-void
 .end method
 
-.method public isAppLockerClient()Z
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFodHelper;->mCurrentClient:Ljava/lang/String;
-
-    invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpFodHelper;->isAppLocker(Ljava/lang/String;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
 .method public isBiometricPromptReadyToShow()Z
     .locals 1
 

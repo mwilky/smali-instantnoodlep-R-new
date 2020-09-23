@@ -626,13 +626,41 @@
 
 .field public static final op_draw_cutout_circle_y:I = 0x7f0706b7
 
+.field public static final op_emergency_bubble_area_height:I = 0x7f0706b8
+
+.field public static final op_emergency_bubble_area_width:I = 0x7f0706b9
+
 .field public static final op_emergency_bubble_diameter:I = 0x7f0706ba
 
 .field public static final op_emergency_bubble_drop_distance:I = 0x7f0706bb
 
+.field public static final op_emergency_bubble_margin_top:I = 0x7f0706bc
+
+.field public static final op_emergency_bubble_text_size:I = 0x7f0706bd
+
 .field public static final op_emergency_panel_indicator_arrow_animation_transY:I = 0x7f0706bf
 
+.field public static final op_emergency_panel_indicator_hint_text_size:I = 0x7f0706c3
+
+.field public static final op_emergency_panel_indicator_margin_top:I = 0x7f0706c4
+
+.field public static final op_emergency_panel_indicator_padding:I = 0x7f0706c5
+
 .field public static final op_fingerprint_icon_dim_alpha_precentage:I = 0x7f0706c6
+
+.field public static final op_front_camera_animation_default_resource_resolution:I = 0x7f0706c8
+
+.field public static final op_front_camera_animation_front_camera_posistion:I = 0x7f0706c9
+
+.field public static final op_front_camera_animation_front_camera_posistion_second:I = 0x7f0706ca
+
+.field public static final op_front_camera_animation_front_camera_posistion_y:I = 0x7f0706cb
+
+.field public static final op_front_camera_animation_front_camera_posistion_y_second:I = 0x7f0706cc
+
+.field public static final op_front_camera_animation_height:I = 0x7f0706cd
+
+.field public static final op_front_camera_animation_width:I = 0x7f0706ce
 
 .field public static final op_game_mode_toolbox_region_width_land:I = 0x7f0706cf
 
@@ -1063,6 +1091,8 @@
 .field public static final status_bar_icon_scale_factor:I = 0x7f07090b
 
 .field public static final status_bar_icon_size:I = 0x7f07090c
+
+.field public static final status_bar_left_clock_end_padding:I = 0x7f07090d
 
 .field public static final status_bar_notification_icon_padding:I = 0x7f07090f
 

@@ -30,6 +30,8 @@
 
 .field private mLastAlpha:I
 
+.field private mOpFingerprintConfig:Lcom/oneplus/onlineconfig/OpFingerprintConfig;
+
 .field protected mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
 .field private mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
@@ -410,6 +412,30 @@
     if-eqz p0, :cond_0
 
     const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+.end method
+
+.method protected isSupportAccelerate()Z
+    .locals 1
+
+    iget-object p0, p0, Lcom/oneplus/systemui/keyguard/OpKeyguardViewMediator;->mOpFingerprintConfig:Lcom/oneplus/onlineconfig/OpFingerprintConfig;
+
+    if-eqz p0, :cond_0
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->getTopPackageName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/oneplus/onlineconfig/OpFingerprintConfig;->isAppSupportAccelerate(Ljava/lang/String;)Z
+
+    move-result p0
 
     goto :goto_0
 
@@ -893,6 +919,14 @@
     invoke-direct {v0, v1}, Lcom/oneplus/systemui/keyguard/OpKeyguardUnlockCounter;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/oneplus/systemui/keyguard/OpKeyguardViewMediator;->mKeyguardUnlockCounter:Lcom/oneplus/systemui/keyguard/OpKeyguardUnlockCounter;
+
+    new-instance v0, Lcom/oneplus/onlineconfig/OpFingerprintConfig;
+
+    iget-object v1, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
+
+    invoke-direct {v0, v1}, Lcom/oneplus/onlineconfig/OpFingerprintConfig;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/oneplus/systemui/keyguard/OpKeyguardViewMediator;->mOpFingerprintConfig:Lcom/oneplus/onlineconfig/OpFingerprintConfig;
 
     return-void
 .end method

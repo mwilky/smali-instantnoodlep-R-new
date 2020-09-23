@@ -76,7 +76,7 @@ Hidupkan Mod Pesawat?"</string>
     <string name="interruption_level_movie">Filem</string>
     <string name="interruption_level_music">Muzik</string>
     <string name="keyguard_fingerprint_unlock">Gunakan cap jari untuk membuka kunci</string>
-    <string name="keyguard_indication_charging_time_fast_vooc">(%s sehingga penuh)</string>
+    <string name="keyguard_indication_charging_time_fast">(%s sehingga penuh)</string>
     <string name="keyguard_plugged_in_charging_warp">%s • Pengecasan Warp</string>
     <string name="keyguard_plugged_in_wireless_warp">%s • Pengecasan Wayarles Warp</string>
     <string name="kg_at_least_four_points">Lukis untuk termasuk sekurang-kurangnya 4 titik</string>
@@ -173,7 +173,7 @@ Untuk melanggan Hotspot Mudah Alih, kunjungi Verizon Saya atau hubungi khidmat p
     <string name="op_notification_channel_summary_low">Pemberitahuan yang kurang penting tanpa apa-apa bunyi atau getaran.</string>
     <string name="op_notification_section_header_gentle">Pemberitahuan lain</string>
     <string name="op_notification_silence_title">Lain-lain</string>
-    <string name="op_protect_charging">" Protect charging"</string>
+    <string name="op_protect_charging">" Protected charging"</string>
     <string name="op_qs_dark_mode_tile_label">Mod gelap</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s digunakan</string>
     <string name="op_quick_settings_night_display_label">Keselesaan penglihatan</string>

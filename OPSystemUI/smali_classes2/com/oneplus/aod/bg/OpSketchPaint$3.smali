@@ -49,7 +49,7 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/bg/OpSketchPaint$3;->this$0:Lcom/oneplus/aod/bg/OpSketchPaint;
 
-    invoke-static {v0}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$600(Lcom/oneplus/aod/bg/OpSketchPaint;)Landroid/graphics/Paint;
+    invoke-static {v0}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$300(Lcom/oneplus/aod/bg/OpSketchPaint;)Landroid/graphics/Paint;
 
     move-result-object v0
 
@@ -63,7 +63,7 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/bg/OpSketchPaint$3;->this$0:Lcom/oneplus/aod/bg/OpSketchPaint;
 
-    invoke-static {v0}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$700(Lcom/oneplus/aod/bg/OpSketchPaint;)[Landroid/graphics/Paint;
+    invoke-static {v0}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$400(Lcom/oneplus/aod/bg/OpSketchPaint;)[Landroid/graphics/Paint;
 
     move-result-object v0
 

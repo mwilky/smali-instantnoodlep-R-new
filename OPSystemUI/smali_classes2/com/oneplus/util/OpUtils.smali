@@ -42,8 +42,6 @@
 
 .field private static mIsCTSAdded:Z
 
-.field private static mIsCtsInputmethodservice:Z
-
 .field public static mIsFullScreenListApp:Z
 
 .field private static mIsHomeApp:Z
@@ -64,6 +62,8 @@
 
 .field private static mOverlayManager:Landroid/content/om/IOverlayManager;
 
+.field private static mPackageName:Ljava/lang/String;
+
 .field public static mScreenResolution:I
 
 .field private static mSimType:Ljava/lang/String;
@@ -83,6 +83,8 @@
 
 .field public static sIsSupportAssistantGesture:Z
 
+.field private static sStatusBarIconsDark:Z
+
 
 # direct methods
 .method static constructor <clinit>()V
@@ -101,8 +103,6 @@
     sput-boolean v0, Lcom/oneplus/util/OpUtils;->mIsScreenCompat:Z
 
     sput-boolean v0, Lcom/oneplus/util/OpUtils;->mIsCTS:Z
-
-    sput-boolean v0, Lcom/oneplus/util/OpUtils;->mIsCtsInputmethodservice:Z
 
     sput-boolean v0, Lcom/oneplus/util/OpUtils;->mIsCTSAdded:Z
 
@@ -152,6 +152,8 @@
 
     sput-boolean v0, Lcom/oneplus/util/OpUtils;->QUICK_REPLY_PORTRAIT_ENABLED:Z
 
+    sput-boolean v0, Lcom/oneplus/util/OpUtils;->sStatusBarIconsDark:Z
+
     const-string v1, "UNKNOWN"
 
     sput-object v1, Lcom/oneplus/util/OpUtils;->mSimType:Ljava/lang/String;
@@ -167,6 +169,8 @@
     const-string v0, ""
 
     sput-object v0, Lcom/oneplus/util/OpUtils;->mTopClassName:Ljava/lang/String;
+
+    sput-object v0, Lcom/oneplus/util/OpUtils;->mPackageName:Ljava/lang/String;
 
     sput-boolean v2, Lcom/oneplus/util/OpUtils;->sIsSupportAssistantGesture:Z
 
@@ -1192,6 +1196,14 @@
     return-object v0
 .end method
 
+.method public static getTopPackageName()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lcom/oneplus/util/OpUtils;->mPackageName:Ljava/lang/String;
+
+    return-object v0
+.end method
+
 .method private static getTypefaceByPath(Ljava/lang/String;)Landroid/graphics/Typeface;
     .locals 2
 
@@ -1397,14 +1409,6 @@
     .locals 1
 
     sget-boolean v0, Lcom/oneplus/util/OpUtils;->mIsCTSAdded:Z
-
-    return v0
-.end method
-
-.method public static isCtsInputmethodservice()Z
-    .locals 1
-
-    sget-boolean v0, Lcom/oneplus/util/OpUtils;->mIsCtsInputmethodservice:Z
 
     return v0
 .end method
@@ -2223,6 +2227,14 @@
     goto :goto_0
 
     :cond_1
+    return v0
+.end method
+
+.method public static isStatusBarIconsDark()Z
+    .locals 1
+
+    sget-boolean v0, Lcom/oneplus/util/OpUtils;->sStatusBarIconsDark:Z
+
     return v0
 .end method
 
@@ -3262,6 +3274,8 @@
 .method public static notifyStatusBarIconsDark(Z)V
     .locals 0
 
+    sput-boolean p0, Lcom/oneplus/util/OpUtils;->sStatusBarIconsDark:Z
+
     return-void
 .end method
 
@@ -3597,6 +3611,8 @@
 
     sput-object p2, Lcom/oneplus/util/OpUtils;->mTopClassName:Ljava/lang/String;
 
+    sput-object p1, Lcom/oneplus/util/OpUtils;->mPackageName:Ljava/lang/String;
+
     new-instance p2, Landroid/content/Intent;
 
     const-string v0, "android.intent.action.MAIN"
@@ -3747,16 +3763,7 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
-    move-result v0
-
-    sput-boolean v0, Lcom/oneplus/util/OpUtils;->mIsCtsInputmethodservice:Z
-
-    goto :goto_7
-
     :cond_9
-    sput-boolean v1, Lcom/oneplus/util/OpUtils;->mIsCtsInputmethodservice:Z
-
-    :goto_7
     if-eqz p1, :cond_c
 
     const-string v0, "com.mobile.legends"
@@ -3775,26 +3782,26 @@
 
     if-eqz v0, :cond_a
 
-    goto :goto_8
+    goto :goto_7
 
     :cond_a
     move v0, v1
 
-    goto :goto_9
+    goto :goto_8
 
     :cond_b
-    :goto_8
+    :goto_7
     move v0, p2
 
-    :goto_9
+    :goto_8
     sput-boolean v0, Lcom/oneplus/util/OpUtils;->mIsNeedDarkNavBar:Z
 
-    goto :goto_a
+    goto :goto_9
 
     :cond_c
     sput-boolean v1, Lcom/oneplus/util/OpUtils;->mIsNeedDarkNavBar:Z
 
-    :goto_a
+    :goto_9
     if-eqz p1, :cond_d
 
     invoke-static {p1}, Lcom/oneplus/systemui/OpSystemUIInjector;->isInNavGestureFullscreenList(Ljava/lang/String;)Z
@@ -3803,12 +3810,12 @@
 
     sput-boolean v0, Lcom/oneplus/util/OpUtils;->mIsFullScreenListApp:Z
 
-    goto :goto_b
+    goto :goto_a
 
     :cond_d
     sput-boolean v1, Lcom/oneplus/util/OpUtils;->mIsFullScreenListApp:Z
 
-    :goto_b
+    :goto_a
     const-string v0, "appops"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -3838,22 +3845,22 @@
 
     if-nez p0, :cond_e
 
-    goto :goto_c
+    goto :goto_b
 
     :cond_e
     move p2, v1
 
-    :goto_c
+    :goto_b
     sput-boolean p2, Lcom/oneplus/util/OpUtils;->mIsScreenCompat:Z
 
-    goto :goto_d
+    goto :goto_c
 
     :cond_f
     sput-boolean v1, Lcom/oneplus/util/OpUtils;->mIsScreenCompat:Z
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_d
+    goto :goto_c
 
     :catch_0
     move-exception p0
@@ -3862,6 +3869,6 @@
 
     sput-boolean v1, Lcom/oneplus/util/OpUtils;->mIsScreenCompat:Z
 
-    :goto_d
+    :goto_c
     return-void
 .end method

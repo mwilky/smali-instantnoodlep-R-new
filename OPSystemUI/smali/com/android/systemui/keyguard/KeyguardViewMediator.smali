@@ -823,12 +823,14 @@
     return-void
 .end method
 
-.method static synthetic access$5500(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Lcom/android/systemui/statusbar/phone/StatusBar;
+.method static synthetic access$5500(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Z
     .locals 0
 
-    iget-object p0, p0, Lcom/oneplus/systemui/keyguard/OpKeyguardViewMediator;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
+    invoke-virtual {p0}, Lcom/oneplus/systemui/keyguard/OpKeyguardViewMediator;->isSupportAccelerate()Z
 
-    return-object p0
+    move-result p0
+
+    return p0
 .end method
 
 .method static synthetic access$5600(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Lcom/android/systemui/statusbar/phone/StatusBar;
@@ -847,18 +849,18 @@
     return-object p0
 .end method
 
-.method static synthetic access$5800(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Z
+.method static synthetic access$5800(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Lcom/android/systemui/statusbar/phone/StatusBar;
     .locals 0
 
-    iget-boolean p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mWakeAndUnlocking:Z
+    iget-object p0, p0, Lcom/oneplus/systemui/keyguard/OpKeyguardViewMediator;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
-    return p0
+    return-object p0
 .end method
 
 .method static synthetic access$5900(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Z
     .locals 0
 
-    iget-boolean p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mPulsing:Z
+    iget-boolean p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mWakeAndUnlocking:Z
 
     return p0
 .end method
@@ -871,7 +873,15 @@
     return-void
 .end method
 
-.method static synthetic access$6000(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Ljava/util/concurrent/Executor;
+.method static synthetic access$6000(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mPulsing:Z
+
+    return p0
+.end method
+
+.method static synthetic access$6100(Lcom/android/systemui/keyguard/KeyguardViewMediator;)Ljava/util/concurrent/Executor;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mUiBgExecutor:Ljava/util/concurrent/Executor;

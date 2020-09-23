@@ -42,6 +42,8 @@
 
 .field private final mEntryManager:Lcom/android/systemui/statusbar/notification/NotificationEntryManager;
 
+.field private mHasMediaArtwork:Z
+
 .field protected final mHideBackdropFront:Ljava/lang/Runnable;
 
 .field private final mKeyguardBypassController:Lcom/android/systemui/statusbar/phone/KeyguardBypassController;
@@ -508,23 +510,35 @@
     move v3, v2
 
     :goto_1
-    if-nez v1, :cond_4
+    if-eqz v1, :cond_2
+
+    move v4, p3
+
+    goto :goto_2
+
+    :cond_2
+    move v4, v2
+
+    :goto_2
+    iput-boolean v4, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mHasMediaArtwork:Z
+
+    if-nez v1, :cond_5
 
     iget-object v4, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mLockscreenWallpaper:Lcom/android/systemui/statusbar/phone/LockscreenWallpaper;
 
-    if-eqz v4, :cond_2
+    if-eqz v4, :cond_3
 
     invoke-virtual {v4}, Lcom/android/systemui/statusbar/phone/LockscreenWallpaper;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v4
 
-    goto :goto_2
+    goto :goto_3
 
-    :cond_2
+    :cond_3
     move-object v4, v0
 
-    :goto_2
-    if-eqz v4, :cond_4
+    :goto_3
+    if-eqz v4, :cond_5
 
     new-instance v1, Lcom/android/systemui/statusbar/phone/LockscreenWallpaper$WallpaperDrawable;
 
@@ -542,7 +556,7 @@
 
     move-result v4
 
-    if-eq v4, p3, :cond_3
+    if-eq v4, p3, :cond_4
 
     const-class v4, Lcom/android/keyguard/KeyguardUpdateMonitor;
 
@@ -556,17 +570,17 @@
 
     move-result v4
 
-    if-eqz v4, :cond_4
-
-    :cond_3
-    move v4, p3
-
-    goto :goto_3
+    if-eqz v4, :cond_5
 
     :cond_4
+    move v4, p3
+
+    goto :goto_4
+
+    :cond_5
     move v4, v2
 
-    :goto_3
+    :goto_4
     iget-object v5, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mNotificationShadeWindowController:Ldagger/Lazy;
 
     invoke-interface {v5}, Ldagger/Lazy;->get()Ljava/lang/Object;
@@ -587,21 +601,21 @@
 
     move-result v6
 
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_6
 
     move v7, p3
 
-    goto :goto_4
+    goto :goto_5
 
-    :cond_5
+    :cond_6
     move v7, v2
 
-    :goto_4
+    :goto_5
     sget-boolean v8, Lcom/oneplus/util/OpUtils;->DEBUG_ONEPLUS:Z
 
     const-string v9, "NotificationMediaManager"
 
-    if-eqz v8, :cond_7
+    if-eqz v8, :cond_8
 
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -673,7 +687,7 @@
 
     iget-object v10, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBiometricUnlockController:Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
 
-    if-eqz v10, :cond_6
+    if-eqz v10, :cond_7
 
     invoke-virtual {v10}, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->getMode()I
 
@@ -683,12 +697,12 @@
 
     move-result-object v10
 
-    goto :goto_5
+    goto :goto_6
 
-    :cond_6
+    :cond_7
     const-string v10, "null"
 
-    :goto_5
+    :goto_6
     invoke-virtual {v8, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v10, ", hideBecauseOccluded:"
@@ -697,57 +711,65 @@
 
     invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
+    const-string v10, ", hasMediaArtwork= "
+
+    invoke-virtual {v8, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v10, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mHasMediaArtwork:Z
+
+    invoke-virtual {v8, v10}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v8
 
     invoke-static {v9, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_7
+    :cond_8
     iget-object v8, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mColorExtractor:Lcom/android/systemui/colorextraction/SysuiColorExtractor;
 
     invoke-virtual {v8, v3}, Lcom/android/systemui/colorextraction/SysuiColorExtractor;->setHasMediaArtwork(Z)V
 
     iget-object v3, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mScrimController:Lcom/android/systemui/statusbar/phone/ScrimController;
 
-    if-eqz v3, :cond_8
+    if-eqz v3, :cond_9
 
     invoke-virtual {v3, v7}, Lcom/android/systemui/statusbar/phone/ScrimController;->setHasBackdrop(Z)V
 
-    :cond_8
+    :cond_9
     const/4 v3, 0x2
 
     const/4 v8, 0x0
 
-    if-nez v7, :cond_9
+    if-nez v7, :cond_a
 
     sget-boolean v7, Lcom/android/systemui/statusbar/phone/StatusBar;->DEBUG_MEDIA_FAKE_ARTWORK:Z
 
-    if-eqz v7, :cond_10
+    if-eqz v7, :cond_11
 
-    :cond_9
+    :cond_a
     iget-object v7, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mStatusBarStateController:Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
 
     invoke-interface {v7}, Lcom/android/systemui/plugins/statusbar/StatusBarStateController;->getState()I
 
     move-result v7
 
-    if-nez v7, :cond_a
+    if-nez v7, :cond_b
 
-    if-eqz v4, :cond_10
+    if-eqz v4, :cond_11
 
-    :cond_a
+    :cond_b
     iget-object v4, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBiometricUnlockController:Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
 
-    if-eqz v4, :cond_10
+    if-eqz v4, :cond_11
 
     invoke-virtual {v4}, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->getMode()I
 
     move-result v4
 
-    if-eq v4, v3, :cond_10
+    if-eq v4, v3, :cond_11
 
-    if-nez v6, :cond_10
+    if-nez v6, :cond_11
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdrop:Lcom/android/systemui/statusbar/BackDropView;
 
@@ -757,13 +779,13 @@
 
     const/high16 v3, 0x3f800000    # 1.0f
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_e
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdrop:Lcom/android/systemui/statusbar/BackDropView;
 
     invoke-virtual {p1, v2}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    if-eqz p2, :cond_b
+    if-eqz p2, :cond_c
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdrop:Lcom/android/systemui/statusbar/BackDropView;
 
@@ -777,9 +799,9 @@
 
     invoke-virtual {p1, v3}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
-    goto :goto_6
+    goto :goto_7
 
-    :cond_b
+    :cond_c
     iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdrop:Lcom/android/systemui/statusbar/BackDropView;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->animate()Landroid/view/ViewPropertyAnimator;
@@ -792,16 +814,16 @@
 
     invoke-virtual {p1, v3}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
-    :goto_6
-    if-eqz v5, :cond_c
+    :goto_7
+    if-eqz v5, :cond_d
 
     invoke-virtual {v5, p3}, Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController;->setBackdropShowing(Z)V
 
-    :cond_c
+    :cond_d
     move p1, p3
 
-    :cond_d
-    if-eqz p1, :cond_18
+    :cond_e
+    if-eqz p1, :cond_19
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdropBack:Landroid/widget/ImageView;
 
@@ -809,7 +831,7 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_e
+    if-eqz p1, :cond_f
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdropBack:Landroid/widget/ImageView;
 
@@ -847,19 +869,19 @@
 
     invoke-virtual {p1, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    goto :goto_7
+    goto :goto_8
 
-    :cond_e
+    :cond_f
     iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdropFront:Landroid/widget/ImageView;
 
     const/4 p2, 0x4
 
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    :goto_7
+    :goto_8
     sget-boolean p1, Lcom/android/systemui/statusbar/phone/StatusBar;->DEBUG_MEDIA_FAKE_ARTWORK:Z
 
-    if-eqz p1, :cond_f
+    if-eqz p1, :cond_10
 
     const/high16 p1, -0x1000000
 
@@ -905,21 +927,21 @@
 
     invoke-virtual {p2, p3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    goto :goto_8
+    goto :goto_9
 
-    :cond_f
+    :cond_10
     iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdropBack:Landroid/widget/ImageView;
 
     invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    :goto_8
+    :goto_9
     iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdropFront:Landroid/widget/ImageView;
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->getVisibility()I
 
     move-result p1
 
-    if-nez p1, :cond_18
+    if-nez p1, :cond_19
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdropFront:Landroid/widget/ImageView;
 
@@ -941,9 +963,9 @@
 
     invoke-virtual {p1, p0}, Landroid/view/ViewPropertyAnimator;->withEndAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
 
-    goto/16 :goto_a
+    goto/16 :goto_b
 
-    :cond_10
+    :cond_11
     iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdrop:Lcom/android/systemui/statusbar/BackDropView;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->getVisibility()I
@@ -952,7 +974,7 @@
 
     const/16 p2, 0x8
 
-    if-eq p1, p2, :cond_18
+    if-eq p1, p2, :cond_19
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mStatusBarStateController:Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
 
@@ -960,7 +982,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_11
+    if-eqz p1, :cond_12
 
     sget-object p1, Lcom/android/systemui/statusbar/phone/ScrimState;->AOD:Lcom/android/systemui/statusbar/phone/ScrimState;
 
@@ -968,14 +990,14 @@
 
     move-result p1
 
-    if-nez p1, :cond_11
+    if-nez p1, :cond_12
 
-    goto :goto_9
+    goto :goto_a
 
-    :cond_11
+    :cond_12
     move p3, v2
 
-    :goto_9
+    :goto_a
     iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mKeyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
 
     invoke-interface {p1}, Lcom/android/systemui/statusbar/policy/KeyguardStateController;->isBypassFadingAnimation()Z
@@ -984,24 +1006,24 @@
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBiometricUnlockController:Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
 
-    if-eqz v1, :cond_12
+    if-eqz v1, :cond_13
 
     invoke-virtual {v1}, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->getMode()I
 
     move-result v1
 
-    if-eq v1, v3, :cond_13
-
-    :cond_12
-    if-eqz p3, :cond_14
+    if-eq v1, v3, :cond_14
 
     :cond_13
-    if-eqz p1, :cond_15
+    if-eqz p3, :cond_15
 
     :cond_14
-    if-eqz v6, :cond_16
+    if-eqz p1, :cond_16
 
     :cond_15
+    if-eqz v6, :cond_17
+
+    :cond_16
     iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdrop:Lcom/android/systemui/statusbar/BackDropView;
 
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->setVisibility(I)V
@@ -1010,18 +1032,18 @@
 
     invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
+    if-eqz v5, :cond_19
+
+    invoke-virtual {v5, v2}, Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController;->setBackdropShowing(Z)V
+
+    goto :goto_b
+
+    :cond_17
     if-eqz v5, :cond_18
 
     invoke-virtual {v5, v2}, Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController;->setBackdropShowing(Z)V
 
-    goto :goto_a
-
-    :cond_16
-    if-eqz v5, :cond_17
-
-    invoke-virtual {v5, v2}, Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController;->setBackdropShowing(Z)V
-
-    :cond_17
+    :cond_18
     iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdrop:Lcom/android/systemui/statusbar/BackDropView;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->animate()Landroid/view/ViewPropertyAnimator;
@@ -1062,7 +1084,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_18
+    if-eqz p1, :cond_19
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdrop:Lcom/android/systemui/statusbar/BackDropView;
 
@@ -1082,8 +1104,8 @@
 
     invoke-virtual {p0}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    :cond_18
-    :goto_a
+    :cond_19
+    :goto_b
     return-void
 .end method
 
@@ -1709,6 +1731,14 @@
     .locals 0
 
     iget-boolean p0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mShowCompactMediaSeekbar:Z
+
+    return p0
+.end method
+
+.method public hasMediaArtwork()Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mHasMediaArtwork:Z
 
     return p0
 .end method

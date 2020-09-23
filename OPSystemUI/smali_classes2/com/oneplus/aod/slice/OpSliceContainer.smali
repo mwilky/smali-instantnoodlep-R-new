@@ -354,7 +354,7 @@
 .end method
 
 .method private updateTextSize()V
-    .locals 4
+    .locals 3
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
@@ -368,49 +368,49 @@
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v1
+    move-result-object v0
 
-    sget v2, Lcom/android/systemui/R$dimen;->aod_slice_text_size_primary:I
+    sget v1, Lcom/android/systemui/R$dimen;->aod_slice_text_size_primary:I
 
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
-    move-result v1
+    move-result v0
 
-    invoke-static {v1, v0}, Lcom/oneplus/util/OpUtils;->convertSpToFixedPx(FF)I
+    invoke-static {v0}, Lcom/oneplus/util/OpUtils;->convertDpToFixedPx2(F)I
 
-    move-result v1
+    move-result v0
 
-    iget-object v2, p0, Lcom/oneplus/aod/slice/OpSliceContainer;->mPrimary:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/oneplus/aod/slice/OpSliceContainer;->mPrimary:Landroid/widget/TextView;
 
-    int-to-float v1, v1
+    int-to-float v0, v0
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    invoke-virtual {v2, v3, v1}, Landroid/widget/TextView;->setTextSize(IF)V
+    invoke-virtual {v1, v2, v0}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    iget-object v2, p0, Lcom/oneplus/aod/slice/OpSliceContainer;->mRemark:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/oneplus/aod/slice/OpSliceContainer;->mRemark:Landroid/widget/TextView;
 
-    invoke-virtual {v2, v3, v1}, Landroid/widget/TextView;->setTextSize(IF)V
+    invoke-virtual {v1, v2, v0}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    iget-object v1, p0, Lcom/oneplus/aod/slice/OpSliceContainer;->mSecondary:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceContainer;->mSecondary:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    sget v2, Lcom/android/systemui/R$dimen;->aod_slice_text_size_secondary:I
+    sget v1, Lcom/android/systemui/R$dimen;->aod_slice_text_size_secondary:I
 
-    invoke-virtual {p0, v2}, Landroid/content/res/Resources;->getDimension(I)F
+    invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result p0
 
-    invoke-static {p0, v0}, Lcom/oneplus/util/OpUtils;->convertSpToFixedPx(FF)I
+    invoke-static {p0}, Lcom/oneplus/util/OpUtils;->convertDpToFixedPx2(F)I
 
     move-result p0
 
     int-to-float p0, p0
 
-    invoke-virtual {v1, v3, p0}, Landroid/widget/TextView;->setTextSize(IF)V
+    invoke-virtual {v0, v2, p0}, Landroid/widget/TextView;->setTextSize(IF)V
 
     return-void
 .end method

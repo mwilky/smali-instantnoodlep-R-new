@@ -199,8 +199,6 @@
 
     iput-object p1, p0, Lcom/android/systemui/statusbar/phone/StatusIconContainer;->mBatteryController:Lcom/android/systemui/statusbar/policy/BatteryController;
 
-    invoke-interface {p1, p0}, Lcom/android/systemui/statusbar/policy/CallbackController;->addCallback(Ljava/lang/Object;)V
-
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/StatusIconContainer;->initDimens()V
 
     sget-boolean p1, Lcom/android/systemui/statusbar/phone/StatusIconContainer;->DEBUG_OVERFLOW:Z
@@ -921,6 +919,18 @@
     return p0
 .end method
 
+.method protected onAttachedToWindow()V
+    .locals 1
+
+    invoke-super {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusIconContainer;->onAttachedToWindow()V
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusIconContainer;->mBatteryController:Lcom/android/systemui/statusbar/policy/BatteryController;
+
+    invoke-interface {v0, p0}, Lcom/android/systemui/statusbar/policy/CallbackController;->addCallback(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
 .method public onBatteryPercentShowChange(Z)V
     .locals 0
 
@@ -937,6 +947,18 @@
     const/4 p1, 0x1
 
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/StatusIconContainer;->mBatteryChange:Z
+
+    return-void
+.end method
+
+.method protected onDetachedFromWindow()V
+    .locals 1
+
+    invoke-super {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusIconContainer;->onDetachedFromWindow()V
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusIconContainer;->mBatteryController:Lcom/android/systemui/statusbar/policy/BatteryController;
+
+    invoke-interface {v0, p0}, Lcom/android/systemui/statusbar/policy/CallbackController;->removeCallback(Ljava/lang/Object;)V
 
     return-void
 .end method

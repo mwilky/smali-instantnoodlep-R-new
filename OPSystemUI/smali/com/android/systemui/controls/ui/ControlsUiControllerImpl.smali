@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nControlsUiControllerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ControlsUiControllerImpl.kt\ncom/android/systemui/controls/ui/ControlsUiControllerImpl\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 _Maps.kt\nkotlin/collections/MapsKt___MapsKt\n*L\n1#1,564:1\n1313#2:565\n1382#2,3:566\n1088#2,4:569\n1591#2,2:573\n1591#2,2:575\n1064#2,2:577\n1088#2,4:579\n1373#2:583\n1591#2,2:584\n1374#2:586\n1591#2,2:587\n240#2,2:589\n205#2,2:591\n1591#2,2:595\n240#2,2:597\n149#3,2:593\n*E\n*S KotlinDebug\n*F\n+ 1 ControlsUiControllerImpl.kt\ncom/android/systemui/controls/ui/ControlsUiControllerImpl\n*L\n160#1:565\n160#1,3:566\n162#1,4:569\n214#1,2:573\n314#1,2:575\n318#1,2:577\n318#1,4:579\n320#1:583\n320#1,2:584\n320#1:586\n384#1,2:587\n448#1,2:589\n462#1,2:591\n503#1,2:595\n531#1,2:597\n481#1,2:593\n*E\n"
+    value = "SMAP\nControlsUiControllerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ControlsUiControllerImpl.kt\ncom/android/systemui/controls/ui/ControlsUiControllerImpl\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 _Maps.kt\nkotlin/collections/MapsKt___MapsKt\n*L\n1#1,568:1\n1313#2:569\n1382#2,3:570\n1088#2,4:573\n1591#2,2:577\n1591#2,2:579\n1064#2,2:581\n1088#2,4:583\n1373#2:587\n1591#2,2:588\n1374#2:590\n1591#2,2:591\n240#2,2:593\n205#2,2:595\n1591#2,2:599\n240#2,2:601\n149#3,2:597\n*E\n*S KotlinDebug\n*F\n+ 1 ControlsUiControllerImpl.kt\ncom/android/systemui/controls/ui/ControlsUiControllerImpl\n*L\n160#1:569\n160#1,3:570\n162#1,4:573\n214#1,2:577\n318#1,2:579\n322#1,2:581\n322#1,4:583\n324#1:587\n324#1,2:588\n324#1:590\n388#1,2:591\n452#1,2:593\n466#1,2:595\n507#1,2:599\n535#1,2:601\n485#1,2:597\n*E\n"
 .end annotation
 
 
@@ -1118,7 +1118,7 @@
 .method private final createMenu()V
     .locals 5
 
-    const/4 v0, 0x3
+    const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/String;
 
@@ -1153,12 +1153,6 @@
     const/4 v2, 0x1
 
     aput-object v1, v0, v2
-
-    const/4 v1, 0x2
-
-    const-string v2, "Reset"
-
-    aput-object v2, v0, v1
 
     new-instance v1, Lkotlin/jvm/internal/Ref$ObjectRef;
 

@@ -62,7 +62,7 @@
 
     iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier$PressModeRunnable;->this$0:Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;
 
-    invoke-static {v1}, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->access$100(Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;)Lvendor/oneplus/hardware/display/V1_0/IOneplusDisplay;
+    invoke-static {v1}, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->access$200(Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;)Lvendor/oneplus/hardware/display/V1_0/IOneplusDisplay;
 
     move-result-object v1
 

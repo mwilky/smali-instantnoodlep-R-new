@@ -2132,7 +2132,7 @@
 .end method
 
 .method private watchForFodOnAodSettings()V
-    .locals 4
+    .locals 5
 
     new-instance v0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$1;
 
@@ -2160,7 +2160,9 @@
 
     const/4 v3, 0x0
 
-    invoke-virtual {v0, v1, v3, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
+    const/4 v4, -0x1
+
+    invoke-virtual {v0, v1, v3, v2, v4}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
     iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mFodOnAodStateObserver:Landroid/database/ContentObserver;
 
@@ -5586,6 +5588,42 @@
     iput-object v0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mWakingUpTime:Ljava/util/Calendar;
 
     :cond_1
+    return-void
+.end method
+
+.method protected opHandleUserSwitch(I)V
+    .locals 3
+
+    const-string v0, "OpKeyguardUpdateMonitor"
+
+    const-string v1, "opHandleUserSwitch"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const-string v1, "show_fod_on_aod_enabled"
+
+    const/4 v2, 0x1
+
+    invoke-static {v0, v1, v2, p1}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    move-result p1
+
+    if-ne p1, v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v2, 0x0
+
+    :goto_0
+    iput-boolean v2, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mShowFodOnAodEnabled:Z
+
     return-void
 .end method
 

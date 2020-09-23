@@ -36,6 +36,8 @@
 
 .field public static final Oneplus_Theme_Material_Light_Dialog_Alert:I = 0x7f1301b2
 
+.field public static final OpGraphLightTheme:I = 0x7f1301b6
+
 .field public static final OpKeyguard_TextView:I = 0x7f1301b7
 
 .field public static final QSHeaderTheme:I = 0x7f1301f2

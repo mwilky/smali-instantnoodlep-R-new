@@ -939,7 +939,6 @@
     <string name="keyguard_fingerprint_unlock">지문으로 잠금 해제</string>
     <string name="keyguard_indication_charging_time">%2$s • 충전 중(%1$s 후 충전 완료)</string>
     <string name="keyguard_indication_charging_time_fast">%2$s • 고속 충전 중(%1$s 후 충전 완료)</string>
-    <string name="keyguard_indication_charging_time_fast_vooc">(가득 찰 때까지 %s)</string>
     <string name="keyguard_indication_charging_time_slowly">%2$s • 저속 충전 중(%1$s 후 충전 완료)</string>
     <string name="keyguard_indication_charging_time_wireless">%2$s • 무선 충전 중(%1$s후 충전 완료)</string>
     <string name="keyguard_indication_trust_disabled">수동으로 잠금 해제할 때까지 기기가 잠금 상태로 유지됩니다.</string>
@@ -1369,7 +1368,7 @@ IT 관리자가 설정, 기업 액세스, 앱, 기기와 연결된 데이터, �
     <string name="op_notification_channel_summary_low">소리 또는 진동이 없는 덜 중요한 알림.</string>
     <string name="op_notification_section_header_gentle">기타 알림</string>
     <string name="op_notification_silence_title">기타</string>
-    <string name="op_protect_charging">" Protect charging"</string>
+    <string name="op_protect_charging">" Protected charging"</string>
     <string name="op_qs_dark_mode_tile_label">다크 모드</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s 사용됨</string>
     <string name="op_quick_settings_night_display_label">비전 컴포트</string>

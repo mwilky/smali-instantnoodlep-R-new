@@ -52,6 +52,12 @@
     return-void
 .end method
 
+.method public release()V
+    .locals 0
+
+    return-void
+.end method
+
 .method public supportSeconds(Z)V
     .locals 0
 

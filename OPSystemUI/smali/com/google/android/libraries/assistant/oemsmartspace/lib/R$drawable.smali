@@ -4,4 +4,4 @@
 
 
 # static fields
-.field public static final bg_smartspace:I = 0x7f0802f1
+.field public static final bg_smartspace:I = 0x7f0803ad
