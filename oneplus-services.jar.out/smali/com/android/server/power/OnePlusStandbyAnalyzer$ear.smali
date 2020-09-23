@@ -75,7 +75,7 @@
 
     const-string p1, "[SIMChange] NO-SIM, stop the timmer immediately"
 
-    invoke-static {p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->L0(Ljava/lang/String;)V
 
     iget-object p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$ear;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer;
 
@@ -94,7 +94,7 @@
     :cond_1
     const-string p1, "[SIMChange] HAVE-SIM"
 
-    invoke-static {p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->L0(Ljava/lang/String;)V
 
     iget-object p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$ear;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer;
 

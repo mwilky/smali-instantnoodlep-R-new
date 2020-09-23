@@ -16,31 +16,31 @@
 
 
 # static fields
-.field private static final l:Ljava/lang/String; = "DynamicVsyncManager"
+.field private static final m:Ljava/lang/String; = "DynamicVsyncManager"
 
-.field public static final m:Ljava/lang/String; = "oneplus_screen_highvsync_auto_refresh_rate"
+.field public static final n:Ljava/lang/String; = "oneplus_screen_highvsync_auto_refresh_rate"
 
-.field private static final n:Ljava/lang/String; = "persist.sys.dynamic.minv"
-
-.field public static final o:Z
+.field private static final o:Ljava/lang/String; = "persist.sys.dynamic.minv"
 
 .field public static final p:Z
 
-.field private static final q:I = 0x0
+.field public static final q:Z
 
-.field private static final r:I = 0x1
+.field private static final r:I = 0x0
 
-.field private static final s:I = 0x2
+.field private static final s:I = 0x1
 
-.field private static final t:I = 0x3
+.field private static final t:I = 0x2
 
-.field private static final u:Ljava/lang/String; = "persist.sys.dps.support"
+.field private static final u:I = 0x3
 
-.field private static final v:Ljava/lang/String; = "persist.sys.dps.support.ol"
+.field private static final v:Ljava/lang/String; = "persist.sys.dps.support"
 
-.field private static w:Lcom/oneplus/server/zta; = null
+.field private static final w:Ljava/lang/String; = "persist.sys.dps.support.ol"
 
-.field private static final x:Ljava/lang/String; = "com.vsync.action.test"
+.field private static x:Lcom/oneplus/server/zta; = null
+
+.field private static final y:Ljava/lang/String; = "com.vsync.action.test"
 
 
 # instance fields
@@ -84,15 +84,7 @@
 
 .field private hmo:Lcom/oneplus/config/ConfigObserver;
 
-.field private final i:Ljava/util/HashSet;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/HashSet<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private i:Z
 
 .field private ibl:D
 
@@ -114,9 +106,19 @@
     .end annotation
 .end field
 
-.field private k:Landroid/content/BroadcastReceiver;
+.field private final k:Ljava/util/HashSet;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashSet<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field private final kth:J
+
+.field private l:Landroid/content/BroadcastReceiver;
 
 .field private les:I
 
@@ -196,7 +198,7 @@
 
     move-result v1
 
-    sput-boolean v1, Lcom/oneplus/server/zta;->o:Z
+    sput-boolean v1, Lcom/oneplus/server/zta;->p:Z
 
     new-array v0, v0, [I
 
@@ -208,7 +210,7 @@
 
     move-result v0
 
-    sput-boolean v0, Lcom/oneplus/server/zta;->p:Z
+    sput-boolean v0, Lcom/oneplus/server/zta;->q:Z
 
     return-void
 .end method
@@ -230,7 +232,7 @@
 
     iput v1, p0, Lcom/oneplus/server/zta;->sis:F
 
-    sget-boolean v1, Lcom/oneplus/server/zta;->o:Z
+    sget-boolean v1, Lcom/oneplus/server/zta;->p:Z
 
     iput-boolean v1, p0, Lcom/oneplus/server/zta;->tsu:Z
 
@@ -398,11 +400,7 @@
 
     iput-boolean v0, p0, Lcom/oneplus/server/zta;->h:Z
 
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    iput-object v0, p0, Lcom/oneplus/server/zta;->i:Ljava/util/HashSet;
+    iput-boolean v0, p0, Lcom/oneplus/server/zta;->i:Z
 
     new-instance v0, Ljava/util/HashSet;
 
@@ -410,13 +408,19 @@
 
     iput-object v0, p0, Lcom/oneplus/server/zta;->j:Ljava/util/HashSet;
 
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    iput-object v0, p0, Lcom/oneplus/server/zta;->k:Ljava/util/HashSet;
+
     new-instance v0, Lcom/oneplus/server/zta$sis;
 
     invoke-direct {v0, p0}, Lcom/oneplus/server/zta$sis;-><init>(Lcom/oneplus/server/zta;)V
 
-    iput-object v0, p0, Lcom/oneplus/server/zta;->k:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/oneplus/server/zta;->l:Landroid/content/BroadcastReceiver;
 
-    invoke-direct {p0}, Lcom/oneplus/server/zta;->D()V
+    invoke-direct {p0}, Lcom/oneplus/server/zta;->E()V
 
     iget-object v0, p0, Lcom/oneplus/server/zta;->veq:Ljava/util/HashSet;
 
@@ -442,25 +446,25 @@
 
     invoke-virtual {v0, v4, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v0, p0, Lcom/oneplus/server/zta;->i:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/oneplus/server/zta;->j:Ljava/util/HashSet;
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lcom/oneplus/server/zta;->i:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/oneplus/server/zta;->j:Ljava/util/HashSet;
 
     invoke-virtual {v0, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lcom/oneplus/server/zta;->i:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/oneplus/server/zta;->j:Ljava/util/HashSet;
 
     invoke-virtual {v0, v4}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lcom/oneplus/server/zta;->i:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/oneplus/server/zta;->j:Ljava/util/HashSet;
 
     const-string v1, "cn.fighting.rrmeijutv.classic"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    sget-boolean v0, Lcom/oneplus/server/zta;->p:Z
+    sget-boolean v0, Lcom/oneplus/server/zta;->q:Z
 
     if-eqz v0, :cond_0
 
@@ -480,7 +484,7 @@
     return-void
 .end method
 
-.method private A(I)V
+.method private B(I)V
     .locals 3
 
     invoke-direct {p0}, Lcom/oneplus/server/zta;->q()V
@@ -549,7 +553,7 @@
     return-void
 .end method
 
-.method private B(I)V
+.method private C(I)V
     .locals 3
 
     iget v0, p0, Lcom/oneplus/server/zta;->wtn:I
@@ -627,7 +631,7 @@
     return-void
 .end method
 
-.method private C(Ljava/lang/String;Ljava/lang/String;)V
+.method private D(Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
 
     const-string v0, ""
@@ -664,7 +668,7 @@
 
     move-result-object v2
 
-    invoke-direct {p0, v1, v2}, Lcom/oneplus/server/zta;->v(ZLjava/lang/String;)V
+    invoke-direct {p0, v1, v2}, Lcom/oneplus/server/zta;->w(ZLjava/lang/String;)V
 
     invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -697,7 +701,7 @@
     return-void
 .end method
 
-.method private D()V
+.method private E()V
     .locals 4
 
     iget-object v0, p0, Lcom/oneplus/server/zta;->obl:Ljava/lang/Object;
@@ -792,7 +796,7 @@
     throw p0
 .end method
 
-.method private F(IIDDI)V
+.method private G(IIDDI)V
     .locals 2
 
     invoke-direct {p0}, Lcom/oneplus/server/zta;->q()V
@@ -873,7 +877,7 @@
     return-void
 .end method
 
-.method private G()V
+.method private H()V
     .locals 5
 
     invoke-direct {p0}, Lcom/oneplus/server/zta;->q()V
@@ -929,7 +933,7 @@
 
     move-result-object v3
 
-    invoke-direct {p0, v2, v3}, Lcom/oneplus/server/zta;->v(ZLjava/lang/String;)V
+    invoke-direct {p0, v2, v3}, Lcom/oneplus/server/zta;->w(ZLjava/lang/String;)V
 
     iget v2, p0, Lcom/oneplus/server/zta;->vju:I
 
@@ -1005,7 +1009,7 @@
     const/4 v1, 0x1
 
     :try_start_4
-    invoke-direct {p0, v1}, Lcom/oneplus/server/zta;->N(Z)V
+    invoke-direct {p0, v1}, Lcom/oneplus/server/zta;->P(Z)V
 
     monitor-exit v0
 
@@ -1021,7 +1025,7 @@
     throw p0
 .end method
 
-.method private H(Z)V
+.method private I(Z)V
     .locals 3
 
     invoke-direct {p0}, Lcom/oneplus/server/zta;->q()V
@@ -1090,7 +1094,7 @@
     return-void
 .end method
 
-.method private I(I)V
+.method private J(I)V
     .locals 3
 
     invoke-direct {p0}, Lcom/oneplus/server/zta;->q()V
@@ -1159,7 +1163,7 @@
     return-void
 .end method
 
-.method private J(I)V
+.method private K(I)V
     .locals 3
 
     invoke-direct {p0}, Lcom/oneplus/server/zta;->q()V
@@ -1228,7 +1232,7 @@
     return-void
 .end method
 
-.method private L(I)V
+.method private N(I)V
     .locals 3
 
     invoke-direct {p0}, Lcom/oneplus/server/zta;->q()V
@@ -1249,7 +1253,7 @@
 
     move-result-object v1
 
-    invoke-direct {p0, v0, v1}, Lcom/oneplus/server/zta;->v(ZLjava/lang/String;)V
+    invoke-direct {p0, v0, v1}, Lcom/oneplus/server/zta;->w(ZLjava/lang/String;)V
 
     iget-object v0, p0, Lcom/oneplus/server/zta;->ear:Landroid/os/IBinder;
 
@@ -1315,17 +1319,17 @@
     return-void
 .end method
 
-.method private M()V
+.method private O()V
     .locals 1
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/oneplus/server/zta;->N(Z)V
+    invoke-direct {p0, v0}, Lcom/oneplus/server/zta;->P(Z)V
 
     return-void
 .end method
 
-.method private N(Z)V
+.method private P(Z)V
     .locals 3
 
     invoke-direct {p0}, Lcom/oneplus/server/zta;->u()Z
@@ -1370,7 +1374,7 @@
 
     move-result-object v1
 
-    invoke-direct {p0, p1, v1}, Lcom/oneplus/server/zta;->v(ZLjava/lang/String;)V
+    invoke-direct {p0, p1, v1}, Lcom/oneplus/server/zta;->w(ZLjava/lang/String;)V
 
     invoke-direct {p0}, Lcom/oneplus/server/zta;->q()V
 
@@ -1385,6 +1389,10 @@
     const-string v1, "android.ui.ISurfaceComposer"
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-boolean v0, p0, Lcom/oneplus/server/zta;->i:Z
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
@@ -1451,7 +1459,7 @@
 
     const-string v1, "fatal when convertFpsToPeriod!"
 
-    invoke-direct {p0, v0, v1}, Lcom/oneplus/server/zta;->v(ZLjava/lang/String;)V
+    invoke-direct {p0, v0, v1}, Lcom/oneplus/server/zta;->w(ZLjava/lang/String;)V
 
     :cond_0
     const-wide v0, 0x408f400000000000L    # 1000.0
@@ -1482,7 +1490,7 @@
 .method static synthetic bvj(Lcom/oneplus/server/zta;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/oneplus/server/zta;->A(I)V
+    invoke-direct {p0, p1}, Lcom/oneplus/server/zta;->B(I)V
 
     return-void
 .end method
@@ -1492,7 +1500,7 @@
 
     iget v0, p0, Lcom/oneplus/server/zta;->bio:I
 
-    invoke-direct {p0, v0}, Lcom/oneplus/server/zta;->B(I)V
+    invoke-direct {p0, v0}, Lcom/oneplus/server/zta;->C(I)V
 
     return-void
 .end method
@@ -1870,7 +1878,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-boolean v1, Lcom/oneplus/server/zta;->p:Z
+    sget-boolean v1, Lcom/oneplus/server/zta;->q:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1884,12 +1892,12 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/oneplus/server/zta;->i:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/oneplus/server/zta;->j:Ljava/util/HashSet;
 
     monitor-enter v0
 
     :try_start_2
-    iget-object v1, p0, Lcom/oneplus/server/zta;->i:Ljava/util/HashSet;
+    iget-object v1, p0, Lcom/oneplus/server/zta;->j:Ljava/util/HashSet;
 
     invoke-virtual {v1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
@@ -1935,12 +1943,12 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/oneplus/server/zta;->j:Ljava/util/HashSet;
+    iget-object v1, p0, Lcom/oneplus/server/zta;->k:Ljava/util/HashSet;
 
     monitor-enter v1
 
     :try_start_3
-    iget-object v0, p0, Lcom/oneplus/server/zta;->j:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/oneplus/server/zta;->k:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
@@ -2209,7 +2217,25 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean p0, p0, Lcom/oneplus/server/zta;->e:Z
+    iget-boolean v1, p0, Lcom/oneplus/server/zta;->e:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "   mInKeepHighVsync="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean p0, p0, Lcom/oneplus/server/zta;->i:Z
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -2323,15 +2349,19 @@
 
     move-result-object v1
 
-    invoke-direct {p0, v0, v1}, Lcom/oneplus/server/zta;->v(ZLjava/lang/String;)V
+    invoke-direct {p0, v0, v1}, Lcom/oneplus/server/zta;->w(ZLjava/lang/String;)V
 
     iget v0, p0, Lcom/oneplus/server/zta;->vdw:I
 
     const/4 v1, 0x3
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_5
 
-    return v1
+    iget-boolean v2, p0, Lcom/oneplus/server/zta;->i:Z
+
+    if-eqz v2, :cond_0
+
+    goto :goto_1
 
     :cond_0
     iget-boolean v2, p0, Lcom/oneplus/server/zta;->h:Z
@@ -2353,7 +2383,7 @@
 
     if-nez v0, :cond_5
 
-    iget-object v0, p0, Lcom/oneplus/server/zta;->i:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/oneplus/server/zta;->j:Ljava/util/HashSet;
 
     iget-object v2, p0, Lcom/oneplus/server/zta;->d:Ljava/lang/String;
 
@@ -2370,7 +2400,7 @@
 
     if-nez v0, :cond_4
 
-    iget-object v0, p0, Lcom/oneplus/server/zta;->j:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/oneplus/server/zta;->k:Ljava/util/HashSet;
 
     iget-object p0, p0, Lcom/oneplus/server/zta;->d:Ljava/lang/String;
 
@@ -2427,7 +2457,7 @@
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lcom/oneplus/server/zta;->L(I)V
+    invoke-direct {p0, v0}, Lcom/oneplus/server/zta;->N(I)V
 
     iget-object v0, p0, Lcom/oneplus/server/zta;->obl:Ljava/lang/Object;
 
@@ -2569,7 +2599,7 @@
 .method static synthetic les(Lcom/oneplus/server/zta;Lorg/json/JSONArray;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/oneplus/server/zta;->y(Lorg/json/JSONArray;)V
+    invoke-direct {p0, p1}, Lcom/oneplus/server/zta;->z(Lorg/json/JSONArray;)V
 
     return-void
 .end method
@@ -2663,7 +2693,7 @@
 .method public static p()Lcom/oneplus/server/zta;
     .locals 1
 
-    sget-object v0, Lcom/oneplus/server/zta;->w:Lcom/oneplus/server/zta;
+    sget-object v0, Lcom/oneplus/server/zta;->x:Lcom/oneplus/server/zta;
 
     if-nez v0, :cond_0
 
@@ -2671,10 +2701,10 @@
 
     invoke-direct {v0}, Lcom/oneplus/server/zta;-><init>()V
 
-    sput-object v0, Lcom/oneplus/server/zta;->w:Lcom/oneplus/server/zta;
+    sput-object v0, Lcom/oneplus/server/zta;->x:Lcom/oneplus/server/zta;
 
     :cond_0
-    sget-object v0, Lcom/oneplus/server/zta;->w:Lcom/oneplus/server/zta;
+    sget-object v0, Lcom/oneplus/server/zta;->x:Lcom/oneplus/server/zta;
 
     return-object v0
 .end method
@@ -2701,7 +2731,7 @@
 .method static synthetic qbh(Lcom/oneplus/server/zta;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/oneplus/server/zta;->M()V
+    invoke-direct {p0}, Lcom/oneplus/server/zta;->O()V
 
     return-void
 .end method
@@ -2756,7 +2786,7 @@
 .method static synthetic sis(Lcom/oneplus/server/zta;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/oneplus/server/zta;->G()V
+    invoke-direct {p0}, Lcom/oneplus/server/zta;->H()V
 
     return-void
 .end method
@@ -2819,19 +2849,6 @@
     return-wide p1
 .end method
 
-.method private v(ZLjava/lang/String;)V
-    .locals 0
-
-    if-eqz p1, :cond_0
-
-    const-string p0, "DynamicVsyncManager"
-
-    invoke-static {p0, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    return-void
-.end method
-
 .method static synthetic vdb(Lcom/oneplus/server/zta;)D
     .locals 2
 
@@ -2859,12 +2876,33 @@
 .method static synthetic vju(Lcom/oneplus/server/zta;ZLjava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/oneplus/server/zta;->v(ZLjava/lang/String;)V
+    invoke-direct {p0, p1, p2}, Lcom/oneplus/server/zta;->w(ZLjava/lang/String;)V
 
     return-void
 .end method
 
-.method private w(Ljava/io/PrintWriter;)V
+.method private w(ZLjava/lang/String;)V
+    .locals 0
+
+    if-eqz p1, :cond_0
+
+    const-string p0, "DynamicVsyncManager"
+
+    invoke-static {p0, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    return-void
+.end method
+
+.method static synthetic wtn(Lcom/oneplus/server/zta;D)D
+    .locals 0
+
+    iput-wide p1, p0, Lcom/oneplus/server/zta;->dma:D
+
+    return-wide p1
+.end method
+
+.method private x(Ljava/io/PrintWriter;)V
     .locals 0
 
     const-string p0, "********************** Help begin:**********************"
@@ -2898,15 +2936,7 @@
     return-void
 .end method
 
-.method static synthetic wtn(Lcom/oneplus/server/zta;D)D
-    .locals 0
-
-    iput-wide p1, p0, Lcom/oneplus/server/zta;->dma:D
-
-    return-wide p1
-.end method
-
-.method private x()V
+.method private y()V
     .locals 5
 
     new-instance v0, Lcom/oneplus/server/zta$tsu;
@@ -2938,7 +2968,23 @@
     return-void
 .end method
 
-.method private y(Lorg/json/JSONArray;)V
+.method static synthetic you(Lcom/oneplus/server/zta;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/oneplus/server/zta;->e:Z
+
+    return p0
+.end method
+
+.method static synthetic ywr(Lcom/oneplus/server/zta;I)I
+    .locals 0
+
+    iput p1, p0, Lcom/oneplus/server/zta;->bio:I
+
+    return p1
+.end method
+
+.method private z(Lorg/json/JSONArray;)V
     .locals 9
 
     if-nez p1, :cond_0
@@ -2947,7 +2993,7 @@
 
     const-string v0, "[OnlineConfig] config is null!"
 
-    invoke-direct {p0, p1, v0}, Lcom/oneplus/server/zta;->v(ZLjava/lang/String;)V
+    invoke-direct {p0, p1, v0}, Lcom/oneplus/server/zta;->w(ZLjava/lang/String;)V
 
     return-void
 
@@ -3002,7 +3048,7 @@
 
     move-result-object v4
 
-    invoke-direct {p0, v5, v4}, Lcom/oneplus/server/zta;->C(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v5, v4}, Lcom/oneplus/server/zta;->D(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-boolean v4, p0, Lcom/oneplus/server/zta;->tsu:Z
 
@@ -3031,7 +3077,7 @@
 
     move-result-object v5
 
-    invoke-direct {p0, v4, v5}, Lcom/oneplus/server/zta;->v(ZLjava/lang/String;)V
+    invoke-direct {p0, v4, v5}, Lcom/oneplus/server/zta;->w(ZLjava/lang/String;)V
 
     :cond_2
     const-string v4, "name"
@@ -3114,7 +3160,7 @@
 
     move-result-object v5
 
-    invoke-direct {p0, v4, v5}, Lcom/oneplus/server/zta;->v(ZLjava/lang/String;)V
+    invoke-direct {p0, v4, v5}, Lcom/oneplus/server/zta;->w(ZLjava/lang/String;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
@@ -3340,7 +3386,7 @@
 
     move-result-object v6
 
-    invoke-direct {p0, v4, v6}, Lcom/oneplus/server/zta;->v(ZLjava/lang/String;)V
+    invoke-direct {p0, v4, v6}, Lcom/oneplus/server/zta;->w(ZLjava/lang/String;)V
 
     :cond_7
     const-string v4, "name"
@@ -3367,7 +3413,7 @@
 
     move-result v4
 
-    invoke-direct {p0, v4}, Lcom/oneplus/server/zta;->H(Z)V
+    invoke-direct {p0, v4}, Lcom/oneplus/server/zta;->I(Z)V
 
     iget-boolean v6, p0, Lcom/oneplus/server/zta;->you:Z
 
@@ -3385,7 +3431,7 @@
 
     move-result-object v4
 
-    invoke-direct {p0, v6, v4}, Lcom/oneplus/server/zta;->v(ZLjava/lang/String;)V
+    invoke-direct {p0, v6, v4}, Lcom/oneplus/server/zta;->w(ZLjava/lang/String;)V
 
     :cond_8
     const-string v4, "name"
@@ -3412,7 +3458,7 @@
 
     move-result v4
 
-    invoke-direct {p0, v4}, Lcom/oneplus/server/zta;->J(I)V
+    invoke-direct {p0, v4}, Lcom/oneplus/server/zta;->K(I)V
 
     iget-boolean v6, p0, Lcom/oneplus/server/zta;->you:Z
 
@@ -3430,7 +3476,7 @@
 
     move-result-object v4
 
-    invoke-direct {p0, v6, v4}, Lcom/oneplus/server/zta;->v(ZLjava/lang/String;)V
+    invoke-direct {p0, v6, v4}, Lcom/oneplus/server/zta;->w(ZLjava/lang/String;)V
 
     :cond_9
     const-string v4, "name"
@@ -3457,7 +3503,7 @@
 
     move-result v4
 
-    invoke-direct {p0, v4}, Lcom/oneplus/server/zta;->I(I)V
+    invoke-direct {p0, v4}, Lcom/oneplus/server/zta;->J(I)V
 
     iget-boolean v6, p0, Lcom/oneplus/server/zta;->you:Z
 
@@ -3475,7 +3521,7 @@
 
     move-result-object v4
 
-    invoke-direct {p0, v6, v4}, Lcom/oneplus/server/zta;->v(ZLjava/lang/String;)V
+    invoke-direct {p0, v6, v4}, Lcom/oneplus/server/zta;->w(ZLjava/lang/String;)V
 
     :cond_a
     const-string v4, "name"
@@ -3543,14 +3589,14 @@
 
     if-eqz v4, :cond_d
 
-    iget-object v4, p0, Lcom/oneplus/server/zta;->i:Ljava/util/HashSet;
+    iget-object v4, p0, Lcom/oneplus/server/zta;->j:Ljava/util/HashSet;
 
     monitor-enter v4
     :try_end_e
     .catch Ljava/lang/Exception; {:try_start_e .. :try_end_e} :catch_0
 
     :try_start_f
-    iget-object v5, p0, Lcom/oneplus/server/zta;->i:Ljava/util/HashSet;
+    iget-object v5, p0, Lcom/oneplus/server/zta;->j:Ljava/util/HashSet;
 
     invoke-virtual {v5}, Ljava/util/HashSet;->clear()V
 
@@ -3569,7 +3615,7 @@
 
     if-ge v6, v7, :cond_c
 
-    iget-object v7, p0, Lcom/oneplus/server/zta;->i:Ljava/util/HashSet;
+    iget-object v7, p0, Lcom/oneplus/server/zta;->j:Ljava/util/HashSet;
 
     invoke-virtual {v5, v6}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
 
@@ -3597,7 +3643,7 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v6, p0, Lcom/oneplus/server/zta;->i:Ljava/util/HashSet;
+    iget-object v6, p0, Lcom/oneplus/server/zta;->j:Ljava/util/HashSet;
 
     invoke-virtual {v6}, Ljava/util/HashSet;->size()I
 
@@ -3609,7 +3655,7 @@
 
     move-result-object v5
 
-    invoke-direct {p0, v4, v5}, Lcom/oneplus/server/zta;->v(ZLjava/lang/String;)V
+    invoke-direct {p0, v4, v5}, Lcom/oneplus/server/zta;->w(ZLjava/lang/String;)V
     :try_end_10
     .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_10} :catch_0
 
@@ -3642,14 +3688,14 @@
 
     if-eqz v4, :cond_f
 
-    iget-object v4, p0, Lcom/oneplus/server/zta;->j:Ljava/util/HashSet;
+    iget-object v4, p0, Lcom/oneplus/server/zta;->k:Ljava/util/HashSet;
 
     monitor-enter v4
     :try_end_12
     .catch Ljava/lang/Exception; {:try_start_12 .. :try_end_12} :catch_0
 
     :try_start_13
-    iget-object v5, p0, Lcom/oneplus/server/zta;->j:Ljava/util/HashSet;
+    iget-object v5, p0, Lcom/oneplus/server/zta;->k:Ljava/util/HashSet;
 
     invoke-virtual {v5}, Ljava/util/HashSet;->clear()V
 
@@ -3668,7 +3714,7 @@
 
     if-ge v6, v7, :cond_e
 
-    iget-object v7, p0, Lcom/oneplus/server/zta;->j:Ljava/util/HashSet;
+    iget-object v7, p0, Lcom/oneplus/server/zta;->k:Ljava/util/HashSet;
 
     invoke-virtual {v5, v6}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
 
@@ -3696,7 +3742,7 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v6, p0, Lcom/oneplus/server/zta;->j:Ljava/util/HashSet;
+    iget-object v6, p0, Lcom/oneplus/server/zta;->k:Ljava/util/HashSet;
 
     invoke-virtual {v6}, Ljava/util/HashSet;->size()I
 
@@ -3708,7 +3754,7 @@
 
     move-result-object v5
 
-    invoke-direct {p0, v4, v5}, Lcom/oneplus/server/zta;->v(ZLjava/lang/String;)V
+    invoke-direct {p0, v4, v5}, Lcom/oneplus/server/zta;->w(ZLjava/lang/String;)V
     :try_end_14
     .catch Ljava/lang/Exception; {:try_start_14 .. :try_end_14} :catch_0
 
@@ -3823,7 +3869,7 @@
 
     move-result-object v4
 
-    invoke-direct {p0, v3, v4}, Lcom/oneplus/server/zta;->v(ZLjava/lang/String;)V
+    invoke-direct {p0, v3, v4}, Lcom/oneplus/server/zta;->w(ZLjava/lang/String;)V
     :try_end_18
     .catch Ljava/lang/Exception; {:try_start_18 .. :try_end_18} :catch_0
 
@@ -3849,7 +3895,7 @@
     :cond_12
     if-eqz v2, :cond_13
 
-    invoke-direct {p0}, Lcom/oneplus/server/zta;->G()V
+    invoke-direct {p0}, Lcom/oneplus/server/zta;->H()V
     :try_end_1a
     .catch Ljava/lang/Exception; {:try_start_1a .. :try_end_1a} :catch_0
 
@@ -3874,27 +3920,11 @@
 
     move-result-object p1
 
-    invoke-direct {p0, v0, p1}, Lcom/oneplus/server/zta;->v(ZLjava/lang/String;)V
+    invoke-direct {p0, v0, p1}, Lcom/oneplus/server/zta;->w(ZLjava/lang/String;)V
 
     :cond_13
     :goto_c
     return-void
-.end method
-
-.method static synthetic you(Lcom/oneplus/server/zta;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/oneplus/server/zta;->e:Z
-
-    return p0
-.end method
-
-.method static synthetic ywr(Lcom/oneplus/server/zta;I)I
-    .locals 0
-
-    iput p1, p0, Lcom/oneplus/server/zta;->bio:I
-
-    return p1
 .end method
 
 .method static synthetic zgw(Lcom/oneplus/server/zta;D)D
@@ -3915,7 +3945,114 @@
 
 
 # virtual methods
-.method public E(Z)V
+.method public A(Ljava/lang/String;)V
+    .locals 8
+
+    iget-boolean v0, p0, Lcom/oneplus/server/zta;->rtg:Z
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lcom/oneplus/server/zta;->obl:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-wide v1, p0, Lcom/oneplus/server/zta;->oxb:J
+
+    const-wide/16 v3, 0x0
+
+    cmp-long v1, v1, v3
+
+    if-eqz v1, :cond_3
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v1
+
+    iget-wide v5, p0, Lcom/oneplus/server/zta;->oxb:J
+
+    sub-long/2addr v1, v5
+
+    iget v5, p0, Lcom/oneplus/server/zta;->cjf:I
+
+    int-to-long v5, v5
+
+    cmp-long v1, v1, v5
+
+    const/4 v2, 0x0
+
+    if-gez v1, :cond_2
+
+    iget-boolean v1, p0, Lcom/oneplus/server/zta;->zta:Z
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, " stop fling-  ("
+
+    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v6, p0, Lcom/oneplus/server/zta;->oxb:J
+
+    invoke-virtual {v5, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string p1, ", "
+
+    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget p1, p0, Lcom/oneplus/server/zta;->cjf:I
+
+    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, ")"
+
+    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, v1, p1}, Lcom/oneplus/server/zta;->w(ZLjava/lang/String;)V
+
+    iget-boolean p1, p0, Lcom/oneplus/server/zta;->ssp:Z
+
+    if-eqz p1, :cond_1
+
+    invoke-direct {p0, v2}, Lcom/oneplus/server/zta;->N(I)V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-direct {p0}, Lcom/oneplus/server/zta;->c()V
+
+    :cond_2
+    :goto_0
+    iput-wide v3, p0, Lcom/oneplus/server/zta;->oxb:J
+
+    iput v2, p0, Lcom/oneplus/server/zta;->cjf:I
+
+    :cond_3
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public F(Z)V
     .locals 3
 
     iget-boolean v0, p0, Lcom/oneplus/server/zta;->tsu:Z
@@ -3945,7 +4082,7 @@
 
     move-result-object v1
 
-    invoke-direct {p0, v0, v1}, Lcom/oneplus/server/zta;->v(ZLjava/lang/String;)V
+    invoke-direct {p0, v0, v1}, Lcom/oneplus/server/zta;->w(ZLjava/lang/String;)V
 
     iput-boolean p1, p0, Lcom/oneplus/server/zta;->rtg:Z
 
@@ -3958,7 +4095,7 @@
     return-void
 .end method
 
-.method public K(Z)V
+.method public L(Z)V
     .locals 1
 
     iget-object v0, p0, Lcom/oneplus/server/zta;->cgv:Ljava/lang/Object;
@@ -3966,9 +4103,9 @@
     monitor-enter v0
 
     :try_start_0
-    iput-boolean p1, p0, Lcom/oneplus/server/zta;->h:Z
+    iput-boolean p1, p0, Lcom/oneplus/server/zta;->i:Z
 
-    invoke-direct {p0}, Lcom/oneplus/server/zta;->M()V
+    invoke-direct {p0}, Lcom/oneplus/server/zta;->O()V
 
     monitor-exit v0
 
@@ -3984,7 +4121,33 @@
     throw p0
 .end method
 
-.method public O(Ljava/lang/String;FD)V
+.method public M(Z)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/oneplus/server/zta;->cgv:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iput-boolean p1, p0, Lcom/oneplus/server/zta;->h:Z
+
+    invoke-direct {p0}, Lcom/oneplus/server/zta;->O()V
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public Q(Ljava/lang/String;FD)V
     .locals 0
 
     iget p1, p0, Lcom/oneplus/server/zta;->sis:F
@@ -3999,7 +4162,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-direct {p0, p2}, Lcom/oneplus/server/zta;->L(I)V
+    invoke-direct {p0, p2}, Lcom/oneplus/server/zta;->N(I)V
 
     goto :goto_0
 
@@ -4066,7 +4229,7 @@
 
     move-result-object v1
 
-    invoke-direct {p0, v0, v1}, Lcom/oneplus/server/zta;->v(ZLjava/lang/String;)V
+    invoke-direct {p0, v0, v1}, Lcom/oneplus/server/zta;->w(ZLjava/lang/String;)V
 
     invoke-direct {p0}, Lcom/oneplus/server/zta;->q()V
 
@@ -4135,7 +4298,7 @@
 
     const-string v1, "doScreenRotation"
 
-    invoke-direct {p0, v0, v1}, Lcom/oneplus/server/zta;->v(ZLjava/lang/String;)V
+    invoke-direct {p0, v0, v1}, Lcom/oneplus/server/zta;->w(ZLjava/lang/String;)V
 
     iget-object v0, p0, Lcom/oneplus/server/zta;->cgv:Ljava/lang/Object;
 
@@ -4172,7 +4335,7 @@
 
     iput p2, p0, Lcom/oneplus/server/zta;->c:I
 
-    invoke-direct {p0}, Lcom/oneplus/server/zta;->M()V
+    invoke-direct {p0}, Lcom/oneplus/server/zta;->O()V
 
     monitor-exit p3
 
@@ -4501,7 +4664,7 @@
 
     move v8, v12
 
-    invoke-direct/range {v1 .. v8}, Lcom/oneplus/server/zta;->F(IIDDI)V
+    invoke-direct/range {v1 .. v8}, Lcom/oneplus/server/zta;->G(IIDDI)V
 
     monitor-exit v10
 
@@ -4645,7 +4808,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     :try_start_2
-    invoke-direct {p0}, Lcom/oneplus/server/zta;->G()V
+    invoke-direct {p0}, Lcom/oneplus/server/zta;->H()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
@@ -4724,7 +4887,7 @@
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
     :try_start_6
-    invoke-direct {p0}, Lcom/oneplus/server/zta;->G()V
+    invoke-direct {p0}, Lcom/oneplus/server/zta;->H()V
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_0
 
@@ -4772,7 +4935,7 @@
     .catchall {:try_start_9 .. :try_end_9} :catchall_2
 
     :try_start_a
-    invoke-direct {p0}, Lcom/oneplus/server/zta;->G()V
+    invoke-direct {p0}, Lcom/oneplus/server/zta;->H()V
     :try_end_a
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_0
 
@@ -4849,14 +5012,14 @@
 
     if-eqz p1, :cond_7
 
-    iget-object p1, p0, Lcom/oneplus/server/zta;->i:Ljava/util/HashSet;
+    iget-object p1, p0, Lcom/oneplus/server/zta;->j:Ljava/util/HashSet;
 
     monitor-enter p1
     :try_end_c
     .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_0
 
     :try_start_d
-    iget-object p0, p0, Lcom/oneplus/server/zta;->i:Ljava/util/HashSet;
+    iget-object p0, p0, Lcom/oneplus/server/zta;->j:Ljava/util/HashSet;
 
     aget-object p2, p2, v3
 
@@ -4877,14 +5040,14 @@
     throw p0
 
     :cond_7
-    iget-object p1, p0, Lcom/oneplus/server/zta;->j:Ljava/util/HashSet;
+    iget-object p1, p0, Lcom/oneplus/server/zta;->k:Ljava/util/HashSet;
 
     monitor-enter p1
     :try_end_e
     .catch Ljava/lang/Exception; {:try_start_e .. :try_end_e} :catch_0
 
     :try_start_f
-    iget-object p0, p0, Lcom/oneplus/server/zta;->j:Ljava/util/HashSet;
+    iget-object p0, p0, Lcom/oneplus/server/zta;->k:Ljava/util/HashSet;
 
     aget-object p2, p2, v3
 
@@ -4926,14 +5089,14 @@
 
     if-eqz p1, :cond_9
 
-    iget-object p1, p0, Lcom/oneplus/server/zta;->i:Ljava/util/HashSet;
+    iget-object p1, p0, Lcom/oneplus/server/zta;->j:Ljava/util/HashSet;
 
     monitor-enter p1
     :try_end_10
     .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_10} :catch_0
 
     :try_start_11
-    iget-object p0, p0, Lcom/oneplus/server/zta;->i:Ljava/util/HashSet;
+    iget-object p0, p0, Lcom/oneplus/server/zta;->j:Ljava/util/HashSet;
 
     aget-object p2, p2, v3
 
@@ -4954,14 +5117,14 @@
     throw p0
 
     :cond_9
-    iget-object p1, p0, Lcom/oneplus/server/zta;->j:Ljava/util/HashSet;
+    iget-object p1, p0, Lcom/oneplus/server/zta;->k:Ljava/util/HashSet;
 
     monitor-enter p1
     :try_end_12
     .catch Ljava/lang/Exception; {:try_start_12 .. :try_end_12} :catch_0
 
     :try_start_13
-    iget-object p0, p0, Lcom/oneplus/server/zta;->j:Ljava/util/HashSet;
+    iget-object p0, p0, Lcom/oneplus/server/zta;->k:Ljava/util/HashSet;
 
     aget-object p2, p2, v3
 
@@ -4983,7 +5146,7 @@
     throw p0
 
     :cond_a
-    invoke-direct {p0, p1}, Lcom/oneplus/server/zta;->w(Ljava/io/PrintWriter;)V
+    invoke-direct {p0, p1}, Lcom/oneplus/server/zta;->x(Ljava/io/PrintWriter;)V
     :try_end_14
     .catch Ljava/lang/Exception; {:try_start_14 .. :try_end_14} :catch_0
 
@@ -5023,9 +5186,9 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    invoke-direct {p0}, Lcom/oneplus/server/zta;->x()V
+    invoke-direct {p0}, Lcom/oneplus/server/zta;->y()V
 
-    sget-boolean p1, Lcom/oneplus/server/zta;->p:Z
+    sget-boolean p1, Lcom/oneplus/server/zta;->q:Z
 
     if-eqz p1, :cond_0
 
@@ -5090,7 +5253,7 @@
 
     iget-object v0, p0, Lcom/oneplus/server/zta;->ire:Landroid/content/Context;
 
-    iget-object p0, p0, Lcom/oneplus/server/zta;->k:Landroid/content/BroadcastReceiver;
+    iget-object p0, p0, Lcom/oneplus/server/zta;->l:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, p0, p1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
@@ -5098,109 +5261,81 @@
     return-void
 .end method
 
-.method public z(Ljava/lang/String;)V
-    .locals 8
+.method public v(I)Z
+    .locals 4
 
-    iget-boolean v0, p0, Lcom/oneplus/server/zta;->rtg:Z
+    invoke-direct {p0}, Lcom/oneplus/server/zta;->q()V
 
-    if-nez v0, :cond_0
+    iget-object v0, p0, Lcom/oneplus/server/zta;->ear:Landroid/os/IBinder;
 
-    return-void
+    const/4 v1, 0x0
 
-    :cond_0
-    iget-object v0, p0, Lcom/oneplus/server/zta;->obl:Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    monitor-enter v0
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v2
+
+    const-string v3, "android.ui.ISurfaceComposer"
+
+    invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
     :try_start_0
-    iget-wide v1, p0, Lcom/oneplus/server/zta;->oxb:J
+    iget-object p0, p0, Lcom/oneplus/server/zta;->ear:Landroid/os/IBinder;
 
-    const-wide/16 v3, 0x0
+    const/16 p1, 0x7539
 
-    cmp-long v1, v1, v3
+    invoke-interface {p0, p1, v0, v2, v1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    if-eqz v1, :cond_3
+    invoke-virtual {v2}, Landroid/os/Parcel;->readBoolean()Z
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    move-result v1
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-wide v1
-
-    iget-wide v5, p0, Lcom/oneplus/server/zta;->oxb:J
-
-    sub-long/2addr v1, v5
-
-    iget v5, p0, Lcom/oneplus/server/zta;->cjf:I
-
-    int-to-long v5, v5
-
-    cmp-long v1, v1, v5
-
-    const/4 v2, 0x0
-
-    if-gez v1, :cond_2
-
-    iget-boolean v1, p0, Lcom/oneplus/server/zta;->zta:Z
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, " stop fling-  ("
-
-    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v6, p0, Lcom/oneplus/server/zta;->oxb:J
-
-    invoke-virtual {v5, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string p1, ", "
-
-    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget p1, p0, Lcom/oneplus/server/zta;->cjf:I
-
-    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p1, ")"
-
-    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, v1, p1}, Lcom/oneplus/server/zta;->v(ZLjava/lang/String;)V
-
-    iget-boolean p1, p0, Lcom/oneplus/server/zta;->ssp:Z
-
-    if-eqz p1, :cond_1
-
-    invoke-direct {p0, v2}, Lcom/oneplus/server/zta;->L(I)V
-
-    goto :goto_0
-
-    :cond_1
-    invoke-direct {p0}, Lcom/oneplus/server/zta;->c()V
-
-    :cond_2
     :goto_0
-    iput-wide v3, p0, Lcom/oneplus/server/zta;->oxb:J
+    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    iput v2, p0, Lcom/oneplus/server/zta;->cjf:I
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    :cond_3
-    monitor-exit v0
-
-    return-void
+    goto :goto_2
 
     :catchall_0
     move-exception p0
 
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    goto :goto_1
+
+    :catch_0
+    move-exception p0
+
+    :try_start_1
+    const-string p1, "DynamicVsyncManager"
+
+    const-string v3, "Exception isGrayNow"
+
+    invoke-static {p1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_0
+
+    :goto_1
+    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw p0
+
+    :cond_0
+    :goto_2
+    return v1
 .end method

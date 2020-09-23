@@ -1624,7 +1624,7 @@
     :cond_0
     iput-boolean p1, p0, Lcom/oneplus/android/server/iris/you;->bud:Z
 
-    sget-boolean p0, Lcom/oneplus/server/zta;->p:Z
+    sget-boolean p0, Lcom/oneplus/server/zta;->q:Z
 
     if-eqz p0, :cond_1
 
@@ -1632,7 +1632,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0, p1}, Lcom/oneplus/server/zta;->K(Z)V
+    invoke-virtual {p0, p1}, Lcom/oneplus/server/zta;->M(Z)V
 
     :cond_1
     return-void

@@ -46,11 +46,11 @@
     return v2
 
     :cond_0
-    sget-boolean v0, Lcom/oneplus/server/zta;->o:Z
+    sget-boolean v0, Lcom/oneplus/server/zta;->p:Z
 
     if-nez v0, :cond_2
 
-    sget-boolean v0, Lcom/oneplus/server/zta;->p:Z
+    sget-boolean v0, Lcom/oneplus/server/zta;->q:Z
 
     if-eqz v0, :cond_1
 

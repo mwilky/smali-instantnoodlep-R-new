@@ -321,7 +321,7 @@
     :try_start_10
     sget-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->tsu:[I
 
-    sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;->sis:Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
+    sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;->you:Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
 
     invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
 
@@ -335,7 +335,7 @@
     :try_start_11
     sget-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->tsu:[I
 
-    sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;->tsu:Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
+    sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;->sis:Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
 
     invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
 

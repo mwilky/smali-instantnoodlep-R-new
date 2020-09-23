@@ -70,7 +70,7 @@
 
 .field private static final F1:I = 0x11
 
-.field private static final G:Ljava/lang/String; = "/data/data_bpm/"
+.field private static final G:Ljava/lang/String; = "/data/system/data_bpm/"
 
 .field private static final G0:J = 0x5a0L
 
@@ -88,19 +88,19 @@
 
 .field private static final I1:I = 0x14
 
-.field private static final J:Ljava/lang/String; = "/data/data_bpm/pkg.xml"
+.field private static final J:Ljava/lang/String; = "/data/system/data_bpm/pkg.xml"
 
 .field private static final J0:I = 0x2
 
 .field private static final J1:I = 0x15
 
-.field private static final K:Ljava/lang/String; = "/data/data_bpm/bpm_sts.xml"
+.field private static final K:Ljava/lang/String; = "/data/system/data_bpm/bpm_sts.xml"
 
 .field public static final K0:J = 0x1L
 
 .field private static final K1:I = 0x16
 
-.field private static final L:Ljava/lang/String; = "/data/data_bpm/cfg.xml"
+.field private static final L:Ljava/lang/String; = "/data/system/data_bpm/cfg.xml"
 
 .field public static final L0:J = 0x2L
 
@@ -3637,7 +3637,7 @@
 .method private I0()I
     .locals 5
 
-    const-string v0, "/data/data_bpm/cfg.xml"
+    const-string v0, "/data/system/data_bpm/cfg.xml"
 
     invoke-static {v0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->B2(Ljava/lang/String;)Ljava/util/HashMap;
 
@@ -5133,7 +5133,7 @@
     :goto_1
     iget-object p1, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->veq:Ljava/util/HashSet;
 
-    const-string p2, "/data/data_bpm/pkg.xml"
+    const-string p2, "/data/system/data_bpm/pkg.xml"
 
     invoke-static {p1, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->O2(Ljava/util/HashSet;Ljava/lang/String;)Z
 
@@ -6072,7 +6072,7 @@
     :cond_19
     iget-object v6, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->veq:Ljava/util/HashSet;
 
-    const-string v7, "/data/data_bpm/pkg.xml"
+    const-string v7, "/data/system/data_bpm/pkg.xml"
 
     invoke-static {v6, v7}, Lcom/android/server/am/OnePlusBackgroundFrozen;->O2(Ljava/util/HashSet;Ljava/lang/String;)Z
 
@@ -6449,7 +6449,7 @@
 
     sput v6, Lcom/android/server/am/OnePlusBackgroundFrozen;->Z:I
 
-    const-string v6, "/data/data_bpm/cfg.xml"
+    const-string v6, "/data/system/data_bpm/cfg.xml"
 
     invoke-static {v6, v4}, Lcom/android/server/am/OnePlusBackgroundFrozen;->P2(Ljava/lang/String;Ljava/util/HashMap;)Z
 
@@ -8224,7 +8224,7 @@
     :try_start_0
     new-instance v2, Ljava/io/File;
 
-    const-string v3, "/data/data_bpm/"
+    const-string v3, "/data/system/data_bpm/"
 
     invoke-direct {v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
@@ -8239,13 +8239,13 @@
     :cond_0
     const-string v2, "/system/bpm/bpm_sts.xml"
 
-    const-string v3, "/data/data_bpm/bpm_sts.xml"
+    const-string v3, "/data/system/data_bpm/bpm_sts.xml"
 
     invoke-direct {p0, v2, v3}, Lcom/android/server/am/OnePlusBackgroundFrozen;->N0(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v2, "/system/bpm/pkg.xml"
 
-    const-string v3, "/data/data_bpm/pkg.xml"
+    const-string v3, "/data/system/data_bpm/pkg.xml"
 
     invoke-direct {p0, v2, v3}, Lcom/android/server/am/OnePlusBackgroundFrozen;->N0(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
@@ -8282,7 +8282,7 @@
 
     move-result-object p0
 
-    const-string v2, "chmod 0770 /data/data_bpm/"
+    const-string v2, "chmod 0770 /data/system/data_bpm/"
 
     invoke-virtual {p0, v2}, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;
 
@@ -8290,7 +8290,7 @@
 
     move-result-object p0
 
-    const-string v2, "chmod 0770 /data/data_bpm/bpm_sts.xml"
+    const-string v2, "chmod 0770 /data/system/data_bpm/bpm_sts.xml"
 
     invoke-virtual {p0, v2}, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;
 
@@ -8298,7 +8298,7 @@
 
     move-result-object p0
 
-    const-string v2, "chmod 0770 /data/data_bpm/pkg.xml"
+    const-string v2, "chmod 0770 /data/system/data_bpm/pkg.xml"
 
     invoke-virtual {p0, v2}, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;
     :try_end_1
@@ -8854,13 +8854,38 @@
     const/4 v5, 0x0
 
     :try_start_0
-    new-instance v6, Ljava/io/FileOutputStream;
+    new-instance v6, Ljava/io/File;
 
-    new-instance v7, Ljava/io/File;
+    invoke-direct {v6, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v7, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v6}, Ljava/io/File;->exists()Z
 
-    invoke-direct {v6, v7}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    move-result p0
+
+    if-nez p0, :cond_1
+
+    invoke-virtual {v6}, Ljava/io/File;->getParentFile()Ljava/io/File;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/io/File;->exists()Z
+
+    move-result p0
+
+    if-nez p0, :cond_1
+
+    invoke-virtual {v6}, Ljava/io/File;->getParentFile()Ljava/io/File;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/io/File;->mkdirs()Z
+
+    invoke-virtual {v6}, Ljava/io/File;->createNewFile()Z
+
+    :cond_1
+    new-instance p0, Ljava/io/FileOutputStream;
+
+    invoke-direct {p0, v6}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
@@ -8868,21 +8893,21 @@
     :try_start_1
     invoke-static {}, Landroid/util/Xml;->newSerializer()Lorg/xmlpull/v1/XmlSerializer;
 
-    move-result-object p0
+    move-result-object v6
 
     const-string v7, "utf-8"
 
-    invoke-interface {p0, v6, v7}, Lorg/xmlpull/v1/XmlSerializer;->setOutput(Ljava/io/OutputStream;Ljava/lang/String;)V
+    invoke-interface {v6, p0, v7}, Lorg/xmlpull/v1/XmlSerializer;->setOutput(Ljava/io/OutputStream;Ljava/lang/String;)V
 
     sget-object v7, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    invoke-interface {p0, v5, v7}, Lorg/xmlpull/v1/XmlSerializer;->startDocument(Ljava/lang/String;Ljava/lang/Boolean;)V
+    invoke-interface {v6, v5, v7}, Lorg/xmlpull/v1/XmlSerializer;->startDocument(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    invoke-interface {p0, v4}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
+    invoke-interface {v6, v4}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    invoke-interface {p0, v5, v1}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
+    invoke-interface {v6, v5, v1}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    invoke-interface {p0, v4}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
+    invoke-interface {v6, v4}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     invoke-virtual {p1}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
@@ -8897,7 +8922,7 @@
 
     move-result v7
 
-    if-eqz v7, :cond_1
+    if-eqz v7, :cond_2
 
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -8905,7 +8930,7 @@
 
     check-cast v7, Ljava/util/Map$Entry;
 
-    invoke-interface {p0, v5, v0}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
+    invoke-interface {v6, v5, v0}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string v8, "name"
 
@@ -8915,7 +8940,7 @@
 
     check-cast v9, Ljava/lang/String;
 
-    invoke-interface {p0, v5, v8, v9}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
+    invoke-interface {v6, v5, v8, v9}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     invoke-interface {v7}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -8923,26 +8948,26 @@
 
     check-cast v7, Ljava/lang/String;
 
-    invoke-interface {p0, v7}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
+    invoke-interface {v6, v7}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    invoke-interface {p0, v5, v0}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
+    invoke-interface {v6, v5, v0}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    invoke-interface {p0, v4}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
+    invoke-interface {v6, v4}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     goto :goto_0
 
-    :cond_1
-    invoke-interface {p0, v5, v1}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
+    :cond_2
+    invoke-interface {v6, v5, v1}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    invoke-interface {p0, v4}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
+    invoke-interface {v6, v4}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    invoke-interface {p0}, Lorg/xmlpull/v1/XmlSerializer;->endDocument()V
+    invoke-interface {v6}, Lorg/xmlpull/v1/XmlSerializer;->endDocument()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     :try_start_2
-    invoke-virtual {v6}, Ljava/io/FileOutputStream;->close()V
+    invoke-virtual {p0}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
@@ -8957,16 +8982,20 @@
     return v3
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
-    move-object v5, v6
+    move-object v5, p0
+
+    move-object p0, p1
 
     goto :goto_4
 
     :catch_1
-    move-exception p0
+    move-exception p1
 
-    move-object v5, v6
+    move-object v5, p0
+
+    move-object p0, p1
 
     goto :goto_2
 
@@ -9006,7 +9035,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    if-eqz v5, :cond_2
+    if-eqz v5, :cond_3
 
     :try_start_4
     invoke-virtual {v5}, Ljava/io/FileOutputStream;->close()V
@@ -9020,12 +9049,12 @@
 
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
-    :cond_2
+    :cond_3
     :goto_3
     return v2
 
     :goto_4
-    if-eqz v5, :cond_3
+    if-eqz v5, :cond_4
 
     :try_start_5
     invoke-virtual {v5}, Ljava/io/FileOutputStream;->close()V
@@ -9039,7 +9068,7 @@
 
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
 
-    :cond_3
+    :cond_4
     :goto_5
     throw p0
 .end method
@@ -16433,7 +16462,7 @@
 
     invoke-virtual {v2}, Ljava/util/HashSet;->clear()V
 
-    const-string v2, "/data/data_bpm/pkg.xml"
+    const-string v2, "/data/system/data_bpm/pkg.xml"
 
     invoke-direct {p0, v2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->z2(Ljava/lang/String;)Ljava/util/List;
 
@@ -16510,23 +16539,8 @@
 
     invoke-static {v1, v0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->D2(ILjava/lang/String;)V
 
-    const-string v0, "/data/data_bpm/bpm_sts.xml"
-
-    invoke-direct {p0, v0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->z2(Ljava/lang/String;)Ljava/util/List;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-ne v0, v1, :cond_2
-
     invoke-virtual {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->A2()V
 
-    :cond_2
     iget-object v0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->lqr:Ljava/util/HashSet;
 
     monitor-enter v0
@@ -16534,7 +16548,7 @@
     :try_start_1
     iget-object v2, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->rtg:Lcom/android/server/ugm;
 
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_3
 
     iget-object v2, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->rtg:Lcom/android/server/ugm;
 
@@ -16551,7 +16565,7 @@
     const/4 v4, 0x0
 
     :goto_1
-    if-ge v4, v3, :cond_3
+    if-ge v4, v3, :cond_2
 
     aget v5, v2, v4
 
@@ -16567,7 +16581,7 @@
 
     goto :goto_1
 
-    :cond_3
+    :cond_2
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -16588,7 +16602,7 @@
 
     invoke-static {v1, p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->D2(ILjava/lang/String;)V
 
-    :cond_4
+    :cond_3
     monitor-exit v0
 
     return-void
@@ -17166,7 +17180,7 @@
 .method A2()V
     .locals 5
 
-    const-string p0, "/data/data_bpm/cfg.xml"
+    const-string p0, "/data/system/data_bpm/cfg.xml"
 
     invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->B2(Ljava/lang/String;)Ljava/util/HashMap;
 

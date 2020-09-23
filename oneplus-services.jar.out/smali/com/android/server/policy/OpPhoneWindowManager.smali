@@ -2859,6 +2859,10 @@
     :cond_0
     invoke-static {p1}, Lcom/android/server/am/OpBGFrozenInjector;->screenStateChangedEvent(Z)V
 
+    const/4 p0, 0x0
+
+    invoke-static {p0}, Lcom/android/server/wm/OpScreenModeServiceInjector;->updateKeepHighVsync(Z)V
+
     :cond_1
     return-void
 .end method

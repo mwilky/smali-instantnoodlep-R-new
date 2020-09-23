@@ -120,7 +120,7 @@
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N0()V
+    invoke-virtual {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0()V
 
     :cond_0
     return-void
@@ -133,7 +133,7 @@
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->Q0()V
+    invoke-virtual {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->P0()V
 
     :cond_0
     return-void
@@ -144,7 +144,7 @@
 
     sget-object p0, Lyou/zta/zta/zta/ssp/zta;->tsu:Lcom/android/server/power/OnePlusStandbyAnalyzer;
 
-    invoke-virtual {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->T0(Lcom/android/server/am/BatteryStatsService;)V
+    invoke-virtual {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->S0(Lcom/android/server/am/BatteryStatsService;)V
 
     return-void
 .end method
@@ -156,7 +156,7 @@
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->V0(Ljava/lang/String;Ljava/io/PrintWriter;Landroid/os/ShellCommand;)Z
+    invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->U0(Ljava/lang/String;Ljava/io/PrintWriter;Landroid/os/ShellCommand;)Z
 
     move-result p0
 

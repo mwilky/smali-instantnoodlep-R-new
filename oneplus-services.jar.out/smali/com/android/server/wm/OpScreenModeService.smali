@@ -165,6 +165,10 @@
 
 .field private mIrisManager:Lcom/oneplus/iris/IOneplusIrisManager;
 
+.field private mKeepHighVsync:Z
+
+.field private final mKeepHighVsyncLock:Ljava/lang/Object;
+
 .field private mModeRecordMap:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -403,6 +407,14 @@
 
     iput-object v3, p0, Lcom/android/server/wm/OpScreenModeService;->mInputLock:Ljava/lang/Object;
 
+    iput-boolean v0, p0, Lcom/android/server/wm/OpScreenModeService;->mKeepHighVsync:Z
+
+    new-instance v3, Ljava/lang/Object;
+
+    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
+
+    iput-object v3, p0, Lcom/android/server/wm/OpScreenModeService;->mKeepHighVsyncLock:Ljava/lang/Object;
+
     iput-boolean v2, p0, Lcom/android/server/wm/OpScreenModeService;->mAudioRecordFeature:Z
 
     iput-boolean v0, p0, Lcom/android/server/wm/OpScreenModeService;->mAudioRecordStatus:Z
@@ -471,7 +483,23 @@
     return p1
 .end method
 
-.method static synthetic access$1100(Lcom/android/server/wm/OpScreenModeService;)Ljava/util/HashMap;
+.method static synthetic access$1100(Lcom/android/server/wm/OpScreenModeService;)Ljava/lang/Object;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/server/wm/OpScreenModeService;->mKeepHighVsyncLock:Ljava/lang/Object;
+
+    return-object p0
+.end method
+
+.method static synthetic access$1200(Lcom/android/server/wm/OpScreenModeService;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/server/wm/OpScreenModeService;->mKeepHighVsync:Z
+
+    return p0
+.end method
+
+.method static synthetic access$1300(Lcom/android/server/wm/OpScreenModeService;)Ljava/util/HashMap;
     .locals 0
 
     iget-object p0, p0, Lcom/android/server/wm/OpScreenModeService;->mAudioActivityMap:Ljava/util/HashMap;
@@ -479,7 +507,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1202(Lcom/android/server/wm/OpScreenModeService;Ljava/lang/String;)Ljava/lang/String;
+.method static synthetic access$1402(Lcom/android/server/wm/OpScreenModeService;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
     iput-object p1, p0, Lcom/android/server/wm/OpScreenModeService;->mCurAudioPackage:Ljava/lang/String;
@@ -599,6 +627,30 @@
     monitor-exit v0
 
     return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method private checkKeepHighVsync()Z
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/wm/OpScreenModeService;->mKeepHighVsyncLock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-boolean p0, p0, Lcom/android/server/wm/OpScreenModeService;->mKeepHighVsync:Z
+
+    monitor-exit v0
+
+    return p0
 
     :catchall_0
     move-exception p0
@@ -1777,7 +1829,7 @@
 .method private updateDynamicVsync(I)V
     .locals 1
 
-    sget-boolean v0, Lcom/oneplus/server/zta;->o:Z
+    sget-boolean v0, Lcom/oneplus/server/zta;->p:Z
 
     if-eqz v0, :cond_1
 
@@ -1811,7 +1863,7 @@
     const/4 p0, 0x0
 
     :goto_0
-    invoke-virtual {p1, p0}, Lcom/oneplus/server/zta;->E(Z)V
+    invoke-virtual {p1, p0}, Lcom/oneplus/server/zta;->F(Z)V
 
     :cond_1
     return-void
@@ -1871,7 +1923,9 @@
 
     if-eqz p1, :cond_3
 
-    invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->isAnimating()Z
+    iget-object v0, p0, Lcom/android/server/wm/OpScreenModeService;->mWindowManagerInternal:Lcom/android/server/wm/WindowManagerInternal;
+
+    invoke-virtual {v0}, Lcom/android/server/wm/WindowManagerInternal;->isAnimating()Z
 
     move-result v0
 
@@ -2368,49 +2422,15 @@
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/OpScreenModeService;->updateIrisWindowInfo(Lcom/android/server/wm/WindowState;)V
 
-    iget-object v0, p1, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
-
-    iget v2, v0, Landroid/view/WindowManager$LayoutParams;->type:I
-
-    const/16 v3, 0x8ff
-
-    const/4 v4, 0x1
-
-    const-string v5, "getPreferredModeId w "
-
-    const-string v6, "ScreenModeService"
-
-    if-ne v2, v3, :cond_2
-
-    invoke-virtual {v0}, Landroid/view/WindowManager$LayoutParams;->getTitle()Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    const-string v2, "OpAodQ"
-
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-direct {p0}, Lcom/android/server/wm/OpScreenModeService;->checkKeepHighVsync()Z
 
     move-result v0
 
+    const-string v2, "getPreferredModeId w "
+
+    const-string v3, "ScreenModeService"
+
     if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcom/android/server/wm/OpScreenModeService;->mModeRecordMap:Ljava/util/HashMap;
-
-    iget v2, p0, Lcom/android/server/wm/OpScreenModeService;->mCurrentModeId:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/server/wm/OpScreenModeService$sis;
-
-    iget v0, v0, Lcom/android/server/wm/OpScreenModeService$sis;->you:I
-
-    if-ne v0, v4, :cond_2
 
     sget-boolean p2, Lcom/android/server/wm/OpScreenModeService;->DEBUG:Z
 
@@ -2420,29 +2440,30 @@
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string p1, " if OpAodQ exists and current is save power keep save power"
+    const-string p1, " keep high vsync"
 
+    :goto_0
     invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {v6, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
-    :goto_0
+    :goto_1
     iget p1, p0, Lcom/android/server/wm/OpScreenModeService;->mResolotionSettings:I
 
-    invoke-virtual {p0, v4, p1}, Lcom/android/server/wm/OpScreenModeService;->getModeRecord(II)Lcom/android/server/wm/OpScreenModeService$sis;
+    invoke-virtual {p0, v1, p1}, Lcom/android/server/wm/OpScreenModeService;->getModeRecordIgnoreSetting(II)Lcom/android/server/wm/OpScreenModeService$sis;
 
     move-result-object p0
 
-    :goto_1
+    :goto_2
     iget-object p0, p0, Lcom/android/server/wm/OpScreenModeService$sis;->zta:Landroid/view/Display$Mode;
 
     invoke-virtual {p0}, Landroid/view/Display$Mode;->getModeId()I
@@ -2454,17 +2475,43 @@
     :cond_2
     iget-object v0, p1, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
 
-    iget v0, v0, Landroid/view/WindowManager$LayoutParams;->type:I
+    iget v4, v0, Landroid/view/WindowManager$LayoutParams;->type:I
 
-    const/16 v2, 0x902
+    const/16 v5, 0x8ff
 
-    if-ne v0, v2, :cond_4
+    const/4 v6, 0x1
 
-    invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->isVisible()Z
+    if-ne v4, v5, :cond_4
+
+    invoke-virtual {v0}, Landroid/view/WindowManager$LayoutParams;->getTitle()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    const-string v4, "OpAodQ"
+
+    invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_4
+
+    iget-object v0, p0, Lcom/android/server/wm/OpScreenModeService;->mModeRecordMap:Ljava/util/HashMap;
+
+    iget v4, p0, Lcom/android/server/wm/OpScreenModeService;->mCurrentModeId:I
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/server/wm/OpScreenModeService$sis;
+
+    iget v0, v0, Lcom/android/server/wm/OpScreenModeService$sis;->you:I
+
+    if-ne v0, v6, :cond_4
 
     sget-boolean p2, Lcom/android/server/wm/OpScreenModeService;->DEBUG:Z
 
@@ -2474,11 +2521,11 @@
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string p1, " full speed when OPFingerprintVDpressed showing"
+    const-string p1, " if OpAodQ exists and current is save power keep save power"
 
     invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2486,26 +2533,57 @@
 
     move-result-object p1
 
-    invoke-static {v6, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_3
-    :goto_2
+    :goto_3
     iget p1, p0, Lcom/android/server/wm/OpScreenModeService;->mResolotionSettings:I
 
-    invoke-virtual {p0, v1, p1}, Lcom/android/server/wm/OpScreenModeService;->getModeRecordIgnoreSetting(II)Lcom/android/server/wm/OpScreenModeService$sis;
+    invoke-virtual {p0, v6, p1}, Lcom/android/server/wm/OpScreenModeService;->getModeRecord(II)Lcom/android/server/wm/OpScreenModeService$sis;
 
     move-result-object p0
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_4
     iget-object v0, p1, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
 
     iget v0, v0, Landroid/view/WindowManager$LayoutParams;->type:I
 
-    const/16 v2, 0x7d0
+    const/16 v4, 0x902
 
-    if-ne v0, v2, :cond_7
+    if-ne v0, v4, :cond_5
+
+    invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->isVisible()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    sget-boolean p2, Lcom/android/server/wm/OpScreenModeService;->DEBUG:Z
+
+    if-eqz p2, :cond_1
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p2, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p1, " full speed when OPFingerprintVDpressed showing"
+
+    goto :goto_0
+
+    :cond_5
+    iget-object v0, p1, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
+
+    iget v0, v0, Landroid/view/WindowManager$LayoutParams;->type:I
+
+    const/16 v4, 0x7d0
+
+    if-ne v0, v4, :cond_8
 
     iget-object v0, p0, Lcom/android/server/wm/OpScreenModeService;->mService:Lcom/android/server/wm/WindowManagerService;
 
@@ -2513,7 +2591,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_8
 
     iget-object v0, p0, Lcom/android/server/wm/OpScreenModeService;->mService:Lcom/android/server/wm/WindowManagerService;
 
@@ -2523,17 +2601,17 @@
 
     move-result v0
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_8
 
     sget-boolean p2, Lcom/android/server/wm/OpScreenModeService;->DEBUG:Z
 
-    if-eqz p2, :cond_5
+    if-eqz p2, :cond_6
 
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -2545,9 +2623,9 @@
 
     move-result-object p1
 
-    invoke-static {v6, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_5
+    :cond_6
     invoke-static {}, Lcom/android/server/wm/OpWindowManagerService;->getInstance()Lcom/android/server/wm/OpWindowManagerService;
 
     move-result-object p1
@@ -2556,54 +2634,54 @@
 
     move-result p1
 
-    if-eqz p1, :cond_6
+    if-eqz p1, :cond_7
 
-    goto :goto_2
+    goto/16 :goto_1
 
-    :cond_6
-    :goto_3
+    :cond_7
+    :goto_4
     iget p1, p0, Lcom/android/server/wm/OpScreenModeService;->mResolotionSettings:I
 
     invoke-virtual {p0, v1, p1}, Lcom/android/server/wm/OpScreenModeService;->getModeRecord(II)Lcom/android/server/wm/OpScreenModeService$sis;
 
     move-result-object p0
 
-    goto :goto_1
+    goto/16 :goto_2
 
-    :cond_7
+    :cond_8
     iget v0, p0, Lcom/android/server/wm/OpScreenModeService;->mScreenRateSettings:I
 
-    const/4 v2, 0x2
+    const/4 v4, 0x2
 
-    if-ne v0, v2, :cond_9
+    if-ne v0, v4, :cond_a
 
     iget-object v0, p1, Lcom/android/server/wm/WindowState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
-    if-nez v0, :cond_9
+    if-nez v0, :cond_a
 
-    if-eqz p2, :cond_9
+    if-eqz p2, :cond_a
 
     invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->getOwningPackage()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v3, "com.oneplus.factorymode"
+    const-string v5, "com.oneplus.factorymode"
 
-    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_a
 
     sget-boolean p0, Lcom/android/server/wm/OpScreenModeService;->DEBUG:Z
 
-    if-eqz p0, :cond_8
+    if-eqz p0, :cond_9
 
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -2617,15 +2695,15 @@
 
     move-result-object p0
 
-    invoke-static {v6, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_8
-    return p2
+    invoke-static {v3, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_9
+    return p2
+
+    :cond_a
     iget-object v0, p1, Lcom/android/server/wm/WindowState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_e
 
     invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
@@ -2633,36 +2711,36 @@
 
     iget v0, v0, Landroid/view/WindowManager$LayoutParams;->type:I
 
-    const/4 v3, 0x3
+    const/4 v5, 0x3
 
-    if-ne v0, v3, :cond_a
+    if-ne v0, v5, :cond_b
 
-    goto :goto_4
+    goto :goto_5
 
-    :cond_a
+    :cond_b
     iget-object v0, p1, Lcom/android/server/wm/WindowState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
     iget v1, v0, Lcom/android/server/wm/ActivityRecord;->mRefreshRate:I
 
-    iget v3, p0, Lcom/android/server/wm/OpScreenModeService;->mScreenRateSettings:I
+    iget v5, p0, Lcom/android/server/wm/OpScreenModeService;->mScreenRateSettings:I
 
-    if-ne v3, v2, :cond_c
+    if-ne v5, v4, :cond_d
 
     iget-boolean v0, v0, Lcom/android/server/wm/ActivityRecord;->mFixedRate:Z
 
-    if-nez v0, :cond_c
+    if-nez v0, :cond_d
 
-    if-eqz p2, :cond_c
+    if-eqz p2, :cond_d
 
     sget-boolean p0, Lcom/android/server/wm/OpScreenModeService;->DEBUG:Z
 
-    if-eqz p0, :cond_b
+    if-eqz p0, :cond_c
 
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -2676,21 +2754,21 @@
 
     move-result-object p0
 
-    invoke-static {v6, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_b
-    return p2
+    invoke-static {v3, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_c
+    return p2
+
+    :cond_d
     sget-boolean p2, Lcom/android/server/wm/OpScreenModeService;->DEBUG:Z
 
-    if-eqz p2, :cond_6
+    if-eqz p2, :cond_7
 
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -2704,21 +2782,21 @@
 
     move-result-object p1
 
-    invoke-static {v6, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto/16 :goto_3
+    goto/16 :goto_4
 
-    :cond_d
-    :goto_4
+    :cond_e
+    :goto_5
     sget-boolean p2, Lcom/android/server/wm/OpScreenModeService;->DEBUG:Z
 
-    if-eqz p2, :cond_e
+    if-eqz p2, :cond_f
 
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -2730,9 +2808,9 @@
 
     move-result-object p2
 
-    invoke-static {v6, p2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, p2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_e
+    :cond_f
     invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object p1
@@ -2743,11 +2821,11 @@
 
     move-result p1
 
-    if-eqz p1, :cond_f
+    if-eqz p1, :cond_10
 
-    goto/16 :goto_0
+    goto/16 :goto_3
 
-    :cond_f
+    :cond_10
     return v1
 .end method
 
@@ -3432,7 +3510,7 @@
 .method public pokeDynamicVsyncAnimation(I)V
     .locals 0
 
-    sget-boolean p0, Lcom/oneplus/server/zta;->p:Z
+    sget-boolean p0, Lcom/oneplus/server/zta;->q:Z
 
     if-eqz p0, :cond_0
 
@@ -4269,47 +4347,56 @@
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    if-eqz p1, :cond_1
+    const/16 v0, 0x12
 
-    iget-object v0, p0, Lcom/android/server/wm/OpScreenModeService;->mInputLock:Ljava/lang/Object;
+    if-eqz p1, :cond_2
 
-    monitor-enter v0
+    iget-object v1, p0, Lcom/android/server/wm/OpScreenModeService;->mInputLock:Ljava/lang/Object;
+
+    monitor-enter v1
 
     :try_start_0
-    iget-object v1, p0, Lcom/android/server/wm/OpScreenModeService;->mScreenModeHandler:Lcom/android/server/wm/OpScreenModeService$rtg;
+    iget-boolean v2, p0, Lcom/android/server/wm/OpScreenModeService;->mInputMethodMode:Z
 
-    const/16 v2, 0x12
+    if-nez v2, :cond_1
 
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->removeMessages(I)V
+    iget-object v2, p0, Lcom/android/server/wm/OpScreenModeService;->mScreenModeHandler:Lcom/android/server/wm/OpScreenModeService$rtg;
 
-    iget-object v1, p0, Lcom/android/server/wm/OpScreenModeService;->mScreenModeHandler:Lcom/android/server/wm/OpScreenModeService$rtg;
+    invoke-virtual {v2, v0}, Landroid/os/Handler;->removeMessages(I)V
+
+    iget-object v2, p0, Lcom/android/server/wm/OpScreenModeService;->mScreenModeHandler:Lcom/android/server/wm/OpScreenModeService$rtg;
 
     const-wide/16 v3, 0x7d0
 
-    invoke-virtual {v1, v2, v3, v4}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
+    invoke-virtual {v2, v0, v3, v4}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    monitor-exit v0
+    :cond_1
+    monitor-exit v1
 
     goto :goto_0
 
     :catchall_0
     move-exception p0
 
-    monitor-exit v0
+    monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw p0
 
-    :cond_1
+    :cond_2
     :goto_0
-    if-nez p1, :cond_2
+    if-nez p1, :cond_3
 
     iget-object p1, p0, Lcom/android/server/wm/OpScreenModeService;->mInputLock:Ljava/lang/Object;
 
     monitor-enter p1
 
     :try_start_1
+    iget-object v1, p0, Lcom/android/server/wm/OpScreenModeService;->mScreenModeHandler:Lcom/android/server/wm/OpScreenModeService$rtg;
+
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->removeMessages(I)V
+
     iget-object v0, p0, Lcom/android/server/wm/OpScreenModeService;->mScreenModeHandler:Lcom/android/server/wm/OpScreenModeService$rtg;
 
     const/16 v1, 0x13
@@ -4333,7 +4420,7 @@
 
     throw p0
 
-    :cond_2
+    :cond_3
     :goto_1
     return-void
 .end method
@@ -4552,6 +4639,86 @@
 
     :cond_2
     return-void
+.end method
+
+.method public updateKeepHighVsync(Z)V
+    .locals 4
+
+    iget-object v0, p0, Lcom/android/server/wm/OpScreenModeService;->mKeepHighVsyncLock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-boolean v1, Lcom/android/server/wm/OpScreenModeService;->DEBUG:Z
+
+    if-eqz v1, :cond_0
+
+    const-string v1, "ScreenModeService"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "updateKeepHighVsync keep "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iput-boolean p1, p0, Lcom/android/server/wm/OpScreenModeService;->mKeepHighVsync:Z
+
+    iget-boolean v1, p0, Lcom/android/server/wm/OpScreenModeService;->mServiceReady:Z
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lcom/android/server/wm/OpScreenModeService;->mScreenModeHandler:Lcom/android/server/wm/OpScreenModeService$rtg;
+
+    if-nez v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-static {}, Lcom/oneplus/server/zta;->p()Lcom/oneplus/server/zta;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Lcom/oneplus/server/zta;->L(Z)V
+
+    iget-object p1, p0, Lcom/android/server/wm/OpScreenModeService;->mScreenModeHandler:Lcom/android/server/wm/OpScreenModeService$rtg;
+
+    const/16 v1, 0x16
+
+    invoke-virtual {p1, v1}, Landroid/os/Handler;->removeMessages(I)V
+
+    iget-object p0, p0, Lcom/android/server/wm/OpScreenModeService;->mScreenModeHandler:Lcom/android/server/wm/OpScreenModeService$rtg;
+
+    invoke-virtual {p0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    monitor-exit v0
+
+    return-void
+
+    :cond_2
+    :goto_0
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
 .end method
 
 .method public updateScenario(I)V

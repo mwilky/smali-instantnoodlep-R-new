@@ -48,7 +48,7 @@
     :try_start_0
     iget-object p4, p0, Lcom/android/server/wm/OpScreenModeService$you;->zta:Lcom/android/server/wm/OpScreenModeService;
 
-    invoke-static {p4}, Lcom/android/server/wm/OpScreenModeService;->access$1100(Lcom/android/server/wm/OpScreenModeService;)Ljava/util/HashMap;
+    invoke-static {p4}, Lcom/android/server/wm/OpScreenModeService;->access$1300(Lcom/android/server/wm/OpScreenModeService;)Ljava/util/HashMap;
 
     move-result-object p4
 
@@ -68,7 +68,7 @@
 
     iget-object p0, p0, Lcom/android/server/wm/OpScreenModeService$you;->zta:Lcom/android/server/wm/OpScreenModeService;
 
-    invoke-static {p0, p2}, Lcom/android/server/wm/OpScreenModeService;->access$1202(Lcom/android/server/wm/OpScreenModeService;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, p2}, Lcom/android/server/wm/OpScreenModeService;->access$1402(Lcom/android/server/wm/OpScreenModeService;Ljava/lang/String;)Ljava/lang/String;
 
     goto :goto_0
 
@@ -77,7 +77,7 @@
 
     const/4 p1, 0x0
 
-    invoke-static {p0, p1}, Lcom/android/server/wm/OpScreenModeService;->access$1202(Lcom/android/server/wm/OpScreenModeService;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, p1}, Lcom/android/server/wm/OpScreenModeService;->access$1402(Lcom/android/server/wm/OpScreenModeService;Ljava/lang/String;)Ljava/lang/String;
 
     :goto_0
     monitor-exit p3
