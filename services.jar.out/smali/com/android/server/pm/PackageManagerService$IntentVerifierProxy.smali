@@ -204,7 +204,7 @@
 
     const/4 v8, 0x1
 
-    const-string v9, "intent filter verifier"
+    const-string/jumbo v9, "intent filter verifier"
 
     move-object v2, v12
 

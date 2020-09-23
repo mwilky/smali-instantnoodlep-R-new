@@ -64,7 +64,7 @@
 
     invoke-static {v0}, Lcom/android/server/display/OpBrightnessReasonAndRate;->access$002(I)I
 
-    goto/16 :goto_2
+    goto/16 :goto_3
 
     :cond_0
     const-string v0, "dim_debug"
@@ -77,13 +77,13 @@
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_7
 
     invoke-static {}, Lcom/android/server/display/OpBrightnessReasonAndRate;->access$200()Z
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_7
 
     invoke-static {}, Lcom/android/server/display/OpBrightnessReasonAndRate;->access$100()Landroid/content/Context;
 
@@ -231,6 +231,8 @@
 
     invoke-static {v4, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    goto/16 :goto_3
+
     :cond_1
     invoke-static {}, Lcom/android/server/display/OpBrightnessReasonAndRate;->access$300()I
 
@@ -302,7 +304,7 @@
     goto :goto_0
 
     :cond_2
-    goto :goto_2
+    goto/16 :goto_3
 
     :cond_3
     invoke-static {}, Lcom/android/server/display/OpBrightnessReasonAndRate;->access$300()I
@@ -311,7 +313,7 @@
 
     const/4 v1, 0x1
 
-    if-ne v0, v1, :cond_4
+    if-ne v0, v1, :cond_5
 
     const/4 v0, 0x0
 
@@ -379,10 +381,116 @@
     goto :goto_1
 
     :cond_4
+    goto :goto_3
+
+    :cond_5
+    invoke-static {}, Lcom/android/server/display/OpBrightnessReasonAndRate;->access$300()I
+
+    move-result v0
+
+    const/4 v5, 0x5
+
+    if-ne v0, v5, :cond_7
+
+    invoke-static {}, Lcom/android/server/display/OpBrightnessReasonAndRate;->access$100()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const-string v5, "auto_step"
+
+    invoke-static {v0, v5, v1, v3}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    move-result v0
+
+    invoke-static {v0}, Lcom/android/server/display/OpBrightnessReasonAndRate;->access$1002(I)I
+
+    invoke-static {}, Lcom/android/server/display/OpBrightnessReasonAndRate;->access$100()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const/16 v5, 0x78
+
+    const-string v6, "auto_rate"
+
+    invoke-static {v0, v6, v5, v3}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    move-result v0
+
+    invoke-static {v0}, Lcom/android/server/display/OpBrightnessReasonAndRate;->access$1102(I)I
+
+    invoke-static {}, Lcom/android/server/display/OpBrightnessReasonAndRate;->access$100()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const-string v5, "auto_rv"
+
+    invoke-static {v0, v5, v2, v3}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    move-result v0
+
+    if-ne v0, v1, :cond_6
+
+    invoke-static {v1}, Lcom/android/server/display/OpBrightnessReasonAndRate;->access$1202(Z)Z
+
+    goto :goto_2
+
+    :cond_6
+    invoke-static {v2}, Lcom/android/server/display/OpBrightnessReasonAndRate;->access$1202(Z)Z
+
     :goto_2
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "STEP:"
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Lcom/android/server/display/OpBrightnessReasonAndRate;->access$1000()I
+
+    move-result v3
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v3, " RATE:"
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Lcom/android/server/display/OpBrightnessReasonAndRate;->access$1100()I
+
+    move-result v3
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v3, " rv:"
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v4, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_7
+    :goto_3
     iget-object v0, p0, Lcom/android/server/display/OpBrightnessReasonAndRate$SettingsObserver;->this$0:Lcom/android/server/display/OpBrightnessReasonAndRate;
 
-    invoke-static {v0, v2}, Lcom/android/server/display/OpBrightnessReasonAndRate;->access$1000(Lcom/android/server/display/OpBrightnessReasonAndRate;Z)V
+    invoke-static {v0, v2}, Lcom/android/server/display/OpBrightnessReasonAndRate;->access$1300(Lcom/android/server/display/OpBrightnessReasonAndRate;Z)V
 
     return-void
 .end method

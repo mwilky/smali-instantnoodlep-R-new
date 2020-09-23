@@ -1689,7 +1689,7 @@
 
     if-ne v8, v1, :cond_1e
 
-    const-string v1, "intent"
+    const-string/jumbo v1, "intent"
 
     invoke-virtual {v1, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

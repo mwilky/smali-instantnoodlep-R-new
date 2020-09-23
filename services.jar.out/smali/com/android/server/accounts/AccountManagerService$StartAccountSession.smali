@@ -74,7 +74,7 @@
 
     const/4 v0, 0x0
 
-    const-string v1, "intent"
+    const-string/jumbo v1, "intent"
 
     const/4 v2, 0x5
 

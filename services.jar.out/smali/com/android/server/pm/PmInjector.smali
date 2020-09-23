@@ -2023,26 +2023,21 @@
 
     const/4 v3, 0x1
 
-    new-array v4, v3, [I
+    new-array v3, v3, [I
 
-    aput v2, v4, v2
+    aput v2, v3, v2
 
-    invoke-static {v4}, Landroid/util/OpFeatures;->isSupport([I)Z
+    invoke-static {v3}, Landroid/util/OpFeatures;->isSupport([I)Z
 
-    move-result v4
+    move-result v2
 
-    if-eqz v4, :cond_2
+    const/4 v3, 0x0
 
-    if-nez v1, :cond_2
+    iget-object v4, p1, Landroid/content/pm/PackageInfoLite;->packageName:Ljava/lang/String;
 
-    move v2, v3
+    invoke-static {p0, v4, v0, v3}, Lcom/android/server/pm/PmInjector;->showInstallPackageForegroundToast(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    :cond_2
-    iget-object v3, p1, Landroid/content/pm/PackageInfoLite;->packageName:Ljava/lang/String;
-
-    invoke-static {p0, v3, v0, v2}, Lcom/android/server/pm/PmInjector;->showInstallPackageForegroundToast(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Z)V
-
-    return v2
+    return v3
 .end method
 
 .method public static isPkgNeedToBeHandleThemeAndOpSdk(Landroid/content/Context;Lcom/android/server/pm/PackageManagerService$OriginInfo;)Z

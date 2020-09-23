@@ -151,12 +151,6 @@
 
     const/4 v1, 0x0
 
-    const/high16 v2, 0x42700000    # 60.0f
-
-    invoke-static {v1, v2}, Lcom/android/server/display/DisplayModeDirector$Vote;->forRefreshRates(FF)Lcom/android/server/display/DisplayModeDirector$Vote;
-
-    move-result-object v1
-
     goto :goto_0
 
     :cond_1

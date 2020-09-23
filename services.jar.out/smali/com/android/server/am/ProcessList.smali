@@ -1550,11 +1550,11 @@
 
     const/4 v1, -0x1
 
-    const/4 v2, 0x0
+    const/high16 v2, 0x400000
 
-    const/high16 v3, 0x400000
+    const/4 v3, 0x1
 
-    const/4 v4, 0x1
+    const/4 v4, 0x0
 
     if-eqz v0, :cond_1
 
@@ -1568,14 +1568,12 @@
 
     iget v0, v0, Landroid/content/pm/ProcessInfo;->gwpAsanMode:I
 
-    if-ne v0, v4, :cond_0
-
-    move v2, v3
+    if-ne v0, v3, :cond_0
 
     goto :goto_0
 
     :cond_0
-    nop
+    move v2, v4
 
     :goto_0
     return v2
@@ -1595,14 +1593,12 @@
 
     move-result v0
 
-    if-ne v0, v4, :cond_2
-
-    move v2, v3
+    if-ne v0, v3, :cond_2
 
     goto :goto_1
 
     :cond_2
-    nop
+    move v2, v4
 
     :goto_1
     return v2
@@ -1620,23 +1616,21 @@
 
     if-eqz v0, :cond_4
 
-    return v3
+    return v2
 
     :cond_4
     iget-object v0, p1, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
     iget v0, v0, Landroid/content/pm/ApplicationInfo;->flags:I
 
-    and-int/2addr v0, v4
+    and-int/2addr v0, v3
 
     if-eqz v0, :cond_5
 
-    const/high16 v0, 0x200000
-
-    return v0
+    return v4
 
     :cond_5
-    return v2
+    return v4
 .end method
 
 .method private decideTaggingLevel(Lcom/android/server/am/ProcessRecord;)I

@@ -51,11 +51,11 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/android/server/display/OpBrightnessReasonAndRate;->access$1102(Lcom/android/server/display/OpBrightnessReasonAndRate;Z)Z
+    invoke-static {v0, v1}, Lcom/android/server/display/OpBrightnessReasonAndRate;->access$1402(Lcom/android/server/display/OpBrightnessReasonAndRate;Z)Z
 
     iget-object v0, p0, Lcom/android/server/display/OpBrightnessReasonAndRate$OpBrightnessReasonHandler;->this$0:Lcom/android/server/display/OpBrightnessReasonAndRate;
 
-    invoke-static {v0}, Lcom/android/server/display/OpBrightnessReasonAndRate;->access$1200(Lcom/android/server/display/OpBrightnessReasonAndRate;)Lcom/android/server/display/DisplayPowerController;
+    invoke-static {v0}, Lcom/android/server/display/OpBrightnessReasonAndRate;->access$1500(Lcom/android/server/display/OpBrightnessReasonAndRate;)Lcom/android/server/display/DisplayPowerController;
 
     move-result-object v0
 

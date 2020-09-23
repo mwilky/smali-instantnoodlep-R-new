@@ -296,6 +296,11 @@
 .method public disposeOfTransportClient(Lcom/android/server/backup/transport/TransportClient;Ljava/lang/String;)V
     .locals 6
 
+    if-nez p1, :cond_0
+
+    return-void
+
+    :cond_0
     invoke-virtual {p1, p2}, Lcom/android/server/backup/transport/TransportClient;->unbind(Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/android/server/backup/transport/TransportClient;->markAsDisposed()V

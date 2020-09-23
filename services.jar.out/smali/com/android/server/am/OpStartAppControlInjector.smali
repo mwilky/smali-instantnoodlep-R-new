@@ -325,7 +325,7 @@
 
     if-nez p2, :cond_1
 
-    const-string v1, "intent is null"
+    const-string/jumbo v1, "intent is null"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 

@@ -1076,7 +1076,7 @@
     :cond_6
     const/4 v1, 0x5
 
-    const-string v5, "intent"
+    const-string/jumbo v5, "intent"
 
     if-eqz p1, :cond_7
 

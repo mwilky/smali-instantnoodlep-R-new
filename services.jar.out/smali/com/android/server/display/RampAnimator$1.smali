@@ -200,6 +200,12 @@
 
     invoke-static {v5, v6}, Lcom/android/server/display/RampAnimator;->access$402(Lcom/android/server/display/RampAnimator;F)F
 
+    invoke-static {}, Lcom/android/server/display/OpBrightnessReasonAndRate;->IsSetValueEnable()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
     iget-object v5, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
 
     invoke-static {v5}, Lcom/android/server/display/RampAnimator;->access$400(Lcom/android/server/display/RampAnimator;)F
@@ -214,13 +220,27 @@
 
     iget-object v5, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
 
-    invoke-static {v5}, Lcom/android/server/display/RampAnimator;->access$700(Lcom/android/server/display/RampAnimator;)Landroid/util/FloatProperty;
+    invoke-static {v5}, Lcom/android/server/display/RampAnimator;->access$600(Lcom/android/server/display/RampAnimator;)Lcom/android/server/display/RampAnimator$Listener;
 
     move-result-object v5
 
     iget-object v6, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
 
-    invoke-static {v6}, Lcom/android/server/display/RampAnimator;->access$600(Lcom/android/server/display/RampAnimator;)Ljava/lang/Object;
+    invoke-static {v6}, Lcom/android/server/display/RampAnimator;->access$400(Lcom/android/server/display/RampAnimator;)F
+
+    move-result v6
+
+    invoke-interface {v5, v6}, Lcom/android/server/display/RampAnimator$Listener;->onBrightnessChanged(F)V
+
+    iget-object v5, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
+
+    invoke-static {v5}, Lcom/android/server/display/RampAnimator;->access$800(Lcom/android/server/display/RampAnimator;)Landroid/util/FloatProperty;
+
+    move-result-object v5
+
+    iget-object v6, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
+
+    invoke-static {v6}, Lcom/android/server/display/RampAnimator;->access$700(Lcom/android/server/display/RampAnimator;)Ljava/lang/Object;
 
     move-result-object v6
 
@@ -253,7 +273,7 @@
 
     iget-object v5, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
 
-    invoke-static {v5}, Lcom/android/server/display/RampAnimator;->access$800(Lcom/android/server/display/RampAnimator;)V
+    invoke-static {v5}, Lcom/android/server/display/RampAnimator;->access$900(Lcom/android/server/display/RampAnimator;)V
 
     goto :goto_1
 
@@ -262,11 +282,11 @@
 
     const/4 v6, 0x0
 
-    invoke-static {v5, v6}, Lcom/android/server/display/RampAnimator;->access$902(Lcom/android/server/display/RampAnimator;Z)Z
+    invoke-static {v5, v6}, Lcom/android/server/display/RampAnimator;->access$1002(Lcom/android/server/display/RampAnimator;Z)Z
 
     iget-object v5, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
 
-    invoke-static {v5}, Lcom/android/server/display/RampAnimator;->access$1000(Lcom/android/server/display/RampAnimator;)Lcom/android/server/display/RampAnimator$Listener;
+    invoke-static {v5}, Lcom/android/server/display/RampAnimator;->access$600(Lcom/android/server/display/RampAnimator;)Lcom/android/server/display/RampAnimator$Listener;
 
     move-result-object v5
 
@@ -274,7 +294,7 @@
 
     iget-object v5, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
 
-    invoke-static {v5}, Lcom/android/server/display/RampAnimator;->access$1000(Lcom/android/server/display/RampAnimator;)Lcom/android/server/display/RampAnimator$Listener;
+    invoke-static {v5}, Lcom/android/server/display/RampAnimator;->access$600(Lcom/android/server/display/RampAnimator;)Lcom/android/server/display/RampAnimator$Listener;
 
     move-result-object v5
 

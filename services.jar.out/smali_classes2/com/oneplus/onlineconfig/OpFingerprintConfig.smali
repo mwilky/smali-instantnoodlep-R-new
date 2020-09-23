@@ -1019,6 +1019,18 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    iget-object v0, p0, Lcom/oneplus/onlineconfig/OpFingerprintConfig;->mAppUnsupportAccelerateList:Ljava/util/ArrayList;
+
+    const-string v1, "com.oneplus.calculator"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/oneplus/onlineconfig/OpFingerprintConfig;->mAppUnsupportAccelerateList:Ljava/util/ArrayList;
+
+    const-string v1, "com.nearme.gamecenter"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
     return-void
 .end method
 

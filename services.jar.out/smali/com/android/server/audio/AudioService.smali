@@ -22302,7 +22302,7 @@
 
     iget-boolean v0, p0, Lcom/android/server/audio/AudioService;->mSystemReady:Z
 
-    if-eqz v0, :cond_c
+    if-eqz v0, :cond_10
 
     invoke-static {}, Landroid/media/AudioSystem;->checkAudioFlinger()I
 
@@ -22310,7 +22310,7 @@
 
     if-eqz v0, :cond_0
 
-    goto/16 :goto_6
+    goto/16 :goto_8
 
     :cond_0
     const-string v0, "AS.AudioService"
@@ -22855,6 +22855,70 @@
 
     invoke-static {v1}, Landroid/media/AudioSystem;->setParameters(Ljava/lang/String;)I
 
+    new-array v1, v6, [I
+
+    const/16 v4, 0xa4
+
+    aput v4, v1, v2
+
+    invoke-static {v1}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_e
+
+    iget-object v1, p0, Lcom/android/server/audio/AudioService;->mContentResolver:Landroid/content/ContentResolver;
+
+    const/4 v4, -0x2
+
+    const-string v5, "hearing_aid"
+
+    invoke-static {v1, v5, v2, v4}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    move-result v1
+
+    if-ne v1, v6, :cond_c
+
+    move v1, v6
+
+    goto :goto_6
+
+    :cond_c
+    move v1, v2
+
+    :goto_6
+    if-eqz v1, :cond_d
+
+    const-string v4, "HACSetting=ON"
+
+    invoke-static {v4}, Landroid/media/AudioSystem;->setParameters(Ljava/lang/String;)I
+
+    goto :goto_7
+
+    :cond_d
+    const-string v4, "HACSetting=OFF"
+
+    invoke-static {v4}, Landroid/media/AudioSystem;->setParameters(Ljava/lang/String;)I
+
+    :cond_e
+    :goto_7
+    new-array v1, v6, [I
+
+    const/16 v4, 0xb2
+
+    aput v4, v1, v2
+
+    invoke-static {v1}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_f
+
+    iget-object v1, p0, Lcom/android/server/audio/AudioService;->mAudioMonitor:Lcom/android/server/audio/OpAudioMonitor;
+
+    invoke-virtual {v1}, Lcom/android/server/audio/OpAudioMonitor;->onAudioServerDied()V
+
+    :cond_f
     iget-object v4, p0, Lcom/android/server/audio/AudioService;->mAudioHandler:Lcom/android/server/audio/AudioService$AudioHandler;
 
     const/16 v5, 0x17
@@ -22971,8 +23035,8 @@
 
     throw v1
 
-    :cond_c
-    :goto_6
+    :cond_10
+    :goto_8
     const-string v0, "AS.AudioService"
 
     const-string v1, "Audioserver died."

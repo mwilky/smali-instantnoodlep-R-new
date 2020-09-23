@@ -51,7 +51,7 @@
 
     const-string v3, "input_native_boot"
 
-    const-string v4, "intelligence_content_suggestions"
+    const-string/jumbo v4, "intelligence_content_suggestions"
 
     const-string/jumbo v5, "media_native"
 

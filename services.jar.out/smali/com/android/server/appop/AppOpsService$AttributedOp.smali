@@ -1013,13 +1013,22 @@
     :goto_0
     if-ge v1, v0, :cond_2
 
-    iget-object v2, p0, Lcom/android/server/appop/AppOpsService$AttributedOp;->mInProgressEvents:Landroid/util/ArrayMap;
+    const/4 v2, 0x0
 
-    invoke-virtual {v2, v1}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
+    :try_start_0
+    iget-object v3, p0, Lcom/android/server/appop/AppOpsService$AttributedOp;->mInProgressEvents:Landroid/util/ArrayMap;
 
-    move-result-object v2
+    invoke-virtual {v3, v1}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
-    check-cast v2, Lcom/android/server/appop/AppOpsService$InProgressStartOpEvent;
+    move-result-object v3
+
+    check-cast v3, Lcom/android/server/appop/AppOpsService$InProgressStartOpEvent;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+
+    move-object v2, v3
+
+    nop
 
     invoke-virtual {v2}, Lcom/android/server/appop/AppOpsService$InProgressStartOpEvent;->getUidState()I
 
@@ -1027,7 +1036,7 @@
 
     if-eq v3, p1, :cond_1
 
-    :try_start_0
+    :try_start_1
     iget v3, v2, Lcom/android/server/appop/AppOpsService$InProgressStartOpEvent;->numUnfinishedStarts:I
 
     const/4 v4, 0x1
@@ -1055,13 +1064,22 @@
     add-int/2addr v4, v5
 
     iput v4, v2, Lcom/android/server/appop/AppOpsService$InProgressStartOpEvent;->numUnfinishedStarts:I
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_1
+    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
     goto :goto_1
 
     :catch_0
     move-exception v3
+
+    goto :goto_1
+
+    :catch_1
+    move-exception v3
+
+    invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
+
+    nop
 
     :cond_1
     :goto_1

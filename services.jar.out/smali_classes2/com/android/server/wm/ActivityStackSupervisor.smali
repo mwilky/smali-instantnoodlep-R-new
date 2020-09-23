@@ -8708,7 +8708,11 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/android/server/wm/OnePlusPerfManagerInjector;->updateCurrentLauncherPid(I)V
+    iget-object v1, p0, Lcom/android/server/wm/ActivityStackSupervisor;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
+
+    iget-object v1, v1, Lcom/android/server/wm/ActivityTaskManagerService;->mService:Lcom/android/server/am/ActivityManagerService;
+
+    invoke-static {v0, v1}, Lcom/android/server/wm/OnePlusPerfManagerInjector;->updateCurrentLauncherPid(ILcom/android/server/am/ActivityManagerService;)V
 
     :cond_1
     return-void

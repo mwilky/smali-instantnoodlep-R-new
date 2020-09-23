@@ -874,7 +874,7 @@
 .end method
 
 .method private applyConfigurationExternallyLocked()V
-    .locals 3
+    .locals 4
 
     iget v0, p0, Lcom/android/server/UiModeManagerService;->mSetUiMode:I
 
@@ -882,81 +882,109 @@
 
     iget v1, v1, Landroid/content/res/Configuration;->uiMode:I
 
-    if-eq v0, v1, :cond_1
+    if-eq v0, v1, :cond_2
 
-    sget-boolean v0, Lcom/android/server/UiModeManagerService;->OP_LOG:Z
+    iget-object v0, p0, Lcom/android/server/UiModeManagerService;->mConfiguration:Landroid/content/res/Configuration;
+
+    iget v0, v0, Landroid/content/res/Configuration;->uiMode:I
+
+    and-int/lit8 v0, v0, 0x20
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/4 v0, 0x1
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    goto :goto_0
 
-    const-string v1, "Change uiMode to "
+    :cond_0
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :goto_0
+    sget-boolean v1, Lcom/android/server/UiModeManagerService;->OP_LOG:Z
+
+    if-eqz v1, :cond_1
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Change Externally uiMode to "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lcom/android/server/UiModeManagerService;->mConfiguration:Landroid/content/res/Configuration;
+
+    iget v2, v2, Landroid/content/res/Configuration;->uiMode:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, ", Night ? "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "OpUiMode"
+
+    invoke-static {v2, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    invoke-virtual {p0}, Lcom/android/server/UiModeManagerService;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Landroid/content/res/OpAccentColorUtils;->preProcessForUiMode(Landroid/content/Context;Z)V
 
     iget-object v1, p0, Lcom/android/server/UiModeManagerService;->mConfiguration:Landroid/content/res/Configuration;
 
     iget v1, v1, Landroid/content/res/Configuration;->uiMode:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iput v1, p0, Lcom/android/server/UiModeManagerService;->mSetUiMode:I
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/server/UiModeManagerService;->mWindowManager:Lcom/android/server/wm/WindowManagerInternal;
 
-    move-result-object v0
-
-    const-string v1, "OpUiMode"
-
-    invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    iget-object v0, p0, Lcom/android/server/UiModeManagerService;->mConfiguration:Landroid/content/res/Configuration;
-
-    iget v0, v0, Landroid/content/res/Configuration;->uiMode:I
-
-    iput v0, p0, Lcom/android/server/UiModeManagerService;->mSetUiMode:I
-
-    iget-object v0, p0, Lcom/android/server/UiModeManagerService;->mWindowManager:Lcom/android/server/wm/WindowManagerInternal;
-
-    invoke-virtual {v0}, Lcom/android/server/wm/WindowManagerInternal;->clearSnapshotCache()V
+    invoke-virtual {v1}, Lcom/android/server/wm/WindowManagerInternal;->clearSnapshotCache()V
 
     :try_start_0
     invoke-static {}, Landroid/app/ActivityTaskManager;->getService()Landroid/app/IActivityTaskManager;
 
-    move-result-object v0
+    move-result-object v1
 
-    iget-object v1, p0, Lcom/android/server/UiModeManagerService;->mConfiguration:Landroid/content/res/Configuration;
+    iget-object v2, p0, Lcom/android/server/UiModeManagerService;->mConfiguration:Landroid/content/res/Configuration;
 
-    invoke-interface {v0, v1}, Landroid/app/IActivityTaskManager;->updateConfiguration(Landroid/content/res/Configuration;)Z
+    invoke-interface {v1, v2}, Landroid/app/IActivityTaskManager;->updateConfiguration(Landroid/content/res/Configuration;)Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    goto :goto_1
 
     :catch_0
-    move-exception v0
+    move-exception v1
 
-    sget-object v1, Lcom/android/server/UiModeManagerService;->TAG:Ljava/lang/String;
+    sget-object v2, Lcom/android/server/UiModeManagerService;->TAG:Ljava/lang/String;
 
-    const-string v2, "Activity does not have the "
+    const-string v3, "Activity does not have the "
 
-    invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v2, v3, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    goto :goto_0
+    goto :goto_1
 
     :catch_1
-    move-exception v0
+    move-exception v1
 
-    sget-object v1, Lcom/android/server/UiModeManagerService;->TAG:Ljava/lang/String;
+    sget-object v2, Lcom/android/server/UiModeManagerService;->TAG:Ljava/lang/String;
 
-    const-string v2, "Failure communicating with activity manager"
+    const-string v3, "Failure communicating with activity manager"
 
-    invoke-static {v1, v2, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v2, v3, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    :cond_1
-    :goto_0
+    :cond_2
+    :goto_1
     return-void
 .end method
 

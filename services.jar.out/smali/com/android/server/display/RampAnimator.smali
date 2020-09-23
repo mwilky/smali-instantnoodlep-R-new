@@ -115,12 +115,12 @@
     return-wide v0
 .end method
 
-.method static synthetic access$1000(Lcom/android/server/display/RampAnimator;)Lcom/android/server/display/RampAnimator$Listener;
-    .locals 1
+.method static synthetic access$1002(Lcom/android/server/display/RampAnimator;Z)Z
+    .locals 0
 
-    iget-object v0, p0, Lcom/android/server/display/RampAnimator;->mListener:Lcom/android/server/display/RampAnimator$Listener;
+    iput-boolean p1, p0, Lcom/android/server/display/RampAnimator;->mAnimating:Z
 
-    return-object v0
+    return p1
 .end method
 
 .method static synthetic access$102(Lcom/android/server/display/RampAnimator;J)J
@@ -187,7 +187,15 @@
     return p1
 .end method
 
-.method static synthetic access$600(Lcom/android/server/display/RampAnimator;)Ljava/lang/Object;
+.method static synthetic access$600(Lcom/android/server/display/RampAnimator;)Lcom/android/server/display/RampAnimator$Listener;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/display/RampAnimator;->mListener:Lcom/android/server/display/RampAnimator$Listener;
+
+    return-object v0
+.end method
+
+.method static synthetic access$700(Lcom/android/server/display/RampAnimator;)Ljava/lang/Object;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/display/RampAnimator;->mObject:Ljava/lang/Object;
@@ -195,7 +203,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$700(Lcom/android/server/display/RampAnimator;)Landroid/util/FloatProperty;
+.method static synthetic access$800(Lcom/android/server/display/RampAnimator;)Landroid/util/FloatProperty;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/display/RampAnimator;->mProperty:Landroid/util/FloatProperty;
@@ -203,20 +211,12 @@
     return-object v0
 .end method
 
-.method static synthetic access$800(Lcom/android/server/display/RampAnimator;)V
+.method static synthetic access$900(Lcom/android/server/display/RampAnimator;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/server/display/RampAnimator;->postAnimationCallback()V
 
     return-void
-.end method
-
-.method static synthetic access$902(Lcom/android/server/display/RampAnimator;Z)Z
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/android/server/display/RampAnimator;->mAnimating:Z
-
-    return p1
 .end method
 
 .method private cancelAnimationCallback()V
@@ -456,6 +456,10 @@
     iput p1, p0, Lcom/android/server/display/RampAnimator;->mCurrentValue:F
 
     invoke-static {p1}, Lcom/android/server/display/OpBrightnessReasonAndRate;->updateTargAndCurValue(F)V
+
+    iget-object v0, p0, Lcom/android/server/display/RampAnimator;->mListener:Lcom/android/server/display/RampAnimator$Listener;
+
+    invoke-interface {v0, p1}, Lcom/android/server/display/RampAnimator$Listener;->onBrightnessChanged(F)V
 
     iget-object v0, p0, Lcom/android/server/display/RampAnimator;->mProperty:Landroid/util/FloatProperty;
 

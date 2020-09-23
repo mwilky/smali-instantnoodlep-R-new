@@ -124,50 +124,81 @@
 .end method
 
 .method public synthetic lambda$onTaskAppeared$0$TaskOrganizerController$TaskOrganizerCallbacks(Lcom/android/server/wm/Task;ZLandroid/app/ActivityManager$RunningTaskInfo;)V
-    .locals 3
+    .locals 4
+
+    const-string v0, "TaskOrganizerController"
 
     :try_start_0
-    new-instance v0, Landroid/view/SurfaceControl;
-
     invoke-virtual {p1}, Lcom/android/server/wm/Task;->getSurfaceControl()Landroid/view/SurfaceControl;
 
     move-result-object v1
 
-    const-string v2, "TaskOrganizerController.onTaskAppeared"
-
-    invoke-direct {v0, v1, v2}, Landroid/view/SurfaceControl;-><init>(Landroid/view/SurfaceControl;Ljava/lang/String;)V
-
-    iget-boolean v1, p1, Lcom/android/server/wm/Task;->mCreatedByOrganizer:Z
-
     if-nez v1, :cond_0
 
-    if-nez p2, :cond_0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerCallbacks;->mTransaction:Landroid/view/SurfaceControl$Transaction;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v1, v0}, Landroid/view/SurfaceControl$Transaction;->hide(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
+    const-string v2, "task surface is null, caller="
 
-    iget-object v1, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerCallbacks;->mTransaction:Landroid/view/SurfaceControl$Transaction;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Landroid/view/SurfaceControl$Transaction;->apply()V
+    const/4 v2, 0x5
+
+    invoke-static {v2}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
 
     :cond_0
-    iget-object v1, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerCallbacks;->mTaskOrganizer:Landroid/window/ITaskOrganizer;
+    new-instance v1, Landroid/view/SurfaceControl;
 
-    invoke-interface {v1, p3, v0}, Landroid/window/ITaskOrganizer;->onTaskAppeared(Landroid/app/ActivityManager$RunningTaskInfo;Landroid/view/SurfaceControl;)V
+    invoke-virtual {p1}, Lcom/android/server/wm/Task;->getSurfaceControl()Landroid/view/SurfaceControl;
+
+    move-result-object v2
+
+    const-string v3, "TaskOrganizerController.onTaskAppeared"
+
+    invoke-direct {v1, v2, v3}, Landroid/view/SurfaceControl;-><init>(Landroid/view/SurfaceControl;Ljava/lang/String;)V
+
+    iget-boolean v2, p1, Lcom/android/server/wm/Task;->mCreatedByOrganizer:Z
+
+    if-nez v2, :cond_1
+
+    if-nez p2, :cond_1
+
+    iget-object v2, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerCallbacks;->mTransaction:Landroid/view/SurfaceControl$Transaction;
+
+    invoke-virtual {v2, v1}, Landroid/view/SurfaceControl$Transaction;->hide(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
+
+    iget-object v2, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerCallbacks;->mTransaction:Landroid/view/SurfaceControl$Transaction;
+
+    invoke-virtual {v2}, Landroid/view/SurfaceControl$Transaction;->apply()V
+
+    :cond_1
+    iget-object v2, p0, Lcom/android/server/wm/TaskOrganizerController$TaskOrganizerCallbacks;->mTaskOrganizer:Landroid/window/ITaskOrganizer;
+
+    invoke-interface {v2, p3, v1}, Landroid/window/ITaskOrganizer;->onTaskAppeared(Landroid/app/ActivityManager$RunningTaskInfo;Landroid/view/SurfaceControl;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
     :catch_0
-    move-exception v0
-
-    const-string v1, "TaskOrganizerController"
+    move-exception v1
 
     const-string v2, "Exception sending onTaskAppeared callback"
 
-    invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v0, v2, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
     return-void

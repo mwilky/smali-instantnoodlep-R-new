@@ -92,22 +92,7 @@
 
     const/4 v0, 0x1
 
-    if-nez p3, :cond_0
-
     :try_start_0
-    iget v1, p0, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->mUid:I
-
-    invoke-static {v1}, Lcom/android/server/am/OpBGFrozenInjector;->isDeliverDisplayChange(I)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_0
     iget v1, p0, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->mUid:I
 
     iget v2, p0, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->mPid:I

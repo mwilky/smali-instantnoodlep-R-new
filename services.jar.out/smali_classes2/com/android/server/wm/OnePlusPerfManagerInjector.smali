@@ -270,7 +270,7 @@
     return-void
 .end method
 
-.method public static updateCurrentLauncherPid(I)V
+.method public static updateCurrentLauncherPid(ILcom/android/server/am/ActivityManagerService;)V
     .locals 2
 
     sget-boolean v0, Lcom/android/server/wm/OnePlusPerfManagerInjector;->ENABLED:Z
@@ -295,7 +295,7 @@
 
     sget-object v0, Lcom/android/server/wm/OnePlusPerfManagerInjector;->onePlusPerfManager:Lcom/android/server/wm/IOnePlusPerfManager;
 
-    invoke-interface {v0, p0}, Lcom/android/server/wm/IOnePlusPerfManager;->updateCurrentLauncherPid(I)V
+    invoke-interface {v0, p0, p1}, Lcom/android/server/wm/IOnePlusPerfManager;->updateCurrentLauncherPid(ILcom/android/server/am/ActivityManagerService;)V
 
     return-void
 .end method

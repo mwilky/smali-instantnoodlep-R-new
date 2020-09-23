@@ -22,5 +22,5 @@
 .method public abstract setThreadToUx(IZ)V
 .end method
 
-.method public abstract updateCurrentLauncherPid(I)V
+.method public abstract updateCurrentLauncherPid(ILcom/android/server/am/ActivityManagerService;)V
 .end method

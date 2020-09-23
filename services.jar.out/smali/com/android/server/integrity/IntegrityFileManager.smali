@@ -83,7 +83,7 @@
 
     new-instance v0, Ljava/io/File;
 
-    const-string v1, "integrity_rules"
+    const-string/jumbo v1, "integrity_rules"
 
     invoke-direct {v0, p3, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
@@ -91,7 +91,7 @@
 
     new-instance v0, Ljava/io/File;
 
-    const-string v1, "integrity_staging"
+    const-string/jumbo v1, "integrity_staging"
 
     invoke-direct {v0, p3, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
