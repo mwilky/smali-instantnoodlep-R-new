@@ -105,7 +105,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->L0(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$ugm;->sis:Lcom/android/server/power/OnePlusStandbyAnalyzer$hmo;
 
@@ -133,7 +133,7 @@
     :try_start_0
     const-string v0, "NoSignalTimer - reset"
 
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->L0(Ljava/lang/String;)V
 
     const-wide/16 v0, 0x0
 
@@ -183,7 +183,7 @@
     :try_start_1
     const-string v0, "NoSignalTimer - start"
 
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->L0(Ljava/lang/String;)V
 
     iput-boolean v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$ugm;->you:Z
 
@@ -257,7 +257,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->L0(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

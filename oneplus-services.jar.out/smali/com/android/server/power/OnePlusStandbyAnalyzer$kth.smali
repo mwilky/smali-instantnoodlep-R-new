@@ -102,7 +102,7 @@
     :goto_0
     iget-object v4, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$kth;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer;
 
-    iget-object v4, v4, Lcom/android/server/power/OnePlusStandbyAnalyzer;->K:Ljava/util/List;
+    iget-object v4, v4, Lcom/android/server/power/OnePlusStandbyAnalyzer;->J:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->size()I
 
@@ -112,7 +112,7 @@
 
     iget-object v4, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$kth;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer;
 
-    iget-object v4, v4, Lcom/android/server/power/OnePlusStandbyAnalyzer;->K:Ljava/util/List;
+    iget-object v4, v4, Lcom/android/server/power/OnePlusStandbyAnalyzer;->J:Ljava/util/List;
 
     invoke-interface {v4, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -126,7 +126,7 @@
 
     iget-object v4, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$kth;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer;
 
-    iget-object v4, v4, Lcom/android/server/power/OnePlusStandbyAnalyzer;->K:Ljava/util/List;
+    iget-object v4, v4, Lcom/android/server/power/OnePlusStandbyAnalyzer;->J:Ljava/util/List;
 
     invoke-interface {v4, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -181,7 +181,7 @@
     const-string p0, "oops!, the enum-definition is not matched with telephony"
 
     :goto_1
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->L0(Ljava/lang/String;)V
 
     goto :goto_2
 

@@ -156,7 +156,7 @@
 .method public sis(Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;IJJJJ)V
     .locals 0
 
-    sget-object p2, Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;->sis:Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
+    sget-object p2, Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;->you:Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
 
     if-ne p1, p2, :cond_3
 

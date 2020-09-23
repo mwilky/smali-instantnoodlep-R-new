@@ -438,7 +438,11 @@
 
     iget-object p0, p0, Lcom/android/server/am/hmo;->oxb:Ljava/util/Set;
 
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {p2}, Landroid/os/UserHandle;->getAppId(I)I
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
@@ -2079,6 +2083,11 @@
 .method private o(Lcom/android/server/pm/parsing/pkg/AndroidPackage;)V
     .locals 5
 
+    if-nez p1, :cond_0
+
+    return-void
+
+    :cond_0
     invoke-interface {p1}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object p0
@@ -2087,9 +2096,7 @@
 
     move-result v0
 
-    if-eqz p1, :cond_b
-
-    if-eqz p0, :cond_b
+    if-eqz p0, :cond_c
 
     const-string v1, "android"
 
@@ -2097,24 +2104,22 @@
 
     move-result v1
 
-    if-nez v1, :cond_b
+    if-nez v1, :cond_c
 
     invoke-static {v0}, Landroid/os/UserHandle;->isCore(I)Z
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
     goto/16 :goto_3
 
-    :cond_0
-    if-eqz p1, :cond_a
-
+    :cond_1
     invoke-interface {p1}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->isSystem()Z
 
     move-result p0
 
-    if-nez p0, :cond_a
+    if-nez p0, :cond_b
 
     const/4 p0, 0x0
 
@@ -2126,13 +2131,13 @@
 
     move-result-object v1
 
-    :cond_1
+    :cond_2
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_5
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -2140,12 +2145,12 @@
 
     check-cast v2, Landroid/content/pm/parsing/component/ParsedActivity;
 
-    if-eqz p0, :cond_2
+    if-eqz p0, :cond_3
 
     goto :goto_1
 
-    :cond_2
-    if-eqz v2, :cond_1
+    :cond_3
+    if-eqz v2, :cond_2
 
     invoke-virtual {v2}, Landroid/content/pm/parsing/component/ParsedActivity;->getIntents()Ljava/util/List;
 
@@ -2155,12 +2160,12 @@
 
     move-result-object v2
 
-    :cond_3
+    :cond_4
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v3
 
-    if-eqz v3, :cond_1
+    if-eqz v3, :cond_2
 
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -2168,7 +2173,7 @@
 
     check-cast v3, Landroid/content/pm/parsing/component/ParsedIntentInfo;
 
-    if-eqz v3, :cond_3
+    if-eqz v3, :cond_4
 
     const-string v4, "android.intent.category.LAUNCHER"
 
@@ -2176,19 +2181,19 @@
 
     move-result v3
 
-    if-eqz v3, :cond_3
+    if-eqz v3, :cond_4
 
     const/4 p0, 0x1
 
     goto :goto_0
 
-    :cond_4
+    :cond_5
     :goto_1
-    if-nez p0, :cond_5
+    if-nez p0, :cond_6
 
     const/4 p0, -0x1
 
-    if-eq v0, p0, :cond_5
+    if-eq v0, p0, :cond_6
 
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -2212,7 +2217,7 @@
 
     invoke-static {v0}, Lcom/android/server/am/StartAppSpecialUidsPolicy;->rtg(I)V
 
-    :cond_5
+    :cond_6
     invoke-interface {p1}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getServices()Ljava/util/List;
 
     move-result-object p0
@@ -2221,12 +2226,12 @@
 
     move-result-object p0
 
-    :cond_6
+    :cond_7
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result p1
 
-    if-eqz p1, :cond_a
+    if-eqz p1, :cond_b
 
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -2234,7 +2239,7 @@
 
     check-cast p1, Landroid/content/pm/parsing/component/ParsedService;
 
-    if-eqz p1, :cond_6
+    if-eqz p1, :cond_7
 
     invoke-virtual {p1}, Landroid/content/pm/parsing/component/ParsedService;->getIntents()Ljava/util/List;
 
@@ -2244,13 +2249,13 @@
 
     move-result-object v0
 
-    :cond_7
+    :cond_8
     :goto_2
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_7
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -2258,7 +2263,7 @@
 
     check-cast v1, Landroid/content/pm/parsing/component/ParsedIntentInfo;
 
-    if-eqz v1, :cond_7
+    if-eqz v1, :cond_8
 
     const-string v2, "android.intent.action.TTS_SERVICE"
 
@@ -2266,13 +2271,13 @@
 
     move-result v2
 
-    if-eqz v2, :cond_8
+    if-eqz v2, :cond_9
 
     invoke-virtual {p1}, Landroid/content/pm/parsing/component/ParsedService;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object v2
 
-    if-eqz v2, :cond_8
+    if-eqz v2, :cond_9
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -2308,20 +2313,20 @@
 
     invoke-static {v2}, Lcom/android/server/am/i;->sis(Ljava/lang/String;)V
 
-    :cond_8
+    :cond_9
     const-string v2, "android.content.SyncAdapter"
 
     invoke-virtual {v1, v2}, Landroid/content/pm/parsing/component/ParsedIntentInfo;->hasAction(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_9
+    if-eqz v2, :cond_a
 
     invoke-virtual {p1}, Landroid/content/pm/parsing/component/ParsedService;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object v2
 
-    if-eqz v2, :cond_9
+    if-eqz v2, :cond_a
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -2357,20 +2362,20 @@
 
     invoke-static {v2}, Lcom/android/server/am/i;->you(Ljava/lang/String;)V
 
-    :cond_9
+    :cond_a
     const-string v2, "android.service.textservice.SpellCheckerService"
 
     invoke-virtual {v1, v2}, Landroid/content/pm/parsing/component/ParsedIntentInfo;->hasAction(Ljava/lang/String;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_7
+    if-eqz v1, :cond_8
 
     invoke-virtual {p1}, Landroid/content/pm/parsing/component/ParsedService;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object v1
 
-    if-eqz v1, :cond_7
+    if-eqz v1, :cond_8
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2408,10 +2413,10 @@
 
     goto/16 :goto_2
 
-    :cond_a
+    :cond_b
     return-void
 
-    :cond_b
+    :cond_c
     :goto_3
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -3400,7 +3405,11 @@
 
     iget-object v1, v0, Lcom/android/server/am/hmo;->oxb:Ljava/util/Set;
 
-    invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v14}, Landroid/os/UserHandle;->getAppId(I)I
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
@@ -3543,7 +3552,11 @@
 
     iget-object v1, v0, Lcom/android/server/am/hmo;->oxb:Ljava/util/Set;
 
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v6}, Landroid/os/UserHandle;->getAppId(I)I
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
@@ -3733,7 +3746,11 @@
 
     iget-object v0, v0, Lcom/android/server/am/hmo;->oxb:Ljava/util/Set;
 
-    invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v13}, Landroid/os/UserHandle;->getAppId(I)I
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
@@ -3764,7 +3781,11 @@
 
     iget-object v1, v0, Lcom/android/server/am/hmo;->oxb:Ljava/util/Set;
 
-    invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v13}, Landroid/os/UserHandle;->getAppId(I)I
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
@@ -4139,7 +4160,11 @@
 
     iget-object v1, v0, Lcom/android/server/am/hmo;->oxb:Ljava/util/Set;
 
-    invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v13}, Landroid/os/UserHandle;->getAppId(I)I
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
@@ -4274,6 +4299,10 @@
     if-eqz v0, :cond_1
 
     iget-object v0, p0, Lcom/android/server/am/hmo;->oxb:Ljava/util/Set;
+
+    invoke-static {p1}, Landroid/os/UserHandle;->getAppId(I)I
+
+    move-result p1
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4446,6 +4475,10 @@
 
     iget-object p0, p0, Lcom/android/server/am/hmo;->oxb:Ljava/util/Set;
 
+    invoke-static {p1}, Landroid/os/UserHandle;->getAppId(I)I
+
+    move-result p1
+
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -4603,6 +4636,10 @@
 
     iget v0, v0, Landroid/content/pm/ApplicationInfo;->uid:I
 
+    invoke-static {v0}, Landroid/os/UserHandle;->getAppId(I)I
+
+    move-result v0
+
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -4618,6 +4655,10 @@
     iget-object p1, p1, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
     iget p1, p1, Landroid/content/pm/ApplicationInfo;->uid:I
+
+    invoke-static {p1}, Landroid/os/UserHandle;->getAppId(I)I
+
+    move-result p1
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4810,7 +4851,11 @@
 
     iget-object v1, v0, Lcom/android/server/am/hmo;->oxb:Ljava/util/Set;
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v3}, Landroid/os/UserHandle;->getAppId(I)I
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
@@ -5043,7 +5088,11 @@
 
     iget-object v0, v0, Lcom/android/server/am/hmo;->oxb:Ljava/util/Set;
 
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v4}, Landroid/os/UserHandle;->getAppId(I)I
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
@@ -5074,7 +5123,11 @@
 
     iget-object v0, v0, Lcom/android/server/am/hmo;->oxb:Ljava/util/Set;
 
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v4}, Landroid/os/UserHandle;->getAppId(I)I
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
@@ -5109,7 +5162,11 @@
 
     iget-object v2, v0, Lcom/android/server/am/hmo;->oxb:Ljava/util/Set;
 
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v4}, Landroid/os/UserHandle;->getAppId(I)I
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
@@ -5291,7 +5348,11 @@
 
     iget-object v1, v0, Lcom/android/server/am/hmo;->oxb:Ljava/util/Set;
 
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v7}, Landroid/os/UserHandle;->getAppId(I)I
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
@@ -5528,7 +5589,11 @@
 
     iget-object v0, v0, Lcom/android/server/am/hmo;->oxb:Ljava/util/Set;
 
-    invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v13}, Landroid/os/UserHandle;->getAppId(I)I
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
@@ -5559,7 +5624,11 @@
 
     iget-object v0, v0, Lcom/android/server/am/hmo;->oxb:Ljava/util/Set;
 
-    invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v13}, Landroid/os/UserHandle;->getAppId(I)I
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
@@ -5594,7 +5663,11 @@
 
     iget-object v1, v0, Lcom/android/server/am/hmo;->oxb:Ljava/util/Set;
 
-    invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v13}, Landroid/os/UserHandle;->getAppId(I)I
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
@@ -5907,7 +5980,11 @@
 
     iget-object v1, v0, Lcom/android/server/am/hmo;->oxb:Ljava/util/Set;
 
-    invoke-static {v15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v15}, Landroid/os/UserHandle;->getAppId(I)I
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
@@ -6147,7 +6224,11 @@
 
     iget-object v0, v0, Lcom/android/server/am/hmo;->oxb:Ljava/util/Set;
 
-    invoke-static {v15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v15}, Landroid/os/UserHandle;->getAppId(I)I
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
@@ -6169,7 +6250,11 @@
 
     iget-object v0, v0, Lcom/android/server/am/hmo;->oxb:Ljava/util/Set;
 
-    invoke-static {v15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v15}, Landroid/os/UserHandle;->getAppId(I)I
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
@@ -6200,7 +6285,11 @@
 
     iget-object v1, v0, Lcom/android/server/am/hmo;->oxb:Ljava/util/Set;
 
-    invoke-static {v15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v15}, Landroid/os/UserHandle;->getAppId(I)I
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 

@@ -97,7 +97,7 @@
 
     move-result v3
 
-    invoke-static {v5, v3}, Lcom/android/server/am/cgv;->cno(Lcom/android/server/am/cgv;Z)Z
+    invoke-static {v5, v3}, Lcom/android/server/am/cgv;->kth(Lcom/android/server/am/cgv;Z)Z
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -109,7 +109,7 @@
 
     iget-object v5, p0, Lcom/android/server/am/cgv$you;->zta:Lcom/android/server/am/cgv;
 
-    invoke-static {v5}, Lcom/android/server/am/cgv;->kth(Lcom/android/server/am/cgv;)Z
+    invoke-static {v5}, Lcom/android/server/am/cgv;->bio(Lcom/android/server/am/cgv;)Z
 
     move-result v5
 
@@ -139,7 +139,7 @@
 
     move-result v2
 
-    invoke-static {v3, v2}, Lcom/android/server/am/cgv;->cno(Lcom/android/server/am/cgv;Z)Z
+    invoke-static {v3, v2}, Lcom/android/server/am/cgv;->kth(Lcom/android/server/am/cgv;Z)Z
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -149,7 +149,7 @@
 
     iget-object v3, p0, Lcom/android/server/am/cgv$you;->zta:Lcom/android/server/am/cgv;
 
-    invoke-static {v3}, Lcom/android/server/am/cgv;->ssp(Lcom/android/server/am/cgv;)Z
+    invoke-static {v3}, Lcom/android/server/am/cgv;->cno(Lcom/android/server/am/cgv;)Z
 
     move-result v3
 
@@ -168,7 +168,7 @@
 
     if-eqz v2, :cond_3
 
-    sget-boolean v2, Lcom/android/server/am/cgv;->qbh:Z
+    sget-boolean v2, Lcom/android/server/am/cgv;->bvj:Z
 
     if-eqz v2, :cond_3
 
@@ -178,7 +178,7 @@
 
     move-result v1
 
-    invoke-static {v2, v1}, Lcom/android/server/am/cgv;->cno(Lcom/android/server/am/cgv;Z)Z
+    invoke-static {v2, v1}, Lcom/android/server/am/cgv;->kth(Lcom/android/server/am/cgv;Z)Z
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -188,7 +188,7 @@
 
     iget-object v2, p0, Lcom/android/server/am/cgv$you;->zta:Lcom/android/server/am/cgv;
 
-    invoke-static {v2}, Lcom/android/server/am/cgv;->ssp(Lcom/android/server/am/cgv;)Z
+    invoke-static {v2}, Lcom/android/server/am/cgv;->cno(Lcom/android/server/am/cgv;)Z
 
     move-result v2
 
@@ -213,7 +213,7 @@
 
     move-result-wide v2
 
-    invoke-static {v1, v2, v3}, Lcom/android/server/am/cgv;->igw(Lcom/android/server/am/cgv;J)J
+    invoke-static {v1, v2, v3}, Lcom/android/server/am/cgv;->wtn(Lcom/android/server/am/cgv;J)J
 
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -225,7 +225,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/cgv$you;->zta:Lcom/android/server/am/cgv;
 
-    invoke-static {p0}, Lcom/android/server/am/cgv;->bio(Lcom/android/server/am/cgv;)J
+    invoke-static {p0}, Lcom/android/server/am/cgv;->igw(Lcom/android/server/am/cgv;)J
 
     move-result-wide v0
 

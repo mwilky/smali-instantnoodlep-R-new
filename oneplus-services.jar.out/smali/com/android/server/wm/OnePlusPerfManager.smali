@@ -178,6 +178,8 @@
 # instance fields
 .field private final currentSPI:Lcom/android/server/wm/OnePlusPerfManager$rtg;
 
+.field private mAms:Lcom/android/server/am/ActivityManagerService;
+
 .field private final mAnimLFTimeout:I
 
 .field private mContext:Landroid/content/Context;
@@ -1689,8 +1691,17 @@
     return v0
 
     :cond_1
-    invoke-direct {p0, p1}, Lcom/android/server/wm/OnePlusPerfManager;->getSpecialThreadOfLauncher(I)I
+    iget-object v0, p0, Lcom/android/server/wm/OnePlusPerfManager;->mAms:Lcom/android/server/am/ActivityManagerService;
 
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0, p1}, Lcom/android/server/am/ActivityManagerService;->getRenderThreadTid(I)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/android/server/wm/OnePlusPerfManager;->mRenderThreadTid:I
+
+    :cond_2
     iget p0, p0, Lcom/android/server/wm/OnePlusPerfManager;->mRenderThreadTid:I
 
     return p0
@@ -1747,7 +1758,7 @@
     :goto_0
     const/4 v5, 0x1
 
-    if-ge v2, v4, :cond_5
+    if-ge v2, v4, :cond_4
 
     aget-object v6, v0, v2
 
@@ -1767,7 +1778,7 @@
 
     if-ge v7, v8, :cond_1
 
-    goto/16 :goto_2
+    goto :goto_2
 
     :cond_1
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1792,51 +1803,13 @@
 
     move-result-object v7
 
-    const-string v8, "RenderThread"
-
-    invoke-virtual {v7, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_2
-
-    aget-object v5, v6, v5
-
-    invoke-static {v5}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v5
-
-    iput v5, p0, Lcom/android/server/wm/OnePlusPerfManager;->mRenderThreadTid:I
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v6, "getSpecialThreadOfLauncher mRenderThreadTid = "
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v6, p0, Lcom/android/server/wm/OnePlusPerfManager;->mRenderThreadTid:I
-
-    :goto_1
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v3, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_2
-
-    :cond_2
     const-string v8, "hwuiTask0"
 
     invoke-virtual {v7, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v8
 
-    if-eqz v8, :cond_3
+    if-eqz v8, :cond_2
 
     aget-object v5, v6, v5
 
@@ -1856,16 +1829,25 @@
 
     iget v6, p0, Lcom/android/server/wm/OnePlusPerfManager;->mHwuiThreadTid0:I
 
-    goto :goto_1
+    :goto_1
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    :cond_3
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v3, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_2
+
+    :cond_2
     const-string v8, "hwuiTask1"
 
     invoke-virtual {v7, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
 
-    if-eqz v7, :cond_4
+    if-eqz v7, :cond_3
 
     aget-object v5, v6, v5
 
@@ -1887,13 +1869,13 @@
 
     goto :goto_1
 
-    :cond_4
+    :cond_3
     :goto_2
     add-int/lit8 v2, v2, 0x1
 
-    goto/16 :goto_0
+    goto :goto_0
 
-    :cond_5
+    :cond_4
     iput p1, p0, Lcom/android/server/wm/OnePlusPerfManager;->mLauncherPid:I
 
     return v5
@@ -6592,7 +6574,7 @@
     return-void
 .end method
 
-.method public updateCurrentLauncherPid(I)V
+.method public updateCurrentLauncherPid(ILcom/android/server/am/ActivityManagerService;)V
     .locals 1
 
     iput p1, p0, Lcom/android/server/wm/OnePlusPerfManager;->mCurrentLauncherPid:I
@@ -6605,18 +6587,27 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget p0, p0, Lcom/android/server/wm/OnePlusPerfManager;->mCurrentLauncherPid:I
+    iget v0, p0, Lcom/android/server/wm/OnePlusPerfManager;->mCurrentLauncherPid:I
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    const-string p1, "OPPerf"
+    const-string v0, "OPPerf"
 
-    invoke-static {p1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    if-eqz p2, :cond_0
+
+    iput-object p2, p0, Lcom/android/server/wm/OnePlusPerfManager;->mAms:Lcom/android/server/am/ActivityManagerService;
+
+    const-string p0, "updateCurrentLauncherPid mAms set"
+
+    invoke-static {v0, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
     return-void
 .end method
 

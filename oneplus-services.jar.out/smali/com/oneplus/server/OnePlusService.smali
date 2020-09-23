@@ -167,7 +167,7 @@
 .method public flingEvent(Ljava/lang/String;I)V
     .locals 0
 
-    sget-boolean p0, Lcom/oneplus/server/zta;->o:Z
+    sget-boolean p0, Lcom/oneplus/server/zta;->p:Z
 
     if-eqz p0, :cond_0
 
@@ -285,7 +285,7 @@
 .method public getDynamicVsyncConfig(Ljava/lang/String;)I
     .locals 0
 
-    sget-boolean p0, Lcom/oneplus/server/zta;->o:Z
+    sget-boolean p0, Lcom/oneplus/server/zta;->p:Z
 
     if-eqz p0, :cond_0
 
@@ -613,7 +613,7 @@
 .method public resume(Ljava/lang/String;)V
     .locals 0
 
-    sget-boolean p0, Lcom/oneplus/server/zta;->o:Z
+    sget-boolean p0, Lcom/oneplus/server/zta;->p:Z
 
     if-eqz p0, :cond_0
 
@@ -621,7 +621,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0, p1}, Lcom/oneplus/server/zta;->z(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/oneplus/server/zta;->A(Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -705,11 +705,11 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/bvj;->cjf(Landroid/content/Context;)V
 
-    sget-boolean v0, Lcom/oneplus/server/zta;->o:Z
+    sget-boolean v0, Lcom/oneplus/server/zta;->p:Z
 
     if-nez v0, :cond_0
 
-    sget-boolean v0, Lcom/oneplus/server/zta;->p:Z
+    sget-boolean v0, Lcom/oneplus/server/zta;->q:Z
 
     if-eqz v0, :cond_1
 
@@ -829,7 +829,7 @@
 .method public updateVelocity(Ljava/lang/String;FD)V
     .locals 0
 
-    sget-boolean p0, Lcom/oneplus/server/zta;->o:Z
+    sget-boolean p0, Lcom/oneplus/server/zta;->p:Z
 
     if-eqz p0, :cond_0
 
@@ -837,7 +837,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/oneplus/server/zta;->O(Ljava/lang/String;FD)V
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/oneplus/server/zta;->Q(Ljava/lang/String;FD)V
 
     :cond_0
     return-void

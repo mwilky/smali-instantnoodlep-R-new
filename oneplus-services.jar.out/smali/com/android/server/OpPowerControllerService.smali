@@ -1138,10 +1138,6 @@
 
     iput-object v0, p0, Lcom/android/server/OpPowerControllerService;->mOemDeviceIdleWhitelist:Ljava/util/Set;
 
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
     iput-object v0, p0, Lcom/android/server/OpPowerControllerService;->mAddedDeviceIdleWhitelist:Ljava/util/Set;
 
     new-instance v0, Ljava/util/HashSet;
@@ -7151,10 +7147,11 @@
 
     if-nez p1, :cond_0
 
-    const-string p0, "[OnlineConfig] configList == null"
+    const-string p1, "[OnlineConfig] configList == null"
 
-    :goto_0
-    invoke-static {v1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-direct {p0}, Lcom/android/server/OpPowerControllerService;->applyIdleWhitelistForSmart()V
 
     return-void
 
@@ -7165,14 +7162,16 @@
 
     const-string p0, "[OnlineConfig] OnlineConfig is turned off!"
 
-    goto :goto_0
+    invoke-static {v1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
 
     :cond_1
     const/4 v2, 0x0
 
     move v3, v2
 
-    :goto_1
+    :goto_0
     :try_start_0
     invoke-virtual {p1}, Lorg/json/JSONArray;->length()I
 
@@ -7220,7 +7219,7 @@
 
     sparse-switch v7, :sswitch_data_0
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
     :sswitch_0
     const-string v7, "deep_clean_whitelist"
@@ -7233,7 +7232,7 @@
 
     const/4 v6, 0x6
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
     :sswitch_1
     const-string v7, "hypnus_conf"
@@ -7246,7 +7245,7 @@
 
     const/16 v6, 0xa
 
-    goto :goto_2
+    goto :goto_1
 
     :sswitch_2
     const-string v7, "dailyproto"
@@ -7259,7 +7258,7 @@
 
     const/4 v6, 0x7
 
-    goto :goto_2
+    goto :goto_1
 
     :sswitch_3
     const-string v7, "network_restrict"
@@ -7272,7 +7271,7 @@
 
     const/4 v6, 0x4
 
-    goto :goto_2
+    goto :goto_1
 
     :sswitch_4
     const-string v7, "wakelocks"
@@ -7285,7 +7284,7 @@
 
     move v6, v2
 
-    goto :goto_2
+    goto :goto_1
 
     :sswitch_5
     const-string v7, "usersleep"
@@ -7298,7 +7297,7 @@
 
     move v6, v8
 
-    goto :goto_2
+    goto :goto_1
 
     :sswitch_6
     const-string v7, "idle_whitelist"
@@ -7311,7 +7310,7 @@
 
     const/4 v6, 0x5
 
-    goto :goto_2
+    goto :goto_1
 
     :sswitch_7
     const-string v7, "opsm"
@@ -7324,7 +7323,7 @@
 
     const/4 v6, 0x2
 
-    goto :goto_2
+    goto :goto_1
 
     :sswitch_8
     const-string v7, "chargingguadrder"
@@ -7337,7 +7336,7 @@
 
     const/16 v6, 0x8
 
-    goto :goto_2
+    goto :goto_1
 
     :sswitch_9
     const-string v7, "bad_process"
@@ -7350,7 +7349,7 @@
 
     const/4 v6, 0x3
 
-    goto :goto_2
+    goto :goto_1
 
     :sswitch_a
     const-string v7, "hypnus"
@@ -7364,20 +7363,20 @@
     const/16 v6, 0x9
 
     :cond_2
-    :goto_2
+    :goto_1
     packed-switch v6, :pswitch_data_0
 
-    goto :goto_3
+    goto :goto_2
 
     :pswitch_0
     invoke-direct {p0, v4}, Lcom/android/server/OpPowerControllerService;->parseHypnusConf(Lorg/json/JSONObject;)V
 
-    goto :goto_3
+    goto :goto_2
 
     :pswitch_1
     invoke-direct {p0, v4}, Lcom/android/server/OpPowerControllerService;->parseHypnus(Lorg/json/JSONObject;)V
 
-    goto :goto_3
+    goto :goto_2
 
     :pswitch_2
     iget-object v5, p0, Lcom/android/server/OpPowerControllerService;->mOnePlusChargingGuarder:Lcom/android/server/igw;
@@ -7388,7 +7387,7 @@
 
     invoke-virtual {v5, v4}, Lcom/android/server/igw;->v(Lorg/json/JSONObject;)V
 
-    goto :goto_3
+    goto :goto_2
 
     :pswitch_3
     new-array v5, v8, [I
@@ -7405,17 +7404,17 @@
 
     invoke-direct {p0, v4}, Lcom/android/server/OpPowerControllerService;->parseDailyProtoConfig(Lorg/json/JSONObject;)V
 
-    goto :goto_3
+    goto :goto_2
 
     :pswitch_4
     invoke-direct {p0, v4}, Lcom/android/server/OpPowerControllerService;->parseDeepCleanWhitelist(Lorg/json/JSONObject;)V
 
-    goto :goto_3
+    goto :goto_2
 
     :pswitch_5
     invoke-direct {p0, v4}, Lcom/android/server/OpPowerControllerService;->parseDozeWhitelist(Lorg/json/JSONObject;)V
 
-    goto :goto_3
+    goto :goto_2
 
     :pswitch_6
     new-array v5, v8, [I
@@ -7432,12 +7431,12 @@
 
     invoke-direct {p0, v4}, Lcom/android/server/OpPowerControllerService;->parseNetworkRestrict(Lorg/json/JSONObject;)V
 
-    goto :goto_3
+    goto :goto_2
 
     :pswitch_7
     invoke-direct {p0, v4}, Lcom/android/server/OpPowerControllerService;->parseBadProcess(Lorg/json/JSONObject;)V
 
-    goto :goto_3
+    goto :goto_2
 
     :pswitch_8
     new-array v5, v8, [I
@@ -7454,12 +7453,12 @@
 
     invoke-direct {p0, v4}, Lcom/android/server/OpPowerControllerService;->parseOPSM(Lorg/json/JSONObject;)V
 
-    goto :goto_3
+    goto :goto_2
 
     :pswitch_9
     invoke-direct {p0, v4}, Lcom/android/server/OpPowerControllerService;->parseUserSleep(Lorg/json/JSONObject;)V
 
-    goto :goto_3
+    goto :goto_2
 
     :pswitch_a
     invoke-direct {p0, v4}, Lcom/android/server/OpPowerControllerService;->parseWakeLock(Lorg/json/JSONObject;)V
@@ -7467,10 +7466,10 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :cond_3
-    :goto_3
+    :goto_2
     add-int/lit8 v3, v3, 0x1
 
-    goto/16 :goto_1
+    goto/16 :goto_0
 
     :catch_0
     move-exception p0

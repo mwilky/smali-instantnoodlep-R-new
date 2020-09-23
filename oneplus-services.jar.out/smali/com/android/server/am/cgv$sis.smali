@@ -15,7 +15,9 @@
 
 
 # static fields
-.field public static final sis:I = 0xea60
+.field public static final sis:I = 0x1
+
+.field public static final tsu:I = 0xea60
 
 .field public static final you:I
 
@@ -40,13 +42,28 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 4
 
-    iget p1, p1, Landroid/os/Message;->what:I
+    iget v0, p1, Landroid/os/Message;->what:I
 
-    if-eqz p1, :cond_0
+    if-eqz v0, :cond_1
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_0
 
     goto :goto_0
 
     :cond_0
+    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/StringBuilder;
+
+    iget-object p0, p0, Lcom/android/server/am/cgv$sis;->zta:Lcom/android/server/am/cgv;
+
+    invoke-static {p0, p1}, Lcom/android/server/am/cgv;->ssp(Lcom/android/server/am/cgv;Ljava/lang/StringBuilder;)V
+
+    goto :goto_0
+
+    :cond_1
     iget-object p1, p0, Lcom/android/server/am/cgv$sis;->zta:Lcom/android/server/am/cgv;
 
     new-instance v0, Lcom/android/server/am/cgv$you;

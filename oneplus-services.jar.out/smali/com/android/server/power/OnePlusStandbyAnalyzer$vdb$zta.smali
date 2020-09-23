@@ -48,39 +48,6 @@
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "==MSG_STANDBY_MIDDLE_CHECK== "
-
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Thread;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget-object p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$vdb$zta;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$vdb;
-
-    iget-object p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$vdb;->sis:Lcom/android/server/power/OnePlusStandbyAnalyzer;
-
-    invoke-virtual {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->L0()V
-
-    goto/16 :goto_1
-
-    :pswitch_2
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v1, "==MSG_GEN_BATTERT_OUTLIER== "
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -105,11 +72,11 @@
 
     iget-object p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$vdb;->sis:Lcom/android/server/power/OnePlusStandbyAnalyzer;
 
-    invoke-virtual {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M()V
+    invoke-virtual {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->N()V
 
     goto/16 :goto_1
 
-    :pswitch_3
+    :pswitch_2
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -142,7 +109,7 @@
 
     goto/16 :goto_1
 
-    :pswitch_4
+    :pswitch_3
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -171,11 +138,11 @@
 
     iget-object p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$vdb;->sis:Lcom/android/server/power/OnePlusStandbyAnalyzer;
 
-    invoke-virtual {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->e1()V
+    invoke-virtual {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->d1()V
 
     goto/16 :goto_1
 
-    :pswitch_5
+    :pswitch_4
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -204,11 +171,11 @@
 
     iget-object p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$vdb;->sis:Lcom/android/server/power/OnePlusStandbyAnalyzer;
 
-    invoke-virtual {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->S0()V
+    invoke-virtual {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->R0()V
 
     goto/16 :goto_1
 
-    :pswitch_6
+    :pswitch_5
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -237,11 +204,11 @@
 
     iget-object p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$vdb;->sis:Lcom/android/server/power/OnePlusStandbyAnalyzer;
 
-    invoke-virtual {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->d1()V
+    invoke-virtual {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->c1()V
 
     goto :goto_1
 
-    :pswitch_7
+    :pswitch_6
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -280,7 +247,7 @@
 
     goto :goto_1
 
-    :pswitch_8
+    :pswitch_7
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -289,7 +256,7 @@
 
     goto :goto_0
 
-    :pswitch_9
+    :pswitch_8
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -317,7 +284,7 @@
 
     goto :goto_1
 
-    :pswitch_a
+    :pswitch_9
     invoke-static {}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->zta()Z
 
     move-result p1
@@ -356,11 +323,12 @@
     :goto_1
     return-void
 
+    nop
+
     :pswitch_data_0
     .packed-switch 0x3e8
-        :pswitch_a
-        :pswitch_0
         :pswitch_9
+        :pswitch_0
         :pswitch_8
         :pswitch_7
         :pswitch_6
