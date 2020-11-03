@@ -16196,6 +16196,10 @@
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mContext:Landroid/content/Context;
     
     invoke-static {v0}, Lcom/android/mwilky/Renovate;->setColorChanges(Landroid/content/Context;)V
+    
+    invoke-static {v0}, Lcom/android/mwilky/Renovate;->setAccentColor(Landroid/content/Context;)V
+
+    invoke-static {v0}, Lcom/android/mwilky/Renovate;->setNotificationTextColors(Landroid/content/Context;)V
 
     invoke-static {v0}, Lcom/android/mwilky/Renovate;->setQsBackgroundColor(Landroid/content/Context;)V
 
@@ -16215,6 +16219,10 @@
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mContext:Landroid/content/Context;
     
     invoke-static {v0}, Lcom/android/mwilky/Renovate;->setColorChanges(Landroid/content/Context;)V
+    
+    invoke-static {v0}, Lcom/android/mwilky/Renovate;->setAccentColor(Landroid/content/Context;)V
+
+    invoke-static {v0}, Lcom/android/mwilky/Renovate;->setNotificationTextColors(Landroid/content/Context;)V
 
     invoke-static {v0}, Lcom/android/mwilky/Renovate;->setQsBackgroundColor(Landroid/content/Context;)V
 
@@ -16234,6 +16242,10 @@
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mContext:Landroid/content/Context;
     
     invoke-static {v0}, Lcom/android/mwilky/Renovate;->setColorChanges(Landroid/content/Context;)V
+    
+    invoke-static {v0}, Lcom/android/mwilky/Renovate;->setAccentColor(Landroid/content/Context;)V
+
+    invoke-static {v0}, Lcom/android/mwilky/Renovate;->setNotificationTextColors(Landroid/content/Context;)V
 
     invoke-static {v0}, Lcom/android/mwilky/Renovate;->setQsBackgroundColor(Landroid/content/Context;)V
 
