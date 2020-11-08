@@ -661,6 +661,83 @@
     return-void
 .end method
 
+.method private getAuthenticatedPackage()Z
+    .locals 4
+
+    const-string p0, "OpColorDisplayService"
+
+    const-string v0, "fingerprint"
+
+    invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/hardware/fingerprint/IFingerprintService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/hardware/fingerprint/IFingerprintService;
+
+    move-result-object v0
+
+    const-string v1, ""
+
+    if-eqz v0, :cond_0
+
+    :try_start_0
+    invoke-interface {v0}, Landroid/hardware/fingerprint/IFingerprintService;->getAuthenticatedPackage()Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "fp in used: "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p0, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "getAuthenticatedPackage , "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p0, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    :goto_0
+    if-nez v1, :cond_1
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_1
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
 .method public static getDefault()Lcom/oneplus/display/IOneplusColorDisplay;
     .locals 1
 
@@ -723,7 +800,15 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "notifyIrisFingerprintStatus fingerprint_status = "
+    const-string v1, "isIrisClose = "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->isIrisClose:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, "   fingerprintStatus = "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -735,19 +820,37 @@
 
     const-string v1, "OpColorDisplayService"
 
-    invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iput-boolean p1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->isIrisClose:Z
+    invoke-direct {p0}, Lcom/oneplus/android/server/display/OpColorDisplayService;->getSurfaceFlinger()Landroid/os/IBinder;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    iget-boolean v0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->isIrisClose:Z
+
+    if-eq v0, p1, :cond_2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "notifyIrisFingerprintStatus fingerprint_status = "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-static {}, Landroid/view/SurfaceControl;->getInternalDisplayToken()Landroid/os/IBinder;
 
     move-result-object v0
-
-    invoke-direct {p0}, Lcom/oneplus/android/server/display/OpColorDisplayService;->getSurfaceFlinger()Landroid/os/IBinder;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_2
 
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
@@ -800,9 +903,9 @@
     move v0, v3
 
     :goto_1
-    iget p0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mCurrentUser:I
+    iget v3, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mCurrentUser:I
 
-    invoke-static {v4, v5, v0, p0}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
+    invoke-static {v4, v5, v0, v3}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_2
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
@@ -817,48 +920,50 @@
     goto :goto_4
 
     :catch_0
-    move-exception p0
+    move-exception v0
 
     :try_start_1
-    new-instance p1, Ljava/lang/StringBuilder;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v0, "Failed to notifyIrisFingerprintStatus: "
+    const-string v4, "Failed to notifyIrisFingerprintStatus: "
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
     :goto_2
-    invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_3
 
     :catch_1
-    const-string p0, "Failed to notifyIrisFingerprintStatus."
+    const-string v0, "Failed to notifyIrisFingerprintStatus."
 
     goto :goto_2
 
     :catch_2
-    move-exception p0
+    move-exception v0
 
-    const-string p1, "Failed to notifyIrisFingerprintStatus"
+    const-string v3, "Failed to notifyIrisFingerprintStatus"
 
-    invoke-static {v1, p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v1, v3, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     :goto_3
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
+
+    iput-boolean p1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->isIrisClose:Z
 
     goto :goto_5
 
@@ -1024,7 +1129,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-eqz p1, :cond_8
+    if-eqz p1, :cond_7
 
     iget-object v0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mColorTintManager:Lcom/oneplus/android/server/display/tsu;
 
@@ -1196,20 +1301,7 @@
 
     iget-boolean v0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mHasFingerprint:Z
 
-    if-eqz v0, :cond_4
-
-    iget-boolean v0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mExitFingerPrintModeReason:Z
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mColorTintManager:Lcom/oneplus/android/server/display/tsu;
-
-    invoke-virtual {v0, p1}, Lcom/oneplus/android/server/display/tsu;->oxb(Z)V
-
-    :cond_4
-    iget-boolean v0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mHasFingerprint:Z
-
-    if-nez v0, :cond_7
+    if-nez v0, :cond_6
 
     const-string v0, "ColorDisable"
 
@@ -1217,7 +1309,7 @@
 
     move-result v0
 
-    if-ne v0, v2, :cond_5
+    if-ne v0, v2, :cond_4
 
     const/4 v0, 0x2
 
@@ -1225,30 +1317,30 @@
 
     invoke-static {v1, v0, v4}, Lcom/oneplus/server/you;->rtg(Ljava/lang/String;II)V
 
-    :cond_5
+    :cond_4
     sget-boolean v0, Lcom/oneplus/android/server/display/OpColorDisplayService;->SUPPORT_SOFTIRIS:Z
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_5
 
     invoke-direct {p0, v4}, Lcom/oneplus/android/server/display/OpColorDisplayService;->notifyIrisFingerprintStatus(Z)V
 
-    :cond_6
+    :cond_5
     invoke-direct {p0, v4}, Lcom/oneplus/android/server/display/OpColorDisplayService;->revertStatus(Z)V
 
     goto :goto_4
 
-    :cond_7
+    :cond_6
     iget-boolean v0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->firstunlock:Z
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_8
 
-    :cond_8
+    :cond_7
     :goto_4
     iget-object p0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mColorTintManager:Lcom/oneplus/android/server/display/tsu;
 
     invoke-virtual {p0, p1}, Lcom/oneplus/android/server/display/tsu;->oxb(Z)V
 
-    :cond_9
+    :cond_8
     return-void
 .end method
 
@@ -2159,7 +2251,7 @@
     iput-object p1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mFpm:Landroid/hardware/fingerprint/FingerprintManager;
 
     :cond_2
-    const-wide/16 v2, 0xa
+    const-wide/16 v2, 0x1e
 
     invoke-static {v2, v3}, Landroid/os/HandlerThread;->sleep(J)V
 
@@ -2182,6 +2274,12 @@
     iget-object p1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mFpm:Landroid/hardware/fingerprint/FingerprintManager;
 
     invoke-virtual {p1}, Landroid/hardware/fingerprint/FingerprintManager;->isEnrolling()Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    invoke-direct {p0}, Lcom/oneplus/android/server/display/OpColorDisplayService;->getAuthenticatedPackage()Z
 
     move-result p1
 

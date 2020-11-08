@@ -1,6 +1,9 @@
-.class public Lcom/android/server/am/ire$sis;
-.super Landroid/os/Handler;
+.class Lcom/android/server/am/ire$sis;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Lcom/android/server/OnePlusUtil$zta$you;
 
 
 # annotations
@@ -9,30 +12,285 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0xa
     name = "sis"
 .end annotation
 
 
+# static fields
+.field private static final sis:Ljava/lang/String; = "HwuiBoostFrontPackageListener"
+
+.field private static final tsu:Ljava/lang/String; = "/sys/module/houston/parameters/hwui_boost_enable"
+
+
 # instance fields
-.field final synthetic zta:Lcom/android/server/am/ire;
+.field private you:Ljava/util/Set;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Set<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private zta:I
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/server/am/ire;Landroid/os/Looper;)V
-    .locals 0
+.method private constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lcom/android/server/am/ire$sis;->zta:Lcom/android/server/am/ire;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    const/4 v0, 0x1
+
+    iput v0, p0, Lcom/android/server/am/ire$sis;->zta:I
+
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    invoke-static {v0}, Ljava/util/Collections;->synchronizedSet(Ljava/util/Set;)Ljava/util/Set;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/server/am/ire$sis;->you:Ljava/util/Set;
 
     return-void
 .end method
 
+.method synthetic constructor <init>(Lcom/android/server/am/ire$zta;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/server/am/ire$sis;-><init>()V
+
+    return-void
+.end method
+
+.method private sis(I)Z
+    .locals 6
+
+    const-string p0, "/sys/module/houston/parameters/hwui_boost_enable"
+
+    const-string v0, "IO close failed : hwui boost=/sys/module/houston/parameters/hwui_boost_enable,ex->"
+
+    const-string v1, "HwuiBoostFrontPackageListener"
+
+    if-nez p1, :cond_0
+
+    const-string p1, "0"
+
+    goto :goto_0
+
+    :cond_0
+    const-string p1, "1"
+
+    :goto_0
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    :try_start_0
+    new-instance v5, Ljava/io/File;
+
+    invoke-direct {v5, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5}, Ljava/io/File;->exists()Z
+
+    move-result v5
+
+    if-nez v5, :cond_1
+
+    const-string p0, "Exception : file not exits :/sys/module/houston/parameters/hwui_boost_enable"
+
+    invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v4
+
+    :cond_1
+    new-instance v5, Ljava/io/FileOutputStream;
+
+    invoke-direct {v5, p0}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    :try_start_1
+    invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object p0
+
+    invoke-virtual {v5, p0}, Ljava/io/FileOutputStream;->write([B)V
+
+    invoke-static {}, Lcom/android/server/am/ire;->you()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_2
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "echo hwui boost = /sys/module/houston/parameters/hwui_boost_enable, "
+
+    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :cond_2
+    :try_start_2
+    invoke-virtual {v5}, Ljava/io/FileOutputStream;->close()V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
+
+    goto :goto_4
+
+    :catch_0
+    move-exception p0
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception p0
+
+    move-object v2, v5
+
+    goto :goto_5
+
+    :catch_1
+    move-exception p0
+
+    move-object v2, v5
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception p0
+
+    goto :goto_5
+
+    :catch_2
+    move-exception p0
+
+    :goto_1
+    :try_start_3
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "echo failed : hwui boost =/sys/module/houston/parameters/hwui_boost_enable,ex->"
+
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    if-eqz v2, :cond_3
+
+    :try_start_4
+    invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_3
+
+    goto :goto_3
+
+    :catch_3
+    move-exception p0
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    :goto_2
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_3
+    :goto_3
+    move v3, v4
+
+    :goto_4
+    return v3
+
+    :goto_5
+    if-eqz v2, :cond_4
+
+    :try_start_5
+    invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
+    :try_end_5
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_4
+
+    goto :goto_6
+
+    :catch_4
+    move-exception p1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v1, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_4
+    :goto_6
+    throw p0
+.end method
+
 
 # virtual methods
-.method public handleMessage(Landroid/os/Message;)V
-    .locals 7
+.method public frontPackageChanged(Ljava/lang/String;IILjava/lang/String;II)V
+    .locals 2
 
     invoke-static {}, Lcom/android/server/am/ire;->you()Z
 
@@ -44,262 +302,94 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "handleMessage # "
+    const-string v1, "frontPackageChanged: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " uid:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p2, " pid:"
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p3, " | "
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p2
 
-    const-string v1, "OnePlusSmartBoostManager"
+    const-string p3, "HwuiBoostFrontPackageListener"
 
-    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p3, p2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    iget v0, p1, Landroid/os/Message;->what:I
+    iget-object p2, p0, Lcom/android/server/am/ire$sis;->you:Ljava/util/Set;
 
-    const-string v1, "uid"
-
-    const/4 v2, 0x1
-
-    const-wide/32 v3, 0x5265c00
-
-    const-string v5, "pkgName"
-
-    const-string v6, "pid"
-
-    packed-switch v0, :pswitch_data_0
-
-    :pswitch_0
-    goto/16 :goto_0
-
-    :pswitch_1
-    invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    invoke-virtual {p1, v6}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v1
-
-    const-string v2, "type"
-
-    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+    invoke-interface {p2, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result p1
 
-    iget-object p0, p0, Lcom/android/server/am/ire$sis;->zta:Lcom/android/server/am/ire;
+    if-eqz p1, :cond_1
 
-    invoke-static {p0, v0, v1, p1}, Lcom/android/server/am/ire;->rtg(Lcom/android/server/am/ire;III)Z
-
-    goto/16 :goto_0
-
-    :pswitch_2
-    invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v6}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    invoke-virtual {p1, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v1
-
-    invoke-virtual {p1, v5}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iget-object v3, p0, Lcom/android/server/am/ire$sis;->zta:Lcom/android/server/am/ire;
-
-    invoke-static {v3, p1, v1, v2}, Lcom/android/server/am/ire;->tsu(Lcom/android/server/am/ire;Ljava/lang/String;IZ)I
-
-    move-result p1
-
-    iget-object p0, p0, Lcom/android/server/am/ire$sis;->zta:Lcom/android/server/am/ire;
-
-    invoke-static {p0, v1, v0, p1}, Lcom/android/server/am/ire;->rtg(Lcom/android/server/am/ire;III)Z
-
-    goto/16 :goto_0
-
-    :pswitch_3
-    invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
-
-    move-result-object p1
-
-    const-string v0, "lastPid"
-
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    const-string v1, "lastUid"
-
-    invoke-virtual {p1, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v1
-
-    const-string v2, "lastPkgName"
-
-    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iget-object p0, p0, Lcom/android/server/am/ire$sis;->zta:Lcom/android/server/am/ire;
-
-    invoke-static {p0, v1, v0, p1}, Lcom/android/server/am/ire;->ssp(Lcom/android/server/am/ire;IILjava/lang/String;)Z
-
-    goto/16 :goto_0
-
-    :pswitch_4
-    iget-object p0, p0, Lcom/android/server/am/ire$sis;->zta:Lcom/android/server/am/ire;
-
-    invoke-static {p0}, Lcom/android/server/am/ire;->kth(Lcom/android/server/am/ire;)I
+    const/4 p1, 0x0
 
     goto :goto_0
 
-    :pswitch_5
-    invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v5}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iget-object p0, p0, Lcom/android/server/am/ire$sis;->zta:Lcom/android/server/am/ire;
-
-    invoke-static {p0, p1}, Lcom/android/server/am/ire;->qbh(Lcom/android/server/am/ire;Ljava/lang/String;)I
-
-    goto :goto_0
-
-    :pswitch_6
-    invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v6}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    invoke-virtual {p1, v5}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "codePath"
-
-    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iget-object p0, p0, Lcom/android/server/am/ire$sis;->zta:Lcom/android/server/am/ire;
-
-    invoke-static {p0, v0, v1, p1}, Lcom/android/server/am/ire;->ywr(Lcom/android/server/am/ire;ILjava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
-
-    :pswitch_7
-    iget-object p1, p0, Lcom/android/server/am/ire$sis;->zta:Lcom/android/server/am/ire;
-
-    invoke-static {p1}, Lcom/android/server/am/ire;->gck(Lcom/android/server/am/ire;)I
-
-    iget-object p0, p0, Lcom/android/server/am/ire$sis;->zta:Lcom/android/server/am/ire;
-
-    invoke-static {p0, v2}, Lcom/android/server/am/ire;->dma(Lcom/android/server/am/ire;Z)V
-
-    goto :goto_0
-
-    :pswitch_8
-    invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v6}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result p1
-
-    iget-object p0, p0, Lcom/android/server/am/ire$sis;->zta:Lcom/android/server/am/ire;
-
-    invoke-static {p0, p1}, Lcom/android/server/am/ire;->wtn(Lcom/android/server/am/ire;I)Z
-
-    goto :goto_0
-
-    :pswitch_9
-    invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v6}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    invoke-virtual {p1, v5}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "hotCount"
-
-    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iget-object p0, p0, Lcom/android/server/am/ire$sis;->zta:Lcom/android/server/am/ire;
-
-    invoke-static {p0, v1, p1, v0}, Lcom/android/server/am/ire;->igw(Lcom/android/server/am/ire;Ljava/lang/String;Ljava/lang/String;I)Z
-
-    goto :goto_0
-
-    :pswitch_a
-    iget-object p1, p0, Lcom/android/server/am/ire$sis;->zta:Lcom/android/server/am/ire;
-
-    invoke-static {p1}, Lcom/android/server/am/ire;->sis(Lcom/android/server/am/ire;)V
-
-    iget-object p1, p0, Lcom/android/server/am/ire$sis;->zta:Lcom/android/server/am/ire;
-
-    invoke-static {p1}, Lcom/android/server/am/ire;->kth(Lcom/android/server/am/ire;)I
-
-    :pswitch_b
-    iget-object p0, p0, Lcom/android/server/am/ire$sis;->zta:Lcom/android/server/am/ire;
-
-    invoke-static {p0, v3, v4}, Lcom/android/server/am/ire;->bio(Lcom/android/server/am/ire;J)V
-
-    goto :goto_0
-
-    :pswitch_c
-    iget-object p0, p0, Lcom/android/server/am/ire$sis;->zta:Lcom/android/server/am/ire;
-
-    invoke-static {p0}, Lcom/android/server/am/ire;->sis(Lcom/android/server/am/ire;)V
+    :cond_1
+    iget p1, p0, Lcom/android/server/am/ire$sis;->zta:I
 
     :goto_0
+    invoke-direct {p0, p1}, Lcom/android/server/am/ire$sis;->sis(I)Z
+
     return-void
+.end method
 
-    nop
+.method public tsu(I)V
+    .locals 0
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_c
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_b
-        :pswitch_0
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_0
-        :pswitch_0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
+    iput p1, p0, Lcom/android/server/am/ire$sis;->zta:I
+
+    invoke-direct {p0, p1}, Lcom/android/server/am/ire$sis;->sis(I)Z
+
+    return-void
+.end method
+
+.method public you()V
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/server/am/ire$sis;->you:Ljava/util/Set;
+
+    invoke-interface {p0}, Ljava/util/Set;->clear()V
+
+    return-void
+.end method
+
+.method public zta(Ljava/lang/String;)V
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/server/am/ire$sis;->you:Ljava/util/Set;
+
+    invoke-interface {p0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    return-void
 .end method

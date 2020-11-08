@@ -32,7 +32,7 @@
 .method private sis(I)Z
     .locals 2
 
-    invoke-static {p1}, Lcom/android/server/am/AppRecordManager;->gwm(I)Z
+    invoke-static {p1}, Lcom/android/server/am/AppRecordManager;->ugm(I)Z
 
     move-result p0
 

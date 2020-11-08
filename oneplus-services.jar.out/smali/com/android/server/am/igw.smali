@@ -87,7 +87,7 @@
     return-void
 .end method
 
-.method public notePSSChanged(II)V
+.method public notePSSChanged(IIJ)V
     .locals 0
 
     return-void

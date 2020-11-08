@@ -97,7 +97,7 @@
 
     check-cast p1, Lcom/android/server/am/bio;
 
-    invoke-virtual {p1}, Lcom/android/server/am/bio;->o()V
+    invoke-virtual {p1}, Lcom/android/server/am/bio;->p()V
 
     goto :goto_0
 
@@ -188,7 +188,7 @@
 
     check-cast p1, Lcom/android/server/am/bio;
 
-    invoke-virtual {p1}, Lcom/android/server/am/bio;->p()V
+    invoke-virtual {p1}, Lcom/android/server/am/bio;->q()V
 
     goto :goto_0
 
@@ -268,7 +268,7 @@
 
     check-cast p1, Lcom/android/server/am/bio;
 
-    invoke-virtual {p1}, Lcom/android/server/am/bio;->q()V
+    invoke-virtual {p1}, Lcom/android/server/am/bio;->r()V
 
     goto :goto_0
 
@@ -354,7 +354,7 @@
 
     check-cast p1, Lcom/android/server/am/bio;
 
-    invoke-virtual {p1, p2, p3, p4}, Lcom/android/server/am/bio;->B(IJ)V
+    invoke-virtual {p1, p2, p3, p4}, Lcom/android/server/am/bio;->C(IJ)V
 
     goto :goto_0
 

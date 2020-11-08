@@ -14,25 +14,29 @@
 
 
 # static fields
-.field private static final A:Ljava/lang/String; = "OpenShortcut"
+.field private static final A:Ljava/lang/String; = "OpenShelf"
 
-.field private static final B:Ljava/lang/String; = "/proc/touchpanel/gesture_enable"
+.field private static final B:Ljava/lang/String; = "OpenApp"
 
-.field private static final C:Ljava/lang/String; = "/proc/touchpanel/coordinate"
+.field private static final C:Ljava/lang/String; = "OpenShortcut"
 
-.field private static final D:Ljava/lang/String; = "/proc/touchpanel/gesture_switch"
+.field private static final D:Ljava/lang/String; = "/proc/touchpanel/gesture_enable"
 
-.field private static final E:J = 0x4bL
+.field private static final E:Ljava/lang/String; = "/proc/touchpanel/coordinate"
 
-.field private static final F:J = 0x96L
+.field private static final F:Ljava/lang/String; = "/proc/touchpanel/gesture_switch"
 
-.field private static final G:Landroid/media/AudioAttributes;
+.field private static final G:J = 0x4bL
 
-.field private static final H:Ljava/lang/String; = "0"
+.field private static final H:J = 0x96L
 
-.field private static final I:F = 0.1f
+.field private static final I:Landroid/media/AudioAttributes;
 
-.field private static final J:I = 0x3e8
+.field private static final J:Ljava/lang/String; = "0"
+
+.field private static final K:F = 0.1f
+
+.field private static final L:I = 0x3e8
 
 .field private static final h:Ljava/lang/String; = "DeviceKeyHandler"
 
@@ -48,29 +52,29 @@
 
 .field private static final n:I = 0xbb8
 
-.field private static final o:Ljava/lang/String; = "15"
+.field private static final o:I = 0x1f4
 
-.field private static final p:Ljava/lang/String; = "6"
+.field private static final p:Ljava/lang/String; = "15"
 
-.field private static final q:Ljava/lang/String; = "2"
+.field private static final q:Ljava/lang/String; = "16"
 
-.field private static final r:Ljava/lang/String; = "14"
+.field private static final r:Ljava/lang/String; = "6"
 
-.field private static final s:Ljava/lang/String; = "12"
+.field private static final s:Ljava/lang/String; = "2"
 
-.field private static final t:Ljava/lang/String; = "13"
+.field private static final t:Ljava/lang/String; = "14"
 
-.field private static final u:Ljava/lang/String; = "OpenCamera"
+.field private static final u:Ljava/lang/String; = "12"
 
-.field private static final v:Ljava/lang/String; = "OpenTorch"
+.field private static final v:Ljava/lang/String; = "13"
 
-.field private static final w:Ljava/lang/String; = "FrontCamera"
+.field private static final w:Ljava/lang/String; = "OpenCamera"
 
-.field private static final x:Ljava/lang/String; = "TakeVideo"
+.field private static final x:Ljava/lang/String; = "OpenTorch"
 
-.field private static final y:Ljava/lang/String; = "OpenShelf"
+.field private static final y:Ljava/lang/String; = "FrontCamera"
 
-.field private static final z:Ljava/lang/String; = "OpenApp"
+.field private static final z:Ljava/lang/String; = "TakeVideo"
 
 
 # instance fields
@@ -210,7 +214,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/server/policy/DeviceKeyHandler;->G:Landroid/media/AudioAttributes;
+    sput-object v0, Lcom/android/server/policy/DeviceKeyHandler;->I:Landroid/media/AudioAttributes;
 
     return-void
 .end method
@@ -1610,27 +1614,50 @@
 
     invoke-direct {p0, p1}, Lcom/android/server/policy/DeviceKeyHandler;->cjf(Ljava/lang/String;)Z
 
-    move-result p1
+    move-result v0
 
-    const-wide/16 v0, 0xbb8
-
-    if-eqz p1, :cond_0
+    if-eqz v0, :cond_0
 
     iget-object p0, p0, Lcom/android/server/policy/DeviceKeyHandler;->wtn:Landroid/os/PowerManager$WakeLock;
 
-    if-eqz p0, :cond_1
+    if-eqz p0, :cond_2
 
-    goto :goto_0
-
-    :cond_0
-    iget-object p0, p0, Lcom/android/server/policy/DeviceKeyHandler;->igw:Landroid/os/PowerManager$WakeLock;
-
-    if-eqz p0, :cond_1
+    const-wide/16 v0, 0xbb8
 
     :goto_0
     invoke-virtual {p0, v0, v1}, Landroid/os/PowerManager$WakeLock;->acquire(J)V
 
+    goto :goto_2
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/server/policy/DeviceKeyHandler;->igw:Landroid/os/PowerManager$WakeLock;
+
+    if-eqz v0, :cond_2
+
+    const-string v0, "16"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const/16 p1, 0x1f4
+
+    goto :goto_1
+
     :cond_1
+    const/16 p1, 0xbb8
+
+    :goto_1
+    iget-object p0, p0, Lcom/android/server/policy/DeviceKeyHandler;->igw:Landroid/os/PowerManager$WakeLock;
+
+    int-to-long v0, p1
+
+    goto :goto_0
+
+    :cond_2
+    :goto_2
     return-void
 .end method
 
@@ -1837,28 +1864,27 @@
 
     if-eq v2, v6, :cond_a
 
-    goto :goto_3
+    goto/16 :goto_3
 
     :cond_a
     iget-boolean v2, p0, Lcom/android/server/policy/DeviceKeyHandler;->b:Z
 
-    if-eqz v2, :cond_c
+    if-nez v2, :cond_b
 
-    :cond_b
-    invoke-direct {p0, v0}, Lcom/android/server/policy/DeviceKeyHandler;->i(Ljava/lang/String;)V
-
-    goto :goto_3
-
-    :cond_c
     iget-boolean v4, p0, Lcom/android/server/policy/DeviceKeyHandler;->d:Z
 
     if-eqz v4, :cond_13
 
     if-nez v2, :cond_13
 
+    :cond_b
     iget-boolean v2, p0, Lcom/android/server/policy/DeviceKeyHandler;->ugm:Z
 
-    if-eqz v2, :cond_b
+    if-eqz v2, :cond_c
+
+    const-string v2, "16"
+
+    invoke-direct {p0, v2}, Lcom/android/server/policy/DeviceKeyHandler;->qbh(Ljava/lang/String;)V
 
     iget-object v2, p0, Lcom/android/server/policy/DeviceKeyHandler;->rtg:Lcom/android/server/policy/DeviceKeyHandler$cno;
 
@@ -1871,6 +1897,11 @@
     const-wide/16 v10, 0xfa
 
     invoke-virtual {v4, v2, v10, v11}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+
+    goto :goto_3
+
+    :cond_c
+    invoke-direct {p0, v0}, Lcom/android/server/policy/DeviceKeyHandler;->i(Ljava/lang/String;)V
 
     goto :goto_3
 
@@ -2434,7 +2465,7 @@
     const-wide/16 v0, 0x96
 
     :goto_0
-    sget-object p1, Lcom/android/server/policy/DeviceKeyHandler;->G:Landroid/media/AudioAttributes;
+    sget-object p1, Lcom/android/server/policy/DeviceKeyHandler;->I:Landroid/media/AudioAttributes;
 
     invoke-virtual {p0, v0, v1, p1}, Landroid/os/Vibrator;->vibrate(JLandroid/media/AudioAttributes;)V
 

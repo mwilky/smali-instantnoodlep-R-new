@@ -235,7 +235,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Lcom/android/server/am/bio;->t(I)V
+    invoke-virtual {v2, v1}, Lcom/android/server/am/bio;->u(I)V
 
     iget-object v2, p0, Lcom/android/server/am/SocketTransition$sis;->you:Lcom/android/server/am/SocketTransition;
 
@@ -257,7 +257,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p2, v1}, Lcom/android/server/am/bio;->t(I)V
+    invoke-virtual {p2, v1}, Lcom/android/server/am/bio;->u(I)V
 
     iget-object p2, p0, Lcom/android/server/am/SocketTransition$sis;->you:Lcom/android/server/am/SocketTransition;
 
@@ -462,7 +462,7 @@
 
     move-result-object p5
 
-    invoke-virtual {p5, p3}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/e;
+    invoke-virtual {p5, p3}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/f;
 
     move-result-object p6
 
@@ -481,7 +481,7 @@
 
     iget-object v2, v2, Lcom/android/server/am/SocketTransition;->mProcList:Ljava/util/Set;
 
-    iget-object v3, p6, Lcom/android/server/am/e;->sis:Ljava/lang/String;
+    iget-object v3, p6, Lcom/android/server/am/f;->sis:Ljava/lang/String;
 
     invoke-interface {v2, v3}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
@@ -493,7 +493,7 @@
 
     iget-object v2, v2, Lcom/android/server/am/SocketTransition;->mProcList:Ljava/util/Set;
 
-    iget-object p6, p6, Lcom/android/server/am/e;->sis:Ljava/lang/String;
+    iget-object p6, p6, Lcom/android/server/am/f;->sis:Ljava/lang/String;
 
     invoke-interface {v2, p6}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
@@ -516,7 +516,7 @@
 
     if-eqz p3, :cond_1
 
-    invoke-virtual {p5, v1}, Lcom/android/server/am/bio;->t(I)V
+    invoke-virtual {p5, v1}, Lcom/android/server/am/bio;->u(I)V
 
     goto :goto_0
 
@@ -632,8 +632,8 @@
     return-void
 .end method
 
-.method public notePSSChanged(II)V
-    .locals 9
+.method public notePSSChanged(IIJ)V
+    .locals 7
 
     sget-boolean v0, Lcom/android/server/am/dma;->kth:Z
 
@@ -665,7 +665,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p2}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/e;
+    invoke-virtual {v0, p2}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/f;
 
     move-result-object v0
 
@@ -679,11 +679,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0}, Lcom/android/server/am/e;->bio()J
-
-    move-result-wide v7
-
-    iget-object v2, v0, Lcom/android/server/am/e;->sis:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/server/am/f;->sis:Ljava/lang/String;
 
     if-eqz v2, :cond_0
 
@@ -695,7 +691,7 @@
 
     if-eqz v2, :cond_0
 
-    iget-object v0, v0, Lcom/android/server/am/e;->sis:Ljava/lang/String;
+    iget-object v0, v0, Lcom/android/server/am/f;->sis:Ljava/lang/String;
 
     move-object v2, v0
 
@@ -709,7 +705,7 @@
 
     move v4, p2
 
-    move-wide v5, v7
+    move-wide v5, p3
 
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/am/SocketTransition;->createPssUpdate(Ljava/lang/String;IIJ)Lorg/json/JSONObject;
 
@@ -750,7 +746,7 @@
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, p3, p4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -904,7 +900,7 @@
 
     if-eqz v5, :cond_0
 
-    invoke-virtual {v5, p2}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/e;
+    invoke-virtual {v5, p2}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/f;
 
     move-result-object v5
 
@@ -935,10 +931,10 @@
 
     const/16 v6, 0x8
 
-    invoke-virtual {v5, v6}, Lcom/android/server/am/e;->zta(I)V
+    invoke-virtual {v5, v6}, Lcom/android/server/am/f;->zta(I)V
 
     :cond_2
-    invoke-virtual {v5}, Lcom/android/server/am/e;->tsu()I
+    invoke-virtual {v5}, Lcom/android/server/am/f;->tsu()I
 
     move-result v5
 

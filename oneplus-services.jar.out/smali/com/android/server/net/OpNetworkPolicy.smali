@@ -329,9 +329,59 @@
 .end method
 
 .method private processAppreciable(I)Z
-    .locals 0
+    .locals 2
 
+    invoke-static {p1}, Lcom/android/server/am/AppRecordManager;->ssp(I)I
+
+    move-result p0
+
+    and-int/lit16 v0, p0, 0x80
+
+    if-nez v0, :cond_1
+
+    and-int/lit8 v0, p0, 0x2
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
     const/4 p0, 0x0
+
+    return p0
+
+    :cond_1
+    :goto_0
+    sget-boolean v0, Lcom/android/server/net/OpNetworkPolicy;->DEBUG_ONEPLUS:Z
+
+    if-eqz v0, :cond_2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "processAppreciable uid:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, ", flag="
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string p1, "OpNetworkPolicy"
+
+    invoke-static {p1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_2
+    const/4 p0, 0x1
 
     return p0
 .end method

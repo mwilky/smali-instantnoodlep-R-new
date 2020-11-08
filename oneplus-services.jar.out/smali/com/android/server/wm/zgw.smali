@@ -570,7 +570,7 @@
 
     iget-object v0, p0, Lcom/android/server/wm/zgw;->tsu:Landroid/content/Context;
 
-    const v1, 0x5070275
+    const v1, 0x5070274
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

@@ -340,11 +340,11 @@
 
     if-eqz p0, :cond_0
 
-    invoke-static {}, Lcom/android/server/am/les;->tsu()Lcom/android/server/am/les;
+    invoke-static {}, Lcom/android/server/am/irq;->tsu()Lcom/android/server/am/irq;
 
     move-result-object p0
 
-    invoke-virtual {p0, p2, p1}, Lcom/android/server/am/les;->cno(Landroid/os/Handler;Lcom/android/server/am/ActivityManagerService;)V
+    invoke-virtual {p0, p2, p1}, Lcom/android/server/am/irq;->cno(Landroid/os/Handler;Lcom/android/server/am/ActivityManagerService;)V
 
     :cond_0
     monitor-exit v0
@@ -389,7 +389,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-static {p0, p1, p2}, Lcom/android/server/am/vdw$you;->bio(Lcom/android/server/am/BroadcastQueue;Lcom/android/server/am/ProcessRecord;Lcom/android/server/am/BroadcastRecord;)Z
+    invoke-static {p0, p1, p2}, Lcom/android/server/am/qeg$you;->bio(Lcom/android/server/am/BroadcastQueue;Lcom/android/server/am/ProcessRecord;Lcom/android/server/am/BroadcastRecord;)Z
 
     move-result v0
 
@@ -716,11 +716,11 @@
 
     invoke-static {v0, v1}, Lcom/android/server/am/Slogger;->debug(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/android/server/am/vju;->sis()Lcom/android/server/am/vju;
+    invoke-static {}, Lcom/android/server/am/bud;->sis()Lcom/android/server/am/bud;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/server/am/vju;->tsu()V
+    invoke-virtual {v0}, Lcom/android/server/am/bud;->tsu()V
 
     :cond_0
     return-void
@@ -762,7 +762,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-static {p0, p1, p2}, Lcom/android/server/am/vdw$you;->kth(Lcom/android/server/am/BroadcastFilter;Lcom/android/server/am/BroadcastRecord;Z)Z
+    invoke-static {p0, p1, p2}, Lcom/android/server/am/qeg$you;->kth(Lcom/android/server/am/BroadcastFilter;Lcom/android/server/am/BroadcastRecord;Z)Z
 
     move-result v0
 
@@ -833,18 +833,18 @@
 
     if-eqz p0, :cond_0
 
-    invoke-static {}, Lcom/android/server/am/vdw;->tsu()Lcom/android/server/am/vdw;
+    invoke-static {}, Lcom/android/server/am/qeg;->tsu()Lcom/android/server/am/qeg;
 
     move-result-object p0
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/vdw;->rtg(Lcom/android/server/am/ActivityManagerService;)V
+    invoke-virtual {p0, p1}, Lcom/android/server/am/qeg;->rtg(Lcom/android/server/am/ActivityManagerService;)V
 
     :cond_0
-    invoke-static {}, Lcom/android/server/am/d;->zta()Lcom/android/server/am/d;
+    invoke-static {}, Lcom/android/server/am/e;->zta()Lcom/android/server/am/e;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/d;->you()V
+    invoke-virtual {p0}, Lcom/android/server/am/e;->you()V
 
     return-void
 .end method
@@ -892,7 +892,7 @@
 
     iput-object p1, p0, Lcom/android/server/am/vdb;->dma:Lcom/android/server/am/OPBRPorcessSpeedMonitor$ProcessBRSpeedType;
 
-    invoke-static {}, Lcom/android/server/am/les;->tsu()Lcom/android/server/am/les;
+    invoke-static {}, Lcom/android/server/am/irq;->tsu()Lcom/android/server/am/irq;
 
     move-result-object p1
 
@@ -904,7 +904,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {p1, v0, v1, p0, v2}, Lcom/android/server/am/les;->wtn(Lcom/android/server/am/ActivityManagerService;Lcom/android/server/am/OPSystemCpuLoadMonitor$SystemLoadType;Lcom/android/server/am/OPBRPorcessSpeedMonitor$ProcessBRSpeedType;Z)V
+    invoke-virtual {p1, v0, v1, p0, v2}, Lcom/android/server/am/irq;->wtn(Lcom/android/server/am/ActivityManagerService;Lcom/android/server/am/OPSystemCpuLoadMonitor$SystemLoadType;Lcom/android/server/am/OPBRPorcessSpeedMonitor$ProcessBRSpeedType;Z)V
 
     :cond_0
     return-void
@@ -1039,13 +1039,13 @@
 
     invoke-static {v1, v0}, Lcom/android/server/am/Slogger;->debug(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/android/server/am/irq;->sis()Lcom/android/server/am/irq;
+    invoke-static {}, Lcom/android/server/am/vdw;->sis()Lcom/android/server/am/vdw;
 
     move-result-object v0
 
     iget-object p0, p0, Lcom/android/server/am/vdb;->zta:Lcom/android/server/am/ActivityManagerService;
 
-    invoke-virtual {v0, p0, p1, p2}, Lcom/android/server/am/irq;->rtg(Lcom/android/server/am/ActivityManagerService;Lcom/android/server/am/BroadcastRecord;I)V
+    invoke-virtual {v0, p0, p1, p2}, Lcom/android/server/am/vdw;->rtg(Lcom/android/server/am/ActivityManagerService;Lcom/android/server/am/BroadcastRecord;I)V
 
     :cond_0
     return-void
@@ -1094,7 +1094,7 @@
 
     iput-object p1, p0, Lcom/android/server/am/vdb;->gck:Lcom/android/server/am/OPSystemCpuLoadMonitor$SystemLoadType;
 
-    invoke-static {}, Lcom/android/server/am/les;->tsu()Lcom/android/server/am/les;
+    invoke-static {}, Lcom/android/server/am/irq;->tsu()Lcom/android/server/am/irq;
 
     move-result-object p1
 
@@ -1106,7 +1106,7 @@
 
     const/4 v2, 0x1
 
-    invoke-virtual {p1, v0, v1, p0, v2}, Lcom/android/server/am/les;->wtn(Lcom/android/server/am/ActivityManagerService;Lcom/android/server/am/OPSystemCpuLoadMonitor$SystemLoadType;Lcom/android/server/am/OPBRPorcessSpeedMonitor$ProcessBRSpeedType;Z)V
+    invoke-virtual {p1, v0, v1, p0, v2}, Lcom/android/server/am/irq;->wtn(Lcom/android/server/am/ActivityManagerService;Lcom/android/server/am/OPSystemCpuLoadMonitor$SystemLoadType;Lcom/android/server/am/OPBRPorcessSpeedMonitor$ProcessBRSpeedType;Z)V
 
     :cond_0
     return-void
@@ -1307,13 +1307,13 @@
     monitor-enter p1
 
     :try_start_1
-    invoke-static {}, Lcom/android/server/am/les;->tsu()Lcom/android/server/am/les;
+    invoke-static {}, Lcom/android/server/am/irq;->tsu()Lcom/android/server/am/irq;
 
     move-result-object p2
 
     iget-object p0, p0, Lcom/android/server/am/vdb;->zta:Lcom/android/server/am/ActivityManagerService;
 
-    invoke-virtual {p2, p0}, Lcom/android/server/am/les;->dma(Lcom/android/server/am/ActivityManagerService;)V
+    invoke-virtual {p2, p0}, Lcom/android/server/am/irq;->dma(Lcom/android/server/am/ActivityManagerService;)V
 
     monitor-exit p1
 
@@ -1737,7 +1737,7 @@
     :pswitch_b
     sput-boolean v5, Lcom/android/server/am/zgw;->ywr:Z
 
-    invoke-static {}, Lcom/android/server/am/vju;->you()V
+    invoke-static {}, Lcom/android/server/am/bud;->you()V
 
     const-string p0, "sEnableDefaultStrategy is false!"
 
@@ -1746,7 +1746,7 @@
     :pswitch_c
     sput-boolean v6, Lcom/android/server/am/zgw;->ywr:Z
 
-    invoke-static {}, Lcom/android/server/am/vju;->zta()V
+    invoke-static {}, Lcom/android/server/am/bud;->zta()V
 
     const-string p0, "sEnableDefaultStrategy is true!"
 
@@ -2220,7 +2220,7 @@
 
     invoke-static {v0, v1}, Lcom/android/server/am/Slogger;->debug(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/android/server/am/les;->tsu()Lcom/android/server/am/les;
+    invoke-static {}, Lcom/android/server/am/irq;->tsu()Lcom/android/server/am/irq;
 
     move-result-object v0
 
@@ -2232,7 +2232,7 @@
 
     const/4 v3, 0x1
 
-    invoke-virtual {v0, v1, v2, p0, v3}, Lcom/android/server/am/les;->wtn(Lcom/android/server/am/ActivityManagerService;Lcom/android/server/am/OPSystemCpuLoadMonitor$SystemLoadType;Lcom/android/server/am/OPBRPorcessSpeedMonitor$ProcessBRSpeedType;Z)V
+    invoke-virtual {v0, v1, v2, p0, v3}, Lcom/android/server/am/irq;->wtn(Lcom/android/server/am/ActivityManagerService;Lcom/android/server/am/OPSystemCpuLoadMonitor$SystemLoadType;Lcom/android/server/am/OPBRPorcessSpeedMonitor$ProcessBRSpeedType;Z)V
 
     :cond_0
     return-void
@@ -2269,11 +2269,11 @@
 
     invoke-static {v0, p0}, Lcom/android/server/am/Slogger;->debug(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/android/server/am/irq;->sis()Lcom/android/server/am/irq;
+    invoke-static {}, Lcom/android/server/am/vdw;->sis()Lcom/android/server/am/vdw;
 
     move-result-object p0
 
-    invoke-virtual {p0, p1, p2}, Lcom/android/server/am/irq;->zta(Ljava/util/List;Landroid/content/Intent;)Ljava/util/List;
+    invoke-virtual {p0, p1, p2}, Lcom/android/server/am/vdw;->zta(Ljava/util/List;Landroid/content/Intent;)Ljava/util/List;
 
     move-result-object p0
 
@@ -2344,7 +2344,7 @@
 
     invoke-static {v0, v1}, Lcom/android/server/am/Slogger;->debug(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/android/server/am/bud;->you()Lcom/android/server/am/bud;
+    invoke-static {}, Lcom/android/server/am/les;->you()Lcom/android/server/am/les;
 
     move-result-object v0
 
@@ -2356,7 +2356,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, p0, p1, v1}, Lcom/android/server/am/bud;->zta(Lcom/android/server/am/ActivityManagerService;Lcom/android/server/am/BroadcastRecord;I)V
+    invoke-virtual {v0, p0, p1, v1}, Lcom/android/server/am/les;->zta(Lcom/android/server/am/ActivityManagerService;Lcom/android/server/am/BroadcastRecord;I)V
 
     :cond_0
     return-void

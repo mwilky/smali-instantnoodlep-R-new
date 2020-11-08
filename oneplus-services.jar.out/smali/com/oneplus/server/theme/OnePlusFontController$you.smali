@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oneplus/server/theme/OnePlusFontController;->scheduleRestoreFontWhenBootComplete(Landroid/content/Context;)V
+    value = Lcom/oneplus/server/theme/OnePlusFontController;->prepareDebugEnv(Landroid/content/Context;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -32,52 +32,37 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 0
+    .locals 2
 
-    iget-object p1, p0, Lcom/oneplus/server/theme/OnePlusFontController$you;->zta:Lcom/oneplus/server/theme/OnePlusFontController;
+    const-string p1, "Debug CMD Received-------------------"
 
-    invoke-static {p1}, Lcom/oneplus/server/theme/OnePlusFontController;->access$300(Lcom/oneplus/server/theme/OnePlusFontController;)Landroid/content/Context;
+    invoke-static {p1}, Lcom/oneplus/server/theme/OnePlusFontController;->logd(Ljava/lang/String;)V
 
-    move-result-object p1
+    :try_start_0
+    const-string p1, "opfontid"
 
-    if-eqz p1, :cond_0
+    const/4 v0, 0x0
 
-    iget-object p1, p0, Lcom/oneplus/server/theme/OnePlusFontController$you;->zta:Lcom/oneplus/server/theme/OnePlusFontController;
+    invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
-    invoke-static {p1}, Lcom/oneplus/server/theme/OnePlusFontController;->access$400(Lcom/oneplus/server/theme/OnePlusFontController;)Landroid/os/Handler;
+    move-result p1
 
-    move-result-object p1
+    const-string v0, "userid"
 
-    if-eqz p1, :cond_0
+    invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
-    iget-object p1, p0, Lcom/oneplus/server/theme/OnePlusFontController$you;->zta:Lcom/oneplus/server/theme/OnePlusFontController;
+    move-result v1
 
-    invoke-static {p1}, Lcom/oneplus/server/theme/OnePlusFontController;->access$400(Lcom/oneplus/server/theme/OnePlusFontController;)Landroid/os/Handler;
+    invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
-    move-result-object p1
-
-    const p2, 0x932ef
-
-    invoke-virtual {p1, p2}, Landroid/os/Handler;->removeMessages(I)V
-
-    iget-object p1, p0, Lcom/oneplus/server/theme/OnePlusFontController$you;->zta:Lcom/oneplus/server/theme/OnePlusFontController;
-
-    invoke-static {p1}, Lcom/oneplus/server/theme/OnePlusFontController;->access$400(Lcom/oneplus/server/theme/OnePlusFontController;)Landroid/os/Handler;
-
-    move-result-object p1
-
-    invoke-static {p1, p2}, Landroid/os/Message;->obtain(Landroid/os/Handler;I)Landroid/os/Message;
-
-    move-result-object p1
+    move-result p2
 
     iget-object p0, p0, Lcom/oneplus/server/theme/OnePlusFontController$you;->zta:Lcom/oneplus/server/theme/OnePlusFontController;
 
-    invoke-static {p0}, Lcom/oneplus/server/theme/OnePlusFontController;->access$400(Lcom/oneplus/server/theme/OnePlusFontController;)Landroid/os/Handler;
+    invoke-virtual {p0, p2, p1}, Lcom/oneplus/server/theme/OnePlusFontController;->changeFontForUser(II)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Landroid/os/Handler;->sendMessageAtFrontOfQueue(Landroid/os/Message;)Z
-
-    :cond_0
+    :catch_0
     return-void
 .end method

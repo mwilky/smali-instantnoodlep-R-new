@@ -3,17 +3,17 @@
 .source ""
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/oneplus/config/ConfigObserver$ConfigUpdater;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/ibl;->chargeVibration()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/android/server/ibl;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x0
-    name = null
+    name = "tsu"
 .end annotation
 
 
@@ -34,40 +34,25 @@
 
 
 # virtual methods
-.method public run()V
+.method public updateConfig(Lorg/json/JSONArray;)V
     .locals 2
 
-    invoke-static {}, Lcom/android/server/ibl;->oif()Landroid/content/Context;
+    invoke-static {}, Lcom/android/server/ibl;->bvj()Z
 
-    move-result-object p0
+    move-result v0
 
-    const-string v0, "vibrator"
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    const-string v0, "CommonFrontMonitor"
 
-    move-result-object p0
+    const-string v1, "updateConfig"
 
-    check-cast p0, Landroid/os/Vibrator;
+    invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    const/4 v0, 0x4
+    :cond_0
+    iget-object p0, p0, Lcom/android/server/ibl$tsu;->zta:Lcom/android/server/ibl;
 
-    new-array v0, v0, [J
-
-    fill-array-data v0, :array_0
-
-    const/4 v1, -0x1
-
-    invoke-virtual {p0, v0, v1}, Landroid/os/Vibrator;->vibrate([JI)V
+    invoke-static {p0, p1}, Lcom/android/server/ibl;->gwm(Lcom/android/server/ibl;Lorg/json/JSONArray;)V
 
     return-void
-
-    nop
-
-    :array_0
-    .array-data 8
-        0x0
-        0xa
-        0x96
-        0xc
-    .end array-data
 .end method

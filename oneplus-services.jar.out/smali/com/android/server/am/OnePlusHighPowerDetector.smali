@@ -514,7 +514,7 @@
 
 .field ibl:Z
 
-.field private igw:Lcom/android/server/ugm;
+.field private igw:Lcom/android/server/vdb;
 
 .field private ire:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
@@ -7048,7 +7048,7 @@
 
     iget-object v1, p0, Lcom/android/server/am/OnePlusHighPowerDetector;->L:Lcom/android/server/am/OnePlusHighPowerDetector$cno;
 
-    invoke-static {v0, v1}, Lcom/android/server/am/AppRecordManager;->ugm(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/qbh;)V
+    invoke-static {v0, v1}, Lcom/android/server/am/AppRecordManager;->vdb(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/qbh;)V
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -16265,7 +16265,7 @@
     :goto_83
     if-nez v10, :cond_d5
 
-    invoke-static/range {v18 .. v18}, Lcom/android/server/vdb;->X(Landroid/util/ArrayMap;)V
+    invoke-static/range {v18 .. v18}, Lcom/android/server/zgw;->X(Landroid/util/ArrayMap;)V
 
     :cond_d5
     monitor-exit v36
@@ -29385,7 +29385,7 @@
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lcom/android/server/am/OnePlusHighPowerDetector;->igw:Lcom/android/server/ugm;
+    iget-object v1, p0, Lcom/android/server/am/OnePlusHighPowerDetector;->igw:Lcom/android/server/vdb;
 
     if-nez v1, :cond_0
 
@@ -29395,16 +29395,16 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/server/ugm;
+    check-cast v1, Lcom/android/server/vdb;
 
-    iput-object v1, p0, Lcom/android/server/am/OnePlusHighPowerDetector;->igw:Lcom/android/server/ugm;
+    iput-object v1, p0, Lcom/android/server/am/OnePlusHighPowerDetector;->igw:Lcom/android/server/vdb;
 
     :cond_0
-    iget-object p0, p0, Lcom/android/server/am/OnePlusHighPowerDetector;->igw:Lcom/android/server/ugm;
+    iget-object p0, p0, Lcom/android/server/am/OnePlusHighPowerDetector;->igw:Lcom/android/server/vdb;
 
     if-eqz p0, :cond_1
 
-    invoke-virtual {p0, p1}, Lcom/android/server/ugm;->isSmartOptApp(Ljava/lang/String;)Z
+    invoke-virtual {p0, p1}, Lcom/android/server/vdb;->isSmartOptApp(Ljava/lang/String;)Z
 
     move-result p0
 
@@ -30321,7 +30321,7 @@
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lcom/android/server/am/OnePlusHighPowerDetector;->igw:Lcom/android/server/ugm;
+    iget-object v1, p0, Lcom/android/server/am/OnePlusHighPowerDetector;->igw:Lcom/android/server/vdb;
 
     if-nez v1, :cond_0
 
@@ -30331,16 +30331,16 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/server/ugm;
+    check-cast v1, Lcom/android/server/vdb;
 
-    iput-object v1, p0, Lcom/android/server/am/OnePlusHighPowerDetector;->igw:Lcom/android/server/ugm;
+    iput-object v1, p0, Lcom/android/server/am/OnePlusHighPowerDetector;->igw:Lcom/android/server/vdb;
 
     :cond_0
-    iget-object p0, p0, Lcom/android/server/am/OnePlusHighPowerDetector;->igw:Lcom/android/server/ugm;
+    iget-object p0, p0, Lcom/android/server/am/OnePlusHighPowerDetector;->igw:Lcom/android/server/vdb;
 
     if-eqz p0, :cond_1
 
-    invoke-virtual {p0, p1}, Lcom/android/server/ugm;->isOptApp(Ljava/lang/String;)Z
+    invoke-virtual {p0, p1}, Lcom/android/server/vdb;->isOptApp(Ljava/lang/String;)Z
 
     move-result p0
 
@@ -31629,7 +31629,7 @@
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lcom/android/server/am/OnePlusHighPowerDetector;->igw:Lcom/android/server/ugm;
+    iget-object v1, p0, Lcom/android/server/am/OnePlusHighPowerDetector;->igw:Lcom/android/server/vdb;
 
     if-nez v1, :cond_0
 
@@ -31639,24 +31639,24 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/server/ugm;
+    check-cast v1, Lcom/android/server/vdb;
 
-    iput-object v1, p0, Lcom/android/server/am/OnePlusHighPowerDetector;->igw:Lcom/android/server/ugm;
+    iput-object v1, p0, Lcom/android/server/am/OnePlusHighPowerDetector;->igw:Lcom/android/server/vdb;
 
     :cond_0
-    iget-object v1, p0, Lcom/android/server/am/OnePlusHighPowerDetector;->igw:Lcom/android/server/ugm;
+    iget-object v1, p0, Lcom/android/server/am/OnePlusHighPowerDetector;->igw:Lcom/android/server/vdb;
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v1, p1}, Lcom/android/server/ugm;->isSmartOptApp(Ljava/lang/String;)Z
+    invoke-virtual {v1, p1}, Lcom/android/server/vdb;->isSmartOptApp(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    iget-object p0, p0, Lcom/android/server/am/OnePlusHighPowerDetector;->igw:Lcom/android/server/ugm;
+    iget-object p0, p0, Lcom/android/server/am/OnePlusHighPowerDetector;->igw:Lcom/android/server/vdb;
 
-    invoke-virtual {p0, p1}, Lcom/android/server/ugm;->isOptApp(Ljava/lang/String;)Z
+    invoke-virtual {p0, p1}, Lcom/android/server/vdb;->isOptApp(Ljava/lang/String;)Z
 
     move-result p0
 

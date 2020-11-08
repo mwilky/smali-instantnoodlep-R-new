@@ -2,9 +2,6 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
@@ -12,85 +9,42 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0xa
     name = "you"
 .end annotation
 
 
-# instance fields
-.field final synthetic sis:Lcom/android/server/am/les;
-
-.field you:Lcom/android/server/am/BroadcastQueue;
-
-.field zta:Z
+# static fields
+.field private static zta:Lcom/android/server/am/les;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/server/am/les;Lcom/android/server/am/BroadcastQueue;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lcom/android/server/am/les$you;->sis:Lcom/android/server/am/les;
+    new-instance v0, Lcom/android/server/am/les;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x0
 
-    const/4 p1, 0x0
+    invoke-direct {v0, v1}, Lcom/android/server/am/les;-><init>(Lcom/android/server/am/les$zta;)V
 
-    iput-boolean p1, p0, Lcom/android/server/am/les$you;->zta:Z
-
-    iput-object p2, p0, Lcom/android/server/am/les$you;->you:Lcom/android/server/am/BroadcastQueue;
+    sput-object v0, Lcom/android/server/am/les$you;->zta:Lcom/android/server/am/les;
 
     return-void
 .end method
 
+.method private constructor <init>()V
+    .locals 0
 
-# virtual methods
-.method public run()V
-    .locals 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-boolean v0, p0, Lcom/android/server/am/les$you;->zta:Z
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "recheck of delay broadcastqueue = "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lcom/android/server/am/les$you;->you:Lcom/android/server/am/BroadcastQueue;
-
-    iget-object v1, v1, Lcom/android/server/am/BroadcastQueue;->mQueueName:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, " queue.mDelayCount = "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lcom/android/server/am/les$you;->you:Lcom/android/server/am/BroadcastQueue;
-
-    iget v1, v1, Lcom/android/server/am/BroadcastQueue;->mDelayCount:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "OpBroadcastDelayStrategy"
-
-    invoke-static {v1, v0}, Lcom/android/server/am/Slogger;->debug(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/android/server/am/les$you;->zta:Z
-
-    iget-object p0, p0, Lcom/android/server/am/les$you;->you:Lcom/android/server/am/BroadcastQueue;
-
-    invoke-virtual {p0}, Lcom/android/server/am/BroadcastQueue;->scheduleBroadcastsLocked()V
-
-    :cond_0
     return-void
+.end method
+
+.method static synthetic zta()Lcom/android/server/am/les;
+    .locals 1
+
+    sget-object v0, Lcom/android/server/am/les$you;->zta:Lcom/android/server/am/les;
+
+    return-object v0
 .end method

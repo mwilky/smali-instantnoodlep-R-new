@@ -94,22 +94,6 @@
     return-void
 .end method
 
-.method static synthetic access$300(Lcom/oneplus/server/theme/OnePlusFontController;)Landroid/content/Context;
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/server/theme/OnePlusFontController;->mContext:Landroid/content/Context;
-
-    return-object p0
-.end method
-
-.method static synthetic access$400(Lcom/oneplus/server/theme/OnePlusFontController;)Landroid/os/Handler;
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/server/theme/OnePlusFontController;->mHandler:Landroid/os/Handler;
-
-    return-object p0
-.end method
-
 .method private checkEnvAndPermission()Z
     .locals 1
 
@@ -365,9 +349,9 @@
 .method private prepareDebugEnv(Landroid/content/Context;)V
     .locals 2
 
-    new-instance v0, Lcom/oneplus/server/theme/OnePlusFontController$sis;
+    new-instance v0, Lcom/oneplus/server/theme/OnePlusFontController$you;
 
-    invoke-direct {v0, p0}, Lcom/oneplus/server/theme/OnePlusFontController$sis;-><init>(Lcom/oneplus/server/theme/OnePlusFontController;)V
+    invoke-direct {v0, p0}, Lcom/oneplus/server/theme/OnePlusFontController$you;-><init>(Lcom/oneplus/server/theme/OnePlusFontController;)V
 
     new-instance p0, Landroid/content/IntentFilter;
 
@@ -438,19 +422,29 @@
 .end method
 
 .method private scheduleRestoreFontWhenBootComplete(Landroid/content/Context;)V
-    .locals 2
+    .locals 1
 
-    new-instance v0, Lcom/oneplus/server/theme/OnePlusFontController$you;
+    const-string p1, "OPDFontCtrl"
 
-    invoke-direct {v0, p0}, Lcom/oneplus/server/theme/OnePlusFontController$you;-><init>(Lcom/oneplus/server/theme/OnePlusFontController;)V
+    const-string v0, "Restore Font"
 
-    new-instance p0, Landroid/content/IntentFilter;
+    invoke-static {p1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-string v1, "android.intent.action.LOCKED_BOOT_COMPLETED"
+    iget-object p1, p0, Lcom/oneplus/server/theme/OnePlusFontController;->mHandler:Landroid/os/Handler;
 
-    invoke-direct {p0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+    const v0, 0x932ef
 
-    invoke-virtual {p1, v0, p0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->removeMessages(I)V
+
+    iget-object p1, p0, Lcom/oneplus/server/theme/OnePlusFontController;->mHandler:Landroid/os/Handler;
+
+    invoke-static {p1, v0}, Landroid/os/Message;->obtain(Landroid/os/Handler;I)Landroid/os/Message;
+
+    move-result-object p1
+
+    iget-object p0, p0, Lcom/oneplus/server/theme/OnePlusFontController;->mHandler:Landroid/os/Handler;
+
+    invoke-virtual {p0, p1}, Landroid/os/Handler;->sendMessageAtFrontOfQueue(Landroid/os/Message;)Z
 
     return-void
 .end method

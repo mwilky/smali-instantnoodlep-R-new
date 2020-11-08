@@ -1,85 +1,50 @@
 .class Lcom/android/server/zgw$you;
-.super Ljava/lang/Object;
+.super Lcom/android/server/am/igw;
 .source ""
-
-# interfaces
-.implements Landroid/hardware/SensorEventListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/zgw;-><init>()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/android/server/zgw;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
-    name = null
+    accessFlags = 0x2
+    name = "you"
 .end annotation
 
 
 # instance fields
-.field final synthetic zta:Lcom/android/server/zgw;
+.field final synthetic you:Lcom/android/server/zgw;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/server/zgw;)V
+.method private constructor <init>(Lcom/android/server/zgw;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/android/server/zgw$you;->zta:Lcom/android/server/zgw;
+    iput-object p1, p0, Lcom/android/server/zgw$you;->you:Lcom/android/server/zgw;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/android/server/am/igw;-><init>()V
+
+    return-void
+.end method
+
+.method synthetic constructor <init>(Lcom/android/server/zgw;Lcom/android/server/zgw$zta;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/server/zgw$you;-><init>(Lcom/android/server/zgw;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAccuracyChanged(Landroid/hardware/Sensor;I)V
+.method public dma(IZ)V
     .locals 0
 
-    return-void
-.end method
+    iget-object p0, p0, Lcom/android/server/zgw$you;->you:Lcom/android/server/zgw;
 
-.method public onSensorChanged(Landroid/hardware/SensorEvent;)V
-    .locals 4
-
-    iget-object v0, p0, Lcom/android/server/zgw$you;->zta:Lcom/android/server/zgw;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object p0, p0, Lcom/android/server/zgw$you;->zta:Lcom/android/server/zgw;
-
-    iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
-
-    const/4 v2, 0x0
-
-    aget v1, v1, v2
-
-    iget-object v2, p1, Landroid/hardware/SensorEvent;->values:[F
-
-    const/4 v3, 0x1
-
-    aget v2, v2, v3
-
-    iget-object p1, p1, Landroid/hardware/SensorEvent;->values:[F
-
-    const/4 v3, 0x2
-
-    aget p1, p1, v3
-
-    invoke-static {p0, v1, v2, p1}, Lcom/android/server/zgw;->ssp(Lcom/android/server/zgw;FFF)V
-
-    monitor-exit v0
+    invoke-virtual {p0, p1}, Lcom/android/server/zgw;->y(I)V
 
     return-void
-
-    :catchall_0
-    move-exception p0
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
 .end method

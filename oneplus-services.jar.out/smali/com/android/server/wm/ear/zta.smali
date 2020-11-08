@@ -247,7 +247,7 @@
 
     sput-object v1, Lcom/android/server/wm/ear/zta;->wtn:Landroid/util/ArrayMap;
 
-    const v2, 0x507027c
+    const v2, 0x507027b
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -257,7 +257,7 @@
 
     sget-object v1, Lcom/android/server/wm/ear/zta;->wtn:Landroid/util/ArrayMap;
 
-    const v2, 0x507027e
+    const v2, 0x507027d
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -267,7 +267,7 @@
 
     sget-object v1, Lcom/android/server/wm/ear/zta;->wtn:Landroid/util/ArrayMap;
 
-    const v2, 0x507027f
+    const v2, 0x507027e
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -277,7 +277,7 @@
 
     sget-object v1, Lcom/android/server/wm/ear/zta;->wtn:Landroid/util/ArrayMap;
 
-    const v2, 0x507027d
+    const v2, 0x507027c
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

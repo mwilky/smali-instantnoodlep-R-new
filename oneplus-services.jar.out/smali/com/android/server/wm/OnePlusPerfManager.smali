@@ -94,6 +94,8 @@
 
 .field private static final PROP_USB_CONNECTOR_TEMP:Ljava/lang/String; = "persist.sys.opperf.usb_temp"
 
+.field private static final SKIPPED_LEVEL:Ljava/lang/String; = "101"
+
 .field private static final STR_PCCORE_VIDEO_LEVEL:Ljava/lang/String; = "100"
 
 .field public static final TAG:Ljava/lang/String; = "OPPerf"
@@ -3488,7 +3490,7 @@
 
     move-result v2
 
-    if-ge v1, v2, :cond_20
+    if-ge v1, v2, :cond_22
 
     invoke-virtual {p1, v1}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
@@ -3521,7 +3523,7 @@
 
     move-result v4
 
-    if-ge v3, v4, :cond_1f
+    if-ge v3, v4, :cond_21
 
     invoke-virtual {v2, v3}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
@@ -3689,7 +3691,7 @@
     :goto_3
     invoke-virtual {p0, v2}, Lcom/android/server/wm/OnePlusPerfManager;->myLog(Ljava/lang/String;)V
 
-    goto/16 :goto_f
+    goto/16 :goto_11
 
     :cond_8
     const-string v3, "name"
@@ -3946,7 +3948,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_12
+    if-eqz v3, :cond_13
 
     const-string v3, "value"
 
@@ -3961,7 +3963,7 @@
 
     move-result v4
 
-    if-ge v3, v4, :cond_1f
+    if-ge v3, v4, :cond_21
 
     invoke-virtual {v2, v3}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
@@ -3989,6 +3991,33 @@
 
     move-result-object v7
 
+    const-string v8, "101"
+
+    invoke-virtual {v8, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_f
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "resolvePerfConfigFromJSON skip level #  "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {p0, v4}, Lcom/android/server/wm/OnePlusPerfManager;->myLog(Ljava/lang/String;)V
+
+    goto :goto_6
+
+    :cond_f
     const-string v8, "timeout"
 
     invoke-virtual {v4, v8}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -4006,7 +4035,7 @@
     .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_1
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    if-eqz v5, :cond_11
+    if-eqz v5, :cond_12
 
     :try_start_3
     iget-object v9, p0, Lcom/android/server/wm/OnePlusPerfManager;->mSpecialPkgMap:Ljava/util/HashMap;
@@ -4017,7 +4046,7 @@
 
     check-cast v9, Lcom/android/server/wm/OnePlusPerfManager$rtg;
 
-    if-eqz v9, :cond_10
+    if-eqz v9, :cond_11
 
     const-string v10, "-1"
 
@@ -4025,7 +4054,7 @@
 
     move-result v10
 
-    if-eqz v10, :cond_f
+    if-eqz v10, :cond_10
 
     iget-object v4, p0, Lcom/android/server/wm/OnePlusPerfManager;->mSpecialPkgMap:Ljava/util/HashMap;
 
@@ -4033,7 +4062,7 @@
 
     goto :goto_5
 
-    :cond_f
+    :cond_10
     iput v6, v9, Lcom/android/server/wm/OnePlusPerfManager$rtg;->you:I
 
     iput-object v7, v9, Lcom/android/server/wm/OnePlusPerfManager$rtg;->sis:Ljava/lang/String;
@@ -4042,7 +4071,7 @@
 
     goto :goto_5
 
-    :cond_10
+    :cond_11
     iget-object v9, p0, Lcom/android/server/wm/OnePlusPerfManager;->mSpecialPkgMap:Ljava/util/HashMap;
 
     new-instance v10, Lcom/android/server/wm/OnePlusPerfManager$rtg;
@@ -4051,7 +4080,7 @@
 
     invoke-virtual {v9, v5, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_11
+    :cond_12
     :goto_5
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -4077,9 +4106,10 @@
 
     monitor-exit v8
 
+    :goto_6
     add-int/lit8 v3, v3, 0x1
 
-    goto :goto_4
+    goto/16 :goto_4
 
     :catchall_1
     move-exception p0
@@ -4091,7 +4121,7 @@
     :try_start_4
     throw p0
 
-    :cond_12
+    :cond_13
     const-string v3, "name"
 
     invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -4104,7 +4134,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_13
+    if-eqz v3, :cond_14
 
     const-string v3, "value"
 
@@ -4114,12 +4144,12 @@
 
     move v3, v0
 
-    :goto_6
+    :goto_7
     invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
 
     move-result v4
 
-    if-ge v3, v4, :cond_1f
+    if-ge v3, v4, :cond_21
 
     invoke-virtual {v2, v3}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
@@ -4179,7 +4209,7 @@
 
     add-int/lit8 v3, v3, 0x1
 
-    goto :goto_6
+    goto :goto_7
 
     :catchall_2
     move-exception p0
@@ -4191,7 +4221,7 @@
     :try_start_6
     throw p0
 
-    :cond_13
+    :cond_14
     const-string v3, "name"
 
     invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -4204,7 +4234,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_15
+    if-eqz v3, :cond_17
 
     const-string v3, "value"
 
@@ -4214,12 +4244,12 @@
 
     move v3, v0
 
-    :goto_7
+    :goto_8
     invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
 
     move-result v4
 
-    if-ge v3, v4, :cond_1f
+    if-ge v3, v4, :cond_21
 
     new-instance v4, Lcom/android/server/wm/OnePlusPerfManager$ssp;
 
@@ -4235,6 +4265,33 @@
 
     move-result-object v6
 
+    const-string v7, "101"
+
+    invoke-virtual {v7, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_15
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "resolvePerfConfigFromJSON skip level #  "
+
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {p0, v4}, Lcom/android/server/wm/OnePlusPerfManager;->myLog(Ljava/lang/String;)V
+
+    goto :goto_a
+
+    :cond_15
     const-string v7, "item"
 
     invoke-virtual {v5, v7}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
@@ -4243,12 +4300,12 @@
 
     move v7, v0
 
-    :goto_8
+    :goto_9
     invoke-virtual {v5}, Lorg/json/JSONArray;->length()I
 
     move-result v8
 
-    if-ge v7, v8, :cond_14
+    if-ge v7, v8, :cond_16
 
     invoke-virtual {v5, v7}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
@@ -4302,9 +4359,9 @@
 
     add-int/lit8 v7, v7, 0x1
 
-    goto :goto_8
+    goto :goto_9
 
-    :cond_14
+    :cond_16
     iget-object v5, p0, Lcom/android/server/wm/OnePlusPerfManager;->mSchedtuneParamMap:Ljava/util/HashMap;
 
     monitor-enter v5
@@ -4335,9 +4392,10 @@
 
     monitor-exit v5
 
+    :goto_a
     add-int/lit8 v3, v3, 0x1
 
-    goto :goto_7
+    goto/16 :goto_8
 
     :catchall_3
     move-exception p0
@@ -4349,7 +4407,7 @@
     :try_start_8
     throw p0
 
-    :cond_15
+    :cond_17
     const-string v3, "name"
 
     invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -4362,7 +4420,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_17
+    if-eqz v3, :cond_19
 
     iget-object v3, p0, Lcom/android/server/wm/OnePlusPerfManager;->suffixListCompany:Ljava/util/List;
 
@@ -4389,12 +4447,12 @@
 
     move v3, v0
 
-    :goto_9
+    :goto_b
     invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
 
     move-result v4
 
-    if-ge v3, v4, :cond_1f
+    if-ge v3, v4, :cond_21
 
     invoke-virtual {v2, v3}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
@@ -4406,7 +4464,7 @@
 
     move-result-object v4
 
-    if-eqz v4, :cond_16
+    if-eqz v4, :cond_18
 
     iget-object v5, p0, Lcom/android/server/wm/OnePlusPerfManager;->suffixListCompany:Ljava/util/List;
 
@@ -4422,7 +4480,7 @@
 
     monitor-exit v5
 
-    goto :goto_a
+    goto :goto_c
 
     :catchall_4
     move-exception p0
@@ -4437,11 +4495,11 @@
     .catch Lorg/json/JSONException; {:try_start_c .. :try_end_c} :catch_1
     .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_0
 
-    :cond_16
-    :goto_a
+    :cond_18
+    :goto_c
     add-int/lit8 v3, v3, 0x1
 
-    goto :goto_9
+    goto :goto_b
 
     :catchall_5
     move-exception p0
@@ -4454,7 +4512,7 @@
     :try_start_e
     throw p0
 
-    :cond_17
+    :cond_19
     const-string v3, "name"
 
     invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -4467,7 +4525,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_19
+    if-eqz v3, :cond_1b
 
     iget-object v3, p0, Lcom/android/server/wm/OnePlusPerfManager;->suffixListGame:Ljava/util/List;
 
@@ -4494,12 +4552,12 @@
 
     move v3, v0
 
-    :goto_b
+    :goto_d
     invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
 
     move-result v4
 
-    if-ge v3, v4, :cond_1f
+    if-ge v3, v4, :cond_21
 
     invoke-virtual {v2, v3}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
@@ -4511,7 +4569,7 @@
 
     move-result-object v4
 
-    if-eqz v4, :cond_18
+    if-eqz v4, :cond_1a
 
     iget-object v5, p0, Lcom/android/server/wm/OnePlusPerfManager;->suffixListGame:Ljava/util/List;
 
@@ -4527,7 +4585,7 @@
 
     monitor-exit v5
 
-    goto :goto_c
+    goto :goto_e
 
     :catchall_6
     move-exception p0
@@ -4542,11 +4600,11 @@
     .catch Lorg/json/JSONException; {:try_start_12 .. :try_end_12} :catch_1
     .catch Ljava/lang/Exception; {:try_start_12 .. :try_end_12} :catch_0
 
-    :cond_18
-    :goto_c
+    :cond_1a
+    :goto_e
     add-int/lit8 v3, v3, 0x1
 
-    goto :goto_b
+    goto :goto_d
 
     :catchall_7
     move-exception p0
@@ -4559,7 +4617,7 @@
     :try_start_14
     throw p0
 
-    :cond_19
+    :cond_1b
     const-string v3, "name"
 
     invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -4572,7 +4630,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_1b
+    if-eqz v3, :cond_1d
 
     iget-object v3, p0, Lcom/android/server/wm/OnePlusPerfManager;->mCpuBlackPackageList:Ljava/util/List;
 
@@ -4599,12 +4657,12 @@
 
     move v3, v0
 
-    :goto_d
+    :goto_f
     invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
 
     move-result v4
 
-    if-ge v3, v4, :cond_1f
+    if-ge v3, v4, :cond_21
 
     invoke-virtual {v2, v3}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
@@ -4616,7 +4674,7 @@
 
     move-result-object v4
 
-    if-eqz v4, :cond_1a
+    if-eqz v4, :cond_1c
 
     iget-object v5, p0, Lcom/android/server/wm/OnePlusPerfManager;->mCpuBlackPackageList:Ljava/util/List;
 
@@ -4632,7 +4690,7 @@
 
     monitor-exit v5
 
-    goto :goto_e
+    goto :goto_10
 
     :catchall_8
     move-exception p0
@@ -4647,11 +4705,11 @@
     .catch Lorg/json/JSONException; {:try_start_18 .. :try_end_18} :catch_1
     .catch Ljava/lang/Exception; {:try_start_18 .. :try_end_18} :catch_0
 
-    :cond_1a
-    :goto_e
+    :cond_1c
+    :goto_10
     add-int/lit8 v3, v3, 0x1
 
-    goto :goto_d
+    goto :goto_f
 
     :catchall_9
     move-exception p0
@@ -4664,7 +4722,7 @@
     :try_start_1a
     throw p0
 
-    :cond_1b
+    :cond_1d
     const-string v3, "name"
 
     invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -4677,7 +4735,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_1c
+    if-eqz v3, :cond_1e
 
     const-string v3, "value"
 
@@ -4707,7 +4765,7 @@
 
     goto/16 :goto_3
 
-    :cond_1c
+    :cond_1e
     const-string v3, "name"
 
     invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -4720,7 +4778,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_1d
+    if-eqz v3, :cond_1f
 
     const-string v3, "value"
 
@@ -4750,7 +4808,7 @@
 
     goto/16 :goto_3
 
-    :cond_1d
+    :cond_1f
     const-string v3, "name"
 
     invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -4763,7 +4821,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_1e
+    if-eqz v3, :cond_20
 
     const-string v3, "value"
 
@@ -4793,7 +4851,7 @@
 
     goto/16 :goto_3
 
-    :cond_1e
+    :cond_20
     const-string v3, "name"
 
     invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -4806,7 +4864,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_1f
+    if-eqz v3, :cond_21
 
     const-string v3, "value"
 
@@ -4832,13 +4890,13 @@
 
     goto/16 :goto_3
 
-    :cond_1f
-    :goto_f
+    :cond_21
+    :goto_11
     add-int/lit8 v1, v1, 0x1
 
     goto/16 :goto_0
 
-    :cond_20
+    :cond_22
     const-string p0, "OPPerf"
 
     const-string p1, "[OnlineConfig] OPPerf updated complete"
@@ -4848,7 +4906,7 @@
     .catch Lorg/json/JSONException; {:try_start_1a .. :try_end_1a} :catch_1
     .catch Ljava/lang/Exception; {:try_start_1a .. :try_end_1a} :catch_0
 
-    goto :goto_11
+    goto :goto_13
 
     :catch_0
     move-exception p0
@@ -4865,7 +4923,7 @@
 
     move-result-object p0
 
-    goto :goto_10
+    goto :goto_12
 
     :catch_1
     move-exception p0
@@ -4882,7 +4940,7 @@
 
     move-result-object p0
 
-    :goto_10
+    :goto_12
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -4893,7 +4951,7 @@
 
     invoke-static {p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :goto_11
+    :goto_13
     return-void
 .end method
 

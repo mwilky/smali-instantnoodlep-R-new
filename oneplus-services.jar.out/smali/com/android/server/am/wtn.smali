@@ -915,7 +915,7 @@
     throw p0
 .end method
 
-.method public qbh(II)V
+.method public qbh(IIJ)V
     .locals 3
 
     iget-object v0, p0, Lcom/android/server/am/wtn;->zta:Ljava/util/HashMap;
@@ -960,6 +960,10 @@
     const-string p1, "pid"
 
     invoke-virtual {v1, p1, p2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    const-string p1, "pss"
+
+    invoke-virtual {v1, p1, p3, p4}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
     iput-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 

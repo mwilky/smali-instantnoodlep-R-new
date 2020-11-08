@@ -210,7 +210,7 @@
 
     aput-object p2, v2, v0
 
-    sget-boolean p2, Lcom/android/server/am/cjf;->cjf:Z
+    sget-boolean p2, Lcom/android/server/am/cjf;->ire:Z
 
     if-eqz p2, :cond_4
 
@@ -353,7 +353,7 @@
 
     check-cast p0, Landroid/net/NetworkInfo;
 
-    sget-boolean p0, Lcom/android/server/am/cjf;->cjf:Z
+    sget-boolean p0, Lcom/android/server/am/cjf;->ire:Z
 
     goto :goto_1
 
