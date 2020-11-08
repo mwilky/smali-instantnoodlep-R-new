@@ -3030,7 +3030,7 @@
 
     const/16 v22, 0x2
 
-    const-string v0, "instrumentation"
+    const-string/jumbo v0, "instrumentation"
 
     iput-object v0, v11, Lcom/android/server/am/ProcessRecord;->adjType:Ljava/lang/String;
 

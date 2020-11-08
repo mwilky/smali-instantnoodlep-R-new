@@ -6,8 +6,20 @@
 # static fields
 .field private static final TAG:Ljava/lang/String; = "OpFingerprintAccelerate"
 
+.field private static sIfp:Landroid/hardware/fingerprint/IFingerprintService;
+
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    sput-object v0, Lcom/android/server/wm/OpFingerprintAccelerateInjector;->sIfp:Landroid/hardware/fingerprint/IFingerprintService;
+
+    return-void
+.end method
+
 .method public constructor <init>()V
     .locals 0
 
@@ -16,44 +28,59 @@
     return-void
 .end method
 
+.method private static initInstance()V
+    .locals 1
+
+    sget-object v0, Lcom/android/server/wm/OpFingerprintAccelerateInjector;->sIfp:Landroid/hardware/fingerprint/IFingerprintService;
+
+    if-nez v0, :cond_0
+
+    const-string v0, "fingerprint"
+
+    invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/hardware/fingerprint/IFingerprintService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/hardware/fingerprint/IFingerprintService;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/android/server/wm/OpFingerprintAccelerateInjector;->sIfp:Landroid/hardware/fingerprint/IFingerprintService;
+
+    :cond_0
+    return-void
+.end method
+
 .method public static isAppSupportsAccelerting(Ljava/lang/String;)Z
-    .locals 5
+    .locals 4
+
+    invoke-static {}, Lcom/android/server/wm/OpFingerprintAccelerateInjector;->initInstance()V
 
     const/4 v0, 0x1
 
-    nop
-
-    const-string v1, "fingerprint"
-
-    invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
-
-    move-result-object v1
-
-    invoke-static {v1}, Landroid/hardware/fingerprint/IFingerprintService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/hardware/fingerprint/IFingerprintService;
-
-    move-result-object v1
+    sget-object v1, Lcom/android/server/wm/OpFingerprintAccelerateInjector;->sIfp:Landroid/hardware/fingerprint/IFingerprintService;
 
     if-eqz v1, :cond_0
 
     :try_start_0
     invoke-interface {v1, p0}, Landroid/hardware/fingerprint/IFingerprintService;->isAppSupportAccelerate(Ljava/lang/String;)Z
 
-    move-result v2
+    move-result v1
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    move v0, v2
+    move v0, v1
 
     goto :goto_0
 
     :catch_0
-    move-exception v2
+    move-exception v1
 
-    const-string v3, "OpFingerprintAccelerate"
+    const-string v2, "OpFingerprintAccelerate"
 
-    const-string v4, "isAppSupportsAccelerting: "
+    const-string v3, "isAppSupportsAccelerting: "
 
-    invoke-static {v3, v4, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
     :goto_0

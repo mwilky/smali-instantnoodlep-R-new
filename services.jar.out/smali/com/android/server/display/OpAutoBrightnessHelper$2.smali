@@ -79,7 +79,7 @@
 
     iget-object v2, p0, Lcom/android/server/display/OpAutoBrightnessHelper$2;->this$0:Lcom/android/server/display/OpAutoBrightnessHelper;
 
-    invoke-static {v2}, Lcom/android/server/display/OpAutoBrightnessHelper;->access$100(Lcom/android/server/display/OpAutoBrightnessHelper;)I
+    invoke-static {v2}, Lcom/android/server/display/OpAutoBrightnessHelper;->access$300(Lcom/android/server/display/OpAutoBrightnessHelper;)I
 
     move-result v2
 
@@ -135,7 +135,7 @@
 
     iget-object v2, p0, Lcom/android/server/display/OpAutoBrightnessHelper$2;->this$0:Lcom/android/server/display/OpAutoBrightnessHelper;
 
-    invoke-static {v2}, Lcom/android/server/display/OpAutoBrightnessHelper;->access$200(Lcom/android/server/display/OpAutoBrightnessHelper;)Z
+    invoke-static {v2}, Lcom/android/server/display/OpAutoBrightnessHelper;->access$400(Lcom/android/server/display/OpAutoBrightnessHelper;)Z
 
     move-result v2
 
@@ -149,7 +149,7 @@
 
     iget-object v2, p0, Lcom/android/server/display/OpAutoBrightnessHelper$2;->this$0:Lcom/android/server/display/OpAutoBrightnessHelper;
 
-    invoke-static {v2}, Lcom/android/server/display/OpAutoBrightnessHelper;->access$300(Lcom/android/server/display/OpAutoBrightnessHelper;)I
+    invoke-static {v2}, Lcom/android/server/display/OpAutoBrightnessHelper;->access$500(Lcom/android/server/display/OpAutoBrightnessHelper;)I
 
     move-result v2
 
@@ -163,7 +163,7 @@
 
     iget-object v2, p0, Lcom/android/server/display/OpAutoBrightnessHelper$2;->this$0:Lcom/android/server/display/OpAutoBrightnessHelper;
 
-    invoke-static {v2}, Lcom/android/server/display/OpAutoBrightnessHelper;->access$400(Lcom/android/server/display/OpAutoBrightnessHelper;)I
+    invoke-static {v2}, Lcom/android/server/display/OpAutoBrightnessHelper;->access$600(Lcom/android/server/display/OpAutoBrightnessHelper;)I
 
     move-result v2
 
@@ -177,7 +177,7 @@
 
     iget-object v2, p0, Lcom/android/server/display/OpAutoBrightnessHelper$2;->this$0:Lcom/android/server/display/OpAutoBrightnessHelper;
 
-    invoke-static {v2}, Lcom/android/server/display/OpAutoBrightnessHelper;->access$500(Lcom/android/server/display/OpAutoBrightnessHelper;)Z
+    invoke-static {v2}, Lcom/android/server/display/OpAutoBrightnessHelper;->access$700(Lcom/android/server/display/OpAutoBrightnessHelper;)Z
 
     move-result v2
 
@@ -191,7 +191,7 @@
 
     iget-object v2, p0, Lcom/android/server/display/OpAutoBrightnessHelper$2;->this$0:Lcom/android/server/display/OpAutoBrightnessHelper;
 
-    invoke-static {v2}, Lcom/android/server/display/OpAutoBrightnessHelper;->access$600(Lcom/android/server/display/OpAutoBrightnessHelper;)I
+    invoke-static {v2}, Lcom/android/server/display/OpAutoBrightnessHelper;->access$800(Lcom/android/server/display/OpAutoBrightnessHelper;)I
 
     move-result v2
 
@@ -209,7 +209,7 @@
 
     iget-object v3, p0, Lcom/android/server/display/OpAutoBrightnessHelper$2;->this$0:Lcom/android/server/display/OpAutoBrightnessHelper;
 
-    invoke-static {v3}, Lcom/android/server/display/OpAutoBrightnessHelper;->access$700(Lcom/android/server/display/OpAutoBrightnessHelper;)Landroid/content/Context;
+    invoke-static {v3}, Lcom/android/server/display/OpAutoBrightnessHelper;->access$900(Lcom/android/server/display/OpAutoBrightnessHelper;)Landroid/content/Context;
 
     move-result-object v3
 

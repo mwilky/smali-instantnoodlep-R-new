@@ -607,24 +607,33 @@
     return-object p1
 
     :cond_3
-    if-eqz p2, :cond_4
-
     const/4 v0, 0x0
+
+    if-eqz p2, :cond_4
 
     return-object v0
 
     :cond_4
+    invoke-static {}, Lcom/android/server/wm/OpQuickReplyInjector;->isQuickReplyRunning()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    return-object v0
+
+    :cond_5
     invoke-direct {p0}, Lcom/android/server/wm/InsetsPolicy;->forceShowsNavigationBarTransiently()Z
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     iget-object v0, p0, Lcom/android/server/wm/InsetsPolicy;->mDummyControlTarget:Lcom/android/server/wm/InsetsControlTarget;
 
     return-object v0
 
-    :cond_5
+    :cond_6
     return-object p1
 .end method
 
@@ -1018,110 +1027,98 @@
     return-void
 .end method
 
-.method showTransient(Landroid/util/IntArray;)I
-    .locals 6
+.method showTransient([I)V
+    .locals 5
 
     const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    array-length v1, p1
 
-    invoke-virtual {p1}, Landroid/util/IntArray;->size()I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, -0x1
+    add-int/lit8 v1, v1, -0x1
 
     :goto_0
-    if-ltz v2, :cond_2
+    if-ltz v1, :cond_2
 
-    invoke-virtual {p1, v2}, Landroid/util/IntArray;->get(I)I
+    aget v2, p1, v1
+
+    invoke-virtual {p0, v2}, Lcom/android/server/wm/InsetsPolicy;->isHidden(I)Z
 
     move-result v3
 
-    invoke-virtual {p0, v3}, Lcom/android/server/wm/InsetsPolicy;->isHidden(I)Z
-
-    move-result v4
-
-    if-nez v4, :cond_0
+    if-nez v3, :cond_0
 
     goto :goto_1
 
     :cond_0
-    invoke-static {v3}, Landroid/view/InsetsState;->toPublicType(I)I
+    iget-object v3, p0, Lcom/android/server/wm/InsetsPolicy;->mShowingTransientTypes:Landroid/util/IntArray;
 
-    move-result v4
+    invoke-virtual {v3, v2}, Landroid/util/IntArray;->indexOf(I)I
 
-    or-int/2addr v0, v4
+    move-result v3
 
-    iget-object v4, p0, Lcom/android/server/wm/InsetsPolicy;->mShowingTransientTypes:Landroid/util/IntArray;
+    const/4 v4, -0x1
 
-    invoke-virtual {v4, v3}, Landroid/util/IntArray;->indexOf(I)I
-
-    move-result v4
-
-    const/4 v5, -0x1
-
-    if-eq v4, v5, :cond_1
+    if-eq v3, v4, :cond_1
 
     goto :goto_1
 
     :cond_1
-    iget-object v4, p0, Lcom/android/server/wm/InsetsPolicy;->mShowingTransientTypes:Landroid/util/IntArray;
+    iget-object v3, p0, Lcom/android/server/wm/InsetsPolicy;->mShowingTransientTypes:Landroid/util/IntArray;
 
-    invoke-virtual {v4, v3}, Landroid/util/IntArray;->add(I)V
+    invoke-virtual {v3, v2}, Landroid/util/IntArray;->add(I)V
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
     :goto_1
-    add-int/lit8 v2, v2, -0x1
+    add-int/lit8 v1, v1, -0x1
 
     goto :goto_0
 
     :cond_2
-    if-eqz v1, :cond_3
+    if-eqz v0, :cond_3
 
-    iget-object v2, p0, Lcom/android/server/wm/InsetsPolicy;->mPolicy:Lcom/android/server/wm/DisplayPolicy;
+    iget-object v1, p0, Lcom/android/server/wm/InsetsPolicy;->mPolicy:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-virtual {v2}, Lcom/android/server/wm/DisplayPolicy;->getStatusBarManagerInternal()Lcom/android/server/statusbar/StatusBarManagerInternal;
+    invoke-virtual {v1}, Lcom/android/server/wm/DisplayPolicy;->getStatusBarManagerInternal()Lcom/android/server/statusbar/StatusBarManagerInternal;
 
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/android/server/wm/InsetsPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
-
-    invoke-virtual {v3}, Lcom/android/server/wm/DisplayContent;->getDisplayId()I
-
-    move-result v3
-
-    iget-object v4, p0, Lcom/android/server/wm/InsetsPolicy;->mShowingTransientTypes:Landroid/util/IntArray;
-
-    invoke-virtual {v4}, Landroid/util/IntArray;->toArray()[I
-
-    move-result-object v4
-
-    invoke-interface {v2, v3, v4}, Lcom/android/server/statusbar/StatusBarManagerInternal;->showTransient(I[I)V
-
-    iget-object v2, p0, Lcom/android/server/wm/InsetsPolicy;->mFocusedWin:Lcom/android/server/wm/WindowState;
-
-    invoke-virtual {p0, v2}, Lcom/android/server/wm/InsetsPolicy;->updateBarControlTarget(Lcom/android/server/wm/WindowState;)V
+    move-result-object v1
 
     iget-object v2, p0, Lcom/android/server/wm/InsetsPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    iget-object v2, v2, Lcom/android/server/wm/DisplayContent;->mWmService:Lcom/android/server/wm/WindowManagerService;
+    invoke-virtual {v2}, Lcom/android/server/wm/DisplayContent;->getDisplayId()I
 
-    iget-object v2, v2, Lcom/android/server/wm/WindowManagerService;->mAnimator:Lcom/android/server/wm/WindowAnimator;
+    move-result v2
 
-    invoke-virtual {v2}, Lcom/android/server/wm/WindowAnimator;->getChoreographer()Landroid/view/Choreographer;
+    iget-object v3, p0, Lcom/android/server/wm/InsetsPolicy;->mShowingTransientTypes:Landroid/util/IntArray;
 
-    move-result-object v2
+    invoke-virtual {v3}, Landroid/util/IntArray;->toArray()[I
 
-    new-instance v3, Lcom/android/server/wm/-$$Lambda$InsetsPolicy$dhcN9TMy4RQEuHtaieXL5PHADOI;
+    move-result-object v3
 
-    invoke-direct {v3, p0}, Lcom/android/server/wm/-$$Lambda$InsetsPolicy$dhcN9TMy4RQEuHtaieXL5PHADOI;-><init>(Lcom/android/server/wm/InsetsPolicy;)V
+    invoke-interface {v1, v2, v3}, Lcom/android/server/statusbar/StatusBarManagerInternal;->showTransient(I[I)V
 
-    invoke-virtual {v2, v3}, Landroid/view/Choreographer;->postFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
+    iget-object v1, p0, Lcom/android/server/wm/InsetsPolicy;->mFocusedWin:Lcom/android/server/wm/WindowState;
+
+    invoke-virtual {p0, v1}, Lcom/android/server/wm/InsetsPolicy;->updateBarControlTarget(Lcom/android/server/wm/WindowState;)V
+
+    iget-object v1, p0, Lcom/android/server/wm/InsetsPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
+
+    iget-object v1, v1, Lcom/android/server/wm/DisplayContent;->mWmService:Lcom/android/server/wm/WindowManagerService;
+
+    iget-object v1, v1, Lcom/android/server/wm/WindowManagerService;->mAnimator:Lcom/android/server/wm/WindowAnimator;
+
+    invoke-virtual {v1}, Lcom/android/server/wm/WindowAnimator;->getChoreographer()Landroid/view/Choreographer;
+
+    move-result-object v1
+
+    new-instance v2, Lcom/android/server/wm/-$$Lambda$InsetsPolicy$dhcN9TMy4RQEuHtaieXL5PHADOI;
+
+    invoke-direct {v2, p0}, Lcom/android/server/wm/-$$Lambda$InsetsPolicy$dhcN9TMy4RQEuHtaieXL5PHADOI;-><init>(Lcom/android/server/wm/InsetsPolicy;)V
+
+    invoke-virtual {v1, v2}, Landroid/view/Choreographer;->postFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
 
     :cond_3
-    return v0
+    return-void
 .end method
 
 .method startAnimation(ZLjava/lang/Runnable;Landroid/view/InsetsState;)V

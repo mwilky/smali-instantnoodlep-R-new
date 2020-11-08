@@ -35,7 +35,7 @@
 
 # virtual methods
 .method public run()V
-    .locals 5
+    .locals 4
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy$4;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
@@ -48,7 +48,7 @@
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/DisplayPolicy$4;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v1}, Lcom/android/server/wm/DisplayPolicy;->access$1200(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/WindowManagerService;
+    invoke-static {v1}, Lcom/android/server/wm/DisplayPolicy;->access$1300(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/WindowManagerService;
 
     move-result-object v1
 
@@ -71,13 +71,13 @@
 
     move-result-wide v2
 
-    invoke-static {v1, v2, v3}, Lcom/android/server/wm/DisplayPolicy;->access$2102(Lcom/android/server/wm/DisplayPolicy;J)J
+    invoke-static {v1, v2, v3}, Lcom/android/server/wm/DisplayPolicy;->access$2202(Lcom/android/server/wm/DisplayPolicy;J)J
 
     iget-object v1, p0, Lcom/android/server/wm/DisplayPolicy$4;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
     iget v1, v1, Lcom/android/server/wm/DisplayPolicy;->mLastSystemUiFlags:I
 
-    invoke-static {v1}, Lcom/android/server/wm/DisplayPolicy;->access$2200(I)Z
+    invoke-static {v1}, Lcom/android/server/wm/DisplayPolicy;->access$2300(I)Z
 
     move-result v1
 
@@ -85,7 +85,7 @@
 
     iget-object v1, p0, Lcom/android/server/wm/DisplayPolicy$4;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v1}, Lcom/android/server/wm/DisplayPolicy;->access$2300(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/BarController;
+    invoke-static {v1}, Lcom/android/server/wm/DisplayPolicy;->access$2400(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/BarController;
 
     move-result-object v1
 
@@ -93,7 +93,7 @@
 
     iget-object v1, p0, Lcom/android/server/wm/DisplayPolicy$4;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v1}, Lcom/android/server/wm/DisplayPolicy;->access$900(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/DisplayContent;
+    invoke-static {v1}, Lcom/android/server/wm/DisplayPolicy;->access$1000(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/DisplayContent;
 
     move-result-object v1
 
@@ -101,19 +101,11 @@
 
     move-result-object v1
 
-    const/4 v2, 0x1
-
-    new-array v3, v2, [I
-
-    const/4 v4, 0x0
-
-    aput v2, v3, v4
-
-    invoke-static {v3}, Landroid/util/IntArray;->wrap([I)Landroid/util/IntArray;
+    invoke-static {}, Lcom/android/server/wm/DisplayPolicy;->access$2500()[I
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/android/server/wm/InsetsPolicy;->showTransient(Landroid/util/IntArray;)I
+    invoke-virtual {v1, v2}, Lcom/android/server/wm/InsetsPolicy;->showTransient([I)V
 
     :cond_1
     monitor-exit v0

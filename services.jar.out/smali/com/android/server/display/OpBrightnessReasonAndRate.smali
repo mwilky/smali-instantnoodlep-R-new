@@ -103,6 +103,10 @@
 
 .field private static mCallingUid:I
 
+.field public static mCameraInFront:Z
+
+.field public static mCameraRequestBoost:Z
+
 .field private static mContext:Landroid/content/Context;
 
 .field private static mCount:I
@@ -241,6 +245,10 @@
     sput-boolean v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mIsSystemUIOrSetting:Z
 
     sput v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mBoostBrightnessNormal:I
+
+    sput-boolean v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCameraInFront:Z
+
+    sput-boolean v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCameraRequestBoost:Z
 
     sput v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mPreBoostBrightnessNormal:I
 
@@ -431,6 +439,22 @@
     move-result-object v0
 
     const-string v1, "dim_debug"
+
+    invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mSettingsObserver:Lcom/android/server/display/OpBrightnessReasonAndRate$SettingsObserver;
+
+    invoke-virtual {v0, v1, v3, v2, v4}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
+
+    sget-object v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const-string v1, "boost_brightness_normal"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -4089,7 +4113,23 @@
 .method public setBoostBrightnessNormal(Z)V
     .locals 1
 
-    sput p1, Lcom/android/server/display/OpBrightnessReasonAndRate;->mBoostBrightnessNormal:I
+    sput-boolean p1, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCameraInFront:Z
+
+    if-eqz p1, :cond_0
+
+    sget-boolean v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCameraRequestBoost:Z
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    sput v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mBoostBrightnessNormal:I
 
     iget-object v0, p0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCallbacks:Lcom/android/server/display/DisplayPowerController;
 

@@ -39,3 +39,6 @@
         }
     .end annotation
 .end method
+
+.method public abstract systemReady(Z)V
+.end method

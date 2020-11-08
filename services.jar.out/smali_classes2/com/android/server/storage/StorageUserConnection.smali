@@ -27,6 +27,8 @@
 
 .field private final mIsDemoUser:Z
 
+.field private final mIsGuestUser:Z
+
 .field private final mLock:Ljava/lang/Object;
 
 .field private final mSessionController:Lcom/android/server/storage/StorageSessionController;
@@ -99,13 +101,49 @@
 
     move-result-object v0
 
+    invoke-virtual {v0}, Landroid/content/pm/UserInfo;->isGuest()Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/android/server/storage/StorageUserConnection;->mIsGuestUser:Z
+
+    const-class v0, Landroid/os/UserManagerInternal;
+
+    invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/os/UserManagerInternal;
+
+    invoke-virtual {v0, p2}, Landroid/os/UserManagerInternal;->getUserInfo(I)Landroid/content/pm/UserInfo;
+
+    move-result-object v0
+
     invoke-virtual {v0}, Landroid/content/pm/UserInfo;->isDemo()Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/server/storage/StorageUserConnection;->mIsDemoUser:Z
+    if-nez v0, :cond_1
+
+    iget-boolean v0, p0, Lcom/android/server/storage/StorageUserConnection;->mIsGuestUser:Z
 
     if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    :goto_1
+    iput-boolean v0, p0, Lcom/android/server/storage/StorageUserConnection;->mIsDemoUser:Z
+
+    if-eqz v0, :cond_2
 
     new-instance v0, Landroid/os/HandlerThread;
 
@@ -131,7 +169,7 @@
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    :cond_0
+    :cond_2
     return-void
 .end method
 

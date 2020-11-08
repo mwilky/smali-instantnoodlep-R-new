@@ -21,7 +21,7 @@
 
 .field private static final DEFAULT_MAX_FILES_LOWRAM:I = 0x12c
 
-.field private static final DEFAULT_QUOTA_KB:I = 0x1400
+.field private static final DEFAULT_QUOTA_KB:I = 0x2000
 
 .field private static final DEFAULT_QUOTA_PERCENT:I = 0xa
 
@@ -1024,7 +1024,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e0061
+    const v1, 0x10e0062
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1038,7 +1038,7 @@
 
     move-result-object v0
 
-    const v1, 0x107003f
+    const v1, 0x1070040
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -1660,7 +1660,7 @@
 
     const-string v9, "dropbox_quota_kb"
 
-    const/16 v10, 0x1400
+    const/16 v10, 0x2000
 
     invoke-static {v0, v9, v10}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 

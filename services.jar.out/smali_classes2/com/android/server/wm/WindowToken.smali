@@ -267,9 +267,36 @@
     return-void
 .end method
 
-.method private cleanUpFixedRotationTransformState()V
-    .locals 1
+.method private cleanUpFixedRotationTransformState(Z)V
+    .locals 2
 
+    if-eqz p1, :cond_0
+
+    iget-object v0, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
+
+    iget-object v0, v0, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mAssociatedTokens:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-le v0, v1, :cond_0
+
+    iget-object v0, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
+
+    iget-object v0, v0, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mAssociatedTokens:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
+
+    iget-object v0, v0, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mRotatedContainers:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    :cond_0
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
@@ -645,28 +672,30 @@
 .end method
 
 .method applyFixedRotationTransform(Landroid/view/DisplayInfo;Lcom/android/server/wm/DisplayFrames;Landroid/content/res/Configuration;)V
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
 
+    const/4 v1, 0x1
+
     if-eqz v0, :cond_0
 
-    return-void
+    invoke-direct {p0, v1}, Lcom/android/server/wm/WindowToken;->cleanUpFixedRotationTransformState(Z)V
 
     :cond_0
     new-instance v0, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
 
-    new-instance v1, Landroid/content/res/Configuration;
+    new-instance v2, Landroid/content/res/Configuration;
 
-    invoke-direct {v1, p3}, Landroid/content/res/Configuration;-><init>(Landroid/content/res/Configuration;)V
+    invoke-direct {v2, p3}, Landroid/content/res/Configuration;-><init>(Landroid/content/res/Configuration;)V
 
-    iget-object v2, p0, Lcom/android/server/wm/WindowToken;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
+    iget-object v3, p0, Lcom/android/server/wm/WindowToken;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    invoke-virtual {v2}, Lcom/android/server/wm/DisplayContent;->getRotation()I
+    invoke-virtual {v3}, Lcom/android/server/wm/DisplayContent;->getRotation()I
 
-    move-result v2
+    move-result v3
 
-    invoke-direct {v0, p1, p2, v1, v2}, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;-><init>(Landroid/view/DisplayInfo;Lcom/android/server/wm/DisplayFrames;Landroid/content/res/Configuration;I)V
+    invoke-direct {v0, p1, p2, v2, v3}, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;-><init>(Landroid/view/DisplayInfo;Lcom/android/server/wm/DisplayFrames;Landroid/content/res/Configuration;I)V
 
     iput-object v0, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
 
@@ -680,15 +709,15 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
-
-    iget-object v1, v1, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mInsetsState:Landroid/view/InsetsState;
-
     iget-object v2, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
 
-    iget-object v2, v2, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mBarContentFrames:Landroid/util/SparseArray;
+    iget-object v2, v2, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mInsetsState:Landroid/view/InsetsState;
 
-    invoke-virtual {v0, p2, v1, v2}, Lcom/android/server/wm/DisplayPolicy;->simulateLayoutDisplay(Lcom/android/server/wm/DisplayFrames;Landroid/view/InsetsState;Landroid/util/SparseArray;)V
+    iget-object v3, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
+
+    iget-object v3, v3, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mBarContentFrames:Landroid/util/SparseArray;
+
+    invoke-virtual {v0, p2, v2, v3}, Lcom/android/server/wm/DisplayPolicy;->simulateLayoutDisplay(Lcom/android/server/wm/DisplayFrames;Landroid/view/InsetsState;Landroid/util/SparseArray;)V
 
     invoke-virtual {p0}, Lcom/android/server/wm/WindowToken;->getParent()Lcom/android/server/wm/WindowContainer;
 
@@ -700,9 +729,7 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/wm/WindowToken;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    const/4 v0, 0x1
-
-    invoke-direct {p0, v0}, Lcom/android/server/wm/WindowToken;->notifyFixedRotationTransform(Z)V
+    invoke-direct {p0, v1}, Lcom/android/server/wm/WindowToken;->notifyFixedRotationTransform(Z)V
 
     return-void
 .end method
@@ -969,7 +996,7 @@
 .end method
 
 .method finishFixedRotationTransform(Ljava/lang/Runnable;)V
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
 
@@ -991,55 +1018,55 @@
     goto :goto_1
 
     :cond_1
-    iget-object v1, v0, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mAssociatedTokens:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, -0x1
-
-    :goto_0
-    if-ltz v1, :cond_2
-
     iget-object v2, v0, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mAssociatedTokens:Ljava/util/ArrayList;
 
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
-    move-result-object v2
+    move-result v2
 
-    check-cast v2, Lcom/android/server/wm/WindowToken;
+    add-int/lit8 v2, v2, -0x1
 
-    invoke-direct {v2}, Lcom/android/server/wm/WindowToken;->cancelFixedRotationTransform()V
+    :goto_0
+    if-ltz v2, :cond_2
 
-    add-int/lit8 v1, v1, -0x1
+    iget-object v3, v0, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mAssociatedTokens:Ljava/util/ArrayList;
+
+    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lcom/android/server/wm/WindowToken;
+
+    invoke-direct {v3}, Lcom/android/server/wm/WindowToken;->cancelFixedRotationTransform()V
+
+    add-int/lit8 v2, v2, -0x1
 
     goto :goto_0
 
     :cond_2
     :goto_1
-    iget-object v1, v0, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mAssociatedTokens:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, -0x1
-
-    :goto_2
-    if-ltz v1, :cond_3
-
     iget-object v2, v0, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mAssociatedTokens:Ljava/util/ArrayList;
 
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
-    move-result-object v2
+    move-result v2
 
-    check-cast v2, Lcom/android/server/wm/WindowToken;
+    add-int/lit8 v2, v2, -0x1
 
-    invoke-direct {v2}, Lcom/android/server/wm/WindowToken;->cleanUpFixedRotationTransformState()V
+    :goto_2
+    if-ltz v2, :cond_3
 
-    add-int/lit8 v1, v1, -0x1
+    iget-object v3, v0, Lcom/android/server/wm/WindowToken$FixedRotationTransformState;->mAssociatedTokens:Ljava/util/ArrayList;
+
+    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lcom/android/server/wm/WindowToken;
+
+    invoke-direct {v3, v1}, Lcom/android/server/wm/WindowToken;->cleanUpFixedRotationTransformState(Z)V
+
+    add-int/lit8 v2, v2, -0x1
 
     goto :goto_2
 
@@ -1532,20 +1559,24 @@
 .end method
 
 .method linkFixedRotationTransform(Lcom/android/server/wm/WindowToken;)V
-    .locals 2
+    .locals 3
 
-    iget-object v0, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
     iget-object v0, p1, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
 
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_2
 
-    return-void
+    iget-object v1, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
+
+    if-ne v1, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_1
+
+    invoke-direct {p0, v2}, Lcom/android/server/wm/WindowToken;->cleanUpFixedRotationTransformState(Z)V
 
     :cond_1
     iput-object v0, p0, Lcom/android/server/wm/WindowToken;->mFixedRotationTransformState:Lcom/android/server/wm/WindowToken$FixedRotationTransformState;
@@ -1564,10 +1595,12 @@
 
     invoke-virtual {p0, v1}, Lcom/android/server/wm/WindowToken;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    const/4 v1, 0x1
+    invoke-direct {p0, v2}, Lcom/android/server/wm/WindowToken;->notifyFixedRotationTransform(Z)V
 
-    invoke-direct {p0, v1}, Lcom/android/server/wm/WindowToken;->notifyFixedRotationTransform(Z)V
+    return-void
 
+    :cond_2
+    :goto_0
     return-void
 .end method
 

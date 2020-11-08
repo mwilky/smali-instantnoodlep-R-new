@@ -325,3 +325,26 @@
 
     return-void
 .end method
+
+.method public static systemReady(Z)V
+    .locals 2
+
+    sget-boolean v0, Lcom/android/server/pm/OpReserveAppInjector;->DEBUG:Z
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "PackageManager[ReserveApp]"
+
+    const-string v1, "call OpReserveAppInjector.systemReady()"
+
+    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    invoke-static {}, Lcom/android/server/pm/OpReserveAppInjector;->makeSureInstanceInitialized()V
+
+    sget-object v0, Lcom/android/server/pm/OpReserveAppInjector;->sOpReserveAppManager:Lcom/android/server/pm/IOpReserveAppManager;
+
+    invoke-interface {v0, p0}, Lcom/android/server/pm/IOpReserveAppManager;->systemReady(Z)V
+
+    return-void
+.end method

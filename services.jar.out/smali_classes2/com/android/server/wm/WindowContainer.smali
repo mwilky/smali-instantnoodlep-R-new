@@ -3221,7 +3221,7 @@
 .end method
 
 .method forAllActivities(Ljava/util/function/Function;Z)Z
-    .locals 4
+    .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -3232,56 +3232,82 @@
         }
     .end annotation
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    if-eqz p2, :cond_2
+    const/4 v1, 0x1
 
-    iget-object v1, p0, Lcom/android/server/wm/WindowContainer;->mChildren:Lcom/android/server/wm/WindowList;
-
-    invoke-virtual {v1}, Lcom/android/server/wm/WindowList;->size()I
-
-    move-result v1
-
-    sub-int/2addr v1, v0
-
-    :goto_0
-    if-ltz v1, :cond_1
+    if-eqz p2, :cond_4
 
     iget-object v2, p0, Lcom/android/server/wm/WindowContainer;->mChildren:Lcom/android/server/wm/WindowList;
 
-    invoke-virtual {v2, v1}, Lcom/android/server/wm/WindowList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/android/server/wm/WindowContainer;
-
-    invoke-virtual {v2, p1, p2}, Lcom/android/server/wm/WindowContainer;->forAllActivities(Ljava/util/function/Function;Z)Z
+    invoke-virtual {v2}, Lcom/android/server/wm/WindowList;->size()I
 
     move-result v2
 
-    if-eqz v2, :cond_0
+    add-int/lit8 v3, v2, -0x1
+
+    :goto_0
+    if-ltz v3, :cond_3
+
+    iget-object v4, p0, Lcom/android/server/wm/WindowContainer;->mChildren:Lcom/android/server/wm/WindowList;
+
+    invoke-virtual {v4}, Lcom/android/server/wm/WindowList;->size()I
+
+    move-result v4
+
+    if-le v2, v4, :cond_0
+
+    iget-object v4, p0, Lcom/android/server/wm/WindowContainer;->mChildren:Lcom/android/server/wm/WindowList;
+
+    invoke-virtual {v4}, Lcom/android/server/wm/WindowList;->size()I
+
+    move-result v4
+
+    sub-int v4, v2, v4
+
+    sub-int/2addr v3, v4
+
+    :cond_0
+    if-gez v3, :cond_1
 
     return v0
 
-    :cond_0
-    add-int/lit8 v1, v1, -0x1
+    :cond_1
+    iget-object v4, p0, Lcom/android/server/wm/WindowContainer;->mChildren:Lcom/android/server/wm/WindowList;
+
+    invoke-virtual {v4, v3}, Lcom/android/server/wm/WindowList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lcom/android/server/wm/WindowContainer;
+
+    invoke-virtual {v4, p1, p2}, Lcom/android/server/wm/WindowContainer;->forAllActivities(Ljava/util/function/Function;Z)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    return v1
+
+    :cond_2
+    add-int/lit8 v3, v3, -0x1
 
     goto :goto_0
 
-    :cond_1
+    :cond_3
     goto :goto_2
 
-    :cond_2
-    iget-object v1, p0, Lcom/android/server/wm/WindowContainer;->mChildren:Lcom/android/server/wm/WindowList;
-
-    invoke-virtual {v1}, Lcom/android/server/wm/WindowList;->size()I
-
-    move-result v1
-
+    :cond_4
     const/4 v2, 0x0
 
     :goto_1
-    if-ge v2, v1, :cond_4
+    iget-object v3, p0, Lcom/android/server/wm/WindowContainer;->mChildren:Lcom/android/server/wm/WindowList;
+
+    invoke-virtual {v3}, Lcom/android/server/wm/WindowList;->size()I
+
+    move-result v3
+
+    if-ge v2, v3, :cond_6
 
     iget-object v3, p0, Lcom/android/server/wm/WindowContainer;->mChildren:Lcom/android/server/wm/WindowList;
 
@@ -3295,19 +3321,17 @@
 
     move-result v3
 
-    if-eqz v3, :cond_3
+    if-eqz v3, :cond_5
 
-    return v0
+    return v1
 
-    :cond_3
+    :cond_5
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    :cond_4
+    :cond_6
     :goto_2
-    const/4 v0, 0x0
-
     return v0
 .end method
 

@@ -19873,7 +19873,7 @@
 
     move-result-object v0
 
-    const v1, 0x107002f
+    const v1, 0x1070030
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -19885,7 +19885,7 @@
 
     move-result-object v1
 
-    const v2, 0x107002e
+    const v2, 0x107002f
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -22638,7 +22638,7 @@
 
     move-result-object v9
 
-    const-string v10, "instant_app_dexopt_enabled"
+    const-string/jumbo v10, "instant_app_dexopt_enabled"
 
     invoke-static {v9, v10, v7}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -26958,7 +26958,7 @@
 
     move-result-object v0
 
-    const v1, 0x1070041
+    const v1, 0x1070042
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -71101,7 +71101,7 @@
     goto/16 :goto_5
 
     :cond_21
-    const-string v0, "installs"
+    const-string/jumbo v0, "installs"
 
     invoke-virtual {v0, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -76548,7 +76548,7 @@
 
     move-result-object v2
 
-    const-string v3, "installed_instant_app_min_cache_period"
+    const-string/jumbo v3, "installed_instant_app_min_cache_period"
 
     invoke-static {v2, v3, v6, v7}, Landroid/provider/Settings$Global;->getLong(Landroid/content/ContentResolver;Ljava/lang/String;J)J
 
@@ -90783,7 +90783,7 @@
     :cond_1
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string v1, "instructionSet == null"
+    const-string/jumbo v1, "instructionSet == null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
@@ -96229,7 +96229,7 @@
 
     move-result-object v3
 
-    const-string v4, "instant_apps_enabled"
+    const-string/jumbo v4, "instant_apps_enabled"
 
     invoke-static {v4}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -96495,6 +96495,25 @@
     invoke-static {v4, v6}, Lcom/android/server/pm/PmInjector;->pruneNonSystemMarketApp(Lcom/android/server/pm/PackageManagerService$PmsInner;Lcom/android/server/pm/Settings;)V
 
     :cond_8
+    new-array v4, v0, [I
+
+    const/16 v6, 0xf
+
+    aput v6, v4, v5
+
+    invoke-static {v4}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_9
+
+    invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerService;->isDeviceUpgrading()Z
+
+    move-result v4
+
+    invoke-static {v4}, Lcom/android/server/pm/OpReserveAppInjector;->systemReady(Z)V
+
+    :cond_9
     iget-object v6, p0, Lcom/android/server/pm/PackageManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v6
@@ -96562,7 +96581,7 @@
 
     move-result v5
 
-    if-eqz v5, :cond_9
+    if-eqz v5, :cond_a
 
     iget-object v5, p0, Lcom/android/server/pm/PackageManagerService;->mContext:Landroid/content/Context;
 
@@ -96572,7 +96591,7 @@
 
     invoke-static {v5, v6, v7}, Lcom/android/server/pm/PmInjector;->controlGooglePackagesForCta(Landroid/content/Context;Landroid/os/Handler;Z)V
 
-    :cond_9
+    :cond_a
     invoke-static {}, Lcom/android/server/pm/OpCompatibilityInjector;->initCompatOnlineConfig()V
 
     iget-object v5, p0, Lcom/android/server/pm/PackageManagerService;->mUserManager:Lcom/android/server/pm/UserManagerService;
@@ -96591,7 +96610,7 @@
 
     iget-object v5, p0, Lcom/android/server/pm/PackageManagerService;->mInstantAppResolverConnection:Lcom/android/server/pm/InstantAppResolverConnection;
 
-    if-eqz v5, :cond_a
+    if-eqz v5, :cond_b
 
     iget-object v5, p0, Lcom/android/server/pm/PackageManagerService;->mContext:Landroid/content/Context;
 
@@ -96607,7 +96626,7 @@
 
     invoke-virtual {v5, v6, v7}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    :cond_a
+    :cond_b
     new-instance v5, Landroid/content/IntentFilter;
 
     const-string v6, "android.intent.action.OVERLAY_CHANGED"

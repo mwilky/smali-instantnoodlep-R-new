@@ -229,6 +229,30 @@
 
     :cond_4
     :goto_1
+    const/4 v0, 0x0
+
+    iget-object v2, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mContiner:Lcom/android/server/wm/ActivityStack;
+
+    iget-object v2, v2, Lcom/android/server/wm/ActivityStack;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
+
+    invoke-virtual {v2}, Lcom/android/server/wm/ActivityTaskManagerService;->getTopDisplayFocusedStack()Lcom/android/server/wm/ActivityStack;
+
+    move-result-object v12
+
+    if-eqz v12, :cond_5
+
+    invoke-virtual {v12}, Lcom/android/server/wm/ActivityStack;->topRunningActivity()Lcom/android/server/wm/ActivityRecord;
+
+    move-result-object v0
+
+    move-object v13, v0
+
+    goto :goto_2
+
+    :cond_5
+    move-object v13, v0
+
+    :goto_2
     new-array v0, v8, [I
 
     const/16 v2, 0x3c
@@ -239,13 +263,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     invoke-static {}, Lcom/oneplus/systemui/OpSystemUIInjector;->isFingerprintEnabled()Z
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     iget-object v0, v7, Lcom/android/server/wm/ActivityRecord;->packageName:Ljava/lang/String;
 
@@ -253,45 +277,21 @@
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     move v0, v8
-
-    goto :goto_2
-
-    :cond_5
-    move v0, v1
-
-    :goto_2
-    move v12, v0
-
-    const/4 v0, 0x0
-
-    iget-object v2, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mContiner:Lcom/android/server/wm/ActivityStack;
-
-    iget-object v2, v2, Lcom/android/server/wm/ActivityStack;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
-
-    invoke-virtual {v2}, Lcom/android/server/wm/ActivityTaskManagerService;->getTopDisplayFocusedStack()Lcom/android/server/wm/ActivityStack;
-
-    move-result-object v13
-
-    if-eqz v13, :cond_6
-
-    invoke-virtual {v13}, Lcom/android/server/wm/ActivityStack;->topRunningActivity()Lcom/android/server/wm/ActivityRecord;
-
-    move-result-object v0
-
-    move-object v14, v0
 
     goto :goto_3
 
     :cond_6
-    move-object v14, v0
+    move v0, v1
 
     :goto_3
+    move v14, v0
+
     if-nez v10, :cond_b
 
-    if-nez v12, :cond_7
+    if-nez v14, :cond_7
 
     iget-object v0, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mContiner:Lcom/android/server/wm/ActivityStack;
 
@@ -345,7 +345,15 @@
 
     if-nez v0, :cond_b
 
-    if-eqz v9, :cond_b
+    invoke-static {v13}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+
+    move-result v0
+
+    invoke-static/range {p1 .. p1}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+
+    move-result v2
+
+    if-ne v0, v2, :cond_b
 
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/ActivityRecord;->isSleeping()Z
 
@@ -461,11 +469,11 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v4, " isTop:"
+    const-string v4, " topRecord:"
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v4, " occludesParent:"
 

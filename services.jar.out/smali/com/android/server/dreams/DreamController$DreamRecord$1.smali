@@ -43,7 +43,7 @@
 
     iget-object v0, v0, Lcom/android/server/dreams/DreamController$DreamRecord;->this$0:Lcom/android/server/dreams/DreamController;
 
-    invoke-static {v0}, Lcom/android/server/dreams/DreamController;->access$100(Lcom/android/server/dreams/DreamController;)Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/server/dreams/DreamController;->access$300(Lcom/android/server/dreams/DreamController;)Landroid/os/Handler;
 
     move-result-object v0
 

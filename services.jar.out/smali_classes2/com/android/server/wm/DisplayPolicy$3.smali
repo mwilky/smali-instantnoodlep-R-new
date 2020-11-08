@@ -50,11 +50,11 @@
 
     const/4 v2, -0x3
 
-    invoke-static {v1, v2}, Lcom/android/server/wm/DisplayPolicy;->access$1872(Lcom/android/server/wm/DisplayPolicy;I)I
+    invoke-static {v1, v2}, Lcom/android/server/wm/DisplayPolicy;->access$1972(Lcom/android/server/wm/DisplayPolicy;I)I
 
     iget-object v1, p0, Lcom/android/server/wm/DisplayPolicy$3;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v1}, Lcom/android/server/wm/DisplayPolicy;->access$900(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/DisplayContent;
+    invoke-static {v1}, Lcom/android/server/wm/DisplayPolicy;->access$1000(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/DisplayContent;
 
     move-result-object v1
 

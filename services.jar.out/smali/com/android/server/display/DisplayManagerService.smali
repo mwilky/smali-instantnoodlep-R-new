@@ -423,7 +423,7 @@
 
     move-result-object v4
 
-    const v5, 0x10e0036
+    const v5, 0x10e0037
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -441,7 +441,7 @@
 
     iput v4, p0, Lcom/android/server/display/DisplayManagerService;->mDefaultDisplayTopInset:I
 
-    const v4, 0x1070056
+    const v4, 0x1070057
 
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->obtainTypedArray(I)Landroid/content/res/TypedArray;
 
@@ -451,7 +451,7 @@
 
     move-result-object v4
 
-    const v5, 0x1070057
+    const v5, 0x1070058
 
     invoke-virtual {v2, v5}, Landroid/content/res/Resources;->obtainTypedArray(I)Landroid/content/res/TypedArray;
 
@@ -798,15 +798,7 @@
     return-void
 .end method
 
-.method static synthetic access$4200(Lcom/android/server/display/DisplayManagerService;Ljava/io/PrintWriter;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/server/display/DisplayManagerService;->dumpInternal(Ljava/io/PrintWriter;)V
-
-    return-void
-.end method
-
-.method static synthetic access$4300(Lcom/android/server/display/DisplayManagerService;)Lcom/android/server/display/DisplayPowerController;
+.method static synthetic access$4200(Lcom/android/server/display/DisplayManagerService;)Lcom/android/server/display/DisplayPowerController;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mDisplayPowerController:Lcom/android/server/display/DisplayPowerController;
@@ -814,12 +806,20 @@
     return-object v0
 .end method
 
-.method static synthetic access$4302(Lcom/android/server/display/DisplayManagerService;Lcom/android/server/display/DisplayPowerController;)Lcom/android/server/display/DisplayPowerController;
+.method static synthetic access$4202(Lcom/android/server/display/DisplayManagerService;Lcom/android/server/display/DisplayPowerController;)Lcom/android/server/display/DisplayPowerController;
     .locals 0
 
     iput-object p1, p0, Lcom/android/server/display/DisplayManagerService;->mDisplayPowerController:Lcom/android/server/display/DisplayPowerController;
 
     return-object p1
+.end method
+
+.method static synthetic access$4300(Lcom/android/server/display/DisplayManagerService;Ljava/io/PrintWriter;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/server/display/DisplayManagerService;->dumpInternal(Ljava/io/PrintWriter;)V
+
+    return-void
 .end method
 
 .method static synthetic access$4400(Lcom/android/server/display/DisplayManagerService;Landroid/hardware/display/BrightnessConfiguration;ILjava/lang/String;)V
@@ -3978,13 +3978,13 @@
 
     move-result-object v1
 
-    const v2, 0x10e00c5
+    const v2, 0x10e00c6
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v2
 
-    const v3, 0x10e00c4
+    const v3, 0x10e00c5
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -3999,6 +3999,61 @@
     :cond_1
     :goto_0
     return-void
+.end method
+
+.method private needUpdateLayerStack(Lcom/android/server/display/LogicalDisplay;)Z
+    .locals 5
+
+    invoke-virtual {p1}, Lcom/android/server/display/LogicalDisplay;->getPrimaryDisplayDeviceLocked()Lcom/android/server/display/DisplayDevice;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return v1
+
+    :cond_0
+    iget-object v2, p0, Lcom/android/server/display/DisplayManagerService;->mDisplayDevices:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    return v1
+
+    :cond_1
+    invoke-virtual {v0}, Lcom/android/server/display/DisplayDevice;->getDisplayDeviceInfoLocked()Lcom/android/server/display/DisplayDeviceInfo;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Lcom/android/server/display/DisplayDevice;->getLayerStackLocked()I
+
+    move-result v3
+
+    const/4 v4, -0x1
+
+    if-ne v3, v4, :cond_2
+
+    iget v3, v2, Lcom/android/server/display/DisplayDeviceInfo;->state:I
+
+    const/4 v4, 0x1
+
+    if-eq v3, v4, :cond_2
+
+    const-string v1, "DisplayManagerService"
+
+    const-string v3, "Layer stack id set to -1 during screen on state, trigger window traversal."
+
+    invoke-static {v1, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v4
+
+    :cond_2
+    return v1
 .end method
 
 .method private onCallbackDied(Lcom/android/server/display/DisplayManagerService$CallbackRecord;)V
@@ -6044,7 +6099,7 @@
     :goto_0
     add-int/lit8 v2, v1, -0x1
 
-    if-lez v1, :cond_2
+    if-lez v1, :cond_3
 
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService;->mLogicalDisplays:Landroid/util/SparseArray;
 
@@ -6105,13 +6160,24 @@
 
     const/4 v0, 0x1
 
+    goto :goto_1
+
     :cond_1
+    invoke-direct {p0, v3}, Lcom/android/server/display/DisplayManagerService;->needUpdateLayerStack(Lcom/android/server/display/LogicalDisplay;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    const/4 v0, 0x1
+
+    :cond_2
     :goto_1
     move v1, v2
 
     goto :goto_0
 
-    :cond_2
+    :cond_3
     return v0
 .end method
 

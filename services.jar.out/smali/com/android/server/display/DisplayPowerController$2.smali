@@ -65,11 +65,11 @@
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$2;->this$0:Lcom/android/server/display/DisplayPowerController;
 
-    invoke-static {v0, p2}, Lcom/android/server/display/DisplayPowerController;->access$302(Lcom/android/server/display/DisplayPowerController;Z)Z
+    invoke-static {v0, p2}, Lcom/android/server/display/DisplayPowerController;->access$402(Lcom/android/server/display/DisplayPowerController;Z)Z
 
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$2;->this$0:Lcom/android/server/display/DisplayPowerController;
 
-    invoke-static {v0}, Lcom/android/server/display/DisplayPowerController;->access$400(Lcom/android/server/display/DisplayPowerController;)V
+    invoke-static {v0}, Lcom/android/server/display/DisplayPowerController;->access$500(Lcom/android/server/display/DisplayPowerController;)V
 
     return-void
 .end method

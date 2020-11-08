@@ -8375,7 +8375,7 @@
     goto :goto_1
 
     :sswitch_3
-    const-string v3, "instrumentation"
+    const-string/jumbo v3, "instrumentation"
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -8565,8 +8565,6 @@
     move-result v2
 
     return v2
-
-    nop
 
     :sswitch_data_0
     .sparse-switch
@@ -8852,7 +8850,7 @@
 
     check-cast v7, Landroid/content/pm/InstrumentationInfo;
 
-    const-string v8, "instrumentation:"
+    const-string/jumbo v8, "instrumentation:"
 
     invoke-virtual {v0, v8}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 

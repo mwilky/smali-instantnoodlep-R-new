@@ -37,7 +37,7 @@
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v0}, Lcom/android/server/wm/DisplayPolicy;->access$900(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/DisplayContent;
+    invoke-static {v0}, Lcom/android/server/wm/DisplayPolicy;->access$1000(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/DisplayContent;
 
     move-result-object v0
 
@@ -80,7 +80,7 @@
     invoke-virtual {v0}, Lcom/android/server/policy/WindowOrientationListener;->onTouchStart()V
 
     :cond_0
-    invoke-static {}, Lcom/android/server/wm/DisplayPolicy;->access$1400()Z
+    invoke-static {}, Lcom/android/server/wm/DisplayPolicy;->access$1500()Z
 
     move-result v1
 
@@ -94,7 +94,7 @@
 
     iget-object v1, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v1}, Lcom/android/server/wm/DisplayPolicy;->access$1500(Lcom/android/server/wm/DisplayPolicy;)Z
+    invoke-static {v1}, Lcom/android/server/wm/DisplayPolicy;->access$1600(Lcom/android/server/wm/DisplayPolicy;)Z
 
     move-result v1
 
@@ -110,7 +110,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v1, v2}, Lcom/android/server/wm/DisplayPolicy;->access$1502(Lcom/android/server/wm/DisplayPolicy;Z)Z
+    invoke-static {v1, v2}, Lcom/android/server/wm/DisplayPolicy;->access$1602(Lcom/android/server/wm/DisplayPolicy;Z)Z
 
     :cond_1
     return-void
@@ -121,7 +121,7 @@
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v0}, Lcom/android/server/wm/DisplayPolicy;->access$1200(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/WindowManagerService;
+    invoke-static {v0}, Lcom/android/server/wm/DisplayPolicy;->access$1300(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/WindowManagerService;
 
     move-result-object v0
 
@@ -131,7 +131,7 @@
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v0}, Lcom/android/server/wm/DisplayPolicy;->access$1200(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/WindowManagerService;
+    invoke-static {v0}, Lcom/android/server/wm/DisplayPolicy;->access$1300(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/WindowManagerService;
 
     move-result-object v0
 
@@ -150,7 +150,7 @@
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v0}, Lcom/android/server/wm/DisplayPolicy;->access$1300(Lcom/android/server/wm/DisplayPolicy;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/android/server/wm/DisplayPolicy;->access$1400(Lcom/android/server/wm/DisplayPolicy;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -165,7 +165,7 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lcom/android/server/wm/DisplayPolicy;->access$1400()Z
+    invoke-static {}, Lcom/android/server/wm/DisplayPolicy;->access$1500()Z
 
     move-result v2
 
@@ -189,7 +189,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v2, v3}, Lcom/android/server/wm/DisplayPolicy;->access$1502(Lcom/android/server/wm/DisplayPolicy;Z)Z
+    invoke-static {v2, v3}, Lcom/android/server/wm/DisplayPolicy;->access$1602(Lcom/android/server/wm/DisplayPolicy;Z)Z
 
     :cond_1
     iget-object v2, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
@@ -209,7 +209,7 @@
 
     iget-object v2, v1, Lcom/android/server/wm/DisplayPolicy;->mPerfBoostFling:Landroid/util/BoostFramework;
 
-    invoke-static {v1, v0, v2}, Lcom/android/server/wm/DisplayPolicy;->access$1600(Lcom/android/server/wm/DisplayPolicy;Ljava/lang/String;Landroid/util/BoostFramework;)Z
+    invoke-static {v1, v0, v2}, Lcom/android/server/wm/DisplayPolicy;->access$1700(Lcom/android/server/wm/DisplayPolicy;Ljava/lang/String;Landroid/util/BoostFramework;)Z
 
     move-result v1
 
@@ -231,7 +231,7 @@
 
     const/4 v3, 0x1
 
-    invoke-static {v2, v3}, Lcom/android/server/wm/DisplayPolicy;->access$1502(Lcom/android/server/wm/DisplayPolicy;Z)Z
+    invoke-static {v2, v3}, Lcom/android/server/wm/DisplayPolicy;->access$1602(Lcom/android/server/wm/DisplayPolicy;Z)Z
 
     :cond_3
     return-void
@@ -242,7 +242,7 @@
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v0}, Lcom/android/server/wm/DisplayPolicy;->access$1700(Lcom/android/server/wm/DisplayPolicy;)Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/server/wm/DisplayPolicy;->access$1800(Lcom/android/server/wm/DisplayPolicy;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -252,7 +252,7 @@
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v0}, Lcom/android/server/wm/DisplayPolicy;->access$1700(Lcom/android/server/wm/DisplayPolicy;)Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/server/wm/DisplayPolicy;->access$1800(Lcom/android/server/wm/DisplayPolicy;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -266,7 +266,7 @@
 
     iget-object v1, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v1}, Lcom/android/server/wm/DisplayPolicy;->access$1700(Lcom/android/server/wm/DisplayPolicy;)Landroid/os/Handler;
+    invoke-static {v1}, Lcom/android/server/wm/DisplayPolicy;->access$1800(Lcom/android/server/wm/DisplayPolicy;)Landroid/os/Handler;
 
     move-result-object v1
 
@@ -282,7 +282,7 @@
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v0}, Lcom/android/server/wm/DisplayPolicy;->access$1700(Lcom/android/server/wm/DisplayPolicy;)Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/server/wm/DisplayPolicy;->access$1800(Lcom/android/server/wm/DisplayPolicy;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -292,7 +292,7 @@
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v0}, Lcom/android/server/wm/DisplayPolicy;->access$1700(Lcom/android/server/wm/DisplayPolicy;)Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/server/wm/DisplayPolicy;->access$1800(Lcom/android/server/wm/DisplayPolicy;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -306,7 +306,7 @@
 
     iget-object v1, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v1}, Lcom/android/server/wm/DisplayPolicy;->access$1700(Lcom/android/server/wm/DisplayPolicy;)Landroid/os/Handler;
+    invoke-static {v1}, Lcom/android/server/wm/DisplayPolicy;->access$1800(Lcom/android/server/wm/DisplayPolicy;)Landroid/os/Handler;
 
     move-result-object v1
 
@@ -322,7 +322,7 @@
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v0}, Lcom/android/server/wm/DisplayPolicy;->access$1700(Lcom/android/server/wm/DisplayPolicy;)Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/server/wm/DisplayPolicy;->access$1800(Lcom/android/server/wm/DisplayPolicy;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -338,7 +338,7 @@
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v0}, Lcom/android/server/wm/DisplayPolicy;->access$1300(Lcom/android/server/wm/DisplayPolicy;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/android/server/wm/DisplayPolicy;->access$1400(Lcom/android/server/wm/DisplayPolicy;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -381,7 +381,7 @@
     return-void
 
     :cond_2
-    invoke-static {}, Lcom/android/server/wm/DisplayPolicy;->access$1400()Z
+    invoke-static {}, Lcom/android/server/wm/DisplayPolicy;->access$1500()Z
 
     move-result v2
 
@@ -419,7 +419,7 @@
 
     iget-object v2, v1, Lcom/android/server/wm/DisplayPolicy;->mPerfBoostPrefling:Landroid/util/BoostFramework;
 
-    invoke-static {v1, v0, v2}, Lcom/android/server/wm/DisplayPolicy;->access$1600(Lcom/android/server/wm/DisplayPolicy;Ljava/lang/String;Landroid/util/BoostFramework;)Z
+    invoke-static {v1, v0, v2}, Lcom/android/server/wm/DisplayPolicy;->access$1700(Lcom/android/server/wm/DisplayPolicy;Ljava/lang/String;Landroid/util/BoostFramework;)Z
 
     move-result v1
 
@@ -440,7 +440,7 @@
 
     iget-object v2, v1, Lcom/android/server/wm/DisplayPolicy;->mPerfBoostDrag:Landroid/util/BoostFramework;
 
-    invoke-static {v1, v0, v2}, Lcom/android/server/wm/DisplayPolicy;->access$1600(Lcom/android/server/wm/DisplayPolicy;Ljava/lang/String;Landroid/util/BoostFramework;)Z
+    invoke-static {v1, v0, v2}, Lcom/android/server/wm/DisplayPolicy;->access$1700(Lcom/android/server/wm/DisplayPolicy;Ljava/lang/String;Landroid/util/BoostFramework;)Z
 
     move-result v1
 
@@ -472,7 +472,7 @@
 .end method
 
 .method public onSwipeFromBottom()V
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
@@ -485,33 +485,37 @@
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v1}, Lcom/android/server/wm/DisplayPolicy;->access$300(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/WindowState;
+    invoke-static {v1}, Lcom/android/server/wm/DisplayPolicy;->access$800(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/WindowState;
 
     move-result-object v1
+
+    const/4 v2, 0x4
 
     if-eqz v1, :cond_0
 
     iget-object v1, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v1}, Lcom/android/server/wm/DisplayPolicy;->access$800(Lcom/android/server/wm/DisplayPolicy;)I
+    invoke-static {v1}, Lcom/android/server/wm/DisplayPolicy;->access$900(Lcom/android/server/wm/DisplayPolicy;)I
 
     move-result v1
-
-    const/4 v2, 0x4
 
     if-ne v1, v2, :cond_0
 
     iget-object v1, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    iget-object v2, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
+    iget-object v3, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v2}, Lcom/android/server/wm/DisplayPolicy;->access$300(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/WindowState;
+    invoke-static {v3}, Lcom/android/server/wm/DisplayPolicy;->access$800(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/WindowState;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-static {v1, v2}, Lcom/android/server/wm/DisplayPolicy;->access$400(Lcom/android/server/wm/DisplayPolicy;Lcom/android/server/wm/WindowState;)V
+    invoke-static {v1, v3}, Lcom/android/server/wm/DisplayPolicy;->access$200(Lcom/android/server/wm/DisplayPolicy;Lcom/android/server/wm/WindowState;)V
 
     :cond_0
+    iget-object v1, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
+
+    invoke-static {v1, v2}, Lcom/android/server/wm/DisplayPolicy;->access$700(Lcom/android/server/wm/DisplayPolicy;I)V
+
     monitor-exit v0
 
     return-void
@@ -527,7 +531,7 @@
 .end method
 
 .method public onSwipeFromLeft()V
-    .locals 5
+    .locals 6
 
     invoke-static {}, Landroid/graphics/Region;->obtain()Landroid/graphics/Region;
 
@@ -544,7 +548,7 @@
     :try_start_0
     iget-object v2, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v2}, Lcom/android/server/wm/DisplayPolicy;->access$900(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/DisplayContent;
+    invoke-static {v2}, Lcom/android/server/wm/DisplayPolicy;->access$1000(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/DisplayContent;
 
     move-result-object v2
 
@@ -554,7 +558,7 @@
 
     iget-object v2, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v2}, Lcom/android/server/wm/DisplayPolicy;->access$1000(Lcom/android/server/wm/DisplayPolicy;)Z
+    invoke-static {v2}, Lcom/android/server/wm/DisplayPolicy;->access$1100(Lcom/android/server/wm/DisplayPolicy;)Z
 
     move-result v2
 
@@ -564,7 +568,7 @@
 
     iget-object v2, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v2}, Lcom/android/server/wm/DisplayPolicy;->access$800(Lcom/android/server/wm/DisplayPolicy;)I
+    invoke-static {v2}, Lcom/android/server/wm/DisplayPolicy;->access$900(Lcom/android/server/wm/DisplayPolicy;)I
 
     move-result v2
 
@@ -573,50 +577,52 @@
     goto :goto_0
 
     :cond_0
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
     goto :goto_1
 
     :cond_1
     :goto_0
-    nop
-
-    :goto_1
     move v2, v3
 
-    iget-object v3, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
-
-    invoke-static {v3}, Lcom/android/server/wm/DisplayPolicy;->access$300(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/WindowState;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_2
-
-    if-eqz v2, :cond_2
-
-    iget-object v3, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
-
-    invoke-static {v3}, Lcom/android/server/wm/DisplayPolicy;->access$1100(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/SystemGesturesPointerEventListener;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v0}, Lcom/android/server/wm/SystemGesturesPointerEventListener;->currentGestureStartedInRegion(Landroid/graphics/Region;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    iget-object v3, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
-
+    :goto_1
     iget-object v4, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v4}, Lcom/android/server/wm/DisplayPolicy;->access$300(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/WindowState;
+    invoke-static {v4}, Lcom/android/server/wm/DisplayPolicy;->access$800(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/WindowState;
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcom/android/server/wm/DisplayPolicy;->access$400(Lcom/android/server/wm/DisplayPolicy;Lcom/android/server/wm/WindowState;)V
+    if-eqz v4, :cond_2
+
+    if-eqz v2, :cond_2
+
+    iget-object v4, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
+
+    invoke-static {v4}, Lcom/android/server/wm/DisplayPolicy;->access$1200(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/SystemGesturesPointerEventListener;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v0}, Lcom/android/server/wm/SystemGesturesPointerEventListener;->currentGestureStartedInRegion(Landroid/graphics/Region;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_2
+
+    iget-object v4, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
+
+    iget-object v5, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
+
+    invoke-static {v5}, Lcom/android/server/wm/DisplayPolicy;->access$800(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/WindowState;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Lcom/android/server/wm/DisplayPolicy;->access$200(Lcom/android/server/wm/DisplayPolicy;Lcom/android/server/wm/WindowState;)V
 
     :cond_2
+    iget-object v4, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
+
+    invoke-static {v4, v3}, Lcom/android/server/wm/DisplayPolicy;->access$700(Lcom/android/server/wm/DisplayPolicy;I)V
+
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -637,7 +643,7 @@
 .end method
 
 .method public onSwipeFromRight()V
-    .locals 5
+    .locals 6
 
     invoke-static {}, Landroid/graphics/Region;->obtain()Landroid/graphics/Region;
 
@@ -654,7 +660,7 @@
     :try_start_0
     iget-object v2, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v2}, Lcom/android/server/wm/DisplayPolicy;->access$900(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/DisplayContent;
+    invoke-static {v2}, Lcom/android/server/wm/DisplayPolicy;->access$1000(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/DisplayContent;
 
     move-result-object v2
 
@@ -664,19 +670,19 @@
 
     iget-object v2, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v2}, Lcom/android/server/wm/DisplayPolicy;->access$1000(Lcom/android/server/wm/DisplayPolicy;)Z
+    invoke-static {v2}, Lcom/android/server/wm/DisplayPolicy;->access$1100(Lcom/android/server/wm/DisplayPolicy;)Z
 
     move-result v2
+
+    const/4 v3, 0x2
 
     if-nez v2, :cond_1
 
     iget-object v2, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v2}, Lcom/android/server/wm/DisplayPolicy;->access$800(Lcom/android/server/wm/DisplayPolicy;)I
+    invoke-static {v2}, Lcom/android/server/wm/DisplayPolicy;->access$900(Lcom/android/server/wm/DisplayPolicy;)I
 
     move-result v2
-
-    const/4 v3, 0x2
 
     if-ne v2, v3, :cond_0
 
@@ -692,39 +698,43 @@
     const/4 v2, 0x1
 
     :goto_1
-    iget-object v3, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
-
-    invoke-static {v3}, Lcom/android/server/wm/DisplayPolicy;->access$300(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/WindowState;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_2
-
-    if-eqz v2, :cond_2
-
-    iget-object v3, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
-
-    invoke-static {v3}, Lcom/android/server/wm/DisplayPolicy;->access$1100(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/SystemGesturesPointerEventListener;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v0}, Lcom/android/server/wm/SystemGesturesPointerEventListener;->currentGestureStartedInRegion(Landroid/graphics/Region;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    iget-object v3, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
-
     iget-object v4, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v4}, Lcom/android/server/wm/DisplayPolicy;->access$300(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/WindowState;
+    invoke-static {v4}, Lcom/android/server/wm/DisplayPolicy;->access$800(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/WindowState;
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcom/android/server/wm/DisplayPolicy;->access$400(Lcom/android/server/wm/DisplayPolicy;Lcom/android/server/wm/WindowState;)V
+    if-eqz v4, :cond_2
+
+    if-eqz v2, :cond_2
+
+    iget-object v4, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
+
+    invoke-static {v4}, Lcom/android/server/wm/DisplayPolicy;->access$1200(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/SystemGesturesPointerEventListener;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v0}, Lcom/android/server/wm/SystemGesturesPointerEventListener;->currentGestureStartedInRegion(Landroid/graphics/Region;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_2
+
+    iget-object v4, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
+
+    iget-object v5, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
+
+    invoke-static {v5}, Lcom/android/server/wm/DisplayPolicy;->access$800(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/WindowState;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Lcom/android/server/wm/DisplayPolicy;->access$200(Lcom/android/server/wm/DisplayPolicy;Lcom/android/server/wm/WindowState;)V
 
     :cond_2
+    iget-object v4, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
+
+    invoke-static {v4, v3}, Lcom/android/server/wm/DisplayPolicy;->access$700(Lcom/android/server/wm/DisplayPolicy;I)V
+
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -758,7 +768,7 @@
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v1}, Lcom/android/server/wm/DisplayPolicy;->access$200(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/WindowState;
+    invoke-static {v1}, Lcom/android/server/wm/DisplayPolicy;->access$600(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/WindowState;
 
     move-result-object v1
 
@@ -768,13 +778,19 @@
 
     iget-object v2, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v2}, Lcom/android/server/wm/DisplayPolicy;->access$200(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/WindowState;
+    invoke-static {v2}, Lcom/android/server/wm/DisplayPolicy;->access$600(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/WindowState;
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/android/server/wm/DisplayPolicy;->access$400(Lcom/android/server/wm/DisplayPolicy;Lcom/android/server/wm/WindowState;)V
+    invoke-static {v1, v2}, Lcom/android/server/wm/DisplayPolicy;->access$200(Lcom/android/server/wm/DisplayPolicy;Lcom/android/server/wm/WindowState;)V
 
     :cond_0
+    iget-object v1, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
+
+    const/16 v2, 0x8
+
+    invoke-static {v1, v2}, Lcom/android/server/wm/DisplayPolicy;->access$700(Lcom/android/server/wm/DisplayPolicy;I)V
+
     monitor-exit v0
 
     return-void
@@ -809,7 +825,7 @@
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v0}, Lcom/android/server/wm/DisplayPolicy;->access$1300(Lcom/android/server/wm/DisplayPolicy;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/android/server/wm/DisplayPolicy;->access$1400(Lcom/android/server/wm/DisplayPolicy;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -824,7 +840,7 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lcom/android/server/wm/DisplayPolicy;->access$1400()Z
+    invoke-static {}, Lcom/android/server/wm/DisplayPolicy;->access$1500()Z
 
     move-result v2
 
@@ -848,7 +864,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v2, v3}, Lcom/android/server/wm/DisplayPolicy;->access$1502(Lcom/android/server/wm/DisplayPolicy;Z)Z
+    invoke-static {v2, v3}, Lcom/android/server/wm/DisplayPolicy;->access$1602(Lcom/android/server/wm/DisplayPolicy;Z)Z
 
     :cond_1
     iget-object v2, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
@@ -868,7 +884,7 @@
 
     iget-object v2, v1, Lcom/android/server/wm/DisplayPolicy;->mPerfBoostFling:Landroid/util/BoostFramework;
 
-    invoke-static {v1, v0, v2}, Lcom/android/server/wm/DisplayPolicy;->access$1600(Lcom/android/server/wm/DisplayPolicy;Ljava/lang/String;Landroid/util/BoostFramework;)Z
+    invoke-static {v1, v0, v2}, Lcom/android/server/wm/DisplayPolicy;->access$1700(Lcom/android/server/wm/DisplayPolicy;Ljava/lang/String;Landroid/util/BoostFramework;)Z
 
     move-result v1
 
@@ -888,7 +904,7 @@
 
     iget-object v2, p0, Lcom/android/server/wm/DisplayPolicy$2;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v2, v5}, Lcom/android/server/wm/DisplayPolicy;->access$1502(Lcom/android/server/wm/DisplayPolicy;Z)Z
+    invoke-static {v2, v5}, Lcom/android/server/wm/DisplayPolicy;->access$1602(Lcom/android/server/wm/DisplayPolicy;Z)Z
 
     :cond_3
     return-void

@@ -3097,7 +3097,7 @@
 
     iget-object v0, v0, Lcom/android/server/pm/InstallSource;->installerPackageName:Ljava/lang/String;
 
-    const-string v1, "installerPackageName"
+    const-string/jumbo v1, "installerPackageName"
 
     invoke-virtual {p1, v1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)Lcom/android/internal/util/IndentingPrintWriter;
 
@@ -6652,7 +6652,7 @@
 
     move-result v15
 
-    const-string v2, "installerPackageName"
+    const-string/jumbo v2, "installerPackageName"
 
     invoke-static {v0, v2}, Lcom/android/internal/util/XmlUtils;->readStringAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Ljava/lang/String;
 
@@ -6666,7 +6666,7 @@
 
     move-result v2
 
-    const-string v3, "installerUid"
+    const-string/jumbo v3, "installerUid"
 
     invoke-static {v0, v3, v2}, Lcom/android/internal/util/XmlUtils;->readIntAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)I
 
@@ -12566,7 +12566,7 @@
 
     invoke-static {p1, v1, v3}, Lcom/android/internal/util/XmlUtils;->writeIntAttribute(Lorg/xmlpull/v1/XmlSerializer;Ljava/lang/String;I)V
 
-    const-string v1, "installerPackageName"
+    const-string/jumbo v1, "installerPackageName"
 
     iget-object v3, p0, Lcom/android/server/pm/PackageInstallerSession;->mInstallSource:Lcom/android/server/pm/InstallSource;
 
@@ -12574,7 +12574,7 @@
 
     invoke-static {p1, v1, v3}, Lcom/android/internal/util/XmlUtils;->writeStringAttribute(Lorg/xmlpull/v1/XmlSerializer;Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    const-string v1, "installerUid"
+    const-string/jumbo v1, "installerUid"
 
     iget v3, p0, Lcom/android/server/pm/PackageInstallerSession;->mInstallerUid:I
 

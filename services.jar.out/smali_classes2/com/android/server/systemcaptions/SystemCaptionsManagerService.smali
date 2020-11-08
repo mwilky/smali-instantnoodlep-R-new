@@ -26,7 +26,7 @@
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x4
+    const/16 v2, 0x44
 
     invoke-direct {p0, p1, v0, v1, v2}, Lcom/android/server/infra/AbstractMasterSystemService;-><init>(Landroid/content/Context;Lcom/android/server/infra/ServiceNameResolver;Ljava/lang/String;I)V
 

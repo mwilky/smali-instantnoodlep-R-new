@@ -140,7 +140,7 @@
 
     move-result-object v2
 
-    const v3, 0x1070043
+    const v3, 0x1070044
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getIntArray(I)[I
 
@@ -156,7 +156,7 @@
 
     move-result-object v2
 
-    const v3, 0x1070046
+    const v3, 0x1070047
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getIntArray(I)[I
 
@@ -181,7 +181,7 @@
 
     move-result-object v2
 
-    const v3, 0x1070045
+    const v3, 0x1070046
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getIntArray(I)[I
 
@@ -209,7 +209,7 @@
 
     move-result-object v0
 
-    const v2, 0x1070048
+    const v2, 0x1070049
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getIntArray(I)[I
 
@@ -226,7 +226,7 @@
 
     move-result-object v0
 
-    const v2, 0x1070044
+    const v2, 0x1070045
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getIntArray(I)[I
 
@@ -242,7 +242,7 @@
 
     move-result-object v0
 
-    const v2, 0x1070047
+    const v2, 0x1070048
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getIntArray(I)[I
 
@@ -2094,7 +2094,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e0065
+    const v1, 0x10e0066
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 

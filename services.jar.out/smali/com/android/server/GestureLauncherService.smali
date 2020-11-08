@@ -384,7 +384,7 @@
 .method public static isCameraLaunchEnabled(Landroid/content/res/Resources;)Z
     .locals 4
 
-    const v0, 0x10e002a
+    const v0, 0x10e002b
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -466,7 +466,7 @@
 .method public static isCameraLiftTriggerEnabled(Landroid/content/res/Resources;)Z
     .locals 2
 
-    const v0, 0x10e002b
+    const v0, 0x10e002c
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -587,7 +587,7 @@
 
     check-cast v0, Landroid/hardware/SensorManager;
 
-    const v1, 0x10e002a
+    const v1, 0x10e002b
 
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -691,7 +691,7 @@
 
     check-cast v0, Landroid/hardware/SensorManager;
 
-    const v1, 0x10e002b
+    const v1, 0x10e002c
 
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getInteger(I)I
 

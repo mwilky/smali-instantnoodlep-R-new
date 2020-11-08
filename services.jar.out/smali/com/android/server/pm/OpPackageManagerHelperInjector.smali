@@ -4,6 +4,18 @@
 
 
 # static fields
+.field private static final CARRIER_APP_FOR_SIG_PERMS_MATCH_EXACTLY:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;>;"
+        }
+    .end annotation
+.end field
+
 .field static final CTSPACKAGE_SIGNATURES:[Landroid/content/pm/Signature;
 
 .field private static final DEBUG:Z
@@ -31,6 +43,8 @@
         }
     .end annotation
 .end field
+
+.field private static final SIGNATURE_SHA256_CDM:Ljava/lang/String; = "27:F9:6D:BA:B7:7B:31:F6:95:3E:4C:D2:C2:DE:FE:15:F5:D7:C7:8F:07:3D:D7:16:20:18:EF:47:6B:09:7C:34"
 
 .field private static final TAG:Ljava/lang/String;
 
@@ -155,6 +169,32 @@
 
     invoke-interface {v2, v3, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    sput-object v0, Lcom/android/server/pm/OpPackageManagerHelperInjector;->CARRIER_APP_FOR_SIG_PERMS_MATCH_EXACTLY:Ljava/util/Map;
+
+    const-string v0, "com.sprint.ms.cdm"
+
+    const-string v1, "android.permission.NETWORK_STACK"
+
+    const-string v2, "android.permission.MAINLINE_NETWORK_STACK"
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    sget-object v2, Lcom/android/server/pm/OpPackageManagerHelperInjector;->CARRIER_APP_FOR_SIG_PERMS_MATCH_EXACTLY:Ljava/util/Map;
+
+    const-string v3, "com.sprint.ms.cdm"
+
+    invoke-interface {v2, v3, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     return-void
 .end method
 
@@ -164,6 +204,62 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+.method public static allowCarrierAppGrantingSigPerms(Landroid/content/Context;Lcom/android/server/pm/parsing/pkg/AndroidPackage;Ljava/lang/String;)Z
+    .locals 4
+
+    const/4 v0, 0x0
+
+    if-nez p1, :cond_0
+
+    return v0
+
+    :cond_0
+    sget-object v1, Lcom/android/server/pm/OpPackageManagerHelperInjector;->CARRIER_APP_FOR_SIG_PERMS_MATCH_EXACTLY:Ljava/util/Map;
+
+    invoke-interface {p1}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/util/List;
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v1, p2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {p1}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "SHA256"
+
+    invoke-static {p0, v2, v3}, Lcom/android/server/pm/OpPackageManagerHelperInjector;->getAppSignature(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "27:F9:6D:BA:B7:7B:31:F6:95:3E:4C:D2:C2:DE:FE:15:F5:D7:C7:8F:07:3D:D7:16:20:18:EF:47:6B:09:7C:34"
+
+    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_1
+    return v0
 .end method
 
 .method public static allowMarketToUninstallAppsSilently(Ljava/lang/String;)Z
@@ -407,12 +503,161 @@
     return v2
 .end method
 
+.method public static getAppSignature(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ""
+
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v1
+
+    const/16 v2, 0x40
+
+    invoke-virtual {v1, p1, v2}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v2, v1, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
+
+    if-eqz v2, :cond_0
+
+    iget-object v2, v1, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
+
+    array-length v2, v2
+
+    if-lez v2, :cond_0
+
+    iget-object v2, v1, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
+
+    const/4 v3, 0x0
+
+    aget-object v3, v2, v3
+
+    invoke-virtual {v3}, Landroid/content/pm/Signature;->toByteArray()[B
+
+    move-result-object v4
+
+    invoke-static {v4, p2}, Lcom/android/server/pm/OpPackageManagerHelperInjector;->hexDigest([BLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-object v0, v4
+
+    :cond_0
+    goto :goto_0
+
+    :catch_0
+    move-exception v1
+
+    invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
+
+    :goto_0
+    return-object v0
+.end method
+
 .method public static getCtsPackageInstalled()Z
     .locals 1
 
     sget-boolean v0, Lcom/android/server/pm/OpPackageManagerHelperInjector;->mCtsPackageInstalled:Z
 
     return v0
+.end method
+
+.method public static hexDigest([BLjava/lang/String;)Ljava/lang/String;
+    .locals 7
+
+    :try_start_0
+    invoke-static {p1}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    nop
+
+    invoke-virtual {v0, p0}, Ljava/security/MessageDigest;->digest([B)[B
+
+    move-result-object v1
+
+    new-instance v2, Ljava/lang/StringBuffer;
+
+    invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
+
+    const/4 v3, 0x0
+
+    :goto_0
+    array-length v4, v1
+
+    const/4 v5, 0x1
+
+    if-ge v3, v4, :cond_1
+
+    aget-byte v4, v1, v3
+
+    and-int/lit16 v4, v4, 0xff
+
+    invoke-static {v4}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/String;->length()I
+
+    move-result v6
+
+    if-ne v6, v5, :cond_0
+
+    const-string v5, "0"
+
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    :cond_0
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    const-string v5, ":"
+
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
+
+    move-result v6
+
+    sub-int/2addr v6, v5
+
+    invoke-virtual {v3, v4, v6}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v4
+
+    return-object v4
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    const-string v1, ""
+
+    return-object v1
 .end method
 
 .method public static isGooglePlayComponent(Ljava/lang/String;Ljava/lang/String;)Z

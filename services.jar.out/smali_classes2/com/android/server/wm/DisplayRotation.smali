@@ -221,7 +221,7 @@
 
     iput-boolean v0, p0, Lcom/android/server/wm/DisplayRotation;->mSupportAutoRotation:Z
 
-    const v0, 0x10e006e
+    const v0, 0x10e006f
 
     invoke-direct {p0, v0}, Lcom/android/server/wm/DisplayRotation;->readRotation(I)I
 
@@ -229,7 +229,7 @@
 
     iput v0, p0, Lcom/android/server/wm/DisplayRotation;->mLidOpenRotation:I
 
-    const v0, 0x10e002d
+    const v0, 0x10e002e
 
     invoke-direct {p0, v0}, Lcom/android/server/wm/DisplayRotation;->readRotation(I)I
 
@@ -237,7 +237,7 @@
 
     iput v0, p0, Lcom/android/server/wm/DisplayRotation;->mCarDockRotation:I
 
-    const v0, 0x10e0047
+    const v0, 0x10e0048
 
     invoke-direct {p0, v0}, Lcom/android/server/wm/DisplayRotation;->readRotation(I)I
 
@@ -245,7 +245,7 @@
 
     iput v0, p0, Lcom/android/server/wm/DisplayRotation;->mDeskDockRotation:I
 
-    const v0, 0x10e00cc
+    const v0, 0x10e00cd
 
     invoke-direct {p0, v0}, Lcom/android/server/wm/DisplayRotation;->readRotation(I)I
 

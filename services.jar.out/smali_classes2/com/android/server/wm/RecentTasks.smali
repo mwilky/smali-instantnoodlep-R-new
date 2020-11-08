@@ -5824,11 +5824,11 @@
 
     const/4 v3, 0x0
 
-    if-eq v0, v2, :cond_a
+    if-eq v0, v2, :cond_b
 
     const/4 v4, 0x3
 
-    if-eq v0, v4, :cond_a
+    if-eq v0, v4, :cond_b
 
     const/4 v5, 0x4
 
@@ -5836,7 +5836,7 @@
 
     const/4 v5, 0x5
 
-    if-eq v0, v5, :cond_a
+    if-eq v0, v5, :cond_b
 
     goto :goto_0
 
@@ -5863,7 +5863,7 @@
 
     move-result v0
 
-    if-eq v0, v2, :cond_9
+    if-eq v0, v2, :cond_a
 
     if-eq v0, v4, :cond_4
 
@@ -5871,84 +5871,90 @@
 
     if-eq v0, v1, :cond_3
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_3
     invoke-virtual {p1}, Lcom/android/server/wm/Task;->isAlwaysOnTop()Z
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     return v3
 
     :cond_4
-    sget-boolean v0, Lcom/android/server/wm/ActivityTaskManagerDebugConfig;->DEBUG_RECENTS_TRIM_TASKS:Z
+    invoke-virtual {p1}, Lcom/android/server/wm/Task;->getStack()Lcom/android/server/wm/ActivityStack;
+
+    move-result-object v0
+
+    sget-boolean v2, Lcom/android/server/wm/ActivityTaskManagerDebugConfig;->DEBUG_RECENTS_TRIM_TASKS:Z
+
+    if-eqz v2, :cond_6
 
     if-eqz v0, :cond_5
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "\ttop="
+    const-string v4, "\ttop="
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Lcom/android/server/wm/Task;->getStack()Lcom/android/server/wm/ActivityStack;
+    invoke-virtual {v0}, Lcom/android/server/wm/ActivityStack;->getTopMostTask()Lcom/android/server/wm/Task;
+
+    move-result-object v4
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/android/server/wm/ActivityStack;->getTopMostTask()Lcom/android/server/wm/Task;
+    invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    goto :goto_1
 
     :cond_5
-    invoke-virtual {p1}, Lcom/android/server/wm/Task;->getStack()Lcom/android/server/wm/ActivityStack;
+    const-string v2, "\ttask.getStack() is null"
 
-    move-result-object v0
+    invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-eqz v0, :cond_6
+    :cond_6
+    :goto_1
+    if-eqz v0, :cond_7
 
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityStack;->getTopMostTask()Lcom/android/server/wm/Task;
 
     move-result-object v1
 
-    if-ne v1, p1, :cond_6
+    if-ne v1, p1, :cond_7
 
     return v3
 
-    :cond_6
-    :goto_1
+    :cond_7
+    :goto_2
     invoke-virtual {p1}, Lcom/android/server/wm/Task;->getStack()Lcom/android/server/wm/ActivityStack;
 
     move-result-object v0
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_8
 
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityStack;->getDisplay()Lcom/android/server/wm/DisplayContent;
 
     move-result-object v1
 
-    if-eqz v1, :cond_7
+    if-eqz v1, :cond_8
 
     invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->isSingleTaskInstance()Z
 
     move-result v2
 
-    if-eqz v2, :cond_7
+    if-eqz v2, :cond_8
 
     return v3
 
-    :cond_7
+    :cond_8
     iget-object v1, p0, Lcom/android/server/wm/RecentTasks;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     invoke-virtual {v1}, Lcom/android/server/wm/ActivityTaskManagerService;->getLockTaskController()Lcom/android/server/wm/LockTaskController;
@@ -5959,19 +5965,19 @@
 
     move-result-object v1
 
-    if-ne p1, v1, :cond_8
+    if-ne p1, v1, :cond_9
 
     return v3
 
-    :cond_8
+    :cond_9
     const/4 v1, 0x1
 
     return v1
 
-    :cond_9
+    :cond_a
     return v3
 
-    :cond_a
+    :cond_b
     return v3
 .end method
 
@@ -5984,7 +5990,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x10e0086
+    const v0, 0x10e0087
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -5992,7 +5998,7 @@
 
     iput v0, p0, Lcom/android/server/wm/RecentTasks;->mMinNumVisibleTasks:I
 
-    const v0, 0x10e007c
+    const v0, 0x10e007d
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -6013,7 +6019,7 @@
 
     if-eqz v0, :cond_1
 
-    const v0, 0x10e0085
+    const v0, 0x10e0086
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -6021,7 +6027,7 @@
 
     iput v0, p0, Lcom/android/server/wm/RecentTasks;->mMinNumVisibleTasks:I
 
-    const v0, 0x10e007b
+    const v0, 0x10e007c
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -6032,7 +6038,7 @@
     goto :goto_0
 
     :cond_1
-    const v0, 0x10e0084
+    const v0, 0x10e0085
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -6040,7 +6046,7 @@
 
     iput v0, p0, Lcom/android/server/wm/RecentTasks;->mMinNumVisibleTasks:I
 
-    const v0, 0x10e007a
+    const v0, 0x10e007b
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getInteger(I)I
 

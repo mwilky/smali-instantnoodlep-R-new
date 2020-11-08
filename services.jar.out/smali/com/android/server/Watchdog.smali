@@ -2037,15 +2037,17 @@
 
     move-result v3
 
-    if-eqz v3, :cond_11
-
-    const-string v0, "Watchdog"
-
-    const-string v2, "Triggering SysRq for system_server watchdog"
-
-    invoke-static {v0, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    const-wide/16 v4, 0xbb8
 
     const/16 v0, 0x77
+
+    if-eqz v3, :cond_11
+
+    const-string v2, "Watchdog"
+
+    const-string v6, "Triggering SysRq for system_server watchdog"
+
+    invoke-static {v2, v6}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-direct {v7, v0}, Lcom/android/server/Watchdog;->doSysRq(C)V
 
@@ -2053,15 +2055,35 @@
 
     invoke-direct {v7, v0}, Lcom/android/server/Watchdog;->doSysRq(C)V
 
-    const-wide/16 v4, 0xbb8
-
     invoke-static {v4, v5}, Landroid/os/SystemClock;->sleep(J)V
 
     const/16 v0, 0x63
 
     invoke-direct {v7, v0}, Lcom/android/server/Watchdog;->doSysRq(C)V
 
+    goto :goto_e
+
     :cond_11
+    const-string/jumbo v2, "ro.build.release_type"
+
+    invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v6, "aging"
+
+    invoke-virtual {v6, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_12
+
+    invoke-direct {v7, v0}, Lcom/android/server/Watchdog;->doSysRq(C)V
+
+    invoke-static {v4, v5}, Landroid/os/SystemClock;->sleep(J)V
+
+    :cond_12
+    :goto_e
     monitor-enter p0
 
     :try_start_c
@@ -2073,7 +2095,7 @@
     :try_end_c
     .catchall {:try_start_c .. :try_end_c} :catchall_0
 
-    if-eqz v2, :cond_13
+    if-eqz v2, :cond_14
 
     const-string v0, "Watchdog"
 
@@ -2086,7 +2108,7 @@
 
     move-result v0
 
-    if-ltz v0, :cond_12
+    if-ltz v0, :cond_13
 
     const-string v4, "Watchdog"
 
@@ -2100,26 +2122,26 @@
 
     goto/16 :goto_0
 
-    :cond_12
-    goto :goto_e
+    :cond_13
+    goto :goto_f
 
     :catch_8
     move-exception v0
 
-    :cond_13
-    :goto_e
+    :cond_14
+    :goto_f
     invoke-static {}, Landroid/os/Debug;->isDebuggerConnected()Z
 
     move-result v0
 
-    if-eqz v0, :cond_14
+    if-eqz v0, :cond_15
 
     const/4 v10, 0x2
 
-    :cond_14
+    :cond_15
     const/4 v4, 0x2
 
-    if-lt v10, v4, :cond_15
+    if-lt v10, v4, :cond_16
 
     const-string v0, "Watchdog"
 
@@ -2127,10 +2149,10 @@
 
     invoke-static {v0, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto/16 :goto_10
+    goto/16 :goto_11
 
-    :cond_15
-    if-lez v10, :cond_16
+    :cond_16
+    if-lez v10, :cond_17
 
     const-string v0, "Watchdog"
 
@@ -2138,10 +2160,10 @@
 
     invoke-static {v0, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_10
+    goto :goto_11
 
-    :cond_16
-    if-nez v15, :cond_17
+    :cond_17
+    if-nez v15, :cond_18
 
     const-string v0, "Watchdog"
 
@@ -2149,9 +2171,9 @@
 
     invoke-static {v0, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_10
+    goto :goto_11
 
-    :cond_17
+    :cond_18
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2180,13 +2202,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_18
+    if-eqz v0, :cond_19
 
     const/4 v8, 0x0
 
     goto/16 :goto_0
 
-    :cond_18
+    :cond_19
     const-wide/32 v4, 0xea60
 
     invoke-direct {v7, v4, v5}, Lcom/android/server/Watchdog;->cleanupProcesses(J)V
@@ -2195,7 +2217,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1a
+    if-eqz v0, :cond_1b
 
     const-string v0, "Watchdog"
 
@@ -2207,14 +2229,14 @@
 
     move-result v0
 
-    if-nez v0, :cond_19
+    if-nez v0, :cond_1a
 
     :try_start_e
     invoke-static/range {v16 .. v17}, Ljava/lang/Thread;->sleep(J)V
     :try_end_e
     .catch Ljava/lang/InterruptedException; {:try_start_e .. :try_end_e} :catch_9
 
-    goto :goto_f
+    goto :goto_10
 
     :catch_9
     move-exception v0
@@ -2225,8 +2247,8 @@
 
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
-    :cond_19
-    :goto_f
+    :cond_1a
+    :goto_10
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v0
@@ -2237,16 +2259,16 @@
 
     invoke-static {v0}, Ljava/lang/System;->exit(I)V
 
-    goto :goto_10
+    goto :goto_11
 
-    :cond_1a
+    :cond_1b
     const-string v0, "Watchdog"
 
     const-string v4, "After KillingAllProcessesByWatchdog:  Watchdog is *not* killing the system process"
 
     invoke-static {v0, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    :goto_10
+    :goto_11
     const/4 v8, 0x0
 
     goto/16 :goto_0
@@ -2266,12 +2288,12 @@
 
     move v1, v10
 
-    goto :goto_11
+    goto :goto_12
 
     :catchall_2
     move-exception v0
 
-    :goto_11
+    :goto_12
     :try_start_10
     monitor-exit p0
     :try_end_10

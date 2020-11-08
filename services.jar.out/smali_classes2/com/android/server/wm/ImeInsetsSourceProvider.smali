@@ -263,6 +263,14 @@
 
     iget-object v3, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/InsetsControlTarget;
 
+    iget-object v5, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
+
+    iget-object v5, v5, Lcom/android/server/wm/DisplayContent;->mInputMethodInputTarget:Lcom/android/server/wm/WindowState;
+
+    if-eq v3, v5, :cond_6
+
+    iget-object v3, p0, Lcom/android/server/wm/ImeInsetsSourceProvider;->mImeTargetFromIme:Lcom/android/server/wm/InsetsControlTarget;
+
     if-ne v1, v3, :cond_5
 
     invoke-interface {v3}, Lcom/android/server/wm/InsetsControlTarget;->getWindow()Lcom/android/server/wm/WindowState;

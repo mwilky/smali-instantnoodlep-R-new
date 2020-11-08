@@ -81,7 +81,7 @@
 
     iget-object v7, p0, Lcom/android/server/pm/PackageManagerService$6;->val$resolver:Landroid/content/ContentResolver;
 
-    const-string v8, "instant_apps_enabled"
+    const-string/jumbo v8, "instant_apps_enabled"
 
     invoke-static {v7, v8, v2, v6}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 

@@ -105,10 +105,6 @@
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    invoke-static {v0}, Ljava/util/Collections;->synchronizedList(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object v0
-
     iput-object v0, p0, Lcom/android/server/job/controllers/TimeController;->mTrackedJobs:Ljava/util/List;
 
     new-instance v0, Lcom/android/server/job/controllers/TimeController$1;
@@ -555,7 +551,7 @@
 
 # virtual methods
 .method checkExpiredDeadlinesAndResetAlarm()V
-    .locals 12
+    .locals 13
 
     iget-object v0, p0, Lcom/android/server/job/controllers/TimeController;->mLock:Ljava/lang/Object;
 
@@ -576,176 +572,32 @@
 
     iget-object v7, p0, Lcom/android/server/job/controllers/TimeController;->mTrackedJobs:Ljava/util/List;
 
-    invoke-interface {v7}, Ljava/util/List;->listIterator()Ljava/util/ListIterator;
-
-    move-result-object v7
-
-    :cond_0
-    :goto_0
-    invoke-interface {v7}, Ljava/util/ListIterator;->hasNext()Z
-
-    move-result v8
-
-    if-eqz v8, :cond_5
-
-    invoke-interface {v7}, Ljava/util/ListIterator;->next()Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Lcom/android/server/job/controllers/JobStatus;
-
-    invoke-virtual {v8}, Lcom/android/server/job/controllers/JobStatus;->hasDeadlineConstraint()Z
-
-    move-result v9
-
-    if-nez v9, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-direct {p0, v8, v5, v6}, Lcom/android/server/job/controllers/TimeController;->evaluateDeadlineConstraint(Lcom/android/server/job/controllers/JobStatus;J)Z
-
-    move-result v9
-
-    if-eqz v9, :cond_3
-
-    invoke-virtual {v8}, Lcom/android/server/job/controllers/JobStatus;->isReady()Z
-
-    move-result v9
-
-    if-eqz v9, :cond_2
-
-    iget-object v9, p0, Lcom/android/server/job/controllers/TimeController;->mStateChangedListener:Lcom/android/server/job/StateChangedListener;
-
-    invoke-interface {v9, v8}, Lcom/android/server/job/StateChangedListener;->onRunJobNow(Lcom/android/server/job/controllers/JobStatus;)V
-
-    :cond_2
-    invoke-interface {v7}, Ljava/util/ListIterator;->remove()V
-
-    goto :goto_0
-
-    :cond_3
-    const/high16 v9, 0x40000000    # 2.0f
-
-    invoke-virtual {p0, v8, v9}, Lcom/android/server/job/controllers/TimeController;->wouldBeReadyWithConstraintLocked(Lcom/android/server/job/controllers/JobStatus;I)Z
-
-    move-result v9
-
-    if-nez v9, :cond_4
-
-    sget-boolean v9, Lcom/android/server/job/controllers/TimeController;->DEBUG:Z
-
-    if-eqz v9, :cond_0
-
-    const-string v9, "JobScheduler.Time"
-
-    new-instance v10, Ljava/lang/StringBuilder;
-
-    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v11, "Skipping "
-
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v10, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v11, " because deadline won\'t make it ready."
-
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v10
-
-    invoke-static {v9, v10}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {v8}, Lcom/android/server/job/controllers/JobStatus;->getLatestRunTimeElapsed()J
-
-    move-result-wide v9
-
-    move-wide v1, v9
-
-    invoke-virtual {v8}, Lcom/android/server/job/controllers/JobStatus;->getSourceUid()I
-
-    move-result v9
-
-    move v3, v9
-
-    invoke-virtual {v8}, Lcom/android/server/job/controllers/JobStatus;->getSourcePackageName()Ljava/lang/String;
-
-    move-result-object v9
-
-    move-object v4, v9
-
-    :cond_5
-    nop
-
-    invoke-direct {p0, v3, v4}, Lcom/android/server/job/controllers/TimeController;->deriveWorkSource(ILjava/lang/String;)Landroid/os/WorkSource;
-
-    move-result-object v8
-
-    invoke-direct {p0, v1, v2, v8}, Lcom/android/server/job/controllers/TimeController;->setDeadlineExpiredAlarmLocked(JLandroid/os/WorkSource;)V
-
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
+    monitor-enter v7
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    throw v1
-.end method
-
-.method checkExpiredDelaysAndResetAlarm()V
-    .locals 13
-
-    iget-object v0, p0, Lcom/android/server/job/controllers/TimeController;->mLock:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    sget-object v1, Lcom/android/server/job/JobSchedulerService;->sElapsedRealtimeClock:Ljava/time/Clock;
-
-    invoke-virtual {v1}, Ljava/time/Clock;->millis()J
-
-    move-result-wide v1
-
-    const-wide v3, 0x7fffffffffffffffL
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
+    :try_start_1
     iget-object v8, p0, Lcom/android/server/job/controllers/TimeController;->mTrackedJobs:Ljava/util/List;
 
-    invoke-interface {v8}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-interface {v8}, Ljava/util/List;->listIterator()Ljava/util/ListIterator;
 
     move-result-object v8
 
     :cond_0
     :goto_0
-    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v8}, Ljava/util/ListIterator;->hasNext()Z
 
     move-result v9
 
-    if-eqz v9, :cond_6
+    if-eqz v9, :cond_5
 
-    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v8}, Ljava/util/ListIterator;->next()Ljava/lang/Object;
 
     move-result-object v9
 
     check-cast v9, Lcom/android/server/job/controllers/JobStatus;
 
-    invoke-virtual {v9}, Lcom/android/server/job/controllers/JobStatus;->hasTimingDelayConstraint()Z
+    invoke-virtual {v9}, Lcom/android/server/job/controllers/JobStatus;->hasDeadlineConstraint()Z
 
     move-result v10
 
@@ -754,33 +606,29 @@
     goto :goto_0
 
     :cond_1
-    invoke-direct {p0, v9, v1, v2}, Lcom/android/server/job/controllers/TimeController;->evaluateTimingDelayConstraint(Lcom/android/server/job/controllers/JobStatus;J)Z
+    invoke-direct {p0, v9, v5, v6}, Lcom/android/server/job/controllers/TimeController;->evaluateDeadlineConstraint(Lcom/android/server/job/controllers/JobStatus;J)Z
 
     move-result v10
 
     if-eqz v10, :cond_3
 
-    invoke-direct {p0, v9}, Lcom/android/server/job/controllers/TimeController;->canStopTrackingJobLocked(Lcom/android/server/job/controllers/JobStatus;)Z
+    invoke-virtual {v9}, Lcom/android/server/job/controllers/JobStatus;->isReady()Z
 
     move-result v10
 
     if-eqz v10, :cond_2
 
-    invoke-interface {v8}, Ljava/util/Iterator;->remove()V
+    iget-object v10, p0, Lcom/android/server/job/controllers/TimeController;->mStateChangedListener:Lcom/android/server/job/StateChangedListener;
+
+    invoke-interface {v10, v9}, Lcom/android/server/job/StateChangedListener;->onRunJobNow(Lcom/android/server/job/controllers/JobStatus;)V
 
     :cond_2
-    invoke-virtual {v9}, Lcom/android/server/job/controllers/JobStatus;->isReady()Z
+    invoke-interface {v8}, Ljava/util/ListIterator;->remove()V
 
-    move-result v10
-
-    if-eqz v10, :cond_5
-
-    const/4 v7, 0x1
-
-    goto :goto_1
+    goto :goto_0
 
     :cond_3
-    const/high16 v10, -0x80000000
+    const/high16 v10, 0x40000000    # 2.0f
 
     invoke-virtual {p0, v9, v10}, Lcom/android/server/job/controllers/TimeController;->wouldBeReadyWithConstraintLocked(Lcom/android/server/job/controllers/JobStatus;I)Z
 
@@ -804,7 +652,7 @@
 
     invoke-virtual {v11, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v12, " because delay won\'t make it ready."
+    const-string v12, " because deadline won\'t make it ready."
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -817,58 +665,256 @@
     goto :goto_0
 
     :cond_4
-    invoke-virtual {v9}, Lcom/android/server/job/controllers/JobStatus;->getEarliestRunTime()J
+    invoke-virtual {v9}, Lcom/android/server/job/controllers/JobStatus;->getLatestRunTimeElapsed()J
 
     move-result-wide v10
 
-    cmp-long v12, v3, v10
-
-    if-lez v12, :cond_5
-
-    move-wide v3, v10
+    move-wide v1, v10
 
     invoke-virtual {v9}, Lcom/android/server/job/controllers/JobStatus;->getSourceUid()I
 
-    move-result v12
+    move-result v10
 
-    move v5, v12
+    move v3, v10
 
     invoke-virtual {v9}, Lcom/android/server/job/controllers/JobStatus;->getSourcePackageName()Ljava/lang/String;
 
+    move-result-object v10
+
+    move-object v4, v10
+
+    :cond_5
+    monitor-exit v7
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    nop
+
+    :try_start_2
+    invoke-direct {p0, v3, v4}, Lcom/android/server/job/controllers/TimeController;->deriveWorkSource(ILjava/lang/String;)Landroid/os/WorkSource;
+
+    move-result-object v7
+
+    invoke-direct {p0, v1, v2, v7}, Lcom/android/server/job/controllers/TimeController;->setDeadlineExpiredAlarmLocked(JLandroid/os/WorkSource;)V
+
+    monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    return-void
+
+    :catchall_0
+    move-exception v8
+
+    :try_start_3
+    monitor-exit v7
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :try_start_4
+    throw v8
+
+    :catchall_1
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    throw v1
+.end method
+
+.method checkExpiredDelaysAndResetAlarm()V
+    .locals 14
+
+    iget-object v0, p0, Lcom/android/server/job/controllers/TimeController;->mLock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-object v1, Lcom/android/server/job/JobSchedulerService;->sElapsedRealtimeClock:Ljava/time/Clock;
+
+    invoke-virtual {v1}, Ljava/time/Clock;->millis()J
+
+    move-result-wide v1
+
+    const-wide v3, 0x7fffffffffffffffL
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    iget-object v8, p0, Lcom/android/server/job/controllers/TimeController;->mTrackedJobs:Ljava/util/List;
+
+    monitor-enter v8
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    :try_start_1
+    iget-object v9, p0, Lcom/android/server/job/controllers/TimeController;->mTrackedJobs:Ljava/util/List;
+
+    invoke-interface {v9}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v9
+
+    :cond_0
+    :goto_0
+    invoke-interface {v9}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v10
+
+    if-eqz v10, :cond_6
+
+    invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v10
+
+    check-cast v10, Lcom/android/server/job/controllers/JobStatus;
+
+    invoke-virtual {v10}, Lcom/android/server/job/controllers/JobStatus;->hasTimingDelayConstraint()Z
+
+    move-result v11
+
+    if-nez v11, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-direct {p0, v10, v1, v2}, Lcom/android/server/job/controllers/TimeController;->evaluateTimingDelayConstraint(Lcom/android/server/job/controllers/JobStatus;J)Z
+
+    move-result v11
+
+    if-eqz v11, :cond_3
+
+    invoke-direct {p0, v10}, Lcom/android/server/job/controllers/TimeController;->canStopTrackingJobLocked(Lcom/android/server/job/controllers/JobStatus;)Z
+
+    move-result v11
+
+    if-eqz v11, :cond_2
+
+    invoke-interface {v9}, Ljava/util/Iterator;->remove()V
+
+    :cond_2
+    invoke-virtual {v10}, Lcom/android/server/job/controllers/JobStatus;->isReady()Z
+
+    move-result v11
+
+    if-eqz v11, :cond_5
+
+    const/4 v7, 0x1
+
+    goto :goto_1
+
+    :cond_3
+    const/high16 v11, -0x80000000
+
+    invoke-virtual {p0, v10, v11}, Lcom/android/server/job/controllers/TimeController;->wouldBeReadyWithConstraintLocked(Lcom/android/server/job/controllers/JobStatus;I)Z
+
+    move-result v11
+
+    if-nez v11, :cond_4
+
+    sget-boolean v11, Lcom/android/server/job/controllers/TimeController;->DEBUG:Z
+
+    if-eqz v11, :cond_0
+
+    const-string v11, "JobScheduler.Time"
+
+    new-instance v12, Ljava/lang/StringBuilder;
+
+    invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v13, "Skipping "
+
+    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v12, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v13, " because delay won\'t make it ready."
+
+    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
     move-result-object v12
 
-    move-object v6, v12
+    invoke-static {v11, v12}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {v10}, Lcom/android/server/job/controllers/JobStatus;->getEarliestRunTime()J
+
+    move-result-wide v11
+
+    cmp-long v13, v3, v11
+
+    if-lez v13, :cond_5
+
+    move-wide v3, v11
+
+    invoke-virtual {v10}, Lcom/android/server/job/controllers/JobStatus;->getSourceUid()I
+
+    move-result v13
+
+    move v5, v13
+
+    invoke-virtual {v10}, Lcom/android/server/job/controllers/JobStatus;->getSourcePackageName()Ljava/lang/String;
+
+    move-result-object v13
+
+    move-object v6, v13
 
     :cond_5
     :goto_1
     goto :goto_0
 
     :cond_6
+    monitor-exit v8
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
     if-eqz v7, :cond_7
 
-    iget-object v9, p0, Lcom/android/server/job/controllers/TimeController;->mStateChangedListener:Lcom/android/server/job/StateChangedListener;
+    :try_start_2
+    iget-object v8, p0, Lcom/android/server/job/controllers/TimeController;->mStateChangedListener:Lcom/android/server/job/StateChangedListener;
 
-    invoke-interface {v9}, Lcom/android/server/job/StateChangedListener;->onControllerStateChanged()V
+    invoke-interface {v8}, Lcom/android/server/job/StateChangedListener;->onControllerStateChanged()V
 
     :cond_7
     nop
 
     invoke-direct {p0, v5, v6}, Lcom/android/server/job/controllers/TimeController;->deriveWorkSource(ILjava/lang/String;)Landroid/os/WorkSource;
 
-    move-result-object v9
+    move-result-object v8
 
-    invoke-direct {p0, v3, v4, v9}, Lcom/android/server/job/controllers/TimeController;->setDelayExpiredAlarmLocked(JLandroid/os/WorkSource;)V
+    invoke-direct {p0, v3, v4, v8}, Lcom/android/server/job/controllers/TimeController;->setDelayExpiredAlarmLocked(JLandroid/os/WorkSource;)V
 
     monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     return-void
 
     :catchall_0
+    move-exception v9
+
+    :try_start_3
+    monitor-exit v8
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :try_start_4
+    throw v9
+
+    :catchall_1
     move-exception v1
 
     monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
     throw v1
 .end method
@@ -906,140 +952,178 @@
         }
     .end annotation
 
-    move-object/from16 v0, p0
+    move-object/from16 v1, p0
 
-    move-object/from16 v1, p1
+    move-object/from16 v2, p1
 
     invoke-virtual/range {p1 .. p3}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
-    move-result-wide v2
+    move-result-wide v3
 
-    const-wide v4, 0x10b00000008L
+    const-wide v5, 0x10b00000008L
 
-    invoke-virtual {v1, v4, v5}, Landroid/util/proto/ProtoOutputStream;->start(J)J
+    invoke-virtual {v2, v5, v6}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
-    move-result-wide v4
+    move-result-wide v5
 
-    sget-object v6, Lcom/android/server/job/JobSchedulerService;->sElapsedRealtimeClock:Ljava/time/Clock;
+    sget-object v0, Lcom/android/server/job/JobSchedulerService;->sElapsedRealtimeClock:Ljava/time/Clock;
 
-    invoke-virtual {v6}, Ljava/time/Clock;->millis()J
+    invoke-virtual {v0}, Ljava/time/Clock;->millis()J
 
-    move-result-wide v6
+    move-result-wide v7
 
-    const-wide v8, 0x10300000001L
+    const-wide v9, 0x10300000001L
 
-    invoke-virtual {v1, v8, v9, v6, v7}, Landroid/util/proto/ProtoOutputStream;->write(JJ)V
+    invoke-virtual {v2, v9, v10, v7, v8}, Landroid/util/proto/ProtoOutputStream;->write(JJ)V
 
-    iget-wide v8, v0, Lcom/android/server/job/controllers/TimeController;->mNextDelayExpiredElapsedMillis:J
+    iget-wide v9, v1, Lcom/android/server/job/controllers/TimeController;->mNextDelayExpiredElapsedMillis:J
 
-    sub-long/2addr v8, v6
+    sub-long/2addr v9, v7
 
-    const-wide v10, 0x10300000002L
+    const-wide v11, 0x10300000002L
 
-    invoke-virtual {v1, v10, v11, v8, v9}, Landroid/util/proto/ProtoOutputStream;->write(JJ)V
+    invoke-virtual {v2, v11, v12, v9, v10}, Landroid/util/proto/ProtoOutputStream;->write(JJ)V
 
-    iget-wide v8, v0, Lcom/android/server/job/controllers/TimeController;->mNextJobExpiredElapsedMillis:J
+    iget-wide v9, v1, Lcom/android/server/job/controllers/TimeController;->mNextJobExpiredElapsedMillis:J
 
-    sub-long/2addr v8, v6
+    sub-long/2addr v9, v7
 
-    const-wide v10, 0x10300000003L
+    const-wide v11, 0x10300000003L
 
-    invoke-virtual {v1, v10, v11, v8, v9}, Landroid/util/proto/ProtoOutputStream;->write(JJ)V
+    invoke-virtual {v2, v11, v12, v9, v10}, Landroid/util/proto/ProtoOutputStream;->write(JJ)V
 
-    iget-object v8, v0, Lcom/android/server/job/controllers/TimeController;->mTrackedJobs:Ljava/util/List;
+    iget-object v9, v1, Lcom/android/server/job/controllers/TimeController;->mTrackedJobs:Ljava/util/List;
 
-    invoke-interface {v8}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    monitor-enter v9
 
-    move-result-object v8
+    :try_start_0
+    iget-object v0, v1, Lcom/android/server/job/controllers/TimeController;->mTrackedJobs:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
 
     :goto_0
-    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v9
+    move-result v10
 
-    if-eqz v9, :cond_1
+    if-eqz v10, :cond_1
 
-    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v9
+    move-result-object v10
 
-    check-cast v9, Lcom/android/server/job/controllers/JobStatus;
+    check-cast v10, Lcom/android/server/job/controllers/JobStatus;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-object/from16 v10, p4
+    move-object/from16 v11, p4
 
-    invoke-interface {v10, v9}, Ljava/util/function/Predicate;->test(Ljava/lang/Object;)Z
+    :try_start_1
+    invoke-interface {v11, v10}, Ljava/util/function/Predicate;->test(Ljava/lang/Object;)Z
 
-    move-result v11
+    move-result v12
 
-    if-nez v11, :cond_0
+    if-nez v12, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const-wide v11, 0x20b00000004L
+    const-wide v12, 0x20b00000004L
 
-    invoke-virtual {v1, v11, v12}, Landroid/util/proto/ProtoOutputStream;->start(J)J
+    invoke-virtual {v2, v12, v13}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
-    move-result-wide v11
+    move-result-wide v12
 
-    const-wide v13, 0x10b00000001L
+    const-wide v14, 0x10b00000001L
 
-    invoke-virtual {v9, v1, v13, v14}, Lcom/android/server/job/controllers/JobStatus;->writeToShortProto(Landroid/util/proto/ProtoOutputStream;J)V
+    invoke-virtual {v10, v2, v14, v15}, Lcom/android/server/job/controllers/JobStatus;->writeToShortProto(Landroid/util/proto/ProtoOutputStream;J)V
 
-    const-wide v13, 0x10800000003L
+    nop
 
-    invoke-virtual {v9}, Lcom/android/server/job/controllers/JobStatus;->hasTimingDelayConstraint()Z
+    invoke-virtual {v10}, Lcom/android/server/job/controllers/JobStatus;->hasTimingDelayConstraint()Z
 
-    move-result v15
+    move-result v14
 
-    invoke-virtual {v1, v13, v14, v15}, Landroid/util/proto/ProtoOutputStream;->write(JZ)V
+    move-object v15, v0
 
-    const-wide v13, 0x10300000004L
+    const-wide v0, 0x10800000003L
 
-    invoke-virtual {v9}, Lcom/android/server/job/controllers/JobStatus;->getEarliestRunTime()J
+    invoke-virtual {v2, v0, v1, v14}, Landroid/util/proto/ProtoOutputStream;->write(JZ)V
 
-    move-result-wide v15
+    const-wide v0, 0x10300000004L
 
-    move-wide/from16 v17, v2
+    invoke-virtual {v10}, Lcom/android/server/job/controllers/JobStatus;->getEarliestRunTime()J
 
-    sub-long v2, v15, v6
+    move-result-wide v16
 
-    invoke-virtual {v1, v13, v14, v2, v3}, Landroid/util/proto/ProtoOutputStream;->write(JJ)V
+    move-object/from16 v18, v15
 
-    const-wide v2, 0x10800000005L
+    sub-long v14, v16, v7
 
-    invoke-virtual {v9}, Lcom/android/server/job/controllers/JobStatus;->hasDeadlineConstraint()Z
+    invoke-virtual {v2, v0, v1, v14, v15}, Landroid/util/proto/ProtoOutputStream;->write(JJ)V
 
-    move-result v13
+    const-wide v0, 0x10800000005L
 
-    invoke-virtual {v1, v2, v3, v13}, Landroid/util/proto/ProtoOutputStream;->write(JZ)V
+    invoke-virtual {v10}, Lcom/android/server/job/controllers/JobStatus;->hasDeadlineConstraint()Z
 
-    const-wide v2, 0x10300000006L
+    move-result v14
 
-    invoke-virtual {v9}, Lcom/android/server/job/controllers/JobStatus;->getLatestRunTimeElapsed()J
+    invoke-virtual {v2, v0, v1, v14}, Landroid/util/proto/ProtoOutputStream;->write(JZ)V
 
-    move-result-wide v13
+    const-wide v0, 0x10300000006L
 
-    sub-long/2addr v13, v6
+    invoke-virtual {v10}, Lcom/android/server/job/controllers/JobStatus;->getLatestRunTimeElapsed()J
 
-    invoke-virtual {v1, v2, v3, v13, v14}, Landroid/util/proto/ProtoOutputStream;->write(JJ)V
+    move-result-wide v14
 
-    invoke-virtual {v1, v11, v12}, Landroid/util/proto/ProtoOutputStream;->end(J)V
+    sub-long/2addr v14, v7
 
-    move-wide/from16 v2, v17
+    invoke-virtual {v2, v0, v1, v14, v15}, Landroid/util/proto/ProtoOutputStream;->write(JJ)V
+
+    invoke-virtual {v2, v12, v13}, Landroid/util/proto/ProtoOutputStream;->end(J)V
+
+    move-object/from16 v1, p0
+
+    move-object/from16 v0, v18
 
     goto :goto_0
 
     :cond_1
-    invoke-virtual {v1, v4, v5}, Landroid/util/proto/ProtoOutputStream;->end(J)V
+    move-object/from16 v11, p4
 
-    invoke-virtual {v1, v2, v3}, Landroid/util/proto/ProtoOutputStream;->end(J)V
+    monitor-exit v9
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    invoke-virtual {v2, v5, v6}, Landroid/util/proto/ProtoOutputStream;->end(J)V
+
+    invoke-virtual {v2, v3, v4}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 
     return-void
+
+    :catchall_0
+    move-exception v0
+
+    move-object/from16 v11, p4
+
+    :goto_1
+    :try_start_2
+    monitor-exit v9
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    throw v0
+
+    :catchall_1
+    move-exception v0
+
+    goto :goto_1
 .end method
 
 .method public dumpControllerStateLocked(Lcom/android/internal/util/IndentingPrintWriter;Ljava/util/function/Predicate;)V
-    .locals 8
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1096,91 +1180,98 @@
 
     iget-object v2, p0, Lcom/android/server/job/controllers/TimeController;->mTrackedJobs:Ljava/util/List;
 
-    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    monitor-enter v2
 
-    move-result-object v2
+    :try_start_0
+    iget-object v3, p0, Lcom/android/server/job/controllers/TimeController;->mTrackedJobs:Ljava/util/List;
 
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
 
-    check-cast v3, Lcom/android/server/job/controllers/JobStatus;
-
-    invoke-interface {p2, v3}, Ljava/util/function/Predicate;->test(Ljava/lang/Object;)Z
+    :goto_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v4
 
-    if-nez v4, :cond_0
+    if-eqz v4, :cond_3
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lcom/android/server/job/controllers/JobStatus;
+
+    invoke-interface {p2, v4}, Ljava/util/function/Predicate;->test(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const-string v4, "#"
+    const-string v5, "#"
 
-    invoke-virtual {p1, v4}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
+    invoke-virtual {p1, v5}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    invoke-virtual {v3, p1}, Lcom/android/server/job/controllers/JobStatus;->printUniqueId(Ljava/io/PrintWriter;)V
+    invoke-virtual {v4, p1}, Lcom/android/server/job/controllers/JobStatus;->printUniqueId(Ljava/io/PrintWriter;)V
 
-    const-string v4, " from "
+    const-string v5, " from "
 
-    invoke-virtual {p1, v4}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
+    invoke-virtual {p1, v5}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    invoke-virtual {v3}, Lcom/android/server/job/controllers/JobStatus;->getSourceUid()I
+    invoke-virtual {v4}, Lcom/android/server/job/controllers/JobStatus;->getSourceUid()I
 
-    move-result v4
+    move-result v5
 
-    invoke-static {p1, v4}, Landroid/os/UserHandle;->formatUid(Ljava/io/PrintWriter;I)V
+    invoke-static {p1, v5}, Landroid/os/UserHandle;->formatUid(Ljava/io/PrintWriter;I)V
 
-    const-string v4, ": Delay="
+    const-string v5, ": Delay="
 
-    invoke-virtual {p1, v4}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
+    invoke-virtual {p1, v5}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    invoke-virtual {v3}, Lcom/android/server/job/controllers/JobStatus;->hasTimingDelayConstraint()Z
+    invoke-virtual {v4}, Lcom/android/server/job/controllers/JobStatus;->hasTimingDelayConstraint()Z
 
-    move-result v4
+    move-result v5
 
-    const-string v5, "N/A"
+    if-eqz v5, :cond_1
 
-    if-eqz v4, :cond_1
+    invoke-virtual {v4}, Lcom/android/server/job/controllers/JobStatus;->getEarliestRunTime()J
 
-    invoke-virtual {v3}, Lcom/android/server/job/controllers/JobStatus;->getEarliestRunTime()J
+    move-result-wide v5
 
-    move-result-wide v6
-
-    invoke-static {v6, v7, v0, v1, p1}, Landroid/util/TimeUtils;->formatDuration(JJLjava/io/PrintWriter;)V
+    invoke-static {v5, v6, v0, v1, p1}, Landroid/util/TimeUtils;->formatDuration(JJLjava/io/PrintWriter;)V
 
     goto :goto_1
 
     :cond_1
+    const-string v5, "N/A"
+
     invoke-virtual {p1, v5}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
     :goto_1
-    const-string v4, ", Deadline="
+    const-string v5, ", Deadline="
 
-    invoke-virtual {p1, v4}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
+    invoke-virtual {p1, v5}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    invoke-virtual {v3}, Lcom/android/server/job/controllers/JobStatus;->hasDeadlineConstraint()Z
+    invoke-virtual {v4}, Lcom/android/server/job/controllers/JobStatus;->hasDeadlineConstraint()Z
 
-    move-result v4
+    move-result v5
 
-    if-eqz v4, :cond_2
+    if-eqz v5, :cond_2
 
-    invoke-virtual {v3}, Lcom/android/server/job/controllers/JobStatus;->getLatestRunTimeElapsed()J
+    invoke-virtual {v4}, Lcom/android/server/job/controllers/JobStatus;->getLatestRunTimeElapsed()J
 
-    move-result-wide v4
+    move-result-wide v5
 
-    invoke-static {v4, v5, v0, v1, p1}, Landroid/util/TimeUtils;->formatDuration(JJLjava/io/PrintWriter;)V
+    invoke-static {v5, v6, v0, v1, p1}, Landroid/util/TimeUtils;->formatDuration(JJLjava/io/PrintWriter;)V
 
     goto :goto_2
 
     :cond_2
+    const-string v5, "N/A"
+
     invoke-virtual {p1, v5}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
     :goto_2
@@ -1189,7 +1280,18 @@
     goto :goto_0
 
     :cond_3
+    monitor-exit v2
+
     return-void
+
+    :catchall_0
+    move-exception v3
+
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v3
 .end method
 
 .method public evaluateStateLocked(Lcom/android/server/job/controllers/JobStatus;)V
@@ -1363,7 +1465,7 @@
 .end method
 
 .method public maybeStartTrackingJobLocked(Lcom/android/server/job/controllers/JobStatus;Lcom/android/server/job/controllers/JobStatus;)V
-    .locals 9
+    .locals 10
 
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->hasTimingDelayConstraint()Z
 
@@ -1430,38 +1532,45 @@
 
     iget-object v3, p0, Lcom/android/server/job/controllers/TimeController;->mTrackedJobs:Ljava/util/List;
 
-    invoke-interface {v3}, Ljava/util/List;->size()I
+    monitor-enter v3
 
-    move-result v4
+    :try_start_0
+    iget-object v4, p0, Lcom/android/server/job/controllers/TimeController;->mTrackedJobs:Ljava/util/List;
 
-    invoke-interface {v3, v4}, Ljava/util/List;->listIterator(I)Ljava/util/ListIterator;
+    iget-object v5, p0, Lcom/android/server/job/controllers/TimeController;->mTrackedJobs:Ljava/util/List;
 
-    move-result-object v3
+    invoke-interface {v5}, Ljava/util/List;->size()I
 
-    :goto_0
-    invoke-interface {v3}, Ljava/util/ListIterator;->hasPrevious()Z
+    move-result v5
 
-    move-result v4
-
-    if-eqz v4, :cond_4
-
-    invoke-interface {v3}, Ljava/util/ListIterator;->previous()Ljava/lang/Object;
+    invoke-interface {v4, v5}, Ljava/util/List;->listIterator(I)Ljava/util/ListIterator;
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/server/job/controllers/JobStatus;
+    :goto_0
+    invoke-interface {v4}, Ljava/util/ListIterator;->hasPrevious()Z
 
-    invoke-virtual {v4}, Lcom/android/server/job/controllers/JobStatus;->getLatestRunTimeElapsed()J
+    move-result v5
 
-    move-result-wide v5
+    if-eqz v5, :cond_4
+
+    invoke-interface {v4}, Ljava/util/ListIterator;->previous()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lcom/android/server/job/controllers/JobStatus;
+
+    invoke-virtual {v5}, Lcom/android/server/job/controllers/JobStatus;->getLatestRunTimeElapsed()J
+
+    move-result-wide v6
 
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getLatestRunTimeElapsed()J
 
-    move-result-wide v7
+    move-result-wide v8
 
-    cmp-long v5, v5, v7
+    cmp-long v6, v6, v8
 
-    if-gez v5, :cond_3
+    if-gez v6, :cond_3
 
     const/4 v2, 0x1
 
@@ -1474,74 +1583,88 @@
     :goto_1
     if-eqz v2, :cond_5
 
-    invoke-interface {v3}, Ljava/util/ListIterator;->next()Ljava/lang/Object;
+    invoke-interface {v4}, Ljava/util/ListIterator;->next()Ljava/lang/Object;
 
     :cond_5
-    invoke-interface {v3, p1}, Ljava/util/ListIterator;->add(Ljava/lang/Object;)V
+    invoke-interface {v4, p1}, Ljava/util/ListIterator;->add(Ljava/lang/Object;)V
 
-    const/16 v4, 0x20
+    monitor-exit v3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {p1, v4}, Lcom/android/server/job/controllers/JobStatus;->setTrackingController(I)V
+    const/16 v3, 0x20
+
+    invoke-virtual {p1, v3}, Lcom/android/server/job/controllers/JobStatus;->setTrackingController(I)V
 
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getSourceUid()I
 
-    move-result v4
+    move-result v3
 
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getSourcePackageName()Ljava/lang/String;
 
-    move-result-object v5
-
-    invoke-direct {p0, v4, v5}, Lcom/android/server/job/controllers/TimeController;->deriveWorkSource(ILjava/lang/String;)Landroid/os/WorkSource;
-
     move-result-object v4
+
+    invoke-direct {p0, v3, v4}, Lcom/android/server/job/controllers/TimeController;->deriveWorkSource(ILjava/lang/String;)Landroid/os/WorkSource;
+
+    move-result-object v3
 
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->hasTimingDelayConstraint()Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_6
+    if-eqz v4, :cond_6
 
-    const/high16 v5, -0x80000000
+    const/high16 v4, -0x80000000
 
-    invoke-virtual {p0, p1, v5}, Lcom/android/server/job/controllers/TimeController;->wouldBeReadyWithConstraintLocked(Lcom/android/server/job/controllers/JobStatus;I)Z
+    invoke-virtual {p0, p1, v4}, Lcom/android/server/job/controllers/TimeController;->wouldBeReadyWithConstraintLocked(Lcom/android/server/job/controllers/JobStatus;I)Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_6
+    if-eqz v4, :cond_6
 
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getEarliestRunTime()J
 
-    move-result-wide v5
+    move-result-wide v4
 
-    invoke-direct {p0, v5, v6, v4}, Lcom/android/server/job/controllers/TimeController;->maybeUpdateDelayAlarmLocked(JLandroid/os/WorkSource;)V
+    invoke-direct {p0, v4, v5, v3}, Lcom/android/server/job/controllers/TimeController;->maybeUpdateDelayAlarmLocked(JLandroid/os/WorkSource;)V
 
     :cond_6
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->hasDeadlineConstraint()Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_7
+    if-eqz v4, :cond_7
 
-    const/high16 v5, 0x40000000    # 2.0f
+    const/high16 v4, 0x40000000    # 2.0f
 
-    invoke-virtual {p0, p1, v5}, Lcom/android/server/job/controllers/TimeController;->wouldBeReadyWithConstraintLocked(Lcom/android/server/job/controllers/JobStatus;I)Z
+    invoke-virtual {p0, p1, v4}, Lcom/android/server/job/controllers/TimeController;->wouldBeReadyWithConstraintLocked(Lcom/android/server/job/controllers/JobStatus;I)Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_7
+    if-eqz v4, :cond_7
 
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getLatestRunTimeElapsed()J
 
-    move-result-wide v5
+    move-result-wide v4
 
-    invoke-direct {p0, v5, v6, v4}, Lcom/android/server/job/controllers/TimeController;->maybeUpdateDeadlineAlarmLocked(JLandroid/os/WorkSource;)V
+    invoke-direct {p0, v4, v5, v3}, Lcom/android/server/job/controllers/TimeController;->maybeUpdateDeadlineAlarmLocked(JLandroid/os/WorkSource;)V
 
     :cond_7
     return-void
+
+    :catchall_0
+    move-exception v4
+
+    :try_start_1
+    monitor-exit v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v4
 .end method
 
 .method public maybeStopTrackingJobLocked(Lcom/android/server/job/controllers/JobStatus;Lcom/android/server/job/controllers/JobStatus;Z)V
-    .locals 1
+    .locals 2
 
     const/16 v0, 0x20
 
@@ -1549,21 +1672,41 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     iget-object v0, p0, Lcom/android/server/job/controllers/TimeController;->mTrackedJobs:Ljava/util/List;
 
-    invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+    monitor-enter v0
 
-    move-result v0
+    :try_start_0
+    iget-object v1, p0, Lcom/android/server/job/controllers/TimeController;->mTrackedJobs:Ljava/util/List;
 
-    if-eqz v0, :cond_0
+    invoke-interface {v1, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
 
     invoke-virtual {p0}, Lcom/android/server/job/controllers/TimeController;->checkExpiredDelaysAndResetAlarm()V
 
     invoke-virtual {p0}, Lcom/android/server/job/controllers/TimeController;->checkExpiredDeadlinesAndResetAlarm()V
 
     :cond_0
+    monitor-exit v0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+
+    :cond_1
+    :goto_0
     return-void
 .end method
 

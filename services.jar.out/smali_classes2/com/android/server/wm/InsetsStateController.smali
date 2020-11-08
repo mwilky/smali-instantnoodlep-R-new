@@ -525,7 +525,7 @@
 
     if-nez v0, :cond_0
 
-    goto :goto_0
+    goto :goto_2
 
     :cond_0
     instance-of v2, p1, Lcom/android/server/wm/WindowState;
@@ -540,23 +540,55 @@
 
     move-result v3
 
-    if-nez v3, :cond_1
+    if-nez v3, :cond_2
 
     iget-boolean v3, v2, Lcom/android/server/wm/WindowState;->mBehindIme:Z
 
-    if-nez v3, :cond_2
+    if-eqz v3, :cond_2
+
+    invoke-static {}, Lcom/android/server/wm/OpQuickReplyInjector;->isQuickReplyRunning()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    iget-object v3, v2, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
+
+    iget-object v3, v3, Landroid/view/WindowManager$LayoutParams;->packageName:Ljava/lang/String;
+
+    invoke-static {v3}, Lcom/android/server/wm/OpQuickReplyInjector;->isQuickReplyIM(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    iget-object v3, v0, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
+
+    iget-object v3, v3, Landroid/view/WindowManager$LayoutParams;->packageName:Ljava/lang/String;
+
+    invoke-static {v3}, Lcom/android/server/wm/OpQuickReplyInjector;->isQuickReplyIME(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    goto :goto_0
 
     :cond_1
-    const/4 v1, 0x1
+    goto :goto_1
 
     :cond_2
+    :goto_0
+    const/4 v1, 0x1
+
+    :goto_1
     return v1
 
     :cond_3
     return v1
 
     :cond_4
-    :goto_0
+    :goto_2
     return v1
 .end method
 
@@ -1728,6 +1760,10 @@
     if-eqz v0, :cond_3
 
     invoke-virtual {p0}, Lcom/android/server/wm/InsetsStateController;->notifyInsetsChanged()V
+
+    iget-object v1, p0, Lcom/android/server/wm/InsetsStateController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
+
+    invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->updateSystemGestureExclusion()Z
 
     iget-object v1, p0, Lcom/android/server/wm/InsetsStateController;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 

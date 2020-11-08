@@ -151,35 +151,33 @@
 
     const-string v3, "com.google.android.apps.messaging"
 
-    const-string v4, "com.tencent.mobileqq"
+    const-string v4, "com.sina.weibo"
 
-    const-string v5, "com.sina.weibo"
+    const-string v5, "com.tmall.wireless"
 
-    const-string v6, "com.tmall.wireless"
+    const-string v6, "com.jingdong.app.mall"
 
-    const-string v7, "com.jingdong.app.mall"
+    const-string v7, "com.xiaomi.shop"
 
-    const-string v8, "com.xiaomi.shop"
+    const-string v8, "com.mi.global.shop"
 
-    const-string v9, "com.mi.global.shop"
+    const-string v9, "com.xiaomi.youpin"
 
-    const-string v10, "com.xiaomi.youpin"
+    const-string v10, "com.netease.yanxuan"
 
-    const-string v11, "com.netease.yanxuan"
+    const-string v11, "com.UCMobile"
 
-    const-string v12, "com.UCMobile"
+    const-string v12, "com.netease.cloudmusic"
 
-    const-string v13, "com.netease.cloudmusic"
+    const-string v13, "com.shhxzq.ztb"
 
-    const-string v14, "com.shhxzq.ztb"
+    const-string v14, "com.cubic.autohome"
 
-    const-string v15, "com.cubic.autohome"
+    const-string v15, "com.taobao.taobao"
 
-    const-string v16, "com.taobao.taobao"
+    const-string v16, "com.tencent.qqlive"
 
-    const-string v17, "com.tencent.qqlive"
-
-    filled-new-array/range {v3 .. v17}, [Ljava/lang/String;
+    filled-new-array/range {v3 .. v16}, [Ljava/lang/String;
 
     move-result-object v3
 

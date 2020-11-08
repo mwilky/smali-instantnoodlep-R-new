@@ -3953,7 +3953,7 @@
 .end method
 
 .method private grantSignaturePermission(Ljava/lang/String;Lcom/android/server/pm/parsing/pkg/AndroidPackage;Lcom/android/server/pm/PackageSetting;Lcom/android/server/pm/permission/BasePermission;Lcom/android/server/pm/permission/PermissionsState;)Z
-    .locals 20
+    .locals 22
 
     move-object/from16 v0, p0
 
@@ -4080,7 +4080,7 @@
     goto :goto_2
 
     :cond_2
-    move/from16 v19, v8
+    move/from16 v20, v8
 
     const/4 v6, 0x0
 
@@ -4192,7 +4192,7 @@
 
     invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-object/from16 v17, v6
+    move-object/from16 v18, v6
 
     const-string v6, "Privileged permission "
 
@@ -4214,7 +4214,7 @@
 
     invoke-virtual {v15, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move/from16 v18, v7
+    move/from16 v19, v7
 
     invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getCodePath()Ljava/lang/String;
 
@@ -4253,7 +4253,7 @@
 
     invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
 
-    move/from16 v19, v8
+    move/from16 v20, v8
 
     invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
@@ -4286,28 +4286,28 @@
     goto :goto_6
 
     :cond_a
-    move/from16 v19, v8
+    move/from16 v20, v8
 
     const/4 v6, 0x0
 
     goto :goto_6
 
     :cond_b
-    move-object/from16 v17, v6
+    move-object/from16 v18, v6
 
     const/4 v6, 0x0
 
     return v6
 
     :cond_c
-    move/from16 v19, v8
+    move/from16 v20, v8
 
     const/4 v6, 0x0
 
     goto :goto_6
 
     :cond_d
-    move/from16 v19, v8
+    move/from16 v20, v8
 
     const/4 v6, 0x0
 
@@ -4319,12 +4319,12 @@
     return v6
 
     :cond_e
-    move/from16 v19, v8
+    move/from16 v20, v8
 
     goto :goto_7
 
     :cond_f
-    move/from16 v19, v8
+    move/from16 v20, v8
 
     :cond_10
     :goto_7
@@ -4402,7 +4402,7 @@
 
     move-result-object v15
 
-    move-object/from16 v18, v6
+    move-object/from16 v19, v6
 
     const/4 v6, 0x4
 
@@ -4420,17 +4420,17 @@
     goto :goto_9
 
     :cond_12
-    move-object/from16 v18, v6
+    move-object/from16 v19, v6
 
     goto :goto_8
 
     :cond_13
-    move-object/from16 v18, v6
+    move-object/from16 v19, v6
 
     goto :goto_8
 
     :cond_14
-    move-object/from16 v18, v6
+    move-object/from16 v19, v6
 
     :goto_8
     const/4 v6, 0x1
@@ -4448,9 +4448,15 @@
 
     move-result v14
 
-    if-eqz v14, :cond_15
+    const-string v15, " to get permission "
 
-    if-nez v6, :cond_15
+    move-object/from16 v18, v7
+
+    const-string v7, "Allowing package "
+
+    if-eqz v14, :cond_17
+
+    if-nez v6, :cond_16
 
     invoke-static {v2, v1}, Lcom/android/server/pm/OpPackageManagerHelperInjector;->allowOrdinaryAppGrantingSigPerms(Lcom/android/server/pm/parsing/pkg/AndroidPackage;Ljava/lang/String;)Z
 
@@ -4462,17 +4468,15 @@
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v15, "Allowing package "
+    invoke-virtual {v14, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move/from16 v21, v6
 
     invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
-    move-result-object v15
+    move-result-object v6
 
-    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v15, " to get permission "
+    invoke-virtual {v14, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4480,674 +4484,734 @@
 
     invoke-virtual {v14}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v14
+    move-result-object v6
 
-    invoke-static {v12, v14}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v12, v6}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    const/4 v6, 0x1
-
-    :cond_15
-    invoke-static {v2, v1, v6}, Lcom/android/server/pm/permission/SensitivePermGrantPolicyManager;->grantSensitivePermissionPolicy(Lcom/android/server/pm/parsing/pkg/AndroidPackage;Ljava/lang/String;Z)Z
-
-    move-result v14
-
-    if-eqz v14, :cond_16
-
-    const/4 v6, 0x1
-
-    :cond_16
-    if-nez v6, :cond_23
-
-    if-nez v5, :cond_17
-
-    if-eqz v3, :cond_23
-
-    :cond_17
-    invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->isSystem()Z
-
-    move-result v14
-
-    if-eqz v14, :cond_23
-
-    invoke-virtual/range {p3 .. p3}, Lcom/android/server/pm/PackageSetting;->getPkgState()Lcom/android/server/pm/pkg/PackageStateUnserialized;
-
-    move-result-object v14
-
-    invoke-virtual {v14}, Lcom/android/server/pm/pkg/PackageStateUnserialized;->isUpdatedSystemApp()Z
-
-    move-result v14
-
-    if-eqz v14, :cond_1f
-
-    iget-object v14, v0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
-
-    invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
-
-    move-result-object v15
-
-    invoke-virtual {v14, v15}, Landroid/content/pm/PackageManagerInternal;->getDisabledSystemPackage(Ljava/lang/String;)Lcom/android/server/pm/PackageSetting;
-
-    move-result-object v14
-
-    if-nez v14, :cond_18
-
-    const/4 v15, 0x0
-
-    goto :goto_a
-
-    :cond_18
-    iget-object v15, v14, Lcom/android/server/pm/PackageSetting;->pkg:Lcom/android/server/pm/parsing/pkg/AndroidPackage;
-
-    :goto_a
-    if-eqz v14, :cond_1b
-
-    invoke-virtual {v14}, Lcom/android/server/pm/PackageSetting;->getPermissionsState()Lcom/android/server/pm/permission/PermissionsState;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Lcom/android/server/pm/permission/PermissionsState;->hasInstallPermission(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1b
-
-    if-eqz v5, :cond_19
-
-    invoke-virtual {v14}, Lcom/android/server/pm/PackageSetting;->isPrivileged()Z
-
-    move-result v2
-
-    if-nez v2, :cond_1a
-
-    :cond_19
-    if-eqz v3, :cond_1e
-
-    invoke-virtual {v14}, Lcom/android/server/pm/PackageSetting;->isOem()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1e
-
-    invoke-static {v14, v1}, Lcom/android/server/pm/permission/PermissionManagerService;->canGrantOemPermission(Lcom/android/server/pm/PackageSetting;Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1e
-
-    :cond_1a
     const/4 v6, 0x1
 
     goto :goto_b
 
-    :cond_1b
-    if-eqz v14, :cond_1e
+    :cond_15
+    move/from16 v21, v6
 
-    if-eqz v15, :cond_1e
+    goto :goto_a
 
-    invoke-direct {v0, v15, v1}, Lcom/android/server/pm/permission/PermissionManagerService;->isPackageRequestingPermission(Lcom/android/server/pm/parsing/pkg/AndroidPackage;Ljava/lang/String;)Z
+    :cond_16
+    move/from16 v21, v6
 
-    move-result v2
+    goto :goto_a
 
-    if-eqz v2, :cond_1e
+    :cond_17
+    move/from16 v21, v6
 
-    if-eqz v5, :cond_1c
+    :goto_a
+    move/from16 v6, v21
 
-    invoke-virtual {v14}, Lcom/android/server/pm/PackageSetting;->isPrivileged()Z
-
-    move-result v2
-
-    if-nez v2, :cond_1d
-
-    :cond_1c
-    if-eqz v3, :cond_1e
-
-    invoke-virtual {v14}, Lcom/android/server/pm/PackageSetting;->isOem()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1e
-
-    invoke-static {v14, v1}, Lcom/android/server/pm/permission/PermissionManagerService;->canGrantOemPermission(Lcom/android/server/pm/PackageSetting;Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1e
-
-    :cond_1d
-    const/4 v6, 0x1
-
-    :cond_1e
     :goto_b
-    goto :goto_d
+    const/4 v14, 0x1
 
-    :cond_1f
-    iget-object v2, v0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
+    new-array v8, v14, [I
+
+    const/16 v14, 0xb7
+
+    const/16 v17, 0x0
+
+    aput v14, v8, v17
+
+    invoke-static {v8}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_18
+
+    if-nez v6, :cond_18
+
+    iget-object v8, v0, Lcom/android/server/pm/permission/PermissionManagerService;->mContext:Landroid/content/Context;
+
+    invoke-static {v8, v2, v1}, Lcom/android/server/pm/OpPackageManagerHelperInjector;->allowCarrierAppGrantingSigPerms(Landroid/content/Context;Lcom/android/server/pm/parsing/pkg/AndroidPackage;Ljava/lang/String;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_18
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v8, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
-    move-result-object v14
+    move-result-object v7
 
-    invoke-virtual {v2, v14}, Landroid/content/pm/PackageManagerInternal;->getPackageSetting(Ljava/lang/String;)Lcom/android/server/pm/PackageSetting;
+    invoke-virtual {v8, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    invoke-virtual {v8, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v5, :cond_20
+    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->isPrivileged()Z
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result v14
+    move-result-object v7
 
-    if-nez v14, :cond_21
+    invoke-static {v12, v7}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_20
-    if-eqz v3, :cond_22
+    const/4 v6, 0x1
 
-    invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->isOem()Z
+    :cond_18
+    if-nez v6, :cond_25
 
-    move-result v14
+    if-nez v5, :cond_19
 
-    if-eqz v14, :cond_22
+    if-eqz v3, :cond_25
 
-    invoke-static {v2, v1}, Lcom/android/server/pm/permission/PermissionManagerService;->canGrantOemPermission(Lcom/android/server/pm/PackageSetting;Ljava/lang/String;)Z
+    :cond_19
+    invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->isSystem()Z
 
-    move-result v14
+    move-result v7
 
-    if-eqz v14, :cond_22
+    if-eqz v7, :cond_25
 
-    :cond_21
-    const/4 v14, 0x1
+    invoke-virtual/range {p3 .. p3}, Lcom/android/server/pm/PackageSetting;->getPkgState()Lcom/android/server/pm/pkg/PackageStateUnserialized;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Lcom/android/server/pm/pkg/PackageStateUnserialized;->isUpdatedSystemApp()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_21
+
+    iget-object v7, v0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
+
+    invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v7, v8}, Landroid/content/pm/PackageManagerInternal;->getDisabledSystemPackage(Ljava/lang/String;)Lcom/android/server/pm/PackageSetting;
+
+    move-result-object v7
+
+    if-nez v7, :cond_1a
+
+    const/4 v8, 0x0
 
     goto :goto_c
 
-    :cond_22
-    const/4 v14, 0x0
+    :cond_1a
+    iget-object v8, v7, Lcom/android/server/pm/PackageSetting;->pkg:Lcom/android/server/pm/parsing/pkg/AndroidPackage;
 
     :goto_c
-    move v6, v14
+    if-eqz v7, :cond_1d
 
-    :goto_d
-    if-eqz v6, :cond_23
-
-    if-eqz v5, :cond_23
-
-    if-nez v4, :cond_23
-
-    invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->isVendor()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_23
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v14, "Permission "
-
-    invoke-virtual {v2, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v14, " cannot be granted to privileged vendor apk "
-
-    invoke-virtual {v2, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
+    invoke-virtual {v7}, Lcom/android/server/pm/PackageSetting;->getPermissionsState()Lcom/android/server/pm/permission/PermissionsState;
 
     move-result-object v14
 
-    invoke-virtual {v2, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v14, v1}, Lcom/android/server/pm/permission/PermissionsState;->hasInstallPermission(Ljava/lang/String;)Z
 
-    const-string v14, " because it isn\'t a \'vendorPrivileged\' permission."
+    move-result v14
 
-    invoke-virtual {v2, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v14, :cond_1d
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-eqz v5, :cond_1b
 
-    move-result-object v2
+    invoke-virtual {v7}, Lcom/android/server/pm/PackageSetting;->isPrivileged()Z
 
-    invoke-static {v12, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+    move-result v14
+
+    if-nez v14, :cond_1c
+
+    :cond_1b
+    if-eqz v3, :cond_20
+
+    invoke-virtual {v7}, Lcom/android/server/pm/PackageSetting;->isOem()Z
+
+    move-result v14
+
+    if-eqz v14, :cond_20
+
+    invoke-static {v7, v1}, Lcom/android/server/pm/permission/PermissionManagerService;->canGrantOemPermission(Lcom/android/server/pm/PackageSetting;Ljava/lang/String;)Z
+
+    move-result v14
+
+    if-eqz v14, :cond_20
+
+    :cond_1c
+    const/4 v6, 0x1
+
+    goto :goto_d
+
+    :cond_1d
+    if-eqz v7, :cond_20
+
+    if-eqz v8, :cond_20
+
+    invoke-direct {v0, v8, v1}, Lcom/android/server/pm/permission/PermissionManagerService;->isPackageRequestingPermission(Lcom/android/server/pm/parsing/pkg/AndroidPackage;Ljava/lang/String;)Z
+
+    move-result v14
+
+    if-eqz v14, :cond_20
+
+    if-eqz v5, :cond_1e
+
+    invoke-virtual {v7}, Lcom/android/server/pm/PackageSetting;->isPrivileged()Z
+
+    move-result v14
+
+    if-nez v14, :cond_1f
+
+    :cond_1e
+    if-eqz v3, :cond_20
+
+    invoke-virtual {v7}, Lcom/android/server/pm/PackageSetting;->isOem()Z
+
+    move-result v14
+
+    if-eqz v14, :cond_20
+
+    invoke-static {v7, v1}, Lcom/android/server/pm/permission/PermissionManagerService;->canGrantOemPermission(Lcom/android/server/pm/PackageSetting;Ljava/lang/String;)Z
+
+    move-result v14
+
+    if-eqz v14, :cond_20
+
+    :cond_1f
+    const/4 v6, 0x1
+
+    :cond_20
+    :goto_d
+    goto :goto_f
+
+    :cond_21
+    iget-object v7, v0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
+
+    invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v7, v8}, Landroid/content/pm/PackageManagerInternal;->getPackageSetting(Ljava/lang/String;)Lcom/android/server/pm/PackageSetting;
+
+    move-result-object v7
+
+    if-eqz v5, :cond_22
+
+    invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->isPrivileged()Z
+
+    move-result v8
+
+    if-nez v8, :cond_23
+
+    :cond_22
+    if-eqz v3, :cond_24
+
+    invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->isOem()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_24
+
+    invoke-static {v7, v1}, Lcom/android/server/pm/permission/PermissionManagerService;->canGrantOemPermission(Lcom/android/server/pm/PackageSetting;Ljava/lang/String;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_24
+
+    :cond_23
+    const/4 v8, 0x1
+
+    goto :goto_e
+
+    :cond_24
+    const/4 v8, 0x0
+
+    :goto_e
+    move v6, v8
+
+    :goto_f
+    if-eqz v6, :cond_25
+
+    if-eqz v5, :cond_25
+
+    if-nez v4, :cond_25
+
+    invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->isVendor()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_25
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "Permission "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v8, " cannot be granted to privileged vendor apk "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v8, " because it isn\'t a \'vendorPrivileged\' permission."
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v12, v7}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v6, 0x0
 
-    :cond_23
-    if-nez v6, :cond_33
+    :cond_25
+    if-nez v6, :cond_35
 
-    if-nez v6, :cond_24
+    if-nez v6, :cond_26
 
     invoke-virtual/range {p4 .. p4}, Lcom/android/server/pm/permission/BasePermission;->isPre23()Z
 
-    move-result v2
+    move-result v7
 
-    if-eqz v2, :cond_24
+    if-eqz v7, :cond_26
 
     invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getTargetSdkVersion()I
 
-    move-result v2
+    move-result v7
 
-    const/16 v12, 0x17
+    const/16 v8, 0x17
 
-    if-ge v2, v12, :cond_24
+    if-ge v7, v8, :cond_26
 
     const/4 v6, 0x1
 
-    :cond_24
-    if-nez v6, :cond_25
+    :cond_26
+    if-nez v6, :cond_27
 
     invoke-virtual/range {p4 .. p4}, Lcom/android/server/pm/permission/BasePermission;->isInstaller()Z
 
-    move-result v2
+    move-result v7
 
-    if-eqz v2, :cond_25
+    if-eqz v7, :cond_27
 
-    iget-object v2, v0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
+    iget-object v7, v0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
 
-    const/4 v12, 0x2
+    const/4 v8, 0x2
 
-    const/4 v14, 0x0
+    const/4 v12, 0x0
 
-    invoke-virtual {v2, v12, v14}, Landroid/content/pm/PackageManagerInternal;->getKnownPackageNames(II)[Ljava/lang/String;
+    invoke-virtual {v7, v8, v12}, Landroid/content/pm/PackageManagerInternal;->getKnownPackageNames(II)[Ljava/lang/String;
 
-    move-result-object v2
-
-    invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
-
-    move-result-object v12
-
-    invoke-static {v2, v12}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_26
-
-    :cond_25
-    iget-object v2, v0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
-
-    const/4 v12, 0x6
-
-    const/4 v14, 0x0
-
-    invoke-virtual {v2, v12, v14}, Landroid/content/pm/PackageManagerInternal;->getKnownPackageNames(II)[Ljava/lang/String;
-
-    move-result-object v2
+    move-result-object v7
 
     invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
-    move-result-object v12
+    move-result-object v8
 
-    invoke-static {v2, v12}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v7, v8}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v7
 
-    if-eqz v2, :cond_27
-
-    :cond_26
-    const/4 v6, 0x1
+    if-nez v7, :cond_28
 
     :cond_27
-    if-nez v6, :cond_28
+    iget-object v7, v0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
 
-    invoke-virtual/range {p4 .. p4}, Lcom/android/server/pm/permission/BasePermission;->isVerifier()Z
+    const/4 v8, 0x6
 
-    move-result v2
+    const/4 v12, 0x0
 
-    if-eqz v2, :cond_28
+    invoke-virtual {v7, v8, v12}, Landroid/content/pm/PackageManagerInternal;->getKnownPackageNames(II)[Ljava/lang/String;
 
-    iget-object v2, v0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
-
-    const/4 v12, 0x3
-
-    const/4 v14, 0x0
-
-    invoke-virtual {v2, v12, v14}, Landroid/content/pm/PackageManagerInternal;->getKnownPackageNames(II)[Ljava/lang/String;
-
-    move-result-object v2
+    move-result-object v7
 
     invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
-    move-result-object v12
+    move-result-object v8
 
-    invoke-static {v2, v12}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v7, v8}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v7
 
-    if-eqz v2, :cond_28
-
-    const/4 v6, 0x1
+    if-eqz v7, :cond_29
 
     :cond_28
-    if-nez v6, :cond_29
-
-    invoke-virtual/range {p4 .. p4}, Lcom/android/server/pm/permission/BasePermission;->isPreInstalled()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_29
-
-    invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->isSystem()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_29
-
     const/4 v6, 0x1
 
     :cond_29
     if-nez v6, :cond_2a
 
-    invoke-virtual/range {p4 .. p4}, Lcom/android/server/pm/permission/BasePermission;->isDevelopment()Z
+    invoke-virtual/range {p4 .. p4}, Lcom/android/server/pm/permission/BasePermission;->isVerifier()Z
 
-    move-result v2
+    move-result v7
 
-    if-eqz v2, :cond_2a
+    if-eqz v7, :cond_2a
 
-    move-object/from16 v2, p5
+    iget-object v7, v0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
 
-    invoke-virtual {v2, v1}, Lcom/android/server/pm/permission/PermissionsState;->hasInstallPermission(Ljava/lang/String;)Z
+    const/4 v8, 0x3
 
-    move-result v6
+    const/4 v12, 0x0
 
-    goto :goto_e
+    invoke-virtual {v7, v8, v12}, Landroid/content/pm/PackageManagerInternal;->getKnownPackageNames(II)[Ljava/lang/String;
 
-    :cond_2a
-    move-object/from16 v2, p5
-
-    :goto_e
-    if-nez v6, :cond_2b
-
-    invoke-virtual/range {p4 .. p4}, Lcom/android/server/pm/permission/BasePermission;->isSetup()Z
-
-    move-result v12
-
-    if-eqz v12, :cond_2b
-
-    iget-object v12, v0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
-
-    const/4 v14, 0x1
-
-    const/4 v15, 0x0
-
-    invoke-virtual {v12, v14, v15}, Landroid/content/pm/PackageManagerInternal;->getKnownPackageNames(II)[Ljava/lang/String;
-
-    move-result-object v12
+    move-result-object v7
 
     invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
-    move-result-object v14
+    move-result-object v8
 
-    invoke-static {v12, v14}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v7, v8}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v12
+    move-result v7
 
-    if-eqz v12, :cond_2b
+    if-eqz v7, :cond_2a
+
+    const/4 v6, 0x1
+
+    :cond_2a
+    if-nez v6, :cond_2b
+
+    invoke-virtual/range {p4 .. p4}, Lcom/android/server/pm/permission/BasePermission;->isPreInstalled()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_2b
+
+    invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->isSystem()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_2b
 
     const/4 v6, 0x1
 
     :cond_2b
     if-nez v6, :cond_2c
 
-    invoke-virtual/range {p4 .. p4}, Lcom/android/server/pm/permission/BasePermission;->isSystemTextClassifier()Z
+    invoke-virtual/range {p4 .. p4}, Lcom/android/server/pm/permission/BasePermission;->isDevelopment()Z
 
-    move-result v12
+    move-result v7
 
-    if-eqz v12, :cond_2c
+    if-eqz v7, :cond_2c
 
-    iget-object v12, v0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
+    move-object/from16 v7, p5
 
-    const/4 v14, 0x5
+    invoke-virtual {v7, v1}, Lcom/android/server/pm/permission/PermissionsState;->hasInstallPermission(Ljava/lang/String;)Z
 
-    const/4 v15, 0x0
+    move-result v6
 
-    invoke-virtual {v12, v14, v15}, Landroid/content/pm/PackageManagerInternal;->getKnownPackageNames(II)[Ljava/lang/String;
-
-    move-result-object v12
-
-    invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
-
-    move-result-object v14
-
-    invoke-static {v12, v14}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v12
-
-    if-eqz v12, :cond_2c
-
-    const/4 v6, 0x1
+    goto :goto_10
 
     :cond_2c
+    move-object/from16 v7, p5
+
+    :goto_10
     if-nez v6, :cond_2d
 
-    invoke-virtual/range {p4 .. p4}, Lcom/android/server/pm/permission/BasePermission;->isConfigurator()Z
+    invoke-virtual/range {p4 .. p4}, Lcom/android/server/pm/permission/BasePermission;->isSetup()Z
 
-    move-result v12
+    move-result v8
 
-    if-eqz v12, :cond_2d
+    if-eqz v8, :cond_2d
 
-    iget-object v12, v0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
+    iget-object v8, v0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
 
-    const/16 v14, 0x9
+    const/4 v12, 0x1
 
-    const/4 v15, 0x0
+    const/4 v14, 0x0
 
-    invoke-virtual {v12, v14, v15}, Landroid/content/pm/PackageManagerInternal;->getKnownPackageNames(II)[Ljava/lang/String;
+    invoke-virtual {v8, v12, v14}, Landroid/content/pm/PackageManagerInternal;->getKnownPackageNames(II)[Ljava/lang/String;
 
-    move-result-object v12
+    move-result-object v8
 
     invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
-    move-result-object v14
+    move-result-object v12
 
-    invoke-static {v12, v14}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v8, v12}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v12
+    move-result v8
 
-    if-eqz v12, :cond_2d
+    if-eqz v8, :cond_2d
 
     const/4 v6, 0x1
 
     :cond_2d
     if-nez v6, :cond_2e
 
-    invoke-virtual/range {p4 .. p4}, Lcom/android/server/pm/permission/BasePermission;->isWellbeing()Z
+    invoke-virtual/range {p4 .. p4}, Lcom/android/server/pm/permission/BasePermission;->isSystemTextClassifier()Z
 
-    move-result v12
+    move-result v8
 
-    if-eqz v12, :cond_2e
+    if-eqz v8, :cond_2e
 
-    iget-object v12, v0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
+    iget-object v8, v0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
 
-    const/4 v14, 0x7
+    const/4 v12, 0x5
 
-    const/4 v15, 0x0
+    const/4 v14, 0x0
 
-    invoke-virtual {v12, v14, v15}, Landroid/content/pm/PackageManagerInternal;->getKnownPackageNames(II)[Ljava/lang/String;
+    invoke-virtual {v8, v12, v14}, Landroid/content/pm/PackageManagerInternal;->getKnownPackageNames(II)[Ljava/lang/String;
 
-    move-result-object v12
+    move-result-object v8
 
     invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
-    move-result-object v14
+    move-result-object v12
 
-    invoke-static {v12, v14}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v8, v12}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v12
+    move-result v8
 
-    if-eqz v12, :cond_2e
+    if-eqz v8, :cond_2e
 
     const/4 v6, 0x1
 
     :cond_2e
     if-nez v6, :cond_2f
 
-    invoke-virtual/range {p4 .. p4}, Lcom/android/server/pm/permission/BasePermission;->isDocumenter()Z
+    invoke-virtual/range {p4 .. p4}, Lcom/android/server/pm/permission/BasePermission;->isConfigurator()Z
 
-    move-result v12
+    move-result v8
 
-    if-eqz v12, :cond_2f
+    if-eqz v8, :cond_2f
 
-    iget-object v12, v0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
+    iget-object v8, v0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
 
-    const/16 v14, 0x8
+    const/16 v12, 0x9
 
-    const/4 v15, 0x0
+    const/4 v14, 0x0
 
-    invoke-virtual {v12, v14, v15}, Landroid/content/pm/PackageManagerInternal;->getKnownPackageNames(II)[Ljava/lang/String;
+    invoke-virtual {v8, v12, v14}, Landroid/content/pm/PackageManagerInternal;->getKnownPackageNames(II)[Ljava/lang/String;
 
-    move-result-object v12
+    move-result-object v8
 
     invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
-    move-result-object v14
+    move-result-object v12
 
-    invoke-static {v12, v14}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v8, v12}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v12
+    move-result v8
 
-    if-eqz v12, :cond_2f
+    if-eqz v8, :cond_2f
 
     const/4 v6, 0x1
 
     :cond_2f
     if-nez v6, :cond_30
 
-    invoke-virtual/range {p4 .. p4}, Lcom/android/server/pm/permission/BasePermission;->isIncidentReportApprover()Z
+    invoke-virtual/range {p4 .. p4}, Lcom/android/server/pm/permission/BasePermission;->isWellbeing()Z
 
-    move-result v12
+    move-result v8
 
-    if-eqz v12, :cond_30
+    if-eqz v8, :cond_30
 
-    iget-object v12, v0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
+    iget-object v8, v0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
 
-    const/16 v14, 0xa
+    const/4 v12, 0x7
 
-    const/4 v15, 0x0
+    const/4 v14, 0x0
 
-    invoke-virtual {v12, v14, v15}, Landroid/content/pm/PackageManagerInternal;->getKnownPackageNames(II)[Ljava/lang/String;
+    invoke-virtual {v8, v12, v14}, Landroid/content/pm/PackageManagerInternal;->getKnownPackageNames(II)[Ljava/lang/String;
 
-    move-result-object v12
+    move-result-object v8
 
     invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
-    move-result-object v14
+    move-result-object v12
 
-    invoke-static {v12, v14}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v8, v12}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v12
+    move-result v8
 
-    if-eqz v12, :cond_30
+    if-eqz v8, :cond_30
 
     const/4 v6, 0x1
 
     :cond_30
     if-nez v6, :cond_31
 
-    invoke-virtual/range {p4 .. p4}, Lcom/android/server/pm/permission/BasePermission;->isAppPredictor()Z
+    invoke-virtual/range {p4 .. p4}, Lcom/android/server/pm/permission/BasePermission;->isDocumenter()Z
 
-    move-result v12
+    move-result v8
 
-    if-eqz v12, :cond_31
+    if-eqz v8, :cond_31
 
-    iget-object v12, v0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
+    iget-object v8, v0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
 
-    const/16 v14, 0xb
+    const/16 v12, 0x8
 
-    const/4 v15, 0x0
+    const/4 v14, 0x0
 
-    invoke-virtual {v12, v14, v15}, Landroid/content/pm/PackageManagerInternal;->getKnownPackageNames(II)[Ljava/lang/String;
+    invoke-virtual {v8, v12, v14}, Landroid/content/pm/PackageManagerInternal;->getKnownPackageNames(II)[Ljava/lang/String;
 
-    move-result-object v12
+    move-result-object v8
 
     invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
-    move-result-object v14
+    move-result-object v12
 
-    invoke-static {v12, v14}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v8, v12}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v12
+    move-result v8
 
-    if-eqz v12, :cond_31
+    if-eqz v8, :cond_31
 
     const/4 v6, 0x1
 
     :cond_31
     if-nez v6, :cond_32
 
-    invoke-virtual/range {p4 .. p4}, Lcom/android/server/pm/permission/BasePermission;->isCompanion()Z
+    invoke-virtual/range {p4 .. p4}, Lcom/android/server/pm/permission/BasePermission;->isIncidentReportApprover()Z
 
-    move-result v12
+    move-result v8
 
-    if-eqz v12, :cond_32
+    if-eqz v8, :cond_32
 
-    iget-object v12, v0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
+    iget-object v8, v0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
 
-    const/16 v14, 0xe
+    const/16 v12, 0xa
 
-    const/4 v15, 0x0
+    const/4 v14, 0x0
 
-    invoke-virtual {v12, v14, v15}, Landroid/content/pm/PackageManagerInternal;->getKnownPackageNames(II)[Ljava/lang/String;
+    invoke-virtual {v8, v12, v14}, Landroid/content/pm/PackageManagerInternal;->getKnownPackageNames(II)[Ljava/lang/String;
 
-    move-result-object v12
+    move-result-object v8
 
     invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
-    move-result-object v14
+    move-result-object v12
 
-    invoke-static {v12, v14}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v8, v12}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v12
+    move-result v8
 
-    if-eqz v12, :cond_32
+    if-eqz v8, :cond_32
 
     const/4 v6, 0x1
 
     :cond_32
-    if-nez v6, :cond_34
+    if-nez v6, :cond_33
 
-    invoke-virtual/range {p4 .. p4}, Lcom/android/server/pm/permission/BasePermission;->isRetailDemo()Z
+    invoke-virtual/range {p4 .. p4}, Lcom/android/server/pm/permission/BasePermission;->isAppPredictor()Z
 
-    move-result v12
+    move-result v8
 
-    if-eqz v12, :cond_34
+    if-eqz v8, :cond_33
 
-    iget-object v12, v0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
+    iget-object v8, v0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
 
-    const/16 v14, 0xf
+    const/16 v12, 0xb
 
-    const/4 v15, 0x0
+    const/4 v14, 0x0
 
-    invoke-virtual {v12, v14, v15}, Landroid/content/pm/PackageManagerInternal;->getKnownPackageNames(II)[Ljava/lang/String;
+    invoke-virtual {v8, v12, v14}, Landroid/content/pm/PackageManagerInternal;->getKnownPackageNames(II)[Ljava/lang/String;
 
-    move-result-object v12
+    move-result-object v8
 
     invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
-    move-result-object v14
+    move-result-object v12
 
-    invoke-static {v12, v14}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v8, v12}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v12
+    move-result v8
 
-    if-eqz v12, :cond_34
-
-    invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getUid()I
-
-    move-result v12
-
-    invoke-static {v12}, Lcom/android/server/pm/permission/PermissionManagerService;->isProfileOwner(I)Z
-
-    move-result v12
-
-    if-eqz v12, :cond_34
+    if-eqz v8, :cond_33
 
     const/4 v6, 0x1
 
-    goto :goto_f
-
     :cond_33
-    move-object/from16 v2, p5
+    if-nez v6, :cond_34
+
+    invoke-virtual/range {p4 .. p4}, Lcom/android/server/pm/permission/BasePermission;->isCompanion()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_34
+
+    iget-object v8, v0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
+
+    const/16 v12, 0xe
+
+    const/4 v14, 0x0
+
+    invoke-virtual {v8, v12, v14}, Landroid/content/pm/PackageManagerInternal;->getKnownPackageNames(II)[Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
+
+    move-result-object v12
+
+    invoke-static {v8, v12}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_34
+
+    const/4 v6, 0x1
 
     :cond_34
-    :goto_f
+    if-nez v6, :cond_36
+
+    invoke-virtual/range {p4 .. p4}, Lcom/android/server/pm/permission/BasePermission;->isRetailDemo()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_36
+
+    iget-object v8, v0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
+
+    const/16 v12, 0xf
+
+    const/4 v14, 0x0
+
+    invoke-virtual {v8, v12, v14}, Landroid/content/pm/PackageManagerInternal;->getKnownPackageNames(II)[Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
+
+    move-result-object v12
+
+    invoke-static {v8, v12}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_36
+
+    invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getUid()I
+
+    move-result v8
+
+    invoke-static {v8}, Lcom/android/server/pm/permission/PermissionManagerService;->isProfileOwner(I)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_36
+
+    const/4 v6, 0x1
+
+    goto :goto_11
+
+    :cond_35
+    move-object/from16 v7, p5
+
+    :cond_36
+    :goto_11
     return v6
 .end method
 

@@ -17,6 +17,8 @@
 # instance fields
 .field private mAnimatingRecents:Lcom/android/server/wm/ActivityRecord;
 
+.field private mRecentsWillBeTop:Z
+
 .field final synthetic this$0:Lcom/android/server/wm/DisplayContent;
 
 
@@ -73,6 +75,16 @@
     return v0
 .end method
 
+.method notifyRecentsWillBeTop()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/android/server/wm/DisplayContent$FixedRotationTransitionListener;->mRecentsWillBeTop:Z
+
+    return-void
+.end method
+
 .method public onAppTransitionCancelledLocked(I)V
     .locals 1
 
@@ -92,7 +104,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     iget-object v1, p0, Lcom/android/server/wm/DisplayContent$FixedRotationTransitionListener;->mAnimatingRecents:Lcom/android/server/wm/ActivityRecord;
 
@@ -101,15 +113,11 @@
     goto :goto_1
 
     :cond_0
-    iget-object v1, p0, Lcom/android/server/wm/DisplayContent$FixedRotationTransitionListener;->this$0:Lcom/android/server/wm/DisplayContent;
+    if-eqz v1, :cond_1
 
-    invoke-static {v1}, Lcom/android/server/wm/DisplayContent;->access$500(Lcom/android/server/wm/DisplayContent;)Lcom/android/server/wm/ActivityRecord;
+    iget-boolean v1, p0, Lcom/android/server/wm/DisplayContent$FixedRotationTransitionListener;->mRecentsWillBeTop:Z
 
-    move-result-object v1
-
-    if-nez v1, :cond_1
-
-    invoke-virtual {v0}, Lcom/android/server/wm/ActivityRecord;->finishFixedRotationTransform()V
+    if-eqz v1, :cond_1
 
     return-void
 
@@ -120,11 +128,24 @@
 
     move-result-object v1
 
+    if-nez v1, :cond_2
+
+    invoke-virtual {v0}, Lcom/android/server/wm/ActivityRecord;->finishFixedRotationTransform()V
+
+    return-void
+
+    :cond_2
+    iget-object v1, p0, Lcom/android/server/wm/DisplayContent$FixedRotationTransitionListener;->this$0:Lcom/android/server/wm/DisplayContent;
+
+    invoke-static {v1}, Lcom/android/server/wm/DisplayContent;->access$500(Lcom/android/server/wm/DisplayContent;)Lcom/android/server/wm/ActivityRecord;
+
+    move-result-object v1
+
     invoke-virtual {v1, v0}, Lcom/android/server/wm/ActivityRecord;->hasFixedRotationTransform(Lcom/android/server/wm/WindowToken;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
     iget-object v1, p0, Lcom/android/server/wm/DisplayContent$FixedRotationTransitionListener;->this$0:Lcom/android/server/wm/DisplayContent;
 
@@ -136,16 +157,16 @@
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_5
 
     return-void
 
-    :cond_2
+    :cond_3
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object v1
 
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_6
 
     iget-object v2, p0, Lcom/android/server/wm/DisplayContent$FixedRotationTransitionListener;->this$0:Lcom/android/server/wm/DisplayContent;
 
@@ -157,31 +178,31 @@
 
     move-result-object v2
 
-    if-eq v1, v2, :cond_3
+    if-eq v1, v2, :cond_4
 
     goto :goto_0
 
-    :cond_3
+    :cond_4
     invoke-virtual {v1}, Lcom/android/server/wm/Task;->isAppTransitioning()Z
 
     move-result v2
 
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_5
 
     return-void
 
-    :cond_4
+    :cond_5
     iget-object v1, p0, Lcom/android/server/wm/DisplayContent$FixedRotationTransitionListener;->this$0:Lcom/android/server/wm/DisplayContent;
 
     invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->continueUpdateOrientationForDiffOrienLaunchingApp()V
 
     return-void
 
-    :cond_5
+    :cond_6
     :goto_0
     return-void
 
-    :cond_6
+    :cond_7
     :goto_1
     return-void
 .end method
@@ -196,40 +217,46 @@
     return-void
 .end method
 
-.method onFinishRecentsAnimation(Z)V
-    .locals 3
+.method onFinishRecentsAnimation()V
+    .locals 4
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayContent$FixedRotationTransitionListener;->mAnimatingRecents:Lcom/android/server/wm/ActivityRecord;
 
-    const/4 v1, 0x0
+    iget-boolean v1, p0, Lcom/android/server/wm/DisplayContent$FixedRotationTransitionListener;->mRecentsWillBeTop:Z
 
-    iput-object v1, p0, Lcom/android/server/wm/DisplayContent$FixedRotationTransitionListener;->mAnimatingRecents:Lcom/android/server/wm/ActivityRecord;
+    const/4 v2, 0x0
 
-    if-nez p1, :cond_0
+    iput-object v2, p0, Lcom/android/server/wm/DisplayContent$FixedRotationTransitionListener;->mAnimatingRecents:Lcom/android/server/wm/ActivityRecord;
+
+    const/4 v3, 0x0
+
+    iput-boolean v3, p0, Lcom/android/server/wm/DisplayContent$FixedRotationTransitionListener;->mRecentsWillBeTop:Z
+
+    if-eqz v1, :cond_0
 
     return-void
 
     :cond_0
     if-eqz v0, :cond_1
 
-    iget-object v2, p0, Lcom/android/server/wm/DisplayContent$FixedRotationTransitionListener;->this$0:Lcom/android/server/wm/DisplayContent;
+    iget-object v3, p0, Lcom/android/server/wm/DisplayContent$FixedRotationTransitionListener;->this$0:Lcom/android/server/wm/DisplayContent;
 
-    invoke-static {v2}, Lcom/android/server/wm/DisplayContent;->access$500(Lcom/android/server/wm/DisplayContent;)Lcom/android/server/wm/ActivityRecord;
+    invoke-static {v3}, Lcom/android/server/wm/DisplayContent;->access$500(Lcom/android/server/wm/DisplayContent;)Lcom/android/server/wm/ActivityRecord;
 
-    move-result-object v2
+    move-result-object v3
 
-    if-ne v0, v2, :cond_1
+    if-ne v0, v3, :cond_1
 
-    iget-object v2, p0, Lcom/android/server/wm/DisplayContent$FixedRotationTransitionListener;->this$0:Lcom/android/server/wm/DisplayContent;
+    iget-object v3, p0, Lcom/android/server/wm/DisplayContent$FixedRotationTransitionListener;->this$0:Lcom/android/server/wm/DisplayContent;
 
-    invoke-virtual {v2, v1}, Lcom/android/server/wm/DisplayContent;->setFixedRotationLaunchingAppUnchecked(Lcom/android/server/wm/ActivityRecord;)V
+    invoke-virtual {v3, v2}, Lcom/android/server/wm/DisplayContent;->setFixedRotationLaunchingAppUnchecked(Lcom/android/server/wm/ActivityRecord;)V
 
     goto :goto_0
 
     :cond_1
-    iget-object v1, p0, Lcom/android/server/wm/DisplayContent$FixedRotationTransitionListener;->this$0:Lcom/android/server/wm/DisplayContent;
+    iget-object v2, p0, Lcom/android/server/wm/DisplayContent$FixedRotationTransitionListener;->this$0:Lcom/android/server/wm/DisplayContent;
 
-    invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->continueUpdateOrientationForDiffOrienLaunchingApp()V
+    invoke-virtual {v2}, Lcom/android/server/wm/DisplayContent;->continueUpdateOrientationForDiffOrienLaunchingApp()V
 
     :goto_0
     return-void

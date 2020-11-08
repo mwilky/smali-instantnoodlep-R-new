@@ -508,7 +508,7 @@
 
     move-result-object v1
 
-    const v2, 0x1070051
+    const v2, 0x1070052
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getIntArray(I)[I
 
@@ -623,7 +623,7 @@
 
     move-result-object v5
 
-    const v6, 0x107006b
+    const v6, 0x107006c
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->obtainTypedArray(I)Landroid/content/res/TypedArray;
 
@@ -633,7 +633,7 @@
 
     move-result-object v6
 
-    const v7, 0x107006a
+    const v7, 0x107006b
 
     invoke-virtual {v5, v7}, Landroid/content/res/Resources;->getIntArray(I)[I
 

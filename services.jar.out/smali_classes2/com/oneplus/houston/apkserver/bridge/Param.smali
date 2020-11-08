@@ -65,3 +65,36 @@
     :cond_1
     return v0
 .end method
+
+.method public getJSONObject()Lorg/json/JSONObject;
+    .locals 3
+
+    new-instance v0, Lorg/json/JSONObject;
+
+    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
+
+    :try_start_0
+    const-string v1, "param1"
+
+    iget-object v2, p0, Lcom/oneplus/houston/apkserver/bridge/Param;->param1:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    const-string v1, "param2"
+
+    iget-object v2, p0, Lcom/oneplus/houston/apkserver/bridge/Param;->param2:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v1
+
+    invoke-virtual {v1}, Lorg/json/JSONException;->printStackTrace()V
+
+    :goto_0
+    return-object v0
+.end method

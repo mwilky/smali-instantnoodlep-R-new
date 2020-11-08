@@ -1290,7 +1290,13 @@
 
     new-instance v28, Lcom/android/server/job/controllers/JobStatus;
 
-    invoke-virtual {v6}, Landroid/app/job/JobInfo$Builder;->build()Landroid/app/job/JobInfo;
+    const/16 v16, 0x1
+
+    invoke-static/range {v16 .. v16}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v11
+
+    invoke-virtual {v6, v11}, Landroid/app/job/JobInfo$Builder;->toBuild(Ljava/lang/Boolean;)Landroid/app/job/JobInfo;
 
     move-result-object v11
 
@@ -1425,6 +1431,8 @@
 
     const/4 v13, 0x2
 
+    const/16 v16, 0x1
+
     move/from16 v11, v33
 
     goto/16 :goto_a
@@ -1512,7 +1520,7 @@
     return-object v1
 
     :cond_16
-    move/from16 v17, v0
+    move/from16 v16, v0
 
     move v0, v12
 
@@ -1530,7 +1538,7 @@
 
     move v13, v8
 
-    move/from16 v0, v17
+    move/from16 v0, v16
 
     move-object/from16 v40, v5
 
@@ -1574,7 +1582,7 @@
     return-object v1
 
     :cond_18
-    move/from16 v17, v0
+    move/from16 v16, v0
 
     move-object v5, v1
 
