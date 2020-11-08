@@ -1,4 +1,4 @@
-.class final enum Lcom/oneplus/keyguard/OpKeyguardClockInfoView$ViewTypeEnum;
+.class public final enum Lcom/oneplus/keyguard/OpKeyguardClockInfoView$ViewTypeEnum;
 .super Ljava/lang/Enum;
 .source "OpKeyguardClockInfoView.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x401a
+    accessFlags = 0x4019
     name = "ViewTypeEnum"
 .end annotation
 

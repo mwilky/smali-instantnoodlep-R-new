@@ -3,7 +3,7 @@
 .source "QSCustomizer.java"
 
 # interfaces
-.implements Landroid/widget/Toolbar$OnMenuItemClickListener;
+.implements Landroidx/appcompat/widget/Toolbar$OnMenuItemClickListener;
 
 
 # annotations
@@ -17,8 +17,6 @@
 # instance fields
 .field private isShown:Z
 
-.field private mAppbar:Lcom/google/android/material/appbar/Appbar;
-
 .field private final mClipper:Lcom/android/systemui/qs/QSDetailClipper;
 
 .field private final mCollapseAnimationListener:Landroid/animation/Animator$AnimatorListener;
@@ -28,8 +26,6 @@
 .field private mCustomizing:Z
 
 .field private mDivider:Landroid/view/View;
-
-.field private mDoneButton:Landroid/widget/Button;
 
 .field private mDragLabel:Landroid/widget/TextView;
 
@@ -55,11 +51,11 @@
 
 .field private mQs:Lcom/android/systemui/plugins/qs/QS;
 
-.field private mResetButton:Landroid/widget/Button;
-
 .field private final mScreenLifecycle:Lcom/android/systemui/keyguard/ScreenLifecycle;
 
 .field private final mTileQueryHelper:Lcom/android/systemui/qs/customize/TileQueryHelper;
+
+.field private mToolbar:Landroidx/appcompat/widget/Toolbar;
 
 .field private mUiEventLogger:Lcom/android/internal/logging/UiEventLogger;
 
@@ -142,73 +138,25 @@
 
     iput-object p2, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mClipper:Lcom/android/systemui/qs/QSDetailClipper;
 
-    new-instance p2, Landroid/util/TypedValue;
-
-    invoke-direct {p2}, Landroid/util/TypedValue;-><init>()V
-
-    iget-object p7, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
-
-    invoke-virtual {p7}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
-
-    move-result-object p7
-
-    const v0, 0x101030b
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p7, v0, p2, v1}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
-
-    sget p2, Lcom/android/systemui/R$id;->op_qs_edit_done:I
-
-    invoke-virtual {p0, p2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/widget/Button;
-
-    iput-object p2, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mDoneButton:Landroid/widget/Button;
-
-    new-instance p7, Lcom/android/systemui/qs/customize/-$$Lambda$QSCustomizer$UrjF3azOC-uGdbn9DsJsA7X1eQo;
-
-    invoke-direct {p7, p0}, Lcom/android/systemui/qs/customize/-$$Lambda$QSCustomizer$UrjF3azOC-uGdbn9DsJsA7X1eQo;-><init>(Lcom/android/systemui/qs/customize/QSCustomizer;)V
-
-    invoke-virtual {p2, p7}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    sget p2, Lcom/android/systemui/R$id;->op_qs_edit_reset:I
-
-    invoke-virtual {p0, p2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/widget/Button;
-
-    iput-object p2, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mResetButton:Landroid/widget/Button;
-
-    new-instance p7, Lcom/android/systemui/qs/customize/-$$Lambda$QSCustomizer$C43yoxQJp4nZ_wK4zrbv9dy209I;
-
-    invoke-direct {p7, p0}, Lcom/android/systemui/qs/customize/-$$Lambda$QSCustomizer$C43yoxQJp4nZ_wK4zrbv9dy209I;-><init>(Lcom/android/systemui/qs/customize/QSCustomizer;)V
-
-    invoke-virtual {p2, p7}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
     sget p2, Lcom/android/systemui/R$id;->op_qs_edit_appbar:I
 
     invoke-virtual {p0, p2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
 
-    check-cast p2, Lcom/google/android/material/appbar/Appbar;
+    check-cast p2, Landroidx/appcompat/widget/Toolbar;
 
-    iput-object p2, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mAppbar:Lcom/google/android/material/appbar/Appbar;
+    iput-object p2, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mToolbar:Landroidx/appcompat/widget/Toolbar;
 
-    invoke-virtual {p2, v1}, Lcom/google/android/material/appbar/Appbar;->setDisplayHomeAsUpEnabled(Z)V
+    invoke-virtual {p2, p0}, Landroidx/appcompat/widget/Toolbar;->setOnMenuItemClickListener(Landroidx/appcompat/widget/Toolbar$OnMenuItemClickListener;)V
 
-    iget-object p2, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mAppbar:Lcom/google/android/material/appbar/Appbar;
+    iget-object p2, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mToolbar:Landroidx/appcompat/widget/Toolbar;
 
-    new-instance p7, Lcom/android/systemui/qs/customize/-$$Lambda$QSCustomizer$Z7CnafcZQZawgCocdnzpbi07dHM;
+    new-instance p7, Lcom/android/systemui/qs/customize/-$$Lambda$QSCustomizer$UrjF3azOC-uGdbn9DsJsA7X1eQo;
 
-    invoke-direct {p7, p0}, Lcom/android/systemui/qs/customize/-$$Lambda$QSCustomizer$Z7CnafcZQZawgCocdnzpbi07dHM;-><init>(Lcom/android/systemui/qs/customize/QSCustomizer;)V
+    invoke-direct {p7, p0}, Lcom/android/systemui/qs/customize/-$$Lambda$QSCustomizer$UrjF3azOC-uGdbn9DsJsA7X1eQo;-><init>(Lcom/android/systemui/qs/customize/QSCustomizer;)V
 
-    invoke-virtual {p2, p7}, Lcom/google/android/material/appbar/Appbar;->setNavigationOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p2, p7}, Landroidx/appcompat/widget/Toolbar;->setNavigationOnClickListener(Landroid/view/View$OnClickListener;)V
 
     sget p2, Lcom/android/systemui/R$id;->upperPages:I
 
@@ -394,30 +342,6 @@
 .end method
 
 .method private synthetic lambda$new$0(Landroid/view/View;)V
-    .locals 0
-
-    invoke-virtual {p0}, Lcom/android/systemui/qs/customize/QSCustomizer;->hide()V
-
-    return-void
-.end method
-
-.method private synthetic lambda$new$1(Landroid/view/View;)V
-    .locals 1
-
-    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    const/16 v0, 0x167
-
-    invoke-static {p1, v0}, Lcom/android/internal/logging/MetricsLogger;->action(Landroid/content/Context;I)V
-
-    invoke-direct {p0}, Lcom/android/systemui/qs/customize/QSCustomizer;->reset()V
-
-    return-void
-.end method
-
-.method private synthetic lambda$new$2(Landroid/view/View;)V
     .locals 0
 
     invoke-virtual {p0}, Lcom/android/systemui/qs/customize/QSCustomizer;->hide()V
@@ -689,6 +613,10 @@
 
     iput-boolean v1, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->isShown:Z
 
+    iget-object v2, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mToolbar:Landroidx/appcompat/widget/Toolbar;
+
+    invoke-virtual {v2}, Landroidx/appcompat/widget/Toolbar;->dismissPopupMenus()V
+
     iget-object v2, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mClipper:Lcom/android/systemui/qs/QSDetailClipper;
 
     invoke-virtual {v2}, Lcom/android/systemui/qs/QSDetailClipper;->cancelAnimator()V
@@ -752,6 +680,10 @@
 
     iput-boolean v0, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->isShown:Z
 
+    iget-object v1, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mToolbar:Landroidx/appcompat/widget/Toolbar;
+
+    invoke-virtual {v1}, Landroidx/appcompat/widget/Toolbar;->dismissPopupMenus()V
+
     invoke-direct {p0, v0}, Lcom/android/systemui/qs/customize/QSCustomizer;->setCustomizing(Z)V
 
     invoke-direct {p0}, Lcom/android/systemui/qs/customize/QSCustomizer;->save()V
@@ -791,22 +723,6 @@
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/systemui/qs/customize/QSCustomizer;->lambda$new$0(Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method public synthetic lambda$new$1$QSCustomizer(Landroid/view/View;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/systemui/qs/customize/QSCustomizer;->lambda$new$1(Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method public synthetic lambda$new$2$QSCustomizer(Landroid/view/View;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/systemui/qs/customize/QSCustomizer;->lambda$new$2(Landroid/view/View;)V
 
     return-void
 .end method
@@ -871,11 +787,31 @@
 .end method
 
 .method protected onFinishInflate()V
-    .locals 0
+    .locals 3
 
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
     invoke-virtual {p0}, Lcom/android/systemui/qs/customize/QSCustomizer;->updateThemeColor()V
+
+    iget-object v0, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mToolbar:Landroidx/appcompat/widget/Toolbar;
+
+    invoke-virtual {v0}, Landroidx/appcompat/widget/Toolbar;->getMenu()Landroid/view/Menu;
+
+    move-result-object v0
+
+    iget-object p0, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
+
+    const v1, 0x10406f7
+
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    invoke-interface {v0, v1, v2, v1, p0}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
 
     return-void
 .end method
@@ -1206,101 +1142,91 @@
 
     invoke-static {v1}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
 
-    move-result v1
+    const/4 v1, 0x2
 
-    const/4 v2, 0x2
+    invoke-static {v1}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
 
-    invoke-static {v2}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
+    move-result v2
+
+    const/16 v3, 0xf
+
+    invoke-static {v3}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
 
     move-result v3
 
-    const/16 v4, 0xf
-
-    invoke-static {v4}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
+    invoke-static {}, Lcom/oneplus/util/ThemeColorUtils;->getCurrentTheme()I
 
     move-result v4
 
-    invoke-static {}, Lcom/oneplus/util/ThemeColorUtils;->getCurrentTheme()I
-
-    move-result v5
-
-    if-ne v5, v2, :cond_0
+    if-ne v4, v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/16 v2, 0x64
+    const/16 v1, 0x64
 
-    invoke-static {v2}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
+    invoke-static {v1}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
 
     :goto_0
-    const/16 v2, 0xe
+    const/16 v1, 0xe
 
-    invoke-static {v2}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
+    invoke-static {v1}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
 
-    move-result v2
+    move-result v1
 
-    sget v5, Lcom/android/systemui/R$id;->op_qs_edit_appbar:I
+    sget v4, Lcom/android/systemui/R$id;->op_qs_edit_appbar:I
 
-    invoke-virtual {p0, v5}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v4}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
-    move-result-object v5
+    move-result-object v4
 
-    invoke-virtual {v5, v0}, Landroid/view/View;->setBackgroundColor(I)V
+    invoke-virtual {v4, v0}, Landroid/view/View;->setBackgroundColor(I)V
 
-    iget-object v5, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mUpperIndicatorContainer:Landroid/widget/LinearLayout;
+    iget-object v4, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mUpperIndicatorContainer:Landroid/widget/LinearLayout;
 
-    invoke-virtual {v5, v0}, Landroid/widget/LinearLayout;->setBackgroundColor(I)V
+    invoke-virtual {v4, v0}, Landroid/widget/LinearLayout;->setBackgroundColor(I)V
 
-    iget-object v5, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mResetButton:Landroid/widget/Button;
+    invoke-static {v1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
-    invoke-virtual {v5, v1}, Landroid/widget/Button;->setTextColor(I)V
+    move-result-object v4
 
-    iget-object v5, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mDoneButton:Landroid/widget/Button;
+    invoke-virtual {p0, v4}, Landroid/widget/LinearLayout;->setBackgroundTintList(Landroid/content/res/ColorStateList;)V
 
-    invoke-virtual {v5, v1}, Landroid/widget/Button;->setTextColor(I)V
+    iget-object v4, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mContainer:Landroid/view/View;
 
-    invoke-static {v2}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->setBackgroundTintList(Landroid/content/res/ColorStateList;)V
-
-    iget-object v1, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mContainer:Landroid/view/View;
-
-    invoke-static {v2}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+    invoke-static {v1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
     move-result-object v5
 
-    invoke-virtual {v1, v5}, Landroid/view/View;->setBackgroundTintList(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {v4, v5}, Landroid/view/View;->setBackgroundTintList(Landroid/content/res/ColorStateList;)V
 
-    iget-object v1, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mLowerPages:Lcom/android/systemui/qs/customize/QSEditViewPager;
+    iget-object v4, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mLowerPages:Lcom/android/systemui/qs/customize/QSEditViewPager;
 
-    invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->setBackgroundColor(I)V
+    invoke-virtual {v4, v1}, Landroid/view/ViewGroup;->setBackgroundColor(I)V
 
-    iget-object v1, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mUpperPages:Lcom/android/systemui/qs/customize/QSEditViewPager;
+    iget-object v4, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mUpperPages:Lcom/android/systemui/qs/customize/QSEditViewPager;
 
-    invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->setBackgroundColor(I)V
+    invoke-virtual {v4, v0}, Landroid/view/ViewGroup;->setBackgroundColor(I)V
 
-    sget v1, Lcom/android/systemui/R$id;->toolbar_panel:I
+    sget v4, Lcom/android/systemui/R$id;->toolbar_panel:I
 
-    invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v4}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
-    move-result-object v1
+    move-result-object v4
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->setBackgroundColor(I)V
-
-    iget-object v0, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mDragLabel:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setBackgroundColor(I)V
+    invoke-virtual {v4, v0}, Landroid/view/View;->setBackgroundColor(I)V
 
     iget-object v0, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mDragLabel:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackgroundColor(I)V
+
+    iget-object v0, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mDragLabel:Landroid/widget/TextView;
+
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
     iget-object p0, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mDivider:Landroid/view/View;
 
-    invoke-virtual {p0, v4}, Landroid/view/View;->setBackgroundColor(I)V
+    invoke-virtual {p0, v3}, Landroid/view/View;->setBackgroundColor(I)V
 
     return-void
 .end method

@@ -12,7 +12,13 @@
 
 
 # instance fields
+.field private mAodMask:Lcom/oneplus/aod/bg/OpAodLowLightMask;
+
 .field private mBgPaint:Lcom/oneplus/aod/bg/IBgPaint;
+
+.field private mChecking:Z
+
+.field private mCurrentTime:J
 
 .field private mHandler:Landroid/os/Handler;
 
@@ -20,11 +26,17 @@
 
 .field private mHelper:Lcom/oneplus/aod/utils/OpCanvasAodHelper;
 
-.field private mIsFirstAlarm:Z
-
 .field private mListener:Lcom/oneplus/aod/utils/OpCanvasAodHelper$OnBitmapHandleDoneListener;
 
+.field private mLowEnviroment:Z
+
 .field private mObserver:Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;
+
+.field private mPm:Landroid/os/PowerManager;
+
+.field private mSensorEventListener:Landroid/hardware/SensorEventListener;
+
+.field private mSensorManager:Lcom/android/systemui/util/sensors/AsyncSensorManager;
 
 .field private mWidth:I
 
@@ -55,9 +67,15 @@
 
     invoke-direct {p0, p1, p2, p3}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    new-instance p2, Lcom/oneplus/aod/bg/OpAodCanvas$2;
+    new-instance p2, Lcom/oneplus/aod/bg/OpAodCanvas$1;
 
-    invoke-direct {p2, p0}, Lcom/oneplus/aod/bg/OpAodCanvas$2;-><init>(Lcom/oneplus/aod/bg/OpAodCanvas;)V
+    invoke-direct {p2, p0}, Lcom/oneplus/aod/bg/OpAodCanvas$1;-><init>(Lcom/oneplus/aod/bg/OpAodCanvas;)V
+
+    iput-object p2, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mSensorEventListener:Landroid/hardware/SensorEventListener;
+
+    new-instance p2, Lcom/oneplus/aod/bg/OpAodCanvas$3;
+
+    invoke-direct {p2, p0}, Lcom/oneplus/aod/bg/OpAodCanvas$3;-><init>(Lcom/oneplus/aod/bg/OpAodCanvas;)V
 
     iput-object p2, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mListener:Lcom/oneplus/aod/utils/OpCanvasAodHelper$OnBitmapHandleDoneListener;
 
@@ -67,50 +85,60 @@
 
     iput-object p2, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mHelper:Lcom/oneplus/aod/utils/OpCanvasAodHelper;
 
-    return-void
-.end method
+    const/4 p2, 0x0
 
-.method static synthetic access$000(Lcom/oneplus/aod/bg/OpAodCanvas;)Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;
-    .locals 0
+    iput-boolean p2, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mLowEnviroment:Z
 
-    iget-object p0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mObserver:Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;
+    const-class p3, Lcom/android/systemui/util/sensors/AsyncSensorManager;
 
-    return-object p0
-.end method
+    invoke-static {p3}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
-.method static synthetic access$100(Lcom/oneplus/aod/bg/OpAodCanvas;)V
-    .locals 0
+    move-result-object p3
 
-    invoke-direct {p0}, Lcom/oneplus/aod/bg/OpAodCanvas;->shouldTurnOnAodGesture()V
+    check-cast p3, Lcom/android/systemui/util/sensors/AsyncSensorManager;
 
-    return-void
-.end method
+    iput-object p3, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mSensorManager:Lcom/android/systemui/util/sensors/AsyncSensorManager;
 
-.method static synthetic access$1000(Lcom/oneplus/aod/bg/OpAodCanvas;)Landroid/content/Context;
-    .locals 0
+    const-class p3, Landroid/os/PowerManager;
 
-    iget-object p0, p0, Landroid/view/View;->mContext:Landroid/content/Context;
+    invoke-virtual {p1, p3}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
-    return-object p0
-.end method
+    move-result-object p1
 
-.method static synthetic access$1100(Lcom/oneplus/aod/bg/OpAodCanvas;Landroid/os/Bundle;Z)V
-    .locals 0
+    check-cast p1, Landroid/os/PowerManager;
 
-    invoke-direct {p0, p1, p2}, Lcom/oneplus/aod/bg/OpAodCanvas;->onChange(Landroid/os/Bundle;Z)V
+    iput-object p1, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mPm:Landroid/os/PowerManager;
+
+    iput-boolean p2, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mChecking:Z
 
     return-void
 .end method
 
-.method static synthetic access$200(Lcom/oneplus/aod/bg/OpAodCanvas;)Landroid/content/Context;
+.method static synthetic access$000(Lcom/oneplus/aod/bg/OpAodCanvas;)Z
     .locals 0
 
-    iget-object p0, p0, Landroid/view/View;->mContext:Landroid/content/Context;
+    iget-boolean p0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mLowEnviroment:Z
+
+    return p0
+.end method
+
+.method static synthetic access$002(Lcom/oneplus/aod/bg/OpAodCanvas;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mLowEnviroment:Z
+
+    return p1
+.end method
+
+.method static synthetic access$100(Lcom/oneplus/aod/bg/OpAodCanvas;)Landroid/hardware/SensorEventListener;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mSensorEventListener:Landroid/hardware/SensorEventListener;
 
     return-object p0
 .end method
 
-.method static synthetic access$300(Lcom/oneplus/aod/bg/OpAodCanvas;Z)Lcom/oneplus/aod/bg/IBgPaint;
+.method static synthetic access$1000(Lcom/oneplus/aod/bg/OpAodCanvas;Z)Lcom/oneplus/aod/bg/IBgPaint;
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/oneplus/aod/bg/OpAodCanvas;->choosePaint(Z)Lcom/oneplus/aod/bg/IBgPaint;
@@ -120,7 +148,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$400(Lcom/oneplus/aod/bg/OpAodCanvas;Lcom/oneplus/aod/bg/IBgPaint;Lcom/oneplus/aod/utils/OpCanvasAodHelper$Data;)V
+.method static synthetic access$1100(Lcom/oneplus/aod/bg/OpAodCanvas;Lcom/oneplus/aod/bg/IBgPaint;Lcom/oneplus/aod/utils/OpCanvasAodHelper$Data;)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/oneplus/aod/bg/OpAodCanvas;->setupPaint(Lcom/oneplus/aod/bg/IBgPaint;Lcom/oneplus/aod/utils/OpCanvasAodHelper$Data;)V
@@ -128,7 +156,7 @@
     return-void
 .end method
 
-.method static synthetic access$500(Lcom/oneplus/aod/bg/OpAodCanvas;)Landroid/content/Context;
+.method static synthetic access$1200(Lcom/oneplus/aod/bg/OpAodCanvas;)Landroid/content/Context;
     .locals 0
 
     iget-object p0, p0, Landroid/view/View;->mContext:Landroid/content/Context;
@@ -136,7 +164,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$600(Lcom/oneplus/aod/bg/OpAodCanvas;)Lcom/oneplus/aod/utils/OpCanvasAodHelper$OnBitmapHandleDoneListener;
+.method static synthetic access$1300(Lcom/oneplus/aod/bg/OpAodCanvas;)Lcom/oneplus/aod/utils/OpCanvasAodHelper$OnBitmapHandleDoneListener;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mListener:Lcom/oneplus/aod/utils/OpCanvasAodHelper$OnBitmapHandleDoneListener;
@@ -144,7 +172,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$700(Lcom/oneplus/aod/bg/OpAodCanvas;)Landroid/os/Handler;
+.method static synthetic access$1400(Lcom/oneplus/aod/bg/OpAodCanvas;)Landroid/os/Handler;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mHandler:Landroid/os/Handler;
@@ -152,12 +180,92 @@
     return-object p0
 .end method
 
-.method static synthetic access$800(Lcom/oneplus/aod/bg/OpAodCanvas;)Lcom/oneplus/aod/utils/OpCanvasAodHelper;
+.method static synthetic access$1500(Lcom/oneplus/aod/bg/OpAodCanvas;)Lcom/oneplus/aod/utils/OpCanvasAodHelper;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mHelper:Lcom/oneplus/aod/utils/OpCanvasAodHelper;
 
     return-object p0
+.end method
+
+.method static synthetic access$1600(Lcom/oneplus/aod/bg/OpAodCanvas;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Landroid/view/View;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$1700(Lcom/oneplus/aod/bg/OpAodCanvas;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Landroid/view/View;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$1800(Lcom/oneplus/aod/bg/OpAodCanvas;Landroid/os/Bundle;Z)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/oneplus/aod/bg/OpAodCanvas;->onChange(Landroid/os/Bundle;Z)V
+
+    return-void
+.end method
+
+.method static synthetic access$200(Lcom/oneplus/aod/bg/OpAodCanvas;)Lcom/android/systemui/util/sensors/AsyncSensorManager;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mSensorManager:Lcom/android/systemui/util/sensors/AsyncSensorManager;
+
+    return-object p0
+.end method
+
+.method static synthetic access$302(Lcom/oneplus/aod/bg/OpAodCanvas;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mChecking:Z
+
+    return p1
+.end method
+
+.method static synthetic access$400(Lcom/oneplus/aod/bg/OpAodCanvas;)Landroid/os/PowerManager;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mPm:Landroid/os/PowerManager;
+
+    return-object p0
+.end method
+
+.method static synthetic access$500(Lcom/oneplus/aod/bg/OpAodCanvas;)Lcom/oneplus/aod/bg/OpAodLowLightMask;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mAodMask:Lcom/oneplus/aod/bg/OpAodLowLightMask;
+
+    return-object p0
+.end method
+
+.method static synthetic access$600(Lcom/oneplus/aod/bg/OpAodCanvas;)Lcom/oneplus/aod/bg/IBgPaint;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mBgPaint:Lcom/oneplus/aod/bg/IBgPaint;
+
+    return-object p0
+.end method
+
+.method static synthetic access$700(Lcom/oneplus/aod/bg/OpAodCanvas;)Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mObserver:Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;
+
+    return-object p0
+.end method
+
+.method static synthetic access$800(Lcom/oneplus/aod/bg/OpAodCanvas;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/oneplus/aod/bg/OpAodCanvas;->shouldTurnOnAodGesture()V
+
+    return-void
 .end method
 
 .method static synthetic access$900(Lcom/oneplus/aod/bg/OpAodCanvas;)Landroid/content/Context;
@@ -166,6 +274,50 @@
     iget-object p0, p0, Landroid/view/View;->mContext:Landroid/content/Context;
 
     return-object p0
+.end method
+
+.method private checkEnvironment()V
+    .locals 8
+
+    iget-boolean v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mChecking:Z
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mSensorManager:Lcom/android/systemui/util/sensors/AsyncSensorManager;
+
+    const/4 v1, 0x5
+
+    invoke-virtual {v0, v1}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
+
+    move-result-object v4
+
+    iget-object v2, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mSensorManager:Lcom/android/systemui/util/sensors/AsyncSensorManager;
+
+    iget-object v3, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mSensorEventListener:Landroid/hardware/SensorEventListener;
+
+    const/4 v5, 0x3
+
+    const/4 v6, 0x0
+
+    iget-object v7, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mHandler:Landroid/os/Handler;
+
+    invoke-virtual/range {v2 .. v7}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;IILandroid/os/Handler;)Z
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mChecking:Z
+
+    goto :goto_0
+
+    :cond_0
+    const-string p0, "OpAodCanvas"
+
+    const-string v0, "checkEnvironment: already checking..."
+
+    invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_0
+    return-void
 .end method
 
 .method private choosePaint(Z)Lcom/oneplus/aod/bg/IBgPaint;
@@ -183,6 +335,24 @@
     const/4 p0, 0x0
 
     return-object p0
+.end method
+
+.method private clearLowEnvironmentChecking()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mLowEnviroment:Z
+
+    iput-boolean v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mChecking:Z
+
+    iget-object v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mSensorManager:Lcom/android/systemui/util/sensors/AsyncSensorManager;
+
+    iget-object p0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mSensorEventListener:Landroid/hardware/SensorEventListener;
+
+    invoke-virtual {v0, p0}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
+
+    return-void
 .end method
 
 .method private onChange(Landroid/os/Bundle;Z)V
@@ -248,39 +418,54 @@
     :cond_1
     if-eqz p1, :cond_3
 
-    iget-object p1, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mBgPaint:Lcom/oneplus/aod/bg/IBgPaint;
+    iget-object v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mBgPaint:Lcom/oneplus/aod/bg/IBgPaint;
 
-    invoke-interface {p1, p0}, Lcom/oneplus/aod/bg/IBgPaint;->setup(Landroid/view/View;)V
+    invoke-interface {v0, p0}, Lcom/oneplus/aod/bg/IBgPaint;->setup(Landroid/view/View;)V
 
-    iget-object p1, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mBgPaint:Lcom/oneplus/aod/bg/IBgPaint;
+    iget-object v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mBgPaint:Lcom/oneplus/aod/bg/IBgPaint;
 
-    instance-of v0, p1, Lcom/oneplus/aod/bg/OpSketchPaint;
+    instance-of v1, v0, Lcom/oneplus/aod/bg/OpSketchPaint;
 
-    if-eqz v0, :cond_2
+    if-eqz v1, :cond_2
 
-    check-cast p1, Lcom/oneplus/aod/bg/OpSketchPaint;
+    check-cast v0, Lcom/oneplus/aod/bg/OpSketchPaint;
 
-    invoke-virtual {p1, p2}, Lcom/oneplus/aod/bg/OpSketchPaint;->setupContour(Lcom/oneplus/aod/utils/OpCanvasAodHelper$Data;)V
+    invoke-virtual {v0, p2}, Lcom/oneplus/aod/bg/OpSketchPaint;->setupContour(Lcom/oneplus/aod/utils/OpCanvasAodHelper$Data;)V
 
     :cond_2
-    iget-object p1, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mBgPaint:Lcom/oneplus/aod/bg/IBgPaint;
+    iget-object p2, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mBgPaint:Lcom/oneplus/aod/bg/IBgPaint;
 
-    iget p2, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mWidth:I
+    iget v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mWidth:I
 
-    iget v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mHeight:I
+    iget v1, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mHeight:I
 
-    invoke-interface {p1, p2, v0}, Lcom/oneplus/aod/bg/IBgPaint;->onSizeChanged(II)V
+    invoke-interface {p2, v0, v1}, Lcom/oneplus/aod/bg/IBgPaint;->onSizeChanged(II)V
 
     :cond_3
+    iget-object p2, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mAodMask:Lcom/oneplus/aod/bg/OpAodLowLightMask;
+
+    if-eqz p2, :cond_5
+
+    if-eqz p1, :cond_4
+
+    invoke-virtual {p2}, Lcom/oneplus/aod/bg/OpAodLowLightMask;->createMask()V
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {p2}, Lcom/oneplus/aod/bg/OpAodLowLightMask;->release()V
+
+    :cond_5
+    :goto_0
     invoke-virtual {p0}, Landroid/view/View;->isAttachedToWindow()Z
 
     move-result p1
 
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_6
 
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
-    :cond_4
+    :cond_6
     return-void
 .end method
 
@@ -301,15 +486,24 @@
 
 # virtual methods
 .method public burnInProtect()V
-    .locals 0
+    .locals 2
 
+    iget-object v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mAodMask:Lcom/oneplus/aod/bg/OpAodLowLightMask;
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_0
     iget-object p0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mBgPaint:Lcom/oneplus/aod/bg/IBgPaint;
 
-    if-eqz p0, :cond_0
+    if-eqz p0, :cond_1
 
     invoke-interface {p0}, Lcom/oneplus/aod/bg/IBgPaint;->burnInProtect()V
 
-    :cond_0
+    :cond_1
     return-void
 .end method
 
@@ -321,6 +515,10 @@
     const-string v1, "disable"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mHelper:Lcom/oneplus/aod/utils/OpCanvasAodHelper;
+
+    invoke-virtual {v0}, Lcom/oneplus/aod/utils/OpCanvasAodHelper;->resetPrevClockStyle()V
 
     const/4 v0, 0x0
 
@@ -359,13 +557,19 @@
 .end method
 
 .method protected onAttachedToWindow()V
-    .locals 1
+    .locals 4
 
     invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
 
-    const/4 v0, 0x1
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    iput-boolean v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mIsFirstAlarm:Z
+    move-result-wide v0
+
+    const-wide/16 v2, 0x3e8
+
+    div-long/2addr v0, v2
+
+    iput-wide v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mCurrentTime:J
 
     return-void
 .end method
@@ -405,22 +609,37 @@
 .end method
 
 .method public onTimeChanged()V
-    .locals 1
+    .locals 7
 
-    iget-boolean v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mIsFirstAlarm:Z
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    if-eqz v0, :cond_0
+    move-result-wide v0
 
-    const/4 v0, 0x0
+    const-wide/16 v2, 0x3e8
 
-    iput-boolean v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mIsFirstAlarm:Z
+    div-long/2addr v0, v2
 
-    goto :goto_0
+    invoke-static {}, Lcom/oneplus/aod/utils/OpAodBurnInProtectionHelper;->getMoveDelay()I
 
-    :cond_0
+    move-result v2
+
+    mul-int/lit8 v2, v2, 0x3b
+
+    iget-wide v3, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mCurrentTime:J
+
+    sub-long v3, v0, v3
+
+    int-to-long v5, v2
+
+    cmp-long v2, v3, v5
+
+    if-lez v2, :cond_0
+
     invoke-virtual {p0}, Lcom/oneplus/aod/bg/OpAodCanvas;->burnInProtect()V
 
-    :goto_0
+    iput-wide v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mCurrentTime:J
+
+    :cond_0
     return-void
 .end method
 
@@ -461,17 +680,50 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mHandler:Landroid/os/Handler;
 
-    new-instance v1, Lcom/oneplus/aod/bg/OpAodCanvas$1;
+    new-instance v1, Lcom/oneplus/aod/bg/OpAodCanvas$2;
 
-    invoke-direct {v1, p0}, Lcom/oneplus/aod/bg/OpAodCanvas$1;-><init>(Lcom/oneplus/aod/bg/OpAodCanvas;)V
+    invoke-direct {v1, p0}, Lcom/oneplus/aod/bg/OpAodCanvas$2;-><init>(Lcom/oneplus/aod/bg/OpAodCanvas;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
+.method protected onVisibilityChanged(Landroid/view/View;I)V
+    .locals 1
+
+    invoke-super {p0, p1, p2}, Landroid/view/View;->onVisibilityChanged(Landroid/view/View;I)V
+
+    iget-object p1, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mAodMask:Lcom/oneplus/aod/bg/OpAodLowLightMask;
+
+    if-eqz p1, :cond_1
+
+    iget-object v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mBgPaint:Lcom/oneplus/aod/bg/IBgPaint;
+
+    if-eqz v0, :cond_0
+
+    iget-boolean p0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mLowEnviroment:Z
+
+    if-eqz p0, :cond_0
+
+    if-nez p2, :cond_0
+
+    const/4 p0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x4
+
+    :goto_0
+    invoke-virtual {p1, p0}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_1
+    return-void
+.end method
+
 .method public recover()V
-    .locals 2
+    .locals 4
 
     const-string v0, "OpAodCanvas"
 
@@ -479,17 +731,25 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    const/4 v0, 0x1
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    iput-boolean v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mIsFirstAlarm:Z
+    move-result-wide v0
 
-    iget-object p0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mBgPaint:Lcom/oneplus/aod/bg/IBgPaint;
+    const-wide/16 v2, 0x3e8
 
-    if-eqz p0, :cond_0
+    div-long/2addr v0, v2
 
-    invoke-interface {p0}, Lcom/oneplus/aod/bg/IBgPaint;->recover()V
+    iput-wide v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mCurrentTime:J
+
+    iget-object v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mBgPaint:Lcom/oneplus/aod/bg/IBgPaint;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lcom/oneplus/aod/bg/IBgPaint;->recover()V
 
     :cond_0
+    invoke-direct {p0}, Lcom/oneplus/aod/bg/OpAodCanvas;->clearLowEnvironmentChecking()V
+
     return-void
 .end method
 
@@ -508,15 +768,24 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mBgPaint:Lcom/oneplus/aod/bg/IBgPaint;
 
+    const/4 v1, 0x0
+
     if-eqz v0, :cond_0
 
     invoke-interface {v0}, Lcom/oneplus/aod/bg/IBgPaint;->release()V
 
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mBgPaint:Lcom/oneplus/aod/bg/IBgPaint;
+    iput-object v1, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mBgPaint:Lcom/oneplus/aod/bg/IBgPaint;
 
     :cond_0
+    iget-object v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mAodMask:Lcom/oneplus/aod/bg/OpAodLowLightMask;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Lcom/oneplus/aod/bg/OpAodLowLightMask;->release()V
+
+    iput-object v1, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mAodMask:Lcom/oneplus/aod/bg/OpAodLowLightMask;
+
+    :cond_1
     return-void
 .end method
 
@@ -551,9 +820,21 @@
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
-    iget-object p0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mObserver:Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;
+    iget-object v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mObserver:Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;
 
-    invoke-virtual {p0}, Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;->register()V
+    invoke-virtual {v0}, Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;->register()V
+
+    invoke-direct {p0}, Lcom/oneplus/aod/bg/OpAodCanvas;->clearLowEnvironmentChecking()V
+
+    return-void
+.end method
+
+.method public setAodMask(Landroid/view/View;)V
+    .locals 0
+
+    check-cast p1, Lcom/oneplus/aod/bg/OpAodLowLightMask;
+
+    iput-object p1, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mAodMask:Lcom/oneplus/aod/bg/OpAodLowLightMask;
 
     return-void
 .end method
@@ -574,8 +855,22 @@
     return-void
 .end method
 
-.method public userActivityInAlwaysOn(Ljava/lang/String;)V
+.method public stopDozing()V
     .locals 2
+
+    const-string v0, "OpAodCanvas"
+
+    const-string v1, "stopDozing"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-direct {p0}, Lcom/oneplus/aod/bg/OpAodCanvas;->clearLowEnvironmentChecking()V
+
+    return-void
+.end method
+
+.method public userActivityInAlwaysOn(Ljava/lang/String;)V
+    .locals 4
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -595,16 +890,17 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    const/4 p1, 0x1
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    iput-boolean p1, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mIsFirstAlarm:Z
+    move-result-wide v0
 
-    iget-object p0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mBgPaint:Lcom/oneplus/aod/bg/IBgPaint;
+    const-wide/16 v2, 0x3e8
 
-    if-eqz p0, :cond_0
+    div-long/2addr v0, v2
 
-    invoke-interface {p0}, Lcom/oneplus/aod/bg/IBgPaint;->userActivityInAlwaysOn()V
+    iput-wide v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mCurrentTime:J
 
-    :cond_0
+    invoke-direct {p0}, Lcom/oneplus/aod/bg/OpAodCanvas;->checkEnvironment()V
+
     return-void
 .end method

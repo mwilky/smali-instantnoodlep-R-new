@@ -1,11 +1,11 @@
 .class Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper$1;
-.super Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
+.super Landroid/os/Handler;
 .source "OpFodBurnInProtectionHelper.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;-><init>(Landroid/content/Context;Lcom/android/keyguard/KeyguardUpdateMonitor;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,42 +19,37 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;)V
+.method constructor <init>(Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;Landroid/os/Looper;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper$1;->this$0:Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;
 
-    invoke-direct {p0}, Lcom/android/keyguard/KeyguardUpdateMonitorCallback;-><init>()V
+    invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onStartedWakingUp()V
+.method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    invoke-super {p0}, Lcom/android/keyguard/KeyguardUpdateMonitorCallback;->onStartedWakingUp()V
+    iget v0, p1, Landroid/os/Message;->what:I
 
-    const-string v0, "OpFodBurnInProtectionHelper"
+    const/16 v1, 0x3e8
 
-    const-string v1, "onStartedWakingUp"
+    if-eq v0, v1, :cond_0
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    return-void
 
-    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper$1;->this$0:Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;
+    :cond_0
+    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->access$000(Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;)Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    check-cast p1, Ljava/lang/String;
 
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper$1;->this$0:Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;
 
-    invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->access$100(Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;)V
+    invoke-virtual {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->handleStartSchedule(Ljava/lang/String;)V
 
     return-void
 .end method

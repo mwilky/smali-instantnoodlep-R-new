@@ -132,43 +132,43 @@
 
     iput-object v3, p0, Lcom/android/systemui/statusbar/policy/UserSwitcherController;->mForcePictureLoadForUserId:Landroid/util/SparseBooleanArray;
 
-    new-instance v3, Lcom/android/systemui/statusbar/policy/UserSwitcherController$2;
-
-    invoke-direct {v3, p0}, Lcom/android/systemui/statusbar/policy/UserSwitcherController$2;-><init>(Lcom/android/systemui/statusbar/policy/UserSwitcherController;)V
-
-    iput-object v3, p0, Lcom/android/systemui/statusbar/policy/UserSwitcherController;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
-
     new-instance v3, Lcom/android/systemui/statusbar/policy/UserSwitcherController$3;
 
     invoke-direct {v3, p0}, Lcom/android/systemui/statusbar/policy/UserSwitcherController$3;-><init>(Lcom/android/systemui/statusbar/policy/UserSwitcherController;)V
 
-    iput-object v3, p0, Lcom/android/systemui/statusbar/policy/UserSwitcherController;->mReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v3, p0, Lcom/android/systemui/statusbar/policy/UserSwitcherController;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
 
     new-instance v3, Lcom/android/systemui/statusbar/policy/UserSwitcherController$4;
 
     invoke-direct {v3, p0}, Lcom/android/systemui/statusbar/policy/UserSwitcherController$4;-><init>(Lcom/android/systemui/statusbar/policy/UserSwitcherController;)V
 
-    iput-object v3, p0, Lcom/android/systemui/statusbar/policy/UserSwitcherController;->mUnpauseRefreshUsers:Ljava/lang/Runnable;
+    iput-object v3, p0, Lcom/android/systemui/statusbar/policy/UserSwitcherController;->mReceiver:Landroid/content/BroadcastReceiver;
 
     new-instance v3, Lcom/android/systemui/statusbar/policy/UserSwitcherController$5;
+
+    invoke-direct {v3, p0}, Lcom/android/systemui/statusbar/policy/UserSwitcherController$5;-><init>(Lcom/android/systemui/statusbar/policy/UserSwitcherController;)V
+
+    iput-object v3, p0, Lcom/android/systemui/statusbar/policy/UserSwitcherController;->mUnpauseRefreshUsers:Ljava/lang/Runnable;
+
+    new-instance v3, Lcom/android/systemui/statusbar/policy/UserSwitcherController$6;
 
     new-instance v4, Landroid/os/Handler;
 
     invoke-direct {v4}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v3, p0, v4}, Lcom/android/systemui/statusbar/policy/UserSwitcherController$5;-><init>(Lcom/android/systemui/statusbar/policy/UserSwitcherController;Landroid/os/Handler;)V
+    invoke-direct {v3, p0, v4}, Lcom/android/systemui/statusbar/policy/UserSwitcherController$6;-><init>(Lcom/android/systemui/statusbar/policy/UserSwitcherController;Landroid/os/Handler;)V
 
     iput-object v3, p0, Lcom/android/systemui/statusbar/policy/UserSwitcherController;->mSettingsObserver:Landroid/database/ContentObserver;
-
-    new-instance v3, Lcom/android/systemui/statusbar/policy/UserSwitcherController$6;
-
-    invoke-direct {v3, p0}, Lcom/android/systemui/statusbar/policy/UserSwitcherController$6;-><init>(Lcom/android/systemui/statusbar/policy/UserSwitcherController;)V
-
-    iput-object v3, p0, Lcom/android/systemui/statusbar/policy/UserSwitcherController;->userDetailAdapter:Lcom/android/systemui/plugins/qs/DetailAdapter;
 
     new-instance v3, Lcom/android/systemui/statusbar/policy/UserSwitcherController$7;
 
     invoke-direct {v3, p0}, Lcom/android/systemui/statusbar/policy/UserSwitcherController$7;-><init>(Lcom/android/systemui/statusbar/policy/UserSwitcherController;)V
+
+    iput-object v3, p0, Lcom/android/systemui/statusbar/policy/UserSwitcherController;->userDetailAdapter:Lcom/android/systemui/plugins/qs/DetailAdapter;
+
+    new-instance v3, Lcom/android/systemui/statusbar/policy/UserSwitcherController$8;
+
+    invoke-direct {v3, p0}, Lcom/android/systemui/statusbar/policy/UserSwitcherController$8;-><init>(Lcom/android/systemui/statusbar/policy/UserSwitcherController;)V
 
     iput-object v3, p0, Lcom/android/systemui/statusbar/policy/UserSwitcherController;->mCallback:Lcom/android/systemui/statusbar/policy/KeyguardStateController$Callback;
 
@@ -527,59 +527,6 @@
     iput-object p0, p1, Lcom/android/systemui/statusbar/policy/UserSwitcherController$UserRecord;->enforcedAdmin:Lcom/android/settingslib/RestrictedLockUtils$EnforcedAdmin;
 
     :goto_0
-    return-void
-.end method
-
-.method private synthetic lambda$switchTo$1()V
-    .locals 5
-
-    const-string v0, "UserSwitcherController"
-
-    const-string/jumbo v1, "switchTo:createGuest:START"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :try_start_0
-    iget-object v1, p0, Lcom/android/systemui/statusbar/policy/UserSwitcherController;->mUserManager:Landroid/os/UserManager;
-
-    iget-object v2, p0, Lcom/android/systemui/statusbar/policy/UserSwitcherController;->mContext:Landroid/content/Context;
-
-    iget-object v3, p0, Lcom/android/systemui/statusbar/policy/UserSwitcherController;->mContext:Landroid/content/Context;
-
-    sget v4, Lcom/android/settingslib/R$string;->guest_nickname:I
-
-    invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v2, v3}, Landroid/os/UserManager;->createGuest(Landroid/content/Context;Ljava/lang/String;)Landroid/content/pm/UserInfo;
-
-    move-result-object v1
-    :try_end_0
-    .catch Landroid/os/UserManager$UserOperationException; {:try_start_0 .. :try_end_0} :catch_0
-
-    const-string/jumbo v2, "switchTo:createGuest:END"
-
-    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    if-nez v1, :cond_0
-
-    return-void
-
-    :cond_0
-    iget v0, v1, Landroid/content/pm/UserInfo;->id:I
-
-    invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/policy/UserSwitcherController;->switchToUserId(I)V
-
-    return-void
-
-    :catch_0
-    move-exception p0
-
-    const-string v1, "Couldn\'t create guest user"
-
-    invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     return-void
 .end method
 
@@ -1117,14 +1064,6 @@
     return p0
 .end method
 
-.method public synthetic lambda$switchTo$1$UserSwitcherController()V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/UserSwitcherController;->lambda$switchTo$1()V
-
-    return-void
-.end method
-
 .method public synthetic lambda$useFullscreenUserSwitcher$0$UserSwitcherController()Ljava/lang/Integer;
     .locals 0
 
@@ -1230,13 +1169,11 @@
 
     if-nez v0, :cond_0
 
-    iget-object p1, p0, Lcom/android/systemui/statusbar/policy/UserSwitcherController;->mHandler:Landroid/os/Handler;
+    new-instance p1, Lcom/android/systemui/statusbar/policy/UserSwitcherController$2;
 
-    new-instance v0, Lcom/android/systemui/statusbar/policy/-$$Lambda$UserSwitcherController$oLVnSzJChIfazaFfVEI2llpMMFM;
+    invoke-direct {p1, p0}, Lcom/android/systemui/statusbar/policy/UserSwitcherController$2;-><init>(Lcom/android/systemui/statusbar/policy/UserSwitcherController;)V
 
-    invoke-direct {v0, p0}, Lcom/android/systemui/statusbar/policy/-$$Lambda$UserSwitcherController$oLVnSzJChIfazaFfVEI2llpMMFM;-><init>(Lcom/android/systemui/statusbar/policy/UserSwitcherController;)V
-
-    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {p1}, Ljava/lang/Thread;->start()V
 
     return-void
 

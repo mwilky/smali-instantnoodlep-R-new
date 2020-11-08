@@ -42,32 +42,62 @@
 .end method
 
 .method private onChangeInner(Z)Z
-    .locals 5
+    .locals 6
 
     const-string v0, "OpAodCanvas"
 
     :try_start_0
     iget-object v1, p0, Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;->this$0:Lcom/oneplus/aod/bg/OpAodCanvas;
 
-    invoke-static {v1}, Lcom/oneplus/aod/bg/OpAodCanvas;->access$1000(Lcom/oneplus/aod/bg/OpAodCanvas;)Landroid/content/Context;
+    invoke-static {v1}, Lcom/oneplus/aod/bg/OpAodCanvas;->access$1700(Lcom/oneplus/aod/bg/OpAodCanvas;)Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/android/systemui/shared/system/OpContextWrapper;->getCurrentUserContext(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object v1
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;->mUri:Landroid/net/Uri;
+
+    const-string v4, "canvasAODEnabled"
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v2, v3, v4, v5, v5}, Landroid/content/ContentResolver;->call(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
+
+    move-result-object v2
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "onChangeInner: contentChange= "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v4, ", userId= "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getUserId()I
+
+    move-result v1
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
     move-result-object v1
 
-    iget-object v2, p0, Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;->mUri:Landroid/net/Uri;
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-string v3, "canvasAODEnabled"
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v1, v2, v3, v4, v4}, Landroid/content/ContentResolver;->call(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
-
-    move-result-object v1
-
-    if-nez v1, :cond_0
+    if-nez v2, :cond_0
 
     const-string p0, "call is null!!!"
 
@@ -78,7 +108,7 @@
     :cond_0
     iget-object p0, p0, Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;->this$0:Lcom/oneplus/aod/bg/OpAodCanvas;
 
-    invoke-static {p0, v1, p1}, Lcom/oneplus/aod/bg/OpAodCanvas;->access$1100(Lcom/oneplus/aod/bg/OpAodCanvas;Landroid/os/Bundle;Z)V
+    invoke-static {p0, v2, p1}, Lcom/oneplus/aod/bg/OpAodCanvas;->access$1800(Lcom/oneplus/aod/bg/OpAodCanvas;Landroid/os/Bundle;Z)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -112,11 +142,23 @@
 
     if-eqz p1, :cond_0
 
-    const-string p1, "OpAodCanvas"
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    const-string p2, "onChange called"
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    const-string p2, "onChange called: userid= "
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "OpAodCanvas"
+
+    invoke-static {p2, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p1, 0x1
 
@@ -126,8 +168,24 @@
     return-void
 .end method
 
+.method public onChange(ZLjava/util/Collection;II)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(Z",
+            "Ljava/util/Collection<",
+            "Landroid/net/Uri;",
+            ">;II)V"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1, p2, p4}, Landroid/database/ContentObserver;->onChange(ZLjava/util/Collection;I)V
+
+    return-void
+.end method
+
 .method public register()V
-    .locals 4
+    .locals 5
 
     const-string v0, "OpAodCanvas"
 
@@ -143,7 +201,7 @@
     :try_start_0
     iget-object v2, p0, Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;->this$0:Lcom/oneplus/aod/bg/OpAodCanvas;
 
-    invoke-static {v2}, Lcom/oneplus/aod/bg/OpAodCanvas;->access$500(Lcom/oneplus/aod/bg/OpAodCanvas;)Landroid/content/Context;
+    invoke-static {v2}, Lcom/oneplus/aod/bg/OpAodCanvas;->access$1200(Lcom/oneplus/aod/bg/OpAodCanvas;)Landroid/content/Context;
 
     move-result-object v2
 
@@ -153,7 +211,9 @@
 
     iget-object v3, p0, Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;->mUri:Landroid/net/Uri;
 
-    invoke-virtual {v2, v3, v1, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
+    const/4 v4, -0x1
+
+    invoke-virtual {v2, v3, v1, p0, v4}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
     const-string v2, "register"
 
@@ -195,19 +255,19 @@
     :cond_2
     iget-object v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;->this$0:Lcom/oneplus/aod/bg/OpAodCanvas;
 
-    invoke-static {v0}, Lcom/oneplus/aod/bg/OpAodCanvas;->access$800(Lcom/oneplus/aod/bg/OpAodCanvas;)Lcom/oneplus/aod/utils/OpCanvasAodHelper;
+    invoke-static {v0}, Lcom/oneplus/aod/bg/OpAodCanvas;->access$1500(Lcom/oneplus/aod/bg/OpAodCanvas;)Lcom/oneplus/aod/utils/OpCanvasAodHelper;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;->this$0:Lcom/oneplus/aod/bg/OpAodCanvas;
 
-    invoke-static {v1}, Lcom/oneplus/aod/bg/OpAodCanvas;->access$600(Lcom/oneplus/aod/bg/OpAodCanvas;)Lcom/oneplus/aod/utils/OpCanvasAodHelper$OnBitmapHandleDoneListener;
+    invoke-static {v1}, Lcom/oneplus/aod/bg/OpAodCanvas;->access$1300(Lcom/oneplus/aod/bg/OpAodCanvas;)Lcom/oneplus/aod/utils/OpCanvasAodHelper$OnBitmapHandleDoneListener;
 
     move-result-object v1
 
     iget-object p0, p0, Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;->this$0:Lcom/oneplus/aod/bg/OpAodCanvas;
 
-    invoke-static {p0}, Lcom/oneplus/aod/bg/OpAodCanvas;->access$700(Lcom/oneplus/aod/bg/OpAodCanvas;)Landroid/os/Handler;
+    invoke-static {p0}, Lcom/oneplus/aod/bg/OpAodCanvas;->access$1400(Lcom/oneplus/aod/bg/OpAodCanvas;)Landroid/os/Handler;
 
     move-result-object p0
 
@@ -226,7 +286,7 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;->this$0:Lcom/oneplus/aod/bg/OpAodCanvas;
 
-    invoke-static {v0}, Lcom/oneplus/aod/bg/OpAodCanvas;->access$900(Lcom/oneplus/aod/bg/OpAodCanvas;)Landroid/content/Context;
+    invoke-static {v0}, Lcom/oneplus/aod/bg/OpAodCanvas;->access$1600(Lcom/oneplus/aod/bg/OpAodCanvas;)Landroid/content/Context;
 
     move-result-object v0
 

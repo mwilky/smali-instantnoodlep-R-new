@@ -1415,6 +1415,9 @@ Je bent ook verbonden met een VPN, waarmee je netwerkactiviteit kan worden gecon
     <string name="overheat_toast_content">De temperatuur van uw telefoon is te hoog en functies met een hoog energieverbruik zijn uitgeschakeld om de temperatuur te verlagen</string>
     <string name="overlay_display_devices_title">Secundaire displays simuleren</string>
     <string name="overview">Overzicht</string>
+    <string name="permission_btn_text_denied">Afsluiten</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Toestemmingsverklaring</string>
     <string name="phone_hint">Vegen voor telefoon</string>
     <string name="phone_label">telefoon openen</string>
     <string name="picture_color_mode">Kleurenmodus voor afbeeldingen</string>

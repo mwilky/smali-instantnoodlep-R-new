@@ -1415,6 +1415,9 @@ You're also connected to a VPN, which can monitor your network activity."</strin
     <string name="overheat_toast_content">The temperature of your phone is too high. High power consumption functions have been turned off to lower the temperature</string>
     <string name="overlay_display_devices_title">Simulate secondary displays</string>
     <string name="overview">Overview</string>
+    <string name="permission_btn_text_denied">Exit</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Permission statement</string>
     <string name="phone_hint">Swipe from icon for phone</string>
     <string name="phone_label">open phone</string>
     <string name="picture_color_mode">Picture colour mode</string>

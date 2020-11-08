@@ -2576,7 +2576,7 @@
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string p2, "setProfileConnectedStatus(): unknown profile id : "
+    const-string/jumbo p2, "setProfileConnectedStatus(): unknown profile id : "
 
     invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

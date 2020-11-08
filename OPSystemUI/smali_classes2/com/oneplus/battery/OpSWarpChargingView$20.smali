@@ -3,12 +3,12 @@
 .source "OpSWarpChargingView.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oneplus/battery/OpSWarpChargingView;->preloadAnimationList()V
+    value = Lcom/oneplus/battery/OpSWarpChargingView;->genWarpAnimation()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -34,77 +34,36 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
 
-    iget-object v0, p0, Lcom/oneplus/battery/OpSWarpChargingView$20;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
+    return-void
+.end method
 
-    const/4 v1, 0x0
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 0
 
-    invoke-static {v0, v1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2802(Lcom/oneplus/battery/OpSWarpChargingView;Z)Z
+    return-void
+.end method
 
-    iget-object v0, p0, Lcom/oneplus/battery/OpSWarpChargingView$20;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
+.method public onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
 
-    const/4 v1, 0x1
+    return-void
+.end method
 
-    invoke-static {v0, v1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2902(Lcom/oneplus/battery/OpSWarpChargingView;Z)Z
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "preloadAnimationList: pre start anim keyguardShowing "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lcom/oneplus/battery/OpSWarpChargingView$20;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
-
-    invoke-static {v1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$3000(Lcom/oneplus/battery/OpSWarpChargingView;)Z
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "OpSWarpChargingView"
-
-    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget-object v0, p0, Lcom/oneplus/battery/OpSWarpChargingView$20;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
-
-    invoke-static {v0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$3000(Lcom/oneplus/battery/OpSWarpChargingView;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
 
     iget-object p0, p0, Lcom/oneplus/battery/OpSWarpChargingView$20;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
 
-    invoke-virtual {p0}, Lcom/oneplus/battery/OpSWarpChargingView;->releaseAsset()V
+    invoke-static {p0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$900(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/widget/TextView;
 
-    goto :goto_0
+    move-result-object p0
 
-    :cond_0
-    iget-object v0, p0, Lcom/oneplus/battery/OpSWarpChargingView$20;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
+    const/4 p1, 0x0
 
-    invoke-static {v0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$3100(Lcom/oneplus/battery/OpSWarpChargingView;)Z
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object p0, p0, Lcom/oneplus/battery/OpSWarpChargingView$20;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
-
-    invoke-static {p0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$3200(Lcom/oneplus/battery/OpSWarpChargingView;)I
-
-    move-result v0
-
-    invoke-virtual {p0, v0}, Lcom/oneplus/battery/OpSWarpChargingView;->startAnimation(I)V
-
-    :cond_1
-    :goto_0
     return-void
 .end method

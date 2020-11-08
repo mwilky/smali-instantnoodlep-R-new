@@ -1256,26 +1256,7 @@
     invoke-virtual {v0, v1}, Lcom/android/systemui/doze/DozeSensors$MotionCheck;->setListening(Z)V
 
     :cond_3
-    iget-object v0, p0, Lcom/android/systemui/doze/DozeSensors;->mLightSensor:Lcom/android/systemui/doze/DozeSensors$LightSensor;
-
-    if-eqz v0, :cond_4
-
-    invoke-virtual {v0}, Lcom/android/systemui/doze/DozeSensors$LightSensor;->isListened()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Lcom/android/systemui/doze/DozeSensors;->mLightSensor:Lcom/android/systemui/doze/DozeSensors$LightSensor;
-
-    iget-boolean v1, p0, Lcom/android/systemui/doze/DozeSensors;->mPaused:Z
-
-    xor-int/2addr v1, v5
-
-    invoke-virtual {v0, v1}, Lcom/android/systemui/doze/DozeSensors$LightSensor;->setListening(Z)V
-
-    :cond_4
-    if-nez v4, :cond_5
+    if-nez v4, :cond_4
 
     iget-object v0, p0, Lcom/android/systemui/doze/DozeSensors;->mResolver:Landroid/content/ContentResolver;
 
@@ -1285,17 +1266,17 @@
 
     goto :goto_2
 
-    :cond_5
+    :cond_4
     iget-boolean v0, p0, Lcom/android/systemui/doze/DozeSensors;->mSettingRegistered:Z
 
-    if-nez v0, :cond_6
+    if-nez v0, :cond_5
 
     iget-object v0, p0, Lcom/android/systemui/doze/DozeSensors;->mSensors:[Lcom/android/systemui/doze/DozeSensors$TriggerSensor;
 
     array-length v1, v0
 
     :goto_1
-    if-ge v2, v1, :cond_6
+    if-ge v2, v1, :cond_5
 
     aget-object v3, v0, v2
 
@@ -1307,7 +1288,7 @@
 
     goto :goto_1
 
-    :cond_6
+    :cond_5
     :goto_2
     iput-boolean v4, p0, Lcom/android/systemui/doze/DozeSensors;->mSettingRegistered:Z
 

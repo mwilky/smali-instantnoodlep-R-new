@@ -47,6 +47,8 @@
 
 .field private mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
+.field private mSupportDarkMode:Z
+
 .field private mViewAdded:Z
 
 .field private mViewContainer:Landroid/widget/LinearLayout;
@@ -108,6 +110,20 @@
 
     check-cast p1, Landroid/app/KeyguardManager;
 
+    iget-object p1, p0, Lcom/oneplus/anim/OpGraphLight;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    sget p2, Lcom/android/systemui/R$bool;->config_front_camera_animation_support_dark_theme:I
+
+    invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getBoolean(I)Z
+
+    move-result p1
+
+    iput-boolean p1, p0, Lcom/oneplus/anim/OpGraphLight;->mSupportDarkMode:Z
+
     :cond_0
     new-instance p1, Lcom/oneplus/anim/OpGraphLight$1;
 
@@ -149,6 +165,14 @@
 .end method
 
 .method static synthetic access$1500(Lcom/oneplus/anim/OpGraphLight;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/oneplus/anim/OpGraphLight;->mSupportDarkMode:Z
+
+    return p0
+.end method
+
+.method static synthetic access$1600(Lcom/oneplus/anim/OpGraphLight;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/anim/OpGraphLight;->mDarkMode:Z
@@ -1258,6 +1282,10 @@
     invoke-virtual {p0}, Lcom/oneplus/anim/OpGraphLight;->isFrontCameraAnimOn()Z
 
     move-result p1
+
+    if-eqz p1, :cond_2
+
+    iget-boolean p1, p0, Lcom/oneplus/anim/OpGraphLight;->mSupportDarkMode:Z
 
     if-eqz p1, :cond_2
 

@@ -583,7 +583,7 @@
 
     sget-object v2, Landroid/widget/ImageView$ScaleType;->FIT_CENTER:Landroid/widget/ImageView$ScaleType;
 
-    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
+    invoke-virtual {v1, v2}, Lcom/airbnb/lottie/LottieAnimationView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
     invoke-direct {p0, p2, p3}, Lcom/oneplus/util/OpLottieUtils;->createLottieDrawable(Lcom/android/systemui/plugins/qs/QSTile$State;Z)Lcom/airbnb/lottie/LottieDrawable;
 

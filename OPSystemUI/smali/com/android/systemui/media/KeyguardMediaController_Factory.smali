@@ -48,6 +48,16 @@
     .end annotation
 .end field
 
+.field private final notificationMediaManagerProvider:Ljavax/inject/Provider;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljavax/inject/Provider<",
+            "Lcom/android/systemui/statusbar/NotificationMediaManager;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field private final statusBarStateControllerProvider:Ljavax/inject/Provider;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -60,7 +70,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
+.method public constructor <init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -76,6 +86,9 @@
             ">;",
             "Ljavax/inject/Provider<",
             "Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;",
+            ">;",
+            "Ljavax/inject/Provider<",
+            "Lcom/android/systemui/statusbar/NotificationMediaManager;",
             ">;)V"
         }
     .end annotation
@@ -90,11 +103,13 @@
 
     iput-object p4, p0, Lcom/android/systemui/media/KeyguardMediaController_Factory;->notifLockscreenUserManagerProvider:Ljavax/inject/Provider;
 
+    iput-object p5, p0, Lcom/android/systemui/media/KeyguardMediaController_Factory;->notificationMediaManagerProvider:Ljavax/inject/Provider;
+
     return-void
 .end method
 
-.method public static create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/media/KeyguardMediaController_Factory;
-    .locals 1
+.method public static create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/media/KeyguardMediaController_Factory;
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -109,20 +124,35 @@
             ">;",
             "Ljavax/inject/Provider<",
             "Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;",
+            ">;",
+            "Ljavax/inject/Provider<",
+            "Lcom/android/systemui/statusbar/NotificationMediaManager;",
             ">;)",
             "Lcom/android/systemui/media/KeyguardMediaController_Factory;"
         }
     .end annotation
 
-    new-instance v0, Lcom/android/systemui/media/KeyguardMediaController_Factory;
+    new-instance v6, Lcom/android/systemui/media/KeyguardMediaController_Factory;
 
-    invoke-direct {v0, p0, p1, p2, p3}, Lcom/android/systemui/media/KeyguardMediaController_Factory;-><init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
+    move-object v0, v6
 
-    return-object v0
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    move-object v5, p4
+
+    invoke-direct/range {v0 .. v5}, Lcom/android/systemui/media/KeyguardMediaController_Factory;-><init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
+
+    return-object v6
 .end method
 
-.method public static provideInstance(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/media/KeyguardMediaController;
-    .locals 1
+.method public static provideInstance(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/media/KeyguardMediaController;
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -137,46 +167,67 @@
             ">;",
             "Ljavax/inject/Provider<",
             "Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;",
+            ">;",
+            "Ljavax/inject/Provider<",
+            "Lcom/android/systemui/statusbar/NotificationMediaManager;",
             ">;)",
             "Lcom/android/systemui/media/KeyguardMediaController;"
         }
     .end annotation
 
-    new-instance v0, Lcom/android/systemui/media/KeyguardMediaController;
+    new-instance v6, Lcom/android/systemui/media/KeyguardMediaController;
 
     invoke-interface {p0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Lcom/android/systemui/media/MediaHost;
+    move-object v1, p0
+
+    check-cast v1, Lcom/android/systemui/media/MediaHost;
 
     invoke-interface {p1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Lcom/android/systemui/statusbar/phone/KeyguardBypassController;
+    move-object v2, p0
+
+    check-cast v2, Lcom/android/systemui/statusbar/phone/KeyguardBypassController;
 
     invoke-interface {p2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object p2
+    move-result-object p0
 
-    check-cast p2, Lcom/android/systemui/statusbar/SysuiStatusBarStateController;
+    move-object v3, p0
+
+    check-cast v3, Lcom/android/systemui/statusbar/SysuiStatusBarStateController;
 
     invoke-interface {p3}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object p3
+    move-result-object p0
 
-    check-cast p3, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
+    move-object v4, p0
 
-    invoke-direct {v0, p0, p1, p2, p3}, Lcom/android/systemui/media/KeyguardMediaController;-><init>(Lcom/android/systemui/media/MediaHost;Lcom/android/systemui/statusbar/phone/KeyguardBypassController;Lcom/android/systemui/statusbar/SysuiStatusBarStateController;Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;)V
+    check-cast v4, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
 
-    return-object v0
+    invoke-interface {p4}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    move-result-object p0
+
+    move-object v5, p0
+
+    check-cast v5, Lcom/android/systemui/statusbar/NotificationMediaManager;
+
+    move-object v0, v6
+
+    invoke-direct/range {v0 .. v5}, Lcom/android/systemui/media/KeyguardMediaController;-><init>(Lcom/android/systemui/media/MediaHost;Lcom/android/systemui/statusbar/phone/KeyguardBypassController;Lcom/android/systemui/statusbar/SysuiStatusBarStateController;Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;Lcom/android/systemui/statusbar/NotificationMediaManager;)V
+
+    return-object v6
 .end method
 
 
 # virtual methods
 .method public get()Lcom/android/systemui/media/KeyguardMediaController;
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lcom/android/systemui/media/KeyguardMediaController_Factory;->mediaHostProvider:Ljavax/inject/Provider;
 
@@ -184,9 +235,11 @@
 
     iget-object v2, p0, Lcom/android/systemui/media/KeyguardMediaController_Factory;->statusBarStateControllerProvider:Ljavax/inject/Provider;
 
-    iget-object p0, p0, Lcom/android/systemui/media/KeyguardMediaController_Factory;->notifLockscreenUserManagerProvider:Ljavax/inject/Provider;
+    iget-object v3, p0, Lcom/android/systemui/media/KeyguardMediaController_Factory;->notifLockscreenUserManagerProvider:Ljavax/inject/Provider;
 
-    invoke-static {v0, v1, v2, p0}, Lcom/android/systemui/media/KeyguardMediaController_Factory;->provideInstance(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/media/KeyguardMediaController;
+    iget-object p0, p0, Lcom/android/systemui/media/KeyguardMediaController_Factory;->notificationMediaManagerProvider:Ljavax/inject/Provider;
+
+    invoke-static {v0, v1, v2, v3, p0}, Lcom/android/systemui/media/KeyguardMediaController_Factory;->provideInstance(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/media/KeyguardMediaController;
 
     move-result-object p0
 

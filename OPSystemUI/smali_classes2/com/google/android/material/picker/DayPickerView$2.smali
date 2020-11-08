@@ -41,36 +41,105 @@
 .end method
 
 .method public onPageScrolled(IFI)V
-    .locals 0
+    .locals 4
 
-    const/high16 p1, 0x3f000000    # 0.5f
+    float-to-double v0, p2
 
-    sub-float/2addr p1, p2
+    const-wide/high16 v2, 0x3fd0000000000000L    # 0.25
 
-    invoke-static {p1}, Ljava/lang/Math;->abs(F)F
+    cmpg-double p1, v0, v2
+
+    const/high16 p3, 0x40800000    # 4.0f
+
+    const/high16 v0, 0x3e800000    # 0.25f
+
+    if-gez p1, :cond_0
+
+    sub-float/2addr v0, p2
+
+    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
 
     move-result p1
 
-    const/high16 p2, 0x40000000    # 2.0f
+    :goto_0
+    mul-float/2addr p1, p3
 
-    mul-float/2addr p1, p2
+    goto :goto_1
 
-    iget-object p2, p0, Lcom/google/android/material/picker/DayPickerView$2;->this$0:Lcom/google/android/material/picker/DayPickerView;
+    :cond_0
+    cmpl-float p1, p2, v0
 
-    invoke-static {p2}, Lcom/google/android/material/picker/DayPickerView;->access$100(Lcom/google/android/material/picker/DayPickerView;)Landroid/widget/ImageButton;
+    const/high16 v0, 0x3f400000    # 0.75f
 
-    move-result-object p2
+    if-ltz p1, :cond_1
 
-    invoke-virtual {p2, p1}, Landroid/widget/ImageButton;->setAlpha(F)V
+    cmpg-float p1, p2, v0
 
+    if-gtz p1, :cond_1
+
+    const/4 p1, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    sub-float/2addr v0, p2
+
+    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
+
+    move-result p1
+
+    goto :goto_0
+
+    :goto_1
     iget-object p0, p0, Lcom/google/android/material/picker/DayPickerView$2;->this$0:Lcom/google/android/material/picker/DayPickerView;
 
-    invoke-static {p0}, Lcom/google/android/material/picker/DayPickerView;->access$200(Lcom/google/android/material/picker/DayPickerView;)Landroid/widget/ImageButton;
+    invoke-static {p0}, Lcom/google/android/material/picker/DayPickerView;->access$100(Lcom/google/android/material/picker/DayPickerView;)Lcom/google/android/material/picker/DayPickerPagerAdapter;
 
     move-result-object p0
 
-    invoke-virtual {p0, p1}, Landroid/widget/ImageButton;->setAlpha(F)V
+    invoke-virtual {p0}, Lcom/google/android/material/picker/DayPickerPagerAdapter;->getCurrentView()Ljava/util/ArrayList;
 
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
+
+    move-result p2
+
+    const/4 p3, 0x3
+
+    if-lt p2, p3, :cond_3
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :cond_2
+    :goto_2
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_3
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lcom/google/android/material/picker/SimpleMonthView;
+
+    if-eqz p2, :cond_2
+
+    const/high16 p3, 0x437f0000    # 255.0f
+
+    mul-float/2addr p3, p1
+
+    float-to-int p3, p3
+
+    invoke-virtual {p2, p3}, Lcom/google/android/material/picker/SimpleMonthView;->setMonthTextAlpha(I)V
+
+    goto :goto_2
+
+    :cond_3
     return-void
 .end method
 
@@ -79,7 +148,7 @@
 
     iget-object p0, p0, Lcom/google/android/material/picker/DayPickerView$2;->this$0:Lcom/google/android/material/picker/DayPickerView;
 
-    invoke-static {p0, p1}, Lcom/google/android/material/picker/DayPickerView;->access$300(Lcom/google/android/material/picker/DayPickerView;I)V
+    invoke-static {p0, p1}, Lcom/google/android/material/picker/DayPickerView;->access$200(Lcom/google/android/material/picker/DayPickerView;I)V
 
     return-void
 .end method

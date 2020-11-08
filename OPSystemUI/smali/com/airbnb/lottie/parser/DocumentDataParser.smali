@@ -79,7 +79,7 @@
 
 # virtual methods
 .method public parse(Lcom/airbnb/lottie/parser/moshi/JsonReader;F)Lcom/airbnb/lottie/model/DocumentData;
-    .locals 22
+    .locals 17
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -94,31 +94,31 @@
 
     const/4 v2, 0x0
 
-    const-wide/16 v3, 0x0
+    const/4 v3, 0x0
 
-    const/4 v5, 0x1
+    const/4 v4, 0x1
 
-    move-object v11, v0
+    move-object v9, v0
 
-    move-object v7, v1
+    move-object v6, v1
 
-    move-object v8, v7
+    move-object v7, v6
 
-    move v12, v2
+    move v10, v2
 
-    move/from16 v17, v12
+    move v13, v10
 
-    move/from16 v18, v17
+    move v14, v13
 
-    move-wide v9, v3
+    move v8, v3
 
-    move-wide v13, v9
+    move v11, v8
 
-    move-wide v15, v13
+    move v12, v11
 
-    move-wide/from16 v19, v15
+    move v15, v12
 
-    move/from16 v21, v5
+    move/from16 v16, v4
 
     :goto_0
     invoke-virtual/range {p1 .. p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->hasNext()Z
@@ -146,49 +146,55 @@
     :pswitch_0
     invoke-virtual/range {p1 .. p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextBoolean()Z
 
-    move-result v21
+    move-result v16
 
     goto :goto_0
 
     :pswitch_1
     invoke-virtual/range {p1 .. p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextDouble()D
 
-    move-result-wide v19
+    move-result-wide v2
+
+    double-to-float v15, v2
 
     goto :goto_0
 
     :pswitch_2
     invoke-static/range {p1 .. p1}, Lcom/airbnb/lottie/parser/JsonUtils;->jsonToColor(Lcom/airbnb/lottie/parser/moshi/JsonReader;)I
 
-    move-result v18
+    move-result v14
 
     goto :goto_0
 
     :pswitch_3
     invoke-static/range {p1 .. p1}, Lcom/airbnb/lottie/parser/JsonUtils;->jsonToColor(Lcom/airbnb/lottie/parser/moshi/JsonReader;)I
 
-    move-result v17
+    move-result v13
 
     goto :goto_0
 
     :pswitch_4
     invoke-virtual/range {p1 .. p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextDouble()D
 
-    move-result-wide v15
+    move-result-wide v2
+
+    double-to-float v12, v2
 
     goto :goto_0
 
     :pswitch_5
     invoke-virtual/range {p1 .. p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextDouble()D
 
-    move-result-wide v13
+    move-result-wide v2
+
+    double-to-float v11, v2
 
     goto :goto_0
 
     :pswitch_6
     invoke-virtual/range {p1 .. p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextInt()I
 
-    move-result v12
+    move-result v10
 
     goto :goto_0
 
@@ -214,34 +220,36 @@
 
     move-result-object v2
 
-    aget-object v11, v2, v0
+    aget-object v9, v2, v0
 
     goto :goto_0
 
     :cond_1
     :goto_1
-    sget-object v11, Lcom/airbnb/lottie/model/DocumentData$Justification;->CENTER:Lcom/airbnb/lottie/model/DocumentData$Justification;
+    sget-object v9, Lcom/airbnb/lottie/model/DocumentData$Justification;->CENTER:Lcom/airbnb/lottie/model/DocumentData$Justification;
 
     goto :goto_0
 
     :pswitch_8
     invoke-virtual/range {p1 .. p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextDouble()D
 
-    move-result-wide v9
+    move-result-wide v2
+
+    double-to-float v8, v2
 
     goto :goto_0
 
     :pswitch_9
     invoke-virtual/range {p1 .. p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextString()Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v7
 
     goto :goto_0
 
     :pswitch_a
     invoke-virtual/range {p1 .. p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextString()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v6
 
     goto :goto_0
 
@@ -252,9 +260,9 @@
 
     new-instance v0, Lcom/airbnb/lottie/model/DocumentData;
 
-    move-object v6, v0
+    move-object v5, v0
 
-    invoke-direct/range {v6 .. v21}, Lcom/airbnb/lottie/model/DocumentData;-><init>(Ljava/lang/String;Ljava/lang/String;DLcom/airbnb/lottie/model/DocumentData$Justification;IDDIIDZ)V
+    invoke-direct/range {v5 .. v16}, Lcom/airbnb/lottie/model/DocumentData;-><init>(Ljava/lang/String;Ljava/lang/String;FLcom/airbnb/lottie/model/DocumentData$Justification;IFFIIFZ)V
 
     return-object v0
 

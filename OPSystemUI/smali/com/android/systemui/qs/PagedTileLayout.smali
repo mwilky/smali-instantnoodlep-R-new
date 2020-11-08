@@ -32,6 +32,8 @@
 
 .field private mHorizontalClipBound:I
 
+.field private mIsUseMediaLayout:Z
+
 .field private mLastExcessHeight:I
 
 .field private mLastExpansion:F
@@ -1152,6 +1154,27 @@
     return-void
 .end method
 
+.method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
+    .locals 1
+
+    invoke-virtual {p0}, Landroidx/viewpager/widget/ViewPager;->isFakeDragging()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_0
+    invoke-super {p0, p1}, Landroidx/viewpager/widget/ViewPager;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
 .method protected onLayout(ZIIII)V
     .locals 1
 
@@ -1439,6 +1462,14 @@
     iput p1, p0, Lcom/android/systemui/qs/PagedTileLayout;->mLastExpansion:F
 
     invoke-direct {p0}, Lcom/android/systemui/qs/PagedTileLayout;->updateSelected()V
+
+    return-void
+.end method
+
+.method public setIsUseMediaLayout(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/systemui/qs/PagedTileLayout;->mIsUseMediaLayout:Z
 
     return-void
 .end method
@@ -1765,7 +1796,7 @@
 .end method
 
 .method public updateResources()Z
-    .locals 3
+    .locals 4
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -1779,10 +1810,45 @@
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    move-result v0
+    move-result v1
 
-    iput v0, p0, Lcom/android/systemui/qs/PagedTileLayout;->mHorizontalClipBound:I
+    iput v1, p0, Lcom/android/systemui/qs/PagedTileLayout;->mHorizontalClipBound:I
 
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->densityDpi:I
+
+    const/4 v2, 0x0
+
+    const/16 v3, 0x1fe
+
+    if-lt v1, v3, :cond_1
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/content/res/Configuration;->orientation:I
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_1
+
+    iget-boolean v0, p0, Lcom/android/systemui/qs/PagedTileLayout;->mIsUseMediaLayout:Z
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0, v2, v2, v2, v2}, Landroid/view/ViewGroup;->setPadding(IIII)V
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1797,41 +1863,40 @@
 
     move-result v0
 
-    const/4 v1, 0x0
+    invoke-virtual {p0, v2, v2, v2, v0}, Landroid/view/ViewGroup;->setPadding(IIII)V
 
-    invoke-virtual {p0, v1, v1, v1, v0}, Landroid/view/ViewGroup;->setPadding(IIII)V
+    :goto_1
+    move v0, v2
 
-    move v0, v1
+    :goto_2
+    iget-object v1, p0, Lcom/android/systemui/qs/PagedTileLayout;->mPages:Ljava/util/ArrayList;
 
-    :goto_0
-    iget-object v2, p0, Lcom/android/systemui/qs/PagedTileLayout;->mPages:Ljava/util/ArrayList;
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+    move-result v1
 
-    move-result v2
+    if-ge v2, v1, :cond_2
 
-    if-ge v1, v2, :cond_0
+    iget-object v1, p0, Lcom/android/systemui/qs/PagedTileLayout;->mPages:Ljava/util/ArrayList;
 
-    iget-object v2, p0, Lcom/android/systemui/qs/PagedTileLayout;->mPages:Ljava/util/ArrayList;
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object v2
+    check-cast v1, Lcom/android/systemui/qs/PagedTileLayout$TilePage;
 
-    check-cast v2, Lcom/android/systemui/qs/PagedTileLayout$TilePage;
+    invoke-virtual {v1}, Lcom/android/systemui/qs/TileLayout;->updateResources()Z
 
-    invoke-virtual {v2}, Lcom/android/systemui/qs/TileLayout;->updateResources()Z
+    move-result v1
 
-    move-result v2
+    or-int/2addr v0, v1
 
-    or-int/2addr v0, v2
+    add-int/lit8 v2, v2, 0x1
 
-    add-int/lit8 v1, v1, 0x1
+    goto :goto_2
 
-    goto :goto_0
-
-    :cond_0
-    if-eqz v0, :cond_1
+    :cond_2
+    if-eqz v0, :cond_3
 
     const/4 v1, 0x1
 
@@ -1839,6 +1904,6 @@
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->requestLayout()V
 
-    :cond_1
+    :cond_3
     return v0
 .end method

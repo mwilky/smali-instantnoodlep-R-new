@@ -958,23 +958,21 @@
 .end method
 
 .method public getTruncateAt(Z)Landroid/text/TextUtils$TruncateAt;
-    .locals 2
+    .locals 1
 
     invoke-direct {p0}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceCard;->getMessage()Lcom/google/geo/sidekick/SmartspaceProto$SmartspaceUpdate$SmartspaceCard$Message;
 
     move-result-object p0
 
-    if-eqz p0, :cond_4
-
-    const/4 v0, 0x0
+    if-eqz p0, :cond_3
 
     if-eqz p1, :cond_0
 
     invoke-virtual {p0}, Lcom/google/geo/sidekick/SmartspaceProto$SmartspaceUpdate$SmartspaceCard$Message;->hasTitle()Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_0
 
     invoke-virtual {p0}, Lcom/google/geo/sidekick/SmartspaceProto$SmartspaceUpdate$SmartspaceCard$Message;->getTitle()Lcom/google/geo/sidekick/SmartspaceProto$SmartspaceUpdate$SmartspaceCard$Message$FormattedText;
 
@@ -987,18 +985,18 @@
 
     invoke-virtual {p0}, Lcom/google/geo/sidekick/SmartspaceProto$SmartspaceUpdate$SmartspaceCard$Message$FormattedText$TruncateLocation;->getNumber()I
 
-    move-result v0
+    move-result p0
 
     goto :goto_1
 
     :cond_0
-    if-nez p1, :cond_1
+    if-nez p1, :cond_3
 
     invoke-virtual {p0}, Lcom/google/geo/sidekick/SmartspaceProto$SmartspaceUpdate$SmartspaceCard$Message;->hasSubtitle()Z
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_3
 
     invoke-virtual {p0}, Lcom/google/geo/sidekick/SmartspaceProto$SmartspaceUpdate$SmartspaceCard$Message;->getSubtitle()Lcom/google/geo/sidekick/SmartspaceProto$SmartspaceUpdate$SmartspaceCard$Message$FormattedText;
 
@@ -1006,29 +1004,28 @@
 
     goto :goto_0
 
-    :cond_1
     :goto_1
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    if-eq v0, p0, :cond_3
+    if-eq p0, p1, :cond_2
 
-    const/4 p0, 0x2
+    const/4 p1, 0x2
 
-    if-eq v0, p0, :cond_2
+    if-eq p0, p1, :cond_1
 
     goto :goto_2
 
-    :cond_2
+    :cond_1
     sget-object p0, Landroid/text/TextUtils$TruncateAt;->MIDDLE:Landroid/text/TextUtils$TruncateAt;
 
     return-object p0
 
-    :cond_3
+    :cond_2
     sget-object p0, Landroid/text/TextUtils$TruncateAt;->START:Landroid/text/TextUtils$TruncateAt;
 
     return-object p0
 
-    :cond_4
+    :cond_3
     :goto_2
     sget-object p0, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 

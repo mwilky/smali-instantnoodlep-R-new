@@ -1415,6 +1415,9 @@
     <string name="overheat_toast_content">טמפרטורת הטלפון שלך גבוהה מדי, ופונקציות הצורכות מתח גבוה ייכבו כדי להוריד את הטמפרטורה</string>
     <string name="overlay_display_devices_title">צור הדמיית תצוגות משניות</string>
     <string name="overview">סקירה</string>
+    <string name="permission_btn_text_denied">יציאה</string>
+    <string name="permission_btn_text_grant">אישור</string>
+    <string name="permission_dialog_title">הצהרת הרשאות</string>
     <string name="phone_hint">החלק מהסמל כדי להפעיל את הטלפון</string>
     <string name="phone_label">פתח את הטלפון</string>
     <string name="picture_color_mode">מצב צבע התמונה</string>

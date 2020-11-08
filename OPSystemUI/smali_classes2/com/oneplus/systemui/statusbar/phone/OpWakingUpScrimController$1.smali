@@ -38,13 +38,17 @@
 
     const/4 v1, 0x1
 
-    if-eq v0, v1, :cond_2
+    if-eq v0, v1, :cond_3
 
     const/4 v1, 0x2
 
-    if-eq v0, v1, :cond_1
+    if-eq v0, v1, :cond_2
 
     const/4 p1, 0x3
+
+    if-eq v0, p1, :cond_1
+
+    const/4 p1, 0x4
 
     if-eq v0, p1, :cond_0
 
@@ -53,11 +57,18 @@
     :cond_0
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController$1;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;
 
-    invoke-static {p0}, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;->access$100(Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;)V
+    invoke-static {p0}, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;->access$200(Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;)V
 
     goto :goto_0
 
     :cond_1
+    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController$1;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;
+
+    invoke-static {p0}, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;->access$100(Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;)V
+
+    goto :goto_0
+
+    :cond_2
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Ljava/lang/Boolean;
@@ -72,7 +83,7 @@
 
     goto :goto_0
 
-    :cond_2
+    :cond_3
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Lcom/android/internal/os/SomeArgs;

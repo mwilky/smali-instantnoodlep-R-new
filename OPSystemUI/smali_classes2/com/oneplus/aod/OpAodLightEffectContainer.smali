@@ -920,65 +920,69 @@
 .end method
 
 .method private relayoutViews()V
-    .locals 3
+    .locals 5
 
     iget v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLightIndex:I
 
-    const/16 v1, 0xa
+    const/4 v1, 0x0
 
-    if-eq v0, v1, :cond_1
+    const/4 v2, 0x1
 
-    const/16 v1, 0xb
+    const/16 v3, 0xa
 
-    if-ne v0, v1, :cond_0
+    if-eq v0, v3, :cond_1
+
+    const/16 v3, 0x14
+
+    if-ne v0, v3, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    move v0, v1
 
     goto :goto_1
 
     :cond_1
     :goto_0
-    const/4 v0, 0x1
+    move v0, v2
 
     :goto_1
-    iget-object v1, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v1
+    move-result-object v3
 
     if-eqz v0, :cond_2
 
-    sget v2, Lcom/android/systemui/R$dimen;->op_aod_light_effect_my_width:I
+    sget v4, Lcom/android/systemui/R$dimen;->op_aod_light_effect_my_width:I
 
     goto :goto_2
 
     :cond_2
-    sget v2, Lcom/android/systemui/R$dimen;->op_aod_light_effect_width:I
+    sget v4, Lcom/android/systemui/R$dimen;->op_aod_light_effect_width:I
 
     :goto_2
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    move-result v1
+    move-result v3
 
-    iget-object v2, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLeftView:Landroid/widget/ImageView;
+    iget-object v4, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLeftView:Landroid/widget/ImageView;
 
-    invoke-virtual {v2}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v4}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    move-result-object v2
+    move-result-object v4
 
-    iput v1, v2, Landroid/view/ViewGroup$LayoutParams;->width:I
+    iput v3, v4, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    iget-object v2, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mRightView:Landroid/widget/ImageView;
+    iget-object v4, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mRightView:Landroid/widget/ImageView;
 
-    invoke-virtual {v2}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v4}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    move-result-object v2
+    move-result-object v4
 
-    iput v1, v2, Landroid/view/ViewGroup$LayoutParams;->width:I
+    iput v3, v4, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     if-eqz v0, :cond_3
 
@@ -1000,7 +1004,35 @@
 
     invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
+    goto :goto_3
+
     :cond_3
+    new-array v0, v2, [I
+
+    const/16 v2, 0x143
+
+    aput v2, v0, v1
+
+    invoke-static {v0}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLeftView:Landroid/widget/ImageView;
+
+    sget-object v1, Landroid/widget/ImageView$ScaleType;->FIT_START:Landroid/widget/ImageView$ScaleType;
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
+
+    iget-object p0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mRightView:Landroid/widget/ImageView;
+
+    sget-object v0, Landroid/widget/ImageView$ScaleType;->FIT_END:Landroid/widget/ImageView$ScaleType;
+
+    invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
+
+    :cond_4
+    :goto_3
     return-void
 .end method
 
@@ -1046,7 +1078,7 @@
     goto :goto_0
 
     :cond_0
-    const/16 v1, 0xb
+    const/16 v1, 0x14
 
     if-ne p0, v1, :cond_1
 
@@ -1080,7 +1112,7 @@
 
     if-eq v0, v1, :cond_0
 
-    const/16 v1, 0xb
+    const/16 v1, 0x14
 
     if-eq v0, v1, :cond_0
 
@@ -1259,7 +1291,7 @@
     :cond_0
     iget v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLightIndex:I
 
-    const/16 v3, 0xb
+    const/16 v3, 0x14
 
     if-ne v0, v2, :cond_1
 
@@ -1342,7 +1374,7 @@
 
     if-eq v0, v1, :cond_2
 
-    const/16 v1, 0xb
+    const/16 v1, 0x14
 
     if-ne v0, v1, :cond_0
 

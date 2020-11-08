@@ -41,7 +41,7 @@
     <string name="abc_toolbar_collapse_description">Skjul</string>
     <string name="about_action_bar_title">Om</string>
     <string name="about_app_version_text">Version %s</string>
-    <string name="about_privacy_policy">Personvern</string>
+    <string name="about_privacy_policy">Personvernerklæring</string>
     <string name="about_release_note_title">Oppdateringslogg:</string>
     <string name="about_terms_service">Bruksvilkår</string>
     <string name="accessibility_accessibility_button">Tilgjengelighet</string>
@@ -1415,6 +1415,9 @@ Du er også tilkoblet en VPN som kan overvåke nettverksaktiviteten din."</strin
     <string name="overheat_toast_content">Temperaturen i telefonen er for høy og funksjonen med høy strømforbruk slås av for å senke temperaturen</string>
     <string name="overlay_display_devices_title">Simulering av sekundærskjermer</string>
     <string name="overview">Oversikt</string>
+    <string name="permission_btn_text_denied">Avslutt</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Tillatelseserklæring</string>
     <string name="phone_hint">Sveip ikonet for å åpne telefon</string>
     <string name="phone_label">åpne telefonen</string>
     <string name="picture_color_mode">Fargemodus for bilder</string>

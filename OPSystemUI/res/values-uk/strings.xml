@@ -39,7 +39,7 @@
     <string name="abc_slice_updated">Оновлено: %1$s</string>
     <string name="abc_slices_permission_request">%1$s хоче показати фрагменти додатка %2$s</string>
     <string name="abc_toolbar_collapse_description">Згорнути</string>
-    <string name="about_action_bar_title">Інформація</string>
+    <string name="about_action_bar_title">Відомості</string>
     <string name="about_app_version_text">Version %s</string>
     <string name="about_privacy_policy">Політика конфіденційності</string>
     <string name="about_release_note_title">Журнал оновлень:</string>
@@ -1415,6 +1415,9 @@ IT-адміністратор може відстежувати й контро�
     <string name="overheat_toast_content">Температура телефону занадто висока. Функції з високим енергоспоживанням вимкнено, щоб знизити температуру</string>
     <string name="overlay_display_devices_title">Імітувати додаткові екрани</string>
     <string name="overview">Огляд</string>
+    <string name="permission_btn_text_denied">Вийти</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Заява про дозволи</string>
     <string name="phone_hint">Телефон: проведіть пальцем від значка</string>
     <string name="phone_label">відкрити телефон</string>
     <string name="picture_color_mode">Режим кольору</string>

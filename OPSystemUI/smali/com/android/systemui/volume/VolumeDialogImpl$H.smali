@@ -47,7 +47,7 @@
     :pswitch_0
     iget-object p0, p0, Lcom/android/systemui/volume/VolumeDialogImpl$H;->this$0:Lcom/android/systemui/volume/VolumeDialogImpl;
 
-    invoke-static {p0}, Lcom/android/systemui/volume/VolumeDialogImpl;->access$4400(Lcom/android/systemui/volume/VolumeDialogImpl;)Lcom/android/systemui/plugins/VolumeDialogController$State;
+    invoke-static {p0}, Lcom/android/systemui/volume/VolumeDialogImpl;->access$4500(Lcom/android/systemui/volume/VolumeDialogImpl;)Lcom/android/systemui/plugins/VolumeDialogController$State;
 
     move-result-object p1
 
@@ -79,7 +79,7 @@
     const/4 p1, 0x0
 
     :goto_0
-    invoke-static {p0, v0, p1}, Lcom/android/systemui/volume/VolumeDialogImpl;->access$4300(Lcom/android/systemui/volume/VolumeDialogImpl;IZ)V
+    invoke-static {p0, v0, p1}, Lcom/android/systemui/volume/VolumeDialogImpl;->access$4400(Lcom/android/systemui/volume/VolumeDialogImpl;IZ)V
 
     goto :goto_1
 

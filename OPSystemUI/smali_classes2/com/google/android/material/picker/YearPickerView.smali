@@ -16,6 +16,8 @@
 
 
 # instance fields
+.field private mOnYearSelectedListener:Lcom/google/android/material/picker/YearPickerView$OnYearSelectedListener;
+
 .field private mPicker:Lcom/google/android/material/picker/NumberPicker;
 
 
@@ -87,17 +89,52 @@
 
     iput-object p1, p0, Lcom/google/android/material/picker/YearPickerView;->mPicker:Lcom/google/android/material/picker/NumberPicker;
 
-    const/4 p0, 0x5
+    const/4 p2, 0x5
 
-    invoke-virtual {p1, p0}, Lcom/google/android/material/picker/NumberPicker;->setSelectNumberCount(I)V
+    invoke-virtual {p1, p2}, Lcom/google/android/material/picker/NumberPicker;->setSelectNumberCount(I)V
+
+    iget-object p1, p0, Lcom/google/android/material/picker/YearPickerView;->mPicker:Lcom/google/android/material/picker/NumberPicker;
+
+    const/4 p2, 0x0
+
+    invoke-virtual {p1, p2}, Lcom/google/android/material/picker/NumberPicker;->setWithoutSelectBoldText(Z)V
+
+    iget-object p1, p0, Lcom/google/android/material/picker/YearPickerView;->mPicker:Lcom/google/android/material/picker/NumberPicker;
+
+    new-instance p2, Lcom/google/android/material/picker/YearPickerView$1;
+
+    invoke-direct {p2, p0}, Lcom/google/android/material/picker/YearPickerView$1;-><init>(Lcom/google/android/material/picker/YearPickerView;)V
+
+    invoke-virtual {p1, p2}, Lcom/google/android/material/picker/NumberPicker;->setOnValueChangedListener(Lcom/google/android/material/picker/NumberPicker$OnValueChangeListener;)V
 
     return-void
 .end method
 
 
 # virtual methods
+.method public setCurrentYear()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/google/android/material/picker/YearPickerView;->mOnYearSelectedListener:Lcom/google/android/material/picker/YearPickerView$OnYearSelectedListener;
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lcom/google/android/material/picker/YearPickerView;->mPicker:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-virtual {v1}, Lcom/google/android/material/picker/NumberPicker;->getValue()I
+
+    move-result v1
+
+    invoke-interface {v0, p0, v1}, Lcom/google/android/material/picker/YearPickerView$OnYearSelectedListener;->onYearChanged(Lcom/google/android/material/picker/YearPickerView;I)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public setOnYearSelectedListener(Lcom/google/android/material/picker/YearPickerView$OnYearSelectedListener;)V
     .locals 0
+
+    iput-object p1, p0, Lcom/google/android/material/picker/YearPickerView;->mOnYearSelectedListener:Lcom/google/android/material/picker/YearPickerView$OnYearSelectedListener;
 
     return-void
 .end method

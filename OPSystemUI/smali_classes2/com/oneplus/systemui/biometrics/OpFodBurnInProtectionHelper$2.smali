@@ -1,9 +1,6 @@
 .class Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper$2;
-.super Ljava/lang/Object;
+.super Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
 .source "OpFodBurnInProtectionHelper.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -27,84 +24,80 @@
 
     iput-object p1, p0, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper$2;->this$0:Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/android/keyguard/KeyguardUpdateMonitorCallback;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 4
+.method public onAlwaysOnEnableChanged(Z)V
+    .locals 2
 
-    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper$2;->this$0:Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;
+    invoke-super {p0, p1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitorCallback;->onAlwaysOnEnableChanged(Z)V
 
-    invoke-static {v0}, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->access$200(Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;)Z
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result v0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper$2;->this$0:Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;
+    const-string v1, "onAlwaysOnEnableChanged: active= "
 
-    invoke-static {v1}, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->access$300(Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v1
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    move-result-object v0
 
-    const-string v3, "checking: isAodMode= "
+    const-string v1, "OpFodBurnInProtectionHelper"
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    if-nez p1, :cond_0
 
-    const-string v3, ", needProtection= "
+    iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper$2;->this$0:Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->access$000(Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;)Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/4 v0, 0x0
 
-    move-result-object v2
+    invoke-virtual {p1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    const-string v3, "OpFodBurnInProtectionHelper"
+    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper$2;->this$0:Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;
 
-    invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    if-eqz v0, :cond_1
-
-    if-nez v1, :cond_0
-
-    goto :goto_0
+    invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->access$100(Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;)V
 
     :cond_0
+    return-void
+.end method
+
+.method public onStartedWakingUp()V
+    .locals 2
+
+    invoke-super {p0}, Lcom/android/keyguard/KeyguardUpdateMonitorCallback;->onStartedWakingUp()V
+
+    const-string v0, "OpFodBurnInProtectionHelper"
+
+    const-string v1, "onStartedWakingUp"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper$2;->this$0:Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;
 
     invoke-static {v0}, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->access$000(Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;)Ljava/util/concurrent/atomic/AtomicBoolean;
 
     move-result-object v0
 
-    const/4 v1, 0x1
+    const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper$2;->this$0:Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;
-
-    invoke-static {v0}, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->access$100(Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;)V
-
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper$2;->this$0:Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;
 
-    invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->access$400(Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;)V
-
-    return-void
-
-    :cond_1
-    :goto_0
-    const-string p0, "checking: not needed"
-
-    invoke-static {v3, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;->access$100(Lcom/oneplus/systemui/biometrics/OpFodBurnInProtectionHelper;)V
 
     return-void
 .end method

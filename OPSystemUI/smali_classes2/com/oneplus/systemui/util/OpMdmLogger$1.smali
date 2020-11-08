@@ -18,6 +18,8 @@
 
 
 # instance fields
+.field final synthetic val$extraData:Ljava/util/HashMap;
+
 .field final synthetic val$label:Ljava/lang/String;
 
 .field final synthetic val$tag:Ljava/lang/String;
@@ -26,7 +28,7 @@
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/HashMap;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/systemui/util/OpMdmLogger$1;->val$label:Ljava/lang/String;
@@ -34,6 +36,8 @@
     iput-object p2, p0, Lcom/oneplus/systemui/util/OpMdmLogger$1;->val$value:Ljava/lang/String;
 
     iput-object p3, p0, Lcom/oneplus/systemui/util/OpMdmLogger$1;->val$tag:Ljava/lang/String;
+
+    iput-object p4, p0, Lcom/oneplus/systemui/util/OpMdmLogger$1;->val$extraData:Ljava/util/HashMap;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,7 +47,7 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 4
 
     new-instance v0, Ljava/util/HashMap;
 
@@ -55,65 +59,104 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object p0, p0, Lcom/oneplus/systemui/util/OpMdmLogger$1;->val$tag:Ljava/lang/String;
+    iget-object v1, p0, Lcom/oneplus/systemui/util/OpMdmLogger$1;->val$tag:Ljava/lang/String;
 
-    const-string v1, "lock_unlock_"
+    const-string v2, "lock_unlock_"
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result p0
+    move-result v1
 
-    if-eqz p0, :cond_1
+    if-eqz v1, :cond_1
 
     invoke-static {}, Lcom/oneplus/systemui/util/OpMdmLogger;->access$000()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v1
 
-    if-nez p0, :cond_0
+    if-nez v1, :cond_0
 
     invoke-static {}, Lcom/oneplus/systemui/util/OpMdmLogger;->access$100()Landroid/content/Context;
 
-    move-result-object p0
+    move-result-object v1
 
-    const-string v1, "fingerprint"
+    const-string v2, "fingerprint"
 
-    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v1
 
-    check-cast p0, Landroid/hardware/fingerprint/FingerprintManager;
+    check-cast v1, Landroid/hardware/fingerprint/FingerprintManager;
 
-    invoke-virtual {p0}, Landroid/hardware/fingerprint/FingerprintManager;->getSensorType()Ljava/lang/String;
+    invoke-virtual {v1}, Landroid/hardware/fingerprint/FingerprintManager;->getSensorType()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-static {p0}, Lcom/oneplus/systemui/util/OpMdmLogger;->access$002(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/oneplus/systemui/util/OpMdmLogger;->access$002(Ljava/lang/String;)Ljava/lang/String;
 
     :cond_0
     invoke-static {}, Lcom/oneplus/systemui/util/OpMdmLogger;->access$000()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v1
 
-    if-eqz p0, :cond_1
-
-    invoke-static {}, Lcom/oneplus/systemui/util/OpMdmLogger;->access$000()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result p0
-
-    if-eqz p0, :cond_1
+    if-eqz v1, :cond_1
 
     invoke-static {}, Lcom/oneplus/systemui/util/OpMdmLogger;->access$000()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v1
 
-    const-string v1, "finger_sensor_type"
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
 
-    invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-static {}, Lcom/oneplus/systemui/util/OpMdmLogger;->access$000()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "finger_sensor_type"
+
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
+    invoke-static {}, Lcom/oneplus/systemui/util/OpMdmLogger;->access$200()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "log: mdmData= "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "MdmLogger"
+
+    invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_2
+    invoke-static {}, Lnet/oneplus/odm/OpDeviceManagerInjector;->getInstance()Lnet/oneplus/odm/OpDeviceManagerInjector;
+
+    move-result-object v1
+
+    invoke-static {}, Lcom/oneplus/systemui/util/OpMdmLogger;->access$100()Landroid/content/Context;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/oneplus/systemui/util/OpMdmLogger$1;->val$tag:Ljava/lang/String;
+
+    iget-object p0, p0, Lcom/oneplus/systemui/util/OpMdmLogger$1;->val$extraData:Ljava/util/HashMap;
+
+    invoke-virtual {v1, v2, v3, v0, p0}, Lnet/oneplus/odm/OpDeviceManagerInjector;->preserveAppData(Landroid/content/Context;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;)V
+
     return-void
 .end method

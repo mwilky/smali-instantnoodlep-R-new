@@ -91,7 +91,7 @@
 
     aget-object p0, p1, p0
 
-    invoke-static {v0, p0}, Lcom/android/systemui/statusbar/NotificationMediaManager;->access$600(Lcom/android/systemui/statusbar/NotificationMediaManager;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+    invoke-static {v0, p0}, Lcom/android/systemui/statusbar/NotificationMediaManager;->access$700(Lcom/android/systemui/statusbar/NotificationMediaManager;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object p0
 
@@ -134,7 +134,7 @@
 
     if-eqz p1, :cond_1
 
-    invoke-static {p1, p0}, Lcom/android/systemui/statusbar/NotificationMediaManager;->access$700(Lcom/android/systemui/statusbar/NotificationMediaManager;Landroid/os/AsyncTask;)V
+    invoke-static {p1, p0}, Lcom/android/systemui/statusbar/NotificationMediaManager;->access$800(Lcom/android/systemui/statusbar/NotificationMediaManager;Landroid/os/AsyncTask;)V
 
     :cond_1
     return-void
@@ -169,13 +169,13 @@
 
     if-nez v1, :cond_0
 
-    invoke-static {v0, p0}, Lcom/android/systemui/statusbar/NotificationMediaManager;->access$700(Lcom/android/systemui/statusbar/NotificationMediaManager;Landroid/os/AsyncTask;)V
+    invoke-static {v0, p0}, Lcom/android/systemui/statusbar/NotificationMediaManager;->access$800(Lcom/android/systemui/statusbar/NotificationMediaManager;Landroid/os/AsyncTask;)V
 
     iget-boolean v1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager$ProcessArtworkTask;->mMetaDataChanged:Z
 
     iget-boolean p0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager$ProcessArtworkTask;->mAllowEnterAnimation:Z
 
-    invoke-static {v0, v1, p0, p1}, Lcom/android/systemui/statusbar/NotificationMediaManager;->access$800(Lcom/android/systemui/statusbar/NotificationMediaManager;ZZLandroid/graphics/Bitmap;)V
+    invoke-static {v0, v1, p0, p1}, Lcom/android/systemui/statusbar/NotificationMediaManager;->access$900(Lcom/android/systemui/statusbar/NotificationMediaManager;ZZLandroid/graphics/Bitmap;)V
 
     :cond_0
     return-void

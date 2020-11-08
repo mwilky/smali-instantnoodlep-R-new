@@ -423,6 +423,27 @@
 
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
+    iget p1, p1, Landroid/content/res/Configuration;->orientation:I
+
+    const/4 v0, 0x2
+
+    if-ne p1, v0, :cond_0
+
+    iget-object p1, p0, Lcom/android/systemui/qs/tileimpl/QSTileView;->mLabel:Landroid/widget/TextView;
+
+    sget v0, Lcom/android/systemui/R$dimen;->op_qs_tile_text_size:I
+
+    invoke-static {p1, v0}, Lcom/android/systemui/FontSizeUtils;->updateFontSize(Landroid/widget/TextView;I)V
+
+    iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileView;->mSecondLine:Landroid/widget/TextView;
+
+    sget p1, Lcom/android/systemui/R$dimen;->op_qs_tile_text_size:I
+
+    invoke-static {p0, p1}, Lcom/android/systemui/FontSizeUtils;->updateFontSize(Landroid/widget/TextView;I)V
+
+    goto :goto_0
+
+    :cond_0
     iget-object p1, p0, Lcom/android/systemui/qs/tileimpl/QSTileView;->mLabel:Landroid/widget/TextView;
 
     sget v0, Lcom/android/systemui/R$dimen;->qs_tile_text_size:I
@@ -435,6 +456,7 @@
 
     invoke-static {p0, p1}, Lcom/android/systemui/FontSizeUtils;->updateFontSize(Landroid/widget/TextView;I)V
 
+    :goto_0
     return-void
 .end method
 

@@ -216,7 +216,15 @@
     return-void
 .end method
 
-.method static synthetic access$1000(Lcom/oneplus/aod/OpAodWindowManager;)V
+.method static synthetic access$1000(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    return-object p0
+.end method
+
+.method static synthetic access$1100(Lcom/oneplus/aod/OpAodWindowManager;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/aod/OpAodWindowManager;->removeAodWindow()V
@@ -224,7 +232,7 @@
     return-void
 .end method
 
-.method static synthetic access$1100(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/oneplus/aod/OpAodWindowManager$SettingObserver;
+.method static synthetic access$1200(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/oneplus/aod/OpAodWindowManager$SettingObserver;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mSettingsOberver:Lcom/oneplus/aod/OpAodWindowManager$SettingObserver;
@@ -232,7 +240,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1200(Lcom/oneplus/aod/OpAodWindowManager;)Landroid/view/View;
+.method static synthetic access$1300(Lcom/oneplus/aod/OpAodWindowManager;)Landroid/view/View;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mAodContainer:Landroid/view/View;
@@ -251,12 +259,20 @@
 .method static synthetic access$300(Lcom/oneplus/aod/OpAodWindowManager;)V
     .locals 0
 
+    invoke-direct {p0}, Lcom/oneplus/aod/OpAodWindowManager;->handleFingerprintAuthenticated()V
+
+    return-void
+.end method
+
+.method static synthetic access$400(Lcom/oneplus/aod/OpAodWindowManager;)V
+    .locals 0
+
     invoke-direct {p0}, Lcom/oneplus/aod/OpAodWindowManager;->reportMDMEvent()V
 
     return-void
 .end method
 
-.method static synthetic access$400(Lcom/oneplus/aod/OpAodWindowManager;)Landroid/content/Context;
+.method static synthetic access$500(Lcom/oneplus/aod/OpAodWindowManager;)Landroid/content/Context;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mContext:Landroid/content/Context;
@@ -264,7 +280,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$500(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/oneplus/aod/bg/OpAodCanvas;
+.method static synthetic access$600(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/oneplus/aod/bg/OpAodCanvas;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mAodBg:Lcom/oneplus/aod/bg/OpAodCanvas;
@@ -272,7 +288,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$600(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
+.method static synthetic access$700(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mUnlockController:Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
@@ -280,7 +296,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$700(Lcom/oneplus/aod/OpAodWindowManager;)Z
+.method static synthetic access$800(Lcom/oneplus/aod/OpAodWindowManager;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mIsWakeAndUnlock:Z
@@ -288,7 +304,7 @@
     return p0
 .end method
 
-.method static synthetic access$702(Lcom/oneplus/aod/OpAodWindowManager;Z)Z
+.method static synthetic access$802(Lcom/oneplus/aod/OpAodWindowManager;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/oneplus/aod/OpAodWindowManager;->mIsWakeAndUnlock:Z
@@ -296,7 +312,7 @@
     return p1
 .end method
 
-.method static synthetic access$802(Lcom/oneplus/aod/OpAodWindowManager;Ljava/lang/String;)Ljava/lang/String;
+.method static synthetic access$902(Lcom/oneplus/aod/OpAodWindowManager;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/aod/OpAodWindowManager;->mWakingUpReason:Ljava/lang/String;
@@ -304,16 +320,8 @@
     return-object p1
 .end method
 
-.method static synthetic access$900(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/android/keyguard/KeyguardUpdateMonitor;
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    return-object p0
-.end method
-
 .method private getAodViewLayoutParams()Landroid/view/WindowManager$LayoutParams;
-    .locals 4
+    .locals 5
 
     new-instance p0, Landroid/view/WindowManager$LayoutParams;
 
@@ -323,29 +331,57 @@
 
     iput v0, p0, Landroid/view/WindowManager$LayoutParams;->type:I
 
-    const/16 v0, 0x10
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isCtsInputmethodservice()Z
 
-    iput v0, p0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
+    move-result v0
 
-    const/4 v1, 0x3
+    if-nez v0, :cond_1
 
-    iput v1, p0, Landroid/view/WindowManager$LayoutParams;->layoutInDisplayCutoutMode:I
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isCTSAdded()Z
 
-    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+    move-result v0
 
-    const/16 v3, 0x1b
+    if-eqz v0, :cond_0
 
-    if-lt v2, v3, :cond_0
-
-    const/high16 v2, 0x200000
-
-    or-int/2addr v0, v2
-
-    iput v0, p0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
+    goto :goto_0
 
     :cond_0
+    const v0, 0x1000500
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const-string v0, "AodWindowManager"
+
+    const-string v1, "no focus flag"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     const v0, 0x1000508
 
+    :goto_1
+    const/16 v1, 0x10
+
+    iput v1, p0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
+
+    const/4 v2, 0x3
+
+    iput v2, p0, Landroid/view/WindowManager$LayoutParams;->layoutInDisplayCutoutMode:I
+
+    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v4, 0x1b
+
+    if-lt v3, v4, :cond_2
+
+    const/high16 v3, 0x200000
+
+    or-int/2addr v1, v3
+
+    iput v1, p0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
+
+    :cond_2
     iput v0, p0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     const/4 v0, -0x2
@@ -370,9 +406,38 @@
 
     invoke-virtual {p0, v0}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    iput v1, p0, Landroid/view/WindowManager$LayoutParams;->softInputMode:I
+    iput v2, p0, Landroid/view/WindowManager$LayoutParams;->softInputMode:I
 
     return-object p0
+.end method
+
+.method private handleFingerprintAuthenticated()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mAodWindowView:Landroid/widget/RelativeLayout;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/widget/RelativeLayout;->getWindowInsetsController()Landroid/view/WindowInsetsController;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mAodWindowView:Landroid/widget/RelativeLayout;
+
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getWindowInsetsController()Landroid/view/WindowInsetsController;
+
+    move-result-object p0
+
+    invoke-static {}, Landroid/view/WindowInsets$Type;->navigationBars()I
+
+    move-result v0
+
+    invoke-interface {p0, v0}, Landroid/view/WindowInsetsController;->show(I)V
+
+    :cond_0
+    return-void
 .end method
 
 .method private handleStartDozing()V
@@ -529,6 +594,27 @@
 
     iput-boolean v0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mDozing:Z
 
+    iget-object v1, p0, Lcom/oneplus/aod/OpAodWindowManager;->mAodBg:Lcom/oneplus/aod/bg/OpAodCanvas;
+
+    invoke-virtual {v1}, Lcom/oneplus/aod/bg/OpAodCanvas;->stopDozing()V
+
+    invoke-direct {p0}, Lcom/oneplus/aod/OpAodWindowManager;->shouldRemoveAodImmediately()Z
+
+    move-result v1
+
+    const-string v2, "AodWindowManager"
+
+    if-eqz v1, :cond_1
+
+    const-string v0, "handleStopDozing: remove window immediately"
+
+    invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-direct {p0}, Lcom/oneplus/aod/OpAodWindowManager;->removeAodWindow()V
+
+    return-void
+
+    :cond_1
     invoke-static {}, Lcom/oneplus/plugin/OpLsState;->getInstance()Lcom/oneplus/plugin/OpLsState;
 
     move-result-object v1
@@ -537,37 +623,35 @@
 
     move-result-object v1
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    invoke-virtual {v1, v2}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->isShowingLiveWallpaper(Z)Z
+    invoke-virtual {v1, v3}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->isShowingLiveWallpaper(Z)Z
 
     move-result v1
 
-    xor-int/2addr v1, v2
+    xor-int/2addr v1, v3
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "handleStopDozing: mIsWakeAndUnlock = "
+    const-string v4, "handleStopDozing: mIsWakeAndUnlock = "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v3, p0, Lcom/oneplus/aod/OpAodWindowManager;->mIsWakeAndUnlock:Z
+    iget-boolean v4, p0, Lcom/oneplus/aod/OpAodWindowManager;->mIsWakeAndUnlock:Z
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v3, ", hasLockWallpaper = "
+    const-string v4, ", hasLockWallpaper = "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
-
-    const-string v2, "AodWindowManager"
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -575,7 +659,7 @@
 
     sget-boolean v3, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
-    if-eqz v3, :cond_1
+    if-eqz v3, :cond_2
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -595,16 +679,16 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_1
+    :cond_2
     invoke-static {}, Lcom/oneplus/util/OpUtils;->isCustomFingerprint()Z
 
     move-result v3
 
-    if-eqz v3, :cond_4
+    if-eqz v3, :cond_5
 
     iget-object v3, p0, Lcom/oneplus/aod/OpAodWindowManager;->mWakingUpReason:Ljava/lang/String;
 
-    if-eqz v3, :cond_5
+    if-eqz v3, :cond_6
 
     const-string v4, "FINGERPRINT"
 
@@ -614,22 +698,22 @@
 
     const-string v4, "com.android.systemui:FailedAttempts"
 
-    if-eqz v3, :cond_2
+    if-eqz v3, :cond_3
 
     goto :goto_0
 
-    :cond_2
+    :cond_3
     iget-object v3, p0, Lcom/oneplus/aod/OpAodWindowManager;->mWakingUpReason:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_3
+    if-eqz v3, :cond_4
 
     const/16 v0, 0x5a
 
-    :cond_3
+    :cond_4
     :goto_0
     iget-object v3, p0, Lcom/oneplus/aod/OpAodWindowManager;->mWakingUpReason:Ljava/lang/String;
 
@@ -637,16 +721,16 @@
 
     move-result v3
 
-    if-eqz v3, :cond_5
+    if-eqz v3, :cond_6
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     goto :goto_1
 
-    :cond_4
+    :cond_5
     iget-object v3, p0, Lcom/oneplus/aod/OpAodWindowManager;->mWakingUpReason:Ljava/lang/String;
 
-    if-eqz v3, :cond_5
+    if-eqz v3, :cond_6
 
     const-string v4, "FINGERPRINT_WALLPAPER"
 
@@ -654,11 +738,11 @@
 
     move-result v3
 
-    if-eqz v3, :cond_5
+    if-eqz v3, :cond_6
 
     const/16 v0, 0x64
 
-    :cond_5
+    :cond_6
     :goto_1
     iget-object v3, p0, Lcom/oneplus/aod/OpAodWindowManager;->mAodWindowView:Landroid/widget/RelativeLayout;
 
@@ -680,7 +764,7 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-lez v0, :cond_6
+    if-lez v0, :cond_7
 
     iget-object v1, p0, Lcom/oneplus/aod/OpAodWindowManager;->mHandler:Landroid/os/Handler;
 
@@ -692,7 +776,7 @@
 
     goto :goto_2
 
-    :cond_6
+    :cond_7
     invoke-direct {p0}, Lcom/oneplus/aod/OpAodWindowManager;->removeAodWindow()V
 
     :goto_2
@@ -719,6 +803,39 @@
     return-void
 
     :cond_0
+    iget-object v0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mAodWindowView:Landroid/widget/RelativeLayout;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Landroid/widget/RelativeLayout;->getWindowInsetsController()Landroid/view/WindowInsetsController;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isFingerprintAlreadyAuthenticated()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mAodWindowView:Landroid/widget/RelativeLayout;
+
+    invoke-virtual {v0}, Landroid/widget/RelativeLayout;->getWindowInsetsController()Landroid/view/WindowInsetsController;
+
+    move-result-object v0
+
+    invoke-static {}, Landroid/view/WindowInsets$Type;->navigationBars()I
+
+    move-result v1
+
+    invoke-interface {v0, v1}, Landroid/view/WindowInsetsController;->show(I)V
+
+    :cond_1
     const-string v0, "AodWindowManager"
 
     const-string v1, "aod remove window"
@@ -879,6 +996,35 @@
 
     :goto_7
     return-void
+.end method
+
+.method private shouldRemoveAodImmediately()Z
+    .locals 1
+
+    iget-object v0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    invoke-virtual {v0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isAlwaysOnEnabled()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mContext:Landroid/content/Context;
+
+    invoke-static {p0}, Lcom/oneplus/aod/utils/OpCanvasAodHelper;->isCanvasAodEnabled(Landroid/content/Context;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
 .end method
 
 
@@ -1098,6 +1244,18 @@
     return p0
 .end method
 
+.method public onFingerprintAuthenticated()V
+    .locals 1
+
+    iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mHandler:Landroid/os/Handler;
+
+    const/4 v0, 0x4
+
+    invoke-virtual {p0, v0}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    return-void
+.end method
+
 .method public onWakingAndUnlocking()V
     .locals 1
 
@@ -1108,12 +1266,6 @@
     move-result-object v0
 
     iput-object v0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mWakingUpReason:Ljava/lang/String;
-
-    const-string p0, "AodWindowManager"
-
-    const-string v0, "onWakingAndUnlocking"
-
-    invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method

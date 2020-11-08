@@ -403,13 +403,37 @@
 .end method
 
 .method private handleTakeScreenshot()V
-    .locals 7
+    .locals 8
 
     new-instance v0, Lcom/android/internal/util/ScreenshotHelper;
 
     iget-object p0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, p0}, Lcom/android/internal/util/ScreenshotHelper;-><init>(Landroid/content/Context;)V
+
+    new-instance v7, Landroid/os/Bundle;
+
+    invoke-direct {v7}, Landroid/os/Bundle;-><init>()V
+
+    const-string/jumbo p0, "voiceLongshot"
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v7, p0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
+
+    const-string p0, "longshot"
+
+    invoke-virtual {v7, p0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
+
+    const-string p0, "focusWindow"
+
+    const-string v1, ""
+
+    invoke-virtual {v7, p0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Lcom/android/internal/util/ScreenshotHelper;->getScreenshotHelperInjector()Lcom/android/internal/util/ScreenshotHelperInjector;
+
+    move-result-object v1
 
     new-instance v5, Landroid/os/Handler;
 
@@ -419,17 +443,15 @@
 
     invoke-direct {v5, p0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    const/4 v1, 0x1
-
     const/4 v2, 0x1
 
     const/4 v3, 0x1
 
-    const/4 v4, 0x0
+    const/4 v4, 0x1
 
     const/4 v6, 0x0
 
-    invoke-virtual/range {v0 .. v6}, Lcom/android/internal/util/ScreenshotHelper;->takeScreenshot(IZZILandroid/os/Handler;Ljava/util/function/Consumer;)V
+    invoke-virtual/range {v1 .. v7}, Lcom/android/internal/util/ScreenshotHelperInjector;->takeScreenshot(IZZLandroid/os/Handler;ZLandroid/os/Bundle;)V
 
     return-void
 .end method

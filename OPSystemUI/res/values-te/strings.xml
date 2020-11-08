@@ -1415,6 +1415,9 @@
     <string name="overheat_toast_content">మీ ఫోన్ యొక్క ఉష్ణోగ్రత చాలా ఎక్కువగా ఉంది మరియు ఉష్ణోగ్రత తగ్గించడానికి అత్యధిక పవర్ వాడకం ఫంక్షన్‌లు ఆఫ్ చేయబడతాయి</string>
     <string name="overlay_display_devices_title">ప్రత్యామ్నాయ ప్రదర్శనలను అనుకరించండి</string>
     <string name="overview">ఓవర్‌వ్యూ</string>
+    <string name="permission_btn_text_denied">నిష్క్రమించు</string>
+    <string name="permission_btn_text_grant">సరే</string>
+    <string name="permission_dialog_title">అనుమతి ప్రకటన</string>
     <string name="phone_hint">ఫోన్ కోసం చిహ్నాన్ని స్వైప్ చేయండి</string>
     <string name="phone_label">ఫోన్‌ను తెరువు</string>
     <string name="picture_color_mode">చిత్రం రంగు మోడ్</string>

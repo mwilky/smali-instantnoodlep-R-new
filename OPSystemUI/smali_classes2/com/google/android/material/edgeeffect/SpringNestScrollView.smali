@@ -28,8 +28,6 @@
 # instance fields
 .field private mActiveEdge:Lcom/google/android/material/edgeeffect/SpringNestScrollView$SpringEdgeEffect;
 
-.field private mAppbarLayout:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
-
 .field private mBottomGlow:Landroid/widget/EdgeEffect;
 
 .field private mDampedScrollShift:F
@@ -47,8 +45,6 @@
 .field private mGlowingBottom:Z
 
 .field private mGlowingTop:Z
-
-.field private mIsEmpty:Z
 
 .field private mLastTouchY:I
 
@@ -85,8 +81,6 @@
 .field private mTouchSlop:I
 
 .field private mVelocityTracker:Landroid/view/VelocityTracker;
-
-.field private mVelocityY:I
 
 .field private mVelocity_multiplier:F
 
@@ -1061,198 +1055,6 @@
     return-void
 .end method
 
-.method public fling(I)V
-    .locals 7
-
-    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->mAppbarLayout:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
-
-    if-eqz v0, :cond_9
-
-    iget-boolean v1, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->mIsEmpty:Z
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_1
-
-    if-gez p1, :cond_0
-
-    const/16 p1, -0x3e8
-
-    invoke-super {p0, p1}, Landroidx/core/widget/NestedScrollView;->fling(I)V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0, v2, v2}, Landroidx/core/widget/NestedScrollView;->smoothScrollTo(II)V
-
-    return-void
-
-    :cond_1
-    const/16 v1, 0x1f4
-
-    const/16 v3, 0x1388
-
-    const/high16 v4, 0x3f800000    # 1.0f
-
-    if-le p1, v1, :cond_2
-
-    if-ge p1, v3, :cond_2
-
-    invoke-virtual {v0}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->getFraction()F
-
-    move-result v0
-
-    cmpg-float v0, v0, v4
-
-    if-gez v0, :cond_2
-
-    const/16 p1, 0x190
-
-    invoke-super {p0, p1}, Landroidx/core/widget/NestedScrollView;->fling(I)V
-
-    return-void
-
-    :cond_2
-    const/16 v0, -0x960
-
-    const/16 v1, -0x1388
-
-    if-ge p1, v1, :cond_3
-
-    iget-object v5, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->mAppbarLayout:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
-
-    invoke-virtual {v5}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->getFraction()F
-
-    move-result v5
-
-    cmpl-float v5, v5, v4
-
-    if-eqz v5, :cond_3
-
-    invoke-super {p0, v0}, Landroidx/core/widget/NestedScrollView;->fling(I)V
-
-    return-void
-
-    :cond_3
-    const/16 v5, -0x2710
-
-    if-ge p1, v5, :cond_4
-
-    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getScrollY()I
-
-    move-result v5
-
-    const/16 v6, 0x5dc
-
-    if-ge v5, v6, :cond_4
-
-    iget-object v5, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->mAppbarLayout:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
-
-    invoke-virtual {v5}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->getFraction()F
-
-    move-result v5
-
-    cmpl-float v5, v5, v4
-
-    if-nez v5, :cond_4
-
-    iput p1, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->mVelocityY:I
-
-    goto :goto_0
-
-    :cond_4
-    if-ge p1, v1, :cond_6
-
-    iget-object v1, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->mAppbarLayout:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
-
-    invoke-virtual {v1}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->getFraction()F
-
-    move-result v1
-
-    cmpl-float v1, v1, v4
-
-    if-nez v1, :cond_6
-
-    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getScrollY()I
-
-    move-result v1
-
-    const/16 v5, 0x64
-
-    if-ge v1, v5, :cond_5
-
-    invoke-super {p0, v0}, Landroidx/core/widget/NestedScrollView;->fling(I)V
-
-    return-void
-
-    :cond_5
-    iput p1, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->mVelocityY:I
-
-    :cond_6
-    :goto_0
-    if-le p1, v3, :cond_8
-
-    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->mAppbarLayout:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
-
-    invoke-virtual {v0}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->getFraction()F
-
-    move-result v0
-
-    cmpg-float v0, v0, v4
-
-    if-gez v0, :cond_8
-
-    add-int/lit16 p1, p1, -0x3e8
-
-    invoke-super {p0, p1}, Landroidx/core/widget/NestedScrollView;->fling(I)V
-
-    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "net.oneplus.weather"
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_7
-
-    iget-object p0, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->mAppbarLayout:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
-
-    const/4 p1, 0x1
-
-    invoke-virtual {p0, p1}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->scrollTop(Z)V
-
-    goto :goto_1
-
-    :cond_7
-    iget-object p0, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->mAppbarLayout:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
-
-    invoke-virtual {p0, v2}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->scrollTop(Z)V
-
-    :goto_1
-    return-void
-
-    :cond_8
-    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->mAppbarLayout:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
-
-    invoke-virtual {v0, v2}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->setOverFling(Z)V
-
-    invoke-super {p0, p1}, Landroidx/core/widget/NestedScrollView;->fling(I)V
-
-    return-void
-
-    :cond_9
-    invoke-super {p0, p1}, Landroidx/core/widget/NestedScrollView;->fling(I)V
-
-    return-void
-.end method
-
 .method invalidateGlows()V
     .locals 1
 
@@ -1579,53 +1381,6 @@
     move-result p0
 
     return p0
-.end method
-
-.method protected onOverScrolled(IIZZ)V
-    .locals 2
-
-    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->mAppbarLayout:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
-
-    if-eqz v0, :cond_1
-
-    iget v0, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->mVelocityY:I
-
-    const/16 v1, -0x1388
-
-    if-ge v0, v1, :cond_1
-
-    const/16 v0, 0x64
-
-    if-ge p2, v0, :cond_1
-
-    const/16 v0, -0x3e8
-
-    invoke-virtual {p0, v0}, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->fling(I)V
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->mVelocityY:I
-
-    iget-boolean v0, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->mIsEmpty:Z
-
-    if-eqz v0, :cond_0
-
-    const/16 v0, -0x578
-
-    invoke-super {p0, v0}, Landroidx/core/widget/NestedScrollView;->fling(I)V
-
-    goto :goto_0
-
-    :cond_0
-    const/16 v0, -0x960
-
-    invoke-super {p0, v0}, Landroidx/core/widget/NestedScrollView;->fling(I)V
-
-    :cond_1
-    :goto_0
-    invoke-super {p0, p1, p2, p3, p4}, Landroidx/core/widget/NestedScrollView;->onOverScrolled(IIZZ)V
-
-    return-void
 .end method
 
 .method public onRecyclerViewScrolled()V

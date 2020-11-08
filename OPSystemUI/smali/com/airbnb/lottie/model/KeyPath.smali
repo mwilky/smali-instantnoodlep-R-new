@@ -3,6 +3,10 @@
 .source "KeyPath.java"
 
 
+# static fields
+.field public static final COMPOSITION:Lcom/airbnb/lottie/model/KeyPath;
+
+
 # instance fields
 .field private final keys:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -18,6 +22,24 @@
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lcom/airbnb/lottie/model/KeyPath;
+
+    const-string v1, "COMPOSITION"
+
+    filled-new-array {v1}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/airbnb/lottie/model/KeyPath;-><init>([Ljava/lang/String;)V
+
+    sput-object v0, Lcom/airbnb/lottie/model/KeyPath;->COMPOSITION:Lcom/airbnb/lottie/model/KeyPath;
+
+    return-void
+.end method
+
 .method private constructor <init>(Lcom/airbnb/lottie/model/KeyPath;)V
     .locals 2
 

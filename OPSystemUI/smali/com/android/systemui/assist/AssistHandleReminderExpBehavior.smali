@@ -113,6 +113,8 @@
 
 .field private mRunningTaskId:I
 
+.field private mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
+
 .field private final mStatusBarStateController:Ldagger/Lazy;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -336,6 +338,16 @@
 
     iput-object p11, p0, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->mBootCompleteCache:Ldagger/Lazy;
 
+    invoke-static {}, Lcom/oneplus/plugin/OpLsState;->getInstance()Lcom/oneplus/plugin/OpLsState;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/oneplus/plugin/OpLsState;->getPhoneStatusBar()Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
+
     return-void
 .end method
 
@@ -435,25 +447,31 @@
     return-void
 
     :cond_0
-    invoke-direct {p0}, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->isFullyAwake()Z
+    invoke-direct {p0}, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->shouldHideCornerHandleView()Z
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    invoke-direct {p0}, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->isFullyAwake()Z
 
-    iget-boolean v0, p0, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->mIsNavBarHidden:Z
+    move-result v1
 
-    if-nez v0, :cond_5
+    if-eqz v1, :cond_5
 
-    iget-boolean v0, p0, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->mOnLockscreen:Z
+    iget-boolean v1, p0, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->mIsNavBarHidden:Z
 
-    if-nez v0, :cond_5
+    if-nez v1, :cond_5
+
+    iget-boolean v1, p0, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->mOnLockscreen:Z
+
+    if-nez v1, :cond_5
 
     invoke-direct {p0}, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->getShowWhenTaught()Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_1
+    if-eqz v1, :cond_5
+
+    if-eqz v0, :cond_1
 
     goto :goto_1
 
@@ -607,22 +625,88 @@
 
     if-eqz v0, :cond_1
 
-    goto :goto_2
+    goto/16 :goto_2
 
     :cond_1
-    invoke-direct {p0}, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->isFullyAwake()Z
+    invoke-direct {p0}, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->shouldHideCornerHandleView()Z
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    iget-boolean v0, p0, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->mIsNavBarHidden:Z
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    if-nez v0, :cond_6
+    const-string v3, "callbackForUnlearnedState isFullyAwake :"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->isFullyAwake()Z
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v3, ", mIsNavBarHidden:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v3, p0, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->mIsNavBarHidden:Z
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v3, ",isSuppressed:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->isSuppressed()Z
 
-    move-result v0
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v3, ", mOnLockscreen:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v3, p0, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->mOnLockscreen:Z
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v3, ", mIsLauncherShowing:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v3, p0, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->mIsLauncherShowing:Z
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v3, ", shouldHideCornerHint:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-direct {p0}, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->isFullyAwake()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    iget-boolean v1, p0, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->mIsNavBarHidden:Z
+
+    if-nez v1, :cond_6
+
+    invoke-direct {p0}, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->isSuppressed()Z
+
+    move-result v1
+
+    if-nez v1, :cond_6
 
     if-eqz v0, :cond_2
 
@@ -1218,6 +1302,50 @@
     iput v0, p0, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->mConsecutiveTaskSwitches:I
 
     return-void
+.end method
+
+.method private shouldHideCornerHandleView()Z
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    if-nez v0, :cond_0
+
+    invoke-static {}, Lcom/oneplus/plugin/OpLsState;->getInstance()Lcom/oneplus/plugin/OpLsState;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oneplus/plugin/OpLsState;->getPhoneStatusBar()Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    :cond_0
+    iget-object p0, p0, Lcom/android/systemui/assist/AssistHandleReminderExpBehavior;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    const/4 v0, 0x1
+
+    if-eqz p0, :cond_1
+
+    invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getNavigationBarHiddenMode()I
+
+    move-result p0
+
+    if-eq p0, v0, :cond_2
+
+    sget-boolean p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->sSideGestureEnabled:Z
+
+    if-nez p0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :cond_2
+    :goto_0
+    return v0
 .end method
 
 .method private updateLearningStatus()V

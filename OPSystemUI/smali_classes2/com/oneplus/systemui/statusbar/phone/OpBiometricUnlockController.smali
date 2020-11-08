@@ -28,6 +28,8 @@
 
 .field private final mPowerManager:Landroid/os/PowerManager;
 
+.field private mSlowAnimateCollapsePanels:Z
+
 .field private final mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
 .field private final mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
@@ -72,6 +74,8 @@
     iput-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->mIsFingerprintAuthenticating:Z
 
     iput v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->mFaceLockMode:I
+
+    iput-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->mSlowAnimateCollapsePanels:Z
 
     const-class v0, Lcom/android/keyguard/KeyguardUpdateMonitor;
 
@@ -557,7 +561,45 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-eqz p2, :cond_0
+    iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    invoke-virtual {v0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isAlwaysOnEnabled()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x1
+
+    if-ne p1, v0, :cond_1
+
+    const-class v0, Lcom/oneplus/battery/OpChargingAnimationController;
+
+    invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oneplus/battery/OpChargingAnimationController;
+
+    invoke-interface {v0}, Lcom/oneplus/battery/OpChargingAnimationController;->isAnimationStarted()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    sget-boolean p0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz p0, :cond_0
+
+    const-string p0, "changePanelVisibilityByAlpha: charging animation is not yet finished."
+
+    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    return-void
+
+    :cond_1
+    if-eqz p2, :cond_2
 
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->mKeyguardViewMediator:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
@@ -567,7 +609,7 @@
 
     goto :goto_0
 
-    :cond_0
+    :cond_2
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->mKeyguardViewMediator:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
     sget p2, Lcom/oneplus/systemui/keyguard/OpKeyguardViewMediator;->AUTHENTICATE_FINGERPRINT:I
@@ -1191,13 +1233,13 @@
 
     const/4 v3, 0x0
 
-    if-eqz v2, :cond_a
+    if-eqz v2, :cond_b
 
     const/4 v2, 0x1
 
     invoke-virtual {p0, v2, v3}, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->changePanelVisibilityByAlpha(IZ)V
 
-    if-nez p1, :cond_9
+    if-nez p1, :cond_a
 
     iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
@@ -1205,9 +1247,9 @@
 
     move-result p1
 
-    if-lt p1, v1, :cond_9
+    if-lt p1, v1, :cond_a
 
-    if-nez v0, :cond_7
+    if-nez v0, :cond_8
 
     invoke-static {}, Lcom/oneplus/plugin/OpLsState;->getInstance()Lcom/oneplus/plugin/OpLsState;
 
@@ -1221,7 +1263,7 @@
 
     move-result p1
 
-    if-nez p1, :cond_7
+    if-nez p1, :cond_8
 
     iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
@@ -1249,7 +1291,7 @@
 
     move-result p1
 
-    if-nez p1, :cond_7
+    if-nez p1, :cond_8
 
     invoke-direct {p0, v1}, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->animateCollapsePanels(F)V
 
@@ -1262,7 +1304,7 @@
 
     move-result p1
 
-    if-nez p1, :cond_7
+    if-nez p1, :cond_8
 
     iput-boolean v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->mForceShowBouncer:Z
 
@@ -1275,7 +1317,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_5
+    if-eqz p1, :cond_6
 
     iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
@@ -1283,33 +1325,44 @@
 
     move-result p1
 
-    if-nez p1, :cond_5
+    if-nez p1, :cond_6
 
+    iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    invoke-virtual {p1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isAlwaysOnEnabled()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    iput-boolean v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->mSlowAnimateCollapsePanels:Z
+
+    :cond_5
     iput-boolean v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->mForceShowBouncer:Z
 
     invoke-direct {p0, v2}, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->setPendingShowBouncer(Z)V
 
     goto :goto_1
 
-    :cond_5
+    :cond_6
     iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
     invoke-virtual {p1}, Lcom/android/systemui/statusbar/phone/StatusBar;->isBouncerShowing()Z
 
     move-result p1
 
-    if-nez p1, :cond_6
+    if-nez p1, :cond_7
 
     invoke-direct {p0, v1}, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->animateCollapsePanels(F)V
 
-    :cond_6
+    :cond_7
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->getKeyguardViewController()Lcom/android/keyguard/KeyguardViewController;
 
     move-result-object p1
 
     invoke-interface {p1, v3}, Lcom/android/keyguard/KeyguardViewController;->showBouncer(Z)V
 
-    :cond_7
+    :cond_8
     :goto_1
     iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
@@ -1327,32 +1380,11 @@
 
     iget-boolean p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->IS_SUPPORT_CUSTOM_FINGERPRINT:Z
 
-    if-nez p1, :cond_8
+    if-nez p1, :cond_9
 
     iget-boolean p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->mIsScreenOffUnlock:Z
 
-    if-eqz p1, :cond_a
-
-    iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
-
-    invoke-virtual {p1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getFacelockController()Lcom/oneplus/faceunlock/OpFacelockController;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/oneplus/faceunlock/OpFacelockController;->tryToStartFaceLockAfterScreenOn()V
-
-    goto :goto_2
-
-    :cond_8
-    invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->getKeyguardViewController()Lcom/android/keyguard/KeyguardViewController;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lcom/android/keyguard/KeyguardViewController;->isBouncerShowing()Z
-
-    move-result p1
-
-    if-nez p1, :cond_a
+    if-eqz p1, :cond_b
 
     iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
@@ -1365,9 +1397,30 @@
     goto :goto_2
 
     :cond_9
+    invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->getKeyguardViewController()Lcom/android/keyguard/KeyguardViewController;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lcom/android/keyguard/KeyguardViewController;->isBouncerShowing()Z
+
+    move-result p1
+
+    if-nez p1, :cond_b
+
+    iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    invoke-virtual {p1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getFacelockController()Lcom/oneplus/faceunlock/OpFacelockController;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/oneplus/faceunlock/OpFacelockController;->tryToStartFaceLockAfterScreenOn()V
+
+    goto :goto_2
+
+    :cond_a
     iget-boolean p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->mIsScreenOffUnlock:Z
 
-    if-eqz p1, :cond_a
+    if-eqz p1, :cond_b
 
     iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->mPowerManager:Landroid/os/PowerManager;
 
@@ -1393,7 +1446,7 @@
 
     invoke-virtual {p1}, Lcom/oneplus/plugin/OpLsState;->onFingerprintStartedGoingToSleep()V
 
-    :cond_a
+    :cond_b
     :goto_2
     const/4 p1, 0x5
 
@@ -1570,7 +1623,7 @@
 .end method
 
 .method protected opShowBouncer()V
-    .locals 3
+    .locals 4
 
     const/4 v0, 0x0
 
@@ -1616,23 +1669,50 @@
 
     move-result v1
 
-    if-nez v1, :cond_3
+    if-nez v1, :cond_4
 
-    iget-boolean v1, p0, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->mNoBouncerAnim:Z
+    const v1, 0x3f8ccccd    # 1.1f
 
-    if-eqz v1, :cond_2
+    iget-boolean v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->mSlowAnimateCollapsePanels:Z
 
-    const v1, 0x4479c000    # 999.0f
+    if-eqz v2, :cond_2
+
+    const/high16 v1, 0x3f000000    # 0.5f
 
     goto :goto_0
 
     :cond_2
-    const v1, 0x3f8ccccd    # 1.1f
+    iget-boolean v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->mNoBouncerAnim:Z
 
-    :goto_0
-    invoke-direct {p0, v1}, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->animateCollapsePanels(F)V
+    if-eqz v2, :cond_3
+
+    const v1, 0x4479c000    # 999.0f
 
     :cond_3
+    :goto_0
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "opShowBouncer, speedUpFactor:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "OpBiometricUnlockController"
+
+    invoke-static {v3, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-direct {p0, v1}, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->animateCollapsePanels(F)V
+
+    :cond_4
+    iput-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->mSlowAnimateCollapsePanels:Z
+
     iput-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->mNoBouncerAnim:Z
 
     invoke-direct {p0, v0}, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->setPendingShowBouncer(Z)V

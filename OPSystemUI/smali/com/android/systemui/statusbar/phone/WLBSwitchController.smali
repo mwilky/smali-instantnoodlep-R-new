@@ -23,8 +23,6 @@
 
 
 # instance fields
-.field private isAdminUser:Z
-
 .field private isWLBDetailClosed:Z
 
 .field private final mAdapters:Ljava/util/ArrayList;
@@ -85,7 +83,7 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
-    .locals 3
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -93,57 +91,55 @@
 
     iput v0, p0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->mPreviousExpansion:F
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->isAdminUser:Z
+    iput-object v0, p0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->mService:Landroid/os/Messenger;
 
-    const/4 v1, 0x0
+    new-instance v0, Landroid/os/Messenger;
 
-    iput-object v1, p0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->mService:Landroid/os/Messenger;
+    new-instance v1, Lcom/android/systemui/statusbar/phone/WLBSwitchController$IncomingHandler;
 
-    new-instance v1, Landroid/os/Messenger;
+    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/phone/WLBSwitchController$IncomingHandler;-><init>(Lcom/android/systemui/statusbar/phone/WLBSwitchController;)V
 
-    new-instance v2, Lcom/android/systemui/statusbar/phone/WLBSwitchController$IncomingHandler;
+    invoke-direct {v0, v1}, Landroid/os/Messenger;-><init>(Landroid/os/Handler;)V
 
-    invoke-direct {v2, p0}, Lcom/android/systemui/statusbar/phone/WLBSwitchController$IncomingHandler;-><init>(Lcom/android/systemui/statusbar/phone/WLBSwitchController;)V
+    iput-object v0, p0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->mMessenger:Landroid/os/Messenger;
 
-    invoke-direct {v1, v2}, Landroid/os/Messenger;-><init>(Landroid/os/Handler;)V
+    new-instance v0, Ljava/util/ArrayList;
 
-    iput-object v1, p0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->mMessenger:Landroid/os/Messenger;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->mModes:Ljava/util/ArrayList;
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->mCurrentMode:I
 
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v1, p0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->mModes:Ljava/util/ArrayList;
+    iput-object v1, p0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->mAdapters:Ljava/util/ArrayList;
 
-    const/4 v1, 0x0
+    const/high16 v1, -0x40800000    # -1.0f
 
-    iput v1, p0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->mCurrentMode:I
+    iput v1, p0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->mHeaderExpansion:F
 
-    new-instance v2, Ljava/util/ArrayList;
+    const/4 v1, 0x1
 
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+    iput-boolean v1, p0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->isWLBDetailClosed:Z
 
-    iput-object v2, p0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->mAdapters:Ljava/util/ArrayList;
+    new-instance v1, Lcom/android/systemui/statusbar/phone/WLBSwitchController$1;
 
-    const/high16 v2, -0x40800000    # -1.0f
+    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/phone/WLBSwitchController$1;-><init>(Lcom/android/systemui/statusbar/phone/WLBSwitchController;)V
 
-    iput v2, p0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->mHeaderExpansion:F
+    iput-object v1, p0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->wlbDetailAdapter:Lcom/android/systemui/plugins/qs/DetailAdapter;
 
-    iput-boolean v0, p0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->isWLBDetailClosed:Z
+    new-instance v1, Lcom/android/systemui/statusbar/phone/WLBSwitchController$2;
 
-    new-instance v0, Lcom/android/systemui/statusbar/phone/WLBSwitchController$1;
+    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/phone/WLBSwitchController$2;-><init>(Lcom/android/systemui/statusbar/phone/WLBSwitchController;)V
 
-    invoke-direct {v0, p0}, Lcom/android/systemui/statusbar/phone/WLBSwitchController$1;-><init>(Lcom/android/systemui/statusbar/phone/WLBSwitchController;)V
-
-    iput-object v0, p0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->wlbDetailAdapter:Lcom/android/systemui/plugins/qs/DetailAdapter;
-
-    new-instance v0, Lcom/android/systemui/statusbar/phone/WLBSwitchController$2;
-
-    invoke-direct {v0, p0}, Lcom/android/systemui/statusbar/phone/WLBSwitchController$2;-><init>(Lcom/android/systemui/statusbar/phone/WLBSwitchController;)V
-
-    iput-object v0, p0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->mConnection:Landroid/content/ServiceConnection;
+    iput-object v1, p0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->mConnection:Landroid/content/ServiceConnection;
 
     iput-object p1, p0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->mContext:Landroid/content/Context;
 
@@ -151,9 +147,9 @@
 
     move-result-object p1
 
-    const-string v0, "oneplus_wlb_activated_mode"
+    const-string v1, "oneplus_wlb_activated_mode"
 
-    invoke-static {p1, v0, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    invoke-static {p1, v1, v0}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result p1
 
@@ -260,6 +256,62 @@
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
+.end method
+
+.method private isNotAdminUser()Z
+    .locals 4
+
+    invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
+
+    move-result-object v0
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->mContext:Landroid/content/Context;
+
+    const-string/jumbo v1, "user"
+
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/os/UserManager;
+
+    invoke-virtual {p0, v0}, Landroid/os/UserManager;->getSerialNumberForUser(Landroid/os/UserHandle;)J
+
+    move-result-wide v0
+
+    sget-object p0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->TAG:Ljava/lang/String;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v3, "uId:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {p0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-wide/16 v2, 0x0
+
+    cmp-long p0, v0, v2
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
 .end method
 
 .method private processModes()V
@@ -638,9 +690,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->isAdminUser:Z
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->isNotAdminUser()Z
 
-    if-nez v0, :cond_0
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     return-void
 
@@ -672,8 +726,6 @@
 
 .method public setAdminUser(Z)V
     .locals 0
-
-    iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->isAdminUser:Z
 
     return-void
 .end method
@@ -797,12 +849,6 @@
     const/4 p1, 0x0
 
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->isWLBDetailClosed:Z
-
-    sget-object p0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->TAG:Ljava/lang/String;
-
-    const-string p1, "QS panel detail opened"
-
-    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
     :goto_0

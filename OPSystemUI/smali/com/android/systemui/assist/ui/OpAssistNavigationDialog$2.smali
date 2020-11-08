@@ -31,9 +31,9 @@
 .method public onClick(Landroid/view/View;)V
     .locals 0
 
-    invoke-static {}, Lcom/android/systemui/assist/ui/OpAssistNavigationDialog;->access$108()I
+    invoke-static {}, Lcom/android/systemui/assist/ui/OpAssistNavigationDialog;->access$308()I
 
-    invoke-static {}, Lcom/android/systemui/assist/ui/OpAssistNavigationDialog;->access$100()I
+    invoke-static {}, Lcom/android/systemui/assist/ui/OpAssistNavigationDialog;->access$300()I
 
     move-result p0
 
@@ -41,11 +41,11 @@
 
     if-ge p0, p1, :cond_0
 
-    invoke-static {}, Lcom/android/systemui/assist/ui/OpAssistNavigationDialog;->access$100()I
+    invoke-static {}, Lcom/android/systemui/assist/ui/OpAssistNavigationDialog;->access$300()I
 
     move-result p0
 
-    invoke-static {p0}, Lcom/android/systemui/assist/ui/OpAssistNavigationDialog;->access$200(I)V
+    invoke-static {p0}, Lcom/android/systemui/assist/ui/OpAssistNavigationDialog;->access$400(I)V
 
     goto :goto_0
 

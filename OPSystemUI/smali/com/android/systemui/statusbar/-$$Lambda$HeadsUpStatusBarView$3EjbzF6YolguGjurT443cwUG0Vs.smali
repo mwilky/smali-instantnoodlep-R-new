@@ -20,3 +20,15 @@
 
     return-void
 .end method
+
+
+# virtual methods
+.method public final onSensitivityChanged(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)V
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/-$$Lambda$HeadsUpStatusBarView$3EjbzF6YolguGjurT443cwUG0Vs;->f$0:Lcom/android/systemui/statusbar/HeadsUpStatusBarView;
+
+    invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/HeadsUpStatusBarView;->lambda$new$0$HeadsUpStatusBarView(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)V
+
+    return-void
+.end method

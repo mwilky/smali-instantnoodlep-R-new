@@ -149,23 +149,46 @@
 
     move-result p1
 
-    if-nez p1, :cond_4
+    if-nez p1, :cond_5
 
-    sget-boolean p1, Lcom/oneplus/util/OpUtils;->SUPPORT_CHARGING_ANIM_V2:Z
+    sget-boolean p1, Lcom/oneplus/util/OpUtils;->SUPPORT_RED_CHARGING_ANIM:Z
 
     if-eqz p1, :cond_1
 
     iget-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$KeyguardStateCallback;->this$0:Lcom/oneplus/battery/OpChargingAnimationControllerImpl;
 
-    invoke-static {p1}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$700(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Lcom/oneplus/battery/OpSWarpChargingView;
+    invoke-static {p1}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$700(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Lcom/oneplus/battery/OpCBWarpChargingView;
 
     move-result-object p1
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_4
 
     iget-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$KeyguardStateCallback;->this$0:Lcom/oneplus/battery/OpChargingAnimationControllerImpl;
 
-    invoke-static {p1}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$700(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Lcom/oneplus/battery/OpSWarpChargingView;
+    invoke-static {p1}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$700(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Lcom/oneplus/battery/OpCBWarpChargingView;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/oneplus/battery/OpCBWarpChargingView;->stopAnimation()V
+
+    goto :goto_0
+
+    :cond_1
+    sget-boolean p1, Lcom/oneplus/util/OpUtils;->SUPPORT_CHARGING_ANIM_V2:Z
+
+    if-eqz p1, :cond_2
+
+    iget-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$KeyguardStateCallback;->this$0:Lcom/oneplus/battery/OpChargingAnimationControllerImpl;
+
+    invoke-static {p1}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$800(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Lcom/oneplus/battery/OpSWarpChargingView;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_4
+
+    iget-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$KeyguardStateCallback;->this$0:Lcom/oneplus/battery/OpChargingAnimationControllerImpl;
+
+    invoke-static {p1}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$800(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Lcom/oneplus/battery/OpSWarpChargingView;
 
     move-result-object p1
 
@@ -173,22 +196,22 @@
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     sget-boolean p1, Lcom/oneplus/util/OpUtils;->SUPPORT_CHARGING_ANIM_V1:Z
-
-    if-eqz p1, :cond_2
-
-    iget-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$KeyguardStateCallback;->this$0:Lcom/oneplus/battery/OpChargingAnimationControllerImpl;
-
-    invoke-static {p1}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$800(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Lcom/oneplus/battery/OpNewWarpChargingView;
-
-    move-result-object p1
 
     if-eqz p1, :cond_3
 
     iget-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$KeyguardStateCallback;->this$0:Lcom/oneplus/battery/OpChargingAnimationControllerImpl;
 
-    invoke-static {p1}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$800(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Lcom/oneplus/battery/OpNewWarpChargingView;
+    invoke-static {p1}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$900(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Lcom/oneplus/battery/OpNewWarpChargingView;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_4
+
+    iget-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$KeyguardStateCallback;->this$0:Lcom/oneplus/battery/OpChargingAnimationControllerImpl;
+
+    invoke-static {p1}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$900(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Lcom/oneplus/battery/OpNewWarpChargingView;
 
     move-result-object p1
 
@@ -196,14 +219,14 @@
 
     goto :goto_0
 
-    :cond_2
+    :cond_3
     iget-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$KeyguardStateCallback;->this$0:Lcom/oneplus/battery/OpChargingAnimationControllerImpl;
 
     invoke-static {p1}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$100(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Lcom/oneplus/battery/OpWarpChargingView;
 
     move-result-object p1
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_4
 
     iget-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$KeyguardStateCallback;->this$0:Lcom/oneplus/battery/OpChargingAnimationControllerImpl;
 
@@ -213,13 +236,13 @@
 
     invoke-virtual {p1}, Lcom/oneplus/battery/OpWarpChargingView;->stopAnimation()V
 
-    :cond_3
+    :cond_4
     :goto_0
     iget-object p0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$KeyguardStateCallback;->this$0:Lcom/oneplus/battery/OpChargingAnimationControllerImpl;
 
-    invoke-static {p0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$900(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)V
+    invoke-static {p0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$1000(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)V
 
-    :cond_4
+    :cond_5
     :goto_1
     return-void
 .end method

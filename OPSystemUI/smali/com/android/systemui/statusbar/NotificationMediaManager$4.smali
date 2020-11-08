@@ -37,9 +37,20 @@
 .method public run()V
     .locals 2
 
+    sget-boolean v0, Lcom/android/systemui/statusbar/NotificationMediaManager;->DEBUG_MEDIA:Z
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "NotificationMediaManager"
+
+    const-string v1, "DEBUG_MEDIA: removing fade layer"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager$4;->this$0:Lcom/android/systemui/statusbar/NotificationMediaManager;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/NotificationMediaManager;->access$500(Lcom/android/systemui/statusbar/NotificationMediaManager;)Landroid/widget/ImageView;
+    invoke-static {v0}, Lcom/android/systemui/statusbar/NotificationMediaManager;->access$600(Lcom/android/systemui/statusbar/NotificationMediaManager;)Landroid/widget/ImageView;
 
     move-result-object v0
 
@@ -49,7 +60,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager$4;->this$0:Lcom/android/systemui/statusbar/NotificationMediaManager;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/NotificationMediaManager;->access$500(Lcom/android/systemui/statusbar/NotificationMediaManager;)Landroid/widget/ImageView;
+    invoke-static {v0}, Lcom/android/systemui/statusbar/NotificationMediaManager;->access$600(Lcom/android/systemui/statusbar/NotificationMediaManager;)Landroid/widget/ImageView;
 
     move-result-object v0
 
@@ -61,7 +72,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager$4;->this$0:Lcom/android/systemui/statusbar/NotificationMediaManager;
 
-    invoke-static {p0}, Lcom/android/systemui/statusbar/NotificationMediaManager;->access$500(Lcom/android/systemui/statusbar/NotificationMediaManager;)Landroid/widget/ImageView;
+    invoke-static {p0}, Lcom/android/systemui/statusbar/NotificationMediaManager;->access$600(Lcom/android/systemui/statusbar/NotificationMediaManager;)Landroid/widget/ImageView;
 
     move-result-object p0
 

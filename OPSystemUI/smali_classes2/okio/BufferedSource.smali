@@ -8,7 +8,9 @@
 
 
 # virtual methods
-.method public abstract getBuffer()Lokio/Buffer;
+.method public abstract buffer()Lokio/Buffer;
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 .end method
 
 .method public abstract indexOf(Lokio/ByteString;)J

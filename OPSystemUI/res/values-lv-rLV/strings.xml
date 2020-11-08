@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="about_action_bar_title">Par</string>
+    <string name="about_action_bar_title">Par ierīci</string>
     <string name="about_app_version_text">Version %s</string>
     <string name="about_privacy_policy">Konfidencialitātes politika</string>
     <string name="about_release_note_title">Atjauninājumu žurnāls:</string>
@@ -204,6 +204,9 @@ Lai abonētu mobilo tīklāju, apmeklējiet My Verizon vai zvaniet klientu apkal
     <string name="overheat_notification_resume">Tālrunim ir atjaunota normāla temperatūra, un to atkal var izmantot kā parasti</string>
     <string name="overheat_notification_title_resume">Tālrunim ir atjaunota normāla temperatūra</string>
     <string name="overheat_toast_content">Tālruņa temperatūra ir pārāk augsta, tādēļ funkcijas, kas patērē daudz enerģijas, tika izslēgtas, lai samazinātu temperatūru</string>
+    <string name="permission_btn_text_denied">Iziet</string>
+    <string name="permission_btn_text_grant">Labi</string>
+    <string name="permission_dialog_title">Atļaujas paziņojums</string>
     <string name="prevent_view_title">Kabatas režīms ir aktivizēts</string>
     <string name="prevent_view_title_cancel">Lai aktivizētu savu tālruni:</string>
     <string name="prevent_view_top_tag_cancel">Nepārklājiet sava tālruņa zilo zonu un notīriet jebkādus uz zilās zonas esošos netīrumus vai putekļus.</string>

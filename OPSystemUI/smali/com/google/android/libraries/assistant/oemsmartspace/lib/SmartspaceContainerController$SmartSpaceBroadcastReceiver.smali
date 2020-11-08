@@ -25,6 +25,14 @@
     return-void
 .end method
 
+.method static final synthetic lambda$onReceive$0$SmartspaceContainerController$SmartSpaceBroadcastReceiver(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;)V
+    .locals 0
+
+    invoke-static {p0}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->access$1000(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;)V
+
+    return-void
+.end method
+
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
@@ -79,9 +87,38 @@
     invoke-static {v1, p1, p2, v0}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->access$600(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;Landroid/content/Context;Landroid/content/Intent;[B)V
 
     :cond_0
+    iget-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$SmartSpaceBroadcastReceiver;->this$0:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;
+
+    invoke-static {v0, p1, p2}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->access$700(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;Landroid/content/Context;Landroid/content/Intent;)V
+
+    iget-object p1, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$SmartSpaceBroadcastReceiver;->this$0:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;
+
+    invoke-static {p1}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->access$800(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;)Landroid/os/Handler;
+
+    move-result-object p1
+
+    new-instance p2, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$SmartSpaceBroadcastReceiver$$Lambda$0;
+
+    iget-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$SmartSpaceBroadcastReceiver;->this$0:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;
+
+    invoke-direct {p2, v0}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$SmartSpaceBroadcastReceiver$$Lambda$0;-><init>(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    iget-object p1, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$SmartSpaceBroadcastReceiver;->this$0:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;
+
+    invoke-static {p1}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->access$900(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
     iget-object p0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$SmartSpaceBroadcastReceiver;->this$0:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;
 
-    invoke-static {p0, p1, p2}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->access$700(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;Landroid/content/Context;Landroid/content/Intent;)V
+    const/4 p1, 0x1
 
+    invoke-static {p0, p1}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->access$902(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;Z)Z
+
+    :cond_1
     return-void
 .end method

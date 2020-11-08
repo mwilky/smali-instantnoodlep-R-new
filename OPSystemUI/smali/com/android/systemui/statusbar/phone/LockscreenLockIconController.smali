@@ -1073,7 +1073,7 @@
 
     if-ne v0, v4, :cond_5
 
-    if-eqz p1, :cond_15
+    if-eqz p1, :cond_16
 
     :cond_5
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mHandler:Landroid/os/Handler;
@@ -1185,11 +1185,60 @@
     :goto_8
     iget-object v7, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mContext:Landroid/content/Context;
 
+    invoke-static {v7}, Lcom/android/systemui/assist/ui/DisplayUtils;->getWidth(Landroid/content/Context;)I
+
+    move-result v7
+
+    const/16 v8, 0x438
+
+    if-le v7, v8, :cond_c
+
+    iget-object v7, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mContext:Landroid/content/Context;
+
     invoke-virtual {v7}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
 
-    sget v8, Lcom/android/systemui/R$dimen;->keyguard_affordance_icon_height:I
+    sget v9, Lcom/android/systemui/R$dimen;->keyguard_affordance_icon_width:I
+
+    invoke-virtual {v7, v9}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v7
+
+    int-to-float v7, v7
+
+    invoke-static {v7, v8}, Lcom/oneplus/util/OpUtils;->convertPxByResolutionProportion(FI)I
+
+    move-result v7
+
+    iget-object v9, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v9}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v9
+
+    sget v10, Lcom/android/systemui/R$dimen;->keyguard_affordance_icon_width:I
+
+    invoke-virtual {v9, v10}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v9
+
+    int-to-float v9, v9
+
+    invoke-static {v9, v8}, Lcom/oneplus/util/OpUtils;->convertPxByResolutionProportion(FI)I
+
+    move-result v8
+
+    goto :goto_9
+
+    :cond_c
+    iget-object v7, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v7}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v7
+
+    sget v8, Lcom/android/systemui/R$dimen;->keyguard_affordance_icon_width:I
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1207,29 +1256,30 @@
 
     move-result v8
 
+    :goto_9
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v9
 
-    if-ne v9, v7, :cond_c
+    if-ne v9, v7, :cond_d
 
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v9
 
-    if-eq v9, v8, :cond_d
+    if-eq v9, v8, :cond_e
 
-    :cond_c
+    :cond_d
     new-instance v9, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController$IntrinsicSizeDrawable;
 
     invoke-direct {v9, p1, v8, v7}, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController$IntrinsicSizeDrawable;-><init>(Landroid/graphics/drawable/Drawable;II)V
 
     move-object p1, v9
 
-    :cond_d
+    :cond_e
     iget-object v7, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLockIcon:Lcom/android/systemui/statusbar/phone/LockIcon;
 
-    if-eqz v11, :cond_e
+    if-eqz v11, :cond_f
 
     iget-object v8, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mContext:Landroid/content/Context;
 
@@ -1243,12 +1293,12 @@
 
     move-result v8
 
-    goto :goto_9
+    goto :goto_a
 
-    :cond_e
+    :cond_f
     move v8, v2
 
-    :goto_9
+    :goto_a
     invoke-virtual {v7, v2, v2, v2, v8}, Landroid/widget/ImageView;->setPaddingRelative(IIII)V
 
     iget-object v7, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLockIcon:Lcom/android/systemui/statusbar/phone/LockIcon;
@@ -1261,7 +1311,7 @@
 
     const/4 v7, 0x2
 
-    if-ne p1, v7, :cond_f
+    if-ne p1, v7, :cond_10
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLockIcon:Lcom/android/systemui/statusbar/phone/LockIcon;
 
@@ -1275,38 +1325,38 @@
 
     invoke-virtual {p1, v7}, Landroid/widget/ImageView;->announceForAccessibility(Ljava/lang/CharSequence;)V
 
-    :cond_f
-    if-eqz v5, :cond_10
+    :cond_10
+    if-eqz v5, :cond_11
 
-    if-eqz v0, :cond_10
+    if-eqz v0, :cond_11
 
     invoke-virtual {v5}, Landroid/graphics/drawable/AnimatedVectorDrawable;->forceAnimationOnUI()V
 
     invoke-virtual {v5}, Landroid/graphics/drawable/AnimatedVectorDrawable;->start()V
 
-    :cond_10
+    :cond_11
     iget p1, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLastState:I
 
     const/16 v0, 0xb
 
-    if-eq p1, v0, :cond_11
+    if-eq p1, v0, :cond_12
 
-    if-ne v3, v0, :cond_11
+    if-ne v3, v0, :cond_12
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLockIcon:Lcom/android/systemui/statusbar/phone/LockIcon;
 
     invoke-virtual {p1, v6}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    goto :goto_a
+    goto :goto_b
 
-    :cond_11
+    :cond_12
     iget p1, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLastState:I
 
     const/16 v5, 0xd
 
-    if-eq p1, v5, :cond_12
+    if-eq p1, v5, :cond_13
 
-    if-ne v3, v5, :cond_12
+    if-ne v3, v5, :cond_13
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLockIcon:Lcom/android/systemui/statusbar/phone/LockIcon;
 
@@ -1320,16 +1370,16 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    goto :goto_a
+    goto :goto_b
 
-    :cond_12
-    if-eq v3, v0, :cond_13
+    :cond_13
+    if-eq v3, v0, :cond_14
 
     const/16 p1, 0xc
 
-    if-eq v3, p1, :cond_13
+    if-eq v3, p1, :cond_14
 
-    if-eq v3, v5, :cond_13
+    if-eq v3, v5, :cond_14
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLockIcon:Lcom/android/systemui/statusbar/phone/LockIcon;
 
@@ -1337,19 +1387,19 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    :cond_13
-    :goto_a
+    :cond_14
+    :goto_b
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLockIcon:Lcom/android/systemui/statusbar/phone/LockIcon;
 
     invoke-virtual {p0, p1, v3}, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->opUpdateIconAnimation(Landroid/view/View;I)V
 
     sget-boolean p1, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
-    if-eqz p1, :cond_14
+    if-eqz p1, :cond_15
 
     iget p1, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLastState:I
 
-    if-eq p1, v3, :cond_14
+    if-eq p1, v3, :cond_15
 
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -1375,7 +1425,7 @@
 
     invoke-static {v12, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_14
+    :cond_15
     iput v3, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mLastState:I
 
     iget-boolean p1, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mDeviceInteractive:Z
@@ -1388,7 +1438,7 @@
 
     move v11, v4
 
-    :cond_15
+    :cond_16
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
     invoke-static {}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getCurrentUser()I
@@ -1399,16 +1449,16 @@
 
     move-result p1
 
-    if-eqz p1, :cond_16
+    if-eqz p1, :cond_17
 
-    if-nez v11, :cond_16
+    if-nez v11, :cond_17
 
-    goto :goto_b
+    goto :goto_c
 
-    :cond_16
+    :cond_17
     move v1, v2
 
-    :goto_b
+    :goto_c
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mTrustDrawable:Lcom/oneplus/phone/OpTrustDrawable;
 
     invoke-virtual {p1, v1}, Lcom/oneplus/phone/OpTrustDrawable;->setTrustManaged(Z)V

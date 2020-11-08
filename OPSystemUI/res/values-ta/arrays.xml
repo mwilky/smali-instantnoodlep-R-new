@@ -82,6 +82,8 @@
         <item>Qualcomm® aptX™ ஆடியோ</item>
         <item>Qualcomm® aptX™ HD ஆடியோ</item>
         <item>LDAC</item>
+        <item>Qualcomm® aptX™ Adaptive ஆடியோ</item>
+        <item>Qualcomm® aptX™ TWS+ ஆடியோ</item>
     </string-array>
     <string-array name="bluetooth_a2dp_codec_titles">
         <item>சாதனத் தேர்வைப் பயன்படுத்து (இயல்பு)</item>
@@ -90,6 +92,8 @@
         <item>Qualcomm® aptX™ ஆடியோ</item>
         <item>Qualcomm® aptX™ HD ஆடியோ</item>
         <item>LDAC</item>
+        <item>Qualcomm® aptX™ Adaptive ஆடியோ</item>
+        <item>Qualcomm® aptX™ TWS+ ஆடியோ</item>
     </string-array>
     <string-array name="bluetooth_audio_active_device_summaries">
         <item></item>

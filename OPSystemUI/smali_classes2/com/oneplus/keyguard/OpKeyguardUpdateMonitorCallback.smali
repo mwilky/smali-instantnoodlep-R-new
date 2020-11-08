@@ -14,6 +14,12 @@
 
 
 # virtual methods
+.method public onAlwaysOnEnableChanged(Z)V
+    .locals 0
+
+    return-void
+.end method
+
 .method public onAuthenticateChanged(ZIII)V
     .locals 0
 
@@ -21,6 +27,12 @@
 .end method
 
 .method public onClearFailedFacelockAttempts()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onEnvironmentLightChanged(Z)V
     .locals 0
 
     return-void
@@ -51,6 +63,12 @@
 .end method
 
 .method public onKeyguardDoneChanged(Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onKeyguardFadedAway()V
     .locals 0
 
     return-void

@@ -38,7 +38,7 @@
 
     const/16 v1, 0x2bd
 
-    if-eq v0, v1, :cond_2
+    if-eq v0, v1, :cond_4
 
     const/4 v1, 0x0
 
@@ -58,18 +58,11 @@
     move v1, v2
 
     :cond_0
-    invoke-static {p0, v1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$200(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;Z)V
+    invoke-static {p0, v1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$500(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;Z)V
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :pswitch_1
-    iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
-
-    invoke-virtual {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->handleSystemReady()V
-
-    goto :goto_1
-
-    :pswitch_2
     iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
 
     iget p1, p1, Landroid/os/Message;->arg1:I
@@ -79,16 +72,51 @@
     move v1, v2
 
     :cond_1
-    invoke-static {p0, v1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$300(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;Z)V
+    invoke-static {p0, v1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$400(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;Z)V
+
+    goto/16 :goto_1
+
+    :pswitch_2
+    iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
+
+    iget p1, p1, Landroid/os/Message;->arg1:I
+
+    if-eq p1, v2, :cond_2
+
+    move v1, v2
+
+    :cond_2
+    invoke-static {p0, v1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$200(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;Z)V
 
     goto :goto_1
 
     :pswitch_3
+    iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
+
+    invoke-virtual {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->handleSystemReady()V
+
+    goto :goto_1
+
+    :pswitch_4
+    iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
+
+    iget p1, p1, Landroid/os/Message;->arg1:I
+
+    if-eq p1, v2, :cond_3
+
+    move v1, v2
+
+    :cond_3
+    invoke-static {p0, v1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$300(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;Z)V
+
+    goto :goto_1
+
+    :pswitch_5
     iget-object p1, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
 
     iget-boolean v0, p1, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mDuringAcquired:Z
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_7
 
     iput-boolean v1, p1, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mDuringAcquired:Z
 
@@ -100,30 +128,30 @@
 
     goto :goto_1
 
-    :pswitch_4
+    :pswitch_6
     iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
 
     invoke-virtual {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->handleScreenTurningOn()V
 
     goto :goto_1
 
-    :cond_2
+    :cond_4
     iget-object v0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
 
     iget-boolean v1, v0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mSimUnlockSlot0:Z
 
-    if-nez v1, :cond_4
+    if-nez v1, :cond_6
 
     iget-boolean v0, v0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mSimUnlockSlot1:Z
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_5
 
     goto :goto_0
 
-    :cond_3
+    :cond_5
     return-void
 
-    :cond_4
+    :cond_6
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -169,12 +197,14 @@
 
     invoke-virtual {p0, p1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->opHandlePendingSubInfoChange(I)V
 
-    :cond_5
+    :cond_7
     :goto_1
     return-void
 
     :pswitch_data_0
     .packed-switch 0x1f4
+        :pswitch_6
+        :pswitch_5
         :pswitch_4
         :pswitch_3
         :pswitch_2

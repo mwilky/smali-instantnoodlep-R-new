@@ -12,8 +12,6 @@
 
 
 # static fields
-.field private static final ATTRS_TEXT_COLOR:[I
-
 .field private static final DATE_FORMATTER:Ljava/text/DateFormat;
 
 .field private static final DEFAULT_LAYOUT:I
@@ -23,8 +21,6 @@
 .field private final mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
 
 .field private final mAdapter:Lcom/google/android/material/picker/DayPickerPagerAdapter;
-
-.field private mContext:Landroid/content/Context;
 
 .field private final mMaxDate:Ljava/util/Calendar;
 
@@ -49,7 +45,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
     sget v0, Lcom/google/android/material/R$layout;->op_day_picker_content_material:I
 
@@ -62,18 +58,6 @@
     invoke-direct {v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
     sput-object v0, Lcom/google/android/material/picker/DayPickerView;->DATE_FORMATTER:Ljava/text/DateFormat;
-
-    const/4 v0, 0x1
-
-    new-array v0, v0, [I
-
-    const/4 v1, 0x0
-
-    const v2, 0x1010098
-
-    aput v2, v0, v1
-
-    sput-object v0, Lcom/google/android/material/picker/DayPickerView;->ATTRS_TEXT_COLOR:[I
 
     return-void
 .end method
@@ -109,7 +93,7 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
-    .locals 11
+    .locals 10
 
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
@@ -142,8 +126,6 @@
     invoke-direct {v0, p0}, Lcom/google/android/material/picker/DayPickerView$3;-><init>(Lcom/google/android/material/picker/DayPickerView;)V
 
     iput-object v0, p0, Lcom/google/android/material/picker/DayPickerView;->mOnClickListener:Landroid/view/View$OnClickListener;
-
-    iput-object p1, p0, Lcom/google/android/material/picker/DayPickerView;->mContext:Landroid/content/Context;
 
     const-string v0, "accessibility"
 
@@ -251,9 +233,9 @@
 
     sget p2, Lcom/google/android/material/picker/DayPickerView;->DEFAULT_LAYOUT:I
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    invoke-virtual {p1, p2, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-virtual {p1, p2, p0, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p1
 
@@ -266,11 +248,11 @@
 
     if-lez p2, :cond_0
 
-    invoke-virtual {p1, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p1, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object p2
 
-    invoke-virtual {p1, v2}, Landroid/view/ViewGroup;->removeViewAt(I)V
+    invoke-virtual {p1, v1}, Landroid/view/ViewGroup;->removeViewAt(I)V
 
     invoke-virtual {p0, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -325,36 +307,6 @@
 
     invoke-virtual {p1, p2}, Landroidx/viewpager/widget/ViewPager;->setOnPageChangeListener(Landroidx/viewpager/widget/ViewPager$OnPageChangeListener;)V
 
-    if-eqz v1, :cond_2
-
-    iget-object p1, p0, Lcom/google/android/material/picker/DayPickerView;->mContext:Landroid/content/Context;
-
-    const/4 p2, 0x0
-
-    sget-object v3, Lcom/google/android/material/picker/DayPickerView;->ATTRS_TEXT_COLOR:[I
-
-    invoke-virtual {p1, p2, v3, v2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v2}, Landroid/content/res/TypedArray;->getColorStateList(I)Landroid/content/res/ColorStateList;
-
-    move-result-object p2
-
-    if-eqz p2, :cond_1
-
-    iget-object v1, p0, Lcom/google/android/material/picker/DayPickerView;->mPrevButton:Landroid/widget/ImageButton;
-
-    invoke-virtual {v1, p2}, Landroid/widget/ImageButton;->setImageTintList(Landroid/content/res/ColorStateList;)V
-
-    iget-object v1, p0, Lcom/google/android/material/picker/DayPickerView;->mNextButton:Landroid/widget/ImageButton;
-
-    invoke-virtual {v1, p2}, Landroid/widget/ImageButton;->setImageTintList(Landroid/content/res/ColorStateList;)V
-
-    :cond_1
-    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
-
-    :cond_2
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object p1
@@ -363,24 +315,24 @@
 
     move-result p2
 
-    if-nez p2, :cond_3
+    if-nez p2, :cond_1
 
     const/16 p2, 0x76c
 
     const/4 p4, 0x1
 
-    invoke-virtual {p1, p2, v2, p4}, Ljava/util/Calendar;->set(III)V
+    invoke-virtual {p1, p2, v1, p4}, Ljava/util/Calendar;->set(III)V
 
-    :cond_3
+    :cond_1
     invoke-virtual {p1}, Ljava/util/Calendar;->getTimeInMillis()J
 
-    move-result-wide v9
+    move-result-wide v8
 
     invoke-static {v0, p1}, Lcom/google/android/material/picker/DayPickerView;->parseDate(Ljava/lang/String;Ljava/util/Calendar;)Z
 
     move-result p2
 
-    if-nez p2, :cond_4
+    if-nez p2, :cond_2
 
     const/16 p2, 0x834
 
@@ -390,34 +342,34 @@
 
     invoke-virtual {p1, p2, p4, v0}, Ljava/util/Calendar;->set(III)V
 
-    :cond_4
+    :cond_2
     invoke-virtual {p1}, Ljava/util/Calendar;->getTimeInMillis()J
 
     move-result-wide p1
 
-    cmp-long p4, p1, v9
+    cmp-long p4, p1, v8
 
-    if-ltz p4, :cond_5
+    if-ltz p4, :cond_3
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v2
 
-    move-wide v5, v9
+    move-wide v4, v8
 
-    move-wide v7, p1
+    move-wide v6, p1
 
-    invoke-static/range {v3 .. v8}, Lcom/google/android/material/math/MathUtils;->constrain(JJJ)J
+    invoke-static/range {v2 .. v7}, Lcom/google/android/material/math/MathUtils;->constrain(JJJ)J
 
-    move-result-wide v0
+    move-result-wide v2
 
     invoke-virtual {p0, p3}, Lcom/google/android/material/picker/DayPickerView;->setFirstDayOfWeek(I)V
 
-    invoke-virtual {p0, v9, v10}, Lcom/google/android/material/picker/DayPickerView;->setMinDate(J)V
+    invoke-virtual {p0, v8, v9}, Lcom/google/android/material/picker/DayPickerView;->setMinDate(J)V
 
     invoke-virtual {p0, p1, p2}, Lcom/google/android/material/picker/DayPickerView;->setMaxDate(J)V
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/google/android/material/picker/DayPickerView;->setDate(JZ)V
+    invoke-virtual {p0, v2, v3, v1}, Lcom/google/android/material/picker/DayPickerView;->setDate(JZ)V
 
     iget-object p1, p0, Lcom/google/android/material/picker/DayPickerView;->mAdapter:Lcom/google/android/material/picker/DayPickerPagerAdapter;
 
@@ -429,7 +381,7 @@
 
     return-void
 
-    :cond_5
+    :cond_3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     const-string p1, "maxDate must be >= minDate"
@@ -447,23 +399,15 @@
     return-object p0
 .end method
 
-.method static synthetic access$100(Lcom/google/android/material/picker/DayPickerView;)Landroid/widget/ImageButton;
+.method static synthetic access$100(Lcom/google/android/material/picker/DayPickerView;)Lcom/google/android/material/picker/DayPickerPagerAdapter;
     .locals 0
 
-    iget-object p0, p0, Lcom/google/android/material/picker/DayPickerView;->mPrevButton:Landroid/widget/ImageButton;
+    iget-object p0, p0, Lcom/google/android/material/picker/DayPickerView;->mAdapter:Lcom/google/android/material/picker/DayPickerPagerAdapter;
 
     return-object p0
 .end method
 
-.method static synthetic access$200(Lcom/google/android/material/picker/DayPickerView;)Landroid/widget/ImageButton;
-    .locals 0
-
-    iget-object p0, p0, Lcom/google/android/material/picker/DayPickerView;->mNextButton:Landroid/widget/ImageButton;
-
-    return-object p0
-.end method
-
-.method static synthetic access$300(Lcom/google/android/material/picker/DayPickerView;I)V
+.method static synthetic access$200(Lcom/google/android/material/picker/DayPickerView;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/google/android/material/picker/DayPickerView;->updateButtonVisibility(I)V
@@ -471,7 +415,23 @@
     return-void
 .end method
 
-.method static synthetic access$400(Lcom/google/android/material/picker/DayPickerView;)Landroid/view/accessibility/AccessibilityManager;
+.method static synthetic access$300(Lcom/google/android/material/picker/DayPickerView;)Landroid/widget/ImageButton;
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/material/picker/DayPickerView;->mPrevButton:Landroid/widget/ImageButton;
+
+    return-object p0
+.end method
+
+.method static synthetic access$400(Lcom/google/android/material/picker/DayPickerView;)Landroid/widget/ImageButton;
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/material/picker/DayPickerView;->mNextButton:Landroid/widget/ImageButton;
+
+    return-object p0
+.end method
+
+.method static synthetic access$500(Lcom/google/android/material/picker/DayPickerView;)Landroid/view/accessibility/AccessibilityManager;
     .locals 0
 
     iget-object p0, p0, Lcom/google/android/material/picker/DayPickerView;->mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
@@ -479,7 +439,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$500(Lcom/google/android/material/picker/DayPickerView;)Landroidx/viewpager/widget/ViewPager;
+.method static synthetic access$600(Lcom/google/android/material/picker/DayPickerView;)Landroidx/viewpager/widget/ViewPager;
     .locals 0
 
     iget-object p0, p0, Lcom/google/android/material/picker/DayPickerView;->mViewPager:Landroidx/viewpager/widget/ViewPager;

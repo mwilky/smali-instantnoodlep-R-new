@@ -89,6 +89,27 @@
 
     iput v0, p0, Lcom/android/systemui/qs/tileimpl/QSTileBaseView;->mStrokeWidthActive:F
 
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isREDVersion()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lcom/android/systemui/R$dimen;->op_qs_tile_stroke_width_inactive:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result v0
+
+    iput v0, p0, Lcom/android/systemui/qs/tileimpl/QSTileBaseView;->mStrokeWidthInactive:F
+
+    goto :goto_0
+
+    :cond_0
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -101,6 +122,7 @@
 
     iput v0, p0, Lcom/android/systemui/qs/tileimpl/QSTileBaseView;->mStrokeWidthInactive:F
 
+    :goto_0
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -147,15 +169,15 @@
 
     invoke-direct {v0, v1}, Landroid/graphics/Path;-><init>(Landroid/graphics/Path;)V
 
-    new-instance v1, Landroid/graphics/drawable/shapes/PathShape;
+    const/high16 v1, 0x42c80000    # 100.0f
 
-    const/high16 v2, 0x42c80000    # 100.0f
+    new-instance v2, Landroid/graphics/drawable/shapes/PathShape;
 
-    invoke-direct {v1, v0, v2, v2}, Landroid/graphics/drawable/shapes/PathShape;-><init>(Landroid/graphics/Path;FF)V
+    invoke-direct {v2, v0, v1, v1}, Landroid/graphics/drawable/shapes/PathShape;-><init>(Landroid/graphics/Path;FF)V
 
     new-instance v0, Landroid/graphics/drawable/ShapeDrawable;
 
-    invoke-direct {v0, v1}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
+    invoke-direct {v0, v2}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
 
     const/4 v1, 0x0
 
@@ -229,13 +251,13 @@
 
     instance-of v0, p2, Landroid/graphics/drawable/RippleDrawable;
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     check-cast p2, Landroid/graphics/drawable/RippleDrawable;
 
     invoke-direct {p0, p2}, Lcom/android/systemui/qs/tileimpl/QSTileBaseView;->setRipple(Landroid/graphics/drawable/RippleDrawable;)V
 
-    :cond_0
+    :cond_1
     invoke-virtual {p0, p3}, Landroid/widget/LinearLayout;->setImportantForAccessibility(I)V
 
     iget-object p2, p0, Lcom/android/systemui/qs/tileimpl/QSTileBaseView;->mTileBackground:Landroid/graphics/drawable/Drawable;
@@ -268,7 +290,7 @@
 
     iget-object p1, p0, Lcom/android/systemui/qs/tileimpl/QSTileBaseView;->mLottieUtils:Lcom/oneplus/util/OpLottieUtils;
 
-    if-nez p1, :cond_1
+    if-nez p1, :cond_2
 
     new-instance p1, Lcom/oneplus/util/OpLottieUtils;
 
@@ -284,7 +306,7 @@
 
     iput-object p1, p0, Lcom/android/systemui/qs/tileimpl/QSTileBaseView;->mLottieUtils:Lcom/oneplus/util/OpLottieUtils;
 
-    :cond_1
+    :cond_2
     return-void
 .end method
 
@@ -469,22 +491,24 @@
 
     iget p1, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->state:I
 
-    const/4 v1, 0x1
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    if-eqz p1, :cond_2
 
-    if-eq p1, v1, :cond_2
+    const/4 v2, 0x1
 
-    const/4 v1, 0x2
+    if-eq p1, v2, :cond_2
 
-    if-eq p1, v1, :cond_1
+    const/4 v2, 0x2
+
+    if-eq p1, v2, :cond_1
 
     goto :goto_0
 
     :cond_1
     iget p1, p0, Lcom/android/systemui/qs/tileimpl/QSTileBaseView;->mStrokeWidthActive:F
 
-    cmpl-float p1, p1, v2
+    cmpl-float p1, p1, v1
 
     if-ltz p1, :cond_3
 
@@ -509,7 +533,7 @@
     :cond_2
     iget p1, p0, Lcom/android/systemui/qs/tileimpl/QSTileBaseView;->mStrokeWidthInactive:F
 
-    cmpl-float p1, p1, v2
+    cmpl-float p1, p1, v1
 
     if-ltz p1, :cond_3
 

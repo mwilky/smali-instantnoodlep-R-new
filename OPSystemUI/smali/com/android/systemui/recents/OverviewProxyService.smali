@@ -748,9 +748,9 @@
 
     iget-object v0, p0, Lcom/android/systemui/recents/OverviewProxyService;->mStatusBarOptionalLazy:Ljava/util/Optional;
 
-    new-instance v1, Lcom/android/systemui/recents/-$$Lambda$OverviewProxyService$Z19I_tELwOlnuL7KNEkdaAv28b4;
+    new-instance v1, Lcom/android/systemui/recents/-$$Lambda$OverviewProxyService$WTIImBC7StgC-546kSb0MM6WeV8;
 
-    invoke-direct {v1, p0}, Lcom/android/systemui/recents/-$$Lambda$OverviewProxyService$Z19I_tELwOlnuL7KNEkdaAv28b4;-><init>(Lcom/android/systemui/recents/OverviewProxyService;)V
+    invoke-direct {v1, p0}, Lcom/android/systemui/recents/-$$Lambda$OverviewProxyService$WTIImBC7StgC-546kSb0MM6WeV8;-><init>(Lcom/android/systemui/recents/OverviewProxyService;)V
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -762,9 +762,9 @@
 
     iget-object v0, p0, Lcom/android/systemui/recents/OverviewProxyService;->mStatusBarOptionalLazy:Ljava/util/Optional;
 
-    new-instance v1, Lcom/android/systemui/recents/-$$Lambda$OverviewProxyService$qcx0rufL4E7LgQgEhF9Bk13yjro;
+    new-instance v1, Lcom/android/systemui/recents/-$$Lambda$OverviewProxyService$FWXo0MqS9edx71sMZ4zb9k8Offc;
 
-    invoke-direct {v1, p0, p1}, Lcom/android/systemui/recents/-$$Lambda$OverviewProxyService$qcx0rufL4E7LgQgEhF9Bk13yjro;-><init>(Lcom/android/systemui/recents/OverviewProxyService;Landroid/view/MotionEvent;)V
+    invoke-direct {v1, p0, p1}, Lcom/android/systemui/recents/-$$Lambda$OverviewProxyService$FWXo0MqS9edx71sMZ4zb9k8Offc;-><init>(Lcom/android/systemui/recents/OverviewProxyService;Landroid/view/MotionEvent;)V
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -975,7 +975,69 @@
     return-void
 .end method
 
-.method private synthetic lambda$dispatchCancelTouch$4(Ldagger/Lazy;)V
+.method private synthetic lambda$cleanupAfterDeath$3(Ldagger/Lazy;)V
+    .locals 2
+
+    invoke-interface {p1}, Ldagger/Lazy;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    if-eqz p1, :cond_0
+
+    :try_start_0
+    iget-object v0, p0, Lcom/android/systemui/recents/OverviewProxyService;->mStatusBarGestureDownEvent:Landroid/view/MotionEvent;
+
+    const/4 v1, 0x3
+
+    invoke-virtual {v0, v1}, Landroid/view/MotionEvent;->setAction(I)V
+
+    iget-object v0, p0, Lcom/android/systemui/recents/OverviewProxyService;->mStatusBarGestureDownEvent:Landroid/view/MotionEvent;
+
+    invoke-virtual {p1, v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->dispatchNotificationsPanelTouchEvent(Landroid/view/MotionEvent;)V
+
+    iget-object p1, p0, Lcom/android/systemui/recents/OverviewProxyService;->mStatusBarGestureDownEvent:Landroid/view/MotionEvent;
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->recycle()V
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lcom/android/systemui/recents/OverviewProxyService;->mStatusBarGestureDownEvent:Landroid/view/MotionEvent;
+    :try_end_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p0
+
+    const-string p1, "OverviewProxyService"
+
+    const-string v0, "StatusBarGestureDownEvent is null "
+
+    invoke-static {p1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_0
+    :goto_0
+    return-void
+.end method
+
+.method private synthetic lambda$cleanupAfterDeath$4()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/systemui/recents/OverviewProxyService;->mStatusBarOptionalLazy:Ljava/util/Optional;
+
+    new-instance v1, Lcom/android/systemui/recents/-$$Lambda$OverviewProxyService$LIT7PecpH_WUNVrTU-kqXthWWwk;
+
+    invoke-direct {v1, p0}, Lcom/android/systemui/recents/-$$Lambda$OverviewProxyService$LIT7PecpH_WUNVrTU-kqXthWWwk;-><init>(Lcom/android/systemui/recents/OverviewProxyService;)V
+
+    invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
+
+    return-void
+.end method
+
+.method private synthetic lambda$dispatchCancelTouch$6(Ldagger/Lazy;)V
     .locals 2
 
     invoke-interface {p1}, Ldagger/Lazy;->get()Ljava/lang/Object;
@@ -1048,7 +1110,7 @@
     return-void
 .end method
 
-.method private synthetic lambda$dispatchLauncherTouch$3(Landroid/view/MotionEvent;Ldagger/Lazy;)V
+.method private synthetic lambda$dispatchLauncherTouch$5(Landroid/view/MotionEvent;Ldagger/Lazy;)V
     .locals 3
 
     invoke-interface {p2}, Ldagger/Lazy;->get()Ljava/lang/Object;
@@ -1783,6 +1845,19 @@
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     :cond_0
+    iget-object v0, p0, Lcom/android/systemui/recents/OverviewProxyService;->mStatusBarGestureDownEvent:Landroid/view/MotionEvent;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/android/systemui/recents/OverviewProxyService;->mHandler:Landroid/os/Handler;
+
+    new-instance v1, Lcom/android/systemui/recents/-$$Lambda$OverviewProxyService$VRFcZ95NRiYdJpC4k7VGsDGQNaE;
+
+    invoke-direct {v1, p0}, Lcom/android/systemui/recents/-$$Lambda$OverviewProxyService$VRFcZ95NRiYdJpC4k7VGsDGQNaE;-><init>(Lcom/android/systemui/recents/OverviewProxyService;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    :cond_1
     invoke-virtual {p0}, Lcom/android/systemui/recents/OverviewProxyService;->startConnectionToCurrentUser()V
 
     iget-object p0, p0, Lcom/android/systemui/recents/OverviewProxyService;->mDividerOptional:Ljava/util/Optional;
@@ -1793,13 +1868,13 @@
 
     check-cast p0, Lcom/android/systemui/stackdivider/Divider;
 
-    if-eqz p0, :cond_1
+    if-eqz p0, :cond_2
 
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/stackdivider/Divider;->setMinimized(Z)V
 
-    :cond_1
+    :cond_2
     return-void
 .end method
 
@@ -1925,18 +2000,34 @@
     return-void
 .end method
 
-.method public synthetic lambda$dispatchCancelTouch$4$OverviewProxyService(Ldagger/Lazy;)V
+.method public synthetic lambda$cleanupAfterDeath$3$OverviewProxyService(Ldagger/Lazy;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/systemui/recents/OverviewProxyService;->lambda$dispatchCancelTouch$4(Ldagger/Lazy;)V
+    invoke-direct {p0, p1}, Lcom/android/systemui/recents/OverviewProxyService;->lambda$cleanupAfterDeath$3(Ldagger/Lazy;)V
 
     return-void
 .end method
 
-.method public synthetic lambda$dispatchLauncherTouch$3$OverviewProxyService(Landroid/view/MotionEvent;Ldagger/Lazy;)V
+.method public synthetic lambda$cleanupAfterDeath$4$OverviewProxyService()V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/android/systemui/recents/OverviewProxyService;->lambda$dispatchLauncherTouch$3(Landroid/view/MotionEvent;Ldagger/Lazy;)V
+    invoke-direct {p0}, Lcom/android/systemui/recents/OverviewProxyService;->lambda$cleanupAfterDeath$4()V
+
+    return-void
+.end method
+
+.method public synthetic lambda$dispatchCancelTouch$6$OverviewProxyService(Ldagger/Lazy;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/systemui/recents/OverviewProxyService;->lambda$dispatchCancelTouch$6(Ldagger/Lazy;)V
+
+    return-void
+.end method
+
+.method public synthetic lambda$dispatchLauncherTouch$5$OverviewProxyService(Landroid/view/MotionEvent;Ldagger/Lazy;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/android/systemui/recents/OverviewProxyService;->lambda$dispatchLauncherTouch$5(Landroid/view/MotionEvent;Ldagger/Lazy;)V
 
     return-void
 .end method
@@ -2256,11 +2347,11 @@
 
     iput-object v1, p0, Lcom/android/systemui/recents/OverviewProxyService;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
-    if-nez v0, :cond_6
+    if-nez v0, :cond_7
 
     if-nez v1, :cond_0
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/recents/OverviewProxyService;->mContext:Landroid/content/Context;
@@ -2329,25 +2420,60 @@
 
     invoke-virtual {v3, v0}, Lcom/android/systemui/model/SysUiState;->commitUpdate(I)V
 
+    iget-object v1, p0, Lcom/android/systemui/recents/OverviewProxyService;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    if-nez v1, :cond_4
+
+    invoke-static {}, Lcom/oneplus/plugin/OpLsState;->getInstance()Lcom/oneplus/plugin/OpLsState;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/oneplus/plugin/OpLsState;->getPhoneStatusBar()Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/android/systemui/recents/OverviewProxyService;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    :cond_4
     iget-object v1, p0, Lcom/android/systemui/recents/OverviewProxyService;->mNavBarController:Lcom/android/systemui/statusbar/NavigationBarController;
 
     invoke-virtual {v1}, Lcom/android/systemui/statusbar/NavigationBarController;->getDefaultNavigationBarFragment()Lcom/android/systemui/statusbar/phone/NavigationBarFragment;
 
     move-result-object v1
 
-    if-eqz v1, :cond_4
+    iget-object v3, p0, Lcom/android/systemui/recents/OverviewProxyService;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
+    invoke-virtual {v3}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getNavigationBarHiddenMode()I
+
+    move-result v3
+
+    if-eq v3, v7, :cond_5
+
+    sget-boolean v3, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->sSideGestureEnabled:Z
+
+    if-eqz v3, :cond_5
+
+    if-eqz v1, :cond_5
+
+    invoke-virtual {v1}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->isNavBarWindowVisible()Z
+
+    move-result v1
+
+    goto :goto_1
+
+    :cond_5
+    move v1, v7
+
+    :goto_1
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "Update nav bar hidden :"
+    const-string v4, "Update nav bar is hidden :"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->isNavBarWindowVisible()Z
-
-    move-result v4
+    xor-int/lit8 v4, v1, 0x1
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -2361,24 +2487,19 @@
 
     const/4 v3, 0x2
 
-    invoke-virtual {v1}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->isNavBarWindowVisible()Z
-
-    move-result v1
-
     xor-int/2addr v1, v7
 
     invoke-virtual {v2, v3, v1}, Lcom/android/systemui/model/SysUiState;->setFlag(IZ)Lcom/android/systemui/model/SysUiState;
 
     invoke-virtual {v2, v0}, Lcom/android/systemui/model/SysUiState;->commitUpdate(I)V
 
-    :cond_4
     iget-object v1, p0, Lcom/android/systemui/recents/OverviewProxyService;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
     invoke-virtual {v1}, Lcom/android/systemui/statusbar/phone/StatusBar;->getPanelController()Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
     move-result-object v1
 
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_6
 
     iget-object v1, p0, Lcom/android/systemui/recents/OverviewProxyService;->mSysUiState:Lcom/android/systemui/model/SysUiState;
 
@@ -2398,7 +2519,7 @@
 
     invoke-virtual {v1, v0}, Lcom/android/systemui/model/SysUiState;->commitUpdate(I)V
 
-    :cond_5
+    :cond_6
     iget-object v0, p0, Lcom/android/systemui/recents/OverviewProxyService;->mSysUiState:Lcom/android/systemui/model/SysUiState;
 
     invoke-virtual {v0}, Lcom/android/systemui/model/SysUiState;->getFlags()I
@@ -2407,8 +2528,8 @@
 
     invoke-direct {p0, v0}, Lcom/android/systemui/recents/OverviewProxyService;->notifySystemUiStateFlags(I)V
 
-    :cond_6
-    :goto_1
+    :cond_7
+    :goto_2
     return-void
 .end method
 

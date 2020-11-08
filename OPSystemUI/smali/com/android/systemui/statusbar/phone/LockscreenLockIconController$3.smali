@@ -56,7 +56,7 @@
 .end method
 
 .method public onDensityOrFontScaleChanged()V
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController$3;->this$0:Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;
 
@@ -88,18 +88,37 @@
 
     iget-object v1, v1, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mContext:Landroid/content/Context;
 
+    invoke-static {v1}, Lcom/android/systemui/assist/ui/DisplayUtils;->getWidth(Landroid/content/Context;)I
+
+    move-result v1
+
+    const/16 v2, 0x438
+
+    if-le v1, v2, :cond_2
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController$3;->this$0:Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;
+
+    iget-object v1, v1, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mContext:Landroid/content/Context;
+
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    sget v2, Lcom/android/systemui/R$dimen;->op_keyguard_clock_info_view_content_lock_icon_size:I
+    sget v3, Lcom/android/systemui/R$dimen;->op_keyguard_clock_info_view_content_lock_icon_size:I
 
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v1
 
-    iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
+    int-to-float v1, v1
 
+    invoke-static {v1, v2}, Lcom/oneplus/util/OpUtils;->convertPxByResolutionProportion(FI)I
+
+    move-result v1
+
+    goto :goto_0
+
+    :cond_2
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/LockscreenLockIconController$3;->this$0:Lcom/android/systemui/statusbar/phone/LockscreenLockIconController;
 
     iget-object v1, v1, Lcom/android/systemui/statusbar/phone/OpLockscreenLockIconController;->mContext:Landroid/content/Context;
@@ -113,6 +132,9 @@
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v1
+
+    :goto_0
+    iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 

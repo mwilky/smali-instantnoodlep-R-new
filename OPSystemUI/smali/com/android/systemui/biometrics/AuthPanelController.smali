@@ -201,13 +201,7 @@
     move v3, p1
 
     :goto_0
-    iget p1, p0, Lcom/android/systemui/biometrics/AuthPanelController;->mContainerHeight:I
-
-    iget v0, p0, Lcom/android/systemui/biometrics/AuthPanelController;->mMargin:I
-
-    sub-int/2addr p1, v0
-
-    add-int/lit8 v5, p1, 0x1
+    iget v5, p0, Lcom/android/systemui/biometrics/AuthPanelController;->mContainerHeight:I
 
     iget v6, p0, Lcom/android/systemui/biometrics/AuthPanelController;->mCornerRadius:F
 

@@ -409,6 +409,14 @@
 
     if-eqz v0, :cond_0
 
+    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
     const/4 v0, 0x0

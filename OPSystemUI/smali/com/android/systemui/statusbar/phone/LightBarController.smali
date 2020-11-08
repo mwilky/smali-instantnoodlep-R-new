@@ -778,6 +778,10 @@
 
     if-eq p1, v1, :cond_0
 
+    sget-object v1, Lcom/android/systemui/statusbar/phone/ScrimState;->BOUNCER_SCRIMMED_BOOT:Lcom/android/systemui/statusbar/phone/ScrimState;
+
+    if-eq p1, v1, :cond_0
+
     const p1, 0x3dcccccd    # 0.1f
 
     cmpl-float p1, p2, p1

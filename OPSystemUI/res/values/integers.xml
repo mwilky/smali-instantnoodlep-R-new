@@ -50,6 +50,8 @@
     <integer name="doze_small_icon_alpha">222</integer>
     <integer name="fingerprint_animation_post_delay_time">6</integer>
     <integer name="fingerprint_animation_post_delay_time_on_aod">6</integer>
+    <integer name="fingerprint_cust_animation_post_delay_time">0</integer>
+    <integer name="fingerprint_cust_animation_post_delay_time_on_aod">0</integer>
     <integer name="fingerprint_default_animation_style">0</integer>
     <integer name="fingerprint_dialog_text_gravity">8388611</integer>
     <integer name="fod_02_anim_end_frame">0</integer>
@@ -150,9 +152,6 @@
     <integer name="op_doze_pulse_duration_visible">5000</integer>
     <integer name="op_doze_single_tap_pulse_duration_visible">3000</integer>
     <integer name="op_doze_three_key_pulse_duration_visible">3000</integer>
-    <item type="integer" name="op_page_indicator_alpha_material">@integer/op_page_indicator_alpha_material_light</item>
-    <integer name="op_page_indicator_alpha_material_dark">30</integer>
-    <integer name="op_page_indicator_alpha_material_light">20</integer>
     <item type="integer" name="pageIndicator_alpha_material">@integer/pageIndicator_alpha_material_light</item>
     <integer name="pageIndicator_alpha_material_dark">30</integer>
     <integer name="pageIndicator_alpha_material_light">18</integer>

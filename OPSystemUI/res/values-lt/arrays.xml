@@ -82,6 +82,8 @@
         <item>Qualcomm® aptX™ garsas</item>
         <item>Qualcomm® aptX™ HD garsas</item>
         <item>LDAC</item>
+        <item>Qualcomm® aptX™ Adaptive garsas</item>
+        <item>Qualcomm® aptX™ TWS+ garsas</item>
     </string-array>
     <string-array name="bluetooth_a2dp_codec_titles">
         <item>Naudoti sistemos pasirink. (numatytasis)</item>
@@ -90,6 +92,8 @@
         <item>Qualcomm® aptX™ garsas</item>
         <item>Qualcomm® aptX™ HD garsas</item>
         <item>LDAC</item>
+        <item>Qualcomm® aptX™ Adaptive garsas</item>
+        <item>Qualcomm® aptX™ TWS+ garsas</item>
     </string-array>
     <string-array name="bluetooth_audio_active_device_summaries">
         <item></item>

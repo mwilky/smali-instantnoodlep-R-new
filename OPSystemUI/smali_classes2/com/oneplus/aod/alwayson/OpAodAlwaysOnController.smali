@@ -30,8 +30,6 @@
 
 .field private mHandler:Landroid/os/Handler;
 
-.field private mInLowLightEnvironment:Z
-
 .field private mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
 .field private mOpSceneModeObserver:Lcom/oneplus/scene/OpSceneModeObserver;
@@ -66,8 +64,6 @@
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;->mAlwaysOnEnabled:Z
-
-    iput-boolean v0, p0, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;->mInLowLightEnvironment:Z
 
     iput-object p1, p0, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;->mContext:Landroid/content/Context;
 
@@ -370,14 +366,6 @@
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v7, ", inLowLightEnvironment= "
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v7, p0, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;->mInLowLightEnvironment:Z
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
     const-string v7, ", batteryLevel= "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -408,10 +396,6 @@
     if-nez v4, :cond_4
 
     iget v0, p0, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;->mPhoneState:I
-
-    if-nez v0, :cond_4
-
-    iget-boolean v0, p0, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;->mInLowLightEnvironment:Z
 
     if-nez v0, :cond_4
 
@@ -572,51 +556,6 @@
     return-void
 .end method
 
-.method public setLowLightEnvironment(Z)V
-    .locals 2
-
-    sget-boolean v0, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;->IS_SUPPORT_ALWAYS_ON:Z
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "setLowLightEnvironment = "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", caller = "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v1, 0x3
-
-    invoke-static {v1}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "AodAlwaysOnController"
-
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    iput-boolean p1, p0, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;->mInLowLightEnvironment:Z
-
-    return-void
-.end method
-
 .method public toString()Ljava/lang/String;
     .locals 4
 
@@ -716,29 +655,9 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v3, p0, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;->mPhoneState:I
+    iget p0, p0, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;->mPhoneState:I
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "    isInLowLightEnvironment="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean p0, p0, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;->mInLowLightEnvironment:Z
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

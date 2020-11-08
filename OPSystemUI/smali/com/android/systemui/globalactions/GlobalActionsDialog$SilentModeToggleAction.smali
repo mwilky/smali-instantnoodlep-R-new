@@ -52,7 +52,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/globalactions/GlobalActionsDialog$SilentModeToggleAction;->this$0:Lcom/android/systemui/globalactions/GlobalActionsDialog;
 
-    invoke-static {p0}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$3800(Lcom/android/systemui/globalactions/GlobalActionsDialog;)Landroid/media/AudioManager;
+    invoke-static {p0}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$3700(Lcom/android/systemui/globalactions/GlobalActionsDialog;)Landroid/media/AudioManager;
 
     move-result-object p0
 
@@ -65,7 +65,7 @@
     :cond_0
     iget-object p0, p0, Lcom/android/systemui/globalactions/GlobalActionsDialog$SilentModeToggleAction;->this$0:Lcom/android/systemui/globalactions/GlobalActionsDialog;
 
-    invoke-static {p0}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$3800(Lcom/android/systemui/globalactions/GlobalActionsDialog;)Landroid/media/AudioManager;
+    invoke-static {p0}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$3700(Lcom/android/systemui/globalactions/GlobalActionsDialog;)Landroid/media/AudioManager;
 
     move-result-object p0
 

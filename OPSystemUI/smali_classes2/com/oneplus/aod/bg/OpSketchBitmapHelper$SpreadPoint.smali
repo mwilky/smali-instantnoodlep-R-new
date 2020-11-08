@@ -17,58 +17,8 @@
 # instance fields
 .field mSpreadDirection:Landroid/graphics/PointF;
 
-.field private mSpreadPath:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Landroid/graphics/Point;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
-# direct methods
-.method public constructor <init>(II)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Landroid/graphics/Point;-><init>(II)V
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Lcom/oneplus/aod/bg/OpSketchBitmapHelper$SpreadPoint;->mSpreadPath:Ljava/util/ArrayList;
-
-    return-void
-.end method
-
-.method static synthetic access$000(Lcom/oneplus/aod/bg/OpSketchBitmapHelper$SpreadPoint;)Ljava/util/ArrayList;
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/aod/bg/OpSketchBitmapHelper$SpreadPoint;->mSpreadPath:Ljava/util/ArrayList;
-
-    return-object p0
-.end method
-
 
 # virtual methods
-.method public getSpreadPath()Ljava/util/ArrayList;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/ArrayList<",
-            "Landroid/graphics/Point;",
-            ">;"
-        }
-    .end annotation
-
-    iget-object p0, p0, Lcom/oneplus/aod/bg/OpSketchBitmapHelper$SpreadPoint;->mSpreadPath:Ljava/util/ArrayList;
-
-    return-object p0
-.end method
-
 .method public toString()Ljava/lang/String;
     .locals 2
 

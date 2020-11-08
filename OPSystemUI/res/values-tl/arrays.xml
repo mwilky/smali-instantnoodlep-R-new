@@ -82,6 +82,8 @@
         <item>Qualcomm® aptX™ na audio</item>
         <item>Qualcomm® aptX™ HD na audio</item>
         <item>LDAC</item>
+        <item>Qualcomm® aptX™ Adaptive na audio</item>
+        <item>Qualcomm® aptX™ TWS+ na audio</item>
     </string-array>
     <string-array name="bluetooth_a2dp_codec_titles">
         <item>Gamitin ang Pagpili ng System (Default)</item>
@@ -90,6 +92,8 @@
         <item>Qualcomm® aptX™ na audio</item>
         <item>Qualcomm® aptX™ HD na audio</item>
         <item>LDAC</item>
+        <item>Qualcomm® aptX™ Adaptive na audio</item>
+        <item>Qualcomm® aptX™ TWS+ na audio</item>
     </string-array>
     <string-array name="bluetooth_audio_active_device_summaries">
         <item></item>

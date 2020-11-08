@@ -1415,6 +1415,9 @@ Vous êtes également connecté à un VPN qui peut contrôler votre activité su
     <string name="overheat_toast_content">La température de votre téléphone est trop élevée et les fonctions à consommation élevée sont désactivées afin de réduire la température</string>
     <string name="overlay_display_devices_title">Simuler des écrans secondaires</string>
     <string name="overview">Aperçu</string>
+    <string name="permission_btn_text_denied">Quitter</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Déclaration de consentement</string>
     <string name="phone_hint">Balayer pour téléphoner</string>
     <string name="phone_label">ouvrir le téléphone</string>
     <string name="picture_color_mode">Mode de couleur des images</string>
@@ -1916,7 +1919,7 @@ Il peut surchauffer si vous :
     <string name="time_picker_hour_label">heure</string>
     <string name="time_picker_input_error">Saisir une durée valide</string>
     <string name="time_picker_minute_label">minute</string>
-    <string name="time_picker_prompt_label">Saisir dans la durée</string>
+    <string name="time_picker_prompt_label">Saisir une durée</string>
     <string name="time_unit_just_now">"À l'instant"</string>
     <string name="title_convert_fbe">Conversion en chiffrement basé sur un fichier en cours</string>
     <string name="title_usb_accessory">Accessoire USB</string>

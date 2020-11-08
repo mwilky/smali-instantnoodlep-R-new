@@ -204,6 +204,9 @@
     <string name="overheat_notification_resume">ફોનનું તાપમાન પુનઃસ્થાપિત કરવામાં આવેલ છે અને ફોનનો સામાન્યની જેમ ઉપયોગ કરી શકાય છે</string>
     <string name="overheat_notification_title_resume">ફોનનું તાપમાન પુનઃસ્થાપિત કરવામાં આવેલ છે</string>
     <string name="overheat_toast_content">તમારા ફોનનું તાપમાન ખૂબ વધારે છે અને તાપમાનને ઘટાડવા માટે ઉચ્ચ વપરાશના કાર્યો બંધ કરવામાં આવ્યા છે</string>
+    <string name="permission_btn_text_denied">બહાર નીકળો</string>
+    <string name="permission_btn_text_grant">ઓકે</string>
+    <string name="permission_dialog_title">પરવાનગી વિધાન</string>
     <string name="prevent_view_title">પોકેટ મોડ ઓન છે</string>
     <string name="prevent_view_title_cancel">તમારા ફોનને સક્રિય કરવા માટે:</string>
     <string name="prevent_view_top_tag_cancel">તમારા ફોનના બ્લુ ભાગને ઢાંકતા નહી અને કોઈપણ ગંદગી તથા ધૂળને સાફ કરતા રહો.</string>

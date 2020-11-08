@@ -8157,7 +8157,7 @@
 
     move-result-object p0
 
-    const-string p1, "setSelectionSmooth should not be called before first layout pass"
+    const-string/jumbo p1, "setSelectionSmooth should not be called before first layout pass"
 
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 

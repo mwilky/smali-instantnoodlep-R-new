@@ -16,6 +16,10 @@
 
 .field public static final config_5g_num_signal_strength_bins:I = 0x7f0c000e
 
+.field public static final config_chargingFastThreshold:I = 0x7f0c0010
+
+.field public static final config_chargingSlowlyThreshold:I = 0x7f0c0011
+
 .field public static final config_keyguardRefreshRate:I = 0x7f0c0012
 
 .field public static final config_lockScreenDisplayTimeout:I = 0x7f0c0013
@@ -52,96 +56,100 @@
 
 .field public static final fingerprint_animation_post_delay_time_on_aod:I = 0x7f0c0031
 
-.field public static final fingerprint_default_animation_style:I = 0x7f0c0032
+.field public static final fingerprint_cust_animation_post_delay_time:I = 0x7f0c0032
 
-.field public static final fod_02_anim_end_frame:I = 0x7f0c0034
+.field public static final fingerprint_cust_animation_post_delay_time_on_aod:I = 0x7f0c0033
 
-.field public static final fod_02_anim_start_frame:I = 0x7f0c0035
+.field public static final fingerprint_default_animation_style:I = 0x7f0c0034
 
-.field public static final fod_03_anim_end_frame:I = 0x7f0c0036
+.field public static final fod_02_anim_end_frame:I = 0x7f0c0036
 
-.field public static final fod_03_anim_start_frame:I = 0x7f0c0037
+.field public static final fod_02_anim_start_frame:I = 0x7f0c0037
 
-.field public static final fod_04_anim_end_frame:I = 0x7f0c0038
+.field public static final fod_03_anim_end_frame:I = 0x7f0c0038
 
-.field public static final fod_04_anim_start_frame:I = 0x7f0c0039
+.field public static final fod_03_anim_start_frame:I = 0x7f0c0039
 
-.field public static final fod_cust01_anim_end_frame:I = 0x7f0c003a
+.field public static final fod_04_anim_end_frame:I = 0x7f0c003a
 
-.field public static final fod_cust01_anim_start_frame:I = 0x7f0c003b
+.field public static final fod_04_anim_start_frame:I = 0x7f0c003b
 
-.field public static final fod_default_down_anim_end_frame:I = 0x7f0c003c
+.field public static final fod_cust01_anim_end_frame:I = 0x7f0c003c
 
-.field public static final fod_default_down_anim_start_frame:I = 0x7f0c003d
+.field public static final fod_cust01_anim_start_frame:I = 0x7f0c003d
 
-.field public static final fod_default_up_anim_end_frame:I = 0x7f0c003e
+.field public static final fod_default_down_anim_end_frame:I = 0x7f0c003e
 
-.field public static final fod_default_up_anim_start_frame:I = 0x7f0c003f
+.field public static final fod_default_down_anim_start_frame:I = 0x7f0c003f
 
-.field public static final fod_mcl_anim_end_frame:I = 0x7f0c0040
+.field public static final fod_default_up_anim_end_frame:I = 0x7f0c0040
 
-.field public static final fod_mcl_anim_start_frame:I = 0x7f0c0041
+.field public static final fod_default_up_anim_start_frame:I = 0x7f0c0041
 
-.field public static final heads_up_default_snooze_length_ms:I = 0x7f0c0042
+.field public static final fod_mcl_anim_end_frame:I = 0x7f0c0042
 
-.field public static final heads_up_notification_decay:I = 0x7f0c0043
+.field public static final fod_mcl_anim_start_frame:I = 0x7f0c0043
 
-.field public static final heads_up_notification_minimum_time:I = 0x7f0c0044
+.field public static final heads_up_default_snooze_length_ms:I = 0x7f0c0044
 
-.field public static final keyguard_max_notification_count:I = 0x7f0c0046
+.field public static final heads_up_notification_decay:I = 0x7f0c0045
 
-.field public static final long_press_dock_anim_duration:I = 0x7f0c0069
+.field public static final heads_up_notification_minimum_time:I = 0x7f0c0046
 
-.field public static final magnification_default_scale:I = 0x7f0c006a
+.field public static final keyguard_max_notification_count:I = 0x7f0c0048
 
-.field public static final navigation_bar_deadzone_decay:I = 0x7f0c007a
+.field public static final long_press_dock_anim_duration:I = 0x7f0c006b
 
-.field public static final navigation_bar_deadzone_hold:I = 0x7f0c007b
+.field public static final magnification_default_scale:I = 0x7f0c006c
 
-.field public static final navigation_bar_deadzone_orientation:I = 0x7f0c007c
+.field public static final navigation_bar_deadzone_decay:I = 0x7f0c007c
 
-.field public static final notification_panel_layout_gravity:I = 0x7f0c007d
+.field public static final navigation_bar_deadzone_hold:I = 0x7f0c007d
 
-.field public static final oneplus_config_threekey_type:I = 0x7f0c0081
+.field public static final navigation_bar_deadzone_orientation:I = 0x7f0c007e
 
-.field public static final op_control_time_225:I = 0x7f0c008a
+.field public static final notification_panel_layout_gravity:I = 0x7f0c007f
 
-.field public static final op_control_time_325:I = 0x7f0c008c
+.field public static final oneplus_config_threekey_type:I = 0x7f0c0083
 
-.field public static final op_doze_fingerprint_poke_pulse_duration_visible:I = 0x7f0c0092
+.field public static final op_control_time_225:I = 0x7f0c008c
 
-.field public static final op_doze_pick_up_pulse_duration_visible:I = 0x7f0c0093
+.field public static final op_control_time_325:I = 0x7f0c008e
 
-.field public static final op_doze_pulse_duration_visible:I = 0x7f0c0094
+.field public static final op_doze_fingerprint_poke_pulse_duration_visible:I = 0x7f0c0094
 
-.field public static final op_doze_single_tap_pulse_duration_visible:I = 0x7f0c0095
+.field public static final op_doze_pick_up_pulse_duration_visible:I = 0x7f0c0095
 
-.field public static final op_doze_three_key_pulse_duration_visible:I = 0x7f0c0096
+.field public static final op_doze_pulse_duration_visible:I = 0x7f0c0096
 
-.field public static final power_menu_max_columns:I = 0x7f0c009d
+.field public static final op_doze_single_tap_pulse_duration_visible:I = 0x7f0c0097
 
-.field public static final quick_qs_panel_max_columns:I = 0x7f0c00a3
+.field public static final op_doze_three_key_pulse_duration_visible:I = 0x7f0c0098
 
-.field public static final quick_settings_max_rows:I = 0x7f0c00a6
+.field public static final power_menu_max_columns:I = 0x7f0c009c
 
-.field public static final quick_settings_min_num_tiles:I = 0x7f0c00a7
+.field public static final quick_qs_panel_max_columns:I = 0x7f0c00a2
 
-.field public static final quick_settings_num_columns:I = 0x7f0c00a8
+.field public static final quick_settings_max_rows:I = 0x7f0c00a5
 
-.field public static final quick_settings_num_rows_lower:I = 0x7f0c00a9
+.field public static final quick_settings_min_num_tiles:I = 0x7f0c00a6
 
-.field public static final touch_acceptance_delay:I = 0x7f0c00b3
+.field public static final quick_settings_num_columns:I = 0x7f0c00a7
 
-.field public static final watch_heap_limit:I = 0x7f0c00b6
+.field public static final quick_settings_num_rows_lower:I = 0x7f0c00a8
 
-.field public static final wireless_charging_anim_opacity_offset:I = 0x7f0c00bb
+.field public static final touch_acceptance_delay:I = 0x7f0c00b2
 
-.field public static final wireless_charging_battery_level_text_opacity_duration:I = 0x7f0c00bc
+.field public static final watch_heap_limit:I = 0x7f0c00b5
 
-.field public static final wireless_charging_battery_level_text_scale_animation_duration:I = 0x7f0c00bd
+.field public static final wireless_charging_anim_opacity_offset:I = 0x7f0c00ba
 
-.field public static final wireless_charging_fade_duration:I = 0x7f0c00be
+.field public static final wireless_charging_battery_level_text_opacity_duration:I = 0x7f0c00bb
 
-.field public static final wireless_charging_fade_offset:I = 0x7f0c00bf
+.field public static final wireless_charging_battery_level_text_scale_animation_duration:I = 0x7f0c00bc
 
-.field public static final zen_mode_alarm_warning_threshold:I = 0x7f0c00c2
+.field public static final wireless_charging_fade_duration:I = 0x7f0c00bd
+
+.field public static final wireless_charging_fade_offset:I = 0x7f0c00be
+
+.field public static final zen_mode_alarm_warning_threshold:I = 0x7f0c00c1

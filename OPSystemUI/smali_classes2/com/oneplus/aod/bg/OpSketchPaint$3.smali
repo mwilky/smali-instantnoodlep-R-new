@@ -35,7 +35,7 @@
 
 # virtual methods
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 6
+    .locals 5
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
@@ -49,7 +49,7 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/bg/OpSketchPaint$3;->this$0:Lcom/oneplus/aod/bg/OpSketchPaint;
 
-    invoke-static {v0}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$300(Lcom/oneplus/aod/bg/OpSketchPaint;)Landroid/graphics/Paint;
+    invoke-static {v0}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$400(Lcom/oneplus/aod/bg/OpSketchPaint;)Landroid/graphics/Paint;
 
     move-result-object v0
 
@@ -61,37 +61,31 @@
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setColor(I)V
 
-    iget-object v0, p0, Lcom/oneplus/aod/bg/OpSketchPaint$3;->this$0:Lcom/oneplus/aod/bg/OpSketchPaint;
+    iget-object p0, p0, Lcom/oneplus/aod/bg/OpSketchPaint$3;->this$0:Lcom/oneplus/aod/bg/OpSketchPaint;
 
-    invoke-static {v0}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$400(Lcom/oneplus/aod/bg/OpSketchPaint;)[Landroid/graphics/Paint;
+    invoke-static {p0}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$500(Lcom/oneplus/aod/bg/OpSketchPaint;)[Landroid/graphics/Paint;
 
-    move-result-object v0
+    move-result-object p0
 
-    array-length v2, v0
+    array-length v0, p0
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
     :goto_0
-    if-ge v3, v2, :cond_0
+    if-ge v2, v0, :cond_0
 
-    aget-object v4, v0, v3
+    aget-object v3, p0, v2
 
     invoke-static {p1, v1, v1, v1}, Landroid/graphics/Color;->argb(FFFF)I
 
-    move-result v5
+    move-result v4
 
-    invoke-virtual {v4, v5}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setColor(I)V
 
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     :cond_0
-    iget-object p0, p0, Lcom/oneplus/aod/bg/OpSketchPaint$3;->this$0:Lcom/oneplus/aod/bg/OpSketchPaint;
-
-    iget-object p0, p0, Lcom/oneplus/aod/bg/OpBasePaint;->mView:Landroid/view/View;
-
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
     return-void
 .end method

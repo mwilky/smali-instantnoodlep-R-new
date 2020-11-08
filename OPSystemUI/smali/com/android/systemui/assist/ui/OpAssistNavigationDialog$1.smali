@@ -29,11 +29,43 @@
 
 # virtual methods
 .method public onSystemUiVisibilityChange(I)V
-    .locals 0
+    .locals 1
 
-    if-nez p1, :cond_0
+    if-eqz p1, :cond_0
 
-    invoke-static {}, Lcom/android/systemui/assist/ui/OpAssistNavigationDialog;->access$000()Landroid/view/View;
+    const/4 p0, 0x2
+
+    if-ne p1, p0, :cond_2
+
+    :cond_0
+    invoke-static {}, Lcom/android/systemui/assist/ui/OpAssistNavigationDialog;->access$000()Landroid/view/WindowManager$LayoutParams;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_1
+
+    invoke-static {}, Lcom/android/systemui/assist/ui/OpAssistNavigationDialog;->access$200()Landroid/view/WindowManager;
+
+    move-result-object p0
+
+    invoke-static {}, Lcom/android/systemui/assist/ui/OpAssistNavigationDialog;->access$100()Landroid/view/View;
+
+    move-result-object p1
+
+    invoke-static {}, Lcom/android/systemui/assist/ui/OpAssistNavigationDialog;->access$000()Landroid/view/WindowManager$LayoutParams;
+
+    move-result-object v0
+
+    invoke-interface {p0, p1, v0}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    :cond_1
+    invoke-static {}, Lcom/android/systemui/assist/ui/OpAssistNavigationDialog;->access$100()Landroid/view/View;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_2
+
+    invoke-static {}, Lcom/android/systemui/assist/ui/OpAssistNavigationDialog;->access$100()Landroid/view/View;
 
     move-result-object p0
 
@@ -41,6 +73,12 @@
 
     invoke-virtual {p0, p1}, Landroid/view/View;->setSystemUiVisibility(I)V
 
-    :cond_0
+    invoke-static {}, Lcom/android/systemui/assist/ui/OpAssistNavigationDialog;->access$100()Landroid/view/View;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
+
+    :cond_2
     return-void
 .end method

@@ -313,6 +313,19 @@
     move-result v0
 
     :cond_0
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isREDVersion()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const/16 v0, 0x64
+
+    invoke-static {v0}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
+
+    move-result v0
+
+    :cond_1
     invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
     move-result-object v0

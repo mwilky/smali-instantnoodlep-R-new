@@ -1415,6 +1415,9 @@ YИсто така, поврзани сте на VPN којашто може д�
     <string name="overheat_toast_content">temperature of the phone is too high</string>
     <string name="overlay_display_devices_title">Симул. секундарен екран</string>
     <string name="overview">Краток преглед</string>
+    <string name="permission_btn_text_denied">Излез</string>
+    <string name="permission_btn_text_grant">ОК</string>
+    <string name="permission_dialog_title">Изјава за дозвола</string>
     <string name="phone_hint">Повлечете од иконата за телефонот</string>
     <string name="phone_label">отвори телефон</string>
     <string name="picture_color_mode">Режим на боја на слика</string>
@@ -1773,10 +1776,13 @@ YИсто така, поврзани сте на VPN којашто може д�
     <string name="search_menu_title">Пребарај</string>
     <string name="see_more_title">Прикажи повеќе</string>
     <string name="select_application">Избери апликација</string>
+    <string name="select_day">Изберете месец или ден</string>
+    <string name="select_hours">Изберете час</string>
     <string name="select_logd_size_dialog_title">Величина/меѓумеморија на дневник</string>
     <string name="select_logd_size_title">Величини на меѓумеморија за дневникот</string>
     <string name="select_logpersist_dialog_title">Изберете привремена меморија на евиденција што ќе се користи постојано на уредот</string>
     <string name="select_logpersist_title">Трајно зачувувај податоци од дневникот на уредот</string>
+    <string name="select_minutes">Изберете минути</string>
     <string name="select_private_dns_configuration_dialog_title">Изберете режим на приватен DNS</string>
     <string name="select_private_dns_configuration_title">Приватен DNS</string>
     <string name="select_usb_configuration_dialog_title">Изберете конфигурација за USB</string>
@@ -1784,6 +1790,7 @@ YИсто така, поврзани сте на VPN којашто може д�
     <string name="select_webview_provider_dialog_title">Поставете воведување WebView</string>
     <string name="select_webview_provider_title">Воведување WebView</string>
     <string name="select_webview_provider_toast_text">Овој избор веќе не важи. Обидете се повторно.</string>
+    <string name="select_year">Изберете година</string>
     <string name="sensor_privacy_mode">Сензорите се исклучени</string>
     <string name="shared_data_delete_failure_text">Грешка при бришењето на споделените податоци.</string>
     <string name="shared_data_no_accessors_dialog_text">Нема стекнати закупи за споделениве податоци. Дали сакате да ги избришете?</string>
@@ -1908,6 +1915,11 @@ YИсто така, поврзани сте на VPN којашто може д�
     <string name="thermal_shutdown_message">Сега телефонот работи нормално</string>
     <string name="thermal_shutdown_title">Телефонот се исклучи поради загреаност</string>
     <string name="tile_unavailable">Недостапно</string>
+    <string name="time_picker_header_text">Поставете време</string>
+    <string name="time_picker_hour_label">час</string>
+    <string name="time_picker_input_error">Внесете важечко време</string>
+    <string name="time_picker_minute_label">минути</string>
+    <string name="time_picker_prompt_label">Внесете време</string>
     <string name="time_unit_just_now">Неодамнешни</string>
     <string name="title_convert_fbe">Конвертирајте до шифрирање на база на датотеки</string>
     <string name="title_usb_accessory">USB додаток</string>

@@ -227,7 +227,15 @@
     return-void
 .end method
 
-.method static synthetic access$1000(Lcom/android/systemui/ScreenDecorations;)Z
+.method static synthetic access$1000(Lcom/android/systemui/ScreenDecorations;)Lcom/oneplus/util/SystemSetting;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/ScreenDecorations;->mTempColorInversionDisableSetting:Lcom/oneplus/util/SystemSetting;
+
+    return-object p0
+.end method
+
+.method static synthetic access$1100(Lcom/android/systemui/ScreenDecorations;)Z
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/ScreenDecorations;->isRectangleTop()Z
@@ -237,7 +245,7 @@
     return p0
 .end method
 
-.method static synthetic access$1100(Lcom/android/systemui/ScreenDecorations;)Z
+.method static synthetic access$1200(Lcom/android/systemui/ScreenDecorations;)Z
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/ScreenDecorations;->isRectangleBottom()Z
@@ -247,7 +255,7 @@
     return p0
 .end method
 
-.method static synthetic access$1200(Lcom/android/systemui/ScreenDecorations;)V
+.method static synthetic access$1300(Lcom/android/systemui/ScreenDecorations;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/ScreenDecorations;->updateLayoutParams()V
@@ -255,7 +263,7 @@
     return-void
 .end method
 
-.method static synthetic access$1300(Lcom/android/systemui/ScreenDecorations;I)V
+.method static synthetic access$1400(Lcom/android/systemui/ScreenDecorations;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/systemui/ScreenDecorations;->updateView(I)V
@@ -263,7 +271,7 @@
     return-void
 .end method
 
-.method static synthetic access$1700()Z
+.method static synthetic access$1800()Z
     .locals 1
 
     sget-boolean v0, Lcom/android/systemui/ScreenDecorations;->DEBUG_SCREEN_DECORATIONS:Z
@@ -271,18 +279,10 @@
     return v0
 .end method
 
-.method static synthetic access$1800()Z
-    .locals 1
-
-    sget-boolean v0, Lcom/android/systemui/ScreenDecorations;->DEBUG_CUTOUT_DISPLAY:Z
-
-    return v0
-.end method
-
 .method static synthetic access$1900()Z
     .locals 1
 
-    sget-boolean v0, Lcom/android/systemui/ScreenDecorations;->DEBUG_CUTOUT_CIRCLE_DISPLAY:Z
+    sget-boolean v0, Lcom/android/systemui/ScreenDecorations;->DEBUG_CUTOUT_DISPLAY:Z
 
     return v0
 .end method
@@ -295,6 +295,14 @@
     return p0
 .end method
 
+.method static synthetic access$2000()Z
+    .locals 1
+
+    sget-boolean v0, Lcom/android/systemui/ScreenDecorations;->DEBUG_CUTOUT_CIRCLE_DISPLAY:Z
+
+    return v0
+.end method
+
 .method static synthetic access$202(Lcom/android/systemui/ScreenDecorations;I)I
     .locals 0
 
@@ -303,7 +311,7 @@
     return p1
 .end method
 
-.method static synthetic access$2300(Lcom/android/systemui/ScreenDecorations;)Z
+.method static synthetic access$2400(Lcom/android/systemui/ScreenDecorations;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/android/systemui/ScreenDecorations;->mPendingRotationChange:Z
@@ -311,7 +319,7 @@
     return p0
 .end method
 
-.method static synthetic access$2400(II)I
+.method static synthetic access$2500(II)I
     .locals 0
 
     invoke-static {p0, p1}, Lcom/android/systemui/ScreenDecorations;->getBoundPositionFromRotation(II)I
@@ -321,7 +329,7 @@
     return p0
 .end method
 
-.method static synthetic access$2500()I
+.method static synthetic access$2600()I
     .locals 1
 
     sget v0, Lcom/android/systemui/ScreenDecorations;->mOpCustRegionleft:I
@@ -329,7 +337,7 @@
     return v0
 .end method
 
-.method static synthetic access$2600()I
+.method static synthetic access$2700()I
     .locals 1
 
     sget v0, Lcom/android/systemui/ScreenDecorations;->mOpCustRegionRight:I
@@ -337,7 +345,7 @@
     return v0
 .end method
 
-.method static synthetic access$2700(I)Ljava/lang/String;
+.method static synthetic access$2800(I)Ljava/lang/String;
     .locals 0
 
     invoke-static {p0}, Lcom/android/systemui/ScreenDecorations;->getWindowTitleByPos(I)Ljava/lang/String;

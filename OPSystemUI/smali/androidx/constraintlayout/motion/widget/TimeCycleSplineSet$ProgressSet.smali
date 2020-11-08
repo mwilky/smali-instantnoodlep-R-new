@@ -89,7 +89,7 @@
 
     move-result-object v3
 
-    const-string v4, "setProgress"
+    const-string/jumbo v4, "setProgress"
 
     new-array v5, v2, [Ljava/lang/Class;
 

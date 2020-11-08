@@ -514,7 +514,23 @@
 
 # virtual methods
 .method protected buildDialog(Landroid/os/Bundle;ZIILjava/lang/String;ZJI)Lcom/android/systemui/biometrics/AuthDialog;
-    .locals 3
+    .locals 4
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isCustomFingerprint()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Lcom/android/systemui/biometrics/Utils;->isBiometricAllowed(Landroid/os/Bundle;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x2
+
+    if-ne p4, v0, :cond_0
 
     new-instance v0, Landroid/view/ContextThemeWrapper;
 
@@ -524,6 +540,32 @@
 
     invoke-direct {v0, v1, v2}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 
+    goto :goto_1
+
+    :cond_0
+    new-instance v0, Landroid/view/ContextThemeWrapper;
+
+    iget-object v1, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
+
+    invoke-static {}, Lcom/oneplus/util/ThemeColorUtils;->getCurrentTheme()I
+
+    move-result v2
+
+    const/4 v3, 0x1
+
+    if-ne v2, v3, :cond_1
+
+    sget v2, Lcom/android/systemui/R$style;->Oneplus_Theme_BiometricDialog_Dark:I
+
+    goto :goto_0
+
+    :cond_1
+    sget v2, Lcom/android/systemui/R$style;->Oneplus_Theme_BiometricDialog_Light:I
+
+    :goto_0
+    invoke-direct {v0, v1, v2}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
+
+    :goto_1
     new-instance v1, Lcom/android/systemui/biometrics/AuthContainerView$Builder;
 
     invoke-direct {v1, v0}, Lcom/android/systemui/biometrics/AuthContainerView$Builder;-><init>(Landroid/content/Context;)V

@@ -188,11 +188,15 @@
 
     if-nez v0, :cond_0
 
+    invoke-static {p0}, Lcom/android/systemui/shared/system/OpContextWrapper;->getCurrentUserContext(Landroid/content/Context;)Landroid/content/Context;
+
+    move-result-object v0
+
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
 
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -520,7 +524,11 @@
     move-result-object p1
 
     :try_start_0
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {p0}, Lcom/android/systemui/shared/system/OpContextWrapper;->getCurrentUserContext(Landroid/content/Context;)Landroid/content/Context;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p2
 

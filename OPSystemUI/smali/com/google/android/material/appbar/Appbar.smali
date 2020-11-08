@@ -3521,18 +3521,6 @@
     return-void
 .end method
 
-.method public setNavigationOnClickListener(Landroid/view/View$OnClickListener;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/google/android/material/appbar/Appbar;->ensureNavButtonView()V
-
-    iget-object p0, p0, Lcom/google/android/material/appbar/Appbar;->mNavButtonView:Landroid/widget/ImageButton;
-
-    invoke-virtual {p0, p1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    return-void
-.end method
-
 .method public setSubtitle(Ljava/lang/CharSequence;)V
     .locals 3
 

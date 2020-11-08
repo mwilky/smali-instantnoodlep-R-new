@@ -93,7 +93,7 @@
 .end method
 
 .method protected onFinishInflate()V
-    .locals 1
+    .locals 2
 
     invoke-super {p0}, Lcom/android/systemui/statusbar/notification/row/StackScrollerDecorView;->onFinishInflate()V
 
@@ -105,6 +105,25 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/EmptyShadeView;->mEmptyText:Landroid/widget/TextView;
 
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isREDVersion()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    sget v1, Lcom/android/systemui/R$color;->op_turquoise:I
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getColor(I)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/EmptyShadeView;->setTextColor(I)V
+
+    :cond_0
     return-void
 .end method
 

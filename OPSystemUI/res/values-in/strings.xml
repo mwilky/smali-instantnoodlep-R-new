@@ -1415,6 +1415,9 @@ Anda juga tersambung ke VPN, yang dapat memantau aktivitas jaringan."</string>
     <string name="overheat_toast_content">temperature of the phone is too high</string>
     <string name="overlay_display_devices_title">Simulasikan tampilan sekunder</string>
     <string name="overview">Ringkasan</string>
+    <string name="permission_btn_text_denied">Keluar</string>
+    <string name="permission_btn_text_grant">OKE</string>
+    <string name="permission_dialog_title">Pernyataan izin</string>
     <string name="phone_hint">Geser dari ikon untuk telepon</string>
     <string name="phone_label">buka ponsel</string>
     <string name="picture_color_mode">Mode warna gambar</string>
@@ -1773,10 +1776,13 @@ Anda juga tersambung ke VPN, yang dapat memantau aktivitas jaringan."</string>
     <string name="search_menu_title">Telusuri</string>
     <string name="see_more_title">Lihat lainnya</string>
     <string name="select_application">Pilih aplikasi</string>
+    <string name="select_day">Pilih bulan dan hari</string>
+    <string name="select_hours">Pilih jam</string>
     <string name="select_logd_size_dialog_title">Ukuran Pencatat Log per buffer log</string>
     <string name="select_logd_size_title">Ukuran buffer pencatat log</string>
     <string name="select_logpersist_dialog_title">Pilih penyangga log untuk terus menyimpan di perangkat</string>
     <string name="select_logpersist_title">Terus simpan data pencatat log di perangkat</string>
+    <string name="select_minutes">Pilih menit</string>
     <string name="select_private_dns_configuration_dialog_title">Pilih Mode DNS Pribadi</string>
     <string name="select_private_dns_configuration_title">DNS Pribadi</string>
     <string name="select_usb_configuration_dialog_title">Pilih Konfigurasi USB</string>
@@ -1784,6 +1790,7 @@ Anda juga tersambung ke VPN, yang dapat memantau aktivitas jaringan."</string>
     <string name="select_webview_provider_dialog_title">Setel penerapan WebView</string>
     <string name="select_webview_provider_title">Penerapan WebView</string>
     <string name="select_webview_provider_toast_text">Pilihan ini tidak valid lagi. Coba lagi.</string>
+    <string name="select_year">Pilih tahun</string>
     <string name="sensor_privacy_mode">Sensor nonaktif</string>
     <string name="shared_data_delete_failure_text">Terjadi error saat menghapus data yang dibagikan.</string>
     <string name="shared_data_no_accessors_dialog_text">Tidak ada lease yang diperoleh dari data yang dibagikan ini. Apakah Anda ingin menghapusnya?</string>
@@ -1905,6 +1912,11 @@ Ponsel dapat menjadi terlalu panas jika Anda:
     <string name="thermal_shutdown_message">Ponsel kini berfungsi normal</string>
     <string name="thermal_shutdown_title">Ponsel dimatikan karena panas</string>
     <string name="tile_unavailable">Tidak tersedia</string>
+    <string name="time_picker_header_text">Tetapkan waktu</string>
+    <string name="time_picker_hour_label">jam</string>
+    <string name="time_picker_input_error">Ketik waktu yang berlaku</string>
+    <string name="time_picker_minute_label">menit</string>
+    <string name="time_picker_prompt_label">Ketik dalam waktu</string>
     <string name="time_unit_just_now">Baru saja</string>
     <string name="title_convert_fbe">Mengonversi ke enkripsi berbasis file</string>
     <string name="title_usb_accessory">Aksesori USB</string>

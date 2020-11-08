@@ -6,6 +6,8 @@
 # static fields
 .field static final ANDROID_PACKAGE:Ljava/lang/String; = "android"
 
+.field private static final DEBUG:Z
+
 .field static final OVERLAY_CATEGORY_COLOR:Ljava/lang/String; = "android.theme.customization.accent_color"
 
 .field static final OVERLAY_CATEGORY_FONT:Ljava/lang/String; = "android.theme.customization.font"
@@ -82,25 +84,29 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 8
+    .locals 9
 
-    const-string v0, "android.theme.customization.icon_pack.launcher"
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
-    const-string v1, "android.theme.customization.adaptive_icon_shape"
+    sput-boolean v0, Lcom/android/systemui/theme/ThemeOverlayManager;->DEBUG:Z
 
-    const-string v2, "android.theme.customization.font"
+    const-string v1, "android.theme.customization.icon_pack.launcher"
 
-    const-string v3, "android.theme.customization.accent_color"
+    const-string v2, "android.theme.customization.adaptive_icon_shape"
 
-    const-string v4, "android.theme.customization.icon_pack.android"
+    const-string v3, "android.theme.customization.font"
 
-    const-string v5, "android.theme.customization.icon_pack.systemui"
+    const-string v4, "android.theme.customization.accent_color"
 
-    const-string v6, "android.theme.customization.icon_pack.settings"
+    const-string v5, "android.theme.customization.icon_pack.android"
 
-    const-string v7, "android.theme.customization.icon_pack.themepicker"
+    const-string v6, "android.theme.customization.icon_pack.systemui"
 
-    filled-new-array/range {v0 .. v7}, [Ljava/lang/String;
+    const-string v7, "android.theme.customization.icon_pack.settings"
+
+    const-string v8, "android.theme.customization.icon_pack.themepicker"
+
+    filled-new-array/range {v1 .. v8}, [Ljava/lang/String;
 
     move-result-object v0
 
@@ -374,23 +380,73 @@
 .end method
 
 .method private synthetic lambda$setEnabledAsync$7(Ljava/lang/String;Landroid/os/UserHandle;Z)V
-    .locals 2
+    .locals 7
 
-    const/4 v0, 0x0
+    sget-boolean v0, Lcom/android/systemui/theme/ThemeOverlayManager;->DEBUG:Z
 
-    if-eqz p3, :cond_0
+    const/4 v1, 0x2
 
+    const/4 v2, 0x1
+
+    const/4 v3, 0x3
+
+    const/4 v4, 0x0
+
+    const-string v5, "ThemeOverlayManager"
+
+    if-eqz v0, :cond_0
+
+    new-array v0, v3, [Ljava/lang/Object;
+
+    aput-object p1, v0, v4
+
+    aput-object p2, v0, v2
+
+    invoke-static {p3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v6
+
+    aput-object v6, v0, v1
+
+    const-string v6, "setEnabled: %s %s %b"
+
+    invoke-static {v6, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v5, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
     :try_start_0
+    iget-object v0, p0, Lcom/android/systemui/theme/ThemeOverlayManager;->mOverlayManager:Landroid/content/om/OverlayManager;
+
+    invoke-virtual {v0, p1, p2}, Landroid/content/om/OverlayManager;->getOverlayInfo(Ljava/lang/String;Landroid/os/UserHandle;)Landroid/content/om/OverlayInfo;
+
+    move-result-object v0
+
+    if-eqz p3, :cond_1
+
+    if-nez v0, :cond_1
+
+    const-string p0, "setEnabled failed: null info"
+
+    invoke-static {v5, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_1
+    if-eqz p3, :cond_2
+
     iget-object p0, p0, Lcom/android/systemui/theme/ThemeOverlayManager;->mOverlayManager:Landroid/content/om/OverlayManager;
 
     invoke-virtual {p0, p1, p2}, Landroid/content/om/OverlayManager;->setEnabledExclusiveInCategory(Ljava/lang/String;Landroid/os/UserHandle;)V
 
     goto :goto_0
 
-    :cond_0
+    :cond_2
     iget-object p0, p0, Lcom/android/systemui/theme/ThemeOverlayManager;->mOverlayManager:Landroid/content/om/OverlayManager;
 
-    invoke-virtual {p0, p1, v0, p2}, Landroid/content/om/OverlayManager;->setEnabled(Ljava/lang/String;ZLandroid/os/UserHandle;)V
+    invoke-virtual {p0, p1, v4, p2}, Landroid/content/om/OverlayManager;->setEnabled(Ljava/lang/String;ZLandroid/os/UserHandle;)V
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
@@ -400,33 +456,25 @@
     :catch_0
     move-exception p0
 
-    const/4 v1, 0x3
+    new-array v0, v3, [Ljava/lang/Object;
 
-    new-array v1, v1, [Ljava/lang/Object;
+    aput-object p1, v0, v4
 
-    aput-object p1, v1, v0
-
-    const/4 p1, 0x1
-
-    aput-object p2, v1, p1
-
-    const/4 p1, 0x2
+    aput-object p2, v0, v2
 
     invoke-static {p3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object p2
+    move-result-object p1
 
-    aput-object p2, v1, p1
+    aput-object p1, v0, v1
 
     const-string p1, "setEnabled failed: %s %s %b"
 
-    invoke-static {p1, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
-    const-string p2, "ThemeOverlayManager"
-
-    invoke-static {p2, p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v5, p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
     return-void

@@ -204,6 +204,9 @@
     <string name="overheat_notification_resume">ফোন স্বাভাবিক তাপমাত্রায় ফিরে এসেছে এবং ফোনটি এখন স্বাভাবিকভাবে ব্যবহার করা যাবে</string>
     <string name="overheat_notification_title_resume">ফোনকে স্বাভাবিক তাপমাত্রায় ফিরিয়ে আনা হয়েছে</string>
     <string name="overheat_toast_content">আপনার ফোন খুব গরম হয়ে গেছে এবং তাপমাত্রা কমাতে বেশি ব্যাটারী খরচকারী ফাংশনগুলি বন্ধ করা হয়েছে</string>
+    <string name="permission_btn_text_denied">প্রস্থান করুন</string>
+    <string name="permission_btn_text_grant">ঠিক আছে</string>
+    <string name="permission_dialog_title">অনুমতির বিবৃতি</string>
     <string name="prevent_view_title">পকেট মোড চালু রয়েছে।</string>
     <string name="prevent_view_title_cancel">আপনার ফোন সক্রিয় করতে:</string>
     <string name="prevent_view_top_tag_cancel">আপনার ফোনের নীল এলাকা ঢাকবেন না, এবং লেগে থাকা ময়লা বা ধুলো পরিষ্কার করুন।</string>

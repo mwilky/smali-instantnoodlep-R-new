@@ -4949,41 +4949,59 @@
 .end method
 
 .method private getMediaHost()Lcom/android/systemui/media/MediaHost;
-    .locals 4
+    .locals 7
 
-    new-instance v0, Lcom/android/systemui/media/MediaHost;
+    new-instance v6, Lcom/android/systemui/media/MediaHost;
 
     new-instance v1, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;
 
     invoke-direct {v1}, Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;-><init>()V
 
-    iget-object v2, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->mediaHierarchyManagerProvider:Ljavax/inject/Provider;
+    iget-object v0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->mediaHierarchyManagerProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v0
+
+    move-object v2, v0
 
     check-cast v2, Lcom/android/systemui/media/MediaHierarchyManager;
 
-    iget-object v3, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->mediaDataFilterProvider:Ljavax/inject/Provider;
+    iget-object v0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->mediaDataFilterProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v3}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object v0
+
+    move-object v3, v0
 
     check-cast v3, Lcom/android/systemui/media/MediaDataFilter;
 
-    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->mediaHostStatesManagerProvider:Ljavax/inject/Provider;
+    iget-object v0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->mediaHostStatesManagerProvider:Ljavax/inject/Provider;
+
+    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v4, v0
+
+    check-cast v4, Lcom/android/systemui/media/MediaHostStatesManager;
+
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideNotificationMediaManagerProvider:Ljavax/inject/Provider;
 
     invoke-interface {p0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Lcom/android/systemui/media/MediaHostStatesManager;
+    move-object v5, p0
 
-    invoke-direct {v0, v1, v2, v3, p0}, Lcom/android/systemui/media/MediaHost;-><init>(Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;Lcom/android/systemui/media/MediaHierarchyManager;Lcom/android/systemui/media/MediaDataFilter;Lcom/android/systemui/media/MediaHostStatesManager;)V
+    check-cast v5, Lcom/android/systemui/statusbar/NotificationMediaManager;
 
-    return-object v0
+    move-object v0, v6
+
+    invoke-direct/range {v0 .. v5}, Lcom/android/systemui/media/MediaHost;-><init>(Lcom/android/systemui/media/MediaHost$MediaHostStateHolder;Lcom/android/systemui/media/MediaHierarchyManager;Lcom/android/systemui/media/MediaDataFilter;Lcom/android/systemui/media/MediaHostStatesManager;Lcom/android/systemui/statusbar/NotificationMediaManager;)V
+
+    return-object v6
 .end method
 
 .method private getNotificationSectionsFeatureManager()Lcom/android/systemui/statusbar/notification/NotificationSectionsFeatureManager;
@@ -12225,7 +12243,9 @@
 
     iget-object v4, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->mediaHostStatesManagerProvider:Ljavax/inject/Provider;
 
-    invoke-static {v1, v2, v3, v4}, Lcom/android/systemui/media/MediaHost_Factory;->create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/media/MediaHost_Factory;
+    iget-object v5, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideNotificationMediaManagerProvider:Ljavax/inject/Provider;
+
+    invoke-static {v1, v2, v3, v4, v5}, Lcom/android/systemui/media/MediaHost_Factory;->create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/media/MediaHost_Factory;
 
     move-result-object v1
 
@@ -12237,7 +12257,9 @@
 
     iget-object v4, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->notificationLockscreenUserManagerImplProvider:Ljavax/inject/Provider;
 
-    invoke-static {v1, v2, v3, v4}, Lcom/android/systemui/media/KeyguardMediaController_Factory;->create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/media/KeyguardMediaController_Factory;
+    iget-object v5, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideNotificationMediaManagerProvider:Ljavax/inject/Provider;
+
+    invoke-static {v1, v2, v3, v4, v5}, Lcom/android/systemui/media/KeyguardMediaController_Factory;->create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/android/systemui/media/KeyguardMediaController_Factory;
 
     move-result-object v1
 

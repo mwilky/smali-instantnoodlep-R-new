@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/android/keyguard/KeyguardAssistantView$SettingObserver;,
         Lcom/android/keyguard/KeyguardAssistantView$Callback;,
         Lcom/android/keyguard/KeyguardAssistantView$KeyguardViewUpdateListener;
     }
@@ -14,6 +15,8 @@
 
 # instance fields
 .field private TAG:Ljava/lang/String;
+
+.field private mAllowShowNotification:Z
 
 .field private mAmbientIndicationContainer:Lcom/oneplus/aod/views/OpSmartspaceContainer;
 
@@ -39,8 +42,6 @@
 
 .field private final mDelayForSetGoogleSmartspaceChildViewHeight:Ljava/lang/Runnable;
 
-.field private mDemoCommandSettings:Lcom/android/systemui/qs/GlobalSetting;
-
 .field private final mEnableSmartSpace:Z
 
 .field private mHandler:Landroid/os/Handler;
@@ -51,14 +52,16 @@
 
 .field private mKeyguardViewUpdateListener:Lcom/android/keyguard/KeyguardAssistantView$KeyguardViewUpdateListener;
 
+.field final mNotifyHasHeaderRunner:Ljava/lang/Runnable;
+
 .field private mRetryTimes:I
 
-.field private mTextColor:I
+.field private final mSettingObserver:Lcom/android/keyguard/KeyguardAssistantView$SettingObserver;
 
 
 # direct methods
 .method public constructor <init>(Landroid/view/View;Landroid/content/Context;Landroid/os/Handler;)V
-    .locals 4
+    .locals 5
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -90,43 +93,57 @@
 
     iput-boolean v1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mEnableSmartSpace:Z
 
+    new-instance v1, Lcom/android/keyguard/KeyguardAssistantView$SettingObserver;
+
+    invoke-direct {v1, p0}, Lcom/android/keyguard/KeyguardAssistantView$SettingObserver;-><init>(Lcom/android/keyguard/KeyguardAssistantView;)V
+
+    iput-object v1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mSettingObserver:Lcom/android/keyguard/KeyguardAssistantView$SettingObserver;
+
+    iput-boolean v2, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAllowShowNotification:Z
+
+    new-instance v1, Lcom/android/keyguard/KeyguardAssistantView$1;
+
+    invoke-direct {v1, p0}, Lcom/android/keyguard/KeyguardAssistantView$1;-><init>(Lcom/android/keyguard/KeyguardAssistantView;)V
+
+    iput-object v1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mNotifyHasHeaderRunner:Ljava/lang/Runnable;
+
     iput v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mRetryTimes:I
 
-    new-instance v0, Lcom/android/keyguard/KeyguardAssistantView$2;
+    new-instance v1, Lcom/android/keyguard/KeyguardAssistantView$2;
 
-    invoke-direct {v0, p0}, Lcom/android/keyguard/KeyguardAssistantView$2;-><init>(Lcom/android/keyguard/KeyguardAssistantView;)V
+    invoke-direct {v1, p0}, Lcom/android/keyguard/KeyguardAssistantView$2;-><init>(Lcom/android/keyguard/KeyguardAssistantView;)V
 
-    iput-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mDelayForSetGoogleSmartspaceChildViewHeight:Ljava/lang/Runnable;
+    iput-object v1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mDelayForSetGoogleSmartspaceChildViewHeight:Ljava/lang/Runnable;
 
-    new-instance v0, Lcom/android/keyguard/KeyguardAssistantView$4;
+    new-instance v1, Lcom/android/keyguard/KeyguardAssistantView$4;
 
-    invoke-direct {v0, p0}, Lcom/android/keyguard/KeyguardAssistantView$4;-><init>(Lcom/android/keyguard/KeyguardAssistantView;)V
+    invoke-direct {v1, p0}, Lcom/android/keyguard/KeyguardAssistantView$4;-><init>(Lcom/android/keyguard/KeyguardAssistantView;)V
 
-    iput-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAttachStateListener:Landroid/view/View$OnAttachStateChangeListener;
+    iput-object v1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAttachStateListener:Landroid/view/View$OnAttachStateChangeListener;
 
-    iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->TAG:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/keyguard/KeyguardAssistantView;->TAG:Ljava/lang/String;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "KeyguardAssistantView constructor, callers= "
+    const-string v4, "KeyguardAssistantView constructor, callers= "
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v3, 0x5
+    const/4 v4, 0x5
 
-    invoke-static {v3}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
+    invoke-static {v4}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     iput-object p2, p0, Lcom/android/keyguard/KeyguardAssistantView;->mContext:Landroid/content/Context;
 
@@ -150,20 +167,6 @@
     iput-object p3, p0, Lcom/android/keyguard/KeyguardAssistantView;->mHandler:Landroid/os/Handler;
 
     :goto_0
-    new-instance p2, Lcom/android/keyguard/KeyguardAssistantView$1;
-
-    iget-object p3, p0, Lcom/android/keyguard/KeyguardAssistantView;->mContext:Landroid/content/Context;
-
-    iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mHandler:Landroid/os/Handler;
-
-    const-string v1, "KeyguardAssistantViewTest"
-
-    invoke-direct {p2, p0, p3, v0, v1}, Lcom/android/keyguard/KeyguardAssistantView$1;-><init>(Lcom/android/keyguard/KeyguardAssistantView;Landroid/content/Context;Landroid/os/Handler;Ljava/lang/String;)V
-
-    iput-object p2, p0, Lcom/android/keyguard/KeyguardAssistantView;->mDemoCommandSettings:Lcom/android/systemui/qs/GlobalSetting;
-
-    invoke-virtual {p2, v2}, Lcom/android/systemui/qs/GlobalSetting;->setListening(Z)V
-
     iput-object p1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mKeyguardStatusView:Landroid/view/View;
 
     sget p2, Lcom/android/systemui/R$id;->ambient_assistant_container:I
@@ -190,58 +193,59 @@
 
     invoke-virtual {p1, p0}, Lcom/android/keyguard/KeyguardAssistantView$KeyguardViewUpdateListener;->setKeyguardAssistantView(Lcom/android/keyguard/KeyguardAssistantView;)V
 
+    iget-object p1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p1
+
+    const/4 p2, -0x2
+
+    const-string p3, "lock_screen_show_notifications"
+
+    invoke-static {p1, p3, v2, p2}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    move v0, v2
+
+    :cond_1
+    iput-boolean v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAllowShowNotification:Z
+
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mSettingObserver:Lcom/android/keyguard/KeyguardAssistantView$SettingObserver;
+
+    invoke-virtual {p0}, Lcom/android/keyguard/KeyguardAssistantView$SettingObserver;->observe()V
+
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/keyguard/KeyguardAssistantView;)Ljava/lang/String;
+.method static synthetic access$100(Lcom/android/keyguard/KeyguardAssistantView;)V
     .locals 0
 
-    iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->TAG:Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/keyguard/KeyguardAssistantView;->notifyHasHeader()V
 
-    return-object p0
+    return-void
 .end method
 
-.method static synthetic access$002(Lcom/android/keyguard/KeyguardAssistantView;Ljava/lang/String;)Ljava/lang/String;
+.method static synthetic access$1002(Lcom/android/keyguard/KeyguardAssistantView;Z)Z
     .locals 0
 
-    iput-object p1, p0, Lcom/android/keyguard/KeyguardAssistantView;->TAG:Ljava/lang/String;
+    iput-boolean p1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAllowShowNotification:Z
 
-    return-object p1
+    return p1
 .end method
 
-.method static synthetic access$100(Lcom/android/keyguard/KeyguardAssistantView;)Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;
+.method static synthetic access$200(Lcom/android/keyguard/KeyguardAssistantView;Z)V
     .locals 0
 
-    iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mController:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;
+    invoke-direct {p0, p1}, Lcom/android/keyguard/KeyguardAssistantView;->setHasHeader(Z)V
 
-    return-object p0
+    return-void
 .end method
 
-.method static synthetic access$200(Lcom/android/keyguard/KeyguardAssistantView;)Landroid/content/Context;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mContext:Landroid/content/Context;
-
-    return-object p0
-.end method
-
-.method static synthetic access$300(Lcom/android/keyguard/KeyguardAssistantView;)Lcom/oneplus/aod/views/OpSmartspaceContainer;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAmbientIndicationContainer:Lcom/oneplus/aod/views/OpSmartspaceContainer;
-
-    return-object p0
-.end method
-
-.method static synthetic access$400(Lcom/android/keyguard/KeyguardAssistantView;)Lcom/android/keyguard/KeyguardAssistantView$KeyguardViewUpdateListener;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mKeyguardViewUpdateListener:Lcom/android/keyguard/KeyguardAssistantView$KeyguardViewUpdateListener;
-
-    return-object p0
-.end method
-
-.method static synthetic access$600(Lcom/android/keyguard/KeyguardAssistantView;)Z
+.method static synthetic access$300(Lcom/android/keyguard/KeyguardAssistantView;)Z
     .locals 0
 
     invoke-direct {p0}, Lcom/android/keyguard/KeyguardAssistantView;->setGoogleSmartspaceChildViewHeightInternal()Z
@@ -251,7 +255,7 @@
     return p0
 .end method
 
-.method static synthetic access$700(Lcom/android/keyguard/KeyguardAssistantView;)I
+.method static synthetic access$400(Lcom/android/keyguard/KeyguardAssistantView;)I
     .locals 0
 
     iget p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mRetryTimes:I
@@ -259,7 +263,7 @@
     return p0
 .end method
 
-.method static synthetic access$702(Lcom/android/keyguard/KeyguardAssistantView;I)I
+.method static synthetic access$402(Lcom/android/keyguard/KeyguardAssistantView;I)I
     .locals 0
 
     iput p1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mRetryTimes:I
@@ -267,7 +271,7 @@
     return p1
 .end method
 
-.method static synthetic access$708(Lcom/android/keyguard/KeyguardAssistantView;)I
+.method static synthetic access$408(Lcom/android/keyguard/KeyguardAssistantView;)I
     .locals 2
 
     iget v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mRetryTimes:I
@@ -279,7 +283,7 @@
     return v0
 .end method
 
-.method static synthetic access$800(Lcom/android/keyguard/KeyguardAssistantView;)Ljava/lang/Runnable;
+.method static synthetic access$500(Lcom/android/keyguard/KeyguardAssistantView;)Ljava/lang/Runnable;
     .locals 0
 
     iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mDelayForSetGoogleSmartspaceChildViewHeight:Ljava/lang/Runnable;
@@ -287,7 +291,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$900(Lcom/android/keyguard/KeyguardAssistantView;)Landroid/os/Handler;
+.method static synthetic access$600(Lcom/android/keyguard/KeyguardAssistantView;)Landroid/os/Handler;
     .locals 0
 
     iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mHandler:Landroid/os/Handler;
@@ -295,20 +299,91 @@
     return-object p0
 .end method
 
+.method static synthetic access$700(Lcom/android/keyguard/KeyguardAssistantView;)Ljava/lang/String;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->TAG:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method static synthetic access$702(Lcom/android/keyguard/KeyguardAssistantView;Ljava/lang/String;)Ljava/lang/String;
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/keyguard/KeyguardAssistantView;->TAG:Ljava/lang/String;
+
+    return-object p1
+.end method
+
+.method static synthetic access$800(Lcom/android/keyguard/KeyguardAssistantView;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$900(Lcom/android/keyguard/KeyguardAssistantView;)Lcom/android/keyguard/KeyguardAssistantView$SettingObserver;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mSettingObserver:Lcom/android/keyguard/KeyguardAssistantView$SettingObserver;
+
+    return-object p0
+.end method
+
 .method private getTextColor()I
-    .locals 2
+    .locals 1
 
-    iget v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mTextColor:I
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mContext:Landroid/content/Context;
 
-    iget p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mDarkAmount:F
+    sget v0, Lcom/android/systemui/R$attr;->wallpaperTextColor:I
 
-    const/high16 v1, -0x10000
-
-    invoke-static {v0, v1, p0}, Landroidx/core/graphics/ColorUtils;->blendARGB(IIF)I
+    invoke-static {p0, v0}, Lcom/android/settingslib/Utils;->getColorAttrDefaultColor(Landroid/content/Context;I)I
 
     move-result p0
 
     return p0
+.end method
+
+.method private notifyHasHeader()V
+    .locals 3
+
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mContentChangeListener:Ljava/lang/Runnable;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    iget-object v1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mCallbacks:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_1
+
+    iget-object v1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mCallbacks:Ljava/util/List;
+
+    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/keyguard/KeyguardAssistantView$Callback;
+
+    iget-boolean v2, p0, Lcom/android/keyguard/KeyguardAssistantView;->mHasHeader:Z
+
+    invoke-interface {v1, v2}, Lcom/android/keyguard/KeyguardAssistantView$Callback;->onCardShownChanged(Z)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-void
 .end method
 
 .method private setGoogleSmartspaceChildViewHeightInternal()Z
@@ -452,6 +527,38 @@
     return v1
 .end method
 
+.method private setHasHeader(Z)V
+    .locals 2
+
+    iget-boolean v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAllowShowNotification:Z
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    iput-boolean p1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mHasHeader:Z
+
+    iget-object p1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mHandler:Landroid/os/Handler;
+
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mNotifyHasHeaderRunner:Ljava/lang/Runnable;
+
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    iget-object p1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mHandler:Landroid/os/Handler;
+
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mNotifyHasHeaderRunner:Ljava/lang/Runnable;
+
+    const-wide/16 v0, 0x3e8
+
+    invoke-virtual {p1, p0, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    return-void
+.end method
+
 
 # virtual methods
 .method public addCallback(Lcom/android/keyguard/KeyguardAssistantView$Callback;)V
@@ -503,7 +610,25 @@
 
     invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mHasHeader:Z
+    iget-boolean p3, p0, Lcom/android/keyguard/KeyguardAssistantView;->mHasHeader:Z
+
+    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p3, " mAllowShowNotification: "
+
+    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAllowShowNotification:Z
 
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -525,7 +650,7 @@
 .end method
 
 .method public inflateIndicatorContainer()V
-    .locals 4
+    .locals 3
 
     iget-boolean v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mEnableSmartSpace:Z
 
@@ -566,10 +691,6 @@
 
     invoke-static {v0, v1}, Lcom/android/settingslib/Utils;->getColorAttrDefaultColor(Landroid/content/Context;I)I
 
-    move-result v0
-
-    iput v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mTextColor:I
-
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
@@ -580,7 +701,13 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget v1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mTextColor:I
+    iget-object v1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mContext:Landroid/content/Context;
+
+    sget v2, Lcom/android/systemui/R$color;->op_nav_bar_background_light:I
+
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getColor(I)I
+
+    move-result v1
 
     const-string v2, "com.google.android.apps.oemsmartspace.TEXT_COLOR_KEY"
 
@@ -588,19 +715,9 @@
 
     const-string v1, "com.google.android.apps.oemsmartspace.SMARTSPACE_RESOURCE_PACKAGE"
 
-    const-string v3, "net.oneplus.launcher"
+    const-string v2, "net.oneplus.launcher"
 
-    invoke-virtual {v0, v1, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mContext:Landroid/content/Context;
-
-    sget v3, Lcom/android/systemui/R$color;->op_nav_bar_background_light:I
-
-    invoke-virtual {v1, v3}, Landroid/content/Context;->getColor(I)I
-
-    move-result v1
-
-    invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "com.google.android.apps.oemsmartspace.SMARTSPACE_ENABLE_DATE_KEY"
 
@@ -681,56 +798,23 @@
 .end method
 
 .method public release()V
-    .locals 4
+    .locals 2
 
-    const-class v0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->TAG:Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/android/keyguard/KeyguardAssistantView;->TAG:Ljava/lang/String;
+    const-string v1, "release"
 
-    const-string v2, "release"
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAmbientIndicationContainer:Lcom/oneplus/aod/views/OpSmartspaceContainer;
 
-    iget-object v1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mDemoCommandSettings:Lcom/android/systemui/qs/GlobalSetting;
+    iget-object v1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAttachStateListener:Landroid/view/View$OnAttachStateChangeListener;
 
-    const/4 v2, 0x0
+    invoke-virtual {v0, v1}, Lcom/oneplus/aod/views/OpSmartspaceContainer;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
-    invoke-virtual {v1, v2}, Lcom/android/systemui/qs/GlobalSetting;->setListening(Z)V
-
-    iget-object v1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAmbientIndicationContainer:Lcom/oneplus/aod/views/OpSmartspaceContainer;
-
-    invoke-virtual {v1}, Lcom/oneplus/aod/views/OpSmartspaceContainer;->removeAllOnAttachStateChangeListener()V
-
-    iget-object v1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mController:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;
-
-    if-eqz v1, :cond_1
-
-    const-string v2, "alarmManager"
-
-    invoke-static {v0, v1, v2}, Lcom/oneplus/util/OpReflectionUtils;->getValue(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/app/AlarmManager;
-
-    if-eqz v1, :cond_0
-
-    iget-object v2, p0, Lcom/android/keyguard/KeyguardAssistantView;->mController:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;
-
-    const-string v3, "expireAlarmAction"
-
-    invoke-static {v0, v2, v3}, Lcom/oneplus/util/OpReflectionUtils;->getValue(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/app/AlarmManager$OnAlarmListener;
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mController:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;
 
     if-eqz v0, :cond_0
-
-    invoke-virtual {v1, v0}, Landroid/app/AlarmManager;->cancel(Landroid/app/AlarmManager$OnAlarmListener;)V
-
-    :cond_0
-    iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mController:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;
 
     invoke-virtual {v0}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->unsetView()V
 
@@ -738,7 +822,11 @@
 
     iput-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mController:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;
 
-    :cond_1
+    :cond_0
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mSettingObserver:Lcom/android/keyguard/KeyguardAssistantView$SettingObserver;
+
+    invoke-virtual {p0}, Lcom/android/keyguard/KeyguardAssistantView$SettingObserver;->unObserve()V
+
     return-void
 .end method
 
@@ -757,7 +845,7 @@
 
     const-string v0, "debug.no.smartspace.custgoogleview"
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
@@ -765,15 +853,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->TAG:Ljava/lang/String;
-
-    const-string v1, "debug.no.smartspace.custgoogleview true"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Lcom/android/keyguard/KeyguardAssistantView;->setHasHeader(Z)V
+    invoke-direct {p0, v1}, Lcom/android/keyguard/KeyguardAssistantView;->setHasHeader(Z)V
 
     return-void
 
@@ -814,47 +894,6 @@
 
     invoke-virtual {v0, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    return-void
-.end method
-
-.method public setHasHeader(Z)V
-    .locals 2
-
-    iput-boolean p1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mHasHeader:Z
-
-    iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mContentChangeListener:Ljava/lang/Runnable;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object v1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mCallbacks:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    if-ge v0, v1, :cond_1
-
-    iget-object v1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mCallbacks:Ljava/util/List;
-
-    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/android/keyguard/KeyguardAssistantView$Callback;
-
-    invoke-interface {v1, p1}, Lcom/android/keyguard/KeyguardAssistantView$Callback;->onCardShownChanged(Z)V
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
     return-void
 .end method
 
@@ -934,8 +973,8 @@
     return-void
 .end method
 
-.method public updateTextColor()V
-    .locals 3
+.method public updateTextColor(Lcom/oneplus/keyguard/OpKeyguardClockInfoView$ViewTypeEnum;)V
+    .locals 4
 
     iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mController:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;
 
@@ -944,21 +983,65 @@
     return-void
 
     :cond_0
+    sget-object v0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$ViewTypeEnum;->aod:Lcom/oneplus/keyguard/OpKeyguardClockInfoView$ViewTypeEnum;
+
+    if-ne p1, v0, :cond_1
+
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mContext:Landroid/content/Context;
+
+    sget v1, Lcom/android/systemui/R$color;->op_nav_bar_background_light:I
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getColor(I)I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_1
     invoke-direct {p0}, Lcom/android/keyguard/KeyguardAssistantView;->getTextColor()I
 
     move-result v0
 
-    new-instance v1, Landroid/os/Bundle;
+    :goto_0
+    iget-object v1, p0, Lcom/android/keyguard/KeyguardAssistantView;->TAG:Ljava/lang/String;
 
-    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string v2, "com.google.android.apps.oemsmartspace.TEXT_COLOR_KEY"
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v1, v2, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+    const-string/jumbo v3, "updateTextColor, textColor:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, ", viewTypeEnum:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance p1, Landroid/os/Bundle;
+
+    invoke-direct {p1}, Landroid/os/Bundle;-><init>()V
+
+    const-string v1, "com.google.android.apps.oemsmartspace.TEXT_COLOR_KEY"
+
+    invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mController:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;
 
-    invoke-virtual {p0, v1}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->setStyle(Landroid/os/Bundle;)V
+    invoke-virtual {p0, p1}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->setStyle(Landroid/os/Bundle;)V
 
     return-void
 .end method

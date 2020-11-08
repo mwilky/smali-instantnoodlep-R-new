@@ -1212,6 +1212,19 @@
 
     move-result p0
 
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isREDVersion()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const/16 p0, 0x64
+
+    invoke-static {p0}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
+
+    move-result p0
+
+    :cond_1
     sget-object v1, Landroid/graphics/PorterDuff$Mode;->SRC_ATOP:Landroid/graphics/PorterDuff$Mode;
 
     invoke-virtual {v0, p0, v1}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V

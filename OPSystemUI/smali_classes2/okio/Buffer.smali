@@ -86,6 +86,12 @@
 
 
 # virtual methods
+.method public buffer()Lokio/Buffer;
+    .locals 0
+
+    return-object p0
+.end method
+
 .method public final clear()V
     .locals 2
 
@@ -345,12 +351,6 @@
     .locals 0
 
     return-void
-.end method
-
-.method public getBuffer()Lokio/Buffer;
-    .locals 0
-
-    return-object p0
 .end method
 
 .method public final getByte(J)B

@@ -23,7 +23,7 @@
                     <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/volume_dialog_rows" android:layout_width="wrap_content" android:layout_height="wrap_content" />
                 </LinearLayout>
             </LinearLayout>
-            <FrameLayout android:id="@id/volume_dialog_row_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:id="@id/volume_dialog_row_container_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content">
                 <FrameLayout android:layout_gravity="center|left" android:id="@id/settings_container" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/op_volume_dialog_settings_container_height" android:layout_marginLeft="@dimen/op_volume_dialog_panel_transparent_padding" android:layout_marginRight="@dimen/op_volume_dialog_panel_transparent_padding">
                     <com.android.keyguard.AlphaOptimizedImageButton android:layout_gravity="center" android:id="@id/settings" android:background="@drawable/ripple_drawable_20dp" android:paddingLeft="@dimen/op_volume_dialog_settings_margin" android:paddingRight="@dimen/op_volume_dialog_settings_margin" android:layout_width="@dimen/op_volume_dialog_panel_width" android:layout_height="@dimen/op_volume_dialog_panel_width" android:src="@drawable/ic_volume_setting_expand" android:scaleType="fitCenter" android:tint="?android:textColorHint" android:soundEffectsEnabled="false" android:contentDescription="@string/accessibility_volume_settings" />
                 </FrameLayout>

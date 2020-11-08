@@ -743,9 +743,13 @@
     move v3, v1
 
     :goto_2
+    iget-boolean v4, p1, Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController$State;->mForceHideWallpaper:Z
+
     if-eqz v3, :cond_4
 
     if-nez v0, :cond_4
+
+    if-nez v4, :cond_4
 
     iget-boolean v0, p1, Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController$State;->mBackdropShowing:Z
 
@@ -1541,6 +1545,16 @@
     return-void
 .end method
 
+.method public forceHideWallpaper(Z)V
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController;->mCurrentState:Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController$State;
+
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController$State;->mForceHideWallpaper:Z
+
+    return-void
+.end method
+
 .method public getForceHasTopUi()Z
     .locals 0
 
@@ -1946,6 +1960,10 @@
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController;->mCurrentState:Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController$State;
 
     iput-boolean p1, v0, Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController$State;->mKeyguardShowing:Z
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, v0, Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController$State;->mForceHideWallpaper:Z
 
     invoke-direct {p0, v0}, Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController;->apply(Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController$State;)V
 

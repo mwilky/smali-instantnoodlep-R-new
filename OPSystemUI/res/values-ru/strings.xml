@@ -1415,6 +1415,9 @@
     <string name="overheat_toast_content">Температура телефона слишком высока. Функции с высоким энергопотреблением будут отключены для снижения температуры</string>
     <string name="overlay_display_devices_title">Эмуляция доп. экранов</string>
     <string name="overview">Обзор</string>
+    <string name="permission_btn_text_denied">Выход</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Заявление о разрешении</string>
     <string name="phone_hint">Телефон: проведите от значка</string>
     <string name="phone_label">Открыть телефон.</string>
     <string name="picture_color_mode">Цветовой режим</string>

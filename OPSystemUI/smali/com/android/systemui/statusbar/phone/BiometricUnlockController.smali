@@ -180,7 +180,7 @@
 
     iput-object p9, p0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mHandler:Landroid/os/Handler;
 
-    const p1, 0x10e00d3
+    const p1, 0x10e00d4
 
     invoke-virtual {p11, p1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1205,6 +1205,14 @@
 
     invoke-virtual {p1}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->userActivity()V
 
+    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    invoke-virtual {p1}, Lcom/android/systemui/statusbar/phone/StatusBar;->getPanelController()Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/oneplus/systemui/statusbar/phone/OpPanelViewController;->stopTrackingAfterUnlock()V
+
     invoke-virtual {p0, p2, p3}, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->startWakeAndUnlock(Landroid/hardware/biometrics/BiometricSourceType;Z)V
 
     goto :goto_1
@@ -1376,7 +1384,7 @@
 .end method
 
 .method public startWakeAndUnlock(I)V
-    .locals 6
+    .locals 7
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1408,75 +1416,108 @@
 
     iput p1, p0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mMode:I
 
-    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mKeyguardViewController:Lcom/android/keyguard/KeyguardViewController;
+    const/4 v2, 0x2
 
-    const/4 v3, 0x1
+    const-string v3, "finger"
 
-    invoke-interface {v2, v3}, Lcom/android/keyguard/KeyguardViewController;->isShowingLiveWallpaper(Z)Z
+    const-string v4, "lock_unlock_success"
 
-    move-result v2
+    const/4 v5, 0x5
 
-    xor-int/2addr v2, v3
+    if-eq p1, v5, :cond_1
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    const/16 v5, 0x8
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "has wallpaper="
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mDozeParameters:Lcom/android/systemui/statusbar/phone/DozeParameters;
-
-    invoke-virtual {v2}, Lcom/android/systemui/statusbar/phone/DozeParameters;->getAlwaysOn()Z
-
-    move-result v2
-
-    const/4 v4, 0x0
-
-    if-ne p1, v3, :cond_0
-
-    if-eqz v2, :cond_0
-
-    iget p1, p0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mWakeUpDelay:I
-
-    if-lez p1, :cond_0
-
-    move p1, v3
+    if-ne p1, v5, :cond_0
 
     goto :goto_0
 
     :cond_0
-    move p1, v4
+    if-ne p1, v2, :cond_2
 
-    :goto_0
-    new-instance v2, Lcom/android/systemui/statusbar/phone/-$$Lambda$BiometricUnlockController$eARUOiIHQidy4dPvrf3UVu6gsv0;
+    const-string v5, "0"
 
-    invoke-direct {v2, p0, v0, p1}, Lcom/android/systemui/statusbar/phone/-$$Lambda$BiometricUnlockController$eARUOiIHQidy4dPvrf3UVu6gsv0;-><init>(Lcom/android/systemui/statusbar/phone/BiometricUnlockController;ZZ)V
+    invoke-static {v4, v3, v5}, Lcom/oneplus/systemui/util/OpMdmLogger;->log(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    if-nez p1, :cond_1
-
-    iget v5, p0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mMode:I
-
-    if-eqz v5, :cond_1
-
-    invoke-interface {v2}, Ljava/lang/Runnable;->run()V
+    goto :goto_1
 
     :cond_1
-    iget v5, p0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mMode:I
+    :goto_0
+    const-string v5, "1"
 
-    packed-switch v5, :pswitch_data_0
+    invoke-static {v4, v3, v5}, Lcom/oneplus/systemui/util/OpMdmLogger;->log(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_2
+    :goto_1
+    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mKeyguardViewController:Lcom/android/keyguard/KeyguardViewController;
+
+    const/4 v4, 0x1
+
+    invoke-interface {v3, v4}, Lcom/android/keyguard/KeyguardViewController;->isShowingLiveWallpaper(Z)Z
+
+    move-result v3
+
+    xor-int/2addr v3, v4
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "has wallpaper="
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mDozeParameters:Lcom/android/systemui/statusbar/phone/DozeParameters;
+
+    invoke-virtual {v3}, Lcom/android/systemui/statusbar/phone/DozeParameters;->getAlwaysOn()Z
+
+    move-result v3
+
+    const/4 v5, 0x0
+
+    if-ne p1, v4, :cond_3
+
+    if-eqz v3, :cond_3
+
+    iget p1, p0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mWakeUpDelay:I
+
+    if-lez p1, :cond_3
+
+    move p1, v4
+
+    goto :goto_2
+
+    :cond_3
+    move p1, v5
+
+    :goto_2
+    new-instance v3, Lcom/android/systemui/statusbar/phone/-$$Lambda$BiometricUnlockController$eARUOiIHQidy4dPvrf3UVu6gsv0;
+
+    invoke-direct {v3, p0, v0, p1}, Lcom/android/systemui/statusbar/phone/-$$Lambda$BiometricUnlockController$eARUOiIHQidy4dPvrf3UVu6gsv0;-><init>(Lcom/android/systemui/statusbar/phone/BiometricUnlockController;ZZ)V
+
+    if-nez p1, :cond_4
+
+    iget v6, p0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mMode:I
+
+    if-eqz v6, :cond_4
+
+    invoke-interface {v3}, Ljava/lang/Runnable;->run()V
+
+    :cond_4
+    iget v6, p0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mMode:I
+
+    packed-switch v6, :pswitch_data_0
 
     :pswitch_0
-    goto/16 :goto_4
+    goto/16 :goto_6
 
     :pswitch_1
     const-string p1, "MODE_DISMISS_BOUNCER or MODE_UNLOCK_FADING"
@@ -1485,14 +1526,14 @@
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mKeyguardViewController:Lcom/android/keyguard/KeyguardViewController;
 
-    invoke-interface {p1, v4}, Lcom/android/keyguard/KeyguardViewController;->notifyKeyguardAuthenticated(Z)V
+    invoke-interface {p1, v5}, Lcom/android/keyguard/KeyguardViewController;->notifyKeyguardAuthenticated(Z)V
 
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    goto/16 :goto_4
+    goto/16 :goto_6
 
     :pswitch_2
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_5
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mKeyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
 
@@ -1500,7 +1541,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_5
 
     const-string p1, "MODE_UNLOCK"
 
@@ -1516,49 +1557,47 @@
 
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    goto :goto_4
+    goto :goto_6
 
-    :cond_2
+    :cond_5
     :pswitch_3
     const-string p1, "MODE_UNLOCK_COLLAPSING or MODE_SHOW_BOUNCER"
 
     invoke-static {p1}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    if-nez v0, :cond_3
+    if-nez v0, :cond_6
 
-    iput-boolean v3, p0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mPendingShowBouncer:Z
+    iput-boolean v4, p0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mPendingShowBouncer:Z
 
-    goto :goto_1
+    goto :goto_3
 
-    :cond_3
+    :cond_6
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->showBouncer()V
 
-    :goto_1
+    :goto_3
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    goto :goto_4
+    goto :goto_6
 
     :pswitch_4
-    const/4 v0, 0x2
-
-    if-ne v5, v0, :cond_4
+    if-ne v6, v2, :cond_7
 
     const-string v0, "MODE_WAKE_AND_UNLOCK_PULSING"
 
     invoke-static {v0}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    goto :goto_2
+    goto :goto_4
 
-    :cond_4
-    if-ne v5, v3, :cond_5
+    :cond_7
+    if-ne v6, v4, :cond_8
 
     const-string v0, "MODE_WAKE_AND_UNLOCK"
 
     invoke-static {v0}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    goto :goto_2
+    goto :goto_4
 
-    :cond_5
+    :cond_8
     const-string v0, "MODE_WAKE_AND_UNLOCK_FROM_DREAM"
 
     invoke-static {v0}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
@@ -1567,16 +1606,16 @@
 
     invoke-virtual {v0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->awakenFromDream()V
 
-    :goto_2
+    :goto_4
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mMediaManager:Lcom/android/systemui/statusbar/NotificationMediaManager;
 
-    invoke-virtual {v0, v4, v3}, Lcom/android/systemui/statusbar/NotificationMediaManager;->updateMediaMetaData(ZZ)V
+    invoke-virtual {v0, v5, v4}, Lcom/android/systemui/statusbar/NotificationMediaManager;->updateMediaMetaData(ZZ)V
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mNotificationShadeWindowController:Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController;
 
-    invoke-virtual {v0, v4}, Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController;->setNotificationShadeFocusable(Z)V
+    invoke-virtual {v0, v5}, Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController;->setNotificationShadeFocusable(Z)V
 
-    if-eqz p1, :cond_6
+    if-eqz p1, :cond_9
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mHandler:Landroid/os/Handler;
 
@@ -1584,11 +1623,11 @@
 
     int-to-long v0, v0
 
-    invoke-virtual {p1, v2, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {p1, v3, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    goto :goto_3
+    goto :goto_5
 
-    :cond_6
+    :cond_9
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mKeyguardViewMediator:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
     invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->shouldApplySpeedUpPolicy()Z
@@ -1597,14 +1636,14 @@
 
     invoke-virtual {p1, v0}, Lcom/oneplus/systemui/keyguard/OpKeyguardViewMediator;->onWakeAndUnlocking(Z)V
 
-    :goto_3
+    :goto_5
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
     invoke-virtual {p1}, Lcom/android/systemui/statusbar/phone/StatusBar;->getNavigationBarView()Lcom/android/systemui/statusbar/phone/NavigationBarView;
 
     move-result-object p1
 
-    if-eqz p1, :cond_7
+    if-eqz p1, :cond_a
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
@@ -1612,12 +1651,12 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, v3}, Lcom/android/systemui/statusbar/phone/NavigationBarView;->setWakeAndUnlocking(Z)V
+    invoke-virtual {p1, v4}, Lcom/android/systemui/statusbar/phone/NavigationBarView;->setWakeAndUnlocking(Z)V
 
-    :cond_7
+    :cond_a
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    :goto_4
+    :goto_6
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBar;->notifyBiometricAuthModeChanged()V
@@ -1625,6 +1664,8 @@
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
     return-void
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x1

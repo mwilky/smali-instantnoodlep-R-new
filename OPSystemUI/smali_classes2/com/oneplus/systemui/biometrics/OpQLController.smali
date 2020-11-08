@@ -40,7 +40,7 @@
 
 .field private mQLRootView:Lcom/oneplus/systemui/biometrics/OpQLRootView;
 
-.field private mQLShowing:Z
+.field private volatile mQLShowing:Z
 
 .field private mShowQLView:Ljava/lang/Runnable;
 
@@ -237,55 +237,77 @@
 
     move-result v1
 
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_6
 
     if-eqz v0, :cond_1
 
     goto/16 :goto_0
 
     :cond_1
-    sget-boolean v0, Lcom/oneplus/systemui/biometrics/OpQLController;->DEBUG:Z
+    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpQLController;->mContext:Landroid/content/Context;
 
-    if-eqz v0, :cond_2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "mShowQLView mQLShowing "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lcom/oneplus/systemui/biometrics/OpQLController;->mQLShowing:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, " mFingerOnView "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpQLController;->mFodFingerTouchValidator:Lcom/oneplus/systemui/biometrics/OpFodFingerTouchValidator;
-
-    invoke-virtual {v1}, Lcom/oneplus/systemui/biometrics/OpFodFingerTouchValidator;->isFingerDownOnView()Z
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/content/res/Configuration;->orientation:I
+
+    sget-boolean v1, Lcom/oneplus/systemui/biometrics/OpQLController;->DEBUG:Z
+
+    if-eqz v1, :cond_2
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "mShowQLView mQLShowing "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v3, p0, Lcom/oneplus/systemui/biometrics/OpQLController;->mQLShowing:Z
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v3, " mFingerOnView "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lcom/oneplus/systemui/biometrics/OpQLController;->mFodFingerTouchValidator:Lcom/oneplus/systemui/biometrics/OpFodFingerTouchValidator;
+
+    invoke-virtual {v3}, Lcom/oneplus/systemui/biometrics/OpFodFingerTouchValidator;->isFingerDownOnView()Z
+
+    move-result v3
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v3, " orientation "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
-    iget-boolean v0, p0, Lcom/oneplus/systemui/biometrics/OpQLController;->mQLShowing:Z
+    iget-boolean v1, p0, Lcom/oneplus/systemui/biometrics/OpQLController;->mQLShowing:Z
 
-    if-nez v0, :cond_5
+    if-nez v1, :cond_6
 
-    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpQLController;->mQLRootView:Lcom/oneplus/systemui/biometrics/OpQLRootView;
+    iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpQLController;->mQLRootView:Lcom/oneplus/systemui/biometrics/OpQLRootView;
 
-    if-nez v0, :cond_5
+    if-nez v1, :cond_6
+
+    const/4 v1, 0x1
+
+    if-ne v1, v0, :cond_6
 
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpQLController;->mFodFingerTouchValidator:Lcom/oneplus/systemui/biometrics/OpFodFingerTouchValidator;
 
@@ -293,7 +315,18 @@
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
+
+    sget-boolean v0, Lcom/oneplus/systemui/biometrics/OpQLController;->DEBUG:Z
+
+    if-eqz v0, :cond_3
+
+    const-string v0, "mQLShowing set to true"
+
+    invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_3
+    iput-boolean v1, p0, Lcom/oneplus/systemui/biometrics/OpQLController;->mQLShowing:Z
 
     const/16 v0, 0x3ff
 
@@ -301,15 +334,11 @@
 
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpQLController;->mFodDialogView:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     invoke-virtual {v0, v1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->updateIconVisibility(Z)V
 
-    :cond_3
-    iput-boolean v1, p0, Lcom/oneplus/systemui/biometrics/OpQLController;->mQLShowing:Z
-
+    :cond_4
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpQLController;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
@@ -330,11 +359,11 @@
 
     iget-object v2, p0, Lcom/oneplus/systemui/biometrics/OpQLController;->mQLConfig:Ljava/lang/String;
 
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_5
 
     invoke-virtual {v0, v2}, Lcom/oneplus/systemui/biometrics/OpQLRootView;->setQLConfig(Ljava/lang/String;)V
 
-    :cond_4
+    :cond_5
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpQLController;->mWindowManager:Landroid/view/WindowManager;
 
     iget-object v2, p0, Lcom/oneplus/systemui/biometrics/OpQLController;->mQLRootView:Lcom/oneplus/systemui/biometrics/OpQLRootView;
@@ -359,7 +388,7 @@
 
     invoke-direct {p0, v1}, Lcom/oneplus/systemui/biometrics/OpQLController;->notifyQLViewVisibilityChanged(Z)V
 
-    :cond_5
+    :cond_6
     :goto_0
     return-void
 .end method
@@ -384,6 +413,17 @@
     iput-object v0, p0, Lcom/oneplus/systemui/biometrics/OpQLController;->mQLRootView:Lcom/oneplus/systemui/biometrics/OpQLRootView;
 
     :cond_0
+    sget-boolean v0, Lcom/oneplus/systemui/biometrics/OpQLController;->DEBUG:Z
+
+    if-eqz v0, :cond_1
+
+    const-string v0, "OpQLController"
+
+    const-string v1, "mQLShowing set to false"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/oneplus/systemui/biometrics/OpQLController;->mQLShowing:Z

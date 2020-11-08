@@ -80,21 +80,6 @@
 
     invoke-virtual {v0, p1}, Lcom/airbnb/lottie/LottieDrawable;->setComposition(Lcom/airbnb/lottie/LottieComposition;)Z
 
-    iget-boolean p1, p0, Lcom/oneplus/anim/OpGraphLight$AnimateLottieView$1;->val$showLastFrame:Z
-
-    if-eqz p1, :cond_1
-
-    iget-object p1, p0, Lcom/oneplus/anim/OpGraphLight$AnimateLottieView$1;->this$1:Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;
-
-    invoke-static {p1}, Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;->access$1000(Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;)Lcom/airbnb/lottie/LottieDrawable;
-
-    move-result-object p1
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    invoke-virtual {p1, v0}, Lcom/airbnb/lottie/LottieDrawable;->setProgress(F)V
-
-    :cond_1
     iget-object p1, p0, Lcom/oneplus/anim/OpGraphLight$AnimateLottieView$1;->this$1:Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;
 
     invoke-static {p1}, Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;->access$1200(Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;)I
@@ -103,13 +88,28 @@
 
     invoke-static {p1, v0}, Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;->access$1102(Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;I)I
 
+    iget-object p1, p0, Lcom/oneplus/anim/OpGraphLight$AnimateLottieView$1;->this$1:Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;
+
+    invoke-static {p1}, Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;->access$1000(Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;)Lcom/airbnb/lottie/LottieDrawable;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/airbnb/lottie/LottieDrawable;->playAnimation()V
+
+    iget-boolean p1, p0, Lcom/oneplus/anim/OpGraphLight$AnimateLottieView$1;->val$showLastFrame:Z
+
+    if-eqz p1, :cond_1
+
     iget-object p0, p0, Lcom/oneplus/anim/OpGraphLight$AnimateLottieView$1;->this$1:Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;
 
     invoke-static {p0}, Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;->access$1000(Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;)Lcom/airbnb/lottie/LottieDrawable;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/airbnb/lottie/LottieDrawable;->playAnimation()V
+    const/high16 p1, 0x3f800000    # 1.0f
 
+    invoke-virtual {p0, p1}, Lcom/airbnb/lottie/LottieDrawable;->setProgress(F)V
+
+    :cond_1
     return-void
 .end method

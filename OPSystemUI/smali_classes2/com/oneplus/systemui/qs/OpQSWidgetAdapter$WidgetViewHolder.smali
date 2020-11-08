@@ -87,6 +87,17 @@
     goto :goto_0
 
     :cond_0
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isREDVersion()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    sget p1, Lcom/android/systemui/R$drawable;->op_qs_red_all:I
+
+    goto :goto_0
+
+    :cond_1
     sget p1, Lcom/android/systemui/R$drawable;->op_qs_widget_bg_dark:I
 
     :goto_0

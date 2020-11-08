@@ -2391,7 +2391,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/google/android/material/R$color;->op_error_color_material_default:I
+    sget v2, Lcom/google/android/material/R$color;->op_error_color_material_xxx_light:I
 
     invoke-static {v1, v2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
@@ -2649,7 +2649,7 @@
 
     move-result-object v3
 
-    sget v4, Lcom/google/android/material/R$color;->op_error_color_material_default:I
+    sget v4, Lcom/google/android/material/R$color;->op_error_color_material_xxx_light:I
 
     invoke-static {v3, v4}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="about_action_bar_title">அறிமுகம்</string>
+    <string name="about_action_bar_title">பற்றி</string>
     <string name="about_app_version_text">Version %s</string>
-    <string name="about_privacy_policy">தனியுரிமை கொள்கை</string>
+    <string name="about_privacy_policy">தனியுரிமைக் கொள்கை</string>
     <string name="about_release_note_title">புதுப்பிப்பு பதிவு:</string>
     <string name="about_terms_service">சேவை விதிமுறைகள்</string>
     <string name="accessibility_fingerprint_dialog_help_area">உதவிச் செய்திப் பகுதி</string>
@@ -204,6 +204,9 @@
     <string name="overheat_notification_resume">ஃபோனின் வெப்பநிலை மீண்டும் இயல்புக்கு மீட்கப்பட்டது, இப்போது வழக்கம்போல் ஃபோனைப் பயன்படுத்தலாம்</string>
     <string name="overheat_notification_title_resume">ஃபோனின் வெப்பநிலை மீண்டும் இயல்புக்கு மீட்கப்பட்டது</string>
     <string name="overheat_toast_content">உங்கள் ஃபோனின் வெப்பநிலை மிக அதிகமாக உள்ளது. அதைக் குறைக்க, மின்சக்தியை அதிகம் பயன்படுத்தும் செயல்பாடுகள் முடக்கப்படுகின்றன</string>
+    <string name="permission_btn_text_denied">வெளியேறு</string>
+    <string name="permission_btn_text_grant">சரி</string>
+    <string name="permission_dialog_title">அனுமதிக்கான அறிக்கை</string>
     <string name="prevent_view_title">பாக்கெட் பயன்முறை ஆன் ஆக உள்ளது</string>
     <string name="prevent_view_title_cancel">உங்கள் ஃபோனை செயல்படுத்த:</string>
     <string name="prevent_view_top_tag_cancel">உங்கள் ஃபோனின் நீல நிற பகுதியை மூடவேண்டாம், மேலும் அதில் உள்ள அழுக்கு மற்றும் தூசியை சுத்தம் செய்யவேண்டாம்.</string>

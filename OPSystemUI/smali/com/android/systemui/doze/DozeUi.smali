@@ -105,7 +105,15 @@
     return-void
 .end method
 
-.method static synthetic access$200(Lcom/android/systemui/doze/DozeUi;)Lcom/android/systemui/doze/DozeMachine;
+.method static synthetic access$200(Lcom/android/systemui/doze/DozeUi;Z)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/systemui/doze/DozeUi;->updateAnimateScreenOff(Z)V
+
+    return-void
+.end method
+
+.method static synthetic access$300(Lcom/android/systemui/doze/DozeUi;)Lcom/android/systemui/doze/DozeMachine;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/doze/DozeUi;->mMachine:Lcom/android/systemui/doze/DozeMachine;
@@ -197,7 +205,7 @@
 .end method
 
 .method private updateAnimateScreenOff()V
-    .locals 2
+    .locals 1
 
     iget-boolean v0, p0, Lcom/android/systemui/doze/DozeUi;->mCanAnimateTransition:Z
 
@@ -231,15 +239,28 @@
     const/4 v0, 0x0
 
     :goto_0
-    iget-object v1, p0, Lcom/android/systemui/doze/DozeUi;->mDozeParameters:Lcom/android/systemui/statusbar/phone/DozeParameters;
+    invoke-direct {p0, v0}, Lcom/android/systemui/doze/DozeUi;->updateAnimateScreenOff(Z)V
 
-    invoke-virtual {v1, v0}, Lcom/android/systemui/statusbar/phone/DozeParameters;->setControlScreenOffAnimation(Z)V
+    :cond_1
+    return-void
+.end method
+
+.method private updateAnimateScreenOff(Z)V
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/android/systemui/doze/DozeUi;->mCanAnimateTransition:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/systemui/doze/DozeUi;->mDozeParameters:Lcom/android/systemui/statusbar/phone/DozeParameters;
+
+    invoke-virtual {v0, p1}, Lcom/android/systemui/statusbar/phone/DozeParameters;->setControlScreenOffAnimation(Z)V
 
     iget-object p0, p0, Lcom/android/systemui/doze/DozeUi;->mHost:Lcom/android/systemui/doze/DozeHost;
 
-    invoke-interface {p0, v0}, Lcom/android/systemui/doze/DozeHost;->setAnimateScreenOff(Z)V
+    invoke-interface {p0, p1}, Lcom/android/systemui/doze/DozeHost;->setAnimateScreenOff(Z)V
 
-    :cond_1
+    :cond_0
     return-void
 .end method
 

@@ -372,6 +372,8 @@
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
+    if-eqz p0, :cond_0
+
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBar;->updateScrimController()V
 
     :cond_0
@@ -923,8 +925,11 @@
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
+    if-eqz p0, :cond_1
+
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBar;->updateScrimController()V
 
+    :cond_1
     return-void
 .end method
 
@@ -1021,8 +1026,11 @@
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
+    if-eqz p0, :cond_3
+
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBar;->updateScrimController()V
 
+    :cond_3
     return-void
 .end method
 
@@ -1157,8 +1165,11 @@
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
+    if-eqz p0, :cond_0
+
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBar;->startDozing()V
 
+    :cond_0
     return-void
 .end method
 
@@ -1167,8 +1178,11 @@
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
+    if-eqz p0, :cond_0
+
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBar;->stopDozing()V
 
+    :cond_0
     return-void
 .end method
 
@@ -1226,7 +1240,10 @@
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
+    if-eqz p0, :cond_0
+
     invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->opUpdateDozing()V
 
+    :cond_0
     return-void
 .end method

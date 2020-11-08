@@ -3,12 +3,12 @@
 .source "OpSWarpChargingView.java"
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oneplus/battery/OpSWarpChargingView;->genWarpAnimation()V
+    value = Lcom/oneplus/battery/OpSWarpChargingView;->getChargeAnimation()Landroid/animation/AnimatorSet;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -34,50 +34,228 @@
 
 
 # virtual methods
-.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 2
+.method public onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object p1
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 0
 
-    check-cast p1, Ljava/lang/Float;
+    iget-object p1, p0, Lcom/oneplus/battery/OpSWarpChargingView$15;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    invoke-static {p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$300(Lcom/oneplus/battery/OpSWarpChargingView;)Z
 
     move-result p1
 
-    const v0, 0x3f19999a    # 0.6f
-
-    sub-float v0, p1, v0
-
-    const v1, 0x3ecccccc    # 0.39999998f
-
-    div-float/2addr v0, v1
-
-    iget-object v1, p0, Lcom/oneplus/battery/OpSWarpChargingView$15;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
-
-    invoke-static {v1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$700(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/widget/TextView;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Landroid/widget/TextView;->setScaleX(F)V
-
-    iget-object v1, p0, Lcom/oneplus/battery/OpSWarpChargingView$15;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
-
-    invoke-static {v1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$700(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/widget/TextView;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Landroid/widget/TextView;->setScaleY(F)V
+    if-eqz p1, :cond_0
 
     iget-object p0, p0, Lcom/oneplus/battery/OpSWarpChargingView$15;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
 
-    invoke-static {p0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$700(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/widget/TextView;
+    invoke-static {p0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2500(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/animation/AnimatorSet;
 
     move-result-object p0
 
-    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setAlpha(F)V
+    invoke-virtual {p0}, Landroid/animation/AnimatorSet;->start()V
 
+    goto :goto_0
+
+    :cond_0
+    iget-object p0, p0, Lcom/oneplus/battery/OpSWarpChargingView$15;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
+
+    const-string p1, "chargingAnimP1"
+
+    invoke-static {p0, p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$500(Lcom/oneplus/battery/OpSWarpChargingView;Ljava/lang/String;)V
+
+    :goto_0
+    return-void
+.end method
+
+.method public onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 6
+
+    sget-boolean p1, Lcom/oneplus/battery/OpSWarpChargingView;->DEBUG:Z
+
+    if-eqz p1, :cond_0
+
+    const-string p1, "OpSWarpChargingView"
+
+    const-string v0, "P1 onAnimationStart()"
+
+    invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget-object p1, p0, Lcom/oneplus/battery/OpSWarpChargingView$15;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$202(Lcom/oneplus/battery/OpSWarpChargingView;I)I
+
+    iget-object p1, p0, Lcom/oneplus/battery/OpSWarpChargingView$15;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
+
+    invoke-static {p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$100(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/view/View;
+
+    move-result-object p1
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v1}, Landroid/view/View;->setScaleX(F)V
+
+    iget-object p1, p0, Lcom/oneplus/battery/OpSWarpChargingView$15;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
+
+    invoke-static {p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$100(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/view/View;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v1}, Landroid/view/View;->setScaleY(F)V
+
+    iget-object p1, p0, Lcom/oneplus/battery/OpSWarpChargingView$15;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
+
+    invoke-static {p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$100(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/view/View;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v1}, Landroid/view/View;->setAlpha(F)V
+
+    iget-object p1, p0, Lcom/oneplus/battery/OpSWarpChargingView$15;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
+
+    invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
+
+    iget-object p1, p0, Lcom/oneplus/battery/OpSWarpChargingView$15;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
+
+    invoke-static {p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$900(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/widget/TextView;
+
+    move-result-object p1
+
+    const/4 v2, 0x4
+
+    invoke-virtual {p1, v2}, Landroid/widget/TextView;->setVisibility(I)V
+
+    iget-object p1, p0, Lcom/oneplus/battery/OpSWarpChargingView$15;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
+
+    invoke-static {p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2100(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/widget/TextView;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/widget/TextView;->getWidth()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    invoke-static {p1, v2}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2002(Lcom/oneplus/battery/OpSWarpChargingView;F)F
+
+    iget-object p1, p0, Lcom/oneplus/battery/OpSWarpChargingView$15;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
+
+    invoke-static {p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2100(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/widget/TextView;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v1}, Landroid/widget/TextView;->setAlpha(F)V
+
+    iget-object p1, p0, Lcom/oneplus/battery/OpSWarpChargingView$15;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
+
+    invoke-static {p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2300(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/widget/LinearLayout;
+
+    move-result-object p1
+
+    iget-object v2, p0, Lcom/oneplus/battery/OpSWarpChargingView$15;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
+
+    invoke-static {v2}, Lcom/oneplus/battery/OpSWarpChargingView;->access$100(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/view/View;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/view/View;->getHeight()I
+
+    move-result v2
+
+    iget-object v3, p0, Lcom/oneplus/battery/OpSWarpChargingView$15;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
+
+    invoke-static {v3}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2200(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/widget/TextView;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/widget/TextView;->getHeight()I
+
+    move-result v3
+
+    sub-int/2addr v2, v3
+
+    const/4 v3, 0x2
+
+    div-int/2addr v2, v3
+
+    int-to-float v2, v2
+
+    invoke-virtual {p1, v2}, Landroid/widget/LinearLayout;->setTranslationY(F)V
+
+    iget-object p1, p0, Lcom/oneplus/battery/OpSWarpChargingView$15;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
+
+    invoke-static {p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$1300(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/animation/ValueAnimator;
+
+    move-result-object p1
+
+    new-array v2, v3, [F
+
+    iget-object v4, p0, Lcom/oneplus/battery/OpSWarpChargingView$15;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
+
+    invoke-static {v4}, Lcom/oneplus/battery/OpSWarpChargingView;->access$100(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/view/View;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/view/View;->getHeight()I
+
+    move-result v4
+
+    iget-object v5, p0, Lcom/oneplus/battery/OpSWarpChargingView$15;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
+
+    invoke-static {v5}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2200(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/widget/TextView;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/widget/TextView;->getHeight()I
+
+    move-result v5
+
+    sub-int/2addr v4, v5
+
+    div-int/2addr v4, v3
+
+    int-to-float v3, v4
+
+    aput v3, v2, v0
+
+    const/4 v0, 0x1
+
+    aput v1, v2, v0
+
+    invoke-virtual {p1, v2}, Landroid/animation/ValueAnimator;->setFloatValues([F)V
+
+    iget-object p1, p0, Lcom/oneplus/battery/OpSWarpChargingView$15;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
+
+    invoke-static {p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2400(Lcom/oneplus/battery/OpSWarpChargingView;)Lcom/oneplus/battery/OpChargingAnimationController;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    iget-object p0, p0, Lcom/oneplus/battery/OpSWarpChargingView$15;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
+
+    invoke-static {p0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2400(Lcom/oneplus/battery/OpSWarpChargingView;)Lcom/oneplus/battery/OpChargingAnimationController;
+
+    move-result-object p0
+
+    const/16 p1, 0x67
+
+    invoke-interface {p0, p1}, Lcom/oneplus/battery/OpChargingAnimationController;->animationStart(I)V
+
+    :cond_1
     return-void
 .end method

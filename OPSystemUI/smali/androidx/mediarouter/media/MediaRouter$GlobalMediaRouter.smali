@@ -2344,7 +2344,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "setSelectedRouteInternal is called while sGlobal is null: pkgName="
+    const-string/jumbo v4, "setSelectedRouteInternal is called while sGlobal is null: pkgName="
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

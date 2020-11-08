@@ -4,7 +4,7 @@
     <item android:id="@id/background">
         <shape>
             <solid android:color="@color/control_default_background" />
-            <corners android:radius="@dimen/control_corner_radius" />
+            <corners android:radius="@dimen/op_control_radius_r12" />
         </shape>
     </item>
     <item android:id="@id/clip_layer">

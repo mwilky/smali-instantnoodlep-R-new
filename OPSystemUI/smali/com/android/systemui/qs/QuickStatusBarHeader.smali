@@ -309,7 +309,7 @@
 
     move-result-object p0
 
-    const v1, 0x10407a4
+    const v1, 0x10407a5
 
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -789,7 +789,7 @@
 .end method
 
 .method private updateClockView()V
-    .locals 2
+    .locals 1
 
     iget-object v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mClockView:Lcom/android/systemui/statusbar/policy/Clock;
 
@@ -798,17 +798,29 @@
     return-void
 
     :cond_0
-    iget-boolean v1, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mExpanded:Z
+    iget-boolean v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mExpanded:Z
 
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
 
-    iget-boolean v1, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mIsLandscape:Z
+    iget-boolean v0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mIsLandscape:Z
 
-    if-nez v1, :cond_1
+    if-nez v0, :cond_1
 
-    const/16 p0, 0x8
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getContext()Landroid/content/Context;
 
-    invoke-virtual {v0, p0}, Lcom/android/systemui/statusbar/policy/Clock;->setVisibility(I)V
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/oneplus/util/OpUtils;->needLargeQSClock(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object p0, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mClockView:Lcom/android/systemui/statusbar/policy/Clock;
+
+    const/16 v0, 0x8
+
+    invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/policy/Clock;->setVisibility(I)V
 
     goto :goto_0
 
@@ -1376,7 +1388,7 @@
 .end method
 
 .method private updateThemeColor()V
-    .locals 5
+    .locals 6
 
     const/4 v0, 0x0
 
@@ -1396,14 +1408,34 @@
 
     move-result v2
 
-    const/16 v3, 0xa
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isREDVersion()Z
 
-    invoke-static {v3}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
+    move-result v3
 
+    if-eqz v3, :cond_0
+
+    iget-object v3, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mDateView:Lcom/android/systemui/statusbar/policy/DateView;
+
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    sget v5, Lcom/android/systemui/R$color;->op_turquoise:I
+
+    invoke-virtual {v4, v5}, Landroid/content/Context;->getColor(I)I
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setTextColor(I)V
+
+    goto :goto_0
+
+    :cond_0
     iget-object v3, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mDateView:Lcom/android/systemui/statusbar/policy/DateView;
 
     invoke-virtual {v3, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
+    :goto_0
     iget-object v3, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mNextAlarmIcon:Landroid/widget/ImageView;
 
     invoke-virtual {v3, v0}, Landroid/widget/ImageView;->setColorFilter(I)V
@@ -1418,7 +1450,7 @@
 
     move-result-object v3
 
-    if-eqz v3, :cond_0
+    if-eqz v3, :cond_1
 
     iget-object v3, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mStatusSeparator:Landroid/view/View;
 
@@ -1430,7 +1462,7 @@
 
     invoke-virtual {v3, v0, v4}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    :cond_0
+    :cond_1
     iget-object v3, p0, Lcom/android/systemui/qs/QuickStatusBarHeader;->mRingerModeIcon:Landroid/widget/ImageView;
 
     invoke-virtual {v3, v0}, Landroid/widget/ImageView;->setColorFilter(I)V

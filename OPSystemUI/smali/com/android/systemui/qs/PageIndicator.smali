@@ -729,7 +729,7 @@
 
     const-string v1, "PageIndicator"
 
-    const-string v2, "setNumPages during animation"
+    const-string/jumbo v2, "setNumPages during animation"
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 

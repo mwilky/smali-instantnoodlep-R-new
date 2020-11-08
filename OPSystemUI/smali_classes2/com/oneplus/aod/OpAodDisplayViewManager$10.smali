@@ -47,7 +47,7 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$10;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1800(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpSingleNotificationView;
+    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1700(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpSingleNotificationView;
 
     move-result-object v0
 
@@ -75,12 +75,12 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$10;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    invoke-static {v0, v2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1902(Lcom/oneplus/aod/OpAodDisplayViewManager;I)I
+    invoke-static {v0, v2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1802(Lcom/oneplus/aod/OpAodDisplayViewManager;I)I
 
     :cond_0
     iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$10;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    invoke-static {v0, v2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$2002(Lcom/oneplus/aod/OpAodDisplayViewManager;Z)Z
+    invoke-static {v0, v2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1902(Lcom/oneplus/aod/OpAodDisplayViewManager;Z)Z
 
     iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$10;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
@@ -90,7 +90,7 @@
 
     const/4 v2, 0x1
 
-    invoke-static {v0, v2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$2102(Lcom/oneplus/aod/OpAodDisplayViewManager;Z)Z
+    invoke-static {v0, v2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$2002(Lcom/oneplus/aod/OpAodDisplayViewManager;Z)Z
 
     :cond_1
     iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$10;->val$callback:Lcom/android/systemui/doze/DozeHost$PulseCallback;

@@ -101,6 +101,14 @@
 
     invoke-static {v0, v1}, Lcom/android/systemui/volume/VolumeDialogImpl;->access$4102(Lcom/android/systemui/volume/VolumeDialogImpl;Z)Z
 
+    iget-object v0, p0, Lcom/android/systemui/volume/VolumeDialogImpl$8;->this$0:Lcom/android/systemui/volume/VolumeDialogImpl;
+
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v1
+
+    invoke-static {v0, v1}, Lcom/android/systemui/volume/VolumeDialogImpl;->access$4202(Lcom/android/systemui/volume/VolumeDialogImpl;Z)Z
+
     sget-boolean v0, Lcom/oneplus/util/OpUtils;->DEBUG_ONEPLUS:Z
 
     if-eqz v0, :cond_0
@@ -148,7 +156,7 @@
 
     move-result p2
 
-    invoke-static {p0, p1, p2}, Lcom/android/systemui/volume/VolumeDialogImpl;->access$4200(Lcom/android/systemui/volume/VolumeDialogImpl;ZZ)V
+    invoke-static {p0, p1, p2}, Lcom/android/systemui/volume/VolumeDialogImpl;->access$4300(Lcom/android/systemui/volume/VolumeDialogImpl;ZZ)V
 
     return-void
 .end method

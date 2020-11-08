@@ -51,6 +51,16 @@
 
     invoke-static {v0, v1}, Landroidx/appcompat/app/AlertDialog;->access$002(Landroidx/appcompat/app/AlertDialog;Z)Z
 
+    iget-object v0, p0, Landroidx/appcompat/app/AlertDialog$1;->this$0:Landroidx/appcompat/app/AlertDialog;
+
+    invoke-virtual {v0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    sget v1, Landroidx/appcompat/R$style;->Oneplus_popup_bottom_edittext_animation:I
+
+    invoke-virtual {v0, v1}, Landroid/view/Window;->setWindowAnimations(I)V
+
     iget-object p0, p0, Landroidx/appcompat/app/AlertDialog$1;->this$0:Landroidx/appcompat/app/AlertDialog;
 
     invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
@@ -81,6 +91,16 @@
     const/4 v0, 0x1
 
     invoke-static {p1, v0}, Landroidx/appcompat/app/AlertDialog;->access$002(Landroidx/appcompat/app/AlertDialog;Z)Z
+
+    iget-object p1, p0, Landroidx/appcompat/app/AlertDialog$1;->this$0:Landroidx/appcompat/app/AlertDialog;
+
+    invoke-virtual {p1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object p1
+
+    sget v0, Landroidx/appcompat/R$style;->Oneplus_popup_bottom_edit_animation:I
+
+    invoke-virtual {p1, v0}, Landroid/view/Window;->setWindowAnimations(I)V
 
     iget-object p0, p0, Landroidx/appcompat/app/AlertDialog$1;->this$0:Landroidx/appcompat/app/AlertDialog;
 

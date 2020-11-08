@@ -58,12 +58,12 @@
 
 .field public static final mtrl_picker_toggle_to_year_selection:I = 0x7f120518
 
-.field public static final op_character_counter_pattern:I = 0x7f120591
+.field public static final op_character_counter_pattern:I = 0x7f120593
 
-.field public static final select_day:I = 0x7f120757
+.field public static final select_day:I = 0x7f12075c
 
-.field public static final select_hours:I = 0x7f120758
+.field public static final select_hours:I = 0x7f12075d
 
-.field public static final select_minutes:I = 0x7f12075d
+.field public static final select_minutes:I = 0x7f120762
 
-.field public static final select_year:I = 0x7f120765
+.field public static final select_year:I = 0x7f12076a

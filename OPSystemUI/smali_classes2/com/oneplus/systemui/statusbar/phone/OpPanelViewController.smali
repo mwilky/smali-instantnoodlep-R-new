@@ -1200,6 +1200,23 @@
     return-void
 .end method
 
+.method public stopTrackingAfterUnlock()V
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/PanelViewController;->isTracking()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/phone/PanelViewController;->onTrackingStopped(Z)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public updateScrimState(Lcom/android/systemui/statusbar/phone/ScrimState;)V
     .locals 0
 

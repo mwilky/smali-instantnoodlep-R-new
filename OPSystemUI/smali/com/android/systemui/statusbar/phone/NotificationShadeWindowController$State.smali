@@ -29,6 +29,8 @@
 
 .field mForceHasTopUi:Z
 
+.field mForceHideWallpaper:Z
+
 .field mForcePluginOpen:Z
 
 .field mForceUserActivity:Z

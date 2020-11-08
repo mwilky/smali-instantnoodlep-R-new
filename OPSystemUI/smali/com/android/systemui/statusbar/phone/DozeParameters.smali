@@ -393,7 +393,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/DozeParameters;->mResources:Landroid/content/res/Resources;
 
-    const v0, 0x10e00b0
+    const v0, 0x10e00b1
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getInteger(I)I
 

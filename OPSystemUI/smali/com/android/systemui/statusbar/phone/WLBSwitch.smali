@@ -282,6 +282,23 @@
 
     move-result v0
 
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isREDVersion()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    sget v1, Lcom/android/systemui/R$color;->op_turquoise:I
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getColor(I)I
+
+    move-result v0
+
+    :cond_1
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/WLBSwitch;->mWlbAvathar:Landroid/widget/ImageView;
 
     invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;

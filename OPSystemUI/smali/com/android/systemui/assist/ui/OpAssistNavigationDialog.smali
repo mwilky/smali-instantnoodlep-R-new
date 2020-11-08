@@ -69,7 +69,15 @@
     return-void
 .end method
 
-.method static synthetic access$000()Landroid/view/View;
+.method static synthetic access$000()Landroid/view/WindowManager$LayoutParams;
+    .locals 1
+
+    sget-object v0, Lcom/android/systemui/assist/ui/OpAssistNavigationDialog;->mWindowLayoutParams:Landroid/view/WindowManager$LayoutParams;
+
+    return-object v0
+.end method
+
+.method static synthetic access$100()Landroid/view/View;
     .locals 1
 
     sget-object v0, Lcom/android/systemui/assist/ui/OpAssistNavigationDialog;->mMainView:Landroid/view/View;
@@ -77,7 +85,15 @@
     return-object v0
 .end method
 
-.method static synthetic access$100()I
+.method static synthetic access$200()Landroid/view/WindowManager;
+    .locals 1
+
+    sget-object v0, Lcom/android/systemui/assist/ui/OpAssistNavigationDialog;->mWindowManager:Landroid/view/WindowManager;
+
+    return-object v0
+.end method
+
+.method static synthetic access$300()I
     .locals 1
 
     sget v0, Lcom/android/systemui/assist/ui/OpAssistNavigationDialog;->mCurrentPage:I
@@ -85,7 +101,7 @@
     return v0
 .end method
 
-.method static synthetic access$102(I)I
+.method static synthetic access$302(I)I
     .locals 0
 
     sput p0, Lcom/android/systemui/assist/ui/OpAssistNavigationDialog;->mCurrentPage:I
@@ -93,7 +109,7 @@
     return p0
 .end method
 
-.method static synthetic access$108()I
+.method static synthetic access$308()I
     .locals 2
 
     sget v0, Lcom/android/systemui/assist/ui/OpAssistNavigationDialog;->mCurrentPage:I
@@ -105,7 +121,7 @@
     return v0
 .end method
 
-.method static synthetic access$200(I)V
+.method static synthetic access$400(I)V
     .locals 0
 
     invoke-static {p0}, Lcom/android/systemui/assist/ui/OpAssistNavigationDialog;->updateDialog(I)V
@@ -113,7 +129,7 @@
     return-void
 .end method
 
-.method static synthetic access$300()Landroid/content/Context;
+.method static synthetic access$500()Landroid/content/Context;
     .locals 1
 
     sget-object v0, Lcom/android/systemui/assist/ui/OpAssistNavigationDialog;->mContext:Landroid/content/Context;

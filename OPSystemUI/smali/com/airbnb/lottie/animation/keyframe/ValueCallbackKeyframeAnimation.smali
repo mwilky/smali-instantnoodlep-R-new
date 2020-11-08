@@ -144,3 +144,11 @@
     :cond_0
     return-void
 .end method
+
+.method public setProgress(F)V
+    .locals 0
+
+    iput p1, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->progress:F
+
+    return-void
+.end method

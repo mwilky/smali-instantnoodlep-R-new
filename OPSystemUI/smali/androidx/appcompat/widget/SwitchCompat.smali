@@ -1038,7 +1038,7 @@
     :cond_1
     const-string p0, "SwitchCompat"
 
-    const-string p1, "setRaidus fail , background not a rippleDrawable"
+    const-string/jumbo p1, "setRaidus fail , background not a rippleDrawable"
 
     invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 

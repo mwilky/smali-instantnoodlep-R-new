@@ -16,6 +16,8 @@
 
 
 # static fields
+.field public static final DEBUG_MEDIA:Z
+
 .field private static final PAUSED_MEDIA_STATES:Ljava/util/HashSet;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -44,6 +46,8 @@
 
 .field private mHasMediaArtwork:Z
 
+.field private mHasNotification:Z
+
 .field protected final mHideBackdropFront:Ljava/lang/Runnable;
 
 .field private final mKeyguardBypassController:Lcom/android/systemui/statusbar/phone/KeyguardBypassController;
@@ -57,6 +61,8 @@
 .field private final mMediaArtworkProcessor:Lcom/android/systemui/statusbar/MediaArtworkProcessor;
 
 .field private mMediaController:Landroid/media/session/MediaController;
+
+.field private mMediaHostViewVisible:Z
 
 .field private final mMediaListener:Landroid/media/session/MediaController$Callback;
 
@@ -104,6 +110,8 @@
 
 .field private mShowCompactMediaSeekbar:Z
 
+.field private mState:Landroid/media/session/PlaybackState;
+
 .field private final mStatusBarLazy:Ldagger/Lazy;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -120,6 +128,10 @@
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
+
+    sget-boolean v0, Lcom/oneplus/util/OpUtils;->DEBUG_ONEPLUS:Z
+
+    sput-boolean v0, Lcom/android/systemui/statusbar/NotificationMediaManager;->DEBUG_MEDIA:Z
 
     new-instance v0, Ljava/util/HashSet;
 
@@ -341,7 +353,15 @@
     return p0
 .end method
 
-.method static synthetic access$200(Lcom/android/systemui/statusbar/NotificationMediaManager;)Lcom/android/systemui/statusbar/MediaArtworkProcessor;
+.method static synthetic access$202(Lcom/android/systemui/statusbar/NotificationMediaManager;Landroid/media/session/PlaybackState;)Landroid/media/session/PlaybackState;
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mState:Landroid/media/session/PlaybackState;
+
+    return-object p1
+.end method
+
+.method static synthetic access$300(Lcom/android/systemui/statusbar/NotificationMediaManager;)Lcom/android/systemui/statusbar/MediaArtworkProcessor;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mMediaArtworkProcessor:Lcom/android/systemui/statusbar/MediaArtworkProcessor;
@@ -349,7 +369,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$302(Lcom/android/systemui/statusbar/NotificationMediaManager;Landroid/media/MediaMetadata;)Landroid/media/MediaMetadata;
+.method static synthetic access$402(Lcom/android/systemui/statusbar/NotificationMediaManager;Landroid/media/MediaMetadata;)Landroid/media/MediaMetadata;
     .locals 0
 
     iput-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mMediaMetadata:Landroid/media/MediaMetadata;
@@ -357,7 +377,7 @@
     return-object p1
 .end method
 
-.method static synthetic access$400(Lcom/android/systemui/statusbar/NotificationMediaManager;ZZ)V
+.method static synthetic access$500(Lcom/android/systemui/statusbar/NotificationMediaManager;ZZ)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/android/systemui/statusbar/NotificationMediaManager;->dispatchUpdateMediaMetaData(ZZ)V
@@ -365,7 +385,7 @@
     return-void
 .end method
 
-.method static synthetic access$500(Lcom/android/systemui/statusbar/NotificationMediaManager;)Landroid/widget/ImageView;
+.method static synthetic access$600(Lcom/android/systemui/statusbar/NotificationMediaManager;)Landroid/widget/ImageView;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdropFront:Landroid/widget/ImageView;
@@ -373,7 +393,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$600(Lcom/android/systemui/statusbar/NotificationMediaManager;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+.method static synthetic access$700(Lcom/android/systemui/statusbar/NotificationMediaManager;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/NotificationMediaManager;->processArtwork(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
@@ -383,7 +403,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$700(Lcom/android/systemui/statusbar/NotificationMediaManager;Landroid/os/AsyncTask;)V
+.method static synthetic access$800(Lcom/android/systemui/statusbar/NotificationMediaManager;Landroid/os/AsyncTask;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/NotificationMediaManager;->removeTask(Landroid/os/AsyncTask;)V
@@ -391,7 +411,7 @@
     return-void
 .end method
 
-.method static synthetic access$800(Lcom/android/systemui/statusbar/NotificationMediaManager;ZZLandroid/graphics/Bitmap;)V
+.method static synthetic access$900(Lcom/android/systemui/statusbar/NotificationMediaManager;ZZLandroid/graphics/Bitmap;)V
     .locals 0
 
     invoke-direct {p0, p1, p2, p3}, Lcom/android/systemui/statusbar/NotificationMediaManager;->finishUpdateMediaMetaData(ZZLandroid/graphics/Bitmap;)V
@@ -412,14 +432,53 @@
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mMediaController:Landroid/media/session/MediaController;
 
+    if-eqz v1, :cond_1
+
+    sget-boolean v1, Lcom/android/systemui/statusbar/NotificationMediaManager;->DEBUG_MEDIA:Z
+
     if-eqz v1, :cond_0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "DEBUG_MEDIA: Disconnecting from old controller: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mMediaController:Landroid/media/session/MediaController;
+
+    invoke-virtual {v2}, Landroid/media/session/MediaController;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "NotificationMediaManager"
+
+    invoke-static {v2, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget-object v1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mMediaController:Landroid/media/session/MediaController;
 
     iget-object v2, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mMediaListener:Landroid/media/session/MediaController$Callback;
 
     invoke-virtual {v1, v2}, Landroid/media/session/MediaController;->unregisterCallback(Landroid/media/session/MediaController$Callback;)V
 
-    :cond_0
+    :cond_1
     iput-object v0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mMediaController:Landroid/media/session/MediaController;
+
+    iput-object v0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mState:Landroid/media/session/PlaybackState;
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mHasNotification:Z
+
+    iput-boolean v0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mMediaHostViewVisible:Z
 
     return-void
 .end method
@@ -474,322 +533,352 @@
 .end method
 
 .method private finishUpdateMediaMetaData(ZZLandroid/graphics/Bitmap;)V
-    .locals 11
+    .locals 12
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mState:Landroid/media/session/PlaybackState;
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x0
+
+    const-string v3, "NotificationMediaManager"
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Landroid/media/session/PlaybackState;->getState()I
+
+    move-result v0
+
+    if-ne v0, v1, :cond_1
+
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mHasNotification:Z
+
+    if-nez v0, :cond_1
+
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mMediaHostViewVisible:Z
+
+    if-nez v0, :cond_1
+
+    sget-boolean p3, Lcom/android/systemui/statusbar/NotificationMediaManager;->DEBUG_MEDIA:Z
 
     if-eqz p3, :cond_0
 
-    new-instance v1, Landroid/graphics/drawable/BitmapDrawable;
+    const-string p3, "Music is paused and there is no music notification, remove album art"
 
-    iget-object v2, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdropBack:Landroid/widget/ImageView;
+    invoke-static {v3, p3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {v2}, Landroid/widget/ImageView;->getResources()Landroid/content/res/Resources;
+    :cond_0
+    move-object p3, v2
 
-    move-result-object v2
+    :cond_1
+    if-eqz p3, :cond_2
 
-    invoke-direct {v1, v2, p3}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
+    new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
+
+    iget-object v4, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdropBack:Landroid/widget/ImageView;
+
+    invoke-virtual {v4}, Landroid/widget/ImageView;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    invoke-direct {v0, v4, p3}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
     goto :goto_0
 
-    :cond_0
-    move-object v1, v0
+    :cond_2
+    move-object v0, v2
 
     :goto_0
     const/4 p3, 0x1
 
-    const/4 v2, 0x0
+    const/4 v4, 0x0
 
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_3
 
-    move v3, p3
+    move v5, p3
 
     goto :goto_1
 
-    :cond_1
-    move v3, v2
+    :cond_3
+    move v5, v4
 
     :goto_1
-    if-eqz v1, :cond_2
+    if-eqz v0, :cond_4
 
-    move v4, p3
+    move v6, p3
 
     goto :goto_2
 
-    :cond_2
-    move v4, v2
+    :cond_4
+    move v6, v4
 
     :goto_2
-    iput-boolean v4, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mHasMediaArtwork:Z
+    iput-boolean v6, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mHasMediaArtwork:Z
 
-    if-nez v1, :cond_5
+    if-nez v0, :cond_7
 
-    iget-object v4, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mLockscreenWallpaper:Lcom/android/systemui/statusbar/phone/LockscreenWallpaper;
+    iget-object v6, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mLockscreenWallpaper:Lcom/android/systemui/statusbar/phone/LockscreenWallpaper;
 
-    if-eqz v4, :cond_3
+    if-eqz v6, :cond_5
 
-    invoke-virtual {v4}, Lcom/android/systemui/statusbar/phone/LockscreenWallpaper;->getBitmap()Landroid/graphics/Bitmap;
-
-    move-result-object v4
-
-    goto :goto_3
-
-    :cond_3
-    move-object v4, v0
-
-    :goto_3
-    if-eqz v4, :cond_5
-
-    new-instance v1, Lcom/android/systemui/statusbar/phone/LockscreenWallpaper$WallpaperDrawable;
-
-    iget-object v5, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdropBack:Landroid/widget/ImageView;
-
-    invoke-virtual {v5}, Landroid/widget/ImageView;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-direct {v1, v5, v4}, Lcom/android/systemui/statusbar/phone/LockscreenWallpaper$WallpaperDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
-
-    iget-object v4, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mStatusBarStateController:Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
-
-    invoke-interface {v4}, Lcom/android/systemui/plugins/statusbar/StatusBarStateController;->getState()I
-
-    move-result v4
-
-    if-eq v4, p3, :cond_4
-
-    const-class v4, Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    invoke-static {v4}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    invoke-virtual {v4}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isSimPinSecure()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_5
-
-    :cond_4
-    move v4, p3
-
-    goto :goto_4
-
-    :cond_5
-    move v4, v2
-
-    :goto_4
-    iget-object v5, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mNotificationShadeWindowController:Ldagger/Lazy;
-
-    invoke-interface {v5}, Ldagger/Lazy;->get()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController;
-
-    iget-object v6, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mStatusBarLazy:Ldagger/Lazy;
-
-    invoke-interface {v6}, Ldagger/Lazy;->get()Ljava/lang/Object;
+    invoke-virtual {v6}, Lcom/android/systemui/statusbar/phone/LockscreenWallpaper;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v6
 
-    check-cast v6, Lcom/android/systemui/statusbar/phone/StatusBar;
+    goto :goto_3
 
-    invoke-virtual {v6}, Lcom/android/systemui/statusbar/phone/StatusBar;->isOccluded()Z
+    :cond_5
+    move-object v6, v2
+
+    :goto_3
+    if-eqz v6, :cond_7
+
+    new-instance v0, Lcom/android/systemui/statusbar/phone/LockscreenWallpaper$WallpaperDrawable;
+
+    iget-object v7, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdropBack:Landroid/widget/ImageView;
+
+    invoke-virtual {v7}, Landroid/widget/ImageView;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v7
+
+    invoke-direct {v0, v7, v6}, Lcom/android/systemui/statusbar/phone/LockscreenWallpaper$WallpaperDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
+
+    iget-object v6, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mStatusBarStateController:Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
+
+    invoke-interface {v6}, Lcom/android/systemui/plugins/statusbar/StatusBarStateController;->getState()I
 
     move-result v6
 
-    if-eqz v1, :cond_6
+    if-eq v6, p3, :cond_6
 
-    move v7, p3
+    const-class v6, Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-    goto :goto_5
+    invoke-static {v6}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    invoke-virtual {v6}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isSimPinSecure()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_7
 
     :cond_6
-    move v7, v2
+    move v6, p3
 
-    :goto_5
-    sget-boolean v8, Lcom/oneplus/util/OpUtils;->DEBUG_ONEPLUS:Z
-
-    const-string v9, "NotificationMediaManager"
-
-    if-eqz v8, :cond_8
-
-    new-instance v8, Ljava/lang/StringBuilder;
-
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string/jumbo v10, "updateMediaMetaData: hasArtwork = "
-
-    invoke-virtual {v8, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8, v7}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v10, ", allowWhenShade:"
-
-    invoke-virtual {v8, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v10, ", allowEnterAnimation:"
-
-    invoke-virtual {v8, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v10, ", vis:"
-
-    invoke-virtual {v8, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v10, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdrop:Lcom/android/systemui/statusbar/BackDropView;
-
-    invoke-virtual {v10}, Landroid/widget/FrameLayout;->getVisibility()I
-
-    move-result v10
-
-    invoke-virtual {v8, v10}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v10, ", alpha:"
-
-    invoke-virtual {v8, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v10, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdrop:Lcom/android/systemui/statusbar/BackDropView;
-
-    invoke-virtual {v10}, Landroid/widget/FrameLayout;->getAlpha()F
-
-    move-result v10
-
-    invoke-virtual {v8, v10}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v10, ", , mStatusBarStateController.getState():"
-
-    invoke-virtual {v8, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v10, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mStatusBarStateController:Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
-
-    invoke-interface {v10}, Lcom/android/systemui/plugins/statusbar/StatusBarStateController;->getState()I
-
-    move-result v10
-
-    invoke-virtual {v8, v10}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v10, ", metaDataChanged:"
-
-    invoke-virtual {v8, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v10, ", mBiometricUnlockController.getMode():"
-
-    invoke-virtual {v8, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v10, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBiometricUnlockController:Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
-
-    if-eqz v10, :cond_7
-
-    invoke-virtual {v10}, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->getMode()I
-
-    move-result v10
-
-    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v10
-
-    goto :goto_6
+    goto :goto_4
 
     :cond_7
-    const-string v10, "null"
+    move v6, v4
 
-    :goto_6
-    invoke-virtual {v8, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :goto_4
+    iget-object v7, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mNotificationShadeWindowController:Ldagger/Lazy;
 
-    const-string v10, ", hideBecauseOccluded:"
+    invoke-interface {v7}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    invoke-virtual {v8, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v7
 
-    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    check-cast v7, Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController;
 
-    const-string v10, ", hasMediaArtwork= "
+    iget-object v8, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mStatusBarLazy:Ldagger/Lazy;
 
-    invoke-virtual {v8, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v10, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mHasMediaArtwork:Z
-
-    invoke-virtual {v8, v10}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v8}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
     move-result-object v8
 
-    invoke-static {v9, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    check-cast v8, Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    invoke-virtual {v8}, Lcom/android/systemui/statusbar/phone/StatusBar;->isOccluded()Z
+
+    move-result v8
+
+    if-eqz v0, :cond_8
+
+    move v9, p3
+
+    goto :goto_5
 
     :cond_8
-    iget-object v8, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mColorExtractor:Lcom/android/systemui/colorextraction/SysuiColorExtractor;
+    move v9, v4
 
-    invoke-virtual {v8, v3}, Lcom/android/systemui/colorextraction/SysuiColorExtractor;->setHasMediaArtwork(Z)V
+    :goto_5
+    sget-boolean v10, Lcom/oneplus/util/OpUtils;->DEBUG_ONEPLUS:Z
 
-    iget-object v3, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mScrimController:Lcom/android/systemui/statusbar/phone/ScrimController;
+    if-eqz v10, :cond_a
 
-    if-eqz v3, :cond_9
+    new-instance v10, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v7}, Lcom/android/systemui/statusbar/phone/ScrimController;->setHasBackdrop(Z)V
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v11, "updateMediaMetaData: hasArtwork = "
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, v9}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v11, ", allowWhenShade:"
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v11, ", allowEnterAnimation:"
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v11, ", vis:"
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v11, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdrop:Lcom/android/systemui/statusbar/BackDropView;
+
+    invoke-virtual {v11}, Landroid/widget/FrameLayout;->getVisibility()I
+
+    move-result v11
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v11, ", alpha:"
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v11, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdrop:Lcom/android/systemui/statusbar/BackDropView;
+
+    invoke-virtual {v11}, Landroid/widget/FrameLayout;->getAlpha()F
+
+    move-result v11
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v11, ", , mStatusBarStateController.getState():"
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v11, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mStatusBarStateController:Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
+
+    invoke-interface {v11}, Lcom/android/systemui/plugins/statusbar/StatusBarStateController;->getState()I
+
+    move-result v11
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v11, ", metaDataChanged:"
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v11, ", mBiometricUnlockController.getMode():"
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v11, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBiometricUnlockController:Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
+
+    if-eqz v11, :cond_9
+
+    invoke-virtual {v11}, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->getMode()I
+
+    move-result v11
+
+    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v11
+
+    goto :goto_6
 
     :cond_9
-    const/4 v3, 0x2
+    const-string v11, "null"
 
-    const/4 v8, 0x0
+    :goto_6
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    if-nez v7, :cond_a
+    const-string v11, ", hideBecauseOccluded:"
 
-    sget-boolean v7, Lcom/android/systemui/statusbar/phone/StatusBar;->DEBUG_MEDIA_FAKE_ARTWORK:Z
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v7, :cond_11
+    invoke-virtual {v10, v8}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v11, ", hasMediaArtwork= "
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v11, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mHasMediaArtwork:Z
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-static {v3, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_a
-    iget-object v7, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mStatusBarStateController:Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
+    iget-object v10, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mColorExtractor:Lcom/android/systemui/colorextraction/SysuiColorExtractor;
 
-    invoke-interface {v7}, Lcom/android/systemui/plugins/statusbar/StatusBarStateController;->getState()I
+    invoke-virtual {v10, v5}, Lcom/android/systemui/colorextraction/SysuiColorExtractor;->setHasMediaArtwork(Z)V
 
-    move-result v7
+    iget-object v5, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mScrimController:Lcom/android/systemui/statusbar/phone/ScrimController;
 
-    if-nez v7, :cond_b
+    if-eqz v5, :cond_b
 
-    if-eqz v4, :cond_11
+    invoke-virtual {v5, v9}, Lcom/android/systemui/statusbar/phone/ScrimController;->setHasBackdrop(Z)V
 
     :cond_b
-    iget-object v4, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBiometricUnlockController:Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
+    const/4 v5, 0x0
 
-    if-eqz v4, :cond_11
+    if-nez v9, :cond_c
 
-    invoke-virtual {v4}, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->getMode()I
+    sget-boolean v9, Lcom/android/systemui/statusbar/phone/StatusBar;->DEBUG_MEDIA_FAKE_ARTWORK:Z
 
-    move-result v4
+    if-eqz v9, :cond_15
 
-    if-eq v4, v3, :cond_11
+    :cond_c
+    iget-object v9, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mStatusBarStateController:Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
 
-    if-nez v6, :cond_11
+    invoke-interface {v9}, Lcom/android/systemui/plugins/statusbar/StatusBarStateController;->getState()I
 
-    iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdrop:Lcom/android/systemui/statusbar/BackDropView;
+    move-result v9
 
-    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getVisibility()I
+    if-nez v9, :cond_d
 
-    move-result v0
+    if-eqz v6, :cond_15
 
-    const/high16 v3, 0x3f800000    # 1.0f
+    :cond_d
+    iget-object v6, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBiometricUnlockController:Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
 
-    if-eqz v0, :cond_e
+    if-eqz v6, :cond_15
+
+    invoke-virtual {v6}, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->getMode()I
+
+    move-result v6
+
+    if-eq v6, v1, :cond_15
+
+    if-nez v8, :cond_15
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdrop:Lcom/android/systemui/statusbar/BackDropView;
+
+    invoke-virtual {v1}, Landroid/widget/FrameLayout;->getVisibility()I
+
+    move-result v1
+
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    if-eqz v1, :cond_11
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdrop:Lcom/android/systemui/statusbar/BackDropView;
 
-    invoke-virtual {p1, v2}, Landroid/widget/FrameLayout;->setVisibility(I)V
+    invoke-virtual {p1, v4}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    if-eqz p2, :cond_c
+    if-eqz p2, :cond_e
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdrop:Lcom/android/systemui/statusbar/BackDropView;
 
-    invoke-virtual {p1, v8}, Landroid/widget/FrameLayout;->setAlpha(F)V
+    invoke-virtual {p1, v5}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdrop:Lcom/android/systemui/statusbar/BackDropView;
 
@@ -797,11 +886,11 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, v3}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {p1, v2}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
     goto :goto_7
 
-    :cond_c
+    :cond_e
     iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdrop:Lcom/android/systemui/statusbar/BackDropView;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->animate()Landroid/view/ViewPropertyAnimator;
@@ -812,18 +901,27 @@
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdrop:Lcom/android/systemui/statusbar/BackDropView;
 
-    invoke-virtual {p1, v3}, Landroid/widget/FrameLayout;->setAlpha(F)V
+    invoke-virtual {p1, v2}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
     :goto_7
-    if-eqz v5, :cond_d
+    if-eqz v7, :cond_f
 
-    invoke-virtual {v5, p3}, Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController;->setBackdropShowing(Z)V
+    invoke-virtual {v7, p3}, Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController;->setBackdropShowing(Z)V
 
-    :cond_d
+    :cond_f
+    sget-boolean p1, Lcom/android/systemui/statusbar/NotificationMediaManager;->DEBUG_MEDIA:Z
+
+    if-eqz p1, :cond_10
+
+    const-string p1, "DEBUG_MEDIA: Fading in album artwork"
+
+    invoke-static {v3, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_10
     move p1, p3
 
-    :cond_e
-    if-eqz p1, :cond_19
+    :cond_11
+    if-eqz p1, :cond_1e
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdropBack:Landroid/widget/ImageView;
 
@@ -831,7 +929,7 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_f
+    if-eqz p1, :cond_12
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdropBack:Landroid/widget/ImageView;
 
@@ -863,15 +961,15 @@
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdropFront:Landroid/widget/ImageView;
 
-    invoke-virtual {p1, v3}, Landroid/widget/ImageView;->setAlpha(F)V
+    invoke-virtual {p1, v2}, Landroid/widget/ImageView;->setAlpha(F)V
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdropFront:Landroid/widget/ImageView;
 
-    invoke-virtual {p1, v2}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-virtual {p1, v4}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto :goto_8
 
-    :cond_f
+    :cond_12
     iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdropFront:Landroid/widget/ImageView;
 
     const/4 p2, 0x4
@@ -881,7 +979,7 @@
     :goto_8
     sget-boolean p1, Lcom/android/systemui/statusbar/phone/StatusBar;->DEBUG_MEDIA_FAKE_ARTWORK:Z
 
-    if-eqz p1, :cond_10
+    if-eqz p1, :cond_13
 
     const/high16 p1, -0x1000000
 
@@ -889,9 +987,9 @@
 
     move-result-wide v0
 
-    const-wide v3, 0x416fffffe0000000L    # 1.6777215E7
+    const-wide v6, 0x416fffffe0000000L    # 1.6777215E7
 
-    mul-double/2addr v0, v3
+    mul-double/2addr v0, v6
 
     double-to-int p2, v0
 
@@ -903,7 +1001,7 @@
 
     move-result-object p3
 
-    aput-object p3, p2, v2
+    aput-object p3, p2, v4
 
     const-string p3, "DEBUG_MEDIA: setting new color: 0x%08x"
 
@@ -911,7 +1009,7 @@
 
     move-result-object p2
 
-    invoke-static {v9, p2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, p2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object p2, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdropBack:Landroid/widget/ImageView;
 
@@ -929,10 +1027,10 @@
 
     goto :goto_9
 
-    :cond_10
+    :cond_13
     iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdropBack:Landroid/widget/ImageView;
 
-    invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     :goto_9
     iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdropFront:Landroid/widget/ImageView;
@@ -941,8 +1039,47 @@
 
     move-result p1
 
-    if-nez p1, :cond_19
+    if-nez p1, :cond_1e
 
+    sget-boolean p1, Lcom/android/systemui/statusbar/NotificationMediaManager;->DEBUG_MEDIA:Z
+
+    if-eqz p1, :cond_14
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p2, "DEBUG_MEDIA: Crossfading album artwork from "
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p2, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdropFront:Landroid/widget/ImageView;
+
+    invoke-virtual {p2}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p2, " to "
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p2, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdropBack:Landroid/widget/ImageView;
+
+    invoke-virtual {p2}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v3, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_14
     iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdropFront:Landroid/widget/ImageView;
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -955,7 +1092,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, v8}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {p1, v5}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
 
@@ -965,7 +1102,7 @@
 
     goto/16 :goto_b
 
-    :cond_11
+    :cond_15
     iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdrop:Lcom/android/systemui/statusbar/BackDropView;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->getVisibility()I
@@ -974,15 +1111,24 @@
 
     const/16 p2, 0x8
 
-    if-eq p1, p2, :cond_19
+    if-eq p1, p2, :cond_1e
 
+    sget-boolean p1, Lcom/android/systemui/statusbar/NotificationMediaManager;->DEBUG_MEDIA:Z
+
+    if-eqz p1, :cond_16
+
+    const-string p1, "DEBUG_MEDIA: Fading out album artwork"
+
+    invoke-static {v3, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_16
     iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mStatusBarStateController:Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
 
     invoke-interface {p1}, Lcom/android/systemui/plugins/statusbar/StatusBarStateController;->isDozing()Z
 
     move-result p1
 
-    if-eqz p1, :cond_12
+    if-eqz p1, :cond_17
 
     sget-object p1, Lcom/android/systemui/statusbar/phone/ScrimState;->AOD:Lcom/android/systemui/statusbar/phone/ScrimState;
 
@@ -990,12 +1136,12 @@
 
     move-result p1
 
-    if-nez p1, :cond_12
+    if-nez p1, :cond_17
 
     goto :goto_a
 
-    :cond_12
-    move p3, v2
+    :cond_17
+    move p3, v4
 
     :goto_a
     iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mKeyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
@@ -1004,53 +1150,53 @@
 
     move-result p1
 
-    iget-object v1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBiometricUnlockController:Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBiometricUnlockController:Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
 
-    if-eqz v1, :cond_13
+    if-eqz v0, :cond_18
 
-    invoke-virtual {v1}, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->getMode()I
+    invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->getMode()I
 
-    move-result v1
+    move-result v0
 
-    if-eq v1, v3, :cond_14
+    if-eq v0, v1, :cond_19
 
-    :cond_13
-    if-eqz p3, :cond_15
+    :cond_18
+    if-eqz p3, :cond_1a
 
-    :cond_14
-    if-eqz p1, :cond_16
+    :cond_19
+    if-eqz p1, :cond_1b
 
-    :cond_15
-    if-eqz v6, :cond_17
+    :cond_1a
+    if-eqz v8, :cond_1c
 
-    :cond_16
+    :cond_1b
     iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdrop:Lcom/android/systemui/statusbar/BackDropView;
 
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdropBack:Landroid/widget/ImageView;
 
-    invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    if-eqz v5, :cond_19
+    if-eqz v7, :cond_1e
 
-    invoke-virtual {v5, v2}, Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController;->setBackdropShowing(Z)V
+    invoke-virtual {v7, v4}, Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController;->setBackdropShowing(Z)V
 
     goto :goto_b
 
-    :cond_17
-    if-eqz v5, :cond_18
+    :cond_1c
+    if-eqz v7, :cond_1d
 
-    invoke-virtual {v5, v2}, Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController;->setBackdropShowing(Z)V
+    invoke-virtual {v7, v4}, Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController;->setBackdropShowing(Z)V
 
-    :cond_18
+    :cond_1d
     iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdrop:Lcom/android/systemui/statusbar/BackDropView;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
 
-    invoke-virtual {p1, v8}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {p1, v5}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
 
@@ -1084,7 +1230,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_19
+    if-eqz p1, :cond_1e
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdrop:Lcom/android/systemui/statusbar/BackDropView;
 
@@ -1104,7 +1250,7 @@
 
     invoke-virtual {p0}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    :cond_19
+    :cond_1e
     :goto_b
     return-void
 .end method
@@ -1392,7 +1538,7 @@
 .end method
 
 .method public findAndUpdateMediaNotifications()V
-    .locals 10
+    .locals 11
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mEntryManager:Lcom/android/systemui/statusbar/notification/NotificationEntryManager;
 
@@ -1414,7 +1560,9 @@
 
     move-result v3
 
-    const/4 v4, 0x0
+    const/4 v4, 0x3
+
+    const/4 v5, 0x0
 
     if-eqz v3, :cond_1
 
@@ -1426,63 +1574,92 @@
 
     invoke-virtual {v3}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->isMediaNotification()Z
 
-    move-result v5
+    move-result v6
 
-    if-eqz v5, :cond_0
+    if-eqz v6, :cond_0
 
     invoke-virtual {v3}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->getSbn()Landroid/service/notification/StatusBarNotification;
 
-    move-result-object v5
+    move-result-object v6
 
-    invoke-virtual {v5}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
+    invoke-virtual {v6}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
-    move-result-object v5
+    move-result-object v6
 
-    iget-object v5, v5, Landroid/app/Notification;->extras:Landroid/os/Bundle;
+    iget-object v6, v6, Landroid/app/Notification;->extras:Landroid/os/Bundle;
 
-    const-string v6, "android.mediaSession"
+    const-string v7, "android.mediaSession"
 
-    invoke-virtual {v5, v6}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+    invoke-virtual {v6, v7}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
-    move-result-object v5
+    move-result-object v6
 
-    check-cast v5, Landroid/media/session/MediaSession$Token;
+    check-cast v6, Landroid/media/session/MediaSession$Token;
 
-    if-eqz v5, :cond_0
+    if-eqz v6, :cond_0
 
-    new-instance v6, Landroid/media/session/MediaController;
+    new-instance v7, Landroid/media/session/MediaController;
 
-    iget-object v7, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mContext:Landroid/content/Context;
+    iget-object v8, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mContext:Landroid/content/Context;
 
-    invoke-direct {v6, v7, v5}, Landroid/media/session/MediaController;-><init>(Landroid/content/Context;Landroid/media/session/MediaSession$Token;)V
+    invoke-direct {v7, v8, v6}, Landroid/media/session/MediaController;-><init>(Landroid/content/Context;Landroid/media/session/MediaSession$Token;)V
 
-    const/4 v5, 0x3
+    invoke-direct {p0, v7}, Lcom/android/systemui/statusbar/NotificationMediaManager;->getMediaControllerPlaybackState(Landroid/media/session/MediaController;)I
 
-    invoke-direct {p0, v6}, Lcom/android/systemui/statusbar/NotificationMediaManager;->getMediaControllerPlaybackState(Landroid/media/session/MediaController;)I
+    move-result v6
 
-    move-result v7
+    if-ne v4, v6, :cond_0
 
-    if-ne v5, v7, :cond_0
+    sget-boolean v2, Lcom/android/systemui/statusbar/NotificationMediaManager;->DEBUG_MEDIA:Z
+
+    if-eqz v2, :cond_2
+
+    const-string v2, "NotificationMediaManager"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "DEBUG_MEDIA: found mediastyle controller matching "
+
+    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->getSbn()Landroid/service/notification/StatusBarNotification;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Landroid/service/notification/StatusBarNotification;->getKey()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v2, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
     :cond_1
-    move-object v3, v4
+    move-object v3, v5
 
-    move-object v6, v3
+    move-object v7, v3
 
+    :cond_2
     :goto_0
-    if-nez v3, :cond_4
+    if-nez v3, :cond_8
 
     iget-object v2, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mMediaSessionManager:Landroid/media/session/MediaSessionManager;
 
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_8
 
     iget-object v2, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mMediaSessionManager:Landroid/media/session/MediaSessionManager;
 
-    const/4 v5, -0x1
+    const/4 v6, -0x1
 
-    invoke-virtual {v2, v4, v5}, Landroid/media/session/MediaSessionManager;->getActiveSessionsForUser(Landroid/content/ComponentName;I)Ljava/util/List;
+    invoke-virtual {v2, v5, v6}, Landroid/media/session/MediaSessionManager;->getActiveSessionsForUser(Landroid/content/ComponentName;I)Ljava/util/List;
 
     move-result-object v2
 
@@ -1490,81 +1667,166 @@
 
     move-result-object v2
 
-    :cond_2
+    :cond_3
     :goto_1
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v4
+    move-result v5
 
-    if-eqz v4, :cond_4
+    if-eqz v5, :cond_8
 
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v4
-
-    check-cast v4, Landroid/media/session/MediaController;
-
-    invoke-virtual {v4}, Landroid/media/session/MediaController;->getPackageName()Ljava/lang/String;
-
     move-result-object v5
 
-    invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    check-cast v5, Landroid/media/session/MediaController;
 
-    move-result-object v7
+    sget-boolean v6, Lcom/android/systemui/statusbar/NotificationMediaManager;->DEBUG_MEDIA:Z
 
-    :cond_3
-    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
+    if-eqz v6, :cond_4
 
-    move-result v8
+    if-eqz v5, :cond_4
 
-    if-eqz v8, :cond_2
+    const-string v6, "NotificationMediaManager"
 
-    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v9, "DEBUG_MEDIA: packageName="
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Landroid/media/session/MediaController;->getPackageName()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v9, " playbackState="
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-direct {p0, v5}, Lcom/android/systemui/statusbar/NotificationMediaManager;->getMediaControllerPlaybackState(Landroid/media/session/MediaController;)I
+
+    move-result v9
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v8
 
-    check-cast v8, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
+    invoke-static {v6, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {v8}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->getSbn()Landroid/service/notification/StatusBarNotification;
+    :cond_4
+    invoke-direct {p0, v5}, Lcom/android/systemui/statusbar/NotificationMediaManager;->getMediaControllerPlaybackState(Landroid/media/session/MediaController;)I
 
-    move-result-object v9
+    move-result v6
 
-    invoke-virtual {v9}, Landroid/service/notification/StatusBarNotification;->getPackageName()Ljava/lang/String;
+    if-eq v4, v6, :cond_5
 
-    move-result-object v9
+    const/16 v6, 0x8
 
-    invoke-virtual {v9, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-direct {p0, v5}, Lcom/android/systemui/statusbar/NotificationMediaManager;->getMediaControllerPlaybackState(Landroid/media/session/MediaController;)I
+
+    move-result v8
+
+    if-ne v6, v8, :cond_3
+
+    :cond_5
+    invoke-virtual {v5}, Landroid/media/session/MediaController;->getPackageName()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v8
+
+    :cond_6
+    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v9
 
     if-eqz v9, :cond_3
 
-    move-object v6, v4
+    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-object v3, v8
+    move-result-object v9
 
-    goto :goto_1
+    check-cast v9, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
 
-    :cond_4
+    invoke-virtual {v9}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->getSbn()Landroid/service/notification/StatusBarNotification;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Landroid/service/notification/StatusBarNotification;->getPackageName()Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-virtual {v10, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v10
+
+    if-eqz v10, :cond_6
+
+    sget-boolean v3, Lcom/android/systemui/statusbar/NotificationMediaManager;->DEBUG_MEDIA:Z
+
+    if-eqz v3, :cond_7
+
+    const-string v3, "NotificationMediaManager"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "DEBUG_MEDIA: found controller matching "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->getSbn()Landroid/service/notification/StatusBarNotification;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Landroid/service/notification/StatusBarNotification;->getKey()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v3, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_7
+    move-object v7, v5
+
+    move-object v3, v9
+
+    goto/16 :goto_1
+
+    :cond_8
     const/4 v1, 0x1
 
-    if-eqz v6, :cond_5
+    if-eqz v7, :cond_a
 
     iget-object v2, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mMediaController:Landroid/media/session/MediaController;
 
-    invoke-direct {p0, v2, v6}, Lcom/android/systemui/statusbar/NotificationMediaManager;->sameSessions(Landroid/media/session/MediaController;Landroid/media/session/MediaController;)Z
+    invoke-direct {p0, v2, v7}, Lcom/android/systemui/statusbar/NotificationMediaManager;->sameSessions(Landroid/media/session/MediaController;Landroid/media/session/MediaController;)Z
 
     move-result v2
 
-    if-nez v2, :cond_5
+    if-nez v2, :cond_a
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/NotificationMediaManager;->clearCurrentMediaNotificationSession()V
 
-    iput-object v6, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mMediaController:Landroid/media/session/MediaController;
+    iput-object v7, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mMediaController:Landroid/media/session/MediaController;
 
     iget-object v2, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mMediaListener:Landroid/media/session/MediaController$Callback;
 
-    invoke-virtual {v6, v2}, Landroid/media/session/MediaController;->registerCallback(Landroid/media/session/MediaController$Callback;)V
+    invoke-virtual {v7, v2}, Landroid/media/session/MediaController;->registerCallback(Landroid/media/session/MediaController$Callback;)V
 
     iget-object v2, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mMediaController:Landroid/media/session/MediaController;
 
@@ -1574,15 +1836,48 @@
 
     iput-object v2, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mMediaMetadata:Landroid/media/MediaMetadata;
 
+    sget-boolean v2, Lcom/android/systemui/statusbar/NotificationMediaManager;->DEBUG_MEDIA:Z
+
+    if-eqz v2, :cond_9
+
+    const-string v2, "NotificationMediaManager"
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "DEBUG_MEDIA: insert listener, found new controller: "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v5, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mMediaController:Landroid/media/session/MediaController;
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v5, ", receive metadata: "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v5, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mMediaMetadata:Landroid/media/MediaMetadata;
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v2, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_9
     move v2, v1
 
     goto :goto_2
 
-    :cond_5
+    :cond_a
     const/4 v2, 0x0
 
     :goto_2
-    if-eqz v3, :cond_6
+    if-eqz v3, :cond_b
 
     invoke-virtual {v3}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->getSbn()Landroid/service/notification/StatusBarNotification;
 
@@ -1598,7 +1893,7 @@
 
     move-result v4
 
-    if-nez v4, :cond_6
+    if-nez v4, :cond_b
 
     invoke-virtual {v3}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->getSbn()Landroid/service/notification/StatusBarNotification;
 
@@ -1610,12 +1905,36 @@
 
     iput-object v3, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mMediaNotificationKey:Ljava/lang/String;
 
-    :cond_6
+    sget-boolean v3, Lcom/android/systemui/statusbar/NotificationMediaManager;->DEBUG_MEDIA:Z
+
+    if-eqz v3, :cond_b
+
+    const-string v3, "NotificationMediaManager"
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "DEBUG_MEDIA: Found new media notification: key="
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v5, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mMediaNotificationKey:Ljava/lang/String;
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_b
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-eqz v2, :cond_7
+    if-eqz v2, :cond_c
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mEntryManager:Lcom/android/systemui/statusbar/notification/NotificationEntryManager;
 
@@ -1623,7 +1942,45 @@
 
     invoke-virtual {v0, v3}, Lcom/android/systemui/statusbar/notification/NotificationEntryManager;->updateNotifications(Ljava/lang/String;)V
 
-    :cond_7
+    iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mMediaController:Landroid/media/session/MediaController;
+
+    if-eqz v0, :cond_c
+
+    invoke-virtual {v0}, Landroid/media/session/MediaController;->getPlaybackState()Landroid/media/session/PlaybackState;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mState:Landroid/media/session/PlaybackState;
+
+    sget-boolean v0, Lcom/android/systemui/statusbar/NotificationMediaManager;->DEBUG_MEDIA:Z
+
+    if-eqz v0, :cond_c
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "metaDataChanged: mState = "
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mState:Landroid/media/session/PlaybackState;
+
+    invoke-virtual {v3}, Landroid/media/session/PlaybackState;->getState()I
+
+    move-result v3
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v3, "NotificationMediaManager"
+
+    invoke-static {v3, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_c
     invoke-direct {p0, v2, v1}, Lcom/android/systemui/statusbar/NotificationMediaManager;->dispatchUpdateMediaMetaData(ZZ)V
 
     return-void
@@ -1751,6 +2108,174 @@
     return-void
 .end method
 
+.method public onMediaHeaderViewChanged(I)V
+    .locals 3
+
+    sget-boolean v0, Lcom/android/systemui/statusbar/NotificationMediaManager;->DEBUG_MEDIA:Z
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "MediaHeaderView new visibility: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", has keyguard music notification: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mHasNotification:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "NotificationMediaManager"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    const/16 v0, 0x8
+
+    const/4 v1, 0x1
+
+    if-ne p1, v0, :cond_1
+
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mHasNotification:Z
+
+    if-eqz v0, :cond_1
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mHasNotification:Z
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mState:Landroid/media/session/PlaybackState;
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Landroid/media/session/PlaybackState;->getState()I
+
+    move-result v0
+
+    const/4 v2, 0x2
+
+    if-ne v0, v2, :cond_2
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mStatusBarStateController:Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
+
+    invoke-interface {v0}, Lcom/android/systemui/plugins/statusbar/StatusBarStateController;->getState()I
+
+    move-result v0
+
+    if-ne v0, v1, :cond_2
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v1, v0}, Lcom/android/systemui/statusbar/NotificationMediaManager;->finishUpdateMediaMetaData(ZZLandroid/graphics/Bitmap;)V
+
+    goto :goto_0
+
+    :cond_1
+    if-nez p1, :cond_2
+
+    iget-boolean p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mHasNotification:Z
+
+    if-nez p1, :cond_2
+
+    iput-boolean v1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mHasNotification:Z
+
+    :cond_2
+    :goto_0
+    return-void
+.end method
+
+.method public onMediaHostVisibilityChanged(I)V
+    .locals 3
+
+    sget-boolean v0, Lcom/android/systemui/statusbar/NotificationMediaManager;->DEBUG_MEDIA:Z
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "MediaHostView - new visibility: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", media host visible: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mMediaHostViewVisible:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "NotificationMediaManager"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    const/16 v0, 0x8
+
+    const/4 v1, 0x1
+
+    if-ne p1, v0, :cond_1
+
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mMediaHostViewVisible:Z
+
+    if-eqz v0, :cond_1
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mMediaHostViewVisible:Z
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mState:Landroid/media/session/PlaybackState;
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Landroid/media/session/PlaybackState;->getState()I
+
+    move-result v0
+
+    const/4 v2, 0x2
+
+    if-ne v0, v2, :cond_2
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v1, v0}, Lcom/android/systemui/statusbar/NotificationMediaManager;->finishUpdateMediaMetaData(ZZLandroid/graphics/Bitmap;)V
+
+    goto :goto_0
+
+    :cond_1
+    if-nez p1, :cond_2
+
+    iget-boolean p1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mMediaHostViewVisible:Z
+
+    if-nez p1, :cond_2
+
+    iput-boolean v1, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mMediaHostViewVisible:Z
+
+    :cond_2
+    :goto_0
+    return-void
+.end method
+
 .method public onNotificationRemoved(Ljava/lang/String;)V
     .locals 1
 
@@ -1815,7 +2340,7 @@
 .end method
 
 .method public updateMediaMetaData(ZZ)V
-    .locals 6
+    .locals 7
 
     const-string v0, "StatusBar#updateMediaMetaData"
 
@@ -1858,51 +2383,120 @@
 
     move-result v3
 
-    if-nez v3, :cond_8
+    if-nez v3, :cond_c
 
     if-eqz v0, :cond_2
 
-    goto :goto_4
+    goto/16 :goto_4
 
     :cond_2
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/NotificationMediaManager;->getMediaMetadata()Landroid/media/MediaMetadata;
 
     move-result-object v0
 
+    sget-boolean v3, Lcom/android/systemui/statusbar/NotificationMediaManager;->DEBUG_MEDIA:Z
+
+    const-string v4, "NotificationMediaManager"
+
+    if-eqz v3, :cond_3
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "DEBUG_MEDIA: updating album art for notification "
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/NotificationMediaManager;->getMediaNotificationKey()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v5, " metadata="
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v5, " metaDataChanged="
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v5, " state="
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v5, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mStatusBarStateController:Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
+
+    invoke-interface {v5}, Lcom/android/systemui/plugins/statusbar/StatusBarStateController;->getState()I
+
+    move-result v5
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v4, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_3
     const/4 v3, 0x0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_6
 
-    iget-object v4, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mKeyguardBypassController:Lcom/android/systemui/statusbar/phone/KeyguardBypassController;
+    iget-object v5, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mKeyguardBypassController:Lcom/android/systemui/statusbar/phone/KeyguardBypassController;
 
-    invoke-virtual {v4}, Lcom/android/systemui/statusbar/phone/KeyguardBypassController;->getBypassEnabled()Z
+    invoke-virtual {v5}, Lcom/android/systemui/statusbar/phone/KeyguardBypassController;->getBypassEnabled()Z
 
-    move-result v4
+    move-result v5
 
-    if-nez v4, :cond_3
+    if-nez v5, :cond_6
 
-    const-string v4, "android.media.metadata.ART"
+    sget-boolean v5, Lcom/android/systemui/statusbar/NotificationMediaManager;->DEBUG_MEDIA:Z
 
-    invoke-virtual {v0, v4}, Landroid/media/MediaMetadata;->getBitmap(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    if-eqz v5, :cond_4
 
-    move-result-object v4
+    const-string v5, "Try to get artworkBitmap from METADATA_KEY_ART"
 
-    if-nez v4, :cond_4
+    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-string v4, "android.media.metadata.ALBUM_ART"
+    :cond_4
+    const-string v5, "android.media.metadata.ART"
 
-    invoke-virtual {v0, v4}, Landroid/media/MediaMetadata;->getBitmap(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    invoke-virtual {v0, v5}, Landroid/media/MediaMetadata;->getBitmap(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
-    move-result-object v4
+    move-result-object v5
+
+    if-nez v5, :cond_7
+
+    sget-boolean v5, Lcom/android/systemui/statusbar/NotificationMediaManager;->DEBUG_MEDIA:Z
+
+    if-eqz v5, :cond_5
+
+    const-string v5, "Try to get artworkBitmap from METADATA_KEY_ALBUM_ART"
+
+    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_5
+    const-string v5, "android.media.metadata.ALBUM_ART"
+
+    invoke-virtual {v0, v5}, Landroid/media/MediaMetadata;->getBitmap(Ljava/lang/String;)Landroid/graphics/Bitmap;
+
+    move-result-object v5
 
     goto :goto_1
 
-    :cond_3
-    move-object v4, v3
+    :cond_6
+    move-object v5, v3
 
-    :cond_4
+    :cond_7
     :goto_1
-    if-eqz p1, :cond_6
+    if-eqz p1, :cond_9
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mProcessArtworkTasks:Ljava/util/Set;
 
@@ -1913,35 +2507,27 @@
     :goto_2
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v5
+    move-result v6
 
-    if-eqz v5, :cond_5
+    if-eqz v6, :cond_8
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v5
+    move-result-object v6
 
-    check-cast v5, Landroid/os/AsyncTask;
+    check-cast v6, Landroid/os/AsyncTask;
 
-    invoke-virtual {v5, v2}, Landroid/os/AsyncTask;->cancel(Z)Z
+    invoke-virtual {v6, v2}, Landroid/os/AsyncTask;->cancel(Z)Z
 
     goto :goto_2
 
-    :cond_5
+    :cond_8
     iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mProcessArtworkTasks:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
 
-    :cond_6
-    if-eqz v4, :cond_7
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mContext:Landroid/content/Context;
-
-    invoke-static {v0}, Lcom/android/systemui/util/Utils;->useQsMediaPlayer(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_7
+    :cond_9
+    if-eqz v5, :cond_a
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mProcessArtworkTasks:Ljava/util/Set;
 
@@ -1951,7 +2537,7 @@
 
     new-array p0, v2, [Landroid/graphics/Bitmap;
 
-    aput-object v4, p0, v1
+    aput-object v5, p0, v1
 
     invoke-virtual {v3, p0}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
@@ -1961,7 +2547,16 @@
 
     goto :goto_3
 
-    :cond_7
+    :cond_a
+    sget-boolean v0, Lcom/android/systemui/statusbar/NotificationMediaManager;->DEBUG_MEDIA:Z
+
+    if-eqz v0, :cond_b
+
+    const-string v0, "artworkBitmap is null, remove music album art"
+
+    invoke-static {v4, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_b
     invoke-direct {p0, p1, p2, v3}, Lcom/android/systemui/statusbar/NotificationMediaManager;->finishUpdateMediaMetaData(ZZLandroid/graphics/Bitmap;)V
 
     :goto_3
@@ -1969,7 +2564,7 @@
 
     return-void
 
-    :cond_8
+    :cond_c
     :goto_4
     iget-object p0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mBackdrop:Lcom/android/systemui/statusbar/BackDropView;
 

@@ -30,6 +30,8 @@
 
 .field private mIsDestroyed:Z
 
+.field private mIsSpecialTheme:Z
+
 .field private mLastScreenHeightDp:I
 
 .field private mLifecycleCallbacks:Landroid/app/FragmentManager$FragmentLifecycleCallbacks;
@@ -95,6 +97,10 @@
 
     iput-object v0, p0, Lcom/android/systemui/fragments/FragmentHostManager;->mPlugins:Lcom/android/systemui/fragments/FragmentHostManager$ExtensionFragmentManager;
 
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/android/systemui/fragments/FragmentHostManager;->mIsSpecialTheme:Z
+
     invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -112,6 +118,14 @@
     move-result-object p2
 
     invoke-virtual {p1, p2}, Lcom/android/settingslib/applications/InterestingConfigChanges;->applyNewConfig(Landroid/content/res/Resources;)Z
+
+    iget-object p1, p0, Lcom/android/systemui/fragments/FragmentHostManager;->mContext:Landroid/content/Context;
+
+    invoke-static {p1}, Lcom/oneplus/util/OpUtils;->isSpecialTheme(Landroid/content/Context;)Z
+
+    move-result p1
+
+    iput-boolean p1, p0, Lcom/android/systemui/fragments/FragmentHostManager;->mIsSpecialTheme:Z
 
     const/4 p1, 0x0
 
@@ -599,6 +613,50 @@
     move v2, v3
 
     :cond_4
+    iget-object v0, p0, Lcom/android/systemui/fragments/FragmentHostManager;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/oneplus/util/OpUtils;->isSpecialTheme(Landroid/content/Context;)Z
+
+    move-result v0
+
+    iget-boolean v1, p0, Lcom/android/systemui/fragments/FragmentHostManager;->mIsSpecialTheme:Z
+
+    if-eq v1, v0, :cond_5
+
+    sget-object v1, Lcom/android/systemui/fragments/FragmentHostManager;->TAG:Ljava/lang/String;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v4, "special theme changed. "
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v4, p0, Lcom/android/systemui/fragments/FragmentHostManager;->mIsSpecialTheme:Z
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v4, "->"
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iput-boolean v0, p0, Lcom/android/systemui/fragments/FragmentHostManager;->mIsSpecialTheme:Z
+
+    goto :goto_4
+
+    :cond_5
+    move v3, v2
+
+    :goto_4
     iget-object v0, p0, Lcom/android/systemui/fragments/FragmentHostManager;->mConfigChanges:Lcom/android/settingslib/applications/InterestingConfigChanges;
 
     iget-object v1, p0, Lcom/android/systemui/fragments/FragmentHostManager;->mContext:Landroid/content/Context;
@@ -611,21 +669,21 @@
 
     move-result v0
 
-    if-nez v0, :cond_6
+    if-nez v0, :cond_7
 
-    if-eqz v2, :cond_5
-
-    goto :goto_4
-
-    :cond_5
-    iget-object p0, p0, Lcom/android/systemui/fragments/FragmentHostManager;->mFragments:Landroid/app/FragmentController;
-
-    invoke-virtual {p0, p1}, Landroid/app/FragmentController;->dispatchConfigurationChanged(Landroid/content/res/Configuration;)V
+    if-eqz v3, :cond_6
 
     goto :goto_5
 
     :cond_6
-    :goto_4
+    iget-object p0, p0, Lcom/android/systemui/fragments/FragmentHostManager;->mFragments:Landroid/app/FragmentController;
+
+    invoke-virtual {p0, p1}, Landroid/app/FragmentController;->dispatchConfigurationChanged(Landroid/content/res/Configuration;)V
+
+    goto :goto_6
+
+    :cond_7
+    :goto_5
     iget v0, p1, Landroid/content/res/Configuration;->smallestScreenWidthDp:I
 
     iput v0, p0, Lcom/android/systemui/fragments/FragmentHostManager;->mCustSmallestWidthDp:I
@@ -642,7 +700,7 @@
 
     invoke-virtual {p0}, Lcom/android/systemui/fragments/FragmentHostManager;->reloadFragments()V
 
-    :goto_5
+    :goto_6
     return-void
 .end method
 

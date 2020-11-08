@@ -41,7 +41,7 @@
     <string name="abc_toolbar_collapse_description">Thu gọn</string>
     <string name="about_action_bar_title">Giới thiệu</string>
     <string name="about_app_version_text">Version %s</string>
-    <string name="about_privacy_policy">Chính sách Riêng tư</string>
+    <string name="about_privacy_policy">Chính sách Quyền riêng tư</string>
     <string name="about_release_note_title">Lịch sử cập nhật:</string>
     <string name="about_terms_service">Điều khoản Dịch vụ</string>
     <string name="accessibility_accessibility_button">Hỗ trợ tiếp cận</string>
@@ -1415,6 +1415,9 @@ Bạn cũng được kết nối với VPN. Dịch vụ này có thể giám sá
     <string name="overheat_toast_content">Nhiệt độ của điện thoại quá cao và các chức năng tiêu tốn nhiều pin sẽ được tắt để giảm bớt nhiệt độ</string>
     <string name="overlay_display_devices_title">Mô phỏng màn hình phụ</string>
     <string name="overview">Tổng quan</string>
+    <string name="permission_btn_text_denied">Thoát</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Tuyên bố về quyền</string>
     <string name="phone_hint">Vuốt từ biểu tượng để mở điện thoại</string>
     <string name="phone_label">mở điện thoại</string>
     <string name="picture_color_mode">Chế độ màu của ảnh</string>

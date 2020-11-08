@@ -41,7 +41,7 @@
     <string name="abc_toolbar_collapse_description">Zbaliť</string>
     <string name="about_action_bar_title">Informácie</string>
     <string name="about_app_version_text">Version %s</string>
-    <string name="about_privacy_policy">Ochrana osobných údajov</string>
+    <string name="about_privacy_policy">Zásady ochrany osobných údajov</string>
     <string name="about_release_note_title">Denník aktualizácie:</string>
     <string name="about_terms_service">Podmienky služby</string>
     <string name="accessibility_accessibility_button">Dostupnosť</string>
@@ -1415,6 +1415,9 @@ Máte tiež aktívne pripojenie k sieti VPN, ktorá môže sledovať vašu akti
     <string name="overheat_toast_content">Teplota vášho telefónu je príliš vysoká a na zníženie teploty boli vypnuté funkcie s vysokou spotrebou energie</string>
     <string name="overlay_display_devices_title">Simulovať sekundárne obrazovky</string>
     <string name="overview">Prehľad</string>
+    <string name="permission_btn_text_denied">Ukončiť</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Vyhlásenie o povolení</string>
     <string name="phone_hint">Telefón otvoríte prejdením prstom od ikony</string>
     <string name="phone_label">otvoriť telefón</string>
     <string name="picture_color_mode">Farebný režim obrázka</string>

@@ -2535,21 +2535,25 @@
 .end method
 
 .method public setTheme(I)V
-    .locals 2
+    .locals 3
 
-    iget-object v0, p0, Lcom/oneplus/volume/OpOutputChooserDialog;->mContext:Landroid/content/Context;
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isREDVersion()Z
 
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    move-result v0
 
-    move-result-object v0
+    iget-object v1, p0, Lcom/oneplus/volume/OpOutputChooserDialog;->mContext:Landroid/content/Context;
 
-    const/4 v1, 0x1
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    if-eq p1, v1, :cond_0
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    if-eq p1, v2, :cond_0
 
     sget p1, Lcom/android/systemui/R$color;->oneplus_contorl_icon_color_accent_active_light:I
 
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-virtual {v1, p1}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result p1
 
@@ -2557,7 +2561,7 @@
 
     sget p1, Lcom/android/systemui/R$color;->oneplus_contorl_icon_color_active_light:I
 
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-virtual {v1, p1}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result p1
 
@@ -2565,7 +2569,7 @@
 
     sget p1, Lcom/android/systemui/R$color;->oneplus_contorl_text_color_primary_light:I
 
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-virtual {v1, p1}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result p1
 
@@ -2573,7 +2577,7 @@
 
     sget p1, Lcom/android/systemui/R$color;->oneplus_contorl_text_color_secondary_light:I
 
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-virtual {v1, p1}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result p1
 
@@ -2583,12 +2587,20 @@
 
     iput p1, p0, Lcom/oneplus/volume/OpOutputChooserDialog;->mBgDrawable:I
 
-    goto :goto_0
+    goto :goto_2
 
     :cond_0
+    if-eqz v0, :cond_1
+
+    sget p1, Lcom/android/systemui/R$color;->op_turquoise:I
+
+    goto :goto_0
+
+    :cond_1
     sget p1, Lcom/android/systemui/R$color;->oneplus_contorl_icon_color_accent_active_dark:I
 
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getColor(I)I
+    :goto_0
+    invoke-virtual {v1, p1}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result p1
 
@@ -2596,7 +2608,7 @@
 
     sget p1, Lcom/android/systemui/R$color;->oneplus_contorl_icon_color_active_dark:I
 
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-virtual {v1, p1}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result p1
 
@@ -2604,7 +2616,7 @@
 
     sget p1, Lcom/android/systemui/R$color;->oneplus_contorl_text_color_primary_dark:I
 
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-virtual {v1, p1}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result p1
 
@@ -2612,17 +2624,25 @@
 
     sget p1, Lcom/android/systemui/R$color;->oneplus_contorl_text_color_secondary_dark:I
 
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-virtual {v1, p1}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result p1
 
     iput p1, p0, Lcom/oneplus/volume/OpOutputChooserDialog;->mSecondaryTextColor:I
 
+    if-eqz v0, :cond_2
+
+    sget p1, Lcom/android/systemui/R$drawable;->volume_dialog_bg_red_dark:I
+
+    goto :goto_1
+
+    :cond_2
     sget p1, Lcom/android/systemui/R$drawable;->volume_dialog_bg_dark:I
 
+    :goto_1
     iput p1, p0, Lcom/oneplus/volume/OpOutputChooserDialog;->mBgDrawable:I
 
-    :goto_0
+    :goto_2
     iget-object p1, p0, Lcom/oneplus/volume/OpOutputChooserDialog;->mView:Lcom/oneplus/volume/OpOutputChooserLayout;
 
     iget-object v0, p0, Lcom/oneplus/volume/OpOutputChooserDialog;->mContext:Landroid/content/Context;

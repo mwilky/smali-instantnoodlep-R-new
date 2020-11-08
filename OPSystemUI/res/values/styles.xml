@@ -1489,7 +1489,7 @@
         <item name="android:clickable">true</item>
         <item name="android:text">@null</item>
         <item name="android:checkable">false</item>
-        <item name="android:stateListAnimator">@animator/mtrl_chip_state_list_anim</item>
+        <item name="android:stateListAnimator">@null</item>
         <item name="checkedIcon">@drawable/ic_mtrl_chip_checked_circle</item>
         <item name="checkedIconVisible">true</item>
         <item name="chipBackgroundColor">@color/mtrl_chip_background_color</item>
@@ -1514,7 +1514,6 @@
         <item name="ensureMinTouchTargetSize">true</item>
         <item name="iconEndPadding">0.0dip</item>
         <item name="iconStartPadding">0.0dip</item>
-        <item name="rippleColor">@color/mtrl_chip_ripple_color</item>
         <item name="shapeAppearance">?shapeAppearanceSmallComponent</item>
         <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MaterialComponents.Chip</item>
         <item name="textEndPadding">6.0dip</item>
@@ -1695,6 +1694,12 @@
         <item name="android:layout_marginStart">10.0dip</item>
         <item name="android:layout_marginEnd">10.0dip</item>
     </style>
+    <style name="DatePicker.Widget.Material.NumberPicker" parent="@style/Widget.Material.NumberPicker">
+        <item name="selectionDivider">@drawable/op_number_picker_divider_material</item>
+        <item name="selectionDividerWidth">320.0dip</item>
+        <item name="selectionDividersDistance">70.0dip</item>
+        <item name="selectionOtherNumberColor">@color/op_control_text_color_secondary_default</item>
+    </style>
     <style name="DeviceManagementDialogTitle">
         <item name="android:textAppearance">@style/TextAppearance.DeviceManagementDialog.Title</item>
         <item name="android:gravity">center</item>
@@ -1873,10 +1878,9 @@
         <item name="android:textColor">@color/op_control_text_color_primary_light</item>
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
-    <style name="OPTextAppearance.Material.DatePicker.DateLabel" parent="@android:style/TextAppearance.Material">
-        <item name="android:textSize">@dimen/date_picker_date_label_size</item>
+    <style name="OPTextAppearance.Material.DatePicker.DateLabel" parent="@style/op_control_text_style_h4">
+        <item name="android:textSize">@dimen/op_text_size_h4</item>
         <item name="android:textColor">@color/op_primary_text_secondary_when_activated_material_inverse</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
     </style>
     <style name="OPTextAppearance.Material.DatePicker.List.YearLabel" parent="@android:style/TextAppearance.Material">
         <item name="android:textSize">@dimen/datepicker_list_year_label_size</item>
@@ -1888,10 +1892,9 @@
         <item name="android:textColor">?pickerColorActivated</item>
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
-    <style name="OPTextAppearance.Material.DatePicker.YearLabel" parent="@android:style/TextAppearance.Material">
-        <item name="android:textSize">@dimen/date_picker_year_label_size</item>
+    <style name="OPTextAppearance.Material.DatePicker.YearLabel" parent="@style/op_control_text_style_h4">
+        <item name="android:textSize">@dimen/op_text_size_h4</item>
         <item name="android:textColor">@color/op_primary_text_secondary_when_activated_material_inverse</item>
-        <item name="android:fontFamily">sans-serif-regular</item>
     </style>
     <style name="OPTextAppearance.Material.NumberPicker" parent="@style/TextAppearance.AppCompat.Body1">
         <item name="android:textSize">21.0dip</item>
@@ -2165,7 +2168,7 @@
         <item name="bottomSheetStyle">@style/OnePlus.Widget.Design.BottomSheet.Modal</item>
     </style>
     <style name="OnePlus.ThemeOverlay.AppCompat.Dialog.Alert" parent="@style/ThemeOverlay.AppCompat.Dialog.Alert">
-        <item name="android:colorBackground">?onePlusBgColorPopup</item>
+        <item name="android:colorBackground">@color/op_control_bg_color_popup_default</item>
         <item name="android:textColorPrimary">@color/op_control_text_color_primary_default</item>
         <item name="android:windowBackground">@drawable/dialog_background_material</item>
         <item name="android:textColor">@color/op_control_text_color_primary_default</item>
@@ -2455,6 +2458,15 @@
         <item name="itemTextColor">@color/op_color_bottom_navigation_item_tint</item>
         <item name="labelVisibilityMode">labeled</item>
     </style>
+    <style name="OnePlusFastScrollerPopupTextStyle">
+        <item name="android:textAppearance">@style/op_control_text_style_h3</item>
+        <item name="android:textColor">@color/op_control_text_color_primary_dark</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/op_bg_fast_scroller_popup</item>
+        <item name="android:layout_width">63.0dip</item>
+        <item name="android:layout_height">63.0dip</item>
+        <item name="android:layout_marginEnd">35.0dip</item>
+    </style>
     <style name="OnePlusTabBarViewStyle" parent="@style/Widget.Design.TabBarView">
         <item name="android:background">?onePlusAppbarBgColor</item>
         <item name="itemIconSize">@dimen/design_tab_bar_icon_size</item>
@@ -2501,7 +2513,7 @@
         <item name="android:textColor">@color/op_control_text_color_secondary_light</item>
     </style>
     <style name="Oneplus.TextAppearance.Material.Light.Widget.Calendar.Month" parent="@style/TextAppearance.Material.Widget.Calendar.Month">
-        <item name="android:textColor">@color/op_control_text_color_primary_light</item>
+        <item name="android:textColor">@color/op_control_text_color_secondary_light</item>
     </style>
     <style name="Oneplus.TextAppearance.Material.NumberPickerDialog.Minute" parent="@android:style/TextAppearance.Material.Large">
         <item name="android:textColor">@color/op_number_picker_minute_text_color_dark</item>
@@ -2510,10 +2522,10 @@
         <item name="android:textColor">@color/op_primary_text_inverse_when_activated_material_dark</item>
     </style>
     <style name="Oneplus.TextAppearance.Material.Widget.Calendar.DayOfWeek" parent="@style/TextAppearance.Material.Widget.Calendar.DayOfWeek">
-        <item name="android:textColor">@color/control_secondary_text_color_dark</item>
+        <item name="android:textColor">@color/op_control_text_color_secondary_dark</item>
     </style>
     <style name="Oneplus.TextAppearance.Material.Widget.Calendar.Month" parent="@style/TextAppearance.Material.Widget.Calendar.Month">
-        <item name="android:textColor">@color/control_primary_text_color_dark</item>
+        <item name="android:textColor">@color/op_control_text_color_secondary_dark</item>
     </style>
     <style name="Oneplus.Widget.Desgin.HintSearchView" parent="@android:style/Widget">
         <item name="android:icon">@drawable/ic_search_hint_material</item>
@@ -2620,6 +2632,10 @@
     <style name="Oneplus_popup_bottom_animation" parent="@android:style/Animation">
         <item name="android:windowEnterAnimation">@anim/op_control_popup_bottom_enter</item>
         <item name="android:windowExitAnimation">@anim/op_control_popup_bottom_exit</item>
+    </style>
+    <style name="Oneplus_popup_bottom_edit_animation" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/op_control_popup_bottom_edittext_enter</item>
+        <item name="android:windowExitAnimation">@anim/op_control_popup_bottom_edittext_edit_exit</item>
     </style>
     <style name="Oneplus_popup_bottom_edittext_animation" parent="@android:style/Animation">
         <item name="android:windowEnterAnimation">@anim/op_control_popup_bottom_edittext_enter</item>
@@ -3417,14 +3433,14 @@
         <item name="android:textSize">20.0sp</item>
         <item name="android:textColor">?android:textColorPrimary</item>
     </style>
-    <style name="TextAppearance.Material.Widget.Calendar.Day" parent="@style/op_control_text_style_body1">
+    <style name="TextAppearance.Material.Widget.Calendar.Day" parent="@style/op_control_text_style_h6">
         <item name="android:textColor">?textColorCalendarDayActivated</item>
     </style>
-    <style name="TextAppearance.Material.Widget.Calendar.DayOfWeek" parent="@style/op_control_text_style_body1">
+    <style name="TextAppearance.Material.Widget.Calendar.DayOfWeek" parent="@style/op_control_text_style_button">
         <item name="android:textColor">?android:textColorPrimary</item>
     </style>
-    <style name="TextAppearance.Material.Widget.Calendar.Month" parent="@style/op_control_text_style_body1">
-        <item name="android:textColor">?android:textColorPrimary</item>
+    <style name="TextAppearance.Material.Widget.Calendar.Month" parent="@style/op_control_text_style_h6">
+        <item name="android:textColor">@color/op_control_text_color_secondary_default</item>
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
     <style name="TextAppearance.MaterialComponents.Badge" parent="@style/Base.TextAppearance.MaterialComponents.Badge">
@@ -6748,10 +6764,10 @@
         <item name="android:fontFamily">@font/oneplus_font_text_45lt</item>
     </style>
     <style name="op_text_style_dialog_body1" parent="@style/op_control_text_style_body1">
-        <item name="android:textSize">36.0px</item>
+        <item name="android:textSize">@dimen/op_text_style_dialog_body1_size</item>
     </style>
     <style name="op_text_style_dialog_title_h6" parent="@style/op_control_text_style_h6">
-        <item name="android:textSize">48.0px</item>
+        <item name="android:textSize">@dimen/op_text_style_dialog_title_size</item>
     </style>
     <style name="op_text_style_h3" parent="@style/op_control_text_style_h3">
         <item name="android:textSize">@dimen/op_charging_anim_info_battery_level_text_size</item>
@@ -6831,8 +6847,8 @@
         <item name="android:colorAccent">@color/remote_input_accent</item>
     </style>
     <style name="tablayout_text_style_unselected" parent="@style/op_control_text_style_base">
-        <item name="android:textSize">12.0sp</item>
-        <item name="android:fontFamily">@font/oneplus_font_text_65md_unselected</item>
+        <item name="android:textSize">@dimen/op_text_size_button</item>
+        <item name="android:fontFamily">@string/op_control_font_text_body1</item>
     </style>
     <style name="three_key_text" parent="@style/op_control_text_style_h5">
         <item name="android:textColor">@color/op_control_text_color_primary_dark</item>

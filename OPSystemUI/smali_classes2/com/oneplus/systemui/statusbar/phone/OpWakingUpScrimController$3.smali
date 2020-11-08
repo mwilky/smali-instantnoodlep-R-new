@@ -80,12 +80,12 @@
 
     iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController$3;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;
 
-    invoke-static {p1, v0}, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;->access$300(Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;Z)V
+    invoke-static {p1, v0}, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;->access$400(Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;Z)V
 
     :cond_0
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController$3;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;
 
-    invoke-static {p0, v0}, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;->access$402(Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;Z)Z
+    invoke-static {p0, v0}, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;->access$502(Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;Z)Z
 
     return-void
 .end method

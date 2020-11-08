@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->onSingleTap()V
+    value = Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->onThreeKeyStatus(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,12 +20,16 @@
 # instance fields
 .field final synthetic this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
+.field final synthetic val$status:I
+
 
 # direct methods
-.method constructor <init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)V
+.method constructor <init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;I)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$12;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
+
+    iput p2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$12;->val$status:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -39,19 +43,21 @@
 
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$12;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
-    invoke-static {v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$2000(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$OpDozeCallbacks;
+    invoke-static {v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$2300(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$OpDozeCallbacks;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$12;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
+    iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$12;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
-    invoke-static {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$2000(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$OpDozeCallbacks;
+    invoke-static {v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$2300(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$OpDozeCallbacks;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-interface {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$OpDozeCallbacks;->fireSingleTap()V
+    iget p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$12;->val$status:I
+
+    invoke-interface {v0, p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$OpDozeCallbacks;->fireThreeKeyChanged(I)V
 
     :cond_0
     return-void

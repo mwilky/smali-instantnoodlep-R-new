@@ -30,6 +30,10 @@
 
 .field private mDistanceToTopRoundness:F
 
+.field private mIsHeadsUp:Z
+
+.field private mIsScrolledToTop:Z
+
 .field private mOutlineAlpha:F
 
 .field protected mOutlineRadius:F
@@ -38,7 +42,11 @@
 
 .field private final mProvider:Landroid/view/ViewOutlineProvider;
 
+.field private mShouldClipNotifToOutline:Z
+
 .field protected mShouldTranslateContents:Z
+
+.field private mStrokePaint:Landroid/graphics/Paint;
 
 .field private mTmpCornerRadii:[F
 
@@ -143,6 +151,12 @@
 
     iput-object p1, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableOutlineView;->mTmpCornerRadii:[F
 
+    new-instance p1, Landroid/graphics/Paint;
+
+    invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
+
+    iput-object p1, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableOutlineView;->mStrokePaint:Landroid/graphics/Paint;
+
     new-instance p1, Lcom/android/systemui/statusbar/notification/row/ExpandableOutlineView$1;
 
     invoke-direct {p1, p0}, Lcom/android/systemui/statusbar/notification/row/ExpandableOutlineView$1;-><init>(Lcom/android/systemui/statusbar/notification/row/ExpandableOutlineView;)V
@@ -213,7 +227,7 @@
 .end method
 
 .method private initDimens()V
-    .locals 2
+    .locals 3
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
@@ -282,9 +296,61 @@
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
+    iget-object v0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lcom/android/systemui/R$bool;->op_config_shouldClipNotifToOutline:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableOutlineView;->mShouldClipNotifToOutline:Z
+
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableOutlineView;->mAlwaysRoundBothCorners:Z
 
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setClipToOutline(Z)V
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableOutlineView;->mStrokePaint:Landroid/graphics/Paint;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableOutlineView;->mStrokePaint:Landroid/graphics/Paint;
+
+    sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableOutlineView;->mStrokePaint:Landroid/graphics/Paint;
+
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Lcom/android/systemui/R$dimen;->op_cb_notification_panel_stroke_width:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableOutlineView;->mStrokePaint:Landroid/graphics/Paint;
+
+    iget-object p0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+
+    sget v1, Lcom/android/systemui/R$color;->op_turquoise:I
+
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getColor(I)I
+
+    move-result p0
+
+    invoke-virtual {v0, p0}, Landroid/graphics/Paint;->setColor(I)V
 
     return-void
 .end method
@@ -473,6 +539,38 @@
     invoke-virtual {p1, v1}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;)Z
 
     const/4 v2, 0x1
+
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/content/res/Configuration;->orientation:I
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isREDVersion()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_3
+
+    iget-boolean v4, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableOutlineView;->mIsHeadsUp:Z
+
+    if-eqz v4, :cond_3
+
+    iget-boolean v4, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableOutlineView;->mIsScrolledToTop:Z
+
+    if-nez v4, :cond_3
+
+    const/4 v4, 0x2
+
+    if-ne v3, v4, :cond_3
+
+    iget-object v3, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableOutlineView;->mStrokePaint:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v1, v3}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
     :cond_3
     if-nez v2, :cond_4
@@ -827,7 +925,7 @@
 .end method
 
 .method protected isClippingNeeded()Z
-    .locals 1
+    .locals 2
 
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableOutlineView;->mAlwaysRoundBothCorners:Z
 
@@ -839,11 +937,15 @@
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/ExpandableView;->getTranslation()F
 
-    move-result p0
+    move-result v0
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    cmpl-float p0, p0, v0
+    cmpl-float v0, v0, v1
+
+    if-nez v0, :cond_1
+
+    iget-boolean p0, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableOutlineView;->mShouldClipNotifToOutline:Z
 
     if-eqz p0, :cond_0
 
@@ -927,6 +1029,16 @@
     invoke-direct {p0}, Lcom/android/systemui/statusbar/notification/row/ExpandableOutlineView;->initDimens()V
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/ExpandableOutlineView;->applyRoundness()V
+
+    return-void
+.end method
+
+.method public onScrolledToTop()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableOutlineView;->mIsScrolledToTop:Z
 
     return-void
 .end method
@@ -1050,6 +1162,25 @@
     invoke-super {p0, p1}, Lcom/android/systemui/statusbar/notification/row/ExpandableView;->setExtraWidthForClipping(F)V
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
+
+    return-void
+.end method
+
+.method public setIsHeadsUp(Z)V
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableOutlineView;->mIsHeadsUp:Z
+
+    if-nez v0, :cond_0
+
+    if-eq v0, p1, :cond_0
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableOutlineView;->mIsScrolledToTop:Z
+
+    :cond_0
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableOutlineView;->mIsHeadsUp:Z
 
     return-void
 .end method

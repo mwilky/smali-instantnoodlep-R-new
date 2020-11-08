@@ -268,7 +268,7 @@
     :cond_1
     const-string v0, "FiveGServiceClient"
 
-    const-string v1, "delay 10s to hide nr icon"
+    const-string v1, "delay 30s to hide nr icon"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 

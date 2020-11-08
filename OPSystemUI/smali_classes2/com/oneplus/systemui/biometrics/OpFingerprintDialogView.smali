@@ -456,7 +456,15 @@
     return-object p0
 .end method
 
-.method static synthetic access$2600(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+.method static synthetic access$2600()Z
+    .locals 1
+
+    sget-boolean v0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->DEBUG_ONEPLUS:Z
+
+    return v0
+.end method
+
+.method static synthetic access$2700(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Lcom/android/keyguard/KeyguardUpdateMonitor;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
@@ -1338,21 +1346,29 @@
 .end method
 
 .method private setDisplayPressModeFingerDown()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mOpFodDisplayController:Lcom/oneplus/systemui/biometrics/OpFodDisplayController;
+    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mOpFodDisplayController:Lcom/oneplus/systemui/biometrics/OpFodDisplayController;
 
-    invoke-virtual {p0}, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->onFingerPressDown()V
+    invoke-virtual {v0}, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->onFingerPressDown()V
+
+    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mOpFodIconViewController:Lcom/oneplus/systemui/biometrics/OpFodIconViewController;
+
+    invoke-virtual {p0}, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->updatePanelVisibility()V
 
     return-void
 .end method
 
 .method private setDisplayPressModeFingerUp()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mOpFodDisplayController:Lcom/oneplus/systemui/biometrics/OpFodDisplayController;
+    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mOpFodDisplayController:Lcom/oneplus/systemui/biometrics/OpFodDisplayController;
 
-    invoke-virtual {p0}, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->onFingerPressUp()V
+    invoke-virtual {v0}, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->onFingerPressUp()V
+
+    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mOpFodIconViewController:Lcom/oneplus/systemui/biometrics/OpFodIconViewController;
+
+    invoke-virtual {p0}, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->updatePanelVisibility()V
 
     return-void
 .end method
@@ -1907,6 +1923,18 @@
     return p0
 .end method
 
+.method public isFodHighlighted()Z
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mOpFodDisplayController:Lcom/oneplus/systemui/biometrics/OpFodDisplayController;
+
+    invoke-virtual {p0}, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->isFodHighlighted()Z
+
+    move-result p0
+
+    return p0
+.end method
+
 .method public isPendingHideDialog()Z
     .locals 0
 
@@ -2342,6 +2370,16 @@
 
     :cond_2
     :goto_0
+    return-void
+.end method
+
+.method public onUiModeChanged()V
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mOpFodIconViewController:Lcom/oneplus/systemui/biometrics/OpFodIconViewController;
+
+    invoke-virtual {p0}, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->onUiModeChanged()V
+
     return-void
 .end method
 

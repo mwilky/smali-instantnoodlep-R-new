@@ -1351,10 +1351,6 @@
     move v8, v0
 
     :goto_7
-    invoke-virtual {v6}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->getRow()Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
-
-    move-result-object v9
-
     if-nez v8, :cond_c
 
     if-eqz v7, :cond_b
@@ -1371,7 +1367,7 @@
     move v8, v5
 
     :goto_9
-    invoke-virtual {v9, v10, v8}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->setSensitive(ZZ)V
+    invoke-virtual {v6, v10, v8}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->setSensitive(ZZ)V
 
     invoke-virtual {v6}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->getRow()Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 

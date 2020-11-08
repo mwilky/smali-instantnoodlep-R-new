@@ -8,6 +8,8 @@
 
 .field private mCurrentUserOnly:Z
 
+.field private mListening:Z
+
 .field private final mSettingName:Ljava/lang/String;
 
 
@@ -94,8 +96,29 @@
     return-void
 .end method
 
+.method public onUserSwitched()V
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/oneplus/util/SystemSetting;->mListening:Z
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lcom/oneplus/util/SystemSetting;->setListening(Z)V
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Lcom/oneplus/util/SystemSetting;->setListening(Z)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public setListening(Z)V
     .locals 3
+
+    iput-boolean p1, p0, Lcom/oneplus/util/SystemSetting;->mListening:Z
 
     if-eqz p1, :cond_1
 

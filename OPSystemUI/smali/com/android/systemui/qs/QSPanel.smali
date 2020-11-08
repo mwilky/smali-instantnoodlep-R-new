@@ -79,6 +79,8 @@
 
 .field protected final mMediaHost:Lcom/android/systemui/media/MediaHost;
 
+.field private mMediaLastVisible:Z
+
 .field private mMediaTotalBottomMargin:I
 
 .field private mMediaVisibilityChangedListener:Ljava/util/function/Consumer;
@@ -136,7 +138,7 @@
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;Lcom/android/systemui/dump/DumpManager;Lcom/android/systemui/broadcast/BroadcastDispatcher;Lcom/android/systemui/qs/logging/QSLogger;Lcom/android/systemui/media/MediaHost;Lcom/android/internal/logging/UiEventLogger;)V
-    .locals 3
+    .locals 4
 
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
@@ -172,35 +174,39 @@
 
     iput-boolean p2, p0, Lcom/android/systemui/qs/QSPanel;->mGridContentVisible:Z
 
-    const/4 v0, -0x1
+    const/4 v0, 0x0
 
-    iput v0, p0, Lcom/android/systemui/qs/QSPanel;->mLastOrientation:I
+    iput-boolean v0, p0, Lcom/android/systemui/qs/QSPanel;->mMediaLastVisible:Z
+
+    const/4 v1, -0x1
+
+    iput v1, p0, Lcom/android/systemui/qs/QSPanel;->mLastOrientation:I
 
     invoke-static {p1}, Lcom/android/systemui/util/Utils;->useQsMediaPlayer(Landroid/content/Context;)Z
 
-    move-result v1
+    move-result v2
 
-    iput-boolean v1, p0, Lcom/android/systemui/qs/QSPanel;->mUsingMediaPlayer:Z
+    iput-boolean v2, p0, Lcom/android/systemui/qs/QSPanel;->mUsingMediaPlayer:Z
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v1
+    move-result-object v2
 
-    sget v2, Lcom/android/systemui/R$dimen;->quick_settings_bottom_margin_media:I
+    sget v3, Lcom/android/systemui/R$dimen;->quick_settings_bottom_margin_media:I
 
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    move-result v1
+    move-result v2
 
-    iput v1, p0, Lcom/android/systemui/qs/QSPanel;->mMediaTotalBottomMargin:I
+    iput v2, p0, Lcom/android/systemui/qs/QSPanel;->mMediaTotalBottomMargin:I
 
     iput-object p6, p0, Lcom/android/systemui/qs/QSPanel;->mMediaHost:Lcom/android/systemui/media/MediaHost;
 
-    new-instance v1, Lcom/android/systemui/qs/-$$Lambda$QSPanel$eQ8pVxxhUsNJKcJOLQN4uzlXkuA;
+    new-instance v2, Lcom/android/systemui/qs/-$$Lambda$QSPanel$eQ8pVxxhUsNJKcJOLQN4uzlXkuA;
 
-    invoke-direct {v1, p0}, Lcom/android/systemui/qs/-$$Lambda$QSPanel$eQ8pVxxhUsNJKcJOLQN4uzlXkuA;-><init>(Lcom/android/systemui/qs/QSPanel;)V
+    invoke-direct {v2, p0}, Lcom/android/systemui/qs/-$$Lambda$QSPanel$eQ8pVxxhUsNJKcJOLQN4uzlXkuA;-><init>(Lcom/android/systemui/qs/QSPanel;)V
 
-    invoke-virtual {p6, v1}, Lcom/android/systemui/media/MediaHost;->addVisibilityChangeListener(Lkotlin/jvm/functions/Function1;)V
+    invoke-virtual {p6, v2}, Lcom/android/systemui/media/MediaHost;->addVisibilityChangeListener(Lkotlin/jvm/functions/Function1;)V
 
     iput-object p1, p0, Lcom/android/systemui/qs/QSPanel;->mContext:Landroid/content/Context;
 
@@ -230,33 +236,31 @@
 
     iget-boolean p3, p0, Lcom/android/systemui/qs/QSPanel;->mUsingMediaPlayer:Z
 
-    const/4 p4, 0x0
-
     if-eqz p3, :cond_0
 
     new-instance p3, Lcom/android/internal/widget/RemeasuringLinearLayout;
 
-    iget-object p5, p0, Lcom/android/systemui/qs/QSPanel;->mContext:Landroid/content/Context;
+    iget-object p4, p0, Lcom/android/systemui/qs/QSPanel;->mContext:Landroid/content/Context;
 
-    invoke-direct {p3, p5}, Lcom/android/internal/widget/RemeasuringLinearLayout;-><init>(Landroid/content/Context;)V
+    invoke-direct {p3, p4}, Lcom/android/internal/widget/RemeasuringLinearLayout;-><init>(Landroid/content/Context;)V
 
     iput-object p3, p0, Lcom/android/systemui/qs/QSPanel;->mHorizontalLinearLayout:Landroid/widget/LinearLayout;
 
-    invoke-virtual {p3, p4}, Landroid/widget/LinearLayout;->setOrientation(I)V
+    invoke-virtual {p3, v0}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
     iget-object p3, p0, Lcom/android/systemui/qs/QSPanel;->mHorizontalLinearLayout:Landroid/widget/LinearLayout;
 
-    invoke-virtual {p3, p4}, Landroid/widget/LinearLayout;->setClipChildren(Z)V
+    invoke-virtual {p3, v0}, Landroid/widget/LinearLayout;->setClipChildren(Z)V
 
     iget-object p3, p0, Lcom/android/systemui/qs/QSPanel;->mHorizontalLinearLayout:Landroid/widget/LinearLayout;
 
-    invoke-virtual {p3, p4}, Landroid/widget/LinearLayout;->setClipToPadding(Z)V
+    invoke-virtual {p3, v0}, Landroid/widget/LinearLayout;->setClipToPadding(Z)V
 
     new-instance p3, Lcom/android/internal/widget/RemeasuringLinearLayout;
 
-    iget-object p5, p0, Lcom/android/systemui/qs/QSPanel;->mContext:Landroid/content/Context;
+    iget-object p4, p0, Lcom/android/systemui/qs/QSPanel;->mContext:Landroid/content/Context;
 
-    invoke-direct {p3, p5}, Lcom/android/internal/widget/RemeasuringLinearLayout;-><init>(Landroid/content/Context;)V
+    invoke-direct {p3, p4}, Lcom/android/internal/widget/RemeasuringLinearLayout;-><init>(Landroid/content/Context;)V
 
     iput-object p3, p0, Lcom/android/systemui/qs/QSPanel;->mHorizontalContentContainer:Landroid/widget/LinearLayout;
 
@@ -264,11 +268,11 @@
 
     iget-object p2, p0, Lcom/android/systemui/qs/QSPanel;->mHorizontalContentContainer:Landroid/widget/LinearLayout;
 
-    invoke-virtual {p2, p4}, Landroid/widget/LinearLayout;->setClipChildren(Z)V
+    invoke-virtual {p2, v0}, Landroid/widget/LinearLayout;->setClipChildren(Z)V
 
     iget-object p2, p0, Lcom/android/systemui/qs/QSPanel;->mHorizontalContentContainer:Landroid/widget/LinearLayout;
 
-    invoke-virtual {p2, p4}, Landroid/widget/LinearLayout;->setClipToPadding(Z)V
+    invoke-virtual {p2, v0}, Landroid/widget/LinearLayout;->setClipToPadding(Z)V
 
     invoke-virtual {p0}, Lcom/android/systemui/qs/QSPanel;->createHorizontalTileLayout()Lcom/android/systemui/qs/QSPanel$QSTileLayout;
 
@@ -280,9 +284,9 @@
 
     const/4 p3, -0x2
 
-    const/high16 p5, 0x3f800000    # 1.0f
+    const/high16 p4, 0x3f800000    # 1.0f
 
-    invoke-direct {p2, p4, p3, p5}, Landroid/widget/LinearLayout$LayoutParams;-><init>(IIF)V
+    invoke-direct {p2, v0, p3, p4}, Landroid/widget/LinearLayout$LayoutParams;-><init>(IIF)V
 
     iget-object p3, p0, Lcom/android/systemui/qs/QSPanel;->mContext:Landroid/content/Context;
 
@@ -290,15 +294,15 @@
 
     move-result-object p3
 
-    sget p6, Lcom/android/systemui/R$dimen;->qqs_media_spacing:I
+    sget p5, Lcom/android/systemui/R$dimen;->qqs_media_spacing:I
 
-    invoke-virtual {p3, p6}, Landroid/content/res/Resources;->getDimension(I)F
+    invoke-virtual {p3, p5}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result p3
 
     float-to-int p3, p3
 
-    invoke-virtual {p2, p4}, Landroid/widget/LinearLayout$LayoutParams;->setMarginStart(I)V
+    invoke-virtual {p2, v0}, Landroid/widget/LinearLayout$LayoutParams;->setMarginStart(I)V
 
     invoke-virtual {p2, p3}, Landroid/widget/LinearLayout$LayoutParams;->setMarginEnd(I)V
 
@@ -308,13 +312,13 @@
 
     iget-object p3, p0, Lcom/android/systemui/qs/QSPanel;->mHorizontalLinearLayout:Landroid/widget/LinearLayout;
 
-    iget-object p6, p0, Lcom/android/systemui/qs/QSPanel;->mHorizontalContentContainer:Landroid/widget/LinearLayout;
+    iget-object p5, p0, Lcom/android/systemui/qs/QSPanel;->mHorizontalContentContainer:Landroid/widget/LinearLayout;
 
-    invoke-virtual {p3, p6, p2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p3, p5, p2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     new-instance p2, Landroid/widget/LinearLayout$LayoutParams;
 
-    invoke-direct {p2, v0, p4, p5}, Landroid/widget/LinearLayout$LayoutParams;-><init>(IIF)V
+    invoke-direct {p2, v1, v0, p4}, Landroid/widget/LinearLayout$LayoutParams;-><init>(IIF)V
 
     iget-object p3, p0, Lcom/android/systemui/qs/QSPanel;->mHorizontalLinearLayout:Landroid/widget/LinearLayout;
 
@@ -329,13 +333,33 @@
 
     sget p2, Lcom/android/systemui/R$layout;->qs_page_indicator:I
 
-    invoke-virtual {p1, p2, p0, p4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-virtual {p1, p2, p0, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p1
 
     check-cast p1, Lcom/android/systemui/qs/PageIndicator;
 
     iput-object p1, p0, Lcom/android/systemui/qs/QSPanel;->mPanelPageIndicator:Lcom/android/systemui/qs/PageIndicator;
+
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p2
+
+    sget p3, Lcom/android/systemui/R$dimen;->op_control_margin_space1:I
+
+    invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p2
+
+    iput p2, p1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    iget-object p1, p0, Lcom/android/systemui/qs/QSPanel;->mPanelPageIndicator:Lcom/android/systemui/qs/PageIndicator;
 
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
@@ -806,7 +830,7 @@
 
     iget-object p2, p0, Lcom/android/systemui/qs/QSPanel;->mSecurityFooter:Lcom/android/systemui/qs/QSSecurityFooter;
 
-    if-eqz p2, :cond_3
+    if-eqz p2, :cond_4
 
     invoke-virtual {p2}, Lcom/android/systemui/qs/QSSecurityFooter;->getView()Landroid/view/View;
 
@@ -834,35 +858,59 @@
 
     invoke-direct {p0, p2, v4, v3}, Lcom/android/systemui/qs/QSPanel;->switchToParent(Landroid/view/View;Landroid/view/ViewGroup;I)V
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_2
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/content/res/Configuration;->orientation:I
+
+    if-ne v0, v3, :cond_3
+
     const/4 v0, -0x1
 
     iput v0, v2, Landroid/widget/LinearLayout$LayoutParams;->width:I
 
     add-int/lit8 v1, v1, 0x2
 
+    goto :goto_1
+
+    :cond_3
+    const/4 v0, -0x2
+
+    iput v0, v2, Landroid/widget/LinearLayout$LayoutParams;->width:I
+
+    :goto_1
+    const/4 v0, 0x0
+
+    iput v0, v2, Landroid/widget/LinearLayout$LayoutParams;->weight:F
+
     invoke-direct {p0, p2, p1, v1}, Lcom/android/systemui/qs/QSPanel;->switchToParent(Landroid/view/View;Landroid/view/ViewGroup;I)V
 
     add-int/2addr v1, v3
 
-    :goto_1
+    :goto_2
     invoke-virtual {p2, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    :cond_3
+    :cond_4
     iget-object p2, p0, Lcom/android/systemui/qs/QSPanel;->mFooter:Landroid/view/View;
 
-    if-eqz p2, :cond_4
+    if-eqz p2, :cond_5
 
     invoke-direct {p0, p2, p1, v1}, Lcom/android/systemui/qs/QSPanel;->switchToParent(Landroid/view/View;Landroid/view/ViewGroup;I)V
 
-    :cond_4
+    :cond_5
     return-void
 .end method
 
 .method private switchTileLayout(Z)Z
-    .locals 8
+    .locals 9
 
     invoke-direct {p0}, Lcom/android/systemui/qs/QSPanel;->shouldUseHorizontalLayout()Z
 
@@ -903,11 +951,21 @@
 
     :cond_1
     :goto_0
-    iget-boolean v1, p0, Lcom/android/systemui/qs/QSPanel;->mUsingHorizontalLayout:Z
+    iget-object v1, p0, Lcom/android/systemui/qs/QSPanel;->mMediaHost:Lcom/android/systemui/media/MediaHost;
 
-    if-ne v0, v1, :cond_3
+    invoke-virtual {v1}, Lcom/android/systemui/media/MediaHost;->getVisible()Z
 
-    if-eqz p1, :cond_2
+    move-result v1
+
+    iget-boolean v4, p0, Lcom/android/systemui/qs/QSPanel;->mUsingHorizontalLayout:Z
+
+    if-ne v0, v4, :cond_3
+
+    if-nez p1, :cond_3
+
+    iget-boolean v4, p0, Lcom/android/systemui/qs/QSPanel;->mMediaLastVisible:Z
+
+    if-eq v4, v1, :cond_2
 
     goto :goto_1
 
@@ -916,43 +974,57 @@
 
     :cond_3
     :goto_1
-    sget-boolean v1, Lcom/oneplus/util/OpUtils;->DEBUG_ONEPLUS:Z
+    sget-boolean v4, Lcom/oneplus/util/OpUtils;->DEBUG_ONEPLUS:Z
 
-    if-eqz v1, :cond_4
+    if-eqz v4, :cond_4
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "useHorizontalLayout: "
+    const-string/jumbo v5, "switchTileLayout: horizontal="
 
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    iget-boolean v5, p0, Lcom/android/systemui/qs/QSPanel;->mUsingHorizontalLayout:Z
 
-    const-string v4, "->"
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v5, "->"
 
-    iget-boolean v4, p0, Lcom/android/systemui/qs/QSPanel;->mUsingHorizontalLayout:Z
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v4, ", force="
+    const-string v6, ", force="
 
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string p1, ", mediaVisible="
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean p1, p0, Lcom/android/systemui/qs/QSPanel;->mMediaLastVisible:Z
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    const-string v1, "QSPanel"
+    const-string v4, "QSPanel"
 
-    invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v4, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_4
+    iput-boolean v1, p0, Lcom/android/systemui/qs/QSPanel;->mMediaLastVisible:Z
+
     iput-boolean v0, p0, Lcom/android/systemui/qs/QSPanel;->mUsingHorizontalLayout:Z
 
     if-eqz v0, :cond_5
@@ -969,53 +1041,53 @@
     :goto_2
     if-eqz v0, :cond_6
 
-    iget-object v1, p0, Lcom/android/systemui/qs/QSPanel;->mRegularTileLayout:Lcom/android/systemui/qs/QSPanel$QSTileLayout;
+    iget-object v4, p0, Lcom/android/systemui/qs/QSPanel;->mRegularTileLayout:Lcom/android/systemui/qs/QSPanel$QSTileLayout;
 
-    check-cast v1, Landroid/view/View;
+    check-cast v4, Landroid/view/View;
 
     goto :goto_3
 
     :cond_6
-    iget-object v1, p0, Lcom/android/systemui/qs/QSPanel;->mHorizontalLinearLayout:Landroid/widget/LinearLayout;
+    iget-object v4, p0, Lcom/android/systemui/qs/QSPanel;->mHorizontalLinearLayout:Landroid/widget/LinearLayout;
 
     :goto_3
     if-eqz v0, :cond_7
 
-    iget-object v4, p0, Lcom/android/systemui/qs/QSPanel;->mHorizontalContentContainer:Landroid/widget/LinearLayout;
+    iget-object v5, p0, Lcom/android/systemui/qs/QSPanel;->mHorizontalContentContainer:Landroid/widget/LinearLayout;
 
     goto :goto_4
 
     :cond_7
-    move-object v4, p0
+    move-object v5, p0
 
     :goto_4
     if-eqz v0, :cond_8
 
-    iget-object v5, p0, Lcom/android/systemui/qs/QSPanel;->mHorizontalTileLayout:Lcom/android/systemui/qs/QSPanel$QSTileLayout;
+    iget-object v6, p0, Lcom/android/systemui/qs/QSPanel;->mHorizontalTileLayout:Lcom/android/systemui/qs/QSPanel$QSTileLayout;
 
     goto :goto_5
 
     :cond_8
-    iget-object v5, p0, Lcom/android/systemui/qs/QSPanel;->mRegularTileLayout:Lcom/android/systemui/qs/QSPanel$QSTileLayout;
-
-    :goto_5
-    if-eqz v1, :cond_a
-
     iget-object v6, p0, Lcom/android/systemui/qs/QSPanel;->mRegularTileLayout:Lcom/android/systemui/qs/QSPanel$QSTileLayout;
 
-    iget-object v7, p0, Lcom/android/systemui/qs/QSPanel;->mHorizontalTileLayout:Lcom/android/systemui/qs/QSPanel$QSTileLayout;
+    :goto_5
+    if-eqz v4, :cond_a
 
-    if-ne v6, v7, :cond_9
+    iget-object v7, p0, Lcom/android/systemui/qs/QSPanel;->mRegularTileLayout:Lcom/android/systemui/qs/QSPanel$QSTileLayout;
 
-    if-eq v1, v6, :cond_a
+    iget-object v8, p0, Lcom/android/systemui/qs/QSPanel;->mHorizontalTileLayout:Lcom/android/systemui/qs/QSPanel$QSTileLayout;
+
+    if-ne v7, v8, :cond_9
+
+    if-eq v4, v7, :cond_a
 
     :cond_9
-    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v4, v2}, Landroid/view/View;->setVisibility(I)V
 
     :cond_a
     invoke-virtual {p1, v3}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-direct {p0, v4, v5}, Lcom/android/systemui/qs/QSPanel;->switchAllContentToParent(Landroid/view/ViewGroup;Lcom/android/systemui/qs/QSPanel$QSTileLayout;)V
+    invoke-direct {p0, v5, v6}, Lcom/android/systemui/qs/QSPanel;->switchAllContentToParent(Landroid/view/ViewGroup;Lcom/android/systemui/qs/QSPanel$QSTileLayout;)V
 
     invoke-virtual {p0}, Lcom/android/systemui/qs/QSPanel;->reAttachMediaHost()V
 
@@ -1034,42 +1106,48 @@
     :goto_6
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_b
+    if-eqz v2, :cond_b
 
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Lcom/android/systemui/qs/QSPanel$TileRecord;
+    check-cast v2, Lcom/android/systemui/qs/QSPanel$TileRecord;
 
-    iget-object v2, p0, Lcom/android/systemui/qs/QSPanel;->mTileLayout:Lcom/android/systemui/qs/QSPanel$QSTileLayout;
+    iget-object v3, p0, Lcom/android/systemui/qs/QSPanel;->mTileLayout:Lcom/android/systemui/qs/QSPanel$QSTileLayout;
 
-    invoke-interface {v2, v1}, Lcom/android/systemui/qs/QSPanel$QSTileLayout;->removeTile(Lcom/android/systemui/qs/QSPanel$TileRecord;)V
+    invoke-interface {v3, v2}, Lcom/android/systemui/qs/QSPanel$QSTileLayout;->removeTile(Lcom/android/systemui/qs/QSPanel$TileRecord;)V
 
-    iget-object v2, v1, Lcom/android/systemui/qs/QSPanel$TileRecord;->tile:Lcom/android/systemui/plugins/qs/QSTile;
+    iget-object v3, v2, Lcom/android/systemui/qs/QSPanel$TileRecord;->tile:Lcom/android/systemui/plugins/qs/QSTile;
 
-    iget-object v1, v1, Lcom/android/systemui/qs/QSPanel$TileRecord;->callback:Lcom/android/systemui/plugins/qs/QSTile$Callback;
+    iget-object v2, v2, Lcom/android/systemui/qs/QSPanel$TileRecord;->callback:Lcom/android/systemui/plugins/qs/QSTile$Callback;
 
-    invoke-interface {v2, v1}, Lcom/android/systemui/plugins/qs/QSTile;->removeCallback(Lcom/android/systemui/plugins/qs/QSTile$Callback;)V
+    invoke-interface {v3, v2}, Lcom/android/systemui/plugins/qs/QSTile;->removeCallback(Lcom/android/systemui/plugins/qs/QSTile$Callback;)V
 
     goto :goto_6
 
     :cond_b
-    iput-object v5, p0, Lcom/android/systemui/qs/QSPanel;->mTileLayout:Lcom/android/systemui/qs/QSPanel$QSTileLayout;
+    iput-object v6, p0, Lcom/android/systemui/qs/QSPanel;->mTileLayout:Lcom/android/systemui/qs/QSPanel$QSTileLayout;
 
-    instance-of p1, v5, Lcom/android/systemui/qs/PagedTileLayout;
+    instance-of p1, v6, Lcom/android/systemui/qs/PagedTileLayout;
 
     if-eqz p1, :cond_c
 
-    move-object p1, v5
+    move-object p1, v6
 
     check-cast p1, Lcom/android/systemui/qs/PagedTileLayout;
 
-    iget-object v1, p0, Lcom/android/systemui/qs/QSPanel;->mPanelPageIndicator:Lcom/android/systemui/qs/PageIndicator;
+    iget-object v2, p0, Lcom/android/systemui/qs/QSPanel;->mPanelPageIndicator:Lcom/android/systemui/qs/PageIndicator;
 
-    invoke-virtual {p1, v1}, Lcom/android/systemui/qs/PagedTileLayout;->setPageIndicator(Lcom/android/systemui/qs/PageIndicator;)V
+    invoke-virtual {p1, v2}, Lcom/android/systemui/qs/PagedTileLayout;->setPageIndicator(Lcom/android/systemui/qs/PageIndicator;)V
+
+    iget-object p1, p0, Lcom/android/systemui/qs/QSPanel;->mTileLayout:Lcom/android/systemui/qs/QSPanel$QSTileLayout;
+
+    check-cast p1, Lcom/android/systemui/qs/PagedTileLayout;
+
+    invoke-virtual {p1, v0}, Lcom/android/systemui/qs/PagedTileLayout;->setIsUseMediaLayout(Z)V
 
     :cond_c
     iget-object p1, p0, Lcom/android/systemui/qs/QSPanel;->mHost:Lcom/android/systemui/qs/QSTileHost;
@@ -1085,41 +1163,67 @@
     :cond_d
     iget-boolean p1, p0, Lcom/android/systemui/qs/QSPanel;->mListening:Z
 
-    invoke-interface {v5, p1}, Lcom/android/systemui/qs/QSPanel$QSTileLayout;->setListening(Z)V
+    invoke-interface {v6, p1}, Lcom/android/systemui/qs/QSPanel$QSTileLayout;->setListening(Z)V
 
     invoke-virtual {p0}, Lcom/android/systemui/qs/QSPanel;->needsDynamicRowsAndColumns()Z
 
     move-result p1
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    if-eqz p1, :cond_10
+    if-eqz p1, :cond_11
 
-    if-eqz v0, :cond_e
+    if-nez v0, :cond_e
+
+    iget-boolean p1, p0, Lcom/android/systemui/qs/QSPanel;->mUsingMediaPlayer:Z
+
+    if-eqz p1, :cond_e
+
+    if-nez v1, :cond_e
+
+    iget-object p1, p0, Lcom/android/systemui/qs/QSPanel;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    sget v1, Lcom/android/systemui/R$integer;->quick_settings_max_rows:I
+
+    invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getInteger(I)I
+
+    move-result p1
+
+    invoke-interface {v6, p1}, Lcom/android/systemui/qs/QSPanel$QSTileLayout;->setMinRows(I)Z
+
+    goto :goto_8
+
+    :cond_e
+    if-eqz v0, :cond_f
 
     const/4 p1, 0x2
 
     goto :goto_7
 
-    :cond_e
-    move p1, v1
+    :cond_f
+    move p1, v2
 
     :goto_7
-    invoke-interface {v5, p1}, Lcom/android/systemui/qs/QSPanel$QSTileLayout;->setMinRows(I)Z
+    invoke-interface {v6, p1}, Lcom/android/systemui/qs/QSPanel$QSTileLayout;->setMinRows(I)Z
 
-    if-eqz v0, :cond_f
+    :goto_8
+    if-eqz v0, :cond_10
 
     const/4 p1, 0x3
 
-    goto :goto_8
-
-    :cond_f
-    const/16 p1, 0x64
-
-    :goto_8
-    invoke-interface {v5, p1}, Lcom/android/systemui/qs/QSPanel$QSTileLayout;->setMaxColumns(I)Z
+    goto :goto_9
 
     :cond_10
+    const/16 p1, 0x64
+
+    :goto_9
+    invoke-interface {v6, p1}, Lcom/android/systemui/qs/QSPanel$QSTileLayout;->setMaxColumns(I)Z
+
+    :cond_11
     invoke-direct {p0}, Lcom/android/systemui/qs/QSPanel;->updateTileLayoutMargins()V
 
     invoke-direct {p0}, Lcom/android/systemui/qs/QSPanel;->updateFooterMargin()V
@@ -1134,7 +1238,7 @@
 
     invoke-virtual {p0}, Lcom/android/systemui/qs/QSPanel;->updatePadding()V
 
-    return v1
+    return v2
 .end method
 
 .method private switchToParent(Landroid/view/View;Landroid/view/ViewGroup;I)V
@@ -1160,9 +1264,26 @@
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
     :cond_1
+    :try_start_0
     invoke-virtual {p2, p1, p3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p0
+
+    const-string p3, "QSPanel"
+
+    const-string/jumbo v0, "switchToParent: exception caught."
+
+    invoke-static {p3, v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    invoke-virtual {p2, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     :cond_2
+    :goto_0
     return-void
 .end method
 
@@ -1411,7 +1532,7 @@
 .end method
 
 .method private updateTileLayoutMargins()V
-    .locals 3
+    .locals 8
 
     iget v0, p0, Lcom/android/systemui/qs/QSPanel;->mVisualMarginEnd:I
 
@@ -1420,6 +1541,46 @@
     if-eqz v1, :cond_0
 
     const/4 v0, 0x0
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->densityDpi:I
+
+    const/16 v2, 0x1fe
+
+    if-lt v1, v2, :cond_0
+
+    iget-object v1, p0, Lcom/android/systemui/qs/QSPanel;->mTileLayout:Lcom/android/systemui/qs/QSPanel$QSTileLayout;
+
+    move-object v3, v1
+
+    check-cast v3, Landroid/view/View;
+
+    iget v4, p0, Lcom/android/systemui/qs/QSPanel;->mVisualMarginStart:I
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Lcom/android/systemui/R$dimen;->op_qs_paged_tile_layout_margin_top:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v5
+
+    const/4 v7, 0x0
+
+    move-object v2, p0
+
+    move v6, v0
+
+    invoke-virtual/range {v2 .. v7}, Lcom/android/systemui/qs/QSPanel;->updateMargins(Landroid/view/View;IIII)V
 
     :cond_0
     iget-object v1, p0, Lcom/android/systemui/qs/QSPanel;->mTileLayout:Lcom/android/systemui/qs/QSPanel$QSTileLayout;
@@ -2271,7 +2432,9 @@
 
     iput p1, p0, Lcom/android/systemui/qs/QSPanel;->mLastOrientation:I
 
-    invoke-virtual {p0}, Lcom/android/systemui/qs/QSPanel;->switchTileLayout()Z
+    const/4 p1, 0x1
+
+    invoke-direct {p0, p1}, Lcom/android/systemui/qs/QSPanel;->switchTileLayout(Z)Z
 
     :cond_1
     invoke-direct {p0}, Lcom/android/systemui/qs/QSPanel;->updateBrightnessViewParams()V
@@ -3193,6 +3356,8 @@
     :goto_0
     invoke-virtual {p0, p2}, Lcom/android/systemui/qs/QSPanel;->setListening(Z)V
 
+    invoke-virtual {p0}, Lcom/android/systemui/qs/QSPanel;->switchTileLayout()Z
+
     iget-object p2, p0, Lcom/android/systemui/qs/QSPanel;->mSecurityFooter:Lcom/android/systemui/qs/QSSecurityFooter;
 
     if-eqz p2, :cond_1
@@ -3545,6 +3710,22 @@
     return-void
 .end method
 
+.method protected updateMargins(Landroid/view/View;IIII)V
+    .locals 0
+
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/widget/LinearLayout$LayoutParams;
+
+    invoke-virtual {p0, p2, p3, p4, p5}, Landroid/widget/LinearLayout$LayoutParams;->setMargins(IIII)V
+
+    invoke-virtual {p1, p0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+.end method
+
 .method protected updateMediaHostContentMargins()V
     .locals 3
 
@@ -3627,6 +3808,24 @@
     mul-float/2addr v1, v2
 
     float-to-int v1, v1
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->densityDpi:I
+
+    const/16 v3, 0x1fe
+
+    if-lt v2, v3, :cond_0
+
+    iget-object v2, p0, Lcom/android/systemui/qs/QSPanel;->mTileLayout:Lcom/android/systemui/qs/QSPanel$QSTileLayout;
+
+    check-cast v2, Landroid/view/View;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v3, v3, v3, v3}, Landroid/view/View;->setPadding(IIII)V
 
     :cond_0
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getPaddingStart()I
@@ -3717,42 +3916,54 @@
 
     const/16 v3, 0x8
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_3
 
-    if-eqz v0, :cond_1
+    if-nez v0, :cond_2
 
-    move v4, v3
+    iget-object v4, p0, Lcom/android/systemui/qs/QSPanel;->mContext:Landroid/content/Context;
+
+    invoke-static {v4}, Lcom/oneplus/util/OpUtils;->needLargeQSClock(Landroid/content/Context;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_1
 
     goto :goto_1
 
     :cond_1
     move v4, v1
 
-    :goto_1
-    invoke-virtual {v2, v4}, Landroid/widget/FrameLayout;->setVisibility(I)V
+    goto :goto_2
 
     :cond_2
+    :goto_1
+    move v4, v3
+
+    :goto_2
+    invoke-virtual {v2, v4}, Landroid/widget/FrameLayout;->setVisibility(I)V
+
+    :cond_3
     iget-object v2, p0, Lcom/android/systemui/qs/QSPanel;->mWidgetLayout:Landroid/view/View;
 
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_5
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     move v1, v3
 
-    :cond_3
+    :cond_4
     invoke-virtual {v2, v1}, Landroid/view/View;->setVisibility(I)V
 
-    :cond_4
+    :cond_5
     invoke-virtual {p0}, Lcom/android/systemui/qs/QSPanel;->refreshAllTiles()V
 
     iget-object p0, p0, Lcom/android/systemui/qs/QSPanel;->mTileLayout:Lcom/android/systemui/qs/QSPanel$QSTileLayout;
 
-    if-eqz p0, :cond_5
+    if-eqz p0, :cond_6
 
     invoke-interface {p0}, Lcom/android/systemui/qs/QSPanel$QSTileLayout;->updateResources()Z
 
-    :cond_5
+    :cond_6
     return-void
 .end method
 
@@ -3807,9 +4018,28 @@
 
     move-result v5
 
-    iget-object v6, p0, Lcom/android/systemui/qs/QSPanel;->mBrightnessView:Landroid/view/View;
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isREDVersion()Z
+
+    move-result v6
 
     if-eqz v6, :cond_1
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    sget v5, Lcom/android/systemui/R$color;->op_turquoise:I
+
+    invoke-virtual {v2, v5}, Landroid/content/Context;->getColor(I)I
+
+    move-result v2
+
+    move v5, v2
+
+    :cond_1
+    iget-object v6, p0, Lcom/android/systemui/qs/QSPanel;->mBrightnessView:Landroid/view/View;
+
+    if-eqz v6, :cond_2
 
     sget v7, Lcom/android/systemui/R$id;->slider:I
 
@@ -3875,7 +4105,7 @@
 
     iget-object v6, p0, Lcom/android/systemui/qs/QSPanel;->mBrightnessMirror:Landroid/view/View;
 
-    if-eqz v6, :cond_1
+    if-eqz v6, :cond_2
 
     sget v7, Lcom/android/systemui/R$id;->slider:I
 
@@ -3963,14 +4193,14 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
 
-    :cond_1
+    :cond_2
     iget-object p0, p0, Lcom/android/systemui/qs/QSPanel;->mSecurityFooter:Lcom/android/systemui/qs/QSSecurityFooter;
 
-    if-eqz p0, :cond_2
+    if-eqz p0, :cond_3
 
     invoke-virtual {p0}, Lcom/android/systemui/qs/QSSecurityFooter;->updateThemeColor()V
 
-    :cond_2
+    :cond_3
     return-void
 .end method
 

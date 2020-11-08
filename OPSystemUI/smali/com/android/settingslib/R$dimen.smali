@@ -14,14 +14,14 @@
 
 .field public static final battery_width:I = 0x7f0700d1
 
-.field public static final bt_battery_padding:I = 0x7f0700e3
+.field public static final bt_battery_padding:I = 0x7f0700e2
 
-.field public static final bt_nearby_icon_size:I = 0x7f0700e4
+.field public static final bt_nearby_icon_size:I = 0x7f0700e3
 
-.field public static final signal_icon_size:I = 0x7f0708cb
+.field public static final signal_icon_size:I = 0x7f0708eb
 
-.field public static final two_target_pref_medium_icon_size:I = 0x7f070963
+.field public static final two_target_pref_medium_icon_size:I = 0x7f070984
 
-.field public static final two_target_pref_small_icon_size:I = 0x7f070964
+.field public static final two_target_pref_small_icon_size:I = 0x7f070985
 
-.field public static final wifi_preference_badge_padding:I = 0x7f0709a4
+.field public static final wifi_preference_badge_padding:I = 0x7f0709c5

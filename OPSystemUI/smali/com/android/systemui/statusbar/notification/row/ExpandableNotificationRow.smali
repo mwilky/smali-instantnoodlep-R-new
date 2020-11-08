@@ -138,6 +138,8 @@
 
 .field private mIsPinned:Z
 
+.field private mIsScrollerExpanded:Z
+
 .field private mIsSummaryWithChildren:Z
 
 .field private mIsSystemChildExpanded:Z
@@ -7745,6 +7747,14 @@
     return-void
 .end method
 
+.method public restoreBackground()V
+    .locals 0
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/ActivatableNotificationView;->initBackground()V
+
+    return-void
+.end method
+
 .method public setAboveShelf(Z)V
     .locals 1
 
@@ -8490,18 +8500,48 @@
     :cond_2
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->isAboveShelf()Z
 
-    move-result p1
+    move-result v2
 
-    if-eq p1, v0, :cond_3
+    if-eq v2, v0, :cond_3
 
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mAboveShelfChangedListener:Lcom/android/systemui/statusbar/notification/AboveShelfChangedListener;
+    iget-object v2, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mAboveShelfChangedListener:Lcom/android/systemui/statusbar/notification/AboveShelfChangedListener;
 
-    xor-int/lit8 p1, v0, 0x1
+    xor-int/2addr v0, v1
 
-    invoke-interface {p0, p1}, Lcom/android/systemui/statusbar/notification/AboveShelfChangedListener;->onAboveShelfStateChanged(Z)V
+    invoke-interface {v2, v0}, Lcom/android/systemui/statusbar/notification/AboveShelfChangedListener;->onAboveShelfStateChanged(Z)V
 
     :cond_3
     :goto_0
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isREDVersion()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mIsHeadsUp:Z
+
+    if-eqz v0, :cond_4
+
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mIsScrollerExpanded:Z
+
+    if-nez v0, :cond_4
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/ActivatableNotificationView;->setREDBackground()V
+
+    goto :goto_1
+
+    :cond_4
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mIsHeadsUp:Z
+
+    if-nez v0, :cond_5
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->restoreBackground()V
+
+    :cond_5
+    :goto_1
+    invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/notification/row/ExpandableOutlineView;->setIsHeadsUp(Z)V
+
+    :cond_6
     return-void
 .end method
 
@@ -8942,6 +8982,25 @@
     if-eqz p0, :cond_0
 
     invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/notification/stack/NotificationChildrenContainer;->setIsLowPriority(Z)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setIsScrollerExpanded(Z)V
+    .locals 1
+
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mIsScrollerExpanded:Z
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->isHeadsUp()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->restoreBackground()V
 
     :cond_0
     return-void

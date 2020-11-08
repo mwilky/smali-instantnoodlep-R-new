@@ -149,6 +149,16 @@
     return p0
 .end method
 
+.method protected getContext()Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController$OpDisplayControl;->mController:Lcom/oneplus/systemui/biometrics/OpFodDisplayController;
+
+    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
 .method protected getNotifier()Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;
     .locals 0
 

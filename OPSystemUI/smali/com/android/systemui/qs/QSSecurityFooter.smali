@@ -845,6 +845,25 @@
     :goto_1
     iput-boolean v3, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mIsVisible:Z
 
+    iget-object v0, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/content/res/Configuration;->orientation:I
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_4
+
+    iput-boolean v4, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mIsVisible:Z
+
+    :cond_4
     move-object v1, p0
 
     move v3, v5
@@ -867,31 +886,31 @@
 
     sget v0, Lcom/android/systemui/R$drawable;->ic_info_outline:I
 
-    if-nez v12, :cond_4
+    if-nez v12, :cond_5
 
-    if-eqz v13, :cond_6
+    if-eqz v13, :cond_7
 
-    :cond_4
+    :cond_5
     iget-object v0, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mSecurityController:Lcom/android/systemui/statusbar/policy/SecurityController;
 
     invoke-interface {v0}, Lcom/android/systemui/statusbar/policy/SecurityController;->isVpnBranded()Z
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     sget v0, Lcom/android/systemui/R$drawable;->stat_sys_branded_vpn:I
 
     goto :goto_2
 
-    :cond_5
+    :cond_6
     sget v0, Lcom/android/systemui/R$drawable;->op_ic_qs_vpn:I
 
-    :cond_6
+    :cond_7
     :goto_2
     iget v1, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mFooterIconId:I
 
-    if-eq v1, v0, :cond_7
+    if-eq v1, v0, :cond_8
 
     iput v0, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mFooterIconId:I
 
@@ -901,7 +920,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    :cond_7
+    :cond_8
     iget-object v0, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mMainHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mUpdateDisplayState:Ljava/lang/Runnable;
@@ -1831,6 +1850,19 @@
 
     invoke-virtual {v3, v0}, Landroid/view/View;->setBackgroundColor(I)V
 
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isREDVersion()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mRootView:Landroid/view/View;
+
+    sget v3, Lcom/android/systemui/R$drawable;->op_qs_red_middle:I
+
+    invoke-virtual {v0, v3}, Landroid/view/View;->setBackgroundResource(I)V
+
+    :cond_0
     iget-object v0, p0, Lcom/android/systemui/qs/QSSecurityFooter;->mFooterText:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V

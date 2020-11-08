@@ -228,7 +228,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->isCameraForeground()Z
+    invoke-virtual {v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->bypassPreventMode()Z
 
     move-result v0
 

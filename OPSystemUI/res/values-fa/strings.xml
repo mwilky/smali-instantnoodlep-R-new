@@ -1415,6 +1415,9 @@
     <string name="overheat_toast_content">دمای تلفن شما بیش از حد بالاست و عملکردهایی که مصرف نیروی زیادی دارند خاموش می‌شوند تا دما کاهش یابد</string>
     <string name="overlay_display_devices_title">شبیه‌سازی نمایشگر ثانویه</string>
     <string name="overview">نمای کلی</string>
+    <string name="permission_btn_text_denied">خروج</string>
+    <string name="permission_btn_text_grant">تأیید</string>
+    <string name="permission_dialog_title">بیانیۀ مجوز</string>
     <string name="phone_hint">انگشتتان را از نماد تلفن تند بکشید</string>
     <string name="phone_label">باز کردن تلفن</string>
     <string name="picture_color_mode">حالت رنگ عکس</string>

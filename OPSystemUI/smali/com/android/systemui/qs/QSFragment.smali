@@ -1377,17 +1377,24 @@
 
     invoke-virtual {p1}, Landroid/content/res/Configuration;->getLayoutDirection()I
 
-    move-result p1
+    move-result v0
 
-    iput p1, p0, Lcom/android/systemui/qs/QSFragment;->mLayoutDirection:I
+    iput v0, p0, Lcom/android/systemui/qs/QSFragment;->mLayoutDirection:I
 
-    iget-object p0, p0, Lcom/android/systemui/qs/QSFragment;->mQSAnimator:Lcom/android/systemui/qs/QSAnimator;
+    iget-object v0, p0, Lcom/android/systemui/qs/QSFragment;->mQSAnimator:Lcom/android/systemui/qs/QSAnimator;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/systemui/qs/QSAnimator;->onRtlChanged()V
+    invoke-virtual {v0}, Lcom/android/systemui/qs/QSAnimator;->onRtlChanged()V
 
     :cond_0
+    iget-object p0, p0, Lcom/android/systemui/qs/QSFragment;->mContainer:Lcom/android/systemui/qs/QSContainerImpl;
+
+    if-eqz p0, :cond_1
+
+    invoke-virtual {p0, p1}, Lcom/android/systemui/qs/QSContainerImpl;->updateResources(Landroid/content/res/Configuration;)V
+
+    :cond_1
     return-void
 .end method
 
@@ -1883,7 +1890,7 @@
 .end method
 
 .method public setQsExpansion(FF)V
-    .locals 11
+    .locals 10
 
     iget-object v0, p0, Lcom/android/systemui/qs/QSFragment;->mContainer:Lcom/android/systemui/qs/QSContainerImpl;
 
@@ -2010,31 +2017,23 @@
     move v6, v4
 
     :goto_2
-    iget-object v7, p0, Lcom/android/systemui/qs/QSFragment;->mQSPanel:Lcom/android/systemui/qs/QSPanel;
-
-    invoke-virtual {v7}, Lcom/android/systemui/qs/QSPanel;->getSecurityFooter()Lcom/android/systemui/qs/QSSecurityFooter;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v7
 
-    if-eqz v7, :cond_6
-
-    invoke-virtual {v7}, Lcom/android/systemui/qs/QSSecurityFooter;->getView()Landroid/view/View;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Landroid/view/View;->getVisibility()I
-
-    move-result v8
-
-    if-nez v8, :cond_6
-
-    invoke-virtual {v7}, Lcom/android/systemui/qs/QSSecurityFooter;->getView()Landroid/view/View;
+    invoke-virtual {v7}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
 
-    invoke-virtual {v7}, Landroid/view/View;->getHeight()I
+    invoke-virtual {v7}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
-    move-result v7
+    move-result-object v7
+
+    iget v7, v7, Landroid/content/res/Configuration;->orientation:I
+
+    if-ne v7, v3, :cond_6
+
+    move v7, v3
 
     goto :goto_3
 
@@ -2042,75 +2041,49 @@
     move v7, v4
 
     :goto_3
-    invoke-virtual {p0}, Landroid/app/Fragment;->getContext()Landroid/content/Context;
+    if-eqz v7, :cond_7
 
-    move-result-object v8
+    invoke-direct {p0}, Lcom/android/systemui/qs/QSFragment;->getExpandedMediaHeight()I
 
-    invoke-virtual {v8}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    move-result v7
 
-    move-result-object v8
+    invoke-direct {p0}, Lcom/android/systemui/qs/QSFragment;->getQuickMediaHeight()I
 
-    invoke-virtual {v8}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    move-result v8
 
-    move-result-object v8
-
-    iget v8, v8, Landroid/content/res/Configuration;->orientation:I
-
-    if-ne v8, v3, :cond_7
-
-    move v8, v3
+    sub-int/2addr v7, v8
 
     goto :goto_4
 
     :cond_7
-    move v8, v4
+    move v7, v4
 
     :goto_4
-    if-eqz v8, :cond_8
+    iget-object v8, p0, Lcom/android/systemui/qs/QSFragment;->mQSPanelScrollView:Lcom/android/systemui/qs/NonInterceptingScrollView;
 
-    invoke-direct {p0}, Lcom/android/systemui/qs/QSFragment;->getExpandedMediaHeight()I
+    invoke-virtual {v8}, Landroid/widget/ScrollView;->getBottom()I
 
     move-result v8
 
-    invoke-direct {p0}, Lcom/android/systemui/qs/QSFragment;->getQuickMediaHeight()I
+    iget-object v9, p0, Lcom/android/systemui/qs/QSFragment;->mHeader:Lcom/android/systemui/qs/QuickStatusBarHeader;
+
+    invoke-virtual {v9}, Landroid/widget/RelativeLayout;->getBottom()I
 
     move-result v9
 
     sub-int/2addr v8, v9
 
-    goto :goto_5
+    iget-object v9, p0, Lcom/android/systemui/qs/QSFragment;->mHeader:Lcom/android/systemui/qs/QuickStatusBarHeader;
 
-    :cond_8
-    move v8, v4
-
-    :goto_5
-    iget-object v9, p0, Lcom/android/systemui/qs/QSFragment;->mQSPanelScrollView:Lcom/android/systemui/qs/NonInterceptingScrollView;
-
-    invoke-virtual {v9}, Landroid/widget/ScrollView;->getBottom()I
+    invoke-virtual {v9}, Landroid/widget/RelativeLayout;->getPaddingBottom()I
 
     move-result v9
 
-    iget-object v10, p0, Lcom/android/systemui/qs/QSFragment;->mHeader:Lcom/android/systemui/qs/QuickStatusBarHeader;
+    add-int/2addr v8, v9
 
-    invoke-virtual {v10}, Landroid/widget/RelativeLayout;->getBottom()I
+    sub-int/2addr v8, v7
 
-    move-result v10
-
-    sub-int/2addr v9, v10
-
-    iget-object v10, p0, Lcom/android/systemui/qs/QSFragment;->mHeader:Lcom/android/systemui/qs/QuickStatusBarHeader;
-
-    invoke-virtual {v10}, Landroid/widget/RelativeLayout;->getPaddingBottom()I
-
-    move-result v10
-
-    add-int/2addr v9, v10
-
-    sub-int/2addr v9, v7
-
-    sub-int/2addr v9, v8
-
-    int-to-float v7, v9
+    int-to-float v7, v8
 
     mul-float/2addr v1, v7
 
@@ -2120,16 +2093,16 @@
 
     iget-object v7, p0, Lcom/android/systemui/qs/QSFragment;->mFooter:Lcom/android/systemui/qs/QSFooter;
 
-    if-eqz v2, :cond_9
+    if-eqz v2, :cond_8
 
     move v2, v0
 
-    goto :goto_6
+    goto :goto_5
 
-    :cond_9
+    :cond_8
     move v2, p1
 
-    :goto_6
+    :goto_5
     invoke-interface {v7, v2}, Lcom/android/systemui/qs/QSFooter;->setExpansion(F)V
 
     iget-object v2, p0, Lcom/android/systemui/qs/QSFragment;->mQSPanel:Lcom/android/systemui/qs/QSPanel;
@@ -2152,13 +2125,13 @@
 
     invoke-virtual {v2, v1}, Landroid/widget/ScrollView;->setTranslationY(F)V
 
-    if-eqz v6, :cond_a
+    if-eqz v6, :cond_9
 
     iget-object v1, p0, Lcom/android/systemui/qs/QSFragment;->mQSPanelScrollView:Lcom/android/systemui/qs/NonInterceptingScrollView;
 
     invoke-virtual {v1, v4}, Landroid/widget/ScrollView;->setScrollY(I)V
 
-    :cond_a
+    :cond_9
     iget-object v1, p0, Lcom/android/systemui/qs/QSFragment;->mQSDetail:Lcom/android/systemui/qs/QSDetail;
 
     invoke-virtual {v1, p2}, Lcom/android/systemui/qs/QSDetail;->setFullyExpanded(Z)V
@@ -2167,21 +2140,21 @@
 
     cmpg-float v2, v5, p1
 
-    if-gez v2, :cond_b
+    if-gez v2, :cond_a
 
     cmpg-float v0, p1, v0
 
-    if-gez v0, :cond_b
+    if-gez v0, :cond_a
 
-    goto :goto_7
+    goto :goto_6
 
-    :cond_b
+    :cond_a
     move v3, v4
 
-    :goto_7
+    :goto_6
     invoke-virtual {v1, v3}, Lcom/android/systemui/qs/QSPanel;->setIsExpanding(Z)V
 
-    if-nez p2, :cond_c
+    if-nez p2, :cond_b
 
     iget-object p2, p0, Lcom/android/systemui/qs/QSFragment;->mQsBounds:Landroid/graphics/Rect;
 
@@ -2217,16 +2190,16 @@
 
     iput v0, p2, Landroid/graphics/Rect;->bottom:I
 
-    :cond_c
+    :cond_b
     invoke-direct {p0}, Lcom/android/systemui/qs/QSFragment;->updateQsBounds()V
 
     iget-object p2, p0, Lcom/android/systemui/qs/QSFragment;->mQSAnimator:Lcom/android/systemui/qs/QSAnimator;
 
-    if-eqz p2, :cond_d
+    if-eqz p2, :cond_c
 
     invoke-virtual {p2, p1}, Lcom/android/systemui/qs/QSAnimator;->setPosition(F)V
 
-    :cond_d
+    :cond_c
     invoke-direct {p0}, Lcom/android/systemui/qs/QSFragment;->updateMediaPositions()V
 
     return-void

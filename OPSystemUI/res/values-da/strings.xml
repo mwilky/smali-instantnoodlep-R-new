@@ -1098,7 +1098,7 @@ Prøv igen om %2$d sekunder."</string>
     <string name="left_nav_bar_button_type">Ekstra venstre knaptype</string>
     <string name="legacy_vpn_name">VPN</string>
     <string name="loading_injected_setting_summary">Indlæser…</string>
-    <string name="loading_text">Indlæser ...</string>
+    <string name="loading_text">Indlæser...</string>
     <string name="local_backup_password_summary_change">Tryk for at skifte eller fjerne adgangskoden til fuld lokal backup</string>
     <string name="local_backup_password_summary_none">Lokale komplette backups er i øjeblikket ikke beskyttet</string>
     <string name="local_backup_password_title">Kode til lokal backup</string>
@@ -1415,6 +1415,9 @@ Du har også forbindelse til et VPN, som kan overvåge din netværksaktivitet."<
     <string name="overheat_toast_content">Din telefons temperatur er for høj, og funktioner med højt strømforbrug deaktiveres for at sænke temperaturen</string>
     <string name="overlay_display_devices_title">Simuler sekundære skærme</string>
     <string name="overview">Oversigt</string>
+    <string name="permission_btn_text_denied">Afslut</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Erklæring om tilladelse</string>
     <string name="phone_hint">Stryg fra telefonikonet</string>
     <string name="phone_label">åbn telefon</string>
     <string name="picture_color_mode">Farvetilstand for billeder</string>

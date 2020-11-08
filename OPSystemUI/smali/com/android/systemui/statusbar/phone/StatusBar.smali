@@ -6218,6 +6218,24 @@
 
     invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "  mPanelExpanded: "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v5, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mPanelExpanded:Z
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -8330,6 +8348,14 @@
     return p0
 .end method
 
+.method public isPanelExpanded()Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mPanelExpanded:Z
+
+    return p0
+.end method
+
 .method public isPulsing()Z
     .locals 0
 
@@ -9703,7 +9729,7 @@
 .end method
 
 .method public notifyImeWindowVisibleStatus(ILandroid/os/IBinder;IIZ)V
-    .locals 3
+    .locals 1
 
     const-class v0, Lcom/android/systemui/recents/OverviewProxyService;
 
@@ -9717,28 +9743,15 @@
 
     move-result v0
 
-    invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getNavigationBarHiddenMode()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    if-eq v1, v2, :cond_0
-
-    sget-boolean v1, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->sSideGestureEnabled:Z
-
-    if-nez v1, :cond_1
-
-    :cond_0
     invoke-static {v0}, Lcom/android/systemui/shared/system/QuickStepContract;->isGesturalMode(I)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     invoke-virtual/range {p0 .. p5}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->notifyImeWindowVisible(ILandroid/os/IBinder;IIZ)V
 
-    :cond_1
+    :cond_0
     return-void
 .end method
 
@@ -9863,33 +9876,47 @@
 
     const/4 v3, 0x1
 
-    if-ne v0, v1, :cond_0
+    if-eq v0, v1, :cond_1
 
-    move v0, v3
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mScrimController:Lcom/android/systemui/statusbar/phone/ScrimController;
+
+    invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/ScrimController;->getState()Lcom/android/systemui/statusbar/phone/ScrimState;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/android/systemui/statusbar/phone/ScrimState;->BOUNCER_SCRIMMED_BOOT:Lcom/android/systemui/statusbar/phone/ScrimState;
+
+    if-ne v0, v1, :cond_0
 
     goto :goto_0
 
     :cond_0
     move v0, v2
 
+    goto :goto_1
+
+    :cond_1
     :goto_0
+    move v0, v3
+
+    :goto_1
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mStatusBarKeyguardViewManager:Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
 
     invoke-virtual {v1, v0}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->onBackPressed(Z)Z
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mNotificationPanelViewController:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->expandWithoutQs()V
 
-    goto :goto_1
+    goto :goto_2
 
-    :cond_1
+    :cond_2
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mHandler:Lcom/android/systemui/statusbar/phone/StatusBar$H;
 
     const/16 v1, 0x3eb
@@ -9900,17 +9927,17 @@
 
     invoke-virtual {p0, v2}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->resetViews(Z)V
 
-    :goto_1
+    :goto_2
     return v3
 
-    :cond_2
+    :cond_3
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mNotificationPanelViewController:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->isQsExpanded()Z
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mNotificationPanelViewController:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
@@ -9918,30 +9945,30 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mNotificationPanelViewController:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->closeQsDetail()V
 
-    goto :goto_2
+    goto :goto_3
 
-    :cond_3
+    :cond_4
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mNotificationPanelViewController:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
     invoke-virtual {p0, v2}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->animateCloseQs(Z)V
 
-    :goto_2
+    :goto_3
     return v3
 
-    :cond_4
+    :cond_5
     iget v0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mState:I
 
-    if-eq v0, v3, :cond_6
+    if-eq v0, v3, :cond_7
 
     const/4 v1, 0x2
 
-    if-eq v0, v1, :cond_6
+    if-eq v0, v1, :cond_7
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mNotificationPanelViewController:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
 
@@ -9949,36 +9976,36 @@
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mShadeController:Lcom/android/systemui/statusbar/phone/ShadeController;
 
     invoke-interface {p0}, Lcom/android/systemui/statusbar/phone/ShadeController;->animateCollapsePanels()V
 
-    goto :goto_3
+    goto :goto_4
 
-    :cond_5
+    :cond_6
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mBubbleController:Lcom/android/systemui/bubbles/BubbleController;
 
     invoke-virtual {p0}, Lcom/android/systemui/bubbles/BubbleController;->performBackPressIfNeeded()V
 
-    :goto_3
+    :goto_4
     return v3
 
-    :cond_6
+    :cond_7
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mKeyguardUserSwitcher:Lcom/android/systemui/statusbar/policy/KeyguardUserSwitcher;
 
-    if-eqz p0, :cond_7
+    if-eqz p0, :cond_8
 
     invoke-virtual {p0, v3}, Lcom/android/systemui/statusbar/policy/KeyguardUserSwitcher;->hideIfNotSimple(Z)Z
 
     move-result p0
 
-    if-eqz p0, :cond_7
+    if-eqz p0, :cond_8
 
     return v3
 
-    :cond_7
+    :cond_8
     return v2
 .end method
 
@@ -12189,7 +12216,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "setPanelViewAlpha to "
+    const-string/jumbo v2, "setPanelViewAlpha to "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -12560,13 +12587,13 @@
     :goto_0
     iget-object v2, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mNotificationShadeWindowView:Lcom/android/systemui/statusbar/phone/NotificationShadeWindowView;
 
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_5
 
-    if-ne p2, p1, :cond_4
+    if-ne p2, p1, :cond_5
 
     iget p2, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mStatusBarWindowState:I
 
-    if-eq p2, p3, :cond_4
+    if-eq p2, p3, :cond_5
 
     iput p3, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mStatusBarWindowState:I
 
@@ -12592,25 +12619,28 @@
 
     invoke-static {v2, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-nez v1, :cond_2
+    if-nez v1, :cond_3
 
     iget p2, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mState:I
 
-    if-nez p2, :cond_2
+    if-nez p2, :cond_3
 
     iget-object p2, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mStatusBarView:Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;
+
+    if-eqz p2, :cond_2
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-virtual {p2, v0, v0, v1}, Lcom/android/systemui/statusbar/phone/PanelBar;->collapsePanel(ZZF)V
 
+    :cond_2
     iget-object p2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mStatusBarCollapseListener:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$StatusBarCollapseListener;
 
-    if-eqz p2, :cond_2
+    if-eqz p2, :cond_3
 
     invoke-interface {p2}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$StatusBarCollapseListener;->statusBarCollapse()V
 
-    :cond_2
+    :cond_3
     const-class p2, Lcom/android/systemui/recents/OverviewProxyService;
 
     invoke-static {p2}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -12623,15 +12653,15 @@
 
     iget-object p2, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mStatusBarView:Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;
 
-    if-eqz p2, :cond_4
+    if-eqz p2, :cond_5
 
     const/4 p2, 0x2
 
-    if-ne p3, p2, :cond_3
+    if-ne p3, p2, :cond_4
 
     goto :goto_1
 
-    :cond_3
+    :cond_4
     move p1, v0
 
     :goto_1
@@ -12639,7 +12669,7 @@
 
     invoke-direct {p0, v0}, Lcom/android/systemui/statusbar/phone/StatusBar;->updateHideIconsForBouncer(Z)V
 
-    :cond_4
+    :cond_5
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/StatusBar;->updateBubblesVisibility()V
 
     return-void

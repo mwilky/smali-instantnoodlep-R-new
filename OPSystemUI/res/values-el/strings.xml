@@ -1414,6 +1414,9 @@
     <string name="overheat_toast_content">Η θερμοκρασία του τηλεφώνου σας είναι υπερβολικά υψηλή και για να μειωθεί έχουν απενεργοποιηθεί οι λειτουργίες με υψηλή κατανάλωση ενέργειας.</string>
     <string name="overlay_display_devices_title">Προσομ. δευτερ. προβολών</string>
     <string name="overview">Επισκόπηση</string>
+    <string name="permission_btn_text_denied">Έξοδος</string>
+    <string name="permission_btn_text_grant">OΚ</string>
+    <string name="permission_dialog_title">Δήλωση χορήγησης άδειας</string>
     <string name="phone_hint">Σύρετε προς τα έξω για τηλέφωνο</string>
     <string name="phone_label">άνοιγμα τηλεφώνου</string>
     <string name="picture_color_mode">Λειτουργία χρώματος εικόνας</string>

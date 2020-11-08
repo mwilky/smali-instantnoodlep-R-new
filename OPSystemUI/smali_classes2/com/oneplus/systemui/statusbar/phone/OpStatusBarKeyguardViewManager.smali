@@ -34,6 +34,16 @@
 
 
 # virtual methods
+.method protected init(Landroid/content/Context;)V
+    .locals 0
+
+    new-instance p0, Lcom/oneplus/onlineconfig/OpFingerprintConfig;
+
+    invoke-direct {p0, p1}, Lcom/oneplus/onlineconfig/OpFingerprintConfig;-><init>(Landroid/content/Context;)V
+
+    return-void
+.end method
+
 .method public showBouncerMessage(Ljava/lang/String;Landroid/content/res/ColorStateList;I)V
     .locals 1
 

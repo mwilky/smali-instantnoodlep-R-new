@@ -956,6 +956,22 @@
 
     const/4 v2, 0x7
 
+    if-eq v0, v2, :cond_7
+
+    invoke-static {}, Lcom/oneplus/plugin/OpLsState;->getInstance()Lcom/oneplus/plugin/OpLsState;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oneplus/plugin/OpLsState;->getBiometricUnlockController()Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->getMode()I
+
+    move-result v0
+
+    const/4 v2, 0x2
+
     if-ne v0, v2, :cond_1
 
     goto/16 :goto_0

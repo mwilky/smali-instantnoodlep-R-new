@@ -274,9 +274,17 @@
 
     if-eqz v0, :cond_f
 
+    iget-object v0, p0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mDivider:Lcom/android/systemui/stackdivider/Divider;
+
+    invoke-virtual {v0}, Lcom/android/systemui/stackdivider/Divider;->startDismissSplit()V
+
+    if-eqz p1, :cond_10
+
+    if-nez v7, :cond_10
+
     iget-object p0, p0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mDivider:Lcom/android/systemui/stackdivider/Divider;
 
-    invoke-virtual {p0}, Lcom/android/systemui/stackdivider/Divider;->startDismissSplit()V
+    invoke-virtual {p0}, Lcom/android/systemui/stackdivider/Divider;->ensureMinimizedSplit()V
 
     goto :goto_8
 

@@ -40,6 +40,7 @@
     <uses-permission android:name="android.permission.REQUEST_NETWORK_SCORES"/>
     <uses-permission android:name="android.permission.CONTROL_VPN"/>
     <uses-permission android:name="android.permission.PEERS_MAC_ADDRESS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.MANAGE_USB"/>
     <uses-permission android:name="android.permission.CONTROL_DISPLAY_BRIGHTNESS"/>
     <uses-permission android:name="android.permission.DEVICE_POWER"/>
@@ -154,12 +155,14 @@
     <uses-permission android:name="android.permission.MODIFY_AUDIO_ROUTING"/>
     <uses-permission android:name="net.oneplus.launcher.permission.READ_SETTINGS"/>
     <uses-permission android:name="net.oneplus.launcher.permission.WRITE_SETTINGS"/>
+    <protected-broadcast android:name="com.android.dialer.action.END_CALL"/>
     <protected-broadcast android:name="com.google.android.apps.oemsmartspace.ENABLE_UPDATE"/>
     <protected-broadcast android:name="com.android.settingslib.action.REGISTER_SLICE_RECEIVER"/>
     <protected-broadcast android:name="com.android.settingslib.action.UNREGISTER_SLICE_RECEIVER"/>
     <protected-broadcast android:name="com.android.settings.flashlight.action.FLASHLIGHT_CHANGED"/>
     <protected-broadcast android:name="com.oneplus.intent.WLB_MANUAL_SELECTION"/>
     <protected-broadcast android:name="com.oneplus.intent.ACTION_WLB_BREAK_MODE"/>
+    <protected-broadcast android:name="com.android.dialer.action.END_CALL"/>
     <uses-permission android:name="android.permission.READ_CALL_LOG"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
@@ -235,6 +238,7 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.oneplus.airplane.AirplanePopupActivity" android:theme="@style/AlertDialogTheme"/>
         <service android:enabled="false" android:exported="true" android:label="@string/dessert_case" android:name="com.android.systemui.DessertCaseDream" android:permission="android.permission.BIND_DREAM_SERVICE" android:process=":sweetsweetdesserts">
             <intent-filter>
                 <action android:name="android.service.dreams.DreamService"/>

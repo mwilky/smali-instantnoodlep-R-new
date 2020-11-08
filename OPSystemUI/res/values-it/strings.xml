@@ -1098,7 +1098,7 @@ Riprova tra %2$d secondi."</string>
     <string name="left_nav_bar_button_type">Tipo di pulsante extra sinistra</string>
     <string name="legacy_vpn_name">VPN</string>
     <string name="loading_injected_setting_summary">Caricamento…</string>
-    <string name="loading_text">Caricamento in corso...</string>
+    <string name="loading_text">Caricamento...</string>
     <string name="local_backup_password_summary_change">Tocca per modificare o rimuovere la password per i backup desktop completi</string>
     <string name="local_backup_password_summary_none">I backup desktop completi non sono attualmente protetti</string>
     <string name="local_backup_password_title">Password di backup desktop</string>
@@ -1415,6 +1415,9 @@ Sei inoltre connesso a una VPN, da cui è possibile monitorare la tua attività 
     <string name="overheat_toast_content">La temperatura del telefono è troppo alta, pertanto le funzioni ad alto consumo energetico saranno disattivate per abbassare la temperatura</string>
     <string name="overlay_display_devices_title">Simula display secondari</string>
     <string name="overview">Panoramica</string>
+    <string name="permission_btn_text_denied">Esci</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Dichiarazione di autorizzazione</string>
     <string name="phone_hint">Scorri per accedere al telefono</string>
     <string name="phone_label">apri telefono</string>
     <string name="picture_color_mode">Modalità colori immagini</string>

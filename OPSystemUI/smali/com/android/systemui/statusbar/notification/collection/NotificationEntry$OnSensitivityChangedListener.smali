@@ -12,3 +12,8 @@
     accessFlags = 0x609
     name = "OnSensitivityChangedListener"
 .end annotation
+
+
+# virtual methods
+.method public abstract onSensitivityChanged(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)V
+.end method

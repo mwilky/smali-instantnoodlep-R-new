@@ -1415,6 +1415,9 @@ Aby dowiedzieć się więcej, skontaktuj się z administratorem.
     <string name="overheat_toast_content">Temperatura telefonu jest zbyt wysoka. Aby obniżyć temperaturę, wyłączono funkcję wysokiego zużycia energii</string>
     <string name="overlay_display_devices_title">Symuluj ekrany dodatkowe</string>
     <string name="overview">Przegląd</string>
+    <string name="permission_btn_text_denied">Zakończ</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Oświadczenie dotyczące uprawnień</string>
     <string name="phone_hint">Aby włączyć telefon, przesuń palcem od ikony</string>
     <string name="phone_label">otwórz telefon</string>
     <string name="picture_color_mode">Tryb kolorów obrazu</string>

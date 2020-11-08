@@ -1415,6 +1415,9 @@ De asemenea, sunteți conectat(ă) la o rețea VPN care vă poate monitoriza act
     <string name="overheat_toast_content">Temperatura telefonului dvs. este prea mare, iar funcțiile cu consum mare de energie sunt dezactivate pentru a reduce temperatura</string>
     <string name="overlay_display_devices_title">Simulați afișaje secundare</string>
     <string name="overview">Recente</string>
+    <string name="permission_btn_text_denied">Ieșire</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Declarație despre permisiuni</string>
     <string name="phone_hint">Glisați dinspre telefon</string>
     <string name="phone_label">deschideți telefonul</string>
     <string name="picture_color_mode">Modul de culori pentru imagini</string>

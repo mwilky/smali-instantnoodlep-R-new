@@ -82,6 +82,8 @@
         <item>Qualcomm® aptX™ ಆಡಿಯೋ</item>
         <item>Qualcomm® aptX™ HD ಆಡಿಯೋ</item>
         <item>LDAC</item>
+        <item>Qualcomm® aptX™ Adaptive ಆಡಿಯೋ</item>
+        <item>Qualcomm® aptX™ TWS+ ಆಡಿಯೋ</item>
     </string-array>
     <string-array name="bluetooth_a2dp_codec_titles">
         <item>ಸಿಸ್ಟಂ ಆಯ್ಕೆಯನ್ನು ಬಳಸಿ (ಡಿಫಾಲ್ಟ್)</item>
@@ -90,6 +92,8 @@
         <item>Qualcomm® aptX™ ಆಡಿಯೋ</item>
         <item>Qualcomm® aptX™ HD ಆಡಿಯೋ</item>
         <item>LDAC</item>
+        <item>Qualcomm® aptX™ Adaptive ಆಡಿಯೋ</item>
+        <item>Qualcomm® aptX™ TWS+ ಆಡಿಯೋ</item>
     </string-array>
     <string-array name="bluetooth_audio_active_device_summaries">
         <item></item>

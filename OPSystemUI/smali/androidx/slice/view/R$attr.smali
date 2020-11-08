@@ -4,4 +4,4 @@
 
 
 # static fields
-.field public static final sliceViewStyle:I = 0x7f0404c7
+.field public static final sliceViewStyle:I = 0x7f0404c9

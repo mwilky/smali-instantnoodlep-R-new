@@ -785,7 +785,7 @@
 
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpHighlightHintView;->mContainer:Landroid/view/ViewGroup;
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -860,43 +860,108 @@
 
     invoke-static {}, Lcom/oneplus/util/OpUtils;->isSupportHolePunchFrontCam()Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_1
+    if-eqz v1, :cond_1
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
     goto :goto_0
 
     :cond_1
-    iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpHighlightHintView;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/oneplus/systemui/statusbar/phone/OpHighlightHintView;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v0
+    move-result-object v1
 
-    sget v1, Lcom/android/systemui/R$dimen;->highlight_hint_margin_start:I
+    sget v2, Lcom/android/systemui/R$dimen;->highlight_hint_margin_start:I
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    move-result v0
+    move-result v1
 
     :goto_0
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getPaddingTop()I
 
-    move-result v1
+    move-result v2
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getPaddingTop()I
 
-    move-result v2
+    move-result v3
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getPaddingEnd()I
 
-    move-result v3
+    move-result v4
 
-    invoke-virtual {p0, v0, v1, v2, v3}, Landroid/widget/FrameLayout;->setPaddingRelative(IIII)V
+    invoke-virtual {p0, v1, v2, v3, v4}, Landroid/widget/FrameLayout;->setPaddingRelative(IIII)V
+
+    iget-object v1, p0, Lcom/oneplus/systemui/statusbar/phone/OpHighlightHintView;->mContainer:Landroid/view/ViewGroup;
+
+    invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpHighlightHintView;->mIconView:Landroid/widget/ImageView;
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/oneplus/systemui/statusbar/phone/OpHighlightHintView;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Lcom/android/systemui/R$dimen;->highlight_hint_icon_size_notch:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v1
+
+    iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpHighlightHintView;->mIconView:Landroid/widget/ImageView;
+
+    invoke-virtual {v0}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    const/4 v1, -0x1
+
+    iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpHighlightHintView;->mIconView:Landroid/widget/ImageView;
+
+    invoke-virtual {v0}, Landroid/widget/ImageView;->requestLayout()V
 
     :cond_2
+    iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpHighlightHintView;->mContainer:Landroid/view/ViewGroup;
+
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getBackground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/drawable/GradientDrawable;
+
+    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpHighlightHintView;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    sget v1, Lcom/android/systemui/R$dimen;->highlight_hint_bg_radius:I
+
+    invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p0
+
+    int-to-float p0, p0
+
+    invoke-virtual {v0, p0}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadius(F)V
+
+    :cond_3
     return-void
 .end method
 
@@ -949,6 +1014,8 @@
 
 .method public onDensityOrFontScaleChanged()V
     .locals 0
+
+    invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpHighlightHintView;->updateLayout()V
 
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpHighlightHintView;->updateHint()V
 

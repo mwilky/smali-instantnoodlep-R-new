@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier$HideAodModeRunnable;,
         Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier$PressModeRunnable;,
         Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier$DimModeNotifyRunnable;,
         Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier$AodModeNotifyRunnable;
@@ -27,6 +28,8 @@
 .field private mDimModeNotifyRunnable:Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier$DimModeNotifyRunnable;
 
 .field private mHandler:Landroid/os/Handler;
+
+.field private mHideAodModeRunnable:Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier$HideAodModeRunnable;
 
 .field private final mOIMCServiceManager:Lcom/oneplus/core/oimc/OIMCServiceManager;
 
@@ -136,7 +139,7 @@
     :goto_0
     new-instance p1, Landroid/os/HandlerThread;
 
-    const/4 v2, -0x8
+    const/16 v2, -0xa
 
     invoke-direct {p1, v0, v2}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;I)V
 
@@ -169,6 +172,12 @@
     invoke-direct {p1, p0}, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier$PressModeRunnable;-><init>(Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;)V
 
     iput-object p1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->mPressModeRunnable:Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier$PressModeRunnable;
+
+    new-instance p1, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier$HideAodModeRunnable;
+
+    invoke-direct {p1, p0}, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier$HideAodModeRunnable;-><init>(Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;)V
+
+    iput-object p1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->mHideAodModeRunnable:Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier$HideAodModeRunnable;
 
     return-void
 .end method
@@ -272,6 +281,22 @@
     iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->mHandler:Landroid/os/Handler;
 
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->mDimModeNotifyRunnable:Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier$DimModeNotifyRunnable;
+
+    invoke-virtual {p1, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public notifyHideAodMode(I)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->mHideAodModeRunnable:Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier$HideAodModeRunnable;
+
+    invoke-virtual {v0, p1}, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier$HideAodModeRunnable;->setMode(I)V
+
+    iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->mHandler:Landroid/os/Handler;
+
+    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->mHideAodModeRunnable:Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier$HideAodModeRunnable;
 
     invoke-virtual {p1, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

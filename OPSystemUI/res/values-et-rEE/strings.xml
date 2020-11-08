@@ -204,6 +204,9 @@ Mobiilse kuupunkti tellimuse tühistamiseks külastage veebisaiti My Verizon võ
     <string name="overheat_notification_resume">Telefoni temperatuur on nüüd normikohane ja telefoni saab jälle tavapäraselt kasutada</string>
     <string name="overheat_notification_title_resume">Telefoni temperatuur on normikohane</string>
     <string name="overheat_toast_content">Telefon on liiga kuum ning temperatuuri alandamiseks lülitatakse suure energiatarbega funktsioonid välja</string>
+    <string name="permission_btn_text_denied">Välju</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Lubade avaldus</string>
     <string name="prevent_view_title">Taskurežiim on sees</string>
     <string name="prevent_view_title_cancel">Telefoni aktiveerimiseks toimige järgmiselt.</string>
     <string name="prevent_view_top_tag_cancel">Ärge katke telefoni sinist ala kinni, puhastage see mustusest ja tolmust.</string>

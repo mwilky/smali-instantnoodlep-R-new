@@ -28,6 +28,8 @@
 
 .field protected mDialogRowContainer:Landroid/view/ViewGroup;
 
+.field protected mDialogRowContainerBottom:Landroid/view/ViewGroup;
+
 .field protected mDialogUpper:Landroid/view/ViewGroup;
 
 .field protected mFirstTimeInitDialog:Z
@@ -1109,10 +1111,33 @@
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
+    move-result v1
+
+    iput v1, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mThemeButtonBg:I
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isREDVersion()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    sget v1, Lcom/android/systemui/R$drawable;->volume_dialog_bg_red_dark:I
+
+    iput v1, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mThemeColorDialogBackground:I
+
+    const/4 v1, 0x0
+
+    iput v1, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mThemeColorDialogRowContainerBackground:I
+
+    sget v1, Lcom/android/systemui/R$color;->op_turquoise:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
+
     move-result v0
 
-    iput v0, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mThemeButtonBg:I
+    iput v0, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mThemeColorIcon:I
 
+    :cond_0
     return-void
 .end method
 
@@ -2369,6 +2394,14 @@
     iget-object v0, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mDialogUpper:Landroid/view/ViewGroup;
 
     if-eqz v0, :cond_4
+
+    iget-boolean v2, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mOpForceExpandState:Z
+
+    if-nez v2, :cond_4
+
+    iget-boolean v2, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mIsExpandAnimDone:Z
+
+    if-eqz v2, :cond_4
 
     invoke-virtual {v0, v1, v1}, Landroid/view/ViewGroup;->measure(II)V
 

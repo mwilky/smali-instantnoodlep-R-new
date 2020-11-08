@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oneplus/battery/OpSWarpChargingView;->genWarpAnimation()V
+    value = Lcom/oneplus/battery/OpSWarpChargingView;->getChargeAnimation()Landroid/animation/AnimatorSet;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -35,7 +35,7 @@
 
 # virtual methods
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 0
+    .locals 1
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
@@ -47,13 +47,21 @@
 
     move-result p1
 
+    iget-object v0, p0, Lcom/oneplus/battery/OpSWarpChargingView$12;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
+
+    invoke-static {v0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$100(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setScaleX(F)V
+
     iget-object p0, p0, Lcom/oneplus/battery/OpSWarpChargingView$12;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
 
-    invoke-static {p0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2200(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/widget/LinearLayout;
+    invoke-static {p0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$100(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/view/View;
 
     move-result-object p0
 
-    invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->setTranslationY(F)V
+    invoke-virtual {p0, p1}, Landroid/view/View;->setScaleY(F)V
 
     return-void
 .end method
