@@ -53,6 +53,8 @@
 
 .field private final mDynamic:Landroid/util/SparseBooleanArray;
 
+.field private mFromTooltip:Z
+
 .field private final mHandler:Lcom/android/systemui/volume/VolumeDialogImpl$H;
 
 .field private mHasSeenODICaptionsTooltip:Z
@@ -62,6 +64,8 @@
 .field private mIsAnimatingDismiss:Z
 
 .field private mIsCaptionComponentEnabled:Z
+
+.field private mIsOpZenModeOn:Z
 
 .field private final mKeyguard:Landroid/app/KeyguardManager;
 
@@ -650,7 +654,15 @@
     return p1
 .end method
 
-.method static synthetic access$4200(Lcom/android/systemui/volume/VolumeDialogImpl;ZZ)V
+.method static synthetic access$4202(Lcom/android/systemui/volume/VolumeDialogImpl;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mFromTooltip:Z
+
+    return p1
+.end method
+
+.method static synthetic access$4300(Lcom/android/systemui/volume/VolumeDialogImpl;ZZ)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/android/systemui/volume/VolumeDialogImpl;->updateODICaptionsH(ZZ)V
@@ -658,7 +670,7 @@
     return-void
 .end method
 
-.method static synthetic access$4300(Lcom/android/systemui/volume/VolumeDialogImpl;IZ)V
+.method static synthetic access$4400(Lcom/android/systemui/volume/VolumeDialogImpl;IZ)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/android/systemui/volume/VolumeDialogImpl;->setStreamImportantH(IZ)V
@@ -666,7 +678,7 @@
     return-void
 .end method
 
-.method static synthetic access$4400(Lcom/android/systemui/volume/VolumeDialogImpl;)Lcom/android/systemui/plugins/VolumeDialogController$State;
+.method static synthetic access$4500(Lcom/android/systemui/volume/VolumeDialogImpl;)Lcom/android/systemui/plugins/VolumeDialogController$State;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mState:Lcom/android/systemui/plugins/VolumeDialogController$State;
@@ -674,7 +686,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$4500(Lcom/android/systemui/volume/VolumeDialogImpl;)Z
+.method static synthetic access$4600(Lcom/android/systemui/volume/VolumeDialogImpl;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mShowing:Z
@@ -682,7 +694,7 @@
     return p0
 .end method
 
-.method static synthetic access$4600(Landroid/widget/SeekBar;I)I
+.method static synthetic access$4700(Landroid/widget/SeekBar;I)I
     .locals 0
 
     invoke-static {p0, p1}, Lcom/android/systemui/volume/VolumeDialogImpl;->getImpliedLevel(Landroid/widget/SeekBar;I)I
@@ -1644,6 +1656,18 @@
 
     iget-object v1, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mDialog:Lcom/android/systemui/volume/VolumeDialogImpl$CustomDialog;
 
+    sget v3, Lcom/android/systemui/R$id;->volume_dialog_row_container_bottom:I
+
+    invoke-virtual {v1, v3}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/ViewGroup;
+
+    iput-object v1, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mDialogRowContainerBottom:Landroid/view/ViewGroup;
+
+    iget-object v1, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mDialog:Lcom/android/systemui/volume/VolumeDialogImpl$CustomDialog;
+
     sget v3, Lcom/android/systemui/R$id;->volume_dialog_rows:I
 
     invoke-virtual {v1, v3}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
@@ -1774,6 +1798,14 @@
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-boolean v4, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mIsCaptionComponentEnabled:Z
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v4, ", mIsOpZenModeOn:"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v4, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mIsOpZenModeOn:Z
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -3397,7 +3429,7 @@
 
     iget-object p1, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
 
-    const v3, 0x1040819
+    const v3, 0x104081b
 
     invoke-virtual {p1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -3447,7 +3479,7 @@
     :cond_2
     iget-object p1, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
 
-    const v3, 0x1040818
+    const v3, 0x104081a
 
     invoke-virtual {p1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -4333,7 +4365,7 @@
 .end method
 
 .method private updateODICaptionsH(ZZ)V
-    .locals 2
+    .locals 3
 
     iget-object v0, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mODICaptionsView:Landroid/view/ViewGroup;
 
@@ -4344,9 +4376,39 @@
     invoke-virtual {p0}, Lcom/oneplus/volume/OpVolumeDialogImpl;->updateODIRelatedLayout()V
 
     :cond_0
+    sget-object v0, Lcom/android/systemui/volume/VolumeDialogImpl;->TAG:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v2, "updateODICaptionsH, isServiceComponentEnabled:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v2, ", mIsOpZenModeOn:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v2, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mIsOpZenModeOn:Z
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
     iget-object v0, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mODICaptionsView:Landroid/view/ViewGroup;
 
     if-eqz p1, :cond_1
+
+    iget-boolean v1, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mIsOpZenModeOn:Z
+
+    if-nez v1, :cond_1
 
     const/4 v1, 0x0
 
@@ -6827,25 +6889,44 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
+    iget-object v0, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mDialogRowContainerBottom:Landroid/view/ViewGroup;
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x8
+
+    if-eqz v0, :cond_2
+
+    iget-boolean v3, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mIsOpZenModeOn:Z
+
+    if-eqz v3, :cond_1
+
+    move v3, v2
+
+    goto :goto_0
+
+    :cond_1
+    move v3, v1
+
+    :goto_0
+    invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->setVisibility(I)V
+
+    :cond_2
     iget-object v0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mSettingsView:Landroid/view/View;
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v3, 0x0
 
-    const-wide/16 v3, 0x113
+    const-wide/16 v5, 0x113
 
-    const/4 v5, 0x0
+    const v7, 0x3ecccccd    # 0.4f
 
-    const v6, 0x3ecccccd    # 0.4f
+    const/high16 v8, 0x3f000000    # 0.5f
 
-    const/high16 v7, 0x3f000000    # 0.5f
+    const/4 v9, 0x0
 
-    const/4 v8, 0x0
+    const/high16 v10, 0x3f800000    # 1.0f
 
-    const/high16 v9, 0x3f800000    # 1.0f
-
-    const/16 v10, 0x8
-
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_b
 
     iget-object v0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mDeviceProvisionedController:Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;
 
@@ -6853,7 +6934,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_3
 
     iget-object v0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mActivityManager:Landroid/app/ActivityManager;
 
@@ -6861,23 +6942,23 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_3
 
     iget-boolean v0, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mOpForceExpandState:Z
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_3
 
-    move v0, v5
+    move v0, v1
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_1
-    move v0, v10
+    :cond_3
+    move v0, v2
 
-    :goto_0
+    :goto_1
     sget-boolean v11, Lcom/oneplus/util/OpUtils;->DEBUG_ONEPLUS:Z
 
-    if-eqz v11, :cond_2
+    if-eqz v11, :cond_4
 
     sget-object v11, Lcom/android/systemui/volume/VolumeDialogImpl;->TAG:Ljava/lang/String;
 
@@ -6905,75 +6986,75 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_2
+    :cond_4
     iget v11, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mTargetBottomSettingsIconVisible:I
 
-    if-eq v11, v0, :cond_7
+    if-eq v11, v0, :cond_9
 
     iput v0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mTargetBottomSettingsIconVisible:I
 
-    if-nez v0, :cond_3
+    if-nez v0, :cond_5
 
     iget-object v11, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mSettingsView:Landroid/view/View;
 
-    invoke-virtual {v11, v5}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v11, v1}, Landroid/view/View;->setVisibility(I)V
 
-    :cond_3
+    :cond_5
     iget-object v11, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mSettingsView:Landroid/view/View;
 
     invoke-virtual {v11}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v11
 
-    if-ne v0, v10, :cond_4
+    if-ne v0, v2, :cond_6
 
-    move v12, v8
-
-    goto :goto_1
-
-    :cond_4
     move v12, v9
 
-    :goto_1
+    goto :goto_2
+
+    :cond_6
+    move v12, v10
+
+    :goto_2
     invoke-virtual {v11, v12}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v11
 
-    if-ne v0, v10, :cond_5
+    if-ne v0, v2, :cond_7
 
-    move v12, v7
+    move v12, v8
 
-    goto :goto_2
+    goto :goto_3
 
-    :cond_5
-    move v12, v9
+    :cond_7
+    move v12, v10
 
-    :goto_2
+    :goto_3
     invoke-virtual {v11, v12}, Landroid/view/ViewPropertyAnimator;->scaleX(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v11
 
-    if-ne v0, v10, :cond_6
+    if-ne v0, v2, :cond_8
 
-    move v12, v7
+    move v12, v8
 
-    goto :goto_3
+    goto :goto_4
 
-    :cond_6
-    move v12, v9
+    :cond_8
+    move v12, v10
 
-    :goto_3
+    :goto_4
     invoke-virtual {v11, v12}, Landroid/view/ViewPropertyAnimator;->scaleY(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v11
 
-    invoke-virtual {v11, v3, v4}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v11, v5, v6}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v11
 
     new-instance v12, Landroid/view/animation/PathInterpolator;
 
-    invoke-direct {v12, v6, v8, v6, v9}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
+    invoke-direct {v12, v7, v9, v7, v10}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
 
     invoke-virtual {v11, v12}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
@@ -6987,34 +7068,34 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v1, v2}, Landroid/view/ViewPropertyAnimator;->setStartDelay(J)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v0, v3, v4}, Landroid/view/ViewPropertyAnimator;->setStartDelay(J)Landroid/view/ViewPropertyAnimator;
 
-    goto :goto_5
+    goto :goto_6
 
-    :cond_7
+    :cond_9
     iget-object v11, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mSettingsView:Landroid/view/View;
 
     invoke-virtual {v11, v0}, Landroid/view/View;->setVisibility(I)V
 
     iget-object v11, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mSettingsView:Landroid/view/View;
 
-    if-ne v0, v10, :cond_8
+    if-ne v0, v2, :cond_a
 
-    move v0, v8
-
-    goto :goto_4
-
-    :cond_8
     move v0, v9
 
-    :goto_4
+    goto :goto_5
+
+    :cond_a
+    move v0, v10
+
+    :goto_5
     invoke-virtual {v11, v0}, Landroid/view/View;->setAlpha(F)V
 
-    :cond_9
-    :goto_5
+    :cond_b
+    :goto_6
     iget-object v0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mSettingsIcon:Landroid/widget/ImageButton;
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_c
 
     new-instance v11, Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$yhKa93yBvDMghPsrninv77nitIM;
 
@@ -7022,91 +7103,91 @@
 
     invoke-virtual {v0, v11}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    :cond_a
+    :cond_c
     iget-object v0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mSettingsBackView:Landroid/view/View;
 
-    if-eqz v0, :cond_12
+    if-eqz v0, :cond_14
 
     iget-boolean v0, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mOpForceExpandState:Z
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_d
 
-    move v0, v5
+    move v0, v1
 
-    goto :goto_6
+    goto :goto_7
 
-    :cond_b
-    move v0, v10
+    :cond_d
+    move v0, v2
 
-    :goto_6
+    :goto_7
     iget v11, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mTargetBottomSettingsBackIconVisible:I
 
-    if-eq v11, v0, :cond_10
+    if-eq v11, v0, :cond_12
 
     iput v0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mTargetBottomSettingsBackIconVisible:I
 
-    if-nez v0, :cond_c
+    if-nez v0, :cond_e
 
     iget-object v11, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mSettingsBackView:Landroid/view/View;
 
-    invoke-virtual {v11, v5}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v11, v1}, Landroid/view/View;->setVisibility(I)V
 
-    :cond_c
+    :cond_e
     iget-object v11, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mSettingsBackView:Landroid/view/View;
 
     invoke-virtual {v11}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v11
 
-    if-ne v0, v10, :cond_d
+    if-ne v0, v2, :cond_f
 
-    move v12, v8
-
-    goto :goto_7
-
-    :cond_d
     move v12, v9
 
-    :goto_7
+    goto :goto_8
+
+    :cond_f
+    move v12, v10
+
+    :goto_8
     invoke-virtual {v11, v12}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v11
 
-    if-ne v0, v10, :cond_e
+    if-ne v0, v2, :cond_10
 
-    move v12, v7
+    move v12, v8
 
-    goto :goto_8
+    goto :goto_9
 
-    :cond_e
-    move v12, v9
+    :cond_10
+    move v12, v10
 
-    :goto_8
+    :goto_9
     invoke-virtual {v11, v12}, Landroid/view/ViewPropertyAnimator;->scaleX(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v11
 
-    if-ne v0, v10, :cond_f
+    if-ne v0, v2, :cond_11
 
-    move v12, v7
+    move v12, v8
 
-    goto :goto_9
+    goto :goto_a
 
-    :cond_f
-    move v12, v9
+    :cond_11
+    move v12, v10
 
-    :goto_9
+    :goto_a
     invoke-virtual {v11, v12}, Landroid/view/ViewPropertyAnimator;->scaleY(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v11
 
-    invoke-virtual {v11, v3, v4}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v11, v5, v6}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v11
 
     new-instance v12, Landroid/view/animation/PathInterpolator;
 
-    invoke-direct {v12, v6, v8, v6, v9}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
+    invoke-direct {v12, v7, v9, v7, v10}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
 
     invoke-virtual {v11, v12}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
@@ -7120,40 +7201,40 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v1, v2}, Landroid/view/ViewPropertyAnimator;->setStartDelay(J)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v0, v3, v4}, Landroid/view/ViewPropertyAnimator;->setStartDelay(J)Landroid/view/ViewPropertyAnimator;
 
-    goto :goto_b
+    goto :goto_c
 
-    :cond_10
+    :cond_12
     iget-object v11, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mSettingsBackView:Landroid/view/View;
 
     invoke-virtual {v11, v0}, Landroid/view/View;->setVisibility(I)V
 
     iget-object v11, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mSettingsBackView:Landroid/view/View;
 
-    if-ne v0, v10, :cond_11
+    if-ne v0, v2, :cond_13
 
-    move v0, v8
-
-    goto :goto_a
-
-    :cond_11
     move v0, v9
 
-    :goto_a
+    goto :goto_b
+
+    :cond_13
+    move v0, v10
+
+    :goto_b
     invoke-virtual {v11, v0}, Landroid/view/View;->setAlpha(F)V
 
-    :cond_12
-    :goto_b
+    :cond_14
+    :goto_c
     iget-object v0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mSettingsBackIcon:Landroid/widget/ImageButton;
 
-    if-eqz v0, :cond_14
+    if-eqz v0, :cond_16
 
     invoke-direct {p0}, Lcom/android/systemui/volume/VolumeDialogImpl;->isLandscape()Z
 
     move-result v0
 
-    if-eqz v0, :cond_13
+    if-eqz v0, :cond_15
 
     iget-object v0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mSettingsBackIcon:Landroid/widget/ImageButton;
 
@@ -7161,14 +7242,14 @@
 
     invoke-virtual {v0, v11}, Landroid/widget/ImageButton;->setRotation(F)V
 
-    goto :goto_c
+    goto :goto_d
 
-    :cond_13
+    :cond_15
     iget-object v0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mSettingsBackIcon:Landroid/widget/ImageButton;
 
-    invoke-virtual {v0, v8}, Landroid/widget/ImageButton;->setRotation(F)V
+    invoke-virtual {v0, v9}, Landroid/widget/ImageButton;->setRotation(F)V
 
-    :goto_c
+    :goto_d
     iget-object v0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mSettingsBackIcon:Landroid/widget/ImageButton;
 
     new-instance v11, Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$_tPh_IeO5Q_gkFTTSsZazreKzHw;
@@ -7177,26 +7258,26 @@
 
     invoke-virtual {v0, v11}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    :cond_14
+    :cond_16
     iget-object v0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mSettingsOpSettingsView:Landroid/view/View;
 
-    if-eqz v0, :cond_1d
+    if-eqz v0, :cond_1f
 
     iget-boolean v0, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mOpForceExpandState:Z
 
-    if-eqz v0, :cond_15
+    if-eqz v0, :cond_17
 
-    goto :goto_d
+    goto :goto_e
 
-    :cond_15
-    move v5, v10
+    :cond_17
+    move v1, v2
 
-    :goto_d
+    :goto_e
     iget v0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mTargetBottomSettingsOpSettingsIconVisible:I
 
-    if-eq v0, v5, :cond_1b
+    if-eq v0, v1, :cond_1d
 
-    iput v5, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mTargetBottomSettingsOpSettingsIconVisible:I
+    iput v1, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mTargetBottomSettingsOpSettingsIconVisible:I
 
     iget-object v0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mSettingsOpSettingsView:Landroid/view/View;
 
@@ -7204,117 +7285,117 @@
 
     move-result-object v0
 
-    if-ne v5, v10, :cond_16
+    if-ne v1, v2, :cond_18
 
-    move v11, v8
-
-    goto :goto_e
-
-    :cond_16
     move v11, v9
 
-    :goto_e
+    goto :goto_f
+
+    :cond_18
+    move v11, v10
+
+    :goto_f
     invoke-virtual {v0, v11}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
-    if-ne v5, v10, :cond_17
+    if-ne v1, v2, :cond_19
 
-    move v11, v7
+    move v11, v8
 
-    goto :goto_f
+    goto :goto_10
 
-    :cond_17
-    move v11, v9
+    :cond_19
+    move v11, v10
 
-    :goto_f
+    :goto_10
     invoke-virtual {v0, v11}, Landroid/view/ViewPropertyAnimator;->scaleX(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
-    if-ne v5, v10, :cond_18
-
-    goto :goto_10
-
-    :cond_18
-    move v7, v9
-
-    :goto_10
-    invoke-virtual {v0, v7}, Landroid/view/ViewPropertyAnimator;->scaleY(F)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v0
-
-    iget-boolean v7, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mOpForceExpandState:Z
-
-    if-eqz v7, :cond_19
+    if-ne v1, v2, :cond_1a
 
     goto :goto_11
 
-    :cond_19
-    const-wide/16 v3, 0x78
+    :cond_1a
+    move v8, v10
 
     :goto_11
-    invoke-virtual {v0, v3, v4}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v0, v8}, Landroid/view/ViewPropertyAnimator;->scaleY(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
-    new-instance v3, Landroid/view/animation/PathInterpolator;
+    iget-boolean v2, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mOpForceExpandState:Z
 
-    invoke-direct {v3, v6, v8, v6, v9}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
-
-    invoke-virtual {v0, v3}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v0
-
-    new-instance v3, Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$3q1KL3g4O5A3gVZ4JD2dByVrkNI;
-
-    invoke-direct {v3, p0, v5}, Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$3q1KL3g4O5A3gVZ4JD2dByVrkNI;-><init>(Lcom/android/systemui/volume/VolumeDialogImpl;I)V
-
-    invoke-virtual {v0, v3}, Landroid/view/ViewPropertyAnimator;->withStartAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v0
-
-    new-instance v3, Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$3i1zvcqG_4mrqN_GeZ7K60UeisA;
-
-    invoke-direct {v3, p0, v5}, Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$3i1zvcqG_4mrqN_GeZ7K60UeisA;-><init>(Lcom/android/systemui/volume/VolumeDialogImpl;I)V
-
-    invoke-virtual {v0, v3}, Landroid/view/ViewPropertyAnimator;->withEndAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v0
-
-    iget-boolean v3, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mOpForceExpandState:Z
-
-    if-eqz v3, :cond_1a
-
-    const-wide/16 v1, 0x5b
-
-    :cond_1a
-    invoke-virtual {v0, v1, v2}, Landroid/view/ViewPropertyAnimator;->setStartDelay(J)Landroid/view/ViewPropertyAnimator;
-
-    goto :goto_13
-
-    :cond_1b
-    iget-object v0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mSettingsOpSettingsView:Landroid/view/View;
-
-    invoke-virtual {v0, v5}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mSettingsOpSettingsView:Landroid/view/View;
-
-    if-ne v5, v10, :cond_1c
+    if-eqz v2, :cond_1b
 
     goto :goto_12
 
-    :cond_1c
-    move v8, v9
+    :cond_1b
+    const-wide/16 v5, 0x78
 
     :goto_12
-    invoke-virtual {v0, v8}, Landroid/view/View;->setAlpha(F)V
+    invoke-virtual {v0, v5, v6}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v0
+
+    new-instance v2, Landroid/view/animation/PathInterpolator;
+
+    invoke-direct {v2, v7, v9, v7, v10}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
+
+    invoke-virtual {v0, v2}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v0
+
+    new-instance v2, Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$3q1KL3g4O5A3gVZ4JD2dByVrkNI;
+
+    invoke-direct {v2, p0, v1}, Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$3q1KL3g4O5A3gVZ4JD2dByVrkNI;-><init>(Lcom/android/systemui/volume/VolumeDialogImpl;I)V
+
+    invoke-virtual {v0, v2}, Landroid/view/ViewPropertyAnimator;->withStartAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v0
+
+    new-instance v2, Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$3i1zvcqG_4mrqN_GeZ7K60UeisA;
+
+    invoke-direct {v2, p0, v1}, Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$3i1zvcqG_4mrqN_GeZ7K60UeisA;-><init>(Lcom/android/systemui/volume/VolumeDialogImpl;I)V
+
+    invoke-virtual {v0, v2}, Landroid/view/ViewPropertyAnimator;->withEndAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v0
+
+    iget-boolean v1, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mOpForceExpandState:Z
+
+    if-eqz v1, :cond_1c
+
+    const-wide/16 v3, 0x5b
+
+    :cond_1c
+    invoke-virtual {v0, v3, v4}, Landroid/view/ViewPropertyAnimator;->setStartDelay(J)Landroid/view/ViewPropertyAnimator;
+
+    goto :goto_14
 
     :cond_1d
+    iget-object v0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mSettingsOpSettingsView:Landroid/view/View;
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object v0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mSettingsOpSettingsView:Landroid/view/View;
+
+    if-ne v1, v2, :cond_1e
+
+    goto :goto_13
+
+    :cond_1e
+    move v9, v10
+
     :goto_13
+    invoke-virtual {v0, v9}, Landroid/view/View;->setAlpha(F)V
+
+    :cond_1f
+    :goto_14
     iget-object v0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mSettingsOpSettingsIcon:Landroid/widget/ImageButton;
 
-    if-eqz v0, :cond_1e
+    if-eqz v0, :cond_20
 
     new-instance v1, Lcom/android/systemui/volume/-$$Lambda$VolumeDialogImpl$vFGDLS9dLMW9Hn6QccZRosNtBGU;
 
@@ -7322,7 +7403,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    :cond_1e
+    :cond_20
     return-void
 .end method
 
@@ -7512,6 +7593,20 @@
 .method protected onStateChangedH(Lcom/android/systemui/plugins/VolumeDialogController$State;)V
     .locals 10
 
+    const-class v0, Lcom/oneplus/scene/OpSceneModeObserver;
+
+    invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oneplus/scene/OpSceneModeObserver;
+
+    invoke-virtual {v0}, Lcom/oneplus/scene/OpSceneModeObserver;->isInBrickMode()Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mIsOpZenModeOn:Z
+
     sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
     const-string v1, "onStateChangedH() state: "
@@ -7531,6 +7626,14 @@
     move-result-object v3
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, ", mIsOpZenModeOn:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v3, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mIsOpZenModeOn:Z
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -7726,6 +7829,12 @@
 
     :cond_7
     invoke-virtual {p0}, Lcom/android/systemui/volume/VolumeDialogImpl;->updateRingerH()V
+
+    iget-boolean p1, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mIsCaptionComponentEnabled:Z
+
+    iget-boolean v0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mFromTooltip:Z
+
+    invoke-direct {p0, p1, v0}, Lcom/android/systemui/volume/VolumeDialogImpl;->updateODICaptionsH(ZZ)V
 
     iget-object p1, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mWindow:Landroid/view/Window;
 

@@ -1415,6 +1415,9 @@ Du är även ansluten till ett VPN som kan övervaka nätverksaktivitet."</strin
     <string name="overheat_toast_content">Telefonens temperatur är för hög och funktioner med hög energiförbrukning har stängts av för att sänka temperaturen</string>
     <string name="overlay_display_devices_title">Simulera sekundär skärm</string>
     <string name="overview">Översikt</string>
+    <string name="permission_btn_text_denied">Avsluta</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Tillåtelseförklaring</string>
     <string name="phone_hint">Svep från ikonen och öppna telefonen</string>
     <string name="phone_label">öppna mobilen</string>
     <string name="picture_color_mode">Färgläge för bilder</string>

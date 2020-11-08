@@ -39,7 +39,7 @@
 
     move-result-object p1
 
-    sget p2, Lcom/android/systemui/R$color;->global_actions_emergency_background:I
+    sget p2, Lcom/android/systemui/R$color;->op_control_state_color_error_dark:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -55,7 +55,7 @@
 
     move-result-object p1
 
-    sget p2, Lcom/android/systemui/R$color;->global_actions_emergency_text:I
+    sget p2, Lcom/android/systemui/R$color;->op_control_text_color_primary_dark:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -71,9 +71,19 @@
 
     invoke-virtual {p2, p1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    const/4 p3, 0x1
+    const/4 p1, 0x1
 
-    invoke-virtual {p2, p3}, Landroid/widget/TextView;->setSelected(Z)V
+    invoke-virtual {p2, p1}, Landroid/widget/TextView;->setSelected(Z)V
+
+    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    sget p2, Lcom/android/systemui/R$color;->op_control_icon_color_active_dark:I
+
+    invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result p1
 
     const p2, 0x1020006
 

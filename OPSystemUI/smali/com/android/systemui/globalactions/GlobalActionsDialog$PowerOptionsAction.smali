@@ -21,30 +21,6 @@
 .field final synthetic this$0:Lcom/android/systemui/globalactions/GlobalActionsDialog;
 
 
-# direct methods
-.method private constructor <init>(Lcom/android/systemui/globalactions/GlobalActionsDialog;)V
-    .locals 2
-
-    iput-object p1, p0, Lcom/android/systemui/globalactions/GlobalActionsDialog$PowerOptionsAction;->this$0:Lcom/android/systemui/globalactions/GlobalActionsDialog;
-
-    sget v0, Lcom/android/systemui/R$drawable;->ic_settings_power:I
-
-    const v1, 0x1040384
-
-    invoke-direct {p0, p1, v0, v1}, Lcom/android/systemui/globalactions/GlobalActionsDialog$SinglePressAction;-><init>(Lcom/android/systemui/globalactions/GlobalActionsDialog;II)V
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Lcom/android/systemui/globalactions/GlobalActionsDialog;Lcom/android/systemui/globalactions/GlobalActionsDialog$1;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/systemui/globalactions/GlobalActionsDialog$PowerOptionsAction;-><init>(Lcom/android/systemui/globalactions/GlobalActionsDialog;)V
-
-    return-void
-.end method
-
-
 # virtual methods
 .method public onPress()V
     .locals 0

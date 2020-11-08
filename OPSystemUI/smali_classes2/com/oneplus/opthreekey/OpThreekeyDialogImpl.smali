@@ -35,6 +35,8 @@
 
 .field private final mHandler:Lcom/oneplus/opthreekey/OpThreekeyDialogImpl$H;
 
+.field private mIsREDVersion:Z
+
 .field private mListener:Lcom/oneplus/opthreekey/OpThreekeyDialog$UserActivityListener;
 
 .field private mOpZenModeController:Lcom/oneplus/opzenmode/OpZenModeController;
@@ -107,6 +109,8 @@
     iput v0, p0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mAccentColor:I
 
     iput v0, p0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThemeColorMode:I
+
+    iput-boolean v0, p0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mIsREDVersion:Z
 
     iput-object p1, p0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mContext:Landroid/content/Context;
 
@@ -306,9 +310,13 @@
 
     invoke-direct {p0, v0, p2, p3}, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->getTheekeyCornerRadii(Landroid/content/Context;ZI)[F
 
-    move-result-object p0
+    move-result-object p2
 
-    invoke-virtual {p1, p0}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadii([F)V
+    invoke-virtual {p1, p2}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadii([F)V
+
+    iget p0, p0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThemeBgColor:I
+
+    invoke-virtual {p1, p0}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
 
     return-object p1
 .end method
@@ -1006,10 +1014,6 @@
     return-void
 
     :cond_1
-    const/4 p1, 0x0
-
-    invoke-direct {p0, p1}, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->updateTheme(Z)V
-
     invoke-direct {p0, v0}, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->registerOrientationListener(Z)V
 
     invoke-direct {p0}, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->checkOrientationType()V
@@ -1095,7 +1099,7 @@
 .end method
 
 .method private updateTheme(Z)V
-    .locals 6
+    .locals 7
 
     iget-object v0, p0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mContext:Landroid/content/Context;
 
@@ -1109,60 +1113,84 @@
 
     move-result v1
 
-    iget v2, p0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThemeColorMode:I
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isREDVersion()Z
 
-    if-ne v2, v0, :cond_1
+    move-result v2
 
-    iget v2, p0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mAccentColor:I
+    iget v3, p0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThemeColorMode:I
 
-    if-eq v2, v1, :cond_0
+    if-ne v3, v0, :cond_1
+
+    iget v3, p0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mAccentColor:I
+
+    if-ne v3, v1, :cond_1
+
+    iget-boolean v3, p0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mIsREDVersion:Z
+
+    if-eq v3, v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
     goto :goto_1
 
     :cond_1
     :goto_0
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
     :goto_1
-    sget-boolean v3, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->DEBUG:Z
+    sget-boolean v4, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->DEBUG:Z
 
-    if-eqz v3, :cond_2
+    if-eqz v4, :cond_2
 
-    sget-object v3, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->TAG:Ljava/lang/String;
+    sget-object v4, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->TAG:Ljava/lang/String;
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "updateTheme change"
+    const-string v6, "updateTheme change:"
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v5, " force:"
+    const-string v6, " force:"
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v6, ", mIsREDVersion:"
 
-    move-result-object v4
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    iget-boolean v6, p0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mIsREDVersion:Z
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v6, ", isREDVersion:"
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
-    if-nez v2, :cond_3
+    if-nez v3, :cond_3
 
     if-eqz p1, :cond_4
 
     :cond_3
+    iput-boolean v2, p0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mIsREDVersion:Z
+
     iput v0, p0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThemeColorMode:I
 
     iput v1, p0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mAccentColor:I
@@ -1194,115 +1222,117 @@
     return-void
 
     :cond_1
-    sget v2, Lcom/android/systemui/R$dimen;->op_threekey_dialog_inner_height:I
+    const/4 v2, 0x0
 
-    const/16 v3, 0x438
+    invoke-direct {v0, v2}, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->updateTheme(Z)V
 
-    invoke-static {v1, v2, v3}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+    sget v3, Lcom/android/systemui/R$dimen;->op_threekey_dialog_inner_height:I
 
-    move-result v2
+    const/16 v4, 0x438
 
-    sget v4, Lcom/android/systemui/R$dimen;->op_threekey_dialog_icon_out_width:I
+    invoke-static {v1, v3, v4}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
 
-    invoke-static {v1, v4, v3}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+    move-result v3
 
-    move-result v4
+    sget v5, Lcom/android/systemui/R$dimen;->op_threekey_dialog_icon_out_width:I
 
-    sget v5, Lcom/android/systemui/R$dimen;->op_threekey_dialog_icon_size:I
-
-    invoke-static {v1, v5, v3}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+    invoke-static {v1, v5, v4}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
 
     move-result v5
 
-    sget v6, Lcom/android/systemui/R$dimen;->op_threekey_dialog_text_size:I
+    sget v6, Lcom/android/systemui/R$dimen;->op_threekey_dialog_icon_size:I
 
-    invoke-static {v1, v6, v3}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+    invoke-static {v1, v6, v4}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
 
     move-result v6
 
-    iget-object v7, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mDialogView:Landroid/view/ViewGroup;
+    sget v7, Lcom/android/systemui/R$dimen;->op_threekey_dialog_text_size:I
 
-    invoke-virtual {v7}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-static {v1, v7, v4}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
 
-    move-result-object v7
+    move-result v7
 
-    iput v2, v7, Landroid/view/ViewGroup$LayoutParams;->height:I
+    iget-object v8, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mDialogView:Landroid/view/ViewGroup;
 
-    iget-object v2, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mDialogView:Landroid/view/ViewGroup;
+    invoke-virtual {v8}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    invoke-virtual {v2, v7}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    move-result-object v8
 
-    iget-object v2, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mDialog:Landroid/app/Dialog;
+    iput v3, v8, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    sget v7, Lcom/android/systemui/R$id;->threekey_icon_frame:I
+    iget-object v3, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mDialogView:Landroid/view/ViewGroup;
 
-    invoke-virtual {v2, v7}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v3, v8}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    move-result-object v2
+    iget-object v3, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mDialog:Landroid/app/Dialog;
 
-    check-cast v2, Landroid/widget/FrameLayout;
+    sget v8, Lcom/android/systemui/R$id;->threekey_icon_frame:I
 
-    invoke-virtual {v2}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v3, v8}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
 
-    move-result-object v7
+    move-result-object v3
 
-    iput v4, v7, Landroid/view/ViewGroup$LayoutParams;->width:I
+    check-cast v3, Landroid/widget/FrameLayout;
 
-    invoke-virtual {v2, v7}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v3}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    iget-object v2, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThreeKeyIcon:Landroid/widget/ImageView;
+    move-result-object v8
 
-    invoke-virtual {v2}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    iput v5, v8, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    move-result-object v2
+    invoke-virtual {v3, v8}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    iput v5, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
+    iget-object v3, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThreeKeyIcon:Landroid/widget/ImageView;
 
-    iput v5, v2, Landroid/view/ViewGroup$LayoutParams;->width:I
+    invoke-virtual {v3}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    iget-object v4, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThreeKeyIcon:Landroid/widget/ImageView;
+    move-result-object v3
 
-    invoke-virtual {v4, v2}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    iput v6, v3, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    iget-object v2, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThreeKeyText:Landroid/widget/TextView;
+    iput v6, v3, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    int-to-float v4, v6
+    iget-object v5, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThreeKeyIcon:Landroid/widget/ImageView;
 
-    const/4 v6, 0x0
+    invoke-virtual {v5, v3}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-virtual {v2, v6, v4}, Landroid/widget/TextView;->setTextSize(IF)V
+    iget-object v3, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThreeKeyText:Landroid/widget/TextView;
 
-    iget-object v2, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mDialog:Landroid/app/Dialog;
+    int-to-float v5, v7
 
-    sget v4, Lcom/android/systemui/R$id;->threekey_layout_frame:I
+    invoke-virtual {v3, v2, v5}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    invoke-virtual {v2, v4}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
+    iget-object v3, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mDialog:Landroid/app/Dialog;
 
-    move-result-object v2
+    sget v5, Lcom/android/systemui/R$id;->threekey_layout_frame:I
 
-    check-cast v2, Landroid/widget/FrameLayout;
+    invoke-virtual {v3, v5}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
 
-    invoke-virtual {v2}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    move-result-object v3
 
-    move-result-object v4
+    check-cast v3, Landroid/widget/FrameLayout;
 
-    iput v5, v4, Landroid/view/ViewGroup$LayoutParams;->width:I
+    invoke-virtual {v3}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    invoke-virtual {v2, v4}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    move-result-object v5
 
-    iget-object v2, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mDialogView:Landroid/view/ViewGroup;
+    iput v6, v5, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    invoke-virtual {v2}, Landroid/view/ViewGroup;->requestLayout()V
+    invoke-virtual {v3, v5}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget-object v2, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mWindowLayoutParams:Landroid/view/WindowManager$LayoutParams;
+    iget-object v3, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mDialogView:Landroid/view/ViewGroup;
 
-    iget v4, v2, Landroid/view/WindowManager$LayoutParams;->y:I
+    invoke-virtual {v3}, Landroid/view/ViewGroup;->requestLayout()V
 
-    iget v5, v2, Landroid/view/WindowManager$LayoutParams;->x:I
+    iget-object v3, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mWindowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
-    iget v2, v2, Landroid/view/WindowManager$LayoutParams;->gravity:I
+    iget v5, v3, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    iget v2, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThreeKeystate:I
+    iget v6, v3, Landroid/view/WindowManager$LayoutParams;->x:I
+
+    iget v3, v3, Landroid/view/WindowManager$LayoutParams;->gravity:I
+
+    iget v3, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThreeKeystate:I
 
     const/4 v7, 0x3
 
@@ -1310,34 +1340,34 @@
 
     const/4 v9, 0x1
 
-    if-eq v2, v9, :cond_4
+    if-eq v3, v9, :cond_4
 
-    if-eq v2, v8, :cond_3
+    if-eq v3, v8, :cond_3
 
-    if-eq v2, v7, :cond_2
+    if-eq v3, v7, :cond_2
 
-    move v2, v6
+    move v3, v2
 
-    move v10, v2
+    move v10, v3
 
     goto :goto_0
 
     :cond_2
-    sget v2, Lcom/android/systemui/R$drawable;->op_ic_ring:I
+    sget v3, Lcom/android/systemui/R$drawable;->op_ic_ring:I
 
     sget v10, Lcom/android/systemui/R$string;->volume_footer_ring:I
 
     goto :goto_0
 
     :cond_3
-    sget v2, Lcom/android/systemui/R$drawable;->op_ic_vibrate:I
+    sget v3, Lcom/android/systemui/R$drawable;->op_ic_vibrate:I
 
     sget v10, Lcom/android/systemui/R$string;->volume_vibrate:I
 
     goto :goto_0
 
     :cond_4
-    sget v2, Lcom/android/systemui/R$drawable;->op_ic_silence:I
+    sget v3, Lcom/android/systemui/R$drawable;->op_ic_silence:I
 
     sget v10, Lcom/android/systemui/R$string;->volume_footer_slient:I
 
@@ -1350,7 +1380,7 @@
 
     if-ne v11, v9, :cond_5
 
-    move v11, v6
+    move v11, v2
 
     goto :goto_1
 
@@ -1366,360 +1396,422 @@
 
     const v15, 0x1050248
 
-    if-eq v12, v9, :cond_15
+    if-eq v12, v9, :cond_1a
 
     const/16 v16, 0x55
 
-    if-eq v12, v8, :cond_10
+    if-eq v12, v8, :cond_14
 
     const/16 v14, 0x35
 
-    if-eq v12, v7, :cond_a
+    if-eq v12, v7, :cond_d
 
     if-eqz v11, :cond_6
 
     move v13, v14
 
     :cond_6
-    sget v5, Lcom/android/systemui/R$dimen;->three_key_up_dialog_position_deep:I
+    sget v6, Lcom/android/systemui/R$dimen;->three_key_up_dialog_position_deep:I
 
-    invoke-static {v1, v5, v3}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+    invoke-static {v1, v6, v4}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
 
-    move-result v5
+    move-result v6
 
     iget v12, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThreeKeystate:I
 
-    if-ne v12, v9, :cond_7
+    if-ne v12, v9, :cond_8
 
-    sget v4, Lcom/android/systemui/R$dimen;->three_key_up_dialog_position:I
+    sget v2, Lcom/android/systemui/R$dimen;->three_key_up_dialog_position:I
 
-    invoke-static {v1, v4, v3}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+    invoke-static {v1, v2, v4}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
 
-    move-result v3
-
-    invoke-virtual {v1, v15}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v4
-
-    add-int/2addr v4, v3
-
-    sget v6, Lcom/android/systemui/R$drawable;->dialog_threekey_up_bg:I
-
-    move v8, v9
-
-    goto/16 :goto_9
-
-    :cond_7
-    if-ne v12, v8, :cond_8
-
-    sget v4, Lcom/android/systemui/R$dimen;->three_key_middle_dialog_position:I
-
-    invoke-static {v1, v4, v3}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
-
-    move-result v3
+    move-result v2
 
     invoke-virtual {v1, v15}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v4
 
-    add-int/2addr v4, v3
+    add-int v5, v2, v4
 
-    sget v6, Lcom/android/systemui/R$drawable;->dialog_threekey_middle_bg:I
+    iget-boolean v2, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mIsREDVersion:Z
 
-    goto/16 :goto_9
+    if-eqz v2, :cond_7
 
-    :cond_8
-    if-ne v12, v7, :cond_9
-
-    sget v4, Lcom/android/systemui/R$dimen;->three_key_down_dialog_position:I
-
-    invoke-static {v1, v4, v3}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
-
-    move-result v3
-
-    invoke-virtual {v1, v15}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v4
-
-    add-int/2addr v4, v3
-
-    sget v6, Lcom/android/systemui/R$drawable;->dialog_threekey_down_bg:I
-
-    move v8, v7
-
-    goto/16 :goto_9
-
-    :cond_9
-    move v8, v6
-
-    goto/16 :goto_9
-
-    :cond_a
-    if-eqz v11, :cond_b
+    sget v2, Lcom/android/systemui/R$drawable;->dialog_threekey_up_red_bg:I
 
     goto :goto_2
 
-    :cond_b
-    move/from16 v16, v14
+    :cond_7
+    sget v2, Lcom/android/systemui/R$drawable;->dialog_threekey_up_bg:I
 
     :goto_2
-    sget v4, Lcom/android/systemui/R$dimen;->three_key_up_dialog_position_deep_land:I
+    move v8, v9
 
-    invoke-static {v1, v4, v3}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+    goto/16 :goto_d
 
-    move-result v4
+    :cond_8
+    if-ne v12, v8, :cond_a
 
-    if-nez v11, :cond_c
+    sget v2, Lcom/android/systemui/R$dimen;->three_key_middle_dialog_position:I
+
+    invoke-static {v1, v2, v4}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v2
 
     invoke-virtual {v1, v15}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    move-result v6
+    move-result v4
 
-    add-int/2addr v4, v6
+    add-int v5, v2, v4
+
+    iget-boolean v2, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mIsREDVersion:Z
+
+    if-eqz v2, :cond_9
+
+    sget v2, Lcom/android/systemui/R$drawable;->dialog_threekey_middle_red_bg:I
+
+    goto/16 :goto_d
+
+    :cond_9
+    sget v2, Lcom/android/systemui/R$drawable;->dialog_threekey_middle_bg:I
+
+    goto/16 :goto_d
+
+    :cond_a
+    if-ne v12, v7, :cond_c
+
+    sget v2, Lcom/android/systemui/R$dimen;->three_key_down_dialog_position:I
+
+    invoke-static {v1, v2, v4}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v2
+
+    invoke-virtual {v1, v15}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v4
+
+    add-int v5, v2, v4
+
+    iget-boolean v2, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mIsREDVersion:Z
+
+    if-eqz v2, :cond_b
+
+    sget v2, Lcom/android/systemui/R$drawable;->dialog_threekey_down_red_bg:I
+
+    goto :goto_3
+
+    :cond_b
+    sget v2, Lcom/android/systemui/R$drawable;->dialog_threekey_down_bg:I
+
+    :goto_3
+    move v8, v7
+
+    goto/16 :goto_d
 
     :cond_c
-    iget v6, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThreeKeystate:I
+    move v8, v2
 
-    if-ne v6, v9, :cond_d
-
-    sget v5, Lcom/android/systemui/R$dimen;->three_key_up_dialog_position_l:I
-
-    invoke-static {v1, v5, v3}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
-
-    move-result v5
-
-    goto :goto_3
+    goto/16 :goto_d
 
     :cond_d
-    if-ne v6, v8, :cond_e
-
-    sget v5, Lcom/android/systemui/R$dimen;->three_key_middle_dialog_position_l:I
-
-    invoke-static {v1, v5, v3}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
-
-    move-result v5
-
-    goto :goto_3
-
-    :cond_e
-    if-ne v6, v7, :cond_f
-
-    sget v5, Lcom/android/systemui/R$dimen;->three_key_down_dialog_position_l:I
-
-    invoke-static {v1, v5, v3}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
-
-    move-result v5
-
-    :cond_f
-    :goto_3
-    sget v6, Lcom/android/systemui/R$drawable;->dialog_threekey_middle_bg:I
-
-    move/from16 v13, v16
-
-    goto/16 :goto_9
-
-    :cond_10
-    if-eqz v11, :cond_11
+    if-eqz v11, :cond_e
 
     goto :goto_4
 
-    :cond_11
-    move/from16 v14, v16
+    :cond_e
+    move/from16 v16, v14
 
     :goto_4
-    sget v5, Lcom/android/systemui/R$dimen;->three_key_up_dialog_position_deep:I
+    sget v2, Lcom/android/systemui/R$dimen;->three_key_up_dialog_position_deep_land:I
 
-    invoke-static {v1, v5, v3}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+    invoke-static {v1, v2, v4}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v2
+
+    if-nez v11, :cond_f
+
+    invoke-virtual {v1, v15}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v5
 
-    iget v6, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThreeKeystate:I
+    add-int/2addr v2, v5
 
-    if-ne v6, v9, :cond_12
+    :cond_f
+    move v5, v2
 
-    sget v4, Lcom/android/systemui/R$dimen;->three_key_up_dialog_position:I
+    iget v2, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThreeKeystate:I
 
-    invoke-static {v1, v4, v3}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+    if-ne v2, v9, :cond_10
 
-    move-result v3
+    sget v2, Lcom/android/systemui/R$dimen;->three_key_up_dialog_position_l:I
 
-    invoke-virtual {v1, v15}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v4
-
-    :goto_5
-    add-int/2addr v4, v3
-
-    goto :goto_6
-
-    :cond_12
-    if-ne v6, v8, :cond_13
-
-    sget v4, Lcom/android/systemui/R$dimen;->three_key_middle_dialog_position:I
-
-    invoke-static {v1, v4, v3}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
-
-    move-result v3
-
-    invoke-virtual {v1, v15}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v4
-
-    goto :goto_5
-
-    :cond_13
-    if-ne v6, v7, :cond_14
-
-    sget v4, Lcom/android/systemui/R$dimen;->three_key_down_dialog_position:I
-
-    invoke-static {v1, v4, v3}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
-
-    move-result v3
-
-    invoke-virtual {v1, v15}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v4
-
-    goto :goto_5
-
-    :cond_14
-    :goto_6
-    sget v6, Lcom/android/systemui/R$drawable;->dialog_threekey_middle_bg:I
-
-    move v13, v14
-
-    goto :goto_9
-
-    :cond_15
-    if-eqz v11, :cond_16
-
-    goto :goto_7
-
-    :cond_16
-    move v13, v14
-
-    :goto_7
-    sget v4, Lcom/android/systemui/R$dimen;->three_key_up_dialog_position_deep_land:I
-
-    invoke-static {v1, v4, v3}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
-
-    move-result v4
-
-    if-eqz v11, :cond_17
-
-    invoke-virtual {v1, v15}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-static {v1, v2, v4}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
 
     move-result v6
 
-    add-int/2addr v4, v6
+    goto :goto_5
+
+    :cond_10
+    if-ne v2, v8, :cond_11
+
+    sget v2, Lcom/android/systemui/R$dimen;->three_key_middle_dialog_position_l:I
+
+    invoke-static {v1, v2, v4}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v6
+
+    goto :goto_5
+
+    :cond_11
+    if-ne v2, v7, :cond_12
+
+    sget v2, Lcom/android/systemui/R$dimen;->three_key_down_dialog_position_l:I
+
+    invoke-static {v1, v2, v4}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v6
+
+    :cond_12
+    :goto_5
+    iget-boolean v2, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mIsREDVersion:Z
+
+    if-eqz v2, :cond_13
+
+    sget v2, Lcom/android/systemui/R$drawable;->dialog_threekey_middle_red_bg:I
+
+    goto :goto_6
+
+    :cond_13
+    sget v2, Lcom/android/systemui/R$drawable;->dialog_threekey_middle_bg:I
+
+    :goto_6
+    move/from16 v13, v16
+
+    goto/16 :goto_d
+
+    :cond_14
+    if-eqz v11, :cond_15
+
+    goto :goto_7
+
+    :cond_15
+    move/from16 v14, v16
+
+    :goto_7
+    sget v2, Lcom/android/systemui/R$dimen;->three_key_up_dialog_position_deep:I
+
+    invoke-static {v1, v2, v4}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v6
+
+    iget v2, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThreeKeystate:I
+
+    if-ne v2, v9, :cond_16
+
+    sget v2, Lcom/android/systemui/R$dimen;->three_key_up_dialog_position:I
+
+    invoke-static {v1, v2, v4}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v2
+
+    invoke-virtual {v1, v15}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v4
+
+    :goto_8
+    add-int v5, v2, v4
+
+    goto :goto_9
+
+    :cond_16
+    if-ne v2, v8, :cond_17
+
+    sget v2, Lcom/android/systemui/R$dimen;->three_key_middle_dialog_position:I
+
+    invoke-static {v1, v2, v4}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v2
+
+    invoke-virtual {v1, v15}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v4
+
+    goto :goto_8
 
     :cond_17
-    iget v6, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThreeKeystate:I
+    if-ne v2, v7, :cond_18
 
-    if-ne v6, v9, :cond_18
+    sget v2, Lcom/android/systemui/R$dimen;->three_key_down_dialog_position:I
 
-    sget v5, Lcom/android/systemui/R$dimen;->three_key_up_dialog_position_l:I
+    invoke-static {v1, v2, v4}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
 
-    invoke-static {v1, v5, v3}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+    move-result v2
 
-    move-result v5
+    invoke-virtual {v1, v15}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v4
 
     goto :goto_8
 
     :cond_18
-    if-ne v6, v8, :cond_19
+    :goto_9
+    iget-boolean v2, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mIsREDVersion:Z
 
-    sget v5, Lcom/android/systemui/R$dimen;->three_key_middle_dialog_position_l:I
+    if-eqz v2, :cond_19
 
-    invoke-static {v1, v5, v3}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+    sget v2, Lcom/android/systemui/R$drawable;->dialog_threekey_middle_red_bg:I
 
-    move-result v5
-
-    goto :goto_8
+    goto :goto_a
 
     :cond_19
-    if-ne v6, v7, :cond_1a
+    sget v2, Lcom/android/systemui/R$drawable;->dialog_threekey_middle_bg:I
 
-    sget v5, Lcom/android/systemui/R$dimen;->three_key_down_dialog_position_l:I
+    :goto_a
+    move v13, v14
 
-    invoke-static {v1, v5, v3}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+    goto :goto_d
+
+    :cond_1a
+    if-eqz v11, :cond_1b
+
+    goto :goto_b
+
+    :cond_1b
+    move v13, v14
+
+    :goto_b
+    sget v2, Lcom/android/systemui/R$dimen;->three_key_up_dialog_position_deep_land:I
+
+    invoke-static {v1, v2, v4}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v2
+
+    if-eqz v11, :cond_1c
+
+    invoke-virtual {v1, v15}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v5
 
-    :cond_1a
-    :goto_8
-    sget v6, Lcom/android/systemui/R$drawable;->dialog_threekey_middle_bg:I
+    add-int/2addr v2, v5
 
-    :goto_9
-    iget v3, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThreeKeystate:I
+    :cond_1c
+    move v5, v2
+
+    iget v2, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThreeKeystate:I
+
+    if-ne v2, v9, :cond_1d
+
+    sget v2, Lcom/android/systemui/R$dimen;->three_key_up_dialog_position_l:I
+
+    invoke-static {v1, v2, v4}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v6
+
+    goto :goto_c
+
+    :cond_1d
+    if-ne v2, v8, :cond_1e
+
+    sget v2, Lcom/android/systemui/R$dimen;->three_key_middle_dialog_position_l:I
+
+    invoke-static {v1, v2, v4}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v6
+
+    goto :goto_c
+
+    :cond_1e
+    if-ne v2, v7, :cond_1f
+
+    sget v2, Lcom/android/systemui/R$dimen;->three_key_down_dialog_position_l:I
+
+    invoke-static {v1, v2, v4}, Lcom/oneplus/util/OpUtils;->getDimensionPixelSize(Landroid/content/res/Resources;II)I
+
+    move-result v6
+
+    :cond_1f
+    :goto_c
+    iget-boolean v2, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mIsREDVersion:Z
+
+    if-eqz v2, :cond_20
+
+    sget v2, Lcom/android/systemui/R$drawable;->dialog_threekey_middle_red_bg:I
+
+    goto :goto_d
+
+    :cond_20
+    sget v2, Lcom/android/systemui/R$drawable;->dialog_threekey_middle_bg:I
+
+    :goto_d
+    iget v4, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThreeKeystate:I
 
     const/4 v7, -0x1
 
-    if-eq v3, v7, :cond_1f
+    if-eq v4, v7, :cond_25
 
-    iget-object v3, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThreeKeyIcon:Landroid/widget/ImageView;
+    iget-object v4, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThreeKeyIcon:Landroid/widget/ImageView;
 
-    if-eqz v3, :cond_1b
+    if-eqz v4, :cond_21
 
-    invoke-virtual {v3, v2}, Landroid/widget/ImageView;->setImageResource(I)V
+    invoke-virtual {v4, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    :cond_1b
-    iget-object v2, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThreeKeyText:Landroid/widget/TextView;
+    :cond_21
+    iget-object v3, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThreeKeyText:Landroid/widget/TextView;
 
-    if-eqz v2, :cond_1d
+    if-eqz v3, :cond_23
 
     invoke-virtual {v1, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    if-eqz v2, :cond_1c
+    if-eqz v3, :cond_22
 
-    iget-object v3, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThreeKeyText:Landroid/widget/TextView;
+    iget-object v4, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThreeKeyText:Landroid/widget/TextView;
 
-    invoke-virtual {v3}, Landroid/widget/TextView;->length()I
+    invoke-virtual {v4}, Landroid/widget/TextView;->length()I
 
-    move-result v3
+    move-result v4
 
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     move-result v7
 
-    if-ne v3, v7, :cond_1c
+    if-ne v4, v7, :cond_22
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v2, " "
+    const-string v3, " "
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    :cond_1c
-    iget-object v3, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThreeKeyText:Landroid/widget/TextView;
-
-    invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    :cond_1d
-    iget-object v2, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mDialogView:Landroid/view/ViewGroup;
-
-    if-eqz v2, :cond_1e
-
-    invoke-direct {v0, v6, v11, v8}, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->getCornerGradientDrawable(IZI)Landroid/graphics/drawable/GradientDrawable;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Landroid/view/ViewGroup;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    :cond_22
+    iget-object v4, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThreeKeyText:Landroid/widget/TextView;
 
-    :cond_1e
-    iput v4, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mDialogPosition:I
+    invoke-virtual {v4, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    :cond_1f
+    :cond_23
+    iget-object v3, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mDialogView:Landroid/view/ViewGroup;
+
+    if-eqz v3, :cond_24
+
+    invoke-direct {v0, v2, v11, v8}, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->getCornerGradientDrawable(IZI)Landroid/graphics/drawable/GradientDrawable;
+
+    move-result-object v2
+
+    invoke-virtual {v3, v2}, Landroid/view/ViewGroup;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_24
+    iput v5, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mDialogPosition:I
+
+    :cond_25
     sget v2, Lcom/android/systemui/R$dimen;->op_threekey_dialog_padding:I
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1730,13 +1822,13 @@
 
     iput v13, v2, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    sub-int/2addr v4, v1
-
-    iput v4, v2, Landroid/view/WindowManager$LayoutParams;->y:I
-
     sub-int/2addr v5, v1
 
-    iput v5, v2, Landroid/view/WindowManager$LayoutParams;->x:I
+    iput v5, v2, Landroid/view/WindowManager$LayoutParams;->y:I
+
+    sub-int/2addr v6, v1
+
+    iput v6, v2, Landroid/view/WindowManager$LayoutParams;->x:I
 
     iget-object v1, v0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mWindow:Landroid/view/Window;
 
@@ -1746,7 +1838,7 @@
 
     sget-boolean v1, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->DEBUG:Z
 
-    if-eqz v1, :cond_20
+    if-eqz v1, :cond_26
 
     sget-object v1, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->TAG:Ljava/lang/String;
 
@@ -1768,7 +1860,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_20
+    :cond_26
     return-void
 .end method
 
@@ -1833,16 +1925,6 @@
     iput v0, p0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThemeBgColor:I
 
     :goto_0
-    iget-object v0, p0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mDialogView:Landroid/view/ViewGroup;
-
-    iget v1, p0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThemeBgColor:I
-
-    invoke-static {v1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setBackgroundTintList(Landroid/content/res/ColorStateList;)V
-
     iget-object v0, p0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThreeKeyText:Landroid/widget/TextView;
 
     iget v1, p0, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->mThemeTextColor:I

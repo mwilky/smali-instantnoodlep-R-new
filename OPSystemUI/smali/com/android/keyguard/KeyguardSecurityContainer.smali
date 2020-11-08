@@ -36,6 +36,8 @@
 
 .field private mFacelockAnimationSet:Landroid/view/animation/Animation;
 
+.field private mImeInset:I
+
 .field private mInjectionInflationController:Lcom/android/systemui/util/InjectionInflationController;
 
 .field private final mKeyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
@@ -1727,7 +1729,7 @@
 .end method
 
 .method public onApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
-    .locals 6
+    .locals 5
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getPaddingTop()I
 
@@ -1759,69 +1761,75 @@
 
     iget v2, v2, Landroid/graphics/Insets;->bottom:I
 
+    iput v2, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mImeInset:I
+
     invoke-static {v1, v2}, Ljava/lang/Integer;->max(II)I
 
-    move-result v3
+    move-result v2
 
-    if-lez v2, :cond_0
+    iget v3, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mImeInset:I
+
+    if-lez v3, :cond_0
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v4, 0x1050248
+    const v3, 0x1050248
 
-    invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
     :cond_0
-    sget-boolean v4, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+    sget-boolean v3, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
-    if-eqz v4, :cond_2
+    if-eqz v3, :cond_2
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "onApplyWindowInsets,, paddingTopWhenIme:"
+    const-string v4, "onApplyWindowInsets,, paddingTopWhenIme:"
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v5, ", imeInset:"
+    const-string v4, ", mImeInset:"
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget v4, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mImeInset:I
 
-    const-string v2, ", bottomInset:"
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v4, ", bottomInset:"
 
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v1, ", inset:"
 
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    const-string v2, "KeyguardSecurityView"
+    const-string v3, "KeyguardSecurityView"
 
-    invoke-static {v2, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
     :cond_1
     invoke-virtual {p1}, Landroid/view/WindowInsets;->getSystemWindowInsetBottom()I
 
-    move-result v3
+    move-result v2
 
     :cond_2
     :goto_0
@@ -1831,13 +1839,13 @@
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getPaddingRight()I
 
-    move-result v2
+    move-result v3
 
-    invoke-virtual {p0, v1, v0, v2, v3}, Landroid/widget/FrameLayout;->setPadding(IIII)V
+    invoke-virtual {p0, v1, v0, v3, v2}, Landroid/widget/FrameLayout;->setPadding(IIII)V
 
     const/4 p0, 0x0
 
-    invoke-virtual {p1, p0, p0, p0, v3}, Landroid/view/WindowInsets;->inset(IIII)Landroid/view/WindowInsets;
+    invoke-virtual {p1, p0, p0, p0, v2}, Landroid/view/WindowInsets;->inset(IIII)Landroid/view/WindowInsets;
 
     move-result-object p0
 
@@ -2766,6 +2774,30 @@
     sget-object v2, Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;->Password:Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
 
     if-ne v1, v2, :cond_0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v2, "startDisappearAnimation, Password, controlWindowInsetsAnimation, mImeInset:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v2, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mImeInset:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "KeyguardSecurityView"
+
+    invoke-static {v2, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget v1, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mImeInset:I
+
+    if-lez v1, :cond_0
 
     iget-object v1, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mSecurityViewFlipper:Lcom/android/keyguard/KeyguardSecurityViewFlipper;
 

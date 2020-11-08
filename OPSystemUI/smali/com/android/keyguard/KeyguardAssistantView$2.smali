@@ -39,7 +39,7 @@
 
     iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView$2;->this$0:Lcom/android/keyguard/KeyguardAssistantView;
 
-    invoke-static {v0}, Lcom/android/keyguard/KeyguardAssistantView;->access$600(Lcom/android/keyguard/KeyguardAssistantView;)Z
+    invoke-static {v0}, Lcom/android/keyguard/KeyguardAssistantView;->access$300(Lcom/android/keyguard/KeyguardAssistantView;)Z
 
     move-result v0
 
@@ -49,7 +49,7 @@
 
     iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView$2;->this$0:Lcom/android/keyguard/KeyguardAssistantView;
 
-    invoke-static {v0}, Lcom/android/keyguard/KeyguardAssistantView;->access$700(Lcom/android/keyguard/KeyguardAssistantView;)I
+    invoke-static {v0}, Lcom/android/keyguard/KeyguardAssistantView;->access$400(Lcom/android/keyguard/KeyguardAssistantView;)I
 
     move-result v0
 
@@ -57,17 +57,17 @@
 
     iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView$2;->this$0:Lcom/android/keyguard/KeyguardAssistantView;
 
-    invoke-static {v0}, Lcom/android/keyguard/KeyguardAssistantView;->access$708(Lcom/android/keyguard/KeyguardAssistantView;)I
+    invoke-static {v0}, Lcom/android/keyguard/KeyguardAssistantView;->access$408(Lcom/android/keyguard/KeyguardAssistantView;)I
 
     iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView$2;->this$0:Lcom/android/keyguard/KeyguardAssistantView;
 
-    invoke-static {v0}, Lcom/android/keyguard/KeyguardAssistantView;->access$900(Lcom/android/keyguard/KeyguardAssistantView;)Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/keyguard/KeyguardAssistantView;->access$600(Lcom/android/keyguard/KeyguardAssistantView;)Landroid/os/Handler;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/android/keyguard/KeyguardAssistantView$2;->this$0:Lcom/android/keyguard/KeyguardAssistantView;
 
-    invoke-static {v1}, Lcom/android/keyguard/KeyguardAssistantView;->access$800(Lcom/android/keyguard/KeyguardAssistantView;)Ljava/lang/Runnable;
+    invoke-static {v1}, Lcom/android/keyguard/KeyguardAssistantView;->access$500(Lcom/android/keyguard/KeyguardAssistantView;)Ljava/lang/Runnable;
 
     move-result-object v1
 
@@ -75,13 +75,13 @@
 
     iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView$2;->this$0:Lcom/android/keyguard/KeyguardAssistantView;
 
-    invoke-static {v0}, Lcom/android/keyguard/KeyguardAssistantView;->access$900(Lcom/android/keyguard/KeyguardAssistantView;)Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/keyguard/KeyguardAssistantView;->access$600(Lcom/android/keyguard/KeyguardAssistantView;)Landroid/os/Handler;
 
     move-result-object v0
 
     iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView$2;->this$0:Lcom/android/keyguard/KeyguardAssistantView;
 
-    invoke-static {p0}, Lcom/android/keyguard/KeyguardAssistantView;->access$800(Lcom/android/keyguard/KeyguardAssistantView;)Ljava/lang/Runnable;
+    invoke-static {p0}, Lcom/android/keyguard/KeyguardAssistantView;->access$500(Lcom/android/keyguard/KeyguardAssistantView;)Ljava/lang/Runnable;
 
     move-result-object p0
 
@@ -94,7 +94,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView$2;->this$0:Lcom/android/keyguard/KeyguardAssistantView;
 
-    invoke-static {v0}, Lcom/android/keyguard/KeyguardAssistantView;->access$700(Lcom/android/keyguard/KeyguardAssistantView;)I
+    invoke-static {v0}, Lcom/android/keyguard/KeyguardAssistantView;->access$400(Lcom/android/keyguard/KeyguardAssistantView;)I
 
     move-result v0
 
@@ -102,7 +102,7 @@
 
     iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView$2;->this$0:Lcom/android/keyguard/KeyguardAssistantView;
 
-    invoke-static {v0}, Lcom/android/keyguard/KeyguardAssistantView;->access$000(Lcom/android/keyguard/KeyguardAssistantView;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/android/keyguard/KeyguardAssistantView;->access$700(Lcom/android/keyguard/KeyguardAssistantView;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -116,7 +116,7 @@
 
     iget-object v2, p0, Lcom/android/keyguard/KeyguardAssistantView$2;->this$0:Lcom/android/keyguard/KeyguardAssistantView;
 
-    invoke-static {v2}, Lcom/android/keyguard/KeyguardAssistantView;->access$700(Lcom/android/keyguard/KeyguardAssistantView;)I
+    invoke-static {v2}, Lcom/android/keyguard/KeyguardAssistantView;->access$400(Lcom/android/keyguard/KeyguardAssistantView;)I
 
     move-result v2
 
@@ -131,7 +131,7 @@
     :cond_1
     iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView$2;->this$0:Lcom/android/keyguard/KeyguardAssistantView;
 
-    invoke-static {v0}, Lcom/android/keyguard/KeyguardAssistantView;->access$000(Lcom/android/keyguard/KeyguardAssistantView;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/android/keyguard/KeyguardAssistantView;->access$700(Lcom/android/keyguard/KeyguardAssistantView;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -143,13 +143,13 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/android/keyguard/KeyguardAssistantView;->access$702(Lcom/android/keyguard/KeyguardAssistantView;I)I
+    invoke-static {v0, v1}, Lcom/android/keyguard/KeyguardAssistantView;->access$402(Lcom/android/keyguard/KeyguardAssistantView;I)I
 
     iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView$2;->this$0:Lcom/android/keyguard/KeyguardAssistantView;
 
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/android/keyguard/KeyguardAssistantView;->setHasHeader(Z)V
+    invoke-static {p0, v0}, Lcom/android/keyguard/KeyguardAssistantView;->access$200(Lcom/android/keyguard/KeyguardAssistantView;Z)V
 
     return-void
 .end method

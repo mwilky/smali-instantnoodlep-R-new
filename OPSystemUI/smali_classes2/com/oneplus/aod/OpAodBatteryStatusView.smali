@@ -460,47 +460,51 @@
 .method public onBatteryLevelChanged(IZZ)V
     .locals 0
 
-    iput p1, p0, Lcom/oneplus/aod/OpAodBatteryStatusView;->mLevel:I
-
     if-eqz p2, :cond_2
 
     const/16 p2, 0x64
 
     if-lt p1, p2, :cond_0
 
-    const/4 p1, 0x0
-
-    iput p1, p0, Lcom/oneplus/aod/OpAodBatteryStatusView;->mChargeState:I
+    const/4 p2, 0x0
 
     goto :goto_0
 
     :cond_0
     invoke-direct {p0}, Lcom/oneplus/aod/OpAodBatteryStatusView;->isFastCharge()Z
 
-    move-result p1
+    move-result p2
 
-    if-eqz p1, :cond_1
+    if-eqz p2, :cond_1
 
-    const/4 p1, 0x2
-
-    iput p1, p0, Lcom/oneplus/aod/OpAodBatteryStatusView;->mChargeState:I
+    const/4 p2, 0x2
 
     goto :goto_0
 
     :cond_1
-    const/4 p1, 0x1
-
-    iput p1, p0, Lcom/oneplus/aod/OpAodBatteryStatusView;->mChargeState:I
+    const/4 p2, 0x1
 
     goto :goto_0
 
     :cond_2
-    const/4 p1, -0x1
-
-    iput p1, p0, Lcom/oneplus/aod/OpAodBatteryStatusView;->mChargeState:I
+    const/4 p2, -0x1
 
     :goto_0
+    iget p3, p0, Lcom/oneplus/aod/OpAodBatteryStatusView;->mLevel:I
+
+    if-ne p3, p1, :cond_3
+
+    iget p3, p0, Lcom/oneplus/aod/OpAodBatteryStatusView;->mChargeState:I
+
+    if-eq p3, p2, :cond_4
+
+    :cond_3
     invoke-direct {p0}, Lcom/oneplus/aod/OpAodBatteryStatusView;->updateViewState()V
+
+    :cond_4
+    iput p2, p0, Lcom/oneplus/aod/OpAodBatteryStatusView;->mChargeState:I
+
+    iput p1, p0, Lcom/oneplus/aod/OpAodBatteryStatusView;->mLevel:I
 
     return-void
 .end method

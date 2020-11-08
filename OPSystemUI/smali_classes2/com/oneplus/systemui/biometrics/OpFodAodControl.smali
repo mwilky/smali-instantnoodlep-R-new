@@ -38,6 +38,40 @@
 
 
 # virtual methods
+.method protected adjustBrightness(Z)V
+    .locals 2
+
+    iget v0, p0, Lcom/oneplus/systemui/biometrics/OpFodAodControl;->mAodMode:I
+
+    const/4 v1, 0x5
+
+    if-eq v0, v1, :cond_0
+
+    const/4 v1, 0x4
+
+    if-ne v0, v1, :cond_2
+
+    :cond_0
+    invoke-virtual {p0}, Lcom/oneplus/systemui/biometrics/OpFodDisplayController$OpDisplayControl;->getNotifier()Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;
+
+    move-result-object p0
+
+    if-eqz p1, :cond_1
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p1, 0x3
+
+    :goto_0
+    invoke-virtual {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->notifyAodMode(I)V
+
+    :cond_2
+    return-void
+.end method
+
 .method public canDisable()Z
     .locals 0
 
@@ -57,17 +91,11 @@
 .end method
 
 .method public canEnable()Z
-    .locals 1
+    .locals 0
 
     iget p0, p0, Lcom/oneplus/systemui/biometrics/OpFodAodControl;->mAodMode:I
 
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_0
-
-    const/4 v0, 0x5
-
-    if-eq p0, v0, :cond_0
+    if-nez p0, :cond_0
 
     const/4 p0, 0x1
 
@@ -135,6 +163,10 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    iget-boolean p1, p0, Lcom/oneplus/systemui/biometrics/OpFodAodControl;->mIsSupportRealAod:Z
+
+    if-eqz p1, :cond_2
+
     invoke-virtual {p0}, Lcom/oneplus/systemui/biometrics/OpFodDisplayController$OpDisplayControl;->getUpdateMonitor()Lcom/android/keyguard/KeyguardUpdateMonitor;
 
     move-result-object p1
@@ -143,22 +175,40 @@
 
     move-result p1
 
-    if-eqz p1, :cond_0
+    if-nez p1, :cond_0
 
-    iget-boolean p1, p0, Lcom/oneplus/systemui/biometrics/OpFodAodControl;->mIsSupportRealAod:Z
+    goto :goto_1
 
-    if-eqz p1, :cond_0
+    :cond_0
+    invoke-virtual {p0}, Lcom/oneplus/systemui/biometrics/OpFodDisplayController$OpDisplayControl;->getContext()Landroid/content/Context;
 
-    const/4 p1, 0x5
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/oneplus/aod/utils/OpCanvasAodHelper;->isCanvasAodEnabled(Landroid/content/Context;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const/4 p1, 0x4
 
     goto :goto_0
 
-    :cond_0
-    const/4 p1, 0x2
+    :cond_1
+    const/4 p1, 0x5
 
     :goto_0
     iput p1, p0, Lcom/oneplus/systemui/biometrics/OpFodAodControl;->mAodMode:I
 
+    goto :goto_2
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x2
+
+    iput p1, p0, Lcom/oneplus/systemui/biometrics/OpFodAodControl;->mAodMode:I
+
+    :goto_2
     iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController$OpDisplayControl;->mTAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -196,4 +246,118 @@
     iget p0, p0, Lcom/oneplus/systemui/biometrics/OpFodAodControl;->mAodMode:I
 
     return p0
+.end method
+
+.method protected onAlwaysOnEnableChanged(Z)V
+    .locals 4
+
+    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController$OpDisplayControl;->mTAG:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "onAlwaysOnEnableChanged: active= "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v2, ", mode= "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v2, p0, Lcom/oneplus/systemui/biometrics/OpFodAodControl;->mAodMode:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget v0, p0, Lcom/oneplus/systemui/biometrics/OpFodAodControl;->mAodMode:I
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x4
+
+    const/4 v3, 0x5
+
+    if-eq v0, v3, :cond_0
+
+    if-ne v0, v2, :cond_1
+
+    :cond_0
+    if-nez p1, :cond_1
+
+    iput v1, p0, Lcom/oneplus/systemui/biometrics/OpFodAodControl;->mAodMode:I
+
+    goto :goto_1
+
+    :cond_1
+    iget v0, p0, Lcom/oneplus/systemui/biometrics/OpFodAodControl;->mAodMode:I
+
+    if-ne v0, v1, :cond_3
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p0}, Lcom/oneplus/systemui/biometrics/OpFodDisplayController$OpDisplayControl;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/oneplus/aod/utils/OpCanvasAodHelper;->isCanvasAodEnabled(Landroid/content/Context;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move v2, v3
+
+    :goto_0
+    iput v2, p0, Lcom/oneplus/systemui/biometrics/OpFodAodControl;->mAodMode:I
+
+    :cond_3
+    :goto_1
+    invoke-virtual {p0}, Lcom/oneplus/systemui/biometrics/OpFodDisplayController$OpDisplayControl;->getNotifier()Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;
+
+    move-result-object p1
+
+    iget p0, p0, Lcom/oneplus/systemui/biometrics/OpFodAodControl;->mAodMode:I
+
+    invoke-virtual {p1, p0}, Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;->notifyAodMode(I)V
+
+    return-void
+.end method
+
+.method public resetState(Ljava/lang/String;)V
+    .locals 3
+
+    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController$OpDisplayControl;->mTAG:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "reset aod state, reason: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Lcom/oneplus/systemui/biometrics/OpFodAodControl;->mAodMode:I
+
+    return-void
 .end method

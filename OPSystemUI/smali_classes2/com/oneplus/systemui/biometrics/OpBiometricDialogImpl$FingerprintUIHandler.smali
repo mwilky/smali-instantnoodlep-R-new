@@ -62,6 +62,15 @@
     goto :goto_0
 
     :pswitch_1
+    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$FingerprintUIHandler;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
+
+    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->mFodDialogView:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
+
+    invoke-virtual {p0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->onUiModeChanged()V
+
+    goto :goto_0
+
+    :pswitch_2
     iget p1, p1, Landroid/os/Message;->arg1:I
 
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$FingerprintUIHandler;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
@@ -70,7 +79,7 @@
 
     goto :goto_0
 
-    :pswitch_2
+    :pswitch_3
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Ljava/lang/Boolean;
@@ -85,14 +94,14 @@
 
     goto :goto_0
 
-    :pswitch_3
+    :pswitch_4
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$FingerprintUIHandler;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
     invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$400(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)V
 
     goto :goto_0
 
-    :pswitch_4
+    :pswitch_5
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$FingerprintUIHandler;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
     iget p1, p1, Landroid/os/Message;->arg1:I
@@ -101,7 +110,7 @@
 
     goto :goto_0
 
-    :pswitch_5
+    :pswitch_6
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$FingerprintUIHandler;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
     iget v0, p1, Landroid/os/Message;->arg1:I
@@ -112,7 +121,7 @@
 
     goto :goto_0
 
-    :pswitch_6
+    :pswitch_7
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$FingerprintUIHandler;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
     iget p1, p1, Landroid/os/Message;->arg1:I
@@ -121,7 +130,7 @@
 
     goto :goto_0
 
-    :pswitch_7
+    :pswitch_8
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$FingerprintUIHandler;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -132,14 +141,14 @@
 
     goto :goto_0
 
-    :pswitch_8
+    :pswitch_9
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$FingerprintUIHandler;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
     invoke-virtual {p0}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->opHandleFingerprintAuthenticatedSuccess()V
 
     goto :goto_0
 
-    :pswitch_9
+    :pswitch_a
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$FingerprintUIHandler;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -153,10 +162,11 @@
 
     :pswitch_data_0
     .packed-switch 0x1
+        :pswitch_a
         :pswitch_9
         :pswitch_8
-        :pswitch_7
         :pswitch_0
+        :pswitch_7
         :pswitch_6
         :pswitch_5
         :pswitch_4

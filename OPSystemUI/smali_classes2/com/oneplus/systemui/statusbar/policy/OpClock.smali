@@ -81,6 +81,19 @@
 
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
+    invoke-virtual {p0}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/oneplus/util/OpUtils;->needLargeQSClock(Landroid/content/Context;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iput-boolean v0, p0, Lcom/oneplus/systemui/statusbar/policy/OpClock;->mAlwaysVisible:Z
+
+    :cond_0
     const-class p1, Lcom/oneplus/scene/OpSceneModeObserver;
 
     invoke-static {p1}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -228,87 +241,106 @@
 .end method
 
 .method protected setTextWithOpStyle(Ljava/lang/CharSequence;)V
-    .locals 6
+    .locals 5
 
-    const/16 v0, 0x11
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
+    invoke-direct {v0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
-    move-result v0
+    const/4 v1, 0x0
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/CharSequence;)V
-
-    const/4 v2, 0x0
-
-    move v3, v2
+    move v2, v1
 
     :goto_0
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
-    move-result v4
+    move-result v3
 
-    if-ge v3, v4, :cond_1
+    if-ge v2, v3, :cond_1
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->charAt(I)C
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->charAt(I)C
 
-    move-result v4
+    move-result v3
 
-    const/16 v5, 0x3a
+    const/16 v4, 0x3a
 
-    if-ne v4, v5, :cond_0
+    if-ne v3, v4, :cond_0
 
-    add-int/lit8 p1, v3, 0x1
+    add-int/lit8 p1, v2, 0x1
 
-    const-string v4, "\u2236"
+    const-string v3, "\u2236"
 
-    invoke-virtual {v1, v3, p1, v4}, Ljava/lang/StringBuilder;->replace(IILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, p1, v3}, Ljava/lang/StringBuilder;->replace(IILjava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    move-result-object v0
 
     goto :goto_1
 
     :cond_0
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     :cond_1
     :goto_1
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isREDVersion()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    const/16 p1, 0x64
+
+    invoke-static {p1}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    return-void
+
+    :cond_2
     new-instance p1, Landroid/text/SpannableString;
 
-    invoke-direct {p1, v1}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
+    invoke-direct {p1, v0}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
 
-    move v3, v2
+    move v2, v1
 
     :goto_2
-    const/4 v4, 0x2
+    const/4 v3, 0x2
 
-    if-ge v3, v4, :cond_3
+    if-ge v2, v3, :cond_4
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->charAt(I)C
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->charAt(I)C
 
-    move-result v4
+    move-result v3
 
-    const/16 v5, 0x31
+    const/16 v4, 0x31
 
-    if-ne v4, v5, :cond_2
+    if-ne v3, v4, :cond_3
+
+    const/16 v3, 0x11
+
+    invoke-static {v3}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
+
+    move-result v3
 
     new-instance v4, Landroid/text/style/ForegroundColorSpan;
 
-    invoke-direct {v4, v0}, Landroid/text/style/ForegroundColorSpan;-><init>(I)V
+    invoke-direct {v4, v3}, Landroid/text/style/ForegroundColorSpan;-><init>(I)V
 
-    add-int/lit8 v5, v3, 0x1
+    add-int/lit8 v3, v2, 0x1
 
-    invoke-virtual {p1, v4, v3, v5, v2}, Landroid/text/SpannableString;->setSpan(Ljava/lang/Object;III)V
+    invoke-virtual {p1, v4, v2, v3, v1}, Landroid/text/SpannableString;->setSpan(Ljava/lang/Object;III)V
 
-    :cond_2
-    add-int/lit8 v3, v3, 0x1
+    :cond_3
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    :cond_3
+    :cond_4
     const/4 v0, 0x1
 
     invoke-static {v0}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I

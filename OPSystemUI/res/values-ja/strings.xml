@@ -1416,6 +1416,9 @@ IT 管理者が、このデバイスに関連付けられている設定、コ�
     <string name="overheat_toast_content">携帯電話の温度が高すぎます。温度を下げるため、バッテリー消費量の多い機能がオフになります</string>
     <string name="overlay_display_devices_title">2次画面シミュレート</string>
     <string name="overview">最近</string>
+    <string name="permission_btn_text_denied">終了</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">権限に関する宣言</string>
     <string name="phone_hint">右にスワイプして通話</string>
     <string name="phone_label">電話を起動</string>
     <string name="picture_color_mode">画像の色モード</string>

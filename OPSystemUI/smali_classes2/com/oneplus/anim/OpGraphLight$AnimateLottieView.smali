@@ -42,7 +42,7 @@
 
     sget-object p1, Landroid/widget/ImageView$ScaleType;->FIT_CENTER:Landroid/widget/ImageView$ScaleType;
 
-    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
+    invoke-virtual {p0, p1}, Lcom/airbnb/lottie/LottieAnimationView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
     invoke-direct {p0}, Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;->createLottieDrawable()Lcom/airbnb/lottie/LottieDrawable;
 
@@ -204,13 +204,28 @@
     invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     :goto_2
+    iget-object v0, p0, Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;->this$0:Lcom/oneplus/anim/OpGraphLight;
+
+    invoke-static {v0}, Lcom/oneplus/anim/OpGraphLight;->access$1500(Lcom/oneplus/anim/OpGraphLight;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    const-string p0, ".json"
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    goto :goto_3
+
+    :cond_3
     iget-object p0, p0, Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;->this$0:Lcom/oneplus/anim/OpGraphLight;
 
-    invoke-static {p0}, Lcom/oneplus/anim/OpGraphLight;->access$1500(Lcom/oneplus/anim/OpGraphLight;)Z
+    invoke-static {p0}, Lcom/oneplus/anim/OpGraphLight;->access$1600(Lcom/oneplus/anim/OpGraphLight;)Z
 
     move-result p0
 
-    if-eqz p0, :cond_3
+    if-eqz p0, :cond_4
 
     const-string p0, "dark.json"
 
@@ -218,7 +233,7 @@
 
     goto :goto_3
 
-    :cond_3
+    :cond_4
     const-string p0, "light.json"
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;

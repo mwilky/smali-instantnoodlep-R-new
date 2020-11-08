@@ -12,3 +12,8 @@
     accessFlags = 0x609
     name = "OnYearSelectedListener"
 .end annotation
+
+
+# virtual methods
+.method public abstract onYearChanged(Lcom/google/android/material/picker/YearPickerView;I)V
+.end method

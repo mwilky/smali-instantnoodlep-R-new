@@ -4818,6 +4818,14 @@
     return-void
 .end method
 
+.method public setOnMenuItemClickListener(Landroidx/appcompat/widget/Toolbar$OnMenuItemClickListener;)V
+    .locals 0
+
+    iput-object p1, p0, Landroidx/appcompat/widget/Toolbar;->mOnMenuItemClickListener:Landroidx/appcompat/widget/Toolbar$OnMenuItemClickListener;
+
+    return-void
+.end method
+
 .method public setPopupTheme(I)V
     .locals 2
 

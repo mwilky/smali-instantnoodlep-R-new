@@ -259,9 +259,15 @@
 
     move-result-object p0
 
-    sget v0, Lcom/android/systemui/R$layout;->status_bar_mobile_signal_group:I
+    invoke-static {}, Lcom/android/systemui/util/ProductUtils;->isUsvMode()Z
+
+    move-result v0
 
     const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    sget v0, Lcom/android/systemui/R$layout;->op_vzw_status_bar_mobile_signal_group:I
 
     invoke-virtual {p0, v0, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -269,6 +275,18 @@
 
     check-cast p0, Lcom/android/systemui/statusbar/StatusBarMobileView;
 
+    goto :goto_0
+
+    :cond_0
+    sget v0, Lcom/android/systemui/R$layout;->status_bar_mobile_signal_group:I
+
+    invoke-virtual {p0, v0, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/android/systemui/statusbar/StatusBarMobileView;
+
+    :goto_0
     invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/StatusBarMobileView;->setSlot(Ljava/lang/String;)V
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/StatusBarMobileView;->init()V

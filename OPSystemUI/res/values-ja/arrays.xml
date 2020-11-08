@@ -82,6 +82,8 @@
         <item>Qualcomm® aptX™ オーディオ</item>
         <item>Qualcomm® aptX™ HD オーディオ</item>
         <item>LDAC</item>
+        <item>Qualcomm® aptX™ Adaptive オーディオ</item>
+        <item>Qualcomm® aptX™ TWS+ オーディオ</item>
     </string-array>
     <string-array name="bluetooth_a2dp_codec_titles">
         <item>システムの選択（デフォルト）を使用</item>
@@ -90,6 +92,8 @@
         <item>Qualcomm® aptX™ オーディオ</item>
         <item>Qualcomm® aptX™ HD オーディオ</item>
         <item>LDAC</item>
+        <item>Qualcomm® aptX™ Adaptive オーディオ</item>
+        <item>Qualcomm® aptX™ TWS+ オーディオ</item>
     </string-array>
     <string-array name="bluetooth_audio_active_device_summaries">
         <item></item>

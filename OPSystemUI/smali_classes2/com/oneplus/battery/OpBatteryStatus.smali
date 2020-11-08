@@ -199,11 +199,65 @@
     return p0
 
     :cond_2
-    invoke-super {p0, p1}, Lcom/android/settingslib/fuelgauge/BatteryStatus;->getChargingSpeed(Landroid/content/Context;)I
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result p0
+    move-result-object v0
 
-    return p0
+    sget v1, Lcom/android/systemui/R$integer;->config_chargingSlowlyThreshold:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
+
+    move-result v0
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    sget v1, Lcom/android/systemui/R$integer;->config_chargingFastThreshold:I
+
+    invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getInteger(I)I
+
+    invoke-static {}, Lcom/android/systemui/util/ProductUtils;->isUsvMode()Z
+
+    move-result p1
+
+    const/4 v1, -0x1
+
+    const/4 v2, 0x1
+
+    if-eqz p1, :cond_5
+
+    iget p0, p0, Lcom/android/settingslib/fuelgauge/BatteryStatus;->maxChargingWattage:I
+
+    if-gtz p0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    if-ge p0, v0, :cond_4
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_4
+    move v1, v2
+
+    :goto_0
+    return v1
+
+    :cond_5
+    iget p0, p0, Lcom/android/settingslib/fuelgauge/BatteryStatus;->maxChargingWattage:I
+
+    if-gtz p0, :cond_6
+
+    goto :goto_1
+
+    :cond_6
+    move v1, v2
+
+    :goto_1
+    return v1
 .end method
 
 .method public getSwarpRemainingTime()J

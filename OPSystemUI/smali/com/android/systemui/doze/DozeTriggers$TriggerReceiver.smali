@@ -73,7 +73,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p1, v1, v1, v0}, Lcom/android/systemui/doze/DozeTriggers;->access$200(Lcom/android/systemui/doze/DozeTriggers;IZLjava/lang/Runnable;)V
+    invoke-static {p1, v1, v1, v0}, Lcom/android/systemui/doze/DozeTriggers;->access$500(Lcom/android/systemui/doze/DozeTriggers;IZLjava/lang/Runnable;)V
 
     :cond_1
     sget-object p1, Landroid/app/UiModeManager;->ACTION_ENTER_CAR_MODE:Ljava/lang/String;
@@ -113,7 +113,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/doze/DozeTriggers$TriggerReceiver;->this$0:Lcom/android/systemui/doze/DozeTriggers;
 
-    invoke-static {p0}, Lcom/android/systemui/doze/DozeTriggers;->access$400(Lcom/android/systemui/doze/DozeTriggers;)Lcom/android/systemui/doze/DozeSensors;
+    invoke-static {p0}, Lcom/android/systemui/doze/DozeTriggers;->access$600(Lcom/android/systemui/doze/DozeTriggers;)Lcom/android/systemui/doze/DozeSensors;
 
     move-result-object p0
 

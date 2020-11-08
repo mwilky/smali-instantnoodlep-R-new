@@ -265,6 +265,14 @@
     return-object v0
 .end method
 
+.method static synthetic access$200()Z
+    .locals 1
+
+    sget-boolean v0, Lcom/oneplus/systemui/util/OpMdmLogger;->DEBUG:Z
+
+    return v0
+.end method
+
 .method public static brightnessSliderClicked()V
     .locals 3
 
@@ -523,11 +531,11 @@
 
     sget-object p3, Lcom/oneplus/systemui/util/OpMdmLogger;->sHandler:Landroid/os/Handler;
 
-    new-instance v0, Lcom/oneplus/systemui/util/OpMdmLogger$1;
+    new-instance v1, Lcom/oneplus/systemui/util/OpMdmLogger$1;
 
-    invoke-direct {v0, p1, p2, p0}, Lcom/oneplus/systemui/util/OpMdmLogger$1;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, p1, p2, p0, v0}, Lcom/oneplus/systemui/util/OpMdmLogger$1;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/HashMap;)V
 
-    invoke-virtual {p3, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {p3, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method

@@ -31,6 +31,21 @@
 
 
 # virtual methods
+.method public onAlwaysOnEnableChanged(Z)V
+    .locals 0
+
+    if-nez p1, :cond_0
+
+    iget-object p0, p0, Lcom/android/systemui/doze/DozeUi$1;->this$0:Lcom/android/systemui/doze/DozeUi;
+
+    const/4 p1, 0x0
+
+    invoke-static {p0, p1}, Lcom/android/systemui/doze/DozeUi;->access$200(Lcom/android/systemui/doze/DozeUi;Z)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public onKeyguardVisibilityChanged(Z)V
     .locals 1
 

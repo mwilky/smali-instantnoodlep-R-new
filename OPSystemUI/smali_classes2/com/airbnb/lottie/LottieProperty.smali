@@ -40,6 +40,8 @@
 
 .field public static final STROKE_WIDTH:Ljava/lang/Float;
 
+.field public static final TEXT_SIZE:Ljava/lang/Float;
+
 .field public static final TEXT_TRACKING:Ljava/lang/Float;
 
 .field public static final TIME_REMAP:Ljava/lang/Float;
@@ -243,6 +245,12 @@
 
     sput-object v0, Lcom/airbnb/lottie/LottieProperty;->TRANSFORM_START_OPACITY:Ljava/lang/Float;
 
+    const v0, 0x4141999a    # 12.1f
+
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v0
+
     sput-object v0, Lcom/airbnb/lottie/LottieProperty;->TRANSFORM_END_OPACITY:Ljava/lang/Float;
 
     const/high16 v0, 0x41500000    # 13.0f
@@ -252,6 +260,14 @@
     move-result-object v0
 
     sput-object v0, Lcom/airbnb/lottie/LottieProperty;->TIME_REMAP:Ljava/lang/Float;
+
+    const/high16 v0, 0x41600000    # 14.0f
+
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/airbnb/lottie/LottieProperty;->TEXT_SIZE:Ljava/lang/Float;
 
     new-instance v0, Landroid/graphics/ColorFilter;
 

@@ -75,14 +75,14 @@
         0x7f0402ae
         0x7f0402ce
         0x7f0402d5
-        0x7f0403e5
-        0x7f0403e8
-        0x7f04040b
-        0x7f04049e
-        0x7f0404af
-        0x7f0404c0
-        0x7f0404fe
-        0x7f040569
-        0x7f0405b2
+        0x7f0403e7
+        0x7f0403ea
+        0x7f04040d
+        0x7f0404a0
+        0x7f0404b1
+        0x7f0404c2
+        0x7f040500
+        0x7f04056b
+        0x7f0405b4
     .end array-data
 .end method

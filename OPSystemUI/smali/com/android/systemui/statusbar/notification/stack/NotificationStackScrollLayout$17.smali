@@ -73,17 +73,17 @@
 .end method
 
 .method public isDragDownEnabledForView(Lcom/android/systemui/statusbar/notification/row/ExpandableView;)Z
-    .locals 2
+    .locals 1
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout$17;->isDragDownAnywhereEnabled()Z
 
     move-result v0
 
-    const/4 v1, 0x1
-
     if-eqz v0, :cond_0
 
-    return v1
+    const/4 p0, 0x1
+
+    return p0
 
     :cond_0
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout$17;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
@@ -96,16 +96,11 @@
 
     move-result p0
 
-    if-eqz p0, :cond_2
+    if-eqz p0, :cond_1
 
-    if-nez p1, :cond_1
-
-    return v1
-
-    :cond_1
     instance-of p0, p1, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
-    if-eqz p0, :cond_2
+    if-eqz p0, :cond_1
 
     check-cast p1, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
@@ -119,7 +114,7 @@
 
     return p0
 
-    :cond_2
+    :cond_1
     const/4 p0, 0x0
 
     return p0

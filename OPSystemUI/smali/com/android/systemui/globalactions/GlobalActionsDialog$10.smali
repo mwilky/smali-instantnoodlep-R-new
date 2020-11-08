@@ -47,11 +47,11 @@
     :cond_0
     iget-object p1, p0, Lcom/android/systemui/globalactions/GlobalActionsDialog$10;->this$0:Lcom/android/systemui/globalactions/GlobalActionsDialog;
 
-    invoke-static {p1}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$4400(Lcom/android/systemui/globalactions/GlobalActionsDialog;)V
+    invoke-static {p1}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$4300(Lcom/android/systemui/globalactions/GlobalActionsDialog;)V
 
     iget-object p0, p0, Lcom/android/systemui/globalactions/GlobalActionsDialog$10;->this$0:Lcom/android/systemui/globalactions/GlobalActionsDialog;
 
-    invoke-static {p0}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$3300(Lcom/android/systemui/globalactions/GlobalActionsDialog;)Lcom/android/systemui/globalactions/GlobalActionsDialog$MyAdapter;
+    invoke-static {p0}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$3200(Lcom/android/systemui/globalactions/GlobalActionsDialog;)Lcom/android/systemui/globalactions/GlobalActionsDialog$MyAdapter;
 
     move-result-object p0
 
@@ -80,7 +80,7 @@
 
     iget-object p1, p1, Lcom/android/systemui/globalactions/GlobalActionsDialog;->mDialog:Lcom/android/systemui/globalactions/GlobalActionsDialog$ActionsDialog;
 
-    invoke-static {p1}, Lcom/android/systemui/globalactions/GlobalActionsDialog$ActionsDialog;->access$4300(Lcom/android/systemui/globalactions/GlobalActionsDialog$ActionsDialog;)V
+    invoke-static {p1}, Lcom/android/systemui/globalactions/GlobalActionsDialog$ActionsDialog;->access$4200(Lcom/android/systemui/globalactions/GlobalActionsDialog$ActionsDialog;)V
 
     goto :goto_0
 

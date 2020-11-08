@@ -1415,6 +1415,9 @@
     <string name="overheat_toast_content">درجة حرارة هاتفك مرتفعة للغاية، وقد تم إيقاف تشغيل الوظائف مرتفعة الاستهلاك للطاقة لخفض درجة الحرارة</string>
     <string name="overlay_display_devices_title">محاكاة الشاشات الثانوية</string>
     <string name="overview">نظرة عامة</string>
+    <string name="permission_btn_text_denied">خروج</string>
+    <string name="permission_btn_text_grant">موافق</string>
+    <string name="permission_dialog_title">بيان الإذن</string>
     <string name="phone_hint">يمكنك التمرير سريعًا من الرمز لتشغيل الهاتف</string>
     <string name="phone_label">فتح الهاتف</string>
     <string name="picture_color_mode">نمط لون الصورة</string>

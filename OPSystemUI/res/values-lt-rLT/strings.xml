@@ -204,6 +204,9 @@ Jei norite užsisakyti mobiliojo interneto prieigos taško paslaugą, apsilankyk
     <string name="overheat_notification_resume">Telefono temperatūra atstatyta ir telefoną dabar galima naudoti įprastai</string>
     <string name="overheat_notification_title_resume">Telefono temperatūra atstatyta</string>
     <string name="overheat_toast_content">Jūsų telefono temperatūra per aukšta, todėl temperatūrai sumažinti išjungtos daug energijos vartojančios funkcijos</string>
+    <string name="permission_btn_text_denied">Išeiti</string>
+    <string name="permission_btn_text_grant">GERAI</string>
+    <string name="permission_dialog_title">Leidimų pranešimas</string>
     <string name="prevent_view_title">Įjungtas kišeninis režimas</string>
     <string name="prevent_view_title_cancel">Kad suaktyvintumėte savo telefoną:</string>
     <string name="prevent_view_top_tag_cancel">Neuždenkite mėlynos spalvos telefono srities ir nuo jos nuvalykite visus nešvarumus ar dulkes.</string>

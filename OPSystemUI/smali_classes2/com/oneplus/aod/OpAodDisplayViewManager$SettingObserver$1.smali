@@ -43,7 +43,7 @@
 
 # virtual methods
 .method public run()V
-    .locals 6
+    .locals 5
 
     iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$SettingObserver$1;->val$uri:Landroid/net/Uri;
 
@@ -57,11 +57,9 @@
 
     move-result v0
 
-    const/4 v2, 0x1
+    const/4 v2, -0x2
 
-    const/4 v3, -0x2
-
-    const/4 v4, 0x0
+    const/4 v3, 0x0
 
     if-eqz v0, :cond_0
 
@@ -73,9 +71,9 @@
 
     move-result-object v0
 
-    iget v5, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$SettingObserver$1;->val$userId:I
+    iget v4, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$SettingObserver$1;->val$userId:I
 
-    invoke-static {v0, v5}, Lcom/oneplus/aod/OpAodUtils;->checkAodStyle(Landroid/content/Context;I)V
+    invoke-static {v0, v4}, Lcom/oneplus/aod/OpAodUtils;->checkAodStyle(Landroid/content/Context;I)V
 
     iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$SettingObserver$1;->this$1:Lcom/oneplus/aod/OpAodDisplayViewManager$SettingObserver;
 
@@ -85,7 +83,9 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Lcom/oneplus/aod/OpClockViewCtrl;->updateClockDB(Z)V
+    const/4 v4, 0x1
+
+    invoke-virtual {v0, v4}, Lcom/oneplus/aod/OpClockViewCtrl;->updateClockDB(Z)V
 
     iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$SettingObserver$1;->this$1:Lcom/oneplus/aod/OpAodDisplayViewManager$SettingObserver;
 
@@ -99,7 +99,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v1, v4, v3}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+    invoke-static {v0, v1, v3, v2}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result v0
 
@@ -115,15 +115,15 @@
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_2
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_2
 
     invoke-static {}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getCurrentUser()I
 
     move-result v0
 
-    if-nez v0, :cond_4
+    if-nez v0, :cond_2
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$SettingObserver$1;->this$1:Lcom/oneplus/aod/OpAodDisplayViewManager$SettingObserver;
 
@@ -135,7 +135,7 @@
 
     invoke-virtual {p0}, Lcom/oneplus/aod/bg/OpAodCanvas;->disable()V
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_0
     iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$SettingObserver$1;->val$uri:Landroid/net/Uri;
@@ -162,7 +162,7 @@
 
     invoke-virtual {p0}, Lcom/oneplus/aod/OpAodMain;->updateDisplayTextDB()V
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_1
     iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$SettingObserver$1;->val$uri:Landroid/net/Uri;
@@ -171,9 +171,9 @@
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
-    move-result-object v5
+    move-result-object v4
 
-    invoke-virtual {v0, v5}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v4}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -199,58 +199,13 @@
 
     move-result-object p0
 
-    invoke-static {p0, v1, v4, v3}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+    invoke-static {p0, v1, v3, v2}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result p0
 
     invoke-virtual {v0, p0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->setLightIndex(I)V
 
-    goto :goto_1
-
     :cond_2
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$SettingObserver$1;->val$uri:Landroid/net/Uri;
-
-    const-string v1, "op_custom_unlock_animation_style"
-
-    invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v5
-
-    invoke-virtual {v0, v5}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    iget-object p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$SettingObserver$1;->this$1:Lcom/oneplus/aod/OpAodDisplayViewManager$SettingObserver;
-
-    iget-object p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$SettingObserver;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
-
-    invoke-static {p0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$700(Lcom/oneplus/aod/OpAodDisplayViewManager;)Landroid/content/Context;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object p0
-
-    invoke-static {p0, v1, v4, v3}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
-
-    move-result p0
-
-    const/16 v0, 0x9
-
-    if-ne p0, v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    move v2, v4
-
     :goto_0
-    invoke-static {v2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1702(Z)Z
-
-    :cond_4
-    :goto_1
     return-void
 .end method

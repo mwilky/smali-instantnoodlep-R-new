@@ -3246,6 +3246,10 @@
 
     iput-object v0, p0, Lcom/android/systemui/stackdivider/DividerView;->mCallback:Lcom/android/systemui/stackdivider/DividerView$DividerCallbacks;
 
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/android/systemui/stackdivider/DividerView;->mSurfaceHidden:Z
+
     return-void
 .end method
 
@@ -4882,7 +4886,7 @@
 
     const-string p0, "DividerView"
 
-    const-string p1, "setResizeDimLayer SurfaceControl is null."
+    const-string/jumbo p1, "setResizeDimLayer SurfaceControl is null."
 
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 

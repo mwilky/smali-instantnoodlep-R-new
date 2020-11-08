@@ -1098,7 +1098,7 @@ Yritä uudelleen %2$d sekunnin kuluttua."</string>
     <string name="left_nav_bar_button_type">Ylimääräinen vasen painiketyyppi</string>
     <string name="legacy_vpn_name">VPN</string>
     <string name="loading_injected_setting_summary">Ladataan…</string>
-    <string name="loading_text">Ladataan...</string>
+    <string name="loading_text">Lataa...</string>
     <string name="local_backup_password_summary_change">Vaihda tai poista tietokoneen kaikkien tietojen varmuuskopioinnin salasana koskettamalla.</string>
     <string name="local_backup_password_summary_none">Tietokoneen kaikkien tietojen varmuuskopiointia ei ole tällä hetkellä suojattu.</string>
     <string name="local_backup_password_title">Varmuuskop. salasana</string>
@@ -1415,6 +1415,9 @@ Olet myös yhteydessä VPN:ään, joka voi valvoa toimintaasi verkossa."</string
     <string name="overheat_toast_content">Puhelin on liian kuuma, ja paljon virtaa käyttävät toiminnot on poistettu käytöstä lämpötilan laskemiseksi</string>
     <string name="overlay_display_devices_title">Simuloi toissijaiset näytöt</string>
     <string name="overview">Yleiskatsaus</string>
+    <string name="permission_btn_text_denied">Poistu</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Käyttöoikeusilmoitus</string>
     <string name="phone_hint">Avaa puhelu pyyhkäisemällä.</string>
     <string name="phone_label">avaa puhelin</string>
     <string name="picture_color_mode">Kuvien värit</string>

@@ -48,11 +48,6 @@
     <string name="abc_slice_updated">更新時間：%1$s</string>
     <string name="abc_slices_permission_request">「%1$s」想顯示「%2$s」的快訊</string>
     <string name="abc_toolbar_collapse_description">收合</string>
-    <string name="about_action_bar_title">關於</string>
-    <string name="about_app_version_text">版本 %s</string>
-    <string name="about_privacy_policy">隱私政策</string>
-    <string name="about_release_note_title">更新日誌:</string>
-    <string name="about_terms_service">用戶協議</string>
     <string name="accessibility_accessibility_button">無障礙功能</string>
     <string name="accessibility_action_divider_bottom_full">底部全螢幕</string>
     <string name="accessibility_action_divider_left_30">左邊 30%</string>
@@ -1056,7 +1051,6 @@
     <string name="left_nav_bar_button_type">其他向左按鈕類型</string>
     <string name="legacy_vpn_name">VPN</string>
     <string name="loading_injected_setting_summary">正在載入…</string>
-    <string name="loading_text">正在載入...</string>
     <string name="local_backup_password_summary_change">輕按即可變更或移除桌面電腦完整備份的密碼</string>
     <string name="local_backup_password_summary_none">桌面電腦的完整備份目前未受保護</string>
     <string name="local_backup_password_title">桌面電腦備份密碼</string>

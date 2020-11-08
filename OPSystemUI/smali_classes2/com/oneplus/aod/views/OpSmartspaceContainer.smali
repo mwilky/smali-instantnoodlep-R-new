@@ -64,40 +64,6 @@
     return-void
 .end method
 
-.method public removeAllOnAttachStateChangeListener()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/oneplus/aod/views/OpSmartspaceContainer;->mCacheListeners:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/view/View$OnAttachStateChangeListener;
-
-    invoke-super {p0, v1}, Landroid/widget/FrameLayout;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p0, p0, Lcom/oneplus/aod/views/OpSmartspaceContainer;->mCacheListeners:Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
-
-    return-void
-.end method
-
 .method public removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
     .locals 1
 

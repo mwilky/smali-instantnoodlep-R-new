@@ -66,20 +66,30 @@
 .end method
 
 .method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
+    .locals 1
 
     sget-boolean p1, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
     if-eqz p1, :cond_0
 
-    iget-object p0, p0, Lcom/oneplus/aod/bg/OpSketchPaint$2;->this$0:Lcom/oneplus/aod/bg/OpSketchPaint;
+    iget-object p1, p0, Lcom/oneplus/aod/bg/OpSketchPaint$2;->this$0:Lcom/oneplus/aod/bg/OpSketchPaint;
 
-    iget-object p0, p0, Lcom/oneplus/aod/bg/OpBasePaint;->mTag:Ljava/lang/String;
+    iget-object p1, p1, Lcom/oneplus/aod/bg/OpBasePaint;->mTag:Ljava/lang/String;
 
-    const-string p1, "spread start"
+    const-string v0, "spread start"
 
-    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
+    iget-object p1, p0, Lcom/oneplus/aod/bg/OpSketchPaint$2;->this$0:Lcom/oneplus/aod/bg/OpSketchPaint;
+
+    invoke-static {p1}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$300(Lcom/oneplus/aod/bg/OpSketchPaint;)V
+
+    iget-object p0, p0, Lcom/oneplus/aod/bg/OpSketchPaint$2;->this$0:Lcom/oneplus/aod/bg/OpSketchPaint;
+
+    iget-object p0, p0, Lcom/oneplus/aod/bg/OpBasePaint;->mView:Landroid/view/View;
+
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
     return-void
 .end method

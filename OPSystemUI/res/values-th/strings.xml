@@ -1415,6 +1415,9 @@
     <string name="overheat_toast_content">โทรศัพท์ของคุณมีอุณหภูมิสูงมาก และฟังก์ชันต่างๆ ที่ใช้พลังงานสูงจะถูกปิดเพื่อลดอุณหภูมิ</string>
     <string name="overlay_display_devices_title">จำลองจอแสดงผลที่สอง</string>
     <string name="overview">ภาพรวม</string>
+    <string name="permission_btn_text_denied">ออก</string>
+    <string name="permission_btn_text_grant">ตกลง</string>
+    <string name="permission_dialog_title">คำชี้แจงสิทธิ์</string>
     <string name="phone_hint">เลื่อนไอคอนโทรศัพท์</string>
     <string name="phone_label">เปิดโทรศัพท์</string>
     <string name="picture_color_mode">โหมดสีของรูปภาพ</string>

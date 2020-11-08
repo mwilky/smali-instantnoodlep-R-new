@@ -33,6 +33,7 @@
     <dimen name="mtrl_calendar_title_baseline_to_top_fullscreen">32.0dip</dimen>
     <item type="dimen" name="navigation_bar_size">@android:dimen/navigation_bar_width</item>
     <dimen name="notification_panel_width">490.0dip</dimen>
+    <item type="dimen" name="op_controls_detail_dialog_side_margin">@dimen/navigation_bar_size</item>
     <item type="dimen" name="op_quick_qs_tile_margin_top">@dimen/op_control_margin_space3</item>
     <dimen name="qs_detail_margin_top">0.0dip</dimen>
     <dimen name="qs_paged_tile_layout_padding_bottom">0.0dip</dimen>

@@ -44,18 +44,18 @@
 
 .field public static final oneplus_control_text_error_message_anim:I = 0x7f010224
 
-.field public static final op_qs_tile_long_press_enter:I = 0x7f010241
+.field public static final op_qs_tile_long_press_enter:I = 0x7f010242
 
-.field public static final op_qs_tile_long_press_exit:I = 0x7f010242
+.field public static final op_qs_tile_long_press_exit:I = 0x7f010243
 
-.field public static final search_launch_enter:I = 0x7f01024f
+.field public static final search_launch_enter:I = 0x7f010250
 
-.field public static final search_launch_exit:I = 0x7f010250
+.field public static final search_launch_exit:I = 0x7f010251
 
-.field public static final tv_pip_controls_focus_gain_animation:I = 0x7f01025e
+.field public static final tv_pip_controls_focus_gain_animation:I = 0x7f01025f
 
-.field public static final tv_pip_controls_focus_loss_animation:I = 0x7f01025f
+.field public static final tv_pip_controls_focus_loss_animation:I = 0x7f010260
 
-.field public static final tv_pip_menu_fade_in_animation:I = 0x7f010260
+.field public static final tv_pip_menu_fade_in_animation:I = 0x7f010261
 
-.field public static final tv_pip_menu_fade_out_animation:I = 0x7f010261
+.field public static final tv_pip_menu_fade_out_animation:I = 0x7f010262

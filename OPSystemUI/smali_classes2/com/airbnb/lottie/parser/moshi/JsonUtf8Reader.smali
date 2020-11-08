@@ -89,7 +89,7 @@
 
     iput-object p1, p0, Lcom/airbnb/lottie/parser/moshi/JsonUtf8Reader;->source:Lokio/BufferedSource;
 
-    invoke-interface {p1}, Lokio/BufferedSource;->getBuffer()Lokio/Buffer;
+    invoke-interface {p1}, Lokio/BufferedSource;->buffer()Lokio/Buffer;
 
     move-result-object p1
 

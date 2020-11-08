@@ -50,7 +50,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/globalactions/GlobalActionsDialog$AirplaneModeAction;->this$0:Lcom/android/systemui/globalactions/GlobalActionsDialog;
 
-    invoke-static {v0}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$3400(Lcom/android/systemui/globalactions/GlobalActionsDialog;)Z
+    invoke-static {v0}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$3300(Lcom/android/systemui/globalactions/GlobalActionsDialog;)Z
 
     move-result v0
 
@@ -91,7 +91,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/globalactions/GlobalActionsDialog$AirplaneModeAction;->this$0:Lcom/android/systemui/globalactions/GlobalActionsDialog;
 
-    invoke-static {p0, p1}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$3702(Lcom/android/systemui/globalactions/GlobalActionsDialog;Lcom/android/systemui/globalactions/GlobalActionsDialog$ToggleState;)Lcom/android/systemui/globalactions/GlobalActionsDialog$ToggleState;
+    invoke-static {p0, p1}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$3602(Lcom/android/systemui/globalactions/GlobalActionsDialog;Lcom/android/systemui/globalactions/GlobalActionsDialog$ToggleState;)Lcom/android/systemui/globalactions/GlobalActionsDialog$ToggleState;
 
     :cond_2
     return-void
@@ -102,7 +102,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/globalactions/GlobalActionsDialog$AirplaneModeAction;->this$0:Lcom/android/systemui/globalactions/GlobalActionsDialog;
 
-    invoke-static {v0}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$3400(Lcom/android/systemui/globalactions/GlobalActionsDialog;)Z
+    invoke-static {v0}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$3300(Lcom/android/systemui/globalactions/GlobalActionsDialog;)Z
 
     move-result v0
 
@@ -130,7 +130,7 @@
 
     const/4 v0, 0x1
 
-    invoke-static {p1, v0}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$3502(Lcom/android/systemui/globalactions/GlobalActionsDialog;Z)Z
+    invoke-static {p1, v0}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$3402(Lcom/android/systemui/globalactions/GlobalActionsDialog;Z)Z
 
     new-instance p1, Landroid/content/Intent;
 
@@ -146,7 +146,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/globalactions/GlobalActionsDialog$AirplaneModeAction;->this$0:Lcom/android/systemui/globalactions/GlobalActionsDialog;
 
-    invoke-static {p0}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$2100(Lcom/android/systemui/globalactions/GlobalActionsDialog;)Landroid/content/Context;
+    invoke-static {p0}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$2000(Lcom/android/systemui/globalactions/GlobalActionsDialog;)Landroid/content/Context;
 
     move-result-object p0
 
@@ -157,7 +157,7 @@
     :cond_0
     iget-object p0, p0, Lcom/android/systemui/globalactions/GlobalActionsDialog$AirplaneModeAction;->this$0:Lcom/android/systemui/globalactions/GlobalActionsDialog;
 
-    invoke-static {p0, p1}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$3600(Lcom/android/systemui/globalactions/GlobalActionsDialog;Z)V
+    invoke-static {p0, p1}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$3500(Lcom/android/systemui/globalactions/GlobalActionsDialog;Z)V
 
     :goto_0
     return-void

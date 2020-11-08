@@ -1,6 +1,9 @@
-.class synthetic Lcom/android/systemui/doze/DozeTriggers$2;
+.class Lcom/android/systemui/doze/DozeTriggers$2;
 .super Ljava/lang/Object;
 .source "DozeTriggers.java"
+
+# interfaces
+.implements Lcom/android/systemui/doze/DozeHost$Callback;
 
 
 # annotations
@@ -9,186 +12,345 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1008
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
-# static fields
-.field static final synthetic $SwitchMap$com$android$systemui$doze$DozeMachine$State:[I
+# instance fields
+.field final synthetic this$0:Lcom/android/systemui/doze/DozeTriggers;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method constructor <init>(Lcom/android/systemui/doze/DozeTriggers;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/systemui/doze/DozeTriggers$2;->this$0:Lcom/android/systemui/doze/DozeTriggers;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onAlwaysOnEnableChanged(Z)V
     .locals 3
 
-    invoke-static {}, Lcom/android/systemui/doze/DozeMachine$State;->values()[Lcom/android/systemui/doze/DozeMachine$State;
+    sget-boolean v0, Lcom/android/systemui/doze/DozeMachine;->DEBUG:Z
+
+    const-string v1, "DozeTriggers"
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "onAlwaysOnEnableChanged, active:"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    array-length v0, v0
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    new-array v0, v0, [I
+    :cond_0
+    iget-object v0, p0, Lcom/android/systemui/doze/DozeTriggers$2;->this$0:Lcom/android/systemui/doze/DozeTriggers;
 
-    sput-object v0, Lcom/android/systemui/doze/DozeTriggers$2;->$SwitchMap$com$android$systemui$doze$DozeMachine$State:[I
+    invoke-static {v0}, Lcom/android/systemui/doze/DozeTriggers;->access$600(Lcom/android/systemui/doze/DozeTriggers;)Lcom/android/systemui/doze/DozeSensors;
 
-    :try_start_0
-    sget-object v1, Lcom/android/systemui/doze/DozeMachine$State;->INITIALIZED:Lcom/android/systemui/doze/DozeMachine$State;
+    move-result-object v0
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v0, p1}, Lcom/android/systemui/doze/DozeSensors;->setLightSensorListening(Z)V
 
-    move-result v1
+    if-eqz p1, :cond_2
 
-    const/4 v2, 0x1
+    iget-object p1, p0, Lcom/android/systemui/doze/DozeTriggers$2;->this$0:Lcom/android/systemui/doze/DozeTriggers;
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {p1}, Lcom/android/systemui/doze/DozeTriggers;->access$300(Lcom/android/systemui/doze/DozeTriggers;)Lcom/android/systemui/doze/DozeMachine;
 
-    :catch_0
-    :try_start_1
-    sget-object v0, Lcom/android/systemui/doze/DozeTriggers$2;->$SwitchMap$com$android$systemui$doze$DozeMachine$State:[I
+    move-result-object p1
+
+    const/16 v0, 0xb
+
+    invoke-virtual {p1, v0}, Lcom/android/systemui/doze/DozeMachine;->requestPulse(I)V
+
+    iget-object p1, p0, Lcom/android/systemui/doze/DozeTriggers$2;->this$0:Lcom/android/systemui/doze/DozeTriggers;
+
+    invoke-static {p1}, Lcom/android/systemui/doze/DozeTriggers;->access$1000(Lcom/android/systemui/doze/DozeTriggers;)Lcom/oneplus/aod/OpAodDisplayViewManager;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    iget-object p0, p0, Lcom/android/systemui/doze/DozeTriggers$2;->this$0:Lcom/android/systemui/doze/DozeTriggers;
+
+    invoke-static {p0}, Lcom/android/systemui/doze/DozeTriggers;->access$1100(Lcom/android/systemui/doze/DozeTriggers;)Lcom/oneplus/aod/OpAodDisplayViewManager;
+
+    move-result-object p0
+
+    invoke-virtual {p0, v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->updateForPulseReason(I)V
+
+    goto :goto_0
+
+    :cond_1
+    const-string p0, "onAlwaysOnEnableChanged: mAodDisplayViewManager is null!!!"
+
+    invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    :cond_2
+    iget-object p0, p0, Lcom/android/systemui/doze/DozeTriggers$2;->this$0:Lcom/android/systemui/doze/DozeTriggers;
+
+    invoke-static {p0}, Lcom/android/systemui/doze/DozeTriggers;->access$300(Lcom/android/systemui/doze/DozeTriggers;)Lcom/android/systemui/doze/DozeMachine;
+
+    move-result-object p0
+
+    sget-object p1, Lcom/android/systemui/doze/DozeMachine$State;->DOZE:Lcom/android/systemui/doze/DozeMachine$State;
+
+    invoke-virtual {p0, p1}, Lcom/android/systemui/doze/DozeMachine;->requestState(Lcom/android/systemui/doze/DozeMachine$State;)V
+
+    :goto_0
+    return-void
+.end method
+
+.method public onDozeSuppressedChanged(Z)V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/systemui/doze/DozeTriggers$2;->this$0:Lcom/android/systemui/doze/DozeTriggers;
+
+    invoke-static {v0}, Lcom/android/systemui/doze/DozeTriggers;->access$900(Lcom/android/systemui/doze/DozeTriggers;)Landroid/hardware/display/AmbientDisplayConfiguration;
+
+    move-result-object v0
+
+    const/4 v1, -0x2
+
+    invoke-virtual {v0, v1}, Landroid/hardware/display/AmbientDisplayConfiguration;->alwaysOnEnabled(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    if-nez p1, :cond_0
+
+    sget-object p1, Lcom/android/systemui/doze/DozeMachine$State;->DOZE_AOD:Lcom/android/systemui/doze/DozeMachine$State;
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p1, Lcom/android/systemui/doze/DozeMachine$State;->DOZE:Lcom/android/systemui/doze/DozeMachine$State;
+
+    :goto_0
+    iget-object p0, p0, Lcom/android/systemui/doze/DozeTriggers$2;->this$0:Lcom/android/systemui/doze/DozeTriggers;
+
+    invoke-static {p0}, Lcom/android/systemui/doze/DozeTriggers;->access$300(Lcom/android/systemui/doze/DozeTriggers;)Lcom/android/systemui/doze/DozeMachine;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p1}, Lcom/android/systemui/doze/DozeMachine;->requestState(Lcom/android/systemui/doze/DozeMachine$State;)V
+
+    return-void
+.end method
+
+.method public onFingerprintPoke()V
+    .locals 3
+
+    sget-boolean v0, Lcom/android/systemui/doze/DozeMachine;->DEBUG:Z
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "DozeTriggers"
+
+    const-string v1, "requestFingerprintPoke"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget-object p0, p0, Lcom/android/systemui/doze/DozeTriggers$2;->this$0:Lcom/android/systemui/doze/DozeTriggers;
+
+    const/16 v0, 0xd
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    invoke-static {p0, v0, v1, v2}, Lcom/android/systemui/doze/DozeTriggers;->access$500(Lcom/android/systemui/doze/DozeTriggers;IZLjava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public onNotificationAlerted(Ljava/lang/Runnable;)V
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/doze/DozeTriggers$2;->this$0:Lcom/android/systemui/doze/DozeTriggers;
+
+    invoke-static {p0, p1}, Lcom/android/systemui/doze/DozeTriggers;->access$700(Lcom/android/systemui/doze/DozeTriggers;Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public onPowerSaveChanged(Z)V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/systemui/doze/DozeTriggers$2;->this$0:Lcom/android/systemui/doze/DozeTriggers;
+
+    invoke-static {v0}, Lcom/android/systemui/doze/DozeTriggers;->access$800(Lcom/android/systemui/doze/DozeTriggers;)Lcom/android/systemui/doze/DozeHost;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/android/systemui/doze/DozeHost;->isPowerSaveActive()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isCustomFingerprint()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/systemui/doze/DozeTriggers$2;->this$0:Lcom/android/systemui/doze/DozeTriggers;
+
+    invoke-static {v0}, Lcom/android/systemui/doze/DozeTriggers;->access$300(Lcom/android/systemui/doze/DozeTriggers;)Lcom/android/systemui/doze/DozeMachine;
+
+    move-result-object v0
 
     sget-object v1, Lcom/android/systemui/doze/DozeMachine$State;->DOZE:Lcom/android/systemui/doze/DozeMachine$State;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v0, v1}, Lcom/android/systemui/doze/DozeMachine;->requestState(Lcom/android/systemui/doze/DozeMachine$State;)V
 
-    move-result v1
+    goto :goto_0
 
-    const/4 v2, 0x2
+    :cond_0
+    iget-object v0, p0, Lcom/android/systemui/doze/DozeTriggers$2;->this$0:Lcom/android/systemui/doze/DozeTriggers;
 
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    invoke-static {v0}, Lcom/android/systemui/doze/DozeTriggers;->access$300(Lcom/android/systemui/doze/DozeTriggers;)Lcom/android/systemui/doze/DozeMachine;
 
-    :catch_1
-    :try_start_2
-    sget-object v0, Lcom/android/systemui/doze/DozeTriggers$2;->$SwitchMap$com$android$systemui$doze$DozeMachine$State:[I
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/systemui/doze/DozeMachine;->getState()Lcom/android/systemui/doze/DozeMachine$State;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/android/systemui/doze/DozeMachine$State;->DOZE:Lcom/android/systemui/doze/DozeMachine$State;
+
+    if-ne v0, v1, :cond_1
+
+    iget-object v0, p0, Lcom/android/systemui/doze/DozeTriggers$2;->this$0:Lcom/android/systemui/doze/DozeTriggers;
+
+    invoke-static {v0}, Lcom/android/systemui/doze/DozeTriggers;->access$900(Lcom/android/systemui/doze/DozeTriggers;)Landroid/hardware/display/AmbientDisplayConfiguration;
+
+    move-result-object v0
+
+    const/4 v1, -0x2
+
+    invoke-virtual {v0, v1}, Landroid/hardware/display/AmbientDisplayConfiguration;->alwaysOnEnabled(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/android/systemui/doze/DozeTriggers$2;->this$0:Lcom/android/systemui/doze/DozeTriggers;
+
+    invoke-static {v0}, Lcom/android/systemui/doze/DozeTriggers;->access$300(Lcom/android/systemui/doze/DozeTriggers;)Lcom/android/systemui/doze/DozeMachine;
+
+    move-result-object v0
 
     sget-object v1, Lcom/android/systemui/doze/DozeMachine$State;->DOZE_AOD:Lcom/android/systemui/doze/DozeMachine$State;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v0, v1}, Lcom/android/systemui/doze/DozeMachine;->requestState(Lcom/android/systemui/doze/DozeMachine$State;)V
 
-    move-result v1
+    :cond_1
+    :goto_0
+    invoke-static {}, Lcom/oneplus/plugin/OpLsState;->getInstance()Lcom/oneplus/plugin/OpLsState;
 
-    const/4 v2, 0x3
+    move-result-object v0
 
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    invoke-virtual {v0}, Lcom/oneplus/plugin/OpLsState;->getUpdateMonitor()Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-    :catch_2
-    :try_start_3
-    sget-object v0, Lcom/android/systemui/doze/DozeTriggers$2;->$SwitchMap$com$android$systemui$doze$DozeMachine$State:[I
+    move-result-object v0
 
-    sget-object v1, Lcom/android/systemui/doze/DozeMachine$State;->DOZE_AOD_PAUSED:Lcom/android/systemui/doze/DozeMachine$State;
+    if-eqz v0, :cond_2
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isAlwaysOnEnabled()Z
 
-    move-result v1
+    move-result v0
 
-    const/4 v2, 0x4
+    if-eqz v0, :cond_2
 
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    if-eqz p1, :cond_2
 
-    :catch_3
-    :try_start_4
-    sget-object v0, Lcom/android/systemui/doze/DozeTriggers$2;->$SwitchMap$com$android$systemui$doze$DozeMachine$State:[I
+    iget-object p0, p0, Lcom/android/systemui/doze/DozeTriggers$2;->this$0:Lcom/android/systemui/doze/DozeTriggers;
 
-    sget-object v1, Lcom/android/systemui/doze/DozeMachine$State;->DOZE_AOD_PAUSING:Lcom/android/systemui/doze/DozeMachine$State;
+    invoke-static {p0}, Lcom/android/systemui/doze/DozeTriggers;->access$300(Lcom/android/systemui/doze/DozeTriggers;)Lcom/android/systemui/doze/DozeMachine;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    move-result-object p0
 
-    move-result v1
+    sget-object p1, Lcom/android/systemui/doze/DozeMachine$State;->DOZE:Lcom/android/systemui/doze/DozeMachine$State;
 
-    const/4 v2, 0x5
+    invoke-virtual {p0, p1}, Lcom/android/systemui/doze/DozeMachine;->requestState(Lcom/android/systemui/doze/DozeMachine$State;)V
 
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    :cond_2
+    return-void
+.end method
 
-    :catch_4
-    :try_start_5
-    sget-object v0, Lcom/android/systemui/doze/DozeTriggers$2;->$SwitchMap$com$android$systemui$doze$DozeMachine$State:[I
+.method public onSingleTap()V
+    .locals 3
 
-    sget-object v1, Lcom/android/systemui/doze/DozeMachine$State;->DOZE_PULSING:Lcom/android/systemui/doze/DozeMachine$State;
+    sget-boolean v0, Lcom/android/systemui/doze/DozeMachine;->DEBUG:Z
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    if-eqz v0, :cond_0
 
-    move-result v1
+    const-string v0, "DozeTriggers"
 
-    const/4 v2, 0x6
+    const-string v1, "requestSingleTapPulse"
 
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :catch_5
-    :try_start_6
-    sget-object v0, Lcom/android/systemui/doze/DozeTriggers$2;->$SwitchMap$com$android$systemui$doze$DozeMachine$State:[I
+    :cond_0
+    iget-object p0, p0, Lcom/android/systemui/doze/DozeTriggers$2;->this$0:Lcom/android/systemui/doze/DozeTriggers;
 
-    sget-object v1, Lcom/android/systemui/doze/DozeMachine$State;->DOZE_PULSING_BRIGHT:Lcom/android/systemui/doze/DozeMachine$State;
+    const/16 v0, 0xc
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    const/4 v1, 0x0
 
-    move-result v1
+    const/4 v2, 0x0
 
-    const/4 v2, 0x7
+    invoke-static {p0, v0, v1, v2}, Lcom/android/systemui/doze/DozeTriggers;->access$500(Lcom/android/systemui/doze/DozeTriggers;IZLjava/lang/Runnable;)V
 
-    aput v2, v0, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+    return-void
+.end method
 
-    :catch_6
-    :try_start_7
-    sget-object v0, Lcom/android/systemui/doze/DozeTriggers$2;->$SwitchMap$com$android$systemui$doze$DozeMachine$State:[I
+.method public onThreeKeyChanged(I)V
+    .locals 2
 
-    sget-object v1, Lcom/android/systemui/doze/DozeMachine$State;->DOZE_AOD_DOCKED:Lcom/android/systemui/doze/DozeMachine$State;
+    sget-boolean p1, Lcom/android/systemui/doze/DozeMachine;->DEBUG:Z
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    if-eqz p1, :cond_0
 
-    move-result v1
+    const-string p1, "DozeTriggers"
 
-    const/16 v2, 0x8
+    const-string v0, "requestThreeKeyStatusPulse"
 
-    aput v2, v0, v1
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :catch_7
-    :try_start_8
-    sget-object v0, Lcom/android/systemui/doze/DozeTriggers$2;->$SwitchMap$com$android$systemui$doze$DozeMachine$State:[I
+    :cond_0
+    iget-object p0, p0, Lcom/android/systemui/doze/DozeTriggers$2;->this$0:Lcom/android/systemui/doze/DozeTriggers;
 
-    sget-object v1, Lcom/android/systemui/doze/DozeMachine$State;->DOZE_PULSE_DONE:Lcom/android/systemui/doze/DozeMachine$State;
+    const/16 p1, 0xa
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    const/4 v0, 0x0
 
-    move-result v1
+    const/4 v1, 0x0
 
-    const/16 v2, 0x9
+    invoke-static {p0, p1, v0, v1}, Lcom/android/systemui/doze/DozeTriggers;->access$500(Lcom/android/systemui/doze/DozeTriggers;IZLjava/lang/Runnable;)V
 
-    aput v2, v0, v1
-    :try_end_8
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
-
-    :catch_8
-    :try_start_9
-    sget-object v0, Lcom/android/systemui/doze/DozeTriggers$2;->$SwitchMap$com$android$systemui$doze$DozeMachine$State:[I
-
-    sget-object v1, Lcom/android/systemui/doze/DozeMachine$State;->FINISH:Lcom/android/systemui/doze/DozeMachine$State;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/16 v2, 0xa
-
-    aput v2, v0, v1
-    :try_end_9
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
-
-    :catch_9
     return-void
 .end method

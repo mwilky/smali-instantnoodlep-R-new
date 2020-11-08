@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/airbnb/lottie/LottieDrawable;->setProgress(F)V
+    value = Lcom/airbnb/lottie/LottieDrawable;->setFrame(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic this$0:Lcom/airbnb/lottie/LottieDrawable;
 
-.field final synthetic val$progress:F
+.field final synthetic val$frame:I
 
 
 # direct methods
-.method constructor <init>(Lcom/airbnb/lottie/LottieDrawable;F)V
+.method constructor <init>(Lcom/airbnb/lottie/LottieDrawable;I)V
     .locals 0
 
     iput-object p1, p0, Lcom/airbnb/lottie/LottieDrawable$14;->this$0:Lcom/airbnb/lottie/LottieDrawable;
 
-    iput p2, p0, Lcom/airbnb/lottie/LottieDrawable$14;->val$progress:F
+    iput p2, p0, Lcom/airbnb/lottie/LottieDrawable$14;->val$frame:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,9 +43,9 @@
 
     iget-object p1, p0, Lcom/airbnb/lottie/LottieDrawable$14;->this$0:Lcom/airbnb/lottie/LottieDrawable;
 
-    iget p0, p0, Lcom/airbnb/lottie/LottieDrawable$14;->val$progress:F
+    iget p0, p0, Lcom/airbnb/lottie/LottieDrawable$14;->val$frame:I
 
-    invoke-virtual {p1, p0}, Lcom/airbnb/lottie/LottieDrawable;->setProgress(F)V
+    invoke-virtual {p1, p0}, Lcom/airbnb/lottie/LottieDrawable;->setFrame(I)V
 
     return-void
 .end method

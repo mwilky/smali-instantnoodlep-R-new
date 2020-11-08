@@ -158,37 +158,21 @@
 .end method
 
 .method public updateThemeColor(Z)V
-    .locals 3
+    .locals 1
 
-    const/4 v0, 0x1
+    const/4 p1, 0x1
+
+    invoke-static {p1}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
+
+    move-result p1
+
+    const/4 v0, 0x2
 
     invoke-static {v0}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
 
-    move-result v0
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/WLBDeatailItemView;->mName:Landroid/widget/TextView;
 
-    const/4 v1, 0x2
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    invoke-static {v1}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
-
-    move-result v1
-
-    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/WLBDeatailItemView;->mName:Landroid/widget/TextView;
-
-    invoke-virtual {v2, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    if-eqz p1, :cond_0
-
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/WLBDeatailItemView;->mTriggerName:Landroid/widget/TextView;
-
-    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/WLBDeatailItemView;->mTriggerName:Landroid/widget/TextView;
-
-    invoke-virtual {p0, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    :goto_0
     return-void
 .end method

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nControlsUiControllerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ControlsUiControllerImpl.kt\ncom/android/systemui/controls/ui/ControlsUiControllerImpl\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 _Maps.kt\nkotlin/collections/MapsKt___MapsKt\n*L\n1#1,568:1\n1313#2:569\n1382#2,3:570\n1088#2,4:573\n1591#2,2:577\n1591#2,2:579\n1064#2,2:581\n1088#2,4:583\n1373#2:587\n1591#2,2:588\n1374#2:590\n1591#2,2:591\n240#2,2:593\n205#2,2:595\n1591#2,2:599\n240#2,2:601\n149#3,2:597\n*E\n*S KotlinDebug\n*F\n+ 1 ControlsUiControllerImpl.kt\ncom/android/systemui/controls/ui/ControlsUiControllerImpl\n*L\n160#1:569\n160#1,3:570\n162#1,4:573\n214#1,2:577\n318#1,2:579\n322#1,2:581\n322#1,4:583\n324#1:587\n324#1,2:588\n324#1:590\n388#1,2:591\n452#1,2:593\n466#1,2:595\n507#1,2:599\n535#1,2:601\n485#1,2:597\n*E\n"
+    value = "SMAP\nControlsUiControllerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ControlsUiControllerImpl.kt\ncom/android/systemui/controls/ui/ControlsUiControllerImpl\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 _Maps.kt\nkotlin/collections/MapsKt___MapsKt\n*L\n1#1,575:1\n1313#2:576\n1382#2,3:577\n1088#2,4:580\n1591#2,2:584\n1591#2,2:586\n1064#2,2:588\n1088#2,4:590\n1373#2:594\n1591#2,2:595\n1374#2:597\n1591#2,2:598\n240#2,2:600\n205#2,2:602\n1591#2,2:606\n240#2,2:608\n149#3,2:604\n*E\n*S KotlinDebug\n*F\n+ 1 ControlsUiControllerImpl.kt\ncom/android/systemui/controls/ui/ControlsUiControllerImpl\n*L\n160#1:576\n160#1,3:577\n162#1,4:580\n214#1,2:584\n318#1,2:586\n322#1,2:588\n322#1,4:590\n324#1:594\n324#1,2:595\n324#1:597\n388#1,2:598\n459#1,2:600\n473#1,2:602\n514#1,2:606\n542#1,2:608\n492#1,2:604\n*E\n"
 .end annotation
 
 
@@ -881,238 +881,277 @@
 .end method
 
 .method private final createListView()V
-    .locals 15
+    .locals 18
 
-    iget-object v0, p0, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->context:Landroid/content/Context;
+    move-object/from16 v0, p0
 
-    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    iget-object v1, v0, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->context:Landroid/content/Context;
 
-    move-result-object v0
+    invoke-static {v1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
-    sget v1, Lcom/android/systemui/R$layout;->controls_with_favorites:I
+    move-result-object v1
 
-    iget-object v2, p0, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->parent:Landroid/view/ViewGroup;
+    sget v2, Lcom/android/systemui/R$layout;->controls_with_favorites:I
 
-    const/4 v3, 0x0
+    iget-object v3, v0, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->parent:Landroid/view/ViewGroup;
 
-    const-string v4, "parent"
+    const/4 v4, 0x0
 
-    if-eqz v2, :cond_8
+    const-string v5, "parent"
 
-    const/4 v5, 0x1
+    if-eqz v3, :cond_a
 
-    invoke-virtual {v0, v1, v2, v5}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    const/4 v6, 0x1
 
-    invoke-direct {p0}, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->findMaxColumns()I
+    invoke-virtual {v1, v2, v3, v6}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    move-result v1
+    invoke-direct/range {p0 .. p0}, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->findMaxColumns()I
 
-    iget-object v2, p0, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->parent:Landroid/view/ViewGroup;
+    move-result v2
 
-    if-eqz v2, :cond_7
+    iget-object v3, v0, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->parent:Landroid/view/ViewGroup;
 
-    sget v3, Lcom/android/systemui/R$id;->global_actions_controls_list:I
+    if-eqz v3, :cond_9
 
-    invoke-virtual {v2, v3}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
+    sget v4, Lcom/android/systemui/R$id;->global_actions_controls_list:I
 
-    move-result-object v2
+    invoke-virtual {v3, v4}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
 
-    const-string v3, "null cannot be cast to non-null type android.view.ViewGroup"
+    move-result-object v3
 
-    if-eqz v2, :cond_6
+    const-string v4, "null cannot be cast to non-null type android.view.ViewGroup"
 
-    check-cast v2, Landroid/view/ViewGroup;
+    if-eqz v3, :cond_8
 
-    const-string v4, "inflater"
+    check-cast v3, Landroid/view/ViewGroup;
 
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    const-string v5, "inflater"
 
-    invoke-direct {p0, v0, v2}, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->createRow(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/ViewGroup;
+    invoke-static {v1, v5}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-result-object v4
-
-    iget-object v5, p0, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->selectedStructure:Lcom/android/systemui/controls/controller/StructureInfo;
-
-    invoke-virtual {v5}, Lcom/android/systemui/controls/controller/StructureInfo;->getControls()Ljava/util/List;
+    invoke-direct {v0, v1, v3}, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->createRow(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/ViewGroup;
 
     move-result-object v5
 
-    invoke-interface {v5}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    iget-object v7, v0, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->selectedStructure:Lcom/android/systemui/controls/controller/StructureInfo;
 
-    move-result-object v5
-
-    :cond_0
-    :goto_0
-    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v6
-
-    const/4 v7, 0x0
-
-    if-eqz v6, :cond_3
-
-    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lcom/android/systemui/controls/controller/ControlInfo;
-
-    new-instance v8, Lcom/android/systemui/controls/ui/ControlKey;
-
-    iget-object v9, p0, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->selectedStructure:Lcom/android/systemui/controls/controller/StructureInfo;
-
-    invoke-virtual {v9}, Lcom/android/systemui/controls/controller/StructureInfo;->getComponentName()Landroid/content/ComponentName;
-
-    move-result-object v9
-
-    invoke-virtual {v6}, Lcom/android/systemui/controls/controller/ControlInfo;->getControlId()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-direct {v8, v9, v6}, Lcom/android/systemui/controls/ui/ControlKey;-><init>(Landroid/content/ComponentName;Ljava/lang/String;)V
-
-    iget-object v6, p0, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->controlsById:Ljava/util/Map;
-
-    invoke-interface {v6, v8}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lcom/android/systemui/controls/ui/ControlWithState;
-
-    if-eqz v6, :cond_0
-
-    invoke-virtual {v4}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result v9
-
-    if-ne v9, v1, :cond_1
-
-    invoke-direct {p0, v0, v2}, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->createRow(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/ViewGroup;
-
-    move-result-object v4
-
-    :cond_1
-    sget v9, Lcom/android/systemui/R$layout;->controls_base_item:I
-
-    invoke-virtual {v0, v9, v4, v7}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-virtual {v7}, Lcom/android/systemui/controls/controller/StructureInfo;->getControls()Ljava/util/List;
 
     move-result-object v7
 
-    if-eqz v7, :cond_2
+    invoke-interface {v7}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    move-object v10, v7
+    move-result-object v7
 
-    check-cast v10, Landroid/view/ViewGroup;
+    :cond_0
+    :goto_0
+    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {v4, v10}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    move-result v8
 
-    new-instance v7, Lcom/android/systemui/controls/ui/ControlViewHolder;
+    const/4 v9, 0x0
 
-    iget-object v9, p0, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->controlsController:Ldagger/Lazy;
+    if-eqz v8, :cond_5
 
-    invoke-interface {v9}, Ldagger/Lazy;->get()Ljava/lang/Object;
+    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v9
+    move-result-object v8
 
-    const-string v11, "controlsController.get()"
+    check-cast v8, Lcom/android/systemui/controls/controller/ControlInfo;
 
-    invoke-static {v9, v11}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    new-instance v10, Lcom/android/systemui/controls/ui/ControlKey;
 
-    move-object v11, v9
+    iget-object v11, v0, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->selectedStructure:Lcom/android/systemui/controls/controller/StructureInfo;
 
-    check-cast v11, Lcom/android/systemui/controls/controller/ControlsController;
+    invoke-virtual {v11}, Lcom/android/systemui/controls/controller/StructureInfo;->getComponentName()Landroid/content/ComponentName;
 
-    iget-object v12, p0, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->uiExecutor:Lcom/android/systemui/util/concurrency/DelayableExecutor;
+    move-result-object v11
 
-    iget-object v13, p0, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->bgExecutor:Lcom/android/systemui/util/concurrency/DelayableExecutor;
+    invoke-virtual {v8}, Lcom/android/systemui/controls/controller/ControlInfo;->getControlId()Ljava/lang/String;
 
-    iget-object v14, p0, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->controlActionCoordinator:Lcom/android/systemui/controls/ui/ControlActionCoordinator;
+    move-result-object v8
 
-    move-object v9, v7
+    invoke-direct {v10, v11, v8}, Lcom/android/systemui/controls/ui/ControlKey;-><init>(Landroid/content/ComponentName;Ljava/lang/String;)V
 
-    invoke-direct/range {v9 .. v14}, Lcom/android/systemui/controls/ui/ControlViewHolder;-><init>(Landroid/view/ViewGroup;Lcom/android/systemui/controls/controller/ControlsController;Lcom/android/systemui/util/concurrency/DelayableExecutor;Lcom/android/systemui/util/concurrency/DelayableExecutor;Lcom/android/systemui/controls/ui/ControlActionCoordinator;)V
+    iget-object v8, v0, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->controlsById:Ljava/util/Map;
 
-    invoke-virtual {v7, v6}, Lcom/android/systemui/controls/ui/ControlViewHolder;->bindData(Lcom/android/systemui/controls/ui/ControlWithState;)V
+    invoke-interface {v8, v10}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v6, p0, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->controlViewsById:Ljava/util/Map;
+    move-result-object v8
 
-    invoke-interface {v6, v8, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast v8, Lcom/android/systemui/controls/ui/ControlWithState;
 
-    move-result-object v6
+    if-eqz v8, :cond_0
 
-    check-cast v6, Lcom/android/systemui/controls/ui/ControlViewHolder;
+    invoke-virtual {v5}, Landroid/view/ViewGroup;->getChildCount()I
 
-    goto :goto_0
+    move-result v11
+
+    if-ne v11, v2, :cond_1
+
+    invoke-direct {v0, v1, v3}, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->createRow(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/ViewGroup;
+
+    move-result-object v5
+
+    :cond_1
+    sget v11, Lcom/android/systemui/R$layout;->controls_base_item:I
+
+    invoke-virtual {v1, v11, v5, v9}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object v11
+
+    if-eqz v11, :cond_4
+
+    move-object v13, v11
+
+    check-cast v13, Landroid/view/ViewGroup;
+
+    invoke-virtual {v5}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v11
+
+    add-int/2addr v11, v6
+
+    if-ne v11, v2, :cond_3
+
+    invoke-virtual {v13}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v11
+
+    if-eqz v11, :cond_2
+
+    check-cast v11, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    iput v9, v11, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+
+    invoke-virtual {v13, v11}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    goto :goto_1
 
     :cond_2
-    new-instance p0, Lkotlin/TypeCastException;
+    new-instance v0, Lkotlin/TypeCastException;
 
-    invoke-direct {p0, v3}, Lkotlin/TypeCastException;-><init>(Ljava/lang/String;)V
+    const-string v1, "null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams"
 
-    throw p0
+    invoke-direct {v0, v1}, Lkotlin/TypeCastException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 
     :cond_3
-    iget-object v0, p0, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->selectedStructure:Lcom/android/systemui/controls/controller/StructureInfo;
+    :goto_1
+    invoke-virtual {v5, v13}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    invoke-virtual {v0}, Lcom/android/systemui/controls/controller/StructureInfo;->getControls()Ljava/util/List;
+    new-instance v9, Lcom/android/systemui/controls/ui/ControlViewHolder;
 
-    move-result-object v0
+    iget-object v11, v0, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->controlsController:Ldagger/Lazy;
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    invoke-interface {v11}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v11
 
-    rem-int/2addr v0, v1
+    const-string v12, "controlsController.get()"
 
-    if-nez v0, :cond_4
+    invoke-static {v11, v12}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move v1, v7
+    move-object v14, v11
 
-    goto :goto_1
+    check-cast v14, Lcom/android/systemui/controls/controller/ControlsController;
+
+    iget-object v15, v0, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->uiExecutor:Lcom/android/systemui/util/concurrency/DelayableExecutor;
+
+    iget-object v11, v0, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->bgExecutor:Lcom/android/systemui/util/concurrency/DelayableExecutor;
+
+    iget-object v12, v0, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->controlActionCoordinator:Lcom/android/systemui/controls/ui/ControlActionCoordinator;
+
+    move-object/from16 v17, v12
+
+    move-object v12, v9
+
+    move-object/from16 v16, v11
+
+    invoke-direct/range {v12 .. v17}, Lcom/android/systemui/controls/ui/ControlViewHolder;-><init>(Landroid/view/ViewGroup;Lcom/android/systemui/controls/controller/ControlsController;Lcom/android/systemui/util/concurrency/DelayableExecutor;Lcom/android/systemui/util/concurrency/DelayableExecutor;Lcom/android/systemui/controls/ui/ControlActionCoordinator;)V
+
+    invoke-virtual {v9, v8}, Lcom/android/systemui/controls/ui/ControlViewHolder;->bindData(Lcom/android/systemui/controls/ui/ControlWithState;)V
+
+    iget-object v8, v0, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->controlViewsById:Ljava/util/Map;
+
+    invoke-interface {v8, v10, v9}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Lcom/android/systemui/controls/ui/ControlViewHolder;
+
+    goto/16 :goto_0
 
     :cond_4
-    sub-int/2addr v1, v0
+    new-instance v0, Lkotlin/TypeCastException;
 
-    :goto_1
-    if-lez v1, :cond_5
+    invoke-direct {v0, v4}, Lkotlin/TypeCastException;-><init>(Ljava/lang/String;)V
 
-    new-instance v0, Landroid/widget/Space;
-
-    iget-object v2, p0, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->context:Landroid/content/Context;
-
-    invoke-direct {v0, v2}, Landroid/widget/Space;-><init>(Landroid/content/Context;)V
-
-    new-instance v2, Landroid/widget/LinearLayout$LayoutParams;
-
-    const/high16 v3, 0x3f800000    # 1.0f
-
-    invoke-direct {v2, v7, v7, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(IIF)V
-
-    invoke-virtual {v4, v0, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    add-int/lit8 v1, v1, -0x1
-
-    goto :goto_1
+    throw v0
 
     :cond_5
-    return-void
+    iget-object v1, v0, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->selectedStructure:Lcom/android/systemui/controls/controller/StructureInfo;
+
+    invoke-virtual {v1}, Lcom/android/systemui/controls/controller/StructureInfo;->getControls()Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    rem-int/2addr v1, v2
+
+    if-nez v1, :cond_6
+
+    move v2, v9
+
+    goto :goto_2
 
     :cond_6
-    new-instance p0, Lkotlin/TypeCastException;
+    sub-int/2addr v2, v1
 
-    invoke-direct {p0, v3}, Lkotlin/TypeCastException;-><init>(Ljava/lang/String;)V
+    :goto_2
+    if-lez v2, :cond_7
 
-    throw p0
+    new-instance v1, Landroid/widget/Space;
+
+    iget-object v3, v0, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->context:Landroid/content/Context;
+
+    invoke-direct {v1, v3}, Landroid/widget/Space;-><init>(Landroid/content/Context;)V
+
+    new-instance v3, Landroid/widget/LinearLayout$LayoutParams;
+
+    const/high16 v4, 0x3f800000    # 1.0f
+
+    invoke-direct {v3, v9, v9, v4}, Landroid/widget/LinearLayout$LayoutParams;-><init>(IIF)V
+
+    invoke-virtual {v5, v1, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    add-int/lit8 v2, v2, -0x1
+
+    goto :goto_2
 
     :cond_7
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
-
-    throw v3
+    return-void
 
     :cond_8
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+    new-instance v0, Lkotlin/TypeCastException;
 
-    throw v3
+    invoke-direct {v0, v4}, Lkotlin/TypeCastException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_9
+    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+
+    throw v4
+
+    :cond_a
+    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+
+    throw v4
 .end method
 
 .method private final createMenu()V

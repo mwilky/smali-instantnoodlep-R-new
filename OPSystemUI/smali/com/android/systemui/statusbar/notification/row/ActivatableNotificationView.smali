@@ -2318,6 +2318,24 @@
     return-void
 .end method
 
+.method public setREDBackground()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/ActivatableNotificationView;->mBackgroundNormal:Lcom/android/systemui/statusbar/notification/row/NotificationBackgroundView;
+
+    sget v1, Lcom/android/systemui/R$drawable;->op_qs_red_all:I
+
+    invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/notification/row/NotificationBackgroundView;->setCustomBackground(I)V
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/ActivatableNotificationView;->mBackgroundDimmed:Lcom/android/systemui/statusbar/notification/row/NotificationBackgroundView;
+
+    sget v0, Lcom/android/systemui/R$drawable;->op_qs_red_all:I
+
+    invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/notification/row/NotificationBackgroundView;->setCustomBackground(I)V
+
+    return-void
+.end method
+
 .method setRippleAllowed(Z)V
     .locals 0
 

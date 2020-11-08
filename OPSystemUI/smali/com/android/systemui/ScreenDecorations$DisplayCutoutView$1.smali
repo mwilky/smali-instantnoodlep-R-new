@@ -65,7 +65,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView$1;->this$0:Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;
 
-    invoke-static {p0}, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->access$2000(Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;)V
+    invoke-static {p0}, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->access$2100(Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;)V
 
     :cond_0
     return-void

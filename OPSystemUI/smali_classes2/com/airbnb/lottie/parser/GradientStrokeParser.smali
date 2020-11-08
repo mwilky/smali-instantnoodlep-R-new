@@ -98,7 +98,7 @@
 
     const/4 v4, 0x0
 
-    move v14, v4
+    move v13, v4
 
     const/4 v4, 0x0
 
@@ -116,7 +116,7 @@
 
     const/4 v12, 0x0
 
-    const/4 v13, 0x0
+    const/4 v14, 0x0
 
     const/4 v15, 0x0
 
@@ -174,11 +174,11 @@
 
     if-eqz v2, :cond_1
 
-    move-object/from16 v20, v15
+    move-object/from16 v20, v14
 
-    const/4 v15, 0x1
+    const/4 v14, 0x1
 
-    if-eq v2, v15, :cond_0
+    if-eq v2, v14, :cond_0
 
     invoke-virtual/range {p0 .. p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipName()V
 
@@ -192,12 +192,12 @@
     move-result-object v18
 
     :goto_3
-    move-object/from16 v15, v20
+    move-object/from16 v14, v20
 
     goto :goto_2
 
     :cond_1
-    move-object/from16 v20, v15
+    move-object/from16 v20, v14
 
     invoke-virtual/range {p0 .. p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextString()Ljava/lang/String;
 
@@ -206,7 +206,7 @@
     goto :goto_2
 
     :cond_2
-    move-object/from16 v20, v15
+    move-object/from16 v20, v14
 
     invoke-virtual/range {p0 .. p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->endObject()V
 
@@ -218,7 +218,7 @@
 
     if-eqz v2, :cond_3
 
-    move-object/from16 v15, v18
+    move-object/from16 v14, v18
 
     const/4 v2, 0x1
 
@@ -259,12 +259,12 @@
     invoke-interface {v11, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :goto_5
-    move-object/from16 v15, v20
+    move-object/from16 v14, v20
 
     goto :goto_1
 
     :cond_6
-    move-object/from16 v20, v15
+    move-object/from16 v20, v14
 
     const/4 v2, 0x1
 
@@ -290,7 +290,7 @@
     const/4 v2, 0x0
 
     :goto_6
-    move-object/from16 v15, v20
+    move-object/from16 v14, v20
 
     goto/16 :goto_0
 
@@ -299,7 +299,7 @@
 
     invoke-virtual/range {p0 .. p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextBoolean()Z
 
-    move-result v16
+    move-result v15
 
     goto/16 :goto_0
 
@@ -308,7 +308,7 @@
 
     move-result-wide v2
 
-    double-to-float v14, v2
+    double-to-float v13, v2
 
     goto/16 :goto_0
 
@@ -321,11 +321,11 @@
 
     move-result v3
 
-    const/4 v13, 0x1
+    const/4 v12, 0x1
 
-    sub-int/2addr v3, v13
+    sub-int/2addr v3, v12
 
-    aget-object v13, v2, v3
+    aget-object v12, v2, v3
 
     goto/16 :goto_0
 
@@ -338,32 +338,32 @@
 
     invoke-virtual/range {p0 .. p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextInt()I
 
-    move-result v12
+    move-result v10
 
-    sub-int/2addr v12, v2
+    sub-int/2addr v10, v2
 
-    aget-object v12, v3, v12
+    aget-object v10, v3, v10
 
     goto/16 :goto_0
 
     :pswitch_5
     invoke-static/range {p0 .. p1}, Lcom/airbnb/lottie/parser/AnimatableValueParser;->parseFloat(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;)Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;
 
-    move-result-object v10
+    move-result-object v9
 
     goto/16 :goto_0
 
     :pswitch_6
     invoke-static/range {p0 .. p1}, Lcom/airbnb/lottie/parser/AnimatableValueParser;->parsePoint(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;)Lcom/airbnb/lottie/model/animatable/AnimatablePointValue;
 
-    move-result-object v9
+    move-result-object v8
 
     goto/16 :goto_0
 
     :pswitch_7
     invoke-static/range {p0 .. p1}, Lcom/airbnb/lottie/parser/AnimatableValueParser;->parsePoint(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;)Lcom/airbnb/lottie/model/animatable/AnimatablePointValue;
 
-    move-result-object v8
+    move-result-object v7
 
     goto/16 :goto_0
 
@@ -391,7 +391,7 @@
     :pswitch_9
     invoke-static/range {p0 .. p1}, Lcom/airbnb/lottie/parser/AnimatableValueParser;->parseInteger(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;)Lcom/airbnb/lottie/model/animatable/AnimatableIntegerValue;
 
-    move-result-object v7
+    move-result-object v16
 
     goto/16 :goto_0
 
@@ -465,6 +465,29 @@
     goto/16 :goto_0
 
     :cond_c
+    if-nez v16, :cond_d
+
+    new-instance v0, Lcom/airbnb/lottie/model/animatable/AnimatableIntegerValue;
+
+    new-instance v1, Lcom/airbnb/lottie/value/Keyframe;
+
+    const/16 v2, 0x64
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Lcom/airbnb/lottie/value/Keyframe;-><init>(Ljava/lang/Object;)V
+
+    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/airbnb/lottie/model/animatable/AnimatableIntegerValue;-><init>(Ljava/util/List;)V
+
+    move-object/from16 v16, v0
+
+    :cond_d
     new-instance v17, Lcom/airbnb/lottie/model/content/GradientStroke;
 
     move-object/from16 v0, v17
@@ -475,23 +498,23 @@
 
     move-object v3, v6
 
-    move-object v4, v7
+    move-object/from16 v4, v16
 
-    move-object v5, v8
+    move-object v5, v7
 
-    move-object v6, v9
+    move-object v6, v8
 
-    move-object v7, v10
+    move-object v7, v9
 
-    move-object v8, v12
+    move-object v8, v10
 
-    move-object v9, v13
+    move-object v9, v12
 
-    move v10, v14
+    move v10, v13
 
-    move-object v12, v15
+    move-object v12, v14
 
-    move/from16 v13, v16
+    move v13, v15
 
     invoke-direct/range {v0 .. v13}, Lcom/airbnb/lottie/model/content/GradientStroke;-><init>(Ljava/lang/String;Lcom/airbnb/lottie/model/content/GradientType;Lcom/airbnb/lottie/model/animatable/AnimatableGradientColorValue;Lcom/airbnb/lottie/model/animatable/AnimatableIntegerValue;Lcom/airbnb/lottie/model/animatable/AnimatablePointValue;Lcom/airbnb/lottie/model/animatable/AnimatablePointValue;Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;Lcom/airbnb/lottie/model/content/ShapeStroke$LineCapType;Lcom/airbnb/lottie/model/content/ShapeStroke$LineJoinType;FLjava/util/List;Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;Z)V
 

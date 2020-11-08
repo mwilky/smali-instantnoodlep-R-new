@@ -66,6 +66,21 @@
     return-void
 .end method
 
+.method public error(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 0
+
+    sget-boolean p0, Lcom/airbnb/lottie/L;->DBG:Z
+
+    if-eqz p0, :cond_0
+
+    const-string p0, "LOTTIE"
+
+    invoke-static {p0, p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_0
+    return-void
+.end method
+
 .method public warning(Ljava/lang/String;)V
     .locals 1
 

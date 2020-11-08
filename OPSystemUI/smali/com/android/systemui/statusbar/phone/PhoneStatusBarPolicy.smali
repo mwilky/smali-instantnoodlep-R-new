@@ -311,7 +311,7 @@
 
     iput-object v1, v0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotCast:Ljava/lang/String;
 
-    const v1, 0x10407a0
+    const v1, 0x10407a1
 
     invoke-virtual {p6, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -323,7 +323,7 @@
 
     invoke-virtual {p6, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    const v1, 0x10407b1
+    const v1, 0x10407b2
 
     invoke-virtual {p6, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -331,7 +331,7 @@
 
     iput-object v1, v0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotTty:Ljava/lang/String;
 
-    const v1, 0x10407b6
+    const v1, 0x10407b8
 
     invoke-virtual {p6, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -339,7 +339,7 @@
 
     iput-object v1, v0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotZen:Ljava/lang/String;
 
-    const v1, 0x10407b2
+    const v1, 0x10407b4
 
     invoke-virtual {p6, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -355,7 +355,7 @@
 
     iput-object v1, v0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotAlarmClock:Ljava/lang/String;
 
-    const v1, 0x10407a3
+    const v1, 0x10407a4
 
     invoke-virtual {p6, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -363,7 +363,7 @@
 
     iput-object v1, v0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotManagedProfile:Ljava/lang/String;
 
-    const v1, 0x10407aa
+    const v1, 0x10407ab
 
     invoke-virtual {p6, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -371,7 +371,7 @@
 
     iput-object v1, v0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotRotate:Ljava/lang/String;
 
-    const v1, 0x104079f
+    const v1, 0x10407a0
 
     invoke-virtual {p6, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -387,7 +387,7 @@
 
     iput-object v1, v0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotDataSaver:Ljava/lang/String;
 
-    const v1, 0x10407a2
+    const v1, 0x10407a3
 
     invoke-virtual {p6, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -395,7 +395,7 @@
 
     iput-object v1, v0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotLocation:Ljava/lang/String;
 
-    const v1, 0x10407ad
+    const v1, 0x10407ae
 
     invoke-virtual {p6, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -403,7 +403,7 @@
 
     iput-object v1, v0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotSensorsOff:Ljava/lang/String;
 
-    const v1, 0x10407ab
+    const v1, 0x10407ac
 
     invoke-virtual {p6, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -419,7 +419,7 @@
 
     iput-object v1, v0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mDateFormatUtil:Lcom/android/systemui/util/time/DateFormatUtil;
 
-    const v1, 0x10407b5
+    const v1, 0x10407b7
 
     invoke-virtual {p6, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

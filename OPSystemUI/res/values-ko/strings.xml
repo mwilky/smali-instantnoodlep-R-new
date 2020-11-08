@@ -1416,6 +1416,9 @@ IT 관리자가 설정, 기업 액세스, 앱, 기기와 연결된 데이터, �
     <string name="overheat_toast_content">휴대폰의 온도가 너무 높습니다. 온도를 낮추기 위해 전력 소비량이 높은 기능이 꺼집니다.</string>
     <string name="overlay_display_devices_title">보조 디스플레이 시뮬레이션</string>
     <string name="overview">최근 사용</string>
+    <string name="permission_btn_text_denied">끝내기</string>
+    <string name="permission_btn_text_grant">확인</string>
+    <string name="permission_dialog_title">권한 설명</string>
     <string name="phone_hint">전화 기능을 사용하려면 아이콘에서 스와이프하세요.</string>
     <string name="phone_label">휴대전화 열기</string>
     <string name="picture_color_mode">사진 색상 모드</string>

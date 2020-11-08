@@ -1415,6 +1415,9 @@ Povezani ste i s VPN-om koji može nadzirati vašu mrežnu aktivnost."</string>
     <string name="overheat_toast_content">Temperatura telefona je previsoka, zbog čega se isključuju funkcije s velikom potrošnjom energije kako bi se snizila temperatura</string>
     <string name="overlay_display_devices_title">Simulacija sek. zaslona</string>
     <string name="overview">Pregled</string>
+    <string name="permission_btn_text_denied">Izađi</string>
+    <string name="permission_btn_text_grant">U redu</string>
+    <string name="permission_dialog_title">Izjava o dozvolama</string>
     <string name="phone_hint">Prijeđite prstom od ikone za telefon</string>
     <string name="phone_label">otvaranje telefona</string>
     <string name="picture_color_mode">Način boje slike</string>

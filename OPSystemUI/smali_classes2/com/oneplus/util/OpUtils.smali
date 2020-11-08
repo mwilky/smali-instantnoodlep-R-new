@@ -26,6 +26,8 @@
 
 .field public static final SUPPORT_CHARGING_ANIM_V2:Z
 
+.field public static final SUPPORT_RED_CHARGING_ANIM:Z
+
 .field public static final SUPPORT_SWARP_CHARGING:Z
 
 .field public static final SUPPORT_WARP_CHARGING:Z
@@ -34,6 +36,8 @@
 
 .field private static WindTreMmcMnc:[Ljava/lang/String;
 
+.field public static isNavigationBarShowing:Z
+
 .field private static mDensityDpi:I
 
 .field private static mEditTileBefore:Z
@@ -41,6 +45,8 @@
 .field private static mIsCTS:Z
 
 .field private static mIsCTSAdded:Z
+
+.field private static mIsCtsInputmethodservice:Z
 
 .field public static mIsFullScreenListApp:Z
 
@@ -66,7 +72,7 @@
 
 .field public static mScreenResolution:I
 
-.field private static mSimType:Ljava/lang/String;
+.field private static mSimType:[Ljava/lang/String;
 
 .field private static mTopClassName:Ljava/lang/String;
 
@@ -88,7 +94,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 7
 
     sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
@@ -103,6 +109,8 @@
     sput-boolean v0, Lcom/oneplus/util/OpUtils;->mIsScreenCompat:Z
 
     sput-boolean v0, Lcom/oneplus/util/OpUtils;->mIsCTS:Z
+
+    sput-boolean v0, Lcom/oneplus/util/OpUtils;->mIsCtsInputmethodservice:Z
 
     sput-boolean v0, Lcom/oneplus/util/OpUtils;->mIsCTSAdded:Z
 
@@ -132,6 +140,12 @@
 
     sput-boolean v1, Lcom/oneplus/util/OpUtils;->SUPPORT_SWARP_CHARGING:Z
 
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isSupportREDCharging()Z
+
+    move-result v1
+
+    sput-boolean v1, Lcom/oneplus/util/OpUtils;->SUPPORT_RED_CHARGING_ANIM:Z
+
     new-instance v1, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
@@ -156,7 +170,11 @@
 
     const-string v1, "UNKNOWN"
 
-    sput-object v1, Lcom/oneplus/util/OpUtils;->mSimType:Ljava/lang/String;
+    filled-new-array {v1, v1}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    sput-object v1, Lcom/oneplus/util/OpUtils;->mSimType:[Ljava/lang/String;
 
     sput-boolean v0, Lcom/oneplus/util/OpUtils;->mIsOnePlusHomeApp:Z
 
@@ -166,51 +184,53 @@
 
     sput-boolean v0, Lcom/oneplus/util/OpUtils;->mIsFullScreenListApp:Z
 
-    const-string v0, ""
+    const-string v1, ""
 
-    sput-object v0, Lcom/oneplus/util/OpUtils;->mTopClassName:Ljava/lang/String;
+    sput-object v1, Lcom/oneplus/util/OpUtils;->mTopClassName:Ljava/lang/String;
 
-    sput-object v0, Lcom/oneplus/util/OpUtils;->mPackageName:Ljava/lang/String;
+    sput-object v1, Lcom/oneplus/util/OpUtils;->mPackageName:Ljava/lang/String;
 
     sput-boolean v2, Lcom/oneplus/util/OpUtils;->sIsSupportAssistantGesture:Z
 
-    const-string v0, "310120"
+    const-string v1, "310120"
 
-    const-string v1, "312530"
+    const-string v3, "312530"
 
-    const-string v3, "311870"
+    const-string v4, "311870"
 
-    const-string v4, "311490"
+    const-string v5, "311490"
 
-    const-string v5, "310000"
+    const-string v6, "310000"
 
-    filled-new-array {v0, v1, v3, v4, v5}, [Ljava/lang/String;
+    filled-new-array {v1, v3, v4, v5, v6}, [Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    sput-object v0, Lcom/oneplus/util/OpUtils;->SprintMmcMnc:[Ljava/lang/String;
+    sput-object v1, Lcom/oneplus/util/OpUtils;->SprintMmcMnc:[Ljava/lang/String;
 
-    const-string v0, "23420"
+    const-string v1, "23420"
 
-    const-string v1, "23594"
+    const-string v3, "23594"
 
-    filled-new-array {v0, v1}, [Ljava/lang/String;
+    filled-new-array {v1, v3}, [Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    sput-object v0, Lcom/oneplus/util/OpUtils;->MmcMnc3UK:[Ljava/lang/String;
+    sput-object v1, Lcom/oneplus/util/OpUtils;->MmcMnc3UK:[Ljava/lang/String;
 
-    const-string v0, "22288"
+    const-string v1, "22288"
 
-    const-string v1, "22299"
+    const-string v3, "22299"
 
-    filled-new-array {v0, v1}, [Ljava/lang/String;
+    filled-new-array {v1, v3}, [Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    sput-object v0, Lcom/oneplus/util/OpUtils;->WindTreMmcMnc:[Ljava/lang/String;
+    sput-object v1, Lcom/oneplus/util/OpUtils;->WindTreMmcMnc:[Ljava/lang/String;
 
     sput-boolean v2, Lcom/oneplus/util/OpUtils;->mEditTileBefore:Z
+
+    sput-boolean v0, Lcom/oneplus/util/OpUtils;->isNavigationBarShowing:Z
 
     const-string v0, "content://net.oneplus.launcher.features"
 
@@ -389,6 +409,350 @@
     move-result p0
 
     return p0
+.end method
+
+.method public static dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
+    .locals 0
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p2, " isClosedBeta:"
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isClosedBeta()Z
+
+    move-result p2
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p2, " isOnePlusHomeApp:"
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isOnePlusHomeApp()Z
+
+    move-result p2
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p2, " isHomeApp:"
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isHomeApp()Z
+
+    move-result p2
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p2, " isScreenCompat:"
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isScreenCompat()Z
+
+    move-result p2
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p2, " isInFullScreenListApp:"
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isInFullScreenListApp()Z
+
+    move-result p2
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p2, " isCTS:"
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isCTS()Z
+
+    move-result p2
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p2, " isCtsInputmethodservice:"
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isCtsInputmethodservice()Z
+
+    move-result p2
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p2, " isCTSAdded:"
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isCTSAdded()Z
+
+    move-result p2
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p2, " isSupportREDCharging:"
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isSupportREDCharging()Z
+
+    move-result p2
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p2, " isREDVersion:"
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isREDVersion()Z
+
+    move-result p2
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p2, " isSupportResolutionSwitch:"
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-boolean p2, Lcom/oneplus/util/OpUtils;->mIsSupportResolutionSwitch:Z
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p2, " isEditTileBefore:"
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->getIsEditTileBefore()Z
+
+    move-result p2
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p2, " isNavigationBarShowing:"
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isNavigationBarShowing()Z
+
+    move-result p2
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p2, " isRecentUnlockBiometricFace:"
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isRecentUnlockBiometricFace()Z
+
+    move-result p2
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p2, " isRecentUnlockBiometricFinger:"
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isRecentUnlockBiometricFinger()Z
+
+    move-result p2
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p2, " getTopPackageName:"
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->getTopPackageName()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p2, " getTopClassName:"
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->getTopClassName()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    return-void
 .end method
 
 .method public static gameToolboxEnable(Landroid/content/Context;)Z
@@ -965,6 +1329,82 @@
     return-object v0
 .end method
 
+.method private static getReleaseType()I
+    .locals 3
+
+    const-string v0, "ro.build.alpha"
+
+    invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "1"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    const-string v2, "ro.build.beta"
+
+    invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v0, :cond_0
+
+    if-eqz v1, :cond_0
+
+    const/4 v0, 0x3
+
+    goto :goto_0
+
+    :cond_0
+    if-nez v0, :cond_1
+
+    if-eqz v1, :cond_1
+
+    const/4 v0, 0x2
+
+    goto :goto_0
+
+    :cond_1
+    if-nez v0, :cond_2
+
+    if-nez v1, :cond_2
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v0, 0x0
+
+    :goto_0
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "getROMType:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "OpUtils"
+
+    invoke-static {v2, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v0
+.end method
+
 .method public static getResourceName(Landroid/content/Context;I)Ljava/lang/String;
     .locals 0
 
@@ -1188,6 +1628,136 @@
     return p0
 .end method
 
+.method private static getTmoSIM(Landroid/content/Context;I)Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "UNKNOWN"
+
+    :try_start_0
+    const-string v1, "phone"
+
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/telephony/TelephonyManager;
+
+    invoke-virtual {v1, p1}, Landroid/telephony/TelephonyManager;->getSimOperator(I)Ljava/lang/String;
+
+    move-result-object v1
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    const-string v2, "TMO"
+
+    if-eqz v1, :cond_0
+
+    :try_start_1
+    const-string v3, "310260"
+
+    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    :goto_0
+    move-object v0, v2
+
+    goto :goto_1
+
+    :cond_0
+    const-string v1, "carrier_config"
+
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/telephony/CarrierConfigManager;
+
+    if-eqz p0, :cond_1
+
+    invoke-virtual {p0, p1}, Landroid/telephony/CarrierConfigManager;->getConfigForSubId(I)Landroid/os/PersistableBundle;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_1
+
+    const-string p1, "carrier_name_string"
+
+    invoke-virtual {p0, p1}, Landroid/os/PersistableBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_1
+
+    const-string p1, "T-Mobile"
+
+    invoke-virtual {p1, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result p0
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+
+    if-eqz p0, :cond_1
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p0
+
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
+
+    :cond_1
+    :goto_1
+    return-object v0
+.end method
+
+.method public static getTopActivityName(Landroid/content/Context;)Ljava/lang/String;
+    .locals 1
+
+    const-class v0, Landroid/app/ActivityManager;
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/app/ActivityManager;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Landroid/app/ActivityManager;->getRunningTasks(I)Ljava/util/List;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/app/ActivityManager$RunningTaskInfo;
+
+    iget-object p0, p0, Landroid/app/ActivityManager$RunningTaskInfo;->topActivity:Landroid/content/ComponentName;
+
+    invoke-virtual {p0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method public static getTopClassName()Ljava/lang/String;
     .locals 1
 
@@ -1244,6 +1814,94 @@
     const/4 p0, 0x0
 
     return-object p0
+.end method
+
+.method private static getVzwSIM()Ljava/lang/String;
+    .locals 10
+
+    const-string v0, "UNKNOWN"
+
+    :try_start_0
+    const-string v1, "extphone"
+
+    invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lorg/codeaurora/internal/IExtTelephony$Stub;->asInterface(Landroid/os/IBinder;)Lorg/codeaurora/internal/IExtTelephony;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    new-instance v2, Landroid/os/Bundle;
+
+    invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
+
+    const-string v3, "phone"
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v2, v3, v4}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    const-string v5, "generalGetter"
+
+    const/4 v6, 0x2
+
+    new-array v7, v6, [Ljava/lang/Class;
+
+    const-class v8, Ljava/lang/String;
+
+    aput-object v8, v7, v4
+
+    const-class v8, Landroid/os/Bundle;
+
+    const/4 v9, 0x1
+
+    aput-object v8, v7, v9
+
+    invoke-virtual {v3, v5, v7}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v9}, Ljava/lang/reflect/Method;->setAccessible(Z)V
+
+    new-array v5, v6, [Ljava/lang/Object;
+
+    const-string v6, "getVzwSimType"
+
+    aput-object v6, v5, v4
+
+    aput-object v2, v5, v9
+
+    invoke-virtual {v3, v1, v5}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/os/Bundle;
+
+    const-string v2, "result"
+
+    invoke-virtual {v1, v2, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v1
+
+    invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
+
+    :cond_0
+    :goto_0
+    return-object v0
 .end method
 
 .method public static hasCtaFeature(Landroid/content/Context;)Z
@@ -1409,6 +2067,54 @@
     .locals 1
 
     sget-boolean v0, Lcom/oneplus/util/OpUtils;->mIsCTSAdded:Z
+
+    return v0
+.end method
+
+.method public static isClosedBeta()Z
+    .locals 3
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->getReleaseType()I
+
+    move-result v0
+
+    const/4 v1, 0x3
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "isClosedBeta:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "OpUtils"
+
+    invoke-static {v2, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v0
+.end method
+
+.method public static isCtsInputmethodservice()Z
+    .locals 1
+
+    sget-boolean v0, Lcom/oneplus/util/OpUtils;->mIsCtsInputmethodservice:Z
 
     return v0
 .end method
@@ -1840,9 +2546,17 @@
 .end method
 
 .method public static isMCLVersion()Z
-    .locals 1
+    .locals 2
 
-    const/4 v0, 0x0
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->MCL:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+
+    invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->getCustomType()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
 
     return v0
 .end method
@@ -1879,6 +2593,14 @@
 
     :goto_0
     return v1
+.end method
+
+.method public static isNavigationBarShowing()Z
+    .locals 1
+
+    sget-boolean v0, Lcom/oneplus/util/OpUtils;->isNavigationBarShowing:Z
+
+    return v0
 .end method
 
 .method public static isNeedDarkNavBar(Landroid/content/Context;)Z
@@ -2070,6 +2792,44 @@
     return p0
 .end method
 
+.method public static isREDVersion()Z
+    .locals 3
+
+    invoke-static {}, Lcom/oneplus/util/ThemeColorUtils;->getCurrentTheme()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    if-eq v0, v2, :cond_0
+
+    return v1
+
+    :cond_0
+    invoke-static {}, Lcom/oneplus/util/ThemeColorUtils;->isSpecialTheme()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    return v1
+
+    :cond_1
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->RED:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+
+    invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->getCustomType()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public static isReallyHasOneSim()Z
     .locals 2
 
@@ -2157,36 +2917,6 @@
 
     :cond_0
     return v1
-.end method
-
-.method public static isSpportFRY2Only()Z
-    .locals 2
-
-    invoke-static {}, Lcom/oneplus/util/OpUtils;->isVzwSIM()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    sget-boolean v0, Lcom/oneplus/util/OpUtils;->DEBUG_ONEPLUS:Z
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "OpUtils"
-
-    const-string v1, "isSpportFRY2Only: TRUE"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    return v0
 .end method
 
 .method public static isSprintMccMnc(Landroid/content/Context;)Z
@@ -2582,6 +3312,12 @@
 
     move-result v0
 
+    if-nez v0, :cond_0
+
+    invoke-static {}, Lcom/android/systemui/util/ProductUtils;->isUsvMode()Z
+
+    move-result v0
+
     if-eqz v0, :cond_1
 
     :cond_0
@@ -2696,6 +3432,40 @@
     return v0
 .end method
 
+.method private static isSupportREDCharging()Z
+    .locals 3
+
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->RED:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+
+    invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->getCustomType()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "isSupportREDCharging:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "OpUtils"
+
+    invoke-static {v2, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v0
+.end method
+
 .method public static isSupportRefreshRateSwitch()Z
     .locals 3
 
@@ -2806,6 +3576,26 @@
 
     move-result v0
 
+    if-nez v0, :cond_1
+
+    invoke-static {}, Lcom/android/systemui/util/ProductUtils;->isUsvMode()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    :goto_1
     return v0
 .end method
 
@@ -2871,6 +3661,12 @@
 
     if-nez p0, :cond_0
 
+    invoke-static {}, Lcom/android/systemui/util/ProductUtils;->isUsvMode()Z
+
+    move-result p0
+
+    if-nez p0, :cond_0
+
     const/4 p0, 0x1
 
     goto :goto_0
@@ -2889,68 +3685,85 @@
 
     move-result v0
 
-    xor-int/lit8 v0, v0, 0x1
+    if-nez v0, :cond_0
 
+    invoke-static {}, Lcom/android/systemui/util/ProductUtils;->isUsvMode()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
     return v0
 .end method
 
 .method private static isSupportWarpCharging()Z
     .locals 4
 
-    const/4 v0, 0x1
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isMCLVersion()Z
 
-    new-array v1, v0, [I
+    move-result v0
 
-    const/16 v2, 0x79
+    const/4 v1, 0x0
 
-    const/4 v3, 0x0
+    const/4 v2, 0x1
 
-    aput v2, v1, v3
+    if-nez v0, :cond_0
 
-    invoke-static {v1}, Landroid/util/OpFeatures;->isSupport([I)Z
+    new-array v0, v2, [I
 
-    move-result v1
+    const/16 v3, 0x79
 
-    if-nez v1, :cond_1
+    aput v3, v0, v1
 
-    new-array v1, v0, [I
+    invoke-static {v0}, Landroid/util/OpFeatures;->isSupport([I)Z
 
-    const/16 v2, 0xee
+    move-result v0
 
-    aput v2, v1, v3
+    if-nez v0, :cond_0
 
-    invoke-static {v1}, Landroid/util/OpFeatures;->isSupport([I)Z
+    new-array v0, v2, [I
 
-    move-result v1
+    const/16 v3, 0xee
 
-    if-eqz v1, :cond_0
+    aput v3, v0, v1
 
-    goto :goto_0
+    invoke-static {v0}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
 
     :cond_0
-    move v0, v3
+    move v1, v2
 
     :cond_1
-    :goto_0
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v2, "isSupportWarpCharging:"
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
     const-string v2, "OpUtils"
 
-    invoke-static {v2, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    return v0
+    return v1
 .end method
 
 .method public static isSupportZVibrationMotor()Z
@@ -3065,33 +3878,50 @@
     return v0
 .end method
 
-.method public static isVzwSIM()Z
+.method public static isVzwSIM(I)Z
     .locals 2
 
-    sget-object v0, Lcom/oneplus/util/OpUtils;->mSimType:Ljava/lang/String;
+    sget-object v0, Lcom/oneplus/util/OpUtils;->mSimType:[Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
-    const-string v1, "UNKNOWN"
+    if-ltz p0, :cond_1
 
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    array-length v1, v0
+
+    if-ge p0, v1, :cond_1
+
+    aget-object v0, v0, p0
+
+    const-string v1, "VZW4G"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
-    goto :goto_0
+    sget-object v0, Lcom/oneplus/util/OpUtils;->mSimType:[Ljava/lang/String;
+
+    aget-object p0, v0, p0
+
+    const-string v0, "VZW3G"
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
 
     :cond_0
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 
     :cond_1
-    :goto_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public static isWLBAllowed(Landroid/content/Context;)Z
@@ -3271,6 +4101,46 @@
     return-void
 .end method
 
+.method public static needLargeQSClock(Landroid/content/Context;)Z
+    .locals 2
+
+    const/4 v0, 0x0
+
+    if-nez p0, :cond_0
+
+    return v0
+
+    :cond_0
+    new-instance v1, Landroid/util/DisplayMetrics;
+
+    invoke-direct {v1}, Landroid/util/DisplayMetrics;-><init>()V
+
+    invoke-virtual {p0}, Landroid/content/Context;->getDisplay()Landroid/view/Display;
+
+    move-result-object p0
+
+    invoke-virtual {p0, v1}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
+
+    iget p0, v1, Landroid/util/DisplayMetrics;->heightPixels:I
+
+    int-to-float p0, p0
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    div-float/2addr p0, v1
+
+    const v1, 0x442c8000    # 690.0f
+
+    cmpl-float p0, p0, v1
+
+    if-lez p0, :cond_1
+
+    const/4 v0, 0x1
+
+    :cond_1
+    return v0
+.end method
+
 .method public static notifyStatusBarIconsDark(Z)V
     .locals 0
 
@@ -3398,6 +4268,20 @@
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
+    if-nez p0, :cond_1
+
+    if-eqz p1, :cond_1
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    :goto_0
+    sput-boolean p0, Lcom/oneplus/util/OpUtils;->isNavigationBarShowing:Z
+
     return-void
 .end method
 
@@ -3417,115 +4301,108 @@
     return-void
 .end method
 
-.method public static setSimType()V
-    .locals 10
+.method public static setSimType(Landroid/content/Context;I)V
+    .locals 4
 
-    const-string v0, "UNKNOWN"
-
-    :try_start_0
-    sput-object v0, Lcom/oneplus/util/OpUtils;->mSimType:Ljava/lang/String;
-
-    const-string v1, "extphone"
-
-    invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lorg/codeaurora/internal/IExtTelephony$Stub;->asInterface(Landroid/os/IBinder;)Lorg/codeaurora/internal/IExtTelephony;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    new-instance v2, Landroid/os/Bundle;
-
-    invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
-
-    const-string v3, "phone"
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v2, v3, v4}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    const-string v5, "generalGetter"
-
-    const/4 v6, 0x2
-
-    new-array v7, v6, [Ljava/lang/Class;
-
-    const-class v8, Ljava/lang/String;
-
-    aput-object v8, v7, v4
-
-    const-class v8, Landroid/os/Bundle;
-
-    const/4 v9, 0x1
-
-    aput-object v8, v7, v9
-
-    invoke-virtual {v3, v5, v7}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v9}, Ljava/lang/reflect/Method;->setAccessible(Z)V
-
-    new-array v5, v6, [Ljava/lang/Object;
-
-    const-string v6, "getVzwSimType"
-
-    aput-object v6, v5, v4
-
-    aput-object v2, v5, v9
-
-    invoke-virtual {v3, v1, v5}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/os/Bundle;
-
-    const-string v2, "result"
-
-    invoke-virtual {v1, v2, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/oneplus/util/OpUtils;->mSimType:Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
-
-    :cond_0
-    :goto_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "setSimType: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-object v1, Lcom/oneplus/util/OpUtils;->mSimType:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    sget-object v0, Lcom/oneplus/util/OpUtils;->mSimType:[Ljava/lang/String;
 
     const-string v1, "OpUtils"
 
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    if-eqz v0, :cond_1
 
+    if-ltz p1, :cond_1
+
+    array-length v2, v0
+
+    if-ge p1, v2, :cond_1
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->getVzwSIM()Ljava/lang/String;
+
+    move-result-object v2
+
+    aput-object v2, v0, p1
+
+    sget-object v0, Lcom/oneplus/util/OpUtils;->mSimType:[Ljava/lang/String;
+
+    aget-object v0, v0, p1
+
+    const-string v2, "UNKNOWN"
+
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Landroid/telephony/SubscriptionManager;->getSubId(I)[I
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    array-length v2, v0
+
+    if-lez v2, :cond_0
+
+    sget-object v2, Lcom/oneplus/util/OpUtils;->mSimType:[Ljava/lang/String;
+
+    const/4 v3, 0x0
+
+    aget v0, v0, v3
+
+    invoke-static {p0, v0}, Lcom/oneplus/util/OpUtils;->getTmoSIM(Landroid/content/Context;I)Ljava/lang/String;
+
+    move-result-object p0
+
+    aput-object p0, v2, p1
+
+    :cond_0
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "setSimType["
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, "]: "
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v0, Lcom/oneplus/util/OpUtils;->mSimType:[Ljava/lang/String;
+
+    aget-object p1, v0, p1
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    :cond_1
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "setSimType: Invalid phoneId "
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_0
     return-void
 .end method
 
@@ -3763,7 +4640,16 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
+    move-result v0
+
+    sput-boolean v0, Lcom/oneplus/util/OpUtils;->mIsCtsInputmethodservice:Z
+
+    goto :goto_7
+
     :cond_9
+    sput-boolean v1, Lcom/oneplus/util/OpUtils;->mIsCtsInputmethodservice:Z
+
+    :goto_7
     if-eqz p1, :cond_c
 
     const-string v0, "com.mobile.legends"
@@ -3782,26 +4668,26 @@
 
     if-eqz v0, :cond_a
 
-    goto :goto_7
+    goto :goto_8
 
     :cond_a
     move v0, v1
 
-    goto :goto_8
+    goto :goto_9
 
     :cond_b
-    :goto_7
+    :goto_8
     move v0, p2
 
-    :goto_8
+    :goto_9
     sput-boolean v0, Lcom/oneplus/util/OpUtils;->mIsNeedDarkNavBar:Z
 
-    goto :goto_9
+    goto :goto_a
 
     :cond_c
     sput-boolean v1, Lcom/oneplus/util/OpUtils;->mIsNeedDarkNavBar:Z
 
-    :goto_9
+    :goto_a
     if-eqz p1, :cond_d
 
     invoke-static {p1}, Lcom/oneplus/systemui/OpSystemUIInjector;->isInNavGestureFullscreenList(Ljava/lang/String;)Z
@@ -3810,12 +4696,12 @@
 
     sput-boolean v0, Lcom/oneplus/util/OpUtils;->mIsFullScreenListApp:Z
 
-    goto :goto_a
+    goto :goto_b
 
     :cond_d
     sput-boolean v1, Lcom/oneplus/util/OpUtils;->mIsFullScreenListApp:Z
 
-    :goto_a
+    :goto_b
     const-string v0, "appops"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -3845,22 +4731,22 @@
 
     if-nez p0, :cond_e
 
-    goto :goto_b
+    goto :goto_c
 
     :cond_e
     move p2, v1
 
-    :goto_b
+    :goto_c
     sput-boolean p2, Lcom/oneplus/util/OpUtils;->mIsScreenCompat:Z
 
-    goto :goto_c
+    goto :goto_d
 
     :cond_f
     sput-boolean v1, Lcom/oneplus/util/OpUtils;->mIsScreenCompat:Z
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_c
+    goto :goto_d
 
     :catch_0
     move-exception p0
@@ -3869,6 +4755,6 @@
 
     sput-boolean v1, Lcom/oneplus/util/OpUtils;->mIsScreenCompat:Z
 
-    :goto_c
+    :goto_d
     return-void
 .end method

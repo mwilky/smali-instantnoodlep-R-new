@@ -29,12 +29,14 @@
 
 .field public static final enum MASK_MODE_INTERSECT:Lcom/airbnb/lottie/model/content/Mask$MaskMode;
 
+.field public static final enum MASK_MODE_NONE:Lcom/airbnb/lottie/model/content/Mask$MaskMode;
+
 .field public static final enum MASK_MODE_SUBTRACT:Lcom/airbnb/lottie/model/content/Mask$MaskMode;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 7
 
     new-instance v0, Lcom/airbnb/lottie/model/content/Mask$MaskMode;
 
@@ -66,19 +68,33 @@
 
     sput-object v0, Lcom/airbnb/lottie/model/content/Mask$MaskMode;->MASK_MODE_INTERSECT:Lcom/airbnb/lottie/model/content/Mask$MaskMode;
 
-    const/4 v1, 0x3
+    new-instance v0, Lcom/airbnb/lottie/model/content/Mask$MaskMode;
+
+    const-string v1, "MASK_MODE_NONE"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v0, v1, v5}, Lcom/airbnb/lottie/model/content/Mask$MaskMode;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/airbnb/lottie/model/content/Mask$MaskMode;->MASK_MODE_NONE:Lcom/airbnb/lottie/model/content/Mask$MaskMode;
+
+    const/4 v1, 0x4
 
     new-array v1, v1, [Lcom/airbnb/lottie/model/content/Mask$MaskMode;
 
-    sget-object v5, Lcom/airbnb/lottie/model/content/Mask$MaskMode;->MASK_MODE_ADD:Lcom/airbnb/lottie/model/content/Mask$MaskMode;
+    sget-object v6, Lcom/airbnb/lottie/model/content/Mask$MaskMode;->MASK_MODE_ADD:Lcom/airbnb/lottie/model/content/Mask$MaskMode;
 
-    aput-object v5, v1, v2
+    aput-object v6, v1, v2
 
     sget-object v2, Lcom/airbnb/lottie/model/content/Mask$MaskMode;->MASK_MODE_SUBTRACT:Lcom/airbnb/lottie/model/content/Mask$MaskMode;
 
     aput-object v2, v1, v3
 
-    aput-object v0, v1, v4
+    sget-object v2, Lcom/airbnb/lottie/model/content/Mask$MaskMode;->MASK_MODE_INTERSECT:Lcom/airbnb/lottie/model/content/Mask$MaskMode;
+
+    aput-object v2, v1, v4
+
+    aput-object v0, v1, v5
 
     sput-object v1, Lcom/airbnb/lottie/model/content/Mask$MaskMode;->$VALUES:[Lcom/airbnb/lottie/model/content/Mask$MaskMode;
 

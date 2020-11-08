@@ -173,6 +173,10 @@
 
     move-result-object p1
 
+    const-string v0, "keyguardPresentation"
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+
     invoke-virtual {p0, p1}, Landroid/app/Presentation;->setContentView(Landroid/view/View;)V
 
     invoke-virtual {p0}, Landroid/app/Presentation;->getWindow()Landroid/view/Window;

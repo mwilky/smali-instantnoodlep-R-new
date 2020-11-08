@@ -77,7 +77,7 @@
 
     iget-object p1, p0, Lcom/android/systemui/globalactions/GlobalActionsDialog$7;->this$0:Lcom/android/systemui/globalactions/GlobalActionsDialog;
 
-    invoke-static {p1}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$3500(Lcom/android/systemui/globalactions/GlobalActionsDialog;)Z
+    invoke-static {p1}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$3400(Lcom/android/systemui/globalactions/GlobalActionsDialog;)Z
 
     move-result p1
 
@@ -85,13 +85,13 @@
 
     iget-object p1, p0, Lcom/android/systemui/globalactions/GlobalActionsDialog$7;->this$0:Lcom/android/systemui/globalactions/GlobalActionsDialog;
 
-    invoke-static {p1, v1}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$3502(Lcom/android/systemui/globalactions/GlobalActionsDialog;Z)Z
+    invoke-static {p1, v1}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$3402(Lcom/android/systemui/globalactions/GlobalActionsDialog;Z)Z
 
     iget-object p0, p0, Lcom/android/systemui/globalactions/GlobalActionsDialog$7;->this$0:Lcom/android/systemui/globalactions/GlobalActionsDialog;
 
     const/4 p1, 0x1
 
-    invoke-static {p0, p1}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$3600(Lcom/android/systemui/globalactions/GlobalActionsDialog;Z)V
+    invoke-static {p0, p1}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$3500(Lcom/android/systemui/globalactions/GlobalActionsDialog;Z)V
 
     goto :goto_1
 
@@ -113,13 +113,13 @@
 
     iget-object p2, p0, Lcom/android/systemui/globalactions/GlobalActionsDialog$7;->this$0:Lcom/android/systemui/globalactions/GlobalActionsDialog;
 
-    invoke-static {p2}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$2300(Lcom/android/systemui/globalactions/GlobalActionsDialog;)Landroid/os/Handler;
+    invoke-static {p2}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$2200(Lcom/android/systemui/globalactions/GlobalActionsDialog;)Landroid/os/Handler;
 
     move-result-object p2
 
     iget-object p0, p0, Lcom/android/systemui/globalactions/GlobalActionsDialog$7;->this$0:Lcom/android/systemui/globalactions/GlobalActionsDialog;
 
-    invoke-static {p0}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$2300(Lcom/android/systemui/globalactions/GlobalActionsDialog;)Landroid/os/Handler;
+    invoke-static {p0}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$2200(Lcom/android/systemui/globalactions/GlobalActionsDialog;)Landroid/os/Handler;
 
     move-result-object p0
 

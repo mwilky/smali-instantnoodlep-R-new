@@ -90,7 +90,11 @@
 
 .field private mNeedShowOTAWizard:Z
 
+.field private final mOIMCServiceManager:Lcom/oneplus/core/oimc/OIMCServiceManager;
+
 .field private mOverlayContainer:Landroid/view/ViewGroup;
+
+.field private final mOverviewProxyService:Lcom/android/systemui/recents/OverviewProxyService;
 
 .field private mPreviewContainer:Landroid/view/ViewGroup;
 
@@ -303,6 +307,22 @@
 
     iput-object p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mDisplay:Landroid/view/Display;
 
+    new-instance p1, Lcom/oneplus/core/oimc/OIMCServiceManager;
+
+    invoke-direct {p1}, Lcom/oneplus/core/oimc/OIMCServiceManager;-><init>()V
+
+    iput-object p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mOIMCServiceManager:Lcom/oneplus/core/oimc/OIMCServiceManager;
+
+    const-class p1, Lcom/android/systemui/recents/OverviewProxyService;
+
+    invoke-static {p1}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/android/systemui/recents/OverviewProxyService;
+
+    iput-object p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mOverviewProxyService:Lcom/android/systemui/recents/OverviewProxyService;
+
     return-void
 .end method
 
@@ -374,7 +394,15 @@
     return-object p0
 .end method
 
-.method static synthetic access$1700(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)Z
+.method static synthetic access$1700(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)Lcom/oneplus/core/oimc/OIMCServiceManager;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mOIMCServiceManager:Lcom/oneplus/core/oimc/OIMCServiceManager;
+
+    return-object p0
+.end method
+
+.method static synthetic access$1800(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)Z
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->isPhoneVisible()Z
@@ -382,14 +410,6 @@
     move-result p0
 
     return p0
-.end method
-
-.method static synthetic access$1800(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)Landroid/content/Context;
-    .locals 0
-
-    iget-object p0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
-
-    return-object p0
 .end method
 
 .method static synthetic access$1900(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)Landroid/content/Context;
@@ -400,7 +420,15 @@
     return-object p0
 .end method
 
-.method static synthetic access$2000()Landroid/content/Intent;
+.method static synthetic access$2000(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2100()Landroid/content/Intent;
     .locals 1
 
     sget-object v0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->PHONE_INTENT:Landroid/content/Intent;
@@ -408,18 +436,10 @@
     return-object v0
 .end method
 
-.method static synthetic access$2100(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)Lcom/android/systemui/statusbar/phone/StatusBar;
+.method static synthetic access$2200(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)Lcom/android/systemui/statusbar/phone/StatusBar;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
-
-    return-object p0
-.end method
-
-.method static synthetic access$2200(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)Landroid/content/Context;
-    .locals 0
-
-    iget-object p0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
 
     return-object p0
 .end method
@@ -432,15 +452,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$2400(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)Lcom/android/systemui/statusbar/policy/KeyguardStateController;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mKeyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
-
-    return-object p0
-.end method
-
-.method static synthetic access$2500(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)Landroid/content/Context;
+.method static synthetic access$2400(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)Landroid/content/Context;
     .locals 0
 
     iget-object p0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
@@ -448,7 +460,23 @@
     return-object p0
 .end method
 
-.method static synthetic access$2600()Landroid/content/Intent;
+.method static synthetic access$2500(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)Lcom/android/systemui/statusbar/policy/KeyguardStateController;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mKeyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2600(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2700()Landroid/content/Intent;
     .locals 1
 
     sget-object v0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->SECURE_CAMERA_INTENT:Landroid/content/Intent;
@@ -2088,6 +2116,31 @@
     invoke-virtual/range {v0 .. v5}, Lcom/android/systemui/statusbar/phone/StatusBar;->executeRunnableDismissingKeyguard(Ljava/lang/Runnable;Ljava/lang/Runnable;ZZZ)V
 
     :goto_1
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mOverviewProxyService:Lcom/android/systemui/recents/OverviewProxyService;
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Lcom/android/systemui/recents/OverviewProxyService;->getNavBarMode()I
+
+    move-result v0
+
+    invoke-static {v0}, Lcom/android/systemui/shared/system/QuickStepContract;->isGesturalMode(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getWindowInsetsController()Landroid/view/WindowInsetsController;
+
+    move-result-object v0
+
+    invoke-static {}, Landroid/view/WindowInsets$Type;->navigationBars()I
+
+    move-result v1
+
+    invoke-interface {v0, v1}, Landroid/view/WindowInsetsController;->show(I)V
+
+    :cond_2
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->collectOpenAssistantEvent()V
 
     return-void

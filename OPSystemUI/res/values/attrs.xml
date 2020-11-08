@@ -1219,7 +1219,9 @@
     <attr name="locale" format="string" />
     <attr name="logo" format="reference" />
     <attr name="logoDescription" format="string" />
+    <attr name="lottieAnimationViewStyle" format="reference" />
     <attr name="lottie_autoPlay" format="boolean" />
+    <attr name="lottie_cacheComposition" format="boolean" />
     <attr name="lottie_cacheStrategy">
         <enum name="none" value="0" />
         <enum name="strong" value="2" />

@@ -594,6 +594,23 @@
 
     move-result v0
 
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isREDVersion()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+
+    if-eqz v1, :cond_0
+
+    sget v0, Lcom/android/systemui/R$color;->op_turquoise:I
+
+    invoke-virtual {v1, v0}, Landroid/content/Context;->getColor(I)I
+
+    move-result v0
+
+    :cond_0
     iget-object v1, p0, Lcom/android/systemui/qs/QSFooterImpl;->mSettingsButton:Lcom/android/systemui/statusbar/phone/SettingsButton;
 
     invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
@@ -626,19 +643,19 @@
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
     invoke-static {}, Lcom/oneplus/util/ThemeColorUtils;->getCurrentTheme()I
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
     sget v1, Lcom/android/systemui/R$drawable;->op_qs_footer_background_my:I
 
     invoke-virtual {p0, v1}, Landroid/widget/FrameLayout;->setBackgroundResource(I)V
 
-    :cond_0
+    :cond_1
     const-class v1, Lcom/android/systemui/statusbar/phone/WLBSwitchController;
 
     invoke-static {v1}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -647,7 +664,7 @@
 
     check-cast v1, Lcom/android/systemui/statusbar/phone/WLBSwitchController;
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
     const/16 v2, 0x64
 
@@ -661,7 +678,7 @@
 
     move-result v1
 
-    if-lez v1, :cond_1
+    if-lez v1, :cond_2
 
     invoke-static {v2}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
@@ -669,7 +686,7 @@
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
     move-result-object v0
@@ -677,7 +694,7 @@
     :goto_0
     invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
 
-    :cond_2
+    :cond_3
     return-void
 .end method
 
@@ -868,15 +885,20 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/QSFooterImpl;->mSettingsButton:Lcom/android/systemui/statusbar/phone/SettingsButton;
 
-    if-ne p1, v0, :cond_2
+    if-eq p1, v0, :cond_0
 
+    iget-object v0, p0, Lcom/android/systemui/qs/QSFooterImpl;->mSettingsContainer:Landroid/view/View;
+
+    if-ne p1, v0, :cond_3
+
+    :cond_0
     iget-object p1, p0, Lcom/android/systemui/qs/QSFooterImpl;->mDeviceProvisionedController:Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;
 
     invoke-interface {p1}, Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;->isCurrentUserSetup()Z
 
     move-result p1
 
-    if-nez p1, :cond_0
+    if-nez p1, :cond_1
 
     iget-object p0, p0, Lcom/android/systemui/qs/QSFooterImpl;->mActivityStarter:Lcom/android/systemui/plugins/ActivityStarter;
 
@@ -886,18 +908,18 @@
 
     return-void
 
-    :cond_0
+    :cond_1
     iget-object p1, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
 
     iget-boolean v0, p0, Lcom/android/systemui/qs/QSFooterImpl;->mExpanded:Z
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     const/16 v0, 0x196
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     const/16 v0, 0x1ea
 
     :goto_0
@@ -909,7 +931,7 @@
 
     invoke-direct {p0}, Lcom/android/systemui/qs/QSFooterImpl;->startSettingsActivity()V
 
-    :cond_2
+    :cond_3
     return-void
 .end method
 
@@ -1049,6 +1071,10 @@
     iget-object v0, p0, Lcom/android/systemui/qs/QSFooterImpl;->mSettingsButton:Lcom/android/systemui/statusbar/phone/SettingsButton;
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v0, p0, Lcom/android/systemui/qs/QSFooterImpl;->mSettingsContainer:Landroid/view/View;
+
+    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     sget v0, Lcom/android/systemui/R$id;->multi_user_switch:I
 

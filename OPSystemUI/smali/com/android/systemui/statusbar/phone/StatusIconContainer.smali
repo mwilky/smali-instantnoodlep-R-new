@@ -26,6 +26,10 @@
 
 .field private mBatteryPercentShow:Z
 
+.field private mClockWidth:I
+
+.field private mClockWidthChanged:Z
+
 .field private mDotPadding:I
 
 .field private final mHandler:Landroid/os/Handler;
@@ -174,6 +178,10 @@
     const-string v0, ""
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusIconContainer;->mOpTag:Ljava/lang/String;
+
+    iput p1, p0, Lcom/android/systemui/statusbar/phone/StatusIconContainer;->mClockWidth:I
+
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/StatusIconContainer;->mClockWidthChanged:Z
 
     new-instance v0, Lcom/android/systemui/statusbar/phone/StatusIconContainer$1;
 
@@ -1176,6 +1184,38 @@
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/StatusIconContainer;->applyIconStates()V
 
+    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/StatusIconContainer;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    if-nez p1, :cond_1
+
+    const-class p1, Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    invoke-static {p1}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    iput-object p1, p0, Lcom/android/systemui/statusbar/phone/StatusIconContainer;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    :cond_1
+    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/StatusIconContainer;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    invoke-virtual {p1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getMinWidthOfClock()I
+
+    move-result p1
+
+    iget p2, p0, Lcom/android/systemui/statusbar/phone/StatusIconContainer;->mClockWidth:I
+
+    if-eq p2, p1, :cond_2
+
+    iput p1, p0, Lcom/android/systemui/statusbar/phone/StatusIconContainer;->mClockWidth:I
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/StatusIconContainer;->mClockWidthChanged:Z
+
+    :cond_2
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getWidth()I
 
     move-result p1
@@ -1184,17 +1224,21 @@
 
     move-result p2
 
-    if-gt p1, p2, :cond_1
+    if-gt p1, p2, :cond_3
 
     iget-boolean p1, p0, Lcom/android/systemui/statusbar/phone/StatusIconContainer;->mBatteryChange:Z
 
-    if-nez p1, :cond_1
+    if-nez p1, :cond_3
 
     iget-boolean p1, p0, Lcom/android/systemui/statusbar/phone/StatusIconContainer;->mBatteryPercentShow:Z
 
-    if-eqz p1, :cond_3
+    if-nez p1, :cond_3
 
-    :cond_1
+    iget-boolean p1, p0, Lcom/android/systemui/statusbar/phone/StatusIconContainer;->mClockWidthChanged:Z
+
+    if-eqz p1, :cond_5
+
+    :cond_3
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1237,7 +1281,7 @@
 
     move-result-object p2
 
-    if-eqz p2, :cond_2
+    if-eqz p2, :cond_4
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getParent()Landroid/view/ViewParent;
 
@@ -1249,7 +1293,7 @@
 
     goto :goto_1
 
-    :cond_2
+    :cond_4
     const-string p2, "Null"
 
     :goto_1
@@ -1275,7 +1319,9 @@
 
     iput-boolean p3, p0, Lcom/android/systemui/statusbar/phone/StatusIconContainer;->mBatteryPercentShow:Z
 
-    :cond_3
+    iput-boolean p3, p0, Lcom/android/systemui/statusbar/phone/StatusIconContainer;->mClockWidthChanged:Z
+
+    :cond_5
     return-void
 .end method
 

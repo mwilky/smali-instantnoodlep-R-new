@@ -28,15 +28,21 @@
 
 # virtual methods
 .method public prepare(Lcom/android/systemui/statusbar/phone/ScrimState;)V
-    .locals 0
+    .locals 2
 
     const/4 p1, 0x0
 
     iput p1, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mBehindAlpha:F
 
+    iput p1, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mBubbleAlpha:F
+
+    iget p1, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mDefaultScrimAlpha:F
+
     iput p1, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mFrontAlpha:F
 
-    iput p1, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mBubbleAlpha:F
+    const-wide/16 v0, 0xdac
+
+    iput-wide v0, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mAnimationDuration:J
 
     return-void
 .end method

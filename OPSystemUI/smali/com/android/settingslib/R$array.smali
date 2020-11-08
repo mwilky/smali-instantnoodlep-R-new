@@ -12,10 +12,10 @@
 
 .field public static final batterymeter_plus_points:I = 0x7f03000a
 
-.field public static final select_logpersist_summaries:I = 0x7f030064
+.field public static final select_logpersist_summaries:I = 0x7f030065
 
-.field public static final select_logpersist_values:I = 0x7f030066
+.field public static final select_logpersist_values:I = 0x7f030067
 
-.field public static final wifi_status:I = 0x7f03007c
+.field public static final wifi_status:I = 0x7f03007d
 
-.field public static final wifi_status_with_ssid:I = 0x7f03007d
+.field public static final wifi_status_with_ssid:I = 0x7f03007e

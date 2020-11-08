@@ -35,6 +35,8 @@
 
 .field private jarLibVersion:I
 
+.field private final onAttachStateChangeListener:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$MyOnAttachStateChangeListener;
+
 .field private receiverList:Ljava/util/List;
 
 .field private final smartspaceData:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceData;
@@ -250,10 +252,26 @@
 
     iput-object p1, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->expireAlarmAction:Landroid/app/AlarmManager$OnAlarmListener;
 
+    new-instance p1, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$MyOnAttachStateChangeListener;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p0, p2}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$MyOnAttachStateChangeListener;-><init>(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$1;)V
+
+    iput-object p1, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->onAttachStateChangeListener:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$MyOnAttachStateChangeListener;
+
     return-void
 .end method
 
-.method static synthetic access$1002(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;Landroid/os/UserHandle;)Landroid/os/UserHandle;
+.method static synthetic access$1000(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->onDataUpdated()V
+
+    return-void
+.end method
+
+.method static synthetic access$1302(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;Landroid/os/UserHandle;)Landroid/os/UserHandle;
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->currentUserHandle:Landroid/os/UserHandle;
@@ -261,7 +279,7 @@
     return-object p1
 .end method
 
-.method static synthetic access$1100(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;)Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceData;
+.method static synthetic access$1400(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;)Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceData;
     .locals 0
 
     iget-object p0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->smartspaceData:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceData;
@@ -269,7 +287,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1200(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;Z)V
+.method static synthetic access$1500(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;Z)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->onExpire(Z)V
@@ -277,7 +295,7 @@
     return-void
 .end method
 
-.method static synthetic access$1300(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;)Z
+.method static synthetic access$1600(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->isSupportedLocale:Z
@@ -285,7 +303,7 @@
     return p0
 .end method
 
-.method static synthetic access$1302(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;Z)Z
+.method static synthetic access$1602(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->isSupportedLocale:Z
@@ -293,15 +311,7 @@
     return p1
 .end method
 
-.method static synthetic access$1400(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;)Landroid/os/Handler;
-    .locals 0
-
-    iget-object p0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->uiHandler:Landroid/os/Handler;
-
-    return-object p0
-.end method
-
-.method static synthetic access$1500(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;)Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;
+.method static synthetic access$1700(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;)Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;
     .locals 0
 
     iget-object p0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->smartspaceView:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;
@@ -354,6 +364,51 @@
 
     invoke-direct {p0, p1, p2}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->onReceiveChip(Landroid/content/Context;Landroid/content/Intent;)V
 
+    return-void
+.end method
+
+.method static synthetic access$800(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;)Landroid/os/Handler;
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->uiHandler:Landroid/os/Handler;
+
+    return-object p0
+.end method
+
+.method static synthetic access$900(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->hasContents:Z
+
+    return p0
+.end method
+
+.method static synthetic access$902(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->hasContents:Z
+
+    return p1
+.end method
+
+.method private checkAndUpdateSmartspaceview()V
+    .locals 2
+
+    invoke-direct {p0}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->updateView()Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->containerView:Landroid/view/ViewGroup;
+
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->removeAllViews()V
+
+    iget-object p0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->containerView:Landroid/view/ViewGroup;
+
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    :cond_0
     return-void
 .end method
 
@@ -434,9 +489,22 @@
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    const/4 v0, 0x0
+    iget-boolean v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->alarmRegistered:Z
 
-    iput-boolean v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->hasContents:Z
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->alarmManager:Landroid/app/AlarmManager;
+
+    iget-object v2, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->expireAlarmAction:Landroid/app/AlarmManager$OnAlarmListener;
+
+    invoke-virtual {v0, v2}, Landroid/app/AlarmManager;->cancel(Landroid/app/AlarmManager$OnAlarmListener;)V
+
+    iput-boolean v1, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->alarmRegistered:Z
+
+    :cond_1
+    iput-boolean v1, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->hasContents:Z
 
     return-void
 .end method
@@ -770,18 +838,13 @@
     iput-boolean v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->alarmRegistered:Z
 
     :cond_1
-    iget-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->containerView:Landroid/view/ViewGroup;
+    iget-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->smartspaceView:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;
 
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
+    if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->containerView:Landroid/view/ViewGroup;
+    invoke-direct {p0}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->checkAndUpdateSmartspaceview()V
 
-    invoke-direct {p0}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->updateView()Landroid/view/View;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
+    :cond_2
     return-void
 .end method
 
@@ -825,9 +888,9 @@
     :cond_0
     iget-object p1, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->uiHandler:Landroid/os/Handler;
 
-    new-instance v0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$$Lambda$5;
+    new-instance v0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$$Lambda$4;
 
-    invoke-direct {v0, p0}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$$Lambda$5;-><init>(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;)V
+    invoke-direct {v0, p0}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$$Lambda$4;-><init>(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;)V
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -835,7 +898,7 @@
 .end method
 
 .method private onNewCard(Lcom/google/geo/sidekick/SmartspaceProto$SmartspaceUpdate$SmartspaceCard;Landroid/graphics/Bitmap;)V
-    .locals 7
+    .locals 6
 
     const-string v0, "SmartSpaceViewCtrl"
 
@@ -852,11 +915,9 @@
 
     move-result v1
 
-    const/4 v2, 0x1
+    const-string v2, "_"
 
-    const-string v3, "_"
-
-    const-string/jumbo v4, "smartspace_"
+    const-string/jumbo v3, "smartspace_"
 
     if-eqz v1, :cond_2
 
@@ -894,11 +955,11 @@
     :goto_0
     iget-object p2, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->store:Lcom/google/android/libraries/assistant/oemsmartspace/lib/ProtoStore;
 
-    iget-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->currentUserHandle:Landroid/os/UserHandle;
+    iget-object p0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->currentUserHandle:Landroid/os/UserHandle;
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
     invoke-virtual {p1}, Lcom/google/geo/sidekick/SmartspaceProto$SmartspaceUpdate$SmartspaceCard;->getCardPriority()Lcom/google/geo/sidekick/SmartspaceProto$SmartspaceUpdate$SmartspaceCard$CardPriority;
 
@@ -908,35 +969,35 @@
 
     move-result p1
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v0
 
-    invoke-virtual {v5}, Ljava/lang/String;->length()I
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-    move-result v5
+    move-result v0
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    add-int/lit8 v5, v5, 0x17
+    add-int/lit8 v0, v0, 0x17
 
-    invoke-direct {v6, v5}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v4, v0}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-virtual {p2, v1, p1}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/ProtoStore;->store(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceCard;Ljava/lang/String;)V
+    invoke-virtual {p2, v1, p0}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/ProtoStore;->store(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceCard;Ljava/lang/String;)V
 
-    goto/16 :goto_2
+    return-void
 
     :cond_2
     invoke-virtual {p1}, Lcom/google/geo/sidekick/SmartspaceProto$SmartspaceUpdate$SmartspaceCard;->getCardType()Lcom/google/geo/sidekick/SmartspaceProto$SmartspaceUpdate$SmartspaceCard$CardType;
@@ -945,21 +1006,21 @@
 
     sget-object v1, Lcom/google/geo/sidekick/SmartspaceProto$SmartspaceUpdate$SmartspaceCard$CardType;->WEATHER:Lcom/google/geo/sidekick/SmartspaceProto$SmartspaceUpdate$SmartspaceCard$CardType;
 
-    if-eq v0, v1, :cond_3
+    if-eq v0, v1, :cond_4
 
     iget-boolean v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->hideSensitiveData:Z
 
-    if-nez v0, :cond_4
+    if-nez v0, :cond_3
 
     iget-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->smartspaceData:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceData;
 
     new-instance v1, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceCard;
 
-    iget-object v5, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->context:Landroid/content/Context;
+    iget-object v4, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->context:Landroid/content/Context;
 
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
-    invoke-direct {v1, v5, p1, v6, p2}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceCard;-><init>(Landroid/content/Context;Lcom/google/geo/sidekick/SmartspaceProto$SmartspaceUpdate$SmartspaceCard;ZLandroid/graphics/Bitmap;)V
+    invoke-direct {v1, v4, p1, v5, p2}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceCard;-><init>(Landroid/content/Context;Lcom/google/geo/sidekick/SmartspaceProto$SmartspaceUpdate$SmartspaceCard;ZLandroid/graphics/Bitmap;)V
 
     iput-object v1, v0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceData;->currentCard:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceCard;
 
@@ -969,11 +1030,11 @@
 
     iget-object v0, v0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceData;->currentCard:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceCard;
 
-    iget-object v1, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->currentUserHandle:Landroid/os/UserHandle;
+    iget-object p0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->currentUserHandle:Landroid/os/UserHandle;
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
     invoke-virtual {p1}, Lcom/google/geo/sidekick/SmartspaceProto$SmartspaceUpdate$SmartspaceCard;->getCardPriority()Lcom/google/geo/sidekick/SmartspaceProto$SmartspaceUpdate$SmartspaceCard$CardPriority;
 
@@ -983,30 +1044,47 @@
 
     move-result p1
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v1
 
-    invoke-virtual {v5}, Ljava/lang/String;->length()I
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
 
-    move-result v5
+    move-result v1
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    add-int/lit8 v5, v5, 0x17
+    add-int/lit8 v1, v1, 0x17
 
-    invoke-direct {v6, v5}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v4, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    goto :goto_1
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p2, v0, p0}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/ProtoStore;->store(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceCard;Ljava/lang/String;)V
 
     :cond_3
+    return-void
+
+    :cond_4
     iget-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->smartspaceData:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceData;
 
     new-instance v1, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceCard;
 
-    iget-object v5, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->context:Landroid/content/Context;
+    iget-object v4, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->context:Landroid/content/Context;
 
-    invoke-direct {v1, v5, p1, v2, p2}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceCard;-><init>(Landroid/content/Context;Lcom/google/geo/sidekick/SmartspaceProto$SmartspaceUpdate$SmartspaceCard;ZLandroid/graphics/Bitmap;)V
+    const/4 v5, 0x1
+
+    invoke-direct {v1, v4, p1, v5, p2}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceCard;-><init>(Landroid/content/Context;Lcom/google/geo/sidekick/SmartspaceProto$SmartspaceUpdate$SmartspaceCard;ZLandroid/graphics/Bitmap;)V
 
     iput-object v1, v0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceData;->weatherCard:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceCard;
 
@@ -1016,11 +1094,11 @@
 
     iget-object v0, v0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceData;->weatherCard:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceCard;
 
-    iget-object v1, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->currentUserHandle:Landroid/os/UserHandle;
+    iget-object p0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->currentUserHandle:Landroid/os/UserHandle;
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
     invoke-virtual {p1}, Lcom/google/geo/sidekick/SmartspaceProto$SmartspaceUpdate$SmartspaceCard;->getCardPriority()Lcom/google/geo/sidekick/SmartspaceProto$SmartspaceUpdate$SmartspaceCard$CardPriority;
 
@@ -1030,51 +1108,33 @@
 
     move-result p1
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v1
 
-    invoke-virtual {v5}, Ljava/lang/String;->length()I
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
 
-    move-result v5
+    move-result v1
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    add-int/lit8 v5, v5, 0x17
+    add-int/lit8 v1, v1, 0x17
 
-    invoke-direct {v6, v5}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v4, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    :goto_1
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-virtual {p2, v0, p1}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/ProtoStore;->store(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceCard;Ljava/lang/String;)V
-
-    :cond_4
-    :goto_2
-    iget-boolean p1, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->hasContents:Z
-
-    if-nez p1, :cond_5
-
-    iput-boolean v2, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->hasContents:Z
-
-    :cond_5
-    iget-object p1, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->uiHandler:Landroid/os/Handler;
-
-    new-instance p2, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$$Lambda$4;
-
-    invoke-direct {p2, p0}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$$Lambda$4;-><init>(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;)V
-
-    invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {p2, v0, p0}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/ProtoStore;->store(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceCard;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1096,9 +1156,9 @@
 
     iget-object v1, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->backgroundHandler:Landroid/os/Handler;
 
-    new-instance v2, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$$Lambda$7;
+    new-instance v2, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$$Lambda$6;
 
-    invoke-direct {v2, p0, p1, v0, p2}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$$Lambda$7;-><init>(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;Landroid/content/Context;Landroid/os/Bundle;Landroid/os/Bundle;)V
+    invoke-direct {v2, p0, p1, v0, p2}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$$Lambda$6;-><init>(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;Landroid/content/Context;Landroid/os/Bundle;Landroid/os/Bundle;)V
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -1197,9 +1257,9 @@
     :goto_3
     iget-object v2, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->backgroundHandler:Landroid/os/Handler;
 
-    new-instance v3, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$$Lambda$8;
+    new-instance v3, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$$Lambda$7;
 
-    invoke-direct {v3, p0, p1, v1, p2}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$$Lambda$8;-><init>(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;Landroid/content/Context;Lcom/google/geo/sidekick/SmartspaceProto$SmartspaceUpdate$SmartspaceCard;Landroid/content/Intent;)V
+    invoke-direct {v3, p0, p1, v1, p2}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$$Lambda$7;-><init>(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;Landroid/content/Context;Lcom/google/geo/sidekick/SmartspaceProto$SmartspaceUpdate$SmartspaceCard;Landroid/content/Intent;)V
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
     :try_end_0
@@ -1247,9 +1307,9 @@
 
     iget-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->uiHandler:Landroid/os/Handler;
 
-    new-instance v1, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$$Lambda$6;
+    new-instance v1, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$$Lambda$5;
 
-    invoke-direct {v1, p0}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$$Lambda$6;-><init>(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;)V
+    invoke-direct {v1, p0}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$$Lambda$5;-><init>(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -1938,8 +1998,6 @@
 
     invoke-direct {p0, p2, p4}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->updateSecondChip(Landroid/os/Bundle;Landroid/graphics/drawable/Drawable;)V
 
-    invoke-direct {p0}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->onDataUpdated()V
-
     return-void
 .end method
 
@@ -2197,6 +2255,14 @@
     return-object p0
 .end method
 
+.method final bridge synthetic bridge$lambda$2$SmartspaceContainerController()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->checkAndUpdateSmartspaceview()V
+
+    return-void
+.end method
+
 .method final synthetic lambda$new$0$SmartspaceContainerController(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceData;)V
     .locals 0
 
@@ -2209,7 +2275,7 @@
     return-void
 .end method
 
-.method final synthetic lambda$onReceiveChip$5$SmartspaceContainerController(Landroid/os/Bundle;Landroid/os/Bundle;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+.method final synthetic lambda$onReceiveChip$4$SmartspaceContainerController(Landroid/os/Bundle;Landroid/os/Bundle;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->updateChips(Landroid/os/Bundle;Landroid/os/Bundle;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
@@ -2217,7 +2283,7 @@
     return-void
 .end method
 
-.method final synthetic lambda$onReceiveChip$6$SmartspaceContainerController(Landroid/content/Context;Landroid/os/Bundle;Landroid/os/Bundle;)V
+.method final synthetic lambda$onReceiveChip$5$SmartspaceContainerController(Landroid/content/Context;Landroid/os/Bundle;Landroid/os/Bundle;)V
     .locals 7
 
     invoke-static {p1, p2}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->retrieveChipIcon(Landroid/content/Context;Landroid/os/Bundle;)Landroid/graphics/drawable/Drawable;
@@ -2230,7 +2296,7 @@
 
     iget-object p1, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->uiHandler:Landroid/os/Handler;
 
-    new-instance v6, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$$Lambda$9;
+    new-instance v6, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$$Lambda$8;
 
     move-object v0, v6
 
@@ -2240,14 +2306,14 @@
 
     move-object v3, p3
 
-    invoke-direct/range {v0 .. v5}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$$Lambda$9;-><init>(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;Landroid/os/Bundle;Landroid/os/Bundle;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    invoke-direct/range {v0 .. v5}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$$Lambda$8;-><init>(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;Landroid/os/Bundle;Landroid/os/Bundle;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
     invoke-virtual {p1, v6}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method final synthetic lambda$onReceivedCard$7$SmartspaceContainerController(Landroid/content/Context;Lcom/google/geo/sidekick/SmartspaceProto$SmartspaceUpdate$SmartspaceCard;Landroid/content/Intent;)V
+.method final synthetic lambda$onReceivedCard$6$SmartspaceContainerController(Landroid/content/Context;Lcom/google/geo/sidekick/SmartspaceProto$SmartspaceUpdate$SmartspaceCard;Landroid/content/Intent;)V
     .locals 0
 
     invoke-static {p1, p2, p3}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->retrieveIcon(Landroid/content/Context;Lcom/google/geo/sidekick/SmartspaceProto$SmartspaceUpdate$SmartspaceCard;Landroid/content/Intent;)Landroid/graphics/Bitmap;
@@ -2282,24 +2348,6 @@
 .end method
 
 .method final synthetic lambda$restoreData$3$SmartspaceContainerController()V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->containerView:Landroid/view/ViewGroup;
-
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
-
-    iget-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->containerView:Landroid/view/ViewGroup;
-
-    invoke-direct {p0}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->updateView()Landroid/view/View;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method final synthetic lambda$restoreData$4$SmartspaceContainerController()V
     .locals 2
 
     iget-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->smartspaceData:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceData;
@@ -2312,21 +2360,18 @@
 
     iput-object v1, v0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceData;->weatherCard:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceCard;
 
-    iget-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->smartspaceData:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceData;
+    iget-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->smartspaceView:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceView;
 
-    const/4 v1, 0x1
+    if-nez v0, :cond_0
 
-    invoke-direct {p0, v1}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->loadSmartSpaceData(Z)Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceCard;
+    return-void
 
-    move-result-object v1
-
-    iput-object v1, v0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceData;->currentCard:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceCard;
-
+    :cond_0
     iget-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->uiHandler:Landroid/os/Handler;
 
-    new-instance v1, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$$Lambda$10;
+    new-instance v1, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$$Lambda$9;
 
-    invoke-direct {v1, p0}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$$Lambda$10;-><init>(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;)V
+    invoke-direct {v1, p0}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$$Lambda$9;-><init>(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -2588,11 +2633,7 @@
 
     iput-object p1, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->containerView:Landroid/view/ViewGroup;
 
-    new-instance p2, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$MyOnAttachStateChangeListener;
-
-    const/4 p3, 0x0
-
-    invoke-direct {p2, p0, p3}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$MyOnAttachStateChangeListener;-><init>(Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$1;)V
+    iget-object p2, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->onAttachStateChangeListener:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$MyOnAttachStateChangeListener;
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
@@ -2623,7 +2664,7 @@
 .end method
 
 .method public unsetView()V
-    .locals 2
+    .locals 3
 
     iget-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->containerView:Landroid/view/ViewGroup;
 
@@ -2638,6 +2679,12 @@
     iget-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->containerView:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
+
+    iget-object v0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->containerView:Landroid/view/ViewGroup;
+
+    iget-object v2, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->onAttachStateChangeListener:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$MyOnAttachStateChangeListener;
+
+    invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
     :cond_0
     const-string v0, "Clean up SmartspaceViews and unregister the listeners"

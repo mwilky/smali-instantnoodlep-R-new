@@ -1366,6 +1366,9 @@
     <string name="overheat_toast_content">手机处于高温状态，建议不要使用此功能</string>
     <string name="overlay_display_devices_title">模拟辅助显示设备</string>
     <string name="overview">概览</string>
+    <string name="permission_btn_text_denied">退出</string>
+    <string name="permission_btn_text_grant">同意并继续</string>
+    <string name="permission_dialog_title">权限声明</string>
     <string name="phone_hint">滑动图标即可拨打电话</string>
     <string name="phone_label">打开电话</string>
     <string name="picture_color_mode">图片颜色模式</string>

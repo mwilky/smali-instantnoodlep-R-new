@@ -943,90 +943,90 @@
 
     move-result-object p1
 
+    move v0, v5
+
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
-    move-result v0
-
-    if-ge v5, v0, :cond_e
-
-    invoke-interface {p1, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/content/pm/ShortcutInfo;
-
-    invoke-virtual {v0}, Landroid/content/pm/ShortcutInfo;->getId()Ljava/lang/String;
-
-    move-result-object v2
-
-    iget-object v3, v1, Lcom/oneplus/systemui/biometrics/OpQLAdapter$ActionInfo;->mShortcutId:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     move-result v2
 
-    if-eqz v2, :cond_7
+    if-ge v0, v2, :cond_e
 
-    invoke-virtual {v0}, Landroid/content/pm/ShortcutInfo;->getIconResourceId()I
-
-    iget-object v2, p0, Lcom/oneplus/systemui/biometrics/OpQLHelper;->mLauncherApps:Landroid/content/pm/LauncherApps;
-
-    iget v3, v1, Lcom/oneplus/systemui/biometrics/OpQLAdapter$ActionInfo;->mUid:I
-
-    invoke-virtual {v2, v0, v3}, Landroid/content/pm/LauncherApps;->getShortcutIconDrawable(Landroid/content/pm/ShortcutInfo;I)Landroid/graphics/drawable/Drawable;
+    invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    iput-object v2, v1, Lcom/oneplus/systemui/biometrics/OpQLAdapter$ActionInfo;->mAppIcon:Landroid/graphics/drawable/Drawable;
+    check-cast v2, Landroid/content/pm/ShortcutInfo;
 
-    if-nez v2, :cond_4
+    invoke-virtual {v2}, Landroid/content/pm/ShortcutInfo;->getId()Ljava/lang/String;
 
-    iget-object v2, v1, Lcom/oneplus/systemui/biometrics/OpQLAdapter$ActionInfo;->mPackageName:Ljava/lang/String;
+    move-result-object v3
 
-    iget v3, v1, Lcom/oneplus/systemui/biometrics/OpQLAdapter$ActionInfo;->mUid:I
+    iget-object v4, v1, Lcom/oneplus/systemui/biometrics/OpQLAdapter$ActionInfo;->mShortcutId:Ljava/lang/String;
 
-    invoke-direct {p0, v2, v3}, Lcom/oneplus/systemui/biometrics/OpQLHelper;->getApplicationIcon(Ljava/lang/String;I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result-object v2
+    move-result v3
 
-    iput-object v2, v1, Lcom/oneplus/systemui/biometrics/OpQLAdapter$ActionInfo;->mAppIcon:Landroid/graphics/drawable/Drawable;
+    if-eqz v3, :cond_7
+
+    invoke-virtual {v2}, Landroid/content/pm/ShortcutInfo;->getIconResourceId()I
+
+    iget-object v3, p0, Lcom/oneplus/systemui/biometrics/OpQLHelper;->mLauncherApps:Landroid/content/pm/LauncherApps;
+
+    invoke-virtual {v3, v2, v5}, Landroid/content/pm/LauncherApps;->getShortcutIconDrawable(Landroid/content/pm/ShortcutInfo;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v3
+
+    iput-object v3, v1, Lcom/oneplus/systemui/biometrics/OpQLAdapter$ActionInfo;->mAppIcon:Landroid/graphics/drawable/Drawable;
+
+    if-nez v3, :cond_4
+
+    iget-object v3, v1, Lcom/oneplus/systemui/biometrics/OpQLAdapter$ActionInfo;->mPackageName:Ljava/lang/String;
+
+    iget v4, v1, Lcom/oneplus/systemui/biometrics/OpQLAdapter$ActionInfo;->mUid:I
+
+    invoke-direct {p0, v3, v4}, Lcom/oneplus/systemui/biometrics/OpQLHelper;->getApplicationIcon(Ljava/lang/String;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v3
+
+    iput-object v3, v1, Lcom/oneplus/systemui/biometrics/OpQLAdapter$ActionInfo;->mAppIcon:Landroid/graphics/drawable/Drawable;
 
     :cond_4
-    invoke-virtual {v0}, Landroid/content/pm/ShortcutInfo;->getLongLabel()Ljava/lang/CharSequence;
+    invoke-virtual {v2}, Landroid/content/pm/ShortcutInfo;->getLongLabel()Ljava/lang/CharSequence;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v3
+    move-result v4
 
-    if-eqz v3, :cond_5
+    if-eqz v4, :cond_5
 
-    invoke-virtual {v0}, Landroid/content/pm/ShortcutInfo;->getShortLabel()Ljava/lang/CharSequence;
+    invoke-virtual {v2}, Landroid/content/pm/ShortcutInfo;->getShortLabel()Ljava/lang/CharSequence;
 
-    move-result-object v2
+    move-result-object v3
 
     :cond_5
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v3
+    move-result v4
 
-    if-eqz v3, :cond_6
+    if-eqz v4, :cond_6
 
-    invoke-virtual {v0}, Landroid/content/pm/ShortcutInfo;->getId()Ljava/lang/String;
+    invoke-virtual {v2}, Landroid/content/pm/ShortcutInfo;->getId()Ljava/lang/String;
+
+    move-result-object v3
+
+    :cond_6
+    invoke-interface {v3}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    :cond_6
-    invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, v1, Lcom/oneplus/systemui/biometrics/OpQLAdapter$ActionInfo;->mLabel:Ljava/lang/String;
+    iput-object v2, v1, Lcom/oneplus/systemui/biometrics/OpQLAdapter$ActionInfo;->mLabel:Ljava/lang/String;
 
     :cond_7
-    add-int/lit8 v5, v5, 0x1
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 

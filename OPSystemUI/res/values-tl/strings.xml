@@ -39,9 +39,9 @@
     <string name="abc_slice_updated">Na-update noong %1$s</string>
     <string name="abc_slices_permission_request">Gustong ipakita ng %1$s ang mga slice ng %2$s</string>
     <string name="abc_toolbar_collapse_description">I-collapse</string>
-    <string name="about_action_bar_title">Tungkol sa</string>
+    <string name="about_action_bar_title">Tungkol Dito</string>
     <string name="about_app_version_text">Version %s</string>
-    <string name="about_privacy_policy">Patakarang Pang-pribado</string>
+    <string name="about_privacy_policy">Patakaran sa Privacy</string>
     <string name="about_release_note_title">I-update ang log:</string>
     <string name="about_terms_service">Mga Tuntunin ng Serbisyo</string>
     <string name="accessibility_accessibility_button">Accessibility</string>
@@ -1415,6 +1415,9 @@ Nakakonekta ka rin sa isang VPN, na may kakayahang subaybayan ang iyong aktibida
     <string name="overheat_toast_content">Napakataas ng temperatura ng telepono mo, at ini-off ang mga function na malakas kumain ng baterya para mapababa ang temperatura</string>
     <string name="overlay_display_devices_title">I-simulate, ika-2 display</string>
     <string name="overview">Pangkalahatang-ideya</string>
+    <string name="permission_btn_text_denied">Lumabas</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Pahayag ng pahintulot</string>
     <string name="phone_hint">Mag-swipe mula sa icon para sa telepono</string>
     <string name="phone_label">buksan ang telepono</string>
     <string name="picture_color_mode">Mode ng kulay ng larawan</string>

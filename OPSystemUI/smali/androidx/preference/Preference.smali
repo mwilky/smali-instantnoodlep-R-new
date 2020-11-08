@@ -1758,26 +1758,6 @@
 
     :cond_4
     :goto_1
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "mIconSpaceReserved = "
-
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v5, p0, Landroidx/preference/Preference;->mIconSpaceReserved:Z
-
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v5, "Preference"
-
-    invoke-static {v5, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     const v1, 0x1020006
 
     invoke-virtual {p1, v1}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
@@ -1788,40 +1768,40 @@
 
     if-eqz v1, :cond_9
 
-    iget v6, p0, Landroidx/preference/Preference;->mIconResId:I
+    iget v5, p0, Landroidx/preference/Preference;->mIconResId:I
 
-    if-nez v6, :cond_5
+    if-nez v5, :cond_5
 
-    iget-object v6, p0, Landroidx/preference/Preference;->mIcon:Landroid/graphics/drawable/Drawable;
+    iget-object v5, p0, Landroidx/preference/Preference;->mIcon:Landroid/graphics/drawable/Drawable;
 
-    if-eqz v6, :cond_7
+    if-eqz v5, :cond_7
 
     :cond_5
-    iget-object v6, p0, Landroidx/preference/Preference;->mIcon:Landroid/graphics/drawable/Drawable;
+    iget-object v5, p0, Landroidx/preference/Preference;->mIcon:Landroid/graphics/drawable/Drawable;
 
-    if-nez v6, :cond_6
+    if-nez v5, :cond_6
 
-    iget-object v6, p0, Landroidx/preference/Preference;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Landroidx/preference/Preference;->mContext:Landroid/content/Context;
 
-    iget v7, p0, Landroidx/preference/Preference;->mIconResId:I
+    iget v6, p0, Landroidx/preference/Preference;->mIconResId:I
 
-    invoke-static {v6, v7}, Landroidx/appcompat/content/res/AppCompatResources;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v5, v6}, Landroidx/appcompat/content/res/AppCompatResources;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    move-result-object v6
+    move-result-object v5
 
-    iput-object v6, p0, Landroidx/preference/Preference;->mIcon:Landroid/graphics/drawable/Drawable;
+    iput-object v5, p0, Landroidx/preference/Preference;->mIcon:Landroid/graphics/drawable/Drawable;
 
     :cond_6
-    iget-object v6, p0, Landroidx/preference/Preference;->mIcon:Landroid/graphics/drawable/Drawable;
+    iget-object v5, p0, Landroidx/preference/Preference;->mIcon:Landroid/graphics/drawable/Drawable;
 
-    if-eqz v6, :cond_7
+    if-eqz v5, :cond_7
 
-    invoke-virtual {v1, v6}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v1, v5}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     :cond_7
-    iget-object v6, p0, Landroidx/preference/Preference;->mIcon:Landroid/graphics/drawable/Drawable;
+    iget-object v5, p0, Landroidx/preference/Preference;->mIcon:Landroid/graphics/drawable/Drawable;
 
-    if-eqz v6, :cond_8
+    if-eqz v5, :cond_8
 
     invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
@@ -1855,9 +1835,9 @@
 
     if-eqz v1, :cond_c
 
-    iget-object v6, p0, Landroidx/preference/Preference;->mIcon:Landroid/graphics/drawable/Drawable;
+    iget-object v5, p0, Landroidx/preference/Preference;->mIcon:Landroid/graphics/drawable/Drawable;
 
-    if-eqz v6, :cond_b
+    if-eqz v5, :cond_b
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
 
@@ -1898,9 +1878,9 @@
 
     move-result-object v4
 
-    sget v6, Landroidx/preference/R$dimen;->op_control_margin_list_top2:I
+    sget v5, Landroidx/preference/R$dimen;->op_control_margin_list_top2:I
 
-    invoke-virtual {v4, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v4
 
@@ -1912,9 +1892,9 @@
 
     move-result-object v4
 
-    sget v6, Landroidx/preference/R$dimen;->op_control_margin_list_bottom2:I
+    sget v5, Landroidx/preference/R$dimen;->op_control_margin_list_bottom2:I
 
-    invoke-virtual {v4, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v4
 
@@ -1929,9 +1909,9 @@
 
     move-result-object v4
 
-    sget v6, Landroidx/preference/R$dimen;->op_control_margin_list_top4:I
+    sget v5, Landroidx/preference/R$dimen;->op_control_margin_list_top4:I
 
-    invoke-virtual {v4, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v4
 
@@ -1943,9 +1923,9 @@
 
     move-result-object v4
 
-    sget v6, Landroidx/preference/R$dimen;->op_control_margin_list_bottom4:I
+    sget v5, Landroidx/preference/R$dimen;->op_control_margin_list_bottom4:I
 
-    invoke-virtual {v4, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v4
 
@@ -1955,54 +1935,6 @@
     invoke-virtual {v1, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     :cond_e
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "getTitle() = "
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Landroidx/preference/Preference;->getTitle()Ljava/lang/CharSequence;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v5, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "mShouldDisableView = "
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v3, p0, Landroidx/preference/Preference;->mShouldDisableView:Z
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v3, " isEnabled() = "
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Landroidx/preference/Preference;->isEnabled()Z
-
-    move-result v3
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v5, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     iget-boolean v1, p0, Landroidx/preference/Preference;->mShouldDisableView:Z
 
     if-eqz v1, :cond_f

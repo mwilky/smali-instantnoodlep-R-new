@@ -2110,6 +2110,16 @@
 
     iput-boolean p2, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mAnimateChange:Z
 
+    invoke-static {}, Lcom/oneplus/plugin/OpLsState;->getInstance()Lcom/oneplus/plugin/OpLsState;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Lcom/oneplus/plugin/OpLsState;->getPhoneStatusBar()Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    move-result-object p2
+
+    invoke-virtual {p2, p1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->shouldForceHideWallpaper(Z)V
+
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/ScrimController;->scheduleUpdate()V
 
     return-void
@@ -2378,11 +2388,21 @@
 .end method
 
 .method public resetForceHide()V
-    .locals 1
+    .locals 2
 
-    const/4 v0, 0x0
+    invoke-static {}, Lcom/oneplus/plugin/OpLsState;->getInstance()Lcom/oneplus/plugin/OpLsState;
 
-    iput-boolean v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mForceHideScrims:Z
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oneplus/plugin/OpLsState;->getPhoneStatusBar()Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->shouldForceHideWallpaper(Z)V
+
+    iput-boolean v1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mForceHideScrims:Z
 
     return-void
 .end method

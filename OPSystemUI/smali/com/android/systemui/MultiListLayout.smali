@@ -158,22 +158,6 @@
     return-void
 .end method
 
-.method public setOutsideTouchListener(Landroid/view/View$OnClickListener;)V
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/widget/LinearLayout;->requestLayout()V
-
-    invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const/4 p1, 0x1
-
-    invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->setClickable(Z)V
-
-    invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->setFocusable(Z)V
-
-    return-void
-.end method
-
 .method public setRotationListener(Lcom/android/systemui/MultiListLayout$RotationListener;)V
     .locals 0
 

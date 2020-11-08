@@ -375,7 +375,7 @@ Turn on Airplane mode?"</string>
     <string name="available_via_app">Available via %1$s</string>
     <string name="available_via_carrier">Available via %1$s</string>
     <string name="available_via_passpoint">Available via %1$s</string>
-    <string name="back_button_label">Pre</string>
+    <string name="back_button_label">Back</string>
     <string name="battery">Battery</string>
     <string name="battery_detail_charging_summary">Battery Saver not available during charging</string>
     <string name="battery_detail_switch_summary">Reduces performance and background data</string>
@@ -581,8 +581,8 @@ Selection"</string>
     <string name="camera_hint">Swipe from icon for camera</string>
     <string name="camera_label">open camera</string>
     <string name="cancel">Cancel</string>
-    <string name="capital_off">Off</string>
-    <string name="capital_on">On</string>
+    <string name="capital_off">OFF</string>
+    <string name="capital_on">ON</string>
     <string name="carrier_network_change_mode">Carrier network changing</string>
     <string name="category_personal">Personal</string>
     <string name="category_work">Work</string>
@@ -1485,7 +1485,7 @@ You're also connected to a VPN, which can monitor your network activity."</strin
     <string name="oneplus_threekey_navigation_sound">All sounds allowed</string>
     <string name="oneplus_threekey_navigation_turned_on_here">It can be turned on by the toggle above</string>
     <string name="oneplus_threekey_navigation_vibration">Vibration only</string>
-    <string name="op_accessibility_quick_settings_page">page %1$d ,Total %2$d pages</string>
+    <string name="op_accessibility_quick_settings_page">Page %1$d of %2$d</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>unlock</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>unlocks</string>
     <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
@@ -1494,6 +1494,8 @@ You're also connected to a VPN, which can monitor your network activity."</strin
     <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
 
 •Turns off or restricts background activity, and some visual effects"</string>
+    <string name="op_cb_warp_charging_animation_charging_state_charged">CHARGED</string>
+    <string name="op_cb_warp_charging_animation_charging_state_charging">CHARGING...</string>
     <string name="op_character_counter_pattern">%1$d / %2$d</string>
     <string name="op_control_font_display_h1">oneplus-sans-display-h1</string>
     <string name="op_control_font_display_h2">oneplus-sans-display-h2</string>
@@ -1596,6 +1598,9 @@ You're also connected to a VPN, which can monitor your network activity."</strin
     <string name="path_password_eye_mask_strike_through">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_eye_mask_visible">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_strike_through">M3.27,4.27 L19.74,20.74</string>
+    <string name="permission_btn_text_denied">Exit</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Permission statement</string>
     <string name="phone_hint">Swipe from icon for phone</string>
     <string name="phone_label">open phone</string>
     <string name="picture_color_mode">Picture color mode</string>
@@ -1973,10 +1978,10 @@ You're also connected to a VPN, which can monitor your network activity."</strin
     <string name="sd_card_unmount_action">Unmount</string>
     <string name="search_menu">Search settings</string>
     <string name="search_menu_title">Search</string>
-    <string name="searchview_description_clear">Clear</string>
-    <string name="searchview_description_search">Search something</string>
-    <string name="searchview_description_submit">Submit</string>
-    <string name="searchview_description_voice">Voice Search</string>
+    <string name="searchview_description_clear">Clear query</string>
+    <string name="searchview_description_search">Search</string>
+    <string name="searchview_description_submit">Submit query</string>
+    <string name="searchview_description_voice">Voice search</string>
     <string name="see_more_title">See more</string>
     <string name="select_application">Select application</string>
     <string name="select_day">Select month and day</string>

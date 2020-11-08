@@ -112,7 +112,7 @@
 
     const/4 v4, 0x0
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_8
 
     const-string p1, "fastcharge_status"
 
@@ -163,7 +163,9 @@
     move v8, v4
 
     :goto_1
-    sget-boolean v0, Lcom/oneplus/util/OpUtils;->DEBUG_ONEPLUS:Z
+    invoke-static {}, Lcom/android/keyguard/KeyguardUpdateMonitor;->access$1400()Z
+
+    move-result v0
 
     if-eqz v0, :cond_5
 
@@ -206,7 +208,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_6
+    if-eqz p1, :cond_7
 
     const-string/jumbo p1, "wireless_fastcharge_type"
 
@@ -225,6 +227,12 @@
     invoke-virtual {p2, v3, v4}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v4
+
+    invoke-static {}, Lcom/android/keyguard/KeyguardUpdateMonitor;->access$1500()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_6
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -254,6 +262,7 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    :cond_6
     move v10, p1
 
     move v9, v0
@@ -262,7 +271,7 @@
 
     goto :goto_2
 
-    :cond_6
+    :cond_7
     move v9, v4
 
     move v10, v9
@@ -298,7 +307,7 @@
 
     goto/16 :goto_3
 
-    :cond_7
+    :cond_8
     const-string v0, "android.intent.action.SIM_STATE_CHANGED"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -307,7 +316,7 @@
 
     const-string v5, "action "
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_b
 
     invoke-static {p2}, Lcom/android/keyguard/KeyguardUpdateMonitor$SimData;->fromIntent(Landroid/content/Intent;)Lcom/android/keyguard/KeyguardUpdateMonitor$SimData;
 
@@ -319,11 +328,11 @@
 
     move-result v2
 
-    if-eqz v2, :cond_9
+    if-eqz v2, :cond_a
 
     iget p1, v0, Lcom/android/keyguard/KeyguardUpdateMonitor$SimData;->simState:I
 
-    if-ne p1, v3, :cond_8
+    if-ne p1, v3, :cond_9
 
     iget-object p0, p0, Lcom/android/keyguard/KeyguardUpdateMonitor$9;->this$0:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
@@ -341,10 +350,10 @@
 
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
-    :cond_8
+    :cond_9
     return-void
 
-    :cond_9
+    :cond_a
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -413,14 +422,14 @@
 
     goto/16 :goto_3
 
-    :cond_a
+    :cond_b
     const-string v0, "android.intent.action.PHONE_STATE"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_c
 
     const-string/jumbo p1, "state"
 
@@ -450,14 +459,14 @@
 
     goto/16 :goto_3
 
-    :cond_b
+    :cond_c
     const-string v0, "android.intent.action.AIRPLANE_MODE"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_c
+    if-eqz v0, :cond_d
 
     iget-object p0, p0, Lcom/android/keyguard/KeyguardUpdateMonitor$9;->this$0:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
@@ -471,14 +480,14 @@
 
     goto/16 :goto_3
 
-    :cond_c
+    :cond_d
     const-string v0, "android.intent.action.SERVICE_STATE"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_e
 
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
@@ -544,29 +553,8 @@
 
     goto :goto_3
 
-    :cond_d
-    const-string p2, "android.intent.action.ACTION_DEFAULT_DATA_SUBSCRIPTION_CHANGED"
-
-    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_e
-
-    iget-object p0, p0, Lcom/android/keyguard/KeyguardUpdateMonitor$9;->this$0:Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    invoke-static {p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->access$200(Lcom/android/keyguard/KeyguardUpdateMonitor;)Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;
-
-    move-result-object p0
-
-    const/16 p1, 0x148
-
-    invoke-virtual {p0, p1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
-
-    goto :goto_3
-
     :cond_e
-    const-string p2, "android.app.action.DEVICE_POLICY_MANAGER_STATE_CHANGED"
+    const-string p2, "android.intent.action.ACTION_DEFAULT_DATA_SUBSCRIPTION_CHANGED"
 
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -580,20 +568,41 @@
 
     move-result-object p0
 
-    const/16 p1, 0x151
+    const/16 p1, 0x148
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     goto :goto_3
 
     :cond_f
+    const-string p2, "android.app.action.DEVICE_POLICY_MANAGER_STATE_CHANGED"
+
+    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_10
+
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardUpdateMonitor$9;->this$0:Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    invoke-static {p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->access$200(Lcom/android/keyguard/KeyguardUpdateMonitor;)Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;
+
+    move-result-object p0
+
+    const/16 p1, 0x151
+
+    invoke-virtual {p0, p1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    goto :goto_3
+
+    :cond_10
     const-string p2, "android.intent.action.ONEPLUS_CHARGE_TIME_ENABLE"
 
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_10
+    if-eqz p1, :cond_11
 
     const-string p1, "Reflash battery info by op intent"
 
@@ -609,7 +618,7 @@
 
     iget-object p2, p0, Lcom/android/keyguard/KeyguardUpdateMonitor$9;->this$0:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-    invoke-static {p2}, Lcom/android/keyguard/KeyguardUpdateMonitor;->access$1400(Lcom/android/keyguard/KeyguardUpdateMonitor;)Lcom/oneplus/battery/OpBatteryStatus;
+    invoke-static {p2}, Lcom/android/keyguard/KeyguardUpdateMonitor;->access$1600(Lcom/android/keyguard/KeyguardUpdateMonitor;)Lcom/oneplus/battery/OpBatteryStatus;
 
     move-result-object p2
 
@@ -625,7 +634,7 @@
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    :cond_10
+    :cond_11
     :goto_3
     return-void
 .end method

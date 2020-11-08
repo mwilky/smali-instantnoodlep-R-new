@@ -26,6 +26,7 @@
     <bool name="config_enableShadowOnChildNotifications">true</bool>
     <bool name="config_fadeDependingOnAmountSwiped">false</bool>
     <bool name="config_fadeNotificationsOnDismiss">false</bool>
+    <bool name="config_front_camera_animation_support_dark_theme">true</bool>
     <bool name="config_hideDividersDuringExpand">false</bool>
     <bool name="config_hideNoInternetState">false</bool>
     <bool name="config_hspa_data_distinguishable">false</bool>
@@ -78,6 +79,7 @@
     <bool name="mtrl_btn_textappearance_all_caps">true</bool>
     <bool name="oneplus_config_keyguardShowCameraAffordance">true</bool>
     <bool name="oneplus_config_keyguardShowLeftAffordance">true</bool>
+    <bool name="op_config_shouldClipNotifToOutline">true</bool>
     <bool name="preferences_prefer_dual_pane">false</bool>
     <bool name="qs_show_user_switcher_for_single_user">false</bool>
     <bool name="quick_settings_rssi_tile_capitalization">true</bool>

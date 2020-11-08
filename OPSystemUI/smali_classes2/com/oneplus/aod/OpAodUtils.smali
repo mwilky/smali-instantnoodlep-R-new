@@ -82,6 +82,97 @@
     return-void
 .end method
 
+.method public static forceTurnOnFpBlackGesture(Landroid/content/Context;I)V
+    .locals 3
+
+    const-string v0, "fingerprint"
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/hardware/fingerprint/FingerprintManager;
+
+    invoke-static {}, Lcom/oneplus/aod/OpAodUtils;->isCustomFingerprint()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Landroid/hardware/fingerprint/FingerprintManager;->getEnrolledFingerprints(I)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "forceTurnOnFpBlackGesture: user ="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "OPAodUtils"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    const-string v2, "oem_acc_blackscreen_gestrue_enable"
+
+    invoke-static {v0, v2, v1, p1}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    move-result v0
+
+    const v1, 0x8000
+
+    or-int/2addr v0, v1
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    invoke-static {p0, v2, v0, p1}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public static getCurrentAodClockStyle(Landroid/content/Context;I)I
+    .locals 2
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    const-string v0, "aod_clock_style"
+
+    const/4 v1, 0x0
+
+    invoke-static {p0, v0, v1, p1}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    move-result p0
+
+    return p0
+.end method
+
 .method public static getDeviceTag()Ljava/lang/String;
     .locals 1
 
@@ -549,9 +640,7 @@
     move v6, v3
 
     :goto_4
-    invoke-static {}, Lcom/oneplus/aod/OpAodUtils;->isSingleTapEnabled()Z
-
-    move-result v7
+    sget-boolean v7, Lcom/oneplus/aod/OpAodUtils;->mSingleTapAwakeOn:Z
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -604,9 +693,9 @@
 
     if-eqz v0, :cond_6
 
-    if-nez v6, :cond_b
+    if-nez v6, :cond_d
 
-    if-nez v7, :cond_b
+    if-nez v7, :cond_d
 
     :cond_6
     if-nez v6, :cond_7
@@ -652,11 +741,34 @@
 
     invoke-static {v0, v1, v2, p1}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const-string v1, "always_on_state"
+
+    invoke-static {v0, v1, v3, p1}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    move-result v0
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_8
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const-string v1, "doze_always_on"
+
+    invoke-static {v0, v1, v2, p1}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
+
+    :cond_8
     invoke-static {}, Lcom/oneplus/aod/OpAodUtils;->isCustomFingerprint()Z
 
     move-result v0
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_c
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -668,124 +780,59 @@
 
     move-result v0
 
-    if-eqz v7, :cond_8
+    if-eqz v7, :cond_9
 
     or-int/lit16 v0, v0, 0x800
 
-    new-array v4, v2, [I
+    new-array v2, v2, [I
 
-    const/16 v5, 0x114
+    const/16 v4, 0x114
 
-    aput v5, v4, v3
+    aput v4, v2, v3
 
-    invoke-static {v4}, Landroid/util/OpFeatures;->isSupport([I)Z
+    invoke-static {v2}, Landroid/util/OpFeatures;->isSupport([I)Z
 
-    move-result v4
+    move-result v2
 
-    if-nez v4, :cond_9
+    if-nez v2, :cond_a
 
-    const v4, 0xff7f
+    const v2, 0xff7f
 
     goto :goto_6
 
-    :cond_8
-    const v4, 0xf7ff
+    :cond_9
+    const v2, 0xf7ff
 
     :goto_6
-    and-int/2addr v0, v4
-
-    :cond_9
-    const-string v4, "fingerprint"
-
-    invoke-virtual {p0, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/hardware/fingerprint/FingerprintManager;
-
-    invoke-virtual {v4, p1}, Landroid/hardware/fingerprint/FingerprintManager;->hasEnrolledFingerprints(I)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_a
-
-    const v4, 0x8000
-
-    or-int/2addr v0, v4
+    and-int/2addr v0, v2
 
     :cond_a
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    const-string v2, "fingerprint"
 
-    move-result-object v4
+    invoke-virtual {p0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    invoke-static {v4, v1, v0, p1}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
+    move-result-object v2
+
+    check-cast v2, Landroid/hardware/fingerprint/FingerprintManager;
+
+    invoke-virtual {v2, p1}, Landroid/hardware/fingerprint/FingerprintManager;->hasEnrolledFingerprints(I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_b
+
+    const v2, 0x8000
+
+    or-int/2addr v0, v2
 
     :cond_b
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object v0
+    move-result-object v2
 
-    const-string v1, "always_on_state"
-
-    invoke-static {v0, v1, v3, p1}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
-
-    move-result v0
-
-    const/4 v4, 0x2
-
-    const-string v5, "doze_always_on"
-
-    if-ne v0, v4, :cond_c
-
-    const-string v4, "sys.c.aod.test.burnin"
-
-    invoke-static {v4, v3}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_c
-
-    const-string v0, "always on enabled"
-
-    invoke-static {v10, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    invoke-static {v0, v5, v2, p1}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
-
-    goto :goto_7
+    invoke-static {v2, v1, v0, p1}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
     :cond_c
-    if-eqz v0, :cond_d
-
-    const-string v0, "always on disabled"
-
-    invoke-static {v10, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    invoke-static {v0, v1, v3, p1}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
-
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    const-string v1, "always_on_all_day"
-
-    invoke-static {v0, v1, v3, p1}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
-
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    invoke-static {v0, v5, v3, p1}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
-
-    :cond_d
-    :goto_7
     new-instance p1, Landroid/content/Intent;
 
     const-string v0, "com.oneplus.intent.action.aod.schedule"
@@ -798,6 +845,7 @@
 
     invoke-virtual {p0, p1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
+    :cond_d
     return-void
 .end method
 

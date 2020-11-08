@@ -159,6 +159,7 @@
     <item type="id" name="arrow_left" />
     <item type="id" name="arrow_panel" />
     <item type="id" name="arrow_right" />
+    <item type="id" name="arrow_view" />
     <item type="id" name="assist_hint_left" />
     <item type="id" name="assist_hint_right" />
     <item type="id" name="assist_orb" />
@@ -315,6 +316,9 @@
     <item type="id" name="charging_info" />
     <item type="id" name="charging_info_contain" />
     <item type="id" name="charging_info_level" />
+    <item type="id" name="charging_progress_bottom_view" />
+    <item type="id" name="charging_progress_top_view" />
+    <item type="id" name="charging_state" />
     <item type="id" name="checkbox" />
     <item type="id" name="checkbox_container" />
     <item type="id" name="checkbox_layout" />
@@ -398,7 +402,10 @@
     <item type="id" name="date_picker_header_date" />
     <item type="id" name="date_picker_header_lunar" />
     <item type="id" name="date_picker_header_year" />
+    <item type="id" name="date_picker_month_selection" />
+    <item type="id" name="date_picker_selection_layout" />
     <item type="id" name="date_picker_year_picker" />
+    <item type="id" name="date_picker_year_selection" />
     <item type="id" name="date_text" />
     <item type="id" name="date_time_group" />
     <item type="id" name="date_time_view" />
@@ -525,6 +532,7 @@
     <item type="id" name="foreground_container" />
     <item type="id" name="foreground_service_dungeon" />
     <item type="id" name="foreground_service_dungeon_row" />
+    <item type="id" name="fp_panel" />
     <item type="id" name="fragment_container_view_tag" />
     <item type="id" name="frame" />
     <item type="id" name="friction_icon" />
@@ -1000,6 +1008,7 @@
     <item type="id" name="op_aod_clock_container" />
     <item type="id" name="op_aod_container" />
     <item type="id" name="op_aod_fp_indication_text" />
+    <item type="id" name="op_aod_lowlight_mask" />
     <item type="id" name="op_aod_system_info_container" />
     <item type="id" name="op_aod_view" />
     <item type="id" name="op_container" />
@@ -1012,10 +1021,8 @@
     <item type="id" name="op_fingerprint_view" />
     <item type="id" name="op_keyguard_clock_info_view_primary_container" />
     <item type="id" name="op_qs_clock" />
+    <item type="id" name="op_qs_drag_handle" />
     <item type="id" name="op_qs_edit_appbar" />
-    <item type="id" name="op_qs_edit_button_panel" />
-    <item type="id" name="op_qs_edit_done" />
-    <item type="id" name="op_qs_edit_reset" />
     <item type="id" name="op_qs_widget_icon" />
     <item type="id" name="op_qs_widget_list" />
     <item type="id" name="op_qs_widget_text" />
@@ -1525,6 +1532,7 @@
     <item type="id" name="volume_dialog_container" />
     <item type="id" name="volume_dialog_lower" />
     <item type="id" name="volume_dialog_row_container" />
+    <item type="id" name="volume_dialog_row_container_bottom" />
     <item type="id" name="volume_dialog_rows" />
     <item type="id" name="volume_dialog_upper" />
     <item type="id" name="volume_item_container" />

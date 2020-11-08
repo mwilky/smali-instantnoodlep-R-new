@@ -1415,6 +1415,9 @@ Außerdem bist du mit einem VPN verbunden, das deine Netzwerkaktivitäten erfass
     <string name="overheat_toast_content">Die Temperatur Ihres Telefons ist zu hoch und zum Senken der Temperatur werden Funktionen mit hohem Stromverbrauch deaktiviert</string>
     <string name="overlay_display_devices_title">Sekundäre Displays simulieren</string>
     <string name="overview">Übersicht</string>
+    <string name="permission_btn_text_denied">Beenden</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Berechtigungserklärung</string>
     <string name="phone_hint">Zum Öffnen des Telefons vom Symbol wegwischen</string>
     <string name="phone_label">Telefon öffnen</string>
     <string name="picture_color_mode">Farbmodus für Bilder</string>

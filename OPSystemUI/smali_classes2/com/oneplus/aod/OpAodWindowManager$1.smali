@@ -40,15 +40,26 @@
 
     const-string v1, "AodWindowManager"
 
-    if-eq p1, v0, :cond_1
+    if-eq p1, v0, :cond_2
 
     const/4 v0, 0x3
+
+    if-eq p1, v0, :cond_1
+
+    const/4 v0, 0x4
 
     if-eq p1, v0, :cond_0
 
     goto :goto_0
 
     :cond_0
+    iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager$1;->this$0:Lcom/oneplus/aod/OpAodWindowManager;
+
+    invoke-static {p0}, Lcom/oneplus/aod/OpAodWindowManager;->access$300(Lcom/oneplus/aod/OpAodWindowManager;)V
+
+    goto :goto_0
+
+    :cond_1
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -77,7 +88,7 @@
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V

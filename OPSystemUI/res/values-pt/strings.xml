@@ -39,7 +39,7 @@
     <string name="abc_slice_updated">Atualizado às %1$s</string>
     <string name="abc_slices_permission_request">%1$s quer mostrar partes do app %2$s</string>
     <string name="abc_toolbar_collapse_description">Recolher</string>
-    <string name="about_action_bar_title">Sobre</string>
+    <string name="about_action_bar_title">Acerca de</string>
     <string name="about_app_version_text">Version %s</string>
     <string name="about_privacy_policy">Política de Privacidade</string>
     <string name="about_release_note_title">Histórico de atualização:</string>
@@ -1415,6 +1415,9 @@ Você também está conectado a uma VPN, que pode monitorar sua atividade de red
     <string name="overheat_toast_content">A temperatura do telefone está demasiado elevada e as funções que consomem bastante energia foram desligadas para baixar a temperatura</string>
     <string name="overlay_display_devices_title">Simular telas secundárias</string>
     <string name="overview">Visão geral</string>
+    <string name="permission_btn_text_denied">Sair</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Declaração de permissão</string>
     <string name="phone_hint">Deslize a partir do ícone do telefone</string>
     <string name="phone_label">abrir telefone</string>
     <string name="picture_color_mode">Modo de cor da imagem</string>

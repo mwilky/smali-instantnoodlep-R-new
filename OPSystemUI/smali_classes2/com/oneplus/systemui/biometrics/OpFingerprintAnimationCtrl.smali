@@ -18,6 +18,10 @@
 
 .field private mCurAnimationType:I
 
+.field private mCustAnimPostDelayTime:J
+
+.field private mCustAnimPostDelayTimeOnAod:J
+
 .field private mDownAnimFrameNum:I
 
 .field private mDownAnimStartIndex:I
@@ -72,6 +76,10 @@
     iput-wide v1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationCtrl;->mAnimPostDelayTime:J
 
     iput-wide v1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationCtrl;->mAnimPostDelayTimeOnAod:J
+
+    iput-wide v1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationCtrl;->mCustAnimPostDelayTime:J
+
+    iput-wide v1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationCtrl;->mCustAnimPostDelayTimeOnAod:J
 
     iput v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationCtrl;->mDownAnimStartIndex:I
 
@@ -151,6 +159,38 @@
     int-to-long p1, p1
 
     iput-wide p1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationCtrl;->mAnimPostDelayTimeOnAod:J
+
+    iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationCtrl;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    sget p2, Lcom/android/systemui/R$integer;->fingerprint_cust_animation_post_delay_time:I
+
+    invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getInteger(I)I
+
+    move-result p1
+
+    int-to-long p1, p1
+
+    iput-wide p1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationCtrl;->mCustAnimPostDelayTime:J
+
+    iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationCtrl;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    sget p2, Lcom/android/systemui/R$integer;->fingerprint_cust_animation_post_delay_time_on_aod:I
+
+    invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getInteger(I)I
+
+    move-result p1
+
+    int-to-long p1, p1
+
+    iput-wide p1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationCtrl;->mCustAnimPostDelayTimeOnAod:J
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -720,19 +760,49 @@
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
+    iget v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationCtrl;->mCurAnimationType:I
+
+    const/16 v1, 0xb
+
+    if-ne v0, v1, :cond_2
+
+    iget-wide v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationCtrl;->mCustAnimPostDelayTime:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v4, v0, v2
+
+    if-eqz v4, :cond_2
+
+    iget-wide v4, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationCtrl;->mCustAnimPostDelayTimeOnAod:J
+
+    cmp-long v2, v4, v2
+
+    if-eqz v2, :cond_2
+
     if-eqz p1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    move-wide v0, v4
+
+    goto :goto_0
+
+    :cond_2
+    if-eqz p1, :cond_3
 
     iget-wide v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationCtrl;->mAnimPostDelayTime:J
 
     goto :goto_0
 
-    :cond_1
+    :cond_3
     iget-wide v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationCtrl;->mAnimPostDelayTimeOnAod:J
 
     :goto_0
     iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationCtrl;->mDownAnimationHelper:Lcom/oneplus/systemui/biometrics/OpFrameAnimationHelper;
 
-    if-nez p1, :cond_2
+    if-nez p1, :cond_4
 
     new-instance p1, Lcom/oneplus/systemui/biometrics/OpFrameAnimationHelper;
 
@@ -760,13 +830,13 @@
 
     goto :goto_1
 
-    :cond_2
+    :cond_4
     invoke-virtual {p1, v0, v1}, Lcom/oneplus/systemui/biometrics/OpFrameAnimationHelper;->updateAnimPostDelayTime(J)V
 
     :goto_1
     iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintAnimationCtrl;->mUpAnimationHelper:Lcom/oneplus/systemui/biometrics/OpFrameAnimationHelper;
 
-    if-nez p1, :cond_3
+    if-nez p1, :cond_5
 
     new-instance p1, Lcom/oneplus/systemui/biometrics/OpFrameAnimationHelper;
 
@@ -792,7 +862,7 @@
 
     goto :goto_2
 
-    :cond_3
+    :cond_5
     invoke-virtual {p1, v0, v1}, Lcom/oneplus/systemui/biometrics/OpFrameAnimationHelper;->updateAnimPostDelayTime(J)V
 
     :goto_2

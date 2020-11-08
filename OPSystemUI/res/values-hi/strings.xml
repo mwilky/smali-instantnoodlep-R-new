@@ -1410,6 +1410,9 @@
     <string name="overheat_toast_content">आपके फ़ोन का तापमान बहुत अधिक है और तापमान कम करने के लिए पॉवर की उच्च खपत करने वाले फ़ंक्शन बंद कर दिए गए हैं</string>
     <string name="overlay_display_devices_title">कई आकार के डिसप्ले बनाएं</string>
     <string name="overview">खास जानकारी</string>
+    <string name="permission_btn_text_denied">बाहर निकलें</string>
+    <string name="permission_btn_text_grant">ठीक है</string>
+    <string name="permission_dialog_title">अनुमति कथन</string>
     <string name="phone_hint">फ़ोन के लिए आइकॉन से स्वाइप करें</string>
     <string name="phone_label">फ़ोन खोलें</string>
     <string name="picture_color_mode">चित्र रंग मोड</string>

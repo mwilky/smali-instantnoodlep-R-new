@@ -10,6 +10,8 @@
 
 .field private final notifLockscreenUserManager:Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
 
+.field private final notificationMediaManager:Lcom/android/systemui/statusbar/NotificationMediaManager;
+
 .field private final statusBarStateController:Lcom/android/systemui/statusbar/SysuiStatusBarStateController;
 
 .field private view:Lcom/android/systemui/statusbar/notification/stack/MediaHeaderView;
@@ -34,7 +36,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/systemui/media/MediaHost;Lcom/android/systemui/statusbar/phone/KeyguardBypassController;Lcom/android/systemui/statusbar/SysuiStatusBarStateController;Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;)V
+.method public constructor <init>(Lcom/android/systemui/media/MediaHost;Lcom/android/systemui/statusbar/phone/KeyguardBypassController;Lcom/android/systemui/statusbar/SysuiStatusBarStateController;Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;Lcom/android/systemui/statusbar/NotificationMediaManager;)V
     .locals 1
     .param p1    # Lcom/android/systemui/media/MediaHost;
         .annotation build Lorg/jetbrains/annotations/NotNull;
@@ -49,6 +51,10 @@
         .end annotation
     .end param
     .param p4    # Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p5    # Lcom/android/systemui/statusbar/NotificationMediaManager;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
@@ -69,6 +75,10 @@
 
     invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    const-string v0, "notificationMediaManager"
+
+    invoke-static {p5, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/systemui/media/KeyguardMediaController;->mediaHost:Lcom/android/systemui/media/MediaHost;
@@ -78,6 +88,8 @@
     iput-object p3, p0, Lcom/android/systemui/media/KeyguardMediaController;->statusBarStateController:Lcom/android/systemui/statusbar/SysuiStatusBarStateController;
 
     iput-object p4, p0, Lcom/android/systemui/media/KeyguardMediaController;->notifLockscreenUserManager:Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
+
+    iput-object p5, p0, Lcom/android/systemui/media/KeyguardMediaController;->notificationMediaManager:Lcom/android/systemui/statusbar/NotificationMediaManager;
 
     new-instance p1, Lcom/android/systemui/media/KeyguardMediaController$1;
 
@@ -196,23 +208,32 @@
     invoke-virtual {v3, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
     :cond_5
-    if-eq v0, v1, :cond_6
+    if-eq v0, v1, :cond_7
 
-    iget-object p0, p0, Lcom/android/systemui/media/KeyguardMediaController;->visibilityChangedListener:Lkotlin/jvm/functions/Function1;
+    iget-object v0, p0, Lcom/android/systemui/media/KeyguardMediaController;->visibilityChangedListener:Lkotlin/jvm/functions/Function1;
 
-    if-eqz p0, :cond_6
+    if-eqz v0, :cond_6
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
+    move-result-object v2
+
+    invoke-interface {v0, v2}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
     move-result-object v0
 
-    invoke-interface {p0, v0}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lkotlin/Unit;
+    check-cast v0, Lkotlin/Unit;
 
     :cond_6
+    iget-object v0, p0, Lcom/android/systemui/media/KeyguardMediaController;->view:Lcom/android/systemui/statusbar/notification/stack/MediaHeaderView;
+
+    if-eqz v0, :cond_7
+
+    iget-object p0, p0, Lcom/android/systemui/media/KeyguardMediaController;->notificationMediaManager:Lcom/android/systemui/statusbar/NotificationMediaManager;
+
+    invoke-virtual {p0, v1}, Lcom/android/systemui/statusbar/NotificationMediaManager;->onMediaHeaderViewChanged(I)V
+
+    :cond_7
     return-void
 .end method
 

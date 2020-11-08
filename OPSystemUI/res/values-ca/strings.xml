@@ -1415,6 +1415,9 @@ A més, estàs connectat a una VPN, que també pot supervisar la teva activitat 
     <string name="overheat_toast_content">"La temperatura del vostre telèfon és massa alta, i s'han desactivat les funcions de consum d'energia alt per reduir la temperatura"</string>
     <string name="overlay_display_devices_title">Simula pantalles secundàries</string>
     <string name="overview">Aplicacions recents</string>
+    <string name="permission_btn_text_denied">Surt</string>
+    <string name="permission_btn_text_grant">"D'ACORD"</string>
+    <string name="permission_dialog_title">Declaració dels permisos</string>
     <string name="phone_hint">Llisca des de la icona per obrir el telèfon</string>
     <string name="phone_label">obre el telèfon</string>
     <string name="picture_color_mode">Mode de color de la imatge</string>

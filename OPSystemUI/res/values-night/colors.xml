@@ -104,6 +104,7 @@
     <color name="op_volume_outputchooser_bg_color">@color/op_control_bg_color_override_dark</color>
     <color name="op_volume_seekbar_bg_color">@color/oneplus_contorl_text_color_secondary_dark</color>
     <color name="op_volume_text_color">@color/op_control_bg_color_override_dark</color>
+    <color name="op_wlb_icon_active_light">@color/op_control_icon_color_active_light</color>
     <color name="qs_customize_background">@color/GM2_grey_900</color>
     <color name="qs_customize_decoration">@color/GM2_grey_800</color>
     <color name="qs_user_switcher_avatar_background">#ff3c4043</color>

@@ -53,7 +53,7 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/OpAodWindowManager$5;->this$0:Lcom/oneplus/aod/OpAodWindowManager;
 
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodWindowManager;->access$1200(Lcom/oneplus/aod/OpAodWindowManager;)Landroid/view/View;
+    invoke-static {v0}, Lcom/oneplus/aod/OpAodWindowManager;->access$1300(Lcom/oneplus/aod/OpAodWindowManager;)Landroid/view/View;
 
     move-result-object v0
 
@@ -65,7 +65,7 @@
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager$5;->this$0:Lcom/oneplus/aod/OpAodWindowManager;
 
-    invoke-static {p0}, Lcom/oneplus/aod/OpAodWindowManager;->access$500(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/oneplus/aod/bg/OpAodCanvas;
+    invoke-static {p0}, Lcom/oneplus/aod/OpAodWindowManager;->access$600(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/oneplus/aod/bg/OpAodCanvas;
 
     move-result-object p0
 

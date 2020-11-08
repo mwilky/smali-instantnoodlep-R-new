@@ -100,7 +100,7 @@
     :try_start_0
     const-class v0, Landroid/hardware/usb/UsbManager;
 
-    const-string v1, "setOtgEnabled"
+    const-string/jumbo v1, "setOtgEnabled"
 
     const/4 v2, 0x1
 

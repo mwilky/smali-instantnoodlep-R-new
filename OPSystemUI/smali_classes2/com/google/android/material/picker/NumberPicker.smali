@@ -68,6 +68,8 @@
 
 .field private final mInputText:Landroid/widget/EditText;
 
+.field private mIsBold:Z
+
 .field private mLastDownEventTime:J
 
 .field private mLastDownEventY:F
@@ -284,6 +286,8 @@
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Lcom/google/android/material/picker/NumberPicker;->mWrapSelectorWheelPreferred:Z
+
+    iput-boolean v2, p0, Lcom/google/android/material/picker/NumberPicker;->mIsBold:Z
 
     const-wide/16 v3, 0x12c
 
@@ -3189,7 +3193,7 @@
     :goto_1
     array-length v7, v0
 
-    if-ge v6, v7, :cond_8
+    if-ge v6, v7, :cond_9
 
     aget v7, v0, v6
 
@@ -3210,7 +3214,7 @@
     :cond_4
     iget v8, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectMiddleCount:I
 
-    if-ne v6, v8, :cond_7
+    if-ne v6, v8, :cond_8
 
     iget-object v8, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
 
@@ -3218,7 +3222,7 @@
 
     move-result v8
 
-    if-eqz v8, :cond_7
+    if-eqz v8, :cond_8
 
     :cond_5
     iget v8, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectMiddleCount:I
@@ -3230,6 +3234,10 @@
     iget v9, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectedValueColor:I
 
     invoke-virtual {v8, v9}, Landroid/graphics/Paint;->setColor(I)V
+
+    iget-boolean v8, p0, Lcom/google/android/material/picker/NumberPicker;->mIsBold:Z
+
+    if-eqz v8, :cond_7
 
     iget-object v8, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorWheelPaint:Landroid/graphics/Paint;
 
@@ -3248,12 +3256,13 @@
 
     invoke-virtual {v8, v5}, Landroid/graphics/Paint;->setFakeBoldText(Z)V
 
+    :cond_7
     :goto_2
     iget-object v8, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorWheelPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v7, v3, v4, v8}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    :cond_7
+    :cond_8
     iget v7, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorElementHeight:I
 
     int-to-float v7, v7
@@ -3264,12 +3273,12 @@
 
     goto :goto_1
 
-    :cond_8
-    if-eqz v1, :cond_b
+    :cond_9
+    if-eqz v1, :cond_c
 
     iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectionDivider:Landroid/graphics/drawable/Drawable;
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_c
 
     iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mTopSelectionDividerTop:I
 
@@ -3291,7 +3300,7 @@
 
     add-int/2addr v3, v0
 
-    if-nez v2, :cond_9
+    if-nez v2, :cond_a
 
     iget-object v2, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectionDivider:Landroid/graphics/drawable/Drawable;
 
@@ -3303,7 +3312,7 @@
 
     goto :goto_3
 
-    :cond_9
+    :cond_a
     iget-object v2, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectionDivider:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2, v4, v0, v1, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
@@ -3321,7 +3330,7 @@
 
     iget v3, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectionDividerWidth:I
 
-    if-nez v3, :cond_a
+    if-nez v3, :cond_b
 
     iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectionDivider:Landroid/graphics/drawable/Drawable;
 
@@ -3333,7 +3342,7 @@
 
     goto :goto_4
 
-    :cond_a
+    :cond_b
     iget-object v3, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectionDivider:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v3, v4, v2, v1, v0}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
@@ -3343,7 +3352,7 @@
 
     invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    :cond_b
+    :cond_c
     return-void
 .end method
 
@@ -4331,6 +4340,26 @@
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/google/android/material/picker/NumberPicker;->setValueInternal(IZ)V
+
+    return-void
+.end method
+
+.method public setWithoutSelectBoldText(Z)V
+    .locals 1
+
+    iput-boolean p1, p0, Lcom/google/android/material/picker/NumberPicker;->mIsBold:Z
+
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
+
+    invoke-virtual {v0}, Landroid/widget/EditText;->getPaint()Landroid/text/TextPaint;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/text/TextPaint;->setFakeBoldText(Z)V
+
+    iget-object p0, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
+
+    invoke-virtual {p0}, Landroid/widget/EditText;->invalidate()V
 
     return-void
 .end method

@@ -194,7 +194,7 @@
     move v1, p2
 
     :goto_0
-    invoke-static {p1, v1}, Lcom/android/systemui/volume/VolumeDialogImpl;->access$4600(Landroid/widget/SeekBar;I)I
+    invoke-static {p1, v1}, Lcom/android/systemui/volume/VolumeDialogImpl;->access$4700(Landroid/widget/SeekBar;I)I
 
     move-result p1
 
@@ -384,7 +384,7 @@
 
     move-result v0
 
-    invoke-static {p1, v0}, Lcom/android/systemui/volume/VolumeDialogImpl;->access$4600(Landroid/widget/SeekBar;I)I
+    invoke-static {p1, v0}, Lcom/android/systemui/volume/VolumeDialogImpl;->access$4700(Landroid/widget/SeekBar;I)I
 
     move-result p1
 

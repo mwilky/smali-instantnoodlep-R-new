@@ -11,6 +11,10 @@
 .end annotation
 
 
+# static fields
+.field private static mClockStyle:I = -0x1
+
+
 # instance fields
 .field private mAodBurnInProtectionHelper:Lcom/oneplus/aod/utils/OpAodBurnInProtectionHelper;
 
@@ -27,8 +31,6 @@
 .field private mClockContainer:Landroid/widget/FrameLayout;
 
 .field private mClockController:Lcom/oneplus/aod/controller/IOpClockController;
-
-.field private mClockStyle:I
 
 .field private mClockView:Landroid/view/View;
 
@@ -65,14 +67,16 @@
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 0
+
+    return-void
+.end method
+
 .method public constructor <init>(Landroid/content/Context;Landroid/view/ViewGroup;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Lcom/oneplus/aod/OpClockViewCtrl;->mClockStyle:I
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -136,7 +140,7 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/OpClockViewCtrl;->mBuildInClockStyleMapping:Landroid/util/SparseArray;
 
-    iget v1, p0, Lcom/oneplus/aod/OpClockViewCtrl;->mClockStyle:I
+    sget v1, Lcom/oneplus/aod/OpClockViewCtrl;->mClockStyle:I
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -249,6 +253,14 @@
 
     :cond_0
     return-void
+.end method
+
+.method public static getClockStyle()I
+    .locals 1
+
+    sget v0, Lcom/oneplus/aod/OpClockViewCtrl;->mClockStyle:I
+
+    return v0
 .end method
 
 .method private initBuildInMapping()V
@@ -617,14 +629,14 @@
 
     if-nez p2, :cond_0
 
-    iget p2, p0, Lcom/oneplus/aod/OpClockViewCtrl;->mClockStyle:I
+    sget p2, Lcom/oneplus/aod/OpClockViewCtrl;->mClockStyle:I
 
     if-ne p2, p1, :cond_0
 
     return-void
 
     :cond_0
-    iput p1, p0, Lcom/oneplus/aod/OpClockViewCtrl;->mClockStyle:I
+    sput p1, Lcom/oneplus/aod/OpClockViewCtrl;->mClockStyle:I
 
     iget-object p1, p0, Lcom/oneplus/aod/OpClockViewCtrl;->mClockController:Lcom/oneplus/aod/controller/IOpClockController;
 
@@ -685,7 +697,7 @@
 
     const/4 p2, 0x0
 
-    iget v0, p0, Lcom/oneplus/aod/OpClockViewCtrl;->mClockStyle:I
+    sget v0, Lcom/oneplus/aod/OpClockViewCtrl;->mClockStyle:I
 
     invoke-static {p1, p2, v0}, Lcom/oneplus/aod/OpDateTimeView$Patterns;->update(Landroid/content/Context;ZI)V
 
@@ -697,7 +709,7 @@
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget p2, p0, Lcom/oneplus/aod/OpClockViewCtrl;->mClockStyle:I
+    sget p2, Lcom/oneplus/aod/OpClockViewCtrl;->mClockStyle:I
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

@@ -22,6 +22,8 @@
 
 .field public static final enum BOUNCER_SCRIMMED:Lcom/android/systemui/statusbar/phone/ScrimState;
 
+.field public static final enum BOUNCER_SCRIMMED_BOOT:Lcom/android/systemui/statusbar/phone/ScrimState;
+
 .field public static final enum BRIGHTNESS_MIRROR:Lcom/android/systemui/statusbar/phone/ScrimState;
 
 .field public static final enum BUBBLE_EXPANDED:Lcom/android/systemui/statusbar/phone/ScrimState;
@@ -89,7 +91,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 13
+    .locals 14
 
     new-instance v0, Lcom/android/systemui/statusbar/phone/ScrimState;
 
@@ -143,61 +145,71 @@
 
     new-instance v0, Lcom/android/systemui/statusbar/phone/ScrimState$5;
 
-    const-string v1, "BRIGHTNESS_MIRROR"
+    const-string v1, "BOUNCER_SCRIMMED_BOOT"
 
     const/4 v7, 0x5
 
     invoke-direct {v0, v1, v7}, Lcom/android/systemui/statusbar/phone/ScrimState$5;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->BRIGHTNESS_MIRROR:Lcom/android/systemui/statusbar/phone/ScrimState;
+    sput-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->BOUNCER_SCRIMMED_BOOT:Lcom/android/systemui/statusbar/phone/ScrimState;
 
     new-instance v0, Lcom/android/systemui/statusbar/phone/ScrimState$6;
 
-    const-string v1, "AOD"
+    const-string v1, "BRIGHTNESS_MIRROR"
 
     const/4 v8, 0x6
 
     invoke-direct {v0, v1, v8}, Lcom/android/systemui/statusbar/phone/ScrimState$6;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->AOD:Lcom/android/systemui/statusbar/phone/ScrimState;
+    sput-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->BRIGHTNESS_MIRROR:Lcom/android/systemui/statusbar/phone/ScrimState;
 
     new-instance v0, Lcom/android/systemui/statusbar/phone/ScrimState$7;
 
-    const-string v1, "PULSING"
+    const-string v1, "AOD"
 
     const/4 v9, 0x7
 
     invoke-direct {v0, v1, v9}, Lcom/android/systemui/statusbar/phone/ScrimState$7;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->PULSING:Lcom/android/systemui/statusbar/phone/ScrimState;
+    sput-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->AOD:Lcom/android/systemui/statusbar/phone/ScrimState;
 
     new-instance v0, Lcom/android/systemui/statusbar/phone/ScrimState$8;
 
-    const-string v1, "UNLOCKED"
+    const-string v1, "PULSING"
 
     const/16 v10, 0x8
 
     invoke-direct {v0, v1, v10}, Lcom/android/systemui/statusbar/phone/ScrimState$8;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->UNLOCKED:Lcom/android/systemui/statusbar/phone/ScrimState;
+    sput-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->PULSING:Lcom/android/systemui/statusbar/phone/ScrimState;
 
     new-instance v0, Lcom/android/systemui/statusbar/phone/ScrimState$9;
 
-    const-string v1, "BUBBLE_EXPANDED"
+    const-string v1, "UNLOCKED"
 
     const/16 v11, 0x9
 
     invoke-direct {v0, v1, v11}, Lcom/android/systemui/statusbar/phone/ScrimState$9;-><init>(Ljava/lang/String;I)V
 
+    sput-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->UNLOCKED:Lcom/android/systemui/statusbar/phone/ScrimState;
+
+    new-instance v0, Lcom/android/systemui/statusbar/phone/ScrimState$10;
+
+    const-string v1, "BUBBLE_EXPANDED"
+
+    const/16 v12, 0xa
+
+    invoke-direct {v0, v1, v12}, Lcom/android/systemui/statusbar/phone/ScrimState$10;-><init>(Ljava/lang/String;I)V
+
     sput-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->BUBBLE_EXPANDED:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    const/16 v1, 0xa
+    const/16 v1, 0xb
 
     new-array v1, v1, [Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    sget-object v12, Lcom/android/systemui/statusbar/phone/ScrimState;->UNINITIALIZED:Lcom/android/systemui/statusbar/phone/ScrimState;
+    sget-object v13, Lcom/android/systemui/statusbar/phone/ScrimState;->UNINITIALIZED:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    aput-object v12, v1, v2
+    aput-object v13, v1, v2
 
     sget-object v2, Lcom/android/systemui/statusbar/phone/ScrimState;->OFF:Lcom/android/systemui/statusbar/phone/ScrimState;
 
@@ -215,23 +227,27 @@
 
     aput-object v2, v1, v6
 
-    sget-object v2, Lcom/android/systemui/statusbar/phone/ScrimState;->BRIGHTNESS_MIRROR:Lcom/android/systemui/statusbar/phone/ScrimState;
+    sget-object v2, Lcom/android/systemui/statusbar/phone/ScrimState;->BOUNCER_SCRIMMED_BOOT:Lcom/android/systemui/statusbar/phone/ScrimState;
 
     aput-object v2, v1, v7
 
-    sget-object v2, Lcom/android/systemui/statusbar/phone/ScrimState;->AOD:Lcom/android/systemui/statusbar/phone/ScrimState;
+    sget-object v2, Lcom/android/systemui/statusbar/phone/ScrimState;->BRIGHTNESS_MIRROR:Lcom/android/systemui/statusbar/phone/ScrimState;
 
     aput-object v2, v1, v8
 
-    sget-object v2, Lcom/android/systemui/statusbar/phone/ScrimState;->PULSING:Lcom/android/systemui/statusbar/phone/ScrimState;
+    sget-object v2, Lcom/android/systemui/statusbar/phone/ScrimState;->AOD:Lcom/android/systemui/statusbar/phone/ScrimState;
 
     aput-object v2, v1, v9
 
-    sget-object v2, Lcom/android/systemui/statusbar/phone/ScrimState;->UNLOCKED:Lcom/android/systemui/statusbar/phone/ScrimState;
+    sget-object v2, Lcom/android/systemui/statusbar/phone/ScrimState;->PULSING:Lcom/android/systemui/statusbar/phone/ScrimState;
 
     aput-object v2, v1, v10
 
-    aput-object v0, v1, v11
+    sget-object v2, Lcom/android/systemui/statusbar/phone/ScrimState;->UNLOCKED:Lcom/android/systemui/statusbar/phone/ScrimState;
+
+    aput-object v2, v1, v11
+
+    aput-object v0, v1, v12
 
     sput-object v1, Lcom/android/systemui/statusbar/phone/ScrimState;->$VALUES:[Lcom/android/systemui/statusbar/phone/ScrimState;
 

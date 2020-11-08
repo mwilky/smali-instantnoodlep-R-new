@@ -58,9 +58,9 @@
 .end method
 
 .method public opLoadDimens(Landroid/content/res/Resources;)V
-    .locals 3
+    .locals 5
 
-    sget v0, Lcom/android/systemui/R$dimen;->op_control_margin_space5:I
+    sget v0, Lcom/android/systemui/R$dimen;->fix_op_control_margin_space5:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -72,59 +72,106 @@
 
     move-result v1
 
-    add-int/2addr v0, v1
+    sget v2, Lcom/android/systemui/R$dimen;->op_keyguard_clock_info_view_content_lock_icon_margin_bottom:I
 
-    sget v1, Lcom/android/systemui/R$dimen;->op_keyguard_clock_info_view_content_lock_icon_margin_bottom:I
+    invoke-virtual {p1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v1
+    move-result v2
 
     add-int/2addr v0, v1
 
-    sget v1, Lcom/android/systemui/R$dimen;->op_keyguard_clock_info_view_content_differ_status_bar_height_with_spec:I
+    add-int/2addr v0, v2
 
-    invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
-    move-result v1
+    move-result-object v1
 
-    add-int/2addr v0, v1
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    const/16 v2, 0x438
+
+    if-le v1, v2, :cond_0
+
+    sget v0, Lcom/android/systemui/R$dimen;->fix_op_control_margin_space5:I
+
+    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    invoke-static {v0, v2}, Lcom/oneplus/util/OpUtils;->convertPxByResolutionProportion(FI)I
+
+    move-result v0
+
+    sget v3, Lcom/android/systemui/R$dimen;->op_keyguard_clock_info_view_content_lock_icon_size:I
+
+    invoke-virtual {p1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    invoke-static {v3, v2}, Lcom/oneplus/util/OpUtils;->convertPxByResolutionProportion(FI)I
+
+    move-result v3
+
+    sget v4, Lcom/android/systemui/R$dimen;->op_keyguard_clock_info_view_content_lock_icon_margin_bottom:I
+
+    invoke-virtual {p1, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    invoke-static {v4, v2}, Lcom/oneplus/util/OpUtils;->convertPxByResolutionProportion(FI)I
+
+    move-result v2
+
+    add-int/2addr v0, v3
+
+    add-int/2addr v0, v2
+
+    :cond_0
     iput v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpKeyguardClockPositionAlgorithm;->mKeyguardClockY:I
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "opLoadDimens(), mKeyguardClockY:"
+    const-string v3, "opLoadDimens(), mKeyguardClockY:"
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpKeyguardClockPositionAlgorithm;->mKeyguardClockY:I
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string p0, ", opKeyguardClockY:"
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string p0, ", test op_control_margin_space5: "
+    const-string p0, ", margingSpace5: "
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget p0, Lcom/android/systemui/R$dimen;->op_control_margin_space5:I
+    sget p0, Lcom/android/systemui/R$dimen;->fix_op_control_margin_space5:I
 
     invoke-virtual {p1, p0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p0
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string p0, ", test op_keyguard_clock_info_view_content_lock_icon_size: "
+    const-string p0, ", lockIconSize: "
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     sget p0, Lcom/android/systemui/R$dimen;->op_keyguard_clock_info_view_content_lock_icon_size:I
 
@@ -132,11 +179,11 @@
 
     move-result p0
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string p0, ", test op_keyguard_clock_info_view_content_lock_icon_margin_bottom: "
+    const-string p0, ", lockIconMarginBottom: "
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     sget p0, Lcom/android/systemui/R$dimen;->op_keyguard_clock_info_view_content_lock_icon_margin_bottom:I
 
@@ -144,45 +191,15 @@
 
     move-result p0
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string p0, ", op_keyguard_clock_info_view_content_differ_status_bar_height_with_spec: "
+    const-string p0, ", displayWidth:"
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget p0, Lcom/android/systemui/R$dimen;->op_keyguard_clock_info_view_content_differ_status_bar_height_with_spec:I
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, p0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result p0
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p0, ", (old) op_keyguard_clock_y:"
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget p0, Lcom/android/systemui/R$dimen;->op_keyguard_clock_y:I
-
-    invoke-virtual {p1, p0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result p0
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p0, ", (old) keyguard_affordance_height:"
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget p0, Lcom/android/systemui/R$dimen;->keyguard_affordance_height:I
-
-    invoke-virtual {p1, p0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result p0
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 

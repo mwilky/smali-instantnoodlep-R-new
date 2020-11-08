@@ -12,6 +12,6 @@
     <include android:id="@id/qs_detail" layout="@layout/qs_detail" />
     <include android:id="@id/qs_customize" android:visibility="gone" layout="@layout/qs_customize_panel" />
     <FrameLayout android:layout_gravity="center_horizontal" android:id="@id/qs_drag_handle_view" android:paddingBottom="@dimen/op_control_margin_space2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:elevation="4.0dip">
-        <View android:background="@drawable/qs_footer_drag_handle" android:layout_width="33.0dip" android:layout_height="4.0dip" />
+        <View android:id="@id/op_qs_drag_handle" android:background="@drawable/qs_footer_drag_handle" android:layout_width="33.0dip" android:layout_height="4.0dip" />
     </FrameLayout>
 </com.android.systemui.qs.QSContainerImpl>

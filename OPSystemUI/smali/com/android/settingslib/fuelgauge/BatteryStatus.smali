@@ -115,40 +115,6 @@
 
 
 # virtual methods
-.method public getChargingSpeed(Landroid/content/Context;)I
-    .locals 2
-
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    sget v1, Lcom/android/settingslib/R$integer;->config_chargingSlowlyThreshold:I
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    sget v0, Lcom/android/settingslib/R$integer;->config_chargingFastThreshold:I
-
-    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getInteger(I)I
-
-    iget p0, p0, Lcom/android/settingslib/fuelgauge/BatteryStatus;->maxChargingWattage:I
-
-    if-gtz p0, :cond_0
-
-    const/4 p0, -0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x1
-
-    :goto_0
-    return p0
-.end method
-
 .method public isCharged()Z
     .locals 2
 

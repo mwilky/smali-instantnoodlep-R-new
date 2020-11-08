@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nConfigurationControllerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ConfigurationControllerImpl.kt\ncom/android/systemui/statusbar/phone/ConfigurationControllerImpl\n+ 2 ConfigurationControllerImpl.kt\ncom/android/systemui/statusbar/phone/ConfigurationControllerImplKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,192:1\n186#2:193\n187#2,4:195\n191#2:200\n186#2:201\n187#2,4:203\n191#2:208\n186#2:209\n187#2,4:211\n191#2:216\n186#2:217\n187#2,4:219\n191#2:224\n186#2:225\n187#2,4:227\n191#2:232\n186#2:233\n187#2,4:235\n191#2:240\n1591#3:194\n1592#3:199\n1591#3:202\n1592#3:207\n1591#3:210\n1592#3:215\n1591#3:218\n1592#3:223\n1591#3:226\n1592#3:231\n1591#3:234\n1592#3:239\n*E\n*S KotlinDebug\n*F\n+ 1 ConfigurationControllerImpl.kt\ncom/android/systemui/statusbar/phone/ConfigurationControllerImpl\n*L\n82#1:193\n82#1,4:195\n82#1:200\n91#1:201\n91#1,4:203\n91#1:208\n132#1:209\n132#1,4:211\n132#1:216\n145#1:217\n145#1,4:219\n145#1:224\n160#1:225\n160#1,4:227\n160#1:232\n166#1:233\n166#1,4:235\n166#1:240\n82#1:194\n82#1:199\n91#1:202\n91#1:207\n132#1:210\n132#1:215\n145#1:218\n145#1:223\n160#1:226\n160#1:231\n166#1:234\n166#1:239\n*E\n"
+    value = "SMAP\nConfigurationControllerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ConfigurationControllerImpl.kt\ncom/android/systemui/statusbar/phone/ConfigurationControllerImpl\n+ 2 ConfigurationControllerImpl.kt\ncom/android/systemui/statusbar/phone/ConfigurationControllerImplKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,212:1\n206#2:213\n207#2,4:215\n211#2:220\n206#2:221\n207#2,4:223\n211#2:228\n206#2:229\n207#2,4:231\n211#2:236\n206#2:237\n207#2,4:239\n211#2:244\n206#2:245\n207#2,4:247\n211#2:252\n206#2:253\n207#2,4:255\n211#2:260\n1591#3:214\n1592#3:219\n1591#3:222\n1592#3:227\n1591#3:230\n1592#3:235\n1591#3:238\n1592#3:243\n1591#3:246\n1592#3:251\n1591#3:254\n1592#3:259\n*E\n*S KotlinDebug\n*F\n+ 1 ConfigurationControllerImpl.kt\ncom/android/systemui/statusbar/phone/ConfigurationControllerImpl\n*L\n90#1:213\n90#1,4:215\n90#1:220\n99#1:221\n99#1,4:223\n99#1:228\n149#1:229\n149#1,4:231\n149#1:236\n162#1:237\n162#1,4:239\n162#1:244\n180#1:245\n180#1,4:247\n180#1:252\n186#1:253\n186#1,4:255\n186#1:260\n90#1:214\n90#1:219\n99#1:222\n99#1:227\n149#1:230\n149#1:235\n162#1:238\n162#1:243\n180#1:246\n180#1:251\n186#1:254\n186#1:259\n*E\n"
 .end annotation
 
 
@@ -34,6 +34,8 @@
 .end field
 
 .field private localeList:Landroid/os/LocaleList;
+
+.field private mIsSpecialTheme:Z
 
 .field private mOrientation:I
 
@@ -132,9 +134,17 @@
 
     iput p1, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->mOrientation:I
 
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->context:Landroid/content/Context;
+    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->context:Landroid/content/Context;
 
-    invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpFodHelper;->init(Landroid/content/Context;)V
+    invoke-static {p1}, Lcom/oneplus/systemui/biometrics/OpFodHelper;->init(Landroid/content/Context;)V
+
+    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->context:Landroid/content/Context;
+
+    invoke-static {p1}, Lcom/oneplus/util/OpUtils;->isSpecialTheme(Landroid/content/Context;)Z
+
+    move-result p1
+
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->mIsSpecialTheme:Z
 
     return-void
 .end method
@@ -215,7 +225,7 @@
 .end method
 
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
-    .locals 11
+    .locals 12
     .param p1    # Landroid/content/res/Configuration;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
@@ -270,172 +280,200 @@
 
     and-int/lit8 v3, v3, 0x30
 
-    iget v4, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->uiMode:I
+    iget-object v4, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->context:Landroid/content/Context;
 
-    const/4 v5, 0x1
+    invoke-static {v4}, Lcom/oneplus/util/OpUtils;->isSpecialTheme(Landroid/content/Context;)Z
 
-    if-eq v3, v4, :cond_2
+    move-result v4
 
-    move v4, v5
+    iget v5, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->uiMode:I
+
+    const/4 v6, 0x1
+
+    if-ne v3, v5, :cond_3
+
+    iget-boolean v5, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->mIsSpecialTheme:Z
+
+    if-eq v4, v5, :cond_2
 
     goto :goto_1
 
     :cond_2
-    const/4 v4, 0x0
-
-    :goto_1
-    iget v6, p1, Landroid/content/res/Configuration;->orientation:I
-
-    invoke-static {}, Lcom/oneplus/util/OpUtils;->isCustomFingerprint()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_3
-
-    invoke-static {}, Lcom/oneplus/systemui/biometrics/OpFodHelper;->getInstance()Lcom/oneplus/systemui/biometrics/OpFodHelper;
-
-    move-result-object v7
-
-    const-class v8, Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    invoke-static {v8}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    new-instance v9, Ljava/lang/StringBuilder;
-
-    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v10, "old: "
-
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v10, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->mOrientation:I
-
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v10, ", new: "
-
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v9, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v9
-
-    const-string v10, "ConfigurationControllerImpl"
-
-    invoke-static {v10, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    if-eqz v8, :cond_3
-
-    if-eqz v7, :cond_3
-
-    invoke-virtual {v7}, Lcom/oneplus/systemui/biometrics/OpFodHelper;->isFingerprintDetecting()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_3
-
-    iget v7, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->mOrientation:I
-
-    if-eq v6, v7, :cond_3
-
-    invoke-virtual {v8}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->updateFodIconVisibility()V
-
-    :cond_3
-    iput v6, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->mOrientation:I
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v7, "onConfigurationChanged, oldUiMode: "
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v7, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->uiMode:I
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v7, ", newUiMode: "
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    const-string v7, "ConfigurationController"
-
-    invoke-static {v7, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget v6, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->density:I
-
-    if-ne v2, v6, :cond_5
-
-    iget v6, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->fontScale:F
-
-    cmpg-float v6, v1, v6
-
-    if-nez v6, :cond_5
-
-    iget-boolean v6, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->inCarMode:Z
-
-    if-eqz v6, :cond_4
-
-    if-nez v4, :cond_5
-
-    :cond_4
-    iget v6, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->mSmallestScreenWidthDp:I
-
-    iget v8, p1, Landroid/content/res/Configuration;->smallestScreenWidthDp:I
-
-    if-eq v6, v8, :cond_8
-
-    :cond_5
-    invoke-static {v2}, Lcom/oneplus/util/OpUtils;->updateDensityDpi(I)V
-
-    iget-object v6, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->context:Landroid/content/Context;
-
-    invoke-static {v6}, Lcom/oneplus/util/OpUtils;->updateScreenResolutionManually(Landroid/content/Context;)V
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v6
-
-    :cond_6
-    :goto_2
-    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v8
-
-    if-eqz v8, :cond_7
-
-    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Lcom/android/systemui/statusbar/policy/ConfigurationController$ConfigurationListener;
-
-    iget-object v9, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->listeners:Ljava/util/List;
-
-    invoke-interface {v9, v8}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    move-result v9
-
-    if-eqz v9, :cond_6
-
-    invoke-interface {v8}, Lcom/android/systemui/statusbar/policy/ConfigurationController$ConfigurationListener;->onDensityOrFontScaleChanged()V
+    const/4 v5, 0x0
 
     goto :goto_2
 
+    :cond_3
+    :goto_1
+    move v5, v6
+
+    :goto_2
+    iget v7, p1, Landroid/content/res/Configuration;->orientation:I
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isCustomFingerprint()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_4
+
+    invoke-static {}, Lcom/oneplus/systemui/biometrics/OpFodHelper;->getInstance()Lcom/oneplus/systemui/biometrics/OpFodHelper;
+
+    move-result-object v8
+
+    const-class v9, Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    invoke-static {v9}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    new-instance v10, Ljava/lang/StringBuilder;
+
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v11, "old: "
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v11, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->mOrientation:I
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v11, ", new: "
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v10
+
+    const-string v11, "ConfigurationControllerImpl"
+
+    invoke-static {v11, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-eqz v9, :cond_4
+
+    if-eqz v8, :cond_4
+
+    invoke-virtual {v8}, Lcom/oneplus/systemui/biometrics/OpFodHelper;->isFingerprintDetecting()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_4
+
+    iget v8, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->mOrientation:I
+
+    if-eq v7, v8, :cond_4
+
+    invoke-virtual {v9}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->updateFodIconVisibility()V
+
+    :cond_4
+    iput v7, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->mOrientation:I
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "onConfigurationChanged, oldUiMode: "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v8, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->uiMode:I
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v8, ", newUiMode: "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v8, ", oldSpecialTheme = "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v8, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->mIsSpecialTheme:Z
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v8, ", newSpecialTheme = "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    const-string v8, "ConfigurationController"
+
+    invoke-static {v8, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget v7, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->density:I
+
+    if-ne v2, v7, :cond_6
+
+    iget v7, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->fontScale:F
+
+    cmpg-float v7, v1, v7
+
+    if-nez v7, :cond_6
+
+    iget-boolean v7, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->inCarMode:Z
+
+    if-eqz v7, :cond_5
+
+    if-nez v5, :cond_6
+
+    :cond_5
+    iget v7, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->mSmallestScreenWidthDp:I
+
+    iget v9, p1, Landroid/content/res/Configuration;->smallestScreenWidthDp:I
+
+    if-eq v7, v9, :cond_9
+
+    :cond_6
+    invoke-static {v2}, Lcom/oneplus/util/OpUtils;->updateDensityDpi(I)V
+
+    iget-object v7, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->context:Landroid/content/Context;
+
+    invoke-static {v7}, Lcom/oneplus/util/OpUtils;->updateScreenResolutionManually(Landroid/content/Context;)V
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v7
+
     :cond_7
+    :goto_3
+    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v9
+
+    if-eqz v9, :cond_8
+
+    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Lcom/android/systemui/statusbar/policy/ConfigurationController$ConfigurationListener;
+
+    iget-object v10, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->listeners:Ljava/util/List;
+
+    invoke-interface {v10, v9}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v10
+
+    if-eqz v10, :cond_7
+
+    invoke-interface {v9}, Lcom/android/systemui/statusbar/policy/ConfigurationController$ConfigurationListener;->onDensityOrFontScaleChanged()V
+
+    goto :goto_3
+
+    :cond_8
     iput v2, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->density:I
 
     iput v1, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->fontScale:F
@@ -444,7 +482,7 @@
 
     iput v1, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->mSmallestScreenWidthDp:I
 
-    :cond_8
+    :cond_9
     invoke-virtual {p1}, Landroid/content/res/Configuration;->getLocales()Landroid/os/LocaleList;
 
     move-result-object v1
@@ -455,9 +493,9 @@
 
     move-result v2
 
-    xor-int/2addr v2, v5
+    xor-int/2addr v2, v6
 
-    if-eqz v2, :cond_a
+    if-eqz v2, :cond_b
 
     iput-object v1, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->localeList:Landroid/os/LocaleList;
 
@@ -465,13 +503,13 @@
 
     move-result-object v1
 
-    :cond_9
-    :goto_3
+    :cond_a
+    :goto_4
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
-    if-eqz v2, :cond_a
+    if-eqz v2, :cond_b
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -479,24 +517,24 @@
 
     check-cast v2, Lcom/android/systemui/statusbar/policy/ConfigurationController$ConfigurationListener;
 
-    iget-object v6, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->listeners:Ljava/util/List;
+    iget-object v7, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->listeners:Ljava/util/List;
 
-    invoke-interface {v6, v2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+    invoke-interface {v7, v2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
-    move-result v6
+    move-result v7
 
-    if-eqz v6, :cond_9
+    if-eqz v7, :cond_a
 
     invoke-interface {v2}, Lcom/android/systemui/statusbar/policy/ConfigurationController$ConfigurationListener;->onLocaleListChanged()V
 
-    goto :goto_3
+    goto :goto_4
 
-    :cond_a
-    if-eqz v4, :cond_c
+    :cond_b
+    if-eqz v5, :cond_d
 
     const-string v1, "onConfigurationChanged, trigger onUiModeChanged for listeners"
 
-    invoke-static {v7, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v8, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->context:Landroid/content/Context;
 
@@ -510,21 +548,23 @@
 
     move-result v2
 
-    invoke-virtual {v1, v2, v5}, Landroid/content/res/Resources$Theme;->applyStyle(IZ)V
+    invoke-virtual {v1, v2, v6}, Landroid/content/res/Resources$Theme;->applyStyle(IZ)V
 
     iput v3, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->uiMode:I
+
+    iput-boolean v4, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->mIsSpecialTheme:Z
 
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    :cond_b
-    :goto_4
+    :cond_c
+    :goto_5
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
-    if-eqz v2, :cond_c
+    if-eqz v2, :cond_d
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -538,13 +578,13 @@
 
     move-result v3
 
-    if-eqz v3, :cond_b
+    if-eqz v3, :cond_c
 
     invoke-interface {v2}, Lcom/android/systemui/statusbar/policy/ConfigurationController$ConfigurationListener;->onUiModeChanged()V
 
-    goto :goto_4
+    goto :goto_5
 
-    :cond_c
+    :cond_d
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->lastConfig:Landroid/content/res/Configuration;
 
     invoke-virtual {v1, p1}, Landroid/content/res/Configuration;->updateFrom(Landroid/content/res/Configuration;)I
@@ -555,19 +595,19 @@
 
     and-int/2addr p1, v1
 
-    if-eqz p1, :cond_e
+    if-eqz p1, :cond_f
 
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    :cond_d
-    :goto_5
+    :cond_e
+    :goto_6
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_e
+    if-eqz v0, :cond_f
 
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -581,13 +621,13 @@
 
     move-result v1
 
-    if-eqz v1, :cond_d
+    if-eqz v1, :cond_e
 
     invoke-interface {v0}, Lcom/android/systemui/statusbar/policy/ConfigurationController$ConfigurationListener;->onOverlayChanged()V
 
-    goto :goto_5
+    goto :goto_6
 
-    :cond_e
+    :cond_f
     return-void
 .end method
 

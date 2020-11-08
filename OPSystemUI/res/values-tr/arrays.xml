@@ -82,6 +82,8 @@
         <item>Qualcomm® aptX™ ses</item>
         <item>Qualcomm® aptX™ HD ses</item>
         <item>LDAC</item>
+        <item>Qualcomm® aptX™ Adaptive ses</item>
+        <item>Qualcomm® aptX™ TWS+ ses</item>
     </string-array>
     <string-array name="bluetooth_a2dp_codec_titles">
         <item>Sistem Seçimini Kullan (Varsayılan)</item>
@@ -90,6 +92,8 @@
         <item>Qualcomm® aptX™ ses</item>
         <item>Qualcomm® aptX™ HD ses</item>
         <item>LDAC</item>
+        <item>Qualcomm® aptX™ Adaptive ses</item>
+        <item>Qualcomm® aptX™ TWS+ ses</item>
     </string-array>
     <string-array name="bluetooth_audio_active_device_summaries">
         <item></item>

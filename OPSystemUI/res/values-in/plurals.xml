@@ -21,7 +21,7 @@
         <item quantity="one">Masukkan PIN SIM. Tersisa %d percobaan sebelum Anda harus menghubungi operator untuk membuka kunci perangkat.</item>
     </plurals>
     <plurals name="kg_password_default_pin_message_multi_sim">
-        <item quantity="other">Masukkan PIN SIM%1$d, Anda memiliki %2$d kesempatan lagi sebelum menghubungi operator Anda untuk membuka kunci perangkat. Masukkan PIN SIM%3$d, Anda memiliki %4$d kesempatan lagi.</item>
+        <item quantity="other">Masukkan PIN SIM%1$d, Anda memiliki %2$d kesempatan lagi sebelum menghubungi operator Anda untuk membuka kunci perangkat.</item>
         <item quantity="one">Enter SIM%1$d PIN, you have %2$d remaining attempt before you must contact your carrier to unlock your device.</item>
     </plurals>
     <plurals name="kg_password_default_puk_message">
@@ -33,7 +33,7 @@
         <item quantity="one">Kode PIN SIM salah, sisa %d percobaan sebelum Anda harus menghubungi operator untuk membuka kunci perangkat.</item>
     </plurals>
     <plurals name="kg_password_wrong_pin_code_multi_sim">
-        <item quantity="other">Kode PIN SIM%1$d salah, Anda memiliki%2$d kesempatan lagi sebelum menghubungi operator Anda untuk membuka kunci perangkat. Kode PIN SIM%3$d salah, Anda memiliki %4$d kesempatan lagi.</item>
+        <item quantity="other">Kode PIN SIM%1$d salah, Anda memiliki%2$d kesempatan lagi sebelum menghubungi operator Anda untuk membuka kunci perangkat.</item>
         <item quantity="one">Incorrect SIM%1$d PIN code, you have %2$d remaining attempt before you must contact your carrier to unlock your device.</item>
     </plurals>
     <plurals name="kg_password_wrong_puk_code">

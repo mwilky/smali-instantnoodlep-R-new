@@ -1362,6 +1362,9 @@
     <string name="overheat_toast_content">手機處於高溫狀態，建議不要使用此功能</string>
     <string name="overlay_display_devices_title">模擬次要顯示器</string>
     <string name="overview">總覽</string>
+    <string name="permission_btn_text_denied">退出</string>
+    <string name="permission_btn_text_grant">同意並繼續</string>
+    <string name="permission_dialog_title">權限聲明</string>
     <string name="phone_hint">滑動手機圖示即可啟用</string>
     <string name="phone_label">開啟電話</string>
     <string name="picture_color_mode">螢幕色彩模式</string>

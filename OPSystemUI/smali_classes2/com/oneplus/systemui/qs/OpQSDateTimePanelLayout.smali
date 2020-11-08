@@ -50,10 +50,23 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcom/oneplus/systemui/qs/OpQSDateTimePanelLayout;->mClockView:Lcom/android/systemui/statusbar/policy/Clock;
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isREDVersion()Z
 
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+    move-result v1
 
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+
+    if-eqz v1, :cond_0
+
+    sget v0, Lcom/android/systemui/R$color;->op_turquoise:I
+
+    invoke-virtual {v1, v0}, Landroid/content/Context;->getColor(I)I
+
+    move-result v0
+
+    :cond_0
     iget-object p0, p0, Lcom/oneplus/systemui/qs/OpQSDateTimePanelLayout;->mDateView:Lcom/android/systemui/statusbar/policy/DateView;
 
     invoke-virtual {p0, v0}, Landroid/widget/TextView;->setTextColor(I)V

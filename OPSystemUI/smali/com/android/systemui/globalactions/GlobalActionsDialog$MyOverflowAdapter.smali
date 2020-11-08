@@ -29,7 +29,7 @@
     return-void
 .end method
 
-.method static synthetic access$4700(Lcom/android/systemui/globalactions/GlobalActionsDialog$MyOverflowAdapter;I)Z
+.method static synthetic access$4600(Lcom/android/systemui/globalactions/GlobalActionsDialog$MyOverflowAdapter;I)Z
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/systemui/globalactions/GlobalActionsDialog$MyOverflowAdapter;->onLongClickItem(I)Z
@@ -39,7 +39,7 @@
     return p0
 .end method
 
-.method static synthetic access$4800(Lcom/android/systemui/globalactions/GlobalActionsDialog$MyOverflowAdapter;I)V
+.method static synthetic access$4700(Lcom/android/systemui/globalactions/GlobalActionsDialog$MyOverflowAdapter;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/systemui/globalactions/GlobalActionsDialog$MyOverflowAdapter;->onClickItem(I)V
@@ -221,7 +221,7 @@
     :cond_1
     iget-object p0, p0, Lcom/android/systemui/globalactions/GlobalActionsDialog$MyOverflowAdapter;->this$0:Lcom/android/systemui/globalactions/GlobalActionsDialog;
 
-    invoke-static {p0}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$2100(Lcom/android/systemui/globalactions/GlobalActionsDialog;)Landroid/content/Context;
+    invoke-static {p0}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$2000(Lcom/android/systemui/globalactions/GlobalActionsDialog;)Landroid/content/Context;
 
     move-result-object p0
 

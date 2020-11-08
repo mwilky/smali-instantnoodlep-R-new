@@ -177,7 +177,7 @@
     :cond_0
     iput-object p1, p0, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->mContext:Landroid/content/Context;
 
-    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$1700()Z
+    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$1800()Z
 
     move-result p2
 
@@ -242,7 +242,7 @@
     return-void
 .end method
 
-.method static synthetic access$2000(Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;)V
+.method static synthetic access$2100(Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->update()V
@@ -296,13 +296,13 @@
 
     if-eqz p0, :cond_6
 
-    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$2500()I
+    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$2600()I
 
     move-result p0
 
     if-nez p0, :cond_3
 
-    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$2600()I
+    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$2700()I
 
     move-result p0
 
@@ -315,13 +315,13 @@
 
     if-nez p0, :cond_6
 
-    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$2500()I
+    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$2600()I
 
     move-result p0
 
     iput p0, p3, Landroid/graphics/Rect;->left:I
 
-    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$2600()I
+    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$2700()I
 
     move-result p0
 
@@ -563,7 +563,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {p1}, Lcom/android/systemui/ScreenDecorations;->access$2700(I)Ljava/lang/String;
+    invoke-static {p1}, Lcom/android/systemui/ScreenDecorations;->access$2800(I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -740,7 +740,7 @@
     move v1, v2
 
     :goto_2
-    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$1900()Z
+    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$2000()Z
 
     move-result v2
 
@@ -931,7 +931,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->mDecorations:Lcom/android/systemui/ScreenDecorations;
 
-    invoke-static {v0}, Lcom/android/systemui/ScreenDecorations;->access$2300(Lcom/android/systemui/ScreenDecorations;)Z
+    invoke-static {v0}, Lcom/android/systemui/ScreenDecorations;->access$2400(Lcom/android/systemui/ScreenDecorations;)Z
 
     move-result v0
 
@@ -954,7 +954,7 @@
 
     iget v1, p0, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->mInitialPosition:I
 
-    invoke-static {v1, v0}, Lcom/android/systemui/ScreenDecorations;->access$2400(II)I
+    invoke-static {v1, v0}, Lcom/android/systemui/ScreenDecorations;->access$2500(II)I
 
     move-result v0
 
@@ -1458,7 +1458,7 @@
 
     invoke-virtual {p1, v2, v0}, Landroid/graphics/Canvas;->translate(FF)V
 
-    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$1800()Z
+    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$1900()Z
 
     move-result v0
 
@@ -1500,7 +1500,7 @@
     return-void
 
     :cond_1
-    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$1900()Z
+    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$2000()Z
 
     move-result v0
 
@@ -1865,7 +1865,7 @@
 
     iput p1, p0, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->mColor:I
 
-    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$1700()Z
+    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$1800()Z
 
     move-result p1
 

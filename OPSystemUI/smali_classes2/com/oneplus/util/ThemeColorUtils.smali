@@ -10,6 +10,8 @@
 
 .field private static sCurrentTheme:I = -0x1
 
+.field private static sRedColors:[I = null
+
 .field private static sSpecialTheme:Z = false
 
 .field private static sSubAccentColor:I
@@ -38,13 +40,37 @@
     :cond_0
     const/16 v0, 0x65
 
-    if-ne p0, v0, :cond_1
+    if-ne p0, v0, :cond_2
 
-    sget p0, Lcom/oneplus/util/ThemeColorUtils;->sSubAccentColor:I
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isREDVersion()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    sget p0, Lcom/oneplus/util/ThemeColorUtils;->sAccentColor:I
 
     return p0
 
     :cond_1
+    sget p0, Lcom/oneplus/util/ThemeColorUtils;->sSubAccentColor:I
+
+    return p0
+
+    :cond_2
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isREDVersion()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    sget-object v0, Lcom/oneplus/util/ThemeColorUtils;->sRedColors:[I
+
+    aget p0, v0, p0
+
+    return p0
+
+    :cond_3
     sget-object v0, Lcom/oneplus/util/ThemeColorUtils;->sColors:[I
 
     aget p0, v0, p0
@@ -201,14 +227,30 @@
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getIntArray(I)[I
 
+    move-result-object v1
+
+    sput-object v1, Lcom/oneplus/util/ThemeColorUtils;->sColors:[I
+
+    sget v1, Lcom/android/systemui/R$array;->op_qs_theme_color_red:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getIntArray(I)[I
+
     move-result-object v0
 
-    sput-object v0, Lcom/oneplus/util/ThemeColorUtils;->sColors:[I
+    sput-object v0, Lcom/oneplus/util/ThemeColorUtils;->sRedColors:[I
 
     :cond_2
     invoke-static {p0}, Lcom/oneplus/util/ThemeColorUtils;->updateAccentColor(Landroid/content/Context;)V
 
     return-void
+.end method
+
+.method public static isSpecialTheme()Z
+    .locals 1
+
+    sget-boolean v0, Lcom/oneplus/util/ThemeColorUtils;->sSpecialTheme:Z
+
+    return v0
 .end method
 
 .method private static updateAccentColor(Landroid/content/Context;)V

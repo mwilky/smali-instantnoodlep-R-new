@@ -41,7 +41,7 @@
     <string name="abc_toolbar_collapse_description">Palos</string>
     <string name="about_action_bar_title">Rreth</string>
     <string name="about_app_version_text">Version %s</string>
-    <string name="about_privacy_policy">Rregullorja për privatësinë</string>
+    <string name="about_privacy_policy">Politika për privatësinë</string>
     <string name="about_release_note_title">Regjistri i përditësimit:</string>
     <string name="about_terms_service">Rregullat e shërbimit</string>
     <string name="accessibility_accessibility_button">Qasshmëria</string>
@@ -1415,6 +1415,9 @@ Je i lidhur edhe me një VPN, që mund të monitorojë aktivitetin tënd të rrj
     <string name="overheat_toast_content">temperature of the phone is too high</string>
     <string name="overlay_display_devices_title">Simulo ekranet dytësore</string>
     <string name="overview">Përmbledhje</string>
+    <string name="permission_btn_text_denied">Dil</string>
+    <string name="permission_btn_text_grant">Në rregull</string>
+    <string name="permission_dialog_title">Deklaratë për lejen</string>
     <string name="phone_hint">Rrëshqit për të hapur telefonin</string>
     <string name="phone_label">hap telefonin</string>
     <string name="picture_color_mode">Modalitti i ngjyrave të figurës</string>
@@ -1773,10 +1776,13 @@ Je i lidhur edhe me një VPN, që mund të monitorojë aktivitetin tënd të rrj
     <string name="search_menu_title">Kërko</string>
     <string name="see_more_title">Shiko më shumë</string>
     <string name="select_application">Zgjidh aplikacionin</string>
+    <string name="select_day">Zgjidh muajin dhe ditën</string>
+    <string name="select_hours">Zgjidh orët</string>
     <string name="select_logd_size_dialog_title">Përzgjidh madhësitë e regjistruesit</string>
     <string name="select_logd_size_title">Madhësitë e regjistruesit</string>
     <string name="select_logpersist_dialog_title">Zgjidh memoriet e regjistrit për të ruajtur vazhdimisht në pajisje</string>
     <string name="select_logpersist_title">Ruaj të dhënat e regjistruesit vazhdimisht në pajisje</string>
+    <string name="select_minutes">Zgjidh minutat</string>
     <string name="select_private_dns_configuration_dialog_title">Zgjidh modalitetin e DNS-së private</string>
     <string name="select_private_dns_configuration_title">DNS-ja private</string>
     <string name="select_usb_configuration_dialog_title">Konfigurimi i USB-së</string>
@@ -1784,6 +1790,7 @@ Je i lidhur edhe me një VPN, që mund të monitorojë aktivitetin tënd të rrj
     <string name="select_webview_provider_dialog_title">Cakto zbatimin e WebView</string>
     <string name="select_webview_provider_title">Zbatimi i WebView</string>
     <string name="select_webview_provider_toast_text">Kjo zgjedhje nuk është më e vlefshme. Provo përsëri.</string>
+    <string name="select_year">Zgjidh vitin</string>
     <string name="sensor_privacy_mode">Sensorët joaktivë</string>
     <string name="shared_data_delete_failure_text">Ndodhi një gabim gjatë fshirjes së të dhënave të ndara.</string>
     <string name="shared_data_no_accessors_dialog_text">Nuk është marrë qira për këto të dhëna të ndara. Dëshiron ta fshish?</string>
@@ -1908,6 +1915,11 @@ Telefoni mund të nxehet së tepërmi nëse ti:
     <string name="thermal_shutdown_message">Telefoni tani punon normalisht</string>
     <string name="thermal_shutdown_title">Telefoni u fik për shkak të nxehtësisë</string>
     <string name="tile_unavailable">Nuk ofrohet</string>
+    <string name="time_picker_header_text">Vendos orën</string>
+    <string name="time_picker_hour_label">orë</string>
+    <string name="time_picker_input_error">Vendosni një orë të vlefshme</string>
+    <string name="time_picker_minute_label">minutë</string>
+    <string name="time_picker_prompt_label">Shkruaj orën</string>
     <string name="time_unit_just_now">Pikërisht tani</string>
     <string name="title_convert_fbe">Po konvertohet në enkriptimin e bazuar te skedari</string>
     <string name="title_usb_accessory">Qasja në USB</string>

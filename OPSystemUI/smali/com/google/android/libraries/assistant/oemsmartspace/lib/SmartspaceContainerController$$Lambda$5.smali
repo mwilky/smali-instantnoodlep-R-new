@@ -27,7 +27,7 @@
 
     iget-object p0, p0, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController$$Lambda$5;->arg$1:Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;
 
-    invoke-virtual {p0}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->bridge$lambda$0$SmartspaceContainerController()V
+    invoke-virtual {p0}, Lcom/google/android/libraries/assistant/oemsmartspace/lib/SmartspaceContainerController;->bridge$lambda$1$SmartspaceContainerController()Landroid/view/View;
 
     return-void
 .end method

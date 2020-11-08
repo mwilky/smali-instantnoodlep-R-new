@@ -667,6 +667,28 @@
 
     invoke-virtual {v5, v8}, Landroid/view/ViewGroup;->setVisibility(I)V
 
+    iget-object v5, v0, Lcom/android/systemui/media/MediaControlPanel;->mViewHolder:Lcom/android/systemui/media/PlayerViewHolder;
+
+    invoke-virtual {v5}, Lcom/android/systemui/media/PlayerViewHolder;->getSeamless()Landroid/view/ViewGroup;
+
+    move-result-object v5
+
+    invoke-static {}, Lcom/oneplus/util/ThemeColorUtils;->getCurrentTheme()I
+
+    move-result v6
+
+    if-nez v6, :cond_8
+
+    sget v6, Lcom/android/systemui/R$drawable;->op_qs_widget_bg_light:I
+
+    goto :goto_3
+
+    :cond_8
+    sget v6, Lcom/android/systemui/R$drawable;->op_qs_widget_bg_dark:I
+
+    :goto_3
+    invoke-virtual {v5, v6}, Landroid/view/ViewGroup;->setBackgroundResource(I)V
+
     sget v5, Lcom/android/systemui/R$id;->media_seamless:I
 
     invoke-direct {v0, v4, v5, v7}, Lcom/android/systemui/media/MediaControlPanel;->setVisibleAndAlpha(Landroidx/constraintlayout/widget/ConstraintSet;IZ)V
@@ -725,32 +747,32 @@
 
     move-result v12
 
-    if-eqz v10, :cond_8
+    if-eqz v10, :cond_9
 
     invoke-virtual {v10}, Lcom/android/systemui/media/MediaDeviceData;->getEnabled()Z
 
     move-result v13
 
-    if-nez v13, :cond_8
+    if-nez v13, :cond_9
 
     move v13, v7
-
-    goto :goto_3
-
-    :cond_8
-    move v13, v8
-
-    :goto_3
-    if-eqz v13, :cond_9
-
-    move v15, v8
 
     goto :goto_4
 
     :cond_9
-    const/16 v15, 0x8
+    move v13, v8
 
     :goto_4
+    if-eqz v13, :cond_a
+
+    move v15, v8
+
+    goto :goto_5
+
+    :cond_a
+    const/16 v15, 0x8
+
+    :goto_5
     iget-object v14, v0, Lcom/android/systemui/media/MediaControlPanel;->mViewHolder:Lcom/android/systemui/media/PlayerViewHolder;
 
     invoke-virtual {v14}, Lcom/android/systemui/media/PlayerViewHolder;->getSeamlessFallback()Landroid/widget/ImageView;
@@ -763,16 +785,16 @@
 
     invoke-virtual {v4, v12, v15}, Landroidx/constraintlayout/widget/ConstraintSet;->setVisibility(II)V
 
-    if-eqz v13, :cond_a
+    if-eqz v13, :cond_b
 
     const/16 v12, 0x8
 
-    goto :goto_5
+    goto :goto_6
 
-    :cond_a
+    :cond_b
     move v12, v8
 
-    :goto_5
+    :goto_6
     iget-object v14, v0, Lcom/android/systemui/media/MediaControlPanel;->mViewHolder:Lcom/android/systemui/media/PlayerViewHolder;
 
     invoke-virtual {v14}, Lcom/android/systemui/media/PlayerViewHolder;->getSeamless()Landroid/view/ViewGroup;
@@ -789,16 +811,16 @@
 
     move-result v12
 
-    if-eqz v12, :cond_b
+    if-eqz v12, :cond_c
 
     const v12, 0x3ec28f5c    # 0.38f
 
-    goto :goto_6
+    goto :goto_7
 
-    :cond_b
+    :cond_c
     const/high16 v12, 0x3f800000    # 1.0f
 
-    :goto_6
+    :goto_7
     invoke-virtual {v2, v11, v12}, Landroidx/constraintlayout/widget/ConstraintSet;->setAlpha(IF)V
 
     invoke-virtual {v4, v11, v12}, Landroidx/constraintlayout/widget/ConstraintSet;->setAlpha(IF)V
@@ -817,16 +839,16 @@
 
     invoke-virtual {v11, v12}, Landroid/view/ViewGroup;->setEnabled(Z)V
 
-    if-eqz v13, :cond_c
+    if-eqz v13, :cond_d
 
     invoke-virtual {v5, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     invoke-virtual {v6, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_8
+    goto :goto_9
 
-    :cond_c
-    if-eqz v10, :cond_e
+    :cond_d
+    if-eqz v10, :cond_f
 
     invoke-virtual {v10}, Lcom/android/systemui/media/MediaDeviceData;->getIcon()Landroid/graphics/drawable/Drawable;
 
@@ -836,7 +858,7 @@
 
     instance-of v11, v3, Lcom/android/settingslib/widget/AdaptiveIcon;
 
-    if-eqz v11, :cond_d
+    if-eqz v11, :cond_e
 
     check-cast v3, Lcom/android/settingslib/widget/AdaptiveIcon;
 
@@ -846,21 +868,21 @@
 
     invoke-virtual {v5, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    goto :goto_7
+    goto :goto_8
 
-    :cond_d
+    :cond_e
     invoke-virtual {v5, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    :goto_7
+    :goto_8
     invoke-virtual {v10}, Lcom/android/systemui/media/MediaDeviceData;->getName()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-virtual {v6, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_8
+    goto :goto_9
 
-    :cond_e
+    :cond_f
     const-string v3, "MediaControlPanel"
 
     const-string v10, "device is null. Not binding output chip."
@@ -875,7 +897,7 @@
 
     invoke-virtual {v6, v3}, Landroid/widget/TextView;->setText(I)V
 
-    :goto_8
+    :goto_9
     invoke-virtual/range {p1 .. p1}, Lcom/android/systemui/media/MediaData;->getActionsToShowInCompact()Ljava/util/List;
 
     move-result-object v3
@@ -886,16 +908,16 @@
 
     move v6, v8
 
-    :goto_9
+    :goto_a
     invoke-interface {v5}, Ljava/util/List;->size()I
 
     move-result v9
 
-    if-ge v6, v9, :cond_10
+    if-ge v6, v9, :cond_11
 
     array-length v9, v1
 
-    if-ge v6, v9, :cond_10
+    if-ge v6, v9, :cond_11
 
     aget v9, v1, v6
 
@@ -927,13 +949,13 @@
 
     move-result-object v11
 
-    if-nez v11, :cond_f
+    if-nez v11, :cond_10
 
     invoke-virtual {v10, v8}, Landroid/widget/ImageButton;->setEnabled(Z)V
 
-    goto :goto_a
+    goto :goto_b
 
-    :cond_f
+    :cond_10
     invoke-virtual {v10, v7}, Landroid/widget/ImageButton;->setEnabled(Z)V
 
     new-instance v12, Lcom/android/systemui/media/-$$Lambda$MediaControlPanel$_SKXzyUYhhL8GMTnpSLM2qnRFFw;
@@ -942,7 +964,7 @@
 
     invoke-virtual {v10, v12}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    :goto_a
+    :goto_b
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v10
@@ -957,13 +979,13 @@
 
     add-int/lit8 v6, v6, 0x1
 
-    goto :goto_9
+    goto :goto_a
 
-    :cond_10
-    :goto_b
+    :cond_11
+    :goto_c
     array-length v3, v1
 
-    if-ge v6, v3, :cond_11
+    if-ge v6, v3, :cond_12
 
     aget v3, v1, v6
 
@@ -975,9 +997,9 @@
 
     add-int/lit8 v6, v6, 0x1
 
-    goto :goto_b
+    goto :goto_c
 
-    :cond_11
+    :cond_12
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/media/MediaControlPanel;->getController()Landroid/media/session/MediaController;
 
     move-result-object v1

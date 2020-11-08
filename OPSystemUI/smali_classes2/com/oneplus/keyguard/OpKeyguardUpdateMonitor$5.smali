@@ -52,7 +52,7 @@
     :goto_0
     iget-object v2, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$5;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
 
-    invoke-static {v2}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$1800(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Ljava/util/ArrayList;
+    invoke-static {v2}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$2000(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Ljava/util/ArrayList;
 
     move-result-object v2
 
@@ -64,7 +64,7 @@
 
     iget-object v2, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$5;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
 
-    invoke-static {v2}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$1800(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Ljava/util/ArrayList;
+    invoke-static {v2}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$2000(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Ljava/util/ArrayList;
 
     move-result-object v2
 
@@ -109,14 +109,14 @@
 
     const/4 v0, 0x1
 
-    invoke-static {p0, v0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$1900(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;Z)V
+    invoke-static {p0, v0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$2100(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;Z)V
 
     goto :goto_1
 
     :cond_3
     iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$5;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
 
-    invoke-static {p0, v0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$1900(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;Z)V
+    invoke-static {p0, v0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$2100(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;Z)V
 
     :goto_1
     return-void

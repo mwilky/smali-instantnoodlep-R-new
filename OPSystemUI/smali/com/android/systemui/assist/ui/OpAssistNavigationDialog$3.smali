@@ -55,7 +55,7 @@
 
     invoke-virtual {p0, p1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    invoke-static {}, Lcom/android/systemui/assist/ui/OpAssistNavigationDialog;->access$300()Landroid/content/Context;
+    invoke-static {}, Lcom/android/systemui/assist/ui/OpAssistNavigationDialog;->access$500()Landroid/content/Context;
 
     move-result-object p1
 
@@ -63,7 +63,7 @@
 
     const/4 p0, 0x2
 
-    invoke-static {p0}, Lcom/android/systemui/assist/ui/OpAssistNavigationDialog;->access$102(I)I
+    invoke-static {p0}, Lcom/android/systemui/assist/ui/OpAssistNavigationDialog;->access$302(I)I
 
     invoke-static {}, Lcom/android/systemui/assist/ui/OpAssistNavigationDialog;->dismissDialog()V
 

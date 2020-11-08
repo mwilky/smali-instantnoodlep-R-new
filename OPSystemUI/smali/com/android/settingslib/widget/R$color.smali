@@ -4,6 +4,6 @@
 
 
 # static fields
-.field public static final advanced_outline_color:I = 0x7f06003b
+.field public static final advanced_outline_color:I = 0x7f06003a
 
-.field public static final bt_outline_color:I = 0x7f06007a
+.field public static final bt_outline_color:I = 0x7f060079

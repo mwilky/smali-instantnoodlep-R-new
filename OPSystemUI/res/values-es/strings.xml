@@ -39,7 +39,7 @@
     <string name="abc_slice_updated">Última actualización: %1$s</string>
     <string name="abc_slices_permission_request">%1$s quiere mostrar fragmentos de %2$s</string>
     <string name="abc_toolbar_collapse_description">Ocultar</string>
-    <string name="about_action_bar_title">Información</string>
+    <string name="about_action_bar_title">Acerca de</string>
     <string name="about_app_version_text">Version %s</string>
     <string name="about_privacy_policy">Política de privacidad</string>
     <string name="about_release_note_title">Registro de actualización:</string>
@@ -1415,6 +1415,9 @@ También estás conectado a una red VPN, que puede supervisar tu actividad de re
     <string name="overheat_toast_content">La temperatura del teléfono es demasiado elevada. Se han desactivado las funciones con un alto consumo de energía para reducir la temperatura.</string>
     <string name="overlay_display_devices_title">Simular pantallas secundarias</string>
     <string name="overview">Aplicaciones recientes</string>
+    <string name="permission_btn_text_denied">Salir</string>
+    <string name="permission_btn_text_grant">Aceptar</string>
+    <string name="permission_dialog_title">Declaración sobre permisos</string>
     <string name="phone_hint">Desliza desde el icono para abrir el teléfono</string>
     <string name="phone_label">abrir teléfono</string>
     <string name="picture_color_mode">Modo de color de imagen</string>

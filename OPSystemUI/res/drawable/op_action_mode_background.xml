@@ -7,7 +7,7 @@
         </shape>
     </item>
     <item android:gravity="fill_horizontal|center|top" android:id="@id/actionbar_divider">
-        <shape android:tint="?onePlusBgColor" android:shape="rectangle">
+        <shape android:tint="@color/op_control_bg_color_default" android:shape="rectangle">
             <size android:height="73.0dip" />
             <solid android:color="@android:color/white" />
         </shape>

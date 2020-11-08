@@ -14,10 +14,16 @@
 .end annotation
 
 
+# static fields
+.field private static final FORCE_APPLIED_CUST_ICON:Z
+
+
 # instance fields
 .field private mAnimatorUpdateListener:Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 .field private mAodDisplayViewManager:Lcom/oneplus/aod/OpAodDisplayViewManager;
+
+.field private mAppliedCustIcon:Z
 
 .field private mContext:Landroid/content/Context;
 
@@ -39,6 +45,8 @@
 
 .field mKeyguardUpdateMonitorCallback:Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
 
+.field private mPanel:Landroid/view/View;
+
 .field private mPowerManager:Landroid/os/PowerManager;
 
 .field private mSettingsObserver:Lcom/oneplus/systemui/biometrics/OpFodIconViewController$SettingsObserver;
@@ -57,10 +65,30 @@
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    const-string v0, "debug.force_applied_cust_icon"
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    sput-boolean v0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->FORCE_APPLIED_CUST_ICON:Z
+
+    return-void
+.end method
+
 .method public constructor <init>(Landroid/content/Context;Landroid/view/ViewGroup;Landroid/view/ViewGroup;Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->mAppliedCustIcon:Z
 
     new-instance v0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController$1;
 
@@ -111,6 +139,40 @@
     check-cast p2, Lcom/oneplus/systemui/biometrics/OpCircleImageView;
 
     iput-object p2, p0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->mIconDisable:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
+
+    sget p2, Lcom/android/systemui/R$id;->fp_panel:I
+
+    invoke-virtual {p3, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->mPanel:Landroid/view/View;
+
+    invoke-virtual {p2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object p2
+
+    iget-object p3, p0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p3
+
+    sget v0, Lcom/android/systemui/R$dimen;->op_fp_panel_size:I
+
+    invoke-virtual {p3, v0}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result p3
+
+    invoke-static {p3}, Lcom/oneplus/util/OpUtils;->convertDpToFixedPx(F)I
+
+    move-result p3
+
+    iput p3, p2, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    iput p3, p2, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    invoke-direct {p0}, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->updatePanelColor()V
 
     const-string p2, "power"
 
@@ -231,7 +293,11 @@
 
     invoke-virtual {p1, p0}, Lcom/oneplus/systemui/biometrics/OpFodHelper;->addFingerprintStateChangeListener(Lcom/oneplus/systemui/biometrics/OpFodHelper$OnFingerprintStateChangeListener;)V
 
+    invoke-direct {p0}, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->updateNormalIcon()V
+
     return-void
+
+    nop
 
     :array_0
     .array-data 4
@@ -296,10 +362,154 @@
     return-object p0
 .end method
 
+.method private updateNormalIcon()V
+    .locals 3
+
+    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/oneplus/util/ThemeColorUtils;->init(Landroid/content/Context;)V
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isREDVersion()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    sget-boolean v0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->FORCE_APPLIED_CUST_ICON:Z
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    :goto_1
+    sget-boolean v1, Lcom/oneplus/util/OpUtils;->DEBUG_ONEPLUS:Z
+
+    if-eqz v1, :cond_2
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "updateNormalIcon: cur="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v2, ", pre="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v2, p0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->mAppliedCustIcon:Z
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "OpFodIconViewController"
+
+    invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_2
+    iget-boolean v1, p0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->mAppliedCustIcon:Z
+
+    if-eq v1, v0, :cond_4
+
+    if-eqz v0, :cond_3
+
+    iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Lcom/android/systemui/R$drawable;->fod_icon_custom:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->mIconNormal:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
+
+    invoke-virtual {v2, v1}, Landroid/widget/ImageView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    goto :goto_2
+
+    :cond_3
+    iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Lcom/android/systemui/R$drawable;->fod_icon_default:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->mIconNormal:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
+
+    invoke-virtual {v2, v1}, Landroid/widget/ImageView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    :goto_2
+    iput-boolean v0, p0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->mAppliedCustIcon:Z
+
+    :cond_4
+    return-void
+.end method
+
+.method private updatePanelColor()V
+    .locals 3
+
+    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->mPanel:Landroid/view/View;
+
+    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->mContext:Landroid/content/Context;
+
+    invoke-static {}, Lcom/oneplus/util/ThemeColorUtils;->getCurrentTheme()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_0
+
+    sget v1, Lcom/android/systemui/R$color;->op_fp_panel_color_dark:I
+
+    goto :goto_0
+
+    :cond_0
+    sget v1, Lcom/android/systemui/R$color;->op_fp_panel_color_light:I
+
+    :goto_0
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getColor(I)I
+
+    move-result p0
+
+    invoke-static {p0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Landroid/view/View;->setBackgroundTintList(Landroid/content/res/ColorStateList;)V
+
+    return-void
+.end method
+
 
 # virtual methods
 .method public handleUpdateIconVisibility(Z)V
-    .locals 34
+    .locals 35
 
     move-object/from16 v0, p0
 
@@ -607,11 +817,19 @@
 
     move/from16 v32, v13
 
+    iget-object v13, v0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    invoke-virtual {v13}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isSwitchingUser()Z
+
+    move-result v13
+
+    move/from16 v33, v13
+
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
 
-    move/from16 v33, v5
+    move/from16 v34, v5
 
     const-string v5, "updateIconVisibility: fp client = "
 
@@ -889,7 +1107,7 @@
 
     invoke-virtual {v13, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move/from16 v10, v33
+    move/from16 v10, v34
 
     invoke-virtual {v13, v10}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -898,6 +1116,14 @@
     invoke-virtual {v13, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move/from16 v10, v32
+
+    invoke-virtual {v13, v10}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v10, ", isUserSwitching= "
+
+    invoke-virtual {v13, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move/from16 v10, v33
 
     invoke-virtual {v13, v10}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1134,10 +1360,12 @@
     if-eqz v2, :cond_12
 
     :cond_11
-    if-nez v33, :cond_1b
+    if-nez v34, :cond_1b
 
     :cond_12
-    if-eqz v32, :cond_13
+    if-nez v32, :cond_1b
+
+    if-eqz v33, :cond_13
 
     goto/16 :goto_5
 
@@ -1340,6 +1568,8 @@
     const-string v1, "2"
 
     :goto_7
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->updatePanelVisibility()V
+
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1612,6 +1842,70 @@
 
     invoke-virtual {p0, v0}, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->handleUpdateIconVisibility(Z)V
 
+    return-void
+.end method
+
+.method public onUiModeChanged()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->updatePanelColor()V
+
+    invoke-direct {p0}, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->updateNormalIcon()V
+
+    return-void
+.end method
+
+.method public updatePanelVisibility()V
+    .locals 1
+
+    invoke-static {}, Lcom/oneplus/systemui/biometrics/OpFodHelper;->getInstance()Lcom/oneplus/systemui/biometrics/OpFodHelper;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oneplus/systemui/biometrics/OpFodHelper;->isFromBiometricPrompt()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-static {}, Lcom/oneplus/systemui/biometrics/OpFodHelper;->isSystemApp()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->mIconNormal:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
+
+    invoke-virtual {v0}, Landroid/widget/ImageView;->getVisibility()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->mDialogImpl:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
+
+    invoke-virtual {v0}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->isFodHighlighted()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->mPanel:Landroid/view/View;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->mPanel:Landroid/view/View;
+
+    const/4 v0, 0x4
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
+
+    :goto_0
     return-void
 .end method
 

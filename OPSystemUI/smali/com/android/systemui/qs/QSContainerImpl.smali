@@ -36,6 +36,8 @@
 
 .field private mHeightOverride:I
 
+.field private mLastUpdateOrientation:I
+
 .field private mQSCustomizer:Lcom/android/systemui/qs/customize/QSCustomizer;
 
 .field private mQSDetail:Landroid/view/View;
@@ -100,6 +102,8 @@
     iput p1, p0, Lcom/android/systemui/qs/QSContainerImpl;->mContentPaddingStart:I
 
     iput p1, p0, Lcom/android/systemui/qs/QSContainerImpl;->mContentPaddingEnd:I
+
+    iput p1, p0, Lcom/android/systemui/qs/QSContainerImpl;->mLastUpdateOrientation:I
 
     return-void
 .end method
@@ -462,12 +466,78 @@
 
     invoke-direct {p0}, Lcom/android/systemui/qs/QSContainerImpl;->updatePaddingsAndMargins()V
 
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Lcom/android/systemui/qs/QSContainerImpl;->setBackgroundGradientVisibility(Landroid/content/res/Configuration;)V
+
     return-void
 .end method
 
 .method public updateThemeColor()V
-    .locals 2
+    .locals 3
 
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isREDVersion()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/android/systemui/qs/QSContainerImpl;->mBackground:Landroid/view/View;
+
+    invoke-virtual {v0}, Landroid/view/View;->getTop()I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/android/systemui/qs/QSContainerImpl;->mBackground:Landroid/view/View;
+
+    sget v2, Lcom/android/systemui/R$drawable;->op_qs_red_all:I
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setBackgroundResource(I)V
+
+    iget-object v1, p0, Lcom/android/systemui/qs/QSContainerImpl;->mBackground:Landroid/view/View;
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->setTop(I)V
+
+    iget-object v0, p0, Lcom/android/systemui/qs/QSContainerImpl;->mBackground:Landroid/view/View;
+
+    iget v1, p0, Lcom/android/systemui/qs/QSContainerImpl;->mBackgroundBottom:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setBottom(I)V
+
+    sget v0, Lcom/android/systemui/R$id;->op_qs_drag_handle:I
+
+    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    sget v1, Lcom/android/systemui/R$color;->op_turquoise:I
+
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getColor(I)I
+
+    move-result p0
+
+    invoke-static {p0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Landroid/view/View;->setBackgroundTintList(Landroid/content/res/ColorStateList;)V
+
+    :cond_0
+    return-void
+
+    :cond_1
     const/16 v0, 0x9
 
     invoke-static {v0}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
@@ -1056,5 +1126,22 @@
 
     invoke-direct {p0, v0, p1}, Lcom/android/systemui/qs/QSContainerImpl;->updateBackgroundBottom(IZ)V
 
+    return-void
+.end method
+
+.method public updateResources(Landroid/content/res/Configuration;)V
+    .locals 1
+
+    iget v0, p0, Lcom/android/systemui/qs/QSContainerImpl;->mLastUpdateOrientation:I
+
+    iget p1, p1, Landroid/content/res/Configuration;->orientation:I
+
+    if-eq v0, p1, :cond_0
+
+    iput p1, p0, Lcom/android/systemui/qs/QSContainerImpl;->mLastUpdateOrientation:I
+
+    invoke-direct {p0}, Lcom/android/systemui/qs/QSContainerImpl;->updateResources()V
+
+    :cond_0
     return-void
 .end method

@@ -44,6 +44,14 @@
 
 
 # virtual methods
+.method public buffer()Lokio/Buffer;
+    .locals 0
+
+    iget-object p0, p0, Lokio/RealBufferedSource;->buffer:Lokio/Buffer;
+
+    return-object p0
+.end method
+
 .method public close()V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
@@ -72,14 +80,6 @@
     invoke-virtual {p0}, Lokio/Buffer;->clear()V
 
     return-void
-.end method
-
-.method public getBuffer()Lokio/Buffer;
-    .locals 0
-
-    iget-object p0, p0, Lokio/RealBufferedSource;->buffer:Lokio/Buffer;
-
-    return-object p0
 .end method
 
 .method public indexOf(Lokio/ByteString;)J

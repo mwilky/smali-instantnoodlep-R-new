@@ -134,6 +134,9 @@ Turn off the mobile data connection?"</string>
     <string name="overheat_notification_resume">Temperatura telefona je obnovljena i telefon može da se koristi normalno</string>
     <string name="overheat_notification_title_resume">Temperatura telefona je obnovljena</string>
     <string name="overheat_toast_content">temperature of the phone is too high</string>
+    <string name="permission_btn_text_denied">Napusti</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Permission statement</string>
     <string name="prevent_view_title">Uključen je džepni režim</string>
     <string name="prevent_view_title_cancel">Da aktivirate vaš telefon:</string>
     <string name="prevent_view_top_tag_cancel">Ne prekrivajte plavo područje telefona i čistite prljavštinu ili prašinu sa njega.</string>
@@ -195,7 +198,16 @@ Turn off the mobile data connection?"</string>
     <string name="remove_oneplus_laboratory_from_settings_prompt">Da li želite da uklonite OnePlus laboratoriju iz podešavanja i prestanete sa korištenjem svih njenih funkcija?</string>
     <string name="screenshot_delete_confirmation">Snimak ekrana je izbrisan</string>
     <string name="sd_card_unmount_action">Prekini vezu</string>
+    <string name="select_day">Izaberi mjesec i dan</string>
+    <string name="select_hours">Izaberi sate</string>
+    <string name="select_minutes">Izaberi minute</string>
+    <string name="select_year">Izaberi godinu</string>
     <string name="sim_status_uss_network_roam">Roaming</string>
+    <string name="time_picker_header_text">Postavi vrijeme</string>
+    <string name="time_picker_hour_label">sat</string>
+    <string name="time_picker_input_error">Unesite važeće vrijeme</string>
+    <string name="time_picker_minute_label">minuta</string>
+    <string name="time_picker_prompt_label">Unesite vrijeme</string>
     <string name="usb_storage_badremoval_notification_message" />
     <string name="usb_storage_badremoval_notification_title">Uklonjena memorija USB-a</string>
     <string name="usb_storage_checking_notification_title">Pripremanje USB memorije</string>

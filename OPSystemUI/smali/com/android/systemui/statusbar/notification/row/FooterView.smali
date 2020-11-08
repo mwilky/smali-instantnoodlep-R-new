@@ -251,6 +251,23 @@
 .method public setTextColor(I)V
     .locals 1
 
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isREDVersion()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    sget v0, Lcom/android/systemui/R$color;->op_turquoise:I
+
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getColor(I)I
+
+    move-result p1
+
+    :cond_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/FooterView;->mManageButton:Lcom/android/systemui/statusbar/notification/row/FooterViewButton;
 
     invoke-virtual {v0, p1}, Landroid/widget/Button;->setTextColor(I)V

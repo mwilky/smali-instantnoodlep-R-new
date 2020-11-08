@@ -356,7 +356,7 @@
 
     iput v1, p0, Lcom/android/systemui/pip/PipBoundsHandler;->mDefaultAspectRatio:F
 
-    const v1, 0x10e0040
+    const v1, 0x10e0041
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 

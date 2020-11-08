@@ -41,7 +41,7 @@
     <string name="abc_toolbar_collapse_description">Összecsukás</string>
     <string name="about_action_bar_title">Névjegy</string>
     <string name="about_app_version_text">Version %s</string>
-    <string name="about_privacy_policy">Adatvédelmi politika</string>
+    <string name="about_privacy_policy">Adatvédelmi irányelvek</string>
     <string name="about_release_note_title">Frissítési napló:</string>
     <string name="about_terms_service">Szolgáltatási feltételek</string>
     <string name="accessibility_accessibility_button">Kisegítő lehetőségek</string>
@@ -1415,6 +1415,9 @@ VPN-hez is kapcsolódik, amely szintén figyelheti hálózati tevékenységét."
     <string name="overheat_toast_content">A telefonja hőmérséklete túl magas, ezért a nagy energiaigényű alkalmazások ki lettek kapcsolva a hőmérséklet csökkentése érdekében</string>
     <string name="overlay_display_devices_title">Másodlagos kijelzők szimulálása</string>
     <string name="overview">Áttekintés</string>
+    <string name="permission_btn_text_denied">Kilépés</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Jogosultsági nyilatkozat</string>
     <string name="phone_hint">A telefonhoz csúsztasson az ikonról</string>
     <string name="phone_label">telefon megnyitása</string>
     <string name="picture_color_mode">Kép színe mód</string>

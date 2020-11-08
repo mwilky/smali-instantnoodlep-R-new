@@ -2,7 +2,7 @@
 <resources>
     <string name="about_action_bar_title">च्या बद्दल</string>
     <string name="about_app_version_text">Version %s</string>
-    <string name="about_privacy_policy">खाजगीयता धोरण</string>
+    <string name="about_privacy_policy">गोपनीयता धोरण</string>
     <string name="about_release_note_title">लॉग अद्यतनित करा:</string>
     <string name="about_terms_service">सेवेच्या अटी</string>
     <string name="accessibility_fingerprint_dialog_help_area">मदत संदेश क्षेत्र</string>
@@ -94,7 +94,7 @@
     <string name="kg_wrong_pattern_warning_one">आपल्याकडे अद्याप 1 संधी आहे</string>
     <string name="kg_wrong_pin_warning">आपल्याकडे अद्याप 2 संधी आहेत</string>
     <string name="kg_wrong_pin_warning_one">आपल्याकडे अद्याप 1 संधी आहे</string>
-    <string name="loading_text">लोड करीत आहे...</string>
+    <string name="loading_text">लोड होत आहे...</string>
     <string name="long_press_power_navigation_assist_content">"आवाज सहाय्यकासाठी \"पॉवर बटण\" 
 दाबा आणि धरून ठेवा"</string>
     <string name="long_press_power_navigation_power_content">पॉवर बंद करण्यासाठी एकाचवेळी \"पॉवर बटण\" आणि व्हॉल्युम अप बटण दाबा</string>
@@ -204,6 +204,9 @@
     <string name="overheat_notification_resume">फोनचे तापमान पुन: संग्रहित करण्‍यात आले आहे आणि फोन सामान्‍यपणे वापरता येऊ शकतो</string>
     <string name="overheat_notification_title_resume">फोनचे तापमान पूर्ववत करण्‍यात आले आहे</string>
     <string name="overheat_toast_content">तुमच्‍या फोनचे तापमान खूपच जास्‍त आहे आणि तापमान कमी करण्यासाठी उच्च पॉवर वापर फंक्शन्स बंद केले आहेत</string>
+    <string name="permission_btn_text_denied">बाहेर पडा</string>
+    <string name="permission_btn_text_grant">ठीक आहे</string>
+    <string name="permission_dialog_title">परवानगी विधान</string>
     <string name="prevent_view_title">पॉकेट स्वरूप चालू आहे</string>
     <string name="prevent_view_title_cancel">आपला फोन सक्रिय करण्यासाठी:</string>
     <string name="prevent_view_top_tag_cancel">आपल्या फोनचा ‍निळा भाग कव्हर करू नका आणि कोणतीही घाण ‍किंवा धूळ साफ करा.</string>

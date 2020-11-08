@@ -3,7 +3,7 @@
 .source "OpSWarpChargingView.java"
 
 # interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # annotations
@@ -34,36 +34,26 @@
 
 
 # virtual methods
-.method public onAnimationCancel(Landroid/animation/Animator;)V
+.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 0
 
-    return-void
-.end method
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 0
+    move-result-object p1
 
-    return-void
-.end method
+    check-cast p1, Ljava/lang/Float;
 
-.method public onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    return-void
-.end method
-
-.method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
+    move-result p1
 
     iget-object p0, p0, Lcom/oneplus/battery/OpSWarpChargingView$16;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
 
-    invoke-static {p0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$700(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/widget/TextView;
+    invoke-static {p0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2300(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/widget/LinearLayout;
 
     move-result-object p0
 
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->setTranslationY(F)V
 
     return-void
 .end method

@@ -558,7 +558,7 @@
 
     move-result-object v4
 
-    sget v5, Lcom/android/systemui/R$color;->oneplus_contorl_icon_color_accent_active_dark:I
+    sget v5, Lcom/android/systemui/R$color;->op_wlb_icon_active_light:I
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getColor(I)I
 

@@ -1415,6 +1415,9 @@ Ayrıca, ağ etkinliğinizi izleyebilen bir VPN'ye de bağlısınız."</string>
     <string name="overheat_toast_content">Telefonunuzun sıcaklığı çok yüksek ve sıcaklığı düşürmek için güç tüketimi yüksek olan işlevler kapatıldı</string>
     <string name="overlay_display_devices_title">İkincil ekranları simüle et</string>
     <string name="overview">Genel Bakış</string>
+    <string name="permission_btn_text_denied">Çık</string>
+    <string name="permission_btn_text_grant">Tamam</string>
+    <string name="permission_dialog_title">İzin bildirimi</string>
     <string name="phone_hint">Telefon için, simgeden hızlıca kaydırın</string>
     <string name="phone_label">telefonu aç</string>
     <string name="picture_color_mode">Resim renk modu</string>

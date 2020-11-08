@@ -82,6 +82,8 @@
         <item>Qualcomm® aptX™ অডিও</item>
         <item>Qualcomm® aptX™ HD অডিও</item>
         <item>LDAC</item>
+        <item>Qualcomm® aptX™ Adaptive অডিওa</item>
+        <item>Qualcomm® aptX™ TWS+ অডিও</item>
     </string-array>
     <string-array name="bluetooth_a2dp_codec_titles">
         <item>সিস্টেমের নির্বাচন ব্যবহার করুন (ডিফল্ট)</item>
@@ -90,6 +92,8 @@
         <item>Qualcomm® aptX™ অডিও</item>
         <item>Qualcomm® aptX™ HD অডিও</item>
         <item>LDAC</item>
+        <item>Qualcomm® aptX™ Adaptive অডিওa</item>
+        <item>Qualcomm® aptX™ TWS+ অডিও</item>
     </string-array>
     <string-array name="bluetooth_audio_active_device_summaries">
         <item></item>

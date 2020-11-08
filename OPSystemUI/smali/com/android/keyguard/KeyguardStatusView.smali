@@ -725,6 +725,228 @@
     return-void
 .end method
 
+.method private updateLayout()V
+    .locals 5
+
+    iget-object v0, p0, Landroid/widget/GridLayout;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/android/systemui/assist/ui/DisplayUtils;->getWidth(Landroid/content/Context;)I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/android/keyguard/KeyguardStatusView;->mLockIconContainer:Landroid/view/ViewGroup;
+
+    const/16 v2, 0x438
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    if-le v0, v2, :cond_0
+
+    iget-object v3, p0, Landroid/widget/GridLayout;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    sget v4, Lcom/android/systemui/R$dimen;->op_keyguard_clock_info_view_content_lock_icon_margin_bottom:I
+
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    invoke-static {v3, v2}, Lcom/oneplus/util/OpUtils;->convertPxByResolutionProportion(FI)I
+
+    move-result v3
+
+    iput v3, v1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    iget-object v3, p0, Landroid/widget/GridLayout;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    sget v4, Lcom/android/systemui/R$dimen;->op_keyguard_clock_info_view_content_padding_for_lock_icon_start:I
+
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    invoke-static {v3, v2}, Lcom/oneplus/util/OpUtils;->convertPxByResolutionProportion(FI)I
+
+    move-result v3
+
+    iput v3, v1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+
+    iget-object v3, p0, Landroid/widget/GridLayout;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    sget v4, Lcom/android/systemui/R$dimen;->op_keyguard_clock_info_view_content_padding_for_lock_icon_start:I
+
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    invoke-static {v3, v2}, Lcom/oneplus/util/OpUtils;->convertPxByResolutionProportion(FI)I
+
+    move-result v3
+
+    iput v3, v1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v3, p0, Landroid/widget/GridLayout;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    sget v4, Lcom/android/systemui/R$dimen;->op_keyguard_clock_info_view_content_lock_icon_margin_bottom:I
+
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v3
+
+    iput v3, v1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    iget-object v3, p0, Landroid/widget/GridLayout;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    sget v4, Lcom/android/systemui/R$dimen;->op_keyguard_clock_info_view_content_padding_for_lock_icon_start:I
+
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v3
+
+    iput v3, v1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+
+    iget-object v3, p0, Landroid/widget/GridLayout;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    sget v4, Lcom/android/systemui/R$dimen;->op_keyguard_clock_info_view_content_padding_for_lock_icon_start:I
+
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v3
+
+    iput v3, v1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+
+    :goto_0
+    iget-object v3, p0, Lcom/android/keyguard/KeyguardStatusView;->mLockIconContainer:Landroid/view/ViewGroup;
+
+    invoke-virtual {v3, v1}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    :cond_1
+    iget-object v1, p0, Lcom/android/keyguard/KeyguardStatusView;->mInfoView:Landroid/view/ViewGroup;
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    if-le v0, v2, :cond_2
+
+    iget-object v0, p0, Landroid/widget/GridLayout;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v3, Lcom/android/systemui/R$dimen;->op_keyguard_clock_info_view_content_padding:I
+
+    invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    invoke-static {v0, v2}, Lcom/oneplus/util/OpUtils;->convertPxByResolutionProportion(FI)I
+
+    move-result v0
+
+    iput v0, v1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+
+    iget-object p0, p0, Landroid/widget/GridLayout;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    sget v0, Lcom/android/systemui/R$dimen;->op_keyguard_clock_info_view_content_padding:I
+
+    invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p0
+
+    int-to-float p0, p0
+
+    invoke-static {p0, v2}, Lcom/oneplus/util/OpUtils;->convertPxByResolutionProportion(FI)I
+
+    move-result p0
+
+    iput p0, v1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+
+    goto :goto_1
+
+    :cond_2
+    iget-object v0, p0, Landroid/widget/GridLayout;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v2, Lcom/android/systemui/R$dimen;->op_keyguard_clock_info_view_content_padding:I
+
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    iput v0, v1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+
+    iget-object p0, p0, Landroid/widget/GridLayout;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    sget v0, Lcom/android/systemui/R$dimen;->op_keyguard_clock_info_view_content_padding:I
+
+    invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p0
+
+    iput p0, v1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+
+    :cond_3
+    :goto_1
+    return-void
+.end method
+
 .method private updateLayoutColor()V
     .locals 5
 
@@ -1343,7 +1565,7 @@
 .end method
 
 .method protected onAttachedToWindow()V
-    .locals 2
+    .locals 3
 
     invoke-super {p0}, Landroid/widget/GridLayout;->onAttachedToWindow()V
 
@@ -1371,6 +1593,42 @@
 
     invoke-direct {p0}, Lcom/android/keyguard/KeyguardStatusView;->updateLayoutColor()V
 
+    invoke-direct {p0}, Lcom/android/keyguard/KeyguardStatusView;->updateLayout()V
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "KeyguardStatusView onAttachedToWindow view tag:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Landroid/widget/GridLayout;->getTag()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "KeyguardStatusView"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {p0}, Landroid/widget/GridLayout;->getTag()Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v2, "keyguardPresentation"
+
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 
     invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -1385,6 +1643,10 @@
 
     if-eqz v0, :cond_0
 
+    const-string v2, "reset keyguard status view"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     invoke-virtual {v0, p0}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->setKeyguardStatusView(Lcom/android/keyguard/KeyguardStatusView;)V
 
     :cond_0
@@ -1393,6 +1655,8 @@
 
 .method public onDensityOrFontScaleChanged()V
     .locals 0
+
+    invoke-direct {p0}, Lcom/android/keyguard/KeyguardStatusView;->updateLayout()V
 
     invoke-direct {p0}, Lcom/android/keyguard/KeyguardStatusView;->updateLayoutColor()V
 
@@ -1650,6 +1914,8 @@
     check-cast v0, Landroid/view/ViewGroup;
 
     iput-object v0, p0, Lcom/android/keyguard/KeyguardStatusView;->mLockIconContainer:Landroid/view/ViewGroup;
+
+    invoke-direct {p0}, Lcom/android/keyguard/KeyguardStatusView;->updateLayout()V
 
     invoke-direct {p0}, Lcom/android/keyguard/KeyguardStatusView;->updateLayoutColor()V
 

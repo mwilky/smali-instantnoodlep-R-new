@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="about_action_bar_title">ਇਸ ਦੇ ਬਾਰੇ</string>
+    <string name="about_action_bar_title">ਇਸ ਬਾਰੇ</string>
     <string name="about_app_version_text">Version %s</string>
     <string name="about_privacy_policy">ਪਰਦੇਦਾਰੀ ਨੀਤੀ</string>
     <string name="about_release_note_title">ਅੱਪਡੇਟ ਲੌਗ:</string>
@@ -204,6 +204,9 @@
     <string name="overheat_notification_resume">ਫ਼ੋਨ ਦੇ ਤਾਪਮਾਨ ਨੂੰ ਮੁੜ-ਬਹਾਲ ਕੀਤਾ ਗਿਆ ਹੈ ਅਤੇ ਫ਼ੋਨ ਨੂੰ ਸਧਾਰਨ ਰੂਪ ਵਿੱਚ ਵਰਤਿਆ ਜਾ ਸਕਦਾ ਹੈ</string>
     <string name="overheat_notification_title_resume">ਫ਼ੋਨ ਦੇ ਤਾਪਮਾਨ ਨੂੰ ਮੁੜ-ਬਹਾਲ ਕੀਤਾ ਗਿਆ ਹੈ</string>
     <string name="overheat_toast_content">ਤੁਹਾਡੇ ਫੋਨ ਦਾ ਤਾਪਮਾਨ ਬਹੁਤ ਜ਼ਿਆਦਾ ਹੈ, ਅਤੇ ਤਾਪਮਾਨ ਨੂੰ ਘੱਟ ਕਰਨ ਲਈ ਜ਼ਿਆਦਾ ਬਿਜਲੀ ਦੀ ਖਪਤ ਕਰਨ ਵਾਲੇ ਸਾਰੇ ਫੰਕਸ਼ਨ ਬੰਦ ਕਰ ਦਿਤੇ ਹਨ।</string>
+    <string name="permission_btn_text_denied">ਬਾਹਰ ਜਾਓ</string>
+    <string name="permission_btn_text_grant">ਠੀਕ ਹੈ</string>
+    <string name="permission_dialog_title">ਇਜਾਜ਼ਤ ਕਥਨ</string>
     <string name="prevent_view_title">ਜੇਬ ਮੋਡ ਚਾਲੂ ਹੈ</string>
     <string name="prevent_view_title_cancel">ਆਪਣਾ ਫ਼ੋਨ ਕਿਰਿਆਸ਼ੀਲ ਕਰਨ ਲਈ:</string>
     <string name="prevent_view_top_tag_cancel">"ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਫ਼ੋਨ ਦੇ ਨੀਲੇ ਖੇਤਰ ਨੂੰ ਨਾ ਢਕੋ ਅਤੇ ਨੀਲੇ ਖੇਤਰ 'ਤੇ ਲੱਗੀ ਗੰਦਗੀ ਜਾਂ ਮਿੱਟੀ-ਘੱਟੇ ਨੂੰ ਸਾਫ਼ ਕਰ ਦਿਓ।"</string>

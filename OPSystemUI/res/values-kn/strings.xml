@@ -39,9 +39,9 @@
     <string name="abc_slice_updated">%1$s ಅನ್ನು ಅಪ್‌ಡೇಟ್‌ ಮಾಡಲಾಗಿದೆ</string>
     <string name="abc_slices_permission_request">%2$s ಸ್ಲೈಸ್‌ಗಳನ್ನು %1$s ತೋರಿಸಲು ಬಯಸಿದೆ</string>
     <string name="abc_toolbar_collapse_description">ಕುಗ್ಗಿಸಿ</string>
-    <string name="about_action_bar_title">ಕುರಿತು</string>
+    <string name="about_action_bar_title">ಬಗ್ಗೆ</string>
     <string name="about_app_version_text">Version %s</string>
-    <string name="about_privacy_policy">ಖಾಸಗಿ ನೀತಿ</string>
+    <string name="about_privacy_policy">ಗೌಪ್ಯತಾ ನೀತಿ</string>
     <string name="about_release_note_title">ಪರಿಷ್ಕರಣೆ ಲಾಗ್:</string>
     <string name="about_terms_service">ಸೇವೆಯ ನಿಯಮಗಳು</string>
     <string name="accessibility_accessibility_button">ಪ್ರವೇಶಿಸುವಿಕೆ</string>
@@ -1413,6 +1413,9 @@
     <string name="overheat_toast_content">ನಿಮ್ಮ ಫೋನ್ ಉಷ್ಣತೆ ತುಂಬಾ ಹೆಚ್ಚಾಗಿದೆ, ಹಾಗೂ ಉಷ್ಣತೆಯನ್ನು ಕಡಿಮೆ ಮಾಡಲು ಪವರ್ ಬಳಕೆಯ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಆಫ್ ಮಾಡಲಾಗುತ್ತದೆ</string>
     <string name="overlay_display_devices_title">ಮಾಧ್ಯಮಿಕ ಡಿಸ್‌ಪ್ಲೇ ಸಿಮ್ಯುಲೇಟ್‌</string>
     <string name="overview">ಸಮಗ್ರ ನೋಟ</string>
+    <string name="permission_btn_text_denied">ನಿರ್ಗಮಿಸಿ</string>
+    <string name="permission_btn_text_grant">ಸರಿ</string>
+    <string name="permission_dialog_title">ಅನುಮತಿ ಹೇಳಿಕೆ</string>
     <string name="phone_hint">ಫೋನ್‌ಗಾಗಿ ಐಕಾನ್‌ನಿಂದ ಸ್ವೈಪ್ ಮಾಡಿ</string>
     <string name="phone_label">ಫೋನ್ ತೆರೆಯಿರಿ</string>
     <string name="picture_color_mode">ಚಿತ್ರ ಬಣ್ಣದ ಮೋಡ್</string>

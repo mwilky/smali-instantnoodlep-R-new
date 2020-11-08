@@ -38,7 +38,7 @@
 
     iget-object p1, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$4;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
 
-    invoke-static {p1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$1200(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)V
+    invoke-static {p1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$1400(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)V
 
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -50,33 +50,13 @@
 
     iget-object v0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$4;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
 
-    invoke-static {v0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$1300(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Z
+    invoke-static {v0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$1500(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Z
 
     move-result v0
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     const-string v0, ", "
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$4;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
-
-    invoke-static {v1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$1400(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Z
-
-    move-result v1
-
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$4;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
-
-    invoke-static {v1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$1500(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Z
-
-    move-result v1
-
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -90,9 +70,29 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    iget-object v1, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$4;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
+
+    invoke-static {v1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$1700(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Z
+
+    move-result v1
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$4;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
+
+    invoke-static {v1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$1800(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Z
+
+    move-result v1
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$4;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
 
-    invoke-static {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$1700(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)I
+    invoke-static {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$1900(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)I
 
     move-result p0
 
