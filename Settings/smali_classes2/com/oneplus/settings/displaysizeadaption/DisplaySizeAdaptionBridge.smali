@@ -183,6 +183,17 @@
 .method private static isLauncherApp(Ljava/lang/String;)Z
     .locals 3
 
+    sget-object v0, Lcom/oneplus/settings/displaysizeadaption/DisplaySizeAdaptionBridge;->resolveInfoList:Ljava/util/List;
+
+    if-nez v0, :cond_0
+
+    invoke-static {}, Lcom/oneplus/settings/displaysizeadaption/DisplaySizeAdaptionBridge;->getLauncherApp()Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/oneplus/settings/displaysizeadaption/DisplaySizeAdaptionBridge;->resolveInfoList:Ljava/util/List;
+
+    :cond_0
     const/4 v0, 0x0
 
     move v1, v0
@@ -194,7 +205,7 @@
 
     move-result v2
 
-    if-ge v1, v2, :cond_1
+    if-ge v1, v2, :cond_2
 
     sget-object v2, Lcom/oneplus/settings/displaysizeadaption/DisplaySizeAdaptionBridge;->resolveInfoList:Ljava/util/List;
 
@@ -212,18 +223,18 @@
 
     move-result v2
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_1
 
     const/4 v0, 0x1
 
     goto :goto_1
 
-    :cond_0
+    :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     :goto_1
     return v0
 .end method

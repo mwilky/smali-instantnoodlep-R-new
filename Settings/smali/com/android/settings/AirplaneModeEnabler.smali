@@ -12,6 +12,8 @@
 
 
 # instance fields
+.field private airplanePref:Landroid/content/SharedPreferences;
+
 .field private final mContext:Landroid/content/Context;
 
 .field private final mMetricsFeatureProvider:Lcom/android/settingslib/core/instrumentation/MetricsFeatureProvider;
@@ -76,6 +78,84 @@
     return-void
 .end method
 
+.method static synthetic access$100(Lcom/android/settings/AirplaneModeEnabler;)Landroid/content/SharedPreferences;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/AirplaneModeEnabler;->airplanePref:Landroid/content/SharedPreferences;
+
+    return-object p0
+.end method
+
+.method static synthetic access$200(Lcom/android/settings/AirplaneModeEnabler;Z)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/settings/AirplaneModeEnabler;->performAirplaneModeOn(Z)V
+
+    return-void
+.end method
+
+.method static synthetic access$300(Lcom/android/settings/AirplaneModeEnabler;)Lcom/android/settings/AirplaneModeEnabler$OnAirplaneModeChangedListener;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/AirplaneModeEnabler;->mOnAirplaneModeChangedListener:Lcom/android/settings/AirplaneModeEnabler$OnAirplaneModeChangedListener;
+
+    return-object p0
+.end method
+
+.method static synthetic access$400(Lcom/android/settings/AirplaneModeEnabler;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/AirplaneModeEnabler;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method private getVzwVolteOrWiFiCallingStatus()Z
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/settings/AirplaneModeEnabler;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Landroid/telephony/SubscriptionManager;->from(Landroid/content/Context;)Landroid/telephony/SubscriptionManager;
+
+    move-result-object v0
+
+    iget-object p0, p0, Lcom/android/settings/AirplaneModeEnabler;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/telephony/SubscriptionManager;->getDefaultDataPhoneId()I
+
+    move-result v0
+
+    invoke-static {p0, v0}, Lcom/android/ims/ImsManager;->getInstance(Landroid/content/Context;I)Lcom/android/ims/ImsManager;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/ims/ImsManager;->isWfcEnabledByUser()Z
+
+    move-result v0
+
+    invoke-virtual {p0}, Lcom/android/ims/ImsManager;->isEnhanced4gLteModeSettingEnabledByUser()Z
+
+    move-result p0
+
+    if-nez v0, :cond_1
+
+    if-eqz p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 p0, 0x1
+
+    :goto_1
+    return p0
+.end method
+
 .method private onAirplaneModeChanged()V
     .locals 1
 
@@ -93,7 +173,7 @@
     return-void
 .end method
 
-.method private setAirplaneModeOn(Z)V
+.method private performAirplaneModeOn(Z)V
     .locals 2
 
     iget-object v0, p0, Lcom/android/settings/AirplaneModeEnabler;->mContext:Landroid/content/Context;
@@ -105,6 +185,12 @@
     const-string v1, "airplane_mode_on"
 
     invoke-static {v0, v1, p1}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+
+    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isUsvMode()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
 
     iget-object v0, p0, Lcom/android/settings/AirplaneModeEnabler;->mOnAirplaneModeChangedListener:Lcom/android/settings/AirplaneModeEnabler$OnAirplaneModeChangedListener;
 
@@ -128,6 +214,158 @@
     sget-object p1, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     invoke-virtual {p0, v0, p1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
+
+    return-void
+.end method
+
+.method private setAirplaneModeOn(Z)V
+    .locals 3
+
+    iget-object v0, p0, Lcom/android/settings/AirplaneModeEnabler;->mContext:Landroid/content/Context;
+
+    const-string v1, "OPPref_airplane"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/settings/AirplaneModeEnabler;->airplanePref:Landroid/content/SharedPreferences;
+
+    const-string v1, "airplanechecked"
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isUsvMode()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    if-eqz p1, :cond_0
+
+    if-nez v0, :cond_0
+
+    invoke-direct {p0, p1}, Lcom/android/settings/AirplaneModeEnabler;->showEnableDialog(Z)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-direct {p0, p1}, Lcom/android/settings/AirplaneModeEnabler;->performAirplaneModeOn(Z)V
+
+    :goto_0
+    return-void
+.end method
+
+.method private showEnableDialog(Z)V
+    .locals 6
+
+    iget-object v0, p0, Lcom/android/settings/AirplaneModeEnabler;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lcom/android/settings/R$string;->airplane_mode:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p0}, Lcom/android/settings/AirplaneModeEnabler;->getVzwVolteOrWiFiCallingStatus()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/android/settings/AirplaneModeEnabler;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Lcom/android/settings/R$string;->airplane_mode_enable_dialog_message_wifi_volte:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v1, p0, Lcom/android/settings/AirplaneModeEnabler;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Lcom/android/settings/R$string;->airplane_mode_enable_dialog_message:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    :goto_0
+    iget-object v2, p0, Lcom/android/settings/AirplaneModeEnabler;->mContext:Landroid/content/Context;
+
+    sget v3, Lcom/android/settings/R$layout;->dialog_checkbox_airplanemode:I
+
+    const/4 v4, 0x0
+
+    invoke-static {v2, v3, v4}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object v2
+
+    sget v3, Lcom/android/settings/R$id;->checkbox:I
+
+    invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/widget/CheckBox;
+
+    new-instance v4, Landroidx/appcompat/app/AlertDialog$Builder;
+
+    iget-object v5, p0, Lcom/android/settings/AirplaneModeEnabler;->mContext:Landroid/content/Context;
+
+    invoke-direct {v4, v5}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v4, v0}, Landroidx/appcompat/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    invoke-virtual {v4, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    const v0, 0x104000a
+
+    new-instance v1, Lcom/android/settings/AirplaneModeEnabler$2;
+
+    invoke-direct {v1, p0, v3, p1}, Lcom/android/settings/AirplaneModeEnabler$2;-><init>(Lcom/android/settings/AirplaneModeEnabler;Landroid/widget/CheckBox;Z)V
+
+    invoke-virtual {v4, v0, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    const/high16 v0, 0x1040000
+
+    new-instance v1, Lcom/android/settings/AirplaneModeEnabler$3;
+
+    invoke-direct {v1, p0, p1}, Lcom/android/settings/AirplaneModeEnabler$3;-><init>(Lcom/android/settings/AirplaneModeEnabler;Z)V
+
+    invoke-virtual {v4, v0, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    new-instance p1, Lcom/android/settings/AirplaneModeEnabler$4;
+
+    invoke-direct {p1, p0}, Lcom/android/settings/AirplaneModeEnabler$4;-><init>(Lcom/android/settings/AirplaneModeEnabler;)V
+
+    invoke-virtual {v4, p1}, Landroidx/appcompat/app/AlertDialog$Builder;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    invoke-virtual {v4, v2}, Landroidx/appcompat/app/AlertDialog$Builder;->setView(Landroid/view/View;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    invoke-virtual {v4}, Landroidx/appcompat/app/AlertDialog$Builder;->create()Landroidx/appcompat/app/AlertDialog;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->show()V
 
     return-void
 .end method

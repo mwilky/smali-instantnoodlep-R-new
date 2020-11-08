@@ -1228,6 +1228,22 @@
 
     move-result-object p1
 
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p0}, Lcom/android/settings/accessibility/ToggleAccessibilityServicePreferenceFragment;->getAccessibilityServiceInfo()Landroid/accessibilityservice/AccessibilityServiceInfo;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/accessibilityservice/AccessibilityServiceInfo;->getResolveInfo()Landroid/content/pm/ResolveInfo;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p0}, Lcom/android/settings/accessibility/ToggleAccessibilityServicePreferenceFragment;->getAccessibilityServiceInfo()Landroid/accessibilityservice/AccessibilityServiceInfo;
+
+    move-result-object p1
+
     invoke-virtual {p1}, Landroid/accessibilityservice/AccessibilityServiceInfo;->getResolveInfo()Landroid/content/pm/ResolveInfo;
 
     move-result-object p1
@@ -1242,6 +1258,7 @@
 
     iput-object p1, p0, Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment;->mPackageName:Ljava/lang/CharSequence;
 
+    :cond_1
     return-void
 .end method
 

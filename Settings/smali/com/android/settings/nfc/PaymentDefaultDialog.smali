@@ -22,7 +22,7 @@
 .end method
 
 .method private buildDialog(Landroid/content/ComponentName;Ljava/lang/String;)Z
-    .locals 6
+    .locals 7
 
     const-string v0, "PaymentDefaultDialog"
 
@@ -141,13 +141,41 @@
 
     move-result-object v4
 
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "defaultComponent : "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v0, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     if-eqz v4, :cond_6
 
     invoke-virtual {v4, p1}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
 
+    move-result v5
+
+    if-eqz v5, :cond_6
+
+    invoke-virtual {v4}, Landroid/content/ComponentName;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string v5, "com.finshell.wallet/com.nearme.wallet.nfc.CardService"
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
     move-result v4
 
-    if-eqz v4, :cond_6
+    if-nez v4, :cond_6
 
     new-instance p0, Ljava/lang/StringBuilder;
 

@@ -142,23 +142,23 @@
     goto :goto_1
 
     :cond_2
-    const v0, 0x1040846
+    const v0, 0x1040848
 
     goto :goto_2
 
     :cond_3
-    const v0, 0x1040843
+    const v0, 0x1040845
 
     goto :goto_2
 
     :cond_4
-    const v0, 0x1040845
+    const v0, 0x1040847
 
     goto :goto_2
 
     :cond_5
     :goto_1
-    const v0, 0x1040864
+    const v0, 0x1040866
 
     :goto_2
     iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;

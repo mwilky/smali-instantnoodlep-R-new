@@ -43,7 +43,7 @@
     <string name="about_action_bar_title">Rreth</string>
     <string name="about_app_version_text">Version %s</string>
     <string name="about_phone_device_name_warning">Emri i pajisjes sate është i dukshëm për aplikacionet në telefonin tënd. Ai mund të shikohet po ashtu nga persona të tjerë kur lidhesh me pajisje me Bluetooth ose kur konfiguron një zonë të qasjes për internet me Wi-Fi.</string>
-    <string name="about_privacy_policy">Rregullorja për privatësinë</string>
+    <string name="about_privacy_policy">Politika për privatësinë</string>
     <string name="about_release_note_title">Regjistri i përditësimit:</string>
     <string name="about_settings">Informacion mbi telefonin</string>
     <string name="about_settings_summary">Shiko informacionin ligjor, statusin dhe versionin e softuerit</string>
@@ -375,7 +375,7 @@ Doni të aktivizoni modalitetin aeroplan?"</string>
     <string name="alert_dialog_cancel">Anulo</string>
     <string name="alert_slider_settings_title">Cilësimet e prioritetit</string>
     <string name="alert_slider_silent_title">Cilësimet e heshtjes</string>
-    <string name="alertslider_settings">Shina e lajmërimit</string>
+    <string name="alertslider_settings">Alert slider</string>
     <string name="alertslider_settings_soc_tri_state_summary">Heshtje, dridhje, zile</string>
     <string name="all_volume_title">Volumet</string>
     <string name="allow">Lejo</string>
@@ -1272,6 +1272,7 @@ Kjo ndikon tek aplikacionet ose bisedat e tjera që lejohen të shfaqen si fllus
     <string name="color_temperature">Temperatura e ftohtë e ngjyrës</string>
     <string name="color_temperature_desc">Përdor ngjyra të ftohta të ekranit</string>
     <string name="color_temperature_toast">Për të zbatuar ndryshimin e ngjyrës, çaktivizoje ekranin</string>
+    <string name="color_temperture">Balanca e bardhësisë së ekranit</string>
     <string name="color_title">Ngjyra</string>
     <string name="color_unspecified">E parazgjedhur</string>
     <string name="color_white">E bardhë</string>
@@ -1585,7 +1586,7 @@ Meqenëse përdorimi i të dhënave matet nga telefoni yt dhe operatori celular 
     <string name="data_usage_metered_yes">Me matje</string>
     <string name="data_usage_ota">Përditësimet e sistemit</string>
     <string name="data_usage_other_apps">Aplikacionet e tjera të përfshira në përdorim</string>
-    <string name="data_usage_package_set">Billing Cycle</string>
+    <string name="data_usage_package_set">Cikli i faturimit</string>
     <string name="data_usage_pick_cycle_day">Dita për rivendosjen e ciklit të përdorimit të të dhënave:</string>
     <string name="data_usage_rank_sim">Përdorimi i internetit celular</string>
     <string name="data_usage_rank_wifi">Përdorimi i internetit Wi-Fi</string>
@@ -2132,8 +2133,8 @@ Kontakto me administratorin e organizatës për më shumë detaje."</string>
     <string name="firewall_rule_data_only_batch">Vetëm internet celular të gjitha</string>
     <string name="firewall_rule_forbid">Ndaluar</string>
     <string name="firewall_rule_forbid_batch">Ndalo të gjitha</string>
-    <string name="firewall_rule_wlan_only">Vetëm W-Fi</string>
-    <string name="firewall_rule_wlan_only_batch">Vetëm Wi-Fi të gjitha</string>
+    <string name="firewall_rule_wlan_only">Wi-Fi only</string>
+    <string name="firewall_rule_wlan_only_batch">Wi-Fi only all</string>
     <string name="firewall_title">Kontrolli i përdorimit të të dhënave</string>
     <string name="firmware_version">Versioni i Android</string>
     <string name="font_size_make_larger_desc">Zmadho</string>
@@ -2260,7 +2261,7 @@ Kur aktivizon rezervimin automatik, të dhënat e pajisjes dhe të aplikacioneve
 Këtë mund ta ndryshosh më vonë nga Cilësimet > Aplikacionet dhe njoftimet."</string>
     <string name="high_power_prompt_title">Të lejohet që aplikacioni të ekzekutohet gjithmonë në sfond?</string>
     <string name="high_power_system">Optimizimi i baterisë nuk ofrohet</string>
-    <string name="hint_data_used_alert">Përdorimi i internetit celular ka kaluar %1$s</string>
+    <string name="hint_data_used_alert">Data usage has exceeded %1$s</string>
     <string name="hint_traffic_auto_close_network_title">Është arritur limiti mujor i përdorimit të internetit celular. Rrjeti është shkëputur automatikisht.</string>
     <string name="hint_traffic_auto_close_network_title_vzw">"Keni arritur limitin e caktuar për përdorimin e internetit celular, ndaj interneti celular është çaktivizuar.
 
@@ -3362,7 +3363,7 @@ Kjo do t'i japë aplikacionit aftësinë për të aktivizuar ose çaktivizuar \"
     <string name="oneplus_auto_open_specified_app">Hap automatikisht aplikacionin e specifikuar</string>
     <string name="oneplus_auto_play">Luajtje automatike</string>
     <string name="oneplus_auto_play_summary">Vazhdo automatikisht luajtjen e muzikës kur lidhen kufjet</string>
-    <string name="oneplus_auto_switch_mobile_data">Përdorimi i internetit celular</string>
+    <string name="oneplus_auto_switch_mobile_data">Lidhje inteligjente rrjeti</string>
     <string name="oneplus_auto_switch_mobile_data_summary">Për stabilitet më të lartë, përdor si Wi‑Fi, ashtu edhe internetin celular kur lidhja është e dobët</string>
     <string name="oneplus_auto_turn_on_apps">Aktivizo automatikisht për këto aplikacione</string>
     <string name="oneplus_auto_turn_on_car_charger_info_o2">Duke vendosur artikujt e mësipërm, mund të aktivizoni \"Mos më shqetëso\" dhe të hapni aplikacionin e specifikuar çdo herë që lidhet karikuesi i makinës</string>
@@ -3370,8 +3371,8 @@ Kjo do t'i japë aplikacionit aftësinë për të aktivizuar ose çaktivizuar \"
     <string name="oneplus_available_keyboard_category">Tastiera e disponueshme</string>
     <string name="oneplus_available_keyboard_description">Tastierat e instaluara të aktivizuara këtu do të shtohen te lista \"Tastierat e disponueshme\"</string>
     <string name="oneplus_back_home">Shtëpia, Mbrapa</string>
-    <string name="oneplus_back_home_o2">Back, Home</string>
-    <string name="oneplus_back_home_summary">Swipe up on Home button</string>
+    <string name="oneplus_back_home_o2">Mbrapa, Shtëpia</string>
+    <string name="oneplus_back_home_summary">Lëvizni lart mbi butonin kryesor</string>
     <string name="oneplus_back_topic_theme_summary">Ndrysho automatikisht temën e sistemit kur ndryshohet kapaku i pasmë</string>
     <string name="oneplus_back_topic_theme_title">Tema e kapakut të pasmë</string>
     <string name="oneplus_battery_menu_stats_total">Shiko përdorimin e detajuar</string>
@@ -3419,7 +3420,7 @@ Kursyesi i baterisë çaktivizohet automatikisht kur pajisja është duke u kari
     <string name="oneplus_clear_intenal_storage_data_summary">Duke përfshirë muzikën, fotot, videot dhe të dhënat e tjera personale</string>
     <string name="oneplus_clear_intenal_storage_data_title">Fshi memorien e brendshme</string>
     <string name="oneplus_colorful_mode_cannot_change_color_accent">Toni shumëngjyrësh mund të përdorë vetëm ngjyrat e sistemit</string>
-    <string name="oneplus_colorful_mode_title">Shumëngjyrësh</string>
+    <string name="oneplus_colorful_mode_title">Shumëngjyrëshe</string>
     <string name="oneplus_compatibility_mode_summary">Aplikacionet në ekran të plotë nuk mund ta përdorin pjesën e dhëmbëzuar</string>
     <string name="oneplus_compatibility_mode_title">Modaliteti i pajtueshmërisë</string>
     <string name="oneplus_condition_airplane_mode_turn_off">ÇAKTIVIZO MODALITETIN AEROPLAN</string>
@@ -3578,7 +3579,9 @@ Kujdes: Zhbllokimi me anë të fytyrës është më pak i sigurt se përdorimi i
     <string name="oneplus_fingerprint_gesture_camera_summary">Nga ekrani i shikimit, mbani shtypur sensorin e shenjës së gishtit për të bërë një foto</string>
     <string name="oneplus_fingerprint_gesture_camera_title">Mbajeni shtypur për të bërë foto</string>
     <string name="oneplus_fingerprint_gesture_settings_title">Gjesti i shenjës së gishtit</string>
+    <string name="oneplus_fingerprint_hardware_exception">Informacionet e harduerit të shenjës së gishtit nuk janë të sakta, ju lutemi kontaktoni shërbimin e klientit</string>
     <string name="oneplus_fingerprint_longpress_for_quickpay_summary">Mbani shypur sensorin e shenjës së gishtit për të hapur pagesën e shpejtë</string>
+    <string name="oneplus_fingerprint_not_adjustment">Të dhënat e kalibrimit të shenjës së gishtit nuk janë të sakta, ju lutemi kontaktoni shërbimin e klientit</string>
     <string name="oneplus_fingerprint_quickpay_lock_swtch_summary">Mbani shtypur sensorin e shenjës së gishtit për të hapur pagesën e shpejtë kur telefoni është i kyçur</string>
     <string name="oneplus_fingerprint_sensor_longpress_for_quickpay_summary">Mbani shtypur sensorin e shenjës së gishtit për të hapur pagesën e shpejtë kur telefoni është i hapur</string>
     <string name="oneplus_fingerprint_settings_list_title">Lista e shenjave të gishtit</string>
@@ -3607,7 +3610,7 @@ Kujdes: Zhbllokimi me anë të fytyrës është më pak i sigurt se përdorimi i
     <string name="oneplus_font_style">Fonti</string>
     <string name="oneplus_font_switch">Ndryshimi i fontit</string>
     <string name="oneplus_force_factory_reset_summary">Fjalëkalimi në ndezje është aktivizuar. Memoria e brendshme do të fshihet</string>
-    <string name="oneplus_forum_award_summary">Ky komunitet është i juaji. Vetëm ju mund të përcaktoni rrugën tonë. Së bashku, mund të përcaktojmë dhe rafinojmë, të copëtojmë build-et dhe të shkruajë kode. Kjo është për ju. Faleminderit që ëndërroni bashkë me ne!</string>
+    <string name="oneplus_forum_award_summary">This community is yours. Only you can define our course. Together, we define and refine. Breaking builds and writing codes. This is for you. Thank you for dreaming with us!</string>
     <string name="oneplus_forum_award_title">Shpërblim</string>
     <string name="oneplus_front_camera_app_display_fullscreen_summary">Nëse përmbajtja e aplikacionit pritet nga pjesa e shfaqjes së kamerës përpara, ju lutemi kaloni në modalitetin standard</string>
     <string name="oneplus_front_camera_display_choose_title">Zgjidhni nëse doni ta fshihni kamerën përpara</string>
@@ -3630,7 +3633,7 @@ Për të shkuar te ekrani kryesor në çfarëdo kohe, lëvizni lart nga qendra e
     <string name="oneplus_fullscreen_home_guide_title">Shtëpia</string>
     <string name="oneplus_fullscreen_landscape_guide_summary">"Gjestet e navigimit mund të aktivizohen përsëri nga ana e poshtme e ekranit. Ju lutemi lëvizni nga ana e majtë ose e djathtë për t'u kthyer mbrapa"</string>
     <string name="oneplus_fullscreen_landscape_guide_summary_deprecated">Njëlloj si në orientim portret, gjestet e navigimit janë përsëri në fund të pajisjes</string>
-    <string name="oneplus_fullscreen_landscape_guide_title">Peizazh</string>
+    <string name="oneplus_fullscreen_landscape_guide_title">Landscape</string>
     <string name="oneplus_fullscreen_mode_summary">Lejoni që aplikacionet në ekran të plotë të përdorin pjesën e dhëmbëzuar</string>
     <string name="oneplus_fullscreen_mode_title">Modaliteti i ekranit të plot</string>
     <string name="oneplus_fullscreen_previous_app_guide_summary">Lëvizni majtas ose djathtas në pjesën e shiritit të poshtëm</string>
@@ -3652,9 +3655,9 @@ Për të shkuar te ekrani kryesor në çfarëdo kohe, lëvizni lart nga qendra e
     <string name="oneplus_gaming_mode_close_automatic_brightness_summary">Kyç ndriçimin e ekranit kur modaliteti i lojërave është aktiv</string>
     <string name="oneplus_gaming_mode_game_battery_saver">Kursyesi i baterisë në lojëra</string>
     <string name="oneplus_gaming_mode_game_battery_saver_close">Çaktivizuar</string>
-    <string name="oneplus_gaming_mode_game_battery_saver_high">E lartë</string>
+    <string name="oneplus_gaming_mode_game_battery_saver_high">I lartë</string>
     <string name="oneplus_gaming_mode_game_battery_saver_high_summary">Rezolucioni dhe FPS e lojërave do të jetë e kufizuar</string>
-    <string name="oneplus_gaming_mode_game_battery_saver_light">E ulët</string>
+    <string name="oneplus_gaming_mode_game_battery_saver_light">I ulët</string>
     <string name="oneplus_gaming_mode_game_battery_saver_light_summary">Rezolucioni i lojërave do të jetë i kufizuar</string>
     <string name="oneplus_gaming_mode_game_battery_saver_summary">Rekomandohet për lojërat që nuk ka pse të jenë tepër të shpejta, si për shembull lojërat e zakonshme</string>
     <string name="oneplus_gaming_mode_network_acceleration">Përforcim rrjeti</string>
@@ -3670,10 +3673,10 @@ Për të shkuar te ekrani kryesor në çfarëdo kohe, lëvizni lart nga qendra e
     <string name="oneplus_gesture_navigation_bar_title_for_bottom">Gjestet e navigimit (poshtë)</string>
     <string name="oneplus_gesture_navigation_bar_title_for_deprecated">Gjestet e navigimit (majtas dhe djathtas)</string>
     <string name="oneplus_gesture_of_answer_call_info">"Kur ka një telefonatë hyrëse, mund t'i përgjigjeni duke e ngritur telefonin te veshi."</string>
-    <string name="oneplus_gesture_of_answer_call_summary">Përgjigju automatikisht telefonatave hyrëse duke e ngritur telefonin te veshi</string>
+    <string name="oneplus_gesture_of_answer_call_summary">Përgjigjuni automatikisht telefonatave hyrëse duke e ngritur telefonin te veshi</string>
     <string name="oneplus_gesture_of_answer_call_title">Përgjigju telefonatave me gjest</string>
     <string name="oneplus_gesture_start_learning">Filloni të mësoni</string>
-    <string name="oneplus_gesture_to_answer_summary">Përgjigju automatikisht telefonatave hyrëse duke e ngritur telefonin te veshi</string>
+    <string name="oneplus_gesture_to_answer_summary">Përgjigjuni automatikisht telefonatave hyrëse duke e ngritur telefonin te veshi</string>
     <string name="oneplus_gesture_to_answer_title">"Ngri për t'u përgjigjur"</string>
     <string name="oneplus_gesture_to_control_call_info">Kontrolloni automatikisht telefonatat duke e ngritur telefonin te veshi</string>
     <string name="oneplus_gesture_to_control_calls_summary">Përgjigjuni automatikisht telefonatave ose kaloni te boksi i veshit duke bërë gjest</string>
@@ -3695,6 +3698,7 @@ Për të shkuar te ekrani kryesor në çfarëdo kohe, lëvizni lart nga qendra e
     <string name="oneplus_google_services_title">Shërbimet që lidhen me Google</string>
     <string name="oneplus_google_tts">Të dhënat e zërit të Google TTS</string>
     <string name="oneplus_gps_using">po përdor GPS</string>
+    <string name="oneplus_green">Jeshile</string>
     <string name="oneplus_h2_contributors">Kontribuesit e HydrogenOS</string>
     <string name="oneplus_hand_up_proximity_summary">Zgjoni ekranin kur e ngrini telefonin</string>
     <string name="oneplus_hand_up_proximity_title">Ngri ekranin</string>
@@ -3729,7 +3733,7 @@ Shënim: Shenja juaj e gishtit mund të jetë më pak e sigurt se një vizatim o
     <string name="oneplus_instrucitons">Udhëzim</string>
     <string name="oneplus_intelligently_select_best_wifi">Zgjidhni në mënyrë inteligjente Wi‑Fi më të mirë</string>
     <string name="oneplus_intelligently_select_best_wifi_summary">Zgjidhni në mënyrë inteligjente dhe lidhuni me Wi‑Fi më të mirë duke dalluar dhe analizuar lidhshmërinë e rrjeteve Wi‑Fi</string>
-    <string name="oneplus_intensely">Strong</string>
+    <string name="oneplus_intensely">E fortë</string>
     <string name="oneplus_is_turn_on_feature">Jeni të sigurt që doni ta aktivizoni këtë veçori?</string>
     <string name="oneplus_is_turn_on_feature_summary">"Kur është e aktivizuar, me raste mund të ndodhin situatat e mëposhtme:
 1.Disa pjesë të ekranit nuk janë normale
@@ -3752,7 +3756,7 @@ Shënim: Shenja juaj e gishtit mund të jetë më pak e sigurt se një vizatim o
     <string name="oneplus_legal_summary">Rregullorja për privatësinë, kontratat etj.</string>
     <string name="oneplus_levels">Nivelet</string>
     <string name="oneplus_lift_up_display">Ekrani gjithnjë ndezur ose ngrijeni ekranin</string>
-    <string name="oneplus_light">E lehtë</string>
+    <string name="oneplus_light">E çelët</string>
     <string name="oneplus_local_ringtone">Rington nga memoria e brendshme</string>
     <string name="oneplus_location_information">Përshkrimi i shërbimeve të vendndodhjes</string>
     <string name="oneplus_lock_after_timeout">Kyç automatikisht pas gjumit</string>
@@ -3770,6 +3774,7 @@ Shënim: Shenja juaj e gishtit mund të jetë më pak e sigurt se një vizatim o
     <string name="oneplus_lockpattern_need_to_unlock_wrong">Provoni përsëri</string>
     <string name="oneplus_lockpattern_too_many_failed_confirmation_attempts_header">Janë bërë tepër prova të gabuara!</string>
     <string name="oneplus_lockscreen_settings_title">Preferencat e ekranit të kyçur</string>
+    <string name="oneplus_magenta">E purpurt</string>
     <string name="oneplus_manage_virtual_keyboard">Menaxho tastierat</string>
     <string name="oneplus_max_shortcuts_tips">Mund të shtoni deri në 6 shkurtore</string>
     <string name="oneplus_media_ring_summary">Hesht volumin e medias</string>
@@ -3783,7 +3788,7 @@ Shënim: Shenja juaj e gishtit mund të jetë më pak e sigurt se një vizatim o
     <string name="oneplus_memc_support_no_apps">Nuk janë instaluar aplikacione që mbështeten</string>
     <string name="oneplus_memc_video">Zbutja e grafikës në lëvizje</string>
     <string name="oneplus_memc_video_effect">Efekti i kompensimit</string>
-    <string name="oneplus_memc_video_extreme">Ekstrem</string>
+    <string name="oneplus_memc_video_extreme">Ekstreme</string>
     <string name="oneplus_memc_video_nosupport_extreme_summary">Aktivizimi i opsionit ekstrem kërkon kalimin në rezolucion FHD+</string>
     <string name="oneplus_memc_video_nosupport_extreme_text">Kalim në rezolucion QHD+, kompensimi i grafikës së lëvizjeve është i kufizuar</string>
     <string name="oneplus_memc_video_smooth">I qetë</string>
@@ -3887,7 +3892,7 @@ Shënim: Shenja juaj e gishtit mund të jetë më pak e sigurt se një vizatim o
     <string name="oneplus_opfinger_input_saving_sub">Përfundoi, duke ruajtur të dhënat...</string>
     <string name="oneplus_opfinger_input_saving_title">Pritni të ruhet</string>
     <string name="oneplus_opfinger_input_setting_back_tips_sub">Ju lutemi vendoseni gishtin mbi sensorin e shenjës së gishtit. Pas çdo dridhjeje, ngrijeni gishtin dhe përsëriteni.</string>
-    <string name="oneplus_opfinger_input_setting_tips_sub">Ju lutemi vendoseni gishtin mbi sensorin e shenjës së gishtit. Pas çdo dridhjeje, ngrijeni gishtin dhe përsëriteni.</string>
+    <string name="oneplus_opfinger_input_setting_tips_sub">Place your finger on the fingerprint sensor. After every vibration, lift your finger and repeat.</string>
     <string name="oneplus_opfinger_input_setting_tips_title">Konfigurimi i shenjës së gishtit</string>
     <string name="oneplus_opfinger_input_up_sub">Ngrijeni gishtin, rregulloni pozicionin dhe uleni.</string>
     <string name="oneplus_opfinger_input_up_title">Ngrijeni gishtin</string>
@@ -4073,6 +4078,7 @@ Shënim: Shenja juaj e gishtit mund të jetë më pak e sigurt se një vizatim o
     <string name="oneplus_search_keyword_theme_settings">Personalizimi i ekranit të kyçur, figurat e sfondit, stili i orës, animacioni i shenjës së gishtit, Horizon Light, personalizimi i sistemit, ngjyrat e theksuara, forma, fonti, toni, paketa e ikonave, drita e ndriçimit, errësirë me nuancë, nuanca të gjalla</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">Personalizimi i ekranit të kyçur, figurat e sfondit, stili i orës, animacioni i shenjës së gishtit, Horizon Light, personalizimi i sistemit, ngjyrat e theksuara, forma, fonti, toni, paketa e ikonave, drita e ndriçimit, errësirë me nuancë, nuanca të gjalla, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_mcl_new">Personalizimi i ekranit të kyçur, figurat e sfondit, stili i orës, animacioni i shenjës së gishtit, Horizon Light, personalizimi i sistemit, ngjyrat e theksuara, forma, fonti, toni, paketa e ikonave, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_must_have">PERSONALIZIMI I EKRANIT TË KYÇUR, Figurat e sfondit, Stili i orës, PERSONALIZIMI I SISTEMIT, Ngjyra e theksit, Forma, Toni, Paketa e ikonave, Drita e ndriçimit, Errësirë me nuancë, Nuanca të gjalla</string>
     <string name="oneplus_search_keyword_theme_settings_new">Personalizimi i ekranit të kyçur, figurat e sfondit, stili i orës, animacioni i shenjës së gishtit, Horizon Light, personalizimi i sistemit, ngjyrat e theksuara, forma, fonti, toni, paketa e ikonave</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">Personalizimi i ekranit të kyçur, figurat e sfondit, stili i orës, animacioni i shenjës së gishtit, personalizimi i sistemit, ngjyrat e theksuara, forma, fonti, toni, paketa e ikonave, drita e ndriçimit, errësirë me nuancë, nuanca të gjalla</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Personalizimi i ekranit të kyçur, figurat e sfondit, stili i orës, animacioni i shenjës së gishtit, personalizimi i sistemit, ngjyrat e theksuara, forma, fonti, toni, paketa e ikonave</string>
@@ -4139,7 +4145,7 @@ Shënim:
     <string name="oneplus_silent_mode_on">Modaliteti i heshtur është aktiv</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Telefonatat dhe njoftimet do të heshten, përveç alarmeve</string>
     <string name="oneplus_silent_mode_summary">Telefonatat dhe njoftimet do të heshten, përveç alarmeve</string>
-    <string name="oneplus_silent_notifications_status_bar">Fshih njoftimin e heshtur te shiriti i statusit</string>
+    <string name="oneplus_silent_notifications_status_bar">Fshih njoftimet e heshtura te shiriti i statusit</string>
     <string name="oneplus_sim1_ringtone_switch">Karta SIM 1</string>
     <string name="oneplus_sim2_ringtone_switch">Karta SIM 2</string>
     <string name="oneplus_simcard_title">SIM</string>
@@ -4157,7 +4163,7 @@ Shënim:
     <string name="oneplus_sound_tuner">Dolby Atmos</string>
     <string name="oneplus_status_summary">Numri i telefonit, sinjali, etj.</string>
     <string name="oneplus_stop_run">Ndalo me forcë</string>
-    <string name="oneplus_storage">STORAGE</string>
+    <string name="oneplus_storage">MEMORIA</string>
     <string name="oneplus_sunrise_sunset">Aktivizo automatikisht nga perëndimi i diellit deri në lindje</string>
     <string name="oneplus_support_apps">APLIKACIONET E MBËSHTETURA</string>
     <string name="oneplus_support_summary">Këshilla dhe FAQ lidhur me përdorimin e pajisjes</string>
@@ -4166,8 +4172,10 @@ Shënim:
     <string name="oneplus_suspension_notice">Njoftime</string>
     <string name="oneplus_suspension_notice_summary">Lejoni që aplikacionet të shfaqin njoftime</string>
     <string name="oneplus_switch">OnePlus Switch</string>
-    <string name="oneplus_switch_resolution_kill_process_confirm">Shkëmbe</string>
+    <string name="oneplus_switch_resolution_kill_process_confirm">Ndrysho</string>
     <string name="oneplus_switch_resolution_kill_process_tips">Ndryshimi i rezolucionit mund të bëjë që disa aplikacione në sfond të mbyllen. Jeni të sigurt që doni ta ndryshoni?</string>
+    <string name="oneplus_switch_sa_option">Modaliteti NSA + SA</string>
+    <string name="oneplus_switch_sa_option_summary">Hyni automatikisht në modalitetin e rrjetit NSA ose SA në varësi të lidhjes 5G të rrjetit dhe cilësimeve të telefonit. Nëse çaktivizohet, do të jetë e disponueshme vetëm hyrja në rrjetin NSA.</string>
     <string name="oneplus_switch_screen_lock_type">Duke ndryshuar mënyrën e kyçjes së ekranit, ju lutemi prisni...</string>
     <string name="oneplus_system_data_summary">Duke përfshirë informacionet e llogarisë, kontaktet, të dhënat e aplikacioneve</string>
     <string name="oneplus_system_data_title">Të dhënat e sistemit</string>
@@ -4185,7 +4193,7 @@ Shënim:
     <string name="oneplus_theme_accent_color_select">Zgjidh një ngjyrë theksi</string>
     <string name="oneplus_theme_apply_summary">Pasi të keni aplikuar këtë temë, opsionet tuaja të personalizimit do të mbishkelen</string>
     <string name="oneplus_theme_apply_title">Doni që ta aplikoni këtë temë?</string>
-    <string name="oneplus_theme_clock">Stili i orës</string>
+    <string name="oneplus_theme_clock">Ora në ekranin e ambientit</string>
     <string name="oneplus_theme_clock_snake_action">NDIZ EKRANIN E AMBIENTIT</string>
     <string name="oneplus_theme_clock_snake_tip">Kjo veçori do të jetë e disponueshme kur ekrani i ambientit të jetë i ndezur</string>
     <string name="oneplus_theme_colorpicker_colorvalue">KODI I NGJYRËS</string>
@@ -4199,7 +4207,7 @@ Shënim:
     <string name="oneplus_theme_font">Fonti</string>
     <string name="oneplus_theme_font_content">Ndani teknologjinë më të mirë në botë, dorë për dore me ju</string>
     <string name="oneplus_theme_icon_pack">Paketat e ikonave</string>
-    <string name="oneplus_theme_lock_screen_customization">PERSONALIZIMI I EKRANIT TË KYÇUR</string>
+    <string name="oneplus_theme_lock_screen_customization">EKRANI I KYÇUR DHE EKRANI I AMBIENTIT</string>
     <string name="oneplus_theme_preset">Tema e caktuar paraprakisht</string>
     <string name="oneplus_theme_preset_color">Nuanca vibrante</string>
     <string name="oneplus_theme_preset_dark">Errësirë me nuancë</string>
@@ -4215,9 +4223,9 @@ Shënim:
     <string name="oneplus_theme_shape_effect_title">Zgjidh formën</string>
     <string name="oneplus_theme_system_customization">PERSONALIZIMI I SISTEMIT</string>
     <string name="oneplus_theme_tone">Toni</string>
-    <string name="oneplus_theme_tone_effect_color">Shumëngjyrësh</string>
+    <string name="oneplus_theme_tone_effect_color">Shumëngjyrëshe</string>
     <string name="oneplus_theme_tone_effect_dark">E errët</string>
-    <string name="oneplus_theme_tone_effect_light">E lehtë</string>
+    <string name="oneplus_theme_tone_effect_light">E çelët</string>
     <string name="oneplus_theme_tone_effect_title">Zgjidh tonin</string>
     <string name="oneplus_theme_wallpaper">Figurat e sfondit</string>
     <string name="oneplus_three_screenshots_enable_summary">Lëvizni me tre gishta mbi ekran për të bërë një foto ekrani</string>
@@ -4238,6 +4246,7 @@ Shënim:
     <string name="oneplus_top_level_buttons_and_gestures_summary">Alert slider, shiriti i navigimit &amp; gjestet</string>
     <string name="oneplus_top_level_cloud_h2_summary">Sinkronizo të dhënat me cloud, Gjej telefonin tim</string>
     <string name="oneplus_top_level_cloud_o2_summary">Sinkronizo të dhënat me cloud</string>
+    <string name="oneplus_top_level_connected_android_auto_summary">NFC, Android Auto, transmetim, shtyp &amp; paguaj</string>
     <string name="oneplus_top_level_connected_summary">NFC, transmetim, shtyp &amp; paguaj</string>
     <string name="oneplus_top_level_display_summary">Shiriti i statusit, ekrani i ambientit, rehatia e shikimit, modaliteti i leximit</string>
     <string name="oneplus_top_level_network_summary">SIM, rrjeti celular, përdorimi i internetit celular, hotspot</string>
@@ -4326,6 +4335,7 @@ Vendosja e rrjetit si të fshehur nuk do të ndryshojë cilësimet e routerit."<
     <string name="onplus_software_version_info">Versioni i softuerit</string>
     <string name="onscreen_keyboard_settings_summary">Cilësimet e tastierës në ekran</string>
     <string name="op_advanced_settings">Të avancuara</string>
+    <string name="op_already_know">E mora</string>
     <string name="op_android_mode_cannot_change_color_accent">Tema standarde mund të përdorë vetëm temën e ngjyrave të sistemit</string>
     <string name="op_aod_parsons_info_button">Në rregull</string>
     <string name="op_aod_parsons_info_message">"Kur hapet, krijohet një kryevepër.
@@ -4381,6 +4391,7 @@ Insight, i krijuar së bashku nga OnePlus &amp; studentët nga Shkolla e Dizajni
     <string name="op_display_advanced_settings_summary_5">Shpejtësia e rifreskimit</string>
     <string name="op_display_advanced_settings_summary_6">Kalibrimi i ekranit, rezolucioni, shpejtësia e rifreskimit, pjesa e shfaqjes së kamerës përpara</string>
     <string name="op_display_advanced_settings_summary_7">Kalibrimi i ekranit, shpejtësia e rifreskimit, pjesa e shfaqjes së kamerës përpara</string>
+    <string name="op_display_advanced_settings_summary_8">Shpejtësia e rifreskimit, pjesa e shfaqjes së kamerës përpara</string>
     <string name="op_display_graphics_enhancement_engine">MOTORI I PËRMIRËSIMIT TË VIDEOVE</string>
     <string name="op_display_motion_graphics_compensation">Zbutja e grafikës në lëvizje</string>
     <string name="op_display_motion_graphics_compensation_summary">Përmirëso shpejtësinë e kuadrove të grafikës, video më e qetë dhe efekte më bukura në lojëra</string>
@@ -4409,6 +4420,8 @@ Zhbllokimi me shenjën e gishtit mund të mos jetë i pajtueshëm me mbrojtës e
     <string name="op_high_power_app_manager">Aplikacionet me përdorim të lartë energjie</string>
     <string name="op_history_toggled_on_summary">Njoftimet tuaja të fundit do të shfaqen këtu</string>
     <string name="op_keep_location_services">Për të gjetur dhe ndjekur stacionet e karikimit pranë, mbajini të aktivizuara shërbimet e vendndodhjes</string>
+    <string name="op_lab_dc_still_on">ENDE AKTIVE</string>
+    <string name="op_lab_dc_warn_message">Kur errësimi DC është i aktivizuar, në disa raste mund të shfaqen ngjyra jo të njëtrajtshme ose jonormale. Jeni i sigurt që doni ta aktivizoni?</string>
     <string name="op_light_mode_title">E çelët</string>
     <string name="op_linked_launch_summary">Menaxhoni aplikacionet që hapen në sfond</string>
     <string name="op_linked_launch_title">Hapja automatike e aplikacioneve</string>
@@ -4424,6 +4437,9 @@ Zhbllokimi me shenjën e gishtit mund të mos jetë i pajtueshëm me mbrojtës e
     <string name="op_notification_history_summary">Shfaq njoftimet e fundit</string>
     <string name="op_oneplus_roaming_summary">Ofro shërbime për aksesin global në internet</string>
     <string name="op_oneplus_roaming_title">OnePlus Roaming</string>
+    <string name="op_powerkey_menu_cards_description">Kur është e aktivizuar, modaliteti i pagesës dhe informacionet e imbarkimit do të shfaqen në mënyrë të sigurt</string>
+    <string name="op_powerkey_menu_device_controller_description">Aktivizoni për të përdorur kontrollorin e pajisjes përkatëse</string>
+    <string name="op_powerkey_menu_lock_display_title">Ekrani i kyçur</string>
     <string name="op_primary_charm_purple_label">Lelja e thellë</string>
     <string name="op_primary_dark_green_label">Jeshile e errët</string>
     <string name="op_primary_default_label">Blu</string>
@@ -4453,6 +4469,9 @@ Zhbllokimi me shenjën e gishtit mund të mos jetë i pajtueshëm me mbrojtës e
     <string name="op_starwar_mode_cannot_change_color_accent">Tema Star Wars mund të përdorë vetëm temën e ngjyrave të sistemit</string>
     <string name="op_starwar_mode_title">Star Wars</string>
     <string name="op_storage">Ruajtja &amp; Memoria</string>
+    <string name="op_switch_record_info">U kopjua %2$s në %1$s</string>
+    <string name="op_switch_record_none">Nuk ka regjistrime të migrimit të të dhënave ende</string>
+    <string name="op_switch_record_title">Regjistrimet e migrimit të të dhënave</string>
     <string name="op_system_dashboard_summary">Gjuhët, ora, rivendosje, përditësime</string>
     <string name="op_tcp_timestamps_randomization_dialog_title">Zgjidhni flamurin e stampave orare tcp të rastësishme</string>
     <string name="op_tcp_timestamps_randomization_title">Flamur stampe orare TCP i rastësishëm</string>
@@ -4460,7 +4479,9 @@ Zhbllokimi me shenjën e gishtit mund të mos jetë i pajtueshëm me mbrojtës e
     <string name="op_theme_2__title">The Avengers</string>
     <string name="op_theme_3_cannot_change_color_accent">Tema McLaren mund të përdorë vetëm temën e ngjyrave të sistemit</string>
     <string name="op_theme_3_title">McLaren</string>
+    <string name="op_theme_clock_preview_title">Ora në ekranin e ambientit</string>
     <string name="op_theme_entrance_summary">Figurat e sfondit, ngjyra e theksit, fonti</string>
+    <string name="op_theme_lock_screen_customization">EKRANI I KYÇUR DHE EKRANI I AMBIENTIT</string>
     <string name="op_theme_mode_title">Tema</string>
     <string name="op_use_cast">Përdor transmetimin</string>
     <string name="op_user_manual_settings">Manuali i përdorimit</string>
@@ -4527,6 +4548,9 @@ Zhbllokimi me shenjën e gishtit mund të mos jetë i pajtueshëm me mbrojtës e
     <string name="permission_bar_chart_details">Shikoji të gjitha te \"Paneli\"</string>
     <string name="permission_bar_chart_empty_text">0 aplikacione përdorën autorizimet</string>
     <string name="permission_bar_chart_title">Përdorimi i autorizimeve në 24 orët e fundit</string>
+    <string name="permission_btn_text_denied">Dil</string>
+    <string name="permission_btn_text_grant">Në rregull</string>
+    <string name="permission_dialog_title">Deklaratë për lejen</string>
     <string name="permissions_label">Lejet</string>
     <string name="permit_draw_overlay">Lejo shfaqjen mbi aplikacionet e tjera</string>
     <string name="permit_manage_external_storage">Lejo qasjen për të menaxhuar të gjithë skedarët</string>
@@ -5194,13 +5218,16 @@ Shënim. Nuk mund ta përdorësh gjurmën tënde të gishtit për ta shkyçur k�
     <string name="select_all">Përzgjidhi të gjtiha</string>
     <string name="select_application">Zgjidh aplikacionin</string>
     <string name="select_automatically">Zgjidh automatikisht rrjetin</string>
+    <string name="select_day">Zgjidh muajin dhe ditën</string>
     <string name="select_device_admin_msg">Apl. e admin. të pajisjes</string>
     <string name="select_function">Zgjidhni funksionin</string>
+    <string name="select_hours">Zgjidh orët</string>
     <string name="select_invalid_bug_report_handler_toast_text">Kjo zgjedhje nuk është më e vlefshme. Provo përsëri.</string>
     <string name="select_logd_size_dialog_title">Përzgjidh madhësitë e regjistruesit</string>
     <string name="select_logd_size_title">Madhësitë e regjistruesit</string>
     <string name="select_logpersist_dialog_title">Zgjidh memoriet e regjistrit për të ruajtur vazhdimisht në pajisje</string>
     <string name="select_logpersist_title">Ruaj të dhënat e regjistruesit vazhdimisht në pajisje</string>
+    <string name="select_minutes">Zgjidh minutat</string>
     <string name="select_private_dns_configuration_dialog_title">Zgjidh modalitetin e DNS-së private</string>
     <string name="select_private_dns_configuration_title">DNS-ja private</string>
     <string name="select_sim_card">Zgjidhni kartën SIM</string>
@@ -5213,6 +5240,7 @@ Shënim. Nuk mund ta përdorësh gjurmën tënde të gishtit për ta shkyçur k�
     <string name="select_webview_provider_dialog_title">Cakto zbatimin e WebView</string>
     <string name="select_webview_provider_title">Zbatimi i WebView</string>
     <string name="select_webview_provider_toast_text">Kjo zgjedhje nuk është më e vlefshme. Provo përsëri.</string>
+    <string name="select_year">Zgjidh vitin</string>
     <string name="sensors_off_quick_settings_title">Sensorët joaktivë</string>
     <string name="service_background_processes">%1$s të lira</string>
     <string name="service_does_not_exists_in_this_area">Shërbimi nuk ekziston në këtë zonë</string>
@@ -5451,7 +5479,7 @@ Këtë po e bën këtë të mundur një kredencial i besuar i instaluar në paji
     <string name="status_bar_settings_cast_title">Roli</string>
     <string name="status_bar_settings_cellular_title">Interneti celular</string>
     <string name="status_bar_settings_dnd_title">Mos më shqetëso</string>
-    <string name="status_bar_settings_headset_title">Kufja</string>
+    <string name="status_bar_settings_headset_title">Kufje</string>
     <string name="status_bar_settings_hotspot_title">Hotspot</string>
     <string name="status_bar_settings_network_speed_title">Shfaq shpejtësinë e rrjetit</string>
     <string name="status_bar_settings_time_title">Koha</string>
@@ -5815,6 +5843,11 @@ Një metodë e Google për të sinkronizuar të dhënat për të të lejuar qasj
     <string name="theme_switch_description">Jeni duke e ndryshuar temën në %1$s</string>
     <string name="theme_switch_dialog_title">Ndrysho temën e sistemit</string>
     <string name="time_format_category_title">Formati i orës</string>
+    <string name="time_picker_header_text">Vendos orën</string>
+    <string name="time_picker_hour_label">orë</string>
+    <string name="time_picker_input_error">Vendosni një orë të vlefshme</string>
+    <string name="time_picker_minute_label">minutë</string>
+    <string name="time_picker_prompt_label">Shkruaj orën</string>
     <string name="time_picker_title">Ora</string>
     <string name="time_spent_in_app_pref_title">Koha para ekranit</string>
     <string name="time_unit_just_now">Pikërisht tani</string>
@@ -5851,7 +5884,7 @@ Një metodë e Google për të sinkronizuar të dhënat për të të lejuar qasj
     <string name="traffic_day_dimension" />
     <string name="traffic_limit_value_title">Limiti i internetit celular</string>
     <string name="traffic_package_used">Interneti celular i përdorur</string>
-    <string name="traffic_reset_day_summary">Cikli mujor fillon më %1$s të çdo muaji</string>
+    <string name="traffic_reset_day_summary">Monthly cycle starts on the %1$s of every month</string>
     <string name="traffic_reset_day_title">Cikli i faturimit</string>
     <string name="traffic_set_limit_description_vzw">Çaktivizo lidhjen e internetit celular kur kam përdorur këtë sasi interneti celular</string>
     <string name="traffic_set_limit_title">Vendos limitin e internetit celular</string>
@@ -5868,7 +5901,7 @@ Një metodë e Google për të sinkronizuar të dhënat për të të lejuar qasj
     <string name="traffic_usage_runout_title_vzw">Interneti celular tani është çaktivizuar</string>
     <string name="traffic_usage_settings">Cilësimet e planit të internetit celular</string>
     <string name="traffic_usage_warn_title">Paralajmërim për përdorimin e internetit celular</string>
-    <string name="traffic_used_summary">" %1$s është përdorur në këtë cikël faturimi"</string>
+    <string name="traffic_used_summary">" %1$s is used in the current billing cycle"</string>
     <string name="traffic_used_title">Sasia e përdorur e internetit celular</string>
     <string name="traffic_warn_value_title">Paralajmërim për internetin celular</string>
     <string name="transition_animation_scale_title">Animacioni kalimtar</string>
@@ -5964,6 +5997,10 @@ Një metodë e Google për të sinkronizuar të dhënat për të të lejuar qasj
     <string name="uninstallapps_toast_message">aplikacionet janë fshirë</string>
     <string name="uninstalling">Duke çinstaluar…</string>
     <string name="uninstalling_notification_channel">Çinstalime në punë</string>
+    <string name="units_one">GB/MB (Ndryshim automatik)</string>
+    <string name="units_three">Vetëm MB</string>
+    <string name="units_title">Trego njësitë</string>
+    <string name="units_two">Vetëm GB</string>
     <string name="unknown">I panjohur</string>
     <string name="unknown_app">Aplikacion i panjohur</string>
     <string name="unknown_unavailability_setting_summary">Cilësimi nuk ofrohet</string>
@@ -6605,6 +6642,8 @@ Caktimi i rrjetit si të fshehur nuk do të ndryshojë cilësimet e router-it."<
     <string name="wifi_no_user_cert_warning">Kërkohet certifikimi.</string>
     <string name="wifi_not_in_range">Nuk është brenda rrezes</string>
     <string name="wifi_not_in_range_message">Rrjeti nuk është brenda rrezes</string>
+    <string name="wifi_notification">"Njoftim Wi-Fi "</string>
+    <string name="wifi_notification_summary">Më njofto kur ka Wi-Fi në dispozicion</string>
     <string name="wifi_notify_open_networks">Njofto për rrjetet publike</string>
     <string name="wifi_notify_open_networks_summary">Njofto kur ofrohet një rrjet publik me cilësi të lartë</string>
     <string name="wifi_on_time">Koha e aktivizimit të Wi‑Fi</string>

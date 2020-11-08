@@ -2,9 +2,20 @@
 .super Lcom/android/settings/notification/zen/AbstractZenModePreferenceController;
 .source "ZenModeConversationsImagePreferenceController.java"
 
+# interfaces
+.implements Lcom/android/settingslib/core/lifecycle/events/OnDestroy;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/android/settings/notification/zen/ZenModeConversationsImagePreferenceController$LoadConversationsTask;
+    }
+.end annotation
+
 
 # instance fields
-.field private final mConversationDrawables:Ljava/util/ArrayList;
+.field private mConversationDrawables:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -17,6 +28,8 @@
 .field private final mIconOffsetPx:I
 
 .field private final mIconSizePx:I
+
+.field private mLoadConversationsTask:Lcom/android/settings/notification/zen/ZenModeConversationsImagePreferenceController$LoadConversationsTask;
 
 .field private final mNotificationBackend:Lcom/android/settings/notification/NotificationBackend;
 
@@ -113,13 +126,15 @@
 .method private loadConversations()V
     .locals 1
 
-    new-instance v0, Lcom/android/settings/notification/zen/ZenModeConversationsImagePreferenceController$1;
+    new-instance v0, Lcom/android/settings/notification/zen/ZenModeConversationsImagePreferenceController$LoadConversationsTask;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/notification/zen/ZenModeConversationsImagePreferenceController$1;-><init>(Lcom/android/settings/notification/zen/ZenModeConversationsImagePreferenceController;)V
+    invoke-direct {v0, p0}, Lcom/android/settings/notification/zen/ZenModeConversationsImagePreferenceController$LoadConversationsTask;-><init>(Lcom/android/settings/notification/zen/ZenModeConversationsImagePreferenceController;)V
+
+    iput-object v0, p0, Lcom/android/settings/notification/zen/ZenModeConversationsImagePreferenceController;->mLoadConversationsTask:Lcom/android/settings/notification/zen/ZenModeConversationsImagePreferenceController$LoadConversationsTask;
 
     const/4 p0, 0x0
 
-    new-array p0, p0, [Ljava/lang/Void;
+    new-array p0, p0, [Ljava/lang/Object;
 
     invoke-virtual {v0, p0}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
@@ -172,6 +187,18 @@
     const/4 p0, 0x1
 
     return p0
+.end method
+
+.method public onDestroy()V
+    .locals 1
+
+    iget-object p0, p0, Lcom/android/settings/notification/zen/ZenModeConversationsImagePreferenceController;->mLoadConversationsTask:Lcom/android/settings/notification/zen/ZenModeConversationsImagePreferenceController$LoadConversationsTask;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Landroid/os/AsyncTask;->cancel(Z)Z
+
+    return-void
 .end method
 
 .method public updateState(Landroidx/preference/Preference;)V

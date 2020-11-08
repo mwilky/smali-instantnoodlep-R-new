@@ -6,6 +6,7 @@
 .implements Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment$Callback;
 .implements Lcom/android/settingslib/core/lifecycle/LifecycleObserver;
 .implements Lcom/android/settingslib/core/lifecycle/events/OnStart;
+.implements Lcom/android/settingslib/core/lifecycle/events/OnDestroy;
 
 
 # static fields
@@ -17,11 +18,11 @@
 
 .field private mHeader:Lcom/android/settingslib/widget/LayoutPreference;
 
-.field private final mLifecycle:Lcom/android/settingslib/core/lifecycle/Lifecycle;
+.field private mLifecycle:Lcom/android/settingslib/core/lifecycle/Lifecycle;
 
 .field private final mPackageName:Ljava/lang/String;
 
-.field private final mParent:Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;
+.field private mParent:Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;
 
 
 # direct methods
@@ -211,6 +212,20 @@
     move-result p0
 
     return p0
+.end method
+
+.method public onDestroy()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/android/settings/applications/appinfo/AppHeaderViewPreferenceController;->mParent:Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;
+
+    iput-object v0, p0, Lcom/android/settings/applications/appinfo/AppHeaderViewPreferenceController;->mLifecycle:Lcom/android/settingslib/core/lifecycle/Lifecycle;
+
+    iput-object v0, p0, Lcom/android/settings/applications/appinfo/AppHeaderViewPreferenceController;->mHeader:Lcom/android/settingslib/widget/LayoutPreference;
+
+    return-void
 .end method
 
 .method public onStart()V

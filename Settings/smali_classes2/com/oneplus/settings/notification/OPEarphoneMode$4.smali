@@ -26,7 +26,7 @@
 
 # virtual methods
 .method public getNonIndexableKeys(Landroid/content/Context;)Ljava/util/List;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -44,24 +44,24 @@
 
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isO2()Z
 
-    move-result v0
+    move-result p1
 
-    if-nez v0, :cond_0
+    if-nez p1, :cond_0
 
-    const-string v0, "notification_ringtone"
+    const-string p1, "notification_ringtone"
 
-    invoke-interface {p0, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    const-string v0, "google_tts"
+    const-string p1, "google_tts"
 
-    invoke-interface {p0, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_0
-    invoke-static {p1}, Lcom/oneplus/settings/utils/OPUtils;->hasOnePlusDialer(Landroid/content/Context;)Z
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportGoogleCommSuit()Z
 
     move-result p1
 
-    if-nez p1, :cond_1
+    if-eqz p1, :cond_1
 
     const-string p1, "call_information_broadcast"
 

@@ -77,7 +77,7 @@
 
     move-result-object p0
 
-    const v0, 0x10e008c
+    const v0, 0x10e008d
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -103,7 +103,7 @@
 
     move-result-object p0
 
-    const v0, 0x10e008c
+    const v0, 0x10e008d
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -139,7 +139,7 @@
 
     move-result-object p0
 
-    const v0, 0x10e008c
+    const v0, 0x10e008d
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -249,8 +249,19 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
+    invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/content/Intent;->resolveActivity(Landroid/content/pm/PackageManager;)Landroid/content/ComponentName;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
     invoke-virtual {p0, p1}, Landroidx/fragment/app/Fragment;->startActivity(Landroid/content/Intent;)V
 
+    :cond_0
     return-void
 .end method
 
@@ -431,7 +442,7 @@
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 7
+    .locals 5
 
     invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
@@ -546,32 +557,32 @@
 
     move-result v3
 
-    const/4 v4, 0x0
-
-    const/4 v5, 0x1
-
     if-eqz v3, :cond_1
 
     iget-object v3, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mGestureNavigationBar:Lcom/android/settings/widget/RadioButtonPreference;
 
-    sget v6, Lcom/android/settings/R$string;->oneplus_gesture_navigation_bar_title_for_deprecated:I
+    sget v4, Lcom/android/settings/R$string;->oneplus_gesture_navigation_bar_title_for_deprecated:I
 
-    invoke-virtual {v3, v6}, Landroidx/preference/Preference;->setTitle(I)V
+    invoke-virtual {v3, v4}, Landroidx/preference/Preference;->setTitle(I)V
 
     iget-object v3, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mGestureNavigationBar:Lcom/android/settings/widget/RadioButtonPreference;
 
-    sget v6, Lcom/android/settings/R$string;->oneplus_gesture_navigation_bar_summary_for_deprecated:I
+    sget v4, Lcom/android/settings/R$string;->oneplus_gesture_navigation_bar_summary_for_deprecated:I
 
-    invoke-virtual {v3, v6}, Landroidx/preference/Preference;->setSummary(I)V
+    invoke-virtual {v3, v4}, Landroidx/preference/Preference;->setSummary(I)V
 
     iget-object v3, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mGestureNavigationBarDeprecated:Lcom/android/settings/widget/RadioButtonPreference;
 
-    invoke-virtual {v3, v5}, Landroidx/preference/Preference;->setVisible(Z)V
+    const/4 v4, 0x1
+
+    invoke-virtual {v3, v4}, Landroidx/preference/Preference;->setVisible(Z)V
 
     goto :goto_0
 
     :cond_1
     iget-object v3, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mGestureNavigationBarDeprecated:Lcom/android/settings/widget/RadioButtonPreference;
+
+    const/4 v4, 0x0
 
     invoke-virtual {v3, v4}, Landroidx/preference/Preference;->setVisible(Z)V
 
@@ -586,9 +597,9 @@
 
     iget-object v3, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mCustomization:Landroidx/preference/Preference;
 
-    sget v6, Lcom/android/settings/R$string;->oneplus_customization_summary_hide_navbar:I
+    sget v4, Lcom/android/settings/R$string;->oneplus_customization_summary_hide_navbar:I
 
-    invoke-virtual {v3, v6}, Landroidx/preference/Preference;->setSummary(I)V
+    invoke-virtual {v3, v4}, Landroidx/preference/Preference;->setSummary(I)V
 
     :cond_2
     iget-object v3, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mAlwaysShowNavigationBar:Lcom/android/settings/widget/RadioButtonPreference;
@@ -629,19 +640,19 @@
 
     iput-object v3, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mbuttonLayoutPref:Lcom/android/settingslib/widget/LayoutPreference;
 
-    sget v6, Lcom/android/settings/R$id;->learn_gesture_button:I
+    sget v4, Lcom/android/settings/R$id;->learn_gesture_button:I
 
-    invoke-virtual {v3, v6}, Lcom/android/settingslib/widget/LayoutPreference;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v3, v4}, Lcom/android/settingslib/widget/LayoutPreference;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
     check-cast v3, Landroid/widget/Button;
 
-    new-instance v6, Lcom/oneplus/settings/navigationbargestures/-$$Lambda$OPNavigationBarGesturesSettings$SqMDUtfMPpqX0AIjfoq9awLuak8;
+    new-instance v4, Lcom/oneplus/settings/navigationbargestures/-$$Lambda$OPNavigationBarGesturesSettings$SqMDUtfMPpqX0AIjfoq9awLuak8;
 
-    invoke-direct {v6, p0}, Lcom/oneplus/settings/navigationbargestures/-$$Lambda$OPNavigationBarGesturesSettings$SqMDUtfMPpqX0AIjfoq9awLuak8;-><init>(Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;)V
+    invoke-direct {v4, p0}, Lcom/oneplus/settings/navigationbargestures/-$$Lambda$OPNavigationBarGesturesSettings$SqMDUtfMPpqX0AIjfoq9awLuak8;-><init>(Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;)V
 
-    invoke-virtual {v3, v6}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v3, v4}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     iget-object v3, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mContext:Landroid/content/Context;
 
@@ -659,128 +670,39 @@
 
     if-nez v3, :cond_3
 
-    iget-object v3, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mAlwaysShowNavigationBar:Lcom/android/settings/widget/RadioButtonPreference;
-
-    invoke-virtual {v3, v5}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
-
-    iget-object v3, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mCustomization:Landroidx/preference/Preference;
-
-    invoke-virtual {v3, v5}, Landroidx/preference/Preference;->setVisible(Z)V
-
-    iget-object v3, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mGestureHiddenBar:Landroidx/preference/SwitchPreference;
-
-    invoke-virtual {v3, v4}, Landroidx/preference/Preference;->setVisible(Z)V
-
-    iget-object v3, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mbuttonLayoutPref:Lcom/android/settingslib/widget/LayoutPreference;
-
-    invoke-virtual {v3, v4}, Landroidx/preference/Preference;->setVisible(Z)V
+    iput-object p1, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mEnterStatus:Ljava/lang/String;
 
     goto :goto_1
 
     :cond_3
-    iget-object v3, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mContext:Landroid/content/Context;
+    iget-object p1, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mContext:Landroid/content/Context;
 
-    invoke-static {v3}, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->isGesturalEnabled(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->isGesturalEnabled(Landroid/content/Context;)Z
 
-    move-result v3
+    move-result p1
 
-    if-eqz v3, :cond_4
+    if-eqz p1, :cond_4
 
-    iget-object v3, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mContext:Landroid/content/Context;
+    iget-object p1, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mContext:Landroid/content/Context;
 
-    invoke-static {v3}, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->isSideEnabled(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->isHideBarEnabled(Landroid/content/Context;)Z
 
-    move-result v3
+    move-result p1
 
-    if-eqz v3, :cond_4
+    if-nez p1, :cond_4
 
-    iget-object v3, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mGestureNavigationBar:Lcom/android/settings/widget/RadioButtonPreference;
-
-    invoke-virtual {v3, v5}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
-
-    iget-object v3, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mCustomization:Landroidx/preference/Preference;
-
-    invoke-virtual {v3, v4}, Landroidx/preference/Preference;->setVisible(Z)V
-
-    iget-object v3, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mGestureHiddenBar:Landroidx/preference/SwitchPreference;
-
-    invoke-virtual {v3, v5}, Landroidx/preference/Preference;->setVisible(Z)V
-
-    iget-object v3, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mGestureHiddenBar:Landroidx/preference/SwitchPreference;
-
-    iget-object v4, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mContext:Landroid/content/Context;
-
-    invoke-static {v4}, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->isHideBarEnabled(Landroid/content/Context;)Z
-
-    move-result v4
-
-    invoke-virtual {v3, v4}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
-
-    iget-object v3, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mbuttonLayoutPref:Lcom/android/settingslib/widget/LayoutPreference;
-
-    invoke-virtual {v3, v5}, Landroidx/preference/Preference;->setVisible(Z)V
+    iput-object v0, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mEnterStatus:Ljava/lang/String;
 
     goto :goto_1
 
     :cond_4
-    iget-object v3, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mContext:Landroid/content/Context;
-
-    invoke-static {v3}, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->isGesturalEnabled(Landroid/content/Context;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_5
-
-    iget-object v3, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mContext:Landroid/content/Context;
-
-    invoke-static {v3}, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->isSideEnabled(Landroid/content/Context;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_5
-
-    iget-object v3, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mGestureNavigationBarDeprecated:Lcom/android/settings/widget/RadioButtonPreference;
-
-    invoke-virtual {v3, v5}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
-
-    iget-object v3, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mCustomSettingsCategory:Landroidx/preference/PreferenceCategory;
-
-    invoke-virtual {v3, v4}, Landroidx/preference/Preference;->setVisible(Z)V
-
-    iget-object v3, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mbuttonLayoutPref:Lcom/android/settingslib/widget/LayoutPreference;
-
-    invoke-virtual {v3, v4}, Landroidx/preference/Preference;->setVisible(Z)V
-
-    :cond_5
-    :goto_1
-    iget-object v3, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mContext:Landroid/content/Context;
-
-    invoke-static {v3}, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->isGesturalEnabled(Landroid/content/Context;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_6
-
-    iget-object v3, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mContext:Landroid/content/Context;
-
-    invoke-static {v3}, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->is2ButtonEnabled(Landroid/content/Context;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_6
-
-    iput-object p1, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mEnterStatus:Ljava/lang/String;
-
-    goto :goto_2
-
-    :cond_6
     iget-object p1, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mContext:Landroid/content/Context;
 
     invoke-static {p1}, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->isGesturalEnabled(Landroid/content/Context;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_7
+    if-eqz p1, :cond_5
 
     iget-object p1, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mContext:Landroid/content/Context;
 
@@ -788,37 +710,16 @@
 
     move-result p1
 
-    if-nez p1, :cond_7
-
-    iput-object v0, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mEnterStatus:Ljava/lang/String;
-
-    goto :goto_2
-
-    :cond_7
-    iget-object p1, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mContext:Landroid/content/Context;
-
-    invoke-static {p1}, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->isGesturalEnabled(Landroid/content/Context;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_8
-
-    iget-object p1, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mContext:Landroid/content/Context;
-
-    invoke-static {p1}, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->isHideBarEnabled(Landroid/content/Context;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_8
+    if-eqz p1, :cond_5
 
     iput-object v2, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mEnterStatus:Ljava/lang/String;
 
-    goto :goto_2
+    goto :goto_1
 
-    :cond_8
+    :cond_5
     iput-object v1, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mEnterStatus:Ljava/lang/String;
 
-    :goto_2
+    :goto_1
     return-void
 .end method
 
@@ -1366,13 +1267,127 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object p0, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mOPPhoneControlWayCategory:Lcom/oneplus/settings/ui/OPPhoneControlWayCategory;
+    iget-object v0, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mOPPhoneControlWayCategory:Lcom/oneplus/settings/ui/OPPhoneControlWayCategory;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/oneplus/settings/ui/OPPhoneControlWayCategory;->startAnim()V
+    invoke-virtual {v0}, Lcom/oneplus/settings/ui/OPPhoneControlWayCategory;->startAnim()V
 
     :cond_0
+    iget-object v0, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->isGesturalEnabled(Landroid/content/Context;)Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->is2ButtonEnabled(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mAlwaysShowNavigationBar:Lcom/android/settings/widget/RadioButtonPreference;
+
+    invoke-virtual {v0, v2}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+
+    iget-object v0, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mCustomization:Landroidx/preference/Preference;
+
+    invoke-virtual {v0, v2}, Landroidx/preference/Preference;->setVisible(Z)V
+
+    iget-object v0, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mGestureHiddenBar:Landroidx/preference/SwitchPreference;
+
+    invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setVisible(Z)V
+
+    iget-object p0, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mbuttonLayoutPref:Lcom/android/settingslib/widget/LayoutPreference;
+
+    invoke-virtual {p0, v1}, Landroidx/preference/Preference;->setVisible(Z)V
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->isGesturalEnabled(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->isSideEnabled(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mGestureNavigationBar:Lcom/android/settings/widget/RadioButtonPreference;
+
+    invoke-virtual {v0, v2}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+
+    iget-object v0, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mCustomization:Landroidx/preference/Preference;
+
+    invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setVisible(Z)V
+
+    iget-object v0, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mGestureHiddenBar:Landroidx/preference/SwitchPreference;
+
+    invoke-virtual {v0, v2}, Landroidx/preference/Preference;->setVisible(Z)V
+
+    iget-object v0, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mGestureHiddenBar:Landroidx/preference/SwitchPreference;
+
+    iget-object v1, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mContext:Landroid/content/Context;
+
+    invoke-static {v1}, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->isHideBarEnabled(Landroid/content/Context;)Z
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+
+    iget-object p0, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mbuttonLayoutPref:Lcom/android/settingslib/widget/LayoutPreference;
+
+    invoke-virtual {p0, v2}, Landroidx/preference/Preference;->setVisible(Z)V
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->isGesturalEnabled(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->isSideEnabled(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    iget-object v0, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mGestureNavigationBarDeprecated:Lcom/android/settings/widget/RadioButtonPreference;
+
+    invoke-virtual {v0, v2}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+
+    iget-object v0, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mCustomSettingsCategory:Landroidx/preference/PreferenceCategory;
+
+    invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setVisible(Z)V
+
+    iget-object p0, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mbuttonLayoutPref:Lcom/android/settingslib/widget/LayoutPreference;
+
+    invoke-virtual {p0, v1}, Landroidx/preference/Preference;->setVisible(Z)V
+
+    :cond_3
+    :goto_0
     return-void
 .end method
 

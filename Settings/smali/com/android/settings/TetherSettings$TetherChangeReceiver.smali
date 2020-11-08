@@ -267,13 +267,7 @@
 
     if-eqz p1, :cond_9
 
-    iget-object p2, p0, Lcom/android/settings/TetherSettings$TetherChangeReceiver;->this$0:Lcom/android/settings/TetherSettings;
-
-    invoke-virtual {p2}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
+    invoke-static {}, Lcom/oneplus/settings/SettingsBaseApplication;->getContext()Landroid/content/Context;
 
     move-result-object p2
 
@@ -318,13 +312,7 @@
 
     if-eqz p1, :cond_9
 
-    iget-object p2, p0, Lcom/android/settings/TetherSettings$TetherChangeReceiver;->this$0:Lcom/android/settings/TetherSettings;
-
-    invoke-virtual {p2}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
+    invoke-static {}, Lcom/oneplus/settings/SettingsBaseApplication;->getContext()Landroid/content/Context;
 
     move-result-object p2
 

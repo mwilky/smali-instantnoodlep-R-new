@@ -302,6 +302,23 @@
     return-void
 .end method
 
+.method protected onDestroy()V
+    .locals 1
+
+    invoke-super {p0}, Landroidx/appcompat/app/AppCompatActivity;->onDestroy()V
+
+    iget-object p0, p0, Lcom/android/settings/wifi/NetworkRequestDialogActivity;->mHandler:Landroid/os/Handler;
+
+    if-eqz p0, :cond_0
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Landroid/os/Handler;->removeMessages(I)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public onMatch(Ljava/util/List;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;

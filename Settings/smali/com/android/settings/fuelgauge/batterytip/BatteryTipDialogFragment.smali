@@ -253,35 +253,29 @@
 
     move-result-object v4
 
-    sget v6, Lcom/android/settings/R$layout;->recycler_view:I
+    sget v6, Lcom/android/settings/R$layout;->op_recycler_view:I
 
     invoke-virtual {v4, v6, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v4
 
-    sget v6, Lcom/android/settings/R$id;->recycler_view:I
+    check-cast v4, Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {v4, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    new-instance v6, Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    move-result-object v6
+    invoke-direct {v6, v0}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(Landroid/content/Context;)V
 
-    check-cast v6, Landroidx/recyclerview/widget/RecyclerView;
+    invoke-virtual {v4, v6}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
-    new-instance v7, Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    invoke-direct {v7, v0}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(Landroid/content/Context;)V
-
-    invoke-virtual {v6, v7}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
-
-    new-instance v7, Lcom/android/settings/fuelgauge/batterytip/HighUsageAdapter;
+    new-instance v6, Lcom/android/settings/fuelgauge/batterytip/HighUsageAdapter;
 
     invoke-virtual {p1}, Lcom/android/settings/fuelgauge/batterytip/tips/HighUsageTip;->getHighUsageAppList()Ljava/util/List;
 
-    move-result-object v8
+    move-result-object v7
 
-    invoke-direct {v7, v0, v8}, Lcom/android/settings/fuelgauge/batterytip/HighUsageAdapter;-><init>(Landroid/content/Context;Ljava/util/List;)V
+    invoke-direct {v6, v0, v7}, Lcom/android/settings/fuelgauge/batterytip/HighUsageAdapter;-><init>(Landroid/content/Context;Ljava/util/List;)V
 
-    invoke-virtual {v6, v7}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {v4, v6}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     new-instance v6, Landroidx/appcompat/app/AlertDialog$Builder;
 
@@ -309,7 +303,7 @@
 
     move-result-object p0
 
-    invoke-virtual {v6, p0}, Landroidx/appcompat/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroidx/appcompat/app/AlertDialog$Builder;
+    invoke-virtual {v6, p0}, Landroidx/appcompat/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroidx/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v6, v4}, Landroidx/appcompat/app/AlertDialog$Builder;->setView(Landroid/view/View;)Landroidx/appcompat/app/AlertDialog$Builder;
 
@@ -411,7 +405,7 @@
 
     move-result-object p0
 
-    sget p1, Lcom/android/settings/R$layout;->recycler_view:I
+    sget p1, Lcom/android/settings/R$layout;->op_recycler_view:I
 
     invoke-virtual {p0, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 

@@ -679,7 +679,7 @@
 .method public static getDefaultStorageManagerDaysToRetain(Landroid/content/res/Resources;)I
     .locals 1
 
-    const v0, 0x10e00c6
+    const v0, 0x10e00c7
 
     :try_start_0
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getInteger(I)I

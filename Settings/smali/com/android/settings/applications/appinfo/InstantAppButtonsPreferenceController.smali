@@ -7,6 +7,7 @@
 .implements Lcom/android/settingslib/core/lifecycle/events/OnCreateOptionsMenu;
 .implements Lcom/android/settingslib/core/lifecycle/events/OnPrepareOptionsMenu;
 .implements Lcom/android/settingslib/core/lifecycle/events/OnOptionsItemSelected;
+.implements Lcom/android/settingslib/core/lifecycle/events/OnDestroy;
 
 
 # static fields
@@ -22,7 +23,7 @@
 
 .field private final mPackageName:Ljava/lang/String;
 
-.field private final mParent:Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;
+.field private mParent:Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;
 
 .field private mPreference:Lcom/android/settingslib/widget/LayoutPreference;
 
@@ -473,6 +474,18 @@
     invoke-interface {p0, v1}, Landroid/view/MenuItem;->setShowAsAction(I)V
 
     :cond_0
+    return-void
+.end method
+
+.method public onDestroy()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/android/settings/applications/appinfo/InstantAppButtonsPreferenceController;->mParent:Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;
+
+    iput-object v0, p0, Lcom/android/settings/applications/appinfo/InstantAppButtonsPreferenceController;->mPreference:Lcom/android/settingslib/widget/LayoutPreference;
+
     return-void
 .end method
 

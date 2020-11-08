@@ -480,18 +480,25 @@
 .method public final updateState(Landroidx/preference/Preference;)V
     .locals 1
 
-    iget-object p1, p0, Lcom/android/settings/display/darkmode/DarkModeScheduleSelectorController;->mPowerManager:Landroid/os/PowerManager;
-
-    invoke-virtual {p1}, Landroid/os/PowerManager;->isPowerSaveMode()Z
+    invoke-static {}, Lcom/oneplus/settings/utils/OPThemeUtils;->isSupportREDTheme()Z
 
     move-result p1
 
-    iget-object v0, p0, Lcom/android/settings/display/darkmode/DarkModeScheduleSelectorController;->mPreference:Landroidx/preference/ListPreference;
+    if-eqz p1, :cond_0
 
-    xor-int/lit8 p1, p1, 0x1
+    iget-object p1, p0, Lcom/android/settings/display/darkmode/DarkModeScheduleSelectorController;->mPreference:Landroidx/preference/ListPreference;
 
-    invoke-virtual {v0, p1}, Landroidx/preference/Preference;->setEnabled(Z)V
+    iget-object v0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
 
+    invoke-static {v0}, Lcom/oneplus/settings/utils/OPThemeUtils;->isCurrentREDTheme(Landroid/content/Context;)Z
+
+    move-result v0
+
+    xor-int/lit8 v0, v0, 0x1
+
+    invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setEnabled(Z)V
+
+    :cond_0
     invoke-direct {p0}, Lcom/android/settings/display/darkmode/DarkModeScheduleSelectorController;->getCurrentMode()I
 
     move-result p1
@@ -504,7 +511,7 @@
 
     iget-object p1, p0, Lcom/android/settings/display/darkmode/DarkModeScheduleSelectorController;->mGlobalDarkPreference:Landroidx/preference/Preference;
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_1
 
     invoke-direct {p0}, Lcom/android/settings/display/darkmode/DarkModeScheduleSelectorController;->needEnableGlobalDarkPreference()Z
 
@@ -512,7 +519,7 @@
 
     invoke-virtual {p1, p0}, Landroidx/preference/Preference;->setEnabled(Z)V
 
-    :cond_0
+    :cond_1
     return-void
 .end method
 

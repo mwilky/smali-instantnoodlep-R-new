@@ -417,25 +417,29 @@
 
     move-result p0
 
-    if-eqz p0, :cond_5
+    if-eqz p0, :cond_6
 
     const/4 v0, 0x1
 
-    if-eq p0, v0, :cond_4
+    if-eq p0, v0, :cond_5
 
     const/4 v0, 0x2
 
-    if-eq p0, v0, :cond_3
+    if-eq p0, v0, :cond_4
 
     const/4 v0, 0x3
 
-    if-eq p0, v0, :cond_2
+    if-eq p0, v0, :cond_3
 
     const/4 v0, 0x4
 
-    if-eq p0, v0, :cond_1
+    if-eq p0, v0, :cond_2
 
     const/16 v0, 0x9
+
+    if-eq p0, v0, :cond_1
+
+    const/16 v0, 0xb
 
     if-eq p0, v0, :cond_0
 
@@ -444,31 +448,36 @@
     return p0
 
     :cond_0
-    sget p0, Lcom/android/settings/R$string;->oneplus_select_fingerprint_animation_effect_none:I
+    sget p0, Lcom/android/settings/R$string;->oneplus_select_fingerprint_animation_effect_red:I
 
     return p0
 
     :cond_1
-    sget p0, Lcom/android/settings/R$string;->oneplus_select_fingerprint_animation_effect_6:I
+    sget p0, Lcom/android/settings/R$string;->oneplus_select_fingerprint_animation_effect_none:I
 
     return p0
 
     :cond_2
-    sget p0, Lcom/android/settings/R$string;->op_theme_3_title:I
+    sget p0, Lcom/android/settings/R$string;->oneplus_select_fingerprint_animation_effect_6:I
 
     return p0
 
     :cond_3
-    sget p0, Lcom/android/settings/R$string;->oneplus_select_fingerprint_animation_effect_3:I
+    sget p0, Lcom/android/settings/R$string;->op_theme_3_title:I
 
     return p0
 
     :cond_4
-    sget p0, Lcom/android/settings/R$string;->oneplus_select_fingerprint_animation_effect_4:I
+    sget p0, Lcom/android/settings/R$string;->oneplus_select_fingerprint_animation_effect_3:I
 
     return p0
 
     :cond_5
+    sget p0, Lcom/android/settings/R$string;->oneplus_select_fingerprint_animation_effect_4:I
+
+    return p0
+
+    :cond_6
     sget p0, Lcom/android/settings/R$string;->oneplus_select_fingerprint_animation_effect_1:I
 
     return p0
@@ -862,7 +871,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e0066
+    const v1, 0x10e0067
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 

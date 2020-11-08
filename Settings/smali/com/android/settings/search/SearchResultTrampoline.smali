@@ -19,6 +19,7 @@
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
+    :try_start_0
     invoke-static {p0}, Lcom/android/settings/overlay/FeatureFactory;->getFactory(Landroid/content/Context;)Lcom/android/settings/overlay/FeatureFactory;
 
     move-result-object p1
@@ -32,7 +33,17 @@
     move-result-object v0
 
     invoke-interface {p1, p0, v0}, Lcom/android/settings/search/SearchFeatureProvider;->verifyLaunchSearchResultPageCaller(Landroid/content/Context;Landroid/content/ComponentName;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
+
+    :goto_0
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object p1
@@ -43,13 +54,13 @@
 
     move-result-object v1
 
-    const-string v2, ":settings:show_fragment_tab"
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    const-string v3, ":settings:show_fragment_tab"
 
-    invoke-virtual {p1, v2, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    invoke-virtual {p1, v3, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
-    move-result v3
+    move-result v2
 
     new-instance v4, Landroid/os/Bundle;
 
@@ -57,7 +68,7 @@
 
     invoke-virtual {v4, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v4, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+    invoke-virtual {v4, v3, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string v0, ":settings:show_fragment_args"
 

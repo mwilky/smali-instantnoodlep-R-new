@@ -668,9 +668,13 @@
 
     if-eqz p2, :cond_0
 
-    iget-wide v0, p1, Lcom/android/settings/deviceinfo/storage/StorageAsyncLoader$AppsStorageResult;->photosAppsSize:J
+    if-eqz p1, :cond_0
 
     iget-object p0, p1, Lcom/android/settings/deviceinfo/storage/StorageAsyncLoader$AppsStorageResult;->externalStats:Lcom/android/settingslib/applications/StorageStatsSource$ExternalStorageStats;
+
+    if-eqz p0, :cond_0
+
+    iget-wide v0, p1, Lcom/android/settings/deviceinfo/storage/StorageAsyncLoader$AppsStorageResult;->photosAppsSize:J
 
     iget-wide v2, p0, Lcom/android/settingslib/applications/StorageStatsSource$ExternalStorageStats;->imageBytes:J
 
@@ -692,23 +696,33 @@
 
     iget-wide p0, p0, Lcom/android/settingslib/applications/StorageStatsSource$ExternalStorageStats;->videoBytes:J
 
-    :goto_0
     add-long/2addr v0, p0
 
     return-wide v0
 
     :cond_0
-    iget-wide v0, p1, Lcom/android/settings/deviceinfo/storage/StorageAsyncLoader$AppsStorageResult;->photosAppsSize:J
+    if-eqz p1, :cond_1
 
     iget-object p0, p1, Lcom/android/settings/deviceinfo/storage/StorageAsyncLoader$AppsStorageResult;->externalStats:Lcom/android/settingslib/applications/StorageStatsSource$ExternalStorageStats;
 
-    iget-wide p1, p0, Lcom/android/settingslib/applications/StorageStatsSource$ExternalStorageStats;->imageBytes:J
+    if-eqz p0, :cond_1
 
-    add-long/2addr v0, p1
+    iget-wide p1, p1, Lcom/android/settings/deviceinfo/storage/StorageAsyncLoader$AppsStorageResult;->photosAppsSize:J
 
-    iget-wide p0, p0, Lcom/android/settingslib/applications/StorageStatsSource$ExternalStorageStats;->videoBytes:J
+    iget-wide v0, p0, Lcom/android/settingslib/applications/StorageStatsSource$ExternalStorageStats;->imageBytes:J
 
-    goto :goto_0
+    add-long/2addr p1, v0
+
+    iget-wide v0, p0, Lcom/android/settingslib/applications/StorageStatsSource$ExternalStorageStats;->videoBytes:J
+
+    add-long/2addr p1, v0
+
+    return-wide p1
+
+    :cond_1
+    const-wide/16 p0, 0x0
+
+    return-wide p0
 .end method
 
 .method private getWorkAnnotatedBundle(I)Landroid/os/Bundle;

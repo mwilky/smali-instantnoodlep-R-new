@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->confirmAlertDialog()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

@@ -14,6 +14,8 @@
 # instance fields
 .field private mActiviteFeatureToggle:Landroid/view/View;
 
+.field private mDCDialog:Landroidx/appcompat/app/AlertDialog;
+
 .field private mDescriptionSummary:Landroid/widget/TextView;
 
 .field private mDialog:Landroidx/appcompat/app/AlertDialog;
@@ -42,12 +44,20 @@
 
 .field private mVibrator:Landroid/os/Vibrator;
 
+.field onClickListener:Landroid/content/DialogInterface$OnClickListener;
+
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Lcom/oneplus/settings/BaseActivity;-><init>()V
+
+    new-instance v0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity$1;
+
+    invoke-direct {v0, p0}, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity$1;-><init>(Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;)V
+
+    iput-object v0, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->onClickListener:Landroid/content/DialogInterface$OnClickListener;
 
     return-void
 .end method
@@ -71,41 +81,41 @@
 .method private confirmAlertDialog()V
     .locals 3
 
-    new-instance v0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity$1;
+    iget-object v0, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mDialog:Landroidx/appcompat/app/AlertDialog;
 
-    invoke-direct {v0, p0}, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity$1;-><init>(Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;)V
+    if-nez v0, :cond_0
 
-    iget-object v1, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mDialog:Landroidx/appcompat/app/AlertDialog;
+    new-instance v0, Landroidx/appcompat/app/AlertDialog$Builder;
 
-    if-nez v1, :cond_0
+    invoke-direct {v0, p0}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    new-instance v1, Landroidx/appcompat/app/AlertDialog$Builder;
+    sget v1, Lcom/android/settings/R$string;->oneplus_is_turn_on_feature:I
 
-    invoke-direct {v1, p0}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setTitle(I)Landroidx/appcompat/app/AlertDialog$Builder;
 
-    sget v2, Lcom/android/settings/R$string;->oneplus_is_turn_on_feature:I
+    sget v1, Lcom/android/settings/R$string;->oneplus_is_turn_on_feature_summary:I
 
-    invoke-virtual {v1, v2}, Landroidx/appcompat/app/AlertDialog$Builder;->setTitle(I)Landroidx/appcompat/app/AlertDialog$Builder;
+    invoke-virtual {v0, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setMessage(I)Landroidx/appcompat/app/AlertDialog$Builder;
 
-    sget v2, Lcom/android/settings/R$string;->oneplus_is_turn_on_feature_summary:I
+    sget v1, Lcom/android/settings/R$string;->oneplus_turn_on_feature_ok:I
 
-    invoke-virtual {v1, v2}, Landroidx/appcompat/app/AlertDialog$Builder;->setMessage(I)Landroidx/appcompat/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->onClickListener:Landroid/content/DialogInterface$OnClickListener;
 
-    sget v2, Lcom/android/settings/R$string;->oneplus_turn_on_feature_ok:I
+    invoke-virtual {v0, v1, v2}, Landroidx/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
 
-    invoke-virtual {v1, v2, v0}, Landroidx/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
+    sget v1, Lcom/android/settings/R$string;->oneplus_turn_on_feature_cancel:I
 
-    sget v2, Lcom/android/settings/R$string;->oneplus_turn_on_feature_cancel:I
+    iget-object v2, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->onClickListener:Landroid/content/DialogInterface$OnClickListener;
 
-    invoke-virtual {v1, v2, v0}, Landroidx/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
+    invoke-virtual {v0, v1, v2}, Landroidx/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
 
-    new-instance v0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity$2;
+    new-instance v1, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity$2;
 
-    invoke-direct {v0, p0}, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity$2;-><init>(Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;)V
+    invoke-direct {v1, p0}, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity$2;-><init>(Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;)V
 
-    invoke-virtual {v1, v0}, Landroidx/appcompat/app/AlertDialog$Builder;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)Landroidx/appcompat/app/AlertDialog$Builder;
+    invoke-virtual {v0, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)Landroidx/appcompat/app/AlertDialog$Builder;
 
-    invoke-virtual {v1}, Landroidx/appcompat/app/AlertDialog$Builder;->create()Landroidx/appcompat/app/AlertDialog;
+    invoke-virtual {v0}, Landroidx/appcompat/app/AlertDialog$Builder;->create()Landroidx/appcompat/app/AlertDialog;
 
     move-result-object v0
 
@@ -113,6 +123,53 @@
 
     :cond_0
     iget-object p0, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mDialog:Landroidx/appcompat/app/AlertDialog;
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->show()V
+
+    return-void
+.end method
+
+.method private confirmDCDialog()V
+    .locals 3
+
+    iget-object v0, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mDCDialog:Landroidx/appcompat/app/AlertDialog;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Landroidx/appcompat/app/AlertDialog$Builder;
+
+    invoke-direct {v0, p0}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    sget v1, Lcom/android/settings/R$string;->op_lab_dc_warn_message:I
+
+    invoke-virtual {v0, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setMessage(I)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    sget v1, Lcom/android/settings/R$string;->op_lab_dc_still_on:I
+
+    iget-object v2, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->onClickListener:Landroid/content/DialogInterface$OnClickListener;
+
+    invoke-virtual {v0, v1, v2}, Landroidx/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    sget v1, Lcom/android/settings/R$string;->oneplus_turn_on_feature_cancel:I
+
+    iget-object v2, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->onClickListener:Landroid/content/DialogInterface$OnClickListener;
+
+    invoke-virtual {v0, v1, v2}, Landroidx/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    new-instance v1, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity$3;
+
+    invoke-direct {v1, p0}, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity$3;-><init>(Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;)V
+
+    invoke-virtual {v0, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    invoke-virtual {v0}, Landroidx/appcompat/app/AlertDialog$Builder;->create()Landroidx/appcompat/app/AlertDialog;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mDCDialog:Landroidx/appcompat/app/AlertDialog;
+
+    :cond_0
+    iget-object p0, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mDCDialog:Landroidx/appcompat/app/AlertDialog;
 
     invoke-virtual {p0}, Landroid/app/Dialog;->show()V
 
@@ -708,7 +765,7 @@
 .end method
 
 .method public onClick(Landroid/view/View;)V
-    .locals 3
+    .locals 7
 
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
@@ -718,7 +775,7 @@
 
     const/4 v1, 0x1
 
-    if-ne p1, v0, :cond_6
+    if-ne p1, v0, :cond_8
 
     iget-object p1, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mOneplusLabFeatureKey:Ljava/lang/String;
 
@@ -728,9 +785,15 @@
 
     move-result p1
 
-    const/16 v0, 0x3eb
+    const-string v2, "0"
 
-    const/4 v2, 0x0
+    const-string v3, "status"
+
+    const-string v4, "dc_dimming"
+
+    const/16 v5, 0x3eb
+
+    const/4 v6, 0x0
 
     if-eqz p1, :cond_1
 
@@ -750,23 +813,17 @@
 
     iget-object p1, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mSwitch:Landroid/widget/Switch;
 
-    invoke-virtual {p1, v2}, Landroid/widget/Switch;->setChecked(Z)V
+    invoke-virtual {p1, v6}, Landroid/widget/Switch;->setChecked(Z)V
 
     invoke-virtual {p0}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
 
-    iget-object v1, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mOneplusLabFeatureKey:Ljava/lang/String;
+    iget-object v0, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mOneplusLabFeatureKey:Ljava/lang/String;
 
-    invoke-static {p1, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+    invoke-static {p1, v0, v6}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    const-string p1, "dc_dimming"
-
-    const-string v1, "status"
-
-    const-string v2, "0"
-
-    invoke-static {p1, v1, v2}, Lcom/oneplus/settings/utils/OPUtils;->sendAnalytics(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v3, v2}, Lcom/oneplus/settings/utils/OPUtils;->sendAnalytics(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -778,11 +835,11 @@
 
     move-result p1
 
-    if-eqz p1, :cond_8
+    if-eqz p1, :cond_a
 
     iget-object p1, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mVibrator:Landroid/os/Vibrator;
 
-    invoke-static {p0, p1, v0}, Lcom/oneplus/settings/utils/VibratorSceneUtils;->getVibratorScenePattern(Landroid/content/Context;Landroid/os/Vibrator;I)[J
+    invoke-static {p0, p1, v5}, Lcom/oneplus/settings/utils/VibratorSceneUtils;->getVibratorScenePattern(Landroid/content/Context;Landroid/os/Vibrator;I)[J
 
     move-result-object p1
 
@@ -792,9 +849,23 @@
 
     invoke-static {p1, p0}, Lcom/oneplus/settings/utils/VibratorSceneUtils;->vibrateIfNeeded([JLandroid/os/Vibrator;)V
 
-    goto :goto_4
+    goto/16 :goto_5
 
     :cond_1
+    iget-object p1, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mOneplusLabFeatureKey:Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isH2()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
     iget-object p1, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {p1}, Landroid/widget/Switch;->isChecked()Z
@@ -805,25 +876,74 @@
 
     iget-object p1, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mSwitch:Landroid/widget/Switch;
 
-    invoke-virtual {p1, v2}, Landroid/widget/Switch;->setChecked(Z)V
+    invoke-virtual {p1, v6}, Landroid/widget/Switch;->setChecked(Z)V
+
+    invoke-virtual {p0}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mOneplusLabFeatureKey:Ljava/lang/String;
+
+    invoke-static {p1, v0, v6}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+
+    invoke-static {v4, v3, v2}, Lcom/oneplus/settings/utils/OPUtils;->sendAnalytics(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
     :cond_2
-    iget-object p1, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mSwitch:Landroid/widget/Switch;
-
-    invoke-virtual {p1, v1}, Landroid/widget/Switch;->setChecked(Z)V
+    invoke-direct {p0}, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->confirmDCDialog()V
 
     :goto_1
     invoke-static {p0}, Lcom/oneplus/settings/utils/VibratorSceneUtils;->systemVibrateEnabled(Landroid/content/Context;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_a
 
     iget-object p1, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mVibrator:Landroid/os/Vibrator;
 
-    invoke-static {p0, p1, v0}, Lcom/oneplus/settings/utils/VibratorSceneUtils;->getVibratorScenePattern(Landroid/content/Context;Landroid/os/Vibrator;I)[J
+    invoke-static {p0, p1, v5}, Lcom/oneplus/settings/utils/VibratorSceneUtils;->getVibratorScenePattern(Landroid/content/Context;Landroid/os/Vibrator;I)[J
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mVibratePattern:[J
+
+    iget-object p0, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mVibrator:Landroid/os/Vibrator;
+
+    invoke-static {p1, p0}, Lcom/oneplus/settings/utils/VibratorSceneUtils;->vibrateIfNeeded([JLandroid/os/Vibrator;)V
+
+    goto :goto_5
+
+    :cond_3
+    iget-object p1, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mSwitch:Landroid/widget/Switch;
+
+    invoke-virtual {p1}, Landroid/widget/Switch;->isChecked()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    iget-object p1, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mSwitch:Landroid/widget/Switch;
+
+    invoke-virtual {p1, v6}, Landroid/widget/Switch;->setChecked(Z)V
+
+    goto :goto_2
+
+    :cond_4
+    iget-object p1, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mSwitch:Landroid/widget/Switch;
+
+    invoke-virtual {p1, v1}, Landroid/widget/Switch;->setChecked(Z)V
+
+    :goto_2
+    invoke-static {p0}, Lcom/oneplus/settings/utils/VibratorSceneUtils;->systemVibrateEnabled(Landroid/content/Context;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    iget-object p1, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mVibrator:Landroid/os/Vibrator;
+
+    invoke-static {p0, p1, v5}, Lcom/oneplus/settings/utils/VibratorSceneUtils;->getVibratorScenePattern(Landroid/content/Context;Landroid/os/Vibrator;I)[J
 
     move-result-object p1
 
@@ -833,21 +953,21 @@
 
     invoke-static {p1, v0}, Lcom/oneplus/settings/utils/VibratorSceneUtils;->vibrateIfNeeded([JLandroid/os/Vibrator;)V
 
-    :cond_3
+    :cond_5
     iget-object p1, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {p1}, Landroid/widget/Switch;->isChecked()Z
 
     move-result p1
 
-    if-ne p1, v1, :cond_4
+    if-ne p1, v1, :cond_6
 
-    goto :goto_2
+    goto :goto_3
 
-    :cond_4
-    move v1, v2
+    :cond_6
+    move v1, v6
 
-    :goto_2
+    :goto_3
     iget-object p1, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mOneplusLabFeatureKey:Ljava/lang/String;
 
     const-string v0, "show_importance_slider"
@@ -856,7 +976,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_5
+    if-eqz p1, :cond_7
 
     invoke-virtual {p0}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -866,9 +986,9 @@
 
     invoke-static {p1, v0, v1}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    goto :goto_3
+    goto :goto_4
 
-    :cond_5
+    :cond_7
     invoke-virtual {p0}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
@@ -877,33 +997,33 @@
 
     invoke-static {p1, v0, v1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    :goto_3
+    :goto_4
     iget-object p0, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mOneplusLabFeatureKey:Ljava/lang/String;
 
     invoke-static {p0, v1}, Lcom/oneplus/settings/utils/OPUtils;->sendAppTracker(Ljava/lang/String;I)V
 
-    goto :goto_4
+    goto :goto_5
 
-    :cond_6
+    :cond_8
     sget v0, Lcom/android/settings/R$id;->op_lab_feature_communiry_like:I
 
-    if-ne p1, v0, :cond_7
+    if-ne p1, v0, :cond_9
 
     invoke-direct {p0, v1}, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->saveActitiveHistory(I)V
 
-    goto :goto_4
+    goto :goto_5
 
-    :cond_7
+    :cond_9
     sget v0, Lcom/android/settings/R$id;->op_lab_feature_communiry_dislike:I
 
-    if-ne p1, v0, :cond_8
+    if-ne p1, v0, :cond_a
 
     const/4 p1, -0x1
 
     invoke-direct {p0, p1}, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->saveActitiveHistory(I)V
 
-    :cond_8
-    :goto_4
+    :cond_a
+    :goto_5
     return-void
 .end method
 

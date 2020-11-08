@@ -8,12 +8,13 @@
 .implements Lcom/android/settingslib/core/lifecycle/LifecycleObserver;
 .implements Lcom/android/settingslib/core/lifecycle/events/OnStart;
 .implements Lcom/android/settingslib/core/lifecycle/events/OnStop;
+.implements Lcom/android/settingslib/core/lifecycle/events/OnDestroy;
 
 
 # instance fields
-.field private final mConditionManager:Lcom/android/settings/homepage/contextualcards/conditional/ConditionManager;
+.field private mConditionManager:Lcom/android/settings/homepage/contextualcards/conditional/ConditionManager;
 
-.field private final mContext:Landroid/content/Context;
+.field private mContext:Landroid/content/Context;
 
 .field private mIsExpanded:Z
 
@@ -380,6 +381,20 @@
     iget-object p0, p0, Lcom/android/settings/homepage/contextualcards/conditional/ConditionContextualCardController;->mListener:Lcom/android/settings/homepage/contextualcards/ContextualCardUpdateListener;
 
     invoke-interface {p0, v0}, Lcom/android/settings/homepage/contextualcards/ContextualCardUpdateListener;->onContextualCardUpdated(Ljava/util/Map;)V
+
+    return-void
+.end method
+
+.method public onDestroy()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/android/settings/homepage/contextualcards/conditional/ConditionContextualCardController;->mContext:Landroid/content/Context;
+
+    iput-object v0, p0, Lcom/android/settings/homepage/contextualcards/conditional/ConditionContextualCardController;->mConditionManager:Lcom/android/settings/homepage/contextualcards/conditional/ConditionManager;
+
+    iput-object v0, p0, Lcom/android/settings/homepage/contextualcards/conditional/ConditionContextualCardController;->mListener:Lcom/android/settings/homepage/contextualcards/ContextualCardUpdateListener;
 
     return-void
 .end method

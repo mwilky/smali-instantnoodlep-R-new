@@ -27,9 +27,7 @@
 
 .field public static final enum AVG:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 
-.field public static final enum CMCC:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
-
-.field public static final enum CYB:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+.field public static final enum C88:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 
 .field public static final enum JCC:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 
@@ -38,6 +36,8 @@
 .field public static final enum NONE:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 
 .field public static final enum OPR_RETAIL:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+
+.field public static final enum RED:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 
 .field public static final enum SW:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 
@@ -108,23 +108,23 @@
 
     new-instance v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 
-    const-string v1, "CYB"
+    const-string v1, "RED"
 
     const/4 v8, 0x6
 
     invoke-direct {v0, v1, v8}, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->CYB:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+    sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->RED:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 
     new-instance v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 
-    const-string v1, "CMCC"
+    const-string v1, "C88"
 
     const/4 v9, 0x7
 
     invoke-direct {v0, v1, v9}, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->CMCC:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+    sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->C88:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 
     const/16 v1, 0x8
 
@@ -154,7 +154,7 @@
 
     aput-object v2, v1, v7
 
-    sget-object v2, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->CYB:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+    sget-object v2, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->RED:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 
     aput-object v2, v1, v8
 

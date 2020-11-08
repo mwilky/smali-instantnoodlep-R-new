@@ -45,3 +45,22 @@
 
     return p0
 .end method
+
+.method public onPrepareOptionsMenu(Landroid/view/Menu;)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/android/settingslib/core/lifecycle/ObservablePreferenceFragment;->onPrepareOptionsMenu(Landroid/view/Menu;)V
+
+    const/4 p0, 0x0
+
+    invoke-interface {p1, p0}, Landroid/view/Menu;->getItem(I)Landroid/view/MenuItem;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p1, p0}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+    :cond_0
+    return-void
+.end method

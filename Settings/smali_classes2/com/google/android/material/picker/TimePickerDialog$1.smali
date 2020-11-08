@@ -101,7 +101,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/google/android/material/R$drawable;->op_picker_dialog_material_background_bottom:I
+    sget v1, Lcom/google/android/material/R$drawable;->op_dialog_material_background_bottom:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

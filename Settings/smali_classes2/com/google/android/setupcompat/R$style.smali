@@ -4,8 +4,8 @@
 
 
 # static fields
-.field public static final SucPartnerCustomizationButtonBar_Stackable:I = 0x7f140286
+.field public static final SucPartnerCustomizationButtonBar_Stackable:I = 0x7f140289
 
-.field public static final SucPartnerCustomizationButton_Primary:I = 0x7f140283
+.field public static final SucPartnerCustomizationButton_Primary:I = 0x7f140286
 
-.field public static final SucPartnerCustomizationButton_Secondary:I = 0x7f140284
+.field public static final SucPartnerCustomizationButton_Secondary:I = 0x7f140287

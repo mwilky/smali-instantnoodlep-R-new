@@ -575,7 +575,7 @@
 .end method
 
 .method public static isHotspotPasswordValid(Ljava/lang/String;)Z
-    .locals 2
+    .locals 3
 
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -588,21 +588,59 @@
     return v1
 
     :cond_0
+    sget-object v0, Ljava/nio/charset/StandardCharsets;->US_ASCII:Ljava/nio/charset/Charset;
+
+    invoke-virtual {v0}, Ljava/nio/charset/Charset;->newEncoder()Ljava/nio/charset/CharsetEncoder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Ljava/nio/charset/CharsetEncoder;->canEncode(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    return v1
+
+    :cond_1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isUsvMode()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    const-string v0, "((?=.*\\d)(?=.*[a-zA-Z])(?=.*[!-/:-@\\[-`{-~]).{8,63})"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result p0
 
-    const/16 v0, 0x8
+    return p0
 
-    if-lt p0, v0, :cond_1
+    :cond_2
+    const/16 p0, 0x8
 
-    const/16 v0, 0x3f
+    if-lt v0, p0, :cond_3
 
-    if-gt p0, v0, :cond_1
+    const/16 p0, 0x3f
+
+    if-gt v0, p0, :cond_3
 
     const/4 v1, 0x1
 
-    :cond_1
+    :cond_3
     return v1
 .end method
 

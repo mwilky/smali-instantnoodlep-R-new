@@ -232,6 +232,71 @@
     return-object p0
 .end method
 
+.method public onCreatePreferences(Landroid/os/Bundle;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-super {p0, p1, p2}, Lcom/android/settings/dashboard/DashboardFragment;->onCreatePreferences(Landroid/os/Bundle;Ljava/lang/String;)V
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPThemeUtils;->isSupportREDTheme()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    new-instance p1, Landroidx/preference/Preference;
+
+    invoke-virtual {p0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->getPrefContext()Landroid/content/Context;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;)V
+
+    sget p2, Lcom/android/settings/R$layout;->op_preference_summary:I
+
+    invoke-virtual {p1, p2}, Landroidx/preference/Preference;->setLayoutResource(I)V
+
+    const/4 p2, 0x0
+
+    invoke-virtual {p1, p2}, Landroidx/preference/Preference;->setSelectable(Z)V
+
+    sget p2, Lcom/android/settings/R$string;->op_red_theme_dark_mode_tips:I
+
+    invoke-virtual {p1, p2}, Landroidx/preference/Preference;->setTitle(I)V
+
+    const/16 p2, -0x50
+
+    invoke-virtual {p1, p2}, Landroidx/preference/Preference;->setOrder(I)V
+
+    invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
+
+    move-result-object p2
+
+    invoke-virtual {p2, p1}, Landroidx/preference/PreferenceGroup;->addPreference(Landroidx/preference/Preference;)Z
+
+    const-string p1, "dark_mode_enabled"
+
+    invoke-virtual {p0, p1}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/oneplus/settings/utils/OPThemeUtils;->isCurrentREDTheme(Landroid/content/Context;)Z
+
+    move-result p0
+
+    xor-int/lit8 p0, p0, 0x1
+
+    invoke-virtual {p1, p0}, Landroidx/preference/Preference;->setEnabled(Z)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public onPreferenceTreeClick(Landroidx/preference/Preference;)Z
     .locals 3
 

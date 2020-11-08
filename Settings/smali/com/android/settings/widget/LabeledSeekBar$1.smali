@@ -53,6 +53,14 @@
 
     invoke-interface {v0, p1, p2, p3}, Landroid/widget/SeekBar$OnSeekBarChangeListener;->onProgressChanged(Landroid/widget/SeekBar;IZ)V
 
+    iget-object p1, p0, Lcom/android/settings/widget/LabeledSeekBar$1;->this$0:Lcom/android/settings/widget/LabeledSeekBar;
+
+    invoke-virtual {p1}, Landroid/widget/SeekBar;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/oneplus/settings/utils/OPUtils;->startVibratePattern(Landroid/content/Context;)V
+
     iget-object p0, p0, Lcom/android/settings/widget/LabeledSeekBar$1;->this$0:Lcom/android/settings/widget/LabeledSeekBar;
 
     invoke-static {p0, p2}, Lcom/android/settings/widget/LabeledSeekBar;->access$100(Lcom/android/settings/widget/LabeledSeekBar;I)V

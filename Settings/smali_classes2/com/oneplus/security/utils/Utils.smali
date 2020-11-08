@@ -421,6 +421,116 @@
     return-object p0
 .end method
 
+.method public static getFormattedFileSizeInGb(Landroid/content/Context;JZ)[Ljava/lang/String;
+    .locals 2
+
+    const/4 p3, 0x2
+
+    new-array p3, p3, [Ljava/lang/String;
+
+    invoke-static {p1, p2}, Ljava/lang/Math;->abs(J)J
+
+    move-result-wide p1
+
+    long-to-float p1, p1
+
+    const/high16 p2, 0x44800000    # 1024.0f
+
+    div-float/2addr p1, p2
+
+    div-float/2addr p1, p2
+
+    const/4 v0, 0x1
+
+    new-array v1, v0, [Ljava/lang/Object;
+
+    div-float/2addr p1, p2
+
+    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    aput-object p1, v1, p2
+
+    const-string p1, "%.2f"
+
+    invoke-static {p1, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    aput-object p1, p3, p2
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    sget p1, Lcom/android/settings/R$string;->gigabyteShort:I
+
+    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    aput-object p0, p3, v0
+
+    return-object p3
+.end method
+
+.method public static getFormattedFileSizeInMb(Landroid/content/Context;JZ)[Ljava/lang/String;
+    .locals 2
+
+    const/4 p3, 0x2
+
+    new-array p3, p3, [Ljava/lang/String;
+
+    invoke-static {p1, p2}, Ljava/lang/Math;->abs(J)J
+
+    move-result-wide p1
+
+    long-to-float p1, p1
+
+    const/high16 p2, 0x44800000    # 1024.0f
+
+    div-float/2addr p1, p2
+
+    const/4 v0, 0x1
+
+    new-array v1, v0, [Ljava/lang/Object;
+
+    div-float/2addr p1, p2
+
+    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    aput-object p1, v1, p2
+
+    const-string p1, "%.2f"
+
+    invoke-static {p1, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    aput-object p1, p3, p2
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    sget p1, Lcom/android/settings/R$string;->megabyteShort:I
+
+    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    aput-object p0, p3, v0
+
+    return-object p3
+.end method
+
 .method public static hasSDK24()Z
     .locals 2
 

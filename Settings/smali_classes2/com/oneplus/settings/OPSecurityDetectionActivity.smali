@@ -54,17 +54,21 @@
 
     move-result-object v1
 
-    sget v2, Lcom/android/settings/R$string;->op_app_security_check_text_legal_tencent_link:I
+    sget v2, Lcom/android/settings/R$string;->op_legal_ten_secure:I
 
     invoke-virtual {p0, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    const-string v3, "http://www.qq.com/privacy.htm"
+    sget v3, Lcom/android/settings/R$string;->op_app_security_check_text_legal_tencent_link:I
+
+    invoke-virtual {p0, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
 
     const-string v4, ""
 
-    invoke-static {v1, v3, v2, v4}, Lcom/oneplus/settings/utils/OPUtils;->parseLink(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/text/SpannableStringBuilder;
+    invoke-static {v1, v2, v3, v4}, Lcom/oneplus/settings/utils/OPUtils;->parseLink(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/text/SpannableStringBuilder;
 
     move-result-object v1
 
@@ -82,13 +86,17 @@
 
     move-result-object p1
 
-    sget v1, Lcom/android/settings/R$string;->op_app_security_check_text_legal_oppo_link:I
+    sget v1, Lcom/android/settings/R$string;->op_legal_ht_secure:I
 
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v1
 
-    const-string v1, "https://www.heytap.com/privacy.html"
+    sget v2, Lcom/android/settings/R$string;->op_app_security_check_text_legal_oppo_link:I
+
+    invoke-virtual {p0, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
 
     invoke-static {p1, v1, p0, v4}, Lcom/oneplus/settings/utils/OPUtils;->parseLink(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/text/SpannableStringBuilder;
 

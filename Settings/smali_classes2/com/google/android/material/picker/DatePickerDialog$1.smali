@@ -43,45 +43,8 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_1
-
-    iget-object p1, p0, Lcom/google/android/material/picker/DatePickerDialog$1;->this$0:Lcom/google/android/material/picker/DatePickerDialog;
-
-    invoke-static {p1}, Lcom/google/android/material/picker/DatePickerDialog;->access$100(Lcom/google/android/material/picker/DatePickerDialog;)Lcom/google/android/material/picker/DatePicker;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/google/android/material/picker/DatePicker;->getMode()I
-
-    move-result p1
-
-    const/4 v0, 0x2
-
-    if-ne p1, v0, :cond_0
-
-    iget-object p1, p0, Lcom/google/android/material/picker/DatePickerDialog$1;->this$0:Lcom/google/android/material/picker/DatePickerDialog;
-
-    invoke-static {p1}, Lcom/google/android/material/picker/DatePickerDialog;->access$100(Lcom/google/android/material/picker/DatePickerDialog;)Lcom/google/android/material/picker/DatePicker;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/google/android/material/picker/DatePicker;->isYearPickerShowing()Z
-
-    move-result p1
-
     if-eqz p1, :cond_0
 
-    iget-object p0, p0, Lcom/google/android/material/picker/DatePickerDialog$1;->this$0:Lcom/google/android/material/picker/DatePickerDialog;
-
-    invoke-static {p0}, Lcom/google/android/material/picker/DatePickerDialog;->access$100(Lcom/google/android/material/picker/DatePickerDialog;)Lcom/google/android/material/picker/DatePicker;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lcom/google/android/material/picker/DatePicker;->setCurrentYear()V
-
-    goto :goto_0
-
-    :cond_0
     iget-object p1, p0, Lcom/google/android/material/picker/DatePickerDialog$1;->this$0:Lcom/google/android/material/picker/DatePickerDialog;
 
     invoke-static {p1}, Lcom/google/android/material/picker/DatePickerDialog;->access$100(Lcom/google/android/material/picker/DatePickerDialog;)Lcom/google/android/material/picker/DatePicker;
@@ -138,7 +101,6 @@
 
     invoke-virtual {p0}, Landroid/app/Dialog;->dismiss()V
 
-    :cond_1
-    :goto_0
+    :cond_0
     return-void
 .end method

@@ -43,7 +43,7 @@
     <string name="about_action_bar_title">Giới thiệu</string>
     <string name="about_app_version_text">Version %s</string>
     <string name="about_phone_device_name_warning">Tên thiết bị của bạn sẽ hiển thị với các ứng dụng trên điện thoại. Những người khác cũng có thể thấy tên thiết bị này khi bạn kết nối với thiết bị Bluetooth hoặc thiết lập điểm phát sóng Wi-Fi.</string>
-    <string name="about_privacy_policy">Chính sách Riêng tư</string>
+    <string name="about_privacy_policy">Chính sách Quyền riêng tư</string>
     <string name="about_release_note_title">Lịch sử cập nhật:</string>
     <string name="about_settings">Giới thiệu về điện thoại</string>
     <string name="about_settings_summary">Xem thông tin pháp lý, trạng thái, phiên bản phần mềm</string>
@@ -476,7 +476,7 @@ Bạn chỉ cần đưa các thiết bị lại gần nhau (thường là chạm
     <string name="app_and_notification_dashboard_summary">Ứng dụng gần đây, ứng dụng mặc định</string>
     <string name="app_and_notification_dashboard_title">Ứng dụng và thông báo</string>
     <string name="app_cellular_data_usage">Mức sử dụng dữ liệu của ứng dụng</string>
-    <string name="app_data_usage">Mức sử dụng dữ liệu của ứng dụng</string>
+    <string name="app_data_usage">Sử dụng dữ liệu của ứng dụng</string>
     <string name="app_default_dashboard_title">Ứng dụng mặc định</string>
     <string name="app_disable_dlg_positive">Tắt ứng dụng</string>
     <string name="app_disable_dlg_text">Nếu bạn tắt ứng dụng này, Android và các ứng dụng khác có thể không hoạt động như dự kiến nữa. Lưu ý rằng bạn không thể xóa vì ứng dụng này được cài đặt trước trên thiết bị. Khi vô hiệu hóa, bạn sẽ tắt và ẩn ứng dụng này trên thiết bị của mình.</string>
@@ -1272,6 +1272,7 @@ Việc này sẽ ảnh hưởng đến các ứng dụng hoặc cuộc trò chuy
     <string name="color_temperature">Nhiệt độ màu lạnh</string>
     <string name="color_temperature_desc">Sử dụng màu hiển thị lạnh hơn</string>
     <string name="color_temperature_toast">Để áp dụng thay đổi màu, hãy tắt màn hình</string>
+    <string name="color_temperture">Hiển thị cân bằng trắng</string>
     <string name="color_title">Màu</string>
     <string name="color_unspecified">Mặc định</string>
     <string name="color_white">Trắng</string>
@@ -1585,7 +1586,7 @@ Mức sử dụng dữ liệu do điện thoại tính toán, nhà mạng có th
     <string name="data_usage_metered_yes">Đo lượng dữ liệu</string>
     <string name="data_usage_ota">Bản cập nhật hệ thống</string>
     <string name="data_usage_other_apps">Những ứng dụng khác được bao gồm trong mức sử dụng</string>
-    <string name="data_usage_package_set">Billing Cycle</string>
+    <string name="data_usage_package_set">Chu kỳ thanh toán</string>
     <string name="data_usage_pick_cycle_day">Ngày trong tháng để đặt lại chu kỳ sử dụng dữ liệu:</string>
     <string name="data_usage_rank_sim">Sử dụng dữ liệu di động</string>
     <string name="data_usage_rank_wifi">Sử dụng dữ liệu Wi-Fi</string>
@@ -3362,7 +3363,7 @@ Ngoài ra, việc này còn cho phép ứng dụng bật hoặc tắt chế đ�
     <string name="oneplus_auto_open_specified_app">Tự động mở ứng dụng đã chỉ định</string>
     <string name="oneplus_auto_play">Phát Tự động</string>
     <string name="oneplus_auto_play_summary">Tự động khôi phục tính năng phát nhạc khi kết nối tai nghe</string>
-    <string name="oneplus_auto_switch_mobile_data">Sử dụng dữ liệu</string>
+    <string name="oneplus_auto_switch_mobile_data">Kết nối mạng thông minh</string>
     <string name="oneplus_auto_switch_mobile_data_summary">Sử dụng cả Wi‑Fi và dữ liệu di động khi kết nối kém để nâng cao độ ổn định</string>
     <string name="oneplus_auto_turn_on_apps">Tự động bật cho các ứng dụng này</string>
     <string name="oneplus_auto_turn_on_car_charger_info_o2">Bằng cách cài đặt các mục trên, bạn có thể kích hoạt chế độ Không làm phiền và khởi chạy ứng dụng đã chỉ định mỗi khi bộ sạc xe hơi được kết nối</string>
@@ -3370,8 +3371,8 @@ Ngoài ra, việc này còn cho phép ứng dụng bật hoặc tắt chế đ�
     <string name="oneplus_available_keyboard_category">Bàn phím khả dụng</string>
     <string name="oneplus_available_keyboard_description">Các bàn phím đã cài đặt được bật tại đây sẽ được thêm vào danh sách \"Bàn phím khả dụng\"</string>
     <string name="oneplus_back_home">Màn hình chính, Quay lại</string>
-    <string name="oneplus_back_home_o2">Back, Home</string>
-    <string name="oneplus_back_home_summary">Swipe up on Home button</string>
+    <string name="oneplus_back_home_o2">Quay lại, Màn hình chính</string>
+    <string name="oneplus_back_home_summary">Vuốt lên trên nút Màn hình chính</string>
     <string name="oneplus_back_topic_theme_summary">Tự động thay đổi chủ đề hệ thống tùy theo ốp lưng</string>
     <string name="oneplus_back_topic_theme_title">Chủ đề ốp lưng</string>
     <string name="oneplus_battery_menu_stats_total">Xem chi tiết sử dụng</string>
@@ -3578,7 +3579,9 @@ Cảnh báo: Mở khóa bằng khuôn mặt kém an toàn hơn so với vân tay
     <string name="oneplus_fingerprint_gesture_camera_summary">Từ màn hình khung ngắm, nhấn và giữ cảm biến vân tay để chụp ảnh</string>
     <string name="oneplus_fingerprint_gesture_camera_title">Nhấn giữ để chụp ảnh</string>
     <string name="oneplus_fingerprint_gesture_settings_title">Cử chỉ dấu vân tay</string>
+    <string name="oneplus_fingerprint_hardware_exception">Thông tin kết cấu dấu vân tay không chính xác, vui lòng liên hệ với bộ phận chăm sóc khách hàng</string>
     <string name="oneplus_fingerprint_longpress_for_quickpay_summary">Nhấn giữ cảm biến vân tay để khởi chạy thanh toán nhanh</string>
+    <string name="oneplus_fingerprint_not_adjustment">Dữ liệu hiệu chuẩn dấu vân tay không chính xác, vui lòng liên hệ với bộ phận chăm sóc khách hàng</string>
     <string name="oneplus_fingerprint_quickpay_lock_swtch_summary">Nhấn giữ cảm biến vân tay để khởi chạy thanh toán nhanh khi điện thoại được khóa.</string>
     <string name="oneplus_fingerprint_sensor_longpress_for_quickpay_summary">Nhấn giữ cảm biến vân tay để khởi chạy thanh toán nhanh khi điện thoại được mở khóa</string>
     <string name="oneplus_fingerprint_settings_list_title">Danh sách vân tay</string>
@@ -3695,6 +3698,7 @@ Bạn có thể tắt chúng bằng cách bật lại thanh điều hướng tro
     <string name="oneplus_google_services_title">Dịch vụ liên quan đến Google</string>
     <string name="oneplus_google_tts">Dữ liệu giọng nói TTS của Google</string>
     <string name="oneplus_gps_using">đang sử dụng GPS</string>
+    <string name="oneplus_green">Xanh lục</string>
     <string name="oneplus_h2_contributors">Nhà phân phối HydrogenOS</string>
     <string name="oneplus_hand_up_proximity_summary">Đánh thức màn hình khi bạn cầm điện thoại lên</string>
     <string name="oneplus_hand_up_proximity_title">Nâng để bật màn hiển thị</string>
@@ -3729,7 +3733,7 @@ Lưu ý: Vân tay của bạn có thể kém an toàn hơn mẫu hình mở khó
     <string name="oneplus_instrucitons">Hướng dẫn</string>
     <string name="oneplus_intelligently_select_best_wifi">Lựa chọn Wi‑Fi tốt nhất một cách thông minh</string>
     <string name="oneplus_intelligently_select_best_wifi_summary">Chọn và kết nối với Wi‑Fi tốt nhất một cách thông minh bằng cách phát hiện và phân tích khả năng kết nối của các mạng Wi‑Fi</string>
-    <string name="oneplus_intensely">Strong</string>
+    <string name="oneplus_intensely">Mạnh</string>
     <string name="oneplus_is_turn_on_feature">Bạn có chắc muốn bật tính năng này?</string>
     <string name="oneplus_is_turn_on_feature_summary">"Khi tính năng này được bật, đôi khi các tình huống sau có thể xuất hiện:
 1.Một số khu vực của màn hình hiển thị không bình thường
@@ -3770,6 +3774,7 @@ Lưu ý: Vân tay của bạn có thể kém an toàn hơn mẫu hình mở khó
     <string name="oneplus_lockpattern_need_to_unlock_wrong">Thử lại</string>
     <string name="oneplus_lockpattern_too_many_failed_confirmation_attempts_header">Quá nhiều lượt thử không đúng!</string>
     <string name="oneplus_lockscreen_settings_title">Tùy chọn màn hình khóa</string>
+    <string name="oneplus_magenta">Hồng sẫm</string>
     <string name="oneplus_manage_virtual_keyboard">Quản lý bàn phím</string>
     <string name="oneplus_max_shortcuts_tips">Bạn có thể thêm tối đa 6 lối tắt</string>
     <string name="oneplus_media_ring_summary">Tắt tiếng nội dung đa phương tiện</string>
@@ -3783,7 +3788,7 @@ Lưu ý: Vân tay của bạn có thể kém an toàn hơn mẫu hình mở khó
     <string name="oneplus_memc_support_no_apps">Chưa cài đặt ứng dụng được hỗ trợ nào</string>
     <string name="oneplus_memc_video">Làm mượt hình ảnh chuyển động</string>
     <string name="oneplus_memc_video_effect">Hiệu ứng bù</string>
-    <string name="oneplus_memc_video_extreme">Cực hạn</string>
+    <string name="oneplus_memc_video_extreme">Xấu</string>
     <string name="oneplus_memc_video_nosupport_extreme_summary">Cần chuyển độ phân giải sang FHD+ để bật chế độ cực hạn</string>
     <string name="oneplus_memc_video_nosupport_extreme_text">Đang chuyển sang độ phân giải QHD+, tính năng bù đồ họa chuyển động bị giới hạn</string>
     <string name="oneplus_memc_video_smooth">Mượt mà</string>
@@ -3816,7 +3821,7 @@ Lưu ý: Vân tay của bạn có thể kém an toàn hơn mẫu hình mở khó
     <string name="oneplus_night_mode_brightness">Sáng</string>
     <string name="oneplus_night_mode_brightness_strong">Tối nhất</string>
     <string name="oneplus_night_mode_color_temperature">Nhiệt độ màu</string>
-    <string name="oneplus_night_mode_enabled_op">Chế độ ban đêm</string>
+    <string name="oneplus_night_mode_enabled_op">Chế độ Ban đêm</string>
     <string name="oneplus_night_mode_enabled_op_summary">Bật Chế độ ban đêm theo cách thủ công</string>
     <string name="oneplus_night_mode_manual_open">Thủ công</string>
     <string name="oneplus_night_mode_open_tip">Trước tiên hãy bật chế độ thoải mái cho mắt</string>
@@ -4073,6 +4078,7 @@ Còn %d lượt."</string>
     <string name="oneplus_search_keyword_theme_settings">Tùy chỉnh Màn hình khóa, Hình nền, Kiểu đồng hồ, Hoạt ảnh vân tay, Horizon Light, Tùy chỉnh hệ thống, Màu nhấn mạnh, Hình dạng, Phông chữ, Tông màu, Gói biểu tượng, Ánh sáng chói lòa, Sắc thái tối, Sắc thái rực rỡ</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">Tùy chỉnh Màn hình khóa, Hình nền, Kiểu đồng hồ, Hoạt ảnh vân tay, Horizon Light, Tùy chỉnh hệ thống, Màu nhấn mạnh, Hình dạng, Phông chữ, Tông màu, Gói biểu tượng, Ánh sáng chói lòa, Sắc thái tối, Sắc thái rực rỡ</string>
     <string name="oneplus_search_keyword_theme_settings_mcl_new">Tùy chỉnh màn hình khóa, Hình nền, Kiểu đồng hồ, Hoạt ảnh vân tay, Horizon Light, Tùy chỉnh hệ thống, Màu nhấn mạnh, Hình dạng, Phông chữ, Tông màu, Gói biểu tượng, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_must_have">TÙY CHỈNH MÀN HÌNH KHÓA, Hình nền, Kiểu đồng hồ, TÙY CHỈNH HỆ THỐNG, Màu nhấn mạnh, Hình dạng, Tông màu, Gói biểu tượng, Ánh sáng chói lòa, Sắc thái tối, Sắc thái rực rỡ</string>
     <string name="oneplus_search_keyword_theme_settings_new">Tùy chỉnh màn hình khóa, Hình nền, Kiểu đồng hồ, Hoạt ảnh vân tay, Horizon Light, Tùy chỉnh hệ thống, Màu nhấn mạnh, Hình dạng, Phông chữ, Tông màu, Gói biểu tượng</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">Tùy chỉnh Màn hình khóa, Hình nền, Kiểu đồng hồ, Hoạt ảnh vân tay, Tùy chỉnh hệ thống, Màu nhấn mạnh, Hình dạng, Phông chữ, Tông màu, Gói biểu tượng, Ánh sáng chói lòa, Sắc thái tối, Sắc thái rực rỡ</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Tùy chỉnh màn hình khóa, Hình nền, Kiểu đồng hồ, Hoạt ảnh vân tay, Tùy chỉnh hệ thống, Màu nhấn mạnh, Hình dạng, Phông chữ, Tông màu, Gói biểu tượng</string>
@@ -4142,7 +4148,7 @@ Lưu ý:
     <string name="oneplus_silent_notifications_status_bar">Ẩn thông báo im lặng trong thanh trạng thái</string>
     <string name="oneplus_sim1_ringtone_switch">Thẻ SIM 1</string>
     <string name="oneplus_sim2_ringtone_switch">Thẻ SIM 2</string>
-    <string name="oneplus_simcard_title">Thẻ</string>
+    <string name="oneplus_simcard_title">SIM</string>
     <string name="oneplus_sla_down_load_app_summary">Không thể tăng tốc tải xuống khi điểm truy cập hoặc Wi‑Fi Direct đang bật</string>
     <string name="oneplus_sleep_standby_summary">Tối ưu hóa thời lượng pin (ví dụ như tắt kết nối mạng) khi bạn ngủ. Điều này sẽ khiến các ứng dụng không thể nhận thông báo kịp thời.</string>
     <string name="oneplus_sleep_standby_title">Tối ưu hóa chế độ chờ khi ngủ</string>
@@ -4157,7 +4163,7 @@ Lưu ý:
     <string name="oneplus_sound_tuner">Dolby Atmos</string>
     <string name="oneplus_status_summary">Số điện thoại, tín hiệu, v.v.</string>
     <string name="oneplus_stop_run">Bắt dừng</string>
-    <string name="oneplus_storage">STORAGE</string>
+    <string name="oneplus_storage">LƯU TRỮ</string>
     <string name="oneplus_sunrise_sunset">Tự động bật từ lúc mặt trời lặn đến khi mặt trời mọc</string>
     <string name="oneplus_support_apps">ỨNG DỤNG ĐƯỢC HỖ TRỢ</string>
     <string name="oneplus_support_summary">Mẹo và câu hỏi thường gặp về việc sử dụng thiết bị</string>
@@ -4168,6 +4174,8 @@ Lưu ý:
     <string name="oneplus_switch">OnePlus Switch</string>
     <string name="oneplus_switch_resolution_kill_process_confirm">Chuyển đổi</string>
     <string name="oneplus_switch_resolution_kill_process_tips">Việc chuyển đổi độ phân giải có thể khiến một số ứng dụng chạy dưới nền bị đóng. Bạn có xác nhận chuyển đổi không?</string>
+    <string name="oneplus_switch_sa_option">Chế độ NSA + SA</string>
+    <string name="oneplus_switch_sa_option_summary">Tự động truy cập chế độ mạng NSA hoặc SA tùy thuộc vào cài đặt và kết nối 5G của nhà mạng điện thoại. Nếu tắt thì chỉ có thể truy cập vào mạng NSA.</string>
     <string name="oneplus_switch_screen_lock_type">Đang thay đổi loại khóa màn hình, vui lòng chờ...</string>
     <string name="oneplus_system_data_summary">Bao gồm thông tin tài khoản, liên hệ, dữ liệu ứng dụng</string>
     <string name="oneplus_system_data_title">Dữ liệu hệ thống</string>
@@ -4185,7 +4193,7 @@ Lưu ý:
     <string name="oneplus_theme_accent_color_select">Chọn màu nhấn mạnh</string>
     <string name="oneplus_theme_apply_summary">Sau khi áp dụng chủ đề này, các tùy chọn tùy chỉnh của bạn sẽ bị ghi đè</string>
     <string name="oneplus_theme_apply_title">Bạn có muốn áp dụng chủ đề này không?</string>
-    <string name="oneplus_theme_clock">Kiểu đồng hồ</string>
+    <string name="oneplus_theme_clock">Đồng hồ ở hiển thị môi trường</string>
     <string name="oneplus_theme_clock_snake_action">BẬT HIỂN THỊ MÔI TRƯỜNG</string>
     <string name="oneplus_theme_clock_snake_tip">Tính năng này sẽ khả dụng khi hiển thị môi trường bật</string>
     <string name="oneplus_theme_colorpicker_colorvalue">MÃ MÀU</string>
@@ -4199,7 +4207,7 @@ Lưu ý:
     <string name="oneplus_theme_font">Phông chữ</string>
     <string name="oneplus_theme_font_content">Chia sẻ công nghệ tốt nhất với thế giới, đồng hành cùng bạn</string>
     <string name="oneplus_theme_icon_pack">Gói biểu tượng</string>
-    <string name="oneplus_theme_lock_screen_customization">TÙY CHỈNH MÀN HÌNH KHÓA</string>
+    <string name="oneplus_theme_lock_screen_customization">MÀN HÌNH KHÓA VÀ HIỂN THỊ MÔI TRƯỜNG</string>
     <string name="oneplus_theme_preset">Chủ đề cài đặt sẵn</string>
     <string name="oneplus_theme_preset_color">Sắc thái rực rỡ</string>
     <string name="oneplus_theme_preset_dark">Sắc thái tối</string>
@@ -4238,6 +4246,7 @@ Lưu ý:
     <string name="oneplus_top_level_buttons_and_gestures_summary">Alert slider, thanh điều hướng &amp; cử chỉ</string>
     <string name="oneplus_top_level_cloud_h2_summary">Đồng bộ dữ liệu với đám mây, tìm điện thoại</string>
     <string name="oneplus_top_level_cloud_o2_summary">Đồng bộ dữ liệu với đám mây</string>
+    <string name="oneplus_top_level_connected_android_auto_summary">NFC, Android Tự động, truyền phát, chạm &amp; thanh toán</string>
     <string name="oneplus_top_level_connected_summary">NFC, truyền phát, nhấn &amp; thanh toán</string>
     <string name="oneplus_top_level_display_summary">Thanh trạng thái, hiển thị môi trường, thoải mái cho mắt, chế độ đọc</string>
     <string name="oneplus_top_level_network_summary">SIM, mạng di động, sử dụng dữ liệu, điểm truy cập</string>
@@ -4323,7 +4332,8 @@ Việc cài đặt mạng dưới dạng ẩn sẽ không thay đổi cài đặ
     <string name="onplus_hardware_version_info">Phiên bản phần cứng</string>
     <string name="onplus_software_version_info">Phiên bản phần mềm</string>
     <string name="onscreen_keyboard_settings_summary">Cài đặt bàn phím ảo</string>
-    <string name="op_advanced_settings">Cao cấp</string>
+    <string name="op_advanced_settings">Nâng cao</string>
+    <string name="op_already_know">Đã hiểu</string>
     <string name="op_android_mode_cannot_change_color_accent">Chủ đề mặc định chỉ có thể sử dụng chủ đề màu hệ thống</string>
     <string name="op_aod_parsons_info_button">Ok</string>
     <string name="op_aod_parsons_info_message">"Sau khi mở, một kiệt tác lại được ra đời.
@@ -4371,7 +4381,7 @@ Insight, được thiết kế bởi OnePlus &amp; các sinh viên từ Trườn
     <string name="op_data_vowlan_enable_summary">Sử dụng Gọi qua Wi-Fi khi có thể</string>
     <string name="op_default_apps_summary">Trang chủ, trình duyệt</string>
     <string name="op_default_luncher_title">Ứng dụng trang chủ</string>
-    <string name="op_display_advanced_settings">Cao cấp</string>
+    <string name="op_display_advanced_settings">Nâng cao</string>
     <string name="op_display_advanced_settings_summary_1">Hiệu chuẩn màn hình, độ phân giải, tốc độ làm mới, cài đặt tai thỏ</string>
     <string name="op_display_advanced_settings_summary_2">Hiệu chuẩn màn hình, tốc độ làm mới, cài đặt tai thỏ</string>
     <string name="op_display_advanced_settings_summary_3">Hiệu chuẩn màn hình, độ phân giải, tốc độ làm mới</string>
@@ -4379,6 +4389,7 @@ Insight, được thiết kế bởi OnePlus &amp; các sinh viên từ Trườn
     <string name="op_display_advanced_settings_summary_5">Tốc độ làm mới</string>
     <string name="op_display_advanced_settings_summary_6">Hiệu chuẩn màn hình, độ phân giải, tốc độ làm mới, khu vực hiển thị máy ảnh trước</string>
     <string name="op_display_advanced_settings_summary_7">Hiệu chuẩn màn hình, tốc độ làm mới, khu vực hiển thị máy ảnh trước</string>
+    <string name="op_display_advanced_settings_summary_8">Tốc độ làm mới, khu vực hiển thị máy ảnh trước</string>
     <string name="op_display_graphics_enhancement_engine">CÔNG CỤ TĂNG CƯỜNG VIDEO</string>
     <string name="op_display_motion_graphics_compensation">Làm mượt hình ảnh chuyển động</string>
     <string name="op_display_motion_graphics_compensation_summary">Tăng cường tốc độ khung hình của đồ họa, các hiệu ứng video và trò chơi mượt mà hơn</string>
@@ -4404,9 +4415,11 @@ Mở khóa bằng vân tay có thể không tương thích với tấm bảo v�
     <string name="op_global_drak_mode_not_full_support_list">Các ứng dụng không được hỗ trợ</string>
     <string name="op_global_drak_mode_support_description">Ứng dụng không được hỗ trợ có thể không hoạt động bình thường trong chế độ tối</string>
     <string name="op_gps_off_warn_msg">Trước hết, vui lòng bật vị trí</string>
-    <string name="op_high_power_app_manager">Ứng dụng sử dụng công suất lớn</string>
+    <string name="op_high_power_app_manager">Quản lý các ứng dụng đòi hỏi công suất lớn</string>
     <string name="op_history_toggled_on_summary">Thông báo gần đây của bạn sẽ xuất hiện tại đây</string>
     <string name="op_keep_location_services">Để tìm kiếm và theo dõi các trạm sạc ở gần, hãy luôn bật dịch vụ vị trí</string>
+    <string name="op_lab_dc_still_on">VẪN BẬT</string>
+    <string name="op_lab_dc_warn_message">Khi bật làm mờ DC, trong một số trường hợp có thể hiển thị màu không đồng đều hoặc bất thường. Bạn có chắc chắn muốn bật không?</string>
     <string name="op_light_mode_title">Nhẹ</string>
     <string name="op_linked_launch_summary">Các ứng dụng được quản lý có thể được khởi chạy đồng loạt trong nền</string>
     <string name="op_linked_launch_title">Tự động khởi chạy ứng dụng</string>
@@ -4421,7 +4434,10 @@ Mở khóa bằng vân tay có thể không tương thích với tấm bảo v�
     <string name="op_notification_history_off_summary">Bật lịch sử thông báo để xem các thông báo gần đây</string>
     <string name="op_notification_history_summary">Hiển thị các thông báo gần đây</string>
     <string name="op_oneplus_roaming_summary">Cung cấp dịch vụ truy cập internet trên toàn cầu</string>
-    <string name="op_oneplus_roaming_title">OnePlus Roaming</string>
+    <string name="op_oneplus_roaming_title">Chuyển vùng OnePlus</string>
+    <string name="op_powerkey_menu_cards_description">Khi bật, chế độ thanh toán và thông tin lên máy bay sẽ được hiển thị an toàn</string>
+    <string name="op_powerkey_menu_device_controller_description">Bật để truy cập trình điều khiển của thiết bị liên quan</string>
+    <string name="op_powerkey_menu_lock_display_title">Hiển thị màn hình khóa</string>
     <string name="op_primary_charm_purple_label">Tím thẫm</string>
     <string name="op_primary_dark_green_label">Màu xanh lá cây đậm</string>
     <string name="op_primary_default_label">Xanh dương</string>
@@ -4451,6 +4467,9 @@ Mở khóa bằng vân tay có thể không tương thích với tấm bảo v�
     <string name="op_starwar_mode_cannot_change_color_accent">Chủ đề Star Wars chỉ có thể sử dụng chủ đề hệ thống màu</string>
     <string name="op_starwar_mode_title">Star Wars</string>
     <string name="op_storage">Lưu trữ &amp; bộ nhớ</string>
+    <string name="op_switch_record_info">Đã sao chép đến %2$s vào %1$s</string>
+    <string name="op_switch_record_none">Chưa có lịch sử di chuyển dữ liệu</string>
+    <string name="op_switch_record_title">Lịch sử di chuyển dữ liệu</string>
     <string name="op_system_dashboard_summary">Ngôn ngữ, thời gian, đặt lại, cập nhật</string>
     <string name="op_tcp_timestamps_randomization_dialog_title">Chọn cờ dấu thời gian ngẫu nhiên tcp</string>
     <string name="op_tcp_timestamps_randomization_title">Cờ dấu thời gian ngẫu nhiên TCP</string>
@@ -4458,7 +4477,9 @@ Mở khóa bằng vân tay có thể không tương thích với tấm bảo v�
     <string name="op_theme_2__title">The Avengers</string>
     <string name="op_theme_3_cannot_change_color_accent">Chủ đề McLaren chỉ có thể sử dụng chủ đề màu của hệ thống</string>
     <string name="op_theme_3_title">McLaren</string>
+    <string name="op_theme_clock_preview_title">Đồng hồ ở hiển thị môi trường</string>
     <string name="op_theme_entrance_summary">Hình nền, màu nhấn mạnh, phông chữ</string>
+    <string name="op_theme_lock_screen_customization">MÀN HÌNH KHÓA VÀ HIỂN THỊ MÔI TRƯỜNG</string>
     <string name="op_theme_mode_title">Chủ đề</string>
     <string name="op_use_cast">Sử dụng Truyền</string>
     <string name="op_user_manual_settings">Hướng dẫn Sử dụng</string>
@@ -4525,6 +4546,9 @@ Mở khóa bằng vân tay có thể không tương thích với tấm bảo v�
     <string name="permission_bar_chart_details">Xem tất cả trong Trang tổng quan</string>
     <string name="permission_bar_chart_empty_text">0 ứng dụng đã sử dụng quyền</string>
     <string name="permission_bar_chart_title">Mức sử dụng quyền truy cập trong 24 giờ qua</string>
+    <string name="permission_btn_text_denied">Thoát</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Tuyên bố về quyền</string>
     <string name="permissions_label">Quyền</string>
     <string name="permit_draw_overlay">Cho phép hiển thị trên các ứng dụng khác</string>
     <string name="permit_manage_external_storage">Cho phép truy cập để quản lý tất cả các tệp</string>
@@ -4951,7 +4975,7 @@ Tùy chọn cài đặt này sẽ ảnh hưởng đến tất cả người dùn
     <string name="scanning_status_text_wifi_on_ble_off">Tính năng quét tìm Wi‑Fi đang bật, tính năng quét tìm Bluetooth đang tắt</string>
     <string name="scanning_status_text_wifi_on_ble_on">Cả tính năng quét tìm Wi‑Fi và quét tìm Bluetooth đều đang bật</string>
     <string name="schedule_reminders">Lời nhắc sự kiện</string>
-    <string name="screen_color_mode_advanced">Cao cấp</string>
+    <string name="screen_color_mode_advanced">Nâng cao</string>
     <string name="screen_color_mode_advanced_settings">Cài đặt nâng cao</string>
     <string name="screen_color_mode_vivid">Sống động</string>
     <string name="screen_compatibility_label">Khả năng tương thích với màn hình</string>
@@ -5455,7 +5479,7 @@ Có thể mã PIN không đúng."</string>
     <string name="status_bar_settings_cast_title">Truyền phát</string>
     <string name="status_bar_settings_cellular_title">Dữ liệu di động</string>
     <string name="status_bar_settings_dnd_title">Không làm phiền</string>
-    <string name="status_bar_settings_headset_title">Tai nghe</string>
+    <string name="status_bar_settings_headset_title">Bộ tai nghe</string>
     <string name="status_bar_settings_hotspot_title">Điểm truy cập</string>
     <string name="status_bar_settings_network_speed_title">Hiển thị tốc độ mạng</string>
     <string name="status_bar_settings_time_title">Thời gian</string>
@@ -5814,7 +5838,7 @@ Một giải pháp đồng bộ hóa dữ liệu của Google cho phép quyền 
     <string name="theme_customization_device_default">Theo giá trị mặc định của thiết bị</string>
     <string name="theme_switch_dark">tối</string>
     <string name="theme_switch_dark_mode_summary">Bật chủ đề tối cho toàn hệ thống</string>
-    <string name="theme_switch_dark_mode_title">Chế độ ban đêm</string>
+    <string name="theme_switch_dark_mode_title">Chế độ Ban đêm</string>
     <string name="theme_switch_default">mặc định</string>
     <string name="theme_switch_description">Bạn sắp chuyển chủ đề thành %1$s</string>
     <string name="theme_switch_dialog_title">Thay đổi chủ đề hệ thống</string>
@@ -5870,7 +5894,7 @@ Một giải pháp đồng bộ hóa dữ liệu của Google cho phép quyền 
     <string name="traffic_set_warn_title_vzw">Cảnh báo sử dụng dữ liệu</string>
     <string name="traffic_usage_limit_dialog_message">Việc sử dụng dữ liệu di động sẽ bị chặn một khi nó đạt đến giới hạn do bạn quy định. Bởi mức sử dụng dữ liệu được đo bởi điện thoại của bạn, và nhà mạng của bạn có thể tính mức sử dụng theo cách khác, bạn nên đặt một giới hạn an toàn.</string>
     <string name="traffic_usage_limit_dialog_message_vzw">Để đặt giới hạn, hãy xem xét lượng dữ liệu bạn muốn sử dụng trên thiết bị này. Mức sử dụng dữ liệu được đo bởi điện thoại và thông tin được thể hiện trên hóa đơn của bạn có thể khác nhau.</string>
-    <string name="traffic_usage_limit_dialog_title">Giới hạn mức sử dụng dữ liệu</string>
+    <string name="traffic_usage_limit_dialog_title">Sử dụng dữ liệu giới hạn</string>
     <string name="traffic_usage_limit_dialog_title_vzw">Đặt giới hạn dữ liệu</string>
     <string name="traffic_usage_notification">Thông báo sử dụng dữ liệu</string>
     <string name="traffic_usage_runout_title">Dữ liệu đã hết</string>
@@ -5973,6 +5997,10 @@ Một giải pháp đồng bộ hóa dữ liệu của Google cho phép quyền 
     <string name="uninstallapps_toast_message">ứng dụng đã bị xóa</string>
     <string name="uninstalling">Gỡ bỏ…</string>
     <string name="uninstalling_notification_channel">Gỡ cài đặt đang chạy</string>
+    <string name="units_one">GB/MB (Tự động thay đổi)</string>
+    <string name="units_three">Chỉ MB</string>
+    <string name="units_title">Hiển thị đơn vị</string>
+    <string name="units_two">Chỉ GB</string>
     <string name="unknown">Không xác định</string>
     <string name="unknown_app">Ứng dụng không xác định</string>
     <string name="unknown_unavailability_setting_summary">Cài đặt không hoạt động</string>
@@ -6614,6 +6642,8 @@ Việc đặt mạng này là mạng ẩn sẽ không thay đổi các tùy ch�
     <string name="wifi_no_user_cert_warning">Bạn cần có chứng chỉ.</string>
     <string name="wifi_not_in_range">Ngoài vùng phủ sóng</string>
     <string name="wifi_not_in_range_message">Đang nằm ngoài vùng phủ sóng của mạng</string>
+    <string name="wifi_notification">"Thông báo Wi-Fi "</string>
+    <string name="wifi_notification_summary">Thông báo cho tôi khi Wi-Fi có thể sử dụng</string>
     <string name="wifi_notify_open_networks">Thông báo về mạng công cộng</string>
     <string name="wifi_notify_open_networks_summary">Thông báo khi có mạng công cộng chất lượng cao</string>
     <string name="wifi_on_time">Thời gian bật Wi-Fi</string>

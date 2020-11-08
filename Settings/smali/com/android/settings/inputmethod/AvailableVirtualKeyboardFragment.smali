@@ -3,7 +3,7 @@
 .source "AvailableVirtualKeyboardFragment.java"
 
 # interfaces
-.implements Lcom/android/settingslib/inputmethod/InputMethodPreference$OnSavePreferenceListener;
+.implements Lcom/android/settingslib/OPInputMethodPreference$OnSavePreferenceListener;
 
 
 # static fields
@@ -21,7 +21,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
-            "Lcom/android/settingslib/inputmethod/InputMethodPreference;",
+            "Lcom/android/settingslib/OPInputMethodPreference;",
             ">;"
         }
     .end annotation
@@ -57,10 +57,10 @@
     return-void
 .end method
 
-.method static synthetic lambda$updateInputMethodPreferenceViews$0(Ljava/text/Collator;Lcom/android/settingslib/inputmethod/InputMethodPreference;Lcom/android/settingslib/inputmethod/InputMethodPreference;)I
+.method static synthetic lambda$updateInputMethodPreferenceViews$0(Ljava/text/Collator;Lcom/android/settingslib/OPInputMethodPreference;Lcom/android/settingslib/OPInputMethodPreference;)I
     .locals 0
 
-    invoke-virtual {p1, p2, p0}, Lcom/android/settingslib/inputmethod/InputMethodPreference;->compareTo(Lcom/android/settingslib/inputmethod/InputMethodPreference;Ljava/text/Collator;)I
+    invoke-virtual {p1, p2, p0}, Lcom/android/settingslib/OPInputMethodPreference;->compareTo(Lcom/android/settingslib/OPInputMethodPreference;Ljava/text/Collator;)I
 
     move-result p0
 
@@ -149,7 +149,7 @@
     move v5, v1
 
     :goto_3
-    new-instance v13, Lcom/android/settingslib/inputmethod/InputMethodPreference;
+    new-instance v13, Lcom/android/settingslib/OPInputMethodPreference;
 
     const/4 v4, 0x1
 
@@ -161,7 +161,7 @@
 
     move-object v6, p0
 
-    invoke-direct/range {v1 .. v6}, Lcom/android/settingslib/inputmethod/InputMethodPreference;-><init>(Landroid/content/Context;Landroid/view/inputmethod/InputMethodInfo;ZZLcom/android/settingslib/inputmethod/InputMethodPreference$OnSavePreferenceListener;)V
+    invoke-direct/range {v1 .. v6}, Lcom/android/settingslib/OPInputMethodPreference;-><init>(Landroid/content/Context;Landroid/view/inputmethod/InputMethodInfo;ZZLcom/android/settingslib/OPInputMethodPreference$OnSavePreferenceListener;)V
 
     invoke-virtual {v7}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -188,9 +188,9 @@
 
     iget-object v1, p0, Lcom/android/settings/inputmethod/AvailableVirtualKeyboardFragment;->mInputMethodPreferenceList:Ljava/util/ArrayList;
 
-    new-instance v2, Lcom/android/settings/inputmethod/-$$Lambda$AvailableVirtualKeyboardFragment$jwIjaxSxVSRnK0I3ZX1KVHtd2wk;
+    new-instance v2, Lcom/android/settings/inputmethod/-$$Lambda$AvailableVirtualKeyboardFragment$vCdjUP8a540qakZeVUIXn3E4j9s;
 
-    invoke-direct {v2, v0}, Lcom/android/settings/inputmethod/-$$Lambda$AvailableVirtualKeyboardFragment$jwIjaxSxVSRnK0I3ZX1KVHtd2wk;-><init>(Ljava/text/Collator;)V
+    invoke-direct {v2, v0}, Lcom/android/settings/inputmethod/-$$Lambda$AvailableVirtualKeyboardFragment$vCdjUP8a540qakZeVUIXn3E4j9s;-><init>(Ljava/text/Collator;)V
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->sort(Ljava/util/Comparator;)V
 
@@ -207,7 +207,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settingslib/inputmethod/InputMethodPreference;
+    check-cast v0, Lcom/android/settingslib/OPInputMethodPreference;
 
     invoke-virtual {v0, v9}, Landroidx/preference/Preference;->setOrder(I)V
 
@@ -217,7 +217,7 @@
 
     invoke-static {v0}, Lcom/android/settingslib/inputmethod/InputMethodAndSubtypeUtilCompat;->removeUnnecessaryNonPersistentPreference(Landroidx/preference/Preference;)V
 
-    invoke-virtual {v0}, Lcom/android/settingslib/inputmethod/InputMethodPreference;->updatePreferenceViews()V
+    invoke-virtual {v0}, Lcom/android/settingslib/OPInputMethodPreference;->updatePreferenceViews()V
 
     add-int/lit8 v9, v9, 0x1
 
@@ -307,7 +307,7 @@
     return-void
 .end method
 
-.method public onSaveInputMethodPreference(Lcom/android/settingslib/inputmethod/InputMethodPreference;)V
+.method public onSaveInputMethodPreference(Lcom/android/settingslib/OPInputMethodPreference;)V
     .locals 2
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
@@ -365,9 +365,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/android/settingslib/inputmethod/InputMethodPreference;
+    check-cast p1, Lcom/android/settingslib/OPInputMethodPreference;
 
-    invoke-virtual {p1}, Lcom/android/settingslib/inputmethod/InputMethodPreference;->updatePreferenceViews()V
+    invoke-virtual {p1}, Lcom/android/settingslib/OPInputMethodPreference;->updatePreferenceViews()V
 
     goto :goto_1
 

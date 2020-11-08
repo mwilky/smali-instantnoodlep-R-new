@@ -51,9 +51,6 @@
 .method public abstract isEnabled()Z
 .end method
 
-.method public abstract isYearPickerIsShow()Z
-.end method
-
 .method public abstract onConfigurationChanged(Landroid/content/res/Configuration;)V
 .end method
 
@@ -67,9 +64,6 @@
 .end method
 
 .method public abstract setCalendarViewShown(Z)V
-.end method
-
-.method public abstract setCurrentYear()V
 .end method
 
 .method public abstract setEnabled(Z)V

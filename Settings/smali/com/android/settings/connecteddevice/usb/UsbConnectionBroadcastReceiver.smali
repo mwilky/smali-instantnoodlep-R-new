@@ -104,7 +104,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_6
+    if-eqz p1, :cond_7
 
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
@@ -223,19 +223,42 @@
 
     move-result-object p1
 
-    const-string p2, "rndis"
+    const-string v1, "rndis"
 
-    invoke-virtual {p1, p2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
+    invoke-virtual {p1, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result p1
 
     if-eqz p1, :cond_5
 
-    const-wide/16 p1, 0x20
+    const-wide/16 v4, 0x20
+
+    or-long/2addr v2, v4
+
+    :cond_5
+    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isUsvMode()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_6
+
+    invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+
+    move-result-object p1
+
+    const-string p2, "system_update,adb"
+
+    invoke-virtual {p1, p2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_6
+
+    const-wide/16 p1, 0x80
 
     or-long/2addr v2, p1
 
-    :cond_5
+    :cond_6
     iput-wide v2, p0, Lcom/android/settings/connecteddevice/usb/UsbConnectionBroadcastReceiver;->mFunctions:J
 
     iget-object p1, p0, Lcom/android/settings/connecteddevice/usb/UsbConnectionBroadcastReceiver;->mUsbBackend:Lcom/android/settings/connecteddevice/usb/UsbBackend;
@@ -290,7 +313,7 @@
 
     goto :goto_2
 
-    :cond_6
+    :cond_7
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -301,7 +324,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_7
+    if-eqz p1, :cond_8
 
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
@@ -315,7 +338,7 @@
 
     check-cast p1, Landroid/hardware/usb/UsbPortStatus;
 
-    if-eqz p1, :cond_7
+    if-eqz p1, :cond_8
 
     invoke-virtual {p1}, Landroid/hardware/usb/UsbPortStatus;->getCurrentDataRole()I
 
@@ -329,11 +352,11 @@
 
     iput p1, p0, Lcom/android/settings/connecteddevice/usb/UsbConnectionBroadcastReceiver;->mPowerRole:I
 
-    :cond_7
+    :cond_8
     :goto_2
     iget-object v0, p0, Lcom/android/settings/connecteddevice/usb/UsbConnectionBroadcastReceiver;->mUsbConnectionListener:Lcom/android/settings/connecteddevice/usb/UsbConnectionBroadcastReceiver$UsbConnectionListener;
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_9
 
     iget-boolean v1, p0, Lcom/android/settings/connecteddevice/usb/UsbConnectionBroadcastReceiver;->mConnected:Z
 
@@ -345,7 +368,7 @@
 
     invoke-interface/range {v0 .. v5}, Lcom/android/settings/connecteddevice/usb/UsbConnectionBroadcastReceiver$UsbConnectionListener;->onUsbConnectionChanged(ZJII)V
 
-    :cond_8
+    :cond_9
     return-void
 .end method
 

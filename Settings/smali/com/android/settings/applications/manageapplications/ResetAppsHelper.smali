@@ -128,7 +128,15 @@
     return-void
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/applications/manageapplications/ResetAppsHelper;)Landroid/net/NetworkPolicyManager;
+.method static synthetic access$600(Lcom/android/settings/applications/manageapplications/ResetAppsHelper;Landroid/content/Context;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/settings/applications/manageapplications/ResetAppsHelper;->sendResetAllModesIntent(Landroid/content/Context;)V
+
+    return-void
+.end method
+
+.method static synthetic access$700(Lcom/android/settings/applications/manageapplications/ResetAppsHelper;)Landroid/net/NetworkPolicyManager;
     .locals 0
 
     iget-object p0, p0, Lcom/android/settings/applications/manageapplications/ResetAppsHelper;->mNpm:Landroid/net/NetworkPolicyManager;
@@ -430,6 +438,26 @@
     invoke-static {v5, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_3
+    return-void
+.end method
+
+.method private sendResetAllModesIntent(Landroid/content/Context;)V
+    .locals 1
+
+    new-instance p1, Landroid/content/Intent;
+
+    const-string v0, "oneplus.intent.action.RESET_ALL_MODES"
+
+    invoke-direct {p1, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string v0, "android"
+
+    invoke-virtual {p1, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+
+    iget-object p0, p0, Lcom/android/settings/applications/manageapplications/ResetAppsHelper;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0, p1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
+
     return-void
 .end method
 

@@ -19,6 +19,8 @@
 
 
 # instance fields
+.field private isDemoModeEnabled:I
+
 .field private final mHost:Lcom/android/settings/security/SecuritySettings;
 
 .field private final mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
@@ -70,27 +72,41 @@
 
     invoke-interface {v0, p1}, Lcom/android/settings/security/SecurityFeatureProvider;->getLockPatternUtils(Landroid/content/Context;)Lcom/android/internal/widget/LockPatternUtils;
 
-    move-result-object p1
+    move-result-object p2
 
-    iput-object p1, p0, Lcom/android/settings/security/trustagent/TrustAgentListPreferenceController;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iput-object p2, p0, Lcom/android/settings/security/trustagent/TrustAgentListPreferenceController;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-interface {v0}, Lcom/android/settings/security/SecurityFeatureProvider;->getTrustAgentManager()Lcom/android/settings/security/trustagent/TrustAgentManager;
 
-    move-result-object p1
+    move-result-object p2
 
-    iput-object p1, p0, Lcom/android/settings/security/trustagent/TrustAgentListPreferenceController;->mTrustAgentManager:Lcom/android/settings/security/trustagent/TrustAgentManager;
+    iput-object p2, p0, Lcom/android/settings/security/trustagent/TrustAgentListPreferenceController;->mTrustAgentManager:Lcom/android/settings/security/trustagent/TrustAgentManager;
 
-    new-instance p1, Ljava/util/ArrayList;
+    new-instance p2, Ljava/util/ArrayList;
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object p1, p0, Lcom/android/settings/security/trustagent/TrustAgentListPreferenceController;->mTrustAgentsKeyList:Ljava/util/List;
+    iput-object p2, p0, Lcom/android/settings/security/trustagent/TrustAgentListPreferenceController;->mTrustAgentsKeyList:Ljava/util/List;
 
     if-eqz p3, :cond_0
 
     invoke-virtual {p3, p0}, Lcom/android/settingslib/core/lifecycle/Lifecycle;->addObserver(Landroidx/lifecycle/LifecycleObserver;)V
 
     :cond_0
+    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    const-string/jumbo p3, "verizonwireless_store_demo_mode"
+
+    invoke-static {p1, p3, p2}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/android/settings/security/trustagent/TrustAgentListPreferenceController;->isDemoModeEnabled:I
+
     return-void
 .end method
 
@@ -331,6 +347,25 @@
 
     iput-object p1, p0, Lcom/android/settings/security/trustagent/TrustAgentListPreferenceController;->mSecurityCategory:Landroidx/preference/PreferenceCategory;
 
+    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isUsvMode()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget p1, p0, Lcom/android/settings/security/trustagent/TrustAgentListPreferenceController;->isDemoModeEnabled:I
+
+    const/4 v0, 0x1
+
+    if-ne p1, v0, :cond_0
+
+    iget-object p1, p0, Lcom/android/settings/security/trustagent/TrustAgentListPreferenceController;->mSecurityCategory:Landroidx/preference/PreferenceCategory;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setEnabled(Z)V
+
+    :cond_0
     invoke-direct {p0}, Lcom/android/settings/security/trustagent/TrustAgentListPreferenceController;->updateTrustAgents()V
 
     return-void

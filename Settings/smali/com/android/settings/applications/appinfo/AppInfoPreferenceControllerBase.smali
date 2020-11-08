@@ -4,6 +4,7 @@
 
 # interfaces
 .implements Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment$Callback;
+.implements Lcom/android/settingslib/core/lifecycle/events/OnDestroy;
 
 
 # instance fields
@@ -209,6 +210,16 @@
     move-result p0
 
     return p0
+.end method
+
+.method public onDestroy()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/android/settings/applications/appinfo/AppInfoPreferenceControllerBase;->mParent:Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;
+
+    return-void
 .end method
 
 .method public refreshUi()V

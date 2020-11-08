@@ -34,7 +34,7 @@
 
 .field private mQHDSettingsCatagory:Landroidx/preference/PreferenceCategory;
 
-.field private mWarnDialog:Landroid/app/AlertDialog;
+.field private mWarnDialog:Landroidx/appcompat/app/AlertDialog;
 
 
 # direct methods
@@ -289,6 +289,14 @@
     move-result-object p1
 
     invoke-static {p1, v1, v2}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+
+    iget-object p1, p0, Lcom/oneplus/settings/OPScreenResolutionAdjust;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p1
+
+    invoke-static {p1, v5, v4}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     goto :goto_0
 
@@ -1242,19 +1250,17 @@
 .method public showWarnigDialog(I)V
     .locals 3
 
-    new-instance v0, Landroid/app/AlertDialog$Builder;
+    new-instance v0, Landroidx/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     sget v1, Lcom/android/settings/R$string;->oneplus_switch_resolution_kill_process_tips:I
 
-    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v0
+    invoke-virtual {v0, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setMessage(I)Landroidx/appcompat/app/AlertDialog$Builder;
 
     sget v1, Lcom/android/settings/R$string;->oneplus_switch_resolution_kill_process_confirm:I
 
@@ -1262,35 +1268,31 @@
 
     invoke-direct {v2, p0, p1}, Lcom/oneplus/settings/OPScreenResolutionAdjust$2;-><init>(Lcom/oneplus/settings/OPScreenResolutionAdjust;I)V
 
-    invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v0, v1, v2}, Landroidx/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
 
-    move-result-object p1
-
-    sget v0, Lcom/android/settings/R$string;->cancel:I
+    sget p1, Lcom/android/settings/R$string;->cancel:I
 
     new-instance v1, Lcom/oneplus/settings/OPScreenResolutionAdjust$1;
 
     invoke-direct {v1, p0}, Lcom/oneplus/settings/OPScreenResolutionAdjust$1;-><init>(Lcom/oneplus/settings/OPScreenResolutionAdjust;)V
 
-    invoke-virtual {p1, v0, v1}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v0, p1, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    invoke-virtual {v0}, Landroidx/appcompat/app/AlertDialog$Builder;->create()Landroidx/appcompat/app/AlertDialog;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcom/oneplus/settings/OPScreenResolutionAdjust;->mWarnDialog:Landroid/app/AlertDialog;
+    iput-object p1, p0, Lcom/oneplus/settings/OPScreenResolutionAdjust;->mWarnDialog:Landroidx/appcompat/app/AlertDialog;
 
     new-instance v0, Lcom/oneplus/settings/OPScreenResolutionAdjust$3;
 
     invoke-direct {v0, p0}, Lcom/oneplus/settings/OPScreenResolutionAdjust$3;-><init>(Lcom/oneplus/settings/OPScreenResolutionAdjust;)V
 
-    invoke-virtual {p1, v0}, Landroid/app/AlertDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
+    invoke-virtual {p1, v0}, Landroid/app/Dialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
-    iget-object p0, p0, Lcom/oneplus/settings/OPScreenResolutionAdjust;->mWarnDialog:Landroid/app/AlertDialog;
+    iget-object p0, p0, Lcom/oneplus/settings/OPScreenResolutionAdjust;->mWarnDialog:Landroidx/appcompat/app/AlertDialog;
 
-    invoke-virtual {p0}, Landroid/app/AlertDialog;->show()V
+    invoke-virtual {p0}, Landroid/app/Dialog;->show()V
 
     return-void
 .end method

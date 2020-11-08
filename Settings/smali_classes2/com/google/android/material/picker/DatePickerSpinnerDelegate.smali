@@ -1619,14 +1619,6 @@
     return p0
 .end method
 
-.method public isYearPickerIsShow()Z
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 0
 
@@ -1837,12 +1829,6 @@
     goto :goto_0
 
     :cond_0
-    return-void
-.end method
-
-.method public setCurrentYear()V
-    .locals 0
-
     return-void
 .end method
 

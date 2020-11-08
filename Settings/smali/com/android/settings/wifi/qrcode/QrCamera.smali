@@ -1109,11 +1109,13 @@
     iput-object v0, p0, Lcom/android/settings/wifi/qrcode/QrCamera;->mDecodeTask:Lcom/android/settings/wifi/qrcode/QrCamera$DecodingTask;
 
     :cond_0
-    iget-object p0, p0, Lcom/android/settings/wifi/qrcode/QrCamera;->mCamera:Landroid/hardware/Camera;
+    iget-object v0, p0, Lcom/android/settings/wifi/qrcode/QrCamera;->mCamera:Landroid/hardware/Camera;
 
-    if-eqz p0, :cond_1
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Landroid/hardware/Camera;->stopPreview()V
+    invoke-virtual {v0}, Landroid/hardware/Camera;->stopPreview()V
+
+    invoke-direct {p0}, Lcom/android/settings/wifi/qrcode/QrCamera;->releaseCamera()V
 
     :cond_1
     return-void

@@ -361,6 +361,22 @@
     return-void
 .end method
 
+.method public static clearForcedDisplayDensity(I)V
+    .locals 2
+
+    invoke-static {}, Landroid/os/UserHandle;->myUserId()I
+
+    move-result v0
+
+    new-instance v1, Lcom/android/settingslib/display/-$$Lambda$DisplayDensityUtils$FjSo_v2dJihYeklLmCubVRPf_nw;
+
+    invoke-direct {v1, p0, v0}, Lcom/android/settingslib/display/-$$Lambda$DisplayDensityUtils$FjSo_v2dJihYeklLmCubVRPf_nw;-><init>(II)V
+
+    invoke-static {v1}, Landroid/os/AsyncTask;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
 .method private static getDefaultDisplayDensity(I)I
     .locals 1
 
@@ -381,6 +397,31 @@
     const/4 p0, -0x1
 
     return p0
+.end method
+
+.method static synthetic lambda$clearForcedDisplayDensity$0(II)V
+    .locals 1
+
+    :try_start_0
+    invoke-static {}, Landroid/view/WindowManagerGlobal;->getWindowManagerService()Landroid/view/IWindowManager;
+
+    move-result-object v0
+
+    invoke-interface {v0, p0, p1}, Landroid/view/IWindowManager;->clearForcedDisplayDensityForUser(II)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    const-string p0, "DisplayDensityUtils"
+
+    const-string p1, "Unable to clear forced display density setting"
+
+    invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_0
+    return-void
 .end method
 
 .method static synthetic lambda$setForcedDisplayDensity$1(III)V

@@ -15,16 +15,56 @@
 
     invoke-direct {p0}, Lcom/android/settings/biometrics/BiometricEnrollSidecar;-><init>()V
 
-    new-instance v0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollSidecar$1;
+    new-instance v0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollSidecar$2;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollSidecar$1;-><init>(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollSidecar;)V
+    invoke-direct {v0, p0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollSidecar$2;-><init>(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollSidecar;)V
 
     iput-object v0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollSidecar;->mEnrollmentCallback:Landroid/hardware/fingerprint/FingerprintManager$EnrollmentCallback;
 
     return-void
 .end method
 
-.method static synthetic access$001(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollSidecar;I)V
+.method static synthetic access$000(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollSidecar;)[B
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/biometrics/BiometricEnrollSidecar;->mToken:[B
+
+    return-object p0
+.end method
+
+.method static synthetic access$100(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollSidecar;)Landroid/os/CancellationSignal;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/biometrics/BiometricEnrollSidecar;->mEnrollmentCancel:Landroid/os/CancellationSignal;
+
+    return-object p0
+.end method
+
+.method static synthetic access$200(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollSidecar;)I
+    .locals 0
+
+    iget p0, p0, Lcom/android/settings/biometrics/BiometricEnrollSidecar;->mUserId:I
+
+    return p0
+.end method
+
+.method static synthetic access$300(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollSidecar;)Landroid/hardware/fingerprint/FingerprintManager$EnrollmentCallback;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollSidecar;->mEnrollmentCallback:Landroid/hardware/fingerprint/FingerprintManager$EnrollmentCallback;
+
+    return-object p0
+.end method
+
+.method static synthetic access$400(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollSidecar;)Landroid/hardware/fingerprint/FingerprintManager;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollSidecar;->mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
+
+    return-object p0
+.end method
+
+.method static synthetic access$501(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollSidecar;I)V
     .locals 0
 
     invoke-super {p0, p1}, Lcom/android/settings/biometrics/BiometricEnrollSidecar;->onEnrollmentProgress(I)V
@@ -32,7 +72,7 @@
     return-void
 .end method
 
-.method static synthetic access$101(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollSidecar;ILjava/lang/CharSequence;)V
+.method static synthetic access$601(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollSidecar;ILjava/lang/CharSequence;)V
     .locals 0
 
     invoke-super {p0, p1, p2}, Lcom/android/settings/biometrics/BiometricEnrollSidecar;->onEnrollmentHelp(ILjava/lang/CharSequence;)V
@@ -40,7 +80,7 @@
     return-void
 .end method
 
-.method static synthetic access$201(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollSidecar;ILjava/lang/CharSequence;)V
+.method static synthetic access$701(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollSidecar;ILjava/lang/CharSequence;)V
     .locals 0
 
     invoke-super {p0, p1, p2}, Lcom/android/settings/biometrics/BiometricEnrollSidecar;->onEnrollmentError(ILjava/lang/CharSequence;)V
@@ -73,7 +113,7 @@
 .end method
 
 .method protected startEnrollment()V
-    .locals 8
+    .locals 4
 
     invoke-super {p0}, Lcom/android/settings/biometrics/BiometricEnrollSidecar;->startEnrollment()V
 
@@ -88,19 +128,17 @@
     invoke-virtual {v1, v0}, Landroid/hardware/fingerprint/FingerprintManager;->setActiveUser(I)V
 
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollSidecar;->mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
+    invoke-static {}, Lcom/android/settingslib/utils/ThreadUtils;->getUiThreadHandler()Landroid/os/Handler;
 
-    iget-object v3, p0, Lcom/android/settings/biometrics/BiometricEnrollSidecar;->mToken:[B
+    move-result-object v0
 
-    iget-object v4, p0, Lcom/android/settings/biometrics/BiometricEnrollSidecar;->mEnrollmentCancel:Landroid/os/CancellationSignal;
+    new-instance v1, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollSidecar$1;
 
-    const/4 v5, 0x0
+    invoke-direct {v1, p0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollSidecar$1;-><init>(Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollSidecar;)V
 
-    iget v6, p0, Lcom/android/settings/biometrics/BiometricEnrollSidecar;->mUserId:I
+    const-wide/16 v2, 0x64
 
-    iget-object v7, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollSidecar;->mEnrollmentCallback:Landroid/hardware/fingerprint/FingerprintManager$EnrollmentCallback;
-
-    invoke-virtual/range {v2 .. v7}, Landroid/hardware/fingerprint/FingerprintManager;->enroll([BLandroid/os/CancellationSignal;IILandroid/hardware/fingerprint/FingerprintManager$EnrollmentCallback;)V
+    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     return-void
 .end method

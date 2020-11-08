@@ -4,10 +4,11 @@
 
 # interfaces
 .implements Lcom/android/settings/homepage/contextualcards/ContextualCardController;
+.implements Lcom/android/settingslib/core/lifecycle/events/OnDestroy;
 
 
 # instance fields
-.field private final mContext:Landroid/content/Context;
+.field private mContext:Landroid/content/Context;
 
 
 # direct methods
@@ -105,6 +106,16 @@
 
 .method public onActionClick(Lcom/android/settings/homepage/contextualcards/ContextualCard;)V
     .locals 0
+
+    return-void
+.end method
+
+.method public onDestroy()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/android/settings/homepage/contextualcards/slices/SliceContextualCardController;->mContext:Landroid/content/Context;
 
     return-void
 .end method

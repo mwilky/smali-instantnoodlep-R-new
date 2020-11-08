@@ -105,6 +105,14 @@
     return-object p0
 .end method
 
+.method static synthetic access$300(Lcom/android/settings/widget/ValidatedEditTextPreference;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/settings/widget/ValidatedEditTextPreference;->mIsSummaryPassword:Z
+
+    return p0
+.end method
+
 
 # virtual methods
 .method public isPassword()Z

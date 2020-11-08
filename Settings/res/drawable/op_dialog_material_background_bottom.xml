@@ -3,6 +3,6 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
     <shape android:shape="rectangle">
         <corners android:radius="@dimen/op_control_radius_r16" android:bottomLeftRadius="30.0dip" android:bottomRightRadius="30.0dip" />
-        <solid android:color="?android:colorBackground" />
+        <solid android:color="@color/op_control_bg_color_popup_default" />
     </shape>
 </inset>

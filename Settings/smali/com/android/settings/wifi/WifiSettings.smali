@@ -20,11 +20,17 @@
 
 
 # instance fields
+.field builder:Landroidx/appcompat/app/AlertDialog$Builder;
+
+.field private dialogShown:Z
+
 .field private mAccessPointSavedState:Landroid/os/Bundle;
 
 .field private mAccessPointsPreferenceCategory:Landroidx/preference/PreferenceCategory;
 
 .field mAddWifiNetworkPreference:Lcom/android/settings/wifi/AddWifiNetworkPreference;
+
+.field mAlertDialog:Landroidx/appcompat/app/AlertDialog;
 
 .field mCaptivePortalNetworkCallback:Lcom/android/settings/wifi/CaptivePortalNetworkCallback;
 
@@ -85,11 +91,11 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lcom/android/settings/wifi/WifiSettings$7;
+    new-instance v0, Lcom/android/settings/wifi/WifiSettings$10;
 
     sget v1, Lcom/android/settings/R$xml;->wifi_settings:I
 
-    invoke-direct {v0, v1}, Lcom/android/settings/wifi/WifiSettings$7;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/android/settings/wifi/WifiSettings$10;-><init>(I)V
 
     sput-object v0, Lcom/android/settings/wifi/WifiSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/BaseSearchIndexProvider;
 
@@ -122,7 +128,23 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/wifi/WifiSettings;)V
+.method static synthetic access$000(Lcom/android/settings/wifi/WifiSettings;)Lcom/android/settingslib/wifi/AccessPoint;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/wifi/WifiSettings;->mSelectedAccessPoint:Lcom/android/settingslib/wifi/AccessPoint;
+
+    return-object p0
+.end method
+
+.method static synthetic access$100(Lcom/android/settings/wifi/WifiSettings;Lcom/android/settingslib/wifi/AccessPoint;I)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/android/settings/wifi/WifiSettings;->showDialog(Lcom/android/settingslib/wifi/AccessPoint;I)V
+
+    return-void
+.end method
+
+.method static synthetic access$200(Lcom/android/settings/wifi/WifiSettings;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/settings/wifi/WifiSettings;->checkStartCaptivePortalApp()V
@@ -1175,9 +1197,9 @@
     :cond_1
     invoke-direct {p0}, Lcom/android/settings/wifi/WifiSettings;->unregisterCaptivePortalNetworkCallback()V
 
-    new-instance v0, Lcom/android/settings/wifi/WifiSettings$3;
+    new-instance v0, Lcom/android/settings/wifi/WifiSettings$6;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/android/settings/wifi/WifiSettings$3;-><init>(Lcom/android/settings/wifi/WifiSettings;Landroid/net/Network;Lcom/android/settings/wifi/ConnectedAccessPointPreference;)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/android/settings/wifi/WifiSettings$6;-><init>(Lcom/android/settings/wifi/WifiSettings;Landroid/net/Network;Lcom/android/settings/wifi/ConnectedAccessPointPreference;)V
 
     iput-object v0, p0, Lcom/android/settings/wifi/WifiSettings;->mCaptivePortalNetworkCallback:Lcom/android/settings/wifi/CaptivePortalNetworkCallback;
 
@@ -1451,17 +1473,17 @@
 
     sget v1, Lcom/android/settings/R$string;->wapi_yes:I
 
-    new-instance v2, Lcom/android/settings/wifi/WifiSettings$5;
+    new-instance v2, Lcom/android/settings/wifi/WifiSettings$8;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/wifi/WifiSettings$5;-><init>(Lcom/android/settings/wifi/WifiSettings;)V
+    invoke-direct {v2, p0}, Lcom/android/settings/wifi/WifiSettings$8;-><init>(Lcom/android/settings/wifi/WifiSettings;)V
 
     invoke-virtual {v0, v1, v2}, Landroidx/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
 
     sget v1, Lcom/android/settings/R$string;->wapi_no:I
 
-    new-instance v2, Lcom/android/settings/wifi/WifiSettings$6;
+    new-instance v2, Lcom/android/settings/wifi/WifiSettings$9;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/wifi/WifiSettings$6;-><init>(Lcom/android/settings/wifi/WifiSettings;)V
+    invoke-direct {v2, p0}, Lcom/android/settings/wifi/WifiSettings$9;-><init>(Lcom/android/settings/wifi/WifiSettings;)V
 
     invoke-virtual {v0, v1, v2}, Landroidx/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
 
@@ -1584,7 +1606,7 @@
     move v5, v2
 
     :goto_0
-    if-ge v1, v4, :cond_6
+    if-ge v1, v4, :cond_7
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1596,7 +1618,7 @@
 
     move-result v7
 
-    if-eqz v7, :cond_5
+    if-eqz v7, :cond_6
 
     invoke-virtual {v6}, Lcom/android/settingslib/wifi/AccessPoint;->getKey()Ljava/lang/String;
 
@@ -1612,7 +1634,7 @@
 
     invoke-virtual {v7, v1}, Landroidx/preference/Preference;->setOrder(I)V
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :cond_2
     invoke-direct {p0, v6}, Lcom/android/settings/wifi/WifiSettings;->createLongPressAccessPointPreference(Lcom/android/settingslib/wifi/AccessPoint;)Lcom/android/settings/wifi/LongPressAccessPointPreference;
@@ -1679,15 +1701,74 @@
 
     invoke-virtual {v7}, Lcom/android/settingslib/wifi/AccessPointPreference;->refresh()V
 
+    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isUsvMode()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_5
+
+    invoke-static {v6}, Lcom/android/settings/wifi/WifiSettings;->isDisabledByWrongPassword(Lcom/android/settingslib/wifi/AccessPoint;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_5
+
+    iget-boolean v5, p0, Lcom/android/settings/wifi/WifiSettings;->dialogShown:Z
+
+    if-eqz v5, :cond_5
+
+    new-instance v5, Landroidx/appcompat/app/AlertDialog$Builder;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v7
+
+    invoke-direct {v5, v7}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v6}, Lcom/android/settingslib/wifi/AccessPoint;->getTitle()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v5, v7}, Landroidx/appcompat/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    sget v7, Lcom/android/settings/R$string;->dialog_wrong_password:I
+
+    invoke-virtual {v5, v7}, Landroidx/appcompat/app/AlertDialog$Builder;->setMessage(I)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    sget v7, Lcom/android/settings/R$string;->dialog_wrong_password_ok:I
+
+    new-instance v8, Lcom/android/settings/wifi/WifiSettings$5;
+
+    invoke-direct {v8, p0, v6}, Lcom/android/settings/wifi/WifiSettings$5;-><init>(Lcom/android/settings/wifi/WifiSettings;Lcom/android/settingslib/wifi/AccessPoint;)V
+
+    invoke-virtual {v5, v7, v8}, Landroidx/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    invoke-virtual {v5}, Landroidx/appcompat/app/AlertDialog$Builder;->create()Landroidx/appcompat/app/AlertDialog;
+
+    move-result-object v5
+
+    iget-object v6, p0, Lcom/android/settings/wifi/WifiSettings;->mAlertDialog:Landroidx/appcompat/app/AlertDialog;
+
+    if-eqz v6, :cond_5
+
+    invoke-virtual {v6}, Landroid/app/Dialog;->isShowing()Z
+
+    move-result v6
+
+    if-nez v6, :cond_5
+
+    invoke-virtual {v5}, Landroid/app/Dialog;->show()V
+
+    :cond_5
     :goto_1
     move v5, v3
 
-    :cond_5
+    :cond_6
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    :cond_6
+    :cond_7
     iget-object v0, p0, Lcom/android/settings/wifi/WifiSettings;->mAccessPointsPreferenceCategory:Landroidx/preference/PreferenceCategory;
 
     invoke-virtual {p0, v0}, Lcom/android/settings/SettingsPreferenceFragment;->removeCachedPrefs(Landroidx/preference/PreferenceGroup;)V
@@ -1704,7 +1785,7 @@
 
     invoke-virtual {p0}, Lcom/android/settings/wifi/WifiSettings;->setAdditionalSettingsSummaries()V
 
-    if-nez v5, :cond_7
+    if-nez v5, :cond_8
 
     invoke-virtual {p0, v3}, Lcom/android/settings/wifi/WifiSettings;->setProgressBarVisible(Z)V
 
@@ -1734,7 +1815,7 @@
 
     goto :goto_2
 
-    :cond_7
+    :cond_8
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getView()Landroid/view/View;
 
     move-result-object v0
@@ -1807,6 +1888,68 @@
 
 
 # virtual methods
+.method public clearNotification()V
+    .locals 2
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const-string v1, "notification"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/NotificationManager;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/app/NotificationManager;->cancel(I)V
+
+    const/4 v1, 0x2
+
+    invoke-virtual {v0, v1}, Landroid/app/NotificationManager;->cancel(I)V
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    const-string v0, "WifiSettingsPrefsFile"
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string v1, "is_notified_on"
+
+    invoke-interface {v0, v1}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object p0
+
+    const-string v0, "is_notified_off"
+
+    invoke-interface {p0, v0}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    return-void
+.end method
+
 .method protected connect(Landroid/net/wifi/WifiConfiguration;ZI)V
     .locals 4
 
@@ -2187,9 +2330,9 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v1, Lcom/android/settings/wifi/WifiSettings$4;
+    new-instance v1, Lcom/android/settings/wifi/WifiSettings$7;
 
-    invoke-direct {v1, p0, p1}, Lcom/android/settings/wifi/WifiSettings$4;-><init>(Lcom/android/settings/wifi/WifiSettings;Lcom/android/settingslib/wifi/AccessPoint;)V
+    invoke-direct {v1, p0, p1}, Lcom/android/settings/wifi/WifiSettings$7;-><init>(Lcom/android/settings/wifi/WifiSettings;Lcom/android/settingslib/wifi/AccessPoint;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
@@ -2511,6 +2654,8 @@
     return p0
 
     :cond_1
+    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiSettings;->clearNotification()V
+
     iget-object p1, p0, Lcom/android/settings/wifi/WifiSettings;->mSelectedAccessPoint:Lcom/android/settingslib/wifi/AccessPoint;
 
     const/4 v0, 0x2
@@ -2520,6 +2665,8 @@
     return v2
 
     :cond_2
+    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiSettings;->clearNotification()V
+
     invoke-virtual {p0}, Lcom/android/settings/wifi/WifiSettings;->forget()V
 
     return v2
@@ -2586,25 +2733,31 @@
     invoke-virtual {p0, v0, p1, v2}, Lcom/android/settings/wifi/WifiSettings;->connect(Landroid/net/wifi/WifiConfiguration;ZI)V
 
     :goto_1
+    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiSettings;->clearNotification()V
+
     return v2
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 1
+    .locals 2
 
     invoke-super {p0, p1}, Lcom/android/settings/RestrictedSettingsFragment;->onCreate(Landroid/os/Bundle;)V
 
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lcom/android/settings/wifi/WifiSettings;->dialogShown:Z
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
-    move-result-object p1
+    move-result-object v0
 
-    const-string v0, "settings_wifitracker2"
+    const-string v1, "settings_wifitracker2"
 
-    invoke-static {p1, v0}, Landroid/util/FeatureFlagUtils;->isEnabled(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v0, v1}, Landroid/util/FeatureFlagUtils;->isEnabled(Landroid/content/Context;Ljava/lang/String;)Z
 
-    move-result p1
+    move-result v0
 
-    if-eqz p1, :cond_1
+    if-eqz v0, :cond_1
 
     new-instance p1, Landroid/content/Intent;
 
@@ -2644,8 +2797,6 @@
     return-void
 
     :cond_1
-    const/4 p1, 0x0
-
     invoke-virtual {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->setAnimationAllowed(Z)V
 
     invoke-direct {p0}, Lcom/android/settings/wifi/WifiSettings;->addPreferences()V
@@ -2925,13 +3076,19 @@
 .end method
 
 .method public onPreferenceTreeClick(Landroidx/preference/Preference;)Z
-    .locals 3
+    .locals 4
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/android/settings/wifi/WifiSettings;->dialogShown:Z
+
+    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiSettings;->clearNotification()V
 
     invoke-virtual {p1}, Landroidx/preference/Preference;->getFragment()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
     const/4 v0, 0x0
 
@@ -2944,27 +3101,25 @@
     return p0
 
     :cond_0
-    instance-of v0, p1, Lcom/android/settings/wifi/LongPressAccessPointPreference;
+    instance-of v1, p1, Lcom/android/settings/wifi/LongPressAccessPointPreference;
 
-    const/4 v1, 0x1
+    if-eqz v1, :cond_7
 
-    if-eqz v0, :cond_6
+    move-object v1, p1
 
-    move-object v0, p1
+    check-cast v1, Lcom/android/settings/wifi/LongPressAccessPointPreference;
 
-    check-cast v0, Lcom/android/settings/wifi/LongPressAccessPointPreference;
-
-    invoke-virtual {v0}, Lcom/android/settingslib/wifi/AccessPointPreference;->getAccessPoint()Lcom/android/settingslib/wifi/AccessPoint;
+    invoke-virtual {v1}, Lcom/android/settingslib/wifi/AccessPointPreference;->getAccessPoint()Lcom/android/settingslib/wifi/AccessPoint;
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/android/settings/wifi/WifiSettings;->mSelectedAccessPoint:Lcom/android/settingslib/wifi/AccessPoint;
 
+    const/4 v3, 0x0
+
     if-nez v2, :cond_1
 
-    const/4 p0, 0x0
-
-    return p0
+    return v3
 
     :cond_1
     invoke-virtual {v2}, Lcom/android/settingslib/wifi/AccessPoint;->isActive()Z
@@ -2986,9 +3141,9 @@
 
     move-result p1
 
-    const/4 v2, 0x2
+    if-eq p1, v0, :cond_5
 
-    if-eq p1, v1, :cond_5
+    const/4 v2, 0x2
 
     if-eq p1, v2, :cond_4
 
@@ -2996,30 +3151,30 @@
 
     if-eq p1, v2, :cond_3
 
-    invoke-virtual {v0}, Landroidx/preference/Preference;->getExtras()Landroid/os/Bundle;
+    invoke-virtual {v1}, Landroidx/preference/Preference;->getExtras()Landroid/os/Bundle;
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSettings;->mSelectedAccessPoint:Lcom/android/settingslib/wifi/AccessPoint;
+    iget-object v1, p0, Lcom/android/settings/wifi/WifiSettings;->mSelectedAccessPoint:Lcom/android/settingslib/wifi/AccessPoint;
 
-    invoke-virtual {v0, p1}, Lcom/android/settingslib/wifi/AccessPoint;->saveWifiState(Landroid/os/Bundle;)V
+    invoke-virtual {v1, p1}, Lcom/android/settingslib/wifi/AccessPoint;->saveWifiState(Landroid/os/Bundle;)V
 
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSettings;->mSelectedAccessPoint:Lcom/android/settingslib/wifi/AccessPoint;
+    iget-object v1, p0, Lcom/android/settings/wifi/WifiSettings;->mSelectedAccessPoint:Lcom/android/settingslib/wifi/AccessPoint;
 
-    invoke-direct {p0, v0, v1, p1}, Lcom/android/settings/wifi/WifiSettings;->launchConfigNewNetworkFragment(Lcom/android/settingslib/wifi/AccessPoint;ILandroid/os/Bundle;)V
+    invoke-direct {p0, v1, v0, p1}, Lcom/android/settings/wifi/WifiSettings;->launchConfigNewNetworkFragment(Lcom/android/settingslib/wifi/AccessPoint;ILandroid/os/Bundle;)V
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_3
     iget-object p1, p0, Lcom/android/settings/wifi/WifiSettings;->mSelectedAccessPoint:Lcom/android/settingslib/wifi/AccessPoint;
 
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSettings;->mConnectListener:Landroid/net/wifi/WifiManager$ActionListener;
+    iget-object v1, p0, Lcom/android/settings/wifi/WifiSettings;->mConnectListener:Landroid/net/wifi/WifiManager$ActionListener;
 
-    invoke-virtual {p1, v0}, Lcom/android/settingslib/wifi/AccessPoint;->startOsuProvisioning(Landroid/net/wifi/WifiManager$ActionListener;)V
+    invoke-virtual {p1, v1}, Lcom/android/settingslib/wifi/AccessPoint;->startOsuProvisioning(Landroid/net/wifi/WifiManager$ActionListener;)V
 
-    iput-boolean v1, p0, Lcom/android/settings/wifi/WifiSettings;->mClickedConnect:Z
+    iput-boolean v0, p0, Lcom/android/settings/wifi/WifiSettings;->mClickedConnect:Z
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_4
     iget-object p1, p0, Lcom/android/settings/wifi/WifiSettings;->mSelectedAccessPoint:Lcom/android/settingslib/wifi/AccessPoint;
@@ -3028,11 +3183,100 @@
 
     move-result-object p1
 
-    invoke-virtual {p0, p1, v1, v2}, Lcom/android/settings/wifi/WifiSettings;->connect(Landroid/net/wifi/WifiConfiguration;ZI)V
+    invoke-virtual {p0, p1, v0, v2}, Lcom/android/settings/wifi/WifiSettings;->connect(Landroid/net/wifi/WifiConfiguration;ZI)V
+
+    goto/16 :goto_0
+
+    :cond_5
+    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isUsvMode()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_6
+
+    iget-object p1, p0, Lcom/android/settings/wifi/WifiSettings;->builder:Landroidx/appcompat/app/AlertDialog$Builder;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    sget v3, Lcom/android/settings/R$string;->dialog_open_network_title:I
+
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, " "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lcom/android/settings/wifi/WifiSettings;->mSelectedAccessPoint:Lcom/android/settingslib/wifi/AccessPoint;
+
+    invoke-virtual {v3}, Lcom/android/settingslib/wifi/AccessPoint;->getTitle()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    sget v3, Lcom/android/settings/R$string;->dialog_open_network_title_info:I
+
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    iget-object p1, p0, Lcom/android/settings/wifi/WifiSettings;->builder:Landroidx/appcompat/app/AlertDialog$Builder;
+
+    sget v1, Lcom/android/settings/R$string;->dialog_open_network_cancel:I
+
+    new-instance v2, Lcom/android/settings/wifi/WifiSettings$3;
+
+    invoke-direct {v2, p0}, Lcom/android/settings/wifi/WifiSettings$3;-><init>(Lcom/android/settings/wifi/WifiSettings;)V
+
+    invoke-virtual {p1, v1, v2}, Landroidx/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    iget-object p1, p0, Lcom/android/settings/wifi/WifiSettings;->builder:Landroidx/appcompat/app/AlertDialog$Builder;
+
+    sget v1, Lcom/android/settings/R$string;->dialog_open_network_connect:I
+
+    new-instance v2, Lcom/android/settings/wifi/WifiSettings$4;
+
+    invoke-direct {v2, p0}, Lcom/android/settings/wifi/WifiSettings$4;-><init>(Lcom/android/settings/wifi/WifiSettings;)V
+
+    invoke-virtual {p1, v1, v2}, Landroidx/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    iget-object p1, p0, Lcom/android/settings/wifi/WifiSettings;->builder:Landroidx/appcompat/app/AlertDialog$Builder;
+
+    invoke-virtual {p1}, Landroidx/appcompat/app/AlertDialog$Builder;->create()Landroidx/appcompat/app/AlertDialog;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/android/settings/wifi/WifiSettings;->mAlertDialog:Landroidx/appcompat/app/AlertDialog;
+
+    invoke-virtual {p1}, Landroid/app/Dialog;->show()V
 
     goto :goto_0
 
-    :cond_5
+    :cond_6
     iget-object p1, p0, Lcom/android/settings/wifi/WifiSettings;->mSelectedAccessPoint:Lcom/android/settingslib/wifi/AccessPoint;
 
     invoke-virtual {p1}, Lcom/android/settingslib/wifi/AccessPoint;->generateOpenNetworkConfig()V
@@ -3043,27 +3287,27 @@
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSettings;->mSelectedAccessPoint:Lcom/android/settingslib/wifi/AccessPoint;
+    iget-object v1, p0, Lcom/android/settings/wifi/WifiSettings;->mSelectedAccessPoint:Lcom/android/settingslib/wifi/AccessPoint;
 
-    invoke-virtual {v0}, Lcom/android/settingslib/wifi/AccessPoint;->isSaved()Z
+    invoke-virtual {v1}, Lcom/android/settingslib/wifi/AccessPoint;->isSaved()Z
 
-    move-result v0
+    move-result v1
 
-    invoke-virtual {p0, p1, v0, v2}, Lcom/android/settings/wifi/WifiSettings;->connect(Landroid/net/wifi/WifiConfiguration;ZI)V
+    invoke-virtual {p0, p1, v1, v3}, Lcom/android/settings/wifi/WifiSettings;->connect(Landroid/net/wifi/WifiConfiguration;ZI)V
 
     goto :goto_0
 
-    :cond_6
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSettings;->mAddWifiNetworkPreference:Lcom/android/settings/wifi/AddWifiNetworkPreference;
+    :cond_7
+    iget-object v1, p0, Lcom/android/settings/wifi/WifiSettings;->mAddWifiNetworkPreference:Lcom/android/settings/wifi/AddWifiNetworkPreference;
 
-    if-ne p1, v0, :cond_7
+    if-ne p1, v1, :cond_8
 
     invoke-direct {p0}, Lcom/android/settings/wifi/WifiSettings;->onAddNetworkPressed()V
 
     :goto_0
-    return v1
+    return v0
 
-    :cond_7
+    :cond_8
     invoke-super {p0, p1}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->onPreferenceTreeClick(Landroidx/preference/Preference;)Z
 
     move-result p0
@@ -3262,15 +3506,23 @@
     invoke-virtual {p0, p2}, Lcom/android/settings/wifi/WifiSettings;->setProgressBarVisible(Z)V
 
     :cond_0
-    check-cast p1, Lcom/android/settings/SettingsActivity;
+    move-object p2, p1
 
-    invoke-virtual {p1}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    check-cast p2, Lcom/android/settings/SettingsActivity;
 
-    move-result-object p0
+    invoke-virtual {p2}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
 
-    sget p1, Lcom/android/settings/R$string;->wifi_settings_master_switch_title:I
+    move-result-object p2
 
-    invoke-virtual {p0, p1, p1}, Lcom/android/settings/widget/SwitchBar;->setSwitchBarText(II)V
+    sget v0, Lcom/android/settings/R$string;->wifi_settings_master_switch_title:I
+
+    invoke-virtual {p2, v0, v0}, Lcom/android/settings/widget/SwitchBar;->setSwitchBarText(II)V
+
+    new-instance p2, Landroidx/appcompat/app/AlertDialog$Builder;
+
+    invoke-direct {p2, p1}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    iput-object p2, p0, Lcom/android/settings/wifi/WifiSettings;->builder:Landroidx/appcompat/app/AlertDialog$Builder;
 
     return-void
 .end method

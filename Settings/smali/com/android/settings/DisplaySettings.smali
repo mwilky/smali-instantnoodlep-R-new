@@ -779,7 +779,7 @@
 .method private static isCameraGestureAvailable(Landroid/content/res/Resources;)Z
     .locals 3
 
-    const v0, 0x10e002a
+    const v0, 0x10e002b
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getInteger(I)I
 

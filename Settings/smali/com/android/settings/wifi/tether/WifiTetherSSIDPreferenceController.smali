@@ -15,11 +15,17 @@
 
 
 # instance fields
+.field private mEditPreference:Landroidx/preference/EditTextPreference;
+
 .field private final mMetricsFeatureProvider:Lcom/android/settingslib/core/instrumentation/MetricsFeatureProvider;
 
 .field private mSSID:Ljava/lang/String;
 
 .field private mWifiDeviceNameTextValidator:Lcom/android/settings/wifi/tether/WifiDeviceNameTextValidator;
+
+.field private newSSID:Ljava/lang/String;
+
+.field onWarningDialogCLickListner:Landroid/content/DialogInterface$OnClickListener;
 
 
 # direct methods
@@ -29,6 +35,12 @@
     const-string/jumbo v0, "wifi_tether_network_name"
 
     invoke-direct {p0, p1, p2, v0}, Lcom/android/settings/wifi/tether/WifiTetherBasePreferenceController;-><init>(Landroid/content/Context;Lcom/android/settings/wifi/tether/WifiTetherBasePreferenceController$OnTetherConfigUpdateListener;Ljava/lang/String;)V
+
+    new-instance p2, Lcom/android/settings/wifi/tether/WifiTetherSSIDPreferenceController$1;
+
+    invoke-direct {p2, p0}, Lcom/android/settings/wifi/tether/WifiTetherSSIDPreferenceController$1;-><init>(Lcom/android/settings/wifi/tether/WifiTetherSSIDPreferenceController;)V
+
+    iput-object p2, p0, Lcom/android/settings/wifi/tether/WifiTetherSSIDPreferenceController;->onWarningDialogCLickListner:Landroid/content/DialogInterface$OnClickListener;
 
     new-instance p2, Lcom/android/settings/wifi/tether/WifiDeviceNameTextValidator;
 
@@ -56,6 +68,12 @@
 
     invoke-direct {p0, p1, p2, v0}, Lcom/android/settings/wifi/tether/WifiTetherBasePreferenceController;-><init>(Landroid/content/Context;Lcom/android/settings/wifi/tether/WifiTetherBasePreferenceController$OnTetherConfigUpdateListener;Ljava/lang/String;)V
 
+    new-instance p1, Lcom/android/settings/wifi/tether/WifiTetherSSIDPreferenceController$1;
+
+    invoke-direct {p1, p0}, Lcom/android/settings/wifi/tether/WifiTetherSSIDPreferenceController$1;-><init>(Lcom/android/settings/wifi/tether/WifiTetherSSIDPreferenceController;)V
+
+    iput-object p1, p0, Lcom/android/settings/wifi/tether/WifiTetherSSIDPreferenceController;->onWarningDialogCLickListner:Landroid/content/DialogInterface$OnClickListener;
+
     new-instance p1, Lcom/android/settings/wifi/tether/WifiDeviceNameTextValidator;
 
     invoke-direct {p1}, Lcom/android/settings/wifi/tether/WifiDeviceNameTextValidator;-><init>()V
@@ -65,6 +83,46 @@
     iput-object p3, p0, Lcom/android/settings/wifi/tether/WifiTetherSSIDPreferenceController;->mMetricsFeatureProvider:Lcom/android/settingslib/core/instrumentation/MetricsFeatureProvider;
 
     return-void
+.end method
+
+.method static synthetic access$000(Lcom/android/settings/wifi/tether/WifiTetherSSIDPreferenceController;)Ljava/lang/String;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/wifi/tether/WifiTetherSSIDPreferenceController;->mSSID:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method static synthetic access$002(Lcom/android/settings/wifi/tether/WifiTetherSSIDPreferenceController;Ljava/lang/String;)Ljava/lang/String;
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/settings/wifi/tether/WifiTetherSSIDPreferenceController;->mSSID:Ljava/lang/String;
+
+    return-object p1
+.end method
+
+.method static synthetic access$100(Lcom/android/settings/wifi/tether/WifiTetherSSIDPreferenceController;)Ljava/lang/String;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/wifi/tether/WifiTetherSSIDPreferenceController;->newSSID:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method static synthetic access$200(Lcom/android/settings/wifi/tether/WifiTetherSSIDPreferenceController;Landroidx/preference/EditTextPreference;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/settings/wifi/tether/WifiTetherSSIDPreferenceController;->updateSsidDisplay(Landroidx/preference/EditTextPreference;)V
+
+    return-void
+.end method
+
+.method static synthetic access$300(Lcom/android/settings/wifi/tether/WifiTetherSSIDPreferenceController;)Landroidx/preference/EditTextPreference;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/wifi/tether/WifiTetherSSIDPreferenceController;->mEditPreference:Landroidx/preference/EditTextPreference;
+
+    return-object p0
 .end method
 
 .method private synthetic lambda$shareHotspotNetwork$1(Landroid/content/Intent;)V
@@ -308,7 +366,7 @@
 .end method
 
 .method public onPreferenceChange(Landroidx/preference/Preference;Ljava/lang/Object;)Z
-    .locals 4
+    .locals 5
 
     iget-object v0, p0, Lcom/android/settings/wifi/tether/WifiTetherSSIDPreferenceController;->mSSID:Ljava/lang/String;
 
@@ -318,21 +376,109 @@
 
     move-result v0
 
+    const/4 v1, 0x0
+
     if-nez v0, :cond_0
 
     iget-object v0, p0, Lcom/android/settings/wifi/tether/WifiTetherSSIDPreferenceController;->mMetricsFeatureProvider:Lcom/android/settingslib/core/instrumentation/MetricsFeatureProvider;
 
-    iget-object v1, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
 
-    const/16 v2, 0x6c8
+    const/16 v3, 0x6c8
 
-    const/4 v3, 0x0
+    new-array v4, v1, [Landroid/util/Pair;
 
-    new-array v3, v3, [Landroid/util/Pair;
-
-    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settingslib/core/instrumentation/MetricsFeatureProvider;->action(Landroid/content/Context;I[Landroid/util/Pair;)V
+    invoke-virtual {v0, v2, v3, v4}, Lcom/android/settingslib/core/instrumentation/MetricsFeatureProvider;->action(Landroid/content/Context;I[Landroid/util/Pair;)V
 
     :cond_0
+    const/4 v0, 0x0
+
+    iget-object v2, p0, Lcom/android/settings/wifi/tether/WifiTetherBasePreferenceController;->mWifiManager:Landroid/net/wifi/WifiManager;
+
+    invoke-virtual {v2}, Landroid/net/wifi/WifiManager;->isWifiApEnabled()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    iget-object v2, p0, Lcom/android/settings/wifi/tether/WifiTetherBasePreferenceController;->mWifiManager:Landroid/net/wifi/WifiManager;
+
+    invoke-virtual {v2}, Landroid/net/wifi/WifiManager;->getSoftApConfiguration()Landroid/net/wifi/SoftApConfiguration;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_1
+
+    iget-object v0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    iget-object v2, p0, Lcom/android/settings/wifi/tether/WifiTetherBasePreferenceController;->mWifiManager:Landroid/net/wifi/WifiManager;
+
+    invoke-virtual {v2}, Landroid/net/wifi/WifiManager;->getSoftApConfiguration()Landroid/net/wifi/SoftApConfiguration;
+
+    move-result-object v3
+
+    invoke-static {v0, v2, v3}, Lcom/android/settings/wifi/dpp/WifiDppUtils;->getHotspotConfiguratorIntentOrNull(Landroid/content/Context;Landroid/net/wifi/WifiManager;Landroid/net/wifi/SoftApConfiguration;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    :cond_1
+    if-eqz v0, :cond_2
+
+    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isUsvMode()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iput-object p2, p0, Lcom/android/settings/wifi/tether/WifiTetherSSIDPreferenceController;->newSSID:Ljava/lang/String;
+
+    new-instance p1, Landroid/app/AlertDialog$Builder;
+
+    iget-object p2, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-direct {p1, p2}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    sget p2, Lcom/android/settings/R$string;->save_changes:I
+
+    invoke-virtual {p1, p2}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
+
+    move-result-object p1
+
+    sget p2, Lcom/android/settings/R$string;->verizon_wifi_tether_band_warning:I
+
+    invoke-virtual {p1, p2}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
+
+    move-result-object p1
+
+    const p2, 0x104000a
+
+    iget-object v0, p0, Lcom/android/settings/wifi/tether/WifiTetherSSIDPreferenceController;->onWarningDialogCLickListner:Landroid/content/DialogInterface$OnClickListener;
+
+    invoke-virtual {p1, p2, v0}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+
+    move-result-object p1
+
+    const/high16 p2, 0x1040000
+
+    iget-object p0, p0, Lcom/android/settings/wifi/tether/WifiTetherSSIDPreferenceController;->onWarningDialogCLickListner:Landroid/content/DialogInterface$OnClickListener;
+
+    invoke-virtual {p1, p2, p0}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+
+    move-result-object p0
+
+    invoke-virtual {p0, v1}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/app/AlertDialog;->show()V
+
+    goto :goto_0
+
+    :cond_2
     iput-object p2, p0, Lcom/android/settings/wifi/tether/WifiTetherSSIDPreferenceController;->mSSID:Ljava/lang/String;
 
     check-cast p1, Landroidx/preference/EditTextPreference;
@@ -343,6 +489,7 @@
 
     invoke-interface {p1, p0}, Lcom/android/settings/wifi/tether/WifiTetherBasePreferenceController$OnTetherConfigUpdateListener;->onTetherConfigUpdated(Lcom/android/settings/core/BasePreferenceController;)V
 
+    :goto_0
     const/4 p0, 0x1
 
     return p0
@@ -373,6 +520,19 @@
     iput-object v1, p0, Lcom/android/settings/wifi/tether/WifiTetherSSIDPreferenceController;->mSSID:Ljava/lang/String;
 
     :goto_0
+    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isUsvMode()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, p0, Lcom/android/settings/wifi/tether/WifiTetherBasePreferenceController;->mPreference:Landroidx/preference/Preference;
+
+    check-cast v1, Landroidx/preference/EditTextPreference;
+
+    iput-object v1, p0, Lcom/android/settings/wifi/tether/WifiTetherSSIDPreferenceController;->mEditPreference:Landroidx/preference/EditTextPreference;
+
+    :cond_1
     iget-object v1, p0, Lcom/android/settings/wifi/tether/WifiTetherBasePreferenceController;->mPreference:Landroidx/preference/Preference;
 
     check-cast v1, Lcom/android/settings/widget/OPEditTextPreferenceForWifiTetherName;
@@ -387,9 +547,9 @@
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     iget-object v1, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
 
@@ -399,7 +559,7 @@
 
     move-result-object v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
     const-string v0, "WifiTetherSsidPref"
 
@@ -415,7 +575,7 @@
 
     goto :goto_1
 
-    :cond_1
+    :cond_2
     iget-object v1, p0, Lcom/android/settings/wifi/tether/WifiTetherBasePreferenceController;->mPreference:Landroidx/preference/Preference;
 
     check-cast v1, Lcom/android/settings/wifi/tether/WifiTetherSsidPreference;
@@ -436,7 +596,7 @@
 
     goto :goto_1
 
-    :cond_2
+    :cond_3
     iget-object v0, p0, Lcom/android/settings/wifi/tether/WifiTetherBasePreferenceController;->mPreference:Landroidx/preference/Preference;
 
     check-cast v0, Lcom/android/settings/wifi/tether/WifiTetherSsidPreference;

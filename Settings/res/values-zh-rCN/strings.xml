@@ -256,7 +256,7 @@
     <string name="accessibility_vibration_intensity_low">低</string>
     <string name="accessibility_vibration_intensity_medium">中</string>
     <string name="accessibility_vibration_intensity_off">关闭</string>
-    <string name="accessibility_vibration_settings_title">震动和触感强度</string>
+    <string name="accessibility_vibration_settings_title">振动和触感强度</string>
     <string name="accessibility_vibration_summary">响铃：%1$s，通知：%2$s，按触：%3$s</string>
     <string name="accessibility_vibration_summary_high">将响铃和通知振动设为高</string>
     <string name="accessibility_vibration_summary_low">将响铃和通知振动设为低</string>
@@ -1540,6 +1540,7 @@
     <string name="data_usage_enable_4g">4G 数据</string>
     <string name="data_usage_enable_mobile">移动数据</string>
     <string name="data_usage_forground_label">前台：</string>
+    <string name="data_usage_hotspot">移动热点&amp;网络共享</string>
     <string name="data_usage_label_background">后台</string>
     <string name="data_usage_label_foreground">前台</string>
     <string name="data_usage_left_title">剩余流量</string>
@@ -3127,6 +3128,8 @@
     <string name="notification_conversation_add_to_home">添加到主屏幕</string>
     <string name="notification_conversation_important">优先</string>
     <string name="notification_conversation_summary_low">不发出提示音，也不振动；显示在对话部分的靠下位置</string>
+    <string name="notification_for_work_life">工作和生活模式的通知</string>
+    <string name="notification_for_work_life_disabled">点击开启此功能</string>
     <string name="notification_group_title">通知类别组</string>
     <string name="notification_history">通知历史记录</string>
     <string name="notification_history_dismiss">最近关闭的通知</string>
@@ -3542,9 +3545,11 @@
     <string name="oneplus_fingerprint_gesture_camera_summary">在相机取景界面长按指纹传感器进行拍照</string>
     <string name="oneplus_fingerprint_gesture_camera_title">长按指纹拍照</string>
     <string name="oneplus_fingerprint_gesture_settings_title">指纹手势</string>
+    <string name="oneplus_fingerprint_hardware_exception">指纹硬件信息异常，请联系售后客服。</string>
     <string name="oneplus_fingerprint_have_inpted">该指纹已经存在，请用其他手指录入</string>
     <string name="oneplus_fingerprint_longpress_for_quickpay_summary">长按指纹按键呼出快捷支付</string>
     <string name="oneplus_fingerprint_max_tips">最多只能录入五个指纹</string>
+    <string name="oneplus_fingerprint_not_adjustment">指纹校准数据异常，请联系售后客服。</string>
     <string name="oneplus_fingerprint_quickpay_lock_swtch_summary">熄屏或锁屏时，使用指纹解锁后继续长按指纹，可以直接打开支付界面</string>
     <string name="oneplus_fingerprint_sensor_longpress_for_quickpay_summary">@string/oneplus_fingerprint_longpress_for_quickpay_summary</string>
     <string name="oneplus_fingerprint_settings_list_title">指纹列表</string>
@@ -3576,7 +3581,7 @@
     <string name="oneplus_font_style">字体</string>
     <string name="oneplus_font_switch">字体切换</string>
     <string name="oneplus_force_factory_reset_summary">由于开机密码功能开启，此选项必须勾选</string>
-    <string name="oneplus_forum_award_summary">6 年前，我们一起从社区出发。正是你们，提供了改进产品的宝贵建言，才使得 OnePlus 越来越好。谢谢你，加油。而继续努力，则是我们表达谢意的最好方式。</string>
+    <string name="oneplus_forum_award_summary">7 年前，我们一起从社区出发。正是你们，提供了改进产品的宝贵建言，才使得 OnePlus 越来越好。谢谢你，加油。而继续努力，则是我们表达谢意的最好方式。</string>
     <string name="oneplus_forum_award_title">功勋墙</string>
     <string name="oneplus_front_camera_app_display_fullscreen_summary">当应用内容被摄像头顶部区域遮挡时，请切换到默认模式</string>
     <string name="oneplus_front_camera_display_choose_title">选择摄像头区域显示方式</string>
@@ -3664,6 +3669,7 @@
     <string name="oneplus_google_services_title">Google 服务</string>
     <string name="oneplus_google_tts">Google TTS 语音数据</string>
     <string name="oneplus_gps_using">正在使用GPS定位</string>
+    <string name="oneplus_green">绿</string>
     <string name="oneplus_h2_contributors">氢OS贡献者名单</string>
     <string name="oneplus_hand_up_proximity_summary">拿起手机时唤醒屏幕</string>
     <string name="oneplus_hand_up_proximity_title">抬手亮屏</string>
@@ -3748,6 +3754,7 @@
     <string name="oneplus_lockpattern_need_to_unlock_wrong">请重试</string>
     <string name="oneplus_lockpattern_too_many_failed_confirmation_attempts_header">错误的尝试次数过多！</string>
     <string name="oneplus_lockscreen_settings_title">锁屏时的偏好设置</string>
+    <string name="oneplus_magenta">品红</string>
     <string name="oneplus_manage_virtual_keyboard">管理输入法</string>
     <string name="oneplus_max_shortcuts_tips">最多只能添加6个快捷方式</string>
     <string name="oneplus_media_ring">媒体音量归零</string>
@@ -3783,7 +3790,7 @@
     <string name="oneplus_multi_app_init_failed_for_more_users">开启超过5个用户后，无法开启应用双开。请删除用户后再试。</string>
     <string name="oneplus_multi_app_init_succeeded">已成功开启双开%1$s</string>
     <string name="oneplus_multitasking_clean_way">多任务清除方式</string>
-    <string name="oneplus_music_control_des">用双指画<strong>||</strong>"，即可播放音乐。画一个 
+    <string name="oneplus_music_control_des">"用双指画 ‖，即可播放音乐。画一个 
  "<strong>&lt;</strong>或 <strong>></strong>，即可转到上一曲或下一曲。</string>
     <string name="oneplus_music_control_title">音乐控制</string>
     <string name="oneplus_must_reset">一定清除</string>
@@ -4221,7 +4228,7 @@
     <string name="oneplus_theme_accent_color_select">选择强调色</string>
     <string name="oneplus_theme_apply_summary">应用该主题后，你所做的个性化设置将会被全部覆盖</string>
     <string name="oneplus_theme_apply_title">要应用该主题吗？</string>
-    <string name="oneplus_theme_clock">时钟样式</string>
+    <string name="oneplus_theme_clock">息屏时钟</string>
     <string name="oneplus_theme_clock_snake_action">去开启</string>
     <string name="oneplus_theme_clock_snake_tip">此功能在开启息屏显示后即可使用</string>
     <string name="oneplus_theme_colorpicker_colorvalue">色值</string>
@@ -4236,7 +4243,7 @@
     <string name="oneplus_theme_font_content">与世界分享品质科技</string>
     <string name="oneplus_theme_font_title">不将就</string>
     <string name="oneplus_theme_icon_pack">应用图标</string>
-    <string name="oneplus_theme_lock_screen_customization">锁屏个性化</string>
+    <string name="oneplus_theme_lock_screen_customization">息屏样式</string>
     <string name="oneplus_theme_preset">预置主题</string>
     <string name="oneplus_theme_preset_color">活泼</string>
     <string name="oneplus_theme_preset_dark">沉浸</string>
@@ -4376,6 +4383,7 @@
     <string name="onscreen_keyboard_settings_summary">屏幕键盘设置</string>
     <string name="op_accessibility_quick_settings_page">第 %1$d 页，共 %2$d 页</string>
     <string name="op_advanced_settings">其他高级设置</string>
+    <string name="op_already_know">我知道了</string>
     <string name="op_android_beam_explained">开启后，只需要将本机与另外一台支持NFC的设备靠在一起(通常是背靠背)，然后触摸屏幕即可将你手机的内容同步给对方</string>
     <string name="op_android_mode_cannot_change_color_accent">Android 主题下只能使用系统色</string>
     <string name="op_android_mode_title">Android 主题</string>
@@ -4486,6 +4494,7 @@ OnePlus 与知名设计学院 Parsons School of Design 的学生，一起设计�
     <string name="op_display_advanced_settings_summary_5">刷新率</string>
     <string name="op_display_advanced_settings_summary_6">颜色模式、分辨率、刷新率、摄像头顶部区域</string>
     <string name="op_display_advanced_settings_summary_7">颜色模式、刷新率、摄像头顶部区域</string>
+    <string name="op_display_advanced_settings_summary_8">刷新率、摄像头顶部区域</string>
     <string name="op_display_graphics_enhancement_engine">画面增强引擎</string>
     <string name="op_display_motion_graphics_compensation">视频高帧率模式</string>
     <string name="op_display_motion_graphics_compensation_summary">提升画面的帧率，视频和游戏效果更流畅</string>
@@ -4591,7 +4600,7 @@ OnePlus 与知名设计学院 Parsons School of Design 的学生，一起设计�
     <string name="op_storage">存储和内存</string>
     <string name="op_switch_record_info">%1$s，使用一加搬家迁移数据至 %2$s 手机</string>
     <string name="op_switch_record_none">暂无纪录</string>
-    <string name="op_switch_record_title">数据迁移纪录</string>
+    <string name="op_switch_record_title">数据迁移记录</string>
     <string name="op_system">系统</string>
     <string name="op_system_dashboard_summary">语言、时间、重置、更新</string>
     <string name="op_system_update_settings">系统更新</string>
@@ -4602,7 +4611,10 @@ OnePlus 与知名设计学院 Parsons School of Design 的学生，一起设计�
     <string name="op_theme_2__title">复仇者联盟</string>
     <string name="op_theme_3_cannot_change_color_accent">迈凯伦主题下只能使用系统色</string>
     <string name="op_theme_3_title">迈凯伦</string>
+    <string name="op_theme_canvas_preview_title">绘影</string>
+    <string name="op_theme_clock_preview_title">息屏时钟</string>
     <string name="op_theme_entrance_summary">壁纸、强调色、字体</string>
+    <string name="op_theme_lock_screen_customization">息屏样式</string>
     <string name="op_theme_mode_title">主题模式</string>
     <string name="op_use_cast">使用投射屏幕</string>
     <string name="op_user_manual_settings">用户手册</string>
@@ -4666,6 +4678,9 @@ OnePlus 与知名设计学院 Parsons School of Design 的学生，一起设计�
     <string name="permission_bar_chart_details">在信息中心查看全部详细信息</string>
     <string name="permission_bar_chart_empty_text">0 个已使用权限的应用</string>
     <string name="permission_bar_chart_title">过去 24 小时内的权限使用频率</string>
+    <string name="permission_btn_text_denied">退出</string>
+    <string name="permission_btn_text_grant">同意并继续</string>
+    <string name="permission_dialog_title">权限声明</string>
     <string name="permissions_label">权限</string>
     <string name="permit_draw_overlay">允许显示在其他应用的上层</string>
     <string name="permit_manage_external_storage">授予所有文件的管理权限</string>
@@ -5150,7 +5165,7 @@ OnePlus 与知名设计学院 Parsons School of Design 的学生，一起设计�
     <string name="screensaver_settings_summary_off">关闭</string>
     <string name="screensaver_settings_summary_sleep">充电时</string>
     <string name="screensaver_settings_title">屏保</string>
-    <string name="screensaver_settings_when_to_dream">启用时机</string>
+    <string name="screensaver_settings_when_to_dream">启动时间</string>
     <string name="sd_card_settings_label">USB存储设备</string>
     <string name="sd_eject">卸载共享存储设备</string>
     <string name="sd_eject_summary">卸载内部USB存储设备</string>
@@ -6055,6 +6070,10 @@ OnePlus 与知名设计学院 Parsons School of Design 的学生，一起设计�
     <string name="uninstall_update_title">卸载更新</string>
     <string name="uninstalling">正在卸载...</string>
     <string name="uninstalling_notification_channel">进行中的卸载操作</string>
+    <string name="units_one">GB/MB（自动变化）</string>
+    <string name="units_three">仅MB</string>
+    <string name="units_title">显示单位</string>
+    <string name="units_two">仅GB</string>
     <string name="unknown">未知</string>
     <string name="unknown_app">未知应用</string>
     <string name="unknown_unavailability_setting_summary">无法更改设置</string>
@@ -6854,6 +6873,9 @@ OnePlus 与知名设计学院 Parsons School of Design 的学生，一起设计�
     <string name="wizard_finish">完成</string>
     <string name="wizard_next">下一步</string>
     <string name="work_alarm_ringtone_title">默认工作闹钟提示音</string>
+    <string name="work_life_balance">Work Life Balance</string>
+    <string name="work_life_banner_summary">通知可能会分散注意力，更好地管理通知能帮助你实现工作生活的平衡。</string>
+    <string name="work_life_disabled_toast">Work life balance 功能已关闭</string>
     <string name="work_mode_label">工作资料</string>
     <string name="work_mode_off_summary">应用和通知均已关闭</string>
     <string name="work_mode_on_summary">由贵单位管理</string>

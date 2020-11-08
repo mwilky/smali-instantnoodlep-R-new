@@ -236,6 +236,125 @@
     return-object p0
 .end method
 
+.method public onAttachedToWindow()V
+    .locals 3
+
+    invoke-super {p0}, Landroidx/appcompat/app/AlertDialog;->onAttachedToWindow()V
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    sget v1, Landroidx/appcompat/R$id;->parentPanel:I
+
+    invoke-virtual {v0, v1}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
+
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
+
+    const/4 v2, 0x0
+
+    iput v2, v1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    sget v1, Landroidx/appcompat/R$id;->parentPanel:I
+
+    invoke-virtual {v0, v1}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    sget v1, Landroidx/appcompat/R$id;->parentPanel:I
+
+    invoke-virtual {v0, v1}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    instance-of v0, v0, Landroidx/appcompat/widget/SmoothRoundLayout;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    sget v1, Landroidx/appcompat/R$id;->parentPanel:I
+
+    invoke-virtual {v0, v1}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/appcompat/widget/SmoothRoundLayout;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/SmoothRoundLayout;->setCornerRadius(F)V
+
+    :cond_0
+    iget-object v0, p0, Landroidx/appcompat/app/AlertDialog;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lcom/google/android/material/R$drawable;->op_dialog_material_background_bottom:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    new-instance v1, Landroid/graphics/drawable/InsetDrawable;
+
+    invoke-direct {v1, v0, v2}, Landroid/graphics/drawable/InsetDrawable;-><init>(Landroid/graphics/drawable/Drawable;I)V
+
+    iget-object v0, p0, Landroidx/appcompat/app/AlertDialog;->mContext:Landroid/content/Context;
+
+    sget v2, Lcom/google/android/material/R$color;->op_control_bg_color_popup_default:I
+
+    invoke-virtual {v0, v2}, Landroid/content/Context;->getColor(I)I
+
+    move-result v0
+
+    invoke-virtual {v1, v0}, Landroid/graphics/drawable/InsetDrawable;->setTint(I)V
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object p0
+
+    invoke-virtual {p0, v1}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+.end method
+
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
 

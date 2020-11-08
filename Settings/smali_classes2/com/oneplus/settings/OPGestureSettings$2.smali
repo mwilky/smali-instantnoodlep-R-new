@@ -138,7 +138,7 @@
 
     move-result p0
 
-    const-string v1, "gesture_to_control_calls"
+    const-string p1, "gesture_to_control_calls"
 
     if-eqz p0, :cond_6
 
@@ -147,7 +147,7 @@
     goto :goto_0
 
     :cond_6
-    move-object p0, v1
+    move-object p0, p1
 
     :goto_0
     invoke-interface {v0, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -180,13 +180,13 @@
     invoke-interface {v0, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_8
-    invoke-static {p1}, Lcom/oneplus/settings/utils/OPUtils;->hasOnePlusDialer(Landroid/content/Context;)Z
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportGoogleCommSuit()Z
 
     move-result p0
 
-    if-nez p0, :cond_9
+    if-eqz p0, :cond_9
 
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     const-string p0, "rotation_silent_enable"
 

@@ -55,7 +55,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/settings/core/BasePreferenceController;->getPreferenceKey()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/oneplus/settings/system/OPUsvSystemUpdateController;->getPreferenceKey()Ljava/lang/String;
 
     move-result-object v0
 
@@ -68,7 +68,7 @@
     :cond_0
     iget-object p1, p0, Lcom/oneplus/settings/system/OPUsvSystemUpdateController;->mUpdatePreference:Landroidx/preference/Preference;
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_4
 
     iget-object p1, p0, Lcom/oneplus/settings/system/OPUsvSystemUpdateController;->mContext:Landroid/content/Context;
 
@@ -103,7 +103,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     iget-object v0, p0, Lcom/oneplus/settings/system/OPUsvSystemUpdateController;->mUpdatePreference:Landroidx/preference/Preference;
 
@@ -121,24 +121,45 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isUsvMode()Z
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
-    if-nez p1, :cond_3
+    iget-object v0, p0, Lcom/oneplus/settings/system/OPUsvSystemUpdateController;->mContext:Landroid/content/Context;
+
+    const-string v1, "com.oneplus.dm"
+
+    invoke-static {v0, v1}, Lcom/oneplus/settings/utils/OPUtils;->isAppPakExist(Landroid/content/Context;Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    iget-object v0, p0, Lcom/oneplus/settings/system/OPUsvSystemUpdateController;->mContext:Landroid/content/Context;
+
+    const-string v1, "com.oneplus.oma.dm"
+
+    invoke-static {v0, v1}, Lcom/oneplus/settings/utils/OPUtils;->isAppPakExist(Landroid/content/Context;Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
 
     :cond_2
+    if-nez p1, :cond_4
+
+    :cond_3
     iget-object p0, p0, Lcom/oneplus/settings/system/OPUsvSystemUpdateController;->mUpdatePreference:Landroidx/preference/Preference;
 
     const/4 p1, 0x0
 
     invoke-virtual {p0, p1}, Landroidx/preference/Preference;->setEnabled(Z)V
 
-    :cond_3
+    :cond_4
     return-void
 .end method
 
@@ -191,6 +212,93 @@
     return-object p0
 .end method
 
+.method public getPreferenceKey()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "oneplus_vzw_system_update_settings"
+
+    return-object p0
+.end method
+
+.method public handlePreferenceTreeClick(Landroidx/preference/Preference;)Z
+    .locals 2
+
+    const-string v0, "com.oneplus.dm"
+
+    invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v1, "oneplus_vzw_system_update_settings"
+
+    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    :try_start_0
+    new-instance p1, Landroid/content/Intent;
+
+    invoke-direct {p1}, Landroid/content/Intent;-><init>()V
+
+    const/high16 v1, 0x10000000
+
+    invoke-virtual {p1, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+
+    iget-object v1, p0, Lcom/oneplus/settings/system/OPUsvSystemUpdateController;->mContext:Landroid/content/Context;
+
+    invoke-static {v1, v0}, Lcom/oneplus/settings/utils/OPUtils;->isAppPakExist(Landroid/content/Context;Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const-string v1, "com.oneplus.dm.SystemUpdateActivity"
+
+    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isUsvMode()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const-string v0, "com.oneplus.oma.dm"
+
+    const-string v1, "com.oma.business.ui.MainActivity"
+
+    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    :cond_1
+    :goto_0
+    iget-object p0, p0, Lcom/oneplus/settings/system/OPUsvSystemUpdateController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0, p1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    :try_end_0
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception p0
+
+    invoke-virtual {p0}, Landroid/content/ActivityNotFoundException;->printStackTrace()V
+
+    :goto_1
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_2
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
 .method public bridge synthetic hasAsyncUpdate()Z
     .locals 0
 
@@ -226,27 +334,48 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
     invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isUsvMode()Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
+    iget-object v0, p0, Lcom/oneplus/settings/system/OPUsvSystemUpdateController;->mContext:Landroid/content/Context;
+
+    const-string v1, "com.oneplus.dm"
+
+    invoke-static {v0, v1}, Lcom/oneplus/settings/utils/OPUtils;->isAppPakExist(Landroid/content/Context;Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/oneplus/settings/system/OPUsvSystemUpdateController;->mContext:Landroid/content/Context;
+
+    const-string v1, "com.oneplus.oma.dm"
+
+    invoke-static {v0, v1}, Lcom/oneplus/settings/utils/OPUtils;->isAppPakExist(Landroid/content/Context;Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
     iget-object p0, p0, Lcom/oneplus/settings/system/OPUsvSystemUpdateController;->mUm:Landroid/os/UserManager;
 
     invoke-virtual {p0}, Landroid/os/UserManager;->isAdminUser()Z
 
     move-result p0
 
-    if-eqz p0, :cond_0
+    if-eqz p0, :cond_1
 
     const/4 p0, 0x1
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     const/4 p0, 0x0
 
     :goto_0

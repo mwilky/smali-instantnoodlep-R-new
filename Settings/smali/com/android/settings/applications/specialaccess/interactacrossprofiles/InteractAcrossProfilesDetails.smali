@@ -310,14 +310,33 @@
 .method private enableInteractAcrossProfiles(Z)V
     .locals 1
 
+    :try_start_0
     iget-object v0, p0, Lcom/android/settings/applications/specialaccess/interactacrossprofiles/InteractAcrossProfilesDetails;->mCrossProfileApps:Landroid/content/pm/CrossProfileApps;
 
     iget-object p0, p0, Lcom/android/settings/applications/AppInfoBase;->mPackageName:Ljava/lang/String;
 
-    xor-int/lit8 p1, p1, 0x1
+    if-eqz p1, :cond_0
 
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x1
+
+    :goto_0
     invoke-virtual {v0, p0, p1}, Landroid/content/pm/CrossProfileApps;->setInteractAcrossProfilesAppOp(Ljava/lang/String;I)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    goto :goto_1
+
+    :catch_0
+    move-exception p0
+
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
+
+    :goto_1
     return-void
 .end method
 

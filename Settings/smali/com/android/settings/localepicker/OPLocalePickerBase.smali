@@ -206,13 +206,13 @@
 
     invoke-static {v1}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
-    const v0, 0x10700a5
+    const v0, 0x10700a6
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v0
 
-    const v2, 0x10700a6
+    const v2, 0x10700a7
 
     invoke-virtual {p0, v2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 

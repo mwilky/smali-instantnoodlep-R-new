@@ -41,13 +41,13 @@
 
     invoke-direct {p0, p1, p2}, Lcom/android/settings/core/BasePreferenceController;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    new-instance p1, Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController$1;
+    new-instance p1, Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController$2;
 
     new-instance p2, Landroid/os/Handler;
 
     invoke-direct {p2}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {p1, p0, p2}, Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController$1;-><init>(Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController;Landroid/os/Handler;)V
+    invoke-direct {p1, p0, p2}, Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController$2;-><init>(Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController;Landroid/os/Handler;)V
 
     iput-object p1, p0, Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController;->mObserver:Landroid/database/ContentObserver;
 
@@ -784,71 +784,79 @@
 
     iput-object v0, p0, Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController;->mChargingStationFeatureReqView:Landroid/view/View;
 
-    sget v0, Lcom/android/settings/R$id;->op_charging_station_animation:I
+    sget v0, Lcom/android/settings/R$id;->op_charging_station_header_details1:I
 
     invoke-virtual {p1, v0}, Lcom/android/settingslib/widget/LayoutPreference;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/ImageView;
+    check-cast v0, Landroid/widget/TextView;
 
-    sget v1, Lcom/android/settings/R$id;->op_charging_station_header_details1:I
+    iput-object v0, p0, Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController;->mChargingStationDistance:Landroid/widget/TextView;
 
-    invoke-virtual {p1, v1}, Lcom/android/settingslib/widget/LayoutPreference;->findViewById(I)Landroid/view/View;
+    sget v0, Lcom/android/settings/R$id;->op_charging_station_header_details2:I
 
-    move-result-object v1
+    invoke-virtual {p1, v0}, Lcom/android/settingslib/widget/LayoutPreference;->findViewById(I)Landroid/view/View;
 
-    check-cast v1, Landroid/widget/TextView;
+    move-result-object v0
 
-    iput-object v1, p0, Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController;->mChargingStationDistance:Landroid/widget/TextView;
+    check-cast v0, Landroid/widget/TextView;
 
-    sget v1, Lcom/android/settings/R$id;->op_charging_station_header_details2:I
+    iput-object v0, p0, Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController;->mChargingStationName:Landroid/widget/TextView;
 
-    invoke-virtual {p1, v1}, Lcom/android/settingslib/widget/LayoutPreference;->findViewById(I)Landroid/view/View;
+    sget v0, Lcom/android/settings/R$id;->op_charging_station_header_off_text:I
 
-    move-result-object v1
+    invoke-virtual {p1, v0}, Lcom/android/settingslib/widget/LayoutPreference;->findViewById(I)Landroid/view/View;
 
-    check-cast v1, Landroid/widget/TextView;
+    move-result-object v0
 
-    iput-object v1, p0, Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController;->mChargingStationName:Landroid/widget/TextView;
+    check-cast v0, Landroid/widget/TextView;
 
-    sget v1, Lcom/android/settings/R$id;->op_charging_station_header_off_text:I
+    iput-object v0, p0, Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController;->mChargingStationOffText:Landroid/widget/TextView;
 
-    invoke-virtual {p1, v1}, Lcom/android/settingslib/widget/LayoutPreference;->findViewById(I)Landroid/view/View;
+    sget v0, Lcom/android/settings/R$id;->op_feature_text:I
 
-    move-result-object v1
+    invoke-virtual {p1, v0}, Lcom/android/settingslib/widget/LayoutPreference;->findViewById(I)Landroid/view/View;
 
-    check-cast v1, Landroid/widget/TextView;
+    move-result-object v0
 
-    iput-object v1, p0, Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController;->mChargingStationOffText:Landroid/widget/TextView;
+    check-cast v0, Landroid/widget/TextView;
 
-    sget v1, Lcom/android/settings/R$id;->op_feature_text:I
+    iput-object v0, p0, Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController;->mChargingStationInfoText:Landroid/widget/TextView;
 
-    invoke-virtual {p1, v1}, Lcom/android/settingslib/widget/LayoutPreference;->findViewById(I)Landroid/view/View;
+    sget v0, Lcom/android/settings/R$id;->op_enable_button:I
 
-    move-result-object v1
+    invoke-virtual {p1, v0}, Lcom/android/settingslib/widget/LayoutPreference;->findViewById(I)Landroid/view/View;
 
-    check-cast v1, Landroid/widget/TextView;
+    move-result-object v0
 
-    iput-object v1, p0, Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController;->mChargingStationInfoText:Landroid/widget/TextView;
+    check-cast v0, Landroid/widget/TextView;
 
-    sget v1, Lcom/android/settings/R$id;->op_enable_button:I
+    iput-object v0, p0, Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController;->enableButton:Landroid/widget/TextView;
+
+    sget v0, Lcom/android/settings/R$id;->animation_view:I
+
+    invoke-virtual {p1, v0}, Lcom/android/settingslib/widget/LayoutPreference;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/airbnb/lottie/LottieAnimationView;
+
+    sget v1, Lcom/android/settings/R$id;->animation_view_dots:I
 
     invoke-virtual {p1, v1}, Lcom/android/settingslib/widget/LayoutPreference;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
-    check-cast p1, Landroid/widget/TextView;
+    check-cast p1, Lcom/airbnb/lottie/LottieAnimationView;
 
-    iput-object p1, p0, Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController;->enableButton:Landroid/widget/TextView;
+    invoke-virtual {v0}, Lcom/airbnb/lottie/LottieAnimationView;->playAnimation()V
 
-    invoke-virtual {v0}, Landroid/widget/ImageView;->getBackground()Landroid/graphics/drawable/Drawable;
+    new-instance v1, Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController$1;
 
-    move-result-object p1
+    invoke-direct {v1, p0, p1}, Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController$1;-><init>(Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController;Lcom/airbnb/lottie/LottieAnimationView;)V
 
-    check-cast p1, Landroid/graphics/drawable/AnimationDrawable;
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/AnimationDrawable;->start()V
+    invoke-virtual {v0, v1}, Lcom/airbnb/lottie/LottieAnimationView;->addAnimatorListener(Landroid/animation/Animator$AnimatorListener;)V
 
     invoke-direct {p0}, Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController;->setView()V
 

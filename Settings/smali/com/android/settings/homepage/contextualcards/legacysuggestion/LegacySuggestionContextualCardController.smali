@@ -8,16 +8,17 @@
 .implements Lcom/android/settingslib/core/lifecycle/events/OnStart;
 .implements Lcom/android/settingslib/core/lifecycle/events/OnStop;
 .implements Lcom/android/settingslib/suggestions/SuggestionController$ServiceConnectionListener;
+.implements Lcom/android/settingslib/core/lifecycle/events/OnDestroy;
 
 
 # instance fields
 .field private mCardUpdateListener:Lcom/android/settings/homepage/contextualcards/ContextualCardUpdateListener;
 
-.field private final mContext:Landroid/content/Context;
+.field private mContext:Landroid/content/Context;
 
 .field mSuggestionController:Lcom/android/settingslib/suggestions/SuggestionController;
 
-.field final mSuggestions:Ljava/util/List;
+.field mSuggestions:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -261,12 +262,15 @@
 
     iget-object v0, p0, Lcom/android/settings/homepage/contextualcards/legacysuggestion/LegacySuggestionContextualCardController;->mCardUpdateListener:Lcom/android/settings/homepage/contextualcards/ContextualCardUpdateListener;
 
+    if-eqz v0, :cond_0
+
     invoke-interface {v0, p1}, Lcom/android/settings/homepage/contextualcards/ContextualCardUpdateListener;->onContextualCardUpdated(Ljava/util/Map;)V
 
     const/4 p1, 0x0
 
     iput-object p1, p0, Lcom/android/settings/homepage/contextualcards/legacysuggestion/LegacySuggestionContextualCardController;->mCardUpdateListener:Lcom/android/settings/homepage/contextualcards/ContextualCardUpdateListener;
 
+    :cond_0
     return-void
 .end method
 
@@ -328,6 +332,26 @@
 
 .method public onActionClick(Lcom/android/settings/homepage/contextualcards/ContextualCard;)V
     .locals 0
+
+    return-void
+.end method
+
+.method public onDestroy()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/settings/homepage/contextualcards/legacysuggestion/LegacySuggestionContextualCardController;->mSuggestions:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/android/settings/homepage/contextualcards/legacysuggestion/LegacySuggestionContextualCardController;->mSuggestions:Ljava/util/List;
+
+    iput-object v0, p0, Lcom/android/settings/homepage/contextualcards/legacysuggestion/LegacySuggestionContextualCardController;->mSuggestionController:Lcom/android/settingslib/suggestions/SuggestionController;
+
+    iput-object v0, p0, Lcom/android/settings/homepage/contextualcards/legacysuggestion/LegacySuggestionContextualCardController;->mCardUpdateListener:Lcom/android/settings/homepage/contextualcards/ContextualCardUpdateListener;
+
+    iput-object v0, p0, Lcom/android/settings/homepage/contextualcards/legacysuggestion/LegacySuggestionContextualCardController;->mContext:Landroid/content/Context;
 
     return-void
 .end method

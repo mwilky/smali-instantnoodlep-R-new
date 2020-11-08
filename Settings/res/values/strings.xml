@@ -463,6 +463,7 @@ Just bring the devices together (typically back to back) and then tap your scree
     <string name="aod_clock_minimalism_1">Minimalism 2</string>
     <string name="aod_clock_none">None</string>
     <string name="aod_clock_parsons">Insight</string>
+    <string name="aod_clock_red" />
     <string name="aod_clock_select_style_text">Select the clock style</string>
     <string name="aod_clock_text_clock">Text clock</string>
     <string name="aod_horizon_light">Horizon light</string>
@@ -475,6 +476,7 @@ Just bring the devices together (typically back to back) and then tap your scree
     <string name="aod_horizon_light_effect_6">Green</string>
     <string name="aod_horizon_light_effect_7">Pink</string>
     <string name="aod_horizon_light_effect_8">Orange</string>
+    <string name="aod_horizon_light_effect_red" />
     <string name="aod_horizon_light_select">SELECT COLOR</string>
     <string name="aod_horizon_light_snake_action">TURN ON</string>
     <string name="aod_horizon_light_snake_tip">This feature will be available when New Notifications is on</string>
@@ -688,7 +690,7 @@ Last ran on %2$s"</string>
     <string name="average_memory_use">Average memory use</string>
     <string name="average_used">Average used (%)</string>
     <string name="awake">Device awake time</string>
-    <string name="back_button_label">Pre</string>
+    <string name="back_button_label">Back</string>
     <string name="back_sensitivity_dialog_message">Higher sensitivity may conflict with any app gestures along the edges of the screen.</string>
     <string name="back_sensitivity_dialog_title">Back Sensitivity</string>
     <string name="background_activity_disabled_dialog_text">"Since this app is not set to optimize battery, you can’t restrict it.
@@ -1212,8 +1214,8 @@ This affects other apps or conversations that are allowed to bubble."</string>
     <string name="cant_sync_dialog_message">Sync for this item is currently disabled. To change this setting, temporarily turn on background data and automatic sync.</string>
     <string name="cant_sync_dialog_title">Can’t manually sync</string>
     <string name="capabilities_list_title">%1$s needs to:</string>
-    <string name="capital_off">Off</string>
-    <string name="capital_on">On</string>
+    <string name="capital_off">OFF</string>
+    <string name="capital_on">ON</string>
     <string name="captioning_background_color">Background color</string>
     <string name="captioning_background_opacity">Background opacity</string>
     <string name="captioning_caption_appearance_summary">%1$s text size</string>
@@ -1332,6 +1334,7 @@ This affects other apps or conversations that are allowed to bubble."</string>
     <string name="color_temperature">Cool color temperature</string>
     <string name="color_temperature_desc">Use cooler display colors</string>
     <string name="color_temperature_toast">To apply color change, turn off screen</string>
+    <string name="color_temperture">Display white balance</string>
     <string name="color_title">Color</string>
     <string name="color_unspecified">Default</string>
     <string name="color_white">White</string>
@@ -1646,6 +1649,7 @@ Some accounts may also automatically copy any changes you make on the phone to t
     <string name="data_usage_enable_4g">4G data</string>
     <string name="data_usage_enable_mobile">Mobile data</string>
     <string name="data_usage_forground_label">Foreground:</string>
+    <string name="data_usage_hotspot">Hotspot &amp; tethering</string>
     <string name="data_usage_label_background">Background</string>
     <string name="data_usage_label_foreground">Foreground</string>
     <string name="data_usage_left_title">Data remaining</string>
@@ -3985,9 +3989,11 @@ Caution: face unlock is less secure than using fingerprint or a password"</strin
     <string name="oneplus_fingerprint_gesture_camera_summary">From the viewfinder screen, long press the fingerprint sensor to take a photo</string>
     <string name="oneplus_fingerprint_gesture_camera_title">Long press to take a photo</string>
     <string name="oneplus_fingerprint_gesture_settings_title">Fingerprint gesture</string>
+    <string name="oneplus_fingerprint_hardware_exception">Fingerprint hardware information is not accurate, please contact customer service</string>
     <string name="oneplus_fingerprint_have_inpted">The fingerprint already exists, please use another finger input</string>
     <string name="oneplus_fingerprint_longpress_for_quickpay_summary">Long press the fingerprint sensor to launch quick pay</string>
     <string name="oneplus_fingerprint_max_tips">A maximum of five fingerprint input</string>
+    <string name="oneplus_fingerprint_not_adjustment">Fingerprint calibration data is not accurate, please contact customer service</string>
     <string name="oneplus_fingerprint_quickpay_lock_swtch_summary">Long press the fingerprint sensor to launch quick pay when the phone is locked</string>
     <string name="oneplus_fingerprint_sensor_longpress_for_quickpay_summary">Long press the fingerprint sensor to launch quick pay when the phone is unlocked</string>
     <string name="oneplus_fingerprint_settings_list_title">Fingerprint list</string>
@@ -4109,6 +4115,7 @@ To go to the home screen at any time, swipe up from the bottom center edge of th
     <string name="oneplus_google_services_title">Google related services</string>
     <string name="oneplus_google_tts">Google TTS voice data</string>
     <string name="oneplus_gps_using">is using GPS</string>
+    <string name="oneplus_green">Green</string>
     <string name="oneplus_h2_contributors">HydrogenOS Contributors</string>
     <string name="oneplus_hand_up_proximity_summary">Wake screen when you pick up the phone</string>
     <string name="oneplus_hand_up_proximity_title">Lift up display</string>
@@ -4216,6 +4223,7 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_lockscreen_settings_title">Lock screen preferences</string>
     <string name="oneplus_lunar_leap">闰</string>
     <string name="oneplus_lunar_year">年</string>
+    <string name="oneplus_magenta">Magenta</string>
     <string name="oneplus_manage_virtual_keyboard">Manage keyboards</string>
     <string name="oneplus_max_shortcuts_tips">You can add up to 6 shortcuts</string>
     <string name="oneplus_media_ring">@string/zen_mode_media_sound</string>
@@ -4646,6 +4654,7 @@ Go to \"Settings - Apps &amp; notifications\", click on the corresponding applic
     <string name="oneplus_search_keyword_theme_settings">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, System Customization, Accent Color, Shape, Font, Tone, Icon Pack, Illuminating Light, Nuanced Dark, Vibrant Tints</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, System Customization, Accent Color, Shape, Font, Tone, Icon Pack, Illuminating Light, Nuanced Dark, Vibrant Tints, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_must_have">LOCK SCREEN CUSTOMIZATION, Wallpapers, Clock style, SYSTEM CUSTOMIZATION, Accent color, Shape, Tone, Icon pack, Illuminating light, Nuanced dark, Vibrant tints</string>
     <string name="oneplus_search_keyword_theme_settings_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, System Customization, Accent Color, Shape, Font, Tone, Icon Pack, Illuminating Light, Nuanced Dark, Vibrant Tints</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
@@ -4684,6 +4693,7 @@ Note:
     <string name="oneplus_select_fingerprint_animation_effect_6">Energy</string>
     <string name="oneplus_select_fingerprint_animation_effect_mcl">McLaren</string>
     <string name="oneplus_select_fingerprint_animation_effect_none">None</string>
+    <string name="oneplus_select_fingerprint_animation_effect_red" />
     <string name="oneplus_select_fingerprint_animation_effect_title">Select fingerprint animation effect</string>
     <string name="oneplus_service_messaging_summary">Allow OnePlus to deliver prompt cloud messaging services to you to ensure optimized product experience</string>
     <string name="oneplus_service_messaging_title">OnePlus Service Messaging</string>
@@ -4775,7 +4785,7 @@ Note:
     <string name="oneplus_theme_accent_color_select">Select Accent Color</string>
     <string name="oneplus_theme_apply_summary">After applying this theme, your customization options will be overridden</string>
     <string name="oneplus_theme_apply_title">Do you want to apply this theme?</string>
-    <string name="oneplus_theme_clock">Clock Style</string>
+    <string name="oneplus_theme_clock">Clock on ambient display</string>
     <string name="oneplus_theme_clock_snake_action">TURN ON AMBIENT DISPLAY</string>
     <string name="oneplus_theme_clock_snake_tip">This feature will be available when ambient display is on</string>
     <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
@@ -4790,7 +4800,7 @@ Note:
     <string name="oneplus_theme_font_content">Share the best technology with the world, hand-in-hand with you</string>
     <string name="oneplus_theme_font_title">Never Settle</string>
     <string name="oneplus_theme_icon_pack">Icon Pack</string>
-    <string name="oneplus_theme_lock_screen_customization">LOCK SCREEN CUSTOMIZATION</string>
+    <string name="oneplus_theme_lock_screen_customization">LOCK SCREEN AND AMBIENT DISPLAY</string>
     <string name="oneplus_theme_preset">Preset Theme</string>
     <string name="oneplus_theme_preset_color">Vibrant Tints</string>
     <string name="oneplus_theme_preset_dark">Nuanced Dark</string>
@@ -4899,6 +4909,9 @@ Note: Face Unlock may be less secure than fingerprint, PIN or other screen lock 
 ©2020, Onformative."</string>
     <string name="oneplus_wallpaper_attributions_a5010_values">2017, Hampus Olsson.</string>
     <string name="oneplus_wallpaper_attributions_avg_values">©MARVEL.</string>
+    <string name="oneplus_wallpaper_attributions_red_values">"©2020, Hampus Olsson.
+©2020, Onformative.
+©2020, TAVO."</string>
     <string name="oneplus_wallpaper_attributions_values">"©2016, Hampus Olsson.
 ©2016, Matthias Heiderich."</string>
     <string name="oneplus_wallpaper_settings_title_desk">@string/wallpaper_settings_title</string>
@@ -4943,8 +4956,9 @@ Setting the network as hidden will not change your router settings."</string>
     <string name="onplus_hardware_version_info">Hardware Version</string>
     <string name="onplus_software_version_info">Software version</string>
     <string name="onscreen_keyboard_settings_summary">Onscreen keyboard settings</string>
-    <string name="op_accessibility_quick_settings_page">page %1$d ,Total %2$d pages</string>
+    <string name="op_accessibility_quick_settings_page">Page %1$d of %2$d</string>
     <string name="op_advanced_settings">Advanced</string>
+    <string name="op_already_know">Got It</string>
     <string name="op_android_auto_title">Android Auto</string>
     <string name="op_android_beam_explained">"When this feature is turned on, you can beam app content to another NFC-capable device by holding the devices close together. For example, you can beam Browser pages, YouTube videos, People contacts, and more.
 
@@ -5052,6 +5066,7 @@ OnePlus does not collect your personal data during use, we only need to call you
     <string name="op_control_accent_color_pink_label">@string/op_primary_vigour_red_label</string>
     <string name="op_control_accent_color_purple_label">@string/op_primary_fashion_pink_label</string>
     <string name="op_control_accent_color_red_label">@string/color_picker_default</string>
+    <string name="op_control_accent_color_red_theme_label" />
     <string name="op_control_accent_color_rose_red_label">@string/op_primary_rose_red_label</string>
     <string name="op_control_accent_color_teal_label">Teal</string>
     <string name="op_control_font_display_h1">oneplus-sans-display-h1</string>
@@ -5064,6 +5079,8 @@ OnePlus does not collect your personal data during use, we only need to call you
     <string name="op_control_font_text_h5">oneplus-sans-text-h5</string>
     <string name="op_control_font_text_h6">oneplus-sans-text-h6</string>
     <string name="op_control_font_text_subtitle">oneplus-sans-text-subtitle</string>
+    <string name="op_control_red_theme_accent_color">\#FCEE0A</string>
+    <string name="op_control_red_theme_accent_color_default">\#c41442</string>
     <string name="op_custom_color_value">Color value</string>
     <string name="op_custom_color_value_edit">Enter a color value</string>
     <string name="op_custom_color_value_invalid">Invalid color value</string>
@@ -5079,6 +5096,7 @@ OnePlus does not collect your personal data during use, we only need to call you
     <string name="op_display_advanced_settings_summary_5">Refresh rate</string>
     <string name="op_display_advanced_settings_summary_6">Screen calibration, resolution, refresh rate, front camera display area</string>
     <string name="op_display_advanced_settings_summary_7">Screen calibration, refresh rate, front camera display area</string>
+    <string name="op_display_advanced_settings_summary_8">Refresh rate, front camera display area</string>
     <string name="op_display_graphics_enhancement_engine">VIDEO ENHANCEMENT ENGINE</string>
     <string name="op_display_motion_graphics_compensation">Motion graphics smoothing</string>
     <string name="op_display_motion_graphics_compensation_summary">Enhance the frame rate of graphics, smoother video and game effects</string>
@@ -5111,6 +5129,8 @@ Fingerprint unlock might be incompatible with the third-party screen protectors.
     <string name="op_keep_location_services">To find and track charging stations nearby, keep the location services enabled</string>
     <string name="op_lab_dc_still_on">STILL ON</string>
     <string name="op_lab_dc_warn_message">When DC dimming is turned on, uneven or abnormal colors may be displayed in some cases. Are you sure you want it on?</string>
+    <string name="op_legal_ht_secure" />
+    <string name="op_legal_ten_secure" />
     <string name="op_light_mode_title">Light</string>
     <string name="op_linked_launch_summary">Manage apps can be linked launch in the background</string>
     <string name="op_linked_launch_title">Apps auto-launch</string>
@@ -5166,6 +5186,10 @@ Fingerprint unlock might be incompatible with the third-party screen protectors.
     <string name="op_primary_vigour_red_label">Pink</string>
     <string name="op_primary_vigour_red_light_label">@string/op_primary_vigour_red_label</string>
     <string name="op_priority_allows">Priority only allows</string>
+    <string name="op_red_theme" />
+    <string name="op_red_theme_accent_color_disable_tips" />
+    <string name="op_red_theme_dark_mode_tips" />
+    <string name="op_red_theme_dialog_title" />
     <string name="op_reset">Reset</string>
     <string name="op_reset_options_summary">Factory reset, apps &amp; network reset</string>
     <string name="op_ringtone">@string/incoming_call_volume_title</string>
@@ -5199,7 +5223,10 @@ Fingerprint unlock might be incompatible with the third-party screen protectors.
     <string name="op_theme_2__title">The Avengers</string>
     <string name="op_theme_3_cannot_change_color_accent">McLaren theme can only use the system color theme</string>
     <string name="op_theme_3_title">McLaren</string>
+    <string name="op_theme_canvas_preview_title">Canvas</string>
+    <string name="op_theme_clock_preview_title">Clock on ambient display</string>
     <string name="op_theme_entrance_summary">Wallpapers, accent color, font</string>
+    <string name="op_theme_lock_screen_customization">LOCK SCREEN AND AMBIENT DISPLAY</string>
     <string name="op_theme_mode_title">Theme</string>
     <string name="op_use_cast">Use Cast</string>
     <string name="op_user_manual_settings">User Manual</string>
@@ -5278,6 +5305,9 @@ Fingerprint unlock might be incompatible with the third-party screen protectors.
     <string name="permission_bar_chart_details">See all in Dashboard</string>
     <string name="permission_bar_chart_empty_text">0 apps used permissions</string>
     <string name="permission_bar_chart_title">Permission usage in last 24 hours</string>
+    <string name="permission_btn_text_denied">Exit</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Permission statement</string>
     <string name="permissions_label">Permissions</string>
     <string name="permit_draw_overlay">Allow display over other apps</string>
     <string name="permit_manage_external_storage">Allow access to manage all files</string>
@@ -5833,10 +5863,10 @@ To use app pinning: \u0009
     <string name="search_network_extenders">Searching Network Extenders</string>
     <string name="search_results_title">Settings</string>
     <string name="search_settings">Search</string>
-    <string name="searchview_description_clear">Clear</string>
-    <string name="searchview_description_search">Search something</string>
-    <string name="searchview_description_submit">Submit</string>
-    <string name="searchview_description_voice">Voice Search</string>
+    <string name="searchview_description_clear">Clear query</string>
+    <string name="searchview_description_search">Search</string>
+    <string name="searchview_description_submit">Submit query</string>
+    <string name="searchview_description_voice">Voice search</string>
     <string name="secure_lock_encryption_warning">Because you’ve turned on an accessibility service, your device won’t use your screen lock to enhance data encryption.</string>
     <string name="security_dashboard_summary">Screen lock, fingerprint</string>
     <string name="security_dashboard_summary_face">Screen lock, face unlock</string>
@@ -6670,7 +6700,7 @@ A Google approach to syncing data to allow access to your contacts, appointments
     <string name="touchscreen_double_tap_to_wake_gesture_title">Double Tap to Wake</string>
     <string name="touchscreen_flashlight_gesture_summary">Draw a V to toggle flashlight</string>
     <string name="touchscreen_flashlight_gesture_title">Toggle flashlight</string>
-    <string name="touchscreen_music_gesture_summary">Draw || with two fingers to play or pause music. Draw &lt; or > for previous or next track</string>
+    <string name="touchscreen_music_gesture_summary">Draw ‖ with two fingers to play or pause music. Draw &lt; or > for previous or next track</string>
     <string name="touchscreen_music_gesture_title">Music Control</string>
     <string name="track_frame_time">Profile HWUI rendering</string>
     <string name="track_frame_time_keywords">GPU</string>
@@ -6797,6 +6827,10 @@ A Google approach to syncing data to allow access to your contacts, appointments
     <string name="uninstallapps_toast_message">apps have been removed</string>
     <string name="uninstalling">Uninstalling…</string>
     <string name="uninstalling_notification_channel">Running uninstalls</string>
+    <string name="units_one">GB/MB (Auto change)</string>
+    <string name="units_three">MB only</string>
+    <string name="units_title">Show units</string>
+    <string name="units_two">GB only</string>
     <string name="unknown">Unknown</string>
     <string name="unknown_app">Unknown app</string>
     <string name="unknown_unavailability_setting_summary">Setting unavailable</string>
@@ -7496,6 +7530,8 @@ Setting the network as hidden will not change your router settings."</string>
     <string name="wifi_no_user_cert_warning">Certificate required.</string>
     <string name="wifi_not_in_range">Not in range</string>
     <string name="wifi_not_in_range_message">Network not in range</string>
+    <string name="wifi_notification">"Wi-Fi notification "</string>
+    <string name="wifi_notification_summary">Notify me when Wi-Fi is available</string>
     <string name="wifi_notify_open_networks">Notify for public networks</string>
     <string name="wifi_notify_open_networks_summary">Notify when a high‑quality public network is available</string>
     <string name="wifi_on_time">Wi‑Fi on time</string>
@@ -8017,35 +8053,36 @@ Update settings to:
     <string name="zzz_op_direct_boot_inputmethod_unaware_dialog_message">"If you restart your phone and have a screen lock set, this keyboard can't start until you unlock your phone"</string>
     <string name="zzz_op_ime_security_warning">%1$s may be able to collect all the text you type, including personal data like passwords and credit card numbers</string>
     <string name="zzz_op_ime_warning_confirm">TURN ON</string>
-    <item type="string" name="APKTOOL_DUMMY_815">false</item>
-    <item type="string" name="APKTOOL_DUMMY_88c">false</item>
-    <item type="string" name="APKTOOL_DUMMY_88d">false</item>
-    <item type="string" name="APKTOOL_DUMMY_cc3">false</item>
-    <item type="string" name="APKTOOL_DUMMY_ced">false</item>
-    <item type="string" name="APKTOOL_DUMMY_cee">false</item>
-    <item type="string" name="APKTOOL_DUMMY_cef">false</item>
-    <item type="string" name="APKTOOL_DUMMY_dad">false</item>
-    <item type="string" name="APKTOOL_DUMMY_dae">false</item>
-    <item type="string" name="APKTOOL_DUMMY_daf">false</item>
-    <item type="string" name="APKTOOL_DUMMY_db0">false</item>
-    <item type="string" name="APKTOOL_DUMMY_dde">false</item>
-    <item type="string" name="APKTOOL_DUMMY_ddf">false</item>
-    <item type="string" name="APKTOOL_DUMMY_e6f">false</item>
-    <item type="string" name="APKTOOL_DUMMY_f73">false</item>
-    <item type="string" name="APKTOOL_DUMMY_fc6">false</item>
-    <item type="string" name="APKTOOL_DUMMY_fc8">false</item>
-    <item type="string" name="APKTOOL_DUMMY_fca">false</item>
-    <item type="string" name="APKTOOL_DUMMY_1022">false</item>
-    <item type="string" name="APKTOOL_DUMMY_1023">false</item>
-    <item type="string" name="APKTOOL_DUMMY_1074">false</item>
-    <item type="string" name="APKTOOL_DUMMY_1075">false</item>
-    <item type="string" name="APKTOOL_DUMMY_11e7">false</item>
-    <item type="string" name="APKTOOL_DUMMY_1227">false</item>
-    <item type="string" name="APKTOOL_DUMMY_1228">false</item>
-    <item type="string" name="APKTOOL_DUMMY_126c">false</item>
-    <item type="string" name="APKTOOL_DUMMY_12a6">false</item>
-    <item type="string" name="APKTOOL_DUMMY_12dd">false</item>
-    <item type="string" name="APKTOOL_DUMMY_193a">false</item>
-    <item type="string" name="APKTOOL_DUMMY_198b">false</item>
-    <item type="string" name="APKTOOL_DUMMY_198c">false</item>
+    <item type="string" name="APKTOOL_DUMMY_819">false</item>
+    <item type="string" name="APKTOOL_DUMMY_890">false</item>
+    <item type="string" name="APKTOOL_DUMMY_891">false</item>
+    <item type="string" name="APKTOOL_DUMMY_cc7">false</item>
+    <item type="string" name="APKTOOL_DUMMY_cf1">false</item>
+    <item type="string" name="APKTOOL_DUMMY_cf2">false</item>
+    <item type="string" name="APKTOOL_DUMMY_cf3">false</item>
+    <item type="string" name="APKTOOL_DUMMY_db1">false</item>
+    <item type="string" name="APKTOOL_DUMMY_db2">false</item>
+    <item type="string" name="APKTOOL_DUMMY_db3">false</item>
+    <item type="string" name="APKTOOL_DUMMY_db4">false</item>
+    <item type="string" name="APKTOOL_DUMMY_de2">false</item>
+    <item type="string" name="APKTOOL_DUMMY_de3">false</item>
+    <item type="string" name="APKTOOL_DUMMY_e73">false</item>
+    <item type="string" name="APKTOOL_DUMMY_f7a">false</item>
+    <item type="string" name="APKTOOL_DUMMY_fcd">false</item>
+    <item type="string" name="APKTOOL_DUMMY_fcf">false</item>
+    <item type="string" name="APKTOOL_DUMMY_fd1">false</item>
+    <item type="string" name="APKTOOL_DUMMY_102a">false</item>
+    <item type="string" name="APKTOOL_DUMMY_102b">false</item>
+    <item type="string" name="APKTOOL_DUMMY_107c">false</item>
+    <item type="string" name="APKTOOL_DUMMY_107d">false</item>
+    <item type="string" name="APKTOOL_DUMMY_11f1">false</item>
+    <item type="string" name="APKTOOL_DUMMY_11f7">false</item>
+    <item type="string" name="APKTOOL_DUMMY_1232">false</item>
+    <item type="string" name="APKTOOL_DUMMY_1233">false</item>
+    <item type="string" name="APKTOOL_DUMMY_1277">false</item>
+    <item type="string" name="APKTOOL_DUMMY_12b3">false</item>
+    <item type="string" name="APKTOOL_DUMMY_12ea">false</item>
+    <item type="string" name="APKTOOL_DUMMY_1957">false</item>
+    <item type="string" name="APKTOOL_DUMMY_19ac">false</item>
+    <item type="string" name="APKTOOL_DUMMY_19ad">false</item>
 </resources>

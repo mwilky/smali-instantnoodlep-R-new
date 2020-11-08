@@ -7,13 +7,15 @@
 .implements Landroid/widget/AdapterView$OnItemSelectedListener;
 .implements Landroidx/appcompat/widget/SearchView$OnQueryTextListener;
 .implements Landroidx/loader/app/LoaderManager$LoaderCallbacks;
+.implements Lcom/android/settings/applications/UninstallAppsBackend$PackageForUninstallCallback;
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;,
-        Lcom/android/settings/applications/manageapplications/ManageApplications$FilterSpinnerAdapter;
+        Lcom/android/settings/applications/manageapplications/ManageApplications$FilterSpinnerAdapter;,
+        Lcom/android/settings/applications/manageapplications/ManageApplications$PackageDeleteObserver;
     }
 .end annotation
 
@@ -25,7 +27,8 @@
         "Landroidx/appcompat/widget/SearchView$OnQueryTextListener;",
         "Landroidx/loader/app/LoaderManager$LoaderCallbacks<",
         "Lcom/android/internal/os/BatteryStatsHelper;",
-        ">;"
+        ">;",
+        "Lcom/android/settings/applications/UninstallAppsBackend$PackageForUninstallCallback;"
     }
 .end annotation
 
@@ -47,6 +50,18 @@
 
 
 # instance fields
+.field private failedApps:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private mAllAppsSelectedForUninstall:Z
+
 .field private mApplications:Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;
 
 .field private mApplicationsState:Lcom/android/settingslib/applications/ApplicationsState;
@@ -70,6 +85,8 @@
 .field private mFilterSpinner:Landroid/widget/Spinner;
 
 .field private mFilterType:I
+
+.field private mInflater:Landroid/view/MenuInflater;
 
 .field mInvalidSizeStr:Ljava/lang/CharSequence;
 
@@ -95,6 +112,10 @@
 
 .field private mSearchView:Landroidx/appcompat/widget/SearchView;
 
+.field private mSelectAll:Landroid/view/MenuItem;
+
+.field private mSelectedCountTextView:Landroid/widget/TextView;
+
 .field private mShowSystem:Z
 
 .field mSortOrder:I
@@ -103,6 +124,10 @@
 
 .field private mStorageType:I
 
+.field private mUninstallAppsBackend:Lcom/android/settings/applications/UninstallAppsBackend;
+
+.field private mUninstallMode:Z
+
 .field private mUsageStatsManager:Landroid/app/usage/IUsageStatsManager;
 
 .field private mUserManager:Landroid/os/UserManager;
@@ -110,6 +135,18 @@
 .field private mVolumeUuid:Ljava/lang/String;
 
 .field private mWorkUserId:I
+
+.field private observer:Lcom/android/settings/applications/manageapplications/ManageApplications$PackageDeleteObserver;
+
+.field private successfullyUninstalledApps:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -167,55 +204,17 @@
     return-void
 .end method
 
-.method static synthetic access$1000(Lcom/android/settings/applications/manageapplications/ManageApplications;)Landroid/os/UserManager;
+.method static synthetic access$1000(Lcom/android/settings/applications/manageapplications/ManageApplications;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mUserManager:Landroid/os/UserManager;
+    invoke-direct {p0, p1}, Lcom/android/settings/applications/manageapplications/ManageApplications;->getAppNameFromPackageName(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
 
     return-object p0
 .end method
 
-.method static synthetic access$1100(Lcom/android/settings/applications/manageapplications/ManageApplications;)Lcom/android/settings/notification/NotificationBackend;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mNotificationBackend:Lcom/android/settings/notification/NotificationBackend;
-
-    return-object p0
-.end method
-
-.method static synthetic access$1200(Lcom/android/settings/applications/manageapplications/ManageApplications;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mShowSystem:Z
-
-    return p0
-.end method
-
-.method static synthetic access$1400(Lcom/android/settings/applications/manageapplications/ManageApplications;)Landroid/view/View;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mEmptyView:Landroid/view/View;
-
-    return-object p0
-.end method
-
-.method static synthetic access$1500(Lcom/android/settings/applications/manageapplications/ManageApplications;)Landroidx/appcompat/widget/SearchView;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mSearchView:Landroidx/appcompat/widget/SearchView;
-
-    return-object p0
-.end method
-
-.method static synthetic access$1600(Lcom/android/settings/applications/manageapplications/ManageApplications;)Ljava/lang/String;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mCurrentPkgName:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method static synthetic access$400(Lcom/android/settings/applications/manageapplications/ManageApplications;)Landroid/widget/Spinner;
+.method static synthetic access$1200(Lcom/android/settings/applications/manageapplications/ManageApplications;)Landroid/widget/Spinner;
     .locals 0
 
     iget-object p0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mFilterSpinner:Landroid/widget/Spinner;
@@ -223,7 +222,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/applications/manageapplications/ManageApplications;)I
+.method static synthetic access$1300(Lcom/android/settings/applications/manageapplications/ManageApplications;)I
     .locals 0
 
     iget p0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mFilterType:I
@@ -231,7 +230,7 @@
     return p0
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/applications/manageapplications/ManageApplications;)Lcom/android/settings/applications/manageapplications/AppFilterItem;
+.method static synthetic access$1400(Lcom/android/settings/applications/manageapplications/ManageApplications;)Lcom/android/settings/applications/manageapplications/AppFilterItem;
     .locals 0
 
     iget-object p0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mFilter:Lcom/android/settings/applications/manageapplications/AppFilterItem;
@@ -239,7 +238,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/applications/manageapplications/ManageApplications;)Landroid/view/View;
+.method static synthetic access$1500(Lcom/android/settings/applications/manageapplications/ManageApplications;)Landroid/view/View;
     .locals 0
 
     iget-object p0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mLoadingContainer:Landroid/view/View;
@@ -247,7 +246,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/applications/manageapplications/ManageApplications;)Landroid/view/View;
+.method static synthetic access$1600(Lcom/android/settings/applications/manageapplications/ManageApplications;)Landroid/view/View;
     .locals 0
 
     iget-object p0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListContainer:Landroid/view/View;
@@ -255,10 +254,122 @@
     return-object p0
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/applications/manageapplications/ManageApplications;)Landroid/app/usage/IUsageStatsManager;
+.method static synthetic access$1700(Lcom/android/settings/applications/manageapplications/ManageApplications;)Landroid/app/usage/IUsageStatsManager;
     .locals 0
 
     iget-object p0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mUsageStatsManager:Landroid/app/usage/IUsageStatsManager;
+
+    return-object p0
+.end method
+
+.method static synthetic access$1800(Lcom/android/settings/applications/manageapplications/ManageApplications;)Landroid/os/UserManager;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mUserManager:Landroid/os/UserManager;
+
+    return-object p0
+.end method
+
+.method static synthetic access$1900(Lcom/android/settings/applications/manageapplications/ManageApplications;)Lcom/android/settings/notification/NotificationBackend;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mNotificationBackend:Lcom/android/settings/notification/NotificationBackend;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2000(Lcom/android/settings/applications/manageapplications/ManageApplications;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mShowSystem:Z
+
+    return p0
+.end method
+
+.method static synthetic access$2200(Lcom/android/settings/applications/manageapplications/ManageApplications;)Landroid/view/View;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mEmptyView:Landroid/view/View;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2300(Lcom/android/settings/applications/manageapplications/ManageApplications;)Landroidx/appcompat/widget/SearchView;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mSearchView:Landroidx/appcompat/widget/SearchView;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2400(Lcom/android/settings/applications/manageapplications/ManageApplications;)Ljava/lang/String;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mCurrentPkgName:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2500(Lcom/android/settings/applications/manageapplications/ManageApplications;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mUninstallMode:Z
+
+    return p0
+.end method
+
+.method static synthetic access$302(Lcom/android/settings/applications/manageapplications/ManageApplications;Lcom/android/settings/applications/manageapplications/ManageApplications$PackageDeleteObserver;)Lcom/android/settings/applications/manageapplications/ManageApplications$PackageDeleteObserver;
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->observer:Lcom/android/settings/applications/manageapplications/ManageApplications$PackageDeleteObserver;
+
+    return-object p1
+.end method
+
+.method static synthetic access$500(Lcom/android/settings/applications/manageapplications/ManageApplications;)Ljava/util/List;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->failedApps:Ljava/util/List;
+
+    return-object p0
+.end method
+
+.method static synthetic access$502(Lcom/android/settings/applications/manageapplications/ManageApplications;Ljava/util/List;)Ljava/util/List;
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->failedApps:Ljava/util/List;
+
+    return-object p1
+.end method
+
+.method static synthetic access$600(Lcom/android/settings/applications/manageapplications/ManageApplications;)Ljava/util/List;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->successfullyUninstalledApps:Ljava/util/List;
+
+    return-object p0
+.end method
+
+.method static synthetic access$602(Lcom/android/settings/applications/manageapplications/ManageApplications;Ljava/util/List;)Ljava/util/List;
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->successfullyUninstalledApps:Ljava/util/List;
+
+    return-object p1
+.end method
+
+.method static synthetic access$700(Lcom/android/settings/applications/manageapplications/ManageApplications;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/settings/applications/manageapplications/ManageApplications;->uninstallPackagesSilently()V
+
+    return-void
+.end method
+
+.method static synthetic access$900(Lcom/android/settings/applications/manageapplications/ManageApplications;)Lcom/android/settings/applications/UninstallAppsBackend;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mUninstallAppsBackend:Lcom/android/settings/applications/UninstallAppsBackend;
 
     return-object p0
 .end method
@@ -302,6 +413,53 @@
 
     :cond_1
     const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method private getAppNameFromPackageName(Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object p0
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    invoke-virtual {p0, p1, v0}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+
+    move-result-object p1
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    const/4 p1, 0x0
+
+    :goto_0
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0, p1}, Landroid/content/pm/PackageManager;->getApplicationLabel(Landroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;
+
+    move-result-object p0
+
+    goto :goto_1
+
+    :cond_0
+    const-string p0, "(unknown)"
+
+    :goto_1
+    check-cast p0, Ljava/lang/String;
 
     return-object p0
 .end method
@@ -390,6 +548,240 @@
     const/4 p0, 0x0
 
     return-object p0
+.end method
+
+.method private declared-synchronized handleAllPickItemChecked()V
+    .locals 3
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-boolean v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mAllAppsSelectedForUninstall:Z
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mUninstallAppsBackend:Lcom/android/settings/applications/UninstallAppsBackend;
+
+    invoke-virtual {v0}, Lcom/android/settings/applications/UninstallAppsBackend;->removeAll()V
+
+    iget-boolean v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mAllAppsSelectedForUninstall:Z
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    iput-boolean v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mAllAppsSelectedForUninstall:Z
+
+    goto :goto_2
+
+    :cond_1
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mApplications:Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;
+
+    invoke-static {v0}, Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;->access$800(Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_2
+    :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
+
+    iget-object v2, v1, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
+
+    invoke-static {v2}, Lcom/android/settings/Utils;->isUninstallablePackage(Landroid/content/pm/ApplicationInfo;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mUninstallAppsBackend:Lcom/android/settings/applications/UninstallAppsBackend;
+
+    iget-object v1, v1, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
+
+    iget-object v1, v1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v2, v1}, Lcom/android/settings/applications/UninstallAppsBackend;->addApp(Ljava/lang/String;)V
+
+    goto :goto_1
+
+    :cond_3
+    :goto_2
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mApplications:Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
+
+    invoke-direct {p0}, Lcom/android/settings/applications/manageapplications/ManageApplications;->togglAllPickIcon()V
+
+    invoke-direct {p0}, Lcom/android/settings/applications/manageapplications/ManageApplications;->updateDeleteButtonVisibility()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
+.method private makeAllPickItemChecked()V
+    .locals 4
+
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mApplications:Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;
+
+    invoke-static {v0}, Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;->access$800(Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :cond_0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
+
+    iget-object v3, v3, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
+
+    invoke-static {v3}, Lcom/android/settings/Utils;->isUninstallablePackage(Landroid/content/pm/ApplicationInfo;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "makeAllPickItemChecked: count = "
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v3, " size = "
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mUninstallAppsBackend:Lcom/android/settings/applications/UninstallAppsBackend;
+
+    invoke-virtual {v3}, Lcom/android/settings/applications/UninstallAppsBackend;->getSize()I
+
+    move-result v3
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v3, "ManageApplications"
+
+    invoke-static {v3, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mUninstallAppsBackend:Lcom/android/settings/applications/UninstallAppsBackend;
+
+    invoke-virtual {v0}, Lcom/android/settings/applications/UninstallAppsBackend;->getSize()I
+
+    move-result v0
+
+    if-ne v2, v0, :cond_2
+
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mUninstallAppsBackend:Lcom/android/settings/applications/UninstallAppsBackend;
+
+    invoke-virtual {v0}, Lcom/android/settings/applications/UninstallAppsBackend;->getSize()I
+
+    move-result v0
+
+    if-lez v0, :cond_2
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mAllAppsSelectedForUninstall:Z
+
+    goto :goto_1
+
+    :cond_2
+    iput-boolean v1, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mAllAppsSelectedForUninstall:Z
+
+    :goto_1
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mSelectAll:Landroid/view/MenuItem;
+
+    if-eqz v0, :cond_4
+
+    iget-boolean v1, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mAllAppsSelectedForUninstall:Z
+
+    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setChecked(Z)Landroid/view/MenuItem;
+
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mSelectAll:Landroid/view/MenuItem;
+
+    iget-boolean v1, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mAllAppsSelectedForUninstall:Z
+
+    if-eqz v1, :cond_3
+
+    sget v1, Lcom/android/settings/R$drawable;->oneplus_ic_all_selected:I
+
+    goto :goto_2
+
+    :cond_3
+    sget v1, Lcom/android/settings/R$drawable;->oneplus_ic_all_unselected:I
+
+    :goto_2
+    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setIcon(I)Landroid/view/MenuItem;
+
+    goto :goto_3
+
+    :cond_4
+    const-string v0, "makeAllPickItemChecked: menu item is null"
+
+    invoke-static {v3, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_3
+    invoke-direct {p0}, Lcom/android/settings/applications/manageapplications/ManageApplications;->updateDeleteButtonVisibility()V
+
+    return-void
 .end method
 
 .method private reportIfRestrictedSawIntent(Landroid/content/Intent;)V
@@ -539,6 +931,74 @@
     iget-object p0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mApplications:Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;
 
     invoke-virtual {p0, v0}, Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;->setCompositeFilter(Lcom/android/settingslib/applications/ApplicationsState$AppFilter;)V
+
+    return-void
+.end method
+
+.method private showDeleteDialog()V
+    .locals 4
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lcom/android/settings/R$string;->uninstallapps_confirm_dialog_title:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Lcom/android/settings/R$string;->uninstallapps_confirm_dialog_body:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v2, Landroidx/appcompat/app/AlertDialog$Builder;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v2, v0}, Landroidx/appcompat/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    invoke-virtual {v2, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    sget v0, Lcom/android/settings/R$string;->uninstallapps_confirm:I
+
+    new-instance v1, Lcom/android/settings/applications/manageapplications/ManageApplications$2;
+
+    invoke-direct {v1, p0}, Lcom/android/settings/applications/manageapplications/ManageApplications$2;-><init>(Lcom/android/settings/applications/manageapplications/ManageApplications;)V
+
+    invoke-virtual {v2, v0, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    sget v0, Lcom/android/settings/R$string;->alert_dialog_cancel:I
+
+    new-instance v1, Lcom/android/settings/applications/manageapplications/ManageApplications$3;
+
+    invoke-direct {v1, p0}, Lcom/android/settings/applications/manageapplications/ManageApplications$3;-><init>(Lcom/android/settings/applications/manageapplications/ManageApplications;)V
+
+    invoke-virtual {v2, v0, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    invoke-virtual {v2}, Landroidx/appcompat/app/AlertDialog$Builder;->create()Landroidx/appcompat/app/AlertDialog;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->show()V
 
     return-void
 .end method
@@ -980,6 +1440,261 @@
         :pswitch_2
         :pswitch_1
     .end packed-switch
+.end method
+
+.method private togglAllPickIcon()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mSelectAll:Landroid/view/MenuItem;
+
+    if-eqz v0, :cond_1
+
+    iget-boolean v1, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mAllAppsSelectedForUninstall:Z
+
+    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setChecked(Z)Landroid/view/MenuItem;
+
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mSelectAll:Landroid/view/MenuItem;
+
+    iget-boolean p0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mAllAppsSelectedForUninstall:Z
+
+    if-eqz p0, :cond_0
+
+    sget p0, Lcom/android/settings/R$drawable;->oneplus_ic_all_selected:I
+
+    goto :goto_0
+
+    :cond_0
+    sget p0, Lcom/android/settings/R$drawable;->oneplus_ic_all_unselected:I
+
+    :goto_0
+    invoke-interface {v0, p0}, Landroid/view/MenuItem;->setIcon(I)Landroid/view/MenuItem;
+
+    goto :goto_1
+
+    :cond_1
+    const-string p0, "ManageApplications"
+
+    const-string v0, "togglAllPickIcon: menu item is null"
+
+    invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_1
+    return-void
+.end method
+
+.method private declared-synchronized uninstallPackagesSilently()V
+    .locals 5
+
+    monitor-enter p0
+
+    :try_start_0
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/Activity;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mUninstallAppsBackend:Lcom/android/settings/applications/UninstallAppsBackend;
+
+    invoke-virtual {v1}, Lcom/android/settings/applications/UninstallAppsBackend;->getSize()I
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const-string v1, "ManageApplications"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "uninstallPackagesSilently: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mUninstallAppsBackend:Lcom/android/settings/applications/UninstallAppsBackend;
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v3, v4}, Lcom/android/settings/applications/UninstallAppsBackend;->get(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v1, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mUninstallAppsBackend:Lcom/android/settings/applications/UninstallAppsBackend;
+
+    invoke-virtual {v1, v4}, Lcom/android/settings/applications/UninstallAppsBackend;->get(I)Ljava/lang/String;
+
+    move-result-object v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :try_start_1
+    iget-object v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mUninstallAppsBackend:Lcom/android/settings/applications/UninstallAppsBackend;
+
+    invoke-virtual {v2, v4}, Lcom/android/settings/applications/UninstallAppsBackend;->remove(I)V
+
+    iget-object v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->observer:Lcom/android/settings/applications/manageapplications/ManageApplications$PackageDeleteObserver;
+
+    invoke-virtual {v0, v1, v2, v4}, Landroid/content/pm/PackageManager;->deletePackage(Ljava/lang/String;Landroid/content/pm/IPackageDeleteObserver;I)V
+    :try_end_1
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    :try_start_2
+    const-string v1, "ManageApplications"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Could not find package, not deleting "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mUninstallAppsBackend:Lcom/android/settings/applications/UninstallAppsBackend;
+
+    invoke-virtual {v3, v4}, Lcom/android/settings/applications/UninstallAppsBackend;->get(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_0
+
+    :cond_0
+    const-string v0, "ManageApplications"
+
+    const-string v1, "No apps to uninstall"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :goto_0
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
+.method private updateDeleteButtonVisibility()V
+    .locals 3
+
+    iget-boolean v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mAllAppsSelectedForUninstall:Z
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mUninstallAppsBackend:Lcom/android/settings/applications/UninstallAppsBackend;
+
+    invoke-virtual {v0}, Lcom/android/settings/applications/UninstallAppsBackend;->getSize()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mOptionsMenu:Landroid/view/Menu;
+
+    sget v1, Lcom/android/settings/R$id;->menu_delete:I
+
+    invoke-interface {v0, v1}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setEnabled(Z)Landroid/view/MenuItem;
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mOptionsMenu:Landroid/view/Menu;
+
+    sget v1, Lcom/android/settings/R$id;->menu_delete:I
+
+    invoke-interface {v0, v1}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setEnabled(Z)Landroid/view/MenuItem;
+
+    :goto_1
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mSelectedCountTextView:Landroid/widget/TextView;
+
+    if-eqz v0, :cond_2
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mUninstallAppsBackend:Lcom/android/settings/applications/UninstallAppsBackend;
+
+    invoke-virtual {v2}, Lcom/android/settings/applications/UninstallAppsBackend;->getSize()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, " "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    sget v2, Lcom/android/settings/R$string;->uninstallapps_selected:I
+
+    invoke-virtual {p0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    :cond_2
+    return-void
 .end method
 
 
@@ -1484,6 +2199,65 @@
     .end packed-switch
 .end method
 
+.method hideUninstallMultipleAppsListMenu()V
+    .locals 4
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mUninstallMode:Z
+
+    iput v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    sget v3, Lcom/android/settings/R$string;->application_info_label:I
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Landroid/app/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {v1, v0}, Landroid/app/ActionBar;->setDisplayShowCustomEnabled(Z)V
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mOptionsMenu:Landroid/view/Menu;
+
+    invoke-interface {v0}, Landroid/view/Menu;->clear()V
+
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mInflater:Landroid/view/MenuInflater;
+
+    sget v1, Lcom/android/settings/R$menu;->manage_apps:I
+
+    iget-object v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mOptionsMenu:Landroid/view/Menu;
+
+    invoke-virtual {v0, v1, v2}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
+
+    invoke-virtual {p0}, Lcom/android/settings/applications/manageapplications/ManageApplications;->updateOptionsMenu()V
+
+    iget-object p0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mApplications:Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;
+
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
+
+    return-void
+.end method
+
 .method public onActivityResult(IILandroid/content/Intent;)V
     .locals 0
 
@@ -1643,7 +2417,7 @@
     :cond_3
     iget-object p1, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mApplications:Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;
 
-    invoke-static {p1}, Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;->access$300(Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;)Lcom/android/settings/applications/manageapplications/FileViewHolderController;
+    invoke-static {p1}, Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;->access$1100(Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;)Lcom/android/settings/applications/manageapplications/FileViewHolderController;
 
     move-result-object p1
 
@@ -1686,532 +2460,549 @@
 
     iput-object v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mApplicationsState:Lcom/android/settingslib/applications/ApplicationsState;
 
+    const/4 v2, 0x0
+
+    iput-boolean v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mAllAppsSelectedForUninstall:Z
+
+    iput-boolean v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mUninstallMode:Z
+
+    new-instance v3, Lcom/android/settings/applications/UninstallAppsBackend;
+
+    invoke-direct {v3}, Lcom/android/settings/applications/UninstallAppsBackend;-><init>()V
+
+    iput-object v3, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mUninstallAppsBackend:Lcom/android/settings/applications/UninstallAppsBackend;
+
     invoke-virtual {v1}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v2
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v3
 
-    sget v4, Lcom/android/settings/R$string;->application_info_label:I
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
 
-    const-string v5, ":settings:show_fragment_title_resid"
+    move-result-object v4
 
-    invoke-virtual {v2, v5, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    sget v5, Lcom/android/settings/R$string;->application_info_label:I
 
-    move-result v4
+    const-string v6, ":settings:show_fragment_title_resid"
 
-    if-eqz v3, :cond_0
+    invoke-virtual {v3, v6, v5}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
-    const-string v5, "classname"
+    move-result v5
 
-    invoke-virtual {v3, v5}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    if-eqz v4, :cond_0
 
-    move-result-object v5
+    const-string v6, "classname"
+
+    invoke-virtual {v4, v6}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
 
     goto :goto_0
 
     :cond_0
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
     :goto_0
-    if-nez v5, :cond_1
+    if-nez v6, :cond_1
 
-    invoke-virtual {v2}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
-
-    move-result-object v5
-
-    :cond_1
-    const-class v6, Lcom/android/settings/Settings$StorageUseActivity;
-
-    invoke-virtual {v6}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {v3}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v6
 
-    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v6}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
+
+    move-result-object v6
+
+    :cond_1
+    const-class v7, Lcom/android/settings/Settings$StorageUseActivity;
+
+    invoke-virtual {v7}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    const-string v8, "storageType"
+
+    if-eqz v7, :cond_3
+
+    if-eqz v4, :cond_2
+
+    const-string/jumbo v3, "volumeUuid"
+
+    invoke-virtual {v4, v3}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v6
 
-    const-string v7, "storageType"
+    if-eqz v6, :cond_2
 
-    const/4 v8, 0x0
+    invoke-virtual {v4, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    if-eqz v6, :cond_3
+    move-result-object v3
 
-    if-eqz v3, :cond_2
+    iput-object v3, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mVolumeUuid:Ljava/lang/String;
 
-    const-string/jumbo v2, "volumeUuid"
+    invoke-virtual {v4, v8, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
-    invoke-virtual {v3, v2}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
+    move-result v3
 
-    move-result v5
+    iput v3, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mStorageType:I
 
-    if-eqz v5, :cond_2
+    const/4 v3, 0x3
 
-    invoke-virtual {v3, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    iput-object v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mVolumeUuid:Ljava/lang/String;
-
-    invoke-virtual {v3, v7, v8}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
-
-    move-result v2
-
-    iput v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mStorageType:I
-
-    const/4 v2, 0x3
-
-    iput v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
+    iput v3, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
 
     goto :goto_1
 
     :cond_2
-    iput v8, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
+    iput v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
 
     :goto_1
-    sget v2, Lcom/android/settings/R$id;->sort_order_size:I
+    sget v3, Lcom/android/settings/R$id;->sort_order_size:I
 
-    iput v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mSortOrder:I
+    iput v3, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mSortOrder:I
 
     goto/16 :goto_2
 
     :cond_3
-    const-class v6, Lcom/android/settings/Settings$UsageAccessSettingsActivity;
+    const-class v7, Lcom/android/settings/Settings$UsageAccessSettingsActivity;
 
-    invoke-virtual {v6}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {v7}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v7
 
-    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v6
+    move-result v7
 
     const/4 v9, 0x4
 
-    if-eqz v6, :cond_4
+    if-eqz v7, :cond_4
 
     iput v9, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
 
-    sget v4, Lcom/android/settings/R$string;->usage_access:I
+    sget v5, Lcom/android/settings/R$string;->usage_access:I
 
     goto/16 :goto_2
 
     :cond_4
-    const-class v6, Lcom/android/settings/Settings$HighPowerApplicationsActivity;
+    const-class v7, Lcom/android/settings/Settings$HighPowerApplicationsActivity;
 
-    invoke-virtual {v6}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {v7}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v7
 
-    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v6
+    move-result v7
 
     const/16 v10, 0x10
 
-    if-eqz v6, :cond_6
+    if-eqz v7, :cond_6
 
     invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isUsvMode()Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_5
+    if-eqz v3, :cond_5
 
     iput-boolean v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mShowSystem:Z
 
     :cond_5
     invoke-static {p0}, Landroidx/loader/app/LoaderManager;->getInstance(Landroidx/lifecycle/LifecycleOwner;)Landroidx/loader/app/LoaderManager;
 
-    move-result-object v2
+    move-result-object v3
 
-    sget-object v4, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
+    sget-object v5, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
 
-    invoke-virtual {v2, v9, v4, p0}, Landroidx/loader/app/LoaderManager;->restartLoader(ILandroid/os/Bundle;Landroidx/loader/app/LoaderManager$LoaderCallbacks;)Landroidx/loader/content/Loader;
+    invoke-virtual {v3, v9, v5, p0}, Landroidx/loader/app/LoaderManager;->restartLoader(ILandroid/os/Bundle;Landroidx/loader/app/LoaderManager$LoaderCallbacks;)Landroidx/loader/content/Loader;
 
     iput v10, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
 
-    sget v4, Lcom/android/settings/R$string;->high_power_apps:I
+    sget v5, Lcom/android/settings/R$string;->high_power_apps:I
 
     goto/16 :goto_2
 
     :cond_6
-    const-class v6, Lcom/android/settings/Settings$OverlaySettingsActivity;
+    const-class v7, Lcom/android/settings/Settings$OverlaySettingsActivity;
 
-    invoke-virtual {v6}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {v7}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v7
 
-    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v6
+    move-result v7
 
-    if-eqz v6, :cond_7
+    if-eqz v7, :cond_7
 
-    const/4 v4, 0x6
+    const/4 v5, 0x6
 
-    iput v4, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
+    iput v5, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
 
-    sget v4, Lcom/android/settings/R$string;->system_alert_window_settings:I
+    sget v5, Lcom/android/settings/R$string;->system_alert_window_settings:I
 
-    invoke-direct {p0, v2}, Lcom/android/settings/applications/manageapplications/ManageApplications;->reportIfRestrictedSawIntent(Landroid/content/Intent;)V
+    invoke-direct {p0, v3}, Lcom/android/settings/applications/manageapplications/ManageApplications;->reportIfRestrictedSawIntent(Landroid/content/Intent;)V
 
     goto/16 :goto_2
 
     :cond_7
-    const-class v2, Lcom/android/settings/Settings$WriteSettingsActivity;
+    const-class v3, Lcom/android/settings/Settings$WriteSettingsActivity;
 
-    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v5, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v6, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_8
+    if-eqz v3, :cond_8
 
-    const/4 v2, 0x7
+    const/4 v3, 0x7
 
-    iput v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
+    iput v3, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
 
-    sget v4, Lcom/android/settings/R$string;->write_settings:I
+    sget v5, Lcom/android/settings/R$string;->write_settings:I
 
     goto/16 :goto_2
 
     :cond_8
-    const-class v2, Lcom/android/settings/Settings$ManageExternalSourcesActivity;
+    const-class v3, Lcom/android/settings/Settings$ManageExternalSourcesActivity;
 
-    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v5, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v6, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_9
+    if-eqz v3, :cond_9
 
-    const/16 v2, 0x8
+    const/16 v3, 0x8
 
-    iput v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
+    iput v3, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
 
-    sget v4, Lcom/android/settings/R$string;->install_other_apps:I
+    sget v5, Lcom/android/settings/R$string;->install_other_apps:I
 
     goto/16 :goto_2
 
     :cond_9
-    const-class v2, Lcom/android/settings/Settings$GamesStorageActivity;
+    const-class v3, Lcom/android/settings/Settings$GamesStorageActivity;
 
-    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v5, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v6, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_a
+    if-eqz v3, :cond_a
 
-    const/16 v2, 0x9
+    const/16 v3, 0x9
 
-    iput v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
+    iput v3, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
 
-    sget v2, Lcom/android/settings/R$id;->sort_order_size:I
+    sget v3, Lcom/android/settings/R$id;->sort_order_size:I
 
-    iput v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mSortOrder:I
+    iput v3, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mSortOrder:I
 
     goto/16 :goto_2
 
     :cond_a
-    const-class v2, Lcom/android/settings/Settings$MoviesStorageActivity;
+    const-class v3, Lcom/android/settings/Settings$MoviesStorageActivity;
 
-    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v5, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v6, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_b
+    if-eqz v3, :cond_b
 
-    const/16 v2, 0xa
+    const/16 v3, 0xa
 
-    iput v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
+    iput v3, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
 
-    sget v2, Lcom/android/settings/R$id;->sort_order_size:I
+    sget v3, Lcom/android/settings/R$id;->sort_order_size:I
 
-    iput v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mSortOrder:I
+    iput v3, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mSortOrder:I
 
     goto/16 :goto_2
 
     :cond_b
-    const-class v2, Lcom/android/settings/Settings$PhotosStorageActivity;
+    const-class v3, Lcom/android/settings/Settings$PhotosStorageActivity;
 
-    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v5, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v6, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_c
+    if-eqz v3, :cond_c
 
-    const/16 v2, 0xb
+    const/16 v3, 0xb
 
-    iput v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
+    iput v3, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
 
-    sget v2, Lcom/android/settings/R$id;->sort_order_size:I
+    sget v3, Lcom/android/settings/R$id;->sort_order_size:I
 
-    iput v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mSortOrder:I
+    iput v3, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mSortOrder:I
 
-    invoke-virtual {v3, v7, v8}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
+    invoke-virtual {v4, v8, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
-    move-result v2
+    move-result v3
 
-    iput v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mStorageType:I
+    iput v3, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mStorageType:I
 
     goto/16 :goto_2
 
     :cond_c
-    const-class v2, Lcom/android/settings/Settings$ChangeWifiStateActivity;
+    const-class v3, Lcom/android/settings/Settings$ChangeWifiStateActivity;
 
-    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v5, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v6, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_d
+    if-eqz v3, :cond_d
 
-    const/16 v2, 0xd
+    const/16 v3, 0xd
 
-    iput v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
+    iput v3, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
 
-    sget v4, Lcom/android/settings/R$string;->change_wifi_state_title:I
+    sget v5, Lcom/android/settings/R$string;->change_wifi_state_title:I
 
     goto/16 :goto_2
 
     :cond_d
-    const-class v2, Lcom/android/settings/Settings$ManageExternalStorageActivity;
+    const-class v3, Lcom/android/settings/Settings$ManageExternalStorageActivity;
 
-    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v5, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v6, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_e
+    if-eqz v3, :cond_e
 
-    const/16 v2, 0xe
+    const/16 v3, 0xe
 
-    iput v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
+    iput v3, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
 
-    sget v4, Lcom/android/settings/R$string;->manage_external_storage_title:I
+    sget v5, Lcom/android/settings/R$string;->manage_external_storage_title:I
 
     goto/16 :goto_2
 
     :cond_e
-    const-class v2, Lcom/android/settings/Settings$NotificationAppListActivity;
+    const-class v3, Lcom/android/settings/Settings$NotificationAppListActivity;
 
-    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v5, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v6, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_f
+    if-eqz v3, :cond_f
 
     iput v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
 
-    const-string/jumbo v2, "usagestats"
+    const-string/jumbo v3, "usagestats"
 
-    invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+    invoke-static {v3}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-static {v2}, Landroid/app/usage/IUsageStatsManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/app/usage/IUsageStatsManager;
+    invoke-static {v3}, Landroid/app/usage/IUsageStatsManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/app/usage/IUsageStatsManager;
 
-    move-result-object v2
+    move-result-object v3
 
-    iput-object v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mUsageStatsManager:Landroid/app/usage/IUsageStatsManager;
+    iput-object v3, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mUsageStatsManager:Landroid/app/usage/IUsageStatsManager;
 
-    new-instance v2, Lcom/android/settings/notification/NotificationBackend;
+    new-instance v3, Lcom/android/settings/notification/NotificationBackend;
 
-    invoke-direct {v2}, Lcom/android/settings/notification/NotificationBackend;-><init>()V
+    invoke-direct {v3}, Lcom/android/settings/notification/NotificationBackend;-><init>()V
 
-    iput-object v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mNotificationBackend:Lcom/android/settings/notification/NotificationBackend;
+    iput-object v3, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mNotificationBackend:Lcom/android/settings/notification/NotificationBackend;
 
-    sget v2, Lcom/android/settings/R$id;->sort_order_recent_notification:I
+    sget v3, Lcom/android/settings/R$id;->sort_order_recent_notification:I
 
-    iput v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mSortOrder:I
+    iput v3, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mSortOrder:I
 
-    sget v4, Lcom/android/settings/R$string;->app_notifications_title:I
+    sget v5, Lcom/android/settings/R$string;->app_notifications_title:I
 
     goto :goto_2
 
     :cond_f
-    const-class v2, Lcom/android/settings/Settings$DisplaySizeAdaptionAppListActivity;
+    const-class v3, Lcom/android/settings/Settings$DisplaySizeAdaptionAppListActivity;
 
-    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v5, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v6, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_10
+    if-eqz v3, :cond_10
 
-    const/16 v2, 0xf
+    const/16 v3, 0xf
 
-    iput v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
+    iput v3, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
 
-    sget v4, Lcom/android/settings/R$string;->oneplus_app_display_fullscreen_title:I
+    sget v5, Lcom/android/settings/R$string;->oneplus_app_display_fullscreen_title:I
 
     goto :goto_2
 
     :cond_10
-    const-class v2, Lcom/android/settings/Settings$ReadingModeAppListActivity;
+    const-class v3, Lcom/android/settings/Settings$ReadingModeAppListActivity;
 
-    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v5, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v6, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_11
+    if-eqz v3, :cond_11
 
-    const/16 v2, 0x11
+    const/16 v3, 0x11
 
-    iput v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
+    iput v3, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
 
-    sget v4, Lcom/android/settings/R$string;->oneplus_read_mode_app_list:I
+    sget v5, Lcom/android/settings/R$string;->oneplus_read_mode_app_list:I
 
     goto :goto_2
 
     :cond_11
-    const-class v2, Lcom/android/settings/Settings$BgOptimizeAppListActivity;
+    const-class v3, Lcom/android/settings/Settings$BgOptimizeAppListActivity;
 
-    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v5, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v6, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_12
+    if-eqz v3, :cond_13
 
+    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isUsvMode()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_12
+
+    iput-boolean v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mShowSystem:Z
+
+    :cond_12
     invoke-static {p0}, Landroidx/loader/app/LoaderManager;->getInstance(Landroidx/lifecycle/LifecycleOwner;)Landroidx/loader/app/LoaderManager;
 
-    move-result-object v2
+    move-result-object v3
 
-    sget-object v4, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
+    sget-object v5, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
 
-    invoke-virtual {v2, v9, v4, p0}, Landroidx/loader/app/LoaderManager;->restartLoader(ILandroid/os/Bundle;Landroidx/loader/app/LoaderManager$LoaderCallbacks;)Landroidx/loader/content/Loader;
+    invoke-virtual {v3, v9, v5, p0}, Landroidx/loader/app/LoaderManager;->restartLoader(ILandroid/os/Bundle;Landroidx/loader/app/LoaderManager$LoaderCallbacks;)Landroidx/loader/content/Loader;
 
     iput v10, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
 
-    sget v4, Lcom/android/settings/R$string;->high_power_apps:I
+    sget v5, Lcom/android/settings/R$string;->high_power_apps:I
 
     iput-boolean v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mShowSystem:Z
 
     goto :goto_2
 
-    :cond_12
-    const/4 v2, -0x1
-
-    if-ne v4, v2, :cond_13
-
-    sget v2, Lcom/android/settings/R$string;->application_info_label:I
-
-    move v4, v2
-
     :cond_13
-    iput v8, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
+    const/4 v3, -0x1
+
+    if-ne v5, v3, :cond_14
+
+    sget v5, Lcom/android/settings/R$string;->application_info_label:I
+
+    :cond_14
+    iput v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
 
     :goto_2
     invoke-static {}, Lcom/android/settings/applications/manageapplications/AppFilterRegistry;->getInstance()Lcom/android/settings/applications/manageapplications/AppFilterRegistry;
 
-    move-result-object v2
+    move-result-object v3
 
-    iget v5, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
+    iget v6, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
 
-    invoke-virtual {v2, v5}, Lcom/android/settings/applications/manageapplications/AppFilterRegistry;->getDefaultFilterType(I)I
+    invoke-virtual {v3, v6}, Lcom/android/settings/applications/manageapplications/AppFilterRegistry;->getDefaultFilterType(I)I
 
-    move-result v5
+    move-result v6
 
-    invoke-virtual {v2, v5}, Lcom/android/settings/applications/manageapplications/AppFilterRegistry;->get(I)Lcom/android/settings/applications/manageapplications/AppFilterItem;
+    invoke-virtual {v3, v6}, Lcom/android/settings/applications/manageapplications/AppFilterRegistry;->get(I)Lcom/android/settings/applications/manageapplications/AppFilterItem;
 
-    move-result-object v2
+    move-result-object v3
 
-    iput-object v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mFilter:Lcom/android/settings/applications/manageapplications/AppFilterItem;
+    iput-object v3, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mFilter:Lcom/android/settings/applications/manageapplications/AppFilterItem;
 
-    const-string v2, "profile"
+    const-string v3, "profile"
 
-    if-eqz v3, :cond_14
+    if-eqz v4, :cond_15
 
-    invoke-virtual {v3, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+    invoke-virtual {v4, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
-    move-result v5
+    move-result v6
 
-    if-ne v5, v0, :cond_14
+    if-ne v6, v0, :cond_15
 
-    move v5, v0
+    move v6, v0
 
     goto :goto_3
 
-    :cond_14
-    move v5, v8
+    :cond_15
+    move v6, v2
 
     :goto_3
-    iput-boolean v5, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mIsPersonalOnly:Z
+    iput-boolean v6, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mIsPersonalOnly:Z
 
-    const/4 v5, 0x2
+    const/4 v6, 0x2
 
-    if-eqz v3, :cond_15
+    if-eqz v4, :cond_16
 
-    invoke-virtual {v3, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+    invoke-virtual {v4, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
-    move-result v2
+    move-result v3
 
-    if-ne v2, v5, :cond_15
+    if-ne v3, v6, :cond_16
 
     goto :goto_4
 
-    :cond_15
-    move v0, v8
+    :cond_16
+    move v0, v2
 
     :goto_4
     iput-boolean v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mIsWorkOnly:Z
 
-    if-eqz v3, :cond_16
+    if-eqz v4, :cond_17
 
     const-string/jumbo v0, "workId"
 
-    invoke-virtual {v3, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+    invoke-virtual {v4, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v0
 
     goto :goto_5
 
-    :cond_16
+    :cond_17
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -2219,48 +3010,48 @@
     :goto_5
     iput v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mWorkUserId:I
 
-    iget-boolean v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mIsWorkOnly:Z
+    iget-boolean v3, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mIsWorkOnly:Z
 
-    if-eqz v2, :cond_17
+    if-eqz v3, :cond_18
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
-    move-result v2
+    move-result v3
 
-    if-ne v0, v2, :cond_17
+    if-ne v0, v3, :cond_18
 
     iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mUserManager:Landroid/os/UserManager;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
-    move-result v2
+    move-result v3
 
-    invoke-static {v0, v2}, Lcom/android/settings/Utils;->getManagedProfileId(Landroid/os/UserManager;I)I
+    invoke-static {v0, v3}, Lcom/android/settings/Utils;->getManagedProfileId(Landroid/os/UserManager;I)I
 
     move-result v0
 
     iput v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mWorkUserId:I
 
-    :cond_17
+    :cond_18
     invoke-virtual {v1}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    const-string v2, "expand_search_view"
+    const-string v3, "expand_search_view"
 
-    invoke-virtual {v0, v2, v8}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+    invoke-virtual {v0, v3, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mExpandSearch:Z
 
-    if-eqz p1, :cond_18
+    if-eqz p1, :cond_19
 
     iget v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mSortOrder:I
 
-    const-string v3, "sortOrder"
+    const-string v2, "sortOrder"
 
-    invoke-virtual {p1, v3, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
+    invoke-virtual {p1, v2, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
@@ -2268,9 +3059,9 @@
 
     iget-boolean v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mShowSystem:Z
 
-    const-string v3, "showSystem"
+    const-string v2, "showSystem"
 
-    invoke-virtual {p1, v3, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-virtual {p1, v2, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
@@ -2278,19 +3069,19 @@
 
     const-string v0, "filterType"
 
-    invoke-virtual {p1, v0, v5}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
+    invoke-virtual {p1, v0, v6}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
     iput v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mFilterType:I
 
-    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
+    invoke-virtual {p1, v3}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result p1
 
     iput-boolean p1, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mExpandSearch:Z
 
-    :cond_18
+    :cond_19
     sget p1, Lcom/android/settings/R$string;->invalid_size_value:I
 
     invoke-virtual {v1, p1}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
@@ -2305,11 +3096,11 @@
 
     iput-object p1, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mResetAppsHelper:Lcom/android/settings/applications/manageapplications/ResetAppsHelper;
 
-    if-lez v4, :cond_19
+    if-lez v5, :cond_1a
 
-    invoke-virtual {v1, v4}, Landroid/app/Activity;->setTitle(I)V
+    invoke-virtual {v1, v5}, Landroid/app/Activity;->setTitle(I)V
 
-    :cond_19
+    :cond_1a
     return-void
 .end method
 
@@ -2373,6 +3164,8 @@
     invoke-static {v0, p1, v1, v2}, Lcom/android/settingslib/HelpUtils;->prepareHelpMenuItem(Landroid/app/Activity;Landroid/view/Menu;ILjava/lang/String;)Z
 
     iput-object p1, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mOptionsMenu:Landroid/view/Menu;
+
+    iput-object p2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mInflater:Landroid/view/MenuInflater;
 
     sget v0, Lcom/android/settings/R$menu;->manage_apps:I
 
@@ -2957,7 +3750,7 @@
 
     const/4 v2, 0x1
 
-    if-eq p1, v1, :cond_7
+    if-eq p1, v1, :cond_b
 
     sget v1, Lcom/android/settings/R$id;->sort_order_size:I
 
@@ -2966,20 +3759,20 @@
     goto/16 :goto_3
 
     :cond_0
-    sget v0, Lcom/android/settings/R$id;->show_system:I
+    sget v1, Lcom/android/settings/R$id;->show_system:I
 
-    if-eq p1, v0, :cond_6
+    if-eq p1, v1, :cond_a
 
-    sget v0, Lcom/android/settings/R$id;->hide_system:I
+    sget v1, Lcom/android/settings/R$id;->hide_system:I
 
-    if-ne p1, v0, :cond_1
+    if-ne p1, v1, :cond_1
 
     goto/16 :goto_2
 
     :cond_1
-    sget v0, Lcom/android/settings/R$id;->reset_app_preferences:I
+    sget v1, Lcom/android/settings/R$id;->reset_app_preferences:I
 
-    if-ne p1, v0, :cond_2
+    if-ne p1, v1, :cond_2
 
     iget-object p0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mResetAppsHelper:Lcom/android/settings/applications/manageapplications/ResetAppsHelper;
 
@@ -2988,9 +3781,9 @@
     return v2
 
     :cond_2
-    sget v0, Lcom/android/settings/R$id;->advanced:I
+    sget v1, Lcom/android/settings/R$id;->advanced:I
 
-    if-ne p1, v0, :cond_4
+    if-ne p1, v1, :cond_4
 
     iget p1, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
 
@@ -3043,9 +3836,9 @@
     return v2
 
     :cond_4
-    sget v0, Lcom/android/settings/R$id;->bg_optimize_preferences:I
+    sget v1, Lcom/android/settings/R$id;->bg_optimize_preferences:I
 
-    if-ne p1, v0, :cond_5
+    if-ne p1, v1, :cond_5
 
     const/4 p1, 0x0
 
@@ -3105,11 +3898,73 @@
     return v2
 
     :cond_5
+    sget v1, Lcom/android/settings/R$id;->sort_apps_by_date:I
+
+    if-ne p1, v1, :cond_6
+
+    const/16 p1, 0x12
+
+    iput p1, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
+
+    iget-object p0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mApplications:Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;
+
+    invoke-virtual {p0, v0}, Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;->rebuild(I)V
+
+    return v2
+
+    :cond_6
+    sget v0, Lcom/android/settings/R$id;->uninstall_multiple_apps:I
+
+    if-ne p1, v0, :cond_7
+
+    iget-object p1, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mUninstallAppsBackend:Lcom/android/settings/applications/UninstallAppsBackend;
+
+    invoke-virtual {p1, p0}, Lcom/android/settings/applications/UninstallAppsBackend;->setPackageForUninstallCallback(Lcom/android/settings/applications/UninstallAppsBackend$PackageForUninstallCallback;)V
+
+    iput-boolean v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mUninstallMode:Z
+
+    invoke-virtual {p0}, Lcom/android/settings/applications/manageapplications/ManageApplications;->showUninstallMultipleAppsListMenu()V
+
+    invoke-direct {p0}, Lcom/android/settings/applications/manageapplications/ManageApplications;->updateDeleteButtonVisibility()V
+
+    const/16 p1, 0x13
+
+    iput p1, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
+
+    iget-object p1, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mApplications:Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;
+
+    invoke-virtual {p1}, Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;->rebuild()V
+
+    iget-object p0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mApplications:Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;
+
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
+
+    return v2
+
+    :cond_7
+    sget v0, Lcom/android/settings/R$id;->menu_all_pick:I
+
+    if-ne p1, v0, :cond_8
+
+    invoke-direct {p0}, Lcom/android/settings/applications/manageapplications/ManageApplications;->handleAllPickItemChecked()V
+
+    goto :goto_4
+
+    :cond_8
+    sget v0, Lcom/android/settings/R$id;->menu_delete:I
+
+    if-ne p1, v0, :cond_9
+
+    invoke-direct {p0}, Lcom/android/settings/applications/manageapplications/ManageApplications;->showDeleteDialog()V
+
+    goto :goto_4
+
+    :cond_9
     const/4 p0, 0x0
 
     return p0
 
-    :cond_6
+    :cond_a
     :goto_2
     iget-boolean p1, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mShowSystem:Z
 
@@ -3123,19 +3978,76 @@
 
     goto :goto_4
 
-    :cond_7
+    :cond_b
     :goto_3
     iget-object p1, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mApplications:Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;
 
-    if-eqz p1, :cond_8
+    if-eqz p1, :cond_c
 
     invoke-virtual {p1, v0}, Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;->rebuild(I)V
 
-    :cond_8
+    :cond_c
     :goto_4
+    iget-boolean p1, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mUninstallMode:Z
+
+    if-nez p1, :cond_d
+
     invoke-virtual {p0}, Lcom/android/settings/applications/manageapplications/ManageApplications;->updateOptionsMenu()V
 
+    :cond_d
     return v2
+.end method
+
+.method public onPackageAddedForUninstall(Ljava/lang/String;)V
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "onPackageAddedForUninstall: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "ManageApplications"
+
+    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-direct {p0}, Lcom/android/settings/applications/manageapplications/ManageApplications;->makeAllPickItemChecked()V
+
+    return-void
+.end method
+
+.method public onPackageRemovedForUninstall(Ljava/lang/String;)V
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "onPackageRemovedForUninstall: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "ManageApplications"
+
+    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-direct {p0}, Lcom/android/settings/applications/manageapplications/ManageApplications;->makeAllPickItemChecked()V
+
+    return-void
 .end method
 
 .method public onPrepareOptionsMenu(Landroid/view/Menu;)V
@@ -3349,8 +4261,99 @@
     return-void
 .end method
 
+.method showUninstallMultipleAppsListMenu()V
+    .locals 4
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
+
+    new-instance v1, Landroid/app/ActionBar$LayoutParams;
+
+    const/4 v2, -0x1
+
+    const/4 v3, -0x2
+
+    invoke-direct {v1, v2, v3}, Landroid/app/ActionBar$LayoutParams;-><init>(II)V
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v1
+
+    sget v2, Lcom/android/settings/R$layout;->oneplus_selection_bar:I
+
+    const/4 v3, 0x0
+
+    invoke-static {v1, v2, v3}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setCustomView(Landroid/view/View;)V
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v2}, Landroid/app/ActionBar;->setDisplayShowCustomEnabled(Z)V
+
+    sget v0, Lcom/android/settings/R$id;->selection_close:I
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    new-instance v2, Lcom/android/settings/applications/manageapplications/ManageApplications$4;
+
+    invoke-direct {v2, p0}, Lcom/android/settings/applications/manageapplications/ManageApplications$4;-><init>(Lcom/android/settings/applications/manageapplications/ManageApplications;)V
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    sget v0, Lcom/android/settings/R$id;->selection_count_text:I
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mSelectedCountTextView:Landroid/widget/TextView;
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mOptionsMenu:Landroid/view/Menu;
+
+    invoke-interface {v0}, Landroid/view/Menu;->clear()V
+
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mInflater:Landroid/view/MenuInflater;
+
+    sget v1, Lcom/android/settings/R$menu;->oneplus_uninstallmultipleapps_options:I
+
+    iget-object v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mOptionsMenu:Landroid/view/Menu;
+
+    invoke-virtual {v0, v1, v2}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
+
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mOptionsMenu:Landroid/view/Menu;
+
+    sget v1, Lcom/android/settings/R$id;->menu_all_pick:I
+
+    invoke-interface {v0, v1}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mSelectAll:Landroid/view/MenuItem;
+
+    return-void
+.end method
+
 .method updateOptionsMenu()V
-    .locals 6
+    .locals 7
 
     iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mOptionsMenu:Landroid/view/Menu;
 
@@ -3359,286 +4362,437 @@
     return-void
 
     :cond_0
+    iget-boolean v1, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mUninstallMode:Z
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_16
+
+    sget v1, Lcom/android/settings/R$id;->sort_apps_by_date:I
+
+    invoke-interface {v0, v1}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isUsvMode()Z
+
+    move-result v1
+
+    const/16 v3, 0x12
+
+    const/4 v4, 0x1
+
+    if-eqz v1, :cond_2
+
+    iget v1, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mSortOrder:I
+
+    sget v5, Lcom/android/settings/R$id;->sort_apps_by_date:I
+
+    if-eq v1, v5, :cond_2
+
+    iget v1, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
+
+    if-eqz v1, :cond_1
+
+    if-ne v1, v3, :cond_2
+
+    :cond_1
+    move v1, v4
+
+    goto :goto_0
+
+    :cond_2
+    move v1, v2
+
+    :goto_0
+    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mOptionsMenu:Landroid/view/Menu;
+
     sget v1, Lcom/android/settings/R$id;->advanced:I
 
     invoke-interface {v0, v1}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    invoke-interface {v0, v2}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
-    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isUsvMode()Z
+
+    move-result v0
+
+    const/4 v1, 0x3
+
+    if-eqz v0, :cond_7
 
     iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mOptionsMenu:Landroid/view/Menu;
-
-    sget v2, Lcom/android/settings/R$id;->sort_order_alpha:I
-
-    invoke-interface {v0, v2}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
-
-    move-result-object v0
-
-    iget v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
-
-    const/4 v3, 0x3
-
-    const/4 v4, 0x1
-
-    if-ne v2, v3, :cond_1
-
-    iget v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mSortOrder:I
 
     sget v5, Lcom/android/settings/R$id;->sort_order_alpha:I
 
-    if-eq v2, v5, :cond_1
-
-    move v2, v4
-
-    goto :goto_0
-
-    :cond_1
-    move v2, v1
-
-    :goto_0
-    invoke-interface {v0, v2}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
-
-    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mOptionsMenu:Landroid/view/Menu;
-
-    sget v2, Lcom/android/settings/R$id;->sort_order_size:I
-
-    invoke-interface {v0, v2}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+    invoke-interface {v0, v5}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
     move-result-object v0
 
-    iget v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
+    iget v5, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
 
-    if-ne v2, v3, :cond_2
+    if-eq v5, v1, :cond_3
 
-    iget v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mSortOrder:I
+    if-eq v5, v3, :cond_3
 
-    sget v3, Lcom/android/settings/R$id;->sort_order_size:I
+    if-nez v5, :cond_4
 
-    if-eq v2, v3, :cond_2
+    :cond_3
+    iget v5, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mSortOrder:I
 
-    move v2, v4
+    sget v6, Lcom/android/settings/R$id;->sort_order_alpha:I
+
+    if-eq v5, v6, :cond_4
+
+    move v5, v4
 
     goto :goto_1
 
-    :cond_2
-    move v2, v1
+    :cond_4
+    move v5, v2
 
     :goto_1
-    invoke-interface {v0, v2}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+    invoke-interface {v0, v5}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
     iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mOptionsMenu:Landroid/view/Menu;
 
-    sget v2, Lcom/android/settings/R$id;->show_system:I
+    sget v5, Lcom/android/settings/R$id;->sort_order_size:I
 
-    invoke-interface {v0, v2}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+    invoke-interface {v0, v5}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
     move-result-object v0
 
-    iget-boolean v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mShowSystem:Z
+    iget v5, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
 
-    const/4 v3, 0x5
+    if-eq v5, v1, :cond_5
 
-    if-nez v2, :cond_3
+    if-eq v5, v3, :cond_5
 
-    iget v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
+    if-nez v5, :cond_6
 
-    if-eq v2, v3, :cond_3
+    :cond_5
+    iget v5, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mSortOrder:I
 
-    move v2, v4
+    sget v6, Lcom/android/settings/R$id;->sort_order_size:I
+
+    if-eq v5, v6, :cond_6
+
+    move v5, v4
 
     goto :goto_2
 
-    :cond_3
-    move v2, v1
+    :cond_6
+    move v5, v2
 
     :goto_2
-    invoke-interface {v0, v2}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
-
-    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mOptionsMenu:Landroid/view/Menu;
-
-    sget v2, Lcom/android/settings/R$id;->hide_system:I
-
-    invoke-interface {v0, v2}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
-
-    move-result-object v0
-
-    iget-boolean v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mShowSystem:Z
-
-    if-eqz v2, :cond_4
-
-    iget v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
-
-    if-eq v2, v3, :cond_4
-
-    move v2, v4
-
-    goto :goto_3
-
-    :cond_4
-    move v2, v1
-
-    :goto_3
-    invoke-interface {v0, v2}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
-
-    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mOptionsMenu:Landroid/view/Menu;
-
-    sget v2, Lcom/android/settings/R$id;->reset_app_preferences:I
-
-    invoke-interface {v0, v2}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
-
-    move-result-object v0
-
-    iget v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
-
-    if-nez v2, :cond_5
-
-    move v2, v4
-
-    goto :goto_4
-
-    :cond_5
-    move v2, v1
-
-    :goto_4
-    invoke-interface {v0, v2}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
-
-    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mOptionsMenu:Landroid/view/Menu;
-
-    sget v2, Lcom/android/settings/R$id;->show_system:I
-
-    invoke-interface {v0, v2}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
-
-    move-result-object v0
-
-    iget-boolean v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mShowSystem:Z
-
-    if-nez v2, :cond_6
-
-    iget v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
-
-    if-eq v2, v3, :cond_6
-
-    move v2, v4
+    invoke-interface {v0, v5}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
     goto :goto_5
 
-    :cond_6
-    move v2, v1
-
-    :goto_5
-    invoke-interface {v0, v2}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
-
+    :cond_7
     iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mOptionsMenu:Landroid/view/Menu;
 
-    sget v2, Lcom/android/settings/R$id;->hide_system:I
+    sget v5, Lcom/android/settings/R$id;->sort_order_alpha:I
 
-    invoke-interface {v0, v2}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+    invoke-interface {v0, v5}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
     move-result-object v0
 
-    iget-boolean v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mShowSystem:Z
+    iget v5, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
 
-    if-eqz v2, :cond_7
+    if-ne v5, v1, :cond_8
 
-    iget v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
+    iget v5, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mSortOrder:I
 
-    if-eq v2, v3, :cond_7
+    sget v6, Lcom/android/settings/R$id;->sort_order_alpha:I
 
-    move v2, v4
+    if-eq v5, v6, :cond_8
+
+    move v5, v4
+
+    goto :goto_3
+
+    :cond_8
+    move v5, v2
+
+    :goto_3
+    invoke-interface {v0, v5}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mOptionsMenu:Landroid/view/Menu;
+
+    sget v5, Lcom/android/settings/R$id;->sort_order_size:I
+
+    invoke-interface {v0, v5}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    iget v5, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
+
+    if-ne v5, v1, :cond_9
+
+    iget v5, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mSortOrder:I
+
+    sget v6, Lcom/android/settings/R$id;->sort_order_size:I
+
+    if-eq v5, v6, :cond_9
+
+    move v5, v4
+
+    goto :goto_4
+
+    :cond_9
+    move v5, v2
+
+    :goto_4
+    invoke-interface {v0, v5}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+    :goto_5
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mOptionsMenu:Landroid/view/Menu;
+
+    sget v5, Lcom/android/settings/R$id;->show_system:I
+
+    invoke-interface {v0, v5}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    iget-boolean v5, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mShowSystem:Z
+
+    const/4 v6, 0x5
+
+    if-nez v5, :cond_a
+
+    iget v5, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
+
+    if-eq v5, v6, :cond_a
+
+    move v5, v4
 
     goto :goto_6
 
-    :cond_7
-    move v2, v1
+    :cond_a
+    move v5, v2
 
     :goto_6
+    invoke-interface {v0, v5}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mOptionsMenu:Landroid/view/Menu;
+
+    sget v5, Lcom/android/settings/R$id;->hide_system:I
+
+    invoke-interface {v0, v5}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    iget-boolean v5, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mShowSystem:Z
+
+    if-eqz v5, :cond_b
+
+    iget v5, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
+
+    if-eq v5, v6, :cond_b
+
+    move v5, v4
+
+    goto :goto_7
+
+    :cond_b
+    move v5, v2
+
+    :goto_7
+    invoke-interface {v0, v5}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isUsvMode()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_e
+
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mOptionsMenu:Landroid/view/Menu;
+
+    sget v5, Lcom/android/settings/R$id;->reset_app_preferences:I
+
+    invoke-interface {v0, v5}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    iget v5, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
+
+    if-eqz v5, :cond_d
+
+    if-eq v5, v3, :cond_d
+
+    if-ne v5, v1, :cond_c
+
+    goto :goto_8
+
+    :cond_c
+    move v1, v2
+
+    goto :goto_9
+
+    :cond_d
+    :goto_8
+    move v1, v4
+
+    :goto_9
+    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+    goto :goto_b
+
+    :cond_e
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mOptionsMenu:Landroid/view/Menu;
+
+    sget v1, Lcom/android/settings/R$id;->reset_app_preferences:I
+
+    invoke-interface {v0, v1}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    iget v1, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
+
+    if-nez v1, :cond_f
+
+    move v1, v4
+
+    goto :goto_a
+
+    :cond_f
+    move v1, v2
+
+    :goto_a
+    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+    :goto_b
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mOptionsMenu:Landroid/view/Menu;
+
+    sget v1, Lcom/android/settings/R$id;->sort_order_recent_notification:I
+
+    invoke-interface {v0, v1}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+
+    move-result-object v0
+
     invoke-interface {v0, v2}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
     iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mOptionsMenu:Landroid/view/Menu;
 
-    sget v2, Lcom/android/settings/R$id;->sort_order_recent_notification:I
+    sget v1, Lcom/android/settings/R$id;->sort_order_frequent_notification:I
 
-    invoke-interface {v0, v2}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+    invoke-interface {v0, v1}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
     move-result-object v0
 
-    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+    invoke-interface {v0, v2}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
     iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mOptionsMenu:Landroid/view/Menu;
 
-    sget v2, Lcom/android/settings/R$id;->sort_order_frequent_notification:I
+    sget v1, Lcom/android/settings/R$id;->bg_optimize_preferences:I
 
-    invoke-interface {v0, v2}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+    invoke-interface {v0, v1}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
     move-result-object v0
 
+    iget v1, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
+
+    const/16 v5, 0x10
+
+    if-ne v1, v5, :cond_10
+
+    move v1, v4
+
+    goto :goto_c
+
+    :cond_10
+    move v1, v2
+
+    :goto_c
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
-
-    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mOptionsMenu:Landroid/view/Menu;
-
-    sget v2, Lcom/android/settings/R$id;->bg_optimize_preferences:I
-
-    invoke-interface {v0, v2}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
-
-    move-result-object v0
-
-    iget v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
-
-    const/16 v3, 0x10
-
-    if-ne v2, v3, :cond_8
-
-    goto :goto_7
-
-    :cond_8
-    move v4, v1
-
-    :goto_7
-    invoke-interface {v0, v4}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
     iget v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
 
-    if-eq v0, v3, :cond_9
+    if-eq v0, v5, :cond_11
 
-    const/16 v2, 0x11
+    const/16 v1, 0x11
 
-    if-ne v0, v2, :cond_a
+    if-ne v0, v1, :cond_12
 
-    :cond_9
+    :cond_11
     iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mOptionsMenu:Landroid/view/Menu;
 
-    sget v2, Lcom/android/settings/R$id;->show_system:I
+    sget v1, Lcom/android/settings/R$id;->show_system:I
 
-    invoke-interface {v0, v2}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+    invoke-interface {v0, v1}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
     move-result-object v0
 
-    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+    invoke-interface {v0, v2}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
     iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mOptionsMenu:Landroid/view/Menu;
 
-    sget v2, Lcom/android/settings/R$id;->hide_system:I
+    sget v1, Lcom/android/settings/R$id;->hide_system:I
 
-    invoke-interface {v0, v2}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+    invoke-interface {v0, v1}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
     move-result-object v0
 
-    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+    invoke-interface {v0, v2}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
     iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mOptionsMenu:Landroid/view/Menu;
 
-    sget v2, Lcom/android/settings/R$id;->reset_app_preferences:I
+    sget v1, Lcom/android/settings/R$id;->reset_app_preferences:I
 
-    invoke-interface {v0, v2}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+    invoke-interface {v0, v1}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
     move-result-object v0
 
-    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+    invoke-interface {v0, v2}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
-    :cond_a
+    :cond_12
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mOptionsMenu:Landroid/view/Menu;
+
+    sget v1, Lcom/android/settings/R$id;->uninstall_multiple_apps:I
+
+    invoke-interface {v0, v1}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isUsvMode()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_13
+
+    iget v1, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
+
+    if-eqz v1, :cond_15
+
+    :cond_13
+    iget v1, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mListType:I
+
+    if-ne v1, v3, :cond_14
+
+    goto :goto_d
+
+    :cond_14
+    move v4, v2
+
+    :cond_15
+    :goto_d
+    invoke-interface {v0, v4}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+    goto :goto_e
+
+    :cond_16
+    invoke-virtual {p0}, Lcom/android/settings/applications/manageapplications/ManageApplications;->showUninstallMultipleAppsListMenu()V
+
+    invoke-direct {p0}, Lcom/android/settings/applications/manageapplications/ManageApplications;->updateDeleteButtonVisibility()V
+
+    invoke-direct {p0}, Lcom/android/settings/applications/manageapplications/ManageApplications;->makeAllPickItemChecked()V
+
+    :goto_e
     iget-object p0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications;->mOptionsMenu:Landroid/view/Menu;
 
     const/16 v0, 0xb
@@ -3647,11 +4801,11 @@
 
     move-result-object p0
 
-    if-eqz p0, :cond_b
+    if-eqz p0, :cond_17
 
-    invoke-interface {p0, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+    invoke-interface {p0, v2}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
-    :cond_b
+    :cond_17
     return-void
 .end method
 

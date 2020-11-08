@@ -1,11 +1,14 @@
 .class Lcom/oneplus/settings/darkmode/OPGloblaDarkModeSettings$5;
-.super Landroid/content/BroadcastReceiver;
+.super Ljava/lang/Object;
 .source "OPGloblaDarkModeSettings.java"
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/oneplus/settings/darkmode/OPGloblaDarkModeSettings;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/oneplus/settings/darkmode/OPGloblaDarkModeSettings;->onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,74 +27,29 @@
 
     iput-object p1, p0, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeSettings$5;->this$0:Lcom/oneplus/settings/darkmode/OPGloblaDarkModeSettings;
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 1
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 0
 
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    return-void
-
-    :cond_0
-    const-string v0, "android.intent.action.PACKAGE_REMOVED"
-
-    invoke-static {p1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    const-string v0, "android.intent.action.PACKAGE_ADDED"
-
-    invoke-static {p1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    :cond_1
-    invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, "has changed"
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string p2, "OPGloblaDarkModeSettings"
-
-    invoke-static {p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
     iget-object p0, p0, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeSettings$5;->this$0:Lcom/oneplus/settings/darkmode/OPGloblaDarkModeSettings;
 
-    const/4 p1, 0x1
+    invoke-virtual {p0}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
 
-    invoke-static {p0, p1}, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeSettings;->access$802(Lcom/oneplus/settings/darkmode/OPGloblaDarkModeSettings;Z)Z
+    move-result-object p0
 
-    :cond_2
+    const-string p1, "op_dark_mode_tips_already_show"
+
+    const/4 p2, 0x1
+
+    invoke-static {p0, p1, p2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+
     return-void
 .end method

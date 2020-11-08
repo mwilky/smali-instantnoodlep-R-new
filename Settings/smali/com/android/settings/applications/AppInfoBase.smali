@@ -136,6 +136,28 @@
     return-object p0
 .end method
 
+.method public static getSummaryByDate(Landroid/content/Context;Lcom/android/settingslib/applications/ApplicationsState$AppEntry;)Ljava/lang/CharSequence;
+    .locals 2
+
+    new-instance p0, Ljava/text/SimpleDateFormat;
+
+    const-string v0, "dd/MM/yyyy HH:mm a"
+
+    invoke-direct {p0, v0}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
+
+    iget-wide v0, p1, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->apkUpdateTimestamp:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Ljava/text/SimpleDateFormat;->format(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method public static startAppInfoFragment(Ljava/lang/Class;ILjava/lang/String;ILandroidx/fragment/app/Fragment;II)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;

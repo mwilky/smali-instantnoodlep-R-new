@@ -39,7 +39,7 @@
 
     iget-object v0, p0, Lcom/google/android/material/picker/DayPickerView$3;->this$0:Lcom/google/android/material/picker/DayPickerView;
 
-    invoke-static {v0}, Lcom/google/android/material/picker/DayPickerView;->access$100(Lcom/google/android/material/picker/DayPickerView;)Landroid/widget/ImageButton;
+    invoke-static {v0}, Lcom/google/android/material/picker/DayPickerView;->access$300(Lcom/google/android/material/picker/DayPickerView;)Landroid/widget/ImageButton;
 
     move-result-object v0
 
@@ -54,7 +54,7 @@
     :cond_0
     iget-object v0, p0, Lcom/google/android/material/picker/DayPickerView$3;->this$0:Lcom/google/android/material/picker/DayPickerView;
 
-    invoke-static {v0}, Lcom/google/android/material/picker/DayPickerView;->access$200(Lcom/google/android/material/picker/DayPickerView;)Landroid/widget/ImageButton;
+    invoke-static {v0}, Lcom/google/android/material/picker/DayPickerView;->access$400(Lcom/google/android/material/picker/DayPickerView;)Landroid/widget/ImageButton;
 
     move-result-object v0
 
@@ -65,7 +65,7 @@
     :goto_0
     iget-object v0, p0, Lcom/google/android/material/picker/DayPickerView$3;->this$0:Lcom/google/android/material/picker/DayPickerView;
 
-    invoke-static {v0}, Lcom/google/android/material/picker/DayPickerView;->access$400(Lcom/google/android/material/picker/DayPickerView;)Landroid/view/accessibility/AccessibilityManager;
+    invoke-static {v0}, Lcom/google/android/material/picker/DayPickerView;->access$500(Lcom/google/android/material/picker/DayPickerView;)Landroid/view/accessibility/AccessibilityManager;
 
     move-result-object v0
 
@@ -77,7 +77,7 @@
 
     iget-object v1, p0, Lcom/google/android/material/picker/DayPickerView$3;->this$0:Lcom/google/android/material/picker/DayPickerView;
 
-    invoke-static {v1}, Lcom/google/android/material/picker/DayPickerView;->access$500(Lcom/google/android/material/picker/DayPickerView;)Landroidx/viewpager/widget/ViewPager;
+    invoke-static {v1}, Lcom/google/android/material/picker/DayPickerView;->access$600(Lcom/google/android/material/picker/DayPickerView;)Landroidx/viewpager/widget/ViewPager;
 
     move-result-object v1
 
@@ -89,7 +89,7 @@
 
     iget-object p0, p0, Lcom/google/android/material/picker/DayPickerView$3;->this$0:Lcom/google/android/material/picker/DayPickerView;
 
-    invoke-static {p0}, Lcom/google/android/material/picker/DayPickerView;->access$500(Lcom/google/android/material/picker/DayPickerView;)Landroidx/viewpager/widget/ViewPager;
+    invoke-static {p0}, Lcom/google/android/material/picker/DayPickerView;->access$600(Lcom/google/android/material/picker/DayPickerView;)Landroidx/viewpager/widget/ViewPager;
 
     move-result-object p0
 

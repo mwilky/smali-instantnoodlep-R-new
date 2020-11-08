@@ -12,6 +12,8 @@
 
 
 # instance fields
+.field private hotspotPref:Landroidx/preference/Preference;
+
 .field private mContext:Landroid/content/Context;
 
 .field private mCurrentSlotId:I
@@ -132,12 +134,12 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/oneplus/security/network/view/DataUsagePrefFragment;)Lcom/oneplus/security/network/view/HeaderPreference;
+.method static synthetic access$000(Lcom/oneplus/security/network/view/DataUsagePrefFragment;)Z
     .locals 0
 
-    iget-object p0, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->mDataUsagePreference:Lcom/oneplus/security/network/view/HeaderPreference;
+    iget-boolean p0, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->mNeedHeadView:Z
 
-    return-object p0
+    return p0
 .end method
 
 .method static synthetic access$100(Lcom/oneplus/security/network/view/DataUsagePrefFragment;)I
@@ -148,7 +150,23 @@
     return p0
 .end method
 
-.method static synthetic access$200(Lcom/oneplus/security/network/view/DataUsagePrefFragment;)J
+.method static synthetic access$200(Lcom/oneplus/security/network/view/DataUsagePrefFragment;)Landroidx/preference/Preference;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->hotspotPref:Landroidx/preference/Preference;
+
+    return-object p0
+.end method
+
+.method static synthetic access$300(Lcom/oneplus/security/network/view/DataUsagePrefFragment;)Lcom/oneplus/security/network/view/HeaderPreference;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->mDataUsagePreference:Lcom/oneplus/security/network/view/HeaderPreference;
+
+    return-object p0
+.end method
+
+.method static synthetic access$400(Lcom/oneplus/security/network/view/DataUsagePrefFragment;)J
     .locals 2
 
     iget-wide v0, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->mWarnValue:J
@@ -369,7 +387,7 @@
     :goto_0
     iget-object v0, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->mHandler:Landroid/os/Handler;
 
-    new-instance v7, Lcom/oneplus/security/network/view/DataUsagePrefFragment$2;
+    new-instance v7, Lcom/oneplus/security/network/view/DataUsagePrefFragment$3;
 
     move-object v1, v7
 
@@ -379,7 +397,7 @@
 
     move-wide v5, p3
 
-    invoke-direct/range {v1 .. v6}, Lcom/oneplus/security/network/view/DataUsagePrefFragment$2;-><init>(Lcom/oneplus/security/network/view/DataUsagePrefFragment;JJ)V
+    invoke-direct/range {v1 .. v6}, Lcom/oneplus/security/network/view/DataUsagePrefFragment$3;-><init>(Lcom/oneplus/security/network/view/DataUsagePrefFragment;JJ)V
 
     invoke-virtual {v0, v7}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -573,6 +591,39 @@
 
     iput-object p1, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->mDataUsagePreference:Lcom/oneplus/security/network/view/HeaderPreference;
 
+    const-string p1, "op_hotspot_usage"
+
+    invoke-virtual {p0, p1}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->hotspotPref:Landroidx/preference/Preference;
+
+    invoke-static {}, Lcom/oneplus/security/utils/FunctionUtils;->isUsvMode()Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    iget-object p1, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->hotspotPref:Landroidx/preference/Preference;
+
+    if-eqz p1, :cond_1
+
+    const-string p1, "screen_brightness"
+
+    invoke-virtual {p0, p1}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    check-cast p1, Landroidx/preference/PreferenceCategory;
+
+    iget-object v1, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->hotspotPref:Landroidx/preference/Preference;
+
+    invoke-virtual {p1, v1}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
+
+    :cond_1
     const-string p1, "op_data_usage_package_set"
 
     invoke-virtual {p0, p1}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
@@ -581,7 +632,7 @@
 
     iput-object p1, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->mDataUsagePackageSet:Landroidx/preference/Preference;
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_2
 
     new-instance v1, Lcom/oneplus/security/network/view/-$$Lambda$DataUsagePrefFragment$65w9ySy8i4zfDZn6aVV1fXzO0Rw;
 
@@ -589,10 +640,10 @@
 
     invoke-virtual {p1, v1}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    :cond_1
+    :cond_2
     iget-object p1, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->mDataUsageRank:Landroidx/preference/Preference;
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_3
 
     new-instance v1, Lcom/oneplus/security/network/view/-$$Lambda$DataUsagePrefFragment$9-EjjHeRcvod7CiqL5Xlya9BFiI;
 
@@ -600,10 +651,10 @@
 
     invoke-virtual {p1, v1}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    :cond_2
+    :cond_3
     iget-object p1, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->mWlanMeteredSettings:Landroidx/preference/Preference;
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_4
 
     const/4 v1, 0x0
 
@@ -617,10 +668,10 @@
 
     invoke-virtual {p1, v1}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    :cond_3
+    :cond_4
     iget-object p1, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->mContext:Landroid/content/Context;
 
-    if-nez p1, :cond_4
+    if-nez p1, :cond_5
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -628,10 +679,10 @@
 
     iput-object p1, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->mContext:Landroid/content/Context;
 
-    :cond_4
+    :cond_5
     iget-object p1, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->mContext:Landroid/content/Context;
 
-    if-nez p1, :cond_5
+    if-nez p1, :cond_6
 
     const-string p0, "mContext is null ,Fragment onCreate return ."
 
@@ -639,9 +690,28 @@
 
     return-void
 
-    :cond_5
+    :cond_6
     invoke-virtual {p0}, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->initUIState()V
 
+    iget-object p1, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->hotspotPref:Landroidx/preference/Preference;
+
+    if-eqz p1, :cond_7
+
+    invoke-static {}, Lcom/oneplus/security/utils/FunctionUtils;->isUsvMode()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_7
+
+    iget-object p1, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->hotspotPref:Landroidx/preference/Preference;
+
+    new-instance v0, Lcom/oneplus/security/network/view/DataUsagePrefFragment$1;
+
+    invoke-direct {v0, p0}, Lcom/oneplus/security/network/view/DataUsagePrefFragment$1;-><init>(Lcom/oneplus/security/network/view/DataUsagePrefFragment;)V
+
+    invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
+
+    :cond_7
     return-void
 .end method
 
@@ -778,7 +848,7 @@
 
     iget-object v0, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->mHandler:Landroid/os/Handler;
 
-    new-instance v7, Lcom/oneplus/security/network/view/DataUsagePrefFragment$1;
+    new-instance v7, Lcom/oneplus/security/network/view/DataUsagePrefFragment$2;
 
     move-object v1, v7
 
@@ -788,7 +858,7 @@
 
     move-wide v5, p3
 
-    invoke-direct/range {v1 .. v6}, Lcom/oneplus/security/network/view/DataUsagePrefFragment$1;-><init>(Lcom/oneplus/security/network/view/DataUsagePrefFragment;JJ)V
+    invoke-direct/range {v1 .. v6}, Lcom/oneplus/security/network/view/DataUsagePrefFragment$2;-><init>(Lcom/oneplus/security/network/view/DataUsagePrefFragment;JJ)V
 
     invoke-virtual {v0, v7}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

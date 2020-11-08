@@ -4,6 +4,7 @@
 
 # interfaces
 .implements Lcom/android/settings/homepage/contextualcards/conditional/ConditionalCardController;
+.implements Lcom/android/settingslib/core/lifecycle/events/OnDestroy;
 
 
 # static fields
@@ -11,11 +12,11 @@
 
 
 # instance fields
-.field private final mAppContext:Landroid/content/Context;
+.field private mAppContext:Landroid/content/Context;
 
-.field private final mConditionManager:Lcom/android/settings/homepage/contextualcards/conditional/ConditionManager;
+.field private mConditionManager:Lcom/android/settings/homepage/contextualcards/conditional/ConditionManager;
 
-.field private final mConnectivityManager:Landroid/net/ConnectivityManager;
+.field private mConnectivityManager:Landroid/net/ConnectivityManager;
 
 .field private mIsListeningConnectionChange:Z
 
@@ -411,6 +412,22 @@
     iget-object p0, p0, Lcom/android/settings/homepage/contextualcards/conditional/CellularDataConditionController;->mConditionManager:Lcom/android/settings/homepage/contextualcards/conditional/ConditionManager;
 
     invoke-virtual {p0}, Lcom/android/settings/homepage/contextualcards/conditional/ConditionManager;->onConditionChanged()V
+
+    return-void
+.end method
+
+.method public onDestroy()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/android/settings/homepage/contextualcards/conditional/CellularDataConditionController;->mAppContext:Landroid/content/Context;
+
+    iput-object v0, p0, Lcom/android/settings/homepage/contextualcards/conditional/CellularDataConditionController;->mConditionManager:Lcom/android/settings/homepage/contextualcards/conditional/ConditionManager;
+
+    iput-object v0, p0, Lcom/android/settings/homepage/contextualcards/conditional/CellularDataConditionController;->mConnectivityManager:Landroid/net/ConnectivityManager;
+
+    iput-object v0, p0, Lcom/android/settings/homepage/contextualcards/conditional/CellularDataConditionController;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     return-void
 .end method

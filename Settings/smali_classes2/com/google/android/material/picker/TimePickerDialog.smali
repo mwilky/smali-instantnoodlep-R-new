@@ -258,45 +258,61 @@
 .method public onAttachedToWindow()V
     .locals 3
 
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x1d
+
+    if-le v0, v2, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v1
+
+    :goto_0
+    if-eqz v0, :cond_1
+
     iget-object v0, p0, Landroidx/appcompat/app/AlertDialog;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lcom/google/android/material/R$drawable;->op_picker_dialog_material_background_bottom:I
+    sget v2, Lcom/google/android/material/R$drawable;->op_dialog_material_background_bottom:I
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    new-instance v1, Landroid/graphics/drawable/InsetDrawable;
+    new-instance v2, Landroid/graphics/drawable/InsetDrawable;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v0, v2}, Landroid/graphics/drawable/InsetDrawable;-><init>(Landroid/graphics/drawable/Drawable;I)V
+    invoke-direct {v2, v0, v1}, Landroid/graphics/drawable/InsetDrawable;-><init>(Landroid/graphics/drawable/Drawable;I)V
 
     iget-object v0, p0, Landroidx/appcompat/app/AlertDialog;->mContext:Landroid/content/Context;
 
-    sget v2, Lcom/google/android/material/R$color;->op_control_bg_color_popup_default:I
+    sget v1, Lcom/google/android/material/R$color;->op_control_bg_color_popup_default:I
 
-    invoke-virtual {v0, v2}, Landroid/content/Context;->getColor(I)I
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getColor(I)I
 
     move-result v0
 
-    invoke-virtual {v1, v0}, Landroid/graphics/drawable/InsetDrawable;->setTint(I)V
+    invoke-virtual {v2, v0}, Landroid/graphics/drawable/InsetDrawable;->setTint(I)V
 
     invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, v2}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     iget-object v0, p0, Landroidx/appcompat/app/AlertDialog;->mContext:Landroid/content/Context;
 
     instance-of v1, v0, Landroid/app/Activity;
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
     check-cast v0, Landroid/app/Activity;
 
@@ -306,7 +322,7 @@
 
     invoke-static {v0, v1}, Landroidx/appcompat/app/SoftKeyBoardListener;->setListener(Landroid/app/Activity;Landroidx/appcompat/app/SoftKeyBoardListener$OnSoftKeyBoardChangeListener;)V
 
-    :cond_0
+    :cond_1
     return-void
 .end method
 

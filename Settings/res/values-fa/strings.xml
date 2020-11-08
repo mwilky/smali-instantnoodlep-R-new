@@ -474,7 +474,7 @@
     <string name="app_and_notification_dashboard_summary">برنامه‌های اخیر، برنامه‌ها پیش‌فرض</string>
     <string name="app_and_notification_dashboard_title">برنامه‌ها و اعلان‌ها</string>
     <string name="app_cellular_data_usage">مصرف داده برنامه</string>
-    <string name="app_data_usage">استفاده از داده های برنامه</string>
+    <string name="app_data_usage">مصرف دادۀ برنامه</string>
     <string name="app_default_dashboard_title">برنامه‌های پیش‌فرض</string>
     <string name="app_disable_dlg_positive">غیرفعال کردن برنامه</string>
     <string name="app_disable_dlg_text">‏اگر این برنامه را غیرفعال کنید، ممکن است Android و سایر برنامه‌ها دیگر عملکرد موردانتظار را نداشته باشند. به‌خاطر داسته باشید که نمی‌توانید این برنامه را حذف کنید، چون از برنامه‌های ازپیش نصب‌شده روی دستگاه است. این برنامه، با غیرفعال کردن، خاموش می‌شود و در دستگاه پنهان می‌شود.</string>
@@ -508,7 +508,7 @@
     <string name="app_notification_block_title">مسدود کردن همه</string>
     <string name="app_notification_importance_title">اهمیت</string>
     <string name="app_notification_led_enabled_summary">هشدارهای ال ای دی را برای این اپلیکیشن نشان بده</string>
-    <string name="app_notification_led_enabled_title">هشدارهای ال ای دی</string>
+    <string name="app_notification_led_enabled_title">اخطارهای ای ای دی</string>
     <string name="app_notification_listing_summary_zero">برای همه برنامه‌ها روشن‌ است</string>
     <string name="app_notification_no_ongoing_on_keyguard_summary">هرگز هشدارهای پیاپی این اپلیکیشین را روی قفل صفحه نمایش نشان نده</string>
     <string name="app_notification_no_ongoing_on_keyguard_title">«اعلان دائمی» بر روی «صفحۀ قفل» غیرفعال شود</string>
@@ -1270,6 +1270,7 @@
     <string name="color_temperature">دمای رنگ سرد</string>
     <string name="color_temperature_desc">استفاده از رنگ‌های سردتر نمایشگر</string>
     <string name="color_temperature_toast">برای اعمال تغییر رنگ، صفحه را خاموش کنید</string>
+    <string name="color_temperture">نمایش تعادل رنگ سفید</string>
     <string name="color_title">رنگی</string>
     <string name="color_unspecified">پیش‌فرض</string>
     <string name="color_white">سفید</string>
@@ -1285,7 +1286,7 @@
     <string name="condition_cellular_title">داده شبکه تلفن همراه خاموش است</string>
     <string name="condition_cloud_summary">برای اطمینان از اینکه داده‌های شما از بین نخواهد رفت، برای استفاده از سرویس ابری، کلیک کنید</string>
     <string name="condition_cloud_title">شروع استفاده از سرویس ابری</string>
-    <string name="condition_cloud_turn_off">انصراف</string>
+    <string name="condition_cloud_turn_off">رد کردن</string>
     <string name="condition_device_muted_action_turn_on_sound">روشن کردن صدا</string>
     <string name="condition_device_muted_summary">برای تماس‌ها و اعلان‌ها</string>
     <string name="condition_device_muted_title">زنگ بی‌صدا است</string>
@@ -1583,7 +1584,7 @@
     <string name="data_usage_metered_yes">محدودشده</string>
     <string name="data_usage_ota">به‌روزرسانی‌های سیستم</string>
     <string name="data_usage_other_apps">برنامه‌های دیگری که در استفاده گنجانده شده</string>
-    <string name="data_usage_package_set">Billing Cycle</string>
+    <string name="data_usage_package_set">دورۀ صدور صورتحساب</string>
     <string name="data_usage_pick_cycle_day">روزِ تنظیم مجدد چرخه مصرف داده:</string>
     <string name="data_usage_rank_sim">مصرف دادۀ تلفن همراه</string>
     <string name="data_usage_rank_wifi">مصرف داده Wi-Fi</string>
@@ -2132,7 +2133,7 @@
     <string name="firewall_rule_forbid_batch">همه ممنوع</string>
     <string name="firewall_rule_wlan_only">تنها بی‑سیم</string>
     <string name="firewall_rule_wlan_only_batch">تنها بی‑سیم</string>
-    <string name="firewall_title">کنترل استفاده از داده ها</string>
+    <string name="firewall_title">کنترل مصرف داده</string>
     <string name="firmware_version">‏نسخهٔ Android</string>
     <string name="font_size_make_larger_desc">بزرگ‌تر کردن</string>
     <string name="font_size_make_smaller_desc">کوچک‌تر کردن</string>
@@ -2196,7 +2197,7 @@
     <string name="gesture_setting_off">خاموش</string>
     <string name="gesture_setting_on">روشن</string>
     <string name="gesture_settings_activity_title">تنظیمات اشاره</string>
-    <string name="gestures_settings">فرمان‌های حرکتی</string>
+    <string name="gestures_settings">حرکت ها</string>
     <string name="ghzonly_2.4">تنها 2.4 GHz</string>
     <string name="ghzonly_5">تنها 5 GHz</string>
     <string name="go_back_button_label">برگشت</string>
@@ -2235,7 +2236,7 @@
     <string name="header_account_settings">تنظیمات حساب</string>
     <string name="header_add_an_account">افزودن حساب</string>
     <string name="header_application_sync_settings">تنظیمات همگام‌سازی برنامه</string>
-    <string name="header_category_custom">سفارشی‌سازی</string>
+    <string name="header_category_custom">شخصی سازی</string>
     <string name="header_category_system">سیستم</string>
     <string name="header_category_wireless_networks">بی‌سیم و شبکه‌ها</string>
     <string name="header_data_and_synchronization">داده و همگام‌سازی</string>
@@ -3360,7 +3361,7 @@
     <string name="oneplus_auto_open_specified_app">باز کردن برنامۀ مشخص‌شده به صورت خودکار</string>
     <string name="oneplus_auto_play">پخش خودکار</string>
     <string name="oneplus_auto_play_summary">ادامه پخش خودکار موسیقی هنگام اتصال گوشی</string>
-    <string name="oneplus_auto_switch_mobile_data">استفاده از داده ها</string>
+    <string name="oneplus_auto_switch_mobile_data">اتصال هوشمند به شبکه</string>
     <string name="oneplus_auto_switch_mobile_data_summary">در صورت ضعیف بودن اتصال، برای بهبود پایداری، همزمان از Wi‑Fi و دادۀ تلفن همراه استفاده شود</string>
     <string name="oneplus_auto_turn_on_apps">به طور خودکار برای این برنامه ها روشن شود</string>
     <string name="oneplus_auto_turn_on_car_charger_info_o2">با تنظیم موارد فوق، می‌توانید «بدون مزاحمت» را فعال کنید و هر بار که شارژر خودرو متصل می‌شود، برنامه مورد نظر خود را راه‌اندازی کنید</string>
@@ -3368,8 +3369,8 @@
     <string name="oneplus_available_keyboard_category">صفحه‌کلید موجود</string>
     <string name="oneplus_available_keyboard_description">صفحه‌کلیدهای نصب‌شده‌ای که در اینجا فعال شده باشد به لیست «صفحه‌کلیدهای موجود» افزوده خواهد شد</string>
     <string name="oneplus_back_home">صفحۀ اصلی، بازگشت</string>
-    <string name="oneplus_back_home_o2">Back, Home</string>
-    <string name="oneplus_back_home_summary">Swipe up on Home button</string>
+    <string name="oneplus_back_home_o2">بازگشت، صفحۀ اصلی</string>
+    <string name="oneplus_back_home_summary">انگشت خود را روی دکمۀ صفحۀ اصلی به سمت بالا بکشید</string>
     <string name="oneplus_back_topic_theme_summary">وقتی موضوع قبلی خودکار باز می شود پوسته سیستم را عوض کنید</string>
     <string name="oneplus_back_topic_theme_title">پوسته پشت جلد</string>
     <string name="oneplus_battery_menu_stats_total">مشاهدۀ جزئیات مصرف</string>
@@ -3408,7 +3409,7 @@
     <string name="oneplus_cancel_finger_input">در حال لغو..</string>
     <string name="oneplus_cannot_enroll_fingerprint_in_splitting_screen">در حالت صفحه تقسیم‌شده نمی‌توان اثر انگشت وارد کرد</string>
     <string name="oneplus_car_charger_settings_title">هنگام استفاده از شارژر خودرو</string>
-    <string name="oneplus_carrier_config_version">نسخۀ پیکربندی شرکت مخابراتی</string>
+    <string name="oneplus_carrier_config_version">نسخه پیکربندی شرکت مخابراتی</string>
     <string name="oneplus_cellular_data_condition_turn_on">روشن کردن دادۀ تلفن همراه</string>
     <string name="oneplus_choose_lock_method_before_face_fingerprint_unlock">پیش از تنظیم «قفل‌گشایی با چهره» یا قفل‌گشایی با اثر انگشت، یک روش قفل صفحه انتخاب کنید</string>
     <string name="oneplus_choose_navigation_bar">انتخاب نوار پیمایش</string>
@@ -3468,7 +3469,7 @@
     <string name="oneplus_disconnected">قطع اتصال</string>
     <string name="oneplus_display_dashboard_no_theme_summary">نوار وضعیت، صفحۀ نمایش محدود، تصاویر زمینه</string>
     <string name="oneplus_display_dashboard_no_theme_summary_801">نوار وضعیت، نمایشگر محیطی، راحتی دید، حالت مطالعه</string>
-    <string name="oneplus_display_dashboard_summary">نوار وضعیت، نمایشگر محیط، تصاویر زمینه، تم</string>
+    <string name="oneplus_display_dashboard_summary">نوار وضعیت، نمایشگر محیطی، تصویر زمینه، تم</string>
     <string name="oneplus_display_dashboard_summary_801">نوار وضعیت، نمایشگر محیطی، تصویر زمینه، تم</string>
     <string name="oneplus_display_screen_timeout">خواب</string>
     <string name="oneplus_display_size_adaption">برنامه‌های تمام‌صفحه</string>
@@ -3559,7 +3560,7 @@
     <string name="oneplus_file_not_exist">فایل موجود نیست!</string>
     <string name="oneplus_finger_input_error_tips">خطای اثر انگشت، لطفا دوباره سعی کنید</string>
     <string name="oneplus_finger_input_fail_tips">ورودی ناموفق ماند، لطفاً موقعیت را تنظیم کنید و دوباره تلاش کنید</string>
-    <string name="oneplus_finger_print_anim_save">ذخیره</string>
+    <string name="oneplus_finger_print_anim_save">ذخیره کردن</string>
     <string name="oneplus_fingerprint">اثر انگشت</string>
     <string name="oneplus_fingerprint_acquired_imager_dirty">ناحیه شناسایی اثر انگشت کثیف است. لطفاً آن را تمیز کرده و مجدداً تلاش کنید.</string>
     <string name="oneplus_fingerprint_acquired_partial">اثر انگشت ناقص تشخیص داده شد. لطفاً ناحیه شناسایی اثر انگشت را کاملاً پوشش دهید.</string>
@@ -3576,7 +3577,9 @@
     <string name="oneplus_fingerprint_gesture_camera_summary">از داخل صفحۀ منظره‌یاب، حسگر اثر انگشت را فشار دهید و نگه دارید تا عکس گرفته شود</string>
     <string name="oneplus_fingerprint_gesture_camera_title">فشار طولانی برای گرفتن عکس</string>
     <string name="oneplus_fingerprint_gesture_settings_title">حرکت اثر انگشت</string>
+    <string name="oneplus_fingerprint_hardware_exception">اطلاعات سخت افزاری اثر انگشت دقیق نیست، لطفاً با خدمات مشتریان تماس بگیرید</string>
     <string name="oneplus_fingerprint_longpress_for_quickpay_summary">حسگر اثر انگشت را برای مدت طولانی برای راه اندازی پرداخت سریع فشار دهید</string>
+    <string name="oneplus_fingerprint_not_adjustment">داده‌های کالیبراسیون اثر انگشت دقیق نیست، لطفاً با خدمات مشتریان تماس بگیرید</string>
     <string name="oneplus_fingerprint_quickpay_lock_swtch_summary">حسگر اثر انگشت را برای راه‌اندازی پرداخت سریع زمانی که گوشی قفل است، برای مدت طولانی فشار دهید</string>
     <string name="oneplus_fingerprint_sensor_longpress_for_quickpay_summary">حسگر اثر انگشت را برای راه‌اندازی پرداخت سریع زمانی که قفل گوشی باز شده است، برای مدت طولانی فشار دهید</string>
     <string name="oneplus_fingerprint_settings_list_title">لیست اثر انگشت</string>
@@ -3605,14 +3608,14 @@
     <string name="oneplus_font_style">قلم</string>
     <string name="oneplus_font_switch">تعویض قلم</string>
     <string name="oneplus_force_factory_reset_summary">رمز عبور راه اندازی فعال شده، حافظه داخلی پاک خواهد شد</string>
-    <string name="oneplus_forum_award_summary">این انجمن متعلق به شماست. فقط شما می‌توانید استانداردهای ما را تعریف کنید. با هم تعریف و بازتعریف می‌کنیم. نسخه‌های جدید می‌سازیم و کدنویسی می‌کنیم. این کارها برای شماست. از اینکه همراه رویاپروری‌مان هستید متشکریم!</string>
+    <string name="oneplus_forum_award_summary">این انجمن متعلق به شما است. فقط شما می‌توانید دوره‌تان را تعریف کنید. با هم، تعریف و پالایش می‌کنیم. نسخه‌های جدید می‌سازیم و کدنویسی می‌کنیم. این کارها برای شما است. از اینکه همراه رویاپروری‌مان هستید متشکریم!</string>
     <string name="oneplus_forum_award_title">پاداش</string>
     <string name="oneplus_front_camera_app_display_fullscreen_summary">لطفاً اگر محتوای برنامه با محدودۀ نمایش دوربین جلو بریده شده است، به حالت پیش‌فرض تغییر وضعیت دهید</string>
     <string name="oneplus_front_camera_display_choose_title">تعیین کنید دوربین جلو باید پنهان شود یا خیر</string>
     <string name="oneplus_front_camera_display_title">محدوده نمایش دوربین جلو</string>
     <string name="oneplus_fullscreen_back_guide_summary">انگشت خود را از لبۀ سمت چپ یا سمت راست پایین صفحهٔ نمایش به داخل بکشید</string>
     <string name="oneplus_fullscreen_back_guide_summary_deprecated">انگشت خود را از سمت چپ یا راست پایین صفحۀ نمایش به سمت بالا بکشید</string>
-    <string name="oneplus_fullscreen_back_guide_title">قبلی</string>
+    <string name="oneplus_fullscreen_back_guide_title">برگشت</string>
     <string name="oneplus_fullscreen_disable_this_feature">در صورت فعال بودن فرمان‌های حرکتی پیمایش، نمی‌توان از این قابلیت استفاده کرد.</string>
     <string name="oneplus_fullscreen_gesture_guide_back">"بیایید از حرکاتی که جایگزین دکمه بازگشت می شوند استفاده کنیم.
 از سمت چپ یا راست پایین صفحه نمایش به سمت بالا جاروب کنید."</string>
@@ -3638,7 +3641,7 @@
     <string name="oneplus_fullscreen_previous_app_no_bar_guide_title">جابه‌جایی بین برنامه‌های اخیر</string>
     <string name="oneplus_fullscreen_recent_guide_summary">انگشت خود را از لبۀ پایینی صفحۀ نمایش به سمت بالا بکشید و مکث کنید</string>
     <string name="oneplus_fullscreen_recent_guide_summary_deprecated">انگشت خود را از لبۀ وسطی پایین صفحۀ نمایش به سمت بالا بکشید و مکث کنید</string>
-    <string name="oneplus_fullscreen_recent_guide_title">اپلیکیشن‌های اخیر</string>
+    <string name="oneplus_fullscreen_recent_guide_title">آخرین برنامه‌ها</string>
     <string name="oneplus_functional_terms">شرایط و ضوابط</string>
     <string name="oneplus_game_haptic_feedback_summary">برای زنده‌تر کردن تجربۀ بازی خود، بازخورد لمسی را اضافه کنید. هنوز از هدفون بلوتوث پشتیبانی نمی‌شود.</string>
     <string name="oneplus_game_mode_ad_summary">بهبود جزئیات قسمت‌های روشن و تیره در صفحۀ نمایش بازی</string>
@@ -3668,10 +3671,10 @@
     <string name="oneplus_gesture_navigation_bar_title_for_bottom">فرمان‌های حرکتی پیمایش (پایین)</string>
     <string name="oneplus_gesture_navigation_bar_title_for_deprecated">فرمان‌های حرکتی پیمایش (چپ و راست)</string>
     <string name="oneplus_gesture_of_answer_call_info">در صورت وجود تماس دریافتی، می‌‌توانید با نزدیک کردن تلفن به گوش به آن پاسخ دهید.</string>
-    <string name="oneplus_gesture_of_answer_call_summary">پاسخدهی خودکار به تماس‌های دریافتی از طریق نزدیک کردن تلفن به گوش</string>
+    <string name="oneplus_gesture_of_answer_call_summary">پاسخ دادن خودکار به تماس‌های ورودی با بالا بردن تلفن تا نزدیک گوش</string>
     <string name="oneplus_gesture_of_answer_call_title">پاسخ به تماس‌ها با حرکت</string>
     <string name="oneplus_gesture_start_learning">شروع یادگیری</string>
-    <string name="oneplus_gesture_to_answer_summary">پاسخدهی خودکار به تماس‌های دریافتی از طریق نزدیک کردن تلفن به گوش</string>
+    <string name="oneplus_gesture_to_answer_summary">پاسخ دادن خودکار به تماس‌های ورودی با بالا بردن تلفن تا نزدیک گوش</string>
     <string name="oneplus_gesture_to_answer_title">بالا بردن برای پاسخ دادن</string>
     <string name="oneplus_gesture_to_control_call_info">کنترل خودکار تماس‌ها با بلند کردن تلفن تا نزدیک گوش</string>
     <string name="oneplus_gesture_to_control_calls_summary">پاسخ دادن خودکار به تماس‌ها یا تغییر وضعیت به گوشی با فرمان حرکتی</string>
@@ -3693,9 +3696,10 @@
     <string name="oneplus_google_services_title">خدمات مرتبط Google</string>
     <string name="oneplus_google_tts">داده های صوتی TTS گوگل</string>
     <string name="oneplus_gps_using">استفاده از GPS</string>
+    <string name="oneplus_green">سبز</string>
     <string name="oneplus_h2_contributors">مشارکت‌کنندگان HydrogenOS</string>
     <string name="oneplus_hand_up_proximity_summary">وقتی گوشی همراه را بلند می‌کنید صفحه نمایش روشن شود</string>
-    <string name="oneplus_hand_up_proximity_title">بلند کردن صفحه نمایش</string>
+    <string name="oneplus_hand_up_proximity_title">صفحه نمایش بلندشدن</string>
     <string name="oneplus_hand_up_to_show">برای نمایش، تلفن خود را بلند کنید</string>
     <string name="oneplus_haptic_feedback_no_app">هیچ برنامۀ پشتیبانی‌شده‌ای نصب نشده است</string>
     <string name="oneplus_haptic_feedback_no_app_tip">می‌توانید PUBG Mobile و Asphalt 9 را نصب کنید</string>
@@ -3727,7 +3731,7 @@
     <string name="oneplus_instrucitons">آموزش</string>
     <string name="oneplus_intelligently_select_best_wifi">انتخاب بهترین Wi‑Fi به صورت هوشمند</string>
     <string name="oneplus_intelligently_select_best_wifi_summary">انتخاب و اتصال هوشمندانه به بهترین شبکۀ Wi‑Fi با شناسایی و تحلیل قابلیت اتصال شبکه‌های Wi‑Fi</string>
-    <string name="oneplus_intensely">Strong</string>
+    <string name="oneplus_intensely">قوی</string>
     <string name="oneplus_is_turn_on_feature">برای روشن کردن این قابلیت مطمئنید؟</string>
     <string name="oneplus_is_turn_on_feature_summary">"در صورت روشن بودن، ممکن است گاهی شرایط زیر به وجود بیاید:
 1. بعضی از قسمت‌های صفحۀ نمایش غیرطبیعی به نظر می‌رسد
@@ -3768,6 +3772,7 @@
     <string name="oneplus_lockpattern_need_to_unlock_wrong">مجدداً سعی کنید</string>
     <string name="oneplus_lockpattern_too_many_failed_confirmation_attempts_header">تلاش‌های نادرست بیش از حد!</string>
     <string name="oneplus_lockscreen_settings_title">ترجیحات صفحۀ قفل</string>
+    <string name="oneplus_magenta">ارغوانی</string>
     <string name="oneplus_manage_virtual_keyboard">مدیریت صفحه‌کلیدها</string>
     <string name="oneplus_max_shortcuts_tips">می‌توانید حداکثر ۶ میان‌بر اضافه کنید</string>
     <string name="oneplus_media_ring_summary">صدای رسانه ساکت</string>
@@ -3784,7 +3789,7 @@
     <string name="oneplus_memc_video_extreme">شدید</string>
     <string name="oneplus_memc_video_nosupport_extreme_summary">برای روشن کردن حالت شدید، وضوح تصویر باید به ‎FHD+‎ تغییر کند</string>
     <string name="oneplus_memc_video_nosupport_extreme_text">در حال تغییر وضعیت به ‎QHD+‎؛ جبران گرافیک حرکتی محدود می‌شود</string>
-    <string name="oneplus_memc_video_smooth">روان</string>
+    <string name="oneplus_memc_video_smooth">صاف و نرم</string>
     <string name="oneplus_memc_video_theacme_summary">نرخ فریم ویدیو به 120 فریم در ثانیه افزایش می‌یابد تا گرافیک به میزان قابل توجهی روان شود؛ این حالت ممکن است باعث افزایش مصرف نیرو شود. موقتاً از وضوح QHD+‎ پشتیبانی نخواهد شد.</string>
     <string name="oneplus_memc_video_theacme_title">حالت ویژۀ یکدست کردن حرکت</string>
     <string name="oneplus_mobile_device_name_title">نام تلفن</string>
@@ -3842,7 +3847,7 @@
     <string name="oneplus_notch_display_area">قسمت برآمده</string>
     <string name="oneplus_notch_display_choose_title">نحوۀ نمایش قسمت فرورفتگی را انتخاب کنید</string>
     <string name="oneplus_notch_display_title">نمایشگر دارای قسمت برآمده</string>
-    <string name="oneplus_notice_vibrate_intensity">اعلان‌ها</string>
+    <string name="oneplus_notice_vibrate_intensity">اطلاعیه‌ها</string>
     <string name="oneplus_notification_advance_settings">تنظیمات پیشرفته اعلان</string>
     <string name="oneplus_notification_alert_title">مهم</string>
     <string name="oneplus_notification_channel_summary_low">موارد کم‌اهمیت‌تر بدون صدا یا لرزش</string>
@@ -3860,7 +3865,7 @@
     <string name="oneplus_notification_sound_default">اعلان پیش‌فرض</string>
     <string name="oneplus_notification_ways">حالت نمایش</string>
     <string name="oneplus_notification_ways_title">نحوۀ نمایش اعلان‌ها</string>
-    <string name="oneplus_notifications">اعلان‌ها</string>
+    <string name="oneplus_notifications">اطلاعیه‌ها</string>
     <string name="oneplus_notifications_3rd_calls">اعلان برای تماس‌های شخص ثالث</string>
     <string name="oneplus_notifications_3rd_calls_summary">تماس‌های صوتی یا ویدیویی از برنامه‌های شبکه‌های اجتماعی به صورت اعلان نمایش داده خواهند شد</string>
     <string name="oneplus_notifications_and_vibration">صدای اعلان و لرزش</string>
@@ -3872,7 +3877,7 @@
     <string name="oneplus_open_bed_time_mode_schedule_title">زمان‌بندی</string>
     <string name="oneplus_open_bed_time_mode_summary">می‌توانید«حالت وقت خواب» را به صورت دستی روشن کنید</string>
     <string name="oneplus_open_bed_time_mode_title">حالت وقت خواب</string>
-    <string name="oneplus_opfinger_input_completed_comfirm">تأیید کردن</string>
+    <string name="oneplus_opfinger_input_completed_comfirm">تأیید</string>
     <string name="oneplus_opfinger_input_completed_sub">نصب اثر انگشت کامل شد. برای ادامه روی \"confirm\" (تأیید) کلید کنید.</string>
     <string name="oneplus_opfinger_input_completed_title">ثبت نام کامل شد</string>
     <string name="oneplus_opfinger_input_failed_sub">ثبت اثر انگشت ناتمام ماند، لطفاً به آرامی خواننده اثر انگشت را فشار دهید تا مطمئن شوید ثبت نام موفق بوده است</string>
@@ -3906,7 +3911,7 @@
 %d تلاش باقی مانده است."</string>
     <string name="oneplus_pocket_mode_summary">وقتی تلفن در جیبتان قرار دارد، از لمس تصادفی صفحۀ نمایش جلوگیری کنید</string>
     <string name="oneplus_pre_application">لیست برنامه‌های از پیش نصب‌شده</string>
-    <string name="oneplus_preference_settings">روش</string>
+    <string name="oneplus_preference_settings">رفتار</string>
     <string name="oneplus_preference_settings_auto_activate">برنامه‌ریزی شده</string>
     <string name="oneplus_preference_settings_behavior">ترجیحات</string>
     <string name="oneplus_preference_settings_custom_time">تغییر خودکار وضعیت</string>
@@ -3922,7 +3927,7 @@
     <string name="oneplus_proximity_summary_disable">چون صفحه نمایش محدود خاموش است، در دسترس نیست</string>
     <string name="oneplus_quick_clipboard">کلیپ برد سریع</string>
     <string name="oneplus_quick_clipboard_summary">قابلیت کپی را افزایش دهید و سپس اقدام بعدی را با توجه به کپی توصیه نمایید</string>
-    <string name="oneplus_quick_gestures">حرکت ها</string>
+    <string name="oneplus_quick_gestures">فرمان‌های حرکتی</string>
     <string name="oneplus_quick_gestures_title">فرمان‌های حرکتی سریع</string>
     <string name="oneplus_quick_launch_how_to_exit_summary">برای خارج شدن از پانل راه‌اندازی سریع، تند به پایین بکشید</string>
     <string name="oneplus_quick_launch_how_to_exit_title">خروج از «راه‌اندازی سریع»</string>
@@ -3971,11 +3976,11 @@
     <string name="oneplus_reading_mode_auto_summary">هنگامی که این برنامه‌ها باز می‌شوند، «حالت مطالعه» به طور خودکار روشن می‌شود و هنگامی که بسته می‌شوند، حالت مطالعه خاموش می‌شود</string>
     <string name="oneplus_reading_mode_available">بدون جلوه</string>
     <string name="oneplus_reading_mode_block_peek_notifications">مسدود کردن اعلان‌های بالا صفحه</string>
-    <string name="oneplus_reading_mode_chromatic">جلوۀ چندرنگ</string>
+    <string name="oneplus_reading_mode_chromatic">جلوه چند رنگ</string>
     <string name="oneplus_reading_mode_default_state">وضعیت پیش‌فرض</string>
     <string name="oneplus_reading_mode_manual_settings">تنظیمات دستی</string>
     <string name="oneplus_reading_mode_mode_setting">تنظیم حالت</string>
-    <string name="oneplus_reading_mode_mono">جلوۀ تک‌رنگ</string>
+    <string name="oneplus_reading_mode_mono">جلوه تک‌رنگ</string>
     <string name="oneplus_reading_mode_select_effect">انتخاب جلوه</string>
     <string name="oneplus_reading_mode_select_effect_for_app">انتخاب جلوه برای «%1$s»</string>
     <string name="oneplus_reading_mode_summary">بسته به شرایط نور محیطی، حالت مطالعه به طور خودکار دمای رنگ صفحۀ نمایش و کالیبراسیون بهینه‌شده برای مطالعه متن را برای تطبیق با محیط تنظیم می‌کند، این می‌تواند تجربه مطالعه را بهبود بخشد.</string>
@@ -4023,7 +4028,7 @@
     <string name="oneplus_screen_refresh_rate_60hz_summary">کمتر روان با عمر باتری بیشتر</string>
     <string name="oneplus_screen_refresh_rate_auto_summary">بسیار روان با نرخ تازه‌سازی بالاتر</string>
     <string name="oneplus_screen_refresh_rate_info">هر چه نرخ تازه‌سازی صفحهٔ نمایش بالاتر باشد، کار با صفحهٔ نمایش روان‌تر خواهد بود. در حالت 90 هرتز، نرخ تازه‌سازی به صورت پویا با توجه به سناریوهای مختلف تغییر خواهد کرد.</string>
-    <string name="oneplus_screen_resolution_adjust">وضوح تصویر</string>
+    <string name="oneplus_screen_resolution_adjust">وضوح</string>
     <string name="oneplus_screen_resolution_adjust_1080p_summary">نمایش عالی، مصرف نیروی کمتر (‎2340×1080‎)</string>
     <string name="oneplus_screen_resolution_adjust_1080p_summary_19811">نمایش عالی، مصرف نیروی کمتر (‎2376×1080‎)</string>
     <string name="oneplus_screen_resolution_adjust_intelligent_switch">تغییر وضعیت خودکار</string>
@@ -4071,6 +4076,7 @@
     <string name="oneplus_search_keyword_theme_settings">سفارشی‌سازی صفحۀ قفل، تصاویر زمینه، سبک ساعت، پویانمایی اثر انگشت، Horizon Light، سفارشی‌سازی سیستم، رنگ برجسته، شکل، فونت، تون، بسته آیکون، نور درخشان، تاریکی جزئی، ته رنگ‌های براق</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">سفارشی‌سازی صفحۀ قفل، تصاویر زمینه، سبک ساعت، پویانمایی اثر انگشت، Horizon Light، سفارشی‌سازی سیستم، رنگ برجسته، شکل، فونت، تون، بسته آیکون، نور درخشان، تاریکی جزئی، ته رنگ‌های براق، McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_mcl_new">سفارشی‌سازی صفحۀ قفل، تصاویر زمینه، سبک ساعت، پویانمایی اثر انگشت، Horizon Light، سفارشی‌سازی سیستم، رنگ برجسته، شکل، فونت، تون، بسته آیکون، McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_must_have">سفارشی‌سازی صفحۀ قفل، تصاویر زمینه، سبک ساعت، سفارشی‌سازی سیستم، رنگ برجسته، شکل، تون، بسته آیکون، نور درخشان، تاریکی جزئی، ته‌رنگ‌های درخشان</string>
     <string name="oneplus_search_keyword_theme_settings_new">سفارشی‌سازی صفحۀ قفل، تصاویر زمینه، سبک ساعت، پویانمایی اثر انگشت، Horizon Light، سفارشی‌سازی سیستم، رنگ برجسته، شکل، فونت، تون، بسته آیکون</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">سفارشی‌سازی صفحۀ قفل، تصاویر زمینه، سبک ساعت، پویانمایی اثر انگشت، سفارشی‌سازی سیستم، رنگ برجسته، شکل، فونت، تون، بسته آیکون، نور درخشان، تاریکی جزئی، ته رنگ‌های براق</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">سفارشی‌سازی صفحۀ قفل، تصاویر زمینه، سبک ساعت، پویانمایی اثر انگشت، سفارشی‌سازی سیستم، رنگ برجسته، شکل، فونت، تون، بسته آیکون</string>
@@ -4122,7 +4128,7 @@
     <string name="oneplus_setup_an_alternate_way_to_0unlock">· راه جایگزینی برای قفل‌گشایی صفحه نمایش تعیین کنید</string>
     <string name="oneplus_share_this_wifi">گسترش پوشش Wi-Fi</string>
     <string name="oneplus_share_wifi_title">اشتراک گذاری بی‑سیم</string>
-    <string name="oneplus_shielding_notification">مسدودکردن</string>
+    <string name="oneplus_shielding_notification">مسدود کردن</string>
     <string name="oneplus_shielding_notification_summary">اعلان‌ها (به غیر از تماس‌ها و زنگ‌های هشدار) مسدود خواهند شد</string>
     <string name="oneplus_shortcuts_add">افزودن میان‌بر</string>
     <string name="oneplus_shortcuts_preview">پیش‌نمایش میان‌برها</string>
@@ -4133,14 +4139,14 @@
     <string name="oneplus_show_notch_display_summary">اجازه به برنامه‌ها برای استفاده از قسمت برآمده</string>
     <string name="oneplus_show_notch_display_title">نمایش قسمت برآمده</string>
     <string name="oneplus_show_pattern_and_password">نمایش رمز عبور یا الگو</string>
-    <string name="oneplus_silent_mode">بی‌صدا</string>
+    <string name="oneplus_silent_mode">سکوت</string>
     <string name="oneplus_silent_mode_on">حالت بی صدا روشن است</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">تماس‌ها و اعلان‌ها به‌جز زنگ‌های ساعت، بی‌صدا می‌شوند</string>
     <string name="oneplus_silent_mode_summary">تماس‌ها و اعلان‌ها به‌جز زنگ‌های ساعت، بی‌صدا می‌شوند</string>
-    <string name="oneplus_silent_notifications_status_bar">اعلان بی‌صدا در نوار وضعیت پنهان شود</string>
+    <string name="oneplus_silent_notifications_status_bar">اعلان‌های بی‌صدا در نوار وضعیت پنهان شود</string>
     <string name="oneplus_sim1_ringtone_switch">سیم کارت 1</string>
     <string name="oneplus_sim2_ringtone_switch">سیم کارت 2</string>
-    <string name="oneplus_simcard_title">کارت</string>
+    <string name="oneplus_simcard_title">سیم‌کارت</string>
     <string name="oneplus_sla_down_load_app_summary">در صورت روشن بودن Wi‑Fi Direct، افزایش سرعت دانلود در دسترس نخواهد بود</string>
     <string name="oneplus_sleep_standby_summary">زمانی که خواب هستید، عمر باتری را بهینه کنید (مثلاً با غیرفعال کردن اتصالات شبکه). با این کار، ممکن است برنامه‌ها نتوانند اعلان‌های خود را به‌موقع دریافت کنند.</string>
     <string name="oneplus_sleep_standby_title">بهینه‌سازی حالت آماده کار ضمن خواب</string>
@@ -4155,7 +4161,7 @@
     <string name="oneplus_sound_tuner">Dolby Atmos</string>
     <string name="oneplus_status_summary">شماره تلفن، سیگنال و غیره</string>
     <string name="oneplus_stop_run">توقف اجباری</string>
-    <string name="oneplus_storage">STORAGE</string>
+    <string name="oneplus_storage">حافظه</string>
     <string name="oneplus_sunrise_sunset">به طور خودکار از غروب تا طلوع آفتاب فعالسازی شود</string>
     <string name="oneplus_support_apps">برنامه‌های پشتیبانی‌شده</string>
     <string name="oneplus_support_summary">نکات و پرسش‌های متداول دربارۀ استفاده از دستگاه</string>
@@ -4164,8 +4170,10 @@
     <string name="oneplus_suspension_notice">هشدار</string>
     <string name="oneplus_suspension_notice_summary">اجازه به برنامه‌ها برای نشان دادن اعلان هشدار</string>
     <string name="oneplus_switch">OnePlus Switch</string>
-    <string name="oneplus_switch_resolution_kill_process_confirm">Switch</string>
+    <string name="oneplus_switch_resolution_kill_process_confirm">تغییر وضعیت</string>
     <string name="oneplus_switch_resolution_kill_process_tips">تغییر وضوح تصویر ممکن است باعث بسته شدن بعضی از برنامه‌های فعال در پس‌زمینه شود. برای تغییر وضعیت مطمئنید؟</string>
+    <string name="oneplus_switch_sa_option">حالت NSA + SA</string>
+    <string name="oneplus_switch_sa_option_summary">بسته به اتصال 5G و تنظیمات شرکت مخابراتی تلفن، به‌صورت خودکار به حالت شبکه NSA یا SA دسترسی پیدا خواهید کرد. در صورت غیرفعال بودن، فقط دسترسی به شبکه NSA موجود خواهد بود.</string>
     <string name="oneplus_switch_screen_lock_type">تعویض نوع قفل صفحه نمایش، لطفا صبر کنید...</string>
     <string name="oneplus_system_data_summary">حاوی اطلاعات حساب، مخاطبان، داده های برنامه</string>
     <string name="oneplus_system_data_title">داده سیستم</string>
@@ -4175,7 +4183,7 @@
     <string name="oneplus_system_settings_title">تنظیمات سیستم</string>
     <string name="oneplus_system_stability_add">پیوستن به برنامه بهبود پایداری سیستم</string>
     <string name="oneplus_system_stability_summary">OnePlus اجازه خواهد داشت به صورت ناشناس به گزارش‌های سیستم دسترسی داشته باشد. در صورت بروز خطا، امکان ارسال گزارش اشکال به همراه گزارش‌ها وجود خواهد داشت. فقط در تحلیل خطاهای سیستم و بهبود پایداری آن از گزارش‌ها استفاده خواهد شد</string>
-    <string name="oneplus_system_stability_title">برنامه پایداری سیستم</string>
+    <string name="oneplus_system_stability_title">برنامۀ پایداری سیستم</string>
     <string name="oneplus_system_vibrate">لرزش سیستم</string>
     <string name="oneplus_theme_accent_color">رنگ برجسته</string>
     <string name="oneplus_theme_accent_color_customization">سفارشی‌سازی</string>
@@ -4183,21 +4191,21 @@
     <string name="oneplus_theme_accent_color_select">انتخاب رنگ برجسته</string>
     <string name="oneplus_theme_apply_summary">پس از اعمال این تم، گزینه‌های سفارشی‌سازی شما رونویسی خواهد شد</string>
     <string name="oneplus_theme_apply_title">می‌خواهید این تم را اعمال کنید؟</string>
-    <string name="oneplus_theme_clock">سبک ساعت</string>
+    <string name="oneplus_theme_clock">ساعت در نمایشگر محیطی</string>
     <string name="oneplus_theme_clock_snake_action">روشن کردن صفحۀ نمایش محدود</string>
     <string name="oneplus_theme_clock_snake_tip">این قابلیت هنگام روشن بودن صفحۀ نمایش محدود در دسترس خواهد بود</string>
     <string name="oneplus_theme_colorpicker_colorvalue">کد رنگ</string>
-    <string name="oneplus_theme_drop_summary">از تغییرات انجام‌شده صرف‌نظر می‌کنید؟</string>
+    <string name="oneplus_theme_drop_summary">از تغییرات انجام‌شده صرف نظر می‌کنید؟</string>
     <string name="oneplus_theme_drop_title">خروج از «حالت ویرایش»</string>
     <string name="oneplus_theme_entrance_summary">تصاویر زمینه، رنگ برجسته، فونت، تون</string>
-    <string name="oneplus_theme_entrance_title">سفارشی‌سازی</string>
+    <string name="oneplus_theme_entrance_title">شخصی سازی</string>
     <string name="oneplus_theme_fingerprint">پویانمایی اثر انگشت</string>
     <string name="oneplus_theme_fingerprint_snake_action">روشن کردن اثر انگشت</string>
     <string name="oneplus_theme_fingerprint_snake_tip">این قابلیت هنگام روشن بودن اثر انگشت در دسترس خواهد بود</string>
     <string name="oneplus_theme_font">قلم</string>
     <string name="oneplus_theme_font_content">دست در دست هم با شما بهترین فناوری را در اختیار تمام دنیا قرار می‌دهیم</string>
     <string name="oneplus_theme_icon_pack">بسته آیکون</string>
-    <string name="oneplus_theme_lock_screen_customization">سفارشی‌سازی صفحۀ قفل</string>
+    <string name="oneplus_theme_lock_screen_customization">صفحۀ قفل و نمایشگر محیطی</string>
     <string name="oneplus_theme_preset">تم پیش‌تنظیم</string>
     <string name="oneplus_theme_preset_color">ته رنگ‌های براق</string>
     <string name="oneplus_theme_preset_dark">تاریکی جزئی</string>
@@ -4214,7 +4222,7 @@
     <string name="oneplus_theme_system_customization">سفارشی‌سازی سیستم</string>
     <string name="oneplus_theme_tone">تون</string>
     <string name="oneplus_theme_tone_effect_color">رنگارنگ</string>
-    <string name="oneplus_theme_tone_effect_dark">تیره</string>
+    <string name="oneplus_theme_tone_effect_dark">تاریک</string>
     <string name="oneplus_theme_tone_effect_light">نور</string>
     <string name="oneplus_theme_tone_effect_title">انتخاب تون</string>
     <string name="oneplus_theme_wallpaper">تصاویر زمینه</string>
@@ -4236,6 +4244,7 @@
     <string name="oneplus_top_level_buttons_and_gestures_summary">Alert Slider، نوار پیمایش و فرمان‌های حرکتی</string>
     <string name="oneplus_top_level_cloud_h2_summary">همگام‌سازی داده‌ها با فضای ابری، یافتن تلفن من</string>
     <string name="oneplus_top_level_cloud_o2_summary">همگام‌سازی داده‌ها با فضای ابری</string>
+    <string name="oneplus_top_level_connected_android_auto_summary">Android Auto، NFC، نمایش دادن، ضربه زدن و پرداخت کردن</string>
     <string name="oneplus_top_level_connected_summary">NFS، انعکاس تصویر، پرداخت تماسی</string>
     <string name="oneplus_top_level_display_summary">نوار وضعیت، نمایشگر محیطی، راحتی دید، حالت مطالعه</string>
     <string name="oneplus_top_level_network_summary">سیم‌کارت، شبکۀ تلفن همراه، مصرف داده، نقطۀ اتصال</string>
@@ -4266,7 +4275,7 @@
     <string name="oneplus_user_enjoy_plan_title">به برنامه تجربه کاربر بپیوندید</string>
     <string name="oneplus_vibrant_color_effect">جلوه رنگ براق حرفه‌ای</string>
     <string name="oneplus_vibrate">لرزش</string>
-    <string name="oneplus_vibrate_dynamic_mode">دینامیک</string>
+    <string name="oneplus_vibrate_dynamic_mode">پویا</string>
     <string name="oneplus_vibrate_intensity">شدت لرزش</string>
     <string name="oneplus_vibrate_on_touch_intensity">ارتعاش با لرزه</string>
     <string name="oneplus_vibrate_rhythm">الگوی لرزش</string>
@@ -4324,6 +4333,7 @@
     <string name="onplus_software_version_info">نسخۀ نرم‌افزار</string>
     <string name="onscreen_keyboard_settings_summary">تنظیمات صفحه‌کلید روی صفحه</string>
     <string name="op_advanced_settings">پیشرفته</string>
+    <string name="op_already_know">متوجه شدم</string>
     <string name="op_android_mode_cannot_change_color_accent">تم پیش‌فرض فقط می‌تواند از تم رنگ سیستم استفاده کند</string>
     <string name="op_aod_parsons_info_button">تأیید</string>
     <string name="op_aod_parsons_info_message">"هنگامی که باز می‌شود، یک شاهکار خلق می شود. Insight
@@ -4367,7 +4377,7 @@
     <string name="op_custom_color_value">مقدار رنگ</string>
     <string name="op_custom_color_value_edit">مقداری برای رنگ وارد کنید</string>
     <string name="op_custom_color_value_invalid">مقدار رنگ نامعتبر است</string>
-    <string name="op_dark_mode_title">تیره</string>
+    <string name="op_dark_mode_title">تاریک</string>
     <string name="op_data_vowlan_enable_summary">استفاده از تماس Wi-Fi در صورت موجود بودن</string>
     <string name="op_default_apps_summary">صفحه اصلی، مرورگر</string>
     <string name="op_default_luncher_title">برنامه صفحه اصلی</string>
@@ -4379,6 +4389,7 @@
     <string name="op_display_advanced_settings_summary_5">نرخ تازه‌سازی</string>
     <string name="op_display_advanced_settings_summary_6">کالیبراسیون صفحۀ نمایش، وضوح تصویر، نرخ تازه‌سازی، محدودۀ نمایش دوربین جلو</string>
     <string name="op_display_advanced_settings_summary_7">کالیبراسیون صفحۀ نمایش، نرخ تازه‌سازی، محدودۀ نمایش دوربین جلو</string>
+    <string name="op_display_advanced_settings_summary_8">نرخ تازه‌سازی، محدوده نمایش دوربین جلو</string>
     <string name="op_display_graphics_enhancement_engine">موتور بهبود ویدیو</string>
     <string name="op_display_motion_graphics_compensation">یکدست کردن گرافیک حرکت</string>
     <string name="op_display_motion_graphics_compensation_summary">بهبود نرخ فریم ویژگی‌های گرافیکی، روان‌تر شدن ویدیوها و جلوه‌های بازی</string>
@@ -4404,10 +4415,12 @@
     <string name="op_global_drak_mode_not_full_support_list">برنامه‌های پشتیبانی‌نشده</string>
     <string name="op_global_drak_mode_support_description">برنامه‌هایی که پشتیبانی نمی‌شوند، ممکن است در حالت تاریک به طور مناسبی عمل نکنند</string>
     <string name="op_gps_off_warn_msg">لطفاً ابتدا موقعیت مکانی را روشن کنید</string>
-    <string name="op_high_power_app_manager">برنامه های با مصرف زیاد برق</string>
+    <string name="op_high_power_app_manager">مدیریت برنامه های تشنه قدرت</string>
     <string name="op_history_toggled_on_summary">اعلان‌های اخیر شما در اینجا ظاهر می‌شوند</string>
     <string name="op_keep_location_services">برای یافتن و ردگیری ایستگاه‌های شارژ نزدیک، لطفاً خدمات موقعیت مکانی را فعال نگه دارید</string>
-    <string name="op_light_mode_title">روشن</string>
+    <string name="op_lab_dc_still_on">همچنان روشن است</string>
+    <string name="op_lab_dc_warn_message">هنگامی که کاهش روشنایی DC روشن است، ممکن است در برخی موارد رنگ‌های ناهموار یا غیرعادی نمایش داده شوند. آیا مطمئن هستید که می‌خواهید آن را روشن کنید؟</string>
+    <string name="op_light_mode_title">نور</string>
     <string name="op_linked_launch_summary">مدیریت برنامه‌ها در پس زمینه قابل لینک دهی و راه اندازی هستند</string>
     <string name="op_linked_launch_title">راه اندازی خودکار برنامه ها</string>
     <string name="op_lockpassword_choose_your_password_header_for_face">برای استفاده از «قفل‌گشایی با چهره»، رمز عبور تنظیم کنید</string>
@@ -4422,6 +4435,9 @@
     <string name="op_notification_history_summary">نمایش اعلان‌های اخیر</string>
     <string name="op_oneplus_roaming_summary">ارائه خدمات دسترسی به اینترنت جهانی</string>
     <string name="op_oneplus_roaming_title">OnePlus Roaming</string>
+    <string name="op_powerkey_menu_cards_description">در صورت فعال شدن، حالت پرداخت و اطلاعات پرواز به طور ایمن نمایش داده خواهد شد</string>
+    <string name="op_powerkey_menu_device_controller_description">دسترسی به کنترل‌کننده دستگاه مربوطه فعال شود</string>
+    <string name="op_powerkey_menu_lock_display_title">نمایشگر صفحۀ قفل</string>
     <string name="op_primary_charm_purple_label">بنفش پررنگ</string>
     <string name="op_primary_dark_green_label">سبز تیره</string>
     <string name="op_primary_default_label">آبی</string>
@@ -4451,6 +4467,9 @@
     <string name="op_starwar_mode_cannot_change_color_accent">تم «جنگ ستارگان» فقط می‌تواند از تم رنگ سیستم استفاده کند</string>
     <string name="op_starwar_mode_title">جنگ ستارگان</string>
     <string name="op_storage">فضای ذخیره و حافظه</string>
+    <string name="op_switch_record_info">کپی شد در %2$s در %1$s</string>
+    <string name="op_switch_record_none">هنوز سوابق انتقال داده موجود نیست</string>
+    <string name="op_switch_record_title">سوابق انتقال داده</string>
     <string name="op_system_dashboard_summary">زبان‌ها، زمان، بازنشانی، به‌روزرسانی‌ها</string>
     <string name="op_tcp_timestamps_randomization_dialog_title">انتخاب پرچم برچسب‌های زمان تصادفی tcp</string>
     <string name="op_tcp_timestamps_randomization_title">پرچم برچسب زمان تصادفی TCP</string>
@@ -4458,7 +4477,9 @@
     <string name="op_theme_2__title">انتقام‌جویان</string>
     <string name="op_theme_3_cannot_change_color_accent">تم McLaren تنها می‌تواند از تم رنگ سیستم استفاده کند</string>
     <string name="op_theme_3_title">McLaren</string>
+    <string name="op_theme_clock_preview_title">ساعت در نمایشگر محیطی</string>
     <string name="op_theme_entrance_summary">تصاویر زمینه، رنگ برجسته، فونت</string>
+    <string name="op_theme_lock_screen_customization">صفحۀ قفل و نمایشگر محیطی</string>
     <string name="op_theme_mode_title">پوسته</string>
     <string name="op_use_cast">استفاده از «تاباندن»</string>
     <string name="op_user_manual_settings">دفترچه راهنمای کاربر</string>
@@ -4512,7 +4533,7 @@
     <string name="owner_info_settings_summary">خالی</string>
     <string name="owner_info_settings_title">افزودن نوشتار در صفحه قفل</string>
     <string name="oxygen_version">نسخۀ OxygenOS</string>
-    <string name="oxygen_version_default">ناشناس</string>
+    <string name="oxygen_version_default">نامشخص</string>
     <string name="packages_subtitle">شامل بسته ها</string>
     <string name="page_tab_title_summary">همه</string>
     <string name="page_tab_title_support">نکته‌ها و پشتیبانی</string>
@@ -4525,6 +4546,9 @@
     <string name="permission_bar_chart_details">دیدن همه موارد در داشبورد</string>
     <string name="permission_bar_chart_empty_text">هیچ برنامه‌ای از مجوزها استفاده نکرده است</string>
     <string name="permission_bar_chart_title">پراستفاده‌ترین مجوز در ۲۴ ساعت گذشته</string>
+    <string name="permission_btn_text_denied">خروج</string>
+    <string name="permission_btn_text_grant">تأیید</string>
+    <string name="permission_dialog_title">بیانیۀ مجوز</string>
     <string name="permissions_label">مجوزها</string>
     <string name="permit_draw_overlay">مجاز کردن نمایش روی سایر برنامه‌ها</string>
     <string name="permit_manage_external_storage">دسترسی دادن برای مدیریت همه فایل‌ها</string>
@@ -5453,7 +5477,7 @@
     <string name="status_bar_settings_auto_rotation_title">چرخش خودکار صفحۀ نمایش</string>
     <string name="status_bar_settings_bluetooth_title">بلوتوث</string>
     <string name="status_bar_settings_cast_title">پخش</string>
-    <string name="status_bar_settings_cellular_title">داده های شبکه موبایل</string>
+    <string name="status_bar_settings_cellular_title">دادۀ تلفن همراه</string>
     <string name="status_bar_settings_dnd_title">بدون مزاحمت</string>
     <string name="status_bar_settings_headset_title">هدست</string>
     <string name="status_bar_settings_hotspot_title">نقطۀ اتصال</string>
@@ -5854,17 +5878,17 @@
     <string name="traffic_auto_close_network">قطع خودکار از شبکه</string>
     <string name="traffic_auto_close_network_keep_closed">نادیده گرفتن</string>
     <string name="traffic_auto_close_network_keep_closed_vzw">تأیید</string>
-    <string name="traffic_auto_close_network_reopen">فعالسازی داده‌های تلفن همراه</string>
+    <string name="traffic_auto_close_network_reopen">فعال کردن دادۀ تلفن همراه</string>
     <string name="traffic_auto_close_network_reopen_vzw">روشن کردن داده</string>
     <string name="traffic_auto_close_network_summary">قطع خودکار شبکه پس از رسیدن به آستانه حداکثر استفاده از داده ها</string>
     <string name="traffic_day_dimension" />
     <string name="traffic_limit_value_title">حد مصرف داده</string>
     <string name="traffic_package_used">داده های استفاده شده</string>
     <string name="traffic_reset_day_summary">دوره ماهانه در %1$s هر ماه شروع می شود</string>
-    <string name="traffic_reset_day_title">دوره صورتحساب</string>
+    <string name="traffic_reset_day_title">دورۀ صدور صورتحساب</string>
     <string name="traffic_set_limit_description_vzw">در صورت مصرف این مقدار دادۀ تلفن همراه، اتصال دادۀ تلفن همراه خاموش شود</string>
     <string name="traffic_set_limit_title">تنظیم حد مصرف داده</string>
-    <string name="traffic_set_limit_title_vzw">محدوده استفاده از داده ها</string>
+    <string name="traffic_set_limit_title_vzw">محدودیت مصرف داده</string>
     <string name="traffic_set_warn_description_vzw">در صورت مصرف این مقدار دادۀ تلفن همراه، اخطار داده شود.</string>
     <string name="traffic_set_warn_title">تنظیم هشدار مصرف داده</string>
     <string name="traffic_set_warn_title_vzw">اخطار مصرف داده</string>
@@ -5973,6 +5997,10 @@
     <string name="uninstallapps_toast_message">برنامه‌ها حذف شد</string>
     <string name="uninstalling">حذف نصب…</string>
     <string name="uninstalling_notification_channel">حذف‌های در حال اجرا</string>
+    <string name="units_one">گیگابایت/مگابایت (تغییر خودکار)</string>
+    <string name="units_three">فقط مگابایت</string>
+    <string name="units_title">نمایش واحدها</string>
+    <string name="units_two">فقط گیگابایت</string>
     <string name="unknown">ناشناس</string>
     <string name="unknown_app">برنامه ناشناس</string>
     <string name="unknown_unavailability_setting_summary">تنظیم در دسترس نیست</string>
@@ -6614,6 +6642,8 @@
     <string name="wifi_no_user_cert_warning">به گواهینامه نیاز است.</string>
     <string name="wifi_not_in_range">در محدوده نیست</string>
     <string name="wifi_not_in_range_message">شبکه در محدوده نیست</string>
+    <string name="wifi_notification">"اعلان Wi-Fi "</string>
+    <string name="wifi_notification_summary">هنگامی که Wi-Fi در دسترس است به من اطلاع داده شود</string>
     <string name="wifi_notify_open_networks">دریافت اعلان برای شبکه‌های عمومی</string>
     <string name="wifi_notify_open_networks_summary">وقتی شبکه عمومی‌ای با کیفیت خوب در دسترس است، اطلاع داده شود</string>
     <string name="wifi_on_time">‏Wi-Fi به موقع</string>
@@ -6662,7 +6692,7 @@
     <string name="wifi_security">امنیت</string>
     <string name="wifi_security_dialog">با امنیت باز، هر دستگاهی می‌تواند به نقطۀ اتصال همراه شما متصل شود و از اتصال دادۀ تلفن همراه شما استفاده کند.</string>
     <string name="wifi_security_none">خالی</string>
-    <string name="wifi_security_open">بازکردن</string>
+    <string name="wifi_security_open">باز کردن</string>
     <string name="wifi_select_network">‏انتخاب Wi-Fi</string>
     <string name="wifi_setting_frequency_band_error">در تنظیم باند فرکانس مشکل وجود دارد.</string>
     <string name="wifi_setting_frequency_band_summary">محدوده فرکانس عملیات را مشخص کنید</string>
