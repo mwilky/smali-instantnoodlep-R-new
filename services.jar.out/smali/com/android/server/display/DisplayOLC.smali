@@ -12,7 +12,7 @@
 
 
 # static fields
-.field public static HBM_THRESHOLD_DELTA:[I = null
+.field public static HBM_THRESHOLD:[I = null
 
 .field private static final MSG_GET_ONLINECONFIG:I = 0x1
 
@@ -69,15 +69,15 @@
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/android/server/display/DisplayOLC;->HBM_THRESHOLD_DELTA:[I
+    sput-object v0, Lcom/android/server/display/DisplayOLC;->HBM_THRESHOLD:[I
 
     return-void
 
     :array_0
     .array-data 4
-        0x0
-        0x2710
         0x4e20
+        0x7530
+        0x9c40
     .end array-data
 .end method
 
@@ -230,7 +230,7 @@
 
     const/4 v3, 0x0
 
-    const-string v4, "HBMThresholdDelta"
+    const-string v4, "HBMThreshold"
 
     const-string v5, "UseCurveGenAlgo"
 
@@ -351,7 +351,7 @@
     :goto_1
     if-ge v2, v9, :cond_4
 
-    sget-object v3, Lcom/android/server/display/DisplayOLC;->HBM_THRESHOLD_DELTA:[I
+    sget-object v3, Lcom/android/server/display/DisplayOLC;->HBM_THRESHOLD:[I
 
     invoke-virtual {v1, v2}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
 
@@ -371,7 +371,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "HBM_THRESHOLD_DELTA["
+    const-string v4, "HBM_THRESHOLD["
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -381,7 +381,7 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v4, Lcom/android/server/display/DisplayOLC;->HBM_THRESHOLD_DELTA:[I
+    sget-object v4, Lcom/android/server/display/DisplayOLC;->HBM_THRESHOLD:[I
 
     aget v4, v4, v2
 
@@ -556,7 +556,7 @@
         -0x7992c032 -> :sswitch_3
         -0x3ef647d8 -> :sswitch_2
         -0xf572f25 -> :sswitch_1
-        0xed85780 -> :sswitch_0
+        0x2257a318 -> :sswitch_0
     .end sparse-switch
 .end method
 

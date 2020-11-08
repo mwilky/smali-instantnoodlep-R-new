@@ -1948,6 +1948,10 @@
 
     if-nez v0, :cond_29
 
+    iget-object v0, v1, Lcom/android/server/wm/ActivityStack;->mLastNoHistoryActivity:Lcom/android/server/wm/ActivityRecord;
+
+    if-eq v0, v7, :cond_29
+
     sget-boolean v0, Lcom/android/server/wm/ActivityTaskManagerDebugConfig;->DEBUG_STATES:Z
 
     if-eqz v0, :cond_28
@@ -5836,79 +5840,99 @@
 .end method
 
 .method handleAppDied(Lcom/android/server/wm/WindowProcessController;)Z
-    .locals 3
+    .locals 4
 
-    iget-object v0, p0, Lcom/android/server/wm/ActivityStack;->mPausingActivity:Lcom/android/server/wm/ActivityRecord;
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    iget-object v1, p0, Lcom/android/server/wm/ActivityStack;->mPausingActivity:Lcom/android/server/wm/ActivityRecord;
 
-    if-eqz v0, :cond_2
+    const/4 v2, 0x0
 
-    iget-object v0, p0, Lcom/android/server/wm/ActivityStack;->mPausingActivity:Lcom/android/server/wm/ActivityRecord;
+    if-eqz v1, :cond_2
 
-    iget-object v0, v0, Lcom/android/server/wm/ActivityRecord;->app:Lcom/android/server/wm/WindowProcessController;
+    iget-object v1, p0, Lcom/android/server/wm/ActivityStack;->mPausingActivity:Lcom/android/server/wm/ActivityRecord;
 
-    if-ne v0, p1, :cond_2
+    iget-object v1, v1, Lcom/android/server/wm/ActivityRecord;->app:Lcom/android/server/wm/WindowProcessController;
 
-    sget-boolean v0, Lcom/android/server/wm/ActivityTaskManagerDebugConfig;->DEBUG_PAUSE:Z
+    if-ne v1, p1, :cond_2
 
-    if-nez v0, :cond_0
+    sget-boolean v1, Lcom/android/server/wm/ActivityTaskManagerDebugConfig;->DEBUG_PAUSE:Z
 
-    sget-boolean v0, Lcom/android/server/wm/ActivityTaskManagerDebugConfig;->DEBUG_CLEANUP:Z
+    if-nez v1, :cond_0
 
-    if-eqz v0, :cond_1
+    sget-boolean v1, Lcom/android/server/wm/ActivityTaskManagerDebugConfig;->DEBUG_CLEANUP:Z
+
+    if-eqz v1, :cond_1
 
     :cond_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "App died while pausing: "
+    const-string v3, "App died while pausing: "
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/android/server/wm/ActivityStack;->mPausingActivity:Lcom/android/server/wm/ActivityRecord;
+    iget-object v3, p0, Lcom/android/server/wm/ActivityStack;->mPausingActivity:Lcom/android/server/wm/ActivityRecord;
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    const-string v2, "ActivityTaskManager"
+    const-string v3, "ActivityTaskManager"
 
-    invoke-static {v2, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
-    iput-object v1, p0, Lcom/android/server/wm/ActivityStack;->mPausingActivity:Lcom/android/server/wm/ActivityRecord;
+    iput-object v2, p0, Lcom/android/server/wm/ActivityStack;->mPausingActivity:Lcom/android/server/wm/ActivityRecord;
+
+    const/4 v0, 0x1
 
     :cond_2
-    iget-object v0, p0, Lcom/android/server/wm/ActivityStack;->mLastPausedActivity:Lcom/android/server/wm/ActivityRecord;
+    iget-object v1, p0, Lcom/android/server/wm/ActivityStack;->mLastPausedActivity:Lcom/android/server/wm/ActivityRecord;
 
-    if-eqz v0, :cond_3
+    if-eqz v1, :cond_3
 
-    iget-object v0, p0, Lcom/android/server/wm/ActivityStack;->mLastPausedActivity:Lcom/android/server/wm/ActivityRecord;
+    iget-object v1, p0, Lcom/android/server/wm/ActivityStack;->mLastPausedActivity:Lcom/android/server/wm/ActivityRecord;
 
-    iget-object v0, v0, Lcom/android/server/wm/ActivityRecord;->app:Lcom/android/server/wm/WindowProcessController;
+    iget-object v1, v1, Lcom/android/server/wm/ActivityRecord;->app:Lcom/android/server/wm/WindowProcessController;
 
-    if-ne v0, p1, :cond_3
+    if-ne v1, p1, :cond_3
 
-    iput-object v1, p0, Lcom/android/server/wm/ActivityStack;->mLastPausedActivity:Lcom/android/server/wm/ActivityRecord;
+    iput-object v2, p0, Lcom/android/server/wm/ActivityStack;->mLastPausedActivity:Lcom/android/server/wm/ActivityRecord;
 
-    iput-object v1, p0, Lcom/android/server/wm/ActivityStack;->mLastNoHistoryActivity:Lcom/android/server/wm/ActivityRecord;
+    iput-object v2, p0, Lcom/android/server/wm/ActivityStack;->mLastNoHistoryActivity:Lcom/android/server/wm/ActivityRecord;
 
     :cond_3
-    iget-object v0, p0, Lcom/android/server/wm/ActivityStack;->mStackSupervisor:Lcom/android/server/wm/ActivityStackSupervisor;
+    iget-object v1, p0, Lcom/android/server/wm/ActivityStack;->mStackSupervisor:Lcom/android/server/wm/ActivityStackSupervisor;
 
-    invoke-virtual {v0, p1}, Lcom/android/server/wm/ActivityStackSupervisor;->removeHistoryRecords(Lcom/android/server/wm/WindowProcessController;)V
+    invoke-virtual {v1, p1}, Lcom/android/server/wm/ActivityStackSupervisor;->removeHistoryRecords(Lcom/android/server/wm/WindowProcessController;)V
 
-    iget-object v0, p0, Lcom/android/server/wm/ActivityStack;->mRemoveHistoryRecordsForApp:Lcom/android/server/wm/ActivityStack$RemoveHistoryRecordsForApp;
+    iget-object v1, p0, Lcom/android/server/wm/ActivityStack;->mRemoveHistoryRecordsForApp:Lcom/android/server/wm/ActivityStack$RemoveHistoryRecordsForApp;
 
-    invoke-virtual {v0, p1}, Lcom/android/server/wm/ActivityStack$RemoveHistoryRecordsForApp;->process(Lcom/android/server/wm/WindowProcessController;)Z
+    invoke-virtual {v1, p1}, Lcom/android/server/wm/ActivityStack$RemoveHistoryRecordsForApp;->process(Lcom/android/server/wm/WindowProcessController;)Z
 
-    move-result v0
+    move-result v1
 
-    return v0
+    if-nez v1, :cond_5
+
+    if-eqz v0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    const/4 v2, 0x0
+
+    goto :goto_1
+
+    :cond_5
+    :goto_0
+    const/4 v2, 0x1
+
+    :goto_1
+    return v2
 .end method
 
 .method handleCompleteDeferredRemoval()Z
@@ -9441,6 +9465,10 @@
     invoke-virtual {v1}, Lcom/android/server/wm/KeyguardController;->isKeyguardGoingAway()Z
 
     move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-boolean v1, v0, Lcom/android/server/wm/DisplayContent;->isDefaultDisplay:Z
 
     if-eqz v1, :cond_0
 

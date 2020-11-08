@@ -458,6 +458,20 @@
     :try_start_1
     invoke-static {v13, v14, v0}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
+    invoke-virtual/range {v18 .. v18}, Landroid/view/SurfaceControl$ScreenshotGraphicBuffer;->getGraphicBuffer()Landroid/graphics/GraphicBuffer;
+
+    move-result-object v0
+
+    invoke-virtual/range {v18 .. v18}, Landroid/view/SurfaceControl$ScreenshotGraphicBuffer;->getColorSpace()Landroid/graphics/ColorSpace;
+
+    move-result-object v13
+
+    invoke-static {v0, v13}, Lcom/android/server/wm/utils/RotationAnimationUtils;->getMedianBorderLuma(Landroid/graphics/GraphicBuffer;Landroid/graphics/ColorSpace;)F
+
+    move-result v0
+
+    iput v0, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mStartLuma:F
+
     sget-boolean v0, Lcom/android/server/wm/OpScreenRotationImprovementInjector;->IS_SCREEN_ROTATION_IMPROVEMENT_ENABLED:Z
 
     if-eqz v0, :cond_7
@@ -535,20 +549,6 @@
     move v14, v7
 
     const/4 v9, 0x3
-
-    invoke-virtual/range {v18 .. v18}, Landroid/view/SurfaceControl$ScreenshotGraphicBuffer;->getGraphicBuffer()Landroid/graphics/GraphicBuffer;
-
-    move-result-object v0
-
-    invoke-virtual/range {v18 .. v18}, Landroid/view/SurfaceControl$ScreenshotGraphicBuffer;->getColorSpace()Landroid/graphics/ColorSpace;
-
-    move-result-object v2
-
-    invoke-static {v0, v2}, Lcom/android/server/wm/utils/RotationAnimationUtils;->getMedianBorderLuma(Landroid/graphics/GraphicBuffer;Landroid/graphics/ColorSpace;)F
-
-    move-result v0
-
-    iput v0, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mStartLuma:F
 
     :goto_7
     const-wide/16 v2, 0x20
@@ -1441,6 +1441,24 @@
 
     if-nez v0, :cond_2
 
+    iget-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
+
+    invoke-virtual {v0}, Lcom/android/server/wm/DisplayContent;->getDisplay()Landroid/view/Display;
+
+    move-result-object v0
+
+    iget-object v3, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
+
+    invoke-virtual {v3}, Lcom/android/server/wm/DisplayContent;->getWindowingLayer()Landroid/view/SurfaceControl;
+
+    move-result-object v3
+
+    invoke-static {v0, v3}, Lcom/android/server/wm/utils/RotationAnimationUtils;->getLumaOfSurfaceControl(Landroid/view/Display;Landroid/view/SurfaceControl;)F
+
+    move-result v0
+
+    iput v0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mEndLuma:F
+
     sget-boolean v0, Lcom/android/server/wm/OpScreenRotationImprovementInjector;->IS_SCREEN_ROTATION_IMPROVEMENT_ENABLED:Z
 
     if-eqz v0, :cond_1
@@ -1465,28 +1483,7 @@
 
     invoke-static {v0, v3, v4}, Lcom/android/server/wm/OpScreenRotationImprovementInjector;->calColorForSurfaceControl(Landroid/view/Display;Landroid/view/SurfaceControl;I)V
 
-    goto :goto_0
-
     :cond_1
-    iget-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
-
-    invoke-virtual {v0}, Lcom/android/server/wm/DisplayContent;->getDisplay()Landroid/view/Display;
-
-    move-result-object v0
-
-    iget-object v3, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
-
-    invoke-virtual {v3}, Lcom/android/server/wm/DisplayContent;->getWindowingLayer()Landroid/view/SurfaceControl;
-
-    move-result-object v3
-
-    invoke-static {v0, v3}, Lcom/android/server/wm/utils/RotationAnimationUtils;->getLumaOfSurfaceControl(Landroid/view/Display;Landroid/view/SurfaceControl;)F
-
-    move-result v0
-
-    iput v0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mEndLuma:F
-
-    :goto_0
     invoke-direct/range {p0 .. p8}, Lcom/android/server/wm/ScreenRotationAnimation;->startAnimation(Landroid/view/SurfaceControl$Transaction;JFIIII)Z
 
     iget-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mPerf:Landroid/util/BoostFramework;

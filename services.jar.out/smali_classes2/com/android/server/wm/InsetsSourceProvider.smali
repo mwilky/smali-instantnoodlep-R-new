@@ -1515,15 +1515,58 @@
 
     move-result v0
 
+    if-nez v0, :cond_7
+
+    iget-object v0, p0, Lcom/android/server/wm/InsetsSourceProvider;->mControlTarget:Lcom/android/server/wm/InsetsControlTarget;
+
+    if-eq p1, v0, :cond_7
+
+    invoke-interface {p1}, Lcom/android/server/wm/InsetsControlTarget;->getWindow()Lcom/android/server/wm/WindowState;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_7
+
+    invoke-interface {p1}, Lcom/android/server/wm/InsetsControlTarget;->getWindow()Lcom/android/server/wm/WindowState;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/android/server/wm/InsetsSourceProvider;->isHomeApp(Lcom/android/server/wm/WindowState;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    iget-object v0, p0, Lcom/android/server/wm/InsetsSourceProvider;->mSource:Landroid/view/InsetsSource;
+
+    invoke-virtual {v0}, Landroid/view/InsetsSource;->getType()I
+
+    move-result v0
+
+    invoke-static {v0}, Landroid/view/InsetsState;->getDefaultVisibility(I)Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/android/server/wm/InsetsSourceProvider;->mClientVisible:Z
+
+    :cond_7
+    invoke-virtual {p0}, Lcom/android/server/wm/InsetsSourceProvider;->getSource()Landroid/view/InsetsSource;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/InsetsSource;->getType()I
+
+    move-result v0
+
     const/16 v3, 0xd
 
-    if-ne v0, v3, :cond_8
+    if-ne v0, v3, :cond_9
 
     invoke-static {}, Lcom/android/server/wm/OpQuickReplyInjector;->isQuickReplyRunning()Z
 
     move-result v0
 
-    if-nez v0, :cond_7
+    if-nez v0, :cond_8
 
     iget-object v0, p0, Lcom/android/server/wm/InsetsSourceProvider;->mSource:Landroid/view/InsetsSource;
 
@@ -1539,14 +1582,14 @@
 
     goto :goto_0
 
-    :cond_7
+    :cond_8
     const-string v0, "WindowManager"
 
     const-string v3, "QuickReply:skipping clientHidden for IME"
 
     invoke-static {v0, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_8
+    :cond_9
     :goto_0
     iget-object v0, p0, Lcom/android/server/wm/InsetsSourceProvider;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -1586,15 +1629,15 @@
 
     cmp-long v7, v5, v7
 
-    if-ltz v7, :cond_9
+    if-ltz v7, :cond_a
 
     iget-object v7, p0, Lcom/android/server/wm/InsetsSourceProvider;->mWin:Lcom/android/server/wm/WindowState;
 
     iget-boolean v7, v7, Lcom/android/server/wm/WindowState;->mHasSurface:Z
 
-    if-eqz v7, :cond_9
+    if-eqz v7, :cond_a
 
-    if-eqz v4, :cond_9
+    if-eqz v4, :cond_a
 
     iget-object v7, p0, Lcom/android/server/wm/InsetsSourceProvider;->mWin:Lcom/android/server/wm/WindowState;
 
@@ -1612,7 +1655,7 @@
 
     invoke-virtual {v0, v4, v7, v5, v6}, Landroid/view/SurfaceControl$Transaction;->deferTransactionUntil(Landroid/view/SurfaceControl;Landroid/view/SurfaceControl;J)Landroid/view/SurfaceControl$Transaction;
 
-    :cond_9
+    :cond_a
     iput-object p1, p0, Lcom/android/server/wm/InsetsSourceProvider;->mControlTarget:Lcom/android/server/wm/InsetsControlTarget;
 
     invoke-direct {p0}, Lcom/android/server/wm/InsetsSourceProvider;->updateVisibility()V
@@ -1655,7 +1698,7 @@
 
     sget-boolean v7, Lcom/android/server/protolog/ProtoLog$Cache;->WM_DEBUG_IME_enabled:Z
 
-    if-eqz v7, :cond_a
+    if-eqz v7, :cond_b
 
     iget-object v7, p0, Lcom/android/server/wm/InsetsSourceProvider;->mControl:Landroid/view/InsetsSourceControl;
 
@@ -1683,7 +1726,7 @@
 
     invoke-static {v9, v10, v3, v1, v11}, Lcom/android/server/protolog/ProtoLogImpl;->d(Lcom/android/server/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    :cond_a
+    :cond_b
     return-void
 .end method
 

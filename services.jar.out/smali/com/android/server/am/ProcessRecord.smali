@@ -838,7 +838,7 @@
     return v2
 
     :cond_0
-    invoke-virtual {p0}, Lcom/android/server/am/ProcessRecord;->isInterestingToUserLocked()Z
+    invoke-virtual {p0}, Lcom/android/server/am/ProcessRecord;->isInterestingTopLocked()Z
 
     move-result v0
 
@@ -5656,7 +5656,7 @@
 .end method
 
 .method public isInterestingToUserLocked()Z
-    .locals 5
+    .locals 7
 
     iget-object v0, p0, Lcom/android/server/am/ProcessRecord;->mWindowProcessController:Lcom/android/server/wm/WindowProcessController;
 
@@ -5680,15 +5680,26 @@
     const/4 v2, 0x0
 
     :goto_0
+    const/4 v3, 0x0
+
     if-ge v2, v0, :cond_2
 
-    iget-object v3, p0, Lcom/android/server/am/ProcessRecord;->mServices:Landroid/util/ArraySet;
+    const/4 v4, 0x0
 
-    invoke-virtual {v3, v2}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
+    :try_start_0
+    iget-object v5, p0, Lcom/android/server/am/ProcessRecord;->mServices:Landroid/util/ArraySet;
 
-    move-result-object v3
+    invoke-virtual {v5, v2}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
 
-    check-cast v3, Lcom/android/server/am/ServiceRecord;
+    move-result-object v5
+
+    check-cast v5, Lcom/android/server/am/ServiceRecord;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-object v3, v5
+
+    nop
 
     if-eqz v3, :cond_1
 
@@ -5703,10 +5714,31 @@
 
     goto :goto_0
 
-    :cond_2
-    const/4 v1, 0x0
+    :catch_0
+    move-exception v1
 
-    return v1
+    const-string v5, "ActivityManager"
+
+    const-string/jumbo v6, "isInterestingToUserLocked value at exception"
+
+    invoke-static {v5, v6, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    return v3
+
+    :cond_2
+    return v3
+.end method
+
+.method public isInterestingTopLocked()Z
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/am/ProcessRecord;->mWindowProcessController:Lcom/android/server/wm/WindowProcessController;
+
+    invoke-virtual {v0}, Lcom/android/server/wm/WindowProcessController;->isInterestingToUser()Z
+
+    move-result v0
+
+    return v0
 .end method
 
 .method isMonitorCpuUsage()Z

@@ -142,7 +142,7 @@
 
     move-result-object v0
 
-    const v1, 0x1070097
+    const v1, 0x1070098
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -612,7 +612,7 @@
 
     sget-object v0, Lcom/android/server/connectivity/NetworkNotificationManager$NotificationType;->NO_INTERNET:Lcom/android/server/connectivity/NetworkNotificationManager$NotificationType;
 
-    const v13, 0x1040865
+    const v13, 0x1040867
 
     if-ne v3, v0, :cond_4
 
@@ -636,7 +636,7 @@
 
     move-result-object v0
 
-    const v13, 0x1040866
+    const v13, 0x1040868
 
     invoke-virtual {v11, v13}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -776,7 +776,7 @@
 
     move-result-object v0
 
-    const v13, 0x1040866
+    const v13, 0x1040868
 
     invoke-virtual {v11, v13}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -830,7 +830,7 @@
     goto/16 :goto_3
 
     :cond_a
-    const v0, 0x1040863
+    const v0, 0x1040865
 
     new-array v13, v15, [Ljava/lang/Object;
 

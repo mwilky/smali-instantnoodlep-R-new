@@ -12,6 +12,12 @@
 
 
 # static fields
+.field private static final EXTRA_FOCUS_WINDOW:Ljava/lang/String; = "focusWindow"
+
+.field private static final EXTRA_LONGSHOT:Ljava/lang/String; = "longshot"
+
+.field private static final EXTRA_VOICE_LONGSHOT:Ljava/lang/String; = "voiceLongshot"
+
 .field private static final TAG:Ljava/lang/String; = "SystemActionPerformer"
 
 
@@ -678,7 +684,7 @@
 .end method
 
 .method private takeScreenshot()Z
-    .locals 9
+    .locals 10
 
     iget-object v0, p0, Lcom/android/server/accessibility/SystemActionPerformer;->mScreenshotHelperSupplier:Ljava/util/function/Supplier;
 
@@ -700,7 +706,31 @@
     invoke-direct {v0, v1}, Lcom/android/internal/util/ScreenshotHelper;-><init>(Landroid/content/Context;)V
 
     :goto_0
-    move-object v2, v0
+    new-instance v1, Landroid/os/Bundle;
+
+    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
+
+    const-string/jumbo v2, "voiceLongshot"
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
+
+    const-string/jumbo v2, "longshot"
+
+    invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
+
+    const-string v2, "focusWindow"
+
+    const-string v3, ""
+
+    invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Lcom/android/internal/util/ScreenshotHelper;->getScreenshotHelperInjector()Lcom/android/internal/util/ScreenshotHelperInjector;
+
+    move-result-object v9
+
+    if-eqz v9, :cond_1
 
     const/4 v3, 0x1
 
@@ -708,23 +738,26 @@
 
     const/4 v5, 0x1
 
-    const/4 v6, 0x4
-
-    new-instance v7, Landroid/os/Handler;
+    new-instance v6, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    move-result-object v0
+    move-result-object v2
 
-    invoke-direct {v7, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    invoke-direct {v6, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    const/4 v8, 0x0
+    const/4 v7, 0x0
 
-    invoke-virtual/range {v2 .. v8}, Lcom/android/internal/util/ScreenshotHelper;->takeScreenshot(IZZILandroid/os/Handler;Ljava/util/function/Consumer;)V
+    move-object v2, v9
 
-    const/4 v0, 0x1
+    move-object v8, v1
 
-    return v0
+    invoke-virtual/range {v2 .. v8}, Lcom/android/internal/util/ScreenshotHelperInjector;->takeScreenshot(IZZLandroid/os/Handler;ZLandroid/os/Bundle;)V
+
+    :cond_1
+    const/4 v2, 0x1
+
+    return v2
 .end method
 
 .method private toggleSplitScreen()Z

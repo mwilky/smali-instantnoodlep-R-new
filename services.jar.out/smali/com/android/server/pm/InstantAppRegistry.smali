@@ -602,7 +602,7 @@
 
     move-result-object v1
 
-    const-string v2, "instant"
+    const-string/jumbo v2, "instant"
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
@@ -3920,7 +3920,7 @@
 
     move-result-object v0
 
-    const-string v1, "installed_instant_app_max_cache_period"
+    const-string/jumbo v1, "installed_instant_app_max_cache_period"
 
     const-wide v2, 0x39ef8b000L
 

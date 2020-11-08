@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager$ConfigHandler;,
         Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager$Instance;
     }
 .end annotation
@@ -20,15 +21,21 @@
 
 .field public static final EMPTY:[Ljava/lang/String;
 
+.field private static final HT_ONLINE_CONFIG_UPDATE_PATH:Ljava/lang/String; = "/sys/module/houston/parameters/ht_online_config_update"
+
 .field private static final INVALID_START_TIME:I = -0x1
 
 .field private static final MAX_JANK_COUNT:I = 0x32
+
+.field private static final MSG_HT_ONLINE_CONFIG_UPDATE:I = 0x1
 
 .field private static final TAG:Ljava/lang/String; = "HoustonProcessManager"
 
 
 # instance fields
 .field private mAiBoostController:I
+
+.field private mAiPicker:Lcom/oneplus/houston/apkserver/bridge/HoustonAiBoostPicker;
 
 .field private mBlackGameArray:[Ljava/lang/String;
 
@@ -43,6 +50,8 @@
 .end field
 
 .field private mCurrentPackage:Ljava/lang/String;
+
+.field private mHandler:Landroid/os/Handler;
 
 .field private mIsAiFeatrueOn:Z
 
@@ -111,7 +120,7 @@
 .end method
 
 .method private constructor <init>()V
-    .locals 8
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -155,33 +164,17 @@
 
     iput-object v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mCurrentPackage:Ljava/lang/String;
 
-    const-string v1, "com.tencent.tmgp.pubgmhd"
-
-    const-string v2, "com.tencent.tmgp.speedmobile"
-
-    const-string v3, "com.rekoo.pubgm"
-
-    const-string v4, "com.nianticlabs.pokemongo"
-
-    const-string v5, "com.supercell.clashofclans"
-
-    const-string v6, "com.kiloo.subwaysurf"
-
-    const-string v7, "com.tencent.ig"
-
-    filled-new-array/range {v1 .. v7}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mWhiteGameArray:[Ljava/lang/String;
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mWhiteGameAdjustMap:Ljava/util/HashMap;
-
     const/4 v0, 0x0
+
+    new-array v1, v0, [Ljava/lang/String;
+
+    iput-object v1, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mWhiteGameArray:[Ljava/lang/String;
+
+    new-instance v1, Ljava/util/HashMap;
+
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v1, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mWhiteGameAdjustMap:Ljava/util/HashMap;
 
     iput-boolean v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mIsBoostAll:Z
 
@@ -195,6 +188,24 @@
 
     iput-boolean v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mIsAiFeatrueOn:Z
 
+    new-instance v0, Landroid/os/HandlerThread;
+
+    const-string v1, "HoustonProcessManager"
+
+    invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
+
+    new-instance v1, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager$ConfigHandler;
+
+    invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
+
+    move-result-object v2
+
+    invoke-direct {v1, p0, v2}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager$ConfigHandler;-><init>(Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;Landroid/os/Looper;)V
+
+    iput-object v1, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mHandler:Landroid/os/Handler;
+
     return-void
 .end method
 
@@ -202,6 +213,22 @@
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;-><init>()V
+
+    return-void
+.end method
+
+.method static synthetic access$200(Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;)Ljava/util/HashMap;
+    .locals 1
+
+    iget-object v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mWhiteGameAdjustMap:Ljava/util/HashMap;
+
+    return-object v0
+.end method
+
+.method static synthetic access$300(Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->writeSysFile(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -356,6 +383,168 @@
     goto :goto_0
 
     :cond_1
+    return-void
+.end method
+
+.method private isBoostPackage(Ljava/lang/String;)Z
+    .locals 2
+
+    iget-object v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mWhiteGameAdjustMap:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oneplus/houston/apkserver/bridge/HoustonAiAdjust;
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x1
+
+    return v1
+
+    :cond_0
+    const/4 v1, 0x0
+
+    return v1
+.end method
+
+.method private isSkipBoostPackage(Ljava/lang/String;)Z
+    .locals 3
+
+    const/4 v0, 0x0
+
+    :goto_0
+    iget-object v1, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mBlackGameArray:[Ljava/lang/String;
+
+    array-length v2, v1
+
+    if-ge v0, v2, :cond_1
+
+    aget-object v1, v1, v0
+
+    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x1
+
+    return v1
+
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method private pause(Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;)V
+    .locals 4
+
+    if-eqz p1, :cond_1
+
+    iget-object v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mLock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    const-string v1, "HoustonProcessManager"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, " pause : "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p1, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->mPackageName:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, " main_pid:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v3, p1, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->mMainProcess:I
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v3, " mAiBoostFlag:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v3, p1, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->mAiBoostFlag:I
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcom/oneplus/houston/common/client/utils/Logger;->debug(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :try_start_1
+    iget v1, p1, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->mAiBoostFlag:I
+
+    const/4 v2, 0x2
+
+    if-ne v1, v2, :cond_0
+
+    const/4 v1, 0x1
+
+    iput v1, p1, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->mAiBoostFlag:I
+
+    iget-object v2, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mHandler:Landroid/os/Handler;
+
+    invoke-virtual {v2, v1, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :cond_0
+    goto :goto_0
+
+    :catch_0
+    move-exception v1
+
+    :try_start_2
+    const-string v2, "HoustonProcessManager"
+
+    invoke-virtual {v1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcom/oneplus/houston/common/client/utils/Logger;->err(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_0
+    monitor-exit v0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw v1
+
+    :cond_1
+    :goto_1
     return-void
 .end method
 
@@ -541,6 +730,242 @@
     return-void
 .end method
 
+.method private remove(Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;)V
+    .locals 5
+
+    if-eqz p1, :cond_6
+
+    iget-object v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mLock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    const-string v1, "HoustonProcessManager"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, " remove : "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p1, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->mPackageName:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, " main_pid:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v3, p1, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->mMainProcess:I
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v3, " mAiBoostFlag:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v3, p1, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->mAiBoostFlag:I
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcom/oneplus/houston/common/client/utils/Logger;->debug(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    :try_start_1
+    iget v1, p1, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->mAiBoostFlag:I
+
+    if-lez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    iput v1, p1, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->mAiBoostFlag:I
+
+    iget-object v1, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mHandler:Landroid/os/Handler;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v2, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    :try_start_2
+    iget-object v2, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mBoostedPids:Ljava/util/ArrayList;
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    if-ge v1, v2, :cond_2
+
+    iget v2, p1, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->mMainProcess:I
+
+    iget-object v3, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mBoostedPids:Ljava/util/ArrayList;
+
+    invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/Integer;
+
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+
+    if-ne v2, v3, :cond_1
+
+    iget-object v2, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mBoostedPids:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    :goto_1
+    goto :goto_2
+
+    :cond_1
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    :goto_2
+    goto :goto_4
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_5
+
+    :catch_0
+    move-exception v1
+
+    :try_start_3
+    const-string v2, "HoustonProcessManager"
+
+    invoke-virtual {v1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcom/oneplus/houston/common/client/utils/Logger;->err(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    const/4 v1, 0x0
+
+    :goto_3
+    :try_start_4
+    iget-object v2, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mBoostedPids:Ljava/util/ArrayList;
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    if-ge v1, v2, :cond_2
+
+    iget v2, p1, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->mMainProcess:I
+
+    iget-object v3, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mBoostedPids:Ljava/util/ArrayList;
+
+    invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/Integer;
+
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+
+    if-ne v2, v3, :cond_3
+
+    iget-object v2, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mBoostedPids:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    goto :goto_1
+
+    :cond_3
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_3
+
+    :goto_4
+    monitor-exit v0
+
+    goto :goto_7
+
+    :goto_5
+    const/4 v2, 0x0
+
+    :goto_6
+    iget-object v3, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mBoostedPids:Ljava/util/ArrayList;
+
+    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
+
+    move-result v3
+
+    if-ge v2, v3, :cond_5
+
+    iget v3, p1, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->mMainProcess:I
+
+    iget-object v4, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mBoostedPids:Ljava/util/ArrayList;
+
+    invoke-virtual {v4, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/Integer;
+
+    invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
+
+    move-result v4
+
+    if-eq v3, v4, :cond_4
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_6
+
+    :cond_4
+    iget-object v3, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mBoostedPids:Ljava/util/ArrayList;
+
+    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    :cond_5
+    nop
+
+    throw v1
+
+    :catchall_1
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    throw v1
+
+    :cond_6
+    :goto_7
+    return-void
+.end method
+
 .method private removeFromAiBoostWhite(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
@@ -682,12 +1107,587 @@
     return-void
 .end method
 
+.method private start(Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;)V
+    .locals 4
+
+    if-eqz p1, :cond_2
+
+    iget-object v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mLock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    const-string v1, "HoustonProcessManager"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, " start : "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p1, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->mPackageName:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, " main_pid:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v3, p1, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->mMainProcess:I
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v3, " mAiBoostFlag:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v3, p1, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->mAiBoostFlag:I
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcom/oneplus/houston/common/client/utils/Logger;->debug(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget v1, p1, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->mAiBoostFlag:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    const/4 v2, 0x2
+
+    if-eq v1, v2, :cond_1
+
+    :try_start_1
+    iput v2, p1, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->mAiBoostFlag:I
+
+    iget-object v1, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mHandler:Landroid/os/Handler;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v2, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :try_start_2
+    iget-object v1, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mBoostedPids:Ljava/util/ArrayList;
+
+    iget v2, p1, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->mMainProcess:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    iget-object v1, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mBoostedPids:Ljava/util/ArrayList;
+
+    iget v2, p1, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->mMainProcess:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    :goto_0
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v1
+
+    :try_start_3
+    const-string v2, "HoustonProcessManager"
+
+    invoke-virtual {v1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcom/oneplus/houston/common/client/utils/Logger;->err(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :try_start_4
+    iget-object v1, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mBoostedPids:Ljava/util/ArrayList;
+
+    iget v2, p1, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->mMainProcess:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    iget-object v1, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mBoostedPids:Ljava/util/ArrayList;
+
+    iget v2, p1, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->mMainProcess:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    goto :goto_0
+
+    :goto_1
+    iget-object v2, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mBoostedPids:Ljava/util/ArrayList;
+
+    iget v3, p1, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->mMainProcess:I
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    iget-object v2, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mBoostedPids:Ljava/util/ArrayList;
+
+    iget v3, p1, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->mMainProcess:I
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    nop
+
+    throw v1
+
+    :cond_1
+    :goto_2
+    monitor-exit v0
+
+    goto :goto_3
+
+    :catchall_1
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    throw v1
+
+    :cond_2
+    :goto_3
+    return-void
+.end method
+
+.method private updateAiBoostLocked(Ljava/util/HashMap;[Ljava/lang/String;I)V
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/HashMap<",
+            "Ljava/lang/String;",
+            "Lcom/oneplus/houston/apkserver/bridge/HoustonAiAdjust;",
+            ">;[",
+            "Ljava/lang/String;",
+            "I)V"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mLock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mPackages:Ljava/util/HashMap;
+
+    iget-object v2, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mCurrentPackage:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;
+
+    if-eqz v1, :cond_5
+
+    invoke-direct {p0, v1}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->pause(Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;)V
+
+    iget v2, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mAiBoostController:I
+
+    if-nez v2, :cond_2
+
+    const-string v2, "HoustonProcessManager"
+
+    const-string v3, " turn off ai boost!"
+
+    invoke-static {v2, v3}, Lcom/oneplus/houston/common/client/utils/Logger;->warn(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v2, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mPackages:Ljava/util/HashMap;
+
+    invoke-virtual {v2}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/String;
+
+    iget-object v4, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mPackages:Ljava/util/HashMap;
+
+    invoke-virtual {v4, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;
+
+    if-eqz v4, :cond_0
+
+    iget v5, v4, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->mAiBoostFlag:I
+
+    if-lez v5, :cond_0
+
+    invoke-direct {p0, v4}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->remove(Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;)V
+
+    :cond_0
+    goto :goto_0
+
+    :cond_1
+    goto :goto_1
+
+    :cond_2
+    iget v2, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mAiBoostController:I
+
+    const/4 v3, 0x1
+
+    if-ne v2, v3, :cond_3
+
+    const-string v2, "HoustonProcessManager"
+
+    const-string v3, " AI_BOOST_WHITE_LIST ai boost!"
+
+    invoke-static {v2, v3}, Lcom/oneplus/houston/common/client/utils/Logger;->warn(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v2, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mCurrentPackage:Ljava/lang/String;
+
+    invoke-direct {p0, v2}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->isBoostPackage(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    invoke-direct {p0, v1}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->start(Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;)V
+
+    goto :goto_1
+
+    :cond_3
+    iget v2, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mAiBoostController:I
+
+    const/4 v3, 0x2
+
+    if-ne v2, v3, :cond_4
+
+    const-string v2, "HoustonProcessManager"
+
+    const-string v3, " AI_BOOST_ALL_EXCEPT_BLACK_LIST ai boost!"
+
+    invoke-static {v2, v3}, Lcom/oneplus/houston/common/client/utils/Logger;->warn(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v2, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mCurrentPackage:Ljava/lang/String;
+
+    invoke-direct {p0, v2}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->isSkipBoostPackage(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_4
+
+    invoke-direct {p0, v1}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->start(Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;)V
+
+    :cond_4
+    :goto_1
+    monitor-exit v0
+
+    return-void
+
+    :cond_5
+    const-string v2, "HoustonProcessManager"
+
+    const-string v3, "ai boost current top never be null!"
+
+    invoke-static {v2, v3}, Lcom/oneplus/houston/common/client/utils/Logger;->err(Ljava/lang/String;Ljava/lang/String;)V
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method private writeSysFile(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 5
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "writeSysFile:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ": "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "HoustonProcessManager"
+
+    invoke-static {v1, v0}, Lcom/oneplus/houston/common/client/utils/Logger;->debug(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    new-instance v2, Ljava/io/FileWriter;
+
+    invoke-direct {v2, p1}, Ljava/io/FileWriter;-><init>(Ljava/lang/String;)V
+
+    move-object v0, v2
+
+    invoke-virtual {v0, p2}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    nop
+
+    :try_start_1
+    invoke-virtual {v0}, Ljava/io/FileWriter;->close()V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+
+    :cond_0
+    :goto_0
+    goto :goto_1
+
+    :catch_0
+    move-exception v2
+
+    invoke-virtual {v2}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v1, v3}, Lcom/oneplus/houston/common/client/utils/Logger;->info(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v2
+
+    goto :goto_2
+
+    :catch_1
+    move-exception v2
+
+    :try_start_2
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Failed to write "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v4, " to "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v1, v3}, Lcom/oneplus/houston/common/client/utils/Logger;->debug(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v2}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v1, v3}, Lcom/oneplus/houston/common/client/utils/Logger;->info(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    if-eqz v0, :cond_0
+
+    :try_start_3
+    invoke-virtual {v0}, Ljava/io/FileWriter;->close()V
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
+
+    goto :goto_0
+
+    :goto_1
+    return-void
+
+    :goto_2
+    if-eqz v0, :cond_1
+
+    :try_start_4
+    invoke-virtual {v0}, Ljava/io/FileWriter;->close()V
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
+
+    goto :goto_3
+
+    :catch_2
+    move-exception v3
+
+    invoke-virtual {v3}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v1, v4}, Lcom/oneplus/houston/common/client/utils/Logger;->info(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_4
+
+    :cond_1
+    :goto_3
+    nop
+
+    :goto_4
+    throw v2
+.end method
+
 
 # virtual methods
 .method public autoAcquireOrRelease(Z)V
-    .locals 0
+    .locals 5
+
+    iget-object v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mLock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mPackages:Ljava/util/HashMap;
+
+    iget-object v2, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mCurrentPackage:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;
+
+    if-eqz v1, :cond_1
+
+    const-string v2, "HoustonProcessManager"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "autoAcquireOrRelease isAwake :"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v4, " mAiBoostFlag:"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v4, v1, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->mAiBoostFlag:I
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcom/oneplus/houston/common/client/utils/Logger;->debug(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget v2, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mAiBoostController:I
+
+    if-lez v2, :cond_1
+
+    if-eqz p1, :cond_0
+
+    iget v2, v1, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->mAiBoostFlag:I
+
+    const/4 v3, 0x1
+
+    if-ne v2, v3, :cond_1
+
+    invoke-direct {p0, v1}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->start(Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-direct {p0, v1}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->pause(Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;)V
+
+    :cond_1
+    :goto_0
+    monitor-exit v0
 
     return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
 .end method
 
 .method public dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
@@ -816,6 +1816,14 @@
 
     invoke-virtual {v2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    iget-object v4, v1, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mWhiteGameAdjustMap:Ljava/util/HashMap;
+
+    iget-object v6, v1, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mBlackGameArray:[Ljava/lang/String;
+
+    iget v7, v1, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mAiBoostController:I
+
+    invoke-direct {v1, v4, v6, v7}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->updateAiBoostLocked(Ljava/util/HashMap;[Ljava/lang/String;I)V
+
     goto/16 :goto_2
 
     :cond_1
@@ -877,6 +1885,14 @@
 
     invoke-direct {v1, v2}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->printAllMap(Ljava/io/PrintWriter;)V
 
+    iget-object v4, v1, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mWhiteGameAdjustMap:Ljava/util/HashMap;
+
+    iget-object v5, v1, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mBlackGameArray:[Ljava/lang/String;
+
+    iget v6, v1, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mAiBoostController:I
+
+    invoke-direct {v1, v4, v5, v6}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->updateAiBoostLocked(Ljava/util/HashMap;[Ljava/lang/String;I)V
+
     goto/16 :goto_2
 
     :cond_2
@@ -931,6 +1947,14 @@
     invoke-virtual {v2, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     invoke-direct {v1, v2}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->printAllMap(Ljava/io/PrintWriter;)V
+
+    iget-object v4, v1, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mWhiteGameAdjustMap:Ljava/util/HashMap;
+
+    iget-object v5, v1, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mBlackGameArray:[Ljava/lang/String;
+
+    iget v6, v1, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mAiBoostController:I
+
+    invoke-direct {v1, v4, v5, v6}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->updateAiBoostLocked(Ljava/util/HashMap;[Ljava/lang/String;I)V
 
     goto/16 :goto_2
 
@@ -1029,6 +2053,14 @@
 
     invoke-direct {v1, v2}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->printAllMap(Ljava/io/PrintWriter;)V
 
+    iget-object v6, v1, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mWhiteGameAdjustMap:Ljava/util/HashMap;
+
+    iget-object v7, v1, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mBlackGameArray:[Ljava/lang/String;
+
+    iget v8, v1, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mAiBoostController:I
+
+    invoke-direct {v1, v6, v7, v8}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->updateAiBoostLocked(Ljava/util/HashMap;[Ljava/lang/String;I)V
+
     goto/16 :goto_2
 
     :cond_6
@@ -1115,6 +2147,14 @@
     invoke-direct {v1, v0, v4, v5}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->removeFromAiBoostWhite(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-direct {v1, v2}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->printAllMap(Ljava/io/PrintWriter;)V
+
+    iget-object v6, v1, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mWhiteGameAdjustMap:Ljava/util/HashMap;
+
+    iget-object v7, v1, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mBlackGameArray:[Ljava/lang/String;
+
+    iget v8, v1, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mAiBoostController:I
+
+    invoke-direct {v1, v6, v7, v8}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->updateAiBoostLocked(Ljava/util/HashMap;[Ljava/lang/String;I)V
 
     goto :goto_2
 
@@ -1384,6 +2424,12 @@
 
     invoke-direct {p0}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->initDefaultAisConfig()V
 
+    new-instance v0, Lcom/oneplus/houston/apkserver/bridge/HoustonAiBoostPicker;
+
+    invoke-direct {v0, p1}, Lcom/oneplus/houston/apkserver/bridge/HoustonAiBoostPicker;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mAiPicker:Lcom/oneplus/houston/apkserver/bridge/HoustonAiBoostPicker;
+
     return-void
 .end method
 
@@ -1471,9 +2517,9 @@
 .end method
 
 .method public preBindApplication(Landroid/content/pm/ApplicationInfo;Ljava/lang/String;II)V
-    .locals 15
+    .locals 16
 
-    move-object v1, p0
+    move-object/from16 v1, p0
 
     move-object/from16 v2, p1
 
@@ -1496,62 +2542,80 @@
     :cond_0
     const-string v13, "TODO"
 
-    iget-object v14, v1, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mLock:Ljava/lang/Object;
+    iget-object v0, v2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    monitor-enter v14
-
-    :try_start_0
-    iget-object v0, v1, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mPackages:Ljava/util/HashMap;
-
-    iget-object v3, v2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {v0, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;
-
-    if-nez v0, :cond_1
-
-    new-instance v3, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;
-
-    iget-object v4, v2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
-
-    const/4 v5, 0x0
-
-    invoke-direct {v3, v2, v4, v5}, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;-><init>(Landroid/content/pm/ApplicationInfo;Ljava/lang/String;I)V
-
-    move-object v0, v3
-
-    iget-object v3, v1, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mPackages:Ljava/util/HashMap;
-
-    iget-object v4, v2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {v3, v4, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_1
-    if-eqz v11, :cond_2
-
-    iget-object v3, v2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+    const-string v3, "com.mobile.legends:UnityKillsMe"
 
     invoke-virtual {v11, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_2
+    if-eqz v3, :cond_1
+
+    const-string v0, "com.mobile.legends:UnityKillsMe"
+
+    const-string v3, "HoustonProcessManager"
+
+    const-string v4, "com.mobile.legends:UnityKillsMe is the main process!"
+
+    invoke-static {v3, v4}, Lcom/oneplus/houston/common/client/utils/Logger;->debug(Ljava/lang/String;Ljava/lang/String;)V
+
+    move-object v14, v0
+
+    goto :goto_0
+
+    :cond_1
+    move-object v14, v0
+
+    :goto_0
+    iget-object v15, v1, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mLock:Ljava/lang/Object;
+
+    monitor-enter v15
+
+    :try_start_0
+    iget-object v0, v1, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mPackages:Ljava/util/HashMap;
+
+    invoke-virtual {v0, v14}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;
+
+    if-nez v0, :cond_2
+
+    new-instance v3, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v3, v2, v14, v4}, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;-><init>(Landroid/content/pm/ApplicationInfo;Ljava/lang/String;I)V
+
+    move-object v0, v3
+
+    iget-object v3, v1, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mPackages:Ljava/util/HashMap;
+
+    invoke-virtual {v3, v14, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_2
+    if-eqz v11, :cond_3
+
+    invoke-virtual {v11, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
 
     iput v12, v0, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->mMainProcess:I
 
     invoke-virtual {v0}, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->markColdLaunched()V
 
-    :cond_2
+    :cond_3
     iget-object v3, v1, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mProcesses:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v12}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
-    if-nez v3, :cond_3
+    if-nez v3, :cond_4
 
     iget-object v3, v1, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mProcesses:Landroid/util/SparseArray;
 
@@ -1583,15 +2647,15 @@
 
     invoke-virtual/range {v3 .. v10}, Lcom/oneplus/houston/apkserver/bridge/HoustonEventDispatcher;->add(Ljava/lang/String;IILjava/lang/String;IILjava/lang/String;)V
 
-    :cond_3
-    monitor-exit v14
+    :cond_4
+    monitor-exit v15
 
     return-void
 
     :catchall_0
     move-exception v0
 
-    monitor-exit v14
+    monitor-exit v15
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1599,7 +2663,7 @@
 .end method
 
 .method public remove(ILjava/lang/String;)V
-    .locals 3
+    .locals 6
 
     iget-object v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mLock:Ljava/lang/Object;
 
@@ -1614,19 +2678,53 @@
 
     check-cast v1, Lcom/oneplus/houston/apkserver/bridge/HoustonProcess;
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_2
 
-    iget-object v2, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mProcesses:Landroid/util/SparseArray;
+    iget-object v2, v1, Lcom/oneplus/houston/apkserver/bridge/HoustonProcess;->mAppInfo:Landroid/content/pm/ApplicationInfo;
 
-    invoke-virtual {v2, p1}, Landroid/util/SparseArray;->remove(I)V
+    iget-object v3, v2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    iget-object v4, v1, Lcom/oneplus/houston/apkserver/bridge/HoustonProcess;->mName:Ljava/lang/String;
+
+    const-string v5, "com.mobile.legends:UnityKillsMe"
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    iget-object v4, v1, Lcom/oneplus/houston/apkserver/bridge/HoustonProcess;->mName:Ljava/lang/String;
+
+    move-object v3, v4
+
+    :cond_0
+    iget-object v4, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mPackages:Ljava/util/HashMap;
+
+    invoke-virtual {v4, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;
+
+    iget v5, v4, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->mMainProcess:I
+
+    if-ne v5, p1, :cond_1
+
+    invoke-direct {p0, v4}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->remove(Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;)V
+
+    :cond_1
+    iget-object v5, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mProcesses:Landroid/util/SparseArray;
+
+    invoke-virtual {v5, p1}, Landroid/util/SparseArray;->remove(I)V
 
     invoke-static {}, Lcom/oneplus/houston/apkserver/bridge/HoustonEventDispatcher;->getInstance()Lcom/oneplus/houston/apkserver/bridge/HoustonEventDispatcher;
 
-    move-result-object v2
+    move-result-object v5
 
-    invoke-virtual {v2, p1, p2}, Lcom/oneplus/houston/apkserver/bridge/HoustonEventDispatcher;->remove(ILjava/lang/String;)V
+    invoke-virtual {v5, p1, p2}, Lcom/oneplus/houston/apkserver/bridge/HoustonEventDispatcher;->remove(ILjava/lang/String;)V
 
-    :cond_0
+    :cond_2
     monitor-exit v0
 
     return-void
@@ -1671,6 +2769,12 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " processName:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -1920,15 +3024,52 @@
 .end method
 
 .method public setFront(Ljava/lang/String;Ljava/lang/String;II)V
-    .locals 6
+    .locals 8
 
     const/4 v0, 0x0
 
+    const-string v1, "com.mobile.legends"
+
+    invoke-virtual {p2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mProcesses:Landroid/util/SparseArray;
+
+    invoke-virtual {v1, p4}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/oneplus/houston/apkserver/bridge/HoustonProcess;
+
+    if-eqz v1, :cond_0
+
+    iget-object v2, v1, Lcom/oneplus/houston/apkserver/bridge/HoustonProcess;->mName:Ljava/lang/String;
+
+    const-string v3, "com.mobile.legends:UnityKillsMe"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const-string p2, "com.mobile.legends:UnityKillsMe"
+
+    const-string v2, "HoustonProcessManager"
+
+    const-string v3, "set packageName to com.mobile.legends:UnityKillsMe!"
+
+    invoke-static {v2, v3}, Lcom/oneplus/houston/common/client/utils/Logger;->debug(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
     iget-object v1, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    if-eqz p2, :cond_0
+    if-eqz p2, :cond_1
 
     :try_start_0
     iget-object v2, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mCurrentPackage:Ljava/lang/String;
@@ -1937,11 +3078,11 @@
 
     move-result v2
 
-    if-nez v2, :cond_0
+    if-nez v2, :cond_1
 
     const/4 v0, 0x1
 
-    :cond_0
+    :cond_1
     iget-object v2, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mCurrentPackage:Ljava/lang/String;
 
     iput-object p2, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mCurrentPackage:Ljava/lang/String;
@@ -1980,7 +3121,7 @@
 
     invoke-static {v3, v4}, Lcom/oneplus/houston/common/client/utils/Logger;->debug(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_6
 
     iget-object v3, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mPackages:Ljava/util/HashMap;
 
@@ -2000,9 +3141,11 @@
 
     sget v5, Lcom/oneplus/houston/apkserver/bridge/HoustonServer;->mGlobalConfig:I
 
-    and-int/lit8 v5, v5, 0x1
+    const/4 v6, 0x1
 
-    if-lez v5, :cond_2
+    and-int/2addr v5, v6
+
+    if-lez v5, :cond_3
 
     const-string v5, "com.android.permissioncontroller"
 
@@ -2010,18 +3153,138 @@
 
     move-result v5
 
-    if-nez v5, :cond_2
+    if-nez v5, :cond_3
 
-    if-eqz v3, :cond_1
+    if-eqz v3, :cond_2
 
     invoke-virtual {v3}, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->addTotalLaunchCount()V
 
-    :cond_1
-    if-eqz v4, :cond_2
+    :cond_2
+    if-eqz v4, :cond_3
 
     invoke-virtual {v4}, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->stopFreezingLaunchCount()V
 
-    :cond_2
+    :cond_3
+    iget v5, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mAiBoostController:I
+
+    if-ne v5, v6, :cond_4
+
+    const-string v5, "HoustonProcessManager"
+
+    const-string v6, "AI_BOOST_WHITE_LIST"
+
+    invoke-static {v5, v6}, Lcom/oneplus/houston/common/client/utils/Logger;->debug(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v5, "HoustonProcessManager"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "frontPackageChanged: "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v7, " uid:"
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v7, " pid:"
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, p4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v5, v6}, Lcom/oneplus/houston/common/client/utils/Logger;->debug(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-direct {p0, v4}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->pause(Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;)V
+
+    invoke-direct {p0, p2}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->isBoostPackage(Ljava/lang/String;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_6
+
+    invoke-direct {p0, v3}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->start(Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;)V
+
+    goto :goto_0
+
+    :cond_4
+    iget v5, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mAiBoostController:I
+
+    const/4 v6, 0x2
+
+    if-ne v5, v6, :cond_5
+
+    const-string v5, "HoustonProcessManager"
+
+    const-string v6, "AI_BOOST_ALL_EXCEPT_BLACK_LIST"
+
+    invoke-static {v5, v6}, Lcom/oneplus/houston/common/client/utils/Logger;->debug(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v5, "HoustonProcessManager"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "frontPackageChanged: "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v7, " uid:"
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v7, " pid:"
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, p4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v5, v6}, Lcom/oneplus/houston/common/client/utils/Logger;->debug(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-direct {p0, v4}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->pause(Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;)V
+
+    invoke-direct {p0, p2}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->isSkipBoostPackage(Ljava/lang/String;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_6
+
+    invoke-direct {p0, v3}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->start(Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;)V
+
+    goto :goto_0
+
+    :cond_5
+    iget v5, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mAiBoostController:I
+
+    if-nez v5, :cond_6
+
+    const-string v5, "HoustonProcessManager"
+
+    const-string v6, " ai boost is off! donothing!"
+
+    invoke-static {v5, v6}, Lcom/oneplus/houston/common/client/utils/Logger;->debug(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_6
+    :goto_0
     monitor-exit v1
 
     return-void
@@ -2205,6 +3468,14 @@
     move-result-object v2
 
     invoke-static {v1, v2}, Lcom/oneplus/houston/common/client/utils/Logger;->warn(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mWhiteGameAdjustMap:Ljava/util/HashMap;
+
+    iget-object v2, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mBlackGameArray:[Ljava/lang/String;
+
+    iget v3, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->mAiBoostController:I
+
+    invoke-direct {p0, v1, v2, v3}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->updateAiBoostLocked(Ljava/util/HashMap;[Ljava/lang/String;I)V
 
     monitor-exit v0
 

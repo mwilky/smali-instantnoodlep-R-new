@@ -19,6 +19,7 @@
         Lcom/android/server/policy/WindowManagerPolicy$StartingSurface;,
         Lcom/android/server/policy/WindowManagerPolicy$InputConsumer;,
         Lcom/android/server/policy/WindowManagerPolicy$WindowState;,
+        Lcom/android/server/policy/WindowManagerPolicy$AltBarPosition;,
         Lcom/android/server/policy/WindowManagerPolicy$NavigationBarPosition;
     }
 .end annotation

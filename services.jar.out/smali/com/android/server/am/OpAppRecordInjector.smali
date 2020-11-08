@@ -294,7 +294,7 @@
     return-void
 .end method
 
-.method public static notePSSChanged(II)V
+.method public static notePSSChanged(IIJ)V
     .locals 1
 
     invoke-static {}, Lcom/android/server/am/OpAppRecordInjector;->initInstance()V
@@ -303,7 +303,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p0, p1}, Lcom/android/server/am/IOpAppRecord;->notePSSChanged(II)V
+    invoke-interface {v0, p0, p1, p2, p3}, Lcom/android/server/am/IOpAppRecord;->notePSSChanged(IIJ)V
 
     :cond_0
     return-void

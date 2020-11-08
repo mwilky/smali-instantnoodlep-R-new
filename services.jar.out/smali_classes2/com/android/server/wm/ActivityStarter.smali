@@ -355,7 +355,7 @@
 
     iput-boolean v2, p0, Lcom/android/server/wm/ActivityStarter;->mAddingToTask:Z
 
-    goto/16 :goto_4
+    goto/16 :goto_5
 
     :cond_2
     const/high16 v5, 0x4000000
@@ -433,7 +433,7 @@
     iput-boolean v2, p0, Lcom/android/server/wm/ActivityStarter;->mAddingToTask:Z
 
     :goto_1
-    goto/16 :goto_4
+    goto/16 :goto_5
 
     :cond_5
     iget-object v1, p0, Lcom/android/server/wm/ActivityStarter;->mStartActivity:Lcom/android/server/wm/ActivityRecord;
@@ -452,7 +452,7 @@
 
     if-ne p1, v1, :cond_6
 
-    goto/16 :goto_4
+    goto/16 :goto_5
 
     :cond_6
     iget v1, p0, Lcom/android/server/wm/ActivityStarter;->mLaunchFlags:I
@@ -503,7 +503,7 @@
     :cond_8
     invoke-direct {p0, v0, p3}, Lcom/android/server/wm/ActivityStarter;->deliverNewIntent(Lcom/android/server/wm/ActivityRecord;Lcom/android/server/uri/NeededUriGrants;)V
 
-    goto/16 :goto_4
+    goto/16 :goto_5
 
     :cond_9
     iget-object v1, p0, Lcom/android/server/wm/ActivityStarter;->mStartActivity:Lcom/android/server/wm/ActivityRecord;
@@ -516,32 +516,32 @@
 
     iput-boolean v2, p0, Lcom/android/server/wm/ActivityStarter;->mAddingToTask:Z
 
-    goto :goto_4
+    goto/16 :goto_5
 
     :cond_a
-    if-nez p2, :cond_13
+    if-nez p2, :cond_16
 
     iput-boolean v2, p0, Lcom/android/server/wm/ActivityStarter;->mAddingToTask:Z
 
-    goto :goto_4
+    goto/16 :goto_5
 
     :cond_b
     if-nez v3, :cond_c
 
     iput-boolean v2, p0, Lcom/android/server/wm/ActivityStarter;->mAddingToTask:Z
 
-    goto :goto_4
+    goto/16 :goto_5
 
     :cond_c
     iget-boolean v1, p1, Lcom/android/server/wm/Task;->rootWasReset:Z
 
-    if-nez v1, :cond_13
+    if-nez v1, :cond_16
 
     iget-object v1, p0, Lcom/android/server/wm/ActivityStarter;->mStartActivity:Lcom/android/server/wm/ActivityRecord;
 
     invoke-virtual {p1, v1}, Lcom/android/server/wm/Task;->setIntent(Lcom/android/server/wm/ActivityRecord;)V
 
-    goto :goto_4
+    goto/16 :goto_5
 
     :cond_d
     :goto_2
@@ -553,22 +553,104 @@
 
     move-result-object v4
 
+    sget-boolean v5, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz v5, :cond_f
+
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
     move-result-object v5
 
-    if-nez v5, :cond_e
+    if-nez v5, :cond_f
 
-    invoke-virtual {p1, v0}, Lcom/android/server/wm/Task;->addChild(Lcom/android/server/wm/ActivityRecord;)V
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "Task addChild--finish: "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v6, v0, Lcom/android/server/wm/ActivityRecord;->finishing:Z
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v6, ", state: "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Lcom/android/server/wm/ActivityRecord;->getState()Lcom/android/server/wm/ActivityStack$ActivityState;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v6, ", top: "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    if-eqz v4, :cond_e
+
+    move v6, v2
+
+    goto :goto_3
 
     :cond_e
-    if-eqz v4, :cond_10
+    move v6, v1
+
+    :goto_3
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v6, ", "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Lcom/android/server/wm/ActivityRecord;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    const-string v6, "ActivityTaskManager"
+
+    invoke-static {v6, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_f
+    invoke-virtual {v0}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
+
+    move-result-object v5
+
+    if-nez v5, :cond_11
+
+    iget-boolean v5, v0, Lcom/android/server/wm/ActivityRecord;->finishing:Z
+
+    if-eqz v5, :cond_10
+
+    if-nez v4, :cond_10
+
+    invoke-virtual {v0}, Lcom/android/server/wm/ActivityRecord;->getState()Lcom/android/server/wm/ActivityStack$ActivityState;
+
+    move-result-object v5
+
+    sget-object v6, Lcom/android/server/wm/ActivityStack$ActivityState;->DESTROYED:Lcom/android/server/wm/ActivityStack$ActivityState;
+
+    if-eq v5, v6, :cond_11
+
+    :cond_10
+    invoke-virtual {p1, v0}, Lcom/android/server/wm/Task;->addChild(Lcom/android/server/wm/ActivityRecord;)V
+
+    :cond_11
+    if-eqz v4, :cond_13
 
     invoke-virtual {v4}, Lcom/android/server/wm/ActivityRecord;->isRootOfTask()Z
 
     move-result v1
 
-    if-eqz v1, :cond_f
+    if-eqz v1, :cond_12
 
     invoke-virtual {v4}, Lcom/android/server/wm/ActivityRecord;->getTask()Lcom/android/server/wm/Task;
 
@@ -578,19 +660,19 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/wm/Task;->setIntent(Lcom/android/server/wm/ActivityRecord;)V
 
-    :cond_f
+    :cond_12
     invoke-direct {p0, v4, p3}, Lcom/android/server/wm/ActivityStarter;->deliverNewIntent(Lcom/android/server/wm/ActivityRecord;Lcom/android/server/uri/NeededUriGrants;)V
 
-    goto :goto_3
+    goto :goto_4
 
-    :cond_10
+    :cond_13
     iput-boolean v2, p0, Lcom/android/server/wm/ActivityStarter;->mAddingToTask:Z
 
     invoke-virtual {p1}, Lcom/android/server/wm/Task;->getStack()Lcom/android/server/wm/ActivityStack;
 
     move-result-object v5
 
-    if-nez v5, :cond_12
+    if-nez v5, :cond_15
 
     iget-object v5, p0, Lcom/android/server/wm/ActivityStarter;->mStartActivity:Lcom/android/server/wm/ActivityRecord;
 
@@ -616,19 +698,19 @@
 
     and-int/lit16 v7, v7, 0x400
 
-    if-eqz v7, :cond_11
+    if-eqz v7, :cond_14
 
     move v1, v2
 
-    :cond_11
+    :cond_14
     invoke-virtual {v5, p1, v6, v1}, Lcom/android/server/wm/ActivityStack;->addChild(Lcom/android/server/wm/WindowContainer;ZZ)V
 
-    :cond_12
-    :goto_3
+    :cond_15
+    :goto_4
     nop
 
-    :cond_13
-    :goto_4
+    :cond_16
+    :goto_5
     return-void
 .end method
 
@@ -2189,6 +2271,10 @@
     move v9, v1
 
     :goto_6
+    invoke-static {v10, v0, v9}, Lcom/oneplus/android/os/OpParallelStorage;->updateSharedParalleledIntentIfNeeded(ILandroid/content/Intent;I)Landroid/content/Intent;
+
+    move-result-object v0
+
     invoke-static {v10, v0, v9}, Lcom/android/server/wm/OpActivityStarterInjector;->maybeAddUserIdtoIntent(ILandroid/content/Intent;I)Landroid/content/Intent;
 
     move-result-object v5
@@ -6930,7 +7016,7 @@
 .end method
 
 .method postStartActivityProcessing(Lcom/android/server/wm/ActivityRecord;ILcom/android/server/wm/ActivityStack;)V
-    .locals 8
+    .locals 9
 
     invoke-static {p2}, Landroid/app/ActivityManager;->isStartResultSuccessful(I)Z
 
@@ -6980,11 +7066,11 @@
     :goto_0
     nop
 
-    if-eqz p3, :cond_9
+    if-eqz p3, :cond_a
 
     if-nez v0, :cond_3
 
-    goto :goto_3
+    goto :goto_4
 
     :cond_3
     const v1, 0x10008000
@@ -7021,14 +7107,14 @@
 
     if-eq p2, v3, :cond_5
 
-    if-eqz v2, :cond_7
+    if-eqz v2, :cond_8
 
     :cond_5
     invoke-virtual {v0}, Lcom/android/server/wm/Task;->getDisplayArea()Lcom/android/server/wm/TaskDisplayArea;
 
     move-result-object v3
 
-    if-eqz v3, :cond_8
+    if-eqz v3, :cond_9
 
     invoke-virtual {v0}, Lcom/android/server/wm/Task;->getDisplayArea()Lcom/android/server/wm/TaskDisplayArea;
 
@@ -7038,22 +7124,42 @@
 
     move-result-object v3
 
-    if-eqz v3, :cond_6
+    invoke-virtual {v0}, Lcom/android/server/wm/Task;->getTopNonFinishingActivity()Lcom/android/server/wm/ActivityRecord;
 
-    const/4 v6, 0x0
-
-    invoke-virtual {v3, v6}, Lcom/android/server/wm/ActivityStack;->shouldBeVisible(Lcom/android/server/wm/ActivityRecord;)Z
-
-    move-result v6
+    move-result-object v6
 
     if-eqz v6, :cond_6
+
+    invoke-virtual {v6}, Lcom/android/server/wm/ActivityRecord;->isVisible()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_6
+
+    move v7, v4
 
     goto :goto_2
 
     :cond_6
-    move v4, v5
+    move v7, v5
 
     :goto_2
+    if-eqz v3, :cond_7
+
+    const/4 v8, 0x0
+
+    invoke-virtual {v3, v8}, Lcom/android/server/wm/ActivityStack;->shouldBeVisible(Lcom/android/server/wm/ActivityRecord;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_7
+
+    goto :goto_3
+
+    :cond_7
+    move v4, v5
+
+    :goto_3
     iget-object v5, p0, Lcom/android/server/wm/ActivityStarter;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     invoke-virtual {v5}, Lcom/android/server/wm/ActivityTaskManagerService;->getTaskChangeNotificationController()Lcom/android/server/wm/TaskChangeNotificationController;
@@ -7062,22 +7168,14 @@
 
     invoke-virtual {v0}, Lcom/android/server/wm/Task;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
 
-    move-result-object v6
+    move-result-object v8
 
-    invoke-virtual {v0}, Lcom/android/server/wm/Task;->getTopNonFinishingActivity()Lcom/android/server/wm/ActivityRecord;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Lcom/android/server/wm/ActivityRecord;->isVisible()Z
-
-    move-result v7
-
-    invoke-virtual {v5, v6, v4, v2, v7}, Lcom/android/server/wm/TaskChangeNotificationController;->notifyActivityRestartAttempt(Landroid/app/ActivityManager$RunningTaskInfo;ZZZ)V
-
-    :cond_7
-    return-void
+    invoke-virtual {v5, v8, v4, v2, v7}, Lcom/android/server/wm/TaskChangeNotificationController;->notifyActivityRestartAttempt(Landroid/app/ActivityManager$RunningTaskInfo;ZZZ)V
 
     :cond_8
+    return-void
+
+    :cond_9
     const-string v3, "ActivityTaskManager"
 
     const-string v4, "fail to notifies all listeners when an attempt was made tostart an an activity that is already running"
@@ -7086,8 +7184,8 @@
 
     return-void
 
-    :cond_9
-    :goto_3
+    :cond_a
+    :goto_4
     return-void
 .end method
 
@@ -9624,10 +9722,20 @@
 
     iget-object v15, v10, Lcom/android/server/wm/ActivityStarter;->mStartActivity:Lcom/android/server/wm/ActivityRecord;
 
+    if-eqz v8, :cond_14
+
     invoke-virtual {v8}, Lcom/android/server/wm/ActivityStack;->getTopNonFinishingActivity()Lcom/android/server/wm/ActivityRecord;
 
-    move-result-object v16
+    move-result-object v2
 
+    move-object/from16 v16, v2
+
+    goto :goto_7
+
+    :cond_14
+    const/16 v16, 0x0
+
+    :goto_7
     iget-boolean v2, v10, Lcom/android/server/wm/ActivityStarter;->mKeepCurTransition:Z
 
     iget-object v3, v10, Lcom/android/server/wm/ActivityStarter;->mOptions:Landroid/app/ActivityOptions;
@@ -9642,7 +9750,7 @@
 
     iget-boolean v2, v10, Lcom/android/server/wm/ActivityStarter;->mDoResume:Z
 
-    if-eqz v2, :cond_17
+    if-eqz v2, :cond_18
 
     iget-object v2, v10, Lcom/android/server/wm/ActivityStarter;->mStartActivity:Lcom/android/server/wm/ActivityRecord;
 
@@ -9660,30 +9768,30 @@
 
     move-result v3
 
-    if-eqz v3, :cond_16
+    if-eqz v3, :cond_17
 
-    if-eqz v2, :cond_14
+    if-eqz v2, :cond_15
 
     invoke-virtual {v2}, Lcom/android/server/wm/ActivityRecord;->isTaskOverlay()Z
 
     move-result v3
 
-    if-eqz v3, :cond_14
+    if-eqz v3, :cond_15
 
     iget-object v3, v10, Lcom/android/server/wm/ActivityStarter;->mStartActivity:Lcom/android/server/wm/ActivityRecord;
 
-    if-eq v3, v2, :cond_14
+    if-eq v3, v2, :cond_15
 
-    goto :goto_7
+    goto :goto_8
 
-    :cond_14
+    :cond_15
     iget-object v3, v10, Lcom/android/server/wm/ActivityStarter;->mTargetStack:Lcom/android/server/wm/ActivityStack;
 
     invoke-virtual {v3}, Lcom/android/server/wm/ActivityStack;->isTopActivityFocusable()Z
 
     move-result v3
 
-    if-eqz v3, :cond_15
+    if-eqz v3, :cond_16
 
     iget-object v3, v10, Lcom/android/server/wm/ActivityStarter;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
 
@@ -9693,7 +9801,7 @@
 
     move-result v3
 
-    if-nez v3, :cond_15
+    if-nez v3, :cond_16
 
     iget-object v3, v10, Lcom/android/server/wm/ActivityStarter;->mTargetStack:Lcom/android/server/wm/ActivityStack;
 
@@ -9701,7 +9809,7 @@
 
     invoke-virtual {v3, v6}, Lcom/android/server/wm/ActivityStack;->moveToFront(Ljava/lang/String;)V
 
-    :cond_15
+    :cond_16
     iget-object v3, v10, Lcom/android/server/wm/ActivityStarter;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
 
     iget-object v6, v10, Lcom/android/server/wm/ActivityStarter;->mTargetStack:Lcom/android/server/wm/ActivityStack;
@@ -9712,10 +9820,10 @@
 
     invoke-virtual {v3, v6, v9, v14}, Lcom/android/server/wm/RootWindowContainer;->resumeFocusedStacksTopActivities(Lcom/android/server/wm/ActivityStack;Lcom/android/server/wm/ActivityRecord;Landroid/app/ActivityOptions;)Z
 
-    goto :goto_8
+    goto :goto_9
 
-    :cond_16
-    :goto_7
+    :cond_17
+    :goto_8
     iget-object v3, v10, Lcom/android/server/wm/ActivityStarter;->mTargetStack:Lcom/android/server/wm/ActivityStack;
 
     const/4 v6, 0x0
@@ -9734,8 +9842,8 @@
 
     invoke-virtual {v3}, Lcom/android/server/wm/DisplayContent;->executeAppTransition()V
 
-    :cond_17
-    :goto_8
+    :cond_18
+    :goto_9
     iget-object v2, v10, Lcom/android/server/wm/ActivityStarter;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
 
     iget-object v3, v10, Lcom/android/server/wm/ActivityStarter;->mStartActivity:Lcom/android/server/wm/ActivityRecord;

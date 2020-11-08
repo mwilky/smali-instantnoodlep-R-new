@@ -500,7 +500,7 @@
 
     move-result-object v4
 
-    const v5, 0x10e00a9
+    const v5, 0x10e00aa
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -514,7 +514,7 @@
 
     move-result-object v4
 
-    const v5, 0x10e0045
+    const v5, 0x10e0046
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -582,7 +582,7 @@
 
     invoke-virtual {p1, v5, v4}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    const v5, 0x1070085
+    const v5, 0x1070086
 
     invoke-direct {p0, v5}, Lcom/android/server/VibratorService;->createEffectFromResource(I)Landroid/os/VibrationEffect;
 
@@ -594,13 +594,13 @@
 
     move-result-object v6
 
-    const v7, 0x1070054
+    const v7, 0x1070055
 
     invoke-direct {p0, v7}, Lcom/android/server/VibratorService;->createEffectFromResource(I)Landroid/os/VibrationEffect;
 
     move-result-object v7
 
-    const v8, 0x1070025
+    const v8, 0x1070026
 
     invoke-direct {p0, v8}, Lcom/android/server/VibratorService;->createEffectFromResource(I)Landroid/os/VibrationEffect;
 

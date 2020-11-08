@@ -45,6 +45,17 @@
 .method public abstract enforceGrantRevokeRuntimePermissionPermissions(Ljava/lang/String;)V
 .end method
 
+.method public abstract getAllPermissions()Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/ArrayList<",
+            "Lcom/android/server/pm/permission/BasePermission;",
+            ">;"
+        }
+    .end annotation
+.end method
+
 .method public abstract getAllPermissionsWithProtection(I)Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {

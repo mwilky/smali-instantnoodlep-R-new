@@ -55,7 +55,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 39
+    .locals 40
 
     sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
@@ -185,7 +185,9 @@
 
     const-string v38, "com.google.android.apps.translate"
 
-    filled-new-array/range {v2 .. v38}, [Ljava/lang/String;
+    const-string v39, "com.microsoft.teams"
+
+    filled-new-array/range {v2 .. v39}, [Ljava/lang/String;
 
     move-result-object v1
 

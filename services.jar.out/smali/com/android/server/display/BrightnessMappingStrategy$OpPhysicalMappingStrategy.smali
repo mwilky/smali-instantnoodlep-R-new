@@ -15,6 +15,8 @@
 
 
 # instance fields
+.field private mBatteryLevel:I
+
 .field private mDeltaNits:F
 
 .field private final mHBMLuxToBacklightSpline:Landroid/util/Spline;
@@ -29,6 +31,10 @@
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/display/BrightnessMappingStrategy$OpPhysicalMappingStrategy;->mDeltaNits:F
+
+    const/16 v0, 0x64
+
+    iput v0, p0, Lcom/android/server/display/BrightnessMappingStrategy$OpPhysicalMappingStrategy;->mBatteryLevel:I
 
     invoke-static {p5, p6}, Landroid/util/Spline;->createSpline([F[F)Landroid/util/Spline;
 
@@ -71,6 +77,57 @@
     return v1
 .end method
 
+.method private getHBMThreshold()I
+    .locals 3
+
+    const/4 v0, 0x0
+
+    iget v1, p0, Lcom/android/server/display/BrightnessMappingStrategy$OpPhysicalMappingStrategy;->mBatteryLevel:I
+
+    const/16 v2, 0x3c
+
+    if-lt v1, v2, :cond_0
+
+    sget-object v1, Lcom/android/server/display/DisplayOLC;->HBM_THRESHOLD:[I
+
+    const/4 v2, 0x0
+
+    aget v0, v1, v2
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v2, 0x1e
+
+    if-lt v1, v2, :cond_1
+
+    sget-object v1, Lcom/android/server/display/DisplayOLC;->HBM_THRESHOLD:[I
+
+    const/4 v2, 0x1
+
+    aget v0, v1, v2
+
+    goto :goto_0
+
+    :cond_1
+    sget-object v1, Lcom/android/server/display/DisplayOLC;->HBM_THRESHOLD:[I
+
+    const/4 v2, 0x2
+
+    aget v0, v1, v2
+
+    :goto_0
+    invoke-static {}, Lcom/android/server/display/BrightnessMappingStrategy;->access$400()I
+
+    move-result v1
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v1
+
+    return v1
+.end method
+
 
 # virtual methods
 .method public dump(Ljava/io/PrintWriter;)V
@@ -104,7 +161,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {}, Lcom/android/server/display/BrightnessMappingStrategy;->access$400()I
+    invoke-direct {p0}, Lcom/android/server/display/BrightnessMappingStrategy$OpPhysicalMappingStrategy;->getHBMThreshold()I
 
     move-result v1
 
@@ -156,6 +213,24 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "  mBatteryLevel="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lcom/android/server/display/BrightnessMappingStrategy$OpPhysicalMappingStrategy;->mBatteryLevel:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
     return-void
 .end method
 
@@ -172,7 +247,7 @@
 
     if-nez v2, :cond_0
 
-    invoke-static {}, Lcom/android/server/display/BrightnessMappingStrategy;->access$400()I
+    invoke-direct {p0}, Lcom/android/server/display/BrightnessMappingStrategy$OpPhysicalMappingStrategy;->getHBMThreshold()I
 
     move-result v2
 
@@ -186,7 +261,7 @@
 
     if-lez v2, :cond_0
 
-    invoke-static {}, Lcom/android/server/display/BrightnessMappingStrategy;->access$400()I
+    invoke-direct {p0}, Lcom/android/server/display/BrightnessMappingStrategy$OpPhysicalMappingStrategy;->getHBMThreshold()I
 
     move-result v2
 
@@ -204,4 +279,12 @@
 
     :cond_0
     return v0
+.end method
+
+.method public updateBatteryLevel(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/android/server/display/BrightnessMappingStrategy$OpPhysicalMappingStrategy;->mBatteryLevel:I
+
+    return-void
 .end method

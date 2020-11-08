@@ -56,6 +56,57 @@
     return-void
 .end method
 
+.method public getParamJson()Lorg/json/JSONArray;
+    .locals 4
+
+    iget-object v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonAiAdjust;->mParam:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Lorg/json/JSONArray;
+
+    invoke-direct {v0}, Lorg/json/JSONArray;-><init>()V
+
+    iget-object v1, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonAiAdjust;->mParam:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/oneplus/houston/apkserver/bridge/Param;
+
+    invoke-virtual {v2}, Lcom/oneplus/houston/apkserver/bridge/Param;->getJSONObject()Lorg/json/JSONObject;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+
+    goto :goto_0
+
+    :cond_1
+    return-object v0
+.end method
+
 .method public removeParam(Lcom/oneplus/houston/apkserver/bridge/Param;)V
     .locals 4
 

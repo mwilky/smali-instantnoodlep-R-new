@@ -147,7 +147,7 @@
 
     move-result v8
 
-    const v2, 0x107006b
+    const v2, 0x107006c
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->obtainTypedArray(I)Landroid/content/res/TypedArray;
 
@@ -157,7 +157,7 @@
 
     move-result-object v6
 
-    const v2, 0x107006a
+    const v2, 0x107006b
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getIntArray(I)[I
 
@@ -217,7 +217,7 @@
 
     sput v12, Lcom/android/server/display/BrightnessMappingStrategy;->mHBMLuxThreshold:I
 
-    const v12, 0x10e0083
+    const v12, 0x10e0084
 
     invoke-virtual {v0, v12}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -225,7 +225,7 @@
 
     sput v12, Lcom/android/server/display/BrightnessMappingStrategy;->mMinHBMLevel:I
 
-    const v12, 0x10e0079
+    const v12, 0x10e007a
 
     invoke-virtual {v0, v12}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -268,13 +268,13 @@
 
     if-eqz v2, :cond_5
 
-    const v2, 0x10e00b6
+    const v2, 0x10e00b7
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v2
 
-    const v11, 0x10e00b5
+    const v11, 0x10e00b6
 
     invoke-virtual {v0, v11}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1561,4 +1561,10 @@
     const/4 v5, 0x1
 
     return v5
+.end method
+
+.method public updateBatteryLevel(I)V
+    .locals 0
+
+    return-void
 .end method

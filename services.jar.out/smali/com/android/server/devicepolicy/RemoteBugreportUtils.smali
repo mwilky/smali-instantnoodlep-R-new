@@ -156,7 +156,7 @@
     :cond_1
     if-ne p1, v4, :cond_2
 
-    const v5, 0x10407d0
+    const v5, 0x10407d2
 
     invoke-virtual {p0, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

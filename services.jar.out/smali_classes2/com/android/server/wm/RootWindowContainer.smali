@@ -2504,7 +2504,7 @@
 .end method
 
 .method applySleepTokens(Z)V
-    .locals 11
+    .locals 12
 
     invoke-virtual {p0}, Lcom/android/server/wm/RootWindowContainer;->getChildCount()I
 
@@ -2606,6 +2606,8 @@
 
     move-result v9
 
+    const/4 v10, 0x0
+
     if-eqz v9, :cond_5
 
     iget-object v9, p0, Lcom/android/server/wm/RootWindowContainer;->mStackSupervisor:Lcom/android/server/wm/ActivityStackSupervisor;
@@ -2614,20 +2616,18 @@
 
     move-result-object v9
 
-    iget v10, v2, Lcom/android/server/wm/DisplayContent;->mDisplayId:I
+    iget v11, v2, Lcom/android/server/wm/DisplayContent;->mDisplayId:I
 
-    invoke-virtual {v9, v10}, Lcom/android/server/wm/KeyguardController;->isKeyguardOrAodShowing(I)Z
+    invoke-virtual {v9, v11}, Lcom/android/server/wm/KeyguardController;->isKeyguardOrAodShowing(I)Z
 
     move-result v9
 
     if-nez v9, :cond_5
 
-    invoke-virtual {p0}, Lcom/android/server/wm/RootWindowContainer;->resumeFocusedStacksTopActivities()Z
+    invoke-virtual {v7, v10, v10}, Lcom/android/server/wm/ActivityStack;->resumeTopActivityUncheckedLocked(Lcom/android/server/wm/ActivityRecord;Landroid/app/ActivityOptions;)Z
 
     :cond_5
-    const/4 v9, 0x0
-
-    invoke-virtual {v7, v9, v8, v8}, Lcom/android/server/wm/ActivityStack;->ensureActivitiesVisible(Lcom/android/server/wm/ActivityRecord;IZ)V
+    invoke-virtual {v7, v10, v8, v8}, Lcom/android/server/wm/ActivityStack;->ensureActivitiesVisible(Lcom/android/server/wm/ActivityRecord;IZ)V
 
     :goto_3
     add-int/lit8 v6, v6, -0x1
@@ -6498,6 +6498,7 @@
     :goto_2
     if-ltz v5, :cond_0
 
+    :try_start_0
     invoke-virtual {v4, v5}, Lcom/android/server/wm/TaskDisplayArea;->getStackAt(I)Lcom/android/server/wm/ActivityStack;
 
     move-result-object v6
@@ -6505,9 +6506,19 @@
     invoke-virtual {v6, p1}, Lcom/android/server/wm/ActivityStack;->handleAppDied(Lcom/android/server/wm/WindowProcessController;)Z
 
     move-result v7
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     or-int/2addr v0, v7
 
+    goto :goto_3
+
+    :catch_0
+    move-exception v6
+
+    invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
+
+    :goto_3
     add-int/lit8 v5, v5, -0x1
 
     goto :goto_2
@@ -10004,15 +10015,15 @@
     :goto_0
     if-ltz v1, :cond_b
 
-    const/4 v2, 0x0
-
     invoke-virtual {p0, v1}, Lcom/android/server/wm/RootWindowContainer;->getChildAt(I)Lcom/android/server/wm/WindowContainer;
 
-    move-result-object v3
+    move-result-object v2
 
-    check-cast v3, Lcom/android/server/wm/DisplayContent;
+    check-cast v2, Lcom/android/server/wm/DisplayContent;
 
-    invoke-virtual {v3}, Lcom/android/server/wm/DisplayContent;->getTaskDisplayAreaCount()I
+    const/4 v3, 0x0
+
+    invoke-virtual {v2}, Lcom/android/server/wm/DisplayContent;->getTaskDisplayAreaCount()I
 
     move-result v4
 
@@ -10021,7 +10032,7 @@
     :goto_1
     if-ltz v4, :cond_8
 
-    invoke-virtual {v3, v4}, Lcom/android/server/wm/DisplayContent;->getTaskDisplayAreaAt(I)Lcom/android/server/wm/TaskDisplayArea;
+    invoke-virtual {v2, v4}, Lcom/android/server/wm/DisplayContent;->getTaskDisplayAreaAt(I)Lcom/android/server/wm/TaskDisplayArea;
 
     move-result-object v5
 
@@ -10055,7 +10066,7 @@
     :cond_3
     if-ne v7, p1, :cond_4
 
-    or-int/2addr v2, v0
+    or-int/2addr v3, v0
 
     goto :goto_3
 
@@ -10076,7 +10087,7 @@
 
     invoke-virtual {v7, p3}, Lcom/android/server/wm/ActivityStack;->executeAppTransition(Landroid/app/ActivityOptions;)V
 
-    iget v9, v3, Lcom/android/server/wm/DisplayContent;->mDisplayId:I
+    iget v9, v2, Lcom/android/server/wm/DisplayContent;->mDisplayId:I
 
     if-nez v9, :cond_6
 
@@ -10091,7 +10102,7 @@
 
     move-result v9
 
-    or-int/2addr v2, v9
+    or-int/2addr v3, v9
 
     :cond_6
     :goto_3
@@ -10105,9 +10116,9 @@
     goto :goto_1
 
     :cond_8
-    if-nez v2, :cond_a
+    if-nez v3, :cond_a
 
-    invoke-virtual {v3}, Lcom/android/server/wm/DisplayContent;->getFocusedStack()Lcom/android/server/wm/ActivityStack;
+    invoke-virtual {v2}, Lcom/android/server/wm/DisplayContent;->getFocusedStack()Lcom/android/server/wm/ActivityStack;
 
     move-result-object v4
 
@@ -10126,7 +10137,7 @@
 
     const/4 v5, 0x0
 
-    invoke-virtual {v3}, Lcom/android/server/wm/DisplayContent;->getDefaultTaskDisplayArea()Lcom/android/server/wm/TaskDisplayArea;
+    invoke-virtual {v2}, Lcom/android/server/wm/DisplayContent;->getDefaultTaskDisplayArea()Lcom/android/server/wm/TaskDisplayArea;
 
     move-result-object v6
 

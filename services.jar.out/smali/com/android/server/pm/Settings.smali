@@ -5363,7 +5363,7 @@
     :cond_1
     :goto_0
     :try_start_a
-    const-string v0, "installer"
+    const-string/jumbo v0, "installer"
 
     invoke-interface {v13, v15, v0}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -12905,7 +12905,7 @@
 
     move-result-object v0
 
-    const-string v1, "instrumentations:"
+    const-string/jumbo v1, "instrumentations:"
 
     invoke-virtual {p0, p1, p2, v1, v0}, Lcom/android/server/pm/Settings;->dumpComponents(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
 
@@ -20611,7 +20611,7 @@
 
     move/from16 v39, v14
 
-    const-string v14, "instant-app"
+    const-string/jumbo v14, "instant-app"
 
     invoke-static {v0, v14, v2}, Lcom/android/internal/util/XmlUtils;->readBooleanAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;Z)Z
 
@@ -22134,8 +22134,6 @@
 
     :goto_22
     return-void
-
-    nop
 
     :sswitch_data_0
     .sparse-switch
@@ -25750,7 +25748,7 @@
 
     iget-object v4, v2, Lcom/android/server/pm/InstallSource;->installerPackageName:Ljava/lang/String;
 
-    const-string v5, "installer"
+    const-string/jumbo v5, "installer"
 
     invoke-interface {p1, v0, v5, v4}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
@@ -26274,7 +26272,7 @@
 
     if-eqz v9, :cond_9
 
-    const-string v9, "instant-app"
+    const-string/jumbo v9, "instant-app"
 
     const/4 v11, 0x0
 

@@ -114,8 +114,6 @@
 
 .field final mName:Ljava/lang/String;
 
-.field private final mNewOverrideConfig:Landroid/content/res/Configuration;
-
 .field private volatile mNotResponding:Z
 
 .field public final mOwner:Ljava/lang/Object;
@@ -218,12 +216,6 @@
     invoke-direct {v0}, Landroid/content/res/Configuration;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/WindowProcessController;->mLastReportedConfiguration:Landroid/content/res/Configuration;
-
-    new-instance v0, Landroid/content/res/Configuration;
-
-    invoke-direct {v0}, Landroid/content/res/Configuration;-><init>()V
-
-    iput-object v0, p0, Lcom/android/server/wm/WindowProcessController;->mNewOverrideConfig:Landroid/content/res/Configuration;
 
     const/4 v0, 0x1
 
@@ -615,6 +607,33 @@
     :cond_1
     :goto_0
     return-void
+.end method
+
+.method private static sanitizeProcessConfiguration(Landroid/content/res/Configuration;)Landroid/content/res/Configuration;
+    .locals 3
+
+    iget-object v0, p0, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+
+    invoke-virtual {v0}, Landroid/app/WindowConfiguration;->getActivityType()I
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Landroid/content/res/Configuration;
+
+    invoke-direct {v0, p0}, Landroid/content/res/Configuration;-><init>(Landroid/content/res/Configuration;)V
+
+    iget-object v1, v0, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Landroid/app/WindowConfiguration;->setActivityType(I)V
+
+    return-object v0
+
+    :cond_0
+    return-object p0
 .end method
 
 .method private setLastReportedConfiguration(Landroid/content/res/Configuration;)V
@@ -3313,21 +3332,13 @@
 .end method
 
 .method public onMergedOverrideConfigurationChanged(Landroid/content/res/Configuration;)V
-    .locals 2
+    .locals 1
 
-    iget-object v0, p0, Lcom/android/server/wm/WindowProcessController;->mNewOverrideConfig:Landroid/content/res/Configuration;
+    nop
 
-    invoke-virtual {v0, p1}, Landroid/content/res/Configuration;->setTo(Landroid/content/res/Configuration;)V
+    invoke-static {p1}, Lcom/android/server/wm/WindowProcessController;->sanitizeProcessConfiguration(Landroid/content/res/Configuration;)Landroid/content/res/Configuration;
 
-    iget-object v0, p0, Lcom/android/server/wm/WindowProcessController;->mNewOverrideConfig:Landroid/content/res/Configuration;
-
-    iget-object v0, v0, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/app/WindowConfiguration;->setActivityType(I)V
-
-    iget-object v0, p0, Lcom/android/server/wm/WindowProcessController;->mNewOverrideConfig:Landroid/content/res/Configuration;
+    move-result-object v0
 
     invoke-super {p0, v0}, Lcom/android/server/wm/ConfigurationContainer;->onRequestedOverrideConfigurationChanged(Landroid/content/res/Configuration;)V
 
@@ -3374,6 +3385,20 @@
 
     :cond_1
     :goto_0
+    return-void
+.end method
+
+.method public onRequestedOverrideConfigurationChanged(Landroid/content/res/Configuration;)V
+    .locals 1
+
+    nop
+
+    invoke-static {p1}, Lcom/android/server/wm/WindowProcessController;->sanitizeProcessConfiguration(Landroid/content/res/Configuration;)Landroid/content/res/Configuration;
+
+    move-result-object v0
+
+    invoke-super {p0, v0}, Lcom/android/server/wm/ConfigurationContainer;->onRequestedOverrideConfigurationChanged(Landroid/content/res/Configuration;)V
+
     return-void
 .end method
 

@@ -45,6 +45,10 @@
 
 .field private static SCROLL_BOOST_SS_ENABLE:Z = false
 
+.field private static final SHOW_TYPES_FOR_PANIC:[I
+
+.field private static final SHOW_TYPES_FOR_SWIPE:[I
+
 .field private static final SYSTEM_UI_CHANGING_LAYOUT:I = -0x3fff7ff2
 
 .field private static final TAG:Ljava/lang/String; = "WindowManager"
@@ -177,6 +181,10 @@
 
 .field private mNavigationBar:Lcom/android/server/wm/WindowState;
 
+.field private mNavigationBarAlt:Lcom/android/server/wm/WindowState;
+
+.field private mNavigationBarAltPosition:I
+
 .field private volatile mNavigationBarAlwaysShowOnSideGesture:Z
 
 .field private volatile mNavigationBarCanMove:Z
@@ -247,6 +255,10 @@
 
 .field private mStatusBar:Lcom/android/server/wm/WindowState;
 
+.field private mStatusBarAlt:Lcom/android/server/wm/WindowState;
+
+.field private mStatusBarAltPosition:I
+
 .field private final mStatusBarController:Lcom/android/server/wm/StatusBarController;
 
 .field private final mStatusBarHeightForRotation:[I
@@ -274,7 +286,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 4
 
     sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
@@ -282,23 +294,37 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [I
+    new-array v1, v0, [I
 
-    const/16 v1, 0x6b
+    const/16 v2, 0x6b
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    aput v1, v0, v2
+    aput v2, v1, v3
 
-    invoke-static {v0}, Landroid/util/OpFeatures;->isSupport([I)Z
+    invoke-static {v1}, Landroid/util/OpFeatures;->isSupport([I)Z
 
-    move-result v0
+    move-result v1
 
-    sput-boolean v0, Lcom/android/server/wm/DisplayPolicy;->isSupportLandPadding:Z
+    sput-boolean v1, Lcom/android/server/wm/DisplayPolicy;->isSupportLandPadding:Z
 
-    sput-boolean v2, Lcom/android/server/wm/DisplayPolicy;->SCROLL_BOOST_SS_ENABLE:Z
+    const/4 v1, 0x2
 
-    sput-boolean v2, Lcom/android/server/wm/DisplayPolicy;->isLowRAM:Z
+    new-array v1, v1, [I
+
+    fill-array-data v1, :array_0
+
+    sput-object v1, Lcom/android/server/wm/DisplayPolicy;->SHOW_TYPES_FOR_SWIPE:[I
+
+    new-array v1, v0, [I
+
+    aput v0, v1, v3
+
+    sput-object v1, Lcom/android/server/wm/DisplayPolicy;->SHOW_TYPES_FOR_PANIC:[I
+
+    sput-boolean v3, Lcom/android/server/wm/DisplayPolicy;->SCROLL_BOOST_SS_ENABLE:Z
+
+    sput-boolean v3, Lcom/android/server/wm/DisplayPolicy;->isLowRAM:Z
 
     new-instance v0, Landroid/graphics/Rect;
 
@@ -325,6 +351,14 @@
     sput-object v0, Lcom/android/server/wm/DisplayPolicy;->sTmpLastParentFrame:Landroid/graphics/Rect;
 
     return-void
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x1
+        0x0
+    .end array-data
 .end method
 
 .method constructor <init>(Lcom/android/server/wm/WindowManagerService;Lcom/android/server/wm/DisplayContent;)V
@@ -362,177 +396,185 @@
 
     iput v4, v0, Lcom/android/server/wm/DisplayPolicy;->mLidState:I
 
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
-    iput v4, v0, Lcom/android/server/wm/DisplayPolicy;->mDockMode:I
+    iput v5, v0, Lcom/android/server/wm/DisplayPolicy;->mDockMode:I
 
-    new-instance v5, Landroid/util/ArraySet;
+    new-instance v6, Landroid/util/ArraySet;
 
-    invoke-direct {v5}, Landroid/util/ArraySet;-><init>()V
+    invoke-direct {v6}, Landroid/util/ArraySet;-><init>()V
 
-    iput-object v5, v0, Lcom/android/server/wm/DisplayPolicy;->mScreenDecorWindows:Landroid/util/ArraySet;
+    iput-object v6, v0, Lcom/android/server/wm/DisplayPolicy;->mScreenDecorWindows:Landroid/util/ArraySet;
 
     iput-object v3, v0, Lcom/android/server/wm/DisplayPolicy;->mStatusBar:Lcom/android/server/wm/WindowState;
 
     iput-object v3, v0, Lcom/android/server/wm/DisplayPolicy;->mNotificationShade:Lcom/android/server/wm/WindowState;
 
-    const/4 v5, 0x4
+    const/4 v6, 0x4
 
-    new-array v6, v5, [I
+    new-array v7, v6, [I
 
-    iput-object v6, v0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarHeightForRotation:[I
+    iput-object v7, v0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarHeightForRotation:[I
 
     iput-object v3, v0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBar:Lcom/android/server/wm/WindowState;
 
-    iput v5, v0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarPosition:I
+    iput v6, v0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarPosition:I
 
-    new-array v6, v5, [I
+    new-array v7, v6, [I
 
-    iput-object v6, v0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarHeightForRotationDefault:[I
+    iput-object v7, v0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarHeightForRotationDefault:[I
 
-    new-array v6, v5, [I
+    new-array v7, v6, [I
 
-    iput-object v6, v0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarWidthForRotationDefault:[I
+    iput-object v7, v0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarWidthForRotationDefault:[I
 
-    new-array v6, v5, [I
+    new-array v7, v6, [I
 
-    iput-object v6, v0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarHeightForRotationInCarMode:[I
+    iput-object v7, v0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarHeightForRotationInCarMode:[I
 
-    new-array v6, v5, [I
+    new-array v7, v6, [I
 
-    iput-object v6, v0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarWidthForRotationInCarMode:[I
+    iput-object v7, v0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarWidthForRotationInCarMode:[I
 
-    new-array v5, v5, [I
+    iput-object v3, v0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarAlt:Lcom/android/server/wm/WindowState;
 
-    iput-object v5, v0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarFrameHeightForRotationDefault:[I
+    iput v4, v0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarAltPosition:I
 
-    new-instance v5, Lcom/android/server/wm/DisplayPolicy$1;
+    iput-object v3, v0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarAlt:Lcom/android/server/wm/WindowState;
 
-    invoke-direct {v5, v0}, Lcom/android/server/wm/DisplayPolicy$1;-><init>(Lcom/android/server/wm/DisplayPolicy;)V
+    iput v4, v0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarAltPosition:I
 
-    iput-object v5, v0, Lcom/android/server/wm/DisplayPolicy;->mNavBarVisibilityListener:Lcom/android/server/wm/BarController$OnBarVisibilityChangedListener;
+    new-array v4, v6, [I
 
-    iput v4, v0, Lcom/android/server/wm/DisplayPolicy;->mResettingSystemUiFlags:I
+    iput-object v4, v0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarFrameHeightForRotationDefault:[I
 
-    iput v4, v0, Lcom/android/server/wm/DisplayPolicy;->mForceClearedSystemUiFlags:I
+    new-instance v4, Lcom/android/server/wm/DisplayPolicy$1;
 
-    new-instance v5, Landroid/graphics/Rect;
+    invoke-direct {v4, v0}, Lcom/android/server/wm/DisplayPolicy$1;-><init>(Lcom/android/server/wm/DisplayPolicy;)V
 
-    invoke-direct {v5}, Landroid/graphics/Rect;-><init>()V
+    iput-object v4, v0, Lcom/android/server/wm/DisplayPolicy;->mNavBarVisibilityListener:Lcom/android/server/wm/BarController$OnBarVisibilityChangedListener;
 
-    iput-object v5, v0, Lcom/android/server/wm/DisplayPolicy;->mNonDockedStackBounds:Landroid/graphics/Rect;
+    iput v5, v0, Lcom/android/server/wm/DisplayPolicy;->mResettingSystemUiFlags:I
 
-    new-instance v5, Landroid/graphics/Rect;
+    iput v5, v0, Lcom/android/server/wm/DisplayPolicy;->mForceClearedSystemUiFlags:I
 
-    invoke-direct {v5}, Landroid/graphics/Rect;-><init>()V
+    new-instance v4, Landroid/graphics/Rect;
 
-    iput-object v5, v0, Lcom/android/server/wm/DisplayPolicy;->mDockedStackBounds:Landroid/graphics/Rect;
+    invoke-direct {v4}, Landroid/graphics/Rect;-><init>()V
 
-    new-instance v5, Landroid/graphics/Rect;
+    iput-object v4, v0, Lcom/android/server/wm/DisplayPolicy;->mNonDockedStackBounds:Landroid/graphics/Rect;
 
-    invoke-direct {v5}, Landroid/graphics/Rect;-><init>()V
+    new-instance v4, Landroid/graphics/Rect;
 
-    iput-object v5, v0, Lcom/android/server/wm/DisplayPolicy;->mLastNonDockedStackBounds:Landroid/graphics/Rect;
+    invoke-direct {v4}, Landroid/graphics/Rect;-><init>()V
 
-    new-instance v5, Landroid/graphics/Rect;
+    iput-object v4, v0, Lcom/android/server/wm/DisplayPolicy;->mDockedStackBounds:Landroid/graphics/Rect;
 
-    invoke-direct {v5}, Landroid/graphics/Rect;-><init>()V
+    new-instance v4, Landroid/graphics/Rect;
 
-    iput-object v5, v0, Lcom/android/server/wm/DisplayPolicy;->mLastDockedStackBounds:Landroid/graphics/Rect;
+    invoke-direct {v4}, Landroid/graphics/Rect;-><init>()V
 
-    iput-boolean v4, v0, Lcom/android/server/wm/DisplayPolicy;->mLastFocusIsFullscreen:Z
+    iput-object v4, v0, Lcom/android/server/wm/DisplayPolicy;->mLastNonDockedStackBounds:Landroid/graphics/Rect;
 
-    iput-boolean v4, v0, Lcom/android/server/wm/DisplayPolicy;->mLastFocusIsImmersive:Z
+    new-instance v4, Landroid/graphics/Rect;
 
-    iput v4, v0, Lcom/android/server/wm/DisplayPolicy;->mNavBarOpacityMode:I
+    invoke-direct {v4}, Landroid/graphics/Rect;-><init>()V
+
+    iput-object v4, v0, Lcom/android/server/wm/DisplayPolicy;->mLastDockedStackBounds:Landroid/graphics/Rect;
+
+    iput-boolean v5, v0, Lcom/android/server/wm/DisplayPolicy;->mLastFocusIsFullscreen:Z
+
+    iput-boolean v5, v0, Lcom/android/server/wm/DisplayPolicy;->mLastFocusIsImmersive:Z
+
+    iput v5, v0, Lcom/android/server/wm/DisplayPolicy;->mNavBarOpacityMode:I
 
     iput-object v3, v0, Lcom/android/server/wm/DisplayPolicy;->mInputConsumer:Lcom/android/server/policy/WindowManagerPolicy$InputConsumer;
 
-    sget-object v5, Landroid/graphics/Insets;->NONE:Landroid/graphics/Insets;
+    sget-object v4, Landroid/graphics/Insets;->NONE:Landroid/graphics/Insets;
 
-    iput-object v5, v0, Lcom/android/server/wm/DisplayPolicy;->mForwardedInsets:Landroid/graphics/Insets;
+    iput-object v4, v0, Lcom/android/server/wm/DisplayPolicy;->mForwardedInsets:Landroid/graphics/Insets;
 
-    new-instance v5, Lcom/android/server/wm/DisplayPolicy$3;
+    new-instance v4, Lcom/android/server/wm/DisplayPolicy$3;
 
-    invoke-direct {v5, v0}, Lcom/android/server/wm/DisplayPolicy$3;-><init>(Lcom/android/server/wm/DisplayPolicy;)V
+    invoke-direct {v4, v0}, Lcom/android/server/wm/DisplayPolicy$3;-><init>(Lcom/android/server/wm/DisplayPolicy;)V
 
-    iput-object v5, v0, Lcom/android/server/wm/DisplayPolicy;->mClearHideNavigationFlag:Ljava/lang/Runnable;
+    iput-object v4, v0, Lcom/android/server/wm/DisplayPolicy;->mClearHideNavigationFlag:Ljava/lang/Runnable;
 
-    const-string v5, ""
+    const-string v4, ""
 
-    iput-object v5, v0, Lcom/android/server/wm/DisplayPolicy;->mInputMethodName:Ljava/lang/String;
+    iput-object v4, v0, Lcom/android/server/wm/DisplayPolicy;->mInputMethodName:Ljava/lang/String;
 
-    new-instance v5, Lcom/android/server/wm/DisplayPolicy$4;
+    new-instance v4, Lcom/android/server/wm/DisplayPolicy$4;
 
-    invoke-direct {v5, v0}, Lcom/android/server/wm/DisplayPolicy$4;-><init>(Lcom/android/server/wm/DisplayPolicy;)V
+    invoke-direct {v4, v0}, Lcom/android/server/wm/DisplayPolicy$4;-><init>(Lcom/android/server/wm/DisplayPolicy;)V
 
-    iput-object v5, v0, Lcom/android/server/wm/DisplayPolicy;->mHiddenNavPanic:Ljava/lang/Runnable;
+    iput-object v4, v0, Lcom/android/server/wm/DisplayPolicy;->mHiddenNavPanic:Ljava/lang/Runnable;
 
     iput-object v1, v0, Lcom/android/server/wm/DisplayPolicy;->mService:Lcom/android/server/wm/WindowManagerService;
 
-    iget-boolean v5, v2, Lcom/android/server/wm/DisplayContent;->isDefaultDisplay:Z
+    iget-boolean v4, v2, Lcom/android/server/wm/DisplayContent;->isDefaultDisplay:Z
 
-    if-eqz v5, :cond_0
+    if-eqz v4, :cond_0
 
-    iget-object v5, v1, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
+    iget-object v4, v1, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
 
     goto :goto_0
 
     :cond_0
-    iget-object v5, v1, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
+    iget-object v4, v1, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual/range {p2 .. p2}, Lcom/android/server/wm/DisplayContent;->getDisplay()Landroid/view/Display;
 
     move-result-object v6
 
-    invoke-virtual {v5, v6}, Landroid/content/Context;->createDisplayContext(Landroid/view/Display;)Landroid/content/Context;
+    invoke-virtual {v4, v6}, Landroid/content/Context;->createDisplayContext(Landroid/view/Display;)Landroid/content/Context;
 
-    move-result-object v5
+    move-result-object v4
 
     :goto_0
-    iput-object v5, v0, Lcom/android/server/wm/DisplayPolicy;->mContext:Landroid/content/Context;
+    iput-object v4, v0, Lcom/android/server/wm/DisplayPolicy;->mContext:Landroid/content/Context;
 
-    iget-boolean v5, v2, Lcom/android/server/wm/DisplayContent;->isDefaultDisplay:Z
+    iget-boolean v4, v2, Lcom/android/server/wm/DisplayContent;->isDefaultDisplay:Z
 
-    if-eqz v5, :cond_1
+    if-eqz v4, :cond_1
 
-    iget-object v5, v1, Lcom/android/server/wm/WindowManagerService;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
+    iget-object v4, v1, Lcom/android/server/wm/WindowManagerService;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
 
-    iget-object v5, v5, Lcom/android/server/wm/ActivityTaskManagerService;->mUiContext:Landroid/content/Context;
+    iget-object v4, v4, Lcom/android/server/wm/ActivityTaskManagerService;->mUiContext:Landroid/content/Context;
 
     goto :goto_1
 
     :cond_1
-    iget-object v5, v1, Lcom/android/server/wm/WindowManagerService;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
+    iget-object v4, v1, Lcom/android/server/wm/WindowManagerService;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
 
-    iget-object v5, v5, Lcom/android/server/wm/ActivityTaskManagerService;->mSystemThread:Landroid/app/ActivityThread;
+    iget-object v4, v4, Lcom/android/server/wm/ActivityTaskManagerService;->mSystemThread:Landroid/app/ActivityThread;
 
     invoke-virtual/range {p2 .. p2}, Lcom/android/server/wm/DisplayContent;->getDisplayId()I
 
     move-result v6
 
-    invoke-virtual {v5, v6}, Landroid/app/ActivityThread;->createSystemUiContext(I)Landroid/app/ContextImpl;
+    invoke-virtual {v4, v6}, Landroid/app/ActivityThread;->createSystemUiContext(I)Landroid/app/ContextImpl;
 
-    move-result-object v5
+    move-result-object v4
 
     :goto_1
-    iput-object v5, v0, Lcom/android/server/wm/DisplayPolicy;->mUiContext:Landroid/content/Context;
+    iput-object v4, v0, Lcom/android/server/wm/DisplayPolicy;->mUiContext:Landroid/content/Context;
 
     iput-object v2, v0, Lcom/android/server/wm/DisplayPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/WindowManagerService;->getWindowManagerLock()Ljava/lang/Object;
 
-    move-result-object v5
+    move-result-object v4
 
-    iput-object v5, v0, Lcom/android/server/wm/DisplayPolicy;->mLock:Ljava/lang/Object;
+    iput-object v4, v0, Lcom/android/server/wm/DisplayPolicy;->mLock:Ljava/lang/Object;
 
     invoke-virtual/range {p2 .. p2}, Lcom/android/server/wm/DisplayContent;->getDisplayId()I
 
-    move-result v5
+    move-result v4
 
     new-instance v6, Lcom/android/server/wm/StatusBarController;
 
-    invoke-direct {v6, v5}, Lcom/android/server/wm/StatusBarController;-><init>(I)V
+    invoke-direct {v6, v4}, Lcom/android/server/wm/StatusBarController;-><init>(I)V
 
     iput-object v6, v0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarController:Lcom/android/server/wm/StatusBarController;
 
@@ -556,7 +598,7 @@
 
     move-object v6, v15
 
-    move v8, v5
+    move v8, v4
 
     move-object v3, v15
 
@@ -642,7 +684,7 @@
     :cond_3
     const-string v6, "ro.config.low_ram"
 
-    invoke-static {v6, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {v6, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v6
 
@@ -752,18 +794,18 @@
 
     if-eqz v9, :cond_5
 
-    iput-boolean v4, v0, Lcom/android/server/wm/DisplayPolicy;->mHasNavigationBar:Z
+    iput-boolean v5, v0, Lcom/android/server/wm/DisplayPolicy;->mHasNavigationBar:Z
 
     goto :goto_3
 
     :cond_5
-    const-string v4, "0"
+    const-string v5, "0"
 
-    invoke-virtual {v4, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v4
+    move-result v5
 
-    if-eqz v4, :cond_6
+    if-eqz v5, :cond_6
 
     iput-boolean v7, v0, Lcom/android/server/wm/DisplayPolicy;->mHasNavigationBar:Z
 
@@ -772,18 +814,18 @@
     goto :goto_4
 
     :cond_7
-    iput-boolean v4, v0, Lcom/android/server/wm/DisplayPolicy;->mHasStatusBar:Z
+    iput-boolean v5, v0, Lcom/android/server/wm/DisplayPolicy;->mHasStatusBar:Z
 
-    iget-object v4, v0, Lcom/android/server/wm/DisplayPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
+    iget-object v5, v0, Lcom/android/server/wm/DisplayPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    invoke-virtual {v4}, Lcom/android/server/wm/DisplayContent;->supportsSystemDecorations()Z
+    invoke-virtual {v5}, Lcom/android/server/wm/DisplayContent;->supportsSystemDecorations()Z
 
-    move-result v4
+    move-result v5
 
-    iput-boolean v4, v0, Lcom/android/server/wm/DisplayPolicy;->mHasNavigationBar:Z
+    iput-boolean v5, v0, Lcom/android/server/wm/DisplayPolicy;->mHasNavigationBar:Z
 
     :goto_4
-    new-instance v4, Lcom/android/server/wm/RefreshRatePolicy;
+    new-instance v5, Lcom/android/server/wm/RefreshRatePolicy;
 
     iget-object v7, v0, Lcom/android/server/wm/DisplayPolicy;->mService:Lcom/android/server/wm/WindowManagerService;
 
@@ -797,11 +839,11 @@
 
     iget-object v9, v9, Lcom/android/server/wm/WindowManagerService;->mHighRefreshRateBlacklist:Lcom/android/server/wm/HighRefreshRateBlacklist;
 
-    invoke-direct {v4, v7, v8, v9}, Lcom/android/server/wm/RefreshRatePolicy;-><init>(Lcom/android/server/wm/WindowManagerService;Landroid/view/DisplayInfo;Lcom/android/server/wm/HighRefreshRateBlacklist;)V
+    invoke-direct {v5, v7, v8, v9}, Lcom/android/server/wm/RefreshRatePolicy;-><init>(Lcom/android/server/wm/WindowManagerService;Landroid/view/DisplayInfo;Lcom/android/server/wm/HighRefreshRateBlacklist;)V
 
-    iput-object v4, v0, Lcom/android/server/wm/DisplayPolicy;->mRefreshRatePolicy:Lcom/android/server/wm/RefreshRatePolicy;
+    iput-object v5, v0, Lcom/android/server/wm/DisplayPolicy;->mRefreshRatePolicy:Lcom/android/server/wm/RefreshRatePolicy;
 
-    new-instance v4, Lcom/android/internal/policy/GestureNavigationSettingsObserver;
+    new-instance v5, Lcom/android/internal/policy/GestureNavigationSettingsObserver;
 
     iget-object v7, v0, Lcom/android/server/wm/DisplayPolicy;->mHandler:Landroid/os/Handler;
 
@@ -811,17 +853,17 @@
 
     invoke-direct {v9, v0}, Lcom/android/server/wm/-$$Lambda$DisplayPolicy$E7j9SKAujlVEAp0eeRWet1AUkHs;-><init>(Lcom/android/server/wm/DisplayPolicy;)V
 
-    invoke-direct {v4, v7, v8, v9}, Lcom/android/internal/policy/GestureNavigationSettingsObserver;-><init>(Landroid/os/Handler;Landroid/content/Context;Ljava/lang/Runnable;)V
+    invoke-direct {v5, v7, v8, v9}, Lcom/android/internal/policy/GestureNavigationSettingsObserver;-><init>(Landroid/os/Handler;Landroid/content/Context;Ljava/lang/Runnable;)V
 
-    iput-object v4, v0, Lcom/android/server/wm/DisplayPolicy;->mGestureNavigationSettingsObserver:Lcom/android/internal/policy/GestureNavigationSettingsObserver;
+    iput-object v5, v0, Lcom/android/server/wm/DisplayPolicy;->mGestureNavigationSettingsObserver:Lcom/android/internal/policy/GestureNavigationSettingsObserver;
 
     iget-object v7, v0, Lcom/android/server/wm/DisplayPolicy;->mHandler:Landroid/os/Handler;
 
-    invoke-static {v4}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v5}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     new-instance v8, Lcom/android/server/wm/-$$Lambda$o8Xf30aea0t-A93AFKY5pBW0IDI;
 
-    invoke-direct {v8, v4}, Lcom/android/server/wm/-$$Lambda$o8Xf30aea0t-A93AFKY5pBW0IDI;-><init>(Lcom/android/internal/policy/GestureNavigationSettingsObserver;)V
+    invoke-direct {v8, v5}, Lcom/android/server/wm/-$$Lambda$o8Xf30aea0t-A93AFKY5pBW0IDI;-><init>(Lcom/android/internal/policy/GestureNavigationSettingsObserver;)V
 
     invoke-virtual {v7, v8}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -844,7 +886,15 @@
     return-object v0
 .end method
 
-.method static synthetic access$1000(Lcom/android/server/wm/DisplayPolicy;)Z
+.method static synthetic access$1000(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/DisplayContent;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
+
+    return-object v0
+.end method
+
+.method static synthetic access$1100(Lcom/android/server/wm/DisplayPolicy;)Z
     .locals 1
 
     iget-boolean v0, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarAlwaysShowOnSideGesture:Z
@@ -852,7 +902,7 @@
     return v0
 .end method
 
-.method static synthetic access$1100(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/SystemGesturesPointerEventListener;
+.method static synthetic access$1200(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/SystemGesturesPointerEventListener;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mSystemGestures:Lcom/android/server/wm/SystemGesturesPointerEventListener;
@@ -860,7 +910,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$1200(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/WindowManagerService;
+.method static synthetic access$1300(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/WindowManagerService;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mService:Lcom/android/server/wm/WindowManagerService;
@@ -868,7 +918,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$1300(Lcom/android/server/wm/DisplayPolicy;)Ljava/lang/String;
+.method static synthetic access$1400(Lcom/android/server/wm/DisplayPolicy;)Ljava/lang/String;
     .locals 1
 
     invoke-direct {p0}, Lcom/android/server/wm/DisplayPolicy;->getAppPackageName()Ljava/lang/String;
@@ -878,7 +928,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$1400()Z
+.method static synthetic access$1500()Z
     .locals 1
 
     sget-boolean v0, Lcom/android/server/wm/DisplayPolicy;->SCROLL_BOOST_SS_ENABLE:Z
@@ -886,7 +936,7 @@
     return v0
 .end method
 
-.method static synthetic access$1500(Lcom/android/server/wm/DisplayPolicy;)Z
+.method static synthetic access$1600(Lcom/android/server/wm/DisplayPolicy;)Z
     .locals 1
 
     iget-boolean v0, p0, Lcom/android/server/wm/DisplayPolicy;->mIsPerfBoostFlingAcquired:Z
@@ -894,7 +944,7 @@
     return v0
 .end method
 
-.method static synthetic access$1502(Lcom/android/server/wm/DisplayPolicy;Z)Z
+.method static synthetic access$1602(Lcom/android/server/wm/DisplayPolicy;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/server/wm/DisplayPolicy;->mIsPerfBoostFlingAcquired:Z
@@ -902,7 +952,7 @@
     return p1
 .end method
 
-.method static synthetic access$1600(Lcom/android/server/wm/DisplayPolicy;Ljava/lang/String;Landroid/util/BoostFramework;)Z
+.method static synthetic access$1700(Lcom/android/server/wm/DisplayPolicy;Ljava/lang/String;Landroid/util/BoostFramework;)Z
     .locals 1
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/wm/DisplayPolicy;->isTopAppGame(Ljava/lang/String;Landroid/util/BoostFramework;)Z
@@ -912,7 +962,7 @@
     return v0
 .end method
 
-.method static synthetic access$1700(Lcom/android/server/wm/DisplayPolicy;)Landroid/os/Handler;
+.method static synthetic access$1800(Lcom/android/server/wm/DisplayPolicy;)Landroid/os/Handler;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mHandler:Landroid/os/Handler;
@@ -920,7 +970,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$1800(Lcom/android/server/wm/DisplayPolicy;)I
+.method static synthetic access$1900(Lcom/android/server/wm/DisplayPolicy;)I
     .locals 1
 
     iget v0, p0, Lcom/android/server/wm/DisplayPolicy;->mForceClearedSystemUiFlags:I
@@ -928,7 +978,7 @@
     return v0
 .end method
 
-.method static synthetic access$1802(Lcom/android/server/wm/DisplayPolicy;I)I
+.method static synthetic access$1902(Lcom/android/server/wm/DisplayPolicy;I)I
     .locals 0
 
     iput p1, p0, Lcom/android/server/wm/DisplayPolicy;->mForceClearedSystemUiFlags:I
@@ -936,7 +986,7 @@
     return p1
 .end method
 
-.method static synthetic access$1872(Lcom/android/server/wm/DisplayPolicy;I)I
+.method static synthetic access$1972(Lcom/android/server/wm/DisplayPolicy;I)I
     .locals 1
 
     iget v0, p0, Lcom/android/server/wm/DisplayPolicy;->mForceClearedSystemUiFlags:I
@@ -948,7 +998,15 @@
     return v0
 .end method
 
-.method static synthetic access$1900(Lcom/android/server/wm/DisplayPolicy;)I
+.method static synthetic access$200(Lcom/android/server/wm/DisplayPolicy;Lcom/android/server/wm/WindowState;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/server/wm/DisplayPolicy;->requestTransientBars(Lcom/android/server/wm/WindowState;)V
+
+    return-void
+.end method
+
+.method static synthetic access$2000(Lcom/android/server/wm/DisplayPolicy;)I
     .locals 1
 
     iget v0, p0, Lcom/android/server/wm/DisplayPolicy;->mResettingSystemUiFlags:I
@@ -956,7 +1014,7 @@
     return v0
 .end method
 
-.method static synthetic access$1902(Lcom/android/server/wm/DisplayPolicy;I)I
+.method static synthetic access$2002(Lcom/android/server/wm/DisplayPolicy;I)I
     .locals 0
 
     iput p1, p0, Lcom/android/server/wm/DisplayPolicy;->mResettingSystemUiFlags:I
@@ -964,15 +1022,7 @@
     return p1
 .end method
 
-.method static synthetic access$200(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/WindowState;
-    .locals 1
-
-    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBar:Lcom/android/server/wm/WindowState;
-
-    return-object v0
-.end method
-
-.method static synthetic access$2000(Lcom/android/server/wm/DisplayPolicy;)Ljava/lang/Runnable;
+.method static synthetic access$2100(Lcom/android/server/wm/DisplayPolicy;)Ljava/lang/Runnable;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mClearHideNavigationFlag:Ljava/lang/Runnable;
@@ -980,7 +1030,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$2102(Lcom/android/server/wm/DisplayPolicy;J)J
+.method static synthetic access$2202(Lcom/android/server/wm/DisplayPolicy;J)J
     .locals 0
 
     iput-wide p1, p0, Lcom/android/server/wm/DisplayPolicy;->mPendingPanicGestureUptime:J
@@ -988,7 +1038,7 @@
     return-wide p1
 .end method
 
-.method static synthetic access$2200(I)Z
+.method static synthetic access$2300(I)Z
     .locals 1
 
     invoke-static {p0}, Lcom/android/server/wm/DisplayPolicy;->isNavBarEmpty(I)Z
@@ -998,7 +1048,7 @@
     return v0
 .end method
 
-.method static synthetic access$2300(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/BarController;
+.method static synthetic access$2400(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/BarController;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarController:Lcom/android/server/wm/BarController;
@@ -1006,23 +1056,15 @@
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/WindowState;
+.method static synthetic access$2500()[I
     .locals 1
 
-    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBar:Lcom/android/server/wm/WindowState;
+    sget-object v0, Lcom/android/server/wm/DisplayPolicy;->SHOW_TYPES_FOR_PANIC:[I
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/server/wm/DisplayPolicy;Lcom/android/server/wm/WindowState;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/server/wm/DisplayPolicy;->requestTransientBars(Lcom/android/server/wm/WindowState;)V
-
-    return-void
-.end method
-
-.method static synthetic access$500(Lcom/android/server/wm/DisplayPolicy;Lcom/android/server/policy/WindowManagerPolicy$InputConsumer;)V
+.method static synthetic access$300(Lcom/android/server/wm/DisplayPolicy;Lcom/android/server/policy/WindowManagerPolicy$InputConsumer;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/wm/DisplayPolicy;->disposeInputConsumer(Lcom/android/server/policy/WindowManagerPolicy$InputConsumer;)V
@@ -1030,7 +1072,7 @@
     return-void
 .end method
 
-.method static synthetic access$600(Lcom/android/server/wm/DisplayPolicy;)V
+.method static synthetic access$400(Lcom/android/server/wm/DisplayPolicy;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/server/wm/DisplayPolicy;->enablePointerLocation()V
@@ -1038,7 +1080,7 @@
     return-void
 .end method
 
-.method static synthetic access$700(Lcom/android/server/wm/DisplayPolicy;)V
+.method static synthetic access$500(Lcom/android/server/wm/DisplayPolicy;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/server/wm/DisplayPolicy;->disablePointerLocation()V
@@ -1046,20 +1088,36 @@
     return-void
 .end method
 
-.method static synthetic access$800(Lcom/android/server/wm/DisplayPolicy;)I
+.method static synthetic access$600(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/WindowState;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBar:Lcom/android/server/wm/WindowState;
+
+    return-object v0
+.end method
+
+.method static synthetic access$700(Lcom/android/server/wm/DisplayPolicy;I)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/server/wm/DisplayPolicy;->checkAltBarSwipeForTransientBars(I)V
+
+    return-void
+.end method
+
+.method static synthetic access$800(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/WindowState;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBar:Lcom/android/server/wm/WindowState;
+
+    return-object v0
+.end method
+
+.method static synthetic access$900(Lcom/android/server/wm/DisplayPolicy;)I
     .locals 1
 
     iget v0, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarPosition:I
 
     return v0
-.end method
-
-.method static synthetic access$900(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/DisplayContent;
-    .locals 1
-
-    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
-
-    return-object v0
 .end method
 
 .method private applyStableConstraints(IILandroid/graphics/Rect;Lcom/android/server/wm/DisplayFrames;)V
@@ -1161,6 +1219,34 @@
 
     :goto_2
     return v1
+.end method
+
+.method private checkAltBarSwipeForTransientBars(I)V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarAlt:Lcom/android/server/wm/WindowState;
+
+    if-eqz v0, :cond_0
+
+    iget v1, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarAltPosition:I
+
+    if-ne v1, p1, :cond_0
+
+    invoke-direct {p0, v0}, Lcom/android/server/wm/DisplayPolicy;->requestTransientBars(Lcom/android/server/wm/WindowState;)V
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarAlt:Lcom/android/server/wm/WindowState;
+
+    if-eqz v0, :cond_1
+
+    iget v1, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarAltPosition:I
+
+    if-ne v1, p1, :cond_1
+
+    invoke-direct {p0, v0}, Lcom/android/server/wm/DisplayPolicy;->requestTransientBars(Lcom/android/server/wm/WindowState;)V
+
+    :cond_1
+    return-void
 .end method
 
 .method static chooseNavigationColorWindowLw(Lcom/android/server/wm/WindowState;Lcom/android/server/wm/WindowState;Lcom/android/server/wm/WindowState;I)Lcom/android/server/wm/WindowState;
@@ -1693,6 +1779,52 @@
     return-void
 .end method
 
+.method private getAltBarPosition(Landroid/view/WindowManager$LayoutParams;)I
+    .locals 2
+
+    iget v0, p1, Landroid/view/WindowManager$LayoutParams;->gravity:I
+
+    const/4 v1, 0x3
+
+    if-eq v0, v1, :cond_3
+
+    const/4 v1, 0x5
+
+    if-eq v0, v1, :cond_2
+
+    const/16 v1, 0x30
+
+    if-eq v0, v1, :cond_1
+
+    const/16 v1, 0x50
+
+    if-eq v0, v1, :cond_0
+
+    const/4 v0, -0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x4
+
+    return v0
+
+    :cond_1
+    const/16 v0, 0x8
+
+    return v0
+
+    :cond_2
+    const/4 v0, 0x2
+
+    return v0
+
+    :cond_3
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
 .method private getAppPackageName()Ljava/lang/String;
     .locals 3
 
@@ -1952,7 +2084,9 @@
 
     const/16 v0, 0x1800
 
-    iget-object v1, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBar:Lcom/android/server/wm/WindowState;
+    invoke-virtual {p0}, Lcom/android/server/wm/DisplayPolicy;->getNavigationBar()Lcom/android/server/wm/WindowState;
+
+    move-result-object v1
 
     if-eqz v1, :cond_0
 
@@ -1990,7 +2124,9 @@
 
     iget v0, v0, Landroid/view/InsetsFlags;->behavior:I
 
-    iget-object v1, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBar:Lcom/android/server/wm/WindowState;
+    invoke-virtual {p0}, Lcom/android/server/wm/DisplayPolicy;->getNavigationBar()Lcom/android/server/wm/WindowState;
+
+    move-result-object v1
 
     const/4 v2, 0x1
 
@@ -3639,7 +3775,7 @@
 .end method
 
 .method private requestTransientBars(Lcom/android/server/wm/WindowState;)V
-    .locals 6
+    .locals 7
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mService:Lcom/android/server/wm/WindowManagerService;
 
@@ -3665,13 +3801,13 @@
     :cond_1
     sget v0, Landroid/view/ViewRootImpl;->sNewInsetsMode:I
 
-    const/4 v1, 0x1
+    const/4 v1, 0x2
 
-    const/4 v2, 0x2
+    const/4 v2, 0x1
 
     const/4 v3, 0x0
 
-    if-ne v0, v2, :cond_8
+    if-ne v0, v1, :cond_9
 
     invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->getControllableInsetProvider()Lcom/android/server/wm/InsetsSourceProvider;
 
@@ -3681,57 +3817,89 @@
 
     invoke-virtual {v0}, Lcom/android/server/wm/InsetsSourceProvider;->getControlTarget()Lcom/android/server/wm/InsetsControlTarget;
 
-    move-result-object v4
+    move-result-object v1
 
     goto :goto_0
 
     :cond_2
-    const/4 v4, 0x0
+    const/4 v1, 0x0
 
     :goto_0
-    if-eqz v4, :cond_7
+    if-eqz v1, :cond_8
 
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayPolicy;->getNotificationShade()Lcom/android/server/wm/WindowState;
 
-    move-result-object v5
+    move-result-object v4
 
-    if-ne v4, v5, :cond_3
+    if-ne v1, v4, :cond_3
 
-    goto :goto_1
+    goto :goto_4
 
     :cond_3
-    iget-object v5, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBar:Lcom/android/server/wm/WindowState;
+    invoke-interface {v1}, Lcom/android/server/wm/InsetsControlTarget;->getRequestedInsetsState()Landroid/view/InsetsState;
 
-    if-ne p1, v5, :cond_4
+    move-result-object v4
 
-    invoke-virtual {p0}, Lcom/android/server/wm/DisplayPolicy;->getInsetsPolicy()Lcom/android/server/wm/InsetsPolicy;
+    invoke-virtual {v4, v2}, Landroid/view/InsetsState;->getSourceOrDefaultVisibility(I)Z
 
-    move-result-object v5
+    move-result v2
 
-    invoke-virtual {v5, v1}, Lcom/android/server/wm/InsetsPolicy;->isHidden(I)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
+    if-eqz v2, :cond_4
 
     invoke-static {}, Landroid/view/WindowInsets$Type;->navigationBars()I
 
-    move-result v1
+    move-result v2
 
-    invoke-interface {v4, v1, v3}, Lcom/android/server/wm/InsetsControlTarget;->showInsets(IZ)V
-
-    return-void
+    goto :goto_1
 
     :cond_4
-    invoke-static {}, Landroid/view/WindowInsets$Type;->systemBars()I
+    move v2, v3
 
-    move-result v1
-
-    invoke-interface {v4}, Lcom/android/server/wm/InsetsControlTarget;->canShowTransient()Z
+    :goto_1
+    invoke-virtual {v4, v3}, Landroid/view/InsetsState;->getSourceOrDefaultVisibility(I)Z
 
     move-result v5
 
     if-eqz v5, :cond_5
+
+    invoke-static {}, Landroid/view/WindowInsets$Type;->statusBars()I
+
+    move-result v5
+
+    goto :goto_2
+
+    :cond_5
+    move v5, v3
+
+    :goto_2
+    or-int/2addr v2, v5
+
+    iget-object v5, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBar:Lcom/android/server/wm/WindowState;
+
+    if-ne p1, v5, :cond_6
+
+    invoke-static {}, Landroid/view/WindowInsets$Type;->navigationBars()I
+
+    move-result v5
+
+    and-int/2addr v5, v2
+
+    if-eqz v5, :cond_6
+
+    invoke-static {}, Landroid/view/WindowInsets$Type;->navigationBars()I
+
+    move-result v5
+
+    invoke-interface {v1, v5, v3}, Lcom/android/server/wm/InsetsControlTarget;->showInsets(IZ)V
+
+    return-void
+
+    :cond_6
+    invoke-interface {v1}, Lcom/android/server/wm/InsetsControlTarget;->canShowTransient()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_7
 
     iget-object v5, p0, Lcom/android/server/wm/DisplayPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -3739,106 +3907,102 @@
 
     move-result-object v5
 
-    new-array v2, v2, [I
+    sget-object v6, Lcom/android/server/wm/DisplayPolicy;->SHOW_TYPES_FOR_SWIPE:[I
 
-    fill-array-data v2, :array_0
+    invoke-virtual {v5, v6}, Lcom/android/server/wm/InsetsPolicy;->showTransient([I)V
 
-    invoke-static {v2}, Landroid/util/IntArray;->wrap([I)Landroid/util/IntArray;
+    invoke-interface {v1, v2, v3}, Lcom/android/server/wm/InsetsControlTarget;->showInsets(IZ)V
 
-    move-result-object v2
-
-    invoke-virtual {v5, v2}, Lcom/android/server/wm/InsetsPolicy;->showTransient(Landroid/util/IntArray;)I
-
-    move-result v2
-
-    not-int v2, v2
-
-    and-int/2addr v1, v2
-
-    :cond_5
-    if-eqz v1, :cond_6
-
-    invoke-interface {v4, v1, v3}, Lcom/android/server/wm/InsetsControlTarget;->showInsets(IZ)V
-
-    :cond_6
     goto :goto_3
 
     :cond_7
-    :goto_1
-    return-void
+    invoke-static {}, Landroid/view/WindowInsets$Type;->statusBars()I
+
+    move-result v5
+
+    invoke-static {}, Landroid/view/WindowInsets$Type;->navigationBars()I
+
+    move-result v6
+
+    or-int/2addr v5, v6
+
+    invoke-interface {v1, v5, v3}, Lcom/android/server/wm/InsetsControlTarget;->showInsets(IZ)V
+
+    :goto_3
+    goto :goto_6
 
     :cond_8
+    :goto_4
+    return-void
+
+    :cond_9
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarController:Lcom/android/server/wm/StatusBarController;
 
     invoke-virtual {v0}, Lcom/android/server/wm/StatusBarController;->checkShowTransientBarLw()Z
 
     move-result v0
 
-    iget-object v2, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarController:Lcom/android/server/wm/BarController;
+    iget-object v1, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarController:Lcom/android/server/wm/BarController;
 
-    invoke-virtual {v2}, Lcom/android/server/wm/BarController;->checkShowTransientBarLw()Z
+    invoke-virtual {v1}, Lcom/android/server/wm/BarController;->checkShowTransientBarLw()Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_9
+    if-eqz v1, :cond_a
 
-    iget v2, p0, Lcom/android/server/wm/DisplayPolicy;->mLastSystemUiFlags:I
+    iget v1, p0, Lcom/android/server/wm/DisplayPolicy;->mLastSystemUiFlags:I
 
-    invoke-static {v2}, Lcom/android/server/wm/DisplayPolicy;->isNavBarEmpty(I)Z
+    invoke-static {v1}, Lcom/android/server/wm/DisplayPolicy;->isNavBarEmpty(I)Z
 
-    move-result v2
+    move-result v1
 
-    if-nez v2, :cond_9
+    if-nez v1, :cond_a
 
-    goto :goto_2
-
-    :cond_9
-    move v1, v3
-
-    :goto_2
-    if-nez v0, :cond_a
-
-    if-eqz v1, :cond_e
+    goto :goto_5
 
     :cond_a
-    if-nez v1, :cond_b
+    move v2, v3
+
+    :goto_5
+    move v1, v2
+
+    if-nez v0, :cond_b
+
+    if-eqz v1, :cond_f
+
+    :cond_b
+    if-nez v1, :cond_c
 
     iget-object v2, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBar:Lcom/android/server/wm/WindowState;
 
-    if-ne p1, v2, :cond_b
+    if-ne p1, v2, :cond_c
 
     return-void
 
-    :cond_b
-    if-eqz v0, :cond_c
+    :cond_c
+    if-eqz v0, :cond_d
 
     iget-object v2, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarController:Lcom/android/server/wm/StatusBarController;
 
     invoke-virtual {v2}, Lcom/android/server/wm/StatusBarController;->showTransient()V
 
-    :cond_c
-    if-eqz v1, :cond_d
+    :cond_d
+    if-eqz v1, :cond_e
 
     iget-object v2, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarController:Lcom/android/server/wm/BarController;
 
     invoke-virtual {v2}, Lcom/android/server/wm/BarController;->showTransient()V
 
-    :cond_d
+    :cond_e
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayPolicy;->updateSystemUiVisibilityLw()I
 
-    :cond_e
-    :goto_3
+    :cond_f
+    :goto_6
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mImmersiveModeConfirmation:Lcom/android/server/wm/ImmersiveModeConfirmation;
 
     invoke-virtual {v0}, Lcom/android/server/wm/ImmersiveModeConfirmation;->confirmCurrentPrompt()V
 
     return-void
-
-    :array_0
-    .array-data 4
-        0x0
-        0x1
-    .end array-data
 .end method
 
 .method private setAttachedWindowFrames(Lcom/android/server/wm/WindowState;IILcom/android/server/wm/WindowState;ZLandroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Lcom/android/server/wm/DisplayFrames;)V
@@ -4894,7 +5058,9 @@
     move v4, v13
 
     :goto_a
-    iget-object v5, v7, Lcom/android/server/wm/DisplayPolicy;->mStatusBar:Lcom/android/server/wm/WindowState;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/server/wm/DisplayPolicy;->getStatusBar()Lcom/android/server/wm/WindowState;
+
+    move-result-object v5
 
     if-eqz v5, :cond_11
 
@@ -5366,7 +5532,7 @@
 
 # virtual methods
 .method addWindowLw(Lcom/android/server/wm/WindowState;Landroid/view/WindowManager$LayoutParams;)V
-    .locals 6
+    .locals 7
 
     iget v0, p2, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
@@ -5387,47 +5553,86 @@
 
     const/4 v2, 0x0
 
-    if-eq v0, v1, :cond_3
+    if-eq v0, v1, :cond_5
 
     const/16 v1, 0x7e3
 
-    if-eq v0, v1, :cond_2
+    const/4 v3, 0x1
+
+    if-eq v0, v1, :cond_4
 
     const/16 v1, 0x7f8
 
-    if-eq v0, v1, :cond_1
+    if-eq v0, v1, :cond_3
 
     iget-object v0, p2, Landroid/view/WindowManager$LayoutParams;->providesInsetsTypes:[I
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_6
 
     iget-object v0, p2, Landroid/view/WindowManager$LayoutParams;->providesInsetsTypes:[I
 
     array-length v1, v0
 
     :goto_0
-    if-ge v2, v1, :cond_4
+    if-ge v2, v1, :cond_6
 
-    aget v3, v0, v2
+    aget v4, v0, v2
 
-    iget-object v4, p0, Lcom/android/server/wm/DisplayPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
+    if-eqz v4, :cond_2
 
-    const/4 v5, 0x0
+    if-eq v4, v3, :cond_1
 
-    invoke-virtual {v4, v3, p1, v5}, Lcom/android/server/wm/DisplayContent;->setInsetProvider(ILcom/android/server/wm/WindowState;Lcom/android/internal/util/function/TriConsumer;)V
+    goto :goto_1
+
+    :cond_1
+    iput-object p1, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarAlt:Lcom/android/server/wm/WindowState;
+
+    iget-object v5, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarController:Lcom/android/server/wm/BarController;
+
+    invoke-virtual {v5, p1}, Lcom/android/server/wm/BarController;->setWindow(Lcom/android/server/wm/WindowState;)V
+
+    invoke-direct {p0, p2}, Lcom/android/server/wm/DisplayPolicy;->getAltBarPosition(Landroid/view/WindowManager$LayoutParams;)I
+
+    move-result v5
+
+    iput v5, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarAltPosition:I
+
+    goto :goto_1
+
+    :cond_2
+    iput-object p1, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarAlt:Lcom/android/server/wm/WindowState;
+
+    iget-object v5, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarController:Lcom/android/server/wm/StatusBarController;
+
+    invoke-virtual {v5, p1}, Lcom/android/server/wm/StatusBarController;->setWindow(Lcom/android/server/wm/WindowState;)V
+
+    invoke-direct {p0, p2}, Lcom/android/server/wm/DisplayPolicy;->getAltBarPosition(Landroid/view/WindowManager$LayoutParams;)I
+
+    move-result v5
+
+    iput v5, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarAltPosition:I
+
+    nop
+
+    :goto_1
+    iget-object v5, p0, Lcom/android/server/wm/DisplayPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
+
+    const/4 v6, 0x0
+
+    invoke-virtual {v5, v4, p1, v6}, Lcom/android/server/wm/DisplayContent;->setInsetProvider(ILcom/android/server/wm/WindowState;Lcom/android/internal/util/function/TriConsumer;)V
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    :cond_1
+    :cond_3
     iput-object p1, p0, Lcom/android/server/wm/DisplayPolicy;->mNotificationShade:Lcom/android/server/wm/WindowState;
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     iget-boolean v0, v0, Lcom/android/server/wm/DisplayContent;->isDefaultDisplay:Z
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_6
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mService:Lcom/android/server/wm/WindowManagerService;
 
@@ -5435,9 +5640,9 @@
 
     invoke-interface {v0, p1}, Lcom/android/server/policy/WindowManagerPolicy;->setKeyguardCandidateLw(Lcom/android/server/policy/WindowManagerPolicy$WindowState;)V
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
-    :cond_2
+    :cond_4
     iput-object p1, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBar:Lcom/android/server/wm/WindowState;
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarController:Lcom/android/server/wm/BarController;
@@ -5448,9 +5653,7 @@
 
     iget-object v1, p0, Lcom/android/server/wm/DisplayPolicy;->mNavBarVisibilityListener:Lcom/android/server/wm/BarController$OnBarVisibilityChangedListener;
 
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v1, v2}, Lcom/android/server/wm/BarController;->setOnBarVisibilityChangedListener(Lcom/android/server/wm/BarController$OnBarVisibilityChangedListener;Z)V
+    invoke-virtual {v0, v1, v3}, Lcom/android/server/wm/BarController;->setOnBarVisibilityChangedListener(Lcom/android/server/wm/BarController$OnBarVisibilityChangedListener;Z)V
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -5458,11 +5661,11 @@
 
     invoke-direct {v1, p0}, Lcom/android/server/wm/-$$Lambda$DisplayPolicy$J8sIwXJvltUaPM3jEGO948Bx9ig;-><init>(Lcom/android/server/wm/DisplayPolicy;)V
 
-    new-instance v3, Lcom/android/server/wm/-$$Lambda$DisplayPolicy$QDPgWUhyEOraWnf6a-u4mTBttdw;
+    new-instance v2, Lcom/android/server/wm/-$$Lambda$DisplayPolicy$QDPgWUhyEOraWnf6a-u4mTBttdw;
 
-    invoke-direct {v3, p0}, Lcom/android/server/wm/-$$Lambda$DisplayPolicy$QDPgWUhyEOraWnf6a-u4mTBttdw;-><init>(Lcom/android/server/wm/DisplayPolicy;)V
+    invoke-direct {v2, p0}, Lcom/android/server/wm/-$$Lambda$DisplayPolicy$QDPgWUhyEOraWnf6a-u4mTBttdw;-><init>(Lcom/android/server/wm/DisplayPolicy;)V
 
-    invoke-virtual {v0, v2, p1, v1, v3}, Lcom/android/server/wm/DisplayContent;->setInsetProvider(ILcom/android/server/wm/WindowState;Lcom/android/internal/util/function/TriConsumer;Lcom/android/internal/util/function/TriConsumer;)V
+    invoke-virtual {v0, v3, p1, v1, v2}, Lcom/android/server/wm/DisplayContent;->setInsetProvider(ILcom/android/server/wm/WindowState;Lcom/android/internal/util/function/TriConsumer;Lcom/android/internal/util/function/TriConsumer;)V
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -5506,7 +5709,7 @@
 
     sget-boolean v0, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_LAYOUT:Z
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_6
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -5528,9 +5731,9 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_1
+    goto :goto_2
 
-    :cond_3
+    :cond_5
     iput-object p1, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBar:Lcom/android/server/wm/WindowState;
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarController:Lcom/android/server/wm/StatusBarController;
@@ -5559,8 +5762,8 @@
 
     nop
 
-    :cond_4
-    :goto_1
+    :cond_6
+    :goto_2
     return-void
 .end method
 
@@ -5855,6 +6058,28 @@
 
     :cond_c
     :goto_2
+    iget-object v1, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarAlt:Lcom/android/server/wm/WindowState;
+
+    if-ne v1, p1, :cond_d
+
+    invoke-direct {p0, p2}, Lcom/android/server/wm/DisplayPolicy;->getAltBarPosition(Landroid/view/WindowManager$LayoutParams;)I
+
+    move-result v1
+
+    iput v1, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarAltPosition:I
+
+    :cond_d
+    iget-object v1, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarAlt:Lcom/android/server/wm/WindowState;
+
+    if-ne v1, p1, :cond_e
+
+    invoke-direct {p0, p2}, Lcom/android/server/wm/DisplayPolicy;->getAltBarPosition(Landroid/view/WindowManager$LayoutParams;)I
+
+    move-result v1
+
+    iput v1, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarAltPosition:I
+
+    :cond_e
     return-void
 .end method
 
@@ -6912,9 +7137,34 @@
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/Object;)V
 
     :cond_2
-    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mNotificationShade:Lcom/android/server/wm/WindowState;
+    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarAlt:Lcom/android/server/wm/WindowState;
 
     if-eqz v0, :cond_3
+
+    invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    const-string v0, "mStatusBarAlt="
+
+    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarAlt:Lcom/android/server/wm/WindowState;
+
+    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/Object;)V
+
+    invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    const-string v0, "mStatusBarAltPosition="
+
+    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    iget v0, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarAltPosition:I
+
+    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(I)V
+
+    :cond_3
+    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mNotificationShade:Lcom/android/server/wm/WindowState;
+
+    if-eqz v0, :cond_4
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -6926,7 +7176,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/Object;)V
 
-    :cond_3
+    :cond_4
     const-string v0, " isKeyguardShowing="
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -6939,7 +7189,7 @@
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBar:Lcom/android/server/wm/WindowState;
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -6981,10 +7231,35 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(I)V
 
-    :cond_4
+    :cond_5
+    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarAlt:Lcom/android/server/wm/WindowState;
+
+    if-eqz v0, :cond_6
+
+    invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    const-string v0, "mNavigationBarAlt="
+
+    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarAlt:Lcom/android/server/wm/WindowState;
+
+    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
+
+    invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    const-string v0, "mNavigationBarAltPosition="
+
+    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    iget v0, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarAltPosition:I
+
+    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(I)V
+
+    :cond_6
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mFocusedWindow:Lcom/android/server/wm/WindowState;
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_7
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -6996,10 +7271,10 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    :cond_5
+    :cond_7
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mTopFullscreenOpaqueWindowState:Lcom/android/server/wm/WindowState;
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_8
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -7011,10 +7286,10 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    :cond_6
+    :cond_8
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mTopFullscreenOpaqueOrDimmingWindowState:Lcom/android/server/wm/WindowState;
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_9
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -7026,10 +7301,10 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    :cond_7
+    :cond_9
     iget-boolean v0, p0, Lcom/android/server/wm/DisplayPolicy;->mForcingShowNavBar:Z
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_a
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -7051,7 +7326,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(I)V
 
-    :cond_8
+    :cond_a
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "mTopIsFullscreen="
@@ -7200,7 +7475,9 @@
     iput-boolean v2, p0, Lcom/android/server/wm/DisplayPolicy;->mDreamingLockscreen:Z
 
     :cond_0
-    iget-object v2, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBar:Lcom/android/server/wm/WindowState;
+    invoke-virtual {p0}, Lcom/android/server/wm/DisplayPolicy;->getStatusBar()Lcom/android/server/wm/WindowState;
+
+    move-result-object v2
 
     if-eqz v2, :cond_13
 
@@ -7237,7 +7514,9 @@
     invoke-static {v3, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
-    iget-object v2, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBar:Lcom/android/server/wm/WindowState;
+    invoke-virtual {p0}, Lcom/android/server/wm/DisplayPolicy;->getStatusBar()Lcom/android/server/wm/WindowState;
+
+    move-result-object v2
 
     invoke-virtual {v2}, Lcom/android/server/wm/WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
@@ -7793,6 +8072,22 @@
     return v0
 .end method
 
+.method getAlternateNavBarPosition()I
+    .locals 1
+
+    iget v0, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarAltPosition:I
+
+    return v0
+.end method
+
+.method getAlternateStatusBarPosition()I
+    .locals 1
+
+    iget v0, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarAltPosition:I
+
+    return v0
+.end method
+
 .method public getConfigDisplayHeight(IIIILandroid/view/DisplayCutout;)I
     .locals 3
 
@@ -8310,6 +8605,14 @@
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBar:Lcom/android/server/wm/WindowState;
 
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarAlt:Lcom/android/server/wm/WindowState;
+
+    :goto_0
     return-object v0
 .end method
 
@@ -8554,6 +8857,14 @@
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBar:Lcom/android/server/wm/WindowState;
 
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarAlt:Lcom/android/server/wm/WindowState;
+
+    :goto_0
     return-object v0
 .end method
 
@@ -8937,8 +9248,15 @@
 
     sget-boolean v1, Lcom/android/server/wm/DisplayPolicy;->isSupportLandPadding:Z
 
-    if-nez v1, :cond_0
+    if-eqz v1, :cond_0
 
+    invoke-static {}, Lcom/android/server/wm/OpQuickReplyInjector;->isQuickReplyRunning()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    :cond_0
     iget v1, p1, Lcom/android/server/wm/DisplayFrames;->mDisplayWidth:I
 
     iget v2, p1, Lcom/android/server/wm/DisplayFrames;->mDisplayHeight:I
@@ -8951,17 +9269,17 @@
 
     const/4 v2, 0x4
 
-    if-ne v1, v2, :cond_0
+    if-ne v1, v2, :cond_1
 
     const/4 v1, 0x2
 
-    if-ne v0, v1, :cond_0
+    if-ne v0, v1, :cond_1
 
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayPolicy;->hasNavigationBar()Z
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
     iget v1, p3, Landroid/graphics/Rect;->bottom:I
 
@@ -8983,7 +9301,7 @@
 
     iput v1, p3, Landroid/graphics/Rect;->top:I
 
-    :cond_0
+    :cond_1
     return-void
 .end method
 
@@ -9333,7 +9651,7 @@
 .end method
 
 .method public layoutWindowLw(Lcom/android/server/wm/WindowState;Lcom/android/server/wm/WindowState;Lcom/android/server/wm/DisplayFrames;)V
-    .locals 52
+    .locals 53
 
     move-object/from16 v11, p0
 
@@ -9356,13 +9674,15 @@
     :cond_0
     move-object/from16 v0, p3
 
+    move-object v8, v12
+
     goto/16 :goto_3b
 
     :cond_1
     :goto_0
     iget-object v0, v11, Lcom/android/server/wm/DisplayPolicy;->mNavigationBar:Lcom/android/server/wm/WindowState;
 
-    if-eq v12, v0, :cond_82
+    if-eq v12, v0, :cond_7b
 
     iget-object v0, v11, Lcom/android/server/wm/DisplayPolicy;->mScreenDecorWindows:Landroid/util/ArraySet;
 
@@ -9373,6 +9693,8 @@
     if-eqz v0, :cond_2
 
     move-object/from16 v0, p3
+
+    move-object v8, v12
 
     goto/16 :goto_3b
 
@@ -9445,53 +9767,53 @@
 
     iget-object v0, v5, Lcom/android/server/wm/WindowFrames;->mDecorFrame:Landroid/graphics/Rect;
 
-    move/from16 v24, v9
+    move/from16 v24, v7
 
-    iget-object v9, v5, Lcom/android/server/wm/WindowFrames;->mStableFrame:Landroid/graphics/Rect;
+    iget-object v7, v5, Lcom/android/server/wm/WindowFrames;->mStableFrame:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->setEmpty()V
 
-    move/from16 v25, v7
+    move-object/from16 p3, v0
 
-    const/4 v7, 0x0
+    const/4 v0, 0x0
 
-    invoke-virtual {v5, v7}, Lcom/android/server/wm/WindowFrames;->setParentFrameWasClippedByDisplayCutout(Z)V
+    invoke-virtual {v5, v0}, Lcom/android/server/wm/WindowFrames;->setParentFrameWasClippedByDisplayCutout(Z)V
 
     invoke-direct {v11, v14}, Lcom/android/server/wm/DisplayPolicy;->opRemoveNavArea(Landroid/view/WindowManager$LayoutParams;)Z
 
-    move-result v26
+    move-result v25
 
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wm/DisplayPolicy;->hasNavigationBar()Z
 
     move-result v18
 
-    move-object/from16 p3, v5
+    move-object/from16 v26, v5
 
     if-eqz v18, :cond_4
 
-    iget-object v7, v11, Lcom/android/server/wm/DisplayPolicy;->mNavigationBar:Lcom/android/server/wm/WindowState;
+    iget-object v0, v11, Lcom/android/server/wm/DisplayPolicy;->mNavigationBar:Lcom/android/server/wm/WindowState;
 
-    if-eqz v7, :cond_4
+    if-eqz v0, :cond_4
 
-    invoke-virtual {v7}, Lcom/android/server/wm/WindowState;->isVisibleLw()Z
+    invoke-virtual {v0}, Lcom/android/server/wm/WindowState;->isVisibleLw()Z
 
-    move-result v7
+    move-result v0
 
-    if-eqz v7, :cond_4
+    if-eqz v0, :cond_4
 
-    if-nez v26, :cond_4
+    if-nez v25, :cond_4
 
-    const/4 v7, 0x1
+    const/4 v0, 0x1
 
     goto :goto_2
 
     :cond_4
-    const/4 v7, 0x0
+    const/4 v0, 0x0
 
     :goto_2
-    move/from16 v28, v7
+    move/from16 v28, v0
 
-    and-int/lit16 v7, v8, 0xf0
+    and-int/lit16 v0, v8, 0xf0
 
     const/16 v29, 0x0
 
@@ -9509,248 +9831,255 @@
 
     if-eqz v5, :cond_5
 
-    const/16 v7, 0x30
+    const/16 v0, 0x30
+
+    move v5, v0
+
+    goto :goto_3
 
     :cond_5
-    and-int/lit16 v5, v10, 0x100
+    move v5, v0
+
+    :goto_3
+    and-int/lit16 v0, v10, 0x100
 
     move/from16 v31, v8
 
     const/16 v8, 0x100
 
-    if-ne v5, v8, :cond_6
+    if-ne v0, v8, :cond_6
 
-    const/4 v5, 0x1
-
-    goto :goto_3
-
-    :cond_6
-    const/4 v5, 0x0
-
-    :goto_3
-    move/from16 v32, v5
-
-    const/high16 v5, 0x10000
-
-    and-int v8, v10, v5
-
-    if-ne v8, v5, :cond_7
-
-    const/4 v5, 0x1
+    const/4 v0, 0x1
 
     goto :goto_4
 
-    :cond_7
-    const/4 v5, 0x0
+    :cond_6
+    const/4 v0, 0x0
 
     :goto_4
-    move/from16 v33, v5
+    move/from16 v32, v0
 
-    iget-object v5, v6, Lcom/android/server/wm/DisplayFrames;->mStable:Landroid/graphics/Rect;
+    const/high16 v0, 0x10000
 
-    invoke-virtual {v9, v5}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    and-int v8, v10, v0
 
-    const/16 v5, 0x7db
+    if-ne v8, v0, :cond_7
 
-    const/4 v8, 0x4
-
-    if-ne v15, v5, :cond_a
-
-    iget-object v5, v12, Lcom/android/server/wm/WindowState;->mImeOffsetRect:Landroid/graphics/Rect;
-
-    invoke-virtual {v5}, Landroid/graphics/Rect;->setEmpty()V
-
-    iget v5, v11, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarPosition:I
-
-    if-ne v5, v8, :cond_a
-
-    invoke-virtual/range {p0 .. p0}, Lcom/android/server/wm/DisplayPolicy;->hasNavigationBar()Z
-
-    move-result v5
-
-    if-nez v5, :cond_a
-
-    iget-object v5, v11, Lcom/android/server/wm/DisplayPolicy;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v5
-
-    iget v5, v5, Landroid/content/res/Configuration;->orientation:I
-
-    const/16 v20, 0x0
-
-    const/4 v8, 0x1
-
-    if-ne v5, v8, :cond_8
-
-    iget-object v8, v11, Lcom/android/server/wm/DisplayPolicy;->mService:Lcom/android/server/wm/WindowManagerService;
-
-    iget-object v8, v8, Lcom/android/server/wm/WindowManagerService;->mPolicy:Lcom/android/server/policy/WindowManagerPolicy;
-
-    invoke-interface {v8}, Lcom/android/server/policy/WindowManagerPolicy;->getUiMode()I
-
-    move-result v8
-
-    move/from16 v21, v5
-
-    iget v5, v6, Lcom/android/server/wm/DisplayFrames;->mRotation:I
-
-    invoke-direct {v11, v5, v8}, Lcom/android/server/wm/DisplayPolicy;->getNavigationBarFrameHeight(II)I
-
-    move-result v20
+    const/4 v0, 0x1
 
     goto :goto_5
 
-    :cond_8
-    move/from16 v21, v5
+    :cond_7
+    const/4 v0, 0x0
 
-    const/4 v5, 0x1
+    :goto_5
+    move/from16 v33, v0
 
-    new-array v8, v5, [I
+    iget-object v0, v6, Lcom/android/server/wm/DisplayFrames;->mStable:Landroid/graphics/Rect;
 
-    const/16 v5, 0x6b
+    invoke-virtual {v7, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    const/16 v19, 0x0
+    const/16 v8, 0x7db
 
-    aput v5, v8, v19
+    const/4 v0, 0x4
 
-    invoke-static {v8}, Landroid/util/OpFeatures;->isSupport([I)Z
+    if-ne v15, v8, :cond_a
 
-    move-result v5
+    iget-object v8, v12, Lcom/android/server/wm/WindowState;->mImeOffsetRect:Landroid/graphics/Rect;
 
-    if-eqz v5, :cond_9
+    invoke-virtual {v8}, Landroid/graphics/Rect;->setEmpty()V
 
-    iget-object v5, v11, Lcom/android/server/wm/DisplayPolicy;->mContext:Landroid/content/Context;
+    iget v8, v11, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarPosition:I
 
-    invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    if-ne v8, v0, :cond_a
 
-    move-result-object v5
+    invoke-virtual/range {p0 .. p0}, Lcom/android/server/wm/DisplayPolicy;->hasNavigationBar()Z
 
-    const v8, 0x506009b
+    move-result v8
 
-    invoke-virtual {v5, v8}, Landroid/content/res/Resources;->getDimension(I)F
+    if-nez v8, :cond_a
 
-    move-result v5
+    iget-object v8, v11, Lcom/android/server/wm/DisplayPolicy;->mContext:Landroid/content/Context;
 
-    invoke-static {v5}, Ljava/lang/Math;->round(F)I
+    invoke-virtual {v8}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result v5
+    move-result-object v8
 
-    move/from16 v20, v5
+    invoke-virtual {v8}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v8
+
+    iget v8, v8, Landroid/content/res/Configuration;->orientation:I
+
+    const/16 v18, 0x0
+
+    const/4 v0, 0x1
+
+    if-ne v8, v0, :cond_8
+
+    iget-object v0, v11, Lcom/android/server/wm/DisplayPolicy;->mService:Lcom/android/server/wm/WindowManagerService;
+
+    iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mPolicy:Lcom/android/server/policy/WindowManagerPolicy;
+
+    invoke-interface {v0}, Lcom/android/server/policy/WindowManagerPolicy;->getUiMode()I
+
+    move-result v0
+
+    move/from16 v19, v8
+
+    iget v8, v6, Lcom/android/server/wm/DisplayFrames;->mRotation:I
+
+    invoke-direct {v11, v8, v0}, Lcom/android/server/wm/DisplayPolicy;->getNavigationBarFrameHeight(II)I
+
+    move-result v18
 
     goto :goto_6
 
+    :cond_8
+    move/from16 v19, v8
+
+    const/4 v0, 0x1
+
+    new-array v8, v0, [I
+
+    const/16 v0, 0x6b
+
+    const/16 v20, 0x0
+
+    aput v0, v8, v20
+
+    invoke-static {v8}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_9
+
+    iget-object v0, v11, Lcom/android/server/wm/DisplayPolicy;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v8, 0x506009b
+
+    invoke-virtual {v0, v8}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Math;->round(F)I
+
+    move-result v0
+
+    move/from16 v18, v0
+
+    goto :goto_7
+
     :cond_9
-    :goto_5
+    :goto_6
     nop
 
-    :goto_6
-    if-lez v20, :cond_a
+    :goto_7
+    if-lez v18, :cond_a
 
-    iget-object v5, v12, Lcom/android/server/wm/WindowState;->mImeOffsetRect:Landroid/graphics/Rect;
+    iget-object v0, v12, Lcom/android/server/wm/WindowState;->mImeOffsetRect:Landroid/graphics/Rect;
 
     iget-object v8, v6, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
 
-    invoke-virtual {v5, v8}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {v0, v8}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    iget-object v5, v12, Lcom/android/server/wm/WindowState;->mImeOffsetRect:Landroid/graphics/Rect;
+    iget-object v0, v12, Lcom/android/server/wm/WindowState;->mImeOffsetRect:Landroid/graphics/Rect;
 
     iget-object v8, v6, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
 
     iget v8, v8, Landroid/graphics/Rect;->bottom:I
 
-    sub-int v8, v8, v20
+    sub-int v8, v8, v18
 
-    iput v8, v5, Landroid/graphics/Rect;->top:I
+    iput v8, v0, Landroid/graphics/Rect;->top:I
 
     :cond_a
-    sget v5, Landroid/view/ViewRootImpl;->sNewInsetsMode:I
+    sget v0, Landroid/view/ViewRootImpl;->sNewInsetsMode:I
 
-    const-string v8, "WindowManager"
+    const/4 v8, 0x2
 
-    move-object/from16 v36, v9
+    move-object/from16 v37, v7
 
-    const/4 v9, 0x2
+    const-string v7, "WindowManager"
 
-    if-ne v5, v9, :cond_25
+    if-ne v0, v8, :cond_20
 
     invoke-virtual {v14}, Landroid/view/WindowManager$LayoutParams;->getFitInsetsTypes()I
 
-    move-result v5
+    move-result v0
 
     invoke-virtual {v14}, Landroid/view/WindowManager$LayoutParams;->getFitInsetsSides()I
 
-    move-result v37
+    move-result v38
 
-    invoke-static {v5}, Landroid/view/InsetsState;->toInternalType(I)Landroid/util/ArraySet;
+    invoke-static {v0}, Landroid/view/InsetsState;->toInternalType(I)Landroid/util/ArraySet;
 
-    move-result-object v9
+    move-result-object v8
 
-    move/from16 v38, v5
+    move/from16 v39, v0
 
-    iget-object v5, v6, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
+    iget-object v0, v6, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
 
-    move/from16 v39, v15
+    move/from16 v40, v15
 
     const/4 v15, 0x0
 
     invoke-static {v15, v15, v15, v15}, Landroid/graphics/Insets;->of(IIII)Landroid/graphics/Insets;
 
-    move-result-object v22
+    move-result-object v20
 
-    invoke-virtual {v9}, Landroid/util/ArraySet;->size()I
+    invoke-virtual {v8}, Landroid/util/ArraySet;->size()I
 
     move-result v15
 
-    const/16 v23, 0x1
+    const/16 v21, 0x1
 
     add-int/lit8 v15, v15, -0x1
 
-    move-object/from16 v40, v0
-
-    move-object/from16 v0, v22
-
-    :goto_7
-    if-ltz v15, :cond_10
-
     move-object/from16 v41, v2
 
-    iget-object v2, v11, Lcom/android/server/wm/DisplayPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
+    move-object/from16 v2, v20
 
-    invoke-virtual {v2}, Lcom/android/server/wm/DisplayContent;->getInsetsPolicy()Lcom/android/server/wm/InsetsPolicy;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v12}, Lcom/android/server/wm/InsetsPolicy;->getInsetsForDispatch(Lcom/android/server/wm/WindowState;)Landroid/view/InsetsState;
-
-    move-result-object v2
-
-    invoke-virtual {v9, v15}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
-
-    move-result-object v22
-
-    check-cast v22, Ljava/lang/Integer;
-
+    :goto_8
     move/from16 v42, v10
 
-    invoke-virtual/range {v22 .. v22}, Ljava/lang/Integer;->intValue()I
+    if-ltz v15, :cond_10
 
-    move-result v10
+    iget-object v10, v11, Lcom/android/server/wm/DisplayPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    invoke-virtual {v2, v10}, Landroid/view/InsetsState;->peekSource(I)Landroid/view/InsetsSource;
+    invoke-virtual {v10}, Lcom/android/server/wm/DisplayContent;->getInsetsPolicy()Lcom/android/server/wm/InsetsPolicy;
 
-    move-result-object v2
+    move-result-object v10
 
-    if-nez v2, :cond_b
+    invoke-virtual {v10, v12}, Lcom/android/server/wm/InsetsPolicy;->getInsetsForDispatch(Lcom/android/server/wm/WindowState;)Landroid/view/InsetsState;
 
-    move-object/from16 v43, v9
+    move-result-object v10
 
-    goto :goto_9
+    invoke-virtual {v8, v15}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
+
+    move-result-object v21
+
+    check-cast v21, Ljava/lang/Integer;
+
+    move-object/from16 v43, v1
+
+    invoke-virtual/range {v21 .. v21}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    invoke-virtual {v10, v1}, Landroid/view/InsetsState;->peekSource(I)Landroid/view/InsetsSource;
+
+    move-result-object v1
+
+    if-nez v1, :cond_b
+
+    move-object/from16 v44, v8
+
+    goto :goto_a
 
     :cond_b
     invoke-static {}, Lcom/android/server/wm/OpQuickReplyInjector;->isQuickReplyRunning()Z
@@ -9769,7 +10098,7 @@
 
     if-eqz v17, :cond_c
 
-    invoke-virtual {v9, v15}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
+    invoke-virtual {v8, v15}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v10
 
@@ -9779,413 +10108,291 @@
 
     move-result v10
 
-    move-object/from16 v43, v9
+    move-object/from16 v44, v8
 
-    const/16 v9, 0xd
+    const/16 v8, 0xd
 
-    if-ne v10, v9, :cond_e
+    if-ne v10, v8, :cond_e
 
-    sget-boolean v9, Lcom/android/server/wm/DisplayPolicy;->DEBUG_ONEPLUS:Z
+    sget-boolean v8, Lcom/android/server/wm/DisplayPolicy;->DEBUG_ONEPLUS:Z
 
-    if-eqz v9, :cond_f
+    if-eqz v8, :cond_f
 
-    new-instance v9, Ljava/lang/StringBuilder;
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v10, "QuickReply: Avoid IME adjust for "
 
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v9
+    move-result-object v8
 
-    invoke-static {v8, v9}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v7, v8}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_a
+
+    :cond_c
+    move-object/from16 v44, v8
 
     goto :goto_9
 
-    :cond_c
-    move-object/from16 v43, v9
-
-    goto :goto_8
-
     :cond_d
-    move-object/from16 v43, v9
+    move-object/from16 v44, v8
 
     :cond_e
-    :goto_8
+    :goto_9
     nop
 
     invoke-virtual {v14}, Landroid/view/WindowManager$LayoutParams;->isFitInsetsIgnoringVisibility()Z
 
-    move-result v9
+    move-result v8
 
-    invoke-virtual {v2, v5, v9}, Landroid/view/InsetsSource;->calculateInsets(Landroid/graphics/Rect;Z)Landroid/graphics/Insets;
+    invoke-virtual {v1, v0, v8}, Landroid/view/InsetsSource;->calculateInsets(Landroid/graphics/Rect;Z)Landroid/graphics/Insets;
 
-    move-result-object v9
+    move-result-object v8
 
-    invoke-static {v0, v9}, Landroid/graphics/Insets;->max(Landroid/graphics/Insets;Landroid/graphics/Insets;)Landroid/graphics/Insets;
+    invoke-static {v2, v8}, Landroid/graphics/Insets;->max(Landroid/graphics/Insets;Landroid/graphics/Insets;)Landroid/graphics/Insets;
 
-    move-result-object v0
+    move-result-object v2
 
     :cond_f
-    :goto_9
+    :goto_a
     add-int/lit8 v15, v15, -0x1
-
-    move-object/from16 v2, v41
 
     move/from16 v10, v42
 
-    move-object/from16 v9, v43
+    move-object/from16 v1, v43
 
-    goto :goto_7
+    move-object/from16 v8, v44
+
+    goto :goto_8
 
     :cond_10
-    move-object/from16 v41, v2
+    move-object/from16 v43, v1
 
-    move-object/from16 v43, v9
+    move-object/from16 v44, v8
 
-    move/from16 v42, v10
+    and-int/lit8 v1, v38, 0x1
 
-    and-int/lit8 v2, v37, 0x1
+    if-eqz v1, :cond_11
 
-    if-eqz v2, :cond_11
-
-    iget v2, v0, Landroid/graphics/Insets;->left:I
-
-    goto :goto_a
-
-    :cond_11
-    const/4 v2, 0x0
-
-    :goto_a
-    and-int/lit8 v9, v37, 0x2
-
-    if-eqz v9, :cond_12
-
-    iget v9, v0, Landroid/graphics/Insets;->top:I
+    iget v1, v2, Landroid/graphics/Insets;->left:I
 
     goto :goto_b
 
-    :cond_12
-    const/4 v9, 0x0
+    :cond_11
+    const/4 v1, 0x0
 
     :goto_b
-    and-int/lit8 v10, v37, 0x4
+    and-int/lit8 v8, v38, 0x2
+
+    if-eqz v8, :cond_12
+
+    iget v8, v2, Landroid/graphics/Insets;->top:I
+
+    goto :goto_c
+
+    :cond_12
+    const/4 v8, 0x0
+
+    :goto_c
+    and-int/lit8 v10, v38, 0x4
 
     if-eqz v10, :cond_13
 
-    iget v10, v0, Landroid/graphics/Insets;->right:I
+    iget v10, v2, Landroid/graphics/Insets;->right:I
 
-    goto :goto_c
+    goto :goto_d
 
     :cond_13
     const/4 v10, 0x0
 
-    :goto_c
-    and-int/lit8 v15, v37, 0x8
+    :goto_d
+    and-int/lit8 v15, v38, 0x8
 
     if-eqz v15, :cond_14
 
-    iget v15, v0, Landroid/graphics/Insets;->bottom:I
+    iget v15, v2, Landroid/graphics/Insets;->bottom:I
 
-    goto :goto_d
+    goto :goto_e
 
     :cond_14
     const/4 v15, 0x0
 
-    :goto_d
-    move-object/from16 v44, v0
+    :goto_e
+    move-object/from16 v45, v2
 
-    iget v0, v5, Landroid/graphics/Rect;->right:I
+    iget v2, v0, Landroid/graphics/Rect;->right:I
 
-    sub-int/2addr v0, v10
+    sub-int/2addr v2, v10
 
-    move/from16 v45, v10
+    move/from16 v46, v10
 
-    iget v10, v5, Landroid/graphics/Rect;->bottom:I
+    iget v10, v0, Landroid/graphics/Rect;->bottom:I
 
     sub-int/2addr v10, v15
 
-    invoke-virtual {v3, v2, v9, v0, v10}, Landroid/graphics/Rect;->set(IIII)V
+    invoke-virtual {v3, v1, v8, v2, v10}, Landroid/graphics/Rect;->set(IIII)V
 
-    if-nez v13, :cond_16
+    if-nez v13, :cond_18
 
     invoke-virtual {v4, v3}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
+    const/high16 v2, 0x40000000    # 2.0f
+
+    and-int/2addr v2, v9
+
+    if-eqz v2, :cond_16
+
+    iget-object v2, v11, Lcom/android/server/wm/DisplayPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
+
+    invoke-virtual {v2}, Lcom/android/server/wm/DisplayContent;->getInsetsPolicy()Lcom/android/server/wm/InsetsPolicy;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v12}, Lcom/android/server/wm/InsetsPolicy;->getInsetsForDispatch(Lcom/android/server/wm/WindowState;)Landroid/view/InsetsState;
+
+    move-result-object v2
+
+    const/16 v10, 0xd
+
+    invoke-virtual {v2, v10}, Landroid/view/InsetsState;->peekSource(I)Landroid/view/InsetsSource;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_15
+
+    move-object/from16 v47, v0
+
+    const/4 v10, 0x0
+
+    invoke-virtual {v2, v4, v10}, Landroid/view/InsetsSource;->calculateInsets(Landroid/graphics/Rect;Z)Landroid/graphics/Insets;
+
+    move-result-object v0
+
+    invoke-virtual {v4, v0}, Landroid/graphics/Rect;->inset(Landroid/graphics/Insets;)V
+
+    goto :goto_f
+
+    :cond_15
+    move-object/from16 v47, v0
+
+    goto :goto_f
+
+    :cond_16
+    move-object/from16 v47, v0
+
+    :goto_f
     const/16 v0, 0x30
 
-    if-eq v7, v0, :cond_15
+    if-eq v5, v0, :cond_17
 
     iget-object v0, v6, Lcom/android/server/wm/DisplayFrames;->mCurrent:Landroid/graphics/Rect;
 
-    goto :goto_e
+    goto :goto_10
 
-    :cond_15
+    :cond_17
     iget-object v0, v6, Lcom/android/server/wm/DisplayFrames;->mDock:Landroid/graphics/Rect;
 
-    :goto_e
-    invoke-virtual {v1, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    :goto_10
+    move-object/from16 v2, v43
+
+    invoke-virtual {v2, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     move/from16 v10, v42
 
-    goto :goto_10
+    goto :goto_12
 
-    :cond_16
+    :cond_18
+    move-object/from16 v47, v0
+
+    move-object/from16 v2, v43
+
     move/from16 v10, v42
 
     and-int/lit16 v0, v10, 0x100
 
-    if-nez v0, :cond_17
+    if-nez v0, :cond_19
 
     invoke-virtual/range {p2 .. p2}, Lcom/android/server/wm/WindowState;->getFrameLw()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    goto :goto_f
+    goto :goto_11
 
-    :cond_17
+    :cond_19
     move-object v0, v3
 
-    :goto_f
+    :goto_11
     invoke-virtual {v4, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     invoke-virtual/range {p2 .. p2}, Lcom/android/server/wm/WindowState;->getVisibleFrameLw()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {v2, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    :goto_10
+    :goto_12
     const/16 v0, 0x10
 
-    if-eq v7, v0, :cond_18
+    if-eq v5, v0, :cond_1a
 
     iget-object v0, v6, Lcom/android/server/wm/DisplayFrames;->mDock:Landroid/graphics/Rect;
 
-    goto :goto_11
+    goto :goto_13
 
-    :cond_18
+    :cond_1a
     iget-object v0, v6, Lcom/android/server/wm/DisplayFrames;->mContent:Landroid/graphics/Rect;
 
-    :goto_11
-    move/from16 v42, v2
+    :goto_13
+    move/from16 v42, v8
 
-    move-object/from16 v2, v41
+    move-object/from16 v8, v41
 
-    invoke-virtual {v2, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {v8, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     iget-object v0, v6, Lcom/android/server/wm/DisplayFrames;->mSystem:Landroid/graphics/Rect;
 
-    move-object/from16 v41, v5
+    move/from16 v41, v1
 
-    move-object/from16 v5, v40
+    move-object/from16 v1, p3
 
-    invoke-virtual {v5, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {v1, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    move/from16 v0, v39
+    move/from16 p3, v15
 
-    move/from16 v39, v9
+    move/from16 v0, v40
 
-    const/16 v9, 0x7db
+    const/16 v15, 0x7db
 
-    if-ne v0, v9, :cond_1f
-
-    move/from16 v40, v15
-
-    const/4 v9, 0x1
-
-    new-array v15, v9, [I
-
-    const/16 v19, 0x6b
-
-    const/16 v20, 0x0
-
-    aput v19, v15, v20
-
-    invoke-static {v15}, Landroid/util/OpFeatures;->isSupport([I)Z
-
-    move-result v15
-
-    if-eqz v15, :cond_1e
+    if-ne v0, v15, :cond_1b
 
     invoke-static {}, Lcom/android/server/wm/OpQuickReplyInjector;->isQuickReplyRunning()Z
 
     move-result v15
 
-    if-nez v15, :cond_1d
-
-    iget v15, v11, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarPosition:I
-
-    if-eq v15, v9, :cond_1a
-
-    const/4 v9, 0x2
-
-    if-ne v15, v9, :cond_19
-
-    goto :goto_12
-
-    :cond_19
-    move-object/from16 v9, v36
-
-    goto/16 :goto_13
-
-    :cond_1a
-    :goto_12
-    iget v9, v6, Lcom/android/server/wm/DisplayFrames;->mRotation:I
-
-    iget-object v15, v11, Lcom/android/server/wm/DisplayPolicy;->mService:Lcom/android/server/wm/WindowManagerService;
-
-    iget-object v15, v15, Lcom/android/server/wm/WindowManagerService;->mPolicy:Lcom/android/server/policy/WindowManagerPolicy;
-
-    invoke-interface {v15}, Lcom/android/server/policy/WindowManagerPolicy;->getUiMode()I
-
-    move-result v15
-
-    move/from16 v19, v9
-
-    iget-object v9, v11, Lcom/android/server/wm/DisplayPolicy;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v9}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v9
-
-    invoke-virtual {v9}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v9
-
-    iget v9, v9, Landroid/content/res/Configuration;->orientation:I
-
-    move/from16 v20, v15
-
-    iget-object v15, v11, Lcom/android/server/wm/DisplayPolicy;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v15}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v15
-
-    const v13, 0x506009b
-
-    invoke-virtual {v15, v13}, Landroid/content/res/Resources;->getDimension(I)F
-
-    move-result v13
-
-    invoke-static {v13}, Ljava/lang/Math;->round(F)I
-
-    move-result v13
-
-    const/4 v15, 0x0
-
-    move/from16 v18, v15
-
-    const/4 v15, 0x2
-
-    if-ne v9, v15, :cond_1c
-
-    move v15, v13
-
-    if-lez v15, :cond_1b
-
-    move/from16 v21, v9
-
-    iget v9, v2, Landroid/graphics/Rect;->bottom:I
-
-    sub-int/2addr v9, v15
-
-    iput v9, v2, Landroid/graphics/Rect;->bottom:I
-
-    move/from16 v22, v13
-
-    move-object/from16 v9, v36
-
-    iget v13, v9, Landroid/graphics/Rect;->bottom:I
-
-    sub-int/2addr v13, v15
-
-    iput v13, v9, Landroid/graphics/Rect;->bottom:I
-
-    iget v13, v1, Landroid/graphics/Rect;->bottom:I
-
-    sub-int/2addr v13, v15
-
-    iput v13, v1, Landroid/graphics/Rect;->bottom:I
-
-    iget v13, v3, Landroid/graphics/Rect;->bottom:I
-
-    sub-int/2addr v13, v15
-
-    iput v13, v3, Landroid/graphics/Rect;->bottom:I
-
-    iget v13, v5, Landroid/graphics/Rect;->bottom:I
-
-    sub-int/2addr v13, v15
-
-    iput v13, v5, Landroid/graphics/Rect;->bottom:I
-
-    goto :goto_13
-
-    :cond_1b
-    move/from16 v21, v9
-
-    move/from16 v22, v13
-
-    move-object/from16 v9, v36
-
-    goto :goto_13
-
-    :cond_1c
-    move/from16 v21, v9
-
-    move/from16 v22, v13
-
-    move-object/from16 v9, v36
-
-    goto :goto_13
-
-    :cond_1d
-    move-object/from16 v9, v36
-
-    goto :goto_13
-
-    :cond_1e
-    move-object/from16 v9, v36
-
-    goto :goto_13
-
-    :cond_1f
-    move/from16 v40, v15
-
-    move-object/from16 v9, v36
-
-    :goto_13
-    const/16 v13, 0x7db
-
-    if-ne v0, v13, :cond_20
-
-    invoke-static {}, Lcom/android/server/wm/OpQuickReplyInjector;->isQuickReplyRunning()Z
-
-    move-result v13
-
-    if-eqz v13, :cond_20
+    if-eqz v15, :cond_1b
 
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/WindowState;->getOwningPackage()Ljava/lang/String;
 
-    move-result-object v13
+    move-result-object v15
 
-    iput-object v13, v11, Lcom/android/server/wm/DisplayPolicy;->mInputMethodName:Ljava/lang/String;
+    iput-object v15, v11, Lcom/android/server/wm/DisplayPolicy;->mInputMethodName:Ljava/lang/String;
 
-    iget-object v15, v11, Lcom/android/server/wm/DisplayPolicy;->mFocusedWindow:Lcom/android/server/wm/WindowState;
+    iget-object v13, v11, Lcom/android/server/wm/DisplayPolicy;->mFocusedWindow:Lcom/android/server/wm/WindowState;
 
-    move-object/from16 v18, v13
+    move-object/from16 v18, v15
 
-    move-object/from16 v19, v15
+    move-object/from16 v19, v13
 
-    move-object/from16 v20, v1
+    move-object/from16 v20, v2
 
-    move-object/from16 v21, v2
+    move-object/from16 v21, v8
 
     move-object/from16 v22, v3
 
@@ -10197,22 +10404,22 @@
 
     goto :goto_14
 
-    :cond_20
-    if-eqz v17, :cond_21
+    :cond_1b
+    if-eqz v17, :cond_1c
 
     const/4 v13, 0x0
 
-    iput v13, v2, Landroid/graphics/Rect;->top:I
+    iput v13, v8, Landroid/graphics/Rect;->top:I
 
     goto :goto_14
 
-    :cond_21
+    :cond_1c
     const/4 v13, 0x0
 
     :goto_14
     const/16 v15, 0x7f6
 
-    if-ne v0, v15, :cond_22
+    if-ne v0, v15, :cond_1d
 
     invoke-virtual {v14}, Landroid/view/WindowManager$LayoutParams;->getTitle()Ljava/lang/CharSequence;
 
@@ -10228,12 +10435,12 @@
 
     move-result v13
 
-    if-nez v13, :cond_23
+    if-nez v13, :cond_1e
 
-    :cond_22
+    :cond_1d
     const/16 v13, 0x7d3
 
-    if-ne v0, v13, :cond_24
+    if-ne v0, v13, :cond_1f
 
     invoke-virtual {v14}, Landroid/view/WindowManager$LayoutParams;->getTitle()Ljava/lang/CharSequence;
 
@@ -10249,12 +10456,12 @@
 
     move-result v13
 
-    if-eqz v13, :cond_24
+    if-eqz v13, :cond_1f
 
-    :cond_23
+    :cond_1e
     iget-object v13, v6, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
 
-    invoke-virtual {v2, v13}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {v8, v13}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     iget-object v13, v6, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
 
@@ -10264,55 +10471,61 @@
 
     invoke-virtual {v4, v13}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    :cond_24
-    move-object/from16 v30, p3
-
+    :cond_1f
     move v13, v0
 
-    move-object/from16 v36, v5
+    move-object/from16 v35, v1
 
-    move v5, v7
+    move v15, v5
 
-    move-object/from16 v27, v9
+    move-object v1, v7
 
-    move v12, v10
+    move-object/from16 v34, v14
 
-    move/from16 v15, v25
+    move/from16 v12, v24
 
-    move/from16 v19, v31
+    move-object/from16 v48, v26
+
+    move/from16 v22, v31
+
+    move-object/from16 v24, v37
+
+    const/4 v0, 0x1
+
+    move-object v7, v6
+
+    move/from16 v31, v9
+
+    move v14, v10
+
+    move-object v6, v2
 
     move-object v9, v3
 
     move-object v10, v4
 
-    move-object v7, v6
-
-    move-object v6, v1
-
-    move-object v1, v8
-
-    move-object v8, v2
-
     goto/16 :goto_2f
 
-    :cond_25
-    move-object v5, v0
+    :cond_20
+    move-object v8, v2
 
     move v0, v15
 
-    move-object/from16 v9, v36
+    move-object v2, v1
+
+    move-object/from16 v1, p3
 
     const/16 v13, 0x7db
 
-    if-ne v0, v13, :cond_2a
-
-    iget-object v15, v6, Lcom/android/server/wm/DisplayFrames;->mDock:Landroid/graphics/Rect;
-
-    invoke-virtual {v1, v15}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    if-ne v0, v13, :cond_25
 
     iget-object v15, v6, Lcom/android/server/wm/DisplayFrames;->mDock:Landroid/graphics/Rect;
 
     invoke-virtual {v2, v15}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    iget-object v15, v6, Lcom/android/server/wm/DisplayFrames;->mDock:Landroid/graphics/Rect;
+
+    invoke-virtual {v8, v15}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     iget-object v15, v6, Lcom/android/server/wm/DisplayFrames;->mDock:Landroid/graphics/Rect;
 
@@ -10334,37 +10547,37 @@
 
     iget v15, v15, Landroid/graphics/Rect;->bottom:I
 
-    iput v15, v1, Landroid/graphics/Rect;->bottom:I
-
     iput v15, v2, Landroid/graphics/Rect;->bottom:I
+
+    iput v15, v8, Landroid/graphics/Rect;->bottom:I
 
     iget-object v15, v11, Lcom/android/server/wm/DisplayPolicy;->mStatusBar:Lcom/android/server/wm/WindowState;
 
-    if-eqz v15, :cond_27
+    if-eqz v15, :cond_22
 
     iget-object v13, v11, Lcom/android/server/wm/DisplayPolicy;->mFocusedWindow:Lcom/android/server/wm/WindowState;
 
-    if-ne v13, v15, :cond_27
+    if-ne v13, v15, :cond_22
 
     invoke-direct {v11, v15}, Lcom/android/server/wm/DisplayPolicy;->canReceiveInput(Lcom/android/server/wm/WindowState;)Z
 
     move-result v13
 
-    if-eqz v13, :cond_27
+    if-eqz v13, :cond_22
 
     iget v13, v11, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarPosition:I
 
     const/4 v15, 0x2
 
-    if-ne v13, v15, :cond_26
+    if-ne v13, v15, :cond_21
 
     iget-object v13, v6, Lcom/android/server/wm/DisplayFrames;->mStable:Landroid/graphics/Rect;
 
     iget v13, v13, Landroid/graphics/Rect;->right:I
 
-    iput v13, v1, Landroid/graphics/Rect;->right:I
-
     iput v13, v2, Landroid/graphics/Rect;->right:I
+
+    iput v13, v8, Landroid/graphics/Rect;->right:I
 
     iput v13, v3, Landroid/graphics/Rect;->right:I
 
@@ -10372,30 +10585,30 @@
 
     goto :goto_15
 
-    :cond_26
+    :cond_21
     const/4 v15, 0x1
 
-    if-ne v13, v15, :cond_27
+    if-ne v13, v15, :cond_22
 
     iget-object v13, v6, Lcom/android/server/wm/DisplayFrames;->mStable:Landroid/graphics/Rect;
 
     iget v13, v13, Landroid/graphics/Rect;->left:I
 
-    iput v13, v1, Landroid/graphics/Rect;->left:I
-
     iput v13, v2, Landroid/graphics/Rect;->left:I
+
+    iput v13, v8, Landroid/graphics/Rect;->left:I
 
     iput v13, v3, Landroid/graphics/Rect;->left:I
 
     iput v13, v4, Landroid/graphics/Rect;->left:I
 
-    :cond_27
+    :cond_22
     :goto_15
     iget v13, v11, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarPosition:I
 
     const/4 v15, 0x4
 
-    if-ne v13, v15, :cond_29
+    if-ne v13, v15, :cond_24
 
     iget v13, v6, Lcom/android/server/wm/DisplayFrames;->mRotation:I
 
@@ -10417,79 +10630,97 @@
 
     sub-int v18, v18, v19
 
-    if-lez v18, :cond_28
+    if-lez v18, :cond_23
 
     move/from16 v19, v13
 
-    iget v13, v2, Landroid/graphics/Rect;->bottom:I
+    iget v13, v8, Landroid/graphics/Rect;->bottom:I
 
     sub-int v13, v13, v18
 
-    iput v13, v2, Landroid/graphics/Rect;->bottom:I
+    iput v13, v8, Landroid/graphics/Rect;->bottom:I
 
-    iget v13, v9, Landroid/graphics/Rect;->bottom:I
+    move/from16 p3, v15
 
-    sub-int v13, v13, v18
+    move-object/from16 v13, v37
 
-    iput v13, v9, Landroid/graphics/Rect;->bottom:I
+    iget v15, v13, Landroid/graphics/Rect;->bottom:I
 
-    iget v13, v1, Landroid/graphics/Rect;->bottom:I
+    sub-int v15, v15, v18
 
-    sub-int v13, v13, v18
+    iput v15, v13, Landroid/graphics/Rect;->bottom:I
 
-    iput v13, v1, Landroid/graphics/Rect;->bottom:I
+    iget v15, v2, Landroid/graphics/Rect;->bottom:I
 
-    iget v13, v5, Landroid/graphics/Rect;->bottom:I
+    sub-int v15, v15, v18
 
-    sub-int v13, v13, v18
+    iput v15, v2, Landroid/graphics/Rect;->bottom:I
 
-    iput v13, v5, Landroid/graphics/Rect;->bottom:I
+    iget v15, v1, Landroid/graphics/Rect;->bottom:I
+
+    sub-int v15, v15, v18
+
+    iput v15, v1, Landroid/graphics/Rect;->bottom:I
 
     goto :goto_16
 
-    :cond_28
+    :cond_23
     move/from16 v19, v13
 
-    :cond_29
+    move/from16 p3, v15
+
+    move-object/from16 v13, v37
+
+    goto :goto_16
+
+    :cond_24
+    move-object/from16 v13, v37
+
     :goto_16
-    const/16 v13, 0x50
+    const/16 v15, 0x50
 
-    iput v13, v14, Landroid/view/WindowManager$LayoutParams;->gravity:I
+    iput v15, v14, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    move-object/from16 v30, p3
+    move-object/from16 v35, v1
+
+    move v15, v5
+
+    move-object v1, v7
+
+    move-object/from16 v34, v14
+
+    move/from16 v12, v24
+
+    move-object/from16 v48, v26
+
+    move/from16 v22, v31
+
+    move-object v7, v6
+
+    move/from16 v31, v9
+
+    move v14, v10
+
+    move-object/from16 v24, v13
 
     move v13, v0
 
-    move-object/from16 v36, v5
-
-    move v5, v7
-
-    move-object/from16 v27, v9
-
-    move v12, v10
-
-    move/from16 v15, v25
-
-    move/from16 v19, v31
+    move-object v6, v2
 
     move-object v9, v3
 
     move-object v10, v4
 
-    move-object v7, v6
-
-    move-object v6, v1
-
-    move-object v1, v8
-
-    move-object v8, v2
+    const/4 v0, 0x1
 
     goto/16 :goto_2f
 
-    :cond_2a
-    const/16 v13, 0x7ef
+    :cond_25
+    move-object/from16 v13, v37
 
-    if-ne v0, v13, :cond_2d
+    const/16 v15, 0x7ef
+
+    if-ne v0, v15, :cond_28
 
     iget-object v15, v6, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
 
@@ -10501,310 +10732,318 @@
 
     const/16 v15, 0x10
 
-    if-eq v7, v15, :cond_2b
+    if-eq v5, v15, :cond_26
 
     iget-object v15, v6, Lcom/android/server/wm/DisplayFrames;->mDock:Landroid/graphics/Rect;
 
-    invoke-virtual {v2, v15}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {v8, v15}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     goto :goto_17
 
-    :cond_2b
+    :cond_26
     iget-object v15, v6, Lcom/android/server/wm/DisplayFrames;->mContent:Landroid/graphics/Rect;
 
-    invoke-virtual {v2, v15}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {v8, v15}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     :goto_17
     const/16 v15, 0x30
 
-    if-eq v7, v15, :cond_2c
+    if-eq v5, v15, :cond_27
 
     iget-object v15, v6, Lcom/android/server/wm/DisplayFrames;->mCurrent:Landroid/graphics/Rect;
 
-    invoke-virtual {v1, v15}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {v2, v15}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    move-object/from16 v30, p3
+    move-object/from16 v35, v1
+
+    move v15, v5
+
+    move-object v1, v7
+
+    move-object/from16 v34, v14
+
+    move/from16 v12, v24
+
+    move-object/from16 v48, v26
+
+    move/from16 v22, v31
+
+    move-object v7, v6
+
+    move/from16 v31, v9
+
+    move v14, v10
+
+    move-object/from16 v24, v13
 
     move v13, v0
 
-    move-object/from16 v36, v5
-
-    move v5, v7
-
-    move-object/from16 v27, v9
-
-    move v12, v10
-
-    move/from16 v15, v25
-
-    move/from16 v19, v31
+    move-object v6, v2
 
     move-object v9, v3
 
     move-object v10, v4
 
-    move-object v7, v6
-
-    move-object v6, v1
-
-    move-object v1, v8
-
-    move-object v8, v2
+    const/4 v0, 0x1
 
     goto/16 :goto_2f
 
-    :cond_2c
-    invoke-virtual {v1, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    :cond_27
+    invoke-virtual {v2, v8}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    move-object/from16 v30, p3
+    move-object/from16 v35, v1
+
+    move v15, v5
+
+    move-object v1, v7
+
+    move-object/from16 v34, v14
+
+    move/from16 v12, v24
+
+    move-object/from16 v48, v26
+
+    move/from16 v22, v31
+
+    move-object v7, v6
+
+    move/from16 v31, v9
+
+    move v14, v10
+
+    move-object/from16 v24, v13
 
     move v13, v0
 
-    move-object/from16 v36, v5
-
-    move v5, v7
-
-    move-object/from16 v27, v9
-
-    move v12, v10
-
-    move/from16 v15, v25
-
-    move/from16 v19, v31
+    move-object v6, v2
 
     move-object v9, v3
 
     move-object v10, v4
 
-    move-object v7, v6
-
-    move-object v6, v1
-
-    move-object v1, v8
-
-    move-object v8, v2
+    const/4 v0, 0x1
 
     goto/16 :goto_2f
 
-    :cond_2d
+    :cond_28
     const/16 v15, 0x7dd
 
-    if-ne v0, v15, :cond_2e
+    if-ne v0, v15, :cond_29
 
-    invoke-direct {v11, v6, v4, v3, v2}, Lcom/android/server/wm/DisplayPolicy;->layoutWallpaper(Lcom/android/server/wm/DisplayFrames;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;)V
+    invoke-direct {v11, v6, v4, v3, v8}, Lcom/android/server/wm/DisplayPolicy;->layoutWallpaper(Lcom/android/server/wm/DisplayFrames;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;)V
 
-    move-object/from16 v30, p3
+    move-object/from16 v35, v1
+
+    move v15, v5
+
+    move-object v1, v7
+
+    move-object/from16 v34, v14
+
+    move/from16 v12, v24
+
+    move-object/from16 v48, v26
+
+    move/from16 v22, v31
+
+    move-object v7, v6
+
+    move/from16 v31, v9
+
+    move v14, v10
+
+    move-object/from16 v24, v13
 
     move v13, v0
 
-    move-object/from16 v36, v5
-
-    move v5, v7
-
-    move-object/from16 v27, v9
-
-    move v12, v10
-
-    move/from16 v15, v25
-
-    move/from16 v19, v31
+    move-object v6, v2
 
     move-object v9, v3
 
     move-object v10, v4
 
-    move-object v7, v6
-
-    move-object v6, v1
-
-    move-object v1, v8
-
-    move-object v8, v2
+    const/4 v0, 0x1
 
     goto/16 :goto_2f
 
-    :cond_2e
-    iget-object v13, v11, Lcom/android/server/wm/DisplayPolicy;->mStatusBar:Lcom/android/server/wm/WindowState;
+    :cond_29
+    iget-object v15, v11, Lcom/android/server/wm/DisplayPolicy;->mStatusBar:Lcom/android/server/wm/WindowState;
 
-    if-eq v12, v13, :cond_64
+    if-eq v12, v15, :cond_5f
 
-    const/16 v13, 0x7f8
+    const/16 v15, 0x7f8
 
-    if-ne v0, v13, :cond_2f
+    if-ne v0, v15, :cond_2a
 
-    move-object/from16 v30, p3
+    move-object/from16 v35, v1
+
+    move v15, v5
+
+    move-object v1, v7
+
+    move-object/from16 v34, v14
+
+    move/from16 v12, v24
+
+    move-object/from16 v48, v26
+
+    move/from16 v22, v31
+
+    move-object v7, v6
+
+    move/from16 v31, v9
+
+    move v14, v10
+
+    move-object/from16 v24, v13
 
     move v13, v0
 
-    move-object/from16 v36, v5
-
-    move v5, v7
-
-    move-object/from16 v27, v9
-
-    move v12, v10
-
-    move/from16 v15, v25
-
-    move/from16 v19, v31
+    move-object v6, v2
 
     move-object v9, v3
 
     move-object v10, v4
 
-    move-object v7, v6
-
-    move-object v6, v1
-
-    move-object v1, v8
-
-    move-object v8, v2
+    const/4 v0, 0x1
 
     goto/16 :goto_2e
 
-    :cond_2f
+    :cond_2a
     iget-object v15, v6, Lcom/android/server/wm/DisplayFrames;->mSystem:Landroid/graphics/Rect;
 
-    invoke-virtual {v5, v15}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {v1, v15}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     const/4 v15, 0x1
 
-    if-lt v0, v15, :cond_30
+    if-lt v0, v15, :cond_2b
 
     const/16 v15, 0x63
 
-    if-gt v0, v15, :cond_30
+    if-gt v0, v15, :cond_2b
 
     const/4 v15, 0x1
 
     goto :goto_18
 
-    :cond_30
+    :cond_2b
     const/4 v15, 0x0
 
     :goto_18
-    iget-object v13, v11, Lcom/android/server/wm/DisplayPolicy;->mTopFullscreenOpaqueWindowState:Lcom/android/server/wm/WindowState;
+    move/from16 v40, v0
 
-    if-ne v12, v13, :cond_31
+    iget-object v0, v11, Lcom/android/server/wm/DisplayPolicy;->mTopFullscreenOpaqueWindowState:Lcom/android/server/wm/WindowState;
+
+    if-ne v12, v0, :cond_2c
 
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/WindowState;->isAnimatingLw()Z
 
-    move-result v13
+    move-result v0
 
-    if-nez v13, :cond_31
+    if-nez v0, :cond_2c
 
-    const/4 v13, 0x1
+    const/4 v0, 0x1
 
     goto :goto_19
 
-    :cond_31
-    const/4 v13, 0x0
+    :cond_2c
+    const/4 v0, 0x0
 
     :goto_19
-    if-eqz v15, :cond_35
+    move/from16 v20, v0
 
-    if-nez v13, :cond_35
+    if-eqz v15, :cond_2f
 
-    and-int/lit8 v19, v25, 0x4
+    if-nez v20, :cond_2f
 
-    if-nez v19, :cond_32
+    and-int/lit8 v0, v24, 0x4
 
-    move/from16 v39, v0
+    const/high16 v21, 0x20000
+
+    if-nez v0, :cond_2d
 
     and-int/lit16 v0, v10, 0x400
 
-    if-nez v0, :cond_33
+    if-nez v0, :cond_2d
 
     const/high16 v0, 0x4000000
 
     and-int/2addr v0, v10
 
-    if-nez v0, :cond_33
+    if-nez v0, :cond_2d
 
     const/high16 v0, -0x80000000
 
-    and-int v19, v10, v0
+    and-int v22, v10, v0
 
-    if-nez v19, :cond_33
+    if-nez v22, :cond_2d
 
-    const/high16 v0, 0x20000
+    and-int v0, v9, v21
 
-    and-int v0, v24, v0
-
-    if-nez v0, :cond_33
+    if-nez v0, :cond_2d
 
     iget-object v0, v6, Lcom/android/server/wm/DisplayFrames;->mStable:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->top:I
 
-    iput v0, v5, Landroid/graphics/Rect;->top:I
+    iput v0, v1, Landroid/graphics/Rect;->top:I
 
-    goto :goto_1a
-
-    :cond_32
-    move/from16 v39, v0
-
-    :cond_33
-    :goto_1a
+    :cond_2d
     const/high16 v0, 0x8000000
 
     and-int/2addr v0, v10
 
-    if-nez v0, :cond_34
+    if-nez v0, :cond_2e
 
-    and-int/lit8 v0, v25, 0x2
+    and-int/lit8 v0, v24, 0x2
 
-    if-nez v0, :cond_34
+    if-nez v0, :cond_2e
 
-    const/high16 v19, -0x80000000
+    const/high16 v22, -0x80000000
 
-    and-int v0, v10, v19
+    and-int v0, v10, v22
 
-    if-nez v0, :cond_36
+    if-nez v0, :cond_30
 
-    const/high16 v0, 0x20000
+    and-int v0, v9, v21
 
-    and-int v0, v24, v0
-
-    if-nez v0, :cond_36
+    if-nez v0, :cond_30
 
     iget-object v0, v6, Lcom/android/server/wm/DisplayFrames;->mStable:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->bottom:I
 
-    iput v0, v5, Landroid/graphics/Rect;->bottom:I
+    iput v0, v1, Landroid/graphics/Rect;->bottom:I
 
     iget-object v0, v6, Lcom/android/server/wm/DisplayFrames;->mStable:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->right:I
 
-    iput v0, v5, Landroid/graphics/Rect;->right:I
+    iput v0, v1, Landroid/graphics/Rect;->right:I
 
-    goto :goto_1b
+    goto :goto_1a
 
-    :cond_34
-    const/high16 v19, -0x80000000
+    :cond_2e
+    const/high16 v22, -0x80000000
 
-    goto :goto_1b
+    goto :goto_1a
 
-    :cond_35
-    move/from16 v39, v0
+    :cond_2f
+    const/high16 v22, -0x80000000
 
-    const/high16 v19, -0x80000000
-
-    :cond_36
-    :goto_1b
+    :cond_30
+    :goto_1a
     const-string v0, "layoutWindowLw("
 
-    if-eqz v32, :cond_48
+    if-eqz v32, :cond_42
 
-    if-eqz v33, :cond_48
+    if-eqz v33, :cond_42
 
-    sget-boolean v18, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_LAYOUT:Z
+    sget-boolean v36, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_LAYOUT:Z
 
-    if-eqz v18, :cond_37
+    if-eqz v36, :cond_31
 
-    move-object/from16 v35, v1
+    move-object/from16 v36, v1
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -10826,232 +11065,244 @@
 
     move-result-object v0
 
-    invoke-static {v8, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v7, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_1c
+    goto :goto_1b
 
-    :cond_37
-    move-object/from16 v35, v1
+    :cond_31
+    move-object/from16 v36, v1
 
-    :goto_1c
+    :goto_1b
     move-object/from16 v1, p2
 
-    if-eqz v1, :cond_38
+    if-eqz v1, :cond_32
 
     const/16 v18, 0x1
 
-    move-object/from16 v36, v5
+    move-object/from16 v37, v13
 
-    move/from16 v5, v39
+    move-object/from16 v35, v36
+
+    move/from16 v13, v40
+
+    move/from16 v36, v15
+
+    const/4 v15, 0x4
 
     move-object/from16 v0, p0
 
+    move-object/from16 v43, v2
+
+    move-object v2, v1
+
     move-object/from16 v1, p1
 
-    move-object/from16 v41, v2
+    move-object/from16 v41, v8
+
+    move-object v8, v2
 
     move v2, v10
 
-    move-object/from16 v37, v3
+    move-object/from16 v38, v3
 
-    move v3, v7
+    move v3, v5
 
-    move-object/from16 v38, v4
+    move-object/from16 v39, v4
 
     move-object/from16 v4, p2
 
-    move-object/from16 v30, p3
+    move v15, v5
 
-    move/from16 v39, v13
+    move-object/from16 v48, v26
 
-    move/from16 p3, v15
-
-    const/4 v15, 0x1
-
-    move v13, v5
+    const/4 v12, 0x1
 
     move/from16 v5, v18
 
-    move-object/from16 v40, v6
+    move-object/from16 v30, v6
 
-    move-object/from16 v6, v38
+    move-object/from16 v6, v39
 
-    move/from16 v46, v7
+    move-object/from16 v49, v7
 
-    move/from16 v15, v25
+    move/from16 v12, v24
 
-    move-object/from16 v7, v37
+    move-object/from16 v24, v37
 
-    move-object/from16 v47, v8
+    move-object/from16 v7, v38
 
-    move/from16 v19, v31
+    move/from16 v22, v31
 
     move-object/from16 v8, v41
 
-    move-object/from16 v27, v9
+    move/from16 v31, v9
 
-    move-object/from16 v9, v35
+    move-object/from16 v9, v43
 
-    move v12, v10
+    move-object/from16 v34, v14
 
-    move-object/from16 v10, v40
+    move v14, v10
+
+    move-object/from16 v10, v30
 
     invoke-direct/range {v0 .. v10}, Lcom/android/server/wm/DisplayPolicy;->setAttachedWindowFrames(Lcom/android/server/wm/WindowState;IILcom/android/server/wm/WindowState;ZLandroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Lcom/android/server/wm/DisplayFrames;)V
 
-    move-object/from16 v6, v35
+    move-object/from16 v7, v30
 
-    move-object/from16 v9, v37
+    move-object/from16 v9, v38
 
-    move-object/from16 v10, v38
+    move-object/from16 v10, v39
 
-    move-object/from16 v7, v40
+    move-object/from16 v6, v43
 
-    move/from16 v5, v46
+    move-object/from16 v1, v49
 
-    move-object/from16 v1, v47
+    const/4 v0, 0x1
 
     goto/16 :goto_2f
 
-    :cond_38
-    move-object/from16 v30, p3
+    :cond_32
+    move-object/from16 v43, v2
 
-    move-object/from16 v41, v2
+    move-object/from16 v38, v3
 
-    move-object/from16 v37, v3
+    move-object/from16 v39, v4
 
-    move-object/from16 v38, v4
+    move-object/from16 v30, v6
 
-    move-object/from16 v36, v5
+    move-object/from16 v49, v7
 
-    move-object/from16 v40, v6
+    move-object/from16 v41, v8
 
-    move/from16 v46, v7
+    move-object/from16 v34, v14
 
-    move-object/from16 v47, v8
+    move/from16 v12, v24
 
-    move-object/from16 v27, v9
+    move-object/from16 v48, v26
 
-    move v12, v10
+    move/from16 v22, v31
 
-    move/from16 p3, v15
+    move-object/from16 v35, v36
 
-    move/from16 v15, v25
+    move/from16 v31, v9
 
-    move/from16 v19, v31
+    move v14, v10
 
-    move/from16 v51, v39
+    move-object/from16 v24, v13
 
-    move/from16 v39, v13
+    move/from16 v36, v15
 
-    move/from16 v13, v51
+    move/from16 v13, v40
+
+    move v15, v5
 
     const/16 v0, 0x7f9
 
-    if-eq v13, v0, :cond_3e
+    if-eq v13, v0, :cond_38
 
     const/16 v0, 0x7e1
 
-    if-ne v13, v0, :cond_39
+    if-ne v13, v0, :cond_33
 
-    move-object/from16 v9, v37
+    move-object/from16 v10, v30
 
-    move-object/from16 v8, v38
+    move-object/from16 v9, v38
 
-    move-object/from16 v10, v40
+    move-object/from16 v8, v39
+
+    goto :goto_1e
+
+    :cond_33
+    and-int/lit16 v0, v12, 0x200
+
+    if-eqz v0, :cond_37
+
+    const/4 v0, 0x1
+
+    if-lt v13, v0, :cond_34
+
+    const/16 v0, 0x7cf
+
+    if-le v13, v0, :cond_36
+
+    :cond_34
+    const/16 v0, 0x7e4
+
+    if-eq v13, v0, :cond_36
+
+    const/16 v0, 0x7d9
+
+    if-ne v13, v0, :cond_35
+
+    goto :goto_1c
+
+    :cond_35
+    move-object/from16 v10, v30
+
+    move-object/from16 v9, v38
+
+    move-object/from16 v8, v39
+
+    goto :goto_1d
+
+    :cond_36
+    :goto_1c
+    move-object/from16 v10, v30
+
+    iget-object v0, v10, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
+
+    move-object/from16 v9, v38
+
+    invoke-virtual {v9, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    iget-object v0, v10, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
+
+    move-object/from16 v8, v39
+
+    invoke-virtual {v8, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    move-object/from16 v7, v49
+
+    goto/16 :goto_22
+
+    :cond_37
+    move-object/from16 v10, v30
+
+    move-object/from16 v9, v38
+
+    move-object/from16 v8, v39
+
+    :goto_1d
+    iget-object v0, v10, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
+
+    invoke-virtual {v9, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    iget-object v0, v10, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
+
+    invoke-virtual {v8, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    move-object/from16 v7, v49
+
+    goto :goto_22
+
+    :cond_38
+    move-object/from16 v10, v30
+
+    move-object/from16 v9, v38
+
+    move-object/from16 v8, v39
+
+    :goto_1e
+    if-eqz v28, :cond_39
+
+    iget-object v0, v10, Lcom/android/server/wm/DisplayFrames;->mDock:Landroid/graphics/Rect;
 
     goto :goto_1f
 
     :cond_39
-    and-int/lit16 v0, v15, 0x200
-
-    if-eqz v0, :cond_3d
-
-    const/4 v0, 0x1
-
-    if-lt v13, v0, :cond_3a
-
-    const/16 v0, 0x7cf
-
-    if-le v13, v0, :cond_3c
-
-    :cond_3a
-    const/16 v0, 0x7e4
-
-    if-eq v13, v0, :cond_3c
-
-    const/16 v0, 0x7d9
-
-    if-ne v13, v0, :cond_3b
-
-    goto :goto_1d
-
-    :cond_3b
-    move-object/from16 v9, v37
-
-    move-object/from16 v8, v38
-
-    move-object/from16 v10, v40
-
-    goto :goto_1e
-
-    :cond_3c
-    :goto_1d
-    move-object/from16 v10, v40
-
     iget-object v0, v10, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
-
-    move-object/from16 v9, v37
-
-    invoke-virtual {v9, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
-    iget-object v0, v10, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
-
-    move-object/from16 v8, v38
-
-    invoke-virtual {v8, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
-    move-object/from16 v7, v47
-
-    goto/16 :goto_23
-
-    :cond_3d
-    move-object/from16 v9, v37
-
-    move-object/from16 v8, v38
-
-    move-object/from16 v10, v40
-
-    :goto_1e
-    iget-object v0, v10, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
-
-    invoke-virtual {v9, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
-    iget-object v0, v10, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
-
-    invoke-virtual {v8, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
-    move-object/from16 v7, v47
-
-    goto :goto_23
-
-    :cond_3e
-    move-object/from16 v9, v37
-
-    move-object/from16 v8, v38
-
-    move-object/from16 v10, v40
 
     :goto_1f
-    if-eqz v28, :cond_3f
-
-    iget-object v0, v10, Lcom/android/server/wm/DisplayFrames;->mDock:Landroid/graphics/Rect;
-
-    goto :goto_20
-
-    :cond_3f
-    iget-object v0, v10, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
-
-    :goto_20
     iget v0, v0, Landroid/graphics/Rect;->left:I
 
     iput v0, v9, Landroid/graphics/Rect;->left:I
@@ -11066,45 +11317,45 @@
 
     iput v0, v8, Landroid/graphics/Rect;->top:I
 
-    if-eqz v28, :cond_40
+    if-eqz v28, :cond_3a
 
     iget-object v0, v10, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->right:I
 
-    goto :goto_21
+    goto :goto_20
 
-    :cond_40
+    :cond_3a
     iget-object v0, v10, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->right:I
 
-    :goto_21
+    :goto_20
     iput v0, v9, Landroid/graphics/Rect;->right:I
 
     iput v0, v8, Landroid/graphics/Rect;->right:I
 
-    if-eqz v28, :cond_41
+    if-eqz v28, :cond_3b
 
     iget-object v0, v10, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->bottom:I
 
-    goto :goto_22
+    goto :goto_21
 
-    :cond_41
+    :cond_3b
     iget-object v0, v10, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->bottom:I
 
-    :goto_22
+    :goto_21
     iput v0, v9, Landroid/graphics/Rect;->bottom:I
 
     iput v0, v8, Landroid/graphics/Rect;->bottom:I
 
     sget-boolean v0, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_LAYOUT:Z
 
-    if-eqz v0, :cond_42
+    if-eqz v0, :cond_3c
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -11120,25 +11371,25 @@
 
     move-result-object v0
 
-    move-object/from16 v7, v47
+    move-object/from16 v7, v49
 
     invoke-static {v7, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_23
+    goto :goto_22
 
-    :cond_42
-    move-object/from16 v7, v47
+    :cond_3c
+    move-object/from16 v7, v49
 
-    :goto_23
-    and-int/lit16 v0, v12, 0x400
+    :goto_22
+    and-int/lit16 v0, v14, 0x400
 
-    if-nez v0, :cond_46
+    if-nez v0, :cond_40
 
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/WindowState;->isVoiceInteraction()Z
 
     move-result v0
 
-    if-eqz v0, :cond_43
+    if-eqz v0, :cond_3d
 
     iget-object v0, v10, Lcom/android/server/wm/DisplayFrames;->mVoiceContent:Landroid/graphics/Rect;
 
@@ -11146,139 +11397,131 @@
 
     invoke-virtual {v6, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    move/from16 v5, v46
+    goto :goto_24
 
-    goto :goto_25
-
-    :cond_43
+    :cond_3d
     move-object/from16 v6, v41
 
     sget v0, Landroid/view/ViewRootImpl;->sNewInsetsMode:I
 
-    if-nez v0, :cond_45
-
-    move/from16 v5, v46
+    if-nez v0, :cond_3f
 
     const/16 v0, 0x10
 
-    if-eq v5, v0, :cond_44
+    if-eq v15, v0, :cond_3e
 
-    goto :goto_24
+    goto :goto_23
 
-    :cond_44
+    :cond_3e
     iget-object v0, v10, Lcom/android/server/wm/DisplayFrames;->mContent:Landroid/graphics/Rect;
 
     invoke-virtual {v6, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    goto :goto_25
+    goto :goto_24
 
-    :cond_45
-    move/from16 v5, v46
-
-    :goto_24
+    :cond_3f
+    :goto_23
     iget-object v0, v10, Lcom/android/server/wm/DisplayFrames;->mDock:Landroid/graphics/Rect;
 
     invoke-virtual {v6, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    goto :goto_25
+    goto :goto_24
 
-    :cond_46
+    :cond_40
     move-object/from16 v6, v41
-
-    move/from16 v5, v46
 
     iget-object v0, v10, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
 
     invoke-virtual {v6, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    :goto_25
-    invoke-direct {v11, v15, v12, v6, v10}, Lcom/android/server/wm/DisplayPolicy;->applyStableConstraints(IILandroid/graphics/Rect;Lcom/android/server/wm/DisplayFrames;)V
+    :goto_24
+    invoke-direct {v11, v12, v14, v6, v10}, Lcom/android/server/wm/DisplayPolicy;->applyStableConstraints(IILandroid/graphics/Rect;Lcom/android/server/wm/DisplayFrames;)V
 
     sget v0, Landroid/view/ViewRootImpl;->sNewInsetsMode:I
 
-    if-nez v0, :cond_47
+    if-nez v0, :cond_41
 
     const/16 v0, 0x30
 
-    if-eq v5, v0, :cond_47
+    if-eq v15, v0, :cond_41
 
     iget-object v0, v10, Lcom/android/server/wm/DisplayFrames;->mCurrent:Landroid/graphics/Rect;
 
-    move-object/from16 v4, v35
+    move-object/from16 v5, v43
 
-    invoke-virtual {v4, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
-    move-object v1, v7
-
-    move-object v7, v10
-
-    move-object v10, v8
-
-    move-object v8, v6
-
-    move-object v6, v4
-
-    goto/16 :goto_2f
-
-    :cond_47
-    move-object/from16 v4, v35
-
-    invoke-virtual {v4, v6}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {v5, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     move-object v1, v7
 
     move-object v7, v10
 
+    const/4 v0, 0x1
+
     move-object v10, v8
 
     move-object v8, v6
 
-    move-object v6, v4
+    move-object v6, v5
 
     goto/16 :goto_2f
 
-    :cond_48
-    move-object/from16 v30, p3
+    :cond_41
+    move-object/from16 v5, v43
 
-    move-object/from16 v36, v5
+    invoke-virtual {v5, v6}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    move v5, v7
+    move-object v1, v7
 
-    move-object v7, v8
+    move-object v7, v10
 
-    move-object/from16 v27, v9
+    const/4 v0, 0x1
 
-    move v12, v10
+    move-object v10, v8
 
-    move/from16 p3, v15
+    move-object v8, v6
 
-    move/from16 v15, v25
+    move-object v6, v5
 
-    move/from16 v19, v31
+    goto/16 :goto_2f
+
+    :cond_42
+    move-object/from16 v35, v1
+
+    move-object/from16 v34, v14
+
+    move/from16 v36, v15
+
+    move/from16 v12, v24
+
+    move-object/from16 v48, v26
+
+    move/from16 v22, v31
+
+    move v15, v5
+
+    move/from16 v31, v9
+
+    move v14, v10
+
+    move-object/from16 v24, v13
+
+    move/from16 v13, v40
+
+    move-object v5, v2
 
     move-object v9, v3
 
-    move-object v8, v4
-
     move-object v10, v6
 
-    move-object v4, v1
+    move-object v6, v8
 
-    move-object v6, v2
+    move-object v8, v4
 
-    move/from16 v51, v39
+    if-nez v32, :cond_4d
 
-    move/from16 v39, v13
+    and-int/lit16 v1, v12, 0x600
 
-    move/from16 v13, v51
-
-    if-nez v32, :cond_53
-
-    and-int/lit16 v1, v15, 0x600
-
-    if-eqz v1, :cond_49
-
-    move v11, v5
+    if-eqz v1, :cond_43
 
     move-object v1, v7
 
@@ -11288,18 +11531,18 @@
 
     move-object v8, v6
 
-    move-object v6, v4
+    move-object v6, v5
 
-    goto/16 :goto_29
+    goto/16 :goto_28
 
-    :cond_49
-    move-object/from16 v3, p2
+    :cond_43
+    move-object/from16 v4, p2
 
-    if-eqz v3, :cond_4b
+    if-eqz v4, :cond_45
 
     sget-boolean v1, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_LAYOUT:Z
 
-    if-eqz v1, :cond_4a
+    if-eqz v1, :cond_44
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -11307,7 +11550,7 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v14}, Landroid/view/WindowManager$LayoutParams;->getTitle()Ljava/lang/CharSequence;
+    invoke-virtual/range {v34 .. v34}, Landroid/view/WindowManager$LayoutParams;->getTitle()Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -11317,7 +11560,7 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -11325,22 +11568,20 @@
 
     invoke-static {v7, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_4a
+    :cond_44
     const/16 v18, 0x0
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
 
-    move v2, v12
+    move v2, v14
 
-    move v3, v5
-
-    move-object/from16 v35, v4
+    move v3, v15
 
     move-object/from16 v4, p2
 
-    move v11, v5
+    move-object/from16 v43, v5
 
     move/from16 v5, v18
 
@@ -11348,56 +11589,52 @@
 
     move-object v6, v8
 
-    move-object/from16 v48, v7
+    move-object/from16 v50, v7
 
     move-object v7, v9
 
-    move-object/from16 v49, v8
+    move-object/from16 v51, v8
 
     move-object/from16 v8, v41
 
-    move-object/from16 v50, v9
+    move-object/from16 v52, v9
 
-    move-object/from16 v9, v35
+    move-object/from16 v9, v43
 
-    move-object/from16 v40, v10
+    move-object/from16 v30, v10
 
     invoke-direct/range {v0 .. v10}, Lcom/android/server/wm/DisplayPolicy;->setAttachedWindowFrames(Lcom/android/server/wm/WindowState;IILcom/android/server/wm/WindowState;ZLandroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Lcom/android/server/wm/DisplayFrames;)V
 
-    move v5, v11
+    move-object/from16 v7, v30
 
-    move-object/from16 v6, v35
+    move-object/from16 v6, v43
 
-    move-object/from16 v7, v40
+    move-object/from16 v1, v50
 
-    move-object/from16 v1, v48
+    move-object/from16 v10, v51
 
-    move-object/from16 v10, v49
+    move-object/from16 v9, v52
 
-    move-object/from16 v9, v50
-
-    move-object/from16 v11, p0
+    const/4 v0, 0x1
 
     goto/16 :goto_2f
 
-    :cond_4b
-    move-object/from16 v35, v4
-
-    move v11, v5
+    :cond_45
+    move-object/from16 v43, v5
 
     move-object/from16 v41, v6
 
-    move-object/from16 v48, v7
+    move-object/from16 v50, v7
 
-    move-object/from16 v49, v8
+    move-object/from16 v51, v8
 
-    move-object/from16 v50, v9
+    move-object/from16 v52, v9
 
-    move-object/from16 v40, v10
+    move-object/from16 v30, v10
 
     sget-boolean v1, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_LAYOUT:Z
 
-    if-eqz v1, :cond_4c
+    if-eqz v1, :cond_46
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -11405,7 +11642,7 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v14}, Landroid/view/WindowManager$LayoutParams;->getTitle()Ljava/lang/CharSequence;
+    invoke-virtual/range {v34 .. v34}, Landroid/view/WindowManager$LayoutParams;->getTitle()Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -11419,21 +11656,21 @@
 
     move-result-object v0
 
-    move-object/from16 v1, v48
+    move-object/from16 v1, v50
 
     invoke-static {v1, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_26
+    goto :goto_25
 
-    :cond_4c
-    move-object/from16 v1, v48
+    :cond_46
+    move-object/from16 v1, v50
 
-    :goto_26
+    :goto_25
     const/16 v0, 0x7f9
 
-    if-ne v13, v0, :cond_4d
+    if-ne v13, v0, :cond_47
 
-    move-object/from16 v7, v40
+    move-object/from16 v7, v30
 
     iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
 
@@ -11443,46 +11680,44 @@
 
     iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
 
-    move-object/from16 v9, v50
+    move-object/from16 v9, v52
 
     invoke-virtual {v9, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
 
-    move-object/from16 v10, v49
+    move-object/from16 v10, v51
 
     invoke-virtual {v10, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    move v5, v11
+    move-object/from16 v6, v43
 
-    move-object/from16 v6, v35
-
-    move-object/from16 v11, p0
+    const/4 v0, 0x1
 
     goto/16 :goto_2f
 
-    :cond_4d
-    move-object/from16 v7, v40
+    :cond_47
+    move-object/from16 v7, v30
 
     move-object/from16 v8, v41
 
-    move-object/from16 v10, v49
+    move-object/from16 v10, v51
 
-    move-object/from16 v9, v50
+    move-object/from16 v9, v52
 
     const/16 v0, 0x7d5
 
-    if-eq v13, v0, :cond_52
+    if-eq v13, v0, :cond_4c
 
     const/16 v0, 0x7d3
 
-    if-ne v13, v0, :cond_4e
+    if-ne v13, v0, :cond_48
 
-    move-object/from16 v6, v35
+    move-object/from16 v6, v43
 
-    goto :goto_28
+    goto :goto_27
 
-    :cond_4e
+    :cond_48
     iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mContent:Landroid/graphics/Rect;
 
     invoke-virtual {v10, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
@@ -11491,7 +11726,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_4f
+    if-eqz v0, :cond_49
 
     iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mVoiceContent:Landroid/graphics/Rect;
 
@@ -11501,12 +11736,12 @@
 
     invoke-virtual {v9, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    goto :goto_27
+    goto :goto_26
 
-    :cond_4f
+    :cond_49
     const/16 v0, 0x10
 
-    if-eq v11, v0, :cond_50
+    if-eq v15, v0, :cond_4a
 
     iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mDock:Landroid/graphics/Rect;
 
@@ -11516,9 +11751,9 @@
 
     invoke-virtual {v9, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    goto :goto_27
+    goto :goto_26
 
-    :cond_50
+    :cond_4a
     iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mContent:Landroid/graphics/Rect;
 
     invoke-virtual {v8, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
@@ -11527,42 +11762,38 @@
 
     invoke-virtual {v9, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    :goto_27
+    :goto_26
     sget v0, Landroid/view/ViewRootImpl;->sNewInsetsMode:I
 
-    if-nez v0, :cond_51
+    if-nez v0, :cond_4b
 
     const/16 v0, 0x30
 
-    if-eq v11, v0, :cond_51
+    if-eq v15, v0, :cond_4b
 
     iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mCurrent:Landroid/graphics/Rect;
 
-    move-object/from16 v6, v35
+    move-object/from16 v6, v43
 
     invoke-virtual {v6, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    move v5, v11
-
-    move-object/from16 v11, p0
+    const/4 v0, 0x1
 
     goto/16 :goto_2f
 
-    :cond_51
-    move-object/from16 v6, v35
+    :cond_4b
+    move-object/from16 v6, v43
 
     invoke-virtual {v6, v8}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    move v5, v11
-
-    move-object/from16 v11, p0
+    const/4 v0, 0x1
 
     goto/16 :goto_2f
 
-    :cond_52
-    move-object/from16 v6, v35
+    :cond_4c
+    move-object/from16 v6, v43
 
-    :goto_28
+    :goto_27
     iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mStable:Landroid/graphics/Rect;
 
     invoke-virtual {v8, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
@@ -11575,15 +11806,11 @@
 
     invoke-virtual {v10, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    move v5, v11
-
-    move-object/from16 v11, p0
+    const/4 v0, 0x1
 
     goto/16 :goto_2f
 
-    :cond_53
-    move v11, v5
-
+    :cond_4d
     move-object v1, v7
 
     move-object v7, v10
@@ -11592,12 +11819,12 @@
 
     move-object v8, v6
 
-    move-object v6, v4
+    move-object v6, v5
 
-    :goto_29
+    :goto_28
     sget-boolean v2, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_LAYOUT:Z
 
-    if-eqz v2, :cond_54
+    if-eqz v2, :cond_4e
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -11605,7 +11832,7 @@
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v14}, Landroid/view/WindowManager$LayoutParams;->getTitle()Ljava/lang/CharSequence;
+    invoke-virtual/range {v34 .. v34}, Landroid/view/WindowManager$LayoutParams;->getTitle()Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -11621,61 +11848,65 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_54
+    :cond_4e
     const/16 v0, 0x7f9
 
-    if-eq v13, v0, :cond_60
+    if-eq v13, v0, :cond_5b
 
     const/16 v0, 0x7e1
 
-    if-ne v13, v0, :cond_55
+    if-ne v13, v0, :cond_4f
+
+    const/4 v0, 0x1
 
     goto/16 :goto_2c
 
-    :cond_55
+    :cond_4f
     const/16 v0, 0x7e3
 
-    if-eq v13, v0, :cond_5f
+    if-eq v13, v0, :cond_5a
 
     const/16 v0, 0x7e8
 
-    if-ne v13, v0, :cond_56
+    if-ne v13, v0, :cond_50
+
+    const/4 v0, 0x1
 
     goto/16 :goto_2b
 
-    :cond_56
+    :cond_50
     const/16 v0, 0x7df
 
-    if-eq v13, v0, :cond_57
+    if-eq v13, v0, :cond_51
 
     const/16 v0, 0x7f4
 
-    if-eq v13, v0, :cond_57
+    if-eq v13, v0, :cond_51
 
     const/16 v0, 0x901
 
-    if-eq v13, v0, :cond_57
+    if-eq v13, v0, :cond_51
 
     const/16 v0, 0x900
 
-    if-eq v13, v0, :cond_57
+    if-eq v13, v0, :cond_51
 
     const/16 v0, 0x8ff
 
-    if-eq v13, v0, :cond_57
+    if-eq v13, v0, :cond_51
 
     const/16 v0, 0x903
 
-    if-eq v13, v0, :cond_57
+    if-eq v13, v0, :cond_51
 
     const/16 v0, 0x902
 
-    if-ne v13, v0, :cond_58
+    if-ne v13, v0, :cond_52
 
-    :cond_57
-    and-int/lit16 v0, v12, 0x400
+    :cond_51
+    and-int/lit16 v0, v14, 0x400
 
-    if-eqz v0, :cond_58
+    if-eqz v0, :cond_52
 
     iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
 
@@ -11688,688 +11919,676 @@
     iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
 
     invoke-virtual {v10, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    const/4 v0, 0x1
+
+    goto/16 :goto_2d
+
+    :cond_52
+    const/16 v0, 0x7e5
+
+    if-ne v13, v0, :cond_53
+
+    iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
+
+    invoke-virtual {v8, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
+
+    invoke-virtual {v9, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
+
+    invoke-virtual {v10, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    const/4 v0, 0x1
+
+    goto/16 :goto_2d
+
+    :cond_53
+    and-int/lit16 v0, v12, 0x200
+
+    if-eqz v0, :cond_55
+
+    const/16 v0, 0x7f8
+
+    if-eq v13, v0, :cond_54
+
+    const/16 v0, 0x7d5
+
+    if-eq v13, v0, :cond_54
+
+    const/16 v0, 0x7f2
+
+    if-eq v13, v0, :cond_54
+
+    const/16 v0, 0x7f1
+
+    if-eq v13, v0, :cond_54
+
+    const/4 v0, 0x1
+
+    if-lt v13, v0, :cond_56
+
+    const/16 v2, 0x7cf
+
+    if-gt v13, v2, :cond_56
+
+    goto :goto_29
+
+    :cond_54
+    const/4 v0, 0x1
+
+    :goto_29
+    iget-object v2, v7, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
+
+    invoke-virtual {v8, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    iget-object v2, v7, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
+
+    invoke-virtual {v9, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    iget-object v2, v7, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
+
+    invoke-virtual {v10, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    goto/16 :goto_2d
+
+    :cond_55
+    const/4 v0, 0x1
+
+    :cond_56
+    and-int/lit16 v2, v12, 0x400
+
+    if-eqz v2, :cond_59
+
+    iget-object v2, v7, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
+
+    invoke-virtual {v9, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    iget-object v2, v7, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
+
+    invoke-virtual {v10, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    sget v2, Landroid/view/ViewRootImpl;->sNewInsetsMode:I
+
+    if-nez v2, :cond_58
+
+    const/16 v2, 0x10
+
+    if-eq v15, v2, :cond_57
+
+    goto :goto_2a
+
+    :cond_57
+    iget-object v2, v7, Lcom/android/server/wm/DisplayFrames;->mContent:Landroid/graphics/Rect;
+
+    invoke-virtual {v8, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     goto/16 :goto_2d
 
     :cond_58
-    const/16 v0, 0x7e5
+    :goto_2a
+    iget-object v2, v7, Lcom/android/server/wm/DisplayFrames;->mDock:Landroid/graphics/Rect;
 
-    if-ne v13, v0, :cond_59
-
-    iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
-
-    invoke-virtual {v8, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
-    iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
-
-    invoke-virtual {v9, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
-    iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
-
-    invoke-virtual {v10, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {v8, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     goto/16 :goto_2d
 
     :cond_59
-    and-int/lit16 v0, v15, 0x200
+    iget-object v2, v7, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
 
-    if-eqz v0, :cond_5b
+    invoke-virtual {v8, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    const/16 v0, 0x7f8
+    iget-object v2, v7, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
 
-    if-eq v13, v0, :cond_5a
+    invoke-virtual {v9, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    const/16 v0, 0x7d5
+    iget-object v2, v7, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
 
-    if-eq v13, v0, :cond_5a
+    invoke-virtual {v10, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    const/16 v0, 0x7f2
-
-    if-eq v13, v0, :cond_5a
-
-    const/16 v0, 0x7f1
-
-    if-eq v13, v0, :cond_5a
-
-    const/4 v0, 0x1
-
-    if-lt v13, v0, :cond_5b
-
-    const/16 v0, 0x7cf
-
-    if-gt v13, v0, :cond_5b
+    goto :goto_2d
 
     :cond_5a
-    iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
+    const/4 v0, 0x1
 
-    invoke-virtual {v8, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    :goto_2b
+    iget-object v2, v7, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
 
-    iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
+    invoke-virtual {v9, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    invoke-virtual {v9, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    iget-object v2, v7, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
 
-    iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
+    invoke-virtual {v10, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    invoke-virtual {v10, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    sget-boolean v2, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_LAYOUT:Z
 
-    goto/16 :goto_2d
+    if-eqz v2, :cond_5d
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Laying out navigation bar window: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_2d
 
     :cond_5b
-    and-int/lit16 v0, v15, 0x400
+    const/4 v0, 0x1
 
-    if-eqz v0, :cond_5e
+    :goto_2c
+    iget-object v2, v7, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
 
-    iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
+    invoke-virtual {v8, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    invoke-virtual {v9, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    iget-object v2, v7, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
 
-    iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
+    invoke-virtual {v9, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    invoke-virtual {v10, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    iget-object v2, v7, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
 
-    sget v0, Landroid/view/ViewRootImpl;->sNewInsetsMode:I
+    invoke-virtual {v10, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    if-nez v0, :cond_5d
+    if-eqz v28, :cond_5c
 
-    const/16 v0, 0x10
+    iget-object v2, v7, Lcom/android/server/wm/DisplayFrames;->mDock:Landroid/graphics/Rect;
 
-    if-eq v11, v0, :cond_5c
+    iget v2, v2, Landroid/graphics/Rect;->left:I
 
-    goto :goto_2a
+    iput v2, v8, Landroid/graphics/Rect;->left:I
+
+    iput v2, v9, Landroid/graphics/Rect;->left:I
+
+    iput v2, v10, Landroid/graphics/Rect;->left:I
+
+    iget-object v2, v7, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
+
+    iget v2, v2, Landroid/graphics/Rect;->right:I
+
+    iput v2, v8, Landroid/graphics/Rect;->right:I
+
+    iput v2, v9, Landroid/graphics/Rect;->right:I
+
+    iput v2, v10, Landroid/graphics/Rect;->right:I
+
+    iget-object v2, v7, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
+
+    iget v2, v2, Landroid/graphics/Rect;->bottom:I
+
+    iput v2, v8, Landroid/graphics/Rect;->bottom:I
+
+    iput v2, v9, Landroid/graphics/Rect;->bottom:I
+
+    iput v2, v10, Landroid/graphics/Rect;->bottom:I
 
     :cond_5c
-    iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mContent:Landroid/graphics/Rect;
+    sget-boolean v2, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_LAYOUT:Z
 
-    invoke-virtual {v8, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    if-eqz v2, :cond_5d
 
-    goto/16 :goto_2d
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Laying out IN_SCREEN status bar window: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_5d
-    :goto_2a
-    iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mDock:Landroid/graphics/Rect;
+    :goto_2d
+    invoke-direct {v11, v12, v14, v8, v7}, Lcom/android/server/wm/DisplayPolicy;->applyStableConstraints(IILandroid/graphics/Rect;Lcom/android/server/wm/DisplayFrames;)V
 
-    invoke-virtual {v8, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    sget v2, Landroid/view/ViewRootImpl;->sNewInsetsMode:I
 
-    goto/16 :goto_2d
+    if-nez v2, :cond_5e
+
+    const/16 v2, 0x30
+
+    if-eq v15, v2, :cond_5e
+
+    iget-object v2, v7, Lcom/android/server/wm/DisplayFrames;->mCurrent:Landroid/graphics/Rect;
+
+    invoke-virtual {v6, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    goto/16 :goto_2f
 
     :cond_5e
-    iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
-
-    invoke-virtual {v8, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
-    iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
-
-    invoke-virtual {v9, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
-    iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
-
-    invoke-virtual {v10, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
-    goto :goto_2d
-
-    :cond_5f
-    :goto_2b
-    iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
-
-    invoke-virtual {v9, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
-    iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
-
-    invoke-virtual {v10, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
-    sget-boolean v0, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_LAYOUT:Z
-
-    if-eqz v0, :cond_62
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Laying out navigation bar window: "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_2d
-
-    :cond_60
-    :goto_2c
-    iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
-
-    invoke-virtual {v8, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
-    iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
-
-    invoke-virtual {v9, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
-    iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
-
-    invoke-virtual {v10, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
-    if-eqz v28, :cond_61
-
-    iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mDock:Landroid/graphics/Rect;
-
-    iget v0, v0, Landroid/graphics/Rect;->left:I
-
-    iput v0, v8, Landroid/graphics/Rect;->left:I
-
-    iput v0, v9, Landroid/graphics/Rect;->left:I
-
-    iput v0, v10, Landroid/graphics/Rect;->left:I
-
-    iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
-
-    iget v0, v0, Landroid/graphics/Rect;->right:I
-
-    iput v0, v8, Landroid/graphics/Rect;->right:I
-
-    iput v0, v9, Landroid/graphics/Rect;->right:I
-
-    iput v0, v10, Landroid/graphics/Rect;->right:I
-
-    iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
-
-    iget v0, v0, Landroid/graphics/Rect;->bottom:I
-
-    iput v0, v8, Landroid/graphics/Rect;->bottom:I
-
-    iput v0, v9, Landroid/graphics/Rect;->bottom:I
-
-    iput v0, v10, Landroid/graphics/Rect;->bottom:I
-
-    :cond_61
-    sget-boolean v0, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_LAYOUT:Z
-
-    if-eqz v0, :cond_62
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Laying out IN_SCREEN status bar window: "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_62
-    :goto_2d
-    move v5, v11
-
-    move-object/from16 v11, p0
-
-    invoke-direct {v11, v15, v12, v8, v7}, Lcom/android/server/wm/DisplayPolicy;->applyStableConstraints(IILandroid/graphics/Rect;Lcom/android/server/wm/DisplayFrames;)V
-
-    sget v0, Landroid/view/ViewRootImpl;->sNewInsetsMode:I
-
-    if-nez v0, :cond_63
-
-    const/16 v0, 0x30
-
-    if-eq v5, v0, :cond_63
-
-    iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mCurrent:Landroid/graphics/Rect;
-
-    invoke-virtual {v6, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
-    goto :goto_2f
-
-    :cond_63
     invoke-virtual {v6, v8}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     goto :goto_2f
 
-    :cond_64
-    move-object/from16 v30, p3
+    :cond_5f
+    move-object/from16 v35, v1
+
+    move v15, v5
+
+    move-object v1, v7
+
+    move-object/from16 v34, v14
+
+    move/from16 v12, v24
+
+    move-object/from16 v48, v26
+
+    move/from16 v22, v31
+
+    move-object v7, v6
+
+    move/from16 v31, v9
+
+    move v14, v10
+
+    move-object/from16 v24, v13
 
     move v13, v0
 
-    move-object/from16 v36, v5
-
-    move v5, v7
-
-    move-object/from16 v27, v9
-
-    move v12, v10
-
-    move/from16 v15, v25
-
-    move/from16 v19, v31
+    move-object v6, v2
 
     move-object v9, v3
 
     move-object v10, v4
 
-    move-object v7, v6
-
-    move-object v6, v1
-
-    move-object v1, v8
-
-    move-object v8, v2
+    const/4 v0, 0x1
 
     :goto_2e
-    iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
+    iget-object v2, v7, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
 
-    invoke-virtual {v9, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {v9, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
+    iget-object v2, v7, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
 
-    invoke-virtual {v10, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {v10, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mStable:Landroid/graphics/Rect;
+    iget-object v2, v7, Lcom/android/server/wm/DisplayFrames;->mStable:Landroid/graphics/Rect;
 
-    invoke-virtual {v8, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {v8, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mStable:Landroid/graphics/Rect;
+    iget-object v2, v7, Lcom/android/server/wm/DisplayFrames;->mStable:Landroid/graphics/Rect;
 
-    invoke-virtual {v6, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {v6, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    const/16 v0, 0x10
+    const/16 v2, 0x10
 
-    if-ne v5, v0, :cond_65
+    if-ne v15, v2, :cond_60
 
-    iget v0, v8, Landroid/graphics/Rect;->bottom:I
+    iget v2, v8, Landroid/graphics/Rect;->bottom:I
+
+    iget-object v3, v7, Lcom/android/server/wm/DisplayFrames;->mContent:Landroid/graphics/Rect;
+
+    iget v3, v3, Landroid/graphics/Rect;->bottom:I
+
+    if-le v2, v3, :cond_62
 
     iget-object v2, v7, Lcom/android/server/wm/DisplayFrames;->mContent:Landroid/graphics/Rect;
 
     iget v2, v2, Landroid/graphics/Rect;->bottom:I
 
-    if-le v0, v2, :cond_67
-
-    iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mContent:Landroid/graphics/Rect;
-
-    iget v0, v0, Landroid/graphics/Rect;->bottom:I
-
-    iput v0, v8, Landroid/graphics/Rect;->bottom:I
+    iput v2, v8, Landroid/graphics/Rect;->bottom:I
 
     goto :goto_2f
 
-    :cond_65
-    iget v0, v8, Landroid/graphics/Rect;->bottom:I
+    :cond_60
+    iget v2, v8, Landroid/graphics/Rect;->bottom:I
+
+    iget-object v3, v7, Lcom/android/server/wm/DisplayFrames;->mDock:Landroid/graphics/Rect;
+
+    iget v3, v3, Landroid/graphics/Rect;->bottom:I
+
+    if-le v2, v3, :cond_61
 
     iget-object v2, v7, Lcom/android/server/wm/DisplayFrames;->mDock:Landroid/graphics/Rect;
 
     iget v2, v2, Landroid/graphics/Rect;->bottom:I
 
-    if-le v0, v2, :cond_66
+    iput v2, v8, Landroid/graphics/Rect;->bottom:I
 
-    iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mDock:Landroid/graphics/Rect;
+    :cond_61
+    iget v2, v6, Landroid/graphics/Rect;->bottom:I
 
-    iget v0, v0, Landroid/graphics/Rect;->bottom:I
+    iget-object v3, v7, Lcom/android/server/wm/DisplayFrames;->mContent:Landroid/graphics/Rect;
 
-    iput v0, v8, Landroid/graphics/Rect;->bottom:I
+    iget v3, v3, Landroid/graphics/Rect;->bottom:I
 
-    :cond_66
-    iget v0, v6, Landroid/graphics/Rect;->bottom:I
+    if-le v2, v3, :cond_62
 
     iget-object v2, v7, Lcom/android/server/wm/DisplayFrames;->mContent:Landroid/graphics/Rect;
 
     iget v2, v2, Landroid/graphics/Rect;->bottom:I
 
-    if-le v0, v2, :cond_67
+    iput v2, v6, Landroid/graphics/Rect;->bottom:I
 
-    iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mContent:Landroid/graphics/Rect;
-
-    iget v0, v0, Landroid/graphics/Rect;->bottom:I
-
-    iput v0, v6, Landroid/graphics/Rect;->bottom:I
-
-    :cond_67
+    :cond_62
     :goto_2f
-    move v4, v12
+    move-object/from16 v5, p1
 
-    move-object/from16 v12, p1
+    invoke-static {v5, v7}, Lcom/android/server/wm/OpScreenCompatInjector;->resetDisplayCutout(Lcom/android/server/wm/WindowState;Lcom/android/server/wm/DisplayFrames;)I
 
-    invoke-static {v12, v7}, Lcom/android/server/wm/OpScreenCompatInjector;->resetDisplayCutout(Lcom/android/server/wm/WindowState;Lcom/android/server/wm/DisplayFrames;)I
+    move-result v4
 
-    move-result v3
+    move-object/from16 v3, p2
 
-    move-object/from16 v2, p2
+    if-eqz v3, :cond_63
 
-    if-eqz v2, :cond_68
+    if-nez v32, :cond_63
 
-    if-nez v32, :cond_68
-
-    const/4 v0, 0x1
+    move v2, v0
 
     goto :goto_30
 
-    :cond_68
-    const/4 v0, 0x0
+    :cond_63
+    const/4 v2, 0x0
 
     :goto_30
-    move/from16 v18, v0
+    move/from16 v18, v2
 
-    and-int/lit16 v0, v4, 0x400
+    and-int/lit16 v2, v14, 0x400
 
-    if-nez v0, :cond_6b
+    if-nez v2, :cond_65
 
-    and-int/lit8 v0, v16, 0x4
+    and-int/lit8 v2, v16, 0x4
 
-    if-nez v0, :cond_6b
+    if-nez v2, :cond_65
 
-    sget v0, Landroid/view/ViewRootImpl;->sNewInsetsMode:I
+    sget v2, Landroid/view/ViewRootImpl;->sNewInsetsMode:I
 
-    move/from16 v46, v5
+    const/4 v0, 0x2
 
-    const/4 v5, 0x2
-
-    if-ne v0, v5, :cond_69
+    if-ne v2, v0, :cond_64
 
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/WindowState;->getRequestedInsetsState()Landroid/view/InsetsState;
 
-    move-result-object v0
+    move-result-object v2
 
-    const/4 v5, 0x0
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v5}, Landroid/view/InsetsState;->getSourceOrDefaultVisibility(I)Z
+    invoke-virtual {v2, v0}, Landroid/view/InsetsState;->getSourceOrDefaultVisibility(I)Z
 
-    move-result v0
+    move-result v2
 
-    if-nez v0, :cond_6a
+    if-nez v2, :cond_64
 
     goto :goto_31
 
-    :cond_69
-    const/4 v5, 0x0
-
-    :cond_6a
-    move v0, v5
+    :cond_64
+    const/4 v0, 0x0
 
     goto :goto_32
 
-    :cond_6b
-    move/from16 v46, v5
-
-    const/4 v5, 0x0
-
+    :cond_65
     :goto_31
     const/4 v0, 0x1
 
     :goto_32
-    move/from16 v20, v0
+    move/from16 v19, v0
 
     and-int/lit8 v0, v16, 0x2
 
-    if-nez v0, :cond_6d
+    if-nez v0, :cond_67
 
     sget v0, Landroid/view/ViewRootImpl;->sNewInsetsMode:I
 
-    const/4 v5, 0x2
+    const/4 v2, 0x2
 
-    if-ne v0, v5, :cond_6c
+    if-ne v0, v2, :cond_66
 
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/WindowState;->getRequestedInsetsState()Landroid/view/InsetsState;
 
     move-result-object v0
 
-    const/4 v5, 0x1
+    const/4 v2, 0x1
 
-    invoke-virtual {v0, v5}, Landroid/view/InsetsState;->getSourceOrDefaultVisibility(I)Z
+    invoke-virtual {v0, v2}, Landroid/view/InsetsState;->getSourceOrDefaultVisibility(I)Z
 
     move-result v0
 
-    if-nez v0, :cond_6c
+    if-nez v0, :cond_66
 
     goto :goto_33
 
-    :cond_6c
+    :cond_66
     const/4 v0, 0x0
 
     goto :goto_34
 
-    :cond_6d
+    :cond_67
     :goto_33
     const/4 v0, 0x1
 
     :goto_34
-    move/from16 v21, v0
+    move/from16 v20, v0
 
-    invoke-virtual {v14}, Landroid/view/WindowManager$LayoutParams;->isFullscreen()Z
+    invoke-virtual/range {v34 .. v34}, Landroid/view/WindowManager$LayoutParams;->isFullscreen()Z
 
     move-result v0
 
-    if-nez v0, :cond_6e
+    if-nez v0, :cond_68
 
-    if-eqz v32, :cond_6e
+    if-eqz v32, :cond_68
 
     const/4 v0, 0x1
 
-    if-eq v13, v0, :cond_6e
+    if-eq v13, v0, :cond_68
 
     const/4 v0, 0x1
 
     goto :goto_35
 
-    :cond_6e
+    :cond_68
     const/4 v0, 0x0
 
     :goto_35
-    move/from16 v22, v0
+    move/from16 v21, v0
 
     const/4 v0, 0x3
 
-    if-eq v3, v0, :cond_7b
+    if-eq v4, v0, :cond_74
 
     sget-object v0, Lcom/android/server/wm/DisplayPolicy;->sTmpDisplayCutoutSafeExceptMaybeBarsRect:Landroid/graphics/Rect;
 
-    iget-object v5, v7, Lcom/android/server/wm/DisplayFrames;->mDisplayCutoutSafe:Landroid/graphics/Rect;
+    iget-object v2, v7, Lcom/android/server/wm/DisplayFrames;->mDisplayCutoutSafe:Landroid/graphics/Rect;
 
-    invoke-virtual {v0, v5}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {v0, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    const/4 v5, 0x1
+    const/4 v2, 0x1
 
-    if-ne v3, v5, :cond_70
+    if-ne v4, v2, :cond_6a
 
-    iget v5, v7, Lcom/android/server/wm/DisplayFrames;->mDisplayWidth:I
+    iget v2, v7, Lcom/android/server/wm/DisplayFrames;->mDisplayWidth:I
 
-    move/from16 v23, v15
+    iget v5, v7, Lcom/android/server/wm/DisplayFrames;->mDisplayHeight:I
 
-    iget v15, v7, Lcom/android/server/wm/DisplayFrames;->mDisplayHeight:I
+    if-ge v2, v5, :cond_69
 
-    if-ge v5, v15, :cond_6f
+    const/high16 v2, -0x80000000
 
-    const/high16 v5, -0x80000000
+    iput v2, v0, Landroid/graphics/Rect;->top:I
 
-    iput v5, v0, Landroid/graphics/Rect;->top:I
-
-    const v15, 0x7fffffff
-
-    iput v15, v0, Landroid/graphics/Rect;->bottom:I
-
-    goto :goto_36
-
-    :cond_6f
-    const/high16 v5, -0x80000000
-
-    const v15, 0x7fffffff
-
-    iput v5, v0, Landroid/graphics/Rect;->left:I
-
-    iput v15, v0, Landroid/graphics/Rect;->right:I
-
-    goto :goto_36
-
-    :cond_70
-    move/from16 v23, v15
-
-    const/high16 v5, -0x80000000
-
-    :goto_36
-    if-eqz v32, :cond_72
-
-    if-eqz v33, :cond_72
-
-    if-nez v20, :cond_72
-
-    if-eqz v3, :cond_71
-
-    const/4 v15, 0x1
-
-    if-ne v3, v15, :cond_72
-
-    :cond_71
-    iput v5, v0, Landroid/graphics/Rect;->top:I
-
-    :cond_72
-    if-eqz v32, :cond_78
-
-    if-eqz v33, :cond_78
-
-    if-nez v21, :cond_78
-
-    if-eqz v3, :cond_74
-
-    const/4 v15, 0x1
-
-    if-ne v3, v15, :cond_73
-
-    goto :goto_37
-
-    :cond_73
-    const/4 v15, 0x4
-
-    goto :goto_38
-
-    :cond_74
-    const/4 v15, 0x1
-
-    :goto_37
-    iget v5, v11, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarPosition:I
-
-    if-eq v5, v15, :cond_77
-
-    const/4 v15, 0x2
-
-    if-eq v5, v15, :cond_76
-
-    const/4 v15, 0x4
-
-    if-eq v5, v15, :cond_75
-
-    goto :goto_38
-
-    :cond_75
     const v5, 0x7fffffff
 
     iput v5, v0, Landroid/graphics/Rect;->bottom:I
 
-    goto :goto_38
+    goto :goto_36
 
-    :cond_76
+    :cond_69
+    const/high16 v2, -0x80000000
+
     const v5, 0x7fffffff
 
-    const/4 v15, 0x4
+    iput v2, v0, Landroid/graphics/Rect;->left:I
 
     iput v5, v0, Landroid/graphics/Rect;->right:I
 
+    goto :goto_36
+
+    :cond_6a
+    const/high16 v2, -0x80000000
+
+    :goto_36
+    if-eqz v32, :cond_6c
+
+    if-eqz v33, :cond_6c
+
+    if-nez v19, :cond_6c
+
+    if-eqz v4, :cond_6b
+
+    const/4 v5, 0x1
+
+    if-ne v4, v5, :cond_6c
+
+    :cond_6b
+    iput v2, v0, Landroid/graphics/Rect;->top:I
+
+    :cond_6c
+    if-eqz v32, :cond_71
+
+    if-eqz v33, :cond_71
+
+    if-nez v20, :cond_71
+
+    if-eqz v4, :cond_6d
+
+    const/4 v5, 0x1
+
+    if-ne v4, v5, :cond_71
+
+    goto :goto_37
+
+    :cond_6d
+    const/4 v5, 0x1
+
+    :goto_37
+    iget v2, v11, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarPosition:I
+
+    if-eq v2, v5, :cond_70
+
+    const/4 v5, 0x2
+
+    if-eq v2, v5, :cond_6f
+
+    const/4 v5, 0x4
+
+    if-eq v2, v5, :cond_6e
+
     goto :goto_38
 
-    :cond_77
-    const/4 v15, 0x4
+    :cond_6e
+    const v2, 0x7fffffff
 
-    const/high16 v5, -0x80000000
-
-    iput v5, v0, Landroid/graphics/Rect;->left:I
+    iput v2, v0, Landroid/graphics/Rect;->bottom:I
 
     goto :goto_38
 
-    :cond_78
-    const/4 v15, 0x4
+    :cond_6f
+    const v2, 0x7fffffff
 
+    iput v2, v0, Landroid/graphics/Rect;->right:I
+
+    goto :goto_38
+
+    :cond_70
+    const/high16 v2, -0x80000000
+
+    iput v2, v0, Landroid/graphics/Rect;->left:I
+
+    :cond_71
     :goto_38
     const/16 v5, 0x7db
 
-    if-ne v13, v5, :cond_79
+    if-ne v13, v5, :cond_72
 
-    iget v5, v11, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarPosition:I
+    iget v2, v11, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarPosition:I
 
-    if-ne v5, v15, :cond_79
+    const/4 v5, 0x4
 
-    const v5, 0x7fffffff
+    if-ne v2, v5, :cond_72
 
-    iput v5, v0, Landroid/graphics/Rect;->bottom:I
+    const v2, 0x7fffffff
 
-    :cond_79
-    if-nez v18, :cond_7a
+    iput v2, v0, Landroid/graphics/Rect;->bottom:I
 
-    if-nez v22, :cond_7a
+    :cond_72
+    if-nez v18, :cond_73
 
-    sget-object v5, Lcom/android/server/wm/DisplayPolicy;->sTmpRect:Landroid/graphics/Rect;
+    if-nez v21, :cond_73
 
-    invoke-virtual {v5, v10}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    sget-object v2, Lcom/android/server/wm/DisplayPolicy;->sTmpRect:Landroid/graphics/Rect;
+
+    invoke-virtual {v2, v10}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     invoke-virtual {v10, v0}, Landroid/graphics/Rect;->intersectUnchecked(Landroid/graphics/Rect;)V
 
-    sget-object v5, Lcom/android/server/wm/DisplayPolicy;->sTmpRect:Landroid/graphics/Rect;
+    sget-object v2, Lcom/android/server/wm/DisplayPolicy;->sTmpRect:Landroid/graphics/Rect;
 
-    invoke-virtual {v5, v10}, Landroid/graphics/Rect;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v10}, Landroid/graphics/Rect;->equals(Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result v2
 
-    const/4 v15, 0x1
+    const/4 v5, 0x1
 
-    xor-int/2addr v5, v15
+    xor-int/2addr v2, v5
 
-    move-object/from16 v15, v30
+    move-object/from16 v5, v48
 
-    invoke-virtual {v15, v5}, Lcom/android/server/wm/WindowFrames;->setParentFrameWasClippedByDisplayCutout(Z)V
+    invoke-virtual {v5, v2}, Lcom/android/server/wm/WindowFrames;->setParentFrameWasClippedByDisplayCutout(Z)V
 
     goto :goto_39
 
-    :cond_7a
-    move-object/from16 v15, v30
+    :cond_73
+    move-object/from16 v5, v48
 
     :goto_39
     invoke-virtual {v9, v0}, Landroid/graphics/Rect;->intersectUnchecked(Landroid/graphics/Rect;)V
 
     goto :goto_3a
 
-    :cond_7b
-    move/from16 v23, v15
-
-    move-object/from16 v15, v30
+    :cond_74
+    move-object/from16 v5, v48
 
     :goto_3a
     invoke-static/range {p1 .. p1}, Lcom/android/server/wm/OpScreenCompatInjector;->isNotchUnLimited(Lcom/android/server/wm/WindowState;)Z
 
     move-result v0
 
-    if-nez v0, :cond_7c
+    if-nez v0, :cond_75
 
     iget-object v0, v7, Lcom/android/server/wm/DisplayFrames;->mDisplayCutoutSafe:Landroid/graphics/Rect;
 
     invoke-virtual {v8, v0}, Landroid/graphics/Rect;->intersectUnchecked(Landroid/graphics/Rect;)V
 
-    :cond_7c
-    and-int/lit16 v0, v4, 0x200
+    :cond_75
+    and-int/lit16 v0, v14, 0x200
 
-    if-eqz v0, :cond_7d
+    if-eqz v0, :cond_76
 
     const/16 v0, 0x7da
 
-    if-eq v13, v0, :cond_7d
+    if-eq v13, v0, :cond_76
 
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/WindowState;->inMultiWindowMode()Z
 
     move-result v0
 
-    if-nez v0, :cond_7d
+    if-nez v0, :cond_76
 
     const/16 v0, -0x2710
 
@@ -12385,7 +12604,7 @@
 
     const/16 v0, 0x7dd
 
-    if-eq v13, v0, :cond_7d
+    if-eq v13, v0, :cond_76
 
     const/16 v0, -0x2710
 
@@ -12407,62 +12626,62 @@
 
     iput v0, v8, Landroid/graphics/Rect;->right:I
 
-    :cond_7d
+    :cond_76
     sget-boolean v0, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_LAYOUT:Z
 
-    if-eqz v0, :cond_7e
+    if-eqz v0, :cond_77
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "Compute frame "
+    const-string v2, "Compute frame "
 
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v14}, Landroid/view/WindowManager$LayoutParams;->getTitle()Ljava/lang/CharSequence;
+    invoke-virtual/range {v34 .. v34}, Landroid/view/WindowManager$LayoutParams;->getTitle()Ljava/lang/CharSequence;
 
-    move-result-object v5
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v5, ": sim=#"
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static/range {v19 .. v19}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v5, " attach="
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v2
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v5, " type="
+    const-string v2, ": sim=#"
 
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static/range {v22 .. v22}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, " attach="
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, " type="
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v13}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const/4 v5, 0x1
+    const/4 v2, 0x1
 
-    new-array v2, v5, [Ljava/lang/Object;
+    new-array v3, v2, [Ljava/lang/Object;
 
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v5
+    move-result-object v2
 
-    const/16 v30, 0x0
+    const/16 v23, 0x0
 
-    aput-object v5, v2, v30
+    aput-object v2, v3, v23
 
-    const-string v5, " flags=0x%08x"
+    const-string v2, " flags=0x%08x"
 
-    invoke-static {v5, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v2, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -12512,7 +12731,7 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual/range {v36 .. v36}, Landroid/graphics/Rect;->toShortString()Ljava/lang/String;
+    invoke-virtual/range {v35 .. v35}, Landroid/graphics/Rect;->toShortString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -12522,7 +12741,7 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual/range {v27 .. v27}, Landroid/graphics/Rect;->toShortString()Ljava/lang/String;
+    invoke-virtual/range {v24 .. v24}, Landroid/graphics/Rect;->toShortString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -12534,21 +12753,21 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_7e
+    :cond_77
     sget-object v0, Lcom/android/server/wm/DisplayPolicy;->sTmpLastParentFrame:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v10}, Landroid/graphics/Rect;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_7f
+    if-nez v0, :cond_78
 
     const/4 v0, 0x1
 
-    invoke-virtual {v15, v0}, Lcom/android/server/wm/WindowFrames;->setContentChanged(Z)V
+    invoke-virtual {v5, v0}, Lcom/android/server/wm/WindowFrames;->setContentChanged(Z)V
 
-    :cond_7f
-    const/4 v5, 0x0
+    :cond_78
+    const/16 v23, 0x0
 
     move-object v0, v10
 
@@ -12556,66 +12775,74 @@
 
     move-object v2, v8
 
-    move/from16 v25, v3
-
     move-object v3, v6
 
-    move/from16 v30, v4
+    move/from16 v26, v4
 
-    move-object/from16 v4, v27
+    move-object/from16 v4, v24
 
-    move/from16 v31, v46
+    move-object/from16 v27, v5
 
-    move-object/from16 v34, v6
+    move-object/from16 v41, v8
+
+    move-object/from16 v38, v9
+
+    const/16 v9, 0x7db
+
+    move-object/from16 v8, p1
+
+    move-object/from16 v5, v23
+
+    move-object/from16 v23, v6
 
     move-object/from16 v6, p1
 
     invoke-static/range {v0 .. v6}, Lcom/android/server/wm/OpScreenCompatInjector;->resetFrameForCompat(Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Lcom/android/server/wm/WindowState;)V
 
-    invoke-virtual {v12, v7}, Lcom/android/server/wm/WindowState;->computeFrame(Lcom/android/server/wm/DisplayFrames;)V
+    invoke-virtual {v8, v7}, Lcom/android/server/wm/WindowState;->computeFrame(Lcom/android/server/wm/DisplayFrames;)V
 
-    const/16 v0, 0x7db
-
-    if-ne v13, v0, :cond_80
+    if-ne v13, v9, :cond_79
 
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/WindowState;->isVisibleLw()Z
 
     move-result v0
 
-    if-eqz v0, :cond_80
+    if-eqz v0, :cond_79
 
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/WindowState;->getGivenInsetsPendingLw()Z
 
     move-result v0
 
-    if-nez v0, :cond_80
+    if-nez v0, :cond_79
 
-    invoke-direct {v11, v12, v7}, Lcom/android/server/wm/DisplayPolicy;->offsetInputMethodWindowLw(Lcom/android/server/wm/WindowState;Lcom/android/server/wm/DisplayFrames;)V
+    invoke-direct {v11, v8, v7}, Lcom/android/server/wm/DisplayPolicy;->offsetInputMethodWindowLw(Lcom/android/server/wm/WindowState;Lcom/android/server/wm/DisplayFrames;)V
 
-    :cond_80
+    :cond_79
     const/16 v0, 0x7ef
 
-    if-ne v13, v0, :cond_81
+    if-ne v13, v0, :cond_7a
 
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/WindowState;->isVisibleLw()Z
 
     move-result v0
 
-    if-eqz v0, :cond_81
+    if-eqz v0, :cond_7a
 
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/WindowState;->getGivenInsetsPendingLw()Z
 
     move-result v0
 
-    if-nez v0, :cond_81
+    if-nez v0, :cond_7a
 
-    invoke-direct {v11, v12, v7}, Lcom/android/server/wm/DisplayPolicy;->offsetVoiceInputWindowLw(Lcom/android/server/wm/WindowState;Lcom/android/server/wm/DisplayFrames;)V
+    invoke-direct {v11, v8, v7}, Lcom/android/server/wm/DisplayPolicy;->offsetVoiceInputWindowLw(Lcom/android/server/wm/WindowState;Lcom/android/server/wm/DisplayFrames;)V
 
-    :cond_81
+    :cond_7a
     return-void
 
-    :cond_82
+    :cond_7b
     move-object/from16 v0, p3
+
+    move-object v8, v12
 
     :goto_3b
     return-void
@@ -12822,7 +13049,7 @@
 
     aput v8, v7, v2
 
-    const v7, 0x10e008d
+    const v7, 0x10e008e
 
     invoke-virtual {v1, v7}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -12998,28 +13225,51 @@
 
     const/4 v1, 0x0
 
+    if-eq v0, p1, :cond_3
+
+    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarAlt:Lcom/android/server/wm/WindowState;
+
     if-ne v0, p1, :cond_0
 
-    iput-object v1, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBar:Lcom/android/server/wm/WindowState;
-
-    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarController:Lcom/android/server/wm/StatusBarController;
-
-    invoke-virtual {v0, v1}, Lcom/android/server/wm/StatusBarController;->setWindow(Lcom/android/server/wm/WindowState;)V
-
-    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v2, v1, v1}, Lcom/android/server/wm/DisplayContent;->setInsetProvider(ILcom/android/server/wm/WindowState;Lcom/android/internal/util/function/TriConsumer;)V
-
-    goto :goto_0
+    goto :goto_1
 
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBar:Lcom/android/server/wm/WindowState;
 
+    if-eq v0, p1, :cond_2
+
+    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarAlt:Lcom/android/server/wm/WindowState;
+
     if-ne v0, p1, :cond_1
 
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mNotificationShade:Lcom/android/server/wm/WindowState;
+
+    if-ne v0, p1, :cond_4
+
+    iput-object v1, p0, Lcom/android/server/wm/DisplayPolicy;->mNotificationShade:Lcom/android/server/wm/WindowState;
+
+    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
+
+    iget-boolean v0, v0, Lcom/android/server/wm/DisplayContent;->isDefaultDisplay:Z
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mService:Lcom/android/server/wm/WindowManagerService;
+
+    iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mPolicy:Lcom/android/server/policy/WindowManagerPolicy;
+
+    invoke-interface {v0, v1}, Lcom/android/server/policy/WindowManagerPolicy;->setKeyguardCandidateLw(Lcom/android/server/policy/WindowManagerPolicy$WindowState;)V
+
+    goto :goto_2
+
+    :cond_2
+    :goto_0
     iput-object v1, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBar:Lcom/android/server/wm/WindowState;
+
+    iput-object v1, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarAlt:Lcom/android/server/wm/WindowState;
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarController:Lcom/android/server/wm/BarController;
 
@@ -13031,36 +13281,33 @@
 
     invoke-virtual {v0, v2, v1, v1}, Lcom/android/server/wm/DisplayContent;->setInsetProvider(ILcom/android/server/wm/WindowState;Lcom/android/internal/util/function/TriConsumer;)V
 
-    goto :goto_0
+    goto :goto_2
 
-    :cond_1
-    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mNotificationShade:Lcom/android/server/wm/WindowState;
+    :cond_3
+    :goto_1
+    iput-object v1, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBar:Lcom/android/server/wm/WindowState;
 
-    if-ne v0, p1, :cond_2
+    iput-object v1, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarAlt:Lcom/android/server/wm/WindowState;
 
-    iput-object v1, p0, Lcom/android/server/wm/DisplayPolicy;->mNotificationShade:Lcom/android/server/wm/WindowState;
+    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarController:Lcom/android/server/wm/StatusBarController;
+
+    invoke-virtual {v0, v1}, Lcom/android/server/wm/StatusBarController;->setWindow(Lcom/android/server/wm/WindowState;)V
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    iget-boolean v0, v0, Lcom/android/server/wm/DisplayContent;->isDefaultDisplay:Z
+    const/4 v2, 0x0
 
-    if-eqz v0, :cond_2
+    invoke-virtual {v0, v2, v1, v1}, Lcom/android/server/wm/DisplayContent;->setInsetProvider(ILcom/android/server/wm/WindowState;Lcom/android/internal/util/function/TriConsumer;)V
 
-    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mService:Lcom/android/server/wm/WindowManagerService;
-
-    iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mPolicy:Lcom/android/server/policy/WindowManagerPolicy;
-
-    invoke-interface {v0, v1}, Lcom/android/server/policy/WindowManagerPolicy;->setKeyguardCandidateLw(Lcom/android/server/policy/WindowManagerPolicy$WindowState;)V
-
-    :cond_2
-    :goto_0
+    :cond_4
+    :goto_2
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mLastFocusedWindow:Lcom/android/server/wm/WindowState;
 
-    if-ne v0, p1, :cond_3
+    if-ne v0, p1, :cond_5
 
     iput-object v1, p0, Lcom/android/server/wm/DisplayPolicy;->mLastFocusedWindow:Lcom/android/server/wm/WindowState;
 
-    :cond_3
+    :cond_5
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mScreenDecorWindows:Landroid/util/ArraySet;
 
     invoke-virtual {v0, p1}, Landroid/util/ArraySet;->remove(Ljava/lang/Object;)Z
@@ -13153,217 +13400,341 @@
 .end method
 
 .method selectAnimation(Lcom/android/server/wm/WindowState;I)I
-    .locals 7
+    .locals 19
 
-    sget-boolean v0, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_ANIM:Z
+    move-object/from16 v0, p0
 
-    const-string v1, "WindowManager"
+    move-object/from16 v1, p1
 
-    if-eqz v0, :cond_0
+    move/from16 v2, p2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    sget-boolean v3, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_ANIM:Z
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v4, "WindowManager"
 
-    const-string v2, "selectAnimation in "
+    if-eqz v3, :cond_0
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, ": transit="
+    const-string v5, "selectAnimation in "
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v5, ": transit="
 
-    move-result-object v0
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v4, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBar:Lcom/android/server/wm/WindowState;
+    iget-object v3, v0, Lcom/android/server/wm/DisplayPolicy;->mStatusBar:Lcom/android/server/wm/WindowState;
 
-    const/4 v2, 0x0
+    const v5, 0x10a002d
 
-    const/4 v3, 0x3
+    const v6, 0x10a002e
 
-    const/4 v4, 0x1
+    const/4 v7, 0x3
 
-    const/4 v5, 0x4
+    const/4 v8, 0x0
 
-    const/4 v6, 0x2
+    const/4 v9, 0x4
 
-    if-ne p1, v0, :cond_4
+    const/4 v10, 0x2
 
-    if-eq p2, v6, :cond_3
+    const/4 v11, 0x1
 
-    if-ne p2, v5, :cond_1
+    if-ne v1, v3, :cond_4
+
+    if-eq v2, v10, :cond_3
+
+    if-ne v2, v9, :cond_1
 
     goto :goto_0
 
     :cond_1
-    if-eq p2, v4, :cond_2
+    if-eq v2, v11, :cond_2
 
-    if-ne p2, v3, :cond_12
+    if-ne v2, v7, :cond_22
 
     :cond_2
-    const v0, 0x10a002d
-
-    return v0
+    return v5
 
     :cond_3
     :goto_0
-    const v0, 0x10a002e
-
-    return v0
+    return v6
 
     :cond_4
-    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBar:Lcom/android/server/wm/WindowState;
+    iget-object v3, v0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBar:Lcom/android/server/wm/WindowState;
 
-    if-ne p1, v0, :cond_12
+    const v12, 0x10a0029
 
-    invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
+    const v13, 0x10a002b
 
-    move-result-object v0
+    const v14, 0x10a0026
 
-    iget v0, v0, Landroid/view/WindowManager$LayoutParams;->windowAnimations:I
+    const v15, 0x10a002a
 
-    if-eqz v0, :cond_5
+    const v16, 0x10a0027
 
-    return v2
+    const v17, 0x10a002c
+
+    if-ne v1, v3, :cond_12
+
+    invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/view/WindowManager$LayoutParams;->windowAnimations:I
+
+    if-eqz v3, :cond_5
+
+    return v8
 
     :cond_5
-    iget v0, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarPosition:I
+    iget v3, v0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarPosition:I
 
-    if-ne v0, v5, :cond_a
+    if-ne v3, v9, :cond_a
 
-    if-eq p2, v6, :cond_8
+    if-eq v2, v10, :cond_8
 
-    if-ne p2, v5, :cond_6
+    if-ne v2, v9, :cond_6
 
     goto :goto_1
 
     :cond_6
-    if-eq p2, v4, :cond_7
+    if-eq v2, v11, :cond_7
 
-    if-ne p2, v3, :cond_12
+    if-ne v2, v7, :cond_22
 
     :cond_7
-    const v0, 0x10a0026
-
-    return v0
+    return v14
 
     :cond_8
     :goto_1
-    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mService:Lcom/android/server/wm/WindowManagerService;
+    iget-object v3, v0, Lcom/android/server/wm/DisplayPolicy;->mService:Lcom/android/server/wm/WindowManagerService;
 
-    iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mPolicy:Lcom/android/server/policy/WindowManagerPolicy;
+    iget-object v3, v3, Lcom/android/server/wm/WindowManagerService;->mPolicy:Lcom/android/server/policy/WindowManagerPolicy;
 
-    invoke-interface {v0}, Lcom/android/server/policy/WindowManagerPolicy;->isKeyguardShowingAndNotOccluded()Z
+    invoke-interface {v3}, Lcom/android/server/policy/WindowManagerPolicy;->isKeyguardShowingAndNotOccluded()Z
 
-    move-result v0
+    move-result v3
 
-    if-eqz v0, :cond_9
+    if-eqz v3, :cond_9
 
-    const v0, 0x10a0028
+    const v3, 0x10a0028
 
-    return v0
+    return v3
 
     :cond_9
-    const v0, 0x10a0027
-
-    return v0
+    return v16
 
     :cond_a
-    if-ne v0, v6, :cond_e
+    if-ne v3, v10, :cond_e
 
-    if-eq p2, v6, :cond_d
+    if-eq v2, v10, :cond_d
 
-    if-ne p2, v5, :cond_b
+    if-ne v2, v9, :cond_b
 
     goto :goto_2
 
     :cond_b
-    if-eq p2, v4, :cond_c
+    if-eq v2, v11, :cond_c
 
-    if-ne p2, v3, :cond_12
+    if-ne v2, v7, :cond_22
 
     :cond_c
-    const v0, 0x10a002b
-
-    return v0
+    return v13
 
     :cond_d
     :goto_2
-    const v0, 0x10a002c
-
-    return v0
+    return v17
 
     :cond_e
-    if-ne v0, v4, :cond_12
+    if-ne v3, v11, :cond_22
 
-    if-eq p2, v6, :cond_11
+    if-eq v2, v10, :cond_11
 
-    if-ne p2, v5, :cond_f
+    if-ne v2, v9, :cond_f
 
     goto :goto_3
 
     :cond_f
-    if-eq p2, v4, :cond_10
+    if-eq v2, v11, :cond_10
 
-    if-ne p2, v3, :cond_12
+    if-ne v2, v7, :cond_22
 
     :cond_10
-    const v0, 0x10a0029
-
-    return v0
+    return v12
 
     :cond_11
     :goto_3
-    const v0, 0x10a002a
-
-    return v0
+    return v15
 
     :cond_12
-    const/4 v0, 0x5
+    iget-object v3, v0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarAlt:Lcom/android/server/wm/WindowState;
 
-    if-ne p2, v0, :cond_15
+    if-eq v1, v3, :cond_13
 
-    invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->hasAppShownWindows()Z
+    iget-object v3, v0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarAlt:Lcom/android/server/wm/WindowState;
 
-    move-result v0
-
-    if-eqz v0, :cond_15
-
-    invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->isActivityTypeHome()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_13
-
-    const/4 v0, -0x1
-
-    return v0
+    if-ne v1, v3, :cond_22
 
     :cond_13
-    sget-boolean v0, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_ANIM:Z
+    invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
-    if-eqz v0, :cond_14
+    move-result-object v3
 
-    const-string v0, "**** STARTING EXIT"
+    iget v3, v3, Landroid/view/WindowManager$LayoutParams;->windowAnimations:I
 
-    invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    if-eqz v3, :cond_14
+
+    return v8
 
     :cond_14
-    const v0, 0x10a0013
+    iget-object v3, v0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarAlt:Lcom/android/server/wm/WindowState;
 
-    return v0
+    if-ne v1, v3, :cond_15
+
+    iget v3, v0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarAltPosition:I
+
+    goto :goto_4
 
     :cond_15
-    return v2
+    iget v3, v0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarAltPosition:I
+
+    :goto_4
+    if-eq v2, v10, :cond_17
+
+    if-ne v2, v9, :cond_16
+
+    goto :goto_5
+
+    :cond_16
+    move/from16 v18, v8
+
+    goto :goto_6
+
+    :cond_17
+    :goto_5
+    move/from16 v18, v11
+
+    :goto_6
+    if-eq v2, v11, :cond_19
+
+    if-ne v2, v7, :cond_18
+
+    goto :goto_7
+
+    :cond_18
+    move v7, v8
+
+    goto :goto_8
+
+    :cond_19
+    :goto_7
+    move v7, v11
+
+    :goto_8
+    if-eq v3, v11, :cond_20
+
+    if-eq v3, v10, :cond_1e
+
+    if-eq v3, v9, :cond_1c
+
+    const/16 v9, 0x8
+
+    if-eq v3, v9, :cond_1a
+
+    goto :goto_9
+
+    :cond_1a
+    if-eqz v18, :cond_1b
+
+    return v6
+
+    :cond_1b
+    if-eqz v7, :cond_22
+
+    return v5
+
+    :cond_1c
+    if-eqz v18, :cond_1d
+
+    return v16
+
+    :cond_1d
+    if-eqz v7, :cond_22
+
+    return v14
+
+    :cond_1e
+    if-eqz v18, :cond_1f
+
+    return v17
+
+    :cond_1f
+    if-eqz v7, :cond_22
+
+    return v13
+
+    :cond_20
+    if-eqz v18, :cond_21
+
+    return v15
+
+    :cond_21
+    if-eqz v7, :cond_22
+
+    return v12
+
+    :cond_22
+    :goto_9
+    const/4 v3, 0x5
+
+    if-ne v2, v3, :cond_25
+
+    invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/WindowState;->hasAppShownWindows()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_25
+
+    invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/WindowState;->isActivityTypeHome()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_23
+
+    const/4 v3, -0x1
+
+    return v3
+
+    :cond_23
+    sget-boolean v3, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_ANIM:Z
+
+    if-eqz v3, :cond_24
+
+    const-string v3, "**** STARTING EXIT"
+
+    invoke-static {v4, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_24
+    const v3, 0x10a0013
+
+    return v3
+
+    :cond_25
+    return v8
 .end method
 
 .method public setAwake(Z)V
@@ -13672,13 +14043,19 @@
 
     iget v6, p0, Lcom/android/server/wm/DisplayPolicy;->mDisplayRotation:I
 
-    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBar:Lcom/android/server/wm/WindowState;
+    invoke-virtual {p0}, Lcom/android/server/wm/DisplayPolicy;->getStatusBar()Lcom/android/server/wm/WindowState;
+
+    move-result-object v0
 
     const/4 v7, 0x1
 
     const/4 v8, 0x0
 
     if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/android/server/wm/DisplayPolicy;->getStatusBar()Lcom/android/server/wm/WindowState;
+
+    move-result-object v0
 
     invoke-virtual {v0}, Lcom/android/server/wm/WindowState;->isVisibleLw()Z
 
@@ -13694,9 +14071,15 @@
     move v0, v8
 
     :goto_0
-    iget-object v9, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBar:Lcom/android/server/wm/WindowState;
+    invoke-virtual {p0}, Lcom/android/server/wm/DisplayPolicy;->getNavigationBar()Lcom/android/server/wm/WindowState;
+
+    move-result-object v9
 
     if-eqz v9, :cond_1
+
+    invoke-virtual {p0}, Lcom/android/server/wm/DisplayPolicy;->getNavigationBar()Lcom/android/server/wm/WindowState;
+
+    move-result-object v9
 
     invoke-virtual {v9}, Lcom/android/server/wm/WindowState;->isVisibleLw()Z
 
@@ -13706,12 +14089,7 @@
 
     move v8, v7
 
-    goto :goto_1
-
     :cond_1
-    nop
-
-    :goto_1
     iget-object v9, p0, Lcom/android/server/wm/DisplayPolicy;->mHandler:Landroid/os/Handler;
 
     move v7, v0
@@ -13996,7 +14374,9 @@
 
     if-nez v2, :cond_7
 
-    iget-object v2, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBar:Lcom/android/server/wm/WindowState;
+    invoke-virtual {p0}, Lcom/android/server/wm/DisplayPolicy;->getStatusBar()Lcom/android/server/wm/WindowState;
+
+    move-result-object v2
 
     if-eqz v2, :cond_7
 
@@ -14403,7 +14783,9 @@
 
     if-nez v3, :cond_e
 
-    iget-object v3, v15, Lcom/android/server/wm/DisplayPolicy;->mStatusBar:Lcom/android/server/wm/WindowState;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/server/wm/DisplayPolicy;->getStatusBar()Lcom/android/server/wm/WindowState;
+
+    move-result-object v3
 
     if-eqz v3, :cond_c
 
@@ -14414,7 +14796,9 @@
     if-nez v3, :cond_e
 
     :cond_c
-    iget-object v3, v15, Lcom/android/server/wm/DisplayPolicy;->mNavigationBar:Lcom/android/server/wm/WindowState;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/server/wm/DisplayPolicy;->getNavigationBar()Lcom/android/server/wm/WindowState;
+
+    move-result-object v3
 
     if-eqz v3, :cond_d
 
@@ -14678,7 +15062,7 @@
 .end method
 
 .method validateAddingWindowLw(Landroid/view/WindowManager$LayoutParams;II)I
-    .locals 5
+    .locals 7
 
     iget v0, p1, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
@@ -14703,15 +15087,15 @@
 
     const/4 v4, -0x7
 
-    if-eq v0, v3, :cond_5
+    if-eq v0, v3, :cond_7
 
     const/16 v3, 0x7de
 
-    if-eq v0, v3, :cond_4
+    if-eq v0, v3, :cond_6
 
     const/16 v3, 0x7e1
 
-    if-eq v0, v3, :cond_3
+    if-eq v0, v3, :cond_5
 
     const/16 v3, 0x7e3
 
@@ -14723,7 +15107,7 @@
 
     const/16 v3, 0x7f1
 
-    if-eq v0, v3, :cond_3
+    if-eq v0, v3, :cond_5
 
     packed-switch v0, :pswitch_data_0
 
@@ -14745,13 +15129,13 @@
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mNotificationShade:Lcom/android/server/wm/WindowState;
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_a
 
     invoke-virtual {v0}, Lcom/android/server/wm/WindowState;->isAlive()Z
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_a
 
     return v4
 
@@ -14764,7 +15148,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_6
+    if-nez v0, :cond_a
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mContext:Landroid/content/Context;
 
@@ -14779,17 +15163,29 @@
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBar:Lcom/android/server/wm/WindowState;
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_3
 
     invoke-virtual {v0}, Lcom/android/server/wm/WindowState;->isAlive()Z
 
     move-result v0
 
-    if-eqz v0, :cond_6
-
-    return v4
+    if-nez v0, :cond_4
 
     :cond_3
+    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarAlt:Lcom/android/server/wm/WindowState;
+
+    if-eqz v0, :cond_a
+
+    invoke-virtual {v0}, Lcom/android/server/wm/WindowState;->isAlive()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_a
+
+    :cond_4
+    return v4
+
+    :cond_5
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mContext:Landroid/content/Context;
 
@@ -14797,33 +15193,47 @@
 
     goto :goto_0
 
-    :cond_4
+    :cond_6
     const/16 v0, -0xa
 
     return v0
 
-    :cond_5
+    :cond_7
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, v1, p2, p3, v2}, Landroid/content/Context;->enforcePermission(Ljava/lang/String;IILjava/lang/String;)V
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBar:Lcom/android/server/wm/WindowState;
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_8
 
     invoke-virtual {v0}, Lcom/android/server/wm/WindowState;->isAlive()Z
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-nez v0, :cond_9
 
+    :cond_8
+    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarAlt:Lcom/android/server/wm/WindowState;
+
+    if-eqz v0, :cond_a
+
+    invoke-virtual {v0}, Lcom/android/server/wm/WindowState;->isAlive()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_a
+
+    :cond_9
     return v4
 
-    :cond_6
+    :cond_a
     :goto_0
     iget-object v0, p1, Landroid/view/WindowManager$LayoutParams;->providesInsetsTypes:[I
 
-    if-eqz v0, :cond_7
+    const/4 v3, 0x0
+
+    if-eqz v0, :cond_12
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mContext:Landroid/content/Context;
 
@@ -14833,10 +15243,85 @@
 
     invoke-static {v0}, Lcom/android/server/wm/DisplayPolicy;->enforceSingleInsetsTypeCorrespondingToWindowType([I)V
 
-    :cond_7
-    const/4 v0, 0x0
+    iget-object v0, p1, Landroid/view/WindowManager$LayoutParams;->providesInsetsTypes:[I
 
-    return v0
+    array-length v1, v0
+
+    move v2, v3
+
+    :goto_1
+    if-ge v2, v1, :cond_12
+
+    aget v5, v0, v2
+
+    if-eqz v5, :cond_e
+
+    const/4 v6, 0x1
+
+    if-eq v5, v6, :cond_b
+
+    goto :goto_2
+
+    :cond_b
+    iget-object v6, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBar:Lcom/android/server/wm/WindowState;
+
+    if-eqz v6, :cond_c
+
+    invoke-virtual {v6}, Lcom/android/server/wm/WindowState;->isAlive()Z
+
+    move-result v6
+
+    if-nez v6, :cond_d
+
+    :cond_c
+    iget-object v6, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarAlt:Lcom/android/server/wm/WindowState;
+
+    if-eqz v6, :cond_11
+
+    invoke-virtual {v6}, Lcom/android/server/wm/WindowState;->isAlive()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_11
+
+    :cond_d
+    return v4
+
+    :cond_e
+    iget-object v6, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBar:Lcom/android/server/wm/WindowState;
+
+    if-eqz v6, :cond_f
+
+    invoke-virtual {v6}, Lcom/android/server/wm/WindowState;->isAlive()Z
+
+    move-result v6
+
+    if-nez v6, :cond_10
+
+    :cond_f
+    iget-object v6, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarAlt:Lcom/android/server/wm/WindowState;
+
+    if-eqz v6, :cond_11
+
+    invoke-virtual {v6}, Lcom/android/server/wm/WindowState;->isAlive()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_11
+
+    :cond_10
+    return v4
+
+    :cond_11
+    :goto_2
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_1
+
+    :cond_12
+    return v3
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x7f8

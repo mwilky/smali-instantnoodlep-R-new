@@ -398,7 +398,7 @@
 .end method
 
 .method public recordSwipe(Lcom/android/server/wm/SystemGesturesPointerEventListener;Landroid/view/MotionEvent;)V
-    .locals 10
+    .locals 12
 
     const-string v0, "OpSystemGestures"
 
@@ -415,168 +415,170 @@
     goto/16 :goto_3
 
     :cond_0
+    const-wide/16 v1, 0x0
+
     :try_start_0
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getActionMasked()I
 
-    move-result v1
+    move-result v3
 
-    if-eqz v1, :cond_9
+    if-eqz v3, :cond_9
 
-    const/4 v2, 0x1
+    const/4 v4, 0x1
 
-    const/4 v3, 0x0
+    const/4 v5, 0x0
 
-    if-eq v1, v2, :cond_7
+    if-eq v3, v4, :cond_7
 
-    const/4 v2, 0x2
+    const/4 v4, 0x2
 
-    if-eq v1, v2, :cond_2
+    if-eq v3, v4, :cond_2
 
-    const/4 v2, 0x6
+    const/4 v4, 0x6
 
-    if-eq v1, v2, :cond_1
+    if-eq v3, v4, :cond_1
 
-    const/16 v2, 0x106
+    const/16 v4, 0x106
 
-    if-eq v1, v2, :cond_1
+    if-eq v3, v4, :cond_1
 
-    const/16 v2, 0x206
+    const/16 v4, 0x206
 
-    if-eq v1, v2, :cond_1
+    if-eq v3, v4, :cond_1
 
     goto/16 :goto_1
 
     :cond_1
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getActionIndex()I
 
-    move-result v1
+    move-result v3
 
-    invoke-virtual {p2, v1}, Landroid/view/MotionEvent;->getPointerId(I)I
+    invoke-virtual {p2, v3}, Landroid/view/MotionEvent;->getPointerId(I)I
 
-    move-result v2
+    move-result v4
 
-    iget-object v4, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mDistanceRecord:Ljava/util/ArrayList;
+    iget-object v6, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mDistanceRecord:Ljava/util/ArrayList;
 
-    iget-object v5, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mPointNove:[F
+    iget-object v7, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mPointNove:[F
 
-    aget v5, v5, v2
+    aget v7, v7, v4
 
-    invoke-static {v5}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    invoke-static {v7}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    move-result-object v5
+    move-result-object v7
 
-    invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v6, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    iget-object v4, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mPointNove:[F
+    iget-object v6, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mPointNove:[F
 
-    aput v3, v4, v2
+    aput v5, v6, v4
 
     goto/16 :goto_1
 
     :cond_2
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getPointerCount()I
 
-    move-result v1
+    move-result v3
 
-    const/4 v2, 0x0
+    const/4 v4, 0x0
 
     :goto_0
-    if-ge v2, v1, :cond_6
+    if-ge v4, v3, :cond_6
 
-    invoke-virtual {p2, v2}, Landroid/view/MotionEvent;->getPointerId(I)I
+    invoke-virtual {p2, v4}, Landroid/view/MotionEvent;->getPointerId(I)I
 
-    move-result v4
+    move-result v6
 
-    invoke-virtual {p1, v4}, Lcom/android/server/wm/SystemGesturesPointerEventListener;->findIndex(I)I
+    invoke-virtual {p1, v6}, Lcom/android/server/wm/SystemGesturesPointerEventListener;->findIndex(I)I
 
-    move-result v5
+    move-result v7
 
-    iget-object v6, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mLastMoveX:[F
+    iget-object v8, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mLastMoveX:[F
 
-    aget v6, v6, v5
+    aget v8, v8, v7
 
-    cmpl-float v6, v6, v3
+    cmpl-float v8, v8, v5
 
-    if-nez v6, :cond_3
+    if-nez v8, :cond_3
 
-    iget-object v6, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mLastMoveX:[F
+    iget-object v8, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mLastMoveX:[F
 
-    iget-object v7, p1, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mDownX:[F
+    iget-object v9, p1, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mDownX:[F
 
-    aget v7, v7, v5
+    aget v9, v9, v7
 
-    aput v7, v6, v5
+    aput v9, v8, v7
 
     :cond_3
-    iget-object v6, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mLastMoveY:[F
+    iget-object v8, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mLastMoveY:[F
 
-    aget v6, v6, v5
+    aget v8, v8, v7
 
-    cmpl-float v6, v6, v3
+    cmpl-float v8, v8, v5
 
-    if-nez v6, :cond_4
+    if-nez v8, :cond_4
 
-    iget-object v6, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mLastMoveY:[F
+    iget-object v8, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mLastMoveY:[F
 
-    iget-object v7, p1, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mDownY:[F
+    iget-object v9, p1, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mDownY:[F
 
-    aget v7, v7, v5
+    aget v9, v9, v7
 
-    aput v7, v6, v5
+    aput v9, v8, v7
 
     :cond_4
-    iget-object v6, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mPointNove:[F
+    iget-object v8, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mPointNove:[F
 
-    aget v7, v6, v2
+    aget v9, v8, v4
 
-    invoke-virtual {p2, v2}, Landroid/view/MotionEvent;->getX(I)F
+    invoke-virtual {p2, v4}, Landroid/view/MotionEvent;->getX(I)F
 
-    move-result v8
+    move-result v10
 
-    invoke-virtual {p2, v2}, Landroid/view/MotionEvent;->getY(I)F
+    invoke-virtual {p2, v4}, Landroid/view/MotionEvent;->getY(I)F
 
-    move-result v9
+    move-result v11
 
-    invoke-direct {p0, v5, v8, v9}, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->getDistance(IFF)F
+    invoke-direct {p0, v7, v10, v11}, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->getDistance(IFF)F
 
-    move-result v8
+    move-result v10
 
-    add-float/2addr v7, v8
+    add-float/2addr v9, v10
 
-    aput v7, v6, v2
+    aput v9, v8, v4
 
-    sget-boolean v6, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->OP_MOVE_DISTANCE_DEBUG:Z
+    sget-boolean v8, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->OP_MOVE_DISTANCE_DEBUG:Z
 
-    if-eqz v6, :cond_5
+    if-eqz v8, :cond_5
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v7, "recordSwipe mPointNove["
+    const-string v9, "recordSwipe mPointNove["
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v7, "] ="
+    const-string v9, "] ="
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v7, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mPointNove:[F
+    iget-object v9, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mPointNove:[F
 
-    aget v7, v7, v2
+    aget v9, v9, v4
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v8
 
-    invoke-static {v0, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v8}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_5
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
@@ -586,65 +588,29 @@
     :cond_7
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getActionIndex()I
 
-    move-result v1
-
-    invoke-virtual {p2, v1}, Landroid/view/MotionEvent;->getPointerId(I)I
-
-    move-result v4
-
-    iget-object v5, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mDistanceRecord:Ljava/util/ArrayList;
-
-    iget-object v6, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mPointNove:[F
-
-    aget v6, v6, v4
-
-    invoke-static {v6}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v6
-
-    invoke-virtual {v5, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v5, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mPointNove:[F
-
-    aput v3, v5, v4
-
-    iget-wide v5, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mSwipeDistanceTotal:D
-
-    iget-object v3, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mDistanceRecord:Ljava/util/ArrayList;
-
-    invoke-static {v3}, Ljava/util/Collections;->max(Ljava/util/Collection;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/Float;
-
-    invoke-virtual {v3}, Ljava/lang/Float;->floatValue()F
-
     move-result v3
 
-    sget v7, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->sScreenHeight:I
+    invoke-virtual {p2, v3}, Landroid/view/MotionEvent;->getPointerId(I)I
 
-    int-to-float v7, v7
+    move-result v6
 
-    div-float/2addr v3, v7
+    iget-object v7, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mDistanceRecord:Ljava/util/ArrayList;
 
-    float-to-double v7, v3
+    iget-object v8, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mPointNove:[F
 
-    add-double/2addr v5, v7
+    aget v8, v8, v6
 
-    iput-wide v5, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mSwipeDistanceTotal:D
+    invoke-static {v8}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    sget-boolean v3, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->OP_MOVE_DISTANCE_DEBUG:Z
+    move-result-object v8
 
-    if-eqz v3, :cond_8
+    invoke-virtual {v7, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    iget-object v7, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mPointNove:[F
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    aput v5, v7, v6
 
-    const-string v5, "recordSwipe: Max distance="
-
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-wide v7, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mSwipeDistanceTotal:D
 
     iget-object v5, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mDistanceRecord:Ljava/util/ArrayList;
 
@@ -652,77 +618,115 @@
 
     move-result-object v5
 
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    check-cast v5, Ljava/lang/Float;
 
-    const-string v5, " sScreenHeight="
+    invoke-virtual {v5}, Ljava/lang/Float;->floatValue()F
 
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v5
 
-    sget v5, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->sScreenHeight:I
+    sget v9, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->sScreenHeight:I
 
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    int-to-float v9, v9
 
-    const-string v5, " distance="
+    div-float/2addr v5, v9
 
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    float-to-double v9, v5
 
-    iget-wide v5, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mSwipeDistanceTotal:D
+    add-double/2addr v7, v9
 
-    invoke-virtual {v3, v5, v6}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    iput-wide v7, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mSwipeDistanceTotal:D
 
-    const-string v5, " count="
+    sget-boolean v5, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->OP_MOVE_DISTANCE_DEBUG:Z
 
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v5, :cond_8
 
-    iget v5, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mMoveCount:I
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v7, "recordSwipe: Max distance="
 
-    move-result-object v3
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    iget-object v7, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mDistanceRecord:Ljava/util/ArrayList;
+
+    invoke-static {v7}, Ljava/util/Collections;->max(Ljava/util/Collection;)Ljava/lang/Object;
+
+    move-result-object v7
+
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v7, " sScreenHeight="
+
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget v7, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->sScreenHeight:I
+
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v7, " distance="
+
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v7, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mSwipeDistanceTotal:D
+
+    invoke-virtual {v5, v7, v8}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v7, " count="
+
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v7, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mMoveCount:I
+
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v0, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_8
-    iget v3, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mMoveCount:I
+    iget v5, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mMoveCount:I
 
-    add-int/2addr v3, v2
+    add-int/2addr v5, v4
 
-    iput v3, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mMoveCount:I
+    iput v5, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mMoveCount:I
 
-    sget v2, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->OP_MOVE_DISTANCE_COUNT:I
+    sget v4, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->OP_MOVE_DISTANCE_COUNT:I
 
-    if-ne v3, v2, :cond_a
+    if-ne v5, v4, :cond_a
 
-    const/4 v2, 0x0
+    const/4 v4, 0x0
 
-    iput v2, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mMoveCount:I
+    iput v4, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mMoveCount:I
 
-    iget-wide v2, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mSwipeDistanceTotal:D
+    iget-wide v4, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mSwipeDistanceTotal:D
 
-    invoke-direct {p0, v2, v3}, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->saveDistance(D)V
+    invoke-direct {p0, v4, v5}, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->saveDistance(D)V
+
+    iput-wide v1, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mSwipeDistanceTotal:D
 
     goto :goto_1
 
     :cond_9
-    iget-object v1, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mDistanceRecord:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mDistanceRecord:Ljava/util/ArrayList;
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
+    invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
-    const/16 v1, 0x20
+    const/16 v3, 0x20
 
-    new-array v2, v1, [F
+    new-array v4, v3, [F
 
-    iput-object v2, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mPointNove:[F
+    iput-object v4, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mPointNove:[F
 
-    new-array v2, v1, [F
+    new-array v4, v3, [F
 
-    iput-object v2, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mLastMoveX:[F
+    iput-object v4, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mLastMoveX:[F
 
-    new-array v1, v1, [F
+    new-array v3, v3, [F
 
-    iput-object v1, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mLastMoveY:[F
+    iput-object v3, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mLastMoveY:[F
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -733,29 +737,27 @@
     goto :goto_2
 
     :catch_0
-    move-exception v1
+    move-exception v3
 
-    const-wide/16 v2, 0x0
+    iput-wide v1, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mSwipeDistanceTotal:D
 
-    iput-wide v2, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mSwipeDistanceTotal:D
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v2, "recordSwipe failed due to total="
 
-    const-string v3, "recordSwipe failed due to total="
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-wide v4, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mSwipeDistanceTotal:D
 
-    iget-wide v3, p0, Lcom/android/server/wm/OpSystemGesturesPointerEventListenerInjector;->mSwipeDistanceTotal:D
+    invoke-virtual {v1, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v2
-
-    invoke-static {v0, v2, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v0, v1, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_2
     return-void

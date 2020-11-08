@@ -45,7 +45,7 @@
 
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$12;->this$0:Lcom/android/server/display/DisplayPowerController;
 
-    invoke-static {v0}, Lcom/android/server/display/DisplayPowerController;->access$2200(Lcom/android/server/display/DisplayPowerController;)Z
+    invoke-static {v0}, Lcom/android/server/display/DisplayPowerController;->access$2300(Lcom/android/server/display/DisplayPowerController;)Z
 
     move-result v0
 
@@ -71,7 +71,7 @@
 
     iget-object v4, p0, Lcom/android/server/display/DisplayPowerController$12;->this$0:Lcom/android/server/display/DisplayPowerController;
 
-    invoke-static {v4}, Lcom/android/server/display/DisplayPowerController;->access$2300(Lcom/android/server/display/DisplayPowerController;)F
+    invoke-static {v4}, Lcom/android/server/display/DisplayPowerController;->access$2400(Lcom/android/server/display/DisplayPowerController;)F
 
     move-result v4
 
@@ -87,7 +87,7 @@
     move v4, v3
 
     :goto_0
-    invoke-static {}, Lcom/android/server/display/DisplayPowerController;->access$2400()Z
+    invoke-static {}, Lcom/android/server/display/DisplayPowerController;->access$2500()Z
 
     move-result v6
 
@@ -99,9 +99,9 @@
 
     if-eqz v6, :cond_3
 
-    invoke-static {v4}, Lcom/android/server/display/DisplayPowerController;->access$2502(Z)Z
+    invoke-static {v4}, Lcom/android/server/display/DisplayPowerController;->access$2602(Z)Z
 
-    invoke-static {}, Lcom/android/server/display/DisplayPowerController;->access$2600()Z
+    invoke-static {}, Lcom/android/server/display/DisplayPowerController;->access$2700()Z
 
     move-result v3
 
@@ -135,7 +135,7 @@
     :cond_2
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$12;->this$0:Lcom/android/server/display/DisplayPowerController;
 
-    invoke-static {v3, v0, v1, v4}, Lcom/android/server/display/DisplayPowerController;->access$2700(Lcom/android/server/display/DisplayPowerController;JZ)V
+    invoke-static {v3, v0, v1, v4}, Lcom/android/server/display/DisplayPowerController;->access$2800(Lcom/android/server/display/DisplayPowerController;JZ)V
 
     goto :goto_1
 
@@ -165,7 +165,7 @@
     :cond_4
     iget-object v6, p0, Lcom/android/server/display/DisplayPowerController$12;->this$0:Lcom/android/server/display/DisplayPowerController;
 
-    invoke-static {v6, v0, v1, v4}, Lcom/android/server/display/DisplayPowerController;->access$2800(Lcom/android/server/display/DisplayPowerController;JZ)V
+    invoke-static {v6, v0, v1, v4}, Lcom/android/server/display/DisplayPowerController;->access$2900(Lcom/android/server/display/DisplayPowerController;JZ)V
 
     iget-object v6, p0, Lcom/android/server/display/DisplayPowerController$12;->this$0:Lcom/android/server/display/DisplayPowerController;
 

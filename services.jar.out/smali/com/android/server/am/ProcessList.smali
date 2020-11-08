@@ -5205,7 +5205,7 @@
 
     move-result-object v6
 
-    const v7, 0x10e0078
+    const v7, 0x10e0079
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -5215,7 +5215,7 @@
 
     move-result-object v7
 
-    const v8, 0x10e0077
+    const v8, 0x10e0078
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -5423,7 +5423,7 @@
 
     move-result-object v11
 
-    const v12, 0x10e0064
+    const v12, 0x10e0065
 
     invoke-virtual {v11, v12}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -5433,7 +5433,7 @@
 
     move-result-object v12
 
-    const v13, 0x10e0063
+    const v13, 0x10e0064
 
     invoke-virtual {v12, v13}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -9932,7 +9932,7 @@
 .end method
 
 .method final removeProcessNameLocked(Ljava/lang/String;ILcom/android/server/am/ProcessRecord;)Lcom/android/server/am/ProcessRecord;
-    .locals 5
+    .locals 6
 
     iget-object v0, p0, Lcom/android/server/am/ProcessList;->mProcessNames:Lcom/android/server/am/ProcessList$MyProcessMap;
 
@@ -9952,105 +9952,97 @@
     invoke-virtual {v1, p1, p2}, Lcom/android/server/am/ProcessList$MyProcessMap;->remove(Ljava/lang/String;I)Lcom/android/server/am/ProcessRecord;
 
     :cond_1
-    if-eqz v0, :cond_4
-
-    iget-object v1, v0, Lcom/android/server/am/ProcessRecord;->uidRecord:Lcom/android/server/am/UidRecord;
-
-    if-eqz v1, :cond_4
-
-    iget-object v1, v0, Lcom/android/server/am/ProcessRecord;->uidRecord:Lcom/android/server/am/UidRecord;
-
-    iget v2, v1, Lcom/android/server/am/UidRecord;->numProcs:I
-
-    const/4 v3, 0x1
-
-    sub-int/2addr v2, v3
-
-    iput v2, v1, Lcom/android/server/am/UidRecord;->numProcs:I
-
-    iget-object v1, v0, Lcom/android/server/am/ProcessRecord;->uidRecord:Lcom/android/server/am/UidRecord;
-
-    iget-object v1, v1, Lcom/android/server/am/UidRecord;->procRecords:Landroid/util/ArraySet;
-
-    invoke-virtual {v1, v0}, Landroid/util/ArraySet;->remove(Ljava/lang/Object;)Z
-
-    iget-object v1, v0, Lcom/android/server/am/ProcessRecord;->uidRecord:Lcom/android/server/am/UidRecord;
-
-    iget v1, v1, Lcom/android/server/am/UidRecord;->numProcs:I
-
-    if-nez v1, :cond_3
-
-    sget-boolean v1, Lcom/android/server/am/ActivityManagerDebugConfig;->DEBUG_UID_OBSERVERS:Z
-
-    if-eqz v1, :cond_2
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "No more processes in "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, Lcom/android/server/am/ProcessRecord;->uidRecord:Lcom/android/server/am/UidRecord;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "ActivityManager"
-
-    invoke-static {v2, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_2
-    iget-object v1, p0, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;
-
-    iget-object v2, v0, Lcom/android/server/am/ProcessRecord;->uidRecord:Lcom/android/server/am/UidRecord;
-
-    const/4 v4, -0x1
-
-    invoke-virtual {v1, v2, v4, v3}, Lcom/android/server/am/ActivityManagerService;->enqueueUidChangeLocked(Lcom/android/server/am/UidRecord;II)V
-
-    invoke-static {p2}, Lcom/android/server/am/EventLogTags;->writeAmUidStopped(I)V
-
-    iget-object v1, p0, Lcom/android/server/am/ProcessList;->mActiveUids:Lcom/android/server/am/ActiveUids;
-
-    invoke-virtual {v1, p2}, Lcom/android/server/am/ActiveUids;->remove(I)V
-
-    iget-object v1, p0, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;
-
-    const/16 v2, 0x14
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, p2, v2, v3}, Lcom/android/server/am/ActivityManagerService;->noteUidProcessState(III)V
-
-    :cond_3
-    const/4 v1, 0x0
-
-    iput-object v1, v0, Lcom/android/server/am/ProcessRecord;->uidRecord:Lcom/android/server/am/UidRecord;
-
-    :cond_4
-    iget-object v1, p0, Lcom/android/server/am/ProcessList;->mIsolatedProcesses:Landroid/util/SparseArray;
-
-    invoke-virtual {v1, p2}, Landroid/util/SparseArray;->remove(I)V
-
-    iget-object v1, p0, Lcom/android/server/am/ProcessList;->mGlobalIsolatedUids:Lcom/android/server/am/ProcessList$IsolatedUidRange;
-
-    invoke-virtual {v1, p2}, Lcom/android/server/am/ProcessList$IsolatedUidRange;->freeIsolatedUidLocked(I)V
-
-    if-eqz p3, :cond_5
+    if-eqz p3, :cond_2
 
     move-object v1, p3
 
     goto :goto_0
 
-    :cond_5
+    :cond_2
     move-object v1, v0
 
     :goto_0
+    if-eqz v1, :cond_5
+
+    iget-object v2, v1, Lcom/android/server/am/ProcessRecord;->uidRecord:Lcom/android/server/am/UidRecord;
+
+    if-eqz v2, :cond_5
+
+    iget-object v2, v1, Lcom/android/server/am/ProcessRecord;->uidRecord:Lcom/android/server/am/UidRecord;
+
+    iget v3, v2, Lcom/android/server/am/UidRecord;->numProcs:I
+
+    const/4 v4, 0x1
+
+    sub-int/2addr v3, v4
+
+    iput v3, v2, Lcom/android/server/am/UidRecord;->numProcs:I
+
+    iget-object v3, v2, Lcom/android/server/am/UidRecord;->procRecords:Landroid/util/ArraySet;
+
+    invoke-virtual {v3, v1}, Landroid/util/ArraySet;->remove(Ljava/lang/Object;)Z
+
+    iget v3, v2, Lcom/android/server/am/UidRecord;->numProcs:I
+
+    if-nez v3, :cond_4
+
+    sget-boolean v3, Lcom/android/server/am/ActivityManagerDebugConfig;->DEBUG_UID_OBSERVERS:Z
+
+    if-eqz v3, :cond_3
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "No more processes in "
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v5, "ActivityManager"
+
+    invoke-static {v5, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_3
+    iget-object v3, p0, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;
+
+    const/4 v5, -0x1
+
+    invoke-virtual {v3, v2, v5, v4}, Lcom/android/server/am/ActivityManagerService;->enqueueUidChangeLocked(Lcom/android/server/am/UidRecord;II)V
+
+    invoke-static {p2}, Lcom/android/server/am/EventLogTags;->writeAmUidStopped(I)V
+
+    iget-object v3, p0, Lcom/android/server/am/ProcessList;->mActiveUids:Lcom/android/server/am/ActiveUids;
+
+    invoke-virtual {v3, p2}, Lcom/android/server/am/ActiveUids;->remove(I)V
+
+    iget-object v3, p0, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;
+
+    const/16 v4, 0x14
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v3, p2, v4, v5}, Lcom/android/server/am/ActivityManagerService;->noteUidProcessState(III)V
+
+    :cond_4
+    const/4 v3, 0x0
+
+    iput-object v3, v1, Lcom/android/server/am/ProcessRecord;->uidRecord:Lcom/android/server/am/UidRecord;
+
+    :cond_5
+    iget-object v2, p0, Lcom/android/server/am/ProcessList;->mIsolatedProcesses:Landroid/util/SparseArray;
+
+    invoke-virtual {v2, p2}, Landroid/util/SparseArray;->remove(I)V
+
+    iget-object v2, p0, Lcom/android/server/am/ProcessList;->mGlobalIsolatedUids:Lcom/android/server/am/ProcessList$IsolatedUidRange;
+
+    invoke-virtual {v2, p2}, Lcom/android/server/am/ProcessList$IsolatedUidRange;->freeIsolatedUidLocked(I)V
+
     if-eqz v1, :cond_6
 
     iget-boolean v2, v1, Lcom/android/server/am/ProcessRecord;->appZygote:Z
@@ -11864,7 +11856,7 @@
 
     rsub-int v6, v6, 0x200
 
-    div-int/lit8 v6, v6, 0x20
+    div-int/lit8 v6, v6, 0x40
 
     const/4 v10, 0x7
 

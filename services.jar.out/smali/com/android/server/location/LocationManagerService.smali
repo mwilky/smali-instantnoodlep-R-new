@@ -509,15 +509,15 @@
 
     move-result v4
 
-    if-eqz v4, :cond_12
+    if-eqz v4, :cond_11
 
-    if-eqz v2, :cond_12
+    if-eqz v2, :cond_11
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v4
 
-    if-nez v4, :cond_12
+    if-nez v4, :cond_11
 
     iget-object v4, v0, Lcom/android/server/location/LocationManagerService;->mSettingsHelper:Lcom/android/server/location/SettingsHelper;
 
@@ -537,18 +537,18 @@
 
     const/4 v8, 0x3
 
-    const/4 v9, 0x1
+    const/4 v9, 0x0
 
-    const/4 v10, 0x0
+    const/4 v10, 0x1
 
     if-ne v7, v8, :cond_0
 
-    move v7, v9
+    move v7, v10
 
     goto :goto_0
 
     :cond_0
-    move v7, v10
+    move v7, v9
 
     :goto_0
     iget v8, v0, Lcom/android/server/location/LocationManagerService;->mBatterySaverMode:I
@@ -565,28 +565,26 @@
 
     if-nez v8, :cond_1
 
-    move v8, v9
+    move v8, v10
 
     goto :goto_1
 
     :cond_1
-    move v8, v10
+    move v8, v9
 
     :goto_1
-    invoke-virtual {v3, v9}, Lcom/android/internal/location/ProviderRequest$Builder;->setLowPowerMode(Z)Lcom/android/internal/location/ProviderRequest$Builder;
+    invoke-virtual {v3, v10}, Lcom/android/internal/location/ProviderRequest$Builder;->setLowPowerMode(Z)Lcom/android/internal/location/ProviderRequest$Builder;
 
-    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v11
+    const/4 v11, 0x0
 
     :goto_2
-    invoke-interface {v11}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v12
 
-    if-eqz v12, :cond_e
+    if-ge v11, v12, :cond_d
 
-    invoke-interface {v11}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v2, v11}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v12
 
@@ -606,7 +604,9 @@
 
     if-nez v14, :cond_2
 
-    goto :goto_2
+    move/from16 v16, v11
+
+    goto/16 :goto_6
 
     :cond_2
     iget-object v14, v0, Lcom/android/server/location/LocationManagerService;->mAppOpsHelper:Lcom/android/server/location/AppOpsHelper;
@@ -617,7 +617,9 @@
 
     if-nez v14, :cond_3
 
-    goto :goto_2
+    move/from16 v16, v11
+
+    goto/16 :goto_6
 
     :cond_3
     if-nez v8, :cond_5
@@ -633,13 +635,13 @@
     goto :goto_3
 
     :cond_4
-    move v14, v10
+    move v14, v9
 
     goto :goto_4
 
     :cond_5
     :goto_3
-    move v14, v9
+    move v14, v10
 
     :goto_4
     iget v15, v13, Lcom/android/server/location/CallerIdentity;->userId:I
@@ -657,20 +659,22 @@
 
     move-result v15
 
-    if-eqz v15, :cond_d
+    if-eqz v15, :cond_b
 
-    invoke-virtual {v3, v9}, Lcom/android/internal/location/ProviderRequest$Builder;->setLocationSettingsIgnored(Z)Lcom/android/internal/location/ProviderRequest$Builder;
+    invoke-virtual {v3, v10}, Lcom/android/internal/location/ProviderRequest$Builder;->setLocationSettingsIgnored(Z)Lcom/android/internal/location/ProviderRequest$Builder;
 
-    invoke-virtual {v3, v10}, Lcom/android/internal/location/ProviderRequest$Builder;->setLowPowerMode(Z)Lcom/android/internal/location/ProviderRequest$Builder;
+    invoke-virtual {v3, v9}, Lcom/android/internal/location/ProviderRequest$Builder;->setLowPowerMode(Z)Lcom/android/internal/location/ProviderRequest$Builder;
 
     :cond_7
     invoke-static {v12}, Lcom/android/server/location/LocationManagerService$UpdateRecord;->access$2500(Lcom/android/server/location/LocationManagerService$UpdateRecord;)Landroid/location/LocationRequest;
 
     move-result-object v15
 
+    move/from16 v16, v11
+
     invoke-virtual {v15}, Landroid/location/LocationRequest;->getInterval()J
 
-    move-result-wide v9
+    move-result-wide v10
 
     invoke-virtual {v3}, Lcom/android/internal/location/ProviderRequest$Builder;->isLocationSettingsIgnored()Z
 
@@ -678,104 +682,89 @@
 
     if-nez v17, :cond_9
 
-    move/from16 v17, v7
+    iget-object v9, v12, Lcom/android/server/location/LocationManagerService$UpdateRecord;->mReceiver:Lcom/android/server/location/LocationManagerService$Receiver;
 
-    iget-object v7, v12, Lcom/android/server/location/LocationManagerService$UpdateRecord;->mReceiver:Lcom/android/server/location/LocationManagerService$Receiver;
+    iget-object v9, v9, Lcom/android/server/location/LocationManagerService$Receiver;->mCallerIdentity:Lcom/android/server/location/CallerIdentity;
 
-    iget-object v7, v7, Lcom/android/server/location/LocationManagerService$Receiver;->mCallerIdentity:Lcom/android/server/location/CallerIdentity;
+    invoke-direct {v0, v9}, Lcom/android/server/location/LocationManagerService;->isThrottlingExempt(Lcom/android/server/location/CallerIdentity;)Z
 
-    invoke-direct {v0, v7}, Lcom/android/server/location/LocationManagerService;->isThrottlingExempt(Lcom/android/server/location/CallerIdentity;)Z
+    move-result v9
 
-    move-result v7
-
-    if-nez v7, :cond_a
+    if-nez v9, :cond_9
 
     invoke-static {v12}, Lcom/android/server/location/LocationManagerService$UpdateRecord;->access$900(Lcom/android/server/location/LocationManagerService$UpdateRecord;)Z
 
-    move-result v7
+    move-result v9
 
-    if-nez v7, :cond_8
+    if-nez v9, :cond_8
 
-    invoke-static {v9, v10, v4, v5}, Ljava/lang/Math;->max(JJ)J
+    invoke-static {v10, v11, v4, v5}, Ljava/lang/Math;->max(JJ)J
 
-    move-result-wide v9
+    move-result-wide v10
 
     :cond_8
     invoke-virtual {v15}, Landroid/location/LocationRequest;->getInterval()J
 
     move-result-wide v18
 
-    cmp-long v7, v9, v18
+    cmp-long v9, v10, v18
 
-    if-eqz v7, :cond_a
+    if-eqz v9, :cond_9
 
-    new-instance v7, Landroid/location/LocationRequest;
+    new-instance v9, Landroid/location/LocationRequest;
 
-    invoke-direct {v7, v15}, Landroid/location/LocationRequest;-><init>(Landroid/location/LocationRequest;)V
+    invoke-direct {v9, v15}, Landroid/location/LocationRequest;-><init>(Landroid/location/LocationRequest;)V
 
-    move-object v15, v7
+    move-object v15, v9
 
-    invoke-virtual {v15, v9, v10}, Landroid/location/LocationRequest;->setInterval(J)Landroid/location/LocationRequest;
-
-    goto :goto_5
+    invoke-virtual {v15, v10, v11}, Landroid/location/LocationRequest;->setInterval(J)Landroid/location/LocationRequest;
 
     :cond_9
-    move/from16 v17, v7
-
-    :cond_a
-    :goto_5
     iput-object v15, v12, Lcom/android/server/location/LocationManagerService$UpdateRecord;->mRequest:Landroid/location/LocationRequest;
 
     invoke-virtual {v6, v15}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     invoke-virtual {v15}, Landroid/location/LocationRequest;->isLowPowerMode()Z
 
-    move-result v7
+    move-result v9
 
-    if-nez v7, :cond_b
+    if-nez v9, :cond_a
 
-    const/4 v7, 0x0
+    const/4 v9, 0x0
 
-    invoke-virtual {v3, v7}, Lcom/android/internal/location/ProviderRequest$Builder;->setLowPowerMode(Z)Lcom/android/internal/location/ProviderRequest$Builder;
+    invoke-virtual {v3, v9}, Lcom/android/internal/location/ProviderRequest$Builder;->setLowPowerMode(Z)Lcom/android/internal/location/ProviderRequest$Builder;
+
+    goto :goto_5
+
+    :cond_a
+    const/4 v9, 0x0
+
+    :goto_5
+    invoke-virtual {v3}, Lcom/android/internal/location/ProviderRequest$Builder;->getInterval()J
+
+    move-result-wide v17
+
+    cmp-long v17, v10, v17
+
+    if-gez v17, :cond_c
+
+    invoke-virtual {v3, v10, v11}, Lcom/android/internal/location/ProviderRequest$Builder;->setInterval(J)Lcom/android/internal/location/ProviderRequest$Builder;
 
     goto :goto_6
 
     :cond_b
-    const/4 v7, 0x0
-
-    :goto_6
-    invoke-virtual {v3}, Lcom/android/internal/location/ProviderRequest$Builder;->getInterval()J
-
-    move-result-wide v18
-
-    cmp-long v16, v9, v18
-
-    if-gez v16, :cond_c
-
-    invoke-virtual {v3, v9, v10}, Lcom/android/internal/location/ProviderRequest$Builder;->setInterval(J)Lcom/android/internal/location/ProviderRequest$Builder;
+    move/from16 v16, v11
 
     :cond_c
-    move v10, v7
+    :goto_6
+    add-int/lit8 v11, v16, 0x1
 
-    move/from16 v7, v17
-
-    const/4 v9, 0x1
+    const/4 v10, 0x1
 
     goto/16 :goto_2
 
     :cond_d
-    move/from16 v17, v7
-
-    move v7, v10
-
-    move/from16 v7, v17
-
-    const/4 v9, 0x1
-
-    goto/16 :goto_2
-
-    :cond_e
-    move/from16 v17, v7
+    move/from16 v16, v11
 
     invoke-virtual {v3, v6}, Lcom/android/internal/location/ProviderRequest$Builder;->setLocationRequests(Ljava/util/List;)Lcom/android/internal/location/ProviderRequest$Builder;
 
@@ -785,9 +774,9 @@
 
     const-wide v11, 0x7fffffffffffffffL
 
-    cmp-long v7, v9, v11
+    cmp-long v9, v9, v11
 
-    if-gez v7, :cond_12
+    if-gez v9, :cond_11
 
     invoke-virtual {v3}, Lcom/android/internal/location/ProviderRequest$Builder;->getInterval()J
 
@@ -807,119 +796,121 @@
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    move-result-object v7
-
-    :goto_7
-    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v11
-
-    if-eqz v11, :cond_12
-
-    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
     move-result-object v11
 
-    check-cast v11, Lcom/android/server/location/LocationManagerService$UpdateRecord;
-
-    iget-object v12, v0, Lcom/android/server/location/LocationManagerService;->mUserInfoHelper:Lcom/android/server/location/UserInfoHelper;
-
-    iget-object v13, v11, Lcom/android/server/location/LocationManagerService$UpdateRecord;->mReceiver:Lcom/android/server/location/LocationManagerService$Receiver;
-
-    iget-object v13, v13, Lcom/android/server/location/LocationManagerService$Receiver;->mCallerIdentity:Lcom/android/server/location/CallerIdentity;
-
-    iget v13, v13, Lcom/android/server/location/CallerIdentity;->uid:I
-
-    invoke-static {v13}, Landroid/os/UserHandle;->getUserId(I)I
-
-    move-result v13
-
-    invoke-virtual {v12, v13}, Lcom/android/server/location/UserInfoHelper;->isCurrentUserId(I)Z
+    :goto_7
+    invoke-interface {v11}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v12
 
     if-eqz v12, :cond_11
 
-    iget-object v12, v11, Lcom/android/server/location/LocationManagerService$UpdateRecord;->mRequest:Landroid/location/LocationRequest;
+    invoke-interface {v11}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-virtual {v3}, Lcom/android/internal/location/ProviderRequest$Builder;->getLocationRequests()Ljava/util/List;
+    move-result-object v12
 
-    move-result-object v13
+    check-cast v12, Lcom/android/server/location/LocationManagerService$UpdateRecord;
 
-    invoke-interface {v13, v12}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+    iget-object v13, v0, Lcom/android/server/location/LocationManagerService;->mUserInfoHelper:Lcom/android/server/location/UserInfoHelper;
 
-    move-result v13
-
-    if-nez v13, :cond_f
-
-    goto :goto_7
-
-    :cond_f
-    invoke-virtual {v12}, Landroid/location/LocationRequest;->getInterval()J
-
-    move-result-wide v13
-
-    cmp-long v13, v13, v9
-
-    if-gtz v13, :cond_11
-
-    iget-object v13, v11, Lcom/android/server/location/LocationManagerService$UpdateRecord;->mReceiver:Lcom/android/server/location/LocationManagerService$Receiver;
-
-    iget-object v13, v13, Lcom/android/server/location/LocationManagerService$Receiver;->mWorkSource:Landroid/os/WorkSource;
-
-    if-eqz v13, :cond_10
-
-    iget-object v13, v11, Lcom/android/server/location/LocationManagerService$UpdateRecord;->mReceiver:Lcom/android/server/location/LocationManagerService$Receiver;
-
-    iget-object v13, v13, Lcom/android/server/location/LocationManagerService$Receiver;->mWorkSource:Landroid/os/WorkSource;
-
-    invoke-static {v13}, Lcom/android/server/location/LocationManagerService;->isValidWorkSource(Landroid/os/WorkSource;)Z
-
-    move-result v13
-
-    if-eqz v13, :cond_10
-
-    invoke-virtual {v3}, Lcom/android/internal/location/ProviderRequest$Builder;->getWorkSource()Landroid/os/WorkSource;
-
-    move-result-object v13
-
-    iget-object v14, v11, Lcom/android/server/location/LocationManagerService$UpdateRecord;->mReceiver:Lcom/android/server/location/LocationManagerService$Receiver;
-
-    iget-object v14, v14, Lcom/android/server/location/LocationManagerService$Receiver;->mWorkSource:Landroid/os/WorkSource;
-
-    invoke-virtual {v13, v14}, Landroid/os/WorkSource;->add(Landroid/os/WorkSource;)Z
-
-    goto :goto_8
-
-    :cond_10
-    invoke-virtual {v3}, Lcom/android/internal/location/ProviderRequest$Builder;->getWorkSource()Landroid/os/WorkSource;
-
-    move-result-object v13
-
-    iget-object v14, v11, Lcom/android/server/location/LocationManagerService$UpdateRecord;->mReceiver:Lcom/android/server/location/LocationManagerService$Receiver;
+    iget-object v14, v12, Lcom/android/server/location/LocationManagerService$UpdateRecord;->mReceiver:Lcom/android/server/location/LocationManagerService$Receiver;
 
     iget-object v14, v14, Lcom/android/server/location/LocationManagerService$Receiver;->mCallerIdentity:Lcom/android/server/location/CallerIdentity;
 
     iget v14, v14, Lcom/android/server/location/CallerIdentity;->uid:I
 
-    iget-object v15, v11, Lcom/android/server/location/LocationManagerService$UpdateRecord;->mReceiver:Lcom/android/server/location/LocationManagerService$Receiver;
+    invoke-static {v14}, Landroid/os/UserHandle;->getUserId(I)I
+
+    move-result v14
+
+    invoke-virtual {v13, v14}, Lcom/android/server/location/UserInfoHelper;->isCurrentUserId(I)Z
+
+    move-result v13
+
+    if-eqz v13, :cond_10
+
+    iget-object v13, v12, Lcom/android/server/location/LocationManagerService$UpdateRecord;->mRequest:Landroid/location/LocationRequest;
+
+    invoke-virtual {v3}, Lcom/android/internal/location/ProviderRequest$Builder;->getLocationRequests()Ljava/util/List;
+
+    move-result-object v14
+
+    invoke-interface {v14, v13}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v14
+
+    if-nez v14, :cond_e
+
+    goto :goto_7
+
+    :cond_e
+    invoke-virtual {v13}, Landroid/location/LocationRequest;->getInterval()J
+
+    move-result-wide v14
+
+    cmp-long v14, v14, v9
+
+    if-gtz v14, :cond_10
+
+    iget-object v14, v12, Lcom/android/server/location/LocationManagerService$UpdateRecord;->mReceiver:Lcom/android/server/location/LocationManagerService$Receiver;
+
+    iget-object v14, v14, Lcom/android/server/location/LocationManagerService$Receiver;->mWorkSource:Landroid/os/WorkSource;
+
+    if-eqz v14, :cond_f
+
+    iget-object v14, v12, Lcom/android/server/location/LocationManagerService$UpdateRecord;->mReceiver:Lcom/android/server/location/LocationManagerService$Receiver;
+
+    iget-object v14, v14, Lcom/android/server/location/LocationManagerService$Receiver;->mWorkSource:Landroid/os/WorkSource;
+
+    invoke-static {v14}, Lcom/android/server/location/LocationManagerService;->isValidWorkSource(Landroid/os/WorkSource;)Z
+
+    move-result v14
+
+    if-eqz v14, :cond_f
+
+    invoke-virtual {v3}, Lcom/android/internal/location/ProviderRequest$Builder;->getWorkSource()Landroid/os/WorkSource;
+
+    move-result-object v14
+
+    iget-object v15, v12, Lcom/android/server/location/LocationManagerService$UpdateRecord;->mReceiver:Lcom/android/server/location/LocationManagerService$Receiver;
+
+    iget-object v15, v15, Lcom/android/server/location/LocationManagerService$Receiver;->mWorkSource:Landroid/os/WorkSource;
+
+    invoke-virtual {v14, v15}, Landroid/os/WorkSource;->add(Landroid/os/WorkSource;)Z
+
+    goto :goto_8
+
+    :cond_f
+    invoke-virtual {v3}, Lcom/android/internal/location/ProviderRequest$Builder;->getWorkSource()Landroid/os/WorkSource;
+
+    move-result-object v14
+
+    iget-object v15, v12, Lcom/android/server/location/LocationManagerService$UpdateRecord;->mReceiver:Lcom/android/server/location/LocationManagerService$Receiver;
 
     iget-object v15, v15, Lcom/android/server/location/LocationManagerService$Receiver;->mCallerIdentity:Lcom/android/server/location/CallerIdentity;
 
-    iget-object v15, v15, Lcom/android/server/location/CallerIdentity;->packageName:Ljava/lang/String;
+    iget v15, v15, Lcom/android/server/location/CallerIdentity;->uid:I
 
-    invoke-virtual {v13, v14, v15}, Landroid/os/WorkSource;->add(ILjava/lang/String;)Z
+    iget-object v0, v12, Lcom/android/server/location/LocationManagerService$UpdateRecord;->mReceiver:Lcom/android/server/location/LocationManagerService$Receiver;
 
-    :cond_11
+    iget-object v0, v0, Lcom/android/server/location/LocationManagerService$Receiver;->mCallerIdentity:Lcom/android/server/location/CallerIdentity;
+
+    iget-object v0, v0, Lcom/android/server/location/CallerIdentity;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v14, v15, v0}, Landroid/os/WorkSource;->add(ILjava/lang/String;)Z
+
+    :cond_10
     :goto_8
+    move-object/from16 v0, p0
+
     goto :goto_7
 
-    :cond_12
+    :cond_11
     invoke-virtual {v3}, Lcom/android/internal/location/ProviderRequest$Builder;->build()Lcom/android/internal/location/ProviderRequest;
 
-    move-result-object v4
+    move-result-object v0
 
-    invoke-virtual {v1, v4}, Lcom/android/server/location/LocationManagerService$LocationProviderManager;->setRequest(Lcom/android/internal/location/ProviderRequest;)V
+    invoke-virtual {v1, v0}, Lcom/android/server/location/LocationManagerService$LocationProviderManager;->setRequest(Lcom/android/internal/location/ProviderRequest;)V
 
     return-void
 .end method
@@ -1300,25 +1291,23 @@
 
     if-nez v6, :cond_4
 
-    goto/16 :goto_5
+    goto/16 :goto_6
 
     :cond_4
     const/4 v6, 0x0
 
     const/4 v7, 0x0
 
-    invoke-virtual {v5}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v8
+    const/4 v8, 0x0
 
     :goto_1
-    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
     move-result v9
 
-    if-eqz v9, :cond_12
+    if-ge v8, v9, :cond_12
 
-    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v5, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v9
 
@@ -1344,7 +1333,7 @@
 
     if-nez v14, :cond_5
 
-    goto :goto_1
+    goto/16 :goto_3
 
     :cond_5
     iget-object v14, v0, Lcom/android/server/location/LocationManagerService;->mUserInfoHelper:Lcom/android/server/location/UserInfoHelper;
@@ -1365,7 +1354,7 @@
 
     if-nez v14, :cond_6
 
-    goto :goto_1
+    goto/16 :goto_3
 
     :cond_6
     iget-object v14, v0, Lcom/android/server/location/LocationManagerService;->mSettingsHelper:Lcom/android/server/location/SettingsHelper;
@@ -1380,7 +1369,7 @@
 
     if-eqz v10, :cond_7
 
-    goto :goto_1
+    goto/16 :goto_3
 
     :cond_7
     iget v10, v12, Lcom/android/server/location/CallerIdentity;->permissionLevel:I
@@ -1398,11 +1387,11 @@
     goto :goto_2
 
     :cond_8
-    new-instance v8, Ljava/lang/AssertionError;
+    new-instance v10, Ljava/lang/AssertionError;
 
-    invoke-direct {v8}, Ljava/lang/AssertionError;-><init>()V
+    invoke-direct {v10}, Ljava/lang/AssertionError;-><init>()V
 
-    throw v8
+    throw v10
 
     :cond_9
     move-object/from16 v10, p3
@@ -1432,7 +1421,7 @@
 
     if-nez v14, :cond_a
 
-    goto :goto_1
+    goto :goto_3
 
     :cond_a
     invoke-virtual {v11, v10}, Lcom/android/server/location/LocationManagerService$Receiver;->callLocationChangedLocked(Landroid/location/Location;)Z
@@ -1506,6 +1495,9 @@
     invoke-virtual {v6, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_11
+    :goto_3
+    add-int/lit8 v8, v8, 0x1
+
     goto/16 :goto_1
 
     :cond_12
@@ -1515,7 +1507,7 @@
 
     move-result-object v8
 
-    :goto_3
+    :goto_4
     invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v9
@@ -1530,7 +1522,7 @@
 
     invoke-direct {v0, v9}, Lcom/android/server/location/LocationManagerService;->removeUpdatesLocked(Lcom/android/server/location/LocationManagerService$Receiver;)V
 
-    goto :goto_3
+    goto :goto_4
 
     :cond_13
     if-eqz v7, :cond_15
@@ -1539,7 +1531,7 @@
 
     move-result-object v8
 
-    :goto_4
+    :goto_5
     invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v9
@@ -1556,7 +1548,7 @@
 
     invoke-static {v9, v10}, Lcom/android/server/location/LocationManagerService$UpdateRecord;->access$3200(Lcom/android/server/location/LocationManagerService$UpdateRecord;Z)V
 
-    goto :goto_4
+    goto :goto_5
 
     :cond_14
     invoke-direct/range {p0 .. p1}, Lcom/android/server/location/LocationManagerService;->applyRequirementsLocked(Lcom/android/server/location/LocationManagerService$LocationProviderManager;)V
@@ -1565,7 +1557,7 @@
     return-void
 
     :cond_16
-    :goto_5
+    :goto_6
     return-void
 .end method
 
@@ -1875,7 +1867,7 @@
 
     move-result-object v3
 
-    const v7, 0x1070078
+    const v7, 0x1070079
 
     invoke-virtual {v3, v7}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -3987,18 +3979,16 @@
 
     if-eqz v1, :cond_4
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
+    const/4 v2, 0x0
 
     :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v3
 
-    if-eqz v3, :cond_4
+    if-ge v2, v3, :cond_4
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -4022,7 +4012,7 @@
 
     if-nez v4, :cond_0
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_0
     invoke-direct {p0, v3}, Lcom/android/server/location/LocationManagerService;->isSettingsExempt(Lcom/android/server/location/LocationManagerService$UpdateRecord;)Z
@@ -4031,7 +4021,7 @@
 
     if-eqz v4, :cond_1
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_1
     iget-object v4, v3, Lcom/android/server/location/LocationManagerService$UpdateRecord;->mReceiver:Lcom/android/server/location/LocationManagerService$Receiver;
@@ -4060,6 +4050,9 @@
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_3
+    :goto_1
+    add-int/lit8 v2, v2, 0x1
+
     goto :goto_0
 
     :cond_4
@@ -4071,7 +4064,7 @@
 
     add-int/lit8 v2, v2, -0x1
 
-    :goto_1
+    :goto_2
     if-ltz v2, :cond_5
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -4084,7 +4077,7 @@
 
     add-int/lit8 v2, v2, -0x1
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_5
     invoke-direct {p0, p1}, Lcom/android/server/location/LocationManagerService;->applyRequirementsLocked(Lcom/android/server/location/LocationManagerService$LocationProviderManager;)V
@@ -6127,7 +6120,7 @@
 
     move-result-object v0
 
-    const v1, 0x1070053
+    const v1, 0x1070054
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -6145,7 +6138,7 @@
 
     move-result-object v0
 
-    const v1, 0x1070052
+    const v1, 0x1070053
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 

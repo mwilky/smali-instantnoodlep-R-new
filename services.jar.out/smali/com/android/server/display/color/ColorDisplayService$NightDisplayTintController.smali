@@ -74,7 +74,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e0096
+    const v1, 0x10e0097
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -705,12 +705,12 @@
 
     if-eqz p2, :cond_0
 
-    const v1, 0x107005c
+    const v1, 0x107005d
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x107005d
+    const v1, 0x107005e
 
     :goto_0
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;

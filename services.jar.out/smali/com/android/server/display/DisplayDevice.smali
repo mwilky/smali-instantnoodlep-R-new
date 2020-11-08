@@ -243,6 +243,14 @@
     return-object v0
 .end method
 
+.method public final getLayerStackLocked()I
+    .locals 1
+
+    iget v0, p0, Lcom/android/server/display/DisplayDevice;->mCurrentLayerStack:I
+
+    return v0
+.end method
+
 .method public final getNameLocked()Ljava/lang/String;
     .locals 1
 

@@ -1017,7 +1017,7 @@
 
     if-nez v0, :cond_1
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_1
     iget-object v0, p0, Lcom/android/server/wm/RecentsAnimation;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
@@ -1064,11 +1064,20 @@
 
     invoke-virtual {v0}, Lcom/android/server/wm/RecentsAnimationController;->setCancelOnNextTransitionStart()V
 
+    goto :goto_0
+
     :cond_4
+    iget-object v1, p0, Lcom/android/server/wm/RecentsAnimation;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
+
+    const-string v3, "stackOrderChanged"
+
+    invoke-virtual {v1, v2, v3}, Lcom/android/server/wm/WindowManagerService;->cancelRecentsAnimation(ILjava/lang/String;)V
+
+    :goto_0
     return-void
 
     :cond_5
-    :goto_0
+    :goto_1
     return-void
 .end method
 

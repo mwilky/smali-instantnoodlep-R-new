@@ -887,7 +887,7 @@
 
     move-result-object v12
 
-    const v4, 0x10e00b6
+    const v4, 0x10e00b7
 
     invoke-virtual {v12, v4}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -905,7 +905,7 @@
 
     move-result-object v4
 
-    const v12, 0x10e00b5
+    const v12, 0x10e00b6
 
     invoke-virtual {v4, v12}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -923,7 +923,7 @@
 
     move-result-object v4
 
-    const v12, 0x10e00b4
+    const v12, 0x10e00b5
 
     invoke-virtual {v4, v12}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -946,7 +946,7 @@
 
     move-result-object v4
 
-    const v12, 0x10e00b0
+    const v12, 0x10e00b1
 
     invoke-virtual {v4, v12}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -974,7 +974,7 @@
 
     move-result-object v4
 
-    const v12, 0x10e00af
+    const v12, 0x10e00b0
 
     invoke-virtual {v4, v12}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1059,7 +1059,7 @@
 
     move-result-object v0
 
-    const v11, 0x10e00b3
+    const v11, 0x10e00b4
 
     invoke-virtual {v0, v11}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1081,7 +1081,7 @@
 
     move-result-object v0
 
-    const v2, 0x10e00b2
+    const v2, 0x10e00b3
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1101,7 +1101,7 @@
 
     move-result-object v0
 
-    const v2, 0x10e00b1
+    const v2, 0x10e00b2
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -8500,6 +8500,34 @@
     move-result-object p0
 
     :cond_5
+    const-string v0, ""
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_6
+
+    const-string v0, "none"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_6
+
+    const-string v0, "NONE"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    :cond_6
+    const-string p0, "software_reboot"
+
+    :cond_7
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -8549,11 +8577,36 @@
 .method public static lowLevelShutdown(Ljava/lang/String;)V
     .locals 2
 
-    if-nez p0, :cond_0
+    if-eqz p0, :cond_0
 
-    const-string p0, ""
+    const-string v0, ""
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, "none"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, "NONE"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
 
     :cond_0
+    const-string p0, "software_reboot"
+
+    :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -14634,7 +14687,7 @@
 
     iput-boolean v1, p0, Lcom/android/server/power/PowerManagerService;->mDreamsEnabledOnBatteryConfig:Z
 
-    const v1, 0x10e0060
+    const v1, 0x10e0061
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -14642,7 +14695,7 @@
 
     iput v1, p0, Lcom/android/server/power/PowerManagerService;->mDreamsBatteryLevelMinimumWhenPoweredConfig:I
 
-    const v1, 0x10e005f
+    const v1, 0x10e0060
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -14650,7 +14703,7 @@
 
     iput v1, p0, Lcom/android/server/power/PowerManagerService;->mDreamsBatteryLevelMinimumWhenNotPoweredConfig:I
 
-    const v1, 0x10e005e
+    const v1, 0x10e005f
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -14666,7 +14719,7 @@
 
     iput-boolean v1, p0, Lcom/android/server/power/PowerManagerService;->mDozeAfterScreenOff:Z
 
-    const v1, 0x10e0087
+    const v1, 0x10e0088
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -14676,7 +14729,7 @@
 
     iput-wide v1, p0, Lcom/android/server/power/PowerManagerService;->mMinimumScreenOffTimeoutConfig:J
 
-    const v1, 0x10e0081
+    const v1, 0x10e0082
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 

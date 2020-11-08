@@ -346,29 +346,50 @@
 
     move-result v0
 
-    sput-boolean v0, Lcom/android/server/StorageManagerService;->LOCAL_LOGV:Z
+    const/4 v1, 0x1
 
-    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+    const/4 v2, 0x0
 
     if-nez v0, :cond_1
 
-    sget-boolean v0, Lcom/android/server/StorageManagerService;->LOCAL_LOGV:Z
+    const-string/jumbo v0, "persist.debug.sm.all"
+
+    invoke-static {v0, v2}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
 
     if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    move v0, v2
 
     goto :goto_1
 
     :cond_1
     :goto_0
-    const/4 v0, 0x1
+    move v0, v1
 
     :goto_1
-    sput-boolean v0, Lcom/android/server/StorageManagerService;->DEBUG_ONEPLUS:Z
+    sput-boolean v0, Lcom/android/server/StorageManagerService;->LOCAL_LOGV:Z
+
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-nez v0, :cond_3
+
+    sget-boolean v0, Lcom/android/server/StorageManagerService;->LOCAL_LOGV:Z
+
+    if-eqz v0, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    move v1, v2
+
+    :cond_3
+    :goto_2
+    sput-boolean v1, Lcom/android/server/StorageManagerService;->DEBUG_ONEPLUS:Z
 
     const-string v0, "android.permission.READ_EXTERNAL_STORAGE"
 
@@ -9768,19 +9789,21 @@
 .end method
 
 .method public getVolumeList(ILjava/lang/String;I)[Landroid/os/storage/StorageVolume;
-    .locals 43
+    .locals 44
 
     move-object/from16 v1, p0
 
-    move/from16 v2, p3
+    move-object/from16 v2, p2
+
+    move/from16 v3, p3
 
     invoke-static/range {p1 .. p1}, Landroid/os/UserHandle;->getUserId(I)I
 
-    move-result v3
+    move-result v4
 
-    and-int/lit16 v0, v2, 0x100
+    and-int/lit16 v0, v3, 0x100
 
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
     if-eqz v0, :cond_0
 
@@ -9789,12 +9812,12 @@
     goto :goto_0
 
     :cond_0
-    move v0, v5
+    move v0, v6
 
     :goto_0
-    move v6, v0
+    move v7, v0
 
-    and-int/lit16 v0, v2, 0x200
+    and-int/lit16 v0, v3, 0x200
 
     if-eqz v0, :cond_1
 
@@ -9803,12 +9826,12 @@
     goto :goto_1
 
     :cond_1
-    move v0, v5
+    move v0, v6
 
     :goto_1
-    move v7, v0
+    move v8, v0
 
-    and-int/lit16 v0, v2, 0x400
+    and-int/lit16 v0, v3, 0x400
 
     if-eqz v0, :cond_2
 
@@ -9817,12 +9840,12 @@
     goto :goto_2
 
     :cond_2
-    move v0, v5
+    move v0, v6
 
     :goto_2
-    move v8, v0
+    move v9, v0
 
-    and-int/lit16 v0, v2, 0x800
+    and-int/lit16 v0, v3, 0x800
 
     if-eqz v0, :cond_3
 
@@ -9831,28 +9854,28 @@
     goto :goto_3
 
     :cond_3
-    move v0, v5
+    move v0, v6
 
     :goto_3
-    move v9, v0
+    move v10, v0
 
-    invoke-direct {v1, v5}, Lcom/android/server/StorageManagerService;->isSystemUnlocked(I)Z
+    invoke-direct {v1, v6}, Lcom/android/server/StorageManagerService;->isSystemUnlocked(I)Z
 
-    move-result v10
+    move-result v11
 
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    iget v11, v1, Lcom/android/server/StorageManagerService;->mMediaStoreAuthorityAppId:I
+    iget v12, v1, Lcom/android/server/StorageManagerService;->mMediaStoreAuthorityAppId:I
 
-    invoke-static {v0, v11}, Landroid/os/UserHandle;->isSameApp(II)Z
+    invoke-static {v0, v12}, Landroid/os/UserHandle;->isSameApp(II)Z
 
-    move-result v11
+    move-result v12
 
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
-    move-result-wide v12
+    move-result-wide v13
 
     :try_start_0
     const-class v0, Landroid/os/UserManagerInternal;
@@ -9863,7 +9886,7 @@
 
     check-cast v0, Landroid/os/UserManagerInternal;
 
-    invoke-virtual {v0, v3}, Landroid/os/UserManagerInternal;->getUserInfo(I)Landroid/content/pm/UserInfo;
+    invoke-virtual {v0, v4}, Landroid/os/UserManagerInternal;->getUserInfo(I)Landroid/content/pm/UserInfo;
 
     move-result-object v0
 
@@ -9871,75 +9894,76 @@
 
     move-result v0
 
-    move v14, v0
+    move v15, v0
 
-    invoke-virtual {v1, v3}, Lcom/android/server/StorageManagerService;->isUserKeyUnlocked(I)Z
+    invoke-virtual {v1, v4}, Lcom/android/server/StorageManagerService;->isUserKeyUnlocked(I)Z
 
     move-result v0
 
-    move v15, v0
+    move/from16 v16, v0
 
     iget-object v0, v1, Lcom/android/server/StorageManagerService;->mStorageManagerInternal:Lcom/android/server/StorageManagerService$StorageManagerInternalImpl;
 
-    move/from16 v4, p1
+    move/from16 v5, p1
 
-    move-object/from16 v5, p2
-
-    invoke-virtual {v0, v4, v5}, Lcom/android/server/StorageManagerService$StorageManagerInternalImpl;->hasExternalStorage(ILjava/lang/String;)Z
+    invoke-virtual {v0, v5, v2}, Lcom/android/server/StorageManagerService$StorageManagerInternalImpl;->hasExternalStorage(ILjava/lang/String;)Z
 
     move-result v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_d
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
-    invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+    invoke-static {v13, v14}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     nop
 
     const/4 v0, 0x0
 
-    new-instance v18, Ljava/util/ArrayList;
+    new-instance v19, Ljava/util/ArrayList;
 
-    invoke-direct/range {v18 .. v18}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct/range {v19 .. v19}, Ljava/util/ArrayList;-><init>()V
 
-    move-object/from16 v19, v18
+    move-object/from16 v20, v19
 
-    new-instance v18, Landroid/util/ArraySet;
+    new-instance v19, Landroid/util/ArraySet;
 
-    invoke-direct/range {v18 .. v18}, Landroid/util/ArraySet;-><init>()V
+    invoke-direct/range {v19 .. v19}, Landroid/util/ArraySet;-><init>()V
 
-    move-object/from16 v20, v18
+    move-object/from16 v21, v19
 
-    iget-object v2, v1, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
+    iget-object v6, v1, Lcom/android/server/StorageManagerService;->mLock:Ljava/lang/Object;
 
-    monitor-enter v2
+    monitor-enter v6
 
-    const/16 v18, 0x0
+    const/16 v22, 0x0
 
-    move/from16 v42, v18
+    move/from16 v43, v22
 
-    move/from16 v18, v0
+    move/from16 v22, v0
 
-    move/from16 v0, v42
+    move/from16 v0, v43
 
     :goto_4
     :try_start_1
-    iget-object v4, v1, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
+    iget-object v3, v1, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
 
-    invoke-virtual {v4}, Landroid/util/ArrayMap;->size()I
+    invoke-virtual {v3}, Landroid/util/ArrayMap;->size()I
 
-    move-result v4
+    move-result v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_b
 
-    if-ge v0, v4, :cond_16
+    if-ge v0, v3, :cond_13
 
-    iget-object v4, v1, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
+    :try_start_2
+    iget-object v3, v1, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
 
-    invoke-virtual {v4, v0}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
+    invoke-virtual {v3, v0}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v3
 
-    check-cast v4, Ljava/lang/String;
+    check-cast v3, Ljava/lang/String;
 
     iget-object v5, v1, Lcom/android/server/StorageManagerService;->mVolumes:Landroid/util/ArrayMap;
 
@@ -9949,692 +9973,700 @@
 
     check-cast v5, Landroid/os/storage/VolumeInfo;
 
-    sget-boolean v21, Lcom/android/server/StorageManagerService;->LOCAL_LOGV:Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_b
-
-    if-eqz v21, :cond_4
-
-    move-wide/from16 v21, v12
-
-    :try_start_2
-    const-string v12, "StorageManagerService"
-
-    new-instance v13, Ljava/lang/StringBuilder;
-
-    invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
+    sget-boolean v23, Lcom/android/server/StorageManagerService;->LOCAL_LOGV:Z
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    .catchall {:try_start_2 .. :try_end_2} :catchall_9
 
-    move/from16 v23, v14
+    if-eqz v23, :cond_4
+
+    move-wide/from16 v23, v13
 
     :try_start_3
-    const-string v14, "getVolumeList: vol("
+    const-string v13, "StorageManagerService"
 
-    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v14, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v13, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v14, ") = "
-
-    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v13, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v13}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v13
-
-    invoke-static {v12, v13}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    move/from16 v25, v15
+
+    :try_start_4
+    const-string v15, "getVolumeList: vol("
+
+    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v14, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v15, ") = "
+
+    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v14, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v14}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v14
+
+    invoke-static {v13, v14}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
     goto :goto_5
 
     :catchall_0
     move-exception v0
 
-    move/from16 v26, v6
+    move/from16 v25, v15
 
-    move/from16 v25, v9
+    move/from16 v27, v7
 
-    move-object/from16 v4, v19
+    move v5, v8
 
-    move-object/from16 v14, v20
+    move-object/from16 v3, v20
 
-    goto/16 :goto_14
+    move-object/from16 v15, v21
+
+    goto/16 :goto_13
+
+    :cond_4
+    move-wide/from16 v23, v13
+
+    move/from16 v25, v15
+
+    :goto_5
+    :try_start_5
+    invoke-virtual {v5}, Landroid/os/storage/VolumeInfo;->getType()I
+
+    move-result v13
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_8
+
+    const/4 v14, 0x2
+
+    if-eqz v13, :cond_7
+
+    if-eq v13, v14, :cond_5
+
+    const/4 v15, 0x5
+
+    if-eq v13, v15, :cond_7
+
+    goto :goto_6
+
+    :cond_5
+    :try_start_6
+    invoke-virtual {v5}, Landroid/os/storage/VolumeInfo;->getMountUserId()I
+
+    move-result v13
+
+    if-ne v13, v4, :cond_6
+
+    sget-boolean v13, Lcom/android/server/StorageManagerService;->LOCAL_LOGV:Z
+
+    if-eqz v13, :cond_8
+
+    const-string v13, "StorageManagerService"
+
+    new-instance v15, Ljava/lang/StringBuilder;
+
+    invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v14, "getVolumeList: userId = "
+
+    invoke-virtual {v15, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v15, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v14, ", packageName = "
+
+    invoke-virtual {v15, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v15, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v14, ", path = "
+
+    invoke-virtual {v15, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Landroid/os/storage/VolumeInfo;->getPath()Ljava/io/File;
+
+    move-result-object v14
+
+    invoke-virtual {v15, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v14
+
+    invoke-static {v13, v14}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_7
+
+    :cond_6
+    :goto_6
+    goto :goto_b
 
     :catchall_1
     move-exception v0
 
-    move/from16 v23, v14
+    move/from16 v27, v7
 
-    move/from16 v26, v6
+    move v5, v8
 
-    move/from16 v25, v9
+    move-object/from16 v3, v20
 
-    move-object/from16 v4, v19
+    move-object/from16 v15, v21
 
-    move-object/from16 v14, v20
+    goto/16 :goto_13
 
-    goto/16 :goto_14
+    :cond_7
+    nop
 
-    :cond_4
-    move-wide/from16 v21, v12
+    :cond_8
+    :goto_7
+    const/4 v13, 0x0
 
-    move/from16 v23, v14
+    if-eqz v7, :cond_9
 
-    :goto_5
-    :try_start_4
-    invoke-virtual {v5}, Landroid/os/storage/VolumeInfo;->getType()I
+    invoke-virtual {v5, v4}, Landroid/os/storage/VolumeInfo;->isVisibleForWrite(I)Z
 
-    move-result v12
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_a
+    move-result v14
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    const/4 v13, 0x2
+    move v13, v14
 
-    if-eqz v12, :cond_a
+    goto :goto_a
 
-    if-eq v12, v13, :cond_6
+    :cond_9
+    :try_start_7
+    invoke-virtual {v5, v4}, Landroid/os/storage/VolumeInfo;->isVisibleForRead(I)Z
 
-    const/4 v14, 0x5
+    move-result v14
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_8
 
-    if-eq v12, v14, :cond_5
+    if-nez v14, :cond_b
 
-    move/from16 v25, v9
+    if-eqz v9, :cond_a
 
-    goto :goto_7
+    :try_start_8
+    invoke-virtual {v5}, Landroid/os/storage/VolumeInfo;->getPath()Ljava/io/File;
 
-    :cond_5
-    move/from16 v25, v9
+    move-result-object v14
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_1
+
+    if-eqz v14, :cond_a
 
     goto :goto_8
 
-    :cond_6
-    :try_start_5
-    invoke-virtual {v5}, Landroid/os/storage/VolumeInfo;->getMountUserId()I
-
-    move-result v12
-
-    sget-boolean v14, Lcom/android/server/StorageManagerService;->DEBUG_ONEPLUS:Z
-
-    if-eqz v14, :cond_7
-
-    const-string v14, "StorageManagerService"
-
-    new-instance v13, Ljava/lang/StringBuilder;
-
-    invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
-
-    move/from16 v25, v9
-
-    :try_start_6
-    const-string v9, "getVolumeList: mountedUserId "
-
-    invoke-virtual {v13, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v13, v12}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v13}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v9
-
-    invoke-static {v14, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_6
-
-    :cond_7
-    move/from16 v25, v9
-
-    :goto_6
-    if-eq v12, v3, :cond_b
-
-    const/16 v9, 0x3e7
-
-    if-ne v12, v9, :cond_8
-
-    if-eqz v3, :cond_b
-
-    :cond_8
-    if-nez v12, :cond_9
-
-    if-ne v3, v9, :cond_9
+    :cond_a
+    const/4 v14, 0x0
 
     goto :goto_9
 
-    :cond_9
-    :goto_7
-    goto :goto_d
+    :cond_b
+    :goto_8
+    const/4 v14, 0x1
+
+    :goto_9
+    move v13, v14
+
+    :goto_a
+    if-nez v13, :cond_c
+
+    :goto_b
+    move/from16 v27, v7
+
+    move-object/from16 v3, v20
+
+    move-object/from16 v15, v21
+
+    goto/16 :goto_f
+
+    :cond_c
+    const/4 v14, 0x0
+
+    if-eqz v12, :cond_d
+
+    move/from16 v27, v7
+
+    goto/16 :goto_c
+
+    :cond_d
+    if-nez v11, :cond_e
+
+    const/4 v14, 0x1
+
+    :try_start_9
+    const-string v15, "StorageManagerService"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_2
+
+    move/from16 v27, v7
+
+    :try_start_a
+    const-string v7, "Reporting "
+
+    invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v7, " unmounted due to system locked"
+
+    invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v15, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_a
+    .catchall {:try_start_a .. :try_end_a} :catchall_3
+
+    goto :goto_c
 
     :catchall_2
     move-exception v0
 
-    move/from16 v25, v9
+    move/from16 v27, v7
 
-    move/from16 v26, v6
+    move v5, v8
 
-    move-object/from16 v4, v19
+    move-object/from16 v3, v20
 
-    move-object/from16 v14, v20
+    move-object/from16 v15, v21
 
-    goto/16 :goto_14
+    goto/16 :goto_13
 
-    :cond_a
-    move/from16 v25, v9
+    :cond_e
+    move/from16 v27, v7
 
-    :goto_8
-    nop
+    :try_start_b
+    invoke-virtual {v5}, Landroid/os/storage/VolumeInfo;->getType()I
 
-    :cond_b
-    :goto_9
-    const/4 v9, 0x0
+    move-result v2
+    :try_end_b
+    .catchall {:try_start_b .. :try_end_b} :catchall_7
 
-    if-eqz v6, :cond_c
+    const/4 v7, 0x2
 
-    invoke-virtual {v5, v3}, Landroid/os/storage/VolumeInfo;->isVisibleForWrite(I)Z
+    if-ne v2, v7, :cond_f
 
-    move-result v12
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_3
+    if-nez v16, :cond_f
 
-    move v9, v12
+    const/4 v14, 0x1
+
+    :try_start_c
+    const-string v2, "StorageManagerService"
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v15, "Reporting "
+
+    invoke-virtual {v7, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string/jumbo v15, "unmounted due to "
+
+    invoke-virtual {v7, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v15, " locked"
+
+    invoke-virtual {v7, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v2, v7}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_c
 
     :catchall_3
     move-exception v0
 
-    move/from16 v26, v6
+    move v5, v8
 
-    move-object/from16 v4, v19
+    move-object/from16 v3, v20
 
-    move-object/from16 v14, v20
+    move-object/from16 v15, v21
 
-    goto/16 :goto_14
-
-    :cond_c
-    :try_start_7
-    invoke-virtual {v5, v3}, Landroid/os/storage/VolumeInfo;->isVisibleForRead(I)Z
-
-    move-result v12
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_9
-
-    if-nez v12, :cond_e
-
-    if-eqz v8, :cond_d
-
-    :try_start_8
-    invoke-virtual {v5}, Landroid/os/storage/VolumeInfo;->getPath()Ljava/io/File;
-
-    move-result-object v12
-    :try_end_8
-    .catchall {:try_start_8 .. :try_end_8} :catchall_3
-
-    if-eqz v12, :cond_d
-
-    goto :goto_a
-
-    :cond_d
-    const/4 v12, 0x0
-
-    goto :goto_b
-
-    :cond_e
-    :goto_a
-    const/4 v12, 0x1
-
-    :goto_b
-    move v9, v12
-
-    :goto_c
-    if-nez v9, :cond_f
-
-    :goto_d
-    move/from16 v26, v6
-
-    move-object/from16 v4, v19
-
-    move-object/from16 v14, v20
-
-    goto/16 :goto_11
+    goto/16 :goto_13
 
     :cond_f
-    const/4 v12, 0x0
+    if-nez v18, :cond_10
 
-    if-eqz v11, :cond_10
+    if-nez v8, :cond_10
 
-    move/from16 v26, v6
+    const-string v2, "StorageManagerService"
 
-    goto/16 :goto_e
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v15, "Reporting "
+
+    invoke-virtual {v7, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string/jumbo v15, "unmounted due to missing permissions"
+
+    invoke-virtual {v7, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v2, v7}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_c
+    .catchall {:try_start_c .. :try_end_c} :catchall_3
+
+    const/4 v14, 0x1
 
     :cond_10
-    if-nez v10, :cond_11
+    :goto_c
+    :try_start_d
+    iget-object v2, v1, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
-    const/4 v12, 0x1
+    invoke-virtual {v5, v2, v4, v14}, Landroid/os/storage/VolumeInfo;->buildStorageVolume(Landroid/content/Context;IZ)Landroid/os/storage/StorageVolume;
 
-    :try_start_9
-    const-string v13, "StorageManagerService"
+    move-result-object v2
 
-    new-instance v14, Ljava/lang/StringBuilder;
+    sget-boolean v7, Lcom/android/server/StorageManagerService;->DEBUG_ONEPLUS:Z
+    :try_end_d
+    .catchall {:try_start_d .. :try_end_d} :catchall_7
 
-    invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
-    :try_end_9
-    .catchall {:try_start_9 .. :try_end_9} :catchall_4
+    if-eqz v7, :cond_11
 
-    move/from16 v26, v6
+    :try_start_e
+    const-string v7, "StorageManagerService"
 
-    :try_start_a
-    const-string v6, "Reporting "
+    new-instance v15, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v14, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v14, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-object/from16 v26, v3
 
-    const-string v6, " unmounted due to system locked"
+    const-string v3, "getVolumeList: userVol = "
 
-    invoke-virtual {v14, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v14}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v15, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v6
+    const-string v3, ", getInternalPath = "
 
-    invoke-static {v13, v6}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_a
-    .catchall {:try_start_a .. :try_end_a} :catchall_5
+    invoke-virtual {v15, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Landroid/os/storage/StorageVolume;->getInternalPath()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v15, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v7, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_e
+    .catchall {:try_start_e .. :try_end_e} :catchall_3
+
+    goto :goto_d
+
+    :cond_11
+    move-object/from16 v26, v3
+
+    :goto_d
+    :try_start_f
+    invoke-virtual {v5}, Landroid/os/storage/VolumeInfo;->isPrimary()Z
+
+    move-result v3
+    :try_end_f
+    .catchall {:try_start_f .. :try_end_f} :catchall_7
+
+    if-eqz v3, :cond_12
+
+    move-object/from16 v3, v20
+
+    const/4 v7, 0x0
+
+    :try_start_10
+    invoke-virtual {v3, v7, v2}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+    :try_end_10
+    .catchall {:try_start_10 .. :try_end_10} :catchall_4
+
+    const/4 v7, 0x1
+
+    move/from16 v22, v7
 
     goto :goto_e
 
     :catchall_4
     move-exception v0
 
-    move/from16 v26, v6
+    move v5, v8
 
-    move-object/from16 v4, v19
+    move-object/from16 v15, v21
 
-    move-object/from16 v14, v20
+    goto/16 :goto_13
 
-    goto/16 :goto_14
+    :cond_12
+    move-object/from16 v3, v20
 
-    :cond_11
-    move/from16 v26, v6
+    :try_start_11
+    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :try_start_b
-    invoke-virtual {v5}, Landroid/os/storage/VolumeInfo;->getType()I
+    :goto_e
+    invoke-virtual {v2}, Landroid/os/storage/StorageVolume;->getUuid()Ljava/lang/String;
 
-    move-result v6
-    :try_end_b
-    .catchall {:try_start_b .. :try_end_b} :catchall_8
+    move-result-object v7
+    :try_end_11
+    .catchall {:try_start_11 .. :try_end_11} :catchall_6
 
-    const/4 v13, 0x2
+    move-object/from16 v15, v21
 
-    if-ne v6, v13, :cond_12
+    :try_start_12
+    invoke-virtual {v15, v7}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
+    :try_end_12
+    .catchall {:try_start_12 .. :try_end_12} :catchall_5
 
-    if-nez v15, :cond_12
+    :goto_f
+    add-int/lit8 v0, v0, 0x1
 
-    const/4 v12, 0x1
+    move/from16 v5, p1
 
-    :try_start_c
-    const-string v6, "StorageManagerService"
+    move-object/from16 v2, p2
 
-    new-instance v13, Ljava/lang/StringBuilder;
+    move-object/from16 v20, v3
 
-    invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
+    move-object/from16 v21, v15
 
-    const-string v14, "Reporting "
+    move-wide/from16 v13, v23
 
-    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move/from16 v15, v25
 
-    invoke-virtual {v13, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move/from16 v7, v27
 
-    const-string/jumbo v14, "unmounted due to "
+    move/from16 v3, p3
 
-    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v13, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v14, " locked"
-
-    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v13}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v13
-
-    invoke-static {v6, v13}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_e
+    goto/16 :goto_4
 
     :catchall_5
     move-exception v0
 
-    move-object/from16 v4, v19
+    move v5, v8
 
-    move-object/from16 v14, v20
-
-    goto/16 :goto_14
-
-    :cond_12
-    if-nez v17, :cond_13
-
-    if-nez v7, :cond_13
-
-    const-string v6, "StorageManagerService"
-
-    new-instance v13, Ljava/lang/StringBuilder;
-
-    invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v14, "Reporting "
-
-    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v13, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string/jumbo v14, "unmounted due to missing permissions"
-
-    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v13}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v13
-
-    invoke-static {v6, v13}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_c
-    .catchall {:try_start_c .. :try_end_c} :catchall_5
-
-    const/4 v12, 0x1
-
-    :cond_13
-    :goto_e
-    :try_start_d
-    iget-object v6, v1, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v5, v6, v3, v12}, Landroid/os/storage/VolumeInfo;->buildStorageVolume(Landroid/content/Context;IZ)Landroid/os/storage/StorageVolume;
-
-    move-result-object v6
-
-    sget-boolean v13, Lcom/android/server/StorageManagerService;->DEBUG_ONEPLUS:Z
-    :try_end_d
-    .catchall {:try_start_d .. :try_end_d} :catchall_8
-
-    if-eqz v13, :cond_14
-
-    :try_start_e
-    const-string v13, "StorageManagerService"
-
-    new-instance v14, Ljava/lang/StringBuilder;
-
-    invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
-
-    move-object/from16 v24, v4
-
-    const-string v4, "getVolumeList: userVol = "
-
-    invoke-virtual {v14, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v14, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v4, ", getInternalPath = "
-
-    invoke-virtual {v14, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Landroid/os/storage/StorageVolume;->getInternalPath()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v14, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v14}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v13, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_e
-    .catchall {:try_start_e .. :try_end_e} :catchall_5
-
-    goto :goto_f
-
-    :cond_14
-    move-object/from16 v24, v4
-
-    :goto_f
-    :try_start_f
-    invoke-virtual {v5}, Landroid/os/storage/VolumeInfo;->isPrimary()Z
-
-    move-result v4
-    :try_end_f
-    .catchall {:try_start_f .. :try_end_f} :catchall_8
-
-    if-eqz v4, :cond_15
-
-    move-object/from16 v4, v19
-
-    const/4 v13, 0x0
-
-    :try_start_10
-    invoke-virtual {v4, v13, v6}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
-    :try_end_10
-    .catchall {:try_start_10 .. :try_end_10} :catchall_6
-
-    const/4 v13, 0x1
-
-    move/from16 v18, v13
-
-    goto :goto_10
+    goto/16 :goto_13
 
     :catchall_6
     move-exception v0
 
-    move-object/from16 v14, v20
+    move-object/from16 v15, v21
 
-    goto/16 :goto_14
+    move v5, v8
 
-    :cond_15
-    move-object/from16 v4, v19
-
-    :try_start_11
-    invoke-virtual {v4, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :goto_10
-    invoke-virtual {v6}, Landroid/os/storage/StorageVolume;->getUuid()Ljava/lang/String;
-
-    move-result-object v13
-    :try_end_11
-    .catchall {:try_start_11 .. :try_end_11} :catchall_7
-
-    move-object/from16 v14, v20
-
-    :try_start_12
-    invoke-virtual {v14, v13}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
-
-    :goto_11
-    add-int/lit8 v0, v0, 0x1
-
-    move-object/from16 v5, p2
-
-    move-object/from16 v19, v4
-
-    move-object/from16 v20, v14
-
-    move-wide/from16 v12, v21
-
-    move/from16 v14, v23
-
-    move/from16 v9, v25
-
-    move/from16 v6, v26
-
-    move/from16 v4, p1
-
-    goto/16 :goto_4
+    goto/16 :goto_13
 
     :catchall_7
     move-exception v0
 
-    move-object/from16 v14, v20
+    move-object/from16 v3, v20
 
-    goto/16 :goto_14
+    move-object/from16 v15, v21
+
+    move v5, v8
+
+    goto/16 :goto_13
 
     :catchall_8
     move-exception v0
 
-    move-object/from16 v4, v19
+    move/from16 v27, v7
 
-    move-object/from16 v14, v20
+    move-object/from16 v3, v20
 
-    goto/16 :goto_14
+    move-object/from16 v15, v21
+
+    move v5, v8
+
+    goto/16 :goto_13
 
     :catchall_9
     move-exception v0
 
-    move/from16 v26, v6
+    move/from16 v27, v7
 
-    move-object/from16 v4, v19
+    move-wide/from16 v23, v13
 
-    move-object/from16 v14, v20
+    move/from16 v25, v15
 
-    goto/16 :goto_14
+    move-object/from16 v3, v20
+
+    move-object/from16 v15, v21
+
+    move v5, v8
+
+    goto/16 :goto_13
+
+    :cond_13
+    move/from16 v27, v7
+
+    move-wide/from16 v23, v13
+
+    move/from16 v25, v15
+
+    move-object/from16 v3, v20
+
+    move-object/from16 v15, v21
+
+    if-eqz v10, :cond_17
+
+    :try_start_13
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v13
+
+    const-wide/32 v20, 0x240c8400
+
+    sub-long v13, v13, v20
+
+    const/4 v0, 0x0
+
+    :goto_10
+    iget-object v2, v1, Lcom/android/server/StorageManagerService;->mRecords:Landroid/util/ArrayMap;
+
+    invoke-virtual {v2}, Landroid/util/ArrayMap;->size()I
+
+    move-result v2
+
+    if-ge v0, v2, :cond_16
+
+    iget-object v2, v1, Lcom/android/server/StorageManagerService;->mRecords:Landroid/util/ArrayMap;
+
+    invoke-virtual {v2, v0}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/os/storage/VolumeRecord;
+
+    iget-object v5, v2, Landroid/os/storage/VolumeRecord;->fsUuid:Ljava/lang/String;
+
+    invoke-virtual {v15, v5}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
+
+    move-result v5
+    :try_end_13
+    .catchall {:try_start_13 .. :try_end_13} :catchall_a
+
+    if-eqz v5, :cond_14
+
+    move v5, v8
+
+    goto :goto_11
+
+    :cond_14
+    move v5, v8
+
+    :try_start_14
+    iget-wide v7, v2, Landroid/os/storage/VolumeRecord;->lastSeenMillis:J
+
+    const-wide/16 v20, 0x0
+
+    cmp-long v7, v7, v20
+
+    if-lez v7, :cond_15
+
+    iget-wide v7, v2, Landroid/os/storage/VolumeRecord;->lastSeenMillis:J
+
+    cmp-long v7, v7, v13
+
+    if-gez v7, :cond_15
+
+    iget-object v7, v1, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v2, v7}, Landroid/os/storage/VolumeRecord;->buildStorageVolume(Landroid/content/Context;)Landroid/os/storage/StorageVolume;
+
+    move-result-object v7
+
+    invoke-virtual {v3, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v7}, Landroid/os/storage/StorageVolume;->getUuid()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v15, v8}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
+
+    :cond_15
+    :goto_11
+    add-int/lit8 v0, v0, 0x1
+
+    move v8, v5
+
+    goto :goto_10
+
+    :cond_16
+    move v5, v8
+
+    goto :goto_12
 
     :catchall_a
     move-exception v0
 
-    move/from16 v26, v6
+    move v5, v8
 
-    move/from16 v25, v9
-
-    move-object/from16 v4, v19
-
-    move-object/from16 v14, v20
-
-    goto/16 :goto_14
-
-    :cond_16
-    move/from16 v26, v6
-
-    move/from16 v25, v9
-
-    move-wide/from16 v21, v12
-
-    move/from16 v23, v14
-
-    move-object/from16 v4, v19
-
-    move-object/from16 v14, v20
-
-    if-eqz v25, :cond_19
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v5
-
-    const-wide/32 v12, 0x240c8400
-
-    sub-long/2addr v5, v12
-
-    const/4 v0, 0x0
-
-    :goto_12
-    iget-object v9, v1, Lcom/android/server/StorageManagerService;->mRecords:Landroid/util/ArrayMap;
-
-    invoke-virtual {v9}, Landroid/util/ArrayMap;->size()I
-
-    move-result v9
-
-    if-ge v0, v9, :cond_19
-
-    iget-object v9, v1, Lcom/android/server/StorageManagerService;->mRecords:Landroid/util/ArrayMap;
-
-    invoke-virtual {v9, v0}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Landroid/os/storage/VolumeRecord;
-
-    iget-object v12, v9, Landroid/os/storage/VolumeRecord;->fsUuid:Ljava/lang/String;
-
-    invoke-virtual {v14, v12}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
-
-    move-result v12
-
-    if-eqz v12, :cond_17
-
-    goto :goto_13
+    goto/16 :goto_13
 
     :cond_17
-    iget-wide v12, v9, Landroid/os/storage/VolumeRecord;->lastSeenMillis:J
+    move v5, v8
 
-    const-wide/16 v19, 0x0
+    :goto_12
+    monitor-exit v6
+    :try_end_14
+    .catchall {:try_start_14 .. :try_end_14} :catchall_c
 
-    cmp-long v12, v12, v19
-
-    if-lez v12, :cond_18
-
-    iget-wide v12, v9, Landroid/os/storage/VolumeRecord;->lastSeenMillis:J
-
-    cmp-long v12, v12, v5
-
-    if-gez v12, :cond_18
-
-    iget-object v12, v1, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v9, v12}, Landroid/os/storage/VolumeRecord;->buildStorageVolume(Landroid/content/Context;)Landroid/os/storage/StorageVolume;
-
-    move-result-object v12
-
-    invoke-virtual {v4, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    invoke-virtual {v12}, Landroid/os/storage/StorageVolume;->getUuid()Ljava/lang/String;
-
-    move-result-object v13
-
-    invoke-virtual {v14, v13}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
-
-    :cond_18
-    :goto_13
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_12
-
-    :cond_19
-    monitor-exit v2
-    :try_end_12
-    .catchall {:try_start_12 .. :try_end_12} :catchall_c
-
-    if-eqz v23, :cond_1a
+    if-eqz v25, :cond_18
 
     const-string v2, "demo"
 
     invoke-static {}, Landroid/os/Environment;->getDataPreloadsMediaDirectory()Ljava/io/File;
 
-    move-result-object v5
+    move-result-object v6
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    const/4 v9, 0x0
+    const/4 v8, 0x0
 
-    const/4 v12, 0x1
+    const/4 v13, 0x1
 
-    const/4 v13, 0x0
+    const/4 v14, 0x0
 
-    const-wide/16 v19, 0x0
+    const-wide/16 v20, 0x0
 
     new-instance v0, Landroid/os/UserHandle;
 
-    invoke-direct {v0, v3}, Landroid/os/UserHandle;-><init>(I)V
+    invoke-direct {v0, v4}, Landroid/os/UserHandle;-><init>(I)V
 
-    move-object/from16 v38, v0
+    move-object/from16 v39, v0
 
     const-string/jumbo v0, "mounted_ro"
 
-    move-object/from16 v24, v0
+    move-object/from16 v26, v0
 
     iget-object v0, v1, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
-    move-object/from16 v41, v2
+    move-object/from16 v42, v2
 
     const v2, 0x104000e
 
@@ -10644,36 +10676,36 @@
 
     new-instance v2, Landroid/os/storage/StorageVolume;
 
-    const/16 v32, 0x0
-
     const/16 v33, 0x0
 
-    const/16 v34, 0x1
+    const/16 v34, 0x0
 
-    const/16 v35, 0x0
+    const/16 v35, 0x1
 
-    const-wide/16 v36, 0x0
+    const/16 v36, 0x0
 
-    const-string v28, "demo"
+    const-wide/16 v37, 0x0
 
-    const-string v39, "demo"
+    const-string v29, "demo"
 
-    const-string/jumbo v40, "mounted_ro"
+    const-string v40, "demo"
 
-    move-object/from16 v27, v2
+    const-string/jumbo v41, "mounted_ro"
 
-    move-object/from16 v29, v5
+    move-object/from16 v28, v2
 
-    move-object/from16 v30, v5
+    move-object/from16 v30, v6
 
-    move-object/from16 v31, v0
+    move-object/from16 v31, v6
 
-    invoke-direct/range {v27 .. v40}, Landroid/os/storage/StorageVolume;-><init>(Ljava/lang/String;Ljava/io/File;Ljava/io/File;Ljava/lang/String;ZZZZJLandroid/os/UserHandle;Ljava/lang/String;Ljava/lang/String;)V
+    move-object/from16 v32, v0
 
-    invoke-virtual {v4, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-direct/range {v28 .. v41}, Landroid/os/storage/StorageVolume;-><init>(Ljava/lang/String;Ljava/io/File;Ljava/io/File;Ljava/lang/String;ZZZZJLandroid/os/UserHandle;Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_1a
-    if-nez v18, :cond_1b
+    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_18
+    if-nez v22, :cond_19
 
     const-string v0, "StorageManagerService"
 
@@ -10693,74 +10725,74 @@
 
     invoke-static {}, Landroid/os/Environment;->getLegacyExternalStorageDirectory()Ljava/io/File;
 
-    move-result-object v5
-
-    iget-object v6, v1, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
-
-    const v9, 0x104000e
-
-    invoke-virtual {v6, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
     move-result-object v6
 
-    const/4 v9, 0x1
+    iget-object v7, v1, Lcom/android/server/StorageManagerService;->mContext:Landroid/content/Context;
 
-    move/from16 v33, v0
+    const v8, 0x104000e
 
-    xor-int/lit8 v34, v0, 0x1
+    invoke-virtual {v7, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    const/4 v12, 0x0
+    move-result-object v7
 
-    const-wide/16 v19, 0x0
+    const/4 v8, 0x1
 
-    new-instance v13, Landroid/os/UserHandle;
+    move/from16 v34, v0
 
-    invoke-direct {v13, v3}, Landroid/os/UserHandle;-><init>(I)V
-
-    move-object/from16 v38, v13
+    xor-int/lit8 v35, v0, 0x1
 
     const/4 v13, 0x0
 
-    const-string/jumbo v16, "removed"
+    const-wide/16 v20, 0x0
 
-    move/from16 v24, v0
+    new-instance v14, Landroid/os/UserHandle;
+
+    invoke-direct {v14, v4}, Landroid/os/UserHandle;-><init>(I)V
+
+    move-object/from16 v39, v14
+
+    const/4 v14, 0x0
+
+    const-string/jumbo v17, "removed"
+
+    move/from16 v26, v0
 
     new-instance v0, Landroid/os/storage/StorageVolume;
 
-    const/16 v32, 0x1
+    const/16 v33, 0x1
 
-    const/16 v35, 0x0
+    const/16 v36, 0x0
 
-    const-wide/16 v36, 0x0
+    const-wide/16 v37, 0x0
 
-    const-string/jumbo v28, "stub_primary"
+    const-string/jumbo v29, "stub_primary"
 
-    const-string/jumbo v40, "removed"
+    const-string/jumbo v41, "removed"
 
-    move-object/from16 v27, v0
+    move-object/from16 v28, v0
 
-    move-object/from16 v29, v5
-
-    move-object/from16 v30, v5
+    move-object/from16 v30, v6
 
     move-object/from16 v31, v6
 
-    move-object/from16 v39, v13
+    move-object/from16 v32, v7
 
-    invoke-direct/range {v27 .. v40}, Landroid/os/storage/StorageVolume;-><init>(Ljava/lang/String;Ljava/io/File;Ljava/io/File;Ljava/lang/String;ZZZZJLandroid/os/UserHandle;Ljava/lang/String;Ljava/lang/String;)V
+    move-object/from16 v40, v14
+
+    invoke-direct/range {v28 .. v41}, Landroid/os/storage/StorageVolume;-><init>(Ljava/lang/String;Ljava/io/File;Ljava/io/File;Ljava/lang/String;ZZZZJLandroid/os/UserHandle;Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
-    invoke-virtual {v4, v1, v0}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+    invoke-virtual {v3, v1, v0}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    :cond_1b
-    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
+    :cond_19
+    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
     new-array v0, v0, [Landroid/os/storage/StorageVolume;
 
-    invoke-virtual {v4, v0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-virtual {v3, v0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
 
@@ -10771,41 +10803,41 @@
     :catchall_b
     move-exception v0
 
-    move/from16 v26, v6
+    move/from16 v27, v7
 
-    move/from16 v25, v9
+    move v5, v8
 
-    move-wide/from16 v21, v12
+    move-wide/from16 v23, v13
 
-    move/from16 v23, v14
+    move/from16 v25, v15
 
-    move-object/from16 v4, v19
+    move-object/from16 v3, v20
 
-    move-object/from16 v14, v20
+    move-object/from16 v15, v21
 
-    :goto_14
-    :try_start_13
-    monitor-exit v2
-    :try_end_13
-    .catchall {:try_start_13 .. :try_end_13} :catchall_c
+    :goto_13
+    :try_start_15
+    monitor-exit v6
+    :try_end_15
+    .catchall {:try_start_15 .. :try_end_15} :catchall_c
 
     throw v0
 
     :catchall_c
     move-exception v0
 
-    goto :goto_14
+    goto :goto_13
 
     :catchall_d
     move-exception v0
 
-    move/from16 v26, v6
+    move/from16 v27, v7
 
-    move/from16 v25, v9
+    move v5, v8
 
-    move-wide/from16 v21, v12
+    move-wide/from16 v23, v13
 
-    invoke-static/range {v21 .. v22}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+    invoke-static/range {v23 .. v24}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     throw v0
 .end method

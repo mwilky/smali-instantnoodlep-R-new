@@ -3639,7 +3639,7 @@
 
     move-result-object v1
 
-    const v2, 0x10e003b
+    const v2, 0x10e003c
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -3647,7 +3647,7 @@
 
     iput v2, p0, Lcom/android/server/UiModeManagerService;->mNightMode:I
 
-    const v2, 0x10e0044
+    const v2, 0x10e0045
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -3655,7 +3655,7 @@
 
     iput v2, p0, Lcom/android/server/UiModeManagerService;->mDefaultUiModeType:I
 
-    const v2, 0x10e002c
+    const v2, 0x10e002d
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -3677,7 +3677,7 @@
     :goto_0
     iput-boolean v2, p0, Lcom/android/server/UiModeManagerService;->mCarModeKeepsScreenOn:Z
 
-    const v2, 0x10e0046
+    const v2, 0x10e0047
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 

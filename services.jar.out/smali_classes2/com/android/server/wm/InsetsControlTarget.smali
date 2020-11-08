@@ -32,6 +32,14 @@
     return v0
 .end method
 
+.method public getRequestedInsetsState()Landroid/view/InsetsState;
+    .locals 1
+
+    sget-object v0, Landroid/view/InsetsState;->EMPTY:Landroid/view/InsetsState;
+
+    return-object v0
+.end method
+
 .method public getWindow()Lcom/android/server/wm/WindowState;
     .locals 1
 

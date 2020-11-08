@@ -96,82 +96,6 @@
     return-void
 .end method
 
-.method public static anyMotionResultOverride(I)I
-    .locals 2
-
-    sget-boolean v0, Lcom/android/server/DeviceIdleControllerInjector;->DEBUG_INJECTOR:Z
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "DeviceIdleControllerInjector"
-
-    const-string v1, "anyMotionResultOverride"
-
-    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    sget-object v0, Lcom/android/server/DeviceIdleControllerInjector;->opAggressiveDoze:Lcom/android/server/IOpAggressiveDoze;
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0, p0}, Lcom/android/server/IOpAggressiveDoze;->anyMotionResultOverride(I)I
-
-    move-result v0
-
-    return v0
-
-    :cond_1
-    return p0
-.end method
-
-.method public static clearGpsUids()V
-    .locals 2
-
-    sget-boolean v0, Lcom/android/server/DeviceIdleControllerInjector;->DEBUG_INJECTOR:Z
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "DeviceIdleControllerInjector"
-
-    const-string v1, "clearGpsUids"
-
-    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    sget-object v0, Lcom/android/server/DeviceIdleControllerInjector;->opAggressiveDoze:Lcom/android/server/IOpAggressiveDoze;
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0}, Lcom/android/server/IOpAggressiveDoze;->clearGpsUids()V
-
-    :cond_1
-    return-void
-.end method
-
-.method public static clearWhitelistUid()V
-    .locals 2
-
-    sget-boolean v0, Lcom/android/server/DeviceIdleControllerInjector;->DEBUG_INJECTOR:Z
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "DeviceIdleControllerInjector"
-
-    const-string v1, "clearWhitelistUid"
-
-    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    sget-object v0, Lcom/android/server/DeviceIdleControllerInjector;->opAggressiveDoze:Lcom/android/server/IOpAggressiveDoze;
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0}, Lcom/android/server/IOpAggressiveDoze;->clearWhitelistUid()V
-
-    :cond_1
-    return-void
-.end method
-
 .method public static dumpHelp(Ljava/io/PrintWriter;)V
     .locals 2
 
@@ -239,78 +163,6 @@
     const/4 v0, 0x0
 
     return-object v0
-.end method
-
-.method public static isDozingGps(I)Z
-    .locals 2
-
-    sget-boolean v0, Lcom/android/server/DeviceIdleControllerInjector;->DEBUG_INJECTOR:Z
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string/jumbo v1, "isDozingGps uid:"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "DeviceIdleControllerInjector"
-
-    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    sget-object v0, Lcom/android/server/DeviceIdleControllerInjector;->opAggressiveDoze:Lcom/android/server/IOpAggressiveDoze;
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0, p0}, Lcom/android/server/IOpAggressiveDoze;->isDozingGps(I)Z
-
-    move-result v0
-
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public static isMoving(Landroid/location/Location;)Z
-    .locals 2
-
-    sget-boolean v0, Lcom/android/server/DeviceIdleControllerInjector;->DEBUG_INJECTOR:Z
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "DeviceIdleControllerInjector"
-
-    const-string/jumbo v1, "isMoving"
-
-    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    sget-object v0, Lcom/android/server/DeviceIdleControllerInjector;->opAggressiveDoze:Lcom/android/server/IOpAggressiveDoze;
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0, p0}, Lcom/android/server/IOpAggressiveDoze;->isMoving(Landroid/location/Location;)Z
-
-    move-result v0
-
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    return v0
 .end method
 
 .method public static mayUseAggressiveTimeoutLocked(FJJJJJFJJ)Z
@@ -449,36 +301,6 @@
     return-void
 .end method
 
-.method public static requestLocationUpdatesOverride()Z
-    .locals 2
-
-    sget-boolean v0, Lcom/android/server/DeviceIdleControllerInjector;->DEBUG_INJECTOR:Z
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "DeviceIdleControllerInjector"
-
-    const-string/jumbo v1, "requestLocationUpdatesOverride"
-
-    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    sget-object v0, Lcom/android/server/DeviceIdleControllerInjector;->opAggressiveDoze:Lcom/android/server/IOpAggressiveDoze;
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0}, Lcom/android/server/IOpAggressiveDoze;->requestLocationUpdatesOverride()Z
-
-    move-result v0
-
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
 .method public static scheduleAlarm(JZ)V
     .locals 1
 
@@ -490,36 +312,6 @@
 
     :cond_0
     return-void
-.end method
-
-.method public static scheduleAlarmOverride()Z
-    .locals 2
-
-    sget-boolean v0, Lcom/android/server/DeviceIdleControllerInjector;->DEBUG_INJECTOR:Z
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "DeviceIdleControllerInjector"
-
-    const-string/jumbo v1, "scheduleAlarmOverride"
-
-    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    sget-object v0, Lcom/android/server/DeviceIdleControllerInjector;->opAggressiveDoze:Lcom/android/server/IOpAggressiveDoze;
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0}, Lcom/android/server/IOpAggressiveDoze;->scheduleAlarmOverride()Z
-
-    move-result v0
-
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    return v0
 .end method
 
 .method public static setDeviceIdleState(I)V
@@ -688,60 +480,6 @@
 
     :cond_1
     return v0
-.end method
-
-.method public static startMonitoringMotionOverride()Z
-    .locals 2
-
-    sget-boolean v0, Lcom/android/server/DeviceIdleControllerInjector;->DEBUG_INJECTOR:Z
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "DeviceIdleControllerInjector"
-
-    const-string/jumbo v1, "startMonitoringMotionOverride"
-
-    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    sget-object v0, Lcom/android/server/DeviceIdleControllerInjector;->opAggressiveDoze:Lcom/android/server/IOpAggressiveDoze;
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0}, Lcom/android/server/IOpAggressiveDoze;->startMonitoringMotionOverride()Z
-
-    move-result v0
-
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public static tryClearAllPendingBroadcasts()V
-    .locals 2
-
-    sget-boolean v0, Lcom/android/server/DeviceIdleControllerInjector;->DEBUG_INJECTOR:Z
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "DeviceIdleControllerInjector"
-
-    const-string/jumbo v1, "tryClearAllPendingBroadcasts"
-
-    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    sget-object v0, Lcom/android/server/DeviceIdleControllerInjector;->opAggressiveDoze:Lcom/android/server/IOpAggressiveDoze;
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0}, Lcom/android/server/IOpAggressiveDoze;->tryClearAllPendingBroadcasts()V
-
-    :cond_1
-    return-void
 .end method
 
 .method public static writeConfigFileLocked(Lorg/xmlpull/v1/XmlSerializer;)V

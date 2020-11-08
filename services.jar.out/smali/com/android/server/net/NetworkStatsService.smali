@@ -4822,6 +4822,10 @@
 
     if-eq v0, v1, :cond_0
 
+    const/16 v1, 0x3e9
+
+    if-eq v0, v1, :cond_0
+
     if-eq v0, p1, :cond_0
 
     const-wide/16 v1, -0x1

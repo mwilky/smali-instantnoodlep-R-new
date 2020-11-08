@@ -17001,7 +17001,7 @@
 
     iput-object v0, v1, Lcom/android/server/notification/NotificationManagerService;->mUiHandler:Landroid/os/Handler;
 
-    const v0, 0x1070061
+    const v0, 0x1070062
 
     const/4 v3, 0x0
 
@@ -17205,7 +17205,7 @@
 
     iput-object v3, v1, Lcom/android/server/notification/NotificationManagerService;->mAttentionLight:Lcom/android/server/lights/LogicalLight;
 
-    const v3, 0x107005f
+    const v3, 0x1070060
 
     const/16 v0, 0x11
 
@@ -17352,7 +17352,7 @@
 
     new-instance v0, Lcom/android/server/notification/NotificationManagerService$Archive;
 
-    const v2, 0x10e0099
+    const v2, 0x10e009a
 
     invoke-virtual {v4, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -17476,7 +17476,7 @@
 
     move-result-object v2
 
-    const v3, 0x1070064
+    const v3, 0x1070065
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -17498,7 +17498,7 @@
 
     move-result-object v0
 
-    const v2, 0x10e009b
+    const v2, 0x10e009c
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -17514,7 +17514,7 @@
 
     move-result-object v0
 
-    const v2, 0x10e009a
+    const v2, 0x10e009b
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -17522,7 +17522,7 @@
 
     iput v0, v1, Lcom/android/server/notification/NotificationManagerService;->mStripRemoteViewsSizeBytes:I
 
-    const v0, 0x1070060
+    const v0, 0x1070061
 
     invoke-virtual {v1, v0}, Lcom/android/server/notification/NotificationManagerService;->getStringArrayResource(I)[Ljava/lang/String;
 

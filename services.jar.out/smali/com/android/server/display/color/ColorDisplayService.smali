@@ -1306,7 +1306,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e004a
+    const v1, 0x10e004b
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1826,7 +1826,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e0050
+    const v1, 0x10e0051
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1834,7 +1834,7 @@
 
     iput v1, p0, Lcom/android/server/display/color/ColorDisplayService;->mMinColorTemperature:I
 
-    const v1, 0x10e004c
+    const v1, 0x10e004d
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1842,7 +1842,7 @@
 
     iput v1, p0, Lcom/android/server/display/color/ColorDisplayService;->mMaxColorTemperature:I
 
-    const v1, 0x10e0051
+    const v1, 0x10e0052
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1850,7 +1850,7 @@
 
     iput v1, p0, Lcom/android/server/display/color/ColorDisplayService;->mMinColorTemperatureForNative:I
 
-    const v1, 0x10e004d
+    const v1, 0x10e004e
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1858,7 +1858,7 @@
 
     iput v1, p0, Lcom/android/server/display/color/ColorDisplayService;->mMaxColorTemperatureForNative:I
 
-    const v1, 0x10e0053
+    const v1, 0x10e0054
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1866,7 +1866,7 @@
 
     iput v1, p0, Lcom/android/server/display/color/ColorDisplayService;->mMinColorTemperatureForSRGB:I
 
-    const v1, 0x10e004f
+    const v1, 0x10e0050
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1874,7 +1874,7 @@
 
     iput v1, p0, Lcom/android/server/display/color/ColorDisplayService;->mMaxColorTemperatureForSRGB:I
 
-    const v1, 0x10e0052
+    const v1, 0x10e0053
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1882,7 +1882,7 @@
 
     iput v1, p0, Lcom/android/server/display/color/ColorDisplayService;->mMinColorTemperatureForP3:I
 
-    const v1, 0x10e004e
+    const v1, 0x10e004f
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -2095,7 +2095,7 @@
 
     move-result-object v1
 
-    const v2, 0x10e0038
+    const v2, 0x10e0039
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -2202,7 +2202,7 @@
 
     move-result-object v1
 
-    const v2, 0x10e0039
+    const v2, 0x10e003a
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -2255,7 +2255,7 @@
 
     move-result-object v1
 
-    const v2, 0x10e003a
+    const v2, 0x10e003b
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -3600,7 +3600,7 @@
 
     move-result-object v2
 
-    const v3, 0x10e004a
+    const v3, 0x10e004b
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -3651,7 +3651,7 @@
 
     iput-object v0, p0, Lcom/android/server/display/color/ColorDisplayService;->mColorModeCompositionColorSpaces:Landroid/util/SparseIntArray;
 
-    const v0, 0x1070031
+    const v0, 0x1070032
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getIntArray(I)[I
 
@@ -3662,7 +3662,7 @@
     return-void
 
     :cond_0
-    const v1, 0x1070032
+    const v1, 0x1070033
 
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getIntArray(I)[I
 

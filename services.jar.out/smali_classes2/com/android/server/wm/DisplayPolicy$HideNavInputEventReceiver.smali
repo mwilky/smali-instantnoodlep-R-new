@@ -29,12 +29,12 @@
     return-void
 .end method
 
-.method private showNavigationBar()V
+.method private showSystemBars()V
     .locals 4
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy$HideNavInputEventReceiver;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v0}, Lcom/android/server/wm/DisplayPolicy;->access$900(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/DisplayContent;
+    invoke-static {v0}, Lcom/android/server/wm/DisplayPolicy;->access$1000(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/DisplayContent;
 
     move-result-object v0
 
@@ -62,7 +62,7 @@
     :goto_0
     if-eqz v1, :cond_1
 
-    invoke-static {}, Landroid/view/WindowInsets$Type;->navigationBars()I
+    invoke-static {}, Landroid/view/WindowInsets$Type;->systemBars()I
 
     move-result v2
 
@@ -133,11 +133,11 @@
 
     :cond_0
     :try_start_2
-    invoke-direct {p0}, Lcom/android/server/wm/DisplayPolicy$HideNavInputEventReceiver;->showNavigationBar()V
+    invoke-direct {p0}, Lcom/android/server/wm/DisplayPolicy$HideNavInputEventReceiver;->showSystemBars()V
 
     iget-object v4, p0, Lcom/android/server/wm/DisplayPolicy$HideNavInputEventReceiver;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v4}, Lcom/android/server/wm/DisplayPolicy;->access$1900(Lcom/android/server/wm/DisplayPolicy;)I
+    invoke-static {v4}, Lcom/android/server/wm/DisplayPolicy;->access$2000(Lcom/android/server/wm/DisplayPolicy;)I
 
     move-result v4
 
@@ -149,7 +149,7 @@
 
     iget-object v5, p0, Lcom/android/server/wm/DisplayPolicy$HideNavInputEventReceiver;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v5}, Lcom/android/server/wm/DisplayPolicy;->access$1900(Lcom/android/server/wm/DisplayPolicy;)I
+    invoke-static {v5}, Lcom/android/server/wm/DisplayPolicy;->access$2000(Lcom/android/server/wm/DisplayPolicy;)I
 
     move-result v5
 
@@ -157,14 +157,14 @@
 
     iget-object v5, p0, Lcom/android/server/wm/DisplayPolicy$HideNavInputEventReceiver;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v5, v4}, Lcom/android/server/wm/DisplayPolicy;->access$1902(Lcom/android/server/wm/DisplayPolicy;I)I
+    invoke-static {v5, v4}, Lcom/android/server/wm/DisplayPolicy;->access$2002(Lcom/android/server/wm/DisplayPolicy;I)I
 
     const/4 v2, 0x1
 
     :cond_1
     iget-object v5, p0, Lcom/android/server/wm/DisplayPolicy$HideNavInputEventReceiver;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v5}, Lcom/android/server/wm/DisplayPolicy;->access$1800(Lcom/android/server/wm/DisplayPolicy;)I
+    invoke-static {v5}, Lcom/android/server/wm/DisplayPolicy;->access$1900(Lcom/android/server/wm/DisplayPolicy;)I
 
     move-result v5
 
@@ -172,7 +172,7 @@
 
     iget-object v5, p0, Lcom/android/server/wm/DisplayPolicy$HideNavInputEventReceiver;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v5}, Lcom/android/server/wm/DisplayPolicy;->access$1800(Lcom/android/server/wm/DisplayPolicy;)I
+    invoke-static {v5}, Lcom/android/server/wm/DisplayPolicy;->access$1900(Lcom/android/server/wm/DisplayPolicy;)I
 
     move-result v5
 
@@ -180,19 +180,19 @@
 
     iget-object v5, p0, Lcom/android/server/wm/DisplayPolicy$HideNavInputEventReceiver;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v5, v4}, Lcom/android/server/wm/DisplayPolicy;->access$1802(Lcom/android/server/wm/DisplayPolicy;I)I
+    invoke-static {v5, v4}, Lcom/android/server/wm/DisplayPolicy;->access$1902(Lcom/android/server/wm/DisplayPolicy;I)I
 
     const/4 v2, 0x1
 
     iget-object v5, p0, Lcom/android/server/wm/DisplayPolicy$HideNavInputEventReceiver;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v5}, Lcom/android/server/wm/DisplayPolicy;->access$1700(Lcom/android/server/wm/DisplayPolicy;)Landroid/os/Handler;
+    invoke-static {v5}, Lcom/android/server/wm/DisplayPolicy;->access$1800(Lcom/android/server/wm/DisplayPolicy;)Landroid/os/Handler;
 
     move-result-object v5
 
     iget-object v6, p0, Lcom/android/server/wm/DisplayPolicy$HideNavInputEventReceiver;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v6}, Lcom/android/server/wm/DisplayPolicy;->access$2000(Lcom/android/server/wm/DisplayPolicy;)Ljava/lang/Runnable;
+    invoke-static {v6}, Lcom/android/server/wm/DisplayPolicy;->access$2100(Lcom/android/server/wm/DisplayPolicy;)Ljava/lang/Runnable;
 
     move-result-object v6
 
@@ -205,7 +205,7 @@
 
     iget-object v5, p0, Lcom/android/server/wm/DisplayPolicy$HideNavInputEventReceiver;->this$0:Lcom/android/server/wm/DisplayPolicy;
 
-    invoke-static {v5}, Lcom/android/server/wm/DisplayPolicy;->access$900(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/DisplayContent;
+    invoke-static {v5}, Lcom/android/server/wm/DisplayPolicy;->access$1000(Lcom/android/server/wm/DisplayPolicy;)Lcom/android/server/wm/DisplayContent;
 
     move-result-object v5
 

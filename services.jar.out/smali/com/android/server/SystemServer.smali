@@ -1027,6 +1027,14 @@
     if-eqz v0, :cond_4
 
     :try_start_7
+    const-string/jumbo v0, "ro.boot.qe"
+
+    invoke-static {v0, v8}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
     invoke-static {}, Lcom/android/server/SystemServer;->spawnFdLeakCheckThread()V
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
@@ -6600,7 +6608,7 @@
 
     move-result-object v0
 
-    const v7, 0x107002d
+    const v7, 0x107002e
 
     invoke-virtual {v0, v7}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 

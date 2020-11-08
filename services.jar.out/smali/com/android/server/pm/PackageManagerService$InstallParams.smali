@@ -1575,7 +1575,7 @@
 
     const/4 v11, 0x0
 
-    const-string v12, "integrity component"
+    const-string/jumbo v12, "integrity component"
 
     move-object/from16 v7, v17
 
