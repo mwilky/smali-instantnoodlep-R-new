@@ -1922,11 +1922,11 @@
 
     sget-boolean v0, Lcom/android/server/wm/OpScreenCompat;->IS_SUPPORT_CAMERA_NOTCH:Z
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_d
 
     iget-object v0, p0, Lcom/android/server/wm/OpScreenCompat;->mOpScreenDecor:Lcom/android/server/wm/zgw;
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_d
 
     iget-object v0, p0, Lcom/android/server/wm/OpScreenCompat;->mWms:Lcom/android/server/wm/WindowManagerService;
 
@@ -1936,96 +1936,130 @@
 
     invoke-virtual {v0}, Lcom/android/server/wm/DisplayContent;->getDefaultTaskDisplayArea()Lcom/android/server/wm/TaskDisplayArea;
 
-    move-result-object v0
+    move-result-object v1
 
-    const/4 v1, 0x3
+    const/4 v2, 0x3
 
-    invoke-virtual {v0, v1}, Lcom/android/server/wm/TaskDisplayArea;->isStackVisible(I)Z
+    invoke-virtual {v1, v2}, Lcom/android/server/wm/TaskDisplayArea;->isStackVisible(I)Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
-    move-object v0, p2
+    move-object v1, p2
 
     goto :goto_0
 
     :cond_0
-    move-object v0, p1
+    move-object v1, p1
 
     :goto_0
-    if-eqz v0, :cond_b
+    if-eqz v1, :cond_d
 
-    iget v1, p0, Lcom/android/server/wm/OpScreenCompat;->mDriveModeEnable:I
+    iget-object v2, v1, Lcom/android/server/wm/WindowState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
-    const/4 v2, 0x0
+    const/4 v3, -0x1
 
-    const/4 v3, 0x1
+    if-eqz v2, :cond_1
 
-    if-ne v1, v3, :cond_2
+    invoke-virtual {v0, v2}, Lcom/android/server/wm/DisplayContent;->rotationForActivityInDifferentOrientation(Lcom/android/server/wm/ActivityRecord;)I
 
-    iget v1, p0, Lcom/android/server/wm/OpScreenCompat;->mDriveModeShowing:I
-
-    if-eq v1, v3, :cond_1
+    move-result v0
 
     goto :goto_1
 
     :cond_1
-    move v1, v2
+    move v0, v3
+
+    :goto_1
+    iget v2, p0, Lcom/android/server/wm/OpScreenCompat;->mDriveModeEnable:I
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x1
+
+    if-ne v2, v5, :cond_2
+
+    iget v2, p0, Lcom/android/server/wm/OpScreenCompat;->mDriveModeShowing:I
+
+    if-eq v2, v5, :cond_4
+
+    :cond_2
+    invoke-static {}, Lcom/oneplus/systemui/OpSystemUIInjector;->isKeyguardDone()Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    iget-object v2, p0, Lcom/android/server/wm/OpScreenCompat;->mWms:Lcom/android/server/wm/WindowManagerService;
+
+    iget-object v2, v2, Lcom/android/server/wm/WindowManagerService;->mPolicy:Lcom/android/server/policy/WindowManagerPolicy;
+
+    if-eqz v2, :cond_3
+
+    invoke-interface {v2}, Lcom/android/server/policy/WindowManagerPolicy;->isKeyguardShowingAndNotOccluded()Z
+
+    move-result v2
+
+    if-nez v2, :cond_4
+
+    :cond_3
+    if-ne v0, v3, :cond_4
+
+    move v0, v5
 
     goto :goto_2
 
-    :cond_2
-    :goto_1
-    move v1, v3
+    :cond_4
+    move v0, v4
 
     :goto_2
-    const/4 v4, 0x0
+    const/4 v2, 0x0
 
-    if-eqz v1, :cond_8
+    if-eqz v0, :cond_a
 
-    iget-object v5, v0, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
+    iget-object v3, v1, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
 
-    iget v5, v5, Landroid/view/WindowManager$LayoutParams;->type:I
+    iget v3, v3, Landroid/view/WindowManager$LayoutParams;->type:I
 
-    if-ne v5, v3, :cond_4
+    if-ne v3, v5, :cond_6
 
-    sget-boolean v1, Lcom/android/server/wm/OpScreenCompat;->mIsIgnoreCameraNotch:Z
+    sget-boolean v0, Lcom/android/server/wm/OpScreenCompat;->mIsIgnoreCameraNotch:Z
 
-    if-nez v1, :cond_3
+    if-nez v0, :cond_5
 
-    iget-boolean v1, v0, Lcom/android/server/wm/WindowState;->mIsNotchUnLimited:Z
+    iget-boolean v0, v1, Lcom/android/server/wm/WindowState;->mIsNotchUnLimited:Z
 
-    if-nez v1, :cond_9
+    if-nez v0, :cond_b
 
-    invoke-virtual {v0}, Lcom/android/server/wm/WindowState;->isLetterboxedAppWindow()Z
+    invoke-virtual {v1}, Lcom/android/server/wm/WindowState;->isLetterboxedAppWindow()Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_9
+    if-eqz v0, :cond_b
 
-    :cond_3
-    move v2, v3
+    :cond_5
+    move v4, v5
 
     goto :goto_6
 
-    :cond_4
-    iget-object v5, v0, Lcom/android/server/wm/WindowState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
+    :cond_6
+    iget-object v3, v1, Lcom/android/server/wm/WindowState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
-    if-eqz v5, :cond_8
+    if-eqz v3, :cond_a
 
-    iget-object v6, v5, Lcom/android/server/wm/ActivityRecord;->mChildren:Lcom/android/server/wm/WindowList;
+    iget-object v6, v3, Lcom/android/server/wm/ActivityRecord;->mChildren:Lcom/android/server/wm/WindowList;
 
     invoke-virtual {v6}, Lcom/android/server/wm/WindowList;->size()I
 
     move-result v6
 
-    move v7, v2
+    move v7, v4
 
     :goto_3
-    if-ge v7, v6, :cond_8
+    if-ge v7, v6, :cond_a
 
-    iget-object v8, v5, Lcom/android/server/wm/ActivityRecord;->mChildren:Lcom/android/server/wm/WindowList;
+    iget-object v8, v3, Lcom/android/server/wm/ActivityRecord;->mChildren:Lcom/android/server/wm/WindowList;
 
     invoke-virtual {v8, v7}, Lcom/android/server/wm/WindowList;->get(I)Ljava/lang/Object;
 
@@ -2035,129 +2069,129 @@
 
     sget-boolean v9, Lcom/android/server/wm/OpScreenCompat;->mIsIgnoreCameraNotch:Z
 
-    if-nez v9, :cond_6
+    if-nez v9, :cond_8
 
     iget-boolean v9, v8, Lcom/android/server/wm/WindowState;->mIsNotchUnLimited:Z
 
-    if-nez v9, :cond_5
+    if-nez v9, :cond_7
 
     invoke-virtual {v8}, Lcom/android/server/wm/WindowState;->isLetterboxedAppWindow()Z
 
     move-result v9
 
-    if-eqz v9, :cond_5
+    if-eqz v9, :cond_7
 
     goto :goto_4
 
-    :cond_5
-    move v9, v2
+    :cond_7
+    move v9, v4
 
     goto :goto_5
 
-    :cond_6
+    :cond_8
     :goto_4
-    move v9, v3
+    move v9, v5
 
     :goto_5
-    if-nez v9, :cond_7
+    if-nez v9, :cond_9
 
-    move-object v4, v8
+    move-object v2, v8
 
     goto :goto_6
 
-    :cond_7
+    :cond_9
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_3
 
-    :cond_8
-    move v2, v1
+    :cond_a
+    move v4, v0
 
-    :cond_9
+    :cond_b
     :goto_6
-    iget-object v1, p0, Lcom/android/server/wm/OpScreenCompat;->mOpScreenDecor:Lcom/android/server/wm/zgw;
+    iget-object v0, p0, Lcom/android/server/wm/OpScreenCompat;->mOpScreenDecor:Lcom/android/server/wm/zgw;
 
-    iget-boolean v1, v1, Lcom/android/server/wm/zgw;->ywr:Z
+    iget-boolean v0, v0, Lcom/android/server/wm/zgw;->ywr:Z
 
-    if-eq v1, v2, :cond_b
+    if-eq v0, v4, :cond_d
 
-    sget-boolean v1, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
-    if-eqz v1, :cond_a
+    if-eqz v0, :cond_c
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "expandScreenDecor to "
+    const-string v3, "expandScreenDecor to "
 
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v5, " ignore="
+    const-string v3, " ignore="
 
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-boolean v5, Lcom/android/server/wm/OpScreenCompat;->mIsIgnoreCameraNotch:Z
+    sget-boolean v3, Lcom/android/server/wm/OpScreenCompat;->mIsIgnoreCameraNotch:Z
 
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v5, " topDocked="
+    const-string v3, " topDocked="
 
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string p2, " topFull="
 
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string p1, " topWin="
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string p1, " isLimited="
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean p1, v0, Lcom/android/server/wm/WindowState;->mIsNotchUnLimited:Z
+    iget-boolean p1, v1, Lcom/android/server/wm/WindowState;->mIsNotchUnLimited:Z
 
-    xor-int/2addr p1, v3
+    xor-int/2addr p1, v5
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     const-string p1, " isLetterboxed="
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lcom/android/server/wm/WindowState;->isLetterboxedAppWindow()Z
+    invoke-virtual {v1}, Lcom/android/server/wm/WindowState;->isLetterboxedAppWindow()Z
 
     move-result p1
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     const-string p1, " mDriveModeEnable="
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget p1, p0, Lcom/android/server/wm/OpScreenCompat;->mDriveModeEnable:I
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string p1, " mDriveModeShowing="
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget p1, p0, Lcom/android/server/wm/OpScreenCompat;->mDriveModeShowing:I
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
@@ -2165,7 +2199,7 @@
 
     invoke-static {p2, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-eqz v4, :cond_a
+    if-eqz v2, :cond_c
 
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -2175,15 +2209,15 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v0, " disableExpandWin isLimited="
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v0, v4, Lcom/android/server/wm/WindowState;->mIsNotchUnLimited:Z
+    iget-boolean v0, v2, Lcom/android/server/wm/WindowState;->mIsNotchUnLimited:Z
 
-    xor-int/2addr v0, v3
+    xor-int/2addr v0, v5
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -2191,7 +2225,7 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Lcom/android/server/wm/WindowState;->isLetterboxedAppWindow()Z
+    invoke-virtual {v2}, Lcom/android/server/wm/WindowState;->isLetterboxedAppWindow()Z
 
     move-result v0
 
@@ -2203,12 +2237,12 @@
 
     invoke-static {p2, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_a
+    :cond_c
     iget-object p0, p0, Lcom/android/server/wm/OpScreenCompat;->mOpScreenDecor:Lcom/android/server/wm/zgw;
 
-    invoke-virtual {p0, v2}, Lcom/android/server/wm/zgw;->ssp(Z)V
+    invoke-virtual {p0, v4}, Lcom/android/server/wm/zgw;->ssp(Z)V
 
-    :cond_b
+    :cond_d
     return-void
 .end method
 

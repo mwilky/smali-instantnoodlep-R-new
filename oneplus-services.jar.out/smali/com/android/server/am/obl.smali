@@ -36,7 +36,7 @@
 
 .field private static final rtg:I = 0x0
 
-.field private static sis:Lcom/android/server/ugm; = null
+.field private static sis:Lcom/android/server/vdb; = null
 
 .field private static final ssp:I = 0x1
 
@@ -97,13 +97,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/server/ugm;
+    check-cast v0, Lcom/android/server/vdb;
 
-    sput-object v0, Lcom/android/server/am/obl;->sis:Lcom/android/server/ugm;
+    sput-object v0, Lcom/android/server/am/obl;->sis:Lcom/android/server/vdb;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p0}, Lcom/android/server/ugm;->ugm(Ljava/lang/String;)Z
+    invoke-virtual {v0, p0}, Lcom/android/server/vdb;->ugm(Ljava/lang/String;)Z
 
     move-result p0
 
@@ -121,10 +121,10 @@
     return p0
 .end method
 
-.method private static cno()Lcom/android/server/ugm;
+.method private static cno()Lcom/android/server/vdb;
     .locals 1
 
-    sget-object v0, Lcom/android/server/am/obl;->sis:Lcom/android/server/ugm;
+    sget-object v0, Lcom/android/server/am/obl;->sis:Lcom/android/server/vdb;
 
     if-eqz v0, :cond_0
 
@@ -137,9 +137,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/server/ugm;
+    check-cast v0, Lcom/android/server/vdb;
 
-    sput-object v0, Lcom/android/server/am/obl;->sis:Lcom/android/server/ugm;
+    sput-object v0, Lcom/android/server/am/obl;->sis:Lcom/android/server/vdb;
 
     return-object v0
 .end method
@@ -219,11 +219,11 @@
 
     if-ne p2, v1, :cond_2
 
-    invoke-static {}, Lcom/android/server/am/obl;->cno()Lcom/android/server/ugm;
+    invoke-static {}, Lcom/android/server/am/obl;->cno()Lcom/android/server/vdb;
 
     move-result-object p1
 
-    invoke-virtual {p1, p0, v1}, Lcom/android/server/ugm;->bud(Ljava/lang/String;I)Z
+    invoke-virtual {p1, p0, v1}, Lcom/android/server/vdb;->bud(Ljava/lang/String;I)Z
 
     move-result p0
 
@@ -232,22 +232,22 @@
     :cond_2
     if-ne p2, p1, :cond_3
 
-    invoke-static {}, Lcom/android/server/am/obl;->cno()Lcom/android/server/ugm;
+    invoke-static {}, Lcom/android/server/am/obl;->cno()Lcom/android/server/vdb;
 
     move-result-object p2
 
-    invoke-virtual {p2, p0, p1}, Lcom/android/server/ugm;->bud(Ljava/lang/String;I)Z
+    invoke-virtual {p2, p0, p1}, Lcom/android/server/vdb;->bud(Ljava/lang/String;I)Z
 
     move-result p0
 
     goto :goto_0
 
     :cond_3
-    invoke-static {}, Lcom/android/server/am/obl;->cno()Lcom/android/server/ugm;
+    invoke-static {}, Lcom/android/server/am/obl;->cno()Lcom/android/server/vdb;
 
     move-result-object p1
 
-    invoke-virtual {p1, p0, v0}, Lcom/android/server/ugm;->bud(Ljava/lang/String;I)Z
+    invoke-virtual {p1, p0, v0}, Lcom/android/server/vdb;->bud(Ljava/lang/String;I)Z
 
     move-result p0
 
@@ -807,13 +807,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/server/ugm;
+    check-cast v0, Lcom/android/server/vdb;
 
-    sput-object v0, Lcom/android/server/am/obl;->sis:Lcom/android/server/ugm;
+    sput-object v0, Lcom/android/server/am/obl;->sis:Lcom/android/server/vdb;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p0}, Lcom/android/server/ugm;->oxb(Ljava/lang/String;)Z
+    invoke-virtual {v0, p0}, Lcom/android/server/vdb;->oxb(Ljava/lang/String;)Z
 
     move-result p0
 
@@ -1079,11 +1079,11 @@
 
     if-eqz v4, :cond_4
 
-    invoke-static {}, Lcom/android/server/am/obl;->cno()Lcom/android/server/ugm;
+    invoke-static {}, Lcom/android/server/am/obl;->cno()Lcom/android/server/vdb;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/android/server/ugm;->bvj()Landroid/util/ArrayMap;
+    invoke-virtual {v4}, Lcom/android/server/vdb;->bvj()Landroid/util/ArrayMap;
 
     move-result-object v4
 

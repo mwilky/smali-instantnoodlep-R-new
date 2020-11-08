@@ -217,7 +217,7 @@
 .method public dynamicallyConfigPMSLogTag(Ljava/io/PrintWriter;[Ljava/lang/String;I)V
     .locals 0
 
-    invoke-static {p1, p2, p3}, Lcom/android/server/pm/igw;->zta(Ljava/io/PrintWriter;[Ljava/lang/String;I)V
+    invoke-static {p1, p2, p3}, Lcom/android/server/pm/bio;->zta(Ljava/io/PrintWriter;[Ljava/lang/String;I)V
 
     return-void
 .end method

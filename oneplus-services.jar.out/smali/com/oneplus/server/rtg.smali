@@ -178,7 +178,7 @@
 
     sget-object p3, Lcom/android/server/am/AppRecordManager$ListenerType;->ear:Lcom/android/server/am/AppRecordManager$ListenerType;
 
-    invoke-static {p3, p2}, Lcom/android/server/am/AppRecordManager;->zgw(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/qbh;)V
+    invoke-static {p3, p2}, Lcom/android/server/am/AppRecordManager;->obl(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/qbh;)V
 
     iget-object p0, p0, Lcom/oneplus/server/rtg;->sis:Ljava/util/HashMap;
 
@@ -281,7 +281,7 @@
 
     sget-object p1, Lcom/android/server/am/AppRecordManager$ListenerType;->ear:Lcom/android/server/am/AppRecordManager$ListenerType;
 
-    invoke-static {p1, v0}, Lcom/android/server/am/AppRecordManager;->ugm(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/qbh;)V
+    invoke-static {p1, v0}, Lcom/android/server/am/AppRecordManager;->vdb(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/qbh;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -410,7 +410,7 @@
 
     sget-object v1, Lcom/android/server/am/AppRecordManager$ListenerType;->ear:Lcom/android/server/am/AppRecordManager$ListenerType;
 
-    invoke-static {v1, v0}, Lcom/android/server/am/AppRecordManager;->zgw(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/qbh;)V
+    invoke-static {v1, v0}, Lcom/android/server/am/AppRecordManager;->obl(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/qbh;)V
 
     iget-object v0, p0, Lcom/oneplus/server/rtg;->sis:Ljava/util/HashMap;
 

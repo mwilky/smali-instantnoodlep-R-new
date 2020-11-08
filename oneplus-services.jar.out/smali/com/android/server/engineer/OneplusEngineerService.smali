@@ -979,7 +979,7 @@
 
     invoke-direct {v0, p0}, Lcom/android/server/engineer/OneplusEngineerService$cno;-><init>(Lcom/android/server/engineer/OneplusEngineerService;)V
 
-    const-wide/16 v1, 0x1f4
+    const-wide/16 v1, 0x5dc
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 

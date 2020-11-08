@@ -292,7 +292,7 @@
 .end method
 
 .method private gck(Landroid/os/Bundle;)V
-    .locals 3
+    .locals 5
 
     const-string v0, "uid"
 
@@ -304,15 +304,21 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
-    move-result p1
+    move-result v1
 
-    iget-object v1, p0, Lcom/android/server/am/wtn$zta;->zta:Lcom/android/server/am/wtn;
+    const-string v2, "pss"
 
-    invoke-static {v1}, Lcom/android/server/am/wtn;->sis(Lcom/android/server/am/wtn;)Ljava/util/HashMap;
+    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
 
-    move-result-object v1
+    move-result-wide v2
 
-    monitor-enter v1
+    iget-object p1, p0, Lcom/android/server/am/wtn$zta;->zta:Lcom/android/server/am/wtn;
+
+    invoke-static {p1}, Lcom/android/server/am/wtn;->sis(Lcom/android/server/am/wtn;)Ljava/util/HashMap;
+
+    move-result-object p1
+
+    monitor-enter p1
 
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/wtn$zta;->zta:Lcom/android/server/am/wtn;
@@ -321,9 +327,9 @@
 
     move-result-object p0
 
-    sget-object v2, Lcom/android/server/am/AppRecordManager$ListenerType;->gck:Lcom/android/server/am/AppRecordManager$ListenerType;
+    sget-object v4, Lcom/android/server/am/AppRecordManager$ListenerType;->gck:Lcom/android/server/am/AppRecordManager$ListenerType;
 
-    invoke-virtual {p0, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -337,31 +343,31 @@
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v2
+    move-result v4
 
-    if-eqz v2, :cond_1
+    if-eqz v4, :cond_1
 
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v4
 
-    check-cast v2, Lcom/android/server/am/qbh;
+    check-cast v4, Lcom/android/server/am/qbh;
 
-    if-eqz v2, :cond_0
+    if-eqz v4, :cond_0
 
-    invoke-interface {v2, v0, p1}, Lcom/android/server/am/qbh;->notePSSChanged(II)V
+    invoke-interface {v4, v0, v1, v2, v3}, Lcom/android/server/am/qbh;->notePSSChanged(IIJ)V
 
     goto :goto_0
 
     :cond_1
-    monitor-exit v1
+    monitor-exit p1
 
     return-void
 
     :catchall_0
     move-exception p0
 
-    monitor-exit v1
+    monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

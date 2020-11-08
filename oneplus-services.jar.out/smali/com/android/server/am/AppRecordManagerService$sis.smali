@@ -286,7 +286,7 @@
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p1}, Lcom/android/server/am/AppRecordManager;->vdb(I)Ljava/lang/String;
+    invoke-static {p1}, Lcom/android/server/am/AppRecordManager;->zgw(I)Ljava/lang/String;
 
     move-result-object p1
 

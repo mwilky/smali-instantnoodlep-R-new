@@ -184,7 +184,7 @@
 
 .field private cjf:F
 
-.field private cno:Lcom/android/server/ugm;
+.field private cno:Lcom/android/server/vdb;
 
 .field private d:J
 
@@ -922,7 +922,7 @@
 
     iget-object p2, p0, Lcom/android/server/am/OnePlusBGController;->ivd:Lcom/android/server/am/OnePlusBGController$gck;
 
-    invoke-static {p1, p2}, Lcom/android/server/am/AppRecordManager;->ugm(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/qbh;)V
+    invoke-static {p1, p2}, Lcom/android/server/am/AppRecordManager;->vdb(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/qbh;)V
 
     const p1, 0x101d0
 
@@ -1888,7 +1888,7 @@
 
     if-eqz v11, :cond_3
 
-    iget-object v11, v0, Lcom/android/server/am/OnePlusBGController;->cno:Lcom/android/server/ugm;
+    iget-object v11, v0, Lcom/android/server/am/OnePlusBGController;->cno:Lcom/android/server/vdb;
 
     if-nez v11, :cond_1
 
@@ -1898,16 +1898,16 @@
 
     move-result-object v11
 
-    check-cast v11, Lcom/android/server/ugm;
+    check-cast v11, Lcom/android/server/vdb;
 
-    iput-object v11, v0, Lcom/android/server/am/OnePlusBGController;->cno:Lcom/android/server/ugm;
+    iput-object v11, v0, Lcom/android/server/am/OnePlusBGController;->cno:Lcom/android/server/vdb;
 
     :cond_1
-    iget-object v11, v0, Lcom/android/server/am/OnePlusBGController;->cno:Lcom/android/server/ugm;
+    iget-object v11, v0, Lcom/android/server/am/OnePlusBGController;->cno:Lcom/android/server/vdb;
 
     if-eqz v11, :cond_3
 
-    invoke-virtual {v11}, Lcom/android/server/ugm;->gck()[I
+    invoke-virtual {v11}, Lcom/android/server/vdb;->gck()[I
 
     move-result-object v11
 
@@ -1943,9 +1943,9 @@
     goto :goto_0
 
     :cond_2
-    iget-object v11, v0, Lcom/android/server/am/OnePlusBGController;->cno:Lcom/android/server/ugm;
+    iget-object v11, v0, Lcom/android/server/am/OnePlusBGController;->cno:Lcom/android/server/vdb;
 
-    invoke-virtual {v11}, Lcom/android/server/ugm;->dma()[I
+    invoke-virtual {v11}, Lcom/android/server/vdb;->dma()[I
 
     move-result-object v11
 
@@ -6508,10 +6508,10 @@
     return-void
 .end method
 
-.method static synthetic vdb(Lcom/android/server/am/OnePlusBGController;)Lcom/android/server/ugm;
+.method static synthetic vdb(Lcom/android/server/am/OnePlusBGController;)Lcom/android/server/vdb;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/am/OnePlusBGController;->cno:Lcom/android/server/ugm;
+    iget-object p0, p0, Lcom/android/server/am/OnePlusBGController;->cno:Lcom/android/server/vdb;
 
     return-object p0
 .end method
@@ -6629,10 +6629,10 @@
     return-void
 .end method
 
-.method static synthetic zgw(Lcom/android/server/am/OnePlusBGController;Lcom/android/server/ugm;)Lcom/android/server/ugm;
+.method static synthetic zgw(Lcom/android/server/am/OnePlusBGController;Lcom/android/server/vdb;)Lcom/android/server/vdb;
     .locals 0
 
-    iput-object p1, p0, Lcom/android/server/am/OnePlusBGController;->cno:Lcom/android/server/ugm;
+    iput-object p1, p0, Lcom/android/server/am/OnePlusBGController;->cno:Lcom/android/server/vdb;
 
     return-object p1
 .end method

@@ -1,11 +1,11 @@
 .class Lcom/android/server/wifi/tsu$you;
-.super Landroid/database/ContentObserver;
+.super Landroid/content/BroadcastReceiver;
 .source ""
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/wifi/tsu;->dma()V
+    value = Lcom/android/server/wifi/tsu;->gck()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,61 +19,64 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/server/wifi/tsu;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/server/wifi/tsu;)V
     .locals 0
 
     iput-object p1, p0, Lcom/android/server/wifi/tsu$you;->zta:Lcom/android/server/wifi/tsu;
 
-    invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onChange(Z)V
-    .locals 3
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 1
 
     iget-object p1, p0, Lcom/android/server/wifi/tsu$you;->zta:Lcom/android/server/wifi/tsu;
 
-    invoke-static {p1}, Lcom/android/server/wifi/tsu;->kth(Lcom/android/server/wifi/tsu;)Landroid/content/Context;
+    const-string v0, "status"
 
-    move-result-object v0
+    invoke-virtual {p2, v0}, Landroid/content/Intent;->getExtra(Ljava/lang/String;)Ljava/lang/Object;
 
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    move-result-object p2
 
-    move-result-object v0
+    check-cast p2, Ljava/lang/Integer;
 
-    const-string v1, "game_mode_status"
+    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
-    const/4 v2, 0x0
+    move-result p2
 
-    invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    invoke-static {p1, p2}, Lcom/android/server/wifi/tsu;->ssp(Lcom/android/server/wifi/tsu;I)I
 
-    move-result v0
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    invoke-static {p1, v0}, Lcom/android/server/wifi/tsu;->ssp(Lcom/android/server/wifi/tsu;I)I
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object p1, p0, Lcom/android/server/wifi/tsu$you;->zta:Lcom/android/server/wifi/tsu;
+    const-string p2, "receive ACTION_THERMAL_STATUS intent, mThermalStatus = "
 
-    invoke-static {p1}, Lcom/android/server/wifi/tsu;->sis(Lcom/android/server/wifi/tsu;)Z
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v0
+    iget-object p2, p0, Lcom/android/server/wifi/tsu$you;->zta:Lcom/android/server/wifi/tsu;
+
+    invoke-static {p2}, Lcom/android/server/wifi/tsu;->rtg(Lcom/android/server/wifi/tsu;)I
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "OpWifiLowLatency"
+
+    invoke-static {p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object p0, p0, Lcom/android/server/wifi/tsu$you;->zta:Lcom/android/server/wifi/tsu;
 
-    invoke-static {p0}, Lcom/android/server/wifi/tsu;->rtg(Lcom/android/server/wifi/tsu;)I
-
-    move-result p0
-
-    const/4 v1, 0x1
-
-    if-ne p0, v1, :cond_0
-
-    move v2, v1
-
-    :cond_0
-    invoke-static {p1, v0, v2}, Lcom/android/server/wifi/tsu;->cno(Lcom/android/server/wifi/tsu;ZZ)V
+    invoke-static {p0}, Lcom/android/server/wifi/tsu;->tsu(Lcom/android/server/wifi/tsu;)V
 
     return-void
 .end method

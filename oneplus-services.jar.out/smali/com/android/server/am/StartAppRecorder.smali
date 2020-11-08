@@ -19,7 +19,7 @@
 
 
 # instance fields
-.field private rtg:Lcom/android/server/am/j;
+.field private rtg:Lcom/android/server/am/k;
 
 .field private sis:I
 
@@ -34,7 +34,7 @@
     .end annotation
 .end field
 
-.field private tsu:Lcom/android/server/am/i;
+.field private tsu:Lcom/android/server/am/j;
 
 .field private you:Z
 
@@ -42,7 +42,7 @@
 
 
 # direct methods
-.method private constructor <init>(Landroid/content/Context;Lcom/android/server/am/i;)V
+.method private constructor <init>(Landroid/content/Context;Lcom/android/server/am/j;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -55,7 +55,7 @@
 
     iput-object p1, p0, Lcom/android/server/am/StartAppRecorder;->zta:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/android/server/am/StartAppRecorder;->tsu:Lcom/android/server/am/i;
+    iput-object p2, p0, Lcom/android/server/am/StartAppRecorder;->tsu:Lcom/android/server/am/j;
 
     const-string p0, "appid"
 
@@ -69,17 +69,17 @@
 .method private ssp(Ljava/lang/String;)V
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/am/StartAppRecorder;->rtg:Lcom/android/server/am/j;
+    iget-object p0, p0, Lcom/android/server/am/StartAppRecorder;->rtg:Lcom/android/server/am/k;
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/j;->dma(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/android/server/am/k;->dma(Ljava/lang/String;)V
 
     :cond_0
     return-void
 .end method
 
-.method public static zta(Landroid/content/Context;Lcom/android/server/am/i;)Lcom/android/server/am/StartAppRecorder;
+.method public static zta(Landroid/content/Context;Lcom/android/server/am/j;)Lcom/android/server/am/StartAppRecorder;
     .locals 1
 
     sget-object v0, Lcom/android/server/am/StartAppRecorder;->kth:Lcom/android/server/am/StartAppRecorder;
@@ -88,7 +88,7 @@
 
     new-instance v0, Lcom/android/server/am/StartAppRecorder;
 
-    invoke-direct {v0, p0, p1}, Lcom/android/server/am/StartAppRecorder;-><init>(Landroid/content/Context;Lcom/android/server/am/i;)V
+    invoke-direct {v0, p0, p1}, Lcom/android/server/am/StartAppRecorder;-><init>(Landroid/content/Context;Lcom/android/server/am/j;)V
 
     sput-object v0, Lcom/android/server/am/StartAppRecorder;->kth:Lcom/android/server/am/StartAppRecorder;
 
@@ -259,7 +259,7 @@
 
     if-eqz v0, :cond_1
 
-    iget-object p0, p0, Lcom/android/server/am/StartAppRecorder;->tsu:Lcom/android/server/am/i;
+    iget-object p0, p0, Lcom/android/server/am/StartAppRecorder;->tsu:Lcom/android/server/am/j;
 
     iget-object v1, p1, Lcom/android/server/am/StartAppRecorder$zta;->rtg:Ljava/lang/String;
 
@@ -267,7 +267,7 @@
 
     iget-object p1, p1, Lcom/android/server/am/StartAppRecorder$zta;->cno:Ljava/lang/String;
 
-    invoke-virtual {p0, v0, v1, v2, p1}, Lcom/android/server/am/i;->vdb(Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, v0, v1, v2, p1}, Lcom/android/server/am/j;->vdb(Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -280,9 +280,9 @@
 
     if-eqz p1, :cond_1
 
-    iget-object p0, p0, Lcom/android/server/am/StartAppRecorder;->tsu:Lcom/android/server/am/i;
+    iget-object p0, p0, Lcom/android/server/am/StartAppRecorder;->tsu:Lcom/android/server/am/j;
 
-    invoke-virtual {p0}, Lcom/android/server/am/i;->igw()V
+    invoke-virtual {p0}, Lcom/android/server/am/j;->igw()V
 
     :cond_1
     :goto_0

@@ -347,11 +347,11 @@
 
     iget-object p1, p0, Lcom/android/server/am/hmo$zta;->zta:Lcom/android/server/am/hmo;
 
-    invoke-static {p1}, Lcom/android/server/am/hmo;->ibl(Lcom/android/server/am/hmo;)Lcom/android/server/am/i;
+    invoke-static {p1}, Lcom/android/server/am/hmo;->ibl(Lcom/android/server/am/hmo;)Lcom/android/server/am/j;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/android/server/am/i;->wtn()V
+    invoke-virtual {p1}, Lcom/android/server/am/j;->wtn()V
 
     iget-object p0, p0, Lcom/android/server/am/hmo$zta;->zta:Lcom/android/server/am/hmo;
 

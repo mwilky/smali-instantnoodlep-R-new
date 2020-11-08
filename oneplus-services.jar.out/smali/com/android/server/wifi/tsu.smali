@@ -4,15 +4,17 @@
 
 
 # static fields
-.field private static igw:Z = false
+.field private static gck:Landroid/net/wifi/WifiManager$WifiLock; = null
 
-.field private static wtn:Landroid/net/wifi/WifiManager$WifiLock;
+.field private static wtn:Z = false
 
 
 # instance fields
 .field private bio:Z
 
 .field private cno:Landroid/net/NetworkInfo;
+
+.field private igw:I
 
 .field private kth:I
 
@@ -55,6 +57,8 @@
 
     iput-boolean v1, p0, Lcom/android/server/wifi/tsu;->bio:Z
 
+    iput v1, p0, Lcom/android/server/wifi/tsu;->igw:I
+
     iput-object p1, p0, Lcom/android/server/wifi/tsu;->you:Landroid/content/Context;
 
     invoke-static {}, Lcom/android/server/wifi/WifiInjector;->getInstance()Lcom/android/server/wifi/WifiInjector;
@@ -87,7 +91,9 @@
 
     move-result-object p1
 
-    sput-object p1, Lcom/android/server/wifi/tsu;->wtn:Landroid/net/wifi/WifiManager$WifiLock;
+    sput-object p1, Lcom/android/server/wifi/tsu;->gck:Landroid/net/wifi/WifiManager$WifiLock;
+
+    invoke-virtual {p1, v1}, Landroid/net/wifi/WifiManager$WifiLock;->setReferenceCounted(Z)V
 
     new-instance p1, Landroid/os/HandlerThread;
 
@@ -139,7 +145,7 @@
 
     iput p1, p0, Lcom/android/server/wifi/tsu;->kth:I
 
-    sget-boolean p0, Lcom/android/server/wifi/tsu;->igw:Z
+    sget-boolean p0, Lcom/android/server/wifi/tsu;->wtn:Z
 
     if-eqz p0, :cond_0
 
@@ -154,17 +160,17 @@
 .method private bio(Z)V
     .locals 0
 
-    sput-boolean p1, Lcom/android/server/wifi/tsu;->igw:Z
+    sput-boolean p1, Lcom/android/server/wifi/tsu;->wtn:Z
 
     return-void
 .end method
 
-.method static synthetic cno(Lcom/android/server/wifi/tsu;ZZ)V
+.method static synthetic cno(Lcom/android/server/wifi/tsu;I)I
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/android/server/wifi/tsu;->ywr(ZZ)V
+    iput p1, p0, Lcom/android/server/wifi/tsu;->kth:I
 
-    return-void
+    return p1
 .end method
 
 .method private dma()V
@@ -182,11 +188,11 @@
 
     move-result-object v1
 
-    new-instance v2, Lcom/android/server/wifi/tsu$you;
+    new-instance v2, Lcom/android/server/wifi/tsu$sis;
 
     iget-object v3, p0, Lcom/android/server/wifi/tsu;->sis:Landroid/os/Handler;
 
-    invoke-direct {v2, p0, v3}, Lcom/android/server/wifi/tsu$you;-><init>(Lcom/android/server/wifi/tsu;Landroid/os/Handler;)V
+    invoke-direct {v2, p0, v3}, Lcom/android/server/wifi/tsu$sis;-><init>(Lcom/android/server/wifi/tsu;Landroid/os/Handler;)V
 
     const/4 v3, 0x1
 
@@ -208,7 +214,7 @@
 .end method
 
 .method private gck()V
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lcom/android/server/wifi/tsu;->you:Landroid/content/Context;
 
@@ -216,9 +222,23 @@
 
     invoke-direct {v1, p0}, Lcom/android/server/wifi/tsu$zta;-><init>(Lcom/android/server/wifi/tsu;)V
 
+    new-instance v2, Landroid/content/IntentFilter;
+
+    const-string v3, "android.net.wifi.STATE_CHANGE"
+
+    invoke-direct {v2, v3}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    iget-object v0, p0, Lcom/android/server/wifi/tsu;->you:Landroid/content/Context;
+
+    new-instance v1, Lcom/android/server/wifi/tsu$you;
+
+    invoke-direct {v1, p0}, Lcom/android/server/wifi/tsu$you;-><init>(Lcom/android/server/wifi/tsu;)V
+
     new-instance p0, Landroid/content/IntentFilter;
 
-    const-string v2, "android.net.wifi.STATE_CHANGE"
+    const-string v2, "oneplus.intent.action.THERMAL_STATUS"
 
     invoke-direct {p0, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
@@ -250,33 +270,33 @@
 .method static synthetic rtg(Lcom/android/server/wifi/tsu;)I
     .locals 0
 
-    iget p0, p0, Lcom/android/server/wifi/tsu;->kth:I
+    iget p0, p0, Lcom/android/server/wifi/tsu;->igw:I
 
     return p0
 .end method
 
-.method static synthetic sis(Lcom/android/server/wifi/tsu;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/android/server/wifi/tsu;->bio:Z
-
-    return p0
-.end method
-
-.method static synthetic ssp(Lcom/android/server/wifi/tsu;I)I
-    .locals 0
-
-    iput p1, p0, Lcom/android/server/wifi/tsu;->kth:I
-
-    return p1
-.end method
-
-.method static synthetic tsu(Lcom/android/server/wifi/tsu;Z)Z
+.method static synthetic sis(Lcom/android/server/wifi/tsu;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/server/wifi/tsu;->bio:Z
 
     return p1
+.end method
+
+.method static synthetic ssp(Lcom/android/server/wifi/tsu;I)I
+    .locals 0
+
+    iput p1, p0, Lcom/android/server/wifi/tsu;->igw:I
+
+    return p1
+.end method
+
+.method static synthetic tsu(Lcom/android/server/wifi/tsu;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/server/wifi/tsu;->ywr()V
+
+    return-void
 .end method
 
 .method static synthetic you(Lcom/android/server/wifi/tsu;Landroid/net/NetworkInfo;)Landroid/net/NetworkInfo;
@@ -287,43 +307,67 @@
     return-object p1
 .end method
 
-.method private ywr(ZZ)V
-    .locals 2
+.method private ywr()V
+    .locals 3
 
-    sget-boolean p0, Lcom/android/server/wifi/tsu;->igw:Z
+    sget-boolean v0, Lcom/android/server/wifi/tsu;->wtn:Z
 
-    const-string v0, "OpWifiLowLatency"
+    const-string v1, "OpWifiLowLatency"
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    new-instance p0, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "wifiConnected = "
+    const-string v2, "wifiConnected = "
 
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    iget-boolean v2, p0, Lcom/android/server/wifi/tsu;->bio:Z
 
-    const-string v1, ", gameModeStarted = "
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, ", gameModeStarted = "
 
-    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget v2, p0, Lcom/android/server/wifi/tsu;->kth:I
 
-    move-result-object p0
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    const-string v2, ", thermalStatus = "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v2, p0, Lcom/android/server/wifi/tsu;->igw:I
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    if-eqz p1, :cond_1
+    iget v0, p0, Lcom/android/server/wifi/tsu;->igw:I
 
-    if-eqz p2, :cond_1
+    const/4 v2, 0x2
 
-    sget-object p0, Lcom/android/server/wifi/tsu;->wtn:Landroid/net/wifi/WifiManager$WifiLock;
+    if-ge v0, v2, :cond_1
+
+    iget-boolean v0, p0, Lcom/android/server/wifi/tsu;->bio:Z
+
+    if-eqz v0, :cond_1
+
+    iget p0, p0, Lcom/android/server/wifi/tsu;->kth:I
+
+    const/4 v0, 0x1
+
+    if-ne p0, v0, :cond_1
+
+    sget-object p0, Lcom/android/server/wifi/tsu;->gck:Landroid/net/wifi/WifiManager$WifiLock;
 
     invoke-virtual {p0}, Landroid/net/wifi/WifiManager$WifiLock;->isHeld()Z
 
@@ -331,7 +375,7 @@
 
     if-nez p0, :cond_2
 
-    sget-object p0, Lcom/android/server/wifi/tsu;->wtn:Landroid/net/wifi/WifiManager$WifiLock;
+    sget-object p0, Lcom/android/server/wifi/tsu;->gck:Landroid/net/wifi/WifiManager$WifiLock;
 
     invoke-virtual {p0}, Landroid/net/wifi/WifiManager$WifiLock;->acquire()V
 
@@ -340,7 +384,7 @@
     goto :goto_0
 
     :cond_1
-    sget-object p0, Lcom/android/server/wifi/tsu;->wtn:Landroid/net/wifi/WifiManager$WifiLock;
+    sget-object p0, Lcom/android/server/wifi/tsu;->gck:Landroid/net/wifi/WifiManager$WifiLock;
 
     invoke-virtual {p0}, Landroid/net/wifi/WifiManager$WifiLock;->isHeld()Z
 
@@ -348,14 +392,14 @@
 
     if-eqz p0, :cond_2
 
-    sget-object p0, Lcom/android/server/wifi/tsu;->wtn:Landroid/net/wifi/WifiManager$WifiLock;
+    sget-object p0, Lcom/android/server/wifi/tsu;->gck:Landroid/net/wifi/WifiManager$WifiLock;
 
     invoke-virtual {p0}, Landroid/net/wifi/WifiManager$WifiLock;->release()V
 
     const-string p0, "disable LLM on wifi"
 
     :goto_0
-    invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
     return-void

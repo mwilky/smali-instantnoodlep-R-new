@@ -72,7 +72,7 @@
 
 .field private mHandlerCarMode:Landroid/os/Handler;
 
-.field private final mInstallTask:Lcom/android/server/wtn;
+.field private final mInstallTask:Lcom/android/server/gck;
 
 .field private final mLock:Ljava/lang/Object;
 
@@ -157,11 +157,11 @@
 
     iput-object v1, p0, Lcom/android/server/OnePlusExService;->outStream:Ljava/io/FileOutputStream;
 
-    new-instance v2, Lcom/android/server/wtn;
+    new-instance v2, Lcom/android/server/gck;
 
-    invoke-direct {v2}, Lcom/android/server/wtn;-><init>()V
+    invoke-direct {v2}, Lcom/android/server/gck;-><init>()V
 
-    iput-object v2, p0, Lcom/android/server/OnePlusExService;->mInstallTask:Lcom/android/server/wtn;
+    iput-object v2, p0, Lcom/android/server/OnePlusExService;->mInstallTask:Lcom/android/server/gck;
 
     new-instance v2, Lcom/android/server/OnePlusExService$ssp;
 
@@ -2191,9 +2191,9 @@
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lcom/android/server/OnePlusExService;->mInstallTask:Lcom/android/server/wtn;
+    iget-object p0, p0, Lcom/android/server/OnePlusExService;->mInstallTask:Lcom/android/server/gck;
 
-    invoke-virtual {p0, v0, p1}, Lcom/android/server/wtn;->ywr(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-virtual {p0, v0, p1}, Lcom/android/server/gck;->ywr(Landroid/content/Context;Ljava/lang/String;)V
 
     :cond_0
     return-void

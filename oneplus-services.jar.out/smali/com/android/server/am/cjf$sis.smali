@@ -34,7 +34,7 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
-    sget-boolean v0, Lcom/android/server/am/cjf;->cjf:Z
+    sget-boolean v0, Lcom/android/server/am/cjf;->ire:Z
 
     if-eqz v0, :cond_0
 

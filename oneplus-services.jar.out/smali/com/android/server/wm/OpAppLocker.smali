@@ -1954,7 +1954,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/android/server/am/cjf;->t(Z)V
+    invoke-virtual {v0, p1}, Lcom/android/server/am/cjf;->v(Z)V
 
     :cond_0
     sget-object v0, Lcom/android/server/wm/OpAppLocker;->mATMService:Lcom/android/server/wm/ActivityTaskManagerService;

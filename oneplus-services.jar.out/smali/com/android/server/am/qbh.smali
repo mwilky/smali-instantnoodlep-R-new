@@ -37,7 +37,7 @@
 .method public abstract noteNotificationChanged(Ljava/lang/String;IIZ)V
 .end method
 
-.method public abstract notePSSChanged(II)V
+.method public abstract notePSSChanged(IIJ)V
 .end method
 
 .method public abstract notePredctionAppChanged(Ljava/lang/String;Z)V

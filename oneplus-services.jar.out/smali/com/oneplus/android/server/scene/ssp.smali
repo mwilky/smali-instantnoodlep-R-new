@@ -210,7 +210,7 @@
 
     iget-object p0, p0, Lcom/oneplus/android/server/scene/ssp;->dma:Landroid/view/View;
 
-    const v1, 0x5070223
+    const v1, 0x5070222
 
     goto :goto_1
 
@@ -235,7 +235,7 @@
 
     iget-object p0, p0, Lcom/oneplus/android/server/scene/ssp;->dma:Landroid/view/View;
 
-    const v1, 0x507022f
+    const v1, 0x507022e
 
     :goto_1
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;

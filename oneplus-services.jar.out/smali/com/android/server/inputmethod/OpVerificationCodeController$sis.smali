@@ -51,7 +51,7 @@
 
     iget p0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController$sis;->you:I
 
-    invoke-static {v0, v1, p0}, Lcom/android/server/inputmethod/OpVerificationCodeController;->access$1200(Lcom/android/server/inputmethod/OpVerificationCodeController;Ljava/lang/CharSequence;I)V
+    invoke-static {v0, v1, p0}, Lcom/android/server/inputmethod/OpVerificationCodeController;->access$1300(Lcom/android/server/inputmethod/OpVerificationCodeController;Ljava/lang/CharSequence;I)V
 
     return-void
 .end method

@@ -39,108 +39,6 @@
     return-void
 .end method
 
-.method private bio()Lcom/android/server/wm/SurfaceAnimator;
-    .locals 3
-
-    invoke-direct {p0}, Lcom/android/server/wm/gwm$zta;->sis()Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
-
-    invoke-static {v1}, Lcom/android/server/wm/gwm;->ssp(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/DisplayContent;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->getSurfaceControl()Landroid/view/SurfaceControl;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;->setAnimationLeashParent(Landroid/view/SurfaceControl;)Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
-
-    invoke-static {v1}, Lcom/android/server/wm/gwm;->ssp(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/DisplayContent;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->getWindowingLayer()Landroid/view/SurfaceControl;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;->setSurfaceControl(Landroid/view/SurfaceControl;)Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
-
-    invoke-static {v1}, Lcom/android/server/wm/gwm;->ssp(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/DisplayContent;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->getSurfaceControl()Landroid/view/SurfaceControl;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;->setParentSurfaceControl(Landroid/view/SurfaceControl;)Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
-
-    invoke-static {v1}, Lcom/android/server/wm/gwm;->ssp(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/DisplayContent;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->getSurfaceWidth()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;->setWidth(I)Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
-
-    invoke-static {v1}, Lcom/android/server/wm/gwm;->ssp(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/DisplayContent;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->getSurfaceHeight()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;->setHeight(I)Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;->build()Lcom/android/server/wm/SurfaceAnimator$Animatable;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
-
-    invoke-static {v1}, Lcom/android/server/wm/gwm;->cno(Lcom/android/server/wm/gwm;)Landroid/view/animation/Animation;
-
-    move-result-object v1
-
-    invoke-direct {p0, v1}, Lcom/android/server/wm/gwm$zta;->you(Landroid/view/animation/Animation;)Lcom/android/server/wm/WindowAnimationSpec;
-
-    move-result-object v1
-
-    new-instance v2, Lcom/android/server/wm/ssp;
-
-    invoke-direct {v2, p0}, Lcom/android/server/wm/ssp;-><init>(Lcom/android/server/wm/gwm$zta;)V
-
-    invoke-direct {p0, v0, v1, v2}, Lcom/android/server/wm/gwm$zta;->cno(Lcom/android/server/wm/SurfaceAnimator$Animatable;Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;Lcom/android/server/wm/SurfaceAnimator$OnAnimationFinishedCallback;)Lcom/android/server/wm/SurfaceAnimator;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 .method private cno(Lcom/android/server/wm/SurfaceAnimator$Animatable;Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;Lcom/android/server/wm/SurfaceAnimator$OnAnimationFinishedCallback;)Lcom/android/server/wm/SurfaceAnimator;
     .locals 2
 
@@ -168,7 +66,7 @@
 
     iget-object p0, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
 
-    invoke-static {p0}, Lcom/android/server/wm/gwm;->ssp(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/DisplayContent;
+    invoke-static {p0}, Lcom/android/server/wm/gwm;->igw(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/DisplayContent;
 
     move-result-object p0
 
@@ -194,7 +92,7 @@
 
     iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
 
-    invoke-static {v1}, Lcom/android/server/wm/gwm;->tsu(Lcom/android/server/wm/gwm;)Landroid/view/SurfaceControl;
+    invoke-static {v1}, Lcom/android/server/wm/gwm;->ywr(Lcom/android/server/wm/gwm;)Landroid/view/SurfaceControl;
 
     move-result-object v1
 
@@ -204,7 +102,7 @@
 
     iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
 
-    invoke-static {v1}, Lcom/android/server/wm/gwm;->ssp(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/DisplayContent;
+    invoke-static {v1}, Lcom/android/server/wm/gwm;->igw(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/DisplayContent;
 
     move-result-object v1
 
@@ -218,7 +116,7 @@
 
     iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
 
-    invoke-static {v1}, Lcom/android/server/wm/gwm;->bio(Lcom/android/server/wm/gwm;)I
+    invoke-static {v1}, Lcom/android/server/wm/gwm;->dma(Lcom/android/server/wm/gwm;)I
 
     move-result v1
 
@@ -228,7 +126,7 @@
 
     iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
 
-    invoke-static {v1}, Lcom/android/server/wm/gwm;->kth(Lcom/android/server/wm/gwm;)I
+    invoke-static {v1}, Lcom/android/server/wm/gwm;->gck(Lcom/android/server/wm/gwm;)I
 
     move-result v1
 
@@ -242,7 +140,7 @@
 
     iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
 
-    invoke-static {v1}, Lcom/android/server/wm/gwm;->rtg(Lcom/android/server/wm/gwm;)Landroid/view/animation/Animation;
+    invoke-static {v1}, Lcom/android/server/wm/gwm;->qbh(Lcom/android/server/wm/gwm;)Landroid/view/animation/Animation;
 
     move-result-object v1
 
@@ -261,7 +159,7 @@
     return-object p0
 .end method
 
-.method private gck()Lcom/android/server/wm/SurfaceAnimator;
+.method private igw()Lcom/android/server/wm/SurfaceAnimator;
     .locals 3
 
     invoke-direct {p0}, Lcom/android/server/wm/gwm$zta;->sis()Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;
@@ -270,21 +168,11 @@
 
     iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
 
-    invoke-static {v1}, Lcom/android/server/wm/gwm;->igw(Lcom/android/server/wm/gwm;)Landroid/view/SurfaceControl;
+    invoke-static {v1}, Lcom/android/server/wm/gwm;->igw(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/DisplayContent;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;->setSurfaceControl(Landroid/view/SurfaceControl;)Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
-
-    invoke-static {v1}, Lcom/android/server/wm/gwm;->ssp(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/DisplayContent;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->getOverlayLayer()Landroid/view/SurfaceControl;
+    invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->getSurfaceControl()Landroid/view/SurfaceControl;
 
     move-result-object v1
 
@@ -294,7 +182,39 @@
 
     iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
 
-    invoke-static {v1}, Lcom/android/server/wm/gwm;->bio(Lcom/android/server/wm/gwm;)I
+    invoke-static {v1}, Lcom/android/server/wm/gwm;->igw(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/DisplayContent;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->getWindowingLayer()Landroid/view/SurfaceControl;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;->setSurfaceControl(Landroid/view/SurfaceControl;)Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
+
+    invoke-static {v1}, Lcom/android/server/wm/gwm;->igw(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/DisplayContent;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->getSurfaceControl()Landroid/view/SurfaceControl;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;->setParentSurfaceControl(Landroid/view/SurfaceControl;)Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
+
+    invoke-static {v1}, Lcom/android/server/wm/gwm;->igw(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/DisplayContent;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->getSurfaceWidth()I
 
     move-result v1
 
@@ -304,7 +224,11 @@
 
     iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
 
-    invoke-static {v1}, Lcom/android/server/wm/gwm;->kth(Lcom/android/server/wm/gwm;)I
+    invoke-static {v1}, Lcom/android/server/wm/gwm;->igw(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/DisplayContent;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->getSurfaceHeight()I
 
     move-result v1
 
@@ -337,8 +261,142 @@
     return-object p0
 .end method
 
-.method private igw()Lcom/android/server/wm/SurfaceAnimator;
+.method private kth()V
+    .locals 11
+
+    iget-object v0, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
+
+    invoke-static {v0}, Lcom/android/server/wm/gwm;->ssp(Lcom/android/server/wm/gwm;)Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x10e00b9
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
+
+    move-result v10
+
+    iget-object v0, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
+
+    invoke-static {v0}, Lcom/android/server/wm/gwm;->zta(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/WindowManagerService;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mSurfaceAnimationRunner:Lcom/android/server/wm/SurfaceAnimationRunner;
+
+    const/4 v1, 0x3
+
+    new-array v9, v1, [F
+
+    iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
+
+    invoke-static {v1}, Lcom/android/server/wm/gwm;->cno(Lcom/android/server/wm/gwm;)F
+
+    move-result v1
+
+    iget-object v2, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
+
+    invoke-static {v2}, Lcom/android/server/wm/gwm;->cno(Lcom/android/server/wm/gwm;)F
+
+    move-result v2
+
+    iget-object v3, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
+
+    invoke-static {v3}, Lcom/android/server/wm/gwm;->cno(Lcom/android/server/wm/gwm;)F
+
+    move-result v3
+
+    invoke-static {v1, v2, v3}, Landroid/graphics/Color;->rgb(FFF)I
+
+    move-result v7
+
+    iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
+
+    invoke-static {v1}, Lcom/android/server/wm/gwm;->kth(Lcom/android/server/wm/gwm;)F
+
+    move-result v1
+
+    iget-object v2, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
+
+    invoke-static {v2}, Lcom/android/server/wm/gwm;->kth(Lcom/android/server/wm/gwm;)F
+
+    move-result v2
+
+    iget-object v3, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
+
+    invoke-static {v3}, Lcom/android/server/wm/gwm;->kth(Lcom/android/server/wm/gwm;)F
+
+    move-result v3
+
+    invoke-static {v1, v2, v3}, Landroid/graphics/Color;->rgb(FFF)I
+
+    move-result v8
+
+    int-to-long v1, v10
+
+    iget-object v3, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
+
+    invoke-static {v3}, Lcom/android/server/wm/gwm;->zta(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/WindowManagerService;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/android/server/wm/WindowManagerService;->getCurrentAnimatorScale()F
+
+    move-result v3
+
+    float-to-long v3, v3
+
+    mul-long v4, v1, v3
+
+    invoke-static {}, Landroid/animation/ArgbEvaluator;->getInstance()Landroid/animation/ArgbEvaluator;
+
+    move-result-object v6
+
+    new-instance v1, Lcom/android/server/wm/gwm$zta$zta;
+
+    move-object v2, v1
+
+    move-object v3, p0
+
+    invoke-direct/range {v2 .. v10}, Lcom/android/server/wm/gwm$zta$zta;-><init>(Lcom/android/server/wm/gwm$zta;JLandroid/animation/ArgbEvaluator;II[FI)V
+
+    iget-object v2, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
+
+    invoke-static {v2}, Lcom/android/server/wm/gwm;->bio(Lcom/android/server/wm/gwm;)Landroid/view/SurfaceControl;
+
+    move-result-object v2
+
+    iget-object p0, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
+
+    invoke-static {p0}, Lcom/android/server/wm/gwm;->igw(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/DisplayContent;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/server/wm/DisplayContent;->getPendingTransaction()Landroid/view/SurfaceControl$Transaction;
+
+    move-result-object p0
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, v2, p0, v3}, Lcom/android/server/wm/SurfaceAnimationRunner;->startAnimation(Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;Landroid/view/SurfaceControl;Landroid/view/SurfaceControl$Transaction;Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method private qbh()Lcom/android/server/wm/SurfaceAnimator;
     .locals 3
+
+    iget-object v0, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
+
+    invoke-static {v0}, Lcom/android/server/wm/gwm;->bvj(Lcom/android/server/wm/gwm;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     invoke-direct {p0}, Lcom/android/server/wm/gwm$zta;->sis()Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;
 
@@ -346,7 +404,7 @@
 
     iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
 
-    invoke-static {v1}, Lcom/android/server/wm/gwm;->gck(Lcom/android/server/wm/gwm;)Landroid/view/SurfaceControl;
+    invoke-static {v1}, Lcom/android/server/wm/gwm;->ywr(Lcom/android/server/wm/gwm;)Landroid/view/SurfaceControl;
 
     move-result-object v1
 
@@ -356,7 +414,61 @@
 
     iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
 
-    invoke-static {v1}, Lcom/android/server/wm/gwm;->ssp(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/DisplayContent;
+    invoke-static {v1}, Lcom/android/server/wm/gwm;->igw(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/DisplayContent;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->getDisplayCoveredLayer()Landroid/view/SurfaceControl;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;->setAnimationLeashParent(Landroid/view/SurfaceControl;)Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;->build()Lcom/android/server/wm/SurfaceAnimator$Animatable;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
+
+    invoke-static {v1}, Lcom/android/server/wm/gwm;->sis(Lcom/android/server/wm/gwm;)Landroid/view/animation/Animation;
+
+    move-result-object v1
+
+    invoke-direct {p0, v1}, Lcom/android/server/wm/gwm$zta;->you(Landroid/view/animation/Animation;)Lcom/android/server/wm/WindowAnimationSpec;
+
+    move-result-object v1
+
+    new-instance v2, Lcom/android/server/wm/ssp;
+
+    invoke-direct {v2, p0}, Lcom/android/server/wm/ssp;-><init>(Lcom/android/server/wm/gwm$zta;)V
+
+    :goto_0
+    invoke-direct {p0, v0, v1, v2}, Lcom/android/server/wm/gwm$zta;->cno(Lcom/android/server/wm/SurfaceAnimator$Animatable;Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;Lcom/android/server/wm/SurfaceAnimator$OnAnimationFinishedCallback;)Lcom/android/server/wm/SurfaceAnimator;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    invoke-direct {p0}, Lcom/android/server/wm/gwm$zta;->sis()Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
+
+    invoke-static {v1}, Lcom/android/server/wm/gwm;->ywr(Lcom/android/server/wm/gwm;)Landroid/view/SurfaceControl;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;->setSurfaceControl(Landroid/view/SurfaceControl;)Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
+
+    invoke-static {v1}, Lcom/android/server/wm/gwm;->igw(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/DisplayContent;
 
     move-result-object v1
 
@@ -374,7 +486,7 @@
 
     iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
 
-    invoke-static {v1}, Lcom/android/server/wm/gwm;->cno(Lcom/android/server/wm/gwm;)Landroid/view/animation/Animation;
+    invoke-static {v1}, Lcom/android/server/wm/gwm;->sis(Lcom/android/server/wm/gwm;)Landroid/view/animation/Animation;
 
     move-result-object v1
 
@@ -386,11 +498,7 @@
 
     invoke-direct {v2, p0}, Lcom/android/server/wm/ssp;-><init>(Lcom/android/server/wm/gwm$zta;)V
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/android/server/wm/gwm$zta;->cno(Lcom/android/server/wm/SurfaceAnimator$Animatable;Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;Lcom/android/server/wm/SurfaceAnimator$OnAnimationFinishedCallback;)Lcom/android/server/wm/SurfaceAnimator;
-
-    move-result-object p0
-
-    return-object p0
+    goto :goto_0
 .end method
 
 .method public static synthetic rtg(Lcom/android/server/wm/gwm$zta;ILcom/android/server/wm/AnimationAdapter;)V
@@ -410,7 +518,7 @@
 
     iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
 
-    invoke-static {v1}, Lcom/android/server/wm/gwm;->ssp(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/DisplayContent;
+    invoke-static {v1}, Lcom/android/server/wm/gwm;->igw(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/DisplayContent;
 
     move-result-object v1
 
@@ -426,7 +534,7 @@
 
     iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
 
-    invoke-static {v1}, Lcom/android/server/wm/gwm;->ssp(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/DisplayContent;
+    invoke-static {v1}, Lcom/android/server/wm/gwm;->igw(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/DisplayContent;
 
     move-result-object v1
 
@@ -442,7 +550,7 @@
 
     iget-object p0, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
 
-    invoke-static {p0}, Lcom/android/server/wm/gwm;->ssp(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/DisplayContent;
+    invoke-static {p0}, Lcom/android/server/wm/gwm;->igw(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/DisplayContent;
 
     move-result-object p0
 
@@ -710,7 +818,7 @@
 
     iget-object p0, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
 
-    invoke-static {p0}, Lcom/android/server/wm/gwm;->ssp(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/DisplayContent;
+    invoke-static {p0}, Lcom/android/server/wm/gwm;->igw(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/DisplayContent;
 
     move-result-object p0
 
@@ -729,6 +837,62 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw p0
+.end method
+
+.method private wtn()Lcom/android/server/wm/SurfaceAnimator;
+    .locals 3
+
+    invoke-direct {p0}, Lcom/android/server/wm/gwm$zta;->sis()Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
+
+    invoke-static {v1}, Lcom/android/server/wm/gwm;->oif(Lcom/android/server/wm/gwm;)Landroid/view/SurfaceControl;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;->setSurfaceControl(Landroid/view/SurfaceControl;)Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
+
+    invoke-static {v1}, Lcom/android/server/wm/gwm;->igw(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/DisplayContent;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->getOverlayLayer()Landroid/view/SurfaceControl;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;->setAnimationLeashParent(Landroid/view/SurfaceControl;)Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;->build()Lcom/android/server/wm/SurfaceAnimator$Animatable;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
+
+    invoke-static {v1}, Lcom/android/server/wm/gwm;->wtn(Lcom/android/server/wm/gwm;)Landroid/view/animation/Animation;
+
+    move-result-object v1
+
+    invoke-direct {p0, v1}, Lcom/android/server/wm/gwm$zta;->you(Landroid/view/animation/Animation;)Lcom/android/server/wm/WindowAnimationSpec;
+
+    move-result-object v1
+
+    new-instance v2, Lcom/android/server/wm/ssp;
+
+    invoke-direct {v2, p0}, Lcom/android/server/wm/ssp;-><init>(Lcom/android/server/wm/gwm$zta;)V
+
+    invoke-direct {p0, v0, v1, v2}, Lcom/android/server/wm/gwm$zta;->cno(Lcom/android/server/wm/SurfaceAnimator$Animatable;Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;Lcom/android/server/wm/SurfaceAnimator$OnAnimationFinishedCallback;)Lcom/android/server/wm/SurfaceAnimator;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method private you(Landroid/view/animation/Animation;)Lcom/android/server/wm/WindowAnimationSpec;
@@ -752,21 +916,13 @@
 .method private ywr()Lcom/android/server/wm/SurfaceAnimator;
     .locals 3
 
-    iget-object v0, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
-
-    invoke-static {v0}, Lcom/android/server/wm/gwm;->dma(Lcom/android/server/wm/gwm;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
     invoke-direct {p0}, Lcom/android/server/wm/gwm$zta;->sis()Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
 
-    invoke-static {v1}, Lcom/android/server/wm/gwm;->igw(Lcom/android/server/wm/gwm;)Landroid/view/SurfaceControl;
+    invoke-static {v1}, Lcom/android/server/wm/gwm;->tsu(Lcom/android/server/wm/gwm;)Landroid/view/SurfaceControl;
 
     move-result-object v1
 
@@ -776,61 +932,7 @@
 
     iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
 
-    invoke-static {v1}, Lcom/android/server/wm/gwm;->ssp(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/DisplayContent;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->getDisplayCoveredLayer()Landroid/view/SurfaceControl;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;->setAnimationLeashParent(Landroid/view/SurfaceControl;)Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;->build()Lcom/android/server/wm/SurfaceAnimator$Animatable;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
-
-    invoke-static {v1}, Lcom/android/server/wm/gwm;->sis(Lcom/android/server/wm/gwm;)Landroid/view/animation/Animation;
-
-    move-result-object v1
-
-    invoke-direct {p0, v1}, Lcom/android/server/wm/gwm$zta;->you(Landroid/view/animation/Animation;)Lcom/android/server/wm/WindowAnimationSpec;
-
-    move-result-object v1
-
-    new-instance v2, Lcom/android/server/wm/ssp;
-
-    invoke-direct {v2, p0}, Lcom/android/server/wm/ssp;-><init>(Lcom/android/server/wm/gwm$zta;)V
-
-    :goto_0
-    invoke-direct {p0, v0, v1, v2}, Lcom/android/server/wm/gwm$zta;->cno(Lcom/android/server/wm/SurfaceAnimator$Animatable;Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;Lcom/android/server/wm/SurfaceAnimator$OnAnimationFinishedCallback;)Lcom/android/server/wm/SurfaceAnimator;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    invoke-direct {p0}, Lcom/android/server/wm/gwm$zta;->sis()Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
-
-    invoke-static {v1}, Lcom/android/server/wm/gwm;->igw(Lcom/android/server/wm/gwm;)Landroid/view/SurfaceControl;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;->setSurfaceControl(Landroid/view/SurfaceControl;)Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
-
-    invoke-static {v1}, Lcom/android/server/wm/gwm;->ssp(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/DisplayContent;
+    invoke-static {v1}, Lcom/android/server/wm/gwm;->igw(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/DisplayContent;
 
     move-result-object v1
 
@@ -842,13 +944,33 @@
 
     move-result-object v0
 
+    iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
+
+    invoke-static {v1}, Lcom/android/server/wm/gwm;->dma(Lcom/android/server/wm/gwm;)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;->setWidth(I)Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
+
+    invoke-static {v1}, Lcom/android/server/wm/gwm;->gck(Lcom/android/server/wm/gwm;)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;->setHeight(I)Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;
+
+    move-result-object v0
+
     invoke-virtual {v0}, Lcom/android/server/wm/SimpleSurfaceAnimatable$Builder;->build()Lcom/android/server/wm/SurfaceAnimator$Animatable;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
 
-    invoke-static {v1}, Lcom/android/server/wm/gwm;->sis(Lcom/android/server/wm/gwm;)Landroid/view/animation/Animation;
+    invoke-static {v1}, Lcom/android/server/wm/gwm;->rtg(Lcom/android/server/wm/gwm;)Landroid/view/animation/Animation;
 
     move-result-object v1
 
@@ -860,12 +982,16 @@
 
     invoke-direct {v2, p0}, Lcom/android/server/wm/ssp;-><init>(Lcom/android/server/wm/gwm$zta;)V
 
-    goto :goto_0
+    invoke-direct {p0, v0, v1, v2}, Lcom/android/server/wm/gwm$zta;->cno(Lcom/android/server/wm/SurfaceAnimator$Animatable;Lcom/android/server/wm/LocalAnimationAdapter$AnimationSpec;Lcom/android/server/wm/SurfaceAnimator$OnAnimationFinishedCallback;)Lcom/android/server/wm/SurfaceAnimator;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 
 # virtual methods
-.method kth()V
+.method bio()V
     .locals 1
 
     :try_start_0
@@ -879,13 +1005,13 @@
 
     invoke-virtual {v0}, Lcom/android/server/wm/SurfaceAnimationRunner;->deferStartingAnimations()V
 
-    invoke-direct {p0}, Lcom/android/server/wm/gwm$zta;->gck()Lcom/android/server/wm/SurfaceAnimator;
+    invoke-direct {p0}, Lcom/android/server/wm/gwm$zta;->dma()Lcom/android/server/wm/SurfaceAnimator;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/wm/gwm$zta;->sis:Lcom/android/server/wm/SurfaceAnimator;
 
-    invoke-direct {p0}, Lcom/android/server/wm/gwm$zta;->bio()Lcom/android/server/wm/SurfaceAnimator;
+    invoke-direct {p0}, Lcom/android/server/wm/gwm$zta;->igw()Lcom/android/server/wm/SurfaceAnimator;
 
     move-result-object v0
 
@@ -899,7 +1025,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0}, Lcom/android/server/wm/gwm$zta;->igw()Lcom/android/server/wm/SurfaceAnimator;
+    invoke-direct {p0}, Lcom/android/server/wm/gwm$zta;->wtn()Lcom/android/server/wm/SurfaceAnimator;
 
     move-result-object v0
 
@@ -908,6 +1034,70 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :cond_0
+    iget-object p0, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
+
+    invoke-static {p0}, Lcom/android/server/wm/gwm;->zta(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/WindowManagerService;
+
+    move-result-object p0
+
+    iget-object p0, p0, Lcom/android/server/wm/WindowManagerService;->mSurfaceAnimationRunner:Lcom/android/server/wm/SurfaceAnimationRunner;
+
+    invoke-virtual {p0}, Lcom/android/server/wm/SurfaceAnimationRunner;->continueStartingAnimations()V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    iget-object p0, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
+
+    invoke-static {p0}, Lcom/android/server/wm/gwm;->zta(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/WindowManagerService;
+
+    move-result-object p0
+
+    iget-object p0, p0, Lcom/android/server/wm/WindowManagerService;->mSurfaceAnimationRunner:Lcom/android/server/wm/SurfaceAnimationRunner;
+
+    invoke-virtual {p0}, Lcom/android/server/wm/SurfaceAnimationRunner;->continueStartingAnimations()V
+
+    throw v0
+.end method
+
+.method gck()V
+    .locals 1
+
+    :try_start_0
+    iget-object v0, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
+
+    invoke-static {v0}, Lcom/android/server/wm/gwm;->zta(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/WindowManagerService;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mSurfaceAnimationRunner:Lcom/android/server/wm/SurfaceAnimationRunner;
+
+    invoke-virtual {v0}, Lcom/android/server/wm/SurfaceAnimationRunner;->deferStartingAnimations()V
+
+    invoke-direct {p0}, Lcom/android/server/wm/gwm$zta;->igw()Lcom/android/server/wm/SurfaceAnimator;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/server/wm/gwm$zta;->zta:Lcom/android/server/wm/SurfaceAnimator;
+
+    invoke-direct {p0}, Lcom/android/server/wm/gwm$zta;->qbh()Lcom/android/server/wm/SurfaceAnimator;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/server/wm/gwm$zta;->you:Lcom/android/server/wm/SurfaceAnimator;
+
+    invoke-direct {p0}, Lcom/android/server/wm/gwm$zta;->ywr()Lcom/android/server/wm/SurfaceAnimator;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/server/wm/gwm$zta;->rtg:Lcom/android/server/wm/SurfaceAnimator;
+
+    invoke-direct {p0}, Lcom/android/server/wm/gwm$zta;->kth()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
     iget-object p0, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
 
     invoke-static {p0}, Lcom/android/server/wm/gwm;->zta(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/WindowManagerService;
@@ -1005,68 +1195,6 @@
     return p0
 .end method
 
-.method wtn()V
-    .locals 1
-
-    :try_start_0
-    iget-object v0, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
-
-    invoke-static {v0}, Lcom/android/server/wm/gwm;->zta(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/WindowManagerService;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mSurfaceAnimationRunner:Lcom/android/server/wm/SurfaceAnimationRunner;
-
-    invoke-virtual {v0}, Lcom/android/server/wm/SurfaceAnimationRunner;->deferStartingAnimations()V
-
-    invoke-direct {p0}, Lcom/android/server/wm/gwm$zta;->bio()Lcom/android/server/wm/SurfaceAnimator;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/android/server/wm/gwm$zta;->zta:Lcom/android/server/wm/SurfaceAnimator;
-
-    invoke-direct {p0}, Lcom/android/server/wm/gwm$zta;->ywr()Lcom/android/server/wm/SurfaceAnimator;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/android/server/wm/gwm$zta;->you:Lcom/android/server/wm/SurfaceAnimator;
-
-    invoke-direct {p0}, Lcom/android/server/wm/gwm$zta;->dma()Lcom/android/server/wm/SurfaceAnimator;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/android/server/wm/gwm$zta;->rtg:Lcom/android/server/wm/SurfaceAnimator;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    iget-object p0, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
-
-    invoke-static {p0}, Lcom/android/server/wm/gwm;->zta(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/WindowManagerService;
-
-    move-result-object p0
-
-    iget-object p0, p0, Lcom/android/server/wm/WindowManagerService;->mSurfaceAnimationRunner:Lcom/android/server/wm/SurfaceAnimationRunner;
-
-    invoke-virtual {p0}, Lcom/android/server/wm/SurfaceAnimationRunner;->continueStartingAnimations()V
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    iget-object p0, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
-
-    invoke-static {p0}, Lcom/android/server/wm/gwm;->zta(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/WindowManagerService;
-
-    move-result-object p0
-
-    iget-object p0, p0, Lcom/android/server/wm/WindowManagerService;->mSurfaceAnimationRunner:Lcom/android/server/wm/SurfaceAnimationRunner;
-
-    invoke-virtual {p0}, Lcom/android/server/wm/SurfaceAnimationRunner;->continueStartingAnimations()V
-
-    throw v0
-.end method
-
 .method public zta()V
     .locals 1
 
@@ -1098,12 +1226,37 @@
     invoke-virtual {v0}, Lcom/android/server/wm/SurfaceAnimator;->cancelAnimation()V
 
     :cond_3
-    iget-object p0, p0, Lcom/android/server/wm/gwm$zta;->rtg:Lcom/android/server/wm/SurfaceAnimator;
+    iget-object v0, p0, Lcom/android/server/wm/gwm$zta;->rtg:Lcom/android/server/wm/SurfaceAnimator;
 
-    if-eqz p0, :cond_4
+    if-eqz v0, :cond_4
 
-    invoke-virtual {p0}, Lcom/android/server/wm/SurfaceAnimator;->cancelAnimation()V
+    invoke-virtual {v0}, Lcom/android/server/wm/SurfaceAnimator;->cancelAnimation()V
 
     :cond_4
+    iget-object v0, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
+
+    invoke-static {v0}, Lcom/android/server/wm/gwm;->bio(Lcom/android/server/wm/gwm;)Landroid/view/SurfaceControl;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_5
+
+    iget-object v0, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
+
+    invoke-static {v0}, Lcom/android/server/wm/gwm;->zta(Lcom/android/server/wm/gwm;)Lcom/android/server/wm/WindowManagerService;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mSurfaceAnimationRunner:Lcom/android/server/wm/SurfaceAnimationRunner;
+
+    iget-object p0, p0, Lcom/android/server/wm/gwm$zta;->ssp:Lcom/android/server/wm/gwm;
+
+    invoke-static {p0}, Lcom/android/server/wm/gwm;->bio(Lcom/android/server/wm/gwm;)Landroid/view/SurfaceControl;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Lcom/android/server/wm/SurfaceAnimationRunner;->onAnimationCancelled(Landroid/view/SurfaceControl;)V
+
+    :cond_5
     return-void
 .end method

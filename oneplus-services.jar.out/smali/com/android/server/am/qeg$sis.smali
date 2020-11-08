@@ -2,9 +2,6 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Landroid/app/AlarmManager$OnAlarmListener;
-
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
@@ -12,34 +9,42 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
-    name = null
+    accessFlags = 0xa
+    name = "sis"
 .end annotation
 
 
-# instance fields
-.field final synthetic zta:Lcom/android/server/am/qeg;
+# static fields
+.field private static zta:Lcom/android/server/am/qeg;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/server/am/qeg;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lcom/android/server/am/qeg$sis;->zta:Lcom/android/server/am/qeg;
+    new-instance v0, Lcom/android/server/am/qeg;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lcom/android/server/am/qeg;-><init>(Lcom/android/server/am/qeg$zta;)V
+
+    sput-object v0, Lcom/android/server/am/qeg$sis;->zta:Lcom/android/server/am/qeg;
+
+    return-void
+.end method
+
+.method private constructor <init>()V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method static synthetic zta()Lcom/android/server/am/qeg;
+    .locals 1
 
-# virtual methods
-.method public onAlarm()V
-    .locals 0
+    sget-object v0, Lcom/android/server/am/qeg$sis;->zta:Lcom/android/server/am/qeg;
 
-    iget-object p0, p0, Lcom/android/server/am/qeg$sis;->zta:Lcom/android/server/am/qeg;
-
-    invoke-static {p0}, Lcom/android/server/am/qeg;->gwm(Lcom/android/server/am/qeg;)V
-
-    return-void
+    return-object v0
 .end method

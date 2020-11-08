@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements Lcom/android/server/cjf/zta;
+.implements Lcom/android/server/ear/zta;
 
 
 # annotations
@@ -34,6 +34,18 @@
 
 
 # virtual methods
+.method public cno()Z
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController$you;->zta:Lcom/android/server/inputmethod/OpVerificationCodeController;
+
+    invoke-static {p0}, Lcom/android/server/inputmethod/OpVerificationCodeController;->access$800(Lcom/android/server/inputmethod/OpVerificationCodeController;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
 .method public rtg()Z
     .locals 1
 
@@ -77,12 +89,12 @@
     return p0
 .end method
 
-.method public sis(Lcom/android/server/cjf/zta$zta;)V
+.method public sis(Lcom/android/server/ear/zta$zta;)V
     .locals 0
 
     iget-object p0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController$you;->zta:Lcom/android/server/inputmethod/OpVerificationCodeController;
 
-    invoke-static {p0, p1}, Lcom/android/server/inputmethod/OpVerificationCodeController;->access$1002(Lcom/android/server/inputmethod/OpVerificationCodeController;Lcom/android/server/cjf/zta$zta;)Lcom/android/server/cjf/zta$zta;
+    invoke-static {p0, p1}, Lcom/android/server/inputmethod/OpVerificationCodeController;->access$1102(Lcom/android/server/inputmethod/OpVerificationCodeController;Lcom/android/server/ear/zta$zta;)Lcom/android/server/ear/zta$zta;
 
     return-void
 .end method
@@ -100,7 +112,7 @@
 
     iget-object p0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController$you;->zta:Lcom/android/server/inputmethod/OpVerificationCodeController;
 
-    invoke-static {p0}, Lcom/android/server/inputmethod/OpVerificationCodeController;->access$900(Lcom/android/server/inputmethod/OpVerificationCodeController;)Landroid/graphics/Rect;
+    invoke-static {p0}, Lcom/android/server/inputmethod/OpVerificationCodeController;->access$1000(Lcom/android/server/inputmethod/OpVerificationCodeController;)Landroid/graphics/Rect;
 
     move-result-object p0
 
@@ -130,7 +142,7 @@
 
     iget-object p0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController$you;->zta:Lcom/android/server/inputmethod/OpVerificationCodeController;
 
-    invoke-static {p0}, Lcom/android/server/inputmethod/OpVerificationCodeController;->access$800(Lcom/android/server/inputmethod/OpVerificationCodeController;)Z
+    invoke-static {p0}, Lcom/android/server/inputmethod/OpVerificationCodeController;->access$900(Lcom/android/server/inputmethod/OpVerificationCodeController;)Z
 
     move-result p0
 
@@ -170,7 +182,7 @@
 
     iget-object p0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController$you;->zta:Lcom/android/server/inputmethod/OpVerificationCodeController;
 
-    invoke-static {p0, p1}, Lcom/android/server/inputmethod/OpVerificationCodeController;->access$1100(Lcom/android/server/inputmethod/OpVerificationCodeController;Ljava/lang/CharSequence;)V
+    invoke-static {p0, p1}, Lcom/android/server/inputmethod/OpVerificationCodeController;->access$1200(Lcom/android/server/inputmethod/OpVerificationCodeController;Ljava/lang/CharSequence;)V
 
     :cond_0
     return-void

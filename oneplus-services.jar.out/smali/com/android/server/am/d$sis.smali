@@ -1,9 +1,6 @@
 .class Lcom/android/server/am/d$sis;
-.super Ljava/lang/Object;
+.super Landroid/os/Handler;
 .source ""
-
-# interfaces
-.implements Lcom/android/server/am/OPBRPorcessSpeedMonitor$sis;
 
 
 # annotations
@@ -22,52 +19,131 @@
 
 
 # direct methods
-.method private constructor <init>(Lcom/android/server/am/d;)V
+.method public constructor <init>(Lcom/android/server/am/d;Landroid/os/Looper;)V
     .locals 0
 
     iput-object p1, p0, Lcom/android/server/am/d$sis;->zta:Lcom/android/server/am/d;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Lcom/android/server/am/d;Lcom/android/server/am/d$zta;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/server/am/d$sis;-><init>(Lcom/android/server/am/d;)V
+    invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public zta(Lcom/android/server/am/OPBRPorcessSpeedMonitor$ProcessBRSpeedType;)V
-    .locals 1
+.method public handleMessage(Landroid/os/Message;)V
+    .locals 5
 
-    new-instance p0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lcom/android/server/am/d$sis;->zta:Lcom/android/server/am/d;
 
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+    iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    const-string v0, "noteSpeedChanged speedType = "
+    invoke-static {v0, v1}, Lcom/android/server/am/d;->rtg(Lcom/android/server/am/d;Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget v1, p1, Landroid/os/Message;->what:I
 
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/4 v2, 0x1
+
+    if-eq v1, v2, :cond_5
+
+    const/4 v3, 0x2
+
+    const/4 v4, 0x0
+
+    if-eq v1, v3, :cond_2
+
+    const/4 v3, 0x3
+
+    if-eq v1, v3, :cond_0
+
+    goto :goto_3
+
+    :cond_0
+    iget p1, p1, Landroid/os/Message;->arg1:I
+
+    if-ne p1, v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    move v2, v4
+
+    :goto_0
+    iget-object p1, p0, Lcom/android/server/am/d$sis;->zta:Lcom/android/server/am/d;
+
+    invoke-static {p1, v2}, Lcom/android/server/am/d;->bio(Lcom/android/server/am/d;Z)Z
+
+    :goto_1
+    iget-object p0, p0, Lcom/android/server/am/d$sis;->zta:Lcom/android/server/am/d;
+
+    invoke-static {p0, v2, v0}, Lcom/android/server/am/d;->wtn(Lcom/android/server/am/d;ZLjava/lang/String;)V
+
+    goto :goto_3
+
+    :cond_2
+    iget-object v1, p0, Lcom/android/server/am/d$sis;->zta:Lcom/android/server/am/d;
+
+    invoke-static {v1}, Lcom/android/server/am/d;->kth(Lcom/android/server/am/d;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    iget p1, p1, Landroid/os/Message;->arg1:I
+
+    if-ne p1, v2, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    move v2, v4
+
+    :goto_2
+    iget-object p1, p0, Lcom/android/server/am/d$sis;->zta:Lcom/android/server/am/d;
+
+    invoke-static {p1}, Lcom/android/server/am/d;->igw(Lcom/android/server/am/d;)Z
+
+    move-result p1
+
+    if-eq v2, p1, :cond_6
+
+    goto :goto_1
+
+    :cond_5
+    new-instance p1, Lcom/oneplus/config/ConfigGrabber;
+
+    iget-object v0, p0, Lcom/android/server/am/d$sis;->zta:Lcom/android/server/am/d;
+
+    invoke-static {v0}, Lcom/android/server/am/d;->ssp(Lcom/android/server/am/d;)Landroid/content/Context;
+
+    move-result-object v0
+
+    const-string v1, "Slient5G"
+
+    invoke-direct {p1, v0, v1}, Lcom/oneplus/config/ConfigGrabber;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/android/server/am/d$sis;->zta:Lcom/android/server/am/d;
+
+    invoke-virtual {p1}, Lcom/oneplus/config/ConfigGrabber;->grabConfig()Lorg/json/JSONArray;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Lcom/android/server/am/d;->zta(Lcom/android/server/am/d;Lorg/json/JSONArray;)V
+
+    iget-object p0, p0, Lcom/android/server/am/d$sis;->zta:Lcom/android/server/am/d;
+
+    invoke-static {p0}, Lcom/android/server/am/d;->cno(Lcom/android/server/am/d;)Lcom/oneplus/config/ConfigObserver;
 
     move-result-object p0
 
-    const-string v0, "OpSystemStateMonitor"
+    invoke-virtual {p0}, Lcom/oneplus/config/ConfigObserver;->register()V
 
-    invoke-static {v0, p0}, Lcom/android/server/am/Slogger;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {}, Lcom/android/server/am/vdb;->cno()Lcom/android/server/am/vdb;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Lcom/android/server/am/vdb;->bvj(Lcom/android/server/am/OPBRPorcessSpeedMonitor$ProcessBRSpeedType;)V
-
+    :cond_6
+    :goto_3
     return-void
 .end method

@@ -1805,17 +1805,77 @@
     :cond_1
     const/4 p1, 0x0
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_5
 
     iput-object p2, v1, Lcom/android/server/wm/ActivityRecord;->packageName:Ljava/lang/String;
 
     invoke-virtual {p0, v1}, Lcom/android/server/wm/vdb;->isQuickReplyIM(Lcom/android/server/wm/ActivityRecord;)Z
 
-    move-result p1
+    move-result p2
 
-    iput-boolean p1, v1, Lcom/android/server/wm/ActivityRecord;->mIsQuickReplyApp:Z
+    if-eqz p2, :cond_3
+
+    const-string v2, "com.oneplus.applocker"
+
+    iget-object v3, v1, Lcom/android/server/wm/ActivityRecord;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contentEquals(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    iget-object v2, v1, Lcom/android/server/wm/ActivityRecord;->intent:Landroid/content/Intent;
+
+    if-eqz v2, :cond_3
+
+    iget-object v2, v1, Lcom/android/server/wm/ActivityRecord;->intent:Landroid/content/Intent;
+
+    const-string v3, "OP_APP_LOCKER_COMPONENT"
+
+    invoke-virtual {v2, v3}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, ""
+
+    if-eqz v2, :cond_2
+
+    const-string v3, "/"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v2
+
+    aget-object v3, v2, p1
 
     :cond_2
+    invoke-virtual {p0, v3}, Lcom/android/server/wm/vdb;->isQuickReplyIM(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    sget-boolean p2, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz p2, :cond_4
+
+    const-string p2, "OpQuickReply"
+
+    const-string v2, "Donot enter QuickReply mode AppLocker-Non QuickReply case"
+
+    invoke-static {p2, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_1
+
+    :cond_3
+    move p1, p2
+
+    :cond_4
+    :goto_1
+    iput-boolean p1, v1, Lcom/android/server/wm/ActivityRecord;->mIsQuickReplyApp:Z
+
+    :cond_5
     invoke-virtual {p0, p1}, Lcom/android/server/wm/vdb;->setQuickReplyRunning(Z)V
 
     monitor-exit v0
@@ -3235,9 +3295,7 @@
 
     iget-object v0, p0, Lcom/android/server/wm/vdb;->oif:Lcom/android/server/wm/ActivityRecord;
 
-    iget-object v0, v0, Lcom/android/server/wm/ActivityRecord;->packageName:Ljava/lang/String;
-
-    invoke-virtual {p0, v0}, Lcom/android/server/wm/vdb;->isQuickReplyIM(Ljava/lang/String;)Z
+    invoke-virtual {p0, v0}, Lcom/android/server/wm/vdb;->isQuickReplyIM(Lcom/android/server/wm/ActivityRecord;)Z
 
     move-result v0
 
@@ -4967,9 +5025,34 @@
     const-string v0, "OpQuickReply"
 
     :try_start_0
-    sget-boolean v1, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+    invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getDisplayId()I
+
+    move-result v1
 
     if-eqz v1, :cond_0
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "skip setResumedApp app="
+
+    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_0
+    sget-boolean v1, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz v1, :cond_1
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -4987,7 +5070,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_0
+    :cond_1
     iget-object v1, p1, Lcom/android/server/wm/ActivityRecord;->appToken:Lcom/android/server/wm/ActivityRecord$Token;
 
     iget-object v2, p1, Lcom/android/server/wm/ActivityRecord;->packageName:Ljava/lang/String;
@@ -4996,7 +5079,7 @@
 
     iget-boolean v1, p0, Lcom/android/server/wm/vdb;->zta:Z
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_4
 
     iget-object v1, p0, Lcom/android/server/wm/vdb;->bvj:Ljava/util/ArrayList;
 
@@ -5004,7 +5087,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_4
+    if-nez v1, :cond_5
 
     sget-object v1, Lcom/android/server/wm/vdb;->K:Ljava/util/List;
 
@@ -5014,11 +5097,11 @@
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
     sget-boolean v1, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -5036,22 +5119,22 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_1
+    :cond_2
     const/4 v1, 0x1
 
     iput-boolean v1, p1, Lcom/android/server/wm/ActivityRecord;->forceNewConfig:Z
 
-    :cond_2
+    :cond_3
     iget-object v1, p0, Lcom/android/server/wm/vdb;->bvj:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    :cond_3
+    :cond_4
     invoke-direct {p0, p1}, Lcom/android/server/wm/vdb;->o(Lcom/android/server/wm/ActivityRecord;)V
 
-    :cond_4
+    :cond_5
     :goto_0
     iput-object p1, p0, Lcom/android/server/wm/vdb;->oif:Lcom/android/server/wm/ActivityRecord;
     :try_end_0

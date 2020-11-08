@@ -7,23 +7,37 @@
 
 
 # static fields
+.field private static final BROADCAST_PERMISSION:Ljava/lang/String; = "com.oplus.permission.safe.MMSVerification"
+
 .field private static final DEBUG:Z
 
 .field private static final DEF_COMMIT_INTERVAL_MS:I = 0x64
 
 .field private static final DEF_TIME_STAMP:J = -0x1L
 
+.field private static final EXTRA_SUPPORT_LIST:Ljava/util/HashSet;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashSet<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field private static final FUNC_DEBUG:Z
 
 .field private static final OP_MMS_SEND_ACTION:Ljava/lang/String; = "oneplus.intent.action.MMSVerification"
+
+.field private static final OP_VC_CONFIG_NAME:Ljava/lang/String; = "OnePlusVerificationCodeConfig"
 
 .field private static final TAG:Ljava/lang/String; = "OpVerificationCodeController"
 
 
 # instance fields
-.field private mActionListener:Lcom/android/server/cjf/zta$zta;
+.field private mActionListener:Lcom/android/server/ear/zta$zta;
 
-.field private final mActionProviderImpl:Lcom/android/server/cjf/zta;
+.field private final mActionProviderImpl:Lcom/android/server/ear/zta;
 
 .field private mCommitTimeInterval:I
 
@@ -39,14 +53,14 @@
 
 .field private volatile mOpLatestImeBounds:Landroid/graphics/Rect;
 
-.field private mOpVCAction:Lcom/android/server/cjf/you;
+.field private mOpVCAction:Lcom/android/server/ear/you;
 
 .field private mPreImeVisible:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
     sget-boolean v0, Lcom/android/server/vcaction/OpVerificationCodeInjector;->FUNC_DEBUG:Z
 
@@ -73,6 +87,34 @@
 
     :goto_1
     sput-boolean v0, Lcom/android/server/inputmethod/OpVerificationCodeController;->DEBUG:Z
+
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    sput-object v0, Lcom/android/server/inputmethod/OpVerificationCodeController;->EXTRA_SUPPORT_LIST:Ljava/util/HashSet;
+
+    const-string v1, "com.taobao.taobao/com.ali.user.mobile.login.ui.UserLoginActivity"
+
+    invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lcom/android/server/inputmethod/OpVerificationCodeController;->EXTRA_SUPPORT_LIST:Ljava/util/HashSet;
+
+    const-string v1, "com.tencent.qqlive/com.tencent.qqlive.ona.browser.H5Activity"
+
+    invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lcom/android/server/inputmethod/OpVerificationCodeController;->EXTRA_SUPPORT_LIST:Ljava/util/HashSet;
+
+    const-string v1, "com.baidu.searchbox/com.baidu.sapi2.activity.LoginActivity"
+
+    invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lcom/android/server/inputmethod/OpVerificationCodeController;->EXTRA_SUPPORT_LIST:Ljava/util/HashSet;
+
+    const-string v1, "com.netease.newsreader.activity/com.netease.newsreader.common.account.fragment.login.TransparentLoginActivity"
+
+    invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
@@ -106,7 +148,7 @@
 
     invoke-direct {v0, p0}, Lcom/android/server/inputmethod/OpVerificationCodeController$you;-><init>(Lcom/android/server/inputmethod/OpVerificationCodeController;)V
 
-    iput-object v0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mActionProviderImpl:Lcom/android/server/cjf/zta;
+    iput-object v0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mActionProviderImpl:Lcom/android/server/ear/zta;
 
     sget-boolean v0, Lcom/android/server/inputmethod/OpVerificationCodeController;->DEBUG:Z
 
@@ -152,12 +194,12 @@
     return p0
 .end method
 
-.method static synthetic access$1002(Lcom/android/server/inputmethod/OpVerificationCodeController;Lcom/android/server/cjf/zta$zta;)Lcom/android/server/cjf/zta$zta;
+.method static synthetic access$1000(Lcom/android/server/inputmethod/OpVerificationCodeController;)Landroid/graphics/Rect;
     .locals 0
 
-    iput-object p1, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mActionListener:Lcom/android/server/cjf/zta$zta;
+    iget-object p0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mOpLatestImeBounds:Landroid/graphics/Rect;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method static synthetic access$102(Lcom/android/server/inputmethod/OpVerificationCodeController;I)I
@@ -168,7 +210,15 @@
     return p1
 .end method
 
-.method static synthetic access$1100(Lcom/android/server/inputmethod/OpVerificationCodeController;Ljava/lang/CharSequence;)V
+.method static synthetic access$1102(Lcom/android/server/inputmethod/OpVerificationCodeController;Lcom/android/server/ear/zta$zta;)Lcom/android/server/ear/zta$zta;
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mActionListener:Lcom/android/server/ear/zta$zta;
+
+    return-object p1
+.end method
+
+.method static synthetic access$1200(Lcom/android/server/inputmethod/OpVerificationCodeController;Ljava/lang/CharSequence;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/inputmethod/OpVerificationCodeController;->commitCodeOneByOne(Ljava/lang/CharSequence;)V
@@ -176,10 +226,18 @@
     return-void
 .end method
 
-.method static synthetic access$1200(Lcom/android/server/inputmethod/OpVerificationCodeController;Ljava/lang/CharSequence;I)V
+.method static synthetic access$1300(Lcom/android/server/inputmethod/OpVerificationCodeController;Ljava/lang/CharSequence;I)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/inputmethod/OpVerificationCodeController;->singleCommit(Ljava/lang/CharSequence;I)V
+
+    return-void
+.end method
+
+.method static synthetic access$1400(Lcom/android/server/inputmethod/OpVerificationCodeController;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/server/inputmethod/OpVerificationCodeController;->handleParseNewConfig()V
 
     return-void
 .end method
@@ -210,10 +268,10 @@
     return-void
 .end method
 
-.method static synthetic access$500(Lcom/android/server/inputmethod/OpVerificationCodeController;)Lcom/android/server/cjf/you;
+.method static synthetic access$500(Lcom/android/server/inputmethod/OpVerificationCodeController;)Lcom/android/server/ear/you;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mOpVCAction:Lcom/android/server/cjf/you;
+    iget-object p0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mOpVCAction:Lcom/android/server/ear/you;
 
     return-object p0
 .end method
@@ -239,17 +297,19 @@
 .method static synthetic access$800(Lcom/android/server/inputmethod/OpVerificationCodeController;)Z
     .locals 0
 
-    iget-boolean p0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mPreImeVisible:Z
+    invoke-direct {p0}, Lcom/android/server/inputmethod/OpVerificationCodeController;->checkExtraSupportedTarget()Z
+
+    move-result p0
 
     return p0
 .end method
 
-.method static synthetic access$900(Lcom/android/server/inputmethod/OpVerificationCodeController;)Landroid/graphics/Rect;
+.method static synthetic access$900(Lcom/android/server/inputmethod/OpVerificationCodeController;)Z
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mOpLatestImeBounds:Landroid/graphics/Rect;
+    iget-boolean p0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mPreImeVisible:Z
 
-    return-object p0
+    return p0
 .end method
 
 .method private static appendFlagText(Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
@@ -296,6 +356,188 @@
 
     :cond_2
     return-object p0
+.end method
+
+.method private checkExtraSupportedTarget()Z
+    .locals 4
+
+    :try_start_0
+    iget-object v0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mIMMService:Lcom/android/server/inputmethod/InputMethodManagerService;
+
+    iget-object v0, v0, Lcom/android/server/inputmethod/InputMethodManagerService;->mWindowManagerInternal:Lcom/android/server/wm/WindowManagerInternal;
+
+    invoke-virtual {v0}, Lcom/android/server/wm/WindowManagerInternal;->getFocusedWindowToken()Landroid/os/IBinder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mIMMService:Lcom/android/server/inputmethod/InputMethodManagerService;
+
+    iget-object v1, v1, Lcom/android/server/inputmethod/InputMethodManagerService;->mLastImeTargetWindow:Landroid/os/IBinder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    iget-object v2, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mIMMService:Lcom/android/server/inputmethod/InputMethodManagerService;
+
+    iget-object v2, v2, Lcom/android/server/inputmethod/InputMethodManagerService;->mWindowManagerInternal:Lcom/android/server/wm/WindowManagerInternal;
+
+    invoke-virtual {v2, v0}, Lcom/android/server/wm/WindowManagerInternal;->getWindowName(Landroid/os/IBinder;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v1, :cond_0
+
+    const-string v1, "OpVerificationCodeController"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "LastImeTargetWindow "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mIMMService:Lcom/android/server/inputmethod/InputMethodManagerService;
+
+    iget-object v3, v3, Lcom/android/server/inputmethod/InputMethodManagerService;->mWindowManagerInternal:Lcom/android/server/wm/WindowManagerInternal;
+
+    iget-object p0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mIMMService:Lcom/android/server/inputmethod/InputMethodManagerService;
+
+    iget-object p0, p0, Lcom/android/server/inputmethod/InputMethodManagerService;->mLastImeTargetWindow:Landroid/os/IBinder;
+
+    invoke-virtual {v3, p0}, Lcom/android/server/wm/WindowManagerInternal;->getWindowName(Landroid/os/IBinder;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, " | CurFocus "
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    const-string p0, " "
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
+
+    move-result p0
+
+    add-int/lit8 p0, p0, 0x1
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    sget-object v0, Lcom/android/server/inputmethod/OpVerificationCodeController;->EXTRA_SUPPORT_LIST:Ljava/util/HashSet;
+
+    monitor-enter v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :try_start_1
+    sget-object v1, Lcom/android/server/inputmethod/OpVerificationCodeController;->EXTRA_SUPPORT_LIST:Ljava/util/HashSet;
+
+    invoke-virtual {v1, p0}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-nez v1, :cond_1
+
+    :try_start_2
+    sget-boolean v0, Lcom/android/server/inputmethod/OpVerificationCodeController;->DEBUG:Z
+
+    if-eqz v0, :cond_3
+
+    :cond_1
+    const-string v0, "OpVerificationCodeController"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    if-eqz v1, :cond_2
+
+    const-string v3, "++"
+
+    goto :goto_0
+
+    :cond_2
+    const-string v3, "--"
+
+    :goto_0
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, "ImeTarget_"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+
+    :cond_3
+    return v1
+
+    :catchall_0
+    move-exception p0
+
+    :try_start_3
+    monitor-exit v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :try_start_4
+    throw p0
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
+
+    :catch_0
+    move-exception p0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Check Extra Supported Target Ex "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "OpVerificationCodeController"
+
+    invoke-static {v0, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 p0, 0x0
+
+    return p0
 .end method
 
 .method private checkTimeStamp(JJ)Z
@@ -497,10 +739,400 @@
     return-object p0
 .end method
 
-.method private initActionIfPossible()V
-    .locals 3
+.method private handleParseNewConfig()V
+    .locals 7
 
-    iget-object v0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mOpVCAction:Lcom/android/server/cjf/you;
+    iget-object v0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mContext:Landroid/content/Context;
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    const/4 v1, 0x0
+
+    :try_start_0
+    new-instance v2, Lcom/oneplus/config/ConfigGrabber;
+
+    iget-object p0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mContext:Landroid/content/Context;
+
+    const-string v3, "OnePlusVerificationCodeConfig"
+
+    invoke-direct {v2, p0, v3}, Lcom/oneplus/config/ConfigGrabber;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    invoke-virtual {v2}, Lcom/oneplus/config/ConfigGrabber;->grabConfig()Lorg/json/JSONArray;
+
+    move-result-object p0
+
+    move v2, v1
+
+    :goto_0
+    invoke-virtual {p0}, Lorg/json/JSONArray;->length()I
+
+    move-result v3
+
+    if-ge v2, v3, :cond_2
+
+    invoke-virtual {p0, v2}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
+
+    move-result-object v3
+
+    const-string v4, "name"
+
+    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string v5, "extra_support_list"
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    const-string v4, "value"
+
+    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+
+    move-result-object v3
+
+    move v4, v1
+
+    :goto_1
+    invoke-virtual {v3}, Lorg/json/JSONArray;->length()I
+
+    move-result v5
+
+    if-ge v4, v5, :cond_1
+
+    invoke-virtual {v3, v4}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v5}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    sget-object p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->EXTRA_SUPPORT_LIST:Ljava/util/HashSet;
+
+    monitor-enter p0
+
+    :try_start_1
+    invoke-virtual {v0}, Ljava/util/HashSet;->size()I
+
+    move-result v2
+
+    if-lez v2, :cond_3
+
+    sget-object v2, Lcom/android/server/inputmethod/OpVerificationCodeController;->EXTRA_SUPPORT_LIST:Ljava/util/HashSet;
+
+    invoke-virtual {v2}, Ljava/util/HashSet;->clear()V
+
+    sget-object v2, Lcom/android/server/inputmethod/OpVerificationCodeController;->EXTRA_SUPPORT_LIST:Ljava/util/HashSet;
+
+    invoke-virtual {v2, v0}, Ljava/util/HashSet;->addAll(Ljava/util/Collection;)Z
+
+    :cond_3
+    sget-boolean v0, Lcom/android/server/inputmethod/OpVerificationCodeController;->DEBUG:Z
+
+    if-eqz v0, :cond_4
+
+    sget-object v0, Lcom/android/server/inputmethod/OpVerificationCodeController;->EXTRA_SUPPORT_LIST:Ljava/util/HashSet;
+
+    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_2
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/String;
+
+    const-string v3, "OpVerificationCodeController"
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "Extra "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v5, v1, 0x1
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ": "
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v3, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    move v1, v5
+
+    goto :goto_2
+
+    :cond_4
+    monitor-exit p0
+
+    goto :goto_4
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+
+    :catchall_1
+    move-exception p0
+
+    goto :goto_5
+
+    :catch_0
+    move-exception p0
+
+    :try_start_2
+    const-string v2, "OpVerificationCodeController"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "handleParseNewConfig Ex "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v2, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    sget-object p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->EXTRA_SUPPORT_LIST:Ljava/util/HashSet;
+
+    monitor-enter p0
+
+    :try_start_3
+    invoke-virtual {v0}, Ljava/util/HashSet;->size()I
+
+    move-result v2
+
+    if-lez v2, :cond_5
+
+    sget-object v2, Lcom/android/server/inputmethod/OpVerificationCodeController;->EXTRA_SUPPORT_LIST:Ljava/util/HashSet;
+
+    invoke-virtual {v2}, Ljava/util/HashSet;->clear()V
+
+    sget-object v2, Lcom/android/server/inputmethod/OpVerificationCodeController;->EXTRA_SUPPORT_LIST:Ljava/util/HashSet;
+
+    invoke-virtual {v2, v0}, Ljava/util/HashSet;->addAll(Ljava/util/Collection;)Z
+
+    :cond_5
+    sget-boolean v0, Lcom/android/server/inputmethod/OpVerificationCodeController;->DEBUG:Z
+
+    if-eqz v0, :cond_6
+
+    sget-object v0, Lcom/android/server/inputmethod/OpVerificationCodeController;->EXTRA_SUPPORT_LIST:Ljava/util/HashSet;
+
+    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_3
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_6
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/String;
+
+    const-string v3, "OpVerificationCodeController"
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "Extra "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v5, v1, 0x1
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ": "
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v3, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    move v1, v5
+
+    goto :goto_3
+
+    :cond_6
+    monitor-exit p0
+
+    :goto_4
+    return-void
+
+    :catchall_2
+    move-exception v0
+
+    monitor-exit p0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
+
+    throw v0
+
+    :goto_5
+    sget-object v2, Lcom/android/server/inputmethod/OpVerificationCodeController;->EXTRA_SUPPORT_LIST:Ljava/util/HashSet;
+
+    monitor-enter v2
+
+    :try_start_4
+    invoke-virtual {v0}, Ljava/util/HashSet;->size()I
+
+    move-result v3
+
+    if-lez v3, :cond_7
+
+    sget-object v3, Lcom/android/server/inputmethod/OpVerificationCodeController;->EXTRA_SUPPORT_LIST:Ljava/util/HashSet;
+
+    invoke-virtual {v3}, Ljava/util/HashSet;->clear()V
+
+    sget-object v3, Lcom/android/server/inputmethod/OpVerificationCodeController;->EXTRA_SUPPORT_LIST:Ljava/util/HashSet;
+
+    invoke-virtual {v3, v0}, Ljava/util/HashSet;->addAll(Ljava/util/Collection;)Z
+
+    :cond_7
+    sget-boolean v0, Lcom/android/server/inputmethod/OpVerificationCodeController;->DEBUG:Z
+
+    if-eqz v0, :cond_8
+
+    sget-object v0, Lcom/android/server/inputmethod/OpVerificationCodeController;->EXTRA_SUPPORT_LIST:Ljava/util/HashSet;
+
+    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_6
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_8
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/String;
+
+    const-string v4, "OpVerificationCodeController"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "Extra "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v6, v1, 0x1
+
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ": "
+
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v4, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    move v1, v6
+
+    goto :goto_6
+
+    :cond_8
+    monitor-exit v2
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_3
+
+    throw p0
+
+    :catchall_3
+    move-exception p0
+
+    :try_start_5
+    monitor-exit v2
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_3
+
+    throw p0
+.end method
+
+.method private initActionIfPossible()V
+    .locals 4
+
+    iget-object v0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mOpVCAction:Lcom/android/server/ear/you;
 
     const-string v1, "OpVerificationCodeController"
 
@@ -529,15 +1161,15 @@
     goto :goto_0
 
     :cond_2
-    new-instance v0, Lcom/android/server/cjf/you;
+    new-instance v0, Lcom/android/server/ear/you;
 
     iget-object v1, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mContext:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mActionProviderImpl:Lcom/android/server/cjf/zta;
+    iget-object v2, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mActionProviderImpl:Lcom/android/server/ear/zta;
 
-    invoke-direct {v0, v1, v2}, Lcom/android/server/cjf/you;-><init>(Landroid/content/Context;Lcom/android/server/cjf/zta;)V
+    invoke-direct {v0, v1, v2}, Lcom/android/server/ear/you;-><init>(Landroid/content/Context;Lcom/android/server/ear/zta;)V
 
-    iput-object v0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mOpVCAction:Lcom/android/server/cjf/you;
+    iput-object v0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mOpVCAction:Lcom/android/server/ear/you;
 
     new-instance v0, Landroid/content/IntentFilter;
 
@@ -553,7 +1185,11 @@
 
     invoke-direct {v2, p0}, Lcom/android/server/inputmethod/OpVerificationCodeController$zta;-><init>(Lcom/android/server/inputmethod/OpVerificationCodeController;)V
 
-    invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    const/4 p0, 0x0
+
+    const-string v3, "com.oplus.permission.safe.MMSVerification"
+
+    invoke-virtual {v1, v2, v0, v3, p0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
     return-void
 
@@ -568,6 +1204,37 @@
     invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_4
+    return-void
+.end method
+
+.method private initOnlineConfig(Landroid/content/Context;)V
+    .locals 3
+
+    if-nez p1, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Lcom/android/server/inputmethod/OpVerificationCodeController$tsu;
+
+    invoke-direct {v0, p0}, Lcom/android/server/inputmethod/OpVerificationCodeController$tsu;-><init>(Lcom/android/server/inputmethod/OpVerificationCodeController;)V
+
+    new-instance p0, Lcom/oneplus/config/ConfigObserver;
+
+    new-instance v1, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    const-string v2, "OnePlusVerificationCodeConfig"
+
+    invoke-direct {p0, p1, v1, v0, v2}, Lcom/oneplus/config/ConfigObserver;-><init>(Landroid/content/Context;Landroid/os/Handler;Lcom/oneplus/config/ConfigObserver$ConfigUpdater;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lcom/oneplus/config/ConfigObserver;->register()V
+
     return-void
 .end method
 
@@ -1366,6 +2033,10 @@
 
     invoke-direct {p0}, Lcom/android/server/inputmethod/OpVerificationCodeController;->initActionIfPossible()V
 
+    iget-object p1, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mContext:Landroid/content/Context;
+
+    invoke-direct {p0, p1}, Lcom/android/server/inputmethod/OpVerificationCodeController;->initOnlineConfig(Landroid/content/Context;)V
+
     return-void
 .end method
 
@@ -1420,11 +2091,11 @@
     :cond_2
     if-eqz p1, :cond_3
 
-    iget-object p0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mActionListener:Lcom/android/server/cjf/zta$zta;
+    iget-object p0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mActionListener:Lcom/android/server/ear/zta$zta;
 
     if-eqz p0, :cond_3
 
-    invoke-interface {p0, p1}, Lcom/android/server/cjf/zta$zta;->zta(I)V
+    invoke-interface {p0, p1}, Lcom/android/server/ear/zta$zta;->zta(I)V
 
     :cond_3
     return-void
@@ -1442,11 +2113,11 @@
     return-void
 
     :cond_0
-    iget-object p0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mActionListener:Lcom/android/server/cjf/zta$zta;
+    iget-object p0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mActionListener:Lcom/android/server/ear/zta$zta;
 
     if-eqz p0, :cond_1
 
-    invoke-interface {p0, p1}, Lcom/android/server/cjf/zta$zta;->zta(I)V
+    invoke-interface {p0, p1}, Lcom/android/server/ear/zta$zta;->zta(I)V
 
     goto :goto_0
 

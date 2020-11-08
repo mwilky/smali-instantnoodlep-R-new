@@ -839,7 +839,7 @@
 
     const-string p1, "No sleep start time, so pass the early restriction!"
 
-    invoke-static {p0, p1}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, p1}, Lcom/android/server/igw$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_b
 
@@ -1198,7 +1198,7 @@
 
     const-string v0, "OpPowerControllerService"
 
-    invoke-static {v0, p1}, Lcom/android/server/bio$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, p1}, Lcom/android/server/igw$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$3200()D
 
@@ -1271,15 +1271,15 @@
 
     iget-object v0, p0, Lcom/android/server/OpPowerControllerService$qbh;->zta:Lcom/android/server/OpPowerControllerService;
 
-    iget-object v0, v0, Lcom/android/server/OpPowerControllerService;->mOnePlusChargingGuarder:Lcom/android/server/igw;
+    iget-object v0, v0, Lcom/android/server/OpPowerControllerService;->mOnePlusChargingGuarder:Lcom/android/server/wtn;
 
     if-eqz v0, :cond_17
 
-    invoke-virtual {v0, p1}, Lcom/android/server/igw;->C(Ljava/time/LocalTime;)V
+    invoke-virtual {v0, p1}, Lcom/android/server/wtn;->C(Ljava/time/LocalTime;)V
 
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$qbh;->zta:Lcom/android/server/OpPowerControllerService;
 
-    iget-object v0, p1, Lcom/android/server/OpPowerControllerService;->mOnePlusChargingGuarder:Lcom/android/server/igw;
+    iget-object v0, p1, Lcom/android/server/OpPowerControllerService;->mOnePlusChargingGuarder:Lcom/android/server/wtn;
 
     invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3000(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$ywr;
 
@@ -1289,7 +1289,7 @@
 
     move-result-wide v3
 
-    invoke-virtual {v0, v3, v4}, Lcom/android/server/igw;->A(J)V
+    invoke-virtual {v0, v3, v4}, Lcom/android/server/wtn;->A(J)V
 
     :cond_17
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$qbh;->zta:Lcom/android/server/OpPowerControllerService;

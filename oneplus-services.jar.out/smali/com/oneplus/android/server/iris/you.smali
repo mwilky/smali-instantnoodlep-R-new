@@ -666,27 +666,20 @@
     :cond_2
     iput-boolean p1, p0, Lcom/oneplus/android/server/iris/you;->gck:Z
 
-    if-eqz p1, :cond_3
-
-    iget-boolean p1, p0, Lcom/oneplus/android/server/iris/you;->irq:Z
-
-    if-eqz p1, :cond_4
-
     iget-object p0, p0, Lcom/oneplus/android/server/iris/cno;->zta:Lcom/oneplus/android/server/iris/tsu;
+
+    if-eqz p1, :cond_3
 
     const-string p1, "56-1"
 
     goto :goto_1
 
     :cond_3
-    iget-object p0, p0, Lcom/oneplus/android/server/iris/cno;->zta:Lcom/oneplus/android/server/iris/tsu;
-
     const-string p1, "56-0"
 
     :goto_1
     invoke-virtual {p0, p1}, Lcom/oneplus/android/server/iris/tsu;->ssp(Ljava/lang/String;)V
 
-    :cond_4
     return-void
 .end method
 
@@ -837,29 +830,24 @@
     goto :goto_1
 
     :cond_6
-    iget-boolean v0, p0, Lcom/oneplus/android/server/iris/you;->irq:Z
-
-    if-eqz v0, :cond_7
-
     iget-object v0, p0, Lcom/oneplus/android/server/iris/cno;->zta:Lcom/oneplus/android/server/iris/tsu;
 
     const-string v1, "258-0"
 
     invoke-virtual {v0, v1}, Lcom/oneplus/android/server/iris/tsu;->ssp(Ljava/lang/String;)V
 
-    :cond_7
     :goto_1
-    if-nez p1, :cond_8
+    if-nez p1, :cond_7
 
     iget-boolean p1, p0, Lcom/oneplus/android/server/iris/you;->vju:Z
 
-    if-eqz p1, :cond_8
+    if-eqz p1, :cond_7
 
     const/4 p1, 0x0
 
     invoke-direct {p0, p1}, Lcom/oneplus/android/server/iris/you;->F(Z)V
 
-    :cond_8
+    :cond_7
     return-void
 .end method
 
@@ -974,28 +962,20 @@
 
     iget-object p0, p0, Lcom/oneplus/android/server/iris/cno;->zta:Lcom/oneplus/android/server/iris/tsu;
 
-    :goto_1
-    invoke-virtual {p0, p1}, Lcom/oneplus/android/server/iris/tsu;->ssp(Ljava/lang/String;)V
-
-    goto :goto_2
+    goto :goto_1
 
     :cond_3
     iget-object p1, p0, Lcom/oneplus/android/server/iris/you;->i:Lcom/oneplus/display/IOneplusColorDisplayManager;
 
     invoke-interface {p1}, Lcom/oneplus/display/IOneplusColorDisplayManager;->resumeColorMode()V
 
-    iget-boolean p1, p0, Lcom/oneplus/android/server/iris/you;->irq:Z
-
-    if-eqz p1, :cond_4
-
     iget-object p0, p0, Lcom/oneplus/android/server/iris/cno;->zta:Lcom/oneplus/android/server/iris/tsu;
 
     const-string p1, "267-3-0"
 
-    goto :goto_1
+    :goto_1
+    invoke-virtual {p0, p1}, Lcom/oneplus/android/server/iris/tsu;->ssp(Ljava/lang/String;)V
 
-    :cond_4
-    :goto_2
     return-void
 .end method
 

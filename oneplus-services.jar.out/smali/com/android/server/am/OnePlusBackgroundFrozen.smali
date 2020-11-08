@@ -535,7 +535,7 @@
 
 .field private qeg:Lcom/android/server/am/OnePlusBackgroundFrozen$rtg;
 
-.field private rtg:Lcom/android/server/ugm;
+.field private rtg:Lcom/android/server/vdb;
 
 .field private sis:Landroid/content/pm/PackageManager;
 
@@ -875,7 +875,7 @@
 
     iput-object v0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->tsu:Landroid/os/PowerManager;
 
-    iput-object v0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->rtg:Lcom/android/server/ugm;
+    iput-object v0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->rtg:Lcom/android/server/vdb;
 
     iput-object v0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->ssp:Lcom/oneplus/config/ConfigObserver;
 
@@ -1347,31 +1347,31 @@
 
     iget-object v0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->qeg:Lcom/android/server/am/OnePlusBackgroundFrozen$rtg;
 
-    invoke-static {p1, v0}, Lcom/android/server/am/AppRecordManager;->ugm(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/qbh;)V
+    invoke-static {p1, v0}, Lcom/android/server/am/AppRecordManager;->vdb(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/qbh;)V
 
     sget-object p1, Lcom/android/server/am/AppRecordManager$ListenerType;->bio:Lcom/android/server/am/AppRecordManager$ListenerType;
 
     iget-object v0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->qeg:Lcom/android/server/am/OnePlusBackgroundFrozen$rtg;
 
-    invoke-static {p1, v0}, Lcom/android/server/am/AppRecordManager;->ugm(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/qbh;)V
+    invoke-static {p1, v0}, Lcom/android/server/am/AppRecordManager;->vdb(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/qbh;)V
 
     sget-object p1, Lcom/android/server/am/AppRecordManager$ListenerType;->you:Lcom/android/server/am/AppRecordManager$ListenerType;
 
     iget-object v0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->qeg:Lcom/android/server/am/OnePlusBackgroundFrozen$rtg;
 
-    invoke-static {p1, v0}, Lcom/android/server/am/AppRecordManager;->ugm(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/qbh;)V
+    invoke-static {p1, v0}, Lcom/android/server/am/AppRecordManager;->vdb(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/qbh;)V
 
     sget-object p1, Lcom/android/server/am/AppRecordManager$ListenerType;->sis:Lcom/android/server/am/AppRecordManager$ListenerType;
 
     iget-object v0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->qeg:Lcom/android/server/am/OnePlusBackgroundFrozen$rtg;
 
-    invoke-static {p1, v0}, Lcom/android/server/am/AppRecordManager;->ugm(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/qbh;)V
+    invoke-static {p1, v0}, Lcom/android/server/am/AppRecordManager;->vdb(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/qbh;)V
 
     sget-object p1, Lcom/android/server/am/AppRecordManager$ListenerType;->obl:Lcom/android/server/am/AppRecordManager$ListenerType;
 
     iget-object p0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->qeg:Lcom/android/server/am/OnePlusBackgroundFrozen$rtg;
 
-    invoke-static {p1, p0}, Lcom/android/server/am/AppRecordManager;->ugm(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/qbh;)V
+    invoke-static {p1, p0}, Lcom/android/server/am/AppRecordManager;->vdb(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/qbh;)V
 
     return-void
 .end method
@@ -2180,11 +2180,11 @@
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    iget-object v1, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->rtg:Lcom/android/server/ugm;
+    iget-object v1, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->rtg:Lcom/android/server/vdb;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcom/android/server/ugm;->dma()[I
+    invoke-virtual {v1}, Lcom/android/server/vdb;->dma()[I
 
     move-result-object v1
 
@@ -11300,9 +11300,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/server/ugm;
+    check-cast v0, Lcom/android/server/vdb;
 
-    iput-object v0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->rtg:Lcom/android/server/ugm;
+    iput-object v0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->rtg:Lcom/android/server/vdb;
 
     return-void
 .end method
@@ -12138,7 +12138,7 @@
 .method private i2(Ljava/lang/String;IZZ)I
     .locals 2
 
-    invoke-static {p1, p2, p3, p4}, Lcom/android/server/am/AppRecordManager;->bvj(Ljava/lang/String;IZZ)I
+    invoke-static {p1, p2, p3, p4}, Lcom/android/server/am/AppRecordManager;->ibl(Ljava/lang/String;IZZ)I
 
     move-result p0
 
@@ -16546,13 +16546,13 @@
     monitor-enter v0
 
     :try_start_1
-    iget-object v2, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->rtg:Lcom/android/server/ugm;
+    iget-object v2, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->rtg:Lcom/android/server/vdb;
 
     if-eqz v2, :cond_3
 
-    iget-object v2, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->rtg:Lcom/android/server/ugm;
+    iget-object v2, p0, Lcom/android/server/am/OnePlusBackgroundFrozen;->rtg:Lcom/android/server/vdb;
 
-    invoke-virtual {v2}, Lcom/android/server/ugm;->dma()[I
+    invoke-virtual {v2}, Lcom/android/server/vdb;->dma()[I
 
     move-result-object v2
 

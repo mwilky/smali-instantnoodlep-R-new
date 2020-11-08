@@ -26,7 +26,7 @@
 
 .field private mOnePlusThemeController:Lcom/oneplus/server/theme/zta;
 
-.field private mOpCommonFrontMonitor:Lcom/android/server/bvj;
+.field private mOpCommonFrontMonitor:Lcom/android/server/ibl;
 
 .field private mSurfaceFlinger:Landroid/os/IBinder;
 
@@ -695,15 +695,15 @@
 
     invoke-virtual {v0}, Lcom/oneplus/server/theme/zta;->ibl()V
 
-    invoke-static {}, Lcom/android/server/bvj;->vdb()Lcom/android/server/bvj;
+    invoke-static {}, Lcom/android/server/ibl;->ire()Lcom/android/server/ibl;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/oneplus/server/OnePlusService;->mOpCommonFrontMonitor:Lcom/android/server/bvj;
+    iput-object v0, p0, Lcom/oneplus/server/OnePlusService;->mOpCommonFrontMonitor:Lcom/android/server/ibl;
 
     iget-object v1, p0, Lcom/oneplus/server/OnePlusService;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/android/server/bvj;->cjf(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/android/server/ibl;->veq(Landroid/content/Context;)V
 
     sget-boolean v0, Lcom/oneplus/server/zta;->p:Z
 

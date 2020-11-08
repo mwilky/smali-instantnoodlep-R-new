@@ -1,5 +1,5 @@
 .class Lcom/android/server/am/c$sis;
-.super Landroid/os/Handler;
+.super Ljava/lang/Object;
 .source ""
 
 
@@ -9,106 +9,202 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0xa
     name = "sis"
 .end annotation
 
 
 # instance fields
-.field final synthetic zta:Lcom/android/server/am/c;
+.field public sis:I
+
+.field public tsu:D
+
+.field public you:Lcom/android/server/am/c$you;
+
+.field public zta:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList<",
+            "Lcom/android/server/am/c$igw;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/server/am/c;Landroid/os/Looper;)V
+.method public constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lcom/android/server/am/c$sis;->zta:Lcom/android/server/am/c;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    iput p1, p0, Lcom/android/server/am/c$sis;->sis:I
+
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Lcom/android/server/am/c$sis;->zta:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public handleMessage(Landroid/os/Message;)V
-    .locals 4
+.method public cno(Lcom/android/server/am/c$you;)V
+    .locals 0
 
-    iget-object v0, p0, Lcom/android/server/am/c$sis;->zta:Lcom/android/server/am/c;
+    iput-object p1, p0, Lcom/android/server/am/c$sis;->you:Lcom/android/server/am/c$you;
 
-    iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+    return-void
+.end method
 
-    invoke-static {v0, v1}, Lcom/android/server/am/c;->rtg(Lcom/android/server/am/c;Ljava/lang/Object;)Ljava/lang/String;
+.method public kth(Ljava/util/ArrayList;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList<",
+            "Lcom/android/server/am/c$igw;",
+            ">;)V"
+        }
+    .end annotation
 
-    move-result-object v0
+    iput-object p1, p0, Lcom/android/server/am/c$sis;->zta:Ljava/util/ArrayList;
 
-    iget v1, p1, Landroid/os/Message;->what:I
+    return-void
+.end method
 
-    const/4 v2, 0x1
+.method public rtg()Ljava/util/ArrayList;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/ArrayList<",
+            "Lcom/android/server/am/c$igw;",
+            ">;"
+        }
+    .end annotation
 
-    if-eq v1, v2, :cond_2
+    iget-object p0, p0, Lcom/android/server/am/c$sis;->zta:Ljava/util/ArrayList;
 
-    const/4 v3, 0x2
+    return-object p0
+.end method
 
-    if-eq v1, v3, :cond_0
+.method public sis()V
+    .locals 5
 
-    goto :goto_1
+    const-string v0, "OpRestartProcessManager"
 
-    :cond_0
-    iget p1, p1, Landroid/os/Message;->arg1:I
+    const-string v1, "-----------------------------------------------------------------------"
 
-    if-ne p1, v2, :cond_1
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_0
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    :cond_1
-    const/4 v2, 0x0
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    :goto_0
-    iget-object p1, p0, Lcom/android/server/am/c$sis;->zta:Lcom/android/server/am/c;
+    const-string v3, "Cluster "
 
-    invoke-static {p1}, Lcom/android/server/am/c;->kth(Lcom/android/server/am/c;)Z
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result p1
+    iget v3, p0, Lcom/android/server/am/c$sis;->sis:I
 
-    if-eq v2, p1, :cond_3
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/android/server/am/c$sis;->zta:Lcom/android/server/am/c;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-static {p0, v2, v0}, Lcom/android/server/am/c;->bio(Lcom/android/server/am/c;ZLjava/lang/String;)V
+    move-result-object v2
 
-    goto :goto_1
+    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_2
-    new-instance p1, Lcom/oneplus/config/ConfigGrabber;
+    iget-object v2, p0, Lcom/android/server/am/c$sis;->you:Lcom/android/server/am/c$you;
 
-    iget-object v0, p0, Lcom/android/server/am/c$sis;->zta:Lcom/android/server/am/c;
+    invoke-virtual {v2}, Lcom/android/server/am/c$you;->zta()V
 
-    invoke-static {v0}, Lcom/android/server/am/c;->ssp(Lcom/android/server/am/c;)Landroid/content/Context;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "Slient5G"
+    const-string v3, "Distance from 0 : "
 
-    invoke-direct {p1, v0, v1}, Lcom/oneplus/config/ConfigGrabber;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lcom/android/server/am/c$sis;->zta:Lcom/android/server/am/c;
+    iget-wide v3, p0, Lcom/android/server/am/c$sis;->tsu:D
 
-    invoke-virtual {p1}, Lcom/oneplus/config/ConfigGrabber;->grabConfig()Lorg/json/JSONArray;
+    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-static {v0, p1}, Lcom/android/server/am/c;->zta(Lcom/android/server/am/c;Lorg/json/JSONArray;)V
+    move-result-object v2
 
-    iget-object p0, p0, Lcom/android/server/am/c$sis;->zta:Lcom/android/server/am/c;
+    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {p0}, Lcom/android/server/am/c;->cno(Lcom/android/server/am/c;)Lcom/oneplus/config/ConfigObserver;
+    const-string v2, "All data : "
+
+    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object p0, p0, Lcom/android/server/am/c$sis;->zta:Ljava/util/ArrayList;
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/oneplus/config/ConfigObserver;->register()V
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    :cond_3
-    :goto_1
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/android/server/am/c$igw;
+
+    invoke-virtual {v2}, Lcom/android/server/am/c$igw;->dma()V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method public ssp()I
+    .locals 0
+
+    iget p0, p0, Lcom/android/server/am/c$sis;->sis:I
+
+    return p0
+.end method
+
+.method public tsu()Lcom/android/server/am/c$you;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/server/am/c$sis;->you:Lcom/android/server/am/c$you;
+
+    return-object p0
+.end method
+
+.method public you()V
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/server/am/c$sis;->zta:Ljava/util/ArrayList;
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
+
+    return-void
+.end method
+
+.method public zta(Lcom/android/server/am/c$igw;)V
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/server/am/c$sis;->zta:Ljava/util/ArrayList;
+
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
     return-void
 .end method

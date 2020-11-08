@@ -1552,7 +1552,7 @@
 
     move-result-object v1
 
-    const v2, 0x10e0072
+    const v2, 0x10e0073
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1572,7 +1572,7 @@
 
     move-result-object v1
 
-    const v4, 0x10e0059
+    const v4, 0x10e005a
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -2756,7 +2756,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, v0}, Lcom/android/server/am/cjf;->t(Z)V
+    invoke-virtual {p1, v0}, Lcom/android/server/am/cjf;->v(Z)V
 
     :cond_0
     invoke-static {v0}, Lcom/android/server/am/OpBGFrozenInjector;->screenStateChangedEvent(Z)V
@@ -2805,7 +2805,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/cjf;->t(Z)V
+    invoke-virtual {p0, p1}, Lcom/android/server/am/cjf;->v(Z)V
 
     :cond_0
     invoke-static {p1}, Lcom/android/server/am/OpBGFrozenInjector;->screenStateChangedEvent(Z)V
@@ -3253,7 +3253,7 @@
 
     move-result-object v0
 
-    const v1, 0x1070085
+    const v1, 0x1070086
 
     invoke-static {v0, v1}, Lcom/android/server/policy/PhoneWindowManager;->getLongIntArray(Landroid/content/res/Resources;I)[J
 
