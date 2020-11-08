@@ -3,12 +3,12 @@
 .source "DataUsagePrefFragment.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroidx/preference/Preference$OnPreferenceClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oneplus/security/network/view/DataUsagePrefFragment;->updateMonthlyRemainingData(JJ)V
+    value = Lcom/oneplus/security/network/view/DataUsagePrefFragment;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,20 +20,12 @@
 # instance fields
 .field final synthetic this$0:Lcom/oneplus/security/network/view/DataUsagePrefFragment;
 
-.field final synthetic val$total:J
-
-.field final synthetic val$used:J
-
 
 # direct methods
-.method constructor <init>(Lcom/oneplus/security/network/view/DataUsagePrefFragment;JJ)V
+.method constructor <init>(Lcom/oneplus/security/network/view/DataUsagePrefFragment;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment$1;->this$0:Lcom/oneplus/security/network/view/DataUsagePrefFragment;
-
-    iput-wide p2, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment$1;->val$total:J
-
-    iput-wide p4, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment$1;->val$used:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,50 +34,120 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 9
+.method public onPreferenceClick(Landroidx/preference/Preference;)Z
+    .locals 6
 
-    iget-object v0, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment$1;->this$0:Lcom/oneplus/security/network/view/DataUsagePrefFragment;
+    const-string p1, "DataUsagePrefFragment"
 
-    invoke-static {v0}, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->access$000(Lcom/oneplus/security/network/view/DataUsagePrefFragment;)Lcom/oneplus/security/network/view/HeaderPreference;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    :try_start_0
+    new-instance v1, Landroid/content/Intent;
 
-    if-eqz v0, :cond_0
+    const-string v2, "android.oneplus.action.DATAUSAGE_DATAUSAGELIS"
 
-    iget-object v0, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment$1;->this$0:Lcom/oneplus/security/network/view/DataUsagePrefFragment;
+    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->access$000(Lcom/oneplus/security/network/view/DataUsagePrefFragment;)Lcom/oneplus/security/network/view/HeaderPreference;
+    iget-object v2, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment$1;->this$0:Lcom/oneplus/security/network/view/DataUsagePrefFragment;
 
-    move-result-object v1
+    invoke-virtual {v2}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
-    iget-object v0, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment$1;->this$0:Lcom/oneplus/security/network/view/DataUsagePrefFragment;
+    move-result-object v2
 
-    invoke-static {v0}, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->access$100(Lcom/oneplus/security/network/view/DataUsagePrefFragment;)I
+    invoke-static {v2, v1}, Lcom/oneplus/security/utils/Utils;->isIntentReceiverExists(Landroid/content/Context;Landroid/content/Intent;)Z
 
     move-result v2
 
-    iget-wide v3, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment$1;->val$total:J
+    if-nez v2, :cond_0
 
-    iget-wide v5, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment$1;->val$used:J
+    const-string v1, "replace a new action"
 
-    iget-object p0, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment$1;->this$0:Lcom/oneplus/security/network/view/DataUsagePrefFragment;
+    invoke-static {p1, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {p0}, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->access$200(Lcom/oneplus/security/network/view/DataUsagePrefFragment;)J
+    new-instance v1, Landroid/content/Intent;
 
-    move-result-wide v7
+    const-string v2, "android.settings.MOBILE_DATA_USAGE"
 
-    invoke-virtual/range {v1 .. v8}, Lcom/oneplus/security/network/view/HeaderPreference;->updateData(IJJJ)V
+    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    :cond_0
+    iget-object v2, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment$1;->this$0:Lcom/oneplus/security/network/view/DataUsagePrefFragment;
+
+    invoke-static {v2}, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->access$000(Lcom/oneplus/security/network/view/DataUsagePrefFragment;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    iget-object v2, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment$1;->this$0:Lcom/oneplus/security/network/view/DataUsagePrefFragment;
+
+    invoke-static {v2}, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->access$100(Lcom/oneplus/security/network/view/DataUsagePrefFragment;)I
+
+    move-result v2
+
+    invoke-static {v2}, Lcom/oneplus/security/utils/OPSNSUtils;->findSubIdBySlotId(I)I
+
+    move-result v2
+
+    invoke-static {v2}, Lcom/oneplus/security/network/trafficinfo/NativeTrafficDataModel;->getNetworkTemplate(I)Landroid/net/NetworkTemplate;
+
+    move-result-object v3
 
     goto :goto_0
 
-    :cond_0
-    const-string p0, "DataUsagePrefFragment"
+    :cond_1
+    invoke-static {}, Landroid/net/NetworkTemplate;->buildTemplateWifiWildcard()Landroid/net/NetworkTemplate;
 
-    const-string v0, "mDataUsagePreference is null"
+    move-result-object v3
 
-    invoke-static {p0, v0}, Lcom/oneplus/security/utils/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)V
+    move v2, v0
 
     :goto_0
-    return-void
+    const-string v4, ":settings:show_fragment_title"
+
+    iget-object v5, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment$1;->this$0:Lcom/oneplus/security/network/view/DataUsagePrefFragment;
+
+    invoke-static {v5}, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->access$200(Lcom/oneplus/security/network/view/DataUsagePrefFragment;)Landroidx/preference/Preference;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroidx/preference/Preference;->getTitle()Ljava/lang/CharSequence;
+
+    move-result-object v5
+
+    invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/content/Intent;
+
+    const-string v4, "sub_id"
+
+    invoke-virtual {v1, v4, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    const-string v2, "network_template"
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    const-string v2, "is_hotspot"
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    iget-object p0, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment$1;->this$0:Lcom/oneplus/security/network/view/DataUsagePrefFragment;
+
+    invoke-virtual {p0, v1}, Landroidx/fragment/app/Fragment;->startActivity(Landroid/content/Intent;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception p0
+
+    invoke-virtual {p0}, Ljava/lang/Exception;->getLocalizedMessage()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p1, p0}, Lcom/oneplus/security/utils/LogUtils;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_1
+    return v0
 .end method

@@ -337,17 +337,21 @@
 
     const/4 p0, 0x1
 
-    if-eq p1, p0, :cond_3
+    if-eq p1, p0, :cond_4
 
     const/4 p0, 0x2
 
-    if-eq p1, p0, :cond_2
+    if-eq p1, p0, :cond_3
 
     const/4 p0, 0x3
 
-    if-eq p1, p0, :cond_1
+    if-eq p1, p0, :cond_2
 
     const/16 p0, 0xa
+
+    if-eq p1, p0, :cond_1
+
+    const/16 p0, 0x14
 
     if-eq p1, p0, :cond_0
 
@@ -356,21 +360,26 @@
     goto :goto_0
 
     :cond_0
-    sget p0, Lcom/android/settings/R$raw;->op_custom_horizon_light_mcl_anim:I
+    sget p0, Lcom/android/settings/R$raw;->op_custom_horizon_light_red1_anim:I
 
     goto :goto_0
 
     :cond_1
-    sget p0, Lcom/android/settings/R$raw;->op_custom_horizon_light_purple_anim:I
+    sget p0, Lcom/android/settings/R$raw;->op_custom_horizon_light_mcl_anim:I
 
     goto :goto_0
 
     :cond_2
-    sget p0, Lcom/android/settings/R$raw;->op_custom_horizon_light_gold_anim:I
+    sget p0, Lcom/android/settings/R$raw;->op_custom_horizon_light_purple_anim:I
 
     goto :goto_0
 
     :cond_3
+    sget p0, Lcom/android/settings/R$raw;->op_custom_horizon_light_gold_anim:I
+
+    goto :goto_0
+
+    :cond_4
     sget p0, Lcom/android/settings/R$raw;->op_custom_horizon_light_red_anim:I
 
     :goto_0
@@ -417,7 +426,7 @@
 .end method
 
 .method private initStyleAnimViews()V
-    .locals 13
+    .locals 15
 
     iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference;->mAnims:Ljava/util/List;
 
@@ -503,73 +512,96 @@
 
     invoke-direct {v6, v8, v10, v11}, Lcom/oneplus/settings/ui/OPCustomItemEntity;-><init>(Ljava/lang/String;II)V
 
-    iget-object v8, p0, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference;->mContext:Landroid/content/Context;
+    new-instance v8, Lcom/oneplus/settings/ui/OPCustomItemEntity;
 
-    invoke-virtual {v8}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    iget-object v10, p0, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference;->mContext:Landroid/content/Context;
 
-    move-result-object v8
+    sget v12, Lcom/android/settings/R$string;->aod_horizon_light_effect_red:I
 
-    const-string v10, "op_custom_horizon_light_animation_style"
+    invoke-virtual {v10, v12}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    const/4 v12, -0x2
+    move-result-object v10
 
-    invoke-static {v8, v10, v3, v12}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+    sget v12, Lcom/android/settings/R$drawable;->op_custom_horizon_light_red1:I
+
+    const/16 v13, 0x14
+
+    invoke-direct {v8, v10, v12, v13}, Lcom/oneplus/settings/ui/OPCustomItemEntity;-><init>(Ljava/lang/String;II)V
+
+    iget-object v10, p0, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v10}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v10
+
+    const-string v12, "op_custom_horizon_light_animation_style"
+
+    const/4 v14, -0x2
+
+    invoke-static {v10, v12, v3, v14}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result v3
 
-    new-instance v8, Ljava/lang/StringBuilder;
+    new-instance v10, Ljava/lang/StringBuilder;
 
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v10, "initStyleAnimViews  AOD style = "
+    const-string v12, "initStyleAnimViews  AOD style = "
 
-    invoke-virtual {v8, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v10, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v10, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v10
 
-    const-string v10, "OPCustomNotificationAnimVideoPreference"
+    const-string v12, "OPCustomNotificationAnimVideoPreference"
 
-    invoke-static {v10, v8}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v12, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-eqz v3, :cond_4
+    if-eqz v3, :cond_5
 
-    if-eq v3, v5, :cond_3
+    if-eq v3, v5, :cond_4
 
-    if-eq v3, v7, :cond_2
+    if-eq v3, v7, :cond_3
 
-    if-eq v3, v9, :cond_1
+    if-eq v3, v9, :cond_2
 
-    if-eq v3, v11, :cond_0
+    if-eq v3, v11, :cond_1
+
+    if-eq v3, v13, :cond_0
 
     iput-boolean v5, v0, Lcom/oneplus/settings/ui/OPCustomItemEntity;->selected:Z
 
     goto :goto_0
 
     :cond_0
-    iput-boolean v5, v6, Lcom/oneplus/settings/ui/OPCustomItemEntity;->selected:Z
+    iput-boolean v5, v8, Lcom/oneplus/settings/ui/OPCustomItemEntity;->selected:Z
 
     goto :goto_0
 
     :cond_1
-    iput-boolean v5, v4, Lcom/oneplus/settings/ui/OPCustomItemEntity;->selected:Z
+    iput-boolean v5, v6, Lcom/oneplus/settings/ui/OPCustomItemEntity;->selected:Z
 
     goto :goto_0
 
     :cond_2
-    iput-boolean v5, v2, Lcom/oneplus/settings/ui/OPCustomItemEntity;->selected:Z
+    iput-boolean v5, v4, Lcom/oneplus/settings/ui/OPCustomItemEntity;->selected:Z
 
     goto :goto_0
 
     :cond_3
-    iput-boolean v5, v1, Lcom/oneplus/settings/ui/OPCustomItemEntity;->selected:Z
+    iput-boolean v5, v2, Lcom/oneplus/settings/ui/OPCustomItemEntity;->selected:Z
 
     goto :goto_0
 
     :cond_4
+    iput-boolean v5, v1, Lcom/oneplus/settings/ui/OPCustomItemEntity;->selected:Z
+
+    goto :goto_0
+
+    :cond_5
     iput-boolean v5, v0, Lcom/oneplus/settings/ui/OPCustomItemEntity;->selected:Z
 
     :goto_0
@@ -577,17 +609,28 @@
 
     move-result v3
 
-    if-eqz v3, :cond_5
+    if-eqz v3, :cond_6
 
     iget-object v3, p0, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference;->mAnims:Ljava/util/List;
 
     invoke-interface {v3, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    :cond_5
+    :cond_6
     iget-object v3, p0, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference;->mAnims:Ljava/util/List;
 
     invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    invoke-static {}, Lcom/oneplus/settings/utils/OPThemeUtils;->isSupportREDTheme()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference;->mAnims:Ljava/util/List;
+
+    invoke-interface {v0, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_7
     iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference;->mAnims:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z

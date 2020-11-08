@@ -16,6 +16,8 @@
 
 
 # static fields
+.field static final HELP_MENU:I = 0x0
+
 .field static final REQUEST_UNINSTALL:I = 0x0
 
 .field static final UNINSTALL_ALL_USERS_MENU:I = 0x1
@@ -42,6 +44,16 @@
     .end annotation
 .end field
 
+.field private mControllers:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Lcom/android/settingslib/core/AbstractPreferenceController;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field private mDpm:Landroid/app/admin/DevicePolicyManager;
 
 .field mFinishing:Z
@@ -56,7 +68,7 @@
 
 .field private mPackageName:Ljava/lang/String;
 
-.field final mPackageRemovedReceiver:Landroid/content/BroadcastReceiver;
+.field mPackageRemovedReceiver:Landroid/content/BroadcastReceiver;
 
 .field private mPm:Landroid/content/pm/PackageManager;
 
@@ -86,6 +98,12 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mCallbacks:Ljava/util/List;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mControllers:Ljava/util/List;
 
     new-instance v0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment$1;
 
@@ -403,7 +421,7 @@
 .end method
 
 .method protected createPreferenceControllers(Landroid/content/Context;)Ljava/util/List;
-    .locals 12
+    .locals 11
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -430,21 +448,25 @@
 
     move-result-object v8
 
-    new-instance v9, Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mControllers:Ljava/util/List;
 
-    invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
+    invoke-interface {v0}, Ljava/util/List;->clear()V
 
     invoke-virtual {p0}, Lcom/android/settingslib/core/lifecycle/ObservablePreferenceFragment;->getSettingsLifecycle()Lcom/android/settingslib/core/lifecycle/Lifecycle;
 
-    move-result-object v10
+    move-result-object v9
 
-    new-instance v0, Lcom/android/settings/applications/appinfo/AppHeaderViewPreferenceController;
+    iget-object v0, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mControllers:Ljava/util/List;
 
-    invoke-direct {v0, p1, p0, v8, v10}, Lcom/android/settings/applications/appinfo/AppHeaderViewPreferenceController;-><init>(Landroid/content/Context;Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;Ljava/lang/String;Lcom/android/settingslib/core/lifecycle/Lifecycle;)V
+    new-instance v1, Lcom/android/settings/applications/appinfo/AppHeaderViewPreferenceController;
 
-    invoke-interface {v9, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-direct {v1, p1, p0, v8, v9}, Lcom/android/settings/applications/appinfo/AppHeaderViewPreferenceController;-><init>(Landroid/content/Context;Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;Ljava/lang/String;Lcom/android/settingslib/core/lifecycle/Lifecycle;)V
 
-    invoke-interface {v9}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mControllers:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
@@ -472,13 +494,15 @@
     :cond_1
     new-instance v0, Lcom/android/settings/applications/appinfo/InstantAppButtonsPreferenceController;
 
-    invoke-direct {v0, p1, p0, v8, v10}, Lcom/android/settings/applications/appinfo/InstantAppButtonsPreferenceController;-><init>(Landroid/content/Context;Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;Ljava/lang/String;Lcom/android/settingslib/core/lifecycle/Lifecycle;)V
+    invoke-direct {v0, p1, p0, v8, v9}, Lcom/android/settings/applications/appinfo/InstantAppButtonsPreferenceController;-><init>(Landroid/content/Context;Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;Ljava/lang/String;Lcom/android/settingslib/core/lifecycle/Lifecycle;)V
 
     iput-object v0, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mInstantAppButtonPreferenceController:Lcom/android/settings/applications/appinfo/InstantAppButtonsPreferenceController;
 
-    invoke-interface {v9, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    iget-object v1, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mControllers:Ljava/util/List;
 
-    new-instance v11, Lcom/android/settings/applications/appinfo/AppButtonsPreferenceController;
+    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    new-instance v10, Lcom/android/settings/applications/appinfo/AppButtonsPreferenceController;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -494,63 +518,81 @@
 
     const/4 v7, 0x5
 
-    move-object v0, v11
+    move-object v0, v10
 
     move-object v2, p0
 
-    move-object v3, v10
+    move-object v3, v9
 
     move-object v4, v8
 
     invoke-direct/range {v0 .. v7}, Lcom/android/settings/applications/appinfo/AppButtonsPreferenceController;-><init>(Lcom/android/settings/SettingsActivity;Lcom/android/settings/core/InstrumentedPreferenceFragment;Lcom/android/settingslib/core/lifecycle/Lifecycle;Ljava/lang/String;Lcom/android/settingslib/applications/ApplicationsState;II)V
 
-    iput-object v11, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mAppButtonsPreferenceController:Lcom/android/settings/applications/appinfo/AppButtonsPreferenceController;
+    iput-object v10, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mAppButtonsPreferenceController:Lcom/android/settings/applications/appinfo/AppButtonsPreferenceController;
 
-    invoke-interface {v9, v11}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    iget-object v0, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mControllers:Ljava/util/List;
 
-    new-instance v0, Lcom/android/settings/applications/appinfo/AppBatteryPreferenceController;
+    invoke-interface {v0, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-direct {v0, p1, p0, v8, v10}, Lcom/android/settings/applications/appinfo/AppBatteryPreferenceController;-><init>(Landroid/content/Context;Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;Ljava/lang/String;Lcom/android/settingslib/core/lifecycle/Lifecycle;)V
+    iget-object v0, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mControllers:Ljava/util/List;
 
-    invoke-interface {v9, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    new-instance v1, Lcom/android/settings/applications/appinfo/AppBatteryPreferenceController;
 
-    new-instance v0, Lcom/android/settings/applications/appinfo/AppMemoryPreferenceController;
+    invoke-direct {v1, p1, p0, v8, v9}, Lcom/android/settings/applications/appinfo/AppBatteryPreferenceController;-><init>(Landroid/content/Context;Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;Ljava/lang/String;Lcom/android/settingslib/core/lifecycle/Lifecycle;)V
 
-    invoke-direct {v0, p1, p0, v10}, Lcom/android/settings/applications/appinfo/AppMemoryPreferenceController;-><init>(Landroid/content/Context;Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;Lcom/android/settingslib/core/lifecycle/Lifecycle;)V
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-interface {v9, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    iget-object v0, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mControllers:Ljava/util/List;
 
-    new-instance p0, Lcom/android/settings/applications/appinfo/DefaultHomeShortcutPreferenceController;
+    new-instance v1, Lcom/android/settings/applications/appinfo/AppMemoryPreferenceController;
 
-    invoke-direct {p0, p1, v8}, Lcom/android/settings/applications/appinfo/DefaultHomeShortcutPreferenceController;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v1, p1, p0, v9}, Lcom/android/settings/applications/appinfo/AppMemoryPreferenceController;-><init>(Landroid/content/Context;Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;Lcom/android/settingslib/core/lifecycle/Lifecycle;)V
 
-    invoke-interface {v9, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    new-instance p0, Lcom/android/settings/applications/appinfo/DefaultBrowserShortcutPreferenceController;
+    iget-object v0, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mControllers:Ljava/util/List;
 
-    invoke-direct {p0, p1, v8}, Lcom/android/settings/applications/appinfo/DefaultBrowserShortcutPreferenceController;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    new-instance v1, Lcom/android/settings/applications/appinfo/DefaultHomeShortcutPreferenceController;
 
-    invoke-interface {v9, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-direct {v1, p1, v8}, Lcom/android/settings/applications/appinfo/DefaultHomeShortcutPreferenceController;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    new-instance p0, Lcom/android/settings/applications/appinfo/DefaultPhoneShortcutPreferenceController;
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-direct {p0, p1, v8}, Lcom/android/settings/applications/appinfo/DefaultPhoneShortcutPreferenceController;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    iget-object v0, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mControllers:Ljava/util/List;
 
-    invoke-interface {v9, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    new-instance v1, Lcom/android/settings/applications/appinfo/DefaultBrowserShortcutPreferenceController;
 
-    new-instance p0, Lcom/android/settings/applications/appinfo/DefaultEmergencyShortcutPreferenceController;
+    invoke-direct {v1, p1, v8}, Lcom/android/settings/applications/appinfo/DefaultBrowserShortcutPreferenceController;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    invoke-direct {p0, p1, v8}, Lcom/android/settings/applications/appinfo/DefaultEmergencyShortcutPreferenceController;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-interface {v9, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    iget-object v0, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mControllers:Ljava/util/List;
 
-    new-instance p0, Lcom/android/settings/applications/appinfo/DefaultSmsShortcutPreferenceController;
+    new-instance v1, Lcom/android/settings/applications/appinfo/DefaultPhoneShortcutPreferenceController;
 
-    invoke-direct {p0, p1, v8}, Lcom/android/settings/applications/appinfo/DefaultSmsShortcutPreferenceController;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v1, p1, v8}, Lcom/android/settings/applications/appinfo/DefaultPhoneShortcutPreferenceController;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    invoke-interface {v9, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    return-object v9
+    iget-object v0, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mControllers:Ljava/util/List;
+
+    new-instance v1, Lcom/android/settings/applications/appinfo/DefaultEmergencyShortcutPreferenceController;
+
+    invoke-direct {v1, p1, v8}, Lcom/android/settings/applications/appinfo/DefaultEmergencyShortcutPreferenceController;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mControllers:Ljava/util/List;
+
+    new-instance v1, Lcom/android/settings/applications/appinfo/DefaultSmsShortcutPreferenceController;
+
+    invoke-direct {v1, p1, v8}, Lcom/android/settings/applications/appinfo/DefaultSmsShortcutPreferenceController;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    iget-object p0, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mControllers:Ljava/util/List;
+
+    return-object p0
 .end method
 
 .method ensureDisplayableModule(Landroid/app/Activity;)Z
@@ -1171,19 +1213,29 @@
 .end method
 
 .method public onDestroy()V
-    .locals 1
+    .locals 2
 
     invoke-direct {p0}, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->stopListeningToPackageRemove()V
 
     iget-object v0, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mCallbacks:Ljava/util/List;
 
+    const/4 v1, 0x0
+
     if-eqz v0, :cond_0
 
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mCallbacks:Ljava/util/List;
+    iput-object v1, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mCallbacks:Ljava/util/List;
 
     :cond_0
+    iput-object v1, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mState:Lcom/android/settingslib/applications/ApplicationsState;
+
+    iput-object v1, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mAppEntry:Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
+
+    iput-object v1, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mPackageRemovedReceiver:Landroid/content/BroadcastReceiver;
+
+    iput-object v1, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mAppButtonsPreferenceController:Lcom/android/settings/applications/appinfo/AppButtonsPreferenceController;
+
+    iput-object v1, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mInstantAppButtonPreferenceController:Lcom/android/settings/applications/appinfo/InstantAppButtonsPreferenceController;
+
     invoke-super {p0}, Lcom/android/settingslib/core/lifecycle/ObservablePreferenceFragment;->onDestroy()V
 
     return-void
@@ -1321,47 +1373,56 @@
 
     invoke-interface {v1, v2}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
-    iget-object v1, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mAppEntry:Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
+    const/4 v1, 0x0
 
-    iget-object v1, v1, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
+    invoke-interface {p1, v1}, Landroid/view/Menu;->getItem(I)Landroid/view/MenuItem;
 
-    iget v1, v1, Landroid/content/pm/ApplicationInfo;->flags:I
+    move-result-object v2
 
-    and-int/lit16 v1, v1, 0x80
+    if-eqz v2, :cond_1
 
-    const/4 v2, 0x0
+    invoke-interface {v2, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
-    if-eqz v1, :cond_1
+    :cond_1
+    iget-object v2, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mAppEntry:Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
 
-    move v1, v0
+    iget-object v2, v2, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
+
+    iget v2, v2, Landroid/content/pm/ApplicationInfo;->flags:I
+
+    and-int/lit16 v2, v2, 0x80
+
+    if-eqz v2, :cond_2
+
+    move v2, v0
 
     goto :goto_0
 
-    :cond_1
-    move v1, v2
+    :cond_2
+    move v2, v1
 
     :goto_0
-    iput-boolean v1, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mUpdatedSysApp:Z
+    iput-boolean v2, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mUpdatedSysApp:Z
 
-    const/4 v1, 0x2
+    const/4 v2, 0x2
 
-    invoke-interface {p1, v1}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+    invoke-interface {p1, v2}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
     move-result-object p1
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v1
+    move-result-object v2
 
     sget v3, Lcom/android/settings/R$bool;->config_disable_uninstall_update:I
 
-    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
 
-    move-result v1
+    move-result v2
 
     iget-object v3, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mUserManager:Landroid/os/UserManager;
 
@@ -1369,22 +1430,22 @@
 
     move-result v3
 
-    if-eqz v3, :cond_2
+    if-eqz v3, :cond_3
 
     iget-boolean v3, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mUpdatedSysApp:Z
 
-    if-eqz v3, :cond_2
+    if-eqz v3, :cond_3
 
     iget-boolean v3, p0, Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;->mAppsControlDisallowedBySystem:Z
 
-    if-nez v3, :cond_2
+    if-nez v3, :cond_3
 
-    if-nez v1, :cond_2
+    if-nez v2, :cond_3
 
     goto :goto_1
 
-    :cond_2
-    move v0, v2
+    :cond_3
+    move v0, v1
 
     :goto_1
     invoke-interface {p1, v0}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
@@ -1393,7 +1454,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -1403,7 +1464,7 @@
 
     invoke-static {v0, p1, p0}, Lcom/android/settingslib/RestrictedLockUtilsInternal;->setMenuItemAsDisabledByAdmin(Landroid/content/Context;Landroid/view/MenuItem;Lcom/android/settingslib/RestrictedLockUtils$EnforcedAdmin;)V
 
-    :cond_3
+    :cond_4
     return-void
 .end method
 

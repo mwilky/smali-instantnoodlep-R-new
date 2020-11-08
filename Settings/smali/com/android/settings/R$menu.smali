@@ -8,6 +8,8 @@
 
 .field public static final menu_firewall_batch:I = 0x7f0f0003
 
+.field public static final oneplus_uninstallmultipleapps_options:I = 0x7f0f0005
+
 .field public static final op_language_selection_list:I = 0x7f0f0006
 
 .field public static final op_search_settings:I = 0x7f0f0007

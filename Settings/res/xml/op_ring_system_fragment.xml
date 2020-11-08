@@ -3,7 +3,7 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
     <com.oneplus.settings.ringtone.OPPaddingPreferenceCategory android:title="@string/oneplus_vibrate" android:key="ringtone_vibrate">
         <Preference android:title="@string/oneplus_vibrate_strength" android:key="vibrate_strength" />
-        <com.oneplus.settings.ringtone.OPPaddingSwitchPreference android:title="@string/vibrate_when_ringing_title" android:key="vibrate_when_ringing" />
+        <SwitchPreference android:title="@string/vibrate_when_ringing_title" android:key="vibrate_when_ringing" />
     </com.oneplus.settings.ringtone.OPPaddingPreferenceCategory>
     <com.oneplus.settings.ringtone.OPPaddingPreferenceCategory android:title="@string/oneplus_vibrate" android:key="vibrate">
         <Preference android:title="@string/oneplus_vibrate_intensity" android:key="sms_notification_vibrate_intensity" />

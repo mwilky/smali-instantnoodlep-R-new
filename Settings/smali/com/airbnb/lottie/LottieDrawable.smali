@@ -676,6 +676,16 @@
 
 
 # virtual methods
+.method public addAnimatorListener(Landroid/animation/Animator$AnimatorListener;)V
+    .locals 0
+
+    iget-object p0, p0, Lcom/airbnb/lottie/LottieDrawable;->animator:Lcom/airbnb/lottie/utils/LottieValueAnimator;
+
+    invoke-virtual {p0, p1}, Lcom/airbnb/lottie/utils/BaseLottieAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    return-void
+.end method
+
 .method public addAnimatorUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
     .locals 0
 

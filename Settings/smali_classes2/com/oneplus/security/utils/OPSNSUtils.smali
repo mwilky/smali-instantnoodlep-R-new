@@ -411,6 +411,18 @@
     return-object p0
 .end method
 
+.method public static getSimName(Landroid/content/Context;I)Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x1
+
+    invoke-static {p0, p1, v0}, Lcom/oneplus/security/utils/OPSNSUtils;->getSimName(Landroid/content/Context;IZ)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method public static getSimName(Landroid/content/Context;ILjava/lang/String;)Ljava/lang/String;
     .locals 4
 

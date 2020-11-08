@@ -493,8 +493,6 @@
 
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->sendAppTrackerForAllSettings()V
 
-    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->setCustomToneDarkModeLocation()V
-
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1

@@ -333,9 +333,26 @@
     :cond_1
     invoke-direct {p0}, Lcom/oneplus/settings/defaultapp/controller/DefaultBasePreferenceController;->getOnlyAppIcon()Landroid/graphics/drawable/Drawable;
 
+    move-result-object v0
+
+    if-nez v0, :cond_2
+
+    iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    sget v0, Lcom/android/settings/R$drawable;->ic_remove_circle:I
+
+    invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
     move-result-object p0
 
     return-object p0
+
+    :cond_2
+    return-object v0
 .end method
 
 .method protected getDefaultAppInfo()Lcom/android/settingslib/applications/DefaultAppInfo;

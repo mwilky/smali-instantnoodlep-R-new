@@ -53,7 +53,7 @@
 
 # virtual methods
 .method public onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
-    .locals 2
+    .locals 3
 
     invoke-super {p0, p1}, Landroidx/preference/Preference;->onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
 
@@ -91,16 +91,30 @@
 
     invoke-virtual {p0, p1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    if-eqz v0, :cond_1
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isNAVersion()Z
+
+    move-result p1
+
+    const/16 v2, 0x8
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p0, v2}, Landroid/view/View;->setVisibility(I)V
+
+    goto :goto_2
+
+    :cond_1
+    if-eqz v0, :cond_2
 
     goto :goto_1
 
-    :cond_1
-    const/16 v1, 0x8
+    :cond_2
+    move v1, v2
 
     :goto_1
     invoke-virtual {p0, v1}, Landroid/view/View;->setVisibility(I)V
 
+    :goto_2
     return-void
 .end method
 

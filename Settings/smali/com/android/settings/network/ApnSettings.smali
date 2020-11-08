@@ -2830,8 +2830,6 @@
 
     iput-boolean v0, p0, Lcom/android/settings/network/ApnSettings;->mHidePresetApnDetails:Z
 
-    invoke-direct {p0}, Lcom/android/settings/network/ApnSettings;->loadCarrierConfigInfo()V
-
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUss()Z
 
     move-result v0
@@ -3255,6 +3253,8 @@
     sget-boolean v0, Lcom/android/settings/network/ApnSettings;->mRestoreDefaultApnMode:Z
 
     if-nez v0, :cond_2
+
+    invoke-direct {p0}, Lcom/android/settings/network/ApnSettings;->loadCarrierConfigInfo()V
 
     invoke-direct {p0}, Lcom/android/settings/network/ApnSettings;->fillList()V
 

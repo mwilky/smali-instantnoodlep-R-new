@@ -8,7 +8,6 @@
     <color name="abc_search_url_text_selected">@android:color/black</color>
     <color name="accent_material_dark">@color/material_deep_teal_200</color>
     <color name="accent_material_light">@color/material_deep_teal_500</color>
-    <color name="actionBarSearchViewIconNormal">@color/op_control_icon_color_active_dark</color>
     <color name="actionbar_op_btn_color">#89ffffff</color>
     <color name="advanced_icon_color">#ff3c4043</color>
     <color name="advanced_outline_color">#ffbdc1c6</color>
@@ -64,9 +63,6 @@
     <color name="bt_color_icon_6">#b4681da8</color>
     <color name="bt_color_icon_7">#b4007b83</color>
     <color name="bt_outline_color">#1f000000</color>
-    <color name="btn_foreground_material">@color/btn_foreground_material_light</color>
-    <color name="btn_foreground_material_dark">#ffffffff</color>
-    <color name="btn_foreground_material_light">#ffffffff</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
     <color name="cardview_dark_background">#ff424242</color>
@@ -333,11 +329,6 @@
     <color name="numberpicker_divider_color_light">#89000000</color>
     <color name="numberpicker_minute_text_color_dark">@color/op_control_text_color_secondary_dark</color>
     <color name="numberpicker_minute_text_color_light">@color/op_control_text_color_secondary_light</color>
-    <color name="onePlusAccentColor_device_default_dark">@color/oneplus_red_color</color>
-    <color name="onePlusAccentColor_device_default_light">@color/oneplus_red_color</color>
-    <color name="onePlusPrimaryColor_device_default">#ff2196f3</color>
-    <color name="onePlusPrimaryColor_device_default_dark">@color/oneplus_red_color</color>
-    <color name="onePlusPrimaryColor_device_default_light">@color/oneplus_red_color</color>
     <color name="oneplus_ActionbarLineColor">#ff212121</color>
     <color name="oneplus__text_color_hint_dark">#3dffffff</color>
     <color name="oneplus__text_color_hint_light">#2d000000</color>
@@ -536,6 +527,7 @@
     <color name="op_control_accent_color_deeppurple_dark">#ff5a3f96</color>
     <color name="op_control_accent_color_deeppurple_default">@color/op_control_accent_color_deeppurple_light</color>
     <color name="op_control_accent_color_deeppurple_light">#ff6542b4</color>
+    <color name="op_control_accent_color_default_red_theme">#ffc41442</color>
     <color name="op_control_accent_color_gin_dark">#ff7e5f5d</color>
     <color name="op_control_accent_color_gin_default">@color/op_control_accent_color_gin_light</color>
     <color name="op_control_accent_color_gin_light">#ff8c6a67</color>
@@ -697,9 +689,7 @@
     <color name="op_edit_text_line_color_dark">#1effffff</color>
     <color name="op_edit_text_line_color_default">@color/op_edit_text_line_color_light</color>
     <color name="op_edit_text_line_color_light">#1e000000</color>
-    <color name="op_error_color_material_dark">#ffff6e6e</color>
-    <color name="op_error_color_material_default">@color/op_error_color_material_light</color>
-    <color name="op_error_color_material_light">#ffd50000</color>
+    <color name="op_error_color_material_xxx_light">#ffd50000</color>
     <color name="op_grid_item_background_dark">#33ffffff</color>
     <color name="op_grid_item_background_default">@color/op_grid_item_background_light</color>
     <color name="op_grid_item_background_light">#4cffffff</color>

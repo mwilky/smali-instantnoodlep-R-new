@@ -15,8 +15,6 @@
 
 .field private mContext:Landroid/content/Context;
 
-.field private mFooterPreference:Lcom/oneplus/settings/widget/OPFooterPreference;
-
 
 # direct methods
 .method static constructor <clinit>()V
@@ -236,18 +234,6 @@
 
     iput-object p1, p0, Lcom/oneplus/settings/chargingstations/OPChargingStationSettings;->mContext:Landroid/content/Context;
 
-    iget-object p1, p0, Lcom/android/settings/SettingsPreferenceFragment;->mFooterPreferenceMixin:Lcom/oneplus/settings/widget/FooterPreferenceMixinCompat;
-
-    invoke-virtual {p1}, Lcom/oneplus/settings/widget/FooterPreferenceMixinCompat;->createFooterPreference()Lcom/oneplus/settings/widget/OPFooterPreference;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcom/oneplus/settings/chargingstations/OPChargingStationSettings;->mFooterPreference:Lcom/oneplus/settings/widget/OPFooterPreference;
-
-    sget p0, Lcom/android/settings/R$string;->op_charging_footer_text:I
-
-    invoke-virtual {p1, p0}, Landroidx/preference/Preference;->setTitle(I)V
-
     return-void
 .end method
 
@@ -355,7 +341,7 @@
 .end method
 
 .method public onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
-    .locals 3
+    .locals 2
 
     invoke-super {p0, p1, p2}, Landroidx/preference/PreferenceFragmentCompat;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
@@ -369,48 +355,58 @@
 
     invoke-virtual {p2}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
 
-    move-result-object v0
+    move-result-object p2
 
-    sget v1, Lcom/android/settings/R$string;->op_find_charging_stations:I
+    invoke-virtual {p2}, Lcom/android/settings/widget/SwitchBar;->hide()V
 
-    invoke-virtual {v0, v1, v1}, Lcom/android/settings/widget/SwitchBar;->setSwitchBarText(II)V
+    const-string p2, "op_charging_station_mute_notification"
 
-    const-string v0, "op_charging_station_mute_notification"
+    invoke-virtual {p0, p2}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object p2
+
+    check-cast p2, Landroidx/preference/SwitchPreference;
+
+    const-string v0, "op_charging_station_feature"
 
     invoke-virtual {p0, v0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
 
-    check-cast v0, Landroidx/preference/SwitchPreference;
+    check-cast v0, Lcom/android/settings/widget/MasterSwitchPreference;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p0}, Landroidx/preference/Preference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
+    new-instance v1, Lcom/android/settings/widget/MasterSwitchController;
 
-    invoke-direct {p0, v0}, Lcom/oneplus/settings/chargingstations/OPChargingStationSettings;->updateMuteDescription(Landroidx/preference/Preference;)V
+    invoke-direct {v1, v0}, Lcom/android/settings/widget/MasterSwitchController;-><init>(Lcom/android/settings/widget/MasterSwitchPreference;)V
+
+    goto :goto_0
 
     :cond_0
-    new-instance v1, Lcom/oneplus/settings/chargingstations/OPChargingStationSettingsController;
+    const/4 v1, 0x0
 
-    new-instance v2, Lcom/android/settings/widget/SwitchBarController;
+    :goto_0
+    if-eqz p2, :cond_1
 
-    invoke-virtual {p2}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    invoke-virtual {p2, p0}, Landroidx/preference/Preference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
 
-    move-result-object p2
+    invoke-direct {p0, p2}, Lcom/oneplus/settings/chargingstations/OPChargingStationSettings;->updateMuteDescription(Landroidx/preference/Preference;)V
 
-    invoke-direct {v2, p2}, Lcom/android/settings/widget/SwitchBarController;-><init>(Lcom/android/settings/widget/SwitchBar;)V
+    :cond_1
+    new-instance v0, Lcom/oneplus/settings/chargingstations/OPChargingStationSettingsController;
 
-    invoke-direct {v1, p1, v2, v0}, Lcom/oneplus/settings/chargingstations/OPChargingStationSettingsController;-><init>(Landroid/content/Context;Lcom/android/settings/widget/SwitchWidgetController;Landroidx/preference/SwitchPreference;)V
+    invoke-direct {v0, p1, v1, p2}, Lcom/oneplus/settings/chargingstations/OPChargingStationSettingsController;-><init>(Landroid/content/Context;Lcom/android/settings/widget/SwitchWidgetController;Landroidx/preference/SwitchPreference;)V
 
     invoke-virtual {p0}, Lcom/android/settingslib/core/lifecycle/ObservablePreferenceFragment;->getSettingsLifecycle()Lcom/android/settingslib/core/lifecycle/Lifecycle;
 
     move-result-object p2
 
-    if-eqz p2, :cond_1
+    if-eqz p2, :cond_2
 
-    invoke-virtual {p2, v1}, Lcom/android/settingslib/core/lifecycle/Lifecycle;->addObserver(Landroidx/lifecycle/LifecycleObserver;)V
+    invoke-virtual {p2, v0}, Lcom/android/settingslib/core/lifecycle/Lifecycle;->addObserver(Landroidx/lifecycle/LifecycleObserver;)V
 
-    :cond_1
+    :cond_2
     new-instance v0, Lcom/android/settings/location/LocationEnabler;
 
     iget-object p0, p0, Lcom/oneplus/settings/chargingstations/OPChargingStationSettings;->listener:Lcom/android/settings/location/LocationEnabler$LocationModeChangeListener;

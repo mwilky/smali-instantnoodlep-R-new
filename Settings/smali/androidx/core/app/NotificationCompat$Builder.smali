@@ -329,6 +329,18 @@
     return-object p0
 .end method
 
+.method public setContentText(Ljava/lang/CharSequence;)Landroidx/core/app/NotificationCompat$Builder;
+    .locals 0
+
+    invoke-static {p1}, Landroidx/core/app/NotificationCompat$Builder;->limitCharSequenceLength(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    iput-object p1, p0, Landroidx/core/app/NotificationCompat$Builder;->mContentText:Ljava/lang/CharSequence;
+
+    return-object p0
+.end method
+
 .method public setContentTitle(Ljava/lang/CharSequence;)Landroidx/core/app/NotificationCompat$Builder;
     .locals 0
 
@@ -337,6 +349,14 @@
     move-result-object p1
 
     iput-object p1, p0, Landroidx/core/app/NotificationCompat$Builder;->mContentTitle:Ljava/lang/CharSequence;
+
+    return-object p0
+.end method
+
+.method public setPriority(I)Landroidx/core/app/NotificationCompat$Builder;
+    .locals 0
+
+    iput p1, p0, Landroidx/core/app/NotificationCompat$Builder;->mPriority:I
 
     return-object p0
 .end method

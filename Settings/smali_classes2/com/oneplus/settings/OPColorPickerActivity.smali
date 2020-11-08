@@ -9,6 +9,8 @@
 
 
 # instance fields
+.field private mAm:Landroid/app/ActivityManager;
+
 .field private mColorEditButton:Landroid/view/View;
 
 .field private mColorEditView:Landroid/widget/EditText;
@@ -99,7 +101,15 @@
     return-void
 .end method
 
-.method static synthetic access$400(Lcom/oneplus/settings/OPColorPickerActivity;)Landroid/widget/EditText;
+.method static synthetic access$400(Lcom/oneplus/settings/OPColorPickerActivity;)Landroid/app/ActivityManager;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/settings/OPColorPickerActivity;->mAm:Landroid/app/ActivityManager;
+
+    return-object p0
+.end method
+
+.method static synthetic access$500(Lcom/oneplus/settings/OPColorPickerActivity;)Landroid/widget/EditText;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/settings/OPColorPickerActivity;->mColorEditView:Landroid/widget/EditText;
@@ -107,7 +117,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$500(Lcom/oneplus/settings/OPColorPickerActivity;Landroid/widget/EditText;)V
+.method static synthetic access$600(Lcom/oneplus/settings/OPColorPickerActivity;Landroid/widget/EditText;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/oneplus/settings/OPColorPickerActivity;->setEditTextAtLastLocation(Landroid/widget/EditText;)V
@@ -115,7 +125,7 @@
     return-void
 .end method
 
-.method static synthetic access$600(Lcom/oneplus/settings/OPColorPickerActivity;Ljava/lang/String;)Z
+.method static synthetic access$700(Lcom/oneplus/settings/OPColorPickerActivity;Ljava/lang/String;)Z
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/oneplus/settings/OPColorPickerActivity;->isColorCodeValid(Ljava/lang/String;)Z
@@ -125,7 +135,7 @@
     return p0
 .end method
 
-.method static synthetic access$700(Lcom/oneplus/settings/OPColorPickerActivity;)Lcom/oneplus/settings/ui/ColorPickerView;
+.method static synthetic access$800(Lcom/oneplus/settings/OPColorPickerActivity;)Lcom/oneplus/settings/ui/ColorPickerView;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/settings/OPColorPickerActivity;->mPickerView:Lcom/oneplus/settings/ui/ColorPickerView;
@@ -133,7 +143,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$800(Lcom/oneplus/settings/OPColorPickerActivity;)Landroidx/appcompat/app/EditTextDialog;
+.method static synthetic access$900(Lcom/oneplus/settings/OPColorPickerActivity;)Landroidx/appcompat/app/EditTextDialog;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/settings/OPColorPickerActivity;->mEditColorDialog:Landroidx/appcompat/app/EditTextDialog;
@@ -1465,6 +1475,8 @@
     move-result-object p1
 
     check-cast p1, Landroid/app/ActivityManager;
+
+    iput-object p1, p0, Lcom/oneplus/settings/OPColorPickerActivity;->mAm:Landroid/app/ActivityManager;
 
     invoke-virtual {p0, p0}, Lcom/oneplus/settings/BaseActivity;->setOnPressListener(Lcom/oneplus/settings/OnPressListener;)V
 

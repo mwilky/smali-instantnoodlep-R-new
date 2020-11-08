@@ -1,11 +1,14 @@
 .class Lcom/android/settings/wifi/WifiSettings$3;
-.super Lcom/android/settings/wifi/CaptivePortalNetworkCallback;
+.super Ljava/lang/Object;
 .source "WifiSettings.java"
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiSettings;->registerCaptivePortalNetworkCallback(Landroid/net/Network;Lcom/android/settings/wifi/ConnectedAccessPointPreference;)V
+    value = Lcom/android/settings/wifi/WifiSettings;->onPreferenceTreeClick(Landroidx/preference/Preference;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -14,29 +17,21 @@
 .end annotation
 
 
-# instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiSettings;
-
-
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiSettings;Landroid/net/Network;Lcom/android/settings/wifi/ConnectedAccessPointPreference;)V
+.method constructor <init>(Lcom/android/settings/wifi/WifiSettings;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiSettings$3;->this$0:Lcom/android/settings/wifi/WifiSettings;
-
-    invoke-direct {p0, p2, p3}, Lcom/android/settings/wifi/CaptivePortalNetworkCallback;-><init>(Landroid/net/Network;Lcom/android/settings/wifi/ConnectedAccessPointPreference;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onCaptivePortalCapabilityChanged()V
+.method public onClick(Landroid/content/DialogInterface;I)V
     .locals 0
 
-    iget-object p0, p0, Lcom/android/settings/wifi/WifiSettings$3;->this$0:Lcom/android/settings/wifi/WifiSettings;
-
-    invoke-static {p0}, Lcom/android/settings/wifi/WifiSettings;->access$000(Lcom/android/settings/wifi/WifiSettings;)V
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
     return-void
 .end method

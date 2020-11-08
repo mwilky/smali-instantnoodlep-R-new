@@ -207,30 +207,39 @@
 .method public isDisplayable()Z
     .locals 4
 
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isNAVersion()Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    return v1
+
+    :cond_0
     iget-object v0, p0, Lcom/android/settings/homepage/contextualcards/conditional/OpOtaConditionController;->mAppContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string v1, "has_new_version_to_update"
+    const-string v2, "has_new_version_to_update"
 
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    invoke-static {v0, v2, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v0
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    if-ne v0, v1, :cond_0
+    if-ne v0, v2, :cond_1
 
-    move v0, v1
+    move v0, v2
 
     goto :goto_0
 
-    :cond_0
-    move v0, v2
+    :cond_1
+    move v0, v1
 
     :goto_0
     iget-object p0, p0, Lcom/android/settings/homepage/contextualcards/conditional/OpOtaConditionController;->mAppContext:Landroid/content/Context;
@@ -241,32 +250,32 @@
 
     const-string v3, "strong_prompt_ota"
 
-    invoke-static {p0, v3, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    invoke-static {p0, v3, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result p0
 
     const/16 v3, 0x64
 
-    if-ne p0, v3, :cond_1
+    if-ne p0, v3, :cond_2
 
-    move v2, v1
+    move v1, v2
 
-    :cond_1
+    :cond_2
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "systemHasUpdate = "
+    const-string v2, "systemHasUpdate = "
 
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v1, "    strongPromptOTA = "
+    const-string v2, "    strongPromptOTA = "
 
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

@@ -263,6 +263,8 @@
         <item>Qualcomm® aptX™ ഓഡിയോ</item>
         <item>Qualcomm® aptX™ HD ഓഡിയോ</item>
         <item>LDAC</item>
+        <item>Qualcomm® aptX™ Adaptive ഓഡിയോ</item>
+        <item>Qualcomm® aptX™ TWS+ ഓഡിയോ</item>
     </string-array>
     <string-array name="bluetooth_a2dp_codec_titles">
         <item>സിസ്റ്റം സെലക്ഷൻ ഉപയോഗിക്കൂ ‌(ഡിഫോൾട്ട്)</item>
@@ -271,6 +273,8 @@
         <item>Qualcomm® aptX™ ഓഡിയോ</item>
         <item>Qualcomm® aptX™ HD ഓഡിയോ</item>
         <item>LDAC</item>
+        <item>Qualcomm® aptX™ Adaptive ഓഡിയോ</item>
+        <item>Qualcomm® aptX™ TWS+ ഓഡിയോ</item>
     </string-array>
     <string-array name="bluetooth_audio_active_device_summaries">
         <item></item>

@@ -51,7 +51,7 @@
 
     iget-object p1, p0, Lcom/oneplus/settings/OPColorPickerActivity$4;->this$0:Lcom/oneplus/settings/OPColorPickerActivity;
 
-    invoke-static {p1}, Lcom/oneplus/settings/OPColorPickerActivity;->access$400(Lcom/oneplus/settings/OPColorPickerActivity;)Landroid/widget/EditText;
+    invoke-static {p1}, Lcom/oneplus/settings/OPColorPickerActivity;->access$500(Lcom/oneplus/settings/OPColorPickerActivity;)Landroid/widget/EditText;
 
     move-result-object p1
 
@@ -69,7 +69,7 @@
 
     iget-object p2, p0, Lcom/oneplus/settings/OPColorPickerActivity$4;->this$0:Lcom/oneplus/settings/OPColorPickerActivity;
 
-    invoke-static {p2}, Lcom/oneplus/settings/OPColorPickerActivity;->access$400(Lcom/oneplus/settings/OPColorPickerActivity;)Landroid/widget/EditText;
+    invoke-static {p2}, Lcom/oneplus/settings/OPColorPickerActivity;->access$500(Lcom/oneplus/settings/OPColorPickerActivity;)Landroid/widget/EditText;
 
     move-result-object p2
 
@@ -79,11 +79,11 @@
 
     iget-object p2, p0, Lcom/oneplus/settings/OPColorPickerActivity$4;->this$0:Lcom/oneplus/settings/OPColorPickerActivity;
 
-    invoke-static {p2}, Lcom/oneplus/settings/OPColorPickerActivity;->access$400(Lcom/oneplus/settings/OPColorPickerActivity;)Landroid/widget/EditText;
+    invoke-static {p2}, Lcom/oneplus/settings/OPColorPickerActivity;->access$500(Lcom/oneplus/settings/OPColorPickerActivity;)Landroid/widget/EditText;
 
     move-result-object p3
 
-    invoke-static {p2, p3}, Lcom/oneplus/settings/OPColorPickerActivity;->access$500(Lcom/oneplus/settings/OPColorPickerActivity;Landroid/widget/EditText;)V
+    invoke-static {p2, p3}, Lcom/oneplus/settings/OPColorPickerActivity;->access$600(Lcom/oneplus/settings/OPColorPickerActivity;Landroid/widget/EditText;)V
 
     :cond_0
     if-eqz p1, :cond_1
@@ -98,7 +98,7 @@
 
     iget-object p2, p0, Lcom/oneplus/settings/OPColorPickerActivity$4;->this$0:Lcom/oneplus/settings/OPColorPickerActivity;
 
-    invoke-static {p2}, Lcom/oneplus/settings/OPColorPickerActivity;->access$400(Lcom/oneplus/settings/OPColorPickerActivity;)Landroid/widget/EditText;
+    invoke-static {p2}, Lcom/oneplus/settings/OPColorPickerActivity;->access$500(Lcom/oneplus/settings/OPColorPickerActivity;)Landroid/widget/EditText;
 
     move-result-object p2
 
@@ -114,11 +114,11 @@
 
     iget-object p0, p0, Lcom/oneplus/settings/OPColorPickerActivity$4;->this$0:Lcom/oneplus/settings/OPColorPickerActivity;
 
-    invoke-static {p0}, Lcom/oneplus/settings/OPColorPickerActivity;->access$400(Lcom/oneplus/settings/OPColorPickerActivity;)Landroid/widget/EditText;
+    invoke-static {p0}, Lcom/oneplus/settings/OPColorPickerActivity;->access$500(Lcom/oneplus/settings/OPColorPickerActivity;)Landroid/widget/EditText;
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Lcom/oneplus/settings/OPColorPickerActivity;->access$500(Lcom/oneplus/settings/OPColorPickerActivity;Landroid/widget/EditText;)V
+    invoke-static {p0, p1}, Lcom/oneplus/settings/OPColorPickerActivity;->access$600(Lcom/oneplus/settings/OPColorPickerActivity;Landroid/widget/EditText;)V
 
     :cond_1
     return-void

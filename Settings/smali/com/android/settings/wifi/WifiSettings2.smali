@@ -972,6 +972,15 @@
 .method private setOffMessage()V
     .locals 4
 
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
     sget v0, Lcom/android/settings/R$string;->wifi_empty_list_wifi_off:I
 
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getText(I)Ljava/lang/CharSequence;
@@ -984,7 +993,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
     sget v1, Lcom/android/settings/R$string;->wifi_scan_notify_text:I
 
@@ -994,7 +1003,7 @@
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     sget v1, Lcom/android/settings/R$string;->wifi_scan_notify_text_scanning_off:I
 
     invoke-virtual {p0, v1}, Landroidx/fragment/app/Fragment;->getText(I)Ljava/lang/CharSequence;

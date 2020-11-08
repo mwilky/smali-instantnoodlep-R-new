@@ -254,28 +254,28 @@
     goto :goto_0
 
     :cond_0
-    const p1, 0x1040844
-
-    goto :goto_1
-
-    :cond_1
     const p1, 0x1040846
 
     goto :goto_1
 
+    :cond_1
+    const p1, 0x1040848
+
+    goto :goto_1
+
     :cond_2
-    const p1, 0x1040843
+    const p1, 0x1040845
 
     goto :goto_1
 
     :cond_3
-    const p1, 0x1040845
+    const p1, 0x1040847
 
     goto :goto_1
 
     :cond_4
     :goto_0
-    const p1, 0x1040864
+    const p1, 0x1040866
 
     :goto_1
     invoke-virtual {p0}, Lcom/android/settings/wifi/calling/WifiCallingSettingsForSub;->getResourcesForSubId()Landroid/content/res/Resources;
@@ -1150,18 +1150,29 @@
 
     move-result-object p1
 
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getView()Landroid/view/View;
+
+    move-result-object p1
+
     const v0, 0x1020004
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
-    check-cast p1, Landroid/widget/TextView;
+    check-cast p1, Lcom/google/android/material/emptyview/EmptyPageView;
+
+    invoke-virtual {p1}, Lcom/google/android/material/emptyview/EmptyPageView;->getEmptyTextView()Landroid/widget/TextView;
+
+    move-result-object p1
 
     iput-object p1, p0, Lcom/android/settings/wifi/calling/WifiCallingSettingsForSub;->mEmptyView:Landroid/widget/TextView;
 
     invoke-virtual {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->setEmptyView(Landroid/view/View;)V
 
+    :cond_0
     invoke-virtual {p0}, Lcom/android/settings/wifi/calling/WifiCallingSettingsForSub;->getResourcesForSubId()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -1172,15 +1183,15 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    sget v2, Lcom/android/settings/R$string;->wifi_calling_off_explanation_2:I
+    const/4 v2, 0x0
 
-    invoke-virtual {p1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    sget v3, Lcom/android/settings/R$string;->wifi_calling_off_explanation_2:I
 
-    move-result-object v2
+    invoke-virtual {p1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    const/4 v3, 0x0
+    move-result-object v3
 
-    aput-object v2, v1, v3
+    aput-object v3, v1, v2
 
     invoke-virtual {p1, v0, v1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 

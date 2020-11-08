@@ -273,7 +273,7 @@
 .end method
 
 .method public static useDefault560Dpi(Landroid/content/Context;)Z
-    .locals 2
+    .locals 3
 
     const-string v0, "ro.sf.lcd_density"
 
@@ -283,30 +283,33 @@
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object p0
+    move-result-object v0
 
-    const-string v0, "oneplus_screen_resolution_adjust"
+    const-string v1, "oneplus_screen_resolution_adjust"
 
-    const/4 v1, 0x2
+    const/4 v2, 0x2
 
-    invoke-static {p0, v0, v1}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    invoke-static {v0, v1, v2}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    if-ne v0, v2, :cond_1
+
+    :cond_0
+    invoke-static {p0}, Lcom/oneplus/settings/utils/OPUtils;->isSupportMultiScreenResolution(Landroid/content/Context;)Z
 
     move-result p0
 
     if-eqz p0, :cond_1
 
-    if-ne p0, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
+    const/4 p0, 0x1
 
     return p0
 
     :cond_1
-    :goto_0
-    const/4 p0, 0x1
+    const/4 p0, 0x0
 
     return p0
 .end method

@@ -510,18 +510,6 @@
     return p0
 .end method
 
-.method public isYearPickerShowing()Z
-    .locals 0
-
-    iget-object p0, p0, Lcom/google/android/material/picker/DatePicker;->mDelegate:Lcom/google/android/material/picker/DatePicker$DatePickerDelegate;
-
-    invoke-interface {p0}, Lcom/google/android/material/picker/DatePicker$DatePickerDelegate;->isYearPickerIsShow()Z
-
-    move-result p0
-
-    return p0
-.end method
-
 .method protected onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 0
 
@@ -595,16 +583,6 @@
     iget-object p0, p0, Lcom/google/android/material/picker/DatePicker;->mDelegate:Lcom/google/android/material/picker/DatePicker$DatePickerDelegate;
 
     invoke-interface {p0, p1}, Lcom/google/android/material/picker/DatePicker$DatePickerDelegate;->setCalendarViewShown(Z)V
-
-    return-void
-.end method
-
-.method public setCurrentYear()V
-    .locals 0
-
-    iget-object p0, p0, Lcom/google/android/material/picker/DatePicker;->mDelegate:Lcom/google/android/material/picker/DatePicker$DatePickerDelegate;
-
-    invoke-interface {p0}, Lcom/google/android/material/picker/DatePicker$DatePickerDelegate;->setCurrentYear()V
 
     return-void
 .end method

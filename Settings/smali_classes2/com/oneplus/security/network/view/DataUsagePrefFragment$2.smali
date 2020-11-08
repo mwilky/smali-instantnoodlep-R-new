@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oneplus/security/network/view/DataUsagePrefFragment;->animateUpdateMonthlyRemainingData(JJ)V
+    value = Lcom/oneplus/security/network/view/DataUsagePrefFragment;->updateMonthlyRemainingData(JJ)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -43,15 +43,49 @@
 
 # virtual methods
 .method public run()V
-    .locals 5
+    .locals 9
 
     iget-object v0, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment$2;->this$0:Lcom/oneplus/security/network/view/DataUsagePrefFragment;
 
-    iget-wide v1, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment$2;->val$total:J
+    invoke-static {v0}, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->access$300(Lcom/oneplus/security/network/view/DataUsagePrefFragment;)Lcom/oneplus/security/network/view/HeaderPreference;
 
-    iget-wide v3, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment$2;->val$used:J
+    move-result-object v0
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->updateMonthlyRemainingData(JJ)V
+    if-eqz v0, :cond_0
 
+    iget-object v0, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment$2;->this$0:Lcom/oneplus/security/network/view/DataUsagePrefFragment;
+
+    invoke-static {v0}, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->access$300(Lcom/oneplus/security/network/view/DataUsagePrefFragment;)Lcom/oneplus/security/network/view/HeaderPreference;
+
+    move-result-object v1
+
+    iget-object v0, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment$2;->this$0:Lcom/oneplus/security/network/view/DataUsagePrefFragment;
+
+    invoke-static {v0}, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->access$100(Lcom/oneplus/security/network/view/DataUsagePrefFragment;)I
+
+    move-result v2
+
+    iget-wide v3, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment$2;->val$total:J
+
+    iget-wide v5, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment$2;->val$used:J
+
+    iget-object p0, p0, Lcom/oneplus/security/network/view/DataUsagePrefFragment$2;->this$0:Lcom/oneplus/security/network/view/DataUsagePrefFragment;
+
+    invoke-static {p0}, Lcom/oneplus/security/network/view/DataUsagePrefFragment;->access$400(Lcom/oneplus/security/network/view/DataUsagePrefFragment;)J
+
+    move-result-wide v7
+
+    invoke-virtual/range {v1 .. v8}, Lcom/oneplus/security/network/view/HeaderPreference;->updateData(IJJJ)V
+
+    goto :goto_0
+
+    :cond_0
+    const-string p0, "DataUsagePrefFragment"
+
+    const-string v0, "mDataUsagePreference is null"
+
+    invoke-static {p0, v0}, Lcom/oneplus/security/utils/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_0
     return-void
 .end method

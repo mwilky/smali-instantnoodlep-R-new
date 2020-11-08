@@ -5,6 +5,7 @@
 # interfaces
 .implements Lcom/android/settingslib/core/lifecycle/LifecycleObserver;
 .implements Lcom/android/settingslib/core/lifecycle/events/OnResume;
+.implements Lcom/android/settingslib/core/lifecycle/events/OnDestroy;
 
 
 # annotations
@@ -20,7 +21,7 @@
 
 
 # instance fields
-.field private final mParent:Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;
+.field private mParent:Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;
 
 .field private mPreference:Landroidx/preference/Preference;
 
@@ -290,6 +291,16 @@
     move-result p0
 
     return p0
+.end method
+
+.method public onDestroy()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/android/settings/applications/appinfo/AppMemoryPreferenceController;->mParent:Lcom/android/settings/applications/appinfo/AppInfoDashboardFragment;
+
+    return-void
 .end method
 
 .method public onResume()V

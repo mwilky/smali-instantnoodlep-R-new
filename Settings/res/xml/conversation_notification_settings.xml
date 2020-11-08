@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen android:title="" android:key="conversation_settings"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
-    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/settings_entity_header" android:key="pref_app_header" settings:allowDividerBelow="true" />
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/op_settings_entity_header" android:key="pref_app_header" settings:allowDividerBelow="true" />
     <com.android.settings.notification.app.ConversationPriorityPreference android:title="@string/notification_conversation_important" android:key="priority" settings:allowDividerAbove="true" settings:allowDividerBelow="true" />
     <PreferenceCategory android:title="@string/notification_bubbles_title" android:key="bubbles">
         <com.android.settingslib.RestrictedSwitchPreference android:title="@string/bubbles_conversation_toggle_title" android:key="bubble_pref" android:summary="@string/bubbles_conversation_toggle_summary" settings:restrictedSwitchSummary="@string/enabled_by_admin" />

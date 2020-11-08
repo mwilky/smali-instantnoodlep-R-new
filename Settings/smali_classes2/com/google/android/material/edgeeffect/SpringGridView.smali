@@ -12,8 +12,6 @@
 
 
 # instance fields
-.field private mAppbarLayout:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
-
 .field private mBottomGlow:Landroid/widget/EdgeEffect;
 
 .field private mDispatchScrollCounter:I
@@ -997,72 +995,6 @@
 
     :cond_2
     :goto_0
-    return-void
-.end method
-
-.method public fling(I)V
-    .locals 4
-
-    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringGridView;->mAppbarLayout:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
-
-    if-eqz v0, :cond_2
-
-    const/16 v1, 0x1f4
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    const/16 v3, 0x1388
-
-    if-le p1, v1, :cond_0
-
-    if-ge p1, v3, :cond_0
-
-    invoke-virtual {v0}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->getFraction()F
-
-    move-result v0
-
-    cmpg-float v0, v0, v2
-
-    if-gez v0, :cond_0
-
-    const/16 p1, 0x190
-
-    invoke-super {p0, p1}, Landroid/widget/GridView;->fling(I)V
-
-    return-void
-
-    :cond_0
-    if-le p1, v3, :cond_1
-
-    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringGridView;->mAppbarLayout:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
-
-    invoke-virtual {v0}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->getFraction()F
-
-    move-result v0
-
-    cmpg-float v0, v0, v2
-
-    if-gez v0, :cond_1
-
-    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringGridView;->mAppbarLayout:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->scrollTop(Z)V
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringGridView;->mAppbarLayout:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->setOverFling(Z)V
-
-    :cond_2
-    :goto_0
-    invoke-super {p0, p1}, Landroid/widget/GridView;->fling(I)V
-
     return-void
 .end method
 

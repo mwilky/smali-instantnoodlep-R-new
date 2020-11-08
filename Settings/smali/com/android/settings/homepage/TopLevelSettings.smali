@@ -87,15 +87,33 @@
 
     invoke-virtual {p0, v0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Lcom/oneplus/settings/OPOnlineConfigManager;->isSupportEnable()Z
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setVisible(Z)V
 
     invoke-static {}, Lcom/oneplus/settings/OPOnlineConfigManager;->isSupportEnable()Z
 
     move-result v0
 
-    invoke-virtual {p0, v0}, Landroidx/preference/Preference;->setVisible(Z)V
+    if-eqz v0, :cond_0
+
+    const-string v0, "top_level_about_device"
+
+    invoke-virtual {p0, v0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    sget v0, Lcom/android/settings/R$layout;->op_home_preference_card_middle:I
+
+    invoke-virtual {p0, v0}, Landroidx/preference/Preference;->setLayoutResource(I)V
 
     :cond_0
     return-void

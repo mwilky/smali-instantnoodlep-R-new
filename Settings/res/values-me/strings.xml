@@ -1332,6 +1332,9 @@ Postavljanje mreže kao skrivene neće promijeniti postavke vašeg rutera."</str
     <string name="overheat_toast_content">Temperatura telefona je previsoka, ne preporučuje se korištenje ove funkcije</string>
     <string name="oxygen_version">OxygenOS verzija</string>
     <string name="oxygen_version_default">Nepoznato</string>
+    <string name="permission_btn_text_denied">Napusti</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Permission statement</string>
     <string name="please_type_passphrase">Bežična lozinka</string>
     <string name="power_menu">Meni za napajanje</string>
     <string name="power_off">Uređaj isključen</string>
@@ -1381,8 +1384,12 @@ Da li želite da resetujete podešavanja sistema? Ne možete da poništite ovu r
     <string name="security_settings_fingerprint_enroll_title_10">Podignite vaš prst</string>
     <string name="security_settings_fingerprint_enroll_title_15">Pomičite vaš prst</string>
     <string name="security_settings_fingerprint_enroll_title_5">Skoro ste gotovi...</string>
+    <string name="select_day">Izaberi mjesec i dan</string>
     <string name="select_function">Odaberi funkciju</string>
+    <string name="select_hours">Izaberi sate</string>
+    <string name="select_minutes">Izaberi minute</string>
     <string name="select_sim_card">Odaberi SIM karticu</string>
+    <string name="select_year">Izaberi godinu</string>
     <string name="service_does_not_exists_in_this_area">Usluga ne postoji na ovom području</string>
     <string name="service_exists_in_this_area_and_is_capable_of_being_used">Usluga postoji na ovom području i može da se koristi</string>
     <string name="service_exists_in_this_area_but_is_not_capable_of_being_used">Usluga postoji na ovom području, ali ne može da se koristi</string>
@@ -1457,6 +1464,11 @@ Da li želite da resetujete podešavanja sistema? Ne možete da poništite ovu r
     <string name="theme_switch_default">podrazumijevano</string>
     <string name="theme_switch_description">Upravo ćete da promijenite temu na %1$s</string>
     <string name="theme_switch_dialog_title">Promijeni temu sistema</string>
+    <string name="time_picker_header_text">Postavi vrijeme</string>
+    <string name="time_picker_hour_label">sat</string>
+    <string name="time_picker_input_error">Unesite važeće vrijeme</string>
+    <string name="time_picker_minute_label">minuta</string>
+    <string name="time_picker_prompt_label">Unesite vrijeme</string>
     <string name="timepower_edit_title">Psotavi planirano vrijeme uključivanja/isključivanja napajanja</string>
     <string name="timepower_power_off">Uređaj isključen</string>
     <string name="timepower_power_off_title">Zakazivanje isključivanja</string>

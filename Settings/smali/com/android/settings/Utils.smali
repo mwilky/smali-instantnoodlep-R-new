@@ -2870,6 +2870,26 @@
     return p0
 .end method
 
+.method public static isUninstallablePackage(Landroid/content/pm/ApplicationInfo;)Z
+    .locals 1
+
+    iget p0, p0, Landroid/content/pm/ApplicationInfo;->flags:I
+
+    const/4 v0, 0x1
+
+    and-int/2addr p0, v0
+
+    if-nez p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
 .method public static isVoiceCapable(Landroid/content/Context;)Z
     .locals 1
 

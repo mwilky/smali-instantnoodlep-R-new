@@ -36,8 +36,6 @@
 # instance fields
 .field private final mContext:Landroid/content/Context;
 
-.field private mDeviceIdleService:Landroid/os/IDeviceIdleController;
-
 .field private final mManager:Lcom/oneplus/settings/backgroundoptimize/BgOActivityManager;
 
 
@@ -97,45 +95,8 @@
 
     invoke-direct {p0, p2, p3}, Lcom/android/settings/applications/AppStateBaseBridge;-><init>(Lcom/android/settingslib/applications/ApplicationsState;Lcom/android/settings/applications/AppStateBaseBridge$Callback;)V
 
-    const-string p2, "deviceidle"
+    invoke-static {}, Lcom/oneplus/settings/backgroundoptimize/AppBgOptimizeBridge;->loadDisabledApps()V
 
-    invoke-static {p2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
-
-    move-result-object p2
-
-    invoke-static {p2}, Landroid/os/IDeviceIdleController$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/IDeviceIdleController;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lcom/oneplus/settings/backgroundoptimize/AppBgOptimizeBridge;->mDeviceIdleService:Landroid/os/IDeviceIdleController;
-
-    :try_start_0
-    new-instance p2, Ljava/util/HashSet;
-
-    iget-object p3, p0, Lcom/oneplus/settings/backgroundoptimize/AppBgOptimizeBridge;->mDeviceIdleService:Landroid/os/IDeviceIdleController;
-
-    invoke-interface {p3}, Landroid/os/IDeviceIdleController;->getSystemPowerWhitelist()[Ljava/lang/String;
-
-    move-result-object p3
-
-    invoke-static {p3}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p3
-
-    invoke-direct {p2, p3}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    sput-object p2, Lcom/oneplus/settings/backgroundoptimize/AppBgOptimizeBridge;->VZW_APPS_SHOWN_DISABLED:Ljava/util/HashSet;
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p2
-
-    invoke-virtual {p2}, Landroid/os/RemoteException;->printStackTrace()V
-
-    :goto_0
     iput-object p1, p0, Lcom/oneplus/settings/backgroundoptimize/AppBgOptimizeBridge;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -163,6 +124,47 @@
     sget-object v0, Lcom/oneplus/settings/backgroundoptimize/AppBgOptimizeBridge;->mPowerWhitelistBackend:Lcom/android/settingslib/fuelgauge/PowerWhitelistBackend;
 
     return-object v0
+.end method
+
+.method public static loadDisabledApps()V
+    .locals 2
+
+    const-string v0, "deviceidle"
+
+    invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/os/IDeviceIdleController$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/IDeviceIdleController;
+
+    move-result-object v0
+
+    :try_start_0
+    new-instance v1, Ljava/util/HashSet;
+
+    invoke-interface {v0}, Landroid/os/IDeviceIdleController;->getSystemPowerWhitelist()[Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    sput-object v1, Lcom/oneplus/settings/backgroundoptimize/AppBgOptimizeBridge;->VZW_APPS_SHOWN_DISABLED:Ljava/util/HashSet;
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+
+    :goto_0
+    return-void
 .end method
 
 .method public static needShown(Ljava/lang/String;Lcom/android/settingslib/fuelgauge/PowerWhitelistBackend;)Z

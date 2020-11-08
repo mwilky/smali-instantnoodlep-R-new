@@ -1272,6 +1272,7 @@ To vpliva na druge aplikacije ali pogovore, v katerih je prikaz v oblačkih že 
     <string name="color_temperature">Hladnejša barvna temperatura</string>
     <string name="color_temperature_desc">Uporaba hladnejših barv zaslona</string>
     <string name="color_temperature_toast">Če želite uveljaviti spremembo barv, izklopite zaslon</string>
+    <string name="color_temperture">Nastavitev beline zaslona</string>
     <string name="color_title">Barva</string>
     <string name="color_unspecified">Privzeto</string>
     <string name="color_white">Bela</string>
@@ -1287,7 +1288,7 @@ To vpliva na druge aplikacije ali pogovore, v katerih je prikaz v oblačkih že 
     <string name="condition_cellular_title">Mobilni podatki so izklopljeni</string>
     <string name="condition_cloud_summary">Kliknite za uporabo storitve v oblaku in zagotovite, da se vaši podatki ne bodo izgubili</string>
     <string name="condition_cloud_title">Začnite uporabljati Storitev v oblaku</string>
-    <string name="condition_cloud_turn_off">OPUSTI</string>
+    <string name="condition_cloud_turn_off">ZAVRNI</string>
     <string name="condition_device_muted_action_turn_on_sound">Vklop zvoka</string>
     <string name="condition_device_muted_summary">Za klice in obvestila</string>
     <string name="condition_device_muted_title">Zvok zvonjenja je izklopljen</string>
@@ -1585,7 +1586,7 @@ Ker količino prenesenih podatkov meri telefon, operater pa jo morda drugače, p
     <string name="data_usage_metered_yes">Omejen prenos podatkov</string>
     <string name="data_usage_ota">Posodobitve sistema</string>
     <string name="data_usage_other_apps">Druge aplikacije, vključene v prikaz porabe</string>
-    <string name="data_usage_package_set">Billing Cycle</string>
+    <string name="data_usage_package_set">Obračunsko obdobje</string>
     <string name="data_usage_pick_cycle_day">Dan za ponastavitev cikla porabe podatkov:</string>
     <string name="data_usage_rank_sim">Poraba podatkov mobilnega omrežja</string>
     <string name="data_usage_rank_wifi">Poraba podatkov prek omrežja Wi-Fi</string>
@@ -3097,8 +3098,8 @@ S tem boste zamenjali aplikacijo %2$s kot privzeto aplikacijo za plačevanje."</
     <string name="nfc_quick_toggle_title">NFC</string>
     <string name="nfc_secure_settings_title">Zahtevaj odklenitev naprave pred uporabo NFC</string>
     <string name="nfc_secure_toggle_summary">Uporabo plačevanja na prodajnih mestih in v javnem prevozu prek povezave NFC dovoli samo pri odklenjenem zaslonu</string>
-    <string name="nfc_uicc_sim1">Kartica SIM 1</string>
-    <string name="nfc_uicc_sim2">Kartica SIM 2</string>
+    <string name="nfc_uicc_sim1">SIM 1</string>
+    <string name="nfc_uicc_sim2">SIM 2</string>
     <string name="night_display_activation_off_custom">Izklopi do %1$s</string>
     <string name="night_display_activation_off_manual">Izklopi zdaj</string>
     <string name="night_display_activation_off_twilight">Izklopi do sončnega zahoda</string>
@@ -3362,7 +3363,7 @@ S tem lahko aplikacija tudi vklopi ali izklopi način »ne moti« in spremeni po
     <string name="oneplus_auto_open_specified_app">Samodejno odpri izbrano aplikacijo</string>
     <string name="oneplus_auto_play">Samodejno predvajanje</string>
     <string name="oneplus_auto_play_summary">Samodejno nadaljevanje predvajanja glasbe pri vklopu slušalk</string>
-    <string name="oneplus_auto_switch_mobile_data">Poraba podatkov</string>
+    <string name="oneplus_auto_switch_mobile_data">Pametna omrežna povezava</string>
     <string name="oneplus_auto_switch_mobile_data_summary">Če je povezava slaba, uporabite tako Wi‑Fi kot mobilne podatke za večjo stabilnost</string>
     <string name="oneplus_auto_turn_on_apps">Samodejni vklop za te aplikacije</string>
     <string name="oneplus_auto_turn_on_car_charger_info_o2">Ko nastavite zgornje elemente, lahko deaktivirate način Ne moti in zaženete določeno aplikacijo vsakič, ko priključite avtomobilski polnilnik</string>
@@ -3370,8 +3371,8 @@ S tem lahko aplikacija tudi vklopi ali izklopi način »ne moti« in spremeni po
     <string name="oneplus_available_keyboard_category">Razpoložljiva tipkovnica</string>
     <string name="oneplus_available_keyboard_description">Tu omogočene nameščene tipkovnice bodo dodane na seznam »Razpoložljive tipkovnice«</string>
     <string name="oneplus_back_home">Domov, nazaj</string>
-    <string name="oneplus_back_home_o2">Back, Home</string>
-    <string name="oneplus_back_home_summary">Swipe up on Home button</string>
+    <string name="oneplus_back_home_o2">Nazaj, domov</string>
+    <string name="oneplus_back_home_summary">Podrsajte navzgor po gumbu Domov</string>
     <string name="oneplus_back_topic_theme_summary">Zamenjaj sistemsko temo pri samodejnem odpiranju teme</string>
     <string name="oneplus_back_topic_theme_title">Tema ozadja</string>
     <string name="oneplus_battery_menu_stats_total">Ogled podrobnosti uporabe</string>
@@ -3578,7 +3579,9 @@ Pozor: Odklepanje z obrazom je manj varno kot odklepanje s prstnim odtisom ali g
     <string name="oneplus_fingerprint_gesture_camera_summary">Na zaslonu iskalnika z dolgim pritiskom bralnika prstnih odtisov zajamete fotografijo</string>
     <string name="oneplus_fingerprint_gesture_camera_title">Z dolgim pritiskom zajamete fotografijo</string>
     <string name="oneplus_fingerprint_gesture_settings_title">Poteza bralnika prstnih odtisov</string>
+    <string name="oneplus_fingerprint_hardware_exception">Podatki strojne opreme za prstne odtise niso natančni. Obrnite se na službo za pomoč strankam.</string>
     <string name="oneplus_fingerprint_longpress_for_quickpay_summary">Z dolgim pritiskom bralnika prstnih odtisov odprete aplikacijo quick pay</string>
+    <string name="oneplus_fingerprint_not_adjustment">Podatki umerjanja prstnega odtisa niso natančni. Obrnite se na službo za pomoč strankam.</string>
     <string name="oneplus_fingerprint_quickpay_lock_swtch_summary">Z dolgim pritiskom bralnika prstnih odtisov odprete aplikacijo quick pay, ko je telefon zaklenjen.</string>
     <string name="oneplus_fingerprint_sensor_longpress_for_quickpay_summary">Z dolgim pritiskom bralnika prstnih odtisov odprete aplikacijo quick pay, ko je telefon odklenjen</string>
     <string name="oneplus_fingerprint_settings_list_title">Seznam prstnih odtisov</string>
@@ -3640,7 +3643,7 @@ Poteze lahko izklopite tako, da v nastavitvah omogočite vrstico za krmarjenje."
     <string name="oneplus_fullscreen_previous_app_no_bar_guide_title">Preklopi med nedavnimi aplikacijami</string>
     <string name="oneplus_fullscreen_recent_guide_summary">Podrsajte navzgor od spodnjega roba zaslona in počakajte</string>
     <string name="oneplus_fullscreen_recent_guide_summary_deprecated">Podrsajte navzgor od spodnjega roba na sredini zaslona in počakajte</string>
-    <string name="oneplus_fullscreen_recent_guide_title">Nedavno odprte aplikacije</string>
+    <string name="oneplus_fullscreen_recent_guide_title">Nedavne aplikacije</string>
     <string name="oneplus_functional_terms">POGOJI IN DOLOČILA</string>
     <string name="oneplus_game_haptic_feedback_summary">Dodajte haptične povratne informacije, da bo vaša igralna izkušnja bolj živahna. Slušalke Bluetooth še niso podprte.</string>
     <string name="oneplus_game_mode_ad_summary">Izboljšanje podrobnosti svetlega in temnega dela igralnega zaslona</string>
@@ -3652,9 +3655,9 @@ Poteze lahko izklopite tako, da v nastavitvah omogočite vrstico za krmarjenje."
     <string name="oneplus_gaming_mode_close_automatic_brightness_summary">Nastavi osvetlitev zaslona v igralnem načinu</string>
     <string name="oneplus_gaming_mode_game_battery_saver">Varčevanje z akumulatorjem v igralnem načinu</string>
     <string name="oneplus_gaming_mode_game_battery_saver_close">Onemogočen</string>
-    <string name="oneplus_gaming_mode_game_battery_saver_high">Visoka stopnja</string>
+    <string name="oneplus_gaming_mode_game_battery_saver_high">Visoka</string>
     <string name="oneplus_gaming_mode_game_battery_saver_high_summary">Ločljivost in št. slik na sekundo bosta omejena</string>
-    <string name="oneplus_gaming_mode_game_battery_saver_light">Nizka stopnja</string>
+    <string name="oneplus_gaming_mode_game_battery_saver_light">Nizka</string>
     <string name="oneplus_gaming_mode_game_battery_saver_light_summary">Ločljivost iger bo omejena</string>
     <string name="oneplus_gaming_mode_game_battery_saver_summary">Priporočljivo za igre, ki ne zahtevajo zelo gladkega delovanja, kot so priložnostne igre</string>
     <string name="oneplus_gaming_mode_network_acceleration">Okrepitev omrežja</string>
@@ -3695,6 +3698,7 @@ Poteze lahko izklopite tako, da v nastavitvah omogočite vrstico za krmarjenje."
     <string name="oneplus_google_services_title">Z Googlom povezane storitve</string>
     <string name="oneplus_google_tts">Glasovni podatki Google TTS</string>
     <string name="oneplus_gps_using">uporablja GPS</string>
+    <string name="oneplus_green">Zelena</string>
     <string name="oneplus_h2_contributors">Sodelavci HydrogenOS</string>
     <string name="oneplus_hand_up_proximity_summary">Bujenje zaslona ob prijemu telefona</string>
     <string name="oneplus_hand_up_proximity_title">Vklop zaslona ob premiku</string>
@@ -3729,7 +3733,7 @@ Opomba: Vaš prstni odtis je lahko manj varen kot močan vzorec ali koda PIN."</
     <string name="oneplus_instrucitons">Navodila</string>
     <string name="oneplus_intelligently_select_best_wifi">Inteligentno izberi najboljše omrežje Wi‑Fi</string>
     <string name="oneplus_intelligently_select_best_wifi_summary">Pametno izberite najboljše omrežje Wi‑Fi in vzpostavite povezavo z njim z odkrivanjem ter analiziranjem povezljivosti omrežij Wi‑Fi</string>
-    <string name="oneplus_intensely">Strong</string>
+    <string name="oneplus_intensely">Močno</string>
     <string name="oneplus_is_turn_on_feature">Res želite vklopiti to funkcijo?</string>
     <string name="oneplus_is_turn_on_feature_summary">"Ko je vključena, lahko občasno pride do naslednjih situacij:
 1.Nekatera mesta na razdeljenem zaslonu niso prikazana normalno.
@@ -3770,6 +3774,7 @@ Opomba: Vaš prstni odtis je lahko manj varen kot močan vzorec ali koda PIN."</
     <string name="oneplus_lockpattern_need_to_unlock_wrong">Poskusite znova</string>
     <string name="oneplus_lockpattern_too_many_failed_confirmation_attempts_header">Preveč nepravilnih poskusov.</string>
     <string name="oneplus_lockscreen_settings_title">Nastavitve zaklenjenega zaslona</string>
+    <string name="oneplus_magenta">Škrlatna</string>
     <string name="oneplus_manage_virtual_keyboard">Upravljanje tipkovnic</string>
     <string name="oneplus_max_shortcuts_tips">Dodate lahko do 6 bližnjic</string>
     <string name="oneplus_media_ring_summary">Utišanje zvokov večpredstavnosti</string>
@@ -4073,6 +4078,7 @@ Opomba: Vaš prstni odtis je lahko manj varen kot močan vzorec ali koda PIN."</
     <string name="oneplus_search_keyword_theme_settings">Prilagoditev zaklenjenega zaslona, slike za ozadje, slog ure, animacija prstnega odtisa, Horizon light, prilagoditev sistema, barva poudarka, oblika, pisava, ton, paket ikon, osvetlitev, temna z niansami, živahni odtenki</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">Prilagoditev zaklenjenega zaslona, slike za ozadje, slog ure, animacija prstnega odtisa, Horizon light, prilagoditev sistema, barva poudarka, oblika, pisava, ton, paket ikon, osvetlitev, temna z niansami, živahni odtenki, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_mcl_new">Prilagoditev zaklenjenega zaslona, slike za ozadje, slog ure, animacija prstnega odtisa, Horizon Light, prilagoditev sistema, barva poudarka, oblika, pisava, ton, paket ikon, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_must_have">PRILAGODITEV ZAKLENJENEGA ZASLONA, slike za ozadje, slog ure, PRILAGODITEV SISTEMA, barva poudarka, oblika, ton, paket ikon, osvetlitev, temna z niansami, živahni odtenki</string>
     <string name="oneplus_search_keyword_theme_settings_new">Prilagoditev zaklenjenega zaslona, slike za ozadje, slog ure, animacija prstnega odtisa, Horizon Light, prilagoditev sistema, barva poudarka, oblika, pisava, ton, paket ikon</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">Prilagoditev zaklenjenega zaslona, slike za ozadje, slog ure, animacija prstnega odtisa, prilagoditev sistema, barva poudarka, oblika, pisava, ton, paket ikon, osvetlitev, temna z niansami, živahni odtenki</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Prilagoditev zaklenjenega zaslona, slike za ozadje, slog ure, animacija prstnega odtisa, prilagoditev sistema, barva poudarka, oblika, pisava, ton, paket ikon</string>
@@ -4142,7 +4148,7 @@ Opomba:
     <string name="oneplus_silent_notifications_status_bar">Skrij tiha obvestila v vrstici stanja</string>
     <string name="oneplus_sim1_ringtone_switch">Kartica SIM 1</string>
     <string name="oneplus_sim2_ringtone_switch">Kartica SIM 2</string>
-    <string name="oneplus_simcard_title">Kartica</string>
+    <string name="oneplus_simcard_title">Kartica SIM</string>
     <string name="oneplus_sla_down_load_app_summary">Pospeševanje prenosov ne bo na voljo, če je vklopljena dostopna točka ali funkcija Wi‑Fi Direct</string>
     <string name="oneplus_sleep_standby_summary">Optimizirajte življenjsko dobo akumulatorja (npr. onemogočite omrežno povezavo), ko spite. V tem primeru programi ne bodo mogli pravočasno prejemati obvestil.</string>
     <string name="oneplus_sleep_standby_title">Optimizacija pripravljenosti med spanjem</string>
@@ -4157,7 +4163,7 @@ Opomba:
     <string name="oneplus_sound_tuner">Dolby Atmos</string>
     <string name="oneplus_status_summary">Telefonska številka, signal itd.</string>
     <string name="oneplus_stop_run">Prisilna zaustavitev</string>
-    <string name="oneplus_storage">STORAGE</string>
+    <string name="oneplus_storage">SHRANJEVANJE</string>
     <string name="oneplus_sunrise_sunset">Samodejno omogoči od večera do jutra</string>
     <string name="oneplus_support_apps">PODPRTE APLIKACIJE</string>
     <string name="oneplus_support_summary">Nasveti in pogosta vprašanja o uporabi naprave</string>
@@ -4168,6 +4174,8 @@ Opomba:
     <string name="oneplus_switch">OnePlus Switch</string>
     <string name="oneplus_switch_resolution_kill_process_confirm">Switch</string>
     <string name="oneplus_switch_resolution_kill_process_tips">Če preklopite ločljivost, se lahko nekaj aplikacij v ozadju zapre. Ali potrjujete preklop?</string>
+    <string name="oneplus_switch_sa_option">Način NSA + SA</string>
+    <string name="oneplus_switch_sa_option_summary">Samodejni dostop do načina omrežja NSA ali SA glede na povezavo in nastavitve 5G vašega operaterja. Če je onemogočeno, bo na voljo le dostop do omrežja NSA.</string>
     <string name="oneplus_switch_screen_lock_type">Poteka postopek preklopa načina zaklepa zaslona, počakajte...</string>
     <string name="oneplus_system_data_summary">Vključno s podatki računa, stiki, podatki o aplikacijah</string>
     <string name="oneplus_system_data_title">Sistemski podatki</string>
@@ -4185,7 +4193,7 @@ Opomba:
     <string name="oneplus_theme_accent_color_select">Izberite barvo poudarka</string>
     <string name="oneplus_theme_apply_summary">Ko uporabite to temo, bodo vaše možnosti prilagoditve preglašene</string>
     <string name="oneplus_theme_apply_title">Želite uporabiti to temo?</string>
-    <string name="oneplus_theme_clock">V slogu ure</string>
+    <string name="oneplus_theme_clock">Ura na ambientalnem zaslonu</string>
     <string name="oneplus_theme_clock_snake_action">VKLJUČI AMBIENTALNI ZASLON</string>
     <string name="oneplus_theme_clock_snake_tip">Ta funkcija je na voljo, ko je vključen ambientalni zaslon</string>
     <string name="oneplus_theme_colorpicker_colorvalue">BARVNA KODA</string>
@@ -4199,7 +4207,7 @@ Opomba:
     <string name="oneplus_theme_font">Pisava</string>
     <string name="oneplus_theme_font_content">Delite najboljšo tehnologijo s svetom, z roko v roki z vami</string>
     <string name="oneplus_theme_icon_pack">Paketi z ikonami</string>
-    <string name="oneplus_theme_lock_screen_customization">PRILAGODITEV ZAKLENJENEGA ZASLONA</string>
+    <string name="oneplus_theme_lock_screen_customization">ZAKLENJENI ZASLON IN AMBIENTALNI ZASLON</string>
     <string name="oneplus_theme_preset">Prednastavljena tema</string>
     <string name="oneplus_theme_preset_color">Živahni odtenki</string>
     <string name="oneplus_theme_preset_dark">Temna z niansami</string>
@@ -4216,7 +4224,7 @@ Opomba:
     <string name="oneplus_theme_system_customization">PRILAGODITEV SISTEMA</string>
     <string name="oneplus_theme_tone">Ton</string>
     <string name="oneplus_theme_tone_effect_color">Barvito</string>
-    <string name="oneplus_theme_tone_effect_dark">Temno</string>
+    <string name="oneplus_theme_tone_effect_dark">Temna</string>
     <string name="oneplus_theme_tone_effect_light">Šibko</string>
     <string name="oneplus_theme_tone_effect_title">Izberi ton</string>
     <string name="oneplus_theme_wallpaper">Slike za ozadje</string>
@@ -4238,6 +4246,7 @@ Opomba:
     <string name="oneplus_top_level_buttons_and_gestures_summary">Drsnik za opozorila, vrstica za krmarjenje &amp; poteze</string>
     <string name="oneplus_top_level_cloud_h2_summary">Sinhronizacija podatkov z oblakom, poišči moj telefon</string>
     <string name="oneplus_top_level_cloud_o2_summary">Sinhronizacija podatkov z oblakom</string>
+    <string name="oneplus_top_level_connected_android_auto_summary">NFC, Android Auto, zrcaljenje, tapnite &amp; plačajte</string>
     <string name="oneplus_top_level_connected_summary">NFC, zrcaljenje, tapnite &amp; plačajte</string>
     <string name="oneplus_top_level_display_summary">Vrstica stanja, ambientalna funkcija zaslona, nočni način, način branja</string>
     <string name="oneplus_top_level_network_summary">SIM, mobilno omrežje, poraba podatkov, dostopna točka</string>
@@ -4326,6 +4335,7 @@ Nastavljanje skritega omrežja ne bo spremenilo nastavitev usmerjevalnika."</str
     <string name="onplus_software_version_info">Različica programske opreme</string>
     <string name="onscreen_keyboard_settings_summary">Nastavitve zaslonske tipkovnice</string>
     <string name="op_advanced_settings">Napredno</string>
+    <string name="op_already_know">Razumem</string>
     <string name="op_android_mode_cannot_change_color_accent">Privzeta tema lahko uporablja samo temo s sistemskimi barvami</string>
     <string name="op_aod_parsons_info_button">V redu</string>
     <string name="op_aod_parsons_info_message">"Ob odpiranju se ustvari mojstrovina.
@@ -4369,7 +4379,7 @@ Insight, zasnovan skupaj s študenti OnePlus &amp; iz Parsons School of Design p
     <string name="op_custom_color_value">Vrednost barve</string>
     <string name="op_custom_color_value_edit">Vnesite barvno vrednost</string>
     <string name="op_custom_color_value_invalid">Neveljavna barvna vrednost</string>
-    <string name="op_dark_mode_title">Temno</string>
+    <string name="op_dark_mode_title">Temna</string>
     <string name="op_data_vowlan_enable_summary">Uporabi klicanje prek Wi-Fi, če je na voljo</string>
     <string name="op_default_apps_summary">Začetna stran, brskalnik</string>
     <string name="op_default_luncher_title">Aplikacija za začetno stran</string>
@@ -4381,6 +4391,7 @@ Insight, zasnovan skupaj s študenti OnePlus &amp; iz Parsons School of Design p
     <string name="op_display_advanced_settings_summary_5">Hitrost osveževanja</string>
     <string name="op_display_advanced_settings_summary_6">Umerjanje zaslona, ločljivost, hitrost osveževanja, področje prikaza sprednje kamere</string>
     <string name="op_display_advanced_settings_summary_7">Umerjanje zaslona, hitrost osveževanja, področje prikaza sprednje kamere</string>
+    <string name="op_display_advanced_settings_summary_8">Hitrost osveževanja, področje prikaza sprednje kamere</string>
     <string name="op_display_graphics_enhancement_engine">MEHANIZEM ZA IZBOLJŠANJE VIDEA</string>
     <string name="op_display_motion_graphics_compensation">Izboljšanje gibljivih slik</string>
     <string name="op_display_motion_graphics_compensation_summary">Izboljšate hitrost sličic grafike za boljši videoposnetek in igralne učinke</string>
@@ -4406,10 +4417,12 @@ Odklepanje s prstnim odtisom je lahko nezdružljivo z zaščitnimi folijami tret
     <string name="op_global_drak_mode_not_full_support_list">Nepodprte aplikacije</string>
     <string name="op_global_drak_mode_support_description">Aplikacije, ki niso podprte, morda ne bodo delovale pravilno v zatemnjenem načinu</string>
     <string name="op_gps_off_warn_msg">Najprej vklopite lokacijo</string>
-    <string name="op_high_power_app_manager">Aplikacije z visoko porabo</string>
+    <string name="op_high_power_app_manager">Upravljanje zahtevnih aplikacij</string>
     <string name="op_history_toggled_on_summary">Vaša nedavna obvestila bodo prikazana tukaj</string>
     <string name="op_keep_location_services">Za iskanje polnilnih postaj v bližini naj ostane lokacija omogočena</string>
-    <string name="op_light_mode_title">Svetlo</string>
+    <string name="op_lab_dc_still_on">ŠE VKLJUČENO</string>
+    <string name="op_lab_dc_warn_message">Če je zatemnitev DC vključena, so lahko v določenih primerih prikazane neenakomerne ali nenormalne barve. Ali jo želite vključiti?</string>
+    <string name="op_light_mode_title">Šibko</string>
     <string name="op_linked_launch_summary">Upravljanje aplikacij, ki se lahko zaženejo v ozadju</string>
     <string name="op_linked_launch_title">Samodejni zagon aplikacij</string>
     <string name="op_lockpassword_choose_your_password_header_for_face">Če želite uporabiti odklepanje z obrazom, nastavite geslo</string>
@@ -4423,7 +4436,10 @@ Odklepanje s prstnim odtisom je lahko nezdružljivo z zaščitnimi folijami tret
     <string name="op_notification_history_off_summary">Vklopite zgodovino obvestil za ogled nedavnih obvestil</string>
     <string name="op_notification_history_summary">Prikaži nedavna obvestila</string>
     <string name="op_oneplus_roaming_summary">Zagotavljanje storitve globalnega internetnega dostopa</string>
-    <string name="op_oneplus_roaming_title">OnePlus Roaming</string>
+    <string name="op_oneplus_roaming_title">Gostovanje OnePlus</string>
+    <string name="op_powerkey_menu_cards_description">Ko je omogočeno, bosta način plačila in podatki o vkrcavanju varno prikazana</string>
+    <string name="op_powerkey_menu_device_controller_description">Omogoči za dostop krmilnika povezane naprave</string>
+    <string name="op_powerkey_menu_lock_display_title">Prikaz zaklenjenega zaslona</string>
     <string name="op_primary_charm_purple_label">Temno vijolična</string>
     <string name="op_primary_dark_green_label">Temno zelena</string>
     <string name="op_primary_default_label">Modra</string>
@@ -4453,6 +4469,9 @@ Odklepanje s prstnim odtisom je lahko nezdružljivo z zaščitnimi folijami tret
     <string name="op_starwar_mode_cannot_change_color_accent">Tema Star Wars lahko uporablja samo temo s sistemskimi barvami</string>
     <string name="op_starwar_mode_title">Star Wars</string>
     <string name="op_storage">Shranjevanje &amp; pomnilnik</string>
+    <string name="op_switch_record_info">Kopirano v %2$s na %1$s</string>
+    <string name="op_switch_record_none">Ni še zapisov prenosov podatkov</string>
+    <string name="op_switch_record_title">Zapisi prenosov podatkov</string>
     <string name="op_system_dashboard_summary">Jeziki, čas, ponastavitev, posodobitve</string>
     <string name="op_tcp_timestamps_randomization_dialog_title">Izberite oznako časovnega žiga naključnega TCP</string>
     <string name="op_tcp_timestamps_randomization_title">Oznaka časovnega žiga naključnega TCP</string>
@@ -4460,7 +4479,9 @@ Odklepanje s prstnim odtisom je lahko nezdružljivo z zaščitnimi folijami tret
     <string name="op_theme_2__title">Maščevalci</string>
     <string name="op_theme_3_cannot_change_color_accent">Tema McLaren lahko uporablja samo temo s sistemskimi barvami</string>
     <string name="op_theme_3_title">McLaren</string>
+    <string name="op_theme_clock_preview_title">Ura na ambientalnem zaslonu</string>
     <string name="op_theme_entrance_summary">Slika za ozadje, barva poudarka, pisava</string>
+    <string name="op_theme_lock_screen_customization">ZAKLENJENI ZASLON IN AMBIENTALNI ZASLON</string>
     <string name="op_theme_mode_title">Tema</string>
     <string name="op_use_cast">Uporabi zrcaljenje</string>
     <string name="op_user_manual_settings">Uporabniški priročnik</string>
@@ -4514,7 +4535,7 @@ Odklepanje s prstnim odtisom je lahko nezdružljivo z zaščitnimi folijami tret
     <string name="owner_info_settings_summary">Brez</string>
     <string name="owner_info_settings_title">Besedilo na zaklenjenem zaslonu</string>
     <string name="oxygen_version">Različica sistema OxygenOS</string>
-    <string name="oxygen_version_default">Neznano</string>
+    <string name="oxygen_version_default">Neznana</string>
     <string name="packages_subtitle">Vključeni paketi</string>
     <string name="page_tab_title_summary">Vse</string>
     <string name="page_tab_title_support">Nasveti in podpora</string>
@@ -4527,6 +4548,9 @@ Odklepanje s prstnim odtisom je lahko nezdružljivo z zaščitnimi folijami tret
     <string name="permission_bar_chart_details">Prikaz vsega na nadzorni plošči</string>
     <string name="permission_bar_chart_empty_text">Dovoljenj ni uporabila nobena aplikacija</string>
     <string name="permission_bar_chart_title">Uporaba dovoljenj v zadnjih 24 urah</string>
+    <string name="permission_btn_text_denied">Izhod</string>
+    <string name="permission_btn_text_grant">V redu</string>
+    <string name="permission_dialog_title">Izjava za dovoljenje</string>
     <string name="permissions_label">Dovoljenja</string>
     <string name="permit_draw_overlay">Dovoli prekrivanje drugih aplikacij</string>
     <string name="permit_manage_external_storage">Dovoli dostop za upravljanje vseh datotek</string>
@@ -5975,6 +5999,10 @@ Googlov pristop k sinhroniziranju podatkov, s katerim lahko dostopate do stikov,
     <string name="uninstallapps_toast_message">aplikacije so bile odstranjene</string>
     <string name="uninstalling">Odstranjevanje…</string>
     <string name="uninstalling_notification_channel">Odstranjevanja v teku</string>
+    <string name="units_one">GB/MB (samodejno spreminjanje)</string>
+    <string name="units_three">Samo MB</string>
+    <string name="units_title">Pokaži enote</string>
+    <string name="units_two">Samo GB</string>
     <string name="unknown">Neznano</string>
     <string name="unknown_app">Neznana aplikacija</string>
     <string name="unknown_unavailability_setting_summary">Nastavitev ni na voljo</string>
@@ -6616,6 +6644,8 @@ To lahko povzroči varnostno tveganje, ker bo telefon redno oddajal svoj signal,
     <string name="wifi_no_user_cert_warning">Potrdilo je obvezno.</string>
     <string name="wifi_not_in_range">Ni v obsegu</string>
     <string name="wifi_not_in_range_message">Omrežje ni v dosegu</string>
+    <string name="wifi_notification">"Obvestilo Wi-Fi "</string>
+    <string name="wifi_notification_summary">Obvesti me, ko bo Wi-Fi na voljo</string>
     <string name="wifi_notify_open_networks">Obveščanje o javnih omrežjih</string>
     <string name="wifi_notify_open_networks_summary">Obvesti me, ko je na voljo zanesljivo javno omrežje</string>
     <string name="wifi_on_time">Čas z vklopljenim Wi-Fi-jem</string>
@@ -6712,7 +6742,7 @@ Dovolite to vsem aplikacijam, ki želijo iskati?"</string>
     <string name="wifi_tether_custom_auto_turn_off_10_min_summary">Po 10 minutah nedejavnosti</string>
     <string name="wifi_tether_custom_auto_turn_off_15_min_summary">Po 15 minutah nedejavnosti</string>
     <string name="wifi_tether_custom_auto_turn_off_5_min_summary">Po 5 minutah nedejavnosti</string>
-    <string name="wifi_tether_custom_auto_turn_off_always_summary">Vedno prikazan</string>
+    <string name="wifi_tether_custom_auto_turn_off_always_summary">Vedno vklopljen</string>
     <string name="wifi_tether_enabled_subtext">Povezava %1$s je aktivna</string>
     <string name="wifi_tether_failed_subtext">Napaka prenosne dostopne točke Wi-Fi</string>
     <string name="wifi_tether_passphrase_warning">Imeti mora najmanj eno veliko črko, malo črko, številko, simbol</string>
@@ -6725,7 +6755,7 @@ Dovolite to vsem aplikacijam, ki želijo iskati?"</string>
     <string name="wifi_tether_verizon_custom_auto_turn_off_30_min_summary">Po 30 minutah nedejavnosti</string>
     <string name="wifi_tether_verizon_custom_auto_turn_off_5_min_summary">Po 5 minutah nedejavnosti</string>
     <string name="wifi_tether_verizon_custom_auto_turn_off_60_min_summary">Po 60 minutah nedejavnosti</string>
-    <string name="wifi_tether_verizon_custom_auto_turn_off_always_summary">Vedno prikazan</string>
+    <string name="wifi_tether_verizon_custom_auto_turn_off_always_summary">Vedno vklopljen</string>
     <string name="wifi_time_remaining">Še %1$s</string>
     <string name="wifi_turned_on_message">Wi-Fi je vklopljen</string>
     <string name="wifi_unchanged">(nespremenjeno)</string>

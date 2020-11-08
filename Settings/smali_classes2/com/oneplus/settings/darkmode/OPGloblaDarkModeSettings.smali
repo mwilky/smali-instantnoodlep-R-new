@@ -102,9 +102,9 @@
 
     iput-object v0, p0, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeSettings;->mAppOpsChangedListener:Landroid/app/AppOpsManager$OnOpChangedListener;
 
-    new-instance v0, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeSettings$5;
+    new-instance v0, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeSettings$6;
 
-    invoke-direct {v0, p0}, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeSettings$5;-><init>(Lcom/oneplus/settings/darkmode/OPGloblaDarkModeSettings;)V
+    invoke-direct {v0, p0}, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeSettings$6;-><init>(Lcom/oneplus/settings/darkmode/OPGloblaDarkModeSettings;)V
 
     iput-object v0, p0, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeSettings;->mPackageBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
@@ -708,6 +708,59 @@
 
     check-cast p4, Lcom/oneplus/settings/better/OPAppModel;
 
+    invoke-virtual {p0}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p5
+
+    const/4 v0, 0x0
+
+    const-string v1, "op_dark_mode_tips_already_show"
+
+    invoke-static {p5, v1, v0}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result p5
+
+    if-nez p5, :cond_2
+
+    invoke-virtual {p4}, Lcom/oneplus/settings/better/OPAppModel;->getAppopsMode()I
+
+    move-result p5
+
+    invoke-static {p5}, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter;->isGrayList(I)Z
+
+    move-result p5
+
+    if-eqz p5, :cond_2
+
+    if-eqz p2, :cond_2
+
+    new-instance p5, Landroidx/appcompat/app/AlertDialog$Builder;
+
+    invoke-direct {p5, p0}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    sget v0, Lcom/android/settings/R$string;->op_global_drak_mode_support_description:I
+
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p5, v0}, Landroidx/appcompat/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    sget v0, Lcom/android/settings/R$string;->okay:I
+
+    new-instance v1, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeSettings$5;
+
+    invoke-direct {v1, p0}, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeSettings$5;-><init>(Lcom/oneplus/settings/darkmode/OPGloblaDarkModeSettings;)V
+
+    invoke-virtual {p5, v0, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    invoke-virtual {p5}, Landroidx/appcompat/app/AlertDialog$Builder;->create()Landroidx/appcompat/app/AlertDialog;
+
+    move-result-object p5
+
+    invoke-virtual {p5}, Landroid/app/Dialog;->show()V
+
+    :cond_2
     new-instance p5, Ljava/lang/StringBuilder;
 
     invoke-direct {p5}, Ljava/lang/StringBuilder;-><init>()V
@@ -740,7 +793,7 @@
 
     const/16 v2, 0x3f2
 
-    if-ne p5, v1, :cond_2
+    if-ne p5, v1, :cond_3
 
     invoke-virtual {p4, p1}, Lcom/oneplus/settings/better/OPAppModel;->setDisable(Z)V
 
@@ -760,12 +813,12 @@
 
     goto/16 :goto_0
 
-    :cond_2
+    :cond_3
     invoke-virtual {p4}, Lcom/oneplus/settings/better/OPAppModel;->getAppopsMode()I
 
     move-result p1
 
-    if-ne p1, v0, :cond_3
+    if-ne p1, v0, :cond_4
 
     invoke-virtual {p4, v1}, Lcom/oneplus/settings/better/OPAppModel;->setAppopsMode(I)V
 
@@ -783,7 +836,7 @@
 
     goto/16 :goto_0
 
-    :cond_3
+    :cond_4
     invoke-virtual {p4}, Lcom/oneplus/settings/better/OPAppModel;->getAppopsMode()I
 
     move-result p1
@@ -792,7 +845,7 @@
 
     const/16 v0, 0x67
 
-    if-ne p1, p5, :cond_4
+    if-ne p1, p5, :cond_5
 
     invoke-virtual {p4, v0}, Lcom/oneplus/settings/better/OPAppModel;->setAppopsMode(I)V
 
@@ -810,39 +863,12 @@
 
     goto/16 :goto_0
 
-    :cond_4
-    invoke-virtual {p4}, Lcom/oneplus/settings/better/OPAppModel;->getAppopsMode()I
-
-    move-result p1
-
-    if-ne p1, v0, :cond_5
-
-    invoke-virtual {p4, p5}, Lcom/oneplus/settings/better/OPAppModel;->setAppopsMode(I)V
-
-    iget-object p1, p0, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeSettings;->mAppOpsManager:Landroid/app/AppOpsManager;
-
-    invoke-virtual {p4}, Lcom/oneplus/settings/better/OPAppModel;->getUid()I
-
-    move-result v0
-
-    invoke-virtual {p4}, Lcom/oneplus/settings/better/OPAppModel;->getPkgName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v2, v0, v1, p5}, Landroid/app/AppOpsManager;->setMode(IILjava/lang/String;I)V
-
-    goto/16 :goto_0
-
     :cond_5
     invoke-virtual {p4}, Lcom/oneplus/settings/better/OPAppModel;->getAppopsMode()I
 
     move-result p1
 
-    const/16 p5, 0x69
-
-    const/16 v1, 0x66
-
-    if-ne p1, v1, :cond_6
+    if-ne p1, v0, :cond_6
 
     invoke-virtual {p4, p5}, Lcom/oneplus/settings/better/OPAppModel;->setAppopsMode(I)V
 
@@ -865,30 +891,32 @@
 
     move-result p1
 
-    if-ne p1, p5, :cond_7
+    const/16 p5, 0x69
 
-    invoke-virtual {p4, v1}, Lcom/oneplus/settings/better/OPAppModel;->setAppopsMode(I)V
+    const/16 v1, 0x66
+
+    if-ne p1, v1, :cond_7
+
+    invoke-virtual {p4, p5}, Lcom/oneplus/settings/better/OPAppModel;->setAppopsMode(I)V
 
     iget-object p1, p0, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeSettings;->mAppOpsManager:Landroid/app/AppOpsManager;
 
     invoke-virtual {p4}, Lcom/oneplus/settings/better/OPAppModel;->getUid()I
 
-    move-result p5
+    move-result v0
 
     invoke-virtual {p4}, Lcom/oneplus/settings/better/OPAppModel;->getPkgName()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {p1, v2, p5, v0, v1}, Landroid/app/AppOpsManager;->setMode(IILjava/lang/String;I)V
+    invoke-virtual {p1, v2, v0, v1, p5}, Landroid/app/AppOpsManager;->setMode(IILjava/lang/String;I)V
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_7
     invoke-virtual {p4}, Lcom/oneplus/settings/better/OPAppModel;->getAppopsMode()I
 
     move-result p1
-
-    const/16 p5, 0x6b
 
     if-ne p1, p5, :cond_8
 
@@ -913,34 +941,9 @@
 
     move-result p1
 
-    const/16 p5, 0x6a
+    const/16 p5, 0x6b
 
     if-ne p1, p5, :cond_9
-
-    invoke-virtual {p4, v0}, Lcom/oneplus/settings/better/OPAppModel;->setAppopsMode(I)V
-
-    iget-object p1, p0, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeSettings;->mAppOpsManager:Landroid/app/AppOpsManager;
-
-    invoke-virtual {p4}, Lcom/oneplus/settings/better/OPAppModel;->getUid()I
-
-    move-result p5
-
-    invoke-virtual {p4}, Lcom/oneplus/settings/better/OPAppModel;->getPkgName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v2, p5, v1, v0}, Landroid/app/AppOpsManager;->setMode(IILjava/lang/String;I)V
-
-    goto :goto_0
-
-    :cond_9
-    invoke-virtual {p4}, Lcom/oneplus/settings/better/OPAppModel;->getAppopsMode()I
-
-    move-result p1
-
-    const/16 p5, 0x6c
-
-    if-ne p1, p5, :cond_a
 
     invoke-virtual {p4, v1}, Lcom/oneplus/settings/better/OPAppModel;->setAppopsMode(I)V
 
@@ -958,7 +961,57 @@
 
     goto :goto_0
 
+    :cond_9
+    invoke-virtual {p4}, Lcom/oneplus/settings/better/OPAppModel;->getAppopsMode()I
+
+    move-result p1
+
+    const/16 p5, 0x6a
+
+    if-ne p1, p5, :cond_a
+
+    invoke-virtual {p4, v0}, Lcom/oneplus/settings/better/OPAppModel;->setAppopsMode(I)V
+
+    iget-object p1, p0, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeSettings;->mAppOpsManager:Landroid/app/AppOpsManager;
+
+    invoke-virtual {p4}, Lcom/oneplus/settings/better/OPAppModel;->getUid()I
+
+    move-result p5
+
+    invoke-virtual {p4}, Lcom/oneplus/settings/better/OPAppModel;->getPkgName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v2, p5, v1, v0}, Landroid/app/AppOpsManager;->setMode(IILjava/lang/String;I)V
+
+    goto :goto_0
+
     :cond_a
+    invoke-virtual {p4}, Lcom/oneplus/settings/better/OPAppModel;->getAppopsMode()I
+
+    move-result p1
+
+    const/16 p5, 0x6c
+
+    if-ne p1, p5, :cond_b
+
+    invoke-virtual {p4, v1}, Lcom/oneplus/settings/better/OPAppModel;->setAppopsMode(I)V
+
+    iget-object p1, p0, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeSettings;->mAppOpsManager:Landroid/app/AppOpsManager;
+
+    invoke-virtual {p4}, Lcom/oneplus/settings/better/OPAppModel;->getUid()I
+
+    move-result p5
+
+    invoke-virtual {p4}, Lcom/oneplus/settings/better/OPAppModel;->getPkgName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v2, p5, v0, v1}, Landroid/app/AppOpsManager;->setMode(IILjava/lang/String;I)V
+
+    goto :goto_0
+
+    :cond_b
     invoke-virtual {p4, v1}, Lcom/oneplus/settings/better/OPAppModel;->setAppopsMode(I)V
 
     iget-object p1, p0, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeSettings;->mAppOpsManager:Landroid/app/AppOpsManager;
@@ -990,7 +1043,7 @@
 
     const-string p4, "0"
 
-    if-lez p1, :cond_b
+    if-lez p1, :cond_c
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -998,7 +1051,7 @@
 
     goto :goto_1
 
-    :cond_b
+    :cond_c
     move-object p1, p4
 
     :goto_1
@@ -1006,11 +1059,11 @@
 
     invoke-static {p5, v0, p1}, Lcom/oneplus/settings/utils/OPUtils;->sendAnalytics(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    if-eqz p2, :cond_c
+    if-eqz p2, :cond_d
 
     const-string p4, "1"
 
-    :cond_c
+    :cond_d
     const-string p1, "app_switch"
 
     invoke-static {p5, p1, p4}, Lcom/oneplus/settings/utils/OPUtils;->sendAnalytics(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V

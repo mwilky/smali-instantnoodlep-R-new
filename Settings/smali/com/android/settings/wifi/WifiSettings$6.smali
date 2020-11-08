@@ -1,14 +1,11 @@
 .class Lcom/android/settings/wifi/WifiSettings$6;
-.super Ljava/lang/Object;
+.super Lcom/android/settings/wifi/CaptivePortalNetworkCallback;
 .source "WifiSettings.java"
-
-# interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiSettings;->startWapiCertManage()V
+    value = Lcom/android/settings/wifi/WifiSettings;->registerCaptivePortalNetworkCallback(Landroid/net/Network;Lcom/android/settings/wifi/ConnectedAccessPointPreference;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,25 +14,29 @@
 .end annotation
 
 
+# instance fields
+.field final synthetic this$0:Lcom/android/settings/wifi/WifiSettings;
+
+
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiSettings;)V
+.method constructor <init>(Lcom/android/settings/wifi/WifiSettings;Landroid/net/Network;Lcom/android/settings/wifi/ConnectedAccessPointPreference;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lcom/android/settings/wifi/WifiSettings$6;->this$0:Lcom/android/settings/wifi/WifiSettings;
+
+    invoke-direct {p0, p2, p3}, Lcom/android/settings/wifi/CaptivePortalNetworkCallback;-><init>(Landroid/net/Network;Lcom/android/settings/wifi/ConnectedAccessPointPreference;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
+.method public onCaptivePortalCapabilityChanged()V
     .locals 0
 
-    const-string p0, "WifiSettings"
+    iget-object p0, p0, Lcom/android/settings/wifi/WifiSettings$6;->this$0:Lcom/android/settings/wifi/WifiSettings;
 
-    const-string p1, "startWapiCertManage: no"
-
-    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0}, Lcom/android/settings/wifi/WifiSettings;->access$200(Lcom/android/settings/wifi/WifiSettings;)V
 
     return-void
 .end method

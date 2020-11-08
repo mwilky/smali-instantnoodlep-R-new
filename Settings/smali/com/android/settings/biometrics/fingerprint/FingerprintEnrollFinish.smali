@@ -247,6 +247,53 @@
     return-void
 .end method
 
+.method private updateFpBlackGestureSettings()V
+    .locals 2
+
+    invoke-static {p0}, Lcom/android/settings/Utils;->getFingerprintManagerOrNull(Landroid/content/Context;)Landroid/hardware/fingerprint/FingerprintManager;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget v1, p0, Lcom/android/settings/biometrics/BiometricEnrollBase;->mUserId:I
+
+    invoke-virtual {v0, v1}, Landroid/hardware/fingerprint/FingerprintManager;->getEnrolledFingerprints(I)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportCustomFingerprint()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    const-string v0, "FingerprintEnrollFinish"
+
+    const-string/jumbo v1, "updateFpBlackGestureSettings: turn on black gesture"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {p0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    const/16 v0, 0xf
+
+    invoke-static {p0, v0}, Lcom/oneplus/settings/gestures/OPGestureUtils;->set1(Landroid/content/Context;I)I
+
+    :cond_0
+    return-void
+.end method
+
 
 # virtual methods
 .method public getMetricsCategory()I
@@ -447,7 +494,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e0066
+    const v1, 0x10e0067
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -545,7 +592,7 @@
 
     move-result-object v2
 
-    const v3, 0x10e0066
+    const v3, 0x10e0067
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -560,11 +607,11 @@
     :cond_0
     if-eqz v1, :cond_1
 
-    iget-object p0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollFinish;->mBtnAdd:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollFinish;->mBtnAdd:Landroid/widget/Button;
 
-    const/4 v0, 0x4
+    const/4 v1, 0x4
 
-    invoke-virtual {p0, v0}, Landroid/widget/Button;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setVisibility(I)V
 
     goto :goto_0
 
@@ -578,5 +625,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     :goto_0
+    invoke-direct {p0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollFinish;->updateFpBlackGestureSettings()V
+
     return-void
 .end method

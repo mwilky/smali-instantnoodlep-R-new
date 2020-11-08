@@ -78,23 +78,9 @@
 
     invoke-virtual {p1, v0, p2}, Ljava/util/Calendar;->set(II)V
 
-    iget-object p1, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate$2;->this$0:Lcom/google/android/material/picker/DatePickerCalendarDelegate;
-
-    invoke-static {p1, v0, v0}, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->access$000(Lcom/google/android/material/picker/DatePickerCalendarDelegate;ZZ)V
-
-    iget-object p1, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate$2;->this$0:Lcom/google/android/material/picker/DatePickerCalendarDelegate;
-
-    const/4 p2, 0x0
-
-    invoke-static {p1, p2}, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->access$100(Lcom/google/android/material/picker/DatePickerCalendarDelegate;I)V
-
     iget-object p0, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate$2;->this$0:Lcom/google/android/material/picker/DatePickerCalendarDelegate;
 
-    invoke-static {p0}, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->access$200(Lcom/google/android/material/picker/DatePickerCalendarDelegate;)Landroid/widget/TextView;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/widget/TextView;->requestFocus()Z
+    invoke-static {p0, v0, v0}, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->access$000(Lcom/google/android/material/picker/DatePickerCalendarDelegate;ZZ)V
 
     return-void
 .end method

@@ -105,12 +105,6 @@
 
     sput-boolean v0, Lcom/oneplus/settings/utils/OPUtils;->mAppUpdated:Z
 
-    new-instance v0, Ljava/io/File;
-
-    const-string v1, "/mnt/vendor/persist/engineermode/"
-
-    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
     const-string v0, "content://net.oneplus.launcher.features"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -2055,40 +2049,6 @@
     return p0
 .end method
 
-.method public static hasOnePlusDialer(Landroid/content/Context;)Z
-    .locals 1
-
-    const-string v0, "com.android.dialer"
-
-    invoke-static {p0, v0}, Lcom/oneplus/settings/utils/OPUtils;->isAppExist(Landroid/content/Context;Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    const-string v0, "com.oneplus.dialer"
-
-    invoke-static {p0, v0}, Lcom/oneplus/settings/utils/OPUtils;->isAppExist(Landroid/content/Context;Ljava/lang/String;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
-
-    :goto_1
-    return p0
-.end method
-
 .method public static initHwId()V
     .locals 0
 
@@ -2934,7 +2894,7 @@
 
     move-result-object p0
 
-    const v0, 0x10e008c
+    const v0, 0x10e008d
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -3683,6 +3643,39 @@
     return v1
 .end method
 
+.method public static isLemonadeProducts()Z
+    .locals 2
+
+    const-string v0, "ro.boot.project_codename"
+
+    invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const-string v1, "lemonade"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
 .method public static isMEARom()Z
     .locals 2
 
@@ -3720,6 +3713,26 @@
     const/4 v0, 0x0
 
     :goto_0
+    return v0
+.end method
+
+.method public static isNAVersion()Z
+    .locals 2
+
+    const-string v0, "ro.build.region"
+
+    const-string v1, ""
+
+    invoke-static {v0, v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "NA"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
     return v0
 .end method
 
@@ -4155,7 +4168,13 @@
 
     if-nez v0, :cond_1
 
-    if-eqz v1, :cond_0
+    if-nez v1, :cond_1
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isLemonadeProducts()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
@@ -4239,6 +4258,22 @@
     const-string v0, "OP_FEATURE_DOUBLE_TAP_POWER_KEY_ALEXA"
 
     invoke-static {v0}, Lcom/oneplus/common/ReflectUtil;->isFeatureSupported(Ljava/lang/String;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static isSupportC88()Z
+    .locals 2
+
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->C88:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+
+    invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->getCustomType()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -4495,11 +4530,7 @@
 .method public static isSupportGota()Z
     .locals 1
 
-    const-string v0, "OP_FEATURE_GOTA"
-
-    invoke-static {v0}, Lcom/oneplus/common/ReflectUtil;->isFeatureSupported(Ljava/lang/String;)Z
-
-    move-result v0
+    const/4 v0, 0x0
 
     return v0
 .end method
@@ -9212,36 +9243,6 @@
     const-string v0, "OPUtils"
 
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-.end method
-
-.method public static setCustomToneDarkModeLocation()V
-    .locals 3
-
-    new-instance v0, Landroid/content/Intent;
-
-    const-string v1, "com.oneplus.systemui.qs.hide_tile"
-
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    const-string v1, "tile"
-
-    const-string v2, "custom(com.android.settings/com.oneplus.settings.darkmode.OPCustomToneDarkModeTileService)"
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    const-string v1, "position"
-
-    const/16 v2, 0xd
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    invoke-static {}, Lcom/oneplus/settings/SettingsBaseApplication;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
     return-void
 .end method

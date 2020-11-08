@@ -841,13 +841,13 @@
 
     const/4 v4, 0x1
 
-    if-eqz v3, :cond_5
+    if-eqz v3, :cond_6
 
     invoke-virtual {v3}, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->isConnected()Z
 
     move-result v3
 
-    if-eqz v3, :cond_5
+    if-eqz v3, :cond_6
 
     :try_start_0
     iget-object v3, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mDoubleClickLeft:Landroidx/preference/ListPreference;
@@ -1030,15 +1030,29 @@
 
     if-ne v3, v4, :cond_3
 
-    move v3, v4
+    move v5, v4
 
     goto :goto_1
 
     :cond_3
-    move v3, v6
+    move v5, v6
 
     :goto_1
-    invoke-virtual {v1, v3}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+    invoke-virtual {v1, v5}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+
+    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mOtaWifiDataSwitchPreference:Landroidx/preference/SwitchPreference;
+
+    if-ne v3, v4, :cond_4
+
+    move v3, v4
+
+    goto :goto_2
+
+    :cond_4
+    move v3, v6
+
+    :goto_2
+    invoke-virtual {v1, v3}, Landroidx/preference/Preference;->setEnabled(Z)V
 
     iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mContext:Landroid/content/Context;
 
@@ -1060,14 +1074,14 @@
 
     iget-object v3, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mOtaWifiDataSwitchPreference:Landroidx/preference/SwitchPreference;
 
-    if-ne v1, v4, :cond_4
+    if-ne v1, v4, :cond_5
 
-    goto :goto_2
+    goto :goto_3
 
-    :cond_4
+    :cond_5
     move v4, v6
 
-    :goto_2
+    :goto_3
     invoke-virtual {v3, v4}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
 
     iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mPodsService:Lcom/oos/onepluspods/service/aidl/IOnePlusPodDevice;
@@ -1084,7 +1098,7 @@
 
     move-result v0
 
-    if-lez v0, :cond_6
+    if-lez v0, :cond_7
 
     rem-int/lit16 v1, v0, 0x3e8
 
@@ -1140,7 +1154,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_3
+    goto :goto_4
 
     :catch_0
     move-exception p0
@@ -1161,21 +1175,21 @@
 
     invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_3
+    goto :goto_4
 
-    :cond_5
+    :cond_6
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isO2()Z
 
     move-result p1
 
-    if-nez p1, :cond_6
+    if-nez p1, :cond_7
 
     iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mFindEarPreference:Landroidx/preference/Preference;
 
     invoke-virtual {p0, v4}, Landroidx/preference/Preference;->setVisible(Z)V
 
-    :cond_6
-    :goto_3
+    :cond_7
+    :goto_4
     return-void
 .end method
 

@@ -159,9 +159,6 @@
     <dimen name="bt_battery_padding">2.0dip</dimen>
     <dimen name="bt_icon_elevation">4.0dip</dimen>
     <dimen name="bt_nearby_icon_size">24.0dip</dimen>
-    <item type="dimen" name="btn_highlight_alpha_material">@dimen/btn_highlight_alpha_material_light</item>
-    <item type="dimen" name="btn_highlight_alpha_material_dark">0.2</item>
-    <item type="dimen" name="btn_highlight_alpha_material_light">0.2</item>
     <dimen name="button_elevation_material">2.0dip</dimen>
     <dimen name="button_pressed_z_material">4.0dip</dimen>
     <dimen name="caption_preview_text_size">48.0dip</dimen>
@@ -262,13 +259,13 @@
     <dimen name="data_usage_chart_height">228.0dip</dimen>
     <dimen name="data_usage_chart_optimalWidth">440.0dip</dimen>
     <dimen name="date_picker_date_label_size">32.0sp</dimen>
-    <dimen name="date_picker_day_height">42.0dip</dimen>
-    <dimen name="date_picker_day_of_week_height">36.0dip</dimen>
+    <dimen name="date_picker_day_height">40.0dip</dimen>
+    <dimen name="date_picker_day_of_week_height">40.0dip</dimen>
     <dimen name="date_picker_day_of_week_text_size">12.0sp</dimen>
-    <dimen name="date_picker_day_selector_radius">27.0dip</dimen>
+    <dimen name="date_picker_day_selector_radius">40.0dip</dimen>
     <dimen name="date_picker_day_text_size">12.0sp</dimen>
-    <dimen name="date_picker_day_width">42.0dip</dimen>
-    <dimen name="date_picker_month_height">56.0dip</dimen>
+    <dimen name="date_picker_day_width">40.0dip</dimen>
+    <dimen name="date_picker_month_height">46.0dip</dimen>
     <dimen name="date_picker_month_text_size">14.0sp</dimen>
     <dimen name="date_picker_year_label_size">32.0sp</dimen>
     <dimen name="datepicker_component_width">260.0dip</dimen>
@@ -291,7 +288,7 @@
     <dimen name="datepicker_year_picker_padding_top">8.0dip</dimen>
     <dimen name="day_picker_button_margin_top">0.0dip</dimen>
     <dimen name="day_picker_padding_horizontal">18.0dip</dimen>
-    <dimen name="day_picker_padding_top">6.0dip</dimen>
+    <dimen name="day_picker_padding_top">0.0dip</dimen>
     <dimen name="def_drawer_elevation">10.0dip</dimen>
     <dimen name="default_icon_bitmap_size">56.0dip</dimen>
     <dimen name="delete_profile_dialog_padding_left_right">24.0dip</dimen>
@@ -1117,7 +1114,7 @@
     <dimen name="oneplus_dialog_image_panel_height">166.0dip</dimen>
     <dimen name="oneplus_dialog_subtitle_minHeight_multiline">56.0dip</dimen>
     <dimen name="oneplus_dialog_subtitle_minHeight_noline">21.0dip</dimen>
-    <dimen name="oneplus_dialog_subtitle_minHeight_singleline">112.0px</dimen>
+    <dimen name="oneplus_dialog_subtitle_minHeight_singleline">75.0px</dimen>
     <dimen name="oneplus_dimens_item_height">271.0px</dimen>
     <dimen name="oneplus_dimens_wallpaper_height">1059.0px</dimen>
     <dimen name="oneplus_faceulock_mode_lottie_top_margin">450.0px</dimen>
@@ -1355,7 +1352,6 @@
     <dimen name="op_reduce_padding_space2">-9.0dip</dimen>
     <dimen name="op_ripple_radius">22.599976dip</dimen>
     <dimen name="op_seekbar_track_background_height_material">4.0dip</dimen>
-    <dimen name="op_seekbar_track_progress_height_material">4.0dip</dimen>
     <dimen name="op_spinner_material_padding_left">18.0dip</dimen>
     <dimen name="op_spinner_material_padding_right">18.0dip</dimen>
     <dimen name="op_switch_ripple_radius">18.0dip</dimen>
@@ -1369,6 +1365,8 @@
     <dimen name="op_text_size_h5">18.0sp</dimen>
     <dimen name="op_text_size_h6">16.0sp</dimen>
     <dimen name="op_text_size_subtitle">13.0sp</dimen>
+    <dimen name="op_text_style_dialog_body1_size">24.0px</dimen>
+    <dimen name="op_text_style_dialog_title_size">32.0px</dimen>
     <dimen name="op_theme_item_entity_size">106.0dip</dimen>
     <dimen name="op_threekey_down_bottom_left_radius">63.0px</dimen>
     <dimen name="op_threekey_down_bottom_right_radius">63.0px</dimen>

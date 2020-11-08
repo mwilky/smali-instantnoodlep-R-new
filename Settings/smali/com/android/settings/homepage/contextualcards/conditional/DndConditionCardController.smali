@@ -205,7 +205,7 @@
 
     iget-object v3, p0, Lcom/android/settings/homepage/contextualcards/conditional/DndConditionCardController;->mAppContext:Landroid/content/Context;
 
-    const v6, 0x104087d
+    const v6, 0x104087f
 
     new-array v7, v2, [Ljava/lang/Object;
 

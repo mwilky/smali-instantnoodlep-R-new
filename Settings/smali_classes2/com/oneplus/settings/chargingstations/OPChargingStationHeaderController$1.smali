@@ -1,11 +1,14 @@
 .class Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController$1;
-.super Landroid/database/ContentObserver;
+.super Ljava/lang/Object;
 .source "OPChargingStationHeaderController.java"
+
+# interfaces
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController;->displayPreference(Landroidx/preference/PreferenceScreen;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,28 +18,52 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController;
+.field final synthetic val$charing_pillar_animation_2:Lcom/airbnb/lottie/LottieAnimationView;
 
 
 # direct methods
-.method constructor <init>(Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController;Lcom/airbnb/lottie/LottieAnimationView;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController$1;->this$0:Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController;
+    iput-object p2, p0, Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController$1;->val$charing_pillar_animation_2:Lcom/airbnb/lottie/LottieAnimationView;
 
-    invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onChange(ZLandroid/net/Uri;)V
+.method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 0
 
-    iget-object p0, p0, Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController$1;->this$0:Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController;
+    return-void
+.end method
 
-    invoke-static {p0}, Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController;->access$000(Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController;)V
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 1
+
+    iget-object p1, p0, Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController$1;->val$charing_pillar_animation_2:Lcom/airbnb/lottie/LottieAnimationView;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    iget-object p0, p0, Lcom/oneplus/settings/chargingstations/OPChargingStationHeaderController$1;->val$charing_pillar_animation_2:Lcom/airbnb/lottie/LottieAnimationView;
+
+    invoke-virtual {p0}, Lcom/airbnb/lottie/LottieAnimationView;->playAnimation()V
+
+    return-void
+.end method
+
+.method public onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
 
     return-void
 .end method

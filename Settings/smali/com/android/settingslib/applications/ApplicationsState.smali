@@ -73,6 +73,16 @@
 
 .field public static final FILTER_WORK:Lcom/android/settingslib/applications/ApplicationsState$AppFilter;
 
+.field public static final INSTALL_OR_UPDATE_DATE_COMPARATOR:Ljava/util/Comparator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Comparator<",
+            "Lcom/android/settingslib/applications/ApplicationsState$AppEntry;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field public static final INTERNAL_SIZE_COMPARATOR:Ljava/util/Comparator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -272,6 +282,12 @@
     invoke-direct {v0}, Lcom/android/settingslib/applications/ApplicationsState$4;-><init>()V
 
     sput-object v0, Lcom/android/settingslib/applications/ApplicationsState;->INTERNAL_SIZE_COMPARATOR:Ljava/util/Comparator;
+
+    new-instance v0, Lcom/android/settingslib/applications/ApplicationsState$5;
+
+    invoke-direct {v0}, Lcom/android/settingslib/applications/ApplicationsState$5;-><init>()V
+
+    sput-object v0, Lcom/android/settingslib/applications/ApplicationsState;->INSTALL_OR_UPDATE_DATE_COMPARATOR:Ljava/util/Comparator;
 
     new-instance v0, Lcom/android/settingslib/applications/ApplicationsState$6;
 

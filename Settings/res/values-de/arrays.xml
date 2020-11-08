@@ -263,6 +263,8 @@
         <item>Qualcomm® aptX™-Audio</item>
         <item>Qualcomm® aptX™ HD-Audio</item>
         <item>LDAC</item>
+        <item>Qualcomm® aptX™ Adaptive-Audio</item>
+        <item>Qualcomm® aptX™ TWS+-Audio</item>
     </string-array>
     <string-array name="bluetooth_a2dp_codec_titles">
         <item>Systemauswahl verwenden (Standard)</item>
@@ -271,6 +273,8 @@
         <item>Qualcomm® aptX™-Audio</item>
         <item>Qualcomm® aptX™ HD-Audio</item>
         <item>LDAC</item>
+        <item>Qualcomm® aptX™ Adaptive-Audio</item>
+        <item>Qualcomm® aptX™ TWS+-Audio</item>
     </string-array>
     <string-array name="bluetooth_audio_active_device_summaries">
         <item></item>

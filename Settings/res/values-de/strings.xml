@@ -1271,6 +1271,7 @@ Dies wirkt sich auch auf andere Apps oder Unterhaltungen aus, die als Bubble ers
     <string name="color_temperature">Kalte Farbtemperatur</string>
     <string name="color_temperature_desc">Kältere Displayfarben verwenden</string>
     <string name="color_temperature_toast">Deaktiviere den Bildschirm, um die neue Farbeinstellung zu übernehmen</string>
+    <string name="color_temperture">Weißabgleich anzeigen</string>
     <string name="color_title">Farbe</string>
     <string name="color_unspecified">Standard</string>
     <string name="color_white">Weiß</string>
@@ -1584,7 +1585,7 @@ Der dabei angesetzte Wert wird von deinem Smartphone berechnet und kann von der 
     <string name="data_usage_metered_yes">Kostenpflichtig</string>
     <string name="data_usage_ota">Systemupdates</string>
     <string name="data_usage_other_apps">Weitere Apps, die ebenfalls Daten verbraucht haben</string>
-    <string name="data_usage_package_set">Billing Cycle</string>
+    <string name="data_usage_package_set">Abrechnungszeitraum</string>
     <string name="data_usage_pick_cycle_day">Tag, an dem Datenverbrauchszyklus zurückgesetzt wird:</string>
     <string name="data_usage_rank_sim">Mobile Datennutzung</string>
     <string name="data_usage_rank_wifi">WLAN-Datennutzung</string>
@@ -3360,7 +3361,7 @@ Zusätzlich wird die App in die Lage versetzt, die \"Bitte nicht stören\"-Funkt
     <string name="oneplus_auto_open_specified_app">Die angegebene App automatisch öffnen</string>
     <string name="oneplus_auto_play">Autom. Wiedergabe</string>
     <string name="oneplus_auto_play_summary">Musik-Wiedergabe automatisch fortsetzen, wenn Kopfhörer angeschlossen werden</string>
-    <string name="oneplus_auto_switch_mobile_data">Datennutzung</string>
+    <string name="oneplus_auto_switch_mobile_data">Intelligente Netzwerkverbindung</string>
     <string name="oneplus_auto_switch_mobile_data_summary">Zur Verbesserung der Stabilität bei schlechter Verbindung WLAN und mobile Daten verwenden</string>
     <string name="oneplus_auto_turn_on_apps">Eingeschaltet für Apps</string>
     <string name="oneplus_auto_turn_on_car_charger_info_o2">"Durch Festlegen der oben genannten Elemente kannst du 'Bitte nicht stören' aktivieren und deine angegebene App immer starten, wenn das KFZ-Ladegerät angeschlossen ist"</string>
@@ -3368,8 +3369,8 @@ Zusätzlich wird die App in die Lage versetzt, die \"Bitte nicht stören\"-Funkt
     <string name="oneplus_available_keyboard_category">Verfügbare Tastatur</string>
     <string name="oneplus_available_keyboard_description">Hier aktivierte installierte Tastaturen werden zur Liste \"Verfügbare Tastaturen\" hinzugefügt</string>
     <string name="oneplus_back_home">Start, Zurück</string>
-    <string name="oneplus_back_home_o2">Back, Home</string>
-    <string name="oneplus_back_home_summary">Swipe up on Home button</string>
+    <string name="oneplus_back_home_o2">Zurück, Start</string>
+    <string name="oneplus_back_home_summary">Auf Start-Taste nach oben wischen</string>
     <string name="oneplus_back_topic_theme_summary">Automatisch zurück zum Systemthema</string>
     <string name="oneplus_back_topic_theme_title">Thema der Rückseite</string>
     <string name="oneplus_battery_menu_stats_total">Nutzungsdetails anzeigen</string>
@@ -3493,7 +3494,7 @@ Der Akku-Schoner wird beim Aufladen des Geräts automatisch deaktiviert."</strin
     <string name="oneplus_doze_summary_new">Uhrzeit, Datum und Benachrichtigungen auf dem Bildschirm anzeigen</string>
     <string name="oneplus_doze_title">Inaktivitätsdisplay</string>
     <string name="oneplus_doze_title_801">Inaktivitätsdisplay</string>
-    <string name="oneplus_draw_gesture_start_none">Keine(r)</string>
+    <string name="oneplus_draw_gesture_start_none">Keine</string>
     <string name="oneplus_draw_m_start_app">M zeichnen</string>
     <string name="oneplus_draw_o_start_app">O zeichnen</string>
     <string name="oneplus_draw_s_start_app">S zeichnen</string>
@@ -3577,7 +3578,9 @@ Vorsicht: Die Gesichtsentsperrung (Face Unlock) ist weniger sicher als die Entsp
     <string name="oneplus_fingerprint_gesture_camera_summary">Auf dem Sucherbildschirm lange auf den Fingerabdrucksensor drücken, um ein Foto aufzunehmen</string>
     <string name="oneplus_fingerprint_gesture_camera_title">Lang drücken, um ein Foto aufzunehmen</string>
     <string name="oneplus_fingerprint_gesture_settings_title">Fingerabdruck-Geste</string>
+    <string name="oneplus_fingerprint_hardware_exception">Die Fingerabdruck-Hardwaredaten sind nicht präzise. Bitte wende dich an den Kundenservice.</string>
     <string name="oneplus_fingerprint_longpress_for_quickpay_summary">Zum Start der Expresszahlung lange auf den Fingerabdrucksensor drücken</string>
+    <string name="oneplus_fingerprint_not_adjustment">Die Fingerabdruck-Kalibrierungsdaten sind nicht präzise. Bitte wende dich an den Kundenservice.</string>
     <string name="oneplus_fingerprint_quickpay_lock_swtch_summary">Fingerabdrucksensor lange drücken, um Quick Pay zu starten, wenn das Telefon gesperrt ist.</string>
     <string name="oneplus_fingerprint_sensor_longpress_for_quickpay_summary">Zum Start der Expresszahlung bei nicht gesperrtem Bildschirm lange auf den Fingerabdrucksensor drücken</string>
     <string name="oneplus_fingerprint_settings_list_title">Fingerabdruck-Liste</string>
@@ -3606,7 +3609,7 @@ Vorsicht: Die Gesichtsentsperrung (Face Unlock) ist weniger sicher als die Entsp
     <string name="oneplus_font_style">Schriftart</string>
     <string name="oneplus_font_switch">Schriftartwechsel</string>
     <string name="oneplus_force_factory_reset_summary">Passwort beim Systemstart aktiviert. Interner Speicher wird gelöscht</string>
-    <string name="oneplus_forum_award_summary">Du bist Teil dieser Community. Nur du kannst unseren Kurs definieren. Gemeinsam entwickeln wir uns weiter. Wir unterbrechen Builds und schreiben Codes für dich. Vielen Dank, dass du mit uns träumst!</string>
+    <string name="oneplus_forum_award_summary">Das ist Ihre Community. Nur Sie können unseren Kurs bestimmen. Gemeinsam legen wir etwas fest und entwickeln es weiter. Wir unterbrechen Builds und schreiben Codes für Sie. Vielen Dank, dass Sie Träume mit uns teilen!</string>
     <string name="oneplus_forum_award_title">Auszeichnung</string>
     <string name="oneplus_front_camera_app_display_fullscreen_summary">Wenn der Inhalt der App durch den Anzeigebereich der Kamera abgedeckt ist, wechseln Sie zum Standardmodus.</string>
     <string name="oneplus_front_camera_display_choose_title">Auswählen, ob die Frontkamera ausgeblendet werden soll</string>
@@ -3653,7 +3656,7 @@ Von der Mitte des unteren Bildschirmrands nach oben wischen, um jederzeit zum Ho
     <string name="oneplus_gaming_mode_game_battery_saver_close">Deaktiviert</string>
     <string name="oneplus_gaming_mode_game_battery_saver_high">Hoch</string>
     <string name="oneplus_gaming_mode_game_battery_saver_high_summary">Auflösung und FPS der Spiele werden begrenzt</string>
-    <string name="oneplus_gaming_mode_game_battery_saver_light">Niedrige</string>
+    <string name="oneplus_gaming_mode_game_battery_saver_light">Niedrig</string>
     <string name="oneplus_gaming_mode_game_battery_saver_light_summary">Auflösung der Spiele wird begrenzt</string>
     <string name="oneplus_gaming_mode_game_battery_saver_summary">Empfohlen für Spiele, die nicht sehr flüssig laufen müssen (z. B. Gelegenheitsspiele)</string>
     <string name="oneplus_gaming_mode_network_acceleration">Netzwerkbeschleunigung</string>
@@ -3694,6 +3697,7 @@ Von der Mitte des unteren Bildschirmrands nach oben wischen, um jederzeit zum Ho
     <string name="oneplus_google_services_title">Dienste mit Google-Bezug</string>
     <string name="oneplus_google_tts">Google TTS Sprachdaten</string>
     <string name="oneplus_gps_using">nutzt GPS</string>
+    <string name="oneplus_green">Grün</string>
     <string name="oneplus_h2_contributors">Mitwirkende an HydrogenOS</string>
     <string name="oneplus_hand_up_proximity_summary">Bildschirm aktivieren, wenn Sie das Telefon in die Hand nehmen</string>
     <string name="oneplus_hand_up_proximity_title">Display beim Hochheben aktivieren</string>
@@ -3728,7 +3732,7 @@ Hinweis: Dein Fingerabdruck ist möglicherweise nicht so sicher wie ein starkes 
     <string name="oneplus_instrucitons">Anleitung</string>
     <string name="oneplus_intelligently_select_best_wifi">Das beste Wi‑Fi intelligent auswählen</string>
     <string name="oneplus_intelligently_select_best_wifi_summary">Das beste Wi‑Fi durch Erkennen und Analysieren der Konnektivität von Wi‑Fi-Netzwerken intelligent auswählen und verbinden</string>
-    <string name="oneplus_intensely">Strong</string>
+    <string name="oneplus_intensely">Stark</string>
     <string name="oneplus_is_turn_on_feature">Möchten Sie diese Funktion wirklich aktivieren?</string>
     <string name="oneplus_is_turn_on_feature_summary">"Wenn die Funktion aktiviert ist, können die folgenden Situationen ggf. gelegentlich auftreten:
 1.Einige Bereiche der Bildschirmdarstellung sind abnormal
@@ -3751,7 +3755,7 @@ Hinweis: Dein Fingerabdruck ist möglicherweise nicht so sicher wie ein starkes 
     <string name="oneplus_legal_summary">Datenschutzerklärung, Vereinbarungen usw.</string>
     <string name="oneplus_levels">Stufen</string>
     <string name="oneplus_lift_up_display">Display immer aktivieren oder Display beim Hochheben aktivieren</string>
-    <string name="oneplus_light">Leicht</string>
+    <string name="oneplus_light">Hell</string>
     <string name="oneplus_local_ringtone">Klingelton aus internem Speicher</string>
     <string name="oneplus_location_information">Beschreibung von standortbezogenen Diensten</string>
     <string name="oneplus_lock_after_timeout">Nach Ruhemodus automatisch sperren</string>
@@ -3769,6 +3773,7 @@ Hinweis: Dein Fingerabdruck ist möglicherweise nicht so sicher wie ein starkes 
     <string name="oneplus_lockpattern_need_to_unlock_wrong">Erneut versuchen</string>
     <string name="oneplus_lockpattern_too_many_failed_confirmation_attempts_header">Zu viele Fehlversuche!</string>
     <string name="oneplus_lockscreen_settings_title">Einstellungen für Sperrbildschirm</string>
+    <string name="oneplus_magenta">Magenta</string>
     <string name="oneplus_manage_virtual_keyboard">Tastaturen verwalten</string>
     <string name="oneplus_max_shortcuts_tips">Sie können bis zu 6 Verknüpfungen hinzufügen</string>
     <string name="oneplus_media_ring_summary">Medienlautstärke stummschalten</string>
@@ -3785,7 +3790,7 @@ Hinweis: Dein Fingerabdruck ist möglicherweise nicht so sicher wie ein starkes 
     <string name="oneplus_memc_video_extreme">Extrem</string>
     <string name="oneplus_memc_video_nosupport_extreme_summary">Für das Aktivieren der extremen Einstellung ist ein Wechseln der Auflösung auf FHD+ erforderlich</string>
     <string name="oneplus_memc_video_nosupport_extreme_text">Wechseln zur Auflösung QHD+, die grafische Kompensation von Bewegungen ist eingeschränkt</string>
-    <string name="oneplus_memc_video_smooth">Flüssig</string>
+    <string name="oneplus_memc_video_smooth">Glatt</string>
     <string name="oneplus_memc_video_theacme_summary">Die Videobildrate wird auf 120 Bilder pro Sekunde (fps) erhöht, um eine extrem flüssige Grafik zu erhalten, was zu einem zusätzlichen Stromverbrauch führen kann. QHD+-Auflösung wird vorübergehend nicht unterstützt.</string>
     <string name="oneplus_memc_video_theacme_title">Glättung von hyperaktiven Bewegungen</string>
     <string name="oneplus_mobile_device_name_title">Name des Telefons</string>
@@ -3817,7 +3822,7 @@ Hinweis: Dein Fingerabdruck ist möglicherweise nicht so sicher wie ein starkes 
     <string name="oneplus_night_mode_color_temperature">Farbtemperatur</string>
     <string name="oneplus_night_mode_enabled_op">Nacht-Modus</string>
     <string name="oneplus_night_mode_enabled_op_summary">Nachtmodus manuell einschalten</string>
-    <string name="oneplus_night_mode_manual_open">Bedienungsanleitung</string>
+    <string name="oneplus_night_mode_manual_open">Dunkelmodus</string>
     <string name="oneplus_night_mode_open_tip">Schalte zuerst den Nachtmodus ein</string>
     <string name="oneplus_night_mode_sensor_summary">Je nach Lichtverhältnissen kalibriert der Nachtmodus automatisch die Farbtemperatur des Bildschirms, um sich der Umgebung anzupassen. Dies kann die Müdigkeit und Beanspruchung der Augen reduzieren und Ihnen eventuell helfen, besser zu schlafen.</string>
     <string name="oneplus_night_mode_strong">Am wärmsten</string>
@@ -3998,7 +4003,7 @@ Hinweis: Dein Fingerabdruck ist möglicherweise nicht so sicher wie ein starkes 
     <string name="oneplus_rename_fingerprint_list">Fingerabdruck umbenennen</string>
     <string name="oneplus_reset_all_data">Alle Daten zurücksetzen</string>
     <string name="oneplus_reset_network">Die Netzwerkeinstellungen werden neu festgelegt, bitte warten...</string>
-    <string name="oneplus_ring_pattern">Klingelton</string>
+    <string name="oneplus_ring_pattern">Ton</string>
     <string name="oneplus_ring_pattern_soc_tri_state_summary">Anrufe und Benachrichtigungen werden nicht stummgeschaltet</string>
     <string name="oneplus_ring_pattern_summary">Anrufe und Benachrichtigungen werden nicht stummgeschaltet</string>
     <string name="oneplus_ringtone_and_vibrate">Klingelton &amp; Vibration</string>
@@ -4072,6 +4077,7 @@ Hinweis: Dein Fingerabdruck ist möglicherweise nicht so sicher wie ein starkes 
     <string name="oneplus_search_keyword_theme_settings">Anpassung des Sperrbildschirms, Bildschirmhintergründe, Uhr-Stil, Fingerabdruckanimation, Horizon Light, Systemanpassung, Akzentfarbe, Form, Schriftart, Tönung, Icon Pack, Leuchtender Hellton, Nuancierter Dunkelton, Lebendige Farbtöne</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">Anpassung des Sperrbildschirms, Bildschirmhintergründe, Uhr-Stil, Fingerabdruckanimation, Horizon Light, Systemanpassung, Akzentfarbe, Form, Schriftart, Tönung, Icon Pack, Leuchtender Hellton, Nuancierter Dunkelton, Lebendige Farbtöne, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_mcl_new">Anpassung des Sperrbildschirms, Bildschirmhintergründe, Uhr-Stil, Fingerabdruckanimation, Horizon Light, Systemanpassung, Akzentfarbe, Form, Schriftart, Tönung, Icon Pack, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_must_have">ANPASSUNG DES SPERRBILDSCHIRMS, Bildschirmhintergründe, Uhr-Stil, SYSTEMANPASSUNG, Akzentfarbe, Form, Tönung, Icon Pack, Leuchtende helle Farbtöne, Nuancierte dunkle Farbtöne, Kräftige Farbtöne</string>
     <string name="oneplus_search_keyword_theme_settings_new">Anpassung des Sperrbildschirms, Bildschirmhintergründe, Uhr-Stil, Fingerabdruckanimation, Horizon Light, Systemanpassung, Akzentfarbe, Form, Schriftart, Tönung, Icon Pack</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">Anpassung des Sperrbildschirms, Bildschirmhintergründe, Uhr-Stil, Fingerabdruckanimation, Horizon Light, Systemanpassung, Akzentfarbe, Form, Schriftart, Tönung, Icon Pack, Leuchtender Hellton, Nuancierter Dunkelton, Lebendige Farbtöne</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Anpassung des Sperrbildschirms, Bildschirmhintergründe, Uhr-Stil, Fingerabdruckanimation, Systemanpassung, Akzentfarbe, Form, Schriftart, Tönung, Icon Pack</string>
@@ -4138,10 +4144,10 @@ Hinweis:
     <string name="oneplus_silent_mode_on">Stummschalten-Modus aktiviert</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Anrufe und Benachrichtigungen werden mit Ausnahme von Alarmen stummgeschaltet</string>
     <string name="oneplus_silent_mode_summary">Anrufe und Benachrichtigungen werden mit Ausnahme von Alarmen stummgeschaltet</string>
-    <string name="oneplus_silent_notifications_status_bar">Stille Benachrichtigung in der Statusleiste ausblenden</string>
+    <string name="oneplus_silent_notifications_status_bar">Stille Benachrichtigungen in der Statusleiste ausblenden</string>
     <string name="oneplus_sim1_ringtone_switch">SIM-Karte 1</string>
     <string name="oneplus_sim2_ringtone_switch">SIM-Karte 2</string>
-    <string name="oneplus_simcard_title">Karte</string>
+    <string name="oneplus_simcard_title">SIM</string>
     <string name="oneplus_sla_down_load_app_summary">Download-Beschleunigung ist nicht verfügbar, wenn Hotspot oder Wi‑Fi Direct aktiviert ist</string>
     <string name="oneplus_sleep_standby_summary">Optimieren Sie die Akkulebensdauer (z.B. durch Deaktivieren der Netzwerkverbindungen), während Sie schlafen. Dadurch erhalten Apps unter Umständen keine Benachrichtigungen rechtzeitig.</string>
     <string name="oneplus_sleep_standby_title">Optimierung für Ruhe-/Standby-Modus</string>
@@ -4156,7 +4162,7 @@ Hinweis:
     <string name="oneplus_sound_tuner">Dolby Atmos</string>
     <string name="oneplus_status_summary">Telefonnummer, Signal usw.</string>
     <string name="oneplus_stop_run">Anhalten erzwingen</string>
-    <string name="oneplus_storage">STORAGE</string>
+    <string name="oneplus_storage">SPEICHER</string>
     <string name="oneplus_sunrise_sunset">Von Sonnenuntergang bis Sonnenaufgang automatisch aktivieren</string>
     <string name="oneplus_support_apps">UNTERSTÜTZTE APPS</string>
     <string name="oneplus_support_summary">Tipps und häufig gestellte Fragen zur Gerätenutzung</string>
@@ -4165,8 +4171,10 @@ Hinweis:
     <string name="oneplus_suspension_notice">Achtung (Heads-Up)</string>
     <string name="oneplus_suspension_notice_summary">Apps Heads-Up-Benachrichtigungen anzeigen lassen</string>
     <string name="oneplus_switch">OnePlus Switch</string>
-    <string name="oneplus_switch_resolution_kill_process_confirm">Switch</string>
+    <string name="oneplus_switch_resolution_kill_process_confirm">Wechseln</string>
     <string name="oneplus_switch_resolution_kill_process_tips">Das Wechseln der Auflösung hat möglicherweise das Schließen einiger Hintergrund-Apps zur Folge. Möchten Sie das Wechseln bestätigen?</string>
+    <string name="oneplus_switch_sa_option">NSA + SA-Modus</string>
+    <string name="oneplus_switch_sa_option_summary">Je nach 5G-Verbindung und entsprechenden Einstellungen des Mobilfunkanbieters für das Telefon wird automatisch auf den NSA- oder SA-Netzwerkmodus zugegriffen. Ist diese Einstellung deaktiviert, ist nur Zugriff auf das NSA-Netzwerk verfügbar.</string>
     <string name="oneplus_switch_screen_lock_type">Umschalten des Typs der Bildschirmsperre, bitte warten...</string>
     <string name="oneplus_system_data_summary">Einschließlich Konten-Informationen, Kontakte, Appdaten</string>
     <string name="oneplus_system_data_title">Systemdaten</string>
@@ -4176,7 +4184,7 @@ Hinweis:
     <string name="oneplus_system_settings_title">Systemeinstellungen</string>
     <string name="oneplus_system_stability_add">Am Programm zur Systemstabilität teilnehmen</string>
     <string name="oneplus_system_stability_summary">OnePlus den anonymen Zugriff auf Systemprotokolle erlauben. Bei Fehlern das Senden eines Fehlerberichts mit Protokollen erlauben. Die Protokolle werden nur für die Systemfehler-Analyse und für Verbesserungen der Stabilität verwendet</string>
-    <string name="oneplus_system_stability_title">Systemstabilitätsprogramm (System Stability Program)</string>
+    <string name="oneplus_system_stability_title">Systemstabilitätsprogramm</string>
     <string name="oneplus_system_vibrate">Systemvibration</string>
     <string name="oneplus_theme_accent_color">Akzentfarbe</string>
     <string name="oneplus_theme_accent_color_customization">ANPASSUNG</string>
@@ -4184,7 +4192,7 @@ Hinweis:
     <string name="oneplus_theme_accent_color_select">Akzentfarbe auswählen</string>
     <string name="oneplus_theme_apply_summary">Nach Anwenden dieses Themas werden Ihre Anpassungsoptionen überschrieben</string>
     <string name="oneplus_theme_apply_title">Möchten Sie dieses Thema anwenden?</string>
-    <string name="oneplus_theme_clock">Uhr-Stil</string>
+    <string name="oneplus_theme_clock">Uhr auf dem Inaktivitätsdisplay</string>
     <string name="oneplus_theme_clock_snake_action">INAKTIVITÄTSDISPLAY AKTIVIEREN</string>
     <string name="oneplus_theme_clock_snake_tip">Diese Funktion ist verfügbar, wenn das Inaktivitätsdisplay aktiviert ist</string>
     <string name="oneplus_theme_colorpicker_colorvalue">FARBCODE</string>
@@ -4198,7 +4206,7 @@ Hinweis:
     <string name="oneplus_theme_font">Schriftart</string>
     <string name="oneplus_theme_font_content">Die beste Technologie gemeinsam mit Ihnen und mit der Welt teilen</string>
     <string name="oneplus_theme_icon_pack">Icon Pack</string>
-    <string name="oneplus_theme_lock_screen_customization">ANPASSUNG DES SPERRBILDSCHIRMS</string>
+    <string name="oneplus_theme_lock_screen_customization">SPERRBILDSCHIRM UND INAKTIVITÄTSDISPLAY</string>
     <string name="oneplus_theme_preset">Voreingestelltes Thema</string>
     <string name="oneplus_theme_preset_color">Lebendige Töne</string>
     <string name="oneplus_theme_preset_dark">Nuancierter Dunkelton</string>
@@ -4216,7 +4224,7 @@ Hinweis:
     <string name="oneplus_theme_tone">Tönung</string>
     <string name="oneplus_theme_tone_effect_color">Farbig</string>
     <string name="oneplus_theme_tone_effect_dark">Dunkel</string>
-    <string name="oneplus_theme_tone_effect_light">Leicht</string>
+    <string name="oneplus_theme_tone_effect_light">Hell</string>
     <string name="oneplus_theme_tone_effect_title">Tönung auswählen</string>
     <string name="oneplus_theme_wallpaper">Hintergrundbilder</string>
     <string name="oneplus_three_screenshots_enable_summary">Mit drei Fingern über den Bildschirm streichen, um einen Screenshot zu machen</string>
@@ -4237,6 +4245,7 @@ Hinweis:
     <string name="oneplus_top_level_buttons_and_gestures_summary">Alert Slider, Navigationsleiste &amp; -gesten</string>
     <string name="oneplus_top_level_cloud_h2_summary">Daten mit Cloud synchronisieren, Mein Telefon finden</string>
     <string name="oneplus_top_level_cloud_o2_summary">Daten mit Cloud synchronisieren</string>
+    <string name="oneplus_top_level_connected_android_auto_summary">NFC, Android Auto, Streamen, tippen &amp; zahlen</string>
     <string name="oneplus_top_level_connected_summary">NFC, streamen, tippen &amp; zahlen</string>
     <string name="oneplus_top_level_display_summary">Statusleiste, Inaktivitätsdisplay, Lesekomfort, Lesemodus</string>
     <string name="oneplus_top_level_network_summary">SIM, Mobilfunknetz, Datennutzung, Hotspot</string>
@@ -4325,8 +4334,9 @@ Wird das Netzwerk als verborgen eingestellt, ändern sich die Einstellungen Ihre
     <string name="onplus_software_version_info">Softwareversion</string>
     <string name="onscreen_keyboard_settings_summary">Einstellungen der Bildschirmtastatur</string>
     <string name="op_advanced_settings">Erweitert</string>
+    <string name="op_already_know">Verstanden</string>
     <string name="op_android_mode_cannot_change_color_accent">Das Standard-Theme verwendet nur die Systemfarben</string>
-    <string name="op_aod_parsons_info_button">OK</string>
+    <string name="op_aod_parsons_info_button">Ok</string>
     <string name="op_aod_parsons_info_message">"Beim Öffnen wird ein Meisterstück erschaffen.
 Insight wurde gemeinsam von OnePlus und Studenten der Parsons School of Design entwickelt und verwandelt Zeit in einen sichtbare Farbbalken. Das Muster wird von der Datennutzung des Geräts erzeugt. Bei jedem Entsperren des Telefons entsteht eine Vertiefung auf dem Balken. Je länger das Telefon genutzt wird, desto länger wird die Vertiefung und umgekehrt. Durch diese Vertiefungen erhältst du einen Blick auf dein digitales Leben."</string>
     <string name="op_app_already_uninstalled">Deinstalliert</string>
@@ -4380,6 +4390,7 @@ Insight wurde gemeinsam von OnePlus und Studenten der Parsons School of Design e
     <string name="op_display_advanced_settings_summary_5">Wiederholrate</string>
     <string name="op_display_advanced_settings_summary_6">Bildschirmkalibrierung, Auflösung, Wiederholrate, Anzeigebereich der Frontkamera</string>
     <string name="op_display_advanced_settings_summary_7">Bildschirmkalibrierung, Wiederholrate, Anzeigebereich der Frontkamera</string>
+    <string name="op_display_advanced_settings_summary_8">Wiederholrate, Anzeigebereich der Frontkamera</string>
     <string name="op_display_graphics_enhancement_engine">VIDEOVERBESSERUNGSMODUL</string>
     <string name="op_display_motion_graphics_compensation">Grafische Glättung von Bewegungen</string>
     <string name="op_display_motion_graphics_compensation_summary">Das Erhöhen der Bildrate von Grafiken sorgt für flüssigere Video- und Spieleffekte</string>
@@ -4405,9 +4416,11 @@ Das Entsperren mit Fingerabdruck ist möglicherweise mit einem Drittanbieter-Bil
     <string name="op_global_drak_mode_not_full_support_list">Nicht unterstützte Apps</string>
     <string name="op_global_drak_mode_support_description">Nicht unterstützte Apps funktionieren im Modus Dunkel möglicherweise nicht ordnungsgemäß.</string>
     <string name="op_gps_off_warn_msg">Bitte aktiviere zunächst die Standortdienste.</string>
-    <string name="op_high_power_app_manager">Apps mit hohem Stromverbrauch</string>
+    <string name="op_high_power_app_manager">Apps mit hohem Leistungsverbrauch verwaltet</string>
     <string name="op_history_toggled_on_summary">Deine letzten Benachrichtigungen werden hier angezeigt.</string>
     <string name="op_keep_location_services">Lasse die Standortdienste aktiviert, um Ladestationen in der Nähe zu finden.</string>
+    <string name="op_lab_dc_still_on">TROTZDEM EINSCHALTEN</string>
+    <string name="op_lab_dc_warn_message">Wenn DC-Dimmen aktiviert, können in manchen Fällen ungleichmäßige oder ungewöhnliche Farben angezeigt werden. Möchtest du es wirklich aktivieren?</string>
     <string name="op_light_mode_title">Hell</string>
     <string name="op_linked_launch_summary">Die Verwaltung der Apps kann im Hintergrund ausgeführt werden</string>
     <string name="op_linked_launch_title">Auto-Start der Apps</string>
@@ -4423,6 +4436,9 @@ Das Entsperren mit Fingerabdruck ist möglicherweise mit einem Drittanbieter-Bil
     <string name="op_notification_history_summary">Letzte Benachrichtigungen anzeigen</string>
     <string name="op_oneplus_roaming_summary">Globale Internet-Zugangsdienste bereitstellen</string>
     <string name="op_oneplus_roaming_title">OnePlus Roaming</string>
+    <string name="op_powerkey_menu_cards_description">Wenn aktiviert, werden die Zahlungsart und die Boarding-Daten aus sichere Weise angezeigt</string>
+    <string name="op_powerkey_menu_device_controller_description">Aktivieren, um auf den Controller des jeweiligen Geräts zuzugreifen</string>
+    <string name="op_powerkey_menu_lock_display_title">Bildschirmanzeige sperren</string>
     <string name="op_primary_charm_purple_label">Purpur</string>
     <string name="op_primary_dark_green_label">Dunkelgrün</string>
     <string name="op_primary_default_label">Blau</string>
@@ -4452,6 +4468,9 @@ Das Entsperren mit Fingerabdruck ist möglicherweise mit einem Drittanbieter-Bil
     <string name="op_starwar_mode_cannot_change_color_accent">Das Thema Star Wars kann nur das System-Farbschema verwenden</string>
     <string name="op_starwar_mode_title">Star Wars</string>
     <string name="op_storage">Speicher &amp; Speicherplatz</string>
+    <string name="op_switch_record_info">Nach %2$s auf %1$s kopiert</string>
+    <string name="op_switch_record_none">Noch keine Datenmigrationsprotokolle vorhanden</string>
+    <string name="op_switch_record_title">Datenmigrationsprotokolle</string>
     <string name="op_system_dashboard_summary">Sprachen, Zeit, Zurücksetzen, Updates</string>
     <string name="op_tcp_timestamps_randomization_dialog_title">Zufällige Markierung für Tcp-Zeitstempel auswählen</string>
     <string name="op_tcp_timestamps_randomization_title">Zufällige Markierung für TCP-Zeitstempel</string>
@@ -4459,7 +4478,9 @@ Das Entsperren mit Fingerabdruck ist möglicherweise mit einem Drittanbieter-Bil
     <string name="op_theme_2__title">The Avengers</string>
     <string name="op_theme_3_cannot_change_color_accent">Das Thema \"McLaren\" kann nur das Farbthema des Systems verwenden.</string>
     <string name="op_theme_3_title">McLaren</string>
+    <string name="op_theme_clock_preview_title">Uhr auf dem Inaktivitätsdisplay</string>
     <string name="op_theme_entrance_summary">Bildschirmhintergründe, Akzentfarbe, Schriftart</string>
+    <string name="op_theme_lock_screen_customization">SPERRBILDSCHIRM UND INAKTIVITÄTSDISPLAY</string>
     <string name="op_theme_mode_title">Thema</string>
     <string name="op_use_cast">Streamen (Screencast) verwenden</string>
     <string name="op_user_manual_settings">Bedienungshandbuch</string>
@@ -4526,6 +4547,9 @@ Das Entsperren mit Fingerabdruck ist möglicherweise mit einem Drittanbieter-Bil
     <string name="permission_bar_chart_details">Alles im Dashboard ansehen</string>
     <string name="permission_bar_chart_empty_text">Keine Apps haben Berechtigungen verwendet</string>
     <string name="permission_bar_chart_title">Berechtigungsnutzungen (letzte 24 Stunden)</string>
+    <string name="permission_btn_text_denied">Beenden</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Berechtigungserklärung</string>
     <string name="permissions_label">Berechtigungen</string>
     <string name="permit_draw_overlay">Einblendung über anderen Apps zulassen</string>
     <string name="permit_manage_external_storage">Zugriff zum Verwalten aller Dateien zulassen</string>
@@ -5456,11 +5480,11 @@ Dies wird durch vertrauenswürdige Anmeldedaten ermöglicht, die auf deinem Ger�
     <string name="status_bar_settings_cast_title">Aufnahme</string>
     <string name="status_bar_settings_cellular_title">Mobile Daten</string>
     <string name="status_bar_settings_dnd_title">Bitte nicht stören</string>
-    <string name="status_bar_settings_headset_title">Headset</string>
+    <string name="status_bar_settings_headset_title">Kopfhörer</string>
     <string name="status_bar_settings_hotspot_title">Hotspot</string>
     <string name="status_bar_settings_network_speed_title">Netzwerkgeschwindigkeit anzeigen</string>
     <string name="status_bar_settings_time_title">Zeit</string>
-    <string name="status_bar_settings_wifi_title">Wi-Fi</string>
+    <string name="status_bar_settings_wifi_title">WLAN</string>
     <string name="status_bar_settings_work_title">Arbeitsprofil</string>
     <string name="status_bar_summary">Symbole der Statusleiste anpassen</string>
     <string name="status_bar_title">Statusleiste</string>
@@ -5974,6 +5998,10 @@ Mit dieser Funktion von Google kannst du deine Daten synchronisieren, um auf dei
     <string name="uninstallapps_toast_message">Apps wurden entfernt</string>
     <string name="uninstalling">Deinstallieren…</string>
     <string name="uninstalling_notification_channel">Laufende Deinstallationen</string>
+    <string name="units_one">GB/MB (automatischer Wechsel)</string>
+    <string name="units_three">Nur MB</string>
+    <string name="units_title">Einheiten anzeigen</string>
+    <string name="units_two">Nur GB</string>
     <string name="unknown">Unbekannt</string>
     <string name="unknown_app">Unbekannte App</string>
     <string name="unknown_unavailability_setting_summary">Einstellung nicht verfügbar</string>
@@ -6615,6 +6643,8 @@ Deine Routereinstellungen ändern sich durch das verborgene Netzwerk nicht."</st
     <string name="wifi_no_user_cert_warning">Zertifikat erforderlich.</string>
     <string name="wifi_not_in_range">Nicht in Reichweite</string>
     <string name="wifi_not_in_range_message">Netzwerk außer Reichweite</string>
+    <string name="wifi_notification">"WLAN-Benachrichtigung "</string>
+    <string name="wifi_notification_summary">Mich benachrichtigen, wenn WLAN verfügbar ist</string>
     <string name="wifi_notify_open_networks">Über öffentliche Netzwerke informieren</string>
     <string name="wifi_notify_open_networks_summary">Benachrichtigen, wenn ein leistungsstarkes öffentliches Netzwerk verfügbar ist</string>
     <string name="wifi_on_time">WLAN-Aktivzeit</string>
@@ -6663,7 +6693,7 @@ Sollen alle Apps nach WLANs suchen können?"</string>
     <string name="wifi_security">Sicherheit</string>
     <string name="wifi_security_dialog">Bei offener Sicherheit (Open Security) kann sich jedes Gerät mit Ihrem Mobile HotSpot verbinden und Ihre mobile Datenverbindung verwenden.</string>
     <string name="wifi_security_none">Keine</string>
-    <string name="wifi_security_open">Öffnen</string>
+    <string name="wifi_security_open">Offen</string>
     <string name="wifi_select_network">WLAN auswählen</string>
     <string name="wifi_setting_frequency_band_error">Es gab ein Problem beim Festlegen des Frequenzbandes.</string>
     <string name="wifi_setting_frequency_band_summary">Geben Sie den Frequenzbereich des Betriebs ein</string>
@@ -6711,7 +6741,7 @@ Sollen alle Apps nach WLANs suchen können?"</string>
     <string name="wifi_tether_custom_auto_turn_off_10_min_summary">Nach 10 Minuten Inaktivität</string>
     <string name="wifi_tether_custom_auto_turn_off_15_min_summary">Nach 15 Minuten Inaktivität</string>
     <string name="wifi_tether_custom_auto_turn_off_5_min_summary">Nach 5 Minuten Inaktivität</string>
-    <string name="wifi_tether_custom_auto_turn_off_always_summary">Immer an</string>
+    <string name="wifi_tether_custom_auto_turn_off_always_summary">Immer eingeschaltet</string>
     <string name="wifi_tether_enabled_subtext">%1$s ist aktiviert</string>
     <string name="wifi_tether_failed_subtext">Fehler beim mobilen WLAN-Hotspot</string>
     <string name="wifi_tether_passphrase_warning">Muss mindestens einen Großbuchstaben, einen Kleinbuchstaben, eine Zahl, ein Symbol enthalten</string>
@@ -6724,7 +6754,7 @@ Sollen alle Apps nach WLANs suchen können?"</string>
     <string name="wifi_tether_verizon_custom_auto_turn_off_30_min_summary">Nach 30 Minuten Inaktivität</string>
     <string name="wifi_tether_verizon_custom_auto_turn_off_5_min_summary">Nach 5 Minuten Inaktivität</string>
     <string name="wifi_tether_verizon_custom_auto_turn_off_60_min_summary">Nach 60 Minuten Inaktivität</string>
-    <string name="wifi_tether_verizon_custom_auto_turn_off_always_summary">Immer an</string>
+    <string name="wifi_tether_verizon_custom_auto_turn_off_always_summary">Immer eingeschaltet</string>
     <string name="wifi_time_remaining">Noch %1$s</string>
     <string name="wifi_turned_on_message">WLAN ist aktiviert</string>
     <string name="wifi_unchanged">(nicht geändert)</string>

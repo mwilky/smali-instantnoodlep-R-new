@@ -52,14 +52,9 @@
     <string name="abc_slice_updated">更新時間：%1$s</string>
     <string name="abc_slices_permission_request">「%1$s」想顯示「%2$s」的快訊</string>
     <string name="abc_toolbar_collapse_description">收合</string>
-    <string name="about_action_bar_title">關於</string>
-    <string name="about_app_version_text">版本 %s</string>
     <string name="about_phone_device_name_warning">您的裝置名稱會在手機的應用程式上顯示。當您連接藍牙裝置或設定 Wi-Fi 熱點時，其他人亦可能會看到您的裝置名稱。</string>
-    <string name="about_privacy_policy">隱私政策</string>
-    <string name="about_release_note_title">更新日誌:</string>
     <string name="about_settings">關於手機</string>
     <string name="about_settings_summary">查看法律資訊、狀態、軟件版本</string>
-    <string name="about_terms_service">用戶協議</string>
     <string name="accelerometer_summary_off">旋轉手機時自動改變顯示方向</string>
     <string name="accelerometer_summary_on">旋轉手機時自動改變顯示方向</string>
     <string name="accelerometer_title">自動旋轉螢幕</string>
@@ -1521,9 +1516,11 @@
     <string name="data_usage_enable_4g">4G 數據</string>
     <string name="data_usage_enable_mobile">流動數據</string>
     <string name="data_usage_forground_label">前景：</string>
+    <string name="data_usage_hotspot">移動熱點&amp;網絡共享</string>
     <string name="data_usage_label_background">背景</string>
     <string name="data_usage_label_foreground">前景</string>
     <string name="data_usage_left_title">剩餘流量</string>
+    <string name="data_usage_less_than_value">少於0.01</string>
     <string name="data_usage_limit_dialog_mobile">"手機的流動數據用量一達到設定的上限，便會關閉流動數據功能。
 
 由於此數據用量由您的手機計算，而流動網絡供應商的用量計算方式可能不同，因此建議您設定較保守的上限。"</string>
@@ -2488,7 +2485,6 @@
     <string name="load_networks_progress">正在搜尋…</string>
     <string name="loading_injected_setting_summary">正在載入…</string>
     <string name="loading_notification_apps">正在載入應用程式…</string>
-    <string name="loading_text">正在載入...</string>
     <string name="local_backup_password_summary_change">輕按即可變更或移除桌面電腦完整備份的密碼</string>
     <string name="local_backup_password_summary_none">桌面電腦的完整備份目前未受保護</string>
     <string name="local_backup_password_title">桌面電腦備份密碼</string>
@@ -3542,7 +3538,7 @@
     <string name="oneplus_font_style">字體</string>
     <string name="oneplus_font_switch">字體切換</string>
     <string name="oneplus_force_factory_reset_summary">由於開機密碼功能開啟，此選項必須勾選</string>
-    <string name="oneplus_forum_award_summary">6 年前，我們一起從社群出發。正是你們，提供了改進產品的寶貴建言，才使得 OnePlus 越來越好。謝謝你，加油。而繼續努力，則是我們表達謝意的最好方式。</string>
+    <string name="oneplus_forum_award_summary">7 年前，我們一起從社群出發。正是你們，提供了改進產品的寶貴建言，才使得 OnePlus 越來越好。謝謝你，加油。而繼續努力，則是我們表達謝意的最好方式。</string>
     <string name="oneplus_forum_award_title">功勳牆</string>
     <string name="oneplus_front_camera_app_display_fullscreen_summary">當應用內容被攝像頭頂部區域遮擋時，請切換到預設模式</string>
     <string name="oneplus_front_camera_display_choose_title">選擇攝像頭區域顯示方式</string>
@@ -3749,7 +3745,7 @@
     <string name="oneplus_multi_app_init_failed_for_more_users">開啟超過5個使用者後，無法開啟應用程式雙開。請刪除使用者後再試。</string>
     <string name="oneplus_multi_app_init_succeeded">已成功開啟雙開%1$s</string>
     <string name="oneplus_multitasking_clean_way">多任務清除方式</string>
-    <string name="oneplus_music_control_des">" 用兩根手指描繪 "<strong>||</strong>"，即可播放音樂。描繪 
+    <string name="oneplus_music_control_des">" 用兩根手指描繪 ‖，即可播放音樂。描繪 
 "<strong>&lt;</strong> 或 <strong>></strong>，即可轉到上一首或下一首曲目。</string>
     <string name="oneplus_music_control_title">音樂控制</string>
     <string name="oneplus_must_reset">一定清除</string>
@@ -4178,7 +4174,7 @@
     <string name="oneplus_theme_accent_color_select">選擇輔色</string>
     <string name="oneplus_theme_apply_summary">應用該主題后，你所做的客制化設定將會被全部覆蓋</string>
     <string name="oneplus_theme_apply_title">要應用該主題嗎？</string>
-    <string name="oneplus_theme_clock">時鐘樣式</string>
+    <string name="oneplus_theme_clock">息屏時鐘</string>
     <string name="oneplus_theme_clock_snake_action">去開啟</string>
     <string name="oneplus_theme_clock_snake_tip">此功能在啟用息屏顯示後即可使用</string>
     <string name="oneplus_theme_colorpicker_colorvalue">色碼</string>
@@ -4193,7 +4189,7 @@
     <string name="oneplus_theme_font_content">與世界分享品質科技</string>
     <string name="oneplus_theme_font_title">不將就</string>
     <string name="oneplus_theme_icon_pack">應用程式圖示</string>
-    <string name="oneplus_theme_lock_screen_customization">鎖屏個性化</string>
+    <string name="oneplus_theme_lock_screen_customization">息屏樣式</string>
     <string name="oneplus_theme_preset">預設主題</string>
     <string name="oneplus_theme_preset_color">活潑</string>
     <string name="oneplus_theme_preset_dark">沉浸</string>
@@ -4451,7 +4447,7 @@ OnePlus 與知名設計學院 Parsons School of Design 的學生，一起設計�
     <string name="op_global_drak_mode_apps_manage">暗色模式應用程式管理</string>
     <string name="op_global_drak_mode_full_support_list">已完全適配的應用程式</string>
     <string name="op_global_drak_mode_not_full_support_list">未完全適配的應用程式</string>
-    <string name="op_global_drak_mode_support_description">未完全適配的應用程式，在暗色模式下無法呈現預期的效果</string>
+    <string name="op_global_drak_mode_support_description">未完全適配的應用程式，在暗色模式下可能無法呈現預期的效果</string>
     <string name="op_high_power_app_manager">高耗電應用管理</string>
     <string name="op_lab_dc_still_on">仍要開啟</string>
     <string name="op_lab_dc_warn_message">開啟 DC 調光，在某些情況下可能存在顯示顏色不均勻和異常，確認要開啟嗎？</string>
@@ -4538,7 +4534,10 @@ OnePlus 與知名設計學院 Parsons School of Design 的學生，一起設計�
     <string name="op_theme_2__title">復仇者聯盟</string>
     <string name="op_theme_3_cannot_change_color_accent">麥拿侖主題下只能使用系統色</string>
     <string name="op_theme_3_title">麥拿侖</string>
+    <string name="op_theme_canvas_preview_title">繪影</string>
+    <string name="op_theme_clock_preview_title">息屏時鐘</string>
     <string name="op_theme_entrance_summary">牆紙、強調色、字體</string>
+    <string name="op_theme_lock_screen_customization">息屏樣式</string>
     <string name="op_theme_mode_title">主題模式</string>
     <string name="op_use_cast">使用投射螢幕</string>
     <string name="op_user_manual_settings">用戶手冊</string>
@@ -5965,6 +5964,10 @@ PIN 碼可能不正確。"</string>
     <string name="uninstall_update_title">解除安裝更新</string>
     <string name="uninstalling">解除安裝中…</string>
     <string name="uninstalling_notification_channel">正在執行的解除安裝操作</string>
+    <string name="units_one">GB/MB（自動變化）</string>
+    <string name="units_three">僅MB</string>
+    <string name="units_title">顯示單位</string>
+    <string name="units_two">僅GB</string>
     <string name="unknown">未知</string>
     <string name="unknown_app">不明應用程式</string>
     <string name="unknown_unavailability_setting_summary">無法變更設定</string>

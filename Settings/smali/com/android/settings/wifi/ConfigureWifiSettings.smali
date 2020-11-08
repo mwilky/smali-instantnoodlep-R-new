@@ -8,7 +8,11 @@
 
 
 # instance fields
+.field private mShowWifiPopUp:Landroidx/preference/SwitchPreference;
+
 .field private mUseOpenWifiPreferenceController:Lcom/android/settings/wifi/UseOpenWifiPreferenceController;
+
+.field private mWifiNotification:Landroidx/preference/SwitchPreference;
 
 .field private mWifiWakeupPreferenceController:Lcom/android/settings/wifi/WifiWakeupPreferenceController;
 
@@ -228,4 +232,290 @@
     invoke-virtual {p1, p0}, Lcom/android/settings/wifi/UseOpenWifiPreferenceController;->setFragment(Landroidx/fragment/app/Fragment;)V
 
     return-void
+.end method
+
+.method public onCreate(Landroid/os/Bundle;)V
+    .locals 5
+
+    invoke-super {p0, p1}, Lcom/android/settings/dashboard/DashboardFragment;->onCreate(Landroid/os/Bundle;)V
+
+    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isUsvMode()Z
+
+    move-result p1
+
+    const-string/jumbo v0, "wifi_notification"
+
+    const-string v1, "show_wifi_popup"
+
+    const/4 v2, 0x0
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    const-string v3, "WifiSettingsPrefsFile"
+
+    invoke-virtual {p1, v3, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object p1
+
+    invoke-virtual {p0, v1}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/preference/SwitchPreference;
+
+    iput-object v1, p0, Lcom/android/settings/wifi/ConfigureWifiSettings;->mShowWifiPopUp:Landroidx/preference/SwitchPreference;
+
+    const-string v1, "show_wifi_popup_enabled"
+
+    invoke-interface {p1, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v1
+
+    const-string v3, "show_wifi_popup_cicked"
+
+    invoke-interface {p1, v3, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v3
+
+    const/4 v4, 0x1
+
+    if-eqz v3, :cond_1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/android/settings/wifi/ConfigureWifiSettings;->mShowWifiPopUp:Landroidx/preference/SwitchPreference;
+
+    invoke-virtual {v1, v4}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v1, p0, Lcom/android/settings/wifi/ConfigureWifiSettings;->mShowWifiPopUp:Landroidx/preference/SwitchPreference;
+
+    invoke-virtual {v1, v2}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+
+    :cond_1
+    :goto_0
+    invoke-virtual {p0, v0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/preference/SwitchPreference;
+
+    iput-object v0, p0, Lcom/android/settings/wifi/ConfigureWifiSettings;->mWifiNotification:Landroidx/preference/SwitchPreference;
+
+    const-string/jumbo v0, "wifi_notification_enabled"
+
+    invoke-interface {p1, v0, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    const-string/jumbo v1, "wifi_notification_Cicked"
+
+    invoke-interface {p1, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    if-eqz v0, :cond_2
+
+    iget-object p0, p0, Lcom/android/settings/wifi/ConfigureWifiSettings;->mWifiNotification:Landroidx/preference/SwitchPreference;
+
+    invoke-virtual {p0, v4}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+
+    goto :goto_1
+
+    :cond_2
+    iget-object p0, p0, Lcom/android/settings/wifi/ConfigureWifiSettings;->mWifiNotification:Landroidx/preference/SwitchPreference;
+
+    invoke-virtual {p0, v2}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+
+    goto :goto_1
+
+    :cond_3
+    invoke-virtual {p0, v1}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object p1
+
+    check-cast p1, Landroidx/preference/SwitchPreference;
+
+    iput-object p1, p0, Lcom/android/settings/wifi/ConfigureWifiSettings;->mShowWifiPopUp:Landroidx/preference/SwitchPreference;
+
+    if-eqz p1, :cond_4
+
+    invoke-virtual {p1, v2}, Landroidx/preference/Preference;->setVisible(Z)V
+
+    invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
+
+    move-result-object p1
+
+    iget-object v1, p0, Lcom/android/settings/wifi/ConfigureWifiSettings;->mShowWifiPopUp:Landroidx/preference/SwitchPreference;
+
+    invoke-virtual {p1, v1}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
+
+    :cond_4
+    invoke-virtual {p0, v0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object p1
+
+    check-cast p1, Landroidx/preference/SwitchPreference;
+
+    iput-object p1, p0, Lcom/android/settings/wifi/ConfigureWifiSettings;->mWifiNotification:Landroidx/preference/SwitchPreference;
+
+    if-eqz p1, :cond_5
+
+    invoke-virtual {p1, v2}, Landroidx/preference/Preference;->setVisible(Z)V
+
+    invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
+
+    move-result-object p1
+
+    iget-object p0, p0, Lcom/android/settings/wifi/ConfigureWifiSettings;->mWifiNotification:Landroidx/preference/SwitchPreference;
+
+    invoke-virtual {p1, p0}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
+
+    :cond_5
+    :goto_1
+    return-void
+.end method
+
+.method public onPreferenceTreeClick(Landroidx/preference/Preference;)Z
+    .locals 4
+
+    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isUsvMode()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    const-string v2, "WifiSettingsPrefsFile"
+
+    invoke-virtual {v0, v2, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/settings/wifi/ConfigureWifiSettings;->mShowWifiPopUp:Landroidx/preference/SwitchPreference;
+
+    const/4 v2, 0x1
+
+    if-ne p1, v1, :cond_1
+
+    const-string v1, "show_wifi_popup_cicked"
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    iget-object v1, p0, Lcom/android/settings/wifi/ConfigureWifiSettings;->mShowWifiPopUp:Landroidx/preference/SwitchPreference;
+
+    invoke-virtual {v1}, Landroidx/preference/TwoStatePreference;->isChecked()Z
+
+    move-result v1
+
+    const-string v3, "show_wifi_popup_enabled"
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/android/settings/wifi/ConfigureWifiSettings;->mShowWifiPopUp:Landroidx/preference/SwitchPreference;
+
+    invoke-virtual {v1}, Landroidx/preference/TwoStatePreference;->isChecked()Z
+
+    move-result v1
+
+    invoke-interface {v0, v3, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v1, p0, Lcom/android/settings/wifi/ConfigureWifiSettings;->mShowWifiPopUp:Landroidx/preference/SwitchPreference;
+
+    invoke-virtual {v1}, Landroidx/preference/TwoStatePreference;->isChecked()Z
+
+    move-result v1
+
+    invoke-interface {v0, v3, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    :goto_0
+    iget-object v1, p0, Lcom/android/settings/wifi/ConfigureWifiSettings;->mShowWifiPopUp:Landroidx/preference/SwitchPreference;
+
+    invoke-virtual {v1}, Landroidx/preference/TwoStatePreference;->isChecked()Z
+
+    move-result v3
+
+    invoke-virtual {v1, v3}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+
+    :cond_1
+    iget-object v1, p0, Lcom/android/settings/wifi/ConfigureWifiSettings;->mWifiNotification:Landroidx/preference/SwitchPreference;
+
+    if-ne p1, v1, :cond_3
+
+    const-string/jumbo v1, "wifi_notification_Cicked"
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    iget-object v1, p0, Lcom/android/settings/wifi/ConfigureWifiSettings;->mWifiNotification:Landroidx/preference/SwitchPreference;
+
+    invoke-virtual {v1}, Landroidx/preference/TwoStatePreference;->isChecked()Z
+
+    move-result v1
+
+    const-string/jumbo v2, "wifi_notification_enabled"
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lcom/android/settings/wifi/ConfigureWifiSettings;->mWifiNotification:Landroidx/preference/SwitchPreference;
+
+    invoke-virtual {v1}, Landroidx/preference/TwoStatePreference;->isChecked()Z
+
+    move-result v1
+
+    invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    goto :goto_1
+
+    :cond_2
+    iget-object v1, p0, Lcom/android/settings/wifi/ConfigureWifiSettings;->mWifiNotification:Landroidx/preference/SwitchPreference;
+
+    invoke-virtual {v1}, Landroidx/preference/TwoStatePreference;->isChecked()Z
+
+    move-result v1
+
+    invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    :goto_1
+    iget-object v0, p0, Lcom/android/settings/wifi/ConfigureWifiSettings;->mWifiNotification:Landroidx/preference/SwitchPreference;
+
+    invoke-virtual {v0}, Landroidx/preference/TwoStatePreference;->isChecked()Z
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+
+    :cond_3
+    invoke-super {p0, p1}, Lcom/android/settings/dashboard/DashboardFragment;->onPreferenceTreeClick(Landroidx/preference/Preference;)Z
+
+    move-result p0
+
+    return p0
 .end method

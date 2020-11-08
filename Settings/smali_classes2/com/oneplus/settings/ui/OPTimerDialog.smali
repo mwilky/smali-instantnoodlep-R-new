@@ -23,7 +23,7 @@
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
-    .locals 3
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -61,31 +61,17 @@
 
     invoke-virtual {v0}, Landroidx/appcompat/app/AlertDialog$Builder;->create()Landroidx/appcompat/app/AlertDialog;
 
-    move-result-object v0
+    move-result-object p1
 
-    iput-object v0, p0, Lcom/oneplus/settings/ui/OPTimerDialog;->mDialog:Landroidx/appcompat/app/AlertDialog;
+    iput-object p1, p0, Lcom/oneplus/settings/ui/OPTimerDialog;->mDialog:Landroidx/appcompat/app/AlertDialog;
 
-    invoke-virtual {v0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    const/16 v2, 0x7d3
-
-    invoke-virtual {v0, v2}, Landroid/view/Window;->setType(I)V
-
-    const-string v0, "power"
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object p1
 
-    check-cast p1, Landroid/os/PowerManager;
+    const/16 v0, 0x7d3
 
-    invoke-virtual {p1}, Landroid/os/PowerManager;->isScreenOn()Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
+    invoke-virtual {p1, v0}, Landroid/view/Window;->setType(I)V
 
     iget-object p1, p0, Lcom/oneplus/settings/ui/OPTimerDialog;->mDialog:Landroidx/appcompat/app/AlertDialog;
 
@@ -97,7 +83,6 @@
 
     invoke-virtual {p1, v0}, Landroid/view/Window;->setType(I)V
 
-    :cond_0
     iget-object p0, p0, Lcom/oneplus/settings/ui/OPTimerDialog;->mDialog:Landroidx/appcompat/app/AlertDialog;
 
     invoke-virtual {p0, v1}, Landroid/app/Dialog;->setCanceledOnTouchOutside(Z)V

@@ -87,24 +87,24 @@
     return-void
 .end method
 
-.method private isGrayList(I)Z
-    .locals 0
+.method public static isGrayList(I)Z
+    .locals 1
 
-    const/16 p0, 0x69
+    const/16 v0, 0x69
 
-    if-eq p1, p0, :cond_1
+    if-eq p0, v0, :cond_1
 
-    const/16 p0, 0x6c
+    const/16 v0, 0x6c
 
-    if-eq p1, p0, :cond_1
+    if-eq p0, v0, :cond_1
 
-    const/16 p0, 0x66
+    const/16 v0, 0x66
 
-    if-eq p1, p0, :cond_1
+    if-eq p0, v0, :cond_1
 
-    const/16 p0, 0x65
+    const/16 v0, 0x65
 
-    if-ne p1, p0, :cond_0
+    if-ne p0, v0, :cond_0
 
     goto :goto_0
 
@@ -223,7 +223,7 @@
 .end method
 
 .method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 7
+    .locals 6
 
     iget-object p3, p0, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter;->mAppList:Ljava/util/List;
 
@@ -355,7 +355,7 @@
 
     move-result v2
 
-    invoke-direct {p0, v2}, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter;->isGrayList(I)Z
+    invoke-static {v2}, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter;->isGrayList(I)Z
 
     move-result v2
 
@@ -383,7 +383,7 @@
 
     move-result v2
 
-    invoke-direct {p0, v2}, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter;->isGrayList(I)Z
+    invoke-static {v2}, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter;->isGrayList(I)Z
 
     move-result v2
 
@@ -403,7 +403,7 @@
 
     move-result v2
 
-    invoke-direct {p0, v2}, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter;->isGrayList(I)Z
+    invoke-static {v2}, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter;->isGrayList(I)Z
 
     move-result v2
 
@@ -467,9 +467,7 @@
 
     iget-object v2, v1, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter$ItemViewHolder;->appIconIv:Landroid/widget/ImageView;
 
-    const/4 v6, 0x4
-
-    invoke-virtual {v2, v6}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-virtual {v2, v4}, Landroid/widget/ImageView;->setVisibility(I)V
 
     iget-object v2, v1, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter$ItemViewHolder;->switchBt:Landroid/widget/Switch;
 
@@ -480,6 +478,12 @@
     sget v4, Lcom/android/settings/R$string;->oneplus_memc_support_no_apps:I
 
     invoke-virtual {v2, v4}, Landroid/widget/TextView;->setText(I)V
+
+    iget-object v2, v1, Lcom/oneplus/settings/darkmode/OPGloblaDarkModeAdapter$ItemViewHolder;->appNameTv:Landroid/widget/TextView;
+
+    sget v4, Lcom/android/settings/R$color;->op_control_text_color_hint_default:I
+
+    invoke-virtual {v2, v4}, Landroid/widget/TextView;->setTextColor(I)V
 
     goto :goto_2
 

@@ -65,7 +65,7 @@
 .end method
 
 .method public getAvailabilityStatus()I
-    .locals 1
+    .locals 2
 
     iget-object p0, p0, Lcom/android/settings/applications/specialaccess/interactacrossprofiles/InteractAcrossProfilesController;->mUserManager:Landroid/os/UserManager;
 
@@ -96,9 +96,15 @@
 
     invoke-virtual {v0}, Landroid/content/pm/UserInfo;->isManagedProfile()Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
+
+    iget v0, v0, Landroid/content/pm/UserInfo;->id:I
+
+    const/16 v1, 0x3e7
+
+    if-eq v0, v1, :cond_0
 
     const/4 p0, 0x0
 

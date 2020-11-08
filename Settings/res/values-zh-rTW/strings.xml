@@ -1524,9 +1524,11 @@
     <string name="data_usage_enable_4g">4G 數據</string>
     <string name="data_usage_enable_mobile">行動數據</string>
     <string name="data_usage_forground_label">前景：</string>
+    <string name="data_usage_hotspot">移動熱點&amp;網絡共享</string>
     <string name="data_usage_label_background">背景</string>
     <string name="data_usage_label_foreground">前景</string>
     <string name="data_usage_left_title">剩餘流量</string>
+    <string name="data_usage_less_than_value">少於0.01</string>
     <string name="data_usage_limit_dialog_mobile">"當行動數據用量達到你設定的上限時，手機將關閉行動數據功能。
 
 由於數據用量是由手機自動計算，而電信業者對用量的計算方式可能有所不同，因此建議你設定保守的上限值。"</string>
@@ -3546,7 +3548,7 @@
     <string name="oneplus_font_style">字體</string>
     <string name="oneplus_font_switch">字體切換</string>
     <string name="oneplus_force_factory_reset_summary">由於開機密碼功能開啟，此選項必須勾選</string>
-    <string name="oneplus_forum_award_summary">6 年前，我們一起從社群出發。正是你們，提供了改進產品的寶貴建言，才使得 OnePlus 越來越好。謝謝你，加油。而繼續努力，則是我們表達謝意的最好方式。</string>
+    <string name="oneplus_forum_award_summary">7 年前，我們一起從社群出發。正是你們，提供了改進產品的寶貴建言，才使得 OnePlus 越來越好。謝謝你，加油。而繼續努力，則是我們表達謝意的最好方式。</string>
     <string name="oneplus_forum_award_title">功勳牆</string>
     <string name="oneplus_front_camera_app_display_fullscreen_summary">當應用內容被攝像頭頂部區域遮擋時，請切換到預設模式</string>
     <string name="oneplus_front_camera_display_choose_title">選擇攝像頭區域顯示方式</string>
@@ -3753,7 +3755,7 @@
     <string name="oneplus_multi_app_init_failed_for_more_users">開啟超過5個使用者後，無法開啟應用程式雙開。請刪除使用者後再試。</string>
     <string name="oneplus_multi_app_init_succeeded">已成功開啟雙開%1$s</string>
     <string name="oneplus_multitasking_clean_way">多任務清除方式</string>
-    <string name="oneplus_music_control_des">" 用兩根手指描繪 "<strong>||</strong>"，即可播放音樂。描繪 
+    <string name="oneplus_music_control_des">" 用兩根手指描繪 ‖，即可播放音樂。描繪 
 "<strong>&lt;</strong> 或 <strong>></strong>，即可轉到上一首或下一首曲目。</string>
     <string name="oneplus_music_control_title">音樂控制</string>
     <string name="oneplus_must_reset">一定清除</string>
@@ -4184,7 +4186,7 @@
     <string name="oneplus_theme_accent_color_select">選擇輔色</string>
     <string name="oneplus_theme_apply_summary">應用該主題后，你所做的客制化設定將會被全部覆蓋</string>
     <string name="oneplus_theme_apply_title">要應用該主題嗎？</string>
-    <string name="oneplus_theme_clock">時鐘樣式</string>
+    <string name="oneplus_theme_clock">息屏時鐘</string>
     <string name="oneplus_theme_clock_snake_action">去開啟</string>
     <string name="oneplus_theme_clock_snake_tip">此功能在啟用息屏顯示後即可使用</string>
     <string name="oneplus_theme_colorpicker_colorvalue">色碼</string>
@@ -4199,7 +4201,7 @@
     <string name="oneplus_theme_font_content">與世界分享品質科技</string>
     <string name="oneplus_theme_font_title">不將就</string>
     <string name="oneplus_theme_icon_pack">應用程式圖示</string>
-    <string name="oneplus_theme_lock_screen_customization">鎖屏個性化</string>
+    <string name="oneplus_theme_lock_screen_customization">息屏樣式</string>
     <string name="oneplus_theme_preset">預設主題</string>
     <string name="oneplus_theme_preset_color">活潑</string>
     <string name="oneplus_theme_preset_dark">沉浸</string>
@@ -4458,7 +4460,7 @@ OnePlus 與知名設計學院 Parsons School of Design 的學生，一起設計�
     <string name="op_global_drak_mode_apps_manage">深色模式應用程式管理</string>
     <string name="op_global_drak_mode_full_support_list">已完全適配的應用程式</string>
     <string name="op_global_drak_mode_not_full_support_list">未完全適配的應用程式</string>
-    <string name="op_global_drak_mode_support_description">未完全適配的應用程式，在深色模式下無法呈現預期的效果</string>
+    <string name="op_global_drak_mode_support_description">未完全適配的應用程式，在深色模式下可能無法呈現預期的效果</string>
     <string name="op_high_power_app_manager">高耗電應用管理</string>
     <string name="op_lab_dc_still_on">仍要開啟</string>
     <string name="op_lab_dc_warn_message">開啟 DC 調光，在某些情況下可能存在顯示顏色不均勻和異常，確認要開啟嗎？</string>
@@ -4545,7 +4547,10 @@ OnePlus 與知名設計學院 Parsons School of Design 的學生，一起設計�
     <string name="op_theme_2__title">復仇者聯盟</string>
     <string name="op_theme_3_cannot_change_color_accent">麥拉倫主題下只能使用系統色</string>
     <string name="op_theme_3_title">麥拉倫</string>
+    <string name="op_theme_canvas_preview_title">繪影</string>
+    <string name="op_theme_clock_preview_title">息屏時鐘</string>
     <string name="op_theme_entrance_summary">桌布、強調色、字體</string>
+    <string name="op_theme_lock_screen_customization">息屏樣式</string>
     <string name="op_theme_mode_title">主題模式</string>
     <string name="op_use_cast">使用投射螢幕</string>
     <string name="op_user_manual_settings">用戶手冊</string>
@@ -4609,6 +4614,9 @@ OnePlus 與知名設計學院 Parsons School of Design 的學生，一起設計�
     <string name="permission_bar_chart_details">在資訊主頁查看所有詳細資料</string>
     <string name="permission_bar_chart_empty_text">0 個已使用權限的應用程式</string>
     <string name="permission_bar_chart_title">過去 24 小時內各權限的使用頻率</string>
+    <string name="permission_btn_text_denied">退出</string>
+    <string name="permission_btn_text_grant">同意並繼續</string>
+    <string name="permission_dialog_title">權限聲明</string>
     <string name="permissions_label">權限</string>
     <string name="permit_draw_overlay">允許顯示在其他應用程式上層</string>
     <string name="permit_manage_external_storage">授予管理所有檔案的權限</string>
@@ -5991,6 +5999,10 @@ PIN 碼可能不正確。"</string>
     <string name="uninstall_update_title">解除安裝更新</string>
     <string name="uninstalling">解除安裝中…</string>
     <string name="uninstalling_notification_channel">執行中的解除安裝作業</string>
+    <string name="units_one">GB/MB（自動變化）</string>
+    <string name="units_three">僅MB</string>
+    <string name="units_title">顯示單位</string>
+    <string name="units_two">僅GB</string>
     <string name="unknown">不明</string>
     <string name="unknown_app">不明的應用程式</string>
     <string name="unknown_unavailability_setting_summary">無法變更設定</string>

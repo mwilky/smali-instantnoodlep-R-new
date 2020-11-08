@@ -39,7 +39,7 @@
 
     iget-object v0, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate$3;->this$0:Lcom/google/android/material/picker/DatePickerCalendarDelegate;
 
-    invoke-static {v0}, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->access$300(Lcom/google/android/material/picker/DatePickerCalendarDelegate;)V
+    invoke-static {v0}, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->access$100(Lcom/google/android/material/picker/DatePickerCalendarDelegate;)V
 
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
@@ -53,7 +53,7 @@
 
     const/4 p1, 0x1
 
-    invoke-static {p0, p1}, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->access$100(Lcom/google/android/material/picker/DatePickerCalendarDelegate;I)V
+    invoke-static {p0, p1}, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->access$200(Lcom/google/android/material/picker/DatePickerCalendarDelegate;I)V
 
     goto :goto_0
 
@@ -70,7 +70,7 @@
 
     const/4 p1, 0x0
 
-    invoke-static {p0, p1}, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->access$100(Lcom/google/android/material/picker/DatePickerCalendarDelegate;I)V
+    invoke-static {p0, p1}, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->access$200(Lcom/google/android/material/picker/DatePickerCalendarDelegate;I)V
 
     :cond_1
     :goto_0

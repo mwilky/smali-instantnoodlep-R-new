@@ -1272,6 +1272,7 @@ This affects other apps or conversations that are allowed to bubble."</string>
     <string name="color_temperature">Cool colour temperature</string>
     <string name="color_temperature_desc">Use cooler display colours</string>
     <string name="color_temperature_toast">To apply colour change, turn off screen</string>
+    <string name="color_temperture">Display white balance</string>
     <string name="color_title">Colour</string>
     <string name="color_unspecified">Default</string>
     <string name="color_white">White</string>
@@ -1585,7 +1586,7 @@ Since data usage is measured by your phone, and your operator may account for us
     <string name="data_usage_metered_yes">Metered</string>
     <string name="data_usage_ota">System updates</string>
     <string name="data_usage_other_apps">Other apps included in usage</string>
-    <string name="data_usage_package_set">Billing Cycle</string>
+    <string name="data_usage_package_set">Billing cycle</string>
     <string name="data_usage_pick_cycle_day">Day of month to reset data usage cycle:</string>
     <string name="data_usage_rank_sim">Mobile Data Usage</string>
     <string name="data_usage_rank_wifi">Wi-Fi Data Usage</string>
@@ -3362,7 +3363,7 @@ This will also give the app the ability to turn Do Not Disturb on or off and cha
     <string name="oneplus_auto_open_specified_app">Automatically open the specified app</string>
     <string name="oneplus_auto_play">Auto Play</string>
     <string name="oneplus_auto_play_summary">Automatically resume music playback when connecting earphones</string>
-    <string name="oneplus_auto_switch_mobile_data">Data usage</string>
+    <string name="oneplus_auto_switch_mobile_data">Intelligent network connection</string>
     <string name="oneplus_auto_switch_mobile_data_summary">Use both Wi‑Fi and mobile data when connection is poor for improved stability</string>
     <string name="oneplus_auto_turn_on_apps">Automatically turn on for these apps</string>
     <string name="oneplus_auto_turn_on_car_charger_info_o2">By setting the items above, you can activate do not disturb and launch your specified app every time the car charger is connected</string>
@@ -3371,7 +3372,7 @@ This will also give the app the ability to turn Do Not Disturb on or off and cha
     <string name="oneplus_available_keyboard_description">Installed keyboards enabled here will be added to the list of \"Available keyboards\"</string>
     <string name="oneplus_back_home">Home, Back</string>
     <string name="oneplus_back_home_o2">Back, Home</string>
-    <string name="oneplus_back_home_summary">Swipe up on Home button</string>
+    <string name="oneplus_back_home_summary">Swipe up on home button</string>
     <string name="oneplus_back_topic_theme_summary">Switch system theme automatically when back topic opens</string>
     <string name="oneplus_back_topic_theme_title">Back cover theme</string>
     <string name="oneplus_battery_menu_stats_total">View detailed usage</string>
@@ -3578,7 +3579,9 @@ Caution: face unlock is less secure than using a fingerprint or password"</strin
     <string name="oneplus_fingerprint_gesture_camera_summary">From the viewfinder screen, long press the fingerprint sensor to take a photo</string>
     <string name="oneplus_fingerprint_gesture_camera_title">Long press to take a photo</string>
     <string name="oneplus_fingerprint_gesture_settings_title">Fingerprint gesture</string>
+    <string name="oneplus_fingerprint_hardware_exception">Fingerprint hardware information is not accurate, please contact customer service</string>
     <string name="oneplus_fingerprint_longpress_for_quickpay_summary">Long press the fingerprint sensor to launch quick pay</string>
+    <string name="oneplus_fingerprint_not_adjustment">Fingerprint calibration data is not accurate, please contact customer service</string>
     <string name="oneplus_fingerprint_quickpay_lock_swtch_summary">Long press the fingerprint sensor to launch quick pay when the phone is locked</string>
     <string name="oneplus_fingerprint_sensor_longpress_for_quickpay_summary">Long press the fingerprint sensor to launch quick pay when the phone is unlocked</string>
     <string name="oneplus_fingerprint_settings_list_title">Fingerprint list</string>
@@ -3695,6 +3698,7 @@ To go to the home screen at any time, swipe up from the bottom center edge of th
     <string name="oneplus_google_services_title">Google related services</string>
     <string name="oneplus_google_tts">Google TTS voice data</string>
     <string name="oneplus_gps_using">is using GPS</string>
+    <string name="oneplus_green">Green</string>
     <string name="oneplus_h2_contributors">HydrogenOS Contributors</string>
     <string name="oneplus_hand_up_proximity_summary">Wake screen when you pick up the phone</string>
     <string name="oneplus_hand_up_proximity_title">Lift up display</string>
@@ -3770,6 +3774,7 @@ Note: your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_lockpattern_need_to_unlock_wrong">Try again</string>
     <string name="oneplus_lockpattern_too_many_failed_confirmation_attempts_header">Too many incorrect attempts!</string>
     <string name="oneplus_lockscreen_settings_title">Lock screen preferences</string>
+    <string name="oneplus_magenta">Magenta</string>
     <string name="oneplus_manage_virtual_keyboard">Manage keyboards</string>
     <string name="oneplus_max_shortcuts_tips">You can add up to 6 shortcuts</string>
     <string name="oneplus_media_ring_summary">Mute media volume</string>
@@ -3816,7 +3821,7 @@ Note: your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_night_mode_brightness">Brightness</string>
     <string name="oneplus_night_mode_brightness_strong">Darkest</string>
     <string name="oneplus_night_mode_color_temperature">Colour Temperature</string>
-    <string name="oneplus_night_mode_enabled_op">Night mode</string>
+    <string name="oneplus_night_mode_enabled_op">Night Mode</string>
     <string name="oneplus_night_mode_enabled_op_summary">Turn on Night Mode Manually</string>
     <string name="oneplus_night_mode_manual_open">Manual</string>
     <string name="oneplus_night_mode_open_tip">Please turn on vision comfort mode first</string>
@@ -4073,6 +4078,7 @@ Note: your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_search_keyword_theme_settings">Lock Screen Customisation, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, System Customisation, Accent Colour, Shape, Font, Tone, Icon Pack, Illuminating Light, Nuanced Dark, Vibrant Tints</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">Lock Screen Customisation, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, System Customisation, Accent Colour, Shape, Font, Tone, Icon Pack, Illuminating Light, Nuanced Dark, Vibrant Tints, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customisation, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, System Customisation, Accent Colour, Shape, Font, Tone, Icon Pack, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_must_have">LOCK SCREEN CUSTOMISATION, Wallpapers, Clock style, SYSTEM CUSTOMISATION, Accent colour, Shape, Tone, Icon pack, Illuminating light, Nuanced dark, Vibrant tints</string>
     <string name="oneplus_search_keyword_theme_settings_new">Lock Screen Customisation, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, System Customisation, Accent Colour, Shape, Font, Tone, Icon Pack</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">Lock Screen Customisation, Wallpapers, Clock Style, Fingerprint Animation, System Customisation, Accent Colour, Shape, Font, Tone, Icon Pack, Illuminating Light, Nuanced Dark, Vibrant Tints</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customisation, Wallpapers, Clock Style, Fingerprint Animation, System Customisation, Accent Colour, Shape, Font, Tone, Icon Pack</string>
@@ -4139,10 +4145,10 @@ Note:
     <string name="oneplus_silent_mode_on">Silent mode is on</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Calls and notifications will be silenced, except for alarms</string>
     <string name="oneplus_silent_mode_summary">Calls and notifications will be silenced, except for alarms</string>
-    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
+    <string name="oneplus_silent_notifications_status_bar">Hide silent notifications in status bar</string>
     <string name="oneplus_sim1_ringtone_switch">SIM card 1</string>
     <string name="oneplus_sim2_ringtone_switch">SIM card 2</string>
-    <string name="oneplus_simcard_title">Card</string>
+    <string name="oneplus_simcard_title">SIM</string>
     <string name="oneplus_sla_down_load_app_summary">Download acceleration will be unavailable while hotspot or Wi‑Fi direct is on</string>
     <string name="oneplus_sleep_standby_summary">"Optimise battery life (e.g. by disabling network connections) when you're asleep. This may make apps unable to receive notifications in a timely manner."</string>
     <string name="oneplus_sleep_standby_title">Sleep Standby Optimisation</string>
@@ -4168,6 +4174,8 @@ Note:
     <string name="oneplus_switch">OnePlus Switch</string>
     <string name="oneplus_switch_resolution_kill_process_confirm">Switch</string>
     <string name="oneplus_switch_resolution_kill_process_tips">Switching the resolution may cause some background apps to close. Are you sure you want to switch?</string>
+    <string name="oneplus_switch_sa_option">NSA + SA Mode</string>
+    <string name="oneplus_switch_sa_option_summary">"Automatically access NSA or SA network mode depending on phone carrier's 5G connection and settings. If disabled, access to only NSA network will be available."</string>
     <string name="oneplus_switch_screen_lock_type">Switching the screen lock type, please wait...</string>
     <string name="oneplus_system_data_summary">Including accounts info, contacts, apps data</string>
     <string name="oneplus_system_data_title">System data</string>
@@ -4185,7 +4193,7 @@ Note:
     <string name="oneplus_theme_accent_color_select">Select Accent Colour</string>
     <string name="oneplus_theme_apply_summary">After applying this theme, your customisation options will be overridden</string>
     <string name="oneplus_theme_apply_title">Do you want to apply this theme?</string>
-    <string name="oneplus_theme_clock">Clock Style</string>
+    <string name="oneplus_theme_clock">Clock on ambient display</string>
     <string name="oneplus_theme_clock_snake_action">TURN ON AMBIENT DISPLAY</string>
     <string name="oneplus_theme_clock_snake_tip">This feature will be available when ambient display is on</string>
     <string name="oneplus_theme_colorpicker_colorvalue">COLOUR CODE</string>
@@ -4199,7 +4207,7 @@ Note:
     <string name="oneplus_theme_font">Font</string>
     <string name="oneplus_theme_font_content">Share the best technology with the world, hand-in-hand with you</string>
     <string name="oneplus_theme_icon_pack">Icon Pack</string>
-    <string name="oneplus_theme_lock_screen_customization">LOCK SCREEN CUSTOMISATION</string>
+    <string name="oneplus_theme_lock_screen_customization">LOCK SCREEN AND AMBIENT DISPLAY</string>
     <string name="oneplus_theme_preset">Preset Theme</string>
     <string name="oneplus_theme_preset_color">Vibrant Tints</string>
     <string name="oneplus_theme_preset_dark">Nuanced Dark</string>
@@ -4238,6 +4246,7 @@ Note:
     <string name="oneplus_top_level_buttons_and_gestures_summary">Alert slider, navigation bar &amp; gestures</string>
     <string name="oneplus_top_level_cloud_h2_summary">Sync data with cloud, find my phone</string>
     <string name="oneplus_top_level_cloud_o2_summary">Sync data with Cloud</string>
+    <string name="oneplus_top_level_connected_android_auto_summary">NFC, Android Auto, cast, tap &amp; pay</string>
     <string name="oneplus_top_level_connected_summary">NFC, cast, tap &amp; pay</string>
     <string name="oneplus_top_level_display_summary">Status bar, ambient display, vision comfort, reading mode</string>
     <string name="oneplus_top_level_network_summary">SIM, mobile network, data usage, hotspot</string>
@@ -4326,6 +4335,7 @@ Setting the network as hidden will not change your router settings."</string>
     <string name="onplus_software_version_info">Software version</string>
     <string name="onscreen_keyboard_settings_summary">On-screen keyboard settings</string>
     <string name="op_advanced_settings">Advanced</string>
+    <string name="op_already_know">Got It</string>
     <string name="op_android_mode_cannot_change_color_accent">Default theme can only use the system colour theme</string>
     <string name="op_aod_parsons_info_button">OK</string>
     <string name="op_aod_parsons_info_message">"When opened, a masterpiece is created.
@@ -4381,6 +4391,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_display_advanced_settings_summary_5">Refresh rate</string>
     <string name="op_display_advanced_settings_summary_6">Screen calibration, resolution, refresh rate, front camera display area</string>
     <string name="op_display_advanced_settings_summary_7">Screen calibration, refresh rate, front camera display area</string>
+    <string name="op_display_advanced_settings_summary_8">Refresh rate, front camera display area</string>
     <string name="op_display_graphics_enhancement_engine">VIDEO ENHANCEMENT ENGINE</string>
     <string name="op_display_motion_graphics_compensation">Motion graphics smoothing</string>
     <string name="op_display_motion_graphics_compensation_summary">Enhance the frame rate of graphics for smoother video and game effects</string>
@@ -4406,9 +4417,11 @@ Fingerprint unlock might be incompatible with third-party screen protectors.
     <string name="op_global_drak_mode_not_full_support_list">Unsupported apps</string>
     <string name="op_global_drak_mode_support_description">Apps that are not supported may not function appropriately in dark mode</string>
     <string name="op_gps_off_warn_msg">Please turn on location first</string>
-    <string name="op_high_power_app_manager">High power usage apps</string>
+    <string name="op_high_power_app_manager">Manage power-hungry apps</string>
     <string name="op_history_toggled_on_summary">Your recent notifications will appear here</string>
     <string name="op_keep_location_services">To find and track charging stations nearby, keep location services enabled</string>
+    <string name="op_lab_dc_still_on">STILL ON</string>
+    <string name="op_lab_dc_warn_message">When DC dimming is turned on, uneven or abnormal colours may be displayed in some cases. Are you sure you want it on?</string>
     <string name="op_light_mode_title">Light</string>
     <string name="op_linked_launch_summary">Manage background app launch</string>
     <string name="op_linked_launch_title">App auto-launch</string>
@@ -4424,6 +4437,9 @@ Fingerprint unlock might be incompatible with third-party screen protectors.
     <string name="op_notification_history_summary">Show recent notifications</string>
     <string name="op_oneplus_roaming_summary">Provide global Internet access services</string>
     <string name="op_oneplus_roaming_title">OnePlus Roaming</string>
+    <string name="op_powerkey_menu_cards_description">When enabled, the payment mode and boarding information will be displayed securely</string>
+    <string name="op_powerkey_menu_device_controller_description">Enable to access the controller of the related device</string>
+    <string name="op_powerkey_menu_lock_display_title">Lock screen display</string>
     <string name="op_primary_charm_purple_label">Deep Purple</string>
     <string name="op_primary_dark_green_label">Dark Green</string>
     <string name="op_primary_default_label">Blue</string>
@@ -4453,6 +4469,9 @@ Fingerprint unlock might be incompatible with third-party screen protectors.
     <string name="op_starwar_mode_cannot_change_color_accent">Star Wars theme can only use the system colour theme</string>
     <string name="op_starwar_mode_title">Star Wars</string>
     <string name="op_storage">Storage &amp; Memory</string>
+    <string name="op_switch_record_info">Copied to %2$s on %1$s</string>
+    <string name="op_switch_record_none">No data migration records yet</string>
+    <string name="op_switch_record_title">Data migration records</string>
     <string name="op_system_dashboard_summary">Languages, time, reset, updates</string>
     <string name="op_tcp_timestamps_randomization_dialog_title">Select TCP random timestamps flag</string>
     <string name="op_tcp_timestamps_randomization_title">TCP random timestamps flag</string>
@@ -4460,7 +4479,9 @@ Fingerprint unlock might be incompatible with third-party screen protectors.
     <string name="op_theme_2__title">The Avengers</string>
     <string name="op_theme_3_cannot_change_color_accent">McLaren theme can only use the system colour theme</string>
     <string name="op_theme_3_title">McLaren</string>
+    <string name="op_theme_clock_preview_title">Clock on ambient display</string>
     <string name="op_theme_entrance_summary">Wallpapers, accent colour, font</string>
+    <string name="op_theme_lock_screen_customization">LOCK SCREEN AND AMBIENT DISPLAY</string>
     <string name="op_theme_mode_title">Theme</string>
     <string name="op_use_cast">Use Cast</string>
     <string name="op_user_manual_settings">User Manual</string>
@@ -4527,6 +4548,9 @@ Fingerprint unlock might be incompatible with third-party screen protectors.
     <string name="permission_bar_chart_details">See all in Dashboard</string>
     <string name="permission_bar_chart_empty_text">0 apps used permissions</string>
     <string name="permission_bar_chart_title">Permission usage in last 24 hours</string>
+    <string name="permission_btn_text_denied">Exit</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Permission statement</string>
     <string name="permissions_label">Permissions</string>
     <string name="permit_draw_overlay">Allow display over other apps</string>
     <string name="permit_manage_external_storage">Allow access to manage all files</string>
@@ -5448,13 +5472,13 @@ A trusted credential installed on your device is making this possible."</string>
     <string name="status_awake_time">Awake time</string>
     <string name="status_bar_ethernet_title">Ethernet</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="status_bar_settings_airplane_title">Flight mode</string>
+    <string name="status_bar_settings_airplane_title">Aeroplane Mode</string>
     <string name="status_bar_settings_alarm_title">Alarm</string>
     <string name="status_bar_settings_auto_rotation_title">Auto-Rotate Screen</string>
     <string name="status_bar_settings_bluetooth_title">Bluetooth</string>
     <string name="status_bar_settings_cast_title">Cast</string>
-    <string name="status_bar_settings_cellular_title">Mobile data</string>
-    <string name="status_bar_settings_dnd_title">Do not disturb</string>
+    <string name="status_bar_settings_cellular_title">Mobile Data</string>
+    <string name="status_bar_settings_dnd_title">Do Not Disturb</string>
     <string name="status_bar_settings_headset_title">Headset</string>
     <string name="status_bar_settings_hotspot_title">Hotspot</string>
     <string name="status_bar_settings_network_speed_title">Display Network Speed</string>
@@ -5864,7 +5888,7 @@ A Google approach to syncing data to allow access to your contacts, appointments
     <string name="traffic_reset_day_title">Billing cycle</string>
     <string name="traffic_set_limit_description_vzw">"Turn off my mobile data connection when I've used this amount of mobile data"</string>
     <string name="traffic_set_limit_title">Set data limit</string>
-    <string name="traffic_set_limit_title_vzw">Data usage limit</string>
+    <string name="traffic_set_limit_title_vzw">Data Usage limit</string>
     <string name="traffic_set_warn_description_vzw">"Alert me when I've used this amount of mobile data."</string>
     <string name="traffic_set_warn_title">Set data warning</string>
     <string name="traffic_set_warn_title_vzw">Data usage alert</string>
@@ -5973,6 +5997,10 @@ A Google approach to syncing data to allow access to your contacts, appointments
     <string name="uninstallapps_toast_message">apps have been removed</string>
     <string name="uninstalling">Uninstalling…</string>
     <string name="uninstalling_notification_channel">Running uninstalls</string>
+    <string name="units_one">GB/MB (Auto change)</string>
+    <string name="units_three">MB only</string>
+    <string name="units_title">Show units</string>
+    <string name="units_two">GB only</string>
     <string name="unknown">Unknown</string>
     <string name="unknown_app">Unknown app</string>
     <string name="unknown_unavailability_setting_summary">Setting unavailable</string>
@@ -6614,6 +6642,8 @@ Setting the network as hidden will not change your router settings."</string>
     <string name="wifi_no_user_cert_warning">Certificate required.</string>
     <string name="wifi_not_in_range">Not in range</string>
     <string name="wifi_not_in_range_message">Network not in range</string>
+    <string name="wifi_notification">"Wi-Fi notification "</string>
+    <string name="wifi_notification_summary">Notify me when Wi-Fi is available</string>
     <string name="wifi_notify_open_networks">Notify for public networks</string>
     <string name="wifi_notify_open_networks_summary">Notify when a high‑quality public network is available</string>
     <string name="wifi_on_time">Wi‑Fi on time</string>

@@ -18,7 +18,13 @@
 
 .field private mBandSummaries:[Ljava/lang/String;
 
+.field private mNewBandIndex:I
+
 .field private mSecurityType:I
+
+.field onWarningDialogCLickListner:Landroid/content/DialogInterface$OnClickListener;
+
+.field private preference:Lcom/oneplus/settings/widget/OPHotspotApBandSelectionPreference;
 
 
 # direct methods
@@ -28,6 +34,12 @@
     const-string/jumbo v0, "wifi_tether_network_ap_band"
 
     invoke-direct {p0, p1, p2, v0}, Lcom/android/settings/wifi/tether/WifiTetherBasePreferenceController;-><init>(Landroid/content/Context;Lcom/android/settings/wifi/tether/WifiTetherBasePreferenceController$OnTetherConfigUpdateListener;Ljava/lang/String;)V
+
+    new-instance p2, Lcom/android/settings/wifi/tether/WifiTetherApBandPreferenceController$1;
+
+    invoke-direct {p2, p0}, Lcom/android/settings/wifi/tether/WifiTetherApBandPreferenceController$1;-><init>(Lcom/android/settings/wifi/tether/WifiTetherApBandPreferenceController;)V
+
+    iput-object p2, p0, Lcom/android/settings/wifi/tether/WifiTetherApBandPreferenceController;->onWarningDialogCLickListner:Landroid/content/DialogInterface$OnClickListener;
 
     iget-object p2, p0, Lcom/android/settings/wifi/tether/WifiTetherBasePreferenceController;->mWifiManager:Landroid/net/wifi/WifiManager;
 
@@ -50,6 +62,30 @@
     invoke-virtual {p0, p2}, Lcom/android/settings/wifi/tether/WifiTetherApBandPreferenceController;->updatePreferenceEntries(Landroid/net/wifi/SoftApConfiguration;)V
 
     return-void
+.end method
+
+.method static synthetic access$002(Lcom/android/settings/wifi/tether/WifiTetherApBandPreferenceController;I)I
+    .locals 0
+
+    iput p1, p0, Lcom/android/settings/wifi/tether/WifiTetherApBandPreferenceController;->mBandIndex:I
+
+    return p1
+.end method
+
+.method static synthetic access$100(Lcom/android/settings/wifi/tether/WifiTetherApBandPreferenceController;)I
+    .locals 0
+
+    iget p0, p0, Lcom/android/settings/wifi/tether/WifiTetherApBandPreferenceController;->mNewBandIndex:I
+
+    return p0
+.end method
+
+.method static synthetic access$200(Lcom/android/settings/wifi/tether/WifiTetherApBandPreferenceController;)Lcom/oneplus/settings/widget/OPHotspotApBandSelectionPreference;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/wifi/tether/WifiTetherApBandPreferenceController;->preference:Lcom/oneplus/settings/widget/OPHotspotApBandSelectionPreference;
+
+    return-object p0
 .end method
 
 .method private is5GhzBandSupported()Z
@@ -416,8 +452,129 @@
 .end method
 
 .method public onPreferenceChange(Landroidx/preference/Preference;Ljava/lang/Object;)Z
-    .locals 1
+    .locals 3
 
+    iget-object v0, p0, Lcom/android/settings/wifi/tether/WifiTetherBasePreferenceController;->mWifiManager:Landroid/net/wifi/WifiManager;
+
+    invoke-virtual {v0}, Landroid/net/wifi/WifiManager;->isWifiApEnabled()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/settings/wifi/tether/WifiTetherBasePreferenceController;->mWifiManager:Landroid/net/wifi/WifiManager;
+
+    invoke-virtual {v0}, Landroid/net/wifi/WifiManager;->getWifiApConfiguration()Landroid/net/wifi/WifiConfiguration;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    iget-object v1, p0, Lcom/android/settings/wifi/tether/WifiTetherBasePreferenceController;->mWifiManager:Landroid/net/wifi/WifiManager;
+
+    invoke-virtual {v1}, Landroid/net/wifi/WifiManager;->getSoftApConfiguration()Landroid/net/wifi/SoftApConfiguration;
+
+    move-result-object v2
+
+    invoke-static {v0, v1, v2}, Lcom/android/settings/wifi/dpp/WifiDppUtils;->getHotspotConfiguratorIntentOrNull(Landroid/content/Context;Landroid/net/wifi/WifiManager;Landroid/net/wifi/SoftApConfiguration;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isUsvMode()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Lcom/android/settings/core/BasePreferenceController;->isAvailable()Z
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, ""
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "Preference change"
+
+    invoke-static {v0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    check-cast p2, Ljava/lang/Integer;
+
+    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    iput p1, p0, Lcom/android/settings/wifi/tether/WifiTetherApBandPreferenceController;->mNewBandIndex:I
+
+    new-instance p1, Landroid/app/AlertDialog$Builder;
+
+    iget-object p2, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-direct {p1, p2}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    sget p2, Lcom/android/settings/R$string;->save_changes:I
+
+    invoke-virtual {p1, p2}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
+
+    move-result-object p1
+
+    sget p2, Lcom/android/settings/R$string;->verizon_wifi_tether_band_warning:I
+
+    invoke-virtual {p1, p2}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
+
+    move-result-object p1
+
+    const p2, 0x104000a
+
+    iget-object v0, p0, Lcom/android/settings/wifi/tether/WifiTetherApBandPreferenceController;->onWarningDialogCLickListner:Landroid/content/DialogInterface$OnClickListener;
+
+    invoke-virtual {p1, p2, v0}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+
+    move-result-object p1
+
+    const/high16 p2, 0x1040000
+
+    iget-object p0, p0, Lcom/android/settings/wifi/tether/WifiTetherApBandPreferenceController;->onWarningDialogCLickListner:Landroid/content/DialogInterface$OnClickListener;
+
+    invoke-virtual {p1, p2, p0}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+
+    move-result-object p0
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/app/AlertDialog;->show()V
+
+    goto :goto_1
+
+    :cond_1
     check-cast p2, Ljava/lang/String;
 
     invoke-static {p2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -460,6 +617,7 @@
 
     invoke-interface {p1, p0}, Lcom/android/settings/wifi/tether/WifiTetherBasePreferenceController$OnTetherConfigUpdateListener;->onTetherConfigUpdated(Lcom/android/settings/core/BasePreferenceController;)V
 
+    :goto_1
     const/4 p0, 0x1
 
     return p0

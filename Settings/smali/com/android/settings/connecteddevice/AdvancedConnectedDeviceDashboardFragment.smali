@@ -74,7 +74,7 @@
 
     const-string v2, "default_payment_app"
 
-    invoke-direct {v1, p0, v2}, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v1, p0, p1, v2}, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController;-><init>(Landroid/content/Context;Lcom/android/settingslib/core/lifecycle/Lifecycle;Ljava/lang/String;)V
 
     if-eqz p2, :cond_0
 

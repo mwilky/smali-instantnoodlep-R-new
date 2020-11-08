@@ -8,6 +8,14 @@
 .implements Lcom/android/settingslib/core/lifecycle/events/OnPause;
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController$SettingObserver;
+    }
+.end annotation
+
+
 # instance fields
 .field private mFragment:Landroidx/fragment/app/Fragment;
 
@@ -19,24 +27,26 @@
 
 .field private mPaymentSettingsEnabler:Lcom/android/settings/applications/specialaccess/PaymentSettingsEnabler;
 
+.field private mSettingObserver:Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController$SettingObserver;
+
 .field private final mUserManager:Landroid/os/UserManager;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/android/settingslib/core/lifecycle/Lifecycle;Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/android/settings/core/BasePreferenceController;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {p0, p1, p3}, Lcom/android/settings/core/BasePreferenceController;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    move-result-object p2
+    move-result-object p3
 
-    iput-object p2, p0, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController;->mPackageManager:Landroid/content/pm/PackageManager;
+    iput-object p3, p0, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    const-class p2, Landroid/os/UserManager;
+    const-class p3, Landroid/os/UserManager;
 
-    invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p1, p3}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -52,7 +62,20 @@
 
     iput-object p1, p0, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController;->mNfcAdapter:Landroid/nfc/NfcAdapter;
 
+    if-eqz p2, :cond_0
+
+    invoke-virtual {p2, p0}, Lcom/android/settingslib/core/lifecycle/Lifecycle;->addObserver(Landroidx/lifecycle/LifecycleObserver;)V
+
+    :cond_0
     return-void
+.end method
+
+.method static synthetic access$000(Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    return-object p0
 .end method
 
 
@@ -70,6 +93,20 @@
 
     invoke-super {p0, p1}, Lcom/android/settings/core/BasePreferenceController;->displayPreference(Landroidx/preference/PreferenceScreen;)V
 
+    invoke-virtual {p0}, Lcom/android/settings/core/BasePreferenceController;->getPreferenceKey()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroidx/preference/PreferenceGroup;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object p1
+
+    new-instance v0, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController$SettingObserver;
+
+    invoke-direct {v0, p0, p1}, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController$SettingObserver;-><init>(Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController;Landroidx/preference/Preference;)V
+
+    iput-object v0, p0, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController;->mSettingObserver:Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController$SettingObserver;
+
     invoke-virtual {p0}, Lcom/android/settings/core/BasePreferenceController;->isAvailable()Z
 
     move-result v0
@@ -83,14 +120,6 @@
     return-void
 
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/core/BasePreferenceController;->getPreferenceKey()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Landroidx/preference/PreferenceGroup;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
-
-    move-result-object p1
-
     iget-object v0, p0, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController;->mNfcAdapter:Landroid/nfc/NfcAdapter;
 
     if-eqz v0, :cond_1
@@ -246,28 +275,58 @@
 .end method
 
 .method public onPause()V
-    .locals 0
+    .locals 2
 
-    iget-object p0, p0, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController;->mPaymentSettingsEnabler:Lcom/android/settings/applications/specialaccess/PaymentSettingsEnabler;
+    iget-object v0, p0, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController;->mPaymentSettingsEnabler:Lcom/android/settings/applications/specialaccess/PaymentSettingsEnabler;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/settings/nfc/BaseNfcEnabler;->pause()V
+    invoke-virtual {v0}, Lcom/android/settings/nfc/BaseNfcEnabler;->pause()V
 
     :cond_0
+    iget-object v0, p0, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController;->mSettingObserver:Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController$SettingObserver;
+
+    if-eqz v0, :cond_1
+
+    iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, p0, v1}, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController$SettingObserver;->register(Landroid/content/ContentResolver;Z)V
+
+    :cond_1
     return-void
 .end method
 
 .method public onResume()V
-    .locals 0
+    .locals 2
 
-    iget-object p0, p0, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController;->mPaymentSettingsEnabler:Lcom/android/settings/applications/specialaccess/PaymentSettingsEnabler;
+    iget-object v0, p0, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController;->mPaymentSettingsEnabler:Lcom/android/settings/applications/specialaccess/PaymentSettingsEnabler;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/settings/applications/specialaccess/PaymentSettingsEnabler;->resume()V
+    invoke-virtual {v0}, Lcom/android/settings/applications/specialaccess/PaymentSettingsEnabler;->resume()V
 
     :cond_0
+    iget-object v0, p0, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController;->mSettingObserver:Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController$SettingObserver;
+
+    if-eqz v0, :cond_1
+
+    iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, p0, v1}, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController$SettingObserver;->register(Landroid/content/ContentResolver;Z)V
+
+    :cond_1
     return-void
 .end method
 

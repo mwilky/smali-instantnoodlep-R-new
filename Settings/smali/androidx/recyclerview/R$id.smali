@@ -4,4 +4,4 @@
 
 
 # static fields
-.field public static final item_touch_helper_previous_elevation:I = 0x7f0b03e3
+.field public static final item_touch_helper_previous_elevation:I = 0x7f0b03e7

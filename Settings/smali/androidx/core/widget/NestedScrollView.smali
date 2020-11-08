@@ -5183,18 +5183,6 @@
     return-void
 .end method
 
-.method public final smoothScrollTo(II)V
-    .locals 2
-
-    const/16 v0, 0xfa
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, p1, p2, v0, v1}, Landroidx/core/widget/NestedScrollView;->smoothScrollTo(IIIZ)V
-
-    return-void
-.end method
-
 .method smoothScrollTo(IIIZ)V
     .locals 1
 

@@ -8,7 +8,13 @@
 
 .field private final mAppName:Landroid/widget/TextView;
 
+.field final mCheckBox:Landroid/widget/CheckBox;
+
 .field final mDisabled:Landroid/widget/TextView;
+
+.field final mDivider:Landroid/view/View;
+
+.field final mItemView:Landroid/view/View;
 
 .field final mSummary:Landroid/widget/TextView;
 
@@ -22,6 +28,8 @@
     .locals 1
 
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
+
+    iput-object p1, p0, Lcom/android/settings/applications/manageapplications/ApplicationViewHolder;->mItemView:Landroid/view/View;
 
     const v0, 0x1020016
 
@@ -77,11 +85,29 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
+    move-result-object v0
+
+    check-cast v0, Landroid/view/ViewGroup;
+
+    iput-object v0, p0, Lcom/android/settings/applications/manageapplications/ApplicationViewHolder;->mWidgetContainer:Landroid/view/ViewGroup;
+
+    sget v0, Lcom/android/settings/R$id;->checkbox:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/CheckBox;
+
+    iput-object v0, p0, Lcom/android/settings/applications/manageapplications/ApplicationViewHolder;->mCheckBox:Landroid/widget/CheckBox;
+
+    sget v0, Lcom/android/settings/R$id;->two_target_divider:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
     move-result-object p1
 
-    check-cast p1, Landroid/view/ViewGroup;
-
-    iput-object p1, p0, Lcom/android/settings/applications/manageapplications/ApplicationViewHolder;->mWidgetContainer:Landroid/view/ViewGroup;
+    iput-object p1, p0, Lcom/android/settings/applications/manageapplications/ApplicationViewHolder;->mDivider:Landroid/view/View;
 
     return-void
 .end method
@@ -169,8 +195,146 @@
     return-object v0
 .end method
 
+.method static newViewForVzw(Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 4
+
+    const-string v0, "ApplicationViewHolder"
+
+    const-string v1, "newViewForVzw"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object v0
+
+    sget v1, Lcom/android/settings/R$layout;->op_application_preference_app:I
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/ViewGroup;
+
+    const v1, 0x1020018
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/ViewGroup;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object p0
+
+    sget v2, Lcom/android/settings/R$layout;->preference_widget_checkbox_uninstall_apps:I
+
+    const/4 v3, 0x1
+
+    invoke-virtual {p0, v2, v1, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    :cond_0
+    return-object v0
+.end method
+
 
 # virtual methods
+.method enableItem(Z)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ApplicationViewHolder;->mWidgetContainer:Landroid/view/ViewGroup;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->setEnabled(Z)V
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ApplicationViewHolder;->mDivider:Landroid/view/View;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setEnabled(Z)V
+
+    :cond_1
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ApplicationViewHolder;->mAppName:Landroid/widget/TextView;
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setEnabled(Z)V
+
+    :cond_2
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ApplicationViewHolder;->mAppIcon:Landroid/widget/ImageView;
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setEnabled(Z)V
+
+    :cond_3
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ApplicationViewHolder;->mSummary:Landroid/widget/TextView;
+
+    if-eqz v0, :cond_4
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setEnabled(Z)V
+
+    :cond_4
+    iget-object p0, p0, Lcom/android/settings/applications/manageapplications/ApplicationViewHolder;->mCheckBox:Landroid/widget/CheckBox;
+
+    if-eqz p0, :cond_5
+
+    invoke-virtual {p0, p1}, Landroid/widget/CheckBox;->setEnabled(Z)V
+
+    :cond_5
+    return-void
+.end method
+
+.method hideWidgetContainer()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ApplicationViewHolder;->mWidgetContainer:Landroid/view/ViewGroup;
+
+    const/16 v1, 0x8
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setVisibility(I)V
+
+    :cond_0
+    iget-object p0, p0, Lcom/android/settings/applications/manageapplications/ApplicationViewHolder;->mDivider:Landroid/view/View;
+
+    if-eqz p0, :cond_1
+
+    invoke-virtual {p0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final setChecked(Z)V
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/applications/manageapplications/ApplicationViewHolder;->mCheckBox:Landroid/widget/CheckBox;
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0, p1}, Landroid/widget/CheckBox;->setChecked(Z)V
+
+    :cond_0
+    return-void
+.end method
+
 .method setEnabled(Z)V
     .locals 0
 
@@ -238,6 +402,28 @@
 
     invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    return-void
+.end method
+
+.method showWidgetContainer()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ApplicationViewHolder;->mWidgetContainer:Landroid/view/ViewGroup;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setVisibility(I)V
+
+    :cond_0
+    iget-object p0, p0, Lcom/android/settings/applications/manageapplications/ApplicationViewHolder;->mDivider:Landroid/view/View;
+
+    if-eqz p0, :cond_1
+
+    invoke-virtual {p0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_1
     return-void
 .end method
 
@@ -413,6 +599,38 @@
 
     invoke-virtual {p0, p2}, Landroid/widget/CompoundButton;->setEnabled(Z)V
 
+    goto :goto_0
+
     :cond_0
+    iget-object p3, p0, Lcom/android/settings/applications/manageapplications/ApplicationViewHolder;->mCheckBox:Landroid/widget/CheckBox;
+
+    if-eqz p3, :cond_1
+
+    iget-object p3, p0, Lcom/android/settings/applications/manageapplications/ApplicationViewHolder;->mWidgetContainer:Landroid/view/ViewGroup;
+
+    if-eqz p3, :cond_1
+
+    const-string p3, "ApplicationViewHolder"
+
+    const-string/jumbo v0, "updateSwitch: Checkbox"
+
+    invoke-static {p3, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object p3, p0, Lcom/android/settings/applications/manageapplications/ApplicationViewHolder;->mItemView:Landroid/view/View;
+
+    invoke-virtual {p3, p1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object p1, p0, Lcom/android/settings/applications/manageapplications/ApplicationViewHolder;->mCheckBox:Landroid/widget/CheckBox;
+
+    invoke-virtual {p1, p2}, Landroid/widget/CheckBox;->setEnabled(Z)V
+
+    iget-object p0, p0, Lcom/android/settings/applications/manageapplications/ApplicationViewHolder;->mCheckBox:Landroid/widget/CheckBox;
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Landroid/widget/CheckBox;->setChecked(Z)V
+
+    :cond_1
+    :goto_0
     return-void
 .end method

@@ -263,6 +263,8 @@
         <item>Qualcomm® aptX™ ऑडियो</item>
         <item>Qualcomm® aptX™ HD ऑडियो</item>
         <item>LDAC</item>
+        <item>Qualcomm® aptX™ Adaptiveऑडियो</item>
+        <item>Qualcomm® aptX™ TWS+ ऑडियो</item>
     </string-array>
     <string-array name="bluetooth_a2dp_codec_titles">
         <item>सिस्टम से चुने जाने का उपयोग करें (डिफ़ॉल्ट)</item>
@@ -271,6 +273,8 @@
         <item>Qualcomm® aptX™ ऑडियो</item>
         <item>Qualcomm® aptX™ HD ऑडियो</item>
         <item>LDAC</item>
+        <item>Qualcomm® aptX™ Adaptiveऑडियो</item>
+        <item>Qualcomm® aptX™ TWS+ ऑडियो</item>
     </string-array>
     <string-array name="bluetooth_audio_active_device_summaries">
         <item></item>

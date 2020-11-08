@@ -39,7 +39,7 @@
 
     iget-object v0, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate$4;->this$0:Lcom/google/android/material/picker/DatePickerCalendarDelegate;
 
-    invoke-static {v0}, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->access$400(Lcom/google/android/material/picker/DatePickerCalendarDelegate;)Lcom/google/android/material/picker/YearPickerView;
+    invoke-static {v0}, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->access$300(Lcom/google/android/material/picker/DatePickerCalendarDelegate;)Lcom/google/android/material/picker/YearPickerView;
 
     move-result-object v0
 
@@ -47,7 +47,7 @@
 
     iget-object p0, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate$4;->this$0:Lcom/google/android/material/picker/DatePickerCalendarDelegate;
 
-    invoke-static {p0}, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->access$400(Lcom/google/android/material/picker/DatePickerCalendarDelegate;)Lcom/google/android/material/picker/YearPickerView;
+    invoke-static {p0}, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->access$300(Lcom/google/android/material/picker/DatePickerCalendarDelegate;)Lcom/google/android/material/picker/YearPickerView;
 
     move-result-object p0
 

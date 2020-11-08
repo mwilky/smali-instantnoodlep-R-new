@@ -1460,6 +1460,26 @@
     return v3
 .end method
 
+.method public static isNumeric(Ljava/lang/String;)Z
+    .locals 1
+
+    const-string v0, "[0-9]*"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/util/regex/Matcher;->matches()Z
+
+    move-result p0
+
+    return p0
+.end method
+
 .method private isSprintMccMnc(Ljava/lang/String;)Z
     .locals 1
 
@@ -5656,10 +5676,10 @@
 
     move-result-object v0
 
-    goto :goto_2
+    goto/16 :goto_2
 
     :cond_1
-    if-eqz v2, :cond_7
+    if-eqz v2, :cond_9
 
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
@@ -5672,7 +5692,7 @@
     goto :goto_1
 
     :cond_2
-    if-eqz v3, :cond_6
+    if-eqz v3, :cond_8
 
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -5693,14 +5713,21 @@
 
     const v1, 0xffff
 
-    if-nez v0, :cond_4
+    if-nez v0, :cond_5
+
+    invoke-static {v4}, Lcom/android/settings/network/ApnEditor;->isNumeric(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
 
     invoke-static {v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v0
 
-    if-le v0, v1, :cond_4
+    if-le v0, v1, :cond_5
 
+    :cond_4
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -5713,19 +5740,26 @@
 
     goto :goto_2
 
-    :cond_4
+    :cond_5
     invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_7
+
+    invoke-static {v5}, Lcom/android/settings/network/ApnEditor;->isNumeric(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
 
     invoke-static {v5}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v0
 
-    if-le v0, v1, :cond_5
+    if-le v0, v1, :cond_7
 
+    :cond_6
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -5738,12 +5772,12 @@
 
     goto :goto_2
 
-    :cond_5
+    :cond_7
     const/4 v0, 0x0
 
     goto :goto_2
 
-    :cond_6
+    :cond_8
     :goto_0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
@@ -5757,7 +5791,7 @@
 
     goto :goto_2
 
-    :cond_7
+    :cond_9
     :goto_1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
@@ -5774,16 +5808,16 @@
 
     move-result v1
 
-    if-eqz v1, :cond_8
+    if-eqz v1, :cond_a
 
     iget-boolean v1, p0, Lcom/android/settings/network/ApnEditor;->mIsFromHM:Z
 
-    if-eqz v1, :cond_8
+    if-eqz v1, :cond_a
 
     return-object v0
 
-    :cond_8
-    if-nez v0, :cond_b
+    :cond_a
+    if-nez v0, :cond_d
 
     iget-object v1, p0, Lcom/android/settings/network/ApnEditor;->mReadOnlyApnTypes:[Ljava/lang/String;
 
@@ -5791,7 +5825,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_b
+    if-nez v1, :cond_d
 
     iget-object v1, p0, Lcom/android/settings/network/ApnEditor;->mReadOnlyApnTypes:[Ljava/lang/String;
 
@@ -5803,7 +5837,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_b
+    if-eqz v1, :cond_d
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -5818,7 +5852,7 @@
     move v4, v3
 
     :goto_3
-    if-ge v4, v2, :cond_9
+    if-ge v4, v2, :cond_b
 
     aget-object v5, v1, v4
 
@@ -5850,12 +5884,12 @@
 
     goto :goto_3
 
-    :cond_9
+    :cond_b
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
     move-result v1
 
-    if-lt v1, v6, :cond_a
+    if-lt v1, v6, :cond_c
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
@@ -5869,7 +5903,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
 
-    :cond_a
+    :cond_c
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -5890,6 +5924,6 @@
 
     move-result-object v0
 
-    :cond_b
+    :cond_d
     return-object v0
 .end method
