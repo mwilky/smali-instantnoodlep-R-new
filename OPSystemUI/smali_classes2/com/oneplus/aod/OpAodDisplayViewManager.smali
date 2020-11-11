@@ -15,6 +15,8 @@
 
 
 # static fields
+.field public static mFirstTimeChange:Z
+
 .field public static mPulseStatus:I
 
 
